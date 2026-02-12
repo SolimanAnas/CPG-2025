@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
     <style>
-        /* ---------- AERO VISTA GLASS THEME (shared) ---------- */
+        /* ---------- AERO VISTA GLASS THEME (full) ---------- */
         :root {
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
@@ -99,9 +99,7 @@
         .btn-quiz { color: #155724; background: linear-gradient(180deg, #e8f5e9 0%, #c3e6cb 100%); border-color: #a5d6a7; }
         .btn-critical { color: #721c24; background: linear-gradient(180deg, #f8d7da 0%, #f5c6cb 100%); border-color: #f1b0b7; }
 
-        .stats-card {
-            margin-top: 20px;
-        }
+        .stats-card { margin-top: 20px; }
         .stat-row {
             display: flex; justify-content: space-between; padding: 12px;
             background: rgba(0,0,0,0.02); border-radius: 8px; margin-top: 8px;
@@ -118,13 +116,11 @@
 <header>
     <div class="header-text">
         <h1>DCAS CPG 2025</h1>
-        <p>Study Platform · Multi‑Chapter</p>
+        <p>Clinical Practice Guidelines · Dubai Ambulance</p>   <!-- ✅ UPDATED SUBTITLE -->
     </div>
 </header>
 
-<main id="mainContent">
-    <!-- Dynamic content will be injected via JavaScript -->
-</main>
+<main id="mainContent"></main>
 
 <footer>
     <div>Created by Soliman Anas · Study aid only</div>
@@ -137,13 +133,17 @@
 
         // ---------- HARDCODED CHAPTER LIST (UPDATE AS YOU ADD CHAPTERS) ----------
         const CHAPTERS = [
-            { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care", hasCritical: true },
-            { id: "c2", shortTitle: "2.1 Airway & Breathing", title: "Airway Management", hasCritical: false },
+            { 
+                id: "c1", 
+                shortTitle: "1.1 Universal Care",          // displayed on main card
+                title: "Universal Care (complete)", 
+                hasCritical: true 
+            },
             // Add more chapters here, e.g.:
-            // { id: "c3", shortTitle: "3.1 Chest Pain / ACS", title: "Cardiovascular", hasCritical: true },
+            // { id: "c2", shortTitle: "2.1 Airway & Breathing", title: "Airway Management", hasCritical: false },
         ];
 
-        // ---------- STORAGE UTILITY (same as in app.js) ----------
+        // ---------- STORAGE UTILITY (same as app.js) ----------
         const STORAGE_KEY = 'dcas_cpg_stats';
         function loadStats() {
             try {
@@ -158,7 +158,6 @@
         function renderMenu() {
             const stats = loadStats();
 
-            // Chapter cards
             let chaptersHtml = CHAPTERS.map(ch => {
                 const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
@@ -177,15 +176,10 @@
                 `;
             }).join('');
 
-            // Overall stats card
             const totalAttempts = stats.totalAttempts || 0;
             const criticalTotal = stats.critical.total || 0;
             const criticalCorrect = stats.critical.correct || 0;
             const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
-
-            // Mistakes count (not stored globally; we don't have it here – optional)
-            // For now, we can skip or show 0 – mistakes are per session and not persisted.
-            const mistakesCount = 0; 
 
             const statsHtml = `
                 <div class="stats-card">
@@ -197,10 +191,6 @@
                     <div class="stat-row">
                         <span class="stat-label">Critical Accuracy</span>
                         <span class="stat-value">${criticalAcc}% (${criticalCorrect}/${criticalTotal})</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Mistakes to Review</span>
-                        <span class="stat-value">${mistakesCount}</span>
                     </div>
                     <p style="margin-top:20px; font-size:0.9rem; color:#666;">⚠️ Mistakes are not persisted across sessions – review them within each chapter quiz.</p>
                 </div>
