@@ -131,18 +131,13 @@
     (function(){
         "use strict";
 
-        // ---------- HARDCODED CHAPTER LIST (UPDATE AS YOU ADD CHAPTERS) ----------
+        // ---------- HARDCODED CHAPTER LIST (UPDATE AS YOU ADD CHAPTERS) ----------##################################################
         const CHAPTERS = [
-            { 
-                id: "c1", 
-                shortTitle: "1.1 Universal Care",          // displayed on main card
-                title: "Universal Care (complete)", 
-                hasCritical: true 
-            },
-            // Add more chapters here, e.g.:
-            // { id: "c2", shortTitle: "2.1 Airway & Breathing", title: "Airway Management", hasCritical: false },
-        ];
-
+    { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care (complete)", hasCritical: true },
+    { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },  // ✅ NEW
+    // add more chapters here...
+];
+        
         // ---------- STORAGE UTILITY (same as app.js) ----------
         const STORAGE_KEY = 'dcas_cpg_stats';
         function loadStats() {
