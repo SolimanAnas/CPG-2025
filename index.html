@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCAS CPG 2025 Review Platform</title>
+
+<!-- Load Content First -->
+<script src="content.js"></script>
+
+<style>
+/* ======= CLEAN BASE STYLES ======= */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f1c3f;
+    color: #1a2a3a;
+}
+
+header {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.primary { background: #0056b3; color: white; }
+.secondary { background: #e3f2fd; }
+.disabled { opacity: 0.5; pointer-events: none; }
+.quiz-option { margin: 6px 0; }
+.correct { background: #d4edda; }
+.wrong { background: #f8d7da; }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div id="headerTitle">DCAS CPG 2025</div>
+    <div>
+        <button class="button secondary" id="homeBtn">Home</button>
+        <button class="button secondary" id="statsBtn">Stats</button>
+    </div>
+</header>
+
+<main id="app"></main>
+
+<script>
+(function() {
+"use strict";
+
+/* ================================
+   VALIDATE CONTENT STRUCTURE
+================================ */
+
+if (!window.CPG_CONTENT) {
+    document.getElementById("app").innerHTML =
+        "<div class='card'>Content failed to load. Check content.js.</div>";
+    return;
+}
+
+const appContainer = document.getElementById("app");
+const headerTitle = document.getElementById("headerTitle");
+
+/* ================================
+   ROUTING SYSTEM
+================================ */
+
+function navigate(route) {
+    window.location.hash = route;
+}
+
+function handleRoute() {
+    const hash = window.location.hash.replace("#", "") || "home";
+    const [section, id] = hash.split("/");
+
+    switch(section) {
+        case "home":
+            renderHome();
+            break;
+        case "chapter":
+            renderChapter(id);
+            break;
+        case "summary":
+            renderSummary(id);
+            break;
+        case "quiz":
+            startQuiz(id);
+            break;
+        case "flashcards":
+            startFlashcards(id);
+            break;
+        case "stats":
+            renderStats();
+            break;
+        default:
+            renderHome();
+    }
+}
+
+/* ================================
+   HOME
+================================ */
+
+function renderHome() {
+    headerTitle.innerText = "DCAS CPG 2025";
+    appContainer.innerHTML = "";
+
+    CPG_CONTENT.chapters.forEach(ch => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>${ch.title}</h3>
+            <p>${ch.desc}</p>
+            <button class="button primary">Open</button>
+        `;
+        card.querySelector("button").onclick = () => navigate("chapter/" + ch.id);
+        appContainer.appendChild(card);
+    });
+}
+
+/* ================================
+   CHAPTER MENU
+================================ */
+
+function renderChapter(id) {
+    const chapter = CPG_CONTENT.chapters.find(c => c.id === id);
+    if (!chapter) return renderHome();
+
+    headerTitle.innerText = chapter.title;
+    appContainer.innerHTML = `
+        <div class="card">
+            <h2>${chapter.title}</h2>
+            <p>${chapter.desc}</p>
+            <button class="button secondary" id="summaryBtn">Summary</button>
+            <button class="button secondary" id="flashBtn">Flashcards</button>
+            <button class="button primary" id="quizBtn">Start Quiz</button>
+        </div>
+    `;
+
+    document.getElementById("summaryBtn").onclick = () => navigate("summary/" + id);
+    document.getElementById("flashBtn").onclick = () => navigate("flashcards/" + id);
+    document.getElementById("quizBtn").onclick = () => navigate("quiz/" + id);
+}
+
+/* ================================
+   SUMMARY RENDER
+================================ */
+
+function renderSummary(id) {
+    const summary = CPG_CONTENT.summaries?.[id];
+    if (!summary) {
+        appContainer.innerHTML =
+            "<div class='card'>Summary not available.</div>";
+        return;
+    }
+
+    headerTitle.innerText = "Module Summary";
+    appContainer.innerHTML = summary;
+}
+
+/* ================================
+   QUIZ ENGINE
+================================ */
+
+let quizState = { data: [], index: 0, score: 0 };
+
+function startQuiz(id) {
+    const questions = CPG_CONTENT.questions?.[id];
+    if (!questions || questions.length === 0) {
+        appContainer.innerHTML =
+            "<div class='card'>Quiz not available.</div>";
+        return;
+    }
+
+    quizState = {
+        data: [...questions].sort(() => 0.5 - Math.random()).slice(0, 10),
+        index: 0,
+        score: 0
+    };
+
+    renderQuestion();
+}
+
+function renderQuestion() {
+    const q = quizState.data[quizState.index];
+    if (!q) return renderQuizComplete();
+
+    headerTitle.innerText = "Quiz";
+
+    appContainer.innerHTML = `
+        <div class="card">
+            <h3>Q ${quizState.index + 1}</h3>
+            <p>${q.q}</p>
+            <div id="options"></div>
+            <div id="feedback"></div>
+        </div>
+    `;
+
+    const optionsDiv = document.getElementById("options");
+
+    q.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "button quiz-option";
+        btn.innerText = opt;
+        btn.onclick = () => handleAnswer(idx);
+        optionsDiv.appendChild(btn);
+    });
+}
+
+function handleAnswer(idx) {
+    const q = quizState.data[quizState.index];
+    const correct = idx === q.correct;
+
+    if (correct) quizState.score++;
+
+    quizState.index++;
+    renderQuestion();
+}
+
+function renderQuizComplete() {
+    const percent = Math.round((quizState.score / quizState.data.length) * 100);
+
+    appContainer.innerHTML = `
+        <div class="card">
+            <h2>Quiz Complete</h2>
+            <h3>${percent}%</h3>
+            <button class="button primary" onclick="location.hash='home'">
+                Back to Home
+            </button>
+        </div>
+    `;
+}
+
+/* ================================
+   FLASHCARDS
+================================ */
+
+function startFlashcards(id) {
+    const cards = CPG_CONTENT.flashcards?.[id];
+    if (!cards || cards.length === 0) {
+        appContainer.innerHTML =
+            "<div class='card'>Flashcards not available.</div>";
+        return;
+    }
+
+    let index = 0;
+
+    function renderCard() {
+        const card = cards[index];
+        appContainer.innerHTML = `
+            <div class="card">
+                <h3>${card.category}</h3>
+                <p>${card.question}</p>
+                <button class="button secondary">Flip</button>
+                <button class="button primary">Next</button>
+            </div>
+        `;
+
+        const flipBtn = appContainer.querySelectorAll("button")[0];
+        const nextBtn = appContainer.querySelectorAll("button")[1];
+
+        flipBtn.onclick = () => flipBtn.innerText = card.answer;
+        nextBtn.onclick = () => {
+            index++;
+            if (index < cards.length) renderCard();
+            else navigate("chapter/" + id);
+        };
+    }
+
+    renderCard();
+}
+
+/* ================================
+   STATS PLACEHOLDER
+================================ */
+
+function renderStats() {
+    headerTitle.innerText = "Stats";
+    appContainer.innerHTML =
+        "<div class='card'>Analytics coming soon.</div>";
+}
+
+/* ================================
+   GLOBAL EVENTS
+================================ */
+
+document.getElementById("homeBtn").onclick = () => navigate("home");
+document.getElementById("statsBtn").onclick = () => navigate("stats");
+
+window.addEventListener("hashchange", handleRoute);
+document.addEventListener("DOMContentLoaded", handleRoute);
+
+})();
+</script>
+
+</body>
+</html>
