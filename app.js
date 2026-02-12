@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (complete, multi‑section) ========== */
+/* ========== app.js – DCAS CPG 2025 (QUERY‑PARAM ONLY, NO HASH) ========== */
 (function(){
     "use strict";
 
@@ -34,12 +34,9 @@
 
     // ---------- STATE ----------
     const state = {
-        // multi‑section support
         sections: chapterData.sections || null,
         activeSectionId: null,
         activeSection: null,
-
-        // per‑section data
         quizData: [],
         mistakes: [],
         qIndex: 0,
@@ -49,7 +46,6 @@
         criticalData: [],
         criticalIndex: 0,
         criticalScore: 0,
-
         stats: storage.load()
     };
 
@@ -72,6 +68,17 @@
         getSection: (id) => {
             if (!state.sections) return null;
             return state.sections.find(s => s.id === id);
+        },
+        // Get URL query parameters
+        getQueryParam: (param) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        },
+        // Update URL query parameter without reload
+        setQueryParam: (param, value) => {
+            const url = new URL(window.location.href);
+            url.searchParams.set(param, value);
+            window.history.replaceState({}, '', url);
         }
     };
 
@@ -101,13 +108,15 @@
         `;
     }
 
-    // ---------- SWITCH SECTION (load data) ----------
+    // ---------- SWITCH SECTION (load data, update URL, re‑render current view) ----------
     function switchSection(sectionId) {
         const section = utils.getSection(sectionId);
         if (!section) return;
+        
         state.activeSectionId = sectionId;
         state.activeSection = section;
-        // reset per‑section state
+        
+        // Reset per‑section state
         state.quizData = [];
         state.mistakes = [];
         state.qIndex = 0;
@@ -118,17 +127,19 @@
         state.criticalIndex = 0;
         state.criticalScore = 0;
 
-        // re-render current view based on URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const view = urlParams.get('view') || 'summary';
-        if (view === 'summary') render.summary();
-        else if (view === 'flashcards') render.flashcards();
-        else if (view === 'quiz') render.quizSetup();
-        else if (view === 'critical') render.criticalGame();
+        // Update URL with new section ID
+        utils.setQueryParam('section', sectionId);
+
+        // Re‑render the current view (preserve view parameter)
+        const currentView = utils.getQueryParam('view') || 'summary';
+        if (currentView === 'summary') render.summary();
+        else if (currentView === 'flashcards') render.flashcards();
+        else if (currentView === 'quiz') render.quizSetup();
+        else if (currentView === 'critical') render.criticalGame();
         else render.summary();
     }
 
-    // ---------- RENDER FUNCTIONS ----------
+    // ---------- RENDER FUNCTIONS (use state.activeSection) ----------
     const render = {
         summary: function() {
             const section = state.activeSection;
@@ -300,7 +311,6 @@
             utils.safeScrollTop();
         },
 
-        // ---------- STATS PAGE (global, across chapters) ----------
         stats: function() {
             const s = state.stats;
             let chapStatsHtml = '';
@@ -341,7 +351,6 @@
             utils.safeScrollTop();
         },
 
-        // ---------- REVIEW MISTAKES ----------
         reviewMistakes: function() {
             if (!state.mistakes.length) {
                 dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';
@@ -373,49 +382,40 @@
             storage.save(state.stats);
             render.quizGame();
         },
-
         handleAnswer: function(selectedIdx, btn) {
             const q = state.quizData[state.qIndex];
             const isCorrect = selectedIdx === q.correct;
             if (isCorrect) {
                 state.score++;
             } else {
-                // store mistake
                 state.mistakes.push({
                     question: q.q,
                     correctAnswer: q.options[q.correct],
                     rationale: q.explanation
                 });
             }
-            // disable all options
             document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-            // highlight
             btn.classList.add(isCorrect ? 'correct' : 'wrong');
             if (!isCorrect) {
                 const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
                 if (correctBtn) correctBtn.classList.add('correct');
             }
-            // show feedback
             const fb = document.getElementById('quizFeedback');
             if (fb) {
                 fb.style.display = 'block';
                 fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
                                 <p style="margin-top:8px;">${q.explanation}</p>`;
             }
-            // show next button
             const nextBtn = document.getElementById('nextQuizBtn');
             if (nextBtn) nextBtn.style.display = 'block';
-            // update score display
             const scoreEl = document.getElementById('currentScore');
             if (scoreEl) scoreEl.innerText = state.score;
         },
-
         next: function() {
             state.qIndex++;
             if (state.qIndex < state.quizData.length) {
                 render.quizGame();
             } else {
-                // update chapter stats
                 const chapterId = chapterData.id || 'c0';
                 if (!state.stats.chapters[chapterId]) {
                     state.stats.chapters[chapterId] = { attempts: 0, totalScore: 0, totalMax: 0 };
@@ -425,7 +425,6 @@
                 chap.totalScore += state.score;
                 chap.totalMax += state.quizData.length;
                 storage.save(state.stats);
-                // show results
                 const percentage = Math.round((state.score / state.quizData.length) * 100);
                 let msg = 'Keep studying!';
                 if (percentage >= 80) msg = 'Excellent!';
@@ -475,7 +474,6 @@
             const nextBtn = document.getElementById('nextCriticalBtn');
             if (nextBtn) nextBtn.style.display = 'block';
         },
-
         next: function() {
             state.criticalIndex++;
             if (state.criticalIndex < state.criticalData.length) {
@@ -496,75 +494,42 @@
         }
     };
 
-    // ---------- ROUTER ----------
-    const router = {
-        navigate: function(route, param, sectionId) {
-            if (!route) route = 'home';
-            let hash = route === 'home' ? '#home' : `#${route}`;
-            if (param) hash += `/${param}`;
-            if (sectionId) hash += `?section=${sectionId}`;
-            location.hash = hash;
-        },
-        handle: function() {
-            const hash = location.hash.slice(1) || 'home';
-            const [route, param] = hash.split('/');
-            const query = new URLSearchParams(hash.includes('?') ? hash.split('?')[1] : '');
-            const sectionId = query.get('section');
+    // ---------- INITIALISE PAGE (READ QUERY PARAMS) ----------
+    function init() {
+        state.stats = storage.load();
 
-            if (route === 'home') {
-                window.location.href = '../index.html';
-                return;
-            }
-
-            // Single‑section mode (backward compatibility)
-            if (!state.sections) {
-                // assume chapterData has direct quiz/flashcards etc.
-                if (!state.activeSection) {
-                    // create a pseudo‑section
-                    state.activeSection = {
-                        id: 'main',
-                        shortTitle: chapterData.shortTitle || 'Chapter',
-                        summary: chapterData.summary,
-                        quiz: chapterData.quiz,
-                        flashcards: chapterData.flashcards,
-                        critical: chapterData.critical
-                    };
-                    state.activeSectionId = 'main';
-                    state.flashData = state.activeSection.flashcards || [];
-                    state.criticalData = state.activeSection.critical || [];
-                }
-                if (route === 'summary') render.summary();
-                else if (route === 'flashcards') render.flashcards();
-                else if (route === 'quiz') render.quizSetup();
-                else if (route === 'critical') render.criticalGame();
-                else if (route === 'stats') render.stats();
-                else if (route === 'reviewMistakes') render.reviewMistakes();
-                else render.summary();
-                return;
-            }
-
-            // Multi‑section mode
-            if (!state.activeSection) {
-                const initialSectionId = sectionId || (state.sections[0] ? state.sections[0].id : null);
-                if (initialSectionId) {
-                    switchSection(initialSectionId);
-                    if (!sectionId) {
-                        const newUrl = `#${route}/${param}?section=${initialSectionId}`;
-                        location.replace(newUrl);
-                    }
-                }
-            }
-
-            // Render view based on route
-            if (route === 'summary') render.summary();
-            else if (route === 'flashcards') render.flashcards();
-            else if (route === 'quiz') render.quizSetup();
-            else if (route === 'critical') render.criticalGame();
-            else if (route === 'stats') render.stats();
-            else if (route === 'reviewMistakes') render.reviewMistakes();
-            else render.summary();
+        // Determine initial section
+        let sectionId = utils.getQueryParam('section');
+        if (!sectionId && state.sections && state.sections.length > 0) {
+            sectionId = state.sections[0].id;
+            utils.setQueryParam('section', sectionId);
         }
-    };
+        if (sectionId) {
+            const section = utils.getSection(sectionId);
+            if (section) {
+                state.activeSectionId = sectionId;
+                state.activeSection = section;
+                state.flashData = section.flashcards || [];
+                state.criticalData = section.critical || [];
+            }
+        }
+
+        // Determine initial view
+        let view = utils.getQueryParam('view') || 'summary';
+        // Update URL with view if not present
+        if (!utils.getQueryParam('view')) {
+            utils.setQueryParam('view', view);
+        }
+
+        // Render appropriate view
+        if (view === 'summary') render.summary();
+        else if (view === 'flashcards') render.flashcards();
+        else if (view === 'quiz') render.quizSetup();
+        else if (view === 'critical') render.criticalGame();
+        else if (view === 'stats') render.stats();
+        else if (view === 'reviewMistakes') render.reviewMistakes();
+        else render.summary();
+    }
 
     // ---------- EVENT DELEGATION ----------
     document.addEventListener('click', function(e) {
@@ -579,9 +544,6 @@
         if (sectionId) {
             e.preventDefault();
             switchSection(sectionId);
-            const url = new URL(window.location.href);
-            url.searchParams.set('section', sectionId);
-            window.history.replaceState({}, '', url);
             return;
         }
 
@@ -591,11 +553,12 @@
             return;
         }
         if (action === 'stats') {
-            router.navigate('stats');
+            window.location.href = '../index.html?view=stats'; // go to main menu stats
             return;
         }
         if (action === 'reviewMistakes') {
-            router.navigate('reviewMistakes');
+            // show mistakes within current chapter (no page reload)
+            render.reviewMistakes();
             return;
         }
 
@@ -642,21 +605,8 @@
         }
     });
 
-    // ---------- INIT ----------
-    function init() {
-        state.stats = storage.load();
-        window.addEventListener('hashchange', router.handle);
-        if (!location.hash || location.hash === '#') {
-            const defaultSection = state.sections ? state.sections[0].id : null;
-            router.navigate('summary', chapterData.id, defaultSection);
-        } else {
-            router.handle();
-        }
-        if (dom.homeBtn) {
-            dom.homeBtn.addEventListener('click', () => window.location.href = '../index.html');
-        }
-    }
-
+    // ---------- START ----------
     init();
-    window.app = { navigate: router.navigate, state };
+
+    window.app = { state };
 })();
