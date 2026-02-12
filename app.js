@@ -1,39 +1,30 @@
-/* ========== app.js – DCAS CPG 2025 Shared Logic ========== */
+/* ========== app.js – DCAS CPG 2025 (complete, multi‑section) ========== */
 (function(){
     "use strict";
 
-    // ---------- SAFE STORAGE WRAPPER (global stats) ----------
+    // ---------- STORAGE (unchanged) ----------
     const storage = (function() {
         const KEY = 'dcas_cpg_stats';
-        const defaultStats = {
-            totalAttempts: 0,
-            chapters: {},
-            critical: { total: 0, correct: 0 }
-        };
+        const defaultStats = { totalAttempts: 0, chapters: {}, critical: { total:0, correct:0 } };
         function load() {
             try {
                 const data = localStorage.getItem(KEY);
                 return data ? JSON.parse(data) : defaultStats;
-            } catch(e) {
-                return defaultStats;
-            }
+            } catch(e) { return defaultStats; }
         }
         function save(stats) {
-            try {
-                localStorage.setItem(KEY, JSON.stringify(stats));
-            } catch(e) { /* ignore */ }
+            try { localStorage.setItem(KEY, JSON.stringify(stats)); } catch(e) {}
         }
         return { load, save };
     })();
 
-    // ---------- GLOBAL CHAPTER DATA (set by chapter-specific JS) ----------
+    // ---------- CHAPTER DATA ----------
     const chapterData = window.CPG_DATA;
     if (!chapterData) {
-        console.error('❌ No chapter data found. Make sure window.CPG_DATA is set.');
+        console.error('❌ No chapter data found (window.CPG_DATA missing)');
         return;
     }
 
-    // ---------- DOM ELEMENT REFERENCES ----------
     const dom = {
         main: document.getElementById('mainContent'),
         homeBtn: document.getElementById('homeBtn'),
@@ -41,14 +32,35 @@
         pageSubtitle: document.getElementById('pageSubtitle')
     };
 
+    // ---------- STATE ----------
+    const state = {
+        // multi‑section support
+        sections: chapterData.sections || null,
+        activeSectionId: null,
+        activeSection: null,
+
+        // per‑section data
+        quizData: [],
+        mistakes: [],
+        qIndex: 0,
+        score: 0,
+        flashData: [],
+        fIndex: 0,
+        criticalData: [],
+        criticalIndex: 0,
+        criticalScore: 0,
+
+        stats: storage.load()
+    };
+
     // ---------- UTILITIES ----------
     const utils = {
         shuffle: (arr) => [...arr].sort(() => Math.random() - 0.5),
         safeScrollTop: () => {
-            window.scrollTo(0, 0);
+            window.scrollTo(0,0);
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
-            setTimeout(() => window.scrollTo(0, 0), 20);
+            setTimeout(() => window.scrollTo(0,0), 20);
         },
         escapeHTML: (str) => str.replace(/[&<>"]/g, (c) => {
             if(c === '&') return '&amp;';
@@ -56,61 +68,102 @@
             if(c === '>') return '&gt;';
             if(c === '"') return '&quot;';
             return c;
-        })
+        }),
+        getSection: (id) => {
+            if (!state.sections) return null;
+            return state.sections.find(s => s.id === id);
+        }
     };
 
-    // ---------- CENTRAL STATE (per session) ----------
-    const state = {
-        quizData: [],          // shuffled & sliced quiz questions
-        mistakes: [],         // { question, correctAnswer, rationale }
-        qIndex: 0,
-        score: 0,
-        flashData: [],        // reference to chapterData.flashcards (not copied)
-        fIndex: 0,
-        criticalData: [],    // reference to chapterData.critical
-        criticalIndex: 0,
-        criticalScore: 0,
-        stats: storage.load()
-    };
-
-    // ---------- HEADER CONTROLLER ----------
+    // ---------- HEADER ----------
     function updateHeader(title, subtitle = '', showBack = true) {
         if (dom.pageTitle) dom.pageTitle.innerText = title || chapterData.shortTitle || 'DCAS CPG';
         if (dom.pageSubtitle) dom.pageSubtitle.innerText = subtitle || '';
         if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';
     }
 
-    // ---------- RENDER FUNCTIONS (all receive chapterData) ----------
+    // ---------- RENDER SECTION TABS (if multi‑section) ----------
+    function renderSectionTabs(activeId) {
+        if (!state.sections || state.sections.length <= 1) return '';
+        return `
+            <div style="display:flex; gap:10px; margin-bottom:20px; overflow-x:auto; padding-bottom:5px;">
+                ${state.sections.map(s => `
+                    <button class="section-tab ${s.id === activeId ? 'active-tab' : ''}" 
+                            data-section-id="${s.id}" 
+                            style="background:${s.id === activeId ? '#0056b3' : 'rgba(255,255,255,0.2)'}; 
+                                   color:white; border:none; border-radius:30px; 
+                                   padding:10px 20px; font-weight:600; cursor:pointer; 
+                                   white-space:nowrap;">
+                        ${s.shortTitle}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    // ---------- SWITCH SECTION (load data) ----------
+    function switchSection(sectionId) {
+        const section = utils.getSection(sectionId);
+        if (!section) return;
+        state.activeSectionId = sectionId;
+        state.activeSection = section;
+        // reset per‑section state
+        state.quizData = [];
+        state.mistakes = [];
+        state.qIndex = 0;
+        state.score = 0;
+        state.flashData = section.flashcards || [];
+        state.fIndex = 0;
+        state.criticalData = section.critical || [];
+        state.criticalIndex = 0;
+        state.criticalScore = 0;
+
+        // re-render current view based on URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const view = urlParams.get('view') || 'summary';
+        if (view === 'summary') render.summary();
+        else if (view === 'flashcards') render.flashcards();
+        else if (view === 'quiz') render.quizSetup();
+        else if (view === 'critical') render.criticalGame();
+        else render.summary();
+    }
+
+    // ---------- RENDER FUNCTIONS ----------
     const render = {
-        // ----- SUMMARY -----
-        summary: function(data) {
+        summary: function() {
+            const section = state.activeSection;
+            if (!section) return;
+            const tabs = renderSectionTabs(section.id);
             const html = `
                 <div class="section active">
-                    ${data.summary || '<div class="sum-card">No summary available.</div>'}
+                    ${tabs}
+                    ${section.summary || '<div class="sum-card">No summary available.</div>'}
                     <button class="control-btn" data-action="backHome" style="width:100%; margin-top:20px;">← Back to Chapters</button>
                 </div>
             `;
             dom.main.innerHTML = html;
-            updateHeader(data.shortTitle, 'Summary', true);
+            updateHeader(section.shortTitle, 'Summary', true);
             utils.safeScrollTop();
         },
 
-        // ----- FLASHCARDS -----
-        flashcards: function(data) {
-            if (!data.flashcards || !data.flashcards.length) {
+        flashcards: function() {
+            const section = state.activeSection;
+            if (!section) return;
+            if (!state.flashData.length) {
                 dom.main.innerHTML = '<div class="sum-card">No flashcards available.</div>';
                 return;
             }
-            state.flashData = data.flashcards;
             state.fIndex = 0;
             this._renderFlashcard();
-            updateHeader(data.shortTitle, 'Flashcards', true);
+            updateHeader(section.shortTitle, 'Flashcards', true);
         },
 
         _renderFlashcard: function() {
             if (!state.flashData.length) return;
             const card = state.flashData[state.fIndex];
+            const tabs = renderSectionTabs(state.activeSectionId);
             const html = `
+                ${tabs}
                 <div style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 15px;" id="fc-progress">
                     Card ${state.fIndex+1} of ${state.flashData.length}
                 </div>
@@ -149,34 +202,36 @@
             utils.safeScrollTop();
         },
 
-        // ----- QUIZ SETUP -----
-        quizSetup: function(data) {
-            if (!data.quiz || !data.quiz.length) {
+        quizSetup: function() {
+            const section = state.activeSection;
+            if (!section) return;
+            if (!section.quiz || !section.quiz.length) {
                 dom.main.innerHTML = '<div class="sum-card">No quiz questions available.</div>';
                 return;
             }
+            const tabs = renderSectionTabs(section.id);
             const html = `
+                ${tabs}
                 <div class="quiz-setup-container">
-                    <h2 style="color:#0056b3;">Quiz: ${data.shortTitle}</h2>
+                    <h2 style="color:#0056b3;">Quiz: ${section.shortTitle}</h2>
                     <p style="color:#666;">Select number of questions</p>
                     <div class="setup-grid">
                         <button class="setup-btn" data-quiz-size="10">10 Questions <span>→</span></button>
                         <button class="setup-btn" data-quiz-size="20">20 Questions <span>→</span></button>
                         <button class="setup-btn" data-quiz-size="30">30 Questions <span>→</span></button>
-                        <button class="setup-btn challenge" data-quiz-size="${data.quiz.length}">All (${data.quiz.length}) <span>→</span></button>
+                        <button class="setup-btn challenge" data-quiz-size="${section.quiz.length}">All (${section.quiz.length}) <span>→</span></button>
                     </div>
                     <button data-action="backHome" style="margin-top:30px; background:none; border:none; color:#666; text-decoration:underline; cursor:pointer;">Cancel</button>
                 </div>
             `;
             dom.main.innerHTML = html;
-            updateHeader('Quiz Setup', data.shortTitle, true);
+            updateHeader('Quiz Setup', section.shortTitle, true);
             utils.safeScrollTop();
         },
 
-        // ----- QUIZ GAME -----
         quizGame: function() {
             if (!state.quizData.length) {
-                this.quizSetup(chapterData);
+                render.quizSetup();
                 return;
             }
             const q = state.quizData[state.qIndex];
@@ -184,14 +239,16 @@
             const optionsHtml = q.options.map((opt, idx) => 
                 `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
             ).join('');
+            const tabs = renderSectionTabs(state.activeSectionId);
             const html = `
+                ${tabs}
                 <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:rgba(255,255,255,0.9);">
                     <span>${progress}</span>
                     <span>Score: <strong style="color:#fff;" id="currentScore">${state.score}</strong></span>
                 </div>
                 <div class="quiz-container">
                     ${q.image ? `<div style="text-align:center; margin-bottom:20px;">
-                        <img src="${q.image}" alt="ECG rhythm" style="max-width:100%; max-height:200px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+                        <img src="${q.image}" alt="ECG" style="max-width:100%; max-height:200px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
                     </div>` : ''}
                     <div style="font-size:1.15rem; font-weight:600; margin-bottom:20px; color:#222;">${utils.escapeHTML(q.q)}</div>
                     <div class="quiz-options" id="quizOptionsContainer">${optionsHtml}</div>
@@ -203,17 +260,17 @@
             utils.safeScrollTop();
         },
 
-        // ----- CRITICAL SCENARIOS -----
-        criticalGame: function(data) {
-            if (!data.critical || !data.critical.length) {
+        criticalGame: function() {
+            const section = state.activeSection;
+            if (!section) return;
+            if (!state.criticalData || !state.criticalData.length) {
                 dom.main.innerHTML = '<div class="sum-card">No critical scenarios available.</div>';
                 return;
             }
-            state.criticalData = data.critical;
             state.criticalIndex = 0;
             state.criticalScore = 0;
             this._renderCriticalQuestion();
-            updateHeader('Critical Scenarios', data.shortTitle, true);
+            updateHeader('Critical Scenarios', section.shortTitle, true);
         },
 
         _renderCriticalQuestion: function() {
@@ -221,7 +278,9 @@
             const optionsHtml = q.options.map((opt, idx) => 
                 `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
             ).join('');
+            const tabs = renderSectionTabs(state.activeSectionId);
             const html = `
+                ${tabs}
                 <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
                     <span style="color:white;">Scenario ${state.criticalIndex+1}/${state.criticalData.length}</span>
                     <span style="color:white;">Score: <strong>${state.criticalScore}</strong></span>
@@ -241,17 +300,19 @@
             utils.safeScrollTop();
         },
 
-        // ----- STATS (global) -----
+        // ---------- STATS PAGE (global, across chapters) ----------
         stats: function() {
             const s = state.stats;
             let chapStatsHtml = '';
             for (let chId in s.chapters) {
                 const ch = s.chapters[chId];
                 const avg = ch.totalMax ? Math.round((ch.totalScore / ch.totalMax) * 100) : 0;
-                chapStatsHtml += `<div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
-                    <span>Chapter ${chId}</span>
-                    <strong>${avg}% (${ch.attempts} attempts)</strong>
-                </div>`;
+                chapStatsHtml += `
+                    <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
+                        <span>Chapter ${chId}</span>
+                        <strong>${avg}% (${ch.attempts} attempts)</strong>
+                    </div>
+                `;
             }
             const critAcc = s.critical.total ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;
             const html = `
@@ -262,13 +323,13 @@
                             <span>Total quiz attempts</span>
                             <strong>${s.totalAttempts}</strong>
                         </div>
-                        ${chapStatsHtml}
+                        ${chapStatsHtml || '<p style="margin-top:10px;">No chapter data yet.</p>'}
                         <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
                             <span>Critical accuracy</span>
-                            <strong>${critAcc}%</strong>
+                            <strong>${critAcc}% (${s.critical.correct || 0}/${s.critical.total || 0})</strong>
                         </div>
                         <div style="display:flex; justify-content:space-between; padding:12px;">
-                            <span>Mistakes recorded</span>
+                            <span>Mistakes recorded (this session)</span>
                             <strong>${state.mistakes.length}</strong>
                         </div>
                     </div>
@@ -280,7 +341,7 @@
             utils.safeScrollTop();
         },
 
-        // ----- REVIEW MISTAKES -----
+        // ---------- REVIEW MISTAKES ----------
         reviewMistakes: function() {
             if (!state.mistakes.length) {
                 dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';
@@ -303,20 +364,23 @@
     // ---------- QUIZ ENGINE ----------
     const quizEngine = {
         init: function(size) {
-            if (!chapterData.quiz) return;
-            state.quizData = utils.shuffle(chapterData.quiz).slice(0, size);
+            const section = state.activeSection;
+            if (!section || !section.quiz) return;
+            state.quizData = utils.shuffle(section.quiz).slice(0, size);
             state.qIndex = 0;
             state.score = 0;
-            // increment global attempts counter
             state.stats.totalAttempts = (state.stats.totalAttempts || 0) + 1;
             storage.save(state.stats);
             render.quizGame();
         },
+
         handleAnswer: function(selectedIdx, btn) {
             const q = state.quizData[state.qIndex];
             const isCorrect = selectedIdx === q.correct;
-            if (isCorrect) state.score++;
-            else {
+            if (isCorrect) {
+                state.score++;
+            } else {
+                // store mistake
                 state.mistakes.push({
                     question: q.q,
                     correctAnswer: q.options[q.correct],
@@ -325,7 +389,7 @@
             }
             // disable all options
             document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-            // highlight correct/wrong
+            // highlight
             btn.classList.add(isCorrect ? 'correct' : 'wrong');
             if (!isCorrect) {
                 const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
@@ -335,13 +399,17 @@
             const fb = document.getElementById('quizFeedback');
             if (fb) {
                 fb.style.display = 'block';
-                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong><p>${q.explanation}</p>`;
+                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
+                                <p style="margin-top:8px;">${q.explanation}</p>`;
             }
+            // show next button
             const nextBtn = document.getElementById('nextQuizBtn');
             if (nextBtn) nextBtn.style.display = 'block';
+            // update score display
             const scoreEl = document.getElementById('currentScore');
             if (scoreEl) scoreEl.innerText = state.score;
         },
+
         next: function() {
             state.qIndex++;
             if (state.qIndex < state.quizData.length) {
@@ -407,6 +475,7 @@
             const nextBtn = document.getElementById('nextCriticalBtn');
             if (nextBtn) nextBtn.style.display = 'block';
         },
+
         next: function() {
             state.criticalIndex++;
             if (state.criticalIndex < state.criticalData.length) {
@@ -427,83 +496,167 @@
         }
     };
 
-    // ---------- EVENT DELEGATION (single listener) ----------
+    // ---------- ROUTER ----------
+    const router = {
+        navigate: function(route, param, sectionId) {
+            if (!route) route = 'home';
+            let hash = route === 'home' ? '#home' : `#${route}`;
+            if (param) hash += `/${param}`;
+            if (sectionId) hash += `?section=${sectionId}`;
+            location.hash = hash;
+        },
+        handle: function() {
+            const hash = location.hash.slice(1) || 'home';
+            const [route, param] = hash.split('/');
+            const query = new URLSearchParams(hash.includes('?') ? hash.split('?')[1] : '');
+            const sectionId = query.get('section');
+
+            if (route === 'home') {
+                window.location.href = '../index.html';
+                return;
+            }
+
+            // Single‑section mode (backward compatibility)
+            if (!state.sections) {
+                // assume chapterData has direct quiz/flashcards etc.
+                if (!state.activeSection) {
+                    // create a pseudo‑section
+                    state.activeSection = {
+                        id: 'main',
+                        shortTitle: chapterData.shortTitle || 'Chapter',
+                        summary: chapterData.summary,
+                        quiz: chapterData.quiz,
+                        flashcards: chapterData.flashcards,
+                        critical: chapterData.critical
+                    };
+                    state.activeSectionId = 'main';
+                    state.flashData = state.activeSection.flashcards || [];
+                    state.criticalData = state.activeSection.critical || [];
+                }
+                if (route === 'summary') render.summary();
+                else if (route === 'flashcards') render.flashcards();
+                else if (route === 'quiz') render.quizSetup();
+                else if (route === 'critical') render.criticalGame();
+                else if (route === 'stats') render.stats();
+                else if (route === 'reviewMistakes') render.reviewMistakes();
+                else render.summary();
+                return;
+            }
+
+            // Multi‑section mode
+            if (!state.activeSection) {
+                const initialSectionId = sectionId || (state.sections[0] ? state.sections[0].id : null);
+                if (initialSectionId) {
+                    switchSection(initialSectionId);
+                    if (!sectionId) {
+                        const newUrl = `#${route}/${param}?section=${initialSectionId}`;
+                        location.replace(newUrl);
+                    }
+                }
+            }
+
+            // Render view based on route
+            if (route === 'summary') render.summary();
+            else if (route === 'flashcards') render.flashcards();
+            else if (route === 'quiz') render.quizSetup();
+            else if (route === 'critical') render.criticalGame();
+            else if (route === 'stats') render.stats();
+            else if (route === 'reviewMistakes') render.reviewMistakes();
+            else render.summary();
+        }
+    };
+
+    // ---------- EVENT DELEGATION ----------
     document.addEventListener('click', function(e) {
         const target = e.target.closest('button');
         if (!target) return;
         const action = target.dataset.action;
         const size = target.dataset.quizSize;
+        const sectionId = target.dataset.sectionId;
+        const flash = target.dataset.flash;
 
-        // Navigation / actions
+        // Section tab switching
+        if (sectionId) {
+            e.preventDefault();
+            switchSection(sectionId);
+            const url = new URL(window.location.href);
+            url.searchParams.set('section', sectionId);
+            window.history.replaceState({}, '', url);
+            return;
+        }
+
+        // Navigation actions
         if (action === 'backHome') {
-            window.location.href = '../index.html';  // assumes chapter HTML is in /chapters/
+            window.location.href = '../index.html';
+            return;
         }
-        else if (action === 'stats') {
-            render.stats();
+        if (action === 'stats') {
+            router.navigate('stats');
+            return;
         }
-        else if (action === 'reviewMistakes') {
-            render.reviewMistakes();
+        if (action === 'reviewMistakes') {
+            router.navigate('reviewMistakes');
+            return;
         }
+
         // Quiz size selection
-        else if (target.classList.contains('setup-btn') && size) {
+        if (target.classList.contains('setup-btn') && size) {
             quizEngine.init(parseInt(size, 10));
+            return;
         }
+
         // Quiz answer
-        else if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
+        if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             quizEngine.handleAnswer(idx, target);
+            return;
         }
+
         // Critical answer
-        else if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
+        if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             criticalEngine.handleAnswer(idx, target);
+            return;
         }
+
         // Next question / critical
-        else if (target.id === 'nextQuizBtn') {
+        if (target.id === 'nextQuizBtn') {
             quizEngine.next();
+            return;
         }
-        else if (target.id === 'nextCriticalBtn') {
+        if (target.id === 'nextCriticalBtn') {
             criticalEngine.next();
+            return;
         }
+
         // Flashcard navigation
-        else if (target.dataset.flash === 'prev') {
+        if (flash === 'prev') {
             if (state.fIndex > 0) state.fIndex--;
             render._renderFlashcard();
+            return;
         }
-        else if (target.dataset.flash === 'next') {
+        if (flash === 'next') {
             if (state.fIndex < state.flashData.length - 1) state.fIndex++;
             render._renderFlashcard();
+            return;
         }
     });
 
-    // ---------- HOME BUTTON HANDLER (navigate to main index) ----------
-    if (dom.homeBtn) {
-        dom.homeBtn.addEventListener('click', function() {
-            window.location.href = '../index.html';
-        });
-    }
-
-    // ---------- INITIALISE PAGE BASED ON URL QUERY PARAMETER ----------
+    // ---------- INIT ----------
     function init() {
-        // Load latest stats
         state.stats = storage.load();
-
-        // Determine which view to render
-        const urlParams = new URLSearchParams(window.location.search);
-        const view = urlParams.get('view') || 'summary'; // default to summary
-
-        if (view === 'summary') {
-            render.summary(chapterData);
-        } else if (view === 'flashcards') {
-            render.flashcards(chapterData);
-        } else if (view === 'quiz') {
-            render.quizSetup(chapterData);
-        } else if (view === 'critical') {
-            render.criticalGame(chapterData);
+        window.addEventListener('hashchange', router.handle);
+        if (!location.hash || location.hash === '#') {
+            const defaultSection = state.sections ? state.sections[0].id : null;
+            router.navigate('summary', chapterData.id, defaultSection);
         } else {
-            render.summary(chapterData);
+            router.handle();
+        }
+        if (dom.homeBtn) {
+            dom.homeBtn.addEventListener('click', () => window.location.href = '../index.html');
         }
     }
 
     init();
+    window.app = { navigate: router.navigate, state };
 })();
