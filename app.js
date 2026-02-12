@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (FIXED SECTION LOADING) ========== */
+/* ========== app.js – DCAS CPG 2025 (FIXED BACK BUTTON + SECTION LOADING) ========== */
 (function(){
     "use strict";
 
@@ -76,6 +76,11 @@
         setQueryParam: (param, value) => {
             const url = new URL(window.location.href);
             url.searchParams.set(param, value);
+            window.history.pushState({}, '', url); // use pushState to enable back button
+        },
+        replaceQueryParam: (param, value) => {
+            const url = new URL(window.location.href);
+            url.searchParams.set(param, value);
             window.history.replaceState({}, '', url);
         }
     };
@@ -107,9 +112,9 @@
     }
 
     // ---------- SWITCH SECTION ----------
-    function switchSection(sectionId) {
+    function switchSection(sectionId, updateUrl = true) {
         const section = utils.getSection(sectionId);
-        if (!section) return;
+        if (!section) return false;
         
         state.activeSectionId = sectionId;
         state.activeSection = section;
@@ -125,8 +130,9 @@
         state.criticalIndex = 0;
         state.criticalScore = 0;
 
-        // Update URL with section
-        utils.setQueryParam('section', sectionId);
+        if (updateUrl) {
+            utils.setQueryParam('section', sectionId); // pushState – back button works
+        }
 
         // Re-render current view
         const currentView = utils.getQueryParam('view') || 'summary';
@@ -135,13 +141,18 @@
         else if (currentView === 'quiz') render.quizSetup();
         else if (currentView === 'critical') render.criticalGame();
         else render.summary();
+        
+        return true;
     }
 
-    // ---------- RENDER FUNCTIONS (unchanged) ----------
+    // ---------- RENDER FUNCTIONS (with safety checks) ----------
     const render = {
         summary: function() {
             const section = state.activeSection;
-            if (!section) { console.error('No active section'); return; }
+            if (!section) { 
+                console.error('No active section for summary');
+                return;
+            }
             const tabs = renderSectionTabs(section.id);
             const html = `
                 <div class="section active">
@@ -156,7 +167,10 @@
         },
         flashcards: function() {
             const section = state.activeSection;
-            if (!section) { console.error('No active section'); return; }
+            if (!section) { 
+                console.error('No active section for flashcards');
+                return;
+            }
             if (!state.flashData.length) {
                 dom.main.innerHTML = '<div class="sum-card">No flashcards available.</div>';
                 return;
@@ -210,7 +224,10 @@
         },
         quizSetup: function() {
             const section = state.activeSection;
-            if (!section) { console.error('No active section'); return; }
+            if (!section) { 
+                console.error('No active section for quiz setup');
+                return;
+            }
             if (!section.quiz || !section.quiz.length) {
                 dom.main.innerHTML = '<div class="sum-card">No quiz questions available.</div>';
                 return;
@@ -266,7 +283,10 @@
         },
         criticalGame: function() {
             const section = state.activeSection;
-            if (!section) { console.error('No active section'); return; }
+            if (!section) { 
+                console.error('No active section for critical');
+                return;
+            }
             if (!state.criticalData || !state.criticalData.length) {
                 dom.main.innerHTML = '<div class="sum-card">No critical scenarios available.</div>';
                 return;
@@ -302,27 +322,225 @@
             dom.main.innerHTML = html;
             utils.safeScrollTop();
         },
-        stats: function() { /* ... unchanged – full version from previous answer ... */ },
-        reviewMistakes: function() { /* ... unchanged ... */ }
+        stats: function() {
+            const s = state.stats;
+            let chapStatsHtml = '';
+            for (let chId in s.chapters) {
+                const ch = s.chapters[chId];
+                const avg = ch.totalMax ? Math.round((ch.totalScore / ch.totalMax) * 100) : 0;
+                chapStatsHtml += `
+                    <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
+                        <span>Chapter ${chId}</span>
+                        <strong>${avg}% (${ch.attempts} attempts)</strong>
+                    </div>
+                `;
+            }
+            const critAcc = s.critical.total ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;
+            const html = `
+                <div class="stats-card">
+                    <h2 style="color:#0056b3;">📊 Your Performance</h2>
+                    <div style="margin-top:20px;">
+                        <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px;">
+                            <span>Total quiz attempts</span>
+                            <strong>${s.totalAttempts}</strong>
+                        </div>
+                        ${chapStatsHtml || '<p style="margin-top:10px;">No chapter data yet.</p>'}
+                        <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
+                            <span>Critical accuracy</span>
+                            <strong>${critAcc}% (${s.critical.correct || 0}/${s.critical.total || 0})</strong>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; padding:12px;">
+                            <span>Mistakes recorded (this session)</span>
+                            <strong>${state.mistakes.length}</strong>
+                        </div>
+                    </div>
+                    <button class="control-btn" data-action="backHome" style="width:100%; margin-top:30px;">← Back to Chapters</button>
+                </div>
+            `;
+            dom.main.innerHTML = html;
+            updateHeader('Statistics', '', true);
+            utils.safeScrollTop();
+        },
+        reviewMistakes: function() {
+            if (!state.mistakes.length) {
+                dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';
+                return;
+            }
+            let items = state.mistakes.map(m => `
+                <div class="mistake-item">
+                    <div class="mistake-question">❓ ${utils.escapeHTML(m.question)}</div>
+                    <div class="mistake-answer">✅ Correct: ${utils.escapeHTML(m.correctAnswer)}</div>
+                    <div class="mistake-rationale">📘 ${utils.escapeHTML(m.rationale)}</div>
+                </div>
+            `).join('');
+            const html = `<div class="sum-card"><h3>📝 Mistakes Review</h3>${items}<button class="control-btn" data-action="backHome" style="width:100%; margin-top:20px;">← Back</button></div>`;
+            dom.main.innerHTML = html;
+            updateHeader('Mistakes', '', true);
+            utils.safeScrollTop();
+        }
     };
 
-    // ---------- QUIZ ENGINE (unchanged) ----------
-    const quizEngine = { /* ... full version from previous answer ... */ };
+    // ---------- QUIZ ENGINE ----------
+    const quizEngine = {
+        init: function(size) {
+            const section = state.activeSection;
+            if (!section || !section.quiz) return;
+            state.quizData = utils.shuffle(section.quiz).slice(0, size);
+            state.qIndex = 0;
+            state.score = 0;
+            state.stats.totalAttempts = (state.stats.totalAttempts || 0) + 1;
+            storage.save(state.stats);
+            render.quizGame();
+        },
+        handleAnswer: function(selectedIdx, btn) {
+            const q = state.quizData[state.qIndex];
+            const isCorrect = selectedIdx === q.correct;
+            if (isCorrect) {
+                state.score++;
+            } else {
+                state.mistakes.push({
+                    question: q.q,
+                    correctAnswer: q.options[q.correct],
+                    rationale: q.explanation
+                });
+            }
+            document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+            btn.classList.add(isCorrect ? 'correct' : 'wrong');
+            if (!isCorrect) {
+                const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
+                if (correctBtn) correctBtn.classList.add('correct');
+            }
+            const fb = document.getElementById('quizFeedback');
+            if (fb) {
+                fb.style.display = 'block';
+                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
+                                <p style="margin-top:8px;">${q.explanation}</p>`;
+            }
+            const nextBtn = document.getElementById('nextQuizBtn');
+            if (nextBtn) nextBtn.style.display = 'block';
+            const scoreEl = document.getElementById('currentScore');
+            if (scoreEl) scoreEl.innerText = state.score;
+        },
+        next: function() {
+            state.qIndex++;
+            if (state.qIndex < state.quizData.length) {
+                render.quizGame();
+            } else {
+                const chapterId = chapterData.id || 'c0';
+                if (!state.stats.chapters[chapterId]) {
+                    state.stats.chapters[chapterId] = { attempts: 0, totalScore: 0, totalMax: 0 };
+                }
+                const chap = state.stats.chapters[chapterId];
+                chap.attempts += 1;
+                chap.totalScore += state.score;
+                chap.totalMax += state.quizData.length;
+                storage.save(state.stats);
+                const percentage = Math.round((state.score / state.quizData.length) * 100);
+                let msg = 'Keep studying!';
+                if (percentage >= 80) msg = 'Excellent!';
+                else if (percentage >= 60) msg = 'Good effort.';
+                const reviewBtn = state.mistakes.length ? 
+                    `<button class="control-btn" data-action="reviewMistakes" style="margin-top:15px;">📝 Review ${state.mistakes.length} Mistakes</button>` : '';
+                const html = `
+                    <div class="quiz-setup-container" style="text-align:center;">
+                        <h2 style="color:#0056b3;">Quiz Complete!</h2>
+                        <div style="font-size:3.5rem; font-weight:bold; color:#0056b3; margin:20px 0;">${percentage}%</div>
+                        <p style="color:#666;">${msg}</p>
+                        ${reviewBtn}
+                        <button class="control-btn" data-action="backHome" style="margin-top:20px;">← Home</button>
+                    </div>
+                `;
+                dom.main.innerHTML = html;
+                utils.safeScrollTop();
+            }
+        }
+    };
 
-    // ---------- CRITICAL ENGINE (unchanged) ----------
-    const criticalEngine = { /* ... full version from previous answer ... */ };
+    // ---------- CRITICAL ENGINE ----------
+    const criticalEngine = {
+        handleAnswer: function(selectedIdx, btn) {
+            const q = state.criticalData[state.criticalIndex];
+            const isCorrect = selectedIdx === q.correct;
+            if (isCorrect) {
+                state.criticalScore++;
+                state.stats.critical.correct = (state.stats.critical.correct || 0) + 1;
+            }
+            state.stats.critical.total = (state.stats.critical.total || 0) + 1;
+            storage.save(state.stats);
 
-    // ---------- INITIALISE – FIXED SECTION LOADING ----------
+            document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+            btn.classList.add(isCorrect ? 'correct' : 'wrong');
+            if (!isCorrect) {
+                const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
+                if (correctBtn) correctBtn.classList.add('correct');
+            }
+            const fb = document.getElementById('criticalFeedback');
+            if (fb) {
+                fb.style.display = 'block';
+                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
+                                <p style="margin-top:8px;">${q.explanation}</p>
+                                ${q.kpi ? `<div class="highlight-box" style="margin-top:10px;">🎯 KPI: ${q.kpi}</div>` : ''}`;
+            }
+            const nextBtn = document.getElementById('nextCriticalBtn');
+            if (nextBtn) nextBtn.style.display = 'block';
+        },
+        next: function() {
+            state.criticalIndex++;
+            if (state.criticalIndex < state.criticalData.length) {
+                render._renderCriticalQuestion();
+            } else {
+                const accuracy = Math.round((state.criticalScore / state.criticalData.length) * 100);
+                const html = `
+                    <div class="quiz-setup-container" style="text-align:center;">
+                        <h2 style="color:#0056b3;">Critical scenarios finished</h2>
+                        <div style="font-size:3rem; font-weight:bold; color:#0056b3; margin:20px 0;">${accuracy}%</div>
+                        <p>Correct: ${state.criticalScore}/${state.criticalData.length}</p>
+                        <button class="control-btn" data-action="backHome" style="margin-top:20px;">← Home</button>
+                    </div>
+                `;
+                dom.main.innerHTML = html;
+                utils.safeScrollTop();
+            }
+        }
+    };
+
+    // ---------- HANDLE BACK/FORWARD NAVIGATION ----------
+    function handlePopState() {
+        // Re-read query params and re-render
+        const view = utils.getQueryParam('view') || 'summary';
+        const sectionId = utils.getQueryParam('section');
+        
+        if (sectionId && state.sections) {
+            // Try to switch to the section from URL (don't push another history state)
+            const success = switchSection(sectionId, false); // false = don't push again
+            if (!success) {
+                // Fallback to first section if invalid
+                if (state.sections.length > 0) {
+                    switchSection(state.sections[0].id, false);
+                }
+            }
+        }
+        
+        // Render the view based on URL
+        if (view === 'summary') render.summary();
+        else if (view === 'flashcards') render.flashcards();
+        else if (view === 'quiz') render.quizSetup();
+        else if (view === 'critical') render.criticalGame();
+        else if (view === 'stats') render.stats();
+        else if (view === 'reviewMistakes') render.reviewMistakes();
+        else render.summary();
+    }
+
+    // ---------- INITIALISE ----------
     function init() {
         state.stats = storage.load();
 
-        // ----- FORCE ACTIVE SECTION -----
+        // ----- ACTIVATE SECTION (for multi-section chapters) -----
         if (state.sections && state.sections.length > 0) {
             let sectionId = utils.getQueryParam('section');
-            // If no section in URL, take the first section and update URL
             if (!sectionId) {
                 sectionId = state.sections[0].id;
-                utils.setQueryParam('section', sectionId);
+                utils.replaceQueryParam('section', sectionId); // replace, not push
             }
             const section = utils.getSection(sectionId);
             if (section) {
@@ -331,16 +549,16 @@
                 state.flashData = section.flashcards || [];
                 state.criticalData = section.critical || [];
             } else {
-                // Fallback to first section if invalid ID
+                // fallback to first section
                 const fallback = state.sections[0];
                 state.activeSectionId = fallback.id;
                 state.activeSection = fallback;
                 state.flashData = fallback.flashcards || [];
                 state.criticalData = fallback.critical || [];
-                utils.setQueryParam('section', fallback.id);
+                utils.replaceQueryParam('section', fallback.id);
             }
         } else {
-            // Single-section mode (backward compatibility)
+            // Single-section mode
             state.activeSection = {
                 id: 'main',
                 shortTitle: chapterData.shortTitle || 'Chapter',
@@ -357,7 +575,7 @@
         // ----- DETERMINE VIEW -----
         let view = utils.getQueryParam('view') || 'summary';
         if (!utils.getQueryParam('view')) {
-            utils.setQueryParam('view', view);
+            utils.replaceQueryParam('view', view);
         }
 
         // ----- RENDER -----
@@ -368,9 +586,12 @@
         else if (view === 'stats') render.stats();
         else if (view === 'reviewMistakes') render.reviewMistakes();
         else render.summary();
+
+        // ----- BACK BUTTON LISTENER -----
+        window.addEventListener('popstate', handlePopState);
     }
 
-    // ---------- EVENT DELEGATION (unchanged) ----------
+    // ---------- EVENT DELEGATION ----------
     document.addEventListener('click', function(e) {
         const target = e.target.closest('button');
         if (!target) return;
@@ -381,7 +602,7 @@
 
         if (sectionId) {
             e.preventDefault();
-            switchSection(sectionId);
+            switchSection(sectionId, true); // pushState for back button
             return;
         }
         if (action === 'backHome') {
@@ -430,8 +651,6 @@
         }
     });
 
-    // ---------- START ----------
     init();
-
     window.app = { state };
 })();
