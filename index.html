@@ -1,324 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DCAS CPG 2025 Review Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Chapters</title>
+    <style>
+        /* ---------- AERO VISTA GLASS THEME (shared) ---------- */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+            --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            --text-dark: #1a2a3a;
+            --text-light: #ffffff;
+            --accent-blue: #0056b3;
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--primary-gradient);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            padding-top: env(safe-area-inset-top);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            touch-action: manipulation;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header-text h1 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .header-text p { margin: 2px 0 0; font-size: 0.85rem; opacity: 0.9; font-weight: 300; }
 
-<!-- Load Content First -->
-<script src="content.js"></script>
+        main {
+            flex: 1 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            padding-bottom: 80px;
+        }
 
-<style>
-/* ======= CLEAN BASE STYLES ======= */
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f1c3f;
-    color: #1a2a3a;
-}
+        .menu-grid { display: grid; gap: 20px; }
+        .menu-card, .stats-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            padding: 25px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .menu-card::before {
+            content: ''; position: absolute; top: 0; left: -50%; width: 100%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-25deg); pointer-events: none;
+        }
+        .menu-card h2 { margin: 0 0 8px; font-size: 1.3rem; color: #004e92; text-shadow: 0 1px 0 rgba(255,255,255,0.8); }
+        .menu-card p { margin: 0 0 20px; color: #444; font-size: 0.95rem; line-height: 1.4; }
+        .status-badge {
+            display: inline-block; font-size: 0.7rem; padding: 4px 10px;
+            border-radius: 20px; background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
+            border: 1px solid #ccc; color: #555; margin-bottom: 12px;
+            font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
 
-header {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
+        .btn-action {
+            -webkit-user-select: none; user-select: none; cursor: pointer; border: none;
+            font-family: inherit; position: relative; z-index: 2; touch-action: manipulation;
+            display: inline-block;
+            padding: 12px 20px; border-radius: 12px; font-weight: 600; font-size: 0.9rem;
+            color: #333; background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
+            border: 1px solid rgba(255,255,255,0.6); transition: all 0.1s ease;
+            text-decoration: none;
+            margin: 5px 5px 0 0;
+        }
+        .btn-action:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.1); }
+        .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
+        .btn-flash { color: #0056b3; background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%); border-color: #90caf9; }
+        .btn-quiz { color: #155724; background: linear-gradient(180deg, #e8f5e9 0%, #c3e6cb 100%); border-color: #a5d6a7; }
+        .btn-critical { color: #721c24; background: linear-gradient(180deg, #f8d7da 0%, #f5c6cb 100%); border-color: #f1b0b7; }
 
-main {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-}
+        .stats-card {
+            margin-top: 20px;
+        }
+        .stat-row {
+            display: flex; justify-content: space-between; padding: 12px;
+            background: rgba(0,0,0,0.02); border-radius: 8px; margin-top: 8px;
+        }
+        .stat-label { font-weight: 600; color: #0c5460; }
+        .stat-value { font-weight: 700; color: #004085; }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-}
-
-.button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5px 0;
-    width: 100%;
-}
-
-.primary { background: #0056b3; color: white; }
-.secondary { background: #e3f2fd; }
-.disabled { opacity: 0.5; pointer-events: none; }
-.quiz-option { margin: 6px 0; }
-.correct { background: #d4edda; }
-.wrong { background: #f8d7da; }
-
-</style>
+        footer { margin-top: auto; padding: 40px; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+        a { text-decoration: none; }
+    </style>
 </head>
-
 <body>
 
 <header>
-    <div id="headerTitle">DCAS CPG 2025</div>
-    <div>
-        <button class="button secondary" id="homeBtn">Home</button>
-        <button class="button secondary" id="statsBtn">Stats</button>
+    <div class="header-text">
+        <h1>DCAS CPG 2025</h1>
+        <p>Study Platform · Multi‑Chapter</p>
     </div>
 </header>
 
-<main id="app"></main>
+<main id="mainContent">
+    <!-- Dynamic content will be injected via JavaScript -->
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · Study aid only</div>
+    <div style="margin-top:5px; opacity:0.6;">Refer to official DCAS CPG & Memos for clinical protocols.</div>
+</footer>
 
 <script>
-(function() {
-"use strict";
+    (function(){
+        "use strict";
 
-/* ================================
-   VALIDATE CONTENT STRUCTURE
-================================ */
+        // ---------- HARDCODED CHAPTER LIST (UPDATE AS YOU ADD CHAPTERS) ----------
+        const CHAPTERS = [
+            { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care", hasCritical: true },
+            { id: "c2", shortTitle: "2.1 Airway & Breathing", title: "Airway Management", hasCritical: false },
+            // Add more chapters here, e.g.:
+            // { id: "c3", shortTitle: "3.1 Chest Pain / ACS", title: "Cardiovascular", hasCritical: true },
+        ];
 
-if (!window.CPG_CONTENT) {
-    document.getElementById("app").innerHTML =
-        "<div class='card'>Content failed to load. Check content.js.</div>";
-    return;
-}
+        // ---------- STORAGE UTILITY (same as in app.js) ----------
+        const STORAGE_KEY = 'dcas_cpg_stats';
+        function loadStats() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
+            } catch(e) {
+                return { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
+            }
+        }
 
-const appContainer = document.getElementById("app");
-const headerTitle = document.getElementById("headerTitle");
+        // ---------- RENDER MAIN MENU ----------
+        function renderMenu() {
+            const stats = loadStats();
 
-/* ================================
-   ROUTING SYSTEM
-================================ */
+            // Chapter cards
+            let chaptersHtml = CHAPTERS.map(ch => {
+                const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
+                const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
+                return `
+                    <div class="menu-card">
+                        <span class="status-badge">${ch.id.toUpperCase()}</span>
+                        <h2>${ch.shortTitle}</h2>
+                        <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <a href="chapters/${ch.id}.html?view=summary" class="btn-action btn-summary">📘 Summary</a>
+                            <a href="chapters/${ch.id}.html?view=flashcards" class="btn-action btn-flash">📇 Flashcards</a>
+                            <a href="chapters/${ch.id}.html?view=quiz" class="btn-action btn-quiz">📋 Quiz</a>
+                            ${ch.hasCritical ? `<a href="chapters/${ch.id}.html?view=critical" class="btn-action btn-critical">🚨 Critical</a>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
 
-function navigate(route) {
-    window.location.hash = route;
-}
+            // Overall stats card
+            const totalAttempts = stats.totalAttempts || 0;
+            const criticalTotal = stats.critical.total || 0;
+            const criticalCorrect = stats.critical.correct || 0;
+            const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
 
-function handleRoute() {
-    const hash = window.location.hash.replace("#", "") || "home";
-    const [section, id] = hash.split("/");
+            // Mistakes count (not stored globally; we don't have it here – optional)
+            // For now, we can skip or show 0 – mistakes are per session and not persisted.
+            const mistakesCount = 0; 
 
-    switch(section) {
-        case "home":
-            renderHome();
-            break;
-        case "chapter":
-            renderChapter(id);
-            break;
-        case "summary":
-            renderSummary(id);
-            break;
-        case "quiz":
-            startQuiz(id);
-            break;
-        case "flashcards":
-            startFlashcards(id);
-            break;
-        case "stats":
-            renderStats();
-            break;
-        default:
-            renderHome();
-    }
-}
+            const statsHtml = `
+                <div class="stats-card">
+                    <h2 style="color:#0056b3;">📊 Overall Performance</h2>
+                    <div class="stat-row">
+                        <span class="stat-label">Total Quiz Attempts</span>
+                        <span class="stat-value">${totalAttempts}</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Critical Accuracy</span>
+                        <span class="stat-value">${criticalAcc}% (${criticalCorrect}/${criticalTotal})</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Mistakes to Review</span>
+                        <span class="stat-value">${mistakesCount}</span>
+                    </div>
+                    <p style="margin-top:20px; font-size:0.9rem; color:#666;">⚠️ Mistakes are not persisted across sessions – review them within each chapter quiz.</p>
+                </div>
+            `;
 
-/* ================================
-   HOME
-================================ */
+            document.getElementById('mainContent').innerHTML = `
+                <div class="menu-grid">
+                    ${chaptersHtml}
+                    ${statsHtml}
+                </div>
+            `;
+        }
 
-function renderHome() {
-    headerTitle.innerText = "DCAS CPG 2025";
-    appContainer.innerHTML = "";
-
-    CPG_CONTENT.chapters.forEach(ch => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-            <h3>${ch.title}</h3>
-            <p>${ch.desc}</p>
-            <button class="button primary">Open</button>
-        `;
-        card.querySelector("button").onclick = () => navigate("chapter/" + ch.id);
-        appContainer.appendChild(card);
-    });
-}
-
-/* ================================
-   CHAPTER MENU
-================================ */
-
-function renderChapter(id) {
-    const chapter = CPG_CONTENT.chapters.find(c => c.id === id);
-    if (!chapter) return renderHome();
-
-    headerTitle.innerText = chapter.title;
-    appContainer.innerHTML = `
-        <div class="card">
-            <h2>${chapter.title}</h2>
-            <p>${chapter.desc}</p>
-            <button class="button secondary" id="summaryBtn">Summary</button>
-            <button class="button secondary" id="flashBtn">Flashcards</button>
-            <button class="button primary" id="quizBtn">Start Quiz</button>
-        </div>
-    `;
-
-    document.getElementById("summaryBtn").onclick = () => navigate("summary/" + id);
-    document.getElementById("flashBtn").onclick = () => navigate("flashcards/" + id);
-    document.getElementById("quizBtn").onclick = () => navigate("quiz/" + id);
-}
-
-/* ================================
-   SUMMARY RENDER
-================================ */
-
-function renderSummary(id) {
-    const summary = CPG_CONTENT.summaries?.[id];
-    if (!summary) {
-        appContainer.innerHTML =
-            "<div class='card'>Summary not available.</div>";
-        return;
-    }
-
-    headerTitle.innerText = "Module Summary";
-    appContainer.innerHTML = summary;
-}
-
-/* ================================
-   QUIZ ENGINE
-================================ */
-
-let quizState = { data: [], index: 0, score: 0 };
-
-function startQuiz(id) {
-    const questions = CPG_CONTENT.questions?.[id];
-    if (!questions || questions.length === 0) {
-        appContainer.innerHTML =
-            "<div class='card'>Quiz not available.</div>";
-        return;
-    }
-
-    quizState = {
-        data: [...questions].sort(() => 0.5 - Math.random()).slice(0, 10),
-        index: 0,
-        score: 0
-    };
-
-    renderQuestion();
-}
-
-function renderQuestion() {
-    const q = quizState.data[quizState.index];
-    if (!q) return renderQuizComplete();
-
-    headerTitle.innerText = "Quiz";
-
-    appContainer.innerHTML = `
-        <div class="card">
-            <h3>Q ${quizState.index + 1}</h3>
-            <p>${q.q}</p>
-            <div id="options"></div>
-            <div id="feedback"></div>
-        </div>
-    `;
-
-    const optionsDiv = document.getElementById("options");
-
-    q.options.forEach((opt, idx) => {
-        const btn = document.createElement("button");
-        btn.className = "button quiz-option";
-        btn.innerText = opt;
-        btn.onclick = () => handleAnswer(idx);
-        optionsDiv.appendChild(btn);
-    });
-}
-
-function handleAnswer(idx) {
-    const q = quizState.data[quizState.index];
-    const correct = idx === q.correct;
-
-    if (correct) quizState.score++;
-
-    quizState.index++;
-    renderQuestion();
-}
-
-function renderQuizComplete() {
-    const percent = Math.round((quizState.score / quizState.data.length) * 100);
-
-    appContainer.innerHTML = `
-        <div class="card">
-            <h2>Quiz Complete</h2>
-            <h3>${percent}%</h3>
-            <button class="button primary" onclick="location.hash='home'">
-                Back to Home
-            </button>
-        </div>
-    `;
-}
-
-/* ================================
-   FLASHCARDS
-================================ */
-
-function startFlashcards(id) {
-    const cards = CPG_CONTENT.flashcards?.[id];
-    if (!cards || cards.length === 0) {
-        appContainer.innerHTML =
-            "<div class='card'>Flashcards not available.</div>";
-        return;
-    }
-
-    let index = 0;
-
-    function renderCard() {
-        const card = cards[index];
-        appContainer.innerHTML = `
-            <div class="card">
-                <h3>${card.category}</h3>
-                <p>${card.question}</p>
-                <button class="button secondary">Flip</button>
-                <button class="button primary">Next</button>
-            </div>
-        `;
-
-        const flipBtn = appContainer.querySelectorAll("button")[0];
-        const nextBtn = appContainer.querySelectorAll("button")[1];
-
-        flipBtn.onclick = () => flipBtn.innerText = card.answer;
-        nextBtn.onclick = () => {
-            index++;
-            if (index < cards.length) renderCard();
-            else navigate("chapter/" + id);
-        };
-    }
-
-    renderCard();
-}
-
-/* ================================
-   STATS PLACEHOLDER
-================================ */
-
-function renderStats() {
-    headerTitle.innerText = "Stats";
-    appContainer.innerHTML =
-        "<div class='card'>Analytics coming soon.</div>";
-}
-
-/* ================================
-   GLOBAL EVENTS
-================================ */
-
-document.getElementById("homeBtn").onclick = () => navigate("home");
-document.getElementById("statsBtn").onclick = () => navigate("stats");
-
-window.addEventListener("hashchange", handleRoute);
-document.addEventListener("DOMContentLoaded", handleRoute);
-
-})();
+        renderMenu();
+    })();
 </script>
 
 </body>
