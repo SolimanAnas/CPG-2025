@@ -82,22 +82,39 @@
             font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
+        /* ---------- BUTTON CONTAINER FIX – CLEAN, EVEN SPACING ---------- */
+        .menu-sub-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
         .btn-action {
             -webkit-user-select: none; user-select: none; cursor: pointer; border: none;
             font-family: inherit; position: relative; z-index: 2; touch-action: manipulation;
             display: inline-block;
-            padding: 12px 20px; border-radius: 12px; font-weight: 600; font-size: 0.9rem;
-            color: #333; background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #333;
+            background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
-            border: 1px solid rgba(255,255,255,0.6); transition: all 0.1s ease;
+            border: 1px solid rgba(255,255,255,0.6);
+            transition: all 0.1s ease;
             text-decoration: none;
-            margin: 5px 5px 0 0;
+            margin: 0; /* reset margin – gap handles spacing */
         }
         .btn-action:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.1); }
         .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
         .btn-flash { color: #0056b3; background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%); border-color: #90caf9; }
         .btn-quiz { color: #155724; background: linear-gradient(180deg, #e8f5e9 0%, #c3e6cb 100%); border-color: #a5d6a7; }
         .btn-critical { color: #721c24; background: linear-gradient(180deg, #f8d7da 0%, #f5c6cb 100%); border-color: #f1b0b7; }
+
+        @media (max-width: 400px) {
+            .btn-action { padding: 8px 12px; font-size: 0.8rem; }
+        }
 
         .stats-card { margin-top: 20px; }
         .stat-row {
@@ -116,7 +133,7 @@
 <header>
     <div class="header-text">
         <h1>DCAS CPG 2025</h1>
-        <p>Clinical Practice Guidelines · Dubai Ambulance</p>   <!-- ✅ UPDATED SUBTITLE -->
+        <p>Clinical Practice Guidelines · Dubai Ambulance</p>
     </div>
 </header>
 
@@ -131,14 +148,15 @@
     (function(){
         "use strict";
 
-        // ---------- HARDCODED CHAPTER LIST (UPDATE AS YOU ADD CHAPTERS) ----------##################################################
+        // ---------- HARDCODED CHAPTER LIST – UPDATED WITH 2025 UPDATES ----------
         const CHAPTERS = [
-    { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care (complete)", hasCritical: true },
-    { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },  // ✅ NEW
-    // add more chapters here...
-];
-        
-        // ---------- STORAGE UTILITY (same as app.js) ----------
+            { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false },
+            { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care (complete)", hasCritical: true },
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },
+            // add more chapters here...
+        ];
+
+        // ---------- STORAGE UTILITY ----------
         const STORAGE_KEY = 'dcas_cpg_stats';
         function loadStats() {
             try {
@@ -161,10 +179,12 @@
                         <span class="status-badge">${ch.id.toUpperCase()}</span>
                         <h2>${ch.shortTitle}</h2>
                         <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
-                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <div class="menu-sub-options">
                             <a href="chapters/${ch.id}.html?view=summary" class="btn-action btn-summary">📘 Summary</a>
-                            <a href="chapters/${ch.id}.html?view=flashcards" class="btn-action btn-flash">📇 Flashcards</a>
-                            <a href="chapters/${ch.id}.html?view=quiz" class="btn-action btn-quiz">📋 Quiz</a>
+                            ${ch.id !== 'c0' ? `
+                                <a href="chapters/${ch.id}.html?view=flashcards" class="btn-action btn-flash">📇 Flashcards</a>
+                                <a href="chapters/${ch.id}.html?view=quiz" class="btn-action btn-quiz">📋 Quiz</a>
+                            ` : ''}
                             ${ch.hasCritical ? `<a href="chapters/${ch.id}.html?view=critical" class="btn-action btn-critical">🚨 Critical</a>` : ''}
                         </div>
                     </div>
