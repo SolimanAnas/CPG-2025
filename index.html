@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -7,67 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
     <div class="header-left">
-        <div class="header-text">
-            <h1>DCAS CPG 2025</h1>
-            <p>Clinical Review Platform</p>
-        </div>
+        <div class="header-text"><h1>DCAS CPG 2025</h1><p>Review Platform</p></div>
     </div>
-    <div class="header-right">
-        <button class="icon-btn" id="themeToggle">🌗</button>
-    </div>
+    <div class="header-right"><button class="icon-btn" id="themeToggle">🌗</button></div>
 </header>
-
-<main id="mainContent">
-    <div class="menu-grid" id="menuGrid"></div>
-</main>
-
-<footer>
-    <div>Created by Soliman Anas</div>
-</footer>
-
+<main id="mainContent"><div class="menu-grid" id="menuGrid"></div></main>
+<footer><div>Created by Soliman Anas</div></footer>
 <script>
-    // Chapter Configuration
     const CHAPTERS = [
         { id: "c0", title: "2025 Updates", desc: "What's New", file: "c0", hasSections: false },
         { id: "c1", title: "1.0 Universal Care", desc: "Foundation & Safety", file: "c1", hasSections: true },
         { id: "c2", title: "2.0 Airway", desc: "Airway Management", file: "c2", hasSections: true },
         { id: "index", title: "Full Index", desc: "All Topics", file: "c-index", hasSections: false }
     ];
-
     const grid = document.getElementById('menuGrid');
-    
-    // Render Grid
     CHAPTERS.forEach(ch => {
         const card = document.createElement('div');
         card.className = 'menu-card';
-        card.onclick = () => window.location.href = `chapters/${ch.file}.html`;
-        card.innerHTML = `
-            <h2>${ch.title}</h2>
-            <p>${ch.desc}</p>
-            <div class="menu-sub-options" style="display:flex;">
-                <button class="btn-action btn-summary" style="width:100%">Open Chapter</button>
-            </div>
-        `;
+        card.innerHTML = `<h2>${ch.title}</h2><p>${ch.desc}</p><button class="btn-action btn-summary" style="width:100%" onclick="window.location.href='chapters/${ch.file}.html'">Open Chapter</button>`;
         grid.appendChild(card);
     });
-
-    // Theme Logic
     const themeBtn = document.getElementById('themeToggle');
-    function toggleTheme() {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-    }
-    // Default to Dark Mode
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    
-    if(themeBtn) themeBtn.addEventListener('click', toggleTheme);
+    themeBtn.addEventListener('click', () => {
+        const n = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', n);
+        localStorage.setItem('theme', n);
+    });
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
 </script>
-
 </body>
 </html>
