@@ -16,7 +16,7 @@ window.CPG_DATA = {
 };
 
 function generateIndexHTML() {
-    // ---------- Complete CPG list (must match main index) ----------
+    // ---------- Complete CPG list (exactly matching main index) ----------
     const CHAPTERS = [
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
