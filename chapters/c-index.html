@@ -20,12 +20,11 @@
             
             --text-primary: #1a2a3a;
             --text-secondary: #475569;
-            --header-text: #0056b3; /* Dark blue for visibility on light bg */
+            --header-text: #0056b3;
             
             --toggle-bg: #cbd5e1;
             --toggle-active: #0056b3;
             
-            /* Button Gradients (Light Glossy) */
             --btn-grad-sum: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
             --btn-grad-flash: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
             --btn-grad-quiz: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
@@ -234,7 +233,7 @@
 </header>
 
 <main id="mainContent">
-    <!-- Content will be injected by c-index.js -->
+    <!-- Content will be injected by app.js -->
 </main>
 
 <footer>
@@ -242,9 +241,12 @@
     <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
 </footer>
 
+<!-- Load content data first, then app.js to render it -->
 <script src="../content/c-index.js"></script>
+<script src="../app.js"></script>
+
 <script>
-    // Theme toggle (same as main index)
+    // Theme toggle (same as main index) – runs after app.js but that's fine
     (function() {
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
