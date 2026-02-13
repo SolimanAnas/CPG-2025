@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Coming Soon</title>
+    <style>
+        /* ---------- AERO VISTA GLASS THEME (minimal for coming soon) ---------- */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+            --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            --text-dark: #1a2a3a;
+            --text-light: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--primary-gradient);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .home-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+            border: none;
+        }
+        .home-btn:active { background: rgba(255,255,255,0.4); transform: scale(0.95); }
+        .header-text h1 { margin: 0; font-size: 1.2rem; font-weight: 700; }
+        .header-text p { margin: 2px 0 0; font-size: 0.85rem; opacity: 0.9; }
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .sum-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .control-btn {
+            padding: 14px 35px; border-radius: 30px; font-weight: 600; color: white;
+            background: linear-gradient(to bottom, #00b4db, #0083b0);
+            border: none; cursor: pointer;
+            width: 100%;
+        }
+        footer { padding: 40px; text-align: center; color: rgba(255,255,255,0.6); }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="home-btn" id="homeBtn">←</button>
+        <div class="header-text">
+            <h1 id="pageTitle">DCAS CPG 2025</h1>
+            <p id="pageSubtitle">Coming Soon</p>
+        </div>
+    </header>
+    <main id="mainContent">
+        <!-- Content will be replaced by app.js -->
+    </main>
+    <footer>
+        <div>Created by Soliman Anas · Study aid only</div>
+    </footer>
+    <!-- No chapter data – app.js will detect and show "Coming Soon" -->
+    <script src="../app.js"></script>
+</body>
+</html>
