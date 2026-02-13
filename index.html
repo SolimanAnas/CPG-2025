@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <header>
@@ -28,7 +29,7 @@
 </footer>
 
 <script>
-    // Simple Index Logic
+    // Chapter Configuration
     const CHAPTERS = [
         { id: "c0", title: "2025 Updates", desc: "What's New", file: "c0", hasSections: false },
         { id: "c1", title: "1.0 Universal Care", desc: "Foundation & Safety", file: "c1", hasSections: true },
@@ -38,6 +39,7 @@
 
     const grid = document.getElementById('menuGrid');
     
+    // Render Grid
     CHAPTERS.forEach(ch => {
         const card = document.createElement('div');
         card.className = 'menu-card';
@@ -45,14 +47,14 @@
         card.innerHTML = `
             <h2>${ch.title}</h2>
             <p>${ch.desc}</p>
-            <div class="menu-sub-options">
-                <button class="btn-action btn-summary">Open Chapter</button>
+            <div class="menu-sub-options" style="display:flex;">
+                <button class="btn-action btn-summary" style="width:100%">Open Chapter</button>
             </div>
         `;
         grid.appendChild(card);
     });
 
-    // Theme Toggle Logic
+    // Theme Logic
     const themeBtn = document.getElementById('themeToggle');
     function toggleTheme() {
         const current = document.documentElement.getAttribute('data-theme');
@@ -60,8 +62,11 @@
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
     }
-    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
-    themeBtn.addEventListener('click', toggleTheme);
+    // Default to Dark Mode
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    if(themeBtn) themeBtn.addEventListener('click', toggleTheme);
 </script>
 
 </body>
