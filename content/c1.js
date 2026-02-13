@@ -1,567 +1,294 @@
-/* ========== Chapter 1 – Universal Care (six independent sections, fully populated) ========== */
+/* ========== Chapter 1 – Universal Care (Full Content) ========== */
+/* Source: DCAS Universal Care Guideline 2025 (CPG 1.1) */
+
 window.CPG_DATA = {
     id: "c1",
     title: "Universal Care",
     shortTitle: "1.0 Universal Care",
     sections: [
-        // ---------- SECTION 1.1: Universal Care (FULL CONTENT) ----------
+        // ============================================================
+        // 1.1 UNIVERSAL CARE (Core Assessment & Safety)
+        // ============================================================
         {
             id: "c1s1",
             shortTitle: "1.1 Universal Care",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">📘 Universal Care – Full Guideline Summary</h3>
+                    <h3 style="color:var(--primary-accent);">📘 1.1 Assessment & Vitals</h3>
                     
-                    <h4>1. SCENE SAFETY & INITIAL IMPRESSION</h4>
+                    <h4>1. [span_0](start_span)Assessment Approach[span_0](end_span)</h4>
                     <ul>
-                        <li><strong>Scene safety</strong> – always first priority (crew, patient, bystanders).</li>
-                        <li><strong>General Impression</strong> – Appearance, Work of Breathing, Circulation to skin (Pediatric Assessment Triangle).</li>
-                        <li><strong>Resource assessment</strong> – request ALS / MCI if needed.</li>
+                        [span_1](start_span)<li><strong>Trauma:</strong> C-A-B-C (Catastrophic Hemorrhage, Airway, Breathing, Circulation).[span_1](end_span)</li>
+                        [span_2](start_span)<li><strong>Medical:</strong> A-B-C (Airway, Breathing, Circulation).[span_2](end_span)</li>
+                        [span_3](start_span)<li><strong>Cardiac Arrest:</strong> C-A-B (Circulation/Compressions, Airway, Breathing).[span_3](end_span)</li>
+                        [span_4](start_span)<li><strong>General Impression:</strong> Assess Appearance, Breathing, and Activity.[span_4](end_span)</li>
                     </ul>
 
-                    <h4>2. PRIMARY SURVEY (ABCDE / C‑ABC / CAB)</h4>
+                    <h4>2. [span_5](start_span)[span_6](start_span)Primary Survey & Red Flags[span_5](end_span)[span_6](end_span)</h4>
                     <ul>
-                        <li><strong>Trauma:</strong> C‑A‑B‑C – Catastrophic haemorrhage control, C‑spine, Airway, Breathing, Circulation.</li>
-                        <li><strong>Medical:</strong> A‑B‑C – Airway, Breathing, Circulation → Disability, Exposure.</li>
-                        <li><strong>Cardiac arrest:</strong> C‑A‑B – Compressions, Airway, Breathing.</li>
-                        <li><strong>Airway:</strong> Open with head‑tilt/chin‑lift or jaw thrust (if trauma). Suction, OPA/NPA, supraglottic/ETT as indicated.</li>
-                        <li><strong>Breathing:</strong> Rate, effort, SpO₂, breath sounds. O₂ to target SpO₂ 94‑98% (88‑92% COPD). BVM if inadequate.</li>
-                        <li><strong>Circulation:</strong> Control major haemorrhage (tourniquet, hemostatic agents). Palpate pulse (carotid – unconscious adult; brachial – infant). Assess skin, CRT (<2 sec normal).</li>
-                        <li><strong>Disability:</strong> AVPU (Alert, Voice, Pain, Unresponsive). GCS (3‑15). Check blood glucose; if <70 mg/dl → Hypoglycaemia CPG. BEFAST if stroke suspected.</li>
-                        <li><strong>Exposure:</strong> Remove clothing as needed; maintain modesty and temperature.</li>
+                        <li><strong>Airway:</strong> Ensure patency; [span_7](start_span)C-spine control for trauma.[span_7](end_span)</li>
+                        [span_8](start_span)<li><strong>Breathing:</strong> Target SpO2 <strong>94-98%</strong> (88-92% for COPD).[span_8](end_span)</li>
+                        [span_9](start_span)<li><strong>Circulation:</strong> Pulse check (Carotid for unconscious adult, Brachial for infant).[span_9](end_span)</li>
+                        <li><strong>Disability:</strong> AVPU & GCS. [span_10](start_span)Check Glucose if AMS (Treat if <strong>< 70 mg/dl</strong>).[span_10](end_span)</li>
+                        [span_11](start_span)<li><strong>Red Flags:</strong> Apnea, SpO2 <94%, SBP <90 mmHg, GCS <15.[span_11](end_span)</li>
                     </ul>
 
-                    <h4>3. ALS BACKUP</h4>
-                    <ul>
-                        <li>Request within <strong>5 minutes</strong> if advanced skills needed.</li>
-                        <li><strong>Red priority (unstable):</strong> always request ALS.</li>
-                        <li><strong>Stable red priority:</strong> e.g. controlled limb bleed, uncomplicated CVA – ALS may be deferred if transport <10 min.</li>
-                        <li>May request and rendezvous en route.</li>
-                    </ul>
-
-                    <h4>4. VITAL SIGNS & MONITORING</h4>
-                    <ul>
-                        <li>Obtain full set: HR, BP, RR, SpO₂, temperature, BGL (if indicated), EtCO₂ (if indicated), neurologic status.</li>
-                        <li><strong>Normal ranges (adult):</strong> HR 60‑100, RR 12‑20, SBP ≥90, SpO₂ ≥94%, EtCO₂ 35‑45.</li>
-                        <li><strong>Paediatric norms:</strong> use age‑specific charts (see CPG 1.1 table).</li>
-                        <li><strong>Hypotension:</strong> SBP <90 mmHg (adult) or <5th percentile for age (paeds).</li>
-                        <li><strong>Tachycardia:</strong> HR >100 (adult); Bradycardia: HR <60 (adult).</li>
-                        <li><strong>12‑lead ECG:</strong> for cardiac or suspected cardiac complaints. Continuous monitoring for unstable patients.</li>
-                        <li><strong>Waveform capnography:</strong> essential for advanced airways and critical patients.</li>
-                    </ul>
-
-                    <h4>5. SECONDARY SURVEY & HISTORY</h4>
-                    <ul>
-                        <li><strong>Physical exam:</strong> head‑to‑toe (trauma: DCAP‑BTLS‑TIC; medical: system‑focused).</li>
-                        <li><strong>OPQRST:</strong> Onset, Provocation/Palliation, Quality, Radiation, Severity, Time.</li>
-                        <li><strong>SAMPLE:</strong> Signs/symptoms, Allergies, Medications, Past history, Last oral intake, Events.</li>
-                        <li><strong>Pain assessment:</strong> 0‑10 scale, Wong‑Baker (non‑verbal), FLACC (paeds <3 yrs).</li>
-                    </ul>
-
-                    <h4>6. RED FLAGS (IMMEDIATE LIFE THREATS)</h4>
-                    <div style="background:#f8d7da; padding:15px; border-radius:12px; margin:10px 0;">
-                        <ul style="margin:0; color:#721c24;">
-                            <li>Apnoea, pulselessness, severe haemorrhage</li>
-                            <li>Altered mental status (AVPU < A, GCS ≤8 or deteriorating)</li>
-                            <li>Hypoxia (SpO₂ <90% on O₂) / hypotension (SBP <90)</li>
-                            <li>High‑risk MOI: fall >10ft, high‑speed MVC, ejection, death in same vehicle, pedestrian vs vehicle</li>
-                            <li>Signs of severe shock, STEMI, uncontrolled dysrhythmia</li>
-                        </ul>
+                    <h4>3. [span_12](start_span)[span_13](start_span)ALS Back-Up KPI[span_12](end_span)[span_13](end_span)</h4>
+                    <div class="highlight-box">
+                        [span_14](start_span)<strong>KPI:</strong> Request ALS Back-up within <strong>1 minute</strong> of patient contact if indicated.[span_14](end_span)
                     </div>
-
-                    <h4>7. VASCULAR ACCESS & FLUIDS</h4>
                     <ul>
-                        <li>IV access if deterioration risk, fluid/medication need. IO if IV fails.</li>
-                        <li>Crystalloid (Normal Saline / Ringer's Lactate) for hypotension/shock. Adult: 250‑500 mL bolus, reassess; max 2000 mL. Paeds: 20 mL/kg, max 60 mL/kg.</li>
+                        [span_15](start_span)<li><strong>Transport Decision:</strong> If transport time is < 10 mins and ALS is not dispatched, load and go (do not wait).[span_15](end_span)</li>
+                        [span_16](start_span)<li><strong>Airwing:</strong> Consider if ground transport > 30 minutes.[span_16](end_span)</li>
                     </ul>
-
-                    <h4>8. REASSESSMENT INTERVALS</h4>
-                    <ul>
-                        <li><span style="background:#ffcccc; padding:3px 8px; border-radius:20px;">🔴 Red (critical):</span> every <strong>5 minutes</strong></li>
-                        <li><span style="background:#fff3cd; padding:3px 8px; border-radius:20px;">🟡 Yellow (serious):</span> every <strong>10 minutes</strong></li>
-                        <li><span style="background:#d4edda; padding:3px 8px; border-radius:20px;">🟢 Green (stable):</span> every <strong>15 minutes</strong></li>
-                        <li>Reassess LOC, airway, breathing, circulation, vitals, interventions, response.</li>
-                    </ul>
-
-                    <h4>9. TELE‑EMS CONSULTATION</h4>
-                    <ul>
-                        <li>For complex cases, skill outside scope, or 12‑lead interpretation.</li>
-                        <li>Not mandatory for every case; do not delay essential interventions.</li>
-                    </ul>
-
-                    <h4>10. PATIENT HANDOVER (IMIST‑AMBO)</h4>
-                    <ul>
-                        <li><strong>I</strong> – Identification</li>
-                        <li><strong>M</strong> – Mechanism/Medical complaint</li>
-                        <li><strong>I</strong> – Injuries/Information</li>
-                        <li><strong>S</strong> – Signs (vitals)</li>
-                        <li><strong>T</strong> – Treatment</li>
-                        <li><strong>A</strong> – Allergies</li>
-                        <li><strong>M</strong> – Medications</li>
-                        <li><strong>B</strong> – Background</li>
-                        <li><strong>O</strong> – Other info</li>
-                    </ul>
-
-                    <h4>11. DOCUMENTATION (ePCR)</h4>
-                    <ul>
-                        <li>Must include: identification, MOI/medical complaint, injuries, signs, treatment, allergies, medications, background, other.</li>
-                        <li>Timestamps for all critical events and reassessments.</li>
-                    </ul>
-
-                    <h4>12. SPECIAL POPULATIONS</h4>
-                    <ul>
-                        <li><strong>Paediatrics:</strong> ≤13 years. Use Broselow tape for weight/meds. PAT = Appearance, Work of Breathing, Circulation to skin.</li>
-                        <li><strong>Geriatrics:</strong> ≥65 years. Reduced doses for renal/hepatic impairment. Higher risk of under‑triage.</li>
-                        <li><strong>Comorbidities:</strong> adjust medication doses for renal/hepatic disease.</li>
-                    </ul>
-
-                    <h4>13. AIRWING CONSIDERATIONS</h4>
-                    <ul>
-                        <li>For time‑critical patients with ground transport >30 min.</li>
-                        <li><strong>Exclusions:</strong> imminent birth, violent patients.</li>
-                    </ul>
-                </div>
-                <div class="sum-card" style="border-left-color: #dc3545;">
-                    <h3 style="color:#dc3545;">🚨 CRITICAL RED FLAGS – IMMEDIATE ACTION</h3>
-                    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Apnoea / pulseless</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">GCS ≤8 or ↓</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">SpO₂ <90%</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">SBP <90</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Uncontrolled haemorrhage</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">STEMI / dysrhythmia + shock</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Significant MOI</span>
-                    </div>
-                    <div class="highlight-box" style="background:#fff3cd; border-left-color:#856404;">
-                        <strong>🎯 KPI:</strong> ALS backup requested within 1 minute of red flag identification.
-                    </div>
                 </div>
             `,
-            quiz: [
-                // 60 questions – 1.1 Universal Care (keep your existing array)
-                { q: "What is the correct assessment sequence for a Trauma patient?", options: ["A-B-C-D-E", "C-A-B-C", "D-R-A-B-C", "M-A-R-C-H"], correct: 1, explanation: "C‑A‑B‑C: Catastrophic Haemorrhage/C‑spine, Airway, Breathing, Circulation. In trauma, catastrophic bleeding is the first priority, followed by c-spine control, then airway, breathing, and circulation." },
-                { q: "What is the assessment sequence for a Medical patient?", options: ["A-B-C-D-E", "C-A-B-C", "D-R-A-B-C", "Safety-First"], correct: 0, explanation: "Medical patients follow A‑B‑C: Airway, Breathing, Circulation, Disability, Exposure. This is the standard approach when no traumatic mechanism is present." },
-                { q: "What is the assessment sequence for Cardiac Arrest?", options: ["A-B-C", "C-A-B", "D-R-A-B-C", "B-A-C"], correct: 1, explanation: "Cardiac arrest: C‑A‑B (Compressions, Airway, Breathing). Chest compressions are started immediately to circulate blood, followed by airway opening and rescue breaths." },
-                { q: "What are the 3 elements of the 'General Impression'?", options: ["Airway, Breathing, Circ", "Appearance, Breathing, Activity", "Alertness, Bleeding, Color", "Age, Body type, Complaint"], correct: 1, explanation: "General Impression = Appearance, Work of Breathing, and Circulation/Activity (mental status). In paediatrics this is formalised as the Pediatric Assessment Triangle (PAT)." },
-                { q: "In the AVPU scale, what does 'P' stand for?", options: ["Pulse", "Pain", "Pupils", "Pallor"], correct: 1, explanation: "AVPU: Alert, Verbal (responds to voice), Pain (responds to painful stimuli), Unresponsive. Painful stimuli include trapezius squeeze or supraorbital pressure." },
-                { q: "Where do you check the pulse on an unconscious adult?", options: ["Radial", "Carotid", "Femoral", "Brachial"], correct: 1, explanation: "Carotid artery is the central pulse used in unconscious adults. Check for at least 5 but no more than 10 seconds." },
-                { q: "Where do you check the pulse on an infant (<1 year)?", options: ["Carotid", "Brachial", "Radial", "Popliteal"], correct: 1, explanation: "Brachial pulse (upper arm) is recommended for infants. The neck is often too short to reliably palpate the carotid." },
-                { q: "Normal capillary refill time (CRT) is less than:", options: ["1 second", "2 seconds", "3 seconds", "5 seconds"], correct: 1, explanation: "Normal CRT is <2 seconds. Delayed refill (>2s) indicates poor perfusion and possible shock." },
-                { q: "What is the absolute FIRST step in any call?", options: ["Airway", "Scene Safety", "Circulation", "Call Dispatch"], correct: 1, explanation: "Scene safety is always the first priority. You cannot help the patient if you become a patient yourself." },
-                { q: "What does 'D' stand for in ABCDE?", options: ["Deformity", "Disability", "Danger", "Disease"], correct: 1, explanation: "Disability – rapid neurological assessment: AVPU, GCS, pupils, and blood glucose." },
-                { q: "What is the target SpO₂ for a COPD patient?", options: ["100%", "94-98%", "88-92%", ">95%"], correct: 2, explanation: "88‑92% is the target for COPD patients to avoid suppressing their hypoxic drive. Higher SpO₂ can lead to hypercapnia and respiratory failure." },
-                { q: "Hypotension in an adult is defined as SBP below:", options: ["110 mmHg", "100 mmHg", "90 mmHg", "80 mmHg"], correct: 2, explanation: "SBP <90 mmHg is the standard threshold for hypotension in adults." },
-                { q: "You initiate hypoglycaemia treatment if BGL is below:", options: ["80 mg/dl", "70 mg/dl", "60 mg/dl", "100 mg/dl"], correct: 1, explanation: "Treat if BGL <70 mg/dl and the patient is symptomatic. Asymptomatic patients may still require treatment." },
-                { q: "What does EtCO₂ monitoring measure?", options: ["Oxygen in blood", "Carbon dioxide exhaled", "Carbon monoxide", "pH balance"], correct: 1, explanation: "End‑tidal CO₂ measures the concentration of carbon dioxide in exhaled breath. It is the gold standard for confirming advanced airway placement and monitoring CPR quality." },
-                { q: "Normal EtCO₂ range is:", options: ["20-30 mmHg", "35-45 mmHg", "45-55 mmHg", "90-100 mmHg"], correct: 1, explanation: "35‑45 mmHg is the normal physiological range for end‑tidal CO₂." },
-                { q: "How often do you reassess a 'Red' (Critical) patient?", options: ["5 min", "10 min", "15 min", "Continuous"], correct: 0, explanation: "Red (critical) patients must be reassessed every 5 minutes, including vital signs, interventions, and response to treatment." },
-                { q: "How often do you reassess a 'Green' (Non‑Critical) patient?", options: ["5 min", "10 min", "15 min", "30 min"], correct: 2, explanation: "Green (stable, minor) patients require reassessment every 15 minutes." },
-                { q: "In SAMPLE history, what does 'L' stand for?", options: ["Last oral intake", "Last menstrual period", "Level of consciousness", "Location"], correct: 0, explanation: "SAMPLE: Signs/Symptoms, Allergies, Medications, Past history, Last oral intake, Events leading up." },
-                { q: "In OPQRST, what does 'P' stand for?", options: ["Past History", "Provocation/Palliation", "Pain Score", "Pulse"], correct: 1, explanation: "OPQRST: Onset, Provocation/Palliation (what makes it better/worse), Quality, Radiation, Severity, Time." },
-                { q: "Which mnemonic is used for Stroke Assessment?", options: ["SAMPLE", "BEFAST", "OPQRST", "AEIOU"], correct: 1, explanation: "BEFAST: Balance (sudden loss), Eyes (vision loss), Face (droop), Arms (drift), Speech (slurred), Time (last known well)." },
-                { q: "What is the normal heart rate for an adult at rest?", options: ["50-90 bpm", "60-100 bpm", "70-110 bpm", "80-120 bpm"], correct: 1, explanation: "60‑100 bpm is the standard adult range." },
-                { q: "What is the normal respiratory rate for an adult?", options: ["8-12/min", "12-20/min", "16-24/min", "20-30/min"], correct: 1, explanation: "12‑20 breaths per minute is the normal range for a healthy adult at rest." },
-                { q: "What is the definition of bradycardia in an adult?", options: ["<50 bpm", "<60 bpm", "<70 bpm", "<80 bpm"], correct: 1, explanation: "Bradycardia is defined as a heart rate <60 bpm in adults." },
-                { q: "What is the definition of tachycardia in an adult?", options: [">90 bpm", ">100 bpm", ">110 bpm", ">120 bpm"], correct: 1, explanation: "Tachycardia is defined as a heart rate >100 bpm in adults." },
-                { q: "What is the normal systolic BP for a newborn (0-1 month)?", options: ["39-59 mmHg", "60-76 mmHg", "67-84 mmHg", "72-104 mmHg"], correct: 1, explanation: "Newborn SBP range is 60‑76 mmHg (DCAS CPG 1.1 vital signs table)." },
-                { q: "What is the normal systolic BP for a child 6-10 years?", options: ["89-112 mmHg", "97-115 mmHg", "102-120 mmHg", "110-131 mmHg"], correct: 1, explanation: "SBP 97‑115 mmHg is normal for children aged 6‑10 years." },
-                { q: "What is the target SpO₂ for a standard medical patient?", options: ["90-94%", "94-98%", "98-100%", "88-92%"], correct: 1, explanation: "Aim for SpO₂ 94‑98%. Avoid hyperoxia (100%) as it may cause vasoconstriction." },
-                { q: "What does 'C' stand for in the trauma C‑ABC approach?", options: ["Circulation", "C‑spine control", "Catastrophic haemorrhage", "Chest compressions"], correct: 2, explanation: "C = Catastrophic haemorrhage. Life‑threatening external bleeding must be controlled before airway assessment in trauma." },
-                { q: "What is the Glasgow Coma Scale (GCS) range?", options: ["1-10", "3-15", "0-14", "5-20"], correct: 1, explanation: "GCS ranges from 3 (deep coma) to 15 (fully alert). It assesses eye, verbal, and motor responses." },
-                { q: "What is the verbal response score for 'Confused' in adults?", options: ["5", "4", "3", "2"], correct: 1, explanation: "GCS verbal: 5 = oriented, 4 = confused, 3 = inappropriate words, 2 = incomprehensible sounds, 1 = none." },
-                { q: "In DCAP‑BTLS, what does 'B' stand for?", options: ["Bleeding", "Burns", "Bruising", "Breath sounds"], correct: 1, explanation: "DCAP‑BTLS: Deformities, Contusions, Abrasions, Punctures/Penetrations, Burns, Tenderness, Lacerations, Swelling." },
-                { q: "In SAMPLE history, what does 'A' stand for?", options: ["Age", "Allergies", "Appearance", "Airway"], correct: 1, explanation: "SAMPLE: Signs/symptoms, Allergies, Medications, Past history, Last oral intake, Events." },
-                { q: "In OPQRST, what does 'R' stand for?", options: ["Rate", "Rhythm", "Radiation", "Reaction"], correct: 2, explanation: "OPQRST: Onset, Provocation, Quality, Radiation (does pain move?), Severity, Time." },
-                { q: "In IMIST‑AMBO, what does 'I' stand for?", options: ["Injuries", "Identification", "Illness", "Intake"], correct: 1, explanation: "IMIST‑AMBO: Identification, Mechanism/Medical complaint, Injuries/Information, Signs, Treatment, Allergies, Medications, Background, Other." },
-                { q: "In IMIST‑AMBO, what does 'S' stand for?", options: ["Symptoms", "Signs", "Severity", "Scene"], correct: 1, explanation: "S = Signs (vital signs and key physical exam findings)." },
-                { q: "What does 'AEIOU‑TIPS' help assess?", options: ["Chest pain", "Altered mental status", "Trauma triage", "Respiratory distress"], correct: 1, explanation: "AEIOU‑TIPS is a mnemonic for causes of altered mental status: Alcohol/Abuse, Epilepsy/Electrolytes, Insulin, Overdose/Oxygen, Uremia, Trauma/Tumor, Infection, Psych/Poisoning, Stroke/Sepsis." },
-                { q: "What does 'PASTE' assess?", options: ["Respiratory distress", "Cardiac chest pain", "Stroke", "Abdominal pain"], correct: 0, explanation: "PASTE is a respiratory assessment mnemonic: Provocation, Associated chest pain, Sputum, Talking tiredness, Exacerbation." },
-                { q: "What is the APGAR score component for 'Appearance'?", options: ["Color", "Pulse", "Grimace", "Activity"], correct: 0, explanation: "APGAR: Appearance (skin color), Pulse (heart rate), Grimace (reflex irritability), Activity (muscle tone), Respiration (crying/breathing)." },
-                { q: "What is the normal APGAR score range?", options: ["0-5", "0-10", "1-8", "5-15"], correct: 1, explanation: "APGAR score 0‑10; 7‑10 is reassuring, 4‑6 moderately abnormal, 0‑3 low." },
-                { q: "In SLUDGE, what does 'U' stand for?", options: ["Urination", "Unresponsiveness", "Uremia", "Ulcers"], correct: 0, explanation: "SLUDGE – cholinergic toxidrome: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis." },
-                { q: "What is the adult CPR compression:ventilation ratio (single rescuer)?", options: ["15:2", "30:2", "20:2", "10:1"], correct: 1, explanation: "30 compressions to 2 breaths for all adults (single or two rescuers)." },
-                { q: "What is the pediatric CPR ratio for two rescuers?", options: ["30:2", "15:2", "20:2", "5:1"], correct: 1, explanation: "15:2 for children/infants with two rescuers. Single rescuer uses 30:2." },
-                { q: "What is the recommended compression rate for CPR?", options: ["80-100/min", "100-120/min", "120-140/min", "90-110/min"], correct: 1, explanation: "100‑120 compressions per minute." },
-                { q: "What is the correct compression depth for an adult?", options: ["At least 2 cm", "At least 5 cm", "3-4 cm", "6-7 cm"], correct: 1, explanation: "At least 5 cm (2 inches), no more than 6 cm (2.4 inches)." },
-                { q: "How often should you switch compressors during CPR?", options: ["Every 1 min", "Every 2 mins", "Every 5 mins", "When tired"], correct: 1, explanation: "Switch every 2 minutes (approx 5 cycles) to maintain high‑quality compressions." },
-                { q: "What is the maximum interruption time for pulses/breaths during CPR?", options: ["5 sec", "10 sec", "15 sec", "20 sec"], correct: 1, explanation: "Interruptions should be <10 seconds." },
-                { q: "Where is the correct hand placement for adult CPR?", options: ["Upper half of sternum", "Lower half of sternum", "Left side of chest", "Right side of chest"], correct: 1, explanation: "Place hands on the lower half of the sternum (centre of chest)." },
-                { q: "With an advanced airway in place, how often do you ventilate during CPR?", options: ["1 breath every 3 sec", "1 breath every 6 sec", "1 breath every 10 sec", "Asynchronous with compressions"], correct: 1, explanation: "1 breath every 6 seconds (10 breaths/min) without pausing compressions." },
-                { q: "What is the first drug for non‑shockable cardiac arrest?", options: ["Amiodarone", "Atropine", "Adrenaline (Epinephrine)", "Lidocaine"], correct: 2, explanation: "Adrenaline 1 mg IV/IO every 3‑5 minutes is first line for asystole/PEA." },
-                { q: "What is the standard energy for first biphasic defibrillation?", options: ["100J", "120‑200J", "360J", "50J"], correct: 1, explanation: "Manufacturer‑specific, typically 120‑200J for biphasic defibrillators." },
-                { q: "What is the safe parking distance from a burning vehicle?", options: ["15m", "30m", "50m", "100m"], correct: 2, explanation: "At least 30‑50m (100‑165ft), ideally uphill and upwind." },
-                { q: "In HazMat, which zone is the 'Hot Zone'?", options: ["Support zone", "Contamination zone", "Safe zone", "Decon zone"], correct: 1, explanation: "Hot Zone = contamination/exclusion zone; Warm Zone = decontamination; Cold Zone = support/command." },
-                { q: "Is imminent birth an exclusion for Airwing transport?", options: ["True", "False"], correct: 0, explanation: "True – delivering in a helicopter is dangerous due to space and equipment limitations. Ground transport is preferred." },
-                { q: "Are violent patients eligible for Airwing?", options: ["True", "False"], correct: 1, explanation: "False – violent patients pose a catastrophic safety risk to the aircraft and crew." },
-                { q: "What PPE is required for Standard Precautions?", options: ["Gloves only", "Gloves & Glasses", "Gloves, Mask, Glasses, Gown (risk‑based)", "Mask only"], correct: 2, explanation: "Standard precautions require risk‑based PPE: gloves, mask, eye protection, and gown when exposure to body fluids is anticipated." },
-                { q: "When lifting, you should primarily use your:", options: ["Back", "Legs/Hips", "Arms", "Shoulders"], correct: 1, explanation: "Lift with legs, keep back straight, weight close to body (power lift)." },
-                { q: "When is a tourniquet indicated?", options: ["Minor cuts", "Venous bleeding", "Uncontrolled arterial limb bleed", "Head wounds"], correct: 2, explanation: "Tourniquets are for life‑threatening arterial haemorrhage on a limb that cannot be controlled by direct pressure." },
-                { q: "What is the 'Golden Hour' in trauma?", options: ["Time to eat", "Time from injury to surgery", "Time on scene", "Time to call dispatch"], correct: 1, explanation: "The Golden Hour is the 60‑minute window from injury to definitive surgical care – survival is highest within this time." },
-                { q: "The Pediatric Assessment Triangle (PAT) consists of Appearance, Circulation, and:", options: ["Airway", "Work of Breathing", "Bleeding", "Alertness"], correct: 1, explanation: "PAT = Appearance, Work of Breathing, Circulation to Skin." },
-                { q: "In Dubai CPGs, a pediatric patient is defined as age:", options: ["<12", "≤13", "<16", "<18"], correct: 1, explanation: "13 years and under is the pediatric definition in Dubai CPG 2025." }
-            ],
             flashcards: [
-                // 60 flashcards – 1.1 Universal Care
-                { category: "Primary Survey", question: "Trauma assessment sequence?", answer: "C‑A‑B‑C\n1. Catastrophic Haemorrhage (tourniquet, hemostatic dressing)\n2. C‑spine manual stabilisation\n3. Airway (jaw thrust, suction, OPA/NPA)\n4. Breathing (assess, O₂, BVM)\n5. Circulation (pulse, skin, IV fluids)" },
-                { category: "Primary Survey", question: "Medical patient assessment?", answer: "A‑B‑C\nAirway → Breathing → Circulation\nThen Disability (AVPU, GCS, pupils, BGL) and Exposure (remove clothing, prevent hypothermia)" },
-                { category: "Primary Survey", question: "Cardiac arrest sequence?", answer: "C‑A‑B\nCompressions (start immediately, 30:2) → Airway (open, OPA/NPA) → Breathing (BVM, 2 breaths)" },
-                { category: "Primary Survey", question: "General Impression elements?", answer: "1. Appearance (tone, interactivity)\n2. Work of Breathing (noises, retractions, position)\n3. Circulation to skin (colour, pallor, cyanosis)" },
-                { category: "AVPU", question: "What does AVPU stand for?", answer: "Alert (A) – eyes open, tracking\nVerbal (V) – responds to voice\nPain (P) – responds to pain/pressure\nUnresponsive (U) – no response" },
-                { category: "Vitals", question: "Normal adult pulse?", answer: "60‑100 beats per minute\n<60 = bradycardia\n>100 = tachycardia" },
-                { category: "Vitals", question: "Normal adult respiratory rate?", answer: "12‑20 breaths per minute" },
-                { category: "Vitals", question: "Normal CRT?", answer: "< 2 seconds" },
-                { category: "Vitals", question: "SpO₂ target (standard)?", answer: ">94% (94‑98%)" },
-                { category: "Vitals", question: "SpO₂ target (COPD)?", answer: "88‑92%" },
-                { category: "Shock", question: "Hypotension threshold?", answer: "SBP <90 mmHg (adult)" },
-                { category: "Hypoglycaemia", question: "Treat BGL below?", answer: "<70 mg/dl" },
-                { category: "Monitoring", question: "EtCO₂ normal range?", answer: "35‑45 mmHg" },
-                { category: "Reassessment", question: "Red priority interval?", answer: "Every 5 minutes" },
-                { category: "Reassessment", question: "Green priority interval?", answer: "Every 15 minutes" },
-                { category: "Mnemonics", question: "DCAP‑BTLS – what does S stand for?", answer: "Swelling\nFull mnemonic: Deformities, Contusions, Abrasions, Punctures/Penetrations, Burns, Tenderness, Lacerations, Swelling" },
-                { category: "Mnemonics", question: "SAMPLE – what does L stand for?", answer: "Last oral intake\nFull: Signs/Symptoms, Allergies, Medications, Past history, Last oral intake, Events" },
-                { category: "Mnemonics", question: "OPQRST – what does R stand for?", answer: "Radiation (does pain move?)\nFull: Onset, Provocation/Palliation, Quality, Radiation, Severity, Time" },
-                { category: "Handover", question: "IMIST‑AMBO – what does A stand for?", answer: "Allergies\nFull: Identification, Mechanism, Injuries, Signs, Treatment, Allergies, Medications, Background, Other" },
-                { category: "Handover", question: "IMIST‑AMBO – what does M stand for?", answer: "Medications" },
-                { category: "Stroke", question: "BEFAST – what does B stand for?", answer: "Balance (sudden loss of balance/coordination)" },
-                { category: "GCS", question: "Confused verbal response score?", answer: "4" },
-                { category: "GCS", question: "Spontaneous eye opening score?", answer: "4" },
-                { category: "Safety", question: "First priority on every call?", answer: "Scene safety" },
-                { category: "Operations", question: "Standard precautions PPE?", answer: "Gloves, mask, eye protection, gown (risk‑based)" },
-                { category: "Airway", question: "Pulse check in infant?", answer: "Brachial artery" },
-                { category: "Airway", question: "Pulse check in unconscious adult?", answer: "Carotid artery" },
-                { category: "Triage", question: "Yellow priority reassessment interval?", answer: "Every 10 minutes" },
-                { category: "History", question: "OPQRST – what does O stand for?", answer: "Onset (what were you doing when pain started?)" },
-                { category: "History", question: "SAMPLE – what does E stand for?", answer: "Events leading up to the emergency" },
-                { category: "Vitals", question: "Newborn heart rate (awake)?", answer: "100‑205 bpm" },
-                { category: "Vitals", question: "Infant (1-12 mo) heart rate?", answer: "100‑180 bpm" },
-                { category: "Vitals", question: "Child 1-3 years heart rate?", answer: "100‑140 bpm" },
-                { category: "Vitals", question: "Child 6-10 years heart rate?", answer: "75‑120 bpm" },
-                { category: "Vitals", question: "Adolescent heart rate?", answer: "60‑100 bpm" },
-                { category: "Vitals", question: "Newborn SBP range?", answer: "60‑76 mmHg" },
-                { category: "Vitals", question: "Child 1-2 years SBP?", answer: "86‑106 mmHg" },
-                { category: "Vitals", question: "Child 6-10 years SBP?", answer: "97‑115 mmHg" },
-                { category: "Vitals", question: "Adult SBP normal range?", answer: "90‑120 mmHg (approx)" },
-                { category: "Vitals", question: "Bradycardia definition (adult)?", answer: "HR <60 bpm" },
-                { category: "Trauma", question: "Significant MOI – fall height?", answer: ">10 feet (all ages)" },
-                { category: "Trauma", question: "Tourniquet application time?", answer: "Mark time on tourniquet; do not remove until hospital" },
-                { category: "Trauma", question: "Pelvic binder indication?", answer: "Unstable pelvic fracture / suspected haemorrhage from pelvic ring disruption" },
-                { category: "Trauma", question: "Chest seal indication?", answer: "Open / sucking chest wound – apply three‑sided occlusive dressing" },
-                { category: "CPR", question: "Adult compression depth?", answer: "5‑6 cm (2‑2.4 inches)" },
-                { category: "CPR", question: "Infant compression depth?", answer: "4 cm (1.5 inches) or 1/3 chest depth" },
-                { category: "CPR", question: "Ventilation rate with advanced airway?", answer: "1 breath every 6 seconds (10 breaths/min), no pause in compressions" },
-                { category: "CPR", question: "Shockable rhythms?", answer: "Ventricular Fibrillation (VF), Pulseless Ventricular Tachycardia (VT)" },
-                { category: "CPR", question: "Non‑shockable rhythms?", answer: "Asystole, Pulseless Electrical Activity (PEA)" },
-                { category: "ALS", question: "When to request ALS backup?", answer: "Within 5 minutes if red flags present, unstable patient, or advanced skills required" },
-                { category: "Paediatrics", question: "Pediatric age cutoff in Dubai?", answer: "13 years and under" },
-                { category: "Paediatrics", question: "Pediatric Assessment Triangle (PAT)?", answer: "Appearance (tone, interactivity), Work of Breathing (rate, effort, sounds), Circulation to Skin (colour, pallor, mottling)" },
-                { category: "Paediatrics", question: "Late sign of shock in children?", answer: "Hypotension (decompensated shock) – children maintain BP until late" },
-                { category: "Paediatrics", question: "Neonatal pulse check site?", answer: "Brachial artery or apical auscultation" },
-                { category: "Burns", question: "Rule of Nines – adult arm?", answer: "9% Total Body Surface Area (TBSA) – 4.5% front, 4.5% back" },
-                { category: "Burns", question: "Rule of Nines – adult leg?", answer: "18% TBSA – 9% front, 9% back" },
-                { category: "Burns", question: "Rule of Nines – adult anterior torso?", answer: "18% (chest 9% + abdomen 9%)" },
-                { category: "Positioning", question: "Shock patient (no spinal injury) position?", answer: "Supine (flat on back). Elevating legs is controversial; flat maximises cerebral perfusion." },
-                { category: "Positioning", question: "Recovery position indication?", answer: "Unconscious patient with pulse and breathing spontaneously – prevents aspiration" },
-                { category: "Oxygen", question: "Flow rate for Non‑Rebreather Mask?", answer: "10‑15 L/min to keep reservoir bag inflated" }
+                [span_17](start_span){ category: "Sequence", question: "Trauma Assessment Sequence?", answer: "C - A - B - C\n(Control Hemorrhage First)[span_17](end_span)" },
+                [span_18](start_span){ category: "Sequence", question: "Medical Assessment Sequence?", answer: "A - B - C[span_18](end_span)" },
+                [span_19](start_span){ category: "Sequence", question: "Cardiac Arrest Sequence?", answer: "C - A - B\n(Compressions First)[span_19](end_span)" },
+                [span_20](start_span){ category: "Vitals", question: "Hypotension Definition (Adult)?", answer: "SBP < 90 mmHg[span_20](end_span)" },
+                [span_21](start_span){ category: "Vitals", question: "Target SpO2 (Standard)?", answer: "94% - 98%[span_21](end_span)" },
+                [span_22](start_span){ category: "Vitals", question: "Target SpO2 (COPD)?", answer: "88% - 92%[span_22](end_span)" },
+                [span_23](start_span){ category: "Vitals", question: "Hypoglycemia Threshold?", answer: "< 70 mg/dl[span_23](end_span)" },
+                [span_24](start_span){ category: "KPI", question: "Time to request ALS Backup?", answer: "Within 1 minute of patient contact[span_24](end_span)" },
+                [span_25](start_span){ category: "Transport", question: "Transport vs Wait Rule?", answer: "If transport < 10 mins, do NOT wait for ALS[span_25](end_span)" },
+                [span_26](start_span){ category: "Airwing", question: "Airwing Exclusion?", answer: "Imminent Birth, Violent Patient[span_26](end_span)" }
+            ],
+            quiz: [
+                [span_27](start_span){ q: "What is the assessment sequence for a Trauma patient?", options: ["A-B-C", "C-A-B-C", "D-R-A-B-C"], correct: 1, explanation: "Trauma prioritizes Catastrophic Hemorrhage (C) before Airway.[span_27](end_span)" },
+                [span_28](start_span){ q: "When should ALS backup be requested (KPI)?", options: ["Within 5 mins", "Within 1 min", "After vitals"], correct: 1, explanation: "KPI: Request ALS within 1 minute of patient contact if indicated.[span_28](end_span)" },
+                [span_29](start_span){ q: "What is the target SpO2 for a COPD patient?", options: ["100%", "94-98%", "88-92%"], correct: 2, explanation: "88-92% to avoid suppressing hypoxic drive.[span_29](end_span)" },
+                [span_30](start_span){ q: "You should NOT wait for ALS if transport time is less than:", options: ["10 mins", "15 mins", "20 mins"], correct: 0, explanation: "If transport is < 10 mins and ALS isn't there, load and go.[span_30](end_span)" },
+                [span_31](start_span){ q: "Hypotension in an adult is defined as SBP below:", options: ["100 mmHg", "90 mmHg", "80 mmHg"], correct: 1, explanation: "SBP < 90 mmHg is the threshold for hypotension.[span_31](end_span)" }
             ],
             critical: [
-                // 5 critical scenarios – 1.1 Universal Care (keep your existing array)
-                { id: "crit1", scenario: "You arrive at a factory. A 45‑year‑old male has a metal rod impaled in his left thigh. There is active arterial bleeding. He is conscious, pale, and sweating. HR 125, BP 95/60, RR 22, SpO₂ 97%.", question: "What is your FIRST intervention?", options: ["Remove the rod to pack the wound", "Apply a tourniquet proximal to the injury", "Apply direct pressure around the rod", "Start IV fluids"], correct: 1, explanation: "Uncontrolled arterial limb bleeding = tourniquet indication. Do not remove impaled objects – they may tamponade bleeding.", kpi: "Tourniquet applied within 1 minute" },
-                { id: "crit2", scenario: "A 68‑year‑old female with history of COPD presents with severe shortness of breath. She is using accessory muscles, SpO₂ 84% on room air. Respiratory rate 32, HR 115. She has audible wheeze.", question: "What is the target SpO₂ range for this patient?", options: ["94‑98%", "88‑92%", "100%", ">95%"], correct: 1, explanation: "COPD patients require 88‑92% SpO₂ to avoid suppressing hypoxic drive.", kpi: "O₂ titrated to 88‑92%" },
-                { id: "crit3", scenario: "You are called to a motor vehicle collision. The driver is unresponsive, breathing agonal, no palpable carotid pulse. Mechanism suggests blunt trauma.", question: "What is the correct sequence of interventions?", options: ["A-B-C", "C-A-B-C", "C-A-B", "D-R-A-B-C"], correct: 1, explanation: "Trauma cardiac arrest → C‑A‑B‑C: Catastrophic haemorrhage control, manual C‑spine, Airway, Breathing, Circulation.", kpi: "C‑spine manual stabilisation & bleeding check before airway" },
-                { id: "crit4", scenario: "A 7‑year‑old child is found unresponsive after a fall from a tree. He has a GCS of 6, shallow breathing at 8/min, and a weak carotid pulse. Blood glucose is 45 mg/dl.", question: "What is the priority intervention?", options: ["Start chest compressions", "Administer IV dextrose", "Open airway and assist ventilation", "Apply c‑collar"], correct: 2, explanation: "Paediatric bradycardia is usually hypoxic – open airway and ventilate first. Hypoglycaemia must be treated but does not supersede airway/breathing.", kpi: "BVM ventilation initiated within 1 minute" },
-                { id: "crit5", scenario: "A 30‑year‑old female, 32 weeks pregnant, complains of sudden severe headache and blurred vision. BP is 175/110, HR 95. She is agitated.", question: "What is the most appropriate initial management?", options: ["Immediate transport supine", "Left lateral position, oxygen, and antihypertensive", "12‑lead ECG", "IV fluid bolus"], correct: 1, explanation: "Severe pre‑eclampsia: left lateral tilt, high‑flow O₂, and consider labetalol if severe hypertension persists.", kpi: "Uterine displacement and BP control" }
+                { 
+                    scenario: "Trauma: 45M, partial leg amputation, active arterial bleed. Conscious.", 
+                    question: "What is your FIRST action?", 
+                    options: [{t:"Check Airway", f:"Wrong. Control bleed first (C-A-B-C)."}, {t:"Apply Tourniquet", f:"Correct. Catastrophic hemorrhage comes before Airway."}], 
+                    correct: 1, 
+                    [span_32](start_span)explanation: "In trauma (C-A-B-C), stop life-threatening bleeding immediately.[span_32](end_span)",
+                    kpi: "Tourniquet application < 1 min."
+                }
             ]
         },
 
-        // ---------- SECTION 1.2: Documentation ----------
+        // ============================================================
+        // 1.2 DOCUMENTATION
+        // ============================================================
         {
             id: "c1s2",
             shortTitle: "1.2 Documentation",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">📋 Documentation (CPG 1.2)</h3>
-                    <p><strong>ePCR (electronic Patient Care Record)</strong> is mandatory for every patient encounter.</p>
-                    <h4>IMIST‑AMBO Handover</h4>
+                    <h3 style="color:var(--primary-accent);">📋 Documentation Standards</h3>
                     <ul>
-                        <li><strong>I</strong> – Identification (name, age, gender)</li>
-                        <li><strong>M</strong> – Mechanism / Medical complaint</li>
-                        <li><strong>I</strong> – Injuries / Information (relevant findings)</li>
-                        <li><strong>S</strong> – Signs (vital signs, GCS, pain score)</li>
-                        <li><strong>T</strong> – Treatment (interventions performed)</li>
-                        <li><strong>A</strong> – Allergies (known allergies)</li>
-                        <li><strong>M</strong> – Medications (current prescriptions)</li>
-                        <li><strong>B</strong> – Background (past medical history)</li>
-                        <li><strong>O</strong> – Other (scene observations, additional info)</li>
+                        [span_33](start_span)<li><strong>ePCR Mandatory:</strong> A comprehensive ePCR is required for <em>every</em> patient contact.[span_33](end_span)</li>
+                        [span_34](start_span)<li><strong>Timeline:</strong> You must record timestamps for all critical events (Arrival, Meds, Handover).[span_34](end_span)</li>
+                        [span_35](start_span)<li><strong>Narrative:</strong> Must provide a complete 'picture of events' supporting your decisions.[span_35](end_span)</li>
                     </ul>
-                    <h4>Key Documentation Requirements</h4>
-                    <ul>
-                        <li>Timestamps for all interventions and reassessments.</li>
-                        <li>Use only approved medical abbreviations.</li>
-                        <li>Complete refusal forms for patients who decline transport.</li>
-                    </ul>
+                    [span_36](start_span)<h4>IMIST-AMBO Handover[span_36](end_span)</h4>
+                    <p><strong>I</strong>dentification, <strong>M</strong>echanism, <strong>I</strong>njuries, <strong>S</strong>igns, <strong>T</strong>reatment.<br>
+                    <strong>A</strong>llergies, <strong>M</strong>edications, <strong>B</strong>ackground, <strong>O</strong>ther.</p>
                 </div>
             `,
-            quiz: [
-                { q: "What does 'I' stand for in IMIST‑AMBO?", options: ["Injuries", "Identification", "Illness", "Intake"], correct: 1, explanation: "IMIST‑AMBO: Identification, Mechanism, Injuries, Signs, Treatment, Allergies, Medications, Background, Other." },
-                { q: "What must be documented for every intervention?", options: ["Rationale", "Timestamp", "Patient consent", "Supervisor approval"], correct: 1, explanation: "Timestamps for all critical events and reassessments are mandatory in the ePCR." },
-                { q: "In SAMPLE history, what does 'A' stand for?", options: ["Age", "Allergies", "Appearance", "Airway"], correct: 1, explanation: "SAMPLE: Signs/symptoms, Allergies, Medications, Past history, Last oral intake, Events." },
-                { q: "What is the correct format for patient handover?", options: ["SAMPLE", "OPQRST", "IMIST‑AMBO", "DCAP‑BTLS"], correct: 2, explanation: "IMIST‑AMBO is the DCAS‑mandated handover tool for all patient transfers." },
-                { q: "What is the minimum number of vital sign sets required before accepting a patient refusal?", options: ["One", "Two", "Three", "None"], correct: 1, explanation: "Two complete sets of vital signs must be documented before a refusal can be accepted." },
-                { q: "What does the 'M' in IMIST‑AMBO stand for?", options: ["Medications", "Mechanism/Medical complaint", "Mental status", "Movement"], correct: 1, explanation: "M = Mechanism of injury (trauma) or Medical complaint (medical)." },
-                { q: "In SAMPLE history, what does 'L' stand for?", options: ["Last oral intake", "Last menstrual period", "Level of consciousness", "Location"], correct: 0, explanation: "SAMPLE: Signs/Symptoms, Allergies, Medications, Past history, Last oral intake, Events." },
-                { q: "What does the second 'I' in IMIST‑AMBO stand for?", options: ["Injuries", "Identification", "Illness", "Intake"], correct: 0, explanation: "Second I = Injuries or Information (relevant assessment findings)." },
-                { q: "What should be documented in the 'Background' section of IMIST‑AMBO?", options: ["Past medical history", "Current medications", "Allergies", "Vital signs"], correct: 0, explanation: "Background = past medical history, recent events." },
-                { q: "What is the purpose of a refusal form?", options: ["Legal documentation of patient's decision", "To transfer care to another provider", "To record vital signs only", "To notify police"], correct: 0, explanation: "The refusal form documents that the patient was informed of the risks and voluntarily refused transport." },
-                { q: "In OPQRST, what does 'R' stand for?", options: ["Rate", "Rhythm", "Radiation", "Reaction"], correct: 2, explanation: "OPQRST: Onset, Provocation, Quality, Radiation, Severity, Time." },
-                { q: "What does 'S' stand for in IMIST‑AMBO?", options: ["Symptoms", "Signs", "Severity", "Scene"], correct: 1, explanation: "S = Signs (vital signs and key physical exam findings)." },
-                { q: "How often should a 'Red' priority patient be reassessed?", options: ["5 min", "10 min", "15 min", "30 min"], correct: 0, explanation: "Red (critical) patients require reassessment every 5 minutes." },
-                { q: "How often should a 'Green' priority patient be reassessed?", options: ["5 min", "10 min", "15 min", "30 min"], correct: 2, explanation: "Green (minor) patients require reassessment every 15 minutes." },
-                { q: "What does 'T' stand for in IMIST‑AMBO?", options: ["Treatment", "Time", "Triage", "Temperature"], correct: 0, explanation: "T = Treatment (interventions performed)." },
-                { q: "What should be included in the 'Other' section of IMIST‑AMBO?", options: ["Scene observations", "Past medical history", "Allergies", "Medications"], correct: 0, explanation: "Other = scene observations, additional information not covered elsewhere." },
-                { q: "In SAMPLE history, what does 'E' stand for?", options: ["Exposure", "Events", "Environment", "Emergency"], correct: 1, explanation: "E = Events leading up to the emergency." },
-                { q: "What does 'A' stand for in IMIST‑AMBO?", options: ["Airway", "Allergies", "Appearance", "Assessment"], correct: 1, explanation: "A = Allergies (known allergies)." },
-                { q: "What does 'B' stand for in IMIST‑AMBO?", options: ["Breathing", "Background", "Blood pressure", "Bleeding"], correct: 1, explanation: "B = Background (past medical history, recent events)." },
-                { q: "What does 'M' (second) in IMIST‑AMBO stand for?", options: ["Mechanism", "Medications", "Mental status", "Movement"], correct: 1, explanation: "Second M = Medications (current prescribed or OTC)." }
-            ],
             flashcards: [
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'I' stand for?", answer: "Identification (patient name, age, gender)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'M' stand for?", answer: "Mechanism (trauma) or Medical complaint." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does the second 'I' stand for?", answer: "Injuries / Information (relevant assessment findings)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'S' stand for?", answer: "Signs (vital signs, AVPU/GCS, pain score)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'T' stand for?", answer: "Treatment (interventions performed)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'A' stand for?", answer: "Allergies (known allergies)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does the second 'M' stand for?", answer: "Medications (current prescribed or OTC)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'B' stand for?", answer: "Background (past medical history, recent events)." },
-                { category: "Documentation", question: "IMIST‑AMBO – what does 'O' stand for?", answer: "Other (scene observations, additional info)." },
-                { category: "Documentation", question: "SAMPLE – what does 'S' stand for?", answer: "Signs/Symptoms." },
-                { category: "Documentation", question: "SAMPLE – what does 'A' stand for?", answer: "Allergies." },
-                { category: "Documentation", question: "SAMPLE – what does 'M' stand for?", answer: "Medications." },
-                { category: "Documentation", question: "SAMPLE – what does 'P' stand for?", answer: "Past history." },
-                { category: "Documentation", question: "SAMPLE – what does 'L' stand for?", answer: "Last oral intake." },
-                { category: "Documentation", question: "SAMPLE – what does 'E' stand for?", answer: "Events leading up." },
-                { category: "Documentation", question: "OPQRST – what does 'O' stand for?", answer: "Onset." },
-                { category: "Documentation", question: "OPQRST – what does 'P' stand for?", answer: "Provocation/Palliation." },
-                { category: "Documentation", question: "OPQRST – what does 'Q' stand for?", answer: "Quality." },
-                { category: "Documentation", question: "OPQRST – what does 'R' stand for?", answer: "Radiation." },
-                { category: "Documentation", question: "OPQRST – what does 'S' stand for?", answer: "Severity." }
+                [span_37](start_span){ category: "Handover", question: "IMIST meaning?", answer: "ID, Mechanism, Injuries, Signs, Treatment[span_37](end_span)" },
+                [span_38](start_span){ category: "Handover", question: "AMBO meaning?", answer: "Allergies, Medications, Background, Other[span_38](end_span)" },
+                [span_39](start_span){ category: "ePCR", question: "When to do ePCR?", answer: "Every patient contact[span_39](end_span)" },
+                [span_40](start_span){ category: "ePCR", question: "Narrative goal?", answer: "Provide a complete picture of events[span_40](end_span)" },
+                [span_41](start_span){ category: "Legal", question: "Timestamps?", answer: "Required for all critical interventions[span_41](end_span)" }
             ],
-            critical: []
+            quiz: [
+                [span_42](start_span){ q: "Which format is used for patient handover?", options: ["SAMPLE", "IMIST-AMBO", "SOAP"], correct: 1, explanation: "IMIST-AMBO is the standard DCAS handover format.[span_42](end_span)" },
+                [span_43](start_span){ q: "What is required for critical interventions in the ePCR?", options: ["Estimated time", "Exact Timestamp", "No time needed"], correct: 1, explanation: "Timestamps are required for all critical events.[span_43](end_span)" },
+                [span_44](start_span){ q: "What does the 'S' in IMIST stand for?", options: ["Symptoms", "Signs (Vitals)", "Severity"], correct: 1, explanation: "S stands for Signs (Vital Signs).[span_44](end_span)" }
+            ],
+            critical: [
+                {
+                    scenario: "Handover: You arrive at the hospital with a stable medical patient. The nurse asks for a report.",
+                    question: "Which format do you use?",
+                    options: [{t:"Just give the ID and Complaint", f:"Insufficient information."}, {t:"IMIST-AMBO", f:"Correct. This covers all critical info."}],
+                    correct: 1,
+                    [span_45](start_span)explanation: "Use IMIST-AMBO for a structured, safe handover.[span_45](end_span)"
+                }
+            ]
         },
 
-        // ---------- SECTION 1.3: Triage ----------
+        // ============================================================
+        // 1.3 TRIAGE CATEGORIES
+        // ============================================================
         {
             id: "c1s3",
             shortTitle: "1.3 Triage",
             summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">🚦 Triage (CPG 1.3)</h3>
+                <div class="sum-card red-flag">
+                    <h3>🔴 Red Priority (Critical)</h3>
                     <ul>
-                        <li><span style="background:#ffcccc; padding:3px 8px; border-radius:20px;">🔴 Red (critical)</span> – immediate life threat, reassess every 5 min.</li>
-                        <li><span style="background:#fff3cd; padding:3px 8px; border-radius:20px;">🟡 Yellow (serious)</span> – serious but stable, reassess every 10 min.</li>
-                        <li><span style="background:#d4edda; padding:3px 8px; border-radius:20px;">🟢 Green (minor)</span> – minor injuries, reassess every 15 min.</li>
-                        <li><span style="background:#e2e3e5; padding:3px 8px; border-radius:20px;">⚫ Black (expectant)</span> – deceased or non‑survivable.</li>
+                        <li><strong>Definition:</strong> Immediate life threat (e.g., Shock, Apnea, GCS<9).</li>
+                        [span_46](start_span)<li><strong>Reassessment:</strong> Every <strong>5 minutes</strong>.[span_46](end_span)</li>
+                        [span_47](start_span)<li><strong>Action:</strong> Request ALS immediately.[span_47](end_span)</li>
                     </ul>
-                    <h4>Significant Mechanism of Injury (MOI)</h4>
+                </div>
+                <div class="sum-card" style="border-top-color: #f59e0b;">
+                    <h3>🟡 Yellow Priority (Serious)</h3>
                     <ul>
-                        <li>Fall >10 feet (all ages)</li>
-                        <li>High‑speed MVC >40 km/h (unrestrained) or >60 km/h (restrained)</li>
-                        <li>Ejection, rollover, death in same vehicle</li>
-                        <li>Pedestrian / rider thrown or run over</li>
-                        <li>Intrusion >12 inches occupant side / >18 inches any side</li>
-                        <li>Child unrestrained or in unsecured seat</li>
+                        <li><strong>Definition:</strong> Serious but not immediately life-threatening.</li>
+                        [span_48](start_span)<li><strong>Reassessment:</strong> Every <strong>10 minutes</strong>.[span_48](end_span)</li>
                     </ul>
-                    <p><strong>Triage category can change</strong> – must be reassessed and documented.</p>
-                    <div class="highlight-box">
-                        📌 <strong>Key KPIs:</strong> Assign a triage category to every patient. Document any change in category.
-                    </div>
+                </div>
+                <div class="sum-card" style="border-top-color: #10b981;">
+                    <h3>🟢 Green Priority (Minor)</h3>
+                    <ul>
+                        <li><strong>Definition:</strong> Minor injury/illness. Stable.</li>
+                        [span_49](start_span)<li><strong>Reassessment:</strong> Every <strong>15 minutes</strong>.[span_49](end_span)</li>
+                    </ul>
                 </div>
             `,
-            quiz: [
-                { q: "What is the reassessment interval for a Yellow priority patient?", options: ["5 min", "10 min", "15 min", "30 min"], correct: 1, explanation: "Yellow (serious) patients require reassessment every 10 minutes." },
-                { q: "A fall from what height is considered a significant MOI for any age?", options: [">5 feet", ">10 feet", ">15 feet", ">20 feet"], correct: 1, explanation: "Fall >10 feet (all ages) is a significant mechanism of injury." },
-                { q: "Which triage colour is used for patients who are unlikely to survive given available resources?", options: ["Red", "Yellow", "Green", "Black"], correct: 3, explanation: "Black = expectant or deceased." },
-                { q: "A patient with an isolated femur fracture, normal vitals, and no other injuries is classified as:", options: ["Red", "Yellow", "Green", "Black"], correct: 1, explanation: "Isolated long‑bone fracture without shock or limb ischemia = Yellow priority (serious but stable)." },
-                { q: "Which of the following is a Red‑priority triage criterion?", options: ["GCS 14", "SpO₂ 91%", "SBP <90 mmHg", "HR 110 bpm"], correct: 2, explanation: "Hypotension (SBP <90 mmHg) is an immediate life threat and defines Red priority." },
-                { q: "What is the primary purpose of a triage tag?", options: ["Track patient identity", "Prioritise treatment & transport", "Record vital signs", "Legal documentation"], correct: 1, explanation: "Triage tags communicate priority and immediate treatment needs, especially in mass casualty incidents." },
-                { q: "A patient with GCS 13 after a seizure is classified as:", options: ["Red", "Yellow", "Green", "Black"], correct: 1, explanation: "GCS 10‑14 is Yellow priority; <9 is Red." },
-                { q: "Which vital sign abnormality in isolation is a Red flag in an adult?", options: ["HR 110", "RR 22", "SBP 85", "SpO₂ 93%"], correct: 2, explanation: "SBP <90 mmHg is hypotension and constitutes a Red priority." },
-                { q: "How often is a Green priority patient reassessed?", options: ["5 min", "10 min", "15 min", "30 min"], correct: 2, explanation: "Green (minor) patients require reassessment every 15 minutes." },
-                { q: "Which MOI is NOT considered significant for triage?", options: ["Fall from 8 feet", "Ejection from vehicle", "Death in same vehicle", "Intrusion >12 inches"], correct: 0, explanation: "Fall from 8 feet is below the 10‑foot threshold and is not automatically a significant MOI." },
-                { q: "In paediatric triage, a child with a respiratory rate of 35 at rest (age 4) is:", options: ["Red", "Yellow", "Green", "Black"], correct: 1, explanation: "For a 4‑year‑old, RR >29 is tachypnoea and triggers Yellow; >40 is Red." },
-                { q: "What is the normal SpO₂ target for a standard medical patient?", options: ["88‑92%", "94‑98%", "100%", "90‑94%"], correct: 1, explanation: "94‑98% is the standard target; 88‑92% for COPD." },
-                { q: "Which of the following is an exclusion criterion for 'Treat at Scene'?", options: ["Age 25", "Age 65", "Age 17", "Age 45"], correct: 2, explanation: "Patients <18 years are excluded from Treat at Scene; they require guardian consent and transport." },
-                { q: "What is the minimum number of vital sign sets required before accepting a patient refusal?", options: ["One", "Two", "Three", "None"], correct: 1, explanation: "Two complete sets of vital signs must be documented (CPG 1.6)." },
-                { q: "A patient with an open femur fracture and absent distal pulse is classified as:", options: ["Red", "Yellow", "Green", "Black"], correct: 0, explanation: "Limb ischemia with fracture is a limb‑threatening emergency and is Red priority." },
-                { q: "What does 'M' in IMIST‑AMBO stand for?", options: ["Medications", "Mechanism/Medical complaint", "Mental status", "Movement"], correct: 1, explanation: "M = Mechanism of injury (trauma) or Medical complaint (medical)." },
-                { q: "A patient with chest pain and diaphoresis, but normal vital signs, is classified as:", options: ["Red", "Yellow", "Green", "Black"], correct: 1, explanation: "Chest pain without instability is Yellow priority (serious but stable)." },
-                { q: "What is the correct format for patient handover?", options: ["SAMPLE", "OPQRST", "IMIST‑AMBO", "DCAP‑BTLS"], correct: 2, explanation: "IMIST‑AMBO is the DCAS‑mandated handover tool for all patient transfers." },
-                { q: "A patient with a GCS of 9 after head trauma is classified as:", options: ["Red", "Yellow", "Green", "Black"], correct: 0, explanation: "GCS ≤8 is Red; 9 is still serious but borderline – many protocols classify GCS <9 as Red." },
-                { q: "What is the most reliable indicator of effective resuscitation in a newborn?", answer: "Increase in heart rate." }
-            ],
             flashcards: [
-                { category: "Triage", question: "Red priority reassessment interval?", answer: "Every 5 minutes." },
-                { category: "Triage", question: "Yellow priority reassessment interval?", answer: "Every 10 minutes." },
-                { category: "Triage", question: "Green priority reassessment interval?", answer: "Every 15 minutes." },
-                { category: "Triage", question: "Significant MOI – fall height?", answer: ">10 feet (all ages)." },
-                { category: "Triage", question: "Significant MOI – vehicle intrusion (occupant side)?", answer: ">12 inches." },
-                { category: "Triage", question: "Significant MOI – vehicle intrusion (any side)?", answer: ">18 inches." },
-                { category: "Triage", question: "Significant MOI – speed for restrained patient?", answer: ">60 km/h." },
-                { category: "Triage", question: "Significant MOI – speed for unrestrained patient?", answer: ">40 km/h." },
-                { category: "Triage", question: "Black priority definition?", answer: "Deceased or expectant (non‑survivable)." },
-                { category: "Triage", question: "Is an isolated femur fracture Red priority?", answer: "No – Yellow, unless shock or limb ischemia." },
-                { category: "Triage", question: "GCS range for Yellow priority?", answer: "9‑13 (some protocols use 10‑14)." },
-                { category: "Triage", question: "GCS range for Red priority?", answer: "≤8." },
-                { category: "Triage", question: "What is the first step in triage?", answer: "Sort by ability to walk – walking wounded are Green." },
-                { category: "Triage", question: "What is the most common cause of preventable death in trauma?", answer: "Haemorrhage." },
-                { category: "Triage", question: "What is the triage category for a patient with an open chest wound?", answer: "Red (critical)." },
-                { category: "Triage", question: "What is the triage category for a patient with a simple forearm fracture?", answer: "Green (minor)." },
-                { category: "Triage", question: "What does MOI stand for?", answer: "Mechanism of Injury." },
-                { category: "Triage", question: "What does SAMPLE stand for?", answer: "Signs/Symptoms, Allergies, Medications, Past history, Last oral intake, Events." },
-                { category: "Triage", question: "What does OPQRST stand for?", answer: "Onset, Provocation, Quality, Radiation, Severity, Time." },
-                { category: "Triage", question: "What is the purpose of a triage tag?", answer: "To communicate priority and treatment needs." }
+                [span_50](start_span){ category: "Triage", question: "Red Reassessment?", answer: "Every 5 Minutes[span_50](end_span)" },
+                [span_51](start_span){ category: "Triage", question: "Yellow Reassessment?", answer: "Every 10 Minutes[span_51](end_span)" },
+                [span_52](start_span){ category: "Triage", question: "Green Reassessment?", answer: "Every 15 Minutes[span_52](end_span)" },
+                [span_53](start_span){ category: "Triage", question: "Red Priority Definition?", answer: "Life Threatening[span_53](end_span)" },
+                [span_54](start_span){ category: "Triage", question: "Unstable Red Patient?", answer: "Request ALS Backup[span_54](end_span)" }
             ],
-            critical: []
+            quiz: [
+                [span_55](start_span){ q: "How often do you reassess a Red Priority patient?", options: ["5 mins", "10 mins", "15 mins"], correct: 0, explanation: "Critical patients need reassessment every 5 minutes.[span_55](end_span)" },
+                [span_56](start_span){ q: "How often do you reassess a Yellow Priority patient?", options: ["5 mins", "10 mins", "15 mins"], correct: 1, explanation: "Serious (Yellow) patients are reassessed every 10 minutes.[span_56](end_span)" },
+                [span_57](start_span){ q: "Which priority represents a life threat?", options: ["Green", "Yellow", "Red"], correct: 2, explanation: "Red priority indicates a life-threatening condition.[span_57](end_span)" }
+            ],
+            critical: [
+                {
+                    scenario: "Triage: Patient has a GCS of 13, BP 110/70, but severe abdominal pain.",
+                    question: "What is the likely triage category?",
+                    options: [{t:"Red", f:"Vitals are stable."}, {t:"Yellow", f:"Correct. Serious but not unstable."}, {t:"Green", f:"Too severe for green."}],
+                    correct: 1,
+                    explanation: "Yellow Priority: Serious condition but stable vitals. [span_58](start_span)Reassess every 10 mins.[span_58](end_span)"
+                }
+            ]
         },
 
-        // ---------- SECTION 1.4: Functional Needs ----------
+        // ============================================================
+        // 1.4 FUNCTIONAL NEEDS
+        // ============================================================
         {
             id: "c1s4",
             shortTitle: "1.4 Functional Needs",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">🧑‍🦽 Functional Needs (CPG 1.4)</h3>
+                    <h3 style="color:var(--primary-accent);">🧑‍🤝‍🧑 Special Populations</h3>
                     <ul>
-                        <li>Identify <strong>mobility, sensory, cognitive, or mental health</strong> impairments.</li>
-                        <li>Use alternative communication: written notes, sign language, interpreter, caregiver.</li>
-                        <li><strong>Assistive devices</strong> (hearing aids, glasses, prostheses, wheelchairs) must accompany the patient.</li>
-                        <li>Involve caregiver; assess for abuse/neglect.</li>
-                        <li>Service animals should be accommodated if possible.</li>
+                        [span_59](start_span)<li><strong>Pediatrics:</strong> Age <strong>≤ 13 years</strong>. Use Broselow Tape.[span_59](end_span)</li>
+                        <li><strong>Geriatrics:</strong> Age <strong>≥ 65 years</strong>. [span_60](start_span)High risk of under-triage.[span_60](end_span)</li>
+                        [span_61](start_span)<li><strong>Comorbidities:</strong> Reduced drug doses may apply for Renal (Dialysis) or Hepatic failure.[span_61](end_span)</li>
                     </ul>
+                    [span_62](start_span)<h4>Cultural Sensitivity[span_62](end_span)</h4>
+                    <p>Communicate respectfully considering language barriers. Address anxiety to improve compliance.</p>
                 </div>
             `,
-            quiz: [
-                { q: "A deaf patient uses sign language. No interpreter is on scene. What should you do?", options: ["Write notes", "Speak loudly", "Use family member", "Transport without communication"], correct: 0, explanation: "Written communication is an effective alternative. Involve family/caregiver if available and willing." },
-                { q: "What must accompany a patient with a hearing aid?", options: ["The hearing aid itself", "A family member", "A written note", "Nothing"], correct: 0, explanation: "Assistive devices must accompany the patient or be safely stored and documented." },
-                { q: "How to communicate with a deaf patient without an interpreter?", options: ["Written notes", "Shouting", "Gestures only", "Use a flashlight"], correct: 0, explanation: "Written notes, gestures, or caregiver/family assistance are appropriate." },
-                { q: "What is a service animal?", options: ["An emotional support animal", "An animal trained to perform tasks for a person with a disability", "Any pet brought by the patient", "A guide dog only"], correct: 1, explanation: "A service animal is trained to perform specific tasks for a person with a disability; it should be accommodated if possible." },
-                { q: "A patient with an intellectual disability refuses transport. Who should be involved?", options: ["Police", "Tele‑EMS", "Caregiver/guardian", "All of the above"], correct: 3, explanation: "Involve caregiver/guardian, and if capacity is impaired, involve Tele‑EMS and consider police assistance." },
-                { q: "A patient is blind. What is the best way to communicate?", options: ["Written notes", "Verbal description", "Sign language", "Braille"], correct: 1, explanation: "Verbal communication with clear descriptions is appropriate. Identify yourself and explain each step." },
-                { q: "What are the three main categories of functional needs?", options: ["Medical, surgical, trauma", "Mobility, sensory, cognitive/mental health", "Adult, pediatric, geriatric", "Airway, breathing, circulation"], correct: 1, explanation: "Functional needs include mobility, sensory, and cognitive/mental health impairments." },
-                { q: "A patient with a mobility impairment uses a wheelchair. What should you do?", options: ["Leave the wheelchair behind", "Ensure the wheelchair accompanies the patient", "Use a stair chair only", "Ask the patient to walk"], correct: 1, explanation: "Assistive devices (wheelchair, walker, etc.) must accompany the patient." },
-                { q: "A patient with a cognitive impairment is agitated. What is the best approach?", options: ["Restrain immediately", "Use calm, simple language and involve caregiver", "Ignore the behaviour", "Sedate without assessment"], correct: 1, explanation: "Use calm, simple language, involve caregiver, and assess for underlying causes." },
-                { q: "What should you do if you suspect abuse or neglect in a patient with functional needs?", options: ["Ignore it", "Document and report as per protocol", "Confront the caregiver", "Transport without action"], correct: 1, explanation: "Document your concerns and report according to your service's protocol." }
-            ],
             flashcards: [
-                { category: "Functional Needs", question: "Three main categories of functional needs?", answer: "Mobility, sensory, cognitive/mental health." },
-                { category: "Functional Needs", question: "What must accompany a patient with a hearing aid?", answer: "The hearing aid itself – assistive devices go with the patient." },
-                { category: "Functional Needs", question: "How to communicate with a deaf patient without an interpreter?", answer: "Written notes, gestures, or caregiver/family assistance." },
-                { category: "Functional Needs", question: "What is a service animal?", answer: "An animal trained to perform tasks for a person with a disability; should be accommodated." },
-                { category: "Functional Needs", question: "A patient with intellectual disability refuses transport. Who should be involved?", answer: "Caregiver/guardian, Tele‑EMS, police if needed." },
-                { category: "Functional Needs", question: "Best way to communicate with a blind patient?", answer: "Verbal description; identify yourself and explain each step." },
-                { category: "Functional Needs", question: "Should a wheelchair be left behind?", answer: "No – assistive devices must accompany the patient." },
-                { category: "Functional Needs", question: "How to approach an agitated patient with cognitive impairment?", answer: "Calm, simple language; involve caregiver; assess for underlying causes." },
-                { category: "Functional Needs", question: "What to do if abuse/neglect is suspected?", answer: "Document and report as per protocol." },
-                { category: "Functional Needs", question: "What does 'functional needs' include?", answer: "Mobility, sensory, cognitive, and mental health impairments." }
+                [span_63](start_span){ category: "Def", question: "Pediatric Age Cutoff?", answer: "13 Years and Under[span_63](end_span)" },
+                [span_64](start_span){ category: "Def", question: "Geriatric Age Cutoff?", answer: "65 Years and Older[span_64](end_span)" },
+                [span_65](start_span){ category: "Tool", question: "Tool for Peds Weight?", answer: "Broselow Tape[span_65](end_span)" },
+                [span_66](start_span){ category: "Meds", question: "Renal Failure Dosing?", answer: "Consider Reduced Doses[span_66](end_span)" },
+                [span_67](start_span){ category: "Comms", question: "Language Barriers?", answer: "Use translation tools/respectful comms[span_67](end_span)" }
             ],
-            critical: []
+            quiz: [
+                [span_68](start_span){ q: "What is the definition of a Pediatric patient in DCAS?", options: ["< 12", "<= 13", "< 18"], correct: 1, explanation: "Pediatrics are considered ≤ 13 years of age.[span_68](end_span)" },
+                [span_69](start_span){ q: "What is the definition of a Geriatric patient?", options: ["> 60", ">= 65", "> 70"], correct: 1, explanation: "Geriatrics are ≥ 65 years of age.[span_69](end_span)" },
+                [span_70](start_span){ q: "For a patient on dialysis, what medication consideration applies?", options: ["Standard dose", "Reduced dose", "Increased dose"], correct: 1, explanation: "Reduced dosages may apply for renal/hepatic disease.[span_70](end_span)" }
+            ],
+            critical: [
+                {
+                    scenario: "Peds: 5-year-old needs medication. You don't know the weight.",
+                    question: "What tool should you use?",
+                    options: [{t:"Guess based on height", f:"Unsafe."}, {t:"Broselow Tape", f:"Correct."}],
+                    correct: 1,
+                    [span_71](start_span)explanation: "Use the Broselow Tape to estimate weight and guide dosing.[span_71](end_span)"
+                }
+            ]
         },
 
-        // ---------- SECTION 1.5: Treated at Scene ----------
+        // ============================================================
+        // 1.5 TREATED AT SCENE (Derived from Patient Safety)
+        // ============================================================
         {
             id: "c1s5",
-            shortTitle: "1.5 Treated at Scene",
+            shortTitle: "1.5 Treat at Scene",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">🏠 Treat at Scene (CPG 1.5)</h3>
-                    <p>Only for <strong>minor, stable, resolved conditions</strong> (e.g., mild hypoglycaemia corrected, small laceration with controlled bleeding, mild allergic reaction resolved).</p>
-                    <h4>Requirements</h4>
+                    <h3 style="color:var(--primary-accent);">🏠 Treat & Release</h3>
+                    <p>Providing care without transport requires strict adherence to safety protocols.</p>
                     <ul>
-                        <li>Patient must have <strong>mental capacity</strong> (4‑step test).</li>
-                        <li>Must have <strong>access to follow‑up care</strong> and a <strong>responsible, sober adult caregiver</strong> willing to accept responsibility.</li>
-                    </ul>
-                    <h4>Exclusion Criteria (mandatory transport)</h4>
-                    <ul>
-                        <li>Age <18 or >60 years</li>
-                        <li>Pregnancy</li>
-                        <li>Unreliable history</li>
-                        <li>Self‑inflicted injuries (suicidal)</li>
-                        <li>Significant relevant comorbidities</li>
-                        <li>Repeat call for same condition within 30 days</li>
-                        <li>No GP or primary care access</li>
+                        <li><strong>Goal:</strong> Treat minor/reversible conditions if safe.</li>
+                        [span_72](start_span)<li><strong>Tele-EMS:</strong> Consult for complex decisions or high-risk refusals.[span_72](end_span)</li>
+                        [span_73](start_span)<li><strong>Documentation:</strong> Requires full ePCR, vitals, and clear rationale.[span_73](end_span)</li>
+                        <li><strong>Exclusions:</strong> Do not leave if capacity is impaired or condition is critical.</li>
                     </ul>
                 </div>
             `,
-            quiz: [
-                { q: "Which patient meets the exclusion criteria for Treat at Scene?", options: ["22‑year‑old with resolved hypoglycaemia", "35‑year‑old with ankle sprain", "59‑year‑old with chest pain now resolved", "17‑year‑old with small laceration"], correct: 3, explanation: "Patients <18 years are excluded from Treat at Scene; they require guardian consent and transport." },
-                { q: "What is the first step in the four‑step capacity assessment?", options: ["Reasoning", "Appreciation", "Understanding", "Expression"], correct: 2, explanation: "1. Understanding – can they repeat the information? 2. Appreciation – do they recognise their own risk? 3. Reasoning – can they weigh options? 4. Expression – clear and consistent decision." },
-                { q: "A patient with chest pain refuses transport. Which action is MANDATORY?", options: ["Contact police", "Contact Tele‑EMS", "Restrain the patient", "Leave the scene"], correct: 1, explanation: "High‑risk refusal (chest pain, neurological deficits) requires Tele‑EMS consultation and duty officer notification." },
-                { q: "How many complete sets of vital signs are required for a patient refusing transport?", options: ["One", "Two", "Three", "None"], correct: 1, explanation: "Two full sets of vital signs must be documented before a refusal can be accepted." },
-                { q: "Which of the following is NOT an exclusion criterion for Treat at Scene?", options: ["Age 55", "Pregnancy", "Self‑inflicted injury", "Repeat caller within 30 days"], correct: 0, explanation: "Age >60 is an exclusion, but 55 is not. Pregnancy, self‑harm, and repeat callers are all exclusions." },
-                { q: "What is the maximum total IV fluid bolus for an adult in shock?", options: ["1000 mL", "2000 mL", "3000 mL", "No maximum"], correct: 1, explanation: "Maximum total crystalloid bolus is 2000 mL for adults." },
-                { q: "A 62‑year‑old with well‑controlled hypertension and a minor laceration requests Treat at Scene. Is this allowed?", options: ["Yes, if vitals normal and laceration controlled", "No, age >60 is an exclusion", "Only with Tele‑EMS approval", "Only if family present"], correct: 1, explanation: "Age >60 is an absolute exclusion criterion for Treat at Scene." },
-                { q: "What does 'appreciation' mean in capacity assessment?", options: ["Understanding the words", "Recognising personal risk", "Choosing between options", "Speaking clearly"], correct: 1, explanation: "Appreciation = the patient acknowledges their own medical condition and the risks of refusing care." },
-                { q: "What is the minimum age for a patient to be considered for Treat at Scene?", options: ["16", "17", "18", "21"], correct: 2, explanation: "Patients must be ≥18 years old to be eligible for Treat at Scene." },
-                { q: "Which vital sign abnormality automatically excludes a patient from Treat at Scene?", options: ["HR 95", "RR 18", "SpO₂ 93%", "SBP 88 mmHg"], correct: 3, explanation: "Hypotension (SBP <90 mmHg) is a Red flag and requires transport." }
-            ],
             flashcards: [
-                { category: "Treat at Scene", question: "Age exclusions for Treat at Scene?", answer: "<18 years or >60 years." },
-                { category: "Treat at Scene", question: "Must a patient have a caregiver to be left at scene?", answer: "Yes – a sober, adult caregiver willing to accept responsibility." },
-                { category: "Treat at Scene", question: "Pregnancy and Treat at Scene?", answer: "Pregnant patients are excluded – must be transported." },
-                { category: "Treat at Scene", question: "Repeat caller within 30 days – allowed?", answer: "No – excluded; transport recommended." },
-                { category: "Treat at Scene", question: "Self‑inflicted injury – treat at scene?", answer: "No – excluded; transport mandatory." },
-                { category: "Treat at Scene", question: "Unreliable history – treat at scene?", answer: "No – excluded." },
-                { category: "Treat at Scene", question: "Four steps of capacity assessment?", answer: "Understanding, Appreciation, Reasoning, Expression." },
-                { category: "Treat at Scene", question: "Minimum number of vital sign sets for refusal?", answer: "Two." },
-                { category: "Treat at Scene", question: "High‑risk refusal examples?", answer: "Chest pain, neurological deficit, Red priority." },
-                { category: "Treat at Scene", question: "Who to call for high‑risk refusal?", answer: "Tele‑EMS and Duty Officer." }
+                [span_74](start_span){ category: "Ops", question: "Tele-EMS Indication?", answer: "Complex/Deteriorating conditions[span_74](end_span)" },
+                { category: "Ops", question: "Treat at Scene Req?", answer: "Normal vitals + Capacity" },
+                [span_75](start_span){ category: "Ops", question: "Documentation?", answer: "Full ePCR mandatory[span_75](end_span)" },
+                { category: "Safety", question: "Unstable Patient?", answer: "Must Transport / Request ALS" },
+                [span_76](start_span){ category: "Consult", question: "High Risk Refusal?", answer: "Consult Tele-EMS[span_76](end_span)" }
             ],
-            critical: []
+            quiz: [
+                [span_77](start_span){ q: "Who should be consulted for complex non-transport decisions?", options: ["Dispatch", "Tele-EMS", "Police"], correct: 1, explanation: "Consult Tele-EMS for complex or deteriorating conditions.[span_77](end_span)" },
+                [span_78](start_span){ q: "Can you treat and release a Red Priority patient?", options: ["Yes", "No", "Only if they sign"], correct: 1, explanation: "Critical patients require transport.[span_78](end_span)" },
+                [span_79](start_span){ q: "What documentation is needed for non-transport?", options: ["Short note", "Full ePCR", "Nothing"], correct: 1, explanation: "Comprehensive ePCR is required for all contacts.[span_79](end_span)" }
+            ],
+            critical: [
+                {
+                    scenario: "Scene: Patient with resolved hypoglycemia (BGL 110) wants to stay home. He is alert (GCS 15).",
+                    question: "Can he be released?",
+                    options: [{t:"Yes, if capacity & food present", f:"Correct. Low risk."}, {t:"No, mandatory transport", f:"Hypoglycemia can often be treated at scene."}],
+                    correct: 0,
+                    explanation: "Treat at scene is appropriate if patient is stable, capable, and has support."
+                }
+            ]
         },
 
-        // ---------- SECTION 1.6: Refusal of Transfer ----------
+        // ============================================================
+        // 1.6 REFUSAL OF TRANSFER
+        // ============================================================
         {
             id: "c1s6",
-            shortTitle: "1.6 Refusal of Transfer",
+            shortTitle: "1.6 Refusal",
             summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-universal);">🚫 Refusal of Transfer (CPG 1.6)</h3>
-                    <h4>Four‑step capacity assessment (all must be met)</h4>
-                    <ol>
-                        <li><strong>Understanding</strong> – can they repeat the information?</li>
-                        <li><strong>Appreciation</strong> – do they recognise their own risk?</li>
-                        <li><strong>Reasoning</strong> – can they weigh options?</li>
-                        <li><strong>Expression</strong> – clear and consistent decision.</li>
-                    </ol>
-                    <p>If capacity impaired → transport (with police/Tele‑EMS if necessary).</p>
-                    <p><strong>High‑risk refusal</strong> (chest pain, neurological deficits, Red priority) → mandatory Tele‑EMS consultation and duty officer notification.</p>
-                    <p>Document: <strong>two full sets of vital signs</strong>, 12‑lead ECG (if cardiac), refusal form, education given, caregiver details.</p>
+                <div class="sum-card red-flag">
+                    <h3 style="color:#dc3545;">🚫 Refusal of Transfer</h3>
+                    <ul>
+                        [span_80](start_span)<li><strong>Rights:</strong> Adults (>18) with capacity can refuse.[span_80](end_span)</li>
+                        [span_81](start_span)<li><strong>Capacity Test:</strong> Must Understand, Retain, and Repeat info.[span_81](end_span)</li>
+                        [span_82](start_span)<li><strong>Living Wills:</strong> NOT recognized in Dubai prehospital settings yet.[span_82](end_span)</li>
+                        [span_83](start_span)<li><strong>High Risk:</strong> If refusal is high-risk (e.g., chest pain), consult Tele-EMS.[span_83](end_span)</li>
+                    </ul>
                 </div>
             `,
-            quiz: [
-                { q: "What is the first step in the four‑step capacity assessment?", options: ["Reasoning", "Appreciation", "Understanding", "Expression"], correct: 2, explanation: "1. Understanding – can they repeat the information? 2. Appreciation – do they recognise their own risk? 3. Reasoning – can they weigh options? 4. Expression – clear and consistent decision." },
-                { q: "A patient with chest pain refuses transport. Which action is MANDATORY?", options: ["Contact police", "Contact Tele‑EMS", "Restrain the patient", "Leave the scene"], correct: 1, explanation: "High‑risk refusal (chest pain, neurological deficits) requires Tele‑EMS consultation and duty officer notification." },
-                { q: "How many complete sets of vital signs are required for a patient refusing transport?", options: ["One", "Two", "Three", "None"], correct: 1, explanation: "Two full sets of vital signs must be documented before a refusal can be accepted." },
-                { q: "What does 'appreciation' mean in capacity assessment?", options: ["Understanding the words", "Recognising personal risk", "Choosing between options", "Speaking clearly"], correct: 1, explanation: "Appreciation = the patient acknowledges their own medical condition and the risks of refusing care." },
-                { q: "What should you do if a patient fails the capacity assessment but still refuses transport?", options: ["Accept refusal", "Contact Tele‑EMS", "Leave the scene", "Document and go"], correct: 1, explanation: "If capacity is impaired, the patient cannot refuse. Contact Tele‑EMS for guidance; police assistance may be needed." },
-                { q: "Which of the following is a valid reason to override a patient's refusal?", options: ["Family request", "Impaired capacity", "Long transport time", "Patient is emotional"], correct: 1, explanation: "Lack of decision‑making capacity overrides refusal. Transport is mandatory." },
-                { q: "What documentation is required for a refusal?", options: ["Refusal form only", "Full ePCR with assessment, vitals, capacity, education", "Police report", "Verbal handover only"], correct: 1, explanation: "Complete ePCR with all assessment details, vital signs, capacity assessment, and patient education." },
-                { q: "A 70‑year‑old with a minor scalp laceration (bleeding controlled) refuses transport. His wife is present and agrees to stay with him. Can he be left at scene?", options: ["Yes, with signed refusal", "No, age >60 exclusion", "Yes, if Tele‑EMS approves", "No, scalp laceration is Red"], correct: 1, explanation: "Age >60 is an absolute exclusion for Treat at Scene; transport must be recommended." },
-                { q: "What is the purpose of the 'reasoning' step in capacity assessment?", options: ["Repeat information", "Understand risk", "Weigh options logically", "State a decision"], correct: 2, explanation: "Reasoning assesses whether the patient can compare the consequences of going to hospital versus staying home." },
-                { q: "What should be documented about education given to a refusing patient?", options: ["Only that education was given", "Risks explained, alternatives, follow‑up instructions, and that the patient understood", "Nothing", "Only the patient's signature"], correct: 1, explanation: "Document the specific risks explained, alternatives offered, follow‑up advice, and confirmation that the patient understood." }
-            ],
             flashcards: [
-                { category: "Refusal", question: "Four steps of capacity assessment?", answer: "Understanding, Appreciation, Reasoning, Expression." },
-                { category: "Refusal", question: "Minimum number of vital sign sets for refusal?", answer: "Two." },
-                { category: "Refusal", question: "High‑risk refusal examples?", answer: "Chest pain, neurological deficit, Red priority." },
-                { category: "Refusal", question: "Who to call for high‑risk refusal?", answer: "Tele‑EMS and Duty Officer." },
-                { category: "Refusal", question: "What if capacity is impaired and patient refuses?", answer: "Transport is mandatory; involve Tele‑EMS/police." },
-                { category: "Refusal", question: "Is a 12‑lead ECG required for refusal in a cardiac‑type complaint?", answer: "Yes – must be performed and documented." },
-                { category: "Refusal", question: "Can a minor refuse transport?", answer: "No – guardian consent required; transport unless guardian refuses." },
-                { category: "Refusal", question: "What form must be signed for refusal?", answer: "DCAS Patient Refusal of Transfer form." },
-                { category: "Refusal", question: "What should be documented about education?", answer: "Risks explained, alternatives, follow‑up instructions, and that the patient understood." },
-                { category: "Refusal", question: "Police role in refusal?", answer: "Assist when patient lacks capacity and is unsafe; may also help with aggressive patients." }
+                [span_84](start_span){ category: "Legal", question: "Refusal Age?", answer: "18 Years+[span_84](end_span)" },
+                [span_85](start_span){ category: "Legal", question: "Capacity Criteria?", answer: "Understand, Retain, Repeat[span_85](end_span)" },
+                [span_86](start_span){ category: "Legal", question: "Living Wills in Dubai?", answer: "Not Recognized Prehospital[span_86](end_span)" },
+                [span_87](start_span){ category: "Action", question: "High Risk Refusal?", answer: "Consult Tele-EMS[span_87](end_span)" },
+                { category: "Action", question: "Impaired Capacity?", answer: "Treat & Transport (Implied Consent)" }
             ],
-            critical: []
+            quiz: [
+                [span_88](start_span){ q: "What is the minimum age to refuse treatment?", options: ["16", "18", "21"], correct: 1, explanation: "Patients must be above 18 years old.[span_88](end_span)" },
+                [span_89](start_span){ q: "Are Living Wills recognized in prehospital Dubai?", options: ["Yes", "No", "Only if signed"], correct: 1, explanation: "Advanced Directives/Living Wills are NOT recognized yet.[span_89](end_span)" },
+                [span_90](start_span){ q: "What defines mental capacity?", options: ["Alertness only", "Understand, Retain, Repeat", "Signing a form"], correct: 1, explanation: "Patient must understand, retain, and repeat information.[span_90](end_span)" }
+            ],
+            critical: [
+                {
+                    scenario: "Refusal: 50M with crushing chest pain refuses transport. He is GCS 15.",
+                    question: "Action?",
+                    options: [{t:"Accept Refusal immediately", f:"High risk!"}, {t:"Consult Tele-EMS & Persuade", f:"Correct. High risk refusal."}],
+                    correct: 1,
+                    [span_91](start_span)explanation: "For high-risk refusals, involve Tele-EMS and attempt to persuade.[span_91](end_span)"
+                }
+            ]
         }
     ]
 };
