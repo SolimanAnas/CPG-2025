@@ -31,6 +31,7 @@
     --border-flash: #dbeafe; --text-flash: #1e40af;
     --border-quiz: #dcfce7; --text-quiz: #166534;
     --border-scen: #fee2e2; --text-scen: #991b1b;
+    --primary-accent: #0056b3; /* added */
 }
 
 /* Light theme */
@@ -44,7 +45,7 @@
     --header-text: #0056b3;
     --toggle-bg: #cbd5e1;
     --toggle-active: #0056b3;
-    /* All other variables remain the same – they are independent of theme */
+    --primary-accent: #0056b3;
 }
 
 /* Sepia theme (warm, vintage) */
@@ -58,7 +59,7 @@
     --header-text: #4a3c2c;
     --toggle-bg: #c4a484;
     --toggle-active: #8b6b4f;
-    /* Keep accent colors unchanged (they remain vibrant) */
+    --primary-accent: #8b6b4f;
 }
 
 /* Forest theme (calm green) */
@@ -72,6 +73,7 @@
     --header-text: #edf4e7;
     --toggle-bg: #52796f;
     --toggle-active: #84a98c;
+    --primary-accent: #84a98c;
 }
 
 /* Shared variables – do not change with theme */
@@ -589,7 +591,7 @@ main {
     pointer-events: none;
 }
 
-/* ---------- STATS CARD ---------- */
+/* ---------- STATS CARD (full) ---------- */
 .stats-card {
     background: var(--glass-bg);
     border-radius: 24px;
@@ -600,23 +602,72 @@ main {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.stat-row {
+.progress-header {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
-    background: rgba(0,0,0,0.02);
-    border-radius: 8px;
-    margin-top: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.progress-container {
+    height: 12px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3b82f6, #0056b3);
+    transition: width 1s ease-out;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-box {
+    background: rgba(0,0,0,0.03);
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .stat-label {
+    font-size: 0.75rem;
     font-weight: 600;
-    color: #0c5460;
+    color: var(--text-secondary);
+    text-transform: uppercase;
 }
 
 .stat-value {
-    font-weight: 700;
-    color: #004085;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.encouragement {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--btn-grad-flash);
+    color: var(--text-flash);
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid var(--border-flash);
 }
 
 /* ---------- MENU CARDS (for index) ---------- */
