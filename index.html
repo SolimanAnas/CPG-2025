@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -10,194 +10,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ---------- THEME: BLUE-GREEN / TEAL ---------- */
+        /* ---------- THEME CONFIGURATION ---------- */
         :root {
-            /* Light Theme (Light Blue-Green) */
-            --bg-base: #f0fdfa; /* Teal-50 */
-            --bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            /* --- LIGHT THEME (Fresh Clinical Blue) --- */
+            --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #b8e1ff 50%, #f0f9ff 100%);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
             
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(20, 184, 166, 0.2); /* Teal-500 border */
-            --glass-shadow: 0 8px 32px 0 rgba(19, 78, 74, 0.05);
+            --text-primary: #1a2a3a;
+            --text-secondary: #475569;
+            --header-text: #0056b3; /* Dark blue for visibility on light bg */
             
-            --text-dark: #115e59; /* Teal-800 */
-            --text-medium: #0f766e; /* Teal-700 */
-            --text-light: #ffffff;
-            
-            --primary-accent: #0d9488; /* Teal-600 */
-            --card-hover: rgba(255,255,255,0.85);
-            
-            /* Button Colors (Light Mode) */
-            --btn-sum-bg: #ffedd5; --btn-sum-text: #9a3412; --btn-sum-border: #fed7aa; /* Orange */
-            --btn-flash-bg: #e0f2fe; --btn-flash-text: #0369a1; --btn-flash-border: #bae6fd; /* Sky Blue */
-            --btn-quiz-bg: #dcfce7; --btn-quiz-text: #15803d; --btn-quiz-border: #bbf7d0; /* Green */
-            --btn-scen-bg: #fee2e2; --btn-scen-text: #991b1b; --btn-scen-border: #fecaca; /* Red */
-
-            /* Toggle Switch */
             --toggle-bg: #cbd5e1;
-            --toggle-active: #0d9488;
-            --toggle-knob: #ffffff;
+            --toggle-active: #0056b3;
             
-            --header-bg: rgba(240, 253, 250, 0.9);
-            --header-border: rgba(20, 184, 166, 0.1);
+            /* Button Gradients (Light Glossy) */
+            --btn-grad-sum: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+            --btn-grad-flash: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+            --btn-grad-quiz: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
+            --btn-grad-scen: linear-gradient(180deg, #fef2f2 0%, #fee2e2 100%);
+            
+            --border-sum: #ffedd5; --text-sum: #9a3412;
+            --border-flash: #dbeafe; --text-flash: #1e40af;
+            --border-quiz: #dcfce7; --text-quiz: #166534;
+            --border-scen: #fee2e2; --text-scen: #991b1b;
+        }
+
+        [data-theme="dark"] {
+            /* --- DARK THEME (Deep Teal/Slate) --- */
+            --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            --glass-bg: rgba(255, 255, 255, 0.75); /* High contrast cards */
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+            
+            /* Text on cards remains dark because cards are white/glass */
+            --text-primary: #1a2a3a;
+            --text-secondary: #334155;
+            --header-text: #ffffff; /* White text on dark header */
+            
+            --toggle-bg: #374151;
+            --toggle-active: #2dd4bf;
+
+            /* Keep button gradients same as light mode for gloss effect on white cards */
+        }
+
+        /* --- SHARED VARIABLES --- */
+        :root {
+            --accent-universal: #d63384;       
+            --accent-airway: #0ca678;          
+            --accent-cardio: #e03131;          
+            --accent-resus: #6741d9;           
+            --accent-neuro: #0891b2;           
+            --accent-medical: #f76707;         
+            --accent-trauma: #fcc419;          
+            --accent-environmental: #845ef7;   
+            --accent-pediatric: #ff922b;       
+            --accent-obstetric: #f06595;       
+            --accent-mci: #2f9e44;             
+            --accent-scope: #495057;           
             
             --header-height: 72px;
-        }
-
-        /* --- DARK THEME (Deep Blue-Green) --- */
-        [data-theme="dark"] {
-            --bg-base: #042f2e; /* Teal-950 */
-            --bg-gradient: linear-gradient(135deg, #042f2e 0%, #115e59 100%);
-            
-            --glass-bg: rgba(19, 78, 74, 0.6); /* Teal-900 glass */
-            --glass-border: rgba(94, 234, 212, 0.1); /* Teal-200 border */
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            
-            --text-dark: #f0fdfa; /* Teal-50 */
-            --text-medium: #99f6e4; /* Teal-200 */
-            --text-light: #ccfbf1;
-            
-            --primary-accent: #2dd4bf; /* Teal-400 */
-            --card-hover: rgba(19, 78, 74, 0.8);
-
-            /* Button Colors (Dark Mode - Muted) */
-            --btn-sum-bg: rgba(124, 45, 18, 0.3); --btn-sum-text: #fdba74; --btn-sum-border: #7c2d12;
-            --btn-flash-bg: rgba(12, 74, 110, 0.3); --btn-flash-text: #7dd3fc; --btn-flash-border: #075985;
-            --btn-quiz-bg: rgba(20, 83, 45, 0.3); --btn-quiz-text: #86efac; --btn-quiz-border: #14532d;
-            --btn-scen-bg: rgba(127, 29, 29, 0.3); --btn-scen-text: #fca5a5; --btn-scen-border: #7f1d1d;
-
-            --toggle-bg: #134e4a;
-            --toggle-active: #2dd4bf;
-            --toggle-knob: #f0fdfa;
-            
-            --header-bg: rgba(4, 47, 46, 0.9);
-            --header-border: rgba(94, 234, 212, 0.05);
-        }
-
-        /* Chapter Accent Colors */
-        :root {
-            --accent-universal: #d946ef;       /* Fuchsia */
-            --accent-airway: #06b6d4;          /* Cyan */
-            --accent-cardio: #ef4444;          /* Red */
-            --accent-resus: #8b5cf6;           /* Violet */
-            --accent-neuro: #14b8a6;           /* Teal */
-            --accent-medical: #f97316;         /* Orange */
-            --accent-trauma: #eab308;          /* Yellow */
-            --accent-environmental: #a855f7;   /* Purple */
-            --accent-pediatric: #f59e0b;       /* Amber */
-            --accent-obstetric: #fb7185;       /* Rose */
-            --accent-mci: #22c55e;             /* Green */
-            --accent-scope: #64748b;           /* Slate */
         }
 
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-base);
-            background-image: var(--bg-gradient);
+            background: var(--bg-gradient);
             background-attachment: fixed;
-            color: var(--text-dark);
+            color: var(--text-primary);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-            transition: background 0.3s ease, color 0.3s ease;
+            display: flex; flex-direction: column;
+            transition: background 0.5s ease;
         }
 
-        /* Header */
+        /* ---------- HEADER ---------- */
         header {
-            background: var(--header-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--header-border);
-            color: var(--text-dark);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between;
             height: var(--header-height);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-            transition: background 0.3s ease, border 0.3s ease;
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        .header-left { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 0; }
-        .header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 16px; }
+        .header-right { display: flex; align-items: center; gap: 12px; }
 
-        .header-text { display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
         .header-text h1 { 
             font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; 
-            color: var(--primary-accent);
-            margin: 0;
+            color: var(--header-text); margin: 0; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .header-text p { font-size: 0.75rem; color: var(--text-medium); font-weight: 500; margin-top: 2px; }
+        .header-text p { 
+            font-size: 0.75rem; color: var(--header-text); 
+            opacity: 0.8; font-weight: 500; margin-top: 2px; 
+        }
 
-        /* Buttons */
+        /* Home Button */
         .icon-btn {
-            background: transparent;
-            border: 1px solid var(--glass-border);
-            color: var(--text-dark);
-            width: 38px; height: 38px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--header-text);
+            width: 40px; height: 40px;
             border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 1.1rem;
-            cursor: pointer;
+            font-size: 1.2rem; cursor: pointer;
             transition: all 0.2s;
         }
-        .icon-btn:active { transform: scale(0.95); background: rgba(13, 148, 136, 0.1); }
+        .icon-btn:active { transform: scale(0.95); background: rgba(255,255,255,0.4); }
 
+        /* Stats Badge */
         .stats-badge {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            display: flex; align-items: center; gap: 8px;
-            box-shadow: var(--glass-shadow);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 12px; border-radius: 20px;
+            font-size: 0.75rem; font-weight: 600;
+            color: var(--header-text);
+            display: flex; align-items: center; gap: 10px;
+            backdrop-filter: blur(10px);
         }
-        .stats-divider { width: 1px; height: 14px; background: var(--text-medium); opacity: 0.3; }
+        .stats-divider { width: 1px; height: 14px; background: currentColor; opacity: 0.4; }
 
-        /* Main Content */
+        /* ---------- MAIN CONTENT ---------- */
         main {
-            flex: 1;
-            padding: 24px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 1;
+            flex: 1; padding: 24px 20px;
+            max-width: 800px; margin: 0 auto; width: 100%;
         }
 
-        .menu-grid { display: grid; gap: 16px; }
+        .menu-grid { display: grid; gap: 20px; }
 
-        /* Cards */
+        /* ---------- CARDS ---------- */
         .menu-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 20px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 24px; padding: 24px;
+            position: relative; overflow: hidden;
             box-shadow: var(--glass-shadow);
             transform: translateZ(0); 
             animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-            opacity: 0;
-            transform: translateY(20px);
+            opacity: 0; transform: translateY(20px);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .menu-card:hover {
-            transform: translateY(-2px);
-            background: var(--card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
         }
 
-        /* Chapter Glow */
-        .menu-card[data-chapter] { border-left: 5px solid transparent; }
+        /* Chapter Accent Border */
+        .menu-card[data-chapter] { border-left: 6px solid transparent; }
         .menu-card[data-chapter="universal"] { border-left-color: var(--accent-universal); }
         .menu-card[data-chapter="airway"] { border-left-color: var(--accent-airway); }
         .menu-card[data-chapter="cardio"] { border-left-color: var(--accent-cardio); }
@@ -212,103 +178,104 @@
         .menu-card[data-chapter="scope"] { border-left-color: var(--accent-scope); }
 
         .card-header {
-            display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;
+            display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;
         }
 
         .status-badge {
-            font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em;
-            text-transform: uppercase; color: var(--text-medium);
-            background: rgba(13, 148, 136, 0.1); padding: 4px 8px; border-radius: 6px;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+            text-transform: uppercase; color: var(--text-secondary);
+            background: rgba(0,0,0,0.06); padding: 4px 10px; border-radius: 6px;
         }
 
-        /* Completion Toggle */
+        /* Modern Toggle */
         .toggle-wrapper { position: relative; z-index: 5; }
         .toggle-label {
             display: flex; align-items: center; gap: 8px; cursor: pointer;
-            font-size: 0.75rem; font-weight: 600; color: var(--text-medium);
+            font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);
         }
         .toggle-input { display: none; }
         .toggle-track {
-            width: 36px; height: 20px; background: var(--toggle-bg);
+            width: 44px; height: 24px; background: var(--toggle-bg);
             border-radius: 20px; position: relative; transition: background 0.3s;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
         }
         .toggle-track::after {
             content: ''; position: absolute; top: 2px; left: 2px;
-            width: 16px; height: 16px; background: var(--toggle-knob);
+            width: 20px; height: 20px; background: white;
             border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         .toggle-input:checked + .toggle-track { background: var(--toggle-active); }
-        .toggle-input:checked + .toggle-track::after { transform: translateX(16px); }
+        .toggle-input:checked + .toggle-track::after { transform: translateX(20px); }
 
         .menu-card h2 {
-            font-size: 1.1rem; font-weight: 700; color: var(--text-dark);
-            margin: 0 0 4px 0; line-height: 1.3;
+            font-size: 1.25rem; font-weight: 700; color: var(--text-primary);
+            margin: 0 0 6px 0; line-height: 1.3;
         }
         .menu-card p {
-            font-size: 0.85rem; color: var(--text-medium); margin: 0 0 16px 0; line-height: 1.5;
+            font-size: 0.9rem; color: var(--text-secondary); margin: 0 0 20px 0; line-height: 1.5;
         }
 
-        /* Buttons Grid */
-        .menu-sub-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; }
+        /* Action Buttons */
+        .menu-sub-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
         
         .btn-action {
             display: flex; align-items: center; justify-content: center; gap: 6px;
-            padding: 10px 12px; border-radius: 12px;
-            font-size: 0.8rem; font-weight: 600; text-decoration: none;
+            padding: 10px 16px; border-radius: 12px;
+            font-size: 0.85rem; font-weight: 600; text-decoration: none;
             transition: all 0.2s; border: none; cursor: pointer;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .btn-action:active { transform: translateY(1px); box-shadow: none; }
 
-        .btn-summary { background: var(--btn-sum-bg); color: var(--btn-sum-text); border: 1px solid var(--btn-sum-border); }
-        .btn-flash { background: var(--btn-flash-bg); color: var(--btn-flash-text); border: 1px solid var(--btn-flash-border); }
-        .btn-quiz { background: var(--btn-quiz-bg); color: var(--btn-quiz-text); border: 1px solid var(--btn-quiz-border); }
-        .btn-scenario { background: var(--btn-scen-bg); color: var(--btn-scen-text); border: 1px solid var(--btn-scen-border); }
+        .btn-summary { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
+        .btn-flash { background: var(--btn-grad-flash); color: var(--text-flash); border: 1px solid var(--border-flash); }
+        .btn-quiz { background: var(--btn-grad-quiz); color: var(--text-quiz); border: 1px solid var(--border-quiz); }
+        .btn-scenario { background: var(--btn-grad-scen); color: var(--text-scen); border: 1px solid var(--border-scen); }
 
         /* Stats Card */
         .stats-card {
-            background: var(--glass-bg); border-radius: 20px; padding: 24px;
-            margin-top: 30px; border: 1px solid var(--glass-border);
+            background: var(--glass-bg); border-radius: 24px; padding: 28px;
+            margin-top: 40px; border: 1px solid var(--glass-border);
             box-shadow: var(--glass-shadow);
             animation: fadeInUp 0.8s ease forwards;
         }
         
         .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .progress-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+        .progress-title { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
         
         .progress-container {
-            height: 10px; background: rgba(13, 148, 136, 0.1); border-radius: 10px; overflow: hidden; margin-bottom: 20px;
+            height: 12px; background: rgba(0,0,0,0.05); border-radius: 10px; overflow: hidden; margin-bottom: 24px;
         }
         .progress-bar {
             height: 100%; border-radius: 10px;
-            background: linear-gradient(90deg, #2dd4bf, #0d9488);
+            background: linear-gradient(90deg, #3b82f6, #0056b3);
             transition: width 1s ease-out;
         }
 
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .stat-box {
-            background: rgba(13, 148, 136, 0.05); padding: 14px; border-radius: 14px;
-            display: flex; flex-direction: column; gap: 4px; border: 1px solid rgba(13, 148, 136, 0.1);
+            background: rgba(0,0,0,0.03); padding: 16px; border-radius: 16px;
+            display: flex; flex-direction: column; gap: 4px; border: 1px solid rgba(0,0,0,0.05);
         }
-        .stat-label { font-size: 0.7rem; font-weight: 600; color: var(--text-medium); text-transform: uppercase; letter-spacing: 0.05em; }
-        .stat-value { font-size: 1.4rem; font-weight: 800; color: var(--text-dark); }
+        .stat-label { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; }
+        .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); }
 
         .encouragement {
-            margin-top: 16px; padding: 14px; border-radius: 14px;
-            background: var(--btn-flash-bg);
-            color: var(--primary-accent); font-weight: 600; text-align: center; font-size: 0.9rem;
-            border: 1px solid var(--btn-flash-border);
+            margin-top: 20px; padding: 16px; border-radius: 16px;
+            background: var(--btn-grad-flash);
+            color: var(--text-flash); font-weight: 600; text-align: center;
+            border: 1px solid var(--border-flash);
         }
 
-        footer { text-align: center; padding: 30px; color: var(--text-medium); font-size: 0.75rem; }
+        footer { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 0.75rem; opacity: 0.8; }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 600px) {
             .header-text h1 { font-size: 1rem; }
             .header-text p { display: none; }
-            .menu-card { padding: 16px; }
-            .btn-action { padding: 10px; font-size: 0.75rem; }
+            .menu-card { padding: 20px; }
+            .btn-action { padding: 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -325,7 +292,7 @@
         </div>
     </div>
     <div class="header-right" id="headerShortcuts">
-        <button class="icon-btn" id="themeToggle" title="Toggle Theme">🌙</button>
+        <button class="icon-btn" id="themeToggle" title="Toggle Theme">🌗</button>
         <div class="stats-badge" id="liveStatsBadge">
             <span>📊 <span id="statsAttempts">0</span></span>
             <div class="stats-divider"></div>
@@ -340,51 +307,45 @@
 
 <footer>
     <div>Created by Soliman Anas · Study Aid Only</div>
-    <div style="margin-top:4px; opacity:0.7;">Based on DCAS Clinical Practice Guidelines 2025</div>
+    <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
 </footer>
 
 <script>
     (function(){
         "use strict";
 
-        // ---------- THEME TOGGLE LOGIC ----------
+        // ---------- THEME SYSTEM ----------
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
         
         function initTheme() {
-            const saved = localStorage.getItem('theme') || 'light';
+            const saved = localStorage.getItem('theme') || 'dark'; // Default to Dark as per preference
             html.setAttribute('data-theme', saved);
-            updateThemeIcon(saved);
         }
 
         function toggleTheme() {
             const current = html.getAttribute('data-theme');
-            const next = current === 'light' ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
-            updateThemeIcon(next);
-        }
-
-        function updateThemeIcon(theme) {
-            themeBtn.innerText = theme === 'light' ? '🌙' : '☀️';
         }
 
         themeBtn.addEventListener('click', toggleTheme);
         initTheme();
 
-        // ---------- ENCOURAGEMENT SYSTEM ----------
+        // ---------- ENCOURAGEMENT ----------
         const ENCOURAGEMENTS = [
             "Every review sharpens your skills.", "Progress, not perfection.", "Small steps lead to mastery.",
             "You've got this!", "Stay curious, stay sharp.", "Excellence is a habit.",
             "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
         ];
 
-        // ---------- DATA CONFIGURATION ----------
+        // ---------- CHAPTER DATA (Updated 1.2-1.6) ----------
         const CHAPTERS = [
             { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             
-            // UNIVERSAL CARE (Enabled buttons for ALL)
+            // UNIVERSAL CARE
             { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Core Assessment & Safety", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
             { id: "c1s2", shortTitle: "1.2 Documentation", title: "PCR Standards", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
             { id: "c1s3", shortTitle: "1.3 Triage", title: "Priority Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
@@ -449,7 +410,7 @@
             { id: "m1-38", shortTitle: "Formulary", title: "Medications", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
         ];
 
-        // ---------- STORAGE LOGIC ----------
+        // ---------- STORAGE & LOGIC ----------
         const COMPLETION_KEY = 'dcas_cpg_completion';
         const STATS_KEY = 'dcas_cpg_stats';
 
@@ -468,7 +429,6 @@
             document.getElementById('statsCritical').innerText = `${critAcc}%`;
         }
 
-        // ---------- APP STATE TOGGLER ----------
         window.app = window.app || {};
         window.app.toggleCompletion = function(chapterId, checked) {
             const completion = loadStorage(COMPLETION_KEY, {});
@@ -477,7 +437,7 @@
             renderMenu(); 
         };
 
-        // ---------- RENDER ENGINE ----------
+        // ---------- RENDER ----------
         function renderMenu() {
             const stats = loadStorage(STATS_KEY, { chapters: {} });
             const completion = loadStorage(COMPLETION_KEY, {});
@@ -485,15 +445,13 @@
             const contentHtml = CHAPTERS.map((ch, index) => {
                 const s = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
-                
                 const baseFile = ch.chapterFile || ch.id;
                 const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                 
-                // VISIBILITY LOGIC
+                // --- BUTTON VISIBILITY ---
                 const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
-                const showBtns = !isSpecial; // SHOW BUTTONS FOR ALL CLINICAL CHAPTERS
+                const showBtns = !isSpecial; // Enabled for ALL clinical chapters (including 1.2-1.6)
                 const showCrit = ch.hasCritical && showBtns;
-
                 const isChecked = completion[ch.id] || false;
 
                 return `
@@ -528,7 +486,7 @@
                 `;
             }).join('');
 
-            // Calculate Overall Stats
+            // Stats Card
             const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
             const completedCount = Object.values(completion).filter(v => v).length;
             const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
@@ -537,15 +495,12 @@
             const statsHtml = `
                 <div class="stats-card">
                     <div class="progress-header">
-                        <div class="progress-title">
-                            <span>🚀 Progress Dashboard</span>
-                        </div>
+                        <div class="progress-title">🚀 Progress Dashboard</div>
                         <span style="font-weight:700; color:var(--primary-accent);">${overallPercent}%</span>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar" style="width: ${overallPercent}%"></div>
                     </div>
-                    
                     <div class="stats-grid">
                         <div class="stat-box">
                             <span class="stat-label">Chapters Done</span>
@@ -556,10 +511,7 @@
                             <span class="stat-value">${loadStorage(STATS_KEY, {totalAttempts:0}).totalAttempts || 0}</span>
                         </div>
                     </div>
-
-                    <div class="encouragement">
-                        ✨ ${quote}
-                    </div>
+                    <div class="encouragement">✨ ${quote}</div>
                 </div>
             `;
 
@@ -567,14 +519,12 @@
             updateStatsBadge();
         }
 
-        // ---------- INIT ----------
+        // Init
         const homeBtn = document.getElementById('homeBtn');
         const indexBtn = document.getElementById('headerIndexBtn');
-
         if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
         if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
 
-        // Initial Load
         renderMenu();
     })();
 </script>
