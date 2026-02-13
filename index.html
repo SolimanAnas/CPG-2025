@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
     <style>
-        /* ---------- AERO VISTA GLASS THEME – ENHANCED UI ---------- */
+        /* ---------- AERO VISTA GLASS THEME – ULTIMATE ---------- */
         :root {
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
@@ -13,10 +13,21 @@
             --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             --text-dark: #1a2a3a;
             --text-light: #ffffff;
-            --accent-blue: #0056b3;
-            --accent-gold: #d4af37;
-            --accent-glow: rgba(212, 175, 55, 0.3);
             --header-height: 70px;
+            
+            /* Chapter accent colors – each first card gets a distinct hue */
+            --accent-universal: #d4af37;    /* Gold */
+            --accent-airway: #2c7da0;       /* Teal */
+            --accent-cardio: #c44536;        /* Coral */
+            --accent-resus: #6a4c93;         /* Purple */
+            --accent-neuro: #2a9d8f;         /* Green */
+            --accent-medical: #e76f51;       /* Orange */
+            --accent-trauma: #b5838d;        /* Mauve */
+            --accent-environmental: #5e60ce; /* Lavender */
+            --accent-pediatric: #f4a261;     /* Sand */
+            --accent-obstetric: #e63946;      /* Red */
+            --accent-mci: #2d6a4f;           /* Forest */
+            --accent-scope: #6c757d;         /* Gray */
         }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
         body {
@@ -31,6 +42,7 @@
             flex-direction: column;
             touch-action: manipulation;
         }
+        /* ---------- GLASS HEADER ---------- */
         header {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -52,7 +64,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            min-width: 0; /* Allow text to shrink */
+            min-width: 0;
         }
         .header-right {
             display: flex;
@@ -73,8 +85,9 @@
             transition: all 0.2s ease;
             touch-action: manipulation;
             flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
         }
-        .home-btn:active { background: rgba(255,255,255,0.4); transform: scale(0.95); }
         .header-btn {
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -91,11 +104,9 @@
             touch-action: manipulation;
             text-decoration: none;
             white-space: nowrap;
+            position: relative;
+            overflow: hidden;
         }
-        .header-btn:hover { background: rgba(255,255,255,0.25); }
-        .header-btn:active { transform: scale(0.95); }
-        
-        /* ---------- STATS BADGE – LIVE ---------- */
         .stats-badge {
             background: rgba(0,86,179,0.3);
             border: 1px solid rgba(255,255,255,0.4);
@@ -112,42 +123,17 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             white-space: nowrap;
         }
-        .stats-badge span {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        .stats-divider {
-            width: 1px;
-            height: 20px;
-            background: rgba(255,255,255,0.3);
-            margin: 0 5px;
-        }
-        
-        .header-text {
-            min-width: 0;
-            overflow: hidden;
-        }
+        .stats-divider { width:1px; height:20px; background:rgba(255,255,255,0.3); margin:0 5px; }
+        .header-text { min-width:0; overflow:hidden; }
         .header-text h1 { 
-            margin: 0; 
-            font-size: 1.2rem; 
-            font-weight: 700; 
-            letter-spacing: 0.5px; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin:0; font-size:1.2rem; font-weight:700; letter-spacing:0.5px; text-shadow:0 2px 4px rgba(0,0,0,0.3);
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
         }
         .header-text p { 
-            margin: 2px 0 0; 
-            font-size: 0.75rem; 
-            opacity: 0.9; 
-            font-weight: 300;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            margin:2px 0 0; font-size:0.75rem; opacity:0.9; font-weight:300;
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
         }
-
+        /* ---------- MAIN LAYOUT ---------- */
         main {
             flex: 1 0 auto;
             padding: 20px;
@@ -156,13 +142,8 @@
             width: 100%;
             padding-bottom: 80px;
         }
-
-        .menu-grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        /* ---------- CARD STYLES – ENHANCED ---------- */
+        .menu-grid { display: grid; gap: 20px; }
+        /* ---------- GLASS CARD – WITH RIPPLE ---------- */
         .menu-card {
             background: var(--glass-bg);
             backdrop-filter: blur(16px);
@@ -174,38 +155,61 @@
             position: relative;
             z-index: 1;
             overflow: hidden;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.5s ease forwards;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
-
+        /* RIPPLE EFFECT – pure CSS, no JS */
+        .menu-card::after, .btn-action::after, .home-btn::after, .header-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255,255,255,0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+        .menu-card:active::after, .btn-action:active::after, .home-btn:active::after, .header-btn:active::after {
+            width: 200px;
+            height: 200px;
+            opacity: 0.3;
+            transition: 0s;
+        }
         .menu-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.35);
-            border-color: rgba(255,255,255,0.8);
         }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        /* ---------- CHAPTER COLORS (applied to first card) ---------- */
+        .menu-card[data-chapter="universal"] { border-color: var(--accent-universal); }
+        .menu-card[data-chapter="airway"] { border-color: var(--accent-airway); }
+        .menu-card[data-chapter="cardio"] { border-color: var(--accent-cardio); }
+        .menu-card[data-chapter="resus"] { border-color: var(--accent-resus); }
+        .menu-card[data-chapter="neuro"] { border-color: var(--accent-neuro); }
+        .menu-card[data-chapter="medical"] { border-color: var(--accent-medical); }
+        .menu-card[data-chapter="trauma"] { border-color: var(--accent-trauma); }
+        .menu-card[data-chapter="environmental"] { border-color: var(--accent-environmental); }
+        .menu-card[data-chapter="pediatric"] { border-color: var(--accent-pediatric); }
+        .menu-card[data-chapter="obstetric"] { border-color: var(--accent-obstetric); }
+        .menu-card[data-chapter="mci"] { border-color: var(--accent-mci); }
+        .menu-card[data-chapter="scope"] { border-color: var(--accent-scope); }
+        
+        .menu-card[data-chapter] .status-badge {
+            background: var(--chapter-bg, linear-gradient(to bottom, #f0f0f0, #d9d9d9));
+            border-color: var(--chapter-border, #ccc);
+            color: var(--chapter-text, #555);
         }
-
-        .menu-card::before {
-            content: ''; position: absolute; top: 0; left: -50%; width: 100%; height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
-            transform: skewX(-25deg);
-            pointer-events: none;
-            transition: left 0.5s ease;
-        }
-        .menu-card:hover::before {
-            left: 150%;
-        }
-
+        /* Dynamic assignment via style attribute – we'll set data-chapter and inline style */
         .menu-card h2 { 
             margin: 0 0 8px; 
             font-size: 1.2rem; 
@@ -214,9 +218,6 @@
             transition: color 0.2s ease;
             word-break: break-word;
         }
-        .menu-card:hover h2 {
-            color: #0066b3;
-        }
         .menu-card p { 
             margin: 0 0 15px; 
             color: #444; 
@@ -224,8 +225,7 @@
             line-height: 1.4;
             word-break: break-word;
         }
-
-        /* ---------- STATUS BADGE – VARIATIONS ---------- */
+        /* ---------- STATUS BADGE ---------- */
         .status-badge {
             display: inline-block; 
             font-size: 0.65rem; 
@@ -241,25 +241,35 @@
             transition: all 0.2s ease;
             word-break: break-word;
         }
-
-        /* ---------- HIGHLIGHT FOR FIRST CARD IN EACH CHAPTER ---------- */
-        .menu-card.first-in-chapter {
-            border: 2px solid var(--accent-gold);
-            box-shadow: 0 8px 30px var(--accent-glow);
+        /* ---------- COMPLETION CHECKBOX – stylish ---------- */
+        .completion-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
         }
-        .menu-card.first-in-chapter .status-badge {
-            background: linear-gradient(to bottom, #fff3cd, #ffe69b);
-            border-color: #d4af37;
-            color: #856404;
+        .completion-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #333;
+            cursor: pointer;
         }
-
+        .completion-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #0056b3;
+            border-radius: 4px;
+        }
+        /* ---------- BUTTONS ---------- */
         .menu-sub-options {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
             margin-top: 10px;
         }
-
         .btn-action {
             -webkit-user-select: none; user-select: none; cursor: pointer; border: none;
             font-family: inherit; position: relative; z-index: 2; touch-action: manipulation;
@@ -276,33 +286,38 @@
             text-decoration: none;
             margin: 0;
             word-break: break-word;
+            overflow: hidden;
         }
-        .btn-action:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 10px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1);
-        }
-        .btn-action:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.1); }
+        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 6px 10px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1); }
+        .btn-action:active { transform: translateY(2px); }
         .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
         .btn-flash { color: #0056b3; background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%); border-color: #90caf9; }
         .btn-quiz { color: #155724; background: linear-gradient(180deg, #e8f5e9 0%, #c3e6cb 100%); border-color: #a5d6a7; }
         .btn-critical { color: #721c24; background: linear-gradient(180deg, #f8d7da 0%, #f5c6cb 100%); border-color: #f1b0b7; }
 
-        @media (max-width: 500px) {
-            .header-text h1 { font-size: 1rem; }
-            .header-text p { font-size: 0.7rem; }
-            .stats-badge { padding: 4px 10px; font-size: 0.7rem; gap: 5px; }
-            .header-btn { padding: 6px 10px; font-size: 0.75rem; }
-            .menu-card h2 { font-size: 1.1rem; }
-            .btn-action { padding: 6px 10px; font-size: 0.7rem; }
+        /* ---------- PROGRESS BAR ---------- */
+        .progress-container {
+            margin: 20px 0 10px;
+            width: 100%;
+            background: rgba(0,0,0,0.05);
+            border-radius: 30px;
+            height: 16px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
         }
-        @media (max-width: 400px) {
-            .header-left { gap: 8px; }
-            .home-btn { padding: 6px 10px; font-size: 1rem; }
-            .stats-badge { padding: 3px 8px; font-size: 0.65rem; }
-            .header-btn { padding: 5px 8px; font-size: 0.7rem; }
-            .menu-card { padding: 15px; }
-            .menu-card h2 { font-size: 1rem; }
-            .btn-action { padding: 5px 8px; font-size: 0.65rem; }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00b4db, #0083b0);
+            border-radius: 30px;
+            transition: width 0.3s ease;
+        }
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #0c5460;
+            font-weight: 600;
         }
 
         .stats-card { 
@@ -326,6 +341,15 @@
 
         footer { margin-top: auto; padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.75rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
         a { text-decoration: none; }
+
+        @media (max-width: 500px) {
+            .header-text h1 { font-size: 1rem; }
+            .header-text p { font-size: 0.7rem; }
+            .stats-badge { padding: 4px 10px; font-size: 0.7rem; gap: 5px; }
+            .header-btn { padding: 6px 10px; font-size: 0.75rem; }
+            .menu-card h2 { font-size: 1.1rem; }
+            .btn-action { padding: 6px 10px; font-size: 0.7rem; }
+        }
     </style>
 </head>
 <body>
@@ -359,92 +383,124 @@
     (function(){
         "use strict";
 
-        // ---------- COMPLETE CHAPTER LIST – SIX UNIVERSAL CARE CARDS ----------
+        // ---------- COMPLETE CHAPTER LIST – WITH CHAPTER COLORS AND COMPLETION ----------
         const CHAPTERS = [
-            // Special chapters
-            { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false, isFirstInChapter: false },
-            { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false, isFirstInChapter: false },
+            // ========== SPECIAL CHAPTERS ==========
+            { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             
-            // ---------- UNIVERSAL CARE – 6 CARDS ----------
-            { 
-                id: "c1s1", 
-                shortTitle: "1.1 Universal Care", 
-                title: "Universal Care – Core Assessment", 
-                hasCritical: true,
-                chapterFile: "c1.html",
-                sectionParam: "c1s1",
-                isFirstInChapter: true
-            },
-            { 
-                id: "c1s2", 
-                shortTitle: "1.2 Documentation", 
-                title: "Patient Care Documentation", 
-                hasCritical: true, // enable button, Coming Soon will show
-                chapterFile: "c1.html",
-                sectionParam: "c1s2",
-                isFirstInChapter: false
-            },
-            { 
-                id: "c1s3", 
-                shortTitle: "1.3 Triage", 
-                title: "Patient Triage Categories", 
-                hasCritical: true,
-                chapterFile: "c1.html",
-                sectionParam: "c1s3",
-                isFirstInChapter: false
-            },
-            { 
-                id: "c1s4", 
-                shortTitle: "1.4 Functional Needs", 
-                title: "Functional Needs", 
-                hasCritical: true,
-                chapterFile: "c1.html",
-                sectionParam: "c1s4",
-                isFirstInChapter: false
-            },
-            { 
-                id: "c1s5", 
-                shortTitle: "1.5 Treated at Scene", 
-                title: "Treated at Scene", 
-                hasCritical: true,
-                chapterFile: "c1.html",
-                sectionParam: "c1s5",
-                isFirstInChapter: false
-            },
-            { 
-                id: "c1s6", 
-                shortTitle: "1.6 Refusal of Transfer", 
-                title: "Patient Refusal of Transfer", 
-                hasCritical: true,
-                chapterFile: "c1.html",
-                sectionParam: "c1s6",
-                isFirstInChapter: false
-            },
+            // ========== UNIVERSAL CARE (6 cards) ==========
+            { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Patient Triage Categories", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Functional Needs", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treated at Scene", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s6", shortTitle: "1.6 Refusal of Transfer", title: "Patient Refusal of Transfer", hasCritical: true, chapterFile: "c1.html", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
             
-            // ---------- AIRWAY & BREATHING ----------
-            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true },
-            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false },
-            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false },
-            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false },
-            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false },
+            // ========== AIRWAY & BREATHING ==========
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
             
-            // ---------- CARDIOVASCULAR ----------
-            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true },
-            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false },
-            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false },
-            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false },
+            // ========== CARDIOVASCULAR ==========
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
             
-            // ... (keep all other chapters as before, with isFirstInChapter flags) ...
-            // For brevity, I'll include all other chapters with isFirstInChapter set correctly.
-            // You should copy the rest of your CHAPTERS array from your current index.html
-            // and ensure each first topic has isFirstInChapter: true.
+            // ========== RESUSCITATION ==========
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true, chapterGroup: "resus" },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            
+            // ========== NEUROLOGICAL ==========
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
+            
+            // ========== GENERAL MEDICAL ==========
+            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "medical" },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            
+            // ========== TRAUMA ==========
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "trauma" },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            
+            // ========== ENVIRONMENTAL ==========
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            
+            // ========== PEDIATRIC ==========
+            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true, chapterGroup: "pediatric" },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            
+            // ========== OBSTETRICS ==========
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            
+            // ========== MAJOR INCIDENT TRIAGE ==========
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
+            
+            // ========== SCOPE & MEDICATIONS ==========
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
         ];
 
-        // ---------- STORAGE UTILITY ----------
-        const STORAGE_KEY = 'dcas_cpg_stats';
+        // ---------- STORAGE FOR COMPLETION ----------
+        const COMPLETION_KEY = 'dcas_cpg_completion';
+        function loadCompletion() {
+            try {
+                const data = localStorage.getItem(COMPLETION_KEY);
+                return data ? JSON.parse(data) : {};
+            } catch(e) {
+                return {};
+            }
+        }
+        function saveCompletion(completion) {
+            try {
+                localStorage.setItem(COMPLETION_KEY, JSON.stringify(completion));
+            } catch(e) {}
+        }
+
+        // ---------- STORAGE FOR STATS (quiz, critical) ----------
+        const STATS_KEY = 'dcas_cpg_stats';
         function loadStats() {
             try {
-                const data = localStorage.getItem(STORAGE_KEY);
+                const data = localStorage.getItem(STATS_KEY);
                 return data ? JSON.parse(data) : { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
             } catch(e) {
                 return { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
@@ -458,29 +514,46 @@
             const criticalTotal = stats.critical.total || 0;
             const criticalCorrect = stats.critical.correct || 0;
             const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
-            
-            const attemptsEl = document.getElementById('statsAttempts');
-            const criticalEl = document.getElementById('statsCritical');
-            if (attemptsEl) attemptsEl.innerText = totalAttempts;
-            if (criticalEl) criticalEl.innerText = `${criticalAcc}%`;
+            document.getElementById('statsAttempts').innerText = totalAttempts;
+            document.getElementById('statsCritical').innerText = `${criticalAcc}%`;
+        }
+
+        // ---------- UPDATE PROGRESS BAR ----------
+        function updateProgressBar(completion) {
+            // Count only "real" chapters (exclude c0, c-index)
+            const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
+            const completed = Object.values(completion).filter(v => v === true).length;
+            const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            if (progressBar) progressBar.style.width = percent + '%';
+            if (progressText) progressText.innerText = `${completed}/${totalChapters} (${percent}%)`;
+        }
+
+        // ---------- TOGGLE COMPLETION CHECKBOX ----------
+        function toggleCompletion(chapterId, checked) {
+            const completion = loadCompletion();
+            completion[chapterId] = checked;
+            saveCompletion(completion);
+            updateProgressBar(completion);
         }
 
         // ---------- HEADER SHORTCUTS VISIBILITY ----------
         function updateHeaderShortcuts(showHomeSpecific) {
             const headerShortcuts = document.getElementById('headerShortcuts');
-            if (!headerShortcuts) return;
-            headerShortcuts.style.display = showHomeSpecific ? 'flex' : 'none';
+            if (headerShortcuts) headerShortcuts.style.display = showHomeSpecific ? 'flex' : 'none';
         }
 
         // ---------- RENDER MAIN MENU ----------
         function renderMenu() {
             const stats = loadStats();
+            const completion = loadCompletion();
 
             let chaptersHtml = CHAPTERS.map((ch, index) => {
                 const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
                 
-                // Determine link URL
+                // Link URL
                 let linkUrl;
                 if (ch.chapterFile) {
                     linkUrl = `chapters/${ch.chapterFile}?view=summary&section=${ch.sectionParam}`;
@@ -492,11 +565,25 @@
                 const showFlashcardsQuiz = (ch.id !== 'c0' && ch.id !== 'c-index');
                 const showCritical = ch.hasCritical && ch.id !== 'c0' && ch.id !== 'c-index';
 
+                // First-in-chapter class
                 const firstClass = ch.isFirstInChapter ? 'first-in-chapter' : '';
+                
+                // Data-chapter attribute for color
+                const chapterGroup = ch.chapterGroup ? `data-chapter="${ch.chapterGroup}"` : '';
+
+                // Checkbox checked state
+                const isChecked = completion[ch.id] || false;
+                const checkedAttr = isChecked ? 'checked' : '';
 
                 return `
-                    <div class="menu-card ${firstClass}" style="animation-delay: ${index * 0.03}s;">
-                        <span class="status-badge">${ch.id.toUpperCase()}</span>
+                    <div class="menu-card ${firstClass}" ${chapterGroup} style="animation-delay: ${index * 0.02}s;">
+                        <div class="completion-wrapper">
+                            <span class="status-badge">${ch.id.toUpperCase()}</span>
+                            <label class="completion-checkbox">
+                                <input type="checkbox" class="chapter-complete" data-chapter-id="${ch.id}" ${checkedAttr} onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
+                                <span>Mark done</span>
+                            </label>
+                        </div>
                         <h2>${ch.shortTitle}</h2>
                         <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
                         <div class="menu-sub-options">
@@ -517,10 +604,22 @@
             const criticalTotal = stats.critical.total || 0;
             const criticalCorrect = stats.critical.correct || 0;
             const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
+            
+            // Progress bar stats
+            const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
+            const completed = Object.values(completion).filter(v => v === true).length;
+            const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
 
             const statsHtml = `
                 <div class="stats-card">
                     <h2 style="color:#0056b3;">📊 Overall Performance</h2>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar" style="width: ${percent}%;"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span>📌 Chapters completed</span>
+                        <span id="progressText">${completed}/${totalChapters} (${percent}%)</span>
+                    </div>
                     <div class="stat-row">
                         <span class="stat-label">Total Quiz Attempts</span>
                         <span class="stat-value">${totalAttempts}</span>
@@ -555,7 +654,7 @@
             }
         }
 
-        // ---------- HOME BUTTON LISTENER ----------
+        // ---------- HOME BUTTON ----------
         const homeBtn = document.getElementById('homeBtn');
         if (homeBtn) {
             homeBtn.addEventListener('click', function(e) {
@@ -564,7 +663,7 @@
             });
         }
 
-        // ---------- INDEX BUTTON IN HEADER ----------
+        // ---------- INDEX BUTTON ----------
         const indexBtn = document.getElementById('headerIndexBtn');
         if (indexBtn) {
             indexBtn.addEventListener('click', function(e) {
@@ -572,6 +671,12 @@
                 window.location.href = 'chapters/c-index.html?view=summary';
             });
         }
+
+        // ---------- EXPOSE TOGGLER ----------
+        window.app = window.app || {};
+        window.app.toggleCompletion = function(chapterId, checked) {
+            toggleCompletion(chapterId, checked);
+        };
 
         // ---------- START ----------
         initPage();
