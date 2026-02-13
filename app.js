@@ -1,824 +1,277 @@
-/* ========== app.js – DCAS CPG 2025 (COMPLETE) ========== */
+/* app.js - Updated Logic */
 (function(){
     "use strict";
 
-    // ---------- STORAGE ----------
-    const storage = (function() {
-        const KEY = 'dcas_cpg_stats';
-        const defaultStats = { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
-        function load() {
-            try {
-                const data = localStorage.getItem(KEY);
-                return data ? JSON.parse(data) : defaultStats;
-            } catch(e) { return defaultStats; }
-        }
-        function save(stats) {
-            try { localStorage.setItem(KEY, JSON.stringify(stats)); } catch(e) {}
-        }
-        return { load, save };
-    })();
-
-    // ---------- CHAPTER DATA ----------
-    const chapterData = window.CPG_DATA;
-    const isChapterMissing = !chapterData;
-
-    const dom = {
-        main: document.getElementById('mainContent'),
-        homeBtn: document.getElementById('homeBtn'),
-        pageTitle: document.getElementById('pageTitle'),
-        pageSubtitle: document.getElementById('pageSubtitle')
+    const storage = {
+        load: () => JSON.parse(localStorage.getItem('dcas_stats') || '{"total":0, "chapters":{}}'),
+        save: (data) => localStorage.setItem('dcas_stats', JSON.stringify(data))
     };
 
-    // ---------- STATE ----------
     const state = {
-        sections: chapterData ? (chapterData.sections || null) : null,
-        activeSectionId: null,
+        data: window.CPG_DATA || null,
         activeSection: null,
-        quizData: [],
-        mistakes: [],
-        qIndex: 0,
-        score: 0,
-        flashData: [],
-        fIndex: 0,
-        criticalData: [],
-        criticalIndex: 0,
-        criticalScore: 0,
-        stats: storage.load()
+        quizData: [], qIndex: 0, score: 0,
+        flashData: [], fIndex: 0,
+        critData: [], critIndex: 0, critScore: 0
     };
 
-    // ---------- UTILITIES ----------
-    const utils = {
-        shuffle: (arr) => [...arr].sort(() => Math.random() - 0.5),
-        safeScrollTop: () => {
-            window.scrollTo(0,0);
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            setTimeout(() => window.scrollTo(0,0), 20);
-        },
-        escapeHTML: (str) => str.replace(/[&<>"]/g, (c) => {
-            if(c === '&') return '&amp;';
-            if(c === '<') return '&lt;';
-            if(c === '>') return '&gt;';
-            if(c === '"') return '&quot;';
-            return c;
-        }),
-        getSection: (id) => {
-            if (!state.sections) return null;
-            return state.sections.find(s => s.id === id);
-        },
-        getSectionIndex: (id) => {
-            if (!state.sections) return -1;
-            return state.sections.findIndex(s => s.id === id);
-        },
-        getQueryParam: (param) => {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        },
-        setQueryParam: (param, value) => {
-            const url = new URL(window.location.href);
-            url.searchParams.set(param, value);
-            window.history.pushState({}, '', url);
-        },
-        replaceQueryParam: (param, value) => {
-            const url = new URL(window.location.href);
-            url.searchParams.set(param, value);
-            window.history.replaceState({}, '', url);
-        }
-    };
-
-    // ---------- HEADER ----------
-    function updateHeader(title, subtitle = '', showBack = true) {
-        if (dom.pageTitle) dom.pageTitle.innerText = title || 'DCAS CPG 2025';
-        if (dom.pageSubtitle) dom.pageSubtitle.innerText = subtitle || '';
-        if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';
-    }
-
-    // ---------- RENDER COMING SOON – VIEW‑SPECIFIC ----------
-    function renderComingSoon() {
-        const view = utils.getQueryParam('view') || 'summary';
-        let title = 'Coming Soon', subtitle = '', message = '', icon = '🚧';
-        switch(view) {
-            case 'critical':
-                title = 'Critical Scenarios';
-                subtitle = 'Coming Soon';
-                message = 'High‑acuity decision‑making cases are being developed for this chapter.';
-                icon = '🚨';
-                break;
-            case 'flashcards':
-                title = 'Flashcards';
-                subtitle = 'Coming Soon';
-                message = 'Interactive flashcards for this chapter are under construction.';
-                icon = '📇';
-                break;
-            case 'quiz':
-                title = 'Quiz';
-                subtitle = 'Coming Soon';
-                message = 'Practice questions for this chapter are being prepared.';
-                icon = '📋';
-                break;
-            default:
-                title = 'Coming Soon';
-                subtitle = 'Stay tuned.....';
-                message = 'This CPG chapter is under construction.';
-                icon = '🚧';
-        }
-        const html = `
-            <div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 70px 40px; box-shadow: var(--glass-shadow);">
-                <div style="font-size: 6rem; font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 20px; line-height: 1; font-family: Georgia, serif;">${icon} ${title}</div>
-                <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 2.5rem; font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 15px 40px; margin-top: 15px; letter-spacing: 3px;">${subtitle}</div>
-                <div style="font-size: 1.8rem; font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 15px 25px; border-radius: 50px; display: inline-block; margin-top: 30px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                    ${message}
-                </div>
-                <div style="margin-top: 50px;">
-                    <button class="control-btn" data-action="backHome" style="padding: 18px 45px; border-radius: 40px; font-weight: 700; font-size: 1.4rem; color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;">← Back to Chapters</button>
-                </div>
-            </div>
-        `;
-        dom.main.innerHTML = html;
-        updateHeader(title, subtitle, true);
-        utils.safeScrollTop();
-    }
-
-    // ---------- RENDER SECTION TABS ----------
-    function renderSectionTabs(activeId) {
-        if (!state.sections || state.sections.length <= 1) return '';
-        return `
-            <div style="display:flex; gap:10px; margin-bottom:20px; overflow-x:auto; padding-bottom:5px;">
-                ${state.sections.map(s => `
-                    <button class="section-tab ${s.id === activeId ? 'active-tab' : ''}" 
-                            data-section-id="${s.id}" 
-                            style="background:${s.id === activeId ? '#0056b3' : 'rgba(255,255,255,0.2)'}; 
-                                   color:white; border:none; border-radius:30px; 
-                                   padding:10px 20px; font-weight:600; cursor:pointer; 
-                                   white-space:nowrap;">
-                        ${s.shortTitle}
-                    </button>
-                `).join('')}
-            </div>
-        `;
-    }
-
-    // ---------- SECTION NAVIGATION BUTTONS (Previous / Next) ----------
-    function renderSectionNavigation() {
-        if (!state.sections || state.sections.length <= 1) return '';
-        const currentIdx = utils.getSectionIndex(state.activeSectionId);
-        const prevSection = currentIdx > 0 ? state.sections[currentIdx - 1] : null;
-        const nextSection = currentIdx < state.sections.length - 1 ? state.sections[currentIdx + 1] : null;
-        const currentView = utils.getQueryParam('view') || 'summary';
-        
-        return `
-            <div style="display:flex; justify-content:space-between; margin-top:30px; gap:10px;">
-                ${prevSection ? 
-                    `<button class="control-btn section-nav-btn" data-section-nav="prev" data-section-id="${prevSection.id}" style="flex:1;">
-                        ◀ Previous Section (${prevSection.shortTitle})
-                    </button>` : 
-                    `<button class="control-btn" disabled style="flex:1; opacity:0.5;">◀ Previous Section</button>`
-                }
-                ${nextSection ? 
-                    `<button class="control-btn section-nav-btn" data-section-nav="next" data-section-id="${nextSection.id}" style="flex:1;">
-                        Next Section (${nextSection.shortTitle}) ▶
-                    </button>` : 
-                    `<button class="control-btn" disabled style="flex:1; opacity:0.5;">Next Section ▶</button>`
-                }
-            </div>
-        `;
-    }
-
-    // ---------- SWITCH SECTION ----------
-    function switchSection(sectionId, updateUrl = true) {
-        const section = utils.getSection(sectionId);
-        if (!section) return false;
-        
-        state.activeSectionId = sectionId;
-        state.activeSection = section;
-        
-        // Reset per-section state
-        state.quizData = [];
-        state.mistakes = [];
-        state.qIndex = 0;
-        state.score = 0;
-        state.flashData = section.flashcards || [];
-        state.fIndex = 0;
-        state.criticalData = section.critical || [];
-        state.criticalIndex = 0;
-        state.criticalScore = 0;
-
-        if (updateUrl) {
-            const url = new URL(window.location.href);
-            url.searchParams.set('section', sectionId);
-            window.history.pushState({}, '', url);
-        }
-
-        const currentView = utils.getQueryParam('view') || 'summary';
-        if (currentView === 'summary') render.summary();
-        else if (currentView === 'flashcards') render.flashcards();
-        else if (currentView === 'quiz') render.quizSetup();
-        else if (currentView === 'critical') render.criticalGame();
-        else render.summary();
-        
-        return true;
-    }
-
-    // ---------- RENDER FUNCTIONS ----------
-    const render = {
-        summary: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const section = state.activeSection;
-            if (!section) { 
-                console.error('No active section');
-                return;
-            }
-            const tabs = renderSectionTabs(section.id);
-            const nav = renderSectionNavigation();
-            const html = `
-                <div class="section active">
-                    ${tabs}
-                    ${section.summary || '<div class="sum-card">No summary available.</div>'}
-                    ${nav}
-                    <button class="control-btn" data-action="backHome" style="width:100%; margin-top:20px;">← Back to Chapters</button>
-                </div>
-            `;
-            dom.main.innerHTML = html;
-            updateHeader(section.shortTitle, 'Summary', true);
-            utils.safeScrollTop();
-        },
-
-        flashcards: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const section = state.activeSection;
-            if (!section) { 
-                console.error('No active section');
-                return;
-            }
-            if (!state.flashData.length) {
-                dom.main.innerHTML = '<div class="sum-card">No flashcards available.</div>';
-                return;
-            }
-            state.fIndex = 0;
-            this._renderFlashcard();
-            updateHeader(section.shortTitle, 'Flashcards', true);
-        },
-
-        _renderFlashcard: function() {
-            if (!state.flashData.length) return;
-            const card = state.flashData[state.fIndex];
-            const tabs = renderSectionTabs(state.activeSectionId);
-            const nav = renderSectionNavigation();
-            const html = `
-                ${tabs}
-                <div style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 15px;" id="fc-progress">
-                    Card ${state.fIndex+1} of ${state.flashData.length}
-                </div>
-                <div class="scene" id="cardScene">
-                    <div class="card" id="flashcard">
-                        <div class="card__face card__face--front">
-                            <span class="category-badge">${utils.escapeHTML(card.category || '')}</span>
-                            ${card.image ? `<div style="margin-bottom:15px;">
-                                <img src="${card.image}" alt="ECG" style="max-width:100%; max-height:150px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-                            </div>` : ''}
-                            <div style="white-space: pre-wrap; font-size:1.3rem;">${utils.escapeHTML(card.question)}</div>
-                            <div style="font-size:0.8rem; color:#888; margin-top:20px;">Tap to flip</div>
-                        </div>
-                        <div class="card__face card__face--back">
-                            <div style="white-space: pre-wrap;">${(card.answer || '').replace(/\n/g, '<br>')}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="controls" style="display:flex; justify-content:center; gap:20px; margin-top:30px;">
-                    <button class="control-btn" data-flash="prev">◀ Previous</button>
-                    <button class="control-btn" data-flash="next">Next ▶</button>
-                </div>
-                ${nav}
-                <div style="text-align:center; margin-top:25px;">
-                    <button data-action="backHome" style="background:none; border:none; color:rgba(255,255,255,0.7); text-decoration:underline; cursor:pointer;">← Back</button>
-                </div>
-            `;
-            dom.main.innerHTML = html;
-            const cardEl = document.getElementById('flashcard');
-            const scene = document.getElementById('cardScene');
-            if (scene) {
-                scene.addEventListener('click', function flipHandler(e) {
-                    if (e.target.closest('.control-btn')) return;
-                    cardEl.classList.toggle('is-flipped');
-                }, { passive: true });
-            }
-            utils.safeScrollTop();
-        },
-
-        quizSetup: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const section = state.activeSection;
-            if (!section) { 
-                console.error('No active section');
-                return;
-            }
-            if (!section.quiz || !section.quiz.length) {
-                dom.main.innerHTML = '<div class="sum-card">No quiz questions available.</div>';
-                return;
-            }
-            const tabs = renderSectionTabs(section.id);
-            const nav = renderSectionNavigation();
-            const html = `
-                ${tabs}
-                <div class="quiz-setup-container">
-                    <h2 style="color:#0056b3;">Quiz: ${section.shortTitle}</h2>
-                    <p style="color:#666;">Select number of questions</p>
-                    <div class="setup-grid">
-                        <button class="setup-btn" data-quiz-size="10">10 Questions <span>→</span></button>
-                        <button class="setup-btn" data-quiz-size="20">20 Questions <span>→</span></button>
-                        <button class="setup-btn" data-quiz-size="30">30 Questions <span>→</span></button>
-                        <button class="setup-btn challenge" data-quiz-size="${section.quiz.length}">All (${section.quiz.length}) <span>→</span></button>
-                    </div>
-                    ${nav}
-                    <button data-action="backHome" style="margin-top:30px; background:none; border:none; color:#666; text-decoration:underline; cursor:pointer;">Cancel</button>
-                </div>
-            `;
-            dom.main.innerHTML = html;
-            updateHeader('Quiz Setup', section.shortTitle, true);
-            utils.safeScrollTop();
-        },
-
-        quizGame: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            if (!state.quizData.length) {
-                render.quizSetup();
-                return;
-            }
-            const q = state.quizData[state.qIndex];
-            const progress = `Q ${state.qIndex+1}/${state.quizData.length}`;
-            const optionsHtml = q.options.map((opt, idx) => 
-                `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
-            ).join('');
-            const tabs = renderSectionTabs(state.activeSectionId);
-            const nav = renderSectionNavigation();
-            const html = `
-                ${tabs}
-                <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:rgba(255,255,255,0.9);">
-                    <span>${progress}</span>
-                    <span>Score: <strong style="color:#fff;" id="currentScore">${state.score}</strong></span>
-                </div>
-                <div class="quiz-container">
-                    ${q.image ? `<div style="text-align:center; margin-bottom:20px;">
-                        <img src="${q.image}" alt="ECG" style="max-width:100%; max-height:200px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-                    </div>` : ''}
-                    <div style="font-size:1.15rem; font-weight:600; margin-bottom:20px; color:#222;">${utils.escapeHTML(q.q)}</div>
-                    <div class="quiz-options" id="quizOptionsContainer">${optionsHtml}</div>
-                    <div class="quiz-feedback" id="quizFeedback" style="display:none;"></div>
-                    <button class="control-btn" id="nextQuizBtn" style="width:100%; margin-top:25px; display:none;">Next Question</button>
-                </div>
-                ${nav}
-            `;
-            dom.main.innerHTML = html;
-            utils.safeScrollTop();
-        },
-
-        criticalGame: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const section = state.activeSection;
-            if (!section) { 
-                console.error('No active section');
-                return;
-            }
-            if (!state.criticalData || !state.criticalData.length) {
-                dom.main.innerHTML = '<div class="sum-card">No critical scenarios available.</div>';
-                return;
-            }
-            state.criticalIndex = 0;
-            state.criticalScore = 0;
-            this._renderCriticalQuestion();
-            updateHeader('Critical Scenarios', section.shortTitle, true);
-        },
-
-        _renderCriticalQuestion: function() {
-            const q = state.criticalData[state.criticalIndex];
-            const optionsHtml = q.options.map((opt, idx) => 
-                `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
-            ).join('');
-            const tabs = renderSectionTabs(state.activeSectionId);
-            const nav = renderSectionNavigation();
-            const html = `
-                ${tabs}
-                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                    <span style="color:white;">Scenario ${state.criticalIndex+1}/${state.criticalData.length}</span>
-                    <span style="color:white;">Score: <strong>${state.criticalScore}</strong></span>
-                </div>
-                <div class="critical-card">
-                    <div style="background: #f8d7da; padding:15px; border-radius:12px; margin-bottom:20px;">
-                        <strong style="color:#721c24;">🚨 Scenario</strong>
-                        <p style="margin-top:8px;">${utils.escapeHTML(q.scenario)}</p>
-                    </div>
-                    <div style="font-weight:600; margin-bottom:15px;">${utils.escapeHTML(q.question)}</div>
-                    <div class="quiz-options" id="criticalOptionsContainer">${optionsHtml}</div>
-                    <div class="critical-feedback" id="criticalFeedback" style="display:none;"></div>
-                    <button class="control-btn" id="nextCriticalBtn" style="width:100%; margin-top:25px; display:none;">Next Scenario</button>
-                </div>
-                ${nav}
-            `;
-            dom.main.innerHTML = html;
-            utils.safeScrollTop();
-        },
-
-        stats: function() {
-            const s = state.stats;
-            let chapStatsHtml = '';
-            for (let chId in s.chapters) {
-                const ch = s.chapters[chId];
-                const avg = ch.totalMax ? Math.round((ch.totalScore / ch.totalMax) * 100) : 0;
-                chapStatsHtml += `
-                    <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
-                        <span>Chapter ${chId}</span>
-                        <strong>${avg}% (${ch.attempts} attempts)</strong>
-                    </div>
-                `;
-            }
-            const critAcc = s.critical.total ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;
-            const html = `
-                <div class="stats-card">
-                    <h2 style="color:#0056b3;">📊 Your Performance</h2>
-                    <div style="margin-top:20px;">
-                        <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px;">
-                            <span>Total quiz attempts</span>
-                            <strong>${s.totalAttempts}</strong>
-                        </div>
-                        ${chapStatsHtml || '<p style="margin-top:10px;">No chapter data yet.</p>'}
-                        <div style="display:flex; justify-content:space-between; padding:12px; background:rgba(0,0,0,0.02); border-radius:8px; margin-top:8px;">
-                            <span>Critical accuracy</span>
-                            <strong>${critAcc}% (${s.critical.correct || 0}/${s.critical.total || 0})</strong>
-                        </div>
-                        <div style="display:flex; justify-content:space-between; padding:12px;">
-                            <span>Mistakes recorded (this session)</span>
-                            <strong>${state.mistakes.length}</strong>
-                        </div>
-                    </div>
-                    <button class="control-btn" data-action="backHome" style="width:100%; margin-top:30px;">← Back to Chapters</button>
-                </div>
-            `;
-            dom.main.innerHTML = html;
-            updateHeader('Statistics', '', true);
-            utils.safeScrollTop();
-        },
-
-        reviewMistakes: function() {
-            if (!state.mistakes.length) {
-                dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';
-                return;
-            }
-            let items = state.mistakes.map(m => `
-                <div class="mistake-item">
-                    <div class="mistake-question">❓ ${utils.escapeHTML(m.question)}</div>
-                    <div class="mistake-answer">✅ Correct: ${utils.escapeHTML(m.correctAnswer)}</div>
-                    <div class="mistake-rationale">📘 ${utils.escapeHTML(m.rationale)}</div>
-                </div>
-            `).join('');
-            const html = `<div class="sum-card"><h3>📝 Mistakes Review</h3>${items}<button class="control-btn" data-action="backHome" style="width:100%; margin-top:20px;">← Back</button></div>`;
-            dom.main.innerHTML = html;
-            updateHeader('Mistakes', '', true);
-            utils.safeScrollTop();
-        }
-    };
-
-    // ---------- QUIZ ENGINE ----------
-    const quizEngine = {
-        init: function(size) {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const section = state.activeSection;
-            if (!section || !section.quiz) return;
-            state.quizData = utils.shuffle(section.quiz).slice(0, size);
-            state.qIndex = 0;
-            state.score = 0;
-            state.stats.totalAttempts = (state.stats.totalAttempts || 0) + 1;
-            storage.save(state.stats);
-            render.quizGame();
-        },
-        handleAnswer: function(selectedIdx, btn) {
-            const q = state.quizData[state.qIndex];
-            const isCorrect = selectedIdx === q.correct;
-            if (isCorrect) {
-                state.score++;
-            } else {
-                state.mistakes.push({
-                    question: q.q,
-                    correctAnswer: q.options[q.correct],
-                    rationale: q.explanation
-                });
-            }
-            document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-            btn.classList.add(isCorrect ? 'correct' : 'wrong');
-            if (!isCorrect) {
-                const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
-                if (correctBtn) correctBtn.classList.add('correct');
-            }
-            const fb = document.getElementById('quizFeedback');
-            if (fb) {
-                fb.style.display = 'block';
-                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
-                                <p style="margin-top:8px;">${q.explanation}</p>`;
-            }
-            const nextBtn = document.getElementById('nextQuizBtn');
-            if (nextBtn) nextBtn.style.display = 'block';
-            const scoreEl = document.getElementById('currentScore');
-            if (scoreEl) scoreEl.innerText = state.score;
-        },
-        next: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            state.qIndex++;
-            if (state.qIndex < state.quizData.length) {
-                render.quizGame();
-            } else {
-                const chapterId = chapterData.id || 'c0';
-                if (!state.stats.chapters[chapterId]) {
-                    state.stats.chapters[chapterId] = { attempts: 0, totalScore: 0, totalMax: 0 };
-                }
-                const chap = state.stats.chapters[chapterId];
-                chap.attempts += 1;
-                chap.totalScore += state.score;
-                chap.totalMax += state.quizData.length;
-                storage.save(state.stats);
-                const percentage = Math.round((state.score / state.quizData.length) * 100);
-                let msg = 'Keep studying!';
-                if (percentage >= 80) msg = 'Excellent!';
-                else if (percentage >= 60) msg = 'Good effort.';
-                const reviewBtn = state.mistakes.length ? 
-                    `<button class="control-btn" data-action="reviewMistakes" style="margin-top:15px;">📝 Review ${state.mistakes.length} Mistakes</button>` : '';
-                const html = `
-                    <div class="quiz-setup-container" style="text-align:center;">
-                        <h2 style="color:#0056b3;">Quiz Complete!</h2>
-                        <div style="font-size:3.5rem; font-weight:bold; color:#0056b3; margin:20px 0;">${percentage}%</div>
-                        <p style="color:#666;">${msg}</p>
-                        ${reviewBtn}
-                        <button class="control-btn" data-action="backHome" style="margin-top:20px;">← Home</button>
-                    </div>
-                `;
-                dom.main.innerHTML = html;
-                utils.safeScrollTop();
-            }
-        }
-    };
-
-    // ---------- CRITICAL ENGINE ----------
-    const criticalEngine = {
-        handleAnswer: function(selectedIdx, btn) {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            const q = state.criticalData[state.criticalIndex];
-            const isCorrect = selectedIdx === q.correct;
-            if (isCorrect) {
-                state.criticalScore++;
-                state.stats.critical.correct = (state.stats.critical.correct || 0) + 1;
-            }
-            state.stats.critical.total = (state.stats.critical.total || 0) + 1;
-            storage.save(state.stats);
-
-            document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-            btn.classList.add(isCorrect ? 'correct' : 'wrong');
-            if (!isCorrect) {
-                const correctBtn = document.querySelectorAll('.option-btn')[q.correct];
-                if (correctBtn) correctBtn.classList.add('correct');
-            }
-            const fb = document.getElementById('criticalFeedback');
-            if (fb) {
-                fb.style.display = 'block';
-                fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>
-                                <p style="margin-top:8px;">${q.explanation}</p>
-                                ${q.kpi ? `<div class="highlight-box" style="margin-top:10px;">🎯 KPI: ${q.kpi}</div>` : ''}`;
-            }
-            const nextBtn = document.getElementById('nextCriticalBtn');
-            if (nextBtn) nextBtn.style.display = 'block';
-        },
-        next: function() {
-            if (isChapterMissing) { renderComingSoon(); return; }
-            state.criticalIndex++;
-            if (state.criticalIndex < state.criticalData.length) {
-                render._renderCriticalQuestion();
-            } else {
-                const accuracy = Math.round((state.criticalScore / state.criticalData.length) * 100);
-                const html = `
-                    <div class="quiz-setup-container" style="text-align:center;">
-                        <h2 style="color:#0056b3;">Critical scenarios finished</h2>
-                        <div style="font-size:3rem; font-weight:bold; color:#0056b3; margin:20px 0;">${accuracy}%</div>
-                        <p>Correct: ${state.criticalScore}/${state.criticalData.length}</p>
-                        <button class="control-btn" data-action="backHome" style="margin-top:20px;">← Home</button>
-                    </div>
-                `;
-                dom.main.innerHTML = html;
-                utils.safeScrollTop();
-            }
-        }
-    };
-
-    // ---------- WATER RIPPLE EFFECT ----------
-    function createRipple(event) {
-        const target = event.currentTarget;
-        const rect = target.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        
-        const ripple = document.createElement('span');
-        ripple.className = 'ripple';
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        ripple.style.width = ripple.style.height = '20px';
-        ripple.style.background = 'rgba(255, 255, 255, 0.7)';
-        
-        target.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
-    }
-
-    // ---------- EVENT DELEGATION ----------
-    document.addEventListener('click', function(e) {
-        const target = e.target.closest('button');
-        if (!target) return;
-        const action = target.dataset.action;
-        const size = target.dataset.quizSize;
-        const sectionId = target.dataset.sectionId;
-        const flash = target.dataset.flash;
-        const sectionNav = target.dataset.sectionNav;
-
-        // Section tab switching
-        if (sectionId && !sectionNav) {
-            e.preventDefault();
-            switchSection(sectionId, true);
-            return;
-        }
-
-        // Section navigation (Previous / Next)
-        if (sectionNav && target.dataset.sectionId) {
-            e.preventDefault();
-            switchSection(target.dataset.sectionId, true);
-            return;
-        }
-
-        // ----- BACK HOME – PATH DETECTION -----
-        if (action === 'backHome') {
-            e.preventDefault();
-            const path = window.location.pathname;
-            if (path.includes('/chapters/')) {
-                window.location.href = '../index.html';
-            } else {
-                window.location.href = 'index.html';
-            }
-            return;
-        }
-
-        if (action === 'stats') {
-            const path = window.location.pathname;
-            if (path.includes('/chapters/')) {
-                window.location.href = '../index.html?view=stats';
-            } else {
-                window.location.href = 'index.html?view=stats';
-            }
-            return;
-        }
-
-        if (action === 'reviewMistakes') {
-            render.reviewMistakes();
-            return;
-        }
-
-        // Quiz size selection
-        if (target.classList.contains('setup-btn') && size) {
-            quizEngine.init(parseInt(size, 10));
-            return;
-        }
-
-        // Quiz answer
-        if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
-            const idx = parseInt(target.dataset.optIndex, 10);
-            quizEngine.handleAnswer(idx, target);
-            return;
-        }
-
-        // Critical answer
-        if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
-            const idx = parseInt(target.dataset.optIndex, 10);
-            criticalEngine.handleAnswer(idx, target);
-            return;
-        }
-
-        // Next question / critical
-        if (target.id === 'nextQuizBtn') {
-            quizEngine.next();
-            return;
-        }
-        if (target.id === 'nextCriticalBtn') {
-            criticalEngine.next();
-            return;
-        }
-
-        // Flashcard navigation
-        if (flash === 'prev') {
-            if (state.fIndex > 0) state.fIndex--;
-            render._renderFlashcard();
-            return;
-        }
-        if (flash === 'next') {
-            if (state.fIndex < state.flashData.length - 1) state.fIndex++;
-            render._renderFlashcard();
-            return;
-        }
-    });
-
-    // ---------- HOME BUTTON LISTENER ----------
-    function setupHomeButton() {
-        if (dom.homeBtn) {
-            dom.homeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const path = window.location.pathname;
-                if (path.includes('/chapters/')) {
-                    window.location.href = '../index.html';
-                } else {
-                    window.location.href = 'index.html';
-                }
-            });
-        }
-    }
-
-    // ---------- INITIALISE ----------
+    // --- INIT ---
     function init() {
-        state.stats = storage.load();
+        applyTheme();
+        
+        // Handle Back Buttons & Home
+        const homeBtn = document.getElementById('homeBtn');
+        if(homeBtn) homeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // If inside chapters folder, go up
+            const isChapter = window.location.pathname.includes('/chapters/');
+            window.location.href = isChapter ? '../index.html' : 'index.html';
+        });
 
-        if (isChapterMissing) {
-            renderComingSoon();
-            setupHomeButton();
-            return;
+        // Theme Toggle
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+        // Load Content Logic if Data Exists
+        if (state.data) {
+            route();
         }
+    }
 
-        // ----- MULTI-SECTION MODE -----
-        if (state.sections && state.sections.length > 0) {
-            let sectionId = utils.getQueryParam('section');
-            if (!sectionId) {
-                sectionId = state.sections[0].id;
-                utils.replaceQueryParam('section', sectionId);
-            }
-            const section = utils.getSection(sectionId);
-            if (section) {
-                state.activeSectionId = sectionId;
-                state.activeSection = section;
-                state.flashData = section.flashcards || [];
-                state.criticalData = section.critical || [];
-            } else {
-                // fallback to first section
-                const fallback = state.sections[0];
-                state.activeSectionId = fallback.id;
-                state.activeSection = fallback;
-                state.flashData = fallback.flashcards || [];
-                state.criticalData = fallback.critical || [];
-                utils.replaceQueryParam('section', fallback.id);
-            }
+    // --- THEME ---
+    function applyTheme() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+    }
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
+
+    // --- ROUTING ---
+    function route() {
+        const params = new URLSearchParams(window.location.search);
+        let sectionId = params.get('section');
+        const view = params.get('view') || 'summary';
+
+        // Set Active Section
+        if (state.data.sections) {
+            state.activeSection = state.data.sections.find(s => s.id === sectionId) || state.data.sections[0];
         } else {
-            // ----- SINGLE-SECTION MODE (backward compatibility) -----
-            state.activeSection = {
-                id: 'main',
-                shortTitle: chapterData.shortTitle || 'Chapter',
-                summary: chapterData.summary,
-                quiz: chapterData.quiz,
-                flashcards: chapterData.flashcards,
-                critical: chapterData.critical
-            };
-            state.activeSectionId = 'main';
-            state.flashData = state.activeSection.flashcards || [];
-            state.criticalData = state.activeSection.critical || [];
+            state.activeSection = state.data;
         }
 
-        // ----- DETERMINE VIEW -----
-        let view = utils.getQueryParam('view') || 'summary';
-        if (!utils.getQueryParam('view')) {
-            utils.replaceQueryParam('view', view);
-        }
+        // Update Title
+        document.getElementById('pageTitle').innerText = state.activeSection.shortTitle || state.data.title;
+        document.getElementById('pageSubtitle').innerText = view.charAt(0).toUpperCase() + view.slice(1);
 
-        // ----- RENDER -----
-        if (view === 'summary') render.summary();
-        else if (view === 'flashcards') render.flashcards();
-        else if (view === 'quiz') render.quizSetup();
-        else if (view === 'critical') render.criticalGame();
-        else if (view === 'stats') render.stats();
-        else if (view === 'reviewMistakes') render.reviewMistakes();
-        else render.summary();
+        // Render Tabs & Content
+        const main = document.getElementById('mainContent');
+        main.innerHTML = renderTabs(state.activeSection.id) + '<div id="viewContent"></div>';
+        
+        const contentDiv = document.getElementById('viewContent');
 
-        // ----- ADD RIPPLE LISTENERS TO INTERACTIVE ELEMENTS -----
-        setTimeout(() => {
-            document.querySelectorAll('.menu-card, .btn-action, .control-btn, .home-btn, .header-btn, .setup-btn, .section-tab').forEach(el => {
-                if (el) {
-                    el.removeEventListener('click', createRipple);
-                    el.removeEventListener('touchstart', createRipple);
-                    el.addEventListener('click', createRipple);
-                    el.addEventListener('touchstart', createRipple);
-                }
+        if(view === 'summary') renderSummary(contentDiv);
+        else if(view === 'flashcards') renderFlashcards(contentDiv);
+        else if(view === 'quiz') renderQuiz(contentDiv);
+        else if(view === 'critical') renderScenario(contentDiv);
+        
+        window.scrollTo(0,0);
+    }
+
+    // --- RENDERERS ---
+    function renderTabs(activeId) {
+        if (!state.data.sections) return ''; // No tabs for single chapter
+        
+        // Navigation Tabs (1.1, 1.2, 1.3...)
+        let html = '<div class="section-tabs">';
+        state.data.sections.forEach(s => {
+            const activeClass = s.id === activeId ? 'active-tab' : '';
+            // When clicking a tab, default to summary view
+            html += `<button class="section-tab ${activeClass}" onclick="window.location.search='?section=${s.id}&view=summary'">${s.shortTitle}</button>`;
+        });
+        html += '</div>';
+
+        // View Tabs (Summary | Flash | Quiz | Scenario)
+        // Only show if we are inside a specific section
+        const params = new URLSearchParams(window.location.search);
+        const currentView = params.get('view') || 'summary';
+        const secId = params.get('section') || state.data.sections[0].id;
+
+        html += '<div class="menu-sub-options" style="margin-bottom:20px;">';
+        html += renderViewBtn('Summary', 'btn-summary', 'summary', currentView, secId);
+        html += renderViewBtn('Flashcards', 'btn-flash', 'flashcards', currentView, secId);
+        html += renderViewBtn('Quiz', 'btn-quiz', 'quiz', currentView, secId);
+        html += renderViewBtn('Scenario', 'btn-scen', 'critical', currentView, secId);
+        html += '</div>';
+
+        return html;
+    }
+
+    function renderViewBtn(label, cls, viewKey, currentView, secId) {
+        const isCurrent = viewKey === currentView;
+        const style = isCurrent ? 'box-shadow: inset 0 0 0 2px var(--primary-accent);' : '';
+        return `<button class="btn-action ${cls}" style="${style}" onclick="window.location.search='?section=${secId}&view=${viewKey}'">${label}</button>`;
+    }
+
+    function renderSummary(container) {
+        container.innerHTML = state.activeSection.summary || '<div class="sum-card">No summary available.</div>';
+    }
+
+    function renderFlashcards(container) {
+        state.flashData = state.activeSection.flashcards || [];
+        if (!state.flashData.length) return container.innerHTML = '<div class="sum-card">No flashcards available yet.</div>';
+        
+        state.fIndex = 0;
+        container.innerHTML = `
+            <div style="text-align:center; margin-bottom:10px;">Card <span id="fcNum">1</span>/${state.flashData.length}</div>
+            <div class="scene" onclick="this.querySelector('.card').classList.toggle('is-flipped')">
+                <div class="card">
+                    <div class="card__face card__face--front">
+                        <div id="fcQ">${state.flashData[0].question}</div>
+                        <small style="margin-top:15px; opacity:0.6;">(Tap to flip)</small>
+                    </div>
+                    <div class="card__face card__face--back" id="fcA">${state.flashData[0].answer}</div>
+                </div>
+            </div>
+            <div style="display:flex; gap:10px; margin-top:20px;">
+                <button class="control-btn" onclick="app.prevFlash()">Previous</button>
+                <button class="control-btn" onclick="app.nextFlash()">Next</button>
+            </div>
+        `;
+    }
+
+    function renderQuiz(container) {
+        state.quizData = state.activeSection.quiz || [];
+        if (!state.quizData.length) return container.innerHTML = '<div class="sum-card">No quiz questions available yet.</div>';
+        
+        state.qIndex = 0; state.score = 0;
+        
+        // Start Quiz HTML
+        container.innerHTML = `
+            <div class="quiz-container">
+                <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                    <span id="qProg">Q 1/${state.quizData.length}</span>
+                    <span>Score: <span id="qScore">0</span></span>
+                </div>
+                <h3 id="qText">${state.quizData[0].q}</h3>
+                <div id="qOptions" class="quiz-options"></div>
+                <div id="qFeedback" class="quiz-feedback"></div>
+                <button id="qNext" class="control-btn" style="display:none;" onclick="app.nextQuiz()">Next Question</button>
+            </div>
+        `;
+        renderQuizOptions();
+    }
+
+    function renderQuizOptions() {
+        const q = state.quizData[state.qIndex];
+        const div = document.getElementById('qOptions');
+        div.innerHTML = '';
+        q.options.forEach((opt, i) => {
+            div.innerHTML += `<button class="option-btn" onclick="app.checkQuiz(${i}, this)">${opt}</button>`;
+        });
+    }
+
+    function renderScenario(container) {
+        state.critData = state.activeSection.critical || state.activeSection.scenarios || [];
+        if (!state.critData.length) return container.innerHTML = '<div class="sum-card">No scenarios available yet.</div>';
+        
+        // Simply reusing Quiz Logic for Scenario for simplicity, but with Scenario styling
+        const s = state.critData[0];
+        container.innerHTML = `
+            <div class="critical-card">
+                <div style="background:rgba(220, 38, 38, 0.1); padding:15px; border-radius:10px; margin-bottom:20px; border-left:4px solid #dc2626;">
+                    <h4 style="color:#dc2626; margin:0;">🚨 Scenario</h4>
+                    <p>${s.scenario || s.desc || s.title}</p>
+                </div>
+                <h3>${s.question || "What is your next action?"}</h3>
+                <div id="scenOptions" class="quiz-options"></div>
+                <div id="scenFeedback" class="quiz-feedback"></div>
+            </div>
+        `;
+        
+        // Render options manually for scenario
+        if(s.options) {
+            const div = document.getElementById('scenOptions');
+            s.options.forEach((opt, i) => {
+                // Determine text (some data has .t, some is string)
+                const txt = typeof opt === 'string' ? opt : opt.t; 
+                div.innerHTML += `<button class="option-btn" onclick="app.checkScenario(${i}, this)">${txt}</button>`;
             });
-        }, 200);
+        }
+    }
 
-        setupHomeButton();
+    // --- PUBLIC ACTIONS (exposed to window.app) ---
+    window.app = {
+        nextFlash: () => {
+            state.fIndex = (state.fIndex + 1) % state.flashData.length;
+            updateFCDisplay();
+        },
+        prevFlash: () => {
+            state.fIndex = (state.fIndex - 1 + state.flashData.length) % state.flashData.length;
+            updateFCDisplay();
+        },
+        checkQuiz: (idx, btn) => {
+            const q = state.quizData[state.qIndex];
+            const isCorrect = idx === q.correct;
+            
+            // Lock buttons
+            const btns = document.querySelectorAll('.option-btn');
+            btns.forEach(b => b.disabled = true);
+            
+            if(isCorrect) {
+                btn.classList.add('correct');
+                state.score++;
+                document.getElementById('qScore').innerText = state.score;
+            } else {
+                btn.classList.add('wrong');
+                btns[q.correct].classList.add('correct');
+            }
+            
+            const fb = document.getElementById('qFeedback');
+            fb.style.display = 'block';
+            fb.innerHTML = `<strong>${isCorrect?'Correct':'Incorrect'}</strong><br>${q.explanation}`;
+            document.getElementById('qNext').style.display = 'block';
+        },
+        nextQuiz: () => {
+            state.qIndex++;
+            if(state.qIndex < state.quizData.length) {
+                document.getElementById('qText').innerText = state.quizData[state.qIndex].q;
+                document.getElementById('qProg').innerText = `Q ${state.qIndex+1}/${state.quizData.length}`;
+                document.getElementById('qFeedback').style.display = 'none';
+                document.getElementById('qNext').style.display = 'none';
+                renderQuizOptions();
+            } else {
+                document.querySelector('.quiz-container').innerHTML = `<h3>Quiz Complete! Score: ${state.score}/${state.quizData.length}</h3>`;
+            }
+        },
+        checkScenario: (idx, btn) => {
+             const s = state.critData[0]; // Just showing first scenario for now
+             const isCorrect = idx === s.correct;
+             const btns = document.querySelectorAll('.option-btn');
+             btns.forEach(b => b.disabled = true);
+             
+             if(isCorrect) btn.classList.add('correct');
+             else {
+                 btn.classList.add('wrong');
+                 btns[s.correct].classList.add('correct');
+             }
+             
+             const fb = document.getElementById('scenFeedback');
+             fb.style.display = 'block';
+             fb.innerHTML = `<strong>${isCorrect?'Correct':'Incorrect'}</strong><br>${s.explanation}<br><strong>KPI:</strong> ${s.kpi}`;
+        }
+    };
+
+    function updateFCDisplay() {
+        document.querySelector('.card').classList.remove('is-flipped');
+        setTimeout(() => {
+            document.getElementById('fcQ').innerText = state.flashData[state.fIndex].question;
+            document.getElementById('fcA').innerText = state.flashData[state.fIndex].answer;
+            document.getElementById('fcNum').innerText = state.fIndex + 1;
+        }, 300);
     }
 
     init();
-
-    // Expose toggler for completion (used in index.html)
-    window.app = window.app || {};
-    window.app.toggleCompletion = function(chapterId, checked) {
-        // This function is defined in index.html, but we keep the namespace
-        console.log('toggleCompletion called from app.js – should be overridden by index.html');
-    };
-    window.app.state = state;
 })();
