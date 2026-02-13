@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
     <style>
-        /* ---------- AERO VISTA GLASS THEME ---------- */
+        /* ---------- AERO VISTA GLASS THEME – ENHANCED UI ---------- */
         :root {
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
@@ -14,6 +14,8 @@
             --text-dark: #1a2a3a;
             --text-light: #ffffff;
             --accent-blue: #0056b3;
+            --accent-gold: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.3);
             --header-height: 70px;
         }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
@@ -89,7 +91,7 @@
         .header-btn:hover { background: rgba(255,255,255,0.25); }
         .header-btn:active { transform: scale(0.95); }
         
-        /* ---------- STATS BADGE – NEW FORM, NO NAVIGATION ---------- */
+        /* ---------- STATS BADGE – LIVE ---------- */
         .stats-badge {
             background: rgba(0,86,179,0.3);
             border: 1px solid rgba(255,255,255,0.4);
@@ -110,10 +112,6 @@
             align-items: center;
             gap: 4px;
         }
-        .stats-badge i {
-            font-style: normal;
-            opacity: 0.9;
-        }
         .stats-divider {
             width: 1px;
             height: 20px;
@@ -133,31 +131,101 @@
             padding-bottom: 80px;
         }
 
-        .menu-grid { display: grid; gap: 20px; }
-        .menu-card, .stats-card {
+        .menu-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        /* ---------- CARD STYLES – ENHANCED ---------- */
+        .menu-card {
             background: var(--glass-bg);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: 24px;
             box-shadow: var(--glass-shadow);
             padding: 25px;
             position: relative;
             z-index: 1;
             overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
         }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.35);
+            border-color: rgba(255,255,255,0.8);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay each card's animation */
+        .menu-card:nth-child(1) { animation-delay: 0.1s; }
+        .menu-card:nth-child(2) { animation-delay: 0.2s; }
+        .menu-card:nth-child(3) { animation-delay: 0.3s; }
+        .menu-card:nth-child(4) { animation-delay: 0.4s; }
+        .menu-card:nth-child(5) { animation-delay: 0.5s; }
+        .menu-card:nth-child(6) { animation-delay: 0.6s; }
+        .menu-card:nth-child(7) { animation-delay: 0.7s; }
+        .menu-card:nth-child(8) { animation-delay: 0.8s; }
+        .menu-card:nth-child(9) { animation-delay: 0.9s; }
+        .menu-card:nth-child(10) { animation-delay: 1s; }
+        /* Add more if needed, but generic works */
+
         .menu-card::before {
             content: ''; position: absolute; top: 0; left: -50%; width: 100%; height: 100%;
             background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
-            transform: skewX(-25deg); pointer-events: none;
+            transform: skewX(-25deg);
+            pointer-events: none;
+            transition: left 0.5s ease;
         }
-        .menu-card h2 { margin: 0 0 8px; font-size: 1.3rem; color: #004e92; text-shadow: 0 1px 0 rgba(255,255,255,0.8); }
-        .menu-card p { margin: 0 0 20px; color: #444; font-size: 0.95rem; line-height: 1.4; }
+        .menu-card:hover::before {
+            left: 150%;
+        }
+
+        .menu-card h2 { 
+            margin: 0 0 8px; 
+            font-size: 1.3rem; 
+            color: #004e92; 
+            text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+            transition: color 0.2s ease;
+        }
+        .menu-card:hover h2 {
+            color: #0066b3;
+        }
+        .menu-card p { 
+            margin: 0 0 20px; 
+            color: #444; 
+            font-size: 0.95rem; 
+            line-height: 1.4; 
+        }
+
+        /* ---------- STATUS BADGE – VARIATIONS ---------- */
         .status-badge {
             display: inline-block; font-size: 0.7rem; padding: 4px 10px;
             border-radius: 20px; background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
             border: 1px solid #ccc; color: #555; margin-bottom: 12px;
             font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        /* ---------- HIGHLIGHT FOR FIRST CARD IN EACH CHAPTER ---------- */
+        .menu-card.first-in-chapter {
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 8px 30px var(--accent-glow);
+        }
+        .menu-card.first-in-chapter .status-badge {
+            background: linear-gradient(to bottom, #fff3cd, #ffe69b);
+            border-color: #d4af37;
+            color: #856404;
         }
 
         .menu-sub-options {
@@ -179,9 +247,13 @@
             background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
             box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
             border: 1px solid rgba(255,255,255,0.6);
-            transition: all 0.1s ease;
+            transition: all 0.15s ease;
             text-decoration: none;
             margin: 0;
+        }
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1);
         }
         .btn-action:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.1); }
         .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
@@ -191,9 +263,22 @@
 
         @media (max-width: 400px) {
             .btn-action { padding: 8px 12px; font-size: 0.8rem; }
+            .stats-badge { padding: 4px 12px; font-size: 0.75rem; gap: 5px; }
+            .header-btn { padding: 6px 10px; font-size: 0.8rem; }
         }
 
-        .stats-card { margin-top: 20px; }
+        .stats-card { 
+            margin-top: 30px; 
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards 1s;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            padding: 25px;
+        }
         .stat-row {
             display: flex; justify-content: space-between; padding: 12px;
             background: rgba(0,0,0,0.02); border-radius: 8px; margin-top: 8px;
@@ -227,9 +312,7 @@
     </div>
 </header>
 
-<main id="mainContent">
-    <!-- Content will be injected by JavaScript below -->
-</main>
+<main id="mainContent"></main>
 
 <footer>
     <div>Created by Soliman Anas · Study aid only</div>
@@ -240,20 +323,21 @@
     (function(){
         "use strict";
 
-        // ---------- COMPLETE CHAPTER LIST – SPLIT UNIVERSAL CARE INTO THREE CARDS ----------
+        // ---------- COMPLETE CHAPTER LIST – WITH FIRST-OF-CHAPTER DETECTION ----------
         const CHAPTERS = [
-            // Special chapters
+            // Special chapters (no highlight)
             { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false },
             { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false },
             
-            // Universal Care – three separate cards, all pointing to c1.html with section parameters
+            // Universal Care – three separate cards
             { 
                 id: "c1s1", 
                 shortTitle: "1.1 Universal Care", 
                 title: "Universal Care – Core Assessment", 
                 hasCritical: true,
                 chapterFile: "c1.html",
-                sectionParam: "c1s1"
+                sectionParam: "c1s1",
+                isFirstInChapter: true  // mark as first in Universal Care
             },
             { 
                 id: "c1s2", 
@@ -261,7 +345,8 @@
                 title: "Documentation & Triage", 
                 hasCritical: false,
                 chapterFile: "c1.html",
-                sectionParam: "c1s2"
+                sectionParam: "c1s2",
+                isFirstInChapter: false
             },
             { 
                 id: "c1s3", 
@@ -269,90 +354,91 @@
                 title: "Functional Needs, Treat at Scene, Refusal", 
                 hasCritical: false,
                 chapterFile: "c1.html",
-                sectionParam: "c1s3"
+                sectionParam: "c1s3",
+                isFirstInChapter: false
             },
             
-            // Airway & Breathing
-            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },
-            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true },
-            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true },
-            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true },
-            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true },
+            // Airway & Breathing – first card is c2 (2.1)
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false },
+            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false },
             
-            // Cardiovascular
-            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true },
-            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true },
-            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true },
-            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true },
+            // Cardiovascular – first card is c3-1 (3.1)
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false },
             
-            // Resuscitation
-            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true },
-            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true },
-            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true },
-            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true },
-            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true },
-            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true },
-            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true },
-            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true },
-            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true },
+            // Resuscitation – first card is c4-1 (4.1)
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false },
             
-            // Neurological
-            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true },
-            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true },
+            // Neurological – first card is c5-1 (5.1)
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false },
             
-            // General Medical
-            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true },
-            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true },
-            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true },
-            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true },
-            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true },
-            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true },
-            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true },
-            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true },
-            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true },
-            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true },
-            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true },
-            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true },
-            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true },
-            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true },
+            // General Medical – first card is c6-1 (6.1)
+            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false },
             
-            // Trauma
-            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true },
-            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true },
-            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true },
-            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true },
-            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true },
-            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true },
+            // Trauma – first card is c7-1 (7.1)
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false },
             
-            // Environmental
-            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true },
-            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true },
-            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true },
-            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true },
-            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true },
-            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true },
-            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true },
-            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true },
-            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true },
-            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true },
+            // Environmental – first card is c8-1 (8.1)
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false },
             
-            // Pediatric
-            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true },
-            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true },
-            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true },
+            // Pediatric – first card is c9-1 (9.1)
+            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false },
             
-            // Obstetrics
-            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true },
-            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true },
-            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true },
-            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true },
+            // Obstetrics – first card is c10-1 (10.1)
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false },
             
-            // Major Incident Triage
-            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true },
+            // Major Incident Triage – only one card, treat as first
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true },
             
-            // Scope & Medications
-            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false },
-            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false }
+            // Scope & Medications – no critical, not highlighted
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: false },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false }
         ];
 
         // ---------- STORAGE UTILITY ----------
@@ -384,7 +470,6 @@
         function updateHeaderShortcuts(showHomeSpecific) {
             const headerShortcuts = document.getElementById('headerShortcuts');
             if (!headerShortcuts) return;
-            // Always show on home page; hide elsewhere
             headerShortcuts.style.display = showHomeSpecific ? 'flex' : 'none';
         }
 
@@ -392,7 +477,7 @@
         function renderMenu() {
             const stats = loadStats();
 
-            let chaptersHtml = CHAPTERS.map(ch => {
+            let chaptersHtml = CHAPTERS.map((ch, index) => {
                 const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
                 
@@ -404,18 +489,39 @@
                     linkUrl = `chapters/${ch.id}.html?view=summary`;
                 }
 
+                // Determine if this card should show Flashcards, Quiz, Critical
+                // Rule: 
+                // - For c1s1: show flashcards, quiz, critical
+                // - For other Universal Care subsections: hide flashcards/quiz (user will provide later)
+                // - For all other chapters: show flashcards/quiz if not special (c0, c-index, c1s*)
+                let showFlashcardsQuiz = false;
+                let showCritical = ch.hasCritical && ch.id !== 'c0' && ch.id !== 'c-index';
+
+                if (ch.id === 'c1s1') {
+                    showFlashcardsQuiz = true;
+                    showCritical = true;
+                } else if (ch.id.startsWith('c1s')) {
+                    showFlashcardsQuiz = false;
+                    showCritical = false; // no critical for other subsections yet
+                } else if (ch.id !== 'c0' && ch.id !== 'c-index' && !ch.id.startsWith('c1s')) {
+                    showFlashcardsQuiz = true;
+                }
+
+                // Apply first-in-chapter highlight class
+                const firstClass = ch.isFirstInChapter ? 'first-in-chapter' : '';
+
                 return `
-                    <div class="menu-card">
+                    <div class="menu-card ${firstClass}" style="animation-delay: ${index * 0.05}s;">
                         <span class="status-badge">${ch.id.toUpperCase()}</span>
                         <h2>${ch.shortTitle}</h2>
                         <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
                         <div class="menu-sub-options">
                             <a href="${linkUrl}" class="btn-action btn-summary">📘 Summary</a>
-                            ${ch.id !== 'c0' && ch.id !== 'c-index' && !ch.id.startsWith('c1s') ? `
+                            ${showFlashcardsQuiz ? `
                                 <a href="chapters/${ch.id}.html?view=flashcards" class="btn-action btn-flash">📇 Flashcards</a>
                                 <a href="chapters/${ch.id}.html?view=quiz" class="btn-action btn-quiz">📋 Quiz</a>
                             ` : ''}
-                            ${ch.hasCritical && ch.id !== 'c0' && ch.id !== 'c-index' ? `
+                            ${showCritical ? `
                                 <a href="chapters/${ch.id}.html?view=critical" class="btn-action btn-critical">🚨 Critical</a>
                             ` : ''}
                         </div>
@@ -457,15 +563,12 @@
 
         // ---------- PAGE INIT ----------
         function initPage() {
-            // Check if we are on the home page (no hash or query params)
             const isHomePage = !window.location.hash && !window.location.search;
             
             if (isHomePage) {
                 renderMenu();
             } else {
-                // Not home page – hide header shortcuts
                 updateHeaderShortcuts(false);
-                // Also update stats badge if it's visible? It should be hidden, but update anyway
                 updateStatsBadge();
             }
         }
