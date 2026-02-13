@@ -3,39 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DCAS CPG 2025</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DCAS CPG 2025 · Chapters</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Shared stylesheet (contains all themes and components) -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header>
     <div class="header-left">
-        <div class="header-text"><h1>DCAS CPG 2025</h1><p>Review Platform</p></div>
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">DCAS CPG 2025</h1>
+            <p id="pageSubtitle">Clinical Review Platform</p>
+        </div>
     </div>
-    <div class="header-right"><button class="icon-btn" id="themeToggle">🌗</button></div>
+    <div class="header-right" id="headerShortcuts">
+        <!-- Theme toggle with palette icon (cycles through 4 themes) -->
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <div class="stats-badge" id="liveStatsBadge">
+            <span>📊 <span id="statsAttempts">0</span></span>
+            <div class="stats-divider"></div>
+            <span>🎯 <span id="statsCritical">0%</span></span>
+        </div>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+    </div>
 </header>
-<main id="mainContent"><div class="menu-grid" id="menuGrid"></div></main>
-<footer><div>Created by Soliman Anas</div></footer>
+
+<main id="mainContent"></main>
+
+<footer>
+    <div>Created by Soliman Anas · Study Aid Only</div>
+    <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
+</footer>
+
 <script>
-    const CHAPTERS = [
-        { id: "c0", title: "2025 Updates", desc: "What's New", file: "c0", hasSections: false },
-        { id: "c1", title: "1.0 Universal Care", desc: "Foundation & Safety", file: "c1", hasSections: true },
-        { id: "c2", title: "2.0 Airway", desc: "Airway Management", file: "c2", hasSections: true },
-        { id: "index", title: "Full Index", desc: "All Topics", file: "c-index", hasSections: false }
-    ];
-    const grid = document.getElementById('menuGrid');
-    CHAPTERS.forEach(ch => {
-        const card = document.createElement('div');
-        card.className = 'menu-card';
-        card.innerHTML = `<h2>${ch.title}</h2><p>${ch.desc}</p><button class="btn-action btn-summary" style="width:100%" onclick="window.location.href='chapters/${ch.file}.html'">Open Chapter</button>`;
-        grid.appendChild(card);
-    });
-    const themeBtn = document.getElementById('themeToggle');
-    themeBtn.addEventListener('click', () => {
-        const n = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', n);
-        localStorage.setItem('theme', n);
-    });
-    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    (function(){
+        "use strict";
+
+        // ---------- THEME SYSTEM (four themes) ----------
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        themeBtn.addEventListener('click', nextTheme);
+        initTheme();
+
+        // ---------- ENCOURAGEMENT ----------
+        const ENCOURAGEMENTS = [
+            "Every review sharpens your skills.", "Progress, not perfection.", "Small steps lead to mastery.",
+            "You've got this!", "Stay curious, stay sharp.", "Excellence is a habit.",
+            "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
+        ];
+
+        // ---------- COMPLETE CHAPTER LIST (ALL CPG 2025) ----------
+        const CHAPTERS = [
+            // Special chapters (no buttons)
+            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            
+            // Universal Care (6 sections – all buttons enabled)
+            { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Patient Triage Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Functional Needs", hasCritical: true, chapterFile: "c1", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treated at Scene", hasCritical: true, chapterFile: "c1", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s6", shortTitle: "1.6 Refusal of Transfer", title: "Patient Refusal of Transfer", hasCritical: true, chapterFile: "c1", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
+
+            // Airway & Breathing (all buttons)
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+
+            // Cardiovascular
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+
+            // Resuscitation
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true, chapterGroup: "resus" },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+
+            // Neurological
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
+
+            // General Medical
+            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "medical" },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+
+            // Trauma
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "trauma" },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+
+            // Environmental
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+
+            // Pediatric
+            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true, chapterGroup: "pediatric" },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+
+            // Obstetrics
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+
+            // Major Incident Triage
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
+
+            // Scope & Medications (no critical scenarios)
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
+        ];
+
+        // ---------- STORAGE & LOGIC ----------
+        const COMPLETION_KEY = 'dcas_cpg_completion';
+        const STATS_KEY = 'dcas_cpg_stats';
+
+        function loadStorage(key, defaultVal) {
+            try { return JSON.parse(localStorage.getItem(key)) || defaultVal; } 
+            catch(e) { return defaultVal; }
+        }
+        function saveStorage(key, val) {
+            try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
+        }
+
+        function updateStatsBadge() {
+            const stats = loadStorage(STATS_KEY, { totalAttempts: 0, critical: { total: 0, correct: 0 } });
+            const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+            document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+            document.getElementById('statsCritical').innerText = `${critAcc}%`;
+        }
+
+        window.app = window.app || {};
+        window.app.toggleCompletion = function(chapterId, checked) {
+            const completion = loadStorage(COMPLETION_KEY, {});
+            completion[chapterId] = checked;
+            saveStorage(COMPLETION_KEY, completion);
+            renderMenu(); 
+        };
+
+        // ---------- RENDER ----------
+        function renderMenu() {
+            const stats = loadStorage(STATS_KEY, { chapters: {} });
+            const completion = loadStorage(COMPLETION_KEY, {});
+            
+            const contentHtml = CHAPTERS.map((ch, index) => {
+                const s = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
+                const avg = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
+                const baseFile = ch.chapterFile || ch.id;
+                const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
+                
+                // --- BUTTON VISIBILITY: show all four for all non‑special chapters ---
+                const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
+                const showFlashcardsQuiz = !isSpecial;
+                const showCritical = ch.hasCritical && !isSpecial;
+                const isChecked = completion[ch.id] || false;
+
+                return `
+                    <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;">
+                        <div class="card-header">
+                            <span class="status-badge">${ch.id.toUpperCase()}</span>
+                            <div class="toggle-wrapper">
+                                <label class="toggle-label">
+                                    <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
+                                    <input type="checkbox" class="toggle-input" 
+                                        ${isChecked ? 'checked' : ''} 
+                                        onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
+                                    <span class="toggle-track"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <h2>${ch.shortTitle}</h2>
+                        <p>${ch.title} • ${s.attempts} attempts • Avg ${avg}%</p>
+                        
+                        <div class="menu-sub-options">
+                            <a href="chapters/${baseFile}.html?view=summary${sec}" class="btn-action btn-summary">📘 Summary</a>
+                            ${showFlashcardsQuiz ? `
+                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
+                                <a href="chapters/${baseFile}.html?view=quiz${sec}" class="btn-action btn-quiz">📝 Quiz</a>
+                            ` : ''}
+                            ${showCritical ? `
+                                <a href="chapters/${baseFile}.html?view=critical${sec}" class="btn-action btn-scenario">🚑 Scenario</a>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Stats Card
+            const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
+            const completedCount = Object.values(completion).filter(v => v).length;
+            const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+            const quote = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+
+            const statsHtml = `
+                <div class="stats-card">
+                    <div class="progress-header">
+                        <div class="progress-title">🚀 Progress Dashboard</div>
+                        <span style="font-weight:700; color:var(--primary-accent);">${overallPercent}%</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: ${overallPercent}%"></div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">Chapters Done</span>
+                            <span class="stat-value">${completedCount}/${totalChaps}</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Total Attempts</span>
+                            <span class="stat-value">${loadStorage(STATS_KEY, {totalAttempts:0}).totalAttempts || 0}</span>
+                        </div>
+                    </div>
+                    <div class="encouragement">✨ ${quote}</div>
+                </div>
+            `;
+
+            document.getElementById('mainContent').innerHTML = `<div class="menu-grid">${contentHtml}${statsHtml}</div>`;
+            updateStatsBadge();
+        }
+
+        // ---------- HOME & INDEX BUTTONS ----------
+        const homeBtn = document.getElementById('homeBtn');
+        const indexBtn = document.getElementById('headerIndexBtn');
+        if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
+        if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
+
+        renderMenu();
+    })();
 </script>
+
 </body>
 </html>
