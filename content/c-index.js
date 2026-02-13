@@ -1,4 +1,4 @@
-/* ========== c-index.js – Full CPG Index with Working Links ========== */
+/* ========== c-index.js – Full CPG Index (One‑line entries, working links) ========== */
 window.CPG_DATA = {
     id: "c-index",
     title: "DCAS CPG Index",
@@ -16,7 +16,7 @@ window.CPG_DATA = {
 };
 
 function generateIndexHTML() {
-    // ---------- Complete CPG list (exactly matching main index) ----------
+    // ---------- Complete CPG list (must match main index) ----------
     const CHAPTERS = [
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
@@ -109,7 +109,7 @@ function generateIndexHTML() {
         { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", chapterFile: "m1-38", chapterGroup: "scope" }
     ];
 
-    // Group chapters by category
+    // Group chapters by category (same as main index)
     const categories = {
         "universal": { name: "🛡️ Universal Care", color: "var(--accent-universal)" },
         "airway": { name: "🫁 Airway & Breathing", color: "var(--accent-airway)" },
@@ -138,10 +138,10 @@ function generateIndexHTML() {
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
             const link = `chapters/${baseFile}.html?view=summary${sectionParam}`;
+            // Single line: the short title (e.g., "1.1 Universal Care") is the clickable link
             html += `
                 <tr>
-                    <td style="width: 100px;"><span class="cpg-badge">${ch.shortTitle}</span></td>
-                    <td><a href="${link}">${ch.title}</a></td>
+                    <td><a href="${link}" style="display: block; padding: 8px 0;">${ch.shortTitle}</a></td>
                 </tr>
             `;
         });
