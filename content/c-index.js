@@ -1,4 +1,4 @@
-/* ========== c-index.js – Full CPG Index (One‑line entries, working links) ========== */
+/* ========== c-index.js – Full CPG Index (Corrected links, single‑line entries) ========== */
 window.CPG_DATA = {
     id: "c-index",
     title: "DCAS CPG Index",
@@ -18,6 +18,10 @@ window.CPG_DATA = {
 function generateIndexHTML() {
     // ---------- Complete CPG list (must match main index) ----------
     const CHAPTERS = [
+        // Special chapters (not listed in index, but kept for completeness)
+        // { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", chapterGroup: null },
+        // { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", chapterGroup: null },
+        
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
         { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", chapterFile: "c1", sectionParam: "c1s2", chapterGroup: "universal" },
@@ -137,8 +141,8 @@ function generateIndexHTML() {
         groupChapters.forEach(ch => {
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
-            const link = `chapters/${baseFile}.html?view=summary${sectionParam}`;
-            // Single line: the short title (e.g., "1.1 Universal Care") is the clickable link
+            // ✅ FIXED: no "chapters/" prefix – correct for a page already inside /chapters/
+            const link = `${baseFile}.html?view=summary${sectionParam}`;
             html += `
                 <tr>
                     <td><a href="${link}" style="display: block; padding: 8px 0;">${ch.shortTitle}</a></td>
