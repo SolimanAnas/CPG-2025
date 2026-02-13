@@ -162,3 +162,85 @@
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">Universal Care</h1>
+            <p id="pageSubtitle">Section</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Toggle Theme">🌗</button>
+        <div class="stats-badge" id="liveStatsBadge">
+            <span>📊 <span id="statsAttempts">0</span></span>
+            <div class="stats-divider"></div>
+            <span>🎯 <span id="statsCritical">0%</span></span>
+        </div>
+    </div>
+</header>
+
+<main id="mainContent">
+    <div class="sum-card" style="text-align: center; padding: 40px;">
+        <div style="font-size: 2rem; margin-bottom: 10px;">⏳</div>
+        <p>Loading content...</p>
+    </div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · Study Aid Only</div>
+    <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
+</footer>
+
+<script src="../content/c1.js"></script>
+
+<script src="../app.js"></script>
+
+<script>
+    (function() {
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Theme Init
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+        initTheme();
+
+        // Back Button Logic
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = '../index.html';
+        });
+
+        // Update Stats in Header
+        function loadStats() {
+            try {
+                const data = localStorage.getItem('dcas_cpg_stats');
+                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+                document.getElementById('statsCritical').innerText = `${critAcc}%`;
+            } catch(e) {}
+        }
+        loadStats();
+    })();
+</script>
+
+</body>
+</html>
+
