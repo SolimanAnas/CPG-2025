@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ---------- THEME CONFIGURATION – COPIED FROM MAIN INDEX.HTML ---------- */
+        /* ---------- THEME CONFIGURATION (same as main index.html) ---------- */
         :root {
             /* --- LIGHT THEME (Fresh Clinical Blue) --- */
             --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #b8e1ff 50%, #f0f9ff 100%);
@@ -20,11 +20,12 @@
             
             --text-primary: #1a2a3a;
             --text-secondary: #475569;
-            --header-text: #0056b3;
+            --header-text: #0056b3; /* Dark blue for visibility on light bg */
             
             --toggle-bg: #cbd5e1;
             --toggle-active: #0056b3;
             
+            /* Button Gradients (Light Glossy) */
             --btn-grad-sum: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
             --btn-grad-flash: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
             --btn-grad-quiz: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
@@ -34,23 +35,10 @@
             --border-flash: #dbeafe; --text-flash: #1e40af;
             --border-quiz: #dcfce7; --text-quiz: #166534;
             --border-scen: #fee2e2; --text-scen: #991b1b;
-            
-            /* Chapter accent colors */
-            --accent-universal: #d63384;
-            --accent-airway: #0ca678;
-            --accent-cardio: #e03131;
-            --accent-resus: #6741d9;
-            --accent-neuro: #0891b2;
-            --accent-medical: #f76707;
-            --accent-trauma: #fcc419;
-            --accent-environmental: #845ef7;
-            --accent-pediatric: #ff922b;
-            --accent-obstetric: #f06595;
-            --accent-mci: #2f9e44;
-            --accent-scope: #495057;
         }
 
         [data-theme="dark"] {
+            /* --- DARK THEME (Deep Teal/Slate) --- */
             --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
@@ -62,8 +50,22 @@
             
             --toggle-bg: #374151;
             --toggle-active: #2dd4bf;
-            
-            /* Button gradients stay the same (glossy on white cards) */
+        }
+
+        :root {
+            --accent-universal: #d63384;       
+            --accent-airway: #0ca678;          
+            --accent-cardio: #e03131;          
+            --accent-resus: #6741d9;           
+            --accent-neuro: #0891b2;           
+            --accent-medical: #f76707;         
+            --accent-trauma: #fcc419;          
+            --accent-environmental: #845ef7;   
+            --accent-pediatric: #ff922b;       
+            --accent-obstetric: #f06595;       
+            --accent-mci: #2f9e44;             
+            --accent-scope: #495057;           
+            --header-height: 72px;
         }
 
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
@@ -86,7 +88,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding: 0 20px;
             display: flex; align-items: center; justify-content: space-between;
-            height: 72px;
+            height: var(--header-height);
             position: sticky; top: 0; z-index: 1000;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
@@ -127,7 +129,7 @@
         }
         .stats-divider { width: 1px; height: 14px; background: currentColor; opacity: 0.4; }
 
-        /* ---------- MAIN ---------- */
+        /* ---------- MAIN CONTENT ---------- */
         main {
             flex: 1; padding: 24px 20px;
             max-width: 800px; margin: 0 auto; width: 100%;
@@ -139,57 +141,49 @@
             border-radius: 24px; padding: 28px;
             box-shadow: var(--glass-shadow);
             animation: fadeInUp 0.6s ease forwards;
-            opacity: 0; transform: translateY(20px);
         }
-
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
         .sum-card h3 {
-            font-size: 1.5rem; font-weight: 700; margin-bottom: 20px;
-            color: var(--header-text);
+            font-size: 1.5rem; font-weight: 700; color: var(--text-primary);
+            margin-bottom: 24px; border-bottom: 2px solid var(--accent-universal);
+            padding-bottom: 10px;
         }
+
         .sum-card h4 {
-            font-size: 1.2rem; font-weight: 600; margin: 30px 0 15px;
-            border-left: 6px solid; padding-left: 15px;
+            font-size: 1.2rem; font-weight: 600; color: var(--text-primary);
+            margin: 30px 0 15px;
         }
-        /* Category heading colors (same as chapter accents) */
-        .sum-card h4[data-group="universal"] { border-color: var(--accent-universal); }
-        .sum-card h4[data-group="airway"] { border-color: var(--accent-airway); }
-        .sum-card h4[data-group="cardio"] { border-color: var(--accent-cardio); }
-        .sum-card h4[data-group="resus"] { border-color: var(--accent-resus); }
-        .sum-card h4[data-group="neuro"] { border-color: var(--accent-neuro); }
-        .sum-card h4[data-group="medical"] { border-color: var(--accent-medical); }
-        .sum-card h4[data-group="trauma"] { border-color: var(--accent-trauma); }
-        .sum-card h4[data-group="environmental"] { border-color: var(--accent-environmental); }
-        .sum-card h4[data-group="pediatric"] { border-color: var(--accent-pediatric); }
-        .sum-card h4[data-group="obstetric"] { border-color: var(--accent-obstetric); }
-        .sum-card h4[data-group="mci"] { border-color: var(--accent-mci); }
-        .sum-card h4[data-group="scope"] { border-color: var(--accent-scope); }
 
         .index-table {
             width: 100%; border-collapse: collapse;
         }
         .index-table tr {
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.1s;
+        }
+        .index-table tr:hover {
+            background: rgba(255,255,255,0.3);
         }
         .index-table td {
-            padding: 12px 8px;
-        }
-        .cpg-number {
-            font-size: 0.8rem; font-weight: 700;
-            background: var(--glass-bg);
-            padding: 4px 10px; border-radius: 6px;
-            display: inline-block;
-            color: var(--text-secondary);
+            padding: 14px 8px;
         }
         .index-table a {
             color: var(--text-primary);
             text-decoration: none;
             font-weight: 500;
+            display: block;
+            width: 100%;
         }
         .index-table a:hover {
             text-decoration: underline;
-            color: var(--toggle-active);
+            color: var(--accent-universal);
+        }
+        .cpg-badge {
+            background: var(--glass-bg);
+            padding: 4px 8px; border-radius: 6px;
+            font-size: 0.7rem; font-weight: 700;
+            color: var(--text-secondary);
+            white-space: nowrap;
         }
 
         .btn-action {
@@ -198,15 +192,22 @@
             font-size: 0.9rem; font-weight: 600; text-decoration: none;
             transition: all 0.2s; border: none; cursor: pointer;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            background: var(--btn-grad-sum);
-            color: var(--text-sum);
-            border: 1px solid var(--border-sum);
+            margin-top: 30px;
         }
-        .btn-action:active { transform: translateY(1px); }
+        .btn-action:active { transform: translateY(1px); box-shadow: none; }
+        .btn-summary { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
 
-        footer {
-            text-align: center; padding: 30px;
-            color: var(--text-secondary); font-size: 0.75rem; opacity: 0.8;
+        footer { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 0.75rem; opacity: 0.8; }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .header-text h1 { font-size: 1rem; }
+            .header-text p { display: none; }
+            .index-table td { padding: 10px 4px; }
+            .cpg-badge { font-size: 0.6rem; }
         }
     </style>
 </head>
@@ -241,13 +242,10 @@
     <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
 </footer>
 
-<!-- Load index data and then app.js for common functions -->
 <script src="../content/c-index.js"></script>
-<script src="../app.js"></script>
-
 <script>
-    // ----- Theme toggle (duplicated from main index for self‑containedness) -----
-    (function(){
+    // Theme toggle (same as main index)
+    (function() {
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
         
@@ -263,31 +261,27 @@
             localStorage.setItem('theme', next);
         }
 
-        themeBtn.addEventListener('click', toggleTheme);
+        if (themeBtn) {
+            themeBtn.addEventListener('click', toggleTheme);
+        }
         initTheme();
 
-        // Update stats badge (reuse functions from app.js if available)
-        // If app.js is loaded, it will handle stats; otherwise we provide a fallback.
-        if (window.app && window.app.updateStatsBadge) {
-            window.app.updateStatsBadge();
-        } else {
-            // Minimal fallback – load from localStorage
-            function updateStatsBadge() {
-                try {
-                    const stats = JSON.parse(localStorage.getItem('dcas_cpg_stats')) || { totalAttempts: 0, critical: { total: 0, correct: 0 } };
-                    const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
-                    document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
-                    document.getElementById('statsCritical').innerText = critAcc + '%';
-                } catch(e) {}
-            }
-            updateStatsBadge();
-        }
-
         // Home button
-        document.getElementById('homeBtn').addEventListener('click', (e) => {
-            e.preventDefault();
+        document.getElementById('homeBtn').addEventListener('click', () => {
             window.location.href = '../index.html';
         });
+
+        // Update stats badge (simple version)
+        function loadStats() {
+            try {
+                const data = localStorage.getItem('dcas_cpg_stats');
+                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+                document.getElementById('statsCritical').innerText = `${critAcc}%`;
+            } catch(e) {}
+        }
+        loadStats();
     })();
 </script>
 
