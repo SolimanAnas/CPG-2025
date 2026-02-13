@@ -1,385 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* ---------- AERO VISTA GLASS THEME – ULTIMATE ---------- */
+        /* ---------- THEME VARIABLES ---------- */
         :root {
+            /* --- LIGHT THEME (Default) --- */
+            --bg-base: #f0f4f8;
+            --bg-gradient: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             --glass-bg: rgba(255, 255, 255, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.6);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
-            --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            --text-dark: #1a2a3a;
-            --text-light: #ffffff;
-            --header-height: 70px;
+            --glass-border: rgba(255, 255, 255, 0.8);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
             
-            /* Chapter accent colors – vibrant & distinctive */
-            --accent-universal: #d4a5a5;      /* Rose */
-            --accent-airway: #00a896;         /* Deep Teal */
-            --accent-cardio: #e63946;          /* Vivid Red */
-            --accent-resus: #8a4fff;           /* Rich Purple */
-            --accent-neuro: #2ec4b6;           /* Bright Green‑Blue */
-            --accent-medical: #ff9e5e;         /* Warm Orange */
-            --accent-trauma: #ffd700;          /* Bright Gold */
-            --accent-environmental: #7b2cbf;   /* Royal Purple */
-            --accent-pediatric: #f6ae2d;       /* Goldenrod */
-            --accent-obstetric: #ef476f;        /* Pink Red */
-            --accent-mci: #38b000;            /* Forest Green */
-            --accent-scope: #6c757d;           /* Cool Gray */
+            --text-dark: #102a43;
+            --text-medium: #486581;
+            --text-light: #ffffff;
+            
+            --primary-blue: #0056b3;
+            --card-hover: rgba(255,255,255,0.95);
+            
+            /* Button Colors (Light) */
+            --btn-sum-bg: #fff7ed; --btn-sum-text: #9a3412; --btn-sum-border: #ffedd5;
+            --btn-flash-bg: #eff6ff; --btn-flash-text: #1e40af; --btn-flash-border: #dbeafe;
+            --btn-quiz-bg: #f0fdf4; --btn-quiz-text: #166534; --btn-quiz-border: #dcfce7;
+            --btn-crit-bg: #fef2f2; --btn-crit-text: #991b1b; --btn-crit-border: #fee2e2;
+
+            /* Toggle Switch */
+            --toggle-bg: #cbd5e1;
+            --toggle-knob: #ffffff;
+            
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --header-border: rgba(0,0,0,0.05);
+            
+            --header-height: 72px;
         }
+
+        /* --- DARK THEME OVERRIDES --- */
+        [data-theme="dark"] {
+            --bg-base: #0f172a;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            
+            --text-dark: #f1f5f9;
+            --text-medium: #94a3b8;
+            --text-light: #e2e8f0;
+            
+            --primary-blue: #60a5fa; /* Lighter blue for dark mode */
+            --card-hover: rgba(30, 41, 59, 0.9);
+
+            /* Button Colors (Dark Mode - Muted) */
+            --btn-sum-bg: rgba(67, 20, 7, 0.5); --btn-sum-text: #fdba74; --btn-sum-border: #7c2d12;
+            --btn-flash-bg: rgba(23, 37, 84, 0.5); --btn-flash-text: #93c5fd; --btn-flash-border: #1e3a8a;
+            --btn-quiz-bg: rgba(20, 83, 45, 0.5); --btn-quiz-text: #86efac; --btn-quiz-border: #14532d;
+            --btn-crit-bg: rgba(127, 29, 29, 0.5); --btn-crit-text: #fca5a5; --btn-crit-border: #7f1d1d;
+
+            --toggle-bg: #334155;
+            --toggle-knob: #0f172a;
+            
+            --header-bg: rgba(15, 23, 42, 0.85);
+            --header-border: rgba(255,255,255,0.1);
+        }
+
+        /* Accent Colors (Consistent across modes) */
+        :root {
+            --accent-universal: #d63384;       
+            --accent-airway: #0ca678;          
+            --accent-cardio: #e03131;          
+            --accent-resus: #7950f2;           
+            --accent-neuro: #0891b2;           
+            --accent-medical: #f76707;         
+            --accent-trauma: #fcc419;          
+            --accent-environmental: #845ef7;   
+            --accent-pediatric: #ff922b;       
+            --accent-obstetric: #f06595;       
+            --accent-mci: #2f9e44;             
+            --accent-scope: #868e96;           
+        }
+
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--primary-gradient);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
             color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            padding-top: env(safe-area-inset-top);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            touch-action: manipulation;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
         }
-        /* ---------- GLASS HEADER ---------- */
+
+        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--text-light);
-            padding: 10px 20px;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--header-border);
+            color: var(--text-dark);
+            padding: 0 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 15px;
+            height: var(--header-height);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            height: var(--header-height);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: background 0.3s ease, border 0.3s ease;
         }
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            min-width: 0;
-        }
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-        .home-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 8px 14px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: none;
-            transition: all 0.2s ease;
-            touch-action: manipulation;
-            flex-shrink: 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .header-btn {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            color: white;
-            padding: 8px 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.2s ease;
-            touch-action: manipulation;
-            text-decoration: none;
-            white-space: nowrap;
-            position: relative;
-            overflow: hidden;
-        }
-        .stats-badge {
-            background: rgba(0,86,179,0.3);
-            border: 1px solid rgba(255,255,255,0.4);
-            backdrop-filter: blur(4px);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: 0.3px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            white-space: nowrap;
-        }
-        .stats-divider { width:1px; height:20px; background:rgba(255,255,255,0.3); margin:0 5px; }
-        .header-text { min-width:0; overflow:hidden; }
+
+        .header-left { display: flex; align-items: center; gap: 16px; flex: 1; min-width: 0; }
+        .header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+        .header-text { display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
         .header-text h1 { 
-            margin:0; font-size:1.2rem; font-weight:700; letter-spacing:0.5px; text-shadow:0 2px 4px rgba(0,0,0,0.3);
-            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; 
+            color: var(--primary-blue);
+            margin: 0;
         }
-        .header-text p { 
-            margin:2px 0 0; font-size:0.75rem; opacity:0.9; font-weight:300;
-            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+        .header-text p { font-size: 0.75rem; color: var(--text-medium); font-weight: 500; margin-top: 2px; }
+
+        /* Buttons */
+        .icon-btn {
+            background: rgba(128, 128, 128, 0.1);
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            color: var(--text-dark);
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        /* ---------- MAIN LAYOUT ---------- */
+        .icon-btn:active { transform: scale(0.95); background: rgba(128,128,128,0.2); }
+
+        .stats-badge {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex; align-items: center; gap: 8px;
+            box-shadow: var(--glass-shadow);
+        }
+        .stats-divider { width: 1px; height: 14px; background: var(--text-medium); opacity: 0.3; }
+
+        /* Main Content */
         main {
-            flex: 1 0 auto;
-            padding: 20px;
+            flex: 1;
+            padding: 24px 20px;
             max-width: 800px;
             margin: 0 auto;
             width: 100%;
-            padding-bottom: 80px;
-        }
-        .menu-grid { display: grid; gap: 20px; }
-        
-        /* ---------- WATER RIPPLE EFFECT – SMOOTH & ORGANIC ---------- */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.7);
-            transform: scale(0);
-            animation: ripple 0.6s linear;
-            pointer-events: none;
-            z-index: 10;
-        }
-        @keyframes ripple {
-            to { transform: scale(4); opacity: 0; }
-        }
-        
-        /* ---------- GLASS CARD – WITH RIPPLE SUPPORT ---------- */
-        .menu-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: var(--glass-shadow);
-            padding: 20px;
             position: relative;
             z-index: 1;
+        }
+
+        .menu-grid { display: grid; gap: 20px; }
+
+        /* Cards */
+        .menu-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 24px;
+            position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: var(--glass-shadow);
+            transform: translateZ(0); 
+            animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeInUp 0.5s ease forwards;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
         }
-        .menu-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 50px 0 rgba(31, 38, 135, 0.4);
-            border-color: rgba(255,255,255,0.9);
-        }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        
-        /* ---------- CHAPTER COLORS + SUBTLE OUTER GLOW (pulsing) ---------- */
-        .menu-card[data-chapter] {
-            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease, background 0.3s ease;
-        }
-        .menu-card.first-in-chapter[data-chapter] {
-            background: rgba(255,255,255,0.85);
-            border-width: 2px;
-            animation: fadeInUp 0.5s ease forwards, glowPulse 2s infinite ease-in-out;
-            transform: scale(1);
-        }
-        .menu-card.first-in-chapter[data-chapter]:hover {
-            transform: scale(1.02);
-        }
-        @keyframes glowPulse {
-            0% { box-shadow: 0 0 2px 1px rgba(var(--glow-rgb), 0.4), 0 8px 32px 0 rgba(31, 38, 135, 0.25); }
-            50% { box-shadow: 0 0 6px 2px rgba(var(--glow-rgb), 0.7), 0 8px 32px 0 rgba(31, 38, 135, 0.35); }
-            100% { box-shadow: 0 0 2px 1px rgba(var(--glow-rgb), 0.4), 0 8px 32px 0 rgba(31, 38, 135, 0.25); }
-        }
-        /* Set RGB values for each accent color */
-        .menu-card[data-chapter="universal"] { --glow-rgb: 212, 165, 165; border-color: var(--accent-universal); }
-        .menu-card[data-chapter="airway"] { --glow-rgb: 0, 168, 150; border-color: var(--accent-airway); }
-        .menu-card[data-chapter="cardio"] { --glow-rgb: 230, 57, 70; border-color: var(--accent-cardio); }
-        .menu-card[data-chapter="resus"] { --glow-rgb: 138, 79, 255; border-color: var(--accent-resus); }
-        .menu-card[data-chapter="neuro"] { --glow-rgb: 46, 196, 182; border-color: var(--accent-neuro); }
-        .menu-card[data-chapter="medical"] { --glow-rgb: 255, 158, 94; border-color: var(--accent-medical); }
-        .menu-card[data-chapter="trauma"] { --glow-rgb: 255, 215, 0; border-color: var(--accent-trauma); }
-        .menu-card[data-chapter="environmental"] { --glow-rgb: 123, 44, 191; border-color: var(--accent-environmental); }
-        .menu-card[data-chapter="pediatric"] { --glow-rgb: 246, 174, 45; border-color: var(--accent-pediatric); }
-        .menu-card[data-chapter="obstetric"] { --glow-rgb: 239, 71, 111; border-color: var(--accent-obstetric); }
-        .menu-card[data-chapter="mci"] { --glow-rgb: 56, 176, 0; border-color: var(--accent-mci); }
-        .menu-card[data-chapter="scope"] { --glow-rgb: 108, 117, 125; border-color: var(--accent-scope); }
-        
-        .menu-card h2 { 
-            margin: 0 0 8px; 
-            font-size: 1.2rem; 
-            color: #004e92; 
-            text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-            transition: color 0.2s ease;
-            word-break: break-word;
-            padding-right: 70px;
-        }
-        .menu-card p { 
-            margin: 0 0 15px; 
-            color: #444; 
-            font-size: 0.85rem; 
-            line-height: 1.4;
-            word-break: break-word;
-        }
-        /* ---------- STATUS BADGE ---------- */
-        .status-badge {
-            display: inline-block; 
-            font-size: 0.65rem; 
-            padding: 3px 8px;
-            border-radius: 20px; 
-            background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
-            border: 1px solid #ccc; 
-            color: #555; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            word-break: break-word;
-        }
-        /* ---------- COMPLETION CHECKBOX – RIGHT UPPER CORNER ---------- */
-        .completion-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        .completion-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.8rem;
-            color: #333;
-            cursor: pointer;
-            background: rgba(255,255,255,0.3);
-            padding: 4px 10px;
-            border-radius: 30px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.5);
-            transition: all 0.2s ease;
-        }
-        .completion-checkbox:hover {
-            background: rgba(255,255,255,0.5);
-        }
-        .completion-checkbox input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-            accent-color: #0056b3;
-            border-radius: 4px;
-            margin: 0;
-        }
-        /* ---------- BUTTONS ---------- */
-        .menu-sub-options {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-        .btn-action {
-            -webkit-user-select: none; user-select: none; cursor: pointer; border: none;
-            font-family: inherit; position: relative; z-index: 2; touch-action: manipulation;
-            display: inline-block;
-            padding: 8px 14px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            color: #333;
-            background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
-            border: 1px solid rgba(255,255,255,0.6);
-            transition: all 0.15s ease;
-            text-decoration: none;
-            margin: 0;
-            word-break: break-word;
-            overflow: hidden;
-        }
-        .btn-action:hover { transform: translateY(-2px); box-shadow: 0 6px 10px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,1); }
-        .btn-action:active { transform: translateY(2px); }
-        .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
-        .btn-flash { color: #0056b3; background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%); border-color: #90caf9; }
-        .btn-quiz { color: #155724; background: linear-gradient(180deg, #e8f5e9 0%, #c3e6cb 100%); border-color: #a5d6a7; }
-        .btn-critical { color: #721c24; background: linear-gradient(180deg, #f8d7da 0%, #f5c6cb 100%); border-color: #f1b0b7; }
 
-        /* ---------- PROGRESS BAR ---------- */
+        .menu-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            background: var(--card-hover);
+        }
+
+        /* Chapter Glow */
+        .menu-card[data-chapter] { border-left: 6px solid transparent; }
+        .menu-card[data-chapter="universal"] { border-left-color: var(--accent-universal); }
+        .menu-card[data-chapter="airway"] { border-left-color: var(--accent-airway); }
+        .menu-card[data-chapter="cardio"] { border-left-color: var(--accent-cardio); }
+        .menu-card[data-chapter="resus"] { border-left-color: var(--accent-resus); }
+        .menu-card[data-chapter="neuro"] { border-left-color: var(--accent-neuro); }
+        .menu-card[data-chapter="medical"] { border-left-color: var(--accent-medical); }
+        .menu-card[data-chapter="trauma"] { border-left-color: var(--accent-trauma); }
+        .menu-card[data-chapter="environmental"] { border-left-color: var(--accent-environmental); }
+        .menu-card[data-chapter="pediatric"] { border-left-color: var(--accent-pediatric); }
+        .menu-card[data-chapter="obstetric"] { border-left-color: var(--accent-obstetric); }
+        .menu-card[data-chapter="mci"] { border-left-color: var(--accent-mci); }
+        .menu-card[data-chapter="scope"] { border-left-color: var(--accent-scope); }
+
+        .card-header {
+            display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;
+        }
+
+        .status-badge {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+            text-transform: uppercase; color: var(--text-medium);
+            background: rgba(128,128,128,0.1); padding: 4px 10px; border-radius: 6px;
+        }
+
+        /* Completion Toggle */
+        .toggle-wrapper { position: relative; z-index: 5; }
+        .toggle-label {
+            display: flex; align-items: center; gap: 8px; cursor: pointer;
+            font-size: 0.8rem; font-weight: 600; color: var(--text-medium);
+        }
+        .toggle-input { display: none; }
+        .toggle-track {
+            width: 44px; height: 24px; background: var(--toggle-bg);
+            border-radius: 20px; position: relative; transition: background 0.3s;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .toggle-track::after {
+            content: ''; position: absolute; top: 2px; left: 2px;
+            width: 20px; height: 20px; background: var(--toggle-knob);
+            border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .toggle-input:checked + .toggle-track { background: var(--primary-blue); }
+        .toggle-input:checked + .toggle-track::after { transform: translateX(20px); }
+
+        .menu-card h2 {
+            font-size: 1.25rem; font-weight: 700; color: var(--text-dark);
+            margin: 0 0 6px 0; line-height: 1.3;
+        }
+        .menu-card p {
+            font-size: 0.9rem; color: var(--text-medium); margin: 0 0 20px 0; line-height: 1.5;
+        }
+
+        /* Buttons */
+        .menu-sub-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
+        
+        .btn-action {
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            padding: 10px 16px; border-radius: 12px;
+            font-size: 0.85rem; font-weight: 600; text-decoration: none;
+            transition: all 0.2s; border: none; cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .btn-action:active { transform: translateY(1px); box-shadow: none; }
+
+        .btn-summary { background: var(--btn-sum-bg); color: var(--btn-sum-text); border: 1px solid var(--btn-sum-border); }
+        .btn-flash { background: var(--btn-flash-bg); color: var(--btn-flash-text); border: 1px solid var(--btn-flash-border); }
+        .btn-quiz { background: var(--btn-quiz-bg); color: var(--btn-quiz-text); border: 1px solid var(--btn-quiz-border); }
+        .btn-scenario { background: var(--btn-crit-bg); color: var(--btn-crit-text); border: 1px solid var(--btn-crit-border); }
+
+        /* Stats Card */
+        .stats-card {
+            background: var(--glass-bg); border-radius: 24px; padding: 28px;
+            margin-top: 40px; border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .progress-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .progress-title { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); display: flex; align-items: center; gap: 8px; }
+        
         .progress-container {
-            margin: 20px 0 10px;
-            width: 100%;
-            background: rgba(0,0,0,0.05);
-            border-radius: 30px;
-            height: 16px;
-            overflow: hidden;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            height: 12px; background: rgba(128,128,128,0.1); border-radius: 10px; overflow: hidden; margin-bottom: 24px;
         }
         .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #00b4db, #0083b0);
-            border-radius: 30px;
-            transition: width 0.3s ease;
-        }
-        .progress-stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: #0c5460;
-            font-weight: 600;
+            height: 100%; border-radius: 10px;
+            background: linear-gradient(90deg, #3b82f6, var(--primary-blue));
+            transition: width 1s ease-out;
         }
 
-        .stats-card { 
-            margin-top: 30px; 
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.5s ease forwards 1s;
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: var(--glass-shadow);
-            padding: 25px;
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .stat-box {
+            background: rgba(128,128,128,0.05); padding: 16px; border-radius: 16px;
+            display: flex; flex-direction: column; gap: 4px; border: 1px solid rgba(128,128,128,0.1);
         }
-        .stat-row {
-            display: flex; justify-content: space-between; padding: 12px;
-            background: rgba(0,0,0,0.02); border-radius: 8px; margin-top: 8px;
-        }
-        .stat-label { font-weight: 600; color: #0c5460; }
-        .stat-value { font-weight: 700; color: #004085; }
+        .stat-label { font-size: 0.75rem; font-weight: 600; color: var(--text-medium); text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); }
+
         .encouragement {
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 30px;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #1a3a4a;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.8);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-top: 20px; padding: 16px; border-radius: 16px;
+            background: var(--btn-flash-bg);
+            color: var(--primary-blue); font-weight: 600; text-align: center; font-size: 0.95rem;
+            border: 1px solid var(--btn-flash-border);
         }
 
-        footer { margin-top: auto; padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.75rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
-        a { text-decoration: none; }
+        footer { text-align: center; padding: 30px; color: var(--text-medium); font-size: 0.75rem; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             .header-text h1 { font-size: 1rem; }
-            .header-text p { font-size: 0.7rem; }
-            .stats-badge { padding: 4px 10px; font-size: 0.7rem; gap: 5px; }
-            .header-btn { padding: 6px 10px; font-size: 0.75rem; }
-            .menu-card h2 { font-size: 1.1rem; }
-            .btn-action { padding: 6px 10px; font-size: 0.7rem; }
-            .completion-checkbox { padding: 2px 8px; font-size: 0.7rem; }
+            .header-text p { display: none; }
+            .menu-card { padding: 20px; }
+            .btn-action { padding: 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -387,441 +313,272 @@
 
 <header>
     <div class="header-left">
-        <button class="home-btn" id="homeBtn">←</button>
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
         <div class="header-text">
             <h1 id="pageTitle">DCAS CPG 2025</h1>
-            <p id="pageSubtitle">Clinical Practice Guidelines · Dubai Ambulance</p>
+            <p id="pageSubtitle">Clinical Review Platform</p>
         </div>
     </div>
     <div class="header-right" id="headerShortcuts">
+        <button class="icon-btn" id="themeToggle" title="Toggle Dark Mode">
+            🌙
+        </button>
         <div class="stats-badge" id="liveStatsBadge">
             <span>📊 <span id="statsAttempts">0</span></span>
-            <span class="stats-divider"></span>
+            <div class="stats-divider"></div>
             <span>🎯 <span id="statsCritical">0%</span></span>
         </div>
-        <a href="chapters/c-index.html?view=summary" class="header-btn" id="headerIndexBtn">📋 Index</a>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
     </div>
 </header>
 
-<main id="mainContent"></main>
+<main id="mainContent">
+    </main>
 
 <footer>
-    <div>Created by Soliman Anas · Study aid only</div>
-    <div style="margin-top:5px; opacity:0.6;">Refer to official DCAS CPG & Memos for clinical protocols.</div>
+    <div>Created by Soliman Anas · Study Aid Only</div>
+    <div style="margin-top:4px; opacity:0.7;">Based on DCAS Clinical Practice Guidelines 2025</div>
 </footer>
 
 <script>
     (function(){
         "use strict";
 
-        // ---------- ENCOURAGING PHRASES – RANDOM ON EVERY LOAD ----------
+        // ---------- THEME TOGGLE LOGIC ----------
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', saved);
+            updateThemeIcon(saved);
+        }
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        }
+
+        function updateThemeIcon(theme) {
+            themeBtn.innerText = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        themeBtn.addEventListener('click', toggleTheme);
+        initTheme();
+
+        // ---------- ENCOURAGEMENT SYSTEM ----------
         const ENCOURAGEMENTS = [
-            "Every review sharpens your skills – keep going.",
-            "Progress, not perfection – learn from each attempt.",
-            "Your growth is in the details – review and improve.",
-            "Small steps lead to mastery – stay consistent.",
-            "Each quiz is a step closer to expertise.",
-            "Mistakes are proof you're learning – keep it up!",
-            "You've got this – every question makes you stronger.",
-            "Stay curious, stay sharp – your effort matters.",
-            "Learning is a journey – enjoy the process.",
-            "Excellence is built one review at a time.",
-            "Review your mistakes, master the material.",
-            "Learn, review, excel – you're on the right track.",
-            "Keep challenging yourself – growth never stops.",
-            "Your dedication today saves lives tomorrow.",
-            "Consistency is the key – keep showing up.",
-            "Mistakes = growth. Keep learning.",
-            "Review, refine, remember.",
-            "Learn from every question.",
-            "Practice makes progress.",
-            "Keep going – you're improving every time.",
-            "Mastery is built on repetition.",
-            "You're closer than yesterday.",
-            "Every click builds confidence.",
-            "Stay hungry, stay humble.",
-            "One day, one question – you're building expertise."
+            "Every review sharpens your skills.", "Progress, not perfection.", "Small steps lead to mastery.",
+            "You've got this!", "Stay curious, stay sharp.", "Excellence is a habit.",
+            "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
         ];
 
-        // ---------- COMPLETE CHAPTER LIST – ALL CPG 2025 CHAPTERS ----------
+        // ---------- DATA CONFIGURATION ----------
         const CHAPTERS = [
-            // ========== SPECIAL CHAPTERS ==========
-            { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
-            { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             
-            // ========== UNIVERSAL CARE – 6 SEPARATE CARDS ==========
-            { 
-                id: "c1s1", 
-                shortTitle: "1.1 Universal Care", 
-                title: "Universal Care – Core Assessment", 
-                hasCritical: true, 
-                chapterFile: "c1", // ← REMOVED .html
-                sectionParam: "c1s1", 
-                isFirstInChapter: true, 
-                chapterGroup: "universal" 
-            },
-            { 
-                id: "c1s2", 
-                shortTitle: "1.2 Documentation", 
-                title: "Patient Care Documentation", 
-                hasCritical: false, 
-                chapterFile: "c1",
-                sectionParam: "c1s2", 
-                isFirstInChapter: false, 
-                chapterGroup: "universal" 
-            },
-            { 
-                id: "c1s3", 
-                shortTitle: "1.3 Triage", 
-                title: "Patient Triage Categories", 
-                hasCritical: false, 
-                chapterFile: "c1",
-                sectionParam: "c1s3", 
-                isFirstInChapter: false, 
-                chapterGroup: "universal" 
-            },
-            { 
-                id: "c1s4", 
-                shortTitle: "1.4 Functional Needs", 
-                title: "Functional Needs", 
-                hasCritical: false, 
-                chapterFile: "c1",
-                sectionParam: "c1s4", 
-                isFirstInChapter: false, 
-                chapterGroup: "universal" 
-            },
-            { 
-                id: "c1s5", 
-                shortTitle: "1.5 Treated at Scene", 
-                title: "Treated at Scene", 
-                hasCritical: false, 
-                chapterFile: "c1",
-                sectionParam: "c1s5", 
-                isFirstInChapter: false, 
-                chapterGroup: "universal" 
-            },
-            { 
-                id: "c1s6", 
-                shortTitle: "1.6 Refusal of Transfer", 
-                title: "Patient Refusal of Transfer", 
-                hasCritical: false, 
-                chapterFile: "c1",
-                sectionParam: "c1s6", 
-                isFirstInChapter: false, 
-                chapterGroup: "universal" 
-            },
-            
-            // ========== AIRWAY & BREATHING ==========
-            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
-            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            
-            // ========== CARDIOVASCULAR ==========
-            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
-            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
-            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
-            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
-            
-            // ========== RESUSCITATION ==========
+            // UNIVERSAL CARE
+            { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Core Assessment & Safety", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "PCR Standards", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Priority Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Special Access Needs", hasCritical: true, chapterFile: "c1", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treat & Release", hasCritical: true, chapterFile: "c1", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s6", shortTitle: "1.6 Refusal", title: "Refusal of Transfer", hasCritical: true, chapterFile: "c1", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
+
+            // AIRWAY
+            { id: "c2", shortTitle: "2.1 Airway Mgmt", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-5", shortTitle: "2.5 Invasive Vent", title: "Mechanical Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+
+            // CARDIO
+            { id: "c3-1", shortTitle: "3.1 Chest Pain", title: "ACS / Chest Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
+            { id: "c3-2", shortTitle: "3.2 Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-3", shortTitle: "3.3 Tachycardia", title: "Adult Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-4", shortTitle: "3.4 Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+
+            // RESUS
             { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true, chapterGroup: "resus" },
-            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            
-            // ========== NEUROLOGICAL ==========
-            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
-            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
-            
-            // ========== GENERAL MEDICAL ==========
+            { id: "c4-2", shortTitle: "4.2 Peds BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-3", shortTitle: "4.3 Adult Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-4", shortTitle: "4.4 Peds Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-5", shortTitle: "4.5 Trauma Arrest", title: "Traumatic Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-6", shortTitle: "4.6 Newborn", title: "Newborn Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-8", shortTitle: "4.8 CPR Ops", title: "Start/Stop CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-9", shortTitle: "4.9 Death Verification", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+
+            // NEURO
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizure Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
+
+            // MEDICAL
             { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "medical" },
-            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-7", shortTitle: "6.7 Sepsis", title: "Fever & Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
             { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            
-            // ========== TRAUMA ==========
+            { id: "c6-11", shortTitle: "6.11 Shock", title: "Non-Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-12", shortTitle: "6.12 Pain", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+
+            // TRAUMA
             { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "trauma" },
-            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            
-            // ========== ENVIRONMENTAL ==========
-            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
-            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
-            
-            // ========== PEDIATRIC ==========
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burn Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-5", shortTitle: "7.5 Spinal", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-6", shortTitle: "7.6 TBI", title: "Traumatic Brain Injury", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+
+            // TOXICOLOGY
+            { id: "c8-1", shortTitle: "8.1 Gen Tox", title: "General Toxicology", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
+            { id: "c8-2", shortTitle: "8.2 Opioid", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+
+            // PEDS/OB
             { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true, chapterGroup: "pediatric" },
-            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
-            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
-            
-            // ========== OBSTETRICS ==========
             { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
-            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
-            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
-            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
-            
-            // ========== MAJOR INCIDENT TRIAGE ==========
-            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
-            
-            // ========== SCOPE & MEDICATIONS ==========
-            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
-            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
+
+            // MCI & SCOPE
+            { id: "c11-1", shortTitle: "11.1 START", title: "MCI Triage", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
+            { id: "s1", shortTitle: "Scope", title: "Scope of Practice", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
+            { id: "m1-38", shortTitle: "Formulary", title: "Medications", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
         ];
 
-        // ---------- STORAGE FOR COMPLETION ----------
+        // ---------- STORAGE LOGIC ----------
         const COMPLETION_KEY = 'dcas_cpg_completion';
-        function loadCompletion() {
-            try {
-                const data = localStorage.getItem(COMPLETION_KEY);
-                return data ? JSON.parse(data) : {};
-            } catch(e) {
-                return {};
-            }
-        }
-        function saveCompletion(completion) {
-            try {
-                localStorage.setItem(COMPLETION_KEY, JSON.stringify(completion));
-            } catch(e) {}
-        }
-
-        // ---------- STORAGE FOR STATS ----------
         const STATS_KEY = 'dcas_cpg_stats';
-        function loadStats() {
-            try {
-                const data = localStorage.getItem(STATS_KEY);
-                return data ? JSON.parse(data) : { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
-            } catch(e) {
-                return { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
-            }
+
+        function loadStorage(key, defaultVal) {
+            try { return JSON.parse(localStorage.getItem(key)) || defaultVal; } 
+            catch(e) { return defaultVal; }
+        }
+        function saveStorage(key, val) {
+            try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
         }
 
-        // ---------- UPDATE LIVE STATS BADGE ----------
         function updateStatsBadge() {
-            const stats = loadStats();
-            const totalAttempts = stats.totalAttempts || 0;
-            const criticalTotal = stats.critical.total || 0;
-            const criticalCorrect = stats.critical.correct || 0;
-            const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
-            document.getElementById('statsAttempts').innerText = totalAttempts;
-            document.getElementById('statsCritical').innerText = `${criticalAcc}%`;
+            const stats = loadStorage(STATS_KEY, { totalAttempts: 0, critical: { total: 0, correct: 0 } });
+            const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+            document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+            document.getElementById('statsCritical').innerText = `${critAcc}%`;
         }
 
-        // ---------- UPDATE PROGRESS BAR ----------
-        function updateProgressBar(completion) {
-            const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
-            const completed = Object.values(completion).filter(v => v === true).length;
-            const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
-            const progressBar = document.getElementById('progressBar');
-            const progressText = document.getElementById('progressText');
-            if (progressBar) progressBar.style.width = percent + '%';
-            if (progressText) progressText.innerText = `${completed}/${totalChapters} (${percent}%)`;
-        }
-
-        // ---------- TOGGLE COMPLETION CHECKBOX ----------
-        function toggleCompletion(chapterId, checked) {
-            const completion = loadCompletion();
+        // ---------- APP STATE TOGGLER ----------
+        window.app = window.app || {};
+        window.app.toggleCompletion = function(chapterId, checked) {
+            const completion = loadStorage(COMPLETION_KEY, {});
             completion[chapterId] = checked;
-            saveCompletion(completion);
-            updateProgressBar(completion);
-        }
+            saveStorage(COMPLETION_KEY, completion);
+            renderMenu(); 
+        };
 
-        // ---------- HEADER SHORTCUTS VISIBILITY ----------
-        function updateHeaderShortcuts(showHomeSpecific) {
-            const headerShortcuts = document.getElementById('headerShortcuts');
-            if (headerShortcuts) headerShortcuts.style.display = showHomeSpecific ? 'flex' : 'none';
-        }
-
-        // ---------- WATER RIPPLE EFFECT ----------
-        function createRipple(event) {
-            const target = event.currentTarget;
-            const rect = target.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-            
-            const ripple = document.createElement('span');
-            ripple.className = 'ripple';
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            ripple.style.width = ripple.style.height = '20px';
-            ripple.style.background = 'rgba(255, 255, 255, 0.7)';
-            
-            target.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        }
-
-        // ---------- RENDER MAIN MENU – WITH FIXED LINKS (NO DOUBLE .html) ----------
+        // ---------- RENDER ENGINE ----------
         function renderMenu() {
-            const stats = loadStats();
-            const completion = loadCompletion();
-
-            let chaptersHtml = CHAPTERS.map((ch, index) => {
-                const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
-                const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
+            const stats = loadStorage(STATS_KEY, { chapters: {} });
+            const completion = loadStorage(COMPLETION_KEY, {});
+            
+            const contentHtml = CHAPTERS.map((ch, index) => {
+                const s = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
+                const avg = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
                 
-                // --- FIXED: base filename WITHOUT extension ---
-                const baseFileName = ch.chapterFile || ch.id;
-                const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
+                const baseFile = ch.chapterFile || ch.id;
+                const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                 
-                // Build URLs – add .html ONCE
-                const summaryUrl = `chapters/${baseFileName}.html?view=summary${sectionParam}`;
-                const flashcardsUrl = `chapters/${baseFileName}.html?view=flashcards${sectionParam}`;
-                const quizUrl = `chapters/${baseFileName}.html?view=quiz${sectionParam}`;
-                const criticalUrl = `chapters/${baseFileName}.html?view=critical${sectionParam}`;
-                
-                // ----- BUTTON VISIBILITY RULES -----
+                // --- VISIBILITY RULES ---
                 const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
-                const isUniversalSub = ch.id.startsWith('c1s') && ch.id !== 'c1s1';
-                const isUniversalMain = (ch.id === 'c1s1');
+                const hasSub = ch.id.startsWith('c1s') && ch.id !== 'c1s1';
                 
-                const showFlashcardsQuiz = !isSpecial && !isUniversalSub;
-                const showCritical = ch.hasCritical && !isSpecial && !isUniversalSub;
+                // FORCE ENABLE ALL BUTTONS for Clinical Chapters
+                // "If it's not a special index/update page, show buttons"
+                const showBtns = !isSpecial && !hasSub;
+                const showCrit = ch.hasCritical && showBtns;
 
-                const firstClass = ch.isFirstInChapter ? 'first-in-chapter' : '';
-                const chapterGroup = ch.chapterGroup ? `data-chapter="${ch.chapterGroup}"` : '';
                 const isChecked = completion[ch.id] || false;
-                const checkedAttr = isChecked ? 'checked' : '';
 
                 return `
-                    <div class="menu-card ${firstClass}" ${chapterGroup} style="animation-delay: ${index * 0.02}s;">
-                        <div class="completion-wrapper">
+                    <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;">
+                        <div class="card-header">
                             <span class="status-badge">${ch.id.toUpperCase()}</span>
-                            <label class="completion-checkbox">
-                                <input type="checkbox" class="chapter-complete" data-chapter-id="${ch.id}" ${checkedAttr} onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
-                                <span>Done</span>
-                            </label>
+                            <div class="toggle-wrapper">
+                                <label class="toggle-label">
+                                    <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
+                                    <input type="checkbox" class="toggle-input" 
+                                        ${isChecked ? 'checked' : ''} 
+                                        onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
+                                    <span class="toggle-track"></span>
+                                </label>
+                            </div>
                         </div>
+                        
                         <h2>${ch.shortTitle}</h2>
-                        <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
+                        <p>${ch.title} • ${s.attempts} attempts • Avg ${avg}%</p>
+                        
                         <div class="menu-sub-options">
-                            <a href="${summaryUrl}" class="btn-action btn-summary">📘 Summary</a>
-                            ${showFlashcardsQuiz ? `
-                                <a href="${flashcardsUrl}" class="btn-action btn-flash">📇 Flashcards</a>
-                                <a href="${quizUrl}" class="btn-action btn-quiz">📋 Quiz</a>
+                            <a href="chapters/${baseFile}.html?view=summary${sec}" class="btn-action btn-summary">📘 Summary</a>
+                            ${showBtns ? `
+                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
+                                <a href="chapters/${baseFile}.html?view=quiz${sec}" class="btn-action btn-quiz">📝 Quiz</a>
                             ` : ''}
-                            ${showCritical ? `
-                                <a href="${criticalUrl}" class="btn-action btn-critical">🚨 Critical</a>
+                            ${showCrit ? `
+                                <a href="chapters/${baseFile}.html?view=critical${sec}" class="btn-action btn-scenario">🚑 Scenario</a>
                             ` : ''}
                         </div>
                     </div>
                 `;
             }).join('');
 
-            const totalAttempts = stats.totalAttempts || 0;
-            const criticalTotal = stats.critical.total || 0;
-            const criticalCorrect = stats.critical.correct || 0;
-            const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
-            
-            const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
-            const completed = Object.values(completion).filter(v => v === true).length;
-            const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
-            
-            const randomEncouragement = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+            // Calculate Overall Stats
+            const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
+            const completedCount = Object.values(completion).filter(v => v).length;
+            const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+            const quote = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
 
             const statsHtml = `
                 <div class="stats-card">
-                    <h2 style="color:#0056b3;">📊 Overall Performance</h2>
+                    <div class="progress-header">
+                        <div class="progress-title">
+                            <span>🚀 Progress Dashboard</span>
+                        </div>
+                        <span style="font-weight:700; color:var(--primary-blue);">${overallPercent}%</span>
+                    </div>
                     <div class="progress-container">
-                        <div class="progress-bar" id="progressBar" style="width: ${percent}%;"></div>
+                        <div class="progress-bar" style="width: ${overallPercent}%"></div>
                     </div>
-                    <div class="progress-stats">
-                        <span>📌 Chapters completed</span>
-                        <span id="progressText">${completed}/${totalChapters} (${percent}%)</span>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">Chapters Done</span>
+                            <span class="stat-value">${completedCount}/${totalChaps}</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Total Attempts</span>
+                            <span class="stat-value">${loadStorage(STATS_KEY, {totalAttempts:0}).totalAttempts || 0}</span>
+                        </div>
                     </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Total Quiz Attempts</span>
-                        <span class="stat-value">${totalAttempts}</span>
-                    </div>
-                    <div class="stat-row">
-                        <span class="stat-label">Critical Accuracy</span>
-                        <span class="stat-value">${criticalAcc}% (${criticalCorrect}/${criticalTotal})</span>
-                    </div>
+
                     <div class="encouragement">
-                        💬 ${randomEncouragement}
+                        ✨ ${quote}
                     </div>
                 </div>
             `;
 
-            document.getElementById('mainContent').innerHTML = `
-                <div class="menu-grid">
-                    ${chaptersHtml}
-                    ${statsHtml}
-                </div>
-            `;
-
-            // Add ripple listeners
-            document.querySelectorAll('.menu-card, .btn-action, .home-btn, .header-btn').forEach(el => {
-                el.addEventListener('click', createRipple);
-                el.addEventListener('touchstart', createRipple);
-            });
-
-            updateHeaderShortcuts(true);
+            document.getElementById('mainContent').innerHTML = `<div class="menu-grid">${contentHtml}${statsHtml}</div>`;
             updateStatsBadge();
         }
 
-        // ---------- HOME BUTTON ----------
+        // ---------- INIT ----------
         const homeBtn = document.getElementById('homeBtn');
-        if (homeBtn) {
-            homeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'index.html';
-            });
-        }
-
-        // ---------- INDEX BUTTON ----------
         const indexBtn = document.getElementById('headerIndexBtn');
-        if (indexBtn) {
-            indexBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.location.href = 'chapters/c-index.html?view=summary';
-            });
-        }
 
-        // ---------- EXPOSE TOGGLER ----------
-        window.app = window.app || {};
-        window.app.toggleCompletion = toggleCompletion;
+        if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
+        if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
 
-        // ---------- INIT PAGE ----------
-        function initPage() {
-            const isHomePage = !window.location.hash && !window.location.search;
-            if (isHomePage) {
-                renderMenu();
-            } else {
-                updateHeaderShortcuts(false);
-                updateStatsBadge();
-            }
-        }
-
-        initPage();
-        window.CHAPTERS = CHAPTERS;
+        // Initial Load
+        renderMenu();
     })();
 </script>
 
