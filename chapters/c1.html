@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* ---------- THEME CONFIGURATION (same as main index.html) ---------- */
+        /* ========== COMPLETE THEME & STYLES (same as main index.html) ========== */
         :root {
             /* --- LIGHT THEME (Fresh Clinical Blue) --- */
             --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #b8e1ff 50%, #f0f9ff 100%);
@@ -155,6 +155,55 @@
             box-shadow: 0 4px 10px rgba(0,86,179,0.3);
         }
 
+        /* ---------- QUIZ SETUP ---------- */
+        .quiz-setup-container {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 28px;
+            box-shadow: var(--glass-shadow);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .setup-grid {
+            display: flex; flex-direction: column; gap: 15px; margin-top: 20px;
+        }
+        .setup-btn {
+            background: white; padding: 18px; border-radius: 15px; font-size: 1rem;
+            font-weight: 600; color: #444; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s; border: 1px solid transparent; cursor: pointer;
+        }
+        .setup-btn:active { transform: scale(0.98); background: #f0f8ff; border-color: #007bff; }
+        .setup-btn.challenge {
+            background: linear-gradient(to right, #fff8e1, #fff);
+            border: 1px solid #ffe082; color: #b7791f;
+        }
+
+        /* ---------- QUIZ GAME ---------- */
+        .quiz-container {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 28px;
+            box-shadow: var(--glass-shadow);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .quiz-options {
+            display: flex; flex-direction: column; gap: 12px; margin-top: 15px;
+        }
+        .option-btn {
+            padding: 18px; background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px; text-align: left; font-size: 1rem; color: #333; line-height: 1.4;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s; cursor: pointer;
+        }
+        .option-btn:active { background: #f0f0f0; transform: scale(0.99); }
+        .option-btn.correct { background: #d4edda; border-color: #c3e6cb; color: #155724; box-shadow: inset 0 0 0 2px #c3e6cb; }
+        .option-btn.wrong { background: #f8d7da; border-color: #f5c6cb; color: #721c24; box-shadow: inset 0 0 0 2px #f5c6cb; }
+
+        .quiz-feedback, .critical-feedback {
+            margin-top: 25px; padding: 20px; border-radius: 12px;
+            background: rgba(255,255,255,0.9); border-left: 5px solid #ccc; display: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
         /* ---------- FLASHCARD 3D ---------- */
         .scene {
             width: 100%;
@@ -201,8 +250,33 @@
             text-transform: uppercase; letter-spacing: 1px;
             margin-bottom: 20px;
         }
+        .fc-progress {
+            text-align: center; font-size: 1rem; font-weight: 600;
+            color: var(--text-secondary);
+            background: rgba(255,255,255,0.5);
+            padding: 6px 12px; border-radius: 30px;
+            margin: 0 auto 20px; width: fit-content;
+        }
 
-        /* ---------- BUTTONS ---------- */
+        /* ---------- CRITICAL SCENARIOS ---------- */
+        .critical-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px; padding: 28px;
+            box-shadow: var(--glass-shadow);
+        }
+        .highlight-box {
+            background: rgba(0, 123, 255, 0.1); color: #004085; font-weight: 600; 
+            border-left: 4px solid #007bff; padding: 10px; margin-top: 15px;
+        }
+
+        /* ---------- MISTAKES REVIEW ---------- */
+        .mistake-item {
+            background: #fff3cd; border-left: 5px solid #ffeeba;
+            padding: 15px; border-radius: 8px; margin-bottom: 12px;
+        }
+
+        /* ---------- NAVIGATION BUTTONS ---------- */
         .control-btn {
             display: inline-flex; align-items: center; justify-content: center; gap: 6px;
             padding: 12px 24px; border-radius: 12px;
@@ -214,35 +288,14 @@
         .control-btn:active { transform: translateY(1px); box-shadow: none; }
         .control-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        .btn-action {
-            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-            padding: 12px 24px; border-radius: 12px;
-            font-size: 0.9rem; font-weight: 600; text-decoration: none;
-            transition: all 0.2s; border: none; cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-top: 30px;
-        }
-        .btn-action:active { transform: translateY(1px); box-shadow: none; }
-        .btn-summary { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
-
-        /* ---------- NAVIGATION ROWS ---------- */
         .nav-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px 0;
+            display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;
         }
         .nav-row button {
             background: linear-gradient(to bottom, #00b4db, #0083b0);
-            border: none;
-            color: white;
-            font-weight: 600;
-            padding: 12px 30px;
-            border-radius: 40px;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: none; color: white; font-weight: 600;
+            padding: 12px 30px; border-radius: 40px; font-size: 1rem;
+            cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             transition: transform 0.1s, box-shadow 0.1s;
             min-width: 140px;
         }
@@ -251,58 +304,40 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .nav-row button:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+            opacity: 0.5; cursor: not-allowed;
         }
+
         .section-nav-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin-top: 15px;
+            display: flex; justify-content: space-between; gap: 10px; margin-top: 15px;
         }
         .section-nav-row button {
-            background: #e2e8f0;
-            color: #1e293b;
-            border: 1px solid #94a3b8;
-            font-weight: 500;
-            padding: 10px 20px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            flex: 1;
+            background: #e2e8f0; color: #1e293b; border: 1px solid #94a3b8;
+            font-weight: 500; padding: 10px 20px; border-radius: 40px;
+            font-size: 0.9rem; cursor: pointer; flex: 1;
             transition: background 0.2s;
         }
         .section-nav-row button:hover {
             background: #cbd5e1;
         }
         .section-nav-row button:disabled {
-            opacity: 0.4;
-            pointer-events: none;
+            opacity: 0.4; pointer-events: none;
         }
 
-        /* ---------- PROGRESS & COUNTER ---------- */
-        .fc-progress {
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            background: rgba(255,255,255,0.5);
-            padding: 6px 12px;
-            border-radius: 30px;
-            margin: 0 auto 20px;
-            width: fit-content;
+        /* ---------- STATS CARD (used in review) ---------- */
+        .stats-card {
+            background: var(--glass-bg); border-radius: 24px; padding: 28px;
+            margin-top: 40px; border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            animation: fadeInUp 0.8s ease forwards;
         }
+        .stat-row {
+            display: flex; justify-content: space-between; padding: 12px;
+            background: rgba(0,0,0,0.02); border-radius: 8px; margin-top: 8px;
+        }
+        .stat-label { font-weight: 600; color: #0c5460; }
+        .stat-value { font-weight: 700; color: #004085; }
 
-        /* ---------- MISC ---------- */
-        .highlight-box {
-            background: rgba(0, 123, 255, 0.1); color: #004085; font-weight: 600; 
-            border-left: 4px solid #007bff; padding: 10px; margin-top: 15px;
-        }
-        .mistake-item {
-            background: #fff3cd; border-left: 5px solid #ffeeba;
-            padding: 15px; border-radius: 8px; margin-bottom: 12px;
-        }
-
+        /* ---------- FOOTER ---------- */
         footer {
             text-align: center; padding: 30px; color: var(--text-secondary);
             font-size: 0.75rem; opacity: 0.8;
@@ -317,6 +352,7 @@
             .header-text p { display: none; }
             .section-nav-row { flex-direction: column; }
             .nav-row button { padding: 10px 20px; min-width: 120px; }
+            .quiz-container, .quiz-setup-container, .critical-card { padding: 20px; }
         }
     </style>
 </head>
