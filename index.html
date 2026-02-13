@@ -20,12 +20,11 @@
             
             --text-primary: #1a2a3a;
             --text-secondary: #475569;
-            --header-text: #0056b3; /* Dark blue for visibility on light bg */
+            --header-text: #0056b3;
             
             --toggle-bg: #cbd5e1;
             --toggle-active: #0056b3;
             
-            /* Button Gradients (Light Glossy) */
             --btn-grad-sum: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
             --btn-grad-flash: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
             --btn-grad-quiz: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
@@ -38,24 +37,17 @@
         }
 
         [data-theme="dark"] {
-            /* --- DARK THEME (Deep Teal/Slate) --- */
             --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            --glass-bg: rgba(255, 255, 255, 0.75); /* High contrast cards */
+            --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
             --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
-            
-            /* Text on cards remains dark because cards are white/glass */
             --text-primary: #1a2a3a;
             --text-secondary: #334155;
-            --header-text: #ffffff; /* White text on dark header */
-            
+            --header-text: #ffffff;
             --toggle-bg: #374151;
             --toggle-active: #2dd4bf;
-
-            /* Keep button gradients same as light mode for gloss effect on white cards */
         }
 
-        /* --- SHARED VARIABLES --- */
         :root {
             --accent-universal: #d63384;       
             --accent-airway: #0ca678;          
@@ -69,7 +61,6 @@
             --accent-obstetric: #f06595;       
             --accent-mci: #2f9e44;             
             --accent-scope: #495057;           
-            
             --header-height: 72px;
         }
 
@@ -111,7 +102,6 @@
             opacity: 0.8; font-weight: 500; margin-top: 2px; 
         }
 
-        /* Home Button */
         .icon-btn {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -124,7 +114,6 @@
         }
         .icon-btn:active { transform: scale(0.95); background: rgba(255,255,255,0.4); }
 
-        /* Stats Badge */
         .stats-badge {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -302,8 +291,7 @@
     </div>
 </header>
 
-<main id="mainContent">
-    </main>
+<main id="mainContent"></main>
 
 <footer>
     <div>Created by Soliman Anas · Study Aid Only</div>
@@ -319,7 +307,7 @@
         const html = document.documentElement;
         
         function initTheme() {
-            const saved = localStorage.getItem('theme') || 'dark'; // Default to Dark as per preference
+            const saved = localStorage.getItem('theme') || 'dark';
             html.setAttribute('data-theme', saved);
         }
 
@@ -340,74 +328,101 @@
             "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
         ];
 
-        // ---------- CHAPTER DATA (Updated 1.2-1.6) ----------
+        // ---------- COMPLETE CHAPTER LIST ----------
         const CHAPTERS = [
+            // Special
             { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
             
-            // UNIVERSAL CARE
+            // Universal Care (6 cards)
             { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Core Assessment & Safety", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
-            { id: "c1s2", shortTitle: "1.2 Documentation", title: "PCR Standards", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
-            { id: "c1s3", shortTitle: "1.3 Triage", title: "Priority Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
-            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Special Access Needs", hasCritical: true, chapterFile: "c1", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
-            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treat & Release", hasCritical: true, chapterFile: "c1", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
-            { id: "c1s6", shortTitle: "1.6 Refusal", title: "Refusal of Transfer", hasCritical: true, chapterFile: "c1", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Patient Triage Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Functional Needs", hasCritical: true, chapterFile: "c1", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treated at Scene", hasCritical: true, chapterFile: "c1", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s6", shortTitle: "1.6 Refusal of Transfer", title: "Patient Refusal of Transfer", hasCritical: true, chapterFile: "c1", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
 
-            // AIRWAY
-            { id: "c2", shortTitle: "2.1 Airway Mgmt", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
-            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
-            { id: "c2-5", shortTitle: "2.5 Invasive Vent", title: "Mechanical Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            // Airway & Breathing
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, isFirstInChapter: true, chapterGroup: "airway" },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, isFirstInChapter: false, chapterGroup: "airway" },
 
-            // CARDIO
-            { id: "c3-1", shortTitle: "3.1 Chest Pain", title: "ACS / Chest Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
-            { id: "c3-2", shortTitle: "3.2 Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
-            { id: "c3-3", shortTitle: "3.3 Tachycardia", title: "Adult Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
-            { id: "c3-4", shortTitle: "3.4 Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            // Cardiovascular
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
 
-            // RESUS
+            // Resuscitation
             { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true, chapterGroup: "resus" },
-            { id: "c4-2", shortTitle: "4.2 Peds BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-3", shortTitle: "4.3 Adult Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-4", shortTitle: "4.4 Peds Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-5", shortTitle: "4.5 Trauma Arrest", title: "Traumatic Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-6", shortTitle: "4.6 Newborn", title: "Newborn Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-8", shortTitle: "4.8 CPR Ops", title: "Start/Stop CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
-            { id: "c4-9", shortTitle: "4.9 Death Verification", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
 
-            // NEURO
-            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
-            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizure Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
+            // Neurological
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
 
-            // MEDICAL
+            // General Medical
             { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "medical" },
-            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-5", shortTitle: "6.5 Altered Mental", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-7", shortTitle: "6.7 Sepsis", title: "Fever & Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
             { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-11", shortTitle: "6.11 Shock", title: "Non-Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
-            { id: "c6-12", shortTitle: "6.12 Pain", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
 
-            // TRAUMA
+            // Trauma
             { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "trauma" },
-            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burn Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-5", shortTitle: "7.5 Spinal", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
-            { id: "c7-6", shortTitle: "7.6 TBI", title: "Traumatic Brain Injury", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
 
-            // TOXICOLOGY
-            { id: "c8-1", shortTitle: "8.1 Gen Tox", title: "General Toxicology", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
-            { id: "c8-2", shortTitle: "8.2 Opioid", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            // Environmental
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
 
-            // PEDS/OB
+            // Pediatric
             { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true, chapterGroup: "pediatric" },
-            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
 
-            // MCI & SCOPE
-            { id: "c11-1", shortTitle: "11.1 START", title: "MCI Triage", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
-            { id: "s1", shortTitle: "Scope", title: "Scope of Practice", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
-            { id: "m1-38", shortTitle: "Formulary", title: "Medications", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
+            // Obstetrics
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+
+            // Major Incident Triage
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
+
+            // Scope & Medications
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
         ];
 
         // ---------- STORAGE & LOGIC ----------
@@ -448,10 +463,11 @@
                 const baseFile = ch.chapterFile || ch.id;
                 const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                 
-                // --- BUTTON VISIBILITY ---
+                // Button visibility rules
                 const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
-                const showBtns = !isSpecial; // Enabled for ALL clinical chapters (including 1.2-1.6)
-                const showCrit = ch.hasCritical && showBtns;
+                const isUniversalSub = ch.id.startsWith('c1s') && ch.id !== 'c1s1';
+                const showFlashcardsQuiz = !isSpecial && !isUniversalSub;
+                const showCritical = ch.hasCritical && !isSpecial && !isUniversalSub;
                 const isChecked = completion[ch.id] || false;
 
                 return `
@@ -474,11 +490,11 @@
                         
                         <div class="menu-sub-options">
                             <a href="chapters/${baseFile}.html?view=summary${sec}" class="btn-action btn-summary">📘 Summary</a>
-                            ${showBtns ? `
+                            ${showFlashcardsQuiz ? `
                                 <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
                                 <a href="chapters/${baseFile}.html?view=quiz${sec}" class="btn-action btn-quiz">📝 Quiz</a>
                             ` : ''}
-                            ${showCrit ? `
+                            ${showCritical ? `
                                 <a href="chapters/${baseFile}.html?view=critical${sec}" class="btn-action btn-scenario">🚑 Scenario</a>
                             ` : ''}
                         </div>
