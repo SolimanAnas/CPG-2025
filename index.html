@@ -143,7 +143,22 @@
             padding-bottom: 80px;
         }
         .menu-grid { display: grid; gap: 20px; }
-        /* ---------- GLASS CARD – WITH RIPPLE ---------- */
+        
+        /* ---------- WATER RIPPLE EFFECT – SMOOTH & ORGANIC ---------- */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+            z-index: 10;
+        }
+        @keyframes ripple {
+            to { transform: scale(4); opacity: 0; }
+        }
+        
+        /* ---------- GLASS CARD – WITH RIPPLE SUPPORT ---------- */
         .menu-card {
             background: var(--glass-bg);
             backdrop-filter: blur(16px);
@@ -164,52 +179,38 @@
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
         }
-        /* RIPPLE EFFECT – pure CSS, no JS */
-        .menu-card::after, .btn-action::after, .home-btn::after, .header-btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255,255,255,0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: translate(-50%, -50%) scale(1);
-            transition: all 0.6s ease;
-            pointer-events: none;
-        }
-        .menu-card:active::after, .btn-action:active::after, .home-btn:active::after, .header-btn:active::after {
-            width: 200px;
-            height: 200px;
-            opacity: 0.3;
-            transition: 0s;
-        }
         .menu-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.35);
         }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        /* ---------- CHAPTER COLORS (applied to first card) ---------- */
-        .menu-card[data-chapter="universal"] { border-color: var(--accent-universal); }
-        .menu-card[data-chapter="airway"] { border-color: var(--accent-airway); }
-        .menu-card[data-chapter="cardio"] { border-color: var(--accent-cardio); }
-        .menu-card[data-chapter="resus"] { border-color: var(--accent-resus); }
-        .menu-card[data-chapter="neuro"] { border-color: var(--accent-neuro); }
-        .menu-card[data-chapter="medical"] { border-color: var(--accent-medical); }
-        .menu-card[data-chapter="trauma"] { border-color: var(--accent-trauma); }
-        .menu-card[data-chapter="environmental"] { border-color: var(--accent-environmental); }
-        .menu-card[data-chapter="pediatric"] { border-color: var(--accent-pediatric); }
-        .menu-card[data-chapter="obstetric"] { border-color: var(--accent-obstetric); }
-        .menu-card[data-chapter="mci"] { border-color: var(--accent-mci); }
-        .menu-card[data-chapter="scope"] { border-color: var(--accent-scope); }
         
-        .menu-card[data-chapter] .status-badge {
-            background: var(--chapter-bg, linear-gradient(to bottom, #f0f0f0, #d9d9d9));
-            border-color: var(--chapter-border, #ccc);
-            color: var(--chapter-text, #555);
+        /* ---------- CHAPTER COLORS + OUTER GLOW (pulsing) ---------- */
+        .menu-card[data-chapter] {
+            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease;
         }
-        /* Dynamic assignment via style attribute – we'll set data-chapter and inline style */
+        .menu-card.first-in-chapter[data-chapter] {
+            animation: glowPulse 2s infinite ease-in-out;
+        }
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 5px 0 rgba(var(--glow-rgb), 0.5), 0 8px 32px 0 rgba(31, 38, 135, 0.25); }
+            50% { box-shadow: 0 0 20px 5px rgba(var(--glow-rgb), 0.8), 0 8px 32px 0 rgba(31, 38, 135, 0.35); }
+            100% { box-shadow: 0 0 5px 0 rgba(var(--glow-rgb), 0.5), 0 8px 32px 0 rgba(31, 38, 135, 0.25); }
+        }
+        /* Set RGB values for each accent color */
+        .menu-card[data-chapter="universal"] { --glow-rgb: 212, 175, 55; border-color: var(--accent-universal); }
+        .menu-card[data-chapter="airway"] { --glow-rgb: 44, 125, 160; border-color: var(--accent-airway); }
+        .menu-card[data-chapter="cardio"] { --glow-rgb: 196, 69, 54; border-color: var(--accent-cardio); }
+        .menu-card[data-chapter="resus"] { --glow-rgb: 106, 76, 147; border-color: var(--accent-resus); }
+        .menu-card[data-chapter="neuro"] { --glow-rgb: 42, 157, 143; border-color: var(--accent-neuro); }
+        .menu-card[data-chapter="medical"] { --glow-rgb: 231, 111, 81; border-color: var(--accent-medical); }
+        .menu-card[data-chapter="trauma"] { --glow-rgb: 181, 131, 141; border-color: var(--accent-trauma); }
+        .menu-card[data-chapter="environmental"] { --glow-rgb: 94, 96, 206; border-color: var(--accent-environmental); }
+        .menu-card[data-chapter="pediatric"] { --glow-rgb: 244, 162, 97; border-color: var(--accent-pediatric); }
+        .menu-card[data-chapter="obstetric"] { --glow-rgb: 230, 57, 70; border-color: var(--accent-obstetric); }
+        .menu-card[data-chapter="mci"] { --glow-rgb: 45, 106, 79; border-color: var(--accent-mci); }
+        .menu-card[data-chapter="scope"] { --glow-rgb: 108, 117, 125; border-color: var(--accent-scope); }
+        
         .menu-card h2 { 
             margin: 0 0 8px; 
             font-size: 1.2rem; 
@@ -217,6 +218,7 @@
             text-shadow: 0 1px 0 rgba(255,255,255,0.8);
             transition: color 0.2s ease;
             word-break: break-word;
+            padding-right: 70px; /* space for the right-aligned checkbox */
         }
         .menu-card p { 
             margin: 0 0 15px; 
@@ -234,18 +236,16 @@
             background: linear-gradient(to bottom, #f0f0f0, #d9d9d9);
             border: 1px solid #ccc; 
             color: #555; 
-            margin-bottom: 10px;
             font-weight: 700; 
             text-transform: uppercase; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
             word-break: break-word;
         }
-        /* ---------- COMPLETION CHECKBOX – stylish ---------- */
+        /* ---------- COMPLETION CHECKBOX – RIGHT UPPER CORNER ---------- */
         .completion-wrapper {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
             margin-bottom: 12px;
         }
         .completion-checkbox {
@@ -255,6 +255,15 @@
             font-size: 0.8rem;
             color: #333;
             cursor: pointer;
+            background: rgba(255,255,255,0.3);
+            padding: 4px 10px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: all 0.2s ease;
+        }
+        .completion-checkbox:hover {
+            background: rgba(255,255,255,0.5);
         }
         .completion-checkbox input[type="checkbox"] {
             width: 18px;
@@ -262,6 +271,7 @@
             cursor: pointer;
             accent-color: #0056b3;
             border-radius: 4px;
+            margin: 0;
         }
         /* ---------- BUTTONS ---------- */
         .menu-sub-options {
@@ -338,6 +348,19 @@
         }
         .stat-label { font-weight: 600; color: #0c5460; }
         .stat-value { font-weight: 700; color: #004085; }
+        .encouragement {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a3a4a;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.8);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
 
         footer { margin-top: auto; padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.75rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
         a { text-decoration: none; }
@@ -349,6 +372,7 @@
             .header-btn { padding: 6px 10px; font-size: 0.75rem; }
             .menu-card h2 { font-size: 1.1rem; }
             .btn-action { padding: 6px 10px; font-size: 0.7rem; }
+            .completion-checkbox { padding: 2px 8px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -383,7 +407,36 @@
     (function(){
         "use strict";
 
-        // ---------- COMPLETE CHAPTER LIST – WITH CHAPTER COLORS AND COMPLETION ----------
+        // ---------- ENCOURAGING PHRASES – RANDOM ON EVERY LOAD ----------
+        const ENCOURAGEMENTS = [
+            "Every review sharpens your skills – keep going.",
+            "Progress, not perfection – learn from each attempt.",
+            "Your growth is in the details – review and improve.",
+            "Small steps lead to mastery – stay consistent.",
+            "Each quiz is a step closer to expertise.",
+            "Mistakes are proof you're learning – keep it up!",
+            "You've got this – every question makes you stronger.",
+            "Stay curious, stay sharp – your effort matters.",
+            "Learning is a journey – enjoy the process.",
+            "Excellence is built one review at a time.",
+            "Review your mistakes, master the material.",
+            "Learn, review, excel – you're on the right track.",
+            "Keep challenging yourself – growth never stops.",
+            "Your dedication today saves lives tomorrow.",
+            "Consistency is the key – keep showing up.",
+            "Mistakes = growth. Keep learning.",
+            "Review, refine, remember.",
+            "Learn from every question.",
+            "Practice makes progress.",
+            "Keep going – you're improving every time.",
+            "Mastery is built on repetition.",
+            "You're closer than yesterday.",
+            "Every click builds confidence.",
+            "Stay hungry, stay humble.",
+            "One day, one question – you're building expertise."
+        ];
+
+        // ---------- COMPLETE CHAPTER LIST – WITH COLORS AND COMPLETION ----------
         const CHAPTERS = [
             // ========== SPECIAL CHAPTERS ==========
             { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
@@ -520,7 +573,6 @@
 
         // ---------- UPDATE PROGRESS BAR ----------
         function updateProgressBar(completion) {
-            // Count only "real" chapters (exclude c0, c-index)
             const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
             const completed = Object.values(completion).filter(v => v === true).length;
             const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
@@ -544,6 +596,27 @@
             if (headerShortcuts) headerShortcuts.style.display = showHomeSpecific ? 'flex' : 'none';
         }
 
+        // ---------- WATER RIPPLE EFFECT ----------
+        function createRipple(event) {
+            const target = event.currentTarget;
+            const rect = target.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.width = ripple.style.height = '20px';
+            ripple.style.background = 'rgba(255, 255, 255, 0.7)';
+            
+            target.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
         // ---------- RENDER MAIN MENU ----------
         function renderMenu() {
             const stats = loadStats();
@@ -553,7 +626,6 @@
                 const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
                 
-                // Link URL
                 let linkUrl;
                 if (ch.chapterFile) {
                     linkUrl = `chapters/${ch.chapterFile}?view=summary&section=${ch.sectionParam}`;
@@ -561,17 +633,10 @@
                     linkUrl = `chapters/${ch.id}.html?view=summary`;
                 }
 
-                // Show Flashcards, Quiz, Critical for all except special chapters
                 const showFlashcardsQuiz = (ch.id !== 'c0' && ch.id !== 'c-index');
                 const showCritical = ch.hasCritical && ch.id !== 'c0' && ch.id !== 'c-index';
-
-                // First-in-chapter class
                 const firstClass = ch.isFirstInChapter ? 'first-in-chapter' : '';
-                
-                // Data-chapter attribute for color
                 const chapterGroup = ch.chapterGroup ? `data-chapter="${ch.chapterGroup}"` : '';
-
-                // Checkbox checked state
                 const isChecked = completion[ch.id] || false;
                 const checkedAttr = isChecked ? 'checked' : '';
 
@@ -581,7 +646,7 @@
                             <span class="status-badge">${ch.id.toUpperCase()}</span>
                             <label class="completion-checkbox">
                                 <input type="checkbox" class="chapter-complete" data-chapter-id="${ch.id}" ${checkedAttr} onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
-                                <span>Mark done</span>
+                                <span>Done ☑︎</span>
                             </label>
                         </div>
                         <h2>${ch.shortTitle}</h2>
@@ -605,10 +670,12 @@
             const criticalCorrect = stats.critical.correct || 0;
             const criticalAcc = criticalTotal ? Math.round((criticalCorrect / criticalTotal) * 100) : 0;
             
-            // Progress bar stats
             const totalChapters = CHAPTERS.filter(ch => ch.id !== 'c0' && ch.id !== 'c-index').length;
             const completed = Object.values(completion).filter(v => v === true).length;
             const percent = totalChapters ? Math.round((completed / totalChapters) * 100) : 0;
+            
+            // Pick a random encouragement
+            const randomEncouragement = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
 
             const statsHtml = `
                 <div class="stats-card">
@@ -628,7 +695,9 @@
                         <span class="stat-label">Critical Accuracy</span>
                         <span class="stat-value">${criticalAcc}% (${criticalCorrect}/${criticalTotal})</span>
                     </div>
-                    <p style="margin-top:20px; font-size:0.9rem; color:#666;">⚠️ Mistakes are not persisted across sessions – review them within each chapter quiz.</p>
+                    <div class="encouragement">
+                        💬 ${randomEncouragement}
+                    </div>
                 </div>
             `;
 
@@ -638,6 +707,12 @@
                     ${statsHtml}
                 </div>
             `;
+
+            // Add ripple listeners to all cards and buttons
+            document.querySelectorAll('.menu-card, .btn-action, .home-btn, .header-btn').forEach(el => {
+                el.addEventListener('click', createRipple);
+                el.addEventListener('touchstart', createRipple);
+            });
 
             updateHeaderShortcuts(true);
             updateStatsBadge();
@@ -674,9 +749,7 @@
 
         // ---------- EXPOSE TOGGLER ----------
         window.app = window.app || {};
-        window.app.toggleCompletion = function(chapterId, checked) {
-            toggleCompletion(chapterId, checked);
-        };
+        window.app.toggleCompletion = toggleCompletion;
 
         // ---------- START ----------
         initPage();
