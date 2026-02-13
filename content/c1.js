@@ -1,139 +1,143 @@
-/* ========== Chapter 1 – Universal Care (three sections) ========== */
+/* ========== Chapter 1 – Universal Care (six independent sections) ========== */
 window.CPG_DATA = {
     id: "c1",
     title: "Universal Care",
-    shortTitle: "1.0 Universal Care (Complete)",
+    shortTitle: "1.0 Universal Care",
     sections: [
-        // ---------- SECTION A: 1.1 Universal Care (60 Q, 60 FC, 5 critical) ----------
+        // ---------- SECTION 1.1: Universal Care (full content) ----------
         {
             id: "c1s1",
             shortTitle: "1.1 Universal Care",
+            summary: `...`, // (your full 1.1 summary – keep as is)
+            quiz: [ /* 60 questions – keep your existing array */ ],
+            flashcards: [ /* 60 flashcards – keep your existing array */ ],
+            critical: [ /* 5 critical scenarios – keep your existing array */ ]
+        },
+        // ---------- SECTION 1.2: Patient Care Documentation ----------
+        {
+            id: "c1s2",
+            shortTitle: "1.2 Documentation",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:#0056b3;">📘 Universal Care – Full Guideline Summary</h3>
-                    
-                    <h4 style="color:#004e92; margin:20px 0 10px;">1. SCENE SAFETY & INITIAL IMPRESSION</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Scene safety</strong> – always first priority (crew, patient, bystanders).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>General Impression</strong> – Appearance, Work of Breathing, Circulation to skin (Pediatric Assessment Triangle).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Resource assessment</strong> – request ALS / MCI if needed.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">2. PRIMARY SURVEY (ABCDE / C‑ABC / CAB)</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Trauma:</strong> C‑A‑B‑C – Catastrophic haemorrhage control, C‑spine, Airway, Breathing, Circulation.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Medical:</strong> A‑B‑C – Airway, Breathing, Circulation → Disability, Exposure.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Cardiac arrest:</strong> C‑A‑B – Compressions, Airway, Breathing.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Airway:</strong> Open with head‑tilt/chin‑lift or jaw thrust (if trauma). Suction, OPA/NPA, supraglottic/ETT as indicated.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Breathing:</strong> Rate, effort, SpO₂, breath sounds. O₂ to target SpO₂ 94‑98% (88‑92% COPD). BVM if inadequate.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Circulation:</strong> Control major haemorrhage (tourniquet, hemostatic agents). Palpate pulse (carotid – unconscious adult; brachial – infant). Assess skin, CRT (<2 sec normal).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Disability:</strong> AVPU (Alert, Voice, Pain, Unresponsive). GCS (3‑15). Check blood glucose; if <70 mg/dl → Hypoglycaemia CPG. BEFAST if stroke suspected.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Exposure:</strong> Remove clothing as needed; maintain modesty and temperature.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">3. ALS BACKUP</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Request within <strong>5 minutes</strong> if advanced skills needed.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Red priority (unstable):</strong> always request ALS.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Stable red priority:</strong> e.g. controlled limb bleed, uncomplicated CVA – ALS may be deferred if transport <10 min.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> May request and rendezvous en route.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">4. VITAL SIGNS & MONITORING</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Obtain full set: HR, BP, RR, SpO₂, temperature, BGL (if indicated), EtCO₂ (if indicated), neurologic status.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Normal ranges (adult):</strong> HR 60‑100, RR 12‑20, SBP ≥90, SpO₂ ≥94%, EtCO₂ 35‑45.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Paediatric norms:</strong> use age‑specific charts (see CPG 1.1 table).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Hypotension:</strong> SBP <90 mmHg (adult) or <5th percentile for age (paeds).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Tachycardia:</strong> HR >100 (adult); Bradycardia: HR <60 (adult).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>12‑lead ECG:</strong> for cardiac or suspected cardiac complaints. Continuous monitoring for unstable patients.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Waveform capnography:</strong> essential for advanced airways and critical patients.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">5. SECONDARY SURVEY & HISTORY</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Physical exam:</strong> head‑to‑toe (trauma: DCAP‑BTLS‑TIC; medical: system‑focused).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>OPQRST:</strong> Onset, Provocation/Palliation, Quality, Radiation, Severity, Time.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>SAMPLE:</strong> Signs/symptoms, Allergies, Medications, Past history, Last oral intake, Events.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Pain assessment:</strong> 0‑10 scale, Wong‑Baker (non‑verbal), FLACC (paeds <3 yrs).</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">6. RED FLAGS (IMMEDIATE LIFE THREATS)</h4>
-                    <div style="background:#f8d7da; padding:15px; border-radius:12px; margin:10px 0;">
-                        <ul style="margin:0; color:#721c24;">
-                            <li>Apnoea, pulselessness, severe haemorrhage</li>
-                            <li>Altered mental status (AVPU < A, GCS ≤8 or deteriorating)</li>
-                            <li>Hypoxia (SpO₂ <90% on O₂) / hypotension (SBP <90)</li>
-                            <li>High‑risk MOI: fall >10ft, high‑speed MVC, ejection, death in same vehicle, pedestrian vs vehicle</li>
-                            <li>Signs of severe shock, STEMI, uncontrolled dysrhythmia</li>
-                        </ul>
-                    </div>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">7. VASCULAR ACCESS & FLUIDS</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> IV access if deterioration risk, fluid/medication need. IO if IV fails.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Crystalloid (Normal Saline / Ringer's Lactate) for hypotension/shock. Adult: 250‑500 mL bolus, reassess; max 2000 mL. Paeds: 20 mL/kg, max 60 mL/kg.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">8. REASSESSMENT INTERVALS</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <span style="background:#ffcccc; padding:3px 8px; border-radius:20px;">🔴 Red (critical):</span> every <strong>5 minutes</strong></li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <span style="background:#fff3cd; padding:3px 8px; border-radius:20px;">🟡 Yellow (serious):</span> every <strong>10 minutes</strong></li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <span style="background:#d4edda; padding:3px 8px; border-radius:20px;">🟢 Green (stable):</span> every <strong>15 minutes</strong></li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Reassess LOC, airway, breathing, circulation, vitals, interventions, response.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">9. TELE‑EMS CONSULTATION</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> For complex cases, skill outside scope, or 12‑lead interpretation.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Not mandatory for every case; do not delay essential interventions.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">10. PATIENT HANDOVER (IMIST‑AMBO)</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>I</strong> – Identification</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>M</strong> – Mechanism/Medical complaint</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>I</strong> – Injuries/Information</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>S</strong> – Signs (vitals)</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>T</strong> – Treatment</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>A</strong> – Allergies</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>M</strong> – Medications</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>B</strong> – Background</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>O</strong> – Other info</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">11. DOCUMENTATION (ePCR)</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Must include: identification, MOI/medical complaint, injuries, signs, treatment, allergies, medications, background, other.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> Timestamps for all critical events and reassessments.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">12. SPECIAL POPULATIONS</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Paediatrics:</strong> ≤13 years. Use Broselow tape for weight/meds. PAT = Appearance, Work of Breathing, Circulation to skin.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Geriatrics:</strong> ≥65 years. Reduced doses for renal/hepatic impairment. Higher risk of under‑triage.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Comorbidities:</strong> adjust medication doses for renal/hepatic disease.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">13. AIRWING CONSIDERATIONS</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> For time‑critical patients with ground transport >30 min.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Exclusions:</strong> imminent birth, violent patients.</li>
+                    <h3 style="color:#0056b3;">📋 Documentation (CPG 1.2)</h3>
+                    <ul>
+                        <li><strong>ePCR mandatory</strong> – every patient encounter requires a complete electronic patient care record.</li>
+                        <li><strong>IMIST‑AMBO</strong> is the standard handover tool.</li>
+                        <li>Document: identification, mechanism, injuries, signs, treatment, allergies, medications, background, other.</li>
+                        <li>Timestamps required for all interventions and reassessments.</li>
+                        <li>Abbreviations: use only approved medical abbreviations.</li>
                     </ul>
                 </div>
-                <div class="sum-card red-flag">
-                    <h3 style="color:#dc3545; margin-bottom:15px;">🚨 CRITICAL RED FLAGS – IMMEDIATE ACTION</h3>
-                    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:15px;">
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Apnoea / pulseless</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">GCS ≤8 or ↓</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">SpO₂ <90%</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">SBP <90</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Uncontrolled haemorrhage</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">STEMI / dysrhythmia + shock</span>
-                        <span style="background:#f8d7da; padding:5px 12px; border-radius:20px; font-weight:600;">Significant MOI</span>
+            `,
+            quiz: [],
+            flashcards: [],
+            critical: []
+        },
+        // ---------- SECTION 1.3: Patient Triage Categories ----------
+        {
+            id: "c1s3",
+            shortTitle: "1.3 Triage",
+            summary: `
+                <div class="sum-card">
+                    <h3 style="color:#0056b3;">🚦 Triage (CPG 1.3)</h3>
+                    <ul>
+                        <li><span style="background:#ffcccc; padding:3px 8px; border-radius:20px;">🔴 Red (critical)</span> – immediate life threat, reassess every 5 min.</li>
+                        <li><span style="background:#fff3cd; padding:3px 8px; border-radius:20px;">🟡 Yellow (serious)</span> – serious but stable, reassess every 10 min.</li>
+                        <li><span style="background:#d4edda; padding:3px 8px; border-radius:20px;">🟢 Green (minor)</span> – minor injuries, reassess every 15 min.</li>
+                        <li><span style="background:#e2e3e5; padding:3px 8px; border-radius:20px;">⚫ Black (expectant)</span> – deceased or non‑survivable.</li>
+                        <li><strong>Significant mechanism of injury (MOI):</strong>
+                            <ul style="margin-top:5px;">
+                                <li>Fall >10 feet (all ages)</li>
+                                <li>High‑speed MVC >40 km/h (unrestrained) or >60 km/h (restrained)</li>
+                                <li>Ejection, rollover, death in same vehicle</li>
+                                <li>Pedestrian / rider thrown or run over</li>
+                                <li>Intrusion >12 inches occupant side / >18 inches any side</li>
+                                <li>Child unrestrained or in unsecured seat</li>
+                            </ul>
+                        </li>
+                        <li><strong>Triage category can change</strong> – must be reassessed and documented.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:15px;">
+                        📌 <strong>Key KPIs:</strong> Assign a triage category to every patient. Document any change in category.
                     </div>
-                    <div class="highlight-box" style="margin-top:10px; background:#fff3cd; border-left-color:#856404;">
-                        <strong>🎯 KPI:</strong> ALS backup requested within 1 minute of red flag identification.
+                </div>
+            `,
+            quiz: [],
+            flashcards: [],
+            critical: []
+        },
+        // ---------- SECTION 1.4: Functional Needs ----------
+        {
+            id: "c1s4",
+            shortTitle: "1.4 Functional Needs",
+            summary: `
+                <div class="sum-card">
+                    <h3 style="color:#0056b3;">🧑‍🦽 Functional Needs (CPG 1.4)</h3>
+                    <ul>
+                        <li>Identify <strong>mobility, sensory, cognitive, or mental health</strong> impairments.</li>
+                        <li>Use alternative communication: written notes, sign language, interpreter, caregiver.</li>
+                        <li><strong>Assistive devices</strong> (hearing aids, glasses, prostheses, wheelchairs) must accompany the patient.</li>
+                        <li>Involve caregiver; assess for abuse/neglect.</li>
+                        <li>Service animals should be accommodated if possible.</li>
+                    </ul>
+                </div>
+            `,
+            quiz: [],
+            flashcards: [],
+            critical: []
+        },
+        // ---------- SECTION 1.5: Treated at Scene ----------
+        {
+            id: "c1s5",
+            shortTitle: "1.5 Treated at Scene",
+            summary: `
+                <div class="sum-card">
+                    <h3 style="color:#0056b3;">🏠 Treat at Scene (CPG 1.5)</h3>
+                    <ul>
+                        <li>Only for <strong>minor, stable, resolved conditions</strong> (e.g., mild hypoglycaemia corrected, small laceration with controlled bleeding, mild allergic reaction resolved).</li>
+                        <li>Patient must have <strong>mental capacity</strong> (4‑step test).</li>
+                        <li>Must have <strong>access to follow‑up care</strong> and a <strong>responsible, sober adult caregiver</strong> willing to accept responsibility.</li>
+                        <li><strong>Exclusion criteria</strong> (mandatory transport):
+                            <ul style="margin-top:5px;">
+                                <li>Age <18 or >60 years</li>
+                                <li>Pregnancy</li>
+                                <li>Unreliable history</li>
+                                <li>Self‑inflicted injuries (suicidal)</li>
+                                <li>Significant relevant comorbidities</li>
+                                <li>Repeat call for same condition within 30 days</li>
+                                <li>No GP or primary care access</li>
+                            </ul>
+                        </li>
+                        <li>Document: full assessment, vital signs, capacity assessment, education provided.</li>
+                    </ul>
+                </div>
+            `,
+            quiz: [],
+            flashcards: [],
+            critical: []
+        },
+        // ---------- SECTION 1.6: Patient Refusal of Transfer ----------
+        {
+            id: "c1s6",
+            shortTitle: "1.6 Refusal of Transfer",
+            summary: `
+                <div class="sum-card">
+                    <h3 style="color:#0056b3;">🚫 Refusal of Transfer (CPG 1.6)</h3>
+                    <ul>
+                        <li><strong>Four‑step capacity assessment</strong> (all must be met):
+                            <ol style="margin-top:5px;">
+                                <li><strong>Understanding</strong> – can they repeat the information?</li>
+                                <li><strong>Appreciation</strong> – do they recognise their own risk?</li>
+                                <li><strong>Reasoning</strong> – can they weigh options?</li>
+                                <li><strong>Expression</strong> – clear and consistent decision.</li>
+                            </ol>
+                        </li>
+                        <li>If capacity impaired → transport (with police/Tele‑EMS if necessary).</li>
+                        <li><strong>High‑risk refusal</strong> (chest pain, neurological deficits, Red priority) → mandatory Tele‑EMS consultation and duty officer notification.</li>
+                        <li>Document: <strong>two full sets of vital signs</strong>, 12‑lead ECG (if cardiac), refusal form, education given, caregiver details.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top:15px;">
+                        📌 <strong>Key KPI:</strong> Document capacity assessment and refusal form for all patients who refuse transport.
                     </div>
                 </div>
             `,
