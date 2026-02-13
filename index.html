@@ -82,7 +82,6 @@
             font-weight: 700; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* ---------- BUTTON CONTAINER FIX – CLEAN, EVEN SPACING ---------- */
         .menu-sub-options {
             display: flex;
             gap: 8px;
@@ -104,7 +103,7 @@
             border: 1px solid rgba(255,255,255,0.6);
             transition: all 0.1s ease;
             text-decoration: none;
-            margin: 0; /* reset margin – gap handles spacing */
+            margin: 0;
         }
         .btn-action:active { transform: translateY(2px); box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.1); }
         .btn-summary { color: #856404; background: linear-gradient(180deg, #fff3cd 0%, #ffeeba 100%); border-color: #ffe8a1; }
@@ -148,14 +147,97 @@
     (function(){
         "use strict";
 
-        // ---------- HARDCODED CHAPTER LIST – UPDATED WITH 2025 UPDATES ----------
+        // ---------- COMPLETE CHAPTER LIST – ALL CPG 2025 CHAPTERS ----------
         const CHAPTERS = [
-    { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false },
-    { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false },  // ✅ NEW
-    { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care (complete)", hasCritical: true },
-    { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },
-    // add more chapters here...
-];
+            // Special chapters
+            { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false },
+            { id: "c-index", shortTitle: "📋 CPG Index", title: "Complete CPG Table of Contents", hasCritical: false },
+            
+            // Universal Care (c1)
+            { id: "c1", shortTitle: "1.1 Universal Care", title: "Universal Care (complete)", hasCritical: true },
+            
+            // Airway & Breathing
+            { id: "c2", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: false },
+            { id: "c2-3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: false },
+            { id: "c2-4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: false },
+            { id: "c2-5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: false },
+            
+            // Cardiovascular
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: false },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: false },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: false },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: false },
+            
+            // Resuscitation
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: false },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: false },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: false },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: false },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: false },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: false },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: false },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: false },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: false },
+            
+            // Neurological
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: false },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: false },
+            
+            // General Medical
+            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: false },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: false },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: false },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: false },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: false },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: false },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: false },
+            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: false },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: false },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: false },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: false },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: false },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: false },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: false },
+            
+            // Trauma
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: false },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: false },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: false },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: false },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: false },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: false },
+            
+            // Environmental
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: false },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: false },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: false },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: false },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: false },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: false },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: false },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: false },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: false },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: false },
+            
+            // Pediatric
+            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: false },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: false },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: false },
+            
+            // Obstetrics
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: false },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: false },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: false },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: false },
+            
+            // Major Incident Triage
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: false },
+            
+            // Scope & Medications
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false }
+        ];
 
         // ---------- STORAGE UTILITY ----------
         const STORAGE_KEY = 'dcas_cpg_stats';
@@ -182,7 +264,7 @@
                         <p>${ch.title} · ${chapStats.attempts} attempts · avg ${avg}%</p>
                         <div class="menu-sub-options">
                             <a href="chapters/${ch.id}.html?view=summary" class="btn-action btn-summary">📘 Summary</a>
-                            ${ch.id !== 'c0' ? `
+                            ${ch.id !== 'c0' && ch.id !== 'c-index' ? `
                                 <a href="chapters/${ch.id}.html?view=flashcards" class="btn-action btn-flash">📇 Flashcards</a>
                                 <a href="chapters/${ch.id}.html?view=quiz" class="btn-action btn-quiz">📋 Quiz</a>
                             ` : ''}
