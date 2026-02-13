@@ -3,157 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DCAS CPG 2025 · Full Index</title>
+    <title>CPG Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ---------- AERO VISTA GLASS THEME (same as other chapters) ---------- */
+        /* ---------- TEAL THEME (Matching Main App) ---------- */
         :root {
-            --glass-bg: rgba(255, 255, 255, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.6);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
-            --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            --text-dark: #1a2a3a;
-            --text-light: #ffffff;
-            --accent-blue: #0056b3;
+            --bg-base: #f0fdfa;
+            --bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+            --text-dark: #115e59;
+            --text-medium: #0f766e;
+            --primary-accent: #0d9488;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(20, 184, 166, 0.2);
+            --item-hover: rgba(255, 255, 255, 0.9);
         }
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+
+        [data-theme="dark"] {
+            --bg-base: #042f2e;
+            --bg-gradient: linear-gradient(135deg, #042f2e 0%, #115e59 100%);
+            --text-dark: #f0fdfa;
+            --text-medium: #99f6e4;
+            --primary-accent: #2dd4bf;
+            --glass-bg: rgba(19, 78, 74, 0.6);
+            --glass-border: rgba(94, 234, 212, 0.1);
+            --item-hover: rgba(19, 78, 74, 0.9);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--primary-gradient);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            padding-top: env(safe-area-inset-top);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            touch-action: manipulation;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-base); background-image: var(--bg-gradient); background-attachment: fixed;
+            color: var(--text-dark); min-height: 100vh; display: flex; flex-direction: column;
         }
+
+        /* HEADER */
         header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--text-light);
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 100;
+            background: var(--glass-bg); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 20px; display: flex; align-items: center; gap: 15px;
         }
-        .home-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 8px 14px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: block;
-            transition: all 0.2s ease;
-            touch-action: manipulation;
-        }
-        .home-btn:active { background: rgba(255,255,255,0.4); transform: scale(0.95); }
-        .header-text h1 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .header-text p { margin: 2px 0 0; font-size: 0.85rem; opacity: 0.9; font-weight: 300; }
-
-        main {
-            flex: 1 0 auto;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-            padding-bottom: 80px;
+        
+        .back-btn {
+            text-decoration: none; font-size: 1.2rem;
+            background: rgba(0,0,0,0.05); width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px; color: var(--text-dark); border: 1px solid var(--glass-border);
         }
 
-        .section { display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .section.active { display: block; opacity: 1; animation: slideUp 0.4s ease-out; }
-        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        h1 { font-size: 1.1rem; font-weight: 700; color: var(--primary-accent); }
 
-        .sum-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: var(--glass-shadow);
-            padding: 25px;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            margin-bottom: 20px;
+        /* SEARCH BAR */
+        .search-container { padding: 20px 20px 10px; max-width: 800px; margin: 0 auto; width: 100%; }
+        .search-input {
+            width: 100%; padding: 12px 16px; border-radius: 12px;
+            border: 1px solid var(--glass-border); background: var(--glass-bg);
+            color: var(--text-dark); font-size: 1rem; outline: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        .control-btn {
-            padding: 14px 35px; border-radius: 30px; font-weight: 600; color: white;
-            background: linear-gradient(to bottom, #00b4db, #0083b0);
-            box-shadow: 0 4px 15px rgba(0, 131, 176, 0.4); border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.2s; display: inline-block; text-align: center;
-            border: none; cursor: pointer;
-        }
-        .control-btn:active { transform: scale(0.95); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .index-section {
-            margin-bottom: 25px;
-        }
-        .index-section h4 {
-            color: #004e92;
-            margin: 20px 0 10px;
-            border-bottom: 2px solid rgba(0,78,146,0.2);
-            padding-bottom: 5px;
-        }
-        .index-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .index-table tr {
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .index-table td {
-            padding: 10px 5px;
-        }
-        .index-table a {
-            color: #0056b3;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .index-table a:hover {
-            text-decoration: underline;
-        }
-        .cpg-number {
-            font-weight: 700;
-            color: #004e92;
-            width: 80px;
-        }
+        .search-input::placeholder { color: var(--text-medium); opacity: 0.7; }
 
-        footer { margin-top: auto; padding: 40px; text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+        /* LIST */
+        main { flex: 1; padding: 10px 20px; max-width: 800px; margin: 0 auto; width: 100%; }
+        
+        .index-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        
+        .index-item {
+            display: block; text-decoration: none;
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            padding: 16px; border-radius: 16px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .index-item:active { transform: scale(0.98); background: var(--item-hover); }
+        
+        .item-code {
+            font-size: 0.75rem; font-weight: 700; color: var(--text-medium);
+            text-transform: uppercase; margin-bottom: 4px; display: block;
+        }
+        .item-title { font-size: 1rem; font-weight: 600; color: var(--text-dark); }
+        .item-desc { font-size: 0.8rem; color: var(--text-medium); margin-top: 4px; opacity: 0.9; }
+
+        /* GROUP HEADERS */
+        .group-header {
+            margin: 20px 0 10px; font-size: 0.85rem; font-weight: 700;
+            color: var(--primary-accent); text-transform: uppercase; letter-spacing: 1px;
+            padding-left: 5px;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <button class="home-btn" id="homeBtn">←</button>
-    <div class="header-text">
-        <h1 id="pageTitle">DCAS CPG 2025</h1>
-        <p id="pageSubtitle">Clinical Practice Guidelines</p>
-    </div>
+    <a href="../index.html" class="back-btn">⬅️</a>
+    <h1>CPG Index</h1>
 </header>
 
-<main id="mainContent">
-    <!-- Content will be injected by app.js -->
+<div class="search-container">
+    <input type="text" id="searchBox" class="search-input" placeholder="Search guidelines...">
+</div>
+
+<main>
+    <div id="listContainer"></div>
 </main>
 
-<footer>
-    <div>Created by Soliman Anas · Study aid only</div>
-    <div style="margin-top:5px; opacity:0.6;">Refer to official DCAS CPG & Memos for clinical protocols.</div>
-</footer>
+<script>
+    (function(){
+        // Apply Theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
 
-<!-- 1. Load chapter-specific content -->
-<script src="../content/c-index.js"></script>
+        // DATA: Same structure as index.html
+        const CHAPTERS = [
+            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", chapterFile: "c0", chapterGroup: "General" },
+            
+            // UNIVERSAL CARE
+            { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Core Assessment & Safety", chapterFile: "c1", sectionId: "c1s1", chapterGroup: "Universal Care" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "PCR Standards", chapterFile: "c1", sectionId: "c1s2", chapterGroup: "Universal Care" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Priority Categories", chapterFile: "c1", sectionId: "c1s3", chapterGroup: "Universal Care" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Special Access Needs", chapterFile: "c1", sectionId: "c1s4", chapterGroup: "Universal Care" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treat & Release", chapterFile: "c1", sectionId: "c1s5", chapterGroup: "Universal Care" },
+            { id: "c1s6", shortTitle: "1.6 Refusal", title: "Refusal of Transfer", chapterFile: "c1", sectionId: "c1s6", chapterGroup: "Universal Care" },
 
-<!-- 2. Load shared app logic -->
-<script src="../app.js"></script>
+            // AIRWAY
+            { id: "c2", shortTitle: "2.1 Airway Mgmt", title: "Airway & Breathing", chapterFile: "c2", chapterGroup: "Airway" },
+            { id: "c2-2", shortTitle: "2.2 FBAO", title: "Foreign Body Obstruction", chapterFile: "c2", sectionId: "c2s2", chapterGroup: "Airway" },
+            
+            // CARDIO
+            { id: "c3-1", shortTitle: "3.1 Chest Pain", title: "ACS / Chest Pain", chapterFile: "c3", sectionId: "c3s1", chapterGroup: "Cardiovascular" },
+            { id: "c3-2", shortTitle: "3.2 Bradycardia", title: "Adult Bradycardia", chapterFile: "c3", sectionId: "c3s2", chapterGroup: "Cardiovascular" },
+            
+            // RESUS
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", chapterFile: "c4", sectionId: "c4s1", chapterGroup: "Resuscitation" },
+            
+            // TRAUMA
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", chapterFile: "c7", sectionId: "c7s1", chapterGroup: "Trauma" },
+            
+            // SCOPE
+            { id: "s1", shortTitle: "Scope", title: "Scope of Practice", chapterFile: "s1", chapterGroup: "Reference" },
+            { id: "m1", shortTitle: "Formulary", title: "Medications", chapterFile: "m1", chapterGroup: "Reference" }
+        ];
+
+        const container = document.getElementById('listContainer');
+        const searchBox = document.getElementById('searchBox');
+
+        function renderList(filterText = '') {
+            container.innerHTML = '';
+            
+            // Group chapters
+            let currentGroup = '';
+            
+            const filtered = CHAPTERS.filter(ch => {
+                const text = (ch.id + ch.shortTitle + ch.title).toLowerCase();
+                return text.includes(filterText.toLowerCase());
+            });
+
+            if(filtered.length === 0) {
+                container.innerHTML = '<div style="text-align:center; opacity:0.6; padding:20px;">No results found</div>';
+                return;
+            }
+
+            filtered.forEach(ch => {
+                // Render Group Header
+                if (ch.chapterGroup !== currentGroup) {
+                    currentGroup = ch.chapterGroup;
+                    const groupHeader = document.createElement('div');
+                    groupHeader.className = 'group-header';
+                    groupHeader.innerText = currentGroup;
+                    container.appendChild(groupHeader);
+                }
+
+                // Create Link
+                // IMPORTANT: Relative link is just filename.html because we are already in /chapters/
+                const sectionParam = ch.sectionId ? `&section=${ch.sectionId}` : '';
+                const linkUrl = `${ch.chapterFile}.html?view=summary${sectionParam}`;
+
+                const a = document.createElement('a');
+                a.className = 'index-item';
+                a.href = linkUrl;
+                a.innerHTML = `
+                    <span class="item-code">${ch.shortTitle}</span>
+                    <div class="item-title">${ch.title}</div>
+                `;
+                container.appendChild(a);
+            });
+        }
+
+        // Search Listener
+        searchBox.addEventListener('input', (e) => renderList(e.target.value));
+
+        // Init
+        renderList();
+    })();
+</script>
 
 </body>
 </html>
