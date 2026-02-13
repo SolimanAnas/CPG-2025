@@ -1,11 +1,11 @@
-/* ========== app.js – DCAS CPG 2025 (FINAL with view‑specific coming soon) ========== */
+/* ========== app.js – DCAS CPG 2025 (COMPLETE) ========== */
 (function(){
     "use strict";
 
     // ---------- STORAGE ----------
     const storage = (function() {
         const KEY = 'dcas_cpg_stats';
-        const defaultStats = { totalAttempts: 0, chapters: {}, critical: { total:0, correct:0 } };
+        const defaultStats = { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
         function load() {
             try {
                 const data = localStorage.getItem(KEY);
@@ -18,7 +18,7 @@
         return { load, save };
     })();
 
-    // ---------- CHAPTER DATA (if missing, show Coming Soon) ----------
+    // ---------- CHAPTER DATA ----------
     const chapterData = window.CPG_DATA;
     const isChapterMissing = !chapterData;
 
@@ -66,6 +66,10 @@
             if (!state.sections) return null;
             return state.sections.find(s => s.id === id);
         },
+        getSectionIndex: (id) => {
+            if (!state.sections) return -1;
+            return state.sections.findIndex(s => s.id === id);
+        },
         getQueryParam: (param) => {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
@@ -89,14 +93,10 @@
         if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';
     }
 
-    // ---------- RENDER COMING SOON – VIEW‑SPECIFIC MESSAGES ----------
+    // ---------- RENDER COMING SOON – VIEW‑SPECIFIC ----------
     function renderComingSoon() {
         const view = utils.getQueryParam('view') || 'summary';
-        let title = 'Coming Soon';
-        let subtitle = '';
-        let message = '';
-        let icon = '🚧';
-
+        let title = 'Coming Soon', subtitle = '', message = '', icon = '🚧';
         switch(view) {
             case 'critical':
                 title = 'Critical Scenarios';
@@ -122,7 +122,6 @@
                 message = 'This CPG chapter is under construction.';
                 icon = '🚧';
         }
-
         const html = `
             <div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 70px 40px; box-shadow: var(--glass-shadow);">
                 <div style="font-size: 6rem; font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 20px; line-height: 1; font-family: Georgia, serif;">${icon} ${title}</div>
@@ -135,7 +134,6 @@
                 </div>
             </div>
         `;
-
         dom.main.innerHTML = html;
         updateHeader(title, subtitle, true);
         utils.safeScrollTop();
@@ -160,6 +158,32 @@
         `;
     }
 
+    // ---------- SECTION NAVIGATION BUTTONS (Previous / Next) ----------
+    function renderSectionNavigation() {
+        if (!state.sections || state.sections.length <= 1) return '';
+        const currentIdx = utils.getSectionIndex(state.activeSectionId);
+        const prevSection = currentIdx > 0 ? state.sections[currentIdx - 1] : null;
+        const nextSection = currentIdx < state.sections.length - 1 ? state.sections[currentIdx + 1] : null;
+        const currentView = utils.getQueryParam('view') || 'summary';
+        
+        return `
+            <div style="display:flex; justify-content:space-between; margin-top:30px; gap:10px;">
+                ${prevSection ? 
+                    `<button class="control-btn section-nav-btn" data-section-nav="prev" data-section-id="${prevSection.id}" style="flex:1;">
+                        ◀ Previous Section (${prevSection.shortTitle})
+                    </button>` : 
+                    `<button class="control-btn" disabled style="flex:1; opacity:0.5;">◀ Previous Section</button>`
+                }
+                ${nextSection ? 
+                    `<button class="control-btn section-nav-btn" data-section-nav="next" data-section-id="${nextSection.id}" style="flex:1;">
+                        Next Section (${nextSection.shortTitle}) ▶
+                    </button>` : 
+                    `<button class="control-btn" disabled style="flex:1; opacity:0.5;">Next Section ▶</button>`
+                }
+            </div>
+        `;
+    }
+
     // ---------- SWITCH SECTION ----------
     function switchSection(sectionId, updateUrl = true) {
         const section = utils.getSection(sectionId);
@@ -180,7 +204,9 @@
         state.criticalScore = 0;
 
         if (updateUrl) {
-            utils.setQueryParam('section', sectionId);
+            const url = new URL(window.location.href);
+            url.searchParams.set('section', sectionId);
+            window.history.pushState({}, '', url);
         }
 
         const currentView = utils.getQueryParam('view') || 'summary';
@@ -203,10 +229,12 @@
                 return;
             }
             const tabs = renderSectionTabs(section.id);
+            const nav = renderSectionNavigation();
             const html = `
                 <div class="section active">
                     ${tabs}
                     ${section.summary || '<div class="sum-card">No summary available.</div>'}
+                    ${nav}
                     <button class="control-btn" data-action="backHome" style="width:100%; margin-top:20px;">← Back to Chapters</button>
                 </div>
             `;
@@ -235,6 +263,7 @@
             if (!state.flashData.length) return;
             const card = state.flashData[state.fIndex];
             const tabs = renderSectionTabs(state.activeSectionId);
+            const nav = renderSectionNavigation();
             const html = `
                 ${tabs}
                 <div style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 15px;" id="fc-progress">
@@ -259,6 +288,7 @@
                     <button class="control-btn" data-flash="prev">◀ Previous</button>
                     <button class="control-btn" data-flash="next">Next ▶</button>
                 </div>
+                ${nav}
                 <div style="text-align:center; margin-top:25px;">
                     <button data-action="backHome" style="background:none; border:none; color:rgba(255,255,255,0.7); text-decoration:underline; cursor:pointer;">← Back</button>
                 </div>
@@ -287,6 +317,7 @@
                 return;
             }
             const tabs = renderSectionTabs(section.id);
+            const nav = renderSectionNavigation();
             const html = `
                 ${tabs}
                 <div class="quiz-setup-container">
@@ -298,6 +329,7 @@
                         <button class="setup-btn" data-quiz-size="30">30 Questions <span>→</span></button>
                         <button class="setup-btn challenge" data-quiz-size="${section.quiz.length}">All (${section.quiz.length}) <span>→</span></button>
                     </div>
+                    ${nav}
                     <button data-action="backHome" style="margin-top:30px; background:none; border:none; color:#666; text-decoration:underline; cursor:pointer;">Cancel</button>
                 </div>
             `;
@@ -318,6 +350,7 @@
                 `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
             ).join('');
             const tabs = renderSectionTabs(state.activeSectionId);
+            const nav = renderSectionNavigation();
             const html = `
                 ${tabs}
                 <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:rgba(255,255,255,0.9);">
@@ -333,6 +366,7 @@
                     <div class="quiz-feedback" id="quizFeedback" style="display:none;"></div>
                     <button class="control-btn" id="nextQuizBtn" style="width:100%; margin-top:25px; display:none;">Next Question</button>
                 </div>
+                ${nav}
             `;
             dom.main.innerHTML = html;
             utils.safeScrollTop();
@@ -361,6 +395,7 @@
                 `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`
             ).join('');
             const tabs = renderSectionTabs(state.activeSectionId);
+            const nav = renderSectionNavigation();
             const html = `
                 ${tabs}
                 <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
@@ -377,6 +412,7 @@
                     <div class="critical-feedback" id="criticalFeedback" style="display:none;"></div>
                     <button class="control-btn" id="nextCriticalBtn" style="width:100%; margin-top:25px; display:none;">Next Scenario</button>
                 </div>
+                ${nav}
             `;
             dom.main.innerHTML = html;
             utils.safeScrollTop();
@@ -569,6 +605,27 @@
         }
     };
 
+    // ---------- WATER RIPPLE EFFECT ----------
+    function createRipple(event) {
+        const target = event.currentTarget;
+        const rect = target.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.style.width = ripple.style.height = '20px';
+        ripple.style.background = 'rgba(255, 255, 255, 0.7)';
+        
+        target.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    }
+
     // ---------- EVENT DELEGATION ----------
     document.addEventListener('click', function(e) {
         const target = e.target.closest('button');
@@ -577,13 +634,23 @@
         const size = target.dataset.quizSize;
         const sectionId = target.dataset.sectionId;
         const flash = target.dataset.flash;
+        const sectionNav = target.dataset.sectionNav;
 
-        if (sectionId) {
+        // Section tab switching
+        if (sectionId && !sectionNav) {
             e.preventDefault();
             switchSection(sectionId, true);
             return;
         }
 
+        // Section navigation (Previous / Next)
+        if (sectionNav && target.dataset.sectionId) {
+            e.preventDefault();
+            switchSection(target.dataset.sectionId, true);
+            return;
+        }
+
+        // ----- BACK HOME – PATH DETECTION -----
         if (action === 'backHome') {
             e.preventDefault();
             const path = window.location.pathname;
@@ -610,23 +677,27 @@
             return;
         }
 
+        // Quiz size selection
         if (target.classList.contains('setup-btn') && size) {
             quizEngine.init(parseInt(size, 10));
             return;
         }
 
+        // Quiz answer
         if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             quizEngine.handleAnswer(idx, target);
             return;
         }
 
+        // Critical answer
         if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             criticalEngine.handleAnswer(idx, target);
             return;
         }
 
+        // Next question / critical
         if (target.id === 'nextQuizBtn') {
             quizEngine.next();
             return;
@@ -636,6 +707,7 @@
             return;
         }
 
+        // Flashcard navigation
         if (flash === 'prev') {
             if (state.fIndex > 0) state.fIndex--;
             render._renderFlashcard();
@@ -673,6 +745,7 @@
             return;
         }
 
+        // ----- MULTI-SECTION MODE -----
         if (state.sections && state.sections.length > 0) {
             let sectionId = utils.getQueryParam('section');
             if (!sectionId) {
@@ -686,6 +759,7 @@
                 state.flashData = section.flashcards || [];
                 state.criticalData = section.critical || [];
             } else {
+                // fallback to first section
                 const fallback = state.sections[0];
                 state.activeSectionId = fallback.id;
                 state.activeSection = fallback;
@@ -694,6 +768,7 @@
                 utils.replaceQueryParam('section', fallback.id);
             }
         } else {
+            // ----- SINGLE-SECTION MODE (backward compatibility) -----
             state.activeSection = {
                 id: 'main',
                 shortTitle: chapterData.shortTitle || 'Chapter',
@@ -707,11 +782,13 @@
             state.criticalData = state.activeSection.critical || [];
         }
 
+        // ----- DETERMINE VIEW -----
         let view = utils.getQueryParam('view') || 'summary';
         if (!utils.getQueryParam('view')) {
             utils.replaceQueryParam('view', view);
         }
 
+        // ----- RENDER -----
         if (view === 'summary') render.summary();
         else if (view === 'flashcards') render.flashcards();
         else if (view === 'quiz') render.quizSetup();
@@ -720,9 +797,28 @@
         else if (view === 'reviewMistakes') render.reviewMistakes();
         else render.summary();
 
+        // ----- ADD RIPPLE LISTENERS TO INTERACTIVE ELEMENTS -----
+        setTimeout(() => {
+            document.querySelectorAll('.menu-card, .btn-action, .control-btn, .home-btn, .header-btn, .setup-btn, .section-tab').forEach(el => {
+                if (el) {
+                    el.removeEventListener('click', createRipple);
+                    el.removeEventListener('touchstart', createRipple);
+                    el.addEventListener('click', createRipple);
+                    el.addEventListener('touchstart', createRipple);
+                }
+            });
+        }, 200);
+
         setupHomeButton();
     }
 
     init();
-    window.app = { state };
+
+    // Expose toggler for completion (used in index.html)
+    window.app = window.app || {};
+    window.app.toggleCompletion = function(chapterId, checked) {
+        // This function is defined in index.html, but we keep the namespace
+        console.log('toggleCompletion called from app.js – should be overridden by index.html');
+    };
+    window.app.state = state;
 })();
