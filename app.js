@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (FINAL) ========== */
+/* ========== app.js – DCAS CPG 2025 (FINAL with view‑specific coming soon) ========== */
 (function(){
     "use strict";
 
@@ -89,18 +89,55 @@
         if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';
     }
 
-    // ---------- RENDER COMING SOON (when chapter file is missing) ----------
+    // ---------- RENDER COMING SOON – VIEW‑SPECIFIC MESSAGES ----------
     function renderComingSoon() {
+        const view = utils.getQueryParam('view') || 'summary';
+        let title = 'Coming Soon';
+        let subtitle = '';
+        let message = '';
+        let icon = '🚧';
+
+        switch(view) {
+            case 'critical':
+                title = 'Critical Scenarios';
+                subtitle = 'Coming Soon';
+                message = 'High‑acuity decision‑making cases are being developed for this chapter.';
+                icon = '🚨';
+                break;
+            case 'flashcards':
+                title = 'Flashcards';
+                subtitle = 'Coming Soon';
+                message = 'Interactive flashcards for this chapter are under construction.';
+                icon = '📇';
+                break;
+            case 'quiz':
+                title = 'Quiz';
+                subtitle = 'Coming Soon';
+                message = 'Practice questions for this chapter are being prepared.';
+                icon = '📋';
+                break;
+            default:
+                title = 'Coming Soon';
+                subtitle = 'Stay tuned.....';
+                message = 'This CPG chapter is under construction.';
+                icon = '🚧';
+        }
+
         const html = `
-            <div class="sum-card" style="text-align:center;">
-                <h3 style="color:#0056b3; margin-bottom:20px;">🚧 Coming Soon</h3>
-                <p style="font-size:1.2rem; margin-bottom:30px;">This CPG chapter is under construction.</p>
-                <p style="color:#666; margin-bottom:40px;">Check back later for full content – summary, flashcards, quiz, and critical scenarios.</p>
-                <button class="control-btn" data-action="backHome" style="width:100%;">← Back to Chapters</button>
+            <div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 70px 40px; box-shadow: var(--glass-shadow);">
+                <div style="font-size: 6rem; font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 20px; line-height: 1; font-family: Georgia, serif;">${icon} ${title}</div>
+                <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 2.5rem; font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 15px 40px; margin-top: 15px; letter-spacing: 3px;">${subtitle}</div>
+                <div style="font-size: 1.8rem; font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 15px 25px; border-radius: 50px; display: inline-block; margin-top: 30px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    ${message}
+                </div>
+                <div style="margin-top: 50px;">
+                    <button class="control-btn" data-action="backHome" style="padding: 18px 45px; border-radius: 40px; font-weight: 700; font-size: 1.4rem; color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;">← Back to Chapters</button>
+                </div>
             </div>
         `;
+
         dom.main.innerHTML = html;
-        updateHeader('Coming Soon', '', true);
+        updateHeader(title, subtitle, true);
         utils.safeScrollTop();
     }
 
@@ -532,7 +569,7 @@
         }
     };
 
-    // ---------- EVENT DELEGATION (with back button fix) ----------
+    // ---------- EVENT DELEGATION ----------
     document.addEventListener('click', function(e) {
         const target = e.target.closest('button');
         if (!target) return;
@@ -547,7 +584,6 @@
             return;
         }
 
-        // ----- BACK HOME – WORKS FROM ANY FOLDER -----
         if (action === 'backHome') {
             e.preventDefault();
             const path = window.location.pathname;
@@ -560,7 +596,6 @@
         }
 
         if (action === 'stats') {
-            // Stats are in main index
             const path = window.location.pathname;
             if (path.includes('/chapters/')) {
                 window.location.href = '../index.html?view=stats';
@@ -575,27 +610,23 @@
             return;
         }
 
-        // Quiz size selection
         if (target.classList.contains('setup-btn') && size) {
             quizEngine.init(parseInt(size, 10));
             return;
         }
 
-        // Quiz answer
         if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             quizEngine.handleAnswer(idx, target);
             return;
         }
 
-        // Critical answer
         if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
             const idx = parseInt(target.dataset.optIndex, 10);
             criticalEngine.handleAnswer(idx, target);
             return;
         }
 
-        // Next question / critical
         if (target.id === 'nextQuizBtn') {
             quizEngine.next();
             return;
@@ -605,7 +636,6 @@
             return;
         }
 
-        // Flashcard navigation
         if (flash === 'prev') {
             if (state.fIndex > 0) state.fIndex--;
             render._renderFlashcard();
@@ -618,7 +648,7 @@
         }
     });
 
-    // ---------- HOME BUTTON LISTENER (with path detection) ----------
+    // ---------- HOME BUTTON LISTENER ----------
     function setupHomeButton() {
         if (dom.homeBtn) {
             dom.homeBtn.addEventListener('click', function(e) {
@@ -637,14 +667,12 @@
     function init() {
         state.stats = storage.load();
 
-        // ----- IF CHAPTER FILE MISSING, SHOW COMING SOON AND STOP -----
         if (isChapterMissing) {
             renderComingSoon();
             setupHomeButton();
             return;
         }
 
-        // ----- ACTIVATE SECTION (multi-section or single-section) -----
         if (state.sections && state.sections.length > 0) {
             let sectionId = utils.getQueryParam('section');
             if (!sectionId) {
@@ -658,7 +686,6 @@
                 state.flashData = section.flashcards || [];
                 state.criticalData = section.critical || [];
             } else {
-                // fallback to first section
                 const fallback = state.sections[0];
                 state.activeSectionId = fallback.id;
                 state.activeSection = fallback;
@@ -667,7 +694,6 @@
                 utils.replaceQueryParam('section', fallback.id);
             }
         } else {
-            // Single-section mode (backward compatibility)
             state.activeSection = {
                 id: 'main',
                 shortTitle: chapterData.shortTitle || 'Chapter',
@@ -681,13 +707,11 @@
             state.criticalData = state.activeSection.critical || [];
         }
 
-        // ----- DETERMINE VIEW -----
         let view = utils.getQueryParam('view') || 'summary';
         if (!utils.getQueryParam('view')) {
             utils.replaceQueryParam('view', view);
         }
 
-        // ----- RENDER -----
         if (view === 'summary') render.summary();
         else if (view === 'flashcards') render.flashcards();
         else if (view === 'quiz') render.quizSetup();
