@@ -16,7 +16,7 @@ window.CPG_DATA = {
 };
 
 function generateIndexHTML() {
-    // ---------- Complete CPG list (same as in main index.html) ----------
+    // ---------- Complete CPG list (must match main index) ----------
     const CHAPTERS = [
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
@@ -109,7 +109,7 @@ function generateIndexHTML() {
         { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", chapterFile: "m1-38", chapterGroup: "scope" }
     ];
 
-    // Group chapters by category (matching accent colors)
+    // Group chapters by category
     const categories = {
         "universal": { name: "🛡️ Universal Care", color: "var(--accent-universal)" },
         "airway": { name: "🫁 Airway & Breathing", color: "var(--accent-airway)" },
