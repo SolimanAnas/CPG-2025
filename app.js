@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (FIXED BACK BUTTON + SECTION LOADING) ========== */
+/* ========== app.js – DCAS CPG 2025 (FINAL) ========== */
 (function(){
     "use strict";
 
@@ -18,12 +18,9 @@
         return { load, save };
     })();
 
-    // ---------- CHAPTER DATA ----------
+    // ---------- CHAPTER DATA (if missing, show Coming Soon) ----------
     const chapterData = window.CPG_DATA;
-    if (!chapterData) {
-        console.error('❌ No chapter data found (window.CPG_DATA missing)');
-        return;
-    }
+    const isChapterMissing = !chapterData;
 
     const dom = {
         main: document.getElementById('mainContent'),
@@ -34,7 +31,7 @@
 
     // ---------- STATE ----------
     const state = {
-        sections: chapterData.sections || null,
+        sections: chapterData ? (chapterData.sections || null) : null,
         activeSectionId: null,
         activeSection: null,
         quizData: [],
@@ -76,7 +73,7 @@
         setQueryParam: (param, value) => {
             const url = new URL(window.location.href);
             url.searchParams.set(param, value);
-            window.history.pushState({}, '', url); // use pushState to enable back button
+            window.history.pushState({}, '', url);
         },
         replaceQueryParam: (param, value) => {
             const url = new URL(window.location.href);
@@ -87,9 +84,24 @@
 
     // ---------- HEADER ----------
     function updateHeader(title, subtitle = '', showBack = true) {
-        if (dom.pageTitle) dom.pageTitle.innerText = title || chapterData.shortTitle || 'DCAS CPG';
+        if (dom.pageTitle) dom.pageTitle.innerText = title || 'DCAS CPG 2025';
         if (dom.pageSubtitle) dom.pageSubtitle.innerText = subtitle || '';
         if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';
+    }
+
+    // ---------- RENDER COMING SOON (when chapter file is missing) ----------
+    function renderComingSoon() {
+        const html = `
+            <div class="sum-card" style="text-align:center;">
+                <h3 style="color:#0056b3; margin-bottom:20px;">🚧 Coming Soon</h3>
+                <p style="font-size:1.2rem; margin-bottom:30px;">This CPG chapter is under construction.</p>
+                <p style="color:#666; margin-bottom:40px;">Check back later for full content – summary, flashcards, quiz, and critical scenarios.</p>
+                <button class="control-btn" data-action="backHome" style="width:100%;">← Back to Chapters</button>
+            </div>
+        `;
+        dom.main.innerHTML = html;
+        updateHeader('Coming Soon', '', true);
+        utils.safeScrollTop();
     }
 
     // ---------- RENDER SECTION TABS ----------
@@ -131,10 +143,9 @@
         state.criticalScore = 0;
 
         if (updateUrl) {
-            utils.setQueryParam('section', sectionId); // pushState – back button works
+            utils.setQueryParam('section', sectionId);
         }
 
-        // Re-render current view
         const currentView = utils.getQueryParam('view') || 'summary';
         if (currentView === 'summary') render.summary();
         else if (currentView === 'flashcards') render.flashcards();
@@ -145,12 +156,13 @@
         return true;
     }
 
-    // ---------- RENDER FUNCTIONS (with safety checks) ----------
+    // ---------- RENDER FUNCTIONS ----------
     const render = {
         summary: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const section = state.activeSection;
             if (!section) { 
-                console.error('No active section for summary');
+                console.error('No active section');
                 return;
             }
             const tabs = renderSectionTabs(section.id);
@@ -165,10 +177,12 @@
             updateHeader(section.shortTitle, 'Summary', true);
             utils.safeScrollTop();
         },
+
         flashcards: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const section = state.activeSection;
             if (!section) { 
-                console.error('No active section for flashcards');
+                console.error('No active section');
                 return;
             }
             if (!state.flashData.length) {
@@ -179,6 +193,7 @@
             this._renderFlashcard();
             updateHeader(section.shortTitle, 'Flashcards', true);
         },
+
         _renderFlashcard: function() {
             if (!state.flashData.length) return;
             const card = state.flashData[state.fIndex];
@@ -222,10 +237,12 @@
             }
             utils.safeScrollTop();
         },
+
         quizSetup: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const section = state.activeSection;
             if (!section) { 
-                console.error('No active section for quiz setup');
+                console.error('No active section');
                 return;
             }
             if (!section.quiz || !section.quiz.length) {
@@ -251,7 +268,9 @@
             updateHeader('Quiz Setup', section.shortTitle, true);
             utils.safeScrollTop();
         },
+
         quizGame: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             if (!state.quizData.length) {
                 render.quizSetup();
                 return;
@@ -281,10 +300,12 @@
             dom.main.innerHTML = html;
             utils.safeScrollTop();
         },
+
         criticalGame: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const section = state.activeSection;
             if (!section) { 
-                console.error('No active section for critical');
+                console.error('No active section');
                 return;
             }
             if (!state.criticalData || !state.criticalData.length) {
@@ -296,6 +317,7 @@
             this._renderCriticalQuestion();
             updateHeader('Critical Scenarios', section.shortTitle, true);
         },
+
         _renderCriticalQuestion: function() {
             const q = state.criticalData[state.criticalIndex];
             const optionsHtml = q.options.map((opt, idx) => 
@@ -322,6 +344,7 @@
             dom.main.innerHTML = html;
             utils.safeScrollTop();
         },
+
         stats: function() {
             const s = state.stats;
             let chapStatsHtml = '';
@@ -361,6 +384,7 @@
             updateHeader('Statistics', '', true);
             utils.safeScrollTop();
         },
+
         reviewMistakes: function() {
             if (!state.mistakes.length) {
                 dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';
@@ -383,6 +407,7 @@
     // ---------- QUIZ ENGINE ----------
     const quizEngine = {
         init: function(size) {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const section = state.activeSection;
             if (!section || !section.quiz) return;
             state.quizData = utils.shuffle(section.quiz).slice(0, size);
@@ -422,6 +447,7 @@
             if (scoreEl) scoreEl.innerText = state.score;
         },
         next: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             state.qIndex++;
             if (state.qIndex < state.quizData.length) {
                 render.quizGame();
@@ -459,6 +485,7 @@
     // ---------- CRITICAL ENGINE ----------
     const criticalEngine = {
         handleAnswer: function(selectedIdx, btn) {
+            if (isChapterMissing) { renderComingSoon(); return; }
             const q = state.criticalData[state.criticalIndex];
             const isCorrect = selectedIdx === q.correct;
             if (isCorrect) {
@@ -485,6 +512,7 @@
             if (nextBtn) nextBtn.style.display = 'block';
         },
         next: function() {
+            if (isChapterMissing) { renderComingSoon(); return; }
             state.criticalIndex++;
             if (state.criticalIndex < state.criticalData.length) {
                 render._renderCriticalQuestion();
@@ -504,43 +532,124 @@
         }
     };
 
-    // ---------- HANDLE BACK/FORWARD NAVIGATION ----------
-    function handlePopState() {
-        // Re-read query params and re-render
-        const view = utils.getQueryParam('view') || 'summary';
-        const sectionId = utils.getQueryParam('section');
-        
-        if (sectionId && state.sections) {
-            // Try to switch to the section from URL (don't push another history state)
-            const success = switchSection(sectionId, false); // false = don't push again
-            if (!success) {
-                // Fallback to first section if invalid
-                if (state.sections.length > 0) {
-                    switchSection(state.sections[0].id, false);
-                }
-            }
+    // ---------- EVENT DELEGATION (with back button fix) ----------
+    document.addEventListener('click', function(e) {
+        const target = e.target.closest('button');
+        if (!target) return;
+        const action = target.dataset.action;
+        const size = target.dataset.quizSize;
+        const sectionId = target.dataset.sectionId;
+        const flash = target.dataset.flash;
+
+        if (sectionId) {
+            e.preventDefault();
+            switchSection(sectionId, true);
+            return;
         }
-        
-        // Render the view based on URL
-        if (view === 'summary') render.summary();
-        else if (view === 'flashcards') render.flashcards();
-        else if (view === 'quiz') render.quizSetup();
-        else if (view === 'critical') render.criticalGame();
-        else if (view === 'stats') render.stats();
-        else if (view === 'reviewMistakes') render.reviewMistakes();
-        else render.summary();
+
+        // ----- BACK HOME – WORKS FROM ANY FOLDER -----
+        if (action === 'backHome') {
+            e.preventDefault();
+            const path = window.location.pathname;
+            if (path.includes('/chapters/')) {
+                window.location.href = '../index.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+            return;
+        }
+
+        if (action === 'stats') {
+            // Stats are in main index
+            const path = window.location.pathname;
+            if (path.includes('/chapters/')) {
+                window.location.href = '../index.html?view=stats';
+            } else {
+                window.location.href = 'index.html?view=stats';
+            }
+            return;
+        }
+
+        if (action === 'reviewMistakes') {
+            render.reviewMistakes();
+            return;
+        }
+
+        // Quiz size selection
+        if (target.classList.contains('setup-btn') && size) {
+            quizEngine.init(parseInt(size, 10));
+            return;
+        }
+
+        // Quiz answer
+        if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
+            const idx = parseInt(target.dataset.optIndex, 10);
+            quizEngine.handleAnswer(idx, target);
+            return;
+        }
+
+        // Critical answer
+        if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
+            const idx = parseInt(target.dataset.optIndex, 10);
+            criticalEngine.handleAnswer(idx, target);
+            return;
+        }
+
+        // Next question / critical
+        if (target.id === 'nextQuizBtn') {
+            quizEngine.next();
+            return;
+        }
+        if (target.id === 'nextCriticalBtn') {
+            criticalEngine.next();
+            return;
+        }
+
+        // Flashcard navigation
+        if (flash === 'prev') {
+            if (state.fIndex > 0) state.fIndex--;
+            render._renderFlashcard();
+            return;
+        }
+        if (flash === 'next') {
+            if (state.fIndex < state.flashData.length - 1) state.fIndex++;
+            render._renderFlashcard();
+            return;
+        }
+    });
+
+    // ---------- HOME BUTTON LISTENER (with path detection) ----------
+    function setupHomeButton() {
+        if (dom.homeBtn) {
+            dom.homeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const path = window.location.pathname;
+                if (path.includes('/chapters/')) {
+                    window.location.href = '../index.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            });
+        }
     }
 
     // ---------- INITIALISE ----------
     function init() {
         state.stats = storage.load();
 
-        // ----- ACTIVATE SECTION (for multi-section chapters) -----
+        // ----- IF CHAPTER FILE MISSING, SHOW COMING SOON AND STOP -----
+        if (isChapterMissing) {
+            renderComingSoon();
+            setupHomeButton();
+            return;
+        }
+
+        // ----- ACTIVATE SECTION (multi-section or single-section) -----
         if (state.sections && state.sections.length > 0) {
             let sectionId = utils.getQueryParam('section');
             if (!sectionId) {
                 sectionId = state.sections[0].id;
-                utils.replaceQueryParam('section', sectionId); // replace, not push
+                utils.replaceQueryParam('section', sectionId);
             }
             const section = utils.getSection(sectionId);
             if (section) {
@@ -558,7 +667,7 @@
                 utils.replaceQueryParam('section', fallback.id);
             }
         } else {
-            // Single-section mode
+            // Single-section mode (backward compatibility)
             state.activeSection = {
                 id: 'main',
                 shortTitle: chapterData.shortTitle || 'Chapter',
@@ -587,69 +696,8 @@
         else if (view === 'reviewMistakes') render.reviewMistakes();
         else render.summary();
 
-        // ----- BACK BUTTON LISTENER -----
-        window.addEventListener('popstate', handlePopState);
+        setupHomeButton();
     }
-
-    // ---------- EVENT DELEGATION ----------
-    document.addEventListener('click', function(e) {
-        const target = e.target.closest('button');
-        if (!target) return;
-        const action = target.dataset.action;
-        const size = target.dataset.quizSize;
-        const sectionId = target.dataset.sectionId;
-        const flash = target.dataset.flash;
-
-        if (sectionId) {
-            e.preventDefault();
-            switchSection(sectionId, true); // pushState for back button
-            return;
-        }
-        if (action === 'backHome') {
-            window.location.href = '../index.html';
-            return;
-        }
-        if (action === 'stats') {
-            window.location.href = '../index.html?view=stats';
-            return;
-        }
-        if (action === 'reviewMistakes') {
-            render.reviewMistakes();
-            return;
-        }
-        if (target.classList.contains('setup-btn') && size) {
-            quizEngine.init(parseInt(size, 10));
-            return;
-        }
-        if (target.classList.contains('option-btn') && target.closest('#quizOptionsContainer')) {
-            const idx = parseInt(target.dataset.optIndex, 10);
-            quizEngine.handleAnswer(idx, target);
-            return;
-        }
-        if (target.classList.contains('option-btn') && target.closest('#criticalOptionsContainer')) {
-            const idx = parseInt(target.dataset.optIndex, 10);
-            criticalEngine.handleAnswer(idx, target);
-            return;
-        }
-        if (target.id === 'nextQuizBtn') {
-            quizEngine.next();
-            return;
-        }
-        if (target.id === 'nextCriticalBtn') {
-            criticalEngine.next();
-            return;
-        }
-        if (flash === 'prev') {
-            if (state.fIndex > 0) state.fIndex--;
-            render._renderFlashcard();
-            return;
-        }
-        if (flash === 'next') {
-            if (state.fIndex < state.flashData.length - 1) state.fIndex++;
-            render._renderFlashcard();
-            return;
-        }
-    });
 
     init();
     window.app = { state };
