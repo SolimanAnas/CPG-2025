@@ -191,11 +191,12 @@
             transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease, background 0.3s ease;
         }
         .menu-card.first-in-chapter[data-chapter] {
-            background: rgba(255,255,255,0.85);
-            border-width: 2px;
-            animation: glowPulse 2s infinite ease-in-out;
-            transform: scale(1);
-        }
+    background: rgba(255,255,255,0.85);
+    border-width: 2px;
+    /* Run BOTH animations: make it visible AND pulse */
+    animation: fadeInUp 0.5s ease forwards, glowPulse 2s infinite ease-in-out;
+    transform: scale(1);
+}
         .menu-card.first-in-chapter[data-chapter]:hover {
             transform: scale(1.02);
         }
@@ -225,7 +226,7 @@
             text-shadow: 0 1px 0 rgba(255,255,255,0.8);
             transition: color 0.2s ease;
             word-break: break-word;
-            padding-right: 70px;
+            padding-right: 70px; /* space for the right-aligned checkbox */
         }
         .menu-card p { 
             margin: 0 0 15px; 
@@ -443,7 +444,7 @@
             "One day, one question – you're building expertise."
         ];
 
-        // ---------- COMPLETE CHAPTER LIST – FULLY VERIFIED ----------
+        // ---------- COMPLETE CHAPTER LIST – WITH CORRECT BUTTON RULES ----------
         const CHAPTERS = [
             // ========== SPECIAL CHAPTERS ==========
             { id: "c0", shortTitle: "2025 Updates", title: "CPG 2025 – What's New", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
@@ -678,7 +679,7 @@
             }, 600);
         }
 
-        // ---------- RENDER MAIN MENU – FIXED BUTTON LOGIC (NO MISSING TABS) ----------
+        // ---------- RENDER MAIN MENU – FIXED BUTTON LOGIC ----------
         function renderMenu() {
             const stats = loadStats();
             const completion = loadCompletion();
@@ -687,7 +688,7 @@
                 const chapStats = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
                 const avg = chapStats.totalMax ? Math.round((chapStats.totalScore / chapStats.totalMax) * 100) : 0;
                 
-                // Summary link
+                // Determine the summary link
                 let summaryUrl;
                 if (ch.chapterFile) {
                     summaryUrl = `chapters/${ch.chapterFile}?view=summary&section=${ch.sectionParam}`;
@@ -695,16 +696,18 @@
                     summaryUrl = `chapters/${ch.id}.html?view=summary`;
                 }
 
-                // ---------- BUTTON VISIBILITY RULES (CRYSTAL CLEAR) ----------
-                const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
-                const isUniversalSub = ch.id.startsWith('c1s') && ch.id !== 'c1s1'; // c1s2 – c1s6
+                // Determine if this card should show Flashcards, Quiz, Critical
+                // Rule: 
+                // - Special chapters (c0, c-index): NO flashcards/quiz, NO critical (already handled)
+                // - Universal Care subsections (c1s2-c1s6): NO flashcards/quiz (they are inside c1.html, will be available via sections)
+                //   BUT we still show Critical button (hasCritical = true) – app.js will show "Coming Soon" for now.
+                // - All other chapters: YES to all three buttons.
                 
-                // Special chapters: NO buttons at all (handled in template)
-                // Universal Care subsections: NO Flashcards/Quiz (content not ready), YES Critical (will show Coming Soon)
-                // All other chapters: YES to all buttons (Summary, Flashcards, Quiz, Critical)
+                const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
+                const isUniversalSub = ch.id.startsWith('c1s') && ch.id !== 'c1s1'; // c1s2-c1s6
                 
                 const showFlashcardsQuiz = !isSpecial && !isUniversalSub;
-                const showCritical = ch.hasCritical && !isSpecial; // includes Universal Care subsections
+                const showCritical = ch.hasCritical && !isSpecial; // c1s2-c1s6 have hasCritical = true, so they get the button
 
                 const firstClass = ch.isFirstInChapter ? 'first-in-chapter' : '';
                 const chapterGroup = ch.chapterGroup ? `data-chapter="${ch.chapterGroup}"` : '';
@@ -717,7 +720,7 @@
                             <span class="status-badge">${ch.id.toUpperCase()}</span>
                             <label class="completion-checkbox">
                                 <input type="checkbox" class="chapter-complete" data-chapter-id="${ch.id}" ${checkedAttr} onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
-                                <span>Done</span>
+                                <span>Done</span>  <!-- ☑︎ removed -->
                             </label>
                         </div>
                         <h2>${ch.shortTitle}</h2>
@@ -778,7 +781,7 @@
                 </div>
             `;
 
-            // Add ripple listeners
+            // Add ripple listeners to all interactive elements
             document.querySelectorAll('.menu-card, .btn-action, .home-btn, .header-btn').forEach(el => {
                 el.addEventListener('click', createRipple);
                 el.addEventListener('touchstart', createRipple);
