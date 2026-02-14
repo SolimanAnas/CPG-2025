@@ -49,15 +49,15 @@
             padding: 15px;
             border-radius: 8px;
         }
-        /* Floated image */
+        /* Floated image – no border, only shadow */
         .about-card .float-image {
             float: right;
             width: 300px;        /* about 1.5x typical size */
             margin-left: 30px;
             margin-bottom: 20px;
-            border-radius: 16px;
+            border-radius: 50%;   /* makes it circular (if the image is square) */
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            /* no border */
+            border: none;         /* ensure no border */
         }
         @media (max-width: 700px) {
             .about-card .float-image {
@@ -67,6 +67,21 @@
                 width: 80%;
                 max-width: 300px;
             }
+        }
+        /* Style for the How‑to section */
+        .how-to-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .how-to-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .how-to-list li span {
+            font-size: 1.2rem;
+            min-width: 30px;
         }
     </style>
 </head>
@@ -90,7 +105,7 @@
     <div class="about-card">
         <h2>📘 About This Application</h2>
         
-        <!-- Floated image -->
+        <!-- Floated image – transparent PNG with shadow, no border -->
         <img src="images/image-01.png" alt="Soliman Anas" class="float-image">
         
         <h3>Disclaimer</h3>
@@ -113,6 +128,17 @@
             <li>Quizzes with adjustable question count</li>
             <li>Critical scenarios with KPIs</li>
             <li>Full‑text search on main menu and index</li>
+        </ul>
+
+        <h3>How to Use</h3>
+        <ul class="how-to-list">
+            <li><span>🎨</span> <strong>Theme Toggle (header):</strong> Click the palette icon to cycle through four color themes – Dark, Light, Sepia, Forest. Your choice is saved automatically.</li>
+            <li><span>📋</span> <strong>Index Button (header):</strong> Opens the full table of contents (same as the "Index" special card).</li>
+            <li><span>📊</span> <strong>Stats Badge (header):</strong> Shows your total quiz attempts and critical‑scenario accuracy at a glance.</li>
+            <li><span>🔍</span> <strong>Search Bar (main menu):</strong> Type any keyword to filter chapter cards in real time. Clear the search with the ✕ button.</li>
+            <li><span>✅</span> <strong>Mark Done (on cards):</strong> Track your progress – completed chapters are stored in your browser.</li>
+            <li><span>📘</span> <strong>Summary / Flashcards / Quiz / Scenario:</strong> Each chapter card has these four buttons (except special cards). They lead to different study modes.</li>
+            <li><span>🔄</span> <strong>Section Tabs (inside chapters):</strong> If a chapter has multiple sections (e.g. Universal Care), you can switch between them directly.</li>
         </ul>
         
         <h3>Version</h3>
