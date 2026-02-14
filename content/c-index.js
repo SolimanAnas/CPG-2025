@@ -1,4 +1,4 @@
-/* ========== c-index.js – Full CPG Index (Corrected links, single‑line entries) ========== */
+/* ========== c-index.js – Full CPG Index with Search ========== */
 window.CPG_DATA = {
     id: "c-index",
     title: "DCAS CPG Index",
@@ -18,10 +18,6 @@ window.CPG_DATA = {
 function generateIndexHTML() {
     // ---------- Complete CPG list (must match main index) ----------
     const CHAPTERS = [
-        // Special chapters (not listed in index, but kept for completeness)
-        // { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", chapterGroup: null },
-        // { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", chapterGroup: null },
-        
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
         { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", chapterFile: "c1", sectionParam: "c1s2", chapterGroup: "universal" },
@@ -113,7 +109,7 @@ function generateIndexHTML() {
         { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", chapterFile: "m1-38", chapterGroup: "scope" }
     ];
 
-    // Group chapters by category (same as main index)
+    // Group chapters by category
     const categories = {
         "universal": { name: "🛡️ Universal Care", color: "var(--accent-universal)" },
         "airway": { name: "🫁 Airway & Breathing", color: "var(--accent-airway)" },
@@ -129,7 +125,16 @@ function generateIndexHTML() {
         "scope": { name: "📘 Scope & Medications", color: "var(--accent-scope)" }
     };
 
-    let html = `<div class="sum-card"><h3>📚 Complete DCAS CPG 2025 Index</h3>`;
+    let html = `<div class="sum-card" id="indexRoot"><h3>📚 Complete DCAS CPG 2025 Index</h3>`;
+
+    // Search bar
+    html += `
+        <div class="search-container" style="margin-bottom:24px;">
+            <input type="text" id="indexSearchInput" placeholder="Search guidelines..." style="width:100%; padding:12px; border-radius:40px; border:1px solid var(--glass-border); background:var(--glass-bg); color:var(--text-primary);">
+            <button id="indexSearchClearBtn" style="display:none; margin-left:8px; padding:8px 16px; border-radius:40px; background:var(--primary-accent); color:white; border:none;">✕</button>
+        </div>
+        <div id="indexTableContainer">
+    `;
 
     for (let group in categories) {
         const groupChapters = CHAPTERS.filter(ch => ch.chapterGroup === group);
@@ -141,7 +146,6 @@ function generateIndexHTML() {
         groupChapters.forEach(ch => {
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
-            // ✅ FIXED: no "chapters/" prefix – correct for a page already inside /chapters/
             const link = `${baseFile}.html?view=summary${sectionParam}`;
             html += `
                 <tr>
@@ -152,10 +156,56 @@ function generateIndexHTML() {
         html += `</table>`;
     }
 
+    html += `</div>`; // close indexTableContainer
+
     html += `<div style="text-align:center; margin-top:30px;">
                 <button class="btn-action btn-summary" data-action="backHome">← Back to Chapters</button>
             </div>`;
-    html += `</div>`;
 
+    // Self‑contained search script
+    html += `
+        <script>
+            (function() {
+                function initIndexSearch() {
+                    const input = document.getElementById('indexSearchInput');
+                    const clearBtn = document.getElementById('indexSearchClearBtn');
+                    const container = document.getElementById('indexTableContainer');
+                    if (!input || !container) return;
+                    
+                    const rows = container.querySelectorAll('.index-table tr');
+                    
+                    function filterRows(text) {
+                        const lowerText = text.toLowerCase().trim();
+                        rows.forEach(row => {
+                            const rowText = row.textContent.toLowerCase();
+                            if (rowText.includes(lowerText)) {
+                                row.classList.remove('filtered-out');
+                            } else {
+                                row.classList.add('filtered-out');
+                            }
+                        });
+                    }
+
+                    input.addEventListener('input', function(e) {
+                        const val = e.target.value;
+                        if (clearBtn) clearBtn.style.display = val ? 'inline-block' : 'none';
+                        filterRows(val);
+                    });
+
+                    if (clearBtn) {
+                        clearBtn.addEventListener('click', function() {
+                            input.value = '';
+                            clearBtn.style.display = 'none';
+                            filterRows('');
+                        });
+                    }
+                }
+                // Run after a short delay to ensure DOM is ready
+                setTimeout(initIndexSearch, 100);
+            })();
+        </script>
+    `;
+
+    html += `</div>`; // close sum-card
     return html;
 }
