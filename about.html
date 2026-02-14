@@ -16,15 +16,17 @@
             padding: 32px;
             box-shadow: var(--glass-shadow);
             margin: 20px 0;
-            position: relative; /* for image positioning */
-            overflow: hidden;    /* keep image inside rounded corners */
         }
         .about-card h2 {
             color: var(--primary-accent);
             margin-bottom: 20px;
             border-bottom: 2px solid var(--accent-universal);
             padding-bottom: 10px;
-            padding-right: 100px; /* make room for image */
+        }
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--text-primary);
         }
         .about-card p {
             margin: 15px 0;
@@ -46,25 +48,36 @@
             padding: 15px;
             border-radius: 8px;
         }
-        /* Image in top right corner */
-        .about-card .corner-image {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 80px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            border: 2px solid rgba(255,255,255,0.3);
+        /* Flex container for intro + image */
+        .intro-row {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 20px;
         }
-        @media (max-width: 600px) {
-            .about-card .corner-image {
-                width: 60px;
-                top: 15px;
-                right: 15px;
+        .intro-text {
+            flex: 3; /* takes 3/4 of space */
+        }
+        .intro-image {
+            flex: 1; /* takes 1/4 of space */
+            text-align: right;
+        }
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+        @media (max-width: 700px) {
+            .intro-row {
+                flex-direction: column;
             }
-            .about-card h2 {
-                padding-right: 70px;
+            .intro-image {
+                text-align: center;
+            }
+            .intro-image img {
+                max-width: 200px;
             }
         }
     </style>
@@ -87,10 +100,19 @@
 
 <main>
     <div class="about-card">
-        <img src="images/image-01.png" alt="DCAS Logo" class="corner-image">
         <h2>📘 About This Application</h2>
-        <p>This is a <strong>study aid</strong> for the Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
         
+        <!-- Row with text and image -->
+        <div class="intro-row">
+            <div class="intro-text">
+                <p>This is a <strong>study aid</strong> for the Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
+            </div>
+            <div class="intro-image">
+                <img src="images/image-01.png" alt="Soliman Anas">
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
         <h3>⚖️ Disclaimer</h3>
         <div class="highlight-box">
             <strong>⚠️ Important:</strong> This application is for educational purposes only. It does not replace the official DCAS Clinical Practice Guidelines or any official memos. Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
