@@ -11,6 +11,50 @@
     
     <!-- Shared stylesheet (contains all themes and components) -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional style for search bar */
+        .search-container {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 4px 4px 4px 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--glass-shadow);
+        }
+        .search-container input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--text-primary);
+            outline: none;
+        }
+        .search-container input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+        .search-container button {
+            background: var(--primary-accent);
+            border: none;
+            border-radius: 40px;
+            padding: 10px 24px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-container button:active {
+            background: #003d80;
+        }
+        /* Hide cards that don't match search */
+        .menu-card.filtered-out {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,7 +69,6 @@
         </div>
     </div>
     <div class="header-right" id="headerShortcuts">
-        <!-- Theme toggle with palette icon (cycles through 4 themes) -->
         <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
         <div class="stats-badge" id="liveStatsBadge">
             <span>📊 <span id="statsAttempts">0</span></span>
@@ -200,8 +243,8 @@
             renderMenu(); 
         };
 
-        // ---------- RENDER ----------
-        function renderMenu() {
+        // ---------- RENDER MENU WITH SEARCH ----------
+        function renderMenu(filterText = '') {
             const stats = loadStorage(STATS_KEY, { chapters: {} });
             const completion = loadStorage(COMPLETION_KEY, {});
             
@@ -211,14 +254,14 @@
                 const baseFile = ch.chapterFile || ch.id;
                 const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                 
-                // --- BUTTON VISIBILITY: show all four for all non‑special chapters ---
                 const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
                 const showFlashcardsQuiz = !isSpecial;
                 const showCritical = ch.hasCritical && !isSpecial;
                 const isChecked = completion[ch.id] || false;
 
+                // Build the card HTML
                 return `
-                    <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;">
+                    <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
                         <div class="card-header">
                             <span class="status-badge">${ch.id.toUpperCase()}</span>
                             <div class="toggle-wrapper">
@@ -256,7 +299,7 @@
             const quote = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
 
             const statsHtml = `
-                <div class="stats-card">
+                <div class="stats-card" id="statsCard">
                     <div class="progress-header">
                         <div class="progress-title">🚀 Progress Dashboard</div>
                         <span style="font-weight:700; color:var(--primary-accent);">${overallPercent}%</span>
@@ -278,8 +321,57 @@
                 </div>
             `;
 
-            document.getElementById('mainContent').innerHTML = `<div class="menu-grid">${contentHtml}${statsHtml}</div>`;
+            // Combine search bar + cards + stats
+            const fullHtml = `
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search chapters..." value="${filterText.replace(/"/g, '&quot;')}">
+                    <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'}>✕</button>
+                </div>
+                <div class="menu-grid" id="menuGrid">
+                    ${contentHtml}
+                </div>
+                ${statsHtml}
+            `;
+
+            document.getElementById('mainContent').innerHTML = fullHtml;
             updateStatsBadge();
+
+            // Attach search listener
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('searchClearBtn');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const val = e.target.value;
+                    if (clearBtn) clearBtn.style.display = val ? 'block' : 'none';
+                    filterCards(val);
+                });
+            }
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function() {
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    filterCards('');
+                });
+            }
+
+            // If filterText was provided, apply filter after rendering
+            if (filterText) {
+                filterCards(filterText);
+            }
+        }
+
+        // Filter function
+        function filterCards(text) {
+            const cards = document.querySelectorAll('.menu-card');
+            const lowerText = text.toLowerCase().trim();
+            cards.forEach(card => {
+                const searchData = card.dataset.search || '';
+                if (searchData.toLowerCase().includes(lowerText)) {
+                    card.classList.remove('filtered-out');
+                } else {
+                    card.classList.add('filtered-out');
+                }
+            });
         }
 
         // ---------- HOME & INDEX BUTTONS ----------
