@@ -332,9 +332,11 @@ const render = {
         }  
         const q = state.quizData[state.qIndex];  
         const progress = `Q ${state.qIndex+1}/${state.quizData.length}`;  
-        const optionsHtml = q.options.map((opt, idx) =>   
-            `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`  
-        ).join('');  
+        // Handle both string and object options
+        const optionsHtml = q.options.map((opt, idx) => {
+            const optText = typeof opt === 'string' ? opt : opt.t;
+            return `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(optText)}</button>`;
+        }).join('');  
         const tabs = renderSectionTabs(state.activeSectionId);  
         const nav = renderSectionNavigation();  
         const html = `  
@@ -379,9 +381,11 @@ const render = {
 
     _renderCriticalQuestion: function() {  
         const q = state.criticalData[state.criticalIndex];  
-        const optionsHtml = q.options.map((opt, idx) =>   
-            `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(opt)}</button>`  
-        ).join('');  
+        // Handle both string and object options
+        const optionsHtml = q.options.map((opt, idx) => {
+            const optText = typeof opt === 'string' ? opt : opt.t;
+            return `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(optText)}</button>`;
+        }).join('');  
         const tabs = renderSectionTabs(state.activeSectionId);  
         const nav = renderSectionNavigation();  
         const html = `  
@@ -492,9 +496,13 @@ const quizEngine = {
         if (isCorrect) {  
             state.score++;  
         } else {  
+            // Extract correct answer text (could be string or object)
+            const correctAnswer = typeof q.options[q.correct] === 'string' 
+                ? q.options[q.correct] 
+                : q.options[q.correct].t;
             state.mistakes.push({  
                 question: q.q,  
-                correctAnswer: q.options[q.correct],  
+                correctAnswer: correctAnswer,  
                 rationale: q.explanation  
             });  
         }  
