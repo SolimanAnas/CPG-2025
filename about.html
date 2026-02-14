@@ -4,103 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · About</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
-
     <style>
-        /* --- Page Specific Overrides --- */
-        
         .about-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
-            padding: 32px 40px; /* More breathing room */
+            padding: 32px;
             box-shadow: var(--glass-shadow);
             margin: 20px 0;
-            /* overflow: hidden;  <-- REMOVED: prevents shape-outside from clipping incorrectly */
+            overflow: auto; /* clearfix for float */
         }
-
-        /* The Float Logic */
-        .author-float-img {
-            float: right;
-            width: 280px;      /* Adjust size as needed */
-            height: auto;
-            
-            /* Create the Oval Shape visually */
-            border-radius: 50%; 
-            
-            /* Text Wrapping Logic */
-            shape-outside: circle(50%);
-            margin-left: 35px;
-            margin-bottom: 15px;
-            
-            /* Elegance */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Soft shadow, no border */
-            transition: transform 0.3s ease;
-        }
-
-        .author-float-img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Clean Disclaimer (Replaces the Yellow Box) */
-        .disclaimer-clean {
-            margin: 25px 0;
-            padding: 10px 0 10px 20px;
-            border-left: 3px solid var(--primary-accent); /* Uses your theme color */
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-        
-        .disclaimer-clean strong {
-            color: var(--text-primary);
-            font-style: normal;
-            display: block;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-        }
-
-        /* Mobile Fix: Stack image on top for small screens */
-        @media (max-width: 700px) {
-            .author-float-img {
-                float: none;
-                display: block;
-                margin: 0 auto 30px auto;
-                width: 200px;
-                shape-outside: none;
-            }
-        }
-        
-        /* Just ensuring typography spacing looks good */
         .about-card h2 {
             color: var(--primary-accent);
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--glass-border);
-            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-universal);
+            padding-bottom: 10px;
         }
         .about-card h3 {
-            margin-top: 2rem;
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
             color: var(--text-primary);
         }
         .about-card p {
+            margin: 15px 0;
+            line-height: 1.6;
             color: var(--text-primary);
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
         }
-        .about-card ul li {
-            margin-bottom: 8px;
+        .about-card ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
             color: var(--text-secondary);
+        }
+        .about-card li {
+            margin-bottom: 8px;
+        }
+        /* Important notice – no background, just bold and maybe a subtle divider */
+        .about-card .important-note {
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .about-card .important-note strong {
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+        /* Floated image – no border, no border-radius, only shadow */
+        .about-card .float-image {
+            float: right;
+            width: 300px;        /* about 1.5x typical size */
+            margin-left: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: none;
+        }
+        @media (max-width: 700px) {
+            .about-card .float-image {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+        /* Style for the How‑to section */
+        .how-to-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .how-to-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .how-to-list li span {
+            font-size: 1.2rem;
+            min-width: 30px;
         }
     </style>
 </head>
 <body>
-
 <header>
     <div class="header-left">
         <button class="icon-btn" id="homeBtn">
@@ -117,67 +107,64 @@
 </header>
 
 <main>
-    <div class="about-card clearfix">
-        <h2>About This Application</h2>
+    <div class="about-card">
+        <h2>📘 About This Application</h2>
         
-        <img src="images/image-01.png" alt="Soliman Anas" class="author-float-img">
+        <!-- Floated image – transparent PNG, no oval, no border -->
+        <img src="images/image-01.png" alt="Soliman Anas" class="float-image">
+        
+        <h3>Disclaimer</h3>
+        <p>This is a study aid for the Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
 
-        <p>
-            This is a dedicated study aid for the <strong>Dubai Corporation for Ambulance Services (DCAS)</strong> Clinical Practice Guidelines 2025. It is designed to assist EMS personnel in mastering guidelines through interactive summaries, 3D flashcards, quizzes, and critical scenario simulations.
-        </p>
-
-        <div class="disclaimer-clean">
-            <strong>Important Notice</strong>
-            This application is for educational purposes only. It does not replace the official DCAS Clinical Practice Guidelines or any official memos. Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
+        <!-- Important note – no highlight box, just elegant text -->
+        <div class="important-note">
+            <strong>Important:</strong> This application is for educational purposes only.<br>
+            It does not replace the official DCAS Clinical Practice Guidelines or any official memos.<br>
+            Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
         </div>
-
-        <h3>Author</h3>
-        <p>
-            Created by <strong>Soliman Anas Soliman</strong><br>
-            <span style="color: var(--text-secondary); font-size: 0.9rem;">Emergency Medical Technician</span>
-        </p>
         
-        <p>
-            The goal of this project is to provide an accessible, mobile-friendly platform for continuous learning and quick reference in the field.
-        </p>
-
+        <h3>Author</h3>
+        <p>Created by <strong>Soliman Anas Soliman</strong><br>Emergency Medical Technician</p>
+        
         <h3>Features</h3>
         <ul>
-            <li><strong>Personalized Themes:</strong> Toggle between Dark, Light, Sepia, and Forest modes.</li>
-            <li><strong>Progress Tracking:</strong> Dashboard statistics for quizzes and scenarios.</li>
-            <li><strong>Study Tools:</strong> Flip-flashcards and adjustable quiz lengths.</li>
-            <li><strong>Smart Search:</strong> Full-text search across the main menu and index.</li>
+            <li>Four themes (Dark, Light, Sepia, Forest) – saved to your browser</li>
+            <li>Completion tracking for chapters</li>
+            <li>Progress dashboard with statistics</li>
+            <li>Flashcards with 3D flip</li>
+            <li>Quizzes with adjustable question count</li>
+            <li>Critical scenarios with KPIs</li>
+            <li>Full‑text search on main menu and index</li>
         </ul>
 
         <h3>How to Use</h3>
-        <ul>
-            <li>Use the <strong>Palette Icon</strong> (🎨) in the header to switch themes.</li>
-            <li>Tap the <strong>Stats Badge</strong> to view your learning analytics.</li>
-            <li>Use the <strong>Search Bar</strong> on the home screen to filter chapters instantly.</li>
+        <ul class="how-to-list">
+            <li><span>🎨</span> <strong>Theme Toggle (header):</strong> Click the palette icon to cycle through four color themes – Dark, Light, Sepia, Forest. Your choice is saved automatically.</li>
+            <li><span>📋</span> <strong>Index Button (header):</strong> Opens the full table of contents (same as the "Index" special card).</li>
+            <li><span>📊</span> <strong>Stats Badge (header):</strong> Shows your total quiz attempts and critical‑scenario accuracy at a glance.</li>
+            <li><span>🔍</span> <strong>Search Bar (main menu):</strong> Type any keyword to filter chapter cards in real time. Clear the search with the ✕ button.</li>
+            <li><span>✅</span> <strong>Mark Done (on cards):</strong> Track your progress – completed chapters are stored in your browser.</li>
+            <li><span>📘</span> <strong>Summary / Flashcards / Quiz / Scenario:</strong> Each chapter card has these four buttons (except special cards). They lead to different study modes.</li>
+            <li><span>🔄</span> <strong>Section Tabs (inside chapters):</strong> If a chapter has multiple sections (e.g. Universal Care), you can switch between them directly.</li>
         </ul>
         
-        <div style="margin-top: 40px; text-align: center;">
-            <button onclick="window.location.href='index.html'" style="
-                background: var(--primary-accent); 
-                color: #fff; 
-                border: none; 
-                padding: 12px 30px; 
-                border-radius: 50px; 
-                cursor: pointer;
-                font-weight: 600;">
-                ← Back to Chapters
-            </button>
+        <h3>Version</h3>
+        <p>Based on DCAS CPG Version 3 – 2025</p>
+        
+        <div style="text-align:center; margin-top:30px;">
+            <button class="control-btn" data-action="backHome">← Back to Chapters</button>
         </div>
     </div>
 </main>
 
 <footer>
     <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
 <script>
     (function() {
-        // Keeps your existing Theme Logic
+        // Theme toggle
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
         const themes = ['dark', 'light', 'sepia', 'forest'];
@@ -197,6 +184,7 @@
         themeBtn?.addEventListener('click', nextTheme);
         initTheme();
 
+        // Home button
         document.getElementById('homeBtn')?.addEventListener('click', () => {
             window.location.href = 'index.html';
         });
