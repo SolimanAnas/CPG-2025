@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (FULL, MODERN) ========== */
+/* ========== app.js – DCAS CPG 2025 (FULL, MODERN, with INDEX SEARCH) ========== */
 (function(){
 "use strict";
 
@@ -226,7 +226,12 @@ const render = {
         `;  
         dom.main.innerHTML = html;  
         updateHeader(section.shortTitle, 'Summary', true);  
-        utils.safeScrollTop();  
+        utils.safeScrollTop();
+
+        // Initialize index search if this is the index chapter
+        if (chapterData && chapterData.id === 'c-index') {
+            initIndexSearch();
+        }
     },  
 
     flashcards: function() {  
@@ -300,18 +305,29 @@ const render = {
             dom.main.innerHTML = '<div class="sum-card">No quiz questions available.</div>';  
             return;  
         }  
+        const totalQuestions = section.quiz.length;
         const tabs = renderSectionTabs(section.id);  
         const nav = renderSectionNavigation();  
+        
+        // Only show size buttons that are <= totalQuestions
+        const possibleSizes = [10, 20, 30];
+        const sizeButtons = possibleSizes
+            .filter(size => size <= totalQuestions)
+            .map(size => `<button class="setup-btn" data-quiz-size="${size}">${size} Questions <span>→</span></button>`)
+            .join('');
+        
+        // Always include "All" button
+        const allButton = `<button class="setup-btn challenge" data-quiz-size="${totalQuestions}">All (${totalQuestions}) <span>→</span></button>`;
+        
+        const buttonsHtml = sizeButtons + allButton;
+        
         const html = `  
             ${tabs}  
             <div class="quiz-setup-container">  
                 <h2 style="color:var(--primary-accent);">Quiz: ${section.shortTitle}</h2>  
                 <p style="color:var(--text-secondary);">Select number of questions</p>  
                 <div class="setup-grid">  
-                    <button class="setup-btn" data-quiz-size="10">10 Questions <span>→</span></button>  
-                    <button class="setup-btn" data-quiz-size="20">20 Questions <span>→</span></button>  
-                    <button class="setup-btn" data-quiz-size="30">30 Questions <span>→</span></button>  
-                    <button class="setup-btn challenge" data-quiz-size="${section.quiz.length}">All (${section.quiz.length}) <span>→</span></button>  
+                    ${buttonsHtml}
                 </div>  
                 ${nav}  
                 <div class="nav-row">  
@@ -476,6 +492,53 @@ const render = {
         utils.safeScrollTop();  
     }  
 };  
+
+// ---------- INDEX SEARCH INIT (for c-index) ----------
+function initIndexSearch() {
+    // Only run on the index page
+    if (!chapterData || chapterData.id !== 'c-index') return;
+    
+    setTimeout(() => {
+        const input = document.getElementById('indexSearchInput');
+        const clearBtn = document.getElementById('indexSearchClearBtn');
+        const container = document.getElementById('indexTableContainer');
+        if (!input || !container) return;
+        
+        const rows = container.querySelectorAll('.index-table tr');
+        
+        function filterRows(text) {
+            const lowerText = text.toLowerCase().trim();
+            rows.forEach(row => {
+                const rowText = row.textContent.toLowerCase();
+                if (rowText.includes(lowerText)) {
+                    row.classList.remove('filtered-out');
+                } else {
+                    row.classList.add('filtered-out');
+                }
+            });
+        }
+
+        // Remove old handlers to avoid duplicates
+        input.removeEventListener('input', input._handler);
+        clearBtn?.removeEventListener('click', clearBtn._handler);
+
+        input._handler = function(e) {
+            const val = e.target.value;
+            if (clearBtn) clearBtn.style.display = val ? 'inline-block' : 'none';
+            filterRows(val);
+        };
+        input.addEventListener('input', input._handler);
+
+        if (clearBtn) {
+            clearBtn._handler = function() {
+                input.value = '';
+                clearBtn.style.display = 'none';
+                filterRows('');
+            };
+            clearBtn.addEventListener('click', clearBtn._handler);
+        }
+    }, 200);
+}
 
 // ---------- QUIZ ENGINE ----------  
 const quizEngine = {  
