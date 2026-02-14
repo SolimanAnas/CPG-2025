@@ -849,18 +849,19 @@ main {
 }
 
 /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
 footer {
     text-align: center;
     padding: 30px 20px;
     color: var(--text-secondary);
     font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);        /* slightly darker */
     backdrop-filter: blur(5px);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: auto;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -5px 20px rgba(255, 255, 255, 0.15); /* stronger glow */
 }
 
 footer div:first-child {
@@ -876,6 +877,11 @@ footer div:last-child {
 footer a {
     color: inherit;
     text-decoration: underline;
+}
+
+/* Dark mode specific – lighter text */
+[data-theme="dark"] footer {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes fadeInUp {
