@@ -42,27 +42,32 @@
         .about-card li {
             margin-bottom: 8px;
         }
-        /* Important notice – no background, just bold and maybe a subtle divider */
+        /* Important note – very subtle background, no lines */
         .about-card .important-note {
             margin: 20px 0;
-            padding: 10px 0;
-            border-top: 1px solid var(--glass-border);
-            border-bottom: 1px solid var(--glass-border);
+            padding: 16px 20px;
+            background: rgba(0,0,0,0.02);
+            border-radius: 12px;
             font-weight: 500;
             color: var(--text-primary);
+        }
+        [data-theme="dark"] .about-card .important-note {
+            background: rgba(255,255,255,0.05);
         }
         .about-card .important-note strong {
             font-weight: 700;
             color: var(--primary-accent);
         }
-        /* Floated image – no border, no border-radius, only shadow */
+        /* Floated image – absolutely no borders, no shadows, no box */
         .about-card .float-image {
             float: right;
             width: 300px;        /* about 1.5x typical size */
             margin-left: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            /* no border, no shadow, no border-radius */
             border: none;
+            box-shadow: none;
+            background: transparent;
         }
         @media (max-width: 700px) {
             .about-card .float-image {
@@ -110,13 +115,13 @@
     <div class="about-card">
         <h2>📘 About This Application</h2>
         
-        <!-- Floated image – transparent PNG, no oval, no border -->
+        <!-- Floated image – pure transparent PNG, no box, no shadow -->
         <img src="images/image-01.png" alt="Soliman Anas" class="float-image">
         
         <h3>Disclaimer</h3>
         <p>This is a study aid for the Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
 
-        <!-- Important note – no highlight box, just elegant text -->
+        <!-- Important note – no lines, just a soft background -->
         <div class="important-note">
             <strong>Important:</strong> This application is for educational purposes only.<br>
             It does not replace the official DCAS Clinical Practice Guidelines or any official memos.<br>
