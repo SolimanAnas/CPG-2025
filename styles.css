@@ -851,10 +851,31 @@ main {
 /* ---------- FOOTER ---------- */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 30px 20px;
     color: var(--text-secondary);
-    font-size: 0.75rem;
-    opacity: 0.8;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+footer div:first-child {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+footer div:last-child {
+    opacity: 0.9;
+    font-size: 0.7rem;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
 }
 
 @keyframes fadeInUp {
