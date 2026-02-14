@@ -7,222 +7,312 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* --- GLOBAL RESET & THEME --- */
-        :root {
-            --glass-bg: rgba(30, 30, 30, 0.6);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --accent: #4a90e2;
-        }
-        [data-theme="light"] {
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-border: rgba(0, 0, 0, 0.1);
-            --text-primary: #333333;
-            --text-secondary: #555555;
-            --accent: #0066cc;
-        }
-
+        /* Base styles updates for elegance */
         body {
             font-family: 'Inter', sans-serif;
-            background: #121212; /* Default dark bg */
-            color: var(--text-primary);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.7; /* Increased line-height for elegance */
+            line-height: 1.6;
         }
-        [data-theme="light"] body { background: #f4f4f9; }
 
-        /* --- CARD STYLING --- */
         .about-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
+            background: var(--glass-bg, rgba(30, 30, 30, 0.8)); /* Fallback if var missing */
+            border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
             border-radius: 24px;
             padding: 40px;
-            max-width: 900px;
+            box-shadow: var(--glass-shadow, 0 8px 32px rgba(0, 0, 0, 0.3));
             margin: 20px auto;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            overflow: hidden; /* Clears floats automatically */
+            max-width: 1000px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
-        /* --- TYPOGRAPHY --- */
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, var(--accent), #8e44ad);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
+        .about-card h2 {
+            color: var(--primary-accent, #4a90e2);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        .about-card h3 {
+            font-size: 1.4rem;
+            margin: 40px 0 20px;
+            color: var(--text-primary, #ffffff);
+            font-weight: 600;
+        }
+
+        /* --- NEW GRID LAYOUT --- */
+        .intro-container {
+            display: grid;
+            grid-template-columns: 1fr 320px; /* Text takes space, image fixed width */
+            gap: 40px;
+            align-items: start;
+        }
+
+        .intro-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Image Styling - Elegant Card Look */
+        .profile-image-container {
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px; /* Clean rounded corners, no oval */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            object-fit: cover;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
         }
         
-        h3 {
-            font-size: 1.3rem;
-            color: var(--text-primary);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent);
-            padding-left: 15px;
+        .profile-image:hover {
+            transform: translateY(-5px);
         }
 
-        p { margin-bottom: 20px; font-weight: 300; }
-
-        /* --- FLOATING OVAL IMAGE --- */
-        .oval-float {
-            float: right;
-            width: 280px; /* Adjust width as needed */
-            height: auto;
-            
-            /* Spacing: Left margin pushes text away, Bottom margin prevents overlap */
-            margin: 0 0 15px 40px;
-            
-            /* The Magic: Shape Outside makes text curve around the circle */
-            shape-outside: circle(50%);
-            -webkit-shape-outside: circle(50%);
-            
-            /* Visual Styling */
-            border-radius: 50%; /* Ensures the image looks circular/oval */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* Floating shadow */
-            transition: transform 0.3s ease;
-            filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+        /* Clean Disclaimer - No Yellow Highlight */
+        .disclaimer-clean {
+            margin-top: 10px;
+            padding: 20px;
+            border-left: 3px solid var(--primary-accent, #4a90e2);
+            background: rgba(255, 255, 255, 0.03); /* Very subtle background */
+            border-radius: 0 12px 12px 0;
+            color: var(--text-secondary, #cccccc);
+            font-size: 0.95rem;
         }
 
-        .oval-float:hover {
-            transform: scale(1.02);
-        }
-
-        /* --- CLEAN DISCLAIMER (No Highlight Box) --- */
-        .disclaimer-text {
-            font-style: italic;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--glass-border);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 20px 0;
-            margin: 20px 0;
-        }
-        .disclaimer-text strong {
-            color: var(--accent);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+        .disclaimer-clean strong {
+            color: var(--text-primary, #ffffff);
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
-        /* --- LISTS --- */
-        ul.elegant-list {
+        /* Author Section within Grid */
+        .author-box {
+            margin-top: 10px;
+        }
+        .author-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary, #fff);
+        }
+        .author-title {
+            color: var(--text-secondary, #aaa);
+            font-size: 0.9rem;
+        }
+
+        /* Features List Styling */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-item {
+            background: rgba(255,255,255,0.03);
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: var(--text-secondary, #ddd);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-item::before {
+            content: "•";
+            color: var(--primary-accent, #4a90e2);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* How To List Styling */
+        .how-to-list {
             list-style: none;
             padding: 0;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
         }
-        ul.elegant-list li {
-            position: relative;
-            padding-left: 20px;
-            color: var(--text-secondary);
+
+        .how-to-list li {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
         }
-        ul.elegant-list li::before {
-            content: "•";
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-            line-height: 1.5rem;
+        
+        .how-to-list li:last-child {
+            border-bottom: none;
         }
 
-        /* --- BUTTONS --- */
-        .nav-btn {
-            background: none;
-            border: 1px solid var(--glass-border);
-            color: var(--text-primary);
-            padding: 10px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 30px;
-        }
-        .nav-btn:hover {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
+        .how-to-list li span {
+            font-size: 1.4rem;
+            line-height: 1;
         }
 
-        /* --- MOBILE RESPONSIVE --- */
-        @media (max-width: 700px) {
-            .oval-float {
-                float: none;
-                display: block;
-                margin: 0 auto 30px auto;
-                width: 200px;
-                shape-outside: none; /* Disable text wrapping on small screens */
+        /* Responsive */
+        @media (max-width: 850px) {
+            .intro-container {
+                grid-template-columns: 1fr; /* Stack vertically */
+                gap: 30px;
             }
-            .about-card { padding: 25px; }
-            h2 { font-size: 1.6rem; }
+            .profile-image-container {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+                order: -1; /* Move image to top on mobile? Remove this line if you want image below text */
+            }
+            .about-card {
+                padding: 25px;
+            }
         }
+        
+        /* Header styling fixes */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .icon-btn { background: none; border: none; cursor: pointer; color: inherit; padding: 5px; }
+        
+        /* Navigation Buttons */
+        .control-btn {
+            background: var(--primary-accent, #4a90e2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .control-btn:hover { opacity: 0.9; }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary, #888);
+        }
+        footer a { color: inherit; text-decoration: underline; }
+
     </style>
 </head>
 <body>
 
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 style="font-size: 1.2rem; margin:0;">About DCAS CPG 2025</h1>
+            <p style="font-size: 0.8rem; margin:0; opacity: 0.7;">Study Aid Platform</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme" style="font-size: 1.2rem;">🎨</button>
+    </div>
+</header>
+
 <main>
     <div class="about-card">
-        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 20px;">
-            <div>
-                <h2>About This Application</h2>
-                <div style="color: var(--text-secondary); font-size: 0.9rem;">DCAS Clinical Practice Guidelines 2025</div>
+        <h2>📘 About This Application</h2>
+        
+        <div class="intro-container">
+            
+            <div class="intro-text">
+                <div>
+                    <p>This is a study aid for the <strong>Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025</strong>. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
+                </div>
+
+                <div class="disclaimer-clean">
+                    <strong>Important Notice</strong>
+                    This application is for educational purposes only. It does not replace the official DCAS Clinical Practice Guidelines or any official memos. Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
+                </div>
+
+                <div class="author-box">
+                    <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; margin-bottom: 5px;">Created By</div>
+                    <div class="author-name">Soliman Anas Soliman</div>
+                    <div class="author-title">Emergency Medical Technician</div>
+                </div>
             </div>
-            <button id="themeToggle" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">🎨</button>
+
+            <div class="profile-image-container">
+                <img src="images/image-01.png" alt="Soliman Anas" class="profile-image">
+            </div>
+        </div>
+        
+        <h3>Features</h3>
+        <div class="feature-grid">
+            <div class="feature-item">Four themes (Dark, Light, Sepia, Forest)</div>
+            <div class="feature-item">Completion tracking for chapters</div>
+            <div class="feature-item">Progress dashboard with statistics</div>
+            <div class="feature-item">Flashcards with 3D flip</div>
+            <div class="feature-item">Quizzes with adjustable questions</div>
+            <div class="feature-item">Critical scenarios with KPIs</div>
+            <div class="feature-item">Full‑text search functionality</div>
         </div>
 
-        <img src="images/image-01.png" alt="Soliman Anas" class="oval-float">
-
-        <p>
-            This is a comprehensive study aid designed for the <strong>Dubai Corporation for Ambulance Services (DCAS)</strong>. It assists EMS personnel in reviewing Clinical Practice Guidelines through interactive summaries, 3D flashcards, quizzes, and critical scenarios.
-        </p>
-
-        <p>
-            The application is built to be intuitive and fast, allowing for quick reference and study sessions on the go. It features progress tracking to help you visualize your learning journey across all chapters.
-        </p>
-
-        <div class="disclaimer-text">
-            <strong>Important Notice</strong>
-            This application is for educational purposes only. It does not replace the official DCAS Clinical Practice Guidelines or any official memos. Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
-        </div>
-
-        <h3>Author</h3>
-        <p>
-            Created by <strong>Soliman Anas Soliman</strong>, an Emergency Medical Technician dedicated to improving educational accessibility for EMS professionals.
-        </p>
-
-        <h3>Key Features</h3>
-        <ul class="elegant-list">
-            <li>Four color themes (Dark/Light/Sepia)</li>
-            <li>Real-time Progress Dashboard</li>
-            <li>Interactive 3D Flashcards</li>
-            <li>KPI-based Critical Scenarios</li>
-            <li>Full-text Instant Search</li>
-            <li>Chapter Completion Tracking</li>
+        <h3>How to Use</h3>
+        <ul class="how-to-list">
+            <li><span>🎨</span> <div><strong>Theme Toggle:</strong> Click the palette icon to cycle through four color themes.</div></li>
+            <li><span>📋</span> <div><strong>Index Button:</strong> Opens the full table of contents for quick navigation.</div></li>
+            <li><span>📊</span> <div><strong>Stats Badge:</strong> Shows your total quiz attempts and scenario accuracy.</div></li>
+            <li><span>🔍</span> <div><strong>Search Bar:</strong> Type keywords to filter chapter cards in real time.</div></li>
+            <li><span>✅</span> <div><strong>Mark Done:</strong> Track your progress manually on cards.</div></li>
         </ul>
+        
+        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <p style="opacity: 0.6; font-size: 0.9rem;">Based on DCAS CPG Version 3 – 2025</p>
+        </div>
 
-        <div style="text-align: center;">
-            <button class="nav-btn" onclick="window.location.href='index.html'">← Back to Library</button>
+        <div style="text-align:center; margin-top:30px;">
+            <button class="control-btn" id="backHomeBtn">← Back to Chapters</button>
         </div>
     </div>
 </main>
 
-<script>
-    // Simple Theme Toggle Logic
-    const btn = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    btn.addEventListener('click', () => {
-        const current = html.getAttribute('data-theme');
-        html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
-    });
-</script>
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div>Refer to DCAS CPG and memo for official procedures.</div>
+</footer>
 
+<script>
+    (function() {
+        // Theme toggle
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+        themeBtn?.addEventListener('click', nextTheme);
+        initTheme();
+
+        // Home button logic
+        const goHome = () => window.location.href = 'index.html';
+        document.getElementById('homeBtn')?.addEventListener('click', goHome);
+        document.getElementById('backHomeBtn')?.addEventListener('click', goHome);
+    })();
+</script>
 </body>
 </html>
