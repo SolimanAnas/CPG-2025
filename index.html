@@ -54,6 +54,75 @@
         .menu-card.filtered-out {
             display: none;
         }
+        /* Special card style for c0 and c-index */
+        .menu-card.special-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: var(--glass-shadow);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .menu-card.special-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+        }
+        .menu-card.special-card .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .menu-card.special-card .status-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            background: rgba(0,0,0,0.06);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .menu-card.special-card h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 4px 0;
+        }
+        .menu-card.special-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        /* Footer visibility */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        footer div:first-child {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        footer div:last-child {
+            opacity: 0.8;
+            font-size: 0.7rem;
+        }
+        footer a {
+            color: inherit;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -82,8 +151,8 @@
 <main id="mainContent"></main>
 
 <footer>
-    <div>Created by Soliman Anas · Study Aid Only</div>
-    <div style="margin-top:4px;">Based on DCAS Clinical Practice Guidelines 2025</div>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
 <script>
@@ -121,9 +190,9 @@
 
         // ---------- COMPLETE CHAPTER LIST (ALL CPG 2025) ----------
         const CHAPTERS = [
-            // Special chapters (no buttons)
-            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
-            { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null },
+            // Special chapters (c0 and c-index)
+            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null, isSpecial: true },
+            { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null, isSpecial: true },
             
             // Universal Care (6 sections – all buttons enabled)
             { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
@@ -243,7 +312,7 @@
             renderMenu(); 
         };
 
-        // ---------- RENDER MENU WITH SEARCH ----------
+        // ---------- RENDER MENU WITH SEARCH AND SPECIAL CARDS ----------
         function renderMenu(filterText = '') {
             const stats = loadStorage(STATS_KEY, { chapters: {} });
             const completion = loadStorage(COMPLETION_KEY, {});
@@ -254,12 +323,25 @@
                 const baseFile = ch.chapterFile || ch.id;
                 const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                 
-                const isSpecial = (ch.id === 'c0' || ch.id === 'c-index');
-                const showFlashcardsQuiz = !isSpecial;
-                const showCritical = ch.hasCritical && !isSpecial;
-                const isChecked = completion[ch.id] || false;
+                // Special handling for c0 and c-index
+                if (ch.id === 'c0' || ch.id === 'c-index') {
+                    // Clickable special card
+                    return `
+                        <a href="chapters/${baseFile}.html?view=summary" class="menu-card special-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
+                            <div class="card-header">
+                                <span class="status-badge">${ch.id.toUpperCase()}</span>
+                            </div>
+                            <h2>${ch.shortTitle}</h2>
+                            <p>${ch.title}</p>
+                        </a>
+                    `;
+                }
 
-                // Build the card HTML
+                // Normal card for other chapters
+                const isChecked = completion[ch.id] || false;
+                const showFlashcardsQuiz = true; // all non-special have these
+                const showCritical = ch.hasCritical;
+
                 return `
                     <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
                         <div class="card-header">
