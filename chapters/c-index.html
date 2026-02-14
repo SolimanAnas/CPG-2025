@@ -196,6 +196,48 @@
         .btn-action:active { transform: translateY(1px); box-shadow: none; }
         .btn-summary { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
 
+        /* Search bar */
+        .search-container {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 4px 4px 4px 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--glass-shadow);
+        }
+        .search-container input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--text-primary);
+            outline: none;
+        }
+        .search-container input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+        .search-container button {
+            background: var(--primary-accent);
+            border: none;
+            border-radius: 40px;
+            padding: 10px 24px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-container button:active {
+            background: #003d80;
+        }
+        .index-table tr.filtered-out {
+            display: none;
+        }
+
         footer { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 0.75rem; opacity: 0.8; }
 
         @keyframes fadeInUp {
@@ -284,6 +326,43 @@
             } catch(e) {}
         }
         loadStats();
+
+        // ----- SEARCH FUNCTIONALITY FOR INDEX PAGE -----
+        // Wait for the DOM to be fully rendered by app.js
+        setTimeout(function() {
+            const searchInput = document.getElementById('indexSearch');
+            if (!searchInput) return;
+            const tableRows = document.querySelectorAll('.index-table tbody tr');
+            
+            function filterIndexRows(text) {
+                const lowerText = text.toLowerCase().trim();
+                tableRows.forEach(row => {
+                    const rowText = row.textContent.toLowerCase();
+                    if (rowText.includes(lowerText)) {
+                        row.classList.remove('filtered-out');
+                    } else {
+                        row.classList.add('filtered-out');
+                    }
+                });
+            }
+
+            searchInput.addEventListener('input', function(e) {
+                filterIndexRows(e.target.value);
+            });
+
+            const clearBtn = document.getElementById('indexSearchClear');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function() {
+                    searchInput.value = '';
+                    filterIndexRows('');
+                    clearBtn.style.display = 'none';
+                });
+                // Show clear button only when there's text
+                searchInput.addEventListener('input', function() {
+                    clearBtn.style.display = this.value ? 'block' : 'none';
+                });
+            }
+        }, 300); // Give app.js time to render the table
     })();
 </script>
 
