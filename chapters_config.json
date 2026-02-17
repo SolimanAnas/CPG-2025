@@ -1,0 +1,684 @@
+[
+    {
+        "id": "c0",
+        "shortTitle": "2025 Updates",
+        "title": "What's New in 2025",
+        "hasCritical": false,
+        "chapterGroup": null,
+        "isSpecial": true,
+        "specialGroup": "updates",
+        "chapterFile": "c0",
+        "sectionParam": null
+    },
+    {
+        "id": "c-index",
+        "shortTitle": "Index",
+        "title": "Full Table of Contents",
+        "hasCritical": false,
+        "chapterGroup": null,
+        "isSpecial": true,
+        "specialGroup": "index",
+        "chapterFile": "c-index",
+        "sectionParam": null
+    },
+    {
+        "id": "c1s1",
+        "shortTitle": "1.1 Universal Care",
+        "title": "Universal Care – Core Assessment",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s1"
+    },
+    {
+        "id": "c1s2",
+        "shortTitle": "1.2 Documentation",
+        "title": "Patient Care Documentation",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s2"
+    },
+    {
+        "id": "c1s3",
+        "shortTitle": "1.3 Triage",
+        "title": "Patient Triage Categories",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s3"
+    },
+    {
+        "id": "c1s4",
+        "shortTitle": "1.4 Functional Needs",
+        "title": "Functional Needs",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s4"
+    },
+    {
+        "id": "c1s5",
+        "shortTitle": "1.5 Treated at Scene",
+        "title": "Treated at Scene",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s5"
+    },
+    {
+        "id": "c1s6",
+        "shortTitle": "1.6 Refusal of Transfer",
+        "title": "Patient Refusal of Transfer",
+        "hasCritical": true,
+        "chapterGroup": "universal",
+        "isSpecial": false,
+        "chapterFile": "c1",
+        "sectionParam": "c1s6"
+    },
+    {
+        "id": "c2s1",
+        "shortTitle": "2.1 Airway Management",
+        "title": "Airway & Breathing",
+        "hasCritical": true,
+        "chapterGroup": "airway",
+        "isSpecial": false,
+        "chapterFile": "c2",
+        "sectionParam": "c2s1"
+    },
+    {
+        "id": "c2s2",
+        "shortTitle": "2.2 FBAO",
+        "title": "Foreign Body Airway Obstruction",
+        "hasCritical": true,
+        "chapterGroup": "airway",
+        "isSpecial": false,
+        "chapterFile": "c2",
+        "sectionParam": "c2s2"
+    },
+    {
+        "id": "c2s3",
+        "shortTitle": "2.3 Asthma",
+        "title": "Asthma",
+        "hasCritical": true,
+        "chapterGroup": "airway",
+        "isSpecial": false,
+        "chapterFile": "c2",
+        "sectionParam": "c2s3"
+    },
+    {
+        "id": "c2s4",
+        "shortTitle": "2.4 COPD",
+        "title": "COPD",
+        "hasCritical": true,
+        "chapterGroup": "airway",
+        "isSpecial": false,
+        "chapterFile": "c2",
+        "sectionParam": "c2s4"
+    },
+    {
+        "id": "c2s5",
+        "shortTitle": "2.5 Invasive Ventilation",
+        "title": "Invasive (Mechanical) Ventilation",
+        "hasCritical": true,
+        "chapterGroup": "airway",
+        "isSpecial": false,
+        "chapterFile": "c2",
+        "sectionParam": "c2s5"
+    },
+    {
+        "id": "c3-1",
+        "shortTitle": "3.1 Chest Pain / ACS",
+        "title": "Chest Pain / Acute Coronary Syndrome",
+        "hasCritical": true,
+        "chapterGroup": "cardio",
+        "isSpecial": false,
+        "chapterFile": "c3-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c3-2",
+        "shortTitle": "3.2 Adult Bradycardia",
+        "title": "Adult Bradycardia",
+        "hasCritical": true,
+        "chapterGroup": "cardio",
+        "isSpecial": false,
+        "chapterFile": "c3-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c3-3",
+        "shortTitle": "3.3 Adult Tachycardia",
+        "title": "Adult Tachycardia with a Pulse",
+        "hasCritical": true,
+        "chapterGroup": "cardio",
+        "isSpecial": false,
+        "chapterFile": "c3-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c3-4",
+        "shortTitle": "3.4 Acute Pulmonary Edema",
+        "title": "Acute Pulmonary Edema",
+        "hasCritical": true,
+        "chapterGroup": "cardio",
+        "isSpecial": false,
+        "chapterFile": "c3-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-1",
+        "shortTitle": "4.1 Adult BLS",
+        "title": "Adult Basic Life Support",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-2",
+        "shortTitle": "4.2 Pediatric BLS",
+        "title": "Pediatric Basic Life Support",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-3",
+        "shortTitle": "4.3 Adult Cardiac Arrest",
+        "title": "Adult Cardiac Arrest",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-4",
+        "shortTitle": "4.4 Pediatric Cardiac Arrest",
+        "title": "Pediatric Cardiac Arrest",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-5",
+        "shortTitle": "4.5 Trauma Cardiac Arrest",
+        "title": "Cardiac Arrest in Trauma",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-5",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-6",
+        "shortTitle": "4.6 Newborn Resuscitation",
+        "title": "Newborn (<4 weeks) and Pre‑term Infant Resuscitation",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-6",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-7",
+        "shortTitle": "4.7 Post-ROSC",
+        "title": "Post Cardiac Arrest Care (ROSC)",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-7",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-8",
+        "shortTitle": "4.8 Starting/Stopping CPR",
+        "title": "Starting, Stopping and Transferring CPR",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-8",
+        "sectionParam": null
+    },
+    {
+        "id": "c4-9",
+        "shortTitle": "4.9 Verification of Death",
+        "title": "Verification of Death",
+        "hasCritical": true,
+        "chapterGroup": "resus",
+        "isSpecial": false,
+        "chapterFile": "c4-9",
+        "sectionParam": null
+    },
+    {
+        "id": "c5-1",
+        "shortTitle": "5.1 Stroke",
+        "title": "Stroke",
+        "hasCritical": true,
+        "chapterGroup": "neuro",
+        "isSpecial": false,
+        "chapterFile": "c5-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c5-2",
+        "shortTitle": "5.2 Seizures",
+        "title": "Seizures",
+        "hasCritical": true,
+        "chapterGroup": "neuro",
+        "isSpecial": false,
+        "chapterFile": "c5-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-1",
+        "shortTitle": "6.1 Abdominal Pain",
+        "title": "Abdominal Pain",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-2",
+        "shortTitle": "6.2 Abnormal Behavior",
+        "title": "Abnormal Behavior",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-3",
+        "shortTitle": "6.3 Adrenal Insufficiency",
+        "title": "Adrenal Insufficiency",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-4",
+        "shortTitle": "6.4 Anaphylaxis",
+        "title": "Anaphylaxis / Allergic Reaction",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-5",
+        "shortTitle": "6.5 Altered Mental Status",
+        "title": "Altered Mental Status",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-5",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-6",
+        "shortTitle": "6.6 Epistaxis",
+        "title": "Epistaxis",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-6",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-7",
+        "shortTitle": "6.7 Fever and Sepsis",
+        "title": "Fever and Sepsis",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-7",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-8",
+        "shortTitle": "6.8 Hypoglycemia",
+        "title": "Hypoglycemia",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-8",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-9",
+        "shortTitle": "6.9 Hyperglycemia",
+        "title": "Hyperglycemia",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-9",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-10",
+        "shortTitle": "6.10 Nausea and Vomiting",
+        "title": "Nausea and Vomiting",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-10",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-11",
+        "shortTitle": "6.11 Non‑Traumatic Shock",
+        "title": "Non‑Traumatic Shock",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-11",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-12",
+        "shortTitle": "6.12 Pain Management",
+        "title": "Pain Management",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-12",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-13",
+        "shortTitle": "6.13 Sickle Cell Crisis",
+        "title": "Sickle Cell Crisis",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-13",
+        "sectionParam": null
+    },
+    {
+        "id": "c6-14",
+        "shortTitle": "6.14 Alcohol Intoxication",
+        "title": "Suspected Alcohol Intoxication",
+        "hasCritical": true,
+        "chapterGroup": "medical",
+        "isSpecial": false,
+        "chapterFile": "c6-14",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-1",
+        "shortTitle": "7.1 General Trauma",
+        "title": "General Trauma Management",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-2",
+        "shortTitle": "7.2 Burns",
+        "title": "Burns",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-3",
+        "shortTitle": "7.3 Crush Injuries",
+        "title": "Crush Injuries",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-4",
+        "shortTitle": "7.4 Limb Injuries",
+        "title": "Limb Injuries",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-5",
+        "shortTitle": "7.5 Spinal Motion Restriction",
+        "title": "Spinal Motion Restriction",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-5",
+        "sectionParam": null
+    },
+    {
+        "id": "c7-6",
+        "shortTitle": "7.6 Traumatic Brain Injury",
+        "title": "Traumatic Brain Injuries",
+        "hasCritical": true,
+        "chapterGroup": "trauma",
+        "isSpecial": false,
+        "chapterFile": "c7-6",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-1",
+        "shortTitle": "8.1 General Toxicology",
+        "title": "General Toxicology Management",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-2",
+        "shortTitle": "8.2 Opioid Overdose",
+        "title": "Opioid Overdose",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-3",
+        "shortTitle": "8.3 Beta‑Blocker Overdose",
+        "title": "Beta‑Blocker Overdose",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-4",
+        "shortTitle": "8.4 CCB Overdose",
+        "title": "Calcium Channel Blocker Overdose",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-5",
+        "shortTitle": "8.5 Organophosphate",
+        "title": "Organophosphate Poisoning",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-5",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-6",
+        "shortTitle": "8.6 Diving Emergencies",
+        "title": "Diving (SCUBA) Emergencies",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-6",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-7",
+        "shortTitle": "8.7 Drowning",
+        "title": "Drowning / Near Drowning",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-7",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-8",
+        "shortTitle": "8.8 Envenomation",
+        "title": "Envenomation",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-8",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-9",
+        "shortTitle": "8.9 Hypothermia",
+        "title": "Hypothermia / Cold Exposure",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-9",
+        "sectionParam": null
+    },
+    {
+        "id": "c8-10",
+        "shortTitle": "8.10 Hyperthermia",
+        "title": "Hyperthermia / Heat Exposure",
+        "hasCritical": true,
+        "chapterGroup": "environmental",
+        "isSpecial": false,
+        "chapterFile": "c8-10",
+        "sectionParam": null
+    },
+    {
+        "id": "c9-1",
+        "shortTitle": "9.1 Croup",
+        "title": "Croup",
+        "hasCritical": true,
+        "chapterGroup": "pediatric",
+        "isSpecial": false,
+        "chapterFile": "c9-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c9-2",
+        "shortTitle": "9.2 Pediatric Bradycardia",
+        "title": "Pediatric Bradycardia",
+        "hasCritical": true,
+        "chapterGroup": "pediatric",
+        "isSpecial": false,
+        "chapterFile": "c9-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c9-3",
+        "shortTitle": "9.3 Pediatric Tachycardia",
+        "title": "Pediatric Tachycardia",
+        "hasCritical": true,
+        "chapterGroup": "pediatric",
+        "isSpecial": false,
+        "chapterFile": "c9-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c10-1",
+        "shortTitle": "10.1 Childbirth",
+        "title": "Childbirth",
+        "hasCritical": true,
+        "chapterGroup": "obstetric",
+        "isSpecial": false,
+        "chapterFile": "c10-1",
+        "sectionParam": null
+    },
+    {
+        "id": "c10-2",
+        "shortTitle": "10.2 Post Partum Hemorrhage",
+        "title": "Post Partum Hemorrhage",
+        "hasCritical": true,
+        "chapterGroup": "obstetric",
+        "isSpecial": false,
+        "chapterFile": "c10-2",
+        "sectionParam": null
+    },
+    {
+        "id": "c10-3",
+        "shortTitle": "10.3 PV Hemorrhage",
+        "title": "PV Hemorrhage in Pregnancy",
+        "hasCritical": true,
+        "chapterGroup": "obstetric",
+        "isSpecial": false,
+        "chapterFile": "c10-3",
+        "sectionParam": null
+    },
+    {
+        "id": "c10-4",
+        "shortTitle": "10.4 Eclampsia",
+        "title": "Eclampsia / Pre‑eclampsia",
+        "hasCritical": true,
+        "chapterGroup": "obstetric",
+        "isSpecial": false,
+        "chapterFile": "c10-4",
+        "sectionParam": null
+    },
+    {
+        "id": "c11-1",
+        "shortTitle": "11.1 START Triage",
+        "title": "S.T.A.R.T Triage (MCI Triage)",
+        "hasCritical": true,
+        "chapterGroup": "mci",
+        "isSpecial": false,
+        "chapterFile": "c11-1",
+        "sectionParam": null
+    },
+    {
+        "id": "s1",
+        "shortTitle": "S1 Scope of Practice",
+        "title": "Scope of Practice Matrix",
+        "hasCritical": false,
+        "chapterGroup": "scope",
+        "isSpecial": false,
+        "chapterFile": "s1",
+        "sectionParam": null
+    },
+    {
+        "id": "m1-38",
+        "shortTitle": "M1–38 Formulary",
+        "title": "Medication Formulary (38 drugs)",
+        "hasCritical": false,
+        "chapterGroup": "scope",
+        "isSpecial": false,
+        "chapterFile": "m1-38",
+        "sectionParam": null
+    }
+]

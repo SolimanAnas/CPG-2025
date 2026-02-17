@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- PWA Manifest and icons -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    
+    <style>
+        .about-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--glass-shadow);
+            margin: 20px 0;
+            overflow: auto; /* clearfix for float */
+        }
+        .about-card h2 {
+            color: var(--primary-accent);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-universal);
+            padding-bottom: 10px;
+        }
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--text-primary);
+        }
+        .about-card p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+        .about-card ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        .about-card li {
+            margin-bottom: 8px;
+        }
+        /* Important note – very subtle background, no lines */
+        .about-card .important-note {
+            margin: 20px 0;
+            padding: 16px 20px;
+            background: rgba(0,0,0,0.02);
+            border-radius: 12px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        [data-theme="dark"] .about-card .important-note {
+            background: rgba(255,255,255,0.05);
+        }
+        .about-card .important-note strong {
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+        /* Floated image – absolutely no borders, no shadows, no box */
+        .about-card .float-image {
+            float: right;
+            width: 300px;        /* about 1.5x typical size */
+            margin-left: 30px;
+            margin-bottom: 20px;
+            /* no border, no shadow, no border-radius */
+            border: none;
+            box-shadow: none;
+            background: transparent;
+        }
+        @media (max-width: 700px) {
+            .about-card .float-image {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+        /* Style for the How‑to section */
+        .how-to-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .how-to-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .how-to-list li span {
+            font-size: 1.2rem;
+            min-width: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1>About DCAS CPG 2025</h1>
+            <p>Study Aid Platform</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <div class="stats-badge" id="liveStatsBadge">
+            <span>📊 <span id="statsAttempts">0</span></span>
+            <div class="stats-divider"></div>
+            <span>🎯 <span id="statsCritical">0%</span></span>
+        </div>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+        <a href="about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main>
+    <div class="about-card">
+        <h2>📘 About This Application</h2>
+        
+        <!-- Floated image – pure transparent PNG, no box, no shadow -->
+        <img src="images/image-01.png" alt="Soliman Anas" class="float-image">
+        
+        <h3>Disclaimer</h3>
+        <p>This is a study aid for the Dubai Corporation for Ambulance Services (DCAS) Clinical Practice Guidelines 2025. It is designed to help EMS personnel review guidelines through summaries, flashcards, quizzes, and critical scenarios.</p>
+
+        <!-- Important note – no lines, just a soft background -->
+        <div class="important-note">
+            <strong>Important:</strong> This application is for educational purposes only.<br>
+            It does not replace the official DCAS Clinical Practice Guidelines or any official memos.<br>
+            Always refer to the latest official DCAS documents and follow your scope of practice and local protocols.
+        </div>
+        
+        <h3>Author</h3>
+        <p>Created by <strong>Soliman Anas Soliman</strong><br>EMT, RN, MSN, MBA, Graphic Designer and Junior Web Developer</p>
+        
+        <h3>Features</h3>
+        <ul>
+            <li>Four themes (Dark, Light, Sepia, Forest) – saved to your browser</li>
+            <li>Completion tracking for chapters</li>
+            <li>Progress dashboard with statistics</li>
+            <li>Flashcards with 3D flip</li>
+            <li>Quizzes with adjustable question count</li>
+            <li>Critical scenarios with KPIs</li>
+            <li>Full‑text search on main menu and index</li>
+        </ul>
+
+        <h3>How to Use</h3>
+        <ul class="how-to-list">
+            <li><span>🎨</span> <strong>Theme Toggle (header):</strong> Click the palette icon to cycle through four color themes – Dark, Light, Sepia, Forest. Your choice is saved automatically.</li>
+            <li><span>📋</span> <strong>Index Button (header):</strong> Opens the full table of contents (same as the "Index" special card).</li>
+            <li><span>📊</span> <strong>Stats Badge (header):</strong> Shows your total quiz attempts and critical‑scenario accuracy at a glance.</li>
+            <li><span>🔍</span> <strong>Search Bar (main menu):</strong> Type any keyword to filter chapter cards in real time. Clear the search with the ✕ button.</li>
+            <li><span>✅</span> <strong>Mark Done (on cards):</strong> Track your progress – completed chapters are stored in your browser.</li>
+            <li><span>📘</span> <strong>Summary / Flashcards / Quiz / Scenario:</strong> Each chapter card has these four buttons (except special cards). They lead to different study modes.</li>
+            <li><span>🔄</span> <strong>Section Tabs (inside chapters):</strong> If a chapter has multiple sections (e.g. Universal Care), you can switch between them directly.</li>
+        </ul>
+        
+        <h3>Version</h3>
+        <p>Based on DCAS CPG Version 3 – 2025</p>
+        
+        <div style="text-align:center; margin-top:30px;">
+            <button class="control-btn" data-action="backHome">← Back to Chapters</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<script>
+    (function() {
+        // Theme toggle
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+        themeBtn?.addEventListener('click', nextTheme);
+        initTheme();
+
+        // Home button
+        document.getElementById('homeBtn')?.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        // Back to Chapters button
+        document.querySelector('[data-action="backHome"]')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
+
+        // Stats badge update
+        function loadStats() {
+            try {
+                const data = localStorage.getItem('dcas_cpg_stats');
+                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+                document.getElementById('statsCritical').innerText = `${critAcc}%`;
+            } catch(e) {}
+        }
+        loadStats();
+    })();
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('PWA Ready!', reg))
+                .catch(err => console.log('PWA Failed', err));
+        });
+    }
+</script>
+</body>
+</html>

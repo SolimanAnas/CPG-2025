@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Cardiovascular</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- PWA Manifest and icons -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="../icon.png">
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">Cardiovascular</h1>
+            <p id="pageSubtitle">DCAS CPG 2025</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <div class="stats-badge" id="liveStatsBadge">
+            <span>📊 <span id="statsAttempts">0</span></span>
+            <div class="stats-divider"></div>
+            <span>🎯 <span id="statsCritical">0%</span></span>
+        </div>
+        <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+        <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main id="mainContent"></main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="../about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<script src="../content/c3.js"></script>
+<script src="../app.js"></script>
+<script>
+    (function() {
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', nextTheme);
+        }
+        initTheme();
+
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = '../index.html';
+        });
+
+        function loadStats() {
+            try {
+                const data = localStorage.getItem('dcas_cpg_stats');
+                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+                document.getElementById('statsCritical').innerText = `${critAcc}%`;
+            } catch(e) {}
+        }
+        loadStats();
+    })();
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js')
+                .then(reg => console.log('PWA Ready!', reg))
+                .catch(err => console.log('PWA Failed', err));
+        });
+    }
+</script>
+</body>
+</html>
