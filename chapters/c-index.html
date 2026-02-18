@@ -9,23 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Shared stylesheet (contains all themes and components) -->
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="../styles.css">
     
-    <!-- PWA Manifest and icons -->
+    <!-- PWA -->
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0056b3">
     <link rel="apple-touch-icon" href="../icons/icon.png">
+
+    <!-- Anchor for dynamic index CSS (prevents repaint glitch) -->
+    <style id="cIndexStylesAnchor"></style>
 </head>
 <body>
 
 <header>
     <div class="header-left">
         <button class="icon-btn" id="homeBtn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
         </button>
+
         <div class="header-text">
             <h1 id="pageTitle">DCAS CPG Index</h1>
             <p id="pageSubtitle">Complete Table of Contents</p>
@@ -34,7 +40,7 @@
 
     <div class="header-right">
 
-        <!-- Theme Toggle (Palette Icon) -->
+        <!-- Theme Toggle -->
         <button class="icon-btn" id="themeToggle" title="Switch Theme">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
@@ -47,110 +53,69 @@
             </svg>
         </button>
 
-        <!-- Stats Badge -->
+        <!-- Stats -->
         <div class="stats-badge" id="liveStatsBadge">
             <span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2"
-                     stroke-linecap="round" stroke-linejoin="round"
-                     style="vertical-align: middle; margin-right: 4px;">
-                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="16"></line>
-                </svg>
-                <span id="statsAttempts">0</span>
+                📊 <span id="statsAttempts">0</span>
             </span>
 
             <div class="stats-divider"></div>
 
             <span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2"
-                     stroke-linecap="round" stroke-linejoin="round"
-                     style="vertical-align: middle; margin-right: 4px;">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="4"></circle>
-                </svg>
-                <span id="statsCritical">0%</span>
+                🎯 <span id="statsCritical">0%</span>
             </span>
         </div>
 
-        <!-- About Button -->
+        <!-- About -->
         <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
+            ℹ️
         </a>
 
     </div>
 </header>
 
-<main id="mainContent">
-    <!-- Content will be injected by app.js -->
-</main>
+<main id="mainContent"></main>
 
 <footer>
     <div>Created by Soliman Anas · for study aid only</div>
-    <div><a href="../about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+    <div>
+        <a href="../about.html">About & Disclaimer</a> ·
+        Refer to DCAS CPG and memo for procedures and protocols.
+    </div>
 </footer>
 
 <script src="../content/c-index.js"></script>
 <script src="../app.js"></script>
 
 <script>
-    (function() {
-        const themeBtn = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        const themes = ['dark', 'light', 'sepia', 'forest'];
-        
-        function initTheme() {
-            const saved = localStorage.getItem('theme') || 'dark';
-            html.setAttribute('data-theme', saved);
-        }
+(function() {
+    const themeBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const themes = ['dark','light','sepia','forest'];
 
-        function nextTheme() {
-            const current = html.getAttribute('data-theme') || 'dark';
-            const currentIndex = themes.indexOf(current);
-            const nextIndex = (currentIndex + 1) % themes.length;
-            const next = themes[nextIndex];
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        }
+    function initTheme() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+    }
 
-        if (themeBtn) {
-            themeBtn.addEventListener('click', nextTheme);
-        }
-        initTheme();
+    function nextTheme() {
+        const current = html.getAttribute('data-theme') || 'dark';
+        const currentIndex = themes.indexOf(current);
+        const nextIndex = (currentIndex + 1) % themes.length;
+        const next = themes[nextIndex];
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
 
-        document.getElementById('homeBtn').addEventListener('click', () => {
+    if (themeBtn) themeBtn.addEventListener('click', nextTheme);
+    initTheme();
+
+    document.getElementById('homeBtn')
+        .addEventListener('click', () => {
             window.location.href = '../index.html';
         });
 
-        function loadStats() {
-            try {
-                const data = localStorage.getItem('dcas_cpg_stats');
-                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
-                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
-                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
-                document.getElementById('statsCritical').innerText = `${critAcc}%`;
-            } catch(e) {}
-        }
-        loadStats();
-    })();
-</script>
-
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('../sw.js')
-                .then(reg => console.log('PWA Ready!', reg))
-                .catch(err => console.log('PWA Failed', err));
-        });
-    }
+})();
 </script>
 
 </body>
