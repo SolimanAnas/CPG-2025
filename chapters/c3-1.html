@@ -1,203 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DCAS CPG 2025 · Coming Soon</title>
-    <style>
-        /* ---------- AERO VISTA GLASS THEME – ELEGANT & BOLD ---------- */
-        :root {
-            --glass-bg: rgba(255, 255, 255, 0.8);
-            --glass-border: rgba(255, 255, 255, 0.7);
-            --glass-shadow: 0 20px 40px 0 rgba(31, 38, 135, 0.3);
-            --primary-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            --text-dark: #1a2a3a;
-            --text-light: #ffffff;
-            --accent-gold: #d4af37;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Segoe UI', 'Playfair Display', Georgia, serif, system-ui, -apple-system, sans-serif;
-            background: var(--primary-gradient);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            touch-action: manipulation;
-        }
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .home-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 8px 14px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: block;
-            border: none;
-            transition: all 0.2s ease;
-        }
-        .home-btn:active { background: rgba(255,255,255,0.4); transform: scale(0.95); }
-        .header-text h1 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
-        .header-text p { margin: 2px 0 0; font-size: 0.85rem; opacity: 0.9; font-weight: 300; }
-
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        /* ---------- LUXURY COMING SOON CARD – BOLD & VISIBLE ---------- */
-        .coming-soon-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 60px;
-            box-shadow: var(--glass-shadow);
-            padding: 70px 40px;
-            text-align: center;
-            width: 100%;
-            animation: fadeIn 1.2s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .coming-soon-title {
-            font-size: 6rem;
-            font-weight: 900;
-            background: linear-gradient(145deg, #0a3b4e, #1e6f8f, #0a3b4e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-            letter-spacing: -2px;
-            line-height: 1;
-            font-family: 'Georgia', 'Times New Roman', serif;
-        }
-
-        .coming-soon-subtitle {
-            font-family: 'Georgia', 'Times New Roman', cursive, serif;
-            font-size: 3rem;
-            font-style: italic;
-            font-weight: 600;
-            color: #0a3b4e;
-            text-shadow: 0 2px 5px rgba(255,255,255,0.7);
-            border-top: 3px solid rgba(0,86,179,0.3);
-            border-bottom: 3px solid rgba(0,86,179,0.3);
-            display: inline-block;
-            padding: 15px 40px;
-            margin-top: 15px;
-            letter-spacing: 3px;
-        }
-
-        .construction-message {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: #1a3a4a;
-            background: rgba(255,255,255,0.5);
-            padding: 15px 25px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 30px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.8);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .back-button-container {
-            margin-top: 50px;
-        }
-
-        .control-btn {
-            padding: 18px 45px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 1.4rem;
-            color: white;
-            background: linear-gradient(to bottom, #00b4db, #0083b0);
-            box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-block;
-            text-decoration: none;
-            border: 1px solid rgba(255,255,255,0.3);
-            letter-spacing: 1px;
-        }
-        .control-btn:active { transform: scale(0.96); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-
-        footer {
-            padding: 30px;
-            text-align: center;
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-
-        /* ---------- RESPONSIVE – STILL HUGE ON SMALL SCREENS ---------- */
-        @media (max-width: 600px) {
-            .coming-soon-title { font-size: 4.2rem; }
-            .coming-soon-subtitle { font-size: 2.2rem; }
-            .construction-message { font-size: 1.4rem; }
-            .control-btn { font-size: 1.2rem; padding: 14px 30px; }
-        }
-        @media (max-width: 400px) {
-            .coming-soon-title { font-size: 3.2rem; }
-            .coming-soon-subtitle { font-size: 1.8rem; }
-            .construction-message { font-size: 1.1rem; }
-        }
-    </style>
+    <title>DCAS CPG 2025 · Chest Pain / ACS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    
+    <!-- PWA Manifest and icons -->
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="../icon.png">
 </head>
 <body>
-    <header>
-        <button class="home-btn" id="homeBtn">←</button>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
         <div class="header-text">
-            <h1 id="pageTitle">DCAS CPG 2025</h1>
-            <p id="pageSubtitle">Coming Soon</p>
+            <h1 id="pageTitle">Chest Pain / ACS</h1>
+            <p id="pageSubtitle">DCAS CPG 2025</p>
         </div>
-    </header>
-    <main id="mainContent">
-        <div class="coming-soon-card">
-            <div class="coming-soon-title">Coming Soon</div>
-            <div class="coming-soon-subtitle">Stay tuned.....</div>
-            <div class="construction-message">
-                📘 This CPG chapter is under construction
-            </div>
-            <div class="back-button-container">
-                <button class="control-btn" data-action="backHome">← Back to Chapters</button>
-            </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <div class="stats-badge" id="liveStatsBadge">
+            <span>📊 <span id="statsAttempts">0</span></span>
+            <div class="stats-divider"></div>
+            <span>🎯 <span id="statsCritical">0%</span></span>
         </div>
-    </main>
-    <footer>
-        <div>Created by Soliman Anas · Study aid only</div>
-    </footer>
-    <!-- app.js will replace content when chapter data exists -->
-    <script src="../app.js"></script>
+        <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+        <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main id="mainContent"></main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="../about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<script src="../content/c3-1.js"></script>
+<script src="../app.js"></script>
+<script>
+    (function() {
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', nextTheme);
+        }
+        initTheme();
+
+        document.getElementById('homeBtn').addEventListener('click', () => {
+            window.location.href = '../index.html';
+        });
+
+        function loadStats() {
+            try {
+                const data = localStorage.getItem('dcas_cpg_stats');
+                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
+                document.getElementById('statsCritical').innerText = `${critAcc}%`;
+            } catch(e) {}
+        }
+        loadStats();
+    })();
+</script>
+
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js')
+                .then(reg => console.log('PWA Ready!', reg))
+                .catch(err => console.log('PWA Failed', err));
+        });
+    }
+</script>
 </body>
 </html>
