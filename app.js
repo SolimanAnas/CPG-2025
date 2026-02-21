@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (FIXED navigation) ========== */
+/* ========== app.js – DCAS CPG 2025 (with flat chapter support) ========== */
 (function(){
 "use strict";
 
@@ -30,7 +30,7 @@ const dom = {
 };  
 
 // ---------- STATE ----------  
-const state = {  
+let state = {  
     sections: chapterData ? (chapterData.sections || null) : null,  
     activeSectionId: null,  
     activeSection: null,  
@@ -45,6 +45,20 @@ const state = {
     criticalScore: 0,  
     stats: storage.load()  
 };  
+
+/* ---------- FIX FOR FLAT CHAPTERS (no sections) ---------- */
+if (!state.sections && chapterData) {
+    // Create a single virtual section from the chapter's root properties
+    state.sections = [{
+        id: chapterData.id,
+        shortTitle: chapterData.shortTitle,
+        summary: chapterData.summary || '',
+        quiz: chapterData.quiz || [],
+        flashcards: chapterData.flashcards || [],
+        critical: chapterData.critical || []
+    }];
+}
+/* -------------------------------------------------------- */
 
 // ---------- UTILITIES ----------  
 const utils = {  
@@ -881,6 +895,7 @@ document.addEventListener('DOMContentLoaded', function() {
             switchSection(state.sections[0].id);
         }
     }
+
 });
 
 })();
