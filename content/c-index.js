@@ -1,6 +1,4 @@
-/* ========== c-index.js – Full CPG Index (Glitch-Free Version) ========== */
-
-injectIndexStyles(); // Inject styles safely into <head> once
+/* ========== c-index.js – Full CPG Index (Glassy Search Bar) ========== */
 
 window.CPG_DATA = {
     id: "c-index",
@@ -18,115 +16,10 @@ window.CPG_DATA = {
     ]
 };
 
-function injectIndexStyles() {
-
-    const anchor = document.getElementById("cIndexStylesAnchor");
-    if (!anchor) return;
-
-    anchor.innerHTML = `
-        .index-search-wrapper {
-            display: flex;
-            align-items: center;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 40px;
-            padding: 4px 4px 4px 20px;
-            margin-bottom: 24px;
-            backdrop-filter: blur(10px);
-            box-shadow: var(--glass-shadow);
-        }
-
-        .index-search-wrapper span {
-            font-size: 1.2rem;
-            margin-right: 8px;
-            color: var(--text-secondary);
-        }
-
-        .index-search-wrapper input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            padding: 12px 0;
-            font-size: 1rem;
-            color: var(--text-primary);
-            outline: none;
-        }
-
-        .index-search-wrapper input::placeholder {
-            color: var(--text-secondary);
-            opacity: 0.7;
-        }
-
-        .index-search-wrapper button {
-            background: transparent;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-right: 4px;
-            padding: 0;
-        }
-
-        .index-search-wrapper button:hover {
-            background: rgba(255,255,255,0.1);
-            color: var(--text-primary);
-        }
-
-        .index-category {
-            margin: 20px 0 10px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-bottom: 2px solid currentColor;
-            padding-bottom: 5px;
-        }
-
-        .index-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
-
-        .index-topic-link {
-            display: block;
-            padding: 12px 0;
-            font-weight: 500;
-            font-size: 1.05rem;
-            color: var(--text-primary);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(128, 128, 128, 0.15);
-            transition: color 0.2s, padding-left 0.2s, background 0.2s;
-        }
-
-        .index-topic-link:hover {
-            color: var(--primary-accent);
-            padding-left: 8px;
-            background: rgba(0,0,0,0.02);
-            border-radius: 8px 0 0 8px;
-        }
-
-        .index-no-results {
-            padding: 30px;
-            text-align: center;
-            color: var(--text-secondary);
-            font-style: italic;
-            background: var(--glass-bg);
-            border-radius: 16px;
-            border: 1px dashed var(--glass-border);
-        }
-    `;
-}
-
 function generateIndexHTML() {
 
+    /* ===================== FULL ORIGINAL CHAPTER ARRAY ===================== */
     const CHAPTERS = [
-
         // Universal Care
         { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", chapterFile: "c1", sectionParam: "c1s1", chapterGroup: "universal" },
         { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", chapterFile: "c1", sectionParam: "c1s2", chapterGroup: "universal" },
@@ -213,11 +106,12 @@ function generateIndexHTML() {
         // MCI
         { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", chapterFile: "c11-1", chapterGroup: "mci" },
 
-        // Scope
+        // Scope & Medications
         { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", chapterFile: "s1", chapterGroup: "scope" },
         { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", chapterFile: "m1-38", chapterGroup: "scope" }
     ];
 
+    /* ================= CATEGORIES ================= */
     const categories = {
         universal: "🛡️ Universal Care",
         airway: "🫁 Airway & Breathing",
@@ -233,29 +127,120 @@ function generateIndexHTML() {
         scope: "📘 Scope & Medications"
     };
 
-    let html = `
-        <div class="sum-card" id="indexRoot">
-            <h3>📚 Complete DCAS CPG 2025 Index</h3>
+    let html = `<div class="sum-card" id="indexRoot">
+        <h3>📚 Complete DCAS CPG 2025 Index</h3>
 
-            <div class="index-search-wrapper">
-                <span>🔍</span>
-                <input type="text" id="indexSearchInput" placeholder="Search guidelines...">
-                <button id="indexSearchClearBtn" style="display:none;">✕</button>
-            </div>
+        <!-- Glassy search bar styles – matches the home page exactly -->
+        <style>
+            .index-search-wrapper {
+                display: flex;
+                align-items: center;
+                background: var(--glass-bg);
+                border: 1px solid var(--glass-border);
+                border-radius: 40px;
+                padding: 4px 4px 4px 20px;
+                margin-bottom: 24px;
+                backdrop-filter: blur(10px);
+                box-shadow: var(--glass-shadow);
+            }
+            .index-search-wrapper span {
+                font-size: 1.2rem;
+                margin-right: 8px;
+                color: var(--text-secondary);
+            }
+            .index-search-wrapper input {
+                flex: 1;
+                background: transparent;
+                border: none;
+                padding: 12px 0;
+                font-size: 1rem;
+                color: var(--text-primary);
+                outline: none;
+            }
+            .index-search-wrapper input::placeholder {
+                color: var(--text-secondary);
+                opacity: 0.7;
+            }
+            .index-search-wrapper button {
+                background: transparent;
+                border: none;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                cursor: pointer;
+                transition: all 0.2s;
+                margin-right: 4px;
+                padding: 0;
+            }
+            .index-search-wrapper button:hover {
+                background: rgba(255,255,255,0.1);
+                color: var(--text-primary);
+            }
+            .index-search-wrapper button:active {
+                transform: scale(0.95);
+            }
+            .index-category {
+                margin: 20px 0 10px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border-bottom: 2px solid currentColor;
+                padding-bottom: 5px;
+            }
+            .index-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 15px;
+            }
+            .index-topic-link {
+                display: block;
+                padding: 12px 0;
+                font-weight: 500;
+                font-size: 1.05rem;
+                color: var(--text-primary);
+                text-decoration: none;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+                transition: color 0.2s, padding-left 0.2s, background 0.2s;
+            }
+            .index-topic-link:hover {
+                color: var(--primary-accent);
+                padding-left: 8px;
+                background: rgba(0,0,0,0.02);
+                border-radius: 8px 0 0 8px;
+            }
+            .index-no-results {
+                padding: 30px;
+                text-align: center;
+                color: var(--text-secondary);
+                font-style: italic;
+                background: var(--glass-bg);
+                border-radius: 16px;
+                border: 1px dashed var(--glass-border);
+            }
+        </style>
 
-            <div id="indexTableContainer">
+        <!-- Search bar -->
+        <div class="index-search-wrapper">
+            <span>🔍</span>
+            <input type="text" id="indexSearchInput" placeholder="Search guidelines..." value="">
+            <button id="indexSearchClearBtn" style="display: none;">✕</button>
+        </div>
+
+        <div id="indexTableContainer">
     `;
 
     for (let group in categories) {
-
         const groupChapters = CHAPTERS.filter(ch => ch.chapterGroup === group);
         if (!groupChapters.length) continue;
 
-        html += `<h4 class="index-category">${categories[group]}</h4>`;
+        html += `<h4 class="index-category" style="color: var(--accent-${group});">${categories[group]}</h4>`;
         html += `<table class="index-table">`;
 
         groupChapters.forEach(ch => {
-
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
             const link = `${baseFile}.html?view=summary${sectionParam}`;
@@ -274,16 +259,11 @@ function generateIndexHTML() {
         html += `</table>`;
     }
 
-    html += `
-            <div id="noResultsMsg" class="index-no-results" style="display:none;">
-                No matching guidelines found.
-            </div>
-        </div>
-    </div>
-    `;
+    html += `<div id="noResultsMsg" class="index-no-results" style="display: none;">No matching guidelines found.</div>`;
+    html += `</div></div>`;
 
+    /* ================= SEARCH LOGIC (EXACTLY AS ORIGINAL) ================= */
     setTimeout(() => {
-
         const input = document.getElementById('indexSearchInput');
         const clearBtn = document.getElementById('indexSearchClearBtn');
         const rows = document.querySelectorAll('.index-row');
@@ -318,14 +298,12 @@ function generateIndexHTML() {
         }
 
         input.addEventListener('input', () => {
-
             const query = input.value.trim();
             clearBtn.style.display = query ? 'flex' : 'none';
             const lowerQuery = query.toLowerCase();
             let visibleCount = 0;
 
             rows.forEach(row => {
-
                 const link = row.querySelector('.index-topic-link');
                 const original = link.getAttribute('data-original');
                 const title = row.getAttribute('data-title');
@@ -334,13 +312,11 @@ function generateIndexHTML() {
                     row.style.display = '';
                     link.innerHTML = original;
                     visibleCount++;
-                }
-                else if (fuzzyMatch(title, lowerQuery)) {
+                } else if (fuzzyMatch(title, lowerQuery)) {
                     row.style.display = '';
                     link.innerHTML = highlight(original, query);
                     visibleCount++;
-                }
-                else {
+                } else {
                     row.style.display = 'none';
                 }
             });
@@ -364,8 +340,7 @@ function generateIndexHTML() {
             clearBtn.style.display = 'none';
             input.dispatchEvent(new Event('input'));
         });
-
     }, 50);
 
     return html;
-} 
+}
