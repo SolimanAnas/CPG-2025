@@ -173,9 +173,9 @@ window.CPG_DATA = {
         },
         {
             q: "What is the Broselow tape used for?",
-            options: ["Measuring height", "Estimating weight and equipment sizes", "Determining drug allergies", "Measuring blood pressure"],
+            options: ["Measuring height", "Estimating weight and drug doses", "Determining drug allergies", "Measuring blood pressure"],
             correct: 1,
-            explanation: "Broselow tape estimates weight based on length, guiding equipment sizes and drug doses."
+            explanation: "Broselow tape estimates weight based on length, guiding drug doses and equipment sizes."
         },
         {
             q: "In a child with suspected trauma, which airway maneuver should be used?",
