@@ -913,3 +913,105 @@ footer a {
         font-size: 1.3rem;
     }
 }
+
+/* ========== ADDED: Remove ugly focus outlines / tap highlights ========== */
+button,
+.icon-btn,
+.control-btn,
+.btn-action,
+.btn-flash,
+.btn-quiz,
+.btn-scenario,
+.setup-btn,
+.download-btn,
+.float-btn,
+.toggle-btn,
+.section-tab,
+.option-btn,
+#nextQuizBtn,
+#nextCriticalBtn,
+[class*="btn"] {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    user-select: none; /* optional: prevent text selection on double‑tap */
+}
+
+/* Firefox specific: remove focus ring */
+button::-moz-focus-inner,
+.icon-btn::-moz-focus-inner,
+.control-btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* For all focusable elements, you may also want to disable focus-visible */
+:focus-visible {
+    outline: none !important;
+}
+/* ===== GLOBAL RESET: Remove tap highlights and focus outlines ===== */
+/* Remove tap highlight on mobile browsers */
+* {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;
+}
+
+/* Target all interactive elements specifically */
+button,
+.button,
+[role="button"],
+a,
+a:visited,
+input,
+select,
+textarea,
+[tabindex],
+.icon-btn,
+.control-btn,
+.btn-action,
+.btn-flash,
+.btn-quiz,
+.btn-scenario,
+.setup-btn,
+.download-btn,
+.float-btn,
+.toggle-btn,
+.section-tab,
+.option-btn,
+#nextQuizBtn,
+#nextCriticalBtn,
+[class*="btn"] {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    user-select: none; /* optional: prevent text selection on double-tap */
+}
+
+/* Remove Firefox inner focus ring */
+button::-moz-focus-inner,
+[role="button"]::-moz-focus-inner,
+a::-moz-focus-inner,
+.icon-btn::-moz-focus-inner,
+.control-btn::-moz-focus-inner,
+[class*="btn"]::-moz-focus-inner {
+    border: 0 !important;
+    padding: 0 !important;
+    outline: none !important;
+}
+
+/* Disable focus-visible completely (use with caution) */
+:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Also disable any default focus styles on active/pressed states */
+:active,
+:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
