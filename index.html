@@ -820,11 +820,26 @@
         }
 
         window.app = window.app || {};
-        window.app.toggleCompletion = function(chapterId, checked) {
+        
+        // ---------- 🆕 NEW TOGGLE FUNCTION – NO RERENDER, NO FLICKER ----------
+        window.app.toggleCompletion = function(checkbox, chapterId) {
+            // Get the new checked state
+            const checked = checkbox.checked;
+            
+            // Update localStorage
             const completion = loadStorage(COMPLETION_KEY, {});
             completion[chapterId] = checked;
             saveStorage(COMPLETION_KEY, completion);
-            renderMenu(); 
+            
+            // Find the previous sibling <span> that contains the "Mark Done" / "Completed" text
+            // The HTML structure is: <span>text</span> <input ...> <span class="toggle-track"></span>
+            const textSpan = checkbox.previousElementSibling;
+            if (textSpan && textSpan.tagName === 'SPAN') {
+                textSpan.textContent = checked ? 'Completed' : 'Mark Done';
+            }
+            
+            // Update global progress stats (dashboard and drawer)
+            updateAllProgress();
         };
 
         // ---------- RENDER MENU ----------
@@ -865,7 +880,7 @@
                                     <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
                                     <input type="checkbox" class="toggle-input" 
                                         ${isChecked ? 'checked' : ''} 
-                                        onchange="window.app.toggleCompletion('${ch.id}', this.checked)">
+                                        onchange="window.app.toggleCompletion(this, '${ch.id}')">
                                     <span class="toggle-track"></span>
                                 </label>
                             </div>
@@ -1008,6 +1023,14 @@
         const indexBtn = document.getElementById('headerIndexBtn');
         if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
         if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
+
+        // ---------- 🛑 FIX #3: Stop propagation on toggle clicks to prevent page reload ----------
+        document.addEventListener('click', function(e) {
+            // Check if the click originated from inside the toggle wrapper
+            if (e.target.closest('.toggle-wrapper')) {
+                e.stopPropagation();
+            }
+        }, true); // use capture phase to intercept early
 
         renderMenu();
         updateFloatButtons();
