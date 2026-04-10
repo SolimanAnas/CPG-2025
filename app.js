@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (with flat chapter support) ========== */
+/* ========== app.js – DCAS CPG 2025 (Final Clean) ========== */
 (function(){
 "use strict";
 
@@ -17,6 +17,181 @@ const storage = (function() {
     }  
     return { load, save };  
 })();  
+
+// ---------- EARLY INIT: theme + font-size applied BEFORE render to prevent flash ----------
+(function() {
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    const savedSize = localStorage.getItem('dcas_font_size') || 'medium';
+    html.setAttribute('data-font-size', savedSize);
+})();
+
+// ============================================================
+// LAST VISITED – records chapter visits to localStorage (single implementation)
+// ============================================================
+const LAST_VISITED_KEY = 'dcas_last_visited';
+
+function recordLastVisited() {
+    if (!chapterData) return;
+    const item = {
+        id:        chapterData.id,
+        title:     chapterData.shortTitle || chapterData.title || 'Chapter',
+        url:       window.location.href,
+        timestamp: Date.now()
+    };
+    try {
+        let list = JSON.parse(localStorage.getItem(LAST_VISITED_KEY) || '[]');
+        list = list.filter(i => i.id !== item.id);
+        list.unshift(item);
+        list = list.slice(0, 5);
+        localStorage.setItem(LAST_VISITED_KEY, JSON.stringify(list));
+    } catch(e) {}
+}
+
+function timeAgo(ts) {
+    const diff = Date.now() - ts;
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1)   return 'Just now';
+    if (mins < 60)  return `${mins}m ago`;
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24)   return `${hrs}h ago`;
+    const days = Math.floor(hrs / 24);
+    return `${days}d ago`;
+}
+
+// ============================================================
+// BATTERY INDICATOR (AMOLED mode only)
+// ============================================================
+function initBatteryIndicator() {
+    const indicator = document.getElementById('batteryIndicator');
+    if (!indicator) return;
+    if (!('getBattery' in navigator)) return;
+
+    navigator.getBattery().then(battery => {
+        function updateBattery() {
+            const pct = Math.round(battery.level * 100);
+            const fill = indicator.querySelector('.battery-fill');
+            const pctEl = indicator.querySelector('.battery-pct');
+            if (fill) {
+                fill.style.width = pct + '%';
+                fill.className = 'battery-fill' +
+                    (battery.charging ? ' charging' : pct < 20 ? ' low' : '');
+            }
+            if (pctEl) pctEl.textContent = pct + '%';
+        }
+        battery.addEventListener('levelchange', updateBattery);
+        battery.addEventListener('chargingchange', updateBattery);
+        updateBattery();
+    }).catch(() => {});
+}
+
+// ============================================================
+// initChapterPage()
+// Called by every chapter HTML after CPG_DATA and app.js load.
+// ============================================================
+function initChapterPage() {
+    const html   = document.documentElement;
+    const themes = ['dark', 'light', 'sepia', 'forest', 'amoled'];
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    const savedSize = localStorage.getItem('dcas_font_size') || 'medium';
+    html.setAttribute('data-font-size', savedSize);
+
+    const headerEl = document.querySelector('header');
+    if (headerEl && chapterData) {
+        const title    = chapterData.shortTitle || chapterData.title || 'DCAS CPG';
+        const subtitle = 'DCAS CPG 2025';
+        headerEl.innerHTML = `
+            <div class="header-left">
+                <button class="icon-btn" id="homeBtn" title="Home" aria-label="Home">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2.2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/>
+                        <path d="M9 21V12h6v9"/>
+                    </svg>
+                </button>
+                <div class="header-text">
+                    <h1 id="pageTitle">${title}</h1>
+                    <p id="pageSubtitle">${subtitle}</p>
+                </div>
+            </div>
+            <div class="header-right" id="headerRight">
+                <div class="battery-indicator" id="batteryIndicator">
+                    <span class="battery-icon"><span class="battery-fill"></span></span>
+                    <span class="battery-pct">--%</span>
+                </div>
+                <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+                <div class="stats-badge" id="liveStatsBadge">
+                    <span>📊 <span id="statsAttempts">0</span></span>
+                    <div class="stats-divider"></div>
+                    <span>🎯 <span id="statsCritical">0%</span></span>
+                </div>
+                <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+                <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+            </div>
+        `;
+    }
+
+    const footerEl = document.querySelector('footer');
+    if (footerEl) {
+        footerEl.innerHTML = `
+            <div>Created by Soliman Anas · for study aid only</div>
+            <div><a href="../about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+        `;
+    }
+
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const idx = themes.indexOf(current);
+            const next = themes[(idx + 1) % themes.length];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            initBatteryIndicator();
+        });
+    }
+
+    function loadStats() {
+        try {
+            const data  = localStorage.getItem('dcas_cpg_stats');
+            const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
+            const critAcc = stats.critical && stats.critical.total
+                ? Math.round((stats.critical.correct / stats.critical.total) * 100)
+                : 0;
+            const attEl  = document.getElementById('statsAttempts');
+            const critEl = document.getElementById('statsCritical');
+            if (attEl)  attEl.textContent  = stats.totalAttempts || 0;
+            if (critEl) critEl.textContent = critAcc + '%';
+        } catch(e) {}
+    }
+    loadStats();
+
+    initBatteryIndicator();
+    recordLastVisited();
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js').catch(() => {});
+        });
+    }
+
+    document.addEventListener('dcas:rendered', () => {
+        const main = document.getElementById('mainContent');
+        if (main) {
+            main.classList.add('content-entering');
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                main.classList.remove('content-entering');
+                main.classList.add('content-visible');
+            }));
+        }
+    });
+}
+
+window.initChapterPage = initChapterPage;
 
 // ---------- CHAPTER DATA ----------  
 const chapterData = window.CPG_DATA;  
@@ -48,7 +223,6 @@ let state = {
 
 /* ---------- FIX FOR FLAT CHAPTERS (no sections) ---------- */
 if (!state.sections && chapterData) {
-    // Create a single virtual section from the chapter's root properties
     state.sections = [{
         id: chapterData.id,
         shortTitle: chapterData.shortTitle,
@@ -58,7 +232,6 @@ if (!state.sections && chapterData) {
         critical: chapterData.critical || []
     }];
 }
-/* -------------------------------------------------------- */
 
 // ---------- UTILITIES ----------  
 const utils = {  
@@ -91,10 +264,11 @@ const utils = {
         const urlParams = new URLSearchParams(window.location.search);  
         return urlParams.get(param);  
     },  
+    // FIX #2: use replaceState instead of pushState
     setQueryParam: (param, value) => {  
         const url = new URL(window.location.href);  
         url.searchParams.set(param, value);  
-        window.history.pushState({}, '', url);  
+        window.history.replaceState({}, '', url);  
     },  
     replaceQueryParam: (param, value) => {  
         const url = new URL(window.location.href);  
@@ -108,9 +282,14 @@ function updateHeader(title, subtitle = '', showBack = true) {
     if (dom.pageTitle) dom.pageTitle.innerText = title || 'DCAS CPG 2025';  
     if (dom.pageSubtitle) dom.pageSubtitle.innerText = subtitle || '';  
     if (dom.homeBtn) dom.homeBtn.style.display = showBack ? 'block' : 'none';  
+
+    const statsBadge = document.getElementById('liveStatsBadge');
+    if (statsBadge) {
+        statsBadge.style.display = chapterData ? 'none' : 'flex';
+    }
 }  
 
-// ---------- RENDER COMING SOON – VIEW‑SPECIFIC ----------  
+// ---------- RENDER COMING SOON ----------  
 function renderComingSoon() {
     const view = utils.getQueryParam('view') || 'summary';
     let title = 'Coming Soon', subtitle = '', message = '', icon = '🚧';
@@ -139,8 +318,8 @@ function renderComingSoon() {
             message = 'This CPG chapter is under construction.';
             icon = '🚧';
     }
-    const html = `<div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 40px 20px; box-shadow: var(--glass-shadow);">   <div style="font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 15px; line-height: 1.2; font-family: Georgia, serif;">${icon} ${title}</div>   <div style="font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 10px 30px; margin-top: 10px; letter-spacing: 2px;">${subtitle}</div>   <div style="font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 12px 20px; border-radius: 50px; display: inline-block; margin-top: 25px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">   ${message}   </div>   <div style="margin-top: 40px;">   <button class="control-btn" data-action="backHome" style="padding: 12px 30px; border-radius: 40px; font-weight: 700; font-size: clamp(0.9rem, 4vw, 1.1rem); color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;">← Back to Chapters</button>   </div>   </div>`;
-    dom.main.innerHTML = html;
+    const html = `<div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 40px 20px; box-shadow: var(--glass-shadow);">   <div style="font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 15px; line-height: 1.2; font-family: Georgia, serif;">${icon} ${title}</div>   <div style="font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 10px 30px; margin-top: 10px; letter-spacing: 2px;">${subtitle}</div>   <div style="font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 12px 20px; border-radius: 50px; display: inline-block; margin-top: 25px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">   ${message}   </div>   <div style="margin-top: 40px;">   <button class="control-btn" data-action="backHome" style="padding: 12px 30px; border-radius: 40px; font-weight: 700; font-size: clamp(0.9rem, 4vw, 1.1rem); color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;">🏠 Home</button>   </div>   </div>`;
+    setMainContent(html);
     updateHeader(title, subtitle, true);
     utils.safeScrollTop();
 }
@@ -160,30 +339,142 @@ function renderSectionTabs(activeId) {
     `;  
 }  
 
-// ---------- SECTION NAVIGATION BUTTONS (Previous / Next) ----------  
+// ---------- 📱 STICKY BOTTOM NAVIGATION ----------
+function renderBottomNav(currentView) {
+    const views = [
+        { id: 'summary', label: 'Summary', icon: '📘' },
+        { id: 'flashcards', label: 'Cards', icon: '⚡' },
+        { id: 'quiz', label: 'Quiz', icon: '📝' },
+        { id: 'critical', label: 'Scenario', icon: '🚑' }
+    ];
+    return `
+        <nav class="bottom-nav">
+            ${views.map(v => `
+                <a href="#" class="nav-pill ${currentView === v.id ? 'active' : ''}" data-view="${v.id}">
+                    <i>${v.icon}</i>${v.label}
+                </a>
+            `).join('')}
+        </nav>
+    `;
+}
+
+// ---------- SLIM SECTION NAVIGATION ----------  
 function renderSectionNavigation() {  
     if (!state.sections || state.sections.length <= 1) return '';  
     const currentIdx = utils.getSectionIndex(state.activeSectionId);  
     const prevSection = currentIdx > 0 ? state.sections[currentIdx - 1] : null;  
     const nextSection = currentIdx < state.sections.length - 1 ? state.sections[currentIdx + 1] : null;  
-      
+    const isLastSection = currentIdx === state.sections.length - 1;  
+
     return `  
-        <div class="section-nav-row">  
+        <div class="section-nav-slim">  
             ${prevSection ?   
                 `<button class="section-nav-btn" data-section-nav="prev" data-section-id="${prevSection.id}">  
-                    ◀ Previous Section (${utils.escapeHTML(prevSection.shortTitle)})  
+                    ◀ ${utils.escapeHTML(prevSection.shortTitle)}  
                 </button>` :   
-                `<button class="section-nav-btn" disabled>◀ Previous Section</button>`  
+                `<button disabled>◀</button>`  
             }  
             ${nextSection ?   
                 `<button class="section-nav-btn" data-section-nav="next" data-section-id="${nextSection.id}">  
-                    Next Section (${utils.escapeHTML(nextSection.shortTitle)}) ▶  
+                    ${utils.escapeHTML(nextSection.shortTitle)} ▶  
                 </button>` :   
-                `<button class="section-nav-btn" disabled>Next Section ▶</button>`  
+                (isLastSection ? 
+                    `<button class="finish-chapter" data-action="backHome">✅ Finish</button>` : 
+                    `<button disabled>▶</button>`)
             }  
         </div>  
     `;  
 }  
+
+// ============================================================
+// SCROLL‑RELATED FUNCTIONS (unified controller)
+// ============================================================
+let lastScrollY = 0;
+let ticking = false;
+let progressBarWrapper;     // set once in DOMContentLoaded
+
+function updateHeaderVisibility() {
+    const header = document.querySelector('header');
+    if (!header) return;
+    const currentY = window.scrollY;
+    if (currentY > lastScrollY && currentY > 100) {
+        header.classList.add('header-hidden');
+    } else if (currentY < lastScrollY) {
+        header.classList.remove('header-hidden');
+    }
+    lastScrollY = currentY;
+}
+
+// FIX #6: more stable progress bar positioning
+function updateProgressBarPosition() {
+    if (!progressBarWrapper) return;
+    const hdr = document.querySelector('header');
+    if (!hdr) return;
+    const realHeight = hdr.classList.contains('header-hidden')
+        ? 0
+        : hdr.getBoundingClientRect().height;
+    progressBarWrapper.style.top = realHeight + 'px';
+}
+
+function updateBottomNavVisibility() {
+    const nav = document.querySelector('.bottom-nav');
+    if (!nav) return;
+    // Simpler threshold
+    if (window.scrollY > 150) {
+        nav.classList.add('visible');
+    } else {
+        nav.classList.remove('visible');
+    }
+}
+
+function updateFooterNavPosition() {
+    const nav = document.querySelector('.bottom-nav');
+    const ft = document.querySelector('footer');
+    if (!nav || !ft) return;
+    const footerRect = ft.getBoundingClientRect();
+    const overlap = window.innerHeight - footerRect.top;
+    nav.style.bottom = overlap > 0 ? overlap + 'px' : '0px';
+}
+
+function updateScrollProgress() {
+    const progressBar = document.querySelector('#pageProgressBar .progress-bar-scroll')
+                     || document.querySelector('.progress-bar-scroll');
+    if (!progressBar) return;
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const totalH    = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (totalH <= 0) { progressBar.style.width = '100%'; return; }
+    progressBar.style.width = Math.min((winScroll / totalH) * 100, 100) + '%';
+}
+
+function handleScroll() {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateHeaderVisibility();
+            updateProgressBarPosition();
+            updateBottomNavVisibility();
+            updateFooterNavPosition();
+            updateScrollProgress();
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+// ---------- INITIALISE SCROLL DEPENDENCIES ----------
+function initBottomNav() {
+    const nav = document.querySelector('.bottom-nav');
+    if (!nav) return;
+    if (nav.dataset.visibilityInit) return;
+    nav.dataset.visibilityInit = 'true';
+}
+
+function initFooterAwareNav() {
+    const nav = document.querySelector('.bottom-nav');
+    const ft = document.querySelector('footer');
+    if (!nav || !ft) return;
+    if (nav.dataset.footerInit) return;
+    nav.dataset.footerInit = 'true';
+}
 
 // ---------- SWITCH SECTION ----------  
 function switchSection(sectionId, updateUrl = true) {  
@@ -193,7 +484,6 @@ function switchSection(sectionId, updateUrl = true) {
     state.activeSectionId = sectionId;  
     state.activeSection = section;  
       
-    // Reset per-section state  
     state.quizData = [];  
     state.mistakes = [];  
     state.qIndex = 0;  
@@ -207,7 +497,8 @@ function switchSection(sectionId, updateUrl = true) {
     if (updateUrl) {  
         const url = new URL(window.location.href);  
         url.searchParams.set('section', sectionId);  
-        window.history.pushState({}, '', url);  
+        // FIX #1: use replaceState instead of pushState
+        window.history.replaceState({}, '', url);  
     }  
 
     const currentView = utils.getQueryParam('view') || 'summary';  
@@ -216,11 +507,30 @@ function switchSection(sectionId, updateUrl = true) {
     else if (currentView === 'quiz') render.quizSetup();  
     else if (currentView === 'critical') render.criticalGame();  
     else render.summary();  
+
+    initBottomNav();
+    initFooterAwareNav();
+    handleScroll();
       
     return true;  
 }  
 
-// ---------- RENDER FUNCTIONS ----------  
+// ============================================================
+// SAFE CONTENT SETTER (replaces innerHTML override)
+// ============================================================
+function setMainContent(html) {
+    dom.main.innerHTML = html;
+    dom.main.classList.remove('content-enter');
+    void dom.main.offsetWidth;
+    dom.main.classList.add('content-enter');
+    initBottomNav();
+    initFooterAwareNav();
+    handleScroll();
+}
+
+// ============================================================
+// RENDER FUNCTIONS
+// ============================================================
 const render = {  
     summary: function() {  
         if (isChapterMissing) { renderComingSoon(); return; }  
@@ -230,34 +540,29 @@ const render = {
             return;  
         }  
         const tabs = renderSectionTabs(section.id);  
+        // FIX #3: exclude c-index from special pages so bottom nav appears
+        const isSpecialPage = chapterData && (chapterData.id === 'c0');  
+        const summaryContent = section.summary || '<div class="sum-card">No summary available.</div>';  
         const nav = renderSectionNavigation();  
-        
-        // Always show "Back to Chapters" button on chapter pages (including index)
-        const showBackButton = true;
-        
-        // Summary is already HTML from data; we need to ensure it's safe, but it's trusted.
-        const summaryContent = section.summary || '<div class="sum-card">No summary available.</div>';
-        
+
         const html = `  
             <div class="section active">  
                 ${tabs}  
                 ${summaryContent}  
                 ${nav}  
-                ${showBackButton ? `
-                    <div class="nav-row">  
-                        <button class="control-btn" data-action="backHome">← Back to Chapters</button>  
-                    </div>
-                ` : ''}  
+                <div class="back-home-ghost">
+                    <button data-action="backHome">🏠 Home</button>
+                </div>
             </div>  
+            ${!isSpecialPage ? renderBottomNav('summary') : ''}  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         updateHeader(utils.escapeHTML(section.shortTitle), 'Summary', true);  
-        utils.safeScrollTop();
+        utils.safeScrollTop();  
 
-        // Initialize index search if this is the index chapter
-        if (chapterData && chapterData.id === 'c-index') {
-            initIndexSearch();
-        }
+        if (chapterData && chapterData.id === 'c-index') {  
+            initIndexSearch();  
+        }  
     },  
 
     flashcards: function() {  
@@ -268,7 +573,7 @@ const render = {
             return;  
         }  
         if (!state.flashData.length) {  
-            dom.main.innerHTML = '<div class="sum-card">No flashcards available.</div>';  
+            setMainContent('<div class="sum-card">No flashcards available.</div>');  
             return;  
         }  
         state.fIndex = 0;  
@@ -282,10 +587,8 @@ const render = {
         const tabs = renderSectionTabs(state.activeSectionId);  
         const nav = renderSectionNavigation();  
         
-        // Escape all user‑supplied content
         const category = utils.escapeHTML(card.category || '');
         const question = utils.escapeHTML(card.question);
-        // For answer, escape first, then replace newlines with <br>
         const safeAnswer = utils.escapeHTML(card.answer || '').replace(/\n/g, '<br>');
         
         const html = `  
@@ -311,11 +614,10 @@ const render = {
                 <button class="control-btn" data-flash="next">Next ▶</button>  
             </div>  
             ${nav}  
-            <div class="nav-row" style="margin-top:10px;">  
-                <button class="control-btn" data-action="backHome">← Back to Chapters</button>  
-            </div>  
+            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            ${renderBottomNav('flashcards')}  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         const cardEl = document.getElementById('flashcard');  
         const scene = document.getElementById('cardScene');  
         if (scene) {  
@@ -323,7 +625,7 @@ const render = {
                 if (e.target.closest('.control-btn')) return;  
                 cardEl.classList.toggle('is-flipped');  
             }, { passive: true });  
-        }  
+        }
         utils.safeScrollTop();  
     },  
 
@@ -335,23 +637,20 @@ const render = {
             return;  
         }  
         if (!section.quiz || !section.quiz.length) {  
-            dom.main.innerHTML = '<div class="sum-card">No quiz questions available.</div>';  
+            setMainContent('<div class="sum-card">No quiz questions available.</div>');  
             return;  
         }  
         const totalQuestions = section.quiz.length;
         const tabs = renderSectionTabs(section.id);  
         const nav = renderSectionNavigation();  
         
-        // Only show size buttons that are <= totalQuestions
         const possibleSizes = [10, 20, 30];
         const sizeButtons = possibleSizes
             .filter(size => size <= totalQuestions)
             .map(size => `<button class="setup-btn" data-quiz-size="${size}">${size} Questions <span>→</span></button>`)
             .join('');
         
-        // Always include "All" button
         const allButton = `<button class="setup-btn challenge" data-quiz-size="${totalQuestions}">All (${totalQuestions}) <span>→</span></button>`;
-        
         const buttonsHtml = sizeButtons + allButton;
         
         const html = `  
@@ -362,13 +661,12 @@ const render = {
                 <div class="setup-grid">  
                     ${buttonsHtml}
                 </div>  
-                ${nav}  
-                <div class="nav-row">  
-                    <button class="control-btn" data-action="backHome">Cancel</button>  
-                </div>  
             </div>  
+            ${nav}  
+            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            ${renderBottomNav('quiz')}  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         updateHeader('Quiz Setup', utils.escapeHTML(section.shortTitle), true);  
         utils.safeScrollTop();  
     },  
@@ -381,7 +679,6 @@ const render = {
         }  
         const q = state.quizData[state.qIndex];  
         const progress = `Q ${state.qIndex+1}/${state.quizData.length}`;  
-        // Handle both string and object options
         const optionsHtml = q.options.map((opt, idx) => {
             const optText = typeof opt === 'string' ? opt : opt.t;
             return `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(optText)}</button>`;
@@ -406,8 +703,10 @@ const render = {
                 <button class="control-btn" id="nextQuizBtn" style="width:100%; margin-top:25px; display:none;">Next Question</button>  
             </div>  
             ${nav}  
+            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            ${renderBottomNav('quiz')}  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         utils.safeScrollTop();  
     },  
 
@@ -419,7 +718,7 @@ const render = {
             return;  
         }  
         if (!state.criticalData || !state.criticalData.length) {  
-            dom.main.innerHTML = '<div class="sum-card">No critical scenarios available.</div>';  
+            setMainContent('<div class="sum-card">No critical scenarios available.</div>');  
             return;  
         }  
         state.criticalIndex = 0;  
@@ -430,7 +729,6 @@ const render = {
 
     _renderCriticalQuestion: function() {  
         const q = state.criticalData[state.criticalIndex];  
-        // Handle both string and object options
         const optionsHtml = q.options.map((opt, idx) => {
             const optText = typeof opt === 'string' ? opt : opt.t;
             return `<button class="option-btn" data-opt-index="${idx}">${utils.escapeHTML(optText)}</button>`;
@@ -456,8 +754,10 @@ const render = {
                 <button class="control-btn" id="nextCriticalBtn" style="width:100%; margin-top:25px; display:none;">Next Scenario</button>  
             </div>  
             ${nav}  
+            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            ${renderBottomNav('critical')}  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         utils.safeScrollTop();  
     },  
 
@@ -474,16 +774,18 @@ const render = {
                 </div>  
             `;  
         }  
+        const totalChapters = window.CHAPTERS ? Object.keys(window.CHAPTERS).length : 1;  
+        const overallPct = Math.round((Object.keys(s.chapters).length / totalChapters) * 100);  
         const critAcc = s.critical.total ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;  
         const html = `  
             <div class="stats-card">  
                 <h2 style="color:var(--primary-accent);">📊 Your Performance</h2>  
                 <div class="progress-header">  
                     <span class="progress-title">Overall Progress</span>  
-                    <span style="font-weight:700;">${Math.round((Object.keys(s.chapters).length / (Object.keys(CHAPTERS||{}).length || 1)) * 100)}%</span>  
+                    <span style="font-weight:700;">${overallPct}%</span>  
                 </div>  
                 <div class="progress-container">  
-                    <div class="progress-bar" style="width: ${Math.round((Object.keys(s.chapters).length / (Object.keys(CHAPTERS||{}).length || 1)) * 100)}%;"></div>  
+                    <div class="progress-bar" style="width: ${overallPct}%;"></div>  
                 </div>  
                 <div class="stats-grid">  
                     <div class="stat-box">  
@@ -498,18 +800,18 @@ const render = {
                 ${chapStatsHtml || '<p style="margin-top:10px;">No chapter data yet.</p>'}  
                 <div class="encouragement">💡 Keep up the great work!</div>  
                 <div class="nav-row">  
-                    <button class="control-btn" data-action="backHome">← Back to Chapters</button>  
+                    <button class="control-btn" data-action="backHome">🏠 Home</button>  
                 </div>  
             </div>  
         `;  
-        dom.main.innerHTML = html;  
+        setMainContent(html);  
         updateHeader('Statistics', '', true);  
         utils.safeScrollTop();  
     },  
 
     reviewMistakes: function() {  
         if (!state.mistakes.length) {  
-            dom.main.innerHTML = '<div class="sum-card">No mistakes to review.</div>';  
+            setMainContent('<div class="sum-card">No mistakes to review.</div>');  
             return;  
         }  
         let items = state.mistakes.map(m => `  
@@ -519,16 +821,15 @@ const render = {
                 <div class="mistake-rationale">📘 ${utils.escapeHTML(m.rationale)}</div>  
             </div>  
         `).join('');  
-        const html = `<div class="sum-card"><h3>📝 Mistakes Review</h3>${items}<div class="nav-row"><button class="control-btn" data-action="backHome">← Back</button></div></div>`;  
-        dom.main.innerHTML = html;  
+        const html = `<div class="sum-card"><h3>📝 Mistakes Review</h3>${items}<div class="nav-row"><button class="control-btn" data-action="backHome">🏠 Home</button></div></div>`;  
+        setMainContent(html);  
         updateHeader('Mistakes', '', true);  
         utils.safeScrollTop();  
     }  
 };  
 
-// ---------- INDEX SEARCH INIT (for c-index) ----------
+// ---------- INDEX SEARCH INIT ----------
 function initIndexSearch() {
-    // Only run on the index page
     if (!chapterData || chapterData.id !== 'c-index') return;
     
     setTimeout(() => {
@@ -545,14 +846,12 @@ function initIndexSearch() {
                 const link = row.querySelector('a');
                 if (!link) return;
                 const originalText = link.getAttribute('data-original') || link.textContent;
-                // Store original if not already stored
                 if (!link.getAttribute('data-original')) {
                     link.setAttribute('data-original', originalText);
                 }
                 const rowText = originalText.toLowerCase();
                 if (rowText.includes(lowerText)) {
                     row.classList.remove('filtered-out');
-                    // Highlight matching text
                     if (lowerText) {
                         const regex = new RegExp('(' + lowerText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
                         link.innerHTML = originalText.replace(regex, '<mark>$1</mark>');
@@ -566,7 +865,6 @@ function initIndexSearch() {
             });
         }
 
-        // Remove old handlers to avoid duplicates
         input.removeEventListener('input', input._handler);
         clearBtn?.removeEventListener('click', clearBtn._handler);
 
@@ -607,7 +905,6 @@ const quizEngine = {
         if (isCorrect) {  
             state.score++;  
         } else {  
-            // Extract correct answer text (could be string or object)
             const correctAnswer = typeof q.options[q.correct] === 'string' 
                 ? q.options[q.correct] 
                 : q.options[q.correct].t;
@@ -662,11 +959,11 @@ const quizEngine = {
                     <p style="color:var(--text-secondary);">${msg}</p>  
                     ${reviewBtn}  
                     <div class="nav-row">  
-                        <button class="control-btn" data-action="backHome">← Home</button>  
+                        <button class="control-btn" data-action="backHome">🏠 Home</button>  
                     </div>  
                 </div>  
             `;  
-            dom.main.innerHTML = html;  
+            setMainContent(html);  
             utils.safeScrollTop();  
         }  
     }  
@@ -714,17 +1011,17 @@ const criticalEngine = {
                     <div style="font-size:3rem; font-weight:bold; color:var(--primary-accent); margin:20px 0;">${accuracy}%</div>  
                     <p>Correct: ${state.criticalScore}/${state.criticalData.length}</p>  
                     <div class="nav-row">  
-                        <button class="control-btn" data-action="backHome">← Home</button>  
+                        <button class="control-btn" data-action="backHome">🏠 Home</button>  
                     </div>  
                 </div>  
             `;  
-            dom.main.innerHTML = html;  
+            setMainContent(html);  
             utils.safeScrollTop();  
         }  
     }  
 };  
 
-// ---------- WATER RIPPLE EFFECT (fixed to use target) ----------  
+// ---------- WATER RIPPLE EFFECT ----------  
 function createRipple(event, target) {  
     try {
         const rect = target.getBoundingClientRect();
@@ -744,31 +1041,63 @@ function createRipple(event, target) {
             ripple.remove();
         }, 600);
     } catch (err) {
-        // Silently fail – ripple is non‑essential
+        // Silently fail
     }
 }  
 
+// ---------- OPTIMISED MUTATION OBSERVER (only watches #mainContent) ----------
+const observer = new MutationObserver((mutations) => {
+    for (const m of mutations) {
+        for (const node of m.addedNodes) {
+            if (node.nodeType === 1 && node.classList?.contains('bottom-nav')) {
+                initBottomNav();
+                initFooterAwareNav();
+                return;
+            }
+        }
+    }
+});
+if (dom.main) {
+    observer.observe(dom.main, { childList: true, subtree: true });
+}
+
 // ---------- COMPLETE EVENT DELEGATION ----------  
 document.addEventListener('click', function(e) {  
-    const target = e.target.closest('button');  
+    const target = e.target.closest('button, .nav-pill');  
     if (!target) return;  
     
-    // Add ripple effect using the target (the button)
     createRipple(e, target);
     
+    // FIX #4: integrate home button handling directly
+    if (target.id === 'homeBtn') {
+        e.preventDefault();
+        const inSub = window.location.pathname.includes('/chapters/');
+        window.location.href = inSub ? '../index.html' : 'index.html';
+        return;
+    }
+
     const action = target.dataset.action;
+    const view = target.dataset.view;
     const sectionNav = target.dataset.sectionNav;
     const sectionId = target.dataset.sectionId;
     const quizSize = target.dataset.quizSize;
     const flashAction = target.dataset.flash;
     const optIndex = target.dataset.optIndex;
     
-    // Handle navigation
     if (action === 'backHome') {
-        e.preventDefault(); // prevent any default button behavior
-        // Detect if we are inside the /chapters/ subfolder
-        const isSubfolder = window.location.pathname.includes('/chapters/');
-        window.location.href = isSubfolder ? '../index.html' : 'index.html';
+        e.preventDefault();
+        const isInSubfolder = window.location.pathname.includes('/chapters/');
+        window.location.href = isInSubfolder ? '../index.html' : 'index.html';
+        return;
+    }
+    
+    if (view) {
+        e.preventDefault();
+        const currentSectionId = state.activeSectionId;
+        if (currentSectionId) {
+            utils.setQueryParam('view', view);
+            switchSection(currentSectionId, false);
+        }
         return;
     }
     
@@ -782,27 +1111,23 @@ document.addEventListener('click', function(e) {
         return;
     }
     
-    // Section tab switching
     if (sectionId && target.classList.contains('section-tab')) {
         e.preventDefault();
         switchSection(sectionId);
         return;
     }
     
-    // Section navigation (prev/next)
     if (sectionNav && sectionId) {
         e.preventDefault();
         switchSection(sectionId);
         return;
     }
     
-    // Quiz setup
     if (quizSize) {
         quizEngine.init(parseInt(quizSize, 10));
         return;
     }
     
-    // Flashcard navigation
     if (flashAction === 'prev') {
         if (state.fIndex > 0) {
             state.fIndex--;
@@ -819,7 +1144,6 @@ document.addEventListener('click', function(e) {
         return;
     }
     
-    // Quiz answer handling
     if (optIndex !== undefined && target.classList.contains('option-btn')) {
         const inQuiz = document.getElementById('quizFeedback') !== null;
         const inCritical = document.getElementById('criticalFeedback') !== null;
@@ -832,7 +1156,6 @@ document.addEventListener('click', function(e) {
         return;
     }
     
-    // Next question buttons
     if (target.id === 'nextQuizBtn') {
         quizEngine.next();
         return;
@@ -844,58 +1167,120 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ---------- POPSTATE HANDLER (browser back/forward) ----------  
-window.addEventListener('popstate', function() {
+// FIX #5: safer popstate handler
+window.addEventListener('popstate', function () {
     const sectionId = utils.getQueryParam('section');
     const view = utils.getQueryParam('view') || 'summary';
-    
-    if (sectionId && state.sections) {
-        switchSection(sectionId, false);
-    } else if (view === 'stats') {
-        render.stats();
-    } else {
-        window.location.reload();
+
+    if (!chapterData) return;
+
+    const section = sectionId ? utils.getSection(sectionId) : null;
+
+    if (section) {
+        state.activeSectionId = sectionId;
+        state.activeSection = section;
+    } else if (state.sections && state.sections.length > 0) {
+        state.activeSectionId = state.sections[0].id;
+        state.activeSection = state.sections[0];
     }
+
+    if (view === 'flashcards') render.flashcards();
+    else if (view === 'quiz') render.quizSetup();
+    else if (view === 'critical') render.criticalGame();
+    else render.summary();
 });
 
-// ---------- INITIALIZE ON PAGE LOAD ----------  
+// ---------- BOOTSTRAP (DOMContentLoaded) ----------
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if chapter data exists
+
+    // ── Create progress bar if missing ─────────────────────
+    if (!document.getElementById('pageProgressBar')) {
+        const wrapper = document.createElement('div');
+        wrapper.id = 'pageProgressBar';
+        wrapper.innerHTML = '<div class="progress-bar-scroll"></div>';
+        document.body.appendChild(wrapper);
+    }
+
+    // ── Initialise global references for scroll controller ──
+    progressBarWrapper = document.getElementById('pageProgressBar');
+
+    // ── Set initial progress bar position ──────────────────
+    const initialHeader = document.querySelector('header');
+    if (initialHeader && progressBarWrapper) {
+        setTimeout(() => {
+            const realHeight = initialHeader.getBoundingClientRect().height;
+            progressBarWrapper.style.top = realHeight + 'px';
+        }, 30);
+    }
+
+    // ── Theme cycling ───────────────────────────────────────
+    const themeBtn  = document.getElementById('themeToggle');
+    const htmlEl    = document.documentElement;
+    const ALL_THEMES = ['dark', 'amoled', 'light', 'sepia', 'forest'];
+
+    function applyTheme(t) {
+        if (!ALL_THEMES.includes(t)) t = 'dark';
+        htmlEl.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
+    }
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function() {
+            const cur = htmlEl.getAttribute('data-theme') || 'dark';
+            const idx = ALL_THEMES.indexOf(cur);
+            applyTheme(ALL_THEMES[(idx + 1) % ALL_THEMES.length]);
+        });
+    }
+    applyTheme(localStorage.getItem('theme') || 'dark');
+
+    // ── Font size ───────────────────────────────────────────
+    const savedFont = localStorage.getItem('dcas_font_size') || 'medium';
+    htmlEl.setAttribute('data-font-size', savedFont);
+
+    // ── Stats badge ─────────────────────────────────────────
+    function refreshStatsBadge() {
+        try {
+            const s = storage.load();
+            const acc = s.critical && s.critical.total
+                ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;
+            const attEl = document.getElementById('statsAttempts');
+            const crtEl = document.getElementById('statsCritical');
+            if (attEl) attEl.textContent = s.totalAttempts || 0;
+            if (crtEl) crtEl.textContent = acc + '%';
+        } catch(e) {}
+    }
+    refreshStatsBadge();
+
+    // ── Attach unified scroll controller ────────────────────
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+    handleScroll();
+
+    // ── Chapter page boot ───────────────────────────────────
     if (isChapterMissing) {
         renderComingSoon();
         return;
     }
-    
-    // Get section from URL or use first section
+
     const urlSection = utils.getQueryParam('section');
-    const urlView = utils.getQueryParam('view') || 'summary';
-    
+    const urlView    = utils.getQueryParam('view') || 'summary';
+
     if (urlSection && state.sections) {
         const section = utils.getSection(urlSection);
         if (section) {
             state.activeSectionId = urlSection;
-            state.activeSection = section;
-            state.flashData = section.flashcards || [];
-            state.criticalData = section.critical || [];
-            
-            // Render appropriate view
-            if (urlView === 'flashcards') render.flashcards();
-            else if (urlView === 'quiz') render.quizSetup();
-            else if (urlView === 'critical') render.criticalGame();
-            else render.summary();
+            state.activeSection   = section;
+            state.flashData       = section.flashcards || [];
+            state.criticalData    = section.critical   || [];
+            if      (urlView === 'flashcards') render.flashcards();
+            else if (urlView === 'quiz')       render.quizSetup();
+            else if (urlView === 'critical')   render.criticalGame();
+            else                               render.summary();
         } else {
-            // Invalid section, use first
-            if (state.sections && state.sections.length > 0) {
-                switchSection(state.sections[0].id);
-            }
+            if (state.sections && state.sections.length > 0) switchSection(state.sections[0].id);
         }
     } else {
-        // No section in URL, use first
-        if (state.sections && state.sections.length > 0) {
-            switchSection(state.sections[0].id);
-        }
+        if (state.sections && state.sections.length > 0) switchSection(state.sections[0].id);
     }
-
 });
 
 })();

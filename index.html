@@ -155,78 +155,31 @@
             padding-top: 12px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            margin-top: auto;
+        /* Footer – controlled by styles.css; theme overrides applied there */
+        footer a { color: inherit; text-decoration: underline; }
+
+        /* Button container – always 2×2 grid, never single-row flex */
+        .menu-sub-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 16px;
             width: 100%;
             box-sizing: border-box;
-            box-shadow: 0 -5px 20px rgba(255, 255, 255, 0.15);
-        }
-        footer div:first-child {
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-        footer div:last-child {
-            opacity: 0.9;
-            font-size: 0.7rem;
-        }
-        footer a {
-            color: inherit;
-            text-decoration: underline;
-        }
-        [data-theme="dark"] footer {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        [data-theme="forest"] footer {
-            color: #edf4e7;
-            background: rgba(30, 75, 62, 0.8);
-        }
-        [data-theme="light"] footer {
-            color: #1a2a3a;
-        }
-        [data-theme="sepia"] footer {
-            color: #4a3c2c;
-        }
-
-        /* Button container */
-        .menu-sub-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 16px;
         }
         .btn-action {
-            flex: 1 1 0%;
-            min-width: 80px;
+            width: 100%;
             text-align: center;
-            padding: 10px 8px;
-            font-size: 0.85rem;
+            padding: 12px 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
         }
-        @media (max-width: 480px) {
-            .menu-sub-options {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8px;
-            }
-            .btn-action {
-                width: 100%;
-                white-space: normal;
-                font-size: 0.75rem;
-                padding: 8px 4px;
-            }
-            .btn-flash {
-                font-size: 0.75rem;
-                padding: 8px 4px;
-            }
+        @media (max-width: 360px) {
+            .btn-action { font-size: 0.78rem; padding: 10px 4px; }
         }
 
         /* Offline download */
@@ -330,21 +283,24 @@
 
         .notification-drawer {
             position: fixed;
-            top: -450px;
+            top: -600px;         /* increased so large drawer fully hides offscreen */
             left: 0;
+            right: 0;            /* explicit right:0 instead of width:100% */
             width: 100%;
+            box-sizing: border-box; /* CRITICAL: padding is INSIDE the 100% width */
+            overflow: hidden;    /* prevent any child overflow */
             background: rgba(20, 30, 40, 0.4);
             backdrop-filter: blur(25px) saturate(180%);
             -webkit-backdrop-filter: blur(25px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             z-index: 2001;
-            padding: 25px 20px 35px;
+            padding: 25px 16px 35px;  /* slightly tighter side padding */
             border-radius: 0 0 30px 30px;
             transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
         }
         .notification-drawer.open {
             top: 0;
@@ -352,9 +308,9 @@
 
         .toggles-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            justify-content: center;
+            grid-template-columns: repeat(4, minmax(0, 1fr)); /* minmax(0) prevents overflow */
+            gap: 10px;
+            width: 100%;
         }
         .toggle-item {
             display: flex;
@@ -363,19 +319,21 @@
             text-align: center;
         }
         .toggle-btn {
-            width: 58px;
-            height: 58px;
+            width: 100%;          /* fill grid cell, don't use fixed px */
+            aspect-ratio: 1;      /* stay circular without fixed height */
+            max-width: 60px;
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(255, 255, 255, 0.08);
             color: white;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 0 auto;       /* center within the grid cell */
         }
         .toggle-btn.active {
             background: var(--primary-accent);
@@ -478,11 +436,15 @@
 
 <!-- Super Glassy Notification Drawer -->
 <div class="notification-drawer" id="notificationDrawer">
-    <div class="toggles-grid">
-        <!-- Theme toggles -->
+    <!-- Theme row: 5 themes -->
+    <div class="toggles-grid theme-row">
         <div class="toggle-item">
             <button class="toggle-btn" id="toggleDark">🌑</button>
             <div class="toggle-label">Dark</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn amoled-btn" id="toggleAmoled">⬛</button>
+            <div class="toggle-label">AMOLED</div>
         </div>
         <div class="toggle-item">
             <button class="toggle-btn" id="toggleLight">☀️</button>
@@ -496,7 +458,9 @@
             <button class="toggle-btn" id="toggleForest">🌲</button>
             <div class="toggle-label">Forest</div>
         </div>
-        <!-- Shortcuts -->
+    </div>
+    <!-- Shortcuts row: 4 buttons -->
+    <div class="toggles-grid shortcut-row">
         <div class="toggle-item">
             <button class="toggle-btn" id="qsIndex">📋</button>
             <div class="toggle-label">Index</div>
@@ -513,6 +477,17 @@
             <button class="toggle-btn" id="qsReload">🔄</button>
             <div class="toggle-label">Reload</div>
         </div>
+    </div>
+
+    <!-- Font Size Accessibility -->
+    <div class="font-size-row">
+        <span class="font-size-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><text x="2" y="18" font-size="14" fill="currentColor" stroke="none" font-weight="700">Aa</text></svg>
+        </span>
+        <button class="font-btn" data-size="small"  id="fontSmall" title="Small text">A</button>
+        <button class="font-btn" data-size="medium" id="fontMedium" title="Normal text">A</button>
+        <button class="font-btn" data-size="large"  id="fontLarge" title="Large text">A</button>
+        <button class="font-btn" data-size="xl"     id="fontXL"    title="Extra large text">A</button>
     </div>
 
     <!-- Mini stats -->
@@ -555,6 +530,10 @@
     </div>
 
     <div class="header-right" id="headerShortcuts">
+        <!-- Battery indicator (shown by JS when Battery API available) -->
+        <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
+        <!-- AMOLED power-saving badge -->
+        <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
         <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
         <button class="icon-btn" id="progressToggle" title="Progress">📊</button>
         <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
@@ -580,6 +559,9 @@
     <div class="popup-quote" id="popupQuote">✨ Every review sharpens your skills.</div>
 </div>
 
+<!-- Last Visited Section – rendered by JS -->
+<div id="lastVisitedSection" style="display:none; padding: 0 16px; max-width: 800px; margin: 0 auto 8px; width: 100%; box-sizing: border-box;"></div>
+
 <main id="mainContent"></main>
 
 <footer>
@@ -598,24 +580,25 @@
         // ---------- THEME SYSTEM ----------
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
-        const themes = ['dark', 'light', 'sepia', 'forest'];
-
+                const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
         function setTheme(theme) {
+            if (!themes.includes(theme)) theme = 'dark';
             html.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            // Update active class on drawer buttons
-            document.querySelectorAll('.toggle-btn[id^="toggle"]').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            const activeBtn = document.getElementById(`toggle${theme.charAt(0).toUpperCase() + theme.slice(1)}`);
+            // Update active class on all theme toggle buttons
+            document.querySelectorAll('.toggle-btn[id^="toggle"]').forEach(btn => btn.classList.remove('active'));
+            const id = 'toggle' + theme.charAt(0).toUpperCase() + theme.slice(1);
+            const activeBtn = document.getElementById(id);
             if (activeBtn) activeBtn.classList.add('active');
+            // Update AMOLED badge visibility
+            const amoledBadge = document.getElementById('amoledBadge');
+            if (amoledBadge) amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
         }
 
         function nextTheme() {
             const current = html.getAttribute('data-theme') || 'dark';
             const currentIndex = themes.indexOf(current);
-            const nextIndex = (currentIndex + 1) % themes.length;
-            setTheme(themes[nextIndex]);
+            setTheme(themes[(currentIndex + 1) % themes.length]);
         }
 
         themeBtn.addEventListener('click', nextTheme);
@@ -626,6 +609,7 @@
 
         // ---------- FIX #1: Add event listeners to drawer theme buttons ----------
         document.getElementById('toggleDark').addEventListener('click', () => setTheme('dark'));
+        document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
         document.getElementById('toggleLight').addEventListener('click', () => setTheme('light'));
         document.getElementById('toggleSepia').addEventListener('click', () => setTheme('sepia'));
         document.getElementById('toggleForest').addEventListener('click', () => setTheme('forest'));
@@ -666,6 +650,31 @@
         });
         document.getElementById('qsReload').addEventListener('click', () => {
             window.location.reload();
+        });
+
+        // ---------- FONT SIZE ACCESSIBILITY ----------
+        const FONT_SIZES = ['small', 'medium', 'large', 'xl'];
+        const FONT_BTN_IDS = { small: 'fontSmall', medium: 'fontMedium', large: 'fontLarge', xl: 'fontXL' };
+
+        function setFontSize(size) {
+            if (!FONT_SIZES.includes(size)) size = 'medium';
+            document.documentElement.setAttribute('data-font-size', size);
+            localStorage.setItem('dcas_font_size', size);
+            // Update active state on buttons
+            FONT_SIZES.forEach(s => {
+                const btn = document.getElementById(FONT_BTN_IDS[s]);
+                if (btn) btn.classList.toggle('active', s === size);
+            });
+        }
+
+        // Apply saved font size on load
+        const savedFontSize = localStorage.getItem('dcas_font_size') || 'medium';
+        setFontSize(savedFontSize);
+
+        // Bind buttons
+        FONT_SIZES.forEach(size => {
+            const btn = document.getElementById(FONT_BTN_IDS[size]);
+            if (btn) btn.addEventListener('click', () => { setFontSize(size); });
         });
 
         // ---------- PROGRESS POPUP ----------
@@ -717,6 +726,92 @@
             "You've got this!", "Stay curious, stay sharp.", "Excellence is a habit.",
             "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
         ];
+
+        // ---------- LAST VISITED + BATTERY INDICATOR ----------
+        function renderLastVisited() {
+            const LV_KEY = 'dcas_last_visited';
+            let history = [];
+            try { history = JSON.parse(localStorage.getItem(LV_KEY) || '[]'); } catch(e) {}
+            const container = document.getElementById('lastVisitedSection');
+            if (!container) return;
+            if (!history || history.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            container.style.display = 'block';
+            const items = history.slice(0, 3).map(h => {
+                const ago = timeAgo(h.ts);
+                // Determine if path is relative or absolute
+                const href = h.path || h.url;
+                return `<a class="lv-item" href="${href}">
+                    <div class="lv-icon">🕐</div>
+                    <div class="lv-info">
+                        <div class="lv-title">${escapeHtml(h.title)}</div>
+                        <div class="lv-time">${ago}</div>
+                    </div>
+                    <div class="lv-arrow">›</div>
+                </a>`;
+            }).join('');
+            container.innerHTML = `
+                <div class="lv-header">
+                    <span class="lv-heading">📖 Continue Where You Left Off</span>
+                    <button class="lv-clear" id="lvClearBtn" title="Clear history">✕</button>
+                </div>
+                <div class="lv-list">${items}</div>`;
+            document.getElementById('lvClearBtn').addEventListener('click', () => {
+                localStorage.removeItem(LV_KEY);
+                container.style.display = 'none';
+            });
+        }
+
+        function escapeHtml(s) {
+            if (!s) return '';
+            return s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+        }
+
+        function timeAgo(ts) {
+            const diff = Math.floor((Date.now() - ts) / 1000);
+            if (diff < 60)    return 'Just now';
+            if (diff < 3600)  return Math.floor(diff / 60) + ' min ago';
+            if (diff < 86400) return Math.floor(diff / 3600) + ' hr ago';
+            return Math.floor(diff / 86400) + ' days ago';
+        }
+
+        // Battery API – show icon in header when available
+        async function initBattery() {
+            if (!navigator.getBattery) return;
+            try {
+                const bat = await navigator.getBattery();
+                const el = document.getElementById('batteryIndicator');
+                if (!el) return;
+                function update() {
+                    const pct = Math.round(bat.level * 100);
+                    const charging = bat.charging;
+                    let icon = '🔋';
+                    // On AMOLED theme, show power-saving badge
+                    const theme = document.documentElement.getAttribute('data-theme');
+                    const amoledBadge = document.getElementById('amoledBadge');
+                    if (amoledBadge) {
+                        amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
+                    }
+                    if (pct <= 15) icon = '🪫';
+                    else if (pct <= 35) icon = '🔋';
+                    else icon = '🔋';
+                    if (charging) icon = '⚡';
+                    el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
+                    el.style.display = 'flex';
+                    // Low battery warning class
+                    el.classList.toggle('bat-low', pct <= 15 && !charging);
+                    el.classList.toggle('bat-charging', charging);
+                }
+                update();
+                bat.addEventListener('levelchange', update);
+                bat.addEventListener('chargingchange', update);
+            } catch(e) {}
+        }
+
+        initBattery();
+        renderLastVisited();
 
         // ---------- COMPLETE CHAPTER LIST ----------
         const CHAPTERS = [
@@ -1038,6 +1133,39 @@
     })();
 </script>
 
+    <!-- Add this just before the closing </script> in index.html -->
+<script>
+    // ---------- SCROLL POSITION MEMORY ----------
+    (function() {
+        // Save scroll position when leaving the page
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('mainScrollPos', window.scrollY);
+        });
+
+        // Restore scroll position after page is fully rendered
+        function restoreScroll() {
+            let saved = sessionStorage.getItem('mainScrollPos');
+            if (saved) {
+                // Give time for dynamic content to settle
+                setTimeout(function() {
+                    window.scrollTo(0, parseInt(saved));
+                    sessionStorage.removeItem('mainScrollPos');
+                }, 150);
+            }
+        }
+
+        // If page is loaded from bfcache (back/forward), also restore
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                restoreScroll();
+            }
+        });
+
+        // Restore after initial render
+        restoreScroll();
+    })();
+</script>
+    
 <!-- Service Worker Registration -->
 <script>
     if ('serviceWorker' in navigator) {
