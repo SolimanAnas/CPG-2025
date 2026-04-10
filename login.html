@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login · DCAS CPG</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .auth-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .auth-card h1 { margin: 0 0 8px; color: var(--text-primary); }
+    .auth-card p { margin: 0 0 16px; color: var(--text-secondary); }
+    .auth-field { margin-bottom: 12px; }
+    .auth-field label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .auth-field input {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.7);
+      color: #111;
+    }
+    .auth-btn {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px;
+      background: var(--primary-accent);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+    .auth-error {
+      min-height: 22px;
+      margin-top: 10px;
+      color: #ff6b6b;
+      font-weight: 600;
+    }
+    .auth-hint {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <main class="auth-wrap">
+    <section class="auth-card" aria-labelledby="authTitle">
+      <h1 id="authTitle">Secure Login</h1>
+      <p>Local login with hashed password verification.</p>
+
+      <form id="loginForm">
+        <div class="auth-field">
+          <label for="username">Username</label>
+          <input id="username" name="username" autocomplete="username" required>
+        </div>
+        <div class="auth-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="auth-btn" type="submit">Login</button>
+        <div class="auth-error" id="authError" role="alert" aria-live="polite"></div>
+      </form>
+
+      <div class="auth-hint">Default credentials: <strong>admin / ChangeMe123!</strong></div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const AUTH_KEY = 'dcas_local_auth';
+      const USERNAME = 'admin';
+      const PASSWORD_HASH = '9a4aabf0e5cf71cae2cea646613ce7e2a5919fa758e56819704be25a3a2c1f0b';
+
+      function basePath() {
+        const path = window.location.pathname;
+        if (path.includes('/chapters/')) return path.split('/chapters/')[0] || '';
+        return path.replace(/\/[^/]*$/, '');
+      }
+
+      function getLoginPath() {
+        return `${basePath()}/login.html`;
+      }
+
+      function getHomePath() {
+        return `${basePath()}/index.html`;
+      }
+
+      function fromHex(buffer) {
+        const bytes = Array.from(new Uint8Array(buffer));
+        return bytes.map(b => b.toString(16).padStart(2, '0')).join('');
+      }
+
+      async function sha256(text) {
+        const data = new TextEncoder().encode(text);
+        const digest = await crypto.subtle.digest('SHA-256', data);
+        return fromHex(digest);
+      }
+
+      function readSession() {
+        try {
+          const raw = localStorage.getItem(AUTH_KEY);
+          return raw ? JSON.parse(raw) : null;
+        } catch (_) {
+          return null;
+        }
+      }
+
+      function isAuthenticated() {
+        const session = readSession();
+        if (!session || !session.loggedIn || !session.expiresAt) return false;
+        return Date.now() < Number(session.expiresAt);
+      }
+
+      if (isAuthenticated()) {
+        window.location.replace(getHomePath());
+      }
+
+      const form = document.getElementById('loginForm');
+      const errorEl = document.getElementById('authError');
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        errorEl.textContent = '';
+
+        const username = String(document.getElementById('username').value || '').trim();
+        const password = String(document.getElementById('password').value || '');
+        const hash = await sha256(password);
+
+        if (username !== USERNAME || hash !== PASSWORD_HASH) {
+          errorEl.textContent = 'Invalid username or password.';
+          return;
+        }
+
+        const payload = {
+          loggedIn: true,
+          user: username,
+          issuedAt: Date.now(),
+          expiresAt: Date.now() + (24 * 60 * 60 * 1000)
+        };
+        localStorage.setItem(AUTH_KEY, JSON.stringify(payload));
+
+        const params = new URLSearchParams(window.location.search);
+        const next = params.get('next');
+        if (next && next !== getLoginPath()) {
+          window.location.replace(next);
+        } else {
+          window.location.replace(getHomePath());
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
