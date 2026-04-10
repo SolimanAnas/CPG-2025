@@ -27,6 +27,47 @@ const storage = (function() {
     html.setAttribute('data-font-size', savedSize);
 })();
 
+// ---------- LOCAL AUTH GUARD ----------
+(function() {
+    const AUTH_KEY = 'dcas_local_auth';
+    const PUBLIC_PAGES = ['login.html', 'about.html', 'privacy.html', 'terms.html'];
+
+    function getBasePath() {
+        const path = window.location.pathname;
+        if (path.includes('/chapters/')) return path.split('/chapters/')[0] || '';
+        return path.replace(/\/[^/]*$/, '');
+    }
+
+    function getPageName() {
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        return parts.length ? parts[parts.length - 1] : 'index.html';
+    }
+
+    function readSession() {
+        try {
+            const raw = localStorage.getItem(AUTH_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (_) {
+            return null;
+        }
+    }
+
+    function isValidSession() {
+        const session = readSession();
+        if (!session || !session.loggedIn || !session.expiresAt) return false;
+        return Date.now() < Number(session.expiresAt);
+    }
+
+    const page = getPageName();
+    if (PUBLIC_PAGES.includes(page)) return;
+    if (isValidSession()) return;
+
+    const loginPath = `${getBasePath()}/login.html`;
+    const next = window.location.pathname + window.location.search + window.location.hash;
+    window.location.replace(`${loginPath}?next=${encodeURIComponent(next)}`);
+})();
+
+
 // ============================================================
 // LAST VISITED – records chapter visits to localStorage (single implementation)
 // ============================================================

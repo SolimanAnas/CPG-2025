@@ -428,6 +428,25 @@
             50% { transform: translateX(-50%) translateY(6px); }
         }
     </style>
+	  <script>
+			(function() {
+				const AUTH_KEY = 'dcas_local_auth';
+				function readSession() {
+					try {
+						const raw = localStorage.getItem(AUTH_KEY);
+						return raw ? JSON.parse(raw) : null;
+					} catch (_) { return null; }
+				}
+				const session = readSession();
+				const ok = session && session.loggedIn && session.expiresAt && Date.now() < Number(session.expiresAt);
+				if (!ok) {
+					const next = window.location.pathname + window.location.search + window.location.hash;
+					window.location.replace(`login.html?next=${encodeURIComponent(next)}`);
+				}
+			})();
+		</script>
+
+
 </head>
 <body>
 
@@ -476,6 +495,10 @@
         <div class="toggle-item">
             <button class="toggle-btn" id="qsReload">🔄</button>
             <div class="toggle-label">Reload</div>
+        </div>
+		<div class="toggle-item">
+            <button class="toggle-btn" id="qsLogout">🚪</button>
+            <div class="toggle-label">Logout</div>
         </div>
     </div>
 
@@ -651,7 +674,12 @@
         document.getElementById('qsReload').addEventListener('click', () => {
             window.location.reload();
         });
-
+		
+		        document.getElementById('qsLogout').addEventListener('click', () => {
+            localStorage.removeItem('dcas_local_auth');
+            window.location.href = 'login.html';
+        });
+		
         // ---------- FONT SIZE ACCESSIBILITY ----------
         const FONT_SIZES = ['small', 'medium', 'large', 'xl'];
         const FONT_BTN_IDS = { small: 'fontSmall', medium: 'fontMedium', large: 'fontLarge', xl: 'fontXL' };
@@ -1072,7 +1100,7 @@
                 progressBar.value = 0;
                 const base = window.location.origin + (window.location.pathname.includes('/DCAS-CPG-Review-V1') ? '/DCAS-CPG-Review-V1' : '') + '/';
                 const filesToCache = [
-                    '/', '/index.html', '/about.html', '/styles.css', '/app.js', '/manifest.json',
+                    '/', '/index.html', '/login.html', '/about.html', '/styles.css', '/app.js', '/manifest.json',
                     '/icons/icon.png', '/images/image-01.png',
                     ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/content/${ch.chapterFile || ch.id}.js`),
                     ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/chapters/${ch.chapterFile || ch.id}.html`)
