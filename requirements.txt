@@ -1,1 +1,6 @@
-pip freeze  requirements.txt
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Werkzeug
+google-auth
+requests
