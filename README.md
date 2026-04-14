@@ -7,7 +7,7 @@
 
 A secure, high-performance Progressive Web Application (PWA) designed to provide Dubai Corporation for Ambulance Services (DCAS) EMS personnel with a digitized, interactive study aid and rapid reference tool for the 2025 Clinical Practice Guidelines.
 
-*🔗 **Live Demo:** [https://cpg-2025.onrender.com](https://cpg-2025.onrender.com)* *(Replace with your actual link)*
+*🔗 **Live Demo:** [https://smart-cpg.onrender.com/]
 
 ---
 
