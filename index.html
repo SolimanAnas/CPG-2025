@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+
+<script>
+  // DCAS Security Guard: Check if user is logged in
+  (function() {
+    const AUTH_KEY = 'dcas_local_auth';
+    try {
+      const sessionRaw = localStorage.getItem(AUTH_KEY);
+      if (!sessionRaw) {
+        window.location.replace('/login.html'); // Kick them to login
+        return;
+      }
+      const session = JSON.parse(sessionRaw);
+      // Check if session is expired
+      if (!session.loggedIn || Date.now() > session.expiresAt) {
+        localStorage.removeItem(AUTH_KEY);
+        window.location.replace('/login.html'); // Kick them to login
+      }
+    } catch (e) {
+      window.location.replace('/login.html');
+    }
+  })();
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
