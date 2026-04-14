@@ -9,7 +9,7 @@
     try {
       const sessionRaw = localStorage.getItem(AUTH_KEY);
       if (!sessionRaw) {
-        window.location.replace('/login.html'); // Kick them to login
+        window.location.replace('login.html');
         return;
       }
       const session = JSON.parse(sessionRaw);
