@@ -16,7 +16,7 @@
       // Check if session is expired
       if (!session.loggedIn || Date.now() > session.expiresAt) {
         localStorage.removeItem(AUTH_KEY);
-        window.location.replace('/login.html'); // Kick them to login
+        window.location.replace('login.html');
       }
     } catch (e) {
       window.location.replace('/login.html');
