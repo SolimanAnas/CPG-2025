@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-
 <script>
   // DCAS Security Guard: Check if user is logged in
   (function() {
@@ -305,19 +304,19 @@
 
         .notification-drawer {
             position: fixed;
-            top: -600px;         /* increased so large drawer fully hides offscreen */
+            top: -600px;
             left: 0;
-            right: 0;            /* explicit right:0 instead of width:100% */
+            right: 0;
             width: 100%;
-            box-sizing: border-box; /* CRITICAL: padding is INSIDE the 100% width */
-            overflow: hidden;    /* prevent any child overflow */
+            box-sizing: border-box;
+            overflow: hidden;
             background: rgba(20, 30, 40, 0.4);
             backdrop-filter: blur(25px) saturate(180%);
             -webkit-backdrop-filter: blur(25px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             z-index: 2001;
-            padding: 25px 16px 35px;  /* slightly tighter side padding */
+            padding: 25px 16px 35px;
             border-radius: 0 0 30px 30px;
             transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             display: flex;
@@ -330,7 +329,6 @@
 
         .toggles-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr)); /* minmax(0) prevents overflow */
             gap: 10px;
             width: 100%;
         }
@@ -341,8 +339,8 @@
             text-align: center;
         }
         .toggle-btn {
-            width: 100%;          /* fill grid cell, don't use fixed px */
-            aspect-ratio: 1;      /* stay circular without fixed height */
+            width: 100%;
+            aspect-ratio: 1;
             max-width: 60px;
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -355,7 +353,7 @@
             cursor: pointer;
             transition: all 0.2s;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin: 0 auto;       /* center within the grid cell */
+            margin: 0 auto;
         }
         .toggle-btn.active {
             background: var(--primary-accent);
@@ -414,7 +412,6 @@
             margin-top: -10px;
         }
 
-        /* Two‑line trigger */
         .drawer-trigger {
             position: absolute;
             left: 50%;
@@ -450,25 +447,6 @@
             50% { transform: translateX(-50%) translateY(6px); }
         }
     </style>
-	  <script>
-			(function() {
-				const AUTH_KEY = 'dcas_local_auth';
-				function readSession() {
-					try {
-						const raw = localStorage.getItem(AUTH_KEY);
-						return raw ? JSON.parse(raw) : null;
-					} catch (_) { return null; }
-				}
-				const session = readSession();
-				const ok = session && session.loggedIn && session.expiresAt && Date.now() < Number(session.expiresAt);
-				if (!ok) {
-					const next = window.location.pathname + window.location.search + window.location.hash;
-					window.location.replace(`login.html?next=${encodeURIComponent(next)}`);
-				}
-			})();
-		</script>
-
-
 </head>
 <body>
 
@@ -477,8 +455,8 @@
 
 <!-- Super Glassy Notification Drawer -->
 <div class="notification-drawer" id="notificationDrawer">
-    <!-- Theme row: 5 themes -->
-    <div class="toggles-grid theme-row">
+    <!-- Top row: 5 items (Dark, AMOLED, Light, Sepia, Logout) -->
+    <div class="toggles-grid theme-row" style="grid-template-columns: repeat(5, 1fr);">
         <div class="toggle-item">
             <button class="toggle-btn" id="toggleDark">🌑</button>
             <div class="toggle-label">Dark</div>
@@ -496,12 +474,13 @@
             <div class="toggle-label">Sepia</div>
         </div>
         <div class="toggle-item">
-            <button class="toggle-btn" id="toggleForest">🌲</button>
-            <div class="toggle-label">Forest</div>
+            <button class="toggle-btn" id="qsLogout" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">🚪</button>
+            <div class="toggle-label">Logout</div>
         </div>
     </div>
-    <!-- Shortcuts row: 4 buttons -->
-    <div class="toggles-grid shortcut-row">
+
+    <!-- Second row: 5 items (Index, About, Reload, Clear Cache, Forest) -->
+    <div class="toggles-grid shortcut-row" style="grid-template-columns: repeat(5, 1fr);">
         <div class="toggle-item">
             <button class="toggle-btn" id="qsIndex">📋</button>
             <div class="toggle-label">Index</div>
@@ -511,16 +490,16 @@
             <div class="toggle-label">About</div>
         </div>
         <div class="toggle-item">
-            <button class="toggle-btn" id="qsJumpDown">⬇️</button>
-            <div class="toggle-label">Bottom</div>
-        </div>
-        <div class="toggle-item">
             <button class="toggle-btn" id="qsReload">🔄</button>
             <div class="toggle-label">Reload</div>
         </div>
-		<div class="toggle-item">
-            <button class="toggle-btn" id="qsLogout">🚪</button>
-            <div class="toggle-label">Logout</div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="qsClearCache" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.3);">🧹</button>
+            <div class="toggle-label">Cache</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="toggleForest">🌲</button>
+            <div class="toggle-label">Forest</div>
         </div>
     </div>
 
@@ -575,9 +554,7 @@
     </div>
 
     <div class="header-right" id="headerShortcuts">
-        <!-- Battery indicator (shown by JS when Battery API available) -->
         <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
-        <!-- AMOLED power-saving badge -->
         <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
         <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
         <button class="icon-btn" id="progressToggle" title="Progress">📊</button>
@@ -625,7 +602,7 @@
         // ---------- THEME SYSTEM ----------
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
-                const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
+        const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
         function setTheme(theme) {
             if (!themes.includes(theme)) theme = 'dark';
             html.setAttribute('data-theme', theme);
@@ -652,7 +629,7 @@
         const savedTheme = localStorage.getItem('theme') || 'dark';
         setTheme(savedTheme);
 
-        // ---------- FIX #1: Add event listeners to drawer theme buttons ----------
+        // Add event listeners to drawer theme buttons (including Forest which is now in second row)
         document.getElementById('toggleDark').addEventListener('click', () => setTheme('dark'));
         document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
         document.getElementById('toggleLight').addEventListener('click', () => setTheme('light'));
@@ -684,24 +661,29 @@
         document.getElementById('qsAbout').addEventListener('click', () => {
             window.location.href = 'about.html';
         });
-        document.getElementById('qsJumpDown').addEventListener('click', () => {
-            const stats = document.getElementById('statsCard');
-            if (stats) {
-                stats.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
-            closeDrawer();
-        });
         document.getElementById('qsReload').addEventListener('click', () => {
             window.location.reload();
         });
-		
-		        document.getElementById('qsLogout').addEventListener('click', () => {
+
+        // NEW: Clear Cache button
+        document.getElementById('qsClearCache').addEventListener('click', async () => {
+            if (confirm("Clear app cache and reload? This will remove all offline files. Your progress will also be reset if you proceed.")) {
+                if ('caches' in window) {
+                    const cacheNames = await caches.keys();
+                    await Promise.all(cacheNames.map(name => caches.delete(name)));
+                }
+                // Warning: This resets all progress. Remove if you only want to clear cache files.
+                localStorage.clear();
+                window.location.reload(true);
+            }
+        });
+
+        // RELOCATED: Logout button (now in top row)
+        document.getElementById('qsLogout').addEventListener('click', () => {
             localStorage.removeItem('dcas_local_auth');
             window.location.href = 'login.html';
         });
-		
+
         // ---------- FONT SIZE ACCESSIBILITY ----------
         const FONT_SIZES = ['small', 'medium', 'large', 'xl'];
         const FONT_BTN_IDS = { small: 'fontSmall', medium: 'fontMedium', large: 'fontLarge', xl: 'fontXL' };
@@ -710,18 +692,15 @@
             if (!FONT_SIZES.includes(size)) size = 'medium';
             document.documentElement.setAttribute('data-font-size', size);
             localStorage.setItem('dcas_font_size', size);
-            // Update active state on buttons
             FONT_SIZES.forEach(s => {
                 const btn = document.getElementById(FONT_BTN_IDS[s]);
                 if (btn) btn.classList.toggle('active', s === size);
             });
         }
 
-        // Apply saved font size on load
         const savedFontSize = localStorage.getItem('dcas_font_size') || 'medium';
         setFontSize(savedFontSize);
 
-        // Bind buttons
         FONT_SIZES.forEach(size => {
             const btn = document.getElementById(FONT_BTN_IDS[size]);
             if (btn) btn.addEventListener('click', () => { setFontSize(size); });
@@ -791,7 +770,6 @@
             container.style.display = 'block';
             const items = history.slice(0, 3).map(h => {
                 const ago = timeAgo(h.ts);
-                // Determine if path is relative or absolute
                 const href = h.path || h.url;
                 return `<a class="lv-item" href="${href}">
                     <div class="lv-icon">🕐</div>
@@ -827,7 +805,6 @@
             return Math.floor(diff / 86400) + ' days ago';
         }
 
-        // Battery API – show icon in header when available
         async function initBattery() {
             if (!navigator.getBattery) return;
             try {
@@ -838,7 +815,6 @@
                     const pct = Math.round(bat.level * 100);
                     const charging = bat.charging;
                     let icon = '🔋';
-                    // On AMOLED theme, show power-saving badge
                     const theme = document.documentElement.getAttribute('data-theme');
                     const amoledBadge = document.getElementById('amoledBadge');
                     if (amoledBadge) {
@@ -850,7 +826,6 @@
                     if (charging) icon = '⚡';
                     el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
                     el.style.display = 'flex';
-                    // Low battery warning class
                     el.classList.toggle('bat-low', pct <= 15 && !charging);
                     el.classList.toggle('bat-charging', charging);
                 }
@@ -966,24 +941,15 @@
 
         window.app = window.app || {};
         
-        // ---------- 🆕 NEW TOGGLE FUNCTION – NO RERENDER, NO FLICKER ----------
         window.app.toggleCompletion = function(checkbox, chapterId) {
-            // Get the new checked state
             const checked = checkbox.checked;
-            
-            // Update localStorage
             const completion = loadStorage(COMPLETION_KEY, {});
             completion[chapterId] = checked;
             saveStorage(COMPLETION_KEY, completion);
-            
-            // Find the previous sibling <span> that contains the "Mark Done" / "Completed" text
-            // The HTML structure is: <span>text</span> <input ...> <span class="toggle-track"></span>
             const textSpan = checkbox.previousElementSibling;
             if (textSpan && textSpan.tagName === 'SPAN') {
                 textSpan.textContent = checked ? 'Completed' : 'Mark Done';
             }
-            
-            // Update global progress stats (dashboard and drawer)
             updateAllProgress();
         };
 
@@ -1091,7 +1057,6 @@
             document.getElementById('mainContent').innerHTML = fullHtml;
             updateAllProgress();
 
-            // Search listener
             const searchInput = document.getElementById('searchInput');
             const clearBtn = document.getElementById('searchClearBtn');
             if (searchInput) {
@@ -1109,7 +1074,6 @@
                 });
             }
 
-            // Offline download (keep existing)
             const downloadBtn = document.getElementById('downloadOfflineBtn');
             const progressBar = document.getElementById('downloadProgress');
             async function downloadAllContent() {
@@ -1149,9 +1113,8 @@
             if (filterText) filterCards(filterText);
         }
 
-        // ---------- 🔒 FIX #2: Remove :not(.special-card) – filter ALL cards ----------
         function filterCards(text) {
-            const cards = document.querySelectorAll('.menu-card'); // now includes special cards
+            const cards = document.querySelectorAll('.menu-card');
             const lowerText = text.toLowerCase().trim();
             cards.forEach(card => {
                 const searchData = card.dataset.search || '';
@@ -1163,19 +1126,16 @@
             });
         }
 
-        // ---------- HOME & INDEX BUTTONS ----------
         const homeBtn = document.getElementById('homeBtn');
         const indexBtn = document.getElementById('headerIndexBtn');
         if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
         if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
 
-        // ---------- 🛑 FIX #3: Stop propagation on toggle clicks to prevent page reload ----------
         document.addEventListener('click', function(e) {
-            // Check if the click originated from inside the toggle wrapper
             if (e.target.closest('.toggle-wrapper')) {
                 e.stopPropagation();
             }
-        }, true); // use capture phase to intercept early
+        }, true);
 
         renderMenu();
         updateFloatButtons();
@@ -1183,39 +1143,28 @@
     })();
 </script>
 
-    <!-- Add this just before the closing </script> in index.html -->
+<!-- Scroll position memory -->
 <script>
-    // ---------- SCROLL POSITION MEMORY ----------
     (function() {
-        // Save scroll position when leaving the page
         window.addEventListener('beforeunload', function() {
             sessionStorage.setItem('mainScrollPos', window.scrollY);
         });
-
-        // Restore scroll position after page is fully rendered
         function restoreScroll() {
             let saved = sessionStorage.getItem('mainScrollPos');
             if (saved) {
-                // Give time for dynamic content to settle
                 setTimeout(function() {
                     window.scrollTo(0, parseInt(saved));
                     sessionStorage.removeItem('mainScrollPos');
                 }, 150);
             }
         }
-
-        // If page is loaded from bfcache (back/forward), also restore
         window.addEventListener('pageshow', function(event) {
-            if (event.persisted) {
-                restoreScroll();
-            }
+            if (event.persisted) restoreScroll();
         });
-
-        // Restore after initial render
         restoreScroll();
     })();
 </script>
-    
+
 <!-- Service Worker Registration -->
 <script>
     if ('serviceWorker' in navigator) {
