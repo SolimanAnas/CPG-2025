@@ -1,27 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<script>
-  // DCAS Security Guard: Check if user is logged in
-  (function() {
-    const AUTH_KEY = 'dcas_local_auth';
-    try {
-      const sessionRaw = localStorage.getItem(AUTH_KEY);
-      if (!sessionRaw) {
-        window.location.replace('login.html');
-        return;
-      }
-      const session = JSON.parse(sessionRaw);
-      // Check if session is expired
-      if (!session.loggedIn || Date.now() > session.expiresAt) {
-        localStorage.removeItem(AUTH_KEY);
-        window.location.replace('login.html');
-      }
-    } catch (e) {
-      window.location.replace('/login.html');
-    }
-  })();
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>DCAS CPG 2025 · Chapters</title>
@@ -304,19 +283,19 @@
 
         .notification-drawer {
             position: fixed;
-            top: -600px;
+            top: -600px;         /* increased so large drawer fully hides offscreen */
             left: 0;
-            right: 0;
+            right: 0;            /* explicit right:0 instead of width:100% */
             width: 100%;
-            box-sizing: border-box;
-            overflow: hidden;
+            box-sizing: border-box; /* CRITICAL: padding is INSIDE the 100% width */
+            overflow: hidden;    /* prevent any child overflow */
             background: rgba(20, 30, 40, 0.4);
             backdrop-filter: blur(25px) saturate(180%);
             -webkit-backdrop-filter: blur(25px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             z-index: 2001;
-            padding: 25px 16px 35px;
+            padding: 25px 16px 35px;  /* slightly tighter side padding */
             border-radius: 0 0 30px 30px;
             transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             display: flex;
@@ -329,6 +308,7 @@
 
         .toggles-grid {
             display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr)); /* minmax(0) prevents overflow */
             gap: 10px;
             width: 100%;
         }
@@ -339,8 +319,8 @@
             text-align: center;
         }
         .toggle-btn {
-            width: 100%;
-            aspect-ratio: 1;
+            width: 100%;          /* fill grid cell, don't use fixed px */
+            aspect-ratio: 1;      /* stay circular without fixed height */
             max-width: 60px;
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -353,7 +333,7 @@
             cursor: pointer;
             transition: all 0.2s;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin: 0 auto;
+            margin: 0 auto;       /* center within the grid cell */
         }
         .toggle-btn.active {
             background: var(--primary-accent);
@@ -412,6 +392,7 @@
             margin-top: -10px;
         }
 
+        /* Two‑line trigger */
         .drawer-trigger {
             position: absolute;
             left: 50%;
@@ -446,6 +427,113 @@
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(6px); }
         }
+
+        /* ═══════════════════════════════════════════════════════
+           PWA INSTALL BANNER
+           ═══════════════════════════════════════════════════════ */
+        #pwa-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 3000;
+            padding: 12px 16px;
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
+            transform: translateY(110%);
+            transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
+        }
+        #pwa-banner.visible {
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .pwa-card {
+            background: rgba(10, 18, 36, 0.88);
+            backdrop-filter: blur(22px) saturate(170%);
+            -webkit-backdrop-filter: blur(22px) saturate(170%);
+            border: 1px solid rgba(59, 130, 246, 0.28);
+            border-radius: 20px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow:
+                0 -4px 32px rgba(0,0,0,0.45),
+                0 0 0 0.5px rgba(59,130,246,0.12) inset;
+            position: relative;
+            overflow: hidden;
+        }
+        /* top shimmer line */
+        .pwa-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 10%; right: 10%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(147,197,253,0.4), transparent);
+        }
+        .pwa-app-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 12px rgba(30,58,138,0.5);
+            overflow: hidden;
+        }
+        .pwa-app-icon img {
+            width: 100%; height: 100%; object-fit: cover; border-radius: 12px;
+        }
+        .pwa-app-icon .pwa-icon-fallback {
+            font-size: 1.6rem; line-height: 1;
+        }
+        .pwa-text {
+            flex: 1; min-width: 0;
+        }
+        .pwa-title {
+            font-size: 0.88rem; font-weight: 700;
+            color: #E8F0FE; line-height: 1.2;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .pwa-subtitle {
+            font-size: 0.75rem; color: #6B7FA3;
+            margin-top: 2px; line-height: 1.3;
+        }
+        /* iOS instruction row */
+        .pwa-ios-row {
+            display: none;
+            align-items: center; gap: 6px;
+            font-size: 0.75rem; color: #93C5FD;
+            margin-top: 4px;
+        }
+        .pwa-ios-row svg { flex-shrink: 0; }
+        .pwa-actions {
+            display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+        }
+        .pwa-install-btn {
+            background: linear-gradient(135deg, #2563EB, #1D4ED8);
+            color: #fff;
+            border: none; border-radius: 30px;
+            padding: 9px 18px;
+            font-size: 0.82rem; font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer; white-space: nowrap;
+            box-shadow: 0 4px 14px -4px rgba(29,78,216,0.65);
+            transition: all 0.2s;
+        }
+        .pwa-install-btn:hover { filter: brightness(1.12); transform: translateY(-1px); }
+        .pwa-install-btn:active { transform: scale(0.96); }
+        .pwa-dismiss-btn {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: #6B7FA3;
+            border-radius: 50%;
+            width: 30px; height: 30px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; flex-shrink: 0;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        .pwa-dismiss-btn:hover { background: rgba(255,255,255,0.14); color: #CBD5E1; }
+        /* iOS: hide install button, show share instruction instead */
+        #pwa-banner.ios-mode .pwa-install-btn { display: none; }
+        #pwa-banner.ios-mode .pwa-ios-row    { display: flex; }
     </style>
 </head>
 <body>
@@ -455,8 +543,8 @@
 
 <!-- Super Glassy Notification Drawer -->
 <div class="notification-drawer" id="notificationDrawer">
-    <!-- Top row: 5 items (Dark, AMOLED, Light, Sepia, Logout) -->
-    <div class="toggles-grid theme-row" style="grid-template-columns: repeat(5, 1fr);">
+    <!-- Theme row: 5 themes -->
+    <div class="toggles-grid theme-row">
         <div class="toggle-item">
             <button class="toggle-btn" id="toggleDark">🌑</button>
             <div class="toggle-label">Dark</div>
@@ -473,16 +561,13 @@
             <button class="toggle-btn" id="toggleSepia">📜</button>
             <div class="toggle-label">Sepia</div>
         </div>
-		
-		 <div class="toggle-item">
+        <div class="toggle-item">
             <button class="toggle-btn" id="toggleForest">🌲</button>
             <div class="toggle-label">Forest</div>
         </div>
-		
     </div>
-
-    <!-- Second row: 5 items (Index, About, Reload, Clear Cache, Forest) -->
-    <div class="toggles-grid shortcut-row" style="grid-template-columns: repeat(5, 1fr);">
+    <!-- Shortcuts row: 4 buttons -->
+    <div class="toggles-grid shortcut-row">
         <div class="toggle-item">
             <button class="toggle-btn" id="qsIndex">📋</button>
             <div class="toggle-label">Index</div>
@@ -492,16 +577,12 @@
             <div class="toggle-label">About</div>
         </div>
         <div class="toggle-item">
+            <button class="toggle-btn" id="qsJumpDown">⬇️</button>
+            <div class="toggle-label">Bottom</div>
+        </div>
+        <div class="toggle-item">
             <button class="toggle-btn" id="qsReload">🔄</button>
             <div class="toggle-label">Reload</div>
-        </div>
-        <div class="toggle-item">
-            <button class="toggle-btn" id="qsClearCache" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.3);">🧹</button>
-            <div class="toggle-label">Cache</div>
-        </div>
-        <div class="toggle-item">
-            <button class="toggle-btn" id="qsLogout" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.3);">🚪</button>
-            <div class="toggle-label">Logout</div>
         </div>
     </div>
 
@@ -556,7 +637,9 @@
     </div>
 
     <div class="header-right" id="headerShortcuts">
+        <!-- Battery indicator (shown by JS when Battery API available) -->
         <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
+        <!-- AMOLED power-saving badge -->
         <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
         <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
         <button class="icon-btn" id="progressToggle" title="Progress">📊</button>
@@ -593,6 +676,35 @@
     <div><a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
+<!-- ═══ PWA Install Banner ═══ -->
+<div id="pwa-banner" role="complementary" aria-label="Install app">
+    <div class="pwa-card">
+        <div class="pwa-app-icon">
+            <img src="icons/icon.png" alt="DCAS CPG"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="pwa-icon-fallback" style="display:none;">🛡️</span>
+        </div>
+        <div class="pwa-text">
+            <div class="pwa-title">DCAS CPG 2025</div>
+            <div class="pwa-subtitle">Install for offline access & faster launch</div>
+            <div class="pwa-ios-row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="#60A5FA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                    <polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/>
+                </svg>
+                Tap <strong style="color:#93C5FD; margin:0 3px;">Share</strong> →
+                <strong style="color:#93C5FD; margin-left:3px;">Add to Home Screen</strong>
+            </div>
+        </div>
+        <div class="pwa-actions">
+            <button class="pwa-install-btn" id="pwaInstallBtn">Install</button>
+            <button class="pwa-dismiss-btn" id="pwaDismissBtn"
+                    aria-label="Dismiss install prompt">✕</button>
+        </div>
+    </div>
+</div>
+
 <!-- Floating buttons -->
 <button class="float-btn hidden" id="scrollToTopBtn" title="Go to top">↑</button>
 <button class="float-btn" id="scrollToBottomBtn" title="Go to progress dashboard">↓</button>
@@ -604,7 +716,7 @@
         // ---------- THEME SYSTEM ----------
         const themeBtn = document.getElementById('themeToggle');
         const html = document.documentElement;
-        const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
+                const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
         function setTheme(theme) {
             if (!themes.includes(theme)) theme = 'dark';
             html.setAttribute('data-theme', theme);
@@ -631,7 +743,7 @@
         const savedTheme = localStorage.getItem('theme') || 'dark';
         setTheme(savedTheme);
 
-        // Add event listeners to drawer theme buttons (including Forest which is now in second row)
+        // ---------- FIX #1: Add event listeners to drawer theme buttons ----------
         document.getElementById('toggleDark').addEventListener('click', () => setTheme('dark'));
         document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
         document.getElementById('toggleLight').addEventListener('click', () => setTheme('light'));
@@ -663,27 +775,17 @@
         document.getElementById('qsAbout').addEventListener('click', () => {
             window.location.href = 'about.html';
         });
+        document.getElementById('qsJumpDown').addEventListener('click', () => {
+            const stats = document.getElementById('statsCard');
+            if (stats) {
+                stats.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+            closeDrawer();
+        });
         document.getElementById('qsReload').addEventListener('click', () => {
             window.location.reload();
-        });
-
-        // NEW: Clear Cache button
-        document.getElementById('qsClearCache').addEventListener('click', async () => {
-            if (confirm("Clear app cache and reload? This will remove all offline files. Your progress will also be reset if you proceed.")) {
-                if ('caches' in window) {
-                    const cacheNames = await caches.keys();
-                    await Promise.all(cacheNames.map(name => caches.delete(name)));
-                }
-                // Warning: This resets all progress. Remove if you only want to clear cache files.
-                localStorage.clear();
-                window.location.reload(true);
-            }
-        });
-
-        // RELOCATED: Logout button (now in top row)
-        document.getElementById('qsLogout').addEventListener('click', () => {
-            localStorage.removeItem('dcas_local_auth');
-            window.location.href = 'login.html';
         });
 
         // ---------- FONT SIZE ACCESSIBILITY ----------
@@ -694,15 +796,18 @@
             if (!FONT_SIZES.includes(size)) size = 'medium';
             document.documentElement.setAttribute('data-font-size', size);
             localStorage.setItem('dcas_font_size', size);
+            // Update active state on buttons
             FONT_SIZES.forEach(s => {
                 const btn = document.getElementById(FONT_BTN_IDS[s]);
                 if (btn) btn.classList.toggle('active', s === size);
             });
         }
 
+        // Apply saved font size on load
         const savedFontSize = localStorage.getItem('dcas_font_size') || 'medium';
         setFontSize(savedFontSize);
 
+        // Bind buttons
         FONT_SIZES.forEach(size => {
             const btn = document.getElementById(FONT_BTN_IDS[size]);
             if (btn) btn.addEventListener('click', () => { setFontSize(size); });
@@ -772,6 +877,7 @@
             container.style.display = 'block';
             const items = history.slice(0, 3).map(h => {
                 const ago = timeAgo(h.ts);
+                // Determine if path is relative or absolute
                 const href = h.path || h.url;
                 return `<a class="lv-item" href="${href}">
                     <div class="lv-icon">🕐</div>
@@ -807,6 +913,7 @@
             return Math.floor(diff / 86400) + ' days ago';
         }
 
+        // Battery API – show icon in header when available
         async function initBattery() {
             if (!navigator.getBattery) return;
             try {
@@ -817,6 +924,7 @@
                     const pct = Math.round(bat.level * 100);
                     const charging = bat.charging;
                     let icon = '🔋';
+                    // On AMOLED theme, show power-saving badge
                     const theme = document.documentElement.getAttribute('data-theme');
                     const amoledBadge = document.getElementById('amoledBadge');
                     if (amoledBadge) {
@@ -828,6 +936,7 @@
                     if (charging) icon = '⚡';
                     el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
                     el.style.display = 'flex';
+                    // Low battery warning class
                     el.classList.toggle('bat-low', pct <= 15 && !charging);
                     el.classList.toggle('bat-charging', charging);
                 }
@@ -943,15 +1052,24 @@
 
         window.app = window.app || {};
         
+        // ---------- 🆕 NEW TOGGLE FUNCTION – NO RERENDER, NO FLICKER ----------
         window.app.toggleCompletion = function(checkbox, chapterId) {
+            // Get the new checked state
             const checked = checkbox.checked;
+            
+            // Update localStorage
             const completion = loadStorage(COMPLETION_KEY, {});
             completion[chapterId] = checked;
             saveStorage(COMPLETION_KEY, completion);
+            
+            // Find the previous sibling <span> that contains the "Mark Done" / "Completed" text
+            // The HTML structure is: <span>text</span> <input ...> <span class="toggle-track"></span>
             const textSpan = checkbox.previousElementSibling;
             if (textSpan && textSpan.tagName === 'SPAN') {
                 textSpan.textContent = checked ? 'Completed' : 'Mark Done';
             }
+            
+            // Update global progress stats (dashboard and drawer)
             updateAllProgress();
         };
 
@@ -1059,6 +1177,7 @@
             document.getElementById('mainContent').innerHTML = fullHtml;
             updateAllProgress();
 
+            // Search listener
             const searchInput = document.getElementById('searchInput');
             const clearBtn = document.getElementById('searchClearBtn');
             if (searchInput) {
@@ -1076,6 +1195,7 @@
                 });
             }
 
+            // Offline download (keep existing)
             const downloadBtn = document.getElementById('downloadOfflineBtn');
             const progressBar = document.getElementById('downloadProgress');
             async function downloadAllContent() {
@@ -1088,7 +1208,7 @@
                 progressBar.value = 0;
                 const base = window.location.origin + (window.location.pathname.includes('/DCAS-CPG-Review-V1') ? '/DCAS-CPG-Review-V1' : '') + '/';
                 const filesToCache = [
-                    '/', '/index.html', '/login.html', '/about.html', '/styles.css', '/app.js', '/manifest.json',
+                    '/', '/index.html', '/about.html', '/styles.css', '/app.js', '/manifest.json',
                     '/icons/icon.png', '/images/image-01.png',
                     ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/content/${ch.chapterFile || ch.id}.js`),
                     ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/chapters/${ch.chapterFile || ch.id}.html`)
@@ -1115,8 +1235,9 @@
             if (filterText) filterCards(filterText);
         }
 
+        // ---------- 🔒 FIX #2: Remove :not(.special-card) – filter ALL cards ----------
         function filterCards(text) {
-            const cards = document.querySelectorAll('.menu-card');
+            const cards = document.querySelectorAll('.menu-card'); // now includes special cards
             const lowerText = text.toLowerCase().trim();
             cards.forEach(card => {
                 const searchData = card.dataset.search || '';
@@ -1128,16 +1249,19 @@
             });
         }
 
+        // ---------- HOME & INDEX BUTTONS ----------
         const homeBtn = document.getElementById('homeBtn');
         const indexBtn = document.getElementById('headerIndexBtn');
         if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
         if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
 
+        // ---------- 🛑 FIX #3: Stop propagation on toggle clicks to prevent page reload ----------
         document.addEventListener('click', function(e) {
+            // Check if the click originated from inside the toggle wrapper
             if (e.target.closest('.toggle-wrapper')) {
                 e.stopPropagation();
             }
-        }, true);
+        }, true); // use capture phase to intercept early
 
         renderMenu();
         updateFloatButtons();
@@ -1145,26 +1269,127 @@
     })();
 </script>
 
-<!-- Scroll position memory -->
+    <!-- Add this just before the closing </script> in index.html -->
 <script>
+    // ---------- SCROLL POSITION MEMORY ----------
     (function() {
+        // Save scroll position when leaving the page
         window.addEventListener('beforeunload', function() {
             sessionStorage.setItem('mainScrollPos', window.scrollY);
         });
+
+        // Restore scroll position after page is fully rendered
         function restoreScroll() {
             let saved = sessionStorage.getItem('mainScrollPos');
             if (saved) {
+                // Give time for dynamic content to settle
                 setTimeout(function() {
                     window.scrollTo(0, parseInt(saved));
                     sessionStorage.removeItem('mainScrollPos');
                 }, 150);
             }
         }
+
+        // If page is loaded from bfcache (back/forward), also restore
         window.addEventListener('pageshow', function(event) {
-            if (event.persisted) restoreScroll();
+            if (event.persisted) {
+                restoreScroll();
+            }
         });
+
+        // Restore after initial render
         restoreScroll();
     })();
+</script>
+    
+<!-- ═══ PWA Install Logic ═══ -->
+<script>
+(function () {
+    'use strict';
+
+    const DISMISS_KEY  = 'dcas_pwa_dismissed';
+    const DISMISS_DAYS = 7;          // re-show after 7 days if not installed
+    const SHOW_DELAY   = 3500;       // ms after page load before banner appears
+
+    const banner      = document.getElementById('pwa-banner');
+    const installBtn  = document.getElementById('pwaInstallBtn');
+    const dismissBtn  = document.getElementById('pwaDismissBtn');
+
+    if (!banner) return;
+
+    // ── Already installed as PWA? ──────────────────────────────────────────
+    const isStandalone =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;       // iOS Safari
+    if (isStandalone) return;                       // silently skip
+
+    // ── Recently dismissed? ────────────────────────────────────────────────
+    function wasDismissed() {
+        try {
+            const ts = parseInt(localStorage.getItem(DISMISS_KEY) || '0', 10);
+            return ts && (Date.now() - ts) < DISMISS_DAYS * 86400000;
+        } catch (_) { return false; }
+    }
+    function markDismissed() {
+        try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch (_) {}
+    }
+
+    // ── Platform detection ─────────────────────────────────────────────────
+    const isIOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) && !window.MSStream;
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    // ── Show / hide helpers ────────────────────────────────────────────────
+    function showBanner() {
+        if (wasDismissed()) return;
+        banner.classList.add('visible');
+    }
+    function hideBanner(persist) {
+        banner.classList.remove('visible');
+        if (persist) markDismissed();
+    }
+
+    // ── Dismiss button ─────────────────────────────────────────────────────
+    dismissBtn.addEventListener('click', () => hideBanner(true));
+
+    // ── iOS path ──────────────────────────────────────────────────────────
+    if (isIOS && isSafari) {
+        banner.classList.add('ios-mode');   // CSS swaps install btn → share hint
+        installBtn.addEventListener('click', () => hideBanner(true)); // just dismiss
+        setTimeout(showBanner, SHOW_DELAY);
+        return;
+    }
+
+    // ── Android / Desktop: beforeinstallprompt ─────────────────────────────
+    let deferredPrompt = null;
+
+    window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();                 // stop default mini-infobar
+        deferredPrompt = e;
+        setTimeout(showBanner, SHOW_DELAY);
+    });
+
+    installBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        hideBanner(false);                  // hide immediately
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        if (outcome === 'accepted') {
+            markDismissed();               // no need to show again
+        }
+        // if dismissed by user, don't persist — let it re-appear next session
+    });
+
+    // Hide banner once the app is actually installed in this session
+    window.addEventListener('appinstalled', () => {
+        hideBanner(false);
+        deferredPrompt = null;
+        markDismissed();
+    });
+
+    // Safety: if beforeinstallprompt never fires (already installed, or
+    // browser doesn't support it) the banner simply never appears.
+})();
 </script>
 
 <!-- Service Worker Registration -->
