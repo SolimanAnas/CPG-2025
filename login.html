@@ -357,14 +357,7 @@
 (function () {
   'use strict';
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  //  ADMIN CREDENTIALS — stored only as SHA-256 hashes (PBKDF2, 100k rounds)
-  //  Salt:     dcas_cpg_2025_salt
-  //  Plaintext is never in source; do NOT store plaintext anywhere.
-  //
-  //  How to regenerate hashes when rotating credentials:
-  //    python3 -c "import hashlib; print(hashlib.pbkdf2_hmac('sha256', b'<value>', b'dcas_cpg_2025_salt', 100000).hex())"
-  // ═══════════════════════════════════════════════════════════════════════════
+  
   const ADMIN_HASH = {
     username: '547126b459623298ad612235081044b3aaf8cb41ddace63bddfa5fe9443914de',
     password: '5fb2127d937fec06f2c1c0569a9d8606da613ad8881dbfe4a9baeb349fea7d7e'
