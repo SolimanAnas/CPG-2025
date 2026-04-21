@@ -3,135 +3,334 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>DCAS CPG | Professional Sign In</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <title>DCAS CPG · Sign In</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg:        #060C14;
+      --surface:   rgba(10, 18, 32, 0.82);
+      --border:    rgba(56, 120, 220, 0.22);
+      --border-focus: rgba(59, 130, 246, 0.7);
+      --text:      #E8F0FE;
+      --muted:     #6B7FA3;
+      --accent:    #3B82F6;
+      --accent2:   #1D4ED8;
+      --err:       #F87171;
+      --ok:        #4ADE80;
+      --input-bg:  rgba(4, 10, 20, 0.8);
+      --radius:    1.1rem;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    html, body { height: 100%; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at 10% 30%, #0B1120, #08101E);
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      overflow: hidden;
       position: relative;
     }
-    /* subtle animated grain */
-    body::before {
-      content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 0;
+
+    /* ── Layered ambient background ── */
+    .bg-layer {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
     }
-    /* main card container */
-    .auth-container {
-      width: 100%; max-width: 460px; z-index: 2;
-      animation: fadeSlideUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    .bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
     }
-    @keyframes fadeSlideUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .orb-1 { width: 480px; height: 480px; background: #1D4ED8; top: -120px; left: -100px; animation: drift1 14s ease-in-out infinite alternate; }
+    .orb-2 { width: 360px; height: 360px; background: #0E7490; bottom: -80px; right: -80px; animation: drift2 18s ease-in-out infinite alternate; }
+    .orb-3 { width: 220px; height: 220px; background: #6D28D9; top: 40%; left: 60%; animation: drift3 22s ease-in-out infinite alternate; }
+    @keyframes drift1 { to { transform: translate(30px, 40px); } }
+    @keyframes drift2 { to { transform: translate(-25px, -35px); } }
+    @keyframes drift3 { to { transform: translate(-40px, 20px); } }
+
+    /* fine grid overlay */
+    .bg-grid {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(56,120,220,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,120,220,0.035) 1px, transparent 1px);
+      background-size: 44px 44px;
     }
-    /* glassmorphism premium card */
-    .professional-card {
-      background: rgba(18, 25, 45, 0.75); backdrop-filter: blur(12px);
-      border-radius: 2rem; border: 1px solid rgba(66, 153, 225, 0.25);
-      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(66, 153, 225, 0.1) inset;
-      padding: 2.5rem 2rem; transition: transform 0.2s ease, box-shadow 0.2s;
+
+    /* ── Card ── */
+    .auth-wrap {
+      position: relative; z-index: 2;
+      width: 100%; max-width: 440px;
+      animation: rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
-    .professional-card:hover { box-shadow: 0 30px 50px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(66, 153, 225, 0.2) inset; }
-    /* header section */
-    .brand-header { text-align: center; margin-bottom: 2rem; }
-    .badge-icon {
-      background: linear-gradient(135deg, #1E3A8A, #3B82F6); width: 64px; height: 64px; border-radius: 32px;
-      display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
-      box-shadow: 0 10px 20px -5px rgba(0, 100, 255, 0.3);
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
     }
-    .badge-icon i { font-size: 32px; color: white; }
-    h1 {
-      font-size: 2rem; font-weight: 700; background: linear-gradient(to right, #F0F9FF, #A5D8FF);
-      background-clip: text; -webkit-background-clip: text; color: transparent; letter-spacing: -0.5px;
+    .card {
+      background: var(--surface);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid var(--border);
+      border-radius: 1.75rem;
+      padding: 2.4rem 2rem 2rem;
+      box-shadow: 0 32px 64px -16px rgba(0,0,0,0.7), 0 0 0 0.5px rgba(56,120,220,0.12) inset;
+      position: relative;
+      overflow: hidden;
     }
-    .subhead { color: #94A3B8; font-size: 0.95rem; margin-top: 0.5rem; font-weight: 500; }
-    /* form groups */
-    .form-group { margin-bottom: 1.25rem; }
-    .input-label { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.3px; color: #CBD5E1; margin-bottom: 0.5rem; }
-    .input-label i { font-size: 0.85rem; color: #3B82F6; width: 18px; }
-    .input-field {
-      width: 100%; background: rgba(12, 20, 30, 0.7); border: 1px solid #2D3A5E; border-radius: 1rem; padding: 0.9rem 1rem;
-      font-size: 1rem; font-family: 'Inter', sans-serif; color: #F1F5F9; transition: all 0.2s ease; outline: none;
+    /* subtle top highlight */
+    .card::before {
+      content: '';
+      position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(147,197,253,0.35), transparent);
     }
-    .input-field:focus { border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); background: rgba(18, 30, 45, 0.9); }
-    /* btn */
-    .login-btn {
-      width: 100%; background: linear-gradient(95deg, #2563EB, #1E40AF); border: none; border-radius: 1.5rem; padding: 1rem;
-      font-weight: 700; font-size: 1rem; color: white; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center;
-      gap: 10px; cursor: pointer; transition: all 0.25s ease; margin-top: 1rem; box-shadow: 0 5px 15px -5px #1E3A8A;
+
+    /* ── Brand ── */
+    .brand { text-align: center; margin-bottom: 2rem; }
+    .logo-ring {
+      width: 62px; height: 62px; border-radius: 50%;
+      background: linear-gradient(145deg, #1E3A8A, #3B82F6);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.1rem;
+      box-shadow: 0 0 0 8px rgba(59,130,246,0.08), 0 12px 24px -8px rgba(30,58,138,0.6);
+      cursor: default; /* admin trigger: 7 clicks */
+      user-select: none;
+      transition: transform 0.15s;
     }
-    .login-btn:hover { background: linear-gradient(95deg, #3B82F6, #1E3A8A); transform: translateY(-2px); box-shadow: 0 12px 20px -8px #1E3A8A; }
-    .login-btn:active { transform: translateY(1px); }
-    /* messages */
-    .form-feedback { margin-top: 1rem; font-size: 0.85rem; font-weight: 500; text-align: center; padding: 0.6rem; border-radius: 12px; display: none; }
-    .error-msg { color: #FF8A8A; background: rgba(255, 80, 80, 0.1); display: block; border: 1px solid rgba(255, 80, 80, 0.2); }
-    .success-msg { color: #6FEE9D; background: rgba(34, 197, 94, 0.1); display: block; border: 1px solid rgba(34, 197, 94, 0.2); }
-    /* divider */
-    .divider { display: flex; align-items: center; gap: 12px; margin: 1.8rem 0; }
-    .divider-line { flex: 1; height: 1px; background: rgba(71, 85, 105, 0.3); }
-    .divider-text { color: #64748B; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-    /* links */
-    .signup-redirect { text-align: center; margin-top: 1.8rem; font-size: 0.9rem; color: #94A3B8; }
-    .signup-redirect a { color: #60A5FA; font-weight: 600; text-decoration: none; transition: color 0.2s; }
-    .signup-redirect a:hover { color: #93C5FD; text-decoration: underline; }
-    @media (max-width: 480px) { .professional-card { padding: 1.8rem 1.5rem; } h1 { font-size: 1.7rem; } }
+    .logo-ring:active { transform: scale(0.93); }
+    .logo-ring i { font-size: 1.6rem; color: #fff; }
+    .brand h1 {
+      font-size: 1.75rem; font-weight: 700; letter-spacing: -0.6px;
+      background: linear-gradient(135deg, #DBEAFE 20%, #93C5FD 80%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .brand p { color: var(--muted); font-size: 0.88rem; margin-top: 0.35rem; font-weight: 400; }
+
+    /* ── Form ── */
+    .form-field { margin-bottom: 1.1rem; }
+    .field-label {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.4px;
+      color: #93C5FD; margin-bottom: 0.45rem; text-transform: uppercase;
+    }
+    .field-label i { font-size: 0.78rem; width: 14px; text-align: center; }
+
+    .input-wrap { position: relative; }
+    .field-input {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid rgba(56,120,220,0.25);
+      border-radius: var(--radius);
+      padding: 0.85rem 3rem 0.85rem 1rem;
+      font-size: 0.97rem;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .field-input::placeholder { color: #3D5070; }
+    .field-input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.18);
+      background: rgba(6, 14, 28, 0.9);
+    }
+    .field-input.has-error { border-color: rgba(248,113,113,0.6); }
+    .field-input.has-error:focus { box-shadow: 0 0 0 3px rgba(248,113,113,0.15); }
+
+    /* password toggle */
+    .pw-toggle {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: var(--muted); cursor: pointer;
+      padding: 4px; font-size: 0.95rem; transition: color 0.2s;
+      display: flex; align-items: center;
+    }
+    .pw-toggle:hover { color: var(--accent); }
+
+    /* caps lock warning */
+    .caps-warn {
+      display: none; align-items: center; gap: 5px;
+      font-size: 0.75rem; color: #FCD34D; margin-top: 0.35rem;
+      font-family: 'DM Mono', monospace;
+    }
+    .caps-warn.show { display: flex; }
+
+    /* ── Submit button ── */
+    .btn-submit {
+      width: 100%; margin-top: 0.75rem;
+      padding: 0.95rem 1rem;
+      background: linear-gradient(95deg, #2563EB, #1D4ED8);
+      border: none; border-radius: 2rem;
+      color: #fff; font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem; font-weight: 700; letter-spacing: 0.2px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px -6px rgba(29, 78, 216, 0.7);
+      transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
+      position: relative; overflow: hidden;
+    }
+    .btn-submit::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background: linear-gradient(95deg, #3B82F6, #1E40AF);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px -10px rgba(29,78,216,0.65);
+    }
+    .btn-submit:active:not(:disabled) { transform: translateY(1px); }
+    .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* spinner */
+    .spinner {
+      width: 16px; height: 16px; border: 2.5px solid rgba(255,255,255,0.3);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Feedback message ── */
+    .feedback {
+      margin-top: 0.9rem; padding: 0.65rem 1rem;
+      border-radius: 0.85rem; font-size: 0.84rem; font-weight: 500;
+      text-align: center; display: none;
+      animation: fadeIn 0.2s ease;
+    }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(-4px); } to { opacity:1; transform:none; } }
+    .feedback.err { display: block; color: var(--err); background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.2); }
+    .feedback.ok  { display: block; color: var(--ok);  background: rgba(74,222,128,0.1);  border: 1px solid rgba(74,222,128,0.2); }
+
+    /* shake on error */
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%,60% { transform: translateX(-6px); }
+      40%,80% { transform: translateX(6px); }
+    }
+    .shake { animation: shake 0.4s cubic-bezier(0.36,0.07,0.19,0.97); }
+
+    /* ── Divider ── */
+    .divider {
+      display: flex; align-items: center; gap: 12px;
+      margin: 1.6rem 0 1.4rem;
+    }
+    .div-line { flex: 1; height: 1px; background: rgba(56,120,220,0.18); }
+    .div-text { color: var(--muted); font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+
+    /* ── Google button wrapper ── */
+    .google-wrap { display: flex; justify-content: center; }
+
+    /* ── Footer ── */
+    .card-footer {
+      text-align: center; margin-top: 1.6rem;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .card-footer a { color: #60A5FA; font-weight: 600; text-decoration: none; transition: color 0.2s; }
+    .card-footer a:hover { color: #93C5FD; }
+
+    /* ── Admin mode visual hint ── */
+    .admin-hint {
+      position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+      width: 32px; height: 3px; border-radius: 2px 2px 0 0;
+      background: linear-gradient(90deg, #7C3AED, #A78BFA);
+      opacity: 0; transition: opacity 0.4s;
+      pointer-events: none;
+    }
+    .card.admin-mode .admin-hint { opacity: 1; }
+    .card.admin-mode { border-color: rgba(124,58,237,0.4); }
+
+    /* offline badge */
+    .offline-badge {
+      display: none; align-items: center; gap: 5px;
+      font-size: 0.72rem; font-family: 'DM Mono', monospace;
+      color: #FCD34D; background: rgba(252,211,77,0.1);
+      border: 1px solid rgba(252,211,77,0.2);
+      padding: 3px 10px; border-radius: 20px;
+      margin: 0 auto 0.9rem; width: fit-content;
+    }
+    .offline-badge.show { display: flex; }
+    .offline-dot { width: 6px; height: 6px; border-radius: 50%; background: #FCD34D; animation: blink 1.4s infinite; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+    @media (max-width: 480px) {
+      .card { padding: 2rem 1.4rem 1.6rem; border-radius: 1.4rem; }
+      .brand h1 { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-<div class="auth-container">
-  <div class="professional-card">
-    <div class="brand-header">
-      <div class="badge-icon">
+
+<div class="bg-layer">
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+</div>
+<div class="bg-grid"></div>
+
+<div class="auth-wrap">
+  <div class="card" id="mainCard">
+    <div class="admin-hint"></div>
+
+    <!-- Brand -->
+    <div class="brand">
+      <div class="logo-ring" id="logoRing">
         <i class="fas fa-shield-alt"></i>
       </div>
       <h1>DCAS · CPG</h1>
-      <div class="subhead">CPG Provider Login</div>
+      <p id="cardSubtitle">CPG Provider Login</p>
     </div>
 
-    <form id="loginForm">
-      <div class="form-group">
-        <div class="input-label">
-          <i class="fas fa-envelope"></i>
-          <span>Email address</span>
+    <!-- Offline indicator -->
+    <div class="offline-badge" id="offlineBadge">
+      <div class="offline-dot"></div> Offline Mode · Local Auth
+    </div>
+
+    <!-- Form -->
+    <form id="loginForm" novalidate>
+      <div class="form-field">
+        <div class="field-label"><i class="fas fa-at"></i> Identifier</div>
+        <div class="input-wrap">
+          <input type="text" id="username" name="username"
+            class="field-input" placeholder="Email or username"
+            autocomplete="username" autocorrect="off" autocapitalize="off" spellcheck="false">
         </div>
-        <input type="email" id="username" name="username" class="input-field" placeholder="clinical@dcas.gov.ae" autocomplete="username" required>
       </div>
 
-      <div class="form-group">
-        <div class="input-label">
-          <i class="fas fa-lock"></i>
-          <span>Password</span>
+      <div class="form-field">
+        <div class="field-label"><i class="fas fa-lock"></i> Password</div>
+        <div class="input-wrap">
+          <input type="password" id="password" name="password"
+            class="field-input" placeholder="••••••••"
+            autocomplete="current-password">
+          <button type="button" class="pw-toggle" id="pwToggle" tabindex="-1" aria-label="Toggle password visibility">
+            <i class="fas fa-eye" id="pwIcon"></i>
+          </button>
         </div>
-        <input type="password" id="password" name="password" class="input-field" placeholder="••••••••" autocomplete="current-password" required>
+        <div class="caps-warn" id="capsWarn"><i class="fas fa-exclamation-triangle"></i> Caps Lock is ON</div>
       </div>
 
-      <button type="submit" class="login-btn">
-        Sign In <i class="fas fa-arrow-right"></i>
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <span id="btnLabel">Sign In</span>
+        <div class="spinner" id="btnSpinner"></div>
+        <i class="fas fa-arrow-right" id="btnArrow"></i>
       </button>
-
-      <div id="authError" class="form-feedback" role="alert" aria-live="polite"></div>
+      <div class="feedback" id="feedback" role="alert" aria-live="polite"></div>
     </form>
 
     <div class="divider">
-      <div class="divider-line"></div>
-      <div class="divider-text">Or securely sign in with</div>
-      <div class="divider-line"></div>
+      <div class="div-line"></div>
+      <div class="div-text">Or continue with</div>
+      <div class="div-line"></div>
     </div>
 
-    <div style="display: flex; justify-content: center; width: 100%;">
+    <div class="google-wrap">
       <div id="g_id_onload"
            data-client_id="413832763437-48k3r32312e8uevrouha9ss11lk79un9.apps.googleusercontent.com"
            data-context="signin"
@@ -139,102 +338,268 @@
            data-callback="handleGoogleLogin"
            data-auto_prompt="false">
       </div>
-      <div class="g_id_signin" 
-           data-type="standard" 
-           data-theme="filled_black" 
-           data-size="large" 
-           data-width="260" 
+      <div class="g_id_signin"
+           data-type="standard"
+           data-theme="filled_black"
+           data-size="large"
+           data-width="260"
            data-shape="pill">
       </div>
     </div>
 
-    <div class="signup-redirect">
-      New to the App? <a href="/signup.html">Register Here →</a>
+    <div class="card-footer">
+      New here? <a href="/signup.html">Register for access →</a>
     </div>
   </div>
 </div>
 
 <script>
+(function () {
+  'use strict';
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  //  ADMIN CREDENTIALS — stored only as SHA-256 hashes (PBKDF2, 100k rounds)
+  //  Salt:     dcas_cpg_2025_salt
+  //  Plaintext is never in source; do NOT store plaintext anywhere.
+  //
+  //  How to regenerate hashes when rotating credentials:
+  //    python3 -c "import hashlib; print(hashlib.pbkdf2_hmac('sha256', b'<value>', b'dcas_cpg_2025_salt', 100000).hex())"
+  // ═══════════════════════════════════════════════════════════════════════════
+  const ADMIN_HASH = {
+    username: '547126b459623298ad612235081044b3aaf8cb41ddace63bddfa5fe9443914de',
+    password: '5fb2127d937fec06f2c1c0569a9d8606da613ad8881dbfe4a9baeb349fea7d7e'
+  };
+  // Salt must match the python derivation above
+  const PBKDF2_SALT   = new TextEncoder().encode('dcas_cpg_2025_salt');
+  const PBKDF2_ITERS  = 100000;
+
   const AUTH_KEY = 'dcas_local_auth';
-  const errorEl = document.getElementById('authError');
+  const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 h
 
-  // Helper to show styled messages
-  function showMessage(text, isError = true) {
-    errorEl.textContent = text;
-    errorEl.className = 'form-feedback ' + (isError ? 'error-msg' : 'success-msg');
+  // ── DOM refs ──────────────────────────────────────────────────────────────
+  const form        = document.getElementById('loginForm');
+  const usernameEl  = document.getElementById('username');
+  const passwordEl  = document.getElementById('password');
+  const submitBtn   = document.getElementById('submitBtn');
+  const feedback    = document.getElementById('feedback');
+  const card        = document.getElementById('mainCard');
+  const logoRing    = document.getElementById('logoRing');
+  const pwToggle    = document.getElementById('pwToggle');
+  const pwIcon      = document.getElementById('pwIcon');
+  const capsWarn    = document.getElementById('capsWarn');
+  const offlineBadge = document.getElementById('offlineBadge');
+  const btnLabel    = document.getElementById('btnLabel');
+  const btnSpinner  = document.getElementById('btnSpinner');
+  const btnArrow    = document.getElementById('btnArrow');
+  const subtitle    = document.getElementById('cardSubtitle');
+
+  // ── Offline detection ─────────────────────────────────────────────────────
+  let isOffline = !navigator.onLine;
+  function syncOfflineBadge() {
+    isOffline = !navigator.onLine;
+    offlineBadge.classList.toggle('show', isOffline);
+  }
+  window.addEventListener('online',  syncOfflineBadge);
+  window.addEventListener('offline', syncOfflineBadge);
+  syncOfflineBadge();
+
+  // ── Admin mode: 7 logo taps  ──────────────────────────────────────────────
+  let adminTaps = 0, adminTimer = null;
+  let adminMode = false;
+  logoRing.addEventListener('click', () => {
+    adminTaps++;
+    clearTimeout(adminTimer);
+    adminTimer = setTimeout(() => { adminTaps = 0; }, 3000);
+    if (adminTaps >= 7) {
+      adminTaps = 0;
+      adminMode = !adminMode;
+      card.classList.toggle('admin-mode', adminMode);
+      subtitle.textContent = adminMode ? '⬡ Admin Access' : 'CPG Provider Login';
+      usernameEl.placeholder = adminMode ? 'admin username' : 'Email or username';
+      usernameEl.type = adminMode ? 'text' : 'text';
+      if (adminMode) usernameEl.focus();
+    }
+  });
+
+  // ── Password visibility toggle ────────────────────────────────────────────
+  pwToggle.addEventListener('click', () => {
+    const show = passwordEl.type === 'password';
+    passwordEl.type = show ? 'text' : 'password';
+    pwIcon.className = show ? 'fas fa-eye-slash' : 'fas fa-eye';
+  });
+
+  // ── Caps Lock warning ─────────────────────────────────────────────────────
+  passwordEl.addEventListener('keyup', e => {
+    capsWarn.classList.toggle('show', e.getModifierState?.('CapsLock'));
+  });
+
+  // ── Feedback helpers ───────────────────────────────────────────────────────
+  function showMsg(text, type = 'err') {
+    feedback.textContent = text;
+    feedback.className = 'feedback ' + type;
+    if (type === 'err') {
+      form.classList.add('shake');
+      setTimeout(() => form.classList.remove('shake'), 450);
+    }
+  }
+  function clearMsg() { feedback.className = 'feedback'; }
+
+  // ── Button loading state ───────────────────────────────────────────────────
+  function setLoading(loading) {
+    submitBtn.disabled = loading;
+    btnLabel.textContent = loading ? 'Signing in…' : 'Sign In';
+    btnSpinner.style.display = loading ? 'block' : 'none';
+    btnArrow.style.display   = loading ? 'none'  : 'inline';
   }
 
-  // Helper: Set local storage so the PWA app.js guard knows we are logged in
-  function setLocalSession() {
-    const payload = {
-      loggedIn: true,
+  // ── Session helpers ────────────────────────────────────────────────────────
+  function setLocalSession(role = 'user', info = {}) {
+    localStorage.setItem(AUTH_KEY, JSON.stringify({
+      loggedIn: true, role,
       issuedAt: Date.now(),
-      expiresAt: Date.now() + (24 * 60 * 60 * 1000)
-    };
-    localStorage.setItem(AUTH_KEY, JSON.stringify(payload));
+      expiresAt: Date.now() + SESSION_TTL_MS,
+      ...info
+    }));
   }
 
-  // 🚀 Google Login Logic
-  async function handleGoogleLogin(response) {
-    showMessage('Verifying secure token...', false);
+  function redirect(url) {
+    showMsg('✅ Access granted. Loading…', 'ok');
+    setTimeout(() => window.location.replace(url || 'index.html'), 900);
+  }
 
+  // ─────────────────────────────────────────────────────────────────────────
+  //  CRYPTO: PBKDF2-SHA256 derivation (matches Python hashlib.pbkdf2_hmac)
+  // ─────────────────────────────────────────────────────────────────────────
+  async function pbkdf2Hex(plain) {
+    const keyMat = await crypto.subtle.importKey(
+      'raw', new TextEncoder().encode(plain),
+      'PBKDF2', false, ['deriveBits']
+    );
+    const bits = await crypto.subtle.deriveBits(
+      { name: 'PBKDF2', hash: 'SHA-256', salt: PBKDF2_SALT, iterations: PBKDF2_ITERS },
+      keyMat, 256
+    );
+    return Array.from(new Uint8Array(bits)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  // constant-time string comparison (prevents timing attacks)
+  function safeEqual(a, b) {
+    if (a.length !== b.length) return false;
+    let diff = 0;
+    for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+    return diff === 0;
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  PLAN B — Local admin authentication (runs when server is unavailable
+  //  OR when adminMode is active).  Never stores plaintext.
+  // ─────────────────────────────────────────────────────────────────────────
+  async function tryLocalAdmin(username, password) {
+    const [uHash, pHash] = await Promise.all([pbkdf2Hex(username), pbkdf2Hex(password)]);
+    return safeEqual(uHash, ADMIN_HASH.username) && safeEqual(pHash, ADMIN_HASH.password);
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  FORM SUBMIT
+  // ─────────────────────────────────────────────────────────────────────────
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    clearMsg();
+
+    const username = usernameEl.value.trim();
+    const password = passwordEl.value;
+
+    if (!username || !password) {
+      showMsg('Please fill in all fields.');
+      if (!username) usernameEl.classList.add('has-error');
+      if (!password) passwordEl.classList.add('has-error');
+      return;
+    }
+    usernameEl.classList.remove('has-error');
+    passwordEl.classList.remove('has-error');
+
+    setLoading(true);
+    showMsg('Authenticating…', 'ok');
+
+    // ── Plan A: try server ────────────────────────────────────────────────
+    let serverOk = false;
+    if (!isOffline) {
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+          signal: AbortSignal.timeout(5000) // 5 s timeout
+        });
+        const data = await res.json();
+        if (res.ok) {
+          setLocalSession(data.role || 'user', { email: data.email });
+          serverOk = true;
+          redirect(data.redirect || 'index.html');
+          return; // done
+        } else if (res.status === 401) {
+          // Server responded — credentials are simply wrong
+          showMsg('❌ ' + (data.error || 'Invalid credentials.'));
+          setLoading(false);
+          return;
+        }
+        // Other server error → fall through to Plan B
+      } catch (_) {
+        // Network failure / timeout → fall through to Plan B
+      }
+    }
+
+    // ── Plan B: local admin hash check ────────────────────────────────────
+    try {
+      const isAdmin = await tryLocalAdmin(username, password);
+      if (isAdmin) {
+        setLocalSession('admin', { localAuth: true });
+        redirect('index.html');
+      } else {
+        // Not admin — show contextual error
+        if (isOffline) {
+          showMsg('❌ Offline: only admin credentials accepted locally.');
+        } else {
+          showMsg('❌ Server unavailable. Non-admin login requires connectivity.');
+        }
+        setLoading(false);
+      }
+    } catch (err) {
+      showMsg('❌ Authentication error. Please try again.');
+      setLoading(false);
+    }
+  });
+
+  // clear error styles on input
+  [usernameEl, passwordEl].forEach(el => {
+    el.addEventListener('input', () => el.classList.remove('has-error'));
+  });
+
+  // ─────────────────────────────────────────────────────────────────────────
+  //  GOOGLE LOGIN
+  // ─────────────────────────────────────────────────────────────────────────
+  window.handleGoogleLogin = async function (response) {
+    showMsg('Verifying token…', 'ok');
     try {
       const res = await fetch('/api/google-login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ credential: response.credential })
+        body: JSON.stringify({ credential: response.credential }),
+        signal: AbortSignal.timeout(8000)
       });
-      
       const data = await res.json();
-      
       if (res.ok) {
-        showMessage('✅ Authentication successful. Redirecting...', false);
-        setLocalSession(); 
-        setTimeout(() => window.location.replace(data.redirect || 'index.html'), 1000);
+        setLocalSession(data.role || 'user', { email: data.email });
+        redirect(data.redirect || 'index.html');
       } else {
-        showMessage('❌ ' + (data.error || 'Google authentication failed.'), true);
+        showMsg('❌ ' + (data.error || 'Google authentication failed.'));
       }
-    } catch(err) {
-      showMessage('❌ Server connection failed. Is the Python server running?', true);
+    } catch (_) {
+      showMsg('❌ Server unreachable. Google login requires connectivity.');
     }
-  }
+  };
 
-  // 🔄 Standard Form Login Logic
-  document.getElementById('loginForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.querySelector('.login-btn');
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
-    showMessage('Authenticating...', false);
-
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
-
-    try {
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        showMessage('✅ Access granted. Loading protocols...', false);
-        setLocalSession(); 
-        setTimeout(() => window.location.replace(data.redirect || 'index.html'), 1000);
-      } else {
-        showMessage('❌ ' + (data.error || 'Invalid credentials.'), true);
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '1';
-      }
-    } catch (err) {
-      showMessage('❌ Server connection failed. Is the Python server running?', true);
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = '1';
-    }
-  });
+})();
 </script>
 </body>
 </html>
