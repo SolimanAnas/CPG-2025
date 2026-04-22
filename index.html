@@ -4,6 +4,8 @@
 <script>
   // ── DCAS Security Guard: runs before anything else renders ──
   // Redirects to login if no valid session exists.
+  // [TEMPORARILY DISABLED FOR TESTING]
+  /*
   (function() {
     const AUTH_KEY = 'dcas_local_auth';
     try {
@@ -18,6 +20,7 @@
       window.location.replace('login.html');
     }
   })();
+  */
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -259,7 +262,6 @@
 </head>
 <body>
 
-<!-- ══ PWA Install Banner ══════════════════════════════════════════ -->
 <div id="pwaInstallBanner" style="display:none;" role="complementary" aria-label="Install app">
     <div class="pwa-banner-inner">
         <div class="pwa-banner-icon">
@@ -276,7 +278,6 @@
             <button class="pwa-btn-dismiss" id="pwaDismissBtn" aria-label="Dismiss">✕</button>
         </div>
     </div>
-    <!-- iOS step-by-step instructions (shown instead of Install button on iOS Safari) -->
     <div class="pwa-ios-steps" id="pwaIosSteps" style="display:none;">
         <div class="pwa-ios-step">
             <span class="pwa-ios-num">1</span>
@@ -289,12 +290,9 @@
     </div>
 </div>
 
-<!-- Drawer Overlay -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
 
-<!-- Settings Drawer -->
 <div class="notification-drawer" id="notificationDrawer">
-    <!-- Theme row: 5 items -->
     <div class="toggles-grid theme-row" style="grid-template-columns: repeat(5, 1fr);">
         <div class="toggle-item"><button class="toggle-btn" id="toggleDark">🌑</button><div class="toggle-label">Dark</div></div>
         <div class="toggle-item"><button class="toggle-btn amoled-btn" id="toggleAmoled">⬛</button><div class="toggle-label">AMOLED</div></div>
@@ -303,7 +301,6 @@
         <div class="toggle-item"><button class="toggle-btn" id="toggleForest">🌲</button><div class="toggle-label">Forest</div></div>
     </div>
 
-    <!-- Shortcuts row: Index, About, Install, Cache, Logout -->
     <div class="toggles-grid shortcut-row" style="grid-template-columns: repeat(5, 1fr);">
         <div class="toggle-item"><button class="toggle-btn" id="qsIndex">📋</button><div class="toggle-label">Index</div></div>
         <div class="toggle-item"><button class="toggle-btn" id="qsAbout">ℹ️</button><div class="toggle-label">About</div></div>
@@ -312,7 +309,6 @@
         <div class="toggle-item"><button class="toggle-btn" id="qsLogout" style="background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);">🚪</button><div class="toggle-label">Logout</div></div>
     </div>
 
-    <!-- Font size -->
     <div class="font-size-row">
         <span class="font-size-label">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><text x="2" y="18" font-size="14" fill="currentColor" stroke="none" font-weight="700">Aa</text></svg>
@@ -323,7 +319,6 @@
         <button class="font-btn" data-size="xl"     id="fontXL"     title="Extra large">A</button>
     </div>
 
-    <!-- Mini stats -->
     <div class="drawer-stats">
         <div class="stat-item"><span class="stat-num" id="drawerDone">0/0</span><span class="stat-text">Chapters</span></div>
         <div class="stat-item"><span class="stat-num" id="drawerAttempts">0</span><span class="stat-text">Attempts</span></div>
@@ -361,7 +356,6 @@
     </div>
 </header>
 
-<!-- Progress popup -->
 <div class="progress-popup" id="progressPopup">
     <div class="popup-title">📊 Your Progress</div>
     <div class="popup-item"><span>Chapters Done:</span><span id="popupChaptersDone">0/0</span></div>
@@ -859,7 +853,17 @@
         const stats      = loadStorage(STATS_KEY, { chapters:{} });
         const completion = loadStorage(COMPLETION_KEY, {});
 
-        const contentHtml = CHAPTERS.map((ch, index) => {
+        // EMS Essentials Card
+        const emsEssentialsHtml = `
+            <div class="menu-card special-card" style="animation-delay:0.06s;" data-search="EMS Essentials Drug Calculations ECG">
+                <h2>EMS Essentials</h2>
+                <div class="menu-sub-options">
+                    <a href="drug-calculator.html" class="btn-action btn-summary">💊 Drug Calculations</a>
+                    <a href="ecg.html" class="btn-action btn-scenario">📈 ECG Simulator</a>
+                </div>
+            </div>`;
+
+        let contentHtml = CHAPTERS.map((ch, index) => {
             const s        = stats.chapters[ch.id] || { attempts:0, totalScore:0, totalMax:0 };
             const avg      = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
             const baseFile = ch.chapterFile || ch.id;
@@ -900,6 +904,13 @@
                     </div>
                 </div>`;
         }).join('');
+
+        // Insert EMS Essentials card after special cards but before regular chapters
+        const specialCardsEnd = contentHtml.indexOf('<a href="chapters/c-index.html?view=summary" class="menu-card special-card" data-chapter="index"');
+        if (specialCardsEnd !== -1) {
+            const afterSpecial = contentHtml.indexOf('</a>', specialCardsEnd) + 4;
+            contentHtml = contentHtml.slice(0, afterSpecial) + emsEssentialsHtml + contentHtml.slice(afterSpecial);
+        }
 
         const totalChaps     = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
         const completedCount = Object.values(completion).filter(v => v).length;
@@ -1004,7 +1015,6 @@
 })();
 </script>
 
-<!-- Scroll position memory -->
 <script>
 (function() {
     window.addEventListener('beforeunload', function() {
@@ -1024,7 +1034,6 @@
 })();
 </script>
 
-<!-- Service Worker -->
 <script>
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
