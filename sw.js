@@ -3,11 +3,10 @@
 //  Strategy: NETWORK FIRST  →  cache fallback
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v4';           // ← Bumped to v4 to force update
-const CACHE_TIMEOUT = 5000;                    // ms before giving up on network
+const CACHE_VERSION = 'dcas-cpg-v5';           // ← Bumped to v5 to fix CSS offline rendering
+const CACHE_TIMEOUT = 5000;                    
 
 // ── Files cached immediately on install ─────────────────────
-// FIX: Using relative paths to prevent 404s depending on hosting root
 const PRE_CACHE = [
   './',
   'index.html',
@@ -38,7 +37,7 @@ const CACHE_FIRST_PATTERNS = [
 ];
 
 // ============================================================
-//  INSTALL  – pre-cache core assets
+//  INSTALL  
 // ============================================================
 self.addEventListener('install', function(event) {
   console.log('[SW] Installing v' + CACHE_VERSION);
@@ -63,7 +62,7 @@ self.addEventListener('install', function(event) {
 });
 
 // ============================================================
-//  ACTIVATE  – delete stale caches from old versions
+//  ACTIVATE 
 // ============================================================
 self.addEventListener('activate', function(event) {
   console.log('[SW] Activating v' + CACHE_VERSION);
@@ -84,7 +83,7 @@ self.addEventListener('activate', function(event) {
 });
 
 // ============================================================
-//  FETCH  – Network First with Cache Fallback
+//  FETCH  
 // ============================================================
 self.addEventListener('fetch', function(event) {
   const req = event.request;
@@ -122,13 +121,13 @@ function networkFirst(req) {
     }
     return networkResponse;
   }).catch(function() {
-    return caches.match(req).then(function(cached) {
+    // FIX: ignoreSearch ensures styles.css matches even if the browser adds hidden parameters
+    return caches.match(req, { ignoreSearch: true }).then(function(cached) {
       if (cached) {
         console.log('[SW] Offline fallback for:', req.url);
         return cached;
       }
       
-      // FIX: Do not return HTML fallback for backend API calls!
       if (req.url.includes('/api/')) {
           return new Response(JSON.stringify({ error: 'Server offline or unreachable.' }), {
               status: 503,
@@ -136,13 +135,19 @@ function networkFirst(req) {
           });
       }
 
-      return caches.match('index.html').then(function(fallback) {
-        return fallback || new Response(
-          '<h2 style="font-family:sans-serif;text-align:center;margin-top:40px">' +
-          '📵 You are offline and this page is not cached yet.</h2>',
-          { headers: { 'Content-Type': 'text/html' } }
-        );
-      });
+      // FIX: Only return the HTML error page if the browser is explicitly asking for a webpage
+      if (req.headers.get('accept').includes('text/html') || req.mode === 'navigate') {
+          return caches.match('index.html', { ignoreSearch: true }).then(function(fallback) {
+            return fallback || new Response(
+              '<h2 style="font-family:sans-serif;text-align:center;margin-top:40px">' +
+              '📵 You are offline and this page is not cached yet.</h2>',
+              { headers: { 'Content-Type': 'text/html' } }
+            );
+          });
+      }
+
+      // If a CSS or JS file is missing offline, silently fail instead of poisoning the DOM
+      return new Response('', { status: 404, statusText: 'Offline' });
     });
   });
 }
@@ -151,7 +156,7 @@ function networkFirst(req) {
 //  STRATEGY: Cache First
 // ============================================================
 function cacheFirst(req) {
-  return caches.match(req).then(function(cached) {
+  return caches.match(req, { ignoreSearch: true }).then(function(cached) {
     const networkUpdate = fetch(req.clone()).then(function(response) {
       if (response && response.ok) {
         caches.open(CACHE_VERSION).then(function(cache) {
@@ -166,7 +171,7 @@ function cacheFirst(req) {
 }
 
 // ============================================================
-//  HELPER: decide whether a cross-origin URL is worth caching
+//  HELPER
 // ============================================================
 function isCacheable(url) {
   return CACHE_FIRST_PATTERNS.some(function(p) { return p.test(url); });
