@@ -3,7 +3,7 @@
 //  Strategy: NETWORK FIRST  →  cache fallback
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v5';           // ← Bumped to v5 to fix CSS offline rendering
+const CACHE_VERSION = 'dcas-cpg-v5.1';           // ← Bumped to v5 to fix CSS offline rendering
 const CACHE_TIMEOUT = 5000;                    
 
 // ── Files cached immediately on install ─────────────────────
