@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · AHA Algorithms</title>
+<script>
+  (function(){
+    var t=localStorage.getItem('theme')||'dark';
+    document.documentElement.setAttribute('data-theme',t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DCAS AHA Algorithms  —  App Design System
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#5a7080;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;
+  --mono:"DM Mono",monospace;--hdr:60px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(20,10,60,.6),transparent);pointer-events:none;z-index:-1}
+
+/* ── HEADER ─────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0;transition:background .15s}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#991b1b,#dc2626);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;box-shadow:0 4px 12px rgba(220,38,38,.4)}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+
+/* ── SEARCH STRIP ───────────────────────────────────── */
+.search-strip{
+  padding:10px 14px;
+  background:rgba(7,17,31,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--br);
+  position:sticky;top:var(--hdr);z-index:55;
+  flex-shrink:0;
+}
+.search-inner{
+  display:flex;align-items:center;gap:10px;
+  background:var(--sf2);border:1.5px solid var(--br);
+  border-radius:12px;padding:9px 14px;
+  transition:border-color .2s;
+}
+.search-inner:focus-within{border-color:rgba(59,130,246,.5)}
+.search-icon{font-size:.85rem;color:var(--muted);flex-shrink:0}
+.search-input{flex:1;background:transparent;border:none;outline:none;font-size:.88rem;font-family:inherit;color:var(--text)}
+.search-input::placeholder{color:var(--muted)}
+.search-clear{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.8rem;padding:2px;display:none}
+.search-clear.visible{display:block}
+
+/* ── PAGE BODY ──────────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:16px 14px 40px;max-width:680px;width:100%;margin:0 auto}
+
+/* ── SECTION HEADER ─────────────────────────────────── */
+.sec-wrap{margin-bottom:20px}
+.sec-hdr{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:10px;
+  padding:10px 14px;
+  border-radius:14px;
+  border-left:4px solid;
+}
+.sec-hdr-icon{font-size:1.1rem;flex-shrink:0}
+.sec-hdr-info{flex:1}
+.sec-hdr-title{font-size:.88rem;font-weight:800}
+.sec-hdr-sub{font-size:.65rem;color:var(--muted);margin-top:1px}
+.sec-count{font-size:.65rem;font-weight:700;font-family:var(--mono);border-radius:20px;padding:3px 10px;flex-shrink:0}
+
+/* Category colour schemes */
+.cat-bls .sec-hdr{background:rgba(34,197,94,.08);border-color:var(--green)}
+.cat-bls .sec-hdr-title{color:#86efac}
+.cat-bls .sec-count{background:rgba(34,197,94,.15);color:#86efac;border:1px solid rgba(34,197,94,.3)}
+.cat-acls .sec-hdr{background:rgba(239,68,68,.08);border-color:var(--red)}
+.cat-acls .sec-hdr-title{color:#fca5a5}
+.cat-acls .sec-count{background:rgba(239,68,68,.12);color:#fca5a5;border:1px solid rgba(239,68,68,.3)}
+.cat-pals .sec-hdr{background:rgba(59,130,246,.08);border-color:var(--blue)}
+.cat-pals .sec-hdr-title{color:#93c5fd}
+.cat-pals .sec-count{background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.3)}
+.cat-sc .sec-hdr{background:rgba(234,179,8,.07);border-color:var(--yellow)}
+.cat-sc .sec-hdr-title{color:#fde047}
+.cat-sc .sec-count{background:rgba(234,179,8,.1);color:#fde047;border:1px solid rgba(234,179,8,.3)}
+
+/* ── ALGORITHM GRID ─────────────────────────────────── */
+.algo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:480px){.algo-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* ── ALGORITHM CARD ─────────────────────────────────── */
+.algo-card{
+  background:var(--sf);border:1px solid var(--br);
+  border-radius:16px;overflow:hidden;
+  cursor:pointer;
+  transition:transform .15s,border-color .2s,box-shadow .2s;
+  position:relative;
+  display:flex;flex-direction:column;
+}
+.algo-card:active{transform:scale(.97)}
+.algo-card.hidden{display:none}
+
+/* Thumbnail */
+.ac-thumb{
+  width:100%;aspect-ratio:4/3;overflow:hidden;
+  background:rgba(0,0,0,.3);position:relative;
+  flex-shrink:0;
+}
+.ac-thumb img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  transition:transform .3s ease;
+  display:block;
+}
+.algo-card:active .ac-thumb img{transform:scale(1.03)}
+.ac-thumb-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 50%,rgba(7,17,31,.7) 100%);
+}
+.ac-zoom-hint{
+  position:absolute;bottom:6px;right:7px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;padding:3px 8px;
+  font-size:.6rem;color:rgba(255,255,255,.6);
+  font-weight:600;letter-spacing:.3px;
+  display:flex;align-items:center;gap:4px;
+}
+
+/* Card body */
+.ac-body{padding:10px 12px 12px;flex:1}
+.ac-cat-dot{
+  width:6px;height:6px;border-radius:50%;
+  display:inline-block;margin-right:5px;margin-bottom:1px;
+  vertical-align:middle;
+}
+.ac-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:4px;display:flex;align-items:center}
+.ac-title{font-size:.82rem;font-weight:800;line-height:1.25;color:var(--text)}
+.ac-sub{font-size:.65rem;color:var(--muted);margin-top:3px;line-height:1.3}
+
+/* No-results message */
+.no-results{text-align:center;padding:50px 20px;color:var(--muted)}
+.no-results-icon{font-size:2.5rem;opacity:.3;margin-bottom:10px}
+
+/* ── BOTTOM SHEET IMAGE VIEWER ──────────────────────── */
+.bs-overlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  z-index:200;display:none;flex-direction:column;justify-content:flex-end;
+}
+.bs-overlay.open{display:flex;animation:bsFI .2s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+
+.bs-panel{
+  background:#0a1728;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-radius:24px 24px 0 0;
+  display:flex;flex-direction:column;
+  height:93vh;
+  padding-bottom:max(16px,env(safe-area-inset-bottom));
+  animation:bsSU .34s cubic-bezier(.25,1,.5,1);
+  overflow:hidden;
+}
+@keyframes bsSU{from{transform:translateY(80px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Panel header */
+.bs-hdr{
+  display:flex;align-items:center;gap:10px;
+  padding:14px 16px 12px;
+  border-bottom:1px solid var(--br);
+  flex-shrink:0;
+  background:rgba(7,17,31,.6);
+}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.2);position:absolute;top:8px;left:50%;transform:translateX(-50%)}
+.bs-cat-badge{
+  height:26px;border-radius:8px;padding:0 10px;
+  display:flex;align-items:center;
+  font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;
+  flex-shrink:0;
+}
+.bs-title-wrap{flex:1;min-width:0}
+.bs-title{font-size:.92rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bs-sub{font-size:.65rem;color:var(--muted);margin-top:1px}
+.bs-close{
+  width:30px;height:30px;border-radius:9px;
+  background:var(--sf2);border:1px solid var(--br);
+  color:var(--muted);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:.8rem;flex-shrink:0;transition:background .15s;
+}
+.bs-close:active{background:var(--br2)}
+
+/* Toolbar row */
+.bs-tools{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 16px;border-bottom:1px solid var(--br);
+  flex-shrink:0;gap:8px;
+}
+.bs-tool-btns{display:flex;gap:7px}
+.tool-btn{
+  background:var(--sf2);border:1px solid var(--br);
+  color:var(--text);border-radius:9px;
+  padding:7px 13px;font-size:.74rem;font-weight:600;
+  font-family:inherit;cursor:pointer;transition:all .15s;
+  display:flex;align-items:center;gap:5px;
+}
+.tool-btn:active{background:var(--br2);transform:scale(.96)}
+.tool-btn.primary{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.35);color:#93c5fd}
+.zoom-info{font-size:.68rem;font-family:var(--mono);color:var(--muted);min-width:46px;text-align:center}
+
+/* Image viewer */
+.bs-viewer{
+  flex:1;overflow:hidden;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  cursor:grab;
+  -webkit-overflow-scrolling:touch;
+}
+.bs-viewer:active{cursor:grabbing}
+.viewer-img-wrap{
+  position:absolute;
+  transform-origin:center center;
+  transition:none;
+  touch-action:none;
+}
+.viewer-img{
+  display:block;
+  max-width:none;
+  width:auto;height:auto;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* Nav arrows */
+.nav-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(7,17,31,.75);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.14);
+  color:var(--text);font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:10;transition:background .15s;
+}
+.nav-btn:active{background:rgba(59,130,246,.3)}
+.nav-prev{left:10px}
+.nav-next{right:10px}
+.nav-btn:disabled{opacity:.25;pointer-events:none}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header class="app-header">
+  <a class="hdr-back" href="index.html">←</a>
+  <div class="hdr-badge">❤️</div>
+  <div class="hdr-info">
+    <div class="hdr-title">AHA Algorithms</div>
+    <div class="hdr-sub">American Heart Association · 2025</div>
+  </div>
+</header>
+
+<!-- ── SEARCH ──────────────────────────────────────────── -->
+<div class="search-strip">
+  <div class="search-inner">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="searchInput" type="text"
+           placeholder="Search algorithms…" autocomplete="off"
+           oninput="filterAlgos(this.value)">
+    <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+  </div>
+</div>
+
+<!-- ── MAIN ────────────────────────────────────────────── -->
+<main class="page-body" id="pageBody"></main>
+
+<!-- ── BOTTOM SHEET VIEWER ─────────────────────────────── -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeViewer()">
+  <div class="bs-panel" onclick="event.stopPropagation()">
+    <!-- Drag handle -->
+    <div class="bs-handle" onclick="closeViewer()"></div>
+
+    <!-- Header -->
+    <div class="bs-hdr">
+      <div class="bs-cat-badge" id="bsCatBadge"></div>
+      <div class="bs-title-wrap">
+        <div class="bs-title" id="bsTitle">—</div>
+        <div class="bs-sub" id="bsSub">AHA Algorithm · 2025</div>
+      </div>
+      <div class="bs-close" onclick="closeViewer()">✕</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="bs-tools">
+      <div class="bs-tool-btns">
+        <button class="tool-btn" onclick="zoomOut()">－</button>
+        <span class="zoom-info" id="zoomInfo">100%</span>
+        <button class="tool-btn" onclick="zoomIn()">＋</button>
+        <button class="tool-btn" onclick="resetZoom()">↺ Fit</button>
+      </div>
+      <div class="bs-tool-btns">
+        <button class="nav-prev-btn tool-btn" id="navPrevBtn" onclick="navAlgo(-1)">← Prev</button>
+        <button class="nav-next-btn tool-btn primary" id="navNextBtn" onclick="navAlgo(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- Image viewer -->
+    <div class="bs-viewer" id="bsViewer">
+      <div class="viewer-img-wrap" id="imgWrap">
+        <img class="viewer-img" id="viewerImg" src="" alt="Algorithm" draggable="false">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── Algorithm Data ─────────────────────────────────────
+   Sorted into 4 clinical categories.
+   file: path relative to this HTML file.
+   Assumed to live in an algorithms/ subfolder.
+   Change IMG_BASE to match your deployment structure.
+────────────────────────────────────────────────────── */
+const IMG_BASE = 'algorithms/';
+
+const CATEGORIES = [
+  {
+    id:'bls',
+    label:'BLS',
+    title:'Basic Life Support',
+    icon:'🫁',
+    colorClass:'cat-bls',
+    badgeBg:'rgba(34,197,94,.18)',
+    badgeColor:'#86efac',
+    dot:'#22c55e',
+    algos:[
+      { file:'BLS-Adult-Healthcare.png',       title:'Adult BLS',                   sub:'Healthcare Provider Algorithm' },
+      { file:'BLS-Adult-FBAO.png',             title:'Adult FBAO',                  sub:'Foreign Body Airway Obstruction' },
+      { file:'Pediatric-BLS-Single-Rescuer.png',title:'Pediatric BLS',              sub:'Single Rescuer Algorithm' },
+      { file:'BLS-Termination-of-Resusc.png',  title:'Termination of Resuscitation',sub:'BLS — Out-of-Hospital' },
+    ]
+  },
+  {
+    id:'acls',
+    label:'ACLS',
+    title:'Advanced Cardiac Life Support',
+    icon:'❤️',
+    colorClass:'cat-acls',
+    badgeBg:'rgba(239,68,68,.18)',
+    badgeColor:'#fca5a5',
+    dot:'#ef4444',
+    algos:[
+      { file:'ACLS-CA.png',                    title:'Cardiac Arrest',              sub:'Adult VF / pVT / Asystole / PEA' },
+      { file:'ACLS-CA-Circular.png',           title:'Cardiac Arrest (Circular)',   sub:'Systems of Care Approach' },
+      { file:'ACLS-Bradycardia.png',           title:'Bradycardia',                 sub:'Adult — With Pulse' },
+      { file:'ACLS-Tachycardia.png',           title:'Tachycardia',                 sub:'Adult — With Pulse' },
+      { file:'ACLS-Electrical-Cardioversion.png',title:'Electrical Cardioversion',  sub:'Adult Cardioversion Algorithm' },
+      { file:'ALS-Termination-of-Resusc.png',  title:'Termination of Resuscitation',sub:'ALS — Out-of-Hospital' },
+    ]
+  },
+  {
+    id:'pals',
+    label:'PALS / Neonatal',
+    title:'Pediatric Advanced Life Support',
+    icon:'👶',
+    colorClass:'cat-pals',
+    badgeBg:'rgba(59,130,246,.18)',
+    badgeColor:'#93c5fd',
+    dot:'#3b82f6',
+    algos:[
+      { file:'PALS-CA.png',                    title:'Pediatric Cardiac Arrest',    sub:'PALS — VF / pVT / Asystole / PEA' },
+      { file:'PALS-Bradycardia.png',           title:'Pediatric Bradycardia',       sub:'PALS — With Pulse' },
+      { file:'PALS-Tachyarrhythmia.png',       title:'Pediatric Tachyarrhythmia',   sub:'PALS — With Pulse' },
+      { file:'Neonatal-Resuscitation.png',     title:'Neonatal Resuscitation',      sub:'Newborn Algorithm' },
+    ]
+  },
+  {
+    id:'sc',
+    label:'Special Circumstances',
+    title:'Special Situations & PCAC',
+    icon:'⚡',
+    colorClass:'cat-sc',
+    badgeBg:'rgba(234,179,8,.15)',
+    badgeColor:'#fde047',
+    dot:'#eab308',
+    algos:[
+      { file:'SC-ACLS-CA-in-Pregnancy.png',    title:'Cardiac Arrest in Pregnancy', sub:'Special Circumstance — ACLS' },
+      { file:'SC-ACLS-LVAD.png',               title:'LVAD Cardiac Arrest',         sub:'Special Circumstance — ACLS' },
+      { file:'PCAC-Algorithm-ACLS-PCAC.png',   title:'Post-Cardiac Arrest Care',    sub:'PCAC — ACLS Algorithm' },
+    ]
+  }
+];
+
+/* ── Flat index for navigation & search ─────────────── */
+const FLAT_ALGOS = [];
+CATEGORIES.forEach(cat => {
+  cat.algos.forEach((a,i) => {
+    FLAT_ALGOS.push({ ...a, cat });
+  });
+});
+
+/* ── Build DOM ──────────────────────────────────────── */
+function buildPage() {
+  const body = document.getElementById('pageBody');
+  body.innerHTML = '';
+
+  CATEGORIES.forEach(cat => {
+    const sec = document.createElement('div');
+    sec.className = 'sec-wrap ' + cat.colorClass;
+    sec.dataset.catId = cat.id;
+
+    sec.innerHTML = `
+      <div class="sec-hdr">
+        <div class="sec-hdr-icon">${cat.icon}</div>
+        <div class="sec-hdr-info">
+          <div class="sec-hdr-title">${cat.title}</div>
+          <div class="sec-hdr-sub">${cat.label} · ${cat.algos.length} algorithm${cat.algos.length > 1 ? 's' : ''}</div>
+        </div>
+        <div class="sec-count">${cat.algos.length}</div>
+      </div>
+      <div class="algo-grid" id="grid-${cat.id}"></div>`;
+
+    const grid = sec.querySelector('.algo-grid');
+    cat.algos.forEach((algo, idx) => {
+      const flatIdx = FLAT_ALGOS.findIndex(a => a.file === algo.file);
+      const card = document.createElement('div');
+      card.className = 'algo-card';
+      card.dataset.flatIdx = flatIdx;
+      card.dataset.search = (algo.title + ' ' + algo.sub + ' ' + cat.label + ' ' + cat.title).toLowerCase();
+      card.onclick = () => openViewer(flatIdx);
+      card.innerHTML = `
+        <div class="ac-thumb">
+          <img src="${IMG_BASE}${algo.file}" alt="${algo.title}" loading="lazy"
+               onerror="this.parentElement.style.background='rgba(59,130,246,.08)';this.style.opacity='0'">
+          <div class="ac-thumb-overlay"></div>
+          <div class="ac-zoom-hint">🔍 View</div>
+        </div>
+        <div class="ac-body">
+          <div class="ac-label">
+            <span class="ac-cat-dot" style="background:${cat.dot}"></span>${cat.label}
+          </div>
+          <div class="ac-title">${algo.title}</div>
+          <div class="ac-sub">${algo.sub}</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    body.appendChild(sec);
+  });
+}
+
+/* ── Search ─────────────────────────────────────────── */
+function filterAlgos(q) {
+  q = q.toLowerCase().trim();
+  const clearBtn = document.getElementById('searchClear');
+  clearBtn.classList.toggle('visible', q.length > 0);
+
+  let anyVisible = false;
+  document.querySelectorAll('.algo-card').forEach(card => {
+    const matches = !q || card.dataset.search.includes(q);
+    card.classList.toggle('hidden', !matches);
+    if (matches) anyVisible = true;
+  });
+
+  // Hide empty category sections
+  document.querySelectorAll('.sec-wrap').forEach(sec => {
+    const hasVisible = sec.querySelectorAll('.algo-card:not(.hidden)').length > 0;
+    sec.style.display = (q && !hasVisible) ? 'none' : '';
+  });
+}
+
+function clearSearch() {
+  const inp = document.getElementById('searchInput');
+  inp.value = '';
+  filterAlgos('');
+  inp.focus();
+}
+
+/* ── Viewer state ───────────────────────────────────── */
+let currentIdx  = 0;
+let scale       = 1;
+let panX        = 0;
+let panY        = 0;
+let isPanning   = false;
+let startX      = 0, startY = 0;
+let startPanX   = 0, startPanY = 0;
+let lastTouchDist = null;
+let lastTapTime = 0;
+
+/* ── Open viewer ────────────────────────────────────── */
+function openViewer(idx) {
+  currentIdx = idx;
+  loadAlgo(idx);
+  document.getElementById('bsOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeViewer() {
+  document.getElementById('bsOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  resetZoom();
+}
+
+function loadAlgo(idx) {
+  const algo = FLAT_ALGOS[idx];
+  if (!algo) return;
+
+  // Header
+  const badge = document.getElementById('bsCatBadge');
+  badge.textContent = algo.cat.label;
+  badge.style.background = algo.cat.badgeBg;
+  badge.style.color = algo.cat.badgeColor;
+  badge.style.border = `1px solid ${algo.cat.badgeColor}40`;
+
+  document.getElementById('bsTitle').textContent = algo.title;
+  document.getElementById('bsSub').textContent   = algo.sub + ' · AHA 2025';
+
+  // Image
+  const img = document.getElementById('viewerImg');
+  img.src = IMG_BASE + algo.file;
+  img.alt = algo.title;
+
+  // Nav buttons
+  document.getElementById('navPrevBtn').disabled = idx <= 0;
+  document.getElementById('navNextBtn').disabled = idx >= FLAT_ALGOS.length - 1;
+
+  // Reset zoom & pan
+  resetZoom(false);
+
+  // After image loads, fit it to viewer
+  img.onload = () => { fitToViewer(); };
+}
+
+function navAlgo(dir) {
+  const next = currentIdx + dir;
+  if (next < 0 || next >= FLAT_ALGOS.length) return;
+  currentIdx = next;
+  loadAlgo(currentIdx);
+}
+
+/* ── Zoom & Pan ─────────────────────────────────────── */
+function applyTransform(animate) {
+  const wrap = document.getElementById('imgWrap');
+  wrap.style.transition = animate ? 'transform .25s ease' : 'none';
+  wrap.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+  document.getElementById('zoomInfo').textContent = Math.round(scale * 100) + '%';
+}
+
+function fitToViewer() {
+  const viewer = document.getElementById('bsViewer');
+  const img    = document.getElementById('viewerImg');
+  if (!img.naturalWidth) return;
+  const vW = viewer.clientWidth,  vH = viewer.clientHeight;
+  const iW = img.naturalWidth,    iH = img.naturalHeight;
+  scale = Math.min(vW / iW, vH / iH) * 0.95;
+  panX = 0; panY = 0;
+  img.style.width  = iW + 'px';
+  img.style.height = iH + 'px';
+  applyTransform(true);
+}
+
+function zoomIn()  { scale = Math.min(scale * 1.35, 6); clampPan(); applyTransform(true); }
+function zoomOut() { scale = Math.max(scale / 1.35, .15); clampPan(); applyTransform(true); }
+function resetZoom(animate) {
+  animate = animate !== false;
+  scale = 1; panX = 0; panY = 0;
+  applyTransform(animate);
+  setTimeout(() => fitToViewer(), animate ? 260 : 0);
+}
+
+function clampPan() {
+  const viewer = document.getElementById('bsViewer');
+  const img    = document.getElementById('viewerImg');
+  const maxX   = Math.max(0, (img.naturalWidth  * scale - viewer.clientWidth)  / 2);
+  const maxY   = Math.max(0, (img.naturalHeight * scale - viewer.clientHeight) / 2);
+  panX = Math.max(-maxX, Math.min(maxX, panX));
+  panY = Math.max(-maxY, Math.min(maxY, panY));
+}
+
+/* ── Pointer events (mouse + touch pan) ────────────── */
+const viewer = document.getElementById('bsViewer');
+
+viewer.addEventListener('mousedown', e => {
+  if (e.button !== 0) return;
+  isPanning = true;
+  startX = e.clientX - panX;
+  startY = e.clientY - panY;
+  e.preventDefault();
+});
+viewer.addEventListener('mousemove', e => {
+  if (!isPanning) return;
+  panX = e.clientX - startX;
+  panY = e.clientY - startY;
+  clampPan();
+  applyTransform(false);
+});
+viewer.addEventListener('mouseup',   () => { isPanning = false; });
+viewer.addEventListener('mouseleave',() => { isPanning = false; });
+
+/* Double-click to zoom in/reset */
+viewer.addEventListener('dblclick', e => {
+  if (scale > 1.5) { resetZoom(); }
+  else { scale = Math.min(scale * 2, 4); applyTransform(true); }
+});
+
+/* Touch pan + pinch zoom */
+viewer.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    const now = Date.now();
+    if (now - lastTapTime < 300) {
+      // Double tap
+      if (scale > 1.5) resetZoom(); else { scale = Math.min(scale * 2, 4); applyTransform(true); }
+      lastTapTime = 0;
+    } else {
+      lastTapTime = now;
+    }
+    isPanning = true;
+    startX = e.touches[0].clientX - panX;
+    startY = e.touches[0].clientY - panY;
+    lastTouchDist = null;
+  } else if (e.touches.length === 2) {
+    isPanning = false;
+    lastTouchDist = getTouchDist(e);
+  }
+  e.preventDefault();
+}, { passive: false });
+
+viewer.addEventListener('touchmove', e => {
+  if (e.touches.length === 1 && isPanning) {
+    panX = e.touches[0].clientX - startX;
+    panY = e.touches[0].clientY - startY;
+    clampPan();
+    applyTransform(false);
+  } else if (e.touches.length === 2 && lastTouchDist) {
+    const dist = getTouchDist(e);
+    const ratio = dist / lastTouchDist;
+    scale = Math.max(.15, Math.min(6, scale * ratio));
+    lastTouchDist = dist;
+    clampPan();
+    applyTransform(false);
+  }
+  e.preventDefault();
+}, { passive: false });
+
+viewer.addEventListener('touchend', () => { isPanning = false; lastTouchDist = null; });
+
+/* Mouse wheel zoom */
+viewer.addEventListener('wheel', e => {
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? 0.85 : 1.18;
+  scale = Math.max(.15, Math.min(6, scale * delta));
+  clampPan();
+  applyTransform(false);
+}, { passive: false });
+
+function getTouchDist(e) {
+  const dx = e.touches[0].clientX - e.touches[1].clientX;
+  const dy = e.touches[0].clientY - e.touches[1].clientY;
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+/* ── Keyboard shortcuts ─────────────────────────────── */
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('bsOverlay').classList.contains('open')) return;
+  if (e.key === 'Escape')      closeViewer();
+  if (e.key === 'ArrowRight')  navAlgo(1);
+  if (e.key === 'ArrowLeft')   navAlgo(-1);
+  if (e.key === '+' || e.key === '=') zoomIn();
+  if (e.key === '-')           zoomOut();
+  if (e.key === '0')           resetZoom();
+});
+
+/* ── Init ───────────────────────────────────────────── */
+buildPage();
+</script>
+</body>
+</html>
