@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · O₂ Duration Calculator</title>
+<script>
+  (function(){
+    var t=localStorage.getItem('theme')||'dark';
+    document.documentElement.setAttribute('data-theme',t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DCAS O₂ Duration Calculator  —  carevent.html
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#5a7080;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;
+  --mono:"DM Mono",monospace;--hdr:60px;--r:18px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(6,182,212,.12),transparent),radial-gradient(ellipse 70% 60% at 85% 100%,rgba(15,39,68,.8),transparent);pointer-events:none;z-index:-1}
+
+/* ── HEADER ─────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0;transition:background .15s}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#0e7490,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:0 4px 14px rgba(6,182,212,.4)}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+
+/* ── PAGE BODY ──────────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:16px 14px 120px;max-width:640px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+
+/* ── SECTION LABEL ──────────────────────────────────── */
+.sec-label{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+
+/* ── GLASS CARD ─────────────────────────────────────── */
+.glass-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px;transition:border-color .2s}
+
+/* ── CYLINDER SELECTOR ──────────────────────────────── */
+.cyl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(min-width:440px){.cyl-grid{grid-template-columns:repeat(5,1fr)}}
+.cyl-btn{background:rgba(0,0,0,.18);border:1.5px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 6px 10px;cursor:pointer;text-align:center;transition:all .18s;font-family:inherit;display:flex;flex-direction:column;align-items:center;gap:4px}
+.cyl-btn:active{transform:scale(.95)}
+.cyl-icon{font-size:1.35rem;line-height:1}
+.cyl-vol{font-size:.9rem;font-weight:900;font-family:var(--mono);color:var(--text)}
+.cyl-name{font-size:.6rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.cyl-factor{font-size:.55rem;color:var(--muted);font-family:var(--mono);margin-top:1px}
+.cyl-btn.sel{border-color:rgba(6,182,212,.6);background:rgba(6,182,212,.14);box-shadow:0 0 0 3px rgba(6,182,212,.1)}
+.cyl-btn.sel .cyl-vol{color:var(--cyan)}
+
+/* ── PRESSURE INPUT ─────────────────────────────────── */
+.pressure-wrap{display:flex;flex-direction:column;gap:10px}
+.pressure-top{display:flex;align-items:center;gap:10px}
+.pressure-field{flex:1;display:flex;flex-direction:column;gap:6px}
+.num-input{
+  width:100%;background:rgba(0,0,0,.3);border:1.5px solid var(--br);
+  border-radius:13px;padding:12px 16px;font-size:1.1rem;
+  font-family:var(--mono);font-weight:700;color:var(--text);
+  outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;
+}
+.num-input:focus{border-color:rgba(6,182,212,.6);box-shadow:0 0 0 3px rgba(6,182,212,.1)}
+.num-input::placeholder{color:var(--muted);font-weight:400}
+.input-unit{position:relative}
+.unit-label{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;display:block}
+
+/* Pressure gauge visual */
+.pressure-gauge{
+  width:100%;height:8px;border-radius:4px;
+  background:rgba(255,255,255,.06);overflow:hidden;
+  position:relative;
+}
+.gauge-bar{
+  height:100%;border-radius:4px;
+  background:linear-gradient(90deg,var(--red) 0%,var(--yellow) 40%,var(--green) 100%);
+  transition:width .4s cubic-bezier(.25,1,.5,1);
+  transform-origin:left;
+}
+.gauge-labels{display:flex;justify-content:space-between;font-size:.58rem;color:var(--muted);font-family:var(--mono);margin-top:4px}
+
+/* Pressure presets */
+.pressure-presets{display:flex;gap:6px;flex-wrap:wrap}
+.preset-btn{background:var(--sf2);border:1px solid var(--br);border-radius:9px;padding:6px 12px;font-size:.72rem;font-weight:700;font-family:var(--mono);color:var(--muted);cursor:pointer;transition:all .15s;flex-shrink:0}
+.preset-btn:active{transform:scale(.95)}
+.preset-btn.full{color:#86efac;border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.08)}
+.preset-btn.warn{color:#fde047;border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.07)}
+
+/* Low pressure warning */
+.pressure-warn{
+  display:none;
+  background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);
+  border-radius:11px;padding:9px 12px;
+  font-size:.75rem;color:#fca5a5;font-weight:600;
+  display:flex;align-items:center;gap:7px;
+}
+.pressure-warn.show{display:flex}
+
+/* ── FLOW RATE ───────────────────────────────────────── */
+.flow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+@media(min-width:400px){.flow-grid{grid-template-columns:repeat(4,1fr)}}
+.flow-btn{background:rgba(0,0,0,.18);border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 6px;cursor:pointer;text-align:center;transition:all .18s;font-family:inherit}
+.flow-btn:active{transform:scale(.95)}
+.flow-rate{font-size:.95rem;font-weight:900;font-family:var(--mono);color:var(--text);display:block}
+.flow-device{font-size:.6rem;font-weight:600;color:var(--muted);display:block;margin-top:2px;line-height:1.3}
+.flow-spo2{font-size:.58rem;color:var(--muted);display:block;margin-top:2px}
+.flow-btn.sel{border-color:rgba(59,130,246,.55);background:rgba(59,130,246,.14);box-shadow:0 0 0 2px rgba(59,130,246,.1)}
+.flow-btn.sel .flow-rate{color:#93c5fd}
+.flow-custom-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+.flow-custom-input{flex:1;background:rgba(0,0,0,.25);border:1.5px solid var(--br);border-radius:11px;padding:9px 14px;font-size:.9rem;font-family:var(--mono);color:var(--text);outline:none;transition:border-color .2s;-webkit-appearance:none}
+.flow-custom-input:focus{border-color:rgba(59,130,246,.5)}
+.flow-custom-input::placeholder{color:var(--muted)}
+
+/* ── QUANTITY ────────────────────────────────────────── */
+.qty-row{display:flex;align-items:center;gap:12px}
+.qty-btn{width:44px;height:44px;border-radius:12px;background:var(--sf2);border:1px solid var(--br);color:var(--text);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;font-family:inherit}
+.qty-btn:active{background:var(--br2);transform:scale(.94)}
+.qty-display{flex:1;text-align:center;font-size:1.8rem;font-weight:900;font-family:var(--mono);color:var(--text)}
+.qty-label{font-size:.68rem;color:var(--muted);text-align:center;margin-top:3px}
+
+/* ── CALCULATE BUTTON ───────────────────────────────── */
+.calc-btn{
+  width:100%;padding:16px;border-radius:16px;
+  background:linear-gradient(135deg,#0e7490,#06b6d4);
+  border:none;color:#fff;
+  font-size:1rem;font-weight:800;font-family:inherit;
+  cursor:pointer;transition:all .18s;
+  box-shadow:0 6px 24px rgba(6,182,212,.35);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  letter-spacing:-.2px;
+}
+.calc-btn:active{transform:scale(.98);box-shadow:0 3px 12px rgba(6,182,212,.3)}
+.calc-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+/* ── ACTIVE TIMERS LIST ─────────────────────────────── */
+.timers-section{display:flex;flex-direction:column;gap:10px}
+.timer-card{
+  background:var(--sf);border:1px solid var(--br);
+  border-radius:var(--r);overflow:hidden;
+  transition:border-color .3s;
+}
+.timer-card.danger{border-color:rgba(239,68,68,.5);box-shadow:0 0 0 2px rgba(239,68,68,.1)}
+.timer-card.warning{border-color:rgba(234,179,8,.4)}
+.timer-card.safe{border-color:rgba(34,197,94,.3)}
+
+/* Timer card header */
+.tc-head{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 14px 10px;
+  border-bottom:1px solid var(--br);
+}
+.tc-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px currentColor}
+.dot-safe{color:var(--green);background:var(--green)}
+.dot-warn{color:var(--yellow);background:var(--yellow)}
+.dot-danger{color:var(--red);background:var(--red);animation:dotPulse 1.2s infinite}
+@keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.35}}
+.dot-expired{color:var(--muted);background:var(--muted)}
+.tc-meta{flex:1;min-width:0}
+.tc-title{font-size:.82rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tc-sub{font-size:.64rem;color:var(--muted);margin-top:1px}
+.tc-remove{width:26px;height:26px;border-radius:8px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;transition:background .15s}
+.tc-remove:active{background:rgba(239,68,68,.25)}
+
+/* Countdown display */
+.tc-body{padding:12px 14px;display:flex;align-items:center;gap:14px}
+.tc-countdown{
+  font-size:1.6rem;font-weight:900;font-family:var(--mono);
+  letter-spacing:-1px;line-height:1;
+  transition:color .3s;min-width:0;flex:1;
+}
+.tc-countdown.safe{color:var(--green);text-shadow:0 0 16px rgba(34,197,94,.3)}
+.tc-countdown.warn{color:var(--yellow);text-shadow:0 0 16px rgba(234,179,8,.3)}
+.tc-countdown.danger{color:var(--red);text-shadow:0 0 16px rgba(239,68,68,.4)}
+.tc-countdown.expired{color:var(--muted)}
+.tc-end{text-align:right;flex-shrink:0}
+.tc-end-label{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.tc-end-time{font-size:.78rem;font-weight:700;font-family:var(--mono);color:var(--text);margin-top:2px}
+
+/* Progress */
+.tc-progress{height:4px;background:rgba(255,255,255,.07);overflow:hidden}
+.tc-prog-bar{height:100%;transition:width 1s linear,background .5s}
+
+/* Empty state */
+.empty-timers{text-align:center;padding:28px 20px;color:var(--muted)}
+.empty-icon{font-size:2.2rem;opacity:.3;margin-bottom:8px}
+
+/* ── BOTTOM SHEET — Result Detail ───────────────────── */
+.bs-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:200;display:none;flex-direction:column;justify-content:flex-end}
+.bs-overlay.open{display:flex;animation:bsFI .2s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+.bs-panel{background:#0a1728;border-top:1px solid rgba(255,255,255,.1);border-radius:24px 24px 0 0;display:flex;flex-direction:column;max-height:88vh;padding-bottom:max(20px,env(safe-area-inset-bottom));animation:bsSU .34s cubic-bezier(.25,1,.5,1)}
+@keyframes bsSU{from{transform:translateY(70px);opacity:0}to{transform:translateY(0);opacity:1}}
+.bs-handle-wrap{padding:10px 0 4px;cursor:pointer;display:flex;justify-content:center}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.18)}
+.bs-head{display:flex;align-items:center;justify-content:space-between;padding:4px 16px 12px;flex-shrink:0;border-bottom:1px solid var(--br)}
+.bs-htitle{font-size:.95rem;font-weight:800}
+.bs-hclose{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:1px solid var(--br);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem;transition:background .15s}
+.bs-hclose:active{background:var(--br2)}
+.bs-scroll{overflow-y:auto;flex:1;padding:16px}
+.bs-scroll::-webkit-scrollbar{width:3px}
+.bs-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+
+/* Result ring */
+.result-hero{text-align:center;padding:6px 0 20px;border-bottom:1px solid var(--br);margin-bottom:16px}
+.result-ring{width:108px;height:108px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 12px;border:3px solid;transition:all .3s}
+.rr-safe{border-color:var(--green);background:rgba(34,197,94,.1);box-shadow:0 0 30px rgba(34,197,94,.2)}
+.rr-warn{border-color:var(--yellow);background:rgba(234,179,8,.1);box-shadow:0 0 30px rgba(234,179,8,.18)}
+.rr-danger{border-color:var(--red);background:rgba(239,68,68,.12);box-shadow:0 0 30px rgba(239,68,68,.25)}
+.rr-num{font-size:1.5rem;font-weight:900;font-family:var(--mono);letter-spacing:-1px;line-height:1}
+.rr-unit{font-size:.62rem;color:var(--muted);margin-top:2px}
+.result-sev-pill{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:5px 14px;font-size:.74rem;font-weight:700;margin-bottom:6px;border:1px solid}
+.rsp-safe{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#86efac}
+.rsp-warn{background:rgba(234,179,8,.09);border-color:rgba(234,179,8,.3);color:#fde047}
+.rsp-danger{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.result-interp{font-size:.78rem;color:var(--muted);line-height:1.4}
+
+/* Stats grid */
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px}
+.stat-box{background:var(--sf);border:1px solid var(--br);border-radius:13px;padding:12px}
+.stat-val{font-size:1.1rem;font-weight:900;font-family:var(--mono);color:var(--cyan);margin-bottom:3px}
+.stat-lbl{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
+.stat-sub{font-size:.66rem;color:var(--muted);margin-top:2px;line-height:1.3}
+
+/* Actions */
+.bs-action-card{background:var(--sf);border:1px solid var(--br);border-radius:14px;padding:14px;margin-bottom:10px}
+.bs-act-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px}
+.act-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--br);font-size:.78rem;line-height:1.5}
+.act-row:last-child{border-bottom:none}
+.act-i{font-size:.9rem;flex-shrink:0;margin-top:1px}
+.act-t{flex:1;color:var(--text)}
+.act-t strong{color:#fff}
+
+/* Add-to-tracker btn */
+.add-tracker-btn{width:100%;padding:13px;border-radius:14px;background:linear-gradient(135deg,rgba(6,182,212,.25),rgba(59,130,246,.2));border:1px solid rgba(6,182,212,.4);color:var(--cyan);font-size:.88rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:6px}
+.add-tracker-btn:active{transform:scale(.98);background:rgba(6,182,212,.3)}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header class="app-header">
+  <a class="hdr-back" href="index.html">←</a>
+  <div class="hdr-badge">🫁</div>
+  <div class="hdr-info">
+    <div class="hdr-title">O₂ Duration Calculator</div>
+    <div class="hdr-sub">Oxygen Supply Planning · DCAS CPG 2026</div>
+  </div>
+</header>
+
+<!-- ── MAIN CONTENT ────────────────────────────────────── -->
+<main class="page-body">
+
+  <!-- ── CYLINDER TYPE ──── -->
+  <div>
+    <div class="sec-label">🫙 Cylinder Size</div>
+    <div class="glass-card" style="padding:12px">
+      <div class="cyl-grid" id="cylGrid">
+        <!-- built by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PRESSURE ──── -->
+  <div>
+    <div class="sec-label">⏲ Gauge Pressure</div>
+    <div class="glass-card">
+      <div class="pressure-wrap">
+        <div>
+          <span class="unit-label">Cylinder Pressure</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            <input class="num-input" id="pressureInput" type="number"
+                   inputmode="decimal" placeholder="0 – 2500"
+                   min="0" max="2500" step="10"
+                   oninput="onPressureInput()">
+            <div style="font-size:.85rem;font-weight:700;color:var(--muted);flex-shrink:0">PSI</div>
+          </div>
+        </div>
+        <!-- Gauge bar -->
+        <div>
+          <div class="pressure-gauge">
+            <div class="gauge-bar" id="gaugeBar" style="width:0%"></div>
+          </div>
+          <div class="gauge-labels">
+            <span>0</span><span>500</span><span>1000</span><span>1500</span><span>2000</span><span>2500</span>
+          </div>
+        </div>
+        <!-- Presets -->
+        <div>
+          <div class="sec-label" style="margin-bottom:6px;font-size:.6rem">Quick Presets</div>
+          <div class="pressure-presets">
+            <button class="preset-btn full" onclick="setPreset(2000)">2000 PSI<br><span style="font-size:.58rem;font-weight:500">Full</span></button>
+            <button class="preset-btn full" onclick="setPreset(1500)">1500 PSI<br><span style="font-size:.58rem;font-weight:500">¾ Full</span></button>
+            <button class="preset-btn warn" onclick="setPreset(1000)">1000 PSI<br><span style="font-size:.58rem;font-weight:500">½ Full</span></button>
+            <button class="preset-btn warn" onclick="setPreset(500)">500 PSI<br><span style="font-size:.58rem;font-weight:500">¼ Full</span></button>
+            <button class="preset-btn" onclick="setPreset(200)">200 PSI<br><span style="font-size:.58rem;font-weight:500">Low!</span></button>
+          </div>
+        </div>
+        <!-- Low pressure warning -->
+        <div class="pressure-warn" id="pressureWarn">
+          ⚠️ Pressure below 200 PSI — cylinder nearly empty. Consider switching now.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FLOW RATE ──── -->
+  <div>
+    <div class="sec-label">💨 Flow Rate (L/min)</div>
+    <div class="glass-card" style="padding:12px">
+      <div class="flow-grid" id="flowGrid">
+        <!-- built by JS -->
+      </div>
+      <div class="flow-custom-row">
+        <input class="flow-custom-input" id="customFlow" type="number"
+               inputmode="decimal" placeholder="Custom L/min"
+               min="0.1" max="25" step="0.5"
+               oninput="onCustomFlow()">
+        <span style="font-size:.72rem;color:var(--muted);flex-shrink:0">L/min</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QUANTITY ──── -->
+  <div>
+    <div class="sec-label">🔢 Number of Cylinders</div>
+    <div class="glass-card">
+      <div class="qty-row">
+        <button class="qty-btn" onclick="adjustQty(-1)">−</button>
+        <div>
+          <div class="qty-display" id="qtyDisplay">1</div>
+          <div class="qty-label">cylinder(s)</div>
+        </div>
+        <button class="qty-btn" onclick="adjustQty(1)">＋</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CALCULATE BUTTON ──── -->
+  <button class="calc-btn" id="calcBtn" onclick="calculate()" disabled>
+    <span style="font-size:1.1rem">🫁</span>
+    Calculate Duration
+  </button>
+
+  <!-- ── ACTIVE TIMERS ──── -->
+  <div id="timersSection" style="display:none">
+    <div class="sec-label">⏱ Active O₂ Timers</div>
+    <div class="timers-section" id="timersList"></div>
+  </div>
+
+</main>
+
+<!-- ── BOTTOM SHEET ─────────────────────────────────────── -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
+  <div class="bs-panel">
+    <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
+    <div class="bs-head">
+      <div class="bs-htitle">O₂ Duration Result</div>
+      <div class="bs-hclose" onclick="closeSheet()">✕</div>
+    </div>
+    <div class="bs-scroll" id="bsContent"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── Cylinder data ──────────────────────────────────────
+   tankFactor = water-volume (L) × compression factor
+   The original formula: duration = (qty × litres × bar) / flowRate
+   where bar = PSI / 14.5038
+─────────────────────────────────────────────────────── */
+const CYLINDERS = [
+  { label:'1L',   name:'Pocket',       liters:1,   icon:'🔵', desc:'82.7 factor' },
+  { label:'2.8L', name:'Size D',       liters:2.8, icon:'🔵', desc:'231 factor'  },
+  { label:'3.8L', name:'Jumbo D',      liters:3.8, icon:'🔵', desc:'314 factor'  },
+  { label:'10L',  name:'Size E/Bus',   liters:10,  icon:'🟢', desc:'828 factor'  },
+  { label:'20L',  name:'Size M',       liters:20,  icon:'🟢', desc:'1656 factor' },
+];
+
+const FLOW_RATES = [
+  { rate:1,  device:'Nasal Cannula',  spo2:'~94–98%'  },
+  { rate:2,  device:'Nasal Cannula',  spo2:'~95–99%'  },
+  { rate:4,  device:'Nasal Cannula',  spo2:'~96–100%' },
+  { rate:6,  device:'Simple Mask',    spo2:'~96–100%' },
+  { rate:8,  device:'Simple Mask',    spo2:'~98–100%' },
+  { rate:10, device:'NRB Mask',       spo2:'~99–100%' },
+  { rate:12, device:'NRB Mask',       spo2:'~99–100%' },
+  { rate:15, device:'NRB Mask',       spo2:'~99–100%' },
+];
+
+/* ── State ──────────────────────────────────────────── */
+const state = {
+  cylinderLiters: null,
+  cylinderLabel:  '',
+  pressurePsi:    null,
+  flowRate:       null,
+  quantity:       1,
+};
+
+let timers    = {};
+let timerData = [];
+
+/* ── Build cylinder selector ────────────────────────── */
+function buildCylinders() {
+  const grid = document.getElementById('cylGrid');
+  grid.innerHTML = CYLINDERS.map((c, i) =>
+    `<button class="cyl-btn" id="cyl-${i}" onclick="selectCyl(${i})">
+      <span class="cyl-icon">${c.icon}</span>
+      <span class="cyl-vol">${c.label}</span>
+      <span class="cyl-name">${c.name}</span>
+    </button>`
+  ).join('');
+}
+
+function selectCyl(idx) {
+  document.querySelectorAll('.cyl-btn').forEach(b => b.classList.remove('sel'));
+  document.getElementById('cyl-' + idx).classList.add('sel');
+  state.cylinderLiters = CYLINDERS[idx].liters;
+  state.cylinderLabel  = CYLINDERS[idx].label + ' ' + CYLINDERS[idx].name;
+  updateCalcBtn();
+}
+
+/* ── Build flow rate grid ───────────────────────────── */
+function buildFlowRates() {
+  const grid = document.getElementById('flowGrid');
+  grid.innerHTML = FLOW_RATES.map((f, i) =>
+    `<button class="flow-btn" id="flow-${i}" onclick="selectFlow(${i})">
+      <span class="flow-rate">${f.rate}</span>
+      <span class="flow-device">${f.device}</span>
+      <span class="flow-spo2">${f.spo2}</span>
+    </button>`
+  ).join('');
+}
+
+function selectFlow(idx) {
+  document.querySelectorAll('.flow-btn').forEach(b => b.classList.remove('sel'));
+  document.getElementById('flow-' + idx).classList.add('sel');
+  document.getElementById('customFlow').value = '';
+  state.flowRate = FLOW_RATES[idx].rate;
+  updateCalcBtn();
+}
+
+function onCustomFlow() {
+  const val = parseFloat(document.getElementById('customFlow').value);
+  document.querySelectorAll('.flow-btn').forEach(b => b.classList.remove('sel'));
+  state.flowRate = (!isNaN(val) && val > 0) ? val : null;
+  updateCalcBtn();
+}
+
+/* ── Pressure ───────────────────────────────────────── */
+function onPressureInput() {
+  const val = parseFloat(document.getElementById('pressureInput').value);
+  state.pressurePsi = (!isNaN(val) && val >= 0) ? val : null;
+  const pct = state.pressurePsi ? Math.min(100, (state.pressurePsi / 2500) * 100) : 0;
+  document.getElementById('gaugeBar').style.width = pct + '%';
+  const warn = document.getElementById('pressureWarn');
+  warn.classList.toggle('show', state.pressurePsi !== null && state.pressurePsi > 0 && state.pressurePsi <= 200);
+  updateCalcBtn();
+}
+
+function setPreset(psi) {
+  document.getElementById('pressureInput').value = psi;
+  onPressureInput();
+}
+
+/* ── Quantity ───────────────────────────────────────── */
+function adjustQty(delta) {
+  state.quantity = Math.max(1, Math.min(20, state.quantity + delta));
+  document.getElementById('qtyDisplay').textContent = state.quantity;
+  updateCalcBtn();
+}
+
+/* ── Enable/disable calc button ─────────────────────── */
+function updateCalcBtn() {
+  const ready = state.cylinderLiters !== null &&
+                state.pressurePsi   !== null && state.pressurePsi > 0 &&
+                state.flowRate      !== null && state.flowRate > 0;
+  document.getElementById('calcBtn').disabled = !ready;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CORE CALCULATION
+   Formula (unchanged from original):
+     pressureBar  = PSI / 14.5038
+     totalMinutes = (qty × litresPerCylinder × pressureBar) / flowRate
+═══════════════════════════════════════════════════════ */
+function calculate() {
+  const PSI_TO_BAR = 14.5038;
+  const bar        = state.pressurePsi / PSI_TO_BAR;
+  const totalMin   = (state.quantity * state.cylinderLiters * bar) / state.flowRate;
+  const totalSec   = Math.floor(totalMin * 60);
+  const totalLiters= (state.quantity * state.cylinderLiters * bar).toFixed(1);
+
+  showResultSheet({
+    totalMin,
+    totalSec,
+    totalLiters,
+    label:    state.cylinderLabel,
+    qty:      state.quantity,
+    psi:      state.pressurePsi,
+    flow:     state.flowRate,
+    bar:      bar.toFixed(2),
+  });
+}
+
+/* ── Format helpers ─────────────────────────────────── */
+function fmtHMS(s) {
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sc = s % 60;
+  return (h > 0 ? h + 'h ' : '') + m + 'm ' + (sc < 10 ? '0' : '') + sc + 's';
+}
+function fmtHM(min) {
+  const h = Math.floor(min / 60);
+  const m = Math.floor(min % 60);
+  if (h > 0) return `${h}h ${m}m`;
+  return `${m} min`;
+}
+function tierFromSec(sec) {
+  if (sec <= 0)     return 'expired';
+  if (sec <  900)   return 'danger';   // < 15 min
+  if (sec < 1800)   return 'warn';     // < 30 min
+  return                  'safe';
+}
+
+/* ── Show result bottom sheet ───────────────────────── */
+function showResultSheet(data) {
+  const {totalMin, totalSec, totalLiters, label, qty, psi, flow, bar} = data;
+  const tier = tierFromSec(totalSec);
+  const ringCls  = {safe:'rr-safe', warn:'rr-warn', danger:'rr-danger', expired:'rr-danger'}[tier];
+  const pillCls  = {safe:'rsp-safe', warn:'rsp-warn', danger:'rsp-danger', expired:'rsp-danger'}[tier];
+  const sev      = {safe:'🟢 Adequate Supply', warn:'🟡 Monitor Closely', danger:'🔴 Critical — Act Now', expired:'⛔ Expired'}[tier];
+  const col      = {safe:'var(--green)', warn:'var(--yellow)', danger:'var(--red)', expired:'var(--muted)'}[tier];
+  const endTime  = new Date(Date.now() + totalSec * 1000);
+
+  const interp = totalMin < 15
+    ? 'Less than 15 minutes of O₂ remaining. Switch cylinder immediately.'
+    : totalMin < 30
+    ? 'Under 30 minutes. Begin planning cylinder change now.'
+    : `Approximately ${fmtHM(totalMin)} of oxygen supply available.`;
+
+  const actions = totalMin < 15 ? [
+    {i:'🚨', t:'<strong>Switch cylinder immediately</strong>', d:'Do not wait until empty. Prepare replacement before administering.'},
+    {i:'💉', t:'<strong>Increase IV fluid if O₂ unavailable</strong>', d:'Maintain airway and perfusion while sourcing additional O₂.'},
+    {i:'📡', t:'<strong>Notify team</strong>', d:'Alert crew/dispatch of O₂ status. Document time.'},
+  ] : totalMin < 30 ? [
+    {i:'⏱',  t:'<strong>Plan cylinder change now</strong>', d:'Identify next cylinder. Ensure it is full before switching.'},
+    {i:'📋', t:'<strong>Document O₂ usage</strong>', d:'Record flow rate, start time, and estimated end time on patient record.'},
+    {i:'🫁', t:'<strong>Reassess FiO₂ requirements</strong>', d:'Can flow rate be safely reduced to extend duration?'},
+  ] : [
+    {i:'📋', t:'<strong>Routine monitoring</strong>', d:'Monitor SpO₂ continuously. Reassess flow rate as clinically indicated.'},
+    {i:'🔄', t:'<strong>Cylinder change plan</strong>', d:`Expected to last until ${endTime.toLocaleTimeString()}. Prepare replacement before depletion.`},
+    {i:'🫁', t:'<strong>Document and hand over</strong>', d:'Include O₂ supply status in handover report.'},
+  ];
+
+  let html = `
+    <div class="result-hero">
+      <div class="result-ring ${ringCls}">
+        <div class="rr-num" style="color:${col}">${fmtHM(totalMin).replace('h ','h<br>').replace('m','m')}</div>
+        <div class="rr-unit">duration</div>
+      </div>
+      <div class="result-sev-pill ${pillCls}">${sev}</div>
+      <div class="result-interp">${interp}</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-val">${totalSec > 0 ? fmtHM(totalMin) : '—'}</div>
+        <div class="stat-lbl">Total Duration</div>
+        <div class="stat-sub">at ${flow} L/min</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">${Number(totalLiters).toLocaleString()}L</div>
+        <div class="stat-lbl">Total O₂ Volume</div>
+        <div class="stat-sub">${qty} × ${state.cylinderLiters}L @ ${bar} bar</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">${endTime.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</div>
+        <div class="stat-lbl">Est. End Time</div>
+        <div class="stat-sub">if started now</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">${psi} PSI</div>
+        <div class="stat-lbl">Cylinder Pressure</div>
+        <div class="stat-sub">${bar} bar</div>
+      </div>
+    </div>
+
+    <div class="bs-action-card">
+      <div class="bs-act-title">🚑 EMS Actions</div>
+      ${actions.map(a => `<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t.replace(/<[^>]+>/g,'')}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`).join('')}
+    </div>
+
+    <div class="bs-action-card">
+      <div class="bs-act-title">📋 Calculation Summary</div>
+      <div class="act-row"><div class="act-i">🫙</div><div class="act-t"><strong>${label}</strong><br><span style="color:var(--muted);font-size:.71rem">Quantity: ${qty} cylinder(s) · ${state.cylinderLiters}L water volume</span></div></div>
+      <div class="act-row"><div class="act-i">⏲</div><div class="act-t"><strong>${psi} PSI → ${bar} bar</strong><br><span style="color:var(--muted);font-size:.71rem">Gauge pressure at time of calculation</span></div></div>
+      <div class="act-row"><div class="act-i">💨</div><div class="act-t"><strong>${flow} L/min flow rate</strong><br><span style="color:var(--muted);font-size:.71rem">Formula: (${qty} × ${state.cylinderLiters} × ${bar}) ÷ ${flow} = ${totalMin.toFixed(1)} min</span></div></div>
+    </div>
+
+    <button class="add-tracker-btn" onclick="addToTracker(${JSON.stringify(data).replace(/"/g,'&quot;')})">
+      ⏱ Add to Live Timer
+    </button>`;
+
+  document.getElementById('bsContent').innerHTML = html;
+  document.getElementById('bsOverlay').classList.add('open');
+}
+
+function closeSheet() {
+  document.getElementById('bsOverlay').classList.remove('open');
+}
+
+/* ═══════════════════════════════════════════════════════
+   LIVE TIMER TRACKER
+═══════════════════════════════════════════════════════ */
+let timerIdCounter = 0;
+
+function addToTracker(data) {
+  closeSheet();
+  const id = ++timerIdCounter;
+  const endAt = Date.now() + Math.floor(data.totalMin * 60) * 1000;
+  timerData.push({ id, endAt, totalSec: Math.floor(data.totalMin * 60), data });
+  renderTimers();
+  // Start interval if not running
+  if (!timers._master) {
+    timers._master = setInterval(tickTimers, 1000);
+  }
+  document.getElementById('timersSection').style.display = 'block';
+}
+
+function removeTimer(id) {
+  timerData = timerData.filter(t => t.id !== id);
+  renderTimers();
+  if (timerData.length === 0) {
+    clearInterval(timers._master);
+    timers._master = null;
+    document.getElementById('timersSection').style.display = 'none';
+  }
+}
+
+function tickTimers() {
+  timerData.forEach(t => {
+    const remaining = Math.max(0, Math.floor((t.endAt - Date.now()) / 1000));
+    updateTimerCard(t.id, remaining, t.totalSec);
+  });
+}
+
+function renderTimers() {
+  const list = document.getElementById('timersList');
+  if (timerData.length === 0) {
+    list.innerHTML = `<div class="empty-timers"><div class="empty-icon">⏱</div><div>No active timers</div></div>`;
+    return;
+  }
+  list.innerHTML = timerData.map(t => {
+    const rem = Math.max(0, Math.floor((t.endAt - Date.now()) / 1000));
+    const tier = tierFromSec(rem);
+    const cardCls = {safe:'safe',warn:'warning',danger:'danger',expired:'danger'}[tier];
+    const dotCls  = {safe:'dot-safe',warn:'dot-warn',danger:'dot-danger',expired:'dot-expired'}[tier];
+    const txtCls  = tier;
+    const pct     = t.totalSec > 0 ? Math.min(100, (rem / t.totalSec) * 100) : 0;
+    const barCol  = {safe:'var(--green)',warn:'var(--yellow)',danger:'var(--red)',expired:'var(--muted)'}[tier];
+    const endDt   = new Date(t.endAt);
+    return `
+      <div class="timer-card ${cardCls}" id="tcard-${t.id}">
+        <div class="tc-head">
+          <div class="tc-dot ${dotCls}"></div>
+          <div class="tc-meta">
+            <div class="tc-title">${t.data.label} · ${t.data.flow} L/min</div>
+            <div class="tc-sub">${t.data.qty} cylinder(s) · ${t.data.psi} PSI</div>
+          </div>
+          <button class="tc-remove" onclick="removeTimer(${t.id})">✕</button>
+        </div>
+        <div class="tc-body">
+          <div class="tc-countdown ${txtCls}" id="tcount-${t.id}">${rem > 0 ? fmtHMS(rem) : '⛔ Expired'}</div>
+          <div class="tc-end">
+            <div class="tc-end-label">Ends at</div>
+            <div class="tc-end-time">${endDt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</div>
+          </div>
+        </div>
+        <div class="tc-progress">
+          <div id="tprog-${t.id}" style="height:100%;width:${pct}%;background:${barCol};transition:width 1s linear,background .5s"></div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function updateTimerCard(id, remaining, totalSec) {
+  const card  = document.getElementById('tcard-' + id);
+  const count = document.getElementById('tcount-' + id);
+  const prog  = document.getElementById('tprog-' + id);
+  if (!card) return;
+
+  const tier   = tierFromSec(remaining);
+  const txtCls = tier;
+  const barCol = {safe:'var(--green)',warn:'var(--yellow)',danger:'var(--red)',expired:'var(--muted)'}[tier];
+  const pct    = totalSec > 0 ? Math.min(100, (remaining / totalSec) * 100) : 0;
+
+  if (count) {
+    count.textContent = remaining > 0 ? fmtHMS(remaining) : '⛔ Expired';
+    count.className   = 'tc-countdown ' + txtCls;
+  }
+  if (prog) {
+    prog.style.width      = pct + '%';
+    prog.style.background = barCol;
+  }
+
+  // Update card border
+  card.className = 'timer-card ' + ({safe:'safe',warn:'warning',danger:'danger',expired:'danger'}[tier]);
+
+  // Update dot
+  const dot = card.querySelector('.tc-dot');
+  if (dot) dot.className = 'tc-dot ' + ({safe:'dot-safe',warn:'dot-warn',danger:'dot-danger',expired:'dot-expired'}[tier]);
+}
+
+/* ── Keyboard ───────────────────────────────────────── */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSheet();
+});
+
+/* ── Init ───────────────────────────────────────────── */
+buildCylinders();
+buildFlowRates();
+</script>
+</body>
+</html>
