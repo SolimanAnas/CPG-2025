@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · GCS Calculator</title>
+<script>
+  (function(){
+    var t=localStorage.getItem('theme')||'dark';
+    document.documentElement.setAttribute('data-theme',t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DCAS GCS Calculator  —  aligned with app design system
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:#07111f;
+  --sf:rgba(255,255,255,.055);
+  --sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);
+  --br2:rgba(255,255,255,.18);
+  --text:#dde6f0;
+  --muted:#5a7080;
+  --green:#22c55e;
+  --yellow:#eab308;
+  --red:#ef4444;
+  --blue:#3b82f6;
+  --cyan:#06b6d4;
+  --mono:'DM Mono',monospace;
+  --hdr:60px;
+  --r:18px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:
+    radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),
+    radial-gradient(ellipse 60% 50% at 85% 100%,rgba(40,10,70,.5),transparent);
+  pointer-events:none;z-index:-1;
+}
+
+/* ── HEADER ─────────────────────────────────────────── */
+.app-header{
+  height:var(--hdr);
+  background:rgba(7,17,31,.94);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--br);
+  display:flex;align-items:center;
+  padding:0 14px;gap:10px;
+  position:sticky;top:0;z-index:60;flex-shrink:0;
+}
+.hdr-back{
+  width:36px;height:36px;border-radius:11px;
+  background:var(--sf2);border:1px solid var(--br);
+  color:var(--text);display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:.85rem;flex-shrink:0;transition:background .15s;
+}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{
+  width:36px;height:36px;border-radius:11px;
+  background:linear-gradient(135deg,#1e40af,#2563eb);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+  box-shadow:0 4px 12px rgba(37,99,235,.4);
+}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+.hdr-reset{
+  background:rgba(239,68,68,.15);
+  border:1px solid rgba(239,68,68,.3);
+  color:#fca5a5;
+  border-radius:10px;
+  padding:7px 13px;
+  font-size:.75rem;font-weight:700;
+  font-family:inherit;cursor:pointer;
+  transition:all .15s;flex-shrink:0;
+}
+.hdr-reset:active{background:rgba(239,68,68,.28);transform:scale(.96)}
+
+/* ── LIVE SCORE STRIP ───────────────────────────────── */
+.score-strip{
+  position:sticky;
+  top:var(--hdr);
+  z-index:50;
+  background:rgba(7,17,31,.9);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--br);
+  padding:10px 16px;
+  display:flex;align-items:center;gap:12px;
+  flex-shrink:0;
+}
+.ss-total{
+  display:flex;align-items:baseline;gap:5px;
+  flex-shrink:0;
+}
+.ss-num{
+  font-size:2.4rem;font-weight:900;letter-spacing:-2px;
+  font-family:var(--mono);
+  transition:color .3s;
+  color:var(--muted);
+}
+.ss-num.mild   {color:var(--green);text-shadow:0 0 20px rgba(34,197,94,.4)}
+.ss-num.mod    {color:var(--yellow);text-shadow:0 0 20px rgba(234,179,8,.4)}
+.ss-num.severe {color:var(--red);text-shadow:0 0 20px rgba(239,68,68,.45)}
+.ss-max{font-size:.7rem;color:var(--muted);font-weight:600;margin-bottom:4px}
+.ss-right{flex:1;min-width:0}
+.ss-label{
+  font-size:.78rem;font-weight:700;
+  transition:color .3s;
+  color:var(--muted);
+}
+.ss-label.mild   {color:var(--green)}
+.ss-label.mod    {color:var(--yellow)}
+.ss-label.severe {color:var(--red)}
+.ss-breakdown{
+  display:flex;gap:6px;margin-top:4px;flex-wrap:wrap;
+}
+.ss-chip{
+  font-size:.68rem;font-weight:700;font-family:var(--mono);
+  background:var(--sf);border:1px solid var(--br);
+  border-radius:6px;padding:2px 8px;color:var(--muted);
+  transition:all .2s;
+}
+.ss-chip.set{color:var(--cyan);border-color:rgba(6,182,212,.3);background:rgba(6,182,212,.08)}
+.ss-btn{
+  background:var(--blue);color:#fff;border:none;
+  border-radius:12px;padding:9px 16px;
+  font-size:.78rem;font-weight:700;font-family:inherit;
+  cursor:pointer;flex-shrink:0;white-space:nowrap;
+  transition:transform .15s,box-shadow .15s,opacity .15s;
+  box-shadow:0 4px 12px rgba(59,130,246,.35);
+  opacity:.4;pointer-events:none;
+}
+.ss-btn.ready{opacity:1;pointer-events:auto}
+.ss-btn.ready:active{transform:scale(.95)}
+
+/* ── PAGE BODY ──────────────────────────────────────── */
+.page-body{
+  flex:1;
+  overflow-y:auto;
+  padding:16px 14px 100px;
+  display:flex;flex-direction:column;gap:14px;
+  max-width:640px;width:100%;margin:0 auto;
+}
+
+/* ── SECTION CARDS ──────────────────────────────────── */
+.gcs-card{
+  background:var(--sf);
+  border:1px solid var(--br);
+  border-radius:var(--r);
+  overflow:hidden;
+  transition:border-color .3s;
+}
+.gcs-card.complete{border-color:rgba(6,182,212,.4)}
+.card-head{
+  display:flex;align-items:center;gap:10px;
+  padding:14px 16px 12px;
+  border-bottom:1px solid var(--br);
+}
+.card-letter{
+  width:34px;height:34px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;font-weight:900;flex-shrink:0;
+  letter-spacing:-.5px;
+}
+.letter-e{background:rgba(34,197,94,.18);color:#86efac;border:1px solid rgba(34,197,94,.3)}
+.letter-v{background:rgba(59,130,246,.18);color:#93c5fd;border:1px solid rgba(59,130,246,.3)}
+.letter-m{background:rgba(168,85,247,.18);color:#d8b4fe;border:1px solid rgba(168,85,247,.3)}
+.card-head-info{flex:1}
+.card-name{font-size:.9rem;font-weight:800}
+.card-hint{font-size:.65rem;color:var(--muted);margin-top:1px}
+.card-score-badge{
+  min-width:36px;height:36px;border-radius:10px;
+  background:var(--sf2);border:1px solid var(--br);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.05rem;font-weight:900;font-family:var(--mono);
+  color:var(--muted);flex-shrink:0;
+  transition:all .25s;
+}
+.card-score-badge.set{
+  color:#fff;
+  background:linear-gradient(135deg,rgba(6,182,212,.3),rgba(59,130,246,.25));
+  border-color:rgba(6,182,212,.5);
+  box-shadow:0 0 12px rgba(6,182,212,.2);
+}
+
+/* Option buttons */
+.options-list{padding:10px;display:flex;flex-direction:column;gap:6px}
+.opt-btn{
+  width:100%;
+  display:flex;align-items:center;gap:12px;
+  background:rgba(0,0,0,.18);
+  border:1.5px solid rgba(255,255,255,.07);
+  border-radius:13px;
+  padding:11px 14px;
+  cursor:pointer;
+  font-family:inherit;
+  text-align:left;
+  transition:all .18s;
+  position:relative;
+  overflow:hidden;
+}
+.opt-btn::after{
+  content:'';
+  position:absolute;inset:0;
+  background:transparent;
+  transition:background .15s;
+}
+.opt-btn:active::after{background:rgba(255,255,255,.06)}
+.opt-btn:active{transform:scale(.984)}
+.opt-score{
+  width:28px;height:28px;border-radius:8px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.82rem;font-weight:800;font-family:var(--mono);
+  color:var(--muted);flex-shrink:0;
+  transition:all .18s;
+}
+.opt-text{flex:1;min-width:0}
+.opt-label{font-size:.85rem;font-weight:600;color:var(--text)}
+.opt-desc{font-size:.68rem;color:var(--muted);margin-top:2px;line-height:1.3}
+.opt-check{
+  width:20px;height:20px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:all .2s;
+}
+
+/* Selected state */
+.opt-btn.selected{
+  border-color:rgba(6,182,212,.55);
+  background:rgba(6,182,212,.1);
+  box-shadow:0 0 0 2px rgba(6,182,212,.12);
+}
+.opt-btn.selected .opt-score{
+  background:var(--cyan);border-color:var(--cyan);
+  color:#fff;box-shadow:0 0 10px rgba(6,182,212,.5);
+}
+.opt-btn.selected .opt-label{color:#fff;font-weight:700}
+.opt-btn.selected .opt-check{
+  background:var(--cyan);border-color:var(--cyan);
+}
+.opt-btn.selected .opt-check::after{
+  content:'✓';font-size:.65rem;color:#fff;font-weight:900;
+}
+
+/* ── BOTTOM SHEET ───────────────────────────────────── */
+.bs-overlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  z-index:200;
+  display:none;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.bs-overlay.open{display:flex;animation:bsFI .2s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+
+.bs-panel{
+  background:#0c1a2e;
+  border-top:1px solid rgba(255,255,255,.1);
+  border-radius:24px 24px 0 0;
+  display:flex;flex-direction:column;
+  max-height:90vh;
+  padding-bottom:max(24px,env(safe-area-inset-bottom));
+  animation:bsSU .35s cubic-bezier(.25,1,.5,1);
+}
+@keyframes bsSU{
+  from{transform:translateY(80px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+.bs-handle{
+  width:36px;height:4px;border-radius:2px;
+  background:rgba(255,255,255,.18);
+  margin:12px auto 0;flex-shrink:0;cursor:pointer;
+}
+
+.bs-scroll{overflow-y:auto;flex:1;padding:0 16px 8px}
+.bs-scroll::-webkit-scrollbar{width:3px}
+.bs-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+
+/* Score hero */
+.bs-hero{
+  text-align:center;
+  padding:20px 16px 16px;
+  border-bottom:1px solid var(--br);
+  margin-bottom:14px;
+  flex-shrink:0;
+}
+.bs-score-ring{
+  width:96px;height:96px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin:0 auto 12px;
+  border:3px solid;
+  transition:all .3s;
+}
+.bs-score-ring.mild{border-color:var(--green);background:rgba(34,197,94,.12);box-shadow:0 0 30px rgba(34,197,94,.2)}
+.bs-score-ring.mod{border-color:var(--yellow);background:rgba(234,179,8,.12);box-shadow:0 0 30px rgba(234,179,8,.2)}
+.bs-score-ring.severe{border-color:var(--red);background:rgba(239,68,68,.14);box-shadow:0 0 30px rgba(239,68,68,.25);animation:ringPulse 1.6s infinite}
+@keyframes ringPulse{0%,100%{box-shadow:0 0 20px rgba(239,68,68,.2)}50%{box-shadow:0 0 40px rgba(239,68,68,.45)}}
+.bs-big-num{
+  font-size:2.4rem;font-weight:900;font-family:var(--mono);
+  letter-spacing:-2px;line-height:1;
+}
+.bs-big-num.mild{color:var(--green)}
+.bs-big-num.mod{color:var(--yellow)}
+.bs-big-num.severe{color:var(--red)}
+.bs-of15{font-size:.65rem;color:var(--muted);font-weight:600}
+.bs-severity{font-size:1rem;font-weight:800;margin-bottom:3px}
+.bs-severity.mild{color:var(--green)}
+.bs-severity.mod{color:var(--yellow)}
+.bs-severity.severe{color:var(--red)}
+.bs-interp{font-size:.78rem;color:var(--muted);line-height:1.4}
+
+/* Breakdown row */
+.bs-breakdown{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:8px;margin-bottom:14px;
+}
+.bs-bk-card{
+  background:var(--sf);border:1px solid var(--br);
+  border-radius:14px;padding:12px 10px;text-align:center;
+}
+.bs-bk-letter{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px}
+.bs-bk-val{font-size:1.4rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+.bs-bk-max{font-size:.6rem;color:var(--muted)}
+.bs-bk-name{font-size:.65rem;color:var(--muted);margin-top:2px}
+
+/* Info sections */
+.bs-section{
+  background:var(--sf);border:1px solid var(--br);
+  border-radius:14px;padding:14px;margin-bottom:10px;
+}
+.bs-sec-title{
+  font-size:.62rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:1px;color:var(--muted);margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.bs-action-row{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:8px 0;border-bottom:1px solid var(--br);
+  font-size:.8rem;line-height:1.5;
+}
+.bs-action-row:last-child{border-bottom:none}
+.bs-action-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
+.bs-action-text{flex:1;color:var(--text)}
+.bs-action-text strong{color:#fff}
+
+/* Severity pill */
+.sev-pill{
+  display:inline-flex;align-items:center;gap:5px;
+  border-radius:20px;padding:4px 12px;
+  font-size:.72rem;font-weight:700;
+  margin-bottom:6px;
+}
+.sev-pill.mild{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#86efac}
+.sev-pill.mod{background:rgba(234,179,8,.1);border:1px solid rgba(234,179,8,.3);color:#fde047}
+.sev-pill.severe{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#fca5a5}
+
+/* Progress bar per section */
+.opt-progress{height:3px;background:rgba(255,255,255,.07);border-radius:2px;margin:0 10px 10px;overflow:hidden}
+.opt-progress-bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:2px;transition:width .4s cubic-bezier(.25,1,.5,1)}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header class="app-header">
+  <a class="hdr-back" href="index.html">←</a>
+  <div class="hdr-badge">🧠</div>
+  <div class="hdr-info">
+    <div class="hdr-title">GCS Calculator</div>
+    <div class="hdr-sub">Glasgow Coma Scale · DCAS CPG 2026</div>
+  </div>
+  <button class="hdr-reset" onclick="resetAll()">↺ Reset</button>
+</header>
+
+<!-- ── LIVE SCORE STRIP ─────────────────────────────────── -->
+<div class="score-strip">
+  <div class="ss-total">
+    <div class="ss-num" id="ssNum">—</div>
+    <div class="ss-max">/15</div>
+  </div>
+  <div class="ss-right">
+    <div class="ss-label" id="ssLabel">Select all three sections</div>
+    <div class="ss-breakdown">
+      <span class="ss-chip" id="chipE">E: —</span>
+      <span class="ss-chip" id="chipV">V: —</span>
+      <span class="ss-chip" id="chipM">M: —</span>
+    </div>
+  </div>
+  <button class="ss-btn" id="viewBtn" onclick="openSheet()">
+    View Results
+  </button>
+</div>
+
+<!-- ── MAIN CONTENT ─────────────────────────────────────── -->
+<main class="page-body">
+
+  <!-- EYE OPENING -->
+  <div class="gcs-card" id="cardE">
+    <div class="card-head">
+      <div class="card-letter letter-e">E</div>
+      <div class="card-head-info">
+        <div class="card-name">Eye Opening</div>
+        <div class="card-hint">Best eye opening response</div>
+      </div>
+      <div class="card-score-badge" id="badgeE">—</div>
+    </div>
+    <div class="opt-progress"><div class="opt-progress-bar" id="progE" style="width:0%"></div></div>
+    <div class="options-list">
+      <button class="opt-btn" data-section="E" data-val="4" onclick="select(this)">
+        <div class="opt-score">4</div>
+        <div class="opt-text">
+          <div class="opt-label">Spontaneous</div>
+          <div class="opt-desc">Eyes open without stimulation</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="E" data-val="3" onclick="select(this)">
+        <div class="opt-score">3</div>
+        <div class="opt-text">
+          <div class="opt-label">To Speech</div>
+          <div class="opt-desc">Opens eyes to verbal command</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="E" data-val="2" onclick="select(this)">
+        <div class="opt-score">2</div>
+        <div class="opt-text">
+          <div class="opt-label">To Pain</div>
+          <div class="opt-desc">Opens eyes to painful stimulus</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="E" data-val="1" onclick="select(this)">
+        <div class="opt-score">1</div>
+        <div class="opt-text">
+          <div class="opt-label">None</div>
+          <div class="opt-desc">No eye opening response</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- VERBAL RESPONSE -->
+  <div class="gcs-card" id="cardV">
+    <div class="card-head">
+      <div class="card-letter letter-v">V</div>
+      <div class="card-head-info">
+        <div class="card-name">Verbal Response</div>
+        <div class="card-hint">Best verbal response</div>
+      </div>
+      <div class="card-score-badge" id="badgeV">—</div>
+    </div>
+    <div class="opt-progress"><div class="opt-progress-bar" id="progV" style="width:0%"></div></div>
+    <div class="options-list">
+      <button class="opt-btn" data-section="V" data-val="5" onclick="select(this)">
+        <div class="opt-score">5</div>
+        <div class="opt-text">
+          <div class="opt-label">Oriented</div>
+          <div class="opt-desc">Knows person, place, time</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="V" data-val="4" onclick="select(this)">
+        <div class="opt-score">4</div>
+        <div class="opt-text">
+          <div class="opt-label">Confused</div>
+          <div class="opt-desc">Conversational speech, disoriented</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="V" data-val="3" onclick="select(this)">
+        <div class="opt-score">3</div>
+        <div class="opt-text">
+          <div class="opt-label">Inappropriate Words</div>
+          <div class="opt-desc">Intelligible words, no sustained conversation</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="V" data-val="2" onclick="select(this)">
+        <div class="opt-score">2</div>
+        <div class="opt-text">
+          <div class="opt-label">Incomprehensible Sounds</div>
+          <div class="opt-desc">Moans, groans — no words</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="V" data-val="1" onclick="select(this)">
+        <div class="opt-score">1</div>
+        <div class="opt-text">
+          <div class="opt-label">None</div>
+          <div class="opt-desc">No verbal response</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOTOR RESPONSE -->
+  <div class="gcs-card" id="cardM">
+    <div class="card-head">
+      <div class="card-letter letter-m">M</div>
+      <div class="card-head-info">
+        <div class="card-name">Motor Response</div>
+        <div class="card-hint">Best motor response</div>
+      </div>
+      <div class="card-score-badge" id="badgeM">—</div>
+    </div>
+    <div class="opt-progress"><div class="opt-progress-bar" id="progM" style="width:0%"></div></div>
+    <div class="options-list">
+      <button class="opt-btn" data-section="M" data-val="6" onclick="select(this)">
+        <div class="opt-score">6</div>
+        <div class="opt-text">
+          <div class="opt-label">Obeys Commands</div>
+          <div class="opt-desc">Follows verbal instructions</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="M" data-val="5" onclick="select(this)">
+        <div class="opt-score">5</div>
+        <div class="opt-text">
+          <div class="opt-label">Localizes Pain</div>
+          <div class="opt-desc">Purposeful movement toward stimulus</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="M" data-val="4" onclick="select(this)">
+        <div class="opt-score">4</div>
+        <div class="opt-text">
+          <div class="opt-label">Withdraws from Pain</div>
+          <div class="opt-desc">Pulls away from stimulus (normal flexion)</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="M" data-val="3" onclick="select(this)">
+        <div class="opt-score">3</div>
+        <div class="opt-text">
+          <div class="opt-label">Flexion (Decorticate)</div>
+          <div class="opt-desc">Abnormal flexion — cortical injury</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="M" data-val="2" onclick="select(this)">
+        <div class="opt-score">2</div>
+        <div class="opt-text">
+          <div class="opt-label">Extension (Decerebrate)</div>
+          <div class="opt-desc">Abnormal extension — brainstem injury</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+      <button class="opt-btn" data-section="M" data-val="1" onclick="select(this)">
+        <div class="opt-score">1</div>
+        <div class="opt-text">
+          <div class="opt-label">None</div>
+          <div class="opt-desc">No motor response</div>
+        </div>
+        <div class="opt-check"></div>
+      </button>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── BOTTOM SHEET ──────────────────────────────────────── -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
+  <div class="bs-panel">
+    <div class="bs-handle" onclick="closeSheet()"></div>
+
+    <!-- Score Hero -->
+    <div class="bs-hero">
+      <div class="bs-score-ring" id="bsRing">
+        <div class="bs-big-num" id="bsBigNum">—</div>
+        <div class="bs-of15">/15</div>
+      </div>
+      <div class="sev-pill" id="bsSevPill">—</div>
+      <div class="bs-severity" id="bsSeverity">—</div>
+      <div class="bs-interp" id="bsInterp">—</div>
+    </div>
+
+    <div class="bs-scroll">
+
+      <!-- E / V / M breakdown -->
+      <div class="bs-breakdown">
+        <div class="bs-bk-card">
+          <div class="bs-bk-letter">Eye (E)</div>
+          <div class="bs-bk-val" id="bkE">—</div>
+          <div class="bs-bk-max">/ 4</div>
+          <div class="bs-bk-name" id="bkEName">—</div>
+        </div>
+        <div class="bs-bk-card">
+          <div class="bs-bk-letter">Verbal (V)</div>
+          <div class="bs-bk-val" id="bkV">—</div>
+          <div class="bs-bk-max">/ 5</div>
+          <div class="bs-bk-name" id="bkVName">—</div>
+        </div>
+        <div class="bs-bk-card">
+          <div class="bs-bk-letter">Motor (M)</div>
+          <div class="bs-bk-val" id="bkM">—</div>
+          <div class="bs-bk-max">/ 6</div>
+          <div class="bs-bk-name" id="bkMName">—</div>
+        </div>
+      </div>
+
+      <!-- EMS Actions -->
+      <div class="bs-section">
+        <div class="bs-sec-title">🚑 EMS Actions</div>
+        <div id="emsActions"></div>
+      </div>
+
+      <!-- Clinical Tips -->
+      <div class="bs-section">
+        <div class="bs-sec-title">💡 Clinical Pearls</div>
+        <div class="bs-action-row">
+          <div class="bs-action-icon">📋</div>
+          <div class="bs-action-text">Document as <strong>GCS E_V_M = Total</strong> (e.g. GCS E2V3M4 = 9). Never document total alone.</div>
+        </div>
+        <div class="bs-action-row">
+          <div class="bs-action-icon">⚠️</div>
+          <div class="bs-action-text"><strong>GCS ≤8 = Intubation threshold</strong> — protect the airway. Consider RSI.</div>
+        </div>
+        <div class="bs-action-row">
+          <div class="bs-action-icon">🔄</div>
+          <div class="bs-action-text">Reassess GCS every <strong>15 min</strong> en route. A drop of <strong>2+ points</strong> indicates deterioration.</div>
+        </div>
+        <div class="bs-action-row">
+          <div class="bs-action-icon">🧠</div>
+          <div class="bs-action-text"><strong>Decorticate (M3)</strong> = cortical injury above the midbrain. <strong>Decerebrate (M2)</strong> = midbrain/brainstem involvement — worse prognosis.</div>
+        </div>
+        <div class="bs-action-row">
+          <div class="bs-action-icon">👁️</div>
+          <div class="bs-action-text">Always check <strong>pupillary response</strong> alongside GCS — unequal pupils + low GCS = herniation until proven otherwise.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ── JAVASCRIPT ────────────────────────────────────────── -->
+<script>
+'use strict';
+
+/* ── State ─────────────────────────────────────────────── */
+const state = { E: null, V: null, M: null };
+
+const LABELS = {
+  E: { 4:'Spontaneous', 3:'To Speech', 2:'To Pain', 1:'None' },
+  V: { 5:'Oriented', 4:'Confused', 3:'Inappropriate Words', 2:'Incomprehensible Sounds', 1:'None' },
+  M: { 6:'Obeys Commands', 5:'Localizes Pain', 4:'Withdraws', 3:'Decorticate (Flexion)', 2:'Decerebrate (Extension)', 1:'None' }
+};
+
+const EMS_ACTIONS = {
+  severe: [
+    { i:'🔴', t:'<strong>GCS ≤8 — Secure the airway NOW</strong>', d:'Consider RSI / supraglottic airway. Oxygen 100%. Position: lateral if no spinal injury.' },
+    { i:'💉', t:'<strong>IV/IO Access</strong>', d:'Establish large-bore IV access en route. Fluid resuscitation if haemodynamically compromised.' },
+    { i:'📡', t:'<strong>Pre-alert receiving hospital</strong>', d:'Trauma team activation if mechanism warrants. Target CT within 30 min of arrival.' },
+    { i:'🫀', t:'<strong>Continuous monitoring</strong>', d:'SpO₂, EtCO₂ (if intubated), BP, ECG. Maintain SpO₂ > 95%, EtCO₂ 35–40 mmHg.' },
+    { i:'🩺', t:'<strong>Pupil assessment</strong>', d:'Fixed dilated pupil = cerebral herniation. Hyperventilate briefly (target EtCO₂ 30–35) if herniation signs present.' },
+  ],
+  mod: [
+    { i:'🟡', t:'<strong>High-flow oxygen</strong>', d:'15L via NRB mask. Monitor SpO₂. Reassess airway status continuously.' },
+    { i:'📋', t:'<strong>Serial GCS assessment</strong>', d:'Every 15 min. Any drop ≥2 points = immediate escalation to severe protocol.' },
+    { i:'💉', t:'<strong>IV access en route</strong>', d:'Establish IV/IO. Treat associated injuries. Cervical spine precautions if trauma.' },
+    { i:'🏥', t:'<strong>Notify hospital</strong>', d:'Early notification allows neurosurgical team to prepare. Do not delay transport.' },
+  ],
+  mild: [
+    { i:'🟢', t:'<strong>Monitor and reassess</strong>', d:'Reassess GCS every 15 min. Patients may deteriorate rapidly — do not leave unattended.' },
+    { i:'🫁', t:'<strong>Supplemental oxygen</strong>', d:'If SpO₂ < 94% or mechanism of injury warrants.' },
+    { i:'📋', t:'<strong>Detailed neuro exam</strong>', d:'Assess pupils, limb power, speech, and orientation. Document baseline for comparison.' },
+    { i:'ℹ️', t:'<strong>Concussion precautions</strong>', d:'Advise patient/family: no driving, no alcohol, return if symptoms worsen. Hospital assessment recommended.' },
+  ]
+};
+
+/* ── Select handler ─────────────────────────────────────── */
+function select(btn) {
+  const sec = btn.dataset.section;
+  const val = parseInt(btn.dataset.val);
+
+  // Deselect all in section
+  document.querySelectorAll(`.opt-btn[data-section="${sec}"]`)
+    .forEach(b => b.classList.remove('selected'));
+
+  // Select this
+  btn.classList.add('selected');
+  state[sec] = val;
+
+  // Update badge + progress bar
+  const badge = document.getElementById('badge' + sec);
+  badge.textContent = val;
+  badge.classList.add('set');
+
+  // Progress bar (visual fill based on score/max)
+  const maxes = { E:4, V:5, M:6 };
+  const pct = (val / maxes[sec]) * 100;
+  document.getElementById('prog' + sec).style.width = pct + '%';
+
+  // Card complete indicator
+  document.getElementById('card' + sec).classList.add('complete');
+
+  updateScore();
+}
+
+/* ── Score update ───────────────────────────────────────── */
+function updateScore() {
+  const E = state.E, V = state.V, M = state.M;
+  const allSet = E !== null && V !== null && M !== null;
+
+  const numEl    = document.getElementById('ssNum');
+  const labelEl  = document.getElementById('ssLabel');
+  const chipE    = document.getElementById('chipE');
+  const chipV    = document.getElementById('chipV');
+  const chipM    = document.getElementById('chipM');
+  const viewBtn  = document.getElementById('viewBtn');
+
+  // Chips
+  if (E !== null) { chipE.textContent = 'E: ' + E; chipE.classList.add('set'); }
+  if (V !== null) { chipV.textContent = 'V: ' + V; chipV.classList.add('set'); }
+  if (M !== null) { chipM.textContent = 'M: ' + M; chipM.classList.add('set'); }
+
+  if (!allSet) {
+    numEl.textContent = '—';
+    numEl.className = 'ss-num';
+    labelEl.className = 'ss-label';
+    labelEl.textContent = 'Select all three sections';
+    viewBtn.classList.remove('ready');
+    return;
+  }
+
+  const total = E + V + M;
+  const tier = total >= 13 ? 'mild' : total >= 9 ? 'mod' : 'severe';
+  const labels = { mild:'Mild Injury', mod:'Moderate Injury', severe:'Severe Injury' };
+  const cssClass = { mild:'mild', mod:'mod', severe:'severe' };
+
+  numEl.textContent = total;
+  numEl.className   = 'ss-num ' + cssClass[tier];
+  labelEl.textContent = labels[tier];
+  labelEl.className   = 'ss-label ' + cssClass[tier];
+
+  viewBtn.classList.add('ready');
+
+  // Auto-open bottom sheet when all selected
+  openSheet();
+}
+
+/* ── Bottom sheet ───────────────────────────────────────── */
+function openSheet() {
+  const E = state.E, V = state.V, M = state.M;
+  if (E === null || V === null || M === null) return;
+
+  const total = E + V + M;
+  const tier  = total >= 13 ? 'mild' : total >= 9 ? 'mod' : 'severe';
+  const sevText = { mild:'MILD INJURY', mod:'MODERATE INJURY', severe:'SEVERE INJURY' };
+  const interpText = {
+    mild:   'Patient appears oriented or near-normal. Reassess frequently — rapid deterioration is possible.',
+    mod:    'Significant neurological compromise. High risk of deterioration. Prepare for airway intervention.',
+    severe: 'Severe neurological compromise. GCS ≤8 = intubation threshold. Protect airway immediately.'
+  };
+
+  // Ring + score
+  const ring = document.getElementById('bsRing');
+  const bigN = document.getElementById('bsBigNum');
+  ring.className = 'bs-score-ring ' + tier;
+  bigN.className = 'bs-big-num ' + tier;
+  bigN.textContent = total;
+
+  // Severity pill
+  const pill = document.getElementById('bsSevPill');
+  pill.className = 'sev-pill ' + tier;
+  pill.textContent = total >= 13 ? '🟢 ' + sevText[tier] : total >= 9 ? '🟡 ' + sevText[tier] : '🔴 ' + sevText[tier];
+
+  document.getElementById('bsSeverity').textContent = 'GCS ' + total + '/15';
+  document.getElementById('bsSeverity').className = 'bs-severity ' + tier;
+  document.getElementById('bsInterp').textContent = interpText[tier];
+
+  // Breakdown
+  document.getElementById('bkE').textContent = E;
+  document.getElementById('bkV').textContent = V;
+  document.getElementById('bkM').textContent = M;
+  document.getElementById('bkEName').textContent = LABELS.E[E];
+  document.getElementById('bkVName').textContent = LABELS.V[V];
+  document.getElementById('bkMName').textContent = LABELS.M[M];
+
+  // EMS actions
+  const actions = EMS_ACTIONS[tier];
+  document.getElementById('emsActions').innerHTML = actions.map(a =>
+    `<div class="bs-action-row">
+       <div class="bs-action-icon">${a.i}</div>
+       <div class="bs-action-text"><strong>${a.t.replace(/<[^>]+>/g,'')}</strong><br><span style="color:var(--muted);font-size:.74rem">${a.d}</span></div>
+     </div>`
+  ).join('');
+
+  // Show
+  document.getElementById('bsOverlay').classList.add('open');
+}
+
+function closeSheet() {
+  document.getElementById('bsOverlay').classList.remove('open');
+}
+
+/* ── Reset ──────────────────────────────────────────────── */
+function resetAll() {
+  state.E = state.V = state.M = null;
+
+  document.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+  ['E','V','M'].forEach(s => {
+    document.getElementById('badge' + s).textContent = '—';
+    document.getElementById('badge' + s).classList.remove('set');
+    document.getElementById('prog'  + s).style.width = '0%';
+    document.getElementById('card'  + s).classList.remove('complete');
+    document.getElementById('chip'  + s).textContent = s + ': —';
+    document.getElementById('chip'  + s).classList.remove('set');
+  });
+
+  document.getElementById('ssNum').textContent = '—';
+  document.getElementById('ssNum').className = 'ss-num';
+  document.getElementById('ssLabel').textContent = 'Select all three sections';
+  document.getElementById('ssLabel').className = 'ss-label';
+  document.getElementById('viewBtn').classList.remove('ready');
+
+  closeSheet();
+}
+
+/* Escape key */
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+</script>
+</body>
+</html>
