@@ -1789,14 +1789,18 @@ progress::-webkit-progress-value { background-color: var(--primary-accent); bord
 .lv-time { font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px; }
 .lv-arrow { color: var(--text-secondary); font-size: 0.8rem; flex-shrink: 0; opacity: 0.6; }
 
-/* Reduce indent for nested lists in summary cards for mobile */
+/* FORCE reduced indent for nested lists in summary cards */
 .sum-card ul {
-    padding-left: 24px; 
+    padding-left: 20px !important; 
+    margin-left: 0 !important;
 }
+
 .sum-card ul ul {
-    padding-left: 16px; /* Further reduce padding for deeper nests */
-    margin-top: 4px;
+    padding-left: 14px !important; 
+    margin-top: 4px !important;
 }
+
 .sum-card ul ul ul {
-    padding-left: 16px; 
+    padding-left: 14px !important; 
 }
+
