@@ -17,7 +17,8 @@
 :root{--bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);--br:rgba(255,255,255,.10);--text:#dde6f0;--muted:#5a7080;--green:#22c55e;--yellow:#eab308;--orange:#f97316;--red:#ef4444;--blue:#3b82f6;--cyan:#06b6d4;--mono:'DM Mono',monospace;--hdr:60px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{height:100%}
-body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 70% 50% at 85% 100%,rgba(40,10,80,.5),transparent);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 70% 50% at 85% 100%,rgba(40,10,80,.5),transparent);pointer-events:none;z-index:-1}
 
 /* HEADER */
 .app-header{height:var(--hdr);background:rgba(7,17,31,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
@@ -41,7 +42,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial
 .pb-sub{font-size:.72rem;opacity:.78;margin-top:3px;line-height:1.4}
 .b-green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#86efac}
 .b-yellow{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
-.b-orange{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.4);color:#fdba74}
 .b-red{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.5);color:#fca5a5}
 .b-arrest{background:rgba(239,68,68,.18);border-color:rgba(239,68,68,.7);color:#fca5a5;box-shadow:0 0 24px rgba(239,68,68,.28);animation:bIn .3s ease,aP 1.4s infinite}
 @keyframes aP{0%,100%{box-shadow:0 0 18px rgba(239,68,68,.22)}50%{box-shadow:0 0 40px rgba(239,68,68,.55)}}
@@ -79,13 +79,106 @@ body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial
 .sc-val.red{color:var(--red)}
 .sc-val.yel{color:var(--yellow)}
 
-/* RHYTHM SELECT */
-.sel-wrap{position:relative}
-.sel-wrap::after{content:'▾';position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:.9rem}
-#rhythmSelect{width:100%;background:rgba(4,12,24,.85);border:1.5px solid var(--br);border-radius:14px;padding:13px 40px 13px 16px;color:var(--text);font-size:.88rem;font-family:inherit;font-weight:600;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color .2s}
-#rhythmSelect:focus{border-color:var(--blue)}
-#rhythmSelect optgroup{background:#0a1525;color:var(--muted);font-size:.72rem}
-#rhythmSelect option{background:#0a1525;color:var(--text)}
+/* RHYTHM SELECTOR TRIGGER BUTTON */
+.rhythm-trigger{
+  width:100%;
+  background:rgba(10,25,55,.95);
+  border:2px solid rgba(59,130,246,.5);
+  border-radius:16px;
+  padding:15px 46px 15px 18px;
+  color:#e8f0fe;
+  font-size:.95rem;
+  font-family:inherit;
+  font-weight:700;
+  text-align:left;
+  cursor:pointer;
+  box-shadow:0 0 0 3px rgba(59,130,246,.1);
+  position:relative;
+  transition:border-color .2s,box-shadow .2s;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.rhythm-trigger:active{border-color:#3b82f6;box-shadow:0 0 0 4px rgba(59,130,246,.2)}
+.rt-icon{font-size:1rem;flex-shrink:0}
+.rt-text{flex:1;min-width:0}
+.rt-label{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#4a7aaa;margin-bottom:2px}
+.rt-value{font-size:.9rem;font-weight:700;color:#e8f0fe;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rt-arrow{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:#93c5fd;font-size:1rem;flex-shrink:0}
+
+/* BOTTOM SHEET OVERLAY */
+.bs-overlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  z-index:200;
+  display:none;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.bs-overlay.open{display:flex;animation:bsFadeIn .2s ease}
+@keyframes bsFadeIn{from{opacity:0}to{opacity:1}}
+
+/* BOTTOM SHEET PANEL */
+.bs-panel{
+  background:#0c1a2e;
+  border-top:1px solid rgba(255,255,255,.1);
+  border-radius:24px 24px 0 0;
+  display:flex;
+  flex-direction:column;
+  max-height:86vh;
+  padding-bottom:max(16px,env(safe-area-inset-bottom));
+  animation:bsSlideUp .32s cubic-bezier(.25,1,.5,1);
+}
+@keyframes bsSlideUp{
+  from{transform:translateY(60px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.2);margin:12px auto 10px;flex-shrink:0;cursor:pointer}
+.bs-title{text-align:center;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);padding:0 16px 10px;flex-shrink:0}
+.bs-search-wrap{padding:0 12px 10px;flex-shrink:0}
+.bs-search{
+  width:100%;
+  background:rgba(255,255,255,.07);
+  border:1.5px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:11px 16px;
+  font-size:.88rem;
+  font-family:inherit;
+  color:var(--text);
+  outline:none;
+  transition:border-color .2s;
+}
+.bs-search:focus{border-color:var(--blue)}
+.bs-search::placeholder{color:var(--muted)}
+.bs-list{overflow-y:auto;flex:1;padding:2px 8px 12px}
+.bs-list::-webkit-scrollbar{width:3px}
+.bs-list::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:2px}
+.bs-group-hdr{
+  font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;
+  color:var(--blue);
+  padding:12px 10px 4px;
+  border-left:3px solid var(--blue);
+  margin-top:4px;
+}
+.bs-group-hdr.g-life{color:var(--red);border-left-color:var(--red)}
+.bs-group-hdr.g-block{color:var(--yellow);border-left-color:var(--yellow)}
+.bs-group-hdr.g-stemi{color:#f87171;border-left-color:#f87171}
+.bs-group-hdr.g-sinus{color:var(--green);border-left-color:var(--green)}
+.bs-item{
+  width:100%;text-align:left;
+  background:none;border:none;
+  color:var(--text);
+  font-family:inherit;font-size:.88rem;font-weight:500;
+  padding:11px 12px;border-radius:11px;
+  cursor:pointer;
+  transition:background .1s;
+  display:block;
+}
+.bs-item:active{background:rgba(255,255,255,.1)}
+.bs-item.active{background:rgba(59,130,246,.2);color:#93c5fd;font-weight:700}
+.bs-item.hidden{display:none}
 
 /* CDE SECTIONS */
 .cde-sec{border-radius:20px;overflow:hidden;border:1px solid var(--br)}
@@ -132,6 +225,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial
 .a-num.dr{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.3);color:var(--blue)}
 .a-title{font-size:.82rem;font-weight:700;line-height:1.3}
 .a-detail{font-size:.72rem;color:var(--muted);margin-top:2px;line-height:1.4}
+
+/* FOOTER */
+.app-footer{background:rgba(7,17,31,.92);border-top:1px solid var(--br);padding:14px 20px;padding-bottom:max(14px,env(safe-area-inset-bottom));text-align:center;flex-shrink:0}
+.footer-txt{font-size:.67rem;color:var(--muted);line-height:1.65;max-width:580px;margin:0 auto}
+.footer-txt strong{color:rgba(221,230,240,.42);font-weight:700}
 </style>
 </head>
 <body>
@@ -182,42 +280,61 @@ body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial
     <div class="stat-card" id="qCard"><div class="sc-lbl">QRS Duration</div><div class="sc-val" id="vQRS">—</div></div>
   </div>
 
-  <div class="sel-wrap">
-    <select id="rhythmSelect" onchange="selectRhythm(this.value)">
-      <optgroup label="── Sinus Node Rhythms">
-        <option value="nsr">Normal Sinus Rhythm (NSR)</option>
-        <option value="stach">Sinus Tachycardia</option>
-        <option value="sbrady">Sinus Bradycardia</option>
-      </optgroup>
-      <optgroup label="── Atrial Rhythms">
-        <option value="afib">Atrial Fibrillation (A-Fib)</option>
-        <option value="aflutter">Atrial Flutter (2:1)</option>
-        <option value="svt">Paroxysmal SVT — Narrow Complex</option>
-      </optgroup>
-      <optgroup label="── Ventricular — LIFE-THREATENING">
-        <option value="vtach">Ventricular Tachycardia (Monomorphic)</option>
-        <option value="torsades">Torsades de Pointes</option>
-        <option value="coarseVf">Coarse Ventricular Fibrillation</option>
-        <option value="fineVf">Fine Ventricular Fibrillation</option>
-        <option value="asystole">Asystole</option>
-        <option value="pea">PEA — Pulseless Electrical Activity</option>
-      </optgroup>
-      <optgroup label="── AV Conduction Blocks">
-        <option value="block1">1st Degree AV Block</option>
-        <option value="block2_1">2nd Degree Type I — Wenckebach</option>
-        <option value="block2_2">2nd Degree Type II — Mobitz</option>
-        <option value="block3">3rd Degree — Complete Heart Block</option>
-      </optgroup>
-      <optgroup label="── 12-Lead Ischemia / STEMI">
-        <option value="stemi_inf">Inferior STEMI (RCA)</option>
-        <option value="stemi_ant">Anterior STEMI (LAD)</option>
-        <option value="stemi_sep">Septal STEMI (LAD)</option>
-        <option value="stemi_lat">Lateral STEMI (LCx)</option>
-        <option value="stemi_ext">Extensive Anterior STEMI — Proximal LAD</option>
-        <option value="stdepress">ST Depression / NSTEMI</option>
-        <option value="tinvert">T-Wave Inversion</option>
-      </optgroup>
-    </select>
+  <!-- Rhythm selector trigger -->
+  <button class="rhythm-trigger" id="rhythmTrigger" onclick="openPicker()">
+    <span class="rt-icon">📈</span>
+    <span class="rt-text">
+      <span class="rt-label">Select Rhythm</span>
+      <span class="rt-value" id="rtValue">Normal Sinus Rhythm (NSR)</span>
+    </span>
+    <span class="rt-arrow"><i class="fas fa-chevron-up"></i></span>
+  </button>
+
+  <!-- Bottom Sheet Picker -->
+  <div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closePicker()">
+    <div class="bs-panel">
+      <div class="bs-handle" onclick="closePicker()"></div>
+      <div class="bs-title">Select ECG Rhythm</div>
+      <div class="bs-search-wrap">
+        <input class="bs-search" id="bsSearch" type="text"
+               placeholder="🔍  Search rhythm..." autocomplete="off" autocorrect="off"
+               oninput="filterPicker(this.value)">
+      </div>
+      <div class="bs-list" id="bsList">
+        <div class="bs-group-hdr g-sinus">🫀 Sinus Node Rhythms</div>
+        <button class="bs-item active" data-val="nsr"    onclick="pickRhythm(this)">Normal Sinus Rhythm (NSR)</button>
+        <button class="bs-item"        data-val="stach"  onclick="pickRhythm(this)">Sinus Tachycardia</button>
+        <button class="bs-item"        data-val="sbrady" onclick="pickRhythm(this)">Sinus Bradycardia</button>
+
+        <div class="bs-group-hdr">💛 Atrial Rhythms</div>
+        <button class="bs-item" data-val="afib"    onclick="pickRhythm(this)">Atrial Fibrillation (A-Fib)</button>
+        <button class="bs-item" data-val="aflutter" onclick="pickRhythm(this)">Atrial Flutter (2:1)</button>
+        <button class="bs-item" data-val="svt"     onclick="pickRhythm(this)">Paroxysmal SVT — Narrow Complex</button>
+
+        <div class="bs-group-hdr g-life">🔴 Ventricular — LIFE-THREATENING</div>
+        <button class="bs-item" data-val="vtach"    onclick="pickRhythm(this)">Ventricular Tachycardia (Monomorphic)</button>
+        <button class="bs-item" data-val="torsades" onclick="pickRhythm(this)">Torsades de Pointes</button>
+        <button class="bs-item" data-val="coarseVf" onclick="pickRhythm(this)">Coarse Ventricular Fibrillation</button>
+        <button class="bs-item" data-val="fineVf"   onclick="pickRhythm(this)">Fine Ventricular Fibrillation</button>
+        <button class="bs-item" data-val="asystole" onclick="pickRhythm(this)">Asystole</button>
+        <button class="bs-item" data-val="pea"      onclick="pickRhythm(this)">PEA — Pulseless Electrical Activity</button>
+
+        <div class="bs-group-hdr g-block">🟡 AV Conduction Blocks</div>
+        <button class="bs-item" data-val="block1"   onclick="pickRhythm(this)">1st Degree AV Block</button>
+        <button class="bs-item" data-val="block2_1" onclick="pickRhythm(this)">2nd Degree Type I — Wenckebach</button>
+        <button class="bs-item" data-val="block2_2" onclick="pickRhythm(this)">2nd Degree Type II — Mobitz</button>
+        <button class="bs-item" data-val="block3"   onclick="pickRhythm(this)">3rd Degree — Complete Heart Block</button>
+
+        <div class="bs-group-hdr g-stemi">🫀 12-Lead Ischemia / STEMI</div>
+        <button class="bs-item" data-val="stemi_inf"  onclick="pickRhythm(this)">Inferior STEMI (RCA)</button>
+        <button class="bs-item" data-val="stemi_ant"  onclick="pickRhythm(this)">Anterior STEMI (LAD)</button>
+        <button class="bs-item" data-val="stemi_sep"  onclick="pickRhythm(this)">Septal STEMI (LAD)</button>
+        <button class="bs-item" data-val="stemi_lat"  onclick="pickRhythm(this)">Lateral STEMI (LCx)</button>
+        <button class="bs-item" data-val="stemi_ext"  onclick="pickRhythm(this)">Extensive Anterior STEMI — Proximal LAD</button>
+        <button class="bs-item" data-val="stdepress"  onclick="pickRhythm(this)">ST Depression / NSTEMI</button>
+        <button class="bs-item" data-val="tinvert"    onclick="pickRhythm(this)">T-Wave Inversion</button>
+      </div>
+    </div>
   </div>
 
   <!-- STEMI Map -->
@@ -241,7 +358,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);background-image:radial
 
   <!-- Drugs -->
   <div class="cde-sec">
-    <div class="cde-hdr"><i class="fas fa-pills" style="color:var(--orange)"></i> Drugs &amp; Interventions</div>
+    <div class="cde-hdr"><i class="fas fa-pills" style="color:var(--yellow)"></i> Drugs &amp; Interventions</div>
     <div class="cde-blk"><div class="drug-list" id="drugList"></div></div>
   </div>
 
@@ -263,9 +380,9 @@ const DB = {
   nsr:{lbl:'Normal Sinus Rhythm',cat:'sinus',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,61 L44,50 L56,50 Q63,38 70,50 L100,50',w:100,spd:'9s',col:'g',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:72,pri:'GREEN',pMsg:'Normal Sinus Rhythm',pSub:'Routine monitoring. No intervention required.',char:'Regular · Rate 60–100 bpm · P before every QRS · Normal P-QRS-T · Constant PR',drugs:[{i:'✅',n:'No acute medications',d:'Routine monitoring',c:''}],arrest:false,stemi:false},
   stach:{lbl:'Sinus Tachycardia',cat:'sinus',path:'M0,50 L8,50 Q11,43 14,50 L22,50 L24,56 L26,9 L28,61 L30,50 L38,50 Q43,38 48,50 L56,50',w:56,spd:'4.5s',col:'g',rate:'100–160 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:120,pri:'YELLOW',pMsg:'Sinus Tachycardia',pSub:'Treat the underlying cause — not the rate.',char:'Regular · Rate > 100 bpm · P before every QRS · Identical to NSR morphology · P may merge with T at fast rates',drugs:[{i:'🔍',n:'Identify & treat the cause',d:'Pain / Hypovolemia / Fever / Anxiety',c:'pri'},{i:'💧',n:'IV Fluid Challenge',d:'NS 250–500 mL if hypovolemia suspected',c:''},{i:'💊',n:'Analgesia if pain-driven',d:'Morphine 2.5 mg IV | Nefopam 20 mg IV',c:''}],arrest:false,stemi:false},
   sbrady:{lbl:'Sinus Bradycardia',cat:'sinus',path:'M0,50 L22,50 Q26,43 30,50 L44,50 L46,56 L48,9 L50,61 L52,50 L64,50 Q71,38 78,50 L100,50',w:100,spd:'14s',col:'b',rate:'< 60 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:42,pri:'YELLOW',pMsg:'Sinus Bradycardia',pSub:'Treat only if symptomatic (hypotension, syncope, altered LOC).',char:'Regular · Rate < 60 bpm · Normal P-QRS-T · May be physiological (athletes)',drugs:[{i:'⚕️',n:'Atropine',d:'0.02 mg/kg IV/IO (Adult: 0.5–1 mg)',c:'pri'},{i:'⚡',n:'Transcutaneous Pacing',d:'Rate 60–70 bpm · 50–100 mA — if Atropine fails',c:'warn'},{i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV',c:''}],arrest:false,stemi:false},
-  afib:{lbl:'Atrial Fibrillation',cat:'atrial',path:'M0,50 Q4,47 8,53 Q12,46 16,51 Q20,55 24,49 L26,56 L28,9 L30,62 L32,50 Q40,53 48,47 Q56,52 64,50 L66,57 L68,7 L70,64 L72,50 Q80,47 88,54 Q96,48 100,50',w:100,spd:'9s',col:'y',rate:'Variable ventricular',pr:'None (no P waves)',qrs:'< 0.12 s',rn:0,pri:'ORANGE',pMsg:'Atrial Fibrillation',pSub:'Irregularly irregular. Rate control if rapid. Cardiovert if unstable.',char:'Irregularly irregular · No P waves · Fibrillatory baseline (best V1) · Variable R-R intervals · Narrow QRS unless aberrant',drugs:[{i:'⚡',n:'Synchronized Cardioversion',d:'120–200 J biphasic — if haemodynamically unstable',c:'crit'},{i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min (rate control)',c:'pri'},{i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min (rate control)',c:''},{i:'🩸',n:'Anticoagulation',d:'Per protocol if onset > 48 h',c:'warn'}],arrest:false,stemi:false},
-  aflutter:{lbl:'Atrial Flutter',cat:'atrial',path:'M0,50 L8,35 L16,50 L24,35 L32,50 L34,56 L36,7 L38,63 L40,50 L48,35 L56,50 L64,35 L72,50 L74,56 L76,7 L78,63 L80,50 L88,35 L96,50 L100,35',w:100,spd:'7s',col:'y',rate:'~150 bpm (2:1)',pr:'N/A (flutter waves)',qrs:'< 0.12 s',rn:150,pri:'ORANGE',pMsg:'Atrial Flutter (2:1)',pSub:'Sawtooth F-waves ~300/min. Usually 2:1 → ventricular rate ~150.',char:'Sawtooth flutter waves ~300/min · Best seen II, III, aVF · Regular ventricular rate (2:1 = ~150 bpm) · Narrow QRS · No discrete P waves',drugs:[{i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J biphasic — if unstable',c:'crit'},{i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min',c:'pri'},{i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min',c:''}],arrest:false,stemi:false},
-  svt:{lbl:'Paroxysmal SVT',cat:'atrial',path:'M0,50 L6,50 L8,56 L10,7 L12,63 L14,50 L22,50 L24,56 L26,7 L28,63 L30,50 L38,50',w:38,spd:'2.8s',col:'y',rate:'150–250 bpm',pr:'Hidden/retrograde',qrs:'< 0.12 s',rn:180,pri:'ORANGE',pMsg:'SVT — Paroxysmal Supraventricular Tachycardia',pSub:'Abrupt onset/offset. Rate ≥150. No visible P waves. Adenosine first line.',char:'Rapid regular narrow complex · Rate 150–250 bpm · P waves absent or retrograde · Abrupt onset & termination · No R-R variation',drugs:[{i:'🫁',n:'Vagal Maneuvers',d:'Modified Valsalva — legs raised 45° or Carotid Sinus Massage',c:'pri'},{i:'💊',n:'Adenosine — 1st dose',d:'0.1 mg/kg IV RAPID bolus + 20 mL NS flush (max 6 mg)',c:'crit'},{i:'💊',n:'Adenosine — 2nd dose',d:'0.2 mg/kg IV RAPID bolus (max 12 mg) — if 1st fails',c:'crit'},{i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}],arrest:false,stemi:false},
+  afib:{lbl:'Atrial Fibrillation',cat:'atrial',path:'M0,50 Q4,47 8,53 Q12,46 16,51 Q20,55 24,49 L26,56 L28,9 L30,62 L32,50 Q40,53 48,47 Q56,52 64,50 L66,57 L68,7 L70,64 L72,50 Q80,47 88,54 Q96,48 100,50',w:100,spd:'9s',col:'y',rate:'Variable ventricular',pr:'None (no P waves)',qrs:'< 0.12 s',rn:0,pri:'YELLOW',pMsg:'Atrial Fibrillation',pSub:'Irregularly irregular. Rate control if rapid. Cardiovert if unstable.',char:'Irregularly irregular · No P waves · Fibrillatory baseline (best V1) · Variable R-R intervals · Narrow QRS unless aberrant',drugs:[{i:'⚡',n:'Synchronized Cardioversion',d:'120–200 J biphasic — if haemodynamically unstable',c:'crit'},{i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min (rate control)',c:'pri'},{i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min (rate control)',c:''},{i:'🩸',n:'Anticoagulation',d:'Per protocol if onset > 48 h',c:'warn'}],arrest:false,stemi:false},
+  aflutter:{lbl:'Atrial Flutter',cat:'atrial',path:'M0,50 L8,35 L16,50 L24,35 L32,50 L34,56 L36,7 L38,63 L40,50 L48,35 L56,50 L64,35 L72,50 L74,56 L76,7 L78,63 L80,50 L88,35 L96,50 L100,35',w:100,spd:'7s',col:'y',rate:'~150 bpm (2:1)',pr:'N/A (flutter waves)',qrs:'< 0.12 s',rn:150,pri:'YELLOW',pMsg:'Atrial Flutter (2:1)',pSub:'Sawtooth F-waves ~300/min. Usually 2:1 → ventricular rate ~150.',char:'Sawtooth flutter waves ~300/min · Best seen II, III, aVF · Regular ventricular rate (2:1 = ~150 bpm) · Narrow QRS · No discrete P waves',drugs:[{i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J biphasic — if unstable',c:'crit'},{i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min',c:'pri'},{i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min',c:''}],arrest:false,stemi:false},
+  svt:{lbl:'Paroxysmal SVT',cat:'atrial',path:'M0,50 L6,50 L8,56 L10,7 L12,63 L14,50 L22,50 L24,56 L26,7 L28,63 L30,50 L38,50',w:38,spd:'2.8s',col:'y',rate:'150–250 bpm',pr:'Hidden/retrograde',qrs:'< 0.12 s',rn:180,pri:'YELLOW',pMsg:'SVT — Paroxysmal Supraventricular Tachycardia',pSub:'Abrupt onset/offset. Rate ≥150. No visible P waves. Adenosine first line.',char:'Rapid regular narrow complex · Rate 150–250 bpm · P waves absent or retrograde · Abrupt onset & termination · No R-R variation',drugs:[{i:'🫁',n:'Vagal Maneuvers',d:'Modified Valsalva — legs raised 45° or Carotid Sinus Massage',c:'pri'},{i:'💊',n:'Adenosine — 1st dose',d:'0.1 mg/kg IV RAPID bolus + 20 mL NS flush (max 6 mg)',c:'crit'},{i:'💊',n:'Adenosine — 2nd dose',d:'0.2 mg/kg IV RAPID bolus (max 12 mg) — if 1st fails',c:'crit'},{i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}],arrest:false,stemi:false},
   vtach:{lbl:'Ventricular Tachycardia (Monomorphic)',cat:'vent',path:'M0,50 L5,50 L7,52 L10,12 Q15,2 20,16 L25,74 Q29,86 33,72 L36,50 L41,50 L43,52 L46,12 Q51,2 56,16 L61,74 Q65,86 69,72 L72,50 L77,50',w:77,spd:'3s',col:'w',rate:'150–250 bpm',pr:'None (AV dissociation)',qrs:'> 0.12 s — WIDE',rn:180,pri:'RED',pMsg:'Ventricular Tachycardia',pSub:'Wide complex tachycardia. CHECK PULSE. AV dissociation = VT until proven otherwise.',char:'Monomorphic wide QRS (>0.12 s) · Rate 150–250 bpm · AV dissociation · Concordance in precordial leads · Fusion/capture beats (pathognomonic)',drugs:[{i:'⚡',n:'PULSELESS VT → Defibrillation',d:'200 J unsynchronized biphasic — DO NOT DELAY',c:'crit'},{i:'⚡',n:'VT with pulse, unstable → Synchronized Cardioversion',d:'100 J biphasic (synchronized)',c:'crit'},{i:'💊',n:'Amiodarone (VT with stable pulse)',d:'5 mg/kg IV over 20–60 min (max 300 mg)',c:'pri'},{i:'🔌',n:'CPR if pulseless',d:'30:2 high-quality CPR while charging',c:'warn'}],arrest:true,stemi:false,shockable:true,steps:[{n:'⚡',t:'sh',ti:'Defibrillate 200 J — Unsynchronized (pulseless)',de:'Do NOT delay. Charge while performing CPR.'},{n:'🔌',t:'ep',ti:'CPR — 2 min immediately post-shock',de:'30:2 · 100–120/min · 5–6 cm depth · Full recoil.'},{n:'💉',t:'ep',ti:'Epinephrine 0.01 mg/kg IV/IO',de:'Adult: 1 mg. Every 3–5 min.'},{n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. Second dose: 150 mg if refractory.'},{n:'🔄',t:'sh',ti:'Reassess rhythm every 2 min',de:'Still shockable? → Shock → CPR → Epi → Amiodarone.'}]},
   torsades:{lbl:'Torsades de Pointes',cat:'vent',path:'M0,50 Q7,12 14,50 Q21,82 28,50 Q35,22 42,50 Q49,78 56,50 Q63,16 70,50 Q77,88 84,50 Q91,10 98,50 Q105,86 112,50 Q119,20 126,50 Q133,80 140,50',w:140,spd:'6s',col:'w',rate:'200–300 bpm',pr:'None',qrs:'Variable — twisting',rn:220,pri:'RED',pMsg:'Torsades de Pointes',pSub:'Polymorphic VT twisting around baseline. Prolonged QTc. Mg2+ is definitive treatment.',char:'Polymorphic VT · Spindle-shaped QRS amplitude variation · Twists around isoelectric line · Associated with prolonged QTc · Risk factors: K+/Mg2+ deficiency, QT-prolonging drugs',drugs:[{i:'⚡',n:'Defibrillation (if pulseless)',d:'200 J unsynchronized biphasic — IMMEDIATE',c:'crit'},{i:'💊',n:'Magnesium Sulphate — FIRST LINE',d:'2 g IV over 1–2 min regardless of Mg2+ level',c:'pri'},{i:'🚫',n:'AVOID: Amiodarone / Sotalol',d:'Both PROLONG QT — CONTRAINDICATED in Torsades',c:'contra'},{i:'⚡',n:'Overdrive Pacing',d:'Rate 90–110 bpm — if Mg2+ fails (shortens QT)',c:'warn'}],arrest:true,stemi:false,shockable:true,steps:[{n:'⚡',t:'sh',ti:'Defibrillate 200 J immediately if pulseless',de:'Unsynchronized. Resume CPR immediately.'},{n:'💊',t:'dr',ti:'Magnesium Sulphate 2 g IV over 1–2 min',de:'Definitive treatment. Give even if Mg2+ level unknown.'},{n:'🔌',t:'ep',ti:'CPR — 2 min between shocks',de:'Do not interrupt for drug administration.'},{n:'🚫',t:'dr',ti:'Do NOT give Amiodarone or Sotalol',de:'Both prolong QT and worsen Torsades.'}]},
   coarseVf:{lbl:'Coarse Ventricular Fibrillation',cat:'vent',path:'M0,50 Q5,12 10,68 Q16,3 22,78 Q28,92 34,18 Q38,-2 44,62 Q50,96 56,28 Q61,6 66,72 Q73,102 80,22 Q85,2 90,70 Q95,90 100,44',w:100,spd:'2.5s',col:'c',rate:'None — chaotic',pr:'None',qrs:'None — no complexes',rn:0,pri:'ARREST',pMsg:'⚡ Coarse VF — SHOCKABLE ARREST RHYTHM',pSub:'CPR → Defibrillate 200 J immediately. Every minute without shock = 10% survival reduction.',char:'SHOCKABLE ARREST · Chaotic high-amplitude deflections (>5 mm) · No P waves, QRS, or T waves · Large amplitude = coarse = better defib success rate · Confirm in 2 leads',drugs:[{i:'⚡',n:'Defibrillation — IMMEDIATE FIRST ACTION',d:'200 J biphasic unsynchronized — DO NOT DELAY',c:'crit'},{i:'🔌',n:'High-Quality CPR',d:'30:2 · 100–120/min · 5–6 cm · Full recoil',c:'warn'},{i:'💉',n:'Epinephrine 0.01 mg/kg IV/IO',d:'Adult: 1 mg · Every 3–5 min · After 1st or 2nd shock',c:'pri'},{i:'💊',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock · 2nd dose 150 mg if refractory',c:'pri'}],arrest:true,stemi:false,shockable:true,steps:[{n:'⚡',t:'sh',ti:'Defibrillate 200 J — DO NOT DELAY',de:'Biphasic unsynchronized. Resume CPR immediately.'},{n:'🔌',t:'ep',ti:'CPR 2 min · 30:2 · 100–120/min',de:'Continue during defibrillator charging. Push hard, push fast.'},{n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO (0.01 mg/kg pedi)',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},{n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO (after 3rd shock)',de:'2nd dose: 150 mg if still refractory VF.'},{n:'🔄',t:'sh',ti:'Reassess every 2 min',de:'Shockable? → Shock → CPR → Epi → Amiodarone cycle.'}]},
@@ -282,7 +399,7 @@ const DB = {
   stemi_sep:{lbl:'Septal STEMI (LAD)',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,56 L46,26 L62,26 Q72,26 82,50 L100,50',w:100,spd:'9s',col:'r',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:85,pri:'RED',pMsg:'STEMI — Septal MI (LAD Septal Perforators)',pSub:'High risk of complete heart block. Monitor PR closely. Have pacing ready.',char:'ST elevation in <b>V1, V2</b> · Loss of normal septal Q waves lateral leads · Risk of conduction system damage (AV block, BBB) · Often co-exists with anterior STEMI',drugs:[{i:'💊',n:'Aspirin 324 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},{i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},{i:'📡',n:'Monitor PR interval',d:'Septal MI → risk of AV block · Have pacing ready',c:'warn'},{i:'🚑',n:'Rapid PCI transport',d:'12-Lead ECG · Notify cath lab en route',c:'pri'}],arrest:false,stemi:true,sd:{terr:'Septal Wall',art:'LAD — Septal Perforating Branches',elev:['V1','V2'],rec:[],zones:{Sep:1,Ant:0,Lat:0,Post:0,Inf:0,RV:0}}},
   stemi_lat:{lbl:'Lateral STEMI (Circumflex)',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,56 L46,26 L62,26 Q72,26 82,50 L100,50',w:100,spd:'9s',col:'r',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:80,pri:'RED',pMsg:'STEMI — Lateral MI (Left Circumflex Artery)',pSub:'May be missed on Lead II monitoring. Always perform 12-lead.',char:'ST elevation in <b>I, aVL, V5, V6</b> · Reciprocal in II, III, aVF · LCx occlusion · Often subtler ST elevation — do not under-triage',drugs:[{i:'💊',n:'Aspirin 324 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},{i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},{i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},{i:'🚑',n:'Rapid PCI transport · 12-Lead ECG',d:'Notify receiving facility en route',c:'pri'}],arrest:false,stemi:true,sd:{terr:'Lateral Wall',art:'Left Circumflex Artery (LCx)',elev:['I','aVL','V5','V6'],rec:['II','III','aVF'],zones:{Sep:0,Ant:0,Lat:1,Post:0,Inf:0,RV:0}}},
   stemi_ext:{lbl:'Extensive Anterior STEMI (Proximal LAD)',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,55 L46,20 L64,20 Q74,20 84,50 L100,50',w:100,spd:'9s',col:'r',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:95,pri:'RED',pMsg:'STEMI — Extensive Anterior MI ("Widow Maker" — Proximal LAD)',pSub:'Largest territory. Highest risk: VF, CHB, cardiogenic shock. Most lethal STEMI.',char:'ST elevation <b>V1–V6, I, aVL</b> · Massive LV territory · Proximal LAD occlusion (before 1st diagonal) · New LBBB equivalent · Risk of VF, complete block, cardiogenic shock',drugs:[{i:'💊',n:'Aspirin 324 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},{i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'ONLY if SBP > 100 — extreme haemodynamic caution',c:'warn'},{i:'📡',n:'Continuous monitoring — VF risk',d:'Defibrillator immediately available. Amiodarone on standby.',c:'warn'},{i:'🚑',n:'Emergency PCI — MAXIMUM URGENCY',d:'Call cath lab activation NOW. This is a MAJOR MI.',c:'crit'}],arrest:false,stemi:true,sd:{terr:'Extensive Anterior Wall',art:'Proximal LAD (before 1st Diagonal) — "Widow Maker"',elev:['V1','V2','V3','V4','V5','V6','I','aVL'],rec:['II','III','aVF'],zones:{Sep:1,Ant:1,Lat:1,Post:0,Inf:0,RV:0}}},
-  stdepress:{lbl:'ST Depression / NSTEMI',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,61 L44,60 L58,60 Q68,60 78,50 L100,50',w:100,spd:'9s',col:'w',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:82,pri:'ORANGE',pMsg:'ST Depression — Ischaemia / NSTEMI',pSub:'High-risk ACS. Aspirin + ACS protocol. Monitor for progression.',char:'ST segment ≥ 0.5 mm below baseline · Subendocardial ischaemia or NSTEMI · Reciprocal changes of posterior STEMI (V1–V3 depression) · Requires troponin to confirm NSTEMI',drugs:[{i:'💊',n:'Aspirin 324 mg PO',d:'Immediately. Chew and swallow.',c:'crit'},{i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Symptom relief',c:'pri'},{i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},{i:'🚑',n:'12-Lead ECG · ACS protocol · Hospital notification',d:'NSTEMI → ACS pathway. Monitor for STEMI progression.',c:'pri'}],arrest:false,stemi:false},
+  stdepress:{lbl:'ST Depression / NSTEMI',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,61 L44,60 L58,60 Q68,60 78,50 L100,50',w:100,spd:'9s',col:'w',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:82,pri:'YELLOW',pMsg:'ST Depression — Ischaemia / NSTEMI',pSub:'High-risk ACS. Aspirin + ACS protocol. Monitor for progression.',char:'ST segment ≥ 0.5 mm below baseline · Subendocardial ischaemia or NSTEMI · Reciprocal changes of posterior STEMI (V1–V3 depression) · Requires troponin to confirm NSTEMI',drugs:[{i:'💊',n:'Aspirin 324 mg PO',d:'Immediately. Chew and swallow.',c:'crit'},{i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Symptom relief',c:'pri'},{i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},{i:'🚑',n:'12-Lead ECG · ACS protocol · Hospital notification',d:'NSTEMI → ACS pathway. Monitor for STEMI progression.',c:'pri'}],arrest:false,stemi:false},
   tinvert:{lbl:'T-Wave Inversion',cat:'stemi',path:'M0,50 L14,50 Q18,43 22,50 L36,50 L38,56 L40,9 L42,61 L44,50 L58,50 Q65,63 72,50 L100,50',w:100,spd:'9s',col:'w',rate:'60–100 bpm',pr:'0.12–0.20 s',qrs:'< 0.12 s',rn:75,pri:'YELLOW',pMsg:'T-Wave Inversion',pSub:'Context-dependent. Wellens syndrome (V2–V3 deep symmetric) = proximal LAD critical stenosis.',char:'T wave deflected below baseline · Causes: ischaemia, Wellens syndrome, LVH, PE, digoxin, post-infarction · Wellens (V2–V3 deep symmetric T-inversion) = proximal LAD critical stenosis — DO NOT stress test · Correlate with clinical presentation',drugs:[{i:'🔍',n:'Correlate clinically',d:'ACS symptoms → ACS protocol immediately',c:'warn'},{i:'💊',n:'Aspirin 324 mg if ACS suspected',d:'Chew and swallow',c:'pri'},{i:'📡',n:'Serial ECGs',d:'Dynamic T-wave changes support ischaemia. Repeat every 15 min.',c:''},{i:'🚑',n:'Wellens syndrome',d:'→ Coronary angiography urgently. Do NOT stress test.',c:'warn'}],arrest:false,stemi:false}
 };
 
@@ -362,8 +479,8 @@ function renderMonitor(d){
 
 function renderBanner(cde){
   const b=document.getElementById('pBanner');
-  const cls={GREEN:'b-green',YELLOW:'b-yellow',ORANGE:'b-orange',RED:'b-red',ARREST:'b-arrest'};
-  const ico={GREEN:'🟢',YELLOW:'🟡',ORANGE:'🟠',RED:'🔴',ARREST:'🚨'};
+  const cls={GREEN:'b-green',YELLOW:'b-yellow',RED:'b-red',ARREST:'b-arrest'};
+  const ico={GREEN:'🟢',YELLOW:'🟡',RED:'🔴',ARREST:'🚨'};
   b.className='priority-banner '+(cls[cde.priority]||'b-green');
   b.querySelector('.pb-icon').textContent=ico[cde.priority]||'⬜';
   document.getElementById('pLevel').textContent=cde.priority+' — PRIORITY';
@@ -447,7 +564,61 @@ function toggleCal(){
   }
 }
 
+
+/* ── BOTTOM SHEET PICKER ──────────────────────────── */
+function openPicker(){
+  const ov=document.getElementById('bsOverlay');
+  ov.classList.add('open');
+  const si=document.getElementById('bsSearch');
+  si.value='';
+  filterPicker('');
+  setTimeout(()=>si.focus(),160);
+}
+function closePicker(){
+  document.getElementById('bsOverlay').classList.remove('open');
+}
+function pickRhythm(btn){
+  closePicker();
+  const val=btn.dataset.val;
+  // Mark active
+  document.querySelectorAll('.bs-item').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // Update trigger button label
+  document.getElementById('rtValue').textContent=btn.textContent.trim();
+  // Update icon based on priority
+  const d=DB[val];
+  const icons={GREEN:'🟢',YELLOW:'🟡',RED:'🔴',ARREST:'🚨'};
+  document.querySelector('.rt-icon').textContent=icons[d&&d.pri]||'📈';
+  selectRhythm(val);
+}
+function filterPicker(q){
+  q=q.toLowerCase().trim();
+  document.querySelectorAll('.bs-item').forEach(function(btn){
+    btn.classList.toggle('hidden',q&&!btn.textContent.toLowerCase().includes(q));
+  });
+  document.querySelectorAll('.bs-group-hdr').forEach(function(hdr){
+    let el=hdr.nextElementSibling,show=false;
+    while(el&&el.classList.contains('bs-item')){
+      if(!el.classList.contains('hidden'))show=true;
+      el=el.nextElementSibling;
+    }
+    hdr.style.display=show||!q?'':'none';
+  });
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')closePicker();
+});
+
 selectRhythm('nsr');
 </script>
+<footer class="app-footer">
+  <div class="footer-txt">
+    <strong>⚠️ For Educational &amp; Reference Use Only</strong><br>
+    This ECG Simulator is a study aid for EMS professionals. It does not replace clinical judgment,
+    formal training, or your local DCAS CPG protocols. Always follow your approved protocols
+    and consult medical direction. Not for use in actual patient care decisions.
+  </div>
+</footer>
+
 </body>
 </html>
