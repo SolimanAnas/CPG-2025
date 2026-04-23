@@ -1,4 +1,4 @@
-/* ========== Chapter 7.3 – Crush Injuries ========== */
+/* ========== Chapter 7.3  Crush Injuries ========== */
 window.CPG_DATA = {
     id: "c7-3",
     title: "Crush Injuries",
@@ -64,7 +64,7 @@ window.CPG_DATA = {
 
             <h4>Patient Safety Considerations</h4>
             <ul>
-                <li>Do not delay IV fluids until after release — pre-hydration improves outcomes.</li>
+                <li>Do not delay IV fluids until after release ï¿½ pre-hydration improves outcomes.</li>
                 <li>Use Broselow tape for pediatric patients to guide equipment and dosing.</li>
                 <li>Avoid overuse of opioids that may mask declining LOC or respiratory effort.</li>
                 <li>Apply tourniquet judiciously and only if limb injury is severe and extrication imminent.</li>
@@ -80,7 +80,7 @@ window.CPG_DATA = {
                         <li>Muscle weakness or flaccid paralysis.</li>
                         <li>Nausea, vomiting, or paresthesia.</li>
                         <li>Bradycardia, hypotension, or irregular pulse.</li>
-                        <li>ECG may show peaked T-waves or widened QRS — but may appear normal early.</li>
+                        <li>ECG may show peaked T-waves or widened QRS ï¿½ but may appear normal early.</li>
                     </ul>
                 </li>
                 <li>Treat based on clinical suspicion, not ECG alone. Early fluid resuscitation is critical.</li>
@@ -307,7 +307,7 @@ window.CPG_DATA = {
         { category: "Reperfusion injury", question: "What is reperfusion injury?", answer: "Sudden release of potassium, myoglobin, and inflammatory mediators after restoration of blood flow." },
         { category: "Documentation", question: "What must be documented in crush injury?", answer: "Entrapment duration, fluid administered, pain management, ECG findings." },
         { category: "KPI", question: "What is the key performance indicator for crush injuries?", answer: "Document entrapment duration in ePCR." },
-        category: "Pediatric considerations", question: "Why are children at risk for crush syndrome?", answer: "Greater muscle mass relative to body weight; fluid resuscitation must be weight-based (Broselow)." },
+        {category: "Pediatric considerations", question: "Why are children at risk for crush syndrome?", answer: "Greater muscle mass relative to body weight; fluid resuscitation must be weight-based (Broselow)." },
         { category: "Elderly considerations", question: "Why are elderly at higher risk?", answer: "Pre-existing renal impairment, cardiovascular disease, and reduced physiological reserve." },
         { category: "Transport decision", question: "Should all crush injury patients be transported?", answer: "Yes, especially those with entrapment >30 minutes, signs of crush syndrome, or significant mechanism." }
     ],
