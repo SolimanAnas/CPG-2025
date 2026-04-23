@@ -1,1790 +1,1208 @@
-/* ========== styles.css – DCAS CPG 2025 (FINAL) ========== */
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Chapters</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- PWA Manifest and icons -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    
+    <style>
+        /* ========== EXISTING STYLES ========== */
+        .search-container {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 4px 4px 4px 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--glass-shadow);
+        }
+        .search-container span {
+            font-size: 1.2rem;
+            margin-right: 8px;
+            color: var(--text-secondary);
+        }
+        .search-container input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 0;
+            font-size: 1rem;
+            color: var(--text-primary);
+            outline: none;
+        }
+        .search-container input::placeholder {
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+        .search-container button {
+            background: transparent;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-right: 4px;
+            padding: 0;
+        }
+        .search-container button:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-primary);
+        }
+        .search-container button:active {
+            transform: scale(0.95);
+        }
 
-/* ---------- NUCLEAR RESET (kills all tap highlights) ---------- */
-* {
-    -webkit-tap-highlight-color: transparent;
-}
+        /* 🔒 FIXED: Force hide with !important */
+        .menu-card.filtered-out {
+            display: none !important;
+        }
 
-*:focus-visible {
-    outline: 2px solid var(--primary-accent);
-    outline-offset: 2px;
-}
+        /* Special card style for c0 and c-index */
+        .menu-card.special-card {
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 16px 20px;
+            box-shadow: var(--glass-shadow);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-left-width: 6px;
+            border-left-style: solid;
+        }
+        .menu-card.special-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+        }
+        .menu-card.special-card .card-header {
+            display: none;
+        }
+        .menu-card.special-card h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 2px 0;
+            line-height: 1.2;
+        }
+        .menu-card.special-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .menu-card.special-card[data-chapter="updates"] {
+            border-left-color: #f39c12;
+        }
+        .menu-card.special-card[data-chapter="index"] {
+            border-left-color: #3498db;
+        }
 
-/* ---------- THEME DEFINITIONS (Four themes) ---------- */
-:root {
-    --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-    --glass-bg: rgba(255, 255, 255, 0.75);
-    --glass-border: rgba(255, 255, 255, 0.6);
-    --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
-    --text-primary: #1a2a3a;
-    --text-secondary: #334155;
-    --header-text: #ffffff;
-    --toggle-bg: #374151;
-    --toggle-active: #2dd4bf;
-    --accent-universal: #d63384;
-    --accent-airway: #0ca678;
-    --accent-cardio: #e03131;
-    --accent-resus: #6741d9;
-    --accent-neuro: #0891b2;
-    --accent-medical: #f76707;
-    --accent-trauma: #fcc419;
-    --accent-environmental: #845ef7;
-    --accent-pediatric: #ff922b;
-    --accent-obstetric: #f06595;
-    --accent-mci: #2f9e44;
-    --accent-scope: #495057;
-    --btn-grad-sum: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
-    --btn-grad-flash: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
-    --btn-grad-quiz: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
-    --btn-grad-scen: linear-gradient(180deg, #fef2f2 0%, #fee2e2 100%);
-    --border-sum: #ffedd5; --text-sum: #9a3412;
-    --border-flash: #dbeafe; --text-flash: #1e40af;
-    --border-quiz: #dcfce7; --text-quiz: #166534;
-    --border-scen: #fee2e2; --text-scen: #991b1b;
-    --primary-accent: #0056b3;
-    --header-height: 72px;
-}
+        /* Progress popup */
+        .progress-popup {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--glass-shadow);
+            z-index: 1001;
+            min-width: 250px;
+            display: none;
+            color: var(--text-primary);
+        }
+        .progress-popup.show {
+            display: block;
+        }
+        .progress-popup .popup-title {
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary-accent);
+        }
+        .progress-popup .popup-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .progress-popup .popup-quote {
+            margin-top: 16px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--glass-border);
+            padding-top: 12px;
+        }
 
-/* ========== FONT SIZE ACCESSIBILITY ========== */
-/* Default (medium). html font-size controls all rem-based sizing */
-html[data-font-size="small"]  { font-size: 13px; }
-html[data-font-size="medium"] { font-size: 16px; }  /* default */
-html[data-font-size="large"]  { font-size: 19px; }
-html[data-font-size="xl"]     { font-size: 22px; }
+        /* Footer – controlled by styles.css; theme overrides applied there */
+        footer a { color: inherit; text-decoration: underline; }
 
-/* Font size selector widget in drawer */
-.font-size-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: space-between;
-    padding: 0 2px;
-}
-.font-size-label {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    flex-shrink: 0;
-    min-width: 24px;
-}
-.font-size-label svg { display: inline-block; vertical-align: middle; }
-.font-btn {
-    flex: 1;
-    padding: 8px 4px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.08);
-    border: 1.5px solid rgba(255,255,255,0.12);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
-    line-height: 1;
-}
-.font-btn.active {
-    background: var(--primary-accent);
-    border-color: var(--primary-accent);
-    box-shadow: 0 0 12px rgba(0, 86, 179, 0.5);
-}
-.font-btn:active { transform: scale(0.94); }
-.font-btn[data-size="small"]  { font-size: 0.72rem; }
-.font-btn[data-size="medium"] { font-size: 0.88rem; }
-.font-btn[data-size="large"]  { font-size: 1.05rem; }
-.font-btn[data-size="xl"]     { font-size: 1.2rem;  }
+        /* Button container – always 2×2 grid, never single-row flex */
+        .menu-sub-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn-action {
+            width: 100%;
+            text-align: center;
+            padding: 12px 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+        @media (max-width: 360px) {
+            .btn-action { font-size: 0.78rem; padding: 10px 4px; }
+        }
+
+        /* Offline download */
+        .offline-download {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .download-btn {
+            background: var(--primary-accent);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+        .download-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        progress {
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        progress::-webkit-progress-bar {
+            background-color: var(--glass-bg);
+            border-radius: 10px;
+        }
+        progress::-webkit-progress-value {
+            background-color: var(--primary-accent);
+            border-radius: 10px;
+        }
+
+        /* Floating buttons */
+        .float-btn {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(61, 100, 115, 0.7);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: transform 0.2s, background 0.2s, opacity 0.2s;
+            z-index: 999;
+            backdrop-filter: blur(2px);
+            opacity: 0.8;
+        }
+        .float-btn:hover {
+            transform: scale(1.1);
+            background: var(--toggle-active);
+            opacity: 1;
+        }
+        .float-btn:active {
+            transform: scale(0.95);
+        }
+        .float-btn.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #scrollToBottomBtn {
+            bottom: 20px;
+            right: 15px;
+        }
+        #scrollToTopBtn {
+            bottom: 70px;
+            right: 15px;
+        }
+
+        /* ========== DRAWER STYLES ========== */
+        .drawer-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+        .drawer-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .notification-drawer {
+            position: fixed;
+            top: -600px;         /* increased so large drawer fully hides offscreen */
+            left: 0;
+            right: 0;            /* explicit right:0 instead of width:100% */
+            width: 100%;
+            box-sizing: border-box; /* CRITICAL: padding is INSIDE the 100% width */
+            overflow: hidden;    /* prevent any child overflow */
+            background: rgba(20, 30, 40, 0.4);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            z-index: 2001;
+            padding: 25px 16px 35px;  /* slightly tighter side padding */
+            border-radius: 0 0 30px 30px;
+            transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .notification-drawer.open {
+            top: 0;
+        }
+
+        .toggles-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr)); /* minmax(0) prevents overflow */
+            gap: 10px;
+            width: 100%;
+        }
+        .toggle-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .toggle-btn {
+            width: 100%;          /* fill grid cell, don't use fixed px */
+            aspect-ratio: 1;      /* stay circular without fixed height */
+            max-width: 60px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 1.35rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 0 auto;       /* center within the grid cell */
+        }
+        .toggle-btn.active {
+            background: var(--primary-accent);
+            border-color: var(--primary-accent);
+            color: white;
+            box-shadow: 0 0 15px var(--primary-accent);
+        }
+        .toggle-btn:active {
+            transform: scale(0.92);
+        }
+        .toggle-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .drawer-stats {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stat-num {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .stat-text {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .close-drawer-btn {
+            width: 100%;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0.5;
+            margin-top: -10px;
+        }
+
+        /* Two‑line trigger */
+        .drawer-trigger {
+            position: absolute;
+            left: 50%;
+            bottom: -35px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 0 0 30px 30px;
+            animation: floatDown 3s ease-in-out infinite;
+        }
+        .trigger-line {
+            height: 3px;
+            background: var(--primary-accent);
+            border-radius: 3px;
+            margin: 3px 0;
+            box-shadow: 0 0 8px var(--primary-accent);
+        }
+        .trigger-line.top {
+            width: 30px;
+        }
+        .trigger-line.bottom {
+            width: 20px;
+        }
+        @keyframes floatDown {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
+        }
+    </style>
+	  <script>
+			(function() {
+				const AUTH_KEY = 'dcas_local_auth';
+				function readSession() {
+					try {
+						const raw = localStorage.getItem(AUTH_KEY);
+						return raw ? JSON.parse(raw) : null;
+					} catch (_) { return null; }
+				}
+				const session = readSession();
+				const ok = session && session.loggedIn && session.expiresAt && Date.now() < Number(session.expiresAt);
+				if (!ok) {
+					const next = window.location.pathname + window.location.search + window.location.hash;
+					window.location.replace(`login.html?next=${encodeURIComponent(next)}`);
+				}
+			})();
+		</script>
 
 
+</head>
+<body>
 
-/* ─── AMOLED theme – true black for OLED battery saving ─── */
-[data-theme="amoled"] {
-    --bg-gradient:      #000000;           /* pure black – OLED pixels OFF */
-    --glass-bg:         rgba(255,255,255,0.06);
-    --glass-border:     rgba(255,255,255,0.12);
-    --glass-shadow:     0 8px 24px rgba(0,0,0,0.8);
-    --text-primary:     #e8f4fd;
-    --text-secondary:   #94a3b8;
-    --header-text:      #ffffff;
-    --toggle-bg:        #111111;
-    --toggle-active:    #00d4ff;
-    --primary-accent:   #00bcd4;
-    /* Keep action button gradients readable on black */
-    --btn-grad-sum:     linear-gradient(180deg, #1a1200 0%, #2a1e00 100%);
-    --btn-grad-flash:   linear-gradient(180deg, #001122 0%, #001a33 100%);
-    --btn-grad-quiz:    linear-gradient(180deg, #001a00 0%, #002200 100%);
-    --btn-grad-scen:    linear-gradient(180deg, #1a0000 0%, #220000 100%);
-    --border-sum: #2a1e00; --text-sum: #fcd34d;
-    --border-flash: #001a33; --text-flash: #38bdf8;
-    --border-quiz: #002200; --text-quiz: #4ade80;
-    --border-scen: #220000; --text-scen: #f87171;
-}
-/* AMOLED: html background pure black, no gradient */
-[data-theme="amoled"] html,
-html[data-theme="amoled"] {
-    background: #000000 !important;
-}
-/* AMOLED: glassmorph cards — very dark, not transparent-white */
-[data-theme="amoled"] .sum-card,
-[data-theme="amoled"] .quiz-container,
-[data-theme="amoled"] .quiz-setup-container,
-[data-theme="amoled"] .critical-card {
-    background: #0d0d0d;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-[data-theme="amoled"] header {
-    background: rgba(0,0,0,0.85);
-    border-bottom-color: rgba(255,255,255,0.08);
-}
-[data-theme="amoled"] footer {
-    background: #000000;
-    color: rgba(255,255,255,0.5);
-    border-top-color: rgba(255,255,255,0.06);
-}
-[data-theme="amoled"] .bottom-nav {
-    background: rgba(0,0,0,0.9);
-    border-top-color: rgba(255,255,255,0.06);
-}
-[data-theme="amoled"] .card__face--front,
-[data-theme="amoled"] .card__face--back {
-    background: #0d0d0d;
-    border-color: rgba(255,255,255,0.1);
-    color: #e8f4fd;
-}[data-theme="amoled"] .section-nav-slim button {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.15);
-}
-/* AMOLED menu card */
-[data-theme="amoled"] .menu-card {
-    background: #0d0d0d;
-    border-color: rgba(255,255,255,0.07);
-}
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
 
-/* Light theme */
-[data-theme="light"] {
-    --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #b8e1ff 50%, #f0f9ff 100%);
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(255, 255, 255, 0.8);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    --text-primary: #1a2a3a;
-    --text-secondary: #475569;
-    --header-text: #0056b3;
-    --toggle-bg: #cbd5e1;
-    --toggle-active: #0056b3;
-    --primary-accent: #0056b3;
-}
+<!-- Super Glassy Notification Drawer -->
+<div class="notification-drawer" id="notificationDrawer">
+    <!-- Theme row: 5 themes -->
+    <div class="toggles-grid theme-row">
+        <div class="toggle-item">
+            <button class="toggle-btn" id="toggleDark">🌑</button>
+            <div class="toggle-label">Dark</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn amoled-btn" id="toggleAmoled">⬛</button>
+            <div class="toggle-label">AMOLED</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="toggleLight">☀️</button>
+            <div class="toggle-label">Light</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="toggleSepia">📜</button>
+            <div class="toggle-label">Sepia</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="toggleForest">🌲</button>
+            <div class="toggle-label">Forest</div>
+        </div>
+    </div>
+    <!-- Shortcuts row: 4 buttons -->
+    <div class="toggles-grid shortcut-row">
+        <div class="toggle-item">
+            <button class="toggle-btn" id="qsIndex">📋</button>
+            <div class="toggle-label">Index</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="qsAbout">ℹ️</button>
+            <div class="toggle-label">About</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="qsJumpDown">⬇️</button>
+            <div class="toggle-label">Bottom</div>
+        </div>
+        <div class="toggle-item">
+            <button class="toggle-btn" id="qsReload">🔄</button>
+            <div class="toggle-label">Reload</div>
+        </div>
+		<div class="toggle-item">
+            <button class="toggle-btn" id="qsLogout">🚪</button>
+            <div class="toggle-label">Logout</div>
+        </div>
+    </div>
 
-/* Sepia theme */
-[data-theme="sepia"] {
-    --bg-gradient: linear-gradient(135deg, #f4e4c1 0%, #e5d3b3 50%, #d6c2a3 100%);
-    --glass-bg: rgba(255, 248, 235, 0.9);
-    --glass-border: rgba(210, 180, 140, 0.6);
-    --glass-shadow: 0 12px 40px 0 rgba(100, 70, 40, 0.2);
-    --text-primary: #4a3c2c;
-    --text-secondary: #6b5a48;
-    --header-text: #4a3c2c;
-    --toggle-bg: #c4a484;
-    --toggle-active: #8b6b4f;
-    --primary-accent: #8b6b4f;
-}
+    <!-- Font Size Accessibility -->
+    <div class="font-size-row">
+        <span class="font-size-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><text x="2" y="18" font-size="14" fill="currentColor" stroke="none" font-weight="700">Aa</text></svg>
+        </span>
+        <button class="font-btn" data-size="small"  id="fontSmall" title="Small text">A</button>
+        <button class="font-btn" data-size="medium" id="fontMedium" title="Normal text">A</button>
+        <button class="font-btn" data-size="large"  id="fontLarge" title="Large text">A</button>
+        <button class="font-btn" data-size="xl"     id="fontXL"    title="Extra large text">A</button>
+    </div>
 
-/* Forest theme */
-[data-theme="forest"] {
-    --bg-gradient: linear-gradient(135deg, #1e4b3e 0%, #2d6a4f 50%, #40916c 100%);
-    --glass-bg: rgba(220, 237, 193, 0.85);
-    --glass-border: rgba(162, 191, 132, 0.7);
-    --glass-shadow: 0 12px 40px 0 rgba(0, 50, 30, 0.3);
-    --text-primary: #0f2c1f;
-    --text-secondary: #2d5a3a;
-    --header-text: #edf4e7;
-    --toggle-bg: #52796f;
-    --toggle-active: #84a98c;
-    --primary-accent: #84a98c;
-}
+    <!-- Mini stats -->
+    <div class="drawer-stats">
+        <div class="stat-item">
+            <span class="stat-num" id="drawerDone">0/0</span>
+            <span class="stat-text">Chapters</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" id="drawerAttempts">0</span>
+            <span class="stat-text">Attempts</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" id="drawerAcc">0%</span>
+            <span class="stat-text">Accuracy</span>
+        </div>
+    </div>
 
-/* ---------- GLOBAL ---------- */
+    <!-- Close handle -->
+    <div class="close-drawer-btn" id="closeDrawerBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </div>
+</div>
 
-/* FIX: White scroll glitch on Android Chrome.
-   background-attachment:fixed on <body> causes repaint flashes during scroll.
-   Solution: paint the gradient on <html> so it's always behind everything,
-   then let body be transparent so the html background shows through. */
-html {
-    background: var(--bg-gradient);
-    background-attachment: fixed;
-    min-height: 100%;
-    transition: background 0.4s ease;
-    margin: 0;
-    padding: 0;
-}
-/* AMOLED: override to pure black with no attachment overhead */
-html[data-theme="amoled"] {
-    background: #000000;
-    background-attachment: scroll;
-}
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">DCAS CPG 2025</h1>
+            <p id="pageSubtitle">Clinical Review Platform</p>
+        </div>
+    </div>
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: transparent; /* let html background show – prevents white flash */
-    color: var(--text-primary);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    transition: color 0.3s ease;
-    margin: 0;          /* kill any default browser body margin */
-    padding: 0;
-    padding-bottom: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    overflow-x: hidden;
-    width: 100%;
-}
+    <!-- Drawer trigger -->
+    <div class="drawer-trigger" id="drawerTrigger">
+        <div class="trigger-line top"></div>
+        <div class="trigger-line bottom"></div>
+    </div>
 
-/* ---------- HEADER ---------- */
-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--header-height);
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-    overflow: visible;
-    /* NO transform: translateY(0) here — any transform creates a containing block
-       for position:fixed children, which would break the progress bar positioning */
-    transition: transform 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    isolation: isolate;
-}
-header.header-hidden {
-    transform: translateY(-100%);
-}
+    <div class="header-right" id="headerShortcuts">
+        <!-- Battery indicator (shown by JS when Battery API available) -->
+        <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
+        <!-- AMOLED power-saving badge -->
+        <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <button class="icon-btn" id="progressToggle" title="Progress">📊</button>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+        <a href="about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+    </div>
+</header>
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.header-text h1 {
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--header-text);
-    margin: 0;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.header-text p {
-    font-size: 0.75rem;
-    color: var(--header-text);
-    opacity: 0.8;
-    font-weight: 500;
-    margin-top: 2px;
-}
-.icon-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--header-text);
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.icon-btn:active {
-    transform: scale(0.95);
-    background: rgba(255,255,255,0.4);
-}
-.stats-badge {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--header-text);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    backdrop-filter: blur(10px);
-}
-.stats-divider {
-    width: 1px;
-    height: 14px;
-    background: currentColor;
-    opacity: 0.4;
-}
+<!-- Progress popup -->
+<div class="progress-popup" id="progressPopup">
+    <div class="popup-title">📊 Your Progress</div>
+    <div class="popup-item">
+        <span>Chapters Done:</span>
+        <span id="popupChaptersDone">0/0</span>
+    </div>
+    <div class="popup-item">
+        <span>Total Attempts:</span>
+        <span id="popupAttempts">0</span>
+    </div>
+    <div class="popup-item">
+        <span>Critical Accuracy:</span>
+        <span id="popupCritical">0%</span>
+    </div>
+    <div class="popup-quote" id="popupQuote">✨ Every review sharpens your skills.</div>
+</div>
 
-/* ---------- MAIN LAYOUT ---------- */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column; 
-    padding: 30px 20px;              /* 30px top = 24px + 6px for progress bar clearance */
-    padding-bottom: 82px;            /* just clears the ~78px fixed bottom-nav, no dead gap */
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    scroll-padding-top: calc(var(--header-height) + 12px);
-}
+<!-- Last Visited Section – rendered by JS -->
+<div id="lastVisitedSection" style="display:none; padding: 0 16px; max-width: 800px; margin: 0 auto 8px; width: 100%; box-sizing: border-box;"></div>
 
-/* ---------- SECTION TABS ---------- */
-.section-tabs {
-    display: flex;
-    gap: 10px;
+<main id="mainContent"></main>
 
-    margin: 0 -20px 20px -20px;  /* break out of main padding */
-    padding: 0 20px 5px 20px;    /* restore internal spacing */
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
 
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-.section-tab {
-    background: rgba(255,255,255,0.2);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s;
-}
-.section-tab.active-tab {
-    background: #0056b3;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,86,179,0.3);
-}
+<!-- Floating buttons -->
+<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top">↑</button>
+<button class="float-btn" id="scrollToBottomBtn" title="Go to progress dashboard">↓</button>
 
-/* ---------- SUMMARY CARD ---------- */
-.sum-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 28px;
-    box-shadow: var(--glass-shadow);
-    animation: fadeInUp 0.6s ease forwards;
-    margin-bottom: 20px;
-    color: var(--text-primary);
-    word-wrap: break-word;
-}
-.sum-card h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--accent-universal);
-    padding-bottom: 10px;
-}
-.sum-card h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin: 30px 0 15px;
-}
-.sum-card p { margin: 15px 0; line-height: 1.6; color: var(--text-secondary); }
-.sum-card ul { margin-left: 25px; margin-bottom: 20px; }
-.sum-card li { margin-bottom: 8px; color: var(--text-secondary); line-height: 1.5; }
-.sum-card strong { color: var(--text-primary); }
-.highlight-box {
-    background: rgba(0, 123, 255, 0.1);
-    color: #004085;
-    font-weight: 600;
-    border-left: 4px solid #007bff;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 0 8px 8px 0;
-}
-.red-flag { border-left-color: #dc3545; }
-.red-flag h3 { color: #dc3545; border-bottom-color: #dc3545; }
-.red-flag .highlight-box { background: #fff3cd; border-left-color: #856404; }
+<script>
+    (function(){
+        "use strict";
 
-/* ---------- QUIZ SETUP ---------- */
-.quiz-setup-container {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 28px;
-    box-shadow: var(--glass-shadow);
-    animation: fadeInUp 0.6s ease forwards;
-}
-.setup-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-.setup-btn {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #444;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: all 0.2s;
-    border: 1px solid transparent;
-    cursor: pointer;
-}
-.setup-btn:active {
-    transform: scale(0.98);
-    background: #f0f8ff;
-    border-color: #007bff;
-}
-.setup-btn.challenge {
-    background: linear-gradient(to right, #fff8e1, #fff);
-    border: 1px solid #ffe082;
-    color: #b7791f;
-}
+        // ---------- THEME SYSTEM ----------
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+                const themes = ['dark', 'amoled', 'light', 'sepia', 'forest'];
+        function setTheme(theme) {
+            if (!themes.includes(theme)) theme = 'dark';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            // Update active class on all theme toggle buttons
+            document.querySelectorAll('.toggle-btn[id^="toggle"]').forEach(btn => btn.classList.remove('active'));
+            const id = 'toggle' + theme.charAt(0).toUpperCase() + theme.slice(1);
+            const activeBtn = document.getElementById(id);
+            if (activeBtn) activeBtn.classList.add('active');
+            // Update AMOLED badge visibility
+            const amoledBadge = document.getElementById('amoledBadge');
+            if (amoledBadge) amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
+        }
 
-/* ---------- QUIZ GAME ---------- */
-.quiz-container {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 28px;
-    box-shadow: var(--glass-shadow);
-    animation: fadeInUp 0.6s ease forwards;
-}
-.quiz-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-.option-btn {
-    padding: 18px;
-    background: rgba(255,255,255,0.8);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 12px;
-    text-align: left;
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.4;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    transition: all 0.2s;
-    cursor: pointer;
-}
-.option-btn:active {
-    background: #f0f0f0;
-    transform: scale(0.99);
-}
-.option-btn.correct {
-    background: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-    box-shadow: inset 0 0 0 2px #c3e6cb;
-}
-.option-btn.wrong {
-    background: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-    box-shadow: inset 0 0 0 2px #f5c6cb;
-}
-.quiz-feedback, .critical-feedback {
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.9);
-    border-left: 5px solid #ccc;
-    display: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-/*FLASHCARD 3D ---------⚡😭😭😭😭😭- */
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            setTheme(themes[(currentIndex + 1) % themes.length]);
+        }
 
-/*FLASHCARD 3D ---------⚡✅ FIXED- */
+        themeBtn.addEventListener('click', nextTheme);
 
-.scene {
-    width: 100%;
-    max-width: 700px;
-    height: 55vh; /* ⚡ THE FIX: Adapts height dynamically to the phone screen */
-    min-height: 300px; /* Never gets too small to read */
-    max-height: 340px; /* Never hogs the whole screen */
-    perspective: 1000px;
-    margin: 15px auto; 
-    touch-action: pan-y;
-    z-index: 10;
-}
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
 
-.card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform-style: preserve-3d;
-    /* Box-shadow removed here to prevent stacking overlap during flip */
-}
+        // ---------- FIX #1: Add event listeners to drawer theme buttons ----------
+        document.getElementById('toggleDark').addEventListener('click', () => setTheme('dark'));
+        document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
+        document.getElementById('toggleLight').addEventListener('click', () => setTheme('light'));
+        document.getElementById('toggleSepia').addEventListener('click', () => setTheme('sepia'));
+        document.getElementById('toggleForest').addEventListener('click', () => setTheme('forest'));
 
-.card.is-flipped {
-    transform: rotateY(180deg);
-}
+        // ---------- DRAWER CONTROLS ----------
+        const drawer = document.getElementById('notificationDrawer');
+        const overlay = document.getElementById('drawerOverlay');
+        const trigger = document.getElementById('drawerTrigger');
+        const closeBtn = document.getElementById('closeDrawerBtn');
 
-.card__face {
-    position: absolute;
-    inset: 0; /* ⚡ Locks the faces perfectly inside the .card boundary */
-    box-sizing: border-box; /* ⚡ Forces padding INSIDE the boundary */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Slightly reduced for better mobile fit */
-    text-align: center;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.8);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* ⚡ Shadow moved here */
-}
+        function openDrawer() {
+            drawer.classList.add('open');
+            overlay.classList.add('active');
+        }
+        function closeDrawer() {
+            drawer.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+        trigger.addEventListener('click', openDrawer);
+        closeBtn.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
 
-.card__face--front { color: #004e92; }
+        // Drawer shortcut buttons
+        document.getElementById('qsIndex').addEventListener('click', () => {
+            window.location.href = 'chapters/c-index.html?view=summary';
+        });
+        document.getElementById('qsAbout').addEventListener('click', () => {
+            window.location.href = 'about.html';
+        });
+        document.getElementById('qsJumpDown').addEventListener('click', () => {
+            const stats = document.getElementById('statsCard');
+            if (stats) {
+                stats.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+            closeDrawer();
+        });
+        document.getElementById('qsReload').addEventListener('click', () => {
+            window.location.reload();
+        });
+		
+		        document.getElementById('qsLogout').addEventListener('click', () => {
+            localStorage.removeItem('dcas_local_auth');
+            window.location.href = 'login.html';
+        });
+		
+        // ---------- FONT SIZE ACCESSIBILITY ----------
+        const FONT_SIZES = ['small', 'medium', 'large', 'xl'];
+        const FONT_BTN_IDS = { small: 'fontSmall', medium: 'fontMedium', large: 'fontLarge', xl: 'fontXL' };
 
-.card__face--back {
-    background: linear-gradient(135deg, #005c97 0%, #363795 100%);
-    color: white;
-    transform: rotateY(180deg);
-    overflow-y: auto;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    font-size: 1.1rem;
-    line-height: 1.5;
-    white-space: pre-wrap;
-}
+        function setFontSize(size) {
+            if (!FONT_SIZES.includes(size)) size = 'medium';
+            document.documentElement.setAttribute('data-font-size', size);
+            localStorage.setItem('dcas_font_size', size);
+            // Update active state on buttons
+            FONT_SIZES.forEach(s => {
+                const btn = document.getElementById(FONT_BTN_IDS[s]);
+                if (btn) btn.classList.toggle('active', s === size);
+            });
+        }
 
-.category-badge {
-    background: #e1f5fe;
-    color: #0277bd;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
+        // Apply saved font size on load
+        const savedFontSize = localStorage.getItem('dcas_font_size') || 'medium';
+        setFontSize(savedFontSize);
 
-.fc-progress {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    background: rgba(255,255,255,0.5);
-    padding: 6px 12px;
-    border-radius: 30px;
-    margin: 0 auto 10px;
-    width: fit-content;
-}
-/* Safeguard to keep buttons above the 3D card */
-.nav-row, .section-nav-slim, .back-home-ghost {
-    position: relative;
-    z-index: 20; 
-}
+        // Bind buttons
+        FONT_SIZES.forEach(size => {
+            const btn = document.getElementById(FONT_BTN_IDS[size]);
+            if (btn) btn.addEventListener('click', () => { setFontSize(size); });
+        });
 
-/* ---------- CRITICAL SCENARIOS ---------- */
-.critical-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 28px;
-    box-shadow: var(--glass-shadow);
-}
-.mistake-item {
-    background: #fff3cd;
-    border-left: 5px solid #ffeeba;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-}
+        // ---------- PROGRESS POPUP ----------
+        const progressToggle = document.getElementById('progressToggle');
+        const progressPopup = document.getElementById('progressPopup');
 
-/* ---------- NAVIGATION BUTTONS ---------- */
-.control-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 12px 24px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    background: var(--btn-grad-sum);
-    color: var(--text-sum);
-    border: 1px solid var(--border-sum);
-}
-.control-btn:active { transform: translateY(1px); box-shadow: none; }
-.control-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        function togglePopup(e) {
+            e.stopPropagation();
+            progressPopup.classList.toggle('show');
+        }
+        function hidePopup(e) {
+            if (!progressPopup.contains(e.target) && e.target !== progressToggle) {
+                progressPopup.classList.remove('show');
+            }
+        }
+        progressToggle.addEventListener('click', togglePopup);
+        document.addEventListener('click', hidePopup);
 
-.nav-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-.nav-row button {
-    background: linear-gradient(to bottom, #00b4db, #0083b0);
-    border: none;
-    color: white;
-    font-weight: 600;
-    padding: 12px 30px;
-    border-radius: 40px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.1s, box-shadow 0.1s;
-    min-width: 140px;
-}
-.nav-row button:active {
-    transform: scale(0.96);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.nav-row button:disabled { opacity: 0.5; cursor: not-allowed; }
+        // ---------- SCROLL BUTTONS ----------
+        const scrollTopBtn = document.getElementById('scrollToTopBtn');
+        const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
 
-.section-nav-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 15px;
-}
-.section-nav-row button {
-    background: #e2e8f0;
-    color: #1e293b;
-    border: 1px solid #94a3b8;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 40px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    flex: 1;
-    transition: background 0.2s;
-}
-.section-nav-row button:hover { background: #cbd5e1; }
-.section-nav-row button:disabled { opacity: 0.4; pointer-events: none; }
+        function updateFloatButtons() {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
 
-/* ---------- STATS CARD ---------- */
-.stats-card {
-    background: var(--glass-bg);
-    border-radius: 24px;
-    padding: 28px;
-    margin-top: 40px;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    animation: fadeInUp 0.8s ease forwards;
-}
-.progress-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-.progress-title { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
-.progress-container {
-    height: 12px;
-    background: rgba(0,0,0,0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 24px;
-}
-.progress-bar {
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #3b82f6, #0056b3);
-    transition: width 1s ease-out;
-}
-.stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-.stat-box {
-    background: rgba(0,0,0,0.03);
-    padding: 16px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-.stat-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-}
-.stat-value { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); }
-.encouragement {
-    margin-top: 20px;
-    padding: 16px;
-    border-radius: 16px;
-    background: var(--btn-grad-flash);
-    color: var(--text-flash);
-    font-weight: 600;
-    text-align: center;
-    border: 1px solid var(--border-flash);
-}
+            scrollTopBtn.classList.toggle('hidden', scrollY <= 200);
+            scrollBottomBtn.classList.toggle('hidden', documentHeight - (scrollY + windowHeight) <= 100);
+        }
+        window.addEventListener('scroll', updateFloatButtons);
+        window.addEventListener('resize', updateFloatButtons);
 
-/* ---------- MENU CARDS (for index) ---------- */
-.menu-grid { display: grid; gap: 20px; }
-.menu-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--glass-shadow);
-    transform: translateZ(0);
-    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.menu-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); }
-.menu-card[data-chapter] { border-left: 6px solid transparent; }
-.menu-card[data-chapter="universal"] { border-left-color: var(--accent-universal); }
-.menu-card[data-chapter="airway"] { border-left-color: var(--accent-airway); }
-.menu-card[data-chapter="cardio"] { border-left-color: var(--accent-cardio); }
-.menu-card[data-chapter="resus"] { border-left-color: var(--accent-resus); }
-.menu-card[data-chapter="neuro"] { border-left-color: var(--accent-neuro); }
-.menu-card[data-chapter="medical"] { border-left-color: var(--accent-medical); }
-.menu-card[data-chapter="trauma"] { border-left-color: var(--accent-trauma); }
-.menu-card[data-chapter="environmental"] { border-left-color: var(--accent-environmental); }
-.menu-card[data-chapter="pediatric"] { border-left-color: var(--accent-pediatric); }
-.menu-card[data-chapter="obstetric"] { border-left-color: var(--accent-obstetric); }
-.menu-card[data-chapter="mci"] { border-left-color: var(--accent-mci); }
-.menu-card[data-chapter="scope"] { border-left-color: var(--accent-scope); }
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        scrollBottomBtn.addEventListener('click', () => {
+            const stats = document.getElementById('statsCard');
+            if (stats) {
+                stats.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        });
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-}
-.status-badge {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    background: rgba(0,0,0,0.06);
-    padding: 4px 10px;
-    border-radius: 6px;
-}
-.menu-card h2 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0 0 6px 0; line-height: 1.3; }
-.menu-card p { font-size: 0.9rem; color: var(--text-secondary); margin: 0 0 20px 0; line-height: 1.5; }
+        // ---------- ENCOURAGEMENT ----------
+        const ENCOURAGEMENTS = [
+            "Every review sharpens your skills.", "Progress, not perfection.", "Small steps lead to mastery.",
+            "You've got this!", "Stay curious, stay sharp.", "Excellence is a habit.",
+            "Review. Refine. Remember.", "Your dedication matters.", "Keep pushing forward."
+        ];
 
-.menu-sub-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-}
-.btn-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.btn-action:active { transform: translateY(1px); box-shadow: none; }
-.btn-summary {
-    background: var(--btn-grad-sum);
-    color: var(--text-sum);
-    border: 1px solid var(--border-sum);
-}
-.btn-flash {
-    background: var(--btn-grad-flash);
-    color: var(--text-flash);
-    border: 1px solid var(--border-flash);
-}
-.btn-quiz {
-    background: var(--btn-grad-quiz);
-    color: var(--text-quiz);
-    border: 1px solid var(--border-quiz);
-}
-.btn-scenario {
-    background: var(--btn-grad-scen);
-    color: var(--text-scen);
-    border: 1px solid var(--border-scen);
-}
+        // ---------- LAST VISITED + BATTERY INDICATOR ----------
+        function renderLastVisited() {
+            const LV_KEY = 'dcas_last_visited';
+            let history = [];
+            try { history = JSON.parse(localStorage.getItem(LV_KEY) || '[]'); } catch(e) {}
+            const container = document.getElementById('lastVisitedSection');
+            if (!container) return;
+            if (!history || history.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            container.style.display = 'block';
+            const items = history.slice(0, 3).map(h => {
+                const ago = timeAgo(h.ts);
+                // Determine if path is relative or absolute
+                const href = h.path || h.url;
+                return `<a class="lv-item" href="${href}">
+                    <div class="lv-icon">🕐</div>
+                    <div class="lv-info">
+                        <div class="lv-title">${escapeHtml(h.title)}</div>
+                        <div class="lv-time">${ago}</div>
+                    </div>
+                    <div class="lv-arrow">›</div>
+                </a>`;
+            }).join('');
+            container.innerHTML = `
+                <div class="lv-header">
+                    <span class="lv-heading">📖 Continue Where You Left Off</span>
+                    <button class="lv-clear" id="lvClearBtn" title="Clear history">✕</button>
+                </div>
+                <div class="lv-list">${items}</div>`;
+            document.getElementById('lvClearBtn').addEventListener('click', () => {
+                localStorage.removeItem(LV_KEY);
+                container.style.display = 'none';
+            });
+        }
 
-/* ---------- TOGGLE (for completion) ---------- */
-.toggle-wrapper { position: relative; z-index: 5; }
-.toggle-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-}
-.toggle-input { display: none; }
-.toggle-track {
-    width: 44px;
-    height: 24px;
-    background: var(--toggle-bg);
-    border-radius: 20px;
-    position: relative;
-    transition: background 0.3s;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-}
-.toggle-track::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-.toggle-input:checked + .toggle-track { background: var(--toggle-active); }
-.toggle-input:checked + .toggle-track::after { transform: translateX(20px); }
+        function escapeHtml(s) {
+            if (!s) return '';
+            return s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+        }
 
-/* ---------- FOOTER ---------- */
-footer {
-    text-align: center;
-    padding: 16px 20px; /*🤔🤔🤔🤔🤔🤔🤔🤔🤔*/
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    position: relative;
-    left: 0;
-    right: 0;
-    isolation: isolate;
-}
+        function timeAgo(ts) {
+            const diff = Math.floor((Date.now() - ts) / 1000);
+            if (diff < 60)    return 'Just now';
+            if (diff < 3600)  return Math.floor(diff / 60) + ' min ago';
+            if (diff < 86400) return Math.floor(diff / 3600) + ' hr ago';
+            return Math.floor(diff / 86400) + ' days ago';
+        }
 
-/* Dark theme – brighten text so it's readable on dark bg */
-[data-theme="dark"] footer {
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.5);
-    border-top-color: rgba(255, 255, 255, 0.1);
-}
-[data-theme="light"] footer {
-    color: #334155;
-    background: rgba(255, 255, 255, 0.4);
-    border-top-color: rgba(0, 0, 0, 0.08);
-}
-[data-theme="sepia"] footer {
-    color: #4a3c2c;
-    background: rgba(180, 140, 100, 0.3);
-    border-top-color: rgba(180, 140, 100, 0.4);
-}
-[data-theme="forest"] footer {
-    background: rgba(20, 60, 45, 0.7) !important;
-    color: #d4edda !important;
-    border-top-color: rgba(100, 180, 130, 0.2);
-}
-footer div:first-child { font-weight: 500; margin-bottom: 4px; }
-footer div:last-child  { opacity: 0.85; font-size: 0.7rem; }
-footer a { color: inherit; text-decoration: underline; }
+        // Battery API – show icon in header when available
+        async function initBattery() {
+            if (!navigator.getBattery) return;
+            try {
+                const bat = await navigator.getBattery();
+                const el = document.getElementById('batteryIndicator');
+                if (!el) return;
+                function update() {
+                    const pct = Math.round(bat.level * 100);
+                    const charging = bat.charging;
+                    let icon = '🔋';
+                    // On AMOLED theme, show power-saving badge
+                    const theme = document.documentElement.getAttribute('data-theme');
+                    const amoledBadge = document.getElementById('amoledBadge');
+                    if (amoledBadge) {
+                        amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
+                    }
+                    if (pct <= 15) icon = '🪫';
+                    else if (pct <= 35) icon = '🔋';
+                    else icon = '🔋';
+                    if (charging) icon = '⚡';
+                    el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
+                    el.style.display = 'flex';
+                    // Low battery warning class
+                    el.classList.toggle('bat-low', pct <= 15 && !charging);
+                    el.classList.toggle('bat-charging', charging);
+                }
+                update();
+                bat.addEventListener('levelchange', update);
+                bat.addEventListener('chargingchange', update);
+            } catch(e) {}
+        }
 
-@keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
-}
+        initBattery();
+        renderLastVisited();
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 600px) {
-    .header-text h1 { font-size: 1rem; }
-    .header-text p { display: none; }
-    .section-nav-row { flex-direction: column; }
-    .nav-row button { padding: 10px 20px; min-width: 120px; }
-    .quiz-container, .quiz-setup-container, .critical-card, .sum-card { padding: 20px; }
-    .sum-card h3 { font-size: 1.3rem; }
-}
+        // ---------- COMPLETE CHAPTER LIST ----------
+        const CHAPTERS = [
+            { id: "c0", shortTitle: "2025 Updates", title: "What's New in 2025", hasCritical: false, isFirstInChapter: false, chapterGroup: null, isSpecial: true, specialGroup: "updates" },
+            { id: "c-index", shortTitle: "Index", title: "Full Table of Contents", hasCritical: false, isFirstInChapter: false, chapterGroup: null, isSpecial: true, specialGroup: "index" },
+            { id: "c1s1", shortTitle: "1.1 Universal Care", title: "Universal Care – Core Assessment", hasCritical: true, chapterFile: "c1", sectionParam: "c1s1", isFirstInChapter: true, chapterGroup: "universal" },
+            { id: "c1s2", shortTitle: "1.2 Documentation", title: "Patient Care Documentation", hasCritical: true, chapterFile: "c1", sectionParam: "c1s2", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s3", shortTitle: "1.3 Triage", title: "Patient Triage Categories", hasCritical: true, chapterFile: "c1", sectionParam: "c1s3", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s4", shortTitle: "1.4 Functional Needs", title: "Functional Needs", hasCritical: true, chapterFile: "c1", sectionParam: "c1s4", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s5", shortTitle: "1.5 Treated at Scene", title: "Treated at Scene", hasCritical: true, chapterFile: "c1", sectionParam: "c1s5", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c1s6", shortTitle: "1.6 Refusal of Transfer", title: "Patient Refusal of Transfer", hasCritical: true, chapterFile: "c1", sectionParam: "c1s6", isFirstInChapter: false, chapterGroup: "universal" },
+            { id: "c2s1", shortTitle: "2.1 Airway Management", title: "Airway & Breathing", hasCritical: true, chapterFile: "c2", sectionParam: "c2s1", isFirstInChapter: true, chapterGroup: "airway" },
+            { id: "c2s2", shortTitle: "2.2 FBAO", title: "Foreign Body Airway Obstruction", hasCritical: true, chapterFile: "c2", sectionParam: "c2s2", isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2s3", shortTitle: "2.3 Asthma", title: "Asthma", hasCritical: true, chapterFile: "c2", sectionParam: "c2s3", isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2s4", shortTitle: "2.4 COPD", title: "COPD", hasCritical: true, chapterFile: "c2", sectionParam: "c2s4", isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c2s5", shortTitle: "2.5 Invasive Ventilation", title: "Invasive (Mechanical) Ventilation", hasCritical: true, chapterFile: "c2", sectionParam: "c2s5", isFirstInChapter: false, chapterGroup: "airway" },
+            { id: "c3-1", shortTitle: "3.1 Chest Pain / ACS", title: "Chest Pain / Acute Coronary Syndrome", hasCritical: true, isFirstInChapter: true, chapterGroup: "cardio" },
+            { id: "c3-2", shortTitle: "3.2 Adult Bradycardia", title: "Adult Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-3", shortTitle: "3.3 Adult Tachycardia", title: "Adult Tachycardia with a Pulse", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c3-4", shortTitle: "3.4 Acute Pulmonary Edema", title: "Acute Pulmonary Edema", hasCritical: true, isFirstInChapter: false, chapterGroup: "cardio" },
+            { id: "c4-1", shortTitle: "4.1 Adult BLS", title: "Adult Basic Life Support", hasCritical: true, isFirstInChapter: true, chapterGroup: "resus" },
+            { id: "c4-2", shortTitle: "4.2 Pediatric BLS", title: "Pediatric Basic Life Support", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-3", shortTitle: "4.3 Adult Cardiac Arrest", title: "Adult Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-4", shortTitle: "4.4 Pediatric Cardiac Arrest", title: "Pediatric Cardiac Arrest", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-5", shortTitle: "4.5 Trauma Cardiac Arrest", title: "Cardiac Arrest in Trauma", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-6", shortTitle: "4.6 Newborn Resuscitation", title: "Newborn (<4 weeks) and Pre‑term Infant Resuscitation", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-7", shortTitle: "4.7 Post-ROSC", title: "Post Cardiac Arrest Care (ROSC)", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-8", shortTitle: "4.8 Starting/Stopping CPR", title: "Starting, Stopping and Transferring CPR", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c4-9", shortTitle: "4.9 Verification of Death", title: "Verification of Death", hasCritical: true, isFirstInChapter: false, chapterGroup: "resus" },
+            { id: "c5-1", shortTitle: "5.1 Stroke", title: "Stroke", hasCritical: true, isFirstInChapter: true, chapterGroup: "neuro" },
+            { id: "c5-2", shortTitle: "5.2 Seizures", title: "Seizures", hasCritical: true, isFirstInChapter: false, chapterGroup: "neuro" },
+            { id: "c6-1", shortTitle: "6.1 Abdominal Pain", title: "Abdominal Pain", hasCritical: true, isFirstInChapter: true, chapterGroup: "medical" },
+            { id: "c6-2", shortTitle: "6.2 Abnormal Behavior", title: "Abnormal Behavior", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-3", shortTitle: "6.3 Adrenal Insufficiency", title: "Adrenal Insufficiency", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-4", shortTitle: "6.4 Anaphylaxis", title: "Anaphylaxis / Allergic Reaction", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-5", shortTitle: "6.5 Altered Mental Status", title: "Altered Mental Status", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-6", shortTitle: "6.6 Epistaxis", title: "Epistaxis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-7", shortTitle: "6.7 Fever and Sepsis", title: "Fever and Sepsis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-8", shortTitle: "6.8 Hypoglycemia", title: "Hypoglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-9", shortTitle: "6.9 Hyperglycemia", title: "Hyperglycemia", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-10", shortTitle: "6.10 Nausea and Vomiting", title: "Nausea and Vomiting", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-11", shortTitle: "6.11 Non‑Traumatic Shock", title: "Non‑Traumatic Shock", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-12", shortTitle: "6.12 Pain Management", title: "Pain Management", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-13", shortTitle: "6.13 Sickle Cell Crisis", title: "Sickle Cell Crisis", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c6-14", shortTitle: "6.14 Alcohol Intoxication", title: "Suspected Alcohol Intoxication", hasCritical: true, isFirstInChapter: false, chapterGroup: "medical" },
+            { id: "c7-1", shortTitle: "7.1 General Trauma", title: "General Trauma Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "trauma" },
+            { id: "c7-2", shortTitle: "7.2 Burns", title: "Burns", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-3", shortTitle: "7.3 Crush Injuries", title: "Crush Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-4", shortTitle: "7.4 Limb Injuries", title: "Limb Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-5", shortTitle: "7.5 Spinal Motion Restriction", title: "Spinal Motion Restriction", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c7-6", shortTitle: "7.6 Traumatic Brain Injury", title: "Traumatic Brain Injuries", hasCritical: true, isFirstInChapter: false, chapterGroup: "trauma" },
+            { id: "c8-1", shortTitle: "8.1 General Toxicology", title: "General Toxicology Management", hasCritical: true, isFirstInChapter: true, chapterGroup: "environmental" },
+            { id: "c8-2", shortTitle: "8.2 Opioid Overdose", title: "Opioid Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-3", shortTitle: "8.3 Beta‑Blocker Overdose", title: "Beta‑Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-4", shortTitle: "8.4 CCB Overdose", title: "Calcium Channel Blocker Overdose", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-5", shortTitle: "8.5 Organophosphate", title: "Organophosphate Poisoning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-6", shortTitle: "8.6 Diving Emergencies", title: "Diving (SCUBA) Emergencies", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-7", shortTitle: "8.7 Drowning", title: "Drowning / Near Drowning", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-8", shortTitle: "8.8 Envenomation", title: "Envenomation", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-9", shortTitle: "8.9 Hypothermia", title: "Hypothermia / Cold Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c8-10", shortTitle: "8.10 Hyperthermia", title: "Hyperthermia / Heat Exposure", hasCritical: true, isFirstInChapter: false, chapterGroup: "environmental" },
+            { id: "c9-1", shortTitle: "9.1 Croup", title: "Croup", hasCritical: true, isFirstInChapter: true, chapterGroup: "pediatric" },
+            { id: "c9-2", shortTitle: "9.2 Pediatric Bradycardia", title: "Pediatric Bradycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            { id: "c9-3", shortTitle: "9.3 Pediatric Tachycardia", title: "Pediatric Tachycardia", hasCritical: true, isFirstInChapter: false, chapterGroup: "pediatric" },
+            { id: "c10-1", shortTitle: "10.1 Childbirth", title: "Childbirth", hasCritical: true, isFirstInChapter: true, chapterGroup: "obstetric" },
+            { id: "c10-2", shortTitle: "10.2 Post Partum Hemorrhage", title: "Post Partum Hemorrhage", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-3", shortTitle: "10.3 PV Hemorrhage", title: "PV Hemorrhage in Pregnancy", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c10-4", shortTitle: "10.4 Eclampsia", title: "Eclampsia / Pre‑eclampsia", hasCritical: true, isFirstInChapter: false, chapterGroup: "obstetric" },
+            { id: "c11-1", shortTitle: "11.1 START Triage", title: "S.T.A.R.T Triage (MCI Triage)", hasCritical: true, isFirstInChapter: true, chapterGroup: "mci" },
+            { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", hasCritical: false, isFirstInChapter: true, chapterGroup: "scope" },
+            { id: "m1-38", shortTitle: "M1–38 Formulary", title: "Medication Formulary (38 drugs)", hasCritical: false, isFirstInChapter: false, chapterGroup: "scope" }
+        ];
 
-/* ── Small screen section nav: stack vertically to prevent overlap ── */
-@media (max-width: 420px) {
-    .section-nav-slim {
-        flex-direction: column;
-        gap: 6px;
+        // ---------- STORAGE & LOGIC ----------
+        const COMPLETION_KEY = 'dcas_cpg_completion';
+        const STATS_KEY = 'dcas_cpg_stats';
+
+        function loadStorage(key, defaultVal) {
+            try { return JSON.parse(localStorage.getItem(key)) || defaultVal; } 
+            catch(e) { return defaultVal; }
+        }
+        function saveStorage(key, val) {
+            try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
+        }
+
+        function updateAllProgress() {
+            const stats = loadStorage(STATS_KEY, { totalAttempts: 0, critical: { total: 0, correct: 0 } });
+            const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+            const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
+            const completion = loadStorage(COMPLETION_KEY, {});
+            const completedCount = Object.values(completion).filter(v => v).length;
+            const quote = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+
+            document.getElementById('popupChaptersDone').innerText = `${completedCount}/${totalChaps}`;
+            document.getElementById('popupAttempts').innerText = stats.totalAttempts || 0;
+            document.getElementById('popupCritical').innerText = `${critAcc}%`;
+            document.getElementById('popupQuote').innerText = `✨ ${quote}`;
+            document.getElementById('drawerDone').innerText = `${completedCount}/${totalChaps}`;
+            document.getElementById('drawerAttempts').innerText = stats.totalAttempts || 0;
+            document.getElementById('drawerAcc').innerText = `${critAcc}%`;
+        }
+
+        window.app = window.app || {};
+        
+        // ---------- 🆕 NEW TOGGLE FUNCTION – NO RERENDER, NO FLICKER ----------
+        window.app.toggleCompletion = function(checkbox, chapterId) {
+            // Get the new checked state
+            const checked = checkbox.checked;
+            
+            // Update localStorage
+            const completion = loadStorage(COMPLETION_KEY, {});
+            completion[chapterId] = checked;
+            saveStorage(COMPLETION_KEY, completion);
+            
+            // Find the previous sibling <span> that contains the "Mark Done" / "Completed" text
+            // The HTML structure is: <span>text</span> <input ...> <span class="toggle-track"></span>
+            const textSpan = checkbox.previousElementSibling;
+            if (textSpan && textSpan.tagName === 'SPAN') {
+                textSpan.textContent = checked ? 'Completed' : 'Mark Done';
+            }
+            
+            // Update global progress stats (dashboard and drawer)
+            updateAllProgress();
+        };
+
+        // ---------- RENDER MENU ----------
+        function renderMenu(filterText = '') {
+            const stats = loadStorage(STATS_KEY, { chapters: {} });
+            const completion = loadStorage(COMPLETION_KEY, {});
+            
+            const contentHtml = CHAPTERS.map((ch, index) => {
+                const s = stats.chapters[ch.id] || { attempts: 0, totalScore: 0, totalMax: 0 };
+                const avg = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
+                const baseFile = ch.chapterFile || ch.id;
+                const sec = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
+                
+                if (ch.isSpecial) {
+                    let titleText, subtitleText;
+                    if (ch.id === 'c0') {
+                        titleText = "What's New";
+                        subtitleText = "2025 Updates";
+                    } else {
+                        titleText = "Index";
+                        subtitleText = "Full Table of Contents";
+                    }
+                    return `
+                        <a href="chapters/${baseFile}.html?view=summary" class="menu-card special-card" data-chapter="${ch.specialGroup}" style="animation-delay: ${index * 0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
+                            <h2>${titleText}</h2>
+                            <p>${subtitleText}</p>
+                        </a>
+                    `;
+                }
+
+                const isChecked = completion[ch.id] || false;
+                return `
+                    <div class="menu-card" data-chapter="${ch.chapterGroup || 'none'}" style="animation-delay: ${index * 0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
+                        <div class="card-header">
+                            <span class="status-badge">${ch.id.toUpperCase()}</span>
+                            <div class="toggle-wrapper">
+                                <label class="toggle-label">
+                                    <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
+                                    <input type="checkbox" class="toggle-input" 
+                                        ${isChecked ? 'checked' : ''} 
+                                        onchange="window.app.toggleCompletion(this, '${ch.id}')">
+                                    <span class="toggle-track"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <h2>${ch.shortTitle}</h2>
+                        <p>${ch.title} • ${s.attempts} attempts • Avg ${avg}%</p>
+                        
+                        <div class="menu-sub-options">
+                            <a href="chapters/${baseFile}.html?view=summary${sec}" class="btn-action btn-summary">📘 Summary</a>
+                            <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡Flashcards</a>
+                            <a href="chapters/${baseFile}.html?view=quiz${sec}" class="btn-action btn-quiz">📝 Quiz</a>
+                            <a href="chapters/${baseFile}.html?view=critical${sec}" class="btn-action btn-scenario">🚑 Scenario</a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
+            const completedCount = Object.values(completion).filter(v => v).length;
+            const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+            const quote = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+
+            const statsHtml = `
+                <div class="stats-card" id="statsCard">
+                    <div class="progress-header">
+                        <div class="progress-title">🚀 Progress Dashboard</div>
+                        <span style="font-weight:700; color:var(--primary-accent);">${overallPercent}%</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: ${overallPercent}%"></div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">Chapters Done</span>
+                            <span class="stat-value">${completedCount}/${totalChaps}</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Total Attempts</span>
+                            <span class="stat-value">${loadStorage(STATS_KEY, {totalAttempts:0}).totalAttempts || 0}</span>
+                        </div>
+                    </div>
+                    <div class="encouragement">✨ ${quote}</div>
+                </div>
+            `;
+
+            const fullHtml = `
+                <div class="search-container">
+                    <span>🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search chapters..." value="${filterText.replace(/"/g, '&quot;')}">
+                    <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'}>✕</button>
+                </div>
+                <div class="menu-grid" id="menuGrid">
+                    ${contentHtml}
+                </div>
+                <div class="offline-download">
+                    <button class="download-btn" id="downloadOfflineBtn">📥 Download All for Offline</button>
+                    <progress id="downloadProgress" value="0" max="100" style="display:none;"></progress>
+                </div>
+                ${statsHtml}
+            `;
+
+            document.getElementById('mainContent').innerHTML = fullHtml;
+            updateAllProgress();
+
+            // Search listener
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('searchClearBtn');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const val = e.target.value;
+                    if (clearBtn) clearBtn.style.display = val ? 'inline-flex' : 'none';
+                    filterCards(val);
+                });
+            }
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function() {
+                    searchInput.value = '';
+                    clearBtn.style.display = 'none';
+                    filterCards('');
+                });
+            }
+
+            // Offline download (keep existing)
+            const downloadBtn = document.getElementById('downloadOfflineBtn');
+            const progressBar = document.getElementById('downloadProgress');
+            async function downloadAllContent() {
+                if (!('caches' in window)) {
+                    alert('Your browser does not support caching.');
+                    return;
+                }
+                downloadBtn.disabled = true;
+                progressBar.style.display = 'block';
+                progressBar.value = 0;
+                const base = window.location.origin + (window.location.pathname.includes('/DCAS-CPG-Review-V1') ? '/DCAS-CPG-Review-V1' : '') + '/';
+                const filesToCache = [
+                    '/', '/index.html', '/login.html', '/about.html', '/styles.css', '/app.js', '/manifest.json',
+                    '/icons/icon.png', '/images/image-01.png',
+                    ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/content/${ch.chapterFile || ch.id}.js`),
+                    ...CHAPTERS.filter(ch => !ch.isSpecial).map(ch => `/chapters/${ch.chapterFile || ch.id}.html`)
+                ].map(path => path.startsWith('/') ? base + path.slice(1) : base + path);
+                filesToCache.push(base + 'content/c0.js', base + 'content/c-index.js');
+                filesToCache.push(base + 'chapters/c0.html', base + 'chapters/c-index.html');
+
+                const cache = await caches.open('dcas-cpg-v1');
+                let completed = 0, total = filesToCache.length;
+                for (const url of filesToCache) {
+                    try {
+                        const response = await fetch(url);
+                        if (response.ok) await cache.put(url, response);
+                    } catch (err) {}
+                    completed++;
+                    progressBar.value = (completed / total) * 100;
+                }
+                progressBar.value = 100;
+                downloadBtn.disabled = false;
+                setTimeout(() => { progressBar.style.display = 'none'; }, 2000);
+            }
+            downloadBtn.addEventListener('click', downloadAllContent);
+
+            if (filterText) filterCards(filterText);
+        }
+
+        // ---------- 🔒 FIX #2: Remove :not(.special-card) – filter ALL cards ----------
+        function filterCards(text) {
+            const cards = document.querySelectorAll('.menu-card'); // now includes special cards
+            const lowerText = text.toLowerCase().trim();
+            cards.forEach(card => {
+                const searchData = card.dataset.search || '';
+                if (searchData.toLowerCase().includes(lowerText)) {
+                    card.classList.remove('filtered-out');
+                } else {
+                    card.classList.add('filtered-out');
+                }
+            });
+        }
+
+        // ---------- HOME & INDEX BUTTONS ----------
+        const homeBtn = document.getElementById('homeBtn');
+        const indexBtn = document.getElementById('headerIndexBtn');
+        if(homeBtn) homeBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'index.html'; });
+        if(indexBtn) indexBtn.addEventListener('click', (e) => { e.preventDefault(); window.location.href = 'chapters/c-index.html?view=summary'; });
+
+        // ---------- 🛑 FIX #3: Stop propagation on toggle clicks to prevent page reload ----------
+        document.addEventListener('click', function(e) {
+            // Check if the click originated from inside the toggle wrapper
+            if (e.target.closest('.toggle-wrapper')) {
+                e.stopPropagation();
+            }
+        }, true); // use capture phase to intercept early
+
+        renderMenu();
+        updateFloatButtons();
+        updateAllProgress();
+    })();
+</script>
+
+    <!-- Add this just before the closing </script> in index.html -->
+<script>
+    // ---------- SCROLL POSITION MEMORY ----------
+    (function() {
+        // Save scroll position when leaving the page
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.setItem('mainScrollPos', window.scrollY);
+        });
+
+        // Restore scroll position after page is fully rendered
+        function restoreScroll() {
+            let saved = sessionStorage.getItem('mainScrollPos');
+            if (saved) {
+                // Give time for dynamic content to settle
+                setTimeout(function() {
+                    window.scrollTo(0, parseInt(saved));
+                    sessionStorage.removeItem('mainScrollPos');
+                }, 150);
+            }
+        }
+
+        // If page is loaded from bfcache (back/forward), also restore
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                restoreScroll();
+            }
+        });
+
+        // Restore after initial render
+        restoreScroll();
+    })();
+</script>
+    
+<!-- Service Worker Registration -->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('PWA Ready!', reg))
+                .catch(err => console.log('PWA Failed', err));
+        });
     }
-    .section-nav-slim button {
-        width: 100%;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 0.82rem;
-        padding: 9px 12px;
-    }
-    .back-home-ghost button,
-    .back-home-ghost a {
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-    }
-    /* Nav row stacks on tiny screens */
-    .nav-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-row button {
-        width: 100%;
-        min-width: unset;
-    }
-}
-
-/* ── Very small screens: reduce header clutter ── */
-@media (max-width: 400px) {
-    /* Tighten header spacing */
-    header { padding: 0 10px; }
-    .header-left { gap: 8px; }
-    .header-right { gap: 6px; }
-    .icon-btn { width: 34px; height: 34px; font-size: 1rem; border-radius: 10px; }
-
-    /* Hide About button – accessible via drawer */
-    #headerAboutBtn { display: none !important; }
-
-    /* Collapse stats badge to icon-only */
-    .stats-badge .stats-divider,
-    .stats-badge span:last-child { display: none; }
-    .stats-badge {
-        padding: 5px 8px;
-        gap: 4px;
-        font-size: 0.7rem;
-    }
-
-    /* Keep title readable */
-    .header-text h1 { font-size: 0.9rem; max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-}
-
-/* ========== MOBILE UX IMPROVEMENTS ========== */
-
-/* 🩺 KPI & ALERT BOXES */
-.kpi-box {
-    background: rgba(59, 130, 246, 0.15);
-    border-left: 5px solid #3b82f6;
-    padding: 18px;
-    border-radius: 4px 16px 16px 4px;
-    margin: 20px 0;
-}
-
-/* Slim section navigation (Previous/Next) – bolder */
-.section-nav-slim {
-    display: flex;
-    gap: 8px;
-    margin: 15px 0 10px;
-    justify-content: space-between;
-}
-.section-nav-slim button {
-    flex: 1;
-    background: rgba(255,255,255,0.15);
-    border: 1.5px solid rgba(255,255,255,0.35);
-    color: #ffffff;               /* always white – visible on any dark bg */
-    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-    border-radius: 30px;
-    padding: 10px 14px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-/* Light & sepia themes – use dark text for readability */
-[data-theme="light"] .section-nav-slim button,
-[data-theme="sepia"] .section-nav-slim button {
-    background: rgba(0,0,0,0.07);
-    border-color: rgba(0,0,0,0.15);
-    color: var(--text-primary);
-    text-shadow: none;
-}
-.section-nav-slim button:hover {
-    background: rgba(255,255,255,0.28);
-    border-color: rgba(255,255,255,0.6);
-}
-.section-nav-slim button:disabled { opacity: 0.3; cursor: not-allowed; }
-.section-nav-slim .finish-chapter {
-    background: var(--primary-accent);
-    color: white;
-    border: none;
-    font-weight: 700;
-}
-.section-nav-slim .finish-chapter:hover { filter: brightness(1.1); }
-
-/* Ghost text link for back home */
-.back-home-ghost {
-    text-align: center;
-    margin: 20px 0 10px;
-}
-.back-home-ghost a,
-.back-home-ghost button {
-    /* Clearly visible Home button on all themes */
-    background: rgba(255, 255, 255, 0.18);
-    border: 1.5px solid rgba(255, 255, 255, 0.55);
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 12px 32px;
-    border-radius: 40px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: background 0.2s, border-color 0.2s, transform 0.1s;
-    display: inline-block;
-}
-[data-theme="light"] .back-home-ghost button,
-[data-theme="sepia"] .back-home-ghost button {
-    background: rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.25);
-    color: var(--text-primary);
-    text-shadow: none;
-}
-.back-home-ghost a:hover,
-.back-home-ghost button:hover {
-    background: rgba(255, 255, 255, 0.28);
-    border-color: rgba(255, 255, 255, 0.8);
-    transform: translateY(-1px);
-}
-[data-theme="light"] .back-home-ghost button:hover,
-[data-theme="sepia"] .back-home-ghost button:hover {
-    background: rgba(0, 0, 0, 0.14);
-    border-color: var(--primary-accent);
-    color: var(--primary-accent);
-    transform: translateY(-1px);
-}
-
-/* Reduce header icon visual weight */
-.header-right .icon-btn { opacity: 0.8; transition: opacity 0.2s; }
-.header-right .icon-btn:hover { opacity: 1; }
-
-/* 📱 STICKY BOTTOM NAVIGATION – redesigned */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(10, 20, 30, 0.3);  /* very transparent */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-around;
-    padding: 6px 8px 18px 8px;  /* reduced height */
-    z-index: 2000;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;                  /* hidden by default */
-    transform: translateY(100%); /* off-screen */
-    pointer-events: none;        /* not clickable when hidden */
-}
-.bottom-nav.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.nav-pill {
-    flex: 1;
-    margin: 0 4px;
-    padding: 8px 4px;            /* smaller padding */
-    border-radius: 20px;          /* less curved */
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white !important;       /* force white text */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.7rem;            /* smaller font */
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    backdrop-filter: blur(4px);
-}
-.nav-pill i {
-    font-size: 1rem;              /* smaller icons */
-    margin-bottom: 2px;
-    display: block;
-}
-.nav-pill.active {
-    background: var(--primary-accent);
-    border-color: #60a5fa;
-    color: white;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-    transform: translateY(-1px);
-}
-.nav-pill:not(.active):hover {
-    background: rgba(255,255,255,0.2);
-}
-
-.bottom-nav.above-footer {
-    bottom: 80px;
-}
-
-/* ---------- View tabs (fallback) – keep but likely unused ---------- */
-.view-tabs {
-    display: flex;
-    gap: 8px;
-    margin: 15px 0 10px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 30px;
-    padding: 6px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.view-tab {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    background: transparent;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    border: 1px solid transparent;
-}
-.view-tab:not(.active-view) {
-    background: rgba(255,255,255,0.2);
-    color: var(--text-secondary);
-    border: 1px solid rgba(255,255,255,0.3);
-    opacity: 0.9;
-}
-.view-tab.active-view {
-    background: var(--primary-accent);
-    color: white;
-    border: 1px solid transparent;
-}
-.view-tab:hover {
-    background: rgba(255,255,255,0.3);
-    color: var(--text-primary);
-}
-
-/* Notification drawer – improve font size */
-.notification-drawer .toggle-label { font-size: 0.85rem; letter-spacing: 0.3px; }
-.drawer-stats .stat-text { font-size: 0.8rem; }
-.drawer-stats .stat-num { font-size: 1.4rem; }
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    .bottom-nav { padding: 4px 6px 14px 6px; }
-    .nav-pill { font-size: 0.65rem; padding: 6px 2px; }
-    .nav-pill i { font-size: 0.9rem; }
-    .view-tabs { flex-wrap: wrap; border-radius: 30px; padding: 4px; }
-    .view-tab { flex: 1 1 calc(50% - 8px); white-space: normal; font-size: 0.85rem; padding: 10px 4px; }
-}
-
-
-/* ═══════════════════════════════════════════════════════════
-   NEW FEATURE STYLES: battery, AMOLED badge, last-visited,
-   theme-row grid, content transitions
-═══════════════════════════════════════════════════════════ */
-
-/* ── Battery Indicator ─────────────────────────────────── */
-.bat-indicator {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--header-text);
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 4px 8px;
-    opacity: 0.85;
-    transition: background 0.3s, color 0.3s;
-    white-space: nowrap;
-}
-.bat-indicator .bat-pct { font-variant-numeric: tabular-nums; }
-.bat-indicator.bat-low {
-    background: rgba(220,38,38,0.25);
-    border-color: rgba(220,38,38,0.5);
-    color: #fca5a5;
-    animation: bat-pulse 2s ease-in-out infinite;
-}
-.bat-indicator.bat-charging {
-    background: rgba(34,197,94,0.2);
-    border-color: rgba(34,197,94,0.4);
-    color: #86efac;
-}
-@keyframes bat-pulse {
-    0%, 100% { opacity: 0.85; }
-    50%       { opacity: 0.45; }
-}
-
-/* ── AMOLED Power-Saving Badge ─────────────────────────── */
-.amoled-badge {
-    display: none;       /* shown via JS when amoled theme active */
-    align-items: center;
-    gap: 3px;
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    color: #00e5ff;
-    background: rgba(0,188,212,0.12);
-    border: 1px solid rgba(0,188,212,0.3);
-    border-radius: 20px;
-    padding: 3px 8px;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-/* ── Last Visited Widget ────────────────────────────────── */
-#lastVisitedSection {
-    margin-bottom: 4px;
-}
-.lv-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    padding: 0 2px;
-}
-.lv-heading {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.lv-clear {
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    font-size: 0.75rem;
-    cursor: pointer;
-    opacity: 0.5;
-    padding: 4px 8px;
-    border-radius: 8px;
-    transition: opacity 0.2s;
-}
-.lv-clear:hover { opacity: 1; }
-.lv-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-.lv-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 14px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 14px;
-    text-decoration: none;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: background 0.2s, transform 0.15s;
-    color: var(--text-primary);
-}
-.lv-item:active { transform: scale(0.98); background: rgba(255,255,255,0.9); }
-.lv-icon { font-size: 1.2rem; flex-shrink: 0; }
-.lv-info { flex: 1; min-width: 0; }
-.lv-title {
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.lv-time {
-    font-size: 0.72rem;
-    color: var(--text-secondary);
-    margin-top: 2px;
-}
-.lv-arrow {
-    font-size: 1.3rem;
-    color: var(--primary-accent);
-    font-weight: 300;
-    flex-shrink: 0;
-}
-/* Dark / AMOLED overrides for last-visited */
-[data-theme="dark"] .lv-item,
-[data-theme="amoled"] .lv-item {
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(255,255,255,0.12);
-}
-[data-theme="dark"] .lv-title,
-[data-theme="amoled"] .lv-title { color: #e8f4fd; }
-[data-theme="dark"] .lv-time,
-[data-theme="amoled"] .lv-time  { color: rgba(255,255,255,0.45); }
-[data-theme="amoled"] .lv-item  { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
-
-/* ── Content Fade-In Transition (CSS class, not inline opacity) ── */
-/* CRITICAL: NO transform on #mainContent — CSS transforms create a stacking context
-   that makes position:fixed children position relative to the element, not the viewport.
-   This was causing the progress bar to scroll with the content instead of staying fixed. */
-#mainContent {
-    will-change: opacity;   /* transform here would permanently break position:fixed children */
-}
-#mainContent.content-enter {
-    animation: contentFadeIn 0.22s ease forwards;
-}
-@keyframes contentFadeIn {
-    from { opacity: 0; }  /* opacity-only — no translateY */
-    to   { opacity: 1; }
-}
-
-/* ── Drawer theme/shortcut grids ────────────────────────── */
-/* Theme row: 5 columns */
-.toggles-grid.theme-row {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 8px;
-}
-/* Shortcut row: 4 columns */
-.toggles-grid.shortcut-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
-}
-/* AMOLED toggle button accent */
-.toggle-btn.amoled-btn {
-    background: #111111;
-    border-color: rgba(0,188,212,0.3);
-    color: #00e5ff;
-    font-size: 1rem;
-}
-.toggle-btn.amoled-btn.active {
-    background: #000000;
-    border-color: #00bcd4;
-    box-shadow: 0 0 14px rgba(0,188,212,0.5);
-}
-
-/* Hide battery on very small screens to avoid header crowding */
-@media (max-width: 380px) {
-    .bat-indicator { display: none !important; }
-    .amoled-badge  { display: none !important; }
-}
-
-/* ======================================================
-   GLOBAL SCROLL PROGRESS BAR
-   ====================================================== */
-
-#pageProgressBar {
-    position: fixed;
-    top: 0;               /* JS controls actual position */
-    left: 0;
-    width: 100%;
-    height: 4px;
-    z-index: 9998;
-    pointer-events: none;
-    transition: top 0.25s ease;
-}
-
-#pageProgressBar .progress-bar-scroll {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #22d3ee, #67e8f9);
-    transition: width 0.15s ease;
-}
-
-/* Theme variations */
-[data-theme="light"]  #pageProgressBar .progress-bar-scroll { background: linear-gradient(90deg, #0056b3, #38bdf8); }
-[data-theme="sepia"]  #pageProgressBar .progress-bar-scroll { background: linear-gradient(90deg, #8b6b4f, #c4a26b); }
-[data-theme="forest"] #pageProgressBar .progress-bar-scroll { background: linear-gradient(90deg, #84a98c, #b7e4c7); }
-[data-theme="amoled"] #pageProgressBar .progress-bar-scroll { background: linear-gradient(90deg, #00bcd4, #00e5ff); }
-
-
-/* ========================================================================
-   CENTRALIZED STYLES (moved from index.html inline <style> block)
-   ======================================================================== */
-
-/* ---------- SEARCH BAR ---------- */
-.search-container {
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 40px;
-    padding: 4px 4px 4px 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--glass-shadow);
-}
-.search-container span {
-    font-size: 1.2rem;
-    margin-right: 8px;
-    color: var(--text-secondary);
-}
-.search-container input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 12px 0;
-    font-size: 1rem;
-    color: var(--text-primary);
-    outline: none;
-}
-.search-container input::placeholder {
-    color: var(--text-secondary);
-    opacity: 0.7;
-}
-.search-container button {
-    background: transparent;
-    border: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-right: 4px;
-    padding: 0;
-}
-.search-container button:hover { background: rgba(255,255,255,0.1); color: var(--text-primary); }
-.search-container button:active { transform: scale(0.95); }
-
-/* ---------- MENU CARDS (home page) ---------- */
-.menu-card.filtered-out { display: none !important; }
-
-.menu-card.special-card {
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 16px 20px;
-    box-shadow: var(--glass-shadow);
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    border-left-width: 6px;
-    border-left-style: solid;
-}
-.menu-card.special-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); }
-.menu-card.special-card .card-header { display: none; }
-.menu-card.special-card h2 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 0 0 2px 0; line-height: 1.2; }
-.menu-card.special-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.3; }
-.menu-card.special-card[data-chapter="updates"] { border-left-color: #f39c12; }
-.menu-card.special-card[data-chapter="index"] { border-left-color: #3498db; }
-
-/* ---------- PROGRESS POPUP ---------- */
-.progress-popup {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--glass-shadow);
-    z-index: 1001;
-    min-width: 250px;
-    display: none;
-    color: var(--text-primary);
-}
-.progress-popup.show { display: block; }
-.progress-popup .popup-title { font-weight: 700; margin-bottom: 12px; color: var(--primary-accent); }
-.progress-popup .popup-item { display: flex; justify-content: space-between; margin-bottom: 8px; }
-.progress-popup .popup-quote { margin-top: 16px; font-style: italic; color: var(--text-secondary); border-top: 1px solid var(--glass-border); padding-top: 12px; }
-
-/* ---------- BUTTON GRID (chapter cards on home) ---------- */
-.menu-sub-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
-.btn-action {
-    width: 100%;
-    text-align: center;
-    padding: 12px 8px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    box-sizing: border-box;
-}
-@media (max-width: 360px) { .btn-action { font-size: 0.78rem; padding: 10px 4px; } }
-
-/* ---------- OFFLINE DOWNLOAD ---------- */
-.offline-download { margin: 20px 0; text-align: center; }
-.download-btn {
-    background: var(--primary-accent);
-    color: white;
-    border: none;
-    border-radius: 40px;
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.download-btn:active { transform: scale(0.98); }
-.download-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-progress { width: 100%; height: 20px; border-radius: 10px; margin-top: 10px; }
-progress::-webkit-progress-bar { background-color: var(--glass-bg); border-radius: 10px; }
-progress::-webkit-progress-value { background-color: var(--primary-accent); border-radius: 10px; }
-
-/* ---------- FLOAT BUTTONS ---------- */
-.float-btn {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(61, 100, 115, 0.7);
-    color: white;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: transform 0.2s, background 0.2s, opacity 0.2s;
-    z-index: 999;
-    backdrop-filter: blur(2px);
-    opacity: 0.8;
-}
-.float-btn:hover { transform: scale(1.1); background: var(--toggle-active); opacity: 1; }
-.float-btn:active { transform: scale(0.95); }
-.float-btn.hidden { opacity: 0; pointer-events: none; }
-#scrollToBottomBtn { bottom: 20px; right: 15px; }
-#scrollToTopBtn { bottom: 70px; right: 15px; }
-
-/* ---------- DRAWER ---------- */
-.drawer-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 2000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    backdrop-filter: blur(4px);
-}
-.drawer-overlay.active { opacity: 1; pointer-events: auto; }
-
-.notification-drawer {
-    position: fixed;
-    top: -700px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: rgba(20, 30, 40, 0.4);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    z-index: 2001;
-    padding: 25px 16px 35px;
-    border-radius: 0 0 30px 30px;
-    transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.notification-drawer.open { top: 0; }
-
-.toggles-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));  /* 5 cols: Dark Light Sepia Forest AMOLED */
-    gap: 8px;
-    width: 100%;
-}
-.toggle-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.toggle-btn {
-    width: 100%;
-    aspect-ratio: 1;
-    max-width: 56px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.08);
-    color: white;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 0 auto;
-}
-.toggle-btn.active {
-    background: var(--primary-accent);
-    border-color: var(--primary-accent);
-    color: white;
-    box-shadow: 0 0 15px var(--primary-accent);
-}
-/* AMOLED toggle gets special active style */
-#toggleAmoled.active {
-    background: #000;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 15px rgba(255,255,255,0.4);
-}
-.toggle-btn:active { transform: scale(0.92); }
-.toggle-label {
-    font-size: 0.68rem;
-    color: rgba(255, 255, 255, 0.85);
-    margin-top: 6px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
-.drawer-stats {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.stat-item { display: flex; flex-direction: column; align-items: center; }
-.stat-num { font-size: 1.3rem; font-weight: 700; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-.stat-text { font-size: 0.7rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-
-.close-drawer-btn { width: 100%; height: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0.5; margin-top: -10px; }
-
-.drawer-trigger {
-    position: absolute;
-    left: 50%;
-    bottom: -35px;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 999;
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: 0 0 30px 30px;
-    animation: floatDown 3s ease-in-out infinite;
-}
-.trigger-line { height: 3px; background: var(--primary-accent); border-radius: 3px; margin: 3px 0; box-shadow: 0 0 8px var(--primary-accent); }
-.trigger-line.top { width: 30px; }
-.trigger-line.bottom { width: 20px; }
-@keyframes floatDown {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(6px); }
-}
-
-/* ========================================================================
-   CONTENT FADE TRANSITION
-   ======================================================================== */
-/* #mainContent transition handled by content-enter animation class above */
-
-/* ========================================================================
-   LAST VISITED WIDGET
-   ======================================================================== */
-.last-visited-section {
-    margin-bottom: 28px;
-}
-.last-visited-section h3 {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-secondary);
-    margin: 0 0 10px 4px;
-}
-.last-visited-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.last-visited-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 14px;
-    padding: 11px 14px;
-    text-decoration: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
-    backdrop-filter: blur(8px);
-}
-.last-visited-item:hover { transform: translateX(4px); box-shadow: var(--glass-shadow); }
-.last-visited-item:active { transform: scale(0.98); }
-.lv-icon {
-    font-size: 1.3rem;
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,0.08);
-    border-radius: 10px;
-}
-.lv-text { flex: 1; min-width: 0; }
-.lv-title { font-size: 0.92rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lv-time { font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px; }
-.lv-arrow { color: var(--text-secondary); font-size: 0.8rem; flex-shrink: 0; opacity: 0.6; }
+</script>
+</body>
+</html>
