@@ -39,13 +39,13 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 /* ──── TOOL GRID ─────────────────────────────────────── */
 .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
 @media(min-width:500px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
-.tool-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px 14px 14px;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;gap:8px}
+.tool-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px 14px 14px;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
 .tool-card:active{transform:scale(.97)}
 .tool-card:hover{border-color:var(--br2)}
 .tc-icon{font-size:1.6rem;line-height:1}
 .tc-title{font-size:.88rem;font-weight:800;line-height:1.2}
 .tc-desc{font-size:.7rem;color:var(--muted);line-height:1.4}
-.tc-tag{align-self:flex-start;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:20px;border:1px solid;margin-top:2px}
+.tc-tag{align-self:center;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:20px;border:1px solid;margin-top:2px}
 .tag-neo{color:#a78bfa;border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.1)}
 .tag-trauma{color:#f87171;border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.1)}
 .tag-mci{color:#fbbf24;border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.1)}
@@ -204,7 +204,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 </head>
 <body>
 
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <header class="app-header">
   <a class="hdr-back" href="index.html">&#8592;</a>
   <div class="hdr-badge">&#x1F6A8;</div>
@@ -214,14 +213,12 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 </header>
 
-<!-- ═══════════════════════ MAIN ═══════════════════════ -->
 <main class="page-body">
 
   <p class="sec-hdr">Clinical Calculators</p>
 
   <div class="tool-grid">
 
-    <!-- APGAR -->
     <div class="tool-card" onclick="openApgar()">
       <div class="tc-icon">&#x1F476;</div>
       <div class="tc-title">APGAR Score</div>
@@ -229,7 +226,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       <span class="tc-tag tag-neo">Neonatal</span>
     </div>
 
-    <!-- BURNS -->
     <div class="tool-card" onclick="openBurns()">
       <div class="tc-icon">&#x1F525;</div>
       <div class="tc-title">Burn Surface Area</div>
@@ -237,7 +233,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       <span class="tc-tag tag-trauma">Trauma</span>
     </div>
 
-    <!-- RTS -->
     <div class="tool-card" onclick="openRts()">
       <div class="tc-icon">&#x1F4CA;</div>
       <div class="tc-title">Revised Trauma Score</div>
@@ -245,7 +240,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       <span class="tc-tag tag-trauma">Trauma</span>
     </div>
 
-    <!-- START -->
     <div class="tool-card" onclick="openStart()">
       <div class="tc-icon">&#x1F6A8;</div>
       <div class="tc-title">START Triage</div>
@@ -253,7 +247,13 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       <span class="tc-tag tag-mci">MCI</span>
     </div>
 	
-	<!-- AHA -->
+    <div class="tool-card" onclick="window.location.href='Carevent.html'">
+      <div class="tc-icon">🫁</div>
+      <div class="tc-title">O₂ Calculator</div>
+      <div class="tc-desc">Cylinder duration &amp; planning</div>
+      <span class="tc-tag tag-calc">Airway</span>
+    </div>
+
 	<div class="tool-card" onclick="window.location.href='aha.html'">
       <div class="tc-icon">❤️</div>
       <div class="tc-title">AHA Algorithms</div>
@@ -264,7 +264,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 </main>
 
-<!-- ═══════════════════════ BOTTOM SHEET ═══════════════════════ -->
 <div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
   <div class="bs-panel">
     <div class="bs-handle-wrap" onclick="closeSheet()">
@@ -278,7 +277,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 </div>
 
-<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
 <script>
 "use strict";
 
