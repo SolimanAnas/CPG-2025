@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · EMS Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════ DESIGN SYSTEM ═════════════════════════════ */
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#5a7080;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;--purple:#8b5cf6;
+  --mono:"DM Mono",monospace;--hdr:60px;--r:18px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(40,10,70,.5),transparent);pointer-events:none;z-index:-1}
+
+/* ──── HEADER ────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0;transition:background .15s}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#b45309,#d97706);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:0 4px 12px rgba(217,119,6,.4)}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+
+/* ──── PAGE BODY ─────────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:16px 14px 40px;max-width:680px;width:100%;margin:0 auto}
+
+/* ──── SECTION HEADER ───────────────────────────────── */
+.sec-hdr{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin:0 0 10px 2px}
+
+/* ──── TOOL GRID ─────────────────────────────────────── */
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+@media(min-width:500px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
+.tool-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px 14px 14px;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;gap:8px}
+.tool-card:active{transform:scale(.97)}
+.tool-card:hover{border-color:var(--br2)}
+.tc-icon{font-size:1.6rem;line-height:1}
+.tc-title{font-size:.88rem;font-weight:800;line-height:1.2}
+.tc-desc{font-size:.7rem;color:var(--muted);line-height:1.4}
+.tc-tag{align-self:flex-start;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:20px;border:1px solid;margin-top:2px}
+.tag-neo{color:#a78bfa;border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.1)}
+.tag-trauma{color:#f87171;border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.1)}
+.tag-mci{color:#fbbf24;border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.1)}
+.tag-calc{color:#6ee7b7;border-color:rgba(110,231,183,.3);background:rgba(110,231,183,.1)}
+
+/* ──── BOTTOM SHEET (shared overlay) ────────────────── */
+.bs-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:200;display:none;flex-direction:column;justify-content:flex-end}
+.bs-overlay.open{display:flex;animation:bsFI .2s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+.bs-panel{background:#0c1a2e;border-top:1px solid rgba(255,255,255,.1);border-radius:24px 24px 0 0;display:flex;flex-direction:column;max-height:92vh;padding-bottom:max(20px,env(safe-area-inset-bottom));animation:bsSU .34s cubic-bezier(.25,1,.5,1)}
+@keyframes bsSU{from{transform:translateY(70px);opacity:0}to{transform:translateY(0);opacity:1}}
+.bs-handle-wrap{padding:10px 0 2px;flex-shrink:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.18)}
+.bs-head{display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px;flex-shrink:0}
+.bs-htitle{font-size:1rem;font-weight:800}
+.bs-hclose{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:1px solid var(--br);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem}
+.bs-scroll{overflow-y:auto;flex:1;padding:0 14px 8px}
+.bs-scroll::-webkit-scrollbar{width:3px}
+.bs-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+
+/* ──── SHARED COMPONENT STYLES ──────────────────────── */
+/* Score hero */
+.score-hero{text-align:center;padding:14px 0 18px;border-bottom:1px solid var(--br);margin-bottom:14px}
+.score-ring{width:88px;height:88px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 10px;border:3px solid;transition:all .3s}
+.score-ring.g{border-color:var(--green);background:rgba(34,197,94,.1);box-shadow:0 0 24px rgba(34,197,94,.2)}
+.score-ring.y{border-color:var(--yellow);background:rgba(234,179,8,.1);box-shadow:0 0 24px rgba(234,179,8,.2)}
+.score-ring.r{border-color:var(--red);background:rgba(239,68,68,.12);box-shadow:0 0 24px rgba(239,68,68,.25);animation:rP 1.6s infinite}
+.score-ring.k{border-color:#374151;background:rgba(55,65,81,.2);box-shadow:none}
+@keyframes rP{0%,100%{box-shadow:0 0 18px rgba(239,68,68,.2)}50%{box-shadow:0 0 40px rgba(239,68,68,.45)}}
+.ring-num{font-size:2rem;font-weight:900;font-family:var(--mono);letter-spacing:-1.5px;line-height:1}
+.ring-sub{font-size:.62rem;color:var(--muted);font-weight:600}
+.hero-sev{font-size:.88rem;font-weight:700;margin-bottom:3px}
+.hero-interp{font-size:.74rem;color:var(--muted);line-height:1.4;max-width:300px;margin:0 auto}
+.sev-pill{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:4px 12px;font-size:.72rem;font-weight:700;margin-bottom:8px;border:1px solid}
+.pill-g{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#86efac}
+.pill-y{background:rgba(234,179,8,.09);border-color:rgba(234,179,8,.3);color:#fde047}
+.pill-r{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.pill-k{background:rgba(107,114,128,.1);border-color:rgba(107,114,128,.3);color:#9ca3af}
+
+/* GCS-style option buttons */
+.opt-grid{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
+.opt-btn{width:100%;display:flex;align-items:center;gap:12px;background:rgba(0,0,0,.18);border:1.5px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 13px;cursor:pointer;font-family:inherit;text-align:left;transition:all .18s;-webkit-user-select:none;user-select:none}
+.opt-btn:active{transform:scale(.984)}
+.opt-score{width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:800;font-family:var(--mono);color:var(--muted);flex-shrink:0;transition:all .18s}
+.opt-label{font-size:.83rem;font-weight:600;color:var(--text);flex:1}
+.opt-sub{font-size:.66rem;color:var(--muted);margin-top:1px;line-height:1.2}
+.opt-check{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.14);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.opt-btn.sel{border-color:rgba(6,182,212,.55);background:rgba(6,182,212,.1);box-shadow:0 0 0 2px rgba(6,182,212,.1)}
+.opt-btn.sel .opt-score{background:var(--cyan);border-color:var(--cyan);color:#fff;box-shadow:0 0 10px rgba(6,182,212,.45)}
+.opt-btn.sel .opt-label{color:#fff;font-weight:700}
+.opt-btn.sel .opt-check{background:var(--cyan);border-color:var(--cyan)}
+.opt-btn.sel .opt-check::after{content:"✓";font-size:.6rem;color:#fff;font-weight:900}
+
+/* Category card inside bottom sheet */
+.cat-card{background:var(--sf);border:1px solid var(--br);border-radius:14px;padding:14px;margin-bottom:10px}
+.cat-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.cat-progress{height:3px;background:rgba(255,255,255,.07);border-radius:2px;margin-bottom:10px;overflow:hidden}
+.cat-prog-bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--blue));border-radius:2px;transition:width .4s cubic-bezier(.25,1,.5,1)}
+
+/* Action rows */
+.act-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--br);font-size:.79rem;line-height:1.5}
+.act-row:last-child{border-bottom:none}
+.act-i{font-size:.95rem;flex-shrink:0;margin-top:1px}
+.act-t{flex:1;color:var(--text)}
+.act-t strong{color:#fff}
+
+/* Info row */
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.ig-card{background:var(--sf);border:1px solid var(--br);border-radius:12px;padding:10px 8px;text-align:center}
+.ig-val{font-size:1.2rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+.ig-lbl{font-size:.6rem;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:.6px}
+
+/* Reset btn */
+.reset-btn{width:100%;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5;border-radius:12px;padding:11px;font-size:.82rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:8px}
+.reset-btn:active{background:rgba(239,68,68,.2);transform:scale(.98)}
+
+/* Section divider */
+.div-line{height:1px;background:var(--br);margin:12px 0}
+
+/* Live score bar inside sheet (apgar/rts) */
+.live-bar{display:flex;align-items:center;justify-content:space-between;background:var(--sf);border:1px solid var(--br);border-radius:12px;padding:10px 16px;margin-bottom:12px}
+.lb-label{font-size:.7rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.8px}
+.lb-score{font-size:1.4rem;font-weight:900;font-family:var(--mono);transition:color .3s}
+
+/* ═══════════════════════════ BURN BODY DIAGRAM ══════════════════════════ */
+.body-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:10px}
+.body-btn{background:rgba(0,0,0,.2);border:1.5px solid rgba(255,255,255,.1);border-radius:13px;padding:13px 8px;cursor:pointer;text-align:center;transition:all .18s;-webkit-user-select:none;user-select:none;font-family:inherit}
+.body-btn:active{transform:scale(.96)}
+.body-btn.on{border-color:rgba(249,115,22,.55);background:rgba(249,115,22,.15);box-shadow:0 0 0 2px rgba(249,115,22,.12)}
+.body-btn.on .bb-pct{color:#fdba74}
+.body-btn.on .bb-icon{filter:none}
+.bb-icon{font-size:1.4rem;display:block;margin-bottom:4px;filter:grayscale(.5)}
+.bb-name{font-size:.74rem;font-weight:700;color:var(--text);display:block}
+.bb-pct{font-size:.68rem;font-family:var(--mono);color:var(--muted);display:block;margin-top:2px}
+
+/* TBSA display */
+.tbsa-display{background:var(--sf);border:1px solid var(--br);border-radius:14px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.tbsa-num{font-size:2rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+.tbsa-unit{font-size:.75rem;color:var(--muted);font-weight:600}
+
+/* Weight input */
+.wt-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.wt-input{flex:1;background:rgba(0,0,0,.3);border:1.5px solid var(--br);border-radius:11px;padding:11px 14px;font-size:.95rem;font-family:var(--mono);color:var(--text);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.wt-input:focus{border-color:var(--blue)}
+.wt-lbl{font-size:.72rem;color:var(--muted);flex-shrink:0}
+.parkland-box{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.28);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.pk-val{font-size:1.3rem;font-weight:900;font-family:var(--mono);color:#93c5fd}
+.pk-info{flex:1}
+.pk-name{font-size:.78rem;font-weight:700;color:#93c5fd}
+.pk-formula{font-size:.65rem;color:var(--muted);margin-top:2px}
+
+/* ═══════════════════════════ RTS CODED INPUTS ═══════════════════════════ */
+.coded-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:4px}
+.coded-btn{background:rgba(0,0,0,.2);border:1.5px solid rgba(255,255,255,.09);border-radius:9px;padding:9px 4px;cursor:pointer;text-align:center;font-family:inherit;transition:all .18s;-webkit-user-select:none;user-select:none}
+.coded-btn:active{transform:scale(.94)}
+.coded-btn.sel{border-color:rgba(6,182,212,.55);background:rgba(6,182,212,.15)}
+.coded-btn.sel .cb-code{color:var(--cyan)}
+.cb-code{font-size:1rem;font-weight:900;font-family:var(--mono);color:var(--muted);display:block;transition:color .15s}
+.cb-range{font-size:.58rem;color:var(--muted);display:block;margin-top:3px;line-height:1.2}
+.rts-param-label{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px;display:block}
+.rts-result-box{border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.rrb-g{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3)}
+.rrb-y{background:rgba(234,179,8,.09);border:1px solid rgba(234,179,8,.3)}
+.rrb-r{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3)}
+
+/* ═══════════════════════════ START TRIAGE FLOW ═══════════════════════════ */
+.start-flow{padding:6px 0}
+.sf-step{animation:sfIn .28s ease}
+@keyframes sfIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:translateX(0)}}
+.sf-q{font-size:1rem;font-weight:800;line-height:1.35;margin-bottom:20px;padding:0 2px}
+.sf-q small{display:block;font-size:.72rem;font-weight:500;color:var(--muted);margin-top:5px;line-height:1.4}
+.sf-btns{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.sf-btn{padding:15px 18px;border-radius:14px;font-size:.92rem;font-weight:700;font-family:inherit;cursor:pointer;border:2px solid;transition:all .18s;text-align:left;display:flex;align-items:center;gap:12px}
+.sf-btn:active{transform:scale(.97)}
+.sf-btn-y{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#86efac}
+.sf-btn-n{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.sf-btn-retry{background:rgba(234,179,8,.08);border-color:rgba(234,179,8,.3);color:#fde047}
+.sf-btn-icon{font-size:1.2rem}
+.sf-progress{display:flex;gap:5px;margin-bottom:18px}
+.sf-dot{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.1);transition:background .3s}
+.sf-dot.done{background:var(--cyan)}
+.sf-dot.active{background:var(--blue);animation:dotP 1s infinite}
+@keyframes dotP{0%,100%{opacity:.6}50%{opacity:1}}
+
+/* START result */
+.start-result{text-align:center;padding:10px 0 16px}
+.start-tag{width:80px;height:80px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 12px;font-weight:900;font-family:var(--mono)}
+.tag-r{background:rgba(239,68,68,.25);border:3px solid var(--red);color:var(--red)}
+.tag-y{background:rgba(234,179,8,.2);border:3px solid var(--yellow);color:var(--yellow)}
+.tag-g{background:rgba(34,197,94,.2);border:3px solid var(--green);color:var(--green)}
+.tag-k{background:rgba(55,65,81,.3);border:3px solid #6b7280;color:#9ca3af}
+.start-cat{font-size:1.1rem;font-weight:900;margin-bottom:4px}
+.start-sub{font-size:.78rem;color:var(--muted);margin-bottom:14px}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ HEADER ═══════════════════════ -->
+<header class="app-header">
+  <a class="hdr-back" href="index.html">&#8592;</a>
+  <div class="hdr-badge">&#x1F6A8;</div>
+  <div class="hdr-info">
+    <div class="hdr-title">EMS Tools</div>
+    <div class="hdr-sub">Clinical Calculators &amp; Decision Support</div>
+  </div>
+</header>
+
+<!-- ═══════════════════════ MAIN ═══════════════════════ -->
+<main class="page-body">
+
+  <p class="sec-hdr">Clinical Calculators</p>
+
+  <div class="tool-grid">
+
+    <!-- APGAR -->
+    <div class="tool-card" onclick="openApgar()">
+      <div class="tc-icon">&#x1F476;</div>
+      <div class="tc-title">APGAR Score</div>
+      <div class="tc-desc">Neonatal assessment at 1 &amp; 5 min</div>
+      <span class="tc-tag tag-neo">Neonatal</span>
+    </div>
+
+    <!-- BURNS -->
+    <div class="tool-card" onclick="openBurns()">
+      <div class="tc-icon">&#x1F525;</div>
+      <div class="tc-title">Burn Surface Area</div>
+      <div class="tc-desc">Rule of Nines + Parkland formula</div>
+      <span class="tc-tag tag-trauma">Trauma</span>
+    </div>
+
+    <!-- RTS -->
+    <div class="tool-card" onclick="openRts()">
+      <div class="tc-icon">&#x1F4CA;</div>
+      <div class="tc-title">Revised Trauma Score</div>
+      <div class="tc-desc">GCS + SBP + RR triage calculator</div>
+      <span class="tc-tag tag-trauma">Trauma</span>
+    </div>
+
+    <!-- START -->
+    <div class="tool-card" onclick="openStart()">
+      <div class="tc-icon">&#x1F6A8;</div>
+      <div class="tc-title">START Triage</div>
+      <div class="tc-desc">MCI step-by-step triage flow</div>
+      <span class="tc-tag tag-mci">MCI</span>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════════════ BOTTOM SHEET ═══════════════════════ -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
+  <div class="bs-panel">
+    <div class="bs-handle-wrap" onclick="closeSheet()">
+      <div class="bs-handle"></div>
+    </div>
+    <div class="bs-head">
+      <div class="bs-htitle" id="bsTitle">Tool</div>
+      <div class="bs-hclose" onclick="closeSheet()">&#x2715;</div>
+    </div>
+    <div class="bs-scroll" id="bsContent"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+"use strict";
+
+/* ─────────────────────── UTILS ─────────────────────── */
+function openSheet(title, html){
+  document.getElementById("bsTitle").textContent = title;
+  document.getElementById("bsContent").innerHTML = html;
+  document.getElementById("bsOverlay").classList.add("open");
+  document.getElementById("bsOverlay").scrollTop = 0;
+}
+function closeSheet(){
+  document.getElementById("bsOverlay").classList.remove("open");
+}
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeSheet(); });
+
+function cls(v){ return v>=7?"g": v>=4?"y":"r"; }
+function sColor(c){ return {g:"var(--green)",y:"var(--yellow)",r:"var(--red)",k:"#6b7280"}[c]; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   APGAR
+═══════════════════════════════════════════════════════════ */
+const APGAR_STATE = {A:null,P:null,G:null,Ac:null,R:null};
+const APGAR_LABELS = {
+  A:{2:"Pink all over",1:"Blue extremities / pale body",0:"Blue / pale all over"},
+  P:{2:"≥ 100 bpm",1:"< 100 bpm",0:"Absent"},
+  G:{2:"Cough / cry / sneeze",1:"Grimace",0:"No response"},
+  Ac:{2:"Active motion",1:"Some flexion",0:"Limp / none"},
+  R:{2:"Strong cry",1:"Weak / irregular",0:"Absent"}
+};
+const APGAR_FIELDS = [
+  {k:"A", label:"Appearance", icon:"🎨"},
+  {k:"P", label:"Pulse",      icon:"💓"},
+  {k:"G", label:"Grimace",    icon:"😬"},
+  {k:"Ac",label:"Activity",   icon:"✋"},
+  {k:"R", label:"Respiration",icon:"🫁"}
+];
+
+function openApgar(){
+  Object.keys(APGAR_STATE).forEach(k=>APGAR_STATE[k]=null);
+  renderApgar();
+}
+function renderApgar(){
+  const total = Object.values(APGAR_STATE).every(v=>v!==null)
+    ? Object.values(APGAR_STATE).reduce((a,b)=>a+b,0) : null;
+  const t = total;
+  const c = t!==null ? cls(t) : null;
+  const colMap = {g:"var(--green)",y:"var(--yellow)",r:"var(--red)"};
+
+  let html = "";
+
+  // Live score
+  html += `<div class="live-bar">
+    <span class="lb-label">APGAR Score</span>
+    <span class="lb-score" id="apgarLive" style="color:${c?colMap[c]:"var(--muted)"}">${t!==null?t:"—"} / 10</span>
+  </div>`;
+
+  // Each field
+  APGAR_FIELDS.forEach(f=>{
+    const cur = APGAR_STATE[f.k];
+    html += `<div class="cat-card">
+      <div class="cat-title">${f.icon} ${f.label}</div>
+      <div class="cat-progress"><div class="cat-prog-bar" style="width:${cur!==null?(cur/2*100):0}%"></div></div>
+      <div class="opt-grid">
+        ${[2,1,0].map(v=>`
+          <button class="opt-btn${cur===v?" sel":""}" onclick="apgarPick('${f.k}',${v})">
+            <div class="opt-score">${v}</div>
+            <div style="flex:1"><div class="opt-label">${APGAR_LABELS[f.k][v]}</div></div>
+            <div class="opt-check"></div>
+          </button>`).join("")}
+      </div>
+    </div>`;
+  });
+
+  // Result if complete
+  if(t!==null){
+    const sev = t>=7?"Normal — No resuscitation needed":t>=4?"Moderate distress — Stimulate, O₂, monitor":"Severe distress — Immediate resuscitation";
+    const sevShort = t>=7?"Normal":t>=4?"Moderate Distress":"Severe Distress";
+    const pillCls = t>=7?"pill-g":t>=4?"pill-y":"pill-r";
+    const icon = t>=7?"🟢":t>=4?"🟡":"🔴";
+    html += `<div class="score-hero">
+      <div class="score-ring ${c}">
+        <div class="ring-num" style="color:${colMap[c]}">${t}</div>
+        <div class="ring-sub">/10</div>
+      </div>
+      <div class="sev-pill ${pillCls}">${icon} ${sevShort}</div>
+      <div class="hero-interp">${sev}</div>
+    </div>`;
+
+    // EMS actions
+    html += `<div class="cat-card"><div class="cat-title">🚑 Neonatal Actions</div>`;
+    const acts = t>=7?[
+      {i:"✅",t:"<strong>No resuscitation needed</strong>",d:"Routine newborn care. Dry, warm, stimulate."},
+      {i:"🫁",t:"<strong>Monitor breathing</strong>",d:"SpO₂ monitor. Ensure airway clear."},
+      {i:"♨️",t:"<strong>Maintain warmth</strong>",d:"Dry immediately. Skin-to-skin or warm wrap."},
+    ]:t>=4?[
+      {i:"🫁",t:"<strong>Supplemental Oxygen</strong>",d:"Free-flow O₂ via mask. Target SpO₂ 90–95%."},
+      {i:"🔄",t:"<strong>Stimulate</strong>",d:"Dry, rub back, flick soles. Reassess in 30 sec."},
+      {i:"📋",t:"<strong>Reassess at 5 min</strong>",d:"Repeat APGAR. If no improvement → PPV."},
+    ]:[
+      {i:"🚨",t:"<strong>Positive Pressure Ventilation (PPV)</strong>",d:"BVM mask ventilation. Rate 40–60/min. 21% O₂ initially."},
+      {i:"🔌",t:"<strong>Cardiac Compression if HR < 60</strong>",d:"2-thumb technique. 3:1 compression:ventilation ratio."},
+      {i:"💉",t:"<strong>IV/UVC Access</strong>",d:"Epinephrine 0.01–0.03 mg/kg IV/IO if HR <60 after 30 sec CPR."},
+      {i:"🌡️",t:"<strong>Prevent hypothermia</strong>",d:"Warm wrap or polyethylene bag for premature infants."},
+    ];
+    acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
+    html += `</div>`;
+  }
+
+  html += `<button class="reset-btn" onclick="openApgar()">↺ Reset APGAR</button>`;
+  openSheet("APGAR Score", html);
+}
+function apgarPick(key,val){
+  if (navigator.vibrate) navigator.vibrate(10);
+  APGAR_STATE[key] = val;
+  renderApgar();
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   BURNS — Rule of Nines
+═══════════════════════════════════════════════════════════ */
+const BURNS_REGIONS = [
+  {k:"head",   label:"Head",        pct:9,  icon:"🧠"},
+  {k:"chest",  label:"Chest",       pct:18, icon:"🫀"},
+  {k:"back",   label:"Back",        pct:18, icon:"⬜"},
+  {k:"armL",   label:"Left Arm",    pct:9,  icon:"💪"},
+  {k:"armR",   label:"Right Arm",   pct:9,  icon:"💪"},
+  {k:"legL",   label:"Left Leg",    pct:18, icon:"🦵"},
+  {k:"legR",   label:"Right Leg",   pct:18, icon:"🦵"},
+  {k:"peri",   label:"Perineum",    pct:1,  icon:"⭕"}
+];
+let burnWeight = 0;
+const BURNS_STATE = {};
+BURNS_REGIONS.forEach(r=>BURNS_STATE[r.k]=false);
+
+function openBurns(){
+  BURNS_REGIONS.forEach(r=>BURNS_STATE[r.k]=false);
+  renderBurns();
+}
+function burnToggle(k){
+  if (navigator.vibrate) navigator.vibrate(10);
+  BURNS_STATE[k] = !BURNS_STATE[k];
+  renderBurns();
+}
+function renderBurns(){
+  const tbsa = BURNS_REGIONS.filter(r=>BURNS_STATE[r.k]).reduce((a,r)=>a+r.pct,0);
+  const wtEl = document.getElementById("burnWt"); const wt = wtEl ? parseFloat(wtEl.value) || 0 : 0;
+  const sev = tbsa<10?"Minor burn (<10% TBSA)":tbsa<=20?"Moderate burn (10–20% TBSA)":"Major burn (>20% TBSA)";
+  const sevClass = tbsa<10?"g":tbsa<=20?"y":"r";
+  const colMap={g:"var(--green)",y:"var(--yellow)",r:"var(--red)"};
+  const parkland = wt>0 ? (4*wt*tbsa).toFixed(0) : null;
+
+  let html = "";
+
+  // TBSA display
+  html += `<div class="tbsa-display">
+    <div>
+      <div class="tbsa-num" style="color:${colMap[sevClass]}">${tbsa}%</div>
+      <div class="tbsa-unit">Total Body Surface Area</div>
+    </div>
+    <div style="text-align:right">
+      <div class="sev-pill ${sevClass==="g"?"pill-g":sevClass==="y"?"pill-y":"pill-r"}" style="font-size:.68rem">${tbsa<10?"🟢":tbsa<=20?"🟡":"🔴"} ${tbsa<10?"Minor":tbsa<=20?"Moderate":"Major"}</div>
+      <div style="font-size:.65rem;color:var(--muted)">${sev.split("(")[1]?.replace(")","")}</div>
+    </div>
+  </div>`;
+
+  // Body region grid
+  html += `<div class="body-grid">`;
+  BURNS_REGIONS.forEach(r=>{
+    html += `<button class="body-btn${BURNS_STATE[r.k]?" on":""}" onclick="burnToggle('${r.k}')">
+      <span class="bb-icon">${r.icon}</span>
+      <span class="bb-name">${r.label}</span>
+      <span class="bb-pct">${r.pct}%</span>
+    </button>`;
+  });
+  html += `</div>`;
+
+  // Weight input for Parkland
+  html += `<div class="cat-card">
+    <div class="cat-title">💧 Parkland Formula</div>
+    <div class="wt-row">
+     <input class="wt-input" id="burnWt" type="number" inputmode="decimal" placeholder="Patient weight" min="1" max="300" oninput="burnWeight=this.value;updateParkland()" onkeydown="if(event.key==='Enter'){this.blur();if(navigator.vibrate)navigator.vibrate(10);}" value="${burnWeight || ''}">
+      <span class="wt-lbl">kg</span>
+    </div>
+    ${tbsa>0 ? `<div class="parkland-box">
+      <div class="pk-val">${parkland?parkland+" mL":"Enter weight"}</div>
+      <div class="pk-info">
+        <div class="pk-name">Total fluid / 24h</div>
+        <div class="pk-formula">4 mL × ${wt||"?"}kg × ${tbsa}% = ${parkland||"??"} mL RL</div>
+        <div class="pk-formula" style="margin-top:3px">½ in first 8h · ½ in next 16h</div>
+      </div>
+    </div>` : `<div style="font-size:.75rem;color:var(--muted)">Select body regions above to calculate</div>`}
+  </div>`;
+
+  // EMS actions
+  if(tbsa>0){
+    html += `<div class="cat-card"><div class="cat-title">🚑 EMS Actions</div>`;
+    const acts = tbsa<10?[
+      {i:"🫁",t:"<strong>O₂ if inhalation injury suspected</strong>",d:"High-flow 15L NRB. Check for singed nasal hairs, soot."},
+      {i:"💧",t:"<strong>IV Access</strong>",d:"Large-bore IV. Cover with clean dry dressings."},
+      {i:"🌡️",t:"<strong>Prevent hypothermia</strong>",d:"Remove burning clothing. Warm environment."},
+    ]:tbsa<=20?[
+      {i:"💧",t:"<strong>IV Fluid Resuscitation</strong>",d:"Lactated Ringer's. Start Parkland formula if >20 min to hospital."},
+      {i:"🚑",t:"<strong>Burns unit notification</strong>",d:"Pre-alert receiving facility. Cover with cling wrap."},
+      {i:"💊",t:"<strong>Analgesia</strong>",d:"Morphine 0.1 mg/kg IV titrated. Burns are extremely painful."},
+    ]:[
+      {i:"🚨",t:"<strong>Major Burn — Immediate resuscitation</strong>",d:"2 large-bore IVs. Parkland formula immediately."},
+      {i:"🫁",t:"<strong>Airway priority</strong>",d:"Burns >40% TBSA or facial burns → early intubation before oedema."},
+      {i:"💧",t:"<strong>Aggressive fluid therapy</strong>",d:"Lactated Ringer's. First 8h = half of 24h total."},
+      {i:"🏥",t:"<strong>Burns centre transport</strong>",d:"Bypass local ED if possible. Pre-alert burns team."},
+    ];
+    acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
+    html += `</div>`;
+  }
+
+  html += `<button class="reset-btn" onclick="openBurns()">↺ Reset Burns</button>`;
+  openSheet("Burn Surface Area", html);
+}
+function updateParkland(){
+  const wtEl = document.getElementById("burnWt");
+  const wt = wtEl ? parseFloat(wtEl.value) || 0 : 0;
+  const tbsa = BURNS_REGIONS.filter(r=>BURNS_STATE[r.k]).reduce((a,r)=>a+r.pct,0);
+  const pk = document.querySelector(".pk-val");
+  const pf = document.querySelector(".pk-formula");
+  if(pk && pf){
+    pk.textContent = wt>0&&tbsa>0 ? (4*wt*tbsa).toFixed(0)+" mL" : "Enter weight";
+    if(pf) pf.textContent = `4 mL × ${wt||"?"}kg × ${tbsa}% = ${wt>0?(4*wt*tbsa).toFixed(0):"??"} mL RL`;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   RTS — Revised Trauma Score
+═══════════════════════════════════════════════════════════ */
+const RTS_STATE = {gcs:null, sbp:null, rr:null};
+const RTS_OPTS = {
+  gcs:[
+    {code:4,range:"13–15"},{code:3,range:"9–12"},{code:2,range:"6–8"},
+    {code:1,range:"4–5"},{code:0,range:"3"}
+  ],
+  sbp:[
+    {code:4,range:"≥90"},{code:3,range:"76–89"},{code:2,range:"50–75"},
+    {code:1,range:"1–49"},{code:0,range:"0"}
+  ],
+  rr:[
+    {code:4,range:"10–29"},{code:3,range:">29"},{code:2,range:"6–9"},
+    {code:1,range:"1–5"},{code:0,range:"0"}
+  ]
+};
+
+function openRts(){
+  RTS_STATE.gcs=null; RTS_STATE.sbp=null; RTS_STATE.rr=null;
+  renderRts();
+}
+function rtsPick(field,code){
+  if (navigator.vibrate) navigator.vibrate(10);
+  RTS_STATE[field]=code;
+  renderRts();
+}
+function calcRts(){
+  const g=RTS_STATE.gcs, s=RTS_STATE.sbp, r=RTS_STATE.rr;
+  if(g===null||s===null||r===null) return null;
+  return parseFloat(((0.9368*g)+(0.7326*s)+(0.2908*r)).toFixed(3));
+}
+function renderRts(){
+  const rts = calcRts();
+  const allSet = rts !== null;
+  const c = allSet ? (rts>=7?"g":rts>=5?"y":"r") : null;
+  const colMap={g:"var(--green)",y:"var(--yellow)",r:"var(--red)"};
+
+  let html = "";
+
+  // Live score bar
+  html += `<div class="live-bar">
+    <span class="lb-label">RTS Score</span>
+    <span class="lb-score" style="color:${c?colMap[c]:"var(--muted)"}">${rts!==null?rts:"—"}</span>
+  </div>`;
+
+  // GCS
+  html += `<div class="cat-card">
+    <div class="cat-title">🧠 GCS Score</div>
+    <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.gcs!==null?(RTS_STATE.gcs/4*100):0}%"></div></div>
+    <span class="rts-param-label">Select GCS range → coded value</span>
+    <div class="coded-grid">
+      ${RTS_OPTS.gcs.map(o=>`<button class="coded-btn${RTS_STATE.gcs===o.code?" sel":""}" onclick="rtsPick('gcs',${o.code})">
+        <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
+      </button>`).join("")}
+    </div>
+  </div>`;
+
+  // SBP
+  html += `<div class="cat-card">
+    <div class="cat-title">🩺 Systolic BP (mmHg)</div>
+    <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.sbp!==null?(RTS_STATE.sbp/4*100):0}%"></div></div>
+    <span class="rts-param-label">Select SBP range → coded value</span>
+    <div class="coded-grid">
+      ${RTS_OPTS.sbp.map(o=>`<button class="coded-btn${RTS_STATE.sbp===o.code?" sel":""}" onclick="rtsPick('sbp',${o.code})">
+        <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
+      </button>`).join("")}
+    </div>
+  </div>`;
+
+  // RR
+  html += `<div class="cat-card">
+    <div class="cat-title">🫁 Respiratory Rate</div>
+    <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.rr!==null?(RTS_STATE.rr/4*100):0}%"></div></div>
+    <span class="rts-param-label">Select RR range → coded value</span>
+    <div class="coded-grid">
+      ${RTS_OPTS.rr.map(o=>`<button class="coded-btn${RTS_STATE.rr===o.code?" sel":""}" onclick="rtsPick('rr',${o.code})">
+        <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
+      </button>`).join("")}
+    </div>
+  </div>`;
+
+  // Result
+  if(allSet){
+    const sev = rts>=7?"Mild physiological derangement":rts>=5?"Moderate physiological compromise":"Severe physiological compromise";
+    const triage = rts>=7?"Delayed (Yellow)":rts>=5?"Urgent (Yellow/Red)":"Immediate (Red)";
+    const rrCls = rts>=7?"rrb-g":rts>=5?"rrb-y":"rrb-r";
+    const icon = rts>=7?"🟢":rts>=5?"🟡":"🔴";
+
+    html += `<div class="score-hero">
+      <div class="score-ring ${c}">
+        <div class="ring-num" style="color:${colMap[c]}">${rts}</div>
+        <div class="ring-sub">/ 7.84</div>
+      </div>
+      <div class="sev-pill ${c==="g"?"pill-g":c==="y"?"pill-y":"pill-r"}">${icon} ${triage}</div>
+      <div class="hero-interp">${sev}</div>
+    </div>`;
+
+    html += `<div class="info-grid">
+      <div class="ig-card"><div class="ig-val">${RTS_STATE.gcs}</div><div class="ig-lbl">GCS Coded</div></div>
+      <div class="ig-card"><div class="ig-val">${RTS_STATE.sbp}</div><div class="ig-lbl">SBP Coded</div></div>
+      <div class="ig-card"><div class="ig-val">${RTS_STATE.rr}</div><div class="ig-lbl">RR Coded</div></div>
+    </div>`;
+
+    html += `<div class="cat-card"><div class="cat-title">🚑 EMS Actions</div>`;
+    const acts = rts>=7?[
+      {i:"🟢",t:"<strong>Delayed triage</strong>",d:"Stable vitals. Can withstand short delay. Monitor continuously."},
+      {i:"📋",t:"<strong>Serial reassessment</strong>",d:"Repeat RTS every 10–15 min. Any deterioration = upgrade to immediate."},
+    ]:rts>=5?[
+      {i:"🟡",t:"<strong>Urgent intervention</strong>",d:"Significant physiological derangement. Transport without delay."},
+      {i:"💉",t:"<strong>IV access + fluid resuscitation</strong>",d:"Permissive hypotension if haemorrhagic trauma (SBP 80–90)."},
+      {i:"📡",t:"<strong>Pre-alert trauma centre</strong>",d:"Notify early. Consider air transport if available."},
+    ]:[
+      {i:"🔴",t:"<strong>IMMEDIATE — Life-saving intervention</strong>",d:"Critical physiological compromise. All resources immediately."},
+      {i:"🫁",t:"<strong>Airway management priority</strong>",d:"GCS coded ≤2 → intubation indicated. Protect from aspiration."},
+      {i:"💉",t:"<strong>IV/IO access × 2</strong>",d:"Large bore. Crystalloid bolus. MTP activation if haemorrhagic."},
+      {i:"🏥",t:"<strong>Trauma centre bypass</strong>",d:"Bypass community ED. Direct to Level I/II trauma centre."},
+    ];
+    acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
+    html += `</div>`;
+  }
+
+  html += `<button class="reset-btn" onclick="openRts()">↺ Reset RTS</button>`;
+  openSheet("Revised Trauma Score", html);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   START TRIAGE — Step-by-step MCI flow (simplified state)
+═══════════════════════════════════════════════════════════ */
+let currentStepId = "walk";
+let startHistory = [];
+const START_STEPS = [
+  {
+    id:"walk",
+    q:"Is the patient WALKING?",
+    sub:"Ask the patient to stand and walk. Anyone able to walk is Minor.",
+    yes:{result:"GREEN"},
+    no:"breathing"
+  },
+  {
+    id:"breathing",
+    q:"Is the patient BREATHING?",
+    sub:"Look, listen, feel. If not breathing → attempt to open airway first.",
+    yes:"rr",
+    no:"airway"
+  },
+  {
+    id:"airway",
+    q:"Open the airway — Did breathing START?",
+    sub:"Head-tilt chin-lift / jaw thrust. Give one attempt only.",
+    yes:{result:"RED"},
+    no:{result:"BLACK"}
+  },
+  {
+    id:"rr",
+    q:"Respiratory Rate > 30 breaths/min?",
+    sub:"Count for 15 seconds × 4. Laboured, gasping, or > 30 = RED.",
+    yes:{result:"RED"},
+    no:"perfusion"
+  },
+  {
+    id:"perfusion",
+    q:"Cap refill > 2 seconds OR no radial pulse?",
+    sub:"Squeeze fingernail for 5 sec. Release. Normal refill < 2 sec.",
+    yes:{result:"RED"},
+    no:"mental"
+  },
+  {
+    id:"mental",
+    q:"Cannot follow simple commands?",
+    sub:"Ask patient to squeeze your hand or open their eyes. Inability = RED.",
+    yes:{result:"RED"},
+    no:{result:"YELLOW"}
+  }
+];
+const START_RESULTS = {
+  RED:   {label:"IMMEDIATE",  icon:"I",  cls:"tag-r",  ringCls:"r", pill:"pill-r", actions:[
+    {i:"🔴",t:"<strong>IMMEDIATE treatment &amp; transport</strong>",d:"Life-threatening injury. First priority. Immediate life-saving intervention."},
+    {i:"🫁",t:"<strong>Open airway / Haemorrhage control</strong>",d:"Tourniquet, pressure dressings, needle decompression as indicated."},
+    {i:"🚑",t:"<strong>Load and go — minimize scene time</strong>",d:"Target scene time < 10 min. Transport to nearest trauma centre."},
+  ]},
+  YELLOW:{label:"DELAYED",    icon:"D",  cls:"tag-y",  ringCls:"y", pill:"pill-y", actions:[
+    {i:"🟡",t:"<strong>DELAYED — stable for now</strong>",d:"Significant injury but stable. Will need treatment but can wait."},
+    {i:"📋",t:"<strong>Reassess frequently</strong>",d:"Re-triage every 10 min. Can deteriorate to RED. Mark and monitor."},
+    {i:"💉",t:"<strong>Pain management when resources allow</strong>",d:"Analgesia if stable and resources available after RED patients treated."},
+  ]},
+  GREEN: {label:"MINOR",      icon:"M",  cls:"tag-g",  ringCls:"g", pill:"pill-g", actions:[
+    {i:"🟢",t:"<strong>MINOR — Walking wounded</strong>",d:"Ambulatory. Self-treating injuries. Direct to collection point."},
+    {i:"🏥",t:"<strong>Assign to treatment area</strong>",d:"Walking wounded can assist with other casualties under supervision."},
+    {i:"📋",t:"<strong>Monitor for deterioration</strong>",d:"GREEN can deteriorate. Reassess periodically."},
+  ]},
+  BLACK: {label:"EXPECTANT",  icon:"E",  cls:"tag-k",  ringCls:"k", pill:"pill-k", actions:[
+    {i:"⬛",t:"<strong>EXPECTANT — Unsurvivable / Deceased</strong>",d:"Injuries not survivable given current resources. Do not divert resources."},
+    {i:"📋",t:"<strong>Document and mark</strong>",d:"Note position, tag if available. Notify incident commander."},
+    {i:"🙏",t:"<strong>Reassess if resources allow</strong>",d:"If mass of critical patients clears, reassess BLACK patients."},
+  ]}
+};
+
+function openStart(){
+  currentStepId = "walk";
+  startHistory = [];
+  renderStart(START_STEPS[0]);
+}
+function startGo(answer){
+  if (navigator.vibrate) navigator.vibrate(10);
+  const cur = START_STEPS.find(s => s.id === currentStepId);
+  if (!cur) return;
+  const next = answer === "yes" ? cur.yes : cur.no;
+  startHistory.push({stepId: cur.id, answer, nextId: typeof next === "string" ? next : null});
+  if (typeof next === "object" && next.result) {
+    renderStartResult(next.result, cur);
+  } else if (typeof next === "string") {
+    currentStepId = next;
+    const nextStep = START_STEPS.find(s => s.id === next);
+    if (nextStep) {
+      renderStart(nextStep);
+    }
+  }
+}
+function renderStart(step){
+  if (!step) step = START_STEPS[0];
+  const totalSteps = START_STEPS.length;
+  const currentIndex = START_STEPS.findIndex(s => s.id === currentStepId);
+  const progressDots = Array.from({length:totalSteps}, (_,i) => 
+    `<div class="sf-dot${i < startHistory.length ? " done" : i === currentIndex ? " active" : ""}"></div>`
+  ).join("");
+
+  let html = `<div class="start-flow">
+    <div class="sf-progress">${progressDots}</div>
+    <div class="sf-step">
+      <div class="sf-q">${step.q}<small>${step.sub}</small></div>
+      <div class="sf-btns">
+        <button class="sf-btn sf-btn-y" onclick="startGo('yes')">
+          <span class="sf-btn-icon">✅</span> Yes
+        </button>
+        <button class="sf-btn sf-btn-n" onclick="startGo('no')">
+          <span class="sf-btn-icon">❌</span> No
+        </button>
+      </div>
+    </div>
+  </div>`;
+  html += `<button class="reset-btn" onclick="openStart()">↺ Restart Triage</button>`;
+  openSheet("START Triage — MCI", html);
+}
+function renderStartResult(resultKey, lastStep){
+  const r = START_RESULTS[resultKey];
+  let html = `<div class="start-result">
+    <div class="start-tag ${r.cls}">${r.icon}</div>
+    <div class="start-cat" style="color:${sColor(r.ringCls)}">${r.label}</div>
+    <div class="start-sub">Triage Category — ${resultKey==="RED"?"Immediate":resultKey==="YELLOW"?"Delayed":resultKey==="GREEN"?"Minor":"Expectant"}</div>
+    <div class="sev-pill ${r.pill}">${resultKey==="RED"?"🔴":resultKey==="YELLOW"?"🟡":resultKey==="GREEN"?"🟢":"⬛"} ${r.label}</div>
+  </div>`;
+
+  html += `<div class="cat-card"><div class="cat-title">🚑 Actions</div>`;
+  r.actions.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
+  html += `</div>`;
+
+  // Step trace
+  html += `<div class="cat-card" style="margin-top:4px"><div class="cat-title">📋 Decision Path</div>`;
+  startHistory.forEach((h,i)=>{
+    const s = START_STEPS.find(st=>st.id===h.stepId);
+    const ans = h.answer==="yes";
+    html += `<div class="act-row">
+      <div class="act-i" style="font-size:.75rem;font-family:var(--mono);color:var(--muted)">${i+1}</div>
+      <div class="act-t" style="font-size:.75rem">${s?s.q:""} → <strong style="color:${ans?"var(--green)":"var(--red)"}">${ans?"YES":"NO"}</strong></div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  html += `<button class="reset-btn" onclick="openStart()">↺ New Patient Triage</button>`;
+  openSheet("START Triage — MCI", html);
+}
+</script>
+</body>
+</html>
