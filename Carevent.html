@@ -74,19 +74,35 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .input-unit{position:relative}
 .unit-label{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;display:block}
 
-/* Pressure gauge visual */
+/* Pressure gauge visual - interactive as a slider */
 .pressure-gauge{
-  width:100%;height:8px;border-radius:4px;
+  width:100%;height:18px; /* Slightly thicker for better touch target */
+  border-radius:9px;
   background:rgba(255,255,255,.06);overflow:hidden;
   position:relative;
+  cursor:pointer;
+  touch-action:none; /* Prevent scrolling while dragging */
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
 .gauge-bar{
-  height:100%;border-radius:4px;
+  height:100%;border-radius:9px;
   background:linear-gradient(90deg,var(--red) 0%,var(--yellow) 40%,var(--green) 100%);
-  transition:width .4s cubic-bezier(.25,1,.5,1);
+  transition:width .1s linear; /* Faster transition for responsive drag */
   transform-origin:left;
+  position: relative;
 }
-.gauge-labels{display:flex;justify-content:space-between;font-size:.58rem;color:var(--muted);font-family:var(--mono);margin-top:4px}
+/* Thumb indicator for visual feedback */
+.gauge-bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 4px;
+}
+.gauge-labels{display:flex;justify-content:space-between;font-size:.58rem;color:var(--muted);font-family:var(--mono);margin-top:4px;padding:0 2px}
 
 /* Pressure presets */
 .pressure-presets{display:flex;gap:6px;flex-wrap:wrap}
@@ -94,16 +110,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .preset-btn:active{transform:scale(.95)}
 .preset-btn.full{color:#86efac;border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.08)}
 .preset-btn.warn{color:#fde047;border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.07)}
-
-/* Low pressure warning */
-.pressure-warn{
-  display:none;
-  background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);
-  border-radius:11px;padding:9px 12px;
-  font-size:.75rem;color:#fca5a5;font-weight:600;
-  display:flex;align-items:center;gap:7px;
-}
-.pressure-warn.show{display:flex}
 
 /* ── FLOW RATE ───────────────────────────────────────── */
 .flow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
@@ -246,7 +252,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 </head>
 <body>
 
-<!-- ── HEADER ──────────────────────────────────────────── -->
 <header class="app-header">
   <a class="hdr-back" href="index.html">←</a>
   <div class="hdr-badge">🫁</div>
@@ -256,20 +261,16 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 </header>
 
-<!-- ── MAIN CONTENT ────────────────────────────────────── -->
 <main class="page-body">
 
-  <!-- ── CYLINDER TYPE ──── -->
   <div>
     <div class="sec-label">🫙 Cylinder Size</div>
     <div class="glass-card" style="padding:12px">
       <div class="cyl-grid" id="cylGrid">
-        <!-- built by JS -->
-      </div>
+        </div>
     </div>
   </div>
 
-  <!-- ── PRESSURE ──── -->
   <div>
     <div class="sec-label">⏲ Gauge Pressure</div>
     <div class="glass-card">
@@ -280,20 +281,21 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
             <input class="num-input" id="pressureInput" type="number"
                    inputmode="decimal" placeholder="0 – 2500"
                    min="0" max="2500" step="10"
-                   oninput="onPressureInput()">
+                   oninput="onPressureInput()"
+                   onkeydown="if(event.key==='Enter') this.blur()">
             <div style="font-size:.85rem;font-weight:700;color:var(--muted);flex-shrink:0">PSI</div>
           </div>
         </div>
-        <!-- Gauge bar -->
+        
         <div>
-          <div class="pressure-gauge">
+          <div class="pressure-gauge" id="pressureGauge">
             <div class="gauge-bar" id="gaugeBar" style="width:0%"></div>
           </div>
           <div class="gauge-labels">
             <span>0</span><span>500</span><span>1000</span><span>1500</span><span>2000</span><span>2500</span>
           </div>
         </div>
-        <!-- Presets -->
+        
         <div>
           <div class="sec-label" style="margin-bottom:6px;font-size:.6rem">Quick Presets</div>
           <div class="pressure-presets">
@@ -304,32 +306,26 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
             <button class="preset-btn" onclick="setPreset(200)">200 PSI<br><span style="font-size:.58rem;font-weight:500">Low!</span></button>
           </div>
         </div>
-        <!-- Low pressure warning -->
-        <div class="pressure-warn" id="pressureWarn">
-          ⚠️ Pressure below 200 PSI — cylinder nearly empty. Consider switching now.
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- ── FLOW RATE ──── -->
   <div>
     <div class="sec-label">💨 Flow Rate (L/min)</div>
     <div class="glass-card" style="padding:12px">
       <div class="flow-grid" id="flowGrid">
-        <!-- built by JS -->
-      </div>
+        </div>
       <div class="flow-custom-row">
         <input class="flow-custom-input" id="customFlow" type="number"
                inputmode="decimal" placeholder="Custom L/min"
                min="0.1" max="25" step="0.5"
-               oninput="onCustomFlow()">
+               oninput="onCustomFlow()"
+               onkeydown="if(event.key==='Enter') this.blur()">
         <span style="font-size:.72rem;color:var(--muted);flex-shrink:0">L/min</span>
       </div>
     </div>
   </div>
 
-  <!-- ── QUANTITY ──── -->
   <div>
     <div class="sec-label">🔢 Number of Cylinders</div>
     <div class="glass-card">
@@ -344,13 +340,11 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     </div>
   </div>
 
-  <!-- ── CALCULATE BUTTON ──── -->
   <button class="calc-btn" id="calcBtn" onclick="calculate()" disabled>
     <span style="font-size:1.1rem">🫁</span>
     Calculate Duration
   </button>
 
-  <!-- ── ACTIVE TIMERS ──── -->
   <div id="timersSection" style="display:none">
     <div class="sec-label">⏱ Active O₂ Timers</div>
     <div class="timers-section" id="timersList"></div>
@@ -358,7 +352,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 </main>
 
-<!-- ── BOTTOM SHEET ─────────────────────────────────────── -->
 <div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
   <div class="bs-panel">
     <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
@@ -370,9 +363,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     JAVASCRIPT
-═══════════════════════════════════════════════════════ -->
 <script>
 'use strict';
 
@@ -402,6 +392,7 @@ const FLOW_RATES = [
 
 /* ── State ──────────────────────────────────────────── */
 const state = {
+  cylIdx:         null,
   cylinderLiters: null,
   cylinderLabel:  '',
   pressurePsi:    null,
@@ -411,6 +402,61 @@ const state = {
 
 let timers    = {};
 let timerData = [];
+
+/* ── State Management (Save/Load) ───────────────────── */
+function saveState() {
+  const s = {
+    cylIdx: state.cylIdx,
+    psi: state.pressurePsi,
+    flow: state.flowRate,
+    qty: state.quantity
+  };
+  localStorage.setItem('dcas_o2_state', JSON.stringify(s));
+}
+
+function loadState() {
+  try {
+    const cachedStr = localStorage.getItem('dcas_o2_state');
+    if (cachedStr) {
+      const cached = JSON.parse(cachedStr);
+      
+      // Load Cylinder
+      if (cached.cylIdx !== undefined && cached.cylIdx !== null) selectCyl(cached.cylIdx);
+      else selectCyl(1);
+      
+      // Load Pressure
+      if (cached.psi !== undefined && cached.psi !== null) setPreset(cached.psi);
+      else setPreset(1500);
+
+      // Load Flow
+      if (cached.flow !== undefined && cached.flow !== null) {
+        const flowIdx = FLOW_RATES.findIndex(f => f.rate === cached.flow);
+        if (flowIdx >= 0) selectFlow(flowIdx);
+        else {
+          document.getElementById('customFlow').value = cached.flow;
+          onCustomFlow();
+        }
+      } else {
+        selectFlow(5); // Default: 10 L/min
+      }
+
+      // Load Quantity
+      if (cached.qty !== undefined && cached.qty !== null) {
+        state.quantity = cached.qty;
+        document.getElementById('qtyDisplay').textContent = state.quantity;
+      }
+      return;
+    }
+  } catch(e) {}
+  
+  // Defaults if no cache
+  selectCyl(1);       // Size D
+  setPreset(1500);    // 1500 PSI
+  selectFlow(5);      // 10 L/min (index 5)
+  state.quantity = 1; // 1 cylinder
+  document.getElementById('qtyDisplay').textContent = state.quantity;
+}
+
 
 /* ── Build cylinder selector ────────────────────────── */
 function buildCylinders() {
@@ -427,6 +473,7 @@ function buildCylinders() {
 function selectCyl(idx) {
   document.querySelectorAll('.cyl-btn').forEach(b => b.classList.remove('sel'));
   document.getElementById('cyl-' + idx).classList.add('sel');
+  state.cylIdx         = idx;
   state.cylinderLiters = CYLINDERS[idx].liters;
   state.cylinderLabel  = CYLINDERS[idx].label + ' ' + CYLINDERS[idx].name;
   updateCalcBtn();
@@ -465,8 +512,6 @@ function onPressureInput() {
   state.pressurePsi = (!isNaN(val) && val >= 0) ? val : null;
   const pct = state.pressurePsi ? Math.min(100, (state.pressurePsi / 2500) * 100) : 0;
   document.getElementById('gaugeBar').style.width = pct + '%';
-  const warn = document.getElementById('pressureWarn');
-  warn.classList.toggle('show', state.pressurePsi !== null && state.pressurePsi > 0 && state.pressurePsi <= 200);
   updateCalcBtn();
 }
 
@@ -474,6 +519,47 @@ function setPreset(psi) {
   document.getElementById('pressureInput').value = psi;
   onPressureInput();
 }
+
+/* ── Interactive Gauge Slider Logic ─────────────────── */
+const gaugeEl = document.getElementById('pressureGauge');
+let isDraggingGauge = false;
+
+function updateGaugeDrag(e) {
+  const rect = gaugeEl.getBoundingClientRect();
+  const clientX = (e.touches && e.touches.length > 0) ? e.touches[0].clientX : e.clientX;
+  let x = clientX - rect.left;
+  let pct = Math.max(0, Math.min(1, x / rect.width));
+  let psi = Math.round((pct * 2500) / 10) * 10;
+  
+  document.getElementById('pressureInput').value = psi;
+  onPressureInput();
+}
+
+gaugeEl.addEventListener('mousedown', e => { 
+  isDraggingGauge = true; 
+  updateGaugeDrag(e); 
+});
+window.addEventListener('mousemove', e => { 
+  if (isDraggingGauge) updateGaugeDrag(e); 
+});
+window.addEventListener('mouseup', () => { 
+  isDraggingGauge = false; 
+});
+
+gaugeEl.addEventListener('touchstart', e => { 
+  isDraggingGauge = true; 
+  updateGaugeDrag(e); 
+});
+window.addEventListener('touchmove', e => { 
+  if (isDraggingGauge) {
+    e.preventDefault(); // Prevents page scrolling while sliding
+    updateGaugeDrag(e); 
+  }
+}, {passive: false});
+window.addEventListener('touchend', () => { 
+  isDraggingGauge = false; 
+});
+
 
 /* ── Quantity ───────────────────────────────────────── */
 function adjustQty(delta) {
@@ -488,6 +574,7 @@ function updateCalcBtn() {
                 state.pressurePsi   !== null && state.pressurePsi > 0 &&
                 state.flowRate      !== null && state.flowRate > 0;
   document.getElementById('calcBtn').disabled = !ready;
+  saveState(); // Cache state on every valid input change
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -732,6 +819,7 @@ document.addEventListener('keydown', e => {
 /* ── Init ───────────────────────────────────────────── */
 buildCylinders();
 buildFlowRates();
+loadState(); // Apply defaults/cached state
 </script>
 </body>
 </html>
