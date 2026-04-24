@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · Medical Assessment</title>
+<script>
+  (function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#5a7080;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;--purple:#8b5cf6;
+  --mono:"DM Mono",monospace;--hdr:60px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 80% 50% at 10% 0%,rgba(59,130,246,.09),transparent),radial-gradient(ellipse 70% 60% at 90% 100%,rgba(15,39,68,.85),transparent);pointer-events:none;z-index:-1}
+
+/* ── HEADER ──────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:70;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#1e3a8a,#2563eb);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:0 4px 14px rgba(37,99,235,.4)}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+.hdr-timer{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--cyan);flex-shrink:0;letter-spacing:-.5px}
+
+/* ── PROGRESS STRIP ──────────────────────────────────── */
+.progress-strip{position:sticky;top:var(--hdr);z-index:65;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--br);padding:10px 14px;flex-shrink:0}
+.ps-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
+.ps-label{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.ps-pct{font-size:.78rem;font-weight:800;font-family:var(--mono);color:var(--cyan)}
+.ps-bar{height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+.ps-bar-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--green));border-radius:3px;transition:width .5s cubic-bezier(.25,1,.5,1);width:0%}
+.phase-pills{display:flex;gap:5px;margin-top:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.phase-pills::-webkit-scrollbar{display:none}
+.phase-pill{flex-shrink:0;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:4px 10px;border-radius:20px;border:1px solid;cursor:pointer;transition:all .2s;white-space:nowrap}
+.phase-pill.done{opacity:.55}
+.phase-pill:active{transform:scale(.96)}
+
+/* ── PAGE BODY ───────────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:14px 14px 140px;max-width:680px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+
+/* ── PHASE SECTION HEADER ────────────────────────────── */
+.phase-hdr{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:16px;border-left:4px solid;margin-bottom:8px}
+.ph-icon{font-size:1.1rem;flex-shrink:0}
+.ph-info{flex:1}
+.ph-title{font-size:.9rem;font-weight:800}
+.ph-sub{font-size:.64rem;color:var(--muted);margin-top:1px}
+.ph-count{font-size:.65rem;font-weight:700;font-family:var(--mono);border-radius:20px;padding:3px 10px;flex-shrink:0;border:1px solid}
+
+/* ── STEP CARD ───────────────────────────────────────── */
+.step-card{background:var(--sf);border:1px solid var(--br);border-radius:16px;overflow:hidden;transition:border-color .25s;margin-bottom:6px}
+.step-card.checked{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.04)}
+.step-card.critical.checked{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.05)}
+.step-card.warn-item.checked{border-color:rgba(234,179,8,.4);background:rgba(234,179,8,.04)}
+
+.step-row{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;cursor:pointer;-webkit-user-select:none;user-select:none}
+.step-row:active{background:rgba(255,255,255,.04)}
+
+.step-check{width:24px;height:24px;border-radius:7px;border:2px solid rgba(255,255,255,.18);background:rgba(0,0,0,.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:1px}
+.step-check.c-done{background:var(--green);border-color:var(--green);box-shadow:0 0 10px rgba(34,197,94,.4)}
+.step-check.c-crit{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(239,68,68,.4)}
+.step-check.c-warn{background:var(--yellow);border-color:var(--yellow);box-shadow:0 0 10px rgba(234,179,8,.35)}
+.step-check.c-done::after,.step-check.c-crit::after,.step-check.c-warn::after{content:'✓';font-size:.72rem;color:#fff;font-weight:900}
+
+.step-body{flex:1;min-width:0}
+.step-title{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.3;transition:color .2s}
+.step-card.checked .step-title{color:rgba(221,230,240,.55)}
+.step-desc{font-size:.7rem;color:var(--muted);margin-top:3px;line-height:1.45}
+.step-badge{display:inline-flex;align-items:center;gap:3px;font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;border-radius:6px;padding:2px 7px;border:1px solid;margin-top:5px}
+.badge-critical{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.badge-intervene{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.badge-warn{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.28);color:#fde047}
+.badge-info{background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.28);color:#93c5fd}
+
+.step-note-row{padding:0 14px 12px 50px}
+.step-note{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--br);border-radius:10px;padding:8px 12px;font-size:.76rem;font-family:inherit;color:var(--text);resize:none;outline:none;min-height:44px;transition:border-color .2s;display:none}
+.step-note.open{display:block;animation:noteIn .18s ease}
+@keyframes noteIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.step-note:focus{border-color:rgba(59,130,246,.45)}
+.step-note::placeholder{color:var(--muted)}
+
+/* ── SUB-SECTION LABEL ───────────────────────────────── */
+.sub-sec{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;padding:10px 14px 6px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.sub-sec::after{content:'';flex:1;height:1px;background:var(--br)}
+
+/* ── AVPU PICKER ─────────────────────────────────────── */
+.avpu-row{display:flex;gap:6px;padding:0 14px 14px}
+.avpu-btn{flex:1;padding:9px 4px;border-radius:10px;font-size:.8rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.avpu-btn:active{transform:scale(.95)}
+.sel-A{background:rgba(34,197,94,.15)!important;border-color:rgba(34,197,94,.5)!important;color:#86efac!important}
+.sel-V{background:rgba(234,179,8,.1)!important;border-color:rgba(234,179,8,.4)!important;color:#fde047!important}
+.sel-P{background:rgba(249,115,22,.1)!important;border-color:rgba(249,115,22,.4)!important;color:#fdba74!important}
+.sel-U{background:rgba(239,68,68,.12)!important;border-color:rgba(239,68,68,.45)!important;color:#fca5a5!important}
+
+/* ── PRIORITY PICKER ─────────────────────────────────── */
+.priority-row{display:flex;gap:6px;padding:0 14px 14px}
+.pri-btn{flex:1;padding:9px 4px;border-radius:10px;font-size:.72rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.pri-btn:active{transform:scale(.95)}
+
+/* ── OPQRST INPUTS ───────────────────────────────────── */
+.opqrst-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 14px 14px}
+.opq-box{background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:12px;padding:10px 12px}
+.opq-key{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--cyan);margin-bottom:3px}
+.opq-label{font-size:.64rem;color:var(--muted);margin-bottom:6px}
+.opq-input{width:100%;background:transparent;border:none;outline:none;font-size:.8rem;font-family:inherit;color:var(--text);resize:none;min-height:36px}
+.opq-input::placeholder{color:rgba(90,112,128,.5);font-size:.72rem}
+
+/* ── VITALS GRID ─────────────────────────────────────── */
+.vitals-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 14px 14px}
+.vital-box{background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:12px;padding:10px 12px}
+.vital-label{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);margin-bottom:6px}
+.vital-input{width:100%;background:transparent;border:none;outline:none;font-size:1rem;font-weight:700;font-family:var(--mono);color:var(--cyan);padding:0;-webkit-appearance:none}
+.vital-input::placeholder{color:rgba(90,112,128,.5);font-weight:400;font-size:.82rem}
+.vital-unit{font-size:.6rem;color:var(--muted);margin-top:3px}
+.vital-box.ecg-box{border-color:rgba(139,92,246,.25);background:rgba(139,92,246,.06)}
+.vital-box.ecg-box .vital-label{color:#a78bfa}
+
+/* ── GCS INPUTS ──────────────────────────────────────── */
+.gcs-row{display:flex;gap:6px;padding:0 14px 14px}
+.gcs-box{flex:1;background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:11px;padding:9px 10px;text-align:center}
+.gcs-lbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:5px}
+.gcs-input{width:100%;text-align:center;background:transparent;border:none;outline:none;font-size:1rem;font-weight:800;font-family:var(--mono);color:var(--cyan)}
+.gcs-input::placeholder{color:rgba(90,112,128,.45);font-size:.72rem;font-weight:400}
+.gcs-total-box{background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);border-radius:11px;padding:9px 10px;text-align:center;flex:1}
+.gcs-total-num{font-size:1.1rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+
+/* ── PHYSICAL EXAM TOGGLE ────────────────────────────── */
+.phys-toggle{display:flex;gap:8px;padding:0 14px 14px}
+.phys-btn{flex:1;padding:12px 8px;border-radius:13px;font-size:.82rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center;line-height:1.35}
+.phys-btn:active{transform:scale(.97)}
+.phys-btn.sel-conscious{background:rgba(34,197,94,.14);border-color:rgba(34,197,94,.5);color:#86efac}
+.phys-btn.sel-aloc{background:rgba(239,68,68,.13);border-color:rgba(239,68,68,.5);color:#fca5a5}
+
+/* ── SIMPLE TEXT INPUTS ──────────────────────────────── */
+.text-input-row{padding:0 14px 14px}
+.ti-input{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--br);border-radius:11px;padding:10px 14px;font-size:.85rem;font-family:inherit;color:var(--text);outline:none;transition:border-color .2s;resize:none;min-height:48px}
+.ti-input:focus{border-color:rgba(59,130,246,.45)}
+.ti-input::placeholder{color:var(--muted)}
+
+/* ── RESULT GRID ─────────────────────────────────────── */
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 14px 14px}
+.result-btn{padding:13px 8px;border-radius:13px;font-size:.85rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.result-btn:active{transform:scale(.96)}
+.sel-excellent{background:rgba(34,197,94,.15)!important;border-color:rgba(34,197,94,.5)!important;color:#86efac!important}
+.sel-good{background:rgba(6,182,212,.12)!important;border-color:rgba(6,182,212,.45)!important;color:#67e8f9!important}
+.sel-adequate{background:rgba(234,179,8,.1)!important;border-color:rgba(234,179,8,.4)!important;color:#fde047!important}
+.sel-inadequate{background:rgba(239,68,68,.12)!important;border-color:rgba(239,68,68,.45)!important;color:#fca5a5!important}
+
+/* ── FAB ─────────────────────────────────────────────── */
+.fab{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:80;background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border:none;border-radius:30px;padding:15px 36px;font-size:.92rem;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 8px 28px rgba(37,99,235,.45);transition:all .18s;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.fab:active{transform:translateX(-50%) scale(.97)}
+.fab.ready{background:linear-gradient(135deg,#14532d,#16a34a);box-shadow:0 8px 28px rgba(22,163,74,.45)}
+
+/* ── BOTTOM SHEET ────────────────────────────────────── */
+.bs-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:200;display:none;flex-direction:column;justify-content:flex-end}
+.bs-overlay.open{display:flex;animation:bsFI .22s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+.bs-panel{background:#0a1728;border-top:1px solid rgba(255,255,255,.12);border-radius:24px 24px 0 0;display:flex;flex-direction:column;max-height:90vh;padding-bottom:max(20px,env(safe-area-inset-bottom));animation:bsSU .34s cubic-bezier(.25,1,.5,1)}
+@keyframes bsSU{from{transform:translateY(70px);opacity:0}to{transform:translateY(0);opacity:1}}
+.bs-handle-wrap{padding:10px 0 4px;cursor:pointer;display:flex;justify-content:center;flex-shrink:0}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.18)}
+.bs-head{display:flex;align-items:center;justify-content:space-between;padding:4px 16px 12px;border-bottom:1px solid var(--br);flex-shrink:0}
+.bs-htitle{font-size:.95rem;font-weight:800}
+.bs-hclose{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:1px solid var(--br);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem}
+.bs-hclose:active{background:var(--br2)}
+.bs-scroll{overflow-y:auto;flex:1;padding:16px}
+.bs-scroll::-webkit-scrollbar{width:3px}
+.bs-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+
+/* Summary */
+.sum-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.sum-stat{background:var(--sf);border:1px solid var(--br);border-radius:13px;padding:12px 10px;text-align:center}
+.sum-stat-val{font-size:1.3rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+.sum-stat-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-top:3px}
+.sum-phase{background:var(--sf);border:1px solid var(--br);border-radius:13px;padding:12px 14px;margin-bottom:8px}
+.sum-phase-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.sum-phase-name{font-size:.8rem;font-weight:700}
+.sum-phase-pct{font-size:.72rem;font-weight:700;font-family:var(--mono)}
+.sum-phase-bar{height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.sum-phase-fill{height:100%;border-radius:2px;transition:width .4s}
+.sum-miss-list{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.sum-miss-item{font-size:.72rem;color:#fca5a5;display:flex;align-items:flex-start;gap:6px}
+.sum-miss-dot{width:4px;height:4px;border-radius:50%;background:#fca5a5;flex-shrink:0;margin-top:5px}
+.sum-data-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.76rem;margin-bottom:14px}
+.sum-data-item{color:var(--muted)}
+.sum-data-item strong{color:var(--text)}
+.sum-result-box{border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;border:1.5px solid}
+.sum-result-icon{font-size:1.8rem;flex-shrink:0}
+.sum-result-title{font-size:.95rem;font-weight:800}
+.sum-result-sub{font-size:.72rem;margin-top:2px}
+.reset-btn{width:100%;padding:13px;border-radius:14px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5;font-size:.85rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:6px}
+.reset-btn:active{background:rgba(239,68,68,.2)}
+
+/* ── ECG Toggle ──────────────────────────────────────── */
+.ecg-toggle-row{display:flex;gap:8px;padding:0 14px 14px;align-items:center}
+.ecg-toggle-label{font-size:.78rem;color:var(--muted);flex:1}
+.toggle-switch{position:relative;width:46px;height:26px;flex-shrink:0}
+.toggle-switch input{opacity:0;width:0;height:0;position:absolute}
+.toggle-track{position:absolute;inset:0;background:rgba(255,255,255,.1);border:1px solid var(--br);border-radius:13px;cursor:pointer;transition:all .25s}
+.toggle-track::after{content:'';position:absolute;left:3px;top:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .25s;opacity:.4}
+input:checked ~ .toggle-track{background:rgba(139,92,246,.3);border-color:rgba(139,92,246,.6)}
+input:checked ~ .toggle-track::after{transform:translateX(20px);opacity:1;background:#a78bfa}
+.ecg-finding-row{padding:0 14px 14px}
+.ecg-finding-input{width:100%;background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.25);border-radius:11px;padding:10px 14px;font-size:.82rem;font-family:inherit;color:var(--text);outline:none;resize:none;min-height:48px;transition:border-color .2s}
+.ecg-finding-input:focus{border-color:rgba(139,92,246,.5)}
+.ecg-finding-input::placeholder{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header class="app-header">
+  <a class="hdr-back" href="ems-tools.html">←</a>
+  <div class="hdr-badge">🩺</div>
+  <div class="hdr-info">
+    <div class="hdr-title">Medical Assessment</div>
+    <div class="hdr-sub">DCAS CPG 2026 · Systematic Evaluation</div>
+  </div>
+  <div class="hdr-timer" id="hdrTimer">00:00</div>
+</header>
+
+<!-- ── PROGRESS STRIP ──────────────────────────────────── -->
+<div class="progress-strip">
+  <div class="ps-top">
+    <span class="ps-label">Overall Progress</span>
+    <span class="ps-pct" id="overallPct">0%</span>
+  </div>
+  <div class="ps-bar"><div class="ps-bar-fill" id="overallBar"></div></div>
+  <div class="phase-pills" id="phasePills"></div>
+</div>
+
+<!-- ── MAIN CONTENT ─────────────────────────────────────── -->
+<main class="page-body" id="pageBody"></main>
+
+<!-- ── FAB ─────────────────────────────────────────────── -->
+<button class="fab" id="fabBtn" onclick="openSummary()">
+  <span id="fabIcon">📋</span>
+  <span id="fabText">View Summary</span>
+</button>
+
+<!-- ── BOTTOM SHEET ─────────────────────────────────────── -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
+  <div class="bs-panel">
+    <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
+    <div class="bs-head">
+      <div class="bs-htitle">Assessment Summary</div>
+      <div class="bs-hclose" onclick="closeSheet()">✕</div>
+    </div>
+    <div class="bs-scroll" id="bsContent"></div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════
+   MEDICAL ASSESSMENT SCHEMA  —  DCAS CPG PDF
+═══════════════════════════════════════════════════════ */
+const SCHEMA = [
+
+  /* ── PHASE 1: SCENE SIZE-UP ─────────────────────── */
+  {
+    id:'scene', label:'Scene Size-Up', icon:'🏔️',
+    color:'#22c55e',
+    desc:'First actions before patient contact',
+    items:[
+      { id:'ppe',      type:'check', title:'PPE', desc:'Don appropriate personal protective equipment before approaching patient', badge:'critical' },
+      { id:'safety',   type:'check', title:'Scene Safety', desc:'Confirm scene is safe for crew, bystanders, and patient' },
+      { id:'noi',      type:'check', title:'Nature of Illness (NOI)', desc:'Identify the chief complaint and likely medical cause' },
+      { id:'numpt',    type:'check', title:'Number of Patients', desc:'Confirm number of patients requiring assessment and care' },
+      { id:'addres',   type:'check', title:'Additional Resources', desc:'Request ALS backup, specialty units, or additional crews if required' },
+    ]
+  },
+
+  /* ── PHASE 2: PRIMARY ASSESSMENT ────────────────── */
+  {
+    id:'primary', label:'Primary Assessment', icon:'🔴',
+    color:'#ef4444',
+    desc:'Rapid life-threat identification — intervene immediately',
+    items:[
+      { id:'gi_sub',   type:'subsection', label:'General Impression' },
+      { id:'age_sex',  type:'check', title:'Age & Gender', desc:'Estimate or confirm age and identify gender of patient' },
+      { id:'appear',   type:'check', title:'General Appearance', desc:'Skin colour, diaphoresis, distress level, affect, posture' },
+      { id:'position', type:'check', title:'Position', desc:'Note body position — lying, sitting, upright (tripod), supine' },
+      { id:'avpu',     type:'avpu',  title:'Mental Status (AVPU)', desc:'*ALOC — consider C-spine stabilization if fall or injury mechanism' },
+      { id:'airway',   type:'check', title:'Assess the Airway', desc:'Open and inspect — suction, OPA/NPA, BVM as indicated', badge:'critical' },
+      { id:'breathing',type:'check', title:'Assess Breathing', desc:'Rate, depth, effort — O₂ therapy, BVM assistance as indicated', badge:'critical' },
+      { id:'circ',     type:'check', title:'Assess Circulation', desc:'Pulse (rate, quality), skin (colour, temperature, condition), CRT — control external bleeding', badge:'critical' },
+      { id:'priority', type:'priority', title:'Establish Patient Priority', desc:'Classify patient as High / Medium / Low priority' },
+    ]
+  },
+
+  /* ── PHASE 3: SECONDARY ASSESSMENT ──────────────── */
+  {
+    id:'secondary', label:'Secondary Assessment', icon:'📋',
+    color:'#3b82f6',
+    desc:'Detailed history and physical findings',
+    items:[
+      /* OPQRST */
+      { id:'hx_sub',   type:'subsection', label:'History — OPQRST + SAMPLE' },
+      { id:'opqrst',   type:'opqrst' },
+      { id:'allergy',  type:'textinput', title:'Allergy', desc:'Drug, food, environmental, latex', placeholder:'Known allergies…' },
+      { id:'meds',     type:'textinput', title:'Medications', desc:'Current medications, doses, and adherence', placeholder:'Current medications…' },
+      { id:'pmhx',     type:'textinput', title:'Past Medical History', desc:'Relevant medical, surgical, and psychiatric history', placeholder:'Past medical history…' },
+      { id:'loi',      type:'textinput', title:'Last Oral Intake', desc:'Time and nature of most recent food or drink', placeholder:'e.g. 6 hours ago — rice meal' },
+      { id:'events',   type:'textinput', title:'Events Prior to Incident', desc:'What was the patient doing when symptoms began?', placeholder:'Events leading to this call…' },
+    ]
+  },
+
+  /* ── PHASE 4: VITAL SIGNS ────────────────────────── */
+  {
+    id:'vitals', label:'Vital Signs', icon:'📊',
+    color:'#06b6d4',
+    desc:'Full baseline physiological measurements',
+    items:[
+      { id:'vitals_inputs', type:'vitals' },
+      { id:'ecg_step',      type:'ecg' },
+      { id:'gcs_step',      type:'gcs' },
+    ]
+  },
+
+  /* ── PHASE 5: PHYSICAL EXAM ──────────────────────── */
+  {
+    id:'physexam', label:'Physical Exam', icon:'🔍',
+    color:'#8b5cf6',
+    desc:'Focused or complete exam based on mental status',
+    items:[
+      { id:'phys_type', type:'physexam' },
+    ]
+  },
+
+  /* ── PHASE 6: REASSESSMENT ───────────────────────── */
+  {
+    id:'reassess', label:'Reassessment', icon:'🔄',
+    color:'#f97316',
+    desc:'Ongoing monitoring en route — repeat every 5 min (critical) or 15 min (stable)',
+    items:[
+      { id:'r_loc',   type:'check', title:'LOC — Level of Consciousness', desc:'Reassess AVPU; note any change in mental status from baseline' },
+      { id:'r_abc',   type:'check', title:'ABC — Airway, Breathing, Circulation', desc:'Reassess all primary survey components — intervene if deterioration detected' },
+      { id:'r_vs',    type:'check', title:'V/S — Repeat Vital Signs', desc:'Compare serial vital signs — document trends and report to hospital' },
+      { id:'r_interv',type:'check', title:'Intervention', desc:'Reassess all interventions: O₂ delivery, IV access, medications given, monitoring leads' },
+    ]
+  },
+
+  /* ── PHASE 7: RESULTS ────────────────────────────── */
+  {
+    id:'results', label:'Performance Results', icon:'🏆',
+    color:'#06b6d4',
+    desc:'Overall performance rating for this assessment',
+    items:[
+      { id:'result_rating', type:'result' },
+    ]
+  },
+];
+
+/* ── State ──────────────────────────────────────────── */
+const ST = {
+  checked:   {},
+  notes:     {},
+  avpu:      null,
+  priority:  null,
+  physType:  null,
+  result:    null,
+  ecgDone:   false,
+  ecgFindings: '',
+  vitals:    { hr:'', rr:'', bp:'', spo2:'', rbs:'' },
+  gcs:       { e:'', v:'', m:'' },
+  opqrst:    { o:'', p:'', q:'', r:'', s:'', t:'' },
+  history:   { allergy:'', meds:'', pmhx:'', loi:'', events:'' },
+  physNotes: '',
+  startTime: Date.now(),
+};
+
+/* ── BUILD PAGE ─────────────────────────────────────── */
+function buildPage() {
+  const body  = document.getElementById('pageBody');
+  const pills = document.getElementById('phasePills');
+  body.innerHTML = '';
+  pills.innerHTML = '';
+
+  SCHEMA.forEach(phase => {
+    /* Pill */
+    const pill = document.createElement('button');
+    pill.className = 'phase-pill';
+    pill.id = 'pill-' + phase.id;
+    pill.style.color = phase.color;
+    pill.style.borderColor = phase.color + '55';
+    pill.style.background  = phase.color + '16';
+    pill.textContent = phase.icon + ' ' + phase.label;
+    pill.onclick = () => document.getElementById('phase-' + phase.id)?.scrollIntoView({ behavior:'smooth', block:'start' });
+    pills.appendChild(pill);
+
+    /* Section wrapper */
+    const sec = document.createElement('div');
+    sec.id = 'phase-' + phase.id;
+    sec.innerHTML = `<div class="phase-hdr" style="background:${phase.color}12;border-color:${phase.color}">
+      <div class="ph-icon">${phase.icon}</div>
+      <div class="ph-info">
+        <div class="ph-title" style="color:${phase.color}">${phase.label}</div>
+        <div class="ph-sub">${phase.desc}</div>
+      </div>
+      <div class="ph-count" id="count-${phase.id}" style="color:${phase.color};background:${phase.color}18;border-color:${phase.color}40">0%</div>
+    </div>`;
+
+    phase.items.forEach(item => buildItem(sec, item, phase));
+    body.appendChild(sec);
+  });
+}
+
+function buildItem(parent, item, phase) {
+  if (item.type === 'subsection') {
+    const d = document.createElement('div');
+    d.className = 'sub-sec';
+    d.style.color = phase.color;
+    d.innerHTML = '<span>' + item.label + '</span>';
+    parent.appendChild(d);
+    return;
+  }
+  if (item.type === 'avpu')     { parent.appendChild(buildAVPU(item)); return; }
+  if (item.type === 'priority') { parent.appendChild(buildPriority(item)); return; }
+  if (item.type === 'opqrst')   { parent.appendChild(buildOPQRST()); return; }
+  if (item.type === 'textinput'){ parent.appendChild(buildTextInput(item)); return; }
+  if (item.type === 'vitals')   { parent.appendChild(buildVitals()); return; }
+  if (item.type === 'ecg')      { parent.appendChild(buildECG()); return; }
+  if (item.type === 'gcs')      { parent.appendChild(buildGCS()); return; }
+  if (item.type === 'physexam') { parent.appendChild(buildPhysExam()); return; }
+  if (item.type === 'result')   { parent.appendChild(buildResult()); return; }
+
+  // Default checkbox
+  const card = document.createElement('div');
+  const isCrit = item.badge === 'critical' || item.badge === 'intervene';
+  card.className = 'step-card' + (isCrit ? ' critical' : item.badge === 'warn' ? ' warn-item' : '');
+  card.id = 'card-' + item.id;
+  const chkCls = isCrit ? 'c-crit' : item.badge === 'warn' ? 'c-warn' : 'c-done';
+  const badgeHtml = item.badge ? `<span class="step-badge badge-${item.badge}">${
+    item.badge==='critical'?'⚠ Critical':item.badge==='intervene'?'🚨 Intervene':'⚡ Important'
+  }</span>` : '';
+
+  card.innerHTML = `<div class="step-row" onclick="toggleStep('${item.id}','${chkCls}')">
+    <div class="step-check" id="chk-${item.id}"></div>
+    <div class="step-body">
+      <div class="step-title">${item.title}</div>
+      <div class="step-desc">${item.desc}</div>
+      ${badgeHtml}
+    </div>
+  </div>
+  <div class="step-note-row">
+    <textarea class="step-note" id="note-${item.id}" placeholder="Add note…" rows="2"
+      oninput="ST.notes['${item.id}']=this.value"></textarea>
+  </div>`;
+
+  // Long-press → note
+  let pt;
+  card.querySelector('.step-row').addEventListener('touchstart', () => { pt = setTimeout(() => showNote(item.id), 600); }, { passive:true });
+  card.querySelector('.step-row').addEventListener('touchend',   () => clearTimeout(pt));
+  card.querySelector('.step-row').addEventListener('touchmove',  () => clearTimeout(pt), { passive:true });
+  parent.appendChild(card);
+}
+
+function showNote(id) {
+  const n = document.getElementById('note-' + id);
+  if (n) { n.classList.add('open'); n.focus(); }
+}
+
+/* ── Interactive builders ───────────────────────────── */
+function buildAVPU(item) {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-avpu';
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">${item.title}</div>
+    <div class="step-desc" style="margin-top:3px">${item.desc}</div>
+    <span class="step-badge badge-warn" style="margin-top:6px">⚡ ALOC → Consider C-Spine</span>
+  </div>
+  <div class="avpu-row">
+    ${[['A','Alert','sel-A'],['V','Voice','sel-V'],['P','Pain','sel-P'],['U','Unresponsive','sel-U']].map(([v,l,cls])=>
+      `<button class="avpu-btn" id="avpu-${v}" onclick="pickAVPU('${v}','${cls}')"><span style="font-size:.9rem;font-weight:900">${v}</span><br><span style="font-size:.6rem;font-weight:500">${l}</span></button>`
+    ).join('')}
+  </div>`;
+  return c;
+}
+
+function buildPriority(item) {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-priority';
+  const opts = [['high','🔴 High','sel-high','rgba(239,68,68,.15)','rgba(239,68,68,.5)','#fca5a5'],
+                ['med','🟡 Medium','sel-med','rgba(234,179,8,.1)','rgba(234,179,8,.4)','#fde047'],
+                ['low','🟢 Low','sel-low','rgba(34,197,94,.12)','rgba(34,197,94,.4)','#86efac']];
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">${item.title}</div>
+    <div class="step-desc" style="margin-top:3px">${item.desc}</div>
+  </div>
+  <div class="priority-row">
+    ${opts.map(([v,l,cls])=>`<button class="pri-btn" id="pri-${v}" onclick="pickPriority('${v}','${cls}')">${l}</button>`).join('')}
+  </div>`;
+  return c;
+}
+
+function buildOPQRST() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-opqrst';
+  const fields = [
+    ['o','O','Onset','When did it start? Sudden or gradual?'],
+    ['p','P','Provocation / Palliation','What makes it better or worse?'],
+    ['q','Q','Quality','What does it feel like? (sharp, dull, pressure…)'],
+    ['r','R','Region / Radiation','Where is it? Does it radiate anywhere?'],
+    ['s','S','Severity','On a scale of 0–10, how bad is it?'],
+    ['t','T','Time / Duration','How long has it been going on?'],
+  ];
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">Signs & Symptoms — OPQRST</div>
+    <div class="step-desc" style="margin-top:3px">Systematic characterisation of the chief complaint</div>
+  </div>
+  <div class="opqrst-grid">
+    ${fields.map(([k,l,title,hint])=>`
+      <div class="opq-box">
+        <div class="opq-key">${l} — ${title}</div>
+        <div class="opq-label">${hint}</div>
+        <textarea class="opq-input" id="opq-${k}" rows="2" placeholder="${hint}…"
+          oninput="ST.opqrst['${k}']=this.value;checkOPQRST()"></textarea>
+      </div>`).join('')}
+  </div>`;
+  return c;
+}
+
+function buildTextInput(item) {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-' + item.id;
+  const key = item.id; // allergy, meds, pmhx, loi, events
+  const histKey = { allergy:'allergy', meds:'meds', pmhx:'pmhx', loi:'loi', events:'events' }[key] || key;
+  c.innerHTML = `<div class="step-row" onclick="focusTI('ti-${item.id}')">
+    <div class="step-check" id="chk-${item.id}"></div>
+    <div class="step-body">
+      <div class="step-title">${item.title}</div>
+      <div class="step-desc">${item.desc}</div>
+    </div>
+  </div>
+  <div class="text-input-row">
+    <textarea class="ti-input" id="ti-${item.id}" rows="2" placeholder="${item.placeholder}"
+      oninput="ST.history['${histKey}']=this.value;checkTI('${item.id}')"></textarea>
+  </div>`;
+  return c;
+}
+
+function buildVitals() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-vitals_inputs';
+  c.innerHTML = `<div style="padding:13px 14px 6px">
+    <div class="step-title">Vital Signs</div>
+    <div class="step-desc" style="margin-top:3px">Record all baseline measurements</div>
+  </div>
+  <div class="vitals-grid">
+    <div class="vital-box">
+      <div class="vital-label">Heart Rate (HR)</div>
+      <input class="vital-input" id="v-hr" type="number" inputmode="numeric" placeholder="72" oninput="ST.vitals.hr=this.value;checkVitals()">
+      <div class="vital-unit">bpm — note rhythm if irregular</div>
+    </div>
+    <div class="vital-box">
+      <div class="vital-label">Respiratory Rate (RR)</div>
+      <input class="vital-input" id="v-rr" type="number" inputmode="numeric" placeholder="16" oninput="ST.vitals.rr=this.value;checkVitals()">
+      <div class="vital-unit">breaths/min</div>
+    </div>
+    <div class="vital-box">
+      <div class="vital-label">Blood Pressure (BP)</div>
+      <input class="vital-input" id="v-bp" type="text" inputmode="text" placeholder="120/80" oninput="ST.vitals.bp=this.value;checkVitals()">
+      <div class="vital-unit">mmHg — systolic / diastolic</div>
+    </div>
+    <div class="vital-box">
+      <div class="vital-label">SpO₂</div>
+      <input class="vital-input" id="v-spo2" type="number" max="100" inputmode="numeric" placeholder="98" oninput="ST.vitals.spo2=this.value;checkVitals()">
+      <div class="vital-unit">%  (target ≥ 94%)</div>
+    </div>
+    <div class="vital-box">
+      <div class="vital-label">RBS</div>
+      <input class="vital-input" id="v-rbs" type="number" inputmode="decimal" placeholder="5.0" oninput="ST.vitals.rbs=this.value;checkVitals()">
+      <div class="vital-unit">mmol/L (normal 4–7)</div>
+    </div>
+  </div>`;
+  return c;
+}
+
+function buildECG() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-ecg_step';
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title" style="display:flex;align-items:center;gap:8px">
+      <span style="color:#a78bfa">📈 ECG</span>
+      <span class="step-badge badge-info" style="font-size:.58rem">If clinically indicated</span>
+    </div>
+    <div class="step-desc" style="margin-top:3px">Obtain 12-lead ECG if indicated by chief complaint — ACS, dysrhythmia, syncope, ALOC, shock</div>
+  </div>
+  <div class="ecg-toggle-row">
+    <span class="ecg-toggle-label">ECG obtained</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="ecgToggle" onchange="toggleECG(this.checked)">
+      <div class="toggle-track"></div>
+    </label>
+  </div>
+  <div class="ecg-finding-row" id="ecgFindingRow" style="display:none">
+    <textarea class="ecg-finding-input" id="ecgFindings" rows="2"
+      placeholder="ECG findings (e.g. NSR 72bpm, ST elevation V2-V4, LBBB…)"
+      oninput="ST.ecgFindings=this.value"></textarea>
+  </div>`;
+  return c;
+}
+
+function buildGCS() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-gcs_step';
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">Glasgow Coma Scale (GCS)</div>
+    <div class="step-desc" style="margin-top:3px">E (1–4) · V (1–5) · M (1–6) · Total 3–15 · ≤8 = intubation threshold</div>
+  </div>
+  <div class="gcs-row">
+    <div class="gcs-box"><div class="gcs-lbl">Eye (E)</div>
+      <input class="gcs-input" id="gcs-e" type="number" min="1" max="4" inputmode="numeric" placeholder="1–4" oninput="updateGCS('e',this.value)">
+    </div>
+    <div class="gcs-box"><div class="gcs-lbl">Verbal (V)</div>
+      <input class="gcs-input" id="gcs-v" type="number" min="1" max="5" inputmode="numeric" placeholder="1–5" oninput="updateGCS('v',this.value)">
+    </div>
+    <div class="gcs-box"><div class="gcs-lbl">Motor (M)</div>
+      <input class="gcs-input" id="gcs-m" type="number" min="1" max="6" inputmode="numeric" placeholder="1–6" oninput="updateGCS('m',this.value)">
+    </div>
+    <div class="gcs-total-box"><div class="gcs-lbl">Total</div>
+      <div class="gcs-total-num" id="gcs-total">—</div>
+    </div>
+  </div>`;
+  return c;
+}
+
+function buildPhysExam() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-phys_type';
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">Physical Exam</div>
+    <div class="step-desc" style="margin-top:3px">Exam type is determined by patient mental status</div>
+  </div>
+  <div class="phys-toggle">
+    <button class="phys-btn" id="phys-conscious" onclick="pickPhys('conscious')">
+      🟢 Conscious<br><span style="font-size:.68rem;font-weight:500;color:var(--muted)">Focused exam — complaint-directed</span>
+    </button>
+    <button class="phys-btn" id="phys-aloc" onclick="pickPhys('aloc')">
+      🔴 ALOC<br><span style="font-size:.68rem;font-weight:500;color:var(--muted)">Complete head-to-toe exam</span>
+    </button>
+  </div>
+  <div class="text-input-row" id="physNotesRow" style="display:none">
+    <textarea class="ti-input" id="physNotes" rows="3"
+      placeholder="Physical exam findings (e.g. chest — equal breath sounds, abdomen — soft non-tender…)"
+      oninput="ST.physNotes=this.value"></textarea>
+  </div>`;
+  return c;
+}
+
+function buildResult() {
+  const c = document.createElement('div');
+  c.className = 'step-card'; c.id = 'card-result_rating';
+  c.innerHTML = `<div style="padding:13px 14px 8px">
+    <div class="step-title">Performance Rating</div>
+    <div class="step-desc" style="margin-top:3px">Overall assessment performance evaluation</div>
+  </div>
+  <div class="result-grid">
+    ${[['excellent','⭐ Excellent'],['good','✅ Good'],['adequate','🟡 Adequate'],['inadequate','❌ Inadequate']].map(([v,l])=>
+      `<button class="result-btn" id="res-${v}" onclick="pickResult('${v}','sel-${v}')">${l}</button>`
+    ).join('')}
+  </div>`;
+  return c;
+}
+
+/* ═══════════════════════════════════════════════════════
+   INTERACTION HANDLERS
+═══════════════════════════════════════════════════════ */
+function toggleStep(id, chkCls) {
+  ST.checked[id] = !ST.checked[id];
+  const chk  = document.getElementById('chk-' + id);
+  const card = document.getElementById('card-' + id);
+  if (chk) chk.className = 'step-check' + (ST.checked[id] ? ' ' + chkCls : '');
+  if (card) card.classList.toggle('checked', !!ST.checked[id]);
+  updateProgress();
+}
+
+function focusTI(id) {
+  const el = document.getElementById(id);
+  if (el) el.focus();
+}
+
+function pickAVPU(val, cls) {
+  document.querySelectorAll('.avpu-btn').forEach(b => b.className = 'avpu-btn');
+  document.getElementById('avpu-' + val)?.classList.add(cls);
+  ST.avpu = val;
+  ST.checked['avpu'] = true;
+  updateProgress();
+}
+
+function pickPriority(val, cls) {
+  document.querySelectorAll('.pri-btn').forEach(b => b.className = 'pri-btn');
+  document.getElementById('pri-' + val)?.classList.add(cls);
+  ST.priority = val;
+  ST.checked['priority'] = true;
+  updateProgress();
+}
+
+function checkOPQRST() {
+  ST.checked['opqrst'] = Object.values(ST.opqrst).some(v => v.trim().length > 0);
+  updateProgress();
+}
+
+function checkTI(id) {
+  const el = document.getElementById('ti-' + id);
+  const chk = document.getElementById('chk-' + id);
+  const card = document.getElementById('card-' + id);
+  const has = el && el.value.trim().length > 0;
+  ST.checked[id] = has;
+  if (chk)  chk.className = 'step-check' + (has ? ' c-done' : '');
+  if (card) card.classList.toggle('checked', has);
+  updateProgress();
+}
+
+function checkVitals() {
+  const v = ST.vitals;
+  ST.checked['vitals_inputs'] = !!(v.hr && v.rr && v.bp && v.spo2);
+  updateProgress();
+}
+
+function toggleECG(on) {
+  ST.ecgDone = on;
+  document.getElementById('ecgFindingRow').style.display = on ? 'block' : 'none';
+  ST.checked['ecg_step'] = on;
+  const card = document.getElementById('card-ecg_step');
+  if (card) card.classList.toggle('checked', on);
+  updateProgress();
+}
+
+function updateGCS(field, val) {
+  ST.gcs[field] = parseInt(val) || '';
+  const e = parseInt(ST.gcs.e)||0, v = parseInt(ST.gcs.v)||0, m = parseInt(ST.gcs.m)||0;
+  const total = e + v + m;
+  const el = document.getElementById('gcs-total');
+  if (el) {
+    el.textContent = (e && v && m) ? total : '—';
+    el.style.color = total <= 8 ? 'var(--red)' : total <= 12 ? 'var(--yellow)' : 'var(--cyan)';
+  }
+  ST.checked['gcs_step'] = !!(ST.gcs.e && ST.gcs.v && ST.gcs.m);
+  updateProgress();
+}
+
+function pickPhys(type) {
+  document.querySelectorAll('.phys-btn').forEach(b => b.className = 'phys-btn');
+  document.getElementById('phys-' + type)?.classList.add('sel-' + type);
+  ST.physType = type;
+  ST.checked['phys_type'] = true;
+  document.getElementById('physNotesRow').style.display = 'block';
+  const card = document.getElementById('card-phys_type');
+  if (card) card.classList.add('checked');
+  updateProgress();
+}
+
+function pickResult(val, cls) {
+  document.querySelectorAll('.result-btn').forEach(b => b.className = 'result-btn');
+  document.getElementById('res-' + val)?.classList.add(cls);
+  ST.result = val;
+  ST.checked['result_rating'] = true;
+  updateProgress();
+}
+
+/* ═══════════════════════════════════════════════════════
+   PROGRESS
+═══════════════════════════════════════════════════════ */
+function getCheckable() {
+  const items = [];
+  SCHEMA.forEach(phase => {
+    phase.items.forEach(item => {
+      if (item.type !== 'subsection') items.push({ phaseId:phase.id, item });
+    });
+  });
+  return items;
+}
+
+function updateProgress() {
+  const all  = getCheckable();
+  const done = all.filter(({item}) => ST.checked[item.id]);
+  const pct  = all.length ? Math.round((done.length / all.length) * 100) : 0;
+  document.getElementById('overallPct').textContent = pct + '%';
+  document.getElementById('overallBar').style.width  = pct + '%';
+
+  SCHEMA.forEach(phase => {
+    const pItems = phase.items.filter(i => i.type !== 'subsection');
+    const pDone  = pItems.filter(i => ST.checked[i.id]).length;
+    const pPct   = pItems.length ? Math.round((pDone / pItems.length) * 100) : 0;
+    const cEl = document.getElementById('count-' + phase.id);
+    const pEl = document.getElementById('pill-' + phase.id);
+    if (cEl) cEl.textContent = pPct + '%';
+    if (pEl) pEl.classList.toggle('done', pPct === 100);
+  });
+
+  const fab = document.getElementById('fabBtn');
+  const ready = pct >= 80;
+  fab.classList.toggle('ready', ready);
+  document.getElementById('fabIcon').textContent = ready ? '✅' : '📋';
+  document.getElementById('fabText').textContent  = ready ? 'Complete Assessment' : 'Summary (' + pct + '%)';
+}
+
+/* ═══════════════════════════════════════════════════════
+   SUMMARY SHEET
+═══════════════════════════════════════════════════════ */
+function openSummary() {
+  const all    = getCheckable();
+  const done   = all.filter(({item}) => ST.checked[item.id]);
+  const pct    = all.length ? Math.round((done.length / all.length) * 100) : 0;
+  const elapsed = fmtTime(Math.floor((Date.now() - ST.startTime) / 1000));
+  const missed  = all.filter(({item}) => !ST.checked[item.id]);
+
+  const gcsE = ST.gcs.e||'—', gcsV = ST.gcs.v||'—', gcsM = ST.gcs.m||'—';
+  const gcsTotal = (parseInt(ST.gcs.e)||0)+(parseInt(ST.gcs.v)||0)+(parseInt(ST.gcs.m)||0);
+
+  const resMap = {
+    excellent:  { icon:'⭐', label:'Excellent',   col:'rgba(34,197,94,.15)', bcol:'rgba(34,197,94,.3)', tcol:'#86efac', sub:'Outstanding clinical assessment' },
+    good:       { icon:'✅', label:'Good',        col:'rgba(6,182,212,.12)', bcol:'rgba(6,182,212,.3)', tcol:'#67e8f9', sub:'Competent assessment performed' },
+    adequate:   { icon:'🟡', label:'Adequate',    col:'rgba(234,179,8,.1)',  bcol:'rgba(234,179,8,.28)', tcol:'#fde047', sub:'Minimum standards met — review gaps' },
+    inadequate: { icon:'❌', label:'Inadequate',  col:'rgba(239,68,68,.1)',  bcol:'rgba(239,68,68,.3)', tcol:'#fca5a5', sub:'Deficiencies require remediation' },
+  };
+  const res = ST.result ? resMap[ST.result] : null;
+
+  let html = `<div class="sum-stat-row">
+    <div class="sum-stat"><div class="sum-stat-val">${pct}%</div><div class="sum-stat-lbl">Completion</div></div>
+    <div class="sum-stat"><div class="sum-stat-val">${elapsed}</div><div class="sum-stat-lbl">Duration</div></div>
+    <div class="sum-stat"><div class="sum-stat-val">${missed.length}</div><div class="sum-stat-lbl">Missed</div></div>
+  </div>`;
+
+  // Patient data snapshot
+  html += `<div class="sum-phase" style="margin-bottom:10px">
+    <div class="sum-phase-hdr"><span class="sum-phase-name">📊 Patient Data</span></div>
+    <div class="sum-data-grid">
+      <div class="sum-data-item">AVPU: <strong>${ST.avpu||'—'}</strong></div>
+      <div class="sum-data-item">Priority: <strong>${ST.priority||'—'}</strong></div>
+      <div class="sum-data-item">HR: <strong>${ST.vitals.hr?ST.vitals.hr+' bpm':'—'}</strong></div>
+      <div class="sum-data-item">RR: <strong>${ST.vitals.rr?ST.vitals.rr+'/min':'—'}</strong></div>
+      <div class="sum-data-item">BP: <strong>${ST.vitals.bp||'—'}</strong></div>
+      <div class="sum-data-item">SpO₂: <strong>${ST.vitals.spo2?ST.vitals.spo2+'%':'—'}</strong></div>
+      <div class="sum-data-item">RBS: <strong>${ST.vitals.rbs?ST.vitals.rbs+' mmol/L':'—'}</strong></div>
+      <div class="sum-data-item">GCS: <strong>${gcsE+gcsV+gcsM>0?'E'+gcsE+'V'+gcsV+'M'+gcsM+' = '+gcsTotal:'—'}</strong></div>
+      <div class="sum-data-item">ECG: <strong>${ST.ecgDone?'Done':'Not performed'}</strong></div>
+      <div class="sum-data-item">Physical: <strong>${ST.physType==='conscious'?'Focused':ST.physType==='aloc'?'Complete (ALOC)':'—'}</strong></div>
+    </div>
+    ${ST.opqrst.o||ST.opqrst.q||ST.opqrst.s ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--br);font-size:.74rem;color:var(--muted)">
+      <strong style="color:var(--text)">Chief Complaint:</strong> ${[
+        ST.opqrst.o?'Onset: '+ST.opqrst.o:'',
+        ST.opqrst.q?'Quality: '+ST.opqrst.q:'',
+        ST.opqrst.s?'Severity: '+ST.opqrst.s+'/10':'',
+      ].filter(Boolean).join(' · ')}
+    </div>` : ''}
+  </div>`;
+
+  // Per-phase breakdown
+  SCHEMA.forEach(phase => {
+    const pItems  = phase.items.filter(i => i.type !== 'subsection');
+    const pDone   = pItems.filter(i => ST.checked[i.id]);
+    const pMissed = pItems.filter(i => !ST.checked[i.id]);
+    const pPct    = pItems.length ? Math.round((pDone.length / pItems.length) * 100) : 0;
+    const barCol  = pPct===100 ? 'var(--green)' : pPct>=60 ? 'var(--yellow)' : 'var(--red)';
+
+    html += `<div class="sum-phase">
+      <div class="sum-phase-hdr">
+        <span class="sum-phase-name">${phase.icon} ${phase.label}</span>
+        <span class="sum-phase-pct" style="color:${barCol}">${pPct}%</span>
+      </div>
+      <div class="sum-phase-bar"><div class="sum-phase-fill" style="width:${pPct}%;background:${barCol}"></div></div>
+      ${pMissed.length ? `<div class="sum-miss-list">${pMissed.map(i=>`<div class="sum-miss-item"><div class="sum-miss-dot"></div>${i.title||i.type}</div>`).join('')}</div>` :
+        `<div style="font-size:.72rem;color:var(--green);margin-top:7px">✓ All steps completed</div>`}
+    </div>`;
+  });
+
+  if (res) {
+    html += `<div class="sum-result-box" style="background:${res.col};border-color:${res.bcol}">
+      <div class="sum-result-icon">${res.icon}</div>
+      <div><div class="sum-result-title" style="color:${res.tcol}">${res.label}</div>
+      <div class="sum-result-sub" style="color:var(--muted)">${res.sub}</div></div>
+    </div>`;
+  }
+
+  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){resetAll();closeSheet()}">↺ Reset Assessment</button>`;
+  document.getElementById('bsContent').innerHTML = html;
+  document.getElementById('bsOverlay').classList.add('open');
+}
+
+function closeSheet() { document.getElementById('bsOverlay').classList.remove('open'); }
+
+/* ── Timer ──────────────────────────────────────────── */
+function fmtTime(s) {
+  const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), sc = s%60;
+  return (h?h+'h ':'')+m+'m '+sc+'s';
+}
+function tick() {
+  const el = document.getElementById('hdrTimer');
+  if (!el) return;
+  const s = Math.floor((Date.now() - ST.startTime) / 1000);
+  const m = Math.floor(s/60), sc = s%60;
+  el.textContent = (m<10?'0':'')+m+':'+(sc<10?'0':'')+sc;
+  el.style.color  = s>900?'var(--red)':s>600?'var(--yellow)':'var(--cyan)';
+}
+setInterval(tick, 1000);
+
+/* ── Reset ──────────────────────────────────────────── */
+function resetAll() {
+  Object.keys(ST.checked).forEach(k=>delete ST.checked[k]);
+  Object.keys(ST.notes).forEach(k=>delete ST.notes[k]);
+  ST.avpu=null;ST.priority=null;ST.physType=null;ST.result=null;
+  ST.ecgDone=false;ST.ecgFindings='';ST.physNotes='';
+  ST.vitals={hr:'',rr:'',bp:'',spo2:'',rbs:''};
+  ST.gcs={e:'',v:'',m:''};
+  ST.opqrst={o:'',p:'',q:'',r:'',s:'',t:''};
+  ST.history={allergy:'',meds:'',pmhx:'',loi:'',events:''};
+  ST.startTime=Date.now();
+  buildPage();
+  updateProgress();
+}
+
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+/* ── Init ───────────────────────────────────────────── */
+buildPage();
+updateProgress();
+</script>
+</body>
+</html>
