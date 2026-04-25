@@ -28,6 +28,9 @@ const PRE_CACHE = [
   'drug-calculator.js'
   'drug-data.json'
   'ecg.html'
+  'aha.html',
+  'courses.html',
+  'itls.html'
 ];
 
 // ── File type routing ────────────────────────────────────────
