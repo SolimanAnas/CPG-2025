@@ -1,1 +1,933 @@
-{"categories":[{"name":"Cardiac / Resus","icon":"❤️","color":"#ef4444","drugs":["Adenosine","Amiodarone","Atropine","Epinephrine (Adrenaline)","Labetalol"]},{"name":"Airway / Respiratory","icon":"🫁","color":"#10b981","drugs":["Combivent","Salbutamol","Racemic Epinephrine (Adrenaline)","Methoxyflurane (Penthrox)","Hydrocortisone","Magnesium Sulphate"]},{"name":"Neuro / Sedation","icon":"🧠","color":"#8b5cf6","drugs":["Diazepam","Midazolam","Haloperidol"]},{"name":"Pain","icon":"💊","color":"#f97316","drugs":["Morphine","Diclofenac","Nefopam","Paracetamol","Glyceryl Trinitrate"]},{"name":"Metabolic / Fluids","icon":"💧","color":"#06b6d4","drugs":["Dextrose 5% Water","Dextrose 10%","Glucose 40% Oral Paste","Glucogon","Normal Saline/ Lactated Ringers"]},{"name":"Other Medications","icon":"🧪","color":"#94a3b8","drugs":["Aspirin","Diphenhydramine","Furosemide","Hyoscine Butyl bromide","Metaclopramide","Naloxone","Tranexamic Acid"]}],"drugs":{"Adenosine":{"category":"Cardiac / Resus","color":"#ef4444","icon":"❤️","indications":[{"name":"SVT 1st dose","dose_formula":"0.1mg/kg IV","max_dose":"Max dose: 6mg","concentration":"Undiluted: 0.3mg/0.1ml 6mg/2ml"},{"name":"SVT 2nd dose","dose_formula":"0.2mg/kg IV","max_dose":"Max dose: 12mg","concentration":"Undiluted: 0.3mg/0.1ml 12mg/4ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.3mg","vol1":"0.1ml","dose2":"0.6mg","vol2":"0.2ml"},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.3mg","vol1":"0.1ml","dose2":"0.6mg","vol2":"0.2ml"},{"age":"3-7 months","weight":"5-7kg","dose1":"0.6mg","vol1":"0.2ml","dose2":"1.2mg","vol2":"0.4ml"},{"age":"8-12 months","weight":"8-11kg","dose1":"0.9mg","vol1":"0.3ml","dose2":"1.8mg","vol2":"0.6ml"},{"age":"1-3 years","weight":"12-15kg","dose1":"1.2mg","vol1":"0.4ml","dose2":"2.4mg","vol2":"0.8ml"},{"age":"4-5 years","weight":"16-21kg","dose1":"1.8mg","vol1":"0.6ml","dose2":"3.6mg","vol2":"1.2ml"},{"age":"6-7 years","weight":"22-28kg","dose1":"2.4mg","vol1":"0.8ml","dose2":"4.8mg","vol2":"1.6ml"},{"age":"8-9 years","weight":"29-34kg","dose1":"3mg","vol1":"1ml","dose2":"6mg","vol2":"2ml"},{"age":"10-11 years","weight":"35-40kg","dose1":"3.9mg","vol1":"1.3ml","dose2":"7.8mg","vol2":"2.6ml"},{"age":"12-13 years","weight":"41-45kg","dose1":"4.2mg","vol1":"1.4ml","dose2":"8.4mg","vol2":"2.8ml"},{"age":"≥14 years","weight":"46-50kg","dose1":"4.5mg","vol1":"1.5ml","dose2":"9mg","vol2":"3ml"},{"age":"Adult","weight":"50kg +","dose1":"6mg","vol1":"2ml","dose2":"12mg","vol2":"4ml"}]},"Amiodarone":{"category":"Cardiac / Resus","color":"#ef4444","icon":"❤️","indications":[{"name":"VF/ PLVT 1st dose","dose_formula":"5mg/kg IV/IO","max_dose":"Max dose: 300mg \nPedi Maxi dose: 5mg/kg","concentration":"Undiluted: 150mg/3ml\n5mg/0.1ml"},{"name":"SVT/VT with Pulse","dose_formula":"150mg Infusion for 10 min","max_dose":"Max dose: 150mg","concentration":"Diluted: 150mg in 100ml 5% Dextrose\n3-4 drops per second"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"10mg","vol1":"0.2ml","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"15mg","vol1":"0.3ml","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"30mg","vol1":"0.6ml","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"50mg","vol1":"1ml","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"65mg","vol1":"1.3ml","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"90mg","vol1":"1.8ml","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"125mg","vol1":"2.5ml","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"150mg","vol1":"3ml","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"200mg","vol1":"4ml","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"225mg","vol1":"4.5ml","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"250mg","vol1":"5ml","dose2":"150mg+100 D5%","vol2":"103ml"},{"age":"Adult","weight":"50kg +","dose1":"300mg","vol1":"6ml","dose2":"150mg+100 D5%","vol2":"103ml"}]},"Atropine":{"category":"Cardiac / Resus","color":"#ef4444","icon":"❤️","indications":[{"name":"Bradycardia","dose_formula":"0.02mg/kg IV/IO","max_dose":"Max dose: Administer till symptoms resolve","concentration":"Diluted: 1mg/10ml\n0.1mg/1ml"},{"name":"Organophosphate Poisoning","dose_formula":"0.02-0.05mg/kg IV/IO","max_dose":"Max dose: Administer till symptoms resolve","concentration":"Diluted: 1mg/10ml\n0.1mg/1ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.04mg","vol1":"0.4ml","dose2":"0.04-0.10mg","vol2":"0.4-1.0ml"},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.06mg","vol1":"0.6ml","dose2":"0.06-0.20mg","vol2":"0.6-2.0ml"},{"age":"3-7 months","weight":"5-7kg","dose1":"0.10mg","vol1":"1.0ml","dose2":"0.10-0.35mg","vol2":"1.0-3.5ml"},{"age":"8-12 months","weight":"8-11kg","dose1":"0.16mg","vol1":"1.6ml","dose2":"0.16-0.55mg","vol2":"1.6-5.5ml"},{"age":"1-3 years","weight":"12-15kg","dose1":"0.24mg","vol1":"2.4ml","dose2":"0.24-0.75mg","vol2":"2.4-7.5ml"},{"age":"4-5 years","weight":"16-21kg","dose1":"0.32mg","vol1":"3.2ml","dose2":"0.32-1.05mg","vol2":"3.2-10.5ml"},{"age":"6-7 years","weight":"22-28kg","dose1":"0.44mg","vol1":"4.4ml","dose2":"0.44-1.40mg","vol2":"4.4-14.0ml"},{"age":"8-9 years","weight":"29-34kg","dose1":"0.58mg","vol1":"5.8ml","dose2":"0.58-1.70mg","vol2":"5.8-17.0ml"},{"age":"10-11 years","weight":"35-40kg","dose1":"0.70mg","vol1":"7ml","dose2":"0.70-2.00mg","vol2":"7.0-20.0ml"},{"age":"12-13 years","weight":"41-45kg","dose1":"0.82mg","vol1":"8.2ml","dose2":"0.82-2.25mg","vol2":"8.2-22.5ml"},{"age":"≥14 years","weight":"46-50kg","dose1":"0.92mg","vol1":"9.2ml","dose2":"0.92-2.50mg","vol2":"9.2-25.0ml"},{"age":"Adult","weight":"50kg +","dose1":"1mg","vol1":"10ml","dose2":"2mg and 4mg","vol2":"20 and 40ml"}]},"Epinephrine (Adrenaline)":{"category":"Cardiac / Resus","color":"#ef4444","icon":"❤️","indications":[{"name":"Cardiac arrest/ Bradycardia","dose_formula":null,"max_dose":"0.01mg/kg IV/IO","concentration":"1mg/10ml (1:10000)"},{"name":"Inotrope Infusion - Pediatric Bradycardia, Anaphylaxis, Asthma, Septic Shock","dose_formula":null,"max_dose":"0.05-0.3mcg/kg/min IV/IO","concentration":"Dilution: 1mg into 50ml NaCl =20mcg/1ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.02mg","vol1":"0.2ml","dose2":"0.1-0.6mcg/min","vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.03mg","vol1":"0.3ml","dose2":"0.15-0.9mcg/min","vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"0.06mg","vol1":"0.6ml","dose2":"0.25-1.8mcg/min","vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"0.1mg","vol1":"1ml","dose2":"0.5-3mcg/min","vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"0.15mg","vol1":"1.5ml","dose2":"0.65-3.9mcg/min","vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"0.2mg","vol1":"2ml","dose2":"0.9-5.4mcg/min","vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"0.25mg","vol1":"2.5ml","dose2":"1.25-7.5mcg/min","vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"0.3mg","vol1":"3ml","dose2":"1.6-9.6mcg/min","vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"0.4mg","vol1":"4ml","dose2":"1.9-11.4mcg/min","vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"0.45mg","vol1":"4.5ml","dose2":"2.1-12.6mcg/min","vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"0.5mg","vol1":"5ml","dose2":"2.35-14.1mcg/min","vol2":null},{"age":"Adult","weight":"50kg +","dose1":"1mg","vol1":"10ml","dose2":"≥2.5 - ≥15.0 mcg/min","vol2":"2-10 mcg/min"}]},"Labetalol":{"category":"Cardiac / Resus","color":"#ef4444","icon":"❤️","indications":[{"name":"Pre-eclampsia with severe hypertension\n• Eclampsia","dose_formula":"100mg/20ml","max_dose":"Dilution: 40mg/8ml in 12ml NS =2mg/1ml","concentration":"Initial Dose: 20mg/10ml over 2 minutes\n(Maximum 80mg)"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"20mg","vol1":"10ml","dose2":null,"vol2":null}]},"Combivent":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Asthma/ COPD","dose_formula":"Nebulizer","max_dose":"2.5ml (2.5mg Salbutamol & 0.5mg Ipratropium Bromide)","concentration":"Diluation: 2.5mg in 2.5ml NS"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"2.5ml","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"2.5ml","vol1":null,"dose2":null,"vol2":null}]},"Salbutamol":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Bronchospasm","dose_formula":"Nebulizer","max_dose":"2.5mg/2.5ml","concentration":"2.5mg diluated in 2.5ml NS"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"2.5mg","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"5mg","vol1":null,"dose2":null,"vol2":null}]},"Racemic Epinephrine (Adrenaline)":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Croup","dose_formula":"2.25% in 0.5ml Nebule","max_dose":"• >4 years: 0.5ml Nebulized (diluted in 3ml normal saline)\n• <4 years: 0.05ml/kg (max 0.5ml, diluted in 3ml normal saline)","concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.10 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.15–0.20 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"0.25–0.35 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"0.40–0.50 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"0.5 mL","vol1":"3 mL","dose2":null,"vol2":null}]},"Methoxyflurane (Penthrox)":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Moderate to Severe Pain","dose_formula":"3ml Inhaled","max_dose":null,"concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"3ml","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"3ml","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"3ml","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"3ml","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"3ml","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"3ml","vol1":null,"dose2":null,"vol2":null}]},"Hydrocortisone":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Asthma, COPD, Anaphylaxis","dose_formula":"100mg/2ml (act-o-vial)","max_dose":"To ease administration:\n• <1year: 25mg\n• 1-5 years: 50mg\n• >5 years: 100mg","concentration":"2mg/kg"},{"name":"Asthma, COPD, Anaphylaxis","dose_formula":"100mg/2ml (act-o-vial)","max_dose":null,"concentration":"4mg/kg"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"4 mg","vol1":"0.08 mL","dose2":"8 mg","vol2":"0.16 mL"},{"age":"Term-2 months","weight":"3-4kg","dose1":"6–8 mg","vol1":"0.12–0.16 mL","dose2":"12–16 mg","vol2":"0.24–0.32 mL"},{"age":"3-7 months","weight":"5-7kg","dose1":"10–14 mg","vol1":"0.20–0.28 mL","dose2":"20–28 mg","vol2":"0.40–0.56 mL"},{"age":"8-12 months","weight":"8-11kg","dose1":"16–22 mg","vol1":"0.32–0.44 mL","dose2":"32–44 mg","vol2":"0.64–0.88 mL"},{"age":"1-3 years","weight":"12-15kg","dose1":"24–30 mg","vol1":"0.48–0.60 mL","dose2":"48–60 mg","vol2":"0.96–1.20 mL"},{"age":"4-5 years","weight":"16-21kg","dose1":"32–42 mg","vol1":"0.64–0.84 mL","dose2":"64–84 mg","vol2":"1.28–1.68 mL"},{"age":"6-7 years","weight":"22-28kg","dose1":"44–56 mg","vol1":"0.88–1.12 mL","dose2":"88–112 mg","vol2":"1.76–2.24 mL"},{"age":"8-9 years","weight":"29-34kg","dose1":"58–68 mg","vol1":"1.16–1.36 mL","dose2":"116–136 mg","vol2":"2.32–2.72 mL"},{"age":"10-11 years","weight":"35-40kg","dose1":"70–80 mg","vol1":"1.40–1.60 mL","dose2":"140–160 mg","vol2":"2.80–3.20 mL"},{"age":"12-13 years","weight":"41-45kg","dose1":"82–90 mg","vol1":"1.64–1.80 mL","dose2":"164–180 mg","vol2":"3.28–3.60 mL"},{"age":"≥14 years","weight":"46-50kg","dose1":"92–100 mg","vol1":"1.84–2.00 mL","dose2":"184–200 mg","vol2":"3.68–4.00 mL"},{"age":"Adult","weight":"50kg +","dose1":"100 mg","vol1":"2.0 mL","dose2":"200 mg","vol2":"4.0 mL"}]},"Magnesium Sulphate":{"category":"Airway / Respiratory","color":"#10b981","icon":"🫁","indications":[{"name":"Asthma (severe or life-threatening)","dose_formula":"5g/10ml IV/IO/IM","max_dose":"Dilution: 2g/4ml in 100ml NS =20mg/1ml \nInfusion over 20 minutes","concentration":"Pediatric: 40mg/kg diluated in 100ml NS"},{"name":"Eclampsia","dose_formula":"5g/10ml IM","max_dose":"8g IM (4mg into each glueal muscle)","concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"80 mg","vol1":"4 mL","dose2":"N/R","vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"120–160 mg","vol1":"6–8 mL","dose2":"N/R","vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"200–280 mg","vol1":"10–14 mL","dose2":"N/R","vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"320–440 mg","vol1":"16–22 mL","dose2":"N/R","vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"480–600 mg","vol1":"24–30 mL","dose2":"N/R","vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"640–840 mg","vol1":"32–42 mL","dose2":"N/R","vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"880–1120 mg","vol1":"44–56 mL","dose2":"N/R","vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"1160–1360 mg","vol1":"58–68 mL","dose2":"N/R","vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"1400–1600 mg","vol1":"70–80 mL","dose2":"N/R","vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"1640–1800 mg","vol1":"82–90 mL","dose2":"N/R","vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"1840–2000 mg","vol1":"92–100 mL","dose2":"4g+4g","vol2":"4 g"},{"age":"Adult","weight":"50kg +","dose1":"2 g","vol1":"100 mL","dose2":"4g+4g","vol2":"4 g"}]},"Diazepam":{"category":"Neuro / Sedation","color":"#8b5cf6","icon":"🧠","indications":[{"name":"Seizure, sedation of agitated/combative patients","dose_formula":"10mg/2ml","max_dose":"Adult 5mg\nPedi: 0.1mg/kg IV/IO max:5mg","concentration":"Diluation: 10mg in 8ml NS; Dosage: 1mg/1ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.2 mg","vol1":"0.2 mL","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.3–0.4 mg","vol1":"0.3–0.4 mL","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"0.5–0.7 mg","vol1":"0.5–0.7 mL","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"0.8–1.1 mg","vol1":"0.8–1.1 mL","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"1.2–1.5 mg","vol1":"1.2–1.5 mL","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"1.6–2.1 mg","vol1":"1.6–2.1 mL","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"2.2–2.8 mg","vol1":"2.2–2.8 mL","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"2.9–3.4 mg","vol1":"2.9–3.4 mL","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"3.5–4.0 mg","vol1":"3.5–4.0 mL","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"4.1–4.5 mg","vol1":"4.1–4.5 mL","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"5 mg","vol1":"5 mL","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"5 mg","vol1":"5 mL","dose2":null,"vol2":null}]},"Midazolam":{"category":"Neuro / Sedation","color":"#8b5cf6","icon":"🧠","indications":[{"name":"• Seizures\n• Sedation of agitated or combative patients","dose_formula":"5mg/1ml \nIV","max_dose":"Adult: 5mg/1ml IV\nPediatric: 0.1mg/kg IV","concentration":"Diluated: 5mg/1ml in 4ml NS IV =1mg/1ml\nMaximum: 5mg"},{"name":"• Seizures\n• Sedation of agitated or combative patients","dose_formula":"5mg/1ml\nIM","max_dose":"Adult: 5mg/1ml IM\nPediatric: 0.2mg/kg IM","concentration":"Pediatric: 5mg/1ml \nMaximum: 5mg"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.2 mg","vol1":"0.2 mL","dose2":"0.4 mg","vol2":"0.08 mL"},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.3–0.4 mg","vol1":"0.3–0.4 mL","dose2":"0.6–0.8 mg","vol2":"0.12–0.16 mL"},{"age":"3-7 months","weight":"5-7kg","dose1":"0.5–0.7 mg","vol1":"0.5–0.7 mL","dose2":"1.0–1.4 mg","vol2":"0.20–0.28 mL"},{"age":"8-12 months","weight":"8-11kg","dose1":"0.8–1.1 mg","vol1":"0.8–1.1 mL","dose2":"1.6–2.2 mg","vol2":"0.32–0.44 mL"},{"age":"1-3 years","weight":"12-15kg","dose1":"1.2–1.5 mg","vol1":"1.2–1.5 mL","dose2":"2.4–3.0 mg","vol2":"0.48–0.60 mL"},{"age":"4-5 years","weight":"16-21kg","dose1":"1.6–2.1 mg","vol1":"1.6–2.1 mL","dose2":"3.2–4.2 mg","vol2":"0.64–0.84 mL"},{"age":"6-7 years","weight":"22-28kg","dose1":"2.2–2.8 mg","vol1":"2.2–2.8 mL","dose2":"4.4–5.0 mg*","vol2":"0.88–1.00 mL*"},{"age":"8-9 years","weight":"29-34kg","dose1":"2.9–3.4 mg","vol1":"2.9–3.4 mL","dose2":"5 mg*","vol2":"1.0 mL*"},{"age":"10-11 years","weight":"35-40kg","dose1":"3.5–4.0 mg","vol1":"3.5–4.0 mL","dose2":"5 mg*","vol2":"1.0 mL*"},{"age":"12-13 years","weight":"41-45kg","dose1":"4.1–4.5 mg","vol1":"4.1–4.5 mL","dose2":"5 mg*","vol2":"1.0 mL*"},{"age":"≥14 years","weight":"46-50kg","dose1":"4.6–5.0 mg","vol1":"4.6–5.0 mL","dose2":"5 mg*","vol2":"1.0 mL*"},{"age":"Adult","weight":"50kg +","dose1":"5 mg","vol1":"5 mL","dose2":"5 mg","vol2":"1.0 mL"}]},"Haloperidol":{"category":"Neuro / Sedation","color":"#8b5cf6","icon":"🧠","indications":[{"name":"Acute Psychosis","dose_formula":"5mg/1ml","max_dose":null,"concentration":"5mg/1ml IM only"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"5mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"5mg","vol1":null,"dose2":null,"vol2":null}]},"Morphine":{"category":"Pain","color":"#f97316","icon":"💊","indications":[{"name":"Severe Pain","dose_formula":"10mg/1ml \nIV/IM","max_dose":"Adult: 2.5mg IV \nMaximum 10mg\nPediatric: 0.1mg/kg","concentration":"Diluation: 10mg/1ml in 9ml NS =1mg/1ml"},{"name":"Severe Pain","dose_formula":"10mg/1ml \nIV/IM","max_dose":"Adult: 2-10mg IM\nMaximum 20mg\nPediatric: 0.1mg/kg","concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.2 mg","vol1":"0.2 mL","dose2":"0.2 mg","vol2":"0.02 mL"},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.3–0.4 mg","vol1":"0.3–0.4 mL","dose2":"0.3–0.4 mg","vol2":"0.03–0.04 mL"},{"age":"3-7 months","weight":"5-7kg","dose1":"0.5–0.7 mg","vol1":"0.5–0.7 mL","dose2":"0.5–0.7 mg","vol2":"0.05–0.07 mL"},{"age":"8-12 months","weight":"8-11kg","dose1":"0.8–1.1 mg","vol1":"0.8–1.1 mL","dose2":"0.8–1.1 mg","vol2":"0.08–0.11 mL"},{"age":"1-3 years","weight":"12-15kg","dose1":"1.2–1.5 mg","vol1":"1.2–1.5 mL","dose2":"1.2–1.5 mg","vol2":"0.12–0.15 mL"},{"age":"4-5 years","weight":"16-21kg","dose1":"1.6–2.1 mg","vol1":"1.6–2.1 mL","dose2":"1.6–2.1 mg","vol2":"0.16–0.21 mL"},{"age":"6-7 years","weight":"22-28kg","dose1":"2.2–2.8 mg","vol1":"2.2–2.8 mL","dose2":"2.2–2.8 mg","vol2":"0.22–0.28 mL"},{"age":"8-9 years","weight":"29-34kg","dose1":"2.9–3.4 mg","vol1":"2.9–3.4 mL","dose2":"2.9–3.4 mg","vol2":"0.29–0.34 mL"},{"age":"10-11 years","weight":"35-40kg","dose1":"3.5–4.0 mg","vol1":"3.5–4.0 mL","dose2":"3.5–4.0 mg","vol2":"0.35–0.40 mL"},{"age":"12-13 years","weight":"41-45kg","dose1":"4.1–4.5 mg","vol1":"4.1–4.5 mL","dose2":"4.1–4.5 mg","vol2":"0.41–0.45 mL"},{"age":"≥14 years","weight":"46-50kg","dose1":"2.5mg","vol1":"2.5ml","dose2":"2-10mg","vol2":"0.2-1 ml"},{"age":"Adult","weight":"50kg +","dose1":"2.5mg","vol1":"2.5ml","dose2":"2-10mg","vol2":"0.2-1 ml"}]},"Diclofenac":{"category":"Pain","color":"#f97316","icon":"💊","indications":[{"name":"Pain management","dose_formula":"75mg/3ml IM/IV","max_dose":"Infusion rate: 3-4 drops/ second","concentration":"Diluation: 75mg in 100ml NS over 10 minutes\nDosage:"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"75mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"75mg","vol1":null,"dose2":null,"vol2":null}]},"Nefopam":{"category":"Pain","color":"#f97316","icon":"💊","indications":[{"name":"Moderate to Severe Pain","dose_formula":"20mg/2ml IV","max_dose":"Diluation: 20mg/2ml in 100ml NS infusion over 5 minutes","concentration":"1 drop every 6-8 sec in the IV drip to administer 102mg in 5 minutes"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":"N/R","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"20 mg","vol1":"100ml","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"20 mg","vol1":"100ml","dose2":null,"vol2":null}]},"Paracetamol":{"category":"Pain","color":"#f97316","icon":"💊","indications":[{"name":"Pain and Fever","dose_formula":"500mg/tablet","max_dose":"Max dose: 15mg/kg","concentration":"500mg/tablet"},{"name":"Pain and Fever","dose_formula":"10mg/ml","max_dose":"Dose: 10mg/kg IV","concentration":"Undiluated: 1000mg/100ml 10mg/1ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"NR","vol1":"125mg","dose2":"15mg","vol2":"1.5ml"},{"age":"Term-2 months","weight":"3-4kg","dose1":"NR","vol1":"125mg","dose2":"20mg","vol2":"2ml"},{"age":"3-7 months","weight":"5-7kg","dose1":"84mg","vol1":"125mg","dose2":"45mg","vol2":"4.5ml"},{"age":"8-12 months","weight":"8-11kg","dose1":"132mg","vol1":"125mg","dose2":"75mg","vol2":"7.5ml"},{"age":"1-3 years","weight":"12-15kg","dose1":"180mg","vol1":"125mg","dose2":"200mg","vol2":"20ml"},{"age":"4-5 years","weight":"16-21kg","dose1":"240mg","vol1":"125mg","dose2":"270mg","vol2":"27ml"},{"age":"6-7 years","weight":"22-28kg","dose1":"360mg","vol1":"250mg","dose2":"375mg","vol2":"37.5ml"},{"age":"8-9 years","weight":"29-34kg","dose1":"420mg","vol1":"250mg","dose2":"480mg","vol2":"48ml"},{"age":"10-11 years","weight":"35-40kg","dose1":"480mg","vol1":"250mg","dose2":"570mg","vol2":"57ml"},{"age":"12-13 years","weight":"41-45kg","dose1":"600mg","vol1":"250mg","dose2":"630mg","vol2":"63ml"},{"age":"≥14 years","weight":"46-50kg","dose1":"720mg","vol1":null,"dose2":"720mg","vol2":"72ml"},{"age":"Adult","weight":"50kg +","dose1":"1000mg","vol1":null,"dose2":"1g","vol2":"100ml"}]},"Glyceryl Trinitrate":{"category":"Pain","color":"#f97316","icon":"💊","indications":[{"name":"Cardaic Chest Pain, Pulmonary Edema","dose_formula":"0.4mg per Spray SL","max_dose":null,"concentration":"SL: 0.4mg(1x spray) every 3-5 minutes (max 1.2mg/ 3x sprays)"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"0.4mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"0.4mg","vol1":null,"dose2":null,"vol2":null}]},"Dextrose 5% Water":{"category":"Metabolic / Fluids","color":"#06b6d4","icon":"💧","indications":[{"name":"Acute Coronary Syndrome","dose_formula":"5g in 100ml","max_dose":"Only for Amiodarone Infusion","concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"100ml","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"100ml","vol1":null,"dose2":null,"vol2":null}]},"Dextrose 10%":{"category":"Metabolic / Fluids","color":"#06b6d4","icon":"💧","indications":[{"name":"Hypoglycemia","dose_formula":"2-5ml/kg IV/IO","max_dose":"2ml Newborn\n5ml Children","concentration":"50% in 500ml 10g/100ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"4ml","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"6-8ml","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"15-35ml","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"40-55ml","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"60-75ml","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"80-105ml","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"110-140ml","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"145-170ml","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"175-100ml","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"205-225ml","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"230-250ml","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"125-250ml","vol1":null,"dose2":null,"vol2":null}]},"Glucose 40% Oral Paste":{"category":"Metabolic / Fluids","color":"#06b6d4","icon":"💧","indications":[{"name":"Hypoglycemia (RBS<70mg/dl)","dose_formula":"20mg/2ml IV","max_dose":null,"concentration":"Adult 1 Tube\nPediatric: ½ Tube"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"½ tube","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"1 tube","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"1 tube","vol1":null,"dose2":null,"vol2":null}]},"Glucogon":{"category":"Metabolic / Fluids","color":"#06b6d4","icon":"💧","indications":[{"name":"Hypoglycemia, Betablocker overdose, Calcium Channel Blocker Overdose","dose_formula":"1mg/1ml","max_dose":"Repeat every 10-15 minutes if required","concentration":">6 years (or >25kg):1mg IM/SC\n<6 years (or <25kg): 0.5mg IM/SC"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"0.5 mg","vol1":"0.5 mL","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"0.5–1 mg","vol1":"0.5–1 mL","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"1 mg","vol1":"1 mL","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"1 mg","vol1":"1 mL","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"1 mg","vol1":"1 mL","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"1 mg","vol1":"1 mL","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"1 mg","vol1":"1 mL","dose2":null,"vol2":null}]},"Normal Saline/ Lactated Ringers":{"category":"Metabolic / Fluids","color":"#06b6d4","icon":"💧","indications":[{"name":"Intravasular Volume","dose_formula":"2, 5ml/kg IV/IO","max_dose":"2ml Newborn\n5-10ml Children","concentration":"250ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"4ml","vol1":"20ml","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"6-8ml","vol1":"30-40ml","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"15-35ml","vol1":"50-70ml","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"40-55ml","vol1":"80-110ml","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"60-75ml","vol1":"120-150ml","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"80-105ml","vol1":"160-210ml","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"110-140ml","vol1":"220-280ml","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"145-170ml","vol1":"290-430ml","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"175-100ml","vol1":"350-400ml","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"205-225ml","vol1":"410-450ml","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"230-250ml","vol1":"460-500ml","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"125-250ml","vol1":"500-1000ml","dose2":null,"vol2":null}]},"Aspirin":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Acute Coronary Syndrome","dose_formula":"325mg/ 4 Tablets","max_dose":"Max dose:","concentration":"chewed before swallowing"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"324mg","vol1":null,"dose2":null,"vol2":null}]},"Diphenhydramine":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Antihistamine","dose_formula":"50mg/ 1ml Vial","max_dose":"Adult: 1mg/kg IV","concentration":"Undiluated: 50MG/1ML"},{"name":"Antihistamine","dose_formula":"50mg/ 1ml Vial","max_dose":"Adult: 1mg/kg IV","concentration":"Diluated: 50mg/1ml in 9ml NS = 5mg/1ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"2 mg","vol1":"0.04 mL","dose2":"2 mg","vol2":"0.4 mL"},{"age":"Term-2 months","weight":"3-4kg","dose1":"3–4 mg","vol1":"0.06–0.08 mL","dose2":"3–4 mg","vol2":"0.6–0.8 mL"},{"age":"3-7 months","weight":"5-7kg","dose1":"5–7 mg","vol1":"0.10–0.14 mL","dose2":"5–7 mg","vol2":"1.0–1.4 mL"},{"age":"8-12 months","weight":"8-11kg","dose1":"8–11 mg","vol1":"0.16–0.22 mL","dose2":"8–11 mg","vol2":"1.6–2.2 mL"},{"age":"1-3 years","weight":"12-15kg","dose1":"12–15 mg","vol1":"0.24–0.30 mL","dose2":"12–15 mg","vol2":"2.4–3.0 mL"},{"age":"4-5 years","weight":"16-21kg","dose1":"16–21 mg","vol1":"0.32–0.42 mL","dose2":"16–21 mg","vol2":"3.2–4.2 mL"},{"age":"6-7 years","weight":"22-28kg","dose1":"22–28 mg","vol1":"0.44–0.56 mL","dose2":"22–28 mg","vol2":"4.4–5.6 mL"},{"age":"8-9 years","weight":"29-34kg","dose1":"29–34 mg","vol1":"0.58–0.68 mL","dose2":"29–34 mg","vol2":"5.8–6.8 mL"},{"age":"10-11 years","weight":"35-40kg","dose1":"35–40 mg","vol1":"0.70–0.80 mL","dose2":"35–40 mg","vol2":"7.0–8.0 mL"},{"age":"12-13 years","weight":"41-45kg","dose1":"41–45 mg","vol1":"0.82–0.90 mL","dose2":"41–45 mg","vol2":"8.2–9.0 mL"},{"age":"≥14 years","weight":"46-50kg","dose1":"46–50 mg","vol1":"0.92–1.00 mL","dose2":"46–50 mg","vol2":"9.2–10.0 mL"},{"age":"Adult","weight":"50kg +","dose1":"50 mg","vol1":"1.0 mL","dose2":"50 mg","vol2":"10 mL"}]},"Furosemide":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Acute Pulonary Edema","dose_formula":"20mg/2ml IV","max_dose":null,"concentration":"Max dose: 40mg IV"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"40mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"40mg","vol1":null,"dose2":null,"vol2":null}]},"Hyoscine Butyl bromide":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Lower abdominal cramping","dose_formula":"20mg/1ml IV/IM/SC","max_dose":null,"concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"N/R","vol1":null,"dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"20mg","vol1":null,"dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"20mg","vol1":null,"dose2":null,"vol2":null}]},"Metaclopramide":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Nausea and Vomiting","dose_formula":"10mg/2ml \nIV/IM","max_dose":"5mg/1ml","concentration":"Adult: 10mg/2ml IV/IM\nPediatric: 0.1mg/kg"},{"name":"Nausea and Vomiting","dose_formula":"10mg/2ml \nIV/IM","max_dose":"10mg/2ml \nIV Infusion","concentration":"Diluation: 10mg/2ml in 100ml NS =1mg/10ml"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.2 mg","vol1":"0.04 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.3–0.4 mg","vol1":"0.06–0.08 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"3-7 months","weight":"5-7kg","dose1":"0.5–0.7 mg","vol1":"0.10–0.14 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"8-12 months","weight":"8-11kg","dose1":"0.8–1.1 mg","vol1":"0.16–0.22 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"1-3 years","weight":"12-15kg","dose1":"1.2–1.5 mg","vol1":"0.24–0.30 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"4-5 years","weight":"16-21kg","dose1":"1.6–2.1 mg","vol1":"0.32–0.42 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"6-7 years","weight":"22-28kg","dose1":"2.2–2.8 mg","vol1":"0.44–0.56 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"8-9 years","weight":"29-34kg","dose1":"2.9–3.4 mg","vol1":"0.58–0.68 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"10-11 years","weight":"35-40kg","dose1":"3.5–4.0 mg","vol1":"0.70–0.80 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"12-13 years","weight":"41-45kg","dose1":"4.1–4.5 mg","vol1":"0.82–0.90 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"≥14 years","weight":"46-50kg","dose1":"4.6–5.0 mg","vol1":"0.92–1.00 mL","dose2":"In CPG not required","vol2":"In CPG not required"},{"age":"Adult","weight":"50kg +","dose1":"10 mg","vol1":"2.0 mL","dose2":"In CPG not required","vol2":"In CPG not required"}]},"Naloxone":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Opiate overdose","dose_formula":"0.4mg IV/IO/IM","max_dose":"Pediatric: 0.01mg/kg IV/IO/IM every 3 minutes","concentration":"0.025ml/kg \nMaximum 2mg"},{"name":"Opiate overdose","dose_formula":"4mg\nIN","max_dose":"repeat every 3 minutes","concentration":null}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"0.02 mg","vol1":"0.05 mL","dose2":"N/R","vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"0.03–0.04 mg","vol1":"0.075–0.10 mL","dose2":"N/R","vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"0.05–0.07 mg","vol1":"0.125–0.175 mL","dose2":"N/R","vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"0.08–0.11 mg","vol1":"0.20–0.275 mL","dose2":"N/R","vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"0.12–0.15 mg","vol1":"0.30–0.375 mL","dose2":"N/R","vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"0.16–0.21 mg","vol1":"0.40–0.525 mL","dose2":"N/R","vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"0.22–0.28 mg","vol1":"0.55–0.70 mL","dose2":"N/R","vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"0.29–0.34 mg","vol1":"0.725–0.85 mL","dose2":"N/R","vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"0.35–0.40 mg","vol1":"0.875–1.0 mL","dose2":"N/R","vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"0.4 mg","vol1":"1 ml","dose2":"N/R","vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"0.4 mg","vol1":"1 ml","dose2":"4 mg","vol2":null},{"age":"Adult","weight":"50kg +","dose1":"0.4 mg","vol1":"1 ml","dose2":"4 mg","vol2":null}]},"Tranexamic Acid":{"category":"Other Medications","color":"#94a3b8","icon":"🧪","indications":[{"name":"Antifibrinolytic","dose_formula":"500mg/5ml","max_dose":"15mg/kg; Single Dose","concentration":"1000mg diluated in 100ml NS over 10 min;  Single Dose"}],"age_data":[{"age":"Preterm","weight":"2kg","dose1":"30 mg","vol1":"6 mL","dose2":null,"vol2":null},{"age":"Term-2 months","weight":"3-4kg","dose1":"45–60 mg","vol1":"9–12 mL","dose2":null,"vol2":null},{"age":"3-7 months","weight":"5-7kg","dose1":"75–105 mg","vol1":"15–21 mL","dose2":null,"vol2":null},{"age":"8-12 months","weight":"8-11kg","dose1":"120–165 mg","vol1":"24–33 mL","dose2":null,"vol2":null},{"age":"1-3 years","weight":"12-15kg","dose1":"180–225 mg","vol1":"36–45 mL","dose2":null,"vol2":null},{"age":"4-5 years","weight":"16-21kg","dose1":"240–315 mg","vol1":"48–63 mL","dose2":null,"vol2":null},{"age":"6-7 years","weight":"22-28kg","dose1":"330–420 mg","vol1":"66–84 mL","dose2":null,"vol2":null},{"age":"8-9 years","weight":"29-34kg","dose1":"435–510 mg","vol1":"87–102 mL","dose2":null,"vol2":null},{"age":"10-11 years","weight":"35-40kg","dose1":"525–600 mg","vol1":"105–120 mL","dose2":null,"vol2":null},{"age":"12-13 years","weight":"41-45kg","dose1":"615–675 mg","vol1":"123–135 mL","dose2":null,"vol2":null},{"age":"≥14 years","weight":"46-50kg","dose1":"1000mg","vol1":"105ml","dose2":null,"vol2":null},{"age":"Adult","weight":"50kg +","dose1":"1000mg","vol1":"105ml","dose2":null,"vol2":null}]}}}
+{
+  "categories": [
+    {
+      "name": "Cardiac / Resus",
+      "icon": "❤️",
+      "color": "#ef4444",
+      "drugs": ["Adenosine", "Amiodarone", "Atropine", "Epinephrine (Adrenaline)", "Labetalol"]
+    },
+    {
+      "name": "Airway / Respiratory",
+      "icon": "🫁",
+      "color": "#10b981",
+      "drugs": ["Combivent", "Salbutamol", "Racemic Epinephrine (Adrenaline)", "Methoxyflurane (Penthrox)", "Hydrocortisone", "Magnesium Sulphate"]
+    },
+    {
+      "name": "Neuro / Sedation",
+      "icon": "🧠",
+      "color": "#8b5cf6",
+      "drugs": ["Diazepam", "Haloperidol"]
+    },
+    {
+      "name": "Pain",
+      "icon": "💊",
+      "color": "#f97316",
+      "drugs": ["Morphine", "Diclofenac", "Nefopam", "Paracetamol", "Glyceryl Trinitrate"]
+    },
+    {
+      "name": "Metabolic / Fluids",
+      "icon": "💧",
+      "color": "#06b6d4",
+      "drugs": ["Dextrose 5% Water", "Dextrose 10%", "Glucose 40% Oral Paste", "Glucagon", "Normal Saline", "Lactated Ringers"]
+    },
+    {
+      "name": "Other Medications",
+      "icon": "🧪",
+      "color": "#94a3b8",
+      "drugs": ["Aspirin", "Diphenhydramine", "Furosemide", "Hyoscine Butyl bromide", "Metoclopramide", "Naloxone", "Tranexamic Acid"]
+    }
+  ],
+  "drugs": {
+    "Adenosine": {
+      "category": "Cardiac / Resus",
+      "color": "#ef4444",
+      "icon": "❤️",
+      "indications": [
+        {
+          "name": "SVT 1st Dose",
+          "dose_formula": "0.1mg/kg IV rapid push",
+          "max_dose": "Max dose: 6mg",
+          "concentration": "Undiluted: 6mg/2ml (3mg/ml). Follow with 10-20ml NS flush; consider arm elevation."
+        },
+        {
+          "name": "SVT 2nd Dose",
+          "dose_formula": "0.2mg/kg IV rapid push",
+          "max_dose": "Max dose: 12mg",
+          "concentration": "Undiluted: 12mg/4ml (3mg/ml). Follow with 10-20ml NS flush."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.3mg", "vol1": "0.1ml", "dose2": "0.6mg", "vol2": "0.2ml" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.3mg", "vol1": "0.1ml", "dose2": "0.6mg", "vol2": "0.2ml" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.6mg", "vol1": "0.2ml", "dose2": "1.2mg", "vol2": "0.4ml" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.9mg", "vol1": "0.3ml", "dose2": "1.8mg", "vol2": "0.6ml" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "1.2mg", "vol1": "0.4ml", "dose2": "2.4mg", "vol2": "0.8ml" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "1.8mg", "vol1": "0.6ml", "dose2": "3.6mg", "vol2": "1.2ml" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "2.4mg", "vol1": "0.8ml", "dose2": "4.8mg", "vol2": "1.6ml" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "3mg", "vol1": "1ml", "dose2": "6mg", "vol2": "2ml" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "3.9mg", "vol1": "1.3ml", "dose2": "7.8mg", "vol2": "2.6ml" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "4.2mg", "vol1": "1.4ml", "dose2": "8.4mg", "vol2": "2.8ml" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "4.5mg", "vol1": "1.5ml", "dose2": "9mg", "vol2": "3ml" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "6mg", "vol1": "2ml", "dose2": "12mg", "vol2": "4ml" }
+      ]
+    },
+    "Amiodarone": {
+      "category": "Cardiac / Resus",
+      "color": "#ef4444",
+      "icon": "❤️",
+      "indications": [
+        {
+          "name": "Cardiac Arrest (refractory VT/VF) – 1st Dose",
+          "dose_formula": "5mg/kg IV/IO",
+          "max_dose": "Max 300mg (adult); pediatric max 5mg/kg (may repeat twice, total 15mg/kg)",
+          "concentration": "Undiluted: 150mg/3ml (50mg/ml). Administer into large vein."
+        },
+        {
+          "name": "Wide Complex Tachycardia (with pulse)",
+          "dose_formula": "150mg IV infusion over 10 minutes",
+          "max_dose": "150mg",
+          "concentration": "Dilute 150mg (3ml) in 100ml D5W. If hypotension, slow or stop."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "10mg", "vol1": "0.2ml", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "15mg", "vol1": "0.3ml", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "30mg", "vol1": "0.6ml", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "50mg", "vol1": "1ml", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "65mg", "vol1": "1.3ml", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "90mg", "vol1": "1.8ml", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "125mg", "vol1": "2.5ml", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "150mg", "vol1": "3ml", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "200mg", "vol1": "4ml", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "225mg", "vol1": "4.5ml", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "250mg", "vol1": "5ml", "dose2": "150mg in 100ml D5W", "vol2": "103ml" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "300mg", "vol1": "6ml", "dose2": "150mg in 100ml D5W", "vol2": "103ml" }
+      ]
+    },
+    "Atropine": {
+      "category": "Cardiac / Resus",
+      "color": "#ef4444",
+      "icon": "❤️",
+      "indications": [
+        {
+          "name": "Bradycardia (compromised)",
+          "dose_formula": "0.02mg/kg IV/IO every 3-5 min",
+          "max_dose": "Repeat until symptoms resolve",
+          "concentration": "Diluted: 1mg/10ml (0.1mg/ml). Give as fast IV push."
+        },
+        {
+          "name": "Organophosphate Poisoning",
+          "dose_formula": "0.02-0.05mg/kg IV/IO every 3-5 min; double each dose",
+          "max_dose": "Until symptom resolution",
+          "concentration": "Diluted: 1mg/10ml (0.1mg/ml)"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.04mg", "vol1": "0.4ml", "dose2": "0.04-0.10mg", "vol2": "0.4-1.0ml" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.06mg", "vol1": "0.6ml", "dose2": "0.06-0.20mg", "vol2": "0.6-2.0ml" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.10mg", "vol1": "1.0ml", "dose2": "0.10-0.35mg", "vol2": "1.0-3.5ml" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.16mg", "vol1": "1.6ml", "dose2": "0.16-0.55mg", "vol2": "1.6-5.5ml" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "0.24mg", "vol1": "2.4ml", "dose2": "0.24-0.75mg", "vol2": "2.4-7.5ml" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "0.32mg", "vol1": "3.2ml", "dose2": "0.32-1.05mg", "vol2": "3.2-10.5ml" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "0.44mg", "vol1": "4.4ml", "dose2": "0.44-1.40mg", "vol2": "4.4-14.0ml" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "0.58mg", "vol1": "5.8ml", "dose2": "0.58-1.70mg", "vol2": "5.8-17.0ml" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "0.70mg", "vol1": "7ml", "dose2": "0.70-2.00mg", "vol2": "7.0-20.0ml" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "0.82mg", "vol1": "8.2ml", "dose2": "0.82-2.25mg", "vol2": "8.2-22.5ml" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "0.92mg", "vol1": "9.2ml", "dose2": "0.92-2.50mg", "vol2": "9.2-25.0ml" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1mg", "vol1": "10ml", "dose2": "2mg then 4mg", "vol2": "20ml then 40ml" }
+      ]
+    },
+    "Epinephrine (Adrenaline)": {
+      "category": "Cardiac / Resus",
+      "color": "#ef4444",
+      "icon": "❤️",
+      "indications": [
+        {
+          "name": "Cardiac Arrest",
+          "dose_formula": "Adult: 1mg IV/IO every 3-5 min; Pediatric: 0.01mg/kg IV/IO every 3-5 min",
+          "max_dose": "Repeat as needed",
+          "concentration": "1mg/10ml (1:10,000) prefilled syringe"
+        },
+        {
+          "name": "Anaphylaxis / Severe Asthma / Bradycardia (push dose)",
+          "dose_formula": "Adult: 0.01mg IV/IO every 2-5 min; Pediatric: 0.005-0.01mg/kg IV/IO every 2-5 min",
+          "max_dose": "Titrate to effect",
+          "concentration": "1mg/10ml (1:10,000) for push dose. Infusion: 1mg in 50ml NS = 20mcg/ml."
+        },
+        {
+          "name": "Inotrope Infusion (Pediatric)",
+          "dose_formula": "0.05-0.3 mcg/kg/min IV/IO",
+          "max_dose": "Titrate to response",
+          "concentration": "Dilution: 1mg into 50ml NS = 20mcg/ml"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.02mg", "vol1": "0.2ml", "dose2": "0.1-0.6mcg/min", "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.03mg", "vol1": "0.3ml", "dose2": "0.15-0.9mcg/min", "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.06mg", "vol1": "0.6ml", "dose2": "0.25-1.8mcg/min", "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.1mg", "vol1": "1ml", "dose2": "0.5-3mcg/min", "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "0.15mg", "vol1": "1.5ml", "dose2": "0.65-3.9mcg/min", "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "0.2mg", "vol1": "2ml", "dose2": "0.9-5.4mcg/min", "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "0.25mg", "vol1": "2.5ml", "dose2": "1.25-7.5mcg/min", "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "0.3mg", "vol1": "3ml", "dose2": "1.6-9.6mcg/min", "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "0.4mg", "vol1": "4ml", "dose2": "1.9-11.4mcg/min", "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "0.45mg", "vol1": "4.5ml", "dose2": "2.1-12.6mcg/min", "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "0.5mg", "vol1": "5ml", "dose2": "2.35-14.1mcg/min", "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1mg", "vol1": "10ml", "dose2": "2-10 mcg/min", "vol2": null }
+      ]
+    },
+    "Labetalol": {
+      "category": "Cardiac / Resus",
+      "color": "#ef4444",
+      "icon": "❤️",
+      "indications": [
+        {
+          "name": "Pre-eclampsia with severe hypertension / Eclampsia",
+          "dose_formula": "20mg IV over 2 minutes; may repeat every 10 min (max 80mg)",
+          "max_dose": "80mg total",
+          "concentration": "Dilution: 8ml Labetalol (40mg) + 12ml NS = 20ml of 2mg/ml. Prepare two syringes."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "20mg", "vol1": "10ml (of 2mg/ml)", "dose2": null, "vol2": null }
+      ]
+    },
+    "Combivent": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Asthma / COPD",
+          "dose_formula": "Nebulized: 2.5ml (2.5mg Salbutamol + 0.5mg Ipratropium). Dilute to max 5ml with NS.",
+          "max_dose": "2.5ml per nebulization",
+          "concentration": "Ready-to-use nebule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "2.5ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "2.5ml", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Salbutamol": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Bronchospasm (Asthma, COPD, Anaphylaxis)",
+          "dose_formula": "Nebulized: Adult 5mg; Pediatric <5y 2.5mg, ≥5y 5mg. Dilute to max 5ml with NS.",
+          "max_dose": "Repeat as needed",
+          "concentration": "2.5mg/2.5ml or 5mg/2.5ml nebule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "2.5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Racemic Epinephrine (Adrenaline)": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Croup",
+          "dose_formula": "Nebulized: >4y: 0.5ml; <4y: 0.05ml/kg (max 0.5ml). Dilute in 3ml NS.",
+          "max_dose": "0.5ml per dose",
+          "concentration": "2.25% racemic epinephrine"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.10 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.15–0.20 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.25–0.35 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.40–0.50 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "0.5 mL", "vol1": "3 mL", "dose2": null, "vol2": null }
+      ]
+    },
+    "Methoxyflurane (Penthrox)": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Moderate to Severe Pain",
+          "dose_formula": "3ml inhaled, self-administered. May repeat once (max 6ml/24h adult; pediatric max 3ml).",
+          "max_dose": "Adult 6ml/24h; pediatric 3ml single dose",
+          "concentration": "3ml vial"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "3ml", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Hydrocortisone": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Asthma, COPD, Anaphylaxis (moderate)",
+          "dose_formula": "2mg/kg IV/IM/IO. Alternative: <1y:25mg, 1-5y:50mg, >5y:100mg.",
+          "max_dose": "100mg adult",
+          "concentration": "100mg/2ml act-o-vial"
+        },
+        {
+          "name": "Severe or life-threatening Asthma/Anaphylaxis",
+          "dose_formula": "4mg/kg IV/IM/IO. Adult: 200mg.",
+          "max_dose": "200mg adult",
+          "concentration": "100mg/2ml act-o-vial"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "4 mg", "vol1": "0.08 mL", "dose2": "8 mg", "vol2": "0.16 mL" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "6–8 mg", "vol1": "0.12–0.16 mL", "dose2": "12–16 mg", "vol2": "0.24–0.32 mL" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "10–14 mg", "vol1": "0.20–0.28 mL", "dose2": "20–28 mg", "vol2": "0.40–0.56 mL" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "16–22 mg", "vol1": "0.32–0.44 mL", "dose2": "32–44 mg", "vol2": "0.64–0.88 mL" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "24–30 mg", "vol1": "0.48–0.60 mL", "dose2": "48–60 mg", "vol2": "0.96–1.20 mL" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "32–42 mg", "vol1": "0.64–0.84 mL", "dose2": "64–84 mg", "vol2": "1.28–1.68 mL" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "44–56 mg", "vol1": "0.88–1.12 mL", "dose2": "88–112 mg", "vol2": "1.76–2.24 mL" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "58–68 mg", "vol1": "1.16–1.36 mL", "dose2": "116–136 mg", "vol2": "2.32–2.72 mL" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "70–80 mg", "vol1": "1.40–1.60 mL", "dose2": "140–160 mg", "vol2": "2.80–3.20 mL" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "82–90 mg", "vol1": "1.64–1.80 mL", "dose2": "164–180 mg", "vol2": "3.28–3.60 mL" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "92–100 mg", "vol1": "1.84–2.00 mL", "dose2": "184–200 mg", "vol2": "3.68–4.00 mL" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "100 mg", "vol1": "2.0 mL", "dose2": "200 mg", "vol2": "4.0 mL" }
+      ]
+    },
+    "Magnesium Sulphate": {
+      "category": "Airway / Respiratory",
+      "color": "#10b981",
+      "icon": "🫁",
+      "indications": [
+        {
+          "name": "Asthma (severe or life-threatening)",
+          "dose_formula": "Adult: 2g IV/IO over 20 min; Pediatric: 40mg/kg IV/IO over 20 min",
+          "max_dose": "2g adult",
+          "concentration": "Dilute in 100ml NS. Do not mix with adrenaline."
+        },
+        {
+          "name": "Eclampsia",
+          "dose_formula": "4g IV over 5-10 min + 8g IM (4g each gluteal)",
+          "max_dose": "As directed",
+          "concentration": "5g/10ml ampule"
+        },
+        {
+          "name": "Torsades de Pointes",
+          "dose_formula": "Adult: 1-2g IV over 5-20 min; Pediatric: 25-50mg/kg IV over 5-20 min (may repeat once)",
+          "max_dose": "Adult 2g, pediatric 50mg/kg",
+          "concentration": "Dilute as needed"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "80 mg", "vol1": "4 mL", "dose2": "N/R", "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "120–160 mg", "vol1": "6–8 mL", "dose2": "N/R", "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "200–280 mg", "vol1": "10–14 mL", "dose2": "N/R", "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "320–440 mg", "vol1": "16–22 mL", "dose2": "N/R", "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "480–600 mg", "vol1": "24–30 mL", "dose2": "N/R", "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "640–840 mg", "vol1": "32–42 mL", "dose2": "N/R", "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "880–1120 mg", "vol1": "44–56 mL", "dose2": "N/R", "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "1160–1360 mg", "vol1": "58–68 mL", "dose2": "N/R", "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "1400–1600 mg", "vol1": "70–80 mL", "dose2": "N/R", "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "1640–1800 mg", "vol1": "82–90 mL", "dose2": "N/R", "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "1840–2000 mg", "vol1": "92–100 mL", "dose2": "4g+4g IM", "vol2": "4g each" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "2 g", "vol1": "100 mL", "dose2": "4g+4g IM", "vol2": "4g each" }
+      ]
+    },
+    "Diazepam": {
+      "category": "Neuro / Sedation",
+      "color": "#8b5cf6",
+      "icon": "🧠",
+      "indications": [
+        {
+          "name": "Seizures",
+          "dose_formula": "Adult: 5mg IV; Pediatric: 0.1mg/kg IV/IO (max 5mg) or 0.5mg/kg PR (max 20mg)",
+          "max_dose": "Adult 5mg IV; pediatric 5mg IV or 20mg PR",
+          "concentration": "Dilute 10mg (2ml) in 8ml NS = 1mg/ml. IM not recommended."
+        },
+        {
+          "name": "Sedation of agitated/combative patients",
+          "dose_formula": "5mg IV (adult); pediatric 0.1mg/kg IV/IO (max 5mg)",
+          "max_dose": "As above",
+          "concentration": "Same dilution"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.2 mg", "vol1": "0.2 mL", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.3–0.4 mg", "vol1": "0.3–0.4 mL", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.5–0.7 mg", "vol1": "0.5–0.7 mL", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.8–1.1 mg", "vol1": "0.8–1.1 mL", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "1.2–1.5 mg", "vol1": "1.2–1.5 mL", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "1.6–2.1 mg", "vol1": "1.6–2.1 mL", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "2.2–2.8 mg", "vol1": "2.2–2.8 mL", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "2.9–3.4 mg", "vol1": "2.9–3.4 mL", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "3.5–4.0 mg", "vol1": "3.5–4.0 mL", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "4.1–4.5 mg", "vol1": "4.1–4.5 mL", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "5 mg", "vol1": "5 mL", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "5 mg", "vol1": "5 mL", "dose2": null, "vol2": null }
+      ]
+    },
+    "Haloperidol": {
+      "category": "Neuro / Sedation",
+      "color": "#8b5cf6",
+      "icon": "🧠",
+      "indications": [
+        {
+          "name": "Acute Psychosis (suspected mental health illness)",
+          "dose_formula": "5mg IM only",
+          "max_dose": "5mg",
+          "concentration": "5mg/1ml ampule. Contraindicated in Parkinson's disease, dementia."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "5mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Morphine": {
+      "category": "Pain",
+      "color": "#f97316",
+      "icon": "💊",
+      "indications": [
+        {
+          "name": "Severe Pain",
+          "dose_formula": "IV: 2.5mg increments every 5 min (max 10mg); IM: 2-10mg (max 20mg). Pediatric: 0.1mg/kg IV/IM/IO.",
+          "max_dose": "Adult IV 10mg, IM 20mg",
+          "concentration": "Dilute 10mg (1ml) in 9ml NS = 1mg/ml. Caution in elderly, infants <1y, morbid obesity, respiratory compromise."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.2 mg", "vol1": "0.2 mL", "dose2": "0.2 mg", "vol2": "0.02 mL" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.3–0.4 mg", "vol1": "0.3–0.4 mL", "dose2": "0.3–0.4 mg", "vol2": "0.03–0.04 mL" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.5–0.7 mg", "vol1": "0.5–0.7 mL", "dose2": "0.5–0.7 mg", "vol2": "0.05–0.07 mL" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.8–1.1 mg", "vol1": "0.8–1.1 mL", "dose2": "0.8–1.1 mg", "vol2": "0.08–0.11 mL" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "1.2–1.5 mg", "vol1": "1.2–1.5 mL", "dose2": "1.2–1.5 mg", "vol2": "0.12–0.15 mL" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "1.6–2.1 mg", "vol1": "1.6–2.1 mL", "dose2": "1.6–2.1 mg", "vol2": "0.16–0.21 mL" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "2.2–2.8 mg", "vol1": "2.2–2.8 mL", "dose2": "2.2–2.8 mg", "vol2": "0.22–0.28 mL" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "2.9–3.4 mg", "vol1": "2.9–3.4 mL", "dose2": "2.9–3.4 mg", "vol2": "0.29–0.34 mL" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "3.5–4.0 mg", "vol1": "3.5–4.0 mL", "dose2": "3.5–4.0 mg", "vol2": "0.35–0.40 mL" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "4.1–4.5 mg", "vol1": "4.1–4.5 mL", "dose2": "4.1–4.5 mg", "vol2": "0.41–0.45 mL" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "2.5mg", "vol1": "2.5ml", "dose2": "2-10mg", "vol2": "0.2-1 ml" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "2.5mg", "vol1": "2.5ml", "dose2": "2-10mg", "vol2": "0.2-1 ml" }
+      ]
+    },
+    "Diclofenac": {
+      "category": "Pain",
+      "color": "#f97316",
+      "icon": "💊",
+      "indications": [
+        {
+          "name": "Moderate to Severe Pain",
+          "dose_formula": "75mg IM (into large muscle) or IV (dilute in 100ml NS over 10 min). Avoid IV due to thromboembolic risk.",
+          "max_dose": "75mg single dose",
+          "concentration": "75mg/3ml ampule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "75mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "75mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Nefopam": {
+      "category": "Pain",
+      "color": "#f97316",
+      "icon": "💊",
+      "indications": [
+        {
+          "name": "Moderate to Severe Pain",
+          "dose_formula": "20mg IV once, diluted in 100ml NS over 5 min. Contraindicated in epilepsy, STEMI/NSTEMI, renal impairment, <13 years.",
+          "max_dose": "20mg single dose",
+          "concentration": "20mg/2ml ampule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": "N/R", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "20 mg", "vol1": "100ml", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "20 mg", "vol1": "100ml", "dose2": null, "vol2": null }
+      ]
+    },
+    "Paracetamol": {
+      "category": "Pain",
+      "color": "#f97316",
+      "icon": "💊",
+      "indications": [
+        {
+          "name": "Pain and Fever",
+          "dose_formula": "Adult: 1000mg IV/PO (max 4g/24h). Pediatric IV: 10mg/kg (slow over 10-15 min). Pediatric PR: <5y 125mg, ≥5y 250mg.",
+          "max_dose": "Adult 4g/24h",
+          "concentration": "IV: 10mg/ml (1000mg/100ml). Not recommended for <33kg (toxicity risk)."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "NR", "vol1": "125mg PR", "dose2": "20 mg IV", "vol2": "2 ml" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "NR", "vol1": "125mg PR", "dose2": "30-40 mg IV", "vol2": "3-4 ml" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "125mg PR", "vol1": "125mg", "dose2": "50-70 mg IV", "vol2": "5-7 ml" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "125mg PR", "vol1": "125mg", "dose2": "80-110 mg IV", "vol2": "8-11 ml" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "120-150 mg IV", "vol2": "12-15 ml" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "160-210 mg IV", "vol2": "16-21 ml" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "220-280 mg IV", "vol2": "22-28 ml" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "290-340 mg IV", "vol2": "29-34 ml" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "350-400 mg IV", "vol2": "35-40 ml" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "250mg PR", "vol1": "250mg", "dose2": "410-450 mg IV", "vol2": "41-45 ml" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "500mg PO", "vol1": "1 tab", "dose2": "460-500 mg IV", "vol2": "46-50 ml" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1000mg PO", "vol1": "2 tabs", "dose2": "1000 mg IV", "vol2": "100 ml" }
+      ]
+    },
+    "Glyceryl Trinitrate": {
+      "category": "Pain",
+      "color": "#f97316",
+      "icon": "💊",
+      "indications": [
+        {
+          "name": "Cardiac Chest Pain, Pulmonary Edema",
+          "dose_formula": "0.4mg SL spray every 3-5 min (max 1.2mg/3 sprays). Do not shake bottle.",
+          "max_dose": "1.2mg",
+          "concentration": "0.4mg per spray"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "0.4mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "0.4mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Dextrose 5% Water": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Diluent for Amiodarone infusion",
+          "dose_formula": "100ml as needed",
+          "max_dose": "Not for hypoglycemia treatment",
+          "concentration": "5g/100ml"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "100ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "100ml", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Dextrose 10%": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Hypoglycemia (RBS <70mg/dl)",
+          "dose_formula": "10ml/kg IV/IO (max 125ml in children). Adult: 125-250ml.",
+          "max_dose": "Adult 250ml, pediatric 125ml",
+          "concentration": "10g/100ml (10% solution)"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "20ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "30-40ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "50-70ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "80-110ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "120-125ml (max 125ml)", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "125ml (max)", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "125ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "125ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "125ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "125ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "125-250ml", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "125-250ml", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Glucose 40% Oral Paste": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Hypoglycemia (RBS <70mg/dl) in conscious patients able to swallow",
+          "dose_formula": "Adult: 1 tube (15g); Pediatric: ½ tube. Must be swallowed – not buccally absorbed.",
+          "max_dose": "Repeat after 5-10 min if needed",
+          "concentration": "40% glucose paste"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "½ tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "1 tube", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1 tube", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Glucagon": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Hypoglycemia, Beta-blocker overdose, Calcium Channel Blocker Overdose",
+          "dose_formula": ">6y or >25kg: 1mg IM/SC; <6y or <25kg: 0.5mg IM/SC. Repeat q10-15min. Up to 5mg for overdose.",
+          "max_dose": "See dosing",
+          "concentration": "1mg/1ml vial. May be ineffective if glycogen stores depleted (sepsis, starvation)."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "0.5 mg", "vol1": "0.5 mL", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "0.5–1 mg", "vol1": "0.5–1 mL", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "1 mg", "vol1": "1 mL", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "1 mg", "vol1": "1 mL", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "1 mg", "vol1": "1 mL", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "1 mg", "vol1": "1 mL", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1 mg", "vol1": "1 mL", "dose2": null, "vol2": null }
+      ]
+    },
+    "Normal Saline": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Intravascular volume replacement, medication dilution, line flushing",
+          "dose_formula": "As per CPG. Pediatric: 10ml/kg bolus (max 500ml).",
+          "max_dose": "Titrate to perfusion",
+          "concentration": "0.9% sodium chloride"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "10ml/kg = 20ml", "vol1": "20ml", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "30-40ml", "vol1": "30-40ml", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "50-70ml", "vol1": "50-70ml", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "80-110ml", "vol1": "80-110ml", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "120-150ml", "vol1": "120-150ml", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "160-210ml", "vol1": "160-210ml", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "220-280ml", "vol1": "220-280ml", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "290-340ml", "vol1": "290-340ml", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "350-400ml", "vol1": "350-400ml", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "410-450ml", "vol1": "410-450ml", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "460-500ml", "vol1": "460-500ml", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "500-1000ml", "vol1": "500-1000ml", "dose2": null, "vol2": null }
+      ]
+    },
+    "Lactated Ringers": {
+      "category": "Metabolic / Fluids",
+      "color": "#06b6d4",
+      "icon": "💧",
+      "indications": [
+        {
+          "name": "Intravascular volume replacement (caution: contraindicated in <1 month, DKA, hypervolemia, liver failure)",
+          "dose_formula": "As per CPG. Not routine in pediatrics – Normal Saline preferred.",
+          "max_dose": "Titrate to perfusion",
+          "concentration": "Hartmann's solution"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R (contraindicated <1m)", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "Use NS", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "As per CPG", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "As per CPG", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Aspirin": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Acute Coronary Syndrome",
+          "dose_formula": "324mg (4x81mg tablets) chewed. If already taken within 60 min, give additional to reach 324mg total.",
+          "max_dose": "324mg single dose",
+          "concentration": "81mg/tablet"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "324mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "324mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Diphenhydramine": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Moderate to Severe Allergic Reactions / Anaphylaxis",
+          "dose_formula": "1mg/kg IM/IV (max 50mg). IM preferred. For IV, dilute in 100ml NS (adult) or 1ml/kg NS (peds) over 5 min.",
+          "max_dose": "50mg",
+          "concentration": "50mg/1ml vial. Injection painful – avoid undiluted."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "2 mg", "vol1": "0.04 mL (undiluted)", "dose2": "2 mg (diluted)", "vol2": "0.4 mL" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "3–4 mg", "vol1": "0.06–0.08 mL", "dose2": "3–4 mg", "vol2": "0.6–0.8 mL" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "5–7 mg", "vol1": "0.10–0.14 mL", "dose2": "5–7 mg", "vol2": "1.0–1.4 mL" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "8–11 mg", "vol1": "0.16–0.22 mL", "dose2": "8–11 mg", "vol2": "1.6–2.2 mL" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "12–15 mg", "vol1": "0.24–0.30 mL", "dose2": "12–15 mg", "vol2": "2.4–3.0 mL" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "16–21 mg", "vol1": "0.32–0.42 mL", "dose2": "16–21 mg", "vol2": "3.2–4.2 mL" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "22–28 mg", "vol1": "0.44–0.56 mL", "dose2": "22–28 mg", "vol2": "4.4–5.6 mL" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "29–34 mg", "vol1": "0.58–0.68 mL", "dose2": "29–34 mg", "vol2": "5.8–6.8 mL" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "35–40 mg", "vol1": "0.70–0.80 mL", "dose2": "35–40 mg", "vol2": "7.0–8.0 mL" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "41–45 mg", "vol1": "0.82–0.90 mL", "dose2": "41–45 mg", "vol2": "8.2–9.0 mL" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "46–50 mg", "vol1": "0.92–1.00 mL", "dose2": "46–50 mg", "vol2": "9.2–10.0 mL" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "50 mg", "vol1": "1.0 mL", "dose2": "50 mg", "vol2": "10 mL (diluted)" }
+      ]
+    },
+    "Furosemide": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Acute Pulmonary Edema with signs of fluid overload",
+          "dose_formula": "40mg IV slow over 1-2 min (adult only). Not for pediatric use.",
+          "max_dose": "40mg",
+          "concentration": "20mg/2ml ampule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "40mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "40mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Hyoscine Butyl bromide": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Lower abdominal cramping (gastroenteritis, renal colic, IBS, dysmenorrhea)",
+          "dose_formula": "20mg IV/IM/SC. Not for pediatrics.",
+          "max_dose": "20mg single dose",
+          "concentration": "20mg/1ml ampule. Contraindicated in tachyarrhythmias, narrow angle glaucoma, prostate hypertrophy, etc."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "N/R", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "20mg", "vol1": null, "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "20mg", "vol1": null, "dose2": null, "vol2": null }
+      ]
+    },
+    "Metoclopramide": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Nausea and Vomiting",
+          "dose_formula": "Adult: 10mg IV/IM slow over 3 min or diluted in 100ml NS. Pediatric: 0.1mg/kg IV/IM (generally not recommended due to extrapyramidal effects).",
+          "max_dose": "Adult 10mg, pediatric 0.1mg/kg",
+          "concentration": "10mg/2ml ampule. Contraindicated in epilepsy, Parkinson's, GI obstruction, age <1 year."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.2 mg", "vol1": "0.04 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.3–0.4 mg", "vol1": "0.06–0.08 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.5–0.7 mg", "vol1": "0.10–0.14 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.8–1.1 mg", "vol1": "0.16–0.22 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "1.2–1.5 mg", "vol1": "0.24–0.30 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "1.6–2.1 mg", "vol1": "0.32–0.42 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "2.2–2.8 mg", "vol1": "0.44–0.56 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "2.9–3.4 mg", "vol1": "0.58–0.68 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "3.5–4.0 mg", "vol1": "0.70–0.80 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "4.1–4.5 mg", "vol1": "0.82–0.90 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "4.6–5.0 mg", "vol1": "0.92–1.00 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" },
+        { "age": "Adult", "weight": "50kg +", "dose1": "10 mg", "vol1": "2.0 mL", "dose2": "In CPG not required", "vol2": "In CPG not required" }
+      ]
+    },
+    "Naloxone": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Opiate overdose",
+          "dose_formula": "IV/IM: 0.4mg every 3 min (max 2mg); IN: 4mg every 3 min. Pediatric: 0.01mg/kg IV/IM/IO every 3 min. Titrate to reverse respiratory depression only.",
+          "max_dose": "Adult 2mg (IV/IM) or repeated IN; pediatric 0.01mg/kg repeat",
+          "concentration": "0.4mg/1ml ampule; 4mg prefilled IN spray (do not test/prime)."
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "0.02 mg", "vol1": "0.05 mL", "dose2": "N/R", "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "0.03–0.04 mg", "vol1": "0.075–0.10 mL", "dose2": "N/R", "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "0.05–0.07 mg", "vol1": "0.125–0.175 mL", "dose2": "N/R", "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "0.08–0.11 mg", "vol1": "0.20–0.275 mL", "dose2": "N/R", "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "0.12–0.15 mg", "vol1": "0.30–0.375 mL", "dose2": "N/R", "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "0.16–0.21 mg", "vol1": "0.40–0.525 mL", "dose2": "N/R", "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "0.22–0.28 mg", "vol1": "0.55–0.70 mL", "dose2": "N/R", "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "0.29–0.34 mg", "vol1": "0.725–0.85 mL", "dose2": "N/R", "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "0.35–0.40 mg", "vol1": "0.875–1.0 mL", "dose2": "N/R", "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "0.4 mg", "vol1": "1 ml", "dose2": "N/R", "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "0.4 mg", "vol1": "1 ml", "dose2": "4 mg IN", "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "0.4 mg", "vol1": "1 ml", "dose2": "4 mg IN", "vol2": null }
+      ]
+    },
+    "Tranexamic Acid": {
+      "category": "Other Medications",
+      "color": "#94a3b8",
+      "icon": "🧪",
+      "indications": [
+        {
+          "name": "Uncontrolled bleeding secondary to trauma or postpartum hemorrhage (within 3 hours of onset)",
+          "dose_formula": "Adult: 1000mg IV once, diluted in 100ml NS over 10 min. Pediatric: 15mg/kg IV once over 10 min.",
+          "max_dose": "Single dose only",
+          "concentration": "500mg/5ml ampule"
+        }
+      ],
+      "age_data": [
+        { "age": "Preterm", "weight": "2kg", "dose1": "30 mg", "vol1": "6 mL", "dose2": null, "vol2": null },
+        { "age": "Term-2 months", "weight": "3-4kg", "dose1": "45–60 mg", "vol1": "9–12 mL", "dose2": null, "vol2": null },
+        { "age": "3-7 months", "weight": "5-7kg", "dose1": "75–105 mg", "vol1": "15–21 mL", "dose2": null, "vol2": null },
+        { "age": "8-12 months", "weight": "8-11kg", "dose1": "120–165 mg", "vol1": "24–33 mL", "dose2": null, "vol2": null },
+        { "age": "1-3 years", "weight": "12-15kg", "dose1": "180–225 mg", "vol1": "36–45 mL", "dose2": null, "vol2": null },
+        { "age": "4-5 years", "weight": "16-21kg", "dose1": "240–315 mg", "vol1": "48–63 mL", "dose2": null, "vol2": null },
+        { "age": "6-7 years", "weight": "22-28kg", "dose1": "330–420 mg", "vol1": "66–84 mL", "dose2": null, "vol2": null },
+        { "age": "8-9 years", "weight": "29-34kg", "dose1": "435–510 mg", "vol1": "87–102 mL", "dose2": null, "vol2": null },
+        { "age": "10-11 years", "weight": "35-40kg", "dose1": "525–600 mg", "vol1": "105–120 mL", "dose2": null, "vol2": null },
+        { "age": "12-13 years", "weight": "41-45kg", "dose1": "615–675 mg", "vol1": "123–135 mL", "dose2": null, "vol2": null },
+        { "age": "≥14 years", "weight": "46-50kg", "dose1": "1000mg", "vol1": "105ml", "dose2": null, "vol2": null },
+        { "age": "Adult", "weight": "50kg +", "dose1": "1000mg", "vol1": "105ml", "dose2": null, "vol2": null }
+      ]
+    }
+  }
+}
