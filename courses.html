@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<script>
+  // ── DCAS Security Guard: runs before anything else renders ──
+  // [TEMPORARILY DISABLED FOR TESTING]
+  /*
+  (function() {
+    const AUTH_KEY = 'dcas_local_auth';
+    try {
+      const sessionRaw = localStorage.getItem(AUTH_KEY);
+      if (!sessionRaw) { window.location.replace('login.html'); return; }
+      const session = JSON.parse(sessionRaw);
+      if (!session.loggedIn || Date.now() > session.expiresAt) {
+        localStorage.removeItem(AUTH_KEY);
+        window.location.replace('login.html');
+      }
+    } catch (e) {
+      window.location.replace('login.html');
+    }
+  })();
+  */
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS · Medical Courses</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    
+    <style>
+        /* ── Core Layout ── */
+        main { padding: 80px 20px 40px; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+        .menu-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 600px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
+        
+        /* ── Special cards (Courses) ── */
+        .menu-card {
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; 
+            background: var(--glass-bg); border: 1px solid var(--glass-border); 
+            border-radius: 24px; padding: 20px; box-shadow: var(--glass-shadow); 
+            text-decoration: none; color: inherit; display: flex; flex-direction: column;
+            position: relative; overflow: hidden;
+            /* Animation completely removed to prevent iOS Safari vanishing bug */
+        }
+              .menu-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 15px 30px -5px rgba(0,0,0,0.3); /* Slightly darker shadow for better depth */
+            border-color: var(--primary-accent); 
+        }
+        
+        .card-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 12px; 
+        }
+        
+        .status-badge { 
+            font-size: 0.72rem; 
+            font-weight: 800; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            letter-spacing: 0.6px; 
+            text-transform: uppercase; 
+            display: flex; 
+            align-items: center; 
+            gap: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Lifts the badge off the card */
+        }
+        
+        .badge-available { 
+            background: rgba(34, 197, 94, 0.15); 
+            color: #86efac; /* Brighter, luminous green */
+            border: 1px solid #22c55e; /* Solid green border for sharp contrast */
+        }
+        
+        .badge-coming { 
+            background: rgba(245, 158, 11, 0.15); 
+            color: #fde047; /* Brighter, luminous yellow */
+            border: 1px solid #f59e0b; /* Solid amber border for sharp contrast */
+        }
+
+        
+        .menu-card h2 { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0 0 5px 0; line-height: 1.2; letter-spacing: -0.5px;}
+        .menu-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 15px 0; line-height: 1.4; flex: 1;}
+        
+        /* Course Icon/Illustration */
+        .course-icon { font-size: 2.5rem; position: absolute; right: 20px; top: 20px; opacity: 0.8; }
+
+        /* ── Disabled Card State ── */
+        .menu-card.disabled { cursor: default; }
+        .menu-card.disabled:hover { transform: none; box-shadow: var(--glass-shadow); border-color: var(--glass-border); }
+        .menu-card.disabled .course-icon { opacity: 0.3; filter: grayscale(100%); }
+
+        /* ── Action buttons ── */
+        .menu-sub-options { display: flex; width: 100%; box-sizing: border-box; margin-top: auto;}
+        .btn-action { flex: 1; text-align: center; padding: 12px 15px; font-size: 0.95rem; font-weight: 700; white-space: nowrap; border-radius: 12px; text-decoration: none; transition: background 0.2s;}
+        
+        .btn-launch { background: var(--primary-accent); color: white; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .btn-launch:hover { filter: brightness(1.1); }
+        .btn-launch:active { transform: scale(0.98); }
+        
+        .btn-locked { background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px dashed var(--glass-border); cursor: not-allowed; }
+
+        footer { text-align: center; font-size: 0.8rem; color: var(--text-secondary); padding: 30px 20px; margin-top: 20px; }
+        footer a { color: inherit; text-decoration: underline; }
+
+        /* ── Float buttons ── */
+        .float-btn { position: fixed; width: 40px; height: 40px; border-radius: 50%; background: rgba(61,100,115,0.7); color: white; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: transform 0.2s, background 0.2s, opacity 0.2s; z-index: 999; backdrop-filter: blur(2px); opacity: 0.8; }
+        .float-btn:hover { transform: scale(1.1); background: var(--toggle-active); opacity: 1; }
+        .float-btn:active { transform: scale(0.95); }
+        .float-btn.hidden { opacity: 0; pointer-events: none; }
+        #scrollToBottomBtn { bottom: 20px; right: 15px; }
+        #scrollToTopBtn   { bottom: 70px; right: 15px; }
+
+        /* ── Drawer ── */
+        .drawer-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; backdrop-filter: blur(4px); }
+        .drawer-overlay.active { opacity: 1; pointer-events: auto; }
+        .notification-drawer { position: fixed; top: -600px; left: 0; right: 0; width: 100%; box-sizing: border-box; overflow: hidden; background: rgba(20,30,40,0.4); backdrop-filter: blur(25px) saturate(180%); -webkit-backdrop-filter: blur(25px) saturate(180%); border-bottom: 1px solid rgba(255,255,255,0.15); box-shadow: 0 15px 40px rgba(0,0,0,0.4); z-index: 2001; padding: 25px 16px 35px; border-radius: 0 0 30px 30px; transition: top 0.4s cubic-bezier(0.25,1,0.5,1); display: flex; flex-direction: column; gap: 20px; }
+        .notification-drawer.open { top: 0; }
+        .toggles-grid { display: grid; gap: 10px; width: 100%; }
+        .toggle-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .toggle-btn { width: 100%; aspect-ratio: 1; max-width: 60px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.08); color: white; font-size: 1.35rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 0 auto; }
+        .toggle-btn.active { background: var(--primary-accent); border-color: var(--primary-accent); color: white; box-shadow: 0 0 15px var(--primary-accent); }
+        .toggle-btn:active { transform: scale(0.92); }
+        .toggle-label { font-size: 0.75rem; color: rgba(255,255,255,0.85); margin-top: 8px; font-weight: 500; letter-spacing: 0.3px; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+        .close-drawer-btn { width: 100%; height: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0.5; margin-top: -10px; }
+        .drawer-trigger { position: absolute; left: 50%; bottom: -35px; transform: translateX(-50%); width: 60px; height: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 999; background: rgba(255,255,255,0.01); border-radius: 0 0 30px 30px; animation: floatDown 3s ease-in-out infinite; }
+        .trigger-line { height: 3px; background: var(--primary-accent); border-radius: 3px; margin: 3px 0; box-shadow: 0 0 8px var(--primary-accent); }
+        .trigger-line.top { width: 30px; }
+        .trigger-line.bottom { width: 20px; }
+        @keyframes floatDown { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+        /* ══════════════════════════════════════════════════════════
+           PWA INSTALL BANNER
+        ══════════════════════════════════════════════════════════ */
+        #pwaInstallBanner {
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 3000; padding: 0 12px 12px;
+            animation: pwaBannerIn 0.45s cubic-bezier(0.16,1,0.3,1) both;
+        }
+        @keyframes pwaBannerIn { from { transform: translateY(110%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        #pwaInstallBanner.pwa-hiding { animation: pwaBannerOut 0.3s ease-in forwards; }
+        @keyframes pwaBannerOut { to { transform: translateY(110%); opacity: 0; } }
+
+        .pwa-banner-inner {
+            display: flex; align-items: center; gap: 12px; background: rgba(10, 20, 40, 0.92);
+            backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1px solid rgba(59,130,246,0.35); border-radius: 20px; padding: 14px;
+            box-shadow: 0 -4px 30px rgba(0,0,0,0.5), 0 0 0 0.5px rgba(59,130,246,0.15) inset;
+        }
+
+        .pwa-banner-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; overflow: hidden; background: rgba(59,130,246,0.15); display: flex; align-items: center; justify-content: center; }
+        .pwa-banner-icon img { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; }
+        .pwa-icon-fallback { font-size: 1.5rem; }
+
+        .pwa-banner-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+        .pwa-banner-title { font-size: 0.92rem; font-weight: 700; color: #E8F0FE; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pwa-banner-sub { font-size: 0.75rem; color: #6B7FA3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .pwa-banner-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .pwa-btn-install { background: linear-gradient(135deg, #2563EB, #1D4ED8); color: white; border: none; border-radius: 30px; padding: 9px 20px; font-size: 0.85rem; font-weight: 700; cursor: pointer; white-space: nowrap; box-shadow: 0 4px 14px -4px rgba(29,78,216,0.7); transition: all 0.2s; }
+        .pwa-btn-install:hover { background: linear-gradient(135deg, #3B82F6, #1E40AF); transform: translateY(-1px); }
+        .pwa-btn-install:active { transform: translateY(1px); }
+        .pwa-btn-dismiss { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); color: #6B7FA3; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; padding: 0; }
+        .pwa-btn-dismiss:hover { background: rgba(255,255,255,0.14); color: #E8F0FE; }
+
+        .pwa-ios-steps { margin-top: 8px; background: rgba(10,20,40,0.88); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(59,130,246,0.25); border-radius: 16px; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+        .pwa-ios-step { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: #94A3B8; }
+        .pwa-ios-num { width: 22px; height: 22px; border-radius: 50%; background: rgba(59,130,246,0.2); border: 1px solid rgba(59,130,246,0.4); color: #60A5FA; font-size: 0.72rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .pwa-share-icon { display: inline-block; font-size: 1rem; margin: 0 2px; }
+
+        #pwaInstallBanner { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+    </style>
+</head>
+<body>
+
+<div id="pwaInstallBanner" style="display:none;" role="complementary" aria-label="Install app">
+    <div class="pwa-banner-inner">
+        <div class="pwa-banner-icon">
+            <img src="icons/icon.png" alt="DCAS Courses" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="pwa-icon-fallback" style="display:none;">🛡️</span>
+        </div>
+        <div class="pwa-banner-text">
+            <strong class="pwa-banner-title">Install DCAS Hub</strong>
+            <span class="pwa-banner-sub" id="pwaBannerSub">Add to home screen · works offline</span>
+        </div>
+        <div class="pwa-banner-actions">
+            <button class="pwa-btn-install" id="pwaInstallBtn">Install</button>
+            <button class="pwa-btn-dismiss" id="pwaDismissBtn" aria-label="Dismiss">✕</button>
+        </div>
+    </div>
+    <div class="pwa-ios-steps" id="pwaIosSteps" style="display:none;">
+        <div class="pwa-ios-step"><span class="pwa-ios-num">1</span>Tap <strong style="color:#E8F0FE;">Share</strong> <span class="pwa-share-icon">⎙</span> in Safari's toolbar</div>
+        <div class="pwa-ios-step"><span class="pwa-ios-num">2</span>Choose <strong style="color:#E8F0FE;">"Add to Home Screen"</strong> from the list</div>
+    </div>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<div class="notification-drawer" id="notificationDrawer">
+    <div class="toggles-grid theme-row" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="toggle-item"><button class="toggle-btn" id="toggleDark">🌑</button><div class="toggle-label">Dark</div></div>
+        <div class="toggle-item"><button class="toggle-btn amoled-btn" id="toggleAmoled">⬛</button><div class="toggle-label">AMOLED</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleLight">☀️</button><div class="toggle-label">Light</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleSepia">📜</button><div class="toggle-label">Sepia</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleForest">🌲</button><div class="toggle-label">Forest</div></div>
+    </div>
+
+    <div class="toggles-grid shortcut-row" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="toggle-item"><button class="toggle-btn" id="qsHome">🏠</button><div class="toggle-label">Home</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsAbout">ℹ️</button><div class="toggle-label">About</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsInstall">📲</button><div class="toggle-label">Install</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsLogout" style="background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);">🚪</button><div class="toggle-label">Logout</div></div>
+    </div>
+
+    <div class="close-drawer-btn" id="closeDrawerBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </div>
+</div>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn" onclick="window.location.href='index.html'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">Courses Preparation</h1>
+            <p id="pageSubtitle">Study &amp; Mock Exams</p>
+        </div>
+    </div>
+
+    <div class="drawer-trigger" id="drawerTrigger">
+        <div class="trigger-line top"></div>
+        <div class="trigger-line bottom"></div>
+    </div>
+
+    <div class="header-right" id="headerShortcuts">
+        <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
+        <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <a href="about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main id="mainContent">
+    <div class="menu-grid" id="menuGrid">
+        </div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About &amp; Disclaimer</a> · Choose a module above to begin.</div>
+</footer>
+
+<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top">↑</button>
+<button class="float-btn hidden" id="scrollToBottomBtn" title="Go to bottom">↓</button>
+
+<script>
+(function(){
+    "use strict";
+
+    // ══════════════════════════════════════════════════════════
+    //  COURSE DATA & RENDER ENGINE
+    // ══════════════════════════════════════════════════════════
+    const COURSES = [
+        { id: 'itls', shortTitle: 'ITLS', title: 'International Trauma Life Support', link: 'itls.html', available: true, icon: '🚑' },
+        { id: 'empact', shortTitle: 'EMPACT', title: 'Emergency Medical Patients: Assessment, Care & Transport', link: '#', available: false, icon: '⚕️' },
+        { id: 'bls', shortTitle: 'BLS', title: 'Basic Life Support', link: '#', available: false, icon: '🫀' },
+        { id: 'acls', shortTitle: 'ACLS', title: 'Advanced Cardiovascular Life Support', link: '#', available: false, icon: '🫀 ' },
+        { id: 'bdls', shortTitle: 'BDLS', title: 'Basic Disaster Life Support', link: '#', available: false, icon: '🌪️' },
+        { id: 'pepp', shortTitle: 'PEPP', title: 'Pediatric Education for Prehospital Professionals', link: '#', available: false, icon: '🧸' },
+        { id: 'ppet', shortTitle: 'PPET', title: 'Prehospital Pediatric Emergency Transport', link: '#', available: false, icon: '🚁' },
+        { id: 'pals', shortTitle: 'PALS', title: 'Pediatric Advanced Life Support', link: '#', available: false, icon: '👶' },
+       
+        { id: 'ecg', shortTitle: 'ECG', title: 'ECG Interpretation', link: '#', available: false, icon: '📉' },
+        { id: 'medical', shortTitle: 'Medical Emergencies', title: 'Medical Emergencies Review', link: '#', available: false, icon: '💊' }
+    ];
+
+    function renderCourses() {
+        const grid = document.getElementById('menuGrid');
+        
+        const html = COURSES.map((course) => {
+            if (course.available) {
+                // Available Course Card 
+                return `
+                    <div class="menu-card">
+                        <div class="card-header">
+                            <span class="status-badge badge-available">✓ Available</span>
+                        </div>
+                        <div class="course-icon">${course.icon}</div>
+                        <h2>${course.shortTitle}</h2>
+                        <p>${course.title}</p>
+                        <div class="menu-sub-options">
+                            <a href="${course.link}" class="btn-action btn-launch">Launch App</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Coming Soon Course Card 
+                return `
+                    <div class="menu-card disabled">
+                        <div class="card-header">
+                            <span class="status-badge badge-coming">⏳ Coming Soon</span>
+                        </div>
+                        <div class="course-icon">${course.icon}</div>
+                        <h2>${course.shortTitle}</h2>
+                        <p>${course.title}</p>
+                        <div class="menu-sub-options">
+                            <span class="btn-action btn-locked">Pending Update</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }).join('');
+
+        grid.innerHTML = html;
+    }
+
+    // Call the render function immediately on page load
+    renderCourses();
+
+    // ══════════════════════════════════════════════════════════
+    //  PWA INSTALL BANNER LOGIC
+    // ══════════════════════════════════════════════════════════
+    const PWA_KEY       = 'dcas_pwa_install';
+    const PWA_NEVER_KEY = 'dcas_pwa_never';
+    const PWA_DELAY_MS  = 4000;
+    const PWA_SNOOZE_MS = 24 * 60 * 60 * 1000;
+
+    let deferredPrompt = null;
+    const banner      = document.getElementById('pwaInstallBanner');
+    const installBtn  = document.getElementById('pwaInstallBtn');
+    const dismissBtn  = document.getElementById('pwaDismissBtn');
+    const iosSteps    = document.getElementById('pwaIosSteps');
+    const bannerSub   = document.getElementById('pwaBannerSub');
+
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+    const isIosSafari = isIos && /safari/i.test(navigator.userAgent) && !/crios|fxios|opios/i.test(navigator.userAgent);
+
+    function isPwaDismissedForever() { return localStorage.getItem(PWA_NEVER_KEY) === '1'; }
+    function getPwaSnoozeUntil() { return parseInt(localStorage.getItem(PWA_KEY) || '0', 10); }
+    function shouldShowBanner() {
+        if (isStandalone || isPwaDismissedForever() || Date.now() < getPwaSnoozeUntil()) return false;
+        return isIosSafari || true;
+    }
+
+    function showBanner() {
+        if (!shouldShowBanner()) return;
+        banner.style.display = 'block';
+        banner.classList.remove('pwa-hiding');
+        if (isIosSafari) {
+            installBtn.style.display = 'none';
+            iosSteps.style.display   = 'flex';
+            bannerSub.textContent    = 'Follow the steps below to install';
+        } else if (!deferredPrompt) {
+            installBtn.style.display = 'none';
+            bannerSub.textContent    = 'Use browser menu → "Add to Home Screen"';
+        }
+    }
+
+    function hideBanner(permanent) {
+        banner.classList.add('pwa-hiding');
+        setTimeout(() => { banner.style.display = 'none'; }, 320);
+        if (permanent) localStorage.setItem(PWA_NEVER_KEY, '1');
+        else localStorage.setItem(PWA_KEY, String(Date.now() + PWA_SNOOZE_MS));
+    }
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (banner.style.display !== 'none') installBtn.style.display = '';
+        if (shouldShowBanner()) setTimeout(showBanner, PWA_DELAY_MS);
+    });
+
+    window.addEventListener('appinstalled', function() { hideBanner(true); deferredPrompt = null; });
+
+    installBtn.addEventListener('click', async function() {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        if (outcome === 'accepted') hideBanner(true);
+        else hideBanner(false); 
+    });
+
+    let dismissTimer = null;
+    dismissBtn.addEventListener('pointerdown', () => { dismissTimer = setTimeout(() => { dismissTimer = null; hideBanner(true); }, 600); });
+    dismissBtn.addEventListener('pointerup', () => { if (dismissTimer) { clearTimeout(dismissTimer); dismissTimer = null; hideBanner(false); } });
+    dismissBtn.addEventListener('pointerleave', () => { if (dismissTimer) { clearTimeout(dismissTimer); dismissTimer = null; } });
+
+    if (isIosSafari || (!('onbeforeinstallprompt' in window))) {
+        if (shouldShowBanner()) setTimeout(showBanner, PWA_DELAY_MS);
+    }
+
+    document.getElementById('qsInstall').addEventListener('click', function() {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+        } else {
+            banner.style.display = 'block';
+            banner.classList.remove('pwa-hiding');
+            if (isIosSafari) { installBtn.style.display = 'none'; iosSteps.style.display = 'flex'; }
+            else { bannerSub.textContent = 'Use your browser menu → "Add to Home Screen"'; installBtn.style.display = 'none'; }
+        }
+        document.getElementById('notificationDrawer').classList.remove('open');
+        document.getElementById('drawerOverlay').classList.remove('active');
+    });
+
+    // ══════════════════════════════════════════════════════════
+    //  THEME SYSTEM
+    // ══════════════════════════════════════════════════════════
+    const themeBtn = document.getElementById('themeToggle');
+    const html     = document.documentElement;
+    const themes   = ['dark', 'amoled', 'light', 'sepia', 'forest'];
+
+    function setTheme(theme) {
+        if (!themes.includes(theme)) theme = 'dark';
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.querySelectorAll('.toggle-btn[id^="toggle"]').forEach(b => b.classList.remove('active'));
+        const activeBtn = document.getElementById('toggle' + theme.charAt(0).toUpperCase() + theme.slice(1));
+        if (activeBtn) activeBtn.classList.add('active');
+        const amoledBadge = document.getElementById('amoledBadge');
+        if (amoledBadge) amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
+    }
+
+    themeBtn.addEventListener('click', function() {
+        const cur = html.getAttribute('data-theme') || 'dark';
+        setTheme(themes[(themes.indexOf(cur) + 1) % themes.length]);
+    });
+
+    setTheme(localStorage.getItem('theme') || 'dark');
+    document.getElementById('toggleDark').addEventListener('click',   () => setTheme('dark'));
+    document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
+    document.getElementById('toggleLight').addEventListener('click',  () => setTheme('light'));
+    document.getElementById('toggleSepia').addEventListener('click',  () => setTheme('sepia'));
+    document.getElementById('toggleForest').addEventListener('click', () => setTheme('forest'));
+
+    // ══════════════════════════════════════════════════════════
+    //  DRAWER
+    // ══════════════════════════════════════════════════════════
+    const drawer  = document.getElementById('notificationDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const trigger = document.getElementById('drawerTrigger');
+    const closeBtn = document.getElementById('closeDrawerBtn');
+
+    function openDrawer()  { drawer.classList.add('open');    overlay.classList.add('active'); }
+    function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); }
+
+    if (trigger) trigger.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    document.getElementById('qsHome').addEventListener('click', () => { window.location.href = 'index.html'; });
+    document.getElementById('qsAbout').addEventListener('click', () => { window.location.href = 'about.html'; });
+    document.getElementById('qsLogout').addEventListener('click', () => {
+        localStorage.removeItem('dcas_local_auth');
+        window.location.replace('login.html');
+    });
+
+    // ══════════════════════════════════════════════════════════
+    //  FLOAT BUTTONS
+    // ══════════════════════════════════════════════════════════
+    const scrollTopBtn    = document.getElementById('scrollToTopBtn');
+    const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
+
+    function updateFloatButtons() {
+        const scrollY = window.scrollY;
+        const winH    = window.innerHeight;
+        const docH    = document.documentElement.scrollHeight;
+        scrollTopBtn.classList.toggle('hidden', scrollY <= 200);
+        scrollBottomBtn.classList.toggle('hidden', docH - (scrollY + winH) <= 100);
+    }
+    window.addEventListener('scroll', updateFloatButtons);
+    window.addEventListener('resize', updateFloatButtons);
+
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    scrollBottomBtn.addEventListener('click', () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }));
+
+    // ══════════════════════════════════════════════════════════
+    //  BATTERY INDICATOR
+    // ══════════════════════════════════════════════════════════
+    async function initBattery() {
+        if (!navigator.getBattery) return;
+        try {
+            const bat = await navigator.getBattery();
+            const el  = document.getElementById('batteryIndicator');
+            if (!el) return;
+            function update() {
+                const pct = Math.round(bat.level * 100);
+                const charging = bat.charging;
+                const amoledBadge = document.getElementById('amoledBadge');
+                if (amoledBadge) amoledBadge.style.display = document.documentElement.getAttribute('data-theme') === 'amoled' ? 'inline-flex' : 'none';
+                let icon = charging ? '⚡' : pct <= 15 ? '🪫' : '🔋';
+                el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
+                el.style.display = 'flex';
+                el.classList.toggle('bat-low', pct <= 15 && !charging);
+                el.classList.toggle('bat-charging', charging);
+            }
+            update();
+            bat.addEventListener('levelchange', update);
+            bat.addEventListener('chargingchange', update);
+        } catch(e) {}
+    }
+    initBattery();
+
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js')
+            .catch(e => console.log('SW failed', e));
+    });
+}
+</script>
+</body>
+</html>
