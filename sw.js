@@ -25,9 +25,9 @@ const PRE_CACHE = [
   'chapters/c0.html',
   'content/c-index.js',
   'content/c0.js',
-  'drug-calculator.js'
-  'drug-data.json'
-  'ecg.html'
+  'drug-calculator.js',
+  'drug-data.json',
+  'ecg.html',
   'aha.html',
   'courses.html',
   'itls.html'
@@ -223,3 +223,4 @@ self.addEventListener('message', function(event) {
       break;
   }
 });
+b
