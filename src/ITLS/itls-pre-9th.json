@@ -9,7 +9,8 @@
       "D. Quaternary blast injury is caused by the displacement of the body"
     ],
     "correct_answer": "B",
-    "explanation": "The secondary blast injury is the result of the patient being struck by material (shrapnel) propelled by the blast force."
+    "explanation": "The secondary blast injury is the result of the patient being struck by material (shrapnel) propelled by the blast force.",
+    "hint": "Blast + shrapnel → secondary injury"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
       "D. Specific injury areas"
     ],
     "correct_answer": "C",
-    "explanation": "The purpose of the initial assessment is to prioritize the patient and to identify immediately life-threatening conditions."
+    "explanation": "The purpose of the initial assessment is to prioritize the patient and to identify immediately life-threatening conditions.",
+    "hint": "Primary survey → find killers first"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
       "D. You observe bilateral chest rise and fall"
     ],
     "correct_answer": "D",
-    "explanation": "Ventilate with enough volume (8-10 ml per kg body weight) to cause adequate chest rise."
+    "explanation": "Ventilate with enough volume (8-10 ml per kg body weight) to cause adequate chest rise.",
+    "hint": "Adequate ventilation → chest rise"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
       "D. Decompress the right chest"
     ],
     "correct_answer": "C",
-    "explanation": "The signs indicative of chest injury found upon inspection include chest wall contusion, open wounds, subcutaneous emphysema, hemoptysis, distended neck veins, tracheal deviation, asymmetrical chest movement including paradoxical motion, cyanosis, and shock. Initially assisted ventilation with positive pressure."
+    "explanation": "The signs indicative of chest injury found upon inspection include chest wall contusion, open wounds, subcutaneous emphysema, hemoptysis, distended neck veins, tracheal deviation, asymmetrical chest movement including paradoxical motion, cyanosis, and shock. Initially assisted ventilation with positive pressure.",
+    "hint": "Chest trauma + asymmetry → ventilate"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
       "D. Narrowed pulse pressure"
     ],
     "correct_answer": "D",
-    "explanation": "Early shock is the loss of approximately 15% to 25% of blood volume. That is enough to stimulate slight to moderate tachycardia, pallor, narrowed pulse pressure, thirst, weakness, and possibly delayed capillary refill."
+    "explanation": "Early shock is the loss of approximately 15% to 25% of blood volume. That is enough to stimulate slight to moderate tachycardia, pallor, narrowed pulse pressure, thirst, weakness, and possibly delayed capillary refill.",
+    "hint": "Early shock → narrow pulse pressure"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
       "D. 15-20 mmHg"
     ],
     "correct_answer": "B",
-    "explanation": "Hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg."
+    "explanation": "Hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg.",
+    "hint": "TBI → ETCO₂ 35–45"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
       "D. Spinal motion restriction"
     ],
     "correct_answer": "D",
-    "explanation": "Immobilization onto a long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury."
+    "explanation": "Immobilization onto a long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury.",
+    "hint": "Penetrating trauma → no SMR"
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
       "D. Flex the knee and splint to the opposite leg"
     ],
     "correct_answer": "B",
-    "explanation": "There are certain exceptions to the general rule of splinting injuries in the position found, including when loss of distal pulse is noted. In that case, especially if you have a long transport time to the appropriate hospital, gentle traction should be applied in an effort to bring the injured extremity into a more anatomic position and restore the distal pulse."
+    "explanation": "There are certain exceptions to the general rule of splinting injuries in the position found, including when loss of distal pulse is noted. In that case, especially if you have a long transport time to the appropriate hospital, gentle traction should be applied in an effort to bring the injured extremity into a more anatomic position and restore the distal pulse.",
+    "hint": "No distal pulse → realign limb"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
       "D. Associated trauma"
     ],
     "correct_answer": "D",
-    "explanation": "Death in the immediate post-burn period is a consequence of associated trauma or conditions such as airway compromise or smoke inhalation."
+    "explanation": "Death in the immediate post-burn period is a consequence of associated trauma or conditions such as airway compromise or smoke inhalation.",
+    "hint": "Early burn death → associated trauma"
   },
   {
     "id": 10,
@@ -117,7 +126,8 @@
       "D. Rapid, weak pulse"
     ],
     "correct_answer": "D",
-    "explanation": "Early shock (often referred to as compensated shock) is far more difficult to diagnose in a child than in an adult because of a child's ability to hemodynamically compensate and maintain a normal blood pressure despite life-threatening bleeding. Persistent tachycardia is the most reliable early indicator of shock in a child."
+    "explanation": "Early shock (often referred to as compensated shock) is far more difficult to diagnose in a child than in an adult because of a child's ability to hemodynamically compensate and maintain a normal blood pressure despite life-threatening bleeding. Persistent tachycardia is the most reliable early indicator of shock in a child.",
+    "hint": "Child shock → tachycardia first"
   },
   {
     "id": 11,
@@ -129,7 +139,8 @@
       "D. Motor vehicle collisions are an uncommon mechanism of injury"
     ],
     "correct_answer": "C",
-    "explanation": "Geriatric patients can die from less severe injuries than younger patients. In addition, it is often difficult to separate the effects of the aging process or of a chronic illness from the consequences of an injury."
+    "explanation": "Geriatric patients can die from less severe injuries than younger patients. In addition, it is often difficult to separate the effects of the aging process or of a chronic illness from the consequences of an injury.",
+    "hint": "Elderly trauma → higher mortality"
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
       "D. Burns"
     ],
     "correct_answer": "A",
-    "explanation": "Motor vehicle collisions (MVCs) account for 65% to 75% of pregnancy-related trauma in North America."
+    "explanation": "Motor vehicle collisions (MVCs) account for 65% to 75% of pregnancy-related trauma in North America.",
+    "hint": "Pregnancy trauma → MVC most common"
   },
   {
     "id": 13,
@@ -153,7 +165,8 @@
       "D. 1 breath every 6 seconds with a volume of 500 cc"
     ],
     "correct_answer": "A",
-    "explanation": "In the TCPA patient, it is reasonable to begin with an assisted ventilation rate of one breath every eight seconds with a tidal volume of 750 cc, which is about eight times per minute using roughly a one-hand squeeze on a standard bag."
+    "explanation": "In the TCPA patient, it is reasonable to begin with an assisted ventilation rate of one breath every eight seconds with a tidal volume of 750 cc, which is about eight times per minute using roughly a one-hand squeeze on a standard bag.",
+    "hint": "TCPA → slow rate, big volume"
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
       "D. Only be concerned if the exposure was to HIV"
     ],
     "correct_answer": "A",
-    "explanation": "Write a report of the incident as soon as possible. Blood tests (if any) to be done on the exposed emergency care provider depend on reports of testing of the source patient."
+    "explanation": "Write a report of the incident as soon as possible. Blood tests (if any) to be done on the exposed emergency care provider depend on reports of testing of the source patient.",
+    "hint": "Exposure → report immediately"
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
       "D. Distance, underlying medical conditions, surface struck"
     ],
     "correct_answer": "A",
-    "explanation": "The mechanism of injury for falls is vertical deceleration. The types of injuries sustained depend on the following three factors, which you must identify and relay to medical direction: distance of fall; anatomic area impacted; and surface struck."
+    "explanation": "The mechanism of injury for falls is vertical deceleration. The types of injuries sustained depend on the following three factors, which you must identify and relay to medical direction: distance of fall; anatomic area impacted; and surface struck.",
+    "hint": "Falls → height + impact + surface"
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
       "D. Obtain SAMPLE history, vital signs and cardiac monitoring"
     ],
     "correct_answer": "A",
-    "explanation": "If you identify a priority (high-risk) patient, you need to find the cause of the abnormal findings to determine if this is a load-and-go patient."
+    "explanation": "If you identify a priority (high-risk) patient, you need to find the cause of the abnormal findings to determine if this is a load-and-go patient.",
+    "hint": "Shock signs → O₂ + rapid survey"
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
       "D. Severe brain injury"
     ],
     "correct_answer": "A",
-    "explanation": "The presence of snoring or stridor or wheezes should alert the rescuer to the presence of airway obstruction. Ultimately, the placement of a 'rescue' ventilation device (BIAD, such as laryngeal mask airway) or endotracheal tube may be required."
+    "explanation": "The presence of snoring or stridor or wheezes should alert the rescuer to the presence of airway obstruction. Ultimately, the placement of a 'rescue' ventilation device (BIAD, such as laryngeal mask airway) or endotracheal tube may be required.",
+    "hint": "Stridor → airway emergency"
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
       "D. Simple pneumothorax"
     ],
     "correct_answer": "C",
-    "explanation": "Clinical signs of shock may be apparent. The neck veins are usually flat secondary to profound hypovolemia, but may very rarely be distended due to mediastinal compression. Other signs of hemothorax include decreased breath sounds and dullness to percussion on the affected side."
+    "explanation": "Clinical signs of shock may be apparent. The neck veins are usually flat secondary to profound hypovolemia, but may very rarely be distended due to mediastinal compression. Other signs of hemothorax include decreased breath sounds and dullness to percussion on the affected side.",
+    "hint": "Flat JVD + absent sounds → hemothorax"
   },
   {
     "id": 19,
@@ -225,7 +243,8 @@
       "D. To minimize brachial plexus penetration"
     ],
     "correct_answer": "A",
-    "explanation": "Military and tactical medical personnel prefer the lateral approach because in a tactical situation it has the advantage of allowing decompression while keeping body armor in place."
+    "explanation": "Military and tactical medical personnel prefer the lateral approach because in a tactical situation it has the advantage of allowing decompression while keeping body armor in place.",
+    "hint": "Lateral decompression → access issue"
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
       "D. Hypotension"
     ],
     "correct_answer": "D",
-    "explanation": "Catecholamines (epinephrine and norepinephrine) increase both the rate and strength of the heart's contractions, constrict peripheral arterial blood vessels and affects the sweat glands. Hypotension is the result of the inability to compensate."
+    "explanation": "Catecholamines (epinephrine and norepinephrine) increase both the rate and strength of the heart's contractions, constrict peripheral arterial blood vessels and affects the sweat glands. Hypotension is the result of the inability to compensate.",
+    "hint": "Catecholamines → NOT hypotension"
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
       "D. Hyperventilating to obtain an ETCO2 of less than 30 mmHg"
     ],
     "correct_answer": "D",
-    "explanation": "Hyperventilation actually has only a slight effect on brain swelling, but causes a significant decrease in cerebral perfusion from that same vasoconstriction, resulting in cerebral hypoxia. Thus, both hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg is very important. Prophylactic hyperventilation for TBI is no longer recommended."
+    "explanation": "Hyperventilation actually has only a slight effect on brain swelling, but causes a significant decrease in cerebral perfusion from that same vasoconstriction, resulting in cerebral hypoxia. Thus, both hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg is very important. Prophylactic hyperventilation for TBI is no longer recommended.",
+    "hint": "TBI → no hyperventilation"
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
       "D. Focal neurologic complaint"
     ],
     "correct_answer": "A",
-    "explanation": "Immobilization onto a long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury."
+    "explanation": "Immobilization onto a long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury.",
+    "hint": "Penetrating trauma → skip SMR"
   },
   {
     "id": 23,
@@ -273,7 +295,8 @@
       "D. Locate artery proximal to the wound and apply pressure"
     ],
     "correct_answer": "B",
-    "explanation": "If administration of fluids or medications prior to releasing the entrapped body area is not possible, consider application of a tourniquet proximal to the injury site on the extremity. Although application of the tourniquet will reduce systemic toxin release, crush syndrome will continue to develop."
+    "explanation": "If administration of fluids or medications prior to releasing the entrapped body area is not possible, consider application of a tourniquet proximal to the injury site on the extremity. Although application of the tourniquet will reduce systemic toxin release, crush syndrome will continue to develop.",
+    "hint": "Crush → tourniquet first"
   },
   {
     "id": 24,
@@ -285,7 +308,8 @@
       "D. The carbon monoxide atoms turn oxygen into carbon dioxide"
     ],
     "correct_answer": "A",
-    "explanation": "Carbon monoxide binds to hemoglobin (257 times stronger than oxygen), resulting in the hemoglobin being unable to transport oxygen. Patients quickly become hypoxic even in the presence of low concentrations of carbon monoxide."
+    "explanation": "Carbon monoxide binds to hemoglobin (257 times stronger than oxygen), resulting in the hemoglobin being unable to transport oxygen. Patients quickly become hypoxic even in the presence of low concentrations of carbon monoxide.",
+    "hint": "CO → binds hemoglobin"
   },
   {
     "id": 25,
@@ -297,7 +321,8 @@
       "D. Perform thoracic needle decompression"
     ],
     "correct_answer": "A",
-    "explanation": "Note whether the child is 'working' to breathe, demonstrated by subcostal or suprasternal retractions, nasal flaring, or grunting. If you have any doubt that the child is breathing adequately on his or her own, immediately assist the child's breathing."
+    "explanation": "Note whether the child is 'working' to breathe, demonstrated by subcostal or suprasternal retractions, nasal flaring, or grunting. If you have any doubt that the child is breathing adequately on his or her own, immediately assist the child's breathing.",
+    "hint": "Pediatric distress → assist breathing"
   },
   {
     "id": 26,
@@ -309,7 +334,8 @@
       "D. Volume replacement should be given more slowly so as to avoid fluid overloading the fetus"
     ],
     "correct_answer": "C",
-    "explanation": "The overall mortality and morbidity resulting from thermal injuries to the pregnant patient is not markedly different from the non-pregnant patient. However, it is important to remember that the fluid requirement for the pregnant patient is greater than that of the nonpregnant woman."
+    "explanation": "The overall mortality and morbidity resulting from thermal injuries to the pregnant patient is not markedly different from the non-pregnant patient. However, it is important to remember that the fluid requirement for the pregnant patient is greater than that of the nonpregnant woman.",
+    "hint": "Pregnant burns → more fluids"
   },
   {
     "id": 27,
@@ -321,7 +347,8 @@
       "D. Opiates"
     ],
     "correct_answer": "D",
-    "explanation": "Signs and symptoms of narcotic/opiate use are altered mental status, constricted pupils, bradycardia, hypotension, respiratory distress depression and hypothermia."
+    "explanation": "Signs and symptoms of narcotic/opiate use are altered mental status, constricted pupils, bradycardia, hypotension, respiratory distress depression and hypothermia.",
+    "hint": "Pinpoint pupils → opioids"
   },
   {
     "id": 28,
@@ -333,7 +360,8 @@
       "D. Resuscitative efforts should be discontinued, unless prohibited by law"
     ],
     "correct_answer": "D",
-    "explanation": "Resuscitation should be withheld in cases of: (a) blunt trauma with no breathing, pulse, or organized rhythm on ECG on EMS arrival at the scene; (b) penetrating trauma with no breathing, pulse, pupillary reflexes, spontaneous movement, or organized ECG activity; (c) any trauma with injuries obviously incompatible with life (such as decapitation); (d) any trauma with evidence of significant time lapse since pulselessness, including dependent lividity, rigor mortis, etc."
+    "explanation": "Resuscitation should be withheld in cases of: (a) blunt trauma with no breathing, pulse, or organized rhythm on ECG on EMS arrival at the scene; (b) penetrating trauma with no breathing, pulse, pupillary reflexes, spontaneous movement, or organized ECG activity; (c) any trauma with injuries obviously incompatible with life (such as decapitation); (d) any trauma with evidence of significant time lapse since pulselessness, including dependent lividity, rigor mortis, etc.",
+    "hint": "Blunt arrest → stop CPR"
   },
   {
     "id": 29,
@@ -345,7 +373,8 @@
       "D. Obtain a blood pressure and SAO2"
     ],
     "correct_answer": "A",
-    "explanation": "Once you begin patient assessment in the ITLS Primary Survey, only four things should cause you to interrupt completion of the assessment. You may interrupt the assessment sequence only if (1) the scene becomes unsafe, (2) you must treat exsanguinating hemorrhage, (3) you must treat an airway obstruction, or (4) you must treat cardiac arrest."
+    "explanation": "Once you begin patient assessment in the ITLS Primary Survey, only four things should cause you to interrupt completion of the assessment. You may interrupt the assessment sequence only if (1) the scene becomes unsafe, (2) you must treat exsanguinating hemorrhage, (3) you must treat an airway obstruction, or (4) you must treat cardiac arrest.",
+    "hint": "Always start → primary survey"
   },
   {
     "id": 30,
@@ -357,7 +386,8 @@
       "D. 4"
     ],
     "correct_answer": "B",
-    "explanation": "The Mallampati score ranges from I to IV and is dependent on what structures can be viewed when the mouth is opened."
+    "explanation": "The Mallampati score ranges from I to IV and is dependent on what structures can be viewed when the mouth is opened.",
+    "hint": "Mallampati mid → score II"
   },
   {
     "id": 31,
@@ -369,7 +399,8 @@
       "D. Directly over the top of the third rib, midclavicular line"
     ],
     "correct_answer": "D",
-    "explanation": "Insert the needle into the second intercostal space at a 90-degree angle to the superior border of the third rib to avoid the neurovascular bundle."
+    "explanation": "Insert the needle into the second intercostal space at a 90-degree angle to the superior border of the third rib to avoid the neurovascular bundle.",
+    "hint": "Needle → 2nd ICS above rib"
   },
   {
     "id": 32,
@@ -381,7 +412,8 @@
       "D. Decreased pulse, normal skin color and temperature"
     ],
     "correct_answer": "D",
-    "explanation": "The clinical presentation of neurogenic shock differs from hemorrhagic shock in that there is no catecholamine release and thus no pallor (vasoconstriction), tachycardia, or sweating. The patient will have a decreased blood pressure, but the heart rate will be normal or slow, and the skin is usually warm, dry, and pink."
+    "explanation": "The clinical presentation of neurogenic shock differs from hemorrhagic shock in that there is no catecholamine release and thus no pallor (vasoconstriction), tachycardia, or sweating. The patient will have a decreased blood pressure, but the heart rate will be normal or slow, and the skin is usually warm, dry, and pink.",
+    "hint": "Neurogenic → brady + warm skin"
   },
   {
     "id": 33,
@@ -393,7 +425,8 @@
       "D. Ventilating 8-10 per minute"
     ],
     "correct_answer": "C",
-    "explanation": "Hyperventilation actually has only a slight effect on brain swelling, but causes a significant decrease in cerebral perfusion from that same vasoconstriction, resulting in cerebral hypoxia. Thus, both hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg is very important. Prophylactic hyperventilation for TBI is no longer recommended."
+    "explanation": "Hyperventilation actually has only a slight effect on brain swelling, but causes a significant decrease in cerebral perfusion from that same vasoconstriction, resulting in cerebral hypoxia. Thus, both hyperventilation and hypoventilation can cause cerebral ischemia and increased mortality in the TBI patient. Maintaining normal ventilation (not hyperventilation) with high-flow oxygen at a rate of about one breath every 6 to 8 seconds (8 to 10 per minute) to maintain an end-tidal CO2 (ETCO2) of 35-45 mmHg is very important. Prophylactic hyperventilation for TBI is no longer recommended.",
+    "hint": "Head injury → avoid hyperventilation"
   },
   {
     "id": 34,
@@ -405,7 +438,8 @@
       "D. Combative patients requiring spinal motion restriction will need to be restrained tighter to ensure that all movement is eliminated."
     ],
     "correct_answer": "C",
-    "explanation": "Elderly patients whose necks have a naturally flexed posture will require posterior padding."
+    "explanation": "Elderly patients whose necks have a naturally flexed posture will require posterior padding.",
+    "hint": "Elderly spine → posterior padding"
   },
   {
     "id": 35,
@@ -417,7 +451,8 @@
       "D. Locate artery proximal to the wound and apply pressure"
     ],
     "correct_answer": "B",
-    "explanation": "If administration of fluids or medications prior to releasing the entrapped body area is not possible, consider application of a tourniquet proximal to the injury site on the extremity. Although application of the tourniquet will reduce systemic toxin release, crush syndrome will continue to develop."
+    "explanation": "If administration of fluids or medications prior to releasing the entrapped body area is not possible, consider application of a tourniquet proximal to the injury site on the extremity. Although application of the tourniquet will reduce systemic toxin release, crush syndrome will continue to develop.",
+    "hint": "Crush → tourniquet priority"
   },
   {
     "id": 36,
@@ -429,7 +464,8 @@
       "D. Renal failure"
     ],
     "correct_answer": "B",
-    "explanation": "The most serious and immediate injury that results from electrical contact is cardiac dysrhythmia."
+    "explanation": "The most serious and immediate injury that results from electrical contact is cardiac dysrhythmia.",
+    "hint": "Electrical → arrhythmia risk"
   },
   {
     "id": 37,
@@ -441,7 +477,8 @@
       "D. Formula: weight (kg) divided by 5 or weight (lbs.) divided by 10"
     ],
     "correct_answer": "D",
-    "explanation": "There are several ways to choose the right size for the endotracheal tube. The simplest is to refer to your length-based tape system. Other techniques include choosing a tube that is about the same diameter as the tip of the child's little finger or the equation: 4 plus age in years divided by 4."
+    "explanation": "There are several ways to choose the right size for the endotracheal tube. The simplest is to refer to your length-based tape system. Other techniques include choosing a tube that is about the same diameter as the tip of the child's little finger or the equation: 4 plus age in years divided by 4.",
+    "hint": "Tube size → not weight-based"
   },
   {
     "id": 38,
@@ -453,7 +490,8 @@
       "D. E - Equipment problems"
     ],
     "correct_answer": "B",
-    "explanation": "DOPE algorithm: D—displacement of the endotracheal tube, O—obstruction of the endotracheal tube, P—pneumothorax development, or E—equipment problems (ventilator failure, loss of oxygen supply)."
+    "explanation": "DOPE algorithm: D—displacement of the endotracheal tube, O—obstruction of the endotracheal tube, P—pneumothorax development, or E—equipment problems (ventilator failure, loss of oxygen supply).",
+    "hint": "DOPE → obstruction, not “other”"
   },
   {
     "id": 39,
@@ -465,7 +503,8 @@
       "D. Begin chest compressions if pulses are absent"
     ],
     "correct_answer": "C",
-    "explanation": "If your patient has major external bleeding, you must immediately direct another team member to control it. As team leader, you may need to initially control the bleeding if no other emergency care provider is immediately available."
+    "explanation": "If your patient has major external bleeding, you must immediately direct another team member to control it. As team leader, you may need to initially control the bleeding if no other emergency care provider is immediately available.",
+    "hint": "Trauma priority → control bleeding"
   },
   {
     "id": 40,
@@ -477,7 +516,8 @@
       "D. Patients with beards"
     ],
     "correct_answer": "C",
-    "explanation": "MMAP is a technique for predicting when a patient will be difficult to intubate. MMAP stands for Mallampati, measurement 3-3-1 (the 1 being the patient should be able to protrude the lower jaw such that the lower teeth are 1 cm beyond the upper teeth) atlanto-occipital extension, and pathology."
+    "explanation": "MMAP is a technique for predicting when a patient will be difficult to intubate. MMAP stands for Mallampati, measurement 3-3-1 (the 1 being the patient should be able to protrude the lower jaw such that the lower teeth are 1 cm beyond the upper teeth) atlanto-occipital extension, and pathology.",
+    "hint": "Difficult airway → jaw issue"
   },
   {
     "id": 41,
@@ -489,7 +529,8 @@
       "D. Directly over the top of the second rib in the midaxillary line"
     ],
     "correct_answer": "A",
-    "explanation": "Insert the needle into the intercostal space at a 90-degree angle to the superior border of the fourth rib to avoid the neurovascular bundle."
+    "explanation": "Insert the needle into the intercostal space at a 90-degree angle to the superior border of the fourth rib to avoid the neurovascular bundle.",
+    "hint": "Needle → lateral valid"
   },
   {
     "id": 42,
@@ -501,7 +542,8 @@
       "D. Psychogenic shock"
     ],
     "correct_answer": "A",
-    "explanation": "Hypovolemic shock victims usually have tachycardia, are pale, and have flat neck veins. So, if you find a trauma victim with a fast heart rate, who is pale, with weak radial pulses and flat neck veins."
+    "explanation": "Hypovolemic shock victims usually have tachycardia, are pale, and have flat neck veins. So, if you find a trauma victim with a fast heart rate, who is pale, with weak radial pulses and flat neck veins.",
+    "hint": "Trauma + flat veins → hemorrhage"
   },
   {
     "id": 43,
@@ -513,7 +555,8 @@
       "D. Administer naloxone (Narcan)"
     ],
     "correct_answer": "B",
-    "explanation": "Endotracheal intubation is still recommended for adults if the airway cannot be maintained or if you cannot maintain adequate oxygenation with supplemental oxygen. There is no reason to routinely intubate patients who are maintaining their airway and have normal oxygen saturation."
+    "explanation": "Endotracheal intubation is still recommended for adults if the airway cannot be maintained or if you cannot maintain adequate oxygenation with supplemental oxygen. There is no reason to routinely intubate patients who are maintaining their airway and have normal oxygen saturation.",
+    "hint": "Airway OK → no routine intubation"
   },
   {
     "id": 44,
@@ -525,7 +568,8 @@
       "D. Concussion brain injury"
     ],
     "correct_answer": "B",
-    "explanation": "Headaches and nausea are common symptoms of mild carbon monoxide poisoning, secondary to smoke inhalation."
+    "explanation": "Headaches and nausea are common symptoms of mild carbon monoxide poisoning, secondary to smoke inhalation.",
+    "hint": "Fire + headache → CO exposure"
   },
   {
     "id": 45,
@@ -537,7 +581,8 @@
       "D. Extremities"
     ],
     "correct_answer": "A",
-    "explanation": "Young children who fall from higher than a few feet often land on their heads because the head is disproportionately large and heavy compared to the body of a small child."
+    "explanation": "Young children who fall from higher than a few feet often land on their heads because the head is disproportionately large and heavy compared to the body of a small child.",
+    "hint": "Infant falls → head injury"
   },
   {
     "id": 46,
@@ -549,7 +594,8 @@
       "D. Weak distal pulse"
     ],
     "correct_answer": "C",
-    "explanation": "You may interrupt the assessment sequence only if (1) the scene becomes unsafe, (2) you must treat exsanguinating hemorrhage, (3) you must treat an airway obstruction, or (4) you must treat cardiac arrest. (Respiratory arrest, dyspnea, or bleeding management should be delegated to other team members while you continue assessment of the patient.)"
+    "explanation": "You may interrupt the assessment sequence only if (1) the scene becomes unsafe, (2) you must treat exsanguinating hemorrhage, (3) you must treat an airway obstruction, or (4) you must treat cardiac arrest. (Respiratory arrest, dyspnea, or bleeding management should be delegated to other team members while you continue assessment of the patient.)",
+    "hint": "Stop survey → airway/bleeding/arrest"
   },
   {
     "id": 47,
@@ -561,7 +607,8 @@
       "D. A nasal cannula at >8 lpm"
     ],
     "correct_answer": "D",
-    "explanation": "Instilling oxygen via a nasal cannula (>8 liters per minute) maintains a high oxygen concentration gradient from the nasopharynx down to the alveoli. As oxygen is absorbed in the alveoli, more oxygen moves down this gradient into the alveoli, even if there is no ventilation."
+    "explanation": "Instilling oxygen via a nasal cannula (>8 liters per minute) maintains a high oxygen concentration gradient from the nasopharynx down to the alveoli. As oxygen is absorbed in the alveoli, more oxygen moves down this gradient into the alveoli, even if there is no ventilation.",
+    "hint": "Apneic oxygenation → high-flow NC"
   },
   {
     "id": 48,
@@ -573,7 +620,8 @@
       "D. Simple pneumothorax"
     ],
     "correct_answer": "B",
-    "explanation": "Clinical signs of a tension pneumothorax include dyspnea, anxiety, tachypnea, distended neck veins, and possibly tracheal deviation away from the affected side. Auscultation will reveal diminished breath sounds on the affected side and will be accompanied by hyperresonance when percussed."
+    "explanation": "Clinical signs of a tension pneumothorax include dyspnea, anxiety, tachypnea, distended neck veins, and possibly tracheal deviation away from the affected side. Auscultation will reveal diminished breath sounds on the affected side and will be accompanied by hyperresonance when percussed.",
+    "hint": "JVD + shift → tension pneumo"
   },
   {
     "id": 49,
@@ -585,7 +633,8 @@
       "D. Cardiogenic shock"
     ],
     "correct_answer": "C",
-    "explanation": "Any traumatic or medical condition that slows or prevents the venous return of blood can cause shock by lowering cardiac output and thus oxygen delivery to the tissues. Likewise, anything that obstructs the flow of blood to or through the heart can cause shock."
+    "explanation": "Any traumatic or medical condition that slows or prevents the venous return of blood can cause shock by lowering cardiac output and thus oxygen delivery to the tissues. Likewise, anything that obstructs the flow of blood to or through the heart can cause shock.",
+    "hint": "Trauma + JVD → obstructive shock"
   },
   {
     "id": 50,
@@ -597,6 +646,7 @@
       "D. 110"
     ],
     "correct_answer": "D",
-    "explanation": "ITLS advocates maintaining systolic blood pressure of at least 110 mmHg in the TBI patient to ensure adequate perfusion, which is higher than the Brain Trauma Foundation guidelines but consistent with those put forth by Arizona EPIC."
+    "explanation": "ITLS advocates maintaining systolic blood pressure of at least 110 mmHg in the TBI patient to ensure adequate perfusion, which is higher than the Brain Trauma Foundation guidelines but consistent with those put forth by Arizona EPIC.",
+    "hint": "TBI → SBP ≥110"
   }
 ]
