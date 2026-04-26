@@ -629,34 +629,34 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   <div class="mode-row" role="group" aria-label="Study mode selection">
     <button class="mode-btn active-exam" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="true">
       📝 Exam Mode
-      <span class="mode-hint">No hints • Timed • Submit to score</span>
+      <span class="mode-hint">No hints • Timed </span>
     </button>
     <button class="mode-btn" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="false">
       📖 Study Mode
-      <span class="mode-hint">💡 Hints available • Review answers • Learn as you go</span>
+      <span class="mode-hint">💡 Hints & Review answers</span>
     </button>
   </div>
 
-  <div class="exam-cards" role="list">
-    <div class="exam-card" onclick="startExam('src/ITLS/pretest8.json', 'Pre-Test — 8th Edition')" role="listitem" tabindex="0" aria-label="Start Pre-Test 8th Edition, 50 questions">
+    <div class="exam-cards" role="list">
+    <div class="exam-card" onclick="startExam('src/ITLS/itls-pre.json', 'Pre-Test — 8th Edition')" role="listitem" tabindex="0" aria-label="Start Pre-Test 8th Edition, 50 questions">
       <div class="ec-icon">📋</div>
       <div class="ec-title">Pre-Test — 8th Edition</div>
       <div class="ec-meta">50 questions · 60 min</div>
       <span class="ec-tag tag-exam">Pre-Test</span>
     </div>
-    <div class="exam-card" onclick="startExam('src/ITLS/pretest9.json', 'Pre-Test — 9th Edition')" role="listitem" tabindex="0" aria-label="Start Pre-Test 9th Edition, 50 questions">
+    <div class="exam-card" onclick="startExam('src/ITLS/itls-pre-9th.json', 'Pre-Test — 9th Edition')" role="listitem" tabindex="0" aria-label="Start Pre-Test 9th Edition, 50 questions">
       <div class="ec-icon">📋</div>
       <div class="ec-title">Pre-Test — 9th Edition</div>
       <div class="ec-meta">50 questions · 60 min</div>
       <span class="ec-tag tag-exam">Pre-Test</span>
     </div>
-    <div class="exam-card" onclick="startExam('src/ITLS/posttestA.json', 'Post-Test — Form A')" role="listitem" tabindex="0" aria-label="Start Post-Test Form A, 50 questions">
+    <div class="exam-card" onclick="startExam('src/ITLS/itls-post-A.json', 'Post-Test — Form A')" role="listitem" tabindex="0" aria-label="Start Post-Test Form A, 50 questions">
       <div class="ec-icon">✅</div>
       <div class="ec-title">Post-Test — Form A</div>
       <div class="ec-meta">50 questions · 60 min</div>
       <span class="ec-tag tag-exam">Post-Test</span>
     </div>
-    <div class="exam-card" onclick="startExam('src/ITLS/posttestB.json', 'Post-Test — Form B')" role="listitem" tabindex="0" aria-label="Start Post-Test Form B, 50 questions">
+    <div class="exam-card" onclick="startExam('src/ITLS/itls-post-B', 'Post-Test — Form B')" role="listitem" tabindex="0" aria-label="Start Post-Test Form B, 50 questions">
       <div class="ec-icon">✅</div>
       <div class="ec-title">Post-Test — Form B</div>
       <div class="ec-meta">50 questions · 60 min</div>
