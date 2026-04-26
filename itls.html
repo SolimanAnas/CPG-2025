@@ -106,19 +106,22 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 #selectorScreen{
   flex:1;overflow-y:auto;
   display:flex;flex-direction:column;align-items:center;
-  padding:40px 20px 48px;
+  padding:32px 20px 48px;
   background:var(--bg);
   background-image:radial-gradient(ellipse 80% 60% at 20% 5%,var(--g1),transparent),
                    radial-gradient(ellipse 70% 70% at 85% 95%,var(--g2),transparent);
 }
+.theme-top{
+  width:100%;max-width:820px;display:flex;justify-content:flex-start;
+  margin-bottom:16px;
+}
 .sel-logo{font-size:2rem;font-weight:900;letter-spacing:-1.5px;margin-bottom:4px}
 .sel-logo .brand-itls{color:var(--blue);background:linear-gradient(135deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sel-sub{color:var(--muted);font-size:.88rem;margin-bottom:28px}
+.sel-sub{color:var(--muted);font-size:.88rem;margin-bottom:20px;text-align:center}
 .sel-theme-row{
   display:flex;align-items:center;gap:8px;
   background:var(--card);border:1px solid var(--border2);
   border-radius:14px;padding:8px 14px;
-  margin-bottom:22px;
   box-shadow:var(--shadow-sm);
   transition:transform 0.2s, box-shadow 0.2s;
 }
@@ -148,14 +151,16 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .tp-sepia{background:linear-gradient(145deg,#c49a52,#f4ead8)}
 .tp-green{background:linear-gradient(145deg,#14532d,#040e06)}
 
-/* Mode row */
-.mode-row{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;justify-content:center}
+/* Mode row - identical size */
+.mode-row{
+  display:flex;gap:12px;margin-bottom:24px;
+  width:100%;max-width:380px;
+}
 .mode-btn{
-  padding:10px 26px;border-radius:30px;
-  font-size:.84rem;font-weight:700;font-family:inherit;
-  cursor:pointer;border:2px solid var(--border2);
-  color:var(--muted);background:transparent;
-  transition:all 0.2s ease;position:relative;overflow:hidden;
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:14px;font-size:.84rem;font-weight:700;font-family:inherit;
+  cursor:pointer;border:2px solid var(--border2);color:var(--muted);background:transparent;
+  transition:all 0.2s ease;position:relative;overflow:hidden;text-align:center;gap:4px;
 }
 .mode-btn::before{
   content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.1),transparent);
@@ -165,10 +170,7 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .mode-btn:hover{color:var(--text);border-color:var(--border)}
 .mode-btn.active-exam{background:var(--blue-d);border-color:var(--blue);color:var(--blue);box-shadow:0 0 0 4px var(--blue-2)}
 .mode-btn.active-study{background:var(--green-d);border-color:var(--green);color:var(--green);box-shadow:0 0 0 4px var(--green-2)}
-.mode-hint{
-  display:block;font-size:.65rem;color:var(--muted);margin-top:4px;
-  font-weight:400;text-align:center;
-}
+.mode-hint{display:block;font-size:.68rem;color:var(--muted);font-weight:400;line-height:1.3}
 .mode-btn.active-study .mode-hint{color:var(--green)}
 
 /* Exam card grid */
@@ -296,7 +298,23 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .hbtn-end:hover{background:var(--red-2)}
 .hbtn-back{background:var(--blue-d);border-color:rgba(59,130,246,.4);color:var(--blue)}
 .hbtn-back:hover{background:var(--blue-2)}
-.sb-toggle{display:none;width:36px;height:36px;border:1.5px solid var(--border2);border-radius:8px;background:transparent;cursor:pointer;transition:all 0.2s}
+.sb-toggle {
+  display: none; /* Keeps it hidden on desktop (as per your original code) */
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--border2);
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  /* NEW ADDITIONS FOR THE ICON */
+  font-size: 1.6rem; /* Makes the bars much bigger */
+  line-height: 1; /* Prevents awkward vertical spacing */
+  align-items: center; /* Centers it vertically */
+  justify-content: center; /* Centers it horizontally */
+  padding: 0; /* Removes any default padding pushing it off-center */
+}
 .sb-toggle:hover{background:var(--card);border-color:var(--border)}
 
 .exam-body{flex:1;display:flex;overflow:hidden;position:relative}
@@ -363,7 +381,7 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .q-box.is-study{border-left-color:var(--green)}
 .study-watermark{
-  display:none;position:absolute;top:10px;right:12px;
+  display:none;position:absolute;top:-15px;right:12px;
   font-size:.6rem;font-weight:800;
   background:var(--green-d);border-radius:6px;padding:2px 8px;
   border:1px solid var(--green-d);
@@ -578,7 +596,16 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   .ring-num{font-size:1.3rem}
   .score-stats{grid-template-columns:repeat(3,1fr);gap:6px}
   .ss-num{font-size:1.1rem}
+  .mode-row{max-width:100%}
 }
+
+/* Toggle switch for hints */
+.toggle{position:relative;display:inline-block;width:44px;height:24px}
+.toggle input{opacity:0;width:0;height:0}
+.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--border2);transition:.3s;border-radius:24px}
+.slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:white;transition:.3s;border-radius:50%}
+input:checked+.slider{background-color:var(--green)}
+input:checked+.slider:before{transform:translateX(20px)}
 
 /* Loading skeleton */
 .skeleton{
@@ -614,22 +641,25 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 
 <!-- Selector -->
 <div id="selectorScreen">
+  <!-- Theme toggle upper left -->
+  <div class="theme-top">
+    <div class="sel-theme-row" role="group" aria-label="Theme selection">
+      <span class="sel-theme-lbl">Theme</span>
+      <button class="tp tp-dark" id="s-tp-dark" onclick="setTheme('dark')" aria-label="Dark theme" aria-pressed="false"></button>
+      <button class="tp tp-light" id="s-tp-light" onclick="setTheme('light')" aria-label="Light theme" aria-pressed="false"></button>
+      <button class="tp tp-sepia" id="s-tp-sepia" onclick="setTheme('sepia')" aria-label="Sepia theme" aria-pressed="false"></button>
+      <button class="tp tp-green" id="s-tp-green" onclick="setTheme('green')" aria-label="Green theme" aria-pressed="false"></button>
+    </div>
+  </div>
+
   <div class="sel-logo"><span class="brand-itls">ITLS</span> Exam</div>
   <div class="sel-sub">Mock test · ITLS</div>
   
-  <div class="sel-theme-row" role="group" aria-label="Theme selection">
-    <span class="sel-theme-lbl">Theme</span>
-    <button class="tp tp-dark" id="s-tp-dark" onclick="setTheme('dark')" aria-label="Dark theme" aria-pressed="false"></button>
-    <button class="tp tp-light" id="s-tp-light" onclick="setTheme('light')" aria-label="Light theme" aria-pressed="false"></button>
-    <button class="tp tp-sepia" id="s-tp-sepia" onclick="setTheme('sepia')" aria-label="Sepia theme" aria-pressed="false"></button>
-    <button class="tp tp-green" id="s-tp-green" onclick="setTheme('green')" aria-label="Green theme" aria-pressed="false"></button>
-  </div>
-
-  <!-- Mode row -->
+  <!-- Mode row - identical size -->
   <div class="mode-row" role="group" aria-label="Study mode selection">
     <button class="mode-btn active-exam" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="true">
       📝 Exam Mode
-      <span class="mode-hint">No hints • Timed </span>
+      <span class="mode-hint">No hints • Timed • Submit to score</span>
     </button>
     <button class="mode-btn" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="false">
       📖 Study Mode
@@ -637,7 +667,7 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
     </button>
   </div>
 
-    <div class="exam-cards" role="list">
+  <div class="exam-cards" role="list">
     <div class="exam-card" onclick="startExam('src/ITLS/itls-pre.json', 'Pre-Test — 8th Edition')" role="listitem" tabindex="0" aria-label="Start Pre-Test 8th Edition, 50 questions">
       <div class="ec-icon">📋</div>
       <div class="ec-title">Pre-Test — 8th Edition</div>
@@ -742,9 +772,8 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
         </div>
         
         <div class="q-box" id="qBox">
-          <span class="study-watermark" aria-hidden="true">Study Mode</span>
-          <span id="qText" aria-live="polite">Loading…</span>
-        </div>
+		<span id="qText" aria-live="polite">Loading…</span>
+		</div>
         
         <!-- Study mode actions -->
         <div id="studyActions" class="study-actions" style="display:none">
@@ -856,16 +885,6 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   </div>
 </div>
 
-<style>
-/* Toggle switch for hints */
-.toggle{position:relative;display:inline-block;width:44px;height:24px}
-.toggle input{opacity:0;width:0;height:0}
-.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--border2);transition:.3s;border-radius:24px}
-.slider:before{position:absolute;content:"";height:18px;width:18px;left:3px;bottom:3px;background-color:white;transition:.3s;border-radius:50%}
-input:checked+.slider{background-color:var(--green)}
-input:checked+.slider:before{transform:translateX(20px)}
-</style>
-
 <script>
 'use strict';
 
@@ -875,7 +894,7 @@ let ST = {
   mode: 'exam', timerSec: 0, timerRef: null,
   confidence: {}, hintsShown: {}, answersRevealed: {},
   currentFilter: 'all', autoSaveInterval: null,
-  hintsEnabled: true // New: toast/hints toggle
+  hintsEnabled: true
 };
 const THEMES = ['dark','light','sepia','green'];
 const STORAGE_KEY = 'itls-progress';
@@ -896,7 +915,7 @@ function setTheme(t) {
       hdrBtn.setAttribute('aria-pressed', th === t);
     }
   });
-  showToast(`Theme: ${t}`, 'info', 1200);
+  // Toast removed for theme change as requested
 }
 
 // Initialize theme
@@ -933,7 +952,7 @@ ST.hintsEnabled = localStorage.getItem('itls-hints-enabled') !== 'false';
 
 // Toast notification system - respects hints toggle
 function showToast(message, type = 'info', duration = 1500) {
-  if (!ST.hintsEnabled) return; // Skip if hints/toasts disabled
+  if (!ST.hintsEnabled) return;
   
   const container = document.getElementById('toastContainer');
   const toast = document.createElement('div');
@@ -1083,7 +1102,6 @@ async function startExam(path, name) {
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     
     const isStudy = ST.mode === 'study';
-    // Back button visible only in study mode
     document.getElementById('backBtn').style.display = isStudy ? '' : 'none';
     document.getElementById('endBtn').style.display = isStudy ? 'none' : '';
     document.getElementById('markBtn').style.display = isStudy ? 'none' : '';
@@ -1222,7 +1240,7 @@ function syncStats() {
   });
 }
 
-// Question rendering
+// Question rendering - FIXED study mode buttons
 function renderQ() {
   const total = ST.qs.length, q = ST.qs[ST.idx];
   const isStudy = ST.mode === 'study';
@@ -1252,11 +1270,12 @@ function renderQ() {
     markBtn.setAttribute('aria-pressed', isFlagged);
   }
 
+  // FIXED: Allow reveal without hint, disable buttons when revealed
   if (isStudy) {
     const hintBtn = document.getElementById('hintBtn');
     const answerBtn = document.getElementById('answerBtn');
-    hintBtn.disabled = hintShown;
-    answerBtn.disabled = !hintShown || revealed;
+    hintBtn.disabled = hintShown || revealed;
+    answerBtn.disabled = revealed;
   }
 
   const optsDiv = document.getElementById('optsList');
@@ -1314,7 +1333,7 @@ function renderQ() {
     if (revealed) {
       expDiv.innerHTML = `
         <div class="study-exp">
-          <div class="exp-label">📖 Explanation</div>
+          <div class="exp-label">Explanation</div>
           <div class="exp-body">${escapeHtml(q.explanation || 'No explanation provided.')}</div>
         </div>`;
     } else if (hintShown) {
@@ -1339,8 +1358,17 @@ function renderQ() {
       </div>`;
   }
 
-  document.getElementById('prevBtn').disabled = ST.idx === 0;
-  document.getElementById('nextBtn').disabled = ST.idx === total - 1;
+document.getElementById('prevBtn').disabled = ST.idx === 0;
+  
+  const nextBtn = document.getElementById('nextBtn');
+  // Update Next button text based on mode and reveal status
+  if (isStudy && !revealed) {
+    nextBtn.textContent = 'Check Answer';
+    nextBtn.disabled = false; // Allow checking even on the very last question
+  } else {
+    nextBtn.textContent = 'Next →';
+    nextBtn.disabled = ST.idx === total - 1;
+  }
   
   syncGrid();
   
@@ -1355,28 +1383,22 @@ function renderQ() {
   saveProgress();
 }
 
-// Answer selection
+// FIXED: Answer selection allows changing before reveal
 function doSelect(letter) {
   const q = ST.qs[ST.idx];
   
-  if (ST.mode === 'study') {
-    if (ST.answersRevealed[q.id]) return;
-    if (ST.answers[q.id]) return;
-  }
+  // Only block if answer is already revealed
+  if (ST.mode === 'study' && ST.answersRevealed[q.id]) return;
   
-  if (ST.mode !== 'study' && ST.answers[q.id] === letter) {
+  // Toggle or set selection
+  if (ST.answers[q.id] === letter) {
     delete ST.answers[q.id];
   } else {
     ST.answers[q.id] = letter;
   }
   
-  if (ST.mode === 'study' && !ST.answersRevealed[q.id]) {
-    document.getElementById('answerBtn').disabled = false;
-  }
-  
   renderQ(); 
   syncStats();
-  showToast('Saved', 'success', 800);
 }
 
 // Elimination
@@ -1457,7 +1479,21 @@ function setConfidence(level) {
 }
 
 // Navigation
+// Navigation
 function nav(d) {
+  const q = ST.qs[ST.idx];
+
+  // NEW: Intercept 'Next' in study mode to validate first
+  if (d === 1 && ST.mode === 'study' && !ST.answersRevealed[q.id]) {
+    // Force user to pick an answer before checking
+    if (!ST.answers[q.id]) {
+      showToast('Please select an answer first', 'warning');
+      return; 
+    }
+    revealAnswer(); // Validate the answer
+    return; // Stop navigation so they can read the explanation
+  }
+
   const n = ST.idx + d;
   if (n >= 0 && n < ST.qs.length) { 
     ST.idx = n; 
@@ -1627,7 +1663,7 @@ function submitExam() {
       <div class="rq-body" id="rb${i}">
         ${buildResOpts(q,ua)}
         <div class="exp-box">
-          <div class="exp-label">📖 Explanation</div>
+          <div class="exp-label">Explanation</div>
           <div class="exp-body">${escapeHtml(q.explanation||'No explanation provided.')}</div>
         </div>
       </div>
@@ -1743,7 +1779,6 @@ document.addEventListener('keydown', e => {
 window.addEventListener('beforeunload', (e) => {
   if (document.getElementById('examScreen')?.classList.contains('active')) {
     saveProgress();
-    // Custom message for modern browsers (limited support)
     e.preventDefault();
     e.returnValue = '';
   }
