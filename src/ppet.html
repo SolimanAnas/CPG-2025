@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Medical Emergencies Review - Medical emergencies mock exams">
-<title>Medical Emergencies Review</title>
+<meta name="description" content="PPET Exam Review - Prehospital Pediatric Emergency Transport mock exams">
+<title>PPET Exam Review</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ================================================================
-   Medical — Enhanced UI/UX
+   PPET — Enhanced UI/UX
  ================================================================ */
 :root,[data-theme="dark"]{
   --bg:#070f1d;--panel:#0c1628;--card:#111d30;--card2:#162035;
@@ -665,8 +665,8 @@ input:checked+.slider:before{transform:translateX(20px)}
     </div>
   </div>
 
-  <div class="sel-logo"><span class="brand-itls">Medical</span> Emergencies</div>
-  <div class="sel-sub">Medical Emergencies Review</div>
+  <div class="sel-logo"><span class="brand-itls">PPET</span> Review</div>
+  <div class="sel-sub">Prehospital Pediatric Emergency Transport</div>
   
   <!-- Mode row - identical size -->
   <div class="mode-row" role="group" aria-label="Study mode selection">
@@ -680,19 +680,27 @@ input:checked+.slider:before{transform:translateX(20px)}
     </button>
   </div>
 
-  <div class="exam-q-selector">
+<div class="exam-q-selector">
     <label for="qCount">Number of Questions:</label>
     <select id="qCount" class="q-select">
         <option value="25">25 Questions</option>
-        <option value="45" selected>All 45 Questions</option>
+        <option value="50">50 Questions</option>
+        <option value="57" selected>All 57 Questions</option>
     </select>
   </div>
 
   <div class="exam-cards" role="list">
-    <div class="exam-card" onclick="startExam('src/Medical/medical.json', 'Medical Exam')" role="listitem" tabindex="0" aria-label="Start Medical Exam">
-      <div class="ec-icon">💊</div>
-      <div class="ec-title">Medical Exam</div>
-      <div class="ec-meta">45 questions · Exam & Study modes</div>
+    <div class="exam-card" onclick="startExam('src/PPET/ppet.json', 'PPET Exam')" role="listitem" tabindex="0" aria-label="Start PPET Exam">
+      <div class="ec-icon">🚁</div>
+      <div class="ec-title">PPET Exam</div>
+      <div class="ec-meta">57 questions · Exam & Study modes</div>
+      <span class="ec-tag tag-exam">Practice Exam</span>
+    </div>
+  </div>
+    <div class="exam-card" onclick="startExam('src/PPET/exam2.json', 'PPET Exam — Form 2')" role="listitem" tabindex="0" aria-label="Start PPET Exam Form 2">
+      <div class="ec-icon">🚁</div>
+      <div class="ec-title">PPET Exam — Form 2</div>
+      <div class="ec-meta">Pediatric transport · Exam & Study modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
@@ -704,7 +712,7 @@ input:checked+.slider:before{transform:translateX(20px)}
   <header class="exam-header">
     <div class="eh-left">
       <button class="sb-toggle" onclick="toggleSidebar()" aria-label="Toggle question navigator" aria-expanded="false">☰</button>
-      <span class="hdr-brand">Medical</span>
+      <span class="hdr-brand">PPET</span>
       <span class="hdr-exam" id="examName" aria-live="polite">—</span>
       <span class="hdr-mode m-exam" id="modeBadge" aria-live="polite">Exam</span>
     </div>
@@ -900,12 +908,12 @@ let ST = {
   hintsEnabled: true
 };
 const THEMES = ['dark','light','sepia','green'];
-const STORAGE_KEY = 'medical-progress';
+const STORAGE_KEY = 'ppet-progress';
 
 // Theme management
 function setTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('medical-theme', t);
+  localStorage.setItem('ppet-theme', t);
   THEMES.forEach(th => {
     const selBtn = document.getElementById(`s-tp-${th}`);
     const hdrBtn = document.getElementById(`h-tp-${th}`);
@@ -921,13 +929,13 @@ function setTheme(t) {
 }
 
 // Initialize theme
-let savedTheme = localStorage.getItem('medical-theme');
+let savedTheme = localStorage.getItem('ppet-theme');
 setTheme(THEMES.includes(savedTheme) ? savedTheme : 'dark');
 
 // Mode UI with persistence
 function setModeUI(m) {
   ST.mode = m;
-  localStorage.setItem('medical-mode', m);
+  localStorage.setItem('ppet-mode', m);
   
   const examBtn = document.getElementById('modeExamBtn');
   const studyBtn = document.getElementById('modeStudyBtn');
@@ -946,7 +954,7 @@ function setModeUI(m) {
 }
 
 // Load saved mode
-let savedMode = localStorage.getItem('medical-mode');
+let savedMode = localStorage.getItem('ppet-mode');
 setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'exam');
 
 // Load hints toggle preference
@@ -1070,7 +1078,7 @@ function loadProgress(name) {
 
 // Exam engine
 async function startExam(path, name) {
-  const qCount = parseInt(document.getElementById('qCount')?.value || '45');
+  const qCount = parseInt(document.getElementById('qCount')?.value || '57');
   document.getElementById('qLoading').style.display = 'block';
   document.getElementById('qBox').style.display = 'none';
   document.getElementById('optsList').innerHTML = '';

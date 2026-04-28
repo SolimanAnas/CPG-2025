@@ -212,32 +212,6 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .back-link:hover{color:var(--text);border-color:var(--border);background:var(--card)}
 
-/* Pearls screen */
-#pearlsScreen{flex:1;display:none;flex-direction:column;overflow:hidden}
-.pearls-header{background:var(--panel);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;gap:12px}
-.pearls-title{font-size:1rem;font-weight:800;color:var(--blue);display:flex;align-items:center;gap:6px}
-.pearls-back{margin-left:auto;background:transparent;border:1.5px solid var(--border2);border-radius:8px;padding:6px 14px;cursor:pointer;transition:all 0.2s;font-size:.8rem}
-.pearls-back:hover{background:var(--card);border-color:var(--border)}
-.pearls-scroll{flex:1;overflow-y:auto;padding:20px 24px}
-.pearls-category{margin-bottom:28px;animation:fadeIn 0.3s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.cat-header{font-size:.85rem;font-weight:800;color:var(--blue);border-left:3px solid var(--blue);padding-left:12px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.cat-header::before{content:'💡';font-size:.9rem}
-.pearl-list{display:flex;flex-direction:column;gap:10px}
-.pearl-item{
-  background:var(--card);border:1px solid var(--border2);border-radius:14px;
-  padding:14px 18px;transition:transform 0.15s, border-color 0.2s;
-  position:relative;
-}
-.pearl-item:hover{border-color:var(--blue);transform:translateX(2px)}
-.pearl-item::before{
-  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:linear-gradient(var(--blue),var(--green));border-radius:14px 0 0 14px;
-  opacity:0;transition:opacity 0.2s;
-}
-.pearl-item:hover::before{opacity:1}
-.pearl-text{font-size:.86rem;line-height:1.55}
-
 /* Toast notifications */
 #toastContainer{
   position:fixed;top:12px;right:12px;z-index:1000;
@@ -686,7 +660,7 @@ input:checked+.slider:before{transform:translateX(20px)}
       <div class="ec-meta">50 questions · 60 min</div>
       <span class="ec-tag tag-exam">Post-Test</span>
     </div>
-    <div class="exam-card" onclick="startExam('src/ITLS/itls-post-B', 'Post-Test — Form B')" role="listitem" tabindex="0" aria-label="Start Post-Test Form B, 50 questions">
+    <div class="exam-card" onclick="startExam('src/ITLS/itls-post-B.json', 'Post-Test — Form B')" role="listitem" tabindex="0" aria-label="Start Post-Test Form B, 50 questions">
       <div class="ec-icon">✅</div>
       <div class="ec-title">Post-Test — Form B</div>
       <div class="ec-meta">50 questions · 60 min</div>
@@ -812,22 +786,6 @@ input:checked+.slider:before{transform:translateX(20px)}
   <div class="res-scroll">
     <div id="resContent">
       <!-- Results will be injected here -->
-    </div>
-  </div>
-</div>
-
-<!-- Pearls screen -->
-<div id="pearlsScreen">
-  <div class="pearls-header">
-    <span class="pearls-title">💡 ITLS Clinical Pearls</span>
-    <button class="pearls-back" onclick="closePearls()">← Back</button>
-  </div>
-  <div class="pearls-scroll" id="pearlsContainer">
-    <!-- Loading state -->
-    <div style="text-align:center;padding:40px">
-      <div class="skeleton skeleton-text" style="width:60%;margin:0 auto 12px"></div>
-      <div class="skeleton skeleton-text" style="width:80%;margin:0 auto 8px"></div>
-      <div class="skeleton skeleton-text" style="width:70%;margin:0 auto"></div>
     </div>
   </div>
 </div>
@@ -977,58 +935,11 @@ function showScreen(s) {
   document.getElementById('selectorScreen').style.display = s === 'sel' ? 'flex' : 'none';
   document.getElementById('examScreen').classList.toggle('active', s === 'exam');
   document.getElementById('resultsScreen').classList.toggle('active', s === 'res');
-  document.getElementById('pearlsScreen').style.display = s === 'pearls' ? 'flex' : 'none';
   
   if (s === 'exam') {
     document.getElementById('qText')?.focus?.();
   }
 }
-
-// Pearls loader
-async function openPearls() {
-  showScreen('pearls');
-  const container = document.getElementById('pearlsContainer');
-  
-  container.innerHTML = `
-    <div style="text-align:center;padding:40px">
-      <div class="skeleton skeleton-text" style="width:60%;margin:0 auto 12px"></div>
-      <div class="skeleton skeleton-text" style="width:80%;margin:0 auto 8px"></div>
-      <div class="skeleton skeleton-text" style="width:70%;margin:0 auto"></div>
-    </div>
-  `;
-  
-  try {
-    const res = await fetch('src/ITLS/pearls.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const pearls = data.pearls;
-    
-    const cats = {};
-    pearls.forEach(p => { 
-      if (!cats[p.category]) cats[p.category] = []; 
-      cats[p.category].push(p); 
-    });
-    
-    let html = '';
-    for (let cat in cats) {
-      html += `<div class="pearls-category">
-        <div class="cat-header">${escapeHtml(cat)}</div>
-        <div class="pearl-list" role="list">`;
-      cats[cat].forEach((p, idx) => { 
-        html += `<div class="pearl-item" role="listitem" tabindex="0">
-          <div class="pearl-text">${escapeHtml(p.text)}</div>
-        </div>`; 
-      });
-      html += `</div></div>`;
-    }
-    container.innerHTML = html || '<div style="text-align:center;padding:40px;color:var(--muted)">No pearls found.</div>';
-    showToast('Pearls loaded', 'success', 1200);
-  } catch(e) {
-    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--red)">Failed to load pearls: ${escapeHtml(e.message)}<br><button class="study-btn" onclick="openPearls()" style="margin-top:12px">Retry</button></div>`;
-    showToast('Load failed', 'warning', 1200);
-  }
-}
-function closePearls() { showScreen('sel'); }
 
 // Save/Load progress
 function saveProgress() {

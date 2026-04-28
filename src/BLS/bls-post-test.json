@@ -1,0 +1,280 @@
+{
+  "exam": "BLS POST TEST",
+  "questions": [
+    {
+      "id": 1,
+      "scenario": null,
+      "question": "While performing high-quality CPR on an adult, what action should you ensure is being accomplished?",
+      "options": {
+        "A": "Maintaining a compression rate of 90 to 120/min",
+        "B": "Placing hands on the upper third of the sternum",
+        "C": "Allowing the chest to recoil 1 inch",
+        "D": "Compressing to a depth of at least 2 inches"
+      }
+    },
+    {
+      "id": 2,
+      "scenario": "A 53-year-old woman collapses while gardening. She is unresponsive, is not breathing, and does not have a pulse. A neighbor, who is an emergency medical technician, rushes to her with an AED.",
+      "question": "When the AED arrives, what is the first step for using it?",
+      "options": {
+        "A": "Apply the pads to the patient's chest",
+        "B": "Clear the patient",
+        "C": "Turn on the AED",
+        "D": "Press the shock button"
+      }
+    },
+    {
+      "id": 3,
+      "scenario": "A 53-year-old woman collapses while gardening. She is unresponsive, is not breathing, and does not have a pulse. A neighbor, who is an emergency medical technician, rushes to her with an AED.",
+      "question": "After the AED pads are attached to the victim's bare chest, the AED detects ventricular fibrillation. What is the next step when using an AED?",
+      "options": {
+        "A": "Check the victim for a carotid pulse",
+        "B": "Follow the AED prompts",
+        "C": "Clear the patient",
+        "D": "Press the shock button"
+      }
+    },
+    {
+      "id": 4,
+      "scenario": null,
+      "question": "What should you do if you need to use an AED on someone who has been submerged in water?",
+      "options": {
+        "A": "Do not move the victim, and do not use the AED",
+        "B": "Pull the victim out of the water, but do not use the AED",
+        "C": "Pull the victim out of the water, and wipe the chest",
+        "D": "Do not pull the victim out of the water, but wipe the chest before placing pads"
+      }
+    },
+    {
+      "id": 5,
+      "scenario": null,
+      "question": "How can rescuers ensure that they are providing effective breaths when using a bag-mask device?",
+      "options": {
+        "A": "Observing the chest rise with breaths",
+        "B": "Delivering breaths quickly and forcefully",
+        "C": "Always having oxygen attached to the bag",
+        "D": "Allowing air to release around the mask"
+      }
+    },
+    {
+      "id": 6,
+      "scenario": null,
+      "question": "What ratio for compressions to breaths should be used for 1-rescuer infant CPR?",
+      "options": {
+        "A": "5 compressions to 1 breath",
+        "B": "20 compressions to 2 breaths",
+        "C": "15 compressions to 2 breaths",
+        "D": "30 compressions to 2 breaths"
+      }
+    },
+    {
+      "id": 7,
+      "scenario": null,
+      "question": "What is a consideration when you are using an AED?",
+      "options": {
+        "A": "You should never remove a transdermal medication patch before applying AED pads",
+        "B": "On a hairy chest, the pads may not stick and may fail to deliver a shock",
+        "C": "AEDs can be used while a victim is submerged in water",
+        "D": "You should not use an AED on someone with an implanted pacemaker"
+      }
+    },
+    {
+      "id": 8,
+      "scenario": "A 9-year-old child has suddenly collapsed. After confirming that the scene is safe, a single rescuer determines that the child is in cardiac arrest, shouts for nearby help, and activates the emergency response system. He immediately begins performing high-quality CPR. Two additional rescuers arrive to assist in the resuscitation attempt.",
+      "question": "What actions should occur next, to support a team-based resuscitation attempt?",
+      "options": {
+        "A": "2 rescuers alternate using the AED and giving breaths",
+        "B": "1 rescuer gives CPR while the other 2 wait for advanced life support to arrive",
+        "C": "2 rescuers alternate giving high-quality chest compressions",
+        "D": "2 rescuers operate the AED while the third rescuer gives breaths"
+      }
+    },
+    {
+      "id": 9,
+      "scenario": "A 9-year-old child has suddenly collapsed. After confirming that the scene is safe, a single rescuer determines that the child is in cardiac arrest, shouts for nearby help, and activates the emergency response system. He immediately begins performing high-quality CPR. Two additional rescuers arrive to assist in the resuscitation attempt.",
+      "question": "Two rescuers begin high-quality CPR while the third rescuer leaves to get the AED. What action supports 2-rescuer CPR?",
+      "options": {
+        "A": "Alternating the AED role every 2 minutes",
+        "B": "Alternating the compressor role every 2 minutes",
+        "C": "Alternating giving rescue breaths every 3 cycles",
+        "D": "Alternating giving shocks every 3 cycles"
+      }
+    },
+    {
+      "id": 10,
+      "scenario": null,
+      "question": "\"Members of the team know their boundaries and ask for help before the resuscitation attempt worsens.\" Match this statement with the most appropriate element of team dynamics listed.",
+      "options": {
+        "A": "Knowledge sharing",
+        "B": "Summarizing and reevaluation",
+        "C": "Constructive intervention",
+        "D": "Knowing your limitations"
+      }
+    },
+    {
+      "id": 11,
+      "scenario": null,
+      "question": "A victim with a foreign-body airway obstruction becomes unresponsive. What is your first course of action?",
+      "options": {
+        "A": "Start CPR, beginning with chest compressions",
+        "B": "Roll the victim over and perform back blows",
+        "C": "Perform abdominal thrusts",
+        "D": "Perform blind finger sweeps"
+      }
+    },
+    {
+      "id": 12,
+      "scenario": null,
+      "question": "Why is defibrillation important?",
+      "options": {
+        "A": "It prevents rearrest from occurring",
+        "B": "It is not important for cardiac arrest",
+        "C": "There is a 100% success rate in regaining a normal cardiac rhythm",
+        "D": "It can restore a regular cardiac rhythm"
+      }
+    },
+    {
+      "id": 13,
+      "scenario": null,
+      "question": "You witness someone suddenly collapse. The person is unresponsive, you hear gasping sounds, and there is no pulse. What should you do next?",
+      "options": {
+        "A": "Begin CPR; the gasps are not normal breathing",
+        "B": "Give rescue breaths only, the gasps are not normal breathing",
+        "C": "Monitor the patient; the gasps are considered normal breathing",
+        "D": "Begin CPR, even though gasping is normal breathing"
+      }
+    },
+    {
+      "id": 14,
+      "scenario": "A middle-aged man collapses. You and a second rescuer go to the victim and find that he is unresponsive, is not breathing, and does not have a pulse.",
+      "question": "Which action is most likely to positively impact this victim's survival?",
+      "options": {
+        "A": "Performing high-quality CPR",
+        "B": "Ensuring scene safety",
+        "C": "Providing rescue breaths",
+        "D": "Checking the pulse frequently"
+      }
+    },
+    {
+      "id": 15,
+      "scenario": "A middle-aged man collapses. You and a second rescuer go to the victim and find that he is unresponsive, is not breathing, and does not have a pulse.",
+      "question": "You and another rescuer begin CPR. After a few cycles, you notice the chest compression rate is slowing. What should you say to offer constructive feedback?",
+      "options": {
+        "A": "\"You need to compress at a rate of 80 to 120 per minute.\"",
+        "B": "\"You need to compress at a rate of at least 120 per minute.\"",
+        "C": "\"You need to compress at a rate of 100 to 120 per minute.\"",
+        "D": "\"You need to compress at a rate of at least 100 per minute.\""
+      }
+    },
+    {
+      "id": 16,
+      "scenario": null,
+      "question": "How do you perform chest compressions when providing high-quality CPR to a child victim?",
+      "options": {
+        "A": "By compressing the chest at least one third the depth of the chest, about 2 inches (5 cm)",
+        "B": "By compressing the chest at least one fourth the depth of the chest, about 1.5 inches (4 cm)",
+        "C": "By compressing the chest at least two thirds the depth of the chest, about 4 inches (10 cm)",
+        "D": "By compressing the chest at least one half the depth of the chest, about 3 inches (8 cm)"
+      }
+    },
+    {
+      "id": 17,
+      "scenario": null,
+      "question": "When performing CPR on an unresponsive choking victim, what modification should you incorporate?",
+      "options": {
+        "A": "There are no modifications to CPR for an unresponsive choking victim",
+        "B": "You do not give breaths to an unresponsive choking victim",
+        "C": "Each time you open the airway, look for the obstructing object",
+        "D": "Attempt a jaw thrust instead of a head tilt-chin lift"
+      }
+    },
+    {
+      "id": 18,
+      "scenario": "An 8-month-old infant is eating and suddenly begins to cough. The infant is unable to make any noise shortly after. You pick up the infant and shout for help.",
+      "question": "You have determined that the infant is responsive and choking with a severe airway obstruction. How do you relieve the airway obstruction?",
+      "options": {
+        "A": "Encourage the infant to cough",
+        "B": "Give sets of 5 back slaps and 5 chest thrusts",
+        "C": "Begin 2 thumb-encircling hands chest compressions",
+        "D": "Give abdominal thrusts"
+      }
+    },
+    {
+      "id": 19,
+      "scenario": "An 8-month-old infant is eating and suddenly begins to cough. The infant is unable to make any noise shortly after. You pick up the infant and shout for help.",
+      "question": "Which action do you perform to relieve choking in an unresponsive infant?",
+      "options": {
+        "A": "Perform CPR, and look in the mouth for the obstructing object",
+        "B": "Give sets of 5 back slaps and 5 chest thrusts",
+        "C": "Give sets of 5 abdominal thrusts and 5 back slaps",
+        "D": "Attempt a blind finger sweep when giving breaths to remove the obstructing object"
+      }
+    },
+    {
+      "id": 20,
+      "scenario": null,
+      "question": "Which victim requires high-quality CPR?",
+      "options": {
+        "A": "A victim who is unresponsive, has a strong pulse, and is breathing adequately",
+        "B": "A victim who is unresponsive with no normal breathing and no pulse",
+        "C": "A victim who is responsive, has a pulse, and is having trouble breathing",
+        "D": "A victim who is responsive, is having trouble breathing, and has a pulse less than 60/min"
+      }
+    },
+    {
+      "id": 21,
+      "scenario": null,
+      "question": "\"The team functions smoothly when all team members know their positions, functions, and tasks during a resuscitation attempt.\" Match this statement with the most appropriate element of team dynamics listed.",
+      "options": {
+        "A": "Clear roles and responsibilities",
+        "B": "Knowing your limitations",
+        "C": "Constructive intervention",
+        "D": "Mutual respect"
+      }
+    },
+    {
+      "id": 22,
+      "scenario": null,
+      "question": "Why is allowing complete chest recoil important when performing high-quality CPR?",
+      "options": {
+        "A": "There will be a reduction of rescuer fatigue",
+        "B": "It will reduce the risk of rib fractures",
+        "C": "The heart will adequately refill between compressions",
+        "D": "The rate of chest compressions will increase"
+      }
+    },
+    {
+      "id": 23,
+      "scenario": "A 67-year-old man is found unresponsive, not breathing, and without a pulse. You and a second rescuer begin performing high-quality CPR.",
+      "question": "When should rescuers switch positions during CPR?",
+      "options": {
+        "A": "Never switch rescuers, and maintain current roles",
+        "B": "Switch rescuers at 5-minute intervals",
+        "C": "Switch rescuers about every 2 minutes",
+        "D": "Switch rescuers when placing the AED pads"
+      }
+    },
+    {
+      "id": 24,
+      "scenario": "A 67-year-old man is found unresponsive, not breathing, and without a pulse. You and a second rescuer begin performing high-quality CPR.",
+      "question": "You notice the person giving chest compressions is not allowing for complete chest recoil. What is your next course of action?",
+      "options": {
+        "A": "Stand back and await direction from the team leader",
+        "B": "Take over leadership and give direction",
+        "C": "Immediately take over chest compressions",
+        "D": "Tell the compressor you notice decreased chest recoil"
+      }
+    },
+    {
+      "id": 25,
+      "scenario": null,
+      "question": "Rapid defibrillation is a link in the adult Chain of Survival. Why is this important to survival?",
+      "options": {
+        "A": "It prevents cardiac arrest",
+        "B": "It prevents respiratory arrest",
+        "C": "It provides normal respiration",
+        "D": "It eliminates the abnormal heart rhythm"
+      }
+    }
+  ]
+}

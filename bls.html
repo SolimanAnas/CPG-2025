@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Medical Emergencies Review - Medical emergencies mock exams">
-<title>Medical Emergencies Review</title>
+<meta name="description" content="BLS Exam Review - Basic Life Support mock exams">
+<title>BLS Exam Review</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ================================================================
-   Medical — Enhanced UI/UX
+   BLS — Enhanced UI/UX
  ================================================================ */
 :root,[data-theme="dark"]{
   --bg:#070f1d;--panel:#0c1628;--card:#111d30;--card2:#162035;
@@ -192,8 +192,6 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   flex:1;padding:8px 12px;border-radius:8px;border:1px solid var(--border);
   background:var(--panel);color:var(--text);font-size:.9rem;cursor:pointer;
 }
-.ec-icon{font-size:1.8rem;margin-bottom:2px;transition:transform 0.25s ease}
-.exam-card:hover .ec-icon{transform:scale(1.05)}
 .exam-card{
   background:var(--card);border:1.5px solid var(--border2);
   border-radius:18px;padding:20px 18px;cursor:pointer;
@@ -207,8 +205,8 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .exam-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:var(--shadow)}
 .exam-card:hover::before{opacity:1}
 .exam-card:active{transform:translateY(-1px)}
-.ec-icon{font-size:1.8rem;margin-bottom:2px;transition:transform 0.2s}
-.exam-card:hover .ec-icon{transform:scale(1.1)}
+.ec-icon{font-size:1.8rem;margin-bottom:2px;transition:transform 0.25s ease}
+.exam-card:hover .ec-icon{transform:scale(1.05)}
 .ec-title{font-size:.88rem;font-weight:800;color:var(--text);line-height:1.3}
 .ec-meta{font-size:.72rem;color:var(--muted)}
 .ec-tag{
@@ -665,8 +663,8 @@ input:checked+.slider:before{transform:translateX(20px)}
     </div>
   </div>
 
-  <div class="sel-logo"><span class="brand-itls">Medical</span> Emergencies</div>
-  <div class="sel-sub">Medical Emergencies Review</div>
+  <div class="sel-logo"><span class="brand-itls">BLS</span> Review</div>
+  <div class="sel-sub">Basic Life Support</div>
   
   <!-- Mode row - identical size -->
   <div class="mode-row" role="group" aria-label="Study mode selection">
@@ -684,15 +682,19 @@ input:checked+.slider:before{transform:translateX(20px)}
     <label for="qCount">Number of Questions:</label>
     <select id="qCount" class="q-select">
         <option value="25">25 Questions</option>
-        <option value="45" selected>All 45 Questions</option>
+        <option value="50" selected>50 Questions</option>
+        <option value="75">75 Questions</option>
+        <option value="100">100 Questions</option>
+        <option value="150">150 Questions</option>
+        <option value="284">All 284 Questions</option>
     </select>
   </div>
 
   <div class="exam-cards" role="list">
-    <div class="exam-card" onclick="startExam('src/Medical/medical.json', 'Medical Exam')" role="listitem" tabindex="0" aria-label="Start Medical Exam">
-      <div class="ec-icon">💊</div>
-      <div class="ec-title">Medical Exam</div>
-      <div class="ec-meta">45 questions · Exam & Study modes</div>
+    <div class="exam-card" onclick="startExam('src/BLS/bls.json', 'BLS Exam')" role="listitem" tabindex="0" aria-label="Start BLS Exam">
+      <div class="ec-icon">🫀</div>
+      <div class="ec-title">BLS Exam</div>
+      <div class="ec-meta">284 questions · Exam & Study modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
@@ -704,7 +706,7 @@ input:checked+.slider:before{transform:translateX(20px)}
   <header class="exam-header">
     <div class="eh-left">
       <button class="sb-toggle" onclick="toggleSidebar()" aria-label="Toggle question navigator" aria-expanded="false">☰</button>
-      <span class="hdr-brand">Medical</span>
+      <span class="hdr-brand">BLS</span>
       <span class="hdr-exam" id="examName" aria-live="polite">—</span>
       <span class="hdr-mode m-exam" id="modeBadge" aria-live="polite">Exam</span>
     </div>
@@ -900,12 +902,12 @@ let ST = {
   hintsEnabled: true
 };
 const THEMES = ['dark','light','sepia','green'];
-const STORAGE_KEY = 'medical-progress';
+const STORAGE_KEY = 'bls-progress';
 
 // Theme management
 function setTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('medical-theme', t);
+  localStorage.setItem('bls-theme', t);
   THEMES.forEach(th => {
     const selBtn = document.getElementById(`s-tp-${th}`);
     const hdrBtn = document.getElementById(`h-tp-${th}`);
@@ -921,13 +923,13 @@ function setTheme(t) {
 }
 
 // Initialize theme
-let savedTheme = localStorage.getItem('medical-theme');
+let savedTheme = localStorage.getItem('bls-theme');
 setTheme(THEMES.includes(savedTheme) ? savedTheme : 'dark');
 
 // Mode UI with persistence
 function setModeUI(m) {
   ST.mode = m;
-  localStorage.setItem('medical-mode', m);
+  localStorage.setItem('bls-mode', m);
   
   const examBtn = document.getElementById('modeExamBtn');
   const studyBtn = document.getElementById('modeStudyBtn');
@@ -946,7 +948,7 @@ function setModeUI(m) {
 }
 
 // Load saved mode
-let savedMode = localStorage.getItem('medical-mode');
+let savedMode = localStorage.getItem('bls-mode');
 setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'exam');
 
 // Load hints toggle preference
@@ -1070,7 +1072,7 @@ function loadProgress(name) {
 
 // Exam engine
 async function startExam(path, name) {
-  const qCount = parseInt(document.getElementById('qCount')?.value || '45');
+  const qCount = parseInt(document.getElementById('qCount')?.value || '50');
   document.getElementById('qLoading').style.display = 'block';
   document.getElementById('qBox').style.display = 'none';
   document.getElementById('optsList').innerHTML = '';
