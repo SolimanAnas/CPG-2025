@@ -1,0 +1,652 @@
+[
+  {
+    "id": 1,
+    "text": "Upon arrival at a trauma scene, you should complete a(n):",
+    "options": [
+      "A. Initial assessment",
+      "B. Scene size- up",
+      "C. Rapid trauma survey",
+      "D. ITLS Ongoing Exam"
+    ],
+    "correct_answer": "B",
+    "explanation": "It is a critical part of trauma assessment and begins before you approach the patient. If you fail to perform the preliminary steps of scene size-up, you may jeopardize your life as well as the life of your patient.",
+    "hint": "Arrival → scene size-up first"
+  },
+  {
+    "id": 2,
+    "text": "Prolonged scene times may reflect:",
+    "options": [
+      "A. A decrease in death rates",
+      "B. Better care being delivered",
+      "C. Accomplishment of interventions",
+      "D. Ineffective team collaboration"
+    ],
+    "correct_answer": "D",
+    "explanation": "When immediate interventions are needed, delegate them to your team members while you continue the assessment. This is an important concept that immediately addresses problems encountered and yet does not interrupt the assessment sequence and does not increase scene time. Teamwork is essential to good patient outcomes.",
+    "hint": "Long scene time → poor teamwork"
+  },
+  {
+    "id": 3,
+    "text": "Which of the following indicates a state of hyperventilation?",
+    "options": [
+      "A. An adult respiratory rate greater than 20 per minute",
+      "B. A tidal volume of less than 400 ml",
+      "C. An oxygen saturation greater than 94%",
+      "D. An end tidal carbon dioxide level less than 30 mmHg"
+    ],
+    "correct_answer": "D",
+    "explanation": "A carbon dioxide level below 35 mmHg indicates hyperventilation.",
+    "hint": "Hyperventilation → low ETCO₂"
+  },
+  {
+    "id": 4,
+    "text": "An unresponsive 34-year-old female was struck by a motor vehicle. You observe asymmetrical chest wall movement with a flail segment on the right. Following delegation of c-spine control and opening the airway, you should:",
+    "options": [
+      "A. Place a cervical collar",
+      "B. Intubate",
+      "C. Administer oxygen at 8 lpm",
+      "D. Stabilize the chest wall"
+    ],
+    "correct_answer": "D",
+    "explanation": "A large flail segment can be stabilized with a bulky dressing to decrease pain associated with rib motion during respirations. Although oxygen administration is indicated it should be administered at 12-15 lpm.",
+    "hint": "Flail chest → stabilize segment"
+  },
+  {
+    "id": 5,
+    "text": "A 23-year-old female fell from a second-floor balcony. Upon arrival, you find her lying in the grass. She responds to verbal commands and your assessment reveals flat neck veins, and normal chest, abdomen and pelvis examinations. Vital signs are BP 74/40, P 54 and weak, and R 16. You should suspect:",
+    "options": [
+      "A. Hypovolemic shock",
+      "B. Relative hypovolemic (high-space) shock",
+      "C. Mechanical (obstructive) shock",
+      "D. Cardiogenic shock"
+    ],
+    "correct_answer": "B",
+    "explanation": "The condition causing the vascular space to be too large for a normal amount of blood has been called 'shock,' or relative hypovolemia. Neurogenic shock, commonly called spinal shock, is a form of relative hypovolemia. The clinical presentation of neurogenic shock differs from hemorrhagic shock in that there is no catecholamine release and thus no pallor (vasoconstriction), tachycardia, or sweating. The patient will have a decreased blood pressure, but the heart rate will be normal or slow, and the skin is usually warm, dry, and pink.",
+    "hint": "Hypotension + bradycardia → neurogenic shock"
+  },
+  {
+    "id": 6,
+    "text": "Which of the following regarding patient positioning for external jugular cannulation is incorrect?",
+    "options": [
+      "A. The patient must be in the supine position",
+      "B. Elevate the head to distend the vein and prevent air embolism",
+      "C. If no suspicion of cervical-spine injury exists, turn the patient's head to the opposite side",
+      "D. If you suspect cervical-spine injury, the head must not be turned during cannulation"
+    ],
+    "correct_answer": "B",
+    "explanation": "The patient must be in the supine position, preferably head down, to distend the vein and to prevent air embolism.",
+    "hint": "EJ cannulation → NOT head elevated"
+  },
+  {
+    "id": 7,
+    "text": "Which of the following sets of vital signs is most compatible with a diagnosis of isolated traumatic brain injury with increasing intracranial pressure?",
+    "options": [
+      "A. BP 170/100; P 50",
+      "B. BP 80/60; P 130",
+      "C. BP 80/60; P 50",
+      "D. BP 170/100; P 130"
+    ],
+    "correct_answer": "A",
+    "explanation": "When the ICP increases, the systemic blood pressure increases to try to preserve blood flow to the brain. The body senses the rise in systemic blood pressure, and this triggers a drop in the pulse rate as the body tries to lower the systemic blood pressure.",
+    "hint": "ICP ↑ → BP ↑ + pulse ↓"
+  },
+  {
+    "id": 8,
+    "text": "Which of the following statements is incorrect regarding spinal motion restriction?",
+    "options": [
+      "A. Patients should be removed from the long spine board when it is safe and practical to do so",
+      "B. Neck traction should be applied to extend the neck upward during cervical collar application",
+      "C. Remaining on the board for prolonged periods can produce discomfort, pressure sores, and respiratory compromise",
+      "D. A long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury"
+    ],
+    "correct_answer": "B",
+    "explanation": "'Pulling traction' is not a prehospital option, and the term traction is not an appropriate description for motion restriction of the spine. Traction usually results in further instability of any spinal-column injury.",
+    "hint": "SMR → no traction applied"
+  },
+  {
+    "id": 9,
+    "text": "A 15-year-old male was stabbed and has an abdominal evisceration. The patient is alert and oriented, BP 112/68, P 94 and R 18. You should:",
+    "options": [
+      "A. Irrigate any protruding organs or viscera and gently push back into the wound",
+      "B. Pack the wound with a hemostatic agent and perform complete spinal motion restriction",
+      "C. Cover any protruding organs or viscera with gauze moistened with a hypertonic dextrose solution",
+      "D. Prepare the patient for transport and establish vascular access during transport"
+    ],
+    "correct_answer": "D",
+    "explanation": "The patient should be readied for immediate transport with appropriate spinal motion restriction, if indicated. Of note, penetrating trauma to the abdomen or chest with no signs of neurologic deficit does not require immobilization of the spine. Time to definitive care at the trauma center is critical. Unnecessary intervention on scene should be avoided. Once en route to an appropriate trauma center, establish two large-bore IV lines of normal saline.",
+    "hint": "Evisceration → rapid transport"
+  },
+  {
+    "id": 10,
+    "text": "A 33-year-old female's leg was trapped in a piece of industrial equipment and has been extricated. She is now complaining of severe lower leg pain. Patient is alert and oriented with no signs of external hemorrhage. Vital signs are BP 132/78, P 96 and R 20. Which of the following is indicated?",
+    "options": [
+      "A. Apply a tourniquet proximal to the injury site",
+      "B. Administer sodium bicarbonate",
+      "C. Administer a pain management medication",
+      "D. Apply a traction splint"
+    ],
+    "correct_answer": "C",
+    "explanation": "Proper management of fractures and dislocations will decrease the incidence of pain, disability, and serious complications. Treatment in the prehospital setting is directed at proper immobilization of the injured part by the use of an appropriate splint and padding. Pain control with appropriate analgesics is another major component of the care of injured extremities.",
+    "hint": "Isolated limb injury → give analgesia"
+  },
+  {
+    "id": 11,
+    "text": "Establishing vascular access on scene is indicated:",
+    "options": [
+      "A. To initiate fluid resuscitation based on the Parkland Formula",
+      "B. To administer medication",
+      "C. To cool a thermal burn",
+      "D. To dilute a chemical burn"
+    ],
+    "correct_answer": "B",
+    "explanation": "Intravenous (IV) line insertion is rarely needed on scene during initial care unless delay in transport to a hospital is unavoidable. It takes hours for burn shock to develop. Therefore, the only reason to initiate IV therapy on scene is if other factors indicate a need for fluid volume or medication administration.",
+    "hint": "IV on scene → meds indication"
+  },
+  {
+    "id": 12,
+    "text": "Which of the following changes is most useful to monitor in the child with head injury?",
+    "options": [
+      "A. Frequency of vomiting",
+      "B. Level of consciousness",
+      "C. Reflexes",
+      "D. Sensory exam"
+    ],
+    "correct_answer": "B",
+    "explanation": "Changing level of consciousness is the best indicator of traumatic brain injury.",
+    "hint": "Head injury child → LOC best indicator"
+  },
+  {
+    "id": 13,
+    "text": "In the geriatric patient, which of the following findings is most likely caused by an acute injury?",
+    "options": [
+      "A. Edema of the lower extremities",
+      "B. Hypotension",
+      "C. Loss of lung tissue elasticity",
+      "D. Decreased peripheral vision"
+    ],
+    "correct_answer": "B",
+    "explanation": "Care providers must distinguish between signs and symptoms of a chronic disease and an acute problem. For instance: A geriatric patient may have nonpathologic rales, or the loss of skin elasticity and the presence of mouth breathing may not necessarily represent dehydration or dependent edema.",
+    "hint": "Elderly → hypotension = acute"
+  },
+  {
+    "id": 14,
+    "text": "A 31-year-old female was the restrained driver of a vehicle that hit a utility pole at moderate speed. The driver's side airbag deployed. She is alert, oriented and anxious. She reports that she is 8 months pregnant and complains of abdominal, chest and lower extremity pain. Her vital signs are BP 100/60, P 90 and R 20. Your impression and interventions are:",
+    "options": [
+      "A. Early signs of shock treated with oxygen, fluid administration at 'keep open' rate",
+      "B. Anxiety treated with emotional support and transport",
+      "C. Normal vital signs, no intervention required except transport",
+      "D. Compensated shock treated with oxygen, fluid administration at 20 ml/kg"
+    ],
+    "correct_answer": "A",
+    "explanation": "Do not mistake normal vital signs in pregnant patients as signs of shock. The pregnant patient has a normal resting pulse that is 10 to 15 beats faster than usual, and the blood pressure is 10 to 15 mmHg lower than usual. However, it is also important to realize that a blood loss of 30% to 35% can occur in these patients before there is a significant change in blood pressure.",
+    "hint": "Pregnancy → subtle shock signs"
+  },
+  {
+    "id": 15,
+    "text": "A disoriented 23-year-old male is injured in a motorcycle collision. The patient appears to be intoxicated and does not want medical attention despite a large laceration on his scalp, which is actively bleeding. You should:",
+    "options": [
+      "A. Have the patient call a friend or family member and have them drive him home and sleep it off",
+      "B. Discuss the impact of alcohol abuse with him",
+      "C. Treat him as a head injured patient",
+      "D. Wait until the patient loses consciousness and then transport"
+    ],
+    "correct_answer": "C",
+    "explanation": "An altered mental status can be seen in every form of substance abuse. However, remember that an altered level of consciousness is always due to a head injury, shock, or hypoglycemia until proven otherwise. Also remember that all patients have an emergency medical condition until proven otherwise.",
+    "hint": "AMS + trauma → assume head injury"
+  },
+  {
+    "id": 16,
+    "text": "What is the most common cause of cardiopulmonary arrest in the trauma patient?",
+    "options": [
+      "A. Brain injury",
+      "B. Hypoxemia",
+      "C. Myocardial contusion",
+      "D. Ventricular arrhythmia"
+    ],
+    "correct_answer": "B",
+    "explanation": "Hypoxemia is the most common cause of traumatic cardiopulmonary arrest. Acute airway obstruction or ineffective breathing will be clinically manifested as hypoxemia.",
+    "hint": "Trauma arrest → hypoxia cause"
+  },
+  {
+    "id": 17,
+    "text": "You may have been exposed to a contaminant (air or fluid borne). You should:",
+    "options": [
+      "A. Seek treatment within hours of the exposure",
+      "B. Report the exposure if testing shows a positive result",
+      "C. Only be concerned if the exposure was to Hepatitis B",
+      "D. Only be concerned if the exposure was to HIV"
+    ],
+    "correct_answer": "A",
+    "explanation": "Write a report of the incident as soon as possible. Blood tests (if any) to be done on the exposed emergency care provider depend on reports of testing of the source patient.",
+    "hint": "Exposure → treat immediately"
+  },
+  {
+    "id": 18,
+    "text": "A 24-year-old male is involved in a head-on collision. If you suspect:",
+    "options": [
+      "A. Lower leg injuries, administer fluid resuscitation at 20 ml/kg",
+      "B. An abdominal injury, administer analgesia",
+      "C. A head injury, administer an anti-seizure medication",
+      "D. A chest injury, obtain an EKG"
+    ],
+    "correct_answer": "D",
+    "explanation": "Consider a bruised chest wall as a myocardial contusion that requires monitoring of cardiac rhythm and, if available, a 12-lead ECG.",
+    "hint": "Chest trauma → get ECG"
+  },
+  {
+    "id": 19,
+    "text": "A brief neurologic exam of an altered mental status patient includes:",
+    "options": [
+      "A. Glasgow Coma Scale, glucose check, pupil examination",
+      "B. Glucose check, pulse oximetry, pupil examination",
+      "C. Glasgow Coma Scale, corneal reflex, ETCO2",
+      "D. Corneal reflex, pupil examination, pulse/motor/sensory"
+    ],
+    "correct_answer": "A",
+    "explanation": "If the patient has an altered mental status, do a brief neurologic exam to identify possible increased intracranial pressure (ICP). This exam should include the pupils, Glasgow Coma Scale (GCS) score. All patients with altered mental status should have a finger-stick glucose test performed.",
+    "hint": "AMS exam → GCS + glucose + pupils"
+  },
+  {
+    "id": 20,
+    "text": "Which of the following findings would indicate the airway needs to be suctioned?",
+    "options": [
+      "A. Gurgling sounds with respiration",
+      "B. Poor respiratory effort",
+      "C. Shock",
+      "D. Presence of dried blood in the nares"
+    ],
+    "correct_answer": "A",
+    "explanation": "Always immediately clear blood and secretions. You also must be alert for sounds that indicate trouble. Remember: Noisy breathing is obstructed breathing.",
+    "hint": "Gurgling → suction airway"
+  },
+  {
+    "id": 21,
+    "text": "Overinflation of an LMA mask can cause all of the following except:",
+    "options": [
+      "A. Malposition",
+      "B. Vomiting",
+      "C. Loss of seal",
+      "D. Trauma"
+    ],
+    "correct_answer": "B",
+    "explanation": "Overinflation may cause malposition, loss of seal, or trauma.",
+    "hint": "LMA overinflation → NOT vomiting"
+  },
+  {
+    "id": 22,
+    "text": "A 54-year-old male is involved in a motor vehicle collision. The steering wheel is bent. During your initial assessment, you note his skin is pale, radial pulses are present and breath sounds are clear. Which one of the following is most consistent with these findings?",
+    "options": [
+      "A. Cardiac contusion",
+      "B. Traumatic aortic rupture",
+      "C. Flail chest",
+      "D. Tension pneumothorax"
+    ],
+    "correct_answer": "A",
+    "explanation": "Bruising of the heart is basically the same injury as an acute myocardial infarction.",
+    "hint": "Bent wheel + stable lungs → cardiac contusion"
+  },
+  {
+    "id": 23,
+    "text": "Which of the following is not a potential complication of performing chest decompression?",
+    "options": [
+      "A. Blood vessel laceration",
+      "B. Difficulty in monitoring the site",
+      "C. Nerve damage",
+      "D. Causing a pneumothorax"
+    ],
+    "correct_answer": "B",
+    "explanation": "Many prefer the anterior site because, in the supine patient, air in the pleural space tends to accumulate anteriorly. Thus, there is a better chance of having the air in the pleural space removed when the anterior approach to decompressing is used. It is also easier to access when the patient is on the ambulance stretcher.",
+    "hint": "Decompression risk → monitoring not issue"
+  },
+  {
+    "id": 24,
+    "text": "Which of the following is considered one of the four essential components to maintain normal perfusion?",
+    "options": [
+      "A. Serum lactate levels",
+      "B. ETCO2 levels",
+      "C. SO2 levels",
+      "D. Fluid levels"
+    ],
+    "correct_answer": "D",
+    "explanation": "It is important to remember that blood pressure requires a 'steady state' activity of all the preceding factors. The heart must be pumping, the blood volume must be adequate, the blood vessels must be intact, and the lungs must be oxygenating the blood.",
+    "hint": "Perfusion → need adequate volume"
+  },
+  {
+    "id": 25,
+    "text": "What site is generally the easiest to landmark for intraosseous infusion?",
+    "options": [
+      "A. Proximal tibia",
+      "B. Distal humerus",
+      "C. Proximal femur",
+      "D. Distal fibula"
+    ],
+    "correct_answer": "A",
+    "explanation": "Proximal tibia, approximately 2 cm below the patella and approximately 2 cm (depending on the patient's anatomy) medial to the tibial tuberosity, or one finger breadth medial to the tibial tuberosity. This is often the easiest site to locate.",
+    "hint": "IO access → proximal tibia"
+  },
+  {
+    "id": 26,
+    "text": "As intracerebral pressure rises after an isolated head injury, what does the systolic blood pressure do?",
+    "options": [
+      "A. Stays the same",
+      "B. Decreases",
+      "C. Increases",
+      "D. Changes randomly"
+    ],
+    "correct_answer": "C",
+    "explanation": "When the ICP increases, the systemic blood pressure increases to try to preserve blood flow to the brain. The body senses the rise in systemic blood pressure, and this triggers a drop in the pulse rate as the body tries to lower the systemic blood pressure.",
+    "hint": "ICP ↑ → BP increases"
+  },
+  {
+    "id": 27,
+    "text": "Which mechanism of injury meets the exclusion criteria for spinal motion restriction?",
+    "options": [
+      "A. 14-year-old with an isolated stab wound to the midaxillary chest wall",
+      "B. 24-year-old with a gunshot wound to the neck",
+      "C. 15-year-old female with extremity numbness and tingling after falling backward",
+      "D. 7-year-old pulled unresponsive from a pond"
+    ],
+    "correct_answer": "A",
+    "explanation": "Immobilization onto a long backboard is not indicated in penetrating wounds of torso, neck, or head unless there is clinical evidence of a spine injury.",
+    "hint": "Penetrating chest → no SMR"
+  },
+  {
+    "id": 28,
+    "text": "Which of the following organs is contained in the retroperitoneal region of the abdomen?",
+    "options": [
+      "A. Stomach",
+      "B. Liver",
+      "C. Kidney",
+      "D. Uterus"
+    ],
+    "correct_answer": "C",
+    "explanation": "The retroperitoneal abdomen is the part of the abdomen behind the thoracic and true portions of the abdomen, separated from the other abdominal regions by a thin retroperitoneal membrane; includes the kidneys, ureters, pancreas, posterior duodenum, ascending and descending colon, abdominal aorta, and the inferior vena cava.",
+    "hint": "Retroperitoneal → kidneys"
+  },
+  {
+    "id": 29,
+    "text": "Which treatment is indicated for the patient who is entrapped for an extended period of time with an isolated crush injury to the lower extremity?",
+    "options": [
+      "A. NSS intravenous fluids only",
+      "B. Sodium bicarbonate and intravenous fluids",
+      "C. 5% Dextrose intravenous fluids",
+      "D. Calcium chloride and tourniquet application"
+    ],
+    "correct_answer": "B",
+    "explanation": "Initial administration of sodium bicarbonate should be at 1 mEq/kg bolus followed by an infusion of 0.25 mEq/kg body weight per hour of the solution.",
+    "hint": "Crush (long) → fluids + bicarb"
+  },
+  {
+    "id": 30,
+    "text": "A 16-year-old female is rescued from a burning house. She has 25% partial thickness burns, and the burned areas are hot to the touch. What is the appropriate treatment?",
+    "options": [
+      "A. Apply ice to burned areas until cool to the touch",
+      "B. Apply clean water to burned areas for up to 5-10 minutes",
+      "C. Apply iced water to burned areas until cool to the touch",
+      "D. Do not apply anything to burned areas other than clean sheets"
+    ],
+    "correct_answer": "B",
+    "explanation": "Limit burn wound progression as much as possible. Rapid cooling early in the course of a surface burn injury can help limit this progression. Following removal from the source of the burn, the skin and clothing are still hot, and this heat continues to injure the tissues, causing an increase in burn depth and seriousness of the injury. Cooling halts this process and, if done appropriately, is beneficial. Cooling should be done with tap water or any source of clean room-temperature water, but it should be undertaken for no more than 5 to 10 minutes. Cooling for longer periods of time can induce hypothermia and subsequent shock. Do not use ice or ice water because this may induce hypothermia.",
+    "hint": "Burns → cool with water (no ice)"
+  },
+  {
+    "id": 31,
+    "text": "An unresponsive 5-year-old female was struck by a car. She presents with retractions and nasal flaring. The airway is patent, breathing is fast and shallow, and the carotid pulse is weak and slow. Which of the steps in her management should be done first?",
+    "options": [
+      "A. Initiate ventilatory assistance",
+      "B. Complete spinal motion restriction",
+      "C. Immediately load and transport",
+      "D. Call medical command"
+    ],
+    "correct_answer": "A",
+    "explanation": "Note whether the child is 'working' to breathe, demonstrated by subcostal or suprasternal retractions, nasal flaring, or grunting. If you have any doubt that the child is breathing adequately on his or her own, immediately assist the child's breathing.",
+    "hint": "Pediatric distress → ventilate first"
+  },
+  {
+    "id": 32,
+    "text": "Which of the following regarding trauma in the elderly is true?",
+    "options": [
+      "A. Elderly patients are less likely to bleed internally than younger patients",
+      "B. Elderly patients have a better outcome following burns than younger patients",
+      "C. Fatal outcomes are more likely in the elderly than in the young",
+      "D. Motor vehicle collisions are an uncommon mechanism of injury"
+    ],
+    "correct_answer": "C",
+    "explanation": "Geriatric patients can die from less severe injuries than younger patients. In addition, it is often difficult to separate the effects of the aging process or of a chronic illness from the consequences of an injury.",
+    "hint": "Elderly trauma → higher mortality"
+  },
+  {
+    "id": 33,
+    "text": "Supine hypotension syndrome in the pregnant patient is caused by:",
+    "options": [
+      "A. Uterine obstruction of venous blood flow",
+      "B. Atelectasis of the lungs",
+      "C. Uterine pressure on the vagal nerve",
+      "D. Gastric reflux"
+    ],
+    "correct_answer": "A",
+    "explanation": "In supine hypotension syndrome, the hypotension is caused by the weight of the pregnant uterus pressing on the inferior vena cava and decreasing the return of blood to the heart by up to 30%.",
+    "hint": "Supine hypotension → vena cava compression"
+  },
+  {
+    "id": 34,
+    "text": "Which of the following has a greater chance of surviving traumatic cardiopulmonary arrest?",
+    "options": [
+      "A. Patients who suffer blunt force trauma to the torso",
+      "B. Patients with non-dilated pupils",
+      "C. Patients with dilated unresponsive pupils",
+      "D. Patients with penetrating chest trauma who are hypothermic"
+    ],
+    "correct_answer": "B",
+    "explanation": "Trauma patients who presented unconscious, without palpable pulse or spontaneous respiration, found that patients with sinus rhythm and nondilated (< 4 mm) reactive pupils had a good chance of survival.",
+    "hint": "Better survival → reactive pupils"
+  },
+  {
+    "id": 35,
+    "text": "Which of the following concerning blast injury is true?",
+    "options": [
+      "A. Primary blast injury is caused by heat",
+      "B. Secondary blast injury is caused by objects propelled by the explosion",
+      "C. Tertiary blast injury is caused by toxic fumes",
+      "D. Quaternary blast injury is caused by the displacement of the body"
+    ],
+    "correct_answer": "B",
+    "explanation": "The secondary blast injury is the result of the patient being struck by material (shrapnel) propelled by the blast force.",
+    "hint": "Blast → secondary = debris"
+  },
+  {
+    "id": 36,
+    "text": "The purpose of the ITLS Primary Survey is to:",
+    "options": [
+      "A. Identify all immediate life threats within the first 2 minutes",
+      "B. Establish measured baseline vital signs",
+      "C. Obtain a detailed medical history",
+      "D. Determine if the patient has any medical allergies"
+    ],
+    "correct_answer": "A",
+    "explanation": "The purpose of the initial assessment is to prioritize the patient and to identify immediately life-threatening conditions and take less than 2 minutes.",
+    "hint": "Primary survey → find life threats fast"
+  },
+  {
+    "id": 37,
+    "text": "Which of the following would be the most compelling reason to immediately intubate a patient?",
+    "options": [
+      "A. Snoring respirations",
+      "B. Gurgling respirations",
+      "C. Inability to ventilate",
+      "D. Traumatic arrest"
+    ],
+    "correct_answer": "C",
+    "explanation": "Continued problems with mask ventilation should prompt the consideration of airway obstruction as a potential cause. Ultimately, the placement of a 'rescue' ventilation device (BIAD, such as laryngeal mask airway) or endotracheal tube may be required.",
+    "hint": "Cannot ventilate → intubate"
+  },
+  {
+    "id": 38,
+    "text": "The depth of the ET tube at the teeth should be approximately ___ times the diameter of the tube.",
+    "options": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ],
+    "correct_answer": "B",
+    "explanation": "The mark on the tube that is even with the teeth should be three times the diameter of the ET tube. Thus, an 8.0 mm tube in an adult should be at 24 cm.",
+    "hint": "Tube depth ≈ 3× size"
+  },
+  {
+    "id": 39,
+    "text": "During transport, a trauma patient develops shallow and rapid breathing, cyanosis and a weak, rapid carotid pulse with distended neck veins and diminished breath sounds on the right. You should:",
+    "options": [
+      "A. Intubate the patient",
+      "B. Decompress the right chest",
+      "C. Perform a pericardiocentesis",
+      "D. Establish intravenous access"
+    ],
+    "correct_answer": "B",
+    "explanation": "Decompress the affected side of the chest, if indicated. The indication for performing emergency chest decompression is the presence of a tension pneumothorax with decompensation as evidenced by more than one of the following: respiratory distress and cyanosis, loss of the radial pulse (late shock), decreasing level of consciousness.",
+    "hint": "Tension pneumo → decompress"
+  },
+  {
+    "id": 40,
+    "text": "A 23-year-old female fell from a second-floor balcony. Upon arrival, you find her lying in the grass. She responds to verbal commands and your assessment reveals flat neck veins, and normal chest, abdomen and pelvis examinations. Her skin is cool, clammy and ashen; respirations are rapid and shallow; radial pulses are too rapid to count and thready. You place her on the heart monitor and it shows a wide-complex tachycardia of about 280 per minute. You should suspect:",
+    "options": [
+      "A. Hypovolemic shock",
+      "B. Relative hypovolemic (high-space) shock",
+      "C. Mechanical (obstructive) shock",
+      "D. Cardiogenic shock"
+    ],
+    "correct_answer": "D",
+    "explanation": "If cardiac output falls (either due to dropping or a very fast heart rate or lowered stroke volume), blood pressure will fall.",
+    "hint": "Extreme tachycardia → cardiogenic shock"
+  },
+  {
+    "id": 41,
+    "text": "Which of the following is the correct orientation for inserting an intraosseous needle to the proximal tibia?",
+    "options": [
+      "A. Medial to the midline, avoiding the growth plate",
+      "B. Medial to the midline, pointing toward the growth plate",
+      "C. Lateral to the midline, avoiding the growth plate",
+      "D. Lateral to the midline, pointing toward the growth plate"
+    ],
+    "correct_answer": "A",
+    "explanation": "Approximately 2 cm below the patella and approximately 2 cm (depending on the patient's anatomy) medial to the tibial tuberosity, or one finger breadth medial to the tibial tuberosity. This is often the easiest site to locate.",
+    "hint": "IO → medial tibia, avoid plate"
+  },
+  {
+    "id": 42,
+    "text": "Barbiturates should not be administered as a sedative for the head-injured patient because they:",
+    "options": [
+      "A. Decrease blood pressure",
+      "B. Increase intracranial pressure",
+      "C. Increase the likelihood of seizures",
+      "D. Increase cerebral oxygen demand"
+    ],
+    "correct_answer": "A",
+    "explanation": "Careful use of benzodiazepines can decrease agitation without dropping blood pressure. An added benefit to the use of benzodiazepines is that they prevent seizures. Seizure prophylaxis in the head injured patient should be initiated on the recommendation of medical direction. Other agents suitable for use include phenytoin. Do not use barbiturates because they can cause hypotension.",
+    "hint": "Barbiturates → cause hypotension"
+  },
+  {
+    "id": 43,
+    "text": "In which situation should an Emergency Rescue be performed?",
+    "options": [
+      "A. Leaking antifreeze from a vehicle radiator",
+      "B. Amputated upper extremity",
+      "C. Sudden release of toxic fumes",
+      "D. Third trimester pregnant patient"
+    ],
+    "correct_answer": "C",
+    "explanation": "Emergency Rescue is reserved for those situations in which there is immediate (within seconds) environmental threat to the life of the victim and/or emergency care responder. Patients should be moved to a safe area in a manner that places the emergency care responder at the least risk. Rapid extrication should be considered for patients whose medical conditions or situations require fast intervention (1 or 2 minutes— but not seconds) to prevent death.",
+    "hint": "Immediate danger → emergency rescue"
+  },
+  {
+    "id": 44,
+    "text": "Which of the following is the most common cause of abdominal trauma?",
+    "options": [
+      "A. Blunt force trauma",
+      "B. Caustic ingestion",
+      "C. Aggressive bag-mask ventilation",
+      "D. Penetrating trauma"
+    ],
+    "correct_answer": "A",
+    "explanation": "Blunt trauma is the most common mechanism of abdominal injury and has relatively high mortality rates of 10% to 30%. The reason is likely related to the frequency of accompanying injuries to the head, chest, pelvis, and/or an extremity in as many as 70% of motor vehicle collision victims.",
+    "hint": "Abd trauma → blunt most common"
+  },
+  {
+    "id": 45,
+    "text": "Proper immobilization of a forearm (radius and ulna) fracture includes splinting the:",
+    "options": [
+      "A. Elbow and fracture site",
+      "B. Fracture site only",
+      "C. Wrist and fracture site",
+      "D. Wrist, elbow and fracture site"
+    ],
+    "correct_answer": "D",
+    "explanation": "Use a splint that will immobilize one joint above and one joint below the injury site.",
+    "hint": "Splint → joint above + below"
+  },
+  {
+    "id": 46,
+    "text": "A 16-year-old female receives 25% partial thickness thermal burns. You should:",
+    "options": [
+      "A. Clean and cover the burns with an antimicrobial sheet",
+      "B. Clean and apply ice packs to the burned area",
+      "C. Cool the burn and then protect from heat loss",
+      "D. Apply burn cream"
+    ],
+    "correct_answer": "C",
+    "explanation": "Limit burn wound progression as much as possible. Rapid cooling early in the course of a surface burn injury can help limit this progression. Following removal from the source of the burn, the skin and clothing are still hot, and this heat continues to injure the tissues, causing an increase in burn depth and seriousness of the injury. Cooling halts this process and, if done appropriately, is beneficial. Cooling should be done with tap water or any source of clean room-temperature water, but it should be undertaken for no more than 5 to 10 minutes. Cooling for longer periods of time can induce hypothermia and subsequent shock. Do not use ice or ice water because this may induce hypothermia.",
+    "hint": "Burns → cool then prevent heat loss"
+  },
+  {
+    "id": 47,
+    "text": "A 3-year-old male fell 9 feet (3 meters). He has a decreased level of consciousness and is making persistent 'grunting' sounds with respirations. Your initial treatment is to:",
+    "options": [
+      "A. Apply a cervical collar and transport immediately",
+      "B. Suction the patient and apply oxygen with a nasal cannula",
+      "C. Provide ventilatory support with supplementary oxygen",
+      "D. Quickly complete a rapid trauma survey"
+    ],
+    "correct_answer": "C",
+    "explanation": "Note whether the child is 'working' to breathe, demonstrated by subcostal or suprasternal retractions, nasal flaring, or grunting. Look at the chest rise, listen for air going in and out, and feel the air coming out of the nose. If there is no movement, reposition the jaw to remove any anatomical obstruction. If you still do not sense any air exchange, you must breathe for the child. If you have any doubt that the child is breathing adequately on his or her own, immediately assist the child's breathing.",
+    "hint": "Child grunting → assist ventilation"
+  },
+  {
+    "id": 48,
+    "text": "A 78-year-old female driver struck a parked car while she was traveling at a low rate of speed. She is complaining of shortness of breath and chest pain. Your assessment and treatment should include:",
+    "options": [
+      "A. Breath sounds, history, place in a position of comfort",
+      "B. Breath sounds, history, EKG",
+      "C. Breath sounds, history, nitroglycerine administration",
+      "D. Breath sounds, history, aspirin administration"
+    ],
+    "correct_answer": "B",
+    "explanation": "All elderly patients should have cardiac monitoring, pulse oximetry, and capnography, if available.",
+    "hint": "Elderly chest pain → add ECG"
+  },
+  {
+    "id": 49,
+    "text": "When transporting a third trimester pregnant trauma patient in spinal motion restriction, you should:",
+    "options": [
+      "A. Initiate intravenous fluids at 20 cc/kg",
+      "B. Tilt or rotate the board or patient 15-30 degrees to the left",
+      "C. Manually displace the uterus to the right",
+      "D. Secure the patient in the left lateral recumbent position"
+    ],
+    "correct_answer": "B",
+    "explanation": "Supine hypotension syndrome: acute hypotension in the pregnant patient due to decreased venous return. It usually occurs when the patient is in a supine position with a 20-week or larger uterus (uterus up to umbilicus). The transport of all pregnant trauma patients, if no contraindication exists, should be by one of the following methods to alleviate vena cava compression: Tilt or rotate the backboard 15 to 30 degrees to the patient's left. Elevate the right hip four to six inches (10 to 15 centimeters) with a towel, and manually displace the uterus to the left.",
+    "hint": "Pregnancy transport → tilt left"
+  },
+  {
+    "id": 50,
+    "text": "Which of the following statements regarding SPO2 is correct?",
+    "options": [
+      "A. An SPO2 reading of 90% is equivalent to a PAO2 reading of 90 mmHg",
+      "B. As a general rule, any pulse oximeter reading below 95% is cause for concern",
+      "C. You should try to maintain a pulse oximeter reading of 95% or higher in your trauma patient",
+      "D. SPO2 is unreliable in trauma patients and has no value in their assessment"
+    ],
+    "correct_answer": "C",
+    "explanation": "Try to maintain a pulse oximeter reading of 95% or higher. However, do not withhold oxygen from a patient with a pulse oximeter reading above 95% who also shows signs and symptoms of hypoxia or difficulty breathing.",
+    "hint": "Trauma SpO₂ → keep ≥95%"
+  }
+]

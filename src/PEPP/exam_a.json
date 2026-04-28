@@ -1,0 +1,331 @@
+{
+  "title": "PEPP Assessment Exam A (25 questions)",
+  "description": "Pediatric Education for Prehospital Professionals – Exam A with answer key and clinical explanations.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "A 7-year-old boy has difficulty breathing and is wheezing. Vital signs are BP 94/62, HR 128, and RR 32. What initial management should be performed?",
+      "options": [
+        "Open the airway with the jaw-thrust maneuver.",
+        "Initiate bag-mask ventilation.",
+        "Place the patient in the Trendelenburg position.",
+        "Apply oxygen by nonrebreather mask."
+      ],
+      "correct_answer": "D",
+      "explanation": "The child is in respiratory distress with wheezing but has adequate ventilation and perfusion. The first step is to provide high-flow oxygen via nonrebreather mask to correct hypoxia. Jaw-thrust is used for trauma or unconscious patients; bag-mask ventilation is for inadequate ventilatory effort; Trendelenburg is not indicated in respiratory distress.",
+      "hint": "Wheezing + stable → give O₂"
+    },
+    {
+      "id": 2,
+      "text": "A 4-month-old infant who has had vomiting and diarrhea for the past 36 hours is lethargic, has a weak cry, and has mottled skin color. Vital signs are BP 62/46, HR 172, and RR 48. What do the signs and symptoms suggest?",
+      "options": [
+        "Respiratory arrest.",
+        "Bacterial meningitis.",
+        "Cardiogenic abnormality.",
+        "Hypovolemic shock."
+      ],
+      "correct_answer": "D",
+      "explanation": "The history of significant fluid loss (vomiting/diarrhea), tachycardia, hypotension, and signs of poor perfusion (lethargy, mottling, weak cry) are classic for hypovolemic shock. Respiratory arrest would present with bradypnea or apnea; meningitis typically includes fever; cardiogenic shock usually arises from a known cardiac condition.",
+      "hint": "Vomiting/diarrhea → hypovolemic shock"
+    },
+    {
+      "id": 3,
+      "text": "What is the priority treatment for a child who is seizing?",
+      "options": [
+        "Open the airway.",
+        "Obtain a history.",
+        "Protect the cervical spine.",
+        "Insert an oropharyngeal airway."
+      ],
+      "correct_answer": "A",
+      "explanation": "The immediate priority in any seizure is ensuring a patent airway, as the tongue may obstruct or secretions may accumulate. Opening the airway takes precedence over gathering history, spinal precautions (unless trauma is suspected), or inserting an adjunct.",
+      "hint": "Seizure → airway first"
+    },
+    {
+      "id": 4,
+      "text": "What should be included in the treatment of thermal burns to the chest, abdomen, and legs?",
+      "options": [
+        "Apply burn cream to burned areas.",
+        "Administer 100% oxygen.",
+        "Apply wet dressings to the burned areas.",
+        "Place the patient in the shock position."
+      ],
+      "correct_answer": "B",
+      "explanation": "For significant burns, administration of 100% oxygen is indicated due to the risk of inhalation injury, carbon monoxide exposure, and increased metabolic demand. Burn creams, wet dressings, and the shock position are not standard prehospital interventions for burn patients.",
+      "hint": "Burns → give 100% O₂"
+    },
+    {
+      "id": 5,
+      "text": "A 2-year-old boy, who is alert and crying, has multiple lacerations and a deformed lower leg after being hit by a car. Additional assessment reveals that he has warm, dry, pink skin and bruising on the lateral right lower chest. What is the significance of the bruising to the right side of his chest?",
+      "options": [
+        "The ribs are pliable, which makes organs more susceptible to underlying damage.",
+        "The chest wall muscles absorb the energy of impact and protect underlying organs from injury.",
+        "Rib fractures may be present because the chest wall is thin.",
+        "The intercostal muscles may be damaged because they are not well developed."
+      ],
+      "correct_answer": "A",
+      "explanation": "Young children have highly pliable ribs that often do not fracture. Therefore, force applied to the chest is transmitted directly to underlying structures (lung, liver) causing pulmonary contusion, pneumothorax, or solid organ injury, even without rib fractures. Bruising should raise suspicion for significant intrathoracic or intra-abdominal injury.",
+      "hint": "Kids ribs → internal injury risk"
+    },
+    {
+      "id": 6,
+      "text": "A 9-year-old patient fell down a steep incline after he rolled over the handlebars of his bicycle. He was not wearing a helmet and has begun vomiting. How should you manage this patient?",
+      "options": [
+        "Elevate his head to 90 degrees.",
+        "Begin suctioning the airway.",
+        "Manually stabilize the cervical spine.",
+        "Administer oxygen via nonrebreather mask."
+      ],
+      "correct_answer": "B",
+      "explanation": "Vomiting in a patient with a possible head and spine injury poses a serious aspiration risk. The first step is to immediately suction the airway to clear vomitus and maintain patency. Once the airway is clear, cervical spine stabilization and oxygen administration should follow. Elevating the head is contraindicated before spinal assessment.",
+      "hint": "Vomiting trauma → suction first"
+    },
+    {
+      "id": 7,
+      "text": "Which of the following patients may have injuries that suggest maltreatment?",
+      "options": [
+        "A 4-year-old with bilateral bruises to the shins.",
+        "A 6-year-old with bruises throughout the back.",
+        "An 8-year-old with a laceration on the face.",
+        "A 10-year-old with several abrasions on the forearm."
+      ],
+      "correct_answer": "B",
+      "explanation": "Bruises on the back are atypical for accidental injury and should raise concern for physical abuse. Bruises on the shins are common with normal play; facial lacerations and forearm abrasions are frequent in childhood falls and activities.",
+      "hint": "Back bruising → abuse"
+    },
+    {
+      "id": 8,
+      "text": "The history provided by the caregiver of which of the following patients is inconsistent with the injury?",
+      "options": [
+        "A 9-month-old infant with a bump on the head from falling out of a highchair reaching for a toy.",
+        "A 2½-year-old girl with a facial laceration from pulling a toaster off a counter.",
+        "A 2-year-old boy with several small, healing circular burns from running into a lit cigarette.",
+        "A 4-year-old boy with a wrist deformity from falling off a swing set at the park."
+      ],
+      "correct_answer": "C",
+      "explanation": "Well-circumscribed, circular, healing burns are characteristic of cigarette burns and are highly suspicious for inflicted injury. A story of a toddler 'running into a lit cigarette' is implausible. The other scenarios describe mechanisms that match the injury pattern.",
+      "hint": "Circular burns → abuse"
+    },
+    {
+      "id": 9,
+      "text": "A newborn who was just delivered at home has cyanosis of the hands and feet, has a strong cry, and is moving her extremities vigorously. Vital signs are HR 164 and RR 52. What is the first step in managing this patient?",
+      "options": [
+        "Dry her and then wrap her in a blanket.",
+        "Ventilate her with a bag-mask device.",
+        "Give high-flow oxygen by nonrebreather mask.",
+        "Maintain her airway using the jaw-thrust maneuver."
+      ],
+      "correct_answer": "A",
+      "explanation": "Acrocyanosis (bluish hands and feet) is normal in a newborn. The infant has a strong cry, normal heart rate, and good respiratory effort, indicating no need for resuscitation. The priority is to prevent heat loss by drying and wrapping the baby in a warm blanket.",
+      "hint": "Newborn well → dry & warm"
+    },
+    {
+      "id": 10,
+      "text": "What is the best way to obtain information about the medical history of a 6-year-old girl who is on a ventilator and has a tracheostomy?",
+      "options": [
+        "Ask the caregivers.",
+        "Ask the home health agency.",
+        "Contact the hospital where she is usually admitted.",
+        "Contact her physician."
+      ],
+      "correct_answer": "A",
+      "explanation": "Family caregivers are the most direct and knowledgeable source of the child's baseline status, equipment settings, and medical history. They are immediately available and can provide critical information for emergency care.",
+      "hint": "History → ask caregivers"
+    },
+    {
+      "id": 11,
+      "text": "In what position should the child in mild respiratory distress be placed?",
+      "options": [
+        "Left lateral recumbent.",
+        "Position of comfort.",
+        "Supine with feet up.",
+        "On his or her right side."
+      ],
+      "correct_answer": "B",
+      "explanation": "Allowing the child to assume a position of comfort optimizes breathing and reduces anxiety. Forcing a specific position may increase respiratory effort and distress.",
+      "hint": "Mild distress → position of comfort"
+    },
+    {
+      "id": 12,
+      "text": "An 8-year-old boy has been sick for 3 days. He has been experiencing nausea and diarrhea that has become progressively worse. He is semi-responsive with pale and diaphoretic skin. It is difficult to obtain a BP. Other vital signs are HR 54 and RR 10. What type of shock is this patient experiencing?",
+      "options": [
+        "Cardiogenic.",
+        "Hypovolemic.",
+        "Septic.",
+        "Neurogenic."
+      ],
+      "correct_answer": "B",
+      "explanation": "Prolonged vomiting and diarrhea lead to fluid loss and hypovolemic shock. The bradycardia (HR 54) is a preterminal sign of decompensated shock in children. There is no history of heart disease (cardiogenic), fever (septic), or spinal injury (neurogenic).",
+      "hint": "Late shock → bradycardia"
+    },
+    {
+      "id": 13,
+      "text": "An unrestrained 4-year-old girl was ejected during a two-vehicle motor vehicle collision. She is crying vigorously while moving her upper extremities. Her lower extremities appear deformed. What is the appropriate initial management of this patient?",
+      "options": [
+        "Initiate cervical spine immobilization.",
+        "Initiate immobilization of the lower extremities.",
+        "Ventilate her with a bag-mask device.",
+        "Cover her with a blanket to keep her warm."
+      ],
+      "correct_answer": "A",
+      "explanation": "A significant mechanism (ejection from vehicle) requires immediate cervical spine immobilization to prevent further spinal injury. The child is moving and crying, indicating spontaneous ventilation and sufficient airway protection. Management of extremity deformities and warmth are secondary priorities.",
+      "hint": "Ejection → C-spine first"
+    },
+    {
+      "id": 14,
+      "text": "What is the most common cause of pediatric seizures?",
+      "options": [
+        "Fever.",
+        "Head trauma.",
+        "Epilepsy.",
+        "Brain cancer."
+      ],
+      "correct_answer": "A",
+      "explanation": "Febrile seizures are the most common type of seizures in children, typically occurring between 6 months and 5 years of age. Head trauma, epilepsy, and brain tumors are less common causes.",
+      "hint": "Kids seizures → fever"
+    },
+    {
+      "id": 15,
+      "text": "When is it appropriate to use an AED in a witnessed pediatric cardiac arrest?",
+      "options": [
+        "After 4 minutes of CPR.",
+        "As soon as possible.",
+        "Once the patient is in the ambulance.",
+        "When the ambulance is en route to the hospital."
+      ],
+      "correct_answer": "B",
+      "explanation": "Early defibrillation is a key link in the chain of survival. For a witnessed pediatric cardiac arrest, the AED should be applied and used as soon as it is available. Delaying defibrillation reduces the chance of successful resuscitation.",
+      "hint": "Arrest → AED ASAP"
+    },
+    {
+      "id": 16,
+      "text": "A 7-year-old boy was having difficulty breathing during his physical education class. He appears tired and has audible wheezing. His vital signs are BP 98/66, HR 124 beats/min, and RR 32 breaths/min. What should the treatment of this patient include?",
+      "options": [
+        "Preparing equipment for orotracheal intubation.",
+        "Initiating bag-mask ventilation at 12 breaths per minute.",
+        "Administering a nebulized beta-agonist medication.",
+        "Administering IV epinephrine 1:10,000."
+      ],
+      "correct_answer": "C",
+      "explanation": "The presentation is consistent with an acute asthma exacerbation. The child is tachypneic and wheezing but still maintaining adequate ventilation (no respiratory failure). The first-line treatment is a nebulized beta-agonist (e.g., albuterol) to reverse bronchospasm. Intubation and bag-mask ventilation are reserved for respiratory failure; epinephrine is indicated for anaphylaxis.",
+      "hint": "Asthma → beta-agonist"
+    },
+    {
+      "id": 17,
+      "text": "What is the first step in caring for a patient with a tracheostomy tube who is having difficulty breathing?",
+      "options": [
+        "Suction the tracheostomy tube.",
+        "Remove the tracheostomy tube.",
+        "Administer a nebulizer treatment with a beta-agonist medication.",
+        "Place a mask over the mouth and initiate bag-mask ventilation."
+      ],
+      "correct_answer": "A",
+      "explanation": "The most common cause of acute respiratory distress in a patient with a tracheostomy is a mucous plug. The first step is to suction the tracheostomy tube to clear the obstruction. If no improvement, further interventions (tube replacement, ventilation via mouth) may be considered.",
+      "hint": "Trach distress → suction first"
+    },
+    {
+      "id": 18,
+      "text": "A 3-month-old infant is found unresponsive in his crib and has cool, mottled skin. His vital signs are HR 50 and RR 6. What is the initial treatment for this patient?",
+      "options": [
+        "Establish IV access and administer an IV fluid bolus of 20 mL/kg.",
+        "Establish IV access and administer 0.01 mg/kg IV epinephrine 1:10,000.",
+        "Perform chest compressions and ventilate with a bag-mask device.",
+        "Initiate bag-mask ventilation and then reassess his skin color and heart rate."
+      ],
+      "correct_answer": "C",
+      "explanation": "An infant with a heart rate less than 60 bpm and signs of poor perfusion requires immediate cardiopulmonary resuscitation, starting with chest compressions and ventilations. Ventilation alone may be insufficient; bradycardia with poor perfusion is treated as a cardiac arrest.",
+      "hint": "HR <60 infant → CPR"
+    },
+    {
+      "id": 19,
+      "text": "Which of the following is an indication for insertion of an intraosseous needle?",
+      "options": [
+        "You are unable to obtain peripheral access within 90 seconds in a 2-year-old child in impending arrest.",
+        "You have just arrived on scene to find a 3-month-old infant who has pink skin color and is lethargic following a seizure.",
+        "You have attempted all peripheral access sites in a 7-year-old child in respiratory failure.",
+        "The transport time is longer than 10 minutes for a 4-year-old boy in hypovolemic shock."
+      ],
+      "correct_answer": "A",
+      "explanation": "IO access is indicated when peripheral IV access cannot be rapidly established in a critically ill or injured child (e.g., impending arrest). A 90-second timeframe is a common guideline. Exhausting all peripheral sites before IO insertion delays necessary treatment. Transport time alone is not an indication.",
+      "hint": "No IV → IO"
+    },
+    {
+      "id": 20,
+      "text": "A 4-year-old boy fell down a 15-foot embankment and landed on packed dirt. He is unresponsive and has pale, cool skin and a capillary refill time of 4 seconds. Additional assessment reveals a 2 cm laceration on the left side of the forehead with minimal bleeding and a distended abdomen. His vital signs are BP 78/56, HR 146, and RR 48. What are the initial management steps for this patient?",
+      "options": [
+        "Administer oxygen by nasal cannula, followed by a detailed physical exam before transport.",
+        "Manage blood loss from the forehead, establish IV access and give a slow infusion of fluids, and prepare for transport.",
+        "Administer oxygen by nonrebreather mask, establish intraosseous access and give a 10 mL/kg bolus, and place him in a high Fowler's position.",
+        "Maintain cervical spine stabilization, establish IV access and give a 20 mL/kg bolus, complete the spinal immobilization, and initiate transport."
+      ],
+      "correct_answer": "D",
+      "explanation": "This child has a significant mechanism of injury, signs of shock (hypotension, tachycardia, delayed capillary refill), and a distended abdomen suggesting internal hemorrhage. Priorities are spinal motion restriction, vascular access, fluid resuscitation with an initial 20 mL/kg bolus, full spinal immobilization, and rapid transport. High-flow oxygen is indicated, but a nonrebreather mask, not nasal cannula, is appropriate. A detailed exam on scene delays transport.",
+      "hint": "Shock trauma → C-spine + fluids"
+    },
+    {
+      "id": 21,
+      "text": "What is the dysrhythmia for a 3-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a variable R-R interval called?",
+      "options": [
+        "Supraventricular tachycardia.",
+        "Sinus tachycardia.",
+        "Ventricular tachycardia.",
+        "Pulseless electrical activity (PEA)."
+      ],
+      "correct_answer": "B",
+      "explanation": "Sinus tachycardia in a 3-year-old has a heart rate usually less than 220 bpm, a narrow QRS, and often some beat-to-beat variability (sinus arrhythmia). SVT typically has a rate exceeding 220 bpm, is abrupt in onset, and has a fixed R-R interval. Ventricular tachycardia has a wide QRS.",
+      "hint": "Variable narrow tachy → sinus tach"
+    },
+    {
+      "id": 22,
+      "text": "What is the initial airway management of a child who is seizing and has gurgling respirations?",
+      "options": [
+        "Suction the oropharynx.",
+        "Insert an endotracheal tube.",
+        "Insert an oropharyngeal airway.",
+        "Administer bag-mask ventilation."
+      ],
+      "correct_answer": "A",
+      "explanation": "Gurgling respirations indicate the presence of secretions or vomitus in the upper airway. The first step is to suction the oropharynx to clear the airway. Insertion of an adjunct or bag-mask ventilation may be necessary after suctioning if the airway remains compromised.",
+      "hint": "Gurgling → suction first"
+    },
+    {
+      "id": 23,
+      "text": "A 3-year-old boy reportedly fell down a flight of stairs and has a swollen, deformed right forearm. You also note several small, healing, circular burns on his arms and back. He appears quiet and withdrawn. What is the treatment of this patient?",
+      "options": [
+        "Splint the forearm.",
+        "Establish IV access.",
+        "Cover the burns.",
+        "Contact law enforcement."
+      ],
+      "correct_answer": "A",
+      "explanation": "The immediate medical priority is to stabilize the acute orthopedic injury by splinting the deformed forearm. While the burns raise suspicion for abuse and must be reported, the question asks for the treatment intervention. Covering the burns or establishing IV access is not urgent; law enforcement notification is a part of overall management but not the primary treatment action.",
+      "hint": "Forearm fracture → splint first"
+    },
+    {
+      "id": 24,
+      "text": "What is the best way to repair a break in a central line catheter?",
+      "options": [
+        "Place a piece of silk tape horizontally over the break.",
+        "Remove the catheter.",
+        "Irrigate the catheter.",
+        "Clamp the catheter with a hemostat and gauze."
+      ],
+      "correct_answer": "D",
+      "explanation": "If a central line catheter breaks, the catheter should be clamped between the break and the patient (using a padded hemostat) to prevent air embolism or bleeding. The catheter is never removed in the field, and irrigation can introduce air. Taping is insufficient to occlude the lumen.",
+      "hint": "Broken central line → clamp"
+    },
+    {
+      "id": 25,
+      "text": "What is a contraindication to straightening the head and neck of a trauma patient during spinal immobilization?",
+      "options": [
+        "Resistance to movement.",
+        "Multiple facial injuries.",
+        "Dilated pupils.",
+        "Severe headache."
+      ],
+      "correct_answer": "A",
+      "explanation": "If resistance to movement is encountered or the patient complains of pain when attempting to align the head and neck into a neutral position, forced straightening could cause further spinal injury. The cervical spine should be immobilized in the position found. Facial injuries, dilated pupils, and headache do not contraindicate gentle alignment.",
+      "hint": "Resistance → don't align"
+    }
+  ]
+}

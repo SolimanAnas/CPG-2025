@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · About & Legal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    
+    <style>
+        /* --- Base Glassy Card Style --- */
+        .about-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--glass-shadow);
+            margin: 20px 0;
+            overflow: auto; /* clearfix to handle the floated image */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* --- Headings --- */
+        .about-card h2 {
+            color: var(--primary-accent);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-universal);
+            padding-bottom: 10px;
+            font-weight: 800;
+        }
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin: 30px 0 15px;
+            color: var(--text-primary);
+            border-left: 4px solid var(--primary-accent);
+            padding-left: 12px;
+        }
+
+        /* --- Text & Lists --- */
+        .about-card p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+        .about-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        .about-card li {
+            margin-bottom: 8px;
+        }
+
+        /* --- PROFILE IMAGE FIX (Use Original Photoshop Effects) --- */
+        .about-card .float-image {
+            float: right;
+            width: 220px;       /* Good size for desktop */
+            height: auto;       /* CRITICAL: Maintains your Oval shape */
+            margin-left: 30px;
+            margin-bottom: 20px;
+            
+            /* Disable all CSS interference so your Photoshop shadow/border shows */
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+            object-fit: contain !important; /* Prevents "Head Chopping" */
+        }
+
+        /* Mobile adjustments for image */
+        @media (max-width: 600px) {
+            .about-card .float-image {
+                float: none;
+                display: block;
+                margin: 0 auto 25px auto;
+                width: 200px; /* Slightly smaller for phone */
+            }
+        }
+
+        /* --- LIABILITY SECTION (Red Warning) --- */
+        .liability-section {
+            background: rgba(255, 59, 48, 0.08);
+            border: 1px solid rgba(255, 59, 48, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 25px 0;
+            color: var(--text-primary);
+        }
+        .liability-section strong {
+            color: #ff3b30;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* --- LICENSE SECTION (Code Style) --- */
+        .license-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        [data-theme="light"] .license-box {
+            background: rgba(0, 0, 0, 0.05);
+            color: #444;
+        }
+
+        /* --- How-To List Styling --- */
+        .how-to-list {
+            list-style: none;
+            padding: 0;
+        }
+        .how-to-list li {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .how-to-list li span.icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        .how-to-list li div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1>About & Legal</h1>
+            <p>DCAS CPG 2025 Review</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <a href="chapters/c-index.html?view=summary&section=c-index-main" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
+    </div>
+</header>
+
+<main>
+    <div class="about-card">
+        <h2>📘 About This Application</h2>
+        
+        <img src="images/image-01.png" alt="Soliman Anas" class="float-image">
+        
+        <h3>The Initiative</h3>
+        <p>
+            <strong>As a member of the CPG team, I took the initiative to develop this digital platform.</strong>
+        </p>
+        <p>
+            While working on the guidelines, I recognized the need to bridge the gap between our comprehensive static documents and the modern, on-the-go needs of field crews. My goal was to transform our protocols into a dynamic, interactive learning experience that fits in your pocket.
+        </p>
+
+        <div class="liability-section">
+            <strong>⚠️ IMPORTANT DISCLAIMER</strong>
+            Although the creator was a member of the CPG team, this application is a <strong>personal initiative</strong> and is <strong>NOT</strong> an official product of DCAS. 
+            <br><br>
+            The content provided is for <strong>educational and study purposes only</strong>. It must not be used as a primary reference for active patient care or clinical decision-making. 
+            <br><br>
+            Always refer to the official signed DCAS CPG documents and internal memos for authorized protocols.
+        </div>
+        
+        <h3>Author & Developer</h3>
+        <p>
+            <strong>Soliman Anas</strong><br>
+            <em>EMT, RN, MSN, MBA</em><br>
+            Graphic Designer & Junior Web Developer
+        </p>
+        <p>
+            A passionate advocate for merging clinical excellence with modern technology. This "Portfolio Project" demonstrates the potential of PWA (Progressive Web App) technology in medical education.
+        </p>
+        
+        <h3>Key Features</h3>
+        <ul class="how-to-list">
+            <li>
+                <span class="icon">📱</span>
+                <div><strong>Progressive Web App:</strong> Installs on your phone, works offline, and updates automatically.</div>
+            </li>
+            <li>
+                <span class="icon">🔄</span>
+                <div><strong>Smart Flip Cards:</strong> Review content in summary mode or test yourself with 3D flashcards.</div>
+            </li>
+            <li>
+                <span class="icon">🔍</span>
+                <div><strong>Dynamic Search:</strong> Instantly filter through hundreds of guidelines and protocols.</div>
+            </li>
+            <li>
+                <span class="icon">📊</span>
+                <div><strong>Performance Tracking:</strong> Your quiz scores and chapter completion status are saved locally on your device.</div>
+            </li>
+        </ul>
+
+        <h3>License</h3>
+        <p>
+            This software is available for the EMS community to study and improve.
+        </p>
+        
+        <div class="license-box">MIT License
+
+Copyright (c) 2025 Soliman Anas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</div>
+        
+        <h3>Version Info</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            <strong>App Version:</strong> 1.0.5 (Stable)<br>
+            <strong>Content Base:</strong> DCAS CPG V3 (2025)<br>
+            <strong>Last Update:</strong> February 2026
+        </p>
+        
+        <div style="text-align:center; margin-top:40px;">
+            <button class="control-btn" id="footerBackBtn" style="width: 100%; max-width: 300px;">← Back to Chapters</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · Open Source Project</div>
+    <div><a href="about.html">Legal & Disclaimer</a> · Not for Clinical Use</div>
+</footer>
+
+<script>
+    (function() {
+        // --- 1. Navigation Logic ---
+        const goHome = () => window.location.href = 'index.html';
+        
+        document.getElementById('homeBtn')?.addEventListener('click', goHome);
+        document.getElementById('footerBackBtn')?.addEventListener('click', goHome);
+
+        // --- 2. Theme Logic (Synced with app.js) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themes = ['dark', 'light', 'sepia', 'forest'];
+        
+        function initTheme() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', saved);
+        }
+
+        function nextTheme() {
+            const current = html.getAttribute('data-theme') || 'dark';
+            const currentIndex = themes.indexOf(current);
+            const nextIndex = (currentIndex + 1) % themes.length;
+            const next = themes[nextIndex];
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+
+        if(themeBtn) themeBtn.addEventListener('click', nextTheme);
+        initTheme(); // Run on load
+    })();
+</script>
+
+</body>
+</html>

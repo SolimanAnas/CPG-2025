@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DCAS CPG | Professional Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 10% 30%, #0B1120, #08101E);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+    /* subtle animated grain */
+    body::before {
+      content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    /* main card container */
+    .auth-container {
+      width: 100%; max-width: 520px; z-index: 2;
+      animation: fadeSlideUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    /* glassmorphism premium card */
+    .professional-card {
+      background: rgba(18, 25, 45, 0.75); backdrop-filter: blur(12px);
+      border-radius: 2rem; border: 1px solid rgba(66, 153, 225, 0.25);
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(66, 153, 225, 0.1) inset;
+      padding: 2rem 2rem 2.2rem; transition: transform 0.2s ease, box-shadow 0.2s;
+    }
+    .professional-card:hover { box-shadow: 0 30px 50px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(66, 153, 225, 0.2) inset; }
+    /* header section */
+    .brand-header { text-align: center; margin-bottom: 1.8rem; }
+    .badge-icon {
+      background: linear-gradient(135deg, #1E3A8A, #3B82F6); width: 56px; height: 56px; border-radius: 28px;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
+      box-shadow: 0 10px 20px -5px rgba(0, 100, 255, 0.3);
+    }
+    .badge-icon i { font-size: 28px; color: white; }
+    h1 {
+      font-size: 1.9rem; font-weight: 700; background: linear-gradient(to right, #F0F9FF, #A5D8FF);
+      background-clip: text; -webkit-background-clip: text; color: transparent; letter-spacing: -0.3px;
+    }
+    .subhead { color: #94A3B8; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 500; }
+    /* form groups */
+    .form-group { margin-bottom: 1.25rem; }
+    .input-label { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.3px; color: #CBD5E1; margin-bottom: 0.5rem; }
+    .input-label i { font-size: 0.85rem; color: #3B82F6; width: 18px; }
+    .input-field {
+      width: 100%; background: rgba(12, 20, 30, 0.7); border: 1px solid #2D3A5E; border-radius: 1rem; padding: 0.85rem 1rem;
+      font-size: 0.95rem; font-family: 'Inter', monospace; color: #F1F5F9; transition: all 0.2s ease; outline: none;
+    }
+    .input-field:focus { border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); background: rgba(18, 30, 45, 0.9); }
+    /* custom select */
+    .custom-select { position: relative; }
+    .custom-select select {
+      appearance: none; cursor: pointer; background: rgba(12, 20, 30, 0.7); border: 1px solid #2D3A5E; border-radius: 1rem;
+      padding: 0.85rem 1rem; width: 100%; font-size: 0.95rem; font-family: 'Inter', sans-serif; font-weight: 500; color: #F1F5F9; transition: all 0.2s;
+    }
+    .custom-select select:focus { border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); }
+    .custom-select i { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: #6C86A3; pointer-events: none; font-size: 1rem; }
+    select option { background: #0F172A; color: #E2E8F0; padding: 0.6rem; }
+    /* checkbox */
+    .terms-row { display: flex; align-items: center; gap: 0.75rem; margin: 1.5rem 0 0.5rem; }
+    .terms-row input { width: 18px; height: 18px; accent-color: #3B82F6; cursor: pointer; }
+    .terms-row label { font-size: 0.8rem; color: #94A3B8; cursor: pointer; }
+    .terms-row a { color: #60A5FA; text-decoration: none; font-weight: 500; }
+    .terms-row a:hover { text-decoration: underline; }
+    /* btn */
+    .register-btn {
+      width: 100%; background: linear-gradient(95deg, #2563EB, #1E40AF); border: none; border-radius: 1.5rem; padding: 0.9rem;
+      font-weight: 700; font-size: 1rem; color: white; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center;
+      gap: 10px; cursor: pointer; transition: all 0.25s ease; margin-top: 0.75rem; box-shadow: 0 5px 15px -5px #1E3A8A;
+    }
+    .register-btn:hover { background: linear-gradient(95deg, #3B82F6, #1E3A8A); transform: translateY(-2px); box-shadow: 0 12px 20px -8px #1E3A8A; }
+    .register-btn:active { transform: translateY(1px); }
+    /* messages */
+    .form-feedback { margin-top: 1.2rem; font-size: 0.85rem; font-weight: 500; text-align: center; padding: 0.5rem; border-radius: 40px; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(4px); }
+    .error-msg { color: #FF8A8A; background: rgba(255, 80, 80, 0.1); }
+    .success-msg { color: #6FEE9D; background: rgba(34, 197, 94, 0.1); }
+    /* links */
+    .login-redirect { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #7E8A9B; }
+    .login-redirect a { color: #60A5FA; font-weight: 600; text-decoration: none; transition: color 0.2s; }
+    .login-redirect a:hover { color: #93C5FD; text-decoration: underline; }
+    .divider { display: flex; align-items: center; gap: 12px; margin: 1rem 0 0.5rem; }
+    .divider-line { flex: 1; height: 1px; background: rgba(71, 85, 105, 0.5); }
+    .password-hint { font-size: 0.7rem; color: #5B6E8C; margin-top: 5px; margin-left: 4px; }
+    @media (max-width: 480px) { .professional-card { padding: 1.5rem; } h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+<div class="auth-container">
+  <div class="professional-card">
+    <div class="brand-header">
+      <div class="badge-icon"><i class="fas fa-hand-holding-heart"></i></div>
+      <h1>DCAS · CPG</h1>
+      <div class="subhead">Clinical Practice Guidelines — Advanced Provider Network</div>
+    </div>
+
+    <form id="professionalSignupForm" novalidate>
+      <div class="form-group">
+        <div class="input-label"><i class="fas fa-user-md"></i><span>Full name</span></div>
+        <input type="text" id="fullName" class="input-field" placeholder="Soliman Anas" autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <div class="input-label"><i class="fas fa-envelope"></i><span>Email address</span></div>
+        <input type="email" id="regEmail" class="input-field" placeholder="clinical@dcas.org" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <div class="input-label"><i class="fas fa-badge"></i><span>Professional level</span></div>
+        <div class="custom-select">
+          <select id="professionalLevel" required>
+            <option value="" disabled selected>— Select clinical role —</option>
+            <option value="EMT">EMT</option>
+            <option value="EMT-A">EMT-A</option>
+            <option value="Paramedic">Paramedic</option>
+            <option value="Advanced paramedic">Advanced Paramedic</option>
+            <option value="Physician">Physician</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-label"><i class="fas fa-lock"></i><span>Password</span></div>
+        <input type="password" id="regPassword" class="input-field" placeholder="••••••••" autocomplete="new-password">
+        <div class="password-hint"><i class="fas fa-info-circle"></i> Minimum 8 characters</div>
+      </div>
+
+      <div class="form-group">
+        <div class="input-label"><i class="fas fa-check-circle"></i><span>Confirm password</span></div>
+        <input type="password" id="confirmPassword" class="input-field" placeholder="Confirm password" autocomplete="off">
+      </div>
+
+      <div class="terms-row">
+        <input type="checkbox" id="termsCheckbox">
+        <label for="termsCheckbox">I agree to the <a href="#" id="termsLink">DCAS Clinical Terms</a> and data processing.</label>
+      </div>
+
+      <button type="submit" class="register-btn">
+        <i class="fas fa-arrow-right-to-bracket"></i> Register & continue
+      </button>
+      <div id="formFeedback" class="form-feedback"></div>
+    </form>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <i class="fas fa-shield-alt" style="color:#3B82F6; font-size:12px;"></i>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="login-redirect">
+      Already have a DCAS CPG profile? <a href="/login.html">Sign in →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const form = document.getElementById('professionalSignupForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+
+    function showMessage(text, isError = true) {
+      feedbackDiv.textContent = text;
+      feedbackDiv.className = 'form-feedback ' + (isError ? 'error-msg' : 'success-msg');
+    }
+
+    function clearMessage() {
+      feedbackDiv.textContent = '';
+      feedbackDiv.className = 'form-feedback';
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+      return re.test(email);
+    }
+
+    function validatePasswordStrength(pwd) {
+      return pwd.length >= 8;
+    }
+
+    // 🚀 UPDATED: Now an async function that talks to your Python backend
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      clearMessage();
+
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const professionalLevel = document.getElementById('professionalLevel').value;
+      const password = document.getElementById('regPassword').value;
+      const confirmPwd = document.getElementById('confirmPassword').value;
+      const termsAccepted = document.getElementById('termsCheckbox').checked;
+
+      if (!fullName) { showMessage('❌ Full name is required for credentialing.', true); return; }
+      if (fullName.length < 2) { showMessage('❌ Please enter a valid full name.', true); return; }
+      if (!email || !validateEmail(email)) { showMessage('❌ Enter a valid professional email.', true); return; }
+      if (!professionalLevel) { showMessage('⚠️ Please select your professional level.', true); return; }
+      if (!password || !validatePasswordStrength(password)) { showMessage('🔐 Password must be at least 8 characters long.', true); return; }
+      if (password !== confirmPwd) { showMessage('✖️ Passwords do not match. Please re-enter.', true); return; }
+      if (!termsAccepted) { showMessage('📜 You must agree to the DCAS Clinical Terms to register.', true); return; }
+
+      // Show loading state
+      const submitBtn = form.querySelector('.register-btn');
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      showMessage('Communicating with secure server...', false);
+
+      // 🔄 The REAL Fetch Request to server.py
+      try {
+        const response = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            username: email, 
+            password: password,
+            full_name: fullName,
+            professional_level: professionalLevel
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            showMessage(`✅ Welcome, ${fullName.split(' ')[0]}! Your profile has been created. Redirecting...`, false);
+            setTimeout(() => {
+                window.location.replace('/login.html');
+            }, 1800);
+        } else {
+            // Handle duplicate email or server errors
+            showMessage('❌ ' + (data.error || 'Registration failed.'), true);
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        }
+      } catch (err) {
+        showMessage('❌ Server connection failed. Is the Python server running?', true);
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }
+    });
+
+    // Terms alert
+    const termsLink = document.getElementById('termsLink');
+    if (termsLink) {
+      termsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert("DCAS CPG Terms of Use:\n• All clinical data is confidential.\n• Professional level verification required.\n• By registering you adhere to CPG protocols v2025.");
+      });
+    }
+  })();
+</script>
+</body>
+</html>

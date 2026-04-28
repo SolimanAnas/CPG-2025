@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · Trauma Assessment</title>
+<script>
+  (function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#5a7080;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;--purple:#8b5cf6;--orange:#f97316;
+  --mono:"DM Mono",monospace;--hdr:60px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 80% 50% at 10% 0%,rgba(239,68,68,.08),transparent),radial-gradient(ellipse 70% 60% at 90% 100%,rgba(15,39,68,.8),transparent);pointer-events:none;z-index:-1}
+
+/* ── HEADER ──────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:70;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0;transition:background .15s}
+.hdr-back:active{background:var(--br2)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#7f1d1d,#dc2626);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:0 4px 14px rgba(220,38,38,.4)}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+.hdr-timer{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--cyan);flex-shrink:0;letter-spacing:-.5px}
+
+/* ── PROGRESS STRIP ──────────────────────────────── */
+.progress-strip{position:sticky;top:var(--hdr);z-index:65;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--br);padding:10px 14px;flex-shrink:0}
+.ps-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
+.ps-label{font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.ps-pct{font-size:.78rem;font-weight:800;font-family:var(--mono);color:var(--cyan)}
+.ps-bar{height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+.ps-bar-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));border-radius:3px;transition:width .5s cubic-bezier(.25,1,.5,1);width:0%}
+.phase-pills{display:flex;gap:5px;margin-top:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.phase-pills::-webkit-scrollbar{display:none}
+.phase-pill{flex-shrink:0;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:4px 10px;border-radius:20px;border:1px solid;cursor:pointer;transition:all .2s;white-space:nowrap}
+.phase-pill.done{opacity:.6}
+.phase-pill:active{transform:scale(.96)}
+
+/* ── PAGE BODY ───────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:14px 14px 140px;max-width:680px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+
+/* ── PHASE SECTION HEADER ────────────────────────── */
+.phase-hdr{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:16px;border-left:4px solid;margin-bottom:8px}
+.ph-icon{font-size:1.1rem;flex-shrink:0}
+.ph-info{flex:1}
+.ph-title{font-size:.9rem;font-weight:800}
+.ph-sub{font-size:.64rem;color:var(--muted);margin-top:1px}
+.ph-count{font-size:.65rem;font-weight:700;font-family:var(--mono);border-radius:20px;padding:3px 10px;flex-shrink:0;border:1px solid}
+
+/* ── STEP CARD ───────────────────────────────────── */
+.step-card{background:var(--sf);border:1px solid var(--br);border-radius:16px;overflow:hidden;transition:border-color .25s,box-shadow .25s;margin-bottom:6px}
+.step-card.checked{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.04)}
+.step-card.critical.checked{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.05)}
+.step-card.warn-item.checked{border-color:rgba(234,179,8,.4);background:rgba(234,179,8,.04)}
+
+.step-row{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;cursor:pointer;-webkit-user-select:none;user-select:none}
+.step-row:active{background:rgba(255,255,255,.04)}
+
+/* Custom checkbox */
+.step-check{width:24px;height:24px;border-radius:7px;border:2px solid rgba(255,255,255,.18);background:rgba(0,0,0,.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:1px}
+.step-check.c-done{background:var(--green);border-color:var(--green);box-shadow:0 0 10px rgba(34,197,94,.4)}
+.step-check.c-crit{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(239,68,68,.4)}
+.step-check.c-warn{background:var(--yellow);border-color:var(--yellow);box-shadow:0 0 10px rgba(234,179,8,.35)}
+.step-check::after{content:'';display:none}
+.step-check.c-done::after,.step-check.c-crit::after,.step-check.c-warn::after{display:block;content:'✓';font-size:.72rem;color:#fff;font-weight:900}
+
+.step-body{flex:1;min-width:0}
+.step-title{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.3;transition:color .2s}
+.step-card.checked .step-title{color:rgba(221,230,240,.6)}
+.step-desc{font-size:.7rem;color:var(--muted);margin-top:3px;line-height:1.45}
+.step-badge{display:inline-flex;align-items:center;gap:3px;font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.7px;border-radius:6px;padding:2px 7px;border:1px solid;margin-top:5px}
+
+/* Critical / warn badges */
+.badge-critical{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.badge-intervene{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#fca5a5}
+.badge-warn{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.28);color:#fde047}
+
+/* Step note input */
+.step-note-row{padding:0 14px 12px 50px}
+.step-note{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--br);border-radius:10px;padding:8px 12px;font-size:.76rem;font-family:inherit;color:var(--text);resize:none;outline:none;min-height:44px;transition:border-color .2s;display:none}
+.step-note.open{display:block;animation:noteIn .18s ease}
+@keyframes noteIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.step-note:focus{border-color:rgba(59,130,246,.45)}
+.step-note::placeholder{color:var(--muted)}
+
+/* Sub-items */
+.sub-items{padding:0 14px 10px 50px;display:flex;flex-direction:column;gap:5px}
+.sub-item{display:flex;align-items:flex-start;gap:8px;font-size:.75rem;color:var(--muted);line-height:1.4}
+.sub-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:5px}
+
+/* ── SUB-SECTION DIVIDER ─────────────────────────── */
+.sub-sec{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;padding:10px 14px 6px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.sub-sec::after{content:'';flex:1;height:1px;background:var(--br)}
+
+/* ── VITAL SIGNS GRID ────────────────────────────── */
+.vitals-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 14px 14px}
+.vital-box{background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:12px;padding:10px 12px}
+.vital-label{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);margin-bottom:6px}
+.vital-input{width:100%;background:transparent;border:none;outline:none;font-size:1rem;font-weight:700;font-family:var(--mono);color:var(--cyan);padding:0}
+.vital-input::placeholder{color:rgba(90,112,128,.5);font-weight:400;font-size:.85rem}
+.vital-unit{font-size:.62rem;color:var(--muted);margin-top:2px}
+
+/* ── GCS mini ────────────────────────────────────── */
+.gcs-row{display:flex;gap:6px;padding:0 14px 14px}
+.gcs-box{flex:1;background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:11px;padding:9px 10px;text-align:center}
+.gcs-lbl{font-size:.58rem;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:5px}
+.gcs-input{width:100%;text-align:center;background:transparent;border:none;outline:none;font-size:1rem;font-weight:800;font-family:var(--mono);color:var(--cyan)}
+.gcs-input::placeholder{color:rgba(90,112,128,.45);font-size:.75rem;font-weight:400}
+.gcs-total-box{background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.3);border-radius:11px;padding:9px 10px;text-align:center;flex:1}
+.gcs-total-num{font-size:1.1rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+
+/* ── AVPU row ────────────────────────────────────── */
+.avpu-row{display:flex;gap:6px;padding:0 14px 14px}
+.avpu-btn{flex:1;padding:9px 4px;border-radius:10px;font-size:.8rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.avpu-btn:active{transform:scale(.95)}
+.avpu-btn.sel-A{background:rgba(34,197,94,.15);border-color:rgba(34,197,94,.5);color:#86efac}
+.avpu-btn.sel-V{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
+.avpu-btn.sel-P{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.4);color:#fdba74}
+.avpu-btn.sel-U{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.45);color:#fca5a5}
+
+/* MOI toggle */
+.moi-row{display:flex;gap:8px;padding:0 14px 14px}
+.moi-btn{flex:1;padding:11px 8px;border-radius:12px;font-size:.79rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center;line-height:1.3}
+.moi-btn:active{transform:scale(.97)}
+.moi-btn.sel{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.5);color:#93c5fd}
+
+/* Priority row */
+.priority-row{display:flex;gap:6px;padding:0 14px 14px}
+.pri-btn{flex:1;padding:9px 4px;border-radius:10px;font-size:.72rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.pri-btn:active{transform:scale(.95)}
+.pri-btn.sel-high{background:rgba(239,68,68,.15);border-color:rgba(239,68,68,.5);color:#fca5a5}
+.pri-btn.sel-med{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
+.pri-btn.sel-low{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.4);color:#86efac}
+
+/* Pupil row */
+.pupil-row{display:flex;gap:8px;padding:0 14px 14px}
+.pupil-input{flex:1;background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:11px;padding:9px 12px;font-size:.82rem;font-family:var(--mono);color:var(--text);outline:none;-webkit-appearance:none;transition:border-color .2s}
+.pupil-input:focus{border-color:rgba(59,130,246,.4)}
+.pupil-input::placeholder{color:var(--muted);font-size:.72rem}
+
+/* SAMPLE boxes */
+.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:8px 14px 14px}
+.sample-box{background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:11px;padding:9px 12px}
+.sample-key{font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--cyan);margin-bottom:4px}
+.sample-word{font-size:.65rem;color:var(--muted);margin-bottom:6px}
+.sample-input{width:100%;background:transparent;border:none;outline:none;font-size:.78rem;font-family:inherit;color:var(--text);resize:none;min-height:36px}
+.sample-input::placeholder{color:rgba(90,112,128,.5);font-size:.72rem}
+
+/* ── RESULTS SECTION ─────────────────────────────── */
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px 14px 14px}
+.result-btn{padding:12px 8px;border-radius:12px;font-size:.82rem;font-weight:700;font-family:inherit;cursor:pointer;border:1.5px solid rgba(255,255,255,.1);background:rgba(0,0,0,.2);color:var(--muted);transition:all .18s;text-align:center}
+.result-btn:active{transform:scale(.96)}
+.result-btn.sel-excellent{background:rgba(34,197,94,.15);border-color:rgba(34,197,94,.5);color:#86efac}
+.result-btn.sel-good{background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.45);color:#67e8f9}
+.result-btn.sel-adequate{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
+.result-btn.sel-inadequate{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.45);color:#fca5a5}
+
+/* ── COMPLETE FAB ────────────────────────────────── */
+.fab-complete{position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:80;background:linear-gradient(135deg,#7f1d1d,#dc2626);color:#fff;border:none;border-radius:30px;padding:15px 36px;font-size:.92rem;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 8px 28px rgba(220,38,38,.45);transition:all .18s;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.fab-complete:active{transform:translateX(-50%) scale(.97)}
+.fab-complete.ready{background:linear-gradient(135deg,#14532d,#16a34a);box-shadow:0 8px 28px rgba(22,163,74,.45)}
+
+/* ── BOTTOM SHEET ────────────────────────────────── */
+.bs-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:200;display:none;flex-direction:column;justify-content:flex-end}
+.bs-overlay.open{display:flex;animation:bsFI .22s ease}
+@keyframes bsFI{from{opacity:0}to{opacity:1}}
+.bs-panel{background:#0a1728;border-top:1px solid rgba(255,255,255,.12);border-radius:24px 24px 0 0;display:flex;flex-direction:column;max-height:90vh;padding-bottom:max(20px,env(safe-area-inset-bottom));animation:bsSU .34s cubic-bezier(.25,1,.5,1)}
+@keyframes bsSU{from{transform:translateY(70px);opacity:0}to{transform:translateY(0);opacity:1}}
+.bs-handle-wrap{padding:10px 0 4px;cursor:pointer;display:flex;justify-content:center;flex-shrink:0}
+.bs-handle{width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.18)}
+.bs-head{display:flex;align-items:center;justify-content:space-between;padding:4px 16px 12px;border-bottom:1px solid var(--br);flex-shrink:0}
+.bs-htitle{font-size:.95rem;font-weight:800}
+.bs-hclose{width:30px;height:30px;border-radius:8px;background:var(--sf2);border:1px solid var(--br);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.8rem;transition:background .15s}
+.bs-hclose:active{background:var(--br2)}
+.bs-scroll{overflow-y:auto;flex:1;padding:16px}
+.bs-scroll::-webkit-scrollbar{width:3px}
+.bs-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+
+/* Summary styles */
+.sum-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.sum-stat{background:var(--sf);border:1px solid var(--br);border-radius:13px;padding:12px 10px;text-align:center}
+.sum-stat-val{font-size:1.3rem;font-weight:900;font-family:var(--mono);color:var(--cyan)}
+.sum-stat-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-top:3px}
+.sum-phase{background:var(--sf);border:1px solid var(--br);border-radius:13px;padding:12px 14px;margin-bottom:8px}
+.sum-phase-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.sum-phase-name{font-size:.8rem;font-weight:700}
+.sum-phase-pct{font-size:.72rem;font-weight:700;font-family:var(--mono)}
+.sum-phase-bar{height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.sum-phase-fill{height:100%;border-radius:2px;transition:width .4s}
+.sum-miss-list{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.sum-miss-item{font-size:.72rem;color:#fca5a5;display:flex;align-items:flex-start;gap:6px}
+.sum-miss-dot{width:4px;height:4px;border-radius:50%;background:#fca5a5;flex-shrink:0;margin-top:5px}
+.sum-result-box{border-radius:14px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:10px;border:1.5px solid}
+.sum-result-icon{font-size:1.8rem;flex-shrink:0}
+.sum-result-title{font-size:.95rem;font-weight:800}
+.sum-result-sub{font-size:.72rem;margin-top:2px}
+.print-btn{width:100%;padding:13px;border-radius:14px;background:var(--sf);border:1px solid var(--br);color:var(--text);font-size:.85rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:6px}
+.print-btn:active{background:var(--sf2)}
+.reset-btn{width:100%;padding:13px;border-radius:14px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5;font-size:.85rem;font-weight:700;font-family:inherit;cursor:pointer;transition:all .15s;margin-top:6px}
+.reset-btn:active{background:rgba(239,68,68,.2)}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────── -->
+<header class="app-header">
+  <a class="hdr-back" href="ems-tools.html">←</a>
+  <div class="hdr-badge">🚑</div>
+  <div class="hdr-info">
+    <div class="hdr-title">Trauma Assessment</div>
+    <div class="hdr-sub">DCAS CPG 2026 · Systematic Evaluation</div>
+  </div>
+  <div class="hdr-timer" id="hdrTimer">00:00</div>
+</header>
+
+<!-- ── PROGRESS STRIP ──────────────────────────────────── -->
+<div class="progress-strip">
+  <div class="ps-top">
+    <span class="ps-label">Overall Progress</span>
+    <span class="ps-pct" id="overallPct">0%</span>
+  </div>
+  <div class="ps-bar"><div class="ps-bar-fill" id="overallBar"></div></div>
+  <div class="phase-pills" id="phasePills"></div>
+</div>
+
+<!-- ── MAIN CONTENT ─────────────────────────────────────── -->
+<main class="page-body" id="pageBody"></main>
+
+<!-- ── FAB ─────────────────────────────────────────────── -->
+<button class="fab-complete" id="fabBtn" onclick="openSummary()">
+  <span id="fabIcon">📋</span>
+  <span id="fabText">View Summary</span>
+</button>
+
+<!-- ── BOTTOM SHEET ─────────────────────────────────────── -->
+<div class="bs-overlay" id="bsOverlay" onclick="if(event.target===this)closeSheet()">
+  <div class="bs-panel">
+    <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
+    <div class="bs-head">
+      <div class="bs-htitle">Assessment Summary</div>
+      <div class="bs-hclose" onclick="closeSheet()">✕</div>
+    </div>
+    <div class="bs-scroll" id="bsContent"></div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════
+   ASSESSMENT SCHEMA  —  Direct from DCAS Trauma PDF
+   ─────────────────────────────────────────────────────
+   Types:
+     check    = tap-to-complete checkbox
+     avpu     = AVPU selector
+     moi      = MOI toggle (Localized / Generalized)
+     priority = patient priority selector
+     vitals   = vital signs input group
+     gcs      = GCS E/V/M inputs
+     avpu     = AVPU picker
+     pupil    = pupil fields
+     sample   = SAMPLE history
+     result   = Excellent/Good/Adequate/Inadequate
+═══════════════════════════════════════════════════════ */
+const SCHEMA = [
+
+  /* ── PHASE 1: SCENE SIZE-UP ─────────────────────── */
+  {
+    id:'scene', label:'Scene Size-Up', icon:'🏔️',
+    color:'#22c55e', pill:'pill-scene',
+    desc:'First actions on scene before patient contact',
+    items:[
+      { id:'ppe',       type:'check', title:'PPE', desc:'Don appropriate personal protective equipment', badge:'critical' },
+      { id:'safety',    type:'check', title:'Scene Safety', desc:'Ensure scene is safe for crew and patient' },
+      { id:'moi',       type:'check', title:'Mechanism of Injury', desc:'Identify and note mechanism of injury' },
+      { id:'numpt',     type:'check', title:'Number of Patients', desc:'Confirm how many patients require assessment' },
+      { id:'addres',    type:'check', title:'Additional Resources', desc:'Request ALS, fire, police, or additional units if needed' },
+    ]
+  },
+
+  /* ── PHASE 2: INITIAL ASSESSMENT ────────────────── */
+  {
+    id:'initial', label:'Initial Assessment', icon:'👁️',
+    color:'#3b82f6', pill:'pill-initial',
+    desc:'Rapid life-threat identification and intervention',
+    items:[
+      /* General Impression */
+      { id:'impression_sub', type:'subsection', label:'General Impression' },
+      { id:'age_gender',  type:'check', title:'Age & Gender', desc:'Estimate or confirm age and identify gender' },
+      { id:'appearance',  type:'check', title:'General Appearance & Position', desc:'Assess overall appearance, body position, and distress level' },
+      { id:'cat_bleed',   type:'check', title:'Catastrophic Bleeding — Intervene', desc:'Identify and immediately control life-threatening haemorrhage (tourniquet, wound packing)', badge:'intervene' },
+      { id:'cspine',      type:'check', title:'Consider C-Spine Stabilization', desc:'Apply manual in-line stabilization if mechanism warrants', badge:'warn' },
+
+      /* Mental Status */
+      { id:'ms_sub',      type:'subsection', label:'Mental Status' },
+      { id:'avpu_step',   type:'avpu',   title:'Assess Mental Status (AVPU)', desc:'Select the best level of consciousness' },
+
+      /* Airway */
+      { id:'airway_sub',  type:'subsection', label:'Airway' },
+      { id:'airway',      type:'check', title:'Assess the Airway', desc:'Open and inspect airway. Intervene: jaw thrust, suction, OPA/NPA, BVM as needed', badge:'critical' },
+
+      /* Breathing */
+      { id:'breath_sub',  type:'subsection', label:'Breathing' },
+      { id:'breathing',   type:'check', title:'Assess Breathing', desc:'Rate, depth, effort — inspect, palpate, auscultate. Intervene: O₂, BVM, needle decompression', badge:'critical' },
+
+      /* Circulation */
+      { id:'circ_sub',    type:'subsection', label:'Circulation' },
+      { id:'circ',        type:'check', title:'Assess Circulation', desc:'Pulse (rate, quality), skin colour/temperature/condition, CRT — control uncontrollable external bleeding', badge:'critical' },
+
+      /* Priority & MOI */
+      { id:'pri_sub',     type:'subsection', label:'Priority & MOI' },
+      { id:'priority',    type:'priority', title:'Establish Patient Priority', desc:'Classify based on findings' },
+      { id:'moi_type',    type:'moi',     title:'Mechanism of Injury', desc:'Determines exam type' },
+    ]
+  },
+
+  /* ── PHASE 3: RAPID TRAUMA SURVEY ───────────────── */
+  {
+    id:'rapid', label:'Rapid Trauma Survey', icon:'🔍',
+    color:'#f97316', pill:'pill-rapid',
+    desc:'Head-to-toe systematic body region assessment',
+    items:[
+      /* Head */
+      { id:'head_sub',    type:'subsection', label:'Head' },
+      { id:'head_facial', type:'check', title:'Major Facial Injuries', desc:'Assess for fractures, bleeding, airway compromise' },
+      { id:'head_bruise', type:'check', title:'Bruising, Swelling & Penetrations', desc:'Battle\'s sign, raccoon eyes, visible trauma, penetrating wounds' },
+
+      /* Neck */
+      { id:'neck_sub',    type:'subsection', label:'Neck' },
+      { id:'neck_post',   type:'check', title:'Posterior — TIC', desc:'Tenderness, Instability, Crepitation along cervical spine' },
+      { id:'neck_ant',    type:'check', title:'Anterior — JVD & Tracheal Deviation', desc:'Jugular venous distension, midline trachea check' },
+      { id:'neck_collar', type:'check', title:'C-Collar Application', desc:'Apply appropriately sized cervical collar if indicated', badge:'warn' },
+      { id:'neck_emph',   type:'check', title:'Subcutaneous Emphysema', desc:'Palpate for air in soft tissues — indicates pneumothorax / airway injury', badge:'warn' },
+
+      /* Chest */
+      { id:'chest_sub',   type:'subsection', label:'Chest' },
+      { id:'chest_insp',  type:'check', title:'Inspection', desc:'Chest rise symmetry, asymmetry, contusions, penetrations, paradoxical motion' },
+      { id:'chest_palp',  type:'check', title:'Palpation — TIC', desc:'Tenderness, Instability, Crepitation over ribs and sternum' },
+      { id:'chest_ausc',  type:'check', title:'Auscultation', desc:'Breath sounds present and equal bilaterally' },
+      { id:'chest_perc',  type:'check', title:'Percussion', desc:'Perform if decreased or absent breath sounds — dullness vs hyperresonance' },
+      { id:'heart_tones', type:'check', title:'Heart Tones', desc:'Auscultate for muffled heart sounds (cardiac tamponade)', badge:'warn' },
+
+      /* Abdomen */
+      { id:'abd_sub',     type:'subsection', label:'Abdomen' },
+      { id:'abd_insp',    type:'check', title:'Inspection', desc:'Bruising (Grey Turner\'s / Cullen\'s sign), evisceration, penetrations' },
+      { id:'abd_palp',    type:'check', title:'Palpation', desc:'Tenderness (all 4 quadrants), rigidity, distension' },
+
+      /* Pelvis & Extremities */
+      { id:'ext_sub',     type:'subsection', label:'Pelvis & Extremities' },
+      { id:'pelvis',      type:'check', title:'Pelvis — TIC', desc:'Single firm compression to assess instability — do not rock', badge:'warn' },
+      { id:'lower_ext',   type:'check', title:'Lower Extremities', desc:'Swelling, deformity, TIC, and PMS (pulse, motor, sensation) both limbs' },
+      { id:'upper_ext',   type:'check', title:'Upper Extremities', desc:'Swelling, deformity, TIC, and PMS both limbs' },
+      { id:'posterior',   type:'check', title:'Posterior', desc:'Log-roll: swelling, deformity, TIC along posterior thorax and lumbar spine' },
+
+      /* Transfer */
+      { id:'transfer',    type:'check', title:'Transfer to Ambulance', desc:'Package patient, maintain spinal precautions, load and transport', badge:'critical' },
+    ]
+  },
+
+  /* ── PHASE 4: VITAL SIGNS ────────────────────────── */
+  {
+    id:'vitals', label:'Vital Signs', icon:'📊',
+    color:'#06b6d4', pill:'pill-vitals',
+    desc:'Baseline physiological measurements',
+    items:[
+      { id:'vitals_inputs', type:'vitals' },
+    ]
+  },
+
+  /* ── PHASE 5: NEUROLOGIC EXAM ────────────────────── */
+  {
+    id:'neuro', label:'Neurologic Exam', icon:'🧠',
+    color:'#8b5cf6', pill:'pill-neuro',
+    desc:'Central nervous system assessment',
+    items:[
+      { id:'gcs_step',    type:'gcs',   title:'GCS', desc:'Glasgow Coma Scale — Eye, Verbal, Motor' },
+      { id:'rbs',         type:'check', title:'RBS', desc:'Random blood sugar — check for hypoglycaemia as altered LOC cause' },
+      { id:'pupils_step', type:'pupils',title:'Pupils', desc:'Size, reactive, and equal' },
+    ]
+  },
+
+  /* ── PHASE 6: SAMPLE HISTORY ─────────────────────── */
+  {
+    id:'sample', label:'SAMPLE History', icon:'📋',
+    color:'#eab308', pill:'pill-sample',
+    desc:'Subjective history from patient or bystanders',
+    items:[
+      { id:'sample_inputs', type:'sample' },
+    ]
+  },
+
+  /* ── PHASE 7: ONGOING ASSESSMENT ────────────────── */
+  {
+    id:'ongoing', label:'Ongoing Assessment', icon:'🔄',
+    color:'#f97316', pill:'pill-ongoing',
+    desc:'Continuous reassessment en route',
+    items:[
+      { id:'og_loc',      type:'check', title:'Level of Consciousness (LOC)', desc:'Monitor and document changes in mental status' },
+      { id:'og_abc',      type:'check', title:'ABC — Airway, Breathing, Circulation', desc:'Reassess all primary survey components' },
+      { id:'og_shock',    type:'check', title:'Assess Shock Potential Areas', desc:'Reassess neck, chest, and abdomen — monitor for evolving haemothorax, tamponade, internal bleeding', badge:'critical' },
+      { id:'og_injuries', type:'check', title:'Check All Identified Injuries', desc:'Ensure dressings intact, splints effective, bleeding controlled' },
+      { id:'og_interv',   type:'check', title:'Check All Interventions', desc:'IV access, O₂ delivery, c-collar, splints, tourniquet — verify efficacy' },
+    ]
+  },
+
+  /* ── PHASE 8: SECONDARY SURVEY ───────────────────── */
+  {
+    id:'secondary', label:'Secondary Survey', icon:'🩺',
+    color:'#22c55e', pill:'pill-secondary',
+    desc:'Detailed head-to-toe reassessment',
+    items:[
+      { id:'ss_repeat',   type:'check', title:'Repeat Initial Assessment', desc:'Reassess mental status, airway, breathing, and circulation' },
+      { id:'ss_vs',       type:'check', title:'Repeat Vital Signs', desc:'Compare trends — document all sets' },
+      { id:'ss_monitor',  type:'check', title:'Monitor', desc:'Continuous ECG, SpO₂, EtCO₂ if intubated, BP every 5 min (critical)' },
+      { id:'ss_h2t',      type:'check', title:'Head-to-Toe Exam (DCAP-BLS-TIC)', desc:'Deformities, Contusions, Abrasions, Penetrations, Burns, Lacerations, Swelling — Tenderness, Instability, Crepitation' },
+    ]
+  },
+
+  /* ── PHASE 9: RESULTS ────────────────────────────── */
+  {
+    id:'results', label:'Performance Results', icon:'🏆',
+    color:'#06b6d4', pill:'pill-results',
+    desc:'Overall performance rating',
+    items:[
+      { id:'result_rating', type:'result' },
+    ]
+  },
+];
+
+/* ── State ──────────────────────────────────────────── */
+const state = {
+  checked: {},   // stepId → bool
+  notes:   {},   // stepId → string
+  avpu:    null,
+  moi:     null,
+  priority:null,
+  vitals:  { bp:'', hr:'', rr:'', spo2:'' },
+  gcs:     { e:'', v:'', m:'' },
+  pupils:  { size:'', reaction:'' },
+  sample:  { s:'', a:'', m:'', p:'', l:'', e:'' },
+  result:  null,
+  startTime: Date.now(),
+};
+
+/* ── Build entire page ──────────────────────────────── */
+function buildPage() {
+  const body   = document.getElementById('pageBody');
+  const pills  = document.getElementById('phasePills');
+  body.innerHTML = '';
+  pills.innerHTML = '';
+
+  SCHEMA.forEach(phase => {
+    // Phase pill
+    const pill = document.createElement('button');
+    pill.className = 'phase-pill';
+    pill.id = 'pill-' + phase.id;
+    pill.style.color = phase.color;
+    pill.style.borderColor = phase.color + '60';
+    pill.style.background  = phase.color + '18';
+    pill.textContent = phase.icon + ' ' + phase.label;
+    pill.onclick = () => document.getElementById('phase-' + phase.id)
+        ?.scrollIntoView({ behavior:'smooth', block:'start' });
+    pills.appendChild(pill);
+
+    // Phase section
+    const sec = document.createElement('div');
+    sec.id = 'phase-' + phase.id;
+
+    // Phase header
+    sec.innerHTML = `<div class="phase-hdr" style="background:${phase.color}12;border-color:${phase.color}">
+      <div class="ph-icon">${phase.icon}</div>
+      <div class="ph-info">
+        <div class="ph-title" style="color:${phase.color}">${phase.label}</div>
+        <div class="ph-sub">${phase.desc}</div>
+      </div>
+      <div class="ph-count" id="count-${phase.id}" style="color:${phase.color};background:${phase.color}18;border-color:${phase.color}40">0%</div>
+    </div>`;
+
+    phase.items.forEach(item => buildItem(sec, item, phase));
+    body.appendChild(sec);
+  });
+}
+
+function buildItem(parent, item, phase) {
+  if (item.type === 'subsection') {
+    const d = document.createElement('div');
+    d.className = 'sub-sec';
+    d.style.color = phase.color;
+    d.innerHTML = `<span>${item.label}</span>`;
+    parent.appendChild(d);
+    return;
+  }
+
+  if (item.type === 'vitals') { parent.appendChild(buildVitals()); return; }
+  if (item.type === 'gcs')    { parent.appendChild(buildGCS(item, phase)); return; }
+  if (item.type === 'pupils') { parent.appendChild(buildPupils(item, phase)); return; }
+  if (item.type === 'sample') { parent.appendChild(buildSample()); return; }
+  if (item.type === 'avpu')   { parent.appendChild(buildAVPU(item, phase)); return; }
+  if (item.type === 'moi')    { parent.appendChild(buildMOI(item, phase)); return; }
+  if (item.type === 'priority'){ parent.appendChild(buildPriority(item, phase)); return; }
+  if (item.type === 'result') { parent.appendChild(buildResult()); return; }
+
+  // Default: checkbox step
+  const card = document.createElement('div');
+  card.className = 'step-card' + (item.badge === 'critical' || item.badge === 'intervene' ? ' critical' : item.badge === 'warn' ? ' warn-item' : '');
+  card.id = 'card-' + item.id;
+
+  const checkCls = item.badge === 'critical' || item.badge === 'intervene' ? 'c-crit' : item.badge === 'warn' ? 'c-warn' : 'c-done';
+
+  const badgeHtml = item.badge ? `<span class="step-badge badge-${item.badge}">${
+    item.badge === 'critical' ? '⚠ Critical' :
+    item.badge === 'intervene' ? '🚨 Intervene' : '⚡ Important'
+  }</span>` : '';
+
+  card.innerHTML = `<div class="step-row" onclick="toggleStep('${item.id}','${checkCls}')">
+      <div class="step-check" id="chk-${item.id}"></div>
+      <div class="step-body">
+        <div class="step-title">${item.title}</div>
+        <div class="step-desc">${item.desc}</div>
+        ${badgeHtml}
+      </div>
+    </div>
+    <div class="step-note-row">
+      <textarea class="step-note" id="note-${item.id}" placeholder="Add note…" rows="2"
+        oninput="state.notes['${item.id}']=this.value"></textarea>
+    </div>`;
+
+  // Long-press to reveal note
+  const row = card.querySelector('.step-row');
+  let pressTimer;
+  row.addEventListener('touchstart', () => { pressTimer = setTimeout(() => showNote(item.id), 600); }, { passive:true });
+  row.addEventListener('touchend',   () => clearTimeout(pressTimer));
+  row.addEventListener('touchmove',  () => clearTimeout(pressTimer), { passive:true });
+
+  parent.appendChild(card);
+}
+
+function showNote(id) {
+  const note = document.getElementById('note-' + id);
+  if (note) { note.classList.add('open'); note.focus(); }
+}
+
+/* ── Interactive item builders ──────────────────────── */
+function buildAVPU(item, phase) {
+  const card = document.createElement('div');
+  card.className = 'step-card';
+  card.id = 'card-' + item.id;
+  const opts = [['A','Alert','sel-A'],['V','Voice','sel-V'],['P','Pain','sel-P'],['U','Unresponsive','sel-U']];
+  card.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">${item.title}</div>
+      <div class="step-desc" style="margin-top:3px">${item.desc}</div>
+    </div>
+    <div class="avpu-row">
+      ${opts.map(([v,l,cls])=>`<button class="avpu-btn" id="avpu-${v}" onclick="pickAVPU('${v}','${cls}')">${v}<br><span style="font-size:.6rem;font-weight:500">${l}</span></button>`).join('')}
+    </div>`;
+  return card;
+}
+
+function buildMOI(item, phase) {
+  const card = document.createElement('div');
+  card.className = 'step-card';
+  card.id = 'card-' + item.id;
+  card.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">${item.title}</div>
+      <div class="step-desc" style="margin-top:3px">${item.desc}</div>
+    </div>
+    <div class="moi-row">
+      <button class="moi-btn" id="moi-L" onclick="pickMOI('L')">🎯 Localized MOI<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Focused exam</span></button>
+      <button class="moi-btn" id="moi-G" onclick="pickMOI('G')">🌐 Generalized / Unknown<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Rapid trauma survey</span></button>
+    </div>`;
+  return card;
+}
+
+function buildPriority(item, phase) {
+  const card = document.createElement('div');
+  card.className = 'step-card';
+  card.id = 'card-' + item.id;
+  const opts = [['high','🔴 High','sel-high'],['med','🟡 Medium','sel-med'],['low','🟢 Low','sel-low']];
+  card.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">${item.title}</div>
+      <div class="step-desc" style="margin-top:3px">${item.desc}</div>
+    </div>
+    <div class="priority-row">
+      ${opts.map(([v,l,cls])=>`<button class="pri-btn" id="pri-${v}" onclick="pickPriority('${v}','${cls}')">${l}</button>`).join('')}
+    </div>`;
+  return card;
+}
+
+function buildVitals() {
+  const wrap = document.createElement('div');
+  wrap.className = 'step-card';
+  wrap.id = 'card-vitals';
+  wrap.innerHTML = `<div style="padding:13px 14px 6px">
+      <div class="step-title">Vital Signs</div>
+      <div class="step-desc" style="margin-top:3px">Document all four baseline measurements</div>
+    </div>
+    <div class="vitals-grid">
+      <div class="vital-box">
+        <div class="vital-label">Blood Pressure</div>
+        <input class="vital-input" id="v-bp" type="text" inputmode="text" placeholder="120/80" oninput="state.vitals.bp=this.value;checkVitals()">
+        <div class="vital-unit">mmHg · systolic/diastolic</div>
+      </div>
+      <div class="vital-box">
+        <div class="vital-label">Heart Rate</div>
+        <input class="vital-input" id="v-hr" type="number" inputmode="numeric" placeholder="72" oninput="state.vitals.hr=this.value;checkVitals()">
+        <div class="vital-unit">bpm</div>
+      </div>
+      <div class="vital-box">
+        <div class="vital-label">Respiratory Rate</div>
+        <input class="vital-input" id="v-rr" type="number" inputmode="numeric" placeholder="16" oninput="state.vitals.rr=this.value;checkVitals()">
+        <div class="vital-unit">breaths/min</div>
+      </div>
+      <div class="vital-box">
+        <div class="vital-label">SpO₂</div>
+        <input class="vital-input" id="v-spo2" type="number" inputmode="numeric" placeholder="98" max="100" oninput="state.vitals.spo2=this.value;checkVitals()">
+        <div class="vital-unit">%  (target ≥ 94%)</div>
+      </div>
+    </div>`;
+  return wrap;
+}
+
+function buildGCS(item, phase) {
+  const card = document.createElement('div');
+  card.className = 'step-card';
+  card.id = 'card-gcs';
+  card.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">Glasgow Coma Scale (GCS)</div>
+      <div class="step-desc" style="margin-top:3px">Eye (max 4) · Verbal (max 5) · Motor (max 6) · Total 3–15</div>
+    </div>
+    <div class="gcs-row">
+      <div class="gcs-box">
+        <div class="gcs-lbl">Eye (E)</div>
+        <input class="gcs-input" id="gcs-e" type="number" min="1" max="4" inputmode="numeric" placeholder="1–4" oninput="updateGCS('e',this.value)">
+      </div>
+      <div class="gcs-box">
+        <div class="gcs-lbl">Verbal (V)</div>
+        <input class="gcs-input" id="gcs-v" type="number" min="1" max="5" inputmode="numeric" placeholder="1–5" oninput="updateGCS('v',this.value)">
+      </div>
+      <div class="gcs-box">
+        <div class="gcs-lbl">Motor (M)</div>
+        <input class="gcs-input" id="gcs-m" type="number" min="1" max="6" inputmode="numeric" placeholder="1–6" oninput="updateGCS('m',this.value)">
+      </div>
+      <div class="gcs-total-box">
+        <div class="gcs-lbl">Total</div>
+        <div class="gcs-total-num" id="gcs-total">—</div>
+      </div>
+    </div>
+    <div style="padding:0 14px 12px">
+      <input class="vital-input" style="font-size:.78rem;font-weight:500;border:1px solid var(--br);border-radius:10px;padding:8px 12px;background:rgba(0,0,0,.2)"
+        id="v-rbs" type="number" inputmode="decimal" placeholder="RBS (mmol/L or mg/dL)" oninput="state.vitals.rbs=this.value">
+    </div>`;
+  return card;
+}
+
+function buildPupils(item, phase) {
+  const card = document.createElement('div');
+  card.className = 'step-card';
+  card.id = 'card-pupils';
+  card.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">Pupils</div>
+      <div class="step-desc" style="margin-top:3px">Size (mm), reactive, and equal bilaterally</div>
+    </div>
+    <div class="pupil-row">
+      <input class="pupil-input" id="pupil-size" type="text" placeholder="Size (e.g. 3mm / 4mm)" oninput="state.pupils.size=this.value;checkPupils()">
+      <input class="pupil-input" id="pupil-react" type="text" placeholder="Reaction (PEARL / fixed)" oninput="state.pupils.reaction=this.value;checkPupils()">
+    </div>`;
+  return card;
+}
+
+function buildSample() {
+  const wrap = document.createElement('div');
+  wrap.className = 'step-card';
+  wrap.id = 'card-sample';
+  const fields = [
+    ['s','S','Signs & Symptoms','Chief complaint and presenting symptoms'],
+    ['a','A','Allergies','Drug, food, environmental'],
+    ['m','M','Medications','Current medications and dosages'],
+    ['p','P','Pertinent History','Past medical / surgical / OB history'],
+    ['l','L','Last Oral Intake','Time and nature of last food/drink'],
+    ['e','E','Events','Events leading to the incident'],
+  ];
+  wrap.innerHTML = `<div style="padding:13px 14px 6px">
+      <div class="step-title">SAMPLE History</div>
+      <div class="step-desc" style="margin-top:3px">Complete all fields from patient or bystander</div>
+    </div>
+    <div class="sample-grid">
+      ${fields.map(([k,l,title,hint])=>`
+        <div class="sample-box">
+          <div class="sample-key">${l} — ${title}</div>
+          <div class="sample-word">${hint}</div>
+          <textarea class="sample-input" id="smp-${k}" rows="2" placeholder="${hint}…"
+            oninput="state.sample['${k}']=this.value;checkSample()"></textarea>
+        </div>`).join('')}
+    </div>`;
+  return wrap;
+}
+
+function buildResult() {
+  const wrap = document.createElement('div');
+  wrap.className = 'step-card';
+  wrap.id = 'card-result';
+  const opts = [
+    ['excellent','⭐ Excellent','sel-excellent'],
+    ['good','✅ Good','sel-good'],
+    ['adequate','🟡 Adequate','sel-adequate'],
+    ['inadequate','❌ Inadequate','sel-inadequate'],
+  ];
+  wrap.innerHTML = `<div style="padding:13px 14px 8px">
+      <div class="step-title">Performance Rating</div>
+      <div class="step-desc" style="margin-top:3px">Overall assessment performance</div>
+    </div>
+    <div class="result-grid">
+      ${opts.map(([v,l,cls])=>`<button class="result-btn" id="res-${v}" onclick="pickResult('${v}','${cls}')">${l}</button>`).join('')}
+    </div>`;
+  return wrap;
+}
+
+/* ═══════════════════════════════════════════════════════
+   INTERACTION HANDLERS
+═══════════════════════════════════════════════════════ */
+
+function toggleStep(id, checkCls) {
+  state.checked[id] = !state.checked[id];
+  const chk  = document.getElementById('chk-' + id);
+  const card = document.getElementById('card-' + id);
+  if (!chk) return;
+  chk.className = 'step-check' + (state.checked[id] ? ' ' + checkCls : '');
+  if (card) card.classList.toggle('checked', state.checked[id]);
+  if (state.checked[id]) {
+    const note = document.getElementById('note-' + id);
+    if (!note?.classList.contains('open')) {
+      chk.style.animation = 'none';
+      requestAnimationFrame(() => { chk.style.animation = ''; });
+    }
+  }
+  updateProgress();
+}
+
+function pickAVPU(val, cls) {
+  document.querySelectorAll('.avpu-btn').forEach(b => b.className = 'avpu-btn');
+  document.getElementById('avpu-' + val)?.classList.add(cls);
+  state.avpu = val;
+  // Mark card complete
+  state.checked['avpu_step'] = true;
+  updateProgress();
+}
+
+function pickMOI(val) {
+  ['L','G'].forEach(v => document.getElementById('moi-' + v)?.classList.remove('sel'));
+  document.getElementById('moi-' + val)?.classList.add('sel');
+  state.moi = val;
+  state.checked['moi_type'] = true;
+  updateProgress();
+}
+
+function pickPriority(val, cls) {
+  ['high','med','low'].forEach(v => document.getElementById('pri-' + v)?.className.replace(/sel-\w+/,''));
+  document.querySelectorAll('.pri-btn').forEach(b => b.className = 'pri-btn');
+  document.getElementById('pri-' + val)?.classList.add(cls);
+  state.priority = val;
+  state.checked['priority'] = true;
+  updateProgress();
+}
+
+function updateGCS(field, val) {
+  state.gcs[field] = parseInt(val) || '';
+  const e = parseInt(state.gcs.e)||0, v = parseInt(state.gcs.v)||0, m = parseInt(state.gcs.m)||0;
+  const total = e + v + m;
+  const el = document.getElementById('gcs-total');
+  if (el) {
+    el.textContent = (e && v && m) ? total : '—';
+    el.style.color = total <= 8 ? 'var(--red)' : total <= 12 ? 'var(--yellow)' : 'var(--cyan)';
+  }
+  state.checked['gcs_step'] = !!(state.gcs.e && state.gcs.v && state.gcs.m);
+  updateProgress();
+}
+
+function checkVitals() {
+  const v = state.vitals;
+  state.checked['vitals_inputs'] = !!(v.bp && v.hr && v.rr && v.spo2);
+  updateProgress();
+}
+
+function checkPupils() {
+  state.checked['pupils_step'] = !!(state.pupils.size && state.pupils.reaction);
+  updateProgress();
+}
+
+function checkSample() {
+  state.checked['sample_inputs'] = Object.values(state.sample).some(v => v.trim().length > 0);
+  updateProgress();
+}
+
+function pickResult(val, cls) {
+  document.querySelectorAll('.result-btn').forEach(b => b.className = 'result-btn');
+  document.getElementById('res-' + val)?.classList.add(cls);
+  state.result = val;
+  state.checked['result_rating'] = true;
+  updateProgress();
+}
+
+/* ═══════════════════════════════════════════════════════
+   PROGRESS CALCULATION
+═══════════════════════════════════════════════════════ */
+function getCheckableItems() {
+  const items = [];
+  SCHEMA.forEach(phase => {
+    phase.items.forEach(item => {
+      if (item.type !== 'subsection') items.push({ phaseId: phase.id, item });
+    });
+  });
+  return items;
+}
+
+function updateProgress() {
+  const all = getCheckableItems();
+  const done = all.filter(({item}) => state.checked[item.id]);
+  const pct = all.length ? Math.round((done.length / all.length) * 100) : 0;
+
+  document.getElementById('overallPct').textContent = pct + '%';
+  document.getElementById('overallBar').style.width  = pct + '%';
+
+  // Per-phase progress
+  SCHEMA.forEach(phase => {
+    const pItems = phase.items.filter(i => i.type !== 'subsection');
+    const pDone  = pItems.filter(i => state.checked[i.id]).length;
+    const pPct   = pItems.length ? Math.round((pDone / pItems.length) * 100) : 0;
+    const countEl = document.getElementById('count-' + phase.id);
+    const pillEl  = document.getElementById('pill-' + phase.id);
+    if (countEl) countEl.textContent = pPct + '%';
+    if (pillEl)  pillEl.classList.toggle('done', pPct === 100);
+  });
+
+  // FAB update
+  const fab = document.getElementById('fabBtn');
+  const ready = pct >= 80;
+  fab.classList.toggle('ready', ready);
+  document.getElementById('fabIcon').textContent = ready ? '✅' : '📋';
+  document.getElementById('fabText').textContent = ready ? 'Complete Assessment' : `Summary (${pct}%)`;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BOTTOM SHEET SUMMARY
+═══════════════════════════════════════════════════════ */
+function openSummary() {
+  const all    = getCheckableItems();
+  const done   = all.filter(({item}) => state.checked[item.id]);
+  const missed = all.filter(({item}) => !state.checked[item.id]);
+  const pct    = all.length ? Math.round((done.length / all.length) * 100) : 0;
+  const elapsed = formatTime(Math.floor((Date.now() - state.startTime) / 1000));
+
+  const resultColors = {
+    excellent:{ring:'rr-safe',pill:'pill-g',label:'Excellent Performance',icon:'⭐',sub:'All critical steps completed to high standard'},
+    good:     {ring:'rr-safe',pill:'pill-g',label:'Good Performance',icon:'✅',sub:'Assessment completed competently'},
+    adequate: {ring:'rr-warn',pill:'pill-y',label:'Adequate Performance',icon:'🟡',sub:'Minimum standards met — review missed steps'},
+    inadequate:{ring:'rr-danger',pill:'pill-r',label:'Inadequate Performance',icon:'❌',sub:'Critical deficiencies identified — remediation required'},
+  };
+  const res = state.result ? resultColors[state.result] : null;
+
+  // GCS data
+  const gcsE = state.gcs.e||'—', gcsV = state.gcs.v||'—', gcsM = state.gcs.m||'—';
+  const gcsTotal = (parseInt(state.gcs.e)||0)+(parseInt(state.gcs.v)||0)+(parseInt(state.gcs.m)||0);
+
+  let html = '';
+
+  // Stat row
+  html += `<div class="sum-stat-row">
+    <div class="sum-stat"><div class="sum-stat-val">${pct}%</div><div class="sum-stat-lbl">Completion</div></div>
+    <div class="sum-stat"><div class="sum-stat-val">${elapsed}</div><div class="sum-stat-lbl">Duration</div></div>
+    <div class="sum-stat"><div class="sum-stat-val">${missed.length}</div><div class="sum-stat-lbl">Missed Steps</div></div>
+  </div>`;
+
+  // Patient data summary
+  html += `<div class="sum-phase" style="margin-bottom:10px">
+    <div class="sum-phase-hdr"><span class="sum-phase-name">📊 Patient Data</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.76rem">
+      <div style="color:var(--muted)">AVPU: <strong style="color:var(--text)">${state.avpu||'—'}</strong></div>
+      <div style="color:var(--muted)">Priority: <strong style="color:var(--text)">${state.priority||'—'}</strong></div>
+      <div style="color:var(--muted)">MOI: <strong style="color:var(--text)">${state.moi==='L'?'Localized':state.moi==='G'?'Generalized':'—'}</strong></div>
+      <div style="color:var(--muted)">GCS: <strong style="color:var(--text)">${gcsE+gcsV+gcsM>0?'E'+gcsE+'V'+gcsV+'M'+gcsM+' = '+gcsTotal:'—'}</strong></div>
+      <div style="color:var(--muted)">BP: <strong style="color:var(--text)">${state.vitals.bp||'—'}</strong></div>
+      <div style="color:var(--muted)">HR: <strong style="color:var(--text)">${state.vitals.hr||'—'}</strong></div>
+      <div style="color:var(--muted)">RR: <strong style="color:var(--text)">${state.vitals.rr||'—'}</strong></div>
+      <div style="color:var(--muted)">SpO₂: <strong style="color:var(--text)">${state.vitals.spo2?state.vitals.spo2+'%':'—'}</strong></div>
+      <div style="color:var(--muted)">Pupils: <strong style="color:var(--text)">${state.pupils.size||'—'} · ${state.pupils.reaction||'—'}</strong></div>
+    </div>
+  </div>`;
+
+  // Per-phase breakdown
+  SCHEMA.forEach(phase => {
+    const pItems  = phase.items.filter(i => i.type !== 'subsection');
+    const pDone   = pItems.filter(i => state.checked[i.id]);
+    const pMissed = pItems.filter(i => !state.checked[i.id]);
+    const pPct    = pItems.length ? Math.round((pDone.length / pItems.length) * 100) : 0;
+    const barCol  = pPct === 100 ? 'var(--green)' : pPct >= 60 ? 'var(--yellow)' : 'var(--red)';
+
+    html += `<div class="sum-phase">
+      <div class="sum-phase-hdr">
+        <span class="sum-phase-name">${phase.icon} ${phase.label}</span>
+        <span class="sum-phase-pct" style="color:${barCol}">${pPct}%</span>
+      </div>
+      <div class="sum-phase-bar"><div class="sum-phase-fill" style="width:${pPct}%;background:${barCol}"></div></div>
+      ${pMissed.length ? `<div class="sum-miss-list">
+        ${pMissed.map(i=>`<div class="sum-miss-item"><div class="sum-miss-dot"></div>${i.title||i.type}</div>`).join('')}
+      </div>` : `<div style="font-size:.72rem;color:var(--green);margin-top:7px">✓ All steps completed</div>`}
+    </div>`;
+  });
+
+  // Result box
+  if (res) {
+    html += `<div class="sum-result-box" style="background:${state.result==='excellent'||state.result==='good'?'rgba(34,197,94,.1)':state.result==='adequate'?'rgba(234,179,8,.08)':'rgba(239,68,68,.1)'};border-color:${state.result==='excellent'||state.result==='good'?'rgba(34,197,94,.3)':state.result==='adequate'?'rgba(234,179,8,.28)':'rgba(239,68,68,.3)'}">
+      <div class="sum-result-icon">${res.icon}</div>
+      <div><div class="sum-result-title" style="color:${state.result==='excellent'||state.result==='good'?'#86efac':state.result==='adequate'?'#fde047':'#fca5a5'}">${res.label}</div>
+      <div class="sum-result-sub" style="color:var(--muted)">${res.sub}</div></div>
+    </div>`;
+  }
+
+  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){resetAll();closeSheet()}">↺ Reset Assessment</button>`;
+
+  document.getElementById('bsContent').innerHTML = html;
+  document.getElementById('bsOverlay').classList.add('open');
+}
+
+function closeSheet() {
+  document.getElementById('bsOverlay').classList.remove('open');
+}
+
+/* ── Timer ──────────────────────────────────────────── */
+function formatTime(s) {
+  const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), sc = s%60;
+  return (h?h+'h ':'')+m+'m '+sc+'s';
+}
+function tick() {
+  const el = document.getElementById('hdrTimer');
+  if (!el) return;
+  const s = Math.floor((Date.now() - state.startTime) / 1000);
+  const m = Math.floor(s/60), sc = s%60;
+  el.textContent = (m<10?'0':'')+m+':'+(sc<10?'0':'')+sc;
+  el.style.color = s>600?'var(--yellow)':s>900?'var(--red)':'var(--cyan)';
+}
+setInterval(tick, 1000);
+
+/* ── Reset ──────────────────────────────────────────── */
+function resetAll() {
+  Object.keys(state.checked).forEach(k => delete state.checked[k]);
+  Object.keys(state.notes).forEach(k => delete state.notes[k]);
+  state.avpu = null; state.moi = null; state.priority = null; state.result = null;
+  state.vitals = {bp:'',hr:'',rr:'',spo2:''};
+  state.gcs = {e:'',v:'',m:''};
+  state.pupils = {size:'',reaction:''};
+  state.sample = {s:'',a:'',m:'',p:'',l:'',e:''};
+  state.startTime = Date.now();
+  buildPage();
+  updateProgress();
+}
+
+/* ── Keyboard ───────────────────────────────────────── */
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeSheet(); });
+
+/* ── Init ───────────────────────────────────────────── */
+buildPage();
+updateProgress();
+</script>
+</body>
+</html>

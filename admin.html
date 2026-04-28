@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DCAS CPG | Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 10% 30%, #0B1120, #08101E);
+      min-height: 100vh;
+      color: #F1F5F9;
+      overflow-x: hidden;
+    }
+
+    /* animated grain overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* layout */
+    .app-wrapper {
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* sidebar */
+    .sidebar {
+      width: 280px;
+      background: rgba(10, 20, 35, 0.7);
+      backdrop-filter: blur(16px);
+      border-right: 1px solid rgba(66, 153, 225, 0.2);
+      padding: 2rem 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-icon {
+      background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .logo-text p {
+      font-size: 0.7rem;
+      color: #7E8A9B;
+    }
+
+    .nav-menu {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .nav-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      color: #CBD5E1;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .nav-link i {
+      width: 22px;
+    }
+
+    .nav-link.active, .nav-link:hover {
+      background: rgba(59, 130, 246, 0.2);
+      color: white;
+    }
+
+    /* main content */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    /* top bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .page-title h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #F0F9FF, #A5D8FF);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logout-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      color: #F1F5F9;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    .logout-btn:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: #EF4444;
+    }
+
+    /* stats cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      background: rgba(18, 25, 45, 0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(66, 153, 225, 0.2);
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      transition: 0.2s;
+    }
+
+    .stat-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94A3B8;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    /* filters bar */
+    .filters-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box {
+      background: rgba(12, 20, 30, 0.7);
+      border: 1px solid #2D3A5E;
+      border-radius: 40px;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: none;
+      color: white;
+      outline: none;
+      width: 100%;
+    }
+
+    .role-filter select {
+      background: rgba(12, 20, 30, 0.7);
+      border: 1px solid #2D3A5E;
+      border-radius: 40px;
+      padding: 0.5rem 1rem;
+      color: white;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #2563EB;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #1D4ED8;
+    }
+
+    /* table card */
+    .table-container {
+      background: rgba(18, 25, 45, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 1.2rem;
+      border: 1px solid rgba(66, 153, 225, 0.25);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      text-align: left;
+      padding: 1rem 1.2rem;
+      color: #94A3B8;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .role-badge {
+      display: inline-block;
+      padding: 0.25rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .role-physician { background: rgba(139, 92, 246, 0.2); color: #C4B5FD; border: 1px solid #A78BFA; }
+    .role-paramedic { background: rgba(59, 130, 246, 0.2); color: #93C5FD; border: 1px solid #60A5FA; }
+    .role-emt { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; border: 1px solid #34D399; }
+    .role-unassigned { background: rgba(100, 116, 139, 0.2); color: #CBD5E1; border: 1px solid #94A3B8; }
+
+    .action-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .edit-role-btn, .delete-user-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      padding: 6px 10px;
+      border-radius: 8px;
+      color: #CBD5E1;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .edit-role-btn:hover { background: #2563EB; color: white; }
+    .delete-user-btn:hover { background: #DC2626; color: white; }
+
+    .role-select {
+      background: #1E293B;
+      border: 1px solid #3B82F6;
+      border-radius: 20px;
+      padding: 4px 8px;
+      color: white;
+      font-size: 0.75rem;
+    }
+
+    /* modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #0F172A;
+      border: 1px solid #3B82F6;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    /* toast */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1E293B;
+      border-left: 4px solid #3B82F6;
+      padding: 12px 20px;
+      border-radius: 12px;
+      color: white;
+      font-size: 0.85rem;
+      z-index: 1100;
+      animation: slideIn 0.2s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .main-content { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="app-wrapper">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+      <div class="logo-text">
+        <h2>DCAS CPG</h2>
+        <p>Admin Console</p>
+      </div>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link active" id="navDashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" id="navUsers"><i class="fas fa-users"></i> Providers</a></li>
+      <li class="nav-item"><a href="/index.html" class="nav-link"><i class="fas fa-arrow-left"></i> Back to App</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="top-bar">
+      <div class="page-title">
+        <h1>Provider Management</h1>
+        <p>Monitor and manage all registered clinical staff</p>
+      </div>
+      <a href="/api/logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card"><div class="stat-title">Total Providers</div><div class="stat-number" id="totalUsers">0</div></div>
+      <div class="stat-card"><div class="stat-title">Physicians</div><div class="stat-number" id="physicianCount">0</div></div>
+      <div class="stat-card"><div class="stat-title">Paramedics</div><div class="stat-number" id="paramedicCount">0</div></div>
+      <div class="stat-card"><div class="stat-title">EMT / EMT-A</div><div class="stat-number" id="emtCount">0</div></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search by name or email...">
+      </div>
+      <div class="role-filter">
+        <select id="roleFilter">
+          <option value="all">All Roles</option>
+          <option value="physician">Physician</option>
+          <option value="paramedic">Paramedic / Adv. Paramedic</option>
+          <option value="emt">EMT / EMT-A</option>
+          <option value="unassigned">Unassigned</option>
+        </select>
+      </div>
+      <button class="btn-primary" id="refreshBtn"><i class="fas fa-sync-alt"></i> Refresh</button>
+    </div>
+
+    <!-- User Table -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Full Name</th><th>Email</th><th>Clinical Role</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="userTableBody">
+          <tr><td colspan="5" class="loading" style="text-align:center; padding:2rem;"><i class="fas fa-circle-notch fa-spin"></i> Loading providers...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<!-- Delete confirmation modal -->
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <h3 style="margin-bottom: 1rem;">Confirm Deletion</h3>
+    <p>Are you sure you want to remove <strong id="deleteUserName"></strong> from the system? This action cannot be undone.</p>
+    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+      <button id="confirmDeleteBtn" class="btn-primary" style="background:#DC2626;">Delete</button>
+      <button id="cancelDeleteBtn" class="btn-primary" style="background:#475569;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- GLOBALS ----------
+  let allUsers = [];
+  let pendingDeleteId = null;
+
+  // Helper: show toast message
+  function showToast(message, isError = false) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.style.borderLeftColor = isError ? '#EF4444' : '#10B981';
+    toast.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}"></i> ${message}`;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  // Get role badge class
+  function getRoleClass(role) {
+    const r = (role || 'Unassigned').toLowerCase();
+    if (r.includes('physician')) return 'role-physician';
+    if (r.includes('paramedic')) return 'role-paramedic';
+    if (r.includes('emt')) return 'role-emt';
+    return 'role-unassigned';
+  }
+
+  // Update stats
+  function updateStats(users) {
+    const total = users.length;
+    let physicians = 0, paramedics = 0, emt = 0;
+    users.forEach(u => {
+      const role = (u.role || 'Unassigned').toLowerCase();
+      if (role.includes('physician')) physicians++;
+      else if (role.includes('paramedic')) paramedics++;
+      else if (role.includes('emt')) emt++;
+    });
+    document.getElementById('totalUsers').innerText = total;
+    document.getElementById('physicianCount').innerText = physicians;
+    document.getElementById('paramedicCount').innerText = paramedics;
+    document.getElementById('emtCount').innerText = emt;
+  }
+
+  // Render table with filters
+  function renderTable() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const roleFilter = document.getElementById('roleFilter').value;
+    let filtered = [...allUsers];
+    
+    if (searchTerm) {
+      filtered = filtered.filter(u => 
+        u.full_name.toLowerCase().includes(searchTerm) || 
+        u.email.toLowerCase().includes(searchTerm)
+      );
+    }
+    
+    if (roleFilter !== 'all') {
+      filtered = filtered.filter(u => {
+        const role = (u.role || 'Unassigned').toLowerCase();
+        if (roleFilter === 'physician') return role.includes('physician');
+        if (roleFilter === 'paramedic') return role.includes('paramedic');
+        if (roleFilter === 'emt') return role.includes('emt');
+        if (roleFilter === 'unassigned') return role === 'unassigned';
+        return true;
+      });
+    }
+    
+    const tbody = document.getElementById('userTableBody');
+    if (filtered.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:2rem;">No providers match the criteria.</td></tr>';
+      return;
+    }
+    
+    tbody.innerHTML = '';
+    filtered.forEach(user => {
+      const row = document.createElement('tr');
+      const roleDisplay = user.role || 'Unassigned';
+      const roleClass = getRoleClass(roleDisplay);
+      
+      // Inline role edit dropdown + save
+      row.innerHTML = `
+        <td>${user.id}</td>
+        <td style="font-weight:500;">${escapeHtml(user.full_name)}</td>
+        <td>${escapeHtml(user.email)}</td>
+        <td>
+          <select class="role-select" data-userid="${user.id}" id="roleSelect-${user.id}">
+            <option value="EMT" ${roleDisplay === 'EMT' ? 'selected' : ''}>EMT</option>
+            <option value="EMT-A" ${roleDisplay === 'EMT-A' ? 'selected' : ''}>EMT-A</option>
+            <option value="Paramedic" ${roleDisplay === 'Paramedic' ? 'selected' : ''}>Paramedic</option>
+            <option value="Advanced paramedic" ${roleDisplay === 'Advanced paramedic' ? 'selected' : ''}>Advanced Paramedic</option>
+            <option value="Physician" ${roleDisplay === 'Physician' ? 'selected' : ''}>Physician</option>
+            <option value="Unassigned" ${roleDisplay === 'Unassigned' ? 'selected' : ''}>Unassigned</option>
+          </select>
+        </td>
+        <td class="action-buttons">
+          <button class="edit-role-btn" data-id="${user.id}"><i class="fas fa-save"></i> Save</button>
+          <button class="delete-user-btn" data-id="${user.id}" data-name="${escapeHtml(user.full_name)}"><i class="fas fa-trash-alt"></i> Delete</button>
+        </td>
+      `;
+      tbody.appendChild(row);
+    });
+    
+    // attach event listeners to new buttons
+    document.querySelectorAll('.edit-role-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        const userId = btn.getAttribute('data-id');
+        const selectEl = document.getElementById(`roleSelect-${userId}`);
+        const newRole = selectEl.value;
+        await updateUserRole(userId, newRole);
+      });
+    });
+    
+    document.querySelectorAll('.delete-user-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const userId = btn.getAttribute('data-id');
+        const userName = btn.getAttribute('data-name');
+        pendingDeleteId = userId;
+        document.getElementById('deleteUserName').innerText = userName;
+        document.getElementById('deleteModal').style.display = 'flex';
+      });
+    });
+  }
+  
+  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+  
+  // API: update user role
+  async function updateUserRole(userId, newRole) {
+    try {
+      const res = await fetch(`/api/admin/users/${userId}/role`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ role: newRole })
+      });
+      if (res.ok) {
+        showToast(`Role updated to ${newRole}`);
+        await fetchUsers(); // reload
+      } else {
+        const err = await res.json();
+        showToast(err.error || 'Update failed', true);
+      }
+    } catch (err) {
+      showToast('Server error', true);
+    }
+  }
+  
+  // API: delete user
+  async function deleteUser(userId) {
+    try {
+      const res = await fetch(`/api/admin/users/${userId}`, { method: 'DELETE' });
+      if (res.ok) {
+        showToast('User deleted successfully');
+        await fetchUsers();
+      } else {
+        const err = await res.json();
+        showToast(err.error || 'Delete failed', true);
+      }
+    } catch (err) {
+      showToast('Server error', true);
+    }
+  }
+  
+  // Fetch users from backend
+  async function fetchUsers() {
+    const tbody = document.getElementById('userTableBody');
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;"><i class="fas fa-circle-notch fa-spin"></i> Syncing...</td></tr>';
+    try {
+      const res = await fetch('/api/admin/users');
+      if (!res.ok) throw new Error('HTTP error');
+      allUsers = await res.json();
+      updateStats(allUsers);
+      renderTable();
+    } catch (err) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#EF4444;"><i class="fas fa-exclamation-triangle"></i> Failed to load providers. Make sure backend is running.</td></tr>';
+      showToast('Could not fetch users', true);
+    }
+  }
+  
+  // Event listeners
+  document.getElementById('refreshBtn').addEventListener('click', fetchUsers);
+  document.getElementById('searchInput').addEventListener('input', renderTable);
+  document.getElementById('roleFilter').addEventListener('change', renderTable);
+  
+  // Modal controls
+  document.getElementById('confirmDeleteBtn').addEventListener('click', async () => {
+    if (pendingDeleteId) {
+      await deleteUser(pendingDeleteId);
+      document.getElementById('deleteModal').style.display = 'none';
+      pendingDeleteId = null;
+    }
+  });
+  document.getElementById('cancelDeleteBtn').addEventListener('click', () => {
+    document.getElementById('deleteModal').style.display = 'none';
+    pendingDeleteId = null;
+  });
+  window.addEventListener('click', (e) => { if (e.target === document.getElementById('deleteModal')) document.getElementById('deleteModal').style.display = 'none'; });
+  
+  // Initial load
+  fetchUsers();
+</script>
+</body>
+</html>

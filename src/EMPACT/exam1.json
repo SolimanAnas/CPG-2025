@@ -1,0 +1,406 @@
+{
+  "title": "EMPACT Assessment (50 questions)",
+  "description": "Questions with verified answers and clinical explanations.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "A patient presents with a recent onset of shortness of breath with exertion. She is presently receiving chemotherapy for treatment of breast cancer. Your physical exam reveals jugular venous distention and muffled heart sounds. Of the following, the most likely etiology of these findings is:",
+      "options": ["Pneumothorax", "Pericardial tamponade", "Pulmonary embolism", "Pericarditis"],
+      "correct_answer": "B",
+      "explanation": "Beck's triad (JVD, muffled heart tones, hypotension) is classic for cardiac tamponade. Chemotherapy (especially with certain agents) can cause pericardial effusion leading to tamponade. Pneumothorax would have absent breath sounds; pulmonary embolism presents with sudden dyspnea/pleuritic pain; pericarditis often has chest pain worse lying flat.",
+      "hint": "Beck’s triad clue → think tamponade."
+    },
+    {
+      "id": 2,
+      "text": "Your patient is a 20-year-old male complaining of a two-day history of diffuse abdominal pain that today, localized in his lower right quadrant. This is most likely caused by:",
+      "options": ["Appendicitis", "Cholecystitis", "Diverticulitis", "Pancreatitis"],
+      "correct_answer": "A",
+      "explanation": "Appendicitis often initially presents with periumbilical pain that transitions into right lower quadrant pain (McBurney's point). Cholecystitis is right upper quadrant; diverticulitis is left lower quadrant (elderly); pancreatitis is epigastric radiating to back.",
+      "hint": "Pain migration to RLQ → classic appendix."
+    },
+    {
+      "id": 3,
+      "text": "A patient in a nursing home is responsive only to painful stimulus. Nursing staff states the patient has a history of diabetes and a stroke. The staff reports that another patient in the same room is also experiencing an acute onset of altered level of consciousness. Which of the following should you do first?",
+      "options": ["Lift the patient's arm to see if one drifts.", "Determine a blood glucose level.", "Ask if anyone else has the same symptoms.", "Administer a narcotic antagonist."],
+      "correct_answer": "C",
+      "explanation": "When more than one person presents with the same signs/symptoms, suspect an environmental cause (e.g., carbon monoxide poisoning, toxic exposure). Asking about others is the priority for scene safety and mass casualty considerations. Blood glucose (B) would be done later. Stroke assessment (A) is not first. Narcan (D) only if opiate overdose suspected.",
+      "hint": "Multiple patients affected → think scene/environment first."
+    },
+    {
+      "id": 4,
+      "text": "Which of the following techniques could help you better communicate with a sitting patient who has difficulty hearing?",
+      "options": ["Face the patient while talking.", "Stand over the patient.", "Yell at the patient.", "Exaggerate your facial motions."],
+      "correct_answer": "A",
+      "explanation": "Facing the patient allows them to lip read and see facial expressions. Standing over them is intimidating; yelling distorts sound; exaggerated motions are not helpful and can be patronizing.",
+      "hint": "Hearing issue → position yourself facing patient."
+    },
+    {
+      "id": 5,
+      "text": "Which of the following best describes a situation where the EMS provider is engaging in active listening techniques?",
+      "options": ["Taking vital signs while also completing a SAMPLE history.", "Asking follow-up questions and summarizing conclusions.", "Assuming a position at or below eye level of the patient.", "Asking the same questions repeatedly while conducting a patient history."],
+      "correct_answer": "B",
+      "explanation": "Active listening involves asking follow-up questions and summarizing to confirm understanding and show engagement. Getting on patient's level (C) is good rapport but not specifically active listening. Multitasking (A) and repeating questions (D) are opposite of active listening.",
+      "hint": "Active listening = clarify + summarize."
+    },
+    {
+      "id": 6,
+      "text": "Which of the following symptoms is best matched to an assessment which would be helpful in determining a cause?",
+      "options": ["Dyspnea: blood glucose determination", "Chest pain: orthostatic vital signs", "Headache: neurologic exam", "Abdominal pain: pulse oximetry determination"],
+      "correct_answer": "C",
+      "explanation": "Headache requires a neurologic exam to rule out stroke or other neurological causes. Dyspnea → pulse oximetry (not blood glucose); chest pain → ECG (not orthostatics); abdominal pain → physical exam (not pulse oximetry).",
+      "hint": "Headache → check neuro status."
+    },
+    {
+      "id": 7,
+      "text": "A nasopharyngeal airway is most indicated to a patient with (in):",
+      "options": ["Respiratory and cardiac arrest", "Hypoglycemia and snoring respirations", "Respiratory distress and wheezing in all lung fields", "Difficulty breathing and tachycardia"],
+      "correct_answer": "B",
+      "explanation": "NPA is indicated when airway obstruction from tongue or soft tissue (snoring respirations) and patient has a gag reflex (not appropriate in arrest where OPA is preferred). Hypoglycemia with snoring respirations → NPA helps maintain airway while treating glucose. In cardiac arrest, OPA is preferred. Wheezing and tachycardia don't necessarily indicate need for an airway adjunct.",
+      "hint": "Snoring respirations + gag → NPA."
+    },
+    {
+      "id": 8,
+      "text": "Your patient is a 42-year-old male with a history of lung cancer. He describes a gradual onset of right sided chest discomfort and dyspnea over the past week. Lung sounds are clear bilaterally but diminished on the right. Of the following, which is the most likely cause?",
+      "options": ["Pneumothorax", "Pleural effusion", "Pneumonia", "Pulmonary embolism"],
+      "correct_answer": "B",
+      "explanation": "Gradual onset dyspnea with decreased breath sounds on one side in a patient with lung cancer strongly suggests pleural effusion (likely malignant). Pneumothorax is usually acute; pneumonia presents with fever and crackles; pulmonary embolism is typically sudden in onset.",
+      "hint": "Cancer + gradual unilateral ↓ sounds → pleural fluid."
+    },
+    {
+      "id": 9,
+      "text": "Which of the following is the most likely cause of an acute altered mental status in an elderly male presenting with a 2-day history of worsening pneumonia?",
+      "options": ["Stroke", "Acute onset Alzheimer's", "Seizure", "Hypoxia"],
+      "correct_answer": "D",
+      "explanation": "Pneumonia causes hypoxia, which leads to altered mental status in the elderly. Sepsis is another cause, but hypoxia is immediate and reversible. Stroke (A) and Alzheimer's (B) are not directly related to pneumonia. Seizure (C) is less likely without history.",
+      "hint": "Pneumonia + AMS → oxygen problem first."
+    },
+    {
+      "id": 10,
+      "text": "Which of the following signs is most helpful in differentiating allergic reaction from anaphylaxis?",
+      "options": ["Hives", "Tachycardia", "Itching", "Hypotension"],
+      "correct_answer": "D",
+      "explanation": "Hypotension indicates cardiovascular involvement (distributive shock) – the hallmark of anaphylaxis. Allergic reaction alone does not cause hypotension. Hives, itching, and tachycardia can occur in both, though tachycardia is more severe in anaphylaxis.",
+      "hint": "Shock sign (BP drop) = anaphylaxis clue."
+    },
+    {
+      "id": 11,
+      "text": "A patient presents complaining of a four-day history of worsening shortness of breath. The clinical exam reveals absent lung sounds on the left. He has a past medical history of CHF and mediastinal cancer for which he is presently receiving chemotherapy. Based on this information, which of the following is most likely the cause of his dyspnea?",
+      "options": ["CHF", "Pulmonary embolism", "Pleural effusion", "Cardiac tamponade"],
+      "correct_answer": "C",
+      "explanation": "Mediastinal cancer + absent breath sounds suggests pleural effusion (likely malignant). CHF can cause effusion, but cancer is more directly associated. Pulmonary embolism presents acutely; tamponade would have JVD and muffled sounds.",
+      "hint": "Cancer + absent breath sounds → effusion."
+    },
+    {
+      "id": 12,
+      "text": "Your patient presents with an altered mental status after an acute onset of sharp, right sided chest pain and increasing respiratory distress. Her skin is cool, cyanotic, and diaphoretic. BP = 86/60, HR = 118, RR = 24. This presentation is most consistent with?",
+      "options": ["Compensated shock", "Decompensated shock", "Reversible shock", "Patient who is stable."],
+      "correct_answer": "B",
+      "explanation": "Hypotension (BP 86/60) with tachycardia, altered mental status, and cool/cyanotic skin indicates decompensated shock. Compensated shock would have normal blood pressure with other signs. 'Reversible shock' is not a standard term.",
+      "hint": "Hypotension + AMS → decompensated shock."
+    },
+    {
+      "id": 13,
+      "text": "An elderly patient presents supine in bed, responsive to painful stimulus only. Family reports patient has been ill for the past ten days, with a worsening cough, poor fluid intake, and fever. She has no significant medical history. Of the following, which is the most likely underlying cause of these findings?",
+      "options": ["Electrolyte imbalance", "Sepsis", "Hypothyroidism", "DKA"],
+      "correct_answer": "B",
+      "explanation": "Fever, worsening cough, poor intake, and altered mental status in elderly are classic for sepsis. No history of diabetes rules out DKA. Hypothyroidism is chronic, not acute. Electrolyte imbalance is secondary, not primary.",
+      "hint": "Elderly + infection signs + AMS → sepsis."
+    },
+    {
+      "id": 14,
+      "text": "Which of the following occurs secondary to coronary artery occlusion?",
+      "options": ["Pulmonary embolism", "Cardiac tamponade", "Myocardial infarction", "Aortic dissection"],
+      "correct_answer": "C",
+      "explanation": "Coronary artery occlusion leads to myocardial infarction (lack of blood flow to heart muscle causing necrosis). PE is from pulmonary artery; tamponade from pericardial effusion; dissection is from aortic wall tear.",
+      "hint": "Coronary blockage → heart muscle death."
+    },
+    {
+      "id": 15,
+      "text": "Your patient presents unresponsive with a HR of 40/min and RR of 8/min and shallow. Which of the following best describes this patient's condition?",
+      "options": ["Agonal breathing", "Respiratory distress", "Respiratory failure", "Respiratory arrest"],
+      "correct_answer": "C",
+      "explanation": "Very slow respiratory rate (8/min) with shallow breathing indicates respiratory failure – inability to maintain adequate ventilation. Agonal breathing is irregular, gasping; respiratory distress would have increased work of breathing; respiratory arrest is absent breathing.",
+      "hint": "Slow, shallow breathing → failure."
+    },
+    {
+      "id": 16,
+      "text": "A patient presents seated on a park bench with dyspnea. You note accessory muscle use and hear inspiratory and expiratory stridor. She has a weak, rapid radial pulse and her skin is cool, pale, and diaphoretic. Which of the following is the most likely cause of her symptoms?",
+      "options": ["Asthma", "Epiglottitis", "Foreign body obstruction", "Anaphylaxis"],
+      "correct_answer": "D",
+      "explanation": "Inspiratory and expiratory stridor indicates significant upper airway obstruction. The presence of shock signs (weak pulse, cool/diaphoretic skin) favors anaphylaxis causing airway edema and distributive shock. Other causes such as foreign body obstruction are possible, but the systemic findings make anaphylaxis most likely.",
+      "hint": "Stridor + shock → anaphylaxis pattern."
+    },
+    {
+      "id": 17,
+      "text": "Which of the following signs or symptoms would be helpful in differentiating migraine headache from meningitis?",
+      "options": ["Photophobia", "Fever", "Nausea", "Sonophobia"],
+      "correct_answer": "B",
+      "explanation": "Fever is typical of meningitis (infection) but not migraine. Both can have photophobia, nausea, and sonophobia. Meningitis often presents with fever, stiff neck, and altered mental status. Kernig/Brudzinski signs are also specific but not listed.",
+      "hint": "Fever separates infection from migraine."
+    },
+    {
+      "id": 18,
+      "text": "A patient presents in bed unresponsive, warm to the touch. Vital signs are HR = 110, RR = 18 with normal tidal volume, BP = 118/78, Blood glucose = 900 mg/dL. Which of the following most correctly describes the pathophysiology of her problem?",
+      "options": ["Her pancreas does not manufacture any insulin.", "Her pancreas does not manufacture any glucagon.", "Her pancreas manufactures some insulin.", "Her pancreas manufactures too much glucagon."],
+      "correct_answer": "C",
+      "explanation": "Blood glucose of 900 mg/dL without mention of ketones or acidosis suggests Hyperglycemic Hyperosmolar Nonketotic Syndrome (HHNS). HHNS is associated with undiagnosed Type II diabetes where there is still some pancreatic function (insulin present but insufficient). Type I diabetes (no insulin) would more likely present with DKA and ketosis.",
+      "hint": "Very high glucose + no ketosis clue → HHNS."
+    },
+    {
+      "id": 19,
+      "text": "Which of the following complaints is most likely to require immediate critical interventions?",
+      "options": ["Melena and general weakness for two weeks and positive orthostatic vitals.", "Weakness and a single episode of coffee ground emesis yesterday, blood pressure 110/70.", "Vomiting of frank blood twice this morning, blood pressure 140/__ heart rate 100.", "Sudden onset of weakness, frank rectal bleeding, pallor, and positive orthostatic vitals."],
+      "correct_answer": "D",
+      "explanation": "Sudden onset weakness, frank rectal bleeding, pallor, and orthostatic vitals indicate acute significant hemorrhage requiring immediate intervention (fluids, rapid transport). Chronic melena (A) is less urgent; coffee ground emesis (B) suggests slower bleed; hematemesis with normal BP (C) is concerning but not as acute as D.",
+      "hint": "Acute bleeding + weakness + orthostatics → unstable hemorrhage."
+    },
+    {
+      "id": 20,
+      "text": "A heavily sedated patient presents unresponsive and vomiting with gurgling respirations at a rate of 6/min. Of the following, your first most immediate action would be to:",
+      "options": ["Provide BVM ventilations.", "Place patient onto his side.", "Perform immediately ET intubation.", "Insert OPA."],
+      "correct_answer": "B",
+      "explanation": "First action for vomiting with gurgling respirations: turn patient on side (recovery position) to clear airway and prevent aspiration. Then suction, then airway adjunct, then BVM if needed. ET intubation is not first step.",
+      "hint": "Vomiting + gurgling → protect airway first (position)."
+    },
+    {
+      "id": 21,
+      "text": "A 64-year-old male with a history of COPD presents sitting in a chair complaining of chest pain and shortness of breath. He describes an acute onset of sharp chest pain located below his right nipple, that is non-radiating and a 5 on a scale of 1-10. Your physical exam reveals decreased lung sounds on the right with very minor diffuse wheezing in all fields bilaterally. Of the following, which is the most likely cause of the patient's condition?",
+      "options": ["COPD exacerbation", "Spontaneous pneumothorax", "Acute MI", "Pulmonary embolism"],
+      "correct_answer": "B",
+      "explanation": "Acute onset sharp chest pain + decreased breath sounds unilaterally in a COPD patient suggests spontaneous pneumothorax. COPD exacerbation would have wheezing throughout, not focal decreased sounds. MI pain is usually central/radiating; PE often has pleuritic pain but normal breath sounds.",
+      "hint": "COPD + sudden pain + unilateral ↓ sounds → pneumothorax."
+    },
+    {
+      "id": 22,
+      "text": "A patient presents alert to pain only and breathing at a rate of 6/min with shallow tidal volume. You note peripheral cyanosis, hypotension, and an ETCO2 of 65 mmHg. The most appropriate way to administer oxygen to this patient is with a:",
+      "options": ["Bag-valve mask", "NRB", "Nasal cannula", "CPAP mask"],
+      "correct_answer": "A",
+      "explanation": "Rate 6/min shallow, ETCO2 65 (hypercapnia), cyanosis, hypotension – respiratory failure. Requires positive pressure ventilation with BVM. NRB and nasal cannula provide inadequate support; CPAP requires spontaneous breathing with adequate drive.",
+      "hint": "RR 6 + high ETCO₂ → ventilate with BVM."
+    },
+    {
+      "id": 23,
+      "text": "An 80-year-old female nursing home resident presents supine in bed and lethargic. The staff report a declining mental status over the last 12 hours since beginning antibiotic therapy for a UTI. Your primary assessment reveals an absent radial pulse, a weak and rapid carotid pulse, and cool, pale skin. Based on this information, place the following potential causes of her hypoperfusion in order from most likely to least likely:",
+      "options": ["Sepsis, hypovolemia, anaphylaxis", "Hypovolemia, anaphylaxis, sepsis", "Anaphylaxis, sepsis, hypovolemia", "Sepsis, anaphylaxis, hypovolemia"],
+      "correct_answer": "A",
+      "explanation": "Infection (UTI) with declining mental status and signs of hypoperfusion makes sepsis the most likely cause. Hypovolemia from poor intake is also possible. Anaphylaxis is less likely but cannot be completely excluded, especially after starting antibiotics; however, absence of rash or airway findings makes it less probable.",
+      "hint": "Infection + shock signs → sepsis first."
+    },
+    {
+      "id": 24,
+      "text": "Of the following signs and symptoms, which is the best indicator of inadequate perfusion?",
+      "options": ["Pale skin", "Tachycardia", "Increased respiratory rate", "Altered mental status"],
+      "correct_answer": "D",
+      "explanation": "Altered mental status is the most reliable indicator of inadequate perfusion (brain hypoperfusion). Pale skin, tachycardia, tachypnea are earlier compensated signs. When the brain is affected, compensation is failing.",
+      "hint": "AMS = best perfusion indicator."
+    },
+    {
+      "id": 25,
+      "text": "A 52-year-old female presents confused but alert complaining of fatigue, tingling in her fingers bilaterally, and chest palpitations. She has a history of AMI, HTN, and renal failure and has missed her last two dialysis treatments. Vital signs are HR=102 and irregular, BP=142/90, RR=18. Of the following, which is the most likely?",
+      "options": ["AMI", "Hypovolemic shock", "Hyperventilation syndrome", "Hyperkalemia"],
+      "correct_answer": "D",
+      "explanation": "Missed dialysis + tingling (paresthesia) + palpitations (irregular HR) = hyperkalemia. Hyperkalemia is common in patients who miss dialysis and can cause ECG changes (peaked T waves, wide QRS, sine wave). AMI less likely without chest pain; hypovolemia would have hypotension; hyperventilation unlikely to cause tingling bilaterally in this context.",
+      "hint": "Missed dialysis + arrhythmia + tingling → potassium issue."
+    },
+    {
+      "id": 26,
+      "text": "A 49-year-old female is complaining of nausea and abdominal pain. She answers your questions appropriately but appears to be in a lot of pain. Your partner is initiating oxygen therapy. What would you do next?",
+      "options": ["Complete a SAMPLE history.", "Palpate the abdomen.", "Move to the ambulance and initiate transport.", "Conduct an ambulation trial."],
+      "correct_answer": "A",
+      "explanation": "For a conscious medical patient, ask questions first and do physical exam second. SAMPLE history is appropriate next step after ensuring ABCs (oxygen given). Abdominal palpation (B) comes after history. Transport (C) is not immediate unless unstable. Ambulation trial (D) is not indicated for abdominal pain.",
+      "hint": "Stable conscious patient → history before exam."
+    },
+    {
+      "id": 27,
+      "text": "You are assessing a patient with a 3-day history of diarrhea and weakness. Which of the following physical exam findings is most likely?",
+      "options": ["Subcutaneous emphysema on the neck and chest", "Rales in the bases of the lungs, bilaterally", "Dry mucous membranes", "Pedal edema"],
+      "correct_answer": "C",
+      "explanation": "Diarrhea for 3 days leads to dehydration, so dry mucous membranes are expected. Subcutaneous emphysema suggests pneumothorax/trauma; rales indicate pulmonary edema/CHF; pedal edema suggests heart failure or venous insufficiency.",
+      "hint": "Diarrhea → dehydration signs."
+    },
+    {
+      "id": 28,
+      "text": "A 16-year-old female presents complaining of difficulty breathing. Auscultation of lung fields reveals expiratory wheezing in all lung fields. Of the following, the most likely cause:",
+      "options": ["Asthma", "Anaphylaxis", "Bronchitis", "Pulmonary embolism"],
+      "correct_answer": "A",
+      "explanation": "Expiratory wheezing bilaterally is hallmark of asthma. Anaphylaxis can cause wheezing but usually with stridor/urticaria; bronchitis has cough and rhonchi; PE has sudden dyspnea/pleuritic pain without wheezing.",
+      "hint": "Diffuse expiratory wheeze → asthma."
+    },
+    {
+      "id": 29,
+      "text": "A patient with a history of COPD presents complaining of dyspnea. Which of the following questions would best help you determine the severity of the patient's complaint?",
+      "options": ["How has your breathing problem interfered with your normal activity?", "How long ago were you first diagnosed with COPD?", "Can you describe your breathing difficulty?", "What makes your breathing better?"],
+      "correct_answer": "A",
+      "explanation": "Assessing impact on normal activity (ADLs) helps gauge severity. Patients often call EMS when they can no longer perform daily tasks. Duration of diagnosis (B) gives context but not severity. Describing difficulty (C) and triggers (D) are helpful but less direct for severity.",
+      "hint": "Severity = effect on daily activity."
+    },
+    {
+      "id": 30,
+      "text": "Which of the following is most likely to present with hypertension and bradycardia?",
+      "options": ["Intracranial hemorrhage", "Hypoglycemia", "Ischemia", "Migraine headache"],
+      "correct_answer": "A",
+      "explanation": "Cushing's triad (hypertension, bradycardia, irregular respirations) indicates increased intracranial pressure, often from intracranial hemorrhage. Hypoglycemia causes tachycardia; ischemia (MI) can cause bradycardia but not hypertension; migraine may have normal vitals.",
+      "hint": "HTN + bradycardia → increased ICP."
+    },
+    {
+      "id": 31,
+      "text": "A 71-year-old male is complaining of an acute onset of right sided weakness and aphasia. Of the following, which would be most helpful in ruling out a non-stroke etiology?",
+      "options": ["ECG", "Blood sugar", "Blood pressure", "SPO2"],
+      "correct_answer": "B",
+      "explanation": "Hypoglycemia can mimic stroke symptoms (focal neurological deficits). Checking blood glucose quickly rules out hypoglycemia as a cause. ECG (A) rules out cardiac causes but not stroke mimics; BP (C) and SpO2 (D) are supportive but not definitive.",
+      "hint": "Stroke mimic to exclude → glucose."
+    },
+    {
+      "id": 32,
+      "text": "In the absence of a blood sugar check, which of the following would be most helpful in differentiating DKA from hypoglycemia in an unconscious patient?",
+      "options": ["Blood pressure", "Respirations", "Heart rate", "SPO2"],
+      "correct_answer": "B",
+      "explanation": "DKA presents with Kussmaul respirations (deep, rapid). Hypoglycemia does not cause Kussmaul breathing. Respiratory pattern helps differentiate. Blood pressure and heart rate may be similar (tachycardia in both). SpO2 is not specific.",
+      "hint": "DKA clue → breathing pattern (Kussmaul)."
+    },
+    {
+      "id": 33,
+      "text": "A 22-year-old male presents with an acute onset of difficulty breathing while eating lunch. Your clinical exam reveals inspiratory stridor and wheezes to all lung fields bilaterally. He has a past medical history of an allergy to nuts. Based on this information, place the following etiologies in order of most likely to least likely.",
+      "options": ["Anaphylaxis, partial foreign body airway obstruction, asthma", "Asthma, anaphylaxis, partial foreign body airway obstruction", "Partial foreign body airway obstruction, asthma, anaphylaxis", "Asthma, partial foreign body airway obstruction, anaphylaxis"],
+      "correct_answer": "A",
+      "explanation": "History of nut allergy + eating lunch + stridor + wheezing = anaphylaxis most likely. Partial FBAO possible but less likely with bilateral wheezing (FBAO usually unilateral). Asthma possible but not triggered specifically by eating nuts.",
+      "hint": "Allergy + airway + eating trigger → anaphylaxis."
+    },
+    {
+      "id": 34,
+      "text": "An allergic reaction differs from anaphylaxis in that:",
+      "options": ["An allergic reaction can include multiple body systems", "Anaphylaxis results in widespread vasodilation", "Anaphylactic reactions rarely progress very quickly.", "An allergic reaction can result in hemodynamic instability."],
+      "correct_answer": "B",
+      "explanation": "Anaphylaxis is distinguished by systemic involvement with distributive shock due to widespread vasodilation, often causing hypotension. Allergic reactions may involve one or more systems but do not cause hemodynamic instability. Anaphylaxis typically progresses rapidly and can be life-threatening.",
+      "hint": "Anaphylaxis = systemic vasodilation/shock."
+    },
+    {
+      "id": 35,
+      "text": "Your patient is complaining of an acute onset of chest discomfort and shortness of breath. His vital signs are P = 116, RR = 18, BP = 108/63. His skin is pale, cool, and diaphoretic. Based on this presentation, the patient is most likely experiencing?",
+      "options": ["Hypovolemic shock", "Obstructive shock", "Cardiogenic shock", "Septic shock"],
+      "correct_answer": "C",
+      "explanation": "Chest discomfort with tachycardia, cool diaphoretic skin, and borderline hypotension is most consistent with cardiogenic shock, likely due to acute coronary syndrome. Other causes such as obstructive shock are possible but less likely without additional supporting findings.",
+      "hint": "Chest pain + cool/diaphoretic → cardiogenic shock."
+    },
+    {
+      "id": 36,
+      "text": "A 39-year-old male presents with near-syncope following a 10km run through the park. First responders on scene report vital signs of RR = 24, HR = 138, BP = 84/50. Of the following, your next step should be to?",
+      "options": ["Measure his blood glucose", "Perform your own primary exam.", "Assist the patient with his metered-dose inhaler.", "Complete a SAMPLE history."],
+      "correct_answer": "B",
+      "explanation": "Always perform your own primary assessment. Do not rely solely on first responder report, especially in a potentially unstable patient. Blood glucose (A) and SAMPLE (D) come after primary exam. Inhaler (C) not indicated without wheezing.",
+      "hint": "Always do your own primary survey."
+    },
+    {
+      "id": 37,
+      "text": "A 72-year-old male presents supine with fever, history of vomiting and diarrhea and now difficulty breathing. Vital signs are BP = 102/64, P = 104, RR = 20. His skin is dry and cool with mottled appearance. Your treatment should include:",
+      "options": ["Assisting ventilation with a BVM.", "Placing heat pack on the patient's armpits, groin, and neck.", "Having the patient drink plenty salted water.", "Covering the patient with fleece or light blanket."],
+      "correct_answer": "D",
+      "explanation": "This patient shows signs of hypoperfusion (cool, mottled skin) likely from dehydration and possible sepsis. Preventing heat loss is essential in shock management, so covering the patient with a blanket is appropriate. BVM is not indicated with adequate respirations, and oral fluids are not appropriate in a potentially unstable patient.",
+      "hint": "Shock → keep patient warm."
+    },
+    {
+      "id": 38,
+      "text": "A 32-year-old male presents sitting at a dining table in obvious respiratory distress, with audible stridor. Bystanders report a sudden onset of respiratory distress while eating dinner. Your physical exam reveals a strong, tachycardic radial pulse and skin that is warm, slightly diaphoretic. Of the following, which is most likely cause?",
+      "options": ["Partial foreign body airway obstruction", "Asthma", "Anaphylaxis", "Epiglottitis"],
+      "correct_answer": "A",
+      "explanation": "Sudden onset while eating + stridor = partial foreign body airway obstruction. Strong pulse indicates partial obstruction, not complete. Anaphylaxis possible but less likely without allergy history. Epiglottitis is rare in adults without fever.",
+      "hint": "Eating + sudden stridor → partial obstruction."
+    },
+    {
+      "id": 39,
+      "text": "A female patient presents complaining of shortness of breath and sudden onset of nonradiating, right sided chest pain, reproducible with inspiration. Given these findings, which etiology is most likely to be causing her symptoms?",
+      "options": ["AMI", "Pulmonary embolism", "Pleural effusion", "Aortic dissection"],
+      "correct_answer": "B",
+      "explanation": "Pleuritic chest pain (reproducible with inspiration) + sudden onset + shortness of breath suggests pulmonary embolism. AMI pain is not typically pleuritic; pleural effusion is gradual; aortic dissection is tearing/radiating pain.",
+      "hint": "Pleuritic pain + SOB → pulmonary embolism."
+    },
+    {
+      "id": 40,
+      "text": "All the following are potential causes of syncope EXCEPT:",
+      "options": ["Cardiac dysrhythmia", "Vasovagal stimulation", "Hypovolemia", "Fever"],
+      "correct_answer": "D",
+      "explanation": "Fever alone does not cause syncope (passing out). Cardiac dysrhythmia, vasovagal, and hypovolemia are common causes of syncope. Fever may cause lightheadedness from dehydration but syncope is not a direct effect.",
+      "hint": "Syncope causes ≠ fever."
+    },
+    {
+      "id": 41,
+      "text": "A 78-year-old female presents with a sudden onset of respiratory distress, which came on while she was at rest. She is anxious and agitated. Vital signs are BP = 78/36, pulse = 110, RR = 22. Abnormal findings include crackles bilaterally, cyanosis. Which of the following medications would be most effective?",
+      "options": ["Beta-2 agonist", "Loop diuretic", "Short-acting benzodiazepine", "Inotropic vasopressor agent"],
+      "correct_answer": "D",
+      "explanation": "Severe hypotension with respiratory distress and bilateral crackles suggests cardiogenic shock with pulmonary edema and poor perfusion. Inotropic vasopressors (e.g., dopamine) are required to support cardiac output and blood pressure. Diuretics may worsen hypotension in this unstable patient.",
+      "hint": "Hypotension + crackles → cardiogenic failure."
+    },
+    {
+      "id": 42,
+      "text": "A 70-year-old male presents responsive to painful stimulus only, with hot and dry skin. You note an infected bedsore on his buttock. After the administration of 1000 ml of normal saline, his vital signs remain unchanged at HR = 90, BP = 56/?. Of the following which would be the most appropriate next action?",
+      "options": ["Administer atropine IV.", "Initiate transcutaneous pacing.", "Administer dopamine IV.", "Continue fluid administration at 125 ml/hour"],
+      "correct_answer": "C",
+      "explanation": "Sepsis with refractory hypotension after fluid bolus requires vasopressors (dopamine). Atropine/pacing not indicated (HR 90). Continuing fluids alone insufficient without pressor support.",
+      "hint": "Sepsis + refractory hypotension → pressors."
+    },
+    {
+      "id": 43,
+      "text": "You are assessing a 69-year-old male, complaining of chest discomfort. His 12-Lead ECG reveals ST depression in leads V1-V4. There is no ST elevation in any lead. This ECG finding is most consistent with:",
+      "options": ["An inferior AMI", "An anterior AMI", "A posterior AMI", "Pericarditis"],
+      "correct_answer": "C",
+      "explanation": "ST depression in V1-V4 (anterior leads) with tall R waves suggests posterior MI. Posterior MI is diagnosed by reciprocal changes (ST depression in anterior leads) or posterior leads V7-V9. Inferior MI has ST elevation in II, III, aVF; anterior MI has ST elevation in V1-V4; pericarditis has diffuse ST elevation.",
+      "hint": "ST depression V1–V4 → posterior MI clue."
+    },
+    {
+      "id": 44,
+      "text": "Symptomatic hyperkalemia should be treated with which of the following medication combinations?",
+      "options": ["Sodium bicarbonate, naloxone, and calcium chloride", "Potassium, albuterol, furosemide", "Lidocaine, albuterol, insulin and ?", "Calcium chloride, furosemide, and albuterol"],
+      "correct_answer": "D",
+      "explanation": "Management of symptomatic hyperkalemia includes calcium (to stabilize cardiac membranes), agents that shift potassium intracellularly (e.g., insulin with glucose, albuterol), and agents that remove potassium (e.g., furosemide). Although option D is incomplete without insulin and glucose, it is the most appropriate combination among the choices provided.",
+      "hint": "Hyperkalemia → stabilize, shift, remove K⁺."
+    },
+    {
+      "id": 45,
+      "text": "A 34-year-old female presents with dyspnea, audible wheezing and responds to painful stimulus. Her husband states that she used her inhaler multiple times without relief. Of the following, the best treatment would be?",
+      "options": ["Assist ventilations with a BVM.", "Administer 1mg 1:10,000 epinephrine IM.", "Transport with no further medication.", "Administer a nebulized beta-2 agonist."],
+      "correct_answer": "A",
+      "explanation": "The patient has life-threatening asthma with decreased level of consciousness (responds only to painful stimulus), indicating impending respiratory failure. Immediate priority is airway and ventilation support with a BVM. Nebulized beta-2 agonists (e.g., salbutamol) are first-line in severe asthma, but require adequate respiratory effort and airway protection, which this patient lacks. IM epinephrine can be considered in severe or refractory asthma, but it does not replace the need for immediate ventilatory support in a patient with altered mental status. The listed dose is also incorrect (1 mg 1:10,000 is for IV use in cardiac arrest, not IM). Therefore, assisted ventilation is the most appropriate immediate intervention.",
+      "hint": "Severe asthma + low LOC → ventilate first."
+    },
+    {
+      "id": 46,
+      "text": "A patient presents disoriented to place and time, with a two-day history of abdominal pain and excessive thirst and urination. Breathing is 20/min and deep and his blood glucose level is 421 mg/dL. Based on these signs and symptoms, prehospital care should include:",
+      "options": ["Infusion of isotonic crystalloid fluid.", "Hyperventilation at a rate of 24/min.", "The administration of insulin IV.", "The administration of oral glucose."],
+      "correct_answer": "A",
+      "explanation": "Hyperglycemia (421) with deep breathing suggests DKA or HHNS. Treat with IV fluids (isotonic crystalloid) to correct dehydration and dilute glucose. Insulin is not given prehospital. Hyperventilation is not indicated. Oral glucose would worsen condition.",
+      "hint": "Hyperglycemia + dehydration → fluids first."
+    },
+    {
+      "id": 47,
+      "text": "A 62-year-old female presents with an acute onset of weakness and dizziness. Vital signs are HR = 52, BP = 240/160, RR = 18. Which of the following actions is the most appropriate?",
+      "options": ["Administer nitroglycerin", "Administer atropine", "Perform stroke assessment", "Initiate transcutaneous pacing"],
+      "correct_answer": "C",
+      "explanation": "Severe hypertension with weakness/dizziness + bradycardia → possible intracranial hemorrhage or hypertensive emergency. Perform stroke assessment first to rule out stroke before giving blood pressure meds or cardiac interventions. Nitroglycerin could lower BP too rapidly in stroke; atropine for bradycardia is not first; pacing not indicated.",
+      "hint": "HTN + brady + neuro symptoms → stroke screen."
+    },
+    {
+      "id": 48,
+      "text": "Your patient is presenting with an acute onset of itchiness and urticaria after eating peanuts. Of the following options, which is the most appropriate treatment?",
+      "options": ["0.3mg of 1:10,000 Epinephrine IV", "0.3mg of 1:1,000 Epinephrine IM", "25mg diphenhydramine IV", "2.5mg albuterol via nebulizer"],
+      "correct_answer": "C",
+      "explanation": "Isolated urticaria and itching without airway compromise, respiratory distress, or hypotension suggests a mild allergic reaction. Antihistamines (e.g., diphenhydramine) are appropriate. However, any progression to airway involvement, respiratory distress, or hypotension requires immediate IM epinephrine.",
+      "hint": "Isolated hives → antihistamine, monitor."
+    },
+    {
+      "id": 49,
+      "text": "A patient presents hemodynamically stable complaining of chest discomfort. A 12-Lead ECG reveals ST segment elevation in all the precordial leads as well as II, III, and aVF. Which of the following is the most likely etiology of these ECG findings?",
+      "options": ["Acute MI", "Aortic dissection", "Pericarditis", "Pulmonary embolism"],
+      "correct_answer": "C",
+      "explanation": "Widespread ST elevation in multiple leads (anterior + inferior) suggests pericarditis (diffuse inflammation). Acute MI typically localizes to a territory (e.g., inferior leads II, III, aVF or anterior V1-V4). Aortic dissection and PE do not cause diffuse ST elevation.",
+      "hint": "Diffuse ST elevation → pericarditis."
+    },
+    {
+      "id": 50,
+      "text": "A 52-year-old male presents complaining of chest discomfort. He is alert and oriented with a blood pressure of 110/70. You obtain the 12-Lead ECG, Shows an Inferior Wall MI (ST elevation in II, III, aVF). Of the following, the most appropriate next action would be to:",
+      "options": ["Administer nitroglycerin", "Obtain a right-side 12-Lead ECG.", "Initiate transcutaneous pacing.", "Administer morphine"],
+      "correct_answer": "B",
+      "explanation": "The 12-lead ECG showed an Inferior Wall MI (ST elevation in II, III, aVF), the immediate next step is to obtain a right-sided ECG (V4R). This is critical to rule out right ventricular infarction before administering nitroglycerin, as NTG reduces preload and can cause profound, life-threatening hypotension in patients with RV infarcts.",
+      "hint": "Inferior MI → check right-sided ECG before nitrates."
+    }
+  ]
+}
