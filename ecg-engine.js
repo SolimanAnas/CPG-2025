@@ -1,451 +1,1163 @@
-/**
- * DCAS Clinical ECG Engine v3.0
- * Real-time physics-based ECG synthesis
- * Based on ecg.md (physics model) + ecg-data.md (clinical data)
- *
- * KEY FIX: All wave positions are in SECONDS within the cardiac cycle.
- * RR interval = 60/HR seconds. Brady has long RR (wide spacing),
- * Tachy has short RR (narrow spacing). The engine is called per-sample.
- */
-const ECGEngine = (() => {
-  'use strict';
-
-  // ── MATH PRIMITIVES (ecg.md §4) ─────────────────────────────
-  // Symmetric Gaussian: models P wave, Q, R, S
-  const G = (t, mu, sigma, amp) =>
-    amp * Math.exp(-0.5 * ((t - mu) / sigma) ** 2);
-
-  // Asymmetric Gaussian: models T wave (slow rise, faster fall)
-  const AG = (t, mu, sR, sF, amp) => {
-    const dt = t - mu;
-    return amp * Math.exp(-0.5 * (dt / (dt < 0 ? sR : sF)) ** 2);
-  };
-
-  // ── STATE FACTORY ────────────────────────────────────────────
-  // Each rhythm session needs fresh state for irregular rhythms
-  function createState() {
-    // XorShift PRNG for reproducible noise
-    let s = (Date.now() ^ 0xdeadbeef) | 1;
-    const prng = () => {
-      s ^= s << 13; s ^= s >> 17; s ^= s << 5;
-      return (s >>> 0) / 0x100000000;
-    };
-    return {
-      prng,
-      // AFib: next QRS beat times
-      afibNext: 0.12 + Math.random() * 0.25,
-      afibLast: -1,
-      afibRng: prng,
-    };
-  }
-
-  // ── SINUS COMPLEX BUILDER ─────────────────────────────────────
-  // Assembles P + QRS + T in absolute seconds within one cardiac cycle.
-  // ALL times are in seconds — this is the key to correct rate rendering.
-  //
-  //  Phase     Meaning (at HR=72, RR=0.833s)
-  //  0.000     cycle start
-  //  0.065     P wave center  (duration ~80ms)
-  //  0.160     PR interval end → QRS onset
-  //  0.176     R peak (narrow!)
-  //  0.190     S nadir
-  //  0.360     T wave center
-  //  0.470     T wave end
-  //  0.833     next cycle (long baseline 470-833ms for brady)
-  //
-  function sinusComplex(phase, opts = {}) {
-    const {
-      pr      = 0.160,  // PR interval in seconds
-      wide    = false,  // wide QRS (VT/BBB morphology)
-      stElev  = 0,      // ST elevation in mV (+ve = elevation)
-      tInv    = false,  // inverted T wave
-      pAmp    = 0.12,   // P wave amplitude mV
-      rAmp    = 1.80,   // R wave amplitude mV
-    } = opts;
-
-    let v = 0;
-
-    // ── P wave (atrial depolarization)
-    if (pAmp > 0.005) {
-      v += G(phase, 0.065, 0.025, pAmp);
-    }
-
-    // ── QRS complex (ventricular depolarization)
-    // sigmas differ dramatically between narrow and wide QRS
-    const qS = wide ? 0.028 : 0.009;  // Q sigma
-    const rS = wide ? 0.042 : 0.008;  // R sigma — NARROW vs WIDE
-    const sS = wide ? 0.032 : 0.010;  // S sigma
-    const rOf = wide ? 0.042 : 0.016; // R offset from QRS onset
-    const sOf = wide ? 0.085 : 0.030; // S offset from QRS onset
-    const sA  = wide ? -0.72 : -0.34; // S amplitude
-
-    v += G(phase, pr + 0.000, qS, -0.07);    // Q deflection
-    v += G(phase, pr + rOf,   rS, rAmp);     // R peak (sharp!)
-    v += G(phase, pr + sOf,   sS, sA);       // S deflection
-
-    // ── ST segment modification
-    if (stElev !== 0) {
-      // Gentle plateau between QRS end and T wave start
-      v += G(phase, pr + (wide ? 0.16 : 0.09), 0.06, stElev);
-    }
-
-    // ── T wave (ventricular repolarization)
-    // Asymmetric: slow rise (sR) faster fall (sF) for realism
-    const tC   = pr + (wide ? 0.28 : 0.20); // T center
-    const tAmp = tInv ? -0.34 : 0.36;
-    v += AG(phase, tC, 0.055, 0.085, tAmp);
-
-    return v;
-  }
-
-  // ── MAIN SAMPLE GENERATOR ─────────────────────────────────────
-  // t         : absolute time in seconds (continuously increasing)
-  // rhythmKey : string key
-  // state     : mutable state object from createState()
-  // addNoise  : boolean for muscle artifact
-  //
-  // Returns: amplitude in millivolts
-  //
-  function generateSample(t, rhythmKey, state, addNoise) {
-    let v = 0;
-
-    // Subtle baseline wander (respiration ~15 breaths/min)
-    const wander = 0.04 * Math.sin(2 * Math.PI * 0.25 * t);
-    // Optional high-frequency noise (muscle artifact)
-    const noise = addNoise ? (Math.random() - 0.5) * 0.06 : 0;
-
-    switch (rhythmKey) {
-
-      // ════════════════════════════════════════
-      // SINUS RHYTHMS
-      // ════════════════════════════════════════
-
-      case 'nsr': {
-        // HR=72 → RR=0.833s. Phase runs 0→0.833 then resets.
-        // P at 0.065, QRS at 0.16, T ends ~0.47s, then 360ms flat baseline.
-        v = sinusComplex(t % (60 / 72), { pr: 0.16, rAmp: 1.80 });
-        break;
-      }
-
-      case 'stach': {
-        // HR=120 → RR=0.500s. Same wave positions, but much shorter flat baseline.
-        // T (ends ~0.47s) nearly touches next cycle (0.50s) → busy trace!
-        v = sinusComplex(t % (60 / 120), { pr: 0.14, pAmp: 0.10, rAmp: 1.70 });
-        break;
-      }
-
-      case 'sbrady': {
-        // HR=45 → RR=1.333s. Same wave positions, but enormous flat baseline.
-        // T ends ~0.47s, next beat at 1.333s → 860ms of flatline between beats.
-        v = sinusComplex(t % (60 / 45), { pr: 0.18, rAmp: 1.85 });
-        break;
-      }
-
-      // ════════════════════════════════════════
-      // ATRIAL RHYTHMS
-      // ════════════════════════════════════════
-
-      case 'svt': {
-        // HR=180 → RR=0.333s.
-        // P waves: NOT VISIBLE — buried inside the QRS complex (retrograde conduction).
-        // No discernible P wave before or after QRS. Narrow QRS. Rapid regular rate.
-        // T wave is slightly deformed by the hidden retrograde P (small negative notch at T end).
-        const rr = 60 / 180;
-        const p = t % rr;
-        // Sharp narrow QRS — no preceding P wave
-        v  = G(p, 0.016, 0.007, -0.06); // Q
-        v += G(p, 0.028, 0.007,  1.65); // R — sharp, narrow
-        v += G(p, 0.040, 0.008, -0.22); // S
-        // T wave with slight terminal notch = retrograde P buried at end of T
-        v += AG(p, 0.130, 0.035, 0.052, 0.22); // T wave
-        v += G(p,  0.175, 0.010, -0.06); // retrograde P notch buried at T end (barely visible)
-        break;
-      }
-
-      case 'afib': {
-        // Irregular QRS (variable RR 380-780ms) + fibrillatory baseline
-        // Advance beat schedule
-        if (t >= state.afibNext) {
-          state.afibLast = state.afibNext;
-          // Random RR: 380-760ms (ventricular rate ~80-160 bpm, irregular)
-          state.afibNext += 0.38 + state.prng() * 0.40;
-        }
-        // Chaotic atrial baseline (summed sinusoids ~4-8 Hz)
-        v  = 0.065 * Math.sin(2 * Math.PI * 4.5 * t);
-        v += 0.055 * Math.sin(2 * Math.PI * 6.2 * t + 1.3);
-        v += 0.040 * Math.sin(2 * Math.PI * 7.8 * t + 2.6);
-        v += (Math.random() - 0.5) * 0.035;
-        // QRS at each beat
-        if (state.afibLast >= 0) {
-          const dt = t - state.afibLast;
-          if (dt >= 0 && dt < 0.34) {
-            v += G(dt,  0.010, 0.009, -0.08);
-            v += G(dt,  0.026, 0.008,  1.75);
-            v += G(dt,  0.042, 0.010, -0.32);
-            v += AG(dt, 0.160, 0.045, 0.075, 0.30);
-          }
-        }
-        break;
-      }
-
-case 'aflutter': {
-  // ATRIAL FLUTTER 3:1 — near-clinical Lead II morphology
-
-  const flRR = 0.200;   // Atrial rate ~300 bpm
-  const vRR  = 0.600;   // Ventricular rate ~100 bpm (3:1)
-
-  // Flutter phase (0 → 1)
-  const flPh = (t % flRR) / flRR;
-
-  // --- Flutter wave (curved sawtooth, physiologic) ---
-  let fwave;
-  if (flPh < 0.75) {
-    const x = flPh / 0.75;
-    fwave = -0.48 * (x * x);   // curved descent
-  } else {
-    const x = (flPh - 0.75) / 0.25;
-    fwave = -0.48 + (x * x * 0.48); // softened upstroke
-  }
-
-  // Per-cycle variability (avoids mechanical repetition)
-  const cycleNoise = Math.sin(2 * Math.PI * (t % flRR) / flRR);
-  fwave *= (0.96 + 0.06 * cycleNoise);
-
-  // Subtle asymmetry (adds realism)
-  fwave *= (1 + 0.02 * Math.cos(4 * Math.PI * t));
-
-  // Continuous baseline (no flat segments)
-  v = fwave - 0.08 + 0.006 * Math.sin(2 * Math.PI * t / flRR);
-
-  // --- Ventricular complex every 3 flutter waves ---
-  const qp = t % vRR;
-
-  // Place QRS just AFTER the 3rd flutter wave
-  if (qp > (vRR - 0.05)) {
-    const q = qp - (vRR - 0.05);
-
-    // Narrow QRS (balanced amplitude)
-    v += G(q, 0.010, 0.005, -0.07);   // Q
-    v += G(q, 0.020, 0.005,  1.70);   // R
-    v += G(q, 0.032, 0.007, -0.25);   // S
-
-    // T wave (subtle)
-    v += AG(q, 0.140, 0.040, 0.050, 0.22);
-  }
-
-  // Tiny noise (monitor realism)
-  v += (Math.random() - 0.5) * 0.006;
-
-  break;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · ECG Trainer</title>
+<script src="ecg-engine2.js"></script>
+<script>(function(){var t=localStorage.getItem('ecg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── THEME TOKENS ── */
+:root,[data-theme="dark"]{
+  --bg:#07111f;--panel:#0c1629;--card:#111d30;
+  --br:rgba(255,255,255,.09);--br2:rgba(255,255,255,.15);
+  --tx:#dde6f0;--mu:#5a7080;--dm:#8a9bb0;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--cyan:#06b6d4;--orange:#f97316;
+  --mono:'DM Mono',monospace;--hdr:60px;
+  --ecg-bg:#020d0a;--ecg-grid:rgba(0,170,70,.16);--ecg-trace:#00e880;
+  --ecg-glow:rgba(0,232,128,.5);
 }
-      // ════════════════════════════════════════
-      // VENTRICULAR RHYTHMS
-      // ════════════════════════════════════════
+[data-theme="light"]{
+  --bg:#f0f4f8;--panel:#fff;--card:#fff;
+  --br:rgba(0,0,0,.09);--br2:rgba(0,0,0,.16);
+  --tx:#1a2637;--mu:#687888;--dm:#45566a;
+  --green:#16a34a;--yellow:#ca8a04;--red:#dc2626;
+  --blue:#2563eb;--cyan:#0891b2;--orange:#ea580c;
+  --ecg-bg:#0a1a10;--ecg-grid:rgba(0,150,60,.18);--ecg-trace:#00d870;
+  --ecg-glow:rgba(0,216,112,.5);
+}
+[data-theme="sepia"]{
+  --bg:#f4ead8;--panel:#ece0ca;--card:#ece0ca;
+  --br:rgba(100,65,20,.1);--br2:rgba(100,65,20,.2);
+  --tx:#33200e;--mu:#836a50;--dm:#5c4033;
+  --green:#3a6b35;--yellow:#92400e;--red:#b91c1c;
+  --blue:#8c5800;--cyan:#0e7490;--orange:#c2410c;
+  --ecg-bg:#061208;--ecg-grid:rgba(0,160,60,.16);--ecg-trace:#00d870;
+  --ecg-glow:rgba(0,216,112,.5);
+}
+[data-theme="green"]{
+  --bg:#040e06;--panel:#071408;--card:#0a180c;
+  --br:rgba(34,197,94,.1);--br2:rgba(34,197,94,.18);
+  --tx:#c0eccb;--mu:#3a6642;--dm:#62986a;
+  --green:#4ade80;--yellow:#fbbf24;--red:#f87171;
+  --blue:#22c55e;--cyan:#34d399;--orange:#fb923c;
+  --ecg-bg:#020e04;--ecg-grid:rgba(34,197,94,.14);--ecg-trace:#4ade80;
+  --ecg-glow:rgba(74,222,128,.6);
+}
 
-      case 'vtach': {
-        // HR=180 → RR=0.333s. WIDE QRS, no P waves, discordant T.
-        // Wide sigma makes the QRS span ~150ms (vs ~50ms normal).
-        const rr = 60 / 180;
-        const p = t % rr;
-        v  = G(p,  0.030, 0.025, -0.15); // broad Q
-        v += G(p,  0.078, 0.044,  2.00); // broad R
-        v += G(p,  0.132, 0.035, -0.72); // broad S
-        v += AG(p, 0.265, 0.060, 0.090, -0.46); // discordant T (inverted)
-        break;
-      }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(ellipse 80% 50% at 10% 0%,rgba(239,68,68,.07),transparent),radial-gradient(ellipse 70% 60% at 90% 100%,rgba(15,39,68,.8),transparent);pointer-events:none;z-index:-1}
 
-      case 'torsades': {
-        // "TWISTING OF THE POINTS" (Torsades de Pointes)
-        // The QRS complexes appear as SINE WAVE oscillations that rotate around the
-        // isoelectric baseline in a sinusoidal (spindle) amplitude pattern.
-        //
-        // Model:
-        //   fast  ≈ 4.5 Hz (270/min) — individual QRS sine-wave oscillation
-        //   slow  ≈ 0.60 Hz           — spindle envelope: how the amplitude waxes/wanes
-        //   envelope = sin(slow)      — drives ±polarity twist (the "rotation")
-        //
-        // Result: rapid sine-wave complexes whose amplitude grows → peaks → shrinks → 
-        //         polarity flips → grows again → classic twisting spindle pattern
-        const fast = 2 * Math.PI * 4.50 * t;     // rapid QRS-like oscillation
-        const slow = 2 * Math.PI * 0.60 * t;     // spindle envelope frequency
-        // Power the envelope to make it spend more time near zero (sharper spindles)
-        const envelope = Math.pow(Math.abs(Math.sin(slow)), 0.6) * Math.sign(Math.sin(slow));
-        v = envelope * 2.20 * Math.sin(fast);    // amplitude-modulated twisting sine
-        // Add a subtle harmonic to give each "beat" a slightly QRS-like shape
-        v += envelope * 0.35 * Math.sin(fast * 2); // 2nd harmonic sharpens peaks
-        v += (Math.random() - 0.5) * 0.04;       // minimal noise
-        break;
-      }
+/* ── HEADER ─────────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+[data-theme="light"] .app-header{background:rgba(240,244,248,.96)}
+[data-theme="sepia"] .app-header{background:rgba(244,234,216,.96)}
+[data-theme="green"] .app-header{background:rgba(4,14,6,.96)}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.07);border:1px solid var(--br);color:var(--tx);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.9rem;flex-shrink:0;transition:background .15s}
+.hdr-back:active{background:rgba(255,255,255,.12)}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#be123c,#e11d48);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(225,29,72,.35);font-size:1rem}
+.hdr-info{flex:1}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.65rem;color:var(--mu)}
+.hdr-right{display:flex;align-items:center;gap:6px}
+.hdr-live{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-      case 'coarseVf': {
-        // Chaotic high-amplitude oscillations — sum of random sinusoids
-        v  = Math.sin(2 * Math.PI * 3.2 * t + 0.5) * 0.70;
-        v += Math.sin(2 * Math.PI * 5.1 * t + 1.1) * 0.50;
-        v += Math.sin(2 * Math.PI * 7.8 * t + 2.3) * 0.40;
-        v += Math.sin(2 * Math.PI * 2.1 * t + 0.8) * 0.55;
-        v += (Math.random() - 0.5) * 0.45;
-        v *= 0.80;
-        break;
-      }
+/* Theme pills in header */
+.theme-pills{display:flex;gap:4px}
+.tp{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .18s;flex-shrink:0}
+.tp:hover{transform:scale(1.2)}
+.tp:active{transform:scale(.9)}
+.tp.act{border-color:var(--tx)!important;box-shadow:0 0 0 2px rgba(59,130,246,.35)}
+.tp-dark {background:linear-gradient(135deg,#1e3a5f,#07111f)}
+.tp-light{background:linear-gradient(135deg,#c8d8f0,#f0f4f8)}
+.tp-sepia{background:linear-gradient(135deg,#c49a52,#f4ead8)}
+.tp-green{background:linear-gradient(135deg,#14532d,#040e06)}
 
-      case 'fineVf': {
-        // Low-amplitude chaotic oscillations
-        v  = Math.sin(2 * Math.PI * 4.5 * t + 0.3) * 0.18;
-        v += Math.sin(2 * Math.PI * 7.2 * t + 1.5) * 0.15;
-        v += Math.sin(2 * Math.PI * 9.1 * t + 2.2) * 0.11;
-        v += Math.sin(2 * Math.PI * 3.3 * t + 0.7) * 0.12;
-        v += (Math.random() - 0.5) * 0.09;
-        break;
-      }
+/* ── PAGE BODY ─────────────────────────────────────────── */
+.page-body{flex:1;overflow-y:auto;padding:14px 14px 50px;display:flex;flex-direction:column;gap:12px;max-width:700px;width:100%;margin:0 auto}
 
-      case 'asystole': {
-        // Flatline with minimal electrical noise
-        v = (Math.random() - 0.5) * 0.018;
-        break;
-      }
+/* ── PRIORITY BANNER ───────────────────────────────────── */
+.prio-banner{border-radius:16px;padding:13px 16px;display:flex;align-items:flex-start;gap:12px;border:2px solid;animation:bIn .3s ease}
+@keyframes bIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+.pb-ico{font-size:1.4rem;flex-shrink:0;margin-top:1px}
+.pb-level{font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;opacity:.7}
+.pb-msg{font-size:.88rem;font-weight:700;line-height:1.3;margin-top:2px}
+.pb-sub{font-size:.72rem;opacity:.78;margin-top:3px;line-height:1.4}
+.b-green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#86efac}
+.b-yellow{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
+.b-orange{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.4);color:#fdba74}
+.b-red{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.5);color:#fca5a5}
+.b-arrest{background:rgba(239,68,68,.18);border-color:rgba(239,68,68,.7);color:#fca5a5;animation:bIn .3s ease,aPulse 1.4s infinite}
+@keyframes aPulse{0%,100%{box-shadow:0 0 18px rgba(239,68,68,.22)}50%{box-shadow:0 0 40px rgba(239,68,68,.55)}}
 
-      case 'pea': {
-        // Organised rhythm (looks like sinus) but patient has no pulse
-        // Morphologically identical to NSR at 65bpm — label distinguishes
-        v = sinusComplex(t % (60 / 65), { pr: 0.16, rAmp: 1.65 });
-        break;
-      }
+/* ── MONITOR ───────────────────────────────────────────── */
+.monitor-wrap{
+  border-radius:20px;
+  background:var(--ecg-bg);
+  border:2px solid rgba(0,200,100,.22);
+  position:relative;overflow:hidden;
+  height:148px;
+  box-shadow:inset 0 0 40px rgba(0,0,0,.9),0 0 0 1px rgba(0,200,100,.06);
+}
+.mon-info{position:absolute;top:7px;left:12px;font-family:var(--mono);font-size:.56rem;color:rgba(0,230,120,.35);z-index:3;letter-spacing:1px}
+.mon-rate{position:absolute;top:7px;right:12px;font-family:var(--mono);font-size:1rem;font-weight:500;color:rgba(0,230,120,.55);z-index:3;transition:color .3s;letter-spacing:-0.5px}
+.mon-rate.crit{color:#ef4444;animation:rFlash 1s infinite}
+@keyframes rFlash{0%,100%{opacity:1}50%{opacity:.3}}
+#ecgCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 
-      // ════════════════════════════════════════
-      // AV BLOCKS
-      // ════════════════════════════════════════
+/* ── MONITOR CONTROLS ─────────────────────────────────── */
+.mon-ctrl{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;background:rgba(0,0,0,.2);border-radius:14px;border:1px solid var(--br)}
+[data-theme="light"] .mon-ctrl{background:rgba(0,0,0,.04)}
+.mc-left{display:flex;align-items:center;gap:14px}
+.mc-tog{display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--mu);cursor:pointer;user-select:none}
+.mc-tog input{accent-color:var(--blue);cursor:pointer}
+.mc-btn{background:rgba(255,255,255,.07);border:1px solid var(--br);color:var(--tx);padding:6px 14px;border-radius:8px;font-size:.76rem;font-weight:600;font-family:inherit;cursor:pointer;transition:background .15s;display:flex;align-items:center;gap:5px}
+.mc-btn:active{background:rgba(255,255,255,.12)}
+.mc-btn.playing{border-color:rgba(34,197,94,.4);color:var(--green)}
 
-      case 'block1': {
-        // 1st Degree: all beats conduct, PR prolonged to 0.28s
-        // Visible: long flat PR segment between P and QRS
-        v = sinusComplex(t % (60 / 68), { pr: 0.28, rAmp: 1.80 });
-        break;
-      }
+/* ── STATS ─────────────────────────────────────────────── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat-card{background:rgba(255,255,255,.05);border:1px solid var(--br);border-radius:14px;padding:12px 10px;text-align:center}
+[data-theme="light"] .stat-card{background:#fff}
+.stat-card.alert{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.07)}
+.sc-lbl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mu);margin-bottom:4px}
+.sc-val{font-size:.9rem;font-weight:800;color:var(--cyan);font-family:var(--mono);word-break:break-word;line-height:1.2}
+.sc-val.red{color:var(--red)}
+.sc-val.yel{color:var(--yellow)}
 
-      case 'block2_1': {
-        // Wenckebach (Mobitz I): progressive PR prolongation, then dropped QRS
-        // Pattern: 3:2 (2 conducted, 1 dropped), each group = 0.80+0.88+0.96 = 2.64s
-        const rrSeq = [0.80, 0.88, 0.96]; // RR intervals in group
-        const prSeq = [0.18, 0.26, null]; // PR for each beat (null = dropped QRS)
-        const gDur  = rrSeq.reduce((a, b) => a + b, 0);
-        const tg    = t % gDur;
-        let cum = 0;
-        for (let i = 0; i < 3; i++) {
-          if (tg >= cum && tg < cum + rrSeq[i]) {
-            const ph = tg - cum;
-            // P wave always present
-            v += G(ph, 0.065, 0.025, 0.13);
-            if (prSeq[i] !== null) {
-              const pr = prSeq[i];
-              v += G(ph,  pr + 0.000, 0.009, -0.07);
-              v += G(ph,  pr + 0.016, 0.008,  1.80);
-              v += G(ph,  pr + 0.030, 0.010, -0.33);
-              v += AG(ph, pr + 0.200, 0.055, 0.085, 0.36);
-            }
-            break;
-          }
-          cum += rrSeq[i];
-        }
-        break;
-      }
+/* ── RHYTHM PICKER ─────────────────────────────────────── */
+.rhythm-picker-btn{
+  width:100%;background:rgba(4,12,24,.85);border:1.5px solid var(--br);
+  border-radius:14px;padding:13px 16px;color:var(--tx);font-size:.88rem;
+  font-family:inherit;font-weight:600;outline:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  transition:border-color .2s;
+}
+[data-theme="light"] .rhythm-picker-btn,[data-theme="sepia"] .rhythm-picker-btn{background:rgba(0,0,0,.05)}
+.rhythm-picker-btn:hover{border-color:var(--blue)}
+.rpb-left{display:flex;align-items:center;gap:8px;min-width:0}
+.rpb-cat{font-size:.58rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--mu);flex-shrink:0}
+.rpb-name{font-size:.86rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rpb-arrow{font-size:.9rem;color:var(--mu);flex-shrink:0;transition:transform .25s}
+.rpb-arrow.open{transform:rotate(180deg)}
 
-      case 'block2_2': {
-        // Mobitz II: constant PR, sudden dropped QRS (3:1 ratio shown here)
-        // Regular P waves, every 3rd fails to conduct → slow ventricular rate
-        const pRR  = 0.82; // P-P interval
-        const ratio = 3;   // conduct ratio (1 dropped per group)
-        const pr    = 0.20; // constant PR
-        const gDur  = pRR * ratio;
-        const tg    = t % gDur;
-        for (let i = 0; i < ratio; i++) {
-          const bs = i * pRR;
-          const ph = tg - bs;
-          if (ph >= 0 && ph < pRR) {
-            // P wave every beat
-            v += G(ph, 0.065, 0.025, 0.12);
-            // QRS only for first (ratio-1) beats, last P is blocked
-            if (i < ratio - 1) {
-              v += G(ph,  pr + 0.000, 0.009, -0.07);
-              v += G(ph,  pr + 0.016, 0.008,  1.80);
-              v += G(ph,  pr + 0.030, 0.010, -0.33);
-              v += AG(ph, pr + 0.200, 0.055, 0.085, 0.34);
-            }
-          }
-        }
-        break;
-      }
+/* Bottom sheet picker */
+.picker-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.72);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  z-index:300;display:none;flex-direction:column;justify-content:flex-end;
+}
+.picker-overlay.open{display:flex;animation:poFI .22s ease}
+@keyframes poFI{from{opacity:0}to{opacity:1}}
+.picker-sheet{
+  background:var(--panel);
+  border-top:1px solid var(--br2);
+  border-radius:22px 22px 0 0;
+  display:flex;flex-direction:column;
+  max-height:88vh;
+  padding-bottom:max(16px,env(safe-area-inset-bottom));
+  animation:poSU .32s cubic-bezier(.25,1,.5,1);
+  box-shadow:0 -4px 32px rgba(0,0,0,.35);
+}
+[data-theme="light"] .picker-sheet{background:#f2f2f7}
+[data-theme="sepia"] .picker-sheet{background:#f0e6d0}
+@keyframes poSU{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+.ps-handle-wrap{padding:10px 0 4px;display:flex;justify-content:center;cursor:pointer;flex-shrink:0}
+.ps-handle{width:36px;height:4px;border-radius:2px;background:rgba(128,128,128,.3)}
+.ps-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:6px 16px 14px;border-bottom:1px solid var(--br2);flex-shrink:0;
+}
+.ps-title{font-size:1rem;font-weight:800;letter-spacing:-.3px}
+.ps-close{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--br);color:var(--mu);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.78rem;transition:background .15s}
+.ps-close:active{background:rgba(255,255,255,.12)}
 
-      case 'block3': {
-        // Complete Heart Block: P waves (80/min) and QRS (35/min) fire INDEPENDENTLY
-        // Wide escape QRS. P waves march through QRS at different rate.
-        const pRR  = 60 / 80;   // 0.750s P-P
-        const qRR  = 60 / 35;   // 1.714s QRS-QRS (ventricular escape)
-        // Phase offset ensures P and QRS don't always coincide at startup
-        const pPh  = t % pRR;
-        const qPh  = (t + 0.38) % qRR; // 0.38s offset
+/* Picker search */
+.ps-search-wrap{padding:10px 14px;border-bottom:1px solid var(--br);flex-shrink:0}
+.ps-search-box{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1.5px solid var(--br);border-radius:10px;padding:8px 12px;transition:border-color .2s}
+.ps-search-box:focus-within{border-color:rgba(59,130,246,.5)}
+[data-theme="light"] .ps-search-box{background:rgba(0,0,0,.04)}
+.ps-search-ico{font-size:.78rem;color:var(--mu);flex-shrink:0}
+.ps-search-inp{flex:1;background:transparent;border:none;outline:none;font-size:.84rem;font-family:inherit;color:var(--tx)}
+.ps-search-inp::placeholder{color:var(--mu)}
+.ps-search-count{font-size:.68rem;font-family:var(--mono);color:var(--mu);flex-shrink:0}
 
-        // Narrow P waves (atrial activity — normal)
-        v += G(pPh, 0.050, 0.022, 0.14);
+/* ── PICKER LIST ────────────────────────────────────────── */
+.ps-list{overflow-y:auto;flex:1;padding:0}
+.ps-list::-webkit-scrollbar{width:3px}
+.ps-list::-webkit-scrollbar-thumb{background:rgba(128,128,128,.2);border-radius:2px}
 
-        // WIDE ventricular escape QRS (infranodal)
-        v += G(qPh,  0.040, 0.028, -0.15);
-        v += G(qPh,  0.092, 0.042,  1.72);
-        v += G(qPh,  0.148, 0.032, -0.66);
-        // Discordant T wave (opposite to main QRS deflection)
-        v += AG(qPh, 0.290, 0.062, 0.092, -0.42);
-        break;
-      }
+/* Category divider — iOS style: "── LABEL ──" */
+.ps-cat-hdr{
+  display:flex;align-items:center;gap:10px;
+  padding:18px 20px 8px;
+  font-size:.68rem;font-weight:800;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--mu);
+  pointer-events:none;
+}
+.ps-cat-hdr::before,.ps-cat-hdr::after{
+  content:'';flex:1;height:1px;background:var(--br2);
+}
+/* Category text colors */
+.pch-sinus  {color:var(--green)}
+.pch-atrial {color:var(--yellow)}
+.pch-vent   {color:var(--orange)}
+.pch-arrest {color:var(--red)}
+.pch-block  {color:var(--cyan)}
+.pch-stemi  {color:#a855f7}
 
-      // ════════════════════════════════════════
-      // STEMI / ACS
-      // ════════════════════════════════════════
+/* Row item — clean, flat, no border radius */
+.ps-item{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 20px;cursor:pointer;
+  border:none;border-bottom:1px solid var(--br);
+  background:transparent;
+  transition:background .12s;
+  -webkit-user-select:none;user-select:none;
+}
+.ps-item:last-child{border-bottom:none}
+.ps-item:active{background:rgba(59,130,246,.08)}
+[data-theme="light"] .ps-item:active{background:rgba(37,99,235,.07)}
+.ps-item.hidden{display:none}
 
-      case 'stemi_inf':
-      case 'stemi_ant':
-      case 'stemi_sep':
-      case 'stemi_lat': {
-        v = sinusComplex(t % (60 / 80), { pr: 0.16, stElev: 0.36, rAmp: 1.80 });
-        break;
-      }
+/* Left: small colour dot for category */
+.pi-dot{
+  width:9px;height:9px;border-radius:50%;flex-shrink:0;
+  box-shadow:0 0 5px currentColor;
+}
 
-      case 'stemi_ext': {
-        // Extensive anterior — larger ST elevation, slightly faster rate
-        v = sinusComplex(t % (60 / 95), { pr: 0.16, stElev: 0.50, rAmp: 1.70 });
-        break;
-      }
+/* Rhythm name — left aligned, grows */
+.pi-name{
+  flex:1;font-size:.95rem;font-weight:500;
+  color:var(--tx);line-height:1.3;
+}
+.ps-item.active .pi-name{font-weight:700;color:var(--tx)}
 
-      case 'stdepress': {
-        // ST depression (NSTEMI / ischaemia) — negative stElev
-        v = sinusComplex(t % (60 / 82), { pr: 0.16, stElev: -0.30, rAmp: 1.80 });
-        break;
-      }
+/* Right: radio circle (empty or filled blue) */
+.pi-radio{
+  width:22px;height:22px;border-radius:50%;flex-shrink:0;
+  border:2px solid rgba(128,128,128,.5);
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color .15s;
+}
+.ps-item.active .pi-radio{
+  border-color:var(--blue);
+  background:var(--blue);
+}
+.pi-radio-inner{
+  width:8px;height:8px;border-radius:50%;
+  background:#fff;display:none;
+}
+.ps-item.active .pi-radio-inner{display:block}
 
-      case 'tinvert': {
-        // T-wave inversion
-        v = sinusComplex(t % (60 / 75), { pr: 0.16, tInv: true, rAmp: 1.72 });
-        break;
-      }
+/* Priority badge — hidden by default, shown on active */
+.pi-pri{display:none}
+.ps-item.active .pi-pri{
+  display:inline-flex;
+  font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  border-radius:20px;padding:2px 8px;border:1px solid;flex-shrink:0;
+}
+.pi-g{color:var(--green);border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.1)}
+.pi-y{color:var(--yellow);border-color:rgba(234,179,8,.35);background:rgba(234,179,8,.1)}
+.pi-o{color:var(--orange);border-color:rgba(249,115,22,.35);background:rgba(249,115,22,.1)}
+.pi-r{color:var(--red);border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.1)}
+.pi-a{color:#fca5a5;border-color:rgba(239,68,68,.55);background:rgba(239,68,68,.15)}
+.pi-check{display:none}
 
-      default: {
-        v = sinusComplex(t % (60 / 72), { pr: 0.16 });
-        break;
-      }
+/* ── CDE SECTIONS ─────────────────────────────────────── */
+.cde-sec{border-radius:18px;overflow:hidden;border:1px solid var(--br)}
+.cde-hdr{display:flex;align-items:center;gap:8px;padding:11px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid var(--br);font-size:.67rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--mu)}
+[data-theme="light"] .cde-hdr{background:rgba(0,0,0,.03)}
+.cde-blk{padding:12px 16px;border-bottom:1px solid var(--br)}
+.cde-blk:last-child{border-bottom:none}
+.cde-text{font-size:.82rem;color:var(--tx);line-height:1.65}
+
+/* Drug cards */
+.drug-card{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:12px;border:1px solid var(--br);background:rgba(255,255,255,.03);margin-bottom:6px}
+.drug-card:last-child{margin-bottom:0}
+.drug-card.crit{border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.06)}
+.drug-card.pri{border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.06)}
+.drug-card.warn{border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.06)}
+.drug-card.contra{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.1)}
+.dc-ico{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.dc-name{font-size:.8rem;font-weight:700;color:var(--tx);margin-bottom:2px}
+.dc-dose{font-size:.74rem;color:var(--mu);line-height:1.4}
+
+/* Arrest pathway steps */
+.step-card{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:12px;border:1px solid var(--br);background:rgba(255,255,255,.03);margin-bottom:6px}
+.step-card:last-child{margin-bottom:0}
+.step-n{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.step-n.sh{background:rgba(239,68,68,.2);border:1px solid rgba(239,68,68,.4)}
+.step-n.ep{background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3)}
+.step-n.dr{background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3)}
+.step-ti{font-size:.78rem;font-weight:700;color:var(--tx);margin-bottom:2px}
+.step-de{font-size:.72rem;color:var(--mu);line-height:1.4}
+
+/* Lead badges for STEMI */
+.lb{display:inline-flex;align-items:center;justify-content:center;background:rgba(59,130,246,.14);border:1px solid rgba(59,130,246,.34);color:var(--blue);padding:2px 8px;border-radius:6px;font-family:var(--mono);font-size:.76rem;font-weight:700;margin:2px}
+.lb.rec{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.28);color:var(--orange)}
+.zone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}
+.zone-box{padding:6px 4px;border-radius:8px;text-align:center;border:1px solid var(--br);font-size:.65rem;font-weight:700;background:rgba(255,255,255,.03)}
+.zone-box.hot{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.1);color:#fca5a5}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <a class="hdr-back" href="index.html">←</a>
+  <div class="hdr-badge">🫀</div>
+  <div class="hdr-info">
+    <div class="hdr-title">ECG Trainer</div>
+    <div class="hdr-sub">DCAS CPG 2026 · Real-Time Physics Engine</div>
+  </div>
+  <div class="hdr-right">
+    <div class="theme-pills">
+      <div class="tp tp-dark"  id="tp-dark"  onclick="setTheme('dark')"  title="Dark"></div>
+      <div class="tp tp-light" id="tp-light" onclick="setTheme('light')" title="Light"></div>
+      <div class="tp tp-sepia" id="tp-sepia" onclick="setTheme('sepia')" title="Sepia"></div>
+      <div class="tp tp-green" id="tp-green" onclick="setTheme('green')" title="Green"></div>
+    </div>
+    <div class="hdr-live" id="liveDot"></div>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <!-- PRIORITY BANNER -->
+  <div class="prio-banner b-green" id="prioBanner">
+    <div class="pb-ico">✅</div>
+    <div>
+      <div class="pb-level" id="prioLevel">GREEN — STABLE</div>
+      <div class="pb-msg" id="prioMsg">Normal Sinus Rhythm</div>
+      <div class="pb-sub" id="prioSub">Routine monitoring. No intervention required.</div>
+    </div>
+  </div>
+
+  <!-- ECG MONITOR -->
+  <div class="monitor-wrap">
+    <div class="mon-info" id="monInfo">LEAD II · 25 mm/s · 1 mV/cm</div>
+    <div class="mon-rate" id="monRate">72 bpm</div>
+    <canvas id="ecgCanvas"></canvas>
+  </div>
+
+  <!-- MONITOR CONTROLS -->
+  <div class="mon-ctrl">
+    <div class="mc-left">
+      <label class="mc-tog">
+        <input type="checkbox" id="noiseToggle" onchange="noiseOn=this.checked">
+        Artifact
+      </label>
+      <label class="mc-tog">
+        <input type="checkbox" id="wanderToggle" onchange="wanderOn=this.checked" checked>
+        Baseline wander
+      </label>
+    </div>
+    <div style="display:flex;gap:6px">
+      <button class="mc-btn" onclick="calPulse()" title="1mV calibration pulse">Cal 1mV</button>
+      <button class="mc-btn playing" id="pauseBtn" onclick="togglePause()">⏸ Pause</button>
+    </div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="stats-row">
+    <div class="stat-card" id="statRate">
+      <div class="sc-lbl">Heart Rate</div>
+      <div class="sc-val" id="svRate">72 bpm</div>
+    </div>
+    <div class="stat-card" id="statQRS">
+      <div class="sc-lbl">QRS Width</div>
+      <div class="sc-val" id="svQRS">Narrow</div>
+    </div>
+    <div class="stat-card" id="statPR">
+      <div class="sc-lbl">PR Interval</div>
+      <div class="sc-val" id="svPR">160 ms</div>
+    </div>
+  </div>
+
+  <!-- RHYTHM PICKER BUTTON -->
+  <button class="rhythm-picker-btn" id="rhythmPickerBtn" onclick="openPicker()">
+    <div class="rpb-left">
+      <span class="rpb-cat" id="rpbCat">SINUS</span>
+      <span class="rpb-name" id="rpbName">Normal Sinus Rhythm (NSR)</span>
+    </div>
+    <span class="rpb-arrow" id="rpbArrow">▾</span>
+  </button>
+
+  <!-- RHYTHM PICKER BOTTOM SHEET -->
+  <div class="picker-overlay" id="pickerOverlay" onclick="if(event.target===this)closePicker()">
+    <div class="picker-sheet">
+      <div class="ps-handle-wrap" onclick="closePicker()"><div class="ps-handle"></div></div>
+      <div class="ps-head">
+        <span class="ps-title">Select Rhythm</span>
+        <div class="ps-close" onclick="closePicker()">✕</div>
+      </div>
+      <div class="ps-search-wrap">
+        <div class="ps-search-box">
+          <span class="ps-search-ico">🔍</span>
+          <input class="ps-search-inp" id="psSearchInp" type="text"
+                 placeholder="Search rhythms…"
+                 autocomplete="off" oninput="filterPicker(this.value)">
+          <span class="ps-search-count" id="psCount">23</span>
+        </div>
+      </div>
+      <div class="ps-list" id="psList"></div>
+    </div>
+  </div>
+
+  <!-- RHYTHM INFO + CDE -->
+  <div id="cdeContainer"></div>
+
+</div><!-- /page-body -->
+
+<script>
+'use strict';
+/* ════════════════════════════════════════════════════════════
+   RHYTHM DATABASE — clinical data per rhythm
+   (Engine handles waveform; this handles UI + clinical logic)
+════════════════════════════════════════════════════════════ */
+const RDB = {
+  nsr:{lbl:'Normal Sinus Rhythm',cat:'sinus',rn:72,pri:'GREEN',
+    pMsg:'Normal Sinus Rhythm',
+    pSub:'Routine monitoring. No intervention required.',
+    char:'Regular · Rate 60–100 bpm · P before every QRS · Normal P-QRS-T · Constant PR interval',
+    pr:'160 ms',qrs:'Narrow < 120 ms',
+    drugs:[{i:'✅',n:'No acute medications',d:'Routine monitoring only',c:''}],
+    arrest:false,stemi:false},
+
+  stach:{lbl:'Sinus Tachycardia',cat:'sinus',rn:120,pri:'YELLOW',
+    pMsg:'Sinus Tachycardia',
+    pSub:'Treat the underlying cause — not the rate.',
+    char:'Regular · Rate > 100 bpm · P before every QRS · Faster spacing between beats · P may merge with T at high rates',
+    pr:'140 ms',qrs:'Narrow < 120 ms',
+    drugs:[
+      {i:'🔍',n:'Identify and treat the cause',d:'Pain / Hypovolemia / Fever / Anxiety / Hypoxia',c:'pri'},
+      {i:'💧',n:'IV Fluid Challenge',d:'NS 250–500 mL if hypovolemia suspected',c:''},
+      {i:'💊',n:'Analgesia if pain-driven',d:'Morphine 2–4 mg IV | Fentanyl 1–2 mcg/kg',c:''}
+    ],arrest:false,stemi:false},
+
+  sbrady:{lbl:'Sinus Bradycardia',cat:'sinus',rn:45,pri:'YELLOW',
+    pMsg:'Sinus Bradycardia',
+    pSub:'Treat ONLY if symptomatic: hypotension, syncope, altered LOC, chest pain.',
+    char:'Regular · Rate < 60 bpm · WIDE spacing between beats · Normal P-QRS-T · May be physiological (athletes)',
+    pr:'180 ms',qrs:'Narrow < 120 ms',
+    drugs:[
+      {i:'⚕️',n:'Atropine',d:'1 mg IV bolus — repeat every 3–5 min to max 3 mg',c:'pri'},
+      {i:'⚡',n:'Transcutaneous Pacing',d:'Rate 60–70 bpm · 50–100 mA — if Atropine fails',c:'warn'},
+      {i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing unavailable',c:''}
+    ],arrest:false,stemi:false},
+
+  svt:{lbl:'Paroxysmal SVT',cat:'atrial',rn:180,pri:'ORANGE',
+    pMsg:'SVT — Supraventricular Tachycardia',
+    pSub:'Abrupt onset/offset. Rate ≥ 150. No visible P waves. Adenosine first line.',
+    char:'Rapid regular narrow complex · Rate 150–250 bpm · P waves: OFTEN NOT VISIBLE — buried inside or just after the QRS complex (retrograde conduction) · Abrupt onset &amp; termination · No R-R variation · Retrograde P may produce a small notch at the terminal end of the T wave · No distinct P wave before QRS',
+    pr:'Often not visible — buried in QRS (retrograde)',qrs:'Narrow < 120 ms',
+    drugs:[
+      {i:'🫁',n:'Vagal Manoeuvres',d:'Modified Valsalva — legs raised 45° · Carotid sinus massage',c:'pri'},
+      {i:'💊',n:'Adenosine — 1st dose',d:'6 mg IV RAPID bolus + 20 mL NS flush immediately',c:'crit'},
+      {i:'💊',n:'Adenosine — 2nd dose',d:'12 mg IV RAPID bolus — if 1st fails after 1–2 min',c:'crit'},
+      {i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}
+    ],arrest:false,stemi:false},
+
+  afib:{lbl:'Atrial Fibrillation',cat:'atrial',rn:0,pri:'ORANGE',
+    pMsg:'Atrial Fibrillation',
+    pSub:'Irregularly irregular. Rate control if rapid. Cardiovert if unstable.',
+    char:'Irregularly irregular · No P waves · Fibrillatory baseline · Variable R-R intervals · Narrow QRS unless aberrant',
+    pr:'None — no P waves',qrs:'Narrow < 120 ms (usually)',
+    drugs:[
+      {i:'⚡',n:'Synchronized Cardioversion',d:'120–200 J biphasic — if haemodynamically unstable',c:'crit'},
+      {i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min (rate or rhythm control)',c:'pri'},
+      {i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min — rate control',c:''},
+      {i:'🩸',n:'Anticoagulation',d:'Per protocol if onset > 48 h or unknown',c:'warn'}
+    ],arrest:false,stemi:false},
+
+  aflutter:{lbl:'Atrial Flutter (3:1)',cat:'atrial',rn:100,pri:'ORANGE',
+    pMsg:'Atrial Flutter — 3:1 Block',
+    pSub:'Classic sawtooth F-waves ~300/min. 3:1 block → ventricular rate ~100 bpm. Three flutter teeth per QRS complex.',
+    char:'Sawtooth flutter waves best seen in II, III, aVF · Atrial rate ~300/min · Ventricular rate ~100 bpm (3:1) · Three F-waves per QRS · Regular · Narrow QRS · "Picket fence" baseline pattern',
+    pr:'N/A — flutter waves',qrs:'Narrow < 120 ms',
+    drugs:[
+      {i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J biphasic — first line if unstable',c:'crit'},
+      {i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min',c:'pri'},
+      {i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min',c:''}
+    ],arrest:false,stemi:false},
+
+  vtach:{lbl:'Ventricular Tachycardia (Monomorphic)',cat:'vent',rn:180,pri:'RED',
+    pMsg:'Ventricular Tachycardia',
+    pSub:'Wide complex tachycardia. CHECK PULSE FIRST. Treat as VT until proven otherwise.',
+    char:'Monomorphic wide QRS (> 120 ms) · Rate 150–250 bpm · No visible P waves · AV dissociation · Concordance in precordial leads',
+    pr:'None — AV dissociation',qrs:'Wide > 120 ms',
+    drugs:[
+      {i:'⚡',n:'PULSELESS VT → Defibrillation',d:'200 J unsynchronized biphasic — DO NOT DELAY',c:'crit'},
+      {i:'⚡',n:'VT with pulse + unstable → Synchronized Cardioversion',d:'100 J biphasic synchronized',c:'crit'},
+      {i:'💊',n:'Amiodarone (stable VT with pulse)',d:'150 mg IV over 10 min',c:'pri'},
+      {i:'🔌',n:'CPR if pulseless',d:'30:2 high-quality CPR while charging defibrillator',c:'warn'}
+    ],
+    arrest:true,shockable:true,
+    steps:[
+      {n:'⚡',t:'sh',ti:'Defibrillate 200 J — Unsynchronized',de:'Pulseless VT. Do NOT delay. Charge while doing CPR.'},
+      {n:'🔌',t:'ep',ti:'CPR — 2 min immediately post-shock',de:'30:2 · 100–120/min · 5–6 cm depth · Full recoil.'},
+      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
+      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. Second dose: 150 mg if refractory.'},
+      {n:'🔄',t:'sh',ti:'Reassess rhythm every 2 min',de:'Still shockable? → Shock → CPR → Epi → Amiodarone.'}
+    ]},
+
+  torsades:{lbl:'Torsades de Pointes',cat:'vent',rn:220,pri:'RED',
+    pMsg:'Torsades de Pointes',
+    pSub:'"Twisting of the Points" — sinusoidal QRS complexes rotating around the baseline. Prolonged QTc. Mg²⁺ is definitive treatment.',
+    char:'"Twisting of the Points" — QRS sine-wave complexes ROTATE around the isoelectric baseline in a sinusoidal (spindle) pattern · Amplitude waxes and wanes · Polarity continuously reverses above/below baseline · Associated with prolonged QTc > 500 ms · Runs of 5–20 beats typical',
+    pr:'None',qrs:'Variable — wide and polymorphic',
+    drugs:[
+      {i:'⚡',n:'Defibrillation (if pulseless)',d:'200 J unsynchronized biphasic — IMMEDIATE',c:'crit'},
+      {i:'💊',n:'Magnesium Sulfate — FIRST LINE',d:'2 g IV over 1–2 min regardless of Mg²⁺ level',c:'pri'},
+      {i:'🚫',n:'AVOID: Amiodarone / Sotalol / Class Ia',d:'All PROLONG QT — CONTRAINDICATED in Torsades',c:'contra'},
+      {i:'⚡',n:'Overdrive Pacing',d:'Rate 90–110 bpm — if Mg²⁺ fails (shortens QT)',c:'warn'}
+    ],
+    arrest:true,shockable:true,
+    steps:[
+      {n:'⚡',t:'sh',ti:'Defibrillate 200 J if pulseless',de:'Unsynchronized. Resume CPR immediately.'},
+      {n:'💊',t:'dr',ti:'Magnesium Sulfate 2 g IV over 1–2 min',de:'Definitive treatment. Give regardless of Mg²⁺ level.'},
+      {n:'🔌',t:'ep',ti:'CPR — 2 min between shocks',de:'Continue during defibrillator charging.'},
+      {n:'🚫',t:'dr',ti:'Do NOT give Amiodarone or Sotalol',de:'Both prolong QT and worsen Torsades.'}
+    ]},
+
+  coarseVf:{lbl:'Coarse Ventricular Fibrillation',cat:'arrest',rn:0,pri:'ARREST',
+    pMsg:'Coarse VF — SHOCKABLE ARREST RHYTHM',
+    pSub:'CPR → Defibrillate 200 J immediately. Every minute without shock = 10% survival reduction.',
+    char:'SHOCKABLE ARREST · Chaotic high-amplitude deflections · No organized P waves, QRS, or T waves · Rapid chaotic baseline',
+    pr:'None',qrs:'None — no organized complexes',
+    drugs:[
+      {i:'⚡',n:'Defibrillation — IMMEDIATE FIRST ACTION',d:'200 J biphasic unsynchronized — DO NOT DELAY',c:'crit'},
+      {i:'🔌',n:'High-Quality CPR',d:'30:2 · 100–120/min · 5–6 cm · Full recoil · Minimise interruptions',c:'warn'},
+      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'After 1st or 2nd shock · Every 3–5 min',c:'pri'},
+      {i:'💊',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock · 2nd dose 150 mg if refractory',c:'pri'}
+    ],
+    arrest:true,shockable:true,
+    steps:[
+      {n:'⚡',t:'sh',ti:'Defibrillate 200 J — DO NOT DELAY',de:'Biphasic unsynchronized. Resume CPR immediately after.'},
+      {n:'🔌',t:'ep',ti:'CPR 2 min · 30:2 · 100–120/min',de:'Continue during defibrillator charging. Push hard, push fast.'},
+      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
+      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. 2nd dose: 150 mg if still refractory.'},
+      {n:'🔄',t:'sh',ti:'Reassess every 2 min',de:'Shockable? → Shock → CPR → Epi → Amiodarone cycle.'}
+    ]},
+
+  fineVf:{lbl:'Fine Ventricular Fibrillation',cat:'arrest',rn:0,pri:'ARREST',
+    pMsg:'Fine VF — SHOCKABLE ARREST RHYTHM',
+    pSub:'Low amplitude VF. Verify in ≥ 2 leads — do NOT mistake for asystole.',
+    char:'SHOCKABLE ARREST · Low-amplitude chaotic deflections · Confirm in ≥ 2 leads · Change lead axis before calling asystole',
+    pr:'None',qrs:'None — low amplitude chaos',
+    drugs:[
+      {i:'⚡',n:'Defibrillation',d:'200 J unsynchronized biphasic',c:'crit'},
+      {i:'🔍',n:'Confirm in ≥ 2 leads first',d:'Change lead axis — never call asystole in one lead',c:'warn'},
+      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min · May coarsen fine VF → better defib success',c:'pri'},
+      {i:'💊',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock',c:'pri'}
+    ],
+    arrest:true,shockable:true,
+    steps:[
+      {n:'🔍',t:'dr',ti:'Confirm in ≥ 2 leads — fine VF vs asystole',de:'Change lead orientation before declaring non-shockable.'},
+      {n:'⚡',t:'sh',ti:'Defibrillate 200 J if VF confirmed',de:'Unsynchronized biphasic. Immediately resume CPR.'},
+      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO every 3–5 min',de:'May coarsen fine VF and improve defibrillation success.'},
+      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock.'}
+    ]},
+
+  asystole:{lbl:'Asystole',cat:'arrest',rn:0,pri:'ARREST',
+    pMsg:'Asystole — NON-SHOCKABLE',
+    pSub:'CPR + Epinephrine immediately. Verify in 2 leads. Treat reversible causes (4H/4T).',
+    char:'NON-SHOCKABLE · Flat isoelectric line · Confirm in ≥ 2 leads (fine VF can mimic) · Check cables and gain · Complete cessation of electrical activity',
+    pr:'None',qrs:'None',
+    drugs:[
+      {i:'🔌',n:'High-Quality CPR — IMMEDIATELY',d:'30:2 · 100–120/min · 5–6 cm depth · Minimise interruptions',c:'crit'},
+      {i:'💉',n:'Epinephrine 1 mg IV/IO ASAP',d:'Every 3–5 min · IO if IV access delayed',c:'pri'},
+      {i:'🔍',n:'4H Causes',d:'Hypoxia · Hypovolemia · Hypo/Hyperkalaemia · Hypothermia',c:'warn'},
+      {i:'🔍',n:'4T Causes',d:'Tension Pneumo · Tamponade · Toxins · Thrombosis (PE/MI)',c:'warn'}
+    ],
+    arrest:true,shockable:false,
+    steps:[
+      {n:'🔍',t:'dr',ti:'Confirm in ≥ 2 leads. Check leads/gain.',de:'Fine VF can look like asystole. Verify before non-shockable.'},
+      {n:'🔌',t:'ep',ti:'CPR — Start immediately, 30:2',de:'Minimise interruptions. Push hard, push fast.'},
+      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO ASAP',de:'Repeat every 3–5 min. IO if IV delayed.'},
+      {n:'🔄',t:'dr',ti:'Search reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'}
+    ]},
+
+  pea:{lbl:'PEA — Pulseless Electrical Activity',cat:'arrest',rn:0,pri:'ARREST',
+    pMsg:'PEA — Pulseless Electrical Activity — NON-SHOCKABLE',
+    pSub:'Organised ECG with NO PULSE. Treat the underlying cause. NEVER shock PEA.',
+    char:'NON-SHOCKABLE · Organised electrical activity on monitor but NO palpable pulse · Can mimic any rhythm · Diagnosis = absence of pulse with organised ECG · Usually caused by reversible condition',
+    pr:'Variable',qrs:'Variable',
+    drugs:[
+      {i:'🔌',n:'CPR — Immediately, do not delay',d:'30:2 · 100–120/min — organised rhythm does NOT mean output',c:'crit'},
+      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min',c:'pri'},
+      {i:'🔍',n:'4H Causes',d:'Hypoxia → O₂ · Hypovolemia → fluids · Hypo/Hyperkalaemia → correct · Hypothermia → warm',c:'warn'},
+      {i:'🔍',n:'4T Causes',d:'Tension Pneumo → needle decomp · Tamponade → pericardiocentesis · Toxins → antidote · Thrombosis → thrombolytics',c:'warn'}
+    ],
+    arrest:true,shockable:false,
+    steps:[
+      {n:'🔌',t:'ep',ti:'CPR immediately — do NOT look at monitor',de:'Organised rhythm does NOT mean cardiac output.'},
+      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO — ASAP',de:'Every 3–5 min. IO if IV delayed.'},
+      {n:'🔍',t:'dr',ti:'Search for reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'},
+      {n:'🔄',t:'dr',ti:'Reassess pulse every 2 min of CPR',de:'ROSC → post-resuscitation care.'}
+    ]},
+
+  block1:{lbl:'1st Degree AV Block',cat:'block',rn:68,pri:'GREEN',
+    pMsg:'1st Degree AV Block',
+    pSub:'Benign in isolation. Monitor for progression to higher-degree block.',
+    char:'Regular · Rate usually normal · Constant PR > 200 ms · All P waves conduct · Narrow QRS · P–QRS relationship intact',
+    pr:'280 ms (prolonged)',qrs:'Narrow < 120 ms',
+    drugs:[
+      {i:'📋',n:'Usually no acute treatment',d:'Investigate cause: medications, inferior MI, myocarditis, Lyme',c:''},
+      {i:'⚠️',n:'Monitor for progression',d:'Can progress to higher-degree block in acute MI or drug toxicity',c:'warn'}
+    ],arrest:false,stemi:false},
+
+  block2_1:{lbl:'2nd Degree AV Block — Wenckebach',cat:'block',rn:55,pri:'YELLOW',
+    pMsg:'2nd Degree AV Block — Wenckebach (Mobitz I)',
+    pSub:'Progressive PR prolongation → dropped QRS. Watch the PR lengthening and pause.',
+    char:'Irregularly irregular (grouped beating) · PR lengthens each cycle · QRS periodically dropped · Narrow QRS · Typically benign but treat if symptomatic',
+    pr:'Progressively lengthens → dropped',qrs:'Narrow < 120 ms (periodically absent)',
+    drugs:[
+      {i:'👀',n:'Observe if asymptomatic',d:'Often benign — inferior MI, increased vagal tone, medications',c:''},
+      {i:'⚕️',n:'Atropine if symptomatic',d:'1 mg IV — repeat every 3–5 min to max 3 mg',c:'pri'},
+      {i:'⚡',n:'Transcutaneous Pacing',d:'If Atropine fails or severe haemodynamic compromise',c:'warn'}
+    ],arrest:false,stemi:false},
+
+  block2_2:{lbl:'2nd Degree AV Block — Mobitz II',cat:'block',rn:50,pri:'RED',
+    pMsg:'2nd Degree AV Block — Mobitz II',
+    pSub:'High risk of progression to complete heart block. Prepare to pace NOW.',
+    char:'Regular P waves · Constant PR interval · Some P waves suddenly blocked · Often wide QRS (infranodal) · High risk of decompensation',
+    pr:'200 ms (constant — key finding)',qrs:'Normal or wide (infranodal block)',
+    drugs:[
+      {i:'⚡',n:'Transcutaneous Pacing — PREPARE IMMEDIATELY',d:'Rate 60–70 bpm. Confirm mechanical capture.',c:'crit'},
+      {i:'⚕️',n:'Atropine — often INEFFECTIVE in Mobitz II',d:'0.5–1 mg IV — may worsen by increasing atrial rate',c:'warn'},
+      {i:'🚑',n:'Urgent transport — transvenous pacing',d:'Infranodal block requires definitive pacing',c:'pri'}
+    ],arrest:false,stemi:false},
+
+  block3:{lbl:'3rd Degree — Complete Heart Block',cat:'block',rn:35,pri:'RED',
+    pMsg:'Complete Heart Block — 3rd Degree AV Block',
+    pSub:'Complete AV dissociation. P waves march through QRS at independent rates. Pace urgently.',
+    char:'P waves and QRS fire independently · P-P regular (atrial rate) · R-R regular (escape rate, different) · PR has NO fixed relationship · Slow wide ventricular escape rhythm',
+    pr:'No fixed relationship (AV dissociation)',qrs:'Wide > 120 ms (ventricular escape)',
+    drugs:[
+      {i:'⚡',n:'Transcutaneous Pacing — FIRST ACTION',d:'Rate 60–70 bpm · 50–100 mA · Confirm mechanical capture',c:'crit'},
+      {i:'⚕️',n:'Atropine 0.5–1 mg IV',d:'Often ineffective — attempt while preparing pacer',c:'warn'},
+      {i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing delayed',c:'pri'},
+      {i:'🚑',n:'Urgent transport — transvenous pacing',d:'TCP is bridge therapy only',c:'pri'}
+    ],arrest:false,stemi:false},
+
+  stemi_inf:{lbl:'Inferior STEMI (RCA)',cat:'stemi',rn:78,pri:'RED',
+    pMsg:'STEMI — Inferior MI (Right Coronary Artery)',
+    pSub:'⚠️ WITHHOLD Nitroglycerin until RV involvement ruled out (V4R). Risk of collapse.',
+    char:'ST elevation <b>II, III, aVF</b> · Reciprocal ST depression in <b>I, aVL</b> · RCA occlusion (80%) · HIGH RISK: check RV infarct (V4R) and bradyarrhythmias',
+    pr:'160 ms',qrs:'Narrow',
+    elev:['II','III','aVF'],rec:['I','aVL'],
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'⚠️',n:'Nitroglycerin — WITHHOLD if RV involvement',d:'Give ONLY if SBP > 100, no RV infarct, no PDE5 inhibitor use in 48h',c:'contra'},
+      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'Avoid hyperoxia',c:''},
+      {i:'🚑',n:'12-Lead ECG + V4R · Rapid PCI',d:'Cath lab activation. Door-to-balloon < 90 min.',c:'pri'}
+    ],arrest:false,stemi:true,
+    sd:{terr:'Inferior Wall',art:'Right Coronary Artery (RCA) — 80% | LCx — 20%',zones:{Sep:0,Ant:0,Lat:0,Inf:1,RV:1}}},
+
+  stemi_ant:{lbl:'Anterior STEMI (LAD)',cat:'stemi',rn:90,pri:'RED',
+    pMsg:'STEMI — Anterior MI (Left Anterior Descending)',
+    pSub:'Large territory. High risk cardiogenic shock and VT/VF. Rapid PCI essential.',
+    char:'ST elevation in <b>V3, V4</b> · Reciprocal in II, III, aVF · Loss of R-wave progression · LAD occlusion',
+    pr:'160 ms',qrs:'Narrow',
+    elev:['V3','V4'],rec:['II','III','aVF'],
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Monitor BP closely',c:'pri'},
+      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'🚑',n:'12-Lead ECG · Rapid PCI · Cath lab activation',d:'Door-to-balloon < 90 min. Notify en route.',c:'pri'}
+    ],arrest:false,stemi:true,
+    sd:{terr:'Anterior Wall',art:'Left Anterior Descending (LAD)',zones:{Sep:0,Ant:1,Lat:0,Inf:0,RV:0}}},
+
+  stemi_sep:{lbl:'Septal STEMI (LAD)',cat:'stemi',rn:85,pri:'RED',
+    pMsg:'STEMI — Septal MI (LAD Septal Perforators)',
+    pSub:'High risk of complete heart block. Monitor PR closely. Have pacing ready.',
+    char:'ST elevation in <b>V1, V2</b> · Risk of conduction system damage (AV block, BBB) · Often co-exists with anterior STEMI',
+    pr:'160 ms',qrs:'Narrow',
+    elev:['V1','V2'],rec:[],
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
+      {i:'📡',n:'Monitor PR interval',d:'Septal MI → risk of AV block · Have pacing ready',c:'warn'},
+      {i:'🚑',n:'Rapid PCI transport',d:'12-Lead ECG · Notify cath lab en route',c:'pri'}
+    ],arrest:false,stemi:true,
+    sd:{terr:'Septal Wall',art:'LAD — Septal Perforating Branches',zones:{Sep:1,Ant:0,Lat:0,Inf:0,RV:0}}},
+
+  stemi_lat:{lbl:'Lateral STEMI (LCx)',cat:'stemi',rn:80,pri:'RED',
+    pMsg:'STEMI — Lateral MI (Left Circumflex Artery)',
+    pSub:'May be missed on Lead II monitoring. Always perform 12-lead.',
+    char:'ST elevation in <b>I, aVL, V5, V6</b> · Reciprocal in II, III, aVF · LCx occlusion',
+    pr:'160 ms',qrs:'Narrow',
+    elev:['I','aVL','V5','V6'],rec:['II','III','aVF'],
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
+      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'🚑',n:'Rapid PCI transport · 12-Lead ECG',d:'Notify receiving facility en route',c:'pri'}
+    ],arrest:false,stemi:true,
+    sd:{terr:'Lateral Wall',art:'Left Circumflex Artery (LCx)',zones:{Sep:0,Ant:0,Lat:1,Inf:0,RV:0}}},
+
+  stemi_ext:{lbl:'Extensive Anterior STEMI (Proximal LAD)',cat:'stemi',rn:95,pri:'RED',
+    pMsg:'STEMI — Extensive Anterior MI ("Widow Maker" — Proximal LAD)',
+    pSub:'Largest territory. Highest risk: VF, CHB, cardiogenic shock. Most lethal STEMI.',
+    char:'ST elevation <b>V1–V6, I, aVL</b> · Massive LV territory · Proximal LAD occlusion · Risk of VF, complete block, cardiogenic shock',
+    pr:'160 ms',qrs:'Narrow',
+    elev:['V1','V2','V3','V4','V5','V6','I','aVL'],rec:['II','III','aVF'],
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'ONLY if SBP > 100 — extreme haemodynamic caution',c:'warn'},
+      {i:'📡',n:'Continuous monitoring — VF risk',d:'Defibrillator immediately available. Amiodarone on standby.',c:'warn'},
+      {i:'🚑',n:'Emergency PCI — MAXIMUM URGENCY',d:'Call cath lab activation NOW. This is a MAJOR MI.',c:'crit'}
+    ],arrest:false,stemi:true,
+    sd:{terr:'Extensive Anterior Wall',art:'Proximal LAD (before 1st Diagonal) — "Widow Maker"',zones:{Sep:1,Ant:1,Lat:1,Inf:0,RV:0}}},
+
+  stdepress:{lbl:'ST Depression / NSTEMI',cat:'stemi',rn:82,pri:'ORANGE',
+    pMsg:'ST Depression — Ischaemia / NSTEMI',
+    pSub:'High-risk ACS. Aspirin + ACS protocol. Monitor for STEMI progression.',
+    char:'ST segment ≥ 0.5 mm below baseline · Subendocardial ischaemia or NSTEMI · Reciprocal changes of posterior STEMI · Requires troponin to confirm NSTEMI',
+    pr:'160 ms',qrs:'Narrow',
+    drugs:[
+      {i:'💊',n:'Aspirin 300–325 mg PO',d:'Immediately. Chew and swallow.',c:'crit'},
+      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Symptom relief',c:'pri'},
+      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'🚑',n:'12-Lead ECG · ACS protocol · Hospital notification',d:'NSTEMI → ACS pathway. Monitor for STEMI progression.',c:'pri'}
+    ],arrest:false,stemi:false},
+
+  tinvert:{lbl:'T-Wave Inversion',cat:'stemi',rn:75,pri:'YELLOW',
+    pMsg:'T-Wave Inversion',
+    pSub:'Context-dependent. Wellens syndrome (V2–V3 deep symmetric) = proximal LAD critical stenosis.',
+    char:'T wave deflected below baseline · Causes: ischaemia, Wellens syndrome, LVH, PE, digoxin · Wellens (V2–V3 deep symmetric) = proximal LAD stenosis — DO NOT stress test',
+    pr:'160 ms',qrs:'Narrow',
+    drugs:[
+      {i:'🔍',n:'Correlate clinically',d:'ACS symptoms → ACS protocol immediately',c:'warn'},
+      {i:'💊',n:'Aspirin 300–325 mg if ACS suspected',d:'Chew and swallow',c:'pri'},
+      {i:'📡',n:'Serial ECGs',d:'Dynamic T-wave changes support ischaemia. Repeat every 15 min.',c:''},
+      {i:'🚑',n:'Wellens syndrome',d:'→ Coronary angiography urgently. Do NOT stress test.',c:'warn'}
+    ],arrest:false,stemi:false}
+};
+
+/* ════════════════════════════════════════════════════════════
+   ECG CANVAS RENDERER
+   Physics engine (ecg-engine.js) generates amplitude samples.
+   This code renders them on canvas with scrolling playback.
+════════════════════════════════════════════════════════════ */
+const SAMPLE_RATE    = 500;  // Hz
+const PX_PER_SEC     = 150;  // scroll speed (pixels/second at 1x DPR)
+let canvas, ctx, dpr;
+let bufferSize = 0;
+let buffer;  // Float32Array ring buffer
+let writeHead = 0;  // ring buffer write index
+
+let ecgTime      = 0;
+let lastTs       = null;
+let ecgState     = null;
+let currentKey   = 'nsr';
+let isPaused     = false;
+let noiseOn      = false;
+let wanderOn     = true;
+let calPulseTime = -999;  // absolute time of last cal pulse trigger
+
+function initCanvas() {
+  canvas = document.getElementById('ecgCanvas');
+  dpr    = window.devicePixelRatio || 1;
+  resize();
+  window.addEventListener('resize', resize);
+  ecgState = ECGEngine.createState();
+  // Pre-fill buffer with 2 seconds of NSR to avoid empty start
+  for (let i = 0; i < bufferSize; i++) {
+    const t = -(bufferSize - i) / SAMPLE_RATE;
+    buffer[i] = ECGEngine.generateSample(Math.max(0, t + 10), 'nsr', ecgState, false);
+  }
+  ecgState = ECGEngine.createState(); // reset state after prefill
+  requestAnimationFrame(renderLoop);
+}
+
+function resize() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  dpr = window.devicePixelRatio || 1;
+  canvas.width  = rect.width  * dpr;
+  canvas.height = rect.height * dpr;
+  ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  // Buffer holds exactly one screen width of samples
+  const logW = rect.width;
+  const logH = rect.height;
+  bufferSize = Math.ceil(logW * SAMPLE_RATE / PX_PER_SEC);
+  buffer = new Float32Array(bufferSize);
+  writeHead = 0;
+}
+
+function renderLoop(ts) {
+  requestAnimationFrame(renderLoop);
+
+  if (lastTs === null) { lastTs = ts; }
+  const dt = isPaused ? 0 : Math.min((ts - lastTs) / 1000, 0.08); // cap at 80ms
+  lastTs = ts;
+
+  // Generate new samples
+  const newCount = Math.round(dt * SAMPLE_RATE);
+  for (let i = 0; i < newCount; i++) {
+    ecgTime += 1 / SAMPLE_RATE;
+
+    // 1mV calibration pulse: 200ms square pulse
+    let v;
+    const calAge = ecgTime - calPulseTime;
+    if (calAge >= 0 && calAge < 0.20) {
+      v = 1.0; // 1 mV square
+    } else {
+      v = ECGEngine.generateSample(ecgTime, currentKey, ecgState,
+            noiseOn,
+            wanderOn  // engine uses this for baseline wander
+          );
     }
 
-    return v + wander + noise;
+    buffer[writeHead] = v;
+    writeHead = (writeHead + 1) % bufferSize;
   }
 
-  // ── PUBLIC API ───────────────────────────────────────────────
-  return {
-    generateSample,
-    createState,
-    // Gaussian helpers for external use
-    gauss: G,
-    asymGauss: AG,
-  };
+  drawECG();
+}
 
+function drawECG() {
+  const W = canvas.width  / dpr;
+  const H = canvas.height / dpr;
+  const cx = W;
+  const cy = H / 2;
+  // Y scale: 30 px per mV. Reasonable for 148px height.
+  const yScale = H * 0.26; // ~38px/mV for 148px height
+
+  // Clear
+  ctx.clearRect(0, 0, W, H);
+
+  // ── Grid ────────────────────────────────────────
+  ctx.save();
+  // Large boxes: 40px wide = 0.267s at 150px/s (close to 0.2s/box at 25mm/s)
+  const bigBox = Math.round(PX_PER_SEC * 0.20); // 30px per 200ms
+  const smBox  = Math.round(bigBox / 5);          // 6px per 40ms
+
+  ctx.strokeStyle = 'rgba(0,170,70,.10)';
+  ctx.lineWidth   = 0.5;
+  // Small grid
+  for (let x = 0; x <= W; x += smBox) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+  for (let y = 0; y <= H; y += smBox) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+  // Large grid
+  ctx.strokeStyle = 'rgba(0,170,70,.20)';
+  ctx.lineWidth   = 1;
+  for (let x = 0; x <= W; x += bigBox) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+  for (let y = 0; y <= H; y += bigBox) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+  ctx.restore();
+
+  // ── ECG Trace ────────────────────────────────────
+  const rdb = RDB[currentKey] || RDB.nsr;
+  const isArrest    = rdb.arrest === true;
+  const isHighRisk  = rdb.pri === 'RED' || rdb.pri === 'ARREST';
+
+  let traceColor, glowColor, lineWidth;
+  if (rdb.pri === 'ARREST') {
+    traceColor = '#ef4444'; glowColor = 'rgba(239,68,68,.55)'; lineWidth = 2.2;
+  } else if (rdb.pri === 'RED') {
+    traceColor = '#f97316'; glowColor = 'rgba(249,115,22,.45)'; lineWidth = 2;
+  } else if (rdb.pri === 'YELLOW' || rdb.pri === 'ORANGE') {
+    traceColor = '#00e880'; glowColor = 'rgba(0,232,128,.4)'; lineWidth = 1.8;
+  } else {
+    traceColor = '#00e880'; glowColor = 'rgba(0,232,128,.4)'; lineWidth = 1.8;
+  }
+
+  ctx.save();
+  ctx.lineWidth   = lineWidth;
+  ctx.strokeStyle = traceColor;
+  ctx.shadowColor = glowColor;
+  ctx.shadowBlur  = 8;
+  ctx.lineJoin    = 'round';
+  ctx.lineCap     = 'round';
+
+  const pxPerSample = W / bufferSize;
+  ctx.beginPath();
+  let first = true;
+  for (let i = 0; i < bufferSize; i++) {
+    // Read from ring buffer in order: oldest first, newest last (right edge)
+    const idx = (writeHead + i) % bufferSize;
+    const x   = i * pxPerSample;
+    const y   = cy - buffer[idx] * yScale;
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else        { ctx.lineTo(x, y); }
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+/* ════════════════════════════════════════════════════════════
+   UI LOGIC
+════════════════════════════════════════════════════════════ */
+function changeRhythm(key) {
+  currentKey = key;
+  ecgTime    = 0;
+  ecgState   = ECGEngine.createState();
+  // Clear buffer to avoid artefact from previous rhythm
+  buffer     = new Float32Array(bufferSize);
+  writeHead  = 0;
+  lastTs     = null;
+  updateUI(key);
+}
+
+function togglePause() {
+  isPaused = !isPaused;
+  lastTs   = null;
+  const btn = document.getElementById('pauseBtn');
+  btn.textContent = isPaused ? '▶ Resume' : '⏸ Pause';
+  btn.classList.toggle('playing', !isPaused);
+  document.getElementById('liveDot').style.opacity = isPaused ? '0.2' : '1';
+}
+
+function calPulse() {
+  calPulseTime = ecgTime; // triggers 200ms 1mV square pulse
+}
+
+/* ── Theme ───────────────────────────────────────────────── */
+const THEMES = ['dark','light','sepia','green'];
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('ecg-theme', t); } catch(e) {}
+  THEMES.forEach(th => {
+    document.getElementById('tp-' + th).classList.toggle('act', th === t);
+  });
+}
+(function() {
+  const saved = localStorage.getItem('ecg-theme') || 'dark';
+  setTheme(THEMES.includes(saved) ? saved : 'dark');
 })();
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ECGEngine;
+/* ── UI update ───────────────────────────────────────────── */
+function updateUI(key) {
+  const d = RDB[key] || RDB.nsr;
+
+  // Priority banner
+  const banner  = document.getElementById('prioBanner');
+  const priMap  = { GREEN:'b-green', YELLOW:'b-yellow', ORANGE:'b-orange', RED:'b-red', ARREST:'b-arrest' };
+  banner.className = 'prio-banner ' + (priMap[d.pri] || 'b-green');
+
+  const icoMap = { GREEN:'✅', YELLOW:'⚠️', ORANGE:'🔶', RED:'🔴', ARREST:'⛔' };
+  banner.innerHTML =
+    '<div class="pb-ico">' + (icoMap[d.pri]||'✅') + '</div>' +
+    '<div><div class="pb-level">' + d.pri + '</div>' +
+    '<div class="pb-msg">' + d.pMsg + '</div>' +
+    '<div class="pb-sub">' + d.pSub + '</div></div>';
+
+  // Stats
+  const rateStr = d.rn > 0 ? d.rn + ' bpm' : '—';
+  const rateEl = document.getElementById('svRate');
+  rateEl.textContent = rateStr;
+  rateEl.className = 'sc-val' + (d.rn > 150 || d.rn < 40 ? ' red' : d.rn < 60 ? ' yel' : '');
+
+  document.getElementById('svQRS').textContent = d.qrs || 'Narrow';
+  document.getElementById('svQRS').className   = 'sc-val' + (d.qrs && d.qrs.includes('Wide') ? ' red' : '');
+
+  document.getElementById('svPR').textContent  = d.pr || '160 ms';
+  document.getElementById('svPR').className    = 'sc-val' + (d.pr && parseInt(d.pr) > 200 ? ' yel' : '');
+
+  // Monitor rate display
+  const monRate = document.getElementById('monRate');
+  if (d.rn > 0) {
+    monRate.textContent = d.rn + ' bpm';
+    monRate.className   = 'mon-rate' + (d.rn > 150 || d.rn < 40 ? ' crit' : '');
+  } else {
+    monRate.textContent = d.cat === 'arrest' ? 'ARREST' : '— bpm';
+    monRate.className   = 'mon-rate' + (d.cat === 'arrest' ? ' crit' : '');
+  }
+
+  // CDE sections
+  const cde = document.getElementById('cdeContainer');
+  let html = '';
+
+  // Characteristics
+  html += '<div class="cde-sec"><div class="cde-hdr">📋 ' + d.lbl + '</div><div class="cde-blk"><div class="cde-text">' + (d.char || '') + '</div></div></div>';
+
+  // STEMI lead badges
+  if (d.stemi && d.sd) {
+    html += '<div class="cde-sec"><div class="cde-hdr">🗺️ Territory — ' + d.sd.art + '</div><div class="cde-blk">';
+    if (d.elev && d.elev.length) {
+      html += '<div style="margin-bottom:6px"><span style="font-size:.7rem;color:var(--mu)">ST Elevation: </span>';
+      d.elev.forEach(l => { html += '<span class="lb">' + l + '</span>'; });
+      html += '</div>';
+    }
+    if (d.rec && d.rec.length) {
+      html += '<div><span style="font-size:.7rem;color:var(--mu)">Reciprocal: </span>';
+      d.rec.forEach(l => { html += '<span class="lb rec">' + l + '</span>'; });
+      html += '</div>';
+    }
+    if (d.sd.zones) {
+      const zn = d.sd.zones;
+      const zones = ['Sep','Ant','Lat','Inf','RV'];
+      html += '<div class="zone-grid" style="margin-top:10px">';
+      zones.forEach(z => {
+        html += '<div class="zone-box' + (zn[z] ? ' hot' : '') + '">' + z + (zn[z] ? ' ✓' : '') + '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</div></div>';
+  }
+
+  // Drugs
+  html += '<div class="cde-sec"><div class="cde-hdr">💊 Treatment</div><div class="cde-blk">';
+  if (d.drugs && d.drugs.length) {
+    d.drugs.forEach(dr => {
+      html += '<div class="drug-card ' + (dr.c||'') + '">' +
+        '<div class="dc-ico">' + dr.i + '</div>' +
+        '<div><div class="dc-name">' + dr.n + '</div><div class="dc-dose">' + dr.d + '</div></div>' +
+        '</div>';
+    });
+  }
+  html += '</div></div>';
+
+  // Arrest pathway
+  if (d.arrest && d.steps && d.steps.length) {
+    html += '<div class="cde-sec"><div class="cde-hdr">⚡ ' +
+      (d.shockable ? 'ACLS — Shockable Pathway' : 'ACLS — Non-Shockable Pathway') +
+      '</div><div class="cde-blk">';
+    d.steps.forEach((st, idx) => {
+      html += '<div class="step-card">' +
+        '<div class="step-n ' + st.t + '">' + st.n + '</div>' +
+        '<div><div class="step-ti">Step ' + (idx+1) + ': ' + st.ti + '</div><div class="step-de">' + st.de + '</div></div>' +
+        '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  cde.innerHTML = html;
 }
+
+/* ════════════════════════════════════════════════════════════
+   CUSTOM RHYTHM PICKER
+════════════════════════════════════════════════════════════ */
+const PICKER_RHYTHMS = [
+  {key:'nsr',   name:'Normal Sinus Rhythm (NSR)',   cat:'SINUS',   catCls:'pch-sinus',   pri:'GREEN',  dot:'#22c55e'},
+  {key:'stach', name:'Sinus Tachycardia',            cat:'SINUS',   catCls:'pch-sinus',   pri:'YELLOW', dot:'#22c55e'},
+  {key:'sbrady',name:'Sinus Bradycardia',            cat:'SINUS',   catCls:'pch-sinus',   pri:'YELLOW', dot:'#22c55e'},
+  {key:'svt',   name:'Paroxysmal SVT',               cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
+  {key:'afib',  name:'Atrial Fibrillation',          cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
+  {key:'aflutter',name:'Atrial Flutter (3:1)',       cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
+  {key:'vtach', name:'Ventricular Tachycardia',      cat:'VENTRICULAR',catCls:'pch-vent', pri:'RED',    dot:'#f97316'},
+  {key:'torsades',name:'Torsades de Pointes',        cat:'VENTRICULAR',catCls:'pch-vent', pri:'RED',    dot:'#f97316'},
+  {key:'coarseVf',name:'Coarse Ventricular Fibrillation',cat:'VENTRICULAR',catCls:'pch-vent',pri:'ARREST',dot:'#ef4444'},
+  {key:'fineVf',name:'Fine Ventricular Fibrillation',cat:'VENTRICULAR',catCls:'pch-vent', pri:'ARREST', dot:'#ef4444'},
+  {key:'asystole',name:'Asystole',                   cat:'ARREST',  catCls:'pch-arrest',  pri:'ARREST', dot:'#ef4444'},
+  {key:'pea',   name:'PEA — Pulseless Electrical Activity',cat:'ARREST',catCls:'pch-arrest',pri:'ARREST',dot:'#ef4444'},
+  {key:'block1',name:'1st Degree AV Block',          cat:'AV BLOCKS',catCls:'pch-block',  pri:'GREEN',  dot:'#06b6d4'},
+  {key:'block2_1',name:'2nd Degree — Wenckebach (Mobitz I)',cat:'AV BLOCKS',catCls:'pch-block',pri:'YELLOW',dot:'#06b6d4'},
+  {key:'block2_2',name:'2nd Degree — Mobitz II',     cat:'AV BLOCKS',catCls:'pch-block',  pri:'RED',    dot:'#06b6d4'},
+  {key:'block3',name:'3rd Degree — Complete Heart Block',cat:'AV BLOCKS',catCls:'pch-block',pri:'RED',  dot:'#06b6d4'},
+  {key:'stemi_inf',name:'Inferior STEMI (RCA)',       cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
+  {key:'stemi_ant',name:'Anterior STEMI (LAD)',       cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
+  {key:'stemi_sep',name:'Septal STEMI (LAD)',         cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
+  {key:'stemi_lat',name:'Lateral STEMI (LCx)',        cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
+  {key:'stemi_ext',name:'Extensive Anterior STEMI',   cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
+  {key:'stdepress',name:'ST Depression / NSTEMI',     cat:'STEMI / ACS',catCls:'pch-stemi',pri:'ORANGE',dot:'#a855f7'},
+  {key:'tinvert', name:'T-Wave Inversion',            cat:'STEMI / ACS',catCls:'pch-stemi',pri:'YELLOW',dot:'#a855f7'},
+];
+
+const PRI_CLS = {GREEN:'pi-g',YELLOW:'pi-y',ORANGE:'pi-o',RED:'pi-r',ARREST:'pi-a'};
+
+function buildPickerList() {
+  const list = document.getElementById('psList');
+  list.innerHTML = '';
+  let lastCat = '';
+  PICKER_RHYTHMS.forEach(r => {
+    if (r.cat !== lastCat) {
+      const hdr = document.createElement('div');
+      hdr.className = 'ps-cat-hdr ' + r.catCls;
+      hdr.textContent = r.cat;
+      hdr.dataset.cat = r.cat;
+      list.appendChild(hdr);
+      lastCat = r.cat;
+    }
+    const item = document.createElement('div');
+    item.className = 'ps-item' + (r.key === currentKey ? ' active' : '');
+    item.id = 'pi-' + r.key;
+    item.dataset.key  = r.key;
+    item.dataset.name = r.name.toLowerCase();
+    item.innerHTML =
+      '<span class="pi-dot" style="background:' + r.dot + ';color:' + r.dot + '"></span>' +
+      '<span class="pi-name">' + r.name + '</span>' +
+      '<span class="pi-pri ' + (PRI_CLS[r.pri]||'pi-g') + '">' + r.pri + '</span>' +
+      '<span class="pi-radio"><span class="pi-radio-inner"></span></span>';
+    item.onclick = () => {
+      pickRhythm(r.key, r.name, r.cat);
+      closePicker();
+    };
+    list.appendChild(item);
+  });
+}
+
+function openPicker() {
+  buildPickerList();
+  document.getElementById('pickerOverlay').classList.add('open');
+  document.getElementById('rpbArrow').classList.add('open');
+  document.getElementById('psSearchInp').value = '';
+  filterPicker('');
+  setTimeout(() => {
+    // Scroll active item into view inside sheet
+    const active = document.getElementById('pi-' + currentKey);
+    if (active) active.scrollIntoView({ block:'nearest' });
+   
+  }, 360);
+}
+
+function closePicker() {
+  document.getElementById('pickerOverlay').classList.remove('open');
+  document.getElementById('rpbArrow').classList.remove('open');
+}
+
+function filterPicker(q) {
+  q = q.toLowerCase().trim();
+  let vis = 0;
+  document.querySelectorAll('.ps-item').forEach(el => {
+    const match = !q || el.dataset.name.includes(q);
+    el.classList.toggle('hidden', !match);
+    if (match) vis++;
+  });
+  // Hide category headers if all their items are hidden
+  document.querySelectorAll('.ps-cat-hdr').forEach(hdr => {
+    const cat = hdr.dataset.cat;
+    const anyVis = [...document.querySelectorAll('.ps-item')].some(
+      el => !el.classList.contains('hidden') &&
+            PICKER_RHYTHMS.find(r => r.key === el.dataset.key)?.cat === cat
+    );
+    hdr.classList.toggle('hidden', !anyVis);
+  });
+  document.getElementById('psCount').textContent = q ? vis : PICKER_RHYTHMS.length;
+}
+
+function pickRhythm(key, name, cat) {
+  document.getElementById('rpbName').textContent = name;
+  document.getElementById('rpbCat').textContent  = cat;
+  changeRhythm(key);
+}
+
+// Keyboard: Escape closes picker
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePicker();
+});
+
+// ── Init ────────────────────────────────────────────────────
+window.addEventListener('load', () => {
+  initCanvas();
+  updateUI('nsr');
+});
+</script>
+</body>
+</html>
