@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>DCAS · ECG Trainer</title>
-<script src="ecg-engine.js"></script>
+<script src="ecg-engine2.js"></script>
 <script>(function(){var t=localStorage.getItem('ecg-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 .pb-sub{font-size:.72rem;opacity:.78;margin-top:3px;line-height:1.4}
 .b-green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:#86efac}
 .b-yellow{background:rgba(234,179,8,.1);border-color:rgba(234,179,8,.4);color:#fde047}
-.b-orange{background:rgba(249,115,22,.1);border-color:rgba(249,115,22,.4);color:#fdba74}
+/* b-orange removed — DCAS has no orange priority */
 .b-red{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.5);color:#fca5a5}
 .b-arrest{background:rgba(239,68,68,.18);border-color:rgba(239,68,68,.7);color:#fca5a5;animation:bIn .3s ease,aPulse 1.4s infinite}
 @keyframes aPulse{0%,100%{box-shadow:0 0 18px rgba(239,68,68,.22)}50%{box-shadow:0 0 40px rgba(239,68,68,.55)}}
@@ -265,7 +265,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 }
 .pi-g{color:var(--green);border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.1)}
 .pi-y{color:var(--yellow);border-color:rgba(234,179,8,.35);background:rgba(234,179,8,.1)}
-.pi-o{color:var(--orange);border-color:rgba(249,115,22,.35);background:rgba(249,115,22,.1)}
+/* pi-o removed — DCAS has no orange priority */
 .pi-r{color:var(--red);border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.1)}
 .pi-a{color:#fca5a5;border-color:rgba(239,68,68,.55);background:rgba(239,68,68,.15)}
 .pi-check{display:none}
@@ -453,9 +453,9 @@ const RDB = {
       {i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing unavailable',c:''}
     ],arrest:false,stemi:false},
 
-  svt:{lbl:'Paroxysmal SVT',cat:'atrial',rn:180,pri:'ORANGE',
+  svt:{lbl:'Paroxysmal SVT',cat:'atrial',rn:180,pri:'RED',
     pMsg:'SVT — Supraventricular Tachycardia',
-    pSub:'Abrupt onset/offset. Rate ≥ 150. No visible P waves. Adenosine first line.',
+    pSub:'URGENT. Abrupt onset/offset. Rate ≥ 150. No visible P waves. Adenosine first line.',
     char:'Rapid regular narrow complex · Rate 150–250 bpm · P waves: OFTEN NOT VISIBLE — buried inside or just after the QRS complex (retrograde conduction) · Abrupt onset &amp; termination · No R-R variation · Retrograde P may produce a small notch at the terminal end of the T wave · No distinct P wave before QRS',
     pr:'Often not visible — buried in QRS (retrograde)',qrs:'Narrow < 120 ms',
     drugs:[
@@ -465,9 +465,9 @@ const RDB = {
       {i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}
     ],arrest:false,stemi:false},
 
-  afib:{lbl:'Atrial Fibrillation',cat:'atrial',rn:0,pri:'ORANGE',
+  afib:{lbl:'Atrial Fibrillation',cat:'atrial',rn:0,pri:'RED',
     pMsg:'Atrial Fibrillation',
-    pSub:'Irregularly irregular. Rate control if rapid. Cardiovert if unstable.',
+    pSub:'URGENT. Irregularly irregular. Rate control if rapid. Cardiovert if unstable.',
     char:'Irregularly irregular · No P waves · Fibrillatory baseline · Variable R-R intervals · Narrow QRS unless aberrant',
     pr:'None — no P waves',qrs:'Narrow < 120 ms (usually)',
     drugs:[
@@ -477,9 +477,9 @@ const RDB = {
       {i:'🩸',n:'Anticoagulation',d:'Per protocol if onset > 48 h or unknown',c:'warn'}
     ],arrest:false,stemi:false},
 
-  aflutter:{lbl:'Atrial Flutter (3:1)',cat:'atrial',rn:100,pri:'ORANGE',
+  aflutter:{lbl:'Atrial Flutter (3:1)',cat:'atrial',rn:100,pri:'RED',
     pMsg:'Atrial Flutter — 3:1 Block',
-    pSub:'Classic sawtooth F-waves ~300/min. 3:1 block → ventricular rate ~100 bpm. Three flutter teeth per QRS complex.',
+    pSub:'URGENT. Classic sawtooth F-waves ~300/min. 3:1 block → ventricular rate ~100 bpm. Three flutter teeth per QRS complex.',
     char:'Sawtooth flutter waves best seen in II, III, aVF · Atrial rate ~300/min · Ventricular rate ~100 bpm (3:1) · Three F-waves per QRS · Regular · Narrow QRS · "Picket fence" baseline pattern',
     pr:'N/A — flutter waves',qrs:'Narrow < 120 ms',
     drugs:[
@@ -718,9 +718,9 @@ const RDB = {
     ],arrest:false,stemi:true,
     sd:{terr:'Extensive Anterior Wall',art:'Proximal LAD (before 1st Diagonal) — "Widow Maker"',zones:{Sep:1,Ant:1,Lat:1,Inf:0,RV:0}}},
 
-  stdepress:{lbl:'ST Depression / NSTEMI',cat:'stemi',rn:82,pri:'ORANGE',
+  stdepress:{lbl:'ST Depression / NSTEMI',cat:'stemi',rn:82,pri:'RED',
     pMsg:'ST Depression — Ischaemia / NSTEMI',
-    pSub:'High-risk ACS. Aspirin + ACS protocol. Monitor for STEMI progression.',
+    pSub:'URGENT. High-risk ACS. Aspirin + ACS protocol. Monitor for STEMI progression.',
     char:'ST segment ≥ 0.5 mm below baseline · Subendocardial ischaemia or NSTEMI · Reciprocal changes of posterior STEMI · Requires troponin to confirm NSTEMI',
     pr:'160 ms',qrs:'Narrow',
     drugs:[
@@ -745,7 +745,7 @@ const RDB = {
 
 /* ════════════════════════════════════════════════════════════
    ECG CANVAS RENDERER
-   Physics engine (ecg-engine.js) generates amplitude samples.
+   Physics engine (ecg-engine2.js) generates amplitude samples.
    This code renders them on canvas with scrolling playback.
 ════════════════════════════════════════════════════════════ */
 const SAMPLE_RATE    = 500;  // Hz
@@ -872,7 +872,7 @@ function drawECG() {
     traceColor = '#ef4444'; glowColor = 'rgba(239,68,68,.55)'; lineWidth = 2.2;
   } else if (rdb.pri === 'RED') {
     traceColor = '#f97316'; glowColor = 'rgba(249,115,22,.45)'; lineWidth = 2;
-  } else if (rdb.pri === 'YELLOW' || rdb.pri === 'ORANGE') {
+  } else if (rdb.pri === 'YELLOW') {
     traceColor = '#00e880'; glowColor = 'rgba(0,232,128,.4)'; lineWidth = 1.8;
   } else {
     traceColor = '#00e880'; glowColor = 'rgba(0,232,128,.4)'; lineWidth = 1.8;
@@ -948,10 +948,10 @@ function updateUI(key) {
 
   // Priority banner
   const banner  = document.getElementById('prioBanner');
-  const priMap  = { GREEN:'b-green', YELLOW:'b-yellow', ORANGE:'b-orange', RED:'b-red', ARREST:'b-arrest' };
+  const priMap  = { GREEN:'b-green', YELLOW:'b-yellow', RED:'b-red', ARREST:'b-arrest' };
   banner.className = 'prio-banner ' + (priMap[d.pri] || 'b-green');
 
-  const icoMap = { GREEN:'✅', YELLOW:'⚠️', ORANGE:'🔶', RED:'🔴', ARREST:'⛔' };
+  const icoMap = { GREEN:'✅', YELLOW:'⚠️', RED:'🔴', ARREST:'⛔' };
   banner.innerHTML =
     '<div class="pb-ico">' + (icoMap[d.pri]||'✅') + '</div>' +
     '<div><div class="pb-level">' + d.pri + '</div>' +
@@ -1048,9 +1048,9 @@ const PICKER_RHYTHMS = [
   {key:'nsr',   name:'Normal Sinus Rhythm (NSR)',   cat:'SINUS',   catCls:'pch-sinus',   pri:'GREEN',  dot:'#22c55e'},
   {key:'stach', name:'Sinus Tachycardia',            cat:'SINUS',   catCls:'pch-sinus',   pri:'YELLOW', dot:'#22c55e'},
   {key:'sbrady',name:'Sinus Bradycardia',            cat:'SINUS',   catCls:'pch-sinus',   pri:'YELLOW', dot:'#22c55e'},
-  {key:'svt',   name:'Paroxysmal SVT',               cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
-  {key:'afib',  name:'Atrial Fibrillation',          cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
-  {key:'aflutter',name:'Atrial Flutter (3:1)',       cat:'ATRIAL',  catCls:'pch-atrial',  pri:'ORANGE', dot:'#eab308'},
+  {key:'svt',   name:'Paroxysmal SVT',               cat:'ATRIAL',  catCls:'pch-atrial',  pri:'RED', dot:'#ef4444'},
+  {key:'afib',  name:'Atrial Fibrillation',          cat:'ATRIAL',  catCls:'pch-atrial',  pri:'RED', dot:'#ef4444'},
+  {key:'aflutter',name:'Atrial Flutter (3:1)',       cat:'ATRIAL',  catCls:'pch-atrial',  pri:'RED', dot:'#ef4444'},
   {key:'vtach', name:'Ventricular Tachycardia',      cat:'VENTRICULAR',catCls:'pch-vent', pri:'RED',    dot:'#f97316'},
   {key:'torsades',name:'Torsades de Pointes',        cat:'VENTRICULAR',catCls:'pch-vent', pri:'RED',    dot:'#f97316'},
   {key:'coarseVf',name:'Coarse Ventricular Fibrillation',cat:'VENTRICULAR',catCls:'pch-vent',pri:'ARREST',dot:'#ef4444'},
@@ -1066,11 +1066,11 @@ const PICKER_RHYTHMS = [
   {key:'stemi_sep',name:'Septal STEMI (LAD)',         cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
   {key:'stemi_lat',name:'Lateral STEMI (LCx)',        cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
   {key:'stemi_ext',name:'Extensive Anterior STEMI',   cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',  dot:'#a855f7'},
-  {key:'stdepress',name:'ST Depression / NSTEMI',     cat:'STEMI / ACS',catCls:'pch-stemi',pri:'ORANGE',dot:'#a855f7'},
+  {key:'stdepress',name:'ST Depression / NSTEMI',     cat:'STEMI / ACS',catCls:'pch-stemi',pri:'RED',dot:'#ef4444'},
   {key:'tinvert', name:'T-Wave Inversion',            cat:'STEMI / ACS',catCls:'pch-stemi',pri:'YELLOW',dot:'#a855f7'},
 ];
 
-const PRI_CLS = {GREEN:'pi-g',YELLOW:'pi-y',ORANGE:'pi-o',RED:'pi-r',ARREST:'pi-a'};
+const PRI_CLS = {GREEN:'pi-g',YELLOW:'pi-y',RED:'pi-r',ARREST:'pi-a'};
 
 function buildPickerList() {
   const list = document.getElementById('psList');
@@ -1113,7 +1113,7 @@ function openPicker() {
     // Scroll active item into view inside sheet
     const active = document.getElementById('pi-' + currentKey);
     if (active) active.scrollIntoView({ block:'nearest' });
-   
+    document.getElementById('psSearchInp').focus();
   }, 360);
 }
 
