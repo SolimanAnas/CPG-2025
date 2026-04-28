@@ -1,0 +1,270 @@
+﻿{
+  "title": "ACLS Exam - Advanced Cardiovascular Life Support",
+  "description": "Advanced Cardiovascular Life Support exam questions from NREMT database",
+  "questions": [
+    {
+      "id": 1,
+      "text": "The single most important factor in determining survival from cardiac arrest is:",
+      "options": ["Early CPR.", "Early defibrillation.", "Recognition of risk factors.", "Recognition of warning signs."],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 2,
+      "text": "What is the preferred technique for providing chest compression during 2-rescuer CPR for an infant",
+      "options": ["The 2 thumb-encircling hands technique", "The 2-finger technique", "The 1 hand technique", "The 2-hand technique"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 3,
+      "text": "One likely cause of the bradycardia is:",
+      "options": ["Fever", "Pain", "Parasympathetic stimulation", "Blood loss"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Bradycardia"
+    },
+    {
+      "id": 4,
+      "text": "A medication used to dilate the bronchioles and causes the blood vessels to constrict is:",
+      "options": ["Oral glucose", "Nitroglycerine", "Activated charcoal", "Epinephrine"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 5,
+      "text": "The dosage epinephrine auto injector for child is:",
+      "options": ["0.3 mg", "0.5 mg", "0.15 mg", "0.2 mg"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 6,
+      "text": "Epinephrine is a medication used to constrict to the bronchioles and causes the blood vessels to dilate:",
+      "options": ["True.", "False."],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 7,
+      "text": "An EMT responds to a cardiac arrest. The patient Hasn't(DNR)order. The EMT should:",
+      "options": ["Begin CPR.", "Consult with your medical direction.", "A+B.", "None of the above."],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 8,
+      "text": "Excitability and anxiety, increased heart rate and headache, consider Side effects Epinephrine:",
+      "options": ["True.", "False."],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 9,
+      "text": "What modifications of the usual management of cardiac arrest should be made for a pregnant patient?",
+      "options": ["Deliver low-flow oxygen to prevent fetal oxygen toxicity", "Administer vasopressors at double the usual dose", "Perform cardiac compressions higher on the sternum", "Deliver small boluses of crystalloids to prevent fetal pulmonary edema"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 10,
+      "text": "Identify the ecg",
+      "options": ["Atrial Fibrillation", "Atrial Flutter", "SVT & Atrial tachycardia", "Ventricular tachycardia"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Cardiac Rhythms"
+    },
+    {
+      "id": 11,
+      "text": "A 49-year-old male was crossing the street and struck by a truck. First responders are doing CPR. The patient is pulseless, apneic and the monitor shows asystole. Your assessment reveals an open skull fracture and deformed pelvis. Based on the ITLS curriculum, which of the following is the most appropriate act?",
+      "options": ["Immediately intubate the patient to secure the airway", "Establish intravenous access and administer a 1 liter bolus", "Establish intravenous access and administer 2 mg of atropine", "Resuscitative efforts should be discontinued, unless prohibited by law"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Asystole"
+    },
+    {
+      "id": 12,
+      "text": "When is it appropriate to use an AED in a witnessed pediatric cardiac arrest?",
+      "options": ["After 4 minutes of CPR.", "As soon as possible.", "Once the patient is in the ambulance.", "When the ambulance is en route to the hospital."],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Algorithms"
+    },
+    {
+      "id": 13,
+      "text": "A 3-month-old infant is found unresponsive in his crib and has cool, mottled skin. His vital signs are HR 50 and RR 6. What is the initial treatment for this patient?",
+      "options": ["Establish IV access and administer an IV fluid bolus of 20 mL/kg.", "Establish IV access and administer 0.01 mg/kg IV epinephrine 1:10,000.", "Perform chest compressions and ventilate with a bag-mask device.", "Initiate bag-mask ventilation and then reassess his skin color and heart rate."],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 14,
+      "text": "What is the appropriate compression depth in a 6-month-old child in cardiac arrest?",
+      "options": ["1 inch.", "1.5 inches.", "2 inches.", "2.5 inches."],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 15,
+      "text": "What is the dysrhythmia for a 3-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a variable R-R interval called?",
+      "options": ["Supraventricular tachycardia.", "Sinus tachycardia.", "Ventricular tachycardia.", "Pulseless electrical activity (PEA)."],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 16,
+      "text": "What is the dysrhythmia for a 16-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a nonvariable RR interval?",
+      "options": ["Supraventricular tachycardia.", "Sinus tachycardia.", "Ventricular tachycardia.", "Pulseless electrical activity (PEA)."],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 17,
+      "text": "A child has a heart rate between 180 - 188 beats/min with a narrow QRS and a strong pulse. Which of the following best describes his rhythm?",
+      "options": ["Supraventricular tachycardia", "Sinus tachycardia", "Ventricular tachycardia", "Pulseless electrical activity"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 18,
+      "text": "What is the dysrhythmia for a 16-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a non-variable RR interval?",
+      "options": ["Supraventricular tachycardia.", "Sinus tachycardia.", "Ventricular tachycardia.", "Pulseless electrical activity (PEA)."],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 19,
+      "text": "Which of the following is most likely to present with hypertension and bradycardia?",
+      "options": ["Intracranial hemorrhage", "Hypoglycemia", "Ischemia", "Migraine headache"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Bradycardia"
+    },
+    {
+      "id": 20,
+      "text": "A 70-year-old male presents responsive to painful stimulus only, with hot and dry skin. You note an infected bedsore on his buttock. After the administration of 1000 ml of normal saline, his vital signs remain unchanged at HR = 90, BP = 56/?. Of the following which would be the most appropriate next action?",
+      "options": ["Administer atropine IV.", "Initiate transcutaneous pacing.", "Administer dopamine IV.", "Continue fluid administration at 125 ml/hour"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 21,
+      "text": "You are assessing a 69-year-old male, complaining of chest discomfort. His 12-Lead ECG reveals ST depression in leads V1-V4. There is no ST elevation in any lead. This ECG finding is most consistent with:",
+      "options": ["An inferior AMI", "An anterior AMI", "A posterior AMI", "Pericarditis"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Cardiac Rhythms"
+    },
+    {
+      "id": 22,
+      "text": "Symptomatic hyperkalemia should be treated with which of the following medication combinations?",
+      "options": ["Sodium bicarbonate, naloxone, and calcium chloride", "Potassium, albuterol, furosemide", "Lidocaine, albuterol, insulin and ?", "Calcium chloride, furosemide, and albuterol"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 23,
+      "text": "A 62-year-old female presents with an acute onset of weakness and dizziness. Vital signs are HR = 52, BP = 240/160, RR = 18. Which of the following actions is the most appropriate?",
+      "options": ["Administer nitroglycerin", "Administer atropine", "Perform stroke assessment", "Initiate transcutaneous pacing"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Bradycardia"
+    },
+    {
+      "id": 24,
+      "text": "Your patient is presenting with an acute onset of itchiness and urticaria after eating peanuts. Of the following options, which is the most appropriate treatment?",
+      "options": ["0.3mg of 1:10,000 Epinephrine IV", "0.3mg of 1:1,000 Epinephrine IM", "25mg of Benadryl IM", "None, this is a mild reaction"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 25,
+      "text": "A patient presents hemodynamically stable complaining of chest discomfort. A 12-Lead ECG reveals ST segment elevation in all the precordial leads as well as II, III, and aVF. Which of the following is the most likely etiology of these ECG findings?",
+      "options": ["Acute MI", "Aortic dissection", "Pericarditis", "Pulmonary embolism"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Cardiac Rhythms"
+    },
+    {
+      "id": 26,
+      "text": "A 52-year-old male presents complaining of chest discomfort. He is alert and oriented with a blood pressure of 110/70. You obtain the 12-Lead ECG, Shows an Inferior Wall MI (ST elevation in II, III, aVF). Of the following, the most appropriate next action would be to:",
+      "options": ["Administer nitroglycerin", "Obtain a right-side 12-Lead ECG.", "Initiate transcutaneous pacing.", "Administer morphine"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Cardiac Rhythms"
+    },
+    {
+      "id": 27,
+      "text": "You are dispatched to a soccer game for a 12-year-old female with signs and symptoms of an allergic reaction. Upon arrival, the patient mother hands you an epinephrine auto-injector. You should:",
+      "options": ["Direct the mother to administer the epi-pen", "Administer the epi-pen", "Begin the primary assessment", "Contact the physician that prescribed the epi-pen"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 28,
+      "text": "You are treating a 35-year-old man who was stung by a bee. He is allergic to bees and has a prescribed epinephrine auto-injector. His breath sounds are clear and non-labored. His BP is 130/82. How should you manage this patient?",
+      "options": ["Administer the epinephrine and transport rapidly", "Begin immediate transport and administer the epinephrine en route", "Assess the patient for signs of hypoxia, administer oxygen as needed, and transport", "Let medical control know your anaphylactic patient needs his epinephrine"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medications"
+    },
+    {
+      "id": 29,
+      "text": "An elderly patient reportedly collapsed on a golf course almost 10 minutes ago. You assess her level of consciousness and determine she is unresponsive. Which of the following should you do first:",
+      "options": ["Open the airway and insert an OPA", "Assess pulse and begin CPR if needed", "Providing ventilations with high flow oxygen", "Attach the AED"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 30,
+      "text": "You are caring for a 3-year-old patient in cardiac arrest. What is the correct compression to ventilation ratio for two-person CPR on this patient?",
+      "options": ["3 compressions to 1 ventilation", "5 compressions to 1 ventilation", "15 compressions to 2 ventilations", "30 compressions to 2 ventilations"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Cardiac Arrest"
+    },
+    {
+      "id": 31,
+      "text": "A 23-year-old female fell from a second-floor balcony. Upon arrival, you find her lying in the grass. She responds to verbal commands and your assessment reveals flat neck veins, and normal chest, abdomen and pelvis examinations. Her skin is cool, clammy and ashen; respirations are rapid and shallow; radial pulses are too rapid to count and thready. You place her on the heart monitor and it shows a wide-complex tachycardia of about 280 per minute. You should suspect:",
+      "options": ["Hypovolemic shock", "Relative hypovolemic (high-space) shock", "Mechanical (obstructive) shock", "Cardiogenic shock"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 32,
+      "text": "Your patient is complaining of an acute onset of chest discomfort and shortness of breath. His vital signs are P = 116, RR = 18, BP = 108/63. His skin is pale, cool, and diaphoretic. Based on this presentation, the patient is most likely experiencing?",
+      "options": ["Hypovolemic shock", "Obstructive shock", "Cardiogenic shock", "Septic shock"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Cardiac Rhythms"
+    },
+    {
+      "id": 33,
+      "text": "A 34-year-old female presents with dyspnea, audible wheezing and responds to painful stimulus. Her husband states that she used her inhaler multiple times without relief. Of the following, the best treatment would be?",
+      "options": ["Assist ventilations with a BVM.", "Administer 1mg 1:10,000 epinephrine IM.", "Transport with no further medication.", "Administer a nebulized beta-2 agonist."],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Airway"
+    }
+  ]
+}

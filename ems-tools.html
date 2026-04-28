@@ -477,31 +477,17 @@ function renderBurns(){
      <input class="wt-input" id="burnWt" type="number" inputmode="decimal" placeholder="Patient weight" min="1" max="300" oninput="burnWeight=this.value;updateParkland()" onkeydown="if(event.key==='Enter'){this.blur();if(navigator.vibrate)navigator.vibrate(10);}" value="${burnWeight || ''}">
       <span class="wt-lbl">kg</span>
     </div>
-        ${tbsa>0 ? `<div class="parkland-box" style="flex-direction:column; align-items:flex-start; gap:12px;">
-      <div style="display:flex; justify-content:space-between; width:100%; align-items:center;">
-        <div>
-           <div class="pk-name">Total fluid / 24h</div>
-           <div class="pk-formula" id="pkForm">4 mL × ${wt||"?"}kg × ${tbsa}% = ${parkland||"??"} mL RL</div>
-        </div>
-        <div class="pk-val" id="pkTotal" style="font-size:1.1rem;">${parkland?parkland+" mL":"Enter weight"}</div>
-      </div>
-      
-      <div style="background:rgba(6, 182, 212, 0.15); border:1px solid rgba(6, 182, 212, 0.4); padding:12px; border-radius:10px; width:100%;">
-         <div style="font-size:0.75rem; color:#67e8f9; font-weight:800; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">1st 8 Hours (50% Volume)</div>
-         <div style="display:flex; justify-content:space-between; align-items:baseline;">
-            <div style="font-size:1.5rem; font-weight:900; font-family:var(--mono); color:#fff;" id="pkRate">${wt>0 ? ((parkland/2)/8).toFixed(0)+" mL/h" : "--"}</div>
-            <div style="font-size:0.85rem; color:#93c5fd; font-weight:600;" id="pkVol8">Vol: ${wt>0 ? (parkland/2).toFixed(0)+" mL" : "--"}</div>
-         </div>
-           <div style="font-size:0.7rem; color:var(--text); margin-top:6px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.1);">
-            <i class="fas fa-info-circle" style="color:var(--yellow)"></i> Hint: Start infusion at rate <strong id="pkHint" style="color:var(--cyan); font-size:0.8rem;">${wt>0 ? ((parkland/2)/8).toFixed(0) : "--"}</strong> <strong>mL/h</strong>
-         </div>
+    ${tbsa>0 ? `<div class="parkland-box">
+      <div class="pk-val">${parkland?parkland+" mL":"Enter weight"}</div>
+      <div class="pk-info">
+        <div class="pk-name">Total fluid / 24h</div>
+        <div class="pk-formula">4 mL × ${wt||"?"}kg × ${tbsa}% = ${parkland||"??"} mL RL</div>
+        <div class="pk-formula" style="margin-top:3px">½ in first 8h · ½ in next 16h</div>
       </div>
     </div>` : `<div style="font-size:.75rem;color:var(--muted)">Select body regions above to calculate</div>`}
-  </div>`; // <--- THIS LINE WAS MISSING
-
+  </div>`;
 
   // EMS actions
-
   if(tbsa>0){
     html += `<div class="cat-card"><div class="cat-title">🚑 EMS Actions</div>`;
     const acts = tbsa<10?[
@@ -529,35 +515,13 @@ function updateParkland(){
   const wtEl = document.getElementById("burnWt");
   const wt = wtEl ? parseFloat(wtEl.value) || 0 : 0;
   const tbsa = BURNS_REGIONS.filter(r=>BURNS_STATE[r.k]).reduce((a,r)=>a+r.pct,0);
-  
-  const elTotal = document.getElementById("pkTotal");
-  const elForm = document.getElementById("pkForm");
-  const elRate = document.getElementById("pkRate");
-  const elVol8 = document.getElementById("pkVol8");
-  const elHint = document.getElementById("pkHint");
-
-  if(elTotal && elForm){
-    if(wt > 0 && tbsa > 0){
-        const totalVol = 4 * wt * tbsa;
-        const first8Vol = totalVol / 2;
-        const rate8hr = first8Vol / 8;
-        
-        elTotal.textContent = totalVol.toFixed(0) + " mL";
-        elForm.textContent = `4 mL × ${wt}kg × ${tbsa}% = ${totalVol.toFixed(0)} mL RL`;
-        
-        if(elRate) elRate.textContent = rate8hr.toFixed(0) + " mL/h";
-        if(elVol8) elVol8.textContent = "Vol: " + first8Vol.toFixed(0) + " mL";
-        if(elHint) elHint.textContent = rate8hr.toFixed(0);
-    } else {
-        elTotal.textContent = "Enter weight";
-        elForm.textContent = `4 mL × ?kg × ${tbsa}% = ?? mL RL`;
-        if(elRate) elRate.textContent = "--";
-        if(elVol8) elVol8.textContent = "Vol: --";
-        if(elHint) elHint.textContent = "--";
-    }
+  const pk = document.querySelector(".pk-val");
+  const pf = document.querySelector(".pk-formula");
+  if(pk && pf){
+    pk.textContent = wt>0&&tbsa>0 ? (4*wt*tbsa).toFixed(0)+" mL" : "Enter weight";
+    if(pf) pf.textContent = `4 mL × ${wt||"?"}kg × ${tbsa}% = ${wt>0?(4*wt*tbsa).toFixed(0):"??"} mL RL`;
   }
 }
-
 
 
 /* ═══════════════════════════════════════════════════════════

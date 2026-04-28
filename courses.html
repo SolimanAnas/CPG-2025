@@ -80,6 +80,16 @@
             border: 1px solid #22c55e; /* Solid green border for sharp contrast */
         }
         
+        .course-count {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border: 1px solid #3b82f6;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: auto;
+        }
+        
         .badge-coming { 
             background: rgba(245, 158, 11, 0.15); 
             color: #fde047; /* Brighter, luminous yellow */
@@ -269,17 +279,18 @@
     //  COURSE DATA & RENDER ENGINE
     // ══════════════════════════════════════════════════════════
     const COURSES = [
-        { id: 'itls', shortTitle: 'ITLS', title: 'International Trauma Life Support', link: 'itls.html', available: true, icon: '🚑' },
-        { id: 'empact', shortTitle: 'EMPACT', title: 'Emergency Medical Patients: Assessment, Care & Transport', link: 'empact.html', available: true, icon: '⚕️' },
-        { id: 'bls', shortTitle: 'BLS', title: 'Basic Life Support', link: '#', available: false, icon: '🫀' },
-        { id: 'acls', shortTitle: 'ACLS', title: 'Advanced Cardiovascular Life Support', link: '#', available: false, icon: '🫀 ' },
-        { id: 'bdls', shortTitle: 'BDLS', title: 'Basic Disaster Life Support', link: '#', available: false, icon: '🌪️' },
-        { id: 'pepp', shortTitle: 'PEPP', title: 'Pediatric Education for Prehospital Professionals', link: 'pepp.html', available: true, icon: '🧸' },
-        { id: 'ppet', shortTitle: 'PPET', title: 'Prehospital Pediatric Emergency Transport', link: '#', available: false, icon: '🚁' },
-        { id: 'pals', shortTitle: 'PALS', title: 'Pediatric Advanced Life Support', link: '#', available: false, icon: '👶' },
-       
-        { id: 'ecg', shortTitle: 'ECG', title: 'ECG Interpretation', link: '#', available: false, icon: '📉' },
-        { id: 'medical', shortTitle: 'Medical Emergencies', title: 'Medical Emergencies Review', link: '#', available: false, icon: '💊' }
+        { id: 'prometric', shortTitle: 'NREMT', title: 'NREMT Prometric Exam', link: 'src/prometric/exams.html', available: true, icon: '📋', count: 879 },
+        { id: 'itls', shortTitle: 'ITLS', title: 'International Trauma Life Support', link: 'itls.html', available: true, icon: '🚑', count: 200 },
+        { id: 'empact', shortTitle: 'EMPACT', title: 'Emergency Medical Patients: Assessment, Care & Transport', link: 'empact.html', available: true, icon: '⚕️', count: 50 },
+        { id: 'bls', shortTitle: 'BLS', title: 'Basic Life Support', link: 'bls.html', available: true, icon: '🫀', count: 284 },
+        { id: 'acls', shortTitle: 'ACLS', title: 'Advanced Cardiovascular Life Support', link: 'acls.html', available: true, icon: '❤️', count: 33 },
+        { id: 'bdls', shortTitle: 'BDLS', title: 'Basic Disaster Life Support', link: 'bdls.html', available: true, icon: '🌪️', count: 40 },
+        { id: 'pepp', shortTitle: 'PEPP', title: 'Pediatric Education for Prehospital Professionals', link: 'pepp.html', available: true, icon: '🧸', count: 200 },
+        { id: 'ppet', shortTitle: 'PPET', title: 'Prehospital Pediatric Emergency Transport', link: 'ppet.html', available: true, icon: '🚁', count: 57 },
+        { id: 'pals', shortTitle: 'PALS', title: 'Pediatric Advanced Life Support', link: 'pals.html', available: true, icon: '👶', count: 57 },
+        { id: 'medical', shortTitle: 'Medical', title: 'Medical Emergencies Review', link: 'medical.html', available: true, icon: '💊', count: 45 },
+        { id: 'ecg', shortTitle: 'ECG', title: 'ECG Interpretation', link: 'ecg.html', available: true, icon: '📉' },
+        { id: 'ecg-test', shortTitle: 'ECG Test', title: 'ECG Test', link: 'ecg-test.html', available: true, icon: '📈' }
     ];
 
     function renderCourses() {
@@ -288,10 +299,12 @@
         const html = COURSES.map((course) => {
             if (course.available) {
                 // Available Course Card 
+                const countTag = course.count ? `<span class="course-count">${course.count} Qs</span>` : '';
                 return `
                     <div class="menu-card">
                         <div class="card-header">
                             <span class="status-badge badge-available">✓ Available</span>
+                            ${countTag}
                         </div>
                         <div class="course-icon">${course.icon}</div>
                         <h2>${course.shortTitle}</h2>

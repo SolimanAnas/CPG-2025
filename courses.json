@@ -1,0 +1,14 @@
+[
+    { "id": "prometric", "shortTitle": "NREMT", "title": "NREMT Prometric Exam", "link": "src/prometric/exams.html", "available": true, "icon": "📋", "count": 879 },
+    { "id": "itls", "shortTitle": "ITLS", "title": "International Trauma Life Support", "link": "itls.html", "available": true, "icon": "🚑", "count": 200 },
+    { "id": "empact", "shortTitle": "EMPACT", "title": "Emergency Medical Patients: Assessment, Care & Transport", "link": "empact.html", "available": true, "icon": "⚕️", "count": 50 },
+    { "id": "bls", "shortTitle": "BLS", "title": "Basic Life Support", "link": "bls.html", "available": true, "icon": "🫀", "count": 284 },
+    { "id": "acls", "shortTitle": "ACLS", "title": "Advanced Cardiovascular Life Support", "link": "acls.html", "available": true, "icon": "❤️", "count": 33 },
+    { "id": "bdls", "shortTitle": "BDLS", "title": "Basic Disaster Life Support", "link": "bdls.html", "available": true, "icon": "🌪️", "count": 40 },
+    { "id": "pepp", "shortTitle": "PEPP", "title": "Pediatric Education for Prehospital Professionals", "link": "pepp.html", "available": true, "icon": "🧸", "count": 200 },
+    { "id": "ppet", "shortTitle": "PPET", "title": "Prehospital Pediatric Emergency Transport", "link": "ppet.html", "available": true, "icon": "🚁", "count": 57 },
+    { "id": "pals", "shortTitle": "PALS", "title": "Pediatric Advanced Life Support", "link": "pals.html", "available": true, "icon": "👶", "count": 57 },
+    { "id": "medical", "shortTitle": "Medical", "title": "Medical Emergencies Review", "link": "medical.html", "available": true, "icon": "💊", "count": 45 },
+    { "id": "ecg", "shortTitle": "ECG", "title": "ECG Interpretation", "link": "ecg.html", "available": true, "icon": "📉" },
+    { "id": "ecg-test", "shortTitle": "ECG Test", "title": "ECG Test", "link": "ecg-test.html", "available": true, "icon": "📈" }
+]

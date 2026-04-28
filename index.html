@@ -766,6 +766,13 @@
                 <p>Training & Mock tests(ITLS, EMPACT...)</p>
             </a>`;
 
+        // Prometric Exam Card
+        const prometricHtml = `
+            <a href="src/prometric/exams.html" class="menu-card special-card" style="animation-delay:0.045s; border-left-color: #2563eb;" data-search="Prometric NREMT EMT Exam Practice Questions">
+                <h2>📋 Prometric EMT Exam</h2>
+                <p>NREMT-style practice questions with analytics</p>
+            </a>`;
+
         // EMS Essentials Card
         const emsEssentialsHtml = `
             <div class="menu-card special-card" style="animation-delay:0.06s;" data-search="EMS Essentials Drug Calculations ECG GCS Tools">
@@ -820,11 +827,11 @@
                 </div>`;
         }).join('');
 
-        // Insert Courses and EMS Essentials cards after special cards but before regular chapters
+        // Insert Courses, Prometric and EMS Essentials cards after special cards but before regular chapters
         const specialCardsEnd = contentHtml.indexOf('<a href="chapters/c-index.html?view=summary" class="menu-card special-card" data-chapter="index"');
         if (specialCardsEnd !== -1) {
             const afterSpecial = contentHtml.indexOf('</a>', specialCardsEnd) + 4;
-            contentHtml = contentHtml.slice(0, afterSpecial) + coursesHtml + emsEssentialsHtml + contentHtml.slice(afterSpecial);
+            contentHtml = contentHtml.slice(0, afterSpecial) + coursesHtml + prometricHtml + emsEssentialsHtml + contentHtml.slice(afterSpecial);
         }
 
         const totalChaps     = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;

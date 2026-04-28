@@ -28,6 +28,8 @@ const storage = (function() {
 })();
 
 // ---------- LOCAL AUTH GUARD ----------
+
+/*
 (function() {
     const AUTH_KEY = 'dcas_local_auth';
     const PUBLIC_PAGES = ['login.html', 'about.html', 'privacy.html', 'terms.html'];
@@ -66,6 +68,7 @@ const storage = (function() {
     const next = window.location.pathname + window.location.search + window.location.hash;
     window.location.replace(`${loginPath}?next=${encodeURIComponent(next)}`);
 })();
+*/
 
 
 // ============================================================
