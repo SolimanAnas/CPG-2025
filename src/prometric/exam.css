@@ -59,35 +59,34 @@ body {
 /* Theme Toggle */
 .theme-header {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 8px;
+    right: 8px;
     display: flex;
-    gap: 8px;
+    gap: 4px;
     z-index: 1000;
     background: var(--bg-card);
-    padding: 8px;
-    border-radius: 25px;
+    padding: 4px;
+    border-radius: 20px;
     box-shadow: var(--shadow);
 }
 
 .theme-btn {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     background: var(--bg-card);
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow);
 }
 
 .theme-btn:hover {
     border-color: var(--primary);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .theme-btn.active {
@@ -138,20 +137,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
-    padding: 0 20px;
+    margin-bottom: 24px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 
 .step-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .step-number {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: var(--border);
     color: var(--text-secondary);
@@ -159,12 +160,12 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     transition: var(--transition);
 }
 
 .step-label {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     color: var(--text-secondary);
     font-weight: 500;
     transition: var(--transition);
@@ -187,11 +188,43 @@ body {
 }
 
 .step-connector {
-    width: 60px;
+    width: 30px;
     height: 2px;
     background: var(--border);
-    margin: 0 16px;
-    margin-bottom: 24px;
+    margin: 0 8px;
+    margin-bottom: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .theme-header {
+        top: 4px;
+        right: 4px;
+        padding: 3px;
+        gap: 2px;
+    }
+    .theme-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+    .wizard-steps {
+        margin-bottom: 16px;
+        padding: 0 4px;
+    }
+    .step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+    }
+    .step-label {
+        font-size: 0.55rem;
+    }
+    .step-connector {
+        width: 20px;
+        margin: 0 4px;
+        margin-bottom: 18px;
+    }
 }
 
 /* Wizard Step Content */
@@ -233,13 +266,16 @@ body {
 .mode-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 12px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mode-card {
-    padding: 24px;
-    border: 2px solid var(--border);
+    padding: 16px 12px;
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     cursor: pointer;
     transition: var(--transition);
@@ -250,29 +286,48 @@ body {
 .mode-card:hover {
     border-color: var(--primary);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .mode-card.selected {
     border-color: var(--primary);
-    background: rgba(37, 99, 235, 0.05);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    background: rgba(37, 99, 235, 0.15);
 }
 
 .mode-icon {
-    font-size: 2.5rem;
-    margin-bottom: 12px;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
 }
 
 .mode-card h4 {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .mode-card p {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
+    line-height: 1.2;
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+    .mode-cards {
+        gap: 8px;
+    }
+    .mode-card {
+        padding: 12px 8px;
+    }
+    .mode-icon {
+        font-size: 1.3rem;
+    }
+    .mode-card h4 {
+        font-size: 0.75rem;
+    }
+    .mode-card p {
+        font-size: 0.6rem;
+    }
 }
 
 /* Topics Grid */
