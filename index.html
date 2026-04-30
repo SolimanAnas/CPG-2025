@@ -332,6 +332,17 @@
         .search-empty-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
         .search-empty-sub { font-size: 0.85rem; }
 
+        /* ── Global search: chapters always in DOM, hidden via CSS ── */
+        .cpg-section-hidden { display: none !important; }
+        .cpg-search-hint {
+            text-align: center; font-size: 0.78rem; color: var(--text-secondary);
+            margin: 8px 4px 0; padding: 6px 16px;
+            background: rgba(0,86,179,0.08); border: 1px solid rgba(0,86,179,0.15);
+            border-radius: 20px; display: none;
+            transition: opacity 0.2s;
+        }
+        .cpg-search-hint.visible { display: block; }
+
         /* ── Global Stats Modal ── */
         .stats-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
         .stats-modal-content { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; width: 100%; max-width: 500px; max-height: 85vh; overflow-y: auto; box-shadow: var(--glass-shadow); }
@@ -1093,9 +1104,10 @@
         const searchHtml = `
             <div class="search-container">
                 <span>🔍</span>
-                <input type="text" id="searchInput" placeholder="Search chapters, topics…" value="${filterText.replace(/"/g,'&quot;')}">
+                <input type="text" id="searchInput" placeholder="Search all CPG chapters &amp; guidelines…" value="${filterText.replace(/"/g,'&quot;')}">
                 <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search">✕</button>
-            </div>`;
+            </div>
+            <div class="cpg-search-hint" id="cpgSearchHint">🔍 Searching across all ${CHAPTERS.filter(c=>!c.isSpecial).length} CPG chapters &amp; guidelines</div>`;
 
         // ── Quick Access (2-col) ──
         const quickHtml = `
@@ -1175,9 +1187,9 @@
                 </div>
             </div>`;
 
-        // ── CPG Chapter list (shown when expanded) ──
+        // ── CPG Chapter list (always rendered; CSS-hidden when collapsed for global search) ──
         let chaptersHtml = '';
-        if (showCpgChapters) {
+        {
             const regularChapters = CHAPTERS.filter(ch => !ch.isSpecial);
             const groups = {};
             regularChapters.forEach(ch => {
@@ -1192,7 +1204,8 @@
                 pediatric:'Pediatrics', obstetric:'Obstetrics', mci:'MCI & Triage', scope:'Scope & Formulary'
             };
             let idx = 0;
-            chaptersHtml = `<div class="section-label" style="margin-top:24px;">All Chapters</div>`;
+            chaptersHtml = `<div id="cpgChaptersContainer" class="${showCpgChapters ? '' : 'cpg-section-hidden'}">
+                <div class="section-label" id="cpgAllChaptersLabel" style="margin-top:24px;">All Chapters</div>`;
             Object.keys(groups).forEach(grp => {
                 const chs = groups[grp];
                 chaptersHtml += `
@@ -1234,6 +1247,7 @@
                 });
                 chaptersHtml += `</div>`;
             });
+            chaptersHtml += `</div>`; // close #cpgChaptersContainer
         }
 
         // ── Offline download ──
@@ -1308,11 +1322,17 @@
             dcasExpandBtn.addEventListener('click', function(e) {
                 e.preventDefault(); e.stopPropagation();
                 showCpgChapters = !showCpgChapters;
-                renderMenu();
+                // Toggle visibility without a full re-render (chapters are always in DOM)
+                const container = document.getElementById('cpgChaptersContainer');
+                if (container) container.classList.toggle('cpg-section-hidden', !showCpgChapters);
+                dcasExpandBtn.textContent = showCpgChapters ? '▲ Hide chapters' : '▼ Browse all chapters';
+                // Hide search hint if user manually expanded
+                const srchHint = document.getElementById('cpgSearchHint');
+                if (srchHint) srchHint.classList.remove('visible');
                 if (showCpgChapters) {
                     setTimeout(() => {
                         const sec = document.querySelector('[data-section="chapters-universal"]') ||
-                                    document.querySelector('.section-label:last-of-type');
+                                    document.getElementById('cpgChaptersContainer');
                         if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 100);
                 }
@@ -1510,7 +1530,21 @@
 
     function filterCards(text) {
         const lower = text.toLowerCase().trim();
+        const isSearching = lower.length > 0;
         let anyVisible = false;
+
+        // Global search: reveal all chapters when searching, collapse when done
+        const cpgContainer = document.getElementById('cpgChaptersContainer');
+        if (cpgContainer) {
+            if (isSearching) {
+                cpgContainer.classList.remove('cpg-section-hidden');
+            } else if (!showCpgChapters) {
+                cpgContainer.classList.add('cpg-section-hidden');
+            }
+        }
+        // Show global-search hint
+        const srchHint = document.getElementById('cpgSearchHint');
+        if (srchHint) srchHint.classList.toggle('visible', isSearching && !showCpgChapters);
 
         // Hide/show section labels and their grids together
         document.querySelectorAll('[data-section]').forEach(section => {
