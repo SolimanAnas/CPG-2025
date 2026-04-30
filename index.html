@@ -24,7 +24,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DCAS CPG 2025 · Chapters</title>
+    <title>DCAS CPG 2025 · Landing Page</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,14 +33,20 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0056b3">
     <link rel="apple-touch-icon" href="icons/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
         /* ── Search ── */
         .search-container {
-            margin-bottom: 24px; display: flex; align-items: center;
+            margin-bottom: 20px; display: flex; align-items: center;
             background: var(--glass-bg); border: 1px solid var(--glass-border);
             border-radius: 40px; padding: 4px 4px 4px 20px;
             backdrop-filter: blur(10px); box-shadow: var(--glass-shadow);
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+        .search-container:focus-within {
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(0,86,179,0.15), var(--glass-shadow);
         }
         .search-container span { font-size: 1.2rem; margin-right: 8px; color: var(--text-secondary); }
         .search-container input { flex: 1; background: transparent; border: none; padding: 12px 0; font-size: 1rem; color: var(--text-primary); outline: none; }
@@ -51,15 +57,301 @@
 
         .menu-card.filtered-out { display: none !important; }
 
-        /* ── Special cards ── */
-        .menu-card.special-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; box-shadow: var(--glass-shadow); text-decoration: none; color: inherit; display: block; border-left-width: 6px; border-left-style: solid; }
-        .menu-card.special-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); }
+        /* ── Hero progress card ── */
+        .hero-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 20px 24px;
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.5s ease forwards;
+            overflow: hidden;
+            position: relative;
+        }
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 140px; height: 140px;
+            background: radial-gradient(circle, rgba(0,86,179,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-text { flex: 1; min-width: 0; }
+        .hero-greeting { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 2px; }
+        .hero-sub { font-size: 0.82rem; color: #94a3b8; }
+        .hero-ring { position: relative; flex-shrink: 0; width: 72px; height: 72px; }
+        .hero-ring svg { width: 72px; height: 72px; transform: rotate(-90deg); }
+        .ring-track { fill: none; stroke: rgba(0,0,0,0.08); stroke-width: 6; }
+        [data-theme="dark"] .ring-track,
+        [data-theme="amoled"] .ring-track { stroke: rgba(255,255,255,0.1); }
+        .ring-fill { fill: none; stroke: var(--primary-accent); stroke-width: 6; stroke-linecap: round; transition: stroke-dashoffset 1s ease; }
+        .ring-label { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .ring-pct { font-size: 1rem; font-weight: 800; color: var(--text-primary); line-height: 1; }
+        .ring-done { font-size: 0.55rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px; }
+
+        /* ── Section labels ── */
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 24px 0 12px 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            border-left: 3px solid #00d4ff;
+            color: #e2e8f0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        [data-theme="light"] .section-label {
+            background: rgba(0,0,0,0.05);
+            border-left-color: #2563eb;
+            color: #1e293b;
+            text-shadow: none;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.15), transparent);
+        }
+        [data-theme="light"] .section-label::after {
+            background: linear-gradient(90deg, rgba(0,0,0,0.1), transparent);
+        }
+
+        /* ── Quick 2-col grid ── */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 0;
+        }
+        .quick-grid .menu-card.special-card { margin-bottom: 0; }
+
+       /* ── Special cards – enhanced ── */
+        .menu-card.special-card {
+            cursor: pointer;
+            transition: transform 0.22s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.22s;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 16px 18px;
+            box-shadow: var(--glass-shadow);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-left-width: 5px;
+            border-left-style: solid;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card.special-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,0.04) 100%);
+            pointer-events: none;
+        }
+        .menu-card.special-card:active { transform: scale(0.97) translateY(0) !important; }
+        .menu-card.special-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px -8px rgba(0,0,0,0.18); }
         .menu-card.special-card .card-header { display: none; }
-        .menu-card.special-card h2 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 0 0 2px 0; line-height: 1.2; }
-        .menu-card.special-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.3; }
-        .menu-card.special-card[data-chapter="updates"] { border-left-color: #f39c12; }
-        .menu-card.special-card[data-chapter="index"]   { border-left-color: #3498db; }
-        .menu-card.special-card[data-chapter="courses"] { border-left-color: #9b59b6; } /* Courses color */
+        .menu-card.special-card .sc-icon {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            display: block;
+            line-height: 1;
+        }
+        .menu-card.special-card h2 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0 0 3px 0; line-height: 1.25; }
+        .menu-card.special-card p { font-size: 0.78rem; color: #94a3b8; margin: 0; line-height: 1.35; }
+
+        /* Accent colours per type */
+        .menu-card.special-card[data-chapter="updates"]    { border-left-color: #f39c12; }
+        .menu-card.special-card[data-chapter="index"]      { border-left-color: #3498db; }
+        .menu-card.special-card[data-chapter="courses"]    { border-left-color: #9b59b6; }
+        .menu-card.special-card[data-chapter="prometric"]  { border-left-color: #2563eb; }
+        .menu-card.special-card[data-chapter="ems"]        { border-left-color: #00d4ff; }
+        .menu-card.special-card[data-chapter="dcas-cpg"]   { border-left-color: #0056b3; }
+        .menu-card.special-card[data-chapter="statistics"] { border-left-color: #27ae60; }
+
+        /* EMS Card - match other CPG cards styling */
+        .menu-card.special-card[data-chapter="ems"] h2 {
+            color: #2563eb;
+            margin: 8px 0 4px;
+        }
+        .menu-card.special-card[data-chapter="ems"] p {
+            color: #e2e8f0;
+            margin: 0 0 12px; 
+            font-size: 0.85rem;
+        }
+        
+        [data-theme="light"] .menu-card.special-card[data-chapter="ems"] h2 { color: #2563eb; }
+        [data-theme="light"] .menu-card.special-card[data-chapter="ems"] p { color: #334155; }
+
+        /* Coloured glow on hover per type */
+        .menu-card.special-card[data-chapter="updates"]:hover    { box-shadow: 0 16px 36px -8px rgba(243,156,18,0.25); }
+        .menu-card.special-card[data-chapter="index"]:hover      { box-shadow: 0 16px 36px -8px rgba(52,152,219,0.25); }
+        .menu-card.special-card[data-chapter="courses"]:hover    { box-shadow: 0 16px 36px -8px rgba(155,89,182,0.25); }
+        .menu-card.special-card[data-chapter="prometric"]:hover  { box-shadow: 0 16px 36px -8px rgba(37,99,235,0.25); }
+        .menu-card.special-card[data-chapter="ems"]:hover        { box-shadow: 0 16px 36px -8px rgba(0,212,255,0.35); }
+        .menu-card.special-card[data-chapter="dcas-cpg"]:hover   { box-shadow: 0 16px 36px -8px rgba(0,86,179,0.25); }
+        .menu-card.special-card[data-chapter="statistics"]:hover { box-shadow: 0 16px 36px -8px rgba(39,174,96,0.25); }
+
+        /* Chevron arrow on non-quick cards */
+        .sc-arrow {
+            position: absolute;
+            right: 14px; top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            opacity: 0.45;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+        .menu-card.special-card:hover .sc-arrow { opacity: 0.75; transform: translateY(-50%) translateX(2px); }
+
+        /* EMS special card label */
+        .special-card[data-chapter="ems"] .sc-icon {
+            font-size: 2rem;
+            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
+            margin-bottom: 10px;
+        }
+
+        /* ── EMS tools button strip (Restored to exact stable code btn-action colors) ── */
+        .ems-tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ems-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 8px;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            box-sizing: border-box;
+        }
+        .ems-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+        .ems-btn:active { transform: scale(0.97) translateY(0); }
+        
+        /* Dark / Forest Themes - Darker / Richer Palette */
+        .ems-btn-aha   { background: rgba(214, 137, 16, 0.15); color: #d35400; border: 1px solid rgba(214, 137, 16, 0.4); } /* Dark Amber */
+        .ems-btn-drug  { background: rgba(40, 116, 166, 0.15); color: #2980b9; border: 1px solid rgba(40, 116, 166, 0.4); } /* Deep Blue */
+        .ems-btn-ecg   { background: rgba(30, 132, 73, 0.15);  color: #27ae60; border: 1px solid rgba(30, 132, 73, 0.4); }  /* Forest Green */
+        .ems-btn-more  { background: rgba(118, 68, 138, 0.15); color: #8e44ad; border: 1px solid rgba(118, 68, 138, 0.4); } /* Deep Purple */
+        
+        /* Light mode / Sepia Themes - Much darker text for high visibility */
+        [data-theme="light"] .ems-btn-aha, [data-theme="sepia"] .ems-btn-aha   { background: rgba(211, 84, 0, 0.1); color: #d35400; border: 1px solid rgba(211, 84, 0, 0.3); }
+        [data-theme="light"] .ems-btn-drug, [data-theme="sepia"] .ems-btn-drug { background: rgba(41, 128, 185, 0.1); color: #2980b9; border: 1px solid rgba(41, 128, 185, 0.3); }
+        [data-theme="light"] .ems-btn-ecg, [data-theme="sepia"] .ems-btn-ecg   { background: rgba(39, 174, 96, 0.1); color: #27ae60; border: 1px solid rgba(39, 174, 96, 0.3); }
+        [data-theme="light"] .ems-btn-more, [data-theme="sepia"] .ems-btn-more { background: rgba(142, 68, 173, 0.1); color: #8e44ad; border: 1px solid rgba(142, 68, 173, 0.3); }
+
+        /* AMOLED specific tweaks - Vivid borders and text to pop against pure black */
+        [data-theme="amoled"] .ems-btn-aha   { color: #f1c40f; border-color: rgba(243, 156, 18, 0.4); }
+        [data-theme="amoled"] .ems-btn-drug  { color: #74b9ff; border-color: rgba(116, 185, 255, 0.4); }
+        [data-theme="amoled"] .ems-btn-ecg   { color: #55efc4; border-color: rgba(85, 239, 196, 0.4); }
+        [data-theme="amoled"] .ems-btn-more  { color: #d6a2e8; border-color: rgba(214, 162, 232, 0.4); }
+
+        /* DCAS CPG expand button */
+        .dcas-expand-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: rgba(0,86,179,0.1);
+            border: 1px solid rgba(0,86,179,0.2);
+            color: var(--primary-accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .dcas-expand-btn:hover { background: rgba(0,86,179,0.18); }
+        .dcas-expand-btn:active { transform: scale(0.97); }
+
+        /* CPG chapter cards — compact version */
+        .chapter-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: var(--glass-shadow);
+            animation: fadeInUp 0.4s ease forwards;
+            opacity: 0;
+            transform: translateY(12px);
+            position: relative;
+            border-left: 5px solid transparent;
+        }
+        .chapter-card:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -8px rgba(0,0,0,0.15); }
+        .chapter-card .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+        .chapter-card h2 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0 0 4px 0; line-height: 1.3; }
+        .chapter-card p { font-size: 0.8rem; color: #94a3b8; margin: 0 0 12px 0; line-height: 1.45; }
+        .chapter-card[data-chapter="universal"]    { border-left-color: var(--accent-universal); }
+        .chapter-card[data-chapter="airway"]       { border-left-color: var(--accent-airway); }
+        .chapter-card[data-chapter="cardio"]       { border-left-color: var(--accent-cardio); }
+        .chapter-card[data-chapter="resus"]        { border-left-color: var(--accent-resus); }
+        .chapter-card[data-chapter="neuro"]        { border-left-color: var(--accent-neuro); }
+        .chapter-card[data-chapter="medical"]      { border-left-color: var(--accent-medical); }
+        .chapter-card[data-chapter="trauma"]       { border-left-color: var(--accent-trauma); }
+        .chapter-card[data-chapter="environmental"]{ border-left-color: var(--accent-environmental); }
+        .chapter-card[data-chapter="pediatric"]    { border-left-color: var(--accent-pediatric); }
+        .chapter-card[data-chapter="obstetric"]    { border-left-color: var(--accent-obstetric); }
+        .chapter-card[data-chapter="mci"]          { border-left-color: var(--accent-mci); }
+        .chapter-card[data-chapter="scope"]        { border-left-color: var(--accent-scope); }
+
+        /* Empty search state */
+        .search-empty {
+            text-align: center;
+            padding: 48px 20px;
+            color: var(--text-secondary);
+        }
+        .search-empty-icon { font-size: 2.5rem; margin-bottom: 12px; opacity: 0.6; }
+        .search-empty-title { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+        .search-empty-sub { font-size: 0.85rem; }
+
+        /* ── Global Stats Modal ── */
+        .stats-modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
+        .stats-modal-content { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 24px; width: 100%; max-width: 500px; max-height: 85vh; overflow-y: auto; box-shadow: var(--glass-shadow); }
+        .stats-modal-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px 0; position: sticky; top: 0; background: var(--glass-bg); backdrop-filter: blur(12px); }
+        .stats-modal-header h2 { font-size: 1.4rem; margin: 0; color: var(--text-primary); }
+        .stats-modal-close { background: rgba(0,0,0,0.06); border: none; font-size: 1rem; cursor: pointer; color: var(--text-secondary); padding: 6px 10px; border-radius: 10px; transition: background 0.2s; }
+        .stats-modal-close:hover { background: rgba(0,0,0,0.12); }
+        .stats-modal-body { padding: 20px 24px 30px; }
+        .stats-modal-body h3 { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; margin: 24px 0 12px; color: var(--primary-accent); border-bottom: 1px solid var(--glass-border); padding-bottom: 8px; }
+        .stats-modal-body h3:first-of-type { margin-top: 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .stat-card { background: rgba(255,255,255,0.08); border: 1px solid var(--glass-border); border-radius: 14px; padding: 16px 12px; text-align: center; }
+        .stat-num { font-size: 1.6rem; font-weight: 700; color: var(--primary-accent); }
+        .stat-label { font-size: 0.72rem; color: var(--text-secondary); margin-top: 4px; font-weight: 600; }
+        .stats-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.85rem; }
+        .stats-table th, .stats-table td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--glass-border); }
+        .stats-table th { color: var(--text-secondary); font-weight: 600; font-size: 0.75rem; }
+        .stats-clear-btn { width: 100%; margin-top: 24px; padding: 14px; background: rgba(231,76,60,0.12); color: #e74c3c; border: 1px solid rgba(231,76,60,0.3); border-radius: 12px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .stats-clear-btn:hover { background: rgba(231,76,60,0.22); }
+        .stats-chart-container { height: 200px; margin: 16px 0; }
 
         /* ── Progress popup ── */
         .progress-popup { position: absolute; top: 60px; right: 10px; background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 20px; box-shadow: var(--glass-shadow); z-index: 1001; min-width: 250px; display: none; color: var(--text-primary); }
@@ -76,13 +368,14 @@
         @media (max-width: 360px) { .btn-action { font-size: 0.78rem; padding: 10px 4px; } }
 
         /* ── Offline download ── */
-        .offline-download { margin: 20px 0; text-align: center; }
-        .download-btn { background: var(--primary-accent); color: white; border: none; border-radius: 40px; padding: 12px 30px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: inline-flex; align-items: center; gap: 8px; }
-        .download-btn:active { transform: scale(0.98); }
+        .offline-download { margin: 24px 0 8px; text-align: center; }
+        .download-btn { background: var(--glass-bg); color: var(--text-primary); border: 1px solid var(--glass-border); border-radius: 40px; padding: 11px 28px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: var(--glass-shadow); display: inline-flex; align-items: center; gap: 8px; }
+        .download-btn:hover { background: rgba(0,86,179,0.1); border-color: var(--primary-accent); color: var(--primary-accent); }
+        .download-btn:active { transform: scale(0.97); }
         .download-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        progress { width: 100%; height: 20px; border-radius: 10px; margin-top: 10px; }
-        progress::-webkit-progress-bar { background-color: var(--glass-bg); border-radius: 10px; }
-        progress::-webkit-progress-value { background-color: var(--primary-accent); border-radius: 10px; }
+        progress { width: 100%; height: 6px; border-radius: 6px; margin-top: 12px; appearance: none; }
+        progress::-webkit-progress-bar { background-color: var(--glass-bg); border-radius: 6px; }
+        progress::-webkit-progress-value { background-color: var(--primary-accent); border-radius: 6px; transition: width 0.3s; }
 
         /* ── Float buttons ── */
         .float-btn { position: fixed; width: 40px; height: 40px; border-radius: 50%; background: rgba(61,100,115,0.7); color: white; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: transform 0.2s, background 0.2s, opacity 0.2s; z-index: 999; backdrop-filter: blur(2px); opacity: 0.8; }
@@ -287,15 +580,11 @@
 (function(){
     "use strict";
 
+    let showCpgChapters = false;
+    let showStats = false;
+
     // ══════════════════════════════════════════════════════════
     //  PWA INSTALL BANNER LOGIC
-    //  Rules:
-    //   • Never show if already running in standalone (installed)
-    //   • Never show if user permanently dismissed ('never' flag)
-    //   • Show after 4 s on first visit / 24 h after soft dismiss
-    //   • Android/Chrome: real install prompt via beforeinstallprompt
-    //   • iOS Safari: manual steps panel (no API available)
-    //   • Drawer "Install" button also triggers the banner/prompt
     // ══════════════════════════════════════════════════════════
     const PWA_KEY       = 'dcas_pwa_install';
     const PWA_NEVER_KEY = 'dcas_pwa_never';
@@ -720,6 +1009,7 @@
     // ══════════════════════════════════════════════════════════
     const COMPLETION_KEY = 'dcas_cpg_completion';
     const STATS_KEY      = 'dcas_cpg_stats';
+    const EXAM_STATS_KEY = 'examStats';
 
     function loadStorage(key, def) { try { return JSON.parse(localStorage.getItem(key)) || def; } catch(e) { return def; } }
     function saveStorage(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {} }
@@ -754,119 +1044,216 @@
     // ══════════════════════════════════════════════════════════
     //  RENDER MENU
     // ══════════════════════════════════════════════════════════
+    function getGreeting() {
+        const h = new Date().getHours();
+        if (h < 12) return 'Good morning';
+        if (h < 17) return 'Good afternoon';
+        return 'Good evening';
+    }
+
+    function buildRingPath(pct) {
+        // SVG circle r=28, circumference = 2π×28 ≈ 175.93
+        const C = 2 * Math.PI * 28;
+        const offset = C - (pct / 100) * C;
+        return { C, offset };
+    }
+
     function renderMenu(filterText) {
         filterText = filterText || '';
         const stats      = loadStorage(STATS_KEY, { chapters:{} });
         const completion = loadStorage(COMPLETION_KEY, {});
 
-        // Courses Special Card
-        const coursesHtml = `
-            <a href="courses.html" class="menu-card special-card" style="animation-delay:0.04s; border-left-color: #9b59b6;" data-search="Courses Training ITLS EMPACT ACLS BLS">
-                <h2>🎓 Courses Preparation </h2>
-                <p>Training & Mock tests(ITLS, EMPACT...)</p>
-            </a>`;
-
-        // Prometric Exam Card
-        const prometricHtml = `
-            <a href="src/prometric/exams.html" class="menu-card special-card" style="animation-delay:0.045s; border-left-color: #2563eb;" data-search="Prometric NREMT EMT Exam Practice Questions">
-                <h2>📋 Prometric EMT Exam</h2>
-                <p>NREMT-style practice questions with analytics</p>
-            </a>`;
-
-        // EMS Essentials Card
-        const emsEssentialsHtml = `
-            <div class="menu-card special-card" style="animation-delay:0.06s;" data-search="EMS Essentials Drug Calculations ECG GCS Tools">
-                <h2>EMS Essentials</h2>
-                <div class="menu-sub-options">
-					<a href="aha.html" class="btn-action btn-flash">❤️ AHA Algorithms</a>
-                    <a href="drug-calculator.html" class="btn-action btn-summary">💊 Drug Calculator</a>
-                    <a href="ecg.html" class="btn-action btn-scenario">📈 ECG Simulator</a>
-                    <a href="ems-tools.html" class="btn-action btn-quiz">🧰 More Tools</a>
-                </div>
-            </div>`;
-
-        let contentHtml = CHAPTERS.map((ch, index) => {
-            const s        = stats.chapters[ch.id] || { attempts:0, totalScore:0, totalMax:0 };
-            const avg      = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
-            const baseFile = ch.chapterFile || ch.id;
-            const sec      = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
-
-            if (ch.isSpecial) {
-                const titleText    = ch.id === 'c0' ? "What's New" : "Index";
-                const subtitleText = ch.id === 'c0' ? "2025 Updates" : "Full Table of Contents";
-                return `
-                    <a href="chapters/${baseFile}.html?view=summary" class="menu-card special-card" data-chapter="${ch.specialGroup}" style="animation-delay:${index*0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
-                        <h2>${titleText}</h2>
-                        <p>${subtitleText}</p>
-                    </a>`;
-            }
-
-            const isChecked = completion[ch.id] || false;
-            return `
-                <div class="menu-card" data-chapter="${ch.chapterGroup||'none'}" style="animation-delay:${index*0.03}s;" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
-                    <div class="card-header">
-                        <span class="status-badge">${ch.id.toUpperCase()}</span>
-                        <div class="toggle-wrapper">
-                            <label class="toggle-label">
-                                <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
-                                <input type="checkbox" class="toggle-input"
-                                    ${isChecked ? 'checked' : ''}
-                                    onchange="window.app.toggleCompletion(this, '${ch.id}')">
-                                <span class="toggle-track"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <h2>${ch.shortTitle}</h2>
-                    <p>${ch.title} • ${s.attempts} attempts • Avg ${avg}%</p>
-                    <div class="menu-sub-options">
-                        <a href="chapters/${baseFile}.html?view=summary${sec}"    class="btn-action btn-summary">📘 Summary</a>
-                        <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡Flashcards</a>
-                        <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz">📝 Quiz</a>
-                        <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario">🚑 Scenario</a>
-                    </div>
-                </div>`;
-        }).join('');
-
-        // Insert Courses, Prometric and EMS Essentials cards after special cards but before regular chapters
-        const specialCardsEnd = contentHtml.indexOf('<a href="chapters/c-index.html?view=summary" class="menu-card special-card" data-chapter="index"');
-        if (specialCardsEnd !== -1) {
-            const afterSpecial = contentHtml.indexOf('</a>', specialCardsEnd) + 4;
-            contentHtml = contentHtml.slice(0, afterSpecial) + coursesHtml + prometricHtml + emsEssentialsHtml + contentHtml.slice(afterSpecial);
-        }
-
         const totalChaps     = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
         const completedCount = Object.values(completion).filter(v => v).length;
         const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
-        const quote          = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+        const { C, offset } = buildRingPath(overallPercent);
 
-        const statsHtml = `
-            <div class="stats-card" id="statsCard">
-                <div class="progress-header">
-                    <div class="progress-title">🚀 Progress Dashboard</div>
-                    <span style="font-weight:700;color:var(--primary-accent);">${overallPercent}%</span>
+        // ── Hero progress card ──
+        const heroHtml = `
+            <div class="hero-card" id="heroCard">
+                <div class="hero-text">
+                    <div class="hero-greeting">${getGreeting()} 👋</div>
+                    <div class="hero-sub">${completedCount}/${totalChaps} chapters · keep it up!</div>
                 </div>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width:${overallPercent}%"></div>
+                <div class="hero-ring">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="ring-track" cx="32" cy="32" r="28"/>
+                        <circle class="ring-fill" cx="32" cy="32" r="28"
+                            stroke-dasharray="${C.toFixed(2)}"
+                            stroke-dashoffset="${offset.toFixed(2)}"/>
+                    </svg>
+                    <div class="ring-label">
+                        <span class="ring-pct">${overallPercent}%</span>
+                        <span class="ring-done">done</span>
+                    </div>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-box"><span class="stat-label">Chapters Done</span><span class="stat-value">${completedCount}/${totalChaps}</span></div>
-                    <div class="stat-box"><span class="stat-label">Total Attempts</span><span class="stat-value">${loadStorage(STATS_KEY,{totalAttempts:0}).totalAttempts||0}</span></div>
-                </div>
-                <div class="encouragement">✨ ${quote}</div>
             </div>`;
 
-        document.getElementById('mainContent').innerHTML = `
+        // ── Search bar ──
+        const searchHtml = `
             <div class="search-container">
                 <span>🔍</span>
-                <input type="text" id="searchInput" placeholder="Search chapters..." value="${filterText.replace(/"/g,'&quot;')}">
-                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'}>✕</button>
-            </div>
-            <div class="menu-grid" id="menuGrid">${contentHtml}</div>
+                <input type="text" id="searchInput" placeholder="Search chapters, topics…" value="${filterText.replace(/"/g,'&quot;')}">
+                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search">✕</button>
+            </div>`;
+
+        // ── Quick Access (2-col) ──
+        const quickHtml = `
+            <div class="section-label">Quick Access</div>
+            <div class="quick-grid" data-section="quick">
+                <a href="chapters/c0.html?view=summary" class="menu-card special-card"
+                   data-chapter="updates" data-search="What's New 2025 Updates c0">
+                    <span class="sc-icon">🆕</span>
+                    <h2>What's New</h2>
+                    <p>2025 Updates</p>
+                </a>
+                <a href="chapters/c-index.html?view=summary" class="menu-card special-card"
+                   data-chapter="index" data-search="Index Full Table of Contents c-index">
+                    <span class="sc-icon">📋</span>
+                    <h2>Full Index</h2>
+                    <p>Table of Contents</p>
+                </a>
+            </div>`;
+
+        // ── Courses & Exams ──
+        const coursesExamsHtml = `
+            <div class="section-label">Courses &amp; Exams</div>
+            <div class="menu-grid" data-section="courses">
+                <a href="courses.html" class="menu-card special-card"
+                   data-chapter="courses" data-search="Courses Training ITLS EMPACT ACLS BLS">
+                    <span class="sc-icon">🎓</span>
+                    <h2>Courses Preparation</h2>
+                    <p>Training &amp; mock tests — ITLS, EMPACT, ACLS, BLS…</p>
+                    <span class="sc-arrow">›</span>
+                </a>
+                <a href="src/prometric/exams.html" class="menu-card special-card"
+                   data-chapter="prometric" data-search="Prometric NREMT EMT Exam Practice Questions">
+                    <span class="sc-icon">📝</span>
+                    <h2>Prometric EMT Exam</h2>
+                    <p>NREMT-style practice questions with analytics</p>
+                    <span class="sc-arrow">›</span>
+                </a>
+            </div>`;
+
+        // ── EMS Tools ──
+        const emsHtml = `
+            <div class="section-label">EMS Tools</div>
+            <div class="menu-grid" data-section="ems">
+                <div class="menu-card special-card"
+                     data-chapter="ems" data-search="EMS Essentials Drug Calculations ECG GCS AHA Algorithms Tools">
+                    <span class="sc-icon">🔬</span>
+                    <h2>EMS Essentials</h2>
+                    <p>Quick-access clinical tools</p>
+                    <div class="ems-tools-grid">
+                        <a href="aha.html"            class="ems-btn ems-btn-aha">❤️ AHA Algorithms</a>
+                        <a href="drug-calculator.html" class="ems-btn ems-btn-drug">💊 Drug Calculator</a>
+                        <a href="ecg.html"             class="ems-btn ems-btn-ecg">📈 ECG Simulator</a>
+                        <a href="ems-tools.html"       class="ems-btn ems-btn-more">🔬 More Tools</a>
+                    </div>
+                </div>
+            </div>`;
+
+        // ── CPG Reference ──
+        const cpgRefHtml = `
+            <div class="section-label">CPG Reference</div>
+            <div class="menu-grid" data-section="cpg-ref">
+                <div class="menu-card special-card"
+                     data-chapter="dcas-cpg" data-search="DCAS CPG Chapters 1.1 Universal Care protocols guidelines">
+                    <span class="sc-icon">📚</span>
+                    <h2>DCAS CPG 2025</h2>
+                    <p>All clinical practice guidelines — Chapters 1.1 onwards</p>
+                    <button class="dcas-expand-btn" id="dcasExpandBtn">
+                        ${showCpgChapters ? '▲ Hide chapters' : '▼ Browse all chapters'}
+                    </button>
+                </div>
+                <div class="menu-card special-card"
+                     data-chapter="statistics" data-search="Statistics Progress Dashboard accuracy attempts">
+                    <span class="sc-icon">📊</span>
+                    <h2>Statistics &amp; Progress</h2>
+                    <p>Detailed study analytics and performance dashboard</p>
+                    <span class="sc-arrow">›</span>
+                </div>
+            </div>`;
+
+        // ── CPG Chapter list (shown when expanded) ──
+        let chaptersHtml = '';
+        if (showCpgChapters) {
+            const regularChapters = CHAPTERS.filter(ch => !ch.isSpecial);
+            const groups = {};
+            regularChapters.forEach(ch => {
+                const g = ch.chapterGroup || 'other';
+                if (!groups[g]) groups[g] = [];
+                groups[g].push(ch);
+            });
+            const groupLabels = {
+                universal:'Universal Care', airway:'Airway & Breathing', cardio:'Cardiology',
+                resus:'Resuscitation', neuro:'Neurology', medical:'Medical Emergencies',
+                trauma:'Trauma', environmental:'Environmental & Toxicology',
+                pediatric:'Pediatrics', obstetric:'Obstetrics', mci:'MCI & Triage', scope:'Scope & Formulary'
+            };
+            let idx = 0;
+            chaptersHtml = `<div class="section-label" style="margin-top:24px;">All Chapters</div>`;
+            Object.keys(groups).forEach(grp => {
+                const chs = groups[grp];
+                chaptersHtml += `
+                    <div class="section-label" style="margin-top:16px;font-size:0.65rem;opacity:0.75;">${groupLabels[grp]||grp}</div>
+                    <div class="menu-grid" data-section="chapters-${grp}">`;
+                chs.forEach(ch => {
+                    const s        = stats.chapters[ch.id] || { attempts:0, totalScore:0, totalMax:0 };
+                    const avg      = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
+                    const baseFile = ch.chapterFile || ch.id;
+                    const sec      = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
+                    const isChecked = completion[ch.id] || false;
+                    const delay = Math.min(idx * 0.025, 0.4);
+                    idx++;
+                    chaptersHtml += `
+                        <div class="chapter-card" data-chapter="${ch.chapterGroup||'none'}"
+                             style="animation-delay:${delay}s;"
+                             data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
+                            <div class="card-header">
+                                <span class="status-badge">${ch.id.toUpperCase()}</span>
+                                <div class="toggle-wrapper">
+                                    <label class="toggle-label">
+                                        <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
+                                        <input type="checkbox" class="toggle-input"
+                                            ${isChecked ? 'checked' : ''}
+                                            onchange="window.app.toggleCompletion(this, '${ch.id}')">
+                                        <span class="toggle-track"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <h2>${ch.shortTitle}</h2>
+                            <p>${ch.title}${s.attempts ? ` · ${s.attempts} attempts · Avg ${avg}%` : ''}</p>
+                            <div class="menu-sub-options">
+                                <a href="chapters/${baseFile}.html?view=summary${sec}"    class="btn-action btn-summary">📘 Summary</a>
+                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
+                                <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz">📝 Quiz</a>
+                                <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario">🚑 Scenario</a>
+                            </div>
+                        </div>`;
+                });
+                chaptersHtml += `</div>`;
+            });
+        }
+
+        // ── Offline download ──
+        const downloadHtml = `
             <div class="offline-download">
                 <button class="download-btn" id="downloadOfflineBtn">📥 Download All for Offline</button>
                 <progress id="downloadProgress" value="0" max="100" style="display:none;"></progress>
-            </div>
-            ${statsHtml}`;
+            </div>`;
+
+        // ── Empty search state ──
+        const emptyHtml = `
+            <div class="search-empty" id="searchEmpty" style="display:none;">
+                <div class="search-empty-icon">🔎</div>
+                <div class="search-empty-title">No results found</div>
+                <div class="search-empty-sub">Try a different keyword or browse by section</div>
+            </div>`;
+
+        document.getElementById('mainContent').innerHTML =
+            heroHtml + searchHtml + quickHtml + coursesExamsHtml + emsHtml +
+            cpgRefHtml + chaptersHtml + downloadHtml + emptyHtml;
 
         updateAllProgress();
 
@@ -887,44 +1274,281 @@
         }
 
         // Offline download
-        const downloadBtn  = document.getElementById('downloadOfflineBtn');
-        const progressBar  = document.getElementById('downloadProgress');
-        downloadBtn.addEventListener('click', async function() {
-            if (!('caches' in window)) { alert('Your browser does not support caching.'); return; }
-            downloadBtn.disabled = true; progressBar.style.display = 'block'; progressBar.value = 0;
-            const base = window.location.origin + (window.location.pathname.includes('/DCAS-CPG-Review-V1') ? '/DCAS-CPG-Review-V1' : '') + '/';
-            const files = [
-                '/','/index.html','/login.html','/about.html','/styles.css','/app.js','/manifest.json',
-                '/icons/icon.png','/images/image-01.png',
-                ...CHAPTERS.filter(c=>!c.isSpecial).map(c=>`/content/${c.chapterFile||c.id}.js`),
-                ...CHAPTERS.filter(c=>!c.isSpecial).map(c=>`/chapters/${c.chapterFile||c.id}.html`),
-                base+'content/c0.js', base+'content/c-index.js',
-                base+'chapters/c0.html', base+'chapters/c-index.html'
-            ].map(p => p.startsWith('/') ? base+p.slice(1) : p);
-            const cache = await caches.open('dcas-cpg-v1');
-            let done = 0, total = files.length;
-            for (const url of files) {
-                try { const r = await fetch(url); if (r.ok) await cache.put(url, r); } catch(_) {}
-                progressBar.value = (++done / total) * 100;
-            }
-            downloadBtn.disabled = false;
-            setTimeout(() => { progressBar.style.display = 'none'; }, 2000);
-        });
+        const downloadBtn = document.getElementById('downloadOfflineBtn');
+        const progressBar = document.getElementById('downloadProgress');
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', async function() {
+                if (!('caches' in window)) { alert('Your browser does not support caching.'); return; }
+                downloadBtn.disabled = true; progressBar.style.display = 'block'; progressBar.value = 0;
+                const base = window.location.origin + (window.location.pathname.includes('/DCAS-CPG-Review-V1') ? '/DCAS-CPG-Review-V1' : '') + '/';
+                const files = [
+                    '/','/index.html','/login.html','/about.html','/styles.css','/app.js','/manifest.json',
+                    '/icons/icon.png','/images/image-01.png',
+                    ...CHAPTERS.filter(c=>!c.isSpecial).map(c=>`/content/${c.chapterFile||c.id}.js`),
+                    ...CHAPTERS.filter(c=>!c.isSpecial).map(c=>`/chapters/${c.chapterFile||c.id}.html`),
+                    base+'content/c0.js', base+'content/c-index.js',
+                    base+'chapters/c0.html', base+'chapters/c-index.html'
+                ].map(p => p.startsWith('/') ? base+p.slice(1) : p);
+                const cache = await caches.open('dcas-cpg-v1');
+                let done = 0, total = files.length;
+                for (const url of files) {
+                    try { const r = await fetch(url); if (r.ok) await cache.put(url, r); } catch(_) {}
+                    progressBar.value = (++done / total) * 100;
+                }
+                downloadBtn.disabled = false;
+                setTimeout(() => { progressBar.style.display = 'none'; }, 2000);
+            });
+        }
 
         if (filterText) filterCards(filterText);
+
+        // DCAS CPG expand button
+        const dcasExpandBtn = document.getElementById('dcasExpandBtn');
+        if (dcasExpandBtn) {
+            dcasExpandBtn.addEventListener('click', function(e) {
+                e.preventDefault(); e.stopPropagation();
+                showCpgChapters = !showCpgChapters;
+                renderMenu();
+                if (showCpgChapters) {
+                    setTimeout(() => {
+                        const sec = document.querySelector('[data-section="chapters-universal"]') ||
+                                    document.querySelector('.section-label:last-of-type');
+                        if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            });
+        }
+
+        // Statistics card click
+        const statsCard = document.querySelector('.menu-card.special-card[data-chapter="statistics"]');
+        if (statsCard) {
+            statsCard.addEventListener('click', function(e) {
+                if (e.target.closest('.dcas-expand-btn')) return;
+                showGlobalStatsModal();
+            });
+        }
+    }
+
+    function showGlobalStatsModal() {
+        const stats = loadStorage(STATS_KEY, { chapters: {}, totalAttempts: 0, critical: {total: 0, correct: 0}, flashcards: [], quizzes: [] });
+        const completion = loadStorage(COMPLETION_KEY, {});
+        const examFromEngine = loadStorage(EXAM_STATS_KEY, []);
+        
+        const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
+        const completedCount = Object.values(completion).filter(v => v).length;
+        const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+        
+        const critAcc = stats.critical?.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+        
+        const flashcardStats = stats.flashcards || [];
+        const fcTotal = flashcardStats.length;
+        const fcCorrect = flashcardStats.filter(f => f.correct).length;
+        const fcAcc = fcTotal ? Math.round((fcCorrect / fcTotal) * 100) : 0;
+        
+        const examStats = examFromEngine || [];
+        const examAvg = examStats.length ? Math.round(examStats.reduce((a, e) => a + (e.score && e.max ? (e.score/e.max)*100 : 0), 0) / examStats.length) : 0;
+        
+        const quizStats = stats.quizzes || [];
+        const quizTotal = quizStats.length;
+        const quizCorrect = quizStats.filter(q => q.correct).length;
+        const quizAcc = quizTotal ? Math.round((quizCorrect / quizTotal) * 100) : 0;
+        
+        // Build chart data
+        const chartLabels = examStats.slice(-10).map((e, i) => `Exam ${i+1}`);
+        const chartData = examStats.slice(-10).map(e => e.score && e.max ? Math.round((e.score/e.max)*100) : 0);
+        const chartColors = chartData.map(v => v >= 70 ? '#27ae60' : v >= 50 ? '#f39c12' : '#e74c3c');
+        
+        const recentExams = examStats.slice(-5).reverse().map(e => `
+            <tr>
+                <td>${e.exam || 'NREMT'}</td>
+                <td>${e.score || 0}/${e.max || 0}</td>
+                <td>${e.score && e.max ? Math.round((e.score/e.max)*100) : 0}%</td>
+                <td>${new Date(e.date).toLocaleDateString() || ''}</td>
+            </tr>
+        `).join('') || '<tr><td colspan="4">No exam data</td></tr>';
+
+        const modal = document.createElement('div');
+        modal.className = 'stats-modal-overlay';
+        modal.innerHTML = `
+            <div class="stats-modal-content" onclick="event.stopPropagation()">
+                <div class="stats-modal-header">
+                    <h2>📊 Global Statistics</h2>
+                    <button class="stats-modal-close" onclick="this.closest('.stats-modal-overlay').remove()">✕</button>
+                </div>
+                <div class="stats-modal-body">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-num">${completedCount}/${totalChaps}</div>
+                            <div class="stat-label">Chapters Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${overallPercent}%</div>
+                            <div class="stat-label">Overall Progress</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${stats.totalAttempts || 0}</div>
+                            <div class="stat-label">Total Attempts</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${critAcc}%</div>
+                            <div class="stat-label">Critical Skills</div>
+                        </div>
+                    </div>
+                    <h3>⚡ Flashcards</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-num">${fcTotal}</div>
+                            <div class="stat-label">Cards Practiced</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${fcAcc}%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                    </div>
+                    <h3>📝 Quizzes</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-num">${quizTotal}</div>
+                            <div class="stat-label">Questions Answered</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${quizAcc}%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                    </div>
+                    <h3>📋 Exam Results</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-num">${examStats.length}</div>
+                            <div class="stat-label">Exams Taken</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">${examAvg}%</div>
+                            <div class="stat-label">Average Score</div>
+                        </div>
+                    </div>
+                    ${examStats.length > 1 ? `
+                    <h3>📈 Progress Chart</h3>
+                    <div class="stats-chart-container">
+                        <canvas id="progress-chart"></canvas>
+                    </div>
+                    ` : ''}
+                    <h3>Recent Exams</h3>
+                    <table class="stats-table">
+                        <thead><tr><th>Exam</th><th>Score</th><th>%</th><th>Date</th></tr></thead>
+                        <tbody>${recentExams}</tbody>
+                    </table>
+                    <button class="stats-clear-btn" onclick="clearAllStats()">Clear All Stats</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        
+        // Render chart if data exists
+        if (examStats.length > 1) {
+            setTimeout(() => renderProgressChart(chartLabels, chartData, chartColors), 100);
+        }
+    }
+
+    function renderProgressChart(labels, data, colors) {
+        const canvas = document.getElementById('progress-chart');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        if (window.progressChartInstance) window.progressChartInstance.destroy();
+        
+        canvas.width = canvas.offsetWidth || 300;
+        canvas.height = 180;
+        
+        window.progressChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Score %',
+                    data: data,
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: colors,
+                    pointRadius: 6,
+                    pointBorderWidth: 2,
+                    pointBorderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: 'rgba(255,255,255,0.1)' },
+                        ticks: { color: '#aaa' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#aaa' }
+                    }
+                }
+            }
+        });
+    }
+
+    function clearAllStats() {
+        if (confirm('Clear all statistics? This cannot be undone.')) {
+            localStorage.removeItem(STATS_KEY);
+            localStorage.removeItem(COMPLETION_KEY);
+            localStorage.removeItem(EXAM_STATS_KEY);
+            location.reload();
+        }
     }
 
     function filterCards(text) {
         const lower = text.toLowerCase().trim();
-        document.querySelectorAll('.menu-card').forEach(card => {
-            card.classList.toggle('filtered-out', !card.dataset.search.toLowerCase().includes(lower));
+        let anyVisible = false;
+
+        // Hide/show section labels and their grids together
+        document.querySelectorAll('[data-section]').forEach(section => {
+            const cards = section.querySelectorAll('.menu-card, .chapter-card');
+            let sectionVisible = false;
+            cards.forEach(card => {
+                const match = !lower || (card.dataset.search || '').toLowerCase().includes(lower);
+                card.classList.toggle('filtered-out', !match);
+                if (match) { sectionVisible = true; anyVisible = true; }
+            });
+            // Hide the section label above this grid when all cards are hidden
+            const label = section.previousElementSibling;
+            if (label && label.classList.contains('section-label')) {
+                label.style.display = (lower && !sectionVisible) ? 'none' : '';
+            }
+            section.style.display = (lower && !sectionVisible) ? 'none' : '';
         });
+
+        // Also handle the quick-grid which uses .menu-card directly
+        document.querySelectorAll('.quick-grid .menu-card').forEach(card => {
+            const match = !lower || (card.dataset.search || '').toLowerCase().includes(lower);
+            card.classList.toggle('filtered-out', !match);
+            if (match) anyVisible = true;
+        });
+
+        // Hero card: hide when searching
+        const hero = document.getElementById('heroCard');
+        if (hero) hero.style.display = lower ? 'none' : '';
+
+        // Empty state
+        const empty = document.getElementById('searchEmpty');
+        if (empty) empty.style.display = (lower && !anyVisible) ? 'block' : 'none';
     }
 
     // Header buttons
     const homeBtn  = document.getElementById('homeBtn');
     const indexBtn = document.getElementById('headerIndexBtn');
-    if (homeBtn)  homeBtn.addEventListener('click',  e => { e.preventDefault(); window.location.href='index.html'; });
+    if (homeBtn)  homeBtn.addEventListener('click',  e => { e.preventDefault(); window.location.href='index-new.html'; });
     if (indexBtn) indexBtn.addEventListener('click', e => { e.preventDefault(); window.location.href='chapters/c-index.html?view=summary'; });
 
     document.addEventListener('click', function(e) {
