@@ -212,6 +212,28 @@ function generateIndexHTML() {
                 background: rgba(0,0,0,0.02);
                 border-radius: 8px 0 0 8px;
             }
+            .index-row td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .index-pdf-link {
+                text-decoration: none;
+                opacity: 0.7;
+                transition: opacity 0.2s, transform 0.2s;
+                margin-left: auto;
+                padding: 4px 8px;
+                display: flex;
+                align-items: center;
+            }
+            .index-pdf-link img {
+                width: 22px;
+                height: 22px;
+            }
+            .index-pdf-link:hover {
+                opacity: 1;
+                transform: scale(1.15);
+            }
             .index-no-results {
                 padding: 30px;
                 text-align: center;
@@ -233,6 +255,74 @@ function generateIndexHTML() {
         <div id="indexTableContainer">
     `;
 
+    const PDF_MAP = {
+        c1s1:  '1_1_Universal_Care__Core_Assessment.pdf',
+        c1s2:  '1_2_Patient_Care_Documentation.pdf',
+        c1s3:  '1_3_Patient_Triage_Categories.pdf',
+        c1s4:  '1_4_Functional_Needs.pdf',
+        c1s5:  '1_5_Treated_at_Scene.pdf',
+        c1s6:  '1_6_Patient_Refusal_of_Transfer.pdf',
+        c2s1:  '2_1_Airway_and_Breathing.pdf',
+        c2s2:  '2_2_Foreign_Body_Airway_Obstruction_FBAO.pdf',
+        c2s3:  '2_3_Asthma.pdf',
+        c2s4:  '2_4_COPD.pdf',
+        c2s5:  '2_5_Invasive_Mechanical_Ventilation.pdf',
+        'c3-1': '3_1_Chest_Pain___Acute_Coronary_Syndrome.pdf',
+        'c3-2': '3_2_Adult_Bradycardia.pdf',
+        'c3-3': '3_3_Adult_Tachycardia_with_a_Pulse.pdf',
+        'c3-4': '3_4_Acute_Pulmonary_Edema.pdf',
+        'c4-1': '4_1_Adult_Basic_Life_Support.pdf',
+        'c4-2': '4_2_Pediatric_Basic_Life_Support.pdf',
+        'c4-3': '4_3_Adult_Cardiac_Arrest.pdf',
+        'c4-4': '4_4_Pediatric_Cardiac_Arrest.pdf',
+        'c4-5': '4_5_Cardiac_Arrest_in_Trauma.pdf',
+        'c4-6': '4_6_Newborn_4_weeks_and_Pre-term_Infant_Resuscitation.pdf',
+        'c4-7': '4_7_Post_Cardiac_Arrest_Care_ROSC.pdf',
+        'c4-8': '4_8_Starting_Stopping_and_Transferring_CPR.pdf',
+        'c4-9': '4_9_Verification_of_Death.pdf',
+        'c5-1': '5_1_Stroke.pdf',
+        'c5-2': '5_2_Seizures.pdf',
+        'c6-1':  '6_1_Abdominal_Pain.pdf',
+        'c6-2':  '6_2_Abnormal_Behavior.pdf',
+        'c6-3':  '6_3_Adrenal_Insufficiency.pdf',
+        'c6-4':  '6_4_Anaphylaxis___Allergic_Reaction.pdf',
+        'c6-5':  '6_5_Altered_Mental_Status.pdf',
+        'c6-6':  '6_6_Epistaxis.pdf',
+        'c6-7':  '6_7_Fever_and_Sepsis.pdf',
+        'c6-8':  '6_8_Hypoglycemia.pdf',
+        'c6-9':  '6_9_Hyperglycemia.pdf',
+        'c6-10': '6_10_Nausea_and_Vomiting.pdf',
+        'c6-11': '6_11_Non-Traumatic_Shock.pdf',
+        'c6-12': '6_12_Pain_Management.pdf',
+        'c6-13': '6_13_Sickle_Cell_Crisis.pdf',
+        'c6-14': '6_14_Suspected_Alcohol_Intoxication.pdf',
+        'c7-1': '7_1_General_Trauma_Management.pdf',
+        'c7-2': '7_2_Burns.pdf',
+        'c7-3': '7_3_Crush_Injuries.pdf',
+        'c7-4': '7_4_Limb_Injuries.pdf',
+        'c7-5': '7_5_Spinal_Motion_Restriction.pdf',
+        'c7-6': '7_6_Traumatic_Brain_Injuries.pdf',
+        'c8-1':  '8_1_General_Toxicology_Management.pdf',
+        'c8-2':  '8_2_Opioid_Overdose.pdf',
+        'c8-3':  '8_3_Beta-Blocker_Overdose.pdf',
+        'c8-4':  '8_4_Calcium_Channel_Blocker_Overdose.pdf',
+        'c8-5':  '8_5_Organophosphate_Poisoning.pdf',
+        'c8-6':  '8_6_Diving_SCUBA_Emergencies.pdf',
+        'c8-7':  '8_7_Drowning___Near_Drowning.pdf',
+        'c8-8':  '8_8_Envenomation.pdf',
+        'c8-9':  '8_9_Hypothermia___Cold_Exposure.pdf',
+        'c8-10': '8_10_Hyperthermia___Heat_Exposure.pdf',
+        'c9-1': '9_1_Croup.pdf',
+        'c9-2': '9_2_Pediatric_Bradycardia.pdf',
+        'c9-3': '9_3_Pediatric_Tachycardia.pdf',
+        'c10-1': '10_1_Childbirth.pdf',
+        'c10-2': '10_2_Post_Partum_Hemorrhage.pdf',
+        'c10-3': '10_3_PV_Hemorrhage_in_Pregnancy.pdf',
+        'c10-4': '10_4_Eclampsia___Pre-eclampsia.pdf',
+        'c11-1': '11_1_START_Triage_MCI_Triage.pdf',
+        'c12-1': '12_1_Scope_of_Practice_Matrix.pdf',
+    };
+
     for (let group in categories) {
         const groupChapters = CHAPTERS.filter(ch => ch.chapterGroup === group);
         if (!groupChapters.length) continue;
@@ -244,6 +334,8 @@ function generateIndexHTML() {
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
             const link = `${baseFile}.html?view=summary${sectionParam}`;
+            const pdfFile = PDF_MAP[ch.id];
+            const pdfLink = pdfFile ? `../pdf_sections/${pdfFile}` : '';
 
             html += `
                 <tr class="index-row" data-title="${(ch.shortTitle + ' ' + ch.title).toLowerCase()}">
@@ -251,6 +343,7 @@ function generateIndexHTML() {
                         <a href="${link}" class="index-topic-link" data-original="${ch.shortTitle}">
                             ${ch.shortTitle}
                         </a>
+                        ${pdfLink ? `<a href="${pdfLink}" class="index-pdf-link" title="Open PDF" target="_blank"><img src="../images/pdf.png" alt="PDF"></a>` : ''}
                     </td>
                 </tr>
             `;
