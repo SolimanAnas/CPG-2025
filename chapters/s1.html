@@ -125,27 +125,27 @@ main{padding:14px 12px 100px;max-width:980px;margin:0 auto;display:flex;flex-dir
 /* ═══════ TABLE HEADER ════════════════════════════════════ */
 .th{display:flex;align-items:stretch;background:var(--sf2);
   border-bottom:1px solid var(--bd2);position:sticky;top:58px;z-index:5}
-.thn{flex:1;padding:7px 12px 7px 15px;font-size:.6rem;font-weight:800;
+.thn{flex:1;min-width:0;padding:7px 12px 7px 15px;font-size:.6rem;font-weight:800;
   text-transform:uppercase;letter-spacing:.6px;color:var(--tx3);display:flex;align-items:center}
 .thl{display:flex;flex-shrink:0;border-left:1px solid var(--bd)}
-.tc{width:38px;text-align:center;padding:7px 2px;font-size:.56rem;font-weight:900;
+.tc{width:38px;flex-shrink:0;text-align:center;padding:7px 2px;font-size:.56rem;font-weight:900;
   text-transform:uppercase;border-right:1px solid var(--bd);
   display:flex;align-items:center;justify-content:center;line-height:1.1;letter-spacing:-.2px}
 .tc:last-child{border-right:none}
 .tc-er{color:var(--c-er)}.tc-emr{color:var(--c-emr)}.tc-emt{color:var(--c-emt)}
 .tc-emta{color:var(--c-emta)}.tc-p{color:var(--c-p)}.tc-ap{color:var(--c-ap)}.tc-ep{color:var(--c-ep)}
 /* ═══════ SKILL ROWS ══════════════════════════════════════ */
-.sr{display:flex;align-items:stretch;border-bottom:1px solid var(--bd);transition:background .12s}
+.sr{display:flex;align-items:stretch;border-bottom:1px solid var(--bd);transition:background .12s;overflow:hidden}
 .sr:last-child{border-bottom:none}
 .sr:hover{background:var(--sf2)}
 .sr.hidden{display:none}
-.sn{flex:1;padding:10px 12px 10px 15px;font-size:.83rem;color:var(--tx);line-height:1.4;
-  display:flex;flex-direction:column;justify-content:center}
+.sn{flex:1;min-width:0;padding:10px 12px 10px 15px;font-size:.83rem;color:var(--tx);line-height:1.4;
+  display:flex;flex-direction:column;justify-content:center;word-break:break-word;overflow-wrap:break-word}
 .sd{font-size:.7rem;color:var(--tx3);margin-top:3px;line-height:1.35}
 .snote{font-size:.67rem;color:#f59e0b;font-weight:600;margin-top:3px}
 .sl{display:flex;flex-shrink:0;border-left:1px solid var(--bd)}
 /* Level cells */
-.lc{width:38px;border-right:1px solid var(--bd);
+.lc{width:38px;flex-shrink:0;border-right:1px solid var(--bd);
   display:flex;align-items:center;justify-content:center}
 .lc:last-child{border-right:none}
 .cy{width:26px;height:26px;border-radius:6px;
@@ -177,6 +177,99 @@ footer a{color:#3b82f6;text-decoration:none}
 }
 @media(min-width:580px){.tc,.lc{width:44px}.cy,.ct{width:30px;height:30px}}
 @media(min-width:800px){.tc,.lc{width:50px}.cy,.ct{width:34px;height:34px}}
+
+/* ═══════ ROTATE OVERLAY ════════════════════════════════ */
+#ro{
+  position:fixed;inset:0;z-index:9999;
+  background:#000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:28px;
+  animation:roIn .5s ease;
+  transition:opacity .8s ease;
+}
+#ro.ro-out{opacity:0;pointer-events:none}
+@keyframes roIn{from{opacity:0}to{opacity:1}}
+
+/* Phone shape */
+.ro-ph-wrap{
+  position:relative;
+  width:56px;height:90px;
+  animation:roSpin 2.2s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes roSpin{
+  0%,15%{transform:rotate(0deg)}
+  50%,65%{transform:rotate(90deg)}
+  100%{transform:rotate(0deg)}
+}
+.ro-ph{
+  width:56px;height:90px;
+  border:2.5px solid #fff;border-radius:10px;
+  box-shadow:0 0 8px rgba(255,255,255,.9),0 0 24px rgba(255,255,255,.45),0 0 50px rgba(255,255,255,.2);
+  position:relative;
+}
+.ro-ph::before{/* speaker */
+  content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);
+  width:14px;height:2.5px;border-radius:2px;background:rgba(255,255,255,.4);
+}
+.ro-ph::after{/* home button */
+  content:'';position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
+  width:9px;height:9px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.45);
+}
+
+/* Orbit ring */
+.ro-ring{
+  position:absolute;top:50%;left:50%;
+  width:110px;height:110px;
+  margin:-55px 0 0 -55px;
+  border-radius:50%;
+  border:1px dashed rgba(255,255,255,.15);
+  box-shadow:0 0 12px rgba(255,255,255,.06) inset;
+  pointer-events:none;
+  animation:roSpin 2.2s cubic-bezier(.4,0,.2,1) infinite reverse;
+}
+/* Arrow tips on ring */
+.ro-ring::before,.ro-ring::after{
+  content:'';position:absolute;
+  width:8px;height:8px;
+  border-top:1.5px solid rgba(255,255,255,.4);
+  border-right:1.5px solid rgba(255,255,255,.4);
+  border-radius:1px;
+}
+.ro-ring::before{top:6px;right:6px;transform:rotate(45deg)}
+.ro-ring::after {bottom:6px;left:6px;transform:rotate(225deg)}
+
+/* Text */
+.ro-text{text-align:center}
+.ro-t1{
+  font-size:1.05rem;font-weight:900;letter-spacing:5px;
+  text-transform:uppercase;color:#fff;
+  text-shadow:0 0 16px rgba(255,255,255,.8),0 0 40px rgba(255,255,255,.35);
+  margin-bottom:6px;
+}
+.ro-t2{
+  font-size:.72rem;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(255,255,255,.42);
+}
+
+/* Progress bar */
+.ro-progress{
+  width:100px;height:2px;
+  background:rgba(255,255,255,.12);
+  border-radius:1px;overflow:hidden;
+}
+.ro-fill{
+  height:100%;width:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.3),rgba(255,255,255,.8));
+  border-radius:1px;
+  animation:roFill var(--ro-dur,2.5s) linear forwards;
+}
+@keyframes roFill{from{width:0}to{width:100%}}
+
+.ro-hint{
+  font-size:.62rem;letter-spacing:1px;text-transform:uppercase;
+  color:rgba(255,255,255,.2);margin-top:4px;
+}
 </style>
 </head>
 <body>
@@ -467,6 +560,65 @@ document.getElementById('homeBtn').addEventListener('click',()=>{ window.locatio
 /* ═══════ INIT ══════════════════════════════════════════════ */
 document.getElementById('pill-all').classList.add('fa');
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script>
+<!-- ── ROTATE OVERLAY ───────────────────────── -->
+<div id="ro" style="display:none" aria-hidden="true">
+  <div class="ro-ph-wrap">
+    <div class="ro-ph"></div>
+    <div class="ro-ring"></div>
+  </div>
+  <div class="ro-text">
+    <div class="ro-t1">Rotate Your Phone</div>
+    <div class="ro-t2">Best viewed in landscape</div>
+  </div>
+  <div>
+    <div class="ro-progress"><div class="ro-fill" id="ro-fill"></div></div>
+    <div class="ro-hint">Tap to dismiss</div>
+  </div>
+</div>
+
+<script>
+/* ── ROTATE OVERLAY LOGIC ─────────────────────────────── */
+(function(){
+  const el  = document.getElementById('ro');
+  const DUR = 2500; // ms before auto-dismiss
+
+  function isPortrait(){ return window.innerWidth < window.innerHeight; }
+  function isMobile()  { return window.innerWidth <= 768; }
+
+  function dismiss(){
+    el.classList.add('ro-out');
+    setTimeout(()=>{ el.style.display='none'; }, 850);
+  }
+
+  function show(){
+    // Set CSS variable for progress bar duration
+    el.querySelector('.ro-fill').style.animationDuration = (DUR/1000)+'s';
+    el.style.display = 'flex';
+    // Auto-dismiss
+    setTimeout(dismiss, DUR);
+  }
+
+  // Only show once per session on narrow portrait screens
+  if(isMobile() && isPortrait() && !sessionStorage.getItem('ro-shown')){
+    sessionStorage.setItem('ro-shown','1');
+    // Small delay so page renders first
+    setTimeout(show, 400);
+  }
+
+  // Tap to dismiss
+  el.addEventListener('click', dismiss);
+
+  // Hide immediately if rotated to landscape
+  window.addEventListener('orientationchange', function(){
+    setTimeout(function(){
+      if(!isPortrait()) dismiss();
+    }, 150);
+  });
+  window.addEventListener('resize', function(){
+    if(!isPortrait() && el.style.display !== 'none') dismiss();
+  });
+})();
 </script>
 </body>
 </html>
