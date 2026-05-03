@@ -1,104 +1,472 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DCAS CPG 2025 · S1 Scope of Practice</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    
-    <!-- PWA Manifest and icons -->
-    <link rel="manifest" href="../manifest.json">
-    <meta name="theme-color" content="#0056b3">
-    <link rel="apple-touch-icon" href="../icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>S1 Scope of Practice · DCAS CPG 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#0056b3">
+<link rel="apple-touch-icon" href="../icon.png">
+<style>
+/* ═══════ THEME TOKENS ═══════════════════════════════════ */
+:root,[data-theme="dark"]{
+  --bg:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);
+  --sf:rgba(255,255,255,.08);--sf2:rgba(255,255,255,.13);--sf3:rgba(255,255,255,.2);
+  --bd:rgba(255,255,255,.11);--bd2:rgba(255,255,255,.22);
+  --tx:#dde8f2;--tx2:rgba(221,232,242,.68);--tx3:rgba(221,232,242,.38);
+  --hdr:rgba(8,22,36,.78);
+}
+[data-theme="light"]{
+  --bg:linear-gradient(135deg,#e0f2fe 0%,#bae6fd 50%,#f0f9ff 100%);
+  --sf:rgba(255,255,255,.82);--sf2:rgba(255,255,255,.96);--sf3:#fff;
+  --bd:rgba(0,0,0,.09);--bd2:rgba(0,0,0,.17);
+  --tx:#1a2637;--tx2:#334155;--tx3:#94a3b8;
+  --hdr:rgba(255,255,255,.94);
+}
+[data-theme="sepia"]{
+  --bg:linear-gradient(135deg,#f4e4c1 0%,#e5d3b3 50%,#d6c2a3 100%);
+  --sf:rgba(255,248,235,.88);--sf2:rgba(255,248,235,.96);--sf3:#fffbf4;
+  --bd:rgba(100,65,20,.13);--bd2:rgba(100,65,20,.24);
+  --tx:#3d2b1e;--tx2:#5c4033;--tx3:#a0806a;
+  --hdr:rgba(244,228,193,.96);
+}
+[data-theme="forest"]{
+  --bg:linear-gradient(135deg,#1e4b3e 0%,#2d6a4f 50%,#40916c 100%);
+  --sf:rgba(220,237,193,.15);--sf2:rgba(220,237,193,.24);--sf3:rgba(220,237,193,.34);
+  --bd:rgba(162,191,132,.26);--bd2:rgba(162,191,132,.44);
+  --tx:#dcedc1;--tx2:rgba(183,217,151,.8);--tx3:rgba(183,217,151,.42);
+  --hdr:rgba(10,40,25,.82);
+}
+/* Level colours — match CPG visual exactly */
+:root{
+  --c-er:#f97316;--c-emr:#7c3aed;--c-emt:#3b82f6;
+  --c-emta:#1e40af;--c-p:#dc2626;--c-ap:#7f1d1d;--c-ep:#0f766e;
+  --c-tele:#d97706;
+}
+/* ═══════ BASE ═══════════════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);background-attachment:fixed;
+  color:var(--tx);min-height:100dvh;line-height:1.5;font-size:15px;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:2px}
+/* ═══════ HEADER ═════════════════════════════════════════ */
+header{position:sticky;top:0;z-index:100;background:var(--hdr);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--bd);height:58px;
+  display:flex;align-items:center;padding:0 14px;gap:10px}
+.hl{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.hr{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ib{width:36px;height:36px;border-radius:11px;background:var(--sf);border:1px solid var(--bd);
+  color:var(--tx);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:.9rem;text-decoration:none;transition:all .15s;flex-shrink:0}
+.ib:active{transform:scale(.9);background:var(--sf2)}
+.pt{font-size:.9rem;font-weight:800;color:var(--tx)}
+.ps{font-size:.66rem;color:var(--tx3)}
+/* ═══════ LAYOUT ═════════════════════════════════════════ */
+main{padding:14px 12px 100px;max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+/* ═══════ HERO ════════════════════════════════════════════ */
+.hero{background:var(--sf);border:1px solid var(--bd);border-left:4px solid #0056b3;
+  border-radius:16px;padding:15px 17px}
+.hero h2{font-size:.97rem;font-weight:800;margin-bottom:4px}
+.hero p{font-size:.8rem;color:var(--tx2);line-height:1.55}
+.hn{margin-top:9px;padding:7px 12px;background:rgba(245,158,11,.12);
+  border:1px solid rgba(245,158,11,.35);border-radius:9px;font-size:.73rem;color:#f59e0b;font-weight:600}
+/* ═══════ LEGEND ═════════════════════════════════════════ */
+.leg{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:13px 15px}
+.leg-t{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:10px}
+.leg-g{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.lg-r{display:flex;align-items:center;gap:8px}
+.lv{font-size:.68rem;font-weight:900;padding:4px 7px;border-radius:8px;
+  min-width:46px;text-align:center;color:#fff;flex-shrink:0}
+.lv-er{background:var(--c-er)}.lv-emr{background:var(--c-emr)}.lv-emt{background:var(--c-emt)}
+.lv-emta{background:var(--c-emta)}.lv-p{background:var(--c-p)}.lv-ap{background:var(--c-ap)}
+.lv-ep{background:var(--c-ep)}.lv-tele{background:var(--c-tele)}
+.ld{font-size:.74rem;color:var(--tx2);line-height:1.35;flex:1}
+.ld strong{color:var(--tx);font-weight:700}
+/* ═══════ FILTER BAR ══════════════════════════════════════ */
+.fb{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:12px 14px;
+  display:flex;flex-direction:column;gap:9px}
+.sb{display:flex;align-items:center;gap:8px;background:var(--sf2);
+  border:1.5px solid var(--bd2);border-radius:10px;padding:8px 12px;transition:border-color .18s}
+.sb:focus-within{border-color:#3b82f6}
+.si{font-size:.8rem;color:var(--tx3);flex-shrink:0}
+#qi{flex:1;background:transparent;border:none;outline:none;font-size:.88rem;font-family:inherit;color:var(--tx)}
+#qi::placeholder{color:var(--tx3)}
+#qc{background:none;border:none;color:var(--tx3);cursor:pointer;font-size:.72rem;padding:2px 4px;display:none;font-family:inherit}
+.fps{display:flex;gap:5px;flex-wrap:wrap}
+.fp{padding:5px 12px;border-radius:20px;font-size:.72rem;font-weight:700;cursor:pointer;
+  border:1.5px solid var(--bd2);background:var(--sf2);color:var(--tx2);
+  transition:all .15s;white-space:nowrap;font-family:inherit}
+.fp.fa{border-color:var(--tx2);color:var(--tx);background:var(--sf3)}
+.fp-er  {border-color:var(--c-er)!important;  color:var(--c-er)!important;  background:rgba(249,115,22,.12)!important}
+.fp-emr {border-color:var(--c-emr)!important; color:var(--c-emr)!important; background:rgba(124,58,237,.12)!important}
+.fp-emt {border-color:var(--c-emt)!important; color:var(--c-emt)!important; background:rgba(59,130,246,.12)!important}
+.fp-emta{border-color:var(--c-emta)!important;color:var(--c-emta)!important;background:rgba(30,64,175,.12)!important}
+.fp-p   {border-color:var(--c-p)!important;   color:var(--c-p)!important;   background:rgba(220,38,38,.12)!important}
+.fp-ap  {border-color:var(--c-ap)!important;  color:var(--c-ap)!important;  background:rgba(127,29,29,.12)!important}
+.fp-ep  {border-color:var(--c-ep)!important;  color:var(--c-ep)!important;  background:rgba(15,118,110,.12)!important}
+#rc{font-size:.7rem;color:var(--tx3);font-family:'DM Mono',monospace;align-self:flex-end}
+/* ═══════ SECTIONS ═══════════════════════════════════════ */
+.ss{background:var(--sf);border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:10px;padding:12px 15px;border-bottom:1px solid var(--bd);
+  cursor:pointer;transition:background .15s;user-select:none;-webkit-user-select:none}
+.sh:active{background:var(--sf2)}
+.si2{font-size:1.05rem;flex-shrink:0}
+.st{font-size:.86rem;font-weight:800;flex:1;color:var(--tx)}
+.sc{font-size:.62rem;font-weight:700;font-family:'DM Mono',monospace;
+  background:var(--sf2);border:1px solid var(--bd);border-radius:20px;padding:2px 8px;color:var(--tx3)}
+.sv{font-size:.68rem;color:var(--tx3);transition:transform .22s;flex-shrink:0}
+.sh.open .sv{transform:rotate(180deg)}
+.sb2{display:none}
+.sb2.open{display:block}
+/* ═══════ TABLE HEADER ════════════════════════════════════ */
+.th{display:flex;align-items:stretch;background:var(--sf2);
+  border-bottom:1px solid var(--bd2);position:sticky;top:58px;z-index:5}
+.thn{flex:1;padding:7px 12px 7px 15px;font-size:.6rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.6px;color:var(--tx3);display:flex;align-items:center}
+.thl{display:flex;flex-shrink:0;border-left:1px solid var(--bd)}
+.tc{width:38px;text-align:center;padding:7px 2px;font-size:.56rem;font-weight:900;
+  text-transform:uppercase;border-right:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:center;line-height:1.1;letter-spacing:-.2px}
+.tc:last-child{border-right:none}
+.tc-er{color:var(--c-er)}.tc-emr{color:var(--c-emr)}.tc-emt{color:var(--c-emt)}
+.tc-emta{color:var(--c-emta)}.tc-p{color:var(--c-p)}.tc-ap{color:var(--c-ap)}.tc-ep{color:var(--c-ep)}
+/* ═══════ SKILL ROWS ══════════════════════════════════════ */
+.sr{display:flex;align-items:stretch;border-bottom:1px solid var(--bd);transition:background .12s}
+.sr:last-child{border-bottom:none}
+.sr:hover{background:var(--sf2)}
+.sr.hidden{display:none}
+.sn{flex:1;padding:10px 12px 10px 15px;font-size:.83rem;color:var(--tx);line-height:1.4;
+  display:flex;flex-direction:column;justify-content:center}
+.sd{font-size:.7rem;color:var(--tx3);margin-top:3px;line-height:1.35}
+.snote{font-size:.67rem;color:#f59e0b;font-weight:600;margin-top:3px}
+.sl{display:flex;flex-shrink:0;border-left:1px solid var(--bd)}
+/* Level cells */
+.lc{width:38px;border-right:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:center}
+.lc:last-child{border-right:none}
+.cy{width:26px;height:26px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:800;color:#fff}
+.cn{font-size:.65rem;opacity:.2;color:var(--tx3)}
+.ct{width:26px;height:26px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;
+  background:rgba(217,119,6,.2);border:1px solid rgba(217,119,6,.4)}
+/* Colours per level */
+.lc-er  .cy{background:var(--c-er)}
+.lc-emr .cy{background:var(--c-emr)}
+.lc-emt .cy{background:var(--c-emt)}
+.lc-emta .cy{background:var(--c-emta)}
+.lc-p   .cy{background:var(--c-p)}
+.lc-ap  .cy{background:var(--c-ap)}
+.lc-ep  .cy{background:var(--c-ep)}
+/* ═══════ NO RESULTS ══════════════════════════════════════ */
+.nr{display:none;text-align:center;padding:36px 20px;color:var(--tx3);font-size:.86rem}
+.nr.show{display:block}
+/* ═══════ FOOTER ══════════════════════════════════════════ */
+footer{text-align:center;padding:14px 16px 28px;font-size:.71rem;color:var(--tx3);line-height:1.7}
+footer a{color:#3b82f6;text-decoration:none}
+/* ═══════ RESPONSIVE ══════════════════════════════════════ */
+@media(max-width:420px){
+  .tc,.lc{width:32px}.cy,.ct{width:22px;height:22px;font-size:.62rem;border-radius:4px}
+  .sn{font-size:.79rem}main{padding:12px 8px 90px}
+  .leg-g{grid-template-columns:1fr}
+}
+@media(min-width:580px){.tc,.lc{width:44px}.cy,.ct{width:30px;height:30px}}
+@media(min-width:800px){.tc,.lc{width:50px}.cy,.ct{width:34px;height:34px}}
+</style>
 </head>
 <body>
 
 <header>
-    <div class="header-left">
-        <button class="icon-btn" id="homeBtn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <div class="header-text">
-            <h1 id="pageTitle">S1 Scope of Practice</h1>
-            <p id="pageSubtitle">DCAS CPG 2025</p>
-        </div>
-    </div>
-    <div class="header-right">
-        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
-        <div class="stats-badge" id="liveStatsBadge">
-            <span>📊 <span id="statsAttempts">0</span></span>
-            <div class="stats-divider"></div>
-            <span>🎯 <span id="statsCritical">0%</span></span>
-        </div>
-        <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
-        <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
-    </div>
+  <div class="hl">
+    <button class="ib" id="homeBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+    <div><div class="pt">S1 Scope of Practice</div><div class="ps">DCAS CPG 2026</div></div>
+  </div>
+  <div class="hr">
+    <button class="ib" id="themeBtn">🎨</button>
+    <a href="c-index.html" class="ib">📋</a>
+    <a href="../about.html" class="ib">ℹ️</a>
+  </div>
 </header>
 
+<main>
 
-<main id="mainContent"></main>
+<div class="hero">
+  <h2>📋 DCAS Scope of Practice Matrix · CPG 2026</h2>
+  <p>Medications, skills, and interventions each DCAS provider level is authorised to perform independently or with Tele-EMS consultation. Source: DCAS CPG 2026, pages 338–341.</p>
+  <div class="hn">⚠️ Study aid only — always refer to the official DCAS CPG and memos for final authority.</div>
+</div>
+
+<div class="leg">
+  <div class="leg-t">Provider Levels &amp; Key</div>
+  <div class="leg-g">
+    <div class="lg-r"><div class="lv lv-er">ER</div><div class="ld"><strong>Emergency Responder</strong> — scene safety, basic care</div></div>
+    <div class="lg-r"><div class="lv lv-emr">EMR</div><div class="ld"><strong>Emergency Medical Responder</strong> — BLS, AED</div></div>
+    <div class="lg-r"><div class="lv lv-emt">EMT</div><div class="ld"><strong>Emergency Medical Technician</strong> — nebulisers, defib, selected meds</div></div>
+    <div class="lg-r"><div class="lv lv-emta">EMT-A</div><div class="ld"><strong>EMT Advanced</strong> — SGA, IV access, expanded meds</div></div>
+    <div class="lg-r"><div class="lv lv-p">P</div><div class="ld"><strong>Paramedic</strong> — ETI, IO, cardioversion, full IV scope</div></div>
+    <div class="lg-r"><div class="lv lv-ap">AP</div><div class="ld"><strong>Advanced Paramedic</strong> — RSI, NIV, procedural sedation</div></div>
+    <div class="lg-r"><div class="lv lv-ep">EP</div><div class="ld"><strong>Emergency Physician</strong> — full unrestricted scope</div></div>
+    <div class="lg-r"><div class="lv lv-tele">📞</div><div class="ld"><strong>Tele-EMS Required</strong> — must consult Tele-EMS before performing</div></div>
+  </div>
+</div>
+
+<div class="fb">
+  <div class="sb">
+    <span class="si">🔍</span>
+    <input id="qi" type="text" placeholder="Search skills or medications..." autocomplete="off">
+    <button id="qc">✕</button>
+  </div>
+  <div class="fps">
+    <button class="fp fa" id="pill-all"  onclick="setFilter('all')">All Levels</button>
+    <button class="fp"    id="pill-er"   onclick="setFilter('er')">ER+</button>
+    <button class="fp"    id="pill-emr"  onclick="setFilter('emr')">EMR+</button>
+    <button class="fp"    id="pill-emt"  onclick="setFilter('emt')">EMT+</button>
+    <button class="fp"    id="pill-emta" onclick="setFilter('emta')">EMT-A+</button>
+    <button class="fp"    id="pill-p"    onclick="setFilter('p')">Para+</button>
+    <button class="fp"    id="pill-ap"   onclick="setFilter('ap')">AP+</button>
+    <button class="fp"    id="pill-ep"   onclick="setFilter('ep')">EP Only</button>
+  </div>
+  <div id="rc"></div>
+</div>
+
+<div id="root"></div>
+<div class="nr" id="noR">🔍 No results match your search or filter.</div>
+
+</main>
 
 <footer>
-    <div>Created by Soliman Anas · for study aid only</div>
-    <div><a href="../about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+  <div>Created by Soliman Anas · DCAS CPG 2026 Study Aid Only</div>
+  <div><a href="../about.html">About &amp; Disclaimer</a> · Refer to official DCAS CPG and memos.</div>
 </footer>
 
-<script src="../content/s1.js"></script>
-<script src="../app.js"></script>
 <script>
-    (function() {
-        const themeBtn = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        const themes = ['dark', 'light', 'sepia', 'forest'];
-        
-        function initTheme() {
-            const saved = localStorage.getItem('theme') || 'dark';
-            html.setAttribute('data-theme', saved);
-        }
+'use strict';
+/* ═══════════════════════════════════════════════════════════
+   DATA — directly from DCAS CPG 2026 S1 matrix (pp.338–341)
+   cells: [ER, EMR, EMT, EMT-A, P, AP, EP]
+   '' = not authorised | 'y' = independent | 't' = Tele-EMS
+═══════════════════════════════════════════════════════════ */
+const LVLS    = ['er','emr','emt','emta','p','ap','ep'];
+const LVLNM   = ['ER','EMR','EMT','EMT-A','P','AP','EP'];
+const LVLCLS  = ['lc-er','lc-emr','lc-emt','lc-emta','lc-p','lc-ap','lc-ep'];
+const LVLHD   = ['tc-er','tc-emr','tc-emt','tc-emta','tc-p','tc-ap','tc-ep'];
+const LVLI    = {all:-1,er:0,emr:1,emt:2,emta:3,p:4,ap:5,ep:6};
 
-        function nextTheme() {
-            const current = html.getAttribute('data-theme') || 'dark';
-            const currentIndex = themes.indexOf(current);
-            const nextIndex = (currentIndex + 1) % themes.length;
-            const next = themes[nextIndex];
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        }
+const DATA = [
+{id:'meds', icon:'💊', title:'Medications', open:true, rows:[
+  /* ── ER+ ── */
+  ['Oxygen','',                                                  ['y','y','y','y','y','y','y'],''],
+  /* ── EMR+ ── */
+  ['Actimaris Wound Cleaning Solution','Wound irrigation',        ['','y','y','y','y','y','y'],''],
+  ['Biofreeze / Ethyl Chloride','Topical analgesia / cold spray',['','y','y','y','y','y','y'],''],
+  ['Paracetamol PO','Oral — analgesic/antipyretic',              ['','y','y','y','y','y','y'],''],
+  ['Aspirin PO','ACS — 325 mg chewed',                          ['','y','y','y','y','y','y'],''],
+  ['Glucose Gel Buccal','Hypoglycaemia — conscious, intact swallow',['','y','y','y','y','y','y'],''],
+  ['EpiPen 0.3 mg / 0.15 mg','Anaphylaxis — IM auto-injector',  ['','y','y','y','y','y','y'],''],
+  /* ── EMT+ ── */
+  ['Paracetamol PR / IV','Rectal or IV route',                   ['','','y','y','y','y','y'],''],
+  ['GTN SL','0.4 mg sublingual — cardiac chest pain / APE',     ['','','y','y','y','y','y'],''],
+  ['Combivent Nebulized','Asthma / COPD',                        ['','','y','y','y','y','y'],''],
+  ['Salbutamol Nebulized','Bronchospasm',                        ['','','y','y','y','y','y'],''],
+  ['Penthrox (Methoxyflurane)','Moderate–severe pain — inhaled', ['','','y','y','y','y','y'],''],
+  ['Dextrose 10%','Hypoglycaemia — IV / IO',                    ['','','y','y','y','y','y'],''],
+  ['Ringer Lactate','IV / IO fluid resuscitation',               ['','','y','y','y','y','y'],''],
+  ['Sodium Chloride 0.9%','IV / IO fluid / dilution',           ['','','y','y','y','y','y'],''],
+  ['Epinephrine 1:10,000 PFS','Cardiac arrest — IV / IO push',  ['','','y','y','y','y','y'],''],
+  ['Diphenhydramine IM','Antihistamine — allergic reaction',     ['','','y','y','y','y','y'],''],
+  ['Glucagon SC / IM','Hypoglycaemia / beta-blocker OD',         ['','','y','y','y','y','y'],''],
+  ['Naloxone IM / IV / IN','Opioid overdose reversal',           ['','','y','y','y','y','y'],''],
+  ['Amiodarone (cardiac arrest)','VF / pVT — 5 mg/kg IV / IO',  ['','','y','y','y','y','y'],''],
+  ['Hydrocortisone IM','Asthma / COPD / anaphylaxis',            ['','','y','y','y','y','y'],''],
+  ['Nefopam IV','Moderate–severe pain — IV infusion',            ['','','y','y','y','y','y'],''],
+  ['Racemic Epinephrine','Croup — nebulised',                    ['','','y','y','y','y','y'],''],
+  /* ── EMT Tele → EMT-A+ ── */
+  ['Diclofenac IM','Pain management — 75 mg IM',                 ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
+  ['Atropine','Bradycardia / organophosphate — IV / IO',         ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
+  ['Hydrocortisone IV','IV route — asthma / anaphylaxis',        ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
+  /* ── EMT Tele → EMT-A Tele → Para+ ── */
+  ['Hyoscine Butylbromide IM / IV','Abdominal cramping — 20 mg', ['','','t','t','y','y','y'],'EMT & EMT-A: Tele-EMS required · Para+: independent'],
+  ['Metoclopramide IM / IV','Nausea & vomiting',                 ['','','t','t','y','y','y'],'EMT & EMT-A: Tele-EMS required · Para+: independent'],
+  /* ── EMT-A Tele → Para+ ── */
+  ['Adenosine','SVT — 0.1 mg/kg IV rapid + flush',              ['','','','t','y','y','y'],'EMT-A: Tele-EMS required · Para+: independent'],
+  /* ── Para+ ── */
+  ['Epinephrine 1:1000 amp','Anaphylaxis / asthma / inotrope',   ['','','','','y','y','y'],''],
+  ['Tranexamic Acid','Major haemorrhage — 15 mg/kg IV over 10 min',['','','','','y','y','y'],''],
+  ['Furosemide','Acute pulmonary oedema — 20–40 mg IV',          ['','','','','y','y','y'],''],
+  ['Epinephrine push-dose / infusion','Haemodynamic support',    ['','','','','y','y','y'],''],
+  ['Amiodarone Infusion (tachyarrhythmias)','SVT/VT — 150 mg over 10 min',['','','','','y','y','y'],''],
+  ['Dopamine','Inotrope infusion — 5–20 mcg/kg/min',            ['','','','','y','y','y'],''],
+  /* ── AP Tele → EP ── */
+  ['Labetalol','Pre-eclampsia severe hypertension — IV',         ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Morphine','Severe pain — IV / IM',                           ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Pethidine','Severe pain — IM',                               ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Haloperidol','Acute psychosis — IM',                         ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Midazolam','Seizures / sedation — IV / IM / IN',             ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Diazepam IM / IV / PR','Seizures / sedation',                ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+  ['Ketamine','Procedural sedation / pain / RSI',                ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
+]},
 
-        if (themeBtn) {
-            themeBtn.addEventListener('click', nextTheme);
-        }
-        initTheme();
+{id:'airway', icon:'🌬️', title:'Airway Management & Ventilation', open:true, rows:[
+  ['Open Airway Maneuvers','Head-tilt/chin-lift · jaw-thrust',   ['y','y','y','y','y','y','y'],''],
+  ['Bag Mask Ventilation (BVM)','1- & 2-person · 10–12/min',    ['y','y','y','y','y','y','y'],''],
+  ['Oxygen Therapy','Nasal cannula · simple mask · NRB · NRBM', ['','y','y','y','y','y','y'],''],
+  ['Suction','Yankauer / soft catheter · <15 sec',              ['','y','y','y','y','y','y'],''],
+  ['Basic Airway Adjuncts (OPA / NPA)','Sizing per guide',       ['','y','y','y','y','y','y'],''],
+  ['Nebulization','Medications via nebuliser mask',              ['','','y','y','y','y','y'],''],
+  ['End-Tidal CO₂ Monitoring (EtCO₂)','Waveform capnography',   ['','','y','y','y','y','y'],''],
+  ['Laryngeal Tube / SGA Insertion','LT · iGEL · LMA',          ['','','y','y','y','y','y'],''],
+  ['Flow-Safe CPAP','Alert, exhausting respiratory failure',     ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
+  ['Endotracheal Intubation (ETI)','Direct / video laryngoscopy',['','','','','y','y','y'],''],
+  ['Ventilation via Ventilator','Invasive mechanical ventilation',['','','','','y','y','y'],''],
+  ['Non-Invasive Ventilation via Ventilator','NIV / BiPAP settings',['','','','','','y','y'],''],
+  ['Rapid Sequence Intubation (RSI)','Drug-assisted intubation', ['','','','','','y','y'],''],
+  ['Foreign Body Removal','Advanced laryngoscopic retrieval',    ['','','','','','y','y'],''],
+]},
 
-        document.getElementById('homeBtn').addEventListener('click', () => {
-            window.location.href = '../index.html';
-        });
+{id:'cardiac', icon:'❤️', title:'Cardiac', open:false, rows:[
+  ['AED & CPR — Adult & Paediatric','30:2 · 100–120/min · 5–6 cm', ['y','y','y','y','y','y','y'],''],
+  ['4-Lead ECG','Continuous cardiac monitoring',                 ['','y','y','y','y','y','y'],''],
+  ['12-Lead ECG','Acquisition and transmission to hospital',     ['','','y','y','y','y','y'],''],
+  ['Defibrillation','200 J unsynchronised — VF / pulseless VT', ['','','y','y','y','y','y'],''],
+  ['Determining Death on Arrival (DOA)','Deciding NOT to start CPR — clear signs of death', ['','','','y','y','y','y'],''],
+  ['Stopping CPR (Terminating Resuscitation)','After CPR has been started', ['','','','','y','y','y'],''],
+  ['Synchronized Cardioversion & Pacing','Unstable tachy / symptomatic brady', ['','','','','t','y','y'],'Para: Tele-EMS required · AP+: independent'],
+]},
 
-        function loadStats() {
-            try {
-                const data = localStorage.getItem('dcas_cpg_stats');
-                const stats = data ? JSON.parse(data) : { totalAttempts: 0, critical: { total: 0, correct: 0 } };
-                const critAcc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
-                document.getElementById('statsAttempts').innerText = stats.totalAttempts || 0;
-                document.getElementById('statsCritical').innerText = `${critAcc}%`;
-            } catch(e) {}
-        }
-        loadStats();
-    })();
-</script>
+{id:'trauma', icon:'🩹', title:'Trauma', open:false, rows:[
+  ['Sling Application','Upper limb immobilisation',              ['y','y','y','y','y','y','y'],''],
+  ['Splinting (SAM / Foam Splint)','Limb fracture stabilisation',['y','y','y','y','y','y','y'],''],
+  ['Logroll','Spinal precaution patient movement',               ['y','y','y','y','y','y','y'],''],
+  ['Spinal Stabilisation','Manual inline stabilisation',         ['y','y','y','y','y','y','y'],''],
+  ['C-Collar Application','Sizing and correct placement',        ['y','y','y','y','y','y','y'],''],
+  ['Rapid Extrication','Life-threatening — short-board technique',['','y','y','y','y','y','y'],''],
+  ['KED (Kendrick Extrication Device)','Seated spinal immobilisation',['','y','y','y','y','y','y'],''],
+  ['Pelvic Binder','Suspected pelvic fracture',                  ['','','y','y','y','y','y'],''],
+  ['Scoop Stretcher','Minimal-movement transfer',                ['','','y','y','y','y','y'],''],
+  ['Traction Splint (Femur Fracture)','Mid-shaft femur — no hip/knee involvement',['','','y','y','y','y','y'],''],
+  ['Helmet Stabilisation / Removal','Sports / motorcycle helmet',['','','y','y','y','y','y'],''],
+  ['Triaging — Establishing Priorities','START triage · Red / Yellow / Green / Black',['','','y','y','y','y','y'],''],
+  ['Needle Chest Decompression','Tension pneumothorax — 2nd ICS MCL / 4th–5th ICS AAL',['','','','','','y','y'],''],
+]},
 
-<!-- Service Worker Registration -->
-<script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('../sw.js')
-                .then(reg => console.log('PWA Ready!', reg))
-                .catch(err => console.log('PWA Failed', err));
-        });
-    }
+{id:'haemo', icon:'🩸', title:'Haemorrhage Control', open:false, rows:[
+  ['C.A.T. Tourniquet Use','Life-threatening extremity haemorrhage · document time', ['','y','y','y','y','y','y'],''],
+  ['Nasal Packing','Epistaxis — anterior / posterior packing',   ['','','','','','y','y'],''],
+]},
+
+{id:'others', icon:'⚙️', title:'Others', open:false, rows:[
+  ['Childbirth','Normal delivery & immediate newborn care',      ['','','y','y','y','y','y'],''],
+  ['Intramuscular (IM) Injection','Correct site selection · ANTT',['','','y','y','y','y','y'],''],
+  ['Intravenous (IV) Cannulation','Peripheral IV access · ANTT', ['','','','y','y','y','y'],''],
+  ['Intraosseous (IO) Cannulation','EZ-IO · tibia / humeral head',['','','','','y','y','y'],''],
+  ['Procedural Sedation','Monitored sedation for procedures',    ['','','','','','y','y'],''],
+]},
+];
+
+/* ═══════ RENDER ═══════════════════════════════════════════ */
+function minLvl(c){ const i=c.findIndex(x=>x==='y'||x==='t'); return i<0?99:i; }
+
+function mkCell(v,i){
+  const cls=LVLCLS[i];
+  if(v==='y') return `<div class="lc ${cls}"><div class="cy">✓</div></div>`;
+  if(v==='t') return `<div class="lc ${cls}"><div class="ct">📞</div></div>`;
+  return `<div class="lc ${cls}"><span class="cn">—</span></div>`;
+}
+
+function mkHdr(){
+  const cols=LVLNM.map((n,i)=>`<div class="tc ${LVLHD[i]}">${n}</div>`).join('');
+  return `<div class="th"><div class="thn">Skill / Medication</div><div class="thl">${cols}</div></div>`;
+}
+
+function buildAll(){
+  return DATA.map(sec=>{
+    const rows=sec.rows.map(([name,detail,cells,note])=>{
+      const ml=minLvl(cells);
+      const cls=cells.map((v,i)=>mkCell(v,i)).join('');
+      const dt=detail?`<div class="sd">${detail}</div>`:'';
+      const nt=note?`<div class="snote">📞 ${note}</div>`:'';
+      const txt=(name+' '+detail).toLowerCase();
+      return `<div class="sr" data-lvl="${ml}" data-text="${txt}">
+        <div class="sn">${name}${dt}${nt}</div>
+        <div class="sl">${cls}</div>
+      </div>`;
+    }).join('');
+    const op=sec.open;
+    return `<div class="ss" data-sid="${sec.id}">
+      <div class="sh${op?' open':''}" onclick="togSec(this)">
+        <span class="si2">${sec.icon}</span>
+        <span class="st">${sec.title}</span>
+        <span class="sc">${sec.rows.length}</span>
+        <span class="sv">▾</span>
+      </div>
+      <div class="sb2${op?' open':''}">${mkHdr()}${rows}</div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('root').innerHTML = buildAll();
+
+/* ═══════ TOGGLE ═══════════════════════════════════════════ */
+function togSec(h){ h.classList.toggle('open'); h.nextElementSibling.classList.toggle('open'); }
+window.togSec=togSec;
+
+/* ═══════ FILTER & SEARCH ══════════════════════════════════ */
+let aF='all', sQ='';
+
+function setFilter(f){
+  aF=f;
+  document.querySelectorAll('.fp').forEach(p=>p.classList.remove('fa','fp-er','fp-emr','fp-emt','fp-emta','fp-p','fp-ap','fp-ep'));
+  const pill=document.getElementById('pill-'+f);
+  if(pill) pill.classList.add(f==='all'?'fa':'fp-'+f);
+  run();
+}
+window.setFilter=setFilter;
+
+const qi=document.getElementById('qi'), qc=document.getElementById('qc');
+qi.addEventListener('input',function(){ sQ=this.value.toLowerCase().trim(); qc.style.display=sQ?'block':'none'; run(); });
+qc.addEventListener('click',()=>{ qi.value=''; sQ=''; qc.style.display='none'; run(); qi.focus(); });
+
+function run(){
+  const fi=LVLI[aF]; let total=0;
+  document.querySelectorAll('.ss').forEach(sec=>{
+    let sv=0;
+    sec.querySelectorAll('.sr').forEach(row=>{
+      const ml=parseInt(row.dataset.lvl);
+      const txt=row.dataset.text||'';
+      let ok=true;
+      if(sQ&&!txt.includes(sQ)&&!row.textContent.toLowerCase().includes(sQ)) ok=false;
+      if(aF==='ep'){ if(ml<6) ok=false; }        // EP Only = items that start at EP (EP-exclusive)
+      else if(fi>=0){ if(ml>fi) ok=false; }       // EMT+ = show items accessible at EMT level and above
+      row.classList.toggle('hidden',!ok);
+      if(ok) sv++;
+    });
+    sec.style.display=sv>0?'':'none';
+    if(sQ&&sv>0){ sec.querySelector('.sh').classList.add('open'); sec.querySelector('.sb2').classList.add('open'); }
+    total+=sv;
+  });
+  document.getElementById('rc').textContent=sQ?`${total} result${total!==1?'s':''}` : '';
+  document.getElementById('noR').classList.toggle('show',total===0);
+}
+
+/* ═══════ THEME ════════════════════════════════════════════ */
+const THEMES=['dark','light','sepia','forest'];
+const html=document.documentElement;
+(function(){ html.setAttribute('data-theme',localStorage.getItem('theme')||'dark'); })();
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  const cur=html.getAttribute('data-theme')||'dark';
+  const nxt=THEMES[(THEMES.indexOf(cur)+1)%THEMES.length];
+  html.setAttribute('data-theme',nxt); localStorage.setItem('theme',nxt);
+});
+document.getElementById('homeBtn').addEventListener('click',()=>{ window.location.href='../index.html'; });
+
+/* ═══════ INIT ══════════════════════════════════════════════ */
+document.getElementById('pill-all').classList.add('fa');
+if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
 </script>
 </body>
 </html>
