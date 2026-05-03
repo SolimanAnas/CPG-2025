@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Tranexamic Acid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <style>
+        .med-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+        .med-card h4 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 0 0 6px 0;
+        }
+        .med-card p {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .med-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+        .med-emoji {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+        }
+        .med-title-block h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary-accent);
+            margin: 0 0 4px 0;
+            line-height: 1.2;
+        }
+        .med-num {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+        .scope-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-top: 6px;
+        }
+        .scope-emr  { background: #2a4a2a; color: #6ddc6d; border: 1px solid #3d7a3d; }
+        .scope-emt  { background: #1e3a5f; color: #60a8e0; border: 1px solid #2d5a8f; }
+        .scope-emta { background: #3a2a5f; color: #a87fe0; border: 1px solid #5a3a8f; }
+        .scope-p    { background: #4a3a1a; color: #e0b060; border: 1px solid #8a6a2a; }
+        .scope-ap   { background: #4a1a1a; color: #e06060; border: 1px solid #8a2a2a; }
+        .scope-ep   { background: #1a1a4a; color: #6060e0; border: 1px solid #2a2a8a; }
+        .scope-multi{ background: var(--glass-bg); color: var(--text-secondary); border: 1px solid var(--glass-border); font-size: 0.68rem; }
+        .med-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        @media (max-width: 600px) { .med-grid { grid-template-columns: 1fr; } }
+        .med-dose-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+        .med-dose-card h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 0 0 8px 0;
+        }
+        .med-dose-card p {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        .warn-box {
+            background: var(--glass-bg);
+            border: 1px solid rgba(220,53,69,0.5);
+            border-left: 4px solid #dc3545;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .warn-box h4 { color: #dc3545; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
+        .warn-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
+        .caution-box {
+            background: var(--glass-bg);
+            border: 1px solid rgba(230,140,0,0.5);
+            border-left: 4px solid #e68c00;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .caution-box h4 { color: #c97a00; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
+        .caution-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
+        .info-box {
+            background: var(--glass-bg);
+            border: 1px solid rgba(0,86,179,0.4);
+            border-left: 4px solid var(--primary-accent);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .info-box h4 { color: var(--primary-accent); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
+        .info-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 20px 0 6px;
+        }
+        .nav-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.18s, border-color 0.18s;
+        }
+        .nav-btn:hover { background: rgba(0,86,179,0.15); border-color: var(--primary-accent); color: var(--primary-accent); }
+        .nav-btn.disabled { opacity: 0.35; pointer-events: none; }
+        .nav-btn.right { justify-content: flex-end; text-align: right; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="backBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">M38 Tranexamic Acid</h1>
+            <p id="pageSubtitle">DCAS CPG 2025 · Medication Formulary</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <a href="m1-38.html" class="icon-btn" title="All Medications">📋</a>
+        <a href="../about.html" class="icon-btn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main id="mainContent">
+<div style="max-width:760px;margin:0 auto;padding:16px 16px 32px;">
+
+    <!-- Header card -->
+    <div class="med-card" style="border-color:var(--primary-accent);border-width:2px;">
+        <div class="med-header">
+            <div class="med-emoji">💊</div>
+            <div class="med-title-block">
+                <div class="med-num">M38 · Antifibrinolytic</div>
+                <h2>Tranexamic Acid</h2>
+                <span class="scope-badge scope-p" title="Paramedic (P) and above">P</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Presentation & Mechanism -->
+    <div class="med-card">
+        <h4>Presentation</h4>
+        <p>500 mg/5 mL ampule.</p>
+    </div>
+    <div class="med-card">
+        <h4>Mechanism of Action</h4>
+        <p>Tranexamic Acid blocks the conversion of plasminogen to plasmin, reducing fibrinolysis and blood loss.</p>
+    </div>
+
+    <!-- Indications -->
+    <div class="med-card" style="border-left:3px solid #28a745;">
+        <h4>Indications ✅</h4>
+        <p>Uncontrolled bleeding secondary to trauma; significant bleeding associated with post partum hemorrhage.</p>
+    </div>
+
+    <!-- Contraindications & Precautions -->
+    <div class="warn-box">
+        <h4>⛔ Contraindications</h4>
+        <p>Known allergy; &gt;3 hours since time of injury or start of bleeding.</p>
+    </div>
+    <div class="caution-box">
+        <h4>⚠️ Precautions</h4>
+        <p>First trimester pregnancy; renal impairment; females taking oral contraceptives; concurrent thromboembolic disease process; suspected subarachnoid hemorrhage.</p>
+    </div>
+
+    <!-- Side Effects -->
+    <div class="med-card">
+        <h4>Side Effects</h4>
+        <p>Thrombosis; convulsions; hypotension with rapid injections.</p>
+    </div>
+
+    <!-- Dose -->
+    <div class="med-grid">
+        <div class="med-dose-card">
+            <h4>👤 Adult Dose &amp; Administration</h4>
+            <p>1000 mg IV once only, administered within 3 hours since onset of bleeding. Dilute in 100 mL normal saline, administer over 10 minutes.</p>
+        </div>
+        <div class="med-dose-card">
+            <h4>🧒 Pediatric Dose &amp; Administration</h4>
+            <p>15 mg/kg IV once only. Slow IV over 10 minutes.</p>
+        </div>
+    </div>
+
+    <!-- Pregnancy -->
+    <div class="info-box" style="margin-top:14px;">
+        <h4>🤰 Use in Pregnancy and Lactation</h4>
+        <p>Pregnancy: Safety has not been established. However, tranexamic acid should be administered if clinically indicated. Lactation: Safety has not been established. However, tranexamic acid should be administered if clinically indicated.</p>
+    </div>
+
+    <!-- Additional -->
+    <div class="med-card">
+        <h4>Additional Information</h4>
+        <p>Nil.</p>
+    </div>
+
+    <!-- Prev / Next navigation -->
+    <div class="nav-bar">
+        <a href="m37.html" class="nav-btn">← M37 Normal Saline</a>
+        <span class="nav-btn right disabled">Last Medication →</span>
+    </div>
+
+</div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="../about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<script>
+(function() {
+    // Theme
+    const themes = ['dark','light','sepia','forest'];
+    const html = document.documentElement;
+    function initTheme() {
+        html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    }
+    function nextTheme() {
+        const cur = html.getAttribute('data-theme') || 'dark';
+        const next = themes[(themes.indexOf(cur)+1) % themes.length];
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
+    document.getElementById('themeToggle').addEventListener('click', nextTheme);
+    document.getElementById('backBtn').addEventListener('click', () => {
+        if (document.referrer) history.back();
+        else window.location.href = 'm1-38.html';
+    });
+    initTheme();
+})();
+</script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js').catch(()=>{});
+        });
+    }
+</script>
+</body>
+</html>
