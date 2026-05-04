@@ -1,847 +1,546 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCAS CPG 2025 - Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        html { background: #0a0e1a; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0e1a;
-            color: #e2e8f0;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        /* Animated background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 20% 20%, rgba(59,130,246,0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(139,92,246,0.06) 0%, transparent 50%),
-                        radial-gradient(circle at 50% 50%, rgba(16,185,129,0.04) 0%, transparent 50%);
-            animation: bgShift 20s ease-in-out infinite;
-            z-index: 0;
-            pointer-events: none;
-        }
-        @keyframes bgShift {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(2%, -2%) rotate(1deg); }
-            66% { transform: translate(-1%, 1%) rotate(-1deg); }
-        }
-        .layout {
-            display: flex;
-            min-height: 100vh;
-            position: relative;
-            z-index: 1;
-        }
-        /* Sidebar */
-        .sidebar {
-            width: 260px;
-            background: rgba(15, 20, 35, 0.95);
-            backdrop-filter: blur(20px);
-            border-right: 1px solid rgba(255,255,255,0.06);
-            padding: 24px 16px;
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 100;
-        }
-        .sidebar-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 0 8px 24px;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            margin-bottom: 24px;
-        }
-        .brand-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-        .brand-text h2 {
-            font-size: 1rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .brand-text span {
-            font-size: 0.65rem;
-            color: #64748b;
-            font-weight: 500;
-        }
-        .nav-section {
-            margin-bottom: 24px;
-        }
-        .nav-label {
-            font-size: 0.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #475569;
-            padding: 0 8px;
-            margin-bottom: 8px;
-        }
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 12px;
-            border-radius: 10px;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            margin-bottom: 2px;
-        }
-        .nav-item:hover {
-            background: rgba(255,255,255,0.05);
-            color: #e2e8f0;
-        }
-        .nav-item.active {
-            background: rgba(59,130,246,0.15);
-            color: #60a5fa;
-        }
-        .nav-item .icon {
-            font-size: 1.1rem;
-            width: 24px;
-            text-align: center;
-        }
-        .nav-item .badge {
-            margin-left: auto;
-            background: #ef4444;
-            color: white;
-            font-size: 0.6rem;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 10px;
-        }
-        .sidebar-footer {
-            margin-top: auto;
-            padding: 16px 8px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .user-avatar {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #10b981, #3b82f6);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: white;
-        }
-        .user-name {
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        .user-role {
-            font-size: 0.65rem;
-            color: #64748b;
-        }
-        /* Main Content */
-        .main {
-            flex: 1;
-            margin-left: 260px;
-            padding: 24px 32px;
-            min-height: 100vh;
-        }
-        /* Header */
-        .top-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 32px;
-        }
-        .greeting h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #f1f5f9;
-            margin-bottom: 4px;
-        }
-        .greeting p {
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-        .header-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px;
-            padding: 8px 16px;
-            gap: 8px;
-            width: 280px;
-        }
-        .search-box input {
-            background: transparent;
-            border: none;
-            color: #e2e8f0;
-            font-size: 0.85rem;
-            outline: none;
-            width: 100%;
-        }
-        .search-box input::placeholder { color: #475569; }
-        .action-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            color: #94a3b8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-        }
-        .action-btn:hover {
-            background: rgba(255,255,255,0.1);
-            color: #e2e8f0;
-        }
-        /* Stats Row */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .stat-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        .stat-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-        .stat-card.blue::after { background: #3b82f6; }
-        .stat-card.green::after { background: #10b981; }
-        .stat-card.purple::after { background: #8b5cf6; }
-        .stat-card.amber::after { background: #f59e0b; }
-        .stat-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-        .stat-card.blue .stat-icon { background: rgba(59,130,246,0.15); }
-        .stat-card.green .stat-icon { background: rgba(16,185,129,0.15); }
-        .stat-card.purple .stat-icon { background: rgba(139,92,246,0.15); }
-        .stat-card.amber .stat-icon { background: rgba(245,158,11,0.15); }
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #f1f5f9;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-        .stat-label {
-            font-size: 0.75rem;
-            color: #64748b;
-            font-weight: 500;
-        }
-        /* Section Title */
-        .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #f1f5f9;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
-        }
-        /* Quick Access Grid */
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        .quick-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 24px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .quick-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            border-radius: 3px 3px 0 0;
-        }
-        .quick-card.blue::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
-        .quick-card.green::before { background: linear-gradient(90deg, #10b981, #34d399); }
-        .quick-card.purple::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
-        .quick-card.amber::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
-        .quick-card.cyan::before { background: linear-gradient(90deg, #06b6d4, #22d3ee); }
-        .quick-card.rose::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
-        .quick-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255,255,255,0.12);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-        .quick-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            display: block;
-        }
-        .quick-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #f1f5f9;
-            margin-bottom: 6px;
-        }
-        .quick-card p {
-            font-size: 0.8rem;
-            color: #64748b;
-            line-height: 1.4;
-        }
-        .quick-arrow {
-            position: absolute;
-            right: 16px;
-            bottom: 16px;
-            font-size: 1.2rem;
-            color: #475569;
-            transition: all 0.2s;
-        }
-        .quick-card:hover .quick-arrow {
-            color: #60a5fa;
-            transform: translateX(4px);
-        }
-        /* Chapters List */
-        .chapters-section {
-            margin-bottom: 32px;
-        }
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-        .chapter-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 16px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 12px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s;
-        }
-        .chapter-item:hover {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.08);
-        }
-        .chapter-num {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-        }
-        .chapter-num.universal { background: linear-gradient(135deg, #d63384, #e91e63); }
-        .chapter-num.airway { background: linear-gradient(135deg, #0ca678, #10b981); }
-        .chapter-num.cardio { background: linear-gradient(135deg, #e03131, #ef4444); }
-        .chapter-num.resus { background: linear-gradient(135deg, #6741d9, #8b5cf6); }
-        .chapter-num.neuro { background: linear-gradient(135deg, #0891b2, #06b6d4); }
-        .chapter-num.medical { background: linear-gradient(135deg, #f76707, #f59e0b); }
-        .chapter-num.trauma { background: linear-gradient(135deg, #fcc419, #eab308); }
-        .chapter-num.env { background: linear-gradient(135deg, #845ef7, #a855f7); }
-        .chapter-num.peds { background: linear-gradient(135deg, #ff922b, #f97316); }
-        .chapter-num.ob { background: linear-gradient(135deg, #f06595, #ec4899); }
-        .chapter-num.mci { background: linear-gradient(135deg, #2f9e44, #22c55e); }
-        .chapter-num.scope { background: linear-gradient(135deg, #495057, #6b7280); }
-        .chapter-info h4 {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 2px;
-        }
-        .chapter-info span {
-            font-size: 0.7rem;
-            color: #64748b;
-        }
-        .chapter-arrow {
-            margin-left: auto;
-            color: #475569;
-            transition: all 0.2s;
-        }
-        .chapter-item:hover .chapter-arrow {
-            color: #60a5fa;
-        }
-        /* EMS Tools */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin-bottom: 32px;
-        }
-        .tool-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 20px 16px;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s;
-        }
-        .tool-card:hover {
-            background: rgba(255,255,255,0.06);
-            transform: translateY(-2px);
-        }
-        .tool-icon {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            display: block;
-        }
-        .tool-card h4 {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 4px;
-        }
-        .tool-card span {
-            font-size: 0.65rem;
-            color: #64748b;
-        }
-        /* Progress Bar */
-        .progress-section {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-        .progress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        .progress-header h3 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #f1f5f9;
-        }
-        .progress-header span {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #60a5fa;
-        }
-        .progress-bar-bg {
-            height: 8px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 12px;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            border-radius: 8px;
-            transition: width 1s ease;
-        }
-        .progress-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.7rem;
-            color: #64748b;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 24px 0;
-            color: #475569;
-            font-size: 0.75rem;
-            border-top: 1px solid rgba(255,255,255,0.04);
-        }
-        footer a {
-            color: #60a5fa;
-            text-decoration: none;
-        }
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 16px;
-            left: 16px;
-            z-index: 200;
-            width: 40px;
-            height: 40px;
-            background: rgba(15, 20, 35, 0.95);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 10px;
-            color: #e2e8f0;
-            font-size: 1.2rem;
-            cursor: pointer;
-            align-items: center;
-            justify-content: center;
-        }
-        .sidebar-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.6);
-            z-index: 90;
-        }
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-            .quick-grid { grid-template-columns: repeat(2, 1fr); }
-            .tools-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
-            .sidebar {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease;
-            }
-            .sidebar.open { transform: translateX(0); }
-            .sidebar-overlay.active { display: block; }
-            .main { margin-left: 0; padding: 16px; padding-top: 70px; }
-            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .quick-grid { grid-template-columns: 1fr; }
-            .chapters-grid { grid-template-columns: 1fr; }
-            .tools-grid { grid-template-columns: repeat(2, 1fr); }
-            .search-box { width: 100%; }
-            .top-header { flex-direction: column; gap: 16px; align-items: flex-start; }
-            .header-actions { width: 100%; }
-            .greeting h1 { font-size: 1.4rem; }
-        }
-        @media (max-width: 480px) {
-            .stats-row { grid-template-columns: 1fr 1fr; }
-            .stat-card { padding: 14px; }
-            .stat-value { font-size: 1.4rem; }
-        }
-        .filtered-out { display: none !important; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DCAS CPG 2026 · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050a12">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+:root{
+  --bg:#050a12;--s0:#07101c;--s1:#0c1828;--s2:#111f30;
+  --bd:rgba(0,212,255,.10);--bd2:rgba(0,212,255,.22);
+  --tx:#ddeeff;--tx2:rgba(192,220,242,.62);--tx3:rgba(192,220,242,.3);
+  --ac:#00d4ff;--ac-d:rgba(0,212,255,.14);
+  --gr:#00e87a;--gr-d:rgba(0,232,122,.14);
+  --pu:#a855f7;--pu-d:rgba(168,85,247,.14);
+  --am:#f59e0b;--am-d:rgba(245,158,11,.14);
+  --re:#f43f5e;
+  --mono:'Space Mono',monospace;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --hdr:58px;--bot:64px;
+  --safe:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg)}
+body{font-family:var(--body);background:var(--bg);color:var(--tx);min-height:100dvh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(0,212,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.025) 1px,transparent 1px);
+  background-size:48px 48px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;
+  background:radial-gradient(ellipse 60% 40% at 15% 10%,rgba(0,212,255,.06) 0%,transparent 60%),
+             radial-gradient(ellipse 50% 50% at 85% 90%,rgba(168,85,247,.05) 0%,transparent 60%);
+  pointer-events:none;z-index:0;animation:atm 20s ease-in-out infinite}
+@keyframes atm{0%,100%{opacity:1}50%{opacity:.6}}
+.layout{display:flex;min-height:100dvh;position:relative;z-index:1}
+/* SIDEBAR */
+.sidebar{width:240px;flex-shrink:0;background:var(--s0);border-right:1px solid var(--bd);
+  padding:20px 10px;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100dvh;overflow-y:auto}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--bd)}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 18px;border-bottom:1px solid var(--bd);margin-bottom:18px}
+.brand-ico{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--ac),var(--pu));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--bg);flex-shrink:0}
+.brand-tx h2{font-family:var(--mono);font-size:.8rem;font-weight:700;letter-spacing:1px;line-height:1.2}
+.brand-tx span{font-size:.58rem;color:var(--tx3);letter-spacing:.5px}
+.nav-lbl{font-family:var(--mono);font-size:.5rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:2.5px;color:var(--tx3);padding:0 8px;margin:14px 0 5px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:8px;
+  color:var(--tx2);text-decoration:none;font-size:.78rem;font-weight:500;
+  transition:all .15s;margin-bottom:1px;position:relative}
+.nav-item .ni{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
+.nav-item .nb{margin-left:auto;background:var(--re);color:#fff;font-family:var(--mono);
+  font-size:.5rem;font-weight:700;padding:1px 5px;border-radius:5px}
+.nav-item:hover{background:var(--ac-d);color:var(--tx)}
+.nav-item.act{background:var(--ac-d);color:var(--ac);font-weight:600}
+.nav-item.act::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:3px;height:55%;background:var(--ac);border-radius:0 3px 3px 0}
+.sb-foot{margin-top:auto;padding:14px 8px 2px;border-top:1px solid var(--bd)}
+.user-row{display:flex;align-items:center;gap:9px}
+.ua{width:30px;height:30px;border-radius:8px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gr),var(--ac));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.65rem;font-weight:700;color:var(--bg)}
+.un{font-size:.78rem;font-weight:600}.ur{font-size:.58rem;color:var(--tx3)}
+/* MAIN */
+.main{flex:1;min-width:0;padding:28px 32px 60px;overflow-x:hidden}
+/* TOPBAR */
+.topbar{display:none;position:sticky;top:0;z-index:80;height:var(--hdr);
+  background:rgba(5,10,18,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--bd);align-items:center;justify-content:space-between;padding:0 16px;gap:10px}
+.tb-brand{display:flex;align-items:center;gap:8px}
+.tb-brand .brand-ico{width:30px;height:30px;border-radius:8px;font-size:.7rem}
+.tb-brand h2{font-family:var(--mono);font-size:.8rem;font-weight:700;letter-spacing:.5px}
+.tb-right{display:flex;align-items:center;gap:6px}
+.tbb{width:36px;height:36px;border-radius:10px;background:var(--s1);border:1px solid var(--bd);
+  color:var(--tx2);display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;cursor:pointer;text-decoration:none;transition:all .15s;flex-shrink:0}
+.tbb:active{transform:scale(.92)}.tbb:hover{border-color:var(--bd2);color:var(--ac)}
+/* SEARCH OVERLAY */
+.so{position:fixed;inset:0;z-index:200;background:rgba(5,10,18,.96);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  display:none;flex-direction:column;padding:20px 16px;gap:12px}
+.so.open{display:flex;animation:soIn .2s ease}
+@keyframes soIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.so-row{display:flex;align-items:center;gap:10px}
+.so-iw{flex:1;display:flex;align-items:center;gap:8px;background:var(--s1);
+  border:1.5px solid var(--ac);border-radius:12px;padding:10px 14px}
+.so-iw span{color:var(--ac);font-size:.9rem;flex-shrink:0}
+.so-iw input{flex:1;background:transparent;border:none;outline:none;font-size:.95rem;font-family:var(--body);color:var(--tx)}
+.so-iw input::placeholder{color:var(--tx3)}
+.so-cancel{background:none;border:none;color:var(--tx2);font-size:.82rem;font-family:var(--body);cursor:pointer;padding:6px;white-space:nowrap}
+.so-lbl{font-size:.65rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);padding:0 4px}
+.so-list{display:flex;flex-direction:column;gap:6px;overflow-y:auto;flex:1}
+.so-hit{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--s1);
+  border:1px solid var(--bd);border-radius:12px;text-decoration:none;color:var(--tx);
+  font-size:.85rem;font-weight:500;transition:background .15s}
+.so-hit:hover,.so-hit:active{background:var(--ac-d);border-color:var(--bd2)}
+.so-ico{font-size:1.1rem;flex-shrink:0;width:28px;text-align:center}
+.so-info{flex:1;min-width:0}
+.so-title{font-weight:700;font-size:.85rem}
+.so-desc{font-size:.7rem;color:var(--tx3);margin-top:1px}
+.so-arr{color:var(--tx3);font-size:.8rem;flex-shrink:0}
+.so-none{text-align:center;padding:40px 20px;color:var(--tx3);font-size:.85rem;display:none}
+.so-none.show{display:block}
+/* HERO */
+.hero{display:flex;align-items:center;gap:24px;background:var(--s0);
+  border:1px solid var(--bd);border-radius:20px;padding:22px 24px;
+  margin-bottom:22px;overflow:hidden;position:relative}
+.hero::before{content:'';position:absolute;top:-40px;right:-40px;
+  width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,212,255,.08),transparent 70%);pointer-events:none}
+.hero-l{flex:1;min-width:0}
+.hero-greet{font-family:var(--mono);font-size:1.35rem;font-weight:700;
+  letter-spacing:-.5px;line-height:1.1;margin-bottom:5px;
+  background:linear-gradient(120deg,var(--tx) 60%,var(--ac));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:.78rem;color:var(--tx2);margin-bottom:12px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:7px}
+.hero-pill{display:inline-flex;align-items:center;gap:5px;background:var(--s2);
+  border:1px solid var(--bd);border-radius:20px;padding:4px 10px;
+  font-size:.68rem;color:var(--tx2);font-weight:500}
+.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.d-gr{background:var(--gr);box-shadow:0 0 6px var(--gr)}
+.d-ac{background:var(--ac);box-shadow:0 0 6px var(--ac)}
+.d-am{background:var(--am)}
+/* RING */
+.ring-w{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
+.ring-svg{transform:rotate(-90deg);width:88px;height:88px}
+.ring-track{fill:none;stroke:var(--s2);stroke-width:7}
+.ring-fill{fill:none;stroke-width:7;stroke-linecap:round;stroke:url(#rg);
+  stroke-dasharray:220;stroke-dashoffset:220;
+  transition:stroke-dashoffset 1.5s cubic-bezier(.4,0,.2,1)}
+.ring-in{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  text-align:center;pointer-events:none}
+.ring-pct{font-family:var(--mono);font-size:1.1rem;font-weight:700;color:var(--tx);line-height:1}
+.ring-lbl{font-size:.5rem;color:var(--tx3);letter-spacing:.5px;text-transform:uppercase;margin-top:2px}
+.ring-cap{font-size:.6rem;color:var(--tx3);text-align:center;margin-top:2px}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}
+.sc{background:var(--s0);border:1px solid var(--bd);border-radius:16px;
+  padding:16px 15px;position:relative;overflow:hidden;transition:border-color .2s,transform .15s}
+.sc:hover{border-color:var(--bd2);transform:translateY(-1px)}
+.sc::after{content:'';position:absolute;top:-24px;right:-24px;width:80px;height:80px;
+  border-radius:50%;opacity:.07;pointer-events:none}
+.sc-bl::after{background:var(--ac)}.sc-gr::after{background:var(--gr)}
+.sc-pu::after{background:var(--pu)}.sc-am::after{background:var(--am)}
+.si{font-size:1.05rem;width:32px;height:32px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.sc-bl .si{background:var(--ac-d)}.sc-gr .si{background:var(--gr-d)}
+.sc-pu .si{background:var(--pu-d)}.sc-am .si{background:var(--am-d)}
+.sv{font-family:var(--mono);font-size:1.7rem;font-weight:700;color:var(--tx);line-height:1;margin-bottom:4px}
+.sl{font-size:.65rem;color:var(--tx3);letter-spacing:.3px;font-weight:500}
+/* SECTION HDR */
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.sh h2{font-family:var(--mono);font-size:.8rem;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--tx);white-space:nowrap}
+.sh .sc2{font-size:.62rem;color:var(--tx3);font-weight:400;
+  letter-spacing:0;text-transform:none;font-family:var(--body);white-space:nowrap}
+.sh::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--bd2),transparent)}
+/* QUICK GRID */
+.qg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
+.qc{background:var(--s0);border:1px solid var(--bd);border-radius:16px;
+  padding:18px 16px;text-decoration:none;color:inherit;
+  transition:all .2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.qc:active{transform:scale(.97)}.qc:hover{border-color:var(--bd2);background:var(--s1)}
+.qc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.qc:hover::before{transform:scaleX(1)}
+.q-bl::before{background:linear-gradient(90deg,var(--ac),var(--pu))}
+.q-gr::before{background:var(--gr)}.q-pu::before{background:var(--pu)}
+.q-cy::before{background:#06b6d4}.q-am::before{background:var(--am)}
+.q-re::before{background:var(--re)}
+.q-badge{position:absolute;top:11px;right:11px;font-size:.54rem;font-family:var(--mono);
+  font-weight:700;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.b-new{background:var(--re);color:#fff}
+.b-live{background:var(--gr-d);color:var(--gr);border:1px solid rgba(0,232,122,.3)}
+.q-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.qc h3{font-family:var(--mono);font-size:.83rem;font-weight:700;color:var(--tx);margin-bottom:5px;letter-spacing:.3px}
+.qc p{font-size:.72rem;color:var(--tx3);line-height:1.5;flex:1}
+.q-arr{align-self:flex-end;margin-top:10px;color:var(--tx3);font-size:1rem;transition:all .2s}
+.qc:hover .q-arr{color:var(--ac);transform:translateX(3px)}
+/* TOOLS */
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:26px}
+.tc{background:var(--s0);border:1px solid var(--bd);border-radius:14px;
+  padding:16px 12px;text-align:center;text-decoration:none;color:inherit;transition:all .2s}
+.tc:hover{border-color:var(--bd2);background:var(--s1);transform:translateY(-1px)}
+.tc:active{transform:scale(.96)}
+.t-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+.tc h4{font-family:var(--mono);font-size:.7rem;font-weight:700;color:var(--tx);margin-bottom:3px;letter-spacing:.5px}
+.tc span{font-size:.6rem;color:var(--tx3)}
+/* CHAPTERS */
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:26px}
+.ci{display:flex;align-items:center;gap:12px;padding:13px 14px;
+  background:var(--s0);border:1px solid var(--bd);border-radius:14px;
+  text-decoration:none;color:inherit;transition:all .2s;position:relative;overflow:hidden}
+.ci:hover{border-color:var(--bd2);background:var(--s1)}.ci:active{transform:scale(.98)}
+.ci.done{border-color:rgba(0,232,122,.22)}
+.ci.done::after{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--gr)}
+.cn{width:36px;height:36px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.62rem;font-weight:700;color:#fff;letter-spacing:.5px}
+.n-uni{background:linear-gradient(135deg,#d63384,#e91e63)}
+.n-air{background:linear-gradient(135deg,#0ca678,#10b981)}
+.n-car{background:linear-gradient(135deg,#e03131,#ef4444)}
+.n-res{background:linear-gradient(135deg,#6741d9,#8b5cf6)}
+.n-neu{background:linear-gradient(135deg,#0891b2,#06b6d4)}
+.n-med{background:linear-gradient(135deg,#f76707,#f59e0b)}
+.n-tra{background:linear-gradient(135deg,#c9a700,#eab308)}
+.n-env{background:linear-gradient(135deg,#845ef7,#a855f7)}
+.n-ped{background:linear-gradient(135deg,#ff922b,#f97316)}
+.n-ob {background:linear-gradient(135deg,#f06595,#ec4899)}
+.n-mci{background:linear-gradient(135deg,#2f9e44,#22c55e)}
+.n-sco{background:linear-gradient(135deg,#495057,#6b7280)}
+.cb{flex:1;min-width:0}
+.cb h4{font-size:.83rem;font-weight:600;color:var(--tx);margin-bottom:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cb span{font-size:.63rem;color:var(--tx3)}
+.cs{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.c-done{font-size:.8rem;opacity:.7;color:var(--gr)}
+.c-arr{color:var(--tx3);font-size:.85rem;transition:all .2s}
+.ci:hover .c-arr{color:var(--ac);transform:translateX(3px)}
+/* BOTTOM NAV */
+.bnav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;
+  height:calc(var(--bot) + var(--safe));padding-bottom:var(--safe);
+  background:rgba(5,10,18,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-top:1px solid var(--bd);align-items:stretch}
+.bn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;text-decoration:none;color:var(--tx3);font-size:.56rem;font-weight:600;
+  letter-spacing:.3px;text-transform:uppercase;transition:color .15s;
+  padding:8px 0;cursor:pointer;background:none;border:none;font-family:var(--body)}
+.bn .bn-ico{font-size:1.25rem;line-height:1;transition:transform .15s}
+.bn.act{color:var(--ac)}.bn.act .bn-ico{transform:scale(1.15)}.bn:active{color:var(--ac)}
+/* ANIMATIONS */
+.fu{opacity:0;transform:translateY(16px);animation:fu .45s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes fu{to{opacity:1;transform:none}}
+.fu.d1{animation-delay:.04s}.fu.d2{animation-delay:.08s}.fu.d3{animation-delay:.13s}
+.fu.d4{animation-delay:.18s}.fu.d5{animation-delay:.22s}.fu.d6{animation-delay:.27s}
+.fu.d7{animation-delay:.30s}.fu.d8{animation-delay:.33s}
+.hbs{display:none!important}
+footer{text-align:center;padding:22px 0;color:var(--tx3);font-size:.68rem;border-top:1px solid var(--bd);margin-top:6px}
+footer a{color:var(--ac);text-decoration:none}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .qg{grid-template-columns:repeat(2,1fr)}
+  .tg{grid-template-columns:repeat(2,1fr)}
+  .main{padding:24px 22px 60px}}
+@media(max-width:768px){
+  .sidebar{display:none}.topbar{display:flex}.bnav{display:flex}
+  .layout{flex-direction:column}
+  .main{padding:12px 14px;padding-bottom:calc(var(--bot) + var(--safe) + 14px)}
+  .stats{grid-template-columns:1fr 1fr;gap:9px}
+  .qg{grid-template-columns:1fr;gap:9px}
+  .cg{grid-template-columns:1fr;gap:9px}
+  .tg{grid-template-columns:1fr 1fr;gap:9px}
+  .hero{gap:14px;padding:16px}
+  .hero-greet{font-size:1.1rem}
+  .ring-svg{width:72px;height:72px}.ring-fill{stroke-dasharray:180}}
+@media(max-width:420px){
+  .sv{font-size:1.4rem}.sc{padding:14px 12px}
+  .hero-greet{font-size:1rem}
+  .ring-svg{width:64px;height:64px}.ring-fill{stroke-dasharray:160}.ring-pct{font-size:.95rem}}
+</style>
 </head>
 <body>
-    <button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open'); document.querySelector('.sidebar-overlay').classList.toggle('active');">☰</button>
-    <div class="sidebar-overlay" onclick="this.classList.remove('active'); document.querySelector('.sidebar').classList.remove('open');"></div>
-    <div class="layout">
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-icon">🛡️</div>
-                <div class="brand-text">
-                    <h2>DCAS CPG</h2>
-                    <span>Clinical Guidelines 2025</span>
-                </div>
-            </div>
-            <nav>
-                <div class="nav-section">
-                    <div class="nav-label">Main</div>
-                    <a href="index.html" class="nav-item active"><span class="icon">📊</span> Dashboard</a>
-                    <a href="chapters/c-index.html?view=summary" class="nav-item"><span class="icon">📋</span> Full Index</a>
-                    <a href="courses.html" class="nav-item"><span class="icon">🎓</span> Courses <span class="badge">12</span></a>
-                </div>
-                <div class="nav-section">
-                    <div class="nav-label">Practice</div>
-                    <a href="src/prometric/exams.html" class="nav-item"><span class="icon">📝</span> Prometric Exam</a>
-                    <a href="ecg.html" class="nav-item"><span class="icon">📈</span> ECG Simulator</a>
-                    <a href="drug-calculator.html" class="nav-item"><span class="icon">💊</span> Drug Calculator</a>
-                </div>
-                <div class="nav-section">
-                    <div class="nav-label">Resources</div>
-                    <a href="aha.html" class="nav-item"><span class="icon">❤️</span> AHA Algorithms</a>
-                    <a href="ems-tools.html" class="nav-item"><span class="icon">🔬</span> EMS Tools</a>
-                    <a href="GCS.html" class="nav-item"><span class="icon">🧠</span> GCS Tool</a>
-                </div>
-            </nav>
-            <div class="sidebar-footer">
-                <div class="user-info">
-                    <div class="user-avatar">S</div>
-                    <div>
-                        <div class="user-name">Soliman</div>
-                        <div class="user-role">EMS Paramedic</div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <main class="main">
-            <div class="top-header">
-                <div class="greeting">
-                    <h1 id="greetingText">Good evening</h1>
-                    <p>Ready for your study session?</p>
-                </div>
-                <div class="header-actions">
-                    <div class="search-box">
-                        <span>🔍</span>
-                        <input type="text" id="searchInput" placeholder="Search chapters, topics...">
-                    </div>
-                    <a href="chapters/c0.html?view=summary" class="action-btn" title="What's New">🆕</a>
-                    <a href="about.html" class="action-btn" title="About">ℹ️</a>
-                </div>
-            </div>
-            <div class="stats-row">
-                <div class="stat-card blue">
-                    <div class="stat-icon">📚</div>
-                    <div class="stat-value">78</div>
-                    <div class="stat-label">Total Chapters</div>
-                </div>
-                <div class="stat-card green">
-                    <div class="stat-icon">✅</div>
-                    <div class="stat-value" id="doneCount">0</div>
-                    <div class="stat-label">Completed</div>
-                </div>
-                <div class="stat-card purple">
-                    <div class="stat-icon">📝</div>
-                    <div class="stat-value" id="attemptsCount">0</div>
-                    <div class="stat-label">Total Attempts</div>
-                </div>
-                <div class="stat-card amber">
-                    <div class="stat-icon">🎯</div>
-                    <div class="stat-value" id="accuracyCount">0%</div>
-                    <div class="stat-label">Accuracy</div>
-                </div>
-            </div>
-            <div class="progress-section">
-                <div class="progress-header">
-                    <h3>Overall Progress</h3>
-                    <span id="progressPct">0%</span>
-                </div>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
-                </div>
-                <div class="progress-labels">
-                    <span>Getting started</span>
-                    <span>Almost there!</span>
-                </div>
-            </div>
-            <h2 class="section-title">Quick Access</h2>
-            <div class="quick-grid">
-                <a href="chapters/c0.html?view=summary" class="quick-card blue" data-search="2025 updates new latest changes guidelines what's new">
-                    <span class="quick-icon">🆕</span>
-                    <h3>2025 Updates</h3>
-                    <p>Latest changes in clinical practice guidelines</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-                <a href="src/prometric/exams.html" class="quick-card green" data-search="prometric exam nremt practice questions test mock assessment">
-                    <span class="quick-icon">📝</span>
-                    <h3>Prometric Exam</h3>
-                    <p>NREMT-style practice with analytics</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-                <a href="courses.html" class="quick-card purple" data-search="courses training itls empact acls bls prep preparation certification exam">
-                    <span class="quick-icon">🎓</span>
-                    <h3>Course Prep</h3>
-                    <p>ITLS, EMPACT, ACLS, BLS & more</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-                <a href="ecg.html" class="quick-card cyan" data-search="ecg ecg simulator rhythm heart rate cardiac electrocardiogram interpretation arrhythmia">
-                    <span class="quick-icon">📈</span>
-                    <h3>ECG Simulator</h3>
-                    <p>Interactive rhythm interpretation</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-                <a href="drug-calculator.html" class="quick-card amber" data-search="drug calculator dose dosage medication weight calculation mg ml pediatric">
-                    <span class="quick-icon">💊</span>
-                    <h3>Drug Calculator</h3>
-                    <p>Quick dosage calculations</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-                <a href="chapters/c-index.html?view=summary" class="quick-card rose" data-search="index full table contents browse all chapters sections toc list">
-                    <span class="quick-icon">📋</span>
-                    <h3>Full Index</h3>
-                    <p>Browse all chapters and sections</p>
-                    <span class="quick-arrow">→</span>
-                </a>
-            </div>
-            <h2 class="section-title">EMS Tools</h2>
-            <div class="tools-grid">
-                <a href="aha.html" class="tool-card" data-search="aha algorithms american heart association cardiac arrest bradycardia tachycardia pulseless vfib vtac asystole pea algorithm flowchart">
-                    <span class="tool-icon">❤️</span>
-                    <h4>AHA Algorithms</h4>
-                    <span>Flowcharts & guides</span>
-                </a>
-                <a href="GCS.html" class="tool-card" data-search="gcs glasgow coma scale neurological assessment eye verbal motor response consciousness brain injury">
-                    <span class="tool-icon">🧠</span>
-                    <h4>GCS Tool</h4>
-                    <span>Coma scale calculator</span>
-                </a>
-                <a href="trauma.html" class="tool-card" data-search="trauma guide protocol burns spinal fracture fracture bleeding hemorrhage wound injury mci mass casualty">
-                    <span class="tool-icon">🩹</span>
-                    <h4>Trauma Guide</h4>
-                    <span>Reference protocols</span>
-                </a>
-                <a href="ems-tools.html" class="tool-card" data-search="more tools ems utilities all calculators references guides resources">
-                    <span class="tool-icon">🔬</span>
-                    <h4>More Tools</h4>
-                    <span>All EMS utilities</span>
-                </a>
-            </div>
-            <div class="chapters-section">
-                <h2 class="section-title">Clinical Chapters</h2>
-                <div class="chapters-grid">
-                    <a href="chapters/c1.html?view=summary" class="chapter-item" data-search="universal care core assessment documentation patient triage categories functional needs treated scene refusal transfer c1 primary survey secondary survey vitals signs">
-                        <div class="chapter-num universal">C1</div>
-                        <div class="chapter-info"><h4>Universal Care</h4><span>Core Assessment & Documentation</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c2.html?view=summary" class="chapter-item" data-search="airway breathing management obstruction fbao asthma copd ventilation invasive mechanical bag valve mask bvm intubation laryngeal mask airway lma c2 oxygenation respiratory failure bronchodilator nebulizer">
-                        <div class="chapter-num airway">C2</div>
-                        <div class="chapter-info"><h4>Airway & Breathing</h4><span>Management & Emergencies</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c3-1.html?view=summary" class="chapter-item" data-search="cardiology chest pain acute coronary syndrome acs bradycardia tachycardia pulmonary edema heart cardiac ecg c3 heart attack myocardial infarction mi stemi nstemi angina afib atrial fibrillation flutter">
-                        <div class="chapter-num cardio">C3</div>
-                        <div class="chapter-info"><h4>Cardiology</h4><span>ACS, Bradycardia, Tachycardia</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c4-1.html?view=summary" class="chapter-item" data-search="resuscitation bls basic life support cpr cardiac arrest adult pediatric newborn infant post rosc starting stopping transferring verification death c4 defibrillation aed epinephrine adrenaline chest compressions rescue breathing ventilation">
-                        <div class="chapter-num resus">C4</div>
-                        <div class="chapter-info"><h4>Resuscitation</h4><span>BLS, Cardiac Arrest, ROSC</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c5-1.html?view=summary" class="chapter-item" data-search="neurology stroke seizure brain cerebral vascular cva tia transient ischemic attack convulsion epileptic status epilepticus c5 facial droop weakness speech aphasia">
-                        <div class="chapter-num neuro">C5</div>
-                        <div class="chapter-info"><h4>Neurology</h4><span>Stroke & Seizures</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c6-1.html?view=summary" class="chapter-item" data-search="medical emergencies abdominal pain abnormal behavior adrenal insufficiency anaphylaxis allergic altered mental status epistaxis fever sepsis hypoglycemia hyperglycemia nausea vomiting shock pain sickle cell alcohol intoxication c6 diabetic ketoacidosis dka overdose poisoning toxicology">
-                        <div class="chapter-num medical">C6</div>
-                        <div class="chapter-info"><h4>Medical Emergencies</h4><span>14 sub-chapters</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c7-1.html?view=summary" class="chapter-item" data-search="trauma general management burns crush injuries limb spinal motion restriction brain injuries tbi c7 fracture hemorrhage bleeding wound amputation pelvic spinal immobilization">
-                        <div class="chapter-num trauma">C7</div>
-                        <div class="chapter-info"><h4>Trauma</h4><span>Burns, Spinal, Brain Injuries</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c8-1.html?view=summary" class="chapter-item" data-search="environmental toxicology opioid overdose beta blocker ccb calcium channel organophosphate poisoning diving scuba drowning envenomation hypothermia hyperthermia c8 heat stroke cold exposure snake bite bee sting">
-                        <div class="chapter-num env">C8</div>
-                        <div class="chapter-info"><h4>Environmental</h4><span>Toxicology & Diving</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c9-1.html?view=summary" class="chapter-item" data-search="pediatrics pediatric child infant croup bradycardia tachycardia c9 peds neonatal young breathing obstruction respiratory">
-                        <div class="chapter-num peds">C9</div>
-                        <div class="chapter-info"><h4>Pediatrics</h4><span>Croup, Bradycardia, Tachycardia</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                    <a href="chapters/c10-1.html?view=summary" class="chapter-item" data-search="obstetrics childbirth delivery labor post partum hemorrhage bleeding pv pregnancy eclampsia pre-eclampsia c10 maternal fetal neonatal birth emergency">
-                        <div class="chapter-num ob">C10</div>
-                        <div class="chapter-info"><h4>Obstetrics</h4><span>Childbirth & Emergencies</span></div>
-                        <span class="chapter-arrow">→</span>
-                    </a>
-                </div>
-            </div>
-            <footer>
-                <p>DCAS CPG 2025 · Created by <a href="about.html">Soliman Anas</a> · For study aid only</p>
-            </footer>
-        </main>
+
+<div class="so" id="so">
+  <div class="so-row">
+    <div class="so-iw"><span>&#x2315;</span><input id="soI" type="text" placeholder="Search chapters, tools&hellip;" autocomplete="off"></div>
+    <button class="so-cancel" onclick="closeSO()">Cancel</button>
+  </div>
+  <div class="so-lbl" id="soLbl">Suggestions</div>
+  <div class="so-list" id="soList"></div>
+  <div class="so-none" id="soNone">No results found</div>
+</div>
+
+<header class="topbar" id="topbar">
+  <div class="tb-brand">
+    <div class="brand-ico">DC</div>
+    <div><h2>DCAS CPG</h2><div style="font-size:.56rem;color:var(--tx3);letter-spacing:.5px">2026 Edition</div></div>
+  </div>
+  <div class="tb-right">
+    <button class="tbb" onclick="openSO()">&#x2315;</button>
+    <a class="tbb" href="chapters/c0.html?view=summary">&#x2691;</a>
+    <a class="tbb" href="about.html">&#x24D8;</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-ico">DC</div>
+      <div class="brand-tx"><h2>DCAS CPG</h2><span>Clinical Guidelines 2026</span></div>
     </div>
-    <script>
-        // Greeting
-        const h = new Date().getHours();
-        const greeting = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
-        document.getElementById('greetingText').textContent = greeting;
-        // Stats from localStorage
-        try {
-            const completion = JSON.parse(localStorage.getItem('dcas_cpg_completion') || '{}');
-            const stats = JSON.parse(localStorage.getItem('dcas_cpg_stats') || '{"totalAttempts":0,"critical":{"total":0,"correct":0}}');
-            const totalChaps = 78;
-            const done = Object.values(completion).filter(v => v).length;
-            const pct = Math.round((done / totalChaps) * 100);
-            const critAcc = stats.critical?.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
-            document.getElementById('doneCount').textContent = done;
-            document.getElementById('attemptsCount').textContent = stats.totalAttempts || 0;
-            document.getElementById('accuracyCount').textContent = critAcc + '%';
-            document.getElementById('progressPct').textContent = pct + '%';
-            setTimeout(() => { document.getElementById('progressFill').style.width = pct + '%'; }, 200);
-        } catch(e) {}
+    <nav>
+      <div class="nav-lbl">Main</div>
+      <a href="index.html" class="nav-item act"><span class="ni">&#x2302;</span> Dashboard</a>
+      <a href="chapters/c-index.html?view=summary" class="nav-item"><span class="ni">&#x2630;</span> Full Index</a>
+      <a href="courses.html" class="nav-item"><span class="ni">&#x25B8;</span> Courses <span class="nb">12</span></a>
+      <div class="nav-lbl">Practice</div>
+      <a href="src/prometric/exams.html" class="nav-item"><span class="ni">&#x2726;</span> Prometric Exam</a>
+      <a href="ecg.html" class="nav-item"><span class="ni">&#x223F;</span> ECG Simulator</a>
+      <a href="drug-calculator.html" class="nav-item"><span class="ni">&#x2695;</span> Drug Calculator</a>
+      <div class="nav-lbl">Resources</div>
+      <a href="aha.html" class="nav-item"><span class="ni">&#x2665;</span> AHA Algorithms</a>
+      <a href="ems-tools.html" class="nav-item"><span class="ni">&#x25C6;</span> EMS Tools</a>
+      <a href="GCS.html" class="nav-item"><span class="ni">&#x25CE;</span> GCS Tool</a>
+      <div class="nav-lbl">Info</div>
+      <a href="about.html" class="nav-item"><span class="ni">&#x24D8;</span> About</a>
+    </nav>
+    <div class="sb-foot">
+      <div class="user-row">
+        <div class="ua">S</div>
+        <div><div class="un">Soliman</div><div class="ur">EMS Paramedic</div></div>
+      </div>
+    </div>
+  </aside>
 
-        // Search (matches index.html approach)
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) {
-            searchInput.addEventListener('input', function(e) {
-                const lower = e.target.value.toLowerCase().trim();
-                let anyVisible = false;
+  <main class="main" id="mainEl">
 
-                const searchable = document.querySelectorAll('.quick-card, .tool-card, .chapter-item');
-                searchable.forEach(card => {
-                    const match = !lower || (card.dataset.search || '').toLowerCase().includes(lower);
-                    card.classList.toggle('filtered-out', !match);
-                    if (match) anyVisible = true;
-                });
+    <div class="hero fu d1">
+      <div class="hero-l">
+        <div class="hero-greet" id="greet">Good evening</div>
+        <div class="hero-sub" id="heroSub">Ready for your study session?</div>
+        <div class="hero-pills">
+          <div class="hero-pill"><span class="dot d-gr"></span><span id="hDone">0</span> completed</div>
+          <div class="hero-pill"><span class="dot d-ac"></span><span id="hAtt">0</span> attempts</div>
+          <div class="hero-pill"><span class="dot d-am"></span><span id="hDate">&mdash;</span></div>
+        </div>
+      </div>
+      <div class="ring-w">
+        <svg class="ring-svg" viewBox="0 0 88 88">
+          <defs>
+            <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#00e87a"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="44" cy="44" r="35"/>
+          <circle class="ring-fill" id="rf" cx="44" cy="44" r="35"/>
+        </svg>
+        <div class="ring-in">
+          <div class="ring-pct" id="rPct">0%</div>
+          <div class="ring-lbl">done</div>
+        </div>
+        <div class="ring-cap">Progress</div>
+      </div>
+    </div>
 
-                // Hide section titles when all their children are filtered out
-                document.querySelectorAll('.section-title').forEach(title => {
-                    const next = title.nextElementSibling;
-                    if (next) {
-                        const visible = Array.from(next.children).filter(c => !c.classList.contains('filtered-out')).length;
-                        title.style.display = (lower && visible === 0) ? 'none' : '';
-                    }
-                });
-            });
-        }
-    </script>
+    <div class="stats fu d2">
+      <div class="sc sc-bl"><div class="si">&#x1F4DA;</div><div class="sv">78</div><div class="sl">Total Chapters</div></div>
+      <div class="sc sc-gr"><div class="si">&#x2713;</div><div class="sv" id="doneC">0</div><div class="sl">Completed</div></div>
+      <div class="sc sc-pu"><div class="si">&#x270E;</div><div class="sv" id="attC">0</div><div class="sl">Attempts</div></div>
+      <div class="sc sc-am"><div class="si">&#x25C8;</div><div class="sv" id="accC">0%</div><div class="sl">Accuracy</div></div>
+    </div>
+
+    <div class="sh fu d3"><h2>Quick Access</h2><span class="sc2">6 items</span></div>
+    <div class="qg fu d4">
+      <a href="chapters/c0.html?view=summary" class="qc q-bl" data-qs="2026 updates new latest changes guidelines what's new">
+        <span class="q-badge b-new">New</span>
+        <span class="q-icon">&#x2691;</span><h3>2026 Updates</h3>
+        <p>Latest CPG changes and clinical practice updates</p><span class="q-arr">&rarr;</span>
+      </a>
+      <a href="src/prometric/exams.html" class="qc q-gr" data-qs="prometric exam nremt practice questions test mock">
+        <span class="q-icon">&#x2726;</span><h3>Prometric Exam</h3>
+        <p>NREMT-style practice with analytics</p><span class="q-arr">&rarr;</span>
+      </a>
+      <a href="courses.html" class="qc q-pu" data-qs="courses training itls empact acls bls prep certification">
+        <span class="q-icon">&#x25B8;</span><h3>Course Prep</h3>
+        <p>ITLS, EMPACT, ACLS, BLS &amp; more</p><span class="q-arr">&rarr;</span>
+      </a>
+      <a href="ecg.html" class="qc q-cy" data-qs="ecg simulator rhythm heart cardiac arrhythmia real-time">
+        <span class="q-badge b-live">Live</span>
+        <span class="q-icon">&#x223F;</span><h3>ECG Simulator</h3>
+        <p>Real-time physics rhythm trainer</p><span class="q-arr">&rarr;</span>
+      </a>
+      <a href="drug-calculator.html" class="qc q-am" data-qs="drug calculator dose dosage medication weight pediatric">
+        <span class="q-icon">&#x2695;</span><h3>Drug Calculator</h3>
+        <p>Weight-based dosing, all age groups</p><span class="q-arr">&rarr;</span>
+      </a>
+      <a href="chapters/c-index.html?view=summary" class="qc q-re" data-qs="index full table contents browse all chapters sections">
+        <span class="q-icon">&#x2630;</span><h3>Full Index</h3>
+        <p>Browse all chapters and sections</p><span class="q-arr">&rarr;</span>
+      </a>
+    </div>
+
+    <div class="sh fu d5"><h2>EMS Tools</h2><span class="sc2">4 items</span></div>
+    <div class="tg fu d5">
+      <a href="aha.html" class="tc" data-qs="aha algorithms cardiac arrest acls bradycardia tachycardia">
+        <span class="t-icon">&#x2665;</span><h4>AHA Algorithms</h4><span>Flowcharts &amp; ACLS guides</span>
+      </a>
+      <a href="GCS.html" class="tc" data-qs="gcs glasgow coma scale neurological eye verbal motor consciousness">
+        <span class="t-icon">&#x25CE;</span><h4>GCS Tool</h4><span>Coma scale calculator</span>
+      </a>
+      <a href="trauma.html" class="tc" data-qs="trauma guide protocol burns spinal hemorrhage wound injury">
+        <span class="t-icon">&#x25C6;</span><h4>Trauma Guide</h4><span>Reference protocols</span>
+      </a>
+      <a href="ems-tools.html" class="tc" data-qs="more tools ems utilities all calculators references guides">
+        <span class="t-icon">&#x25C7;</span><h4>More Tools</h4><span>All EMS utilities</span>
+      </a>
+    </div>
+
+    <div class="sh fu d6"><h2>Clinical Chapters</h2><span class="sc2">12 chapters</span></div>
+    <div class="cg fu d7" id="chGrid">
+      <a href="chapters/c1.html?view=summary" class="ci" data-cid="c1" data-qs="universal care assessment documentation triage c1 primary survey vitals">
+        <div class="cn n-uni">C1</div><div class="cb"><h4>Universal Care</h4><span>Core Assessment &amp; Documentation</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c2.html?view=summary" class="ci" data-cid="c2" data-qs="airway breathing obstruction asthma copd bvm intubation c2 oxygenation">
+        <div class="cn n-air">C2</div><div class="cb"><h4>Airway &amp; Breathing</h4><span>Management &amp; Emergencies</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c3-1.html?view=summary" class="ci" data-cid="c3" data-qs="cardiology chest pain acs stemi nstemi afib c3 bradycardia tachycardia">
+        <div class="cn n-car">C3</div><div class="cb"><h4>Cardiology</h4><span>ACS, Bradycardia, Tachycardia</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c4-1.html?view=summary" class="ci" data-cid="c4" data-qs="resuscitation bls cpr cardiac arrest rosc defibrillation aed c4">
+        <div class="cn n-res">C4</div><div class="cb"><h4>Resuscitation</h4><span>BLS, Cardiac Arrest, ROSC</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c5-1.html?view=summary" class="ci" data-cid="c5" data-qs="neurology stroke seizure cva tia epileptic c5">
+        <div class="cn n-neu">C5</div><div class="cb"><h4>Neurology</h4><span>Stroke &amp; Seizures</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c6-1.html?view=summary" class="ci" data-cid="c6" data-qs="medical abdominal anaphylaxis sepsis hypoglycemia overdose c6">
+        <div class="cn n-med">C6</div><div class="cb"><h4>Medical Emergencies</h4><span>14 sub-chapters</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c7-1.html?view=summary" class="ci" data-cid="c7" data-qs="trauma burns spinal brain tbi fracture hemorrhage c7">
+        <div class="cn n-tra">C7</div><div class="cb"><h4>Trauma</h4><span>Burns, Spinal, Brain Injuries</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c8-1.html?view=summary" class="ci" data-cid="c8" data-qs="environmental toxicology opioid organophosphate drowning hypothermia c8">
+        <div class="cn n-env">C8</div><div class="cb"><h4>Environmental</h4><span>Toxicology &amp; Diving</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c9-1.html?view=summary" class="ci" data-cid="c9" data-qs="pediatrics child infant croup peds c9 neonatal cardiac">
+        <div class="cn n-ped">C9</div><div class="cb"><h4>Pediatrics</h4><span>Croup, Bradycardia, Tachycardia</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c10-1.html?view=summary" class="ci" data-cid="c10" data-qs="obstetrics childbirth delivery eclampsia c10 maternal postpartum">
+        <div class="cn n-ob">C10</div><div class="cb"><h4>Obstetrics</h4><span>Childbirth &amp; Emergencies</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/c11.html?view=summary" class="ci" data-cid="c11" data-qs="mci major incident triage start mass casualty c11">
+        <div class="cn n-mci">C11</div><div class="cb"><h4>Major Incident Triage</h4><span>START Triage &amp; MCI</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+      <a href="chapters/s1.html" class="ci" data-cid="s1" data-qs="scope practice medications procedures formulary s1 er emr emt para">
+        <div class="cn n-sco">S1</div><div class="cb"><h4>Scope of Practice</h4><span>Medications &amp; Procedures Matrix</span></div>
+        <div class="cs"><span class="c-arr">&rarr;</span></div></a>
+    </div>
+
+    <footer>DCAS CPG 2026 &middot; <a href="about.html">Soliman Anas</a> &middot; For study aid only</footer>
+  </main>
+</div>
+
+<nav class="bnav" id="bnav">
+  <button class="bn act" id="bnHome" onclick="scrollToTop()">
+    <span class="bn-ico">&#x2302;</span>Home
+  </button>
+  <a class="bn" href="chapters/c-index.html?view=summary">
+    <span class="bn-ico">&#x2630;</span>Index
+  </a>
+  <button class="bn" onclick="scrollToChapters()">
+    <span class="bn-ico">&#x1F4D6;</span>Chapters
+  </button>
+  <button class="bn" onclick="openSO()">
+    <span class="bn-ico">&#x2315;</span>Search
+  </button>
+</nav>
+
+<script>
+'use strict';
+const hr=new Date().getHours();
+const gs=['Good night','Good morning','Good afternoon','Good evening'];
+document.getElementById('greet').textContent=gs[hr<5?0:hr<12?1:hr<17?2:3];
+const nd=new Date();
+document.getElementById('hDate').textContent=nd.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+try{
+  const comp=JSON.parse(localStorage.getItem('dcas_cpg_completion')||'{}');
+  const stats=JSON.parse(localStorage.getItem('dcas_cpg_stats')||'{"totalAttempts":0,"critical":{"total":0,"correct":0}}');
+  const done=Object.values(comp).filter(v=>v).length;
+  const pct=Math.round(done/78*100);
+  const acc=stats.critical&&stats.critical.total?Math.round(stats.critical.correct/stats.critical.total*100):0;
+  document.getElementById('doneC').textContent=done;
+  document.getElementById('attC').textContent=stats.totalAttempts||0;
+  document.getElementById('accC').textContent=acc+'%';
+  document.getElementById('hDone').textContent=done;
+  document.getElementById('hAtt').textContent=stats.totalAttempts||0;
+  document.getElementById('rPct').textContent=pct+'%';
+  const circ=2*Math.PI*35;
+  const rf=document.getElementById('rf');
+  rf.style.strokeDasharray=circ;rf.style.strokeDashoffset=circ;
+  setTimeout(function(){rf.style.strokeDashoffset=circ*(1-pct/100);},400);
+  document.querySelectorAll('.ci[data-cid]').forEach(function(el){
+    const cid=el.dataset.cid;
+    if(comp[cid]||comp['c'+cid.replace('c','')]){
+      el.classList.add('done');
+      var cs=el.querySelector('.cs');
+      if(cs){var d=document.createElement('span');d.className='c-done';d.textContent='\u2713';cs.prepend(d);}
+    }
+  });
+}catch(e){}
+const ITEMS=[
+  {t:'Universal Care',d:'Core Assessment & Documentation',href:'chapters/c1.html?view=summary',i:'\uD83D\uDCCB',k:'universal care assessment documentation triage c1'},
+  {t:'Airway & Breathing',d:'Management & Emergencies',href:'chapters/c2.html?view=summary',i:'\uD83C\uDF2C\uFE0F',k:'airway breathing obstruction asthma copd c2'},
+  {t:'Cardiology',d:'ACS, Bradycardia, Tachycardia',href:'chapters/c3-1.html?view=summary',i:'\u2764\uFE0F',k:'cardiology chest pain acs stemi afib c3'},
+  {t:'Resuscitation',d:'BLS, Cardiac Arrest, ROSC',href:'chapters/c4-1.html?view=summary',i:'\u26A1',k:'resuscitation bls cpr cardiac arrest rosc c4'},
+  {t:'Neurology',d:'Stroke & Seizures',href:'chapters/c5-1.html?view=summary',i:'\uD83E\uDDE0',k:'neurology stroke seizure cva tia c5'},
+  {t:'Medical Emergencies',d:'14 sub-chapters',href:'chapters/c6-1.html?view=summary',i:'\uD83E\uDE7A',k:'medical abdominal anaphylaxis sepsis hypoglycemia overdose c6'},
+  {t:'Trauma',d:'Burns, Spinal, Brain Injuries',href:'chapters/c7-1.html?view=summary',i:'\uD83E\uDE79',k:'trauma burns spinal brain fracture hemorrhage c7'},
+  {t:'Environmental',d:'Toxicology & Diving',href:'chapters/c8-1.html?view=summary',i:'\u2620\uFE0F',k:'environmental toxicology opioid drowning hypothermia c8'},
+  {t:'Pediatrics',d:'Croup, Bradycardia, Tachycardia',href:'chapters/c9-1.html?view=summary',i:'\uD83D\uDC76',k:'pediatrics child infant croup c9'},
+  {t:'Obstetrics',d:'Childbirth & Emergencies',href:'chapters/c10-1.html?view=summary',i:'\uD83E\uDD31',k:'obstetrics childbirth delivery eclampsia c10'},
+  {t:'Major Incident Triage',d:'START Triage & MCI',href:'chapters/c11.html?view=summary',i:'\uD83D\uDEA8',k:'mci major incident triage start mass casualty c11'},
+  {t:'Scope of Practice',d:'Medications & Procedures Matrix',href:'chapters/s1.html',i:'\uD83D\uDCCB',k:'scope practice medications procedures s1 er emr emt para'},
+  {t:'ECG Simulator',d:'Real-time rhythm trainer',href:'ecg.html',i:'\u223F',k:'ecg simulator rhythm heart cardiac'},
+  {t:'Drug Calculator',d:'Weight-based dosing',href:'drug-calculator.html',i:'\u2695',k:'drug calculator dose dosage medication weight'},
+  {t:'Prometric Exam',d:'NREMT-style practice',href:'src/prometric/exams.html',i:'\u2726',k:'prometric exam nremt practice questions test mock'},
+  {t:'AHA Algorithms',d:'Cardiac arrest flowcharts',href:'aha.html',i:'\u2665',k:'aha algorithms cardiac arrest acls bradycardia'},
+  {t:'GCS Tool',d:'Glasgow Coma Scale',href:'GCS.html',i:'\u25CE',k:'gcs glasgow coma scale neurological consciousness'},
+  {t:'Course Prep',d:'ITLS, EMPACT, ACLS, BLS',href:'courses.html',i:'\u25B8',k:'courses itls empact acls bls prep certification'},
+  {t:'Full Index',d:'Browse all chapters',href:'chapters/c-index.html?view=summary',i:'\u2630',k:'index full table contents browse all chapters'},
+];
+function renderHits(arr){
+  var el=document.getElementById('soList'),no=document.getElementById('soNone'),lb=document.getElementById('soLbl');
+  if(!arr.length){el.innerHTML='';no.classList.add('show');lb.textContent='';return;}
+  no.classList.remove('show');lb.textContent=arr.length+' result'+(arr.length!==1?'s':'');
+  el.innerHTML=arr.map(function(x){return'<a class="so-hit" href="'+x.href+'"><span class="so-ico">'+x.i+'</span><div class="so-info"><div class="so-title">'+x.t+'</div><div class="so-desc">'+x.d+'</div></div><span class="so-arr">\u2192</span></a>';}).join('');
+}
+function openSO(){document.getElementById('so').classList.add('open');document.getElementById('soLbl').textContent='Suggestions';renderHits(ITEMS.slice(0,7));setTimeout(function(){document.getElementById('soI').focus();},80);}
+function closeSO(){document.getElementById('so').classList.remove('open');document.getElementById('soI').value='';}
+window.openSO=openSO;window.closeSO=closeSO;
+document.getElementById('soI').addEventListener('input',function(){
+  var q=this.value.toLowerCase().trim();
+  if(!q){document.getElementById('soLbl').textContent='Suggestions';renderHits(ITEMS.slice(0,7));return;}
+  renderHits(ITEMS.filter(function(x){return x.k.includes(q)||x.t.toLowerCase().includes(q);}));
+});
+document.getElementById('so').addEventListener('click',function(e){if(e.target===this)closeSO();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSO();});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function scrollToChapters(){var el=document.getElementById('chGrid');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+window.scrollToTop=scrollToTop;window.scrollToChapters=scrollToChapters;
+window.addEventListener('scroll',function(){
+  var cg=document.getElementById('chGrid');if(!cg)return;
+  var bn=document.getElementById('bnHome');
+  if(cg.getBoundingClientRect().top<=120)bn.classList.remove('act');else bn.classList.add('act');
+},{passive:true});
+if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+</script>
 </body>
 </html>
