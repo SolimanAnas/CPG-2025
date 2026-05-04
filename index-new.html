@@ -82,31 +82,63 @@ body::after{content:'';position:fixed;inset:0;
   font-size:.9rem;cursor:pointer;text-decoration:none;transition:all .15s;flex-shrink:0}
 .tbb:active{transform:scale(.92)}.tbb:hover{border-color:var(--bd2);color:var(--ac)}
 /* SEARCH OVERLAY */
-.so{position:fixed;inset:0;z-index:200;background:rgba(5,10,18,.96);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  display:none;flex-direction:column;padding:20px 16px;gap:12px}
-.so.open{display:flex;animation:soIn .2s ease}
-@keyframes soIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.so-row{display:flex;align-items:center;gap:10px}
+.so{position:fixed;inset:0;z-index:200;background:rgba(5,10,18,.97);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  display:none;flex-direction:column;padding:0}
+.so.open{display:flex;animation:soIn .18s ease}
+@keyframes soIn{from{opacity:0}to{opacity:1}}
+.so-top{display:flex;align-items:center;gap:10px;padding:16px 16px 12px;border-bottom:1px solid var(--bd);flex-shrink:0}
 .so-iw{flex:1;display:flex;align-items:center;gap:8px;background:var(--s1);
   border:1.5px solid var(--ac);border-radius:12px;padding:10px 14px}
-.so-iw span{color:var(--ac);font-size:.9rem;flex-shrink:0}
+.so-iw .so-ico-lead{color:var(--ac);font-size:.9rem;flex-shrink:0}
 .so-iw input{flex:1;background:transparent;border:none;outline:none;font-size:.95rem;font-family:var(--body);color:var(--tx)}
 .so-iw input::placeholder{color:var(--tx3)}
-.so-cancel{background:none;border:none;color:var(--tx2);font-size:.82rem;font-family:var(--body);cursor:pointer;padding:6px;white-space:nowrap}
-.so-lbl{font-size:.65rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);padding:0 4px}
-.so-list{display:flex;flex-direction:column;gap:6px;overflow-y:auto;flex:1}
-.so-hit{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--s1);
-  border:1px solid var(--bd);border-radius:12px;text-decoration:none;color:var(--tx);
-  font-size:.85rem;font-weight:500;transition:background .15s}
-.so-hit:hover,.so-hit:active{background:var(--ac-d);border-color:var(--bd2)}
-.so-ico{font-size:1.1rem;flex-shrink:0;width:28px;text-align:center}
-.so-info{flex:1;min-width:0}
-.so-title{font-weight:700;font-size:.85rem}
-.so-desc{font-size:.7rem;color:var(--tx3);margin-top:1px}
-.so-arr{color:var(--tx3);font-size:.8rem;flex-shrink:0}
-.so-none{text-align:center;padding:40px 20px;color:var(--tx3);font-size:.85rem;display:none}
+.so-clr{background:rgba(255,255,255,.1);border:none;color:var(--tx3);cursor:pointer;
+  width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center;
+  font-size:.6rem;flex-shrink:0}
+.so-clr.show{display:flex}
+.so-cancel{background:none;border:none;color:var(--ac);font-size:.82rem;font-family:var(--body);
+  cursor:pointer;padding:6px 2px;white-space:nowrap;font-weight:600}
+.so-filters{display:flex;gap:5px;padding:10px 16px;border-bottom:1px solid var(--bd);
+  overflow-x:auto;flex-shrink:0;scrollbar-width:none}
+.so-filters::-webkit-scrollbar{display:none}
+.so-fp{display:flex;align-items:center;gap:4px;padding:4px 11px;border-radius:20px;
+  font-size:.68rem;font-weight:700;cursor:pointer;white-space:nowrap;
+  border:1.5px solid var(--bd2);background:var(--s2);color:var(--tx2);
+  transition:all .15s;font-family:var(--body)}
+.so-fp.act{border-color:var(--ac);background:var(--ac-d);color:var(--ac)}
+.so-statusbar{display:flex;justify-content:space-between;align-items:center;
+  padding:8px 16px 4px;flex-shrink:0}
+.so-lbl{font-size:.62rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3)}
+.so-kbhint{font-size:.6rem;color:var(--tx3);display:flex;align-items:center;gap:4px}
+.so-kbhint kbd{border:1px solid var(--bd2);border-radius:4px;padding:1px 5px;
+  font-family:var(--mono);font-size:.58rem;background:var(--s2);color:var(--tx3)}
+.so-body{overflow-y:auto;flex:1;padding:6px 16px 20px}
+.so-ch{font-size:.6rem;font-family:var(--mono);font-weight:700;text-transform:uppercase;
+  letter-spacing:1.5px;color:var(--tx3);padding:12px 0 5px;
+  display:flex;align-items:center;gap:8px}
+.so-ch::after{content:'';flex:1;height:1px;background:var(--bd)}
+.so-list{display:flex;flex-direction:column;gap:3px;margin-bottom:3px}
+.so-hit{display:flex;align-items:center;gap:11px;padding:10px 12px;background:var(--s1);
+  border:1px solid var(--bd);border-radius:10px;text-decoration:none;color:var(--tx);
+  transition:all .12s;outline:none;-webkit-user-select:none;user-select:none}
+.so-hit:hover,.so-hit:active,.so-hit.hl{background:var(--ac-d);border-color:var(--bd2)}
+.so-hit.hl{box-shadow:0 0 0 2px rgba(0,212,255,.25)}
+.so-h-ico{font-size:.95rem;flex-shrink:0;width:24px;text-align:center}
+.so-h-info{flex:1;min-width:0}
+.so-h-title{font-weight:600;font-size:.84rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.so-h-meta{font-size:.66rem;color:var(--tx3);margin-top:1px}
+.so-h-num{font-family:var(--mono);font-size:.62rem;color:var(--tx3);flex-shrink:0;white-space:nowrap;margin-left:2px}
+.so-none{text-align:center;padding:50px 20px;color:var(--tx3);font-size:.85rem;display:none}
 .so-none.show{display:block}
+.so-none-ico{font-size:2rem;margin-bottom:8px;opacity:.4}
+/* Recent searches */
+.so-recent{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 8px}
+.so-recent-pill{display:flex;align-items:center;gap:5px;padding:5px 11px;
+  background:var(--s2);border:1px solid var(--bd);border-radius:20px;
+  font-size:.74rem;color:var(--tx2);cursor:pointer;transition:all .15s}
+.so-recent-pill:hover{border-color:var(--ac);color:var(--ac)}
+.so-recent-x{color:var(--tx3);font-size:.6rem;margin-left:1px}
 /* HERO */
 .hero{display:flex;align-items:center;gap:24px;background:var(--s0);
   border:1px solid var(--bd);border-radius:20px;padding:22px 24px;
@@ -269,14 +301,42 @@ footer a{color:var(--ac);text-decoration:none}
 </head>
 <body>
 
-<div class="so" id="so">
-  <div class="so-row">
-    <div class="so-iw"><span>&#x2315;</span><input id="soI" type="text" placeholder="Search chapters, tools&hellip;" autocomplete="off"></div>
+<div class="so" id="so" role="dialog" aria-modal="true" aria-label="Search">
+  <!-- Top search bar -->
+  <div class="so-top">
+    <div class="so-iw">
+      <span class="so-ico-lead">&#x2315;</span>
+      <input id="soI" type="text" placeholder="Search all guidelines, chapters, tools&hellip;" autocomplete="off" spellcheck="false">
+      <button class="so-clr" id="soClr" onclick="clearSOInput()" title="Clear">&#x2715;</button>
+    </div>
     <button class="so-cancel" onclick="closeSO()">Cancel</button>
   </div>
-  <div class="so-lbl" id="soLbl">Suggestions</div>
-  <div class="so-list" id="soList"></div>
-  <div class="so-none" id="soNone">No results found</div>
+  <!-- Category filter pills -->
+  <div class="so-filters" id="soFilters">
+    <button class="so-fp act" data-cat="all" onclick="setSOCat('all')">&#x1F4CB; All</button>
+    <button class="so-fp" data-cat="universal"    onclick="setSOCat('universal')">&#x1F6E1;&#xFE0F; Universal</button>
+    <button class="so-fp" data-cat="airway"       onclick="setSOCat('airway')">&#x1FAC1; Airway</button>
+    <button class="so-fp" data-cat="cardio"       onclick="setSOCat('cardio')">&#x2764;&#xFE0F; Cardio</button>
+    <button class="so-fp" data-cat="resus"        onclick="setSOCat('resus')">&#x26A1; Resus</button>
+    <button class="so-fp" data-cat="neuro"        onclick="setSOCat('neuro')">&#x1F9E0; Neuro</button>
+    <button class="so-fp" data-cat="medical"      onclick="setSOCat('medical')">&#x1FA7A; Medical</button>
+    <button class="so-fp" data-cat="trauma"       onclick="setSOCat('trauma')">&#x1FA79; Trauma</button>
+    <button class="so-fp" data-cat="env"          onclick="setSOCat('env')">&#x2620;&#xFE0F; Enviro</button>
+    <button class="so-fp" data-cat="peds"         onclick="setSOCat('peds')">&#x1F476; Peds</button>
+    <button class="so-fp" data-cat="obs"          onclick="setSOCat('obs')">&#x1F930; OB</button>
+    <button class="so-fp" data-cat="tools"        onclick="setSOCat('tools')">&#x2699;&#xFE0F; Tools</button>
+  </div>
+  <!-- Status bar -->
+  <div class="so-statusbar">
+    <span class="so-lbl" id="soLbl">All guidelines</span>
+    <span class="so-kbhint"><kbd>&uarr;&darr;</kbd> navigate &nbsp;<kbd>&crarr;</kbd> open &nbsp;<kbd>Esc</kbd> close</span>
+  </div>
+  <!-- Results body -->
+  <div class="so-body" id="soBody"></div>
+  <div class="so-none" id="soNone">
+    <div class="so-none-ico">&#x1F50D;</div>
+    No results found for that search.
+  </div>
 </div>
 
 <header class="topbar" id="topbar">
@@ -495,46 +555,281 @@ try{
     }
   });
 }catch(e){}
-const ITEMS=[
-  {t:'Universal Care',d:'Core Assessment & Documentation',href:'chapters/c1.html?view=summary',i:'\uD83D\uDCCB',k:'universal care assessment documentation triage c1'},
-  {t:'Airway & Breathing',d:'Management & Emergencies',href:'chapters/c2.html?view=summary',i:'\uD83C\uDF2C\uFE0F',k:'airway breathing obstruction asthma copd c2'},
-  {t:'Cardiology',d:'ACS, Bradycardia, Tachycardia',href:'chapters/c3-1.html?view=summary',i:'\u2764\uFE0F',k:'cardiology chest pain acs stemi afib c3'},
-  {t:'Resuscitation',d:'BLS, Cardiac Arrest, ROSC',href:'chapters/c4-1.html?view=summary',i:'\u26A1',k:'resuscitation bls cpr cardiac arrest rosc c4'},
-  {t:'Neurology',d:'Stroke & Seizures',href:'chapters/c5-1.html?view=summary',i:'\uD83E\uDDE0',k:'neurology stroke seizure cva tia c5'},
-  {t:'Medical Emergencies',d:'14 sub-chapters',href:'chapters/c6-1.html?view=summary',i:'\uD83E\uDE7A',k:'medical abdominal anaphylaxis sepsis hypoglycemia overdose c6'},
-  {t:'Trauma',d:'Burns, Spinal, Brain Injuries',href:'chapters/c7-1.html?view=summary',i:'\uD83E\uDE79',k:'trauma burns spinal brain fracture hemorrhage c7'},
-  {t:'Environmental',d:'Toxicology & Diving',href:'chapters/c8-1.html?view=summary',i:'\u2620\uFE0F',k:'environmental toxicology opioid drowning hypothermia c8'},
-  {t:'Pediatrics',d:'Croup, Bradycardia, Tachycardia',href:'chapters/c9-1.html?view=summary',i:'\uD83D\uDC76',k:'pediatrics child infant croup c9'},
-  {t:'Obstetrics',d:'Childbirth & Emergencies',href:'chapters/c10-1.html?view=summary',i:'\uD83E\uDD31',k:'obstetrics childbirth delivery eclampsia c10'},
-  {t:'Major Incident Triage',d:'START Triage & MCI',href:'chapters/c11.html?view=summary',i:'\uD83D\uDEA8',k:'mci major incident triage start mass casualty c11'},
-  {t:'Scope of Practice',d:'Medications & Procedures Matrix',href:'chapters/s1.html',i:'\uD83D\uDCCB',k:'scope practice medications procedures s1 er emr emt para'},
-  {t:'ECG Simulator',d:'Real-time rhythm trainer',href:'ecg.html',i:'\u223F',k:'ecg simulator rhythm heart cardiac'},
-  {t:'Drug Calculator',d:'Weight-based dosing',href:'drug-calculator.html',i:'\u2695',k:'drug calculator dose dosage medication weight'},
-  {t:'Prometric Exam',d:'NREMT-style practice',href:'src/prometric/exams.html',i:'\u2726',k:'prometric exam nremt practice questions test mock'},
-  {t:'AHA Algorithms',d:'Cardiac arrest flowcharts',href:'aha.html',i:'\u2665',k:'aha algorithms cardiac arrest acls bradycardia'},
-  {t:'GCS Tool',d:'Glasgow Coma Scale',href:'GCS.html',i:'\u25CE',k:'gcs glasgow coma scale neurological consciousness'},
-  {t:'Course Prep',d:'ITLS, EMPACT, ACLS, BLS',href:'courses.html',i:'\u25B8',k:'courses itls empact acls bls prep certification'},
-  {t:'Full Index',d:'Browse all chapters',href:'chapters/c-index.html?view=summary',i:'\u2630',k:'index full table contents browse all chapters'},
+/* ═══════════════════════════════════════════════════════
+   COMPREHENSIVE SEARCH INDEX — all 66 guidelines + tools
+   cat: category key for filtering
+   num: chapter/section number displayed in result
+   k:   keyword bag for matching
+═══════════════════════════════════════════════════════ */
+const CAT_META = {
+  universal: {label:'Universal Care',      color:'#d63384'},
+  airway:    {label:'Airway & Breathing',   color:'#10b981'},
+  cardio:    {label:'Cardiovascular',       color:'#ef4444'},
+  resus:     {label:'Resuscitation',        color:'#8b5cf6'},
+  neuro:     {label:'Neurological',         color:'#06b6d4'},
+  medical:   {label:'General Medical',      color:'#f59e0b'},
+  trauma:    {label:'Trauma',               color:'#eab308'},
+  env:       {label:'Environmental',        color:'#a855f7'},
+  peds:      {label:'Pediatrics',           color:'#f97316'},
+  obs:       {label:'Obstetrics',           color:'#ec4899'},
+  mci:       {label:'Major Incident',       color:'#22c55e'},
+  scope:     {label:'Scope & Meds',         color:'#6b7280'},
+  tools:     {label:'Tools & Resources',    color:'#00d4ff'},
+};
+
+const SEARCH_INDEX = [
+  // ── UNIVERSAL CARE (C1) ──
+  {num:'1.1', t:'Universal Care — Core Assessment',  cat:'universal', href:'chapters/c1.html?view=summary',    k:'universal care assessment primary survey scene safety ppe apvu gcs c1'},
+  {num:'1.2', t:'Patient Care Documentation',         cat:'universal', href:'chapters/c1.html?view=summary',    k:'documentation pcr patient care report documentation records c1s2'},
+  {num:'1.3', t:'Patient Triage Categories',          cat:'universal', href:'chapters/c1.html?view=summary',    k:'triage categories red yellow green black priority start sieve sort c1s3'},
+  {num:'1.4', t:'Functional Needs',                   cat:'universal', href:'chapters/c1.html?view=summary',    k:'functional needs special populations disability vulnerability c1s4'},
+  {num:'1.5', t:'Treated at Scene',                   cat:'universal', href:'chapters/c1.html?view=summary',    k:'treated at scene no transport treat leave c1s5'},
+  {num:'1.6', t:'Patient Refusal of Transfer',        cat:'universal', href:'chapters/c1.html?view=summary',    k:'refusal transfer rtf patient refuses transport capacity consent c1s6'},
+  // ── AIRWAY (C2) ──
+  {num:'2.1', t:'Airway Management',                  cat:'airway',    href:'chapters/c2.html?view=summary',    k:'airway management opa npa bvm ventilation suction jaw thrust chin lift c2 intubation ett sgd igel'},
+  {num:'2.2', t:'Foreign Body Airway Obstruction',    cat:'airway',    href:'chapters/c2.html?view=summary',    k:'fbao foreign body obstruction choking heimlich abdominal thrusts back blows c2s2'},
+  {num:'2.3', t:'Asthma',                             cat:'airway',    href:'chapters/c2.html?view=summary',    k:'asthma bronchospasm wheeze salbutamol combivent nebulizer albuterol c2s3 respiratory'},
+  {num:'2.4', t:'COPD',                               cat:'airway',    href:'chapters/c2.html?view=summary',    k:'copd chronic obstructive pulmonary disease emphysema bronchitis salbutamol oxygen c2s4'},
+  {num:'2.5', t:'Invasive Mechanical Ventilation',    cat:'airway',    href:'chapters/c2.html?view=summary',    k:'invasive mechanical ventilation ventilator settings tidal volume peep rate c2s5 rsi'},
+  // ── CARDIOVASCULAR (C3) ──
+  {num:'3.1', t:'Chest Pain / Acute Coronary Syndrome', cat:'cardio', href:'chapters/c3-1.html?view=summary',  k:'chest pain acs acute coronary syndrome stemi nstemi mi myocardial infarction aspirin gtn c3 ecg troponin'},
+  {num:'3.2', t:'Adult Bradycardia',                  cat:'cardio',    href:'chapters/c3-2.html?view=summary',  k:'bradycardia slow heart rate atropine pacing transcutaneous tcp c3-2 sinus brady av block'},
+  {num:'3.3', t:'Adult Tachycardia with Pulse',       cat:'cardio',    href:'chapters/c3-3.html?view=summary',  k:'tachycardia svt vt afib atrial fibrillation flutter adenosine amiodarone cardioversion c3-3 fast rate'},
+  {num:'3.4', t:'Acute Pulmonary Edema',              cat:'cardio',    href:'chapters/c3-4.html?view=summary',  k:'pulmonary edema ape heart failure fluid lungs gtn furosemide cpap c3-4 ape oe'},
+  // ── RESUSCITATION (C4) ──
+  {num:'4.1', t:'Adult Basic Life Support',           cat:'resus',     href:'chapters/c4-1.html?view=summary',  k:'adult bls cpr compressions 30:2 aed defibrillation basic life support c4-1'},
+  {num:'4.2', t:'Pediatric Basic Life Support',       cat:'resus',     href:'chapters/c4-2.html?view=summary',  k:'pediatric bls child infant cpr 15:2 aed defibrillation c4-2 peds'},
+  {num:'4.3', t:'Adult Cardiac Arrest',               cat:'resus',     href:'chapters/c4-3.html?view=summary',  k:'adult cardiac arrest acls vf vt pulseless epinephrine adrenaline amiodarone shockable non-shockable c4-3'},
+  {num:'4.4', t:'Pediatric Cardiac Arrest',           cat:'resus',     href:'chapters/c4-4.html?view=summary',  k:'pediatric cardiac arrest child infant pals c4-4 peds vf vt asystole pea'},
+  {num:'4.5', t:'Cardiac Arrest in Trauma',           cat:'resus',     href:'chapters/c4-5.html?view=summary',  k:'trauma cardiac arrest tca reversible causes haemorrhage tension pneumothorax tamponade c4-5'},
+  {num:'4.6', t:'Newborn Resuscitation',              cat:'resus',     href:'chapters/c4-6.html?view=summary',  k:'newborn resuscitation preterm infant neonatal apgar c4-6 neonatal resus'},
+  {num:'4.7', t:'Post Cardiac Arrest Care (ROSC)',    cat:'resus',     href:'chapters/c4-7.html?view=summary',  k:'post cardiac arrest rosc return spontaneous circulation post resuscitation care c4-7 targeted temperature management'},
+  {num:'4.8', t:'Starting, Stopping & Transferring CPR', cat:'resus',  href:'chapters/c4-8.html?view=summary',  k:'start stop cpr termination resuscitation transport transfer dead c4-8 doa death criteria'},
+  {num:'4.9', t:'Verification of Death',              cat:'resus',     href:'chapters/c4-9.html?view=summary',  k:'verification death doa obvious signs death cessation rigor mortis lividity c4-9'},
+  // ── NEUROLOGICAL (C5) ──
+  {num:'5.1', t:'Stroke',                             cat:'neuro',     href:'chapters/c5-1.html?view=summary',  k:'stroke cva tia cerebrovascular transient ischemic attack face arm speech time befast fast c5-1 facial droop'},
+  {num:'5.2', t:'Seizures',                           cat:'neuro',     href:'chapters/c5-2.html?view=summary',  k:'seizure epilepsy convulsion status epilepticus midazolam diazepam c5-2 postictal'},
+  // ── GENERAL MEDICAL (C6) ──
+  {num:'6.1',  t:'Abdominal Pain',                    cat:'medical',   href:'chapters/c6-1.html?view=summary',  k:'abdominal pain stomach cramps nausea vomiting metoclopramide hyoscine c6-1 abdomen acute'},
+  {num:'6.2',  t:'Abnormal Behavior',                 cat:'medical',   href:'chapters/c6-2.html?view=summary',  k:'abnormal behavior psychiatric agitation psychosis haloperidol midazolam c6-2 behavioral mental health'},
+  {num:'6.3',  t:'Adrenal Insufficiency',             cat:'medical',   href:'chapters/c6-3.html?view=summary',  k:'adrenal insufficiency addison crisis cortisol hydrocortisone c6-3 steroid'},
+  {num:'6.4',  t:'Anaphylaxis / Allergic Reaction',   cat:'medical',   href:'chapters/c6-4.html?view=summary',  k:'anaphylaxis allergic reaction epipen epinephrine adrenaline diphenhydramine hydrocortisone c6-4 allergy anaphylactic'},
+  {num:'6.5',  t:'Altered Mental Status',             cat:'medical',   href:'chapters/c6-5.html?view=summary',  k:'altered mental status ams confusion glasgow coma gcs avpu c6-5 altered consciousness encephalopathy'},
+  {num:'6.6',  t:'Epistaxis',                         cat:'medical',   href:'chapters/c6-6.html?view=summary',  k:'epistaxis nose bleed nasal bleeding packing c6-6'},
+  {num:'6.7',  t:'Fever and Sepsis',                  cat:'medical',   href:'chapters/c6-7.html?view=summary',  k:'fever sepsis septic shock antibiotics paracetamol temperature c6-7 infection pyrexia'},
+  {num:'6.8',  t:'Hypoglycemia',                      cat:'medical',   href:'chapters/c6-8.html?view=summary',  k:'hypoglycemia low blood sugar glucose dextrose glucagon c6-8 diabetic hypoglycaemia bgl'},
+  {num:'6.9',  t:'Hyperglycemia',                     cat:'medical',   href:'chapters/c6-9.html?view=summary',  k:'hyperglycemia high blood sugar dka diabetic ketoacidosis insulin c6-9 hyperglycaemia'},
+  {num:'6.10', t:'Nausea and Vomiting',               cat:'medical',   href:'chapters/c6-10.html?view=summary', k:'nausea vomiting antiemetic metoclopramide ondansetron c6-10'},
+  {num:'6.11', t:'Non-Traumatic Shock',               cat:'medical',   href:'chapters/c6-11.html?view=summary', k:'shock non-traumatic cardiogenic distributive septic neurogenic hypovolaemic fluid c6-11'},
+  {num:'6.12', t:'Pain Management',                   cat:'medical',   href:'chapters/c6-12.html?view=summary', k:'pain management analgesia morphine fentanyl ketamine paracetamol nefopam penthrox methoxyflurane c6-12 analgesic'},
+  {num:'6.13', t:'Sickle Cell Crisis',                cat:'medical',   href:'chapters/c6-13.html?view=summary', k:'sickle cell crisis pain vaso-occlusive acute chest syndrome c6-13 sickle'},
+  {num:'6.14', t:'Suspected Alcohol Intoxication',    cat:'medical',   href:'chapters/c6-14.html?view=summary', k:'alcohol intoxication drunk ethanol substance abuse c6-14 inebriation'},
+  // ── TRAUMA (C7) ──
+  {num:'7.1', t:'General Trauma Management',          cat:'trauma',    href:'chapters/c7-1.html?view=summary',  k:'general trauma management primary survey assessment haemorrhage control tourniquet c7-1 abcde'},
+  {num:'7.2', t:'Burns',                              cat:'trauma',    href:'chapters/c7-2.html?view=summary',  k:'burns thermal chemical electrical parkland formula cooling rule of nines c7-2 burn wound'},
+  {num:'7.3', t:'Crush Injuries',                     cat:'trauma',    href:'chapters/c7-3.html?view=summary',  k:'crush injury crush syndrome rhabdomyolysis compartment syndrome c7-3'},
+  {num:'7.4', t:'Limb Injuries',                      cat:'trauma',    href:'chapters/c7-4.html?view=summary',  k:'limb injuries fracture dislocation splinting traction femur c7-4 extremity'},
+  {num:'7.5', t:'Spinal Motion Restriction',          cat:'trauma',    href:'chapters/c7-5.html?view=summary',  k:'spinal motion restriction smr c-collar cervical spine immobilization logroll c7-5 backboard'},
+  {num:'7.6', t:'Traumatic Brain Injury',             cat:'trauma',    href:'chapters/c7-6.html?view=summary',  k:'traumatic brain injury tbi head injury intracranial pressure gcs c7-6 concussion skull'},
+  // ── ENVIRONMENTAL / TOXICOLOGY (C8) ──
+  {num:'8.1',  t:'General Toxicology Management',     cat:'env',       href:'chapters/c8-1.html?view=summary',  k:'toxicology poisoning overdose general management activated charcoal antidote c8-1'},
+  {num:'8.2',  t:'Opioid Overdose',                   cat:'env',       href:'chapters/c8-2.html?view=summary',  k:'opioid overdose naloxone narcan heroin fentanyl morphine c8-2 respiratory depression pinpoint pupils'},
+  {num:'8.3',  t:'Beta-Blocker Overdose',             cat:'env',       href:'chapters/c8-3.html?view=summary',  k:'beta blocker overdose glucagon atropine c8-3 bradycardia hypotension'},
+  {num:'8.4',  t:'Calcium Channel Blocker Overdose',  cat:'env',       href:'chapters/c8-4.html?view=summary',  k:'calcium channel blocker ccb overdose glucagon calcium chloride c8-4'},
+  {num:'8.5',  t:'Organophosphate Poisoning',         cat:'env',       href:'chapters/c8-5.html?view=summary',  k:'organophosphate poisoning atropine pralidoxime pesticide sludge c8-5 nerve agent'},
+  {num:'8.6',  t:'Diving Emergencies',                cat:'env',       href:'chapters/c8-6.html?view=summary',  k:'diving scuba emergencies decompression sickness barotrauma nitrogen narcosis c8-6 dcs bends'},
+  {num:'8.7',  t:'Drowning / Near Drowning',          cat:'env',       href:'chapters/c8-7.html?view=summary',  k:'drowning near drowning submersion water c8-7 hypothermia'},
+  {num:'8.8',  t:'Envenomation',                      cat:'env',       href:'chapters/c8-8.html?view=summary',  k:'envenomation snake bite sting venom scorpion jellyfish c8-8 antivenom'},
+  {num:'8.9',  t:'Hypothermia / Cold Exposure',       cat:'env',       href:'chapters/c8-9.html?view=summary',  k:'hypothermia cold exposure frostbite temperature rewarming c8-9'},
+  {num:'8.10', t:'Hyperthermia / Heat Exposure',      cat:'env',       href:'chapters/c8-10.html?view=summary', k:'hyperthermia heat stroke heat exhaustion cooling c8-10 heatstroke temperature'},
+  // ── PEDIATRICS (C9) ──
+  {num:'9.1', t:'Croup',                              cat:'peds',      href:'chapters/c9-1.html?view=summary',  k:'croup stridor laryngotracheobronchitis racemic epinephrine dexamethasone c9-1 bark seal'},
+  {num:'9.2', t:'Pediatric Bradycardia',              cat:'peds',      href:'chapters/c9-2.html?view=summary',  k:'pediatric bradycardia child infant atropine pacing c9-2 peds slow'},
+  {num:'9.3', t:'Pediatric Tachycardia',              cat:'peds',      href:'chapters/c9-3.html?view=summary',  k:'pediatric tachycardia svt child adenosine cardioversion c9-3 peds fast'},
+  // ── OBSTETRICS (C10) ──
+  {num:'10.1', t:'Childbirth',                        cat:'obs',       href:'chapters/c10-1.html?view=summary', k:'childbirth delivery labour labor normal birth c10-1 obstetric'},
+  {num:'10.2', t:'Post Partum Hemorrhage',            cat:'obs',       href:'chapters/c10-2.html?view=summary', k:'post partum hemorrhage pph bleeding tranexamic acid oxytocin c10-2 postpartum'},
+  {num:'10.3', t:'PV Hemorrhage in Pregnancy',        cat:'obs',       href:'chapters/c10-3.html?view=summary', k:'pv hemorrhage pregnancy bleeding antepartum placenta previa c10-3'},
+  {num:'10.4', t:'Eclampsia / Pre-eclampsia',         cat:'obs',       href:'chapters/c10-4.html?view=summary', k:'eclampsia pre-eclampsia hypertension magnesium seizure labetalol c10-4 bp'},
+  // ── MCI (C11) ──
+  {num:'11.1', t:'START Triage (MCI)',                cat:'mci',       href:'chapters/c11-1.html?view=summary', k:'start triage mci mass casualty incident sieve sort red yellow green black c11 simple triage rapid treatment'},
+  // ── SCOPE & MEDICATIONS ──
+  {num:'S1',  t:'Scope of Practice Matrix',           cat:'scope',     href:'chapters/s1.html',                  k:'scope practice matrix er emr emt emt-a paramedic ap ep medications skills procedures tele-ems s1'},
+  {num:'M1',  t:'Medication Formulary (M1–38)',       cat:'scope',     href:'chapters/m1-38.html',               k:'medication formulary drug list m1 m38 all medications dosage formulary m1-38'},
+  // ── TOOLS & RESOURCES ──
+  {num:'',    t:'ECG Simulator',                      cat:'tools',     href:'ecg.html',                          k:'ecg simulator rhythm heart cardiac arrhythmia real-time live nsr vf vt svt afib stemi'},
+  {num:'',    t:'Drug Calculator',                    cat:'tools',     href:'drug-calculator.html',              k:'drug calculator dose dosage medication weight pediatric mg ml concentration'},
+  {num:'',    t:'Prometric Exam',                     cat:'tools',     href:'src/prometric/exams.html',          k:'prometric exam nremt practice questions test mock assessment analytics'},
+  {num:'',    t:'AHA Algorithms',                     cat:'tools',     href:'aha.html',                          k:'aha algorithms american heart association acls bls cardiac arrest bradycardia tachycardia pulseless vf vt'},
+  {num:'',    t:'GCS Tool',                           cat:'tools',     href:'GCS.html',                          k:'gcs glasgow coma scale neurological eye verbal motor response consciousness assessment'},
+  {num:'',    t:'Course Prep (ITLS, EMPACT, ACLS)',   cat:'tools',     href:'courses.html',                      k:'courses itls empact acls bls prep certification training trauma life support'},
+  {num:'',    t:'Full Chapter Index',                 cat:'tools',     href:'chapters/c-index.html?view=summary',k:'index full table contents browse all chapters sections toc list overview'},
+  {num:'',    t:'2026 Updates & Changes',             cat:'tools',     href:'chapters/c0.html?view=summary',     k:'2026 updates new latest changes guidelines what\'s new cpg revision'},
+  {num:'',    t:'Trauma Guide',                       cat:'tools',     href:'trauma.html',                       k:'trauma guide protocol reference burns spinal hemorrhage wound injury quick reference'},
 ];
-function renderHits(arr){
-  var el=document.getElementById('soList'),no=document.getElementById('soNone'),lb=document.getElementById('soLbl');
-  if(!arr.length){el.innerHTML='';no.classList.add('show');lb.textContent='';return;}
-  no.classList.remove('show');lb.textContent=arr.length+' result'+(arr.length!==1?'s':'');
-  el.innerHTML=arr.map(function(x){return'<a class="so-hit" href="'+x.href+'"><span class="so-ico">'+x.i+'</span><div class="so-info"><div class="so-title">'+x.t+'</div><div class="so-desc">'+x.d+'</div></div><span class="so-arr">\u2192</span></a>';}).join('');
+
+/* ═══════════════════════════════════════════════════════
+   SEARCH ENGINE
+═══════════════════════════════════════════════════════ */
+let soActiveCat = 'all';
+let soFocusIdx  = -1;
+let soVisible   = [];
+
+function scoreItem(item, q) {
+  const title = item.t.toLowerCase();
+  const kw    = item.k.toLowerCase();
+  if (!q) return 1;
+  if (title === q) return 100;
+  if (title.startsWith(q)) return 80;
+  if (title.includes(q)) return 60;
+  const words = q.split(' ').filter(Boolean);
+  const allMatch = words.every(w => title.includes(w) || kw.includes(w));
+  if (allMatch) return 40;
+  const anyMatch = words.some(w => title.includes(w) || kw.includes(w));
+  if (anyMatch) return 20;
+  return 0;
 }
-function openSO(){document.getElementById('so').classList.add('open');document.getElementById('soLbl').textContent='Suggestions';renderHits(ITEMS.slice(0,7));setTimeout(function(){document.getElementById('soI').focus();},80);}
-function closeSO(){document.getElementById('so').classList.remove('open');document.getElementById('soI').value='';}
-window.openSO=openSO;window.closeSO=closeSO;
-document.getElementById('soI').addEventListener('input',function(){
-  var q=this.value.toLowerCase().trim();
-  if(!q){document.getElementById('soLbl').textContent='Suggestions';renderHits(ITEMS.slice(0,7));return;}
-  renderHits(ITEMS.filter(function(x){return x.k.includes(q)||x.t.toLowerCase().includes(q);}));
+
+function getSOResults(q, cat) {
+  let items = SEARCH_INDEX;
+  if (cat && cat !== 'all') items = items.filter(x => x.cat === cat);
+  if (!q) return items;
+  return items
+    .map(x => ({...x, _score: scoreItem(x, q)}))
+    .filter(x => x._score > 0)
+    .sort((a, b) => b._score - a._score);
+}
+
+function renderSOResults(q, cat) {
+  const body = document.getElementById('soBody');
+  const none = document.getElementById('soNone');
+  const lbl  = document.getElementById('soLbl');
+  const items = getSOResults(q, cat);
+  soVisible = items;
+  soFocusIdx = -1;
+
+  if (!items.length) {
+    body.innerHTML = '';
+    none.classList.add('show');
+    lbl.textContent = '0 results';
+    return;
+  }
+  none.classList.remove('show');
+  lbl.textContent = (q ? items.length + ' result' + (items.length !== 1 ? 's' : '') : items.length + ' guidelines') ;
+
+  // Group by category
+  const grouped = {};
+  items.forEach(item => {
+    if (!grouped[item.cat]) grouped[item.cat] = [];
+    grouped[item.cat].push(item);
+  });
+
+  let html = '';
+  const catOrder = ['universal','airway','cardio','resus','neuro','medical','trauma','env','peds','obs','mci','scope','tools'];
+  catOrder.forEach(cat => {
+    if (!grouped[cat]) return;
+    const meta = CAT_META[cat] || {label:cat, color:'#888'};
+    html += `<div class="so-ch"><span style="color:${meta.color}">${meta.label}</span></div><div class="so-list">`;
+    grouped[cat].forEach((item, i) => {
+      const globalIdx = items.indexOf(item);
+      const boldQ = q ? item.t.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi'), '<mark style="background:rgba(0,212,255,.25);color:inherit;border-radius:2px">$1</mark>') : item.t;
+      html += `<a class="so-hit" href="${item.href}" data-idx="${globalIdx}" tabindex="-1">
+        <span class="so-h-ico">${getCatIcon(cat)}</span>
+        <span class="so-h-info">
+          <span class="so-h-title">${boldQ}</span>
+          <span class="so-h-meta">${meta.label}</span>
+        </span>
+        ${item.num ? `<span class="so-h-num">${item.num}</span>` : ''}
+        <span class="so-h-arr">&rarr;</span>
+      </a>`;
+    });
+    html += '</div>';
+  });
+
+  body.innerHTML = html;
+  // Click handlers for all hits
+  body.querySelectorAll('.so-hit').forEach(el => {
+    el.addEventListener('click', () => { closeSO(); });
+  });
+}
+
+function getCatIcon(cat) {
+  const icons = {universal:'🛡️',airway:'🌬️',cardio:'❤️',resus:'⚡',neuro:'🧠',
+                 medical:'🩺',trauma:'🩹',env:'☠️',peds:'👶',obs:'🤰',
+                 mci:'🚨',scope:'📋',tools:'⚙️'};
+  return icons[cat] || '📄';
+}
+
+function setSOCat(cat) {
+  soActiveCat = cat;
+  document.querySelectorAll('.so-fp').forEach(p => {
+    p.classList.toggle('act', p.dataset.cat === cat);
+  });
+  renderSOResults(document.getElementById('soI').value.toLowerCase().trim(), cat);
+}
+window.setSOCat = setSOCat;
+
+function clearSOInput() {
+  document.getElementById('soI').value = '';
+  document.getElementById('soClr').classList.remove('show');
+  renderSOResults('', soActiveCat);
+  document.getElementById('soI').focus();
+}
+window.clearSOInput = clearSOInput;
+
+function openSO() {
+  soActiveCat = 'all';
+  document.querySelectorAll('.so-fp').forEach(p => p.classList.toggle('act', p.dataset.cat === 'all'));
+  document.getElementById('so').classList.add('open');
+  renderSOResults('', 'all');
+  setTimeout(() => document.getElementById('soI').focus(), 80);
+}
+function closeSO() {
+  document.getElementById('so').classList.remove('open');
+  document.getElementById('soI').value = '';
+  document.getElementById('soClr').classList.remove('show');
+  soFocusIdx = -1;
+}
+window.openSO = openSO;
+window.closeSO = closeSO;
+
+document.getElementById('soI').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  document.getElementById('soClr').classList.toggle('show', q.length > 0);
+  renderSOResults(q, soActiveCat);
 });
-document.getElementById('so').addEventListener('click',function(e){if(e.target===this)closeSO();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSO();});
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
-function scrollToChapters(){var el=document.getElementById('chGrid');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+  const so = document.getElementById('so');
+  if (!so.classList.contains('open')) return;
+  const hits = so.querySelectorAll('.so-hit');
+  if (e.key === 'Escape') { closeSO(); return; }
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    soFocusIdx = Math.min(soFocusIdx + 1, hits.length - 1);
+    updateSOFocus(hits);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    soFocusIdx = Math.max(soFocusIdx - 1, -1);
+    updateSOFocus(hits);
+    if (soFocusIdx < 0) document.getElementById('soI').focus();
+  } else if (e.key === 'Enter' && soFocusIdx >= 0 && hits[soFocusIdx]) {
+    hits[soFocusIdx].click();
+  }
+});
+
+function updateSOFocus(hits) {
+  hits.forEach((h, i) => h.classList.toggle('hl', i === soFocusIdx));
+  if (soFocusIdx >= 0 && hits[soFocusIdx]) hits[soFocusIdx].scrollIntoView({block:'nearest'});
+}
+
+document.getElementById('so').addEventListener('click', function(e) {
+  if (e.target === this) closeSO();
+});
+
 window.scrollToTop=scrollToTop;window.scrollToChapters=scrollToChapters;
+
 window.addEventListener('scroll',function(){
   var cg=document.getElementById('chGrid');if(!cg)return;
   var bn=document.getElementById('bnHome');
