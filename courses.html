@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0056b3">
-    <link rel="apple-touch-icon" href="icons/icon.png">
+    <link rel="apple-touch-icon" href="../icons/icon.png">
     
     <style>
         /* ── Core Layout ── */
@@ -56,8 +56,8 @@
         
         .card-header { 
             display: flex; 
-            justify-content: space-between; 
             align-items: center; 
+            gap: 8px;
             margin-bottom: 12px; 
         }
         
@@ -71,23 +71,25 @@
             display: flex; 
             align-items: center; 
             gap: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Lifts the badge off the card */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            white-space: nowrap;
         }
         
         .badge-available { 
             background: rgba(34, 197, 94, 0.15); 
-            color: #86efac; /* Brighter, luminous green */
-            border: 1px solid #22c55e; /* Solid green border for sharp contrast */
+            color: #86efac;
+            border: 1px solid #22c55e;
         }
         
         .course-count {
-            background: rgba(59, 130, 246, 0.15);
-            color: #93c5fd;
+            background: rgba(59, 130, 246, 0.25);
+            color: #dbeafe;
             border: 1px solid #3b82f6;
-            font-size: 0.7rem;
-            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
             border-radius: 12px;
-            margin-left: auto;
+            white-space: nowrap;
         }
         
         .badge-coming { 
@@ -100,8 +102,13 @@
         .menu-card h2 { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0 0 5px 0; line-height: 1.2; letter-spacing: -0.5px;}
         .menu-card p { font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 15px 0; line-height: 1.4; flex: 1;}
         
-        /* Course Icon/Illustration */
-        .course-icon { font-size: 2.5rem; position: absolute; right: 20px; top: 20px; opacity: 0.8; }
+        .course-icon {
+            font-size: 2.5rem;
+            position: absolute;
+            right: 20px;
+            top: 40px;
+            opacity: 0.8;
+        }
 
         /* ── Disabled Card State ── */
         .menu-card.disabled { cursor: default; }
@@ -193,7 +200,7 @@
 <div id="pwaInstallBanner" style="display:none;" role="complementary" aria-label="Install app">
     <div class="pwa-banner-inner">
         <div class="pwa-banner-icon">
-            <img src="icons/icon.png" alt="DCAS Courses" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="../icons/icon.png" alt="DCAS Courses" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <span class="pwa-icon-fallback" style="display:none;">🛡️</span>
         </div>
         <div class="pwa-banner-text">
@@ -279,7 +286,7 @@
     //  COURSE DATA & RENDER ENGINE
     // ══════════════════════════════════════════════════════════
     const COURSES = [
-        { id: 'prometric', shortTitle: 'NREMT', title: 'NREMT Prometric Exam', link: 'src/prometric/exams.html', available: true, icon: '📋', count: 879 },
+        { id: 'prometric', shortTitle: 'NREMT', title: 'NREMT Prometric Exam', link: 'src/components/exam-ui.html', available: true, icon: '📋', count: 879 },
         { id: 'itls', shortTitle: 'ITLS', title: 'International Trauma Life Support', link: 'itls.html', available: true, icon: '🚑', count: 200 },
         { id: 'empact', shortTitle: 'EMPACT', title: 'Emergency Medical Patients: Assessment, Care & Transport', link: 'empact.html', available: true, icon: '⚕️', count: 50 },
         { id: 'bls', shortTitle: 'BLS', title: 'Basic Life Support', link: 'bls.html', available: true, icon: '🫀', count: 284 },
