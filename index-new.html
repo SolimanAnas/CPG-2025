@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCAS CPG 2025 - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html { background: #0a0e1a; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e1a;
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 20%, rgba(59,130,246,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139,92,246,0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, rgba(16,185,129,0.04) 0%, transparent 50%);
+            animation: bgShift 20s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @keyframes bgShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, -2%) rotate(1deg); }
+            66% { transform: translate(-1%, 1%) rotate(-1deg); }
+        }
+        .layout {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: rgba(15, 20, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 8px 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 24px;
+        }
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .brand-text h2 {
+            font-size: 1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-text span {
+            font-size: 0.65rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .nav-section {
+            margin-bottom: 24px;
+        }
+        .nav-label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #475569;
+            padding: 0 8px;
+            margin-bottom: 8px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-bottom: 2px;
+        }
+        .nav-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: #e2e8f0;
+        }
+        .nav-item.active {
+            background: rgba(59,130,246,0.15);
+            color: #60a5fa;
+        }
+        .nav-item .icon {
+            font-size: 1.1rem;
+            width: 24px;
+            text-align: center;
+        }
+        .nav-item .badge {
+            margin-left: auto;
+            background: #ef4444;
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 16px 8px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        .user-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .user-role {
+            font-size: 0.65rem;
+            color: #64748b;
+        }
+        /* Main Content */
+        .main {
+            flex: 1;
+            margin-left: 260px;
+            padding: 24px 32px;
+            min-height: 100vh;
+        }
+        /* Header */
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .greeting h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+        .greeting p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 8px 16px;
+            gap: 8px;
+            width: 280px;
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: #e2e8f0;
+            font-size: 0.85rem;
+            outline: none;
+            width: 100%;
+        }
+        .search-box input::placeholder { color: #475569; }
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .action-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: #e2e8f0;
+        }
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        .stat-card.blue::after { background: #3b82f6; }
+        .stat-card.green::after { background: #10b981; }
+        .stat-card.purple::after { background: #8b5cf6; }
+        .stat-card.amber::after { background: #f59e0b; }
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        .stat-card.blue .stat-icon { background: rgba(59,130,246,0.15); }
+        .stat-card.green .stat-icon { background: rgba(16,185,129,0.15); }
+        .stat-card.purple .stat-icon { background: rgba(139,92,246,0.15); }
+        .stat-card.amber .stat-icon { background: rgba(245,158,11,0.15); }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #f1f5f9;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        /* Section Title */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
+        }
+        /* Quick Access Grid */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .quick-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .quick-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+        }
+        .quick-card.blue::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .quick-card.green::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .quick-card.purple::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .quick-card.amber::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .quick-card.cyan::before { background: linear-gradient(90deg, #06b6d4, #22d3ee); }
+        .quick-card.rose::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+        .quick-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.12);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .quick-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .quick-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 6px;
+        }
+        .quick-card p {
+            font-size: 0.8rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        .quick-arrow {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            font-size: 1.2rem;
+            color: #475569;
+            transition: all 0.2s;
+        }
+        .quick-card:hover .quick-arrow {
+            color: #60a5fa;
+            transform: translateX(4px);
+        }
+        /* Chapters List */
+        .chapters-section {
+            margin-bottom: 32px;
+        }
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .chapter-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.08);
+        }
+        .chapter-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+        .chapter-num.universal { background: linear-gradient(135deg, #d63384, #e91e63); }
+        .chapter-num.airway { background: linear-gradient(135deg, #0ca678, #10b981); }
+        .chapter-num.cardio { background: linear-gradient(135deg, #e03131, #ef4444); }
+        .chapter-num.resus { background: linear-gradient(135deg, #6741d9, #8b5cf6); }
+        .chapter-num.neuro { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+        .chapter-num.medical { background: linear-gradient(135deg, #f76707, #f59e0b); }
+        .chapter-num.trauma { background: linear-gradient(135deg, #fcc419, #eab308); }
+        .chapter-num.env { background: linear-gradient(135deg, #845ef7, #a855f7); }
+        .chapter-num.peds { background: linear-gradient(135deg, #ff922b, #f97316); }
+        .chapter-num.ob { background: linear-gradient(135deg, #f06595, #ec4899); }
+        .chapter-num.mci { background: linear-gradient(135deg, #2f9e44, #22c55e); }
+        .chapter-num.scope { background: linear-gradient(135deg, #495057, #6b7280); }
+        .chapter-info h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 2px;
+        }
+        .chapter-info span {
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+        .chapter-arrow {
+            margin-left: auto;
+            color: #475569;
+            transition: all 0.2s;
+        }
+        .chapter-item:hover .chapter-arrow {
+            color: #60a5fa;
+        }
+        /* EMS Tools */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .tool-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 20px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .tool-card:hover {
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-2px);
+        }
+        .tool-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .tool-card h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 4px;
+        }
+        .tool-card span {
+            font-size: 0.65rem;
+            color: #64748b;
+        }
+        /* Progress Bar */
+        .progress-section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .progress-header h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+        .progress-header span {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        .progress-bar-bg {
+            height: 8px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 8px;
+            transition: width 1s ease;
+        }
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 24px 0;
+            color: #475569;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 200;
+            width: 40px;
+            height: 40px;
+            background: rgba(15, 20, 35, 0.95);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 90;
+        }
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .quick-grid { grid-template-columns: repeat(2, 1fr); }
+            .tools-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .sidebar-overlay.active { display: block; }
+            .main { margin-left: 0; padding: 16px; padding-top: 70px; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .quick-grid { grid-template-columns: 1fr; }
+            .chapters-grid { grid-template-columns: 1fr; }
+            .tools-grid { grid-template-columns: repeat(2, 1fr); }
+            .search-box { width: 100%; }
+            .top-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+            .header-actions { width: 100%; }
+            .greeting h1 { font-size: 1.4rem; }
+        }
+        @media (max-width: 480px) {
+            .stats-row { grid-template-columns: 1fr 1fr; }
+            .stat-card { padding: 14px; }
+            .stat-value { font-size: 1.4rem; }
+        }
+        .filtered-out { display: none !important; }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open'); document.querySelector('.sidebar-overlay').classList.toggle('active');">☰</button>
+    <div class="sidebar-overlay" onclick="this.classList.remove('active'); document.querySelector('.sidebar').classList.remove('open');"></div>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">🛡️</div>
+                <div class="brand-text">
+                    <h2>DCAS CPG</h2>
+                    <span>Clinical Guidelines 2025</span>
+                </div>
+            </div>
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-label">Main</div>
+                    <a href="index.html" class="nav-item active"><span class="icon">📊</span> Dashboard</a>
+                    <a href="chapters/c-index.html?view=summary" class="nav-item"><span class="icon">📋</span> Full Index</a>
+                    <a href="courses.html" class="nav-item"><span class="icon">🎓</span> Courses <span class="badge">12</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">Practice</div>
+                    <a href="src/prometric/exams.html" class="nav-item"><span class="icon">📝</span> Prometric Exam</a>
+                    <a href="ecg.html" class="nav-item"><span class="icon">📈</span> ECG Simulator</a>
+                    <a href="drug-calculator.html" class="nav-item"><span class="icon">💊</span> Drug Calculator</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-label">Resources</div>
+                    <a href="aha.html" class="nav-item"><span class="icon">❤️</span> AHA Algorithms</a>
+                    <a href="ems-tools.html" class="nav-item"><span class="icon">🔬</span> EMS Tools</a>
+                    <a href="GCS.html" class="nav-item"><span class="icon">🧠</span> GCS Tool</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">S</div>
+                    <div>
+                        <div class="user-name">Soliman</div>
+                        <div class="user-role">EMS Paramedic</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="top-header">
+                <div class="greeting">
+                    <h1 id="greetingText">Good evening</h1>
+                    <p>Ready for your study session?</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <span>🔍</span>
+                        <input type="text" id="searchInput" placeholder="Search chapters, topics...">
+                    </div>
+                    <a href="chapters/c0.html?view=summary" class="action-btn" title="What's New">🆕</a>
+                    <a href="about.html" class="action-btn" title="About">ℹ️</a>
+                </div>
+            </div>
+            <div class="stats-row">
+                <div class="stat-card blue">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value">78</div>
+                    <div class="stat-label">Total Chapters</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-value" id="doneCount">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-value" id="attemptsCount">0</div>
+                    <div class="stat-label">Total Attempts</div>
+                </div>
+                <div class="stat-card amber">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" id="accuracyCount">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+            <div class="progress-section">
+                <div class="progress-header">
+                    <h3>Overall Progress</h3>
+                    <span id="progressPct">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Getting started</span>
+                    <span>Almost there!</span>
+                </div>
+            </div>
+            <h2 class="section-title">Quick Access</h2>
+            <div class="quick-grid">
+                <a href="chapters/c0.html?view=summary" class="quick-card blue" data-search="2025 updates new latest changes guidelines what's new">
+                    <span class="quick-icon">🆕</span>
+                    <h3>2025 Updates</h3>
+                    <p>Latest changes in clinical practice guidelines</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+                <a href="src/prometric/exams.html" class="quick-card green" data-search="prometric exam nremt practice questions test mock assessment">
+                    <span class="quick-icon">📝</span>
+                    <h3>Prometric Exam</h3>
+                    <p>NREMT-style practice with analytics</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+                <a href="courses.html" class="quick-card purple" data-search="courses training itls empact acls bls prep preparation certification exam">
+                    <span class="quick-icon">🎓</span>
+                    <h3>Course Prep</h3>
+                    <p>ITLS, EMPACT, ACLS, BLS & more</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+                <a href="ecg.html" class="quick-card cyan" data-search="ecg ecg simulator rhythm heart rate cardiac electrocardiogram interpretation arrhythmia">
+                    <span class="quick-icon">📈</span>
+                    <h3>ECG Simulator</h3>
+                    <p>Interactive rhythm interpretation</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+                <a href="drug-calculator.html" class="quick-card amber" data-search="drug calculator dose dosage medication weight calculation mg ml pediatric">
+                    <span class="quick-icon">💊</span>
+                    <h3>Drug Calculator</h3>
+                    <p>Quick dosage calculations</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+                <a href="chapters/c-index.html?view=summary" class="quick-card rose" data-search="index full table contents browse all chapters sections toc list">
+                    <span class="quick-icon">📋</span>
+                    <h3>Full Index</h3>
+                    <p>Browse all chapters and sections</p>
+                    <span class="quick-arrow">→</span>
+                </a>
+            </div>
+            <h2 class="section-title">EMS Tools</h2>
+            <div class="tools-grid">
+                <a href="aha.html" class="tool-card" data-search="aha algorithms american heart association cardiac arrest bradycardia tachycardia pulseless vfib vtac asystole pea algorithm flowchart">
+                    <span class="tool-icon">❤️</span>
+                    <h4>AHA Algorithms</h4>
+                    <span>Flowcharts & guides</span>
+                </a>
+                <a href="GCS.html" class="tool-card" data-search="gcs glasgow coma scale neurological assessment eye verbal motor response consciousness brain injury">
+                    <span class="tool-icon">🧠</span>
+                    <h4>GCS Tool</h4>
+                    <span>Coma scale calculator</span>
+                </a>
+                <a href="trauma.html" class="tool-card" data-search="trauma guide protocol burns spinal fracture fracture bleeding hemorrhage wound injury mci mass casualty">
+                    <span class="tool-icon">🩹</span>
+                    <h4>Trauma Guide</h4>
+                    <span>Reference protocols</span>
+                </a>
+                <a href="ems-tools.html" class="tool-card" data-search="more tools ems utilities all calculators references guides resources">
+                    <span class="tool-icon">🔬</span>
+                    <h4>More Tools</h4>
+                    <span>All EMS utilities</span>
+                </a>
+            </div>
+            <div class="chapters-section">
+                <h2 class="section-title">Clinical Chapters</h2>
+                <div class="chapters-grid">
+                    <a href="chapters/c1.html?view=summary" class="chapter-item" data-search="universal care core assessment documentation patient triage categories functional needs treated scene refusal transfer c1 primary survey secondary survey vitals signs">
+                        <div class="chapter-num universal">C1</div>
+                        <div class="chapter-info"><h4>Universal Care</h4><span>Core Assessment & Documentation</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c2.html?view=summary" class="chapter-item" data-search="airway breathing management obstruction fbao asthma copd ventilation invasive mechanical bag valve mask bvm intubation laryngeal mask airway lma c2 oxygenation respiratory failure bronchodilator nebulizer">
+                        <div class="chapter-num airway">C2</div>
+                        <div class="chapter-info"><h4>Airway & Breathing</h4><span>Management & Emergencies</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c3-1.html?view=summary" class="chapter-item" data-search="cardiology chest pain acute coronary syndrome acs bradycardia tachycardia pulmonary edema heart cardiac ecg c3 heart attack myocardial infarction mi stemi nstemi angina afib atrial fibrillation flutter">
+                        <div class="chapter-num cardio">C3</div>
+                        <div class="chapter-info"><h4>Cardiology</h4><span>ACS, Bradycardia, Tachycardia</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c4-1.html?view=summary" class="chapter-item" data-search="resuscitation bls basic life support cpr cardiac arrest adult pediatric newborn infant post rosc starting stopping transferring verification death c4 defibrillation aed epinephrine adrenaline chest compressions rescue breathing ventilation">
+                        <div class="chapter-num resus">C4</div>
+                        <div class="chapter-info"><h4>Resuscitation</h4><span>BLS, Cardiac Arrest, ROSC</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c5-1.html?view=summary" class="chapter-item" data-search="neurology stroke seizure brain cerebral vascular cva tia transient ischemic attack convulsion epileptic status epilepticus c5 facial droop weakness speech aphasia">
+                        <div class="chapter-num neuro">C5</div>
+                        <div class="chapter-info"><h4>Neurology</h4><span>Stroke & Seizures</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c6-1.html?view=summary" class="chapter-item" data-search="medical emergencies abdominal pain abnormal behavior adrenal insufficiency anaphylaxis allergic altered mental status epistaxis fever sepsis hypoglycemia hyperglycemia nausea vomiting shock pain sickle cell alcohol intoxication c6 diabetic ketoacidosis dka overdose poisoning toxicology">
+                        <div class="chapter-num medical">C6</div>
+                        <div class="chapter-info"><h4>Medical Emergencies</h4><span>14 sub-chapters</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c7-1.html?view=summary" class="chapter-item" data-search="trauma general management burns crush injuries limb spinal motion restriction brain injuries tbi c7 fracture hemorrhage bleeding wound amputation pelvic spinal immobilization">
+                        <div class="chapter-num trauma">C7</div>
+                        <div class="chapter-info"><h4>Trauma</h4><span>Burns, Spinal, Brain Injuries</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c8-1.html?view=summary" class="chapter-item" data-search="environmental toxicology opioid overdose beta blocker ccb calcium channel organophosphate poisoning diving scuba drowning envenomation hypothermia hyperthermia c8 heat stroke cold exposure snake bite bee sting">
+                        <div class="chapter-num env">C8</div>
+                        <div class="chapter-info"><h4>Environmental</h4><span>Toxicology & Diving</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c9-1.html?view=summary" class="chapter-item" data-search="pediatrics pediatric child infant croup bradycardia tachycardia c9 peds neonatal young breathing obstruction respiratory">
+                        <div class="chapter-num peds">C9</div>
+                        <div class="chapter-info"><h4>Pediatrics</h4><span>Croup, Bradycardia, Tachycardia</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                    <a href="chapters/c10-1.html?view=summary" class="chapter-item" data-search="obstetrics childbirth delivery labor post partum hemorrhage bleeding pv pregnancy eclampsia pre-eclampsia c10 maternal fetal neonatal birth emergency">
+                        <div class="chapter-num ob">C10</div>
+                        <div class="chapter-info"><h4>Obstetrics</h4><span>Childbirth & Emergencies</span></div>
+                        <span class="chapter-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+            <footer>
+                <p>DCAS CPG 2025 · Created by <a href="about.html">Soliman Anas</a> · For study aid only</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+        // Greeting
+        const h = new Date().getHours();
+        const greeting = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+        document.getElementById('greetingText').textContent = greeting;
+        // Stats from localStorage
+        try {
+            const completion = JSON.parse(localStorage.getItem('dcas_cpg_completion') || '{}');
+            const stats = JSON.parse(localStorage.getItem('dcas_cpg_stats') || '{"totalAttempts":0,"critical":{"total":0,"correct":0}}');
+            const totalChaps = 78;
+            const done = Object.values(completion).filter(v => v).length;
+            const pct = Math.round((done / totalChaps) * 100);
+            const critAcc = stats.critical?.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+            document.getElementById('doneCount').textContent = done;
+            document.getElementById('attemptsCount').textContent = stats.totalAttempts || 0;
+            document.getElementById('accuracyCount').textContent = critAcc + '%';
+            document.getElementById('progressPct').textContent = pct + '%';
+            setTimeout(() => { document.getElementById('progressFill').style.width = pct + '%'; }, 200);
+        } catch(e) {}
+
+        // Search (matches index.html approach)
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const lower = e.target.value.toLowerCase().trim();
+                let anyVisible = false;
+
+                const searchable = document.querySelectorAll('.quick-card, .tool-card, .chapter-item');
+                searchable.forEach(card => {
+                    const match = !lower || (card.dataset.search || '').toLowerCase().includes(lower);
+                    card.classList.toggle('filtered-out', !match);
+                    if (match) anyVisible = true;
+                });
+
+                // Hide section titles when all their children are filtered out
+                document.querySelectorAll('.section-title').forEach(title => {
+                    const next = title.nextElementSibling;
+                    if (next) {
+                        const visible = Array.from(next.children).filter(c => !c.classList.contains('filtered-out')).length;
+                        title.style.display = (lower && visible === 0) ? 'none' : '';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
