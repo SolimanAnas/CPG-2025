@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>DCAS CPG 2026 · Dashboard</title>
+<title>DCAS CPG 2025 · Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
@@ -34,6 +34,102 @@ body::after{content:'';position:fixed;inset:0;
   background:radial-gradient(ellipse 60% 40% at 15% 10%,rgba(0,212,255,.06) 0%,transparent 60%),
              radial-gradient(ellipse 50% 50% at 85% 90%,rgba(168,85,247,.05) 0%,transparent 60%);
   pointer-events:none;z-index:0;animation:atm 20s ease-in-out infinite}
+/* ── LIGHT THEME ─────────────────────────────────────── */
+[data-theme="light"]{
+  --bg:#eef3fb;--s0:#ffffff;--s1:#f4f7fc;--s2:#e6ecf8;
+  --bd:rgba(37,99,235,.12);--bd2:rgba(37,99,235,.22);
+  --tx:#0a1628;--tx2:rgba(10,22,40,.65);--tx3:rgba(10,22,40,.38);
+  --ac:#1d4ed8;--ac-d:rgba(29,78,216,.12);
+  --gr:#15803d;--gr-d:rgba(21,128,61,.12);
+  --pu:#7e22ce;--pu-d:rgba(126,34,206,.12);
+  --am:#b45309;--am-d:rgba(180,83,9,.12);
+  --re:#be123c;
+  --s-glow:rgba(29,78,216,.06);
+}
+[data-theme="light"] body::before{
+  background-image:linear-gradient(rgba(37,99,235,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(37,99,235,.04) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+[data-theme="light"] body::after{
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 10%,rgba(29,78,216,.06) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 50% at 85% 90%,rgba(126,34,206,.04) 0%,transparent 60%);
+}
+[data-theme="light"] .topbar{background:rgba(238,243,251,.95)}
+[data-theme="light"] .sidebar{background:#f4f7fc}
+[data-theme="light"] .brand-tx h2,[data-theme="light"] .nav-lbl{color:var(--tx3)}
+
+/* ── SEPIA THEME ─────────────────────────────────────── */
+[data-theme="sepia"]{
+  --bg:#f5ead5;--s0:#fdf6e8;--s1:#f7efd8;--s2:#ede0c4;
+  --bd:rgba(100,65,20,.14);--bd2:rgba(100,65,20,.26);
+  --tx:#3d2b1e;--tx2:rgba(61,43,30,.68);--tx3:rgba(61,43,30,.4);
+  --ac:#8b5e00;--ac-d:rgba(139,94,0,.14);
+  --gr:#376830;--gr-d:rgba(55,104,48,.14);
+  --pu:#6d3fa8;--pu-d:rgba(109,63,168,.14);
+  --am:#b45309;--am-d:rgba(180,83,9,.14);
+  --re:#c0392b;
+  --s-glow:rgba(139,94,0,.08);
+}
+[data-theme="sepia"] body::before{
+  background-image:linear-gradient(rgba(100,65,20,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(100,65,20,.04) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+[data-theme="sepia"] body::after{
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 10%,rgba(139,94,0,.06) 0%,transparent 60%),
+    radial-gradient(ellipse 50% 50% at 85% 90%,rgba(180,83,9,.05) 0%,transparent 60%);
+}
+[data-theme="sepia"] .topbar{background:rgba(245,234,213,.96)}
+[data-theme="sepia"] .sidebar{background:#f7efd8}
+[data-theme="sepia"] body::before,.noatm{opacity:.5}
+
+/* Ensure stat cards, search overlay etc. readable in all themes */
+[data-theme="light"] .so,[data-theme="sepia"] .so{
+  background:rgba(238,243,251,.98);
+}
+[data-theme="sepia"] .so{background:rgba(253,246,232,.98)}
+[data-theme="light"] .so-hit,[data-theme="light"] .so-iw,
+[data-theme="light"] .motive-banner,[data-theme="light"] .dash-card,
+[data-theme="light"] .hero,[data-theme="light"] .sc,
+[data-theme="light"] .qc,[data-theme="light"] .ci,[data-theme="light"] .tc{
+  background:var(--s0);
+}
+[data-theme="sepia"] .so-hit,[data-theme="sepia"] .so-iw,
+[data-theme="sepia"] .motive-banner,[data-theme="sepia"] .dash-card,
+[data-theme="sepia"] .hero,[data-theme="sepia"] .sc,
+[data-theme="sepia"] .qc,[data-theme="sepia"] .ci,[data-theme="sepia"] .tc{
+  background:var(--s0);
+}
+/* Mono gradient text needs fallback for light/sepia */
+[data-theme="light"] .hero-greet,
+[data-theme="sepia"] .hero-greet{
+  background:linear-gradient(120deg,var(--tx) 50%,var(--ac));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+[data-theme="light"] .mb-text h3,
+[data-theme="sepia"] .mb-text h3{
+  background:linear-gradient(90deg,var(--gr),var(--ac));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+/* Sidebar nav text */
+[data-theme="light"] .nav-item,[data-theme="sepia"] .nav-item{color:var(--tx2)}
+[data-theme="light"] .nav-item:hover,[data-theme="sepia"] .nav-item:hover{
+  background:var(--ac-d);color:var(--tx)
+}
+[data-theme="light"] .nav-item.act,[data-theme="sepia"] .nav-item.act{
+  color:var(--ac);background:var(--ac-d)
+}
+/* Bottom nav */
+[data-theme="light"] .bnav,[data-theme="sepia"] .bnav{
+  background:rgba(255,255,255,.97)
+}
+[data-theme="sepia"] .bnav{background:rgba(253,246,232,.97)}
+/* Tbb buttons */
+[data-theme="light"] .tbb,[data-theme="sepia"] .tbb{color:var(--tx2)}
+
 @keyframes atm{0%,100%{opacity:1}50%{opacity:.6}}
 .layout{display:flex;min-height:100dvh;position:relative;z-index:1}
 /* SIDEBAR */
@@ -450,9 +546,10 @@ footer a{color:var(--ac);text-decoration:none}
 <header class="topbar" id="topbar">
   <div class="tb-brand">
     <div class="brand-ico">DC</div>
-    <div><h2>DCAS CPG</h2><div style="font-size:.56rem;color:var(--tx3);letter-spacing:.5px">2026 Edition</div></div>
+    <div><h2>DCAS CPG</h2><div style="font-size:.56rem;color:var(--tx3);letter-spacing:.5px">2025 Edition</div></div>
   </div>
   <div class="tb-right">
+    <button class="tbb" id="themeToggleBtn" onclick="cycleTheme()" title="Change theme">🎨</button>
     <button class="tbb" onclick="openSO()">&#x2315;</button>
     <a class="tbb" href="chapters/c0.html?view=summary">&#x2691;</a>
     <a class="tbb" href="about.html">&#x24D8;</a>
@@ -463,7 +560,7 @@ footer a{color:var(--ac);text-decoration:none}
   <aside class="sidebar">
     <div class="brand">
       <div class="brand-ico">DC</div>
-      <div class="brand-tx"><h2>DCAS CPG</h2><span>Clinical Guidelines 2026</span></div>
+      <div class="brand-tx"><h2>DCAS CPG</h2><span>Clinical Guidelines 2025</span></div>
     </div>
     <nav>
       <div class="nav-lbl">Main</div>
@@ -724,7 +821,7 @@ footer a{color:var(--ac);text-decoration:none}
         <div class="cs"><span class="c-arr">&rarr;</span></div></a>
     </div>
 
-    <footer>DCAS CPG 2026 &middot; <a href="about.html">Soliman Anas</a> &middot; For study aid only</footer>
+    <footer>DCAS CPG 2025 &middot; <a href="about.html">Soliman Anas</a> &middot; For study aid only</footer>
   </main>
 </div>
 
@@ -735,9 +832,9 @@ footer a{color:var(--ac);text-decoration:none}
   <a class="bn" href="chapters/c-index.html?view=summary">
     <span class="bn-ico">&#x2630;</span>Index
   </a>
-  <button class="bn" onclick="scrollToChapters()">
+  <a class="bn" href="chapters/c-index.html?view=summary">
     <span class="bn-ico">&#x1F4D6;</span>Chapters
-  </button>
+  </a>
   <button class="bn" onclick="openSO()">
     <span class="bn-ico">&#x2315;</span>Search
   </button>
@@ -1251,6 +1348,8 @@ document.getElementById('so').addEventListener('click', function(e) {
 
 })();
 
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function scrollToChapters(){var el=document.getElementById('chGrid');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
 window.scrollToTop=scrollToTop;window.scrollToChapters=scrollToChapters;
 
 window.addEventListener('scroll',function(){
@@ -1259,6 +1358,108 @@ window.addEventListener('scroll',function(){
   if(cg.getBoundingClientRect().top<=120)bn.classList.remove('act');else bn.classList.add('act');
 },{passive:true});
 if('serviceWorker' in navigator)window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+
+/* ── THEME SYSTEM ──────────────────────────────────────── */
+var THEMES_CYCLE = ['dark','light','sepia'];
+var THEME_ICONS  = {dark:'🌙', light:'☀️', sepia:'📜'};
+var THEME_LABELS = {dark:'Dark', light:'Light', sepia:'Sepia'};
+
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('theme', t); } catch(e){}
+  var btn = document.getElementById('themeToggleBtn');
+  if (btn) btn.textContent = THEME_ICONS[t] || '🎨';
+  showThemeToast((THEME_LABELS[t]||t) + ' mode');
+}
+
+function cycleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+  var idx = THEMES_CYCLE.indexOf(cur);
+  var next = THEMES_CYCLE[(idx + 1) % THEMES_CYCLE.length];
+  applyTheme(next);
+}
+window.cycleTheme = cycleTheme;
+
+(function(){
+  var saved = localStorage.getItem('theme') || 'dark';
+  var t = THEMES_CYCLE.indexOf(saved) >= 0 ? saved : 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  var btn = document.getElementById('themeToggleBtn');
+  if (btn) btn.textContent = THEME_ICONS[t] || '🎨';
+})();
+
+function showThemeToast(msg) {
+  var el = document.getElementById('themeToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'themeToast';
+    el.style.cssText = 'position:fixed;bottom:calc(var(--bot,64px) + 12px);left:50%;transform:translateX(-50%);' +
+      'background:var(--s2);border:1px solid var(--bd2);color:var(--tx);' +
+      'font-family:var(--mono);font-size:.72rem;font-weight:700;' +
+      'padding:7px 18px;border-radius:30px;z-index:9998;pointer-events:none;' +
+      'transition:opacity .35s;box-shadow:0 4px 16px rgba(0,0,0,.25)';
+    document.body.appendChild(el);
+  }
+  el.textContent = msg;
+  el.style.opacity = '1';
+  clearTimeout(el._tid);
+  el._tid = setTimeout(function(){ el.style.opacity='0'; }, 1800);
+}
+
 </script>
 </body>
-</html>
+</html
+/* ── THEME SYSTEM ──────────────────────────────────────── */
+const THEMES_CYCLE = ['dark','light','sepia'];
+const THEME_ICONS  = {dark:'🌙', light:'☀️', sepia:'📜'};
+const THEME_LABELS = {dark:'Dark', light:'Light', sepia:'Sepia'};
+
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('theme', t); } catch(e){}
+  // Update topbar button icon
+  const btn = document.getElementById('themeToggleBtn');
+  if (btn) btn.textContent = THEME_ICONS[t] || '🎨';
+  // Show mini toast
+  showThemeToast(THEME_LABELS[t] + ' mode');
+}
+
+function cycleTheme() {
+  const cur  = document.documentElement.getAttribute('data-theme') || 'dark';
+  const idx  = THEMES_CYCLE.indexOf(cur);
+  const next = THEMES_CYCLE[(idx + 1) % THEMES_CYCLE.length];
+  applyTheme(next);
+}
+window.cycleTheme = cycleTheme;
+
+// Apply saved theme on load
+(function(){
+  const saved = localStorage.getItem('theme') || 'dark';
+  const t = THEMES_CYCLE.includes(saved) ? saved : 'dark';
+  applyTheme(t);
+})();
+
+/* ── THEME TOAST ─────────────────────────────────────── */
+function showThemeToast(msg) {
+  let el = document.getElementById('themeToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'themeToast';
+    el.style.cssText = [
+      'position:fixed','bottom:calc(var(--bot,64px) + var(--safe,0px) + 12px)',
+      'left:50%','transform:translateX(-50%)',
+      'background:var(--s2)','border:1px solid var(--bd2)',
+      'color:var(--tx)','font-family:var(--mono)','font-size:.72rem','font-weight:700',
+      'padding:7px 18px','border-radius:30px',
+      'z-index:9998','pointer-events:none',
+      'transition:opacity .3s','box-shadow:0 4px 16px rgba(0,0,0,.3)'
+    ].join(';');
+    document.body.appendChild(el);
+  }
+  el.textContent = msg;
+  el.style.opacity = '1';
+  clearTimeout(el._t);
+  el._t = setTimeout(() => { el.style.opacity = '0'; }, 1600);
+}
+
+>
