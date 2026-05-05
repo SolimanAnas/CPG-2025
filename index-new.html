@@ -297,6 +297,114 @@ footer a{color:var(--ac);text-decoration:none}
   .sv{font-size:1.4rem}.sc{padding:14px 12px}
   .hero-greet{font-size:1rem}
   .ring-svg{width:64px;height:64px}.ring-fill{stroke-dasharray:160}.ring-pct{font-size:.95rem}}
+
+/* ═══ STATS DASHBOARD ════════════════════════════════════ */
+.dash{display:flex;flex-direction:column;gap:16px;margin-bottom:26px}
+
+/* motivation banner */
+.motive-banner{
+  background:var(--s0);border:1px solid var(--bd);border-radius:18px;
+  padding:16px 18px;position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:16px;
+}
+.motive-banner::before{content:'';position:absolute;top:-30px;right:-30px;
+  width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,232,122,.1),transparent 70%);pointer-events:none}
+.mb-emoji{font-size:2rem;flex-shrink:0}
+.mb-text h3{font-family:var(--mono);font-size:.88rem;font-weight:700;margin-bottom:4px;
+  background:linear-gradient(90deg,var(--gr),var(--ac));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mb-text p{font-size:.74rem;color:var(--tx2);line-height:1.5}
+.mb-streak{margin-left:auto;text-align:center;flex-shrink:0}
+.mb-streak-n{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--am);line-height:1}
+.mb-streak-l{font-size:.58rem;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px}
+
+/* 3-column layout for main dash cards */
+.dash-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dash-card{background:var(--s0);border:1px solid var(--bd);border-radius:16px;padding:16px;overflow:hidden;position:relative}
+.dash-card-hdr{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.dc-icon{font-size:.9rem;width:30px;height:30px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dc-icon-gr{background:var(--gr-d)} .dc-icon-bl{background:var(--ac-d)}
+.dc-icon-pu{background:var(--pu-d)} .dc-icon-am{background:var(--am-d)}
+.dash-card-hdr h3{font-family:var(--mono);font-size:.65rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;color:var(--tx3)}
+
+/* Donut chart */
+.donut-wrap{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.donut-svg{width:64px;height:64px;flex-shrink:0;transform:rotate(-90deg)}
+.donut-track{fill:none;stroke:var(--s2);stroke-width:9}
+.donut-fill{fill:none;stroke-width:9;stroke-linecap:round;
+  stroke-dasharray:160;stroke-dashoffset:160;
+  transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)}
+.donut-label{text-align:left;flex:1;min-width:0}
+.dl-big{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--tx);line-height:1;margin-bottom:3px}
+.dl-sub{font-size:.68rem;color:var(--tx3)}
+
+/* mini stat rows */
+.mini-stats{display:flex;flex-direction:column;gap:6px}
+.mini-row{display:flex;justify-content:space-between;align-items:center;
+  padding:6px 10px;background:var(--s1);border-radius:8px}
+.mr-lbl{font-size:.72rem;color:var(--tx2)}
+.mr-val{font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--tx)}
+.mr-val.c-gr{color:var(--gr)}.mr-val.c-ac{color:var(--ac)}.mr-val.c-am{color:var(--am)}.mr-val.c-re{color:var(--re)}
+
+/* Sparkline bar chart */
+.spark-wrap{margin-bottom:10px}
+.spark-bars{display:flex;align-items:flex-end;gap:3px;height:44px}
+.spark-bar{flex:1;border-radius:3px 3px 0 0;min-height:3px;
+  transition:height .6s cubic-bezier(.4,0,.2,1);position:relative}
+.spark-bar.high{background:linear-gradient(180deg,var(--gr),rgba(0,232,122,.4))}
+.spark-bar.mid {background:linear-gradient(180deg,var(--ac),rgba(0,212,255,.4))}
+.spark-bar.low {background:linear-gradient(180deg,var(--am),rgba(245,158,11,.4))}
+.spark-bar.vlow{background:linear-gradient(180deg,var(--re),rgba(244,63,94,.4))}
+.spark-labels{display:flex;justify-content:space-between;margin-top:4px}
+.spark-lbl{font-size:.52rem;color:var(--tx3);font-family:var(--mono)}
+
+/* topic weakness list */
+.topic-list{display:flex;flex-direction:column;gap:5px}
+.tl-row{display:flex;align-items:center;gap:8px}
+.tl-name{font-size:.7rem;color:var(--tx2);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-bar-wrap{width:60px;height:5px;background:var(--s2);border-radius:3px;flex-shrink:0;overflow:hidden}
+.tl-bar{height:100%;border-radius:3px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+.tl-bar.high{background:var(--gr)}.tl-bar.mid{background:var(--ac)}
+.tl-bar.low{background:var(--am)}.tl-bar.vlow{background:var(--re)}
+.tl-pct{font-family:var(--mono);font-size:.62rem;color:var(--tx3);width:28px;text-align:right;flex-shrink:0}
+
+/* last visited */
+.lv-list{display:flex;flex-direction:column;gap:5px}
+.lv-item{display:flex;align-items:center;gap:8px;padding:7px 10px;
+  background:var(--s1);border-radius:8px;text-decoration:none;color:var(--tx);
+  transition:background .15s}
+.lv-item:hover{background:var(--ac-d)}
+.lv-dot{width:6px;height:6px;border-radius:50%;background:var(--ac);flex-shrink:0}
+.lv-name{font-size:.72rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lv-time{font-size:.6rem;color:var(--tx3);flex-shrink:0;font-family:var(--mono)}
+
+/* Course pills row */
+.course-pills{display:flex;flex-wrap:wrap;gap:6px}
+.cp{display:inline-flex;align-items:center;gap:5px;
+  padding:5px 11px;border-radius:20px;
+  background:var(--s1);border:1px solid var(--bd);
+  font-size:.7rem;font-weight:600;color:var(--tx2);
+  text-decoration:none;transition:all .15s}
+.cp:hover{border-color:var(--ac);color:var(--ac)}
+.cp-qs{font-family:var(--mono);font-size:.6rem;color:var(--tx3)}
+
+/* no-data state */
+.no-data{text-align:center;padding:16px 10px;color:var(--tx3);font-size:.74rem}
+.no-data .nd-ico{font-size:1.4rem;opacity:.35;margin-bottom:4px}
+
+@media(max-width:768px){
+  .dash-cols{grid-template-columns:1fr}
+  .motive-banner{gap:12px}
+  .mb-streak{display:none}
+}
+@media(max-width:480px){
+  .mb-emoji{font-size:1.5rem}
+  .mb-text h3{font-size:.8rem}
+}
+
 </style>
 </head>
 <body>
@@ -418,7 +526,119 @@ footer a{color:var(--ac);text-decoration:none}
       <div class="sc sc-am"><div class="si">&#x25C8;</div><div class="sv" id="accC">0%</div><div class="sl">Accuracy</div></div>
     </div>
 
-    <div class="sh fu d3"><h2>Quick Access</h2><span class="sc2">6 items</span></div>
+    
+    <!-- ══════════════════════════════════════════════════════
+         STATS DASHBOARD
+    ══════════════════════════════════════════════════════ -->
+    <div class="dash fu d3" id="statsDash">
+
+      <!-- Motivation banner -->
+      <div class="motive-banner" id="motiveBanner">
+        <div class="mb-emoji" id="motiveEmoji">🚀</div>
+        <div class="mb-text">
+          <h3 id="motiveHeading">Keep going — you're making progress!</h3>
+          <p id="motiveText">Complete chapters, take practice exams, and review your weak areas.</p>
+        </div>
+        <div class="mb-streak">
+          <div class="mb-streak-n" id="streakDays">0</div>
+          <div class="mb-streak-l">day streak</div>
+        </div>
+      </div>
+
+      <div class="dash-cols">
+
+        <!-- ── CPG Guidelines ── -->
+        <div class="dash-card">
+          <div class="dash-card-hdr">
+            <div class="dc-icon dc-icon-gr">📖</div>
+            <h3>CPG Guidelines</h3>
+          </div>
+          <div class="donut-wrap">
+            <svg class="donut-svg" viewBox="0 0 64 64">
+              <defs>
+                <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00e87a"/>
+                  <stop offset="100%" stop-color="#00d4ff"/>
+                </linearGradient>
+              </defs>
+              <circle class="donut-track" cx="32" cy="32" r="25.5"/>
+              <circle class="donut-fill" id="cpgDonut" cx="32" cy="32" r="25.5" stroke="url(#dg1)"/>
+            </svg>
+            <div class="donut-label">
+              <div class="dl-big"><span id="cpgDone">0</span><span style="font-size:.9rem;opacity:.5">/78</span></div>
+              <div class="dl-sub">Chapters done</div>
+            </div>
+          </div>
+          <div class="mini-stats">
+            <div class="mini-row"><span class="mr-lbl">Quiz attempts</span><span class="mr-val c-ac" id="cpgAttempts">—</span></div>
+            <div class="mini-row"><span class="mr-lbl">Quiz accuracy</span><span class="mr-val" id="cpgAccuracy">—</span></div>
+            <div class="mini-row"><span class="mr-lbl">Critical Qs</span><span class="mr-val c-gr" id="cpgCritical">—</span></div>
+          </div>
+        </div>
+
+        <!-- ── Prometric Exam ── -->
+        <div class="dash-card">
+          <div class="dash-card-hdr">
+            <div class="dc-icon dc-icon-bl">📝</div>
+            <h3>Prometric Exams</h3>
+          </div>
+          <!-- sparkline chart -->
+          <div class="spark-wrap" id="sparkWrap">
+            <div class="spark-bars" id="sparkBars">
+              <div class="no-data"><div class="nd-ico">📊</div>No exams yet</div>
+            </div>
+            <div class="spark-labels" id="sparkLabels"></div>
+          </div>
+          <div class="mini-stats">
+            <div class="mini-row"><span class="mr-lbl">Exams taken</span><span class="mr-val c-ac" id="examCount">0</span></div>
+            <div class="mini-row"><span class="mr-lbl">Average score</span><span class="mr-val" id="examAvg">—</span></div>
+            <div class="mini-row"><span class="mr-lbl">Best score</span><span class="mr-val c-gr" id="examBest">—</span></div>
+            <div class="mini-row"><span class="mr-lbl">Questions done</span><span class="mr-val" id="examQs">0</span></div>
+          </div>
+        </div>
+
+        <!-- ── Topics & Activity ── -->
+        <div class="dash-card">
+          <div class="dash-card-hdr">
+            <div class="dc-icon dc-icon-pu">📊</div>
+            <h3>Topic Performance</h3>
+          </div>
+          <!-- topic accuracy bars or last-visited -->
+          <div id="topicPanel">
+            <div class="topic-list" id="topicList">
+              <div class="no-data"><div class="nd-ico">🎯</div>Complete an exam to see topic breakdown</div>
+            </div>
+          </div>
+          <div style="margin-top:12px">
+            <div style="font-size:.6rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--tx3);margin-bottom:6px">Recently Visited</div>
+            <div class="lv-list" id="lvList">
+              <div class="no-data" style="padding:6px"><div class="nd-ico" style="font-size:1rem">🕐</div>No recent activity</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /dash-cols -->
+
+      <!-- Courses row -->
+      <div>
+        <div style="font-size:.62rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);margin-bottom:9px">Available Courses — 879+ Questions</div>
+        <div class="course-pills">
+          <a href="src/prometric/exams.html" class="cp">📋 NREMT<span class="cp-qs">879 Qs</span></a>
+          <a href="itls.html" class="cp">🚑 ITLS<span class="cp-qs">200 Qs</span></a>
+          <a href="empact.html" class="cp">⚕️ EMPACT<span class="cp-qs">50 Qs</span></a>
+          <a href="bls.html" class="cp">🫀 BLS<span class="cp-qs">284 Qs</span></a>
+          <a href="acls.html" class="cp">❤️ ACLS<span class="cp-qs">33 Qs</span></a>
+          <a href="pepp.html" class="cp">🧸 PEPP<span class="cp-qs">200 Qs</span></a>
+          <a href="pals.html" class="cp">👶 PALS<span class="cp-qs">57 Qs</span></a>
+          <a href="bdls.html" class="cp">🌪️ BDLS<span class="cp-qs">40 Qs</span></a>
+          <a href="ppet.html" class="cp">🚁 PPET<span class="cp-qs">57 Qs</span></a>
+          <a href="medical.html" class="cp">💊 Medical<span class="cp-qs">45 Qs</span></a>
+        </div>
+      </div>
+
+    </div><!-- /dash -->
+
+<div class="sh fu d3"><h2>Quick Access</h2><span class="sc2">6 items</span></div>
     <div class="qg fu d4">
       <a href="chapters/c0.html?view=summary" class="qc q-bl" data-qs="2026 updates new latest changes guidelines what's new">
         <span class="q-badge b-new">New</span>
@@ -827,6 +1047,209 @@ function updateSOFocus(hits) {
 document.getElementById('so').addEventListener('click', function(e) {
   if (e.target === this) closeSO();
 });
+
+
+/* ═══════════════════════════════════════════════════════
+   STATS DASHBOARD
+═══════════════════════════════════════════════════════ */
+(function initDash() {
+
+  /* ── 1. CPG Guidelines ─────────────────────────────── */
+  try {
+    const comp  = JSON.parse(localStorage.getItem('dcas_cpg_completion') || '{}');
+    const stats = JSON.parse(localStorage.getItem('dcas_cpg_stats') || '{"totalAttempts":0,"chapters":{},"critical":{"total":0,"correct":0}}');
+    const done  = Object.values(comp).filter(Boolean).length;
+    const pct   = Math.round(done / 78 * 100);
+
+    document.getElementById('cpgDone').textContent = done;
+
+    // Donut
+    const circ = 2 * Math.PI * 25.5; // r=25.5
+    const donut = document.getElementById('cpgDonut');
+    donut.style.strokeDasharray  = circ;
+    donut.style.strokeDashoffset = circ;
+    setTimeout(() => { donut.style.strokeDashoffset = circ * (1 - pct / 100); }, 300);
+
+    // Quiz accuracy from chapter data
+    let totalScore = 0, totalMax = 0;
+    if (stats.chapters) {
+      Object.values(stats.chapters).forEach(ch => {
+        totalScore += ch.totalScore || 0;
+        totalMax   += ch.totalMax   || 0;
+      });
+    }
+    const quizAcc = totalMax > 0 ? Math.round(totalScore / totalMax * 100) : null;
+    document.getElementById('cpgAttempts').textContent = stats.totalAttempts || 0;
+    const accEl = document.getElementById('cpgAccuracy');
+    if (quizAcc !== null) {
+      accEl.textContent = quizAcc + '%';
+      accEl.className = 'mr-val ' + (quizAcc >= 70 ? 'c-gr' : quizAcc >= 50 ? 'c-ac' : 'c-am');
+    } else {
+      accEl.textContent = '—';
+    }
+
+    // Critical accuracy
+    const crit    = stats.critical || {total:0,correct:0};
+    const critPct = crit.total ? Math.round(crit.correct / crit.total * 100) : null;
+    const critEl  = document.getElementById('cpgCritical');
+    if (critPct !== null) {
+      critEl.textContent = critPct + '% (' + crit.total + ' Qs)';
+      critEl.className = 'mr-val ' + (critPct >= 70 ? 'c-gr' : critPct >= 50 ? 'c-ac' : 'c-am');
+    } else {
+      critEl.textContent = '—';
+    }
+  } catch(e) {}
+
+  /* ── 2. Prometric Exam (examStats) ─────────────────── */
+  try {
+    const examStats = JSON.parse(localStorage.getItem('examStats') || '[]');
+    const total = examStats.length;
+
+    document.getElementById('examCount').textContent = total;
+
+    if (total > 0) {
+      const scores   = examStats.map(e => e.score);
+      const avg      = Math.round(scores.reduce((a,b) => a+b,0) / total);
+      const best     = Math.max(...scores);
+      const totalQs  = examStats.reduce((a,e) => a + (e.total||0), 0);
+
+      const avgEl  = document.getElementById('examAvg');
+      avgEl.textContent = avg + '%';
+      avgEl.className = 'mr-val ' + (avg >= 70 ? 'c-gr' : avg >= 50 ? 'c-ac' : 'c-am');
+
+      const bestEl = document.getElementById('examBest');
+      bestEl.textContent = best + '%';
+      bestEl.className = 'mr-val ' + (best >= 70 ? 'c-gr' : best >= 50 ? 'c-ac' : 'c-am');
+
+      document.getElementById('examQs').textContent = totalQs;
+
+      // Sparkline — last 8 exams
+      const recents = examStats.slice(-8);
+      const barsEl  = document.getElementById('sparkBars');
+      const labsEl  = document.getElementById('sparkLabels');
+      const maxSc   = Math.max(...recents.map(e => e.score), 1);
+
+      barsEl.innerHTML = recents.map((e, i) => {
+        const h    = Math.round((e.score / 100) * 44);
+        const cls  = e.score >= 70 ? 'high' : e.score >= 50 ? 'mid' : e.score >= 30 ? 'low' : 'vlow';
+        const dt   = new Date(e.date);
+        const lbl  = (dt.getMonth()+1) + '/' + dt.getDate();
+        return `<div class="spark-bar ${cls}" style="height:${h}px" title="${e.score}% on ${lbl}"></div>`;
+      }).join('');
+
+      labsEl.innerHTML = recents.map(e => {
+        const dt = new Date(e.date);
+        return `<span class="spark-lbl">${e.score}%</span>`;
+      }).join('');
+
+      /* Topic breakdown from examStats */
+      const combined = {};
+      examStats.forEach(ex => {
+        if (!ex.topicStats) return;
+        Object.entries(ex.topicStats).forEach(([topic, s]) => {
+          if (!combined[topic]) combined[topic] = {correct:0,total:0};
+          combined[topic].correct += s.correct || 0;
+          combined[topic].total   += s.total   || 0;
+        });
+      });
+
+      const sorted = Object.entries(combined)
+        .filter(([,s]) => s.total >= 2)
+        .map(([topic, s]) => ({ topic, pct: Math.round(s.correct/s.total*100) }))
+        .sort((a,b) => a.pct - b.pct);   // worst first
+
+      const topicEl = document.getElementById('topicList');
+      if (sorted.length > 0) {
+        const show = sorted.slice(0, 5);
+        topicEl.innerHTML = show.map(t => {
+          const cls = t.pct >= 70 ? 'high' : t.pct >= 50 ? 'mid' : t.pct >= 30 ? 'low' : 'vlow';
+          return `<div class="tl-row">
+            <span class="tl-name" title="${t.topic}">${t.topic}</span>
+            <div class="tl-bar-wrap"><div class="tl-bar ${cls}" style="width:0%" data-w="${t.pct}"></div></div>
+            <span class="tl-pct ${cls === 'high' ? 'c-gr' : cls === 'mid' ? 'c-ac' : 'c-am'}">${t.pct}%</span>
+          </div>`;
+        }).join('');
+        // Animate bars
+        setTimeout(() => {
+          topicEl.querySelectorAll('.tl-bar').forEach(b => {
+            b.style.width = b.dataset.w + '%';
+          });
+        }, 400);
+      }
+    }
+  } catch(e) {}
+
+  /* ── 3. Last visited ────────────────────────────────── */
+  try {
+    const lv = JSON.parse(localStorage.getItem('dcas_last_visited') || '[]');
+    const lvEl = document.getElementById('lvList');
+    if (lv.length > 0) {
+      const now = Date.now();
+      lvEl.innerHTML = lv.slice(0,4).map(item => {
+        const ago = now - item.ts;
+        const agoStr = ago < 60000 ? 'just now'
+          : ago < 3600000 ? Math.round(ago/60000) + 'm ago'
+          : ago < 86400000 ? Math.round(ago/3600000) + 'h ago'
+          : Math.round(ago/86400000) + 'd ago';
+        const href = item.url || ('#' + (item.path||''));
+        return `<a class="lv-item" href="${href}">
+          <span class="lv-dot"></span>
+          <span class="lv-name">${item.title}</span>
+          <span class="lv-time">${agoStr}</span>
+        </a>`;
+      }).join('');
+    }
+  } catch(e) {}
+
+  /* ── 4. Streak from dcas_cpg_stats visit pattern ───── */
+  try {
+    const lv = JSON.parse(localStorage.getItem('dcas_last_visited') || '[]');
+    // Compute streak: consecutive days with activity
+    const days = new Set(lv.map(x => new Date(x.ts).toDateString()));
+    let streak = 0;
+    let d = new Date();
+    while (days.has(d.toDateString())) {
+      streak++;
+      d.setDate(d.getDate() - 1);
+    }
+    document.getElementById('streakDays').textContent = streak;
+  } catch(e) {}
+
+  /* ── 5. Motivation message ──────────────────────────── */
+  try {
+    const comp  = JSON.parse(localStorage.getItem('dcas_cpg_completion') || '{}');
+    const exams = JSON.parse(localStorage.getItem('examStats') || '[]');
+    const done  = Object.values(comp).filter(Boolean).length;
+    const pct   = Math.round(done / 78 * 100);
+    const avgSc = exams.length ? Math.round(exams.map(e=>e.score).reduce((a,b)=>a+b,0)/exams.length) : 0;
+
+    let emoji = '🚀', heading = '', body = '';
+    if (done === 0 && exams.length === 0) {
+      emoji = '👋'; heading = 'Welcome to DCAS CPG 2026!';
+      body = 'Start by reading any chapter or taking a practice exam to track your progress here.';
+    } else if (pct >= 80 && avgSc >= 70) {
+      emoji = '🏆'; heading = 'Outstanding performance!';
+      body = `${pct}% of chapters completed · ${avgSc}% average exam score. You're exam-ready!`;
+    } else if (pct >= 50) {
+      emoji = '🔥'; heading = 'Great momentum — keep pushing!';
+      body = `${done} of 78 chapters done. ${78-done} remaining. Consistency is key.`;
+    } else if (exams.length > 0 && avgSc < 60) {
+      emoji = '💪'; heading = 'Practice makes perfect.';
+      body = `Average ${avgSc}% on exams. Focus on your weak topics shown below and re-test.`;
+    } else if (done > 0) {
+      emoji = '📚'; heading = 'Building strong foundations!';
+      body = `${done} chapters completed. Keep reading and testing as you go.`;
+    } else {
+      emoji = '🎯'; heading = 'Ready to level up?';
+      body = 'Take a practice exam and start reading chapters to unlock your full stats dashboard.';
+    }
+
+    document.getElementById('motiveEmoji').textContent = emoji;
+    document.getElementById('motiveHeading').textContent = heading;
+    document.getElementById('motiveText').textContent = body;
+  } catch(e) {}
+
+})();
 
 window.scrollToTop=scrollToTop;window.scrollToChapters=scrollToChapters;
 
