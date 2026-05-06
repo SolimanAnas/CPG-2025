@@ -1,0 +1,462 @@
+{
+  "title": "PPET Exam — Form 2",
+  "description": "Pediatric Emergency Transport — Form 2. Additional practice questions covering pediatric assessment, airway management, resuscitation, shock, and emergency transport for the PPET certification exam.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which of the following is the MOST reliable early indicator of shock in a pediatric patient?",
+      "options": ["Hypotension", "Tachycardia", "Decreased urine output", "Altered mental status"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Shock"
+    },
+    {
+      "id": 2,
+      "text": "What is the correct initial IV fluid bolus for a child in hypovolemic shock?",
+      "options": ["10 mL/kg normal saline", "20 mL/kg normal saline", "40 mL/kg normal saline", "5 mL/kg lactated Ringer's"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Shock"
+    },
+    {
+      "id": 3,
+      "text": "When using a Broselow Tape, you measure the child from head to heel and the tape falls in the red zone. What does this indicate?",
+      "options": ["The child weighs approximately 36–45 kg", "The child weighs approximately 3–5 kg", "The child is in the preschool age range", "The child's blood pressure is critically low"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Pharmacology"
+    },
+    {
+      "id": 4,
+      "text": "What is the correct compression-to-ventilation ratio for 1-rescuer infant CPR?",
+      "options": ["15:2", "30:2", "5:1", "20:2"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 5,
+      "text": "A 3-year-old presents with a barking cough, low-grade fever, and inspiratory stridor. What is the MOST likely diagnosis?",
+      "options": ["Epiglottitis", "Croup (laryngotracheobronchitis)", "Bronchiolitis", "Foreign body airway obstruction"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 6,
+      "text": "Which of the following is an indication of respiratory FAILURE (not just distress) in a child?",
+      "options": ["Nasal flaring", "Intercostal retractions", "Grunting with each breath", "Decreased respiratory rate with cyanosis"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 7,
+      "text": "A 6-month-old infant presents with fever, bulging fontanelle, and high-pitched cry. What condition should you suspect?",
+      "options": ["Febrile seizure", "Meningitis", "Intussusception", "Pyloric stenosis"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Neurological"
+    },
+    {
+      "id": 8,
+      "text": "Which site is PREFERRED for intraosseous (IO) access in infants and young children?",
+      "options": ["Distal femur", "Proximal tibia", "Calcaneus", "Sternum"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Vascular Access"
+    },
+    {
+      "id": 9,
+      "text": "A 2-year-old is found unresponsive with no breathing and no pulse. What is the correct initial energy dose for defibrillation?",
+      "options": ["1 J/kg", "2 J/kg", "4 J/kg", "360 J"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 10,
+      "text": "Which of the following BEST describes the Pediatric Assessment Triangle (PAT)?",
+      "options": ["A bedside tool requiring vital signs and ECG monitoring", "A rapid visual assessment of appearance, work of breathing, and circulation to skin", "A scoring system based on GCS, heart rate, and blood pressure", "A head-to-toe physical examination performed in under 2 minutes"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Assessment"
+    },
+    {
+      "id": 11,
+      "text": "A 4-year-old is having a generalized tonic-clonic seizure that has lasted 8 minutes and has not stopped. What is this condition called?",
+      "options": ["Febrile seizure", "Absence seizure", "Status epilepticus", "Postictal state"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Neurological"
+    },
+    {
+      "id": 12,
+      "text": "What is the MOST common cause of cardiac arrest in the pediatric population?",
+      "options": ["Ventricular fibrillation", "Congenital heart disease", "Respiratory failure or shock leading to asphyxia", "Hypertrophic cardiomyopathy"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 13,
+      "text": "A child presents with urticaria, wheezing, and hypotension after eating peanuts. What is the FIRST-LINE treatment?",
+      "options": ["Diphenhydramine (Benadryl) IV", "Methylprednisolone IV", "Epinephrine 1:1,000 IM", "Albuterol nebulizer"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Pharmacology"
+    },
+    {
+      "id": 14,
+      "text": "Which of the following findings is MOST consistent with epiglottitis in a child?",
+      "options": ["Barking cough and low-grade fever", "High fever, drooling, and tripod position", "Diffuse wheezing and prolonged expiration", "Sudden onset of stridor without fever in a toddler"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 15,
+      "text": "A 10-month-old infant is in cardiopulmonary arrest. Two rescuers are present. What is the PREFERRED chest compression technique?",
+      "options": ["2-finger technique on the sternum", "1-hand technique", "2 thumb-encircling hands technique", "Heel-of-hand technique"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 16,
+      "text": "Normal blood glucose for a pediatric patient is approximately:",
+      "options": ["40–60 mg/dL", "60–100 mg/dL", "100–160 mg/dL", "160–200 mg/dL"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Medical"
+    },
+    {
+      "id": 17,
+      "text": "When should you suspect non-accidental trauma (child abuse) in a pediatric patient?",
+      "options": ["Any fracture in a child under age 10", "Injury pattern inconsistent with the child's developmental age or history", "Any bruising in a mobile child", "Only when the child reports abuse directly"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 18,
+      "text": "What is the minimum systolic blood pressure considered acceptable for a 5-year-old child?",
+      "options": ["60 mmHg", "70 mmHg", "80 mmHg", "90 mmHg"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Assessment"
+    },
+    {
+      "id": 19,
+      "text": "A 3-month-old infant is found unresponsive and not breathing. After activating EMS, what is the NEXT step?",
+      "options": ["Attach an AED immediately", "Begin 30 compressions then check for pulse", "Open the airway and give 2 rescue breaths", "Begin 5 cycles of CPR (30:2)"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 20,
+      "text": "Bronchiolitis is MOST commonly caused by which pathogen?",
+      "options": ["Parainfluenza virus", "Respiratory syncytial virus (RSV)", "Influenza A", "Streptococcus pneumoniae"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 21,
+      "text": "Which of the following BEST describes grunting in an infant?",
+      "options": ["A sign of gastrointestinal distress", "Auto-PEEP to maintain alveolar patency — a critical sign of respiratory distress", "A normal finding in neonates under 1 week", "Indicates upper airway obstruction"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 22,
+      "text": "What is the correct depth of chest compression for a child (1–8 years)?",
+      "options": ["At least 1 inch (2.5 cm)", "At least 1.5 inches (4 cm)", "At least 2 inches (5 cm)", "At least 2.5 inches (6 cm)"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 23,
+      "text": "A 7-year-old is in respiratory distress with diffuse expiratory wheezing. His home albuterol MDI has not helped. What is the NEXT step?",
+      "options": ["Administer epinephrine IM", "Administer nebulized albuterol and consider magnesium sulfate", "Perform bag-mask ventilation immediately", "Place a nasopharyngeal airway"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 24,
+      "text": "Which of the following is a feature of the APPEARANCE component of the Pediatric Assessment Triangle?",
+      "options": ["Respiratory rate", "Skin color (pallor, mottling)", "Muscle tone and interactability", "Capillary refill time"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Assessment"
+    },
+    {
+      "id": 25,
+      "text": "An 18-month-old is brought in with sudden onset of coughing and choking while eating. She is now quiet with decreased breath sounds on the right and mild stridor. What is the MOST likely diagnosis?",
+      "options": ["Croup", "Asthma", "Foreign body airway obstruction", "Epiglottitis"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Airway"
+    },
+    {
+      "id": 26,
+      "text": "Which of the following is TRUE about febrile seizures?",
+      "options": ["They always indicate meningitis", "They are most common in children aged 6 months to 5 years", "They cause permanent brain damage in most cases", "They require anticonvulsant therapy after the first episode"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Neurological"
+    },
+    {
+      "id": 27,
+      "text": "When suctioning a pediatric patient's airway, how long should each suction attempt last?",
+      "options": ["Up to 5 seconds", "Up to 10 seconds", "Up to 30 seconds", "No time limit is necessary"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Airway"
+    },
+    {
+      "id": 28,
+      "text": "A 6-year-old involved in a motor vehicle collision is awake and crying. His pelvis is unstable on compression. Which type of shock is MOST likely?",
+      "options": ["Distributive (septic)", "Obstructive (tension pneumothorax)", "Hypovolemic (hemorrhagic)", "Cardiogenic"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 29,
+      "text": "Which of the following is the MOST appropriate BVM mask size for a term newborn?",
+      "options": ["Size 0 (neonatal)", "Size 1 (infant)", "Size 2 (child)", "Any mask that creates a seal"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "topic": "Airway"
+    },
+    {
+      "id": 30,
+      "text": "A 2-year-old has a capillary refill time of 4 seconds. This finding is MOST consistent with:",
+      "options": ["Normal perfusion in a cold environment", "Mild dehydration only", "Adequate cardiac output", "Impaired peripheral perfusion suggesting shock"],
+      "correct_answer": "D",
+      "difficulty": "easy",
+      "topic": "Assessment"
+    },
+    {
+      "id": 31,
+      "text": "In pediatric trauma, what anatomical feature makes children MORE prone to solid organ (liver/spleen) injury than adults?",
+      "options": ["Thinner, more pliable rib cage with less protection", "Larger kidneys relative to body size", "Proportionally smaller abdominal cavity", "Stronger intercostal muscles"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 32,
+      "text": "Which of the following correctly describes the normal respiratory rate for a 1-year-old infant?",
+      "options": ["12–20 breaths/min", "20–30 breaths/min", "30–50 breaths/min", "50–70 breaths/min"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Assessment"
+    },
+    {
+      "id": 33,
+      "text": "A 9-year-old is found unresponsive after a near-drowning. He has no pulse. After beginning CPR, the AED is attached and advises 'no shock recommended.' What is the MOST likely rhythm?",
+      "options": ["Ventricular fibrillation", "Pulseless ventricular tachycardia", "Asystole or pulseless electrical activity (PEA)", "Sinus tachycardia"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 34,
+      "text": "What is the MOST common cause of pulseless electrical activity (PEA) in pediatric patients?",
+      "options": ["Hypovolemia and hypoxia", "Hyperkalemia and acidosis", "Cardiac tamponade and tension pneumothorax", "Drug toxicity and hypothermia"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 35,
+      "text": "When performing bag-mask ventilation on a child, what is the MOST important indicator that ventilation is adequate?",
+      "options": ["The bag is being squeezed completely with each breath", "Visible chest rise with each breath", "SpO2 reading above 90%", "End-tidal CO2 waveform is present"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Airway"
+    },
+    {
+      "id": 36,
+      "text": "A 5-year-old presents with sudden onset of high fever, a petechial rash, and altered mental status. What condition should you IMMEDIATELY suspect?",
+      "options": ["Febrile seizure", "Rocky Mountain spotted fever", "Meningococcal meningitis/septicemia", "Immune thrombocytopenic purpura (ITP)"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medical"
+    },
+    {
+      "id": 37,
+      "text": "A 4-year-old has a suspected forearm fracture after a fall. The limb is deformed but there is no open wound. What is the APPROPRIATE prehospital management?",
+      "options": ["Apply a traction splint", "Straighten the arm and apply a rigid splint", "Splint in position found with a padded board splint, assess neurovascular status before and after", "Transport without splinting to avoid causing further injury"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 38,
+      "text": "How is the estimated weight (in kg) of a child calculated using the pediatric formula for ages 1–10 years?",
+      "options": ["Age × 2", "(Age × 2) + 8", "Age + 10", "Age × 3"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Pharmacology"
+    },
+    {
+      "id": 39,
+      "text": "When should an AED be used on an infant under 1 year of age?",
+      "options": ["Never — AED use is contraindicated under age 1", "Only if a manual defibrillator is not available", "It is the preferred method at any age", "Only with pediatric pads and attenuator if available; manual defibrillator is preferred"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 40,
+      "text": "Which of the following is TRUE regarding nasopharyngeal airways (NPAs) in pediatric patients?",
+      "options": ["They can be used in conscious patients with an intact gag reflex", "They are preferred over OPAs in all pediatric patients", "They are contraindicated in any child under age 5", "They require the child to be deeply unconscious for placement"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Airway"
+    },
+    {
+      "id": 41,
+      "text": "A school-age child with known diabetes is found confused and diaphoretic. Blood glucose reads 42 mg/dL. What is the APPROPRIATE treatment?",
+      "options": ["Administer insulin per protocol", "Give oral glucose if the patient can swallow, or IV dextrose if not", "Give 20 mL/kg NS bolus for hypoperfusion", "Place in recovery position and transport immediately without treatment"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Medical"
+    },
+    {
+      "id": 42,
+      "text": "Which of the following is a hallmark sign of distributive (septic) shock in a child?",
+      "options": ["Cool, pale, mottled skin with delayed cap refill", "Warm, flushed skin with bounding pulses despite hypotension", "JVD with muffled heart sounds", "Absent breath sounds unilaterally"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Shock"
+    },
+    {
+      "id": 43,
+      "text": "A 12-year-old athlete collapses during a sports event and is found in ventricular fibrillation. What energy setting should be used for the SECOND defibrillation attempt?",
+      "options": ["2 J/kg", "4 J/kg", "200 J", "360 J"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 44,
+      "text": "Which of the following is an early sign of increased intracranial pressure (ICP) in a child?",
+      "options": ["Bradycardia and hypotension", "Altered mental status and irritability", "Hypotension and tachycardia", "Dilated pupils and irregular breathing"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Neurological"
+    },
+    {
+      "id": 45,
+      "text": "A 3-year-old is in respiratory arrest. After opening the airway and finding no breathing, how many rescue breaths should you give before beginning CPR (1-rescuer scenario)?",
+      "options": ["1 breath", "2 breaths", "5 breaths", "None — go straight to compressions"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Resuscitation"
+    },
+    {
+      "id": 46,
+      "text": "A 7-year-old has burns to both arms and the anterior trunk. Using the Rule of Nines (modified for pediatrics), approximately what percentage of BSA is burned?",
+      "options": ["18%", "27%", "36%", "45%"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 47,
+      "text": "Which of the following findings is MOST consistent with cardiogenic shock in a child?",
+      "options": ["Flat neck veins and cool, clammy skin", "JVD, crackles in the lungs, and cool extremities", "Warm, flushed skin with widened pulse pressure", "Petechiae and high fever"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "topic": "Shock"
+    },
+    {
+      "id": 48,
+      "text": "What is the PREFERRED method to confirm endotracheal tube placement in a pediatric patient during cardiac arrest?",
+      "options": ["Chest x-ray", "Auscultation of bilateral breath sounds only", "Continuous waveform capnography", "Visualization of the cords during intubation only"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Airway"
+    },
+    {
+      "id": 49,
+      "text": "A 2-month-old presents with poor feeding, weak cry, and constipation for 5 days. The infant has poor muscle tone and a weak suck. What condition should you suspect?",
+      "options": ["Pyloric stenosis", "Infantile botulism", "Meningitis", "Intussusception"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "topic": "Medical"
+    },
+    {
+      "id": 50,
+      "text": "In a child with a suspected head injury and a GCS of 8, what is the MOST important prehospital intervention?",
+      "options": ["Administer mannitol IV", "Establish two large-bore IVs and give 40 mL/kg NS", "Ensure adequate oxygenation and ventilation while preventing hypotension", "Perform rapid sequence intubation immediately"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 51,
+      "text": "What is the NORMAL heart rate range for a school-age child (6–12 years)?",
+      "options": ["100–160 bpm", "90–150 bpm", "70–120 bpm", "60–100 bpm"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Assessment"
+    },
+    {
+      "id": 52,
+      "text": "Which of the following scenarios MOST warrants activation of a pediatric trauma team rather than a standard transport?",
+      "options": ["A 10-year-old with an isolated closed tibia fracture after a bicycle fall", "A 3-year-old restrained passenger in a low-speed MVA with no complaints", "An 8-year-old unrestrained passenger in a high-speed rollover with altered mental status", "A 6-year-old with a forehead laceration requiring sutures"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Trauma"
+    },
+    {
+      "id": 53,
+      "text": "Which structure is responsible for the higher-pitched voice in young children compared to adults?",
+      "options": ["Longer, narrower trachea", "Smaller, narrower subglottic airway (cricoid ring is the narrowest point)", "Less developed epiglottis", "Underdeveloped vocal cords"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Airway"
+    },
+    {
+      "id": 54,
+      "text": "A 4-year-old swallowed a button battery 2 hours ago and is now drooling and refusing to eat. What is the MOST appropriate action?",
+      "options": ["Give water to help the battery pass", "Observe at home for 24 hours", "Transport immediately — button battery in the esophagus is a surgical emergency", "Induce vomiting to expel the battery"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Medical"
+    },
+    {
+      "id": 55,
+      "text": "Which of the following oxygen delivery devices provides the HIGHEST concentration of oxygen for a spontaneously breathing child?",
+      "options": ["Nasal cannula", "Simple face mask", "Partial rebreather mask", "Nonrebreather mask (NRB)"],
+      "correct_answer": "D",
+      "difficulty": "easy",
+      "topic": "Respiratory"
+    },
+    {
+      "id": 56,
+      "text": "A 5-year-old has ingested an unknown quantity of a grandparent's cardiac medication. He is bradycardic and hypotensive. Which medication class is MOST likely responsible?",
+      "options": ["ACE inhibitors", "Diuretics", "Beta-blockers or calcium channel blockers", "Statins"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "topic": "Toxicology"
+    },
+    {
+      "id": 57,
+      "text": "What is the MOST effective way to reduce anxiety and improve assessment accuracy in a toddler during a pediatric call?",
+      "options": ["Separate the child from the caregiver immediately for a focused exam", "Approach quickly and confidently to establish authority", "Keep the caregiver involved, use a calm voice, and perform the least threatening assessments first", "Restrain the child to prevent movement during assessment"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Assessment"
+    }
+  ]
+}
