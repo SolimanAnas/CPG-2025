@@ -1,0 +1,396 @@
+{
+  "title": "ECG Interpretation Exam",
+  "description": "ECG interpretation practice questions from NREMT database",
+  "questions": [
+    {
+      "id": 1,
+      "text": "One factor which does not shown in ECG is:",
+      "options": [
+        "Rhythm",
+        "Rate",
+        "Time of onset",
+        "Strength"
+      ],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "ECG Interpretation"
+    },
+    {
+      "id": 2,
+      "text": "You are evaluating an ECG of a patient, PR interval is more than 0.20sec, QRS regular. What should you suspect?",
+      "options": [
+        "Normal sinus rhythm",
+        "1st degree heart block",
+        "Second degree heart block",
+        "3rd degree heart block"
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Heart Block"
+    },
+    {
+      "id": 3,
+      "text": "Identify the ecg: (Looking for sawtooth baseline pattern)",
+      "options": [
+        "Atrial Fibrillation",
+        "Atrial Flutter",
+        "SVT & Atrial tachycardia",
+        "Ventricular tachycardia"
+      ],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Rhythm"
+    },
+    {
+      "id": 4,
+      "text": "You are dispatched to a call for a 36 year old male construction site worker who is complaining of anxiety like symptoms at work. Upon your arrival the worker tells you that he feels palpitations, chest discomfort, vomiting, nausea, sweating and shaking. 12 lead ECG reveals no changes in relation to myocardial infarction. Based on the presentation of symptoms what is the condition of the patient",
+      "options": [
+        "Social phobia",
+        "Post-traumatic stress disorder",
+        "Panic attack with agoraphobia",
+        "Panic disorder"
+      ],
+      "correct_answer": "D",
+      "difficulty": "hard",
+      "topic": "ECG Interpretation"
+    },
+    {
+      "id": 5,
+      "text": "Due to which of the following conditions are cardiac abnormalities or dysrhythmias common in patients with eating disorders",
+      "options": [
+        "Loss or imbalance of electrolyte",
+        "Hypothermia",
+        "Bleeding Of Gl tract or esophagus",
+        "Diminished muscle mass"
+      ],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "topic": "Arrhythmia"
+    },
+    {
+      "id": 6,
+      "text": "A 24-year-old male is involved in a head-on collision. If you suspect chest injury, you should:",
+      "options": [
+        "Lower leg injuries, administer fluid resuscitation at 20 ml/kg",
+        "An abdominal injury, administer analgesia",
+        "A head injury, administer an anti-seizure medication",
+        "A chest injury, obtain an EKG"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "ECG in Trauma"
+    },
+    {
+      "id": 7,
+      "text": "What is the most serious early complication of burns from electrical contact?",
+      "options": [
+        "Cervical spine injury",
+        "Cardiac arrhythmia",
+        "Hypovolemic shock",
+        "Renal failure"
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Arrhythmia"
+    },
+    {
+      "id": 8,
+      "text": "Trauma patients who presented unconscious, without palpable pulse or spontaneous respiration, found that patients with which rhythm and nondilated reactive pupils had a good chance of survival?",
+      "options": [
+        "Ventricular fibrillation",
+        "Asystole",
+        "Sinus rhythm",
+        "Pulseless electrical activity"
+      ],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Rhythm"
+    },
+    {
+      "id": 9,
+      "text": "Which one of the following is typically associated with post-traumatic hemorrhage early shock?",
+      "options": [
+        "Ventricular dysrhythmias",
+        "Hypotension",
+        "Loss of 30% to 45% of blood volume",
+        "Narrowed pulse pressure"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Arrhythmia in Shock"
+    },
+    {
+      "id": 10,
+      "text": "A 49-year-old male was crossing the street and struck by a truck. First responders are doing CPR. The patient is pulseless, apneic and the monitor shows asystole. Your assessment reveals an open skull fracture and deformed pelvis. Based on the ITLS curriculum, which of the following is the most appropriate act?",
+      "options": [
+        "Immediately intubate the patient to secure the airway",
+        "Establish intravenous access and administer a 1 liter bolus",
+        "Establish intravenous access and administer 2 mg of atropine",
+        "Resuscitative efforts should be discontinued, unless prohibited by law"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Asystole"
+    },
+    {
+      "id": 11,
+      "text": "What is the dysrhythmia for a 3-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a variable R-R interval called?",
+      "options": [
+        "Supraventricular tachycardia.",
+        "Sinus tachycardia.",
+        "Ventricular tachycardia.",
+        "Pulseless electrical activity (PEA)."
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Rhythm"
+    },
+    {
+      "id": 12,
+      "text": "A 2-year-old girl has been having respiratory distress for about an hour. She has crackles noted in her lower lobes and her lips are cyanotic. She is semi-responsive with pale and diaphoretic skin. It is difficult to obtain a BP. Other vital signs are HR 270 and RR 60. What type of shock is this patient experiencing?",
+      "options": [
+        "Cardiogenic.",
+        "Hypovolemic.",
+        "Septic.",
+        "Neurogenic."
+      ],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 13,
+      "text": "What is the dysrhythmia for a 16-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a nonvariable RR interval?",
+      "options": [
+        "Supraventricular tachycardia.",
+        "Sinus tachycardia.",
+        "Ventricular tachycardia.",
+        "Pulseless electrical activity (PEA)."
+      ],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "SVT"
+    },
+    {
+      "id": 14,
+      "text": "A child has a heart rate between 180 - 188 beats/min with a narrow QRS and a strong pulse. Which of the following best describes his rhythm?",
+      "options": [
+        "Supraventricular tachycardia",
+        "Sinus tachycardia",
+        "Ventricular tachycardia",
+        "Pulseless electrical activity"
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Rhythm"
+    },
+    {
+      "id": 15,
+      "text": "What is the dysrhythmia for a 16-year-old with a heart rate of 180 beats/min, a narrow QRS complex, and a non-variable RR interval? (Second instance)",
+      "options": [
+        "Supraventricular tachycardia.",
+        "Sinus tachycardia.",
+        "Ventricular tachycardia.",
+        "Pulseless electrical activity (PEA)."
+      ],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "SVT"
+    },
+    {
+      "id": 16,
+      "text": "A patient with a history of missed dialysis presents with tingling (paresthesia) and palpitations (irregular HR). What is the most likely condition?",
+      "options": [
+        "Hypovolemia",
+        "AMI",
+        "Hypoglycemia",
+        "Hyperkalemia"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Electrolytes and ECG"
+    },
+    {
+      "id": 17,
+      "text": "A 78-year-old female presents with a sudden onset of respiratory distress. Vital signs are BP = 78/36, pulse = 110, RR = 22. Abnormal findings include crackles bilaterally, cyanosis. Which of the following medications would be most effective?",
+      "options": [
+        "Beta-2 agonist",
+        "Loop diuretic",
+        "Short-acting benzodiazepine",
+        "Inotropic vasopressor agent"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Cardiogenic Shock"
+    },
+    {
+      "id": 18,
+      "text": "All the following are potential causes of syncope EXCEPT:",
+      "options": [
+        "Cardiac dysrhythmia",
+        "Vasovagal stimulation",
+        "Hypovolemia",
+        "Fever"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Arrhythmia"
+    },
+    {
+      "id": 19,
+      "text": "You are assessing a 69-year-old male, complaining of chest discomfort. His 12-Lead ECG reveals ST depression in leads V1-V4. There is no ST elevation in any lead. This ECG finding is most consistent with:",
+      "options": [
+        "An inferior AMI",
+        "An anterior AMI",
+        "A posterior AMI",
+        "Pericarditis"
+      ],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "NSTEMI/Posterior MI"
+    },
+    {
+      "id": 20,
+      "text": "Symptomatic hyperkalemia should be treated with which of the following medication combinations? (Note: Hyperkalemia causes ECG changes like peaked T waves, wide QRS)",
+      "options": [
+        "Sodium bicarbonate, naloxone, and calcium chloride",
+        "Potassium, albuterol, furosemide",
+        "Lidocaine, albuterol, insulin and ?",
+        "Calcium chloride, furosemide, and albuterol"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "ECG Electrolyte Changes"
+    },
+    {
+      "id": 21,
+      "text": "A patient presents hemodynamically stable complaining of chest discomfort. A 12-Lead ECG reveals ST segment elevation in all the precordial leads as well as II, III, and aVF. Which of the following is the most likely etiology of these ECG findings?",
+      "options": [
+        "Acute MI",
+        "Aortic dissection",
+        "Pericarditis",
+        "Pulmonary embolism"
+      ],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Pericarditis"
+    },
+    {
+      "id": 22,
+      "text": "A 52-year-old male presents complaining of chest discomfort. He is alert and oriented with a blood pressure of 110/70. You obtain the 12-Lead ECG, Shows an Inferior Wall MI (ST elevation in II, III, aVF). Of the following, the most appropriate next action would be to:",
+      "options": [
+        "Administer nitroglycerin",
+        "Obtain a right-side 12-Lead ECG.",
+        "Initiate transcutaneous pacing.",
+        "Administer morphine"
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "STEMI/Inferior MI"
+    },
+    {
+      "id": 23,
+      "text": "A 23-year-old female fell from a second-floor balcony. You place her on the heart monitor and it shows a wide-complex tachycardia of about 280 per minute. You should suspect:",
+      "options": [
+        "Hypovolemic shock",
+        "Relative hypovolemic (high-space) shock",
+        "Mechanical (obstructive) shock",
+        "Cardiogenic shock"
+      ],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "topic": "Ventricular Tachycardia"
+    },
+    {
+      "id": 24,
+      "text": "A 16-year-old female presents complaining of difficulty breathing. Auscultation of lung fields reveals expiratory wheezing in all lung fields. Heart rate is 110. Of the following, the most likely cause:",
+      "options": [
+        "Asthma",
+        "Anaphylaxis",
+        "Bronchitis",
+        "Pulmonary embolism"
+      ],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 25,
+      "text": "Which of the following is most likely to present with hypertension and bradycardia?",
+      "options": [
+        "Intracranial hemorrhage",
+        "Hypoglycemia",
+        "Ischemia",
+        "Migraine headache"
+      ],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "topic": "Bradycardia"
+    },
+    {
+      "id": 26,
+      "text": "For assessing wheezing, which method of physical examination you will use:",
+      "options": [
+        "Palpitation",
+        "Auscultation",
+        "Inspection",
+        "Percussion"
+      ],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "topic": "Physical Exam"
+    },
+    {
+      "id": 27,
+      "text": "Standard pulse assessment includes all EXCEPT:",
+      "options": [
+        "Rate",
+        "Rhythm",
+        "Volume",
+        "Quality"
+      ],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "topic": "Heart Rate"
+    },
+    {
+      "id": 28,
+      "text": "What is the compression-ventilation ratio for 2-rescuer child CPR?",
+      "options": [
+        "5:1",
+        "15:2",
+        "20:2",
+        "30:2"
+      ],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "topic": "Pediatric Resuscitation"
+    },
+    {
+      "id": 29,
+      "text": "A 5-year-old boy is wheezing and complains of chest tightness. HR is 128. What initial management should be performed?",
+      "options": [
+        "Open the airway with the jaw thrust maneuver.",
+        "Initiate bag-mask ventilation.",
+        "Insert a nasopharyngeal airway.",
+        "Apply oxygen by nonrebreather mask."
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Tachycardia"
+    },
+    {
+      "id": 30,
+      "text": "Which of the following is most helpful in differentiating allergic reaction from anaphylaxis?",
+      "options": [
+        "Hives",
+        "Tachycardia",
+        "Itching",
+        "Hypotension"
+      ],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "topic": "Arrhythmia"
+    }
+  ]
+}
