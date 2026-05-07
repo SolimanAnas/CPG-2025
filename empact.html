@@ -415,7 +415,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);displ
 
 <!-- Results screen -->
 <div id="resultsScreen">
-  <div class="res-hdr"><span class="res-ttl">📊 Exam Results</span><span id="resExamName"></span><button class="res-back" onclick="goSelector()">← New Exam</button></div>
+  <div class="res-hdr"><span class="res-ttl">📊 Exam Results</span><span id="resExamName"></span><button class="res-back" onclick="confirmExit()">← New Exam</button></div>
   <div class="res-scroll"><div id="resContent"></div></div>
 </div>
 
@@ -745,6 +745,25 @@ document.addEventListener('keydown', e => {
 });
 
 showScreen('sel');
+</script>
+
+<!-- Exit Confirmation Modal -->
+<div class="modal-bg" id="exitModal" onclick="if(event.target===this)closeExitModal()" role="dialog" aria-modal="true" aria-labelledby="exitModalTitleE">
+  <div class="modal">
+    <div class="modal-ico" aria-hidden="true">⚠️</div>
+    <div class="modal-ttl" id="exitModalTitleE">Leave Exam?</div>
+    <div class="modal-sub">Your current progress will be lost.</div>
+    <div class="modal-btns">
+      <button class="mbtn mbtn-cancel" onclick="closeExitModal()">Stay</button>
+      <button class="mbtn mbtn-submit" onclick="confirmExitNow()">Leave</button>
+    </div>
+  </div>
+</div>
+<script>
+function openExitModal()  { document.getElementById('exitModal').classList.add('open'); }
+function closeExitModal() { document.getElementById('exitModal').classList.remove('open'); }
+function confirmExitNow() { clearInterval(ST.timerRef); showScreen('sel'); closeExitModal(); }
+function confirmExit()    { openExitModal(); }
 </script>
 </body>
 </html>

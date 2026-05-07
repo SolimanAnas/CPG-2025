@@ -670,13 +670,13 @@ input:checked+.slider:before{transform:translateX(20px)}
   
   <!-- Mode row - identical size -->
   <div class="mode-row" role="group" aria-label="Study mode selection">
-    <button class="mode-btn active-exam" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="true">
-      📝 Exam Mode
-      <span class="mode-hint">No hints • Timed • Submit to score</span>
-    </button>
-    <button class="mode-btn" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="false">
+    <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">
       📖 Study Mode
       <span class="mode-hint">💡 Hints & Review answers</span>
+    </button>
+    <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">
+      📝 Exam Mode
+      <span class="mode-hint">No hints • Timed • Submit to score</span>
     </button>
   </div>
 
@@ -948,7 +948,7 @@ function setModeUI(m) {
 
 // Load saved mode
 let savedMode = localStorage.getItem('pals-mode');
-setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'exam');
+setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'study');
 
 // Load hints toggle preference
 ST.hintsEnabled = localStorage.getItem('itls-hints-enabled') !== 'false';

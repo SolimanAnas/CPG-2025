@@ -16,6 +16,16 @@
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0056b3">
     <link rel="apple-touch-icon" href="../icons/icon.png">
+
+    <style>
+        /* ── Float buttons ── */
+        .float-btn { position: fixed; width: 40px; height: 40px; border-radius: 50%; background: rgba(61,100,115,0.7); color: white; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: transform 0.2s, background 0.2s, opacity 0.2s; z-index: 999; backdrop-filter: blur(2px); opacity: 0.8; }
+        .float-btn:hover { transform: scale(1.1); background: var(--toggle-active); opacity: 1; }
+        .float-btn:active { transform: scale(0.95); }
+        .float-btn.hidden { opacity: 0; pointer-events: none; }
+        #scrollToBottomBtn { bottom: 20px; right: 15px; }
+        #scrollToTopBtn   { bottom: 70px; right: 15px; }
+    </style>
 </head>
 <body>
 
@@ -49,6 +59,9 @@
     <div>Created by Soliman Anas · for study aid only</div>
     <div><a href="../about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
+
+<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top">↑</button>
+<button class="float-btn" id="scrollToBottomBtn" title="Go to bottom">↓</button>
 
 <!-- Load chapter content data first, then app.js to render it -->
 <script src="../content/c-index.js"></script>
@@ -93,6 +106,34 @@
             } catch(e) {}
         }
         loadStats();
+
+        // ── Float Buttons ──
+        const scrollTopBtn    = document.getElementById('scrollToTopBtn');
+        const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
+
+        function updateFloatButtons() {
+            const scrollY = window.scrollY;
+            const winH    = window.innerHeight;
+            const docH    = document.documentElement.scrollHeight;
+            if (scrollTopBtn) {
+                scrollTopBtn.classList.toggle('hidden', scrollY <= 200);
+            }
+            if (scrollBottomBtn) {
+                scrollBottomBtn.classList.toggle('hidden', docH - (scrollY + winH) <= 100);
+            }
+        }
+        window.addEventListener('scroll', updateFloatButtons);
+        window.addEventListener('resize', updateFloatButtons);
+        updateFloatButtons();
+
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        if (scrollBottomBtn) {
+            scrollBottomBtn.addEventListener('click', () => {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            });
+        }
     })();
 </script>
 
