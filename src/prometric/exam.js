@@ -20,7 +20,7 @@ class ExamEngine {
         this.examStats = this.loadStats();
         this.improvementChart = null;
         this.questionHistory = this.loadQuestionHistory();
-        this.settings = { count: 50, difficulty: 'all', timer: 'timed', score: 'show' };
+        this.settings = { count: 50, difficulty: 'all', timer: 'tutor', score: 'show' };
         this.keyboardHandler = (e) => this.handleKeyboard(e);
         
         this.init();
@@ -327,8 +327,16 @@ class ExamEngine {
             alert('No questions available. Please select different topics or difficulty.');
             return;
         }
-        
-        this.questions = pool.slice(0, Math.min(count, pool.length));
+
+        // Prioritise unseen questions (never answered) then seen, shuffled within each group
+        const seenIds = new Set(Object.keys(this.questionHistory));
+        const unseen = pool.filter(q => !seenIds.has(String(q.id)));
+        const seen   = pool.filter(q =>  seenIds.has(String(q.id)));
+        this.shuffleArray(unseen);
+        this.shuffleArray(seen);
+        const orderedPool = [...unseen, ...seen];
+
+        this.questions = orderedPool.slice(0, Math.min(count, orderedPool.length));
         
         if (this.questions.length === 0) {
             alert('No questions available for the selected criteria.');
@@ -938,29 +946,38 @@ class ExamEngine {
     }
 
     showModal(title, message, buttons) {
-        const existing = document.querySelector('.modal');
+        const existing = document.querySelector('.modal-overlay');
         if (existing) existing.remove();
 
-        const modal = document.createElement('div');
-        modal.className = 'modal';
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h3>${title}</h3>
-                <p>${message}</p>
-                <div class="modal-buttons"></div>
+        const icons = { 'End Exam?': '⚠️', 'Pause Exam': '⏸️', "Time's Up!": '⏱️' };
+        const icon = icons[title] || '💬';
+
+        const overlay = document.createElement('div');
+        overlay.className = 'modal-overlay';
+        overlay.innerHTML = `
+            <div class="modal-dialog" role="dialog" aria-modal="true">
+                <div class="modal-icon">${icon}</div>
+                <h3 class="modal-title">${title}</h3>
+                <p class="modal-message">${message}</p>
+                <div class="modal-actions"></div>
             </div>
         `;
-        
-        const btnContainer = modal.querySelector('.modal-buttons');
+
+        // Close on backdrop click
+        overlay.addEventListener('click', e => { if (e.target === overlay) this.closeModal(); });
+
+        const btnContainer = overlay.querySelector('.modal-actions');
         Object.entries(buttons).forEach(([label, action]) => {
             const btn = document.createElement('button');
             btn.textContent = label;
-            btn.className = label === 'End Exam' ? 'btn-danger' : 'btn-secondary';
+            const isDanger = label === 'End Exam' || label === "Time's Up!";
+            btn.className = isDanger ? 'modal-btn modal-btn-danger' : 'modal-btn modal-btn-cancel';
             btn.addEventListener('click', action);
             btnContainer.appendChild(btn);
         });
-        
-        document.body.appendChild(modal);
+
+        document.body.appendChild(overlay);
+        requestAnimationFrame(() => overlay.classList.add('open'));
     }
 
     showToast(message) {
@@ -980,8 +997,8 @@ class ExamEngine {
     }
 
     closeModal() {
-        const modal = document.querySelector('.modal');
-        if (modal) modal.remove();
+        const overlay = document.querySelector('.modal-overlay');
+        if (overlay) overlay.remove();
     }
 
     loadStats() {

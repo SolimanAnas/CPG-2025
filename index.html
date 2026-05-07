@@ -1012,7 +1012,7 @@
         { id:"c10-4", shortTitle:"10.4 Eclampsia",         title:"Eclampsia / Pre‑eclampsia",                  hasCritical:true,  isFirstInChapter:false, chapterGroup:"obstetric" },
         { id:"c11-1", shortTitle:"11.1 START Triage",      title:"S.T.A.R.T Triage (MCI Triage)",              hasCritical:true,  isFirstInChapter:true,  chapterGroup:"mci" },
         { id:"s1",    shortTitle:"S1 Scope of Practice",   title:"Scope of Practice Matrix",                    hasCritical:false, isFirstInChapter:true,  chapterGroup:"scope" },
-        { id:"m1-38", shortTitle:"M1–38 Formulary",        title:"Medication Formulary (38 drugs)",             hasCritical:false, isFirstInChapter:false, chapterGroup:"scope" }
+        { id:"m1-38", shortTitle:"M1–38 Formulary",        title:"Medication Formulary (38 drugs)",             hasCritical:false, isFirstInChapter:false, chapterGroup:"scope", chapterFile:"m1-38" }
     ];
 
     // ══════════════════════════════════════════════════════════
@@ -1238,8 +1238,7 @@
                             <h2>${ch.shortTitle}</h2>
                             <p>${ch.title}${s.attempts ? ` · ${s.attempts} attempts · Avg ${avg}%` : ''}</p>
                             <div class="menu-sub-options">
-                                <a href="chapters/${baseFile}.html?view=summary${sec}"    class="btn-action btn-summary">📘 Summary</a>
-                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
+<a href="${ch.id === 'm1-38' ? 'med-index.html' : `chapters/${baseFile}.html?view=summary${sec}`}" class="btn-action btn-summary">📘 Summary</a>                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash">⚡ Flashcards</a>
                                 <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz">📝 Quiz</a>
                                 <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario">🚑 Scenario</a>
                             </div>

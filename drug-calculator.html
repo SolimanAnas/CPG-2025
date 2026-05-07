@@ -259,6 +259,12 @@ async function boot() {
     const res  = await fetch('drug-data.json');
     state.data = await res.json();
     buildInlineList();
+    // Deep-link: ?drug=DrugName auto-selects on load
+    var deepDrug = new URLSearchParams(window.location.search).get('drug');
+    if (deepDrug) {
+      var btn = document.querySelector('[data-drug="' + deepDrug.replace(/"/g,'') + '"]');
+      if (btn) { inlinePick(btn); btn.scrollIntoView({block:'center'}); }
+    }
   } catch(e) {
     document.getElementById('doseArea').innerHTML =
       '<div class="dose-empty"><div class="de-icon">❌</div><span>' + e.message + '</span></div>';

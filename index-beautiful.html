@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="luxury">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Clinical Reference</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a0f0a">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+
+    <style>
+        :root {
+            --bg-primary: #1a0f0a;
+            --bg-secondary: #2a1a12;
+            --bg-card: rgba(42, 26, 18, 0.6);
+            --text-primary: #f5e6d8;
+            --text-secondary: #c4a882;
+            --accent-gold: #d4a853;
+            --accent-burgundy: #8b1a1a;
+            --accent-navy: #1a2a4a;
+            --border-elegant: rgba(212, 168, 83, 0.2);
+            --shadow-luxury: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --font-display: 'Playfair Display', 'Georgia', serif;
+            --font-body: 'Source Sans Pro', 'Segoe UI', sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #faf6f1;
+            --bg-secondary: #f0e8dc;
+            --bg-card: rgba(255, 255, 255, 0.8);
+            --text-primary: #2c1810;
+            --text-secondary: #6b5344;
+            --accent-gold: #8b6914;
+            --accent-burgundy: #a52a2a;
+            --accent-navy: #1a3a6a;
+            --border-elegant: rgba(139, 105, 20, 0.3);
+            --shadow-luxury: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(139, 26, 26, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(212, 168, 83, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Header ── */
+        header {
+            padding: 40px 0 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-elegant);
+            margin-bottom: 40px;
+        }
+
+        .header-ornament {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            letter-spacing: 20px;
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* ── Hero Section ── */
+        .hero-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-elegant);
+            border-radius: 2px;
+            padding: 40px 30px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 168, 83, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-greeting {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-elegant);
+        }
+
+        .stat-block {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            line-height: 1;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* ── Search ── */
+        .search-wrapper {
+            margin-bottom: 40px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 18px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-elegant);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.1);
+        }
+
+        .search-box::placeholder {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* ── Section Headers ── */
+        .section-header {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-header::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent-gold);
+            transform: rotate(45deg);
+        }
+
+        /* ── Quick Access Grid ── */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ── Cards ── */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-elegant);
+            border-radius: 2px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gold);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: top;
+        }
+
+        .card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-luxury);
+            border-color: var(--accent-gold);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* ── EMS Tools Special ── */
+        .ems-card {
+            grid-column: 1 / -1;
+        }
+
+        .ems-tools {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .ems-tools {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .ems-btn {
+            padding: 14px 12px;
+            background: rgba(212, 168, 83, 0.1);
+            border: 1px solid var(--border-elegant);
+            border-radius: 2px;
+            color: var(--text-primary);
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .ems-btn:hover {
+            background: rgba(212, 168, 83, 0.2);
+            border-color: var(--accent-gold);
+        }
+
+        /* ── Chapter List ── */
+        .chapter-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .chapter-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-elegant);
+            border-radius: 2px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .chapter-item:hover {
+            border-color: var(--accent-gold);
+            padding-left: 24px;
+        }
+
+        .chapter-info {
+            flex: 1;
+        }
+
+        .chapter-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .chapter-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .chapter-num {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            opacity: 0.3;
+            margin-left: 20px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-elegant);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        /* ── Animations ── */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+
+        /* ── Filtered Out ── */
+        .filtered-out {
+            display: none !important;
+        }
+
+        /* ── Theme Toggle ── */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .theme-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--border-elegant);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-btn:hover {
+            border-color: var(--accent-gold);
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-switcher" id="themeBtn" title="Switch Theme">☀️</button>
+
+    <div class="container">
+        <header class="animate-in">
+            <div class="header-ornament">◆ ◆ ◆</div>
+            <h1>DCAS CPG 2025</h1>
+            <p>Clinical Practice Guidelines</p>
+        </header>
+
+        <div class="hero-section animate-in delay-1" id="heroSection">
+            <div class="hero-greeting" id="greeting">Good Evening</div>
+            <p style="color: var(--text-secondary); font-style: italic;">Your clinical reference companion</p>
+            <div class="hero-stats">
+                <div class="stat-block">
+                    <span class="stat-number" id="statChapters">0</span>
+                    <span class="stat-label">Chapters Done</span>
+                </div>
+                <div class="stat-block">
+                    <span class="stat-number" id="statAttempts">0</span>
+                    <span class="stat-label">Total Attempts</span>
+                </div>
+                <div class="stat-block">
+                    <span class="stat-number" id="statAccuracy">0%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-wrapper animate-in delay-2">
+            <input type="text"
+                   class="search-box"
+                   id="searchInput"
+                   placeholder="Search chapters, guidelines, protocols...">
+        </div>
+
+        <div class="section-header animate-in delay-2">Quick Access</div>
+        <div class="quick-grid" id="quickGrid">
+            <a href="chapters/c0.html?view=summary" class="card" data-search="What's New 2025 Updates c0">
+                <span class="card-icon">🆕</span>
+                <div class="card-title">What's New in 2025</div>
+                <div class="card-desc">Latest updates and changes</div>
+            </a>
+            <a href="chapters/c-index.html?view=summary" class="card" data-search="Index Full Table of Contents c-index">
+                <span class="card-icon">📋</span>
+                <div class="card-title">Full Index</div>
+                <div class="card-desc">Complete table of contents</div>
+            </a>
+            <a href="med-index.html" class="card" data-search="M1-38 Formulary Medication Index Drugs">
+                <span class="card-icon">💊</span>
+                <div class="card-title">Med Formulary</div>
+                <div class="card-desc">Complete drug reference</div>
+            </a>
+        </div>
+
+        <div class="section-header animate-in delay-2">Education & Testing</div>
+        <div class="quick-grid" id="coursesGrid">
+            <a href="courses.html" class="card" data-search="Courses Training ITLS EMPACT ACLS BLS">
+                <span class="card-icon">🎓</span>
+                <div class="card-title">Courses</div>
+                <div class="card-desc">ITLS, EMPACT, ACLS, BLS prep</div>
+            </a>
+            <a href="src/prometric/exams.html" class="card" data-search="Prometric NREMT EMT Exam Practice Questions">
+                <span class="card-icon">📝</span>
+                <div class="card-title">EMT Exam Practice</div>
+                <div class="card-desc">NREMT-style questions</div>
+            </a>
+        </div>
+
+        <div class="section-header animate-in delay-2">EMS Tools</div>
+        <div class="quick-grid">
+            <div class="card ems-card" data-search="EMS Essentials Drug Calculations ECG GCS AHA Algorithms Tools">
+                <span class="card-icon">🔬</span>
+                <div class="card-title">EMS Essentials</div>
+                <div class="card-desc">Quick-access clinical tools</div>
+                <div class="ems-tools">
+                    <a href="aha.html" class="ems-btn">❤️ AHA Algorithms</a>
+                    <a href="drug-calculator.html" class="ems-btn">⚖️ Drug Calculator</a>
+                    <a href="ecg.html" class="ems-btn">📈 ECG Simulator</a>
+                    <a href="ems-tools.html" class="ems-btn">🔬 More Tools</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" id="cpgHeader">Clinical Guidelines</div>
+        <div class="chapter-list" id="chapterList"></div>
+
+        <footer>
+            <div>Created by Soliman Anas · For study aid only</div>
+            <div style="margin-top: 8px;">
+                <a href="about.html">About & Disclaimer</a> · Refer to DCAS CPG and memo for procedures
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ── Theme Toggle ──
+        const themes = ['luxury', 'light'];
+        let currentTheme = localStorage.getItem('beautiful-theme') || 'luxury';
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('beautiful-theme', theme);
+            document.getElementById('themeBtn').textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        setTheme(currentTheme);
+
+        document.getElementById('themeBtn').addEventListener('click', function() {
+            const idx = themes.indexOf(currentTheme);
+            currentTheme = themes[(idx + 1) % themes.length];
+            setTheme(currentTheme);
+        });
+
+        // ── Greeting ──
+        function updateGreeting() {
+            const h = new Date().getHours();
+            let greeting = 'Good Evening';
+            if (h < 12) greeting = 'Good Morning';
+            else if (h < 17) greeting = 'Good Afternoon';
+            document.getElementById('greeting').textContent = greeting + ' 👋';
+        }
+        updateGreeting();
+
+        // ── Stats ──
+        const COMPLETION_KEY = 'dcas_cpg_completion';
+        const STATS_KEY = 'dcas_cpg_stats';
+
+        function loadStorage(key, def) {
+            try { return JSON.parse(localStorage.getItem(key)) || def; } catch(e) { return def; }
+        }
+
+        function updateStats() {
+            const stats = loadStorage(STATS_KEY, { totalAttempts: 0, critical: { total: 0, correct: 0 } });
+            const completion = loadStorage(COMPLETION_KEY, {});
+            const totalChaps = 59;
+            const done = Object.values(completion).filter(v => v).length;
+            const acc = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
+
+            document.getElementById('statChapters').textContent = done + '/' + totalChaps;
+            document.getElementById('statAttempts').textContent = stats.totalAttempts || 0;
+            document.getElementById('statAccuracy').textContent = acc + '%';
+        }
+        updateStats();
+
+        // ── Chapter Data ──
+        const CHAPTERS = [
+            { id: "c1s1", num: "1.1", title: "Universal Care", subtitle: "Core Assessment" },
+            { id: "c1s2", num: "1.2", title: "Documentation", subtitle: "Patient Care Documentation" },
+            { id: "c1s3", num: "1.3", title: "Triage", subtitle: "Patient Triage Categories" },
+            { id: "c1s4", num: "1.4", title: "Functional Needs", subtitle: "Functional Needs Assessment" },
+            { id: "c1s5", num: "1.5", title: "Treated at Scene", subtitle: "Patient Refusal of Transfer" },
+            { id: "c2s1", num: "2.1", title: "Airway Management", subtitle: "Airway & Breathing" },
+            { id: "c2s2", num: "2.2", title: "FBAO", subtitle: "Foreign Body Airway Obstruction" },
+            { id: "c3-1", num: "3.1", title: "Chest Pain / ACS", subtitle: "Acute Coronary Syndrome" },
+            { id: "c3-2", num: "3.2", title: "Adult Bradycardia", subtitle: "Adult Bradycardia Management" },
+            { id: "c4-1", num: "4.1", title: "Adult BLS", subtitle: "Adult Basic Life Support" },
+            { id: "c4-2", num: "4.2", title: "Pediatric BLS", subtitle: "Pediatric Basic Life Support" },
+            { id: "c5-1", num: "5.1", title: "Stroke", subtitle: "Stroke Management" },
+            { id: "c6-1", num: "6.1", title: "Abdominal Pain", subtitle: "Abdominal Pain Assessment" },
+            { id: "c7-1", num: "7.1", title: "General Trauma", subtitle: "Trauma Management" },
+            { id: "c8-1", num: "8.1", title: "General Toxicology", subtitle: "Toxicology Management" },
+            { id: "c9-1", num: "9.1", title: "Croup", subtitle: "Pediatric Croup" },
+            { id: "c10-1", num: "10.1", title: "Childbirth", subtitle: "Normal Childbirth" },
+            { id: "c11-1", num: "11.1", title: "START Triage", subtitle: "MCI Triage" },
+            { id: "s1", num: "S1", title: "Scope of Practice", subtitle: "Scope Matrix" }
+        ];
+
+        function renderChapters(filter) {
+            const container = document.getElementById('chapterList');
+            const header = document.getElementById('cpgHeader');
+            filter = (filter || '').toLowerCase();
+
+            let html = '';
+            let visible = 0;
+
+            CHAPTERS.forEach(function(ch) {
+                const searchText = (ch.num + ' ' + ch.title + ' ' + ch.subtitle).toLowerCase();
+                const hidden = filter && searchText.indexOf(filter) === -1;
+
+                if (!hidden) visible++;
+
+                html += `
+                    <div class="chapter-item ${hidden ? 'filtered-out' : ''}" data-search="${ch.num} ${ch.title} ${ch.subtitle}">
+                        <div class="chapter-info">
+                            <div class="chapter-title">${ch.num} ${ch.title}</div>
+                            <div class="chapter-subtitle">${ch.subtitle}</div>
+                        </div>
+                        <div class="chapter-num">${ch.num.split('.')[0]}</div>
+                    </div>`;
+            });
+
+            container.innerHTML = html;
+            header.style.display = filter ? 'block' : 'none';
+        }
+
+        renderChapters();
+
+        // ── Search ──
+        const searchInput = document.getElementById('searchInput');
+        let searchTimeout;
+
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            const val = this.value;
+            searchTimeout = setTimeout(function() {
+                renderChapters(val);
+                filterCards(val);
+            }, 200);
+        });
+
+        function filterCards(filter) {
+            filter = (filter || '').toLowerCase();
+            document.querySelectorAll('.card, .ems-card').forEach(function(card) {
+                const searchText = (card.getAttribute('data-search') || '').toLowerCase();
+                card.classList.toggle('filtered-out', filter && searchText.indexOf(filter) === -1);
+            });
+        }
+
+        // ── Intersection Observer for animations ──
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-in').forEach(function(el) {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
