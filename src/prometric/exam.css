@@ -54,6 +54,7 @@ body {
     color: var(--text-primary);
     min-height: 100vh;
     line-height: 1.6;
+    overscroll-behavior: none;   /* prevent pull-to-refresh */
 }
 
 /* Theme Toggle */
@@ -118,6 +119,28 @@ body {
 .wizard-header {
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.wizard-back-btn {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+.wizard-back-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--bg-light);
 }
 
 .wizard-header h1 {
@@ -1677,6 +1700,11 @@ body {
     width: 0%;
 }
 
+/* Explanation hidden fix */
+.explanation-container.hidden {
+    display: none;
+}
+
 /* Toast */
 .toast {
     position: fixed;
@@ -1685,18 +1713,34 @@ body {
     transform: translateX(-50%) translateY(20px);
     background: var(--bg-card);
     color: var(--text-primary);
-    padding: 12px 24px;
-    border-radius: var(--radius);
+    padding: 10px 22px;
+    border-radius: 50px;
     box-shadow: var(--shadow-lg);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     z-index: 2000;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    pointer-events: none;
 }
 
 .toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+/* Answer feedback variants */
+.toast.toast-correct {
+    background: #16a34a;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(22,163,74,.45);
+}
+
+.toast.toast-wrong {
+    background: #dc2626;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(220,38,38,.45);
 }
 /* Mode hint tag in settings */
 .mode-hint-tag {

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>DCAS · ECG Tests</title>
+<style>
+/* ── TOKENS ── */
+:root,[data-theme="dark"]{
+  --bg:#0f172a;--card:#1e293b;--border:#334155;
+  --tx:#f1f5f9;--mu:#94a3b8;--primary:#3b82f6;
+  --success:#22c55e;--danger:#ef4444;--warning:#f59e0b;
+  --radius:14px;--shadow:0 4px 24px rgba(0,0,0,.35);
+}
+[data-theme="light"]{
+  --bg:#f0f4f8;--card:#fff;--border:#e2e8f0;
+  --tx:#1e293b;--mu:#64748b;--primary:#2563eb;
+  --shadow:0 4px 24px rgba(0,0,0,.12);
+}
+[data-theme="sepia"]{
+  --bg:#f4ecd8;--card:#fdf8ef;--border:#d4b896;
+  --tx:#3b2a1a;--mu:#7a6250;--primary:#b56a2e;
+  --shadow:0 4px 24px rgba(60,30,10,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+     background:var(--bg);color:var(--tx);min-height:100vh;
+     overscroll-behavior:none;line-height:1.6;}
+
+/* ── HEADER ── */
+.hdr{position:sticky;top:0;z-index:100;background:var(--card);
+     border-bottom:1px solid var(--border);
+     display:flex;align-items:center;gap:12px;padding:10px 16px;}
+.hdr-back{text-decoration:none;color:var(--mu);font-weight:600;
+          font-size:.85rem;border:1px solid var(--border);
+          border-radius:20px;padding:5px 12px;transition:all .2s;}
+.hdr-back:hover{color:var(--primary);border-color:var(--primary);}
+.hdr-title{flex:1;font-weight:800;font-size:1rem;}
+.theme-cycle{background:none;border:1px solid var(--border);border-radius:20px;
+             padding:5px 12px;cursor:pointer;font-size:.8rem;color:var(--mu);}
+
+/* ── SELECT SCREEN ── */
+#selectScreen{max-width:640px;margin:0 auto;padding:32px 16px;}
+.hero{text-align:center;margin-bottom:32px;}
+.hero h1{font-size:2rem;font-weight:900;margin-bottom:8px;}
+.hero p{color:var(--mu);font-size:.95rem;}
+.test-cards{display:grid;gap:16px;}
+.test-card{background:var(--card);border:1px solid var(--border);
+           border-radius:var(--radius);padding:24px;cursor:pointer;
+           transition:all .2s;position:relative;overflow:hidden;}
+.test-card::before{content:'';position:absolute;left:0;top:0;bottom:0;
+                   width:4px;background:var(--primary);border-radius:4px 0 0 4px;}
+.test-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.test-card h2{font-size:1.1rem;font-weight:800;margin-bottom:6px;}
+.test-card p{font-size:.85rem;color:var(--mu);}
+.test-meta{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.meta-chip{background:var(--bg);border:1px solid var(--border);
+           border-radius:20px;padding:3px 10px;font-size:.75rem;
+           font-weight:600;color:var(--mu);}
+
+/* ── EXAM SCREEN ── */
+#examScreen{display:none;}
+.progress-bar{height:3px;background:var(--border);}
+.progress-fill{height:100%;background:var(--primary);transition:width .3s;}
+.exam-wrap{max-width:740px;margin:0 auto;padding:20px 16px 120px;}
+
+.q-header{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+.badge{padding:4px 10px;border-radius:20px;font-size:.72rem;font-weight:700;
+       text-transform:uppercase;letter-spacing:.5px;}
+.badge-num{background:var(--primary);color:#fff;}
+.badge-diff{background:var(--border);color:var(--mu);}
+.badge-diff.easy{background:#d1fae5;color:#065f46;}
+.badge-diff.medium{background:#fef3c7;color:#92400e;}
+.badge-diff.hard{background:#fce7f3;color:#9d174d;}
+[data-theme="dark"] .badge-diff.easy{background:#064e3b;color:#6ee7b7;}
+[data-theme="dark"] .badge-diff.medium{background:#78350f;color:#fde68a;}
+[data-theme="dark"] .badge-diff.hard{background:#831843;color:#fbcfe8;}
+.badge-topic{background:var(--bg);color:var(--mu);border:1px solid var(--border);}
+
+.q-stem{font-size:1.05rem;font-weight:600;line-height:1.65;margin-bottom:20px;}
+
+.options{display:grid;gap:10px;margin-bottom:20px;}
+.opt{display:flex;align-items:flex-start;gap:12px;background:var(--card);
+     border:2px solid var(--border);border-radius:12px;
+     padding:14px 16px;cursor:pointer;transition:all .2s;text-align:left;
+     font-size:.95rem;width:100%;
+     color:var(--tx); /* buttons don't inherit color in all browsers */}
+.opt:hover:not(.disabled){border-color:var(--primary);background:rgba(59,130,246,.07);}
+.opt.selected{border-color:var(--primary);background:rgba(59,130,246,.1);}
+.opt.correct{border-color:var(--success);background:rgba(34,197,94,.1);}
+.opt.wrong{border-color:var(--danger);background:rgba(239,68,68,.1);}
+.opt.disabled{cursor:default;pointer-events:none;}
+.opt-letter{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);
+            display:flex;align-items:center;justify-content:center;
+            font-weight:800;font-size:.8rem;flex-shrink:0;
+            background:var(--bg);color:var(--tx);}
+.opt.selected .opt-letter{border-color:var(--primary);color:var(--primary);}
+.opt.correct .opt-letter{border-color:var(--success);color:var(--success);background:rgba(34,197,94,.15);}
+.opt.wrong .opt-letter{border-color:var(--danger);color:var(--danger);background:rgba(239,68,68,.15);}
+
+.explanation{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.3);
+             border-left:4px solid var(--primary);border-radius:12px;
+             padding:16px;margin-bottom:20px;display:none;}
+.explanation.show{display:block;}
+.explanation h4{color:var(--primary);font-size:.85rem;text-transform:uppercase;
+                letter-spacing:.5px;margin-bottom:8px;}
+.explanation p{font-size:.9rem;line-height:1.7;color:var(--tx);}
+
+.q-actions{display:flex;gap:10px;justify-content:flex-end;}
+.btn{padding:10px 22px;border-radius:10px;border:none;cursor:pointer;
+     font-weight:700;font-size:.9rem;transition:all .2s;}
+.btn-submit{background:var(--primary);color:#fff;}
+.btn-submit:hover{opacity:.88;}
+.btn-submit:disabled{opacity:.45;cursor:not-allowed;}
+.btn-next{background:var(--success);color:#fff;}
+.btn-next:hover{opacity:.88;}
+
+/* ── STICKY FOOTER NAV ── */
+.sticky-nav{position:fixed;bottom:0;left:0;right:0;
+            background:var(--card);border-top:1px solid var(--border);
+            padding:10px 16px;display:flex;align-items:center;
+            justify-content:space-between;gap:12px;z-index:50;}
+.nav-info{font-size:.8rem;color:var(--mu);font-weight:600;}
+.live-score{font-size:.8rem;font-weight:700;
+            padding:4px 10px;border-radius:20px;
+            background:var(--bg);border:1px solid var(--border);}
+
+/* ── RESULT SCREEN ── */
+#resultScreen{display:none;max-width:640px;margin:0 auto;padding:32px 16px 80px;}
+.score-hero{text-align:center;margin-bottom:32px;}
+.score-circle{width:130px;height:130px;border-radius:50%;
+              border:6px solid var(--primary);display:flex;
+              flex-direction:column;align-items:center;justify-content:center;
+              margin:0 auto 16px;font-size:2rem;font-weight:900;}
+.score-label{font-size:.8rem;color:var(--mu);}
+.pass-tag{display:inline-block;padding:6px 18px;border-radius:20px;
+          font-weight:800;font-size:.9rem;margin-bottom:12px;}
+.pass-tag.pass{background:#d1fae5;color:#065f46;}
+.pass-tag.fail{background:#fce7f3;color:#9d174d;}
+[data-theme="dark"] .pass-tag.pass{background:#064e3b;color:#6ee7b7;}
+[data-theme="dark"] .pass-tag.fail{background:#831843;color:#fbcfe8;}
+
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
+.stat-box{background:var(--card);border:1px solid var(--border);
+          border-radius:12px;padding:16px;text-align:center;}
+.stat-val{font-size:1.6rem;font-weight:900;display:block;}
+.stat-lbl{font-size:.72rem;color:var(--mu);font-weight:600;text-transform:uppercase;}
+
+.review-list{display:grid;gap:10px;margin-bottom:24px;}
+.rev-item{background:var(--card);border:1px solid var(--border);
+          border-radius:12px;padding:14px;font-size:.88rem;}
+.rev-q{font-weight:600;margin-bottom:6px;}
+.rev-ans{display:flex;gap:6px;align-items:flex-start;font-size:.82rem;color:var(--mu);}
+.rev-correct{color:var(--success);}
+.rev-wrong{color:var(--danger);}
+.rev-exp{margin-top:8px;font-size:.82rem;color:var(--mu);line-height:1.6;
+         border-top:1px solid var(--border);padding-top:8px;}
+
+.result-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.btn-outline{background:none;border:2px solid var(--border);color:var(--tx);}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary);}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(16px);
+       padding:9px 20px;border-radius:50px;font-weight:700;font-size:.9rem;
+       opacity:0;transition:all .22s;z-index:999;pointer-events:none;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast.correct{background:#16a34a;color:#fff;}
+.toast.wrong{background:#dc2626;color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="courses.html" class="hdr-back">← Courses</a>
+  <span class="hdr-title" id="hdrTitle">ECG Tests</span>
+  <button class="theme-cycle" onclick="cycleTheme()">🎨 Theme</button>
+</div>
+
+<!-- ── SELECT SCREEN ── -->
+<div id="selectScreen">
+  <div class="hero">
+    <h1>📈 ECG Tests</h1>
+    <p>Two 30-question practice tests covering ECG interpretation,<br>arrhythmias, ischaemia, and advanced ECG patterns.</p>
+  </div>
+  <div class="test-cards">
+    <div class="test-card" onclick="startTest('src/ECG/ecg-test-1.json','ECG Test 1')">
+      <h2>Test 1 — Rhythm & Blocks</h2>
+      <p>Normal sinus rhythm, heart blocks (1°–3°), tachyarrhythmias, bradyarrhythmias, bundle branch blocks, and ECG fundamentals.</p>
+      <div class="test-meta">
+        <span class="meta-chip">30 Questions</span>
+        <span class="meta-chip">60 min</span>
+        <span class="meta-chip">Rhythms • Blocks • Arrhythmias</span>
+      </div>
+    </div>
+    <div class="test-card" onclick="startTest('src/ECG/ecg-test-2.json','ECG Test 2')">
+      <h2>Test 2 — Ischaemia & Advanced</h2>
+      <p>STEMI patterns, Wellens', de Winter, Brugada, electrolyte effects, pacemaker rhythms, ARVC, WPW, and Sgarbossa criteria.</p>
+      <div class="test-meta">
+        <span class="meta-chip">30 Questions</span>
+        <span class="meta-chip">60 min</span>
+        <span class="meta-chip">STEMI • Electrolytes • Advanced</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── EXAM SCREEN ── -->
+<div id="examScreen">
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="exam-wrap" id="examWrap"></div>
+  <div class="sticky-nav">
+    <span class="nav-info" id="navInfo">Q 1 / 30</span>
+    <span class="live-score" id="liveScore">Score: –</span>
+  </div>
+</div>
+
+<!-- ── RESULT SCREEN ── -->
+<div id="resultScreen">
+  <div class="score-hero">
+    <div class="score-circle" id="scoreCircle"></div>
+    <div class="pass-tag" id="passTag"></div>
+    <p style="color:var(--mu);font-size:.9rem;" id="resultTitle"></p>
+  </div>
+  <div class="result-stats" id="resultStats"></div>
+  <div id="reviewList" class="review-list"></div>
+  <div class="result-actions">
+    <button class="btn btn-outline" onclick="backToSelect()">← Choose Test</button>
+    <button class="btn btn-submit" onclick="retakeTest()">↺ Retake</button>
+  </div>
+</div>
+
+<script>
+// ── State ──
+const THEMES = ['dark','light','sepia'];
+let themeIdx = THEMES.indexOf(localStorage.getItem('ecg-test-theme')||'dark');
+
+let questions=[], currentQ=0, answers=[], submitted=[], lastFile='', lastTitle='';
+
+// ── Theme ──
+function cycleTheme(){
+  themeIdx=(themeIdx+1)%THEMES.length;
+  const t=THEMES[themeIdx];
+  document.documentElement.setAttribute('data-theme',t);
+  localStorage.setItem('ecg-test-theme',t);
+}
+(function(){
+  const t=localStorage.getItem('ecg-test-theme')||'dark';
+  themeIdx=THEMES.indexOf(t);
+  document.documentElement.setAttribute('data-theme',t);
+})();
+
+// ── Load & Start ──
+async function startTest(file, title){
+  try {
+    const r = await fetch(file);
+    const db = await r.json();
+    questions = shuffle([...db.questions]);
+    answers = new Array(questions.length).fill(null);
+    submitted = new Array(questions.length).fill(false);
+    currentQ = 0;
+    lastFile = file;
+    lastTitle = title;
+    document.getElementById('hdrTitle').textContent = title;
+    show('examScreen');
+    renderQuestion();
+  } catch(e){
+    alert('Failed to load test file: '+e.message);
+  }
+}
+
+function shuffle(arr){return arr.sort(()=>Math.random()-.5);}
+
+// ── Render Question ──
+function renderQuestion(){
+  const q = questions[currentQ];
+  const isSubmitted = submitted[currentQ];
+  const letters=['A','B','C','D'];
+
+  const pct = Math.round((currentQ/questions.length)*100);
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('navInfo').textContent = `Q ${currentQ+1} / ${questions.length}`;
+  updateLiveScore();
+
+  const diffClass = (q.difficulty||'medium').toLowerCase();
+  let optsHtml = q.options.map((opt,i)=>{
+    const l=letters[i];
+    let cls='opt';
+    if(answers[currentQ]===l) cls+=' selected';
+    if(isSubmitted){
+      cls+=' disabled';
+      if(l===q.correct_answer) cls+=' correct';
+      else if(l===answers[currentQ]) cls+=' wrong';
+    }
+    return `<button class="${cls}" onclick="selectOpt('${l}')" data-l="${l}">
+      <span class="opt-letter">${l}</span>
+      <span>${opt}</span>
+    </button>`;
+  }).join('');
+
+  const expHtml = isSubmitted && q.explanation
+    ? `<div class="explanation show"><h4>💡 Explanation</h4><p>${q.explanation}</p></div>`
+    : `<div class="explanation"></div>`;
+
+  let actionHtml;
+  if(!isSubmitted){
+    actionHtml=`<button class="btn btn-submit" id="submitBtn" onclick="submitAnswer()" ${answers[currentQ]?'':'disabled'}>Submit Answer</button>`;
+  } else if(currentQ < questions.length-1){
+    actionHtml=`<button class="btn btn-next" onclick="nextQuestion()">Next Question →</button>`;
+  } else {
+    actionHtml=`<button class="btn btn-next" onclick="showResults()">See Results 🎉</button>`;
+  }
+
+  document.getElementById('examWrap').innerHTML=`
+    <div class="q-header">
+      <span class="badge badge-num">Q${currentQ+1}</span>
+      <span class="badge badge-diff ${diffClass}">${q.difficulty||'medium'}</span>
+      <span class="badge badge-topic">${q.topic||q.subject||''}</span>
+    </div>
+    <div class="q-stem">${q.text}</div>
+    <div class="options">${optsHtml}</div>
+    ${expHtml}
+    <div class="q-actions">${actionHtml}</div>
+  `;
+  window.scrollTo(0,0);
+}
+
+function selectOpt(l){
+  if(submitted[currentQ]) return;
+  answers[currentQ]=l;
+  // update selected state without full re-render
+  document.querySelectorAll('.opt').forEach(o=>{
+    o.classList.toggle('selected', o.dataset.l===l);
+  });
+  const sb=document.getElementById('submitBtn');
+  if(sb) sb.disabled=false;
+}
+
+function submitAnswer(){
+  if(answers[currentQ]===null) return;
+  submitted[currentQ]=true;
+  const q=questions[currentQ];
+  const isCorrect=answers[currentQ]===q.correct_answer;
+  showToast(isCorrect?'✅ Correct!':'❌ Incorrect', isCorrect?'correct':'wrong');
+  renderQuestion();
+}
+
+function nextQuestion(){
+  if(currentQ < questions.length-1){
+    currentQ++;
+    renderQuestion();
+  }
+}
+
+function updateLiveScore(){
+  const done=submitted.filter(Boolean).length;
+  if(!done){document.getElementById('liveScore').textContent='Score: –';return;}
+  const correct=submitted.filter((s,i)=>s && answers[i]===questions[i].correct_answer).length;
+  const pct=Math.round((correct/done)*100);
+  document.getElementById('liveScore').textContent=`Score: ${pct}% (${correct}/${done})`;
+}
+
+// ── Results ──
+function showResults(){
+  const total=questions.length;
+  const correct=submitted.filter((s,i)=>s && answers[i]===questions[i].correct_answer).length;
+  const pct=Math.round((correct/total)*100);
+  const pass=pct>=70;
+
+  document.getElementById('scoreCircle').innerHTML=`<span>${pct}%</span><span class="score-label">${correct}/${total}</span>`;
+  document.getElementById('passTag').className='pass-tag '+(pass?'pass':'fail');
+  document.getElementById('passTag').textContent=pass?'✅ PASS':'❌ NEEDS REVIEW';
+  document.getElementById('resultTitle').textContent=lastTitle;
+
+  document.getElementById('resultStats').innerHTML=`
+    <div class="stat-box"><span class="stat-val" style="color:var(--success)">${correct}</span><span class="stat-lbl">Correct</span></div>
+    <div class="stat-box"><span class="stat-val" style="color:var(--danger)">${total-correct}</span><span class="stat-lbl">Incorrect</span></div>
+    <div class="stat-box"><span class="stat-val">${pct}%</span><span class="stat-lbl">Score</span></div>
+  `;
+
+  const letters=['A','B','C','D'];
+  document.getElementById('reviewList').innerHTML = questions.map((q,i)=>{
+    const userAns=answers[i];
+    const isCorrect=userAns===q.correct_answer;
+    const correctText=q.options[letters.indexOf(q.correct_answer)];
+    const userText=userAns?q.options[letters.indexOf(userAns)]:'(Not answered)';
+    return `<div class="rev-item">
+      <div class="rev-q">${i+1}. ${q.text}</div>
+      <div class="rev-ans">
+        <span>Your answer:</span>
+        <span class="${isCorrect?'rev-correct':'rev-wrong'}">${userAns||'–'}: ${userText}</span>
+      </div>
+      ${!isCorrect?`<div class="rev-ans"><span>Correct:</span><span class="rev-correct">${q.correct_answer}: ${correctText}</span></div>`:''}
+      ${q.explanation?`<div class="rev-exp">${q.explanation}</div>`:''}
+    </div>`;
+  }).join('');
+
+  show('resultScreen');
+}
+
+function retakeTest(){startTest(lastFile,lastTitle);}
+function backToSelect(){
+  document.getElementById('hdrTitle').textContent='ECG Tests';
+  show('selectScreen');
+}
+
+// ── Utilities ──
+function show(id){
+  ['selectScreen','examScreen','resultScreen'].forEach(s=>{
+    document.getElementById(s).style.display = s===id ? (s==='examScreen'||s==='resultScreen'?'block':'block') : 'none';
+  });
+}
+
+function showToast(msg,type){
+  document.querySelectorAll('.toast').forEach(t=>t.remove());
+  const t=document.createElement('div');
+  t.className=`toast ${type}`;
+  t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>t.classList.add('show'),10);
+  setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),250);},1100);
+}
+</script>
+</body>
+</html>

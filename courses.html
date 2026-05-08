@@ -82,14 +82,15 @@
         }
         
         .course-count {
-            background: rgba(59, 130, 246, 0.25);
-            color: #dbeafe;
-            border: 1px solid #3b82f6;
-            font-size: 0.75rem;
+            background: var(--primary-accent, #2563eb);
+            color: #fff;
+            border: none;
+            font-size: 0.72rem;
             font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 12px;
+            padding: 4px 11px;
+            border-radius: 20px;
             white-space: nowrap;
+            letter-spacing: 0.3px;
         }
         
         .badge-coming { 
@@ -297,7 +298,7 @@
         { id: 'pals', shortTitle: 'PALS', title: 'Pediatric Advanced Life Support', link: 'pals.html', available: true, icon: '👶', count: 57 },
         { id: 'medical', shortTitle: 'Medical', title: 'Medical Emergencies Review', link: 'medical.html', available: true, icon: '💊', count: 45 },
         { id: 'ecg', shortTitle: 'ECG', title: 'ECG Interpretation', link: 'ecg.html', available: true, icon: '📉' },
-        { id: 'ecg-test', shortTitle: 'ECG Test', title: 'ECG Test', link: 'ecg-test.html', available: true, icon: '📈' }
+        { id: 'ecg-test', shortTitle: 'ECG Test', title: 'ECG Interpretation Practice Tests', link: 'ecg-test.html', available: true, icon: '📈', count: 60 }
     ];
 
     function renderCourses() {
@@ -310,7 +311,6 @@
                 return `
                     <div class="menu-card">
                         <div class="card-header">
-                            <span class="status-badge badge-available">✓ Available</span>
                             ${countTag}
                         </div>
                         <div class="course-icon">${course.icon}</div>
