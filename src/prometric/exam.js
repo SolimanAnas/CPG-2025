@@ -497,12 +497,13 @@ class ExamEngine {
             container.appendChild(div);
         });
 
+        const expContainer = document.getElementById('explanation-container');
         if (isSubmitted && q.explanation) {
-            const expContainer = document.getElementById('explanation-container');
             expContainer.innerHTML = `<h4>Explanation</h4><p>${q.explanation}</p>`;
             expContainer.classList.remove('hidden');
         } else {
-            document.getElementById('explanation-container').classList.add('hidden');
+            expContainer.classList.add('hidden');
+            expContainer.innerHTML = ''; // clear so old text never bleeds into next question
         }
         
         const submitBtn = document.getElementById('submit-answer');
@@ -572,6 +573,9 @@ class ExamEngine {
             }
             el.style.pointerEvents = 'none';
         });
+
+        // Answer feedback toast
+        this.showToast(isCorrect ? '✅ Correct!' : '❌ Incorrect', isCorrect ? 'correct' : 'wrong');
 
         if (q.explanation) {
             const expContainer = document.getElementById('explanation-container');
@@ -980,20 +984,22 @@ class ExamEngine {
         requestAnimationFrame(() => overlay.classList.add('open'));
     }
 
-    showToast(message) {
+    showToast(message, type = '') {
         const existing = document.querySelector('.toast');
         if (existing) existing.remove();
-        
+
         const toast = document.createElement('div');
-        toast.className = 'toast';
+        toast.className = 'toast' + (type ? ` toast-${type}` : '');
         toast.textContent = message;
         document.body.appendChild(toast);
-        
+
+        // answer feedback disappears faster (1s) than info toasts (2s)
+        const duration = type === 'correct' || type === 'wrong' ? 1000 : 2000;
         setTimeout(() => toast.classList.add('show'), 10);
         setTimeout(() => {
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 300);
-        }, 2000);
+        }, duration);
     }
 
     closeModal() {
@@ -1169,3 +1175,17 @@ class ExamEngine {
 document.addEventListener('DOMContentLoaded', () => {
     window.examEngine = new ExamEngine();
 });
+                    <span class="perf-accuracy" style="color: ${item.accuracy >= 70 ? 'var(--success)' : 'var(--danger)'}">${item.accuracy}%</span>
+                    <span class="perf-count">${item.total} Q</span>
+                `;
+                container.appendChild(div);
+            });
+        };
+
+        renderList('strengths-list', strengths);
+        renderList('weaknesses-list', weaknesses);
+    }
+}
+
+// ── Boot ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => new ExamEngine());

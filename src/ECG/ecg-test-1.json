@@ -1,0 +1,307 @@
+{
+  "title": "ECG Interpretation Test 1",
+  "description": "30-question ECG practice test covering rhythm interpretation, heart blocks, and tachyarrhythmias",
+  "categories": ["Rhythm Analysis","Heart Blocks","Tachyarrhythmias","Bradyarrhythmias","ECG Fundamentals"],
+  "questions": [
+    {
+      "id": 1,
+      "text": "A rhythm strip shows a regular rhythm at 72 bpm, P wave before every QRS, PR interval 0.16s, QRS 0.08s. What is this rhythm?",
+      "options": ["1st degree heart block","Normal sinus rhythm","Junctional rhythm","Accelerated idioventricular rhythm"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "ECG Fundamentals",
+      "topic": "Normal Sinus Rhythm",
+      "explanation": "Normal sinus rhythm (NSR) is defined by: rate 60–100 bpm, regular rhythm, P wave before every QRS with normal morphology, PR interval 0.12–0.20s (3–5 small squares), QRS ≤0.12s. All criteria are met here."
+    },
+    {
+      "id": 2,
+      "text": "A patient has a PR interval consistently measuring 0.26 seconds. All P waves conduct to QRS complexes. The rhythm is regular at 68 bpm. What is the diagnosis?",
+      "options": ["2nd degree heart block Mobitz I","Normal variant","1st degree heart block","3rd degree heart block"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "subject": "Heart Blocks",
+      "topic": "1st Degree AV Block",
+      "explanation": "1st degree AV block: PR interval >0.20s (>1 large square) with every P wave conducting to a QRS. The delay is in the AV node but conduction is never dropped. It is often benign but can indicate increased vagal tone or AV node disease."
+    },
+    {
+      "id": 3,
+      "text": "You observe a rhythm where the PR interval progressively lengthens until a QRS is dropped, then the cycle resets. What is this?",
+      "options": ["2nd degree AV block Mobitz II","1st degree AV block","2nd degree AV block Mobitz I (Wenckebach)","3rd degree AV block"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Heart Blocks",
+      "topic": "Mobitz I",
+      "explanation": "Mobitz I (Wenckebach): Progressive PR prolongation until a P wave fails to conduct (dropped QRS). The RR interval shortens before the dropped beat. The site of block is usually the AV node. Often seen with inferior MI. Generally more benign than Mobitz II."
+    },
+    {
+      "id": 4,
+      "text": "An ECG shows constant PR intervals with sudden, unexpected non-conducted P waves (dropped QRS). What block is this?",
+      "options": ["2nd degree AV block Mobitz II","2nd degree AV block Mobitz I","1st degree AV block","Sinus arrest"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "Heart Blocks",
+      "topic": "Mobitz II",
+      "explanation": "Mobitz II: Constant PR interval followed by unexpected non-conducted P waves. The block is in the His-Purkinje system (below the AV node). It is more dangerous than Mobitz I as it can progress to complete heart block. Often requires pacemaker."
+    },
+    {
+      "id": 5,
+      "text": "An ECG shows P waves and QRS complexes with no relationship to each other. Atrial rate 90 bpm, ventricular rate 38 bpm. QRS is wide. What is the rhythm?",
+      "options": ["Junctional escape rhythm","Accelerated idioventricular rhythm","3rd degree (complete) AV block","Ventricular tachycardia"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Heart Blocks",
+      "topic": "3rd Degree AV Block",
+      "explanation": "Complete (3rd degree) AV block: Complete dissociation between atria and ventricles. P waves and QRS have no relationship (AV dissociation). The wide QRS (≥0.12s) and slow ventricular rate indicate a ventricular escape rhythm originating below the bundle of His. Emergency pacing may be required."
+    },
+    {
+      "id": 6,
+      "text": "A regular narrow-complex tachycardia at 160 bpm with no visible P waves is most consistent with:",
+      "options": ["Ventricular tachycardia","Atrial fibrillation","SVT (AVNRT)","Sinus tachycardia"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Tachyarrhythmias",
+      "topic": "SVT",
+      "explanation": "SVT (AVNRT – AV Nodal Reentrant Tachycardia) typically presents as a regular, narrow-complex tachycardia at 150–250 bpm with P waves buried in or just after the QRS (not visible or retrograde). It is the most common SVT in adults. Vagal manoeuvres or adenosine are first-line treatment."
+    },
+    {
+      "id": 7,
+      "text": "An ECG shows an irregularly irregular rhythm with no discernible P waves, and a wavy baseline. Rate is 110 bpm. What is the diagnosis?",
+      "options": ["Atrial flutter","Atrial fibrillation","Multifocal atrial tachycardia","Ventricular fibrillation"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Tachyarrhythmias",
+      "topic": "Atrial Fibrillation",
+      "explanation": "Atrial fibrillation (AF): Chaotic atrial activity at 350–600 bpm produces an irregularly irregular ventricular response with no distinct P waves and an undulating (fibrillatory) baseline. It is the most common sustained arrhythmia. Stroke risk necessitates anticoagulation assessment."
+    },
+    {
+      "id": 8,
+      "text": "The ECG shows a regular sawtooth baseline at 300 bpm with 2:1 conduction producing a ventricular rate of 150 bpm. What is this?",
+      "options": ["Atrial fibrillation","Atrial flutter with 2:1 block","AVNRT","Sinus tachycardia"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachyarrhythmias",
+      "topic": "Atrial Flutter",
+      "explanation": "Atrial flutter: Regular sawtooth flutter waves (F waves) at ~300 bpm with fixed AV conduction ratio. With 2:1 block the ventricular rate is ~150 bpm — a classic ECG clue. Flutter waves are best seen in leads II, III, aVF and V1. Treatment includes rate control, cardioversion, or ablation."
+    },
+    {
+      "id": 9,
+      "text": "Monomorphic wide-complex tachycardia at 180 bpm in a haemodynamically stable patient. The most likely diagnosis is:",
+      "options": ["SVT with aberrancy","Atrial flutter with 2:1 block","Ventricular tachycardia (VT)","Torsades de pointes"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Tachyarrhythmias",
+      "topic": "Ventricular Tachycardia",
+      "explanation": "VT: Regular wide-complex (≥0.12s) tachycardia. Although SVT with aberrancy looks similar, VT is far more common in adults with structural heart disease. Key features favouring VT: AV dissociation, fusion beats, capture beats, concordance in V1–V6, northwest axis. Treat with amiodarone or cardioversion."
+    },
+    {
+      "id": 10,
+      "text": "A rhythm strip shows chaotic, disorganised electrical activity with no discernible QRS complexes. The patient is pulseless. What rhythm is this?",
+      "options": ["Asystole","Pulseless electrical activity","Ventricular fibrillation","Polymorphic VT"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "subject": "Tachyarrhythmias",
+      "topic": "Ventricular Fibrillation",
+      "explanation": "Ventricular fibrillation (VF): Chaotic, uncoordinated ventricular activity with no effective contraction. Patient is pulseless and in cardiac arrest. Immediate defibrillation and CPR are required. It is the most common initial rhythm in witnessed sudden cardiac arrest."
+    },
+    {
+      "id": 11,
+      "text": "The small squares on standard ECG paper at 25 mm/s paper speed represent:",
+      "options": ["0.04 seconds and 0.1 mV","0.1 seconds and 0.5 mV","0.2 seconds and 1.0 mV","0.04 seconds and 0.5 mV"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "ECG Fundamentals",
+      "topic": "ECG Paper",
+      "explanation": "Standard ECG paper runs at 25 mm/s. Each small square = 1 mm = 0.04 seconds horizontally. Each large square = 5 mm = 0.20 seconds. Vertically, standard calibration: 1 mm = 0.1 mV; 1 large square = 0.5 mV. Knowing this allows measurement of intervals and amplitudes."
+    },
+    {
+      "id": 12,
+      "text": "A patient's ECG shows a heart rate of 150 bpm. Using the 300 method, if R waves are in two consecutive large squares, the rate is approximately:",
+      "options": ["300 bpm","150 bpm","100 bpm","75 bpm"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "ECG Fundamentals",
+      "topic": "Rate Calculation",
+      "explanation": "The 300 method: Count large squares between two consecutive R waves and divide 300 by that number. 1 square = 300 bpm, 2 squares = 150 bpm, 3 squares = 100 bpm, 4 squares = 75 bpm, 5 = 60, 6 = 50. For irregular rhythms, count QRS complexes in a 10-second strip and multiply by 6."
+    },
+    {
+      "id": 13,
+      "text": "A sinus bradycardia is defined as sinus rhythm with a rate below:",
+      "options": ["50 bpm","60 bpm","40 bpm","70 bpm"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Bradyarrhythmias",
+      "topic": "Sinus Bradycardia",
+      "explanation": "Sinus bradycardia: All features of NSR (P before each QRS, normal intervals) but rate <60 bpm. Common causes include high vagal tone (athletes), hypothyroidism, hypothermia, inferior MI, beta-blockers. Treat only if symptomatic (atropine, pacing)."
+    },
+    {
+      "id": 14,
+      "text": "Which of the following best describes a junctional escape rhythm?",
+      "options": ["Rate 40–60 bpm, no P waves or retrograde P waves, narrow QRS","Rate 20–40 bpm, wide QRS, no P waves","Rate 60–100 bpm, P waves present, narrow QRS","Rate >100 bpm, narrow QRS, inverted P waves"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "Bradyarrhythmias",
+      "topic": "Junctional Rhythm",
+      "explanation": "Junctional escape rhythm originates in the AV node / bundle of His when the sinus node fails. Rate 40–60 bpm. QRS is narrow (unless aberrant conduction). P waves are absent, hidden in QRS, or retrograde (inverted in II, III, aVF) before or after QRS. Treat underlying cause; pacing if haemodynamically unstable."
+    },
+    {
+      "id": 15,
+      "text": "What does the QRS complex represent on the ECG?",
+      "options": ["Atrial depolarisation","Ventricular repolarisation","Ventricular depolarisation","SA node firing"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "subject": "ECG Fundamentals",
+      "topic": "ECG Waveforms",
+      "explanation": "ECG waveforms: P wave = atrial depolarisation. QRS complex = ventricular depolarisation (spreads from endocardium to epicardium via His-Purkinje). T wave = ventricular repolarisation. Atrial repolarisation is hidden within the QRS. Normal QRS duration ≤0.12s (3 small squares)."
+    },
+    {
+      "id": 16,
+      "text": "A patient presents with palpitations. The ECG shows a delta wave and short PR interval. What syndrome does this suggest?",
+      "options": ["Brugada syndrome","Long QT syndrome","Wolff-Parkinson-White (WPW) syndrome","Lown-Ganong-Levine syndrome"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "ECG Fundamentals",
+      "topic": "Pre-excitation",
+      "explanation": "WPW syndrome: Caused by an accessory pathway (Bundle of Kent) bypassing the AV node. ECG shows: short PR interval (<0.12s), delta wave (slurred upstroke of QRS), widened QRS. Risk of rapid conduction during AF which can lead to VF. Avoid AV-nodal blocking agents (adenosine, verapamil) in pre-excited AF."
+    },
+    {
+      "id": 17,
+      "text": "The normal QTc interval in adults is:",
+      "options": ["<480 ms in males, <460 ms in females","<440 ms in males, <460 ms in females","<350 ms in all patients","<500 ms in all patients"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Fundamentals",
+      "topic": "QT Interval",
+      "explanation": "Normal QTc (Bazett formula): ≤440 ms in males, ≤460 ms in females. QTc >500 ms significantly increases risk of Torsades de Pointes (TdP). Causes of prolonged QT: electrolyte disturbances (↓K, ↓Mg, ↓Ca), drugs (amiodarone, haloperidol, erythromycin), congenital LQTS, hypothermia."
+    },
+    {
+      "id": 18,
+      "text": "Torsades de Pointes (TdP) is a type of polymorphic VT associated with:",
+      "options": ["Short PR interval","Prolonged QT interval","ST elevation","Bundle branch block"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachyarrhythmias",
+      "topic": "Torsades de Pointes",
+      "explanation": "TdP is a polymorphic VT characterised by a twisting of the QRS axis around the isoelectric line on the ECG — 'twisting of the points'. It occurs on a background of prolonged QT interval. Treatment: IV magnesium sulphate 2g, correct electrolytes, overdrive pacing. Avoid QT-prolonging drugs."
+    },
+    {
+      "id": 19,
+      "text": "A rhythm strip shows regular P waves at 80 bpm with no conducted QRS complexes. QRS complexes appear at 32 bpm with a wide morphology. What is this?",
+      "options": ["2nd degree Mobitz II","Junctional rhythm","3rd degree AV block with ventricular escape","Accelerated idioventricular rhythm"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Heart Blocks",
+      "topic": "Complete AV Block",
+      "explanation": "3rd degree (complete) AV block with ventricular escape: No relationship between P waves and QRS complexes. The ventricular escape rate of 20–40 bpm with wide QRS indicates a focus below the bundle of His. This is a medical emergency requiring urgent pacing (transcutaneous, then transvenous). Atropine is unlikely to be effective with infranodal block."
+    },
+    {
+      "id": 20,
+      "text": "A multifocal atrial tachycardia (MAT) is characterised by:",
+      "options": ["Regular rhythm, single P wave morphology","Irregular rhythm, ≥3 different P wave morphologies, rate >100 bpm","Regular rhythm, sawtooth baseline","Irregular rhythm, no P waves"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachyarrhythmias",
+      "topic": "MAT",
+      "explanation": "MAT: Irregular rhythm with ≥3 distinct P wave morphologies at rate >100 bpm (if <100, called multifocal atrial rhythm). Associated with severe COPD, hypoxia, hypomagnesaemia. Unlike AF, discrete P waves are present. Treatment: treat underlying cause, correct electrolytes, verapamil or metoprolol for rate control."
+    },
+    {
+      "id": 21,
+      "text": "Which ECG finding indicates right bundle branch block (RBBB)?",
+      "options": ["Broad S wave in V1, RSR' in V6","RSR' ('M' pattern) in V1, broad S wave in I and V6, QRS ≥0.12s","Left axis deviation, QS pattern in V1","Broad monophasic R in V5–V6"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "ECG Fundamentals",
+      "topic": "Bundle Branch Block",
+      "explanation": "RBBB: QRS ≥0.12s with RSR' ('rabbit ears' or 'M' pattern) in V1, broad S waves in leads I, aVL, V5–V6. Activation of the right ventricle is delayed, occurring after the left. Causes: right heart strain, PE, RV infarction, cardiomyopathy, or normal variant."
+    },
+    {
+      "id": 22,
+      "text": "Left bundle branch block (LBBB) on ECG shows:",
+      "options": ["RSR' in V1, broad S in V6","Broad notched R waves in I, aVL, V5–V6; QS or rS in V1; QRS ≥0.12s","Right axis deviation","Small R waves in V1–V4 with tall R in V5"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "ECG Fundamentals",
+      "topic": "Bundle Branch Block",
+      "explanation": "LBBB: QRS ≥0.12s with broad, notched (M-shaped) R in lateral leads (I, aVL, V5–V6), deep QS or rS in V1. LBBB indicates organic heart disease (IHD, cardiomyopathy, hypertension). New LBBB in ACS may represent MI and should be treated as STEMI equivalent (Sgarbossa criteria)."
+    },
+    {
+      "id": 23,
+      "text": "A patient in SVT is given adenosine 6 mg IV. The tachycardia terminates and reverts to sinus rhythm. This confirms the SVT mechanism was:",
+      "options": ["Accessory pathway-mediated (WPW)","AV node-dependent reentry (AVNRT or AVRT)","Atrial flutter","Ventricular tachycardia"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Tachyarrhythmias",
+      "topic": "SVT / Adenosine",
+      "explanation": "Adenosine transiently blocks AV nodal conduction. SVTs that depend on the AV node for the reentry circuit (AVNRT, AVRT) are terminated by adenosine. AF and flutter may show transient rate slowing but do not terminate. VT is not terminated by adenosine. Successful termination confirms AV node-dependent mechanism."
+    },
+    {
+      "id": 24,
+      "text": "Which ECG feature helps differentiate VT from SVT with aberrancy?",
+      "options": ["Heart rate >150 bpm","Narrow QRS complex","AV dissociation","Short PR interval"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "subject": "Tachyarrhythmias",
+      "topic": "VT vs SVT",
+      "explanation": "AV dissociation (P waves and QRS have no relationship) is the most specific ECG feature of VT. Other features supporting VT: fusion beats, capture beats, concordance in precordial leads, extreme axis, QRS >0.16s. The Brugada and Vereckei algorithms use these criteria. When in doubt, treat as VT."
+    },
+    {
+      "id": 25,
+      "text": "A sinus rhythm with premature beats showing wide, bizarre QRS morphology not preceded by a P wave, with a compensatory pause, represents:",
+      "options": ["Premature atrial contractions (PAC)","Aberrant conduction","Premature ventricular contractions (PVC)","Junctional escape beats"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "subject": "ECG Fundamentals",
+      "topic": "PVC",
+      "explanation": "PVCs: Premature, wide (≥0.12s), bizarre-morphology QRS complexes arising from ectopic ventricular focus. No preceding P wave. Usually followed by a full compensatory pause (RR interval around the PVC = 2× normal RR). Bigeminy = PVC after every normal beat; trigeminy = after every 2nd. Usually benign unless frequent or on structurally abnormal heart."
+    },
+    {
+      "id": 26,
+      "text": "Sinus arrest differs from sinus exit block in that:",
+      "options": ["Sinus arrest shows a pause that is a multiple of the PP interval","Sinus arrest shows a pause that is NOT a multiple of the PP interval","Both produce the same ECG appearance","Sinus arrest is always followed by a junctional escape"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Bradyarrhythmias",
+      "topic": "Sinus Arrest vs Exit Block",
+      "explanation": "Sinus arrest: the SA node fails to fire — the pause is NOT a multiple of the basic PP interval. Sinus exit block: SA node fires but impulse fails to exit — the pause IS a multiple of the PP interval (e.g., exactly 2×PP). Both may be followed by escape rhythms. Sinus arrest = failure to generate; exit block = failure to conduct out."
+    },
+    {
+      "id": 27,
+      "text": "An ECG shows regular P waves at 70 bpm with QRS complexes at 70 bpm but the PR interval varies randomly. QRS is narrow. What is this?",
+      "options": ["Atrial tachycardia","Isorhythmic AV dissociation","2nd degree Mobitz II","Junctional tachycardia"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Heart Blocks",
+      "topic": "AV Dissociation",
+      "explanation": "Isorhythmic AV dissociation: Atria and ventricles fire independently but at nearly the same rate — P waves 'march through' QRS complexes with varying PR intervals. Different from 3rd degree block where rates differ significantly. Occurs in junctional or ventricular rhythms with similar rate to sinus. Generally benign; treat underlying cause."
+    },
+    {
+      "id": 28,
+      "text": "A patient has a rate of 45 bpm with narrow QRS complexes and no visible P waves. What is the most likely rhythm?",
+      "options": ["Ventricular escape rhythm","Sinus bradycardia","Junctional escape rhythm","Idioventricular rhythm"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Bradyarrhythmias",
+      "topic": "Junctional Escape",
+      "explanation": "Junctional escape rhythm: Rate 40–60 bpm, narrow QRS (unless BBB), absent or retrograde P waves. Originates from AV node/bundle of His when sinus node fails or AV block occurs. Ventricular escape would be wider QRS and slower (20–40 bpm). Treat the cause; atropine or pacing if symptomatic."
+    },
+    {
+      "id": 29,
+      "text": "Atropine is the first-line pharmacological treatment for symptomatic bradycardia. Its mechanism is:",
+      "options": ["Beta-1 agonist increasing heart rate","Muscarinic antagonist blocking vagal inhibition of SA node","Calcium channel blocker","Direct pacing the SA node"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Bradyarrhythmias",
+      "topic": "Atropine",
+      "explanation": "Atropine is a muscarinic (M2) receptor antagonist. It blocks parasympathetic (vagal) inhibition of the SA node and AV conduction, thereby increasing heart rate and AV conduction speed. Dose: 0.5–1 mg IV, repeat every 3–5 min, max 3 mg. Not effective in 3rd degree infranodal block — use pacing. Caution in myocardial ischaemia (may worsen ischaemia by increasing rate)."
+    },
+    {
+      "id": 30,
+      "text": "An accelerated idioventricular rhythm (AIVR) is characterised by:",
+      "options": ["Narrow QRS, rate 60–100 bpm, P waves present","Wide QRS, rate 40–100 bpm, no P waves or AV dissociation","Narrow QRS, rate >100 bpm, retrograde P waves","Wide QRS, rate >150 bpm, AV dissociation"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Bradyarrhythmias",
+      "topic": "AIVR",
+      "explanation": "AIVR: Wide QRS (≥0.12s), rate 40–100 bpm (faster than ventricular escape but slower than VT), AV dissociation common. Often seen as a reperfusion rhythm post-thrombolysis or PCI — a sign that coronary artery has reopened. Usually transient and haemodynamically tolerated. Generally does not require treatment unless symptomatic."
+    }
+  ]
+}

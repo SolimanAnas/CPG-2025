@@ -1,0 +1,307 @@
+{
+  "title": "ECG Interpretation Test 2",
+  "description": "30-question ECG practice test covering ischaemia, STEMI patterns, electrolyte effects, and advanced arrhythmias",
+  "categories": ["STEMI & Ischaemia","Electrolyte Effects","Advanced Arrhythmias","Pacemaker Rhythms","ECG Axis"],
+  "questions": [
+    {
+      "id": 31,
+      "text": "ST elevation in leads II, III, and aVF with reciprocal ST depression in I and aVL indicates:",
+      "options": ["Anterior STEMI","Lateral STEMI","Inferior STEMI","Posterior MI"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Inferior STEMI",
+      "explanation": "Inferior STEMI: STE in II, III, aVF (inferior leads). Reciprocal STD in I and aVL is expected. Usually caused by RCA occlusion (80%) or LCx (20%). Always check for RV involvement: right-sided leads (V4R STE ≥1mm = RV infarct). Avoid nitrates in RV infarct (preload-dependent). Urgent PCI is standard of care."
+    },
+    {
+      "id": 32,
+      "text": "ST elevation in V1–V4 with reciprocal changes in inferior leads is most consistent with:",
+      "options": ["Inferior STEMI","Anterior STEMI (LAD occlusion)","Posterior STEMI","Right ventricular infarction"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Anterior STEMI",
+      "explanation": "Anterior STEMI: STE in V1–V4 indicates LAD occlusion. Proximal LAD occlusion (\"widow maker\") may also affect septal (V1–V2) and lateral (V5–V6, I, aVL) leads. It carries the highest mortality due to large myocardial territory at risk. Reciprocal STD in II, III, aVF common. Door-to-balloon time <90 min is the target."
+    },
+    {
+      "id": 33,
+      "text": "Posterior MI on standard 12-lead ECG is suggested by:",
+      "options": ["STE in V1–V2","Tall R waves and ST depression in V1–V3 (mirror image of STE)","Q waves in aVL","Deep T wave inversions in V1–V4"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Posterior MI",
+      "explanation": "Posterior MI is the 'mirror image' on standard ECG: tall broad R waves and STD (horizontal) in V1–V3. Confirmed with posterior leads (V7–V9) showing STE ≥0.5mm. Usually caused by LCx or PDA occlusion. Apply V7–V9 leads in any patient with STD in V1–V3 without anterior ischaemia."
+    },
+    {
+      "id": 34,
+      "text": "Which ECG pattern in V1 distinguishes posterior MI from right bundle branch block?",
+      "options": ["Tall R wave in both","RSR' pattern in RBBB vs tall monophasic R with STD in posterior MI","Q wave in V1","Delta wave in V1"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Posterior MI vs RBBB",
+      "explanation": "RBBB: RSR' (M pattern) in V1, broad S in V6. Posterior MI: Tall, broad, monophasic R in V1 with horizontal STD — the mirror image of STE. Posterior MI also shows a R/S ratio >1 in V1–V2. Adding posterior leads (V7–V9) showing STE confirms posterior MI. RBBB lacks the STD seen in posterior MI."
+    },
+    {
+      "id": 35,
+      "text": "Hyperacute T waves (tall, broad, symmetric) in the early phase of MI precede:",
+      "options": ["T wave inversion","ST elevation","Q wave formation","All of the above in sequence"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "MI Evolution",
+      "explanation": "MI ECG evolution: (1) Hyperacute T waves (tall, peaked, broad) — first minutes. (2) ST elevation develops — hours. (3) Q waves form as necrosis develops — hours to days. (4) T wave inversion — hours to weeks. (5) ST returns to baseline, Q waves persist. Recognising hyperacute T waves is critical for very early intervention."
+    },
+    {
+      "id": 36,
+      "text": "Peaked, narrow, symmetric T waves ('tented T waves') on ECG suggest:",
+      "options": ["Hypokalaemia","Hyperkalaemia","Hypocalcaemia","Hypomagnesaemia"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Electrolyte Effects",
+      "topic": "Hyperkalaemia",
+      "explanation": "Hyperkalaemia ECG progression: (1) Peaked (tented) narrow symmetric T waves — earliest sign. (2) PR prolongation and P wave flattening. (3) Widened QRS. (4) Sinusoidal pattern. (5) VF/asystole. Treatment: calcium gluconate (membrane stabilisation), insulin+dextrose, salbutamol, sodium bicarbonate, dialysis. Calcium acts in minutes."
+    },
+    {
+      "id": 37,
+      "text": "A patient with prolonged QT interval, U waves, and flat T waves on ECG is most likely to have:",
+      "options": ["Hyperkalaemia","Hypermagnesaemia","Hypokalaemia","Hypercalcaemia"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Electrolyte Effects",
+      "topic": "Hypokalaemia",
+      "explanation": "Hypokalaemia ECG: Flat or inverted T waves, prominent U waves (positive deflection after T wave, best in V2–V3), prolonged QU interval (mistaken for QT). Severe hypokalaemia can cause ST depression, PVCs, VT/VF. Treat with IV or oral potassium replacement. Magnesium supplementation often needed concurrently."
+    },
+    {
+      "id": 38,
+      "text": "Hypercalcaemia shortens which ECG interval?",
+      "options": ["PR interval","QT interval","RR interval","QRS duration"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Electrolyte Effects",
+      "topic": "Hypercalcaemia",
+      "explanation": "Hypercalcaemia: Shortens QT interval (specifically the ST segment shortens). Severe hypercalcaemia can cause ST elevation, J waves, wide QRS, and complete heart block. Hypocalcaemia does the opposite — prolongs QT interval. Calcium affects phase 2 of the cardiac action potential."
+    },
+    {
+      "id": 39,
+      "text": "A patient with hypothermia shows a distinctive ECG finding at the J-point (junction of QRS and ST segment). What is this called?",
+      "options": ["Delta wave","Epsilon wave","Osborn (J) wave","Brugada pattern"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "subject": "ECG Fundamentals",
+      "topic": "Hypothermia",
+      "explanation": "Osborn (J) waves: Distinctive positive deflection at the J-point, most prominent in inferior and lateral leads. Pathognomonic of hypothermia but can occur in hypercalcaemia and CNS injury. Other ECG features of hypothermia: sinus bradycardia, slow AF, prolonged intervals, shivering artefact. Core rewarming is definitive treatment."
+    },
+    {
+      "id": 40,
+      "text": "The Brugada pattern on ECG shows:",
+      "options": ["RBBB with STE in V4–V6","Coved-type STE ≥2mm in V1–V2 with RBBB morphology","STE in II, III, aVF","Peaked T waves in precordial leads"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Advanced Arrhythmias",
+      "topic": "Brugada Syndrome",
+      "explanation": "Brugada syndrome: Coved-type STE (≥2mm) in V1–V2 with RBBB-like morphology. Associated with sodium channelopathy and risk of sudden cardiac death from VF, especially during fever or at night. Fever should be treated aggressively. ICD is the definitive treatment. Avoid flecainide, procainamide, and tricyclic antidepressants."
+    },
+    {
+      "id": 41,
+      "text": "A pacemaker rhythm shows pacemaker spikes followed by wide QRS complexes. This indicates:",
+      "options": ["Ventricular pacing","Atrial pacing only","Failure to capture","Undersensing"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "Pacemaker Rhythms",
+      "topic": "Ventricular Pacing",
+      "explanation": "Ventricular pacing: Pacemaker spike followed by wide, bizarre QRS (LBBB morphology if right ventricular lead — the usual placement). Rate is set by the device. The wide QRS resembles LBBB because RV depolarisation precedes LV (opposite of normal). Normal pacemaker function: each spike should be followed by an appropriate response."
+    },
+    {
+      "id": 42,
+      "text": "In a paced rhythm, a pacemaker spike is followed by no QRS complex. This represents:",
+      "options": ["Oversensing","Failure to capture","Failure to sense","Appropriate pacing"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Pacemaker Rhythms",
+      "topic": "Pacemaker Failure",
+      "explanation": "Failure to capture: Pacemaker fires (spike visible) but fails to depolarise the myocardium (no subsequent P or QRS). Causes: lead displacement, fibrosis at lead tip, battery depletion, electrolyte disturbance, drugs. Management: increase pacing output, reposition lead, check battery. Transcutaneous pacing as bridge if patient is pacemaker-dependent."
+    },
+    {
+      "id": 43,
+      "text": "Pacemaker oversensing results in:",
+      "options": ["Pacing at a faster rate than programmed","Failure to pace when needed (pauses)","Pacing at the programmed rate regardless of intrinsic rhythm","Failure to sense the intrinsic rhythm"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Pacemaker Rhythms",
+      "topic": "Pacemaker Oversensing",
+      "explanation": "Oversensing: Pacemaker incorrectly detects non-cardiac signals (muscle artefact, T waves, electromagnetic interference) as intrinsic cardiac activity, causing inappropriate inhibition — pauses or bradycardia. Treatment: reduce sensitivity, reposition lead, apply magnet (reverts to asynchronous mode). Undersensing is the opposite — pacemaker fails to detect intrinsic beats and fires inappropriately."
+    },
+    {
+      "id": 44,
+      "text": "Left axis deviation (LAD) on ECG is defined as an axis between:",
+      "options": ["0° and +90°","-30° and -90°","0° and -30°","+90° and +180°"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Axis",
+      "topic": "Axis Deviation",
+      "explanation": "Normal axis: -30° to +90°. Left axis deviation (LAD): -30° to -90° (QRS positive in I, negative in aVF, negative in II). Causes: LBBB, left anterior fascicular block (LAFB), inferior MI, LVH, WPW. Right axis deviation (RAD): +90° to +180° — causes include RBBB, RVH, lateral MI, PE, left posterior fascicular block."
+    },
+    {
+      "id": 45,
+      "text": "The ECG axis is determined by which leads primarily?",
+      "options": ["V1 and V6","Leads I and aVF","Leads II and III","Leads I and II"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Axis",
+      "topic": "Axis Calculation",
+      "explanation": "The simplest axis determination uses leads I and aVF. If QRS is positive in both I and aVF: normal axis (0° to +90°). Positive I, negative aVF: left axis. Negative I, positive aVF: right axis. Negative in both: extreme (northwest) axis (VT, hyperkalaemia). More precise calculation uses perpendicular lead method."
+    },
+    {
+      "id": 46,
+      "text": "Saddle-shaped ST elevation diffusely in most leads (without reciprocal depression) and PR depression is classic for:",
+      "options": ["STEMI","Early repolarisation","Pericarditis","Myocarditis"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Pericarditis",
+      "explanation": "Acute pericarditis ECG: Stage 1 — diffuse concave (saddle-shaped) STE in most leads + PR depression (most sensitive sign). Unlike STEMI, STE is diffuse (not regional), no reciprocal STD (except aVR), PR elevation in aVR. Stage 4 — T wave inversion. Caused by inflammation; treat with NSAIDs + colchicine. Avoid anticoagulation if pericardial effusion."
+    },
+    {
+      "id": 47,
+      "text": "A patient with chest pain has ST elevation only in aVR and diffuse ST depression in all other leads. What should you suspect?",
+      "options": ["Inferior STEMI","Left main coronary artery occlusion or severe 3-vessel disease","Pericarditis","Right bundle branch block"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Left Main / 3-Vessel Disease",
+      "explanation": "STE in aVR with diffuse STD: Indicates global subendocardial ischaemia, typically from left main coronary artery occlusion, severe 3-vessel CAD, or proximal LAD occlusion. This is a high-risk ECG pattern with significant mortality. Requires urgent catheterisation. The STE in aVR represents the high lateral wall viewed from a unique angle."
+    },
+    {
+      "id": 48,
+      "text": "Which of the following is NOT a criterion of the Sgarbossa criteria for diagnosing MI in LBBB?",
+      "options": ["Concordant STE ≥1mm in leads with positive QRS","Concordant STD ≥1mm in V1–V3","Discordant STE ≥5mm in leads with negative QRS","PR prolongation >0.24s"],
+      "correct_answer": "D",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Sgarbossa Criteria",
+      "explanation": "Sgarbossa criteria for MI in LBBB: (1) Concordant STE ≥1mm (QRS and ST same direction) — most specific. (2) Concordant STD ≥1mm in V1–V3. (3) Discordant STE ≥5mm (or ≥25% of S wave depth — modified Smith-Sgarbossa). PR prolongation is not a Sgarbossa criterion. New LBBB with chest pain should always prompt urgent cardiology review."
+    },
+    {
+      "id": 49,
+      "text": "Wellens' syndrome on ECG indicates critical stenosis of which coronary artery?",
+      "options": ["Right coronary artery","Left circumflex","Proximal left anterior descending (LAD)","Posterior descending artery"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Wellens Syndrome",
+      "explanation": "Wellens' syndrome: Biphasic (Type A) or deeply inverted (Type B) T waves in V2–V3 during pain-free period. Represents reperfusion pattern of critical proximal LAD stenosis. Patient may be pain-free and troponin may be normal or minimally elevated. Do NOT perform exercise stress test — risk of massive anterior MI. Urgent catheterisation required."
+    },
+    {
+      "id": 50,
+      "text": "De Winter T waves on ECG are characterised by:",
+      "options": ["T wave inversions in V1–V4","Upsloping ST depression at the J-point with tall symmetric T waves in V1–V6","Peaked T waves in inferior leads only","Biphasic T waves in V2–V3"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "STEMI & Ischaemia",
+      "topic": "De Winter Pattern",
+      "explanation": "De Winter T waves: Upsloping STD at J-point (≥1–3mm) followed by tall, symmetric, peaked T waves in V1–V6, often with STE in aVR. This is an STEMI equivalent representing proximal LAD occlusion — it does NOT evolve to classic STE. Occurs in ~2% of LAD occlusions. Requires immediate PCI."
+    },
+    {
+      "id": 51,
+      "text": "In a dual-chamber (DDD) pacemaker, what does the first letter represent?",
+      "options": ["Chamber sensed","Chamber paced","Response to sensing","Rate modulation"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Pacemaker Rhythms",
+      "topic": "Pacemaker Nomenclature",
+      "explanation": "NASPE/BPEG pacemaker code (NBG): Letter 1 = Chamber Paced (A=atrium, V=ventricle, D=dual). Letter 2 = Chamber Sensed. Letter 3 = Response to sensing (I=inhibit, T=trigger, D=dual). Letter 4 = Rate modulation (R=rate-responsive). Example: DDDR = dual-chamber pacing and sensing, inhibit/trigger response, rate-responsive."
+    },
+    {
+      "id": 52,
+      "text": "ST depression during a stress test is most concerning when it occurs in:",
+      "options": ["V1 only","Multiple leads, horizontal or downsloping, at low workload","aVR only","Any lead at peak exercise"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Stress Test ECG",
+      "explanation": "Significant exercise-induced STD: Horizontal or downsloping ≥1mm in ≥2 leads, especially at low workload (early Bruce protocol), is associated with multivessel disease. Upsloping STD is less specific. Early onset, persistence into recovery, and haemodynamic compromise (BP drop, VT) predict severe CAD. These findings warrant urgent catheterisation."
+    },
+    {
+      "id": 53,
+      "text": "Which ECG finding is most characteristic of right ventricular strain (acute cor pulmonale, e.g., massive PE)?",
+      "options": ["LBBB pattern","S1Q3T3 pattern with sinus tachycardia","STE in V1–V4","First degree AV block"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Advanced Arrhythmias",
+      "topic": "Pulmonary Embolism",
+      "explanation": "Massive PE ECG: Most common — sinus tachycardia. Classic S1Q3T3 pattern: S wave in I, Q wave and T wave inversion in III. Also: new RBBB, right axis deviation, T wave inversions in V1–V4 (RV strain), AF. ECG is non-specific — diagnosis confirmed by CTPA or echo. Thrombolysis if massive PE with haemodynamic compromise."
+    },
+    {
+      "id": 54,
+      "text": "Early repolarisation on ECG is characterised by:",
+      "options": ["Diffuse PR depression","Notching at the J-point with concave STE, most prominent in V2–V5, in young healthy individuals","STE with reciprocal changes","Peaked T waves in precordial leads"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "STEMI & Ischaemia",
+      "topic": "Early Repolarisation",
+      "explanation": "Early repolarisation (ER): Notching or slurring at the J-point with concave STE in V2–V5 (and sometimes inferior leads), in young healthy males. Usually benign but high-risk ER (inferolateral, with horizontal or descending ST segment) is associated with idiopathic VF. Must be distinguished from STEMI (which has convex STE, reciprocal changes, and evolves)."
+    },
+    {
+      "id": 55,
+      "text": "Digoxin toxicity on ECG characteristically shows:",
+      "options": ["Peaked T waves","Scooped ST depression ('Salvador Dali sagging'), short QT, and bradyarrhythmias","Prolonged QT and U waves","Right bundle branch block"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Electrolyte Effects",
+      "topic": "Digoxin Effect",
+      "explanation": "Digoxin ECG effects: 'Scooped' (reverse-tick) ST depression, short QT interval, T wave changes, PR prolongation. Digoxin toxicity: Bradycardia, any arrhythmia, especially PVCs (bigeminy), VT, AF with slow ventricular response. Bidirectional VT is pathognomonic. Treat toxicity with digoxin-specific Fab antibodies (Digibind), correct hypokalaemia."
+    },
+    {
+      "id": 56,
+      "text": "A rhythm strip shows regular QRS complexes at 110 bpm with P waves that follow each QRS (RP interval > PR interval) with inverted P waves in II, III, aVF. This is:",
+      "options": ["AVNRT (slow-fast)","Sinus tachycardia","AVRT using accessory pathway (fast-slow type)","Atrial tachycardia"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "subject": "Advanced Arrhythmias",
+      "topic": "AVRT",
+      "explanation": "Long RP tachycardia (RP > PR) with retrograde P waves: Characteristic of AVRT via slow accessory pathway (fast-slow), PJRT (permanent junctional reciprocating tachycardia), or atypical AVNRT. Short RP (RP < PR) = typical AVNRT or orthodromic AVRT. The long RP pattern and inverted P waves in inferior leads indicate retrograde atrial activation via accessory pathway."
+    },
+    {
+      "id": 57,
+      "text": "Which ECG change is seen with severe hypothyroidism (myxoedema)?",
+      "options": ["Sinus tachycardia, shortened QT","Sinus bradycardia, low voltage, prolonged QT, flat T waves","Atrial fibrillation with rapid ventricular response","Peaked T waves"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Electrolyte Effects",
+      "topic": "Hypothyroidism ECG",
+      "explanation": "Hypothyroidism ECG: Sinus bradycardia, low-voltage QRS complexes (<5mm in limb leads), prolonged QT interval, flat or inverted T waves, and PR prolongation. Pericardial effusion (common in severe hypothyroidism) causes electrical alternans. Thyroid hormone replacement is the definitive treatment."
+    },
+    {
+      "id": 58,
+      "text": "ST elevation in V1 and V2 with RBBB morphology (coved type) that becomes more pronounced after fever or sodium channel blocker administration is:",
+      "options": ["Anterior STEMI","Wellens pattern","Brugada pattern","De Winter pattern"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Advanced Arrhythmias",
+      "topic": "Brugada",
+      "explanation": "Brugada pattern is unmasked or worsened by fever, sodium channel blockers (flecainide, ajmaline, procainamide), vagotonic states, and hypo/hyperkalaemia. Provocative testing with ajmaline or flecainide can reveal concealed Brugada pattern. Patients at risk for VF/sudden cardiac death may require ICD. Quinidine is used in some cases."
+    },
+    {
+      "id": 59,
+      "text": "The epsilon wave — a small positive deflection after the QRS complex in V1–V3 — is associated with:",
+      "options": ["Brugada syndrome","Arrhythmogenic right ventricular cardiomyopathy (ARVC)","WPW syndrome","Pericarditis"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Advanced Arrhythmias",
+      "topic": "ARVC",
+      "explanation": "ARVC (arrhythmogenic right ventricular cardiomyopathy): Epsilon wave — small positive notch at end of QRS in V1–V3 — is pathognomonic. Other features: T wave inversions V1–V4, RBBB pattern, prolonged S wave upstroke. Associated with VT with LBBB morphology (originating from RV) and SCD in young athletes. Diagnosis by Task Force Criteria; ICD for high risk."
+    },
+    {
+      "id": 60,
+      "text": "A patient has a wide complex tachycardia at 200 bpm. ECG shows positive concordance in V1–V6 (all QRS complexes predominantly positive in all precordial leads). This finding strongly suggests:",
+      "options": ["SVT with RBBB aberrancy","Ventricular tachycardia","Antidromic AVRT in WPW","Atrial flutter with aberrancy"],
+      "correct_answer": "C",
+      "difficulty": "hard",
+      "subject": "Advanced Arrhythmias",
+      "topic": "WPW Antidromic AVRT",
+      "explanation": "Positive precordial concordance (all V1–V6 QRS predominantly positive in a WCT) is strongly associated with antidromic AVRT in WPW, where conduction travels antegrade through the accessory pathway (usually left-sided) causing fully pre-excited, wide QRS. Negative concordance (all negative) suggests VT. Do NOT give adenosine or AV-nodal blockers in pre-excited tachycardia — use procainamide or cardioversion."
+    }
+  ]
+}
