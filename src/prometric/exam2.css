@@ -947,4 +947,6 @@ body {
     white-space: nowrap;
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast.correct   { background: var(--success); color: white; border-color: transparent; }
+.toast.incorrect { background: var(--danger);  color: white; border-color: transparent; }
 @media (max-width: 768px) { .toast { bottom: calc(var(--tabs-h) + var(--footer-h) + 12px); } }
