@@ -566,7 +566,8 @@ class ExamEngine {
 
         const q = this.questions[this.currentIndex];
         const isCorrect = this.answers[this.currentIndex] === q.shuffledCorrect;
-        
+        this.showToast(isCorrect ? '✓ Correct!' : '✗ Incorrect', isCorrect ? 'correct' : 'incorrect');
+
         this.submitted[this.currentIndex] = true;
         this.saveQuestionHistory(q.id, isCorrect, q.subject);
         
@@ -980,12 +981,12 @@ class ExamEngine {
         document.body.appendChild(modal);
     }
 
-    showToast(message) {
+    showToast(message, type = '') {
         const existing = document.querySelector('.toast');
         if (existing) existing.remove();
-        
+
         const toast = document.createElement('div');
-        toast.className = 'toast';
+        toast.className = type ? `toast ${type}` : 'toast';
         toast.textContent = message;
         document.body.appendChild(toast);
         

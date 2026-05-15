@@ -1698,3 +1698,15 @@ body {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+.toast.correct {
+    background: var(--success);
+    color: white;
+    border-color: transparent;
+}
+
+.toast.incorrect {
+    background: var(--danger);
+    color: white;
+    border-color: transparent;
+}
