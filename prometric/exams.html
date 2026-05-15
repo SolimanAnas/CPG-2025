@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMT Exam Engine</title>
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Theme Toggle Header -->
+        <div class="theme-header">
+            <button class="theme-btn" data-theme="light" title="Light">☀️</button>
+            <button class="theme-btn" data-theme="dark" title="Dark">🌙</button>
+            <button class="theme-btn" data-theme="sepia" title="Sepia">📜</button>
+        </div>
+        
+        <!-- Start Screen - Wizard Flow -->
+        <div id="start-screen" class="screen active">
+            <div class="wizard-container">
+                <div class="wizard-header">
+                    <h1>NREMT Prometric Mock Test</h1>
+                    <p class="subtitle">EMT Basic Practice Questions</p>
+                </div>
+                
+                <!-- Progress Steps -->
+                <div class="wizard-steps">
+                    <div class="step-indicator active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Mode</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-indicator" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Topics</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-indicator" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Settings</span>
+                    </div>
+                </div>
+                
+                <!-- Step 1: Choose Mode -->
+                <div class="wizard-step active" data-step="1">
+                    <h3>Choose Your Exam Mode</h3>
+                    <div class="mode-cards">
+                        <div class="mode-card selected" data-mode="random">
+                            <div class="mode-icon">🎲</div>
+                            <h4>Random Mixed</h4>
+                            <p>All topics</p>
+                        </div>
+                        <div class="mode-card" data-mode="topic">
+                            <div class="mode-icon">📚</div>
+                            <h4>Topic-Based</h4>
+                            <p>Selected subjects</p>
+                        </div>
+                        <div class="mode-card" data-mode="cat">
+                            <div class="mode-icon">🧠</div>
+                            <h4>CAT Mode</h4>
+                            <p>Adaptive</p>
+                        </div>
+                        <div class="mode-card" data-mode="spaced">
+                            <div class="mode-icon">🔄</div>
+                            <h4>Spaced Repetition</h4>
+                            <p>Weak areas</p>
+                        </div>
+                    </div>
+                    <div class="wizard-nav">
+                        <button class="btn-primary wizard-next" data-next="2">Next →</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Select Topics -->
+                <div class="wizard-step" data-step="2">
+                    <h3>Select Topics <span class="optional-note">(Optional)</span></h3>
+                    <p class="step-hint">Skip to include all topics</p>
+                    <div class="topics-grid">
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Fundamentals and Operations" checked>
+                            <span class="topic-name">Fundamentals and Operations</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Trauma" checked>
+                            <span class="topic-name">Trauma</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Shock and Resuscitation" checked>
+                            <span class="topic-name">Shock and Resuscitation</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Pediatrics" checked>
+                            <span class="topic-name">Pediatrics</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="OB/GYN" checked>
+                            <span class="topic-name">OB/GYN</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Airway" checked>
+                            <span class="topic-name">Airway</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Patient Assessment" checked>
+                            <span class="topic-name">Patient Assessment</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Medical/Behavioral/Geriatric" checked>
+                            <span class="topic-name">Medical/Behavioral/Geriatric</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Environmental and Toxicology" checked>
+                            <span class="topic-name">Environmental and Toxicology</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Disaster" checked>
+                            <span class="topic-name">Disaster</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Professionalism and Ethics" checked>
+                            <span class="topic-name">Professionalism and Ethics</span>
+                        </label>
+                        <label class="topic-checkbox">
+                            <input type="checkbox" value="Patient Safety" checked>
+                            <span class="topic-name">Patient Safety</span>
+                        </label>
+                    </div>
+                    <div class="select-all-row">
+                        <button class="btn-link" id="select-all-topics">Select All</button>
+                        <button class="btn-link" id="clear-all-topics">Clear All</button>
+                    </div>
+                    <div class="wizard-nav">
+                        <button class="btn-secondary wizard-prev" data-prev="1">← Back</button>
+                        <button class="btn-primary wizard-next" data-next="3">Next →</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Configure Settings -->
+                <div class="wizard-step" data-step="3">
+                    <h3>Configure Your Exam</h3>
+                    <div class="settings-grid">
+                        <div class="setting-card">
+                            <label>Number of Questions</label>
+                            <div class="setting-options">
+                                <button class="setting-btn" data-value="10" data-setting="count">10</button>
+                                <button class="setting-btn" data-value="25" data-setting="count">25</button>
+                                <button class="setting-btn selected" data-value="50" data-setting="count">50</button>
+                                <button class="setting-btn" data-value="100" data-setting="count">100</button>
+                            </div>
+                        </div>
+                        <div class="setting-card" id="difficulty-filter-card">
+                            <label>Difficulty Filter</label>
+                            <div class="setting-options">
+                                <button class="setting-btn selected" data-value="all" data-setting="difficulty">All</button>
+                                <button class="setting-btn" data-value="easy" data-setting="difficulty">Easy</button>
+                                <button class="setting-btn" data-value="medium" data-setting="difficulty">Medium</button>
+                                <button class="setting-btn" data-value="hard" data-setting="difficulty">Hard</button>
+                            </div>
+                        </div>
+                        <div class="setting-card">
+                            <label>Timer Mode</label>
+                            <div class="setting-options">
+                                <button class="setting-btn selected" data-value="timed" data-setting="timer">Timed</button>
+                                <button class="setting-btn" data-value="tutor" data-setting="timer">Tutor Mode</button>
+                            </div>
+                        </div>
+                        <div class="setting-card">
+                            <label>Show Score During Exam</label>
+                            <div class="setting-options">
+                                <button class="setting-btn" data-value="hide" data-setting="score">Hide</button>
+                                <button class="setting-btn selected" data-value="show" data-setting="score">Show</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wizard-nav">
+                        <button class="btn-secondary wizard-prev" data-prev="2">← Back</button>
+                        <button id="start-exam" class="btn-primary start-btn">Start Exam</button>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <a href="#" id="view-analytics-home" class="link-btn">📊 Analytics Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exam Screen -->
+        <div id="exam-screen" class="screen">
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            
+            <div class="exam-layout">
+                <!-- Left Panel - Navigator -->
+                <div class="left-panel">
+                    <div class="nav-header">
+                        <h4>Questions</h4>
+                        <span id="question-counter">1 of 50</span>
+                    </div>
+                    <div id="question-nav" class="question-nav"></div>
+                    <div class="nav-legend">
+                        <span class="legend-item"><span class="dot answered"></span> Answered</span>
+                        <span class="legend-item"><span class="dot flagged"></span> Flagged</span>
+                        <span class="legend-item"><span class="dot current"></span> Current</span>
+                    </div>
+                </div>
+
+                <!-- Main Panel - Question -->
+                <div class="main-panel">
+                    <!-- Focus Mode Toggle -->
+                    <button id="focus-mode" class="focus-toggle" title="Toggle Focus Mode">⛶</button>
+                    
+                    <div class="question-header">
+                        <span id="question-subject" class="subject-badge"></span>
+                        <span id="question-difficulty" class="difficulty-badge"></span>
+                        <span id="question-topic" class="topic-badge"></span>
+                        <div id="cat-indicator" class="cat-indicator hidden"></div>
+                    </div>
+                    <div id="question-stem" class="question-stem"></div>
+                    <div id="options-container" class="options-container"></div>
+                    <div id="explanation-container" class="explanation-container hidden"></div>
+                    <div class="question-actions">
+                        <button id="flag-question" class="btn-secondary">🚩 Mark for Review</button>
+                        <button id="submit-answer" class="btn-primary" disabled>Select an Answer</button>
+                    </div>
+                </div>
+
+                <!-- Right Panel - Controls -->
+                <div class="right-panel">
+                    <div class="timer-container">
+                        <div id="timer" class="timer">60:00</div>
+                        <span class="timer-label">Time Remaining</span>
+                    </div>
+                    <div id="live-score" class="live-score hidden">
+                        <div class="score-label">Current Score</div>
+                        <div id="current-score" class="score-value">--%</div>
+                    </div>
+                    <div class="control-buttons">
+                        <button id="pause-exam" class="btn-secondary">⏸️ Pause</button>
+                        <button id="end-exam" class="btn-danger">⏹️ End Exam</button>
+                    </div>
+                    <div class="progress-info">
+                        <div class="progress-item">
+                            <span class="progress-label">Answered</span>
+                            <span id="answered-count" class="progress-value">0</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-label">Flagged</span>
+                            <span id="flagged-count" class="progress-value">0</span>
+                        </div>
+                        <div class="progress-item">
+                            <span class="progress-label">Remaining</span>
+                            <span id="remaining-count" class="progress-value">50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Tabs -->
+            <div class="mobile-tabs">
+                <button class="mobile-tab active" data-panel="question">Question</button>
+                <button class="mobile-tab" data-panel="nav">Navigator</button>
+                <button class="mobile-tab" data-panel="stats">Stats</button>
+            </div>
+
+            <!-- Navigation Footer -->
+            <div class="exam-footer">
+                <button id="prev-question" class="btn-nav">← Previous</button>
+                <button id="next-question" class="btn-nav">Next →</button>
+            </div>
+        </div>
+
+        <!-- Review Screen -->
+        <div id="review-screen" class="screen">
+            <div class="review-container">
+                <div class="review-header">
+                    <h2>Exam Complete!</h2>
+                    <div class="pass-indicator" id="pass-indicator"></div>
+                </div>
+                <div class="score-summary">
+                    <div class="score-circle">
+                        <span id="final-score">0%</span>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-stat">
+                            <span class="stat-value correct" id="correct-count">0</span>
+                            <span class="stat-label">Correct</span>
+                        </div>
+                        <div class="score-stat">
+                            <span class="stat-value incorrect" id="incorrect-count">0</span>
+                            <span class="stat-label">Incorrect</span>
+                        </div>
+                        <div class="score-stat">
+                            <span class="stat-value" id="time-spent">00:00</span>
+                            <span class="stat-label">Time Spent</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="exam-insights" class="exam-insights"></div>
+                <div id="topic-performance" class="topic-performance"></div>
+                <div class="review-actions">
+                    <button id="review-questions" class="btn-primary">Review Questions</button>
+                    <button id="retry-incorrect" class="btn-secondary">Retry Incorrect</button>
+                    <button id="new-exam" class="btn-secondary">New Exam</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-container">
+                <h2>Question Review</h2>
+                <div id="results-list" class="results-list"></div>
+                <div class="results-actions">
+                    <button id="back-to-review" class="btn-primary">Back to Summary</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Dashboard -->
+        <div id="analytics-screen" class="screen">
+            <div class="analytics-container">
+                <div class="analytics-header">
+                    <h2>Performance Analytics</h2>
+                    <button id="analytics-back" class="btn-secondary">← Back to Exam</button>
+                </div>
+                
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Overall Progress</h3>
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <span class="stat-number" id="total-exams">0</span>
+                                <span class="stat-label">Exams Taken</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" id="avg-score">0%</span>
+                                <span class="stat-label">Average Score</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" id="total-questions">0</span>
+                                <span class="stat-label">Questions</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" id="best-score">0%</span>
+                                <span class="stat-label">Best Score</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Improvement Curve</h3>
+                        <div class="chart-container">
+                            <canvas id="improvement-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card full-width">
+                        <h3>Topic Mastery Heatmap</h3>
+                        <div id="heatmap-container" class="heatmap-container"></div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Strengths</h3>
+                        <div id="strengths-list" class="performance-list"></div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Areas for Improvement</h3>
+                        <div id="weaknesses-list" class="performance-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="exam.js"></script>
+</body>
+</html>
