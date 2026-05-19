@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # ── Python ────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Lint Python with Ruff
+        uses: chartboost/ruff-action@v1
+        with:
+          args: check .
+
+      - name: Run Python tests with pytest
+        run: python -m pytest tests/ -v
+        env:
+          SECRET_KEY: ci-test-key
+          DATABASE_URL: sqlite:///:memory:
+          GOOGLE_CLIENT_ID: ci-test-id
+
+      # ── JavaScript ────────────────────────────────────────
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ESLint & Prettier
+        run: npm install --save-dev eslint prettier
+
+      - name: Lint JavaScript with ESLint
+        run: npx eslint --no-eslintrc -c .eslintrc.json "*.js" "src/**/*.js"
+
+      - name: Check JS formatting with Prettier
+        run: npx prettier --check "*.js" "src/**/*.js"
+        continue-on-error: true
