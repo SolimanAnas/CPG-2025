@@ -1,7 +1,8 @@
-Flask
-Flask-SQLAlchemy
-Flask-Login
-Werkzeug
-google-auth
-requests
-gunicorn
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Login==0.6.3
+Werkzeug==3.0.3
+google-auth==2.35.0
+requests==2.32.3
+gunicorn==22.0.0
+pytest==8.3.4

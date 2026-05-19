@@ -249,6 +249,12 @@ class ExamEngine {
                 const bPriority = bHistory.attempts === 0 ? 2 : (bHistory.correct / bHistory.attempts < 0.7 ? 1 : 0);
                 return bPriority - aPriority;
             });
+        } else {
+            const unseen = pool.filter(q => !this.questionHistory[q.id] || this.questionHistory[q.id].attempts === 0);
+            const seen = pool.filter(q => this.questionHistory[q.id] && this.questionHistory[q.id].attempts > 0);
+            this.shuffleArray(unseen);
+            this.shuffleArray(seen);
+            pool = [...unseen, ...seen];
         }
 
         return pool;
@@ -327,16 +333,8 @@ class ExamEngine {
             alert('No questions available. Please select different topics or difficulty.');
             return;
         }
-
-        // Prioritise unseen questions (never answered) then seen, shuffled within each group
-        const seenIds = new Set(Object.keys(this.questionHistory));
-        const unseen = pool.filter(q => !seenIds.has(String(q.id)));
-        const seen   = pool.filter(q =>  seenIds.has(String(q.id)));
-        this.shuffleArray(unseen);
-        this.shuffleArray(seen);
-        const orderedPool = [...unseen, ...seen];
-
-        this.questions = orderedPool.slice(0, Math.min(count, orderedPool.length));
+        
+        this.questions = pool.slice(0, Math.min(count, pool.length));
         
         if (this.questions.length === 0) {
             alert('No questions available for the selected criteria.');
@@ -354,6 +352,8 @@ class ExamEngine {
         this.currentIndex = 0;
         this.startTime = Date.now();
         this.elapsedSeconds = 0;
+        this._timerBase = Date.now();
+        this._pausedElapsed = 0;
         this.totalExamSeconds = this.questions.length * 72;
         this.isEnded = false;
         this.isPaused = false;
@@ -363,9 +363,18 @@ class ExamEngine {
         this.buildNavigator();
         this.showScreen('exam-screen');
         this.renderQuestion();
-        
+
+        const timerContainer = document.querySelector('.timer-container');
+        const timerEl = document.getElementById('timer');
         if (!this.tutorMode) {
+            if (timerContainer) timerContainer.style.display = '';
+            if (timerEl) {
+                timerEl.textContent = this.formatTime(this.totalExamSeconds);
+                timerEl.classList.remove('warning', 'danger');
+            }
             this.startTimer();
+        } else {
+            if (timerContainer) timerContainer.style.display = 'none';
         }
         
         if (this.showScoreDuringExam) {
@@ -497,13 +506,12 @@ class ExamEngine {
             container.appendChild(div);
         });
 
-        const expContainer = document.getElementById('explanation-container');
         if (isSubmitted && q.explanation) {
+            const expContainer = document.getElementById('explanation-container');
             expContainer.innerHTML = `<h4>Explanation</h4><p>${q.explanation}</p>`;
             expContainer.classList.remove('hidden');
         } else {
-            expContainer.classList.add('hidden');
-            expContainer.innerHTML = ''; // clear so old text never bleeds into next question
+            document.getElementById('explanation-container').classList.add('hidden');
         }
         
         const submitBtn = document.getElementById('submit-answer');
@@ -558,7 +566,8 @@ class ExamEngine {
 
         const q = this.questions[this.currentIndex];
         const isCorrect = this.answers[this.currentIndex] === q.shuffledCorrect;
-        
+        this.showToast(isCorrect ? '✓ Correct!' : '✗ Incorrect', isCorrect ? 'correct' : 'incorrect');
+
         this.submitted[this.currentIndex] = true;
         this.saveQuestionHistory(q.id, isCorrect, q.subject);
         
@@ -573,9 +582,6 @@ class ExamEngine {
             }
             el.style.pointerEvents = 'none';
         });
-
-        // Answer feedback toast
-        this.showToast(isCorrect ? '✅ Correct!' : '❌ Incorrect', isCorrect ? 'correct' : 'wrong');
 
         if (q.explanation) {
             const expContainer = document.getElementById('explanation-container');
@@ -664,14 +670,10 @@ class ExamEngine {
     startTimer() {
         clearInterval(this.timerInterval);
         
-        const remaining = this.totalExamSeconds - this.elapsedSeconds;
-        const displaySeconds = remaining > 0 ? remaining : this.totalExamSeconds;
-        document.getElementById('timer').textContent = this.formatTime(displaySeconds);
-        
         this.timerInterval = setInterval(() => {
             if (this.isPaused) return;
             
-            this.elapsedSeconds++;
+            this.elapsedSeconds = Math.floor((Date.now() - this._timerBase) / 1000);
             const timeLeft = this.totalExamSeconds - this.elapsedSeconds;
             
             const timer = document.getElementById('timer');
@@ -687,7 +689,7 @@ class ExamEngine {
             if (timeLeft <= 0) {
                 this.endExam();
             }
-        }, 1000);
+        }, 200);
     }
 
     formatTime(seconds) {
@@ -699,6 +701,7 @@ class ExamEngine {
     pauseExam() {
         this.isPaused = true;
         clearInterval(this.timerInterval);
+        this._pausedElapsed = this.elapsedSeconds;
         this.showModal('Pause Exam', 'Click Resume to continue or End Exam to see results.', {
             'Resume': () => this.resumeExam(),
             'End Exam': () => this.endExam()
@@ -708,6 +711,7 @@ class ExamEngine {
     resumeExam() {
         this.closeModal();
         this.isPaused = false;
+        this._timerBase = Date.now() - (this._pausedElapsed * 1000);
         if (!this.tutorMode) {
             this.startTimer();
         }
@@ -933,6 +937,8 @@ class ExamEngine {
         this.currentIndex = 0;
         this.startTime = Date.now();
         this.elapsedSeconds = 0;
+        this._timerBase = Date.now();
+        this._pausedElapsed = 0;
         this.isEnded = false;
 
         this.buildNavigator();
@@ -950,38 +956,29 @@ class ExamEngine {
     }
 
     showModal(title, message, buttons) {
-        const existing = document.querySelector('.modal-overlay');
+        const existing = document.querySelector('.modal');
         if (existing) existing.remove();
 
-        const icons = { 'End Exam?': '⚠️', 'Pause Exam': '⏸️', "Time's Up!": '⏱️' };
-        const icon = icons[title] || '💬';
-
-        const overlay = document.createElement('div');
-        overlay.className = 'modal-overlay';
-        overlay.innerHTML = `
-            <div class="modal-dialog" role="dialog" aria-modal="true">
-                <div class="modal-icon">${icon}</div>
-                <h3 class="modal-title">${title}</h3>
-                <p class="modal-message">${message}</p>
-                <div class="modal-actions"></div>
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <h3>${title}</h3>
+                <p>${message}</p>
+                <div class="modal-buttons"></div>
             </div>
         `;
-
-        // Close on backdrop click
-        overlay.addEventListener('click', e => { if (e.target === overlay) this.closeModal(); });
-
-        const btnContainer = overlay.querySelector('.modal-actions');
+        
+        const btnContainer = modal.querySelector('.modal-buttons');
         Object.entries(buttons).forEach(([label, action]) => {
             const btn = document.createElement('button');
             btn.textContent = label;
-            const isDanger = label === 'End Exam' || label === "Time's Up!";
-            btn.className = isDanger ? 'modal-btn modal-btn-danger' : 'modal-btn modal-btn-cancel';
+            btn.className = label === 'End Exam' ? 'btn-danger' : 'btn-secondary';
             btn.addEventListener('click', action);
             btnContainer.appendChild(btn);
         });
-
-        document.body.appendChild(overlay);
-        requestAnimationFrame(() => overlay.classList.add('open'));
+        
+        document.body.appendChild(modal);
     }
 
     showToast(message, type = '') {
@@ -989,22 +986,20 @@ class ExamEngine {
         if (existing) existing.remove();
 
         const toast = document.createElement('div');
-        toast.className = 'toast' + (type ? ` toast-${type}` : '');
+        toast.className = type ? `toast ${type}` : 'toast';
         toast.textContent = message;
         document.body.appendChild(toast);
-
-        // answer feedback disappears faster (1s) than info toasts (2s)
-        const duration = type === 'correct' || type === 'wrong' ? 1000 : 2000;
+        
         setTimeout(() => toast.classList.add('show'), 10);
         setTimeout(() => {
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 300);
-        }, duration);
+        }, 2000);
     }
 
     closeModal() {
-        const overlay = document.querySelector('.modal-overlay');
-        if (overlay) overlay.remove();
+        const modal = document.querySelector('.modal');
+        if (modal) modal.remove();
     }
 
     loadStats() {
@@ -1175,17 +1170,3 @@ class ExamEngine {
 document.addEventListener('DOMContentLoaded', () => {
     window.examEngine = new ExamEngine();
 });
-                    <span class="perf-accuracy" style="color: ${item.accuracy >= 70 ? 'var(--success)' : 'var(--danger)'}">${item.accuracy}%</span>
-                    <span class="perf-count">${item.total} Q</span>
-                `;
-                container.appendChild(div);
-            });
-        };
-
-        renderList('strengths-list', strengths);
-        renderList('weaknesses-list', weaknesses);
-    }
-}
-
-// ── Boot ────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => new ExamEngine());
