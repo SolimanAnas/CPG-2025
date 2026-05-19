@@ -1,4 +1,4 @@
-/* ========== app.js – DCAS CPG 2025 (Final Clean) ========== */
+﻿/* ========== app.js – DCAS CPG 2025 (Final Clean) ========== */
 (function(){
 "use strict";
 
@@ -174,7 +174,7 @@ function initChapterPage() {
                     <span>🎯 <span id="statsCritical">0%</span></span>
                 </div>
                 <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
-                <a href="../about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+                <a href="../pages/about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
             </div>
         `;
     }
@@ -183,7 +183,7 @@ function initChapterPage() {
     if (footerEl) {
         footerEl.innerHTML = `
             <div>Created by Soliman Anas · for study aid only</div>
-            <div><a href="../about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+            <div><a href="../pages/about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
         `;
     }
 

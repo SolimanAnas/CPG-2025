@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
 <script>
@@ -10,14 +10,14 @@
     const AUTH_KEY = 'dcas_local_auth';
     try {
       const sessionRaw = localStorage.getItem(AUTH_KEY);
-      if (!sessionRaw) { window.location.replace('login.html'); return; }
+      if (!sessionRaw) { window.location.replace('pages/login.html'); return; }
       const session = JSON.parse(sessionRaw);
       if (!session.loggedIn || Date.now() > session.expiresAt) {
         localStorage.removeItem(AUTH_KEY);
-        window.location.replace('login.html');
+        window.location.replace('pages/login.html');
       }
     } catch (e) {
-      window.location.replace('login.html');
+      window.location.replace('pages/login.html');
     }
   })();
   */
@@ -561,9 +561,9 @@
         <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving">⚡ AMOLED</span>
         <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
         <button class="icon-btn" id="progressToggle" title="Progress">📊</button>
-        <a href="courses.html" class="icon-btn" id="headerCoursesBtn" title="Courses">🎓</a>
+        <a href="pages/courses.html" class="icon-btn" id="headerCoursesBtn" title="Courses">🎓</a>
         <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
-        <a href="about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+        <a href="pages/about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
     </div>
 </header>
 
@@ -581,7 +581,7 @@
 
 <footer>
     <div>Created by Soliman Anas · for study aid only</div>
-    <div><a href="about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+    <div><a href="pages/about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
 <button class="float-btn hidden" id="scrollToTopBtn" title="Go to top">↑</button>
@@ -788,7 +788,7 @@
     overlay.addEventListener('click', closeDrawer);
 
     document.getElementById('qsIndex').addEventListener('click', () => { window.location.href = 'chapters/c-index.html?view=summary'; });
-    document.getElementById('qsAbout').addEventListener('click', () => { window.location.href = 'about.html'; });
+    document.getElementById('qsAbout').addEventListener('click', () => { window.location.href = 'pages/about.html'; });
 
     document.getElementById('qsClearCache').addEventListener('click', async () => {
         if (!confirm('Clear cache and reload? Your progress will be reset.')) return;
@@ -803,7 +803,7 @@
     // Logout
     document.getElementById('qsLogout').addEventListener('click', () => {
         localStorage.removeItem('dcas_local_auth');
-        window.location.replace('login.html');
+        window.location.replace('pages/login.html');
     });
 
     // ══════════════════════════════════════════════════════════
@@ -1131,7 +1131,7 @@
         const coursesExamsHtml = `
             <div class="section-label">Courses &amp; Exams</div>
             <div class="menu-grid" data-section="courses">
-                <a href="courses.html" class="menu-card special-card"
+                <a href="pages/courses.html" class="menu-card special-card"
                    data-chapter="courses" data-search="Courses Training ITLS EMPACT ACLS BLS">
                     <span class="sc-icon">🎓</span>
                     <h2>Courses Preparation</h2>
@@ -1157,10 +1157,10 @@
                     <h2>EMS Essentials</h2>
                     <p>Quick-access clinical tools</p>
                     <div class="ems-tools-grid">
-                        <a href="aha.html"            class="ems-btn ems-btn-aha">❤️ AHA Algorithms</a>
-                        <a href="drug-calculator.html" class="ems-btn ems-btn-drug">💊 Drug Calculator</a>
-                        <a href="ecg.html"             class="ems-btn ems-btn-ecg">📈 ECG Simulator</a>
-                        <a href="ems-tools.html"       class="ems-btn ems-btn-more">🔬 More Tools</a>
+                        <a href="pages/aha.html"            class="ems-btn ems-btn-aha">❤️ AHA Algorithms</a>
+                        <a href="pages/drug-calculator.html" class="ems-btn ems-btn-drug">💊 Drug Calculator</a>
+                        <a href="pages/ecg.html"             class="ems-btn ems-btn-ecg">📈 ECG Simulator</a>
+                        <a href="pages/ems-tools.html"       class="ems-btn ems-btn-more">🔬 More Tools</a>
                     </div>
                 </div>
             </div>`;
@@ -1581,7 +1581,7 @@
     // Header buttons
     const homeBtn  = document.getElementById('homeBtn');
     const indexBtn = document.getElementById('headerIndexBtn');
-    if (homeBtn)  homeBtn.addEventListener('click',  e => { e.preventDefault(); window.location.href='index-new.html'; });
+    if (homeBtn)  homeBtn.addEventListener('click',  e => { e.preventDefault(); window.location.reload(); });
     if (indexBtn) indexBtn.addEventListener('click', e => { e.preventDefault(); window.location.href='chapters/c-index.html?view=summary'; });
 
     document.addEventListener('click', function(e) {

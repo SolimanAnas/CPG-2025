@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>DCAS CPG 2025 · Page Not Found</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+
+    <style>
+        :root {
+            --alert-red: #e03131;
+            --alert-glow: rgba(224, 49, 49, 0.4);
+            --monitor-green: #22c55e;
+            --monitor-dim: rgba(34, 197, 94, 0.15);
+            --medical-blue: #0056b3;
+            --grid-color: rgba(255, 255, 255, 0.03);
+            --grid-strong: rgba(255, 255, 255, 0.06);
+        }
+
+        [data-theme="light"] {
+            --alert-red: #c62828;
+            --alert-glow: rgba(198, 40, 40, 0.2);
+            --monitor-green: #16a34a;
+            --monitor-dim: rgba(22, 163, 74, 0.1);
+            --grid-color: rgba(0, 0, 0, 0.04);
+            --grid-strong: rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="amoled"] {
+            --alert-red: #ff4444;
+            --alert-glow: rgba(255, 68, 68, 0.3);
+            --monitor-green: #00ff88;
+            --monitor-dim: rgba(0, 255, 136, 0.1);
+            --grid-color: rgba(255, 255, 255, 0.02);
+            --grid-strong: rgba(255, 255, 255, 0.04);
+        }
+
+        /* ── Medical Grid Background ── */
+        .error-scene {
+            position: relative;
+            min-height: calc(100vh - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            overflow: hidden;
+        }
+
+        .error-scene::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(var(--grid-strong) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-strong) 1px, transparent 1px);
+            background-size:
+                20px 20px,
+                20px 20px,
+                100px 100px,
+                100px 100px;
+            pointer-events: none;
+        }
+
+        /* ── Scan Line ── */
+        .scan-line {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--monitor-green), transparent);
+            opacity: 0.15;
+            animation: scanDown 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes scanDown {
+            0%   { top: -2px; }
+            100% { top: 100%; }
+        }
+
+        /* ── Monitor Frame ── */
+        .monitor-frame {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--grid-strong);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            animation: monitorOn 0.6s ease-out;
+        }
+
+        [data-theme="light"] .monitor-frame {
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow:
+                0 0 0 1px rgba(0, 0, 0, 0.08),
+                0 20px 60px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes monitorOn {
+            0%   { opacity: 0; transform: scale(0.95) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* ── Status Bar ── */
+        .status-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--grid-strong);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] .status-bar {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .status-indicators {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--alert-red);
+            box-shadow: 0 0 8px var(--alert-glow);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .status-dot.active {
+            background: var(--monitor-green);
+            box-shadow: 0 0 8px var(--monitor-dim);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50%      { opacity: 0.3; }
+        }
+
+        .status-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--alert-red);
+        }
+
+        .status-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* ── Main Content ── */
+        .monitor-content {
+            padding: 32px 28px;
+            text-align: center;
+        }
+
+        /* ── Heartbeat Line ── */
+        .heartbeat-container {
+            position: relative;
+            height: 60px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .heartbeat-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .heartbeat-line {
+            stroke: var(--alert-red);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 6px var(--alert-glow));
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawHeartbeat 2s ease-out forwards;
+        }
+
+        .heartbeat-line.flat {
+            stroke: var(--alert-red);
+            stroke-width: 1.5;
+            opacity: 0.3;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: drawFlat 1.5s ease-out 0.5s forwards;
+        }
+
+        @keyframes drawHeartbeat {
+            to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes drawFlat {
+            to { stroke-dashoffset: 0; }
+        }
+
+        /* ── Error Code ── */
+        .error-code-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .error-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--alert-red);
+            text-shadow: 0 0 40px var(--alert-glow);
+            position: relative;
+            animation: codeAppear 0.8s ease-out 0.3s both;
+        }
+
+        @keyframes codeAppear {
+            0%   { opacity: 0; transform: scale(0.8); filter: blur(8px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+
+        .error-code::before,
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .error-code::before {
+            color: #00d4ff;
+            z-index: -1;
+            animation: glitch1 3s infinite;
+            clip-path: inset(0 0 60% 0);
+        }
+
+        .error-code::after {
+            color: #ff6b6b;
+            z-index: -1;
+            animation: glitch2 3s infinite;
+            clip-path: inset(60% 0 0 0);
+        }
+
+        @keyframes glitch1 {
+            0%, 90%, 100% { transform: translate(0); }
+            92%           { transform: translate(-3px, 1px); }
+            94%           { transform: translate(3px, -1px); }
+            96%           { transform: translate(-2px, 2px); }
+        }
+
+        @keyframes glitch2 {
+            0%, 88%, 100% { transform: translate(0); }
+            90%           { transform: translate(3px, -1px); }
+            93%           { transform: translate(-3px, 2px); }
+            95%           { transform: translate(2px, -2px); }
+        }
+
+        /* ── Diagnosis ── */
+        .diagnosis {
+            margin-bottom: 28px;
+        }
+
+        .diagnosis-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .diagnosis-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .diagnosis-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        /* ── Action Buttons ── */
+        .action-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .action-btn:hover::after { opacity: 1; }
+        .action-btn:active { transform: scale(0.98); }
+
+        .action-btn-primary {
+            background: var(--medical-blue);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 86, 179, 0.3);
+        }
+
+        .action-btn-primary:hover {
+            box-shadow: 0 6px 24px rgba(0, 86, 179, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .action-btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-primary);
+            border: 1px solid var(--grid-strong);
+        }
+
+        [data-theme="light"] .action-btn-secondary {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .action-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .action-btn svg {
+            flex-shrink: 0;
+        }
+
+        /* ── Path Info ── */
+        .path-info {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--grid-strong);
+        }
+
+        .path-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            margin-bottom: 4px;
+        }
+
+        .path-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            word-break: break-all;
+        }
+
+        /* ── Corner Decorations ── */
+        .corner-tl, .corner-tr, .corner-bl, .corner-br {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            pointer-events: none;
+        }
+
+        .corner-tl { top: 8px; left: 8px; border-top: 2px solid var(--alert-red); border-left: 2px solid var(--alert-red); }
+        .corner-tr { top: 8px; right: 8px; border-top: 2px solid var(--alert-red); border-right: 2px solid var(--alert-red); }
+        .corner-bl { bottom: 8px; left: 8px; border-bottom: 2px solid var(--alert-red); border-left: 2px solid var(--alert-red); }
+        .corner-br { bottom: 8px; right: 8px; border-bottom: 2px solid var(--alert-red); border-right: 2px solid var(--alert-red); }
+
+        /* ── Responsive ── */
+        @media (max-width: 480px) {
+            .error-code { font-size: 4.5rem; }
+            .monitor-content { padding: 24px 20px; }
+            .status-bar { padding: 10px 16px; }
+        }
+
+        /* ── Staggered Animation Delays ── */
+        .status-bar       { animation: fadeIn 0.4s ease-out 0.1s both; }
+        .heartbeat-container { animation: fadeIn 0.4s ease-out 0.4s both; }
+        .error-code-wrapper { animation: fadeIn 0.4s ease-out 0.5s both; }
+        .diagnosis        { animation: fadeIn 0.4s ease-out 0.6s both; }
+        .action-stack     { animation: fadeIn 0.4s ease-out 0.7s both; }
+        .path-info        { animation: fadeIn 0.4s ease-out 0.8s both; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">DCAS CPG 2025</h1>
+            <p id="pageSubtitle">Clinical Review Platform</p>
+        </div>
+    </div>
+
+    <div class="drawer-trigger" id="drawerTrigger">
+        <div class="trigger-line top"></div>
+        <div class="trigger-line bottom"></div>
+    </div>
+
+    <div class="header-right" id="headerShortcuts">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+        <a href="pages/courses.html" class="icon-btn" title="Courses">🎓</a>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" title="Index">📋</a>
+        <a href="pages/about.html" class="icon-btn" title="About">ℹ️</a>
+    </div>
+</header>
+
+<main id="mainContent">
+    <div class="error-scene">
+        <div class="scan-line"></div>
+
+        <div class="monitor-frame">
+            <div class="corner-tl"></div>
+            <div class="corner-tr"></div>
+            <div class="corner-bl"></div>
+            <div class="corner-br"></div>
+
+            <div class="status-bar">
+                <div class="status-indicators">
+                    <div class="status-dot"></div>
+                    <div class="status-dot"></div>
+                    <div class="status-dot active"></div>
+                    <span class="status-label">Signal Lost</span>
+                </div>
+                <span class="status-time" id="liveTime"></span>
+            </div>
+
+            <div class="monitor-content">
+                <div class="heartbeat-container">
+                    <svg class="heartbeat-svg" viewBox="0 0 300 60" preserveAspectRatio="none">
+                        <path class="heartbeat-line" d="M0,30 L60,30 L70,30 L80,10 L90,50 L100,30 L110,30 L120,30 L130,30 L140,30 L150,30 L160,30 L170,30 L180,30 L190,30 L200,30 L210,30 L220,30 L230,30 L240,30 L250,30 L260,30 L270,30 L280,30 L290,30 L300,30" />
+                        <path class="heartbeat-line flat" d="M0,30 L300,30" />
+                    </svg>
+                </div>
+
+                <div class="error-code-wrapper">
+                    <div class="error-code">404</div>
+                </div>
+
+                <div class="diagnosis">
+                    <div class="diagnosis-title">Diagnosis</div>
+                    <div class="diagnosis-text">Page Not Found</div>
+                    <div class="diagnosis-sub">The requested resource doesn't exist or has been relocated.<br>Your study progress remains intact.</div>
+                </div>
+
+                <div class="action-stack">
+                    <a href="index.html" class="action-btn action-btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Return to Home
+                    </a>
+                    <a href="chapters/c-index.html?view=summary" class="action-btn action-btn-secondary">
+                        📋 Browse All Chapters
+                    </a>
+                    <a href="pages/courses.html" class="action-btn action-btn-secondary">
+                        🎓 Courses & Exams
+                    </a>
+                </div>
+
+                <div class="path-info">
+                    <div class="path-label">Requested Path</div>
+                    <div class="path-value" id="currentPath"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="pages/about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<script>
+(function() {
+    // Show requested path
+    const pathEl = document.getElementById('currentPath');
+    if (pathEl) pathEl.textContent = window.location.pathname;
+
+    // Live clock
+    const timeEl = document.getElementById('liveTime');
+    function updateTime() {
+        const now = new Date();
+        timeEl.textContent = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    // Home button
+    const homeBtn = document.getElementById('homeBtn');
+    if (homeBtn) homeBtn.addEventListener('click', () => window.location.href = 'index.html');
+
+    // Theme toggle
+    const themeBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const themes = ['dark', 'light', 'sepia', 'forest'];
+
+    function initTheme() {
+        html.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    }
+
+    function nextTheme() {
+        const current = html.getAttribute('data-theme') || 'dark';
+        html.setAttribute('data-theme', themes[(themes.indexOf(current) + 1) % themes.length]);
+        localStorage.setItem('theme', html.getAttribute('data-theme'));
+    }
+
+    if (themeBtn) themeBtn.addEventListener('click', nextTheme);
+    initTheme();
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+            .then(r => console.log('PWA Ready', r))
+            .catch(e => console.log('SW failed', e));
+    });
+}
+</script>
+</body>
+</html>

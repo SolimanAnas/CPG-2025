@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 //  DCAS CPG 2025 – Service Worker
 //  Strategy: NETWORK FIRST  →  cache fallback
 // ============================================================
@@ -10,12 +10,12 @@ const CACHE_TIMEOUT = 5000;
 const PRE_CACHE = [
   './',
   'index.html',
-  'login.html',
-  'admin.html',
-  'about.html',
-  'signup.html',
-  'privacy.html',
-  'terms.html',
+  'pages/login.html',
+  'pages/admin.html',
+  'pages/about.html',
+  'pages/signup.html',
+  'pages/privacy.html',
+  'pages/terms.html',
   'styles.css',
   'app.js',
   'manifest.json',
@@ -25,12 +25,12 @@ const PRE_CACHE = [
   'chapters/c0.html',
   'content/c-index.js',
   'content/c0.js',
-  'drug-calculator.js',
-  'drug-data.json',
-  'ecg.html',
-  'aha.html',
-  'courses.html',
-  'itls.html'
+  'pages/drug-calculator.js',
+  'pages/drug-data.json',
+  'pages/ecg.html',
+  'pages/aha.html',
+  'pages/courses.html',
+  'pages/itls.html'
 ];
 
 // ── File type routing ────────────────────────────────────────

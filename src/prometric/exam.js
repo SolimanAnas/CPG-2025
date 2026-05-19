@@ -20,7 +20,7 @@ class ExamEngine {
         this.examStats = this.loadStats();
         this.improvementChart = null;
         this.questionHistory = this.loadQuestionHistory();
-        this.settings = { count: 50, difficulty: 'all', timer: 'tutor', score: 'show' };
+        this.settings = { count: 50, difficulty: 'all', timer: 'timed', score: 'show' };
         this.keyboardHandler = (e) => this.handleKeyboard(e);
         
         this.init();
@@ -249,12 +249,6 @@ class ExamEngine {
                 const bPriority = bHistory.attempts === 0 ? 2 : (bHistory.correct / bHistory.attempts < 0.7 ? 1 : 0);
                 return bPriority - aPriority;
             });
-        } else {
-            const unseen = pool.filter(q => !this.questionHistory[q.id] || this.questionHistory[q.id].attempts === 0);
-            const seen = pool.filter(q => this.questionHistory[q.id] && this.questionHistory[q.id].attempts > 0);
-            this.shuffleArray(unseen);
-            this.shuffleArray(seen);
-            pool = [...unseen, ...seen];
         }
 
         return pool;
@@ -363,18 +357,9 @@ class ExamEngine {
         this.buildNavigator();
         this.showScreen('exam-screen');
         this.renderQuestion();
-
-        const timerContainer = document.querySelector('.timer-container');
-        const timerEl = document.getElementById('timer');
+        
         if (!this.tutorMode) {
-            if (timerContainer) timerContainer.style.display = '';
-            if (timerEl) {
-                timerEl.textContent = this.formatTime(this.totalExamSeconds);
-                timerEl.classList.remove('warning', 'danger');
-            }
             this.startTimer();
-        } else {
-            if (timerContainer) timerContainer.style.display = 'none';
         }
         
         if (this.showScoreDuringExam) {
@@ -566,8 +551,7 @@ class ExamEngine {
 
         const q = this.questions[this.currentIndex];
         const isCorrect = this.answers[this.currentIndex] === q.shuffledCorrect;
-        this.showToast(isCorrect ? '✓ Correct!' : '✗ Incorrect', isCorrect ? 'correct' : 'incorrect');
-
+        
         this.submitted[this.currentIndex] = true;
         this.saveQuestionHistory(q.id, isCorrect, q.subject);
         
@@ -981,12 +965,12 @@ class ExamEngine {
         document.body.appendChild(modal);
     }
 
-    showToast(message, type = '') {
+    showToast(message) {
         const existing = document.querySelector('.toast');
         if (existing) existing.remove();
-
+        
         const toast = document.createElement('div');
-        toast.className = type ? `toast ${type}` : 'toast';
+        toast.className = 'toast';
         toast.textContent = message;
         document.body.appendChild(toast);
         
