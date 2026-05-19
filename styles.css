@@ -199,6 +199,14 @@ html[data-theme="amoled"] {
     --toggle-bg: #52796f;
     --toggle-active: #84a98c;
     --primary-accent: #84a98c;
+    --btn-grad-sum: linear-gradient(180deg, #2d4a2d 0%, #3d5a3d 100%);
+    --btn-grad-flash: linear-gradient(180deg, #1a3a2a 0%, #2a4a3a 100%);
+    --btn-grad-quiz: linear-gradient(180deg, #1a4a1a 0%, #2a5a2a 100%);
+    --btn-grad-scen: linear-gradient(180deg, #3a2a2a 0%, #4a3a3a 100%);
+    --border-sum: #3d5a3d; --text-sum: #d4ed9a;
+    --border-flash: #2a4a3a; --text-flash: #7ec8a0;
+    --border-quiz: #2a5a2a; --text-quiz: #8fbc8f;
+    --border-scen: #4a3a3a; --text-scen: #e8a0a0;
 }
 
 /* ---------- GLOBAL ---------- */

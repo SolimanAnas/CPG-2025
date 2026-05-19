@@ -217,14 +217,12 @@
         }
         .menu-card.special-card:hover .sc-arrow { opacity: 0.75; transform: translateY(-50%) translateX(2px); }
 
-        /* EMS special card label */
+        /* EMS special card label - hidden icon */
         .special-card[data-chapter="ems"] .sc-icon {
-            font-size: 2rem;
-            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
-            margin-bottom: 10px;
+            display: none;
         }
 
-        /* ── EMS tools button strip (Restored to exact stable code btn-action colors) ── */
+        /* ── EMS tools button strip (Match chapter view button style) ── */
         .ems-tools-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -249,27 +247,16 @@
             overflow: hidden;
             text-overflow: ellipsis;
             box-sizing: border-box;
+            text-align: center;
         }
-        .ems-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+        .ems-btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
         .ems-btn:active { transform: scale(0.97) translateY(0); }
         
-        /* Dark / Forest Themes - Darker / Richer Palette */
-        .ems-btn-aha   { background: rgba(214, 137, 16, 0.15); color: #d35400; border: 1px solid rgba(214, 137, 16, 0.4); } /* Dark Amber */
-        .ems-btn-drug  { background: rgba(40, 116, 166, 0.15); color: #2980b9; border: 1px solid rgba(40, 116, 166, 0.4); } /* Deep Blue */
-        .ems-btn-ecg   { background: rgba(30, 132, 73, 0.15);  color: #27ae60; border: 1px solid rgba(30, 132, 73, 0.4); }  /* Forest Green */
-        .ems-btn-more  { background: rgba(118, 68, 138, 0.15); color: #8e44ad; border: 1px solid rgba(118, 68, 138, 0.4); } /* Deep Purple */
-        
-        /* Light mode / Sepia Themes - Much darker text for high visibility */
-        [data-theme="light"] .ems-btn-aha, [data-theme="sepia"] .ems-btn-aha   { background: rgba(211, 84, 0, 0.1); color: #d35400; border: 1px solid rgba(211, 84, 0, 0.3); }
-        [data-theme="light"] .ems-btn-drug, [data-theme="sepia"] .ems-btn-drug { background: rgba(41, 128, 185, 0.1); color: #2980b9; border: 1px solid rgba(41, 128, 185, 0.3); }
-        [data-theme="light"] .ems-btn-ecg, [data-theme="sepia"] .ems-btn-ecg   { background: rgba(39, 174, 96, 0.1); color: #27ae60; border: 1px solid rgba(39, 174, 96, 0.3); }
-        [data-theme="light"] .ems-btn-more, [data-theme="sepia"] .ems-btn-more { background: rgba(142, 68, 173, 0.1); color: #8e44ad; border: 1px solid rgba(142, 68, 173, 0.3); }
-
-        /* AMOLED specific tweaks - Vivid borders and text to pop against pure black */
-        [data-theme="amoled"] .ems-btn-aha   { color: #f1c40f; border-color: rgba(243, 156, 18, 0.4); }
-        [data-theme="amoled"] .ems-btn-drug  { color: #74b9ff; border-color: rgba(116, 185, 255, 0.4); }
-        [data-theme="amoled"] .ems-btn-ecg   { color: #55efc4; border-color: rgba(85, 239, 196, 0.4); }
-        [data-theme="amoled"] .ems-btn-more  { color: #d6a2e8; border-color: rgba(214, 162, 232, 0.4); }
+        /* EMS buttons use the same CSS variables as chapter buttons for theme consistency */
+        .ems-btn-aha   { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
+        .ems-btn-drug  { background: var(--btn-grad-flash); color: var(--text-flash); border: 1px solid var(--border-flash); }
+        .ems-btn-ecg   { background: var(--btn-grad-quiz); color: var(--text-quiz); border: 1px solid var(--border-quiz); }
+        .ems-btn-more  { background: var(--btn-grad-scen); color: var(--text-scen); border: 1px solid var(--border-scen); }
 
         /* DCAS CPG expand button */
         .dcas-expand-btn {
@@ -1153,14 +1140,14 @@
             <div class="menu-grid" data-section="ems">
                 <div class="menu-card special-card"
                      data-chapter="ems" data-search="EMS Essentials Drug Calculations ECG GCS AHA Algorithms Tools">
-                    <span class="sc-icon">🔬</span>
+                    <span class="sc-icon"></span>
                     <h2>EMS Essentials</h2>
                     <p>Quick-access clinical tools</p>
                     <div class="ems-tools-grid">
-                        <a href="pages/aha.html"            class="ems-btn ems-btn-aha">❤️ AHA Algorithms</a>
-                        <a href="pages/drug-calculator.html" class="ems-btn ems-btn-drug">💊 Drug Calculator</a>
-                        <a href="pages/ecg.html"             class="ems-btn ems-btn-ecg">📈 ECG Simulator</a>
-                        <a href="pages/ems-tools.html"       class="ems-btn ems-btn-more">🔬 More Tools</a>
+                        <a href="pages/aha.html"            class="ems-btn ems-btn-aha">AHA Algorithms</a>
+                        <a href="pages/drug-calculator.html" class="ems-btn ems-btn-drug">Drug Calculator</a>
+                        <a href="pages/ecg.html"             class="ems-btn ems-btn-ecg">ECG Simulator</a>
+                        <a href="pages/ems-tools.html"       class="ems-btn ems-btn-more">More Tools</a>
                     </div>
                 </div>
             </div>`;
