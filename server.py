@@ -1,7 +1,13 @@
+import json
+import logging
 import os
+import re
 import secrets
+from datetime import datetime, timezone
 
 from flask import Flask, abort, jsonify, redirect, request, send_from_directory
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from flask_login import (
     LoginManager,
     UserMixin,
@@ -17,15 +23,68 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 db = SQLAlchemy()
 login_manager = LoginManager()
+limiter = Limiter(key_func=get_remote_address)
+
+# ── Audit logger (Secure SDLC §4.7(b), §3.9) ─────────────────────────────────
+# Emits one JSON line per security event to the "dcas.audit" logger.
+# Wire this logger to a monitored sink (e.g. CloudWatch, Datadog) in production.
+_audit_log = logging.getLogger("dcas.audit")
+
+
+def _audit(event: str, outcome: str, actor: str = "anonymous", detail: str = "") -> None:
+    """Write a structured audit record for auth and admin events."""
+    record = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "event": event,
+        "outcome": outcome,
+        "actor": actor,
+        "ip": request.remote_addr if request else "-",
+        "detail": detail,
+    }
+    _audit_log.info(json.dumps(record))
+
+
+# ── Password policy (Secure SDLC §4.2(b), ISR 5.2.1.5) ─────────────────────
+_MIN_PW_LEN = 10
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+# Top common passwords to block at registration (sampled from NCSC/HIBP top-1k).
+_COMMON_PASSWORDS = {
+    "password", "password1", "password123", "passw0rd",
+    "123456789", "1234567890", "12345678", "123456",
+    "qwerty123", "qwertyuiop", "iloveyou", "welcome1",
+    "admin1234", "letmein1", "monkey123", "dragon123",
+    "superman", "batman123", "football", "baseball",
+}
+
+
+def _validate_email(email: str) -> str | None:
+    """Return an error string, or None if valid."""
+    if not email or not _EMAIL_RE.match(email):
+        return "A valid email address is required."
+    if len(email) > 254:
+        return "Email address is too long."
+    return None
+
+
+def _validate_password(pw: str) -> str | None:
+    """Return an error string, or None if the password meets policy."""
+    if len(pw) < _MIN_PW_LEN:
+        return f"Password must be at least {_MIN_PW_LEN} characters."
+    if not re.search(r"[A-Z]", pw):
+        return "Password must include at least one uppercase letter."
+    if not re.search(r"[a-z]", pw):
+        return "Password must include at least one lowercase letter."
+    if not re.search(r"\d", pw):
+        return "Password must include at least one digit."
+    if pw.lower() in _COMMON_PASSWORDS:
+        return "Password is too common. Please choose a stronger password."
+    return None
 
 
 def create_app(test_config=None):
     app = Flask(__name__, static_folder=".", static_url_path="")
 
     # ── Secrets & config (Secure SDLC §3.4: no hard-coded secrets) ──────────
-    # SECRET_KEY must come from the environment. If it is unset we fall back to
-    # a per-process RANDOM key (never a predictable literal) so a missing
-    # config can never enable session-cookie forgery.
     secret_key = os.getenv("SECRET_KEY")
     if not secret_key:
         secret_key = secrets.token_hex(32)
@@ -44,12 +103,22 @@ def create_app(test_config=None):
     app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
     app.config["SESSION_COOKIE_SECURE"] = is_production
 
+    # ── Rate limiting (Secure SDLC §4.4(c), ISR 5.2.1.5) ────────────────────
+    # Production: set RATELIMIT_STORAGE_URI=redis://... for multi-worker safety.
+    # In test mode RATELIMIT_ENABLED is set to False (see test_config below).
+    app.config.setdefault(
+        "RATELIMIT_STORAGE_URI",
+        os.getenv("RATELIMIT_STORAGE_URI", "memory://"),
+    )
+    app.config.setdefault("RATELIMIT_HEADERS_ENABLED", True)
+
     if test_config:
         app.config.update(test_config)
 
     db.init_app(app)
     login_manager.init_app(app)
     login_manager.login_view = "index"
+    limiter.init_app(app)
 
     with app.app_context():
         db.create_all()
@@ -107,18 +176,36 @@ def _register_routes(app):
     def serve_static(path):
         return send_from_directory(".", path)
 
+    # ── Auth endpoints ────────────────────────────────────────────────────────
     @app.route("/api/register", methods=["POST"])
+    @limiter.limit("5 per minute; 20 per hour")
     def register():
         data = request.get_json(silent=True) or {}
-        email = data.get("username", "").strip()
-        password = data.get("password", "").strip()
-        full_name = data.get("full_name", "").strip()
-        professional_level = data.get("professional_level", "").strip()
+        email = (data.get("username") or "").strip()
+        password = (data.get("password") or "").strip()
+        full_name = (data.get("full_name") or "").strip()
+        professional_level = (data.get("professional_level") or "").strip()
 
-        if not email or not password:
-            return jsonify({"error": "Email and password are required"}), 400
+        # ── Input validation (Secure SDLC §4.2(b), ISR 8.3.1) ───────────────
+        err = _validate_email(email)
+        if err:
+            _audit("register", "fail", detail=f"invalid email: {err}")
+            return jsonify({"error": err}), 400
+
+        err = _validate_password(password)
+        if err:
+            _audit("register", "fail", actor=email, detail=f"weak password: {err}")
+            return jsonify({"error": err}), 400
+
+        if len(full_name) > 150:
+            return jsonify({"error": "Name is too long."}), 400
+
+        allowed_levels = {"Physician", "Paramedic", "EMT", "Admin", ""}
+        if professional_level and professional_level not in allowed_levels:
+            return jsonify({"error": "Invalid professional level."}), 400
 
         if User.query.filter_by(username=email).first():
+            _audit("register", "fail", actor=email, detail="duplicate email")
             return jsonify({"error": "An account with that email already exists"}), 400
 
         hashed_pw = generate_password_hash(password)
@@ -131,15 +218,21 @@ def _register_routes(app):
         db.session.add(new_user)
         db.session.commit()
 
+        _audit("register", "success", actor=email)
         return jsonify({"message": "Account created successfully! You can now log in."}), 201
 
     @app.route("/api/login", methods=["POST"])
+    @limiter.limit("10 per minute; 50 per hour")
     def login():
         data = request.get_json(silent=True) or {}
-        user = User.query.filter_by(username=data.get("username")).first()
+        username = (data.get("username") or "").strip()
+        password = data.get("password") or ""
 
-        if user and check_password_hash(user.password, data.get("password", "")):
+        user = User.query.filter_by(username=username).first()
+
+        if user and check_password_hash(user.password, password):
             login_user(user)
+            _audit("login", "success", actor=username)
             return jsonify(
                 {
                     "message": "Logged in successfully",
@@ -150,9 +243,11 @@ def _register_routes(app):
             )
 
         # Generic message — do not reveal whether the user exists (anti-enumeration).
+        _audit("login", "fail", actor=username or "unknown")
         return jsonify({"error": "Invalid username or password"}), 401
 
     @app.route("/api/google-login", methods=["POST"])
+    @limiter.limit("10 per minute; 50 per hour")
     def google_login():
         data = request.get_json(silent=True) or {}
         token = data.get("credential")
@@ -176,8 +271,10 @@ def _register_routes(app):
                 user = User(username=email, password=random_pw, full_name=name)
                 db.session.add(user)
                 db.session.commit()
+                _audit("google_register", "success", actor=email)
 
             login_user(user)
+            _audit("google_login", "success", actor=email)
             return jsonify(
                 {
                     "message": "Logged in successfully",
@@ -187,12 +284,15 @@ def _register_routes(app):
                 }
             )
         except ValueError:
+            _audit("google_login", "fail", detail="invalid token")
             return jsonify({"error": "Google authentication failed."}), 401
 
     @app.route("/api/logout")
     @login_required
     def logout():
+        actor = current_user.username if current_user.is_authenticated else "unknown"
         logout_user()
+        _audit("logout", "success", actor=actor)
         return redirect("/login.html")
 
     # ── Admin API (Secure SDLC §4.4(c): authn + authz required) ─────────────
@@ -200,9 +300,11 @@ def _register_routes(app):
     @login_required
     def get_all_users():
         if not _is_admin(current_user):
+            _audit("admin_list_users", "denied", actor=current_user.username)
             abort(403)
 
         users = User.query.all()
+        _audit("admin_list_users", "success", actor=current_user.username)
         return jsonify(
             [
                 {
@@ -219,6 +321,7 @@ def _register_routes(app):
     @login_required
     def update_user_role(user_id):
         if not _is_admin(current_user):
+            _audit("admin_update_role", "denied", actor=current_user.username)
             abort(403)
 
         data = request.get_json(silent=True) or {}
@@ -230,23 +333,43 @@ def _register_routes(app):
         if not user:
             return jsonify({"error": "User not found"}), 404
 
+        old_role = user.role
         user.role = new_role
         db.session.commit()
+        _audit(
+            "admin_update_role",
+            "success",
+            actor=current_user.username,
+            detail=f"user={user.username} {old_role!r}→{new_role!r}",
+        )
         return jsonify({"message": "Role updated", "id": user.id, "role": user.role})
 
     @app.route("/api/admin/users/<int:user_id>", methods=["DELETE"])
     @login_required
     def delete_user(user_id):
         if not _is_admin(current_user):
+            _audit("admin_delete_user", "denied", actor=current_user.username)
             abort(403)
 
         user = db.session.get(User, user_id)
         if not user:
             return jsonify({"error": "User not found"}), 404
 
+        deleted_email = user.username
         db.session.delete(user)
         db.session.commit()
+        _audit(
+            "admin_delete_user",
+            "success",
+            actor=current_user.username,
+            detail=f"deleted={deleted_email}",
+        )
         return jsonify({"message": "User deleted", "id": user_id})
+
+    @app.errorhandler(429)
+    def rate_limit_exceeded(e):
+        _audit("rate_limit", "blocked", detail=str(e.description))
+        return jsonify({"error": "Too many requests. Please try again later."}), 429
 
     @app.errorhandler(403)
     def forbidden(e):
