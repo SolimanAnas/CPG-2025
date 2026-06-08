@@ -1,5 +1,7 @@
 import pytest
-from server import create_app, db as _db
+
+from server import create_app
+from server import db as _db
 
 
 @pytest.fixture

@@ -2,9 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, "claude/**"]
   pull_request:
-    branches: [main]
 
 jobs:
   lint-and-test:
@@ -35,14 +34,27 @@ jobs:
           DATABASE_URL: sqlite:///:memory:
           GOOGLE_CLIENT_ID: ci-test-id
 
+      # ── Security scanning (Secure SDLC §5/§7: Static Source Code Scanning) ─
+      - name: SAST — Bandit (Python static analysis)
+        run: |
+          pip install bandit
+          bandit -r server.py scripts/ -ll
+
+      - name: Dependency vulnerability scan — pip-audit
+        run: |
+          pip install pip-audit
+          pip-audit -r requirements.txt
+
       # ── JavaScript ────────────────────────────────────────
       - name: Set up Node 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # ESLint is pinned to v8 because the project uses the legacy
+      # .eslintrc.json config format (ESLint v9 removed --no-eslintrc).
       - name: Install ESLint & Prettier
-        run: npm install --save-dev eslint prettier
+        run: npm install --save-dev eslint@8 prettier
 
       - name: Lint JavaScript with ESLint
         run: npx eslint --no-eslintrc -c .eslintrc.json "*.js" "src/**/*.js"

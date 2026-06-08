@@ -1,5 +1,4 @@
 """Smoke tests for the DCAS CPG Flask API."""
-import json
 
 
 class TestIndex:
@@ -85,19 +84,38 @@ class TestLogout:
 
 
 class TestAdminUsers:
-    def test_admin_users_empty(self, client):
+    def test_admin_users_requires_auth(self, client):
+        """Anonymous access to the admin API must be denied (no PII leak)."""
         resp = client.get("/api/admin/users")
-        assert resp.status_code == 200
-        assert resp.get_json() == []
+        # Unauthenticated → Flask-Login redirects to the login view (302).
+        assert resp.status_code in (302, 401)
 
-    def test_admin_users_with_data(self, client):
+    def test_admin_users_forbidden_for_regular_user(self, client):
+        """A signed-in non-admin must be forbidden (broken-access-control fix)."""
+        client.post("/api/register", json={
+            "username": "regular@dcas.ae",
+            "password": "secure123",
+            "professional_level": "Paramedic"
+        })
+        client.post("/api/login", json={
+            "username": "regular@dcas.ae", "password": "secure123"
+        })
+        resp = client.get("/api/admin/users")
+        assert resp.status_code == 403
+
+    def test_admin_can_list_users(self, client):
+        """An authenticated admin (role == 'Admin') can list users."""
         client.post("/api/register", json={
             "username": "admin-test@dcas.ae",
-            "password": "pw",
+            "password": "secure123",
             "full_name": "Admin Test",
             "professional_level": "Admin"
         })
+        client.post("/api/login", json={
+            "username": "admin-test@dcas.ae", "password": "secure123"
+        })
         resp = client.get("/api/admin/users")
+        assert resp.status_code == 200
         data = resp.get_json()
         assert len(data) >= 1
         assert any(u["email"] == "admin-test@dcas.ae" for u in data)

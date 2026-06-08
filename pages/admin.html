@@ -604,6 +604,12 @@
     tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;"><i class="fas fa-circle-notch fa-spin"></i> Syncing...</td></tr>';
     try {
       const res = await fetch('/api/admin/users');
+      // Access control is enforced by the server. A non-admin (or signed-out)
+      // user receives 401/403 — send them to the login page.
+      if (res.status === 401 || res.status === 403) {
+        window.location.replace('/login.html');
+        return;
+      }
       if (!res.ok) throw new Error('HTTP error');
       allUsers = await res.json();
       updateStats(allUsers);
