@@ -169,7 +169,10 @@ class TestAdminUsers:
         _login(client, "deleter@dcas.ae")
         users = client.get("/api/admin/users").get_json()
         target = next(u for u in users if u["email"] == "todelete@dcas.ae")
-        resp = client.delete(f"/api/admin/users/{target['id']}")
+        resp = client.delete(
+            f"/api/admin/users/{target['id']}",
+            headers={"X-Requested-With": "XMLHttpRequest"},
+        )
         assert resp.status_code == 200
         users_after = client.get("/api/admin/users").get_json()
         assert not any(u["email"] == "todelete@dcas.ae" for u in users_after)
@@ -229,6 +232,42 @@ class TestAuditLogging:
         events = [json.loads(r.message) for r in records]
         assert any(e["event"] == "admin_list_users" and e["outcome"] == "success"
                    for e in events)
+
+
+# ── CSRF guard (P2-7, §4.2(b)) ───────────────────────────────────────────────
+class TestCsrfGuard:
+    def test_post_without_json_content_type_rejected(self, client):
+        """A plain-form POST to an API endpoint must be rejected (CSRF)."""
+        resp = client.post(
+            "/api/login",
+            data="username=x&password=y",
+            content_type="application/x-www-form-urlencoded",
+            headers={"X-Requested-With": "XMLHttpRequest"},
+        )
+        assert resp.status_code == 400
+
+    def test_post_without_xrw_header_rejected(self, client):
+        """A POST missing X-Requested-With must be rejected."""
+        resp = client.post(
+            "/api/login",
+            json={"username": "x@x.ae", "password": "y"},
+            headers={"X-Requested-With": ""},  # blank — override the fixture default
+        )
+        assert resp.status_code == 400
+
+    def test_valid_json_post_allowed(self, client):
+        """A well-formed JSON POST with the CSRF headers must reach the handler."""
+        resp = client.post(
+            "/api/login",
+            json={"username": "noone@dcas.ae", "password": "whatever"},
+            headers={"X-Requested-With": "XMLHttpRequest"},
+        )
+        # Handler reached — 401 from wrong credentials, not 400 from CSRF guard.
+        assert resp.status_code == 401
+
+    def test_get_requests_not_blocked(self, client):
+        """GET requests are never subject to the CSRF guard."""
+        assert client.get("/api/admin/users").status_code in (302, 401)
 
 
 # ── Static files ──────────────────────────────────────────────────────────────

@@ -124,6 +124,7 @@ def create_app(test_config=None):
         db.create_all()
 
     _register_routes(app)
+    _register_csrf_guard(app)
     _register_security_headers(app)
 
     return app
@@ -378,6 +379,34 @@ def _register_routes(app):
     @app.errorhandler(404)
     def not_found(e):
         return send_from_directory(app.static_folder or ".", "404.html"), 404
+
+
+# ==========================================
+# CSRF GUARD (Secure SDLC §4.2(b), P2-7)
+# ==========================================
+# Defense-in-depth on top of SameSite=Lax cookies:
+#  1. SameSite=Lax blocks cross-site POST/PATCH/DELETE from carrying cookies.
+#  2. We additionally require Content-Type: application/json (browsers cannot
+#     send cross-site JSON POSTs without a CORS preflight) and the custom
+#     X-Requested-With header (simple cross-site requests cannot set custom
+#     headers without a preflight that would be rejected by absent CORS config).
+def _register_csrf_guard(app):
+    @app.before_request
+    def csrf_guard():
+        if request.method not in ("POST", "PATCH", "DELETE", "PUT"):
+            return
+        if not request.path.startswith("/api/"):
+            return
+        xrw = request.headers.get("X-Requested-With", "")
+        # Body-carrying methods must additionally declare JSON content.
+        # DELETE has no body so Content-Type is typically absent.
+        ct = request.content_type or ""
+        needs_ct = request.method in ("POST", "PATCH", "PUT")
+        ct_ok = not needs_ct or "application/json" in ct
+        if xrw != "XMLHttpRequest" or not ct_ok:
+            detail = f"method={request.method} path={request.path}"
+            _audit("csrf_guard", "blocked", detail=detail)
+            return jsonify({"error": "Invalid request"}), 400
 
 
 # ==========================================

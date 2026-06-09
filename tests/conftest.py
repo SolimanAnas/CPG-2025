@@ -26,7 +26,15 @@ def app():
 
 @pytest.fixture
 def client(app):
-    return app.test_client()
+    # Set default headers that the real browser clients send so that the CSRF
+    # guard (Content-Type + X-Requested-With) passes in all API tests.
+    # Individual tests can override per-request headers when testing the guard
+    # itself.
+    c = app.test_client()
+    c.environ_base = {
+        "HTTP_X_REQUESTED_WITH": "XMLHttpRequest",
+    }
+    return c
 
 
 @pytest.fixture

@@ -470,7 +470,10 @@
     try {
       const res = await fetch('/api/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
         body: JSON.stringify({ username, password }),
         signal: AbortSignal.timeout(8000)
       });
@@ -501,7 +504,10 @@
     try {
       const res = await fetch('/api/google-login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
         body: JSON.stringify({ credential: response.credential }),
         signal: AbortSignal.timeout(8000)
       });

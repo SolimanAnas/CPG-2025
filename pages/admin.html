@@ -445,15 +445,7 @@
   let allUsers = [];
   let pendingDeleteId = null;
 
-  // Helper: show toast message
-  function showToast(message, isError = false) {
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.style.borderLeftColor = isError ? '#EF4444' : '#10B981';
-    toast.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}"></i> ${message}`;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3000);
-  }
+  // showToast is defined below escapeHtml to keep the secure DOM-based version.
 
   // Get role badge class
   function getRoleClass(role) {
@@ -560,14 +552,39 @@
     });
   }
   
-  function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+  // escapeHtml covers element content AND attribute values (Secure SDLC §4.4(a))
+  function escapeHtml(str) {
+    return String(str == null ? '' : str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;');
+  }
+
+  // showToast builds the DOM rather than assigning innerHTML so that
+  // server-returned error strings cannot inject markup. (Secure SDLC §4.4(a))
+  function showToast(message, isError = false) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.style.borderLeftColor = isError ? '#EF4444' : '#10B981';
+    const icon = document.createElement('i');
+    icon.className = `fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}`;
+    toast.appendChild(icon);
+    toast.appendChild(document.createTextNode(' ' + message));
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+  }
   
   // API: update user role
   async function updateUserRole(userId, newRole) {
     try {
       const res = await fetch(`/api/admin/users/${userId}/role`, {
         method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
         body: JSON.stringify({ role: newRole })
       });
       if (res.ok) {
@@ -585,7 +602,10 @@
   // API: delete user
   async function deleteUser(userId) {
     try {
-      const res = await fetch(`/api/admin/users/${userId}`, { method: 'DELETE' });
+      const res = await fetch(`/api/admin/users/${userId}`, {
+        method: 'DELETE',
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      });
       if (res.ok) {
         showToast('User deleted successfully');
         await fetchUsers();
@@ -603,7 +623,9 @@
     const tbody = document.getElementById('userTableBody');
     tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;"><i class="fas fa-circle-notch fa-spin"></i> Syncing...</td></tr>';
     try {
-      const res = await fetch('/api/admin/users');
+      const res = await fetch('/api/admin/users', {
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      });
       // Access control is enforced by the server. A non-admin (or signed-out)
       // user receives 401/403 — send them to the login page.
       if (res.status === 401 || res.status === 403) {
