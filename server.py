@@ -376,6 +376,22 @@ def _register_routes(app):
     def forbidden(e):
         return jsonify({"error": "Forbidden"}), 403
 
+    @app.route("/api/health")
+    @limiter.exempt
+    def health_check():
+        # Liveness/readiness probe for monitoring. Verifies DB connectivity.
+        try:
+            db.session.execute(db.text("SELECT 1"))
+            db_ok = True
+        except Exception:
+            _audit("health_check", "db_probe_failed")
+            db_ok = False
+        status = "healthy" if db_ok else "degraded"
+        return (
+            jsonify({"status": status, "database": "up" if db_ok else "down"}),
+            200 if db_ok else 503,
+        )
+
     @app.errorhandler(404)
     def not_found(e):
         return send_from_directory(app.static_folder or ".", "404.html"), 404

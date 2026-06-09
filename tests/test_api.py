@@ -205,6 +205,16 @@ class TestSecurityHeaders:
         assert "frame-ancestors" in csp
 
 
+# ── Health check ─────────────────────────────────────────────────────────────
+class TestHealthCheck:
+    def test_health_returns_ok(self, client):
+        resp = client.get("/api/health")
+        assert resp.status_code == 200
+        data = resp.get_json()
+        assert data["status"] == "healthy"
+        assert data["database"] == "up"
+
+
 # ── Audit logging (P2-5, §4.7(b)) ────────────────────────────────────────────
 class TestAuditLogging:
     def test_successful_login_is_audited(self, client, caplog):
