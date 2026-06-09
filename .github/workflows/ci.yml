@@ -31,7 +31,7 @@ jobs:
         run: python -m pytest tests/ -v
         env:
           SECRET_KEY: ci-test-key
-          DATABASE_URL: sqlite:///:memory:
+          DATABASE_URL: "sqlite:///:memory:"
           GOOGLE_CLIENT_ID: ci-test-id
 
       # ── Security scanning (Secure SDLC §5/§7: Static Source Code Scanning) ─
