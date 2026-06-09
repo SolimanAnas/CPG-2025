@@ -40,10 +40,10 @@ def generate_course_page(template, course):
     # 2. Update the JSON file paths (Form A -> 1.json, Form B -> 2.json, etc.)
     html = html.replace(f"src/{course['shortTitle']}/exam_a.json", f"src/{course['shortTitle']}/1.json")
     html = html.replace(f"{course['shortTitle']} Exam — Form A", f"{course['shortTitle']} Exam — Form 1")
-    
+
     html = html.replace(f"src/{course['shortTitle']}/exam_b.json", f"src/{course['shortTitle']}/2.json")
     html = html.replace(f"{course['shortTitle']} Exam — Form B", f"{course['shortTitle']} Exam — Form 2")
-    
+
     html = html.replace(f"src/{course['shortTitle']}/exam_c.json", f"src/{course['shortTitle']}/3.json")
     html = html.replace(f"{course['shortTitle']} Exam — Form C", f"{course['shortTitle']} Exam — Form 3")
 
@@ -74,11 +74,11 @@ def main():
             continue
 
         output_path = os.path.join(OUTPUT_DIR, course['link'])
-        
+
         print(f"\n🔄 Generating: {course['title']}")
         print(f"   → Output: {course['link']}")
         print(f"   → Available: {'Yes' if course['available'] else 'No (placeholder)'}")
-        
+
         try:
             content = generate_course_page(template, course)
             with open(output_path, 'w', encoding='utf-8') as f:
@@ -89,20 +89,20 @@ def main():
             print(f"   ❌ Error: {e}")
 
     # Create src folders
-    print(f"\n📁 Creating src folders...")
+    print("\n📁 Creating src folders...")
     create_src_folders(COURSES, OUTPUT_DIR)
 
     # Summary
-    print(f"\n" + "=" * 50)
-    print(f"✅ Generation complete!")
+    print("\n" + "=" * 50)
+    print("✅ Generation complete!")
     print(f"   • Generated: {generated} new course pages")
     print(f"   • Template: {TEMPLATE_PATH}")
     print(f"   • Output directory: {OUTPUT_DIR}")
-    print(f"\n📝 Next steps:")
-    print(f"   1. Place JSON exam files (1.json, 2.json) in each course's src/ folder")
-    print(f"   2. Update courses.html to link to new pages")
-    print(f"   3. Test each generated page in a browser")
-    print(f"\n💡 Tip: Set 'available: True' in COURSES config when ready to publish")
+    print("\n📝 Next steps:")
+    print("   1. Place JSON exam files (1.json, 2.json) in each course's src/ folder")
+    print("   2. Update courses.html to link to new pages")
+    print("   3. Test each generated page in a browser")
+    print("\n💡 Tip: Set 'available: True' in COURSES config when ready to publish")
 
 # This tells Python to execute the main() function when you run the file
 if __name__ == "__main__":

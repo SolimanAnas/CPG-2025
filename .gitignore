@@ -1,0 +1,36 @@
+# ── Secrets & local config (Secure SDLC §3.4) ──────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+
+# ── Databases / PII — never commit (Secure SDLC §8.2) ──────────────────────
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+venv/
+.venv/
+env/
+
+# ── Node / tooling ─────────────────────────────────────────────────────────
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# ── OS / editor ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

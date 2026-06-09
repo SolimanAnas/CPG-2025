@@ -357,15 +357,11 @@
 (function () {
   'use strict';
 
-  
-  const ADMIN_HASH = {
-    username: '547126b459623298ad612235081044b3aaf8cb41ddace63bddfa5fe9443914de',
-    password: '5fb2127d937fec06f2c1c0569a9d8606da613ad8881dbfe4a9baeb349fea7d7e'
-  };
-  // Salt must match the python derivation above
-  const PBKDF2_SALT   = new TextEncoder().encode('dcas_cpg_2025_salt');
-  const PBKDF2_ITERS  = 100000;
-
+  // NOTE: Authentication is performed exclusively server-side (POST /api/login
+  // and /api/google-login). No credentials, hashes, or admin secrets live in
+  // the client. The AUTH_KEY below is only a UX hint for the front-end and is
+  // NOT a security boundary — server sessions (HttpOnly cookies) are the
+  // source of truth for access control. (Secure SDLC §4.4(c))
   const AUTH_KEY = 'dcas_local_auth';
   const SESSION_TTL_MS = 24 * 60 * 60 * 1000; // 24 h
 
@@ -395,24 +391,6 @@
   window.addEventListener('online',  syncOfflineBadge);
   window.addEventListener('offline', syncOfflineBadge);
   syncOfflineBadge();
-
-  // ── Admin mode: 7 logo taps  ──────────────────────────────────────────────
-  let adminTaps = 0, adminTimer = null;
-  let adminMode = false;
-  logoRing.addEventListener('click', () => {
-    adminTaps++;
-    clearTimeout(adminTimer);
-    adminTimer = setTimeout(() => { adminTaps = 0; }, 3000);
-    if (adminTaps >= 7) {
-      adminTaps = 0;
-      adminMode = !adminMode;
-      card.classList.toggle('admin-mode', adminMode);
-      subtitle.textContent = adminMode ? '⬡ Admin Access' : 'CPG Provider Login';
-      usernameEl.placeholder = adminMode ? 'admin username' : 'Email or username';
-      usernameEl.type = adminMode ? 'text' : 'text';
-      if (adminMode) usernameEl.focus();
-    }
-  });
 
   // ── Password visibility toggle ────────────────────────────────────────────
   pwToggle.addEventListener('click', () => {
@@ -461,39 +439,7 @@
   }
 
   // ─────────────────────────────────────────────────────────────────────────
-  //  CRYPTO: PBKDF2-SHA256 derivation (matches Python hashlib.pbkdf2_hmac)
-  // ─────────────────────────────────────────────────────────────────────────
-  async function pbkdf2Hex(plain) {
-    const keyMat = await crypto.subtle.importKey(
-      'raw', new TextEncoder().encode(plain),
-      'PBKDF2', false, ['deriveBits']
-    );
-    const bits = await crypto.subtle.deriveBits(
-      { name: 'PBKDF2', hash: 'SHA-256', salt: PBKDF2_SALT, iterations: PBKDF2_ITERS },
-      keyMat, 256
-    );
-    return Array.from(new Uint8Array(bits)).map(b => b.toString(16).padStart(2, '0')).join('');
-  }
-
-  // constant-time string comparison (prevents timing attacks)
-  function safeEqual(a, b) {
-    if (a.length !== b.length) return false;
-    let diff = 0;
-    for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
-    return diff === 0;
-  }
-
-  // ─────────────────────────────────────────────────────────────────────────
-  //  PLAN B — Local admin authentication (runs when server is unavailable
-  //  OR when adminMode is active).  Never stores plaintext.
-  // ─────────────────────────────────────────────────────────────────────────
-  async function tryLocalAdmin(username, password) {
-    const [uHash, pHash] = await Promise.all([pbkdf2Hex(username), pbkdf2Hex(password)]);
-    return safeEqual(uHash, ADMIN_HASH.username) && safeEqual(pHash, ADMIN_HASH.password);
-  }
-
-  // ─────────────────────────────────────────────────────────────────────────
-  //  FORM SUBMIT
+  //  FORM SUBMIT — server is the single source of truth for authentication
   // ─────────────────────────────────────────────────────────────────────────
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -511,54 +457,36 @@
     usernameEl.classList.remove('has-error');
     passwordEl.classList.remove('has-error');
 
+    if (isOffline) {
+      showMsg('❌ You are offline. Sign-in requires a connection.');
+      return;
+    }
+
     setLoading(true);
     showMsg('Authenticating…', 'ok');
 
-    // ── Plan A: try server ────────────────────────────────────────────────
-    let serverOk = false;
-    if (!isOffline) {
-      try {
-        const res = await fetch('/api/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password }),
-          signal: AbortSignal.timeout(5000) // 5 s timeout
-        });
-        const data = await res.json();
-        if (res.ok) {
-          setLocalSession(data.role || 'user', { email: data.email });
-          serverOk = true;
-          redirect(data.redirect || 'index.html');
-          return; // done
-        } else if (res.status === 401) {
-          // Server responded — credentials are simply wrong
-          showMsg('❌ ' + (data.error || 'Invalid credentials.'));
-          setLoading(false);
-          return;
-        }
-        // Other server error → fall through to Plan B
-      } catch (_) {
-        // Network failure / timeout → fall through to Plan B
-      }
-    }
-
-    // ── Plan B: local admin hash check ────────────────────────────────────
+    // Authentication is always decided by the server. There is no client-side
+    // fallback — that would be a security bypass. (Secure SDLC §4.4(c))
     try {
-      const isAdmin = await tryLocalAdmin(username, password);
-      if (isAdmin) {
-        setLocalSession('admin', { localAuth: true });
-        redirect('index.html');
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: JSON.stringify({ username, password }),
+        signal: AbortSignal.timeout(8000)
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        setLocalSession(data.role || 'user', { email: data.email });
+        redirect(data.redirect || 'index.html');
       } else {
-        // Not admin — show contextual error
-        if (isOffline) {
-          showMsg('❌ Offline: only admin credentials accepted locally.');
-        } else {
-          showMsg('❌ Server unavailable. Non-admin login requires connectivity.');
-        }
+        showMsg('❌ ' + (data.error || 'Invalid username or password.'));
         setLoading(false);
       }
-    } catch (err) {
-      showMsg('❌ Authentication error. Please try again.');
+    } catch (_) {
+      showMsg('❌ Server unreachable. Please try again when you have a connection.');
       setLoading(false);
     }
   });
@@ -576,7 +504,10 @@
     try {
       const res = await fetch('/api/google-login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
         body: JSON.stringify({ credential: response.credential }),
         signal: AbortSignal.timeout(8000)
       });

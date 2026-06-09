@@ -1,0 +1,25 @@
+# CODEOWNERS — DCAS CPG 2025
+# Any PR that modifies these files requires review from @security-reviewer
+# (Information Security Section GitHub team) before merge.
+# See docs/security/SOURCE_CODE_VC_PROCESS.md §4 for the full policy.
+
+# Security-sensitive backend
+/server.py                      @security-reviewer
+/requirements.txt               @security-reviewer
+/Procfile                       @security-reviewer
+
+# CI/CD pipeline
+/.github/                       @security-reviewer
+
+# Authentication and admin UI
+/pages/login.html               @security-reviewer
+/pages/admin.html               @security-reviewer
+/pages/signup.html              @security-reviewer
+
+# Security documentation
+/docs/security/                 @security-reviewer
+
+# Root security config
+/.gitignore                     @security-reviewer
+/pyproject.toml                 @security-reviewer
+/SECURITY.md                    @security-reviewer
