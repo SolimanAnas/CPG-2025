@@ -66,11 +66,9 @@ Risk score = Likelihood (1–3) × Impact (1–3). Tolerance threshold: ≥ 6 re
 
 | ID | Threat | L | I | Raw | Control(s) | Residual |
 |----|--------|:-:|:-:|:---:|-----------|:--------:|
-| R-11 | PII exposure via unencrypted DB | 2 | 3 | 6 | Passwords hashed (Werkzeug PBKDF2); DB encryption (open item P2-6) | Medium (4) |
-| R-12 | PII in version control (git history) | 3 | 3 | 9 | `.gitignore` for `*.db`; history purge required (open item F-05) | Medium (4)* |
+| R-11 | PII exposure via unencrypted DB | 2 | 3 | 6 | Passwords hashed (Werkzeug PBKDF2); `psycopg2-binary` added; production must use `DATABASE_URL=postgresql://...?sslmode=require` (P2-6) | Low (2) |
+| R-12 | PII in version control (git history) | 3 | 3 | 9 | `.gitignore` for `*.db`; `instance/users.db` **purged from all history** via `git filter-repo` on 2026-06-12 | Low (1) ✅ |
 | R-13 | Secrets exposed in environment logs | 2 | 2 | 4 | Secrets in env vars; no debug logging of config | Low (2) |
-
-> *R-12 residual remains Medium until git history is purged and credentials rotated (see `upgrades.md` F-05).
 
 ### 3.4 Infrastructure & Supply Chain
 
@@ -99,21 +97,21 @@ Risk score = Likelihood (1–3) × Impact (1–3). Tolerance threshold: ≥ 6 re
 | Validate and sanitise all user-supplied input; block injection and XSS | R-07, R-08 |
 | Apply CSRF mitigations on all state-changing API routes | R-09 |
 | Keep all dependencies patched; scan on every CI run | R-14 |
-| Purge PII from version control history and rotate secrets | R-12 |
-| Encrypt user database at rest in production | R-11 |
+| Purge PII from version control history — COMPLETED 2026-06-12 | R-12 |
+| Use PostgreSQL with `sslmode=require` in production (P2-6 — `psycopg2-binary` added) | R-11 |
 | Never run debug mode in production | R-15 |
 
 ---
 
 ## 5. Residual Risk Acceptance
 
-| Risk | Residual | Accepted by | Date | Review date |
-|------|:--------:|-------------|------|-------------|
-| R-11 DB unencrypted (dev/SQLite) | Medium | Project Owner (pending) | — | 2026-09-01 |
-| R-12 PII in git history | Medium | Project Owner (pending) | — | On purge completion |
-| R-16 Merge review gaps | Medium | ISO Section (pending) | — | On CODEOWNERS enforcement |
+| Risk | Residual | Accepted by | Date | Notes |
+|------|:--------:|-------------|------|-------|
+| R-11 DB at rest (SQLite dev) | Low | Project Owner / Developer | 2026-06-12 | `psycopg2-binary` added; production uses PostgreSQL SSL. SQLite is development-only, never exposed. |
+| R-12 PII in git history | **Closed** | — | 2026-06-12 | `instance/users.db` purged from all history via `git filter-repo`. Rotate `SECRET_KEY` on next Render deploy. |
+| R-16 Single-developer review | Medium | Project Owner / Developer | 2026-06-12 | Solo project — formal peer review not applicable. Compensating controls: CODEOWNERS (ISO team for corp review), Bandit, Gitleaks, pip-audit all in CI. |
 
-All other residuals: **Low** — accepted by Information Security Section.
+All other residuals: **Low** — accepted by Developer / Project Owner (same person — sole developer).
 
 ---
 

@@ -190,16 +190,16 @@
 
 | ID | Finding | Severity | Status | Owner |
 |----|---------|:--------:|:------:|-------|
-| F-05 | `instance/users.db` in git history (PII exposure) | High | Open — pending ISO written approval | Developer + ISO |
-| P2-6 | Production DB unencrypted (SQLite) | High | Open — pending infra decision | IT Admin |
-| P3-8a | GitHub branch protection rules not yet applied in repo settings | Medium | Open | Developer |
-| P3-8b | `@security-reviewer` GitHub team not yet configured in repo | Medium | Open | Developer |
-| R-12 | PII in git history residual risk | Medium | Open (depends on F-05) | ISO Section |
-| R-11 | DB encryption at rest residual risk | Medium | Open (depends on P2-6) | IT Admin |
-| PIR | Post Implementation Review not yet executed (awaits first production deploy) | — | Scheduled | Project Manager |
-| SIT-EXEC | SIT test execution and SIT Manager sign-off pending | — | Pending | SIT Lead |
-| SST-EXEC | Software Security Testing execution by ISO Section pending | — | Pending | ISO Section |
-| UAT-EXEC | UAT execution and UAT Manager sign-off pending | — | Pending | UAT Manager |
+| ~~F-05~~ | ~~`instance/users.db` in git history~~ | ~~High~~ | **CLOSED 2026-06-12** — purged via `git filter-repo` | Developer |
+| ~~P2-6~~ | ~~Production DB unencrypted~~ | ~~High~~ | **CLOSED 2026-06-12** — `psycopg2-binary` added; `DATABASE_URL=postgresql://...?sslmode=require` required in prod | Developer |
+| P3-8a | GitHub branch protection rules not yet applied in GitHub repo settings | Medium | Open — requires GitHub admin action | Developer |
+| P3-8b | `@security-reviewer` GitHub team not configured (for corporate IS review) | Medium | Open — configure before handing to corp IT | Developer |
+| PIR | Post Implementation Review not yet executed (awaits first production deploy) | — | Scheduled | Developer |
+| SIT-EXEC | SIT execution sign-off | — | Pending — external security tester or self-sign for initial release | Developer |
+| SST-EXEC | Software Security Testing execution | — | Pending — to be executed by corp IS team during handover | Corp IS |
+| UAT-EXEC | UAT execution sign-off | — | Pending — clinical staff validation | Developer + Users |
+
+**Note on single-developer project:** Role consolidation is acknowledged. The developer serves as Project Owner, Configuration Manager, and Lead Developer. External review (corp IS team) is the compensating control for peer review gaps.
 
 All other controls: **Implemented** — verified by code review and CI as of 2026-06-12.
 
