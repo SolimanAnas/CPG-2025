@@ -1,10 +1,10 @@
 # Compliance Traceability Matrix — DCAS CPG 2025
 
 **Policy ref:** DCAS Secure SDLC Policy and Procedure v1.1 (07-02-2025) — all sections
-**Document ref:** CPG2025-CTM-001 · Version 1.0 · 2026-06-09
+**Document ref:** CPG2025-CTM-001 · Version 1.2 · 2026-06-12
 **Classification:** Shared – Confidential
 
-> This matrix maps every Secure SDLC policy control to the implementation evidence in this repository. "Status" reflects compliance as of 2026-06-09.
+> This matrix maps every Secure SDLC policy control to the implementation evidence in this repository. "Status" reflects compliance as of 2026-06-12.
 
 ---
 
@@ -169,18 +169,39 @@
 
 ---
 
-## 13. Open Items Summary
+## 13. Additional Controls Added (2026-06-12)
+
+| Control | Evidence | Policy ref | Status |
+|---------|---------|-----------|:------:|
+| SAD Behavioural/Process view | `SAD.md §6` — 5 sequence flows | §6 SAD | ✅ |
+| SAD Implementation view | `SAD.md §7` — module/file mapping | §6 SAD | ✅ |
+| SAD Infrastructure view | `SAD.md §8` — network topology, cloud-equivalent VLANs | §6 SAD | ✅ |
+| Post Implementation Review procedure | `POST_IMPLEMENTATION_REVIEW.md` | §8 | ✅ |
+| Annual internal audit procedure | `ANNUAL_AUDIT_PROCEDURE.md` | §11 | ✅ |
+| User manual | `docs/user/USER_MANUAL.md` | §8 UAT/Production | ✅ |
+| Operations manual | `docs/user/OPERATIONS_MANUAL.md` | §8 Production | ✅ |
+| Installation/deployment manual | `docs/user/INSTALLATION_MANUAL.md` | §8 Production | ✅ |
+| Gitleaks secret scanning in CI | `.github/workflows/ci.yml` — `gitleaks-action@v2` | §3.4 | ✅ |
+| Software version label | `server.py: __version__ = "1.0.0"` + git tag `v1.0.0` | §8 Production Release §5 | ✅ |
+
+---
+
+## 14. Open Items Summary
 
 | ID | Finding | Severity | Status | Owner |
 |----|---------|:--------:|:------:|-------|
-| F-05 | `instance/users.db` in git history (PII exposure) | High | Open — pending approval | Developer + ISO |
+| F-05 | `instance/users.db` in git history (PII exposure) | High | Open — pending ISO written approval | Developer + ISO |
 | P2-6 | Production DB unencrypted (SQLite) | High | Open — pending infra decision | IT Admin |
-| P3-8a | GitHub branch protection rules not yet configured | Medium | Open | Developer |
-| P3-8b | `CODEOWNERS` file not yet created | Medium | Open | Developer |
+| P3-8a | GitHub branch protection rules not yet applied in repo settings | Medium | Open | Developer |
+| P3-8b | `@security-reviewer` GitHub team not yet configured in repo | Medium | Open | Developer |
 | R-12 | PII in git history residual risk | Medium | Open (depends on F-05) | ISO Section |
 | R-11 | DB encryption at rest residual risk | Medium | Open (depends on P2-6) | IT Admin |
+| PIR | Post Implementation Review not yet executed (awaits first production deploy) | — | Scheduled | Project Manager |
+| SIT-EXEC | SIT test execution and SIT Manager sign-off pending | — | Pending | SIT Lead |
+| SST-EXEC | Software Security Testing execution by ISO Section pending | — | Pending | ISO Section |
+| UAT-EXEC | UAT execution and UAT Manager sign-off pending | — | Pending | UAT Manager |
 
-All other controls: **Implemented** — verified by code review and CI as of 2026-06-09.
+All other controls: **Implemented** — verified by code review and CI as of 2026-06-12.
 
 ---
 

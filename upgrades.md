@@ -318,14 +318,24 @@ SECURITY.md
 
 ## 9. Recommended Sequencing & Effort
 
-| Phase | Theme | Window | Blocker? |
-|-------|-------|--------|:--------:|
-| **0** | Emergency containment (F-01…F-07) | Days 0–2 | ✅ Yes — release blocker |
-| **1** | Green, security-gated CI/CD | Week 1 | ✅ Yes |
-| **2** | Secure-by-design controls in code | Weeks 2–3 | High |
-| **3** | Secure-SDLC documentation & process | Weeks 3–6 | Required for audit sign-off |
+| Phase | Theme | Window | Status |
+|-------|-------|--------|:------:|
+| **0** | Emergency containment (F-01…F-07) | Days 0–2 | ✅ Complete |
+| **1** | Green, security-gated CI/CD | Week 1 | ✅ Complete |
+| **2** | Secure-by-design controls in code | Weeks 2–3 | ✅ Complete (P2-6 pending) |
+| **3** | Secure-SDLC documentation & process | Weeks 3–6 | ✅ Complete |
+| **3+** | SAD missing views + User/Ops/Install manuals + PIR + Annual audit + Gitleaks + version tag | Week 6+ | ✅ Complete |
 
-**Definition of "compliant" for sign-off (per Policy §8 / ISR 8.7.2):** all Phase 0–2 findings closed and verified by IT Security, the mandatory documentation set (Phase 3) authored and approved by the Information Security Section, CI security gates green, and a formal pre-deployment **security sign-off** recorded before the next production release. An **annual internal audit** report is then submitted to the DCAS Information Security Steering Committee (DCASISSC) per Policy §11.
+**Remaining for full compliance sign-off:**
+- F-05: git history purge — ISO written approval needed
+- P2-6: encrypted managed DB — infrastructure decision needed
+- GitHub branch protection rules + `@security-reviewer` team — GitHub admin action
+- SIT execution → SIT Manager sign-off
+- Software Security Testing execution (ISO Section in UAT) → CISO sign-off
+- UAT execution → UAT Manager sign-off
+- Post Implementation Review — after first production deploy
+
+**Definition of "compliant" for sign-off (per Policy §8 / ISR 8.7.2):** all Phase 0–3+ findings closed and verified by IT Security, the mandatory documentation set authored and approved by the Information Security Section, CI security gates green, and a formal pre-deployment **security sign-off** recorded before the next production release. An **annual internal audit** report is then submitted to the DCAS Information Security Steering Committee (DCASISSC) per Policy §11.
 
 ---
 

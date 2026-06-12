@@ -5,6 +5,8 @@ import re
 import secrets
 from datetime import datetime, timezone
 
+__version__ = "1.0.0"
+
 from flask import Flask, abort, jsonify, redirect, request, send_from_directory
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address

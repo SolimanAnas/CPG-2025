@@ -45,6 +45,12 @@ jobs:
           pip install pip-audit
           pip-audit -r requirements.txt
 
+      # ── Secret scanning (Secure SDLC §3.4: no secrets in source) ─────────
+      - name: Secret scan — Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # ── JavaScript ────────────────────────────────────────
       - name: Set up Node 20
         uses: actions/setup-node@v4
