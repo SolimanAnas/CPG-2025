@@ -90,10 +90,16 @@ class ExamEngine {
         
         document.getElementById('select-all-topics')?.addEventListener('click', () => {
             document.querySelectorAll('.topic-checkbox input').forEach(cb => cb.checked = true);
+            this.updateAvailableCount();
         });
         
         document.getElementById('clear-all-topics')?.addEventListener('click', () => {
             document.querySelectorAll('.topic-checkbox input').forEach(cb => cb.checked = false);
+            this.updateAvailableCount();
+        });
+        
+        document.querySelectorAll('.topic-checkbox input').forEach(cb => {
+            cb.addEventListener('change', () => this.updateAvailableCount());
         });
         
         document.querySelectorAll('.setting-btn').forEach(btn => {
@@ -124,6 +130,7 @@ class ExamEngine {
         } else if (diffFilterCard) {
             diffFilterCard.style.opacity = '1';
         }
+        this.updateAvailableCount();
     }
 
     selectSetting(btn) {
@@ -133,6 +140,14 @@ class ExamEngine {
         
         btn.parentElement.querySelectorAll('.setting-btn').forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
+        this.updateAvailableCount();
+    }
+
+    updateAvailableCount() {
+        const el = document.getElementById('available-count');
+        if (!el) return;
+        const count = this.filterQuestions().length;
+        el.textContent = `${count} question${count !== 1 ? 's' : ''} available`;
     }
 
     bindEvents() {
@@ -329,6 +344,13 @@ class ExamEngine {
             alert('No questions available. Please select different topics or difficulty.');
             return;
         }
+        
+        this.shuffleArray(pool);
+        pool.sort((a, b) => {
+            const aSeen = this.questionHistory[a.id]?.attempts || 0;
+            const bSeen = this.questionHistory[b.id]?.attempts || 0;
+            return aSeen - bSeen;
+        });
         
         this.questions = pool.slice(0, Math.min(count, pool.length));
         
