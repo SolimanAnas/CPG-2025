@@ -28,7 +28,7 @@ class ExamEngine {
 
     async init() {
         await this.loadDatabase();
-        await this.loadChartJS();
+        try { await this.loadChartJS(); } catch (_) { /* analytics charts unavailable */ }
         this.bindEvents();
         this.initTheme();
         this.initWizard();
