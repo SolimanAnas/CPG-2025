@@ -33,6 +33,8 @@ class ExamEngine {
         this.initTheme();
         this.initWizard();
         this.showScreen('start-screen');
+        const overlay = document.getElementById('loading-overlay');
+        if (overlay) overlay.classList.add('hidden');
     }
 
     async loadDatabase() {
@@ -354,14 +356,17 @@ class ExamEngine {
         this.catIndex = 0;
         this.catDifficulty = 'medium';
 
+        document.removeEventListener('keydown', this.keyboardHandler);
+        document.addEventListener('keydown', this.keyboardHandler);
+
         this.buildNavigator();
         this.showScreen('exam-screen');
         this.renderQuestion();
-        
+
         if (!this.tutorMode) {
             this.startTimer();
         }
-        
+
         if (this.showScoreDuringExam) {
             document.getElementById('live-score')?.classList.remove('hidden');
         } else {
@@ -923,12 +928,16 @@ class ExamEngine {
         this.elapsedSeconds = 0;
         this._timerBase = Date.now();
         this._pausedElapsed = 0;
+        this.totalExamSeconds = this.questions.length * 72;
         this.isEnded = false;
+
+        document.removeEventListener('keydown', this.keyboardHandler);
+        document.addEventListener('keydown', this.keyboardHandler);
 
         this.buildNavigator();
         this.showScreen('exam-screen');
         this.renderQuestion();
-        
+
         if (!this.tutorMode) {
             this.startTimer();
         }

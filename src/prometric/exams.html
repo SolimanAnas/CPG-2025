@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="exam.css">
 </head>
 <body>
+    <!-- Loading overlay — hidden once JS init completes -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <span class="loading-text">Loading Exam Engine…</span>
+    </div>
+
+    <!-- Home button -->
+    <a href="../../index.html" class="home-btn" title="Back to Home">🏠</a>
+
     <div id="app">
         <!-- Theme Toggle Header -->
         <div class="theme-header">
@@ -268,6 +277,12 @@
             <!-- Navigation Footer -->
             <div class="exam-footer">
                 <button id="prev-question" class="btn-nav">← Previous</button>
+                <div class="kbd-hint">
+                    <kbd>A</kbd><kbd>B</kbd><kbd>C</kbd><kbd>D</kbd> select &nbsp;·&nbsp;
+                    <kbd>Enter</kbd> submit &nbsp;·&nbsp;
+                    <kbd>F</kbd> flag &nbsp;·&nbsp;
+                    <kbd>←</kbd><kbd>→</kbd> navigate
+                </div>
                 <button id="next-question" class="btn-nav">Next →</button>
             </div>
         </div>
