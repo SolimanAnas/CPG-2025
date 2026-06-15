@@ -22,6 +22,8 @@ class ExamEngine {
         this.questionHistory = this.loadQuestionHistory();
         this.settings = { count: 50, difficulty: 'all', timer: 'timed', score: 'show' };
         this.keyboardHandler = (e) => this.handleKeyboard(e);
+        this.touchStartX = 0;
+        this.touchStartY = 0;
         
         this.init();
     }
@@ -173,6 +175,12 @@ class ExamEngine {
             tab.addEventListener('click', () => this.showMobilePanel(tab.dataset.panel));
         });
         
+        const mainPanel = document.querySelector('.main-panel');
+        if (mainPanel) {
+            mainPanel.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
+            mainPanel.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
+        }
+
         if (this.keyboardHandler) {
             document.addEventListener('keydown', this.keyboardHandler);
         }
@@ -204,6 +212,22 @@ class ExamEngine {
             }
         } else if (key === 'F') {
             this.toggleFlag();
+        }
+    }
+
+    handleTouchStart(e) {
+        this.touchStartX = e.touches[0].clientX;
+        this.touchStartY = e.touches[0].clientY;
+    }
+
+    handleTouchEnd(e) {
+        if (!document.getElementById('exam-screen').classList.contains('active')) return;
+        if (this.isEnded) return;
+        const dx = e.changedTouches[0].clientX - this.touchStartX;
+        const dy = e.changedTouches[0].clientY - this.touchStartY;
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+            if (dx < 0) this.navigate(1);
+            else this.navigate(-1);
         }
     }
 
@@ -380,6 +404,16 @@ class ExamEngine {
 
         document.removeEventListener('keydown', this.keyboardHandler);
         document.addEventListener('keydown', this.keyboardHandler);
+
+        const touchPanel = document.querySelector('.main-panel');
+        if (touchPanel) {
+            touchPanel.removeEventListener('touchstart', this._touchStart);
+            touchPanel.removeEventListener('touchend', this._touchEnd);
+            this._touchStart = (e) => this.handleTouchStart(e);
+            this._touchEnd = (e) => this.handleTouchEnd(e);
+            touchPanel.addEventListener('touchstart', this._touchStart, { passive: true });
+            touchPanel.addEventListener('touchend', this._touchEnd, { passive: true });
+        }
 
         this.buildNavigator();
         this.showScreen('exam-screen');
@@ -736,6 +770,14 @@ class ExamEngine {
         });
     }
 
+    removeTouchListeners() {
+        const tp = document.querySelector('.main-panel');
+        if (tp) {
+            tp.removeEventListener('touchstart', this._touchStart);
+            tp.removeEventListener('touchend', this._touchEnd);
+        }
+    }
+
     endExam() {
         if (this.timerInterval) {
             clearInterval(this.timerInterval);
@@ -747,6 +789,7 @@ class ExamEngine {
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
         }
+        this.removeTouchListeners();
         
         this.calculateResults();
         this.showScreen('review-screen');
@@ -761,6 +804,7 @@ class ExamEngine {
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
         }
+        this.removeTouchListeners();
         
         this.goToStep(1);
         this.showScreen('start-screen');
@@ -955,6 +999,15 @@ class ExamEngine {
 
         document.removeEventListener('keydown', this.keyboardHandler);
         document.addEventListener('keydown', this.keyboardHandler);
+
+        this.removeTouchListeners();
+        const touchPanel = document.querySelector('.main-panel');
+        if (touchPanel) {
+            this._touchStart = (e) => this.handleTouchStart(e);
+            this._touchEnd = (e) => this.handleTouchEnd(e);
+            touchPanel.addEventListener('touchstart', this._touchStart, { passive: true });
+            touchPanel.addEventListener('touchend', this._touchEnd, { passive: true });
+        }
 
         this.buildNavigator();
         this.showScreen('exam-screen');

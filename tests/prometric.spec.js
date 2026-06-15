@@ -173,3 +173,43 @@ test('can complete exam and see results', async ({ page }) => {
   const scoreText = await page.locator('#final-score').textContent();
   expect(scoreText).toMatch(/\d+%/);
 });
+
+// ── 8. Mobile viewport layout ─────────────────────────────────────────
+test('mobile viewport shows tabs, panels switch correctly', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 667 });
+  await page.goto(EXAM_PAGE, { waitUntil: 'networkidle' });
+  await navigateWizard(page);
+  await expect(page.locator('#exam-screen')).toBeVisible();
+
+  // Mobile tabs should be visible
+  await expect(page.locator('.mobile-tabs')).toBeVisible();
+  const tabs = page.locator('.mobile-tab');
+  await expect(tabs).toHaveCount(3);
+
+  // Question panel should be visible by default
+  await expect(page.locator('.main-panel')).toBeVisible();
+  await expect(page.locator('#question-stem')).toBeVisible();
+
+  // Navigate to navigator panel via mobile tab
+  await page.locator('.mobile-tab[data-panel="nav"]').click();
+  await expect(page.locator('.left-panel')).toBeVisible();
+  await expect(page.locator('#question-nav')).toBeVisible();
+
+  // Navigate to stats panel
+  await page.locator('.mobile-tab[data-panel="stats"]').click();
+  await expect(page.locator('.right-panel')).toBeVisible();
+  await expect(page.locator('.timer-container')).toBeVisible();
+
+  // Switch back to question panel
+  await page.locator('.mobile-tab[data-panel="question"]').click();
+  await expect(page.locator('.main-panel')).toBeVisible();
+  await expect(page.locator('.question-stem')).toBeVisible();
+
+  // Select and submit an answer on mobile
+  const firstOption = page.locator('.option-item').first();
+  await firstOption.click();
+  await expect(firstOption).toHaveClass(/selected/);
+  await page.locator('#submit-answer').click();
+  const correctOpt = page.locator('.option-item.correct');
+  await expect(correctOpt).toHaveCount(1);
+});

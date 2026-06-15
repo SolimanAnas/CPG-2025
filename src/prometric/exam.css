@@ -110,6 +110,7 @@ body {
         radial-gradient(ellipse 80% 60% at 20% -10%, rgba(59,130,246,0.10) 0%, transparent 60%),
         radial-gradient(ellipse 60% 50% at 80% 110%, rgba(139,92,246,0.08) 0%, transparent 55%);
     background-attachment: fixed;
+    touch-action: manipulation;
 }
 
 [data-theme="sepia"] body,
@@ -2282,7 +2283,7 @@ body {
 @media (max-width: 768px) {
     .exam-layout {
         grid-template-columns: 1fr;
-        padding: 12px 14px;
+        padding: 0;
         gap: 0;
     }
 
@@ -2290,51 +2291,122 @@ body {
         display: none;
     }
 
-    .left-panel,
+    .left-panel {
+        display: none;
+        padding: 14px 12px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+
     .right-panel {
         display: none;
+        padding: 12px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .question-nav {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4px;
+    }
+
+    .question-nav button {
+        aspect-ratio: 1;
+        font-size: 0.68rem;
+        min-width: 0;
+        min-height: 0;
+        border-radius: 6px;
+    }
+
+    .nav-header {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-legend {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        margin-top: 10px;
     }
 
     .mobile-tabs {
         display: flex;
+        padding: 4px 6px;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .mobile-tab {
+        padding: 12px 6px;
+        font-size: 0.78rem;
+        border-radius: 8px;
     }
 
     .wizard-container {
-        margin: 14px 12px;
-        padding: 24px 18px;
+        margin: 12px 10px;
+        padding: 20px 16px;
         border-radius: var(--radius-lg);
     }
 
     .wizard-header h1 {
-        font-size: 1.65rem;
+        font-size: 1.5rem;
     }
 
     .mode-cards {
         grid-template-columns: 1fr;
         max-width: 100%;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .mode-card {
+        padding: 16px 12px;
+        min-height: 44px;
     }
 
     .topics-grid {
         grid-template-columns: 1fr;
-        max-height: none;
+        max-height: 40vh;
+        gap: 6px;
+    }
+
+    .topic-checkbox {
+        padding: 14px;
+        min-height: 44px;
     }
 
     .settings-grid { grid-template-columns: 1fr; }
+
+    .setting-btn {
+        padding: 12px 10px;
+        min-height: 44px;
+        font-size: 0.82rem;
+    }
 
     .analytics-grid { grid-template-columns: 1fr; }
 
     .score-summary {
         flex-direction: column;
         text-align: center;
-        gap: 26px;
-        padding: 22px;
+        gap: 20px;
+        padding: 18px;
+    }
+
+    .score-circle {
+        width: 140px;
+        height: 140px;
     }
 
     .score-details {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 16px;
     }
 
     .wizard-steps { padding: 0; }
@@ -2343,99 +2415,279 @@ body {
 
     .step-label { display: none; }
 
-    .main-panel { padding: 20px 18px; border-radius: 0; }
+    .main-panel {
+        padding: 16px 14px;
+        border-radius: 0;
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-    .question-stem { font-size: 1.02rem; }
+    .question-stem {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
 
-    .option-item { padding: 14px 14px; }
+    .options-container {
+        gap: 8px;
+    }
+
+    .option-item {
+        padding: 16px 14px;
+        min-height: 48px;
+    }
+
+    .option-letter {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+
+    .option-text {
+        font-size: 0.93rem;
+    }
+
+    .question-actions button {
+        padding: 14px 10px;
+        font-size: 0.90rem;
+    }
+
+    .explanation-container {
+        padding: 16px 18px;
+    }
+
+    .exam-footer {
+        padding: 8px 10px;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .btn-nav {
+        padding: 14px 16px;
+        font-size: 0.85rem;
+        min-height: 48px;
+        flex: 1;
+    }
+
+    .right-panel {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .timer-container {
+        padding: 16px;
+    }
+
+    .timer {
+        font-size: 1.8rem;
+    }
+
+    .live-score {
+        padding: 14px;
+    }
+
+    .score-value {
+        font-size: 1.5rem;
+    }
+
+    .control-buttons button {
+        padding: 14px;
+        min-height: 48px;
+        font-size: 0.90rem;
+    }
+
+    .progress-info {
+        padding: 12px 14px;
+    }
 
     .review-container,
-    .results-container { padding: 24px 16px; }
+    .results-container {
+        padding: 20px 14px;
+        border-radius: var(--radius-lg);
+    }
 
-    .modal-content { padding: 26px 20px; }
+    .review-header h2 {
+        font-size: 1.4rem;
+    }
 
-    .quick-links { gap: 16px; }
+    .modal-content {
+        padding: 24px 18px;
+        margin: 16px;
+    }
+
+    .quick-links {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-btn {
+        padding: 12px 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
 
     .review-actions {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .review-actions button { max-width: none; }
+    .review-actions button {
+        max-width: none;
+        padding: 14px;
+        min-height: 48px;
+    }
+
+    .topic-bar .topic-name {
+        width: 100px;
+        font-size: 0.78rem;
+    }
+
+    .result-item {
+        padding: 16px;
+    }
+
+    .exam-insights {
+        padding: 12px;
+    }
+
+    .insight-item {
+        padding: 10px 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .theme-header {
-        top: 6px;
-        right: 6px;
-        padding: 3px;
-        gap: 3px;
+        top: 4px;
+        right: 4px;
+        padding: 2px;
+        gap: 2px;
     }
 
     .theme-btn {
-        width: 26px;
-        height: 26px;
-        font-size: 0.75rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.80rem;
     }
 
     .home-btn {
-        top: 6px;
-        left: 6px;
-        width: 34px;
-        height: 34px;
-        font-size: 0.90rem;
+        top: 4px;
+        left: 4px;
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
     }
 
     .wizard-container {
-        margin: 10px 8px;
-        padding: 20px 14px;
+        margin: 8px 6px;
+        padding: 16px 12px;
     }
 
-    .wizard-header h1 { font-size: 1.40rem; }
+    .wizard-header h1 { font-size: 1.25rem; }
+
+    .wizard-header .subtitle { font-size: 0.80rem; }
 
     .step-number {
-        width: 26px;
-        height: 26px;
-        font-size: 0.76rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.78rem;
     }
 
-    .step-connector { width: 16px; }
+    .step-connector { width: 12px; margin-bottom: 14px; }
 
-    .mode-card { padding: 14px 10px; }
+    .mode-card { padding: 12px 10px; }
 
-    .mode-icon { font-size: 1.45rem; }
+    .mode-icon { font-size: 1.3rem; }
 
-    .mode-card h4 { font-size: 0.80rem; }
+    .mode-card h4 { font-size: 0.82rem; }
 
-    .mode-card p { font-size: 0.66rem; }
+    .mode-card p { font-size: 0.68rem; }
 
     .setting-options { flex-wrap: wrap; }
 
-    .setting-btn { flex: unset; padding: 8px 14px; }
+    .setting-btn { flex: unset; padding: 10px 12px; font-size: 0.80rem; }
 
-    .timer { font-size: 2.1rem; }
+    .available-count { font-size: 0.72rem; }
 
-    #final-score { font-size: 1.9rem; }
+    .mobile-tab {
+        padding: 10px 4px;
+        font-size: 0.72rem;
+    }
 
-    .stat-value { font-size: 1.75rem; }
+    .timer { font-size: 1.6rem; }
 
-    .score-circle { width: 130px; height: 130px; }
+    .timer-container { padding: 12px; }
+
+    .live-score { padding: 10px; }
+
+    .score-value { font-size: 1.3rem; }
+
+    #final-score { font-size: 1.6rem; }
+
+    .stat-value { font-size: 1.4rem; }
+
+    .score-circle { width: 120px; height: 120px; }
+
+    .question-stem { font-size: 0.95rem; }
+
+    .option-item { padding: 14px 12px; min-height: 44px; }
+
+    .option-letter { width: 32px; height: 32px; font-size: 0.80rem; }
+
+    .option-text { font-size: 0.88rem; }
+
+    .btn-nav { padding: 12px 10px; font-size: 0.82rem; min-height: 44px; }
+
+    .exam-footer { padding: 6px 8px; gap: 6px; }
 
     .heatmap-grid { grid-template-columns: repeat(2, 1fr); }
 
-    .topic-bar .topic-name { width: 120px; font-size: 0.78rem; }
+    .topic-bar .topic-name { width: 90px; font-size: 0.72rem; }
 
-    .exam-footer { padding: 10px 14px; }
+    .topic-bar-container { height: 22px; }
 
-    .btn-nav { padding: 9px 18px; font-size: 0.85rem; }
+    .topic-score { font-size: 0.78rem; }
 
-    .modal-content { padding: 22px 16px; }
+    .modal-content { padding: 18px 14px; margin: 12px; }
+
+    .analytics-card { padding: 16px; }
+
+    .stat-box { padding: 12px; }
+
+    .stat-number { font-size: 1.4rem; }
 }
 
 @media (max-width: 360px) {
-    .wizard-container { margin: 6px; padding: 16px 12px; }
+    .wizard-container { margin: 4px; padding: 14px 10px; }
 
-    .wizard-header h1 { font-size: 1.25rem; }
+    .wizard-header h1 { font-size: 1.1rem; }
+
+    .step-number { width: 24px; height: 24px; font-size: 0.70rem; }
+
+    .step-connector { width: 8px; }
+
+    .mode-card { padding: 10px 8px; }
+
+    .setting-btn { padding: 8px 8px; font-size: 0.75rem; }
+
+    .exam-layout { padding: 0; }
+
+    .main-panel { padding: 12px 10px; }
+
+    .question-stem { font-size: 0.90rem; }
+
+    .option-item { padding: 12px 10px; min-height: 40px; }
+
+    .option-letter { width: 28px; height: 28px; font-size: 0.75rem; }
+
+    .option-text { font-size: 0.84rem; }
+
+    .timer { font-size: 1.4rem; }
+
+    .btn-nav { padding: 10px 8px; font-size: 0.78rem; min-height: 40px; }
 
     .analytics-grid { grid-template-columns: 1fr; }
 
