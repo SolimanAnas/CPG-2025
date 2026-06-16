@@ -437,6 +437,30 @@
             from { opacity: 0; transform: translateY(8px); }
             to   { opacity: 1; transform: translateY(0); }
         }
+
+        /* ── Theme-aware text contrast for dark backgrounds ── */
+        [data-theme="dark"] .monitor-content {
+            color: #e8f4fd;
+        }
+        [data-theme="dark"] .monitor-content .diagnosis-text {
+            color: #e8f4fd;
+        }
+        [data-theme="dark"] .monitor-content .diagnosis-sub {
+            color: #94a3b8;
+        }
+        [data-theme="dark"] .monitor-content .path-value {
+            color: #94a3b8;
+        }
+        [data-theme="dark"] .status-label {
+            color: #ef4444;
+        }
+        [data-theme="dark"] .action-btn-secondary {
+            color: #e8f4fd;
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        [data-theme="dark"] .action-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
