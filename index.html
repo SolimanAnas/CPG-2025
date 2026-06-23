@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96x96.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-    
+    <style>
         /* ── Search ── */
         .search-container {
             margin-bottom: 20px; display: flex; align-items: center;
@@ -480,7 +480,7 @@
         <div class="pwa-banner-icon">
             <img src="icons/icon.png" alt="DCAS CPG"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <span class="pwa-icon-fallback" style="display:none;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#shield'/></svg>️</span>
+            <span class="pwa-icon-fallback" style="display:none;"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#shield'/></svg>️</span>
         </div>
         <div class="pwa-banner-text">
             <strong class="pwa-banner-title">Install DCAS CPG</strong>
@@ -488,13 +488,13 @@
         </div>
         <div class="pwa-banner-actions">
             <button class="pwa-btn-install" id="pwaInstallBtn">Install</button>
-            <button class="pwa-btn-dismiss" id="pwaDismissBtn" aria-label="Dismiss"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
+            <button class="pwa-btn-dismiss" id="pwaDismissBtn" aria-label="Dismiss"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
         </div>
     </div>
     <div class="pwa-ios-steps" id="pwaIosSteps" style="display:none;">
         <div class="pwa-ios-step">
             <span class="pwa-ios-num">1</span>
-            Tap <strong style="color:#E8F0FE;">Share</strong> <span class="pwa-share-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#printer-check'/></svg></span> in Safari's toolbar
+            Tap <strong style="color:#E8F0FE;">Share</strong> <span class="pwa-share-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#printer-check'/></svg></span> in Safari's toolbar
         </div>
         <div class="pwa-ios-step">
             <span class="pwa-ios-num">2</span>
@@ -507,19 +507,19 @@
 
 <div class="notification-drawer" id="notificationDrawer">
     <div class="toggles-grid theme-row" style="grid-template-columns: repeat(5, 1fr);">
-        <div class="toggle-item"><button class="toggle-btn" id="toggleDark"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#moon'/></svg></button><div class="toggle-label">Dark</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleDark"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#moon'/></svg></button><div class="toggle-label">Dark</div></div>
         <div class="toggle-item"><button class="toggle-btn amoled-btn" id="toggleAmoled">⬛</button><div class="toggle-label">AMOLED</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="toggleLight"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sun'/></svg></button><div class="toggle-label">Light</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="toggleSepia"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#scroll'/></svg></button><div class="toggle-label">Sepia</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="toggleForest"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#tree-pine'/></svg></button><div class="toggle-label">Forest</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleLight"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sun'/></svg></button><div class="toggle-label">Light</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleSepia"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#scroll'/></svg></button><div class="toggle-label">Sepia</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="toggleForest"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#tree-pine'/></svg></button><div class="toggle-label">Forest</div></div>
     </div>
 
     <div class="toggles-grid shortcut-row" style="grid-template-columns: repeat(5, 1fr);">
-        <div class="toggle-item"><button class="toggle-btn" id="qsIndex"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></button><div class="toggle-label">Index</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="qsAbout"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg></button><div class="toggle-label">About</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="qsInstall"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#smartphone'/></svg></button><div class="toggle-label">Install</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="qsClearCache" style="background:rgba(245,158,11,0.2);border-color:rgba(245,158,11,0.3);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#brush'/></svg></button><div class="toggle-label">Cache</div></div>
-        <div class="toggle-item"><button class="toggle-btn" id="qsLogout" style="background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#door-open'/></svg></button><div class="toggle-label">Logout</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsIndex"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></button><div class="toggle-label">Index</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsAbout"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg></button><div class="toggle-label">About</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsInstall"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#smartphone'/></svg></button><div class="toggle-label">Install</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsClearCache" style="background:rgba(245,158,11,0.2);border-color:rgba(245,158,11,0.3);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#brush'/></svg></button><div class="toggle-label">Cache</div></div>
+        <div class="toggle-item"><button class="toggle-btn" id="qsLogout" style="background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.3);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#door-open'/></svg></button><div class="toggle-label">Logout</div></div>
     </div>
 
     <div class="font-size-row">
@@ -561,21 +561,21 @@
 
     <div class="header-right" id="headerShortcuts">
         <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
-        <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> AMOLED</span>
-        <button class="icon-btn" id="themeToggle" title="Switch Theme"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#palette'/></svg></button>
-        <button class="icon-btn" id="progressToggle" title="Progress"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg></button>
-        <a href="pages/courses.html" class="icon-btn" id="headerCoursesBtn" title="Courses"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#graduation-cap'/></svg></a>
-        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></a>
-        <a href="pages/about.html" class="icon-btn" id="headerAboutBtn" title="About"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg></a>
+        <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> AMOLED</span>
+        <button class="icon-btn" id="themeToggle" title="Switch Theme"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#palette'/></svg></button>
+        <button class="icon-btn" id="progressToggle" title="Progress"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg></button>
+        <a href="pages/courses.html" class="icon-btn" id="headerCoursesBtn" title="Courses"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#graduation-cap'/></svg></a>
+        <a href="chapters/c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></a>
+        <a href="pages/about.html" class="icon-btn" id="headerAboutBtn" title="About"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg></a>
     </div>
 </header>
 
 <div class="progress-popup" id="progressPopup">
-    <div class="popup-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> Your Progress</div>
+    <div class="popup-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> Your Progress</div>
     <div class="popup-item"><span>Chapters Done:</span><span id="popupChaptersDone">0/0</span></div>
     <div class="popup-item"><span>Total Attempts:</span><span id="popupAttempts">0</span></div>
     <div class="popup-item"><span>Critical Accuracy:</span><span id="popupCritical">0%</span></div>
-    <div class="popup-quote" id="popupQuote"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sparkles'/></svg> Every review sharpens your skills.</div>
+    <div class="popup-quote" id="popupQuote"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sparkles'/></svg> Every review sharpens your skills.</div>
 </div>
 
 <div id="lastVisitedSection" style="display:none; padding:0 16px; max-width:800px; margin:0 auto 8px; width:100%; box-sizing:border-box;"></div>
@@ -587,8 +587,8 @@
     <div><a href="pages/about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
-<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-up'/></svg></button>
-<button class="float-btn" id="scrollToBottomBtn" title="Go to progress dashboard"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-down'/></svg></button>
+<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-up'/></svg></button>
+<button class="float-btn" id="scrollToBottomBtn" title="Go to progress dashboard"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-down'/></svg></button>
 
 <script>
 (function(){
@@ -650,7 +650,7 @@
         } else if (!deferredPrompt) {
             // Non-iOS, no prompt yet or unsupported: hide Install button
             installBtn.style.display = 'none';
-            bannerSub.textContent    = 'Use browser menu <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg> "Add to Home Screen"';
+            bannerSub.textContent    = 'Use browser menu <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#arrow-right"/></svg> "Add to Home Screen"';
         }
     }
 
@@ -736,7 +736,7 @@
                 installBtn.style.display = 'none';
                 iosSteps.style.display   = 'flex';
             } else {
-                bannerSub.textContent = 'Use your browser menu <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg> "Add to Home Screen"';
+                bannerSub.textContent = 'Use your browser menu <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#arrow-right"/></svg> "Add to Home Screen"';
                 installBtn.style.display = 'none';
             }
         }
@@ -899,7 +899,7 @@
         container.style.display = 'block';
         const items = history.slice(0, 3).map(h => `
             <a class="lv-item" href="${h.path || h.url}">
-                <div class="lv-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clock'/></svg></div>
+                <div class="lv-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clock'/></svg></div>
                 <div class="lv-info">
                     <div class="lv-title">${escapeHtml(h.title)}</div>
                     <div class="lv-time">${timeAgo(h.ts)}</div>
@@ -908,8 +908,8 @@
             </a>`).join('');
         container.innerHTML = `
             <div class="lv-header">
-                <span class="lv-heading"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book-open'/></svg> Continue Where You Left Off</span>
-                <button class="lv-clear" id="lvClearBtn" title="Clear history"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
+                <span class="lv-heading"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book-open'/></svg> Continue Where You Left Off</span>
+                <button class="lv-clear" id="lvClearBtn" title="Clear history"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
             </div>
             <div class="lv-list">${items}</div>`;
         document.getElementById('lvClearBtn').addEventListener('click', () => {
@@ -929,7 +929,7 @@
                 const charging = bat.charging;
                 const amoledBadge = document.getElementById('amoledBadge');
                 if (amoledBadge) amoledBadge.style.display = document.documentElement.getAttribute('data-theme') === 'amoled' ? 'inline-flex' : 'none';
-                let icon = charging ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg>' : pct <= 15 ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#battery-low'/></svg>' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#battery'/></svg>';
+                let icon = charging ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#zap"/></svg>' : pct <= 15 ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#battery-low"/></svg>' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#battery"/></svg>';
                 el.innerHTML = `<span>${icon}</span><span class="bat-pct">${pct}%</span>`;
                 el.style.display = 'flex';
                 el.classList.toggle('bat-low', pct <= 15 && !charging);
@@ -1038,7 +1038,7 @@
         document.getElementById('popupChaptersDone').innerText = `${done}/${totalChaps}`;
         document.getElementById('popupAttempts').innerText     = stats.totalAttempts || 0;
         document.getElementById('popupCritical').innerText     = `${critAcc}%`;
-        document.getElementById('popupQuote').innerText        = `<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sparkles'/></svg> ${quote}`;
+        document.getElementById('popupQuote').innerText        = `<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#sparkles'/></svg> ${quote}`;
         document.getElementById('drawerDone').innerText        = `${done}/${totalChaps}`;
         document.getElementById('drawerAttempts').innerText    = stats.totalAttempts || 0;
         document.getElementById('drawerAcc').innerText         = `${critAcc}%`;
@@ -1086,7 +1086,7 @@
         const heroHtml = `
             <div class="hero-card" id="heroCard">
                 <div class="hero-text">
-                    <div class="hero-greeting">${getGreeting()} <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#hand'/></svg></div>
+                    <div class="hero-greeting">${getGreeting()} <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#hand'/></svg></div>
                     <div class="hero-sub">${completedCount}/${totalChaps} chapters · keep it up!</div>
                 </div>
                 <div class="hero-ring">
@@ -1106,11 +1106,11 @@
         // ── Search bar ──
         const searchHtml = `
             <div class="search-container">
-                <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#search'/></svg></span>
+                <span><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#search'/></svg></span>
                 <input type="text" id="searchInput" placeholder="Search all CPG chapters &amp; guidelines…" value="${filterText.replace(/"/g,'&quot;')}">
-                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
+                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
             </div>
-            <div class="cpg-search-hint" id="cpgSearchHint"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#search'/></svg> Searching across all ${CHAPTERS.filter(c=>!c.isSpecial).length} CPG chapters &amp; guidelines</div>`;
+            <div class="cpg-search-hint" id="cpgSearchHint"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#search'/></svg> Searching across all ${CHAPTERS.filter(c=>!c.isSpecial).length} CPG chapters &amp; guidelines</div>`;
 
         // ── Quick Access (2-col) ──
         const quickHtml = `
@@ -1124,7 +1124,7 @@
                 </a>
                 <a href="chapters/c-index.html?view=summary" class="menu-card special-card"
                    data-chapter="index" data-search="Index Full Table of Contents c-index">
-                    <span class="sc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></span>
+                    <span class="sc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></span>
                     <h2>Full Index</h2>
                     <p>Table of Contents</p>
                 </a>
@@ -1136,14 +1136,14 @@
             <div class="menu-grid" data-section="courses">
                 <a href="pages/courses.html" class="menu-card special-card"
                    data-chapter="courses" data-search="Courses Training ITLS EMPACT ACLS BLS">
-                    <span class="sc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#graduation-cap'/></svg></span>
+                    <span class="sc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#graduation-cap'/></svg></span>
                     <h2>Courses Preparation</h2>
                     <p>Training &amp; mock tests — ITLS, EMPACT, ACLS, BLS…</p>
                     <span class="sc-arrow">›</span>
                 </a>
                 <a href="src/prometric/exam.html" class="menu-card special-card"
                    data-chapter="prometric" data-search="Prometric NREMT EMT Exam Practice Questions">
-                    <span class="sc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg></span>
+                    <span class="sc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg></span>
                     <h2>Prometric EMT Exam</h2>
                     <p>NREMT-style practice questions with analytics</p>
                     <span class="sc-arrow">›</span>
@@ -1174,7 +1174,7 @@
             <div class="menu-grid" data-section="cpg-ref">
                 <div class="menu-card special-card"
                      data-chapter="dcas-cpg" data-search="DCAS CPG Chapters 1.1 Universal Care protocols guidelines">
-                    <span class="sc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#library'/></svg></span>
+                    <span class="sc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#library'/></svg></span>
                     <h2>DCAS CPG 2025</h2>
                     <p>All clinical practice guidelines — Chapters 1.1 onwards</p>
                     <button class="dcas-expand-btn" id="dcasExpandBtn">
@@ -1183,7 +1183,7 @@
                 </div>
                 <div class="menu-card special-card"
                      data-chapter="statistics" data-search="Statistics Progress Dashboard accuracy attempts">
-                    <span class="sc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg></span>
+                    <span class="sc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg></span>
                     <h2>Statistics &amp; Progress</h2>
                     <p>Detailed study analytics and performance dashboard</p>
                     <span class="sc-arrow">›</span>
@@ -1241,9 +1241,9 @@
                             <h2>${ch.shortTitle}</h2>
                             <p>${ch.title}${s.attempts ? ` · ${s.attempts} attempts · Avg ${avg}%` : ''}</p>
                             <div class="menu-sub-options">
-<a href="${ch.id === 'm1-38' ? 'med-index.html' : `chapters/${baseFile}.html?view=summary${sec}`}" class="btn-action btn-summary"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book'/></svg> Summary</a>                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> Flashcards</a>
-                                <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Quiz</a>
-                                <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#ambulance'/></svg> Scenario</a>
+<a href="${ch.id === 'm1-38' ? 'med-index.html' : `chapters/${baseFile}.html?view=summary${sec}`}" class="btn-action btn-summary"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book'/></svg> Summary</a>                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> Flashcards</a>
+                                <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Quiz</a>
+                                <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#ambulance'/></svg> Scenario</a>
                             </div>
                         </div>`;
                 });
@@ -1255,14 +1255,14 @@
         // ── Offline download ──
         const downloadHtml = `
             <div class="offline-download">
-                <button class="download-btn" id="downloadOfflineBtn"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#download'/></svg> Download All for Offline</button>
+                <button class="download-btn" id="downloadOfflineBtn"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#download'/></svg> Download All for Offline</button>
                 <progress id="downloadProgress" value="0" max="100" style="display:none;"></progress>
             </div>`;
 
         // ── Empty search state ──
         const emptyHtml = `
             <div class="search-empty" id="searchEmpty" style="display:none;">
-                <div class="search-empty-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zoom-in'/></svg></div>
+                <div class="search-empty-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zoom-in'/></svg></div>
                 <div class="search-empty-title">No results found</div>
                 <div class="search-empty-sub">Try a different keyword or browse by section</div>
             </div>`;
@@ -1394,8 +1394,8 @@
         modal.innerHTML = `
             <div class="stats-modal-content" onclick="event.stopPropagation()">
                 <div class="stats-modal-header">
-                    <h2><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> Global Statistics</h2>
-                    <button class="stats-modal-close" onclick="this.closest('.stats-modal-overlay').remove()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
+                    <h2><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> Global Statistics</h2>
+                    <button class="stats-modal-close" onclick="this.closest('.stats-modal-overlay').remove()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#x'/></svg></button>
                 </div>
                 <div class="stats-modal-body">
                     <div class="stats-grid">
@@ -1416,7 +1416,7 @@
                             <div class="stat-label">Critical Skills</div>
                         </div>
                     </div>
-                    <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> Flashcards</h3>
+                    <h3><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg> Flashcards</h3>
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-num">${fcTotal}</div>
@@ -1427,7 +1427,7 @@
                             <div class="stat-label">Accuracy</div>
                         </div>
                     </div>
-                    <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Quizzes</h3>
+                    <h3><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Quizzes</h3>
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-num">${quizTotal}</div>
@@ -1438,7 +1438,7 @@
                             <div class="stat-label">Accuracy</div>
                         </div>
                     </div>
-                    <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg> Exam Results</h3>
+                    <h3><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg> Exam Results</h3>
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-num">${examStats.length}</div>
@@ -1450,7 +1450,7 @@
                         </div>
                     </div>
                     ${examStats.length > 1 ? `
-                    <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#trending-up'/></svg> Progress Chart</h3>
+                    <h3><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#trending-up'/></svg> Progress Chart</h3>
                     <div class="stats-chart-container">
                         <canvas id="progress-chart"></canvas>
                     </div>

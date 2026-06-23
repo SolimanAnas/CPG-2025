@@ -3,7 +3,7 @@
 window.CPG_DATA = {
     id: "c-index",
     title: "DCAS CPG Index",
-    shortTitle: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> Full Index",
+    shortTitle: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> Full Index",
     sections: [
         {
             id: "c-index-main",
@@ -150,23 +150,23 @@ function generateIndexHTML() {
 
     /* ================= CATEGORIES ================= */
     const categories = {
-        universal: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#shield'/></svg>️ Universal Care",
-        airway: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Airway & Breathing",
-        cardio: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg> Cardiovascular",
-        resus: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg> Resuscitation",
-        neuro: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> Neurological",
-        medical: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> General Medical",
-        trauma: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#scan'/></svg> Trauma",
-        environmental: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️ Environmental",
-        pediatric: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg> Pediatric",
-        obstetric: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg> Obstetrics & Gynecology",
-        mci: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg> Major Incident Triage",
-        scope: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book'/></svg> Scope of Practice",
-        meds: "<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Medications"
+        universal: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#shield'/></svg>️ Universal Care",
+        airway: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Airway & Breathing",
+        cardio: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg> Cardiovascular",
+        resus: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg> Resuscitation",
+        neuro: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> Neurological",
+        medical: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> General Medical",
+        trauma: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#scan'/></svg> Trauma",
+        environmental: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️ Environmental",
+        pediatric: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg> Pediatric",
+        obstetric: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg> Obstetrics & Gynecology",
+        mci: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg> Major Incident Triage",
+        scope: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book'/></svg> Scope of Practice",
+        meds: "<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Medications"
     };
 
     let html = `<div class="sum-card" id="indexRoot">
-        <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#library'/></svg> Complete DCAS CPG 2025 Index</h3>
+        <h3><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#library'/></svg> Complete DCAS CPG 2025 Index</h3>
 
         <!-- Glassy search bar styles – matches the home page exactly -->
         <style>
@@ -285,9 +285,9 @@ function generateIndexHTML() {
 
         <!-- Search bar -->
         <div class="index-search-wrapper">
-            <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
+            <span><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
             <input type="text" id="indexSearchInput" placeholder="Search guidelines..." value="">
-            <button id="indexSearchClearBtn" style="display: none;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
+            <button id="indexSearchClearBtn" style="display: none;"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
         </div>
 
         <div id="indexTableContainer">

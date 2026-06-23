@@ -258,8 +258,8 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 <!-- ── HEADER ──────────────────────────────────────────── -->
 <header class="app-header">
-  <a class="hdr-back" href="../index.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
-  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg></div>
+  <a class="hdr-back" href="../index.html"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">AHA Algorithms</div>
     <div class="hdr-sub">American Heart Association · 2025</div>
@@ -269,11 +269,11 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <!-- ── SEARCH ──────────────────────────────────────────── -->
 <div class="search-strip">
   <div class="search-inner">
-    <span class="search-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
+    <span class="search-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
     <input class="search-input" id="searchInput" type="text"
            placeholder="Search algorithms…" autocomplete="off"
            oninput="filterAlgos(this.value)">
-    <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
+    <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
   </div>
 </div>
 
@@ -293,7 +293,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
         <div class="bs-title" id="bsTitle">—</div>
         <div class="bs-sub" id="bsSub">AHA Algorithm · 2025</div>
       </div>
-      <div class="bs-close" onclick="closeViewer()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
+      <div class="bs-close" onclick="closeViewer()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
     </div>
 
     <!-- Toolbar -->
@@ -302,11 +302,11 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
         <button class="tool-btn" onclick="zoomOut()">－</button>
         <span class="zoom-info" id="zoomInfo">100%</span>
         <button class="tool-btn" onclick="zoomIn()">＋</button>
-        <button class="tool-btn" onclick="resetZoom()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Fit</button>
+        <button class="tool-btn" onclick="resetZoom()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Fit</button>
       </div>
       <div class="bs-tool-btns">
-        <button class="nav-prev-btn tool-btn" id="navPrevBtn" onclick="navAlgo(-1)"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Prev</button>
-        <button class="nav-next-btn tool-btn primary" id="navNextBtn" onclick="navAlgo(1)">Next <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>
+        <button class="nav-prev-btn tool-btn" id="navPrevBtn" onclick="navAlgo(-1)"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Prev</button>
+        <button class="nav-next-btn tool-btn primary" id="navNextBtn" onclick="navAlgo(1)">Next <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>
       </div>
     </div>
 
@@ -338,7 +338,7 @@ const CATEGORIES = [
     id:'bls',
     label:'BLS',
     title:'Basic Life Support',
-    icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',
+    icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',
     colorClass:'cat-bls',
     badgeBg:'rgba(34,197,94,.18)',
     badgeColor:'#86efac',
@@ -354,7 +354,7 @@ const CATEGORIES = [
     id:'acls',
     label:'ACLS',
     title:'Advanced Cardiac Life Support',
-    icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg>',
+    icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg>',
     colorClass:'cat-acls',
     badgeBg:'rgba(239,68,68,.18)',
     badgeColor:'#fca5a5',
@@ -372,7 +372,7 @@ const CATEGORIES = [
     id:'pals',
     label:'PALS / Neonatal',
     title:'Pediatric Advanced Life Support',
-    icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg>',
+    icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg>',
     colorClass:'cat-pals',
     badgeBg:'rgba(59,130,246,.18)',
     badgeColor:'#93c5fd',
@@ -388,7 +388,7 @@ const CATEGORIES = [
     id:'sc',
     label:'Special Circumstances',
     title:'Special Situations & PCAC',
-    icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',
+    icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',
     colorClass:'cat-sc',
     badgeBg:'rgba(234,179,8,.15)',
     badgeColor:'#fde047',
@@ -443,7 +443,7 @@ function buildPage() {
           <img src="${IMG_BASE}${algo.file}" alt="${algo.title}" loading="lazy"
                onerror="this.parentElement.style.background='rgba(59,130,246,.08)';this.style.opacity='0'">
           <div class="ac-thumb-overlay"></div>
-          <div class="ac-zoom-hint"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg> View</div>
+          <div class="ac-zoom-hint"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg> View</div>
         </div>
         <div class="ac-body">
           <div class="ac-label">

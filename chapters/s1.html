@@ -280,18 +280,18 @@ footer a{color:#3b82f6;text-decoration:none}
     <div><div class="pt">S1 Scope of Practice</div><div class="ps">DCAS CPG 2026</div></div>
   </div>
   <div class="hr">
-    <button class="ib" id="themeBtn"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg></button>
-    <a href="c-index.html" class="ib"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></a>
-    <a href="../pages/about.html" class="ib"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg></a>
+    <button class="ib" id="themeBtn"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg></button>
+    <a href="c-index.html" class="ib"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></a>
+    <a href="../pages/about.html" class="ib"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg></a>
   </div>
 </header>
 
 <main>
 
 <div class="hero">
-  <h2><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> DCAS Scope of Practice Matrix · CPG 2026</h2>
+  <h2><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> DCAS Scope of Practice Matrix · CPG 2026</h2>
   <p>Medications, skills, and interventions each DCAS provider level is authorised to perform independently or with Tele-EMS consultation. Source: DCAS CPG 2026, pages 338–341.</p>
-  <div class="hn"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️ Study aid only — always refer to the official DCAS CPG and memos for final authority.</div>
+  <div class="hn"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️ Study aid only — always refer to the official DCAS CPG and memos for final authority.</div>
 </div>
 
 <div class="leg">
@@ -304,15 +304,15 @@ footer a{color:#3b82f6;text-decoration:none}
     <div class="lg-r"><div class="lv lv-p">P</div><div class="ld"><strong>Paramedic</strong> — ETI, IO, cardioversion, full IV scope</div></div>
     <div class="lg-r"><div class="lv lv-ap">AP</div><div class="ld"><strong>Advanced Paramedic</strong> — RSI, NIV, procedural sedation</div></div>
     <div class="lg-r"><div class="lv lv-ep">EP</div><div class="ld"><strong>Emergency Physician</strong> — full unrestricted scope</div></div>
-    <div class="lg-r"><div class="lv lv-tele"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg></div><div class="ld"><strong>Tele-EMS Required</strong> — must consult Tele-EMS before performing</div></div>
+    <div class="lg-r"><div class="lv lv-tele"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg></div><div class="ld"><strong>Tele-EMS Required</strong> — must consult Tele-EMS before performing</div></div>
   </div>
 </div>
 
 <div class="fb">
   <div class="sb">
-    <span class="si"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
+    <span class="si"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
     <input id="qi" type="text" placeholder="Search skills or medications..." autocomplete="off">
-    <button id="qc"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
+    <button id="qc"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
   </div>
   <div class="fps">
     <button class="fp fa" id="pill-all"  onclick="setFilter('all')">All Levels</button>
@@ -328,7 +328,7 @@ footer a{color:#3b82f6;text-decoration:none}
 </div>
 
 <div id="root"></div>
-<div class="nr" id="noR"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg> No results match your search or filter.</div>
+<div class="nr" id="noR"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg> No results match your search or filter.</div>
 
 </main>
 
@@ -351,7 +351,7 @@ const LVLHD   = ['tc-er','tc-emr','tc-emt','tc-emta','tc-p','tc-ap','tc-ep'];
 const LVLI    = {all:-1,er:0,emr:1,emt:2,emta:3,p:4,ap:5,ep:6};
 
 const DATA = [
-{id:'meds', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>', title:'Medications', open:true, rows:[
+{id:'meds', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>', title:'Medications', open:true, rows:[
   /* ── ER+ ── */
   ['Oxygen','',                                                  ['y','y','y','y','y','y','y'],''],
   /* ── EMR+ ── */
@@ -378,14 +378,14 @@ const DATA = [
   ['Hydrocortisone IM','Asthma / COPD / anaphylaxis',            ['','','y','y','y','y','y'],''],
   ['Nefopam IV','Moderate–severe pain — IV infusion',            ['','','y','y','y','y','y'],''],
   ['Racemic Epinephrine','Croup — nebulised',                    ['','','y','y','y','y','y'],''],
-  /* ── EMT Tele <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EMT-A+ ── */
+  /* ── EMT Tele <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EMT-A+ ── */
   ['Diclofenac IM','Pain management — 75 mg IM',                 ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
   ['Atropine','Bradycardia / organophosphate — IV / IO',         ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
   ['Hydrocortisone IV','IV route — asthma / anaphylaxis',        ['','','t','y','y','y','y'],'EMT: Tele-EMS required · EMT-A+: independent'],
-  /* ── EMT Tele <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EMT-A Tele <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Para+ ── */
+  /* ── EMT Tele <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EMT-A Tele <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Para+ ── */
   ['Hyoscine Butylbromide IM / IV','Abdominal cramping — 20 mg', ['','','t','t','y','y','y'],'EMT & EMT-A: Tele-EMS required · Para+: independent'],
   ['Metoclopramide IM / IV','Nausea & vomiting',                 ['','','t','t','y','y','y'],'EMT & EMT-A: Tele-EMS required · Para+: independent'],
-  /* ── EMT-A Tele <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Para+ ── */
+  /* ── EMT-A Tele <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Para+ ── */
   ['Adenosine','SVT — 0.1 mg/kg IV rapid + flush',              ['','','','t','y','y','y'],'EMT-A: Tele-EMS required · Para+: independent'],
   /* ── Para+ ── */
   ['Epinephrine 1:1000 amp','Anaphylaxis / asthma / inotrope',   ['','','','','y','y','y'],''],
@@ -394,7 +394,7 @@ const DATA = [
   ['Epinephrine push-dose / infusion','Haemodynamic support',    ['','','','','y','y','y'],''],
   ['Amiodarone Infusion (tachyarrhythmias)','SVT/VT — 150 mg over 10 min',['','','','','y','y','y'],''],
   ['Dopamine','Inotrope infusion — 5–20 mcg/kg/min',            ['','','','','y','y','y'],''],
-  /* ── AP Tele <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EP ── */
+  /* ── AP Tele <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> EP ── */
   ['Labetalol','Pre-eclampsia severe hypertension — IV',         ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
   ['Morphine','Severe pain — IV / IM',                           ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
   ['Pethidine','Severe pain — IM',                               ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
@@ -404,7 +404,7 @@ const DATA = [
   ['Ketamine','Procedural sedation / pain / RSI',                ['','','','','','t','y'],'AP: Tele-EMS required · EP: independent'],
 ]},
 
-{id:'airway', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>️', title:'Airway Management & Ventilation', open:true, rows:[
+{id:'airway', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>️', title:'Airway Management & Ventilation', open:true, rows:[
   ['Open Airway Maneuvers','Head-tilt/chin-lift · jaw-thrust',   ['y','y','y','y','y','y','y'],''],
   ['Bag Mask Ventilation (BVM)','1- & 2-person · 10–12/min',    ['y','y','y','y','y','y','y'],''],
   ['Oxygen Therapy','Nasal cannula · simple mask · NRB · NRBM', ['','y','y','y','y','y','y'],''],
@@ -421,7 +421,7 @@ const DATA = [
   ['Foreign Body Removal','Advanced laryngoscopic retrieval',    ['','','','','','y','y'],''],
 ]},
 
-{id:'cardiac', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg>', title:'Cardiac', open:false, rows:[
+{id:'cardiac', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg>', title:'Cardiac', open:false, rows:[
   ['AED & CPR — Adult & Paediatric','30:2 · 100–120/min · 5–6 cm', ['y','y','y','y','y','y','y'],''],
   ['4-Lead ECG','Continuous cardiac monitoring',                 ['','y','y','y','y','y','y'],''],
   ['12-Lead ECG','Acquisition and transmission to hospital',     ['','','y','y','y','y','y'],''],
@@ -431,7 +431,7 @@ const DATA = [
   ['Synchronized Cardioversion & Pacing','Unstable tachy / symptomatic brady', ['','','','','t','y','y'],'Para: Tele-EMS required · AP+: independent'],
 ]},
 
-{id:'trauma', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bandage'/></svg>', title:'Trauma', open:false, rows:[
+{id:'trauma', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bandage'/></svg>', title:'Trauma', open:false, rows:[
   ['Sling Application','Upper limb immobilisation',              ['y','y','y','y','y','y','y'],''],
   ['Splinting (SAM / Foam Splint)','Limb fracture stabilisation',['y','y','y','y','y','y','y'],''],
   ['Logroll','Spinal precaution patient movement',               ['y','y','y','y','y','y','y'],''],
@@ -447,12 +447,12 @@ const DATA = [
   ['Needle Chest Decompression','Tension pneumothorax — 2nd ICS MCL / 4th–5th ICS AAL',['','','','','','y','y'],''],
 ]},
 
-{id:'haemo', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>', title:'Haemorrhage Control', open:false, rows:[
+{id:'haemo', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>', title:'Haemorrhage Control', open:false, rows:[
   ['C.A.T. Tourniquet Use','Life-threatening extremity haemorrhage · document time', ['','y','y','y','y','y','y'],''],
   ['Nasal Packing','Epistaxis — anterior / posterior packing',   ['','','','','','y','y'],''],
 ]},
 
-{id:'others', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#settings-2'/></svg>️', title:'Others', open:false, rows:[
+{id:'others', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#settings-2'/></svg>️', title:'Others', open:false, rows:[
   ['Childbirth','Normal delivery & immediate newborn care',      ['','','y','y','y','y','y'],''],
   ['Intramuscular (IM) Injection','Correct site selection · ANTT',['','','y','y','y','y','y'],''],
   ['Intravenous (IV) Cannulation','Peripheral IV access · ANTT', ['','','','y','y','y','y'],''],
@@ -466,8 +466,8 @@ function minLvl(c){ const i=c.findIndex(x=>x==='y'||x==='t'); return i<0?99:i; }
 
 function mkCell(v,i){
   const cls=LVLCLS[i];
-  if(v==='y') return `<div class="lc ${cls}"><div class="cy"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></div></div>`;
-  if(v==='t') return `<div class="lc ${cls}"><div class="ct"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg></div></div>`;
+  if(v==='y') return `<div class="lc ${cls}"><div class="cy"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></div></div>`;
+  if(v==='t') return `<div class="lc ${cls}"><div class="ct"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg></div></div>`;
   return `<div class="lc ${cls}"><span class="cn">—</span></div>`;
 }
 
@@ -482,7 +482,7 @@ function buildAll(){
       const ml=minLvl(cells);
       const cls=cells.map((v,i)=>mkCell(v,i)).join('');
       const dt=detail?`<div class="sd">${detail}</div>`:'';
-      const nt=note?`<div class="snote"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg> ${note}</div>`:'';
+      const nt=note?`<div class="snote"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#phone'/></svg> ${note}</div>`:'';
       const txt=(name+' '+detail).toLowerCase();
       return `<div class="sr" data-lvl="${ml}" data-text="${txt}">
         <div class="sn">${name}${dt}${nt}</div>

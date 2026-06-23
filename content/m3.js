@@ -6,7 +6,7 @@ window.MEDICATIONS = {
         shortTitle: "M21 Hyoscine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Hyoscine Butyl bromide</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Hyoscine Butyl bromide</h3>
                 <h4>Classification</h4>
                 <p>Anticholinergic (antimuscarinic)</p>
                 <h4>Presentation</h4>
@@ -43,7 +43,7 @@ window.MEDICATIONS = {
         shortTitle: "M22 Ketamine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Ketamine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Ketamine</h3>
                 <h4>Classification</h4>
                 <p>Dissociative Anesthetic</p>
                 <h4>Presentation</h4>
@@ -82,7 +82,7 @@ window.MEDICATIONS = {
         shortTitle: "M23 Labetalol",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Labetalol</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Labetalol</h3>
                 <h4>Classification</h4>
                 <p>Beta Blocker</p>
                 <h4>Presentation</h4>
@@ -120,7 +120,7 @@ window.MEDICATIONS = {
         shortTitle: "M24 Magnesium Sulphate",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Magnesium Sulphate</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Magnesium Sulphate</h3>
                 <h4>Classification</h4>
                 <p>Electrolyte</p>
                 <h4>Presentation</h4>
@@ -160,7 +160,7 @@ window.MEDICATIONS = {
         shortTitle: "M25 Penthrox",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Methoxyflurane (Penthrox)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Methoxyflurane (Penthrox)</h3>
                 <h4>Classification</h4>
                 <p>Inhaled Anesthetic</p>
                 <h4>Presentation</h4>
@@ -197,7 +197,7 @@ window.MEDICATIONS = {
         shortTitle: "M26 Metoclopramide",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Metoclopramide</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Metoclopramide</h3>
                 <h4>Classification</h4>
                 <p>Antiemetic</p>
                 <h4>Presentation</h4>
@@ -234,7 +234,7 @@ window.MEDICATIONS = {
         shortTitle: "M27 Midazolam",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Midazolam</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Midazolam</h3>
                 <h4>Classification</h4>
                 <p>Benzodiazepine</p>
                 <h4>Presentation</h4>
@@ -274,7 +274,7 @@ window.MEDICATIONS = {
         shortTitle: "M28 Morphine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Morphine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Morphine</h3>
                 <h4>Classification</h4>
                 <p>Opiate Analgesic (opiate agonist)</p>
                 <h4>Presentation</h4>
@@ -312,7 +312,7 @@ window.MEDICATIONS = {
         shortTitle: "M29 Naloxone",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Naloxone</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Naloxone</h3>
                 <h4>Classification</h4>
                 <p>Opiate Antagonist / Opiate Antidote</p>
                 <h4>Presentation</h4>
@@ -349,7 +349,7 @@ window.MEDICATIONS = {
         shortTitle: "M30 Nefopam",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Nefopam</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Nefopam</h3>
                 <h4>Classification</h4>
                 <p>Non‑opioid analgesic</p>
                 <h4>Presentation</h4>

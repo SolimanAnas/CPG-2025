@@ -1,6 +1,6 @@
 ﻿// ============================================================
 //  DCAS CPG 2025 – Service Worker
-//  Strategy: NETWORK FIRST  <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg>  cache fallback
+//  Strategy: NETWORK FIRST  <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg>  cache fallback
 // ============================================================
 
 const CACHE_VERSION = 'dcas-cpg-v5.2';           // Bumped to v5.2 to add Lucide icon sprite
@@ -147,7 +147,7 @@ function networkFirst(req) {
           return caches.match('index.html', { ignoreSearch: true }).then(function(fallback) {
             return fallback || new Response(
               '<h2 style="font-family:sans-serif;text-align:center;margin-top:40px">' +
-              '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#phone-off'/></svg> You are offline and this page is not cached yet.</h2>',
+              '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#phone-off"/></svg> You are offline and this page is not cached yet.</h2>',
               { headers: { 'Content-Type': 'text/html' } }
             );
           });

@@ -52,9 +52,9 @@ test('exam.html loads without console errors', async ({ page }) => {
 
 // ── 3. Wizard flow - select mode and start exam ───────────────────────
 async function navigateWizard(page) {
-  // Step 1 <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Step 2: Click Next on mode step
+  // Step 1 <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Step 2: Click Next on mode step
   await page.locator('.wizard-next[data-next="2"]').click();
-  // Step 2 <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Step 3: Click Next on topics step
+  // Step 2 <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Step 3: Click Next on topics step
   await page.locator('.wizard-next[data-next="3"]').click();
   // Step 3: select timed mode for tests that need auto-advance
   await page.locator('[data-setting="timer"][data-value="timed"]').click();

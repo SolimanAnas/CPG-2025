@@ -5,7 +5,7 @@ window.CPG_DATA = {
     shortTitle: "4.1 Adult BLS",
     summary: `
         <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg> Adult Basic Life Support (BLS)</h3>
+            <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg> Adult Basic Life Support (BLS)</h3>
             
             <h4>Patient Care Goals</h4>
             <ul>
@@ -335,7 +335,7 @@ window.CPG_DATA = {
         { category: "Quality", question: "What does EtCO₂ >10 mmHg during CPR indicate?", answer: "Adequate compressions." },
         { category: "Quality", question: "What does EtCO₂ >40 mmHg suddenly indicate?", answer: "Possible ROSC." },
         { category: "Exclusion", question: "When should CPR not be started?", answer: "Signs of irreversible death (rigor mortis, dependent lividity, decapitation)." },
-        { category: "BLS sequence", question: "What is the BLS sequence for adult cardiac arrest?", answer: "Check responsiveness <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> call for help/AED <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> check pulse (≤10 sec) <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> start CPR 30:2." },
+        { category: "BLS sequence", question: "What is the BLS sequence for adult cardiac arrest?", answer: "Check responsiveness <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> call for help/AED <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> check pulse (≤10 sec) <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> start CPR 30:2." },
         { category: "Chest recoil", question: "Why is full chest recoil important?", answer: "Allows heart to refill, improving coronary perfusion." },
         { category: "Pulse check", question: "Where do you check pulse in an adult?", answer: "Carotid artery." },
         { category: "Pulse check duration", question: "How long should you check for a pulse?", answer: "At least 5 seconds but no more than 10 seconds." },

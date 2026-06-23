@@ -5,7 +5,7 @@ window.CPG_DATA = {
     shortTitle: "3.3 Adult Tachycardia",
     summary: `
         <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> Adult Tachycardia with a Pulse</h3>
+            <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> Adult Tachycardia with a Pulse</h3>
             
             <h4>Patient Care Goals</h4>
             <ul>
@@ -312,7 +312,7 @@ window.CPG_DATA = {
         { category: "Precautions", question: "What should be available when giving adenosine?", answer: "Defibrillator and resuscitation equipment." },
         { category: "Fluid", question: "What is the initial fluid bolus for stable tachycardia?", answer: "250 mL IV crystalloid (cautiously)." },
         { category: "Wide complex", question: "What is the first medication for stable monomorphic VT after adenosine?", answer: "Amiodarone 150 mg IV." },
-        { category: "Narrow complex", question: "What is the sequence for stable narrow complex tachycardia?", answer: "Vagal manoeuvres <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> adenosine 6 mg <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> 12 mg <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> consider alternative." },
+        { category: "Narrow complex", question: "What is the sequence for stable narrow complex tachycardia?", answer: "Vagal manoeuvres <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> adenosine 6 mg <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> 12 mg <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> consider alternative." },
         { category: "Refractory", question: "What should you do if tachycardia is refractory to initial treatment?", answer: "Consider underlying causes, consult Tele‑EMS." },
         { category: "KPI", question: "What is the key performance indicator for unstable tachycardia?", answer: "Perform synchronized cardioversion on all hemodynamically compromised patients." },
         { category: "Safety", question: "Why must resuscitation equipment be ready during cardioversion?", answer: "Risk of inducing VF or asystole." },

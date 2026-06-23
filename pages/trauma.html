@@ -214,8 +214,8 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 <!-- ── HEADER ──────────────────────────────────────────── -->
 <header class="app-header">
-  <a class="hdr-back" href="ems-tools.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
-  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg></div>
+  <a class="hdr-back" href="ems-tools.html"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">Trauma Assessment</div>
     <div class="hdr-sub">DCAS CPG 2026 · Systematic Evaluation</div>
@@ -238,7 +238,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 <!-- ── FAB ─────────────────────────────────────────────── -->
 <button class="fab-complete" id="fabBtn" onclick="openSummary()">
-  <span id="fabIcon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></span>
+  <span id="fabIcon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></span>
   <span id="fabText">View Summary</span>
 </button>
 
@@ -248,7 +248,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
     <div class="bs-head">
       <div class="bs-htitle">Assessment Summary</div>
-      <div class="bs-hclose" onclick="closeSheet()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
+      <div class="bs-hclose" onclick="closeSheet()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
     </div>
     <div class="bs-scroll" id="bsContent"></div>
   </div>
@@ -276,7 +276,7 @@ const SCHEMA = [
 
   /* ── PHASE 1: SCENE SIZE-UP ─────────────────────── */
   {
-    id:'scene', label:'Scene Size-Up', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#mountain'/></svg>️',
+    id:'scene', label:'Scene Size-Up', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#mountain'/></svg>️',
     color:'#22c55e', pill:'pill-scene',
     desc:'First actions on scene before patient contact',
     items:[
@@ -290,7 +290,7 @@ const SCHEMA = [
 
   /* ── PHASE 2: INITIAL ASSESSMENT ────────────────── */
   {
-    id:'initial', label:'Initial Assessment', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#eye'/></svg>️',
+    id:'initial', label:'Initial Assessment', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#eye'/></svg>️',
     color:'#3b82f6', pill:'pill-initial',
     desc:'Rapid life-threat identification and intervention',
     items:[
@@ -326,7 +326,7 @@ const SCHEMA = [
 
   /* ── PHASE 3: RAPID TRAUMA SURVEY ───────────────── */
   {
-    id:'rapid', label:'Rapid Trauma Survey', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',
+    id:'rapid', label:'Rapid Trauma Survey', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',
     color:'#f97316', pill:'pill-rapid',
     desc:'Head-to-toe systematic body region assessment',
     items:[
@@ -369,7 +369,7 @@ const SCHEMA = [
 
   /* ── PHASE 4: VITAL SIGNS ────────────────────────── */
   {
-    id:'vitals', label:'Vital Signs', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg>',
+    id:'vitals', label:'Vital Signs', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg>',
     color:'#06b6d4', pill:'pill-vitals',
     desc:'Baseline physiological measurements',
     items:[
@@ -379,7 +379,7 @@ const SCHEMA = [
 
   /* ── PHASE 5: NEUROLOGIC EXAM ────────────────────── */
   {
-    id:'neuro', label:'Neurologic Exam', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg>',
+    id:'neuro', label:'Neurologic Exam', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg>',
     color:'#8b5cf6', pill:'pill-neuro',
     desc:'Central nervous system assessment',
     items:[
@@ -391,7 +391,7 @@ const SCHEMA = [
 
   /* ── PHASE 6: SAMPLE HISTORY ─────────────────────── */
   {
-    id:'sample', label:'SAMPLE History', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>',
+    id:'sample', label:'SAMPLE History', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>',
     color:'#eab308', pill:'pill-sample',
     desc:'Subjective history from patient or bystanders',
     items:[
@@ -401,7 +401,7 @@ const SCHEMA = [
 
   /* ── PHASE 7: ONGOING ASSESSMENT ────────────────── */
   {
-    id:'ongoing', label:'Ongoing Assessment', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',
+    id:'ongoing', label:'Ongoing Assessment', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',
     color:'#f97316', pill:'pill-ongoing',
     desc:'Continuous reassessment en route',
     items:[
@@ -415,7 +415,7 @@ const SCHEMA = [
 
   /* ── PHASE 8: SECONDARY SURVEY ───────────────────── */
   {
-    id:'secondary', label:'Secondary Survey', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg>',
+    id:'secondary', label:'Secondary Survey', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg>',
     color:'#22c55e', pill:'pill-secondary',
     desc:'Detailed head-to-toe reassessment',
     items:[
@@ -428,7 +428,7 @@ const SCHEMA = [
 
   /* ── PHASE 9: RESULTS ────────────────────────────── */
   {
-    id:'results', label:'Performance Results', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trophy'/></svg>',
+    id:'results', label:'Performance Results', icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trophy'/></svg>',
     color:'#06b6d4', pill:'pill-results',
     desc:'Overall performance rating',
     items:[
@@ -439,8 +439,8 @@ const SCHEMA = [
 
 /* ── State ──────────────────────────────────────────── */
 const state = {
-  checked: {},   // stepId <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> bool
-  notes:   {},   // stepId <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> string
+  checked: {},   // stepId <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> bool
+  notes:   {},   // stepId <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> string
   avpu:    null,
   moi:     null,
   priority:null,
@@ -518,8 +518,8 @@ function buildItem(parent, item, phase) {
   const checkCls = item.badge === 'critical' || item.badge === 'intervene' ? 'c-crit' : item.badge === 'warn' ? 'c-warn' : 'c-done';
 
   const badgeHtml = item.badge ? `<span class="step-badge badge-${item.badge}">${
-    item.badge === 'critical' ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg> Critical' :
-    item.badge === 'intervene' ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg> Intervene' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> Important'
+    item.badge === 'critical' ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg> Critical' :
+    item.badge === 'intervene' ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg> Intervene' : '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> Important'
   }</span>` : '';
 
   card.innerHTML = `<div class="step-row" onclick="toggleStep('${item.id}','${checkCls}')">
@@ -575,8 +575,8 @@ function buildMOI(item, phase) {
       <div class="step-desc" style="margin-top:3px">${item.desc}</div>
     </div>
     <div class="moi-row">
-      <button class="moi-btn" id="moi-L" onclick="pickMOI('L')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#target'/></svg> Localized MOI<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Focused exam</span></button>
-      <button class="moi-btn" id="moi-G" onclick="pickMOI('G')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#globe'/></svg> Generalized / Unknown<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Rapid trauma survey</span></button>
+      <button class="moi-btn" id="moi-L" onclick="pickMOI('L')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#target'/></svg> Localized MOI<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Focused exam</span></button>
+      <button class="moi-btn" id="moi-G" onclick="pickMOI('G')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#globe'/></svg> Generalized / Unknown<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Rapid trauma survey</span></button>
     </div>`;
   return card;
 }
@@ -710,10 +710,10 @@ function buildResult() {
   wrap.className = 'step-card';
   wrap.id = 'card-result';
   const opts = [
-    ['excellent','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg> Excellent','sel-excellent'],
-    ['good','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Good','sel-good'],
+    ['excellent','<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg> Excellent','sel-excellent'],
+    ['good','<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Good','sel-good'],
     ['adequate','🟡 Adequate','sel-adequate'],
-    ['inadequate','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Inadequate','sel-inadequate'],
+    ['inadequate','<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Inadequate','sel-inadequate'],
   ];
   wrap.innerHTML = `<div style="padding:13px 14px 8px">
       <div class="step-title">Performance Rating</div>
@@ -845,7 +845,7 @@ function updateProgress() {
   const fab = document.getElementById('fabBtn');
   const ready = pct >= 80;
   fab.classList.toggle('ready', ready);
-  document.getElementById('fabIcon').textContent = ready ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>';
+  document.getElementById('fabIcon').textContent = ready ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>' : '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>';
   document.getElementById('fabText').textContent = ready ? 'Complete Assessment' : `Summary (${pct}%)`;
 }
 
@@ -860,10 +860,10 @@ function openSummary() {
   const elapsed = formatTime(Math.floor((Date.now() - state.startTime) / 1000));
 
   const resultColors = {
-    excellent:{ring:'rr-safe',pill:'pill-g',label:'Excellent Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg>',sub:'All critical steps completed to high standard'},
-    good:     {ring:'rr-safe',pill:'pill-g',label:'Good Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>',sub:'Assessment completed competently'},
+    excellent:{ring:'rr-safe',pill:'pill-g',label:'Excellent Performance',icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg>',sub:'All critical steps completed to high standard'},
+    good:     {ring:'rr-safe',pill:'pill-g',label:'Good Performance',icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>',sub:'Assessment completed competently'},
     adequate: {ring:'rr-warn',pill:'pill-y',label:'Adequate Performance',icon:'🟡',sub:'Minimum standards met — review missed steps'},
-    inadequate:{ring:'rr-danger',pill:'pill-r',label:'Inadequate Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg>',sub:'Critical deficiencies identified — remediation required'},
+    inadequate:{ring:'rr-danger',pill:'pill-r',label:'Inadequate Performance',icon:'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg>',sub:'Critical deficiencies identified — remediation required'},
   };
   const res = state.result ? resultColors[state.result] : null;
 
@@ -882,7 +882,7 @@ function openSummary() {
 
   // Patient data summary
   html += `<div class="sum-phase" style="margin-bottom:10px">
-    <div class="sum-phase-hdr"><span class="sum-phase-name"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg> Patient Data</span></div>
+    <div class="sum-phase-hdr"><span class="sum-phase-name"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg> Patient Data</span></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.76rem">
       <div style="color:var(--muted)">AVPU: <strong style="color:var(--text)">${state.avpu||'—'}</strong></div>
       <div style="color:var(--muted)">Priority: <strong style="color:var(--text)">${state.priority||'—'}</strong></div>
@@ -912,7 +912,7 @@ function openSummary() {
       <div class="sum-phase-bar"><div class="sum-phase-fill" style="width:${pPct}%;background:${barCol}"></div></div>
       ${pMissed.length ? `<div class="sum-miss-list">
         ${pMissed.map(i=>`<div class="sum-miss-item"><div class="sum-miss-dot"></div>${i.title||i.type}</div>`).join('')}
-      </div>` : `<div style="font-size:.72rem;color:var(--green);margin-top:7px"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> All steps completed</div>`}
+      </div>` : `<div style="font-size:.72rem;color:var(--green);margin-top:7px"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> All steps completed</div>`}
     </div>`;
   });
 
@@ -925,7 +925,7 @@ function openSummary() {
     </div>`;
   }
 
-  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){resetAll();closeSheet()}"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset Assessment</button>`;
+  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){resetAll();closeSheet()}"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset Assessment</button>`;
 
   document.getElementById('bsContent').innerHTML = html;
   document.getElementById('bsOverlay').classList.add('open');

@@ -701,11 +701,11 @@ input:checked+.slider:before{transform:translateX(20px)}
   <!-- Mode row - identical size -->
   <div class="mode-row" role="group" aria-label="Study mode selection">
     <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">
-      <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book-open'/></svg> Study Mode
-      <span class="mode-hint"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Hints & Review answers</span>
+      <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book-open'/></svg> Study Mode
+      <span class="mode-hint"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Hints & Review answers</span>
     </button>
     <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">
-      <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#notebook-pen'/></svg> Exam Mode
+      <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#notebook-pen'/></svg> Exam Mode
       <span class="mode-hint">No hints • Timed • Submit to score</span>
     </button>
   </div>
@@ -721,27 +721,27 @@ input:checked+.slider:before{transform:translateX(20px)}
 
   <div class="exam-cards" role="list">
     <div class="exam-card" onclick="startExam('../src/PPET/ppet.json', 'PPET Exam')" role="listitem" tabindex="0" aria-label="Start PPET Exam">
-      <div class="ec-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plane-takeoff'/></svg></div>
+      <div class="ec-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plane-takeoff'/></svg></div>
       <div class="ec-title">PPET Exam</div>
       <div class="ec-meta">57 questions · Exam & Study modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
     <div class="exam-card" onclick="startExam('../src/PPET/exam2.json', 'PPET Exam — Form 2')" role="listitem" tabindex="0" aria-label="Start PPET Exam Form 2">
-      <div class="ec-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plane-takeoff'/></svg></div>
+      <div class="ec-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plane-takeoff'/></svg></div>
       <div class="ec-title">PPET Exam — Form 2</div>
       <div class="ec-meta">Pediatric transport · Exam & Study modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
-  <a href="courses.html" class="back-link"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back to Courses</a>
+  <a href="courses.html" class="back-link"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back to Courses</a>
 </div>
 
 <!-- Exam screen -->
 <div id="examScreen" role="main" aria-label="Exam interface">
   <header class="exam-header">
     <div class="eh-left">
-      <button class="sb-toggle" onclick="toggleSidebar()" aria-label="Toggle question navigator" aria-expanded="false"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#menu'/></svg></button>
+      <button class="sb-toggle" onclick="toggleSidebar()" aria-label="Toggle question navigator" aria-expanded="false"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#menu'/></svg></button>
       <span class="hdr-brand">PPET</span>
       <span class="hdr-exam" id="examName" aria-live="polite">—</span>
       <span class="hdr-mode m-exam" id="modeBadge" aria-live="polite">Exam</span>
@@ -757,11 +757,11 @@ input:checked+.slider:before{transform:translateX(20px)}
         <button class="tp tp-green" id="h-tp-green" onclick="setTheme('green')" aria-label="Green theme"></button>
       </div>
       <button class="hbtn hbtn-flag" id="markBtn" onclick="toggleMark()" aria-pressed="false">
-        <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg> <span class="btn-txt">Flag</span>
+        <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg> <span class="btn-txt">Flag</span>
       </button>
       <!-- Back button for study mode -->
-      <button class="hbtn hbtn-back" id="backBtn" onclick="confirmExit()" style="display:none"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back</button>
-      <button class="hbtn hbtn-end" id="endBtn" onclick="openEndModal()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#upload'/></svg> <span class="btn-txt">End</span></button>
+      <button class="hbtn hbtn-back" id="backBtn" onclick="confirmExit()" style="display:none"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back</button>
+      <button class="hbtn hbtn-end" id="endBtn" onclick="openEndModal()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#upload'/></svg> <span class="btn-txt">End</span></button>
     </div>
   </header>
   
@@ -773,8 +773,8 @@ input:checked+.slider:before{transform:translateX(20px)}
           <button class="sb-filter-btn active" data-filter="all" onclick="filterGrid('all')" aria-pressed="true">All</button>
         </div>
         <div class="sb-filters">
-          <button class="sb-filter-btn" data-filter="unanswered" onclick="filterGrid('unanswered')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-dot'/></svg></button>
-          <button class="sb-filter-btn" data-filter="flagged" onclick="filterGrid('flagged')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg></button>
+          <button class="sb-filter-btn" data-filter="unanswered" onclick="filterGrid('unanswered')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-dot'/></svg></button>
+          <button class="sb-filter-btn" data-filter="flagged" onclick="filterGrid('flagged')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg></button>
         </div>
         <div class="sb-legend" aria-label="Question status legend">
           <div class="sb-leg"><div class="leg-dot ld-unseen" aria-hidden="true"></div>Unanswered</div>
@@ -818,26 +818,26 @@ input:checked+.slider:before{transform:translateX(20px)}
         
         <!-- Study mode actions -->
         <div id="studyActions" class="study-actions" style="display:none">
-          <button class="study-btn" id="hintBtn" onclick="showHint()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Show Hint</button>
-          <button class="study-btn primary" id="answerBtn" onclick="revealAnswer()" disabled><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Reveal Answer</button>
+          <button class="study-btn" id="hintBtn" onclick="showHint()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Show Hint</button>
+          <button class="study-btn primary" id="answerBtn" onclick="revealAnswer()" disabled><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Reveal Answer</button>
         </div>
         
         <div class="opts" id="optsList" role="radiogroup" aria-label="Answer choices"></div>
         
         <!-- Confidence rating for study mode -->
         <div id="confidenceRow" class="confidence-row" style="display:none" aria-label="How confident were you?">
-          <button class="confidence-btn" data-level="high" onclick="setConfidence('high')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg> Sure</button>
-          <button class="confidence-btn" data-level="medium" onclick="setConfidence('medium')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#message-circle-question'/></svg> Maybe</button>
-          <button class="confidence-btn" data-level="low" onclick="setConfidence('low')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#frown'/></svg> Guessed</button>
+          <button class="confidence-btn" data-level="high" onclick="setConfidence('high')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg> Sure</button>
+          <button class="confidence-btn" data-level="medium" onclick="setConfidence('medium')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#message-circle-question'/></svg> Maybe</button>
+          <button class="confidence-btn" data-level="low" onclick="setConfidence('low')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#frown'/></svg> Guessed</button>
         </div>
         
         <div id="expArea" aria-live="polite"></div>
       </div>
       
       <div class="q-nav">
-        <button class="nav-btn nav-prev" id="prevBtn" onclick="nav(-1)" disabled aria-label="Previous question"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Prev</button>
+        <button class="nav-btn nav-prev" id="prevBtn" onclick="nav(-1)" disabled aria-label="Previous question"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Prev</button>
         <span class="nav-ctr" id="navCtr" aria-live="polite">1 / 50</span>
-        <button class="nav-btn nav-next" id="nextBtn" onclick="nav(1)" aria-label="Next question">Next <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>
+        <button class="nav-btn nav-next" id="nextBtn" onclick="nav(1)" aria-label="Next question">Next <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>
       </div>
     </main>
   </div>
@@ -846,9 +846,9 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Results screen -->
 <div id="resultsScreen">
   <div class="res-hdr">
-    <span class="res-ttl"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg> Exam Results</span>
+    <span class="res-ttl"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg> Exam Results</span>
     <span id="resExamName" aria-live="polite"></span>
-    <button class="res-back" onclick="goSelector()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> New Exam</button>
+    <button class="res-back" onclick="goSelector()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> New Exam</button>
   </div>
   <div class="res-scroll">
     <div id="resContent">
@@ -860,8 +860,8 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Pearls screen -->
 <div id="pearlsScreen">
   <div class="pearls-header">
-    <span class="pearls-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> ITLS Clinical Pearls</span>
-    <button class="pearls-back" onclick="closePearls()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back</button>
+    <span class="pearls-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> ITLS Clinical Pearls</span>
+    <button class="pearls-back" onclick="closePearls()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back</button>
   </div>
   <div class="pearls-scroll" id="pearlsContainer">
     <!-- Loading state -->
@@ -876,7 +876,7 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Modal -->
 <div class="modal-bg" id="endModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
-    <div class="modal-ico" aria-hidden="true"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#upload'/></svg></div>
+    <div class="modal-ico" aria-hidden="true"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#upload'/></svg></div>
     <div class="modal-ttl" id="modalTitle">Submit Exam Block?</div>
     <div class="modal-sub">You are about to submit your answers. This action cannot be undone.</div>
     <div class="modal-stats" aria-live="polite">
@@ -894,7 +894,7 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Exit Confirmation Modal -->
 <div class="modal-bg" id="exitModal" onclick="if(event.target===this)closeExitModal()" role="dialog" aria-modal="true" aria-labelledby="exitModalTitle">
   <div class="modal">
-    <div class="modal-ico" aria-hidden="true"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️</div>
+    <div class="modal-ico" aria-hidden="true"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️</div>
     <div class="modal-ttl" id="exitModalTitle">Leave Exam?</div>
     <div class="modal-sub" id="exitModalSub">Your progress will be saved. You can resume later.</div>
     <div class="modal-btns">
@@ -907,12 +907,12 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Settings Modal for Hint Toggle -->
 <div class="modal-bg" id="settingsModal" onclick="if(event.target===this)closeSettingsModal()" role="dialog" aria-modal="true" aria-labelledby="settingsModalTitle">
   <div class="modal">
-    <div class="modal-ico" aria-hidden="true"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#settings-2'/></svg>️</div>
+    <div class="modal-ico" aria-hidden="true"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#settings-2'/></svg>️</div>
     <div class="modal-ttl" id="settingsModalTitle">Settings</div>
     <div class="modal-sub">Customize your experience</div>
     <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--border)">
       <div>
-        <div style="font-weight:600">Hints (toasts) <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile-plus'/></svg></div>
+        <div style="font-weight:600">Hints (toasts) <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile-plus'/></svg></div>
         <div style="font-size:.75rem;color:var(--muted)">Show quick feedback messages</div>
       </div>
       <label class="toggle">
@@ -999,8 +999,8 @@ function showToast(message, type = 'info', duration = 1500) {
   toast.className = `toast ${type}`;
   toast.setAttribute('role', 'status');
   
-  const icons = { success: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg>', info: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg>', warning: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>' };
-  toast.innerHTML = `<span class="toast-icon" aria-hidden="true">${icons[type] || '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg>'}</span><span>${escapeHtml(message)}</span>`;
+  const icons = { success: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg>', info: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg>', warning: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>' };
+  toast.innerHTML = `<span class="toast-icon" aria-hidden="true">${icons[type] || '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg>'}</span><span>${escapeHtml(message)}</span>`;
   
   container.appendChild(toast);
   
@@ -1143,7 +1143,7 @@ async function startExam(path, name) {
     document.getElementById('resExamName').textContent = name;
     
     const modeBadge = document.getElementById('modeBadge');
-    modeBadge.textContent = ST.mode === 'study' ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book-open'/></svg> Study' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#notebook-pen'/></svg> Exam';
+    modeBadge.textContent = ST.mode === 'study' ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book-open'/></svg> Study' : '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#notebook-pen'/></svg> Exam';
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     
     const isStudy = ST.mode === 'study';
@@ -1164,7 +1164,7 @@ async function startExam(path, name) {
       if (ST.timerSec >= 2700 && ST.mode === 'exam') {
         timerEl.classList.add('warning');
         if (ST.timerSec === 2700) {
-          showToast('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#alarm-clock'/></svg> 45 min - review flagged', 'warning', 1500);
+          showToast('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#alarm-clock'/></svg> 45 min - review flagged', 'warning', 1500);
         }
       }
     }, 1000);
@@ -1347,14 +1347,14 @@ function renderQ() {
     
     let elimHtml = '';
     if (!isStudy && !revealed) {
-      elimHtml = `<button class="elim-btn" onclick="doElim(${ST.idx},${idx},event)" aria-label="${isElim ? 'Restore' : 'Eliminate'} option ${letter}">${isElim ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#undo-2'/></svg>' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg>'}</button>`;
+      elimHtml = `<button class="elim-btn" onclick="doElim(${ST.idx},${idx},event)" aria-label="${isElim ? 'Restore' : 'Eliminate'} option ${letter}">${isElim ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#undo-2'/></svg>' : '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg>'}</button>`;
     }
     
     let tagHtml = '';
     if (revealed) {
-      if (isCorrect && isSel) tagHtml = '<span class="rev-tag rev-tag-ok"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Correct</span>';
-      else if (isCorrect) tagHtml = '<span class="rev-tag rev-tag-ans"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Answer</span>';
-      else if (isSel) tagHtml = '<span class="rev-tag rev-tag-ng"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg> Wrong</span>';
+      if (isCorrect && isSel) tagHtml = '<span class="rev-tag rev-tag-ok"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Correct</span>';
+      else if (isCorrect) tagHtml = '<span class="rev-tag rev-tag-ans"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Answer</span>';
+      else if (isSel) tagHtml = '<span class="rev-tag rev-tag-ng"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg> Wrong</span>';
     }
     
     row.innerHTML = elimHtml + 
@@ -1385,18 +1385,18 @@ function renderQ() {
       const hint = q.hint || 'Remember pediatric assessment triangle: Appearance, Work of Breathing, Circulation to Skin.';
       expDiv.innerHTML = `
         <div class="study-hint" onclick="revealAnswer()" style="cursor:pointer">
-          <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> <strong>Hint:</strong> ${escapeHtml(hint)}
+          <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> <strong>Hint:</strong> ${escapeHtml(hint)}
           <div style="margin-top:8px;font-size:.75rem;color:var(--blue)">Click to reveal answer</div>
         </div>`;
     } else {
-      expDiv.innerHTML = '<div class="study-hint"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Select an answer, then use the buttons above to get help</div>';
+      expDiv.innerHTML = '<div class="study-hint"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Select an answer, then use the buttons above to get help</div>';
     }
   } else {
     expDiv.innerHTML = '';
   }
 
   if (isStudy && revealed && confidence) {
-    const confLabels = { high: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg> Sure', medium: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#message-circle-question'/></svg> Maybe', low: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#frown'/></svg> Guessed' };
+    const confLabels = { high: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg> Sure', medium: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#message-circle-question'/></svg> Maybe', low: '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#frown'/></svg> Guessed' };
     expDiv.innerHTML += `
       <div style="margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)">
         <span style="font-size:.7rem;color:var(--muted)">Your confidence: <strong>${confLabels[confidence]}</strong></span>
@@ -1411,7 +1411,7 @@ function renderQ() {
     nextBtn.textContent = 'Check Answer';
     nextBtn.disabled = false;
   } else {
-    nextBtn.textContent = 'Next <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg>';
+    nextBtn.textContent = 'Next <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg>';
     nextBtn.disabled = ST.idx === total - 1;
   }
   
@@ -1621,7 +1621,7 @@ function closeSettingsModal() {
 function toggleHints() {
   ST.hintsEnabled = document.getElementById('hintsToggle').checked;
   localStorage.setItem('itls-hints-enabled', ST.hintsEnabled);
-  showToast(ST.hintsEnabled ? 'Hints enabled <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile-plus'/></svg>' : 'Hints disabled', 'info', 1200);
+  showToast(ST.hintsEnabled ? 'Hints enabled <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile-plus'/></svg>' : 'Hints disabled', 'info', 1200);
 }
 
 function goSelector() { 
@@ -1679,9 +1679,9 @@ function submitExam() {
     
     <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
       <button class="study-btn" onclick="filterResults('all')">All Questions</button>
-      <button class="study-btn" onclick="filterResults('incorrect')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Incorrect Only</button>
-      <button class="study-btn" onclick="filterResults('flagged')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg> Flagged</button>
-      <button class="study-btn" onclick="window.print()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#printer'/></svg>️ Print</button>
+      <button class="study-btn" onclick="filterResults('incorrect')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Incorrect Only</button>
+      <button class="study-btn" onclick="filterResults('flagged')"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flag'/></svg> Flagged</button>
+      <button class="study-btn" onclick="window.print()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#printer'/></svg>️ Print</button>
     </div>
     
     <div class="rq-list" id="resultsList">`;
@@ -1690,7 +1690,7 @@ function submitExam() {
     const ua = ST.answers[q.id];
     const isC = ua && ua === q.correct_answer, isX = ua && !isC, isO = !ua;
     const dotClass = isC ? 'dot-c' : isX ? 'dot-x' : 'dot-o';
-    const ind = isC ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg>' : isX ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg>' : '—';
+    const ind = isC ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg>' : isX ? '<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg>' : '—';
     const badgeClass = isC ? 'rqb-c' : isX ? 'rqb-x' : 'rqb-o';
     const badgeText = isC ? 'Correct' : isX ? 'Incorrect' : 'Omitted';
     const confidence = ST.confidence[q.id];
@@ -1751,8 +1751,8 @@ function buildResOpts(q, ua) {
     h += `<div class="res-opt ${cls}" role="listitem">
       <div class="ro-ltr" aria-hidden="true">${letter}</div>
       <span style="font-size:.82rem;flex:1">${escapeHtml(optText)}</span>
-      ${isC ? '<span class="ro-tag" style="color:var(--green)"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Correct</span>' : ''}
-      ${isW ? '<span class="ro-tag" style="color:var(--red)"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg> Your pick</span>' : ''}
+      ${isC ? '<span class="ro-tag" style="color:var(--green)"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg> Correct</span>' : ''}
+      ${isW ? '<span class="ro-tag" style="color:var(--red)"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg> Your pick</span>' : ''}
     </div>`;
   });
   

@@ -348,7 +348,7 @@
     </div>
 
     <div class="card-footer">
-      New here? <a href="signup.html">Register for access <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></a>
+      New here? <a href="signup.html">Register for access <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></a>
     </div>
   </div>
 </div>
@@ -434,7 +434,7 @@
   }
 
   function redirect(url) {
-    showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Access granted. Loading…', 'ok');
+    showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Access granted. Loading…', 'ok');
     setTimeout(() => window.location.replace(url || 'index.html'), 900);
   }
 
@@ -458,7 +458,7 @@
     passwordEl.classList.remove('has-error');
 
     if (isOffline) {
-      showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> You are offline. Sign-in requires a connection.');
+      showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> You are offline. Sign-in requires a connection.');
       return;
     }
 
@@ -482,11 +482,11 @@
         setLocalSession(data.role || 'user', { email: data.email });
         redirect(data.redirect || 'index.html');
       } else {
-        showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> ' + (data.error || 'Invalid username or password.'));
+        showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> ' + (data.error || 'Invalid username or password.'));
         setLoading(false);
       }
     } catch (_) {
-      showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Server unreachable. Please try again when you have a connection.');
+      showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Server unreachable. Please try again when you have a connection.');
       setLoading(false);
     }
   });
@@ -516,10 +516,10 @@
         setLocalSession(data.role || 'user', { email: data.email });
         redirect(data.redirect || 'index.html');
       } else {
-        showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> ' + (data.error || 'Google authentication failed.'));
+        showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> ' + (data.error || 'Google authentication failed.'));
       }
     } catch (_) {
-      showMsg('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Server unreachable. Google login requires connectivity.');
+      showMsg('<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Server unreachable. Google login requires connectivity.');
     }
   };
 

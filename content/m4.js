@@ -6,7 +6,7 @@ window.MEDICATIONS = {
         shortTitle: "M31 Oxygen",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Oxygen</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Oxygen</h3>
                 <h4>Classification</h4>
                 <p>Gas</p>
                 <h4>Presentation</h4>
@@ -43,7 +43,7 @@ window.MEDICATIONS = {
         shortTitle: "M32 Paracetamol",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Paracetamol (Acetaminophen)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Paracetamol (Acetaminophen)</h3>
                 <h4>Classification</h4>
                 <p>Non‑opioid analgesic and antipyretic</p>
                 <h4>Presentation</h4>
@@ -80,7 +80,7 @@ window.MEDICATIONS = {
         shortTitle: "M33 Pethidine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Pethidine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Pethidine</h3>
                 <h4>Classification</h4>
                 <p>Opiate Analgesic</p>
                 <h4>Presentation</h4>
@@ -118,7 +118,7 @@ window.MEDICATIONS = {
         shortTitle: "M34 Racemic Epinephrine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Racemic Epinephrine (Adrenaline)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Racemic Epinephrine (Adrenaline)</h3>
                 <h4>Classification</h4>
                 <p>Adrenergic Agonist</p>
                 <h4>Presentation</h4>
@@ -155,7 +155,7 @@ window.MEDICATIONS = {
         shortTitle: "M35 Ringers Lactate",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Ringers Lactate</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Ringers Lactate</h3>
                 <h4>Classification</h4>
                 <p>Isotonic Crystalloid</p>
                 <h4>Presentation</h4>
@@ -192,7 +192,7 @@ window.MEDICATIONS = {
         shortTitle: "M36 Salbutamol",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Salbutamol</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Salbutamol</h3>
                 <h4>Classification</h4>
                 <p>Bronchodilator (Beta‑2 selective adrenergic agonist)</p>
                 <h4>Presentation</h4>
@@ -229,7 +229,7 @@ window.MEDICATIONS = {
         shortTitle: "M37 Normal Saline",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Sodium Chloride 0.9% (Normal Saline)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Sodium Chloride 0.9% (Normal Saline)</h3>
                 <h4>Classification</h4>
                 <p>Isotonic Crystalloid</p>
                 <h4>Presentation</h4>
@@ -266,7 +266,7 @@ window.MEDICATIONS = {
         shortTitle: "M38 Tranexamic Acid",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Tranexamic Acid</h3>
+                <h3 style="color:var(--primary-accent);"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Tranexamic Acid</h3>
                 <h4>Classification</h4>
                 <p>Antifibrinolytic</p>
                 <h4>Presentation</h4>

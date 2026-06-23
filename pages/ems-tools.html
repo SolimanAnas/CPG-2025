@@ -220,21 +220,21 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
   <div class="tool-grid">
 	<div class="tool-card" onclick="window.location.href='medical-asm.html'">
-      <div class="tc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg></div>
+      <div class="tc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg></div>
       <div class="tc-title">Medical Assessment</div>
       <div class="tc-desc">Primary &amp; secondary survey</div>
       <span class="tc-tag tag-cardio">Medical</span>
     </div>
 
     <div class="tool-card" onclick="window.location.href='trauma.html'">
-      <div class="tc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg></div>
+      <div class="tc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg></div>
       <div class="tc-title">Trauma Assessment</div>
       <div class="tc-desc">Rapid trauma survey checklist</div>
       <span class="tc-tag tag-trauma">Trauma</span>
     </div>
     
     <div class="tool-card" onclick="window.location.href='GCS.html'">
-      <div class="tc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg></div>
+      <div class="tc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg></div>
       <div class="tc-title">GCS Score</div>
       <div class="tc-desc">Glasgow Coma Scale Assessment</div>
       <span class="tc-tag tag-neuro">Neuro</span>
@@ -268,7 +268,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     </div>
 	
     <div class="tool-card" onclick="window.location.href='Carevent.html'">
-      <div class="tc-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg></div>
+      <div class="tc-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg></div>
       <div class="tc-title">O₂ Calculator</div>
       <div class="tc-desc">Cylinder duration &amp; planning</div>
       <span class="tc-tag tag-calc">Airway</span>
@@ -323,11 +323,11 @@ const APGAR_LABELS = {
   R:{2:"Strong cry",1:"Weak / irregular",0:"Absent"}
 };
 const APGAR_FIELDS = [
-  {k:"A", label:"Appearance", icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg>"},
-  {k:"P", label:"Pulse",      icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg>"},
-  {k:"G", label:"Grimace",    icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg>"},
-  {k:"Ac",label:"Activity",   icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hand'/></svg>"},
-  {k:"R", label:"Respiration",icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>"}
+  {k:"A", label:"Appearance", icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg>"},
+  {k:"P", label:"Pulse",      icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg>"},
+  {k:"G", label:"Grimace",    icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#smile'/></svg>"},
+  {k:"Ac",label:"Activity",   icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hand'/></svg>"},
+  {k:"R", label:"Respiration",icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>"}
 ];
 
 function openApgar(){
@@ -382,26 +382,26 @@ function renderApgar(){
     </div>`;
 
     // EMS actions
-    html += `<div class="cat-card"><div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> Neonatal Actions</div>`;
+    html += `<div class="cat-card"><div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> Neonatal Actions</div>`;
     const acts = t>=7?[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>",t:"<strong>No resuscitation needed</strong>",d:"Routine newborn care. Dry, warm, stimulate."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Monitor breathing</strong>",d:"SpO₂ monitor. Ensure airway clear."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer-sun'/></svg>️",t:"<strong>Maintain warmth</strong>",d:"Dry immediately. Skin-to-skin or warm wrap."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>",t:"<strong>No resuscitation needed</strong>",d:"Routine newborn care. Dry, warm, stimulate."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Monitor breathing</strong>",d:"SpO₂ monitor. Ensure airway clear."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer-sun'/></svg>️",t:"<strong>Maintain warmth</strong>",d:"Dry immediately. Skin-to-skin or warm wrap."},
     ]:t>=4?[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Supplemental Oxygen</strong>",d:"Free-flow O₂ via mask. Target SpO₂ 90–95%."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>",t:"<strong>Stimulate</strong>",d:"Dry, rub back, flick soles. Reassess in 30 sec."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Reassess at 5 min</strong>",d:"Repeat APGAR. If no improvement <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> PPV."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Supplemental Oxygen</strong>",d:"Free-flow O₂ via mask. Target SpO₂ 90–95%."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>",t:"<strong>Stimulate</strong>",d:"Dry, rub back, flick soles. Reassess in 30 sec."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Reassess at 5 min</strong>",d:"Repeat APGAR. If no improvement <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> PPV."},
     ]:[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg>",t:"<strong>Positive Pressure Ventilation (PPV)</strong>",d:"BVM mask ventilation. Rate 40–60/min. 21% O₂ initially."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>",t:"<strong>Cardiac Compression if HR < 60</strong>",d:"2-thumb technique. 3:1 compression:ventilation ratio."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV/UVC Access</strong>",d:"Epinephrine 0.01–0.03 mg/kg IV/IO if HR <60 after 30 sec CPR."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️",t:"<strong>Prevent hypothermia</strong>",d:"Warm wrap or polyethylene bag for premature infants."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg>",t:"<strong>Positive Pressure Ventilation (PPV)</strong>",d:"BVM mask ventilation. Rate 40–60/min. 21% O₂ initially."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>",t:"<strong>Cardiac Compression if HR < 60</strong>",d:"2-thumb technique. 3:1 compression:ventilation ratio."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV/UVC Access</strong>",d:"Epinephrine 0.01–0.03 mg/kg IV/IO if HR <60 after 30 sec CPR."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️",t:"<strong>Prevent hypothermia</strong>",d:"Warm wrap or polyethylene bag for premature infants."},
     ];
     acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
     html += `</div>`;
   }
 
-  html += `<button class="reset-btn" onclick="openApgar()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset APGAR</button>`;
+  html += `<button class="reset-btn" onclick="openApgar()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset APGAR</button>`;
   openSheet("APGAR Score", html);
 }
 function apgarPick(key,val){
@@ -415,14 +415,14 @@ function apgarPick(key,val){
    BURNS — Rule of Nines
 ═══════════════════════════════════════════════════════════ */
 const BURNS_REGIONS = [
-  {k:"head",   label:"Head",        pct:9,  icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg>"},
-  {k:"chest",  label:"Chest",       pct:18, icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg>"},
+  {k:"head",   label:"Head",        pct:9,  icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg>"},
+  {k:"chest",  label:"Chest",       pct:18, icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg>"},
   {k:"back",   label:"Back",        pct:18, icon:"⬜"},
-  {k:"armL",   label:"Left Arm",    pct:9,  icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#dumbbell'/></svg>"},
-  {k:"armR",   label:"Right Arm",   pct:9,  icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#dumbbell'/></svg>"},
-  {k:"legL",   label:"Left Leg",    pct:18, icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bone'/></svg>"},
-  {k:"legR",   label:"Right Leg",   pct:18, icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bone'/></svg>"},
-  {k:"peri",   label:"Perineum",    pct:1,  icon:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-dot'/></svg>"}
+  {k:"armL",   label:"Left Arm",    pct:9,  icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#dumbbell'/></svg>"},
+  {k:"armR",   label:"Right Arm",   pct:9,  icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#dumbbell'/></svg>"},
+  {k:"legL",   label:"Left Leg",    pct:18, icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bone'/></svg>"},
+  {k:"legR",   label:"Right Leg",   pct:18, icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bone'/></svg>"},
+  {k:"peri",   label:"Perineum",    pct:1,  icon:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-dot'/></svg>"}
 ];
 let burnWeight = 0;
 const BURNS_STATE = {};
@@ -472,7 +472,7 @@ function renderBurns(){
 
   // Weight input for Parkland
   html += `<div class="cat-card">
-    <div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Parkland Formula</div>
+    <div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Parkland Formula</div>
     <div class="wt-row">
      <input class="wt-input" id="burnWt" type="number" inputmode="decimal" placeholder="Patient weight" min="1" max="300" oninput="burnWeight=this.value;updateParkland()" onkeydown="if(event.key==='Enter'){this.blur();if(navigator.vibrate)navigator.vibrate(10);}" value="${burnWeight || ''}">
       <span class="wt-lbl">kg</span>
@@ -489,26 +489,26 @@ function renderBurns(){
 
   // EMS actions
   if(tbsa>0){
-    html += `<div class="cat-card"><div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>`;
+    html += `<div class="cat-card"><div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>`;
     const acts = tbsa<10?[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>O₂ if inhalation injury suspected</strong>",d:"High-flow 15L NRB. Check for singed nasal hairs, soot."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>IV Access</strong>",d:"Large-bore IV. Cover with clean dry dressings."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️",t:"<strong>Prevent hypothermia</strong>",d:"Remove burning clothing. Warm environment."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>O₂ if inhalation injury suspected</strong>",d:"High-flow 15L NRB. Check for singed nasal hairs, soot."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>IV Access</strong>",d:"Large-bore IV. Cover with clean dry dressings."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#thermometer'/></svg>️",t:"<strong>Prevent hypothermia</strong>",d:"Remove burning clothing. Warm environment."},
     ]:tbsa<=20?[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>IV Fluid Resuscitation</strong>",d:"Lactated Ringer's. Start Parkland formula if >20 min to hospital."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>",t:"<strong>Burns unit notification</strong>",d:"Pre-alert receiving facility. Cover with cling wrap."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>",t:"<strong>Analgesia</strong>",d:"Morphine 0.1 mg/kg IV titrated. Burns are extremely painful."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>IV Fluid Resuscitation</strong>",d:"Lactated Ringer's. Start Parkland formula if >20 min to hospital."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>",t:"<strong>Burns unit notification</strong>",d:"Pre-alert receiving facility. Cover with cling wrap."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>",t:"<strong>Analgesia</strong>",d:"Morphine 0.1 mg/kg IV titrated. Burns are extremely painful."},
     ]:[
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg>",t:"<strong>Major Burn — Immediate resuscitation</strong>",d:"2 large-bore IVs. Parkland formula immediately."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Airway priority</strong>",d:"Burns >40% TBSA or facial burns <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> early intubation before oedema."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>Aggressive fluid therapy</strong>",d:"Lactated Ringer's. First 8h = half of 24h total."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Burns centre transport</strong>",d:"Bypass local ED if possible. Pre-alert burns team."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg>",t:"<strong>Major Burn — Immediate resuscitation</strong>",d:"2 large-bore IVs. Parkland formula immediately."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Airway priority</strong>",d:"Burns >40% TBSA or facial burns <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> early intubation before oedema."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>",t:"<strong>Aggressive fluid therapy</strong>",d:"Lactated Ringer's. First 8h = half of 24h total."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Burns centre transport</strong>",d:"Bypass local ED if possible. Pre-alert burns team."},
     ];
     acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
     html += `</div>`;
   }
 
-  html += `<button class="reset-btn" onclick="openBurns()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset Burns</button>`;
+  html += `<button class="reset-btn" onclick="openBurns()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset Burns</button>`;
   openSheet("Burn Surface Area", html);
 }
 function updateParkland(){
@@ -573,9 +573,9 @@ function renderRts(){
 
   // GCS
   html += `<div class="cat-card">
-    <div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> GCS Score</div>
+    <div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> GCS Score</div>
     <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.gcs!==null?(RTS_STATE.gcs/4*100):0}%"></div></div>
-    <span class="rts-param-label">Select GCS range <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
+    <span class="rts-param-label">Select GCS range <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
     <div class="coded-grid">
       ${RTS_OPTS.gcs.map(o=>`<button class="coded-btn${RTS_STATE.gcs===o.code?" sel":""}" onclick="rtsPick('gcs',${o.code})">
         <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
@@ -585,9 +585,9 @@ function renderRts(){
 
   // SBP
   html += `<div class="cat-card">
-    <div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg> Systolic BP (mmHg)</div>
+    <div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg> Systolic BP (mmHg)</div>
     <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.sbp!==null?(RTS_STATE.sbp/4*100):0}%"></div></div>
-    <span class="rts-param-label">Select SBP range <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
+    <span class="rts-param-label">Select SBP range <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
     <div class="coded-grid">
       ${RTS_OPTS.sbp.map(o=>`<button class="coded-btn${RTS_STATE.sbp===o.code?" sel":""}" onclick="rtsPick('sbp',${o.code})">
         <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
@@ -597,9 +597,9 @@ function renderRts(){
 
   // RR
   html += `<div class="cat-card">
-    <div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Respiratory Rate</div>
+    <div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Respiratory Rate</div>
     <div class="cat-progress"><div class="cat-prog-bar" style="width:${RTS_STATE.rr!==null?(RTS_STATE.rr/4*100):0}%"></div></div>
-    <span class="rts-param-label">Select RR range <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
+    <span class="rts-param-label">Select RR range <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> coded value</span>
     <div class="coded-grid">
       ${RTS_OPTS.rr.map(o=>`<button class="coded-btn${RTS_STATE.rr===o.code?" sel":""}" onclick="rtsPick('rr',${o.code})">
         <span class="cb-code">${o.code}</span><span class="cb-range">${o.range}</span>
@@ -629,25 +629,25 @@ function renderRts(){
       <div class="ig-card"><div class="ig-val">${RTS_STATE.rr}</div><div class="ig-lbl">RR Coded</div></div>
     </div>`;
 
-    html += `<div class="cat-card"><div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>`;
+    html += `<div class="cat-card"><div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>`;
     const acts = rts>=7?[
       {i:"🟢",t:"<strong>Delayed triage</strong>",d:"Stable vitals. Can withstand short delay. Monitor continuously."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Serial reassessment</strong>",d:"Repeat RTS every 10–15 min. Any deterioration = upgrade to immediate."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Serial reassessment</strong>",d:"Repeat RTS every 10–15 min. Any deterioration = upgrade to immediate."},
     ]:rts>=5?[
       {i:"🟡",t:"<strong>Urgent intervention</strong>",d:"Significant physiological derangement. Transport without delay."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV access + fluid resuscitation</strong>",d:"Permissive hypotension if haemorrhagic trauma (SBP 80–90)."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>",t:"<strong>Pre-alert trauma centre</strong>",d:"Notify early. Consider air transport if available."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV access + fluid resuscitation</strong>",d:"Permissive hypotension if haemorrhagic trauma (SBP 80–90)."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>",t:"<strong>Pre-alert trauma centre</strong>",d:"Notify early. Consider air transport if available."},
     ]:[
       {i:"🔴",t:"<strong>IMMEDIATE — Life-saving intervention</strong>",d:"Critical physiological compromise. All resources immediately."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Airway management priority</strong>",d:"GCS coded ≤2 <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> intubation indicated. Protect from aspiration."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV/IO access × 2</strong>",d:"Large bore. Crystalloid bolus. MTP activation if haemorrhagic."},
-      {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Trauma centre bypass</strong>",d:"Bypass community ED. Direct to Level I/II trauma centre."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Airway management priority</strong>",d:"GCS coded ≤2 <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> intubation indicated. Protect from aspiration."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>IV/IO access × 2</strong>",d:"Large bore. Crystalloid bolus. MTP activation if haemorrhagic."},
+      {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Trauma centre bypass</strong>",d:"Bypass community ED. Direct to Level I/II trauma centre."},
     ];
     acts.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
     html += `</div>`;
   }
 
-  html += `<button class="reset-btn" onclick="openRts()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset RTS</button>`;
+  html += `<button class="reset-btn" onclick="openRts()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset RTS</button>`;
   openSheet("Revised Trauma Score", html);
 }
 
@@ -668,7 +668,7 @@ const START_STEPS = [
   {
     id:"breathing",
     q:"Is the patient BREATHING?",
-    sub:"Look, listen, feel. If not breathing <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> attempt to open airway first.",
+    sub:"Look, listen, feel. If not breathing <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> attempt to open airway first.",
     yes:"rr",
     no:"airway"
   },
@@ -704,23 +704,23 @@ const START_STEPS = [
 const START_RESULTS = {
   RED:   {label:"IMMEDIATE",  icon:"I",  cls:"tag-r",  ringCls:"r", pill:"pill-r", actions:[
     {i:"🔴",t:"<strong>IMMEDIATE treatment &amp; transport</strong>",d:"Life-threatening injury. First priority. Immediate life-saving intervention."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Open airway / Haemorrhage control</strong>",d:"Tourniquet, pressure dressings, needle decompression as indicated."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>",t:"<strong>Load and go — minimize scene time</strong>",d:"Target scene time < 10 min. Transport to nearest trauma centre."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>",t:"<strong>Open airway / Haemorrhage control</strong>",d:"Tourniquet, pressure dressings, needle decompression as indicated."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>",t:"<strong>Load and go — minimize scene time</strong>",d:"Target scene time < 10 min. Transport to nearest trauma centre."},
   ]},
   YELLOW:{label:"DELAYED",    icon:"D",  cls:"tag-y",  ringCls:"y", pill:"pill-y", actions:[
     {i:"🟡",t:"<strong>DELAYED — stable for now</strong>",d:"Significant injury but stable. Will need treatment but can wait."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Reassess frequently</strong>",d:"Re-triage every 10 min. Can deteriorate to RED. Mark and monitor."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>Pain management when resources allow</strong>",d:"Analgesia if stable and resources available after RED patients treated."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Reassess frequently</strong>",d:"Re-triage every 10 min. Can deteriorate to RED. Mark and monitor."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>",t:"<strong>Pain management when resources allow</strong>",d:"Analgesia if stable and resources available after RED patients treated."},
   ]},
   GREEN: {label:"MINOR",      icon:"M",  cls:"tag-g",  ringCls:"g", pill:"pill-g", actions:[
     {i:"🟢",t:"<strong>MINOR — Walking wounded</strong>",d:"Ambulatory. Self-treating injuries. Direct to collection point."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Assign to treatment area</strong>",d:"Walking wounded can assist with other casualties under supervision."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Monitor for deterioration</strong>",d:"GREEN can deteriorate. Reassess periodically."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>",t:"<strong>Assign to treatment area</strong>",d:"Walking wounded can assist with other casualties under supervision."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Monitor for deterioration</strong>",d:"GREEN can deteriorate. Reassess periodically."},
   ]},
   BLACK: {label:"EXPECTANT",  icon:"E",  cls:"tag-k",  ringCls:"k", pill:"pill-k", actions:[
     {i:"⬛",t:"<strong>EXPECTANT — Unsurvivable / Deceased</strong>",d:"Injuries not survivable given current resources. Do not divert resources."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Document and mark</strong>",d:"Note position, tag if available. Notify incident commander."},
-    {i:"<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hand-heart'/></svg>",t:"<strong>Reassess if resources allow</strong>",d:"If mass of critical patients clears, reassess BLACK patients."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>",t:"<strong>Document and mark</strong>",d:"Note position, tag if available. Notify incident commander."},
+    {i:"<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hand-heart'/></svg>",t:"<strong>Reassess if resources allow</strong>",d:"If mass of critical patients clears, reassess BLACK patients."},
   ]}
 };
 
@@ -759,15 +759,15 @@ function renderStart(step){
       <div class="sf-q">${step.q}<small>${step.sub}</small></div>
       <div class="sf-btns">
         <button class="sf-btn sf-btn-y" onclick="startGo('yes')">
-          <span class="sf-btn-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg></span> Yes
+          <span class="sf-btn-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg></span> Yes
         </button>
         <button class="sf-btn sf-btn-n" onclick="startGo('no')">
-          <span class="sf-btn-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg></span> No
+          <span class="sf-btn-icon"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg></span> No
         </button>
       </div>
     </div>
   </div>`;
-  html += `<button class="reset-btn" onclick="openStart()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Restart Triage</button>`;
+  html += `<button class="reset-btn" onclick="openStart()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Restart Triage</button>`;
   openSheet("START Triage — MCI", html);
 }
 function renderStartResult(resultKey, lastStep){
@@ -779,23 +779,23 @@ function renderStartResult(resultKey, lastStep){
     <div class="sev-pill ${r.pill}">${resultKey==="RED"?"🔴":resultKey==="YELLOW"?"🟡":resultKey==="GREEN"?"🟢":"⬛"} ${r.label}</div>
   </div>`;
 
-  html += `<div class="cat-card"><div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> Actions</div>`;
+  html += `<div class="cat-card"><div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> Actions</div>`;
   r.actions.forEach(a=>{ html+=`<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`; });
   html += `</div>`;
 
   // Step trace
-  html += `<div class="cat-card" style="margin-top:4px"><div class="cat-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> Decision Path</div>`;
+  html += `<div class="cat-card" style="margin-top:4px"><div class="cat-title"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> Decision Path</div>`;
   startHistory.forEach((h,i)=>{
     const s = START_STEPS.find(st=>st.id===h.stepId);
     const ans = h.answer==="yes";
     html += `<div class="act-row">
       <div class="act-i" style="font-size:.75rem;font-family:var(--mono);color:var(--muted)">${i+1}</div>
-      <div class="act-t" style="font-size:.75rem">${s?s.q:""} <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> <strong style="color:${ans?"var(--green)":"var(--red)"}">${ans?"YES":"NO"}</strong></div>
+      <div class="act-t" style="font-size:.75rem">${s?s.q:""} <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> <strong style="color:${ans?"var(--green)":"var(--red)"}">${ans?"YES":"NO"}</strong></div>
     </div>`;
   });
   html += `</div>`;
 
-  html += `<button class="reset-btn" onclick="openStart()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> New Patient Triage</button>`;
+  html += `<button class="reset-btn" onclick="openStart()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> New Patient Triage</button>`;
   openSheet("START Triage — MCI", html);
 }
 </script>

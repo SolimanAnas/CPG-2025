@@ -172,15 +172,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 <body>
 
 <div class="hdr">
-  <a href="courses.html" class="hdr-back"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Courses</a>
+  <a href="courses.html" class="hdr-back"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Courses</a>
   <span class="hdr-title" id="hdrTitle">ECG Tests</span>
-  <button class="theme-cycle" onclick="cycleTheme()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg> Theme</button>
+  <button class="theme-cycle" onclick="cycleTheme()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg> Theme</button>
 </div>
 
 <!-- ── SELECT SCREEN ── -->
 <div id="selectScreen">
   <div class="hero">
-    <h1><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trending-up'/></svg> ECG Tests</h1>
+    <h1><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trending-up'/></svg> ECG Tests</h1>
     <p>Two 30-question practice tests covering ECG interpretation,<br>arrhythmias, ischaemia, and advanced ECG patterns.</p>
   </div>
   <div class="test-cards">
@@ -225,8 +225,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   <div class="result-stats" id="resultStats"></div>
   <div id="reviewList" class="review-list"></div>
   <div class="result-actions">
-    <button class="btn btn-outline" onclick="backToSelect()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Choose Test</button>
-    <button class="btn btn-submit" onclick="retakeTest()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Retake</button>
+    <button class="btn btn-outline" onclick="backToSelect()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Choose Test</button>
+    <button class="btn btn-submit" onclick="retakeTest()"><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Retake</button>
   </div>
 </div>
 
@@ -299,16 +299,16 @@ function renderQuestion(){
   }).join('');
 
   const expHtml = isSubmitted && q.explanation
-    ? `<div class="explanation show"><h4><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Explanation</h4><p>${q.explanation}</p></div>`
+    ? `<div class="explanation show"><h4><svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Explanation</h4><p>${q.explanation}</p></div>`
     : `<div class="explanation"></div>`;
 
   let actionHtml;
   if(!isSubmitted){
     actionHtml=`<button class="btn btn-submit" id="submitBtn" onclick="submitAnswer()" ${answers[currentQ]?'':'disabled'}>Submit Answer</button>`;
   } else if(currentQ < questions.length-1){
-    actionHtml=`<button class="btn btn-next" onclick="nextQuestion()">Next Question <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>`;
+    actionHtml=`<button class="btn btn-next" onclick="nextQuestion()">Next Question <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></button>`;
   } else {
-    actionHtml=`<button class="btn btn-next" onclick="showResults()">See Results <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#party-popper'/></svg></button>`;
+    actionHtml=`<button class="btn btn-next" onclick="showResults()">See Results <svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#party-popper'/></svg></button>`;
   }
 
   document.getElementById('examWrap').innerHTML=`
@@ -341,7 +341,7 @@ function submitAnswer(){
   submitted[currentQ]=true;
   const q=questions[currentQ];
   const isCorrect=answers[currentQ]===q.correct_answer;
-  showToast(isCorrect?'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Correct!':'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Incorrect', isCorrect?'correct':'wrong');
+  showToast(isCorrect?'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Correct!':'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Incorrect', isCorrect?'correct':'wrong');
   renderQuestion();
 }
 
@@ -369,7 +369,7 @@ function showResults(){
 
   document.getElementById('scoreCircle').innerHTML=`<span>${pct}%</span><span class="score-label">${correct}/${total}</span>`;
   document.getElementById('passTag').className='pass-tag '+(pass?'pass':'fail');
-  document.getElementById('passTag').textContent=pass?'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> PASS':'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> NEEDS REVIEW';
+  document.getElementById('passTag').textContent=pass?'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> PASS':'<svg class="lucide" width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> NEEDS REVIEW';
   document.getElementById('resultTitle').textContent=lastTitle;
 
   document.getElementById('resultStats').innerHTML=`
