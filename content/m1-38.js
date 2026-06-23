@@ -14,7 +14,7 @@ window.CPG_DATA = {
                     <p style="color:var(--text-secondary);font-size:.85rem;line-height:1.6;margin-bottom:20px;">
                         The full interactive drug reference — all 31 medications across 6 clinical categories with indications, dosing tables, and pediatric weight-based doses — is available in the Medication Index.
                     </p>
-                    <a href="../med-index.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary-accent);color:#fff;text-decoration:none;padding:12px 24px;border-radius:12px;font-weight:700;font-size:.9rem;box-shadow:0 4px 16px rgba(0,86,179,.35);transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                    <a href="../pages/med-index.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary-accent);color:#fff;text-decoration:none;padding:12px 24px;border-radius:12px;font-weight:700;font-size:.9rem;box-shadow:0 4px 16px rgba(0,86,179,.35);transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
                         <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#pill"/></svg> Open Medication Index <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>
                     </a>
                     <div style="margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">
