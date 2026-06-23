@@ -861,10 +861,10 @@ class ExamEngine {
         const passIndicator = document.getElementById('pass-indicator');
         if (score >= 70) {
             passIndicator.className = 'pass-indicator pass';
-            passIndicator.textContent = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#check"/></svg> Pass Probability High';
+            passIndicator.innerHTML = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#check"/></svg> Pass Probability High';
         } else {
             passIndicator.className = 'pass-indicator fail';
-            passIndicator.textContent = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg> Needs More Practice';
+            passIndicator.innerHTML = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg> Needs More Practice';
         }
         
         this.renderInsights(correct, total, topicStats);

@@ -46,7 +46,7 @@ const ECGEngine = (() => {
   //  Phase     Meaning (at HR=72, RR=0.833s)
   //  0.000     cycle start
   //  0.065     P wave center  (duration ~80ms)
-  //  0.160     PR interval end <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> QRS onset
+  //  0.160     PR interval end → QRS onset
   //  0.176     R peak (narrow!)
   //  0.190     S nadir
   //  0.360     T wave center
@@ -121,22 +121,22 @@ const ECGEngine = (() => {
       // ════════════════════════════════════════
 
       case 'nsr': {
-        // HR=72 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> RR=0.833s. Phase runs 0<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>0.833 then resets.
+        // HR=72 → RR=0.833s. Phase runs 0→0.833 then resets.
         // P at 0.065, QRS at 0.16, T ends ~0.47s, then 360ms flat baseline.
         v = sinusComplex(t % (60 / 72), { pr: 0.16, rAmp: 1.80 });
         break;
       }
 
       case 'stach': {
-        // HR=120 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> RR=0.500s. Same wave positions, but much shorter flat baseline.
-        // T (ends ~0.47s) nearly touches next cycle (0.50s) <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> busy trace!
+        // HR=120 → RR=0.500s. Same wave positions, but much shorter flat baseline.
+        // T (ends ~0.47s) nearly touches next cycle (0.50s) → busy trace!
         v = sinusComplex(t % (60 / 120), { pr: 0.14, pAmp: 0.10, rAmp: 1.70 });
         break;
       }
 
       case 'sbrady': {
-        // HR=45 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> RR=1.333s. Same wave positions, but enormous flat baseline.
-        // T ends ~0.47s, next beat at 1.333s <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> 860ms of flatline between beats.
+        // HR=45 → RR=1.333s. Same wave positions, but enormous flat baseline.
+        // T ends ~0.47s, next beat at 1.333s → 860ms of flatline between beats.
         v = sinusComplex(t % (60 / 45), { pr: 0.18, rAmp: 1.85 });
         break;
       }
@@ -146,7 +146,7 @@ const ECGEngine = (() => {
       // ════════════════════════════════════════
 
       case 'svt': {
-        // HR=180 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> RR=0.333s.
+        // HR=180 → RR=0.333s.
         // P waves: NOT VISIBLE — buried inside the QRS complex (retrograde conduction).
         // No discernible P wave before or after QRS. Narrow QRS. Rapid regular rate.
         // T wave is slightly deformed by the hidden retrograde P (small negative notch at T end).
@@ -194,7 +194,7 @@ case 'aflutter': {
   const flRR = 0.200;   // Atrial rate ~300 bpm
   const vRR  = 0.600;   // Ventricular rate ~100 bpm (3:1)
 
-  // Flutter phase (0 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> 1)
+  // Flutter phase (0 → 1)
   const flPh = (t % flRR) / flRR;
 
   // --- Flutter wave (curved sawtooth, physiologic) ---
@@ -243,7 +243,7 @@ case 'aflutter': {
       // ════════════════════════════════════════
 
       case 'vtach': {
-        // HR=180 <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> RR=0.333s. WIDE QRS, no P waves, discordant T.
+        // HR=180 → RR=0.333s. WIDE QRS, no P waves, discordant T.
         // Wide sigma makes the QRS span ~150ms (vs ~50ms normal).
         const rr = 60 / 180;
         const p = t % rr;
@@ -355,7 +355,7 @@ case 'torsades': {
 
       case 'block2_2': {
         // Mobitz II: constant PR, sudden dropped QRS (3:1 ratio shown here)
-        // Regular P waves, every 3rd fails to conduct <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> slow ventricular rate
+        // Regular P waves, every 3rd fails to conduct → slow ventricular rate
         const pRR  = 0.82; // P-P interval
         const ratio = 3;   // conduct ratio (1 dropped per group)
         const pr    = 0.20; // constant PR
