@@ -3,7 +3,7 @@
 //  Strategy: NETWORK FIRST → cache fallback
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v5.3';           // Bumped to v5.3 to force cache refresh after Lucide migration fixes
+const CACHE_VERSION = 'dcas-cpg-v5.4';           // Bumped to v5.4 to force cache refresh after CSS multi-line url() fixes
 const CACHE_TIMEOUT = 5000;                    
 
 // ── Files cached immediately on install ─────────────────────
