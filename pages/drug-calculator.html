@@ -192,9 +192,9 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
 <body>
 
 <header class="app-header">
-  <a class="hdr-back" href="../index.html">←</a>
+  <a class="hdr-back" href="../index.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
   <div class="hdr-info">
-    <div class="hdr-title">💊 Drug Calculator</div>
+    <div class="hdr-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Drug Calculator</div>
     <div class="hdr-sub">DCAS CPG 2026 · Medication Matrix</div>
   </div>
 </header>
@@ -204,12 +204,12 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
   <div class="drug-panel">
     <div class="search-wrap">
       <div class="search-inner">
-        <span class="si-icon">🔍</span>
+        <span class="si-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
         <input class="si-input" id="drugSearch" type="text"
                placeholder="Search medication…"
                autocomplete="off" autocorrect="off" spellcheck="false"
                oninput="filterDrugs(this.value)">
-        <button class="si-clear" id="searchClear" onclick="clearSearch()">✕</button>
+        <button class="si-clear" id="searchClear" onclick="clearSearch()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
       </div>
     </div>
     <div class="drug-scroll" id="drugList">
@@ -219,7 +219,7 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
   <div class="dose-panel" id="dosePanel">
 
     <button class="mob-back-btn" onclick="closeDetail()">
-      ← Back to Medications
+      <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg> Back to Medications
     </button>
 
     <div class="drug-header" id="drugHeader">
@@ -234,7 +234,7 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
 
     <div id="doseArea">
       <div class="dose-empty full">
-        <div class="de-icon">💊</div>
+        <div class="de-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg></div>
         <strong>Select a medication</strong>
         <span>Choose from the list to see age-based dosing</span>
       </div>
@@ -267,7 +267,7 @@ async function boot() {
     }
   } catch(e) {
     document.getElementById('doseArea').innerHTML =
-      '<div class="dose-empty"><div class="de-icon">❌</div><span>' + e.message + '</span></div>';
+      '<div class="dose-empty"><div class="de-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg></div><span>' + e.message + '</span></div>';
   }
 }
 

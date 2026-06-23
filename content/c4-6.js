@@ -5,7 +5,7 @@ window.CPG_DATA = {
     shortTitle: "4.6 Newborn Resuscitation",
     summary: `
         <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">👶 Newborn Resuscitation (&lt;4 weeks, including pre‑term)</h3>
+            <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#baby'/></svg> Newborn Resuscitation (&lt;4 weeks, including pre‑term)</h3>
             
             <h4>Patient Care Goals</h4>
             <ul>
@@ -45,7 +45,7 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Immediately after delivery:</strong>
                     <ul>
-                        <li>Assess tone, breathing/crying. If adequate, no resuscitation needed → go to Childbirth CPG.</li>
+                        <li>Assess tone, breathing/crying. If adequate, no resuscitation needed <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> go to Childbirth CPG.</li>
                         <li>If weak cry, distress, poor tone, or preterm: position airway (sniffing), clear airway (suction mouth then nose if obstruction; routine suction not recommended), dry, warm, stimulate. Wrap in dry towel/plastic bag, cover head.</li>
                     </ul>
                 </li>
@@ -346,7 +346,7 @@ window.CPG_DATA = {
             question: "What should you do now?",
             options: [
                 { t: "Continue PPV and reassess in another 30 seconds", f: "No improvement; need to escalate." },
-                { t: "Start chest compressions with 3:1 ratio", f: "Correct. HR <60 despite 30 seconds PPV → start compressions." },
+                { t: "Start chest compressions with 3:1 ratio", f: "Correct. HR <60 despite 30 seconds PPV <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> start compressions." },
                 { t: "Increase FiO₂ to 100%", f: "Compressions are the priority; oxygen can be increased simultaneously." },
                 { t: "Give epinephrine 0.01 mg/kg IV", f: "Epinephrine is given after compressions are started if no response." }
             ],

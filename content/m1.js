@@ -6,7 +6,7 @@ window.MEDICATIONS = {
         shortTitle: "M1 ActiMaris",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">🧴 ActiMaris (Wound Irrigation Solution)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#test-tube'/></svg> ActiMaris (Wound Irrigation Solution)</h3>
                 <h4>Classification</h4>
                 <p>Topical Antiseptic</p>
                 <h4>Presentation</h4>
@@ -43,7 +43,7 @@ window.MEDICATIONS = {
         shortTitle: "M2 Adenosine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Adenosine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Adenosine</h3>
                 <h4>Classification</h4>
                 <p>Antiarrhythmic</p>
                 <h4>Presentation</h4>
@@ -80,7 +80,7 @@ window.MEDICATIONS = {
         shortTitle: "M3 Amiodarone",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Amiodarone</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Amiodarone</h3>
                 <h4>Classification</h4>
                 <p>Antiarrhythmic</p>
                 <h4>Presentation</h4>
@@ -117,7 +117,7 @@ window.MEDICATIONS = {
         shortTitle: "M4 Aspirin",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Aspirin</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Aspirin</h3>
                 <h4>Classification</h4>
                 <p>Platelet aggregator inhibitor</p>
                 <h4>Presentation</h4>
@@ -154,7 +154,7 @@ window.MEDICATIONS = {
         shortTitle: "M5 Atropine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Atropine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Atropine</h3>
                 <h4>Classification</h4>
                 <p>Anticholinergic</p>
                 <h4>Presentation</h4>
@@ -191,7 +191,7 @@ window.MEDICATIONS = {
         shortTitle: "M6 Combivent",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Combivent</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Combivent</h3>
                 <h4>Classification</h4>
                 <p>β2 Agonist and Anticholinergic</p>
                 <h4>Presentation</h4>
@@ -228,7 +228,7 @@ window.MEDICATIONS = {
         shortTitle: "M7 D5W",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Dextrose 5% Water (D5W)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Dextrose 5% Water (D5W)</h3>
                 <h4>Classification</h4>
                 <p>Carbohydrate</p>
                 <h4>Presentation</h4>
@@ -265,7 +265,7 @@ window.MEDICATIONS = {
         shortTitle: "M8 Dextrose 10%",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Dextrose 10%</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Dextrose 10%</h3>
                 <h4>Classification</h4>
                 <p>Carbohydrate</p>
                 <h4>Presentation</h4>
@@ -302,7 +302,7 @@ window.MEDICATIONS = {
         shortTitle: "M9 Diazepam",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Diazepam</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Diazepam</h3>
                 <h4>Classification</h4>
                 <p>Benzodiazepine</p>
                 <h4>Presentation</h4>
@@ -339,7 +339,7 @@ window.MEDICATIONS = {
         shortTitle: "M10 Diclofenac",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Diclofenac (Voltaren)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Diclofenac (Voltaren)</h3>
                 <h4>Classification</h4>
                 <p>Non‑Steroidal Anti‑inflammatory (NSAID)</p>
                 <h4>Presentation</h4>

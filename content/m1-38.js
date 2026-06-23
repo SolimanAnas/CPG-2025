@@ -9,13 +9,13 @@ window.CPG_DATA = {
             shortTitle: "M1–38 Drug Formulary",
             summary: `
                 <div class="sum-card" style="text-align:center;padding:28px 20px;">
-                    <div style="font-size:2.8rem;margin-bottom:12px;">💊</div>
+                    <div style="font-size:2.8rem;margin-bottom:12px;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg></div>
                     <h3 style="color:var(--primary-accent);font-size:1.2rem;margin-bottom:8px;">DCAS Medication Formulary</h3>
                     <p style="color:var(--text-secondary);font-size:.85rem;line-height:1.6;margin-bottom:20px;">
                         The full interactive drug reference — all 31 medications across 6 clinical categories with indications, dosing tables, and pediatric weight-based doses — is available in the Medication Index.
                     </p>
                     <a href="../med-index.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary-accent);color:#fff;text-decoration:none;padding:12px 24px;border-radius:12px;font-weight:700;font-size:.9rem;box-shadow:0 4px 16px rgba(0,86,179,.35);transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-                        💊 Open Medication Index →
+                        <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Open Medication Index <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg>
                     </a>
                     <div style="margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">
                         <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:10px;">
@@ -33,7 +33,7 @@ window.CPG_DATA = {
                     </div>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:var(--primary-accent);">❤️ Cardiac / Resus</h3>
+                    <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg> Cardiac / Resus</h3>
                     <ul>
                         <li><strong>Adenosine:</strong> SVT — 0.1 mg/kg IV rapid push (max 6 mg); 2nd dose 0.2 mg/kg (max 12 mg). Follow with NS flush.</li>
                         <li><strong>Amiodarone:</strong> Arrest (VT/VF) 5 mg/kg IV/IO; Wide-complex tachycardia 5 mg/kg over 20 min.</li>
@@ -43,7 +43,7 @@ window.CPG_DATA = {
                     </ul>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:#10b981;">🫁 Airway / Respiratory</h3>
+                    <h3 style="color:#10b981;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Airway / Respiratory</h3>
                     <ul>
                         <li><strong>Salbutamol:</strong> Bronchospasm — Nebulized: Adult 5 mg; Peds &lt;5y 2.5 mg, ≥5y 5 mg.</li>
                         <li><strong>Combivent:</strong> Asthma/COPD — 2.5 ml nebulized (Salbutamol 2.5 mg + Ipratropium 0.5 mg).</li>
@@ -54,14 +54,14 @@ window.CPG_DATA = {
                     </ul>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:#8b5cf6;">🧠 Neuro / Sedation</h3>
+                    <h3 style="color:#8b5cf6;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> Neuro / Sedation</h3>
                     <ul>
                         <li><strong>Diazepam:</strong> Seizures — Adult 5 mg IV; Peds 0.1 mg/kg IV/IO (max 5 mg) or 0.5 mg/kg PR (max 20 mg).</li>
                         <li><strong>Haloperidol:</strong> Acute psychosis — 5 mg IM only. Not IV. Not pediatric.</li>
                     </ul>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:#f97316;">💊 Pain Management</h3>
+                    <h3 style="color:#f97316;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Pain Management</h3>
                     <ul>
                         <li><strong>Morphine:</strong> Severe pain — IV 2.5 mg q5 min (max 10 mg); Peds 0.1 mg/kg IV/IM/IO.</li>
                         <li><strong>Paracetamol:</strong> Pain/Fever — Adult 1 g IV/PO (max 4 g/24h); Peds 10 mg/kg IV slow.</li>
@@ -71,7 +71,7 @@ window.CPG_DATA = {
                     </ul>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:#06b6d4;">💧 Metabolic / Fluids</h3>
+                    <h3 style="color:#06b6d4;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg> Metabolic / Fluids</h3>
                     <ul>
                         <li><strong>Dextrose 10%:</strong> Hypoglycemia (&lt;70 mg/dl) — 10 ml/kg IV/IO (max 125 ml peds); Adult 125–250 ml.</li>
                         <li><strong>Glucose 40% Oral Paste:</strong> Hypoglycemia (conscious) — Adult 1 tube (15 g); Peds ½ tube. Swallow only.</li>
@@ -81,7 +81,7 @@ window.CPG_DATA = {
                     </ul>
                 </div>
                 <div class="sum-card">
-                    <h3 style="color:#94a3b8;">🧪 Other Medications</h3>
+                    <h3 style="color:#94a3b8;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flask-conical'/></svg> Other Medications</h3>
                     <ul>
                         <li><strong>Aspirin:</strong> ACS — 324 mg (4×81 mg) chewed. Not if already taken in last 60 min.</li>
                         <li><strong>Naloxone:</strong> Opioid overdose — IV/IM 0.4 mg q3 min (max 2 mg); IN 4 mg q3 min. Titrate to respiratory effort.</li>
@@ -93,7 +93,7 @@ window.CPG_DATA = {
                     </ul>
                 </div>
                 <div class="sum-card red-flag">
-                    <h3>⚠️ High-Alert Drug Reminders</h3>
+                    <h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️ High-Alert Drug Reminders</h3>
                     <ul>
                         <li><strong>Adenosine:</strong> Must be given as a RAPID IV push + 10–20 ml NS flush immediately after.</li>
                         <li><strong>Amiodarone:</strong> Always dilute in D5W (NOT NS). Incompatible with NS.</li>
@@ -162,7 +162,7 @@ window.CPG_DATA = {
                 { category: "Metabolic", question: "Lactated Ringers: Key contraindications?", answer: "<1 month of age\nDKA (may worsen)\nHypervolemia\nLiver failure" },
 
                 /* ── OTHER MEDICATIONS ── */
-                { category: "Other", question: "Aspirin: Dose for ACS?", answer: "324 mg (4 × 81 mg tablets) CHEWED\nIf already taken in last 60 min → give additional to reach 324 mg total" },
+                { category: "Other", question: "Aspirin: Dose for ACS?", answer: "324 mg (4 × 81 mg tablets) CHEWED\nIf already taken in last 60 min <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> give additional to reach 324 mg total" },
                 { category: "Other", question: "Naloxone: Opioid overdose dose?", answer: "IV/IM: 0.4 mg q3 min (max 2 mg)\nIN: 4 mg q3 min\nPeds: 0.01 mg/kg IV/IM/IO q3 min\nTitrate to restore respirations ONLY — do not over-reverse" },
                 { category: "Other", question: "Naloxone: Why titrate carefully?", answer: "Over-reversal causes acute withdrawal: agitation, vomiting, tachycardia, hypertension\nGoal: adequate spontaneous respirations, not full consciousness" },
                 { category: "Other", question: "Tranexamic Acid (TXA): Indication?", answer: "Uncontrolled traumatic bleeding OR postpartum hemorrhage\nMust be within 3 hours of onset of bleeding" },
@@ -248,7 +248,7 @@ window.CPG_DATA = {
                     question: "What is the MOST appropriate immediate intervention?",
                     options: [
                         { t: "Diazepam 5 mg IV — attempt IV access first", f: "No IV access is established. Attempting IV during active seizure wastes critical time." },
-                        { t: "Diazepam PR 9 mg (0.5 mg/kg)", f: "Correct. No IV → rectal Diazepam 0.5 mg/kg = 9 mg. Fast, effective, atraumatic." },
+                        { t: "Diazepam PR 9 mg (0.5 mg/kg)", f: "Correct. No IV <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> rectal Diazepam 0.5 mg/kg = 9 mg. Fast, effective, atraumatic." },
                         { t: "Haloperidol 5 mg IM", f: "Haloperidol is for psychosis — never for seizures." },
                         { t: "Intranasal Midazolam", f: "Not in DCAS CPG formulary for this indication." }
                     ],
@@ -274,7 +274,7 @@ window.CPG_DATA = {
                     question: "What is the NEXT drug indicated?",
                     options: [
                         { t: "Repeat Salbutamol only", f: "Already given × 2. Add Ipratropium (Combivent) and consider Magnesium." },
-                        { t: "Magnesium Sulphate 2 g IV over 20 min", f: "Correct. Life-threatening asthma not responding to bronchodilators → Magnesium 2 g IV/IO over 20 min." },
+                        { t: "Magnesium Sulphate 2 g IV over 20 min", f: "Correct. Life-threatening asthma not responding to bronchodilators <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Magnesium 2 g IV/IO over 20 min." },
                         { t: "Haloperidol 5 mg IM for anxiety", f: "Never — causes respiratory depression in a patient already in extremis." },
                         { t: "Furosemide 40 mg IV", f: "Not indicated — this is bronchoconstriction, not pulmonary edema." }
                     ],

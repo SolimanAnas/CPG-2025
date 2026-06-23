@@ -167,14 +167,14 @@ function initChapterPage() {
                     <span class="battery-icon"><span class="battery-fill"></span></span>
                     <span class="battery-pct">--%</span>
                 </div>
-                <button class="icon-btn" id="themeToggle" title="Switch Theme">🎨</button>
+                <button class="icon-btn" id="themeToggle" title="Switch Theme"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#palette'/></svg></button>
                 <div class="stats-badge" id="liveStatsBadge">
-                    <span>📊 <span id="statsAttempts">0</span></span>
+                    <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> <span id="statsAttempts">0</span></span>
                     <div class="stats-divider"></div>
-                    <span>🎯 <span id="statsCritical">0%</span></span>
+                    <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#target'/></svg> <span id="statsCritical">0%</span></span>
                 </div>
-                <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index">📋</a>
-                <a href="../pages/about.html" class="icon-btn" id="headerAboutBtn" title="About">ℹ️</a>
+                <a href="c-index.html?view=summary" class="icon-btn" id="headerIndexBtn" title="Index"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg></a>
+                <a href="../pages/about.html" class="icon-btn" id="headerAboutBtn" title="About"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg></a>
             </div>
         `;
     }
@@ -336,33 +336,33 @@ function updateHeader(title, subtitle = '', showBack = true) {
 // ---------- RENDER COMING SOON ----------  
 function renderComingSoon() {
     const view = utils.getQueryParam('view') || 'summary';
-    let title = 'Coming Soon', subtitle = '', message = '', icon = '🚧';
+    let title = 'Coming Soon', subtitle = '', message = '', icon = '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#construction'/></svg>';
     switch(view) {
         case 'critical':
             title = 'Critical Scenarios';
             subtitle = 'Coming Soon';
             message = 'High‑acuity decision‑making cases are being developed for this chapter.';
-            icon = '🚨';
+            icon = '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#siren'/></svg>';
             break;
         case 'flashcards':
             title = 'Flashcards';
             subtitle = 'Coming Soon';
             message = 'Interactive flashcards for this chapter are under construction.';
-            icon = '📇';
+            icon = '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#contact'/></svg>';
             break;
         case 'quiz':
             title = 'Quiz';
             subtitle = 'Coming Soon';
             message = 'Practice questions for this chapter are being prepared.';
-            icon = '📋';
+            icon = '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#clipboard-list'/></svg>';
             break;
         default:
             title = 'Coming Soon';
             subtitle = 'Stay tuned.....';
             message = 'This CPG chapter is under construction.';
-            icon = '🚧';
+            icon = '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#construction'/></svg>';
     }
-    const html = `<div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 40px 20px; box-shadow: var(--glass-shadow);">   <div style="font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 15px; line-height: 1.2; font-family: Georgia, serif;">${icon} ${title}</div>   <div style="font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 10px 30px; margin-top: 10px; letter-spacing: 2px;">${subtitle}</div>   <div style="font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 12px 20px; border-radius: 50px; display: inline-block; margin-top: 25px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">   ${message}   </div>   <div style="margin-top: 40px;">   <button class="control-btn" data-action="backHome" style="padding: 12px 30px; border-radius: 40px; font-weight: 700; font-size: clamp(0.9rem, 4vw, 1.1rem); color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;">🏠 Home</button>   </div>   </div>`;
+    const html = `<div class="coming-soon-card" style="text-align:center; background: var(--glass-bg); backdrop-filter: blur(16px); border-radius: 60px; padding: 40px 20px; box-shadow: var(--glass-shadow);">   <div style="font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900; background: linear-gradient(145deg, #0a3b4e, #1e6f8f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 15px 30px rgba(0,0,0,0.2); margin-bottom: 15px; line-height: 1.2; font-family: Georgia, serif;">${icon} ${title}</div>   <div style="font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-style: italic; font-weight: 600; color: #0a3b4e; text-shadow: 0 2px 5px rgba(255,255,255,0.7); border-top: 3px solid rgba(0,86,179,0.3); border-bottom: 3px solid rgba(0,86,179,0.3); display: inline-block; padding: 10px 30px; margin-top: 10px; letter-spacing: 2px;">${subtitle}</div>   <div style="font-size: clamp(1rem, 4vw, 1.4rem); font-weight: 500; color: #1a3a4a; background: rgba(255,255,255,0.5); padding: 12px 20px; border-radius: 50px; display: inline-block; margin-top: 25px; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">   ${message}   </div>   <div style="margin-top: 40px;">   <button class="control-btn" data-action="backHome" style="padding: 12px 30px; border-radius: 40px; font-weight: 700; font-size: clamp(0.9rem, 4vw, 1.1rem); color: white; background: linear-gradient(to bottom, #00b4db, #0083b0); box-shadow: 0 8px 20px rgba(0, 131, 176, 0.5); border: none; cursor: pointer; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); letter-spacing: 1px;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button>   </div>   </div>`;
     setMainContent(html);
     updateHeader(title, subtitle, true);
     utils.safeScrollTop();
@@ -383,13 +383,13 @@ function renderSectionTabs(activeId) {
     `;  
 }  
 
-// ---------- 📱 STICKY BOTTOM NAVIGATION ----------
+// ---------- <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#smartphone'/></svg> STICKY BOTTOM NAVIGATION ----------
 function renderBottomNav(currentView) {
     const views = [
-        { id: 'summary', label: 'Summary', icon: '📘' },
-        { id: 'flashcards', label: 'Cards', icon: '⚡' },
-        { id: 'quiz', label: 'Quiz', icon: '📝' },
-        { id: 'critical', label: 'Scenario', icon: '🚑' }
+        { id: 'summary', label: 'Summary', icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book'/></svg>' },
+        { id: 'flashcards', label: 'Cards', icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#zap'/></svg>' },
+        { id: 'quiz', label: 'Quiz', icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg>' },
+        { id: 'critical', label: 'Scenario', icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#ambulance'/></svg>' }
     ];
     return `
         <nav class="bottom-nav">
@@ -423,7 +423,7 @@ function renderSectionNavigation() {
                     ${utils.escapeHTML(nextSection.shortTitle)} ▶  
                 </button>` :   
                 (isLastSection ? 
-                    `<button class="finish-chapter" data-action="backHome">✅ Finish</button>` : 
+                    `<button class="finish-chapter" data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-check-big'/></svg> Finish</button>` : 
                     `<button disabled>▶</button>`)
             }  
         </div>  
@@ -595,7 +595,7 @@ const render = {
                 ${summaryContent}  
                 ${nav}  
                 <div class="back-home-ghost">
-                    <button data-action="backHome">🏠 Home</button>
+                    <button data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button>
                 </div>
             </div>  
             ${!isSpecialPage ? renderBottomNav('summary') : ''}  
@@ -658,7 +658,7 @@ const render = {
                 <button class="control-btn" data-flash="next">Next ▶</button>  
             </div>  
             ${nav}  
-            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            <div class="back-home-ghost"><button data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button></div>  
             ${renderBottomNav('flashcards')}  
         `;  
         setMainContent(html);  
@@ -691,10 +691,10 @@ const render = {
         const possibleSizes = [10, 20, 30];
         const sizeButtons = possibleSizes
             .filter(size => size <= totalQuestions)
-            .map(size => `<button class="setup-btn" data-quiz-size="${size}">${size} Questions <span>→</span></button>`)
+            .map(size => `<button class="setup-btn" data-quiz-size="${size}">${size} Questions <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg></span></button>`)
             .join('');
         
-        const allButton = `<button class="setup-btn challenge" data-quiz-size="${totalQuestions}">All (${totalQuestions}) <span>→</span></button>`;
+        const allButton = `<button class="setup-btn challenge" data-quiz-size="${totalQuestions}">All (${totalQuestions}) <span><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#arrow-right'/></svg></span></button>`;
         const buttonsHtml = sizeButtons + allButton;
         
         const html = `  
@@ -707,7 +707,7 @@ const render = {
                 </div>  
             </div>  
             ${nav}  
-            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            <div class="back-home-ghost"><button data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button></div>  
             ${renderBottomNav('quiz')}  
         `;  
         setMainContent(html);  
@@ -747,7 +747,7 @@ const render = {
                 <button class="control-btn" id="nextQuizBtn" style="width:100%; margin-top:25px; display:none;">Next Question</button>  
             </div>  
             ${nav}  
-            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            <div class="back-home-ghost"><button data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button></div>  
             ${renderBottomNav('quiz')}  
         `;  
         setMainContent(html);  
@@ -789,7 +789,7 @@ const render = {
                     </span>  
                 </div>  
                 <div style="background: var(--btn-grad-scen); padding:15px; border-radius:12px; margin-bottom:20px; border:1px solid var(--border-scen);">  
-                    <strong style="color:var(--text-scen);">🚨 Scenario</strong>  
+                    <strong style="color:var(--text-scen);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#siren'/></svg> Scenario</strong>  
                     <p style="margin-top:8px; color:var(--text-primary);">${utils.escapeHTML(q.scenario)}</p>  
                 </div>  
                 <div style="font-weight:600; margin-bottom:15px;">${utils.escapeHTML(q.question)}</div>  
@@ -798,7 +798,7 @@ const render = {
                 <button class="control-btn" id="nextCriticalBtn" style="width:100%; margin-top:25px; display:none;">Next Scenario</button>  
             </div>  
             ${nav}  
-            <div class="back-home-ghost"><button data-action="backHome">🏠 Home</button></div>  
+            <div class="back-home-ghost"><button data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button></div>  
             ${renderBottomNav('critical')}  
         `;  
         setMainContent(html);  
@@ -823,7 +823,7 @@ const render = {
         const critAcc = s.critical.total ? Math.round((s.critical.correct / s.critical.total) * 100) : 0;  
         const html = `  
             <div class="stats-card">  
-                <h2 style="color:var(--primary-accent);">📊 Your Performance</h2>  
+                <h2 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#chart-no-axes-column'/></svg> Your Performance</h2>  
                 <div class="progress-header">  
                     <span class="progress-title">Overall Progress</span>  
                     <span style="font-weight:700;">${overallPct}%</span>  
@@ -842,9 +842,9 @@ const render = {
                     </div>  
                 </div>  
                 ${chapStatsHtml || '<p style="margin-top:10px;">No chapter data yet.</p>'}  
-                <div class="encouragement">💡 Keep up the great work!</div>  
+                <div class="encouragement"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#lightbulb'/></svg> Keep up the great work!</div>  
                 <div class="nav-row">  
-                    <button class="control-btn" data-action="backHome">🏠 Home</button>  
+                    <button class="control-btn" data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button>  
                 </div>  
             </div>  
         `;  
@@ -860,12 +860,12 @@ const render = {
         }  
         let items = state.mistakes.map(m => `  
             <div class="mistake-item">  
-                <div class="mistake-question">❓ ${utils.escapeHTML(m.question)}</div>  
-                <div class="mistake-answer">✅ Correct: ${utils.escapeHTML(m.correctAnswer)}</div>  
-                <div class="mistake-rationale">📘 ${utils.escapeHTML(m.rationale)}</div>  
+                <div class="mistake-question"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-help'/></svg> ${utils.escapeHTML(m.question)}</div>  
+                <div class="mistake-answer"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-check-big'/></svg> Correct: ${utils.escapeHTML(m.correctAnswer)}</div>  
+                <div class="mistake-rationale"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#book'/></svg> ${utils.escapeHTML(m.rationale)}</div>  
             </div>  
         `).join('');  
-        const html = `<div class="sum-card"><h3>📝 Mistakes Review</h3>${items}<div class="nav-row"><button class="control-btn" data-action="backHome">🏠 Home</button></div></div>`;  
+        const html = `<div class="sum-card"><h3><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Mistakes Review</h3>${items}<div class="nav-row"><button class="control-btn" data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button></div></div>`;  
         setMainContent(html);  
         updateHeader('Mistakes', '', true);  
         utils.safeScrollTop();  
@@ -967,7 +967,7 @@ const quizEngine = {
         const fb = document.getElementById('quizFeedback');  
         if (fb) {  
             fb.style.display = 'block';  
-            fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>  
+            fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-check-big'/></svg> Correct':'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-x'/></svg> Incorrect'}</strong>  
                             <p style="margin-top:8px;">${utils.escapeHTML(q.explanation)}</p>`;  
         }  
         const nextBtn = document.getElementById('nextQuizBtn');  
@@ -995,7 +995,7 @@ const quizEngine = {
             if (percentage >= 80) msg = 'Excellent!';  
             else if (percentage >= 60) msg = 'Good effort.';  
             const reviewBtn = state.mistakes.length ?   
-                `<button class="control-btn" data-action="reviewMistakes" style="margin-top:15px;">📝 Review ${state.mistakes.length} Mistakes</button>` : '';  
+                `<button class="control-btn" data-action="reviewMistakes" style="margin-top:15px;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#notebook-pen'/></svg> Review ${state.mistakes.length} Mistakes</button>` : '';  
             const html = `  
                 <div class="quiz-setup-container" style="text-align:center;">  
                     <h2 style="color:var(--primary-accent);">Quiz Complete!</h2>  
@@ -1003,7 +1003,7 @@ const quizEngine = {
                     <p style="color:var(--text-secondary);">${msg}</p>  
                     ${reviewBtn}  
                     <div class="nav-row">  
-                        <button class="control-btn" data-action="backHome">🏠 Home</button>  
+                        <button class="control-btn" data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button>  
                     </div>  
                 </div>  
             `;  
@@ -1035,9 +1035,9 @@ const criticalEngine = {
         const fb = document.getElementById('criticalFeedback');  
         if (fb) {  
             fb.style.display = 'block';  
-            fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'✅ Correct':'❌ Incorrect'}</strong>  
+            fb.innerHTML = `<strong style="color:${isCorrect?'#155724':'#721c24'};">${isCorrect?'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-check-big'/></svg> Correct':'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#circle-x'/></svg> Incorrect'}</strong>  
                             <p style="margin-top:8px;">${utils.escapeHTML(q.explanation)}</p>  
-                            ${q.kpi ? `<div class="highlight-box" style="margin-top:10px;">🎯 KPI: ${utils.escapeHTML(q.kpi)}</div>` : ''}`;  
+                            ${q.kpi ? `<div class="highlight-box" style="margin-top:10px;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#target'/></svg> KPI: ${utils.escapeHTML(q.kpi)}</div>` : ''}`;  
         }  
         const nextBtn = document.getElementById('nextCriticalBtn');  
         if (nextBtn) nextBtn.style.display = 'block';  
@@ -1055,7 +1055,7 @@ const criticalEngine = {
                     <div style="font-size:3rem; font-weight:bold; color:var(--primary-accent); margin:20px 0;">${accuracy}%</div>  
                     <p>Correct: ${state.criticalScore}/${state.criticalData.length}</p>  
                     <div class="nav-row">  
-                        <button class="control-btn" data-action="backHome">🏠 Home</button>  
+                        <button class="control-btn" data-action="backHome"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='icons/sprite.svg#house'/></svg> Home</button>  
                     </div>  
                 </div>  
             `;  

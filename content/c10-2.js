@@ -1,4 +1,4 @@
-/* ========== Chapter 10.2 – Post Partum Hemorrhage ========== */
+/* ========== Chapter 10.2 ï¿½ Post Partum Hemorrhage ========== */
 window.CPG_DATA = {
     id: "c10-2",
     title: "Post Partum Hemorrhage",
@@ -36,7 +36,7 @@ window.CPG_DATA = {
                         <li>Vaginal and Perineal Examination: Inspect for lacerations, hematomas, or ongoing bleeding from perineum, vagina, or cervix.</li>
                     </ul>
                 </li>
-                <li><strong>Cause Identification (4 T’s):</strong>
+                <li><strong>Cause Identification (4 Tï¿½s):</strong>
                     <ul>
                         <li><strong>Tone:</strong> Uterine atony (most common).</li>
                         <li><strong>Trauma:</strong> Lacerations, hematomas, uterine rupture.</li>
@@ -82,7 +82,7 @@ window.CPG_DATA = {
 
             <h4>Documentation</h4>
             <ul>
-                <li>Patient’s full name, age, gender.</li>
+                <li>Patientï¿½s full name, age, gender.</li>
                 <li>Obstetric history (gravidity, parity, duration of labor, placenta delivery status, risk factors).</li>
                 <li>Estimated blood loss, rate of PV bleeding, uterine assessment findings (fundal height, tone).</li>
                 <li>Vital signs, mental status, signs of hypovolemia.</li>

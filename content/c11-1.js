@@ -1,4 +1,4 @@
-/* ========== Chapter 11.1 – S.T.A.R.T Triage (MCI Triage) ========== */
+/* ========== Chapter 11.1 ï¿½ S.T.A.R.T Triage (MCI Triage) ========== */
 window.CPG_DATA = {
     id: "c11-1",
     title: "S.T.A.R.T Triage (MCI Triage)",
@@ -30,7 +30,7 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Sequential Evaluation (START Algorithm):</strong>
                     <ol>
-                        <li><strong>Global Command:</strong> "If you can hear me and are able to walk, come to my voice." – all walking/ambulatory patients are categorized as <strong>Green (Minor)</strong>.</li>
+                        <li><strong>Global Command:</strong> "If you can hear me and are able to walk, come to my voice." ï¿½ all walking/ambulatory patients are categorized as <strong>Green (Minor)</strong>.</li>
                         <li><strong>For non-ambulatory patients:</strong>
                             <ul>
                                 <li><strong>Breathing:</strong> Is the patient breathing spontaneously? If no ? position airway; if still not breathing ? <strong>Black (Expectant)</strong>. If breathing returns ? continue.</li>
@@ -286,9 +286,9 @@ window.CPG_DATA = {
         { category: "START", question: "What does START stand for?", answer: "Simple Triage and Rapid Treatment." },
         { category: "Triage categories", question: "What are the four START triage categories?", answer: "Immediate (Red), Delayed (Yellow), Minor (Green), Expectant (Black)." },
         { category: "Green patients", question: "How are Green patients identified?", answer: "They can walk when instructed (global command)." },
-        { category: "Red criteria – breathing", question: "What breathing abnormality makes a patient Red?", answer: "Respiratory rate >30, or apnea that resumes after airway opening." },
-        { category: "Red criteria – perfusion", question: "What perfusion abnormality makes a patient Red?", answer: "Absent radial pulse or capillary refill >2 seconds." },
-        { category: "Red criteria – mental status", question: "What mental status abnormality makes a patient Red?", answer: "Does not obey commands." },
+        { category: "Red criteria ï¿½ breathing", question: "What breathing abnormality makes a patient Red?", answer: "Respiratory rate >30, or apnea that resumes after airway opening." },
+        { category: "Red criteria ï¿½ perfusion", question: "What perfusion abnormality makes a patient Red?", answer: "Absent radial pulse or capillary refill >2 seconds." },
+        { category: "Red criteria ï¿½ mental status", question: "What mental status abnormality makes a patient Red?", answer: "Does not obey commands." },
         { category: "Yellow criteria", question: "What are the criteria for Yellow (Delayed)?", answer: "RR =30, radial pulse present, capillary refill =2 sec, and obeys commands." },
         { category: "Black criteria", question: "When is a patient tagged Black (Expectant)?", answer: "Apneic after airway opening; obviously deceased; injuries incompatible with life." },
         { category: "Triage tag", question: "What is the purpose of a triage tag?", answer: "To indicate priority, document findings, and assist with patient tracking." },

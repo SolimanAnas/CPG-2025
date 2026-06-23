@@ -6,7 +6,7 @@ window.MEDICATIONS = {
         shortTitle: "M11 Diphenhydramine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Diphenhydramine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Diphenhydramine</h3>
                 <h4>Classification</h4>
                 <p>Antihistamine</p>
                 <h4>Presentation</h4>
@@ -43,16 +43,16 @@ window.MEDICATIONS = {
         shortTitle: "M12 Dopamine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Dopamine</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Dopamine</h3>
                 <h4>Classification</h4>
                 <p>Catecholamine, Positive Inotrope, Vasopressor</p>
                 <h4>Presentation</h4>
                 <p>200 mg/5 mL ampule (note: ampule presentation in mg, dose calculation in mcg).</p>
                 <h4>Mechanism of Action</h4>
                 <p>Dopamine stimulates dopaminergic (D1 & D2), adrenergic (α1 & β1) receptors, causing:<br>
-                – At low doses (1–5 mcg/kg/min): dopamine receptors → increased blood flow to kidneys, improved urine output.<br>
-                – At medium doses (5–10 mcg/kg/min): beta‑1 adrenergic receptors → increased heart rate and contractility (inotropic effect), improving cardiac output.<br>
-                – At high doses (10–20 mcg/kg/min): alpha‑1 adrenergic receptors → vasoconstriction, increasing blood pressure.</p>
+                – At low doses (1–5 mcg/kg/min): dopamine receptors <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> increased blood flow to kidneys, improved urine output.<br>
+                – At medium doses (5–10 mcg/kg/min): beta‑1 adrenergic receptors <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> increased heart rate and contractility (inotropic effect), improving cardiac output.<br>
+                – At high doses (10–20 mcg/kg/min): alpha‑1 adrenergic receptors <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> vasoconstriction, increasing blood pressure.</p>
                 <h4>Indications</h4>
                 <p>Hypotension/Shock associated with: cardiogenic shock / congestive heart failure; bradycardia; post cardiac arrest; sepsis.</p>
                 <h4>Contraindications</h4>
@@ -83,7 +83,7 @@ window.MEDICATIONS = {
         shortTitle: "M13 Epinephrine",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Epinephrine (Adrenaline)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Epinephrine (Adrenaline)</h3>
                 <h4>Classification</h4>
                 <p>Adrenergic agonist</p>
                 <h4>Presentation</h4>
@@ -128,7 +128,7 @@ window.MEDICATIONS = {
         shortTitle: "M14 Ethyl Chloride",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">🧊 Ethyl Chloride (Chloroethane)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#snowflake'/></svg> Ethyl Chloride (Chloroethane)</h3>
                 <h4>Classification</h4>
                 <p>Topical Anesthetic</p>
                 <h4>Presentation</h4>
@@ -165,7 +165,7 @@ window.MEDICATIONS = {
         shortTitle: "M15 Furosemide",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Furosemide</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Furosemide</h3>
                 <h4>Classification</h4>
                 <p>Loop Diuretic</p>
                 <h4>Presentation</h4>
@@ -202,7 +202,7 @@ window.MEDICATIONS = {
         shortTitle: "M16 Glucagon",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Glucagon</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Glucagon</h3>
                 <h4>Classification</h4>
                 <p>Hormone</p>
                 <h4>Presentation</h4>
@@ -241,7 +241,7 @@ window.MEDICATIONS = {
         shortTitle: "M17 Glucose Paste",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">🍬 Glucose 40% Oral Paste</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#candy'/></svg> Glucose 40% Oral Paste</h3>
                 <h4>Classification</h4>
                 <p>Carbohydrate</p>
                 <h4>Presentation</h4>
@@ -278,7 +278,7 @@ window.MEDICATIONS = {
         shortTitle: "M18 GTN",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Glyceryl Trinitrate (GTN)</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Glyceryl Trinitrate (GTN)</h3>
                 <h4>Classification</h4>
                 <p>Organic Nitrate / Vasodilator</p>
                 <h4>Presentation</h4>
@@ -315,7 +315,7 @@ window.MEDICATIONS = {
         shortTitle: "M19 Haloperidol",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Haloperidol</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Haloperidol</h3>
                 <h4>Classification</h4>
                 <p>Antipsychotic</p>
                 <h4>Presentation</h4>
@@ -352,7 +352,7 @@ window.MEDICATIONS = {
         shortTitle: "M20 Hydrocortisone",
         summary: `
             <div class="sum-card">
-                <h3 style="color:var(--primary-accent);">💊 Hydrocortisone</h3>
+                <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Hydrocortisone</h3>
                 <h4>Classification</h4>
                 <p>Corticosteroid</p>
                 <h4>Presentation</h4>

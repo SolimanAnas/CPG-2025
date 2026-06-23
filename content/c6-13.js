@@ -1,4 +1,4 @@
-/* ========== Chapter 6.13 – Sickle Cell Crisis ========== */
+/* ========== Chapter 6.13 ï¿½ Sickle Cell Crisis ========== */
 window.CPG_DATA = {
     id: "c6-13",
     title: "Sickle Cell Crisis",
@@ -56,14 +56,14 @@ window.CPG_DATA = {
                         <li>Reassure and position for comfort.</li>
                         <li>Administer appropriate analgesia early as per Pain Management CPG.</li>
                         <li>IV analgesics are likely to be required (e.g., IV morphine, IV paracetamol).</li>
-                        <li>Avoid delays in pain relief – consider escalation to ALS for opioid administration.</li>
+                        <li>Avoid delays in pain relief ï¿½ consider escalation to ALS for opioid administration.</li>
                     </ul>
                 </li>
                 <li><strong>Oxygen Therapy:</strong> Administer oxygen if SpO2 <94% or signs of respiratory compromise; target SpO2 =94%; avoid hyperoxia.</li>
                 <li><strong>IV Access & Fluids:</strong>
                     <ul>
                         <li>Establish IV access.</li>
-                        <li>Fluid resuscitation: Indications – signs of dehydration, fever, vomiting, or hypotension.</li>
+                        <li>Fluid resuscitation: Indications ï¿½ signs of dehydration, fever, vomiting, or hypotension.</li>
                         <li>Adults: 250 mL IV bolus, may be repeated if required.</li>
                         <li>Pediatrics: 10-20 mL/kg IV bolus, may be repeated if required.</li>
                         <li>Avoid large-volume fluid boluses unless the patient is hypotensive.</li>
@@ -77,7 +77,7 @@ window.CPG_DATA = {
 
             <h4>Patient Safety Considerations</h4>
             <ul>
-                <li>Do not delay pain relief – early treatment improves patient outcomes.</li>
+                <li>Do not delay pain relief ï¿½ early treatment improves patient outcomes.</li>
                 <li>Avoid aggressive fluid administration in patients with chest pain symptoms (may worsen acute chest syndrome).</li>
                 <li>Monitor closely for deterioration (e.g., increasing respiratory rate, reduced GCS).</li>
                 <li>Use weight-based dosing; refer to Broselow tape for pediatric patients.</li>
@@ -136,7 +136,7 @@ window.CPG_DATA = {
             explanation: "Adults should receive a 250 mL bolus of normal saline; avoid large volumes unless hypotensive."
         },
         {
-            q: "A child with sickle cell crisis has a fever of 39°C. What should you consider?",
+            q: "A child with sickle cell crisis has a fever of 39ï¿½C. What should you consider?",
             options: ["Normal for crisis", "Possible infection or sepsis; transport urgently", "Give paracetamol and monitor", "No action needed"],
             correct: 1,
             explanation: "Fever in sickle cell patients is a red flag for sepsis; they are functionally asplenic and at high risk for serious bacterial infection."
@@ -191,7 +191,7 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a red flag in sickle cell crisis?",
-            options: ["Bone pain", "Joint swelling", "Fever >38.5°C", "Mild dehydration"],
+            options: ["Bone pain", "Joint swelling", "Fever >38.5ï¿½C", "Mild dehydration"],
             correct: 2,
             explanation: "Fever indicates possible infection; sickle cell patients are at high risk for sepsis."
         },
@@ -262,7 +262,7 @@ window.CPG_DATA = {
             explanation: "Hyperglycemia is not a typical trigger; triggers include dehydration, infection, hypoxia, stress, cold, and acidosis."
         },
         {
-            q: "A child with sickle cell crisis has a fever of 38.5°C and is vomiting. What is the priority?",
+            q: "A child with sickle cell crisis has a fever of 38.5ï¿½C and is vomiting. What is the priority?",
             options: ["Give oral fluids", "Administer paracetamol", "Start IV fluids and transport", "Give antiemetic"],
             correct: 2,
             explanation: "Fever plus vomiting increases dehydration risk; IV fluids and urgent transport are needed."
@@ -301,7 +301,7 @@ window.CPG_DATA = {
         { category: "Triggers", question: "What are common triggers of sickle cell crisis?", answer: "Dehydration, infection, hypoxia, cold, stress, acidosis, strenuous exercise." },
         { category: "Pain management", question: "What is the first-line treatment for severe pain in sickle cell crisis?", answer: "IV opioids (morphine) titrated to effect." },
         { category: "Oxygen target", question: "What is the target SpO2 in sickle cell crisis?", answer: "=94% to prevent hypoxia-induced sickling." },
-        { category: "Fluid resuscitation", question: "What is the fluid of choice for sickle cell crisis?", answer: "Normal saline (0.9% sodium chloride) – isotonic." },
+        { category: "Fluid resuscitation", question: "What is the fluid of choice for sickle cell crisis?", answer: "Normal saline (0.9% sodium chloride) ï¿½ isotonic." },
         { category: "Fluid volume", question: "What is the initial fluid bolus for an adult with sickle cell crisis?", answer: "250 mL normal saline; repeat if needed but avoid overload, especially if chest symptoms." },
         { category: "Pediatric fluid", question: "What is the initial fluid bolus for a child with sickle cell crisis?", answer: "10-20 mL/kg normal saline." },
         { category: "Fever in SCD", question: "Why is fever a red flag in sickle cell disease?", answer: "Functional asplenia increases risk of overwhelming sepsis; fever requires urgent evaluation." },
@@ -331,7 +331,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_6_13_2",
-            scenario: "A 10-year-old with sickle cell disease presents with fever (39°C), cough, and chest pain. He is tachypneic with SpO2 91% on room air. What should you suspect?",
+            scenario: "A 10-year-old with sickle cell disease presents with fever (39ï¿½C), cough, and chest pain. He is tachypneic with SpO2 91% on room air. What should you suspect?",
             question: "What is the most likely diagnosis and next step?",
             options: [
                 { t: "Vaso-occlusive crisis; give morphine", f: "Chest pain, fever, and hypoxia suggest acute chest syndrome." },

@@ -1,4 +1,4 @@
-/* ========== Chapter 7.6 – Traumatic Brain Injuries ========== */
+/* ========== Chapter 7.6 ï¿½ Traumatic Brain Injuries ========== */
 window.CPG_DATA = {
     id: "c7-6",
     title: "Traumatic Brain Injuries",
@@ -10,7 +10,7 @@ window.CPG_DATA = {
             <h4>Patient Care Goals</h4>
             <ul>
                 <li>Rapidly identify and manage traumatic brain injuries (TBI) to prevent secondary brain injury and optimize neurological outcomes.</li>
-                <li>Stabilize the patient’s condition through targeted interventions, including oxygenation, ventilation and blood pressure management.</li>
+                <li>Stabilize the patientï¿½s condition through targeted interventions, including oxygenation, ventilation and blood pressure management.</li>
                 <li>Ensure rapid transport to a trauma center with neurosurgical capabilities for definitive evaluation and treatment.</li>
             </ul>
 
@@ -36,7 +36,7 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Mechanism of Injury:</strong> Identify blunt vs. penetrating trauma; height of fall, impact force, presence of secondary injuries (facial fractures, cervical spine injury).</li>
                 <li><strong>Neurological Assessment:</strong> Evaluate level of consciousness using AVPU or Glasgow Coma Scale (GCS). Assess for focal neurological deficits (unilateral weakness, sensory loss, cranial nerve abnormalities). Check pupil size and reactivity (unequal pupils, sluggish response) for signs of increased ICP.</li>
-                <li><strong>Signs of Severe TBI:</strong> Cushing’s triad (hypertension, bradycardia, irregular respirations). Posturing (decorticate or decerebrate), seizures, CSF leakage from ears/nose.</li>
+                <li><strong>Signs of Severe TBI:</strong> Cushingï¿½s triad (hypertension, bradycardia, irregular respirations). Posturing (decorticate or decerebrate), seizures, CSF leakage from ears/nose.</li>
                 <li><strong>Trauma-Specific Findings:</strong> Inspect for scalp lacerations, skull deformities, open fractures. Assess for associated injuries (cervical spine, chest, abdomen) that may contribute to hypoxia or hypotension.</li>
                 <li><strong>Determine Triage Category:</strong> Red priority for GCS =9 or progressive deterioration in GCS.</li>
             </ul>
@@ -44,9 +44,9 @@ window.CPG_DATA = {
             <h4>Patient Management & Interventions</h4>
             <ul>
                 <li><strong>Consider ALS back-up:</strong> For patients responding only to Pain or Unresponsive on AVPU scale.</li>
-                <li><strong>Primary Survey:</strong> Perform as per Universal Care CPG. Control catastrophic external bleeding. Spinal Motion Restriction: The use of c-collars is contraindicated in patients with Traumatic Brain Injuries as it impedes cerebral venous drainage, further increasing ICP. Provide in-line stabilization and support the head using head block plate and head blocks – forehead and chin straps are not required. Secure patient to stretcher.</li>
+                <li><strong>Primary Survey:</strong> Perform as per Universal Care CPG. Control catastrophic external bleeding. Spinal Motion Restriction: The use of c-collars is contraindicated in patients with Traumatic Brain Injuries as it impedes cerebral venous drainage, further increasing ICP. Provide in-line stabilization and support the head using head block plate and head blocks ï¿½ forehead and chin straps are not required. Secure patient to stretcher.</li>
                 <li><strong>Oxygenation:</strong> Titrate oxygen to maintain SpO2 =94% to prevent hypoxia. Secure airway with advanced techniques (e.g., endotracheal intubation) if GCS =8 or airway compromise. Avoid hyperventilation; target EtCO2 35-45 mmHg to prevent cerebral vasoconstriction.</li>
-                <li><strong>Fluid Resuscitation:</strong> Administer Normal Saline or Ringer’s Lactate for hypotension. Adults: 250-500 mL bolus IV/IO, reassess, target SBP =120 mmHg (or MAP =90 mmHg). Avoid over-resuscitation to prevent cerebral edema.</li>
+                <li><strong>Fluid Resuscitation:</strong> Administer Normal Saline or Ringerï¿½s Lactate for hypotension. Adults: 250-500 mL bolus IV/IO, reassess, target SBP =120 mmHg (or MAP =90 mmHg). Avoid over-resuscitation to prevent cerebral edema.</li>
                 <li><strong>Advanced Airway Management:</strong> If GCS <8: perform open airway maneuvers (jaw thrust). OPA/NPA may be used if airway cannot be maintained. Consider supraglottic airway/intubation only if patient is profoundly unconscious (GCS=3) and airway cannot be maintained with basic adjuncts, or if medication-facilitated intubation is available.</li>
                 <li><strong>Head Positioning:</strong> If signs of impending herniation, elevate head of bed 30 degrees (if no spinal precautions) to reduce ICP. Maintain neutral head alignment.</li>
                 <li><strong>Hyperventilation:</strong> Only initiate in patients who have had hypoxemia and hypotension corrected, and have one or more of: GCS <9 with extensor posturing; GCS <9 with asymmetric, dilated, or non-reactive pupils; initial GCS <9 that drops by >2 points. Ventilate to target EtCO2 30-35 mmHg (adults: 20 breaths/min; children: 25 breaths/min; infants: 30 breaths/min).</li>
@@ -75,7 +75,7 @@ window.CPG_DATA = {
                 <li>Mechanism of injury, GCS, pupil size and reactivity.</li>
                 <li>Vital signs, SpO2, EtCO2.</li>
                 <li>Airway management, oxygen, IV fluids, sedation given.</li>
-                <li>Signs of increased ICP (Cushing’s triad, posturing).</li>
+                <li>Signs of increased ICP (Cushingï¿½s triad, posturing).</li>
                 <li>Transport decision, hospital notification.</li>
             </ul>
 
@@ -107,9 +107,9 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a sign of increased intracranial pressure?",
-            options: ["Hypotension", "Tachycardia", "Cushing’s triad (hypertension, bradycardia, irregular respirations)", "Fever"],
+            options: ["Hypotension", "Tachycardia", "Cushingï¿½s triad (hypertension, bradycardia, irregular respirations)", "Fever"],
             correct: 2,
-            explanation: "Cushing’s triad is a late sign of increased ICP."
+            explanation: "Cushingï¿½s triad is a late sign of increased ICP."
         },
         {
             q: "What is the preferred sedation agent for an agitated patient with TBI?",
@@ -221,9 +221,9 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a sign of basilar skull fracture?",
-            options: ["Battle’s sign", "Raccoon eyes", "CSF otorrhea", "All of the above"],
+            options: ["Battleï¿½s sign", "Raccoon eyes", "CSF otorrhea", "All of the above"],
             correct: 3,
-            explanation: "Battle’s sign (mastoid ecchymosis), raccoon eyes (periorbital ecchymosis), and CSF leak are signs of basilar skull fracture."
+            explanation: "Battleï¿½s sign (mastoid ecchymosis), raccoon eyes (periorbital ecchymosis), and CSF leak are signs of basilar skull fracture."
         },
         {
             q: "What is the dose of midazolam for sedation in an adult with TBI?",
@@ -272,7 +272,7 @@ window.CPG_DATA = {
         { category: "Definition", question: "What is traumatic brain injury (TBI)?", answer: "Injury to the brain resulting from external mechanical force, leading to temporary or permanent impairment." },
         { category: "Primary brain injury", question: "What is primary brain injury?", answer: "Direct damage from the initial impact (contusion, laceration, hemorrhage)." },
         { category: "Secondary brain injury", question: "What is secondary brain injury?", answer: "Progressive damage from hypoxia, hypotension, increased ICP, or inflammation after the initial injury." },
-        { category: "Cushing’s triad", question: "What is Cushing’s triad?", answer: "Hypertension, bradycardia, irregular respirations – a late sign of increased ICP." },
+        { category: "Cushingï¿½s triad", question: "What is Cushingï¿½s triad?", answer: "Hypertension, bradycardia, irregular respirations ï¿½ a late sign of increased ICP." },
         { category: "Decerebrate posturing", question: "What is decerebrate posturing?", answer: "Arms extended, internally rotated; indicates severe brain injury." },
         { category: "Decorticate posturing", question: "What is decorticate posturing?", answer: "Arms flexed, legs extended; indicates damage above the brainstem." },
         { category: "GCS thresholds", question: "What GCS indicates severe TBI?", answer: "GCS =8." },
@@ -283,7 +283,7 @@ window.CPG_DATA = {
         { category: "Hyperventilation indication", question: "When is hyperventilation indicated in TBI?", answer: "Signs of herniation after correcting hypoxia and hypotension." },
         { category: "C-collar contraindication", question: "Why are c-collars contraindicated in TBI?", answer: "They may increase ICP by impeding cerebral venous drainage." },
         { category: "Sedation in TBI", question: "What is the preferred sedation agent for TBI?", answer: "Ketamine 0.5-1 mg/kg IV/IO/IM." },
-        { category: "Fluid resuscitation", question: "What fluid is used for hypotension in TBI?", answer: "Normal saline or Ringer’s lactate; small boluses (250-500 mL in adults)." },
+        { category: "Fluid resuscitation", question: "What fluid is used for hypotension in TBI?", answer: "Normal saline or Ringerï¿½s lactate; small boluses (250-500 mL in adults)." },
         { category: "Avoid hyperventilation", question: "Why is hyperventilation harmful without herniation?", answer: "It causes cerebral vasoconstriction and ischemia." },
         { category: "Pediatric considerations", question: "What is different about pediatric TBI?", answer: "Subtle signs; use Broselow tape; avoid over-resuscitation." },
         { category: "Elderly considerations", question: "Why are elderly at higher risk?", answer: "Brain atrophy, anticoagulants, falls; may have delayed deterioration." },

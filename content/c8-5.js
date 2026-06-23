@@ -1,4 +1,4 @@
-/* ========== Chapter 8.5 – Organophosphate Poisoning ========== */
+/* ========== Chapter 8.5 ï¿½ Organophosphate Poisoning ========== */
 window.CPG_DATA = {
     id: "c8-5",
     title: "Organophosphate Poisoning",
@@ -61,7 +61,7 @@ window.CPG_DATA = {
                 <li><strong>Scene Safety & Decontamination:</strong> Wear full PPE: gloves, mask, eye protection, gown or coverall. Remove patient from source of exposure. Remove contaminated clothing carefully and seal in plastic bag. Irrigate exposed skin and eyes with clean water or saline if not yet decontaminated. Avoid contaminating ambulance or personnel.</li>
                 <li><strong>Primary Survey:</strong> As per Universal Care CPG. Suction airway to manage bronchorrhea and reduce aspiration risk. Administer high-flow oxygen via non-rebreather mask or BVM. If patient is not breathing adequately, begin assisted ventilation with BVM. Prepare for rapid respiratory failure; have airway equipment ready. Position patient in lateral recovery if unresponsive or vomiting. Monitor heart rate and rhythm closely for bradycardia or blocks; perform ECG and serial ECG if patient is compliant.</li>
                 <li><strong>IV Access:</strong> Establish IV access; consider IO if IV not readily available.</li>
-                <li><strong>Fluid Administration:</strong> Administer 0.9% sodium chloride (normal saline) if hypotension develops: Adults 250-500 mL; Pediatrics 10–20 mL/kg IV. Reassess after each bolus for improvement in perfusion. Avoid fluid overload, especially if signs of pulmonary edema are present.</li>
+                <li><strong>Fluid Administration:</strong> Administer 0.9% sodium chloride (normal saline) if hypotension develops: Adults 250-500 mL; Pediatrics 10ï¿½20 mL/kg IV. Reassess after each bolus for improvement in perfusion. Avoid fluid overload, especially if signs of pulmonary edema are present.</li>
                 <li><strong>Atropine Administration:</strong> Indication: Symptomatic bradycardia, bronchial secretions, or respiratory distress. Titrate to effect (chest clear of secretions), not heart rate; the primary goal is drying secretions and improving ventilation. Do not delay atropine if the patient has respiratory symptoms.
                     <ul>
                         <li><strong>Adult:</strong> 1st Dose: 2 mg IV/IO/IM; Subsequent Doses: 4 mg, 8 mg, 16 mg IV/IO/IM (double each dose).</li>
@@ -76,7 +76,7 @@ window.CPG_DATA = {
             <ul>
                 <li>Always wear gloves, mask, and eye protection; use gowns when available.</li>
                 <li>Do not delay atropine if symptoms are present; treat per clinical effect, not vitals alone.</li>
-                <li>Avoid direct skin contact with the patient’s clothing or vomit.</li>
+                <li>Avoid direct skin contact with the patientï¿½s clothing or vomit.</li>
                 <li>Ensure suction and BVM are ready; anticipate airway deterioration.</li>
                 <li>Secure and label contaminated clothing or material for hospital handover.</li>
                 <li>Monitor for re-narcotization-like recurrence; symptoms may return if exposure persists.</li>
@@ -295,8 +295,8 @@ window.CPG_DATA = {
     ],
     flashcards: [
         { category: "Toxidrome", question: "What are the signs of organophosphate poisoning?", answer: "Cholinergic toxidrome: SLUDGE (salivation, lacrimation, urination, defecation, GI upset, emesis), miosis, bronchospasm, bradycardia, muscle fasciculations." },
-        { category: "Atropine dose – adult", question: "What is the initial atropine dose for an adult?", answer: "2 mg IV/IO/IM; subsequent doses doubled (4, 8, 16 mg) until secretions dry." },
-        { category: "Atropine dose – pediatric", question: "What is the pediatric atropine dose?", answer: "0.02 mg/kg IV/IO/IM (min 0.1 mg, max 0.5 mg per dose); repeat every 5 minutes as needed." },
+        { category: "Atropine dose ï¿½ adult", question: "What is the initial atropine dose for an adult?", answer: "2 mg IV/IO/IM; subsequent doses doubled (4, 8, 16 mg) until secretions dry." },
+        { category: "Atropine dose ï¿½ pediatric", question: "What is the pediatric atropine dose?", answer: "0.02 mg/kg IV/IO/IM (min 0.1 mg, max 0.5 mg per dose); repeat every 5 minutes as needed." },
         { category: "Atropine goal", question: "What is the endpoint for atropine administration?", answer: "Drying of bronchial secretions (lungs clear), not a specific heart rate." },
         { category: "Decontamination", question: "How should contaminated skin be decontaminated?", answer: "Remove clothing, irrigate with copious water. Avoid contaminating ambulance." },
         { category: "PPE", question: "What PPE is required for organophosphate exposure?", answer: "Gloves, mask, eye protection, gown or coverall." },
@@ -305,8 +305,8 @@ window.CPG_DATA = {
         { category: "Respiratory failure", question: "What is the primary cause of death in organophosphate poisoning?", answer: "Respiratory failure due to secretions, bronchospasm, and muscle weakness." },
         { category: "Benzodiazepines", question: "When are benzodiazepines indicated?", answer: "Seizures, agitation." },
         { category: "Pralidoxime", question: "What is the role of pralidoxime?", answer: "Reactivates acetylcholinesterase; given in hospital, not prehospital." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult with hypotension?", answer: "250-500 mL normal saline." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the pediatric fluid bolus for shock?", answer: "10-20 mL/kg." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult with hypotension?", answer: "250-500 mL normal saline." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the pediatric fluid bolus for shock?", answer: "10-20 mL/kg." },
         { category: "ALS back-up", question: "When should ALS be requested?", answer: "Any symptomatic patient; large atropine doses may be needed." },
         { category: "Scene clues", question: "What scene clues suggest organophosphate poisoning?", answer: "Pesticide containers, sprayers, chemical odor, multiple affected people." },
         { category: "KPI", question: "What is a key performance indicator for organophosphate poisoning?", answer: "Request ALS back-up within 5 minutes for symptomatic patients." },

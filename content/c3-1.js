@@ -5,7 +5,7 @@ window.CPG_DATA = {
     shortTitle: "3.1 Chest Pain / ACS",
     summary: `
         <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">❤️ Chest Pain / Acute Coronary Syndrome (ACS)</h3>
+            <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg> Chest Pain / Acute Coronary Syndrome (ACS)</h3>
             
             <h4>Patient Care Goals</h4>
             <ul>

@@ -1,4 +1,4 @@
-/* ========== Chapter 6.5 – Altered Mental Status ========== */
+/* ========== Chapter 6.5 ï¿½ Altered Mental Status ========== */
 window.CPG_DATA = {
     id: "c6-5",
     title: "Altered Mental Status",
@@ -10,7 +10,7 @@ window.CPG_DATA = {
             <h4>Patient Care Goals</h4>
             <ul>
                 <li>Identify and manage life-threatening causes of altered mental status.</li>
-                <li>Stabilize the patient’s condition through appropriate interventions to restore normal mental status or prevent further deterioration.</li>
+                <li>Stabilize the patientï¿½s condition through appropriate interventions to restore normal mental status or prevent further deterioration.</li>
             </ul>
 
             <h4>Inclusion Criteria</h4>
@@ -37,15 +37,15 @@ window.CPG_DATA = {
                 <li><strong>History:</strong> Identify potential causes through SAMPLE history: recent events (trauma, drug use, medication changes), medical history (diabetes, epilepsy, stroke, psychiatric disorders), medication use (insulin, sedatives, missed doses). Check for medical alert bracelets.</li>
                 <li><strong>Differential Diagnosis (AEIOU TIPS):</strong>
                     <ul>
-                        <li>A – Alcohol, Abuse, Atypical migraine</li>
-                        <li>E – Epilepsy, Electrolytes</li>
-                        <li>I – Insulin (hypoglycemia)</li>
-                        <li>O – Oxygen, Overdose</li>
-                        <li>U – Uremia (kidney failure)</li>
-                        <li>T – Trauma, Tumor</li>
-                        <li>I – Infection</li>
-                        <li>P – Psych, Poisoning</li>
-                        <li>S – Seizure, Subarachnoid hemorrhage, Sepsis</li>
+                        <li>A ï¿½ Alcohol, Abuse, Atypical migraine</li>
+                        <li>E ï¿½ Epilepsy, Electrolytes</li>
+                        <li>I ï¿½ Insulin (hypoglycemia)</li>
+                        <li>O ï¿½ Oxygen, Overdose</li>
+                        <li>U ï¿½ Uremia (kidney failure)</li>
+                        <li>T ï¿½ Trauma, Tumor</li>
+                        <li>I ï¿½ Infection</li>
+                        <li>P ï¿½ Psych, Poisoning</li>
+                        <li>S ï¿½ Seizure, Subarachnoid hemorrhage, Sepsis</li>
                     </ul>
                 </li>
                 <li><strong>Glucose and Oxygen Assessment:</strong> Check random blood sugar (RBS) to identify hypoglycemia (&lt;70 mg/dL) or hyperglycemia (&gt;200 mg/dL). Assess for hypoxia via pulse oximetry (SpO2 &lt;94%).</li>
@@ -207,7 +207,7 @@ window.CPG_DATA = {
             explanation: "A 500-1000 mL bolus of crystalloid is recommended for hypotension in adults."
         },
         {
-            q: "A patient with altered mental status has a fever of 39.5°C. What condition should you suspect?",
+            q: "A patient with altered mental status has a fever of 39.5ï¿½C. What condition should you suspect?",
             options: ["Heat stroke", "Sepsis", "Meningitis", "All of the above"],
             correct: 3,
             explanation: "Fever with altered mental status can be due to sepsis, meningitis, or hyperthermia; treat accordingly."

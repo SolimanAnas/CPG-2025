@@ -1,4 +1,4 @@
-/* ========== Chapter 9.1 – Croup ========== */
+/* ========== Chapter 9.1 ï¿½ Croup ========== */
 window.CPG_DATA = {
     id: "c9-1",
     title: "Croup",
@@ -19,8 +19,8 @@ window.CPG_DATA = {
             <ul>
                 <li>Patients presenting with croup symptoms, including:
                     <ul>
-                        <li>Typically children aged 6 months–6 years.</li>
-                        <li>Barking, “seal-like” cough.</li>
+                        <li>Typically children aged 6 monthsï¿½6 years.</li>
+                        <li>Barking, ï¿½seal-likeï¿½ cough.</li>
                         <li>Inspiratory stridor at rest or with agitation.</li>
                         <li>Hoarseness, respiratory distress.</li>
                         <li>Fever (usually low-grade).</li>
@@ -40,8 +40,8 @@ window.CPG_DATA = {
             <h4>Key Assessment Points</h4>
             <ul>
                 <li><strong>Primary and Secondary Survey:</strong> Perform as per Universal Care CPG. Perform initial impression from a distance to avoid agitating the child. Use the Pediatric Assessment Triangle (PAT): Appearance, Work of Breathing, Circulation to Skin.</li>
-                <li><strong>Airway Assessment:</strong> Listen for barking “seal-like” cough, inspiratory stridor, hoarseness. Assess for obstructed airway signs: drooling (suggests epiglottitis), difficulty swallowing, upper airway noises at rest versus exertion. Assess if stridor is at rest (more concerning) or only on exertion/crying.</li>
-                <li><strong>Breathing Assessment:</strong> Rate: tachypnea or slow (impending failure). Effort: mild (minimal retractions, no stridor at rest); moderate (visible retractions, stridor at rest); severe (marked retractions, nasal flaring, fatigue, “silent chest”). SpO2: aim for =94%; lower indicates hypoxia.</li>
+                <li><strong>Airway Assessment:</strong> Listen for barking ï¿½seal-likeï¿½ cough, inspiratory stridor, hoarseness. Assess for obstructed airway signs: drooling (suggests epiglottitis), difficulty swallowing, upper airway noises at rest versus exertion. Assess if stridor is at rest (more concerning) or only on exertion/crying.</li>
+                <li><strong>Breathing Assessment:</strong> Rate: tachypnea or slow (impending failure). Effort: mild (minimal retractions, no stridor at rest); moderate (visible retractions, stridor at rest); severe (marked retractions, nasal flaring, fatigue, ï¿½silent chestï¿½). SpO2: aim for =94%; lower indicates hypoxia.</li>
                 <li><strong>Circulation Assessment:</strong> Heart rate (elevated in distress, bradycardia in severe hypoxia), capillary refill time, skin color (cyanosis is late, ominous).</li>
                 <li><strong>Mental Status Assessment:</strong> Observe for fatigue, reduced LOC, or confusion (signals exhaustion and impending respiratory failure). Irritability may worsen obstruction, but lethargy is more concerning.</li>
                 <li><strong>History (SAMPLE & OPQRST):</strong> Barking cough, stridor at rest or with activity, hoarseness; allergies; prior steroids; previous croup episodes, airway abnormalities, asthma, hospitalizations; immunization history; last oral intake; onset, progression, triggers (often viral, seasonal).</li>
@@ -63,8 +63,8 @@ window.CPG_DATA = {
                 <li><strong>Keep the child calm and minimize distress:</strong> Maintain quiet environment, allow child to remain with caregivers in a position of comfort, avoid unnecessary interventions that could increase agitation and worsen airway obstruction.</li>
                 <li><strong>If moderate or severe respiratory distress (croup score >3 points):</strong> Consider nebulized racemic epinephrine (2.25% solution):
                     <ul>
-                        <li>Dose: 0.5 mL diluted in 2.5–3 mL normal saline, administered via nebulizer over ~15 minutes.</li>
-                        <li>May be repeated every 20–30 minutes as needed, observing for improvement and recurrence of symptoms.</li>
+                        <li>Dose: 0.5 mL diluted in 2.5ï¿½3 mL normal saline, administered via nebulizer over ~15 minutes.</li>
+                        <li>May be repeated every 20ï¿½30 minutes as needed, observing for improvement and recurrence of symptoms.</li>
                         <li>Maximum 3 doses without consultation with Tele-EMS.</li>
                         <li>If racemic epinephrine unavailable, standard L-epinephrine (1:1,000) at 0.5 mL/kg (max 5 mL) nebulized may also be used.</li>
                         <li>Any patient who has received nebulized epinephrine must be transported to hospital.</li>
@@ -92,7 +92,7 @@ window.CPG_DATA = {
                 <li>Request ALS back-up early if moderate or severe distress, impending failure, or deterioration expected, as per Universal Care CPG.</li>
                 <li>Consult Tele-EMS when in doubt about management decisions or disposition.</li>
                 <li>Differentiate croup from other serious upper airway conditions (epiglottitis, bacterial tracheitis, foreign body aspiration) which may present similarly but require different management.</li>
-                <li>Ensure caregivers understand the temporary nature of racemic epinephrine’s effect, the potential for symptom recurrence, and when to seek further help.</li>
+                <li>Ensure caregivers understand the temporary nature of racemic epinephrineï¿½s effect, the potential for symptom recurrence, and when to seek further help.</li>
                 <li>Avoid humidified air and unnecessary interventions, as these have not been shown to improve outcomes and may increase distress.</li>
                 <li>Always prepare for possible airway compromise and have equipment readily available. Avoid invasive airway management unless absolutely necessary.</li>
             </ul>
@@ -133,7 +133,7 @@ window.CPG_DATA = {
             q: "What is the dose of racemic epinephrine (2.25%) for croup?",
             options: ["0.25 mL", "0.5 mL", "1 mL", "2 mL"],
             correct: 1,
-            explanation: "The dose is 0.5 mL diluted in 2.5–3 mL normal saline via nebulizer."
+            explanation: "The dose is 0.5 mL diluted in 2.5ï¿½3 mL normal saline via nebulizer."
         },
         {
             q: "A child with croup has a croup score of 5. What severity is this?",
@@ -268,7 +268,7 @@ window.CPG_DATA = {
             explanation: "Supine position can worsen airway obstruction; upright is preferred."
         },
         {
-            q: "A child with croup has a fever of 39.5°C. What should you consider?",
+            q: "A child with croup has a fever of 39.5ï¿½C. What should you consider?",
             options: ["Typical for croup", "Alternative diagnosis (e.g., epiglottitis, bacterial tracheitis)", "Give antipyretics", "Both B and C"],
             correct: 3,
             explanation: "High fever may indicate a more serious condition; antipyretics can be given, but consider other diagnoses."
@@ -365,7 +365,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_9_1_4",
-            scenario: "A child with croup has a fever of 39.5°C and is drooling, sitting forward, and has muffled voice. What should you suspect?",
+            scenario: "A child with croup has a fever of 39.5ï¿½C and is drooling, sitting forward, and has muffled voice. What should you suspect?",
             question: "What is the most likely diagnosis and next step?",
             options: [
                 { t: "Croup; give racemic epinephrine", f: "Signs suggest epiglottitis, not croup." },

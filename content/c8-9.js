@@ -1,4 +1,4 @@
-/* ========== Chapter 8.9 – Hypothermia / Cold Exposure ========== */
+/* ========== Chapter 8.9 ï¿½ Hypothermia / Cold Exposure ========== */
 window.CPG_DATA = {
     id: "c8-9",
     title: "Hypothermia / Cold Exposure",
@@ -20,7 +20,7 @@ window.CPG_DATA = {
                     <ul>
                         <li>Exposure to cold environments (e.g., wet clothing, prolonged outdoor exposure).</li>
                         <li>Clinical features such as apathy, ataxia, shivering, confusion, bradycardia, or diminished/absent vital signs.</li>
-                        <li>Core temperature below 35°C.</li>
+                        <li>Core temperature below 35ï¿½C.</li>
                         <li>History of immersion, inadequate clothing, or exhaustion in cold conditions.</li>
                     </ul>
                 </li>
@@ -36,29 +36,29 @@ window.CPG_DATA = {
                 <li><strong>Primary and Secondary Survey:</strong> Check for pulse; if absent, initiate CPR as per Adult/Pediatric Cardiac Arrest CPG. Consider spinal motion restriction if trauma is present.</li>
                 <li><strong>Severity Grading:</strong>
                     <ul>
-                        <li><strong>Mild (32–35°C):</strong> Apathy/lethargy, ataxia, vasoconstriction, tachypnea, confusion, shivering.</li>
-                        <li><strong>Moderate (28–32°C):</strong> Acute loss of consciousness, bradycardia, muscle rigidity, stupor or coma, shivering may cease.</li>
-                        <li><strong>Severe (<28°C):</strong> Diminished/absent signs of life, apnea, dilated pupils, reduced or absent reflexes, dysrhythmias, ventricular fibrillation.</li>
+                        <li><strong>Mild (32ï¿½35ï¿½C):</strong> Apathy/lethargy, ataxia, vasoconstriction, tachypnea, confusion, shivering.</li>
+                        <li><strong>Moderate (28ï¿½32ï¿½C):</strong> Acute loss of consciousness, bradycardia, muscle rigidity, stupor or coma, shivering may cease.</li>
+                        <li><strong>Severe (<28ï¿½C):</strong> Diminished/absent signs of life, apnea, dilated pupils, reduced or absent reflexes, dysrhythmias, ventricular fibrillation.</li>
                     </ul>
                 </li>
-                <li><strong>Determine Triage Category:</strong> Red priority for any hypothermic patient with altered mental status, cardiac instability, or core temperature <32°C.</li>
+                <li><strong>Determine Triage Category:</strong> Red priority for any hypothermic patient with altered mental status, cardiac instability, or core temperature <32ï¿½C.</li>
             </ul>
 
             <h4>Patient Management & Interventions</h4>
             <ul>
-                <li><strong>Consider ALS back-up:</strong> Routinely for moderate to severe hypothermia (temperature <32°C), cardiac instability, or unresponsiveness.</li>
+                <li><strong>Consider ALS back-up:</strong> Routinely for moderate to severe hypothermia (temperature <32ï¿½C), cardiac instability, or unresponsiveness.</li>
                 <li><strong>Determine severity:</strong> Based on core temperature (if available) and clinical features.</li>
                 <li><strong>General Management:</strong> Remove patient from cold environment, prevent further heat loss. Remove wet clothing and dry the patient.</li>
                 <li><strong>Supportive Care by Severity:</strong>
                     <ul>
-                        <li><strong>Mild (32–35°C):</strong> Cover patient with blankets (foil blanket if available); passive external rewarming.</li>
-                        <li><strong>Moderate & Severe (28–32°C or <28°C):</strong>
+                        <li><strong>Mild (32ï¿½35ï¿½C):</strong> Cover patient with blankets (foil blanket if available); passive external rewarming.</li>
+                        <li><strong>Moderate & Severe (28ï¿½32ï¿½C or <28ï¿½C):</strong>
                             <ul>
                                 <li>Cover patient with blankets (foil blanket if available).</li>
                                 <li><strong>Active Rewarming:</strong> Apply heat packs to axilla and groin (if available).</li>
-                                <li><strong>Warmed IV Fluid:</strong> Consider warmed IV fluids (if available). Adults: 250–500 mL (max 1000 mL). Pediatrics: 10 mL/kg (max 20 mL/kg).</li>
+                                <li><strong>Warmed IV Fluid:</strong> Consider warmed IV fluids (if available). Adults: 250ï¿½500 mL (max 1000 mL). Pediatrics: 10 mL/kg (max 20 mL/kg).</li>
                                 <li><strong>Continuous ECG monitoring</strong> is required to detect arrhythmias.</li>
-                                <li>Target temperature increase: 1–2°C/hour.</li>
+                                <li>Target temperature increase: 1ï¿½2ï¿½C/hour.</li>
                             </ul>
                         </li>
                     </ul>
@@ -67,8 +67,8 @@ window.CPG_DATA = {
                     <ul>
                         <li>Active rewarming (as above).</li>
                         <li><strong>Confirm Cardiac Arrest Carefully:</strong> Profound hypothermia can mimic death (stiffness, fixed pupils, absent reflexes). Assess for at least 60 seconds for pulse and breathing.</li>
-                        <li><strong>CPR & Defibrillation:</strong> Begin standard CPR. Defibrillation: Up to 3 shocks attempted until core temp =30°C. Then resume standard intervals.</li>
-                        <li><strong>Medications:</strong> Withhold medications (epinephrine and amiodarone) until core temperature is >30°C; between 30–35°C, double the interval between doses.</li>
+                        <li><strong>CPR & Defibrillation:</strong> Begin standard CPR. Defibrillation: Up to 3 shocks attempted until core temp =30ï¿½C. Then resume standard intervals.</li>
+                        <li><strong>Medications:</strong> Withhold medications (epinephrine and amiodarone) until core temperature is >30ï¿½C; between 30ï¿½35ï¿½C, double the interval between doses.</li>
                         <li><strong>Transport:</strong> All cardiac arrest patients secondary to hypothermia must be transferred to hospital under CPR.</li>
                     </ul>
                 </li>
@@ -77,7 +77,7 @@ window.CPG_DATA = {
 
             <h4>Patient Safety Considerations</h4>
             <ul>
-                <li>Time-Sensitive Transport: Patients with moderate to severe hypothermia (<32°C) or cardiac arrest should be rapidly transported to a facility with warming capabilities.</li>
+                <li>Time-Sensitive Transport: Patients with moderate to severe hypothermia (<32ï¿½C) or cardiac arrest should be rapidly transported to a facility with warming capabilities.</li>
                 <li>Avoid Harmful Interventions: Avoid aggressive external rewarming (e.g., hot baths) in the field, as it may cause vasodilation and worsen core temperature drop (afterdrop).</li>
                 <li>Do not massage extremities in severe cases to prevent dislodging clots.</li>
                 <li>Handle hypothermic patients gently to avoid precipitating ventricular fibrillation.</li>
@@ -85,16 +85,16 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li><strong>Fluid Warming:</strong> Warm fluids to 40°C if available; administer in 250 mL boluses (10 mL/kg for pediatrics). If accurate fluid-warming temperature monitoring is not available, administer room-temperature fluids.</li>
+                <li><strong>Fluid Warming:</strong> Warm fluids to 40ï¿½C if available; administer in 250 mL boluses (10 mL/kg for pediatrics). If accurate fluid-warming temperature monitoring is not available, administer room-temperature fluids.</li>
                 <li><strong>Tympanic Thermometers:</strong> Use tympanic thermometers if available, recognizing their unreliability in severe cases. Recognition relies heavily on clinical features.</li>
                 <li><strong>Medication Administration:</strong> For analgesia, consider reducing medication doses and extending the time between doses due to altered metabolism in hypothermia.</li>
                 <li><strong>Afterdrop Phenomenon:</strong> Monitor for a potential drop in core temperature during rewarming due to cold blood from extremities returning to the core.</li>
-                <li><strong>Hypothermia and Cardiac Arrest:</strong> Withhold epinephrine until core temperature >30°C. If medications are to be given (e.g., in prolonged arrest with partial rewarming), use standard doses but extend intervals (e.g., every 6–10 minutes) to avoid accumulation and post-rewarming catecholamine surge. Defibrillation doses remain unchanged. All cardiac arrest patients secondary to hypothermia must be transferred to hospital under CPR.</li>
+                <li><strong>Hypothermia and Cardiac Arrest:</strong> Withhold epinephrine until core temperature >30ï¿½C. If medications are to be given (e.g., in prolonged arrest with partial rewarming), use standard doses but extend intervals (e.g., every 6ï¿½10 minutes) to avoid accumulation and post-rewarming catecholamine surge. Defibrillation doses remain unchanged. All cardiac arrest patients secondary to hypothermia must be transferred to hospital under CPR.</li>
             </ul>
 
             <h4>Documentation</h4>
             <ul>
-                <li>Patient’s full name, age, and gender.</li>
+                <li>Patientï¿½s full name, age, and gender.</li>
                 <li>Description of cold exposure (e.g., immersion, wet clothing), duration of exposure.</li>
                 <li>Initial temperature (if measured), clinical features, trauma considerations.</li>
                 <li>Vital signs, neurological status, ECG findings, severity classification.</li>
@@ -113,15 +113,15 @@ window.CPG_DATA = {
     quiz: [
         {
             q: "What is the definition of hypothermia?",
-            options: ["Core temperature <36°C", "Core temperature <35°C", "Core temperature <37°C", "Core temperature <34°C"],
+            options: ["Core temperature <36ï¿½C", "Core temperature <35ï¿½C", "Core temperature <37ï¿½C", "Core temperature <34ï¿½C"],
             correct: 1,
-            explanation: "Hypothermia is defined as core body temperature below 35°C (95°F)."
+            explanation: "Hypothermia is defined as core body temperature below 35ï¿½C (95ï¿½F)."
         },
         {
-            q: "A patient with hypothermia has a core temperature of 30°C. What is the severity classification?",
+            q: "A patient with hypothermia has a core temperature of 30ï¿½C. What is the severity classification?",
             options: ["Mild", "Moderate", "Severe", "Profound"],
             correct: 1,
-            explanation: "Moderate hypothermia is 28–32°C; severe is <28°C."
+            explanation: "Moderate hypothermia is 28ï¿½32ï¿½C; severe is <28ï¿½C."
         },
         {
             q: "What is the first step in managing a hypothermic patient with a pulse?",
@@ -131,21 +131,21 @@ window.CPG_DATA = {
         },
         {
             q: "A hypothermic patient is in cardiac arrest. How should defibrillation be managed?",
-            options: ["Give 3 shocks, then wait until core temp >30°C", "Withhold defibrillation until >30°C", "Defibrillate as usual", "Only use AED"],
+            options: ["Give 3 shocks, then wait until core temp >30ï¿½C", "Withhold defibrillation until >30ï¿½C", "Defibrillate as usual", "Only use AED"],
             correct: 0,
-            explanation: "Up to 3 shocks may be attempted; if unsuccessful, wait until core temperature >30°C before further attempts."
+            explanation: "Up to 3 shocks may be attempted; if unsuccessful, wait until core temperature >30ï¿½C before further attempts."
         },
         {
             q: "When should epinephrine be given in hypothermic cardiac arrest?",
-            options: ["Immediately", "Only after core temp >30°C", "Every 10 minutes regardless", "Not given"],
+            options: ["Immediately", "Only after core temp >30ï¿½C", "Every 10 minutes regardless", "Not given"],
             correct: 1,
-            explanation: "Epinephrine is withheld until core temperature exceeds 30°C to avoid accumulation and arrhythmias."
+            explanation: "Epinephrine is withheld until core temperature exceeds 30ï¿½C to avoid accumulation and arrhythmias."
         },
         {
             q: "What is the target rewarming rate for hypothermic patients?",
-            options: ["0.5°C/hour", "1-2°C/hour", "3-4°C/hour", "5°C/hour"],
+            options: ["0.5ï¿½C/hour", "1-2ï¿½C/hour", "3-4ï¿½C/hour", "5ï¿½C/hour"],
             correct: 1,
-            explanation: "Target rewarming rate is 1-2°C/hour to avoid complications like afterdrop."
+            explanation: "Target rewarming rate is 1-2ï¿½C/hour to avoid complications like afterdrop."
         },
         {
             q: "What is the preferred method for active rewarming in the field?",
@@ -181,7 +181,7 @@ window.CPG_DATA = {
             q: "A hypothermic patient is shivering. What does this indicate?",
             options: ["Mild hypothermia", "Moderate hypothermia", "Severe hypothermia", "Normothermia"],
             correct: 0,
-            explanation: "Shivering is present in mild hypothermia (32-35°C) and ceases as temperature drops further."
+            explanation: "Shivering is present in mild hypothermia (32-35ï¿½C) and ceases as temperature drops further."
         },
         {
             q: "What is the significance of the afterdrop phenomenon?",
@@ -280,8 +280,8 @@ window.CPG_DATA = {
             explanation: "Hypothermia can cause hypoglycemia; treat promptly."
         },
         {
-            q: "A patient with severe hypothermia is in cardiac arrest. CPR has been ongoing for 20 minutes with no response. Core temperature is 28°C. What should you do?",
-            options: ["Terminate resuscitation", "Continue CPR until temperature >30°C", "Transport with ongoing CPR", "Both B and C"],
+            q: "A patient with severe hypothermia is in cardiac arrest. CPR has been ongoing for 20 minutes with no response. Core temperature is 28ï¿½C. What should you do?",
+            options: ["Terminate resuscitation", "Continue CPR until temperature >30ï¿½C", "Transport with ongoing CPR", "Both B and C"],
             correct: 3,
             explanation: "Hypothermic cardiac arrest requires continued resuscitation and rewarming; transport with ongoing CPR."
         },
@@ -293,20 +293,20 @@ window.CPG_DATA = {
         }
     ],
     flashcards: [
-        { category: "Definition", question: "What is hypothermia?", answer: "Core body temperature <35°C." },
-        { category: "Mild hypothermia", question: "What temperature range is mild hypothermia?", answer: "32-35°C; shivering present, alert but may be confused." },
-        { category: "Moderate hypothermia", question: "What temperature range is moderate hypothermia?", answer: "28-32°C; shivering ceases, bradycardia, altered mental status." },
-        { category: "Severe hypothermia", question: "What temperature range is severe hypothermia?", answer: "<28°C; risk of cardiac arrest, coma, apnea." },
+        { category: "Definition", question: "What is hypothermia?", answer: "Core body temperature <35ï¿½C." },
+        { category: "Mild hypothermia", question: "What temperature range is mild hypothermia?", answer: "32-35ï¿½C; shivering present, alert but may be confused." },
+        { category: "Moderate hypothermia", question: "What temperature range is moderate hypothermia?", answer: "28-32ï¿½C; shivering ceases, bradycardia, altered mental status." },
+        { category: "Severe hypothermia", question: "What temperature range is severe hypothermia?", answer: "<28ï¿½C; risk of cardiac arrest, coma, apnea." },
         { category: "Initial management", question: "What is the first step in hypothermia?", answer: "Remove wet clothing, prevent further heat loss, passive external rewarming." },
         { category: "Active rewarming", question: "What active rewarming methods are used prehospital?", answer: "Heat packs to axilla/groin, warmed IV fluids (if available)." },
-        { category: "Warmed fluids – adult", question: "What is the dose of warmed IV fluid for an adult?", answer: "250-500 mL, up to 1000 mL." },
-        { category: "Warmed fluids – pediatric", question: "What is the dose of warmed IV fluid for a child?", answer: "10 mL/kg (max 20 mL/kg)." },
+        { category: "Warmed fluids ï¿½ adult", question: "What is the dose of warmed IV fluid for an adult?", answer: "250-500 mL, up to 1000 mL." },
+        { category: "Warmed fluids ï¿½ pediatric", question: "What is the dose of warmed IV fluid for a child?", answer: "10 mL/kg (max 20 mL/kg)." },
         { category: "Afterdrop", question: "What is afterdrop?", answer: "Paradoxical core temperature decrease during rewarming due to cold blood returning from extremities." },
-        { category: "Cardiac arrest in hypothermia", question: "How is cardiac arrest managed in hypothermia?", answer: "CPR, up to 3 defibrillation attempts, withhold epinephrine until >30°C, transport with ongoing CPR." },
+        { category: "Cardiac arrest in hypothermia", question: "How is cardiac arrest managed in hypothermia?", answer: "CPR, up to 3 defibrillation attempts, withhold epinephrine until >30ï¿½C, transport with ongoing CPR." },
         { category: "Pulse check", question: "How long should pulse be assessed?", answer: "Up to 60 seconds due to profound bradycardia." },
-        { category: "Defibrillation in hypothermia", question: "How many shocks before waiting?", answer: "Up to 3 shocks; if unsuccessful, wait until core temp >30°C." },
-        { category: "Epinephrine in hypothermia", question: "When is epinephrine given?", answer: "Withheld until core temperature >30°C." },
-        { category: "Rewarming rate", question: "What is the target rewarming rate?", answer: "1-2°C/hour." },
+        { category: "Defibrillation in hypothermia", question: "How many shocks before waiting?", answer: "Up to 3 shocks; if unsuccessful, wait until core temp >30ï¿½C." },
+        { category: "Epinephrine in hypothermia", question: "When is epinephrine given?", answer: "Withheld until core temperature >30ï¿½C." },
+        { category: "Rewarming rate", question: "What is the target rewarming rate?", answer: "1-2ï¿½C/hour." },
         { category: "Hypoglycemia", question: "Why check glucose in hypothermia?", answer: "Hypoglycemia is common and can worsen outcome." },
         { category: "KPI", question: "What is the key performance indicator for hypothermia?", answer: "Assess and document hypothermia severity." },
         { category: "Transport decision", question: "Should all hypothermic patients be transported?", answer: "Yes, especially those with moderate to severe hypothermia or risk factors." },
@@ -317,7 +317,7 @@ window.CPG_DATA = {
     critical: [
         {
             id: "crit_8_9_1",
-            scenario: "A 45-year-old homeless male is found in a park on a cold night. He is confused, shivering, and has a core temperature of 32°C. What is the priority?",
+            scenario: "A 45-year-old homeless male is found in a park on a cold night. He is confused, shivering, and has a core temperature of 32ï¿½C. What is the priority?",
             question: "What should you do first?",
             options: [
                 { t: "Give warmed IV fluids", f: "Fluids are important, but passive rewarming comes first." },
@@ -331,7 +331,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_8_9_2",
-            scenario: "A 30-year-old male is rescued from cold water after 20 minutes. He is unconscious, has a core temperature of 28°C, and has a palpable pulse of 30. What is the priority?",
+            scenario: "A 30-year-old male is rescued from cold water after 20 minutes. He is unconscious, has a core temperature of 28ï¿½C, and has a palpable pulse of 30. What is the priority?",
             question: "What should you do?",
             options: [
                 { t: "Start CPR", f: "Pulse is present; CPR not indicated." },
@@ -345,16 +345,16 @@ window.CPG_DATA = {
         },
         {
             id: "crit_8_9_3",
-            scenario: "A 55-year-old female is found unresponsive in a cold room. She has a core temperature of 30°C, no pulse, and is apneic. What is the appropriate action?",
+            scenario: "A 55-year-old female is found unresponsive in a cold room. She has a core temperature of 30ï¿½C, no pulse, and is apneic. What is the appropriate action?",
             question: "What should you do?",
             options: [
                 { t: "Start CPR and active rewarming", f: "Correct. CPR and rewarming are simultaneous." },
-                { t: "Withhold CPR until temperature >30°C", f: "No, CPR should be started immediately." },
+                { t: "Withhold CPR until temperature >30ï¿½C", f: "No, CPR should be started immediately." },
                 { t: "Defibrillate first", f: "Not without a shockable rhythm." },
-                { t: "Give epinephrine", f: "Withheld until >30°C." }
+                { t: "Give epinephrine", f: "Withheld until >30ï¿½C." }
             ],
             correct: 0,
-            explanation: "Hypothermic cardiac arrest requires CPR and rewarming; epinephrine is withheld until >30°C.",
+            explanation: "Hypothermic cardiac arrest requires CPR and rewarming; epinephrine is withheld until >30ï¿½C.",
             kpi: "CPR initiated and rewarming started."
         },
         {
@@ -373,12 +373,12 @@ window.CPG_DATA = {
         },
         {
             id: "crit_8_9_5",
-            scenario: "A hypothermic patient in cardiac arrest has received 20 minutes of CPR with no response. Core temperature is 32°C. The rhythm is asystole. What should you do?",
+            scenario: "A hypothermic patient in cardiac arrest has received 20 minutes of CPR with no response. Core temperature is 32ï¿½C. The rhythm is asystole. What should you do?",
             question: "What is the appropriate action?",
             options: [
                 { t: "Terminate resuscitation", f: "Not yet; hypothermia may still be reversible." },
                 { t: "Continue CPR and transport with ongoing rewarming", f: "Correct. Hypothermic cardiac arrest patients should be transported with ongoing CPR." },
-                { t: "Administer epinephrine", f: "Temperature is now >30°C; can give epinephrine." },
+                { t: "Administer epinephrine", f: "Temperature is now >30ï¿½C; can give epinephrine." },
                 { t: "Defibrillate", f: "No shockable rhythm." }
             ],
             correct: 1,

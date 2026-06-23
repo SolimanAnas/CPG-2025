@@ -1,4 +1,4 @@
-/* ========== Chapter 8.7 – Drowning / Near Drowning ========== */
+/* ========== Chapter 8.7 ï¿½ Drowning / Near Drowning ========== */
 window.CPG_DATA = {
     id: "c8-7",
     title: "Drowning / Near Drowning",
@@ -10,7 +10,7 @@ window.CPG_DATA = {
             <h4>Patient Care Goals</h4>
             <ul>
                 <li>Ensure airway, oxygenation, and ventilation as top priorities.</li>
-                <li>Treat hypoxia aggressively — it is the primary cause of cardiac arrest in drowning.</li>
+                <li>Treat hypoxia aggressively ï¿½ it is the primary cause of cardiac arrest in drowning.</li>
                 <li>Prevent aspiration-related complications (e.g., pulmonary edema, ARDS).</li>
                 <li>Minimize time to BLS/ALS resuscitation in cardiac arrest.</li>
                 <li>Prevent hypothermia and monitor for its progression.</li>
@@ -59,7 +59,7 @@ window.CPG_DATA = {
                 <li><strong>Consider CPAP / BiPAP:</strong> Indicated for conscious patient with moderate to severe respiratory difficulty.</li>
                 <li><strong>If No Pulse or No Normal Breathing:</strong> Prioritize 5 initial rescue breaths before starting compressions. Perform standard CPR as per Adult or Pediatric Cardiac Arrest CPG.</li>
                 <li><strong>Spinal Precautions (Spinal Motion Restriction):</strong> Routine SMR is not required. Only if traumatic mechanism (such as shallow diving accident) is present.</li>
-                <li><strong>Hypothermia:</strong> Rewarming if hypothermic – see Hypothermia CPG.</li>
+                <li><strong>Hypothermia:</strong> Rewarming if hypothermic ï¿½ see Hypothermia CPG.</li>
                 <li><strong>Blood Glucose:</strong> Check early in all unconscious or lethargic patients; treat as per Hypoglycemia CPG if glucose low.</li>
                 <li><strong>Transport:</strong> Transport all symptomatic patients, even if improved on scene. Prioritize high-risk patients: long submersion, persistent cough, altered LOC, low SpO2, pediatric. Asymptomatic patients after minor events may be treated at scene with advice to call back or visit emergency department.</li>
                 <li><strong>Patient Reassessment:</strong> Frequently reassess airway sounds and breathing effort, response to oxygen or airway management, signs of fatigue or deterioration en route.</li>
@@ -77,7 +77,7 @@ window.CPG_DATA = {
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
                 <li><strong>Airway and Ventilation Management:</strong> Airway management and ventilation should be early and aggressive. The most serious problem in drowning is lack of oxygen (hypoxia), not the amount of water in the lungs. Even a small amount of water can cause lung irritation and inhibit oxygenation.</li>
-                <li><strong>Do NOT attempt to expel water from lungs</strong> (Heimlich/abdominal thrusts) – this is ineffective and delays resuscitation.</li>
+                <li><strong>Do NOT attempt to expel water from lungs</strong> (Heimlich/abdominal thrusts) ï¿½ this is ineffective and delays resuscitation.</li>
                 <li><strong>Salbutamol:</strong> Nebulized salbutamol may be administered if fluid is auscultated, however the priority is the priority measures noted above. Where possible, salbutamol should be administered via the CPAP nebulizer. The doses of salbutamol for adults and pediatrics are the same as in asthma.</li>
                 <li><strong>Transportation Guidance:</strong> Patients may initially recover but develop delayed pulmonary edema or ARDS. Transportation to hospital should be recommended. Always advise caregivers of warning signs for deterioration if not transported.</li>
                 <li><strong>Consult with TeleEMS</strong> if clarification is required for borderline or asymptomatic cases.</li>
@@ -164,9 +164,9 @@ window.CPG_DATA = {
         },
         {
             q: "A drowning victim is hypothermic. What special consideration applies to CPR?",
-            options: ["Withhold epinephrine until >30°C", "Shorter compression cycles", "Avoid defibrillation", "No special considerations"],
+            options: ["Withhold epinephrine until >30ï¿½C", "Shorter compression cycles", "Avoid defibrillation", "No special considerations"],
             correct: 0,
-            explanation: "In hypothermic cardiac arrest, epinephrine is withheld until core temperature >30°C; defibrillation may be attempted."
+            explanation: "In hypothermic cardiac arrest, epinephrine is withheld until core temperature >30ï¿½C; defibrillation may be attempted."
         },
         {
             q: "What is the maximum total fluid bolus for an adult drowning victim with shock?",
@@ -230,7 +230,7 @@ window.CPG_DATA = {
         },
         {
             q: "A drowning victim is pulled from salt water. Does the type of water affect management?",
-            options: ["Fresh water requires different treatment", "Salt water requires diuretics", "Management is the same – focus on oxygenation", "Salt water is more dangerous"],
+            options: ["Fresh water requires different treatment", "Salt water requires diuretics", "Management is the same ï¿½ focus on oxygenation", "Salt water is more dangerous"],
             correct: 2,
             explanation: "Regardless of water type, the priority is oxygenation and ventilation; fluid management is similar."
         },
@@ -290,11 +290,11 @@ window.CPG_DATA = {
         { category: "Oxygen target", question: "What is the target SpO2 in drowning?", answer: "=94%." },
         { category: "CPAP indication", question: "When is CPAP indicated in drowning?", answer: "Conscious patient with moderate to severe respiratory distress." },
         { category: "Spinal precautions", question: "When should spinal motion restriction be used in drowning?", answer: "Only if mechanism suggests spinal injury (e.g., diving accident)." },
-        { category: "Hypothermia", question: "How does hypothermia affect drowning management?", answer: "May cause bradycardia; rewarming is priority; in cardiac arrest, withhold epinephrine until >30°C." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult drowning victim with shock?", answer: "250-500 mL normal saline." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg normal saline." },
-        category: "Salbutamol dose – adult", question: "What is the salbutamol dose for an adult with wheezing after drowning?", answer: "5 mg nebulized." },
-        { category: "Salbutamol dose – pediatric", question: "What is the pediatric salbutamol dose?", answer: "<5 years: 2.5 mg; >5 years: 5 mg." },
+        { category: "Hypothermia", question: "How does hypothermia affect drowning management?", answer: "May cause bradycardia; rewarming is priority; in cardiac arrest, withhold epinephrine until >30ï¿½C." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult drowning victim with shock?", answer: "250-500 mL normal saline." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg normal saline." },
+        category: "Salbutamol dose ï¿½ adult", question: "What is the salbutamol dose for an adult with wheezing after drowning?", answer: "5 mg nebulized." },
+        { category: "Salbutamol dose ï¿½ pediatric", question: "What is the pediatric salbutamol dose?", answer: "<5 years: 2.5 mg; >5 years: 5 mg." },
         { category: "Submersion time", question: "What submersion time is associated with worse outcomes?", answer: ">10 minutes." },
         { category: "Delayed pulmonary edema", question: "Why transport asymptomatic drowning victims?", answer: "Risk of delayed pulmonary edema or ARDS." },
         { category: "KPI", question: "What is a key performance indicator for drowning?", answer: "Document submersion time." },

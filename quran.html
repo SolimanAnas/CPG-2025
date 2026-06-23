@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
 
-  <style>
+  
   @font-face {
     font-family: 'ScheherazadeLocal';
     src: url('fonts/Scheherazade.ttf') format('truetype');
@@ -1452,7 +1452,21 @@
     .mushaf-grid { grid-template-columns: repeat(3, 1fr); }
     .mushaf-card:first-child { grid-column: auto; }
   }
-  </style>
+  
+/* Lucide icon sizing within common containers (also in styles.css) */
+.icon-btn svg.lucide,
+.toggle-btn svg.lucide,
+.btn-action svg.lucide,
+.sc-icon svg.lucide,
+.lv-icon svg.lucide,
+.search-empty-icon svg.lucide,
+.pwa-icon-fallback svg.lucide { width: 60%; height: 60%; }
+
+.stats-badge svg.lucide,
+.popup-title svg.lucide,
+.amoled-badge svg.lucide,
+.res-ttl svg.lucide { width: 1em; height: 1em; margin-right: 4px; }
+</style>
 </head>
 <body>
 
@@ -1460,7 +1474,7 @@
   <header id="appHeader">
     <div class="header-right">
       <button class="icon-btn" onclick="goHome()" title="الرئيسية">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
           <polyline points="9 22 9 12 15 12 15 22"/>
         </svg>
@@ -1478,18 +1492,18 @@
 
     <div class="header-left">
       <button class="icon-btn" id="searchIconBtn" onclick="toggleSearchOverlay('toggle')" title="بحث">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
           <circle cx="11" cy="11" r="8"/>
           <line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       </button>
       <button class="icon-btn" id="bookmarkBtn" onclick="toggleBookmark()" title="إضافة علامة">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
           <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
         </svg>
       </button>
       <button class="icon-btn" onclick="openSettingsModal()" title="الإعدادات">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
           <circle cx="12" cy="12" r="3"/>
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
         </svg>
@@ -1503,19 +1517,19 @@
   <div class="search-overlay" id="searchOverlay">
     <div class="search-header">
       <div class="search-header-icon">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'>
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       </div>
       <span class="search-header-title">البحث في القرآن</span>
       <button class="search-header-settings" onclick="openSettingsModal()" title="الإعدادات">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
           <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
           <circle cx="12" cy="12" r="3"/>
         </svg>
       </button>
       <button class="search-header-close" onclick="toggleSearchOverlay('close')" title="إغلاق">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
           <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
@@ -1526,7 +1540,7 @@
                oninput="onSearchInput(this.value)"
                onkeydown="if(event.key==='Enter'){ this.blur(); handleGlobalSearch(this.value); }">
         <button class="search-input-clear" id="searchClearBtn" onclick="clearSearch()" title="مسح">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -1535,7 +1549,7 @@
     <div class="search-results-container" id="searchResults">
       <div class="search-hint">
         <div class="search-hint-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </div>
@@ -1566,7 +1580,7 @@
 
       <!-- Animated pinch gesture -->
       <div class="zoom-hint-gesture">
-        <svg class="pinch-svg" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class='pinch-svg' viewBox='0 0 160 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <!-- glow beneath each finger -->
           <ellipse class="zh-glow-l" cx="62" cy="88" rx="14" ry="5" fill="var(--accent)" opacity="0.18"/>
           <ellipse class="zh-glow-r" cx="98" cy="88" rx="14" ry="5" fill="var(--accent)" opacity="0.18"/>
@@ -1605,12 +1619,12 @@
   <div id="audioMiniPlayer" class="audio-mini-player">
     <div class="mini-player-info" onclick="toggleExpandPlayer()">
       <div class="expand-icon">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
           <polyline points="18 15 12 9 6 15"/>
         </svg>
       </div>
       <div class="mini-player-avatar">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
           <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
         </svg>
       </div>
@@ -1625,13 +1639,13 @@
 
     <div class="mini-controls" dir="rtl">
       <button class="mini-ctrl-btn" onclick="event.stopPropagation(); prevAyah();" title="السابق">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <svg viewBox='0 0 24 24' width='20' height='20' fill='currentColor'>
           <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
         </svg>
       </button>
       <button id="miniPlayPauseBtn" class="mini-play-btn" onclick="event.stopPropagation(); togglePlayPause(event);"></button>
       <button class="mini-ctrl-btn" onclick="event.stopPropagation(); nextAyah();" title="التالي">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <svg viewBox='0 0 24 24' width='20' height='20' fill='currentColor'>
           <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
         </svg>
       </button>
@@ -1647,7 +1661,7 @@
     <div class="expanded-header">
       <div class="sheet-title">
         <div class="sheet-title-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
           </svg>
         </div>
@@ -1655,12 +1669,12 @@
       </div>
       <div class="sheet-header-actions">
         <button class="sheet-icon-btn" onclick="closeAudioExpanded(); toggleSearchOverlay('toggle')" title="بحث">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'>
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </button>
         <button class="close-sheet" onclick="closeAudioExpanded()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -1690,7 +1704,7 @@
         </optgroup>
       </select>
       <span class="select-chevron">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
           <polyline points="6 9 12 15 18 9"/>
         </svg>
       </span>
@@ -1698,13 +1712,13 @@
 
     <div class="controls-row">
       <button id="prevAyahBtn" class="ctrl-btn" title="السابق">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <svg viewBox='0 0 24 24' width='26' height='26' fill='currentColor'>
           <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
         </svg>
       </button>
       <button id="expandedPlayPauseBtn" class="ctrl-btn primary"></button>
       <button id="nextAyahBtn" class="ctrl-btn" title="التالي">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <svg viewBox='0 0 24 24' width='26' height='26' fill='currentColor'>
           <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
         </svg>
       </button>
@@ -1713,7 +1727,7 @@
     <div class="repeat-options">
       <div class="repeat-row">
         <span class="repeat-title">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/>
             <polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
           </svg>
@@ -1732,7 +1746,7 @@
 
       <div class="repeat-row">
         <span class="repeat-title">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
             <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
           </svg>
@@ -1759,7 +1773,7 @@
 
       <div class="speed-row">
         <span class="speed-label">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
           </svg>
           سرعة القراءة
@@ -1783,7 +1797,7 @@
     <div class="expanded-header">
       <div class="sheet-title">
         <div class="sheet-title-icon">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>
           </svg>
         </div>
@@ -1791,18 +1805,18 @@
       </div>
       <div class="sheet-header-actions">
         <button class="sheet-icon-btn" onclick="closeContextMenu(); toggleSearchOverlay('toggle')" title="بحث">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'>
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </button>
         <button class="sheet-icon-btn" onclick="closeContextMenu(); openSettingsModal()" title="الإعدادات">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
             <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
             <circle cx="12" cy="12" r="3"/>
           </svg>
         </button>
         <button class="close-sheet" onclick="closeContextMenu()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -1812,7 +1826,7 @@
     <!-- Mushaf version selector -->
     <div class="sheet-mushaf-row" onclick="closeContextMenu(); openMushafSelectorModal();">
       <div class="sheet-mushaf-icon">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
         </svg>
@@ -1822,7 +1836,7 @@
         <div class="sheet-mushaf-value" id="contextMushafLabel">إطار بني</div>
       </div>
       <div class="sheet-mushaf-arrow">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
           <polyline points="9 18 15 12 9 6"/>
         </svg>
       </div>
@@ -1832,13 +1846,13 @@
     <div class="sheet-actions-col" style="margin-bottom: 8px;">
       <button class="action-btn primary-action" id="contextPlayBtn" onclick="contextPlayAyah()" style="display:none;">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='currentColor'><path d="M8 5v14l11-7z"/></svg>
         </span>
         استماع للآية المحددة
       </button>
       <button class="action-btn" id="contextTafsirBtn" onclick="contextShowTafsir()" style="display:none;">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
@@ -1847,7 +1861,7 @@
       </button>
       <button class="action-btn" id="contextCopyBtn" onclick="contextCopyAyah()" style="display:none;">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <rect x="9" y="9" width="13" height="13" rx="2"/>
             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
           </svg>
@@ -1862,7 +1876,7 @@
     <div class="sheet-actions-col">
       <button class="action-btn" onclick="openRepeatSettings()">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
           </svg>
         </span>
@@ -1870,7 +1884,7 @@
       </button>
       <button class="action-btn" onclick="navigateToJuz()">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
             <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
           </svg>
@@ -1879,7 +1893,7 @@
       </button>
       <button class="action-btn" onclick="navigateToSurah()">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
           </svg>
@@ -1888,7 +1902,7 @@
       </button>
       <button class="action-btn" onclick="navigateToPage()">
         <span class="btn-icon">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
           </svg>
@@ -1907,7 +1921,7 @@
     <div class="expanded-header" style="flex-shrink:0;">
       <div class="sheet-title">
         <div class="sheet-title-icon" style="background:var(--gold-light); color:var(--gold);">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
@@ -1916,13 +1930,13 @@
       </div>
       <div style="display:flex; gap:8px; align-items:center;">
         <button class="close-sheet" onclick="toggleTafsirFullscreen()" title="ملء الشاشة">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='15' height='15' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round'>
             <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
             <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
           </svg>
         </button>
         <button class="close-sheet" onclick="closeTafsirModal()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -1937,7 +1951,7 @@
         <option value="ar.tabari">تفسير الطبري</option>
       </select>
       <span class="select-chevron">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
           <polyline points="6 9 12 15 18 9"/>
         </svg>
       </span>
@@ -1947,14 +1961,14 @@
 
     <div class="tafsir-nav-row" style="flex-shrink:0;">
       <button class="tafsir-nav-btn" onclick="prevTafsirAyah()">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round'>
           <polyline points="15 18 9 12 15 6"/>
         </svg>
         السابق
       </button>
       <button class="tafsir-nav-btn" onclick="nextTafsirAyah()">
         التالي
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round'>
           <polyline points="9 18 15 12 9 6"/>
         </svg>
       </button>
@@ -1967,7 +1981,7 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <circle cx="12" cy="12" r="3"/>
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
             </svg>
@@ -1975,7 +1989,7 @@
           الإعدادات
         </div>
         <button class="close-btn" onclick="closeModal('settingsModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -1985,7 +1999,7 @@
         <div class="setting-row clickable" onclick="closeModal('settingsModal'); openMushafSelectorModal();">
           <div class="setting-label">
             <span class="row-icon accent">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
               </svg>
@@ -1996,7 +2010,7 @@
             </div>
           </div>
           <span class="row-chevron">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <polyline points="15 18 9 12 15 6"/>
             </svg>
           </span>
@@ -2006,7 +2020,7 @@
         <div class="setting-row clickable" onclick="closeModal('settingsModal'); toggleSearchOverlay('toggle');">
           <div class="setting-label">
             <span class="row-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
             </span>
@@ -2016,7 +2030,7 @@
             </div>
           </div>
           <span class="row-chevron">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <polyline points="15 18 9 12 15 6"/>
             </svg>
           </span>
@@ -2026,7 +2040,7 @@
         <div class="setting-row clickable" onclick="openBookmarksModal(); closeModal('settingsModal');">
           <div class="setting-label">
             <span class="row-icon gold">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
               </svg>
             </span>
@@ -2036,7 +2050,7 @@
             </div>
           </div>
           <span class="row-chevron">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <polyline points="15 18 9 12 15 6"/>
             </svg>
           </span>
@@ -2046,7 +2060,7 @@
         <div class="setting-row" style="flex-direction:column; align-items:stretch; gap:10px; padding:12px 16px;">
           <div class="setting-label" style="margin-bottom:4px;">
             <span class="row-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
                 <circle cx="12" cy="12" r="5"/>
                 <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
                 <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
@@ -2071,7 +2085,7 @@
 
         <!-- Download -->
         <button class="offline-btn" id="offlineDownloadBtn" onclick="cacheAllPages()">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round'>
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
@@ -2088,7 +2102,7 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
@@ -2097,7 +2111,7 @@
           الذهاب إلى صفحة
         </div>
         <button class="close-btn" onclick="closeModal('pageSelectorModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -2123,7 +2137,7 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
             </svg>
@@ -2131,7 +2145,7 @@
           إصدار المصحف
         </div>
         <button class="close-btn" onclick="closeModal('mushafSelectorModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -2150,14 +2164,14 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon" style="background:var(--gold-light); color:var(--gold);">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
             </svg>
           </div>
           المفضلة
         </div>
         <button class="close-btn" onclick="closeModal('bookmarksModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -2174,7 +2188,7 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
             </svg>
@@ -2182,7 +2196,7 @@
           اختر سورة
         </div>
         <button class="close-btn" onclick="closeModal('surahSelectorModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -2203,7 +2217,7 @@
       <div class="modal-header">
         <div class="modal-title">
           <div class="modal-title-icon">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'>
               <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
               <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
             </svg>
@@ -2211,7 +2225,7 @@
           اختر جزءًا
         </div>
         <button class="close-btn" onclick="closeModal('juzSelectorModal')">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'>
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
@@ -2757,8 +2771,8 @@ function getVariantHighlightCal() {
     });
 
     // ========== AUDIO PLAYER ==========
-    const svgPlay = `<svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor" style="padding:13%"><path d="M8 5v14l11-7z"/></svg>`;
-    const svgPause = `<svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor" style="padding:13%"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+    const svgPlay = `<svg viewBox='0 0 24 24' width='100%' height='100%' fill='currentColor' style='padding:13%'><path d="M8 5v14l11-7z"/></svg>`;
+    const svgPause = `<svg viewBox='0 0 24 24' width='100%' height='100%' fill='currentColor' style='padding:13%'><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
 
     let audioPlayer = new Audio();
     const preloaderAudio = new Audio();
@@ -3358,7 +3372,7 @@ function getVariantHighlightCal() {
     function cacheAllPages() {
       const btn = document.getElementById('offlineDownloadBtn');
       btn.disabled = true;
-      btn.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> جاري التحميل...`;
+      btn.innerHTML = `<svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> جاري التحميل...`;
       let count = 0; const total = 604; const cacheName = `quran-pages-${currentMushafVariant}`;
       const v = getVariantInfo(currentMushafVariant);
       caches.open(cacheName).then(cache => {
@@ -3368,9 +3382,9 @@ function getVariantHighlightCal() {
         }
         function finish() {
           btn.disabled = false;
-          btn.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> تم التحميل بنجاح`;
+          btn.innerHTML = `<svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'><polyline points="20 6 9 17 4 12"/></svg> تم التحميل بنجاح`;
           setTimeout(()=> {
-            btn.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> تحميل جميع الصفحات للقراءة بدون إنترنت`;
+            btn.innerHTML = `<svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round'><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> تحميل جميع الصفحات للقراءة بدون إنترنت`;
           }, 3000);
         }
       });
@@ -3396,7 +3410,7 @@ function getVariantHighlightCal() {
         handleGlobalSearch(value);
       } else {
         document.getElementById('searchResults').innerHTML =
-          '<div class="search-hint"><div class="search-hint-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>اكتب كلمة للبحث في القرآن الكريم<br><span style="font-size:0.8rem;opacity:0.6;">يمكنك البحث في الآيات وأسماء السور</span></div>';
+          '<div class="search-hint"><div class="search-hint-icon"><svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>اكتب كلمة للبحث في القرآن الكريم<br><span style="font-size:0.8rem;opacity:0.6;">يمكنك البحث في الآيات وأسماء السور</span></div>';
       }
     }
 
@@ -3438,7 +3452,7 @@ function getVariantHighlightCal() {
           let html = '';
           // Surah results
           if (surahResults.length > 0) {
-            html += '<div class="search-section-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>السور</div>';
+            html += '<div class="search-section-label"><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>السور</div>';
             surahResults.forEach(s => {
               html += `<div class="search-result-item" onclick="goToPage(${s.page}); toggleSearchOverlay('close');">
                 <div class="search-result-surah">
@@ -3458,7 +3472,7 @@ function getVariantHighlightCal() {
             });
             if (exactMatches.length > 0) {
               const label = surahResults.length > 0 ? 'الآيات' : `${exactMatches.length} نتيجة`;
-              html += `<div class="search-section-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${label}</div>`;
+              html += `<div class="search-section-label"><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${label}</div>`;
               const display = exactMatches.slice(0, 25);
               html += display.map(m => {
                 const normText = normalizeArabic(m.text);
@@ -3470,7 +3484,7 @@ function getVariantHighlightCal() {
                 }
                 return `<div class="search-result-item" onclick="jumpToSearchResult(${m.number})">
                   <div class="res-meta">
-                    <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    <svg viewBox='0 0 24 24' width='11' height='11' fill='currentColor'><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                     ${(SURAH_MAP.find(s => s.number === m.surah.number)?.name) || m.surah.name.replace(/سورة|سُورَةُ|سُورَةِ/g, '').trim()} — آية ${m.numberInSurah}
                   </div>
                   <div class="res-text">${displayText}</div>
@@ -3488,7 +3502,7 @@ function getVariantHighlightCal() {
           resultsDiv.innerHTML = html;
         }).catch(() => {
           if (surahResults.length > 0) {
-            let html = '<div class="search-section-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>السور</div>';
+            let html = '<div class="search-section-label"><svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>السور</div>';
             surahResults.forEach(s => {
               html += `<div class="search-result-item" onclick="goToPage(${s.page}); toggleSearchOverlay('close');">
                 <div class="search-result-surah">

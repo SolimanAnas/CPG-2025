@@ -1,4 +1,4 @@
-/* ========== Chapter 8.8 – Envenomation ========== */
+/* ========== Chapter 8.8 ï¿½ Envenomation ========== */
 window.CPG_DATA = {
     id: "c8-8",
     title: "Envenomation",
@@ -69,7 +69,7 @@ window.CPG_DATA = {
                     <ul>
                         <li>Remove stinger if visible (scrape with edge, do not squeeze).</li>
                         <li>Apply ice for symptomatic relief.</li>
-                        <li>Monitor for anaphylaxis – treat as per Allergy / Anaphylaxis CPG if required.</li>
+                        <li>Monitor for anaphylaxis ï¿½ treat as per Allergy / Anaphylaxis CPG if required.</li>
                         <li>Scorpion & Spider Bites: Monitor for autonomic storm (hypertension, salivation, arrhythmias); benzodiazepines may be required for agitation.</li>
                     </ul>
                 </li>
@@ -78,8 +78,8 @@ window.CPG_DATA = {
                         <li>Immobilize and splint the injured extremity.</li>
                         <li>Use pressure bandage technique for possible neurotoxic snakes.</li>
                         <li>Do NOT apply ice to snake bites.</li>
-                        <li>Do NOT incise wound or try to “suck” the venom out.</li>
-                        <li>Do NOT wash or clean the bite site: Venom residues on the skin or fang marks are often needed for snake venom detection kits (used in labs/hospitals to identify the snake species and guide antivenom choice). Washing may remove venom traces and make identification difficult. Exception: If there’s gross contamination with dirt, mud, or foreign material ? gentle cleaning around (not scrubbing the fang punctures themselves).</li>
+                        <li>Do NOT incise wound or try to ï¿½suckï¿½ the venom out.</li>
+                        <li>Do NOT wash or clean the bite site: Venom residues on the skin or fang marks are often needed for snake venom detection kits (used in labs/hospitals to identify the snake species and guide antivenom choice). Washing may remove venom traces and make identification difficult. Exception: If thereï¿½s gross contamination with dirt, mud, or foreign material ? gentle cleaning around (not scrubbing the fang punctures themselves).</li>
                     </ul>
                 </li>
                 <li><strong>If: Marine Animal Envenomation:</strong>
@@ -87,7 +87,7 @@ window.CPG_DATA = {
                         <li>Remove any pieces of debris or tentacles (gloved hands or forceps).</li>
                         <li>If the stinger or tentacle cannot be removed easily with gentle traction, do not compress with bandages as additional envenomation may occur.</li>
                         <li>For jellyfish/stingers: Rinse with vinegar or seawater (not freshwater).</li>
-                        <li>Use hot water immersion (40-45°C) for 20-30 minutes if tolerated. Rinse a small portion of the affected area with hot water. If the patient gets relief, continue with a larger area and then progressively to the entire area.</li>
+                        <li>Use hot water immersion (40-45ï¿½C) for 20-30 minutes if tolerated. Rinse a small portion of the affected area with hot water. If the patient gets relief, continue with a larger area and then progressively to the entire area.</li>
                         <li>Bandage loosely and splint injured extremity.</li>
                     </ul>
                 </li>
@@ -103,13 +103,13 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li><strong>Snake bites:</strong> Most snakebites are “dry,” i.e., no venom is injected. If envenomated, some of the following should occur in 5–30 minutes: severe burning pain out of proportion to the wound; edema around the bite out of proportion to the wound; small, non-blanching purple spots (petechiae), bruising, or continued oozing from site; numbness or tingling of the mouth, extremities, or bite site; metallic taste in the mouth; involuntary twitching of the mouth, extremities, or bite site; generalized weakness. Exotic snakes (Cobra, Krait, etc.) or Coral may cause neurologic and respiratory depression prior to a local reaction. Observe for mental status change, respiratory depression, convulsions, or paralysis.</li>
-                <li><strong>Marine Animal Envenomation:</strong> Portuguese man-of-war, although often mistaken for a “jellyfish”, is treated differently than most Coelenterates, using hot water and not vinegar. Stonefish envenomation can cause systemic toxicity with hypotension, tachycardia, cardiac arrhythmias, diaphoresis, dyspnea and pulmonary edema. Most cases are successfully managed with hot water immersion and symptomatic care, however some may require a specific antivenom.</li>
+                <li><strong>Snake bites:</strong> Most snakebites are ï¿½dry,ï¿½ i.e., no venom is injected. If envenomated, some of the following should occur in 5ï¿½30 minutes: severe burning pain out of proportion to the wound; edema around the bite out of proportion to the wound; small, non-blanching purple spots (petechiae), bruising, or continued oozing from site; numbness or tingling of the mouth, extremities, or bite site; metallic taste in the mouth; involuntary twitching of the mouth, extremities, or bite site; generalized weakness. Exotic snakes (Cobra, Krait, etc.) or Coral may cause neurologic and respiratory depression prior to a local reaction. Observe for mental status change, respiratory depression, convulsions, or paralysis.</li>
+                <li><strong>Marine Animal Envenomation:</strong> Portuguese man-of-war, although often mistaken for a ï¿½jellyfishï¿½, is treated differently than most Coelenterates, using hot water and not vinegar. Stonefish envenomation can cause systemic toxicity with hypotension, tachycardia, cardiac arrhythmias, diaphoresis, dyspnea and pulmonary edema. Most cases are successfully managed with hot water immersion and symptomatic care, however some may require a specific antivenom.</li>
             </ul>
 
             <h4>Documentation</h4>
             <ul>
-                <li>Patient’s full name, age, and gender.</li>
+                <li>Patientï¿½s full name, age, and gender.</li>
                 <li>Description of bite/sting, animal type (if known), time of exposure.</li>
                 <li>Site of injury, symptoms progression, envenomation mimics considered (e.g., allergy, infection).</li>
                 <li>Wound appearance, swelling measurement, vital signs, neurological exam, respiratory status.</li>
@@ -177,7 +177,7 @@ window.CPG_DATA = {
         },
         {
             q: "A patient with a marine animal sting develops severe pain. What is the appropriate first-line treatment?",
-            options: ["Hot water immersion (40-45°C)", "Ice packs", "Vinegar rinse", "Pressure immobilization"],
+            options: ["Hot water immersion (40-45ï¿½C)", "Ice packs", "Vinegar rinse", "Pressure immobilization"],
             correct: 0,
             explanation: "Hot water immersion denatures heat-labile toxins and provides significant pain relief."
         },
@@ -309,9 +309,9 @@ window.CPG_DATA = {
         }
     ],
     flashcards: [
-        { category: "Snake bite – do not", question: "What should you NOT do for a snake bite?", answer: "Do not apply ice, do not incise or suck, do not apply tourniquet, do not wash the wound (preserve venom for identification)." },
-        { category: "Snake bite – do", question: "What should you do for a snake bite?", answer: "Immobilize and splint, mark swelling, transport urgently, consider pressure immobilization for neurotoxic snakes." },
-        { category: "Marine sting – jellyfish", question: "How should a jellyfish sting be treated?", answer: "Rinse with vinegar or seawater, remove tentacles with gloved hands, apply hot water immersion (40-45°C) for pain." },
+        { category: "Snake bite ï¿½ do not", question: "What should you NOT do for a snake bite?", answer: "Do not apply ice, do not incise or suck, do not apply tourniquet, do not wash the wound (preserve venom for identification)." },
+        { category: "Snake bite ï¿½ do", question: "What should you do for a snake bite?", answer: "Immobilize and splint, mark swelling, transport urgently, consider pressure immobilization for neurotoxic snakes." },
+        { category: "Marine sting ï¿½ jellyfish", question: "How should a jellyfish sting be treated?", answer: "Rinse with vinegar or seawater, remove tentacles with gloved hands, apply hot water immersion (40-45ï¿½C) for pain." },
         { category: "Scorpion sting", question: "What is the management for scorpion sting?", answer: "Supportive care, monitor for autonomic storm (hypertension, tachycardia), consider benzodiazepines for agitation." },
         { category: "Black widow spider", question: "What are signs of black widow envenomation?", answer: "Muscle cramps, hypertension, diaphoresis, agitation." },
         { category: "Brown recluse spider", question: "What are signs of brown recluse envenomation?", answer: "Local necrosis, pain, blistering; systemic effects uncommon." },
@@ -319,15 +319,15 @@ window.CPG_DATA = {
         { category: "Hemotoxic snake", question: "What are signs of hemotoxic envenomation?", answer: "Swelling, bruising, bleeding, coagulopathy, petechiae." },
         { category: "Pressure immobilization", question: "When is pressure immobilization used?", answer: "For neurotoxic snake bites (e.g., elapids) to delay venom absorption." },
         { category: "Antivenom", question: "Is antivenom given prehospital?", answer: "No; it is a hospital intervention after identification of the snake species." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult with hypotension?", answer: "250-500 mL normal saline." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg normal saline." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult with hypotension?", answer: "250-500 mL normal saline." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg normal saline." },
         { category: "Pain management", question: "What analgesic is used for severe pain from envenomation?", answer: "Morphine IV titrated per Pain Management CPG." },
         { category: "Anaphylaxis from sting", question: "What is the first-line treatment for anaphylaxis?", answer: "IM adrenaline 0.3-0.5 mg (adult), 0.01 mg/kg (pediatric)." },
         { category: "Hot water immersion", question: "What is hot water immersion used for?", answer: "Pain relief for marine animal stings (jellyfish, stonefish)." },
         { category: "KPI", question: "What is the key performance indicator for envenomation?", answer: "Assess and document bite type and severity." },
         { category: "Transport decision", question: "Should all envenomated patients be transported?", answer: "Yes, even with mild symptoms, due to risk of delayed systemic effects." },
         { category: "Scorpion autonomic storm", question: "How is scorpion-induced hypertension managed?", answer: "Benzodiazepines for agitation; antivenom is a hospital intervention." },
-        { category: "Snake bite – dry bite", question: "What is a dry bite?", answer: "Snake bite where no venom is injected; still requires observation." },
+        { category: "Snake bite ï¿½ dry bite", question: "What is a dry bite?", answer: "Snake bite where no venom is injected; still requires observation." },
         { category: "Vinegar for jellyfish", question: "Why is vinegar used for jellyfish stings?", answer: "It inactivates nematocysts, preventing further venom discharge." }
     ],
     critical: [
@@ -352,7 +352,7 @@ window.CPG_DATA = {
             options: [
                 { t: "Apply ice", f: "Ineffective; hot water is preferred." },
                 { t: "Rinse with freshwater", f: "May worsen nematocyst discharge." },
-                { t: "Rinse with vinegar and immerse in hot water (40-45°C)", f: "Correct. Vinegar inactivates nematocysts; hot water relieves pain." },
+                { t: "Rinse with vinegar and immerse in hot water (40-45ï¿½C)", f: "Correct. Vinegar inactivates nematocysts; hot water relieves pain." },
                 { t: "Apply a pressure bandage", f: "Not indicated for jellyfish stings." }
             ],
             correct: 2,

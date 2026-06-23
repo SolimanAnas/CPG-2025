@@ -1,4 +1,4 @@
-/* ========== Chapter 9.3 – Pediatric Tachycardia ========== */
+/* ========== Chapter 9.3 ï¿½ Pediatric Tachycardia ========== */
 window.CPG_DATA = {
     id: "c9-3",
     title: "Pediatric Tachycardia",
@@ -18,7 +18,7 @@ window.CPG_DATA = {
             <h4>Inclusion Criteria</h4>
             <ul>
                 <li>Infants and children =13 years presenting with a heart rate above normal for age, with or without signs of instability.</li>
-                <li>Age-specific concerning heart rates: infant (<1 yr) >220 bpm; child (1–10 yrs) >180 bpm; adolescent (>10 yrs) >180 bpm.</li>
+                <li>Age-specific concerning heart rates: infant (<1 yr) >220 bpm; child (1ï¿½10 yrs) >180 bpm; adolescent (>10 yrs) >180 bpm.</li>
                 <li>Signs of poor perfusion: altered mental status, weak pulses, hypotension, prolonged capillary refill (>3 seconds), pallor, cyanosis, respiratory distress.</li>
             </ul>
 
@@ -90,7 +90,7 @@ window.CPG_DATA = {
                                 <li>If ineffective or too unstable: consider Adenosine (same doses as above).</li>
                                 <li>If adenosine fails or child deteriorates: synchronized cardioversion.
                                     <ul>
-                                        <li>1st dose: 0.5–1 J/kg; if ineffective: 2 J/kg.</li>
+                                        <li>1st dose: 0.5ï¿½1 J/kg; if ineffective: 2 J/kg.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -117,7 +117,7 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li>Pediatric tachycardia is often secondary to hypoxia or shock — address underlying causes promptly.</li>
+                <li>Pediatric tachycardia is often secondary to hypoxia or shock ï¿½ address underlying causes promptly.</li>
                 <li>If rhythm is unclear, patient deteriorates, or advanced interventions (e.g., cardioversion, advanced airway) may be needed, consult Tele-EMS.</li>
                 <li>Differentiate between sinus tachycardia (common with fever, pain, dehydration) and SVT (abrupt onset, often >220 in infants).</li>
                 <li>Vagal maneuvers: modified Valsalva (blowing through a syringe) or ice water applied to face (diving reflex) may be effective in infants.</li>
@@ -127,10 +127,10 @@ window.CPG_DATA = {
             <h4>Documentation</h4>
             <ul>
                 <li>Name, age, sex, weight.</li>
-                <li>Pediatric tachycardia – specify if stable or unstable, suspected type (SVT, VT, sinus).</li>
+                <li>Pediatric tachycardia ï¿½ specify if stable or unstable, suspected type (SVT, VT, sinus).</li>
                 <li>Relevant history: congenital heart disease, recent infection, medications, previous episodes.</li>
                 <li>Heart rate and rhythm (trends and response to treatment), blood pressure, SpO2, mental status, skin perfusion.</li>
-                <li>Treatment: oxygen, airway support, vagal maneuvers, medications (adenosine – dose & response), cardioversion (energy level & response).</li>
+                <li>Treatment: oxygen, airway support, vagal maneuvers, medications (adenosine ï¿½ dose & response), cardioversion (energy level & response).</li>
                 <li>Allergies, medications given at scene and home meds.</li>
                 <li>Background medical history, family history if relevant.</li>
                 <li>Time of onset, changes during care, ALS back-up requested, equipment used, Tele-EMS consultation.</li>
@@ -246,7 +246,7 @@ window.CPG_DATA = {
             explanation: "Initial fluid bolus is 20 mL/kg isotonic crystalloid."
         },
         {
-            q: "A child with a heart rate of 200 and a fever of 39.5°C is alert and has good perfusion. What is the most likely rhythm?",
+            q: "A child with a heart rate of 200 and a fever of 39.5ï¿½C is alert and has good perfusion. What is the most likely rhythm?",
             options: ["SVT", "Sinus tachycardia", "VT", "Atrial flutter"],
             correct: 1,
             explanation: "Sinus tachycardia is common with fever; treat the underlying fever."
@@ -331,7 +331,7 @@ window.CPG_DATA = {
         { category: "VT", question: "What are features of ventricular tachycardia?", answer: "Wide QRS, monomorphic or polymorphic, may be stable or unstable." },
         { category: "Initial action", question: "What is the first step in pediatric tachycardia?", answer: "Assess airway, breathing, circulation; correct hypoxia and shock." },
         { category: "Stable SVT", question: "How is stable SVT managed?", answer: "Vagal maneuvers, then adenosine if unsuccessful." },
-        { category: "Adenosine dose – child", question: "What is the first dose of adenosine for a child?", answer: "0.1 mg/kg IV/IO rapid push (max 6 mg)." },
+        { category: "Adenosine dose ï¿½ child", question: "What is the first dose of adenosine for a child?", answer: "0.1 mg/kg IV/IO rapid push (max 6 mg)." },
         { category: "Adenosine second dose", question: "What is the second dose of adenosine?", answer: "0.2 mg/kg IV/IO (max 12 mg)." },
         { category: "Unstable tachycardia", question: "What is the treatment for unstable tachycardia?", answer: "Synchronized cardioversion (0.5-1 J/kg, then 2 J/kg)." },
         { category: "Cardioversion dose", question: "What is the initial synchronized cardioversion energy dose for a child?", answer: "0.5-1 J/kg." },

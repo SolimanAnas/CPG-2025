@@ -71,7 +71,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .step-check.c-crit{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(239,68,68,.4)}
 .step-check.c-warn{background:var(--yellow);border-color:var(--yellow);box-shadow:0 0 10px rgba(234,179,8,.35)}
 .step-check::after{content:'';display:none}
-.step-check.c-done::after,.step-check.c-crit::after,.step-check.c-warn::after{display:block;content:'✓';font-size:.72rem;color:#fff;font-weight:900}
+.step-check.c-done::after,.step-check.c-crit::after,.step-check.c-warn::after{content:"";display:inline-block;width:1em;height:1em;vertical-align:-.125em;background-color:currentColor;-webkit-mask:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%206%209%2017l-5-5'%20/%3E%3C/svg%3E") no-repeat center/contain;mask:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%206%209%2017l-5-5'%20/%3E%3C/svg%3E") no-repeat center/contain;display:block;;font-size:.72rem;color:#fff;font-weight:900}
 
 .step-body{flex:1;min-width:0}
 .step-title{font-size:.85rem;font-weight:700;color:var(--text);line-height:1.3;transition:color .2s}
@@ -198,8 +198,8 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <body>
 
 <header class="app-header">
-  <a class="hdr-back" href="ems-tools.html">←</a>
-  <div class="hdr-badge">🩺</div>
+  <a class="hdr-back" href="ems-tools.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">Medical Assessment</div>
     <div class="hdr-sub">DCAS CPG 2026 · Systematic Evaluation</div>
@@ -219,7 +219,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <main class="page-body" id="pageBody"></main>
 
 <button class="fab-complete" id="fabBtn" onclick="openSummary()">
-  <span id="fabIcon">📋</span>
+  <span id="fabIcon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></span>
   <span id="fabText">View Summary</span>
 </button>
 
@@ -228,7 +228,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
     <div class="bs-head">
       <div class="bs-htitle">Assessment Summary</div>
-      <div class="bs-hclose" onclick="closeSheet()">✕</div>
+      <div class="bs-hclose" onclick="closeSheet()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
     </div>
     <div class="bs-scroll" id="bsContent"></div>
   </div>
@@ -241,7 +241,7 @@ const SCHEMA = [
 
   /* ── PHASE 1: SCENE SIZE-UP ─────────────────────── */
   {
-    id:'scene', label:'Scene Size-Up', icon:'🏥',
+    id:'scene', label:'Scene Size-Up', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>',
     color:'#22c55e', pill:'pill-scene',
     desc:'First actions on scene before patient contact',
     items:[
@@ -255,7 +255,7 @@ const SCHEMA = [
 
   /* ── PHASE 2: PRIMARY ASSESSMENT ────────────────── */
   {
-    id:'primary', label:'Primary Assessment', icon:'👁️',
+    id:'primary', label:'Primary Assessment', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#eye'/></svg>️',
     color:'#3b82f6', pill:'pill-primary',
     desc:'Rapid life-threat identification and intervention',
     items:[
@@ -288,7 +288,7 @@ const SCHEMA = [
 
   /* ── PHASE 3: SECONDARY ASSESSMENT ──────────────── */
   {
-    id:'secondary', label:'Secondary Assessment', icon:'🔍',
+    id:'secondary', label:'Secondary Assessment', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',
     color:'#f97316', pill:'pill-secondary',
     desc:'Detailed history, vitals, and physical examination',
     items:[
@@ -313,7 +313,7 @@ const SCHEMA = [
 
   /* ── PHASE 4: REASSESSMENT ──────────────────────── */
   {
-    id:'reassess', label:'Reassessment', icon:'🔄',
+    id:'reassess', label:'Reassessment', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',
     color:'#06b6d4', pill:'pill-reassess',
     desc:'Continuous monitoring and intervention review',
     items:[
@@ -326,7 +326,7 @@ const SCHEMA = [
 
   /* ── PHASE 5: RESULTS ────────────────────────────── */
   {
-    id:'results', label:'Performance Results', icon:'🏆',
+    id:'results', label:'Performance Results', icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trophy'/></svg>',
     color:'#06b6d4', pill:'pill-results',
     desc:'Overall performance rating',
     items:[
@@ -410,8 +410,8 @@ function buildItem(parent, item, phase) {
   const checkCls = item.badge === 'critical' || item.badge === 'intervene' ? 'c-crit' : item.badge === 'warn' ? 'c-warn' : 'c-done';
 
   const badgeHtml = item.badge ? `<span class="step-badge badge-${item.badge}">${
-    item.badge === 'critical' ? '⚠ Critical' :
-    item.badge === 'intervene' ? '🚨 Intervene' : '⚡ Important'
+    item.badge === 'critical' ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg> Critical' :
+    item.badge === 'intervene' ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg> Intervene' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> Important'
   }</span>` : '';
 
   card.innerHTML = `<div class="step-row" onclick="toggleStep('${item.id}','${checkCls}')">
@@ -579,8 +579,8 @@ function buildPhysToggle(item, phase) {
       <div class="step-desc" style="margin-top:3px">${item.desc}</div>
     </div>
     <div class="phys-toggle">
-      <button class="phys-btn" id="phys-con" onclick="pickPhys('con')">🧠 Conscious (Focused)<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Targeted exam</span></button>
-      <button class="phys-btn" id="phys-aloc" onclick="pickPhys('aloc')">😴 ALOC (Complete)<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Full head-to-toe</span></button>
+      <button class="phys-btn" id="phys-con" onclick="pickPhys('con')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg> Conscious (Focused)<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Targeted exam</span></button>
+      <button class="phys-btn" id="phys-aloc" onclick="pickPhys('aloc')"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#bed'/></svg> ALOC (Complete)<br><span style="font-size:.65rem;font-weight:500;color:var(--muted)">Full head-to-toe</span></button>
     </div>`;
   return card;
 }
@@ -590,10 +590,10 @@ function buildResult() {
   wrap.className = 'step-card';
   wrap.id = 'card-result';
   const opts = [
-    ['excellent','⭐ Excellent','sel-excellent'],
-    ['good','✅ Good','sel-good'],
+    ['excellent','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg> Excellent','sel-excellent'],
+    ['good','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Good','sel-good'],
     ['adequate','🟡 Adequate','sel-adequate'],
-    ['inadequate','❌ Inadequate','sel-inadequate'],
+    ['inadequate','<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Inadequate','sel-inadequate'],
   ];
   wrap.innerHTML = `<div style="padding:13px 14px 8px">
       <div class="step-title">Performance Rating</div>
@@ -708,7 +708,7 @@ function updateProgress() {
   const fab = document.getElementById('fabBtn');
   const ready = pct >= 80;
   fab.classList.toggle('ready', ready);
-  document.getElementById('fabIcon').textContent = ready ? '✅' : '📋';
+  document.getElementById('fabIcon').textContent = ready ? '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>';
   document.getElementById('fabText').textContent = ready ? 'Complete Assessment' : `Summary (${pct}%)`;
 }
 
@@ -723,10 +723,10 @@ function openSummary() {
   const elapsed = formatTime(Math.floor((Date.now() - state.startTime) / 1000));
 
   const resultColors = {
-    excellent:{label:'Excellent Performance',icon:'⭐',sub:'All critical steps completed to high standard'},
-    good:     {label:'Good Performance',icon:'✅',sub:'Assessment completed competently'},
+    excellent:{label:'Excellent Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#star'/></svg>',sub:'All critical steps completed to high standard'},
+    good:     {label:'Good Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>',sub:'Assessment completed competently'},
     adequate: {label:'Adequate Performance',icon:'🟡',sub:'Minimum standards met — review missed steps'},
-    inadequate:{label:'Inadequate Performance',icon:'❌',sub:'Critical deficiencies identified — remediation required'},
+    inadequate:{label:'Inadequate Performance',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg>',sub:'Critical deficiencies identified — remediation required'},
   };
   const res = state.result ? resultColors[state.result] : null;
 
@@ -740,7 +740,7 @@ function openSummary() {
 
   // Patient data
   html += `<div class="sum-phase" style="margin-bottom:10px">
-    <div class="sum-phase-hdr"><span class="sum-phase-name">📊 Patient Data</span></div>
+    <div class="sum-phase-hdr"><span class="sum-phase-name"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#chart-no-axes-column'/></svg> Patient Data</span></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:.76rem">
       <div><span style="color:var(--muted)">AVPU:</span> <strong>${state.avpu||'—'}</strong></div>
       <div><span style="color:var(--muted)">Priority:</span> <strong>${state.priority||'—'}</strong></div>
@@ -757,7 +757,7 @@ function openSummary() {
   const opqVals = Object.entries(state.opqrst).map(([k,v]) => ({k,v,label:{o:'Onset',p:'Provocation',q:'Quality',r:'Radiation',s:'Severity',t:'Time'}[k]})).filter(x=>x.v);
   if (opqVals.length) {
     html += `<div class="sum-phase" style="margin-bottom:10px">
-      <div class="sum-phase-hdr"><span class="sum-phase-name">🔎 OPQRST</span></div>
+      <div class="sum-phase-hdr"><span class="sum-phase-name"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zoom-in'/></svg> OPQRST</span></div>
       ${opqVals.map(x=>`<div style="font-size:.76rem;margin-bottom:4px"><strong style="color:var(--cyan)">${x.label}:</strong> ${esc(x.v)}</div>`).join('')}
     </div>`;
   }
@@ -766,7 +766,7 @@ function openSummary() {
   const ampVals = Object.entries(state.ample).map(([k,v]) => ({k,v,label:{a:'Allergies',m:'Medications',p:'Past History',l:'Last Intake',e:'Events'}[k]})).filter(x=>x.v);
   if (ampVals.length) {
     html += `<div class="sum-phase" style="margin-bottom:10px">
-      <div class="sum-phase-hdr"><span class="sum-phase-name">📋 AMPLE</span></div>
+      <div class="sum-phase-hdr"><span class="sum-phase-name"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> AMPLE</span></div>
       ${ampVals.map(x=>`<div style="font-size:.76rem;margin-bottom:4px"><strong style="color:var(--cyan)">${x.label}:</strong> ${esc(x.v)}</div>`).join('')}
     </div>`;
   }
@@ -795,8 +795,8 @@ function openSummary() {
     </div>`;
   }
 
-  html += `<button class="print-btn" onclick="window.print()">🖨️ Print / Save Report</button>`;
-  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){localStorage.removeItem('dcas-med-assess');location.reload()}">🗑️ Reset Assessment</button>`;
+  html += `<button class="print-btn" onclick="window.print()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#printer'/></svg>️ Print / Save Report</button>`;
+  html += `<button class="reset-btn" onclick="if(confirm('Reset entire assessment?')){localStorage.removeItem('dcas-med-assess');location.reload()}"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#trash-2'/></svg>️ Reset Assessment</button>`;
 
   document.getElementById('bsContent').innerHTML = html;
   document.getElementById('bsOverlay').classList.add('open');

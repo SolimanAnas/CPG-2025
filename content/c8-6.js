@@ -1,4 +1,4 @@
-/* ========== Chapter 8.6 – Diving (SCUBA) Emergencies ========== */
+/* ========== Chapter 8.6 ï¿½ Diving (SCUBA) Emergencies ========== */
 window.CPG_DATA = {
     id: "c8-6",
     title: "Diving (SCUBA) Emergencies",
@@ -40,7 +40,7 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Time of Last Dive & Dive History:</strong> Time and number of dives, depth and duration, use of compressed gas, rapid ascent or missed safety stops, use of flying or altitude after diving.</li>
                 <li><strong>Airway:</strong> Assess for patency, gurgling, or vomiting.</li>
-                <li><strong>Breathing:</strong> Assess for dyspnea, cough, chest tightness, or tachypnea; auscultate for wheezing, crackles, or decreased breath sounds; monitor SpO2 – aim for =94%.</li>
+                <li><strong>Breathing:</strong> Assess for dyspnea, cough, chest tightness, or tachypnea; auscultate for wheezing, crackles, or decreased breath sounds; monitor SpO2 ï¿½ aim for =94%.</li>
                 <li><strong>Circulation:</strong> Check HR, BP, perfusion, skin color; look for arrhythmias, bradycardia, or hypotension; cyanosis may indicate serious gas embolism.</li>
                 <li><strong>Disability (Neurological):</strong> Use GCS or AVPU; assess for confusion, headache, dizziness, slurred speech, paralysis, numbness, seizures, visual or hearing disturbances, ataxia.</li>
                 <li><strong>Exposure:</strong> Evaluate for rash or skin mottling (cutis marmorata); joint or back pain suggests decompression sickness (DCS); check for signs of barotrauma (e.g., facial bruising, ear bleeding).</li>
@@ -63,10 +63,10 @@ window.CPG_DATA = {
                 <li><strong>Transport:</strong> Transport all symptomatic patients urgently. Notify receiving hospital early; suspect DCS or AGE. Coordinate with Dispatch 2 to confirm the receiving facility has a hyperbaric chamber (e.g., Al Zahra hospital). If a hyperbaric chamber is not immediately available, the patient may need to be managed at an appropriate emergency department first while waiting for chamber availability.</li>
                 <li><strong>Patient Reassessment:</strong> Frequently reassess:
                     <ul>
-                        <li>Level of consciousness (GCS or AVPU) – track improvement or deterioration.</li>
-                        <li>Neurological examination – limb strength, movement, sensation every 5-10 minutes; check speech clarity, facial droop, coordination.</li>
-                        <li>Pain assessment – joint, back, or chest pain; document changes.</li>
-                        <li>Response to oxygen therapy – note improvement in symptoms (e.g., clearer speech, reduced dizziness, better SpO2).</li>
+                        <li>Level of consciousness (GCS or AVPU) ï¿½ track improvement or deterioration.</li>
+                        <li>Neurological examination ï¿½ limb strength, movement, sensation every 5-10 minutes; check speech clarity, facial droop, coordination.</li>
+                        <li>Pain assessment ï¿½ joint, back, or chest pain; document changes.</li>
+                        <li>Response to oxygen therapy ï¿½ note improvement in symptoms (e.g., clearer speech, reduced dizziness, better SpO2).</li>
                     </ul>
                 </li>
             </ul>

@@ -1,4 +1,4 @@
-/* ========== Chapter 6.11 – Non-Traumatic Shock ========== */
+/* ========== Chapter 6.11 ï¿½ Non-Traumatic Shock ========== */
 window.CPG_DATA = {
     id: "c6-11",
     title: "Non-Traumatic Shock",
@@ -102,7 +102,7 @@ window.CPG_DATA = {
             <ul>
                 <li>Suspected type of shock, underlying cause, vital signs, mental status, skin perfusion.</li>
                 <li>IV access, fluid type and volume administered, response.</li>
-                <li>Vasopressor used (dopamine) – dose, rate, response.</li>
+                <li>Vasopressor used (dopamine) ï¿½ dose, rate, response.</li>
                 <li>Hospital notification and transport details.</li>
             </ul>
 
@@ -347,7 +347,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_6_11_3",
-            scenario: "A 65-year-old male with fever, cough, and confusion. BP 80/50, HR 110, RR 28, temperature 39°C. He has received 1 L normal saline with no improvement. What is the next step?",
+            scenario: "A 65-year-old male with fever, cough, and confusion. BP 80/50, HR 110, RR 28, temperature 39ï¿½C. He has received 1 L normal saline with no improvement. What is the next step?",
             question: "What should you do next?",
             options: [
                 { t: "Give another 500 mL fluid bolus", f: "Fluid-refractory septic shock requires vasopressors." },

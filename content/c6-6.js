@@ -1,4 +1,4 @@
-/* ========== Chapter 6.6 – Epistaxis ========== */
+/* ========== Chapter 6.6 ï¿½ Epistaxis ========== */
 window.CPG_DATA = {
     id: "c6-6",
     title: "Epistaxis",
@@ -42,11 +42,11 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Primary Survey:</strong> Ensure airway patency, breathing, and circulation. If airway is compromised, suction and position appropriately.</li>
                 <li><strong>Positioning:</strong> Sit the patient upright with head tilted forward to prevent blood from pooling in the oropharynx. Instruct the patient to avoid swallowing blood and not to blow the nose.</li>
-                <li><strong>Nasal Compression:</strong> Apply firm, continuous pressure to the soft part of the nose (alae nasi) for 10–15 minutes using a gauze pad or cloth.</li>
+                <li><strong>Nasal Compression:</strong> Apply firm, continuous pressure to the soft part of the nose (alae nasi) for 10ï¿½15 minutes using a gauze pad or cloth.</li>
                 <li><strong>Nasal Packing:</strong> If bleeding persists, consider nasal packing with hemostatic agents or gauze. Posterior packing requires hospital management.</li>
                 <li><strong>Consider ALS back-up:</strong> For uncontrolled bleeding, signs of shock, or airway compromise. Prioritize transport; meet ALS en route.</li>
                 <li><strong>IV Access and Fluid Resuscitation:</strong> For hypotension (SBP <90 mmHg in adults) or tachycardia >120 bpm, administer 500 mL bolus of normal saline (adults) or 20 mL/kg (pediatrics) as per shock protocol.</li>
-                <li><strong>Patient Reassessment:</strong> Reassess bleeding every 5–10 minutes; maintain direct pressure if bleeding continues. Monitor for airway compromise or worsening blood loss.</li>
+                <li><strong>Patient Reassessment:</strong> Reassess bleeding every 5ï¿½10 minutes; maintain direct pressure if bleeding continues. Monitor for airway compromise or worsening blood loss.</li>
             </ul>
 
             <h4>Patient Safety Considerations</h4>
@@ -58,7 +58,7 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li>Anterior bleeding is usually from Kiesselbach’s plexus; posterior bleeding often requires otolaryngology intervention.</li>
+                <li>Anterior bleeding is usually from Kiesselbachï¿½s plexus; posterior bleeding often requires otolaryngology intervention.</li>
                 <li>Epistaxis with uncontrolled bleeding may result in severe hypovolemic shock.</li>
                 <li>Ice packs applied to the bridge of the nose may help vasoconstriction (adjunctive).</li>
                 <li>Hypertension may exacerbate bleeding but should not be treated emergently unless severe and causing end-organ damage.</li>
@@ -106,9 +106,9 @@ window.CPG_DATA = {
         },
         {
             q: "How long should direct nasal compression be applied initially?",
-            options: ["2–3 minutes", "5–10 minutes", "10–15 minutes", "30 minutes"],
+            options: ["2ï¿½3 minutes", "5ï¿½10 minutes", "10ï¿½15 minutes", "30 minutes"],
             correct: 2,
-            explanation: "Firm, continuous pressure for 10–15 minutes is recommended to allow clot formation."
+            explanation: "Firm, continuous pressure for 10ï¿½15 minutes is recommended to allow clot formation."
         },
         {
             q: "Which of the following is a red flag in epistaxis?",
@@ -178,7 +178,7 @@ window.CPG_DATA = {
         },
         {
             q: "What is the correct technique for direct nasal compression?",
-            options: ["Pinch the bony bridge of the nose", "Pinch the soft part of the nose (alae nasi) for 10–15 minutes", "Apply pressure above the eyebrows", "Press the upper lip"],
+            options: ["Pinch the bony bridge of the nose", "Pinch the soft part of the nose (alae nasi) for 10ï¿½15 minutes", "Apply pressure above the eyebrows", "Press the upper lip"],
             correct: 1,
             explanation: "Compress the soft cartilaginous part of the nose against the septum to apply direct pressure to the bleeding site."
         },
@@ -266,7 +266,7 @@ window.CPG_DATA = {
         { category: "Anterior bleeding", question: "What is the most common site of anterior epistaxis?", answer: "Kiesselbach's plexus (Little's area) on the anterior nasal septum." },
         { category: "Posterior bleeding", question: "How does posterior epistaxis present?", answer: "Blood may drain into the oropharynx, causing swallowing of blood or airway compromise." },
         { category: "Risk factors", question: "Name three risk factors for epistaxis.", answer: "Anticoagulant use, hypertension, dry air, trauma, bleeding disorders." },
-        { category: "Initial management", question: "What is the first step in managing epistaxis?", answer: "Position patient upright with head forward, apply firm direct pressure to the soft part of the nose for 10–15 minutes." },
+        { category: "Initial management", question: "What is the first step in managing epistaxis?", answer: "Position patient upright with head forward, apply firm direct pressure to the soft part of the nose for 10ï¿½15 minutes." },
         { category: "Nasal packing", question: "When is nasal packing indicated?", answer: "When direct pressure fails to control anterior bleeding." },
         { category: "Shock signs", question: "What signs indicate significant blood loss from epistaxis?", answer: "Tachycardia, hypotension, pallor, diaphoresis, altered mental status." },
         { category: "Fluid resuscitation", question: "What is the initial fluid bolus for an adult with shock from epistaxis?", answer: "500 mL normal saline; repeat as needed up to 2000 mL." },

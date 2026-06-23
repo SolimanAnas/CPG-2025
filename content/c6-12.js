@@ -1,4 +1,4 @@
-/* ========== Chapter 6.12 – Pain Management ========== */
+/* ========== Chapter 6.12 ï¿½ Pain Management ========== */
 window.CPG_DATA = {
     id: "c6-12",
     title: "Pain Management",
@@ -49,7 +49,7 @@ window.CPG_DATA = {
                 <li><strong>Consider ALS back-up:</strong> For severe pain (7-10/10) or if advanced analgesics required.</li>
                 <li><strong>Non-Pharmacological Interventions:</strong>
                     <ul>
-                        <li>Positioning for comfort (e.g., semi-Fowler’s for chest pain, splinting for fractures).</li>
+                        <li>Positioning for comfort (e.g., semi-Fowlerï¿½s for chest pain, splinting for fractures).</li>
                         <li>Reassurance to reduce anxiety.</li>
                         <li>Cooling/heating as appropriate (cold packs for acute injuries, heat for muscle spasms).</li>
                     </ul>
@@ -312,14 +312,14 @@ window.CPG_DATA = {
     ],
     flashcards: [
         { category: "Pain scales", question: "What pain scales are used for adults?", answer: "0-10 numeric scale; Wong-Baker FACES for non-verbal adults." },
-        { category: "Pain scales – children", question: "What pain scales are used for children?", answer: ">3 years: 0-10 or Wong-Baker FACES; <3 years: FLACC." },
+        { category: "Pain scales ï¿½ children", question: "What pain scales are used for children?", answer: ">3 years: 0-10 or Wong-Baker FACES; <3 years: FLACC." },
         { category: "FLACC", question: "What does FLACC stand for?", answer: "Face, Legs, Activity, Cry, Consolability." },
         { category: "Mild pain", question: "What is the treatment for mild pain (1-3/10)?", answer: "Paracetamol PO." },
         { category: "Moderate pain", question: "What analgesics are used for moderate pain (4-6/10)?", answer: "Paracetamol IV, diclofenac IM, nefopam IV, or methoxyflurane for procedural pain." },
         { category: "Severe pain", question: "What analgesics are used for severe pain (7-10/10)?", answer: "Morphine, pethidine, plus moderate pain options." },
-        { category: "Morphine dose – adult", question: "What is the adult dose of IV morphine?", answer: "2.5 mg increments every 5-10 minutes, max 20 mg." },
-        { category: "Morphine dose – pediatric", question: "What is the pediatric dose of morphine?", answer: "0.1 mg/kg IV/IM (max 5 mg IV, 10 mg IM)." },
-        { category: "Pethidine dose – adult", question: "What is the adult dose of pethidine?", answer: "IV 25-50 mg single dose; IM 50-100 mg single dose." },
+        { category: "Morphine dose ï¿½ adult", question: "What is the adult dose of IV morphine?", answer: "2.5 mg increments every 5-10 minutes, max 20 mg." },
+        { category: "Morphine dose ï¿½ pediatric", question: "What is the pediatric dose of morphine?", answer: "0.1 mg/kg IV/IM (max 5 mg IV, 10 mg IM)." },
+        { category: "Pethidine dose ï¿½ adult", question: "What is the adult dose of pethidine?", answer: "IV 25-50 mg single dose; IM 50-100 mg single dose." },
         { category: "Methoxyflurane (Penthrox)", question: "What is methoxyflurane used for?", answer: "Moderate to severe pain, especially procedural pain; inhaled, self-administered." },
         { category: "Methoxyflurane dose", question: "What is the dose of methoxyflurane?", answer: "3 mL inhalation; may repeat once (max 6 mL/24h)." },
         { category: "Paracetamol IV dose", question: "What is the adult dose of IV paracetamol?", answer: "1 g over 10 minutes." },

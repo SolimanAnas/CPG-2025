@@ -311,8 +311,8 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 
 <!-- HEADER -->
 <header class="app-header">
-  <a class="hdr-back" href="../index.html">←</a>
-  <div class="hdr-badge">🫀</div>
+  <a class="hdr-back" href="../index.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">ECG Trainer</div>
     <div class="hdr-sub">DCAS CPG 2026 · Real-Time Physics Engine</div>
@@ -332,7 +332,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 
   <!-- PRIORITY BANNER -->
   <div class="prio-banner b-green" id="prioBanner">
-    <div class="pb-ico">✅</div>
+    <div class="pb-ico"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg></div>
     <div>
       <div class="pb-level" id="prioLevel">GREEN — STABLE</div>
       <div class="pb-msg" id="prioMsg">Normal Sinus Rhythm</div>
@@ -361,7 +361,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
     </div>
     <div style="display:flex;gap:6px">
       <button class="mc-btn" onclick="calPulse()" title="1mV calibration pulse">Cal 1mV</button>
-      <button class="mc-btn playing" id="pauseBtn" onclick="togglePause()">⏸ Pause</button>
+      <button class="mc-btn playing" id="pauseBtn" onclick="togglePause()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pause'/></svg> Pause</button>
     </div>
   </div>
 
@@ -396,11 +396,11 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
       <div class="ps-handle-wrap" onclick="closePicker()"><div class="ps-handle"></div></div>
       <div class="ps-head">
         <span class="ps-title">Select Rhythm</span>
-        <div class="ps-close" onclick="closePicker()">✕</div>
+        <div class="ps-close" onclick="closePicker()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
       </div>
       <div class="ps-search-wrap">
         <div class="ps-search-box">
-          <span class="ps-search-ico">🔍</span>
+          <span class="ps-search-ico"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
           <input class="ps-search-inp" id="psSearchInp" type="text"
                  placeholder="Search rhythms…"
                  autocomplete="off" oninput="filterPicker(this.value)">
@@ -428,7 +428,7 @@ const RDB = {
     pSub:'Routine monitoring. No intervention required.',
     char:'Regular · Rate 60–100 bpm · P before every QRS · Normal P-QRS-T · Constant PR interval',
     pr:'160 ms',qrs:'Narrow < 120 ms',
-    drugs:[{i:'✅',n:'No acute medications',d:'Routine monitoring only',c:''}],
+    drugs:[{i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>',n:'No acute medications',d:'Routine monitoring only',c:''}],
     arrest:false,stemi:false},
 
   stach:{lbl:'Sinus Tachycardia',cat:'sinus',rn:120,pri:'YELLOW',
@@ -437,9 +437,9 @@ const RDB = {
     char:'Regular · Rate > 100 bpm · P before every QRS · Faster spacing between beats · P may merge with T at high rates',
     pr:'140 ms',qrs:'Narrow < 120 ms',
     drugs:[
-      {i:'🔍',n:'Identify and treat the cause',d:'Pain / Hypovolemia / Fever / Anxiety / Hypoxia',c:'pri'},
-      {i:'💧',n:'IV Fluid Challenge',d:'NS 250–500 mL if hypovolemia suspected',c:''},
-      {i:'💊',n:'Analgesia if pain-driven',d:'Morphine 2–4 mg IV | Fentanyl 1–2 mcg/kg',c:''}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'Identify and treat the cause',d:'Pain / Hypovolemia / Fever / Anxiety / Hypoxia',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>',n:'IV Fluid Challenge',d:'NS 250–500 mL if hypovolemia suspected',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Analgesia if pain-driven',d:'Morphine 2–4 mg IV | Fentanyl 1–2 mcg/kg',c:''}
     ],arrest:false,stemi:false},
 
   sbrady:{lbl:'Sinus Bradycardia',cat:'sinus',rn:45,pri:'YELLOW',
@@ -448,9 +448,9 @@ const RDB = {
     char:'Regular · Rate < 60 bpm · WIDE spacing between beats · Normal P-QRS-T · May be physiological (athletes)',
     pr:'180 ms',qrs:'Narrow < 120 ms',
     drugs:[
-      {i:'⚕️',n:'Atropine',d:'1 mg IV bolus — repeat every 3–5 min to max 3 mg',c:'pri'},
-      {i:'⚡',n:'Transcutaneous Pacing',d:'Rate 60–70 bpm · 50–100 mA — if Atropine fails',c:'warn'},
-      {i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing unavailable',c:''}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#cross'/></svg>️',n:'Atropine',d:'1 mg IV bolus — repeat every 3–5 min to max 3 mg',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Transcutaneous Pacing',d:'Rate 60–70 bpm · 50–100 mA — if Atropine fails',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing unavailable',c:''}
     ],arrest:false,stemi:false},
 
   svt:{lbl:'Paroxysmal SVT',cat:'atrial',rn:180,pri:'RED',
@@ -459,10 +459,10 @@ const RDB = {
     char:'Rapid regular narrow complex · Rate 150–250 bpm · P waves: OFTEN NOT VISIBLE — buried inside or just after the QRS complex (retrograde conduction) · Abrupt onset &amp; termination · No R-R variation · Retrograde P may produce a small notch at the terminal end of the T wave · No distinct P wave before QRS',
     pr:'Often not visible — buried in QRS (retrograde)',qrs:'Narrow < 120 ms',
     drugs:[
-      {i:'🫁',n:'Vagal Manoeuvres',d:'Modified Valsalva — legs raised 45° · Carotid sinus massage',c:'pri'},
-      {i:'💊',n:'Adenosine — 1st dose',d:'6 mg IV RAPID bolus + 20 mL NS flush immediately',c:'crit'},
-      {i:'💊',n:'Adenosine — 2nd dose',d:'12 mg IV RAPID bolus — if 1st fails after 1–2 min',c:'crit'},
-      {i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',n:'Vagal Manoeuvres',d:'Modified Valsalva — legs raised 45° · Carotid sinus massage',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Adenosine — 1st dose',d:'6 mg IV RAPID bolus + 20 mL NS flush immediately',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Adenosine — 2nd dose',d:'12 mg IV RAPID bolus — if 1st fails after 1–2 min',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Synchronized Cardioversion',d:'50–100 J — if haemodynamically unstable',c:'warn'}
     ],arrest:false,stemi:false},
 
   afib:{lbl:'Atrial Fibrillation',cat:'atrial',rn:0,pri:'RED',
@@ -471,21 +471,21 @@ const RDB = {
     char:'Irregularly irregular · No P waves · Fibrillatory baseline · Variable R-R intervals · Narrow QRS unless aberrant',
     pr:'None — no P waves',qrs:'Narrow < 120 ms (usually)',
     drugs:[
-      {i:'⚡',n:'Synchronized Cardioversion',d:'120–200 J biphasic — if haemodynamically unstable',c:'crit'},
-      {i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min (rate or rhythm control)',c:'pri'},
-      {i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min — rate control',c:''},
-      {i:'🩸',n:'Anticoagulation',d:'Per protocol if onset > 48 h or unknown',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Synchronized Cardioversion',d:'120–200 J biphasic — if haemodynamically unstable',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Amiodarone',d:'150 mg IV over 10 min (rate or rhythm control)',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min — rate control',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>',n:'Anticoagulation',d:'Per protocol if onset > 48 h or unknown',c:'warn'}
     ],arrest:false,stemi:false},
 
   aflutter:{lbl:'Atrial Flutter (3:1)',cat:'atrial',rn:100,pri:'RED',
     pMsg:'Atrial Flutter — 3:1 Block',
-    pSub:'URGENT. Classic sawtooth F-waves ~300/min. 3:1 block → ventricular rate ~100 bpm. Three flutter teeth per QRS complex.',
+    pSub:'URGENT. Classic sawtooth F-waves ~300/min. 3:1 block <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> ventricular rate ~100 bpm. Three flutter teeth per QRS complex.',
     char:'Sawtooth flutter waves best seen in II, III, aVF · Atrial rate ~300/min · Ventricular rate ~100 bpm (3:1) · Three F-waves per QRS · Regular · Narrow QRS · "Picket fence" baseline pattern',
     pr:'N/A — flutter waves',qrs:'Narrow < 120 ms',
     drugs:[
-      {i:'⚡',n:'Synchronized Cardioversion',d:'50–100 J biphasic — first line if unstable',c:'crit'},
-      {i:'💊',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min',c:'pri'},
-      {i:'💊',n:'Amiodarone',d:'150 mg IV over 10 min',c:''}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Synchronized Cardioversion',d:'50–100 J biphasic — first line if unstable',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Diltiazem',d:'0.25 mg/kg IV over 2 min',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Amiodarone',d:'150 mg IV over 10 min',c:''}
     ],arrest:false,stemi:false},
 
   vtach:{lbl:'Ventricular Tachycardia (Monomorphic)',cat:'vent',rn:180,pri:'RED',
@@ -494,18 +494,18 @@ const RDB = {
     char:'Monomorphic wide QRS (> 120 ms) · Rate 150–250 bpm · No visible P waves · AV dissociation · Concordance in precordial leads',
     pr:'None — AV dissociation',qrs:'Wide > 120 ms',
     drugs:[
-      {i:'⚡',n:'PULSELESS VT → Defibrillation',d:'200 J unsynchronized biphasic — DO NOT DELAY',c:'crit'},
-      {i:'⚡',n:'VT with pulse + unstable → Synchronized Cardioversion',d:'100 J biphasic synchronized',c:'crit'},
-      {i:'💊',n:'Amiodarone (stable VT with pulse)',d:'150 mg IV over 10 min',c:'pri'},
-      {i:'🔌',n:'CPR if pulseless',d:'30:2 high-quality CPR while charging defibrillator',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'PULSELESS VT <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Defibrillation',d:'200 J unsynchronized biphasic — DO NOT DELAY',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'VT with pulse + unstable <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Synchronized Cardioversion',d:'100 J biphasic synchronized',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Amiodarone (stable VT with pulse)',d:'150 mg IV over 10 min',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',n:'CPR if pulseless',d:'30:2 high-quality CPR while charging defibrillator',c:'warn'}
     ],
     arrest:true,shockable:true,
     steps:[
-      {n:'⚡',t:'sh',ti:'Defibrillate 200 J — Unsynchronized',de:'Pulseless VT. Do NOT delay. Charge while doing CPR.'},
-      {n:'🔌',t:'ep',ti:'CPR — 2 min immediately post-shock',de:'30:2 · 100–120/min · 5–6 cm depth · Full recoil.'},
-      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
-      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. Second dose: 150 mg if refractory.'},
-      {n:'🔄',t:'sh',ti:'Reassess rhythm every 2 min',de:'Still shockable? → Shock → CPR → Epi → Amiodarone.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',t:'sh',ti:'Defibrillate 200 J — Unsynchronized',de:'Pulseless VT. Do NOT delay. Charge while doing CPR.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',t:'ep',ti:'CPR — 2 min immediately post-shock',de:'30:2 · 100–120/min · 5–6 cm depth · Full recoil.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. Second dose: 150 mg if refractory.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',t:'sh',ti:'Reassess rhythm every 2 min',de:'Still shockable? <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Shock <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> CPR <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Epi <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Amiodarone.'}
     ]},
 
   torsades:{lbl:'Torsades de Pointes',cat:'vent',rn:220,pri:'RED',
@@ -514,37 +514,37 @@ const RDB = {
     char:'"Twisting of the Points" — QRS sine-wave complexes ROTATE around the isoelectric baseline in a sinusoidal (spindle) pattern · Amplitude waxes and wanes · Polarity continuously reverses above/below baseline · Associated with prolonged QTc > 500 ms · Runs of 5–20 beats typical',
     pr:'None',qrs:'Variable — wide and polymorphic',
     drugs:[
-      {i:'⚡',n:'Defibrillation (if pulseless)',d:'200 J unsynchronized biphasic — IMMEDIATE',c:'crit'},
-      {i:'💊',n:'Magnesium Sulfate — FIRST LINE',d:'2 g IV over 1–2 min regardless of Mg²⁺ level',c:'pri'},
-      {i:'🚫',n:'AVOID: Amiodarone / Sotalol / Class Ia',d:'All PROLONG QT — CONTRAINDICATED in Torsades',c:'contra'},
-      {i:'⚡',n:'Overdrive Pacing',d:'Rate 90–110 bpm — if Mg²⁺ fails (shortens QT)',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Defibrillation (if pulseless)',d:'200 J unsynchronized biphasic — IMMEDIATE',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Magnesium Sulfate — FIRST LINE',d:'2 g IV over 1–2 min regardless of Mg²⁺ level',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg>',n:'AVOID: Amiodarone / Sotalol / Class Ia',d:'All PROLONG QT — CONTRAINDICATED in Torsades',c:'contra'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Overdrive Pacing',d:'Rate 90–110 bpm — if Mg²⁺ fails (shortens QT)',c:'warn'}
     ],
     arrest:true,shockable:true,
     steps:[
-      {n:'⚡',t:'sh',ti:'Defibrillate 200 J if pulseless',de:'Unsynchronized. Resume CPR immediately.'},
-      {n:'💊',t:'dr',ti:'Magnesium Sulfate 2 g IV over 1–2 min',de:'Definitive treatment. Give regardless of Mg²⁺ level.'},
-      {n:'🔌',t:'ep',ti:'CPR — 2 min between shocks',de:'Continue during defibrillator charging.'},
-      {n:'🚫',t:'dr',ti:'Do NOT give Amiodarone or Sotalol',de:'Both prolong QT and worsen Torsades.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',t:'sh',ti:'Defibrillate 200 J if pulseless',de:'Unsynchronized. Resume CPR immediately.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',t:'dr',ti:'Magnesium Sulfate 2 g IV over 1–2 min',de:'Definitive treatment. Give regardless of Mg²⁺ level.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',t:'ep',ti:'CPR — 2 min between shocks',de:'Continue during defibrillator charging.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg>',t:'dr',ti:'Do NOT give Amiodarone or Sotalol',de:'Both prolong QT and worsen Torsades.'}
     ]},
 
   coarseVf:{lbl:'Coarse Ventricular Fibrillation',cat:'arrest',rn:0,pri:'ARREST',
     pMsg:'Coarse VF — SHOCKABLE ARREST RHYTHM',
-    pSub:'CPR → Defibrillate 200 J immediately. Every minute without shock = 10% survival reduction.',
+    pSub:'CPR <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Defibrillate 200 J immediately. Every minute without shock = 10% survival reduction.',
     char:'SHOCKABLE ARREST · Chaotic high-amplitude deflections · No organized P waves, QRS, or T waves · Rapid chaotic baseline',
     pr:'None',qrs:'None — no organized complexes',
     drugs:[
-      {i:'⚡',n:'Defibrillation — IMMEDIATE FIRST ACTION',d:'200 J biphasic unsynchronized — DO NOT DELAY',c:'crit'},
-      {i:'🔌',n:'High-Quality CPR',d:'30:2 · 100–120/min · 5–6 cm · Full recoil · Minimise interruptions',c:'warn'},
-      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'After 1st or 2nd shock · Every 3–5 min',c:'pri'},
-      {i:'💊',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock · 2nd dose 150 mg if refractory',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Defibrillation — IMMEDIATE FIRST ACTION',d:'200 J biphasic unsynchronized — DO NOT DELAY',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',n:'High-Quality CPR',d:'30:2 · 100–120/min · 5–6 cm · Full recoil · Minimise interruptions',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',n:'Epinephrine 1 mg IV/IO',d:'After 1st or 2nd shock · Every 3–5 min',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock · 2nd dose 150 mg if refractory',c:'pri'}
     ],
     arrest:true,shockable:true,
     steps:[
-      {n:'⚡',t:'sh',ti:'Defibrillate 200 J — DO NOT DELAY',de:'Biphasic unsynchronized. Resume CPR immediately after.'},
-      {n:'🔌',t:'ep',ti:'CPR 2 min · 30:2 · 100–120/min',de:'Continue during defibrillator charging. Push hard, push fast.'},
-      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
-      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. 2nd dose: 150 mg if still refractory.'},
-      {n:'🔄',t:'sh',ti:'Reassess every 2 min',de:'Shockable? → Shock → CPR → Epi → Amiodarone cycle.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',t:'sh',ti:'Defibrillate 200 J — DO NOT DELAY',de:'Biphasic unsynchronized. Resume CPR immediately after.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',t:'ep',ti:'CPR 2 min · 30:2 · 100–120/min',de:'Continue during defibrillator charging. Push hard, push fast.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',t:'ep',ti:'Epinephrine 1 mg IV/IO',de:'After 1st or 2nd shock. Repeat every 3–5 min.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock. 2nd dose: 150 mg if still refractory.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',t:'sh',ti:'Reassess every 2 min',de:'Shockable? <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Shock <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> CPR <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Epi <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Amiodarone cycle.'}
     ]},
 
   fineVf:{lbl:'Fine Ventricular Fibrillation',cat:'arrest',rn:0,pri:'ARREST',
@@ -553,17 +553,17 @@ const RDB = {
     char:'SHOCKABLE ARREST · Low-amplitude chaotic deflections · Confirm in ≥ 2 leads · Change lead axis before calling asystole',
     pr:'None',qrs:'None — low amplitude chaos',
     drugs:[
-      {i:'⚡',n:'Defibrillation',d:'200 J unsynchronized biphasic',c:'crit'},
-      {i:'🔍',n:'Confirm in ≥ 2 leads first',d:'Change lead axis — never call asystole in one lead',c:'warn'},
-      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min · May coarsen fine VF → better defib success',c:'pri'},
-      {i:'💊',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Defibrillation',d:'200 J unsynchronized biphasic',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'Confirm in ≥ 2 leads first',d:'Change lead axis — never call asystole in one lead',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min · May coarsen fine VF <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> better defib success',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Amiodarone 300 mg IV/IO',d:'After 3rd shock',c:'pri'}
     ],
     arrest:true,shockable:true,
     steps:[
-      {n:'🔍',t:'dr',ti:'Confirm in ≥ 2 leads — fine VF vs asystole',de:'Change lead orientation before declaring non-shockable.'},
-      {n:'⚡',t:'sh',ti:'Defibrillate 200 J if VF confirmed',de:'Unsynchronized biphasic. Immediately resume CPR.'},
-      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO every 3–5 min',de:'May coarsen fine VF and improve defibrillation success.'},
-      {n:'💊',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',t:'dr',ti:'Confirm in ≥ 2 leads — fine VF vs asystole',de:'Change lead orientation before declaring non-shockable.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',t:'sh',ti:'Defibrillate 200 J if VF confirmed',de:'Unsynchronized biphasic. Immediately resume CPR.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',t:'ep',ti:'Epinephrine 1 mg IV/IO every 3–5 min',de:'May coarsen fine VF and improve defibrillation success.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',t:'dr',ti:'Amiodarone 300 mg IV/IO',de:'After 3rd shock.'}
     ]},
 
   asystole:{lbl:'Asystole',cat:'arrest',rn:0,pri:'ARREST',
@@ -572,17 +572,17 @@ const RDB = {
     char:'NON-SHOCKABLE · Flat isoelectric line · Confirm in ≥ 2 leads (fine VF can mimic) · Check cables and gain · Complete cessation of electrical activity',
     pr:'None',qrs:'None',
     drugs:[
-      {i:'🔌',n:'High-Quality CPR — IMMEDIATELY',d:'30:2 · 100–120/min · 5–6 cm depth · Minimise interruptions',c:'crit'},
-      {i:'💉',n:'Epinephrine 1 mg IV/IO ASAP',d:'Every 3–5 min · IO if IV access delayed',c:'pri'},
-      {i:'🔍',n:'4H Causes',d:'Hypoxia · Hypovolemia · Hypo/Hyperkalaemia · Hypothermia',c:'warn'},
-      {i:'🔍',n:'4T Causes',d:'Tension Pneumo · Tamponade · Toxins · Thrombosis (PE/MI)',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',n:'High-Quality CPR — IMMEDIATELY',d:'30:2 · 100–120/min · 5–6 cm depth · Minimise interruptions',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',n:'Epinephrine 1 mg IV/IO ASAP',d:'Every 3–5 min · IO if IV access delayed',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'4H Causes',d:'Hypoxia · Hypovolemia · Hypo/Hyperkalaemia · Hypothermia',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'4T Causes',d:'Tension Pneumo · Tamponade · Toxins · Thrombosis (PE/MI)',c:'warn'}
     ],
     arrest:true,shockable:false,
     steps:[
-      {n:'🔍',t:'dr',ti:'Confirm in ≥ 2 leads. Check leads/gain.',de:'Fine VF can look like asystole. Verify before non-shockable.'},
-      {n:'🔌',t:'ep',ti:'CPR — Start immediately, 30:2',de:'Minimise interruptions. Push hard, push fast.'},
-      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO ASAP',de:'Repeat every 3–5 min. IO if IV delayed.'},
-      {n:'🔄',t:'dr',ti:'Search reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',t:'dr',ti:'Confirm in ≥ 2 leads. Check leads/gain.',de:'Fine VF can look like asystole. Verify before non-shockable.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',t:'ep',ti:'CPR — Start immediately, 30:2',de:'Minimise interruptions. Push hard, push fast.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',t:'ep',ti:'Epinephrine 1 mg IV/IO ASAP',de:'Repeat every 3–5 min. IO if IV delayed.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',t:'dr',ti:'Search reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'}
     ]},
 
   pea:{lbl:'PEA — Pulseless Electrical Activity',cat:'arrest',rn:0,pri:'ARREST',
@@ -591,17 +591,17 @@ const RDB = {
     char:'NON-SHOCKABLE · Organised electrical activity on monitor but NO palpable pulse · Can mimic any rhythm · Diagnosis = absence of pulse with organised ECG · Usually caused by reversible condition',
     pr:'Variable',qrs:'Variable',
     drugs:[
-      {i:'🔌',n:'CPR — Immediately, do not delay',d:'30:2 · 100–120/min — organised rhythm does NOT mean output',c:'crit'},
-      {i:'💉',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min',c:'pri'},
-      {i:'🔍',n:'4H Causes',d:'Hypoxia → O₂ · Hypovolemia → fluids · Hypo/Hyperkalaemia → correct · Hypothermia → warm',c:'warn'},
-      {i:'🔍',n:'4T Causes',d:'Tension Pneumo → needle decomp · Tamponade → pericardiocentesis · Toxins → antidote · Thrombosis → thrombolytics',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',n:'CPR — Immediately, do not delay',d:'30:2 · 100–120/min — organised rhythm does NOT mean output',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',n:'Epinephrine 1 mg IV/IO',d:'Every 3–5 min',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'4H Causes',d:'Hypoxia <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> O₂ · Hypovolemia <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> fluids · Hypo/Hyperkalaemia <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> correct · Hypothermia <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> warm',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'4T Causes',d:'Tension Pneumo <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> needle decomp · Tamponade <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> pericardiocentesis · Toxins <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> antidote · Thrombosis <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> thrombolytics',c:'warn'}
     ],
     arrest:true,shockable:false,
     steps:[
-      {n:'🔌',t:'ep',ti:'CPR immediately — do NOT look at monitor',de:'Organised rhythm does NOT mean cardiac output.'},
-      {n:'💉',t:'ep',ti:'Epinephrine 1 mg IV/IO — ASAP',de:'Every 3–5 min. IO if IV delayed.'},
-      {n:'🔍',t:'dr',ti:'Search for reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'},
-      {n:'🔄',t:'dr',ti:'Reassess pulse every 2 min of CPR',de:'ROSC → post-resuscitation care.'}
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg>',t:'ep',ti:'CPR immediately — do NOT look at monitor',de:'Organised rhythm does NOT mean cardiac output.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>',t:'ep',ti:'Epinephrine 1 mg IV/IO — ASAP',de:'Every 3–5 min. IO if IV delayed.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',t:'dr',ti:'Search for reversible cause — PRIMARY GOAL',de:'4H: Hypoxia, Hypovolemia, K+, Hypothermia · 4T: Tension, Tamponade, Toxins, Thrombosis.'},
+      {n:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>',t:'dr',ti:'Reassess pulse every 2 min of CPR',de:'ROSC <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> post-resuscitation care.'}
     ]},
 
   block1:{lbl:'1st Degree AV Block',cat:'block',rn:68,pri:'GREEN',
@@ -610,19 +610,19 @@ const RDB = {
     char:'Regular · Rate usually normal · Constant PR > 200 ms · All P waves conduct · Narrow QRS · P–QRS relationship intact',
     pr:'280 ms (prolonged)',qrs:'Narrow < 120 ms',
     drugs:[
-      {i:'📋',n:'Usually no acute treatment',d:'Investigate cause: medications, inferior MI, myocarditis, Lyme',c:''},
-      {i:'⚠️',n:'Monitor for progression',d:'Can progress to higher-degree block in acute MI or drug toxicity',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>',n:'Usually no acute treatment',d:'Investigate cause: medications, inferior MI, myocarditis, Lyme',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️',n:'Monitor for progression',d:'Can progress to higher-degree block in acute MI or drug toxicity',c:'warn'}
     ],arrest:false,stemi:false},
 
   block2_1:{lbl:'2nd Degree AV Block — Wenckebach',cat:'block',rn:55,pri:'YELLOW',
     pMsg:'2nd Degree AV Block — Wenckebach (Mobitz I)',
-    pSub:'Progressive PR prolongation → dropped QRS. Watch the PR lengthening and pause.',
+    pSub:'Progressive PR prolongation <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> dropped QRS. Watch the PR lengthening and pause.',
     char:'Irregularly irregular (grouped beating) · PR lengthens each cycle · QRS periodically dropped · Narrow QRS · Typically benign but treat if symptomatic',
-    pr:'Progressively lengthens → dropped',qrs:'Narrow < 120 ms (periodically absent)',
+    pr:'Progressively lengthens <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> dropped',qrs:'Narrow < 120 ms (periodically absent)',
     drugs:[
-      {i:'👀',n:'Observe if asymptomatic',d:'Often benign — inferior MI, increased vagal tone, medications',c:''},
-      {i:'⚕️',n:'Atropine if symptomatic',d:'1 mg IV — repeat every 3–5 min to max 3 mg',c:'pri'},
-      {i:'⚡',n:'Transcutaneous Pacing',d:'If Atropine fails or severe haemodynamic compromise',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#eye'/></svg>',n:'Observe if asymptomatic',d:'Often benign — inferior MI, increased vagal tone, medications',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#cross'/></svg>️',n:'Atropine if symptomatic',d:'1 mg IV — repeat every 3–5 min to max 3 mg',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Transcutaneous Pacing',d:'If Atropine fails or severe haemodynamic compromise',c:'warn'}
     ],arrest:false,stemi:false},
 
   block2_2:{lbl:'2nd Degree AV Block — Mobitz II',cat:'block',rn:50,pri:'RED',
@@ -631,9 +631,9 @@ const RDB = {
     char:'Regular P waves · Constant PR interval · Some P waves suddenly blocked · Often wide QRS (infranodal) · High risk of decompensation',
     pr:'200 ms (constant — key finding)',qrs:'Normal or wide (infranodal block)',
     drugs:[
-      {i:'⚡',n:'Transcutaneous Pacing — PREPARE IMMEDIATELY',d:'Rate 60–70 bpm. Confirm mechanical capture.',c:'crit'},
-      {i:'⚕️',n:'Atropine — often INEFFECTIVE in Mobitz II',d:'0.5–1 mg IV — may worsen by increasing atrial rate',c:'warn'},
-      {i:'🚑',n:'Urgent transport — transvenous pacing',d:'Infranodal block requires definitive pacing',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Transcutaneous Pacing — PREPARE IMMEDIATELY',d:'Rate 60–70 bpm. Confirm mechanical capture.',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#cross'/></svg>️',n:'Atropine — often INEFFECTIVE in Mobitz II',d:'0.5–1 mg IV — may worsen by increasing atrial rate',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Urgent transport — transvenous pacing',d:'Infranodal block requires definitive pacing',c:'pri'}
     ],arrest:false,stemi:false},
 
   block3:{lbl:'3rd Degree — Complete Heart Block',cat:'block',rn:35,pri:'RED',
@@ -642,23 +642,23 @@ const RDB = {
     char:'P waves and QRS fire independently · P-P regular (atrial rate) · R-R regular (escape rate, different) · PR has NO fixed relationship · Slow wide ventricular escape rhythm',
     pr:'No fixed relationship (AV dissociation)',qrs:'Wide > 120 ms (ventricular escape)',
     drugs:[
-      {i:'⚡',n:'Transcutaneous Pacing — FIRST ACTION',d:'Rate 60–70 bpm · 50–100 mA · Confirm mechanical capture',c:'crit'},
-      {i:'⚕️',n:'Atropine 0.5–1 mg IV',d:'Often ineffective — attempt while preparing pacer',c:'warn'},
-      {i:'💊',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing delayed',c:'pri'},
-      {i:'🚑',n:'Urgent transport — transvenous pacing',d:'TCP is bridge therapy only',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg>',n:'Transcutaneous Pacing — FIRST ACTION',d:'Rate 60–70 bpm · 50–100 mA · Confirm mechanical capture',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#cross'/></svg>️',n:'Atropine 0.5–1 mg IV',d:'Often ineffective — attempt while preparing pacer',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Dopamine Infusion',d:'5–20 mcg/kg/min IV — if pacing delayed',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Urgent transport — transvenous pacing',d:'TCP is bridge therapy only',c:'pri'}
     ],arrest:false,stemi:false},
 
   stemi_inf:{lbl:'Inferior STEMI (RCA)',cat:'stemi',rn:78,pri:'RED',
     pMsg:'STEMI — Inferior MI (Right Coronary Artery)',
-    pSub:'⚠️ WITHHOLD Nitroglycerin until RV involvement ruled out (V4R). Risk of collapse.',
+    pSub:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️ WITHHOLD Nitroglycerin until RV involvement ruled out (V4R). Risk of collapse.',
     char:'ST elevation <b>II, III, aVF</b> · Reciprocal ST depression in <b>I, aVL</b> · RCA occlusion (80%) · HIGH RISK: check RV infarct (V4R) and bradyarrhythmias',
     pr:'160 ms',qrs:'Narrow',
     elev:['II','III','aVF'],rec:['I','aVL'],
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
-      {i:'⚠️',n:'Nitroglycerin — WITHHOLD if RV involvement',d:'Give ONLY if SBP > 100, no RV infarct, no PDE5 inhibitor use in 48h',c:'contra'},
-      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'Avoid hyperoxia',c:''},
-      {i:'🚑',n:'12-Lead ECG + V4R · Rapid PCI',d:'Cath lab activation. Door-to-balloon < 90 min.',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️',n:'Nitroglycerin — WITHHOLD if RV involvement',d:'Give ONLY if SBP > 100, no RV infarct, no PDE5 inhibitor use in 48h',c:'contra'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',n:'Oxygen if SpO₂ < 94%',d:'Avoid hyperoxia',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'12-Lead ECG + V4R · Rapid PCI',d:'Cath lab activation. Door-to-balloon < 90 min.',c:'pri'}
     ],arrest:false,stemi:true,
     sd:{terr:'Inferior Wall',art:'Right Coronary Artery (RCA) — 80% | LCx — 20%',zones:{Sep:0,Ant:0,Lat:0,Inf:1,RV:1}}},
 
@@ -669,10 +669,10 @@ const RDB = {
     pr:'160 ms',qrs:'Narrow',
     elev:['V3','V4'],rec:['II','III','aVF'],
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
-      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Monitor BP closely',c:'pri'},
-      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
-      {i:'🚑',n:'12-Lead ECG · Rapid PCI · Cath lab activation',d:'Door-to-balloon < 90 min. Notify en route.',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Monitor BP closely',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'12-Lead ECG · Rapid PCI · Cath lab activation',d:'Door-to-balloon < 90 min. Notify en route.',c:'pri'}
     ],arrest:false,stemi:true,
     sd:{terr:'Anterior Wall',art:'Left Anterior Descending (LAD)',zones:{Sep:0,Ant:1,Lat:0,Inf:0,RV:0}}},
 
@@ -683,10 +683,10 @@ const RDB = {
     pr:'160 ms',qrs:'Narrow',
     elev:['V1','V2'],rec:[],
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
-      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
-      {i:'📡',n:'Monitor PR interval',d:'Septal MI → risk of AV block · Have pacing ready',c:'warn'},
-      {i:'🚑',n:'Rapid PCI transport',d:'12-Lead ECG · Notify cath lab en route',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>',n:'Monitor PR interval',d:'Septal MI <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> risk of AV block · Have pacing ready',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Rapid PCI transport',d:'12-Lead ECG · Notify cath lab en route',c:'pri'}
     ],arrest:false,stemi:true,
     sd:{terr:'Septal Wall',art:'LAD — Septal Perforating Branches',zones:{Sep:1,Ant:0,Lat:0,Inf:0,RV:0}}},
 
@@ -697,10 +697,10 @@ const RDB = {
     pr:'160 ms',qrs:'Narrow',
     elev:['I','aVL','V5','V6'],rec:['II','III','aVF'],
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
-      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
-      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
-      {i:'🚑',n:'Rapid PCI transport · 12-Lead ECG',d:'Notify receiving facility en route',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Rapid PCI transport · 12-Lead ECG',d:'Notify receiving facility en route',c:'pri'}
     ],arrest:false,stemi:true,
     sd:{terr:'Lateral Wall',art:'Left Circumflex Artery (LCx)',zones:{Sep:0,Ant:0,Lat:1,Inf:0,RV:0}}},
 
@@ -711,10 +711,10 @@ const RDB = {
     pr:'160 ms',qrs:'Narrow',
     elev:['V1','V2','V3','V4','V5','V6','I','aVL'],rec:['II','III','aVF'],
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
-      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'ONLY if SBP > 100 — extreme haemodynamic caution',c:'warn'},
-      {i:'📡',n:'Continuous monitoring — VF risk',d:'Defibrillator immediately available. Amiodarone on standby.',c:'warn'},
-      {i:'🚑',n:'Emergency PCI — MAXIMUM URGENCY',d:'Call cath lab activation NOW. This is a MAJOR MI.',c:'crit'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO — IMMEDIATELY',d:'Chew and swallow',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Nitroglycerin 0.4 mg SL',d:'ONLY if SBP > 100 — extreme haemodynamic caution',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>',n:'Continuous monitoring — VF risk',d:'Defibrillator immediately available. Amiodarone on standby.',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Emergency PCI — MAXIMUM URGENCY',d:'Call cath lab activation NOW. This is a MAJOR MI.',c:'crit'}
     ],arrest:false,stemi:true,
     sd:{terr:'Extensive Anterior Wall',art:'Proximal LAD (before 1st Diagonal) — "Widow Maker"',zones:{Sep:1,Ant:1,Lat:1,Inf:0,RV:0}}},
 
@@ -724,10 +724,10 @@ const RDB = {
     char:'ST segment ≥ 0.5 mm below baseline · Subendocardial ischaemia or NSTEMI · Reciprocal changes of posterior STEMI · Requires troponin to confirm NSTEMI',
     pr:'160 ms',qrs:'Narrow',
     drugs:[
-      {i:'💊',n:'Aspirin 300–325 mg PO',d:'Immediately. Chew and swallow.',c:'crit'},
-      {i:'💊',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Symptom relief',c:'pri'},
-      {i:'🫁',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
-      {i:'🚑',n:'12-Lead ECG · ACS protocol · Hospital notification',d:'NSTEMI → ACS pathway. Monitor for STEMI progression.',c:'pri'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg PO',d:'Immediately. Chew and swallow.',c:'crit'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Nitroglycerin 0.4 mg SL',d:'If SBP > 100 · Every 5 min × 3 · Symptom relief',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>',n:'Oxygen if SpO₂ < 94%',d:'',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'12-Lead ECG · ACS protocol · Hospital notification',d:'NSTEMI <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> ACS pathway. Monitor for STEMI progression.',c:'pri'}
     ],arrest:false,stemi:false},
 
   tinvert:{lbl:'T-Wave Inversion',cat:'stemi',rn:75,pri:'YELLOW',
@@ -736,10 +736,10 @@ const RDB = {
     char:'T wave deflected below baseline · Causes: ischaemia, Wellens syndrome, LVH, PE, digoxin · Wellens (V2–V3 deep symmetric) = proximal LAD stenosis — DO NOT stress test',
     pr:'160 ms',qrs:'Narrow',
     drugs:[
-      {i:'🔍',n:'Correlate clinically',d:'ACS symptoms → ACS protocol immediately',c:'warn'},
-      {i:'💊',n:'Aspirin 300–325 mg if ACS suspected',d:'Chew and swallow',c:'pri'},
-      {i:'📡',n:'Serial ECGs',d:'Dynamic T-wave changes support ischaemia. Repeat every 15 min.',c:''},
-      {i:'🚑',n:'Wellens syndrome',d:'→ Coronary angiography urgently. Do NOT stress test.',c:'warn'}
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg>',n:'Correlate clinically',d:'ACS symptoms <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> ACS protocol immediately',c:'warn'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',n:'Aspirin 300–325 mg if ACS suspected',d:'Chew and swallow',c:'pri'},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>',n:'Serial ECGs',d:'Dynamic T-wave changes support ischaemia. Repeat every 15 min.',c:''},
+      {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg>',n:'Wellens syndrome',d:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> Coronary angiography urgently. Do NOT stress test.',c:'warn'}
     ],arrest:false,stemi:false}
 };
 
@@ -919,7 +919,7 @@ function togglePause() {
   isPaused = !isPaused;
   lastTs   = null;
   const btn = document.getElementById('pauseBtn');
-  btn.textContent = isPaused ? '▶ Resume' : '⏸ Pause';
+  btn.textContent = isPaused ? '▶ Resume' : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pause'/></svg> Pause';
   btn.classList.toggle('playing', !isPaused);
   document.getElementById('liveDot').style.opacity = isPaused ? '0.2' : '1';
 }
@@ -951,9 +951,9 @@ function updateUI(key) {
   const priMap  = { GREEN:'b-green', YELLOW:'b-yellow', RED:'b-red', ARREST:'b-arrest' };
   banner.className = 'prio-banner ' + (priMap[d.pri] || 'b-green');
 
-  const icoMap = { GREEN:'✅', YELLOW:'⚠️', RED:'🔴', ARREST:'⛔' };
+  const icoMap = { GREEN:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>', YELLOW:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️', RED:'🔴', ARREST:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg>' };
   banner.innerHTML =
-    '<div class="pb-ico">' + (icoMap[d.pri]||'✅') + '</div>' +
+    '<div class="pb-ico">' + (icoMap[d.pri]||'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg>') + '</div>' +
     '<div><div class="pb-level">' + d.pri + '</div>' +
     '<div class="pb-msg">' + d.pMsg + '</div>' +
     '<div class="pb-sub">' + d.pSub + '</div></div>';
@@ -985,11 +985,11 @@ function updateUI(key) {
   let html = '';
 
   // Characteristics
-  html += '<div class="cde-sec"><div class="cde-hdr">📋 ' + d.lbl + '</div><div class="cde-blk"><div class="cde-text">' + (d.char || '') + '</div></div></div>';
+  html += '<div class="cde-sec"><div class="cde-hdr"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> ' + d.lbl + '</div><div class="cde-blk"><div class="cde-text">' + (d.char || '') + '</div></div></div>';
 
   // STEMI lead badges
   if (d.stemi && d.sd) {
-    html += '<div class="cde-sec"><div class="cde-hdr">🗺️ Territory — ' + d.sd.art + '</div><div class="cde-blk">';
+    html += '<div class="cde-sec"><div class="cde-hdr"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#map'/></svg>️ Territory — ' + d.sd.art + '</div><div class="cde-blk">';
     if (d.elev && d.elev.length) {
       html += '<div style="margin-bottom:6px"><span style="font-size:.7rem;color:var(--mu)">ST Elevation: </span>';
       d.elev.forEach(l => { html += '<span class="lb">' + l + '</span>'; });
@@ -1005,7 +1005,7 @@ function updateUI(key) {
       const zones = ['Sep','Ant','Lat','Inf','RV'];
       html += '<div class="zone-grid" style="margin-top:10px">';
       zones.forEach(z => {
-        html += '<div class="zone-box' + (zn[z] ? ' hot' : '') + '">' + z + (zn[z] ? ' ✓' : '') + '</div>';
+        html += '<div class="zone-box' + (zn[z] ? ' hot' : '') + '">' + z + (zn[z] ? ' <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg>' : '') + '</div>';
       });
       html += '</div>';
     }
@@ -1013,7 +1013,7 @@ function updateUI(key) {
   }
 
   // Drugs
-  html += '<div class="cde-sec"><div class="cde-hdr">💊 Treatment</div><div class="cde-blk">';
+  html += '<div class="cde-sec"><div class="cde-hdr"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg> Treatment</div><div class="cde-blk">';
   if (d.drugs && d.drugs.length) {
     d.drugs.forEach(dr => {
       html += '<div class="drug-card ' + (dr.c||'') + '">' +
@@ -1026,7 +1026,7 @@ function updateUI(key) {
 
   // Arrest pathway
   if (d.arrest && d.steps && d.steps.length) {
-    html += '<div class="cde-sec"><div class="cde-hdr">⚡ ' +
+    html += '<div class="cde-sec"><div class="cde-hdr"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#zap'/></svg> ' +
       (d.shockable ? 'ACLS — Shockable Pathway' : 'ACLS — Non-Shockable Pathway') +
       '</div><div class="cde-blk">';
     d.steps.forEach((st, idx) => {

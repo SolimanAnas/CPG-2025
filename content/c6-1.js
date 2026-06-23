@@ -5,7 +5,7 @@ window.CPG_DATA = {
     shortTitle: "6.1 Abdominal Pain",
     summary: `
         <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">🩺 Abdominal Pain</h3>
+            <h3 style="color:var(--primary-accent);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg> Abdominal Pain</h3>
             
             <h4>Patient Care Goals</h4>
             <ul>

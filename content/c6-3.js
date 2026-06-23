@@ -1,4 +1,4 @@
-/* ========== Chapter 6.3 – Adrenal Insufficiency ========== */
+/* ========== Chapter 6.3 ï¿½ Adrenal Insufficiency ========== */
 window.CPG_DATA = {
     id: "c6-3",
     title: "Adrenal Insufficiency",
@@ -16,7 +16,7 @@ window.CPG_DATA = {
 
             <h4>Inclusion Criteria</h4>
             <ul>
-                <li>Known adrenal insufficiency (Addison’s disease) with signs of crisis (hypotension, altered mental status, vomiting, abdominal pain).</li>
+                <li>Known adrenal insufficiency (Addisonï¿½s disease) with signs of crisis (hypotension, altered mental status, vomiting, abdominal pain).</li>
                 <li>Suspected adrenal crisis in undiagnosed patient with shock not responding to standard therapy.</li>
                 <li>Patients on long-term corticosteroids with acute illness or injury.</li>
                 <li>Patients with medical alert bracelets indicating adrenal insufficiency.</li>
@@ -24,7 +24,7 @@ window.CPG_DATA = {
 
             <h4>Exclusion Criteria</h4>
             <ul>
-                <li>None – treat empirically if suspicion is high.</li>
+                <li>None ï¿½ treat empirically if suspicion is high.</li>
             </ul>
 
             <h4>Key Assessment Points</h4>
@@ -65,11 +65,11 @@ window.CPG_DATA = {
 
             <h4>Patient Safety Considerations</h4>
             <ul>
-                <li>Rapid deterioration can occur – monitor closely.</li>
+                <li>Rapid deterioration can occur ï¿½ monitor closely.</li>
                 <li>Fluid resuscitation may need to be repeated; avoid excessive fluid in patients with heart failure.</li>
                 <li>If patient has known steroid use, do not withhold steroids even if crisis not definite.</li>
-                <li>Hypoglycemia is common – treat aggressively.</li>
-                <li>Addisonian crisis is difficult to diagnose; most patients will inform you – check for medical alert bracelets.</li>
+                <li>Hypoglycemia is common ï¿½ treat aggressively.</li>
+                <li>Addisonian crisis is difficult to diagnose; most patients will inform you ï¿½ check for medical alert bracelets.</li>
             </ul>
 
             <h4>Clinical Insights & Additional Guidance</h4>
@@ -77,7 +77,7 @@ window.CPG_DATA = {
                 <li>Adrenal crisis can mimic septic shock; give steroids early if there is any suspicion.</li>
                 <li>Patients on chronic steroids may not have the classic hyperpigmentation.</li>
                 <li>If patient is unable to take oral maintenance steroids, IM/IV hydrocortisone is life-saving.</li>
-                <li>Document time of steroid administration – crucial for ongoing hospital care.</li>
+                <li>Document time of steroid administration ï¿½ crucial for ongoing hospital care.</li>
                 <li>Common causes: medication non-compliance, infection, trauma, surgery, dehydration.</li>
             </ul>
 
@@ -112,7 +112,7 @@ window.CPG_DATA = {
             explanation: "Hydrocortisone 100 mg IV/IM is the standard dose."
         },
         {
-            q: "A patient with known Addison’s disease presents with hypotension, vomiting, and confusion. What is the priority?",
+            q: "A patient with known Addisonï¿½s disease presents with hypotension, vomiting, and confusion. What is the priority?",
             options: ["IV fluids", "Hydrocortisone", "Blood glucose check", "All of the above"],
             correct: 3,
             explanation: "All are critical; fluids and steroids should be given rapidly, and glucose checked early."
@@ -161,9 +161,9 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a contraindication to giving hydrocortisone?",
-            options: ["Hypotension", "Pregnancy", "Infection", "None – it is life-saving"],
+            options: ["Hypotension", "Pregnancy", "Infection", "None ï¿½ it is life-saving"],
             correct: 3,
-            explanation: "In suspected adrenal crisis, do not withhold steroids – they are life-saving."
+            explanation: "In suspected adrenal crisis, do not withhold steroids ï¿½ they are life-saving."
         },
         {
             q: "What is the most common cause of death in untreated adrenal crisis?",
@@ -203,7 +203,7 @@ window.CPG_DATA = {
         },
         {
             q: "What is the preferred IV fluid for resuscitation in adrenal crisis?",
-            options: ["Dextrose 5%", "Normal saline", "Ringer’s lactate", "Colloids"],
+            options: ["Dextrose 5%", "Normal saline", "Ringerï¿½s lactate", "Colloids"],
             correct: 1,
             explanation: "Isotonic crystalloid (normal saline) is recommended."
         },
@@ -305,7 +305,7 @@ window.CPG_DATA = {
     critical: [
         {
             id: "crit_6_3_1",
-            scenario: "A 55-year-old known Addison’s disease patient is found collapsed at home. He is confused, BP 80/50, HR 120, blood glucose 45 mg/dL. What is your priority?",
+            scenario: "A 55-year-old known Addisonï¿½s disease patient is found collapsed at home. He is confused, BP 80/50, HR 120, blood glucose 45 mg/dL. What is your priority?",
             question: "What should you do first?",
             options: [
                 { t: "Give 50% dextrose 25 g IV", f: "Correct. Hypoglycemia is life-threatening; correct glucose first." },
@@ -319,7 +319,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_6_3_2",
-            scenario: "A 28-year-old with known Addison’s presents with vomiting and weakness. She is alert but pale. BP 90/60, HR 110. She took her morning hydrocortisone. What should you do?",
+            scenario: "A 28-year-old with known Addisonï¿½s presents with vomiting and weakness. She is alert but pale. BP 90/60, HR 110. She took her morning hydrocortisone. What should you do?",
             question: "What is the best next step?",
             options: [
                 { t: "Administer additional hydrocortisone 100 mg IV", f: "Correct. Stress doses are needed despite morning dose." },
@@ -336,10 +336,10 @@ window.CPG_DATA = {
             scenario: "A 45-year-old with no known adrenal disease presents with shock after a bout of gastroenteritis. He does not respond to two fluid boluses. What should you suspect?",
             question: "What is the most likely diagnosis and next step?",
             options: [
-                { t: "Septic shock – start antibiotics", f: "Possible, but adrenal crisis should be considered." },
-                { t: "Adrenal crisis – give hydrocortisone", f: "Correct. Unexplained shock after illness with poor fluid response is classic." },
-                { t: "Cardiogenic shock – give dopamine", f: "Not indicated." },
-                { t: "Hypovolemia – give more fluids", f: "Already done." }
+                { t: "Septic shock ï¿½ start antibiotics", f: "Possible, but adrenal crisis should be considered." },
+                { t: "Adrenal crisis ï¿½ give hydrocortisone", f: "Correct. Unexplained shock after illness with poor fluid response is classic." },
+                { t: "Cardiogenic shock ï¿½ give dopamine", f: "Not indicated." },
+                { t: "Hypovolemia ï¿½ give more fluids", f: "Already done." }
             ],
             correct: 1,
             explanation: "Adrenal crisis can present as shock not responding to fluids; empiric steroids are indicated.",

@@ -9,7 +9,7 @@ window.CPG_DATA = {
             shortTitle: "2.1 Airway Management",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:#0056b3;">📘 Airway Management – Full Guideline Summary</h3>
+                    <h3 style="color:#0056b3;"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#book'/></svg> Airway Management – Full Guideline Summary</h3>
                     
                     <h4 style="color:#004e92; margin:20px 0 10px;">1. AIRWAY ASSESSMENT</h4>
                     <ul style="list-style-type: none; padding-left:0;">
@@ -59,7 +59,7 @@ window.CPG_DATA = {
                     </ul>
 
                     <div class="highlight-box" style="margin-top:15px;">
-                        📌 <strong>Key KPIs:</strong> Document initial airway findings. Administer O₂ if SpO₂ <92%. First‑pass intubation success.
+                        <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pin'/></svg> <strong>Key KPIs:</strong> Document initial airway findings. Administer O₂ if SpO₂ <92%. First‑pass intubation success.
                     </div>
                 </div>
             `,
@@ -272,7 +272,7 @@ window.CPG_DATA = {
             shortTitle: "2.2 FBAO",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);">🍖 2.2 Foreign Body Airway Obstruction</h3>
+                    <h3 style="color:var(--accent-airway);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#drumstick'/></svg> 2.2 Foreign Body Airway Obstruction</h3>
                     
                     <h4>1. Assessment of Severity</h4>
                     <ul>
@@ -370,7 +370,7 @@ window.CPG_DATA = {
             shortTitle: "2.3 Asthma",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);">🫁 2.3 Asthma Management</h3>
+                    <h3 style="color:var(--accent-airway);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> 2.3 Asthma Management</h3>
                     
                     <h4>1. Assessment & Severity</h4>
                     <ul>
@@ -458,7 +458,7 @@ window.CPG_DATA = {
             shortTitle: "2.4 COPD",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);">🚬 2.4 COPD Exacerbation</h3>
+                    <h3 style="color:var(--accent-airway);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#cigarette'/></svg> 2.4 COPD Exacerbation</h3>
                     
                     <h4>1. Assessment (The 'Blue Bloater' vs 'Pink Puffer')</h4>
                     <ul>
@@ -552,7 +552,7 @@ window.CPG_DATA = {
             shortTitle: "2.5 Invasive Vent",
             summary: `
                 <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);">🔌 2.5 Invasive Mechanical Ventilation</h3>
+                    <h3 style="color:var(--accent-airway);"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#plug'/></svg> 2.5 Invasive Mechanical Ventilation</h3>
                     <p><strong>Note:</strong> This section applies to Paramedics managing intubated patients.</p>
 
                     <h4>1. Indications</h4>

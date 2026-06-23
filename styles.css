@@ -1,5 +1,44 @@
 /* ========== styles.css – DCAS CPG 2025 (FINAL) ========== */
 
+/* ---------- LUCIDE SVG ICONS (sprite-based) ---------- */
+.lucide {
+    display: inline-block;
+    vertical-align: -0.125em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+.icon-btn svg.lucide,
+.toggle-btn svg.lucide,
+.btn-action svg.lucide,
+.sc-icon svg.lucide,
+.lv-icon svg.lucide,
+.search-empty-icon svg.lucide,
+.pwa-icon-fallback svg.lucide {
+    width: 60%;
+    height: 60%;
+}
+.lv-icon svg.lucide,
+.sc-icon svg.lucide,
+.pwa-icon-fallback svg.lucide,
+.search-empty-icon svg.lucide {
+    width: 100%;
+    height: 100%;
+}
+.toggle-btn svg.lucide { width: 1.4rem; height: 1.4rem; }
+.stats-badge svg.lucide { width: 1em; height: 1em; }
+.popup-title svg.lucide,
+.amoled-badge svg.lucide,
+.res-ttl svg.lucide {
+    width: 1em;
+    height: 1em;
+    margin-right: 4px;
+    vertical-align: -0.15em;
+}
+
 /* ---------- NUCLEAR RESET (kills all tap highlights) ---------- */
 * {
     -webkit-tap-highlight-color: transparent;

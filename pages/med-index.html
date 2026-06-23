@@ -181,15 +181,15 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
 
 <!-- HEADER -->
 <div class="app-header">
-  <button class="hdr-back" onclick="history.length>1?history.back():location.href='../index.html'">←</button>
-  <div class="hdr-badge">💊</div>
+  <button class="hdr-back" onclick="history.length>1?history.back():location.href='../index.html'"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></button>
+  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">Medication Index</div>
     <div class="hdr-sub" id="hdrSub">Loading…</div>
   </div>
   <div class="hdr-actions">
-    <a href="drug-calculator.html" class="hdr-pill">⚖️ Calculator</a>
-    <button class="theme-btn" id="themeBtn" onclick="toggleThemePanel()" title="Change theme">🎨</button>
+    <a href="drug-calculator.html" class="hdr-pill"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#scale'/></svg>️ Calculator</a>
+    <button class="theme-btn" id="themeBtn" onclick="toggleThemePanel()" title="Change theme"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#palette'/></svg></button>
   </div>
 </div>
 
@@ -200,22 +200,22 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
     <div class="tp-option" data-theme="dark"   onclick="setTheme('dark')">
       <div class="tp-swatch tp-swatch-dark"></div>
       <div><div class="tp-label">Dark</div><div class="tp-desc">Deep navy</div></div>
-      <span class="tp-check">✓</span>
+      <span class="tp-check"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></span>
     </div>
     <div class="tp-option" data-theme="light"  onclick="setTheme('light')">
       <div class="tp-swatch tp-swatch-light"></div>
       <div><div class="tp-label">Light</div><div class="tp-desc">Clean white</div></div>
-      <span class="tp-check">✓</span>
+      <span class="tp-check"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></span>
     </div>
     <div class="tp-option" data-theme="sepia"  onclick="setTheme('sepia')">
       <div class="tp-swatch tp-swatch-sepia"></div>
       <div><div class="tp-label">Sepia</div><div class="tp-desc">Warm paper</div></div>
-      <span class="tp-check">✓</span>
+      <span class="tp-check"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></span>
     </div>
     <div class="tp-option" data-theme="amoled" onclick="setTheme('amoled')">
       <div class="tp-swatch tp-swatch-amoled"></div>
       <div><div class="tp-label">AMOLED</div><div class="tp-desc">Pure black</div></div>
-      <span class="tp-check">✓</span>
+      <span class="tp-check"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#check'/></svg></span>
     </div>
   </div>
 </div>
@@ -237,25 +237,25 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
 <!-- SEARCH -->
 <div class="search-wrap">
   <div class="search-inner">
-    <span class="si-icon">🔍</span>
+    <span class="si-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
     <input class="si-input" id="searchInput" type="search"
       placeholder="Search by drug name, indication, or class…"
       autocomplete="off" autocorrect="off" spellcheck="false">
-    <button class="si-clear" id="clearBtn" onclick="clearSearch()">Clear ✕</button>
+    <button class="si-clear" id="clearBtn" onclick="clearSearch()">Clear <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
   </div>
 </div>
 
 <!-- FILTER PILLS -->
 <div class="filter-bar" id="filterBar">
-  <button class="fpill fpill-all active" onclick="filterCat('ALL',this)">🗂 All Drugs</button>
+  <button class="fpill fpill-all active" onclick="filterCat('ALL',this)"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#folder-archive'/></svg> All Drugs</button>
 </div>
 
 <!-- INFO BAR -->
 <div class="info-bar">
   <div class="stats-count" id="statsCount"></div>
   <div class="info-bar-right">
-    <button class="bar-btn" id="sortBtn" onclick="toggleSort()">↕ A–Z</button>
-    <button class="bar-btn" id="azBtn"   onclick="toggleAZ()">⌨ Jump</button>
+    <button class="bar-btn" id="sortBtn" onclick="toggleSort()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#move-vertical'/></svg> A–Z</button>
+    <button class="bar-btn" id="azBtn"   onclick="toggleAZ()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#keyboard'/></svg> Jump</button>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellips
   <div id="drugList"></div>
 </div>
 
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-up'/></svg></button>
 
 <script>
 let DRUGS={},CATS=[],activeCat='ALL',query='',sortAZ=false,azOpen=false;
@@ -309,7 +309,7 @@ async function init(){
     const d=new URLSearchParams(location.search).get('drug');
     if(d){document.getElementById('searchInput').value=d;query=d.toLowerCase();document.getElementById('clearBtn').classList.add('visible');render();}
   }catch(err){
-    document.getElementById('drugList').innerHTML='<div class="empty-state"><span class="es-icon">⚠️</span><div class="es-title">Failed to load</div><div class="es-sub">'+err.message+'</div></div>';
+    document.getElementById('drugList').innerHTML='<div class="empty-state"><span class="es-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️</span><div class="es-title">Failed to load</div><div class="es-sub">'+err.message+'</div></div>';
   }
 }
 
@@ -339,7 +339,7 @@ function buildAZ(){
   });
 }
 function toggleAZ(){azOpen=!azOpen;document.getElementById('azPanel').classList.toggle('open',azOpen);document.getElementById('azBtn').classList.toggle('active',azOpen);}
-function toggleSort(){sortAZ=!sortAZ;document.getElementById('sortBtn').textContent=sortAZ?'↕ Cat':'↕ A–Z';document.getElementById('sortBtn').classList.toggle('active',sortAZ);render();}
+function toggleSort(){sortAZ=!sortAZ;document.getElementById('sortBtn').textContent=sortAZ?'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#move-vertical'/></svg> Cat':'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#move-vertical'/></svg> A–Z';document.getElementById('sortBtn').classList.toggle('active',sortAZ);render();}
 
 /* SEARCH */
 document.getElementById('searchInput').addEventListener('input',function(){
@@ -370,10 +370,10 @@ function render(){
   });
   const total=entries.length;
   document.getElementById('statsCount').innerHTML='<strong>'+total+'</strong> of <strong>'+Object.keys(DRUGS).length+'</strong> medications';
-  if(total===0){list.innerHTML='<div class="empty-state"><span class="es-icon">🔍</span><div class="es-title">No results for &ldquo;'+query+'&rdquo;</div><div class="es-sub">Try a different name, class, or indication</div></div>';return;}
+  if(total===0){list.innerHTML='<div class="empty-state"><span class="es-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span><div class="es-title">No results for &ldquo;'+query+'&rdquo;</div><div class="es-sub">Try a different name, class, or indication</div></div>';return;}
   if(sortAZ){
     entries.sort((a,b)=>a[0].localeCompare(b[0]));
-    list.appendChild(buildSection({name:'All Medications',icon:'💊',color:'#3b82f6'},entries,true));
+    list.appendChild(buildSection({name:'All Medications',icon:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>',color:'#3b82f6'},entries,true));
   }else{
     const grouped={};CATS.forEach(c=>{grouped[c.name]=[];});
     entries.forEach(([n,d])=>{(grouped[d.category]=grouped[d.category]||[]).push([n,d]);});
@@ -415,7 +415,7 @@ function buildCard(name,drug,cat){
     +'<div class="dc-inds">'+allInds.map(i=>'<div class="dc-ind"><div class="dc-ind-dot" style="background:'+cc+'"></div><div class="dc-ind-text">'+hl(i)+'</div></div>').join('')+'</div>'
     +(primaryDose?'<div class="dc-dose-box"><div class="dc-dose-lbl">Primary Dose</div><div class="dc-dose-val">'+hl(primaryDose)+'</div></div>':'')
     +'</div>'
-    +'<div class="dc-arrow">→</div>'
+    +'<div class="dc-arrow"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></div>'
     +'</div>';
   return card;
 }

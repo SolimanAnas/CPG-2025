@@ -1,4 +1,4 @@
-/* ========== Chapter 6.9 – Hyperglycemia ========== */
+/* ========== Chapter 6.9 ï¿½ Hyperglycemia ========== */
 window.CPG_DATA = {
     id: "c6-9",
     title: "Hyperglycemia",

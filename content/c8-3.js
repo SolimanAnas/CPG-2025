@@ -1,4 +1,4 @@
-/* ========== Chapter 8.3 – Beta-Blocker Overdose ========== */
+/* ========== Chapter 8.3 ï¿½ Beta-Blocker Overdose ========== */
 window.CPG_DATA = {
     id: "c8-3",
     title: "Beta-Blocker Overdose",
@@ -59,13 +59,13 @@ window.CPG_DATA = {
                 </li>
                 <li><strong>IV Adrenaline (Epinephrine):</strong> Indicated if patient remains hypotensive or bradycardic after adequate fluid resuscitation and atropine.
                     <ul>
-                        <li><strong>Infusion:</strong> 0.05–0.3 mcg/kg/min IV/IO (use syringe driver when available).</li>
+                        <li><strong>Infusion:</strong> 0.05ï¿½0.3 mcg/kg/min IV/IO (use syringe driver when available).</li>
                         <li><strong>Push Dose:</strong> Adults 0.1 mg IV/IO; Pediatrics 0.001 mg/kg IV/IO, every 2-5 minutes as needed.</li>
                     </ul>
                 </li>
                 <li><strong>Glucagon:</strong> Indicated if patient remains hypotensive or bradycardic after IV adrenaline.
                     <ul>
-                        <li><strong>IV Glucagon:</strong> Adults 5 mg IVP, then 1 mg IV/IO every 5 minutes (may require 5–15 mg). Pediatrics: (25–40 kg) 1 mg IV; (<25 kg) 0.5 mg IV, repeat every 5 minutes as required.</li>
+                        <li><strong>IV Glucagon:</strong> Adults 5 mg IVP, then 1 mg IV/IO every 5 minutes (may require 5ï¿½15 mg). Pediatrics: (25ï¿½40 kg) 1 mg IV; (<25 kg) 0.5 mg IV, repeat every 5 minutes as required.</li>
                         <li><strong>IM Glucagon (if IV not available):</strong> Adults 1 mg IM; can increase to 5 mg IM (different sites) if additional available. Repeat every 10-15 minutes. Pediatrics (<20 kg) 0.5 mg IM; (>20 kg) 1 mg IM.</li>
                     </ul>
                 </li>
@@ -288,15 +288,15 @@ window.CPG_DATA = {
     ],
     flashcards: [
         { category: "Toxidrome", question: "What are signs of beta-blocker overdose?", answer: "Bradycardia, hypotension, heart block, hypoglycemia, altered mental status." },
-        { category: "Atropine dose – adult", question: "What is the adult atropine dose for beta-blocker overdose?", answer: "1 mg IV/IO every 3-5 minutes, max 3 mg." },
-        { category: "Atropine dose – pediatric", question: "What is the pediatric atropine dose?", answer: "0.02 mg/kg IV/IO (max 0.5 mg per dose), every 3-5 minutes (max 1 mg total)." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult with beta-blocker overdose?", answer: "500 mL normal saline; repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg; repeat as needed up to 80 mL/kg." },
+        { category: "Atropine dose ï¿½ adult", question: "What is the adult atropine dose for beta-blocker overdose?", answer: "1 mg IV/IO every 3-5 minutes, max 3 mg." },
+        { category: "Atropine dose ï¿½ pediatric", question: "What is the pediatric atropine dose?", answer: "0.02 mg/kg IV/IO (max 0.5 mg per dose), every 3-5 minutes (max 1 mg total)." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult with beta-blocker overdose?", answer: "500 mL normal saline; repeat as needed up to 2000 mL." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg; repeat as needed up to 80 mL/kg." },
         { category: "Adrenaline infusion", question: "What is the adrenaline infusion dose for beta-blocker overdose?", answer: "0.05-0.3 mcg/kg/min IV/IO." },
-        { category: "Glucagon dose – adult IV", question: "What is the IV glucagon dose for an adult?", answer: "5 mg IV bolus, then 1 mg every 5 minutes as needed." },
-        { category: "Glucagon dose – adult IM", question: "What is the IM glucagon dose if IV not available?", answer: "1 mg IM; can increase to 5 mg (different sites) if additional available; repeat every 10-15 minutes." },
-        { category: "Glucagon dose – pediatric IV", question: "What is the IV glucagon dose for a child?", answer: "<25 kg: 0.5 mg; 25-40 kg: 1 mg; repeat every 5 minutes." },
-        { category: "Glucagon dose – pediatric IM", question: "What is the IM glucagon dose for a child?", answer: "<20 kg: 0.5 mg; >20 kg: 1 mg; repeat every 10-15 minutes." },
+        { category: "Glucagon dose ï¿½ adult IV", question: "What is the IV glucagon dose for an adult?", answer: "5 mg IV bolus, then 1 mg every 5 minutes as needed." },
+        { category: "Glucagon dose ï¿½ adult IM", question: "What is the IM glucagon dose if IV not available?", answer: "1 mg IM; can increase to 5 mg (different sites) if additional available; repeat every 10-15 minutes." },
+        { category: "Glucagon dose ï¿½ pediatric IV", question: "What is the IV glucagon dose for a child?", answer: "<25 kg: 0.5 mg; 25-40 kg: 1 mg; repeat every 5 minutes." },
+        { category: "Glucagon dose ï¿½ pediatric IM", question: "What is the IM glucagon dose for a child?", answer: "<20 kg: 0.5 mg; >20 kg: 1 mg; repeat every 10-15 minutes." },
         { category: "Transcutaneous pacing", question: "When is transcutaneous pacing indicated?", answer: "Refractory bradycardia with hemodynamic compromise despite atropine and inotropes." },
         { category: "Hypoglycemia", question: "Why check glucose in beta-blocker overdose?", answer: "Beta-blockers (especially propranolol) can cause hypoglycemia, particularly in children." },
         { category: "Sustained-release", question: "Why monitor sustained-release formulations?", answer: "Delayed toxicity; symptoms may appear hours after ingestion." },

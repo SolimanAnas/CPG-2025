@@ -1,4 +1,4 @@
-/* ========== Chapter 10.4 – Eclampsia / Pre-eclampsia ========== */
+/* ========== Chapter 10.4 ï¿½ Eclampsia / Pre-eclampsia ========== */
 window.CPG_DATA = {
     id: "c10-4",
     title: "Eclampsia / Pre-eclampsia",
@@ -288,11 +288,11 @@ window.CPG_DATA = {
         { category: "Definition", question: "What is pre-eclampsia?", answer: "Hypertension (SBP =140 or DBP =90) with proteinuria or end-organ dysfunction after 20 weeks gestation." },
         { category: "Severe pre-eclampsia", question: "What defines severe pre-eclampsia?", answer: "SBP =160 or DBP =110 with symptoms (headache, visual changes, epigastric pain, thrombocytopenia, renal insufficiency, etc.)." },
         { category: "Eclampsia", question: "What is eclampsia?", answer: "Seizures occurring in a patient with pre-eclampsia, not attributable to other causes." },
-        { category: "HELLP syndrome", question: "What is HELLP syndrome?", answer: "Hemolysis, Elevated Liver enzymes, Low Platelets – a severe complication of pre-eclampsia." },
+        { category: "HELLP syndrome", question: "What is HELLP syndrome?", answer: "Hemolysis, Elevated Liver enzymes, Low Platelets ï¿½ a severe complication of pre-eclampsia." },
         { category: "Symptoms of pre-eclampsia", question: "What are common symptoms of pre-eclampsia?", answer: "Headache, visual disturbances, epigastric or right upper quadrant pain, nausea/vomiting, shortness of breath." },
         { category: "First-line antihypertensive", question: "What is the first-line antihypertensive for severe pre-eclampsia?", answer: "Labetalol 20 mg IV over 2 minutes; may repeat every 10 minutes (max 80 mg)." },
-        { category: "Magnesium sulphate dose – IV", question: "What is the IV dose of magnesium for eclampsia?", answer: "6 g IV over 5-10 minutes." },
-        { category: "Magnesium sulphate dose – IM", question: "What is the IM dose of magnesium for eclampsia?", answer: "8 g total: 4 g in each gluteal area." },
+        { category: "Magnesium sulphate dose ï¿½ IV", question: "What is the IV dose of magnesium for eclampsia?", answer: "6 g IV over 5-10 minutes." },
+        { category: "Magnesium sulphate dose ï¿½ IM", question: "What is the IM dose of magnesium for eclampsia?", answer: "8 g total: 4 g in each gluteal area." },
         { category: "Magnesium toxicity signs", question: "What are signs of magnesium toxicity?", answer: "Loss of deep tendon reflexes, respiratory depression, hypotension, altered mental status." },
         { category: "Magnesium toxicity treatment", question: "How is magnesium toxicity treated?", answer: "Stop magnesium infusion; give calcium gluconate 3 g IV or calcium chloride 1 g IV; support ventilation." },
         { category: "Seizure management", question: "How are eclamptic seizures managed if magnesium is not available?", answer: "Benzodiazepines: diazepam 5 mg IV or midazolam 5 mg IV/IM; may repeat once." },

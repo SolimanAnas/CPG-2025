@@ -1,4 +1,4 @@
-/* ========== Chapter 6.8 – Hypoglycemia ========== */
+/* ========== Chapter 6.8 ï¿½ Hypoglycemia ========== */
 window.CPG_DATA = {
     id: "c6-8",
     title: "Hypoglycemia",
@@ -269,9 +269,9 @@ window.CPG_DATA = {
         { category: "Symptoms", question: "What are the autonomic symptoms of hypoglycemia?", answer: "Sweating, tremor, palpitations, anxiety, hunger." },
         { category: "Neuroglycopenic symptoms", question: "What are neuroglycopenic symptoms of hypoglycemia?", answer: "Confusion, drowsiness, seizures, coma, behavioral changes." },
         { category: "Causes", question: "What are common causes of hypoglycemia in diabetics?", answer: "Excess insulin/oral agents, missed meals, increased physical activity, alcohol, infection." },
-        { category: "Treatment – conscious", question: "How should a conscious hypoglycemic patient be treated?", answer: "Oral glucose (15-20 g) or glucose paste, followed by complex carbohydrate if available." },
-        { category: "Treatment – unconscious with IV", question: "How should an unconscious hypoglycemic patient with IV access be treated?", answer: "IV dextrose 25 g (50 mL of 50% dextrose) or 10-20 g of 10% dextrose." },
-        { category: "Treatment – unconscious without IV", question: "How should an unconscious hypoglycemic patient without IV access be treated?", answer: "Glucagon 1 mg IM (adult) or 0.5 mg IM (child <20 kg)." },
+        { category: "Treatment ï¿½ conscious", question: "How should a conscious hypoglycemic patient be treated?", answer: "Oral glucose (15-20 g) or glucose paste, followed by complex carbohydrate if available." },
+        { category: "Treatment ï¿½ unconscious with IV", question: "How should an unconscious hypoglycemic patient with IV access be treated?", answer: "IV dextrose 25 g (50 mL of 50% dextrose) or 10-20 g of 10% dextrose." },
+        { category: "Treatment ï¿½ unconscious without IV", question: "How should an unconscious hypoglycemic patient without IV access be treated?", answer: "Glucagon 1 mg IM (adult) or 0.5 mg IM (child <20 kg)." },
         { category: "Glucagon", question: "When is glucagon ineffective?", answer: "In patients with depleted glycogen stores (e.g., alcoholics, malnutrition, liver disease)." },
         { category: "Pediatric dextrose", question: "What is the preferred dextrose concentration for children?", answer: "10% dextrose (2-4 mL/kg) to avoid hyperosmolar injury." },
         { category: "Recurrence", question: "Why might hypoglycemia recur after treatment?", answer: "Long-acting insulin or sulfonylureas can cause prolonged hypoglycemia." },

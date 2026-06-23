@@ -253,8 +253,8 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <body>
 
 <header class="app-header">
-  <a class="hdr-back" href="../index.html">←</a>
-  <div class="hdr-badge">🫁</div>
+  <a class="hdr-back" href="../index.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">O₂ Duration Calculator</div>
     <div class="hdr-sub">Oxygen Supply Planning · DCAS CPG 2026</div>
@@ -264,7 +264,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <main class="page-body">
 
   <div>
-    <div class="sec-label">🫙 Cylinder Size</div>
+    <div class="sec-label"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#container'/></svg> Cylinder Size</div>
     <div class="glass-card" style="padding:12px">
       <div class="cyl-grid" id="cylGrid">
         </div>
@@ -272,7 +272,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 
   <div>
-    <div class="sec-label">⏲ Gauge Pressure</div>
+    <div class="sec-label"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg> Gauge Pressure</div>
     <div class="glass-card">
       <div class="pressure-wrap">
         <div>
@@ -311,7 +311,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 
   <div>
-    <div class="sec-label">💨 Flow Rate (L/min)</div>
+    <div class="sec-label"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg> Flow Rate (L/min)</div>
     <div class="glass-card" style="padding:12px">
       <div class="flow-grid" id="flowGrid">
         </div>
@@ -327,7 +327,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 
   <div>
-    <div class="sec-label">🔢 Number of Cylinders</div>
+    <div class="sec-label"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hash'/></svg> Number of Cylinders</div>
     <div class="glass-card">
       <div class="qty-row">
         <button class="qty-btn" onclick="adjustQty(-1)">−</button>
@@ -341,12 +341,12 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   </div>
 
   <button class="calc-btn" id="calcBtn" onclick="calculate()" disabled>
-    <span style="font-size:1.1rem">🫁</span>
+    <span style="font-size:1.1rem"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg></span>
     Calculate Duration
   </button>
 
   <div id="timersSection" style="display:none">
-    <div class="sec-label">⏱ Active O₂ Timers</div>
+    <div class="sec-label"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg> Active O₂ Timers</div>
     <div class="timers-section" id="timersList"></div>
   </div>
 
@@ -357,7 +357,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     <div class="bs-handle-wrap" onclick="closeSheet()"><div class="bs-handle"></div></div>
     <div class="bs-head">
       <div class="bs-htitle">O₂ Duration Result</div>
-      <div class="bs-hclose" onclick="closeSheet()">✕</div>
+      <div class="bs-hclose" onclick="closeSheet()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></div>
     </div>
     <div class="bs-scroll" id="bsContent"></div>
   </div>
@@ -628,7 +628,7 @@ function showResultSheet(data) {
   const tier = tierFromSec(totalSec);
   const ringCls  = {safe:'rr-safe', warn:'rr-warn', danger:'rr-danger', expired:'rr-danger'}[tier];
   const pillCls  = {safe:'rsp-safe', warn:'rsp-warn', danger:'rsp-danger', expired:'rsp-danger'}[tier];
-  const sev      = {safe:'🟢 Adequate Supply', warn:'🟡 Monitor Closely', danger:'🔴 Critical — Act Now', expired:'⛔ Expired'}[tier];
+  const sev      = {safe:'🟢 Adequate Supply', warn:'🟡 Monitor Closely', danger:'🔴 Critical — Act Now', expired:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg> Expired'}[tier];
   const col      = {safe:'var(--green)', warn:'var(--yellow)', danger:'var(--red)', expired:'var(--muted)'}[tier];
   const endTime  = new Date(Date.now() + totalSec * 1000);
 
@@ -639,17 +639,17 @@ function showResultSheet(data) {
     : `Approximately ${fmtHM(totalMin)} of oxygen supply available.`;
 
   const actions = totalMin < 15 ? [
-    {i:'🚨', t:'<strong>Switch cylinder immediately</strong>', d:'Do not wait until empty. Prepare replacement before administering.'},
-    {i:'💉', t:'<strong>Increase IV fluid if O₂ unavailable</strong>', d:'Maintain airway and perfusion while sourcing additional O₂.'},
-    {i:'📡', t:'<strong>Notify team</strong>', d:'Alert crew/dispatch of O₂ status. Document time.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#siren'/></svg>', t:'<strong>Switch cylinder immediately</strong>', d:'Do not wait until empty. Prepare replacement before administering.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>', t:'<strong>Increase IV fluid if O₂ unavailable</strong>', d:'Maintain airway and perfusion while sourcing additional O₂.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>', t:'<strong>Notify team</strong>', d:'Alert crew/dispatch of O₂ status. Document time.'},
   ] : totalMin < 30 ? [
-    {i:'⏱',  t:'<strong>Plan cylinder change now</strong>', d:'Identify next cylinder. Ensure it is full before switching.'},
-    {i:'📋', t:'<strong>Document O₂ usage</strong>', d:'Record flow rate, start time, and estimated end time on patient record.'},
-    {i:'🫁', t:'<strong>Reassess FiO₂ requirements</strong>', d:'Can flow rate be safely reduced to extend duration?'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg>',  t:'<strong>Plan cylinder change now</strong>', d:'Identify next cylinder. Ensure it is full before switching.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>', t:'<strong>Document O₂ usage</strong>', d:'Record flow rate, start time, and estimated end time on patient record.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>', t:'<strong>Reassess FiO₂ requirements</strong>', d:'Can flow rate be safely reduced to extend duration?'},
   ] : [
-    {i:'📋', t:'<strong>Routine monitoring</strong>', d:'Monitor SpO₂ continuously. Reassess flow rate as clinically indicated.'},
-    {i:'🔄', t:'<strong>Cylinder change plan</strong>', d:`Expected to last until ${endTime.toLocaleTimeString()}. Prepare replacement before depletion.`},
-    {i:'🫁', t:'<strong>Document and hand over</strong>', d:'Include O₂ supply status in handover report.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>', t:'<strong>Routine monitoring</strong>', d:'Monitor SpO₂ continuously. Reassess flow rate as clinically indicated.'},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg>', t:'<strong>Cylinder change plan</strong>', d:`Expected to last until ${endTime.toLocaleTimeString()}. Prepare replacement before depletion.`},
+    {i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>', t:'<strong>Document and hand over</strong>', d:'Include O₂ supply status in handover report.'},
   ];
 
   let html = `
@@ -686,19 +686,19 @@ function showResultSheet(data) {
     </div>
 
     <div class="bs-action-card">
-      <div class="bs-act-title">🚑 EMS Actions</div>
+      <div class="bs-act-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>
       ${actions.map(a => `<div class="act-row"><div class="act-i">${a.i}</div><div class="act-t"><strong>${a.t.replace(/<[^>]+>/g,'')}</strong><br><span style="color:var(--muted);font-size:.71rem">${a.d}</span></div></div>`).join('')}
     </div>
 
     <div class="bs-action-card">
-      <div class="bs-act-title">📋 Calculation Summary</div>
-      <div class="act-row"><div class="act-i">🫙</div><div class="act-t"><strong>${label}</strong><br><span style="color:var(--muted);font-size:.71rem">Quantity: ${qty} cylinder(s) · ${state.cylinderLiters}L water volume</span></div></div>
-      <div class="act-row"><div class="act-i">⏲</div><div class="act-t"><strong>${psi} PSI → ${bar} bar</strong><br><span style="color:var(--muted);font-size:.71rem">Gauge pressure at time of calculation</span></div></div>
-      <div class="act-row"><div class="act-i">💨</div><div class="act-t"><strong>${flow} L/min flow rate</strong><br><span style="color:var(--muted);font-size:.71rem">Formula: (${qty} × ${state.cylinderLiters} × ${bar}) ÷ ${flow} = ${totalMin.toFixed(1)} min</span></div></div>
+      <div class="bs-act-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg> Calculation Summary</div>
+      <div class="act-row"><div class="act-i"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#container'/></svg></div><div class="act-t"><strong>${label}</strong><br><span style="color:var(--muted);font-size:.71rem">Quantity: ${qty} cylinder(s) · ${state.cylinderLiters}L water volume</span></div></div>
+      <div class="act-row"><div class="act-i"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg></div><div class="act-t"><strong>${psi} PSI <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg> ${bar} bar</strong><br><span style="color:var(--muted);font-size:.71rem">Gauge pressure at time of calculation</span></div></div>
+      <div class="act-row"><div class="act-i"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg></div><div class="act-t"><strong>${flow} L/min flow rate</strong><br><span style="color:var(--muted);font-size:.71rem">Formula: (${qty} × ${state.cylinderLiters} × ${bar}) ÷ ${flow} = ${totalMin.toFixed(1)} min</span></div></div>
     </div>
 
     <button class="add-tracker-btn" onclick="addToTracker(${JSON.stringify(data).replace(/"/g,'&quot;')})">
-      ⏱ Add to Live Timer
+      <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg> Add to Live Timer
     </button>`;
 
   document.getElementById('bsContent').innerHTML = html;
@@ -747,7 +747,7 @@ function tickTimers() {
 function renderTimers() {
   const list = document.getElementById('timersList');
   if (timerData.length === 0) {
-    list.innerHTML = `<div class="empty-timers"><div class="empty-icon">⏱</div><div>No active timers</div></div>`;
+    list.innerHTML = `<div class="empty-timers"><div class="empty-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#timer'/></svg></div><div>No active timers</div></div>`;
     return;
   }
   list.innerHTML = timerData.map(t => {
@@ -767,10 +767,10 @@ function renderTimers() {
             <div class="tc-title">${t.data.label} · ${t.data.flow} L/min</div>
             <div class="tc-sub">${t.data.qty} cylinder(s) · ${t.data.psi} PSI</div>
           </div>
-          <button class="tc-remove" onclick="removeTimer(${t.id})">✕</button>
+          <button class="tc-remove" onclick="removeTimer(${t.id})"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
         </div>
         <div class="tc-body">
-          <div class="tc-countdown ${txtCls}" id="tcount-${t.id}">${rem > 0 ? fmtHMS(rem) : '⛔ Expired'}</div>
+          <div class="tc-countdown ${txtCls}" id="tcount-${t.id}">${rem > 0 ? fmtHMS(rem) : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg> Expired'}</div>
           <div class="tc-end">
             <div class="tc-end-label">Ends at</div>
             <div class="tc-end-time">${endDt.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</div>
@@ -795,7 +795,7 @@ function updateTimerCard(id, remaining, totalSec) {
   const pct    = totalSec > 0 ? Math.min(100, (remaining / totalSec) * 100) : 0;
 
   if (count) {
-    count.textContent = remaining > 0 ? fmtHMS(remaining) : '⛔ Expired';
+    count.textContent = remaining > 0 ? fmtHMS(remaining) : '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ban'/></svg> Expired';
     count.className   = 'tc-countdown ' + txtCls;
   }
   if (prog) {

@@ -861,10 +861,10 @@ class ExamEngine {
         const passIndicator = document.getElementById('pass-indicator');
         if (score >= 70) {
             passIndicator.className = 'pass-indicator pass';
-            passIndicator.textContent = '✓ Pass Probability High';
+            passIndicator.textContent = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#check"/></svg> Pass Probability High';
         } else {
             passIndicator.className = 'pass-indicator fail';
-            passIndicator.textContent = '✗ Needs More Practice';
+            passIndicator.textContent = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg> Needs More Practice';
         }
         
         this.renderInsights(correct, total, topicStats);
@@ -886,11 +886,11 @@ class ExamEngine {
         const insights = [];
         
         if (percentage >= 80) {
-            insights.push({ icon: '🏆', text: 'Excellent performance!', positive: true });
+            insights.push({ icon: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#trophy"/></svg>', text: 'Excellent performance!', positive: true });
         } else if (percentage >= 70) {
-            insights.push({ icon: '👍', text: 'Good job! You passed.', positive: true });
+            insights.push({ icon: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#thumbs-up"/></svg>', text: 'Good job! You passed.', positive: true });
         } else {
-            insights.push({ icon: '💪', text: 'Keep practicing! You can improve.', positive: false });
+            insights.push({ icon: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#dumbbell"/></svg>', text: 'Keep practicing! You can improve.', positive: false });
         }
         
         const weakTopics = Object.entries(topicStats)
@@ -898,7 +898,7 @@ class ExamEngine {
             .map(([topic]) => topic);
         
         if (weakTopics.length > 0) {
-            insights.push({ icon: '📚', text: `Focus on: ${weakTopics.slice(0, 3).join(', ')}`, positive: false });
+            insights.push({ icon: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#library"/></svg>', text: `Focus on: ${weakTopics.slice(0, 3).join(', ')}`, positive: false });
         }
         
         const strongTopics = Object.entries(topicStats)
@@ -906,7 +906,7 @@ class ExamEngine {
             .map(([topic]) => topic);
         
         if (strongTopics.length > 0) {
-            insights.push({ icon: '⭐', text: `Strong in: ${strongTopics.slice(0, 3).join(', ')}`, positive: true });
+            insights.push({ icon: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#star"/></svg>', text: `Strong in: ${strongTopics.slice(0, 3).join(', ')}`, positive: true });
         }
         
         container.innerHTML = insights.map(insight => `
@@ -966,7 +966,7 @@ class ExamEngine {
                 <div class="result-header">
                     <span class="result-number">Question ${i + 1}</span>
                     <span class="result-status ${isCorrect ? 'correct' : 'incorrect'}">
-                        ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                        ${isCorrect ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#check"/></svg> Correct' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg> Incorrect'}
                     </span>
                 </div>
                 <div class="result-question">${q.text}</div>

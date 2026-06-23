@@ -1,4 +1,4 @@
-/* ========== Chapter 10.3 – PV Hemorrhage in Pregnancy ========== */
+/* ========== Chapter 10.3 ï¿½ PV Hemorrhage in Pregnancy ========== */
 window.CPG_DATA = {
     id: "c10-3",
     title: "PV Hemorrhage in Pregnancy",
@@ -67,7 +67,7 @@ window.CPG_DATA = {
 
             <h4>Documentation</h4>
             <ul>
-                <li>Patient’s full name, age, gender.</li>
+                <li>Patientï¿½s full name, age, gender.</li>
                 <li>Obstetric/gynecologic history: gestation, gravidity, parity, last menstrual period, past obstetric history, previous PV bleeds, last fetal movements.</li>
                 <li>Estimated blood loss, rate of PV bleeding, signs of hypovolemia.</li>
                 <li>Vital signs, mental status, abdominal pain, uterine tenderness.</li>
@@ -270,7 +270,7 @@ window.CPG_DATA = {
         { category: "Placenta previa", question: "What are signs of placenta previa?", answer: "Painless vaginal bleeding in third trimester." },
         { category: "Placental abruption", question: "What are signs of placental abruption?", answer: "Painful vaginal bleeding, uterine tenderness, rigid abdomen, signs of shock." },
         { category: "Initial management", question: "What is the first step in PV hemorrhage?", answer: "Primary survey (ABCs), oxygen, IV access, fluid resuscitation." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult with PV hemorrhage?", answer: "500-1000 mL crystalloid; repeat up to 2000 mL." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult with PV hemorrhage?", answer: "500-1000 mL crystalloid; repeat up to 2000 mL." },
         { category: "TXA dose", question: "What is the dose of TXA for PV hemorrhage?", answer: "1 g IV diluted in 100 mL normal saline over 10 minutes." },
         { category: "Positioning", question: "How should a pregnant patient be positioned?", answer: "Left lateral tilt to prevent supine hypotension." },
         { category: "Avoid vaginal exam", question: "Why avoid vaginal exam in third trimester bleeding?", answer: "May dislodge placenta previa and cause massive hemorrhage." },

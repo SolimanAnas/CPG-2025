@@ -1,4 +1,4 @@
-/* ========== Chapter 6.10 – Nausea and Vomiting ========== */
+/* ========== Chapter 6.10 ï¿½ Nausea and Vomiting ========== */
 window.CPG_DATA = {
     id: "c6-10",
     title: "Nausea and Vomiting",

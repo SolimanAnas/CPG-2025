@@ -1,4 +1,4 @@
-/* ========== Chapter 6.4 – Anaphylaxis / Allergic Reaction ========== */
+/* ========== Chapter 6.4 ï¿½ Anaphylaxis / Allergic Reaction ========== */
 window.CPG_DATA = {
     id: "c6-4",
     title: "Anaphylaxis / Allergic Reaction",
@@ -181,7 +181,7 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a contraindication to giving epinephrine in anaphylaxis?",
-            options: ["Pregnancy", "Age >65 years", "Hypertension", "None – it is life-saving"],
+            options: ["Pregnancy", "Age >65 years", "Hypertension", "None ï¿½ it is life-saving"],
             correct: 3,
             explanation: "There are no absolute contraindications to epinephrine in anaphylaxis; the benefits outweigh risks."
         },
@@ -265,7 +265,7 @@ window.CPG_DATA = {
         },
         {
             q: "A patient with anaphylaxis has been given epinephrine but remains hypotensive. Which fluid is preferred?",
-            options: ["5% dextrose", "Normal saline", "Ringer’s lactate", "Colloids"],
+            options: ["5% dextrose", "Normal saline", "Ringerï¿½s lactate", "Colloids"],
             correct: 1,
             explanation: "Isotonic crystalloid (normal saline) is preferred for resuscitation."
         },
@@ -282,7 +282,7 @@ window.CPG_DATA = {
             explanation: "Epinephrine should be titrated to clinical response; repeated doses are guided by symptoms and response."
         },
         {
-            q: "After administering epinephrine for anaphylaxis, the patient’s wheezing improves. What should you do next?",
+            q: "After administering epinephrine for anaphylaxis, the patientï¿½s wheezing improves. What should you do next?",
             options: ["Transport immediately", "Give diphenhydramine and hydrocortisone", "Repeat epinephrine", "Discharge home"],
             correct: 1,
             explanation: "Continue care with antihistamines and steroids; all anaphylaxis patients require transport."
@@ -302,7 +302,7 @@ window.CPG_DATA = {
         { category: "Airway compromise", question: "What are signs of airway compromise in anaphylaxis?", answer: "Stridor, hoarseness, throat swelling, drooling." },
         { category: "Biphasic reaction", question: "What is a biphasic reaction?", answer: "Recurrence of anaphylaxis symptoms after initial resolution, typically within 1-8 hours." },
         { category: "KPI", question: "What is the key performance indicator for anaphylaxis?", answer: "Administer adrenaline within 5 minutes of recognition." },
-        { category: "Contraindications to epinephrine", question: "What are the contraindications to epinephrine in anaphylaxis?", answer: "None – it is life-saving; use even with cardiovascular disease." },
+        { category: "Contraindications to epinephrine", question: "What are the contraindications to epinephrine in anaphylaxis?", answer: "None ï¿½ it is life-saving; use even with cardiovascular disease." },
         { category: "Allergen identification", question: "Why is identifying the allergen important?", answer: "To prevent future exposure and guide management." },
         { category: "Monitoring after epinephrine", question: "How often should a patient with anaphylaxis be reassessed?", answer: "Every 5-10 minutes for vital signs and response." },
         { category: "Transport decision", question: "Should all anaphylaxis patients be transported to hospital?", answer: "Yes, even if symptoms resolve, due to risk of biphasic reaction." },

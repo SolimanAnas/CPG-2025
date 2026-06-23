@@ -160,7 +160,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 <body>
 
 <header class="app-header">
-  <a href="../index.html" class="hdr-back">←</a>
+  <a href="../index.html" class="hdr-back"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
   <div class="hdr-info">
     <div class="hdr-title">Drug Index</div>
     <div class="hdr-sub">Quick reference & formulary</div>
@@ -169,15 +169,15 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 <div class="search-strip">
   <div class="search-inner">
-    <span class="search-icon">🔍</span>
+    <span class="search-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#search'/></svg></span>
     <input type="text" class="search-input" id="searchInput" placeholder="Search drugs...">
-    <button class="search-clear" id="searchClear">✕</button>
+    <button class="search-clear" id="searchClear"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg></button>
   </div>
 </div>
 
 <main class="page-body">
   <a href="../chapters/m1-38.html" class="action-card">
-    <span class="action-icon">💊</span>
+    <span class="action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg></span>
     <div class="action-title">Complete Drug Formulary</div>
     <div class="action-sub">View full M1–38 formulary with dosages, indications, and adminstraton notes</div>
   </a>
@@ -198,7 +198,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   <div id="drugList"></div>
 
   <div class="empty-state" id="emptyState" style="display:none;">
-    <div class="empty-icon">💊</div>
+    <div class="empty-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg></div>
     <div class="empty-title">No drugs found</div>
     <div class="empty-sub">Try a different search term</div>
   </div>
@@ -221,12 +221,12 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
   // Category config
   const catConfig = {
-    'Cardiac / Resus':     { icon: '❤️', color: '#ef4444', key: 'cardiac' },
-    'Airway / Respiratory': { icon: '🫁', color: '#10b981', key: 'airway' },
-    'Neuro / Sedation':     { icon: '🧠', color: '#8b5cf6', key: 'neuro' },
-    'Pain':                  { icon: '💊', color: '#f97316', key: 'pain' },
-    'Metabolic / Fluids':     { icon: '💧', color: '#06b6d4', key: 'metabolic' },
-    'Other Medications':      { icon: '🧪', color: '#94a3b8', key: 'other' }
+    'Cardiac / Resus':     { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart'/></svg>', color: '#ef4444', key: 'cardiac' },
+    'Airway / Respiratory': { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>', color: '#10b981', key: 'airway' },
+    'Neuro / Sedation':     { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg>', color: '#8b5cf6', key: 'neuro' },
+    'Pain':                  { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>', color: '#f97316', key: 'pain' },
+    'Metabolic / Fluids':     { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#droplet'/></svg>', color: '#06b6d4', key: 'metabolic' },
+    'Other Medications':      { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#flask-conical'/></svg>', color: '#94a3b8', key: 'other' }
   };
 
   async function loadData() {
@@ -253,7 +253,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   function renderCatGrid(categories, drugs) {
     catGrid.innerHTML = '';
     categories.forEach(cat => {
-      const config = catConfig[cat.name] || { icon: '💊', key: 'other' };
+      const config = catConfig[cat.name] || { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>', key: 'other' };
       const drugCount = (cat.drugs || []).length;
 
       const card = document.createElement('a');
@@ -284,7 +284,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       if (filtered.length === 0) return;
       totalVisible += filtered.length;
 
-      const config = catConfig[cat.name] || { icon: '💊', color: '#94a3b8' };
+      const config = catConfig[cat.name] || { icon: '<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#pill'/></svg>', color: '#94a3b8' };
 
       const section = document.createElement('div');
       section.className = 'drug-section';
@@ -315,7 +315,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
         item.innerHTML = `
           <span class="drug-badge" style="background:${config.color}"></span>
           <span class="drug-name">${drugName}</span>
-          <span class="drug-arrow">→</span>
+          <span class="drug-arrow"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></span>
         `;
 
         item.onclick = () => {

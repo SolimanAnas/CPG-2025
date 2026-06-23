@@ -1,4 +1,4 @@
-/* ========== Chapter 7.2 – Burns ========== */
+/* ========== Chapter 7.2 ï¿½ Burns ========== */
 window.CPG_DATA = {
     id: "c7-2",
     title: "Burns",
@@ -39,7 +39,7 @@ window.CPG_DATA = {
             <h4>Key Assessment Points</h4>
             <ul>
                 <li><strong>Airway Assessment:</strong> Look for facial burns, singed nasal hairs, carbonaceous sputum, stridor, hoarseness (suggest inhalation injury). Consider early airway protection.</li>
-                <li><strong>Breathing:</strong> Listen for voice changes, wheezing, or stridor. Evaluate for carbon monoxide (CO) exposure – suspect in enclosed-space fires; headache, nausea, confusion; SpO2 may be normal.</li>
+                <li><strong>Breathing:</strong> Listen for voice changes, wheezing, or stridor. Evaluate for carbon monoxide (CO) exposure ï¿½ suspect in enclosed-space fires; headache, nausea, confusion; SpO2 may be normal.</li>
                 <li><strong>Circulation:</strong> Check for hypovolemia, especially in large burns or electrical injuries. Evaluate peripheral pulses in circumferential limb burns (risk of compartment syndrome).</li>
                 <li><strong>Neurological Status:</strong> Assess for altered mental status (suggests hypoxia, CO poisoning, or associated trauma).</li>
                 <li><strong>Burn Depth Classification:</strong>
@@ -61,14 +61,14 @@ window.CPG_DATA = {
                 <li><strong>Oxygen Therapy:</strong> Administer 100% oxygen via non-rebreather mask to all patients with suspected inhalation injury or CO exposure. Continue throughout transport.</li>
                 <li><strong>Pain Management:</strong> Assess and manage pain as per Pain Management CPG.</li>
                 <li><strong>Burn Cooling (First Aid):</strong> Cool thermal burns with cool running water for up to 20 minutes if within 3 hours of injury. Avoid ice, prolonged cooling, or soaking (may cause hypothermia).</li>
-                <li><strong>Chemical Burns:</strong> Remove clothing and brush off dry chemicals; irrigate continuously with copious water for at least 15–30 minutes.</li>
+                <li><strong>Chemical Burns:</strong> Remove clothing and brush off dry chemicals; irrigate continuously with copious water for at least 15ï¿½30 minutes.</li>
                 <li><strong>Electrical Burns:</strong> Monitor for cardiac arrhythmias; assume deep tissue injury regardless of surface appearance; treat for associated trauma (fall, blast).</li>
                 <li><strong>Establish IV Access:</strong> Indicated for fluid or medication administration. Consider IO access if IV cannot be attained.</li>
                 <li><strong>Fluid Resuscitation:</strong> Indicated for burns >10% TBSA in children or >15% in adults. Start fluids prehospital if transport time >30 min or patient is hypotensive.
                     <ul>
                         <li>Adults: 250-500 mL bolus, repeat as needed (up to 2000 mL).</li>
                         <li>Pediatrics: 10-20 mL/kg bolus, repeat as needed (max 40 mL/kg).</li>
-                        <li>If time permits, use Parkland Formula (4 mL × weight kg × % TBSA) – give first half over 8 hours.</li>
+                        <li>If time permits, use Parkland Formula (4 mL ï¿½ weight kg ï¿½ % TBSA) ï¿½ give first half over 8 hours.</li>
                     </ul>
                 </li>
                 <li><strong>Prevent Hypothermia:</strong> Cover patient with foil blanket or clean sheets; keep ambient temperature warm.</li>
@@ -78,9 +78,9 @@ window.CPG_DATA = {
 
             <h4>Patient Safety Considerations</h4>
             <ul>
-                <li>Avoid ice packs or creams in the field; use only sterile or clean coverings — no cotton.</li>
+                <li>Avoid ice packs or creams in the field; use only sterile or clean coverings ï¿½ no cotton.</li>
                 <li>Do not break blisters or debride.</li>
-                <li>Avoid overhydration — titrate fluids carefully.</li>
+                <li>Avoid overhydration ï¿½ titrate fluids carefully.</li>
                 <li>Always consider airway risk even in the absence of early symptoms.</li>
             </ul>
 
@@ -186,9 +186,9 @@ window.CPG_DATA = {
         },
         {
             q: "What is the Parkland formula for fluid resuscitation in burns?",
-            options: ["2 mL × kg × %TBSA", "4 mL × kg × %TBSA", "6 mL × kg × %TBSA", "10 mL × kg × %TBSA"],
+            options: ["2 mL ï¿½ kg ï¿½ %TBSA", "4 mL ï¿½ kg ï¿½ %TBSA", "6 mL ï¿½ kg ï¿½ %TBSA", "10 mL ï¿½ kg ï¿½ %TBSA"],
             correct: 1,
-            explanation: "Parkland formula: 4 mL × weight (kg) × %TBSA (second and third degree)."
+            explanation: "Parkland formula: 4 mL ï¿½ weight (kg) ï¿½ %TBSA (second and third degree)."
         },
         {
             q: "Which of the following is NOT a reason to start fluids prehospital in a burn patient?",
@@ -297,14 +297,14 @@ window.CPG_DATA = {
         { category: "Burn depth", question: "What are the characteristics of a superficial (1st degree) burn?", answer: "Red, dry, painful; no blistering." },
         { category: "Partial thickness burn", question: "What are the characteristics of a partial thickness (2nd degree) burn?", answer: "Blistered, moist, very painful." },
         { category: "Full thickness burn", question: "What are the characteristics of a full thickness (3rd degree) burn?", answer: "Leathery, dry, insensate; may appear white or charred." },
-        { category: "Rule of Nines – adult", question: "What are the TBSA percentages in the Rule of Nines for adults?", answer: "Head 9%, each arm 9%, each leg 18%, trunk 36%, perineum 1%." },
+        { category: "Rule of Nines ï¿½ adult", question: "What are the TBSA percentages in the Rule of Nines for adults?", answer: "Head 9%, each arm 9%, each leg 18%, trunk 36%, perineum 1%." },
         { category: "Inhalation injury signs", question: "What are signs of inhalation injury?", answer: "Facial burns, singed nasal hairs, carbonaceous sputum, hoarseness, stridor." },
         { category: "CO poisoning", question: "How is carbon monoxide poisoning treated?", answer: "High-flow oxygen (100% via NRB) to reduce carboxyhemoglobin half-life." },
         { category: "Burn cooling", question: "How should thermal burns be cooled?", answer: "Cool running water for up to 20 minutes within 3 hours of injury." },
         { category: "Chemical burn irrigation", question: "How long should chemical burns be irrigated?", answer: "At least 15-30 minutes with copious water." },
         { category: "Electrical burn monitoring", question: "What monitoring is required for electrical burns?", answer: "Continuous ECG, SpO2, blood pressure; assume deep tissue injury." },
         { category: "Fluid resuscitation indication", question: "When should fluids be given for burns?", answer: "Burns >15% TBSA in adults, >10% in children, or hypotension." },
-        { category: "Parkland formula", question: "What is the Parkland formula?", answer: "4 mL × weight (kg) × %TBSA; first half given over 8 hours." },
+        { category: "Parkland formula", question: "What is the Parkland formula?", answer: "4 mL ï¿½ weight (kg) ï¿½ %TBSA; first half given over 8 hours." },
         { category: "Adult fluid bolus", question: "What is the initial fluid bolus for an adult burn patient?", answer: "250-500 mL crystalloid; may repeat up to 2000 mL." },
         { category: "Pediatric fluid bolus", question: "What is the initial fluid bolus for a pediatric burn patient?", answer: "10-20 mL/kg crystalloid; may repeat up to 40 mL/kg." },
         { category: "Hypothermia prevention", question: "How can hypothermia be prevented in burn patients?", answer: "Remove wet clothing, cover with thermal blanket, limit exposure, warm environment." },

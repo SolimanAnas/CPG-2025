@@ -1,4 +1,4 @@
-/* ========== Chapter 8.1 – General Toxicology Management ========== */
+/* ========== Chapter 8.1 ï¿½ General Toxicology Management ========== */
 window.CPG_DATA = {
     id: "c8-1",
     title: "General Toxicology Management",
@@ -60,7 +60,7 @@ window.CPG_DATA = {
                 <li><strong>Oxygen Therapy:</strong> High-flow oxygen for altered LOC, respiratory distress, or suspected CO poisoning; target SpO2 =94%.</li>
                 <li><strong>Specific Therapy / Medication Administration:</strong> If opioid overdose suspected ? go to Opioid Overdose CPG. If calcium channel blocker or beta-blocker overdose suspected ? go to specific CPGs. If organophosphate poisoning suspected ? go to Organophosphate Poisoning CPG.</li>
                 <li><strong>IV Access:</strong> Obtain IV access if patient is hypotensive, vomiting, or unconscious.</li>
-                <li><strong>Fluid Administration:</strong> If signs of shock present, administer 10–20 mL/kg 0.9% NaCl bolus (adults 250-500 mL, pediatrics 10-20 mL/kg).</li>
+                <li><strong>Fluid Administration:</strong> If signs of shock present, administer 10ï¿½20 mL/kg 0.9% NaCl bolus (adults 250-500 mL, pediatrics 10-20 mL/kg).</li>
                 <li><strong>ECG Monitoring:</strong> Monitor for bradycardia, wide QRS, arrhythmias; perform 12-lead ECG if patient is stable enough.</li>
                 <li><strong>Patient Reassessment:</strong> Frequently reassess pupil size/reactivity, seizures/twitching, response to interventions, signs of deterioration, and scene/crew safety.</li>
                 <li><strong>Transport & Early Notification:</strong> Transport all symptomatic patients; notify hospital if ingestion of cardiotoxic agents or pediatric patient with possible toxic ingestion.</li>
@@ -77,7 +77,7 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li>Many overdoses are mixed; don’t focus on one substance unless confirmed.</li>
+                <li>Many overdoses are mixed; donï¿½t focus on one substance unless confirmed.</li>
                 <li>ECG changes may indicate sodium channel or potassium channel toxicity (e.g., TCA, lithium).</li>
                 <li>In pediatric ingestions, even small amounts can be lethal (e.g., calcium channel blockers, opioids, hydrocarbons).</li>
                 <li>Consider scene safety: hazardous substances, paraphernalia, agitated patients.</li>
@@ -284,15 +284,15 @@ window.CPG_DATA = {
         }
     ],
     flashcards: [
-        { category: "Toxidrome – Opioid", question: "What are the signs of opioid toxidrome?", answer: "CNS depression, miosis (pinpoint pupils), respiratory depression, bradycardia." },
-        { category: "Toxidrome – Anticholinergic", question: "What are the signs of anticholinergic toxidrome?", answer: "Dry skin, hyperthermia, delirium, tachycardia, dilated pupils (blind as a bat, dry as a bone, red as a beet, mad as a hatter)." },
-        { category: "Toxidrome – Sympathomimetic", question: "What are the signs of sympathomimetic toxidrome?", answer: "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils." },
-        { category: "Toxidrome – Cholinergic", question: "What are the signs of cholinergic toxidrome?", answer: "SLUDGE: salivation, lacrimation, urination, defecation, GI upset, emesis; also bronchospasm, miosis." },
-        { category: "Toxidrome – Sedative-hypnotic", question: "What are the signs of sedative-hypnotic toxidrome?", answer: "CNS depression, normal or small pupils, hypotension, bradycardia." },
+        { category: "Toxidrome ï¿½ Opioid", question: "What are the signs of opioid toxidrome?", answer: "CNS depression, miosis (pinpoint pupils), respiratory depression, bradycardia." },
+        { category: "Toxidrome ï¿½ Anticholinergic", question: "What are the signs of anticholinergic toxidrome?", answer: "Dry skin, hyperthermia, delirium, tachycardia, dilated pupils (blind as a bat, dry as a bone, red as a beet, mad as a hatter)." },
+        { category: "Toxidrome ï¿½ Sympathomimetic", question: "What are the signs of sympathomimetic toxidrome?", answer: "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils." },
+        { category: "Toxidrome ï¿½ Cholinergic", question: "What are the signs of cholinergic toxidrome?", answer: "SLUDGE: salivation, lacrimation, urination, defecation, GI upset, emesis; also bronchospasm, miosis." },
+        { category: "Toxidrome ï¿½ Sedative-hypnotic", question: "What are the signs of sedative-hypnotic toxidrome?", answer: "CNS depression, normal or small pupils, hypotension, bradycardia." },
         { category: "Decontamination", question: "How should a chemical skin exposure be managed?", answer: "Remove contaminated clothing, irrigate with copious water for at least 15-30 minutes." },
         { category: "Indications for ALS backup", question: "When should ALS be requested in toxicology?", answer: "GCS <13, seizures, dysrhythmias, cardiovascular instability, or need for advanced airway." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult with toxic ingestion and shock?", answer: "250-500 mL crystalloid, repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial fluid bolus for a pediatric patient with toxic ingestion and shock?", answer: "10-20 mL/kg crystalloid, repeat as needed up to 60 mL/kg." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult with toxic ingestion and shock?", answer: "250-500 mL crystalloid, repeat as needed up to 2000 mL." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial fluid bolus for a pediatric patient with toxic ingestion and shock?", answer: "10-20 mL/kg crystalloid, repeat as needed up to 60 mL/kg." },
         { category: "ECG in TCA overdose", question: "What ECG finding is concerning in TCA overdose?", answer: "Widened QRS (>100 ms), prolonged QT, right axis deviation." },
         { category: "ECG in calcium channel blocker overdose", question: "What ECG findings are seen in CCB overdose?", answer: "Bradycardia, heart block, hypotension." },
         { category: "Pediatric ingestions", question: "Why are pediatric ingestions particularly dangerous?", answer: "Small body weight means even a single adult pill can cause severe toxicity." },

@@ -1,4 +1,4 @@
-/* ========== Chapter 6.14 – Suspected Alcohol Intoxication ========== */
+/* ========== Chapter 6.14 ï¿½ Suspected Alcohol Intoxication ========== */
 window.CPG_DATA = {
     id: "c6-14",
     title: "Suspected Alcohol Intoxication",
@@ -89,7 +89,7 @@ window.CPG_DATA = {
                 <li><strong>Alcohol Withdrawal:</strong> Patients with chronic alcohol use may present with withdrawal symptoms (tremors, seizures, delirium tremens) which require transport.</li>
                 <li><strong>Co-ingestion:</strong> Suspect other substances if the level of intoxication is disproportionate to reported alcohol intake.</li>
                 <li><strong>Pediatric Considerations:</strong> Alcohol intoxication in children is always concerning; transport for evaluation.</li>
-                <li><strong>Documentation:</strong> Record “acetone breath” unless alcohol intoxication is confirmed by blood testing.</li>
+                <li><strong>Documentation:</strong> Record ï¿½acetone breathï¿½ unless alcohol intoxication is confirmed by blood testing.</li>
             </ul>
 
             <h4>Documentation</h4>

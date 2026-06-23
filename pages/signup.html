@@ -164,7 +164,7 @@
     </div>
 
     <div class="login-redirect">
-      Already have a DCAS CPG profile? <a href="login.html">Sign in →</a>
+      Already have a DCAS CPG profile? <a href="login.html">Sign in <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-right'/></svg></a>
     </div>
   </div>
 </div>
@@ -193,7 +193,7 @@
       return pwd.length >= 8;
     }
 
-    // 🚀 UPDATED: Now an async function that talks to your Python backend
+    // <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rocket'/></svg> UPDATED: Now an async function that talks to your Python backend
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
       clearMessage();
@@ -205,13 +205,13 @@
       const confirmPwd = document.getElementById('confirmPassword').value;
       const termsAccepted = document.getElementById('termsCheckbox').checked;
 
-      if (!fullName) { showMessage('❌ Full name is required for credentialing.', true); return; }
-      if (fullName.length < 2) { showMessage('❌ Please enter a valid full name.', true); return; }
-      if (!email || !validateEmail(email)) { showMessage('❌ Enter a valid professional email.', true); return; }
-      if (!professionalLevel) { showMessage('⚠️ Please select your professional level.', true); return; }
-      if (!password || !validatePasswordStrength(password)) { showMessage('🔐 Password must be at least 8 characters long.', true); return; }
-      if (password !== confirmPwd) { showMessage('✖️ Passwords do not match. Please re-enter.', true); return; }
-      if (!termsAccepted) { showMessage('📜 You must agree to the DCAS Clinical Terms to register.', true); return; }
+      if (!fullName) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Full name is required for credentialing.', true); return; }
+      if (fullName.length < 2) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Please enter a valid full name.', true); return; }
+      if (!email || !validateEmail(email)) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Enter a valid professional email.', true); return; }
+      if (!professionalLevel) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️ Please select your professional level.', true); return; }
+      if (!password || !validatePasswordStrength(password)) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#key-round'/></svg> Password must be at least 8 characters long.', true); return; }
+      if (password !== confirmPwd) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#x'/></svg>️ Passwords do not match. Please re-enter.', true); return; }
+      if (!termsAccepted) { showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#scroll'/></svg> You must agree to the DCAS Clinical Terms to register.', true); return; }
 
       // Show loading state
       const submitBtn = form.querySelector('.register-btn');
@@ -219,7 +219,7 @@
       submitBtn.style.opacity = '0.7';
       showMessage('Communicating with secure server...', false);
 
-      // 🔄 The REAL Fetch Request to server.py
+      // <svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg> The REAL Fetch Request to server.py
       try {
         const response = await fetch('/api/register', {
           method: 'POST',
@@ -238,18 +238,18 @@
         const data = await response.json();
 
         if (response.ok) {
-            showMessage(`✅ Welcome, ${fullName.split(' ')[0]}! Your profile has been created. Redirecting...`, false);
+            showMessage(`<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-check-big'/></svg> Welcome, ${fullName.split(' ')[0]}! Your profile has been created. Redirecting...`, false);
             setTimeout(() => {
                 window.location.replace('login.html');
             }, 1800);
         } else {
             // Handle duplicate email or server errors
-            showMessage('❌ ' + (data.error || 'Registration failed.'), true);
+            showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> ' + (data.error || 'Registration failed.'), true);
             submitBtn.disabled = false;
             submitBtn.style.opacity = '1';
         }
       } catch (err) {
-        showMessage('❌ Server connection failed. Is the Python server running?', true);
+        showMessage('<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-x'/></svg> Server connection failed. Is the Python server running?', true);
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
       }

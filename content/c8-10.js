@@ -1,4 +1,4 @@
-/* ========== Chapter 8.10 – Hyperthermia / Heat Exposure ========== */
+/* ========== Chapter 8.10 ï¿½ Hyperthermia / Heat Exposure ========== */
 window.CPG_DATA = {
     id: "c8-10",
     title: "Hyperthermia / Heat Exposure",
@@ -19,7 +19,7 @@ window.CPG_DATA = {
                     <ul>
                         <li>Exposure to hot environments (e.g., high ambient temperatures, exertion in heat).</li>
                         <li>Clinical features such as elevated body temperature, headache, nausea/vomiting, syncope, heat cramps, CNS involvement (e.g., ataxia, confusion, seizures), hot/dry skin, or hypotension.</li>
-                        <li>Core temperature above 37°C, often >40°C in heat stroke, as measured or estimated.</li>
+                        <li>Core temperature above 37ï¿½C, often >40ï¿½C in heat stroke, as measured or estimated.</li>
                         <li>History of prolonged heat exposure, physical exertion, or inadequate hydration in hot conditions.</li>
                     </ul>
                 </li>
@@ -35,8 +35,8 @@ window.CPG_DATA = {
                 <li><strong>Primary and Secondary Survey:</strong> Perform as per Universal Care CPG. Consider non-environmental causes of hyperthermia (e.g., infections, medications).</li>
                 <li><strong>Differentiation of Conditions:</strong>
                     <ul>
-                        <li><strong>Heat Exhaustion:</strong> Elevated body temperature (typically 37–40°C), headache, nausea/vomiting, syncope, heat cramps, poor circulation, dehydration.</li>
-                        <li><strong>Heat Stroke:</strong> Core temperature usually >40°C, neurological dysfunction (delirium, confusion, seizures, loss of consciousness), hot/dry skin, hypotension; recognize exertional (from activity) vs. non-exertional (vulnerable populations like elderly).</li>
+                        <li><strong>Heat Exhaustion:</strong> Elevated body temperature (typically 37ï¿½40ï¿½C), headache, nausea/vomiting, syncope, heat cramps, poor circulation, dehydration.</li>
+                        <li><strong>Heat Stroke:</strong> Core temperature usually >40ï¿½C, neurological dysfunction (delirium, confusion, seizures, loss of consciousness), hot/dry skin, hypotension; recognize exertional (from activity) vs. non-exertional (vulnerable populations like elderly).</li>
                     </ul>
                 </li>
                 <li><strong>Severity Grading:</strong>
@@ -46,7 +46,7 @@ window.CPG_DATA = {
                     </ul>
                 </li>
                 <li><strong>Monitoring:</strong> Assess for dehydration, electrolyte imbalances, and altered mental status. Monitor ECG for arrhythmias secondary to electrolyte imbalances.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for heat stroke (CNS involvement, core temperature >40°C, hypotension).</li>
+                <li><strong>Determine Triage Category:</strong> Red priority for heat stroke (CNS involvement, core temperature >40ï¿½C, hypotension).</li>
             </ul>
 
             <h4>Patient Management & Interventions</h4>
@@ -58,7 +58,7 @@ window.CPG_DATA = {
                     <ul>
                         <li><strong>General Cooling:</strong> Strip/remove clothing and loosen restrictive garments; spray/mist skin with tepid water; fan to promote evaporation; apply ice/cold packs to axilla, groin, and posterior neck.</li>
                         <li><strong>Heat Exhaustion:</strong> Passive cooling (remove from heat, fan, remove clothing).</li>
-                        <li><strong>Heat Stroke:</strong> Aggressive active cooling as priority ("cool first, transport second"). Aim for cooling rate of 0.15°C/min or more. Target reduction to 38.6–39.4°C to avoid overcooling. Methods include: cold water immersion (gold standard if available), or ice packs/fans during transport.</li>
+                        <li><strong>Heat Stroke:</strong> Aggressive active cooling as priority ("cool first, transport second"). Aim for cooling rate of 0.15ï¿½C/min or more. Target reduction to 38.6ï¿½39.4ï¿½C to avoid overcooling. Methods include: cold water immersion (gold standard if available), or ice packs/fans during transport.</li>
                     </ul>
                 </li>
                 <li><strong>PO Fluids and Electrolytes:</strong> Indicated for heat exhaustion (provided patient is alert and able to swallow).</li>
@@ -85,12 +85,12 @@ window.CPG_DATA = {
                 <li><strong>Non-Environmental Hyperthermia:</strong> Consider intrinsic causes (e.g., malignant hyperthermia, drug toxicity) and manage accordingly.</li>
                 <li><strong>Special Populations:</strong> Elderly, children, and those with comorbidities are at higher risk; exertional heat stroke common in athletes.</li>
                 <li><strong>Antipyretics:</strong> Avoid antipyretics (e.g., acetaminophen) as they are ineffective; focus on external cooling.</li>
-                <li><strong>Cooling Goal:</strong> Aim for cooling rate of 0.15°C/min or more; target temperature 38.6–39.4°C to avoid overcooling.</li>
+                <li><strong>Cooling Goal:</strong> Aim for cooling rate of 0.15ï¿½C/min or more; target temperature 38.6ï¿½39.4ï¿½C to avoid overcooling.</li>
             </ul>
 
             <h4>Documentation</h4>
             <ul>
-                <li>Patient’s full name, age, and gender.</li>
+                <li>Patientï¿½s full name, age, and gender.</li>
                 <li>Description of heat exposure (e.g., environment, exertion), duration.</li>
                 <li>Initial temperature (if measured), clinical features, non-environmental causes considered.</li>
                 <li>Vital signs, neurological status, skin condition, severity classification.</li>
@@ -110,9 +110,9 @@ window.CPG_DATA = {
     quiz: [
         {
             q: "What is the defining feature that distinguishes heat stroke from heat exhaustion?",
-            options: ["Core temperature >40°C", "Altered mental status", "Hot, dry skin", "All of the above"],
+            options: ["Core temperature >40ï¿½C", "Altered mental status", "Hot, dry skin", "All of the above"],
             correct: 1,
-            explanation: "Heat stroke is characterized by central nervous system dysfunction (altered mental status, seizures, coma), often with core temperature >40°C."
+            explanation: "Heat stroke is characterized by central nervous system dysfunction (altered mental status, seizures, coma), often with core temperature >40ï¿½C."
         },
         {
             q: "What is the initial cooling intervention for a patient with heat stroke?",
@@ -128,9 +128,9 @@ window.CPG_DATA = {
         },
         {
             q: "What is the target cooling rate for heat stroke?",
-            options: ["0.05°C/min", "0.15°C/min or more", "0.5°C/min", "1°C/min"],
+            options: ["0.05ï¿½C/min", "0.15ï¿½C/min or more", "0.5ï¿½C/min", "1ï¿½C/min"],
             correct: 1,
-            explanation: "Aim for cooling rate of at least 0.15°C/min to rapidly reduce core temperature."
+            explanation: "Aim for cooling rate of at least 0.15ï¿½C/min to rapidly reduce core temperature."
         },
         {
             q: "What is the initial IV fluid bolus for an adult with heat stroke?",
@@ -164,9 +164,9 @@ window.CPG_DATA = {
         },
         {
             q: "What is the target core temperature during cooling for heat stroke?",
-            options: ["<37°C", "38.6–39.4°C", "36°C", "40°C"],
+            options: ["<37ï¿½C", "38.6ï¿½39.4ï¿½C", "36ï¿½C", "40ï¿½C"],
             correct: 1,
-            explanation: "Cool to 38.6–39.4°C to avoid overcooling and complications."
+            explanation: "Cool to 38.6ï¿½39.4ï¿½C to avoid overcooling and complications."
         },
         {
             q: "A patient with heat stroke has a seizure. What is the priority?",
@@ -283,20 +283,20 @@ window.CPG_DATA = {
             explanation: "Cold water immersion is the gold standard for rapid cooling in heat stroke."
         },
         {
-            q: "A patient with heat stroke has a core temperature of 41°C. After 15 minutes of cooling, temperature is 39.5°C. What should you do?",
-            options: ["Continue cooling until <38°C", "Stop cooling", "Continue cooling to 38.6-39.4°C", "Switch to passive cooling"],
+            q: "A patient with heat stroke has a core temperature of 41ï¿½C. After 15 minutes of cooling, temperature is 39.5ï¿½C. What should you do?",
+            options: ["Continue cooling until <38ï¿½C", "Stop cooling", "Continue cooling to 38.6-39.4ï¿½C", "Switch to passive cooling"],
             correct: 2,
-            explanation: "Cool to 38.6–39.4°C to avoid overcooling; once achieved, stop active cooling."
+            explanation: "Cool to 38.6ï¿½39.4ï¿½C to avoid overcooling; once achieved, stop active cooling."
         }
     ],
     flashcards: [
-        { category: "Definition", question: "What is heat stroke?", answer: "Life-threatening condition with core temperature >40°C and CNS dysfunction." },
+        { category: "Definition", question: "What is heat stroke?", answer: "Life-threatening condition with core temperature >40ï¿½C and CNS dysfunction." },
         { category: "Heat exhaustion", question: "What is heat exhaustion?", answer: "Milder form with elevated temperature, dehydration, but no CNS involvement." },
-        { category: "Cooling goal", question: "What is the target cooling rate for heat stroke?", answer: "0.15°C/min or more." },
-        { category: "Target temperature", question: "What core temperature should be achieved during cooling?", answer: "38.6–39.4°C to avoid overcooling." },
+        { category: "Cooling goal", question: "What is the target cooling rate for heat stroke?", answer: "0.15ï¿½C/min or more." },
+        { category: "Target temperature", question: "What core temperature should be achieved during cooling?", answer: "38.6ï¿½39.4ï¿½C to avoid overcooling." },
         { category: "Active cooling methods", question: "What are effective active cooling methods?", answer: "Cold water immersion, ice packs to neck/axilla/groin, evaporative cooling (mist + fans)." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial IV fluid bolus for an adult with heat stroke?", answer: "500 mL normal saline or Ringer's lactate; repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial IV fluid bolus for a child with hyperthermia?", answer: "10 mL/kg crystalloid; may repeat up to 40 mL/kg total." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial IV fluid bolus for an adult with heat stroke?", answer: "500 mL normal saline or Ringer's lactate; repeat as needed up to 2000 mL." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial IV fluid bolus for a child with hyperthermia?", answer: "10 mL/kg crystalloid; may repeat up to 40 mL/kg total." },
         { category: "Antipyretics", question: "Are antipyretics effective for heat stroke?", answer: "No, because hyperthermia is not due to a reset hypothalamic set point." },
         { category: "Seizure management", question: "How are seizures in heat stroke managed?", answer: "Protect airway, give benzodiazepines (midazolam or diazepam)." },
         { category: "Risk factors", question: "What are risk factors for heat stroke?", answer: "Age extremes, exertion, obesity, dehydration, medications (anticholinergics, diuretics)." },
@@ -314,7 +314,7 @@ window.CPG_DATA = {
     critical: [
         {
             id: "crit_8_10_1",
-            scenario: "A 25-year-old athlete collapses after a marathon. He is unresponsive, has hot, dry skin, and a core temperature of 41°C. What is the priority?",
+            scenario: "A 25-year-old athlete collapses after a marathon. He is unresponsive, has hot, dry skin, and a core temperature of 41ï¿½C. What is the priority?",
             question: "What should you do first?",
             options: [
                 { t: "Start IV fluids", f: "Fluids are important, but cooling is the priority." },
@@ -328,7 +328,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_8_10_2",
-            scenario: "A 70-year-old male is found in a non-air-conditioned home during a heat wave. He is confused, with a core temperature of 40.5°C, BP 90/60, HR 120. What is the priority?",
+            scenario: "A 70-year-old male is found in a non-air-conditioned home during a heat wave. He is confused, with a core temperature of 40.5ï¿½C, BP 90/60, HR 120. What is the priority?",
             question: "What should you do?",
             options: [
                 { t: "Give 500 mL normal saline IV", f: "Fluids are needed, but cooling is the priority." },
@@ -370,7 +370,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_8_10_5",
-            scenario: "A 30-year-old male with heat stroke has been cooled to 38.8°C and is now shivering. What should you do?",
+            scenario: "A 30-year-old male with heat stroke has been cooled to 38.8ï¿½C and is now shivering. What should you do?",
             question: "What is the appropriate action?",
             options: [
                 { t: "Stop cooling", f: "Correct. Target reached; stop active cooling to prevent afterdrop." },
@@ -379,7 +379,7 @@ window.CPG_DATA = {
                 { t: "Increase cooling", f: "Contraindicated." }
             ],
             correct: 0,
-            explanation: "Once target temperature (38.6–39.4°C) is reached, stop active cooling to avoid overcooling and shivering.",
+            explanation: "Once target temperature (38.6ï¿½39.4ï¿½C) is reached, stop active cooling to avoid overcooling and shivering.",
             kpi: "Cooling discontinued appropriately."
         }
     ]

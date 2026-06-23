@@ -255,8 +255,8 @@ body::before{
 .opt-btn.selected .opt-check{
   background:var(--cyan);border-color:var(--cyan);
 }
-.opt-btn.selected .opt-check::after{
-  content:'✓';font-size:.65rem;color:#fff;font-weight:900;
+.opt-btn.selected .opt-check::after{content:"";display:inline-block;width:1em;height:1em;vertical-align:-.125em;background-color:currentColor;-webkit-mask:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%206%209%2017l-5-5'%20/%3E%3C/svg%3E") no-repeat center/contain;mask:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%206%209%2017l-5-5'%20/%3E%3C/svg%3E") no-repeat center/contain;
+  ;font-size:.65rem;color:#fff;font-weight:900;
 }
 
 /* ── BOTTOM SHEET ───────────────────────────────────── */
@@ -382,13 +382,13 @@ body::before{
 
 <!-- ── HEADER ──────────────────────────────────────────── -->
 <header class="app-header">
-  <a class="hdr-back" href="ems-tools.html">←</a>
-  <div class="hdr-badge">🧠</div>
+  <a class="hdr-back" href="ems-tools.html"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#arrow-left'/></svg></a>
+  <div class="hdr-badge"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg></div>
   <div class="hdr-info">
     <div class="hdr-title">GCS Calculator</div>
     <div class="hdr-sub">Glasgow Coma Scale · DCAS CPG 2026</div>
   </div>
-  <button class="hdr-reset" onclick="resetAll()">↺ Reset</button>
+  <button class="hdr-reset" onclick="resetAll()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> Reset</button>
 </header>
 
 <!-- ── LIVE SCORE STRIP ─────────────────────────────────── -->
@@ -622,31 +622,31 @@ body::before{
 
       <!-- EMS Actions -->
       <div class="bs-section">
-        <div class="bs-sec-title">🚑 EMS Actions</div>
+        <div class="bs-sec-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#ambulance'/></svg> EMS Actions</div>
         <div id="emsActions"></div>
       </div>
 
       <!-- Clinical Tips -->
       <div class="bs-section">
-        <div class="bs-sec-title">💡 Clinical Pearls</div>
+        <div class="bs-sec-title"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#lightbulb'/></svg> Clinical Pearls</div>
         <div class="bs-action-row">
-          <div class="bs-action-icon">📋</div>
+          <div class="bs-action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg></div>
           <div class="bs-action-text">Document as <strong>GCS E_V_M = Total</strong> (e.g. GCS E2V3M4 = 9). Never document total alone.</div>
         </div>
         <div class="bs-action-row">
-          <div class="bs-action-icon">⚠️</div>
+          <div class="bs-action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#triangle-alert'/></svg>️</div>
           <div class="bs-action-text"><strong>GCS ≤8 = Intubation threshold</strong> — protect the airway. Consider RSI.</div>
         </div>
         <div class="bs-action-row">
-          <div class="bs-action-icon">🔄</div>
+          <div class="bs-action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#refresh-ccw'/></svg></div>
           <div class="bs-action-text">Reassess GCS every <strong>15 min</strong> en route. A drop of <strong>2+ points</strong> indicates deterioration.</div>
         </div>
         <div class="bs-action-row">
-          <div class="bs-action-icon">🧠</div>
+          <div class="bs-action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#brain'/></svg></div>
           <div class="bs-action-text"><strong>Decorticate (M3)</strong> = cortical injury above the midbrain. <strong>Decerebrate (M2)</strong> = midbrain/brainstem involvement — worse prognosis.</div>
         </div>
         <div class="bs-action-row">
-          <div class="bs-action-icon">👁️</div>
+          <div class="bs-action-icon"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#eye'/></svg>️</div>
           <div class="bs-action-text">Always check <strong>pupillary response</strong> alongside GCS — unequal pupils + low GCS = herniation until proven otherwise.</div>
         </div>
       </div>
@@ -671,22 +671,22 @@ const LABELS = {
 const EMS_ACTIONS = {
   severe: [
     { i:'🔴', t:'<strong>GCS ≤8 — Secure the airway NOW</strong>', d:'Consider RSI / supraglottic airway. Oxygen 100%. Position: lateral if no spinal injury.' },
-    { i:'💉', t:'<strong>IV/IO Access</strong>', d:'Establish large-bore IV access en route. Fluid resuscitation if haemodynamically compromised.' },
-    { i:'📡', t:'<strong>Pre-alert receiving hospital</strong>', d:'Trauma team activation if mechanism warrants. Target CT within 30 min of arrival.' },
-    { i:'🫀', t:'<strong>Continuous monitoring</strong>', d:'SpO₂, EtCO₂ (if intubated), BP, ECG. Maintain SpO₂ > 95%, EtCO₂ 35–40 mmHg.' },
-    { i:'🩺', t:'<strong>Pupil assessment</strong>', d:'Fixed dilated pupil = cerebral herniation. Hyperventilate briefly (target EtCO₂ 30–35) if herniation signs present.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>', t:'<strong>IV/IO Access</strong>', d:'Establish large-bore IV access en route. Fluid resuscitation if haemodynamically compromised.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#satellite'/></svg>', t:'<strong>Pre-alert receiving hospital</strong>', d:'Trauma team activation if mechanism warrants. Target CT within 30 min of arrival.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#heart-pulse'/></svg>', t:'<strong>Continuous monitoring</strong>', d:'SpO₂, EtCO₂ (if intubated), BP, ECG. Maintain SpO₂ > 95%, EtCO₂ 35–40 mmHg.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#stethoscope'/></svg>', t:'<strong>Pupil assessment</strong>', d:'Fixed dilated pupil = cerebral herniation. Hyperventilate briefly (target EtCO₂ 30–35) if herniation signs present.' },
   ],
   mod: [
     { i:'🟡', t:'<strong>High-flow oxygen</strong>', d:'15L via NRB mask. Monitor SpO₂. Reassess airway status continuously.' },
-    { i:'📋', t:'<strong>Serial GCS assessment</strong>', d:'Every 15 min. Any drop ≥2 points = immediate escalation to severe protocol.' },
-    { i:'💉', t:'<strong>IV access en route</strong>', d:'Establish IV/IO. Treat associated injuries. Cervical spine precautions if trauma.' },
-    { i:'🏥', t:'<strong>Notify hospital</strong>', d:'Early notification allows neurosurgical team to prepare. Do not delay transport.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>', t:'<strong>Serial GCS assessment</strong>', d:'Every 15 min. Any drop ≥2 points = immediate escalation to severe protocol.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#syringe'/></svg>', t:'<strong>IV access en route</strong>', d:'Establish IV/IO. Treat associated injuries. Cervical spine precautions if trauma.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#hospital'/></svg>', t:'<strong>Notify hospital</strong>', d:'Early notification allows neurosurgical team to prepare. Do not delay transport.' },
   ],
   mild: [
     { i:'🟢', t:'<strong>Monitor and reassess</strong>', d:'Reassess GCS every 15 min. Patients may deteriorate rapidly — do not leave unattended.' },
-    { i:'🫁', t:'<strong>Supplemental oxygen</strong>', d:'If SpO₂ < 94% or mechanism of injury warrants.' },
-    { i:'📋', t:'<strong>Detailed neuro exam</strong>', d:'Assess pupils, limb power, speech, and orientation. Document baseline for comparison.' },
-    { i:'ℹ️', t:'<strong>Concussion precautions</strong>', d:'Advise patient/family: no driving, no alcohol, return if symptoms worsen. Hospital assessment recommended.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#wind'/></svg>', t:'<strong>Supplemental oxygen</strong>', d:'If SpO₂ < 94% or mechanism of injury warrants.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#clipboard-list'/></svg>', t:'<strong>Detailed neuro exam</strong>', d:'Assess pupils, limb power, speech, and orientation. Document baseline for comparison.' },
+    { i:'<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#circle-help'/></svg>', t:'<strong>Concussion precautions</strong>', d:'Advise patient/family: no driving, no alcohol, return if symptoms worsen. Hospital assessment recommended.' },
   ]
 };
 

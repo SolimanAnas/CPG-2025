@@ -1,4 +1,4 @@
-/* ========== Chapter 9.2 – Pediatric Bradycardia ========== */
+/* ========== Chapter 9.2 ï¿½ Pediatric Bradycardia ========== */
 window.CPG_DATA = {
     id: "c9-2",
     title: "Pediatric Bradycardia",
@@ -37,7 +37,7 @@ window.CPG_DATA = {
             <h4>Key Assessment Points</h4>
             <ul>
                 <li><strong>Initial Impression:</strong> Assess responsiveness, appearance, and distress using the Pediatric Assessment Triangle (PAT): tone, interactiveness, breathing effort, skin color. Look for signs of instability: lethargy, cyanosis, poor perfusion.</li>
-                <li><strong>Airway & Breathing Assessment:</strong> Ensure airway patent; assess for respiratory distress or failure. Look for hypoxia, apnea, or shallow respirations – the most common cause of bradycardia. Normal respiratory rate ranges: 1-12 months 30-53, 1-3yrs 22-37, 3-5yrs 20-28, 5-11yrs 18-25, >11yrs 12-20.</li>
+                <li><strong>Airway & Breathing Assessment:</strong> Ensure airway patent; assess for respiratory distress or failure. Look for hypoxia, apnea, or shallow respirations ï¿½ the most common cause of bradycardia. Normal respiratory rate ranges: 1-12 months 30-53, 1-3yrs 22-37, 3-5yrs 20-28, 5-11yrs 18-25, >11yrs 12-20.</li>
                 <li><strong>Circulation Assessment:</strong> Palpate central and peripheral pulses for rate, rhythm, quality. Capillary refill time (>3 seconds suggests poor perfusion). Blood pressure if possible. Hypotension: <1 month SBP <60, 1-12 months <70, 1-10yrs <(70+(age yrs x 2)), >10yrs <90.</li>
                 <li><strong>Heart Rate Assessment:</strong> Count accurately over a full minute. Normal ranges: <1 month 100-205, 1-12 months 100-180, 1-3yrs 100-140, 3-5yrs 80-120, 5-11yrs 75-120, >11yrs 60-100. A heart rate below these thresholds with poor perfusion is significant and warrants immediate intervention.</li>
                 <li><strong>ECG Monitoring:</strong> Apply ECG to identify rhythm (e.g., sinus bradycardia, heart block).</li>
@@ -51,19 +51,19 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Request ALS back-up:</strong> Routinely for pediatric patients with bradycardia.</li>
                 <li><strong>Maintain a Calm, Systematic Approach:</strong> Minimize stress, keep child warm, allow caregiver to stay if calming.</li>
-                <li><strong>Support Oxygenation & Ventilation:</strong> Ensure patent airway. Administer high-flow oxygen to maintain SpO2 >94%. If respiratory effort inadequate or apnea, start bag-valve-mask ventilation with 100% oxygen. Correct hypoxia promptly – most pediatric bradycardia is secondary to hypoxia.</li>
+                <li><strong>Support Oxygenation & Ventilation:</strong> Ensure patent airway. Administer high-flow oxygen to maintain SpO2 >94%. If respiratory effort inadequate or apnea, start bag-valve-mask ventilation with 100% oxygen. Correct hypoxia promptly ï¿½ most pediatric bradycardia is secondary to hypoxia.</li>
                 <li><strong>Start CPR if Indicated:</strong> If HR <60 bpm with signs of poor perfusion despite oxygenation & ventilation, begin chest compressions immediately. Use appropriate compression depth and ratio for age (15:2 if two rescuers, 30:2 if alone).</li>
                 <li><strong>Obtain IV/IO access:</strong> As soon as possible.</li>
                 <li><strong>Administer Adrenaline (Epinephrine):</strong> If bradycardia persists despite adequate oxygenation & ventilation:
                     <ul>
-                        <li>IV/IO: 0.01 mg/kg of 1:10,000 (0.1 mL/kg) every 3–5 minutes as needed.</li>
-                        <li>If no IV/IO access, via ETT: 0.1 mg/kg of 1:1,000 diluted in 3–5 mL saline.</li>
+                        <li>IV/IO: 0.01 mg/kg of 1:10,000 (0.1 mL/kg) every 3ï¿½5 minutes as needed.</li>
+                        <li>If no IV/IO access, via ETT: 0.1 mg/kg of 1:1,000 diluted in 3ï¿½5 mL saline.</li>
                     </ul>
                 </li>
                 <li><strong>Administer Atropine:</strong> If vagal-mediated or suspected heart block:
                     <ul>
                         <li>Dose: Atropine 0.02 mg/kg IV/IO (minimum 0.1 mg; maximum single dose 0.5 mg).</li>
-                        <li>May repeat once after 3–5 minutes.</li>
+                        <li>May repeat once after 3ï¿½5 minutes.</li>
                         <li>Maximum total dose: 1 mg in children, 3 mg in adolescents.</li>
                     </ul>
                 </li>
@@ -249,7 +249,7 @@ window.CPG_DATA = {
             explanation: "Excessive ventilation can cause gastric distension, decreased cardiac output, and respiratory alkalosis."
         },
         {
-            q: "A child with bradycardia has a core temperature of 32°C. What is the priority?",
+            q: "A child with bradycardia has a core temperature of 32ï¿½C. What is the priority?",
             options: ["Atropine", "Epinephrine", "Rewarming", "Pacing"],
             correct: 2,
             explanation: "Hypothermic bradycardia requires rewarming; atropine and epinephrine may be less effective until normothermic."

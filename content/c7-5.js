@@ -1,4 +1,4 @@
-/* ========== Chapter 7.5 – Spinal Motion Restriction ========== */
+/* ========== Chapter 7.5 ï¿½ Spinal Motion Restriction ========== */
 window.CPG_DATA = {
     id: "c7-5",
     title: "Spinal Motion Restriction",
@@ -55,7 +55,7 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Primary Survey:</strong> Ensure airway patency, adequate breathing, and circulation while maintaining manual cervical spine stabilization. Control catastrophic external bleeding if present.</li>
                 <li><strong>Secondary Survey:</strong> Conduct a focused spinal and neurological examination to confirm need for SMR. Obtain history of trauma mechanism and presenting symptoms. Reassess vital signs and neurological status.</li>
-                <li><strong>Spinal Motion Restriction Goals:</strong> The goal is to limit movement of the c-spine through the least invasive means to ensure patient does not move. Use of extrication devices may increase movement; use with caution. Back boards (LBB) should be used as extrication devices only – patients should not be routinely transported on a back board. Scoop stretchers are preferred; remove once on ambulance stretcher when possible.</li>
+                <li><strong>Spinal Motion Restriction Goals:</strong> The goal is to limit movement of the c-spine through the least invasive means to ensure patient does not move. Use of extrication devices may increase movement; use with caution. Back boards (LBB) should be used as extrication devices only ï¿½ patients should not be routinely transported on a back board. Scoop stretchers are preferred; remove once on ambulance stretcher when possible.</li>
                 <li><strong>Manual In-Line Stabilization:</strong> Maintain manual cervical spine stabilization until a cervical collar is applied. Use jaw thrust for airway opening if cervical injury is suspected.</li>
                 <li><strong>Cervical Collar:</strong> Apply a rigid cervical collar for patients with suspected cervical spine injury or inability to clear SMR. Ensure proper sizing to avoid discomfort or airway obstruction. Contraindications: severe traumatic brain injuries (impedes cerebral venous drainage) or inability to maintain effective airway.</li>
                 <li><strong>Transfer to Stretcher:</strong> Use a long spinal board or scoop stretcher to extricate and move the patient onto the ambulance stretcher. Log roll with multiple providers to maintain neutral alignment. Pad spaces under the head and lumbar spine.</li>
@@ -76,8 +76,8 @@ window.CPG_DATA = {
 
             <h4>Clinical Insights & Additional Guidance</h4>
             <ul>
-                <li>Back boards (LBB) should be used as extrication devices only – patients should not be routinely transported to hospital on a back board.</li>
-                <li>Scoop stretchers are preferred to facilitate patient movement – where possible, the scoop stretcher should be removed once the patient is on the ambulance stretcher.</li>
+                <li>Back boards (LBB) should be used as extrication devices only ï¿½ patients should not be routinely transported to hospital on a back board.</li>
+                <li>Scoop stretchers are preferred to facilitate patient movement ï¿½ where possible, the scoop stretcher should be removed once the patient is on the ambulance stretcher.</li>
                 <li>If SMR is indicated, and a c-collar has not been placed, clearly communicate the requirement for SMR with receiving hospital staff as part of IMIST-AMBO handover.</li>
             </ul>
 
@@ -112,7 +112,7 @@ window.CPG_DATA = {
         },
         {
             q: "What is the NEXUS criterion for clearing cervical spine injury?",
-            options: ["Midline cervical tenderness", "Neurological deficit", "Altered mental status", "None of the above – all indicate SMR required"],
+            options: ["Midline cervical tenderness", "Neurological deficit", "Altered mental status", "None of the above ï¿½ all indicate SMR required"],
             correct: 3,
             explanation: "NEXUS criteria require all five to be negative to clear the cervical spine; any positive indicates SMR."
         },

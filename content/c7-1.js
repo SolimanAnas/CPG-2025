@@ -1,4 +1,4 @@
-/* ========== Chapter 7.1 – General Trauma Management ========== */
+/* ========== Chapter 7.1 ï¿½ General Trauma Management ========== */
 window.CPG_DATA = {
     id: "c7-1",
     title: "General Trauma Management",
@@ -208,7 +208,7 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a contraindication to applying a pelvic binder?",
-            options: ["Pelvic fracture", "Pregnancy", "Open pelvic fracture", "None – indicated for unstable pelvis"],
+            options: ["Pelvic fracture", "Pregnancy", "Open pelvic fracture", "None ï¿½ indicated for unstable pelvis"],
             correct: 3,
             explanation: "Pelvic binder is indicated for suspected unstable pelvic fractures regardless of other injuries."
         },
@@ -291,10 +291,10 @@ window.CPG_DATA = {
         { category: "Pelvic binder", question: "When should a pelvic binder be applied?", answer: "For suspected unstable pelvic fracture or when mechanism suggests pelvic injury." },
         { category: "Needle decompression", question: "What are indications for needle decompression?", answer: "Tension pneumothorax: hypotension, JVD, tracheal deviation, absent breath sounds." },
         { category: "Chest seal", question: "How is an open pneumothorax managed?", answer: "Apply chest seal or occlusive dressing taped on three sides." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for an adult trauma patient with hypotension?", answer: "500 mL crystalloid; target SBP =90 mmHg." },
-        { category: "Fluid resuscitation – pediatric", question: "What is the initial fluid bolus for a pediatric trauma patient with shock?", answer: "20 mL/kg crystalloid; may repeat up to 60 mL/kg total." },
-        { category: "TXA dose – adult", question: "What is the dose of TXA for an adult?", answer: "1000 mg IV/IO diluted in 100 mL normal saline over 10 minutes." },
-        { category: "TXA dose – pediatric", question: "What is the pediatric dose of TXA?", answer: "15 mg/kg IV/IO (max 1000 mg) infused over 10 minutes." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for an adult trauma patient with hypotension?", answer: "500 mL crystalloid; target SBP =90 mmHg." },
+        { category: "Fluid resuscitation ï¿½ pediatric", question: "What is the initial fluid bolus for a pediatric trauma patient with shock?", answer: "20 mL/kg crystalloid; may repeat up to 60 mL/kg total." },
+        { category: "TXA dose ï¿½ adult", question: "What is the dose of TXA for an adult?", answer: "1000 mg IV/IO diluted in 100 mL normal saline over 10 minutes." },
+        { category: "TXA dose ï¿½ pediatric", question: "What is the pediatric dose of TXA?", answer: "15 mg/kg IV/IO (max 1000 mg) infused over 10 minutes." },
         { category: "Hypothermia prevention", question: "How can hypothermia be prevented in trauma?", answer: "Remove wet clothing, cover with thermal blanket, limit exposure." },
         { category: "Spinal motion restriction", question: "What is spinal motion restriction?", answer: "Limiting movement of the spine using a cervical collar and careful handling, without prolonged backboard use." },
         { category: "Traumatic brain injury", question: "What is the target SBP for isolated TBI?", answer: "=120 mmHg to maintain cerebral perfusion." },

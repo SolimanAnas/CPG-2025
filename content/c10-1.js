@@ -1,4 +1,4 @@
-/* ========== Chapter 10.1 – Childbirth ========== */
+/* ========== Chapter 10.1 ï¿½ Childbirth ========== */
 window.CPG_DATA = {
     id: "c10-1",
     title: "Childbirth",
@@ -22,7 +22,7 @@ window.CPG_DATA = {
             <ul>
                 <li>Patients with signs of imminent birth with crowning:
                     <ul>
-                        <li>Painful contractions lasting 45-60 seconds at 1–2-minute intervals.</li>
+                        <li>Painful contractions lasting 45-60 seconds at 1ï¿½2-minute intervals.</li>
                         <li>Bearing down/urge to open bowels.</li>
                         <li>Bloody show, bulging perineum, fetal head crowning, or membrane rupture.</li>
                     </ul>
@@ -52,29 +52,29 @@ window.CPG_DATA = {
                 <li><strong>Active Labor / Imminent Delivery:</strong>
                     <ul>
                         <li>Delivery should be controlled to allow slow, controlled delivery to prevent injury to the mother.</li>
-                        <li>Do not routinely suction the infant’s airway (even with bulb syringe) during delivery.</li>
-                        <li><strong>Deliver the Newborn:</strong> Support infant’s head as needed and apply gentle counterpressure to help prevent sudden popping out. Grasping the head with hand over the ears, gently guide head down to allow delivery of the anterior shoulder. Gently guide the head up to allow delivery of the posterior shoulder. Slowly deliver the remainder of the infant.</li>
+                        <li>Do not routinely suction the infantï¿½s airway (even with bulb syringe) during delivery.</li>
+                        <li><strong>Deliver the Newborn:</strong> Support infantï¿½s head as needed and apply gentle counterpressure to help prevent sudden popping out. Grasping the head with hand over the ears, gently guide head down to allow delivery of the anterior shoulder. Gently guide the head up to allow delivery of the posterior shoulder. Slowly deliver the remainder of the infant.</li>
                         <li><strong>Cord Clamping:</strong> After 1 minute, clamp the cord in three places (10cm, 15cm, 20cm from the abdomen); cut the cord between the last two clamps. While cord is attached, take care to ensure baby is not significantly higher than the mother to prevent blood from flowing backwards.</li>
                         <li>If resuscitation is needed: start resuscitation immediately after birth and then clamp and cut the cord at 1 minute.</li>
                         <li><strong>Warm and stimulate:</strong> Dry, warm, and stimulate infant, wrap in towel and place on maternal chest unless resuscitation is needed.</li>
                         <li><strong>APGAR Scores:</strong> Record at 1 and 5 minutes once the neonate is stabilized. Resuscitation takes priority over recording APGAR scores.</li>
                     </ul>
                 </li>
-                <li><strong>After Delivery – Mother:</strong>
+                <li><strong>After Delivery ï¿½ Mother:</strong>
                     <ul>
                         <li>The placenta will deliver spontaneously, often within 5-15 minutes. Do not force the placenta to deliver, do not pull on the umbilical cord. Place placenta in biohazard bag and transport with the mother.</li>
                         <li>Monitor for post partum hemorrhage (see Post-Partum Hemorrhage CPG).</li>
                         <li>Uterine massage: after delivery, massaging the uterus (located at about the umbilicus) and allowing the infant to breastfeed will promote uterine contraction and help control bleeding.</li>
                     </ul>
                 </li>
-                <li><strong>After Delivery – Child:</strong> Keep the infant warm during transport; kangaroo care/skin-to-skin is suitable; place towel or blanket over mother and infant where possible.</li>
+                <li><strong>After Delivery ï¿½ Child:</strong> Keep the infant warm during transport; kangaroo care/skin-to-skin is suitable; place towel or blanket over mother and infant where possible.</li>
                 <li><strong>Delivery Complications:</strong>
                     <ul>
-                        <li><strong>Shoulder Dystocia:</strong> Discourage pushing; transport must be prioritized, maneuvers continued en route. McRoberts maneuver (hyperflex mother’s hips) with suprapubic pressure. If fails, attempt posterior arm delivery or internal rotational maneuvers (Rubin II or Woods corkscrew) after consultation. If all fail, roll patient onto all fours.</li>
+                        <li><strong>Shoulder Dystocia:</strong> Discourage pushing; transport must be prioritized, maneuvers continued en route. McRoberts maneuver (hyperflex motherï¿½s hips) with suprapubic pressure. If fails, attempt posterior arm delivery or internal rotational maneuvers (Rubin II or Woods corkscrew) after consultation. If all fail, roll patient onto all fours.</li>
                         <li><strong>Nuchal Cord:</strong> After head delivered, palpate neck. If cord present, slip over head. If too tight, attempt to slip over shoulders and deliver body through loop.</li>
                         <li><strong>Cord Rupture:</strong> Apply direct pressure with sterile dressing; position clamp proximally to tear if possible.</li>
                         <li><strong>Prolapsed Cord:</strong> Insert fingers into vagina and gently push presenting part away from cord; minimize handling of cord; maintain pressure until birth. If cord prolapsed outside vagina, cover with pad soaked in warm saline. Consider tocolysis (nebulized salbutamol 10-20 mg) if birth not imminent.</li>
-                        <li><strong>Breech Birth:</strong> Allow buttocks, feet, trunk to deliver spontaneously, then support body while head delivers. If head fails to deliver, place gloved hand in vagina with fingers between infant’s face and uterine wall to create an airway. NEVER pull on the body.</li>
+                        <li><strong>Breech Birth:</strong> Allow buttocks, feet, trunk to deliver spontaneously, then support body while head delivers. If head fails to deliver, place gloved hand in vagina with fingers between infantï¿½s face and uterine wall to create an airway. NEVER pull on the body.</li>
                         <li><strong>Compound Presentation (arm/leg):</strong> Prioritize transport; C-section likely needed.</li>
                         <li><strong>Excessive Bleeding During Active Labor:</strong> Place large bore IV and administer IV fluids as per PV Hemorrhage in Pregnancy CPG; expedite transport.</li>
                     </ul>
@@ -87,7 +87,7 @@ window.CPG_DATA = {
             <ul>
                 <li>Supine Hypotension Syndrome: If mother has hypotension before delivery, place patient in left lateral recumbent position or manually displace gravid uterus to the left in supine position.</li>
                 <li>Knee-chest position may create safety issues during rapid ambulance transport.</li>
-                <li>Do not routinely suction the infant’s airway during delivery (even with bulb syringe).</li>
+                <li>Do not routinely suction the infantï¿½s airway during delivery (even with bulb syringe).</li>
                 <li>Newborns are very slippery, take care not to drop the infant.</li>
                 <li>Do not pull on the umbilical cord while the placenta is delivering.</li>
                 <li>If possible, transport between deliveries if the mother is expecting twins.</li>
@@ -97,13 +97,13 @@ window.CPG_DATA = {
             <ul>
                 <li><strong>Determining Between Imminent Birth and Non-Imminent Birth:</strong> Imminent birth: painful contractions 45-60 secs at 1-2 min intervals; bearing down; bloody show; bulging perineum, fetal head crowning, membrane rupture. Non-imminent: irregular contractions, no bloody show, no visible body parts.</li>
                 <li><strong>Requesting Back-up:</strong> Routinely for imminent birth; ideally ALS, but if not available, a second BLS unit should be requested in case neonatal resuscitation is required.</li>
-                <li><strong>Male Clinicians:</strong> It is acceptable for a male clinician to assist in delivery – providing this is acceptable to the patient. If not, request a maternity ambulance (MAMA unit).</li>
+                <li><strong>Male Clinicians:</strong> It is acceptable for a male clinician to assist in delivery ï¿½ providing this is acceptable to the patient. If not, request a maternity ambulance (MAMA unit).</li>
                 <li><strong>Dispatch 2 Coordination:</strong> Notify dispatch of antepartum hemorrhage, post partum hemorrhage, breech presentation, limb presentation, complicated nuchal cord, prolapsed cord, shoulder dystocia, maternal cardiac arrest to determine appropriate receiving facility.</li>
             </ul>
 
             <h4>Documentation</h4>
             <ul>
-                <li>Mother’s identity, infant details if delivered, gestational age or estimated due date.</li>
+                <li>Motherï¿½s identity, infant details if delivered, gestational age or estimated due date.</li>
                 <li>Focused obstetric history (length of pregnancy, Gravida/Para, prenatal care, complications, drug use) and signs of labor (contraction timing, crowning, bloody show).</li>
                 <li>Any complications (shoulder dystocia, prolapsed cord, post-partum hemorrhage) and maternal/infant conditions.</li>
                 <li>Vital signs for mother and APGAR scores for infant at 1 and 5 minutes post-delivery.</li>
@@ -310,7 +310,7 @@ window.CPG_DATA = {
         { category: "Breech delivery", question: "How is a breech delivery managed?", answer: "Allow spontaneous delivery; support body; do not pull; if head fails to deliver, create airway with fingers." },
         { category: "Postpartum hemorrhage", question: "What is the initial management of postpartum hemorrhage?", answer: "Fundal massage, IV fluids, TXA, oxygen, transport." },
         { category: "TXA dose", question: "What is the dose of TXA for postpartum hemorrhage?", answer: "1 g IV diluted in 100 mL normal saline over 10 minutes." },
-        { category: "Fluid resuscitation – adult", question: "What is the initial fluid bolus for postpartum hemorrhage?", answer: "500-1000 mL crystalloid." },
+        { category: "Fluid resuscitation ï¿½ adult", question: "What is the initial fluid bolus for postpartum hemorrhage?", answer: "500-1000 mL crystalloid." },
         { category: "Placenta delivery", question: "How should the placenta be managed?", answer: "Allow spontaneous delivery; do not pull cord; place in biohazard bag and transport." },
         { category: "Uterine massage", question: "What is the purpose of fundal massage?", answer: "Promote uterine contraction and reduce postpartum hemorrhage." },
         { category: "Maternal cardiac arrest", question: "How is maternal cardiac arrest managed?", answer: "Left uterine displacement, standard CPR, expedite transport for peri-mortem C-section if >20 weeks." },

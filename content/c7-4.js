@@ -1,4 +1,4 @@
-/* ========== Chapter 7.4 – Limb Injuries ========== */
+/* ========== Chapter 7.4 ï¿½ Limb Injuries ========== */
 window.CPG_DATA = {
     id: "c7-4",
     title: "Limb Injuries",
@@ -70,7 +70,7 @@ window.CPG_DATA = {
                 <li>The use of a tourniquet for uncontrolled limb bleeding is exceptionally important. Ensure tourniquets are applied when indicated.</li>
                 <li>Manipulation of fractured limbs to apply a splint will likely increase pain. Ensure adequate analgesia is administered prior to splinting.</li>
                 <li>Traction splint for mid-shaft femur fracture limits blood loss and pain; it is appropriate to delay transfer to apply it, providing there are no other signs/symptoms that require immediate transfer.</li>
-                <li>Reduction of anterior shoulder dislocation: position patient supine, flex elbow to 90°, apply gentle longitudinal traction, then slowly externally rotate forearm until reduction occurs.</li>
+                <li>Reduction of anterior shoulder dislocation: position patient supine, flex elbow to 90ï¿½, apply gentle longitudinal traction, then slowly externally rotate forearm until reduction occurs.</li>
                 <li>Patella dislocation reduction: extend knee while applying medial pressure to lateral edge of patella.</li>
                 <li>Amputated part viability: cooling slows chemical processes and extends viability from 4 hours to up to 18 hours.</li>
             </ul>
@@ -139,7 +139,7 @@ window.CPG_DATA = {
         },
         {
             q: "What is the preferred position for reducing an anterior shoulder dislocation?",
-            options: ["Sitting upright with arm adducted", "Supine with elbow flexed 90°, apply gentle traction and external rotation", "Prone with arm hanging", "Standing with arm raised"],
+            options: ["Sitting upright with arm adducted", "Supine with elbow flexed 90ï¿½, apply gentle traction and external rotation", "Prone with arm hanging", "Standing with arm raised"],
             correct: 1,
             explanation: "The technique involves supine position, elbow flexion, gentle longitudinal traction, then slow external rotation of the forearm."
         },
@@ -284,7 +284,7 @@ window.CPG_DATA = {
         { category: "Compartment syndrome", question: "What are the signs of compartment syndrome?", answer: "Pain on passive stretch, pallor, pulselessness, paresthesia, paralysis." },
         { category: "Amputated part", question: "How should an amputated part be preserved?", answer: "Wrap in moist sterile gauze, place in plastic bag, then surround with ice water mixture." },
         { category: "Impaled object", question: "How should an impaled object be managed?", answer: "Do not remove; secure with bulky dressing." },
-        { category: "Shoulder reduction", question: "How is an anterior shoulder dislocation reduced?", answer: "Supine, elbow flexed 90°, gentle traction, then slow external rotation." },
+        { category: "Shoulder reduction", question: "How is an anterior shoulder dislocation reduced?", answer: "Supine, elbow flexed 90ï¿½, gentle traction, then slow external rotation." },
         { category: "Patella dislocation reduction", question: "How is a lateral patella dislocation reduced?", answer: "Extend knee while applying medial pressure." },
         { category: "Femur fracture blood loss", question: "How much blood can be lost from a femur fracture?", answer: "1-2 L." },
         { category: "Methoxyflurane dose", question: "What is the dose of methoxyflurane for procedural pain?", answer: "3 mL inhalation; may repeat once (max 6 mL/24h)." },

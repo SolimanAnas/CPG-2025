@@ -1,4 +1,4 @@
-/* ========== Chapter 6.7 – Fever and Sepsis ========== */
+/* ========== Chapter 6.7 ï¿½ Fever and Sepsis ========== */
 window.CPG_DATA = {
     id: "c6-7",
     title: "Fever and Sepsis",
@@ -17,7 +17,7 @@ window.CPG_DATA = {
             <ul>
                 <li>Patients presenting with fever or suspected sepsis, including:
                     <ul>
-                        <li>Documented or reported fever (temperature >38°C) or hypothermia (<36°C).</li>
+                        <li>Documented or reported fever (temperature >38ï¿½C) or hypothermia (<36ï¿½C).</li>
                         <li>Symptoms suggestive of infection (e.g., chills, rigors, malaise, or localized symptoms like cough, dysuria, or wound infection).</li>
                         <li>Signs of systemic inflammatory response or sepsis, such as tachycardia, tachypnea, hypotension, or altered mental status.</li>
                         <li>Suspected septic shock with hypotension (SBP <90 mmHg in adults, or age-specific for pediatrics) and signs of poor perfusion.</li>
@@ -33,9 +33,9 @@ window.CPG_DATA = {
             <h4>Key Assessment Points</h4>
             <ul>
                 <li><strong>Infection History:</strong> Identify potential sources of infection (respiratory, urinary, skin, abdominal). Recent illness, surgery, invasive procedures, immunocompromised states (diabetes, cancer, HIV).</li>
-                <li><strong>Sepsis Screening (SIRS Criteria):</strong> Assess for systemic inflammatory response syndrome (SIRS) – two or more of:
+                <li><strong>Sepsis Screening (SIRS Criteria):</strong> Assess for systemic inflammatory response syndrome (SIRS) ï¿½ two or more of:
                     <ul>
-                        <li>Temperature >38°C or <36°C.</li>
+                        <li>Temperature >38ï¿½C or <36ï¿½C.</li>
                         <li>Heart rate >90 beats/min (or age-specific for pediatrics).</li>
                         <li>Respiratory rate >20 breaths/min (or age-specific for pediatrics).</li>
                         <li>Altered mental status or confusion.</li>
@@ -110,9 +110,9 @@ window.CPG_DATA = {
     quiz: [
         {
             q: "What are the SIRS criteria?",
-            options: ["Fever >38°C or <36°C, HR >90, RR >20, altered mental status", "SBP <90, HR >100, RR >24, temperature >39°C", "WBC >12,000, lactate >2, hypotension, oliguria", "Cough, fever, dyspnea, chest pain"],
+            options: ["Fever >38ï¿½C or <36ï¿½C, HR >90, RR >20, altered mental status", "SBP <90, HR >100, RR >24, temperature >39ï¿½C", "WBC >12,000, lactate >2, hypotension, oliguria", "Cough, fever, dyspnea, chest pain"],
             correct: 0,
-            explanation: "SIRS criteria include temperature >38°C or <36°C, heart rate >90, respiratory rate >20, and altered mental status (or WBC abnormalities, though not typically measured prehospital)."
+            explanation: "SIRS criteria include temperature >38ï¿½C or <36ï¿½C, heart rate >90, respiratory rate >20, and altered mental status (or WBC abnormalities, though not typically measured prehospital)."
         },
         {
             q: "A patient with suspected sepsis has a BP of 85/50 after 1000 mL normal saline. What is the next step?",
@@ -128,7 +128,7 @@ window.CPG_DATA = {
         },
         {
             q: "Which of the following is a red flag for sepsis?",
-            options: ["Temperature 38.5°C", "Heart rate 100", "Hypotension (SBP <90)", "Respiratory rate 22"],
+            options: ["Temperature 38.5ï¿½C", "Heart rate 100", "Hypotension (SBP <90)", "Respiratory rate 22"],
             correct: 2,
             explanation: "Hypotension indicates septic shock and requires immediate intervention."
         },
@@ -139,10 +139,10 @@ window.CPG_DATA = {
             explanation: "Maintain SpO2 =94% to prevent hypoxia and support tissue oxygenation."
         },
         {
-            q: "A 70-year-old with suspected sepsis has a BP of 100/70, HR 110, RR 24, temperature 38.5°C, and is confused. How many SIRS criteria does she meet?",
+            q: "A 70-year-old with suspected sepsis has a BP of 100/70, HR 110, RR 24, temperature 38.5ï¿½C, and is confused. How many SIRS criteria does she meet?",
             options: ["1", "2", "3", "4"],
             correct: 3,
-            explanation: "She meets criteria for temperature (38.5°C), HR >90, RR >20, and altered mental status – all four."
+            explanation: "She meets criteria for temperature (38.5ï¿½C), HR >90, RR >20, and altered mental status ï¿½ all four."
         },
         {
             q: "What is the dose of paracetamol for an adult with fever?",
@@ -211,10 +211,10 @@ window.CPG_DATA = {
             explanation: "Adrenaline infusion for septic shock is typically 2-10 mcg/min in adults."
         },
         {
-            q: "A patient with suspected sepsis has a temperature of 35.5°C. Is this a SIRS criterion?",
+            q: "A patient with suspected sepsis has a temperature of 35.5ï¿½C. Is this a SIRS criterion?",
             options: ["Yes, hypothermia qualifies", "No, only fever qualifies", "Only if patient is also hypotensive", "Only in pediatrics"],
             correct: 0,
-            explanation: "SIRS includes temperature <36°C (hypothermia) as well as fever."
+            explanation: "SIRS includes temperature <36ï¿½C (hypothermia) as well as fever."
         },
         {
             q: "What is the recommended initial fluid for septic shock?",
@@ -271,7 +271,7 @@ window.CPG_DATA = {
             explanation: "Pediatric push dose adrenaline is 0.005 mg/kg (5 mcg/kg) IV every 2-5 minutes."
         },
         {
-            q: "A patient with suspected sepsis has a fever of 39°C and is shivering. What should you do?",
+            q: "A patient with suspected sepsis has a fever of 39ï¿½C and is shivering. What should you do?",
             options: ["Administer paracetamol", "Cover with blankets", "Cool the patient with tepid sponging", "Administer adrenaline"],
             correct: 0,
             explanation: "Antipyretics like paracetamol help reduce fever and patient discomfort; avoid overcooling."
@@ -292,7 +292,7 @@ window.CPG_DATA = {
     flashcards: [
         { category: "Definition", question: "What is sepsis?", answer: "Life-threatening organ dysfunction caused by a dysregulated host response to infection." },
         { category: "Septic shock", question: "What is septic shock?", answer: "Sepsis with persistent hypotension requiring vasopressors to maintain MAP =65 mmHg and lactate >2 mmol/L despite adequate fluid resuscitation." },
-        { category: "SIRS criteria", question: "What are the SIRS criteria?", answer: "Temperature >38°C or <36°C, heart rate >90, respiratory rate >20, and altered mental status or WBC >12,000 or <4,000." },
+        { category: "SIRS criteria", question: "What are the SIRS criteria?", answer: "Temperature >38ï¿½C or <36ï¿½C, heart rate >90, respiratory rate >20, and altered mental status or WBC >12,000 or <4,000." },
         { category: "Risk factors", question: "Name three risk factors for sepsis.", answer: "Age >65, immunosuppression, diabetes, chronic kidney disease, recent surgery." },
         { category: "Common sources", question: "What are common sources of sepsis?", answer: "Pneumonia, urinary tract infection, intra-abdominal infection, skin/soft tissue infection." },
         { category: "Fluid resuscitation", question: "What is the initial fluid bolus for adult septic shock?", answer: "500-1000 mL crystalloid, repeated as needed up to 2000 mL." },
@@ -314,7 +314,7 @@ window.CPG_DATA = {
     critical: [
         {
             id: "crit_6_7_1",
-            scenario: "A 55-year-old male with diabetes presents with fever, chills, and productive cough for 2 days. On arrival, BP 85/50, HR 120, RR 28, SpO2 91% on room air, temperature 39°C. He is confused. What is your priority?",
+            scenario: "A 55-year-old male with diabetes presents with fever, chills, and productive cough for 2 days. On arrival, BP 85/50, HR 120, RR 28, SpO2 91% on room air, temperature 39ï¿½C. He is confused. What is your priority?",
             question: "What should you do first?",
             options: [
                 { t: "Administer paracetamol", f: "Antipyretics are secondary; the priority is to support circulation and oxygenation." },
@@ -342,7 +342,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_6_7_3",
-            scenario: "A 75-year-old female from a nursing home is found lethargic. Her temperature is 37.5°C, BP 100/60, HR 110, RR 24. She has a urinary catheter in place. Staff reports she was 'not herself' today. What should you suspect?",
+            scenario: "A 75-year-old female from a nursing home is found lethargic. Her temperature is 37.5ï¿½C, BP 100/60, HR 110, RR 24. She has a urinary catheter in place. Staff reports she was 'not herself' today. What should you suspect?",
             question: "What is the most likely diagnosis?",
             options: [
                 { t: "Stroke", f: "No focal deficits." },
@@ -356,7 +356,7 @@ window.CPG_DATA = {
         },
         {
             id: "crit_6_7_4",
-            scenario: "A 2-year-old child with fever, irritability, and poor feeding. Temperature 39.5°C, HR 160, RR 40, SpO2 95%, BP 85/50. The child is lethargic. What is the priority?",
+            scenario: "A 2-year-old child with fever, irritability, and poor feeding. Temperature 39.5ï¿½C, HR 160, RR 40, SpO2 95%, BP 85/50. The child is lethargic. What is the priority?",
             question: "What should you do first?",
             options: [
                 { t: "Administer paracetamol", f: "Antipyretics are secondary; fluid resuscitation is critical." },

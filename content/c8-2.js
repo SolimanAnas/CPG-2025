@@ -1,4 +1,4 @@
-/* ========== Chapter 8.2 – Opioid Overdose ========== */
+/* ========== Chapter 8.2 ï¿½ Opioid Overdose ========== */
 window.CPG_DATA = {
     id: "c8-2",
     title: "Opioid Overdose",
@@ -55,10 +55,10 @@ window.CPG_DATA = {
                 <li><strong>Oxygen Therapy:</strong> Administer high-flow O2 for all patients with hypoxia or respiratory depression; target SpO2 =94%.</li>
                 <li><strong>Naloxone Administration:</strong>
                     <ul>
-                        <li><strong>IN (Intranasal):</strong> 4 mg (single puff per nostril). Repeat every 2–3 min if needed, max 8 mg.</li>
-                        <li><strong>IM or IV:</strong> 0.4 mg; titrate to respiratory effort, may repeat every 2–3 min, max 10 mg.</li>
+                        <li><strong>IN (Intranasal):</strong> 4 mg (single puff per nostril). Repeat every 2ï¿½3 min if needed, max 8 mg.</li>
+                        <li><strong>IM or IV:</strong> 0.4 mg; titrate to respiratory effort, may repeat every 2ï¿½3 min, max 10 mg.</li>
                         <li>If no response after 10 mg total ? suspect alternative diagnosis.</li>
-                        <li>Maintain ventilation support – naloxone has shorter half-life than some opioids.</li>
+                        <li>Maintain ventilation support ï¿½ naloxone has shorter half-life than some opioids.</li>
                         <li>Be prepared for agitation or withdrawal after reversal.</li>
                     </ul>
                 </li>
@@ -285,9 +285,9 @@ window.CPG_DATA = {
     ],
     flashcards: [
         { category: "Opioid toxidrome", question: "What are the signs of opioid overdose?", answer: "Miosis (pinpoint pupils), respiratory depression, CNS depression, bradycardia." },
-        { category: "Naloxone dose – adult IV/IM", question: "What is the adult IV/IM naloxone dose?", answer: "0.4 mg; repeat every 2-3 minutes as needed, max 10 mg." },
-        { category: "Naloxone dose – adult IN", question: "What is the adult intranasal naloxone dose?", answer: "4 mg (one spray per nostril); repeat once if needed, max 8 mg." },
-        { category: "Naloxone dose – pediatric", question: "What is the pediatric IV/IM naloxone dose?", answer: "0.01 mg/kg (max 0.4 mg)." },
+        { category: "Naloxone dose ï¿½ adult IV/IM", question: "What is the adult IV/IM naloxone dose?", answer: "0.4 mg; repeat every 2-3 minutes as needed, max 10 mg." },
+        { category: "Naloxone dose ï¿½ adult IN", question: "What is the adult intranasal naloxone dose?", answer: "4 mg (one spray per nostril); repeat once if needed, max 8 mg." },
+        { category: "Naloxone dose ï¿½ pediatric", question: "What is the pediatric IV/IM naloxone dose?", answer: "0.01 mg/kg (max 0.4 mg)." },
         { category: "Mechanism of naloxone", question: "How does naloxone work?", answer: "Competitive opioid receptor antagonist." },
         { category: "Withdrawal symptoms", question: "What are signs of opioid withdrawal?", answer: "Agitation, nausea, vomiting, diarrhea, tachycardia, hypertension, yawning." },
         { category: "Re-narcotization", question: "Why monitor after naloxone?", answer: "Naloxone half-life is shorter than many opioids; symptoms may recur." },
