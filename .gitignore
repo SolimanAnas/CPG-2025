@@ -28,6 +28,10 @@ node_modules/
 package-lock.json
 npm-debug.log*
 
+# ── Playwright ─────────────────────────────────────────────────────────────
+playwright-report/
+test-results/
+
 # ── Dev server scripts ─────────────────────────────────────────────────────
 server.bat
 
