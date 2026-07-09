@@ -1,0 +1,31 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "Summary of High-Quality CPR Components — Adult vs Child vs Infant",
+      "headers": ["Component", "Adult", "Child (1 yr–puberty)", "Infant (<1 yr)"],
+      "rows": [
+        ["Compression rate", "100–120/min", "100–120/min", "100–120/min"],
+        ["Compression depth", "At least 2 in (5 cm), ≤2.4 in (6 cm)", "At least 1/3 AP diameter (~2 in / 5 cm)", "At least 1/3 AP diameter (~1.5 in / 4 cm)"],
+        ["Hand/finger placement", "2 hands on lower half of sternum", "1 or 2 hands on lower half of sternum", "2 thumbs–encircling hands (preferred) or 2 fingers"],
+        ["Ratio (single rescuer)", "30:2", "30:2", "30:2"],
+        ["Ratio (2+ rescuers)", "30:2", "15:2", "15:2"],
+        ["Chest recoil", "Full recoil each compression", "Full recoil each compression", "Full recoil each compression"],
+        ["Interruptions", "Minimize; keep <10 s", "Minimize; keep <10 s", "Minimize; keep <10 s"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "The Five Components of High-Quality Chest Compressions",
+      "headers": ["Component", "Target", "Why It Matters"],
+      "rows": [
+        ["Rate", "100–120/min", "Maintains circulation without sacrificing depth"],
+        ["Depth", "At least 2 in (5 cm), not >2.4 in (6 cm)", "Generates adequate blood flow; avoids injury"],
+        ["Recoil", "Full recoil each time", "Allows the heart to refill between compressions"],
+        ["Interruptions", "Minimize, <10 s each", "Blood flow falls rapidly when compressions stop"],
+        ["Ventilation", "Avoid excessive ventilation", "Over-ventilation reduces venous return and cardiac output"]
+      ]
+    }
+  ]
+}

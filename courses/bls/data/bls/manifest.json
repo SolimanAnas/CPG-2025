@@ -1,0 +1,32 @@
+{
+  "id": "bls",
+  "title": "BLS — Basic Life Support",
+  "subtitle": "The Ultimate Provider Course Reviewer",
+  "version": "1.0.0",
+  "edition": "Based on the AHA 2025 Guidelines for CPR and ECC",
+  "description": "A comprehensive, self-contained study reviewer for Basic Life Support. Each chapter includes a concise summary, clinical pearls, red flags, common mistakes, memory aids, decision trees, high-yield flashcards, AHA-style quiz questions, and realistic scenarios. Designed for EMTs, nurses, nursing students, paramedics, and all healthcare providers preparing for BLS Provider certification.",
+  "icon": "heart-pulse",
+  "color": "#c8102e",
+  "accentColor": "#1f6feb",
+  "estimatedHours": 12,
+  "difficulty": "Beginner to Intermediate",
+  "certification": "AHA BLS Provider",
+  "examLink": "https://cpr.heart.org/",
+  "audience": ["EMT", "AEMT", "Paramedic", "Nurse", "Nursing Student", "Physician", "Healthcare Provider"],
+  "prerequisites": ["None — BLS is the entry-level resuscitation course"],
+  "contentTypes": ["summary", "flashcards", "quizzes", "scenarios", "algorithms", "tables"],
+  "chapters": [
+    { "id": "c01", "number": 1, "title": "Chain of Survival & Systems of Care", "section": "Foundations", "difficulty": "Beginner" },
+    { "id": "c02", "number": 2, "title": "Scene Safety, Assessment & Recognition of Cardiac Arrest", "section": "Foundations", "difficulty": "Beginner" },
+    { "id": "c03", "number": 3, "title": "High-Quality CPR: Adult (1-Rescuer)", "section": "Adult BLS", "difficulty": "Beginner" },
+    { "id": "c04", "number": 4, "title": "Adult 2-Rescuer CPR & Team Dynamics", "section": "Adult BLS", "difficulty": "Intermediate" },
+    { "id": "c05", "number": 5, "title": "Automated External Defibrillation (AED)", "section": "Adult BLS", "difficulty": "Beginner" },
+    { "id": "c06", "number": 6, "title": "Ventilation: Barrier Devices, Pocket Mask & Bag-Mask", "section": "Airway & Breathing", "difficulty": "Intermediate" },
+    { "id": "c07", "number": 7, "title": "Breaths, Ventilations & Advanced Airway Considerations", "section": "Airway & Breathing", "difficulty": "Intermediate" },
+    { "id": "c08", "number": 8, "title": "Child BLS", "section": "Pediatric BLS", "difficulty": "Intermediate" },
+    { "id": "c09", "number": 9, "title": "Infant BLS", "section": "Pediatric BLS", "difficulty": "Intermediate" },
+    { "id": "c10", "number": 10, "title": "Foreign-Body Airway Obstruction (Adult, Child, Infant)", "section": "Emergencies", "difficulty": "Beginner" },
+    { "id": "c11", "number": 11, "title": "Opioid-Associated Life-Threatening Emergencies", "section": "Emergencies", "difficulty": "Intermediate" },
+    { "id": "c12", "number": 12, "title": "Special Circumstances: Drowning, Pregnancy, Recovery & Post-Arrest Care", "section": "Emergencies", "difficulty": "Intermediate" }
+  ]
+}

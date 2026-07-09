@@ -1,0 +1,234 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "According to the 2025 AHA Guidelines, what is the sequence for a responsive adult with SEVERE choking?",
+      "options": [
+        "A. Abdominal thrusts only",
+        "B. Alternate 5 back blows and 5 abdominal thrusts",
+        "C. Back blows only",
+        "D. Chest compressions only"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 Guidelines recommend alternating cycles of 5 back blows (back slaps) and 5 abdominal thrusts for a responsive adult or child with severe obstruction, until relief or unresponsiveness.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q02",
+      "question": "A choking victim is coughing forcefully and can still speak. What should you do?",
+      "options": [
+        "A. Immediately give abdominal thrusts",
+        "B. Encourage them to keep coughing and do not interfere",
+        "C. Perform a finger sweep",
+        "D. Begin CPR"
+      ],
+      "correct": 1,
+      "rationale": "Forceful coughing and the ability to speak indicate mild obstruction with adequate air exchange. Encourage continued coughing and monitor; intervening can worsen it.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "How should you relieve severe choking in a pregnant woman?",
+      "options": [
+        "A. Abdominal thrusts over the uterus",
+        "B. Chest thrusts (alternating with back blows) instead of abdominal thrusts",
+        "C. No intervention",
+        "D. Blind finger sweeps"
+      ],
+      "correct": 1,
+      "rationale": "For pregnant or obese patients, chest thrusts replace abdominal thrusts (still alternating with back blows), avoiding pressure on the abdomen/uterus.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q04",
+      "question": "What is the correct choking sequence for a responsive infant?",
+      "options": [
+        "A. 5 abdominal thrusts",
+        "B. Alternate 5 back blows and 5 chest thrusts",
+        "C. Abdominal thrusts and back blows",
+        "D. Chest compressions only"
+      ],
+      "correct": 1,
+      "rationale": "Infants receive alternating 5 back blows and 5 chest thrusts. Abdominal thrusts are not used in infants due to injury risk.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q05",
+      "question": "Why are abdominal thrusts NOT used in infants?",
+      "options": [
+        "A. Infants cannot choke",
+        "B. Risk of injury to the infant's abdominal organs",
+        "C. They are too effective",
+        "D. Infants have no diaphragm"
+      ],
+      "correct": 1,
+      "rationale": "The infant's abdominal organs are vulnerable to injury from abdominal thrusts, so back blows and chest thrusts are used instead.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q06",
+      "question": "A choking adult becomes unresponsive. What should you do?",
+      "options": [
+        "A. Continue abdominal thrusts on the floor",
+        "B. Lower them to the ground, activate the emergency response, and begin CPR",
+        "C. Perform a blind finger sweep and wait",
+        "D. Give back blows only"
+      ],
+      "correct": 1,
+      "rationale": "When a choking victim becomes unresponsive, carefully lower them, call for help, and begin CPR starting with compressions; the compressions can help expel the object.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "During CPR on a victim who was choking, when do you look for the object?",
+      "options": [
+        "A. Never",
+        "B. Each time you open the airway to give breaths — remove it only if visible",
+        "C. Continuously with blind sweeps",
+        "D. Only after 10 minutes"
+      ],
+      "correct": 1,
+      "rationale": "Each time the airway is opened for breaths, look inside and remove an object only if you can clearly see it. Blind finger sweeps are not performed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "Why are blind finger sweeps discouraged?",
+      "options": [
+        "A. They are too slow",
+        "B. They can push the object deeper and cause injury",
+        "C. They always work and are unnecessary",
+        "D. They require special equipment"
+      ],
+      "correct": 1,
+      "rationale": "Reaching blindly into the mouth can lodge the object deeper, worsening the obstruction, and may injure the victim or rescuer. Only remove a visible object.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q09",
+      "question": "Where are abdominal thrusts applied on a responsive choking adult?",
+      "options": [
+        "A. Over the lower ribs",
+        "B. Just above the navel, with inward and upward pressure",
+        "C. On the back only",
+        "D. Over the sternum"
+      ],
+      "correct": 1,
+      "rationale": "Abdominal thrusts are delivered just above the navel and below the ribs, using quick inward and upward pressure to raise intrathoracic pressure and expel the object.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q10",
+      "question": "What single change did the 2025 Guidelines make to adult/child choking response?",
+      "options": [
+        "A. Removed abdominal thrusts entirely",
+        "B. Added back blows to the sequence (5 back blows + 5 abdominal thrusts)",
+        "C. Recommended blind finger sweeps",
+        "D. Replaced all thrusts with CPR"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 update added back blows to the responsive adult/child choking sequence, alternating 5 back blows with 5 abdominal thrusts.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q11",
+      "question": "Where are back blows delivered?",
+      "options": ["A. On the lower back", "B. Between the shoulder blades with the heel of the hand", "C. On the abdomen", "D. On the neck"],
+      "correct": 1,
+      "rationale": "Back blows are delivered between the shoulder blades using the heel of the hand.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q12",
+      "question": "A large adult is choking and you cannot get your arms around the abdomen for abdominal thrusts. What is the alternative?",
+      "options": [
+        "A. Give up",
+        "B. Use chest thrusts (with back blows)",
+        "C. Perform blind finger sweeps",
+        "D. Only back blows for 10 minutes"
+      ],
+      "correct": 1,
+      "rationale": "When abdominal thrusts are not feasible (obese or pregnant patient), chest thrusts on the lower sternum are used, alternating with back blows.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q13",
+      "question": "How is an infant positioned for back blows?",
+      "options": [
+        "A. Face-up on a table",
+        "B. Face-down along the forearm with head and neck supported",
+        "C. Sitting upright",
+        "D. Held by the ankles"
+      ],
+      "correct": 1,
+      "rationale": "For back blows, the infant is held face-down along the rescuer's forearm with the head supported and lower than the trunk; then turned face-up for chest thrusts.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q14",
+      "question": "How do chest compressions help when a choking victim is unresponsive?",
+      "options": [
+        "A. They only circulate blood",
+        "B. They can generate pressure that helps expel the foreign object",
+        "C. They open the airway permanently",
+        "D. They replace the need to look in the mouth"
+      ],
+      "correct": 1,
+      "rationale": "Chest compressions raise intrathoracic pressure, which can help dislodge and expel the obstructing object, in addition to circulating blood.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q15",
+      "question": "A responsive choking child (severe obstruction) is standing in front of you. What do you do?",
+      "options": [
+        "A. Abdominal thrusts only",
+        "B. Alternate 5 back blows and 5 abdominal thrusts until relief or unresponsiveness",
+        "C. Chest thrusts only",
+        "D. Wait for EMS"
+      ],
+      "correct": 1,
+      "rationale": "A responsive child with severe obstruction is managed like an adult: alternating 5 back blows and 5 abdominal thrusts until the object clears or the child becomes unresponsive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q16",
+      "question": "Which finding indicates severe (rather than mild) airway obstruction?",
+      "options": [
+        "A. Forceful coughing",
+        "B. Ability to speak in full sentences",
+        "C. Inability to speak, cough, or breathe effectively",
+        "D. Normal color and breathing"
+      ],
+      "correct": 2,
+      "rationale": "Severe obstruction is marked by the inability to speak, cough effectively, or breathe, often with the universal choking sign. Forceful coughing and speaking indicate mild obstruction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q17",
+      "question": "After relieving a choking episode with abdominal thrusts, what is an appropriate follow-up?",
+      "options": [
+        "A. No follow-up is ever needed",
+        "B. Advise medical evaluation, as abdominal thrusts can cause internal injury and complications can occur",
+        "C. Immediately give more thrusts",
+        "D. Perform a blind finger sweep to be safe"
+      ],
+      "correct": 1,
+      "rationale": "Because abdominal thrusts can cause internal injury and aspiration complications can develop, victims should be advised to seek medical evaluation after a significant choking event.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q18",
+      "question": "Which sequence correctly reflects the 2025 approach across ages for severe, responsive choking?",
+      "options": [
+        "A. Adults: chest thrusts; infants: abdominal thrusts",
+        "B. Adults/children: 5 back blows + 5 abdominal thrusts; infants: 5 back blows + 5 chest thrusts",
+        "C. Everyone: abdominal thrusts only",
+        "D. Everyone: blind finger sweeps"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 sequences are: adults and children alternate 5 back blows with 5 abdominal thrusts (chest thrusts if pregnant/obese); infants alternate 5 back blows with 5 chest thrusts (no abdominal thrusts).",
+      "difficulty": "Hard"
+    }
+  ]
+}

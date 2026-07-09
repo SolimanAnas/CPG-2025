@@ -1,0 +1,29 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "Ventilation Rates by Situation",
+      "headers": ["Situation", "Breath Timing", "Notes"],
+      "rows": [
+        ["CPR, no advanced airway (adult)", "2 breaths per 30 compressions", "Brief pause after compressions"],
+        ["Rescue breathing, adult (pulse present)", "1 breath every 6 s (~10/min)", "Reassess pulse ~every 2 min"],
+        ["Rescue breathing, child/infant (pulse present)", "1 breath every 2–3 s (~20–30/min)", "Higher rate than adults"],
+        ["Advanced airway in place", "1 breath every 6 s (~10/min)", "Continuous compressions, no pause"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "Airway Opening & Adjuncts",
+      "headers": ["Tool / Maneuver", "Use When"],
+      "rows": [
+        ["Head-tilt/chin-lift", "No suspected spinal injury"],
+        ["Jaw-thrust", "Suspected cervical spine injury"],
+        ["Oropharyngeal airway (OPA)", "No gag reflex"],
+        ["Nasopharyngeal airway (NPA)", "Gag reflex may be present"],
+        ["Pocket mask", "One- or two-rescuer ventilation with a one-way valve"],
+        ["Bag-mask device", "Positive-pressure ventilation, best with 2 rescuers"]
+      ]
+    }
+  ]
+}

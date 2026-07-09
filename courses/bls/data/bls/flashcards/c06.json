@@ -1,0 +1,21 @@
+{
+  "chapter": "c06",
+  "cards": [
+    { "id": "c06_fc01", "question": "How do you open the airway in a patient with no suspected spinal injury?", "answer": "Head-tilt/chin-lift: tilt the forehead back and lift the bony part of the chin.", "category": "Airway" },
+    { "id": "c06_fc02", "question": "How do you open the airway when a spinal injury is suspected?", "answer": "Use a jaw-thrust maneuver without extending the head/neck.", "category": "Airway" },
+    { "id": "c06_fc03", "question": "What is the E-C clamp technique?", "answer": "For mask seal: the thumb and index finger form a 'C' pressing the mask down, while the other three fingers form an 'E' lifting the jaw into the mask.", "category": "Bag-Mask" },
+    { "id": "c06_fc04", "question": "How long should each breath be delivered over?", "answer": "About 1 second, with just enough volume to produce visible chest rise.", "category": "Technique" },
+    { "id": "c06_fc05", "question": "Why is bag-mask ventilation more effective with two rescuers?", "answer": "One rescuer can maintain a tight two-handed mask seal while the other squeezes the bag, greatly improving delivered volume.", "category": "Bag-Mask" },
+    { "id": "c06_fc06", "question": "What is the adult rescue-breathing rate for a patient with a pulse but inadequate breathing?", "answer": "1 breath every 6 seconds (about 10 breaths per minute).", "category": "Rates" },
+    { "id": "c06_fc07", "question": "What is the danger of over-ventilation?", "answer": "It raises intrathoracic pressure (reducing venous return and cardiac output) and causes gastric inflation, increasing vomiting and aspiration risk.", "category": "Risks" },
+    { "id": "c06_fc08", "question": "What is a pocket mask and its advantage over a face shield?", "answer": "A pocket mask has a one-way valve and allows a two-handed seal and supplemental oxygen, giving more effective and protected ventilation than a thin face shield.", "category": "Barrier Devices" },
+    { "id": "c06_fc09", "question": "When is an oropharyngeal airway (OPA) appropriate?", "answer": "Only in patients without a gag reflex; it can trigger vomiting in a patient who still has one.", "category": "Adjuncts" },
+    { "id": "c06_fc10", "question": "When is a nasopharyngeal airway (NPA) useful?", "answer": "When an airway adjunct is needed but the patient may have a gag reflex; the NPA is better tolerated than an OPA.", "category": "Adjuncts" },
+    { "id": "c06_fc11", "question": "What does no visible chest rise during ventilation suggest?", "answer": "A poor mask seal or an obstructed/unopened airway — reposition the airway, improve the seal, and check for obstruction.", "category": "Troubleshooting" },
+    { "id": "c06_fc12", "question": "Approximately what tidal volume produces chest rise in an adult?", "answer": "Roughly 500–600 mL — 'just enough to see the chest rise,' not a full forceful squeeze.", "category": "Technique" },
+    { "id": "c06_fc13", "question": "Is routine cricoid pressure recommended during CPR?", "answer": "No, routine cricoid pressure is not recommended during CPR.", "category": "Technique" },
+    { "id": "c06_fc14", "question": "How does supplemental oxygen fit into BLS ventilation?", "answer": "When available, connect oxygen to the pocket mask or bag to raise the delivered oxygen concentration.", "category": "Oxygen" },
+    { "id": "c06_fc15", "question": "During CPR without an advanced airway, what is the breath pattern?", "answer": "2 breaths after every 30 compressions (30:2), each over about 1 second with visible chest rise.", "category": "Rates" },
+    { "id": "c06_fc16", "question": "What must you always do before attempting to ventilate?", "answer": "Open the airway; without a patent airway, breaths will not reach the lungs effectively.", "category": "Airway" }
+  ]
+}

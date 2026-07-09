@@ -1,0 +1,229 @@
+{
+  "chapter": "c11",
+  "questions": [
+    {
+      "id": "c11_q01",
+      "question": "What is the immediate life threat in an opioid overdose?",
+      "options": ["A. A shockable cardiac rhythm", "B. Respiratory depression leading to hypoxia", "C. High blood pressure", "D. Seizures"],
+      "correct": 1,
+      "rationale": "Opioids depress the drive to breathe. The immediate threat is respiratory depression and hypoxia, which can progress to cardiac arrest if oxygenation is not restored.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q02",
+      "question": "A person with a suspected opioid overdose has a pulse but is not breathing normally. What should you do?",
+      "options": [
+        "A. Chest compressions only",
+        "B. Give breaths (rescue breathing) and administer naloxone",
+        "C. Naloxone only, no ventilation",
+        "D. Wait for the drug to wear off"
+      ],
+      "correct": 1,
+      "rationale": "With a pulse but inadequate breathing, provide rescue breathing (adult 1 breath every 6 seconds) and give naloxone. Restoring oxygenation is immediately life-saving while naloxone takes effect.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q03",
+      "question": "In opioid-associated CARDIAC arrest (no pulse), what is the priority?",
+      "options": [
+        "A. Find and give naloxone before compressions",
+        "B. High-quality CPR and an AED; naloxone is an adjunct",
+        "C. Naloxone alone",
+        "D. Rescue breaths only"
+      ],
+      "correct": 1,
+      "rationale": "For cardiac arrest, CPR and defibrillation are the priority. Do not delay compressions to give naloxone; naloxone is given as an adjunct once CPR is underway.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q04",
+      "question": "According to the 2025 Guidelines, who can administer naloxone for a suspected opioid emergency?",
+      "options": [
+        "A. Only physicians",
+        "B. Only paramedics",
+        "C. Lay rescuers, trained rescuers, and the general public",
+        "D. Only nurses"
+      ],
+      "correct": 2,
+      "rationale": "The 2025 Guidelines added public-access instruction: lay rescuers, trained rescuers, and members of the general public can all administer naloxone.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q05",
+      "question": "What is naloxone?",
+      "options": [
+        "A. A stimulant",
+        "B. An opioid antagonist that reverses opioid effects",
+        "C. A sedative",
+        "D. A pain reliever"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone is an opioid antagonist that reverses the effects of opioids, including respiratory depression, and is given intranasally or intramuscularly.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q06",
+      "question": "Why must you continue monitoring a patient after naloxone reverses the overdose?",
+      "options": [
+        "A. Naloxone lasts much longer than opioids",
+        "B. Naloxone can wear off before the opioid, causing re-narcotization",
+        "C. The patient is now immune to opioids",
+        "D. Monitoring is not necessary"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone can wear off before the opioid does, so respiratory depression may return (re-narcotization). Continued monitoring and possible repeat dosing are required.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q07",
+      "question": "By what routes is naloxone commonly administered by rescuers?",
+      "options": ["A. Only intravenously", "B. Intranasal or intramuscular", "C. Oral tablets", "D. Inhaled through a nebulizer"],
+      "correct": 1,
+      "rationale": "Naloxone is commonly given intranasally (nasal spray) or by intramuscular injection in the prehospital and public-access setting.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q08",
+      "question": "Why is ventilation especially important in an opioid emergency?",
+      "options": [
+        "A. Opioids cause bleeding",
+        "B. The core problem is respiratory depression, so restoring oxygen is life-saving",
+        "C. Ventilation replaces naloxone",
+        "D. Opioids stop the heart directly first"
+      ],
+      "correct": 1,
+      "rationale": "Because opioids primarily suppress breathing, providing ventilation restores oxygenation and prevents progression to cardiac arrest while naloxone reverses the opioid effect.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q09",
+      "question": "A patient in opioid-associated cardiac arrest is receiving CPR. When is naloxone given?",
+      "options": [
+        "A. Before starting compressions",
+        "B. As an adjunct once CPR is underway, without interrupting compressions",
+        "C. Instead of compressions",
+        "D. Only after ROSC"
+      ],
+      "correct": 1,
+      "rationale": "In arrest, CPR is the priority. Naloxone may be given as an adjunct once compressions are established, but it should not delay or replace high-quality CPR.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q10",
+      "question": "Which findings would raise suspicion of an opioid emergency?",
+      "options": [
+        "A. Dilated pupils and rapid breathing",
+        "B. Pinpoint pupils, slow/absent breathing, and drug paraphernalia",
+        "C. Fever and rash",
+        "D. Chest pain radiating to the arm"
+      ],
+      "correct": 1,
+      "rationale": "Pinpoint pupils, depressed or absent breathing, unresponsiveness, and signs such as paraphernalia or a known history point to a suspected opioid emergency.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q11",
+      "question": "If a suspected opioid patient with a pulse does not improve after the first naloxone dose and breathing remains inadequate, what is appropriate?",
+      "options": [
+        "A. Stop all treatment",
+        "B. Continue ventilation and repeat naloxone (e.g., about every 4 minutes) as needed",
+        "C. Give a stimulant",
+        "D. Wait 30 minutes before doing anything"
+      ],
+      "correct": 1,
+      "rationale": "If there is no response and breathing remains inadequate, continue ventilation and repeat naloxone (for example, about every 4 minutes) while reassessing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q12",
+      "question": "Which statement is TRUE about naloxone and cardiac arrest?",
+      "options": [
+        "A. Naloxone alone will restart a hypoxic arrested heart",
+        "B. Naloxone does not replace CPR; compressions and ventilation are still required in arrest",
+        "C. Naloxone should be given before checking for a pulse",
+        "D. Naloxone is contraindicated in arrest"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone cannot substitute for CPR. A patient in cardiac arrest needs compressions, ventilation, and an AED; naloxone is only a supportive adjunct.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q13",
+      "question": "A bystander with a naloxone nasal spray hesitates because they are not a healthcare professional. What is correct?",
+      "options": [
+        "A. They must not use it",
+        "B. Per 2025 guidance, laypeople and the public can administer naloxone for a suspected opioid emergency",
+        "C. Only after EMS permission",
+        "D. Only if the patient consents"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 Guidelines explicitly support administration of naloxone by lay rescuers and the general public for suspected opioid emergencies.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q14",
+      "question": "What is the correct overall sequence for a suspected opioid emergency with a pulse but no normal breathing?",
+      "options": [
+        "A. Naloxone first, then leave the patient",
+        "B. Activate EMS, give breaths, administer naloxone, reassess, and monitor for re-narcotization",
+        "C. Chest compressions and AED",
+        "D. Only place in the recovery position"
+      ],
+      "correct": 1,
+      "rationale": "Activate the emergency response, provide rescue breathing, give naloxone, reassess breathing and pulse, and continue monitoring because the opioid may outlast the naloxone.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q15",
+      "question": "A revived opioid patient becomes drowsy and slow-breathing again 30 minutes later. What happened?",
+      "options": [
+        "A. A new stroke",
+        "B. Re-narcotization as the naloxone wore off before the opioid",
+        "C. The naloxone caused the sedation",
+        "D. Normal recovery"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone can wear off before the opioid, allowing the opioid effect (including respiratory depression) to return — re-narcotization — which is why continued monitoring and repeat dosing may be needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q16",
+      "question": "Which is the BEST first action for an unresponsive person with slow breathing and a pulse, found next to opioid paraphernalia?",
+      "options": [
+        "A. Begin chest compressions",
+        "B. Open the airway and provide breaths while getting naloxone and activating EMS",
+        "C. Perform a blind finger sweep",
+        "D. Give a stimulant drink"
+      ],
+      "correct": 1,
+      "rationale": "With a pulse but inadequate breathing, the priority is oxygenation: open the airway and ventilate, administer naloxone, and activate EMS. Compressions are not indicated while a pulse is present.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q17",
+      "question": "Naloxone is given to a breathing-inadequate opioid patient, but the rescuer stops ventilating to watch for a response. Why is this a mistake?",
+      "options": [
+        "A. Naloxone works instantly, so ventilation is pointless",
+        "B. Ventilation must continue to maintain oxygenation while naloxone takes effect",
+        "C. Ventilation interferes with naloxone",
+        "D. It is not a mistake"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone takes time to work, and the patient remains hypoxic until it does. Ventilation must continue to keep the patient oxygenated while the naloxone reverses the opioid effect.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q18",
+      "question": "Which single factor makes opioid emergencies different from a primary cardiac arrest in terms of BLS emphasis?",
+      "options": [
+        "A. Defibrillation is never needed",
+        "B. The problem is primarily respiratory, so ventilation and naloxone are emphasized alongside standard BLS",
+        "C. Compressions are contraindicated",
+        "D. The AED must not be used"
+      ],
+      "correct": 1,
+      "rationale": "Opioid emergencies are driven by respiratory depression, so ventilation (and naloxone to reverse the cause) is emphasized. Standard BLS — including CPR and the AED — still applies if the patient is in cardiac arrest.",
+      "difficulty": "Hard"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "What is the FIRST action when you come upon a person who has suddenly collapsed?",
+      "options": ["A. Begin chest compressions", "B. Check the pulse", "C. Ensure the scene is safe", "D. Apply an AED"],
+      "correct": 2,
+      "rationale": "Scene safety comes first. A rescuer who is injured cannot help the patient, so you must confirm the scene is safe before approaching and assessing.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "How should you check responsiveness in an adult?",
+      "options": ["A. Shake vigorously and lift the head", "B. Tap the shoulders and shout, 'Are you okay?'", "C. Perform a sternal rub only", "D. Tap the sole of the foot"],
+      "correct": 1,
+      "rationale": "Tapping the shoulders firmly and shouting is the standard method to assess responsiveness in adults and children. Tapping the sole of the foot is used for infants.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "For a BLS provider, the combined check for breathing and pulse should take no longer than:",
+      "options": ["A. 5 seconds", "B. 10 seconds", "C. 30 seconds", "D. 60 seconds"],
+      "correct": 1,
+      "rationale": "The breathing and pulse check should be simultaneous and take no more than 10 seconds so compressions are not delayed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q04",
+      "question": "You find an unresponsive adult who is taking occasional slow, gasping breaths and has no pulse you can feel. What does the gasping indicate?",
+      "options": [
+        "A. The patient is breathing normally and does not need CPR",
+        "B. Agonal gasping — a sign of cardiac arrest; begin CPR",
+        "C. The patient is choking",
+        "D. The patient is recovering"
+      ],
+      "correct": 1,
+      "rationale": "Occasional gasping is agonal breathing, a common early sign of cardiac arrest. It is not adequate breathing; CPR should begin immediately.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "Which three findings define cardiac arrest for a BLS provider?",
+      "options": [
+        "A. Chest pain, sweating, and nausea",
+        "B. Unresponsive, not breathing normally, and no definite pulse within 10 seconds",
+        "C. Confusion, low blood pressure, and fast pulse",
+        "D. Unresponsive, snoring, and a strong pulse"
+      ],
+      "correct": 1,
+      "rationale": "Cardiac arrest is recognized by unresponsiveness, absence of normal breathing (no breathing or only gasping), and no definite pulse within 10 seconds.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q06",
+      "question": "Where do you palpate the pulse in an unresponsive infant?",
+      "options": ["A. Carotid artery", "B. Radial artery", "C. Brachial artery", "D. Femoral artery only"],
+      "correct": 2,
+      "rationale": "The brachial artery on the inner upper arm is used for infants because the short, chubby neck makes the carotid difficult to locate.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q07",
+      "question": "If you cannot definitely feel a pulse within 10 seconds in an unresponsive, non-breathing patient, you should:",
+      "options": [
+        "A. Continue searching for the pulse for another 30 seconds",
+        "B. Assume there is a pulse and only give breaths",
+        "C. Begin chest compressions and treat as cardiac arrest",
+        "D. Wait for advanced providers"
+      ],
+      "correct": 2,
+      "rationale": "Uncertainty about a pulse within 10 seconds should be treated as cardiac arrest. Beginning compressions avoids a dangerous delay; the risk of compressing a patient with a faint pulse is low.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q08",
+      "question": "A lone rescuer with a mobile phone finds an unresponsive adult. What is the best way to activate help while starting care?",
+      "options": [
+        "A. Leave the patient to find a landline",
+        "B. Call emergency services on speaker mode and stay with the patient",
+        "C. Wait until after 2 minutes of CPR to call",
+        "D. Text a friend to call for you"
+      ],
+      "correct": 1,
+      "rationale": "Using speaker mode lets a lone rescuer activate the emergency response and receive dispatcher guidance without leaving the patient or delaying care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q09",
+      "question": "An unresponsive patient has a definite pulse but is not breathing normally. What is the correct BLS action?",
+      "options": [
+        "A. Begin chest compressions",
+        "B. Provide rescue breathing (breaths) and monitor the pulse",
+        "C. Apply an AED and shock",
+        "D. Place in the recovery position and leave"
+      ],
+      "correct": 1,
+      "rationale": "A pulse with inadequate breathing calls for rescue breathing, not compressions. Compressions are reserved for patients without a pulse. Reassess the pulse regularly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q10",
+      "question": "Why should the breathing check and pulse check be done at the same time?",
+      "options": [
+        "A. To make the assessment more thorough and slower",
+        "B. To minimize delay and keep the total pause to 10 seconds or less",
+        "C. Because breathing cannot be assessed alone",
+        "D. To avoid using an AED"
+      ],
+      "correct": 1,
+      "rationale": "Simultaneous assessment keeps the pause short (≤10 seconds), so high-quality compressions can begin quickly if the patient is in arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q11",
+      "question": "Which of the following is TRUE about agonal gasps?",
+      "options": [
+        "A. They indicate adequate ventilation",
+        "B. They mean CPR should be withheld",
+        "C. They are a sign of cardiac arrest and CPR should begin",
+        "D. They only occur in choking"
+      ],
+      "correct": 2,
+      "rationale": "Agonal gasps are irregular, ineffective breaths seen early in arrest. They are a recognition cue for cardiac arrest, and CPR should be started.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q12",
+      "question": "After confirming an adult is unresponsive, what should you do BEFORE checking breathing and pulse if help is available?",
+      "options": [
+        "A. Nothing — check breathing and pulse first",
+        "B. Shout for help, activate the emergency response, and send someone for an AED",
+        "C. Start an IV",
+        "D. Perform a head-to-toe exam"
+      ],
+      "correct": 1,
+      "rationale": "Once unresponsiveness is confirmed, immediately shout for help, activate the emergency response, and dispatch someone for an AED so defibrillation and advanced care are en route before you complete the assessment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q13",
+      "question": "Which scene hazard would make it UNSAFE to immediately approach a collapsed patient?",
+      "options": [
+        "A. A quiet living room",
+        "B. Downed electrical wires near the patient",
+        "C. A well-lit hallway",
+        "D. A grassy park"
+      ],
+      "correct": 1,
+      "rationale": "Downed electrical wires pose a lethal hazard. The scene must be made safe (e.g., power secured) before approaching, or the rescuer risks becoming a second victim.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q14",
+      "question": "A patient is unresponsive with normal breathing and a strong pulse after a fainting episode. What is the most appropriate BLS action?",
+      "options": [
+        "A. Begin chest compressions",
+        "B. Provide rescue breaths",
+        "C. Monitor, consider the recovery position, and reassess",
+        "D. Apply an AED and analyze"
+      ],
+      "correct": 2,
+      "rationale": "A patient breathing normally with a pulse is not in arrest. Monitoring, positioning to protect the airway, and reassessing are appropriate; CPR and AED are not indicated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q15",
+      "question": "What is the main danger of a prolonged, careful pulse check in a suspected arrest?",
+      "options": [
+        "A. It uses too much equipment",
+        "B. It delays the start of chest compressions",
+        "C. It is uncomfortable for the rescuer",
+        "D. It requires two rescuers"
+      ],
+      "correct": 1,
+      "rationale": "A prolonged pulse check delays compressions. Every second without compressions in arrest reduces the chance of survival, so the check is limited to 10 seconds.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q16",
+      "question": "You witness an adult collapse and are certain the scene is safe. The patient is unresponsive, not breathing, and pulseless. What is the correct order of your next actions?",
+      "options": [
+        "A. Start compressions, then never call for help",
+        "B. Activate emergency response/get AED, then immediately begin high-quality chest compressions",
+        "C. Give 2 breaths, then check the pulse for 30 seconds",
+        "D. Place in recovery position, then call for help"
+      ],
+      "correct": 1,
+      "rationale": "For a witnessed arrest, activate the emergency response and get an AED, then start high-quality compressions immediately. This aligns with the front links of the Chain of Survival.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q17",
+      "question": "Which finding, by itself, is NOT sufficient to diagnose cardiac arrest?",
+      "options": [
+        "A. Unresponsiveness alone",
+        "B. Unresponsive plus no breathing plus no pulse",
+        "C. No pulse plus no normal breathing in an unresponsive patient",
+        "D. Agonal breathing in an unresponsive, pulseless patient"
+      ],
+      "correct": 0,
+      "rationale": "Unresponsiveness alone can occur in fainting, seizure, or intoxication. Cardiac arrest requires unresponsiveness together with absent normal breathing and no pulse.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q18",
+      "question": "Why is it acceptable to start compressions on a patient who might have a very weak pulse?",
+      "options": [
+        "A. Because compressions are harmless in all cases",
+        "B. Because the harm of delaying CPR in true arrest outweighs the low risk of compressing a patient with a faint pulse",
+        "C. Because a weak pulse always means arrest",
+        "D. Because pulse checks are never accurate"
+      ],
+      "correct": 1,
+      "rationale": "Studies show rescuers are unreliable at detecting a weak pulse quickly. The danger of withholding CPR from someone in arrest is far greater than the minor risk of compressing a patient with a faint pulse, so uncertainty defaults to starting CPR.",
+      "difficulty": "Hard"
+    }
+  ]
+}

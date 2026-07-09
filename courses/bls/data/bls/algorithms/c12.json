@@ -1,0 +1,42 @@
+{
+  "chapter": "c12",
+  "algorithms": [
+    {
+      "id": "c12_alg01",
+      "title": "Drowning Resuscitation (Ventilation-Focused)",
+      "description": "The hypoxia-driven approach to a drowning victim in or near cardiac arrest.",
+      "steps": [
+        "Ensure rescuer safety and remove the victim from the water (trained rescuers may begin in-water rescue breaths once safe and the victim is reachable).",
+        "On a firm surface, open the airway and give initial rescue breaths.",
+        "If pulseless, begin conventional CPR with compressions AND breaths — avoid compression-only CPR.",
+        "Dry the chest and apply an AED; follow prompts and resume compressions immediately after any shock.",
+        "Do not attempt routine maneuvers to expel water from the lungs.",
+        "Continue CPR with breaths until signs of life or handoff; transport promptly."
+      ]
+    },
+    {
+      "id": "c12_alg02",
+      "title": "CPR in Late Pregnancy",
+      "description": "Modifications to high-quality CPR for a pregnant patient in the second half of pregnancy.",
+      "image": "../../images/courses/bls/c12_g01.webp",
+      "steps": [
+        "Provide high-quality CPR with standard hand placement, rate, and depth on a firm surface.",
+        "Perform manual left uterine displacement (gently push the uterus to the patient's left) to relieve compression of the major vessels.",
+        "Use the AED normally — defibrillation is safe in pregnancy.",
+        "Activate advanced resources early and transport rapidly; advanced interventions may be needed for mother and fetus."
+      ]
+    },
+    {
+      "id": "c12_alg03",
+      "title": "Post-ROSC Care and Recovery Position",
+      "description": "BLS priorities after return of spontaneous circulation and for the unresponsive patient who is breathing.",
+      "steps": [
+        "Recognize ROSC: palpable pulse, spontaneous breathing, movement, or other signs of life.",
+        "Monitor airway, breathing, and pulse continuously; assist ventilation and give oxygen if breathing is inadequate.",
+        "Keep the AED attached in case of re-arrest and be ready to resume CPR.",
+        "For an unresponsive patient breathing normally with a pulse and no spinal injury, use the recovery position to protect the airway.",
+        "Transport promptly to definitive care and support the recovery link — survivor, family, and rescuer debriefing."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Breathing Stopped, Pulse Present",
+      "presentation": "An adult is found unresponsive after a sedative overdose. He is not breathing but has a strong, regular carotid pulse of about 70/min. The scene is safe and help has been called.",
+      "vitals": { "hr": "70 bpm, strong", "rr": "Absent", "spo2": "84%", "loc": "Unresponsive" },
+      "question": "What is the correct BLS intervention?",
+      "options": [
+        "A: Begin chest compressions at 30:2.",
+        "B: Provide breaths at 1 every 6 seconds and reassess the pulse every 2 minutes.",
+        "C: Apply an AED and shock.",
+        "D: Place him in the recovery position and wait."
+      ],
+      "correct": 1,
+      "explanation": "This is respiratory arrest with a pulse. The correct action is rescue breathing at 1 breath every 6 seconds for an adult, reassessing the pulse about every 2 minutes and starting CPR if the pulse is lost. Compressions are not indicated while a pulse is present.",
+      "clinicalPearl": "A pulse with no breathing means breaths only — and watch that pulse, because respiratory arrest can slide into cardiac arrest."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Child Not Breathing",
+      "presentation": "A 4-year-old is pulled from a backyard pond. She is unresponsive and not breathing, but you feel a definite pulse of about 90/min.",
+      "vitals": { "hr": "90 bpm", "rr": "Absent", "spo2": "80%", "loc": "Unresponsive" },
+      "question": "What rescue-breathing rate should you use?",
+      "options": [
+        "A: 1 breath every 6 seconds.",
+        "B: 1 breath every 2–3 seconds (about 20–30/min).",
+        "C: 1 breath every 10 seconds.",
+        "D: Only compressions, no breaths."
+      ],
+      "correct": 1,
+      "explanation": "Children and infants with a pulse but inadequate breathing receive breaths at the faster pediatric rate of 1 every 2–3 seconds. Because drowning is a breathing-driven emergency, prompt ventilation is especially important here.",
+      "clinicalPearl": "Kids breathe faster than adults — rescue-breathe them faster too: one breath every 2–3 seconds."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Deterioration During Rescue Breathing",
+      "presentation": "You have been providing rescue breaths to an adult in respiratory arrest for 2 minutes. On your scheduled pulse reassessment, you can no longer feel a carotid pulse within 10 seconds.",
+      "vitals": { "hr": "No pulse felt", "rr": "Absent (being assisted)", "loc": "Unresponsive" },
+      "question": "What should you do now?",
+      "options": [
+        "A: Continue rescue breathing only.",
+        "B: Begin CPR immediately, starting with chest compressions.",
+        "C: Reassess the pulse for another 30 seconds.",
+        "D: Increase the breathing rate."
+      ],
+      "correct": 1,
+      "explanation": "Loss of a pulse means the respiratory arrest has progressed to cardiac arrest. Start CPR immediately, beginning with compressions, and apply an AED as soon as available.",
+      "clinicalPearl": "The 2-minute pulse check exists precisely to catch this moment — respiratory arrest becoming cardiac arrest."
+    }
+  ]
+}

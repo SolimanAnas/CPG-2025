@@ -1,0 +1,21 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "Infant BLS Algorithm (<1 year)",
+      "description": "The sequence for an infant in cardiac arrest, reflecting the 2025 preferred two-thumb technique.",
+      "image": "../../images/courses/bls/c09_g01.webp",
+      "steps": [
+        "Verify scene safety; check responsiveness by tapping the sole of the foot; shout for help.",
+        "Assess breathing and the brachial pulse simultaneously for no more than 10 seconds.",
+        "If a pulse is present but breathing is absent/inadequate, give breaths at 1 every 2–3 seconds and reassess.",
+        "If the heart rate is under 60/min with poor perfusion despite adequate ventilation, begin compressions.",
+        "If no pulse, begin CPR: compress the lower half of the sternum (just below the nipple line), rate 100–120/min, depth at least one-third the chest (~1.5 in/4 cm), full recoil.",
+        "Use the two-thumb–encircling-hands technique (preferred, including for a lone rescuer who can encircle); use the heel of one hand if unable to encircle.",
+        "Use 30:2 for a single rescuer and 15:2 for two or more rescuers.",
+        "Lone rescuer: witnessed sudden collapse → call and get AED first; unwitnessed → about 2 minutes of CPR first, then call and get AED."
+      ]
+    }
+  ]
+}

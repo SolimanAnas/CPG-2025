@@ -1,0 +1,29 @@
+{
+  "chapter": "c12",
+  "tables": [
+    {
+      "id": "c12_t01",
+      "title": "CPR Modifications by Special Circumstance",
+      "headers": ["Circumstance", "Key Modification"],
+      "rows": [
+        ["Drowning", "Ventilation-first; conventional CPR WITH breaths; AED once chest is dry"],
+        ["Late pregnancy", "High-quality CPR + manual left uterine displacement; normal AED; rapid transport"],
+        ["Opioid overdose (pulse present)", "Breaths + naloxone"],
+        ["Unresponsive, breathing, pulse, no trauma", "Recovery position + monitor"],
+        ["After ROSC", "Monitor ABCs, support breathing/oxygen, keep AED attached, transport"]
+      ]
+    },
+    {
+      "id": "c12_t02",
+      "title": "Compression-Only vs Conventional CPR (with Breaths)",
+      "headers": ["Situation", "Preferred Approach"],
+      "rows": [
+        ["Adult sudden collapse, rescuer unable/unwilling to ventilate", "Compression-only CPR"],
+        ["Drowning", "Conventional CPR with breaths"],
+        ["Opioid overdose arrest", "Conventional CPR with breaths (plus naloxone adjunct)"],
+        ["Choking-related arrest", "Conventional CPR with breaths"],
+        ["Most pediatric arrests", "Conventional CPR with breaths"]
+      ]
+    }
+  ]
+}

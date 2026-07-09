@@ -1,0 +1,260 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "How many links make up the 2025 AHA universal Chain of Survival?",
+      "options": ["A. Four", "B. Five", "C. Six", "D. Seven"],
+      "correct": 2,
+      "rationale": "The 2025 Guidelines consolidated the separate adult/pediatric and in-hospital/out-of-hospital chains into a single universal six-link Chain of Survival. A separate seven-step-style Neonatal Chain of Care exists for newborns, but the universal chain itself has six links.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Which change did the 2025 AHA Guidelines make to the Chain of Survival?",
+      "options": [
+        "A. Removed the defibrillation link",
+        "B. Consolidated the separate chains into one universal chain and added a distinct newborn chain",
+        "C. Reduced the number of links to four",
+        "D. Eliminated the recovery link"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 update merged the previously separate adult, pediatric, in-hospital, and out-of-hospital chains into a single universal Chain of Survival, and introduced a separate Neonatal Chain of Care for newborns.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q03",
+      "question": "Which two interventions, both within BLS scope, are most strongly associated with survival from cardiac arrest?",
+      "options": [
+        "A. Advanced airway placement and epinephrine",
+        "B. Early high-quality CPR and rapid defibrillation",
+        "C. IV access and 12-lead ECG",
+        "D. Targeted temperature management and coronary angiography"
+      ],
+      "correct": 1,
+      "rationale": "Early bystander CPR and rapid defibrillation are the interventions most strongly linked to survival, and both are core BLS actions available before advanced providers arrive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q04",
+      "question": "In the in-hospital cardiac arrest (IHCA) setting, which emphasis is placed at the front of the system of care?",
+      "options": [
+        "A. Public-access AED programs",
+        "B. Surveillance and prevention with rapid-response systems",
+        "C. Bystander recognition by untrained laypeople",
+        "D. Dispatcher-assisted CPR"
+      ],
+      "correct": 1,
+      "rationale": "In hospitals, surveillance, monitoring, and rapid-response systems aim to recognize deterioration early and prevent many arrests before they occur, unlike the bystander-dependent front of out-of-hospital arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q05",
+      "question": "What does the recovery link of the Chain of Survival address?",
+      "options": [
+        "A. Only the immediate minutes after ROSC in the field",
+        "B. Physical, cognitive, and emotional rehabilitation and support for survivors and families after arrest",
+        "C. Replacing defibrillator pads after use",
+        "D. Documentation and billing for the resuscitation"
+      ],
+      "correct": 1,
+      "rationale": "The recovery link recognizes that survival continues beyond return of a pulse; survivors may need rehabilitation, psychological support, and treatment planning, and families need support as well.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q06",
+      "question": "A bystander calls 911 and the dispatcher coaches them to push hard and fast on the chest. This is an example of:",
+      "options": [
+        "A. Advanced cardiac life support",
+        "B. Dispatcher-assisted CPR",
+        "C. Post-cardiac arrest care",
+        "D. The recovery link"
+      ],
+      "correct": 1,
+      "rationale": "Dispatcher-assisted CPR is when emergency dispatchers coach bystanders over the phone to recognize arrest and begin chest compressions before EMS arrives — a key part of the system of care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q07",
+      "question": "Why is the 'weakest link' concept important in the Chain of Survival?",
+      "options": [
+        "A. Because only one link needs to work for survival",
+        "B. Because a delay or failure in any single link reduces the effectiveness of the entire chain",
+        "C. Because advanced care can always compensate for delayed CPR",
+        "D. Because the links can be performed in any order"
+      ],
+      "correct": 1,
+      "rationale": "Each link depends on the ones before it. A weak or delayed link — such as late recognition — cannot be fully rescued by strong later care, so speed and quality matter at every step.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q08",
+      "question": "Which of the following is the FIRST link of the universal Chain of Survival?",
+      "options": [
+        "A. Defibrillation",
+        "B. High-quality CPR",
+        "C. Activation of the emergency response",
+        "D. Post-cardiac arrest care"
+      ],
+      "correct": 2,
+      "rationale": "Activation of the emergency response is the first link — without calling for help and summoning an AED and advanced providers, the later links cannot occur.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q09",
+      "question": "Roughly what happens to survival probability for each minute defibrillation is delayed in a shockable arrest without CPR?",
+      "options": [
+        "A. It increases",
+        "B. It stays the same",
+        "C. It falls substantially",
+        "D. It is unaffected by time"
+      ],
+      "correct": 2,
+      "rationale": "In a shockable rhythm, survival probability declines substantially with each minute defibrillation is delayed, which is the rationale for public-access AED programs and rapid AED use.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "Which population is served by a separate chain introduced in the 2025 Guidelines?",
+      "options": [
+        "A. Geriatric patients",
+        "B. Newborns (Neonatal Chain of Care)",
+        "C. Trauma patients",
+        "D. Pregnant patients"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 Guidelines introduced a distinct Neonatal Chain of Care for newborns, separate from the universal Chain of Survival used for other populations.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q11",
+      "question": "A patient regains a pulse (ROSC) after CPR and defibrillation. What is the correct BLS mindset?",
+      "options": [
+        "A. The resuscitation is complete and no further care is needed",
+        "B. Continue monitoring and support post-arrest care; recovery is part of the chain",
+        "C. Remove the AED pads immediately and reassure the family it is over",
+        "D. Stop reassessing because the pulse has returned"
+      ],
+      "correct": 1,
+      "rationale": "ROSC is not the finish line. Post-cardiac arrest care (link 5) and recovery (link 6) follow; the patient still needs close monitoring, support, and continued care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q12",
+      "question": "Which statement about defibrillation and BLS scope is TRUE?",
+      "options": [
+        "A. Defibrillation with an AED is exclusively an advanced-provider skill",
+        "B. AED use is a core BLS and public-access action available to lay rescuers",
+        "C. Only physicians may apply an AED",
+        "D. AEDs should only be used after epinephrine is given"
+      ],
+      "correct": 1,
+      "rationale": "AED use is intentionally designed for lay rescuers and BLS providers. Public-access defibrillation is a cornerstone of the chain and does not require advanced training.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q13",
+      "question": "What is the primary purpose of continuous quality improvement within a system of care?",
+      "options": [
+        "A. To assign blame after unsuccessful resuscitations",
+        "B. To measure resuscitation performance and feed it back so future outcomes improve",
+        "C. To reduce the number of AEDs in public places",
+        "D. To replace bystander CPR with technology"
+      ],
+      "correct": 1,
+      "rationale": "Quality improvement measures performance (such as compression quality and time to defibrillation) and feeds it back to responders and the system, strengthening the chain and improving future survival.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q14",
+      "question": "Link 4 of the universal chain, advanced resuscitation interventions, includes which of the following?",
+      "options": [
+        "A. Recognizing the arrest",
+        "B. Airway management, medications, and treating reversible causes by trained providers",
+        "C. Applying the first AED shock",
+        "D. Coaching a bystander over the phone"
+      ],
+      "correct": 1,
+      "rationale": "Advanced resuscitation interventions build on high-quality CPR and defibrillation, adding advanced airway management, medications, and treatment of reversible causes delivered by trained providers.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Which sequence best represents a BLS provider's priorities when finding an unresponsive, pulseless adult?",
+      "options": [
+        "A. Start an IV, then call for help, then compress",
+        "B. Activate emergency response and get an AED, start high-quality CPR, defibrillate when available",
+        "C. Perform a detailed head-to-toe exam before compressions",
+        "D. Wait for advanced providers before doing anything"
+      ],
+      "correct": 1,
+      "rationale": "The BLS priority sequence is to activate the emergency response and obtain an AED, begin high-quality compressions immediately, and defibrillate as soon as the AED is available — the front links of the chain.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q16",
+      "question": "Why did the AHA move from multiple chains to a single universal Chain of Survival in 2025?",
+      "options": [
+        "A. To make resuscitation harder to teach",
+        "B. To simplify and unify the concept across ages and settings while keeping setting-specific emphasis",
+        "C. Because defibrillation is no longer recommended",
+        "D. To eliminate the role of bystanders"
+      ],
+      "correct": 1,
+      "rationale": "A single universal chain simplifies teaching and unifies the core sequence across adult, pediatric, in-hospital, and out-of-hospital arrest, while the emphasis (e.g., prevention in hospitals vs. bystander action in the community) still varies by setting.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q17",
+      "question": "A hospital rapid-response team is called for a deteriorating patient before any arrest occurs. Which link/emphasis does this represent?",
+      "options": [
+        "A. Recovery",
+        "B. Surveillance and prevention (IHCA emphasis)",
+        "C. Defibrillation",
+        "D. Post-cardiac arrest care"
+      ],
+      "correct": 1,
+      "rationale": "Rapid-response and early-warning systems reflect the surveillance-and-prevention emphasis of the in-hospital setting, aiming to prevent arrest by recognizing and treating deterioration early.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q18",
+      "question": "Which of the following best describes why public-access AED placement is emphasized?",
+      "options": [
+        "A. AEDs replace the need for CPR",
+        "B. Rapid defibrillation before EMS arrival improves survival in shockable arrests",
+        "C. AEDs are only useful in hospitals",
+        "D. Public AEDs are meant for training, not real use"
+      ],
+      "correct": 1,
+      "rationale": "Because survival in shockable rhythms declines with each minute of delay, placing AEDs where the public can reach them enables defibrillation before EMS arrives, strengthening a critical link.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q19",
+      "question": "The recovery link implies that good resuscitation practice ALSO includes:",
+      "options": [
+        "A. Stopping all follow-up once ROSC is achieved",
+        "B. Supporting survivors and families and debriefing rescuers",
+        "C. Avoiding any discussion of the event with the family",
+        "D. Immediately discharging the patient"
+      ],
+      "correct": 1,
+      "rationale": "The recovery link reframes survival as an ongoing journey, so supporting survivors and families and debriefing the rescue team are part of complete, high-quality resuscitation care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q20",
+      "question": "Which statement about the relationship between links is MOST accurate?",
+      "options": [
+        "A. Links can be skipped without affecting outcome",
+        "B. Each link builds on and depends upon the previous links",
+        "C. The last link is the only one that matters",
+        "D. Bystander links are unimportant if EMS is nearby"
+      ],
+      "correct": 1,
+      "rationale": "The chain is sequential and interdependent: each link builds on the ones before it, so timely, high-quality performance of the early links sets up the success of the later ones.",
+      "difficulty": "Easy"
+    }
+  ]
+}

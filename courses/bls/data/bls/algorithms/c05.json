@@ -1,0 +1,33 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "AED Operation Sequence",
+      "description": "The universal four-step AED sequence, integrated with ongoing CPR.",
+      "image": "../../images/courses/bls/c05_g01.webp",
+      "steps": [
+        "Power on the AED as soon as it arrives and follow the voice prompts.",
+        "Attach the pads to the patient's bare, dry chest as shown on the pad diagrams (anterolateral or anteroposterior).",
+        "Ensure everyone is clear and allow the AED to analyze the rhythm.",
+        "If a shock is advised, confirm everyone is clear and press the shock button.",
+        "Immediately resume chest compressions after the shock (or after 'no shock advised'), without checking a pulse.",
+        "Continue CPR for about 2 minutes until the AED prompts the next analysis; use that pause to switch compressors.",
+        "Repeat analyze–shock–CPR cycles until the patient shows signs of life or advanced providers take over."
+      ]
+    },
+    {
+      "id": "c05_alg02",
+      "title": "AED Special-Situation Adjustments",
+      "description": "Quick fixes for common obstacles to safe, effective pad placement.",
+      "steps": [
+        "Wet chest: move off standing water and wipe the chest dry before applying pads.",
+        "Implanted pacemaker/ICD: place the pad at least about 1 inch (2.5 cm) from the device bump.",
+        "Medication patch: remove the patch and wipe the skin, then apply the pad.",
+        "Hairy chest: press pads firmly; if they will not adhere, quickly shave the area and use fresh pads.",
+        "Small child: if pads would touch, use anteroposterior (front/back) placement.",
+        "Pregnancy: use the AED normally — defibrillation is safe and indicated."
+      ]
+    }
+  ]
+}

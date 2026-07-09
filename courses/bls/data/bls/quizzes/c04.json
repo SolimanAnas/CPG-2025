@@ -1,0 +1,214 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "What is the compression-to-ventilation ratio for 2-rescuer ADULT CPR without an advanced airway?",
+      "options": ["A. 15:2", "B. 30:2", "C. 10:1", "D. 5:1"],
+      "correct": 1,
+      "rationale": "The adult ratio remains 30:2 regardless of the number of rescuers. Only child and infant CPR change to 15:2 when a second rescuer is present.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "How often should the compressor role be rotated during CPR?",
+      "options": ["A. Every 30 seconds", "B. About every 2 minutes", "C. Every 6 minutes", "D. Only at the end"],
+      "correct": 1,
+      "rationale": "Switching about every 2 minutes (every 5 cycles) prevents the decline in compression depth that fatigue causes, and the switch should take under 10 seconds.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q03",
+      "question": "Once an advanced airway is in place during adult CPR, how are compressions and ventilations delivered?",
+      "options": [
+        "A. Continue 30:2 with pauses",
+        "B. Continuous compressions with 1 breath every 6 seconds",
+        "C. Stop compressions during each breath",
+        "D. 1 breath every 2 seconds"
+      ],
+      "correct": 1,
+      "rationale": "With an advanced airway, rescuers stop pausing for breaths. They give continuous compressions and one breath every 6 seconds (about 10/min), maximizing the compression fraction.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q04",
+      "question": "What is closed-loop communication?",
+      "options": [
+        "A. Speaking only to the team leader",
+        "B. Giving an order, having it repeated back, and confirming completion",
+        "C. Remaining silent to avoid distraction",
+        "D. Writing all orders down"
+      ],
+      "correct": 1,
+      "rationale": "Closed-loop communication means the receiver repeats the order back and reports when it is done, so the leader knows tasks are understood and completed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q05",
+      "question": "When is the ideal time to perform a compressor switch to minimize interruption?",
+      "options": [
+        "A. In the middle of a compression cycle",
+        "B. During the AED rhythm analysis pause",
+        "C. During a breath",
+        "D. Randomly whenever tired"
+      ],
+      "correct": 1,
+      "rationale": "Timing the switch to the AED rhythm-analysis pause uses a moment when compressions are already paused, so no additional interruption is added.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q06",
+      "question": "Which of the following is an element of effective team dynamics?",
+      "options": ["A. Vague, indirect orders", "B. Clear roles and responsibilities", "C. Ignoring feedback", "D. Multiple leaders giving conflicting orders"],
+      "correct": 1,
+      "rationale": "Clear roles and responsibilities is a core element of team dynamics, along with closed-loop communication, knowledge sharing, mutual respect, and constructive intervention.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q07",
+      "question": "A team member notices the compressions look too shallow. What should they do?",
+      "options": [
+        "A. Say nothing to avoid conflict",
+        "B. Use constructive intervention and respectfully alert the team",
+        "C. Take over without warning",
+        "D. Wait until the code is over to mention it"
+      ],
+      "correct": 1,
+      "rationale": "Constructive intervention means respectfully speaking up about a safety issue in real time, allowing correction that benefits the patient.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q08",
+      "question": "Why does the adult ratio remain 30:2 even with multiple rescuers?",
+      "options": [
+        "A. Because adults need fewer breaths than children",
+        "B. Because pediatric arrests are more often respiratory, so children benefit from more frequent ventilation at 15:2",
+        "C. Because adults cannot tolerate breaths",
+        "D. There is no physiological reason"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric arrests are frequently respiratory in origin, so children and infants receive more frequent ventilation (15:2 with two rescuers). Adult arrests are more often cardiac, so 30:2 is retained.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q09",
+      "question": "With an advanced airway in place, approximately how many breaths per minute should be given?",
+      "options": ["A. 4", "B. 10", "C. 20", "D. 30"],
+      "correct": 1,
+      "rationale": "One breath every 6 seconds equals about 10 breaths per minute, delivered without interrupting continuous compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "A two-rescuer team is doing adult CPR. Both stop and look at each other, each thinking the other is compressing. What team dynamics failure is this?",
+      "options": [
+        "A. Over-ventilation",
+        "B. Unclear roles and lack of closed-loop communication",
+        "C. Excessive compression depth",
+        "D. Correct technique"
+      ],
+      "correct": 1,
+      "rationale": "This is a failure of clear role assignment and communication. Explicit roles and closed-loop confirmation prevent the dangerous gap where no one is compressing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q11",
+      "question": "What is the maximum time a compressor switch should take?",
+      "options": ["A. 5 seconds", "B. Less than 10 seconds", "C. 20 seconds", "D. 30 seconds"],
+      "correct": 1,
+      "rationale": "Like all interruptions, a compressor switch should take less than 10 seconds so perfusion is minimally affected.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q12",
+      "question": "The team leader's primary responsibility during resuscitation is to:",
+      "options": [
+        "A. Perform all compressions personally",
+        "B. Coordinate the team, assign tasks, and monitor CPR quality",
+        "C. Operate the AED only",
+        "D. Document the event and nothing else"
+      ],
+      "correct": 1,
+      "rationale": "The leader maintains situational awareness, assigns and monitors tasks, ensures high-quality CPR, and adapts the plan — rather than getting fixed on one hands-on task.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q13",
+      "question": "Which practice best minimizes the post-shock pause?",
+      "options": [
+        "A. Checking the pulse for 30 seconds after the shock",
+        "B. Resuming chest compressions immediately after the shock is delivered",
+        "C. Waiting to see if the patient wakes up",
+        "D. Reanalyzing the rhythm before compressions"
+      ],
+      "correct": 1,
+      "rationale": "Compressions should resume immediately after a shock without a pulse or rhythm check, because early post-shock compressions support perfusion while the heart recovers.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q14",
+      "question": "In 2-rescuer adult CPR without an advanced airway, how are the 2 breaths delivered?",
+      "options": [
+        "A. During ongoing compressions without pausing",
+        "B. During a brief pause after each set of 30 compressions",
+        "C. Continuously every 2 seconds",
+        "D. Only once at the start"
+      ],
+      "correct": 1,
+      "rationale": "Without an advanced airway, the compressor pauses briefly after 30 compressions while the second rescuer delivers 2 breaths, then compressions resume immediately.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q15",
+      "question": "Which of the following correctly pairs a scenario with its ratio?",
+      "options": [
+        "A. 2-rescuer adult → 15:2",
+        "B. 2-rescuer child → 15:2",
+        "C. 1-rescuer child → 15:2",
+        "D. 2-rescuer adult → 5:1"
+      ],
+      "correct": 1,
+      "rationale": "Two-rescuer child (and infant) CPR uses 15:2. Adults stay at 30:2, and single-rescuer child CPR is 30:2.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q16",
+      "question": "Why should ventilation be limited to about 10 breaths/min with an advanced airway?",
+      "options": [
+        "A. To conserve oxygen tanks",
+        "B. To avoid over-ventilation, which raises intrathoracic pressure and reduces cardiac output",
+        "C. Because more breaths are impossible",
+        "D. To allow the compressor to rest"
+      ],
+      "correct": 1,
+      "rationale": "Excessive ventilation increases intrathoracic pressure and impairs venous return and cardiac output, so a controlled rate of about 10/min is used with an advanced airway.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q17",
+      "question": "A well-functioning team assigns a member to watch and call out CPR quality metrics. This best reflects which element?",
+      "options": [
+        "A. Mutual disrespect",
+        "B. Knowledge sharing and reassessment/summarizing",
+        "C. Unclear roles",
+        "D. Closed airway"
+      ],
+      "correct": 1,
+      "rationale": "Monitoring and calling out metrics supports reassessment/summarizing and knowledge sharing, helping the team maintain high-quality CPR and adjust as needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q18",
+      "question": "During 2-rescuer adult CPR, the AED advises 'no shock' and the patient remains pulseless. What should the team do?",
+      "options": [
+        "A. Stop CPR and wait",
+        "B. Immediately resume high-quality compressions and continue the 2-minute cycles",
+        "C. Give 5 rescue breaths only",
+        "D. Remove the AED pads"
+      ],
+      "correct": 1,
+      "rationale": "A 'no shock advised' with no pulse means resume compressions immediately and continue CPR in 2-minute cycles until the next analysis or return of a pulse.",
+      "difficulty": "Medium"
+    }
+  ]
+}

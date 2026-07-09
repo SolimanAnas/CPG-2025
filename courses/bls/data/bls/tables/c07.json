@@ -1,0 +1,35 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Rescue Breathing Rates by Age",
+      "headers": ["Patient", "Rate (pulse present, inadequate breathing)", "Breaths per Minute"],
+      "rows": [
+        ["Adult", "1 breath every 6 seconds", "~10"],
+        ["Child (1 yr–puberty)", "1 breath every 2–3 seconds", "~20–30"],
+        ["Infant (<1 yr)", "1 breath every 2–3 seconds", "~20–30"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "2025 Terminology: Breaths vs Ventilations",
+      "headers": ["Term", "Meaning", "Example"],
+      "rows": [
+        ["Breaths", "Assisting a patient with a pulse who is not breathing normally", "Mouth-to-mask breaths in an opioid overdose with a pulse"],
+        ["Ventilations", "Breaths delivered with a device", "Bag-mask ventilations during CPR"]
+      ]
+    },
+    {
+      "id": "c07_t03",
+      "title": "Match the Finding to the Action",
+      "headers": ["Finding", "Action"],
+      "rows": [
+        ["Pulse present, breathing adequately", "Monitor, recovery position, reassess"],
+        ["Pulse present, breathing inadequate/absent", "Give breaths at age-appropriate rate"],
+        ["No pulse", "Start CPR (compressions first)"],
+        ["Advanced airway placed", "Continuous compressions + 1 ventilation every 6 s"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Bradycardia in a Toddler",
+      "presentation": "A 3-year-old with a severe asthma attack becomes unresponsive. You are ventilating effectively with a bag-mask and good chest rise, but the heart rate is 48/min and the child is mottled and limp.",
+      "vitals": { "hr": "48 bpm", "rr": "Assisted", "spo2": "82%", "loc": "Unresponsive" },
+      "question": "What is the correct action?",
+      "options": [
+        "A: Continue only ventilation and reassess in 5 minutes.",
+        "B: Begin chest compressions because the heart rate is under 60 with poor perfusion despite ventilation.",
+        "C: Apply an AED and shock the bradycardia.",
+        "D: Stop ventilating."
+      ],
+      "correct": 1,
+      "explanation": "A child with a heart rate below 60/min and signs of poor perfusion despite adequate oxygenation and ventilation should receive chest compressions. A slow, poorly perfusing rhythm in a child quickly deteriorates to full arrest.",
+      "clinicalPearl": "In children, 'under 60 with poor perfusion' is a compression trigger — you don't wait for the pulse to disappear."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Two Rescuers, One Child",
+      "presentation": "A 7-year-old is in cardiac arrest after a drowning. You and a colleague are both trained rescuers with a bag-mask and AED available.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What compression-to-ventilation ratio and technique should you use?",
+      "options": [
+        "A: 30:2, one hand, rate 60/min.",
+        "B: 15:2, one or two hands to a depth of at least one-third the chest, rate 100–120/min, with breaths.",
+        "C: Compression-only CPR at 30:2.",
+        "D: 5:1 with shallow compressions."
+      ],
+      "correct": 1,
+      "explanation": "With two rescuers, child CPR is 15:2. Compress the lower half of the sternum with one or two hands to at least one-third the chest depth at 100–120/min, including ventilations — especially important here because drowning is a hypoxic, breathing-driven arrest.",
+      "clinicalPearl": "Two rescuers + child = 15:2, and never skip breaths in a drowning arrest."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Alone With a Collapsed Child",
+      "presentation": "You are alone and find a 5-year-old unresponsive on the floor; you did not see the collapse and no one else is around. The child is not breathing and has no pulse. You have a phone.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the best sequence for a lone rescuer?",
+      "options": [
+        "A: Leave to find an AED across the building before doing anything.",
+        "B: Give about 2 minutes of CPR first (likely hypoxic), then activate the emergency response and get an AED — or call immediately on speaker while starting CPR.",
+        "C: Only give breaths and wait.",
+        "D: Apply an AED before any CPR."
+      ],
+      "correct": 1,
+      "explanation": "For an unwitnessed pediatric collapse with a lone rescuer, the likely cause is hypoxic, so about 2 minutes of CPR is provided before leaving to activate help and get an AED. Using a phone on speaker lets the rescuer call without interrupting CPR.",
+      "clinicalPearl": "Unwitnessed child collapse alone = CPR first; a speakerphone lets you do both at once."
+    }
+  ]
+}

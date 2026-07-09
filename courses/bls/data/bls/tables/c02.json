@@ -1,0 +1,37 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "Normal Breathing vs Agonal Gasping",
+      "headers": ["Feature", "Normal Breathing", "Agonal Gasping"],
+      "rows": [
+        ["Rate", "Regular, ~12–20/min (adult)", "Slow, irregular, occasional"],
+        ["Pattern", "Even, effortless chest rise", "Gasping, snoring, or gurgling"],
+        ["Meaning", "Adequate ventilation", "Sign of cardiac arrest"],
+        ["Action", "Monitor / reassess", "Begin CPR"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "Assessment Findings and the Correct BLS Action",
+      "headers": ["Responsive?", "Normal Breathing?", "Pulse?", "Action"],
+      "rows": [
+        ["Yes", "—", "—", "Monitor, reassure, get help as needed"],
+        ["No", "Yes", "Yes", "Monitor; recovery position; reassess"],
+        ["No", "No", "Yes", "Rescue breathing (breaths); reassess pulse"],
+        ["No", "No", "No / unsure", "Start high-quality CPR; apply AED"]
+      ]
+    },
+    {
+      "id": "c02_t03",
+      "title": "Pulse Check Site by Age",
+      "headers": ["Age Group", "Pulse Site", "Max Check Time"],
+      "rows": [
+        ["Adult", "Carotid (neck)", "10 seconds"],
+        ["Child (1 yr–puberty)", "Carotid or femoral", "10 seconds"],
+        ["Infant (<1 yr)", "Brachial (upper arm)", "10 seconds"]
+      ]
+    }
+  ]
+}

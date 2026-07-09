@@ -1,0 +1,21 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "Bag-Mask Ventilation Technique",
+      "description": "Steps for effective positive-pressure ventilation with a bag-mask device.",
+      "image": "../../images/courses/bls/c06_g01.webp",
+      "steps": [
+        "Position at the patient's head and open the airway (head-tilt/chin-lift, or jaw-thrust if spinal injury is suspected).",
+        "Select an appropriately sized mask that covers the mouth and nose without covering the eyes or extending past the chin.",
+        "Insert an airway adjunct if indicated (OPA if no gag reflex; NPA if a gag reflex may be present).",
+        "Apply the mask using the E-C clamp: thumb and index finger form a 'C' sealing the mask, the other fingers form an 'E' lifting the jaw.",
+        "Attach supplemental oxygen when available.",
+        "Squeeze the bag smoothly over about 1 second, delivering only enough volume to see the chest rise.",
+        "Match the rate to context: 2 breaths per 30 compressions (no advanced airway), or 1 breath every 6 seconds (rescue breathing or advanced airway).",
+        "If the chest does not rise, reposition the airway, improve the seal, and check for obstruction before re-attempting."
+      ]
+    }
+  ]
+}

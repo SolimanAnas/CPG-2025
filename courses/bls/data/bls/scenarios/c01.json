@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "Collapse in a Shopping Mall",
+      "presentation": "You are a BLS provider walking through a shopping mall when a man in his 60s suddenly collapses. He is unresponsive and not breathing normally. A crowd gathers, and you notice an AED cabinet on the wall about 15 meters away. Two bystanders are nearby.",
+      "vitals": { "hr": "No pulse", "rr": "Agonal gasps", "loc": "Unresponsive" },
+      "question": "Applying the Chain of Survival, what is the most appropriate immediate set of actions?",
+      "options": [
+        "A: Direct a bystander to call emergency services and another to bring the AED, and begin high-quality chest compressions now.",
+        "B: Wait for EMS to arrive before touching the patient.",
+        "C: Perform a detailed head-to-toe assessment before starting CPR.",
+        "D: Retrieve the AED yourself first, leaving the patient, before starting any compressions."
+      ],
+      "correct": 0,
+      "explanation": "The first links of the chain are activation and high-quality CPR. Delegating the call and AED retrieval to bystanders lets you start compressions immediately without leaving the patient, compressing the time to both CPR and defibrillation.",
+      "clinicalPearl": "Delegate clearly and specifically ('You, call 911; you, bring that AED') — vague requests to a crowd often go unanswered."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Ward Patient Deteriorating",
+      "presentation": "On a hospital ward, a monitored patient's early-warning score rises sharply over 20 minutes: increasing respiratory rate, falling blood pressure, and new confusion. The patient still has a pulse and is breathing.",
+      "vitals": { "hr": "122 bpm", "bp": "88/54 mmHg", "rr": "28 bpm", "spo2": "90%", "loc": "Confused" },
+      "question": "Which system-of-care action best reflects the in-hospital emphasis of the Chain of Survival here?",
+      "options": [
+        "A: Do nothing until the patient arrests, then start CPR.",
+        "B: Activate the rapid-response/medical emergency team to intervene before arrest occurs.",
+        "C: Apply an AED to the conscious patient with a pulse.",
+        "D: Begin chest compressions immediately."
+      ],
+      "correct": 1,
+      "explanation": "In-hospital care emphasizes surveillance and prevention. Activating the rapid-response team addresses deterioration early and may prevent the arrest entirely — compressions and AED are not indicated in a patient who has a pulse and is breathing.",
+      "clinicalPearl": "The best cardiac arrest is the one that never happens — early-warning systems and rapid-response teams are the prevention link in action."
+    },
+    {
+      "id": "c01_s03",
+      "title": "After the Pulse Returns",
+      "presentation": "Your team resuscitated a woman in cardiac arrest at home. After several cycles of CPR and one AED shock, she regains a pulse and begins breathing on her own. The family, relieved, asks if everything is 'over now.'",
+      "vitals": { "hr": "96 bpm", "bp": "104/68 mmHg", "rr": "16 bpm", "spo2": "94%", "loc": "Drowsy, responsive" },
+      "question": "Based on the Chain of Survival, what is the most appropriate next step and message?",
+      "options": [
+        "A: Tell the family it is over and stop monitoring the patient.",
+        "B: Continue close monitoring, support post-arrest care and transport, and explain that recovery is an ongoing process.",
+        "C: Remove the AED pads and leave the scene.",
+        "D: Discharge the patient at home since she has a pulse."
+      ],
+      "correct": 1,
+      "explanation": "ROSC is not the end. Post-cardiac arrest care (link 5) and recovery (link 6) continue: the patient needs monitoring, transport, and ongoing care, and the family should understand that recovery is a journey requiring further treatment and support.",
+      "clinicalPearl": "Re-arrest is common early after ROSC — keep the AED attached and reassess frequently during transport."
+    }
+  ]
+}

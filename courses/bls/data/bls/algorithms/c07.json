@@ -1,0 +1,31 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Rescue Breathing (Breaths) for a Patient with a Pulse",
+      "description": "The sequence for assisting a patient who is unresponsive with a pulse but inadequate or absent breathing.",
+      "steps": [
+        "Confirm the patient is unresponsive with a pulse but not breathing normally.",
+        "Open the airway (head-tilt/chin-lift, or jaw-thrust if trauma is suspected).",
+        "Deliver breaths at the age-appropriate rate: adult 1 breath every 6 seconds (~10/min); infant/child 1 breath every 2–3 seconds (~20–30/min).",
+        "Give each breath over about 1 second, to visible chest rise, avoiding over-ventilation.",
+        "Reassess the pulse about every 2 minutes (≤10 seconds).",
+        "If the pulse is lost, begin CPR immediately, starting with compressions, and apply an AED.",
+        "If breathing recovers adequately, monitor and place in the recovery position as appropriate."
+      ]
+    },
+    {
+      "id": "c07_alg02",
+      "title": "Ventilation With an Advanced Airway",
+      "description": "How ventilation changes once a supraglottic device or endotracheal tube is placed during cardiac arrest.",
+      "steps": [
+        "Continue chest compressions continuously at 100–120/min — do not pause for breaths.",
+        "Deliver 1 ventilation every 6 seconds (about 10/min).",
+        "Give each ventilation gently to visible chest rise; avoid over-ventilation.",
+        "Confirm and monitor placement with clinical signs and waveform capnography where available.",
+        "Reassess the rhythm at the scheduled AED/monitor intervals and continue until ROSC or handoff."
+      ]
+    }
+  ]
+}

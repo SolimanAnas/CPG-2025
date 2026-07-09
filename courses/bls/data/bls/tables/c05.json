@@ -1,0 +1,28 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "AED Defibrillation by Age Group",
+      "headers": ["Age", "Preferred", "If Preferred Unavailable"],
+      "rows": [
+        ["Adult / ≥8 years", "AED with adult pads", "—"],
+        ["Child 1–8 years", "Pediatric pads / pediatric setting", "Adult pads (do not let pads touch)"],
+        ["Infant <1 year", "Manual defibrillator (trained provider)", "AED with dose attenuator, then AED with adult pads"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "AED Special Situations",
+      "headers": ["Situation", "Action"],
+      "rows": [
+        ["Wet chest / standing water", "Move to dry area; wipe chest dry before pads"],
+        ["Pacemaker / ICD", "Place pad ≥1 in (2.5 cm) from the device"],
+        ["Transdermal medication patch", "Remove patch, wipe skin, then apply pad"],
+        ["Hairy chest", "Press pads firmly; shave quickly if pads won't stick"],
+        ["Pregnancy", "Use AED normally — defibrillation is safe"],
+        ["Metal jewelry", "Remove only if directly under a pad"]
+      ]
+    }
+  ]
+}

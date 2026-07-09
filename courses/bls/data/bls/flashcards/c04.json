@@ -1,0 +1,20 @@
+{
+  "chapter": "c04",
+  "cards": [
+    { "id": "c04_fc01", "question": "What is the adult compression-to-ventilation ratio with two rescuers?", "answer": "Still 30:2. The adult ratio does not change with more rescuers (only child/infant change to 15:2).", "category": "Ratios" },
+    { "id": "c04_fc02", "question": "How often should compressors switch in multi-rescuer CPR?", "answer": "About every 2 minutes (roughly every 5 cycles of 30:2), completing the switch in under 10 seconds.", "category": "Technique" },
+    { "id": "c04_fc03", "question": "What are the typical roles in a resuscitation team?", "answer": "Compressor, airway/ventilation, AED operator, and team leader; roles rotate to keep compressions high-quality.", "category": "Team Dynamics" },
+    { "id": "c04_fc04", "question": "How is ventilation delivered once an advanced airway is in place?", "answer": "Continuous compressions at 100–120/min with one breath every 6 seconds (about 10 breaths/min); no pauses for breaths.", "category": "Advanced Airway" },
+    { "id": "c04_fc05", "question": "What is closed-loop communication?", "answer": "The sender gives a clear order, the receiver repeats it back, and confirms when it is completed — preventing missed or duplicated actions.", "category": "Team Dynamics" },
+    { "id": "c04_fc06", "question": "When is the best moment to switch compressors with minimal interruption?", "answer": "During a natural pause such as AED rhythm analysis, planned in advance so the change takes under 10 seconds.", "category": "Technique" },
+    { "id": "c04_fc07", "question": "List the elements of effective team dynamics.", "answer": "Closed-loop communication, clear messages, clear roles/responsibilities, knowledge sharing, constructive intervention, reassessment/summarizing, and mutual respect.", "category": "Team Dynamics" },
+    { "id": "c04_fc08", "question": "What does the team leader do during a resuscitation?", "answer": "Keeps the big picture, assigns and monitors tasks, ensures high-quality CPR, adjusts the plan, and coordinates the team.", "category": "Team Dynamics" },
+    { "id": "c04_fc09", "question": "What is 'constructive intervention'?", "answer": "A team member respectfully speaking up to correct or suggest a change (e.g., 'compressions look shallow') for patient safety.", "category": "Team Dynamics" },
+    { "id": "c04_fc10", "question": "Why does compressor fatigue matter even if the rescuer feels fine?", "answer": "Depth quietly decreases within about 2 minutes of continuous compressions, so scheduled switching preserves quality.", "category": "Technique" },
+    { "id": "c04_fc11", "question": "How many breaths per minute with an advanced airway in adult CPR?", "answer": "About 10 breaths per minute — one every 6 seconds.", "category": "Advanced Airway" },
+    { "id": "c04_fc12", "question": "Which age groups change to 15:2 with two rescuers?", "answer": "Children (1 year to puberty) and infants (under 1 year); adults remain 30:2.", "category": "Ratios" },
+    { "id": "c04_fc13", "question": "What is a danger of poor communication during multi-rescuer CPR?", "answer": "Tasks may be missed or duplicated — for example, both rescuers assuming the other is compressing, leaving no one doing CPR.", "category": "Common Mistakes" },
+    { "id": "c04_fc14", "question": "What should a team member do if they cannot complete an assigned task?", "answer": "Speak up clearly and immediately so the leader can reassign it, rather than staying silent.", "category": "Team Dynamics" },
+    { "id": "c04_fc15", "question": "Why minimize pre-shock and post-shock pauses as a team?", "answer": "Long pauses around defibrillation reduce perfusion and lower the chance of a successful shock; resume compressions immediately after the shock.", "category": "Defibrillation" }
+  ]
+}

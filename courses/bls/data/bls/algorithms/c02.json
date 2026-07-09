@@ -1,0 +1,19 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "BLS Assessment & Recognition of Cardiac Arrest",
+      "description": "The stepwise sequence a BLS provider uses from arrival to the decision to start CPR.",
+      "steps": [
+        "Ensure the scene is safe before approaching; address or avoid hazards.",
+        "Check responsiveness: tap the shoulders (sole of the foot for an infant) and shout.",
+        "If unresponsive, shout for nearby help and activate the emergency response system.",
+        "Send someone to retrieve an AED and additional equipment (or use a phone on speaker if alone).",
+        "Simultaneously check for normal breathing and a pulse for no more than 10 seconds (carotid in adult/child, brachial in infant).",
+        "Interpret findings: normal breathing + pulse → monitor and reassess; pulse but inadequate breathing → give breaths; no pulse / no normal breathing / unsure → begin CPR.",
+        "If in arrest, start high-quality chest compressions immediately and apply the AED as soon as it arrives."
+      ]
+    }
+  ]
+}

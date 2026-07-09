@@ -1,0 +1,209 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "Which infant chest compression technique is PREFERRED in the 2025 AHA Guidelines?",
+      "options": [
+        "A. Two-finger technique",
+        "B. Two-thumb–encircling-hands technique",
+        "C. Heel of two hands",
+        "D. One-finger technique"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 Guidelines preferentially recommend the two-thumb–encircling-hands technique for infants, including for a lone rescuer who can encircle the chest. The two-finger technique is no longer recommended.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q02",
+      "question": "What is the correct compression depth for an infant?",
+      "options": [
+        "A. At least 2 inches",
+        "B. At least one-third the chest depth (about 1.5 inches / 4 cm)",
+        "C. About 0.5 inch",
+        "D. At least 2.4 inches"
+      ],
+      "correct": 1,
+      "rationale": "Infant compressions are at least one-third the anterior-posterior chest depth, approximately 1.5 inches (4 cm).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q03",
+      "question": "Where should you check the pulse in an infant?",
+      "options": ["A. Carotid", "B. Radial", "C. Brachial", "D. Pedal"],
+      "correct": 2,
+      "rationale": "The brachial artery on the inside of the upper arm is used for infants, because their short necks make the carotid hard to palpate.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q04",
+      "question": "If a lone rescuer cannot encircle an infant's chest, which technique may be used?",
+      "options": ["A. Two-finger technique", "B. Heel-of-one-hand technique", "C. Two-hand adult technique", "D. No compressions"],
+      "correct": 1,
+      "rationale": "When a single rescuer cannot encircle the chest, the heel-of-one-hand technique is the recommended alternative in the 2025 Guidelines (the two-finger technique is no longer recommended).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q05",
+      "question": "Where on the body do you perform infant chest compressions?",
+      "options": [
+        "A. Upper third of the sternum",
+        "B. Lower half of the sternum, just below the nipple line",
+        "C. Over the xiphoid process",
+        "D. On the left side of the chest"
+      ],
+      "correct": 1,
+      "rationale": "Compress the lower half of the sternum, just below the nipple line, avoiding the xiphoid process.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q06",
+      "question": "What is the single-rescuer compression-to-ventilation ratio for an infant?",
+      "options": ["A. 15:2", "B. 30:2", "C. 5:1", "D. 10:2"],
+      "correct": 1,
+      "rationale": "A single rescuer uses 30:2 for an infant; the ratio changes to 15:2 with two or more rescuers.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q07",
+      "question": "What is the 2-rescuer compression-to-ventilation ratio for an infant?",
+      "options": ["A. 30:2", "B. 15:2", "C. 15:1", "D. 5:2"],
+      "correct": 1,
+      "rationale": "With two or more rescuers, infant CPR uses 15:2, the same as for children.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q08",
+      "question": "How is the two-thumb–encircling-hands technique performed?",
+      "options": [
+        "A. Two fingers on the sternum with the other hand supporting the head",
+        "B. Both thumbs on the lower half of the sternum while the fingers encircle and support the back",
+        "C. The heel of one hand on the abdomen",
+        "D. Both palms flat on the chest"
+      ],
+      "correct": 1,
+      "rationale": "The two thumbs are placed side by side on the lower half of the sternum while the fingers wrap around the chest to encircle and support the infant's back.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q09",
+      "question": "An infant has a heart rate of 50/min with poor perfusion despite effective ventilation with 100% oxygen. What should you do?",
+      "options": [
+        "A. Continue ventilation only",
+        "B. Begin chest compressions",
+        "C. Shock with an AED",
+        "D. Reassess in 5 minutes"
+      ],
+      "correct": 1,
+      "rationale": "A heart rate below 60/min with poor perfusion despite adequate oxygenation and ventilation is an indication to start compressions in an infant, as it rapidly leads to full arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q10",
+      "question": "How do you check responsiveness in an infant?",
+      "options": ["A. Tap the shoulders", "B. Tap the sole of the foot", "C. Shake vigorously", "D. Perform a sternal rub"],
+      "correct": 1,
+      "rationale": "Tap the sole of the infant's foot and look for a response, rather than tapping the shoulders as in older patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q11",
+      "question": "A lone rescuer finds an infant unresponsive and pulseless from an unwitnessed collapse. What is the recommended sequence?",
+      "options": [
+        "A. Call for help and get an AED before any CPR",
+        "B. Provide about 2 minutes of CPR first, then activate help and get an AED",
+        "C. Only give breaths",
+        "D. Apply an AED before CPR"
+      ],
+      "correct": 1,
+      "rationale": "An unwitnessed infant collapse is likely hypoxic, so a lone rescuer gives about 2 minutes of CPR first, then activates the emergency response and gets an AED (or calls on speaker while doing CPR).",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q12",
+      "question": "Why is the two-thumb–encircling-hands technique preferred over two fingers?",
+      "options": [
+        "A. It is easier to remember",
+        "B. It produces higher-quality compressions and better depth/pressure",
+        "C. It requires no chest recoil",
+        "D. It avoids the need for ventilation"
+      ],
+      "correct": 1,
+      "rationale": "Evidence supports that the two-thumb–encircling-hands technique delivers better-quality compressions, leading the 2025 Guidelines to prefer it and drop the two-finger technique.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q13",
+      "question": "What compression rate is used for an infant?",
+      "options": ["A. 60–80/min", "B. 80–100/min", "C. 100–120/min", "D. 140–160/min"],
+      "correct": 2,
+      "rationale": "The infant compression rate is 100–120/min, the same as for children and adults.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q14",
+      "question": "Why is ventilation emphasized in infant CPR?",
+      "options": [
+        "A. Infants cannot receive compressions",
+        "B. Most infant arrests are hypoxic in origin",
+        "C. Infants never have cardiac arrests",
+        "D. Breaths replace compressions"
+      ],
+      "correct": 1,
+      "rationale": "Like older children, infants usually arrest from respiratory or hypoxic causes, making ventilation a critical component of effective CPR.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q15",
+      "question": "An infant is unresponsive with a brachial pulse of 120/min but is not breathing. What is correct?",
+      "options": [
+        "A. Start compressions at 15:2",
+        "B. Give breaths at 1 every 2–3 seconds and reassess",
+        "C. Apply an AED",
+        "D. Place in the recovery position"
+      ],
+      "correct": 1,
+      "rationale": "With an adequate pulse but no breathing, provide rescue breathing at 1 breath every 2–3 seconds and reassess the pulse; compressions are not indicated with a good pulse.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q16",
+      "question": "Which patient is considered an 'infant' rather than 'newly born' for BLS?",
+      "options": [
+        "A. A baby in the first minutes after birth",
+        "B. A 4-month-old at home",
+        "C. A 2-year-old",
+        "D. A 6-year-old"
+      ],
+      "correct": 1,
+      "rationale": "An infant is under 1 year of age, excluding the newly born immediately after birth (who follow neonatal guidance). A 4-month-old is an infant.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q17",
+      "question": "During 2-rescuer infant CPR, which technique pairs best with the 15:2 ratio?",
+      "options": [
+        "A. Two-finger technique",
+        "B. Two-thumb–encircling-hands technique",
+        "C. Adult two-hand technique",
+        "D. Heel of two hands"
+      ],
+      "correct": 1,
+      "rationale": "The two-thumb–encircling-hands technique is preferred and is especially well suited to two-rescuer CPR, where one compresses and one ventilates at 15:2.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q18",
+      "question": "Which combination is correct for single-rescuer infant CPR?",
+      "options": [
+        "A. Two-thumb or heel-of-one-hand technique, rate 100–120/min, depth ~1.5 in, ratio 30:2",
+        "B. Two fingers, rate 60/min, depth 2.4 in, ratio 15:2",
+        "C. Adult two-hand technique, rate 140/min, ratio 5:1",
+        "D. One finger, rate 80/min, depth 0.5 in, ratio 30:2"
+      ],
+      "correct": 0,
+      "rationale": "Single-rescuer infant CPR uses the preferred two-thumb–encircling-hands technique (or heel of one hand if unable to encircle), 100–120/min, depth about 1.5 inches (one-third the chest), with a 30:2 ratio.",
+      "difficulty": "Hard"
+    }
+  ]
+}

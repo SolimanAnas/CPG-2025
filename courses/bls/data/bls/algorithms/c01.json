@@ -1,0 +1,30 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Universal Chain of Survival (2025) — BLS Provider View",
+      "description": "The 2025 AHA universal Chain of Survival unifies adult and pediatric, in-hospital and out-of-hospital cardiac arrest into a single six-link sequence. BLS providers own the earliest, most impactful links.",
+      "image": "../../images/courses/bls/c01_g01.webp",
+      "steps": [
+        "Link 1 — Activation of emergency response: recognize cardiac arrest and immediately summon help, an AED, and advanced providers.",
+        "Link 2 — High-quality CPR: begin chest compressions right away, pushing hard and fast with full recoil and minimal interruptions.",
+        "Link 3 — Defibrillation: apply an AED and deliver a shock as soon as one is available for a shockable rhythm.",
+        "Link 4 — Advanced resuscitation interventions: trained providers add airway management, medications, and treatment of reversible causes.",
+        "Link 5 — Post-cardiac arrest care: after ROSC, continue monitoring, support oxygenation and circulation, and transport to definitive care.",
+        "Link 6 — Recovery: rehabilitation, psychological support, and treatment planning for the survivor and support for the family."
+      ]
+    },
+    {
+      "id": "c01_alg02",
+      "title": "System-of-Care Emphasis by Setting",
+      "description": "The universal chain is applied with different front-end emphasis depending on where the arrest occurs.",
+      "steps": [
+        "Out-of-hospital (OHCA): emphasize bystander recognition, calling for help, dispatcher-assisted CPR, and public-access AED use before EMS arrival.",
+        "In-hospital (IHCA): emphasize surveillance, monitoring, early-warning scores, and rapid-response systems to prevent arrest before it happens.",
+        "All settings: deliver high-quality CPR and rapid defibrillation, ensure smooth hand-offs between responders, and use quality improvement to strengthen the system.",
+        "Newborns: apply the separate Neonatal Chain of Care rather than the universal chain."
+      ]
+    }
+  ]
+}

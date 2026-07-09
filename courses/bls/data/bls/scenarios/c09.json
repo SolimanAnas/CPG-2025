@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "Two Rescuers, One Infant",
+      "presentation": "A 4-month-old is found unresponsive and pulseless. You and a partner, both trained, respond with a bag-mask. You are able to encircle the infant's small chest with your hands.",
+      "vitals": { "hr": "No pulse (brachial)", "rr": "None", "loc": "Unresponsive" },
+      "question": "What compression technique and ratio should you use?",
+      "options": [
+        "A: Two-finger technique at 30:2.",
+        "B: Two-thumb–encircling-hands technique at 15:2, depth about 1.5 inches, rate 100–120/min.",
+        "C: Adult two-hand technique at 30:2.",
+        "D: Heel of one hand at 5:1."
+      ],
+      "correct": 1,
+      "explanation": "With two rescuers who can encircle the chest, the preferred 2025 technique is two-thumb–encircling-hands at a 15:2 ratio, compressing the lower half of the sternum to about 1.5 inches (one-third the chest) at 100–120/min.",
+      "clinicalPearl": "Two thumbs, encircle the chest, 15:2 with a partner — the 2025 preferred infant approach."
+    },
+    {
+      "id": "c09_s02",
+      "title": "Alone With an Infant",
+      "presentation": "You are the only rescuer with an unresponsive, pulseless 6-month-old. Your hands are large enough to encircle the infant's chest. You did not witness the collapse.",
+      "vitals": { "hr": "No pulse (brachial)", "rr": "None", "loc": "Unresponsive" },
+      "question": "What technique should a lone rescuer use, and what is the sequence?",
+      "options": [
+        "A: Two-finger technique, and leave immediately to find an AED.",
+        "B: Two-thumb–encircling-hands technique (since you can encircle), give about 2 minutes of CPR first for this unwitnessed collapse, then call for help and get an AED — or call on speaker while doing CPR.",
+        "C: Adult two-hand technique and shock first.",
+        "D: Only give breaths."
+      ],
+      "correct": 1,
+      "explanation": "The 2025 Guidelines prefer the two-thumb–encircling-hands technique even for a lone rescuer who can encircle the chest. For an unwitnessed infant collapse (likely hypoxic), provide about 2 minutes of CPR before leaving to activate help and get an AED, ideally using a speakerphone.",
+      "clinicalPearl": "The two-finger technique is retired — if you can encircle the chest, use two thumbs even when alone."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Infant Bradycardia",
+      "presentation": "A 2-month-old with bronchiolitis becomes limp. You are ventilating with good chest rise and supplemental oxygen, but the brachial heart rate is 45/min and the baby is pale and unresponsive.",
+      "vitals": { "hr": "45 bpm", "rr": "Assisted", "spo2": "83%", "loc": "Unresponsive" },
+      "question": "What is the correct action?",
+      "options": [
+        "A: Continue ventilation only and monitor.",
+        "B: Begin chest compressions because the heart rate is under 60 with poor perfusion despite ventilation.",
+        "C: Apply an AED and shock.",
+        "D: Stop ventilating and reassess."
+      ],
+      "correct": 1,
+      "explanation": "An infant with a heart rate below 60/min and poor perfusion despite adequate oxygenation and ventilation should receive chest compressions, using the two-thumb–encircling-hands technique. A slow, poorly perfusing rhythm quickly progresses to full arrest.",
+      "clinicalPearl": "In babies and children alike, 'under 60 with poor perfusion despite good ventilation' means start compressions."
+    }
+  ]
+}

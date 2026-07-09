@@ -1,0 +1,72 @@
+{
+  "id": "c08",
+  "title": "Child BLS",
+  "shortTitle": "Child BLS",
+  "estimatedStudyTime": 32,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define the child age range for BLS purposes.",
+    "State the compression rate, depth, and hand technique for a child.",
+    "Give the compression-to-ventilation ratios for 1- and 2-rescuer child CPR.",
+    "Explain why ventilation is emphasized in pediatric arrest.",
+    "State when to begin compressions in a child with a pulse but bradycardia and poor perfusion.",
+    "Describe how a lone rescuer manages a witnessed vs unwitnessed child collapse."
+  ],
+  "summary": [
+    {
+      "title": "Defining a Child",
+      "content": "For BLS, a 'child' is from 1 year of age to the onset of puberty (signs such as chest or underarm hair in males, or breast development in females). Below 1 year is an infant; at puberty and beyond, use adult BLS. The distinction matters because compression technique, depth, and the 2-rescuer ratio differ from adults."
+    },
+    {
+      "title": "Compression Technique for a Child",
+      "content": "Compress the lower half of the sternum at a rate of 100–120 per minute to a depth of at least one-third the depth of the chest (anterior-posterior diameter), which is about 2 inches (5 cm). Use one or two hands, whichever achieves adequate depth for the size of the child. Allow full chest recoil after each compression and perform CPR on a firm surface."
+    },
+    {
+      "title": "Ratios for Child CPR",
+      "content": "A single rescuer uses a 30:2 compression-to-ventilation ratio. When two or more rescuers are present, the ratio changes to 15:2 — more frequent ventilation than for adults. This reflects the physiology of pediatric arrest, which is more often caused by breathing problems and hypoxia than by a primary cardiac rhythm."
+    },
+    {
+      "title": "Why Ventilation Matters in Children",
+      "content": "Most pediatric cardiac arrests result from progressive respiratory failure or shock rather than a sudden cardiac cause. By the time the heart stops, the child is usually severely hypoxic. Because of this, ventilation is a critical part of pediatric CPR — compression-only CPR is a fallback, but conventional CPR with breaths is preferred whenever a rescuer is able to provide them."
+    },
+    {
+      "title": "Bradycardia with Poor Perfusion",
+      "content": "In a child, a heart rate below 60 beats per minute with signs of poor perfusion (such as pallor, mottling, altered mental status, or weak pulses) despite adequate oxygenation and ventilation is an indication to begin chest compressions. A dangerously slow heart with poor perfusion is treated like arrest, because a slow, poorly perfusing rhythm in a child rapidly leads to full arrest."
+    },
+    {
+      "title": "Lone Rescuer: Witnessed vs Unwitnessed",
+      "content": "If a lone rescuer witnesses a child suddenly collapse, the cause may be cardiac; activate the emergency response and get an AED first, then start CPR. If the collapse is unwitnessed and the rescuer is alone (a likely hypoxic cause), provide about 2 minutes of CPR first, then activate the emergency response and get an AED if not already done. Using a phone on speaker allows a lone rescuer to call without leaving the child."
+    }
+  ],
+  "clinicalPearls": [
+    "Child = 1 year to puberty; the 2-rescuer ratio drops to 15:2, unlike adults.",
+    "Depth is at least one-third the chest (about 2 inches / 5 cm) — use one or two hands as needed.",
+    "Ventilation matters more in children because arrests are usually hypoxic.",
+    "A child with a heart rate under 60 and poor perfusion despite oxygenation gets compressions."
+  ],
+  "redFlags": [
+    "Using compression-only CPR by default in a child when breaths could be given.",
+    "Failing to start compressions in a bradycardic, poorly perfused child.",
+    "Inadequate depth from being too gentle out of fear of hurting the child."
+  ],
+  "commonMistakes": [
+    "Keeping the adult 30:2 ratio when a second rescuer is available (should be 15:2).",
+    "Compressing too shallow — depth should be at least one-third of the chest.",
+    "Treating an unwitnessed pediatric collapse the same as a witnessed adult cardiac arrest."
+  ],
+  "memoryAids": [
+    "Child 2-rescuer = 15:2; adult stays 30:2.",
+    "Depth = one-third the chest (~2 in / 5 cm).",
+    "Kids arrest from lack of oxygen — breaths matter."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Child BLS Sequence",
+      "content": "Child unresponsive, scene safe\n  → Shout for help; check breathing and pulse (≤10 s)\n     → Pulse present, not breathing: breaths 1 every 2–3 s\n     → Pulse <60 with poor perfusion despite ventilation: START compressions\n     → No pulse: START CPR\n        → 1 rescuer: 30:2   |   2+ rescuers: 15:2\n        → Rate 100–120/min, depth ≥1/3 chest (~2 in), full recoil\n  → Witnessed sudden collapse alone: call + AED first, then CPR\n  → Unwitnessed alone: ~2 min CPR first, then call + AED\n  → Apply pediatric AED pads/setting when available"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Basic Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric CPR Ratios and Bradycardia"
+  ]
+}

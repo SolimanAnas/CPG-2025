@@ -1,0 +1,33 @@
+{
+  "chapter": "c04",
+  "algorithms": [
+    {
+      "id": "c04_alg01",
+      "title": "Adult 2-Rescuer BLS Sequence",
+      "description": "Coordinated multi-rescuer adult CPR, from role assignment through advanced-airway ventilation.",
+      "steps": [
+        "Confirm arrest and assign roles: compressor, airway/ventilation, AED operator, and team leader.",
+        "Rescuer 1 delivers compressions at 100–120/min, depth 2–2.4 inches, with full recoil.",
+        "Rescuer 2 manages the airway and gives 2 breaths during the brief pause after every 30 compressions (30:2).",
+        "Operate the AED as soon as it arrives; minimize pre-shock and post-shock pauses; resume compressions immediately after any shock.",
+        "Switch the compressor about every 2 minutes (5 cycles), ideally during AED analysis, completing the change in under 10 seconds.",
+        "When an advanced airway is placed, switch to continuous compressions with 1 breath every 6 seconds (~10/min).",
+        "Use closed-loop communication and reassess throughout; continue until ROSC or handoff to advanced care."
+      ]
+    },
+    {
+      "id": "c04_alg02",
+      "title": "Elements of Effective Resuscitation Team Dynamics",
+      "description": "The behaviors that make a resuscitation team perform reliably under pressure.",
+      "steps": [
+        "Clear roles and responsibilities: everyone knows their job.",
+        "Closed-loop communication: orders are repeated back and completion confirmed.",
+        "Clear messages: concise, specific, and directed to a named person.",
+        "Knowledge sharing: information and concerns are voiced to the team.",
+        "Constructive intervention: members respectfully raise safety issues in real time.",
+        "Reassessment and summarizing: the leader re-evaluates and restates the plan.",
+        "Mutual respect: professional, supportive tone regardless of hierarchy."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Child BLS Algorithm (1 year to puberty)",
+      "description": "The sequence for a child in cardiac arrest, including single- and multi-rescuer ratios.",
+      "image": "../../algorithms/Pediatric-BLS-Single-Rescuer.webp",
+      "steps": [
+        "Verify scene safety and check responsiveness; shout for help.",
+        "Assess breathing and pulse simultaneously (carotid or femoral) for no more than 10 seconds.",
+        "If a pulse is present but breathing is absent/inadequate, give breaths at 1 every 2–3 seconds and reassess.",
+        "If the heart rate is under 60/min with poor perfusion despite adequate ventilation, begin compressions.",
+        "If no pulse, begin CPR: compress the lower half of the sternum with one or two hands, rate 100–120/min, depth at least one-third the chest (~2 in/5 cm), full recoil.",
+        "Use 30:2 for a single rescuer and 15:2 for two or more rescuers.",
+        "Apply pediatric AED pads/setting as soon as available (adult pads if pediatric are unavailable).",
+        "Lone rescuer: witnessed sudden collapse → call and get AED first; unwitnessed → about 2 minutes of CPR first, then call and get AED."
+      ]
+    }
+  ]
+}

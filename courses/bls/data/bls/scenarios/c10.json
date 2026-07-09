@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "Choking at Dinner",
+      "presentation": "A 45-year-old man at a restaurant suddenly grabs his throat, cannot speak or cough, and is turning red. He is standing and responsive.",
+      "vitals": { "hr": "Elevated", "rr": "No effective air movement", "loc": "Responsive, distressed" },
+      "question": "Following the 2025 Guidelines, what should you do?",
+      "options": [
+        "A: Encourage him to keep coughing.",
+        "B: Alternate 5 back blows between the shoulder blades with 5 abdominal thrusts until the object clears or he becomes unresponsive.",
+        "C: Perform a blind finger sweep.",
+        "D: Begin chest compressions immediately."
+      ],
+      "correct": 1,
+      "explanation": "He has severe obstruction (cannot speak or cough) and is responsive. The 2025 sequence is alternating 5 back blows and 5 abdominal thrusts until the object is expelled or he becomes unresponsive.",
+      "clinicalPearl": "The 2025 update adds back blows first — 5 back blows, then 5 abdominal thrusts, repeat."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Choking Infant",
+      "presentation": "A 7-month-old suddenly starts choking on a piece of food, cannot cry or breathe effectively, and is responsive with a weak, high-pitched sound.",
+      "vitals": { "hr": "Elevated", "rr": "Ineffective", "loc": "Responsive, distressed" },
+      "question": "What is the correct technique?",
+      "options": [
+        "A: Abdominal thrusts (Heimlich).",
+        "B: Alternate 5 back blows (face-down) with 5 chest thrusts (face-up), supporting the head and neck.",
+        "C: Blind finger sweep.",
+        "D: Shake the infant."
+      ],
+      "correct": 1,
+      "explanation": "For a responsive choking infant, alternate 5 back blows and 5 chest thrusts, supporting the head and neck throughout. Abdominal thrusts are never used in infants due to the risk of organ injury.",
+      "clinicalPearl": "Babies get back blows and chest thrusts — no Heimlich for infants."
+    },
+    {
+      "id": "c10_s03",
+      "title": "Choking Victim Goes Limp",
+      "presentation": "You have been giving back blows and abdominal thrusts to a choking adult, but he suddenly becomes unresponsive and slumps.",
+      "vitals": { "hr": "Unknown", "rr": "None effective", "loc": "Now unresponsive" },
+      "question": "What is your next action?",
+      "options": [
+        "A: Continue standing abdominal thrusts.",
+        "B: Lower him to the ground, activate the emergency response, and begin CPR — looking in the mouth for a visible object each time you open the airway.",
+        "C: Perform repeated blind finger sweeps.",
+        "D: Wait for him to wake up."
+      ],
+      "correct": 1,
+      "explanation": "When a choking victim becomes unresponsive, lower them safely, call for help, and start CPR beginning with compressions. At each airway opening for breaths, look inside and remove a visible object only — no blind sweeps. The compressions themselves may dislodge the object.",
+      "clinicalPearl": "Choking + unresponsive = CPR, and the compressions double as a way to expel the object."
+    }
+  ]
+}

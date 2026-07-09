@@ -1,0 +1,27 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Choking Relief by Age and Body Type (2025)",
+      "headers": ["Victim", "Responsive Severe Obstruction", "If Unresponsive"],
+      "rows": [
+        ["Adult", "Alternate 5 back blows + 5 abdominal thrusts", "Lower to ground, start CPR, remove visible object"],
+        ["Child (1 yr–puberty)", "Alternate 5 back blows + 5 abdominal thrusts", "Lower to ground, start CPR, remove visible object"],
+        ["Pregnant / obese adult", "Alternate 5 back blows + 5 chest thrusts", "Lower to ground, start CPR, remove visible object"],
+        ["Infant (<1 yr)", "Alternate 5 back blows + 5 chest thrusts (no abdominal thrusts)", "Lower to firm surface, start CPR, remove visible object"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Mild vs Severe Airway Obstruction",
+      "headers": ["Feature", "Mild", "Severe"],
+      "rows": [
+        ["Air exchange", "Adequate", "Poor or none"],
+        ["Can cough / speak", "Yes (forceful cough)", "No effective cough or speech"],
+        ["Signs", "Coughing, some wheeze", "Universal choking sign, silence, cyanosis"],
+        ["Action", "Encourage coughing, do not interfere", "Back blows + thrusts; CPR if unresponsive"]
+      ]
+    }
+  ]
+}

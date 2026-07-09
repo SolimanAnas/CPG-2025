@@ -1,0 +1,29 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "The 2025 Universal Chain of Survival — Six Links",
+      "headers": ["Link", "Name", "Primary Owner", "BLS Provider Action"],
+      "rows": [
+        ["1", "Activation of emergency response", "Bystanders / first responders", "Recognize arrest; call for help and an AED"],
+        ["2", "High-quality CPR", "Bystanders / BLS", "Push hard and fast, full recoil, minimal interruptions"],
+        ["3", "Defibrillation", "Bystanders / BLS", "Apply AED; shock a shockable rhythm ASAP"],
+        ["4", "Advanced resuscitation interventions", "ALS providers", "Support and hand off; assist advanced team"],
+        ["5", "Post-cardiac arrest care", "ALS / hospital team", "Monitor, support oxygenation and circulation, transport"],
+        ["6", "Recovery", "Hospital / rehab / family", "Support survivorship; debrief and support family"]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "OHCA vs IHCA — Where the Emphasis Falls",
+      "headers": ["Feature", "Out-of-Hospital (OHCA)", "In-Hospital (IHCA)"],
+      "rows": [
+        ["Front-end emphasis", "Bystander recognition and action", "Surveillance and prevention"],
+        ["Who recognizes arrest", "Laypeople and first responders", "Monitoring systems and staff"],
+        ["Key early tools", "Dispatcher-assisted CPR, public AED", "Early-warning scores, rapid-response teams"],
+        ["Goal", "Fast CPR and defibrillation before EMS", "Prevent arrest before it happens"]
+      ]
+    }
+  ]
+}

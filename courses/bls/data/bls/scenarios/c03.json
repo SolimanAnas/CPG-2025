@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Collapse on the Kitchen Floor",
+      "presentation": "A 70-year-old woman collapses at home. She is unresponsive, not breathing normally, and pulseless. You are alone, have called 911 on speaker, and are trained in CPR. She is on a tile kitchen floor.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "How should you perform compressions?",
+      "options": [
+        "A: Rate 60/min, depth 1 inch, hands on the upper sternum.",
+        "B: Rate 100–120/min, depth 2–2.4 inches on the lower half of the sternum, full recoil, 30:2 with breaths.",
+        "C: Continuous fast shallow compressions at 140/min.",
+        "D: Give breaths first for 2 minutes, then start compressions."
+      ],
+      "correct": 1,
+      "explanation": "High-quality adult CPR is 100–120/min at 2–2.4 inches on the lower half of the sternum with full recoil, in a 30:2 ratio for a single trained rescuer. The firm floor is ideal for effective depth.",
+      "clinicalPearl": "Push to a 100–120 bpm tempo and let the chest fully rebound each time — depth and recoil matter as much as rate."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Untrained Bystander",
+      "presentation": "A man collapses on a train platform. A bystander who has never taken a CPR class is on the phone with the dispatcher. The man is unresponsive with agonal gasps and no pulse. The bystander is anxious about mouth-to-mouth.",
+      "vitals": { "hr": "No pulse", "rr": "Agonal gasps", "loc": "Unresponsive" },
+      "question": "What should the dispatcher coach the bystander to do?",
+      "options": [
+        "A: Wait for EMS without touching the patient.",
+        "B: Perform compression-only (hands-only) CPR: push hard and fast in the center of the chest continuously.",
+        "C: Give only rescue breaths.",
+        "D: Perform 15:2 CPR with breaths."
+      ],
+      "correct": 1,
+      "explanation": "For an adult in sudden collapse with an untrained or unwilling rescuer, compression-only CPR is recommended. Continuous hard, fast compressions maintain circulation until help arrives, and any CPR beats none.",
+      "clinicalPearl": "Removing the mouth-to-mouth barrier gets more bystanders to act — hands-only CPR saves lives."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Fatigue and Falling Depth",
+      "presentation": "You have been doing single-rescuer CPR for nearly 3 minutes. A feedback device shows your compressions have drifted to about 1.5 inches deep and your rate has crept up. A second trained responder has just arrived with an AED.",
+      "vitals": { "hr": "No pulse (CPR in progress)", "rr": "None", "loc": "Unresponsive" },
+      "question": "What are the two best immediate actions?",
+      "options": [
+        "A: Keep compressing alone and ignore the device.",
+        "B: Quickly switch compressors (<10 s) to restore depth and apply the AED as soon as possible.",
+        "C: Stop CPR to rest for a minute.",
+        "D: Slow down to 60/min to regain depth."
+      ],
+      "correct": 1,
+      "explanation": "Fatigue degrades depth within a couple of minutes. Swapping compressors quickly restores high-quality compressions, and applying the AED enables early defibrillation — both improve the chance of survival while keeping interruptions minimal.",
+      "clinicalPearl": "Feedback devices catch the silent decay of depth and rate that rescuers rarely notice themselves."
+    }
+  ]
+}

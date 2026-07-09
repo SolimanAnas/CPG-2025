@@ -1,0 +1,20 @@
+{
+  "chapter": "c11",
+  "cards": [
+    { "id": "c11_fc01", "question": "How do opioids cause a life-threatening emergency?", "answer": "They depress the brain's drive to breathe, causing respiratory depression and arrest, which leads to hypoxia and then cardiac arrest.", "category": "Concepts" },
+    { "id": "c11_fc02", "question": "What signs suggest a suspected opioid emergency?", "answer": "Unresponsiveness with slow, shallow, or absent breathing, often with pinpoint pupils, a history of opioid use, or drug paraphernalia present.", "category": "Recognition" },
+    { "id": "c11_fc03", "question": "For a suspected opioid patient with a pulse but not breathing normally, what do you do?", "answer": "Provide breaths (adult 1 every 6 seconds) AND administer naloxone; continue ventilation and reassess.", "category": "Management" },
+    { "id": "c11_fc04", "question": "In opioid-associated cardiac arrest (no pulse), what is the priority?", "answer": "High-quality CPR and an AED — do not delay compressions to give naloxone; naloxone is an adjunct.", "category": "Management" },
+    { "id": "c11_fc05", "question": "What is naloxone?", "answer": "An opioid antagonist that reverses the effects of opioids, given intranasally or by intramuscular injection.", "category": "Naloxone" },
+    { "id": "c11_fc06", "question": "Who can administer naloxone per the 2025 Guidelines?", "answer": "Lay rescuers, trained rescuers, and members of the general public — the 2025 Guidelines added public-access naloxone instruction.", "category": "2025 Updates" },
+    { "id": "c11_fc07", "question": "How often can naloxone be repeated if there is no response?", "answer": "It may be repeated (for example, about every 4 minutes) if breathing remains inadequate, while ventilation continues.", "category": "Naloxone" },
+    { "id": "c11_fc08", "question": "Why must you keep monitoring after naloxone works?", "answer": "Naloxone can wear off before the opioid does, so the patient may deteriorate again (re-narcotization).", "category": "Monitoring" },
+    { "id": "c11_fc09", "question": "Why is ventilation central in opioid emergencies?", "answer": "The primary problem is respiratory depression, so restoring oxygenation with breaths is immediately life-saving.", "category": "Concepts" },
+    { "id": "c11_fc10", "question": "Will naloxone alone fix a hypoxic cardiac arrest?", "answer": "No — a patient in cardiac arrest needs CPR and an AED; naloxone is a supportive adjunct, not a substitute for compressions and ventilation.", "category": "Management" },
+    { "id": "c11_fc11", "question": "What routes are used to give naloxone in the field?", "answer": "Intranasal (nasal spray) or intramuscular injection.", "category": "Naloxone" },
+    { "id": "c11_fc12", "question": "What is the immediate life threat in an opioid overdose?", "answer": "Respiratory depression leading to hypoxia.", "category": "Concepts" },
+    { "id": "c11_fc13", "question": "Should a layperson withhold naloxone because they are not a professional?", "answer": "No — the 2025 Guidelines support administration by laypeople and the public for a suspected opioid emergency.", "category": "2025 Updates" },
+    { "id": "c11_fc14", "question": "What should you do after a patient improves with naloxone?", "answer": "Continue monitoring breathing and responsiveness, keep them observed, ensure EMS is activated, and arrange transport — the opioid may outlast the naloxone.", "category": "Monitoring" },
+    { "id": "c11_fc15", "question": "What is re-narcotization?", "answer": "The return of opioid effects (including respiratory depression) after naloxone wears off, requiring further treatment.", "category": "Monitoring" }
+  ]
+}

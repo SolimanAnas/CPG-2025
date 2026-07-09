@@ -1,0 +1,26 @@
+{
+  "chapter": "c11",
+  "tables": [
+    {
+      "id": "c11_t01",
+      "title": "Opioid Emergency: Pulse-Present vs Pulseless",
+      "headers": ["Finding", "Priority", "Naloxone Role"],
+      "rows": [
+        ["Pulse present, not breathing normally", "Give breaths (adult 1 every 6 s)", "Give naloxone (IN/IM); repeat as needed"],
+        ["No pulse (cardiac arrest)", "High-quality CPR + AED", "Adjunct once CPR is underway; do not delay CPR"]
+      ]
+    },
+    {
+      "id": "c11_t02",
+      "title": "Naloxone Quick Facts (2025)",
+      "headers": ["Aspect", "Detail"],
+      "rows": [
+        ["What it is", "Opioid antagonist that reverses opioid effects"],
+        ["Routes", "Intranasal (nasal spray) or intramuscular"],
+        ["Who can give it", "Lay rescuers, trained rescuers, and the public"],
+        ["Repeat dosing", "As needed (e.g., ~every 4 min) if breathing stays inadequate"],
+        ["Key caution", "Can wear off before the opioid — watch for re-narcotization"]
+      ]
+    }
+  ]
+}

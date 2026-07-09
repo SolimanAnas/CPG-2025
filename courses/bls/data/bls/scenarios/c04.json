@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "Second Rescuer Arrives",
+      "presentation": "You are doing single-rescuer CPR on an adult in cardiac arrest. A second trained rescuer arrives with an AED. You have completed about 2 minutes of compressions and are tiring.",
+      "vitals": { "hr": "No pulse (CPR in progress)", "rr": "None", "loc": "Unresponsive" },
+      "question": "How should the team organize?",
+      "options": [
+        "A: Both give breaths and stop compressions.",
+        "B: Assign roles — one compresses (switch to the fresh rescuer), one manages AED/breaths — continue 30:2, and apply the AED.",
+        "C: Switch the adult ratio to 15:2.",
+        "D: Have both rescuers compress at the same time."
+      ],
+      "correct": 1,
+      "explanation": "With two rescuers, assign clear roles and switch to the fresh compressor to maintain depth. The adult ratio stays 30:2, and the AED should be applied and used as soon as possible.",
+      "clinicalPearl": "The adult ratio never changes with more rescuers — only the workload distribution does."
+    },
+    {
+      "id": "c04_s02",
+      "title": "Advanced Airway Placed",
+      "presentation": "During an adult resuscitation, a paramedic successfully inserts a supraglottic advanced airway. The team has been running 30:2.",
+      "vitals": { "hr": "No pulse (CPR in progress)", "rr": "Ventilated via device", "loc": "Unresponsive" },
+      "question": "How should compressions and ventilations now be delivered?",
+      "options": [
+        "A: Continue pausing for 2 breaths every 30 compressions.",
+        "B: Deliver continuous compressions with 1 breath every 6 seconds (about 10/min).",
+        "C: Give 1 breath every 2 seconds.",
+        "D: Stop compressions to ventilate."
+      ],
+      "correct": 1,
+      "explanation": "With an advanced airway, rescuers no longer pause compressions for breaths. Compress continuously at 100–120/min and ventilate once every 6 seconds (~10 breaths/min), which raises the compression fraction while avoiding over-ventilation.",
+      "clinicalPearl": "Advanced airway = asynchronous CPR: hands never stop, one breath every 6 seconds."
+    },
+    {
+      "id": "c04_s03",
+      "title": "The Silent Team",
+      "presentation": "A four-person team is resuscitating an adult, but no one is calling out actions. The compressor is fatigued, the AED sits unopened, and the leader is doing compressions instead of directing. Two minutes pass with no compressor switch.",
+      "vitals": { "hr": "No pulse (CPR in progress)", "rr": "Intermittent breaths", "loc": "Unresponsive" },
+      "question": "Which team-dynamics improvement is most needed?",
+      "options": [
+        "A: Add more rescuers regardless of roles.",
+        "B: Establish a leader who directs, assign clear roles with closed-loop communication, apply the AED, and switch the tiring compressor.",
+        "C: Everyone give breaths at once.",
+        "D: Stop CPR to discuss a plan."
+      ],
+      "correct": 1,
+      "explanation": "The failures are unclear roles, no communication, an unused AED, and no compressor rotation. A leader who coordinates rather than compresses, clear role assignment, closed-loop communication, prompt AED use, and a timely switch will restore high-quality, organized CPR.",
+      "clinicalPearl": "A leader with their hands on the chest often loses the big picture — leading and compressing rarely mix well in a full team."
+    }
+  ]
+}

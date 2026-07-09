@@ -1,0 +1,73 @@
+{
+  "id": "c02",
+  "title": "Scene Safety, Assessment & Recognition of Cardiac Arrest",
+  "shortTitle": "Assessment & Recognition",
+  "estimatedStudyTime": 30,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Perform a scene safety check before approaching a collapsed person.",
+    "Assess responsiveness using the tap-and-shout technique.",
+    "Activate the emergency response system and obtain an AED appropriately.",
+    "Check for breathing and a pulse simultaneously in no more than 10 seconds.",
+    "Distinguish agonal gasping from normal breathing.",
+    "State the three findings that define cardiac arrest for a BLS provider.",
+    "Explain when to begin chest compressions based on the assessment."
+  ],
+  "summary": [
+    {
+      "title": "Scene Safety First",
+      "content": "Before touching a patient, ensure the scene is safe for you, the patient, and bystanders. Look for traffic, fire, electrical hazards, water, violence, or environmental dangers. A rescuer who becomes a second victim helps no one. Use personal protective equipment as available. Only approach once the scene is safe or has been made safe."
+    },
+    {
+      "title": "Check Responsiveness",
+      "content": "Tap the person's shoulders firmly and shout, 'Are you okay?' A person who does not respond, move, or react is unresponsive. For infants, tap the sole of the foot instead of the shoulders. Unresponsiveness is the trigger to call for help and continue the assessment."
+    },
+    {
+      "title": "Activate the Emergency Response and Get an AED",
+      "content": "If the person is unresponsive, immediately shout for nearby help and activate the emergency response system (call 911 or the facility code). Send someone to retrieve an AED and additional equipment. If you are alone with a phone, use speaker mode so you can start care while help is dispatched. Rapid activation ensures defibrillation and advanced care are already on the way."
+    },
+    {
+      "title": "Check Breathing and Pulse Together (≤10 seconds)",
+      "content": "For a healthcare/BLS provider, simultaneously scan for breathing and palpate a pulse, taking no more than 10 seconds. Look for chest rise and normal breathing while feeling for a carotid pulse in adults and children, or a brachial pulse in infants. Checking both at once avoids delaying compressions. If you are unsure whether there is a pulse within 10 seconds, treat the patient as being in cardiac arrest and begin CPR."
+    },
+    {
+      "title": "Agonal Gasps Are Not Breathing",
+      "content": "In the first minutes of cardiac arrest, a person may gasp occasionally. These agonal gasps are slow, irregular, sometimes snoring or gurgling efforts — they are a sign of arrest, not of adequate breathing. Do not be fooled into withholding CPR because the person 'took a breath.' Only normal, effective breathing counts as breathing."
+    },
+    {
+      "title": "Recognizing Cardiac Arrest",
+      "content": "For a BLS provider, cardiac arrest is recognized by three findings: the person is unresponsive, is not breathing normally (absent breathing or only gasping), and has no definite pulse within 10 seconds. When these are present, begin high-quality CPR immediately, starting with chest compressions."
+    }
+  ],
+  "clinicalPearls": [
+    "When in doubt about a pulse, start compressions — the harm of compressions on a patient who has a weak pulse is far less than the harm of withholding CPR from someone in arrest.",
+    "Checking breathing and pulse at the same time keeps the pause under 10 seconds and speeds the start of compressions.",
+    "Agonal gasping is common early in arrest and is one of the most missed signs of cardiac arrest.",
+    "Use a phone on speaker so you never have to choose between calling for help and starting care."
+  ],
+  "redFlags": [
+    "Interpreting agonal gasps as normal breathing and delaying CPR.",
+    "Spending more than 10 seconds searching for a pulse.",
+    "Approaching an unsafe scene and becoming a second casualty."
+  ],
+  "commonMistakes": [
+    "Skipping the scene-safety check in the urgency to help.",
+    "Performing a prolonged, careful pulse check instead of a quick simultaneous assessment.",
+    "Failing to send a specific person for the AED while starting CPR."
+  ],
+  "memoryAids": [
+    "Safety → Shout & Tap → Shout for help/Call → Check breathing & pulse → CPR.",
+    "'No response, no normal breathing, no pulse' = start CPR.",
+    "Gasping is grave — treat agonal breathing as arrest."
+  ],
+  "decisionTrees": [
+    {
+      "title": "BLS Assessment and Recognition Sequence",
+      "content": "Scene safe?\n  → No: make safe or wait for it to be made safe\n  → Yes: approach\n     → Tap and shout — responsive?\n        → Yes: monitor, reassess, get help as needed\n        → No (unresponsive):\n           → Shout for help + activate emergency response + send for AED\n           → Check breathing AND pulse simultaneously (≤10 s)\n              → Normal breathing + pulse: monitor / recovery position, reassess\n              → Pulse, no normal breathing: give breaths (rescue breathing)\n              → No pulse / not breathing normally / unsure: START CPR"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — BLS Assessment and Recognition of Arrest"
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "What is the recommended chest compression rate for an adult?",
+      "options": ["A. 60–80 per minute", "B. 80–100 per minute", "C. 100–120 per minute", "D. 120–140 per minute"],
+      "correct": 2,
+      "rationale": "The AHA recommends compressing at 100–120 per minute. Slower rates provide inadequate circulation, and faster rates tend to reduce depth and full recoil.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "What is the correct compression depth for an adult?",
+      "options": ["A. At least 1 inch", "B. At least 2 inches (5 cm), not exceeding 2.4 inches (6 cm)", "C. At least 3 inches", "D. Exactly 1.5 inches"],
+      "correct": 1,
+      "rationale": "Adult compressions should be at least 2 inches (5 cm) deep but not more than 2.4 inches (6 cm), as excessive depth can cause injury without improving outcomes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "What is the compression-to-ventilation ratio for single-rescuer adult CPR without an advanced airway?",
+      "options": ["A. 15:2", "B. 30:2", "C. 5:1", "D. 15:1"],
+      "correct": 1,
+      "rationale": "A single rescuer performs adult CPR at 30 compressions to 2 breaths (30:2).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q04",
+      "question": "Which of the following is NOT one of the five components of high-quality CPR?",
+      "options": [
+        "A. Adequate compression rate",
+        "B. Full chest recoil",
+        "C. Delivering rapid, deep breaths as often as possible",
+        "D. Minimizing interruptions"
+      ],
+      "correct": 2,
+      "rationale": "Avoiding excessive ventilation is a component of high-quality CPR. Rapid, deep, frequent breaths are harmful — they raise intrathoracic pressure and reduce cardiac output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q05",
+      "question": "Why is full chest recoil between compressions important?",
+      "options": [
+        "A. It lets the rescuer rest",
+        "B. It allows the heart to refill with blood, improving the next compression",
+        "C. It increases the compression rate",
+        "D. It prevents rib fractures"
+      ],
+      "correct": 1,
+      "rationale": "Allowing the chest to fully re-expand lets blood return to the heart. Leaning on the chest (incomplete recoil) reduces venous return and lowers cardiac output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "Where should the hands be placed for adult chest compressions?",
+      "options": [
+        "A. Over the upper sternum",
+        "B. On the lower half of the sternum, center of the chest",
+        "C. Over the left nipple",
+        "D. On the xiphoid process"
+      ],
+      "correct": 1,
+      "rationale": "The heel of the hand goes on the center of the chest, on the lower half of the sternum. Compressing over the xiphoid or too high reduces effectiveness and risks injury.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q07",
+      "question": "What is the minimum target chest compression fraction (CCF)?",
+      "options": ["A. At least 20%", "B. At least 40%", "C. At least 60%", "D. Exactly 100%"],
+      "correct": 2,
+      "rationale": "Aim for a compression fraction of at least 60% — the proportion of resuscitation time spent actively compressing — with higher being better.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q08",
+      "question": "A bystander is untrained and unwilling to give mouth-to-mouth to an adult in sudden cardiac arrest. What should they do?",
+      "options": [
+        "A. Do nothing until EMS arrives",
+        "B. Perform compression-only (hands-only) CPR continuously",
+        "C. Only give breaths",
+        "D. Perform 15:2 CPR"
+      ],
+      "correct": 1,
+      "rationale": "For adults with sudden collapse, compression-only CPR is recommended when a rescuer is untrained or unwilling to ventilate. Continuous compressions maintain circulation, and any CPR is far better than none.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q09",
+      "question": "How long should a pause in compressions (e.g., to give breaths) ideally last?",
+      "options": ["A. Less than 10 seconds", "B. About 30 seconds", "C. About 1 minute", "D. As long as needed"],
+      "correct": 0,
+      "rationale": "Interruptions should be kept under 10 seconds because blood flow falls quickly when compressions stop and takes time to rebuild.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q10",
+      "question": "How frequently should rescuers switch the compressor role when possible?",
+      "options": ["A. Every 30 seconds", "B. About every 2 minutes", "C. Every 10 minutes", "D. Only when exhausted"],
+      "correct": 1,
+      "rationale": "Switching about every 2 minutes (roughly every 5 cycles of 30:2) prevents fatigue that quietly reduces compression depth. The switch should take less than 10 seconds.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "A patient in cardiac arrest is on a soft mattress. What should the rescuer do to ensure effective compressions?",
+      "options": [
+        "A. Compress harder to make up for the mattress",
+        "B. Place a backboard under the patient or move them to the floor",
+        "C. Elevate the head of the bed",
+        "D. Nothing — the mattress does not matter"
+      ],
+      "correct": 1,
+      "rationale": "A soft surface absorbs compression depth. Using a firm backboard or moving the patient to the floor ensures the force reaches the chest and achieves adequate depth.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q12",
+      "question": "Which body mechanics help deliver effective compressions while reducing fatigue?",
+      "options": [
+        "A. Bent elbows and pushing with the arms",
+        "B. Shoulders over the hands, arms straight, using body weight",
+        "C. Kneeling far from the patient",
+        "D. Compressing with the fingertips"
+      ],
+      "correct": 1,
+      "rationale": "Positioning the shoulders directly over the hands with straight arms lets the rescuer use body weight, delivering consistent depth with less fatigue than pushing with arm muscles.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q13",
+      "question": "What is the danger of compressing faster than 120 per minute?",
+      "options": [
+        "A. It improves circulation with no downside",
+        "B. It often reduces depth and prevents full recoil",
+        "C. It is impossible to do",
+        "D. It increases the compression fraction"
+      ],
+      "correct": 1,
+      "rationale": "Excessive rate typically comes at the cost of inadequate depth and incomplete recoil, both of which reduce the effectiveness of CPR.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q14",
+      "question": "In the adult CPR sequence, which comes first?",
+      "options": ["A. Airway", "B. Breathing", "C. Compressions", "D. Defibrillation always before compressions"],
+      "correct": 2,
+      "rationale": "Adult CPR follows C-A-B: compressions first, then airway, then breathing, because circulating existing oxygenated blood is the immediate priority in sudden cardiac arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q15",
+      "question": "Each rescue breath during CPR should be delivered:",
+      "options": [
+        "A. As forcefully as possible",
+        "B. Over about 1 second, just enough to produce visible chest rise",
+        "C. Over 5 seconds each",
+        "D. Continuously without pausing compressions in basic CPR"
+      ],
+      "correct": 1,
+      "rationale": "Each breath is given over about 1 second with just enough volume to make the chest visibly rise. Larger or faster breaths cause gastric inflation and reduce circulation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q16",
+      "question": "Why does avoiding excessive ventilation matter during CPR?",
+      "options": [
+        "A. It saves oxygen for later",
+        "B. Over-ventilation raises intrathoracic pressure, reducing venous return and cardiac output",
+        "C. It makes compressions unnecessary",
+        "D. It has no physiological effect"
+      ],
+      "correct": 1,
+      "rationale": "Excessive ventilation increases pressure in the chest, impeding blood return to the heart and lowering the output generated by compressions, and can also cause gastric inflation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q17",
+      "question": "A lone rescuer has performed 5 cycles of 30:2 and is becoming fatigued, with another trained rescuer now present. What is the best action?",
+      "options": [
+        "A. Continue alone to avoid interrupting compressions",
+        "B. Switch compressors quickly (in under 10 seconds) to maintain depth",
+        "C. Stop CPR entirely",
+        "D. Slow the rate to rest"
+      ],
+      "correct": 1,
+      "rationale": "Fatigue degrades compression quality within a couple of minutes. Swapping compressors quickly maintains depth and rate while keeping the interruption minimal.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q18",
+      "question": "Which statement best reflects the priority of high-quality compressions?",
+      "options": [
+        "A. Perfect breaths matter more than compressions",
+        "B. High-quality compressions with minimal interruption are the single most important BLS action",
+        "C. Compressions can be shallow if fast",
+        "D. Interruptions do not affect outcome"
+      ],
+      "correct": 1,
+      "rationale": "Delivering compressions of adequate rate and depth with full recoil and minimal interruption drives perfusion and is the most important determinant of BLS success.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q19",
+      "question": "A rescuer notices they are leaning on the chest between compressions. What problem does this cause?",
+      "options": [
+        "A. Excessive depth",
+        "B. Incomplete recoil, reducing venous return and CPR effectiveness",
+        "C. Too high a compression rate",
+        "D. Nothing significant"
+      ],
+      "correct": 1,
+      "rationale": "Leaning prevents the chest from fully re-expanding (incomplete recoil), which limits the blood refilling the heart and weakens the next compression.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q20",
+      "question": "When is compression-only CPR specifically recommended over conventional CPR?",
+      "options": [
+        "A. For all pediatric arrests",
+        "B. For adults in sudden collapse when a rescuer is untrained or unwilling/unable to give breaths",
+        "C. For all drowning victims",
+        "D. Never"
+      ],
+      "correct": 1,
+      "rationale": "Compression-only CPR is recommended for adult sudden collapse when rescuers cannot or will not ventilate. Note that ventilation is more important in children, infants, and drowning, where breaths should be included when possible.",
+      "difficulty": "Hard"
+    }
+  ]
+}

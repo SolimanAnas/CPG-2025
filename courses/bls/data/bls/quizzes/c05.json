@@ -1,0 +1,229 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "What should you do immediately after an AED delivers a shock?",
+      "options": ["A. Check the pulse for 30 seconds", "B. Resume chest compressions immediately", "C. Wait for the AED to re-analyze", "D. Remove the pads"],
+      "correct": 1,
+      "rationale": "Resume compressions immediately after a shock without pausing for a pulse check, because early post-shock compressions support perfusion while the heart recovers.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "Which rhythms will an AED treat with a shock?",
+      "options": ["A. Asystole and PEA", "B. Ventricular fibrillation and pulseless ventricular tachycardia", "C. Normal sinus rhythm", "D. Sinus bradycardia"],
+      "correct": 1,
+      "rationale": "AEDs are designed to detect and shock ventricular fibrillation and pulseless ventricular tachycardia. Asystole and PEA are non-shockable.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q03",
+      "question": "What is the standard anterolateral AED pad placement in an adult?",
+      "options": [
+        "A. Both pads on the left chest",
+        "B. Right upper chest below the collarbone and left lower chest at the mid-axillary line",
+        "C. Both pads on the upper back",
+        "D. Over the stomach and the neck"
+      ],
+      "correct": 1,
+      "rationale": "Anterolateral placement puts one pad on the right upper chest below the clavicle and the other on the left lower chest at the mid-axillary line, so current passes through the heart.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q04",
+      "question": "For a 5-year-old child in cardiac arrest, which is preferred if available?",
+      "options": [
+        "A. Adult pads at full energy only",
+        "B. Pediatric (dose-attenuating) pads or a pediatric setting",
+        "C. No defibrillation for children",
+        "D. Two AEDs at once"
+      ],
+      "correct": 1,
+      "rationale": "Children under 8 should receive pediatric dose-attenuating pads or a pediatric setting when available to reduce energy. If unavailable, adult pads are used rather than withholding defibrillation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "Only adult pads are available for a 4-year-old in a shockable arrest. What should you do?",
+      "options": [
+        "A. Do not defibrillate",
+        "B. Use the adult pads, ensuring they do not touch (use front/back placement if needed)",
+        "C. Wait for pediatric pads to arrive",
+        "D. Cut the adult pads in half"
+      ],
+      "correct": 1,
+      "rationale": "Defibrillation should not be withheld for lack of pediatric pads. Adult pads are used, placed so they do not touch — often anteroposterior on a small child.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "The patient was pulled from a pool and the chest is wet. What must you do before applying pads?",
+      "options": [
+        "A. Apply pads to the wet chest immediately",
+        "B. Wipe the chest dry and move the patient off standing water",
+        "C. Pour more water to improve conduction",
+        "D. Skip the AED entirely"
+      ],
+      "correct": 1,
+      "rationale": "Water on the chest can cause the shock to arc across the skin and reduce effectiveness. Quickly dry the chest and move the patient away from standing water before applying pads.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q07",
+      "question": "The patient has an implanted pacemaker with a visible bump under the right upper chest. How should you place the pad?",
+      "options": [
+        "A. Directly over the pacemaker",
+        "B. At least about 1 inch (2.5 cm) away from the device",
+        "C. Do not use the AED",
+        "D. On the pacemaker to reset it"
+      ],
+      "correct": 1,
+      "rationale": "Place the pad at least about 1 inch from the implanted device to avoid blocking energy delivery; do not withhold defibrillation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "There is a medication patch where a pad needs to go. What is correct?",
+      "options": [
+        "A. Place the pad on top of the patch",
+        "B. Remove the patch, wipe the area, then apply the pad",
+        "C. Leave the patch and skip that pad",
+        "D. Cut a hole in the pad"
+      ],
+      "correct": 1,
+      "rationale": "Transdermal patches can block energy and cause burns/arcing. Remove the patch and wipe the skin before placing the pad.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "A pregnant woman is in cardiac arrest. Regarding AED use:",
+      "options": [
+        "A. Defibrillation is contraindicated in pregnancy",
+        "B. Use the AED normally — defibrillation is safe and indicated",
+        "C. Only shock at half energy",
+        "D. Wait until after delivery"
+      ],
+      "correct": 1,
+      "rationale": "Pregnancy is not a contraindication. The best treatment for the fetus is effective resuscitation of the mother, so the AED is used normally.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q10",
+      "question": "Why must everyone be 'clear' during AED analysis and shock?",
+      "options": [
+        "A. To let the patient rest",
+        "B. Contact can distort analysis and expose rescuers to the shock",
+        "C. To save battery",
+        "D. It is not actually necessary"
+      ],
+      "correct": 1,
+      "rationale": "Touching the patient can interfere with accurate rhythm analysis and puts the rescuer at risk of receiving the shock, so the operator ensures everyone is clear both times.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q11",
+      "question": "You are alone with an adult in cardiac arrest and no AED is immediately at hand. What is correct?",
+      "options": [
+        "A. Leave to search the building for an AED before starting CPR",
+        "B. Start and continue high-quality CPR; use the AED as soon as one is brought to you",
+        "C. Do nothing until an AED is found",
+        "D. Only give breaths until an AED arrives"
+      ],
+      "correct": 1,
+      "rationale": "Do not interrupt or delay CPR to hunt for an AED when alone. Keep compressing and apply the AED as soon as one is available (ideally brought by another person).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q12",
+      "question": "The AED says 'no shock advised' and the patient has no pulse. What next?",
+      "options": [
+        "A. Remove the pads and stop",
+        "B. Immediately resume high-quality CPR",
+        "C. Repeat the analysis right away",
+        "D. Deliver a manual shock"
+      ],
+      "correct": 1,
+      "rationale": "'No shock advised' with no pulse means the rhythm is non-shockable; resume compressions immediately and continue CPR until the next analysis or return of a pulse.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q13",
+      "question": "On a small child, the two AED pads would overlap on the front of the chest. What should you do?",
+      "options": [
+        "A. Let them overlap",
+        "B. Use anteroposterior placement — one pad on the chest, one on the back",
+        "C. Use only one pad",
+        "D. Do not defibrillate"
+      ],
+      "correct": 1,
+      "rationale": "Pads must not touch. On a small child, place one pad on the front of the chest and one on the back (anteroposterior) so they do not overlap.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "How can a team minimize the pre-shock pause?",
+      "options": [
+        "A. Stop CPR long before the shock",
+        "B. Continue compressions while the AED charges (where the device allows), then clear and shock",
+        "C. Analyze the rhythm several times first",
+        "D. Check the pulse before every shock"
+      ],
+      "correct": 1,
+      "rationale": "Keeping hands on the chest while the device charges (when supported) shortens the pre-shock pause; the team then clears briefly to deliver the shock and resumes compressions immediately.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q15",
+      "question": "Which statement about AEDs and lay rescuers is TRUE?",
+      "options": [
+        "A. Only physicians may operate an AED",
+        "B. AEDs are designed for use by lay rescuers with minimal training and give voice prompts",
+        "C. AEDs require interpreting the ECG manually",
+        "D. AEDs shock any rhythm"
+      ],
+      "correct": 1,
+      "rationale": "AEDs analyze the rhythm automatically and guide the user with voice prompts, so lay rescuers and BLS providers can defibrillate safely and effectively. They only shock shockable rhythms.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q16",
+      "question": "During AED use, when is a good time to switch compressors with no added interruption?",
+      "options": [
+        "A. In the middle of compressions",
+        "B. During the AED rhythm-analysis pause every ~2 minutes",
+        "C. During a breath",
+        "D. Never switch"
+      ],
+      "correct": 1,
+      "rationale": "The roughly 2-minute rhythm-analysis pause is an ideal, already-occurring interruption during which to swap compressors without adding a new pause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q17",
+      "question": "What is the correct sequence of the four AED steps?",
+      "options": [
+        "A. Analyze, shock, power on, pads",
+        "B. Power on, attach pads, analyze (clear), shock if advised (clear)",
+        "C. Pads, shock, analyze, power on",
+        "D. Power on, shock, pads, analyze"
+      ],
+      "correct": 1,
+      "rationale": "The universal order is: power on the AED, attach pads to the bare dry chest, allow analysis while clear, and deliver a shock if advised while clear — then resume CPR.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q18",
+      "question": "Why should defibrillation not be delayed while retrieving or applying the AED in a witnessed shockable arrest?",
+      "options": [
+        "A. It saves paperwork",
+        "B. Survival from a shockable rhythm declines with each minute defibrillation is delayed",
+        "C. The AED battery drains quickly",
+        "D. It is only a convenience"
+      ],
+      "correct": 1,
+      "rationale": "In shockable rhythms, the probability of survival falls substantially per minute of delay, so rapid application and use of the AED (while CPR continues) is critical.",
+      "difficulty": "Hard"
+    }
+  ]
+}

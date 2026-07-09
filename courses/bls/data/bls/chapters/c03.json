@@ -1,0 +1,83 @@
+{
+  "id": "c03",
+  "title": "High-Quality CPR: Adult (1-Rescuer)",
+  "shortTitle": "Adult 1-Rescuer CPR",
+  "estimatedStudyTime": 35,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "State the five components of high-quality chest compressions for an adult.",
+    "Give the correct compression rate and depth for an adult.",
+    "Describe correct hand placement and body mechanics for compressions.",
+    "Explain the importance of full chest recoil and minimizing interruptions.",
+    "State the compression-to-ventilation ratio for 1-rescuer adult CPR.",
+    "Explain compression-only (hands-only) CPR and when it is used.",
+    "Define chest compression fraction and state the target."
+  ],
+  "summary": [
+    {
+      "title": "The Five Components of High-Quality CPR",
+      "content": "High-quality chest compressions are the foundation of CPR. The five components are: (1) an adequate rate of 100–120 compressions per minute, (2) adequate depth of at least 2 inches (5 cm), (3) allowing full chest recoil after each compression, (4) minimizing interruptions in compressions, and (5) avoiding excessive ventilation. Getting these right does more for survival than any other single BLS action."
+    },
+    {
+      "title": "Rate and Depth",
+      "content": "Compress the adult chest at a rate of 100–120 per minute — fast, but not so fast that depth suffers. Compress to a depth of at least 2 inches (5 cm) but not more than 2.4 inches (6 cm); excessive depth can cause injury without added benefit. Counting aloud or using a metronome or feedback device helps maintain rate and depth."
+    },
+    {
+      "title": "Hand Placement and Body Mechanics",
+      "content": "Place the heel of one hand on the center of the chest, on the lower half of the sternum, and the other hand on top, interlocking or lifting the fingers off the chest. Position your shoulders directly over your hands, keep your arms straight, and compress using your body weight rather than your arm muscles. This delivers effective depth and reduces fatigue. Perform CPR on a firm, flat surface."
+    },
+    {
+      "title": "Full Chest Recoil",
+      "content": "After each compression, release completely so the chest fully re-expands without lifting your hands off the chest. Full recoil lets the heart refill with blood between compressions. Leaning on the chest ('incomplete recoil') reduces the blood that returns to the heart and lowers the effectiveness of the next compression."
+    },
+    {
+      "title": "Minimize Interruptions and Chest Compression Fraction",
+      "content": "Interruptions in compressions cause blood flow to fall rapidly. Keep any pause — for breaths, rhythm analysis, or switching rescuers — to less than 10 seconds. Chest compression fraction (CCF) is the proportion of total resuscitation time spent actively compressing; aim for at least 60%, and ideally higher. The more time hands are on the chest, the better the perfusion."
+    },
+    {
+      "title": "Ratio and Compression-Only CPR",
+      "content": "For a single rescuer performing adult CPR without an advanced airway, the compression-to-ventilation ratio is 30:2 — thirty compressions followed by two breaths. If a rescuer is untrained, unable, or unwilling to give breaths, compression-only (hands-only) CPR is recommended for adults with sudden collapse: push hard and fast in the center of the chest continuously until help or an AED arrives. Any CPR is far better than none."
+    }
+  ],
+  "clinicalPearls": [
+    "Push to the beat of 100–120/min — the tempo of many familiar songs helps rescuers keep pace.",
+    "Let the chest come all the way back up between compressions; do not lean on the chest.",
+    "Hands-only CPR removes the barrier of mouth-to-mouth and keeps blood flowing when a rescuer will not or cannot ventilate.",
+    "Swap compressors about every 2 minutes to prevent fatigue-related loss of depth, keeping the switch under 10 seconds."
+  ],
+  "redFlags": [
+    "Compressing too slowly, too shallow, or leaning on the chest — all reduce blood flow.",
+    "Long pauses in compressions that drop the compression fraction and perfusion.",
+    "Compressing on a soft surface (like a mattress) without a backboard, wasting depth."
+  ],
+  "commonMistakes": [
+    "Going faster than 120/min, which sacrifices depth and recoil.",
+    "Incomplete recoil from leaning on the chest between compressions.",
+    "Interrupting compressions too long to give breaths or check for a pulse."
+  ],
+  "memoryAids": [
+    "'Push hard, push fast, let it come back, don't stop' captures the five components.",
+    "Rate 100–120, depth 2–2.4 inches, ratio 30:2.",
+    "C-A-B: Compressions come first, then Airway, then Breathing for adults."
+  ],
+  "decisionTrees": [
+    {
+      "title": "1-Rescuer Adult CPR Cycle",
+      "content": "Confirmed adult cardiac arrest\n  → Place on firm, flat surface; expose chest\n  → Hands on lower half of sternum\n  → 30 compressions: rate 100–120/min, depth 2–2.4 in, full recoil\n     → Trained and willing: open airway, give 2 breaths (each ~1 s, visible chest rise)\n     → Untrained/unwilling to ventilate: continue compression-only CPR\n  → Repeat 30:2 cycles; apply AED as soon as available\n  → Minimize interruptions (<10 s); switch compressors ~every 2 min"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — High-Quality CPR Components"
+  ],
+  "graphics": [
+    {
+      "id": "c03_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/bls/c03_g01.webp",
+      "alt": "High-Quality CPR Hand Placement & Posture",
+      "caption": "Medical illustration demonstrating a rescuer's locked elbows, straight shoulders, and hand placement on the lower half of the sternum."
+    }
+  ]
+}

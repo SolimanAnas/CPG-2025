@@ -1,0 +1,82 @@
+{
+  "id": "c09",
+  "title": "Infant BLS",
+  "shortTitle": "Infant BLS",
+  "estimatedStudyTime": 32,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define the infant age range for BLS purposes.",
+    "State the compression rate, depth, and location for an infant.",
+    "Describe the 2025 preferred compression techniques for infants.",
+    "Give the compression-to-ventilation ratios for 1- and 2-rescuer infant CPR.",
+    "Locate and check the brachial pulse in an infant.",
+    "Apply the correct sequence for a lone rescuer with a witnessed or unwitnessed infant collapse."
+  ],
+  "summary": [
+    {
+      "title": "Defining an Infant",
+      "content": "For BLS, an infant is a child under 1 year of age, excluding the newly born (immediately after birth, which follows neonatal guidance). Infant CPR differs from child and adult CPR in compression technique, depth, and pulse-check location because of the infant's small size and anatomy."
+    },
+    {
+      "title": "Compression Location, Rate, and Depth",
+      "content": "Compress the lower half of the sternum, just below the nipple line, at a rate of 100–120 per minute. The depth is at least one-third the anterior-posterior depth of the chest, about 1.5 inches (4 cm). Allow full chest recoil after each compression and perform CPR on a firm surface."
+    },
+    {
+      "title": "2025 Compression Technique — Two Thumbs Preferred",
+      "content": "The 2025 AHA Guidelines preferentially recommend the two-thumb–encircling-hands technique for infant chest compressions, including for a lone rescuer when the rescuer can encircle the chest. The two thumbs are placed side by side on the lower half of the sternum while the fingers encircle and support the infant's back. The older two-finger technique is no longer recommended; if a single rescuer cannot encircle the chest, the heel-of-one-hand technique may be used as an alternative."
+    },
+    {
+      "title": "Ratios for Infant CPR",
+      "content": "As with children, a single rescuer uses a 30:2 compression-to-ventilation ratio, and two or more rescuers use 15:2. The two-thumb–encircling-hands technique is especially well suited to two-rescuer CPR, where one rescuer compresses while the other ventilates. Ventilation is important because, like older children, most infant arrests are hypoxic in origin."
+    },
+    {
+      "title": "Checking the Brachial Pulse",
+      "content": "In an infant, palpate the brachial pulse on the inside of the upper arm, between the shoulder and elbow, for no more than 10 seconds. The short, chubby neck of an infant makes the carotid pulse difficult to find. As with all patients, if there is no pulse or you are unsure within 10 seconds, begin CPR. A heart rate below 60/min with poor perfusion despite adequate ventilation is also an indication for compressions."
+    },
+    {
+      "title": "Lone Rescuer Sequence",
+      "content": "As with children, if a lone rescuer witnesses an infant suddenly collapse (possible cardiac cause), activate the emergency response and get an AED first, then start CPR. If the collapse is unwitnessed (likely hypoxic), provide about 2 minutes of CPR first, then activate help and get an AED. A phone on speaker lets a lone rescuer call for help without interrupting compressions."
+    }
+  ],
+  "clinicalPearls": [
+    "2025 change: the two-thumb–encircling-hands technique is preferred for infants, even for a lone rescuer who can encircle the chest — the two-finger technique is no longer recommended.",
+    "Infant depth is at least one-third the chest, about 1.5 inches (4 cm).",
+    "Check the brachial pulse in the upper arm, not the carotid.",
+    "Infant 2-rescuer ratio is 15:2, like children; single rescuer is 30:2."
+  ],
+  "redFlags": [
+    "Compressing over the xiphoid or too high rather than the lower half of the sternum.",
+    "Using the abandoned two-finger technique when the chest can be encircled.",
+    "Inadequate depth from being too gentle with a small infant."
+  ],
+  "commonMistakes": [
+    "Searching for a carotid pulse in an infant instead of the brachial pulse.",
+    "Forgetting that ventilation is critical because infant arrests are usually hypoxic.",
+    "Applying the two-finger technique by default despite the 2025 preference for two thumbs."
+  ],
+  "memoryAids": [
+    "Infant compressions: two thumbs, encircle the chest, lower half of the sternum.",
+    "Depth ~1.5 in (4 cm) = one-third the chest.",
+    "Brachial pulse for babies; 30:2 alone, 15:2 with a partner."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Infant BLS Sequence",
+      "content": "Infant unresponsive (tap the foot), scene safe\n  → Shout for help; check breathing and brachial pulse (≤10 s)\n     → Pulse present, not breathing: breaths 1 every 2–3 s\n     → Pulse <60 with poor perfusion despite ventilation: START compressions\n     → No pulse: START CPR\n        → Two-thumb–encircling-hands technique preferred (heel of 1 hand if unable to encircle)\n        → Rate 100–120/min, depth ≥1/3 chest (~1.5 in), full recoil\n        → 1 rescuer: 30:2   |   2+ rescuers: 15:2\n  → Witnessed sudden collapse alone: call + AED first, then CPR\n  → Unwitnessed alone: ~2 min CPR first, then call + AED"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Basic Life Support (Infant)",
+    "AHA 2025 Guidelines for CPR and ECC — Infant Compression Technique Update"
+  ],
+  "graphics": [
+    {
+      "id": "c09_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/bls/c09_g01.webp",
+      "alt": "Infant CPR: Two-Thumb Encircling-Hands Technique",
+      "caption": "Medical illustration showing the two-thumb encircling-hands technique on an infant chest."
+    }
+  ]
+}

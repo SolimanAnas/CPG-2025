@@ -1,0 +1,78 @@
+{
+  "id": "c01",
+  "title": "Chain of Survival & Systems of Care",
+  "shortTitle": "Chain of Survival",
+  "estimatedStudyTime": 25,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Describe the purpose of the Chain of Survival and how each link contributes to survival from cardiac arrest.",
+    "List the links of the 2025 AHA universal Chain of Survival and explain why the concept was consolidated.",
+    "Differentiate the emphasis of out-of-hospital cardiac arrest (OHCA) from in-hospital cardiac arrest (IHCA).",
+    "Explain the role of the recovery link and survivorship after cardiac arrest.",
+    "Describe how a BLS provider fits into the larger system of care, including dispatcher-assisted CPR and hand-off to advanced providers.",
+    "Explain why early, high-quality CPR and rapid defibrillation are the two links most influenced by bystanders and BLS providers."
+  ],
+  "summary": [
+    {
+      "title": "What the Chain of Survival Is",
+      "content": "The Chain of Survival is a metaphor describing the sequence of time-sensitive actions that give a person in cardiac arrest the best chance of survival. Each link depends on the ones before it: a delay or weakness in any single link reduces the effectiveness of the whole chain. BLS providers own the earliest and most impactful links — recognition, activation, high-quality CPR, and defibrillation."
+    },
+    {
+      "title": "The 2025 Universal Chain of Survival",
+      "content": "The 2025 AHA Guidelines consolidated the previously separate adult and pediatric, in-hospital and out-of-hospital chains into a single universal six-link Chain of Survival. The links are: (1) activation of the emergency response, (2) high-quality CPR, (3) defibrillation, (4) advanced resuscitation interventions, (5) post-cardiac arrest care, and (6) recovery. A separate Neonatal Chain of Care was introduced for the newborn population."
+    },
+    {
+      "title": "OHCA vs IHCA Emphasis",
+      "content": "Although the chain is now universal, the setting changes where the emphasis falls. Out-of-hospital cardiac arrest depends heavily on bystanders: recognizing arrest, calling for help, starting compressions, and using a public AED before EMS arrives. In-hospital cardiac arrest emphasizes surveillance and prevention — monitoring, rapid-response systems, and early recognition of deterioration — so that many arrests are prevented before they happen."
+    },
+    {
+      "title": "The Recovery Link and Survivorship",
+      "content": "Recovery recognizes that survival does not end when a pulse returns. Survivors and their families may face physical, cognitive, and emotional challenges. The recovery link includes rehabilitation, treatment planning, psychological support, and expectations for return to daily life. It reframes cardiac arrest as a condition people survive and live beyond, not merely an event to be reversed."
+    },
+    {
+      "title": "Systems of Care and the BLS Provider's Place",
+      "content": "A system of care links people, training, equipment, and organizations so that the chain functions reliably. Dispatchers coach bystanders through compressions (dispatcher-assisted CPR), BLS providers deliver high-quality CPR and defibrillation, and advanced providers add airway management, medications, and post-arrest care. Smooth hand-offs and continuous quality improvement — measuring performance and feeding it back — keep the system strong."
+    }
+  ],
+  "clinicalPearls": [
+    "Bystander CPR and early defibrillation are the two interventions most strongly associated with survival — and both fall squarely within BLS scope.",
+    "For every minute that defibrillation is delayed in a shockable arrest, the probability of survival falls substantially, which is why public-access AEDs matter.",
+    "Dispatcher-assisted CPR helps untrained bystanders start compressions; a BLS provider should support and integrate with this system rather than work in isolation.",
+    "The recovery link means debriefing the rescuers and supporting the family are part of good resuscitation, not optional extras."
+  ],
+  "redFlags": [
+    "Failing to activate the emergency response system early — no help or AED is coming if no one calls.",
+    "Treating post-ROSC (return of spontaneous circulation) as the finish line and stopping monitoring or care.",
+    "A weak first link (delayed recognition) cannot be rescued by a strong later link (excellent ALS)."
+  ],
+  "commonMistakes": [
+    "Assuming defibrillation is only an advanced-provider skill — AED use is a core BLS and public action.",
+    "Confusing the universal chain with the older separate chains; since 2025 there is one six-link chain plus a distinct newborn chain.",
+    "Overlooking prevention and surveillance as the leading emphasis for in-hospital arrests."
+  ],
+  "memoryAids": [
+    "Think 'Call, Push, Shock' for the bystander-dependent front of the chain: activate, compress, defibrillate.",
+    "The chain is only as strong as its weakest link — speed and quality at every step.",
+    "Recovery = the sixth link; survival is a journey, not a single moment."
+  ],
+  "decisionTrees": [
+    {
+      "title": "BLS Provider's Priorities Within the Chain",
+      "content": "Unresponsive person found\n  → Ensure scene is safe\n  → Check responsiveness and breathing / pulse (≤10 s)\n     → Normal breathing + pulse: monitor, position, reassess\n     → No normal breathing / no pulse: CARDIAC ARREST\n        → Activate emergency response + get AED (Link 1)\n        → Start high-quality CPR immediately (Link 2)\n        → Apply AED and defibrillate as soon as available (Link 3)\n        → Hand off to advanced providers (Link 4)\n        → Support post-arrest and recovery care (Links 5–6)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary and Systems of Care",
+    "AHA 2025 Guidelines for CPR and ECC — Universal Chain of Survival"
+  ],
+  "graphics": [
+    {
+      "id": "c01_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/bls/c01_g01.webp",
+      "alt": "The 2025 Universal Chain of Survival",
+      "caption": "The six links of the 2025 universal Chain of Survival: Activation, High-Quality CPR, Defibrillation, Advanced Resuscitation, Post-Arrest Care, and Recovery."
+    }
+  ]
+}

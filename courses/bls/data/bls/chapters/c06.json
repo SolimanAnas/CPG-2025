@@ -1,0 +1,82 @@
+{
+  "id": "c06",
+  "title": "Ventilation: Barrier Devices, Pocket Mask & Bag-Mask",
+  "shortTitle": "Ventilation Devices",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Open the airway using the head-tilt/chin-lift and jaw-thrust maneuvers.",
+    "Describe the use of barrier devices and pocket masks for ventilation.",
+    "Demonstrate correct bag-mask technique, including the E-C clamp.",
+    "State the correct volume, timing, and rate for delivering breaths.",
+    "Explain the risks of excessive ventilation and gastric inflation.",
+    "Describe when to add supplemental oxygen and airway adjuncts."
+  ],
+  "summary": [
+    {
+      "title": "Opening the Airway",
+      "content": "In an unresponsive patient the tongue commonly obstructs the airway. Open it with a head-tilt/chin-lift: tilt the forehead back and lift the bony chin. If a cervical spine injury is suspected (for example, after trauma), use a jaw-thrust without head extension instead. A patent airway is required before any ventilation attempt is effective."
+    },
+    {
+      "title": "Barrier Devices and Pocket Masks",
+      "content": "Barrier devices reduce direct contact during rescue breathing. A face shield is a thin barrier placed over the mouth. A pocket mask is more effective: it has a one-way valve, can be used with two hands for a good seal, and many accept supplemental oxygen. To use a pocket mask, seal it over the mouth and nose, open the airway, and deliver each breath over about 1 second while watching for chest rise."
+    },
+    {
+      "title": "Bag-Mask Ventilation",
+      "content": "A bag-mask device (BVM) delivers positive-pressure ventilation and can be connected to high-flow oxygen. It is most effective with two rescuers: one holds the mask seal with both hands using the E-C clamp technique (thumb and index finger form a 'C' on the mask while the remaining fingers form an 'E' lifting the jaw), while the second squeezes the bag. Deliver each breath over about 1 second, just enough to see the chest rise."
+    },
+    {
+      "title": "Volume, Timing, and Rate",
+      "content": "Each breath is delivered over about 1 second with only enough volume to produce visible chest rise — roughly 500–600 mL for an adult bag. During CPR without an advanced airway, give 2 breaths after every 30 compressions (30:2). For rescue breathing in a patient who has a pulse but is not breathing adequately, give 1 breath every 6 seconds for an adult (about 10/min). With an advanced airway, ventilate once every 6 seconds without pausing compressions."
+    },
+    {
+      "title": "Avoiding Over-Ventilation and Gastric Inflation",
+      "content": "Delivering breaths too fast, too forcefully, or with too much volume raises pressure in the chest, reduces blood return to the heart, and pushes air into the stomach (gastric inflation). Gastric inflation increases the risk of vomiting and aspiration and pushes up on the diaphragm, worsening ventilation. Give slow, gentle breaths just to chest rise and avoid the urge to over-ventilate under stress."
+    },
+    {
+      "title": "Oxygen and Airway Adjuncts",
+      "content": "When available, connect supplemental oxygen to the pocket mask or bag to raise the delivered oxygen concentration. Airway adjuncts such as an oropharyngeal airway (OPA) — for patients without a gag reflex — or a nasopharyngeal airway (NPA) can help keep the airway open and improve bag-mask ventilation. Routine cricoid pressure is not recommended during CPR."
+    }
+  ],
+  "clinicalPearls": [
+    "Two rescuers make bag-mask ventilation far more effective — one seals with both hands, one squeezes the bag.",
+    "The correct volume is 'just enough to see the chest rise' — more is harmful, not better.",
+    "Suspected spinal injury? Open the airway with a jaw-thrust, not a head-tilt.",
+    "An OPA is only for patients without a gag reflex; use an NPA if a gag reflex is present."
+  ],
+  "redFlags": [
+    "Rapid, forceful breaths that cause gastric inflation and reduce cardiac output.",
+    "No visible chest rise — indicates a poor mask seal or an obstructed airway.",
+    "Using an OPA in a patient with an intact gag reflex, which can trigger vomiting."
+  ],
+  "commonMistakes": [
+    "A poor mask seal from a one-handed grip, causing air leaks and inadequate breaths.",
+    "Squeezing the bag too hard and too fast under stress.",
+    "Forgetting to open the airway before ventilating."
+  ],
+  "memoryAids": [
+    "E-C clamp: 'C' of thumb and index finger seals the mask, 'E' of three fingers lifts the jaw.",
+    "Each breath: about 1 second, just to chest rise.",
+    "Adult rescue breathing: 1 breath every 6 seconds (~10/min)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Ventilation Approach",
+      "content": "Need to ventilate\n  → Open airway (head-tilt/chin-lift; jaw-thrust if spinal injury suspected)\n  → Choose device: pocket mask (add O2) or bag-mask (2 rescuers preferred)\n  → Consider adjunct: OPA (no gag reflex) or NPA (gag reflex present)\n  → Deliver each breath over ~1 s to visible chest rise\n     → No chest rise: reposition airway, improve seal, check for obstruction\n  → Match rate to context: 30:2 during CPR, or 1 breath/6 s for rescue breathing / advanced airway"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support (Ventilation)",
+    "AHA 2025 Guidelines for CPR and ECC — Airway Management and Ventilation"
+  ],
+  "graphics": [
+    {
+      "id": "c06_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/bls/c06_g01.webp",
+      "alt": "Bag-Mask Ventilation",
+      "caption": "Close-up of a rescuer's hand performing the E-C clamp technique to seal a BVM mask on a patient's face."
+    }
+  ]
+}

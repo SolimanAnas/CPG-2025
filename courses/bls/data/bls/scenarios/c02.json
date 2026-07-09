@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "Gasping After Collapse",
+      "presentation": "A 58-year-old man collapses at his desk. You confirm the scene is safe, tap his shoulders, and shout — he does not respond. As you scan for breathing and feel for a carotid pulse, you see him take a single slow, snoring gasp every several seconds. You feel no pulse in 10 seconds.",
+      "vitals": { "hr": "No pulse felt", "rr": "Occasional agonal gasp", "loc": "Unresponsive" },
+      "question": "What is the correct interpretation and action?",
+      "options": [
+        "A: He is breathing, so place him in the recovery position.",
+        "B: The gasps are agonal; treat as cardiac arrest and begin high-quality CPR.",
+        "C: Give two rescue breaths and recheck the pulse for 30 seconds.",
+        "D: Wait to see if the gasping becomes regular breathing."
+      ],
+      "correct": 1,
+      "explanation": "Occasional slow, snoring gasps are agonal breathing — a hallmark of early cardiac arrest, not effective breathing. With no pulse in 10 seconds, this is cardiac arrest: begin compressions immediately.",
+      "clinicalPearl": "Agonal gasps are one of the most commonly misread signs of arrest; when in doubt, start CPR."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Unsafe Scene",
+      "presentation": "You arrive to find a person unresponsive on a wet garage floor near a running generator, with a faint smell of exhaust and an extension cord lying in a puddle beside them.",
+      "vitals": { "hr": "Unknown", "rr": "Unknown", "loc": "Unresponsive" },
+      "question": "What should you do first?",
+      "options": [
+        "A: Rush in and start compressions immediately.",
+        "B: Ensure the scene is safe first — address electrical and possible carbon monoxide hazards, and move the patient/secure the scene before care.",
+        "C: Apply an AED while standing in the puddle.",
+        "D: Ignore the hazards because the patient is critical."
+      ],
+      "correct": 1,
+      "explanation": "The scene contains electrical (cord in water) and possible carbon monoxide hazards. Making the scene safe — securing power, ensuring ventilation, and moving to a safe/dry area — must come before hands-on care to avoid a second casualty.",
+      "clinicalPearl": "A dead rescuer saves no one. Scene safety is not a delay in good care — it is the first step of it."
+    },
+    {
+      "id": "c02_s03",
+      "title": "Fainted, Not Arrested",
+      "presentation": "A young woman faints at a warm outdoor event. She is briefly unresponsive when you reach her, but you confirm the scene is safe, and on assessment she is breathing normally with a strong, regular carotid pulse. She begins to open her eyes.",
+      "vitals": { "hr": "72 bpm, strong", "bp": "112/70 mmHg", "rr": "16 bpm, normal", "loc": "Regaining responsiveness" },
+      "question": "What is the most appropriate BLS action?",
+      "options": [
+        "A: Begin chest compressions.",
+        "B: Provide rescue breaths.",
+        "C: Monitor her, protect her airway (recovery position if needed), and reassess; call for help if she does not improve.",
+        "D: Apply an AED and analyze the rhythm."
+      ],
+      "correct": 2,
+      "explanation": "A patient breathing normally with a strong pulse is not in cardiac arrest. Fainting (syncope) is managed by monitoring, positioning to protect the airway, and reassessing. Compressions and AED are not indicated when a pulse and normal breathing are present.",
+      "clinicalPearl": "Not every collapse is an arrest — match the intervention to the assessment findings, not to the drama of the moment."
+    }
+  ]
+}

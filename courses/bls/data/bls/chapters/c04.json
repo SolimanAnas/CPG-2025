@@ -1,0 +1,68 @@
+{
+  "id": "c04",
+  "title": "Adult 2-Rescuer CPR & Team Dynamics",
+  "shortTitle": "2-Rescuer CPR & Teams",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the roles in multi-rescuer adult CPR and how they rotate.",
+    "State the adult compression-to-ventilation ratio with two rescuers.",
+    "Explain how and when to switch compressors to maintain quality.",
+    "Describe ventilation timing once an advanced airway is in place.",
+    "List the elements of effective resuscitation team dynamics.",
+    "Explain how to minimize pre-shock and post-shock pauses as a team."
+  ],
+  "summary": [
+    {
+      "title": "Roles in Multi-Rescuer CPR",
+      "content": "When more rescuers are available, work is divided: one performs compressions, one manages the airway and gives breaths, one operates the AED, and a team leader coordinates. Clear role assignment prevents duplicated effort and gaps. Roles rotate so the compressor can rest, keeping compression quality high. In a small team, one person may hold more than one role, but responsibilities should still be explicit."
+    },
+    {
+      "title": "Adult Ratio with Two Rescuers",
+      "content": "For an adult, the compression-to-ventilation ratio stays at 30:2 even with two rescuers (unlike children and infants, which change to 15:2 with two rescuers). One rescuer compresses while the other prepares and delivers the two breaths during the brief pause after 30 compressions, then compressions resume immediately."
+    },
+    {
+      "title": "Switching Compressors",
+      "content": "Compressor fatigue reduces depth within about 2 minutes, often without the rescuer noticing. Switch the compressor role about every 2 minutes (roughly every 5 cycles of 30:2), ideally during a natural pause such as AED rhythm analysis. Plan the switch in advance and complete it in less than 10 seconds so blood flow is barely interrupted."
+    },
+    {
+      "title": "Ventilation with an Advanced Airway",
+      "content": "Once an advanced airway (such as a supraglottic device or endotracheal tube placed by trained providers) is in place, rescuers no longer pause compressions for breaths. Instead, deliver continuous compressions at 100–120/min and give one breath every 6 seconds (about 10 breaths per minute). This maximizes the compression fraction while providing steady ventilation."
+    },
+    {
+      "title": "Team Dynamics",
+      "content": "Effective resuscitation teams use closed-loop communication (orders are repeated back and completion confirmed), clear messages, defined roles and responsibilities, knowledge sharing, constructive intervention, reassessment and summarizing, and mutual respect. The team leader keeps the big picture, assigns tasks, monitors performance, and adjusts the plan; team members speak up if they see a problem or cannot complete a task."
+    }
+  ],
+  "clinicalPearls": [
+    "The adult ratio does not change with more rescuers — it stays 30:2 until an advanced airway is placed.",
+    "Anticipate the 2-minute switch so it happens smoothly during the AED analysis pause.",
+    "Closed-loop communication ('Give 2 breaths' → 'Giving 2 breaths' → 'Breaths done') prevents missed or duplicated actions.",
+    "With an advanced airway, stop pausing for breaths — compress continuously and ventilate once every 6 seconds."
+  ],
+  "redFlags": [
+    "Long, disorganized compressor switches that create dangerous pauses.",
+    "Two rescuers both assuming someone else is doing compressions.",
+    "Over-ventilating once an advanced airway is in place."
+  ],
+  "commonMistakes": [
+    "Changing the adult ratio to 15:2 — that ratio is only for 2-rescuer child and infant CPR.",
+    "Failing to rotate compressors, allowing depth to decay from fatigue.",
+    "Silence instead of closed-loop communication, leading to missed tasks."
+  ],
+  "memoryAids": [
+    "Adult stays 30:2 no matter how many rescuers; kids drop to 15:2 with two.",
+    "Advanced airway = continuous compressions + 1 breath every 6 seconds (~10/min).",
+    "Team dynamics: Roles, Loops, Respect — assign, confirm, and support."
+  ],
+  "decisionTrees": [
+    {
+      "title": "2-Rescuer Adult CPR Flow",
+      "content": "Two or more rescuers present\n  → Assign roles: compressor, airway/breaths, AED, leader\n  → No advanced airway: 30:2 (compressor pauses briefly for 2 breaths)\n     → Every ~2 min (5 cycles) or at AED analysis: switch compressors (<10 s)\n  → Advanced airway placed: continuous compressions + 1 breath every 6 s\n  → Throughout: closed-loop communication, minimize pauses, reassess"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Team Dynamics and Systems of Care"
+  ]
+}

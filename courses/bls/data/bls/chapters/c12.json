@@ -1,0 +1,83 @@
+{
+  "id": "c12",
+  "title": "Special Circumstances: Drowning, Pregnancy, Recovery & Post-Arrest Care",
+  "shortTitle": "Special Circumstances",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the ventilation-focused approach to drowning resuscitation.",
+    "Explain the modifications to CPR for a pregnant patient, including uterine displacement.",
+    "Describe when and how to place a patient in the recovery position.",
+    "Recognize return of spontaneous circulation (ROSC) and provide post-arrest care at the BLS level.",
+    "Explain the recovery link and survivorship after cardiac arrest.",
+    "Explain why some special circumstances favor conventional CPR with breaths over compression-only CPR."
+  ],
+  "summary": [
+    {
+      "title": "Drowning: Ventilation First",
+      "content": "Drowning causes cardiac arrest through hypoxia, so ventilation is the priority. Rescue breaths should be started as soon as safely possible — trained rescuers may begin in-water ventilation once the victim is reachable and it is safe. After removing the victim from the water, provide conventional CPR with breaths rather than compression-only CPR, because oxygenation is the central problem. Give initial rescue breaths, then continue standard CPR (compressions and breaths) and apply an AED once the chest is dry."
+    },
+    {
+      "title": "CPR in Pregnancy",
+      "content": "For a pregnant patient in cardiac arrest, provide high-quality CPR with standard hand placement and depth. In the later stages of pregnancy (roughly the second half), the enlarged uterus can compress the major blood vessels when the patient is flat, reducing blood return. To relieve this, perform manual left uterine displacement (gently pushing the uterus to the patient's left) during compressions. Use the AED normally. Rapid transport to definitive care is essential, as advanced interventions may be needed for both mother and fetus."
+    },
+    {
+      "title": "The Recovery Position",
+      "content": "The recovery position is used for a person who is unresponsive but breathing normally with a pulse and has no suspected spinal injury. Rolling the patient onto their side helps keep the airway open and allows fluids or vomit to drain, reducing aspiration risk. Continue to monitor breathing, and be ready to roll the patient back and start CPR if breathing becomes inadequate or the pulse is lost. Do not use the recovery position if trauma or spinal injury is suspected without appropriate precautions."
+    },
+    {
+      "title": "Recognizing ROSC and Post-Arrest Care",
+      "content": "Return of spontaneous circulation (ROSC) is suggested by a palpable pulse, spontaneous breathing, movement, or other signs of life. After ROSC, continue to support the patient: monitor the airway, breathing, and pulse; provide oxygen and assist ventilation if breathing is inadequate; position appropriately; and prepare for possible re-arrest by keeping the AED attached. Rapid transport to definitive care is a priority."
+    },
+    {
+      "title": "The Recovery Link and Survivorship",
+      "content": "The recovery link of the Chain of Survival recognizes that care continues well beyond ROSC. Survivors may face physical, cognitive, and emotional challenges and benefit from rehabilitation, structured follow-up, and psychological support; families need support too. Rescuers themselves may benefit from debriefing after a resuscitation. Viewing cardiac arrest as a survivable condition with a recovery journey shapes compassionate, complete care."
+    },
+    {
+      "title": "When to Favor Conventional CPR with Breaths",
+      "content": "While compression-only CPR is appropriate for adult sudden collapse when a rescuer cannot ventilate, several special circumstances strongly favor conventional CPR with breaths because they are driven by hypoxia: drowning, opioid overdose, choking-related arrest, and most pediatric arrests. In these situations, ventilation is a critical part of restoring the patient, and breaths should be provided whenever possible."
+    }
+  ],
+  "clinicalPearls": [
+    "Drowning is hypoxic — ventilate early and use CPR with breaths, not compression-only.",
+    "Late-pregnancy CPR: add manual left uterine displacement and transport rapidly.",
+    "Recovery position: for an unresponsive patient who is breathing normally with a pulse and no spinal injury.",
+    "After ROSC, keep the AED on and be ready for re-arrest; transport promptly."
+  ],
+  "redFlags": [
+    "Using compression-only CPR for a drowning or pediatric hypoxic arrest.",
+    "Leaving a late-pregnancy arrest patient supine without uterine displacement.",
+    "Placing a trauma patient in the recovery position without spinal precautions."
+  ],
+  "commonMistakes": [
+    "Delaying rescue breaths in a drowning victim.",
+    "Forgetting left uterine displacement in the pregnant patient.",
+    "Assuming ROSC means the emergency is over and stopping monitoring."
+  ],
+  "memoryAids": [
+    "Drowning: breaths first, then CPR with breaths.",
+    "Pregnant + late term: push the uterus to the left during CPR.",
+    "ROSC ≠ done — monitor, support, transport, and watch for re-arrest."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Special-Circumstance CPR Modifications",
+      "content": "Special circumstance?\n  → Drowning: rescue breaths ASAP (in-water if trained/safe) → remove from water → CPR WITH breaths + AED when dry\n  → Pregnancy (late term) arrest: high-quality CPR + manual LEFT uterine displacement → AED normal → rapid transport\n  → Unresponsive, breathing normally, pulse, no spinal injury: recovery position + monitor\n  → ROSC achieved: monitor ABCs, support breathing/oxygen, keep AED attached, transport\n  → Hypoxic causes (drowning, opioid, choking, pediatric): prefer CPR WITH breaths over compression-only"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult and Pediatric Special Circumstances of Resuscitation",
+    "AHA 2024/2025 Focused Guidance — Drowning Resuscitation",
+    "AHA 2025 Guidelines for CPR and ECC — Post-Cardiac Arrest Care and Recovery"
+  ],
+  "graphics": [
+    {
+      "id": "c12_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/bls/c12_g01.webp",
+      "alt": "Maternal Cardiac Arrest: Left Uterine Displacement",
+      "caption": "Schematic showing a rescuer applying left uterine displacement (LUD) to a pregnant patient during CPR to relieve aortocaval compression."
+    }
+  ]
+}

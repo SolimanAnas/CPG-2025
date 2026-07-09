@@ -1,0 +1,72 @@
+{
+  "id": "c07",
+  "title": "Breaths, Ventilations & Advanced Airway Considerations",
+  "shortTitle": "Breaths & Rescue Breathing",
+  "estimatedStudyTime": 28,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain the 2025 terminology change from 'rescue breaths' to 'breaths' and 'ventilations.'",
+    "Perform rescue breathing at the correct rate for adults, children, and infants.",
+    "Distinguish adequate breathing from inadequate breathing requiring assistance.",
+    "State when to reassess the pulse during rescue breathing.",
+    "Describe basic considerations for ventilating a patient with an advanced airway.",
+    "Recognize respiratory arrest and its relationship to cardiac arrest."
+  ],
+  "summary": [
+    {
+      "title": "2025 Terminology: Breaths and Ventilations",
+      "content": "The 2025 AHA Guidelines updated terminology. The term 'breaths' now refers to ventilations given to a patient who has a pulse but is not breathing normally (formerly 'rescue breaths'). The term 'ventilations' is used when breaths are delivered with a device such as a bag-mask. The underlying actions are unchanged; the clearer wording distinguishes the clinical situation and the method of delivery."
+    },
+    {
+      "title": "Rescue Breathing (Breaths) for a Patient with a Pulse",
+      "content": "When a patient is unresponsive with a pulse but is not breathing or is breathing inadequately (for example, only agonal gasps), provide breaths without chest compressions. For an adult, give 1 breath every 6 seconds (about 10 per minute). For an infant or child, give 1 breath every 2–3 seconds (about 20–30 per minute). Each breath is delivered over about 1 second to produce visible chest rise."
+    },
+    {
+      "title": "Adequate vs Inadequate Breathing",
+      "content": "Adequate breathing has a normal rate, regular pattern, and good chest rise with no distress. Inadequate breathing may be too slow, too shallow, gasping, or labored, and often shows signs such as cyanosis, altered mental status, or falling oxygen saturation. Agonal gasps are inadequate and require intervention. A patient with inadequate breathing but a pulse needs assisted ventilation (breaths); a patient with no pulse needs CPR."
+    },
+    {
+      "title": "Reassessing During Rescue Breathing",
+      "content": "While providing rescue breathing to a patient with a pulse, reassess the pulse about every 2 minutes, taking no more than 10 seconds. If at any point the pulse is lost, begin CPR starting with compressions. Continued monitoring is essential because a patient in respiratory arrest can deteriorate into cardiac arrest."
+    },
+    {
+      "title": "Advanced Airway Considerations",
+      "content": "Advanced airways (supraglottic devices and endotracheal tubes) are placed by trained providers to secure the airway. Once an advanced airway is in place, compressions become continuous and ventilations are given once every 6 seconds (about 10 per minute) without pausing compressions. Correct placement should be confirmed (for example, with waveform capnography where available), and the device secured. At the BLS level, the key point is the switch to asynchronous, continuous compressions with steady ventilation."
+    },
+    {
+      "title": "Respiratory Arrest and Its Link to Cardiac Arrest",
+      "content": "Respiratory arrest is the absence of breathing while a pulse is still present. If untreated, the lack of oxygen quickly leads to cardiac arrest. Prompt rescue breathing can prevent this progression, especially in situations where the primary problem is oxygenation — such as drowning, opioid overdose, choking, or respiratory disease — which are often more breathing-driven than sudden cardiac arrest."
+    }
+  ],
+  "clinicalPearls": [
+    "Pulse present + inadequate breathing = give breaths only; no pulse = CPR.",
+    "Adult breaths: 1 every 6 seconds. Child/infant breaths: 1 every 2–3 seconds (faster).",
+    "Reassess the pulse about every 2 minutes during rescue breathing — respiratory arrest can become cardiac arrest.",
+    "With an advanced airway, stop pausing for breaths: compress continuously and ventilate once every 6 seconds."
+  ],
+  "redFlags": [
+    "Missing the loss of a pulse during rescue breathing because of infrequent reassessment.",
+    "Treating agonal gasping as adequate breathing.",
+    "Over-ventilating a patient with an advanced airway."
+  ],
+  "commonMistakes": [
+    "Using the adult rate (1 every 6 s) for infants and children, who need a faster rate.",
+    "Continuing to pause compressions for breaths after an advanced airway is placed.",
+    "Giving compressions to a patient who still has a pulse."
+  ],
+  "memoryAids": [
+    "'Breaths' = to a patient with a pulse; 'ventilations' = delivered with a device.",
+    "Adult 10/min, child & infant 20–30/min.",
+    "No advanced airway → 30:2; advanced airway → non-stop compressions + 1 breath/6 s."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Breathing and Pulse Decision",
+      "content": "Unresponsive patient assessed\n  → Pulse present?\n     → Yes, breathing adequate: monitor, recovery position, reassess\n     → Yes, breathing inadequate/absent: give breaths\n        → Adult: 1 breath every 6 s (~10/min)\n        → Child/Infant: 1 breath every 2–3 s (~20–30/min)\n        → Reassess pulse every ~2 min → if lost, start CPR\n     → No pulse: start CPR (compressions first)\n  → Advanced airway placed: continuous compressions + 1 breath/6 s"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support (Ventilation and Terminology)",
+    "AHA 2025 Guidelines for CPR and ECC — Rescue Breathing and Advanced Airway Ventilation"
+  ]
+}

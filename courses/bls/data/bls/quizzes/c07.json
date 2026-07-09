@@ -1,0 +1,214 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "In the 2025 AHA terminology, the word 'breaths' refers to:",
+      "options": [
+        "A. Compressions delivered to the chest",
+        "B. Ventilations given to a patient who has a pulse but is not breathing normally",
+        "C. Only breaths given through an advanced airway",
+        "D. The patient's spontaneous respirations only"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 Guidelines use 'breaths' for what was previously called rescue breaths — assisting a patient who has a pulse but inadequate breathing — while 'ventilations' denotes device-delivered breaths.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "What is the correct adult rescue-breathing rate for a pulse-present patient who is not breathing adequately?",
+      "options": ["A. 1 breath every 2 seconds", "B. 1 breath every 6 seconds (~10/min)", "C. 1 breath every 10 seconds", "D. 1 breath every 15 seconds"],
+      "correct": 1,
+      "rationale": "Adult rescue breathing is 1 breath every 6 seconds, about 10 per minute.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "What is the rescue-breathing rate for an infant or child with a pulse but inadequate breathing?",
+      "options": ["A. 1 breath every 6 seconds", "B. 1 breath every 2–3 seconds (~20–30/min)", "C. 1 breath every 10 seconds", "D. 1 breath every minute"],
+      "correct": 1,
+      "rationale": "Infants and children receive breaths more frequently than adults: 1 every 2–3 seconds (about 20–30/min).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q04",
+      "question": "A patient is unresponsive with a strong pulse but is only gasping occasionally. What is the correct action?",
+      "options": [
+        "A. Begin chest compressions",
+        "B. Provide breaths (rescue breathing) and reassess the pulse every 2 minutes",
+        "C. Place in the recovery position and leave",
+        "D. Apply an AED and shock"
+      ],
+      "correct": 1,
+      "rationale": "Agonal gasping is inadequate breathing. With a pulse present, provide rescue breathing (breaths) and reassess the pulse about every 2 minutes; compressions are not indicated while a pulse is present.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "How often should the pulse be reassessed during rescue breathing?",
+      "options": ["A. Every 30 seconds", "B. About every 2 minutes", "C. Every 10 minutes", "D. Never"],
+      "correct": 1,
+      "rationale": "Reassess the pulse about every 2 minutes (≤10 seconds each check). If the pulse is lost, begin CPR.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q06",
+      "question": "With an advanced airway in place during cardiac arrest, ventilations are given:",
+      "options": [
+        "A. During pauses in compressions",
+        "B. Once every 6 seconds with continuous compressions",
+        "C. Once every 2 seconds",
+        "D. Only when the patient gasps"
+      ],
+      "correct": 1,
+      "rationale": "An advanced airway allows asynchronous CPR: continuous compressions with 1 ventilation every 6 seconds (about 10/min), no pauses.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q07",
+      "question": "What is respiratory arrest?",
+      "options": [
+        "A. Absence of a pulse with normal breathing",
+        "B. Absence of breathing while a pulse is still present",
+        "C. A slow but adequate breathing pattern",
+        "D. Cardiac arrest with a shockable rhythm"
+      ],
+      "correct": 1,
+      "rationale": "Respiratory arrest is the absence of breathing with a pulse still present. Untreated, hypoxia leads to cardiac arrest, so rescue breathing is time-critical.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "During rescue breathing, the patient's pulse suddenly disappears. What should you do?",
+      "options": [
+        "A. Continue only breaths",
+        "B. Begin CPR starting with chest compressions",
+        "C. Reassess for another 2 minutes first",
+        "D. Increase the breath rate"
+      ],
+      "correct": 1,
+      "rationale": "Loss of pulse means the patient is now in cardiac arrest; begin CPR immediately, starting with compressions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q09",
+      "question": "Which set of conditions is more 'breathing-driven,' making early ventilation especially important?",
+      "options": [
+        "A. Sudden collapse from a heart attack",
+        "B. Drowning, opioid overdose, and choking",
+        "C. Ventricular fibrillation",
+        "D. A witnessed shockable arrest in an adult"
+      ],
+      "correct": 1,
+      "rationale": "Drowning, opioid overdose, and choking primarily impair oxygenation, so breaths/ventilation are especially important, unlike a primary cardiac arrest where compressions and defibrillation lead.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q10",
+      "question": "Each breath during rescue breathing should be delivered over about:",
+      "options": ["A. 0.2 seconds", "B. 1 second, to visible chest rise", "C. 3 seconds", "D. 5 seconds"],
+      "correct": 1,
+      "rationale": "Each breath is delivered over about 1 second with just enough volume to produce visible chest rise, avoiding over-ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q11",
+      "question": "Which is a sign of INADEQUATE breathing?",
+      "options": [
+        "A. Regular rate with good chest rise",
+        "B. Slow, shallow, gasping breaths with cyanosis",
+        "C. Effortless breathing",
+        "D. Normal mental status"
+      ],
+      "correct": 1,
+      "rationale": "Slow, shallow, or gasping breaths with cyanosis or altered mental status indicate inadequate breathing that requires assisted ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q12",
+      "question": "What is the difference between 'breaths' and 'ventilations' in the 2025 terminology?",
+      "options": [
+        "A. They are the same and interchangeable in all contexts",
+        "B. 'Breaths' describes assisting a pulse-present patient; 'ventilations' describes device-delivered breaths",
+        "C. 'Ventilations' are only for children",
+        "D. 'Breaths' means compressions"
+      ],
+      "correct": 1,
+      "rationale": "The distinction clarifies clinical context: 'breaths' for assisting a patient with a pulse who isn't breathing normally, and 'ventilations' for breaths delivered via a device such as a bag-mask.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Why is over-ventilation harmful even in respiratory arrest with a pulse?",
+      "options": [
+        "A. It improves circulation",
+        "B. It can cause gastric inflation, vomiting, and aspiration, and impair venous return",
+        "C. It has no downside",
+        "D. It increases the pulse rate safely"
+      ],
+      "correct": 1,
+      "rationale": "Excessive volume or rate inflates the stomach (risking vomiting/aspiration) and raises intrathoracic pressure, which can reduce venous return — so gentle breaths to chest rise are used.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "A child is unresponsive, has a pulse of 70/min, and is not breathing. What is correct?",
+      "options": [
+        "A. Give 1 breath every 6 seconds",
+        "B. Give 1 breath every 2–3 seconds and reassess",
+        "C. Start compressions immediately",
+        "D. Do nothing until EMS arrives"
+      ],
+      "correct": 1,
+      "rationale": "A child with a pulse but not breathing needs rescue breathing at the pediatric rate of 1 breath every 2–3 seconds; compressions are not started while a pulse is present. (Note: in children a heart rate under 60 with poor perfusion is an indication to start compressions.)",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q15",
+      "question": "How is correct placement of an advanced airway best confirmed when available?",
+      "options": ["A. By the color of the tube", "B. With waveform capnography and clinical signs", "C. By the patient waking up", "D. It cannot be confirmed"],
+      "correct": 1,
+      "rationale": "Waveform capnography, together with clinical signs such as chest rise and breath sounds, is used to confirm and monitor advanced airway placement.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q16",
+      "question": "Why does the AHA emphasize reassessing the pulse during rescue breathing?",
+      "options": [
+        "A. To document vital signs for billing",
+        "B. Because respiratory arrest can progress to cardiac arrest, requiring a switch to CPR",
+        "C. To decide whether to stop breaths",
+        "D. It is not actually emphasized"
+      ],
+      "correct": 1,
+      "rationale": "A patient in respiratory arrest can deteriorate to cardiac arrest. Regular pulse reassessment ensures the rescuer promptly switches to compressions if the pulse is lost.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q17",
+      "question": "Which patient needs compressions rather than breaths alone?",
+      "options": [
+        "A. Unresponsive, pulse present, not breathing",
+        "B. Unresponsive, no pulse, not breathing",
+        "C. Responsive and breathing",
+        "D. Unresponsive, pulse present, breathing normally"
+      ],
+      "correct": 1,
+      "rationale": "No pulse means cardiac arrest, which requires CPR (compressions). A pulse-present patient with inadequate breathing needs breaths, not compressions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q18",
+      "question": "After an advanced airway is placed, a rescuer keeps pausing compressions to give breaths. What is the correct instruction?",
+      "options": [
+        "A. Keep pausing for each breath",
+        "B. Compress continuously and give 1 ventilation every 6 seconds",
+        "C. Stop ventilating entirely",
+        "D. Give 1 ventilation every 2 seconds"
+      ],
+      "correct": 1,
+      "rationale": "With an advanced airway, compressions should be continuous and ventilations delivered once every 6 seconds without interrupting compressions, maximizing the compression fraction.",
+      "difficulty": "Medium"
+    }
+  ]
+}

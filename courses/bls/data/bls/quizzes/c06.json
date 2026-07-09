@@ -1,0 +1,194 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "How should each rescue breath be delivered?",
+      "options": ["A. As forcefully and quickly as possible", "B. Over about 1 second, just enough to produce visible chest rise", "C. Over 5 seconds with maximal volume", "D. In rapid bursts"],
+      "correct": 1,
+      "rationale": "Each breath is given over about 1 second with only enough volume to make the chest visibly rise. Larger or faster breaths cause harm through over-ventilation and gastric inflation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "Which airway maneuver is preferred when a cervical spine injury is suspected?",
+      "options": ["A. Head-tilt/chin-lift", "B. Jaw-thrust without head extension", "C. Hyperextension of the neck", "D. No airway maneuver"],
+      "correct": 1,
+      "rationale": "The jaw-thrust opens the airway while minimizing neck movement, making it preferred when a spinal injury is suspected.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q03",
+      "question": "The E-C clamp technique is used to:",
+      "options": ["A. Perform compressions", "B. Maintain a mask seal while lifting the jaw during bag-mask ventilation", "C. Insert an advanced airway", "D. Measure oxygen"],
+      "correct": 1,
+      "rationale": "The E-C clamp uses the thumb and index finger (C) to seal the mask and the remaining fingers (E) to lift the jaw, maintaining a good seal for bag-mask ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q04",
+      "question": "Why is bag-mask ventilation usually more effective with two rescuers?",
+      "options": [
+        "A. It doubles the oxygen supply",
+        "B. One rescuer maintains a two-handed mask seal while the other squeezes the bag",
+        "C. It allows faster compressions",
+        "D. It eliminates the need to open the airway"
+      ],
+      "correct": 1,
+      "rationale": "A two-handed seal by one rescuer greatly reduces leaks, while the second rescuer provides consistent bag volume — together delivering far more effective breaths than a one-person technique.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q05",
+      "question": "What is the adult rescue-breathing rate for a patient with a pulse who is not breathing adequately?",
+      "options": ["A. 1 breath every 2 seconds", "B. 1 breath every 6 seconds (about 10/min)", "C. 1 breath every 10 seconds", "D. 30 breaths per minute"],
+      "correct": 1,
+      "rationale": "For an adult with a pulse but inadequate breathing, deliver 1 breath every 6 seconds, about 10 breaths per minute.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q06",
+      "question": "What is a consequence of excessive ventilation?",
+      "options": [
+        "A. Improved cardiac output",
+        "B. Gastric inflation and reduced venous return, lowering cardiac output",
+        "C. Lower risk of aspiration",
+        "D. Better chest recoil"
+      ],
+      "correct": 1,
+      "rationale": "Over-ventilation raises intrathoracic pressure (reducing blood return to the heart) and inflates the stomach, increasing vomiting and aspiration risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "When is an oropharyngeal airway (OPA) appropriate?",
+      "options": [
+        "A. In any patient",
+        "B. Only in a patient without a gag reflex",
+        "C. Only in awake patients",
+        "D. Only in children"
+      ],
+      "correct": 1,
+      "rationale": "An OPA is used only in patients without a gag reflex, because it can provoke gagging, vomiting, and aspiration in a patient who still has one.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "What advantage does a pocket mask have over a simple face shield?",
+      "options": [
+        "A. It requires no airway opening",
+        "B. It has a one-way valve, allows a two-handed seal, and can accept supplemental oxygen",
+        "C. It delivers compressions",
+        "D. It works without a seal"
+      ],
+      "correct": 1,
+      "rationale": "A pocket mask provides a one-way valve for protection, a better two-handed seal, and often an oxygen inlet, making ventilation more effective and safer than a thin face shield.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q09",
+      "question": "During ventilation you see no chest rise. What is the best first response?",
+      "options": [
+        "A. Squeeze the bag much harder",
+        "B. Reposition the airway and improve the mask seal, then check for obstruction",
+        "C. Give up on ventilation",
+        "D. Increase the ventilation rate"
+      ],
+      "correct": 1,
+      "rationale": "No chest rise usually means a poor seal or an unopened/obstructed airway. Reposition the head/jaw, improve the seal, and check for a foreign body — do not simply force more air.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q10",
+      "question": "Approximately what tidal volume is appropriate for adult bag-mask breaths?",
+      "options": ["A. 200 mL", "B. About 500–600 mL (enough for visible chest rise)", "C. 1000 mL", "D. As much as the bag holds"],
+      "correct": 1,
+      "rationale": "About 500–600 mL produces visible chest rise in an adult without over-inflating; giving the full bag volume risks over-ventilation and gastric inflation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q11",
+      "question": "Is routine cricoid pressure recommended during CPR?",
+      "options": ["A. Yes, always", "B. No, it is not routinely recommended", "C. Only in children", "D. Only with a bag-mask"],
+      "correct": 1,
+      "rationale": "Routine cricoid pressure is not recommended during CPR, as it can impede ventilation and does not reliably prevent aspiration.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q12",
+      "question": "With an advanced airway in place, how is ventilation delivered?",
+      "options": [
+        "A. Pause compressions for each breath",
+        "B. Continuous compressions with 1 breath every 6 seconds",
+        "C. 1 breath every 2 seconds",
+        "D. No ventilation is needed"
+      ],
+      "correct": 1,
+      "rationale": "With an advanced airway, compressions are continuous and breaths are given once every 6 seconds (about 10/min) without pausing compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q13",
+      "question": "What should be done before every ventilation attempt?",
+      "options": ["A. Check blood pressure", "B. Open the airway", "C. Start an IV", "D. Apply the AED"],
+      "correct": 1,
+      "rationale": "The airway must be opened (head-tilt/chin-lift or jaw-thrust) before ventilating; otherwise the tongue can block airflow and breaths will not reach the lungs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q14",
+      "question": "A trauma patient needs ventilation and may have a neck injury. Which technique and device pairing is best?",
+      "options": [
+        "A. Head-tilt/chin-lift with a bag-mask",
+        "B. Jaw-thrust with a bag-mask, ideally two rescuers",
+        "C. Hyperextend the neck and use mouth-to-mouth",
+        "D. No airway opening, just squeeze the bag"
+      ],
+      "correct": 1,
+      "rationale": "With a possible neck injury, open the airway using a jaw-thrust (minimizing neck movement) and ventilate with a bag-mask, preferably with two rescuers for a good seal.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q15",
+      "question": "Which finding indicates ventilation is effective?",
+      "options": ["A. The stomach distends", "B. The chest visibly rises with each breath", "C. Air escapes around the mask", "D. The patient's abdomen rises"],
+      "correct": 1,
+      "rationale": "Visible chest rise indicates air is reaching the lungs. Gastric/abdominal distension or air leaking around the mask indicates ineffective or misdirected ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q16",
+      "question": "Under stress, a rescuer tends to squeeze the bag hard and fast. Why is this harmful?",
+      "options": [
+        "A. It has no effect",
+        "B. It causes over-ventilation and gastric inflation, reducing cardiac output and risking aspiration",
+        "C. It improves recoil",
+        "D. It increases compression depth"
+      ],
+      "correct": 1,
+      "rationale": "Fast, forceful bagging over-ventilates the patient — raising intrathoracic pressure and inflating the stomach — which reduces circulation and increases the risk of vomiting and aspiration.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q17",
+      "question": "Which adjunct is better tolerated in a patient who may still have a gag reflex?",
+      "options": ["A. Oropharyngeal airway (OPA)", "B. Nasopharyngeal airway (NPA)", "C. Neither can be used", "D. Endotracheal tube only"],
+      "correct": 1,
+      "rationale": "An NPA is generally better tolerated than an OPA when a gag reflex may be present, as the OPA can provoke gagging and vomiting.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q18",
+      "question": "During single-rescuer CPR with a pocket mask, what ventilation pattern is used?",
+      "options": [
+        "A. Continuous breaths",
+        "B. 2 breaths after every 30 compressions",
+        "C. 1 breath every 2 seconds",
+        "D. No breaths at all"
+      ],
+      "correct": 1,
+      "rationale": "Without an advanced airway, CPR uses 30:2 — two breaths, each over about 1 second, after every 30 compressions.",
+      "difficulty": "Easy"
+    }
+  ]
+}

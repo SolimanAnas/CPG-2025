@@ -1,0 +1,33 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "Choking (FBAO) — Responsive Victim (2025)",
+      "description": "Management of a responsive victim with a foreign-body airway obstruction, by age and body type.",
+      "image": "../../algorithms/BLS-Adult-FBAO.webp",
+      "steps": [
+        "Assess severity: if the victim can cough forcefully, speak, or breathe (mild), encourage coughing and do not interfere.",
+        "If severe (cannot speak, cough effectively, or breathe) and responsive, act immediately.",
+        "Adult or child: deliver 5 back blows between the shoulder blades, then 5 abdominal thrusts; alternate these cycles.",
+        "Pregnant or obese adult: replace abdominal thrusts with chest thrusts (still alternating with back blows).",
+        "Infant: alternate 5 back blows (face-down) with 5 chest thrusts (face-up), supporting the head and neck; never use abdominal thrusts.",
+        "Continue until the object is expelled or the victim becomes unresponsive."
+      ]
+    },
+    {
+      "id": "c10_alg02",
+      "title": "Choking Victim Who Becomes Unresponsive",
+      "description": "Transition from choking relief to CPR when the victim loses responsiveness.",
+      "image": "../../images/courses/bls/c10_g01.webp",
+      "steps": [
+        "Carefully lower the victim to the ground.",
+        "Activate the emergency response system (or ensure it has been activated).",
+        "Begin CPR starting with chest compressions.",
+        "Each time you open the airway to give breaths, look inside the mouth.",
+        "Remove the foreign object only if you can clearly see it — do not perform blind finger sweeps.",
+        "Continue CPR; the compressions themselves can help expel the obstruction, and continue until relief, ROSC, or handoff."
+      ]
+    }
+  ]
+}

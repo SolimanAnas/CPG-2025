@@ -1,0 +1,82 @@
+{
+  "id": "c05",
+  "title": "Automated External Defibrillation (AED)",
+  "shortTitle": "AED",
+  "estimatedStudyTime": 30,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Describe the purpose of an AED and why early defibrillation improves survival.",
+    "List the steps to operate an AED safely.",
+    "Describe correct pad placement for adults and children.",
+    "Explain the pediatric considerations for AED use, including dose attenuators.",
+    "Manage special situations: wet chest, implanted devices, medication patches, hairy chest, and pregnancy.",
+    "Integrate AED use with high-quality CPR to minimize pauses."
+  ],
+  "summary": [
+    {
+      "title": "What an AED Does",
+      "content": "An automated external defibrillator analyzes the heart rhythm and, if it detects a shockable rhythm (ventricular fibrillation or pulseless ventricular tachycardia), delivers an electrical shock to allow a normal rhythm to resume. Early defibrillation is one of the strongest predictors of survival in shockable arrest, and AEDs are designed for use by lay rescuers and BLS providers with minimal training."
+    },
+    {
+      "title": "Operating an AED",
+      "content": "The four universal steps are: (1) Power on the AED — it will give voice prompts. (2) Attach the pads to the patient's bare, dry chest as pictured on the pads. (3) Allow the AED to analyze the rhythm — ensure no one touches the patient ('clear'). (4) If a shock is advised, ensure everyone is clear and press the shock button, then immediately resume chest compressions. Follow the device prompts throughout and continue CPR between analyses."
+    },
+    {
+      "title": "Pad Placement",
+      "content": "The most common placement is anterolateral: one pad on the right upper chest below the collarbone, the other on the left lower chest along the mid-axillary line. An alternative is anteroposterior (front and back). Pads must not touch each other. For children and infants, if pads are large enough to overlap, use anteroposterior placement (one on the chest, one on the back)."
+    },
+    {
+      "title": "Pediatric Considerations",
+      "content": "For children younger than 8 years, use pediatric (dose-attenuating) pads or a pediatric setting if available, which reduce the energy delivered. If pediatric pads are not available, use adult pads rather than withholding defibrillation, ensuring the pads do not touch. For infants, a manual defibrillator operated by a trained provider is preferred; if unavailable, use an AED with a dose attenuator, and if that is also unavailable, an AED with adult pads may be used."
+    },
+    {
+      "title": "Special Situations",
+      "content": "Wet chest: quickly wipe the chest dry before applying pads, and move the patient off standing water. Implanted device (pacemaker/ICD): place the pad at least about 1 inch (2.5 cm) away from the visible bump. Transdermal medication patch: remove the patch and wipe the area before placing a pad. Hairy chest: press pads firmly, or quickly shave the area if a razor is available and pads will not stick. Pregnancy: use the AED normally — defibrillation is safe and indicated. Remove metal jewelry only if it lies directly under a pad."
+    },
+    {
+      "title": "Integrating the AED with CPR",
+      "content": "Continue high-quality CPR while the AED is retrieved and the pads are applied — only pause for analysis and shock. Minimize the pre-shock pause by charging while compressions continue where the device allows, and resume compressions immediately after the shock without checking a pulse. The AED will prompt a rhythm re-analysis about every 2 minutes, which is also a good moment to switch compressors."
+    }
+  ],
+  "clinicalPearls": [
+    "Apply the AED as soon as it arrives, but never stop good compressions to go find one if you are alone with the patient — send someone else.",
+    "Immediately resume compressions after a shock; do not pause to check a pulse.",
+    "Do not withhold defibrillation from a child just because only adult pads are available — use them (without letting the pads touch).",
+    "Pregnancy is not a contraindication to defibrillation; treat the mother, and you treat the baby."
+  ],
+  "redFlags": [
+    "Touching the patient during rhythm analysis or shock delivery.",
+    "Applying pads to a wet chest or over a medication patch.",
+    "Long pre-shock and post-shock pauses that reduce perfusion."
+  ],
+  "commonMistakes": [
+    "Delaying pad placement to finish a cycle of compressions when the AED is ready.",
+    "Placing pads so they touch each other, especially on small children.",
+    "Checking a pulse immediately after a shock instead of resuming compressions."
+  ],
+  "memoryAids": [
+    "AED steps: Power on → Pads on → Analyze (clear) → Shock (clear), then CPR.",
+    "'Clear!' before analyze and before shock — eyes on the whole team.",
+    "Shock, then compress — hands back on the chest immediately."
+  ],
+  "decisionTrees": [
+    {
+      "title": "AED Use During Cardiac Arrest",
+      "content": "Cardiac arrest, CPR in progress, AED arrives\n  → Power on the AED; attach pads to bare, dry chest\n  → AED analyzes — ensure everyone is CLEAR\n     → Shock advised: clear, deliver shock → immediately resume compressions\n     → No shock advised: immediately resume compressions\n  → Continue CPR ~2 min → AED re-analyzes (good time to switch compressor)\n  → Repeat until ROSC or advanced providers take over"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support (Defibrillation)",
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Basic Life Support (AED Use)"
+  ],
+  "graphics": [
+    {
+      "id": "c05_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/bls/c05_g01.webp",
+      "alt": "AED Pad Placement",
+      "caption": "Schematic diagram of an adult chest showing anterolateral and anteroposterior AED pad placement."
+    }
+  ]
+}

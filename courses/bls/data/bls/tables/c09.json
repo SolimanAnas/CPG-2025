@@ -1,0 +1,31 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Infant CPR at a Glance",
+      "headers": ["Component", "Infant (<1 yr)"],
+      "rows": [
+        ["Compression rate", "100–120/min"],
+        ["Compression depth", "At least 1/3 chest depth (~1.5 in / 4 cm)"],
+        ["Preferred technique", "Two-thumb–encircling-hands (2025)"],
+        ["Alternative technique", "Heel of one hand (if unable to encircle)"],
+        ["Compression location", "Lower half of sternum, just below nipple line"],
+        ["Ratio, 1 rescuer", "30:2"],
+        ["Ratio, 2+ rescuers", "15:2"],
+        ["Pulse check site", "Brachial (upper arm)"],
+        ["Responsiveness check", "Tap the sole of the foot"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "2025 Infant Technique Change",
+      "headers": ["Technique", "2025 Status"],
+      "rows": [
+        ["Two-thumb–encircling-hands", "Preferred (including lone rescuer who can encircle)"],
+        ["Heel of one hand", "Alternative when unable to encircle the chest"],
+        ["Two-finger technique", "No longer recommended"]
+      ]
+    }
+  ]
+}

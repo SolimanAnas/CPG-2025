@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "Pulled From the Lake",
+      "presentation": "A teenager is pulled unconscious from a lake by trained lifeguards. On the shore he is unresponsive, not breathing, and pulseless. His chest is wet.",
+      "vitals": { "hr": "No pulse", "rr": "None", "spo2": "Unrecordable", "loc": "Unresponsive" },
+      "question": "What is the best resuscitation approach?",
+      "options": [
+        "A: Compression-only CPR.",
+        "B: Give initial rescue breaths, then conventional CPR with compressions and breaths; dry the chest and apply the AED.",
+        "C: Perform abdominal thrusts to remove water first.",
+        "D: Apply the AED to the wet chest immediately without CPR."
+      ],
+      "correct": 1,
+      "explanation": "Drowning is a hypoxic arrest, so ventilation is prioritized. Provide initial rescue breaths and conventional CPR (compressions plus breaths), and dry the chest before applying the AED. Routine attempts to expel water are not recommended.",
+      "clinicalPearl": "Drowning = breaths matter most: rescue breaths first, then CPR with breaths — never compression-only."
+    },
+    {
+      "id": "c12_s02",
+      "title": "Cardiac Arrest in Late Pregnancy",
+      "presentation": "A woman about 36 weeks pregnant collapses and is in cardiac arrest. Your team begins CPR on a firm surface.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "Which modification improves the effectiveness of CPR here?",
+      "options": [
+        "A: Compress on the right side of the chest.",
+        "B: Perform manual left uterine displacement during compressions and use the AED normally.",
+        "C: Withhold the AED because she is pregnant.",
+        "D: Give only rescue breaths."
+      ],
+      "correct": 1,
+      "explanation": "In late pregnancy, the enlarged uterus compresses the major vessels when the patient is flat. Manual left uterine displacement relieves this and improves blood return during compressions. The AED is used normally, and rapid transport is essential.",
+      "clinicalPearl": "Late-term arrest: push the uterus to the left and move fast — the best fetal resuscitation is maternal resuscitation."
+    },
+    {
+      "id": "c12_s03",
+      "title": "After the Pulse Returns",
+      "presentation": "Following CPR and one shock, an adult regains a pulse and starts breathing shallowly. He remains unresponsive. You are awaiting transport with the AED still attached.",
+      "vitals": { "hr": "88 bpm", "bp": "Not measured", "rr": "8/min, shallow", "spo2": "90%", "loc": "Unresponsive" },
+      "question": "What is the correct post-arrest (BLS) management?",
+      "options": [
+        "A: Remove the AED and stop monitoring since he has a pulse.",
+        "B: Monitor airway/breathing/pulse, assist ventilation and give oxygen for the inadequate breathing, keep the AED attached, and transport promptly.",
+        "C: Place him in the recovery position and leave.",
+        "D: Give abdominal thrusts."
+      ],
+      "correct": 1,
+      "explanation": "Post-ROSC care includes ongoing monitoring, supporting inadequate breathing with assisted ventilation and oxygen, keeping the AED attached in case of re-arrest, and rapid transport. ROSC is not the end of care.",
+      "clinicalPearl": "ROSC with poor breathing still needs your help — assist ventilation, keep the AED on, and transport."
+    }
+  ]
+}

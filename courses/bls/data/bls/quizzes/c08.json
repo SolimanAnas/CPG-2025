@@ -1,0 +1,204 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "For BLS purposes, a 'child' is defined as:",
+      "options": ["A. Birth to 1 year", "B. 1 year to the onset of puberty", "C. 5 to 12 years only", "D. Any patient under 18"],
+      "correct": 1,
+      "rationale": "A child is from 1 year of age to the onset of puberty. Under 1 year is an infant, and from puberty onward adult BLS is used.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q02",
+      "question": "What is the correct compression depth for a child?",
+      "options": [
+        "A. At least one-third the depth of the chest (about 2 inches / 5 cm)",
+        "B. At least 2.4 inches",
+        "C. About 1 inch",
+        "D. As deep as possible"
+      ],
+      "correct": 0,
+      "rationale": "Child compressions are at least one-third the anterior-posterior depth of the chest, approximately 2 inches (5 cm).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "Two rescuers are performing CPR on a child. What compression-to-ventilation ratio should they use?",
+      "options": ["A. 30:2", "B. 15:2", "C. 5:1", "D. 10:2"],
+      "correct": 1,
+      "rationale": "With two or more rescuers, child CPR uses 15:2, providing more frequent ventilation than the adult 30:2.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q04",
+      "question": "A single rescuer is performing CPR on a child. What ratio is used?",
+      "options": ["A. 30:2", "B. 15:2", "C. 15:1", "D. 5:2"],
+      "correct": 0,
+      "rationale": "A single rescuer uses 30:2 for a child; the ratio only changes to 15:2 when a second rescuer is available.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q05",
+      "question": "A 5-year-old has a heart rate of 50/min with mottled skin and altered mental status despite effective oxygenation and ventilation. What should you do?",
+      "options": [
+        "A. Continue only ventilation",
+        "B. Begin chest compressions",
+        "C. Wait and reassess in 5 minutes",
+        "D. Apply an AED and shock"
+      ],
+      "correct": 1,
+      "rationale": "A heart rate below 60/min with poor perfusion despite adequate oxygenation/ventilation is an indication to start compressions in a child, because it rapidly leads to full arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q06",
+      "question": "Why is ventilation emphasized in pediatric CPR?",
+      "options": [
+        "A. Children have larger lungs",
+        "B. Most pediatric arrests are caused by respiratory failure or shock, so children are usually hypoxic",
+        "C. Children never have cardiac causes",
+        "D. Ventilation replaces compressions in children"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric arrests are typically the end result of respiratory failure or shock, so restoring oxygenation with breaths is especially important.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q07",
+      "question": "How many hands may be used for chest compressions on a child?",
+      "options": ["A. Only two hands", "B. Only one hand", "C. One or two hands, whichever achieves adequate depth", "D. Two fingers"],
+      "correct": 2,
+      "rationale": "One or two hands may be used for a child, depending on the child's size, as long as adequate depth (one-third the chest) is achieved.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q08",
+      "question": "A lone rescuer witnesses a previously healthy child suddenly collapse. What is the best sequence?",
+      "options": [
+        "A. Give 2 minutes of CPR, then call for help",
+        "B. Activate the emergency response and get an AED first, then start CPR",
+        "C. Only give breaths",
+        "D. Do nothing until help arrives"
+      ],
+      "correct": 1,
+      "rationale": "A witnessed sudden collapse may be a cardiac (shockable) event, so a lone rescuer should activate the emergency response and get an AED first, then begin CPR.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q09",
+      "question": "A lone rescuer finds a child unresponsive from an unwitnessed collapse. What is the recommended sequence?",
+      "options": [
+        "A. Call for help and get an AED before any CPR",
+        "B. Provide about 2 minutes of CPR first, then activate the emergency response and get an AED",
+        "C. Only apply an AED",
+        "D. Wait to see if the child recovers"
+      ],
+      "correct": 1,
+      "rationale": "An unwitnessed pediatric collapse is likely hypoxic, so a lone rescuer provides about 2 minutes of CPR first, then activates the emergency response and retrieves an AED.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Where can you check for a pulse in a child?",
+      "options": ["A. Brachial only", "B. Carotid or femoral", "C. Radial only", "D. There is no pulse check in children"],
+      "correct": 1,
+      "rationale": "In a child, the carotid (neck) or femoral (groin) artery is used for the pulse check, limited to 10 seconds.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q11",
+      "question": "Which statement about compression-only CPR in children is correct?",
+      "options": [
+        "A. It is always preferred over CPR with breaths",
+        "B. Conventional CPR with breaths is preferred; compression-only is a fallback",
+        "C. Children should never receive compressions",
+        "D. Breaths are contraindicated in children"
+      ],
+      "correct": 1,
+      "rationale": "Because pediatric arrest is usually hypoxic, CPR with breaths is preferred. Compression-only CPR is used only when a rescuer cannot or will not provide ventilation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "What compression rate is used for a child?",
+      "options": ["A. 60–80/min", "B. 80–100/min", "C. 100–120/min", "D. 140–160/min"],
+      "correct": 2,
+      "rationale": "The compression rate for a child is 100–120/min, the same as for adults and infants.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q13",
+      "question": "Only adult AED pads are available for a 6-year-old in a shockable arrest. What is correct?",
+      "options": [
+        "A. Do not defibrillate",
+        "B. Use the adult pads, ensuring they do not touch (front/back if needed)",
+        "C. Wait for pediatric pads regardless of delay",
+        "D. Use two AEDs"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric pads or a pediatric setting are preferred, but if unavailable, adult pads are used rather than withholding defibrillation, placed so they do not touch.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q14",
+      "question": "A rescuer is compressing a child too shallowly out of fear of causing harm. What is the consequence?",
+      "options": [
+        "A. Better outcomes due to gentleness",
+        "B. Inadequate blood flow because depth is insufficient",
+        "C. No effect on outcome",
+        "D. Excessive recoil"
+      ],
+      "correct": 1,
+      "rationale": "Compressions that are too shallow do not generate adequate circulation. Depth must reach at least one-third the chest to be effective, even though it may feel forceful.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q15",
+      "question": "Which best explains why the 2-rescuer child ratio differs from the adult ratio?",
+      "options": [
+        "A. Children have stronger hearts",
+        "B. Pediatric arrests are usually hypoxic, so children benefit from more frequent ventilation (15:2)",
+        "C. Adults need more breaths",
+        "D. There is no physiological reason"
+      ],
+      "correct": 1,
+      "rationale": "Because hypoxia is the usual cause of pediatric arrest, more frequent ventilation (15:2 with two rescuers) benefits children, whereas adults retain 30:2.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q16",
+      "question": "A child is unresponsive with a pulse of 100/min but is not breathing. What is the correct action?",
+      "options": [
+        "A. Start compressions at 15:2",
+        "B. Provide breaths at 1 every 2–3 seconds and reassess",
+        "C. Apply an AED and shock",
+        "D. Place in the recovery position"
+      ],
+      "correct": 1,
+      "rationale": "With an adequate pulse but no breathing, provide rescue breathing at the pediatric rate of 1 breath every 2–3 seconds and reassess the pulse; compressions are not indicated with a good pulse.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q17",
+      "question": "What defines the upper age boundary of 'child' in BLS?",
+      "options": ["A. Exactly age 12", "B. The onset of puberty", "C. Age 18", "D. Age 8"],
+      "correct": 1,
+      "rationale": "The child category extends to the onset of puberty (e.g., chest/underarm hair in males, breast development in females), after which adult BLS is used.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q18",
+      "question": "During 2-rescuer child CPR, which is the correct combination?",
+      "options": [
+        "A. Rate 100–120/min, depth one-third chest, ratio 15:2",
+        "B. Rate 60/min, depth 1 inch, ratio 30:2",
+        "C. Rate 140/min, depth 2.4 inches, ratio 5:1",
+        "D. Rate 80/min, depth one-quarter chest, ratio 15:1"
+      ],
+      "correct": 0,
+      "rationale": "Correct 2-rescuer child CPR is 100–120/min, depth at least one-third the chest (~2 in/5 cm), full recoil, with a 15:2 ratio.",
+      "difficulty": "Medium"
+    }
+  ]
+}

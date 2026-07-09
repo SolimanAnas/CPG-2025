@@ -1,0 +1,26 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "Compression-to-Ventilation Ratio by Age and Rescuer Count",
+      "headers": ["Patient", "1 Rescuer", "2+ Rescuers", "With Advanced Airway"],
+      "rows": [
+        ["Adult", "30:2", "30:2", "Continuous compressions + 1 breath every 6 s"],
+        ["Child (1 yr–puberty)", "30:2", "15:2", "Continuous compressions + 1 breath every 2–3 s"],
+        ["Infant (<1 yr)", "30:2", "15:2", "Continuous compressions + 1 breath every 2–3 s"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "Resuscitation Team Roles",
+      "headers": ["Role", "Main Responsibility"],
+      "rows": [
+        ["Team leader", "Coordinates the team, assigns tasks, monitors CPR quality, adapts the plan"],
+        ["Compressor", "Delivers high-quality compressions; rotates about every 2 minutes"],
+        ["Airway / ventilation", "Manages the airway and delivers breaths or device ventilations"],
+        ["AED operator", "Applies pads, ensures safe analysis and shock, minimizes pauses"]
+      ]
+    }
+  ]
+}

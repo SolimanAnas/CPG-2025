@@ -1,0 +1,19 @@
+{
+  "chapter": "c11",
+  "algorithms": [
+    {
+      "id": "c11_alg01",
+      "title": "Opioid-Associated Emergency Algorithm (BLS)",
+      "description": "The 2025 approach to a suspected opioid-associated life-threatening emergency for a BLS provider or lay rescuer.",
+      "steps": [
+        "Suspect an opioid emergency in an unresponsive person with slow/absent breathing, pinpoint pupils, or paraphernalia.",
+        "Activate the emergency response system.",
+        "Assess breathing and pulse (≤10 seconds).",
+        "Pulse present but not breathing normally: open the airway, give breaths (adult 1 every 6 seconds), and administer naloxone (intranasal or IM).",
+        "No pulse: begin high-quality CPR and apply an AED immediately — do not delay compressions for naloxone; give naloxone as an adjunct once CPR is underway.",
+        "Reassess; if breathing remains inadequate, continue ventilation and repeat naloxone (for example, about every 4 minutes).",
+        "After improvement, monitor closely for re-narcotization, keep the person under observation, and arrange transport and medical evaluation."
+      ]
+    }
+  ]
+}

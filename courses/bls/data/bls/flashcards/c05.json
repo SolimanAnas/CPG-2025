@@ -1,0 +1,21 @@
+{
+  "chapter": "c05",
+  "cards": [
+    { "id": "c05_fc01", "question": "What are the four universal steps of AED operation?", "answer": "1) Power on the AED, 2) Attach pads to the bare dry chest, 3) Analyze the rhythm (clear everyone), 4) Deliver a shock if advised (clear), then immediately resume CPR.", "category": "AED Operation" },
+    { "id": "c05_fc02", "question": "What rhythms will an AED shock?", "answer": "Shockable rhythms: ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT).", "category": "Concepts" },
+    { "id": "c05_fc03", "question": "What is the standard anterolateral pad placement?", "answer": "One pad on the right upper chest below the collarbone; the other on the left lower chest along the mid-axillary line.", "category": "Pad Placement" },
+    { "id": "c05_fc04", "question": "What should you do immediately after delivering a shock?", "answer": "Resume chest compressions immediately, without pausing to check a pulse.", "category": "AED Operation" },
+    { "id": "c05_fc05", "question": "What pads/setting are used for a child under 8 years?", "answer": "Pediatric (dose-attenuating) pads or a pediatric setting if available; if not, use adult pads rather than withhold defibrillation, ensuring pads don't touch.", "category": "Pediatric" },
+    { "id": "c05_fc06", "question": "What is the preferred defibrillation approach for an infant?", "answer": "A manual defibrillator operated by a trained provider is preferred; if unavailable, an AED with a dose attenuator; if that is unavailable, an AED with adult pads may be used.", "category": "Pediatric" },
+    { "id": "c05_fc07", "question": "How do you manage a wet chest before applying AED pads?", "answer": "Quickly wipe the chest dry and move the patient away from standing water so the shock is delivered effectively and safely.", "category": "Special Situations" },
+    { "id": "c05_fc08", "question": "How do you place a pad near an implanted pacemaker or ICD?", "answer": "Place the pad at least about 1 inch (2.5 cm) away from the visible device bump.", "category": "Special Situations" },
+    { "id": "c05_fc09", "question": "What do you do about a transdermal medication patch under a pad site?", "answer": "Remove the patch and wipe the area before applying the pad, to prevent burns and interference.", "category": "Special Situations" },
+    { "id": "c05_fc10", "question": "How do you handle a very hairy chest for AED pads?", "answer": "Press the pads firmly; if they won't stick, quickly shave the area if a razor is available, then apply new pads.", "category": "Special Situations" },
+    { "id": "c05_fc11", "question": "Is defibrillation safe in pregnancy?", "answer": "Yes. Use the AED normally — defibrillation is safe and indicated; treating the mother is the best treatment for the fetus.", "category": "Special Situations" },
+    { "id": "c05_fc12", "question": "Why must no one touch the patient during analysis and shock?", "answer": "Contact can interfere with rhythm analysis and expose rescuers to the shock; call 'Clear!' and confirm before analysis and before shocking.", "category": "Safety" },
+    { "id": "c05_fc13", "question": "Should you stop CPR to look for an AED if you are alone with the patient?", "answer": "No — continue high-quality CPR and send someone else for the AED; only pause for analysis and shock once it arrives.", "category": "Integration" },
+    { "id": "c05_fc14", "question": "How often does an AED prompt a rhythm re-analysis?", "answer": "About every 2 minutes, which is also a good time to switch compressors.", "category": "Integration" },
+    { "id": "c05_fc15", "question": "What must you avoid when placing pads on a small child?", "answer": "Letting the two pads touch each other; if they would overlap, use anteroposterior (front and back) placement.", "category": "Pediatric" },
+    { "id": "c05_fc16", "question": "Why is early defibrillation so important?", "answer": "For shockable rhythms, the chance of survival falls with each minute of delay, so shocking as early as possible greatly improves outcomes.", "category": "Concepts" }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "Shock, Then What?",
+      "presentation": "An adult in cardiac arrest has an AED attached. The AED analyzes, advises a shock, and you deliver it after confirming everyone is clear.",
+      "vitals": { "hr": "Shockable rhythm treated", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the correct action immediately after the shock?",
+      "options": [
+        "A: Check the carotid pulse for 30 seconds.",
+        "B: Immediately resume high-quality chest compressions.",
+        "C: Re-analyze the rhythm right away.",
+        "D: Remove the pads and reassess breathing."
+      ],
+      "correct": 1,
+      "explanation": "Compressions must resume immediately after the shock without a pulse check. Early post-shock compressions maintain perfusion while the heart reorganizes; the AED will prompt the next analysis in about 2 minutes.",
+      "clinicalPearl": "Shock, then hands back on the chest — the post-shock pause should be only a second or two."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Poolside Collapse",
+      "presentation": "A man collapses beside a swimming pool and is in cardiac arrest. His chest is soaked and he is lying in a thin film of water. A bystander runs up with an AED.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What must you do before applying the AED pads?",
+      "options": [
+        "A: Apply pads directly to the wet chest and shock.",
+        "B: Move him to a dry area if possible and wipe the chest dry, then apply pads.",
+        "C: Pour fresh water on the chest first.",
+        "D: Do not use the AED because he is wet."
+      ],
+      "correct": 1,
+      "explanation": "Water on the skin and standing water can cause the shock to arc and reduce effectiveness or create hazards. Move the patient to a dry surface if feasible and wipe the chest dry before applying pads — then proceed normally.",
+      "clinicalPearl": "Dry the chest and clear the puddle — a wet field wastes the shock and endangers rescuers."
+    },
+    {
+      "id": "c05_s03",
+      "title": "Small Child, Adult Pads Only",
+      "presentation": "A 3-year-old is in cardiac arrest. The only AED available has adult pads and no pediatric setting. On this small chest, the two adult pads would overlap if placed side by side on the front.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the correct approach?",
+      "options": [
+        "A: Do not defibrillate because pediatric pads are unavailable.",
+        "B: Use the adult pads with anteroposterior placement (one on the chest, one on the back) so they do not touch.",
+        "C: Overlap the pads to make them fit.",
+        "D: Wait for pediatric pads no matter how long it takes."
+      ],
+      "correct": 1,
+      "explanation": "Defibrillation should not be withheld for lack of pediatric equipment. Adult pads are used, and on a small child they are placed front and back (anteroposterior) so they do not touch each other.",
+      "clinicalPearl": "For a small child with adult pads, go front-and-back — never let the pads touch."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "c11",
+  "title": "Opioid-Associated Life-Threatening Emergencies",
+  "shortTitle": "Opioid Emergencies",
+  "estimatedStudyTime": 28,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize a suspected opioid-associated emergency.",
+    "Describe how opioids cause respiratory then cardiac arrest.",
+    "Manage a patient with a pulse but inadequate breathing due to suspected opioids.",
+    "Explain the role and priority of naloxone versus CPR in opioid emergencies.",
+    "Describe how naloxone is administered and the 2025 public-access guidance.",
+    "Explain why continued monitoring is needed after naloxone."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing an Opioid Emergency",
+      "content": "Opioids (such as heroin, fentanyl, and prescription pain medications) depress the brain's drive to breathe. A suspected opioid emergency should be considered when a person is unresponsive with slow, shallow, or absent breathing, especially with pinpoint pupils, a known history of opioid use, or drug paraphernalia present. The immediate life threat is respiratory depression leading to hypoxia."
+    },
+    {
+      "title": "From Respiratory to Cardiac Arrest",
+      "content": "Opioid toxicity first causes respiratory depression and respiratory arrest — breathing slows and stops while a pulse may still be present. If oxygen is not restored, hypoxia soon causes cardiac arrest. Because the root problem is breathing, early ventilation is central to management, alongside naloxone to reverse the opioid effect."
+    },
+    {
+      "title": "Pulse Present but Not Breathing Normally",
+      "content": "If a person with a suspected opioid emergency has a pulse but is not breathing normally, provide breaths (rescue breathing) at 1 breath every 6 seconds for an adult, and administer naloxone. Support ventilation and reassess breathing and pulse. Restoring oxygenation with breaths is immediately life-saving while the naloxone takes effect."
+    },
+    {
+      "title": "Naloxone vs CPR in Cardiac Arrest",
+      "content": "If the person has no pulse (cardiac arrest), high-quality CPR is the priority — do not delay compressions to give naloxone. Naloxone is given as an adjunct once CPR is underway, but it will not restart a heart that has arrested from hypoxia if oxygenation and circulation are not provided. For arrest, follow standard BLS: CPR and an AED, with naloxone as a supportive measure."
+    },
+    {
+      "title": "Administering Naloxone (2025 Public-Access Guidance)",
+      "content": "Naloxone is an opioid antagonist that reverses opioid effects. It is commonly given intranasally or by intramuscular injection and may be repeated (for example, about every 4 minutes) if there is no response and breathing remains inadequate. The 2025 AHA Guidelines provide public-access instruction on naloxone: lay rescuers, trained rescuers, and members of the general public can all administer naloxone for a suspected opioid-associated emergency. Ventilation should continue while naloxone is given and takes effect."
+    },
+    {
+      "title": "Monitoring After Naloxone",
+      "content": "Naloxone can wear off before the opioid does, so a person who initially improves may deteriorate again (re-narcotization) as the opioid effect returns. Continue to monitor breathing and responsiveness, keep the person under observation, ensure the emergency response is activated, and be prepared to give additional naloxone or resume ventilation/CPR. Arrange transport and medical evaluation."
+    }
+  ],
+  "clinicalPearls": [
+    "Opioid emergencies are breathing-driven — ventilation is central, with naloxone to reverse the cause.",
+    "Pulse present + inadequate breathing: give breaths AND naloxone.",
+    "No pulse: CPR first — do not delay compressions for naloxone.",
+    "2025: lay rescuers and the public can administer naloxone (intranasal or IM)."
+  ],
+  "redFlags": [
+    "Delaying CPR in cardiac arrest to find or give naloxone.",
+    "Assuming naloxone alone will fix a hypoxic cardiac arrest without ventilation and compressions.",
+    "Leaving a revived patient unmonitored — naloxone can wear off and the patient can re-arrest."
+  ],
+  "commonMistakes": [
+    "Giving naloxone but forgetting to ventilate a patient who is not breathing.",
+    "Withholding naloxone because the rescuer is a layperson (the 2025 guidance supports public use).",
+    "Discontinuing observation too early after apparent recovery."
+  ],
+  "memoryAids": [
+    "Breathing problem first: ventilate, then naloxone.",
+    "No pulse → CPR first; naloxone is an adjunct, not a substitute.",
+    "Naloxone can wear off before the opioid — keep watching."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Opioid Emergency",
+      "content": "Unresponsive, suspected opioids\n  → Activate emergency response; check breathing and pulse\n     → Pulse present, not breathing normally:\n        → Give breaths (adult 1 every 6 s) + administer naloxone (IN/IM)\n        → Reassess; repeat naloxone if needed; continue ventilation\n     → No pulse (cardiac arrest):\n        → START CPR and apply AED (do NOT delay compressions for naloxone)\n        → Give naloxone as an adjunct once CPR is underway\n  → After improvement: monitor for re-narcotization; arrange transport"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Opioid-Associated Emergencies",
+    "AHA 2025 Guidelines for CPR and ECC — Public-Access Naloxone"
+  ]
+}

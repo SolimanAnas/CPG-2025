@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "Slow Breathing in the Restroom",
+      "presentation": "A young adult is found unresponsive in a restroom with pinpoint pupils and a nearby syringe. He is breathing about 4 times per minute and has a weak but present carotid pulse.",
+      "vitals": { "hr": "58 bpm", "rr": "4/min, shallow", "spo2": "80%", "loc": "Unresponsive" },
+      "question": "What is the correct BLS management?",
+      "options": [
+        "A: Begin chest compressions.",
+        "B: Activate EMS, open the airway and give breaths at 1 every 6 seconds, and administer naloxone (intranasal or IM).",
+        "C: Give naloxone and leave the airway alone.",
+        "D: Place in the recovery position and wait."
+      ],
+      "correct": 1,
+      "explanation": "He has a pulse but grossly inadequate breathing from a suspected opioid overdose. The priority is oxygenation: activate EMS, provide rescue breathing, and give naloxone. Compressions are not indicated while a pulse is present.",
+      "clinicalPearl": "Pulse present + opioid + not breathing = breaths plus naloxone, not compressions."
+    },
+    {
+      "id": "c11_s02",
+      "title": "Opioid Cardiac Arrest",
+      "presentation": "A person with a known opioid history is found unresponsive, not breathing, and pulseless. A bystander has a naloxone kit and asks whether to give it first.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What should the team prioritize?",
+      "options": [
+        "A: Give naloxone before starting compressions.",
+        "B: Start high-quality CPR and apply an AED immediately; give naloxone as an adjunct once CPR is underway.",
+        "C: Give naloxone alone and skip CPR.",
+        "D: Wait to see if naloxone works before CPR."
+      ],
+      "correct": 1,
+      "explanation": "This is cardiac arrest. CPR and an AED are the priority and must not be delayed for naloxone. Naloxone can be given as an adjunct once compressions are established, but it will not substitute for CPR.",
+      "clinicalPearl": "No pulse means CPR first — naloxone never replaces compressions in arrest."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Waking Up, Then Fading Again",
+      "presentation": "You gave naloxone to an overdose patient who woke up and began breathing adequately. About 30 minutes later, while awaiting transport, he becomes drowsy again with slow, shallow breathing.",
+      "vitals": { "hr": "64 bpm", "rr": "6/min, shallow", "spo2": "85%", "loc": "Drowsy, declining" },
+      "question": "What is happening and what should you do?",
+      "options": [
+        "A: He is faking; ignore it.",
+        "B: Re-narcotization — the naloxone wore off; resume ventilation and give another dose of naloxone, continue monitoring, and ensure transport.",
+        "C: Give a stimulant.",
+        "D: Discharge him now that he woke up earlier."
+      ],
+      "correct": 1,
+      "explanation": "Naloxone can wear off before the opioid, causing the overdose effects to return (re-narcotization). Support breathing, repeat naloxone as needed, keep monitoring, and ensure the patient is transported for evaluation.",
+      "clinicalPearl": "Never leave a revived overdose patient alone — naloxone can outlast neither the opioid nor your vigilance."
+    }
+  ]
+}

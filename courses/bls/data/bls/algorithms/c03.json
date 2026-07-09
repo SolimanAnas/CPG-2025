@@ -1,0 +1,22 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Adult 1-Rescuer BLS (CPR) Algorithm",
+      "description": "The single-rescuer sequence for an adult in cardiac arrest, following the C-A-B approach.",
+      "image": "../../algorithms/BLS-Adult-Healthcare.webp",
+      "steps": [
+        "Verify scene safety and confirm cardiac arrest (unresponsive, no normal breathing, no pulse in ≤10 s).",
+        "Activate the emergency response system and get an AED (use a phone on speaker if alone).",
+        "Place the patient supine on a firm, flat surface and expose the chest.",
+        "Begin compressions: heel of one hand on the lower half of the sternum, other hand on top, rate 100–120/min, depth 2–2.4 inches, full recoil after each.",
+        "After 30 compressions, if trained and willing, open the airway (head-tilt/chin-lift) and give 2 breaths, each over ~1 second with visible chest rise.",
+        "If untrained or unwilling to ventilate, perform continuous compression-only CPR instead.",
+        "Continue cycles of 30:2, minimizing interruptions to less than 10 seconds.",
+        "Apply and use the AED as soon as it arrives; resume compressions immediately after any shock.",
+        "Switch compressors about every 2 minutes if another rescuer is available."
+      ]
+    }
+  ]
+}

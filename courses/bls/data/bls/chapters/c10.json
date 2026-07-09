@@ -1,0 +1,90 @@
+{
+  "id": "c10",
+  "title": "Foreign-Body Airway Obstruction (Adult, Child, Infant)",
+  "shortTitle": "Choking (FBAO)",
+  "estimatedStudyTime": 30,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Distinguish mild from severe foreign-body airway obstruction.",
+    "Describe the 2025 responsive-adult and child choking sequence.",
+    "State the technique for choking in pregnant or obese patients.",
+    "Describe the infant choking sequence.",
+    "Explain what to do when a choking victim becomes unresponsive.",
+    "Explain why blind finger sweeps are avoided."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing Choking: Mild vs Severe",
+      "content": "A foreign-body airway obstruction (FBAO) may be mild or severe. In mild obstruction the victim can still cough forcefully, speak, or breathe — encourage them to keep coughing and do not interfere. In severe obstruction the victim cannot speak, cough effectively, or breathe, may clutch the throat (the universal choking sign), and may make high-pitched or no sounds. Severe obstruction is life-threatening and requires immediate action."
+    },
+    {
+      "title": "Responsive Adult and Child (2025 Sequence)",
+      "content": "For a responsive adult or child with severe obstruction, the 2025 AHA Guidelines recommend delivering cycles of 5 back blows (back slaps) followed by 5 abdominal thrusts, alternating, until the object is expelled or the victim becomes unresponsive. Back blows are delivered between the shoulder blades with the heel of the hand; abdominal thrusts (the Heimlich maneuver) are inward and upward pressure just above the navel. This adds back blows to the prior abdominal-thrust-only approach and, for the first time, provides explicit guidance for the responsive choking adult."
+    },
+    {
+      "title": "Pregnant or Obese Patients",
+      "content": "If the choking adult is pregnant or too large to encircle for abdominal thrusts, use chest thrusts instead of abdominal thrusts (still alternating with back blows). Chest thrusts are delivered on the lower half of the sternum, similar to the hand position for compressions, avoiding the abdomen where a fetus or excessive girth makes abdominal thrusts ineffective or unsafe."
+    },
+    {
+      "title": "Infant Choking",
+      "content": "For a responsive choking infant with severe obstruction, alternate 5 back blows (back slaps) with 5 chest thrusts, repeating until the object is expelled or the infant becomes unresponsive. Support the head and neck, position the infant face-down for back blows and face-up for chest thrusts. Abdominal thrusts are NOT used in infants because of the risk of injury to the abdominal organs."
+    },
+    {
+      "title": "When the Victim Becomes Unresponsive",
+      "content": "If a choking victim of any age becomes unresponsive, carefully lower them to the ground, activate the emergency response, and begin CPR starting with chest compressions. Each time you open the airway to give breaths, look in the mouth and remove any object you can clearly see. Do not perform blind finger sweeps. The chest compressions themselves can help expel the obstruction."
+    },
+    {
+      "title": "Why No Blind Finger Sweeps",
+      "content": "Blind finger sweeps — reaching into the mouth without seeing the object — can push the foreign body deeper, worsening the obstruction, and can injure the rescuer or victim. Only remove an object that is visible. This is why the technique is 'look, then remove if seen,' performed during the airway-opening step of CPR rather than as a separate maneuver."
+    }
+  ],
+  "clinicalPearls": [
+    "2025 change: responsive adult/child choking now uses 5 back blows THEN 5 abdominal thrusts, alternating.",
+    "Mild obstruction with effective coughing: encourage coughing and do not interfere.",
+    "Pregnant or obese: use chest thrusts, not abdominal thrusts.",
+    "Infants: back blows and chest thrusts only — never abdominal thrusts."
+  ],
+  "redFlags": [
+    "Interfering with a victim who is coughing forcefully (mild obstruction) — this can worsen it.",
+    "Performing blind finger sweeps that push the object deeper.",
+    "Using abdominal thrusts on an infant."
+  ],
+  "commonMistakes": [
+    "Forgetting to add back blows to the sequence for adults and children.",
+    "Using abdominal thrusts on a pregnant or obese patient instead of chest thrusts.",
+    "Delaying the switch to CPR when a choking victim becomes unresponsive."
+  ],
+  "memoryAids": [
+    "Severe adult/child: 5 back blows + 5 abdominal thrusts, repeat.",
+    "Infant: 5 back blows + 5 chest thrusts — no abdominal thrusts.",
+    "Unresponsive choking → CPR; look before you sweep, and only remove what you see."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Choking (FBAO) Management",
+      "content": "Suspected choking\n  → Can the victim cough/speak/breathe? (mild)\n     → Yes: encourage coughing, monitor, do not interfere\n     → No (severe), responsive:\n        → Adult/Child: alternate 5 back blows + 5 abdominal thrusts (chest thrusts if pregnant/obese)\n        → Infant: alternate 5 back blows + 5 chest thrusts (no abdominal thrusts)\n        → Repeat until relief or unresponsive\n  → Becomes unresponsive (any age):\n     → Lower to ground, activate emergency response, START CPR\n     → Look in mouth at each airway opening; remove object only if seen (no blind sweeps)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Adult and Pediatric Choking (FBAO)",
+    "AHA 2025 Guidelines for CPR and ECC — First Aid for Airway Obstruction"
+  ],
+  "graphics": [
+    {
+      "id": "c10_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/bls/c10_g01.webp",
+      "alt": "Choking Relief Sequence (Adult & Child)",
+      "caption": "Step-by-step panel sequence showing 5 back blows followed by 5 abdominal thrusts for responsive adults and children."
+    },
+    {
+      "id": "c10_g02",
+      "section": "summary",
+      "sectionIndex": 3,
+      "url": "../../images/courses/bls/c10_g02.webp",
+      "alt": "Infant Choking Relief Sequence",
+      "caption": "Dual-panel illustration demonstrating face-down back blows and face-up chest thrusts on an infant."
+    }
+  ]
+}
