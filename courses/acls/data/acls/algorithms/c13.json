@@ -1,0 +1,31 @@
+{
+  "chapter": "c13",
+  "algorithms": [
+    {
+      "id": "c13_alg01",
+      "title": "Acute Ischemic Stroke — Prehospital and Emergency Department Management",
+      "description": "End-to-end pathway from stroke recognition to reperfusion decision, including IV thrombolysis and thrombectomy.",
+      "steps": [
+        "Stroke recognized (Cincinnati/FAST positive) — activate stroke alert and notify receiving stroke center.",
+        "Check blood glucose immediately.",
+        "If glucose <50 mg/dL → administer IV dextrose, reassess (may be stroke mimic).",
+        "Acquire 12-lead ECG, vital signs, SpO₂. Maintain airway if needed.",
+        "On arrival at stroke center: non-contrast CT head (MANDATORY before any reperfusion therapy).",
+        "CT shows intracranial hemorrhage → STOP: no tPA; neurosurgical consultation.",
+        "CT shows no hemorrhage, ischemic stroke confirmed or highly suspected.",
+        "Determine symptom onset (last known normal time).",
+        "Within 4.5-hour window AND no tPA contraindications?",
+        "YES → Check BP: must be <185/110 mmHg before tPA.",
+        "  → If BP >185/110: IV labetalol 10–20 mg over 1–2 min (repeat once) or nicardipine 5 mg/hr infusion (titrate up).",
+        "  → BP <185/110 achieved → Administer tPA: 0.9 mg/kg IV (max 90 mg), 10% bolus over 1 min, remainder over 60 min.",
+        "  → Maintain BP <180/105 during and for ≥24 hours after tPA (reduce by ~15% in first 24 h).",
+        "Large-vessel occlusion suspected? Obtain CTA head and neck.",
+        "LVO confirmed AND onset ≤6 hours (or ≤24 h with perfusion imaging showing penumbra) → proceed to mechanical thrombectomy (do not delay tPA).",
+        "Outside 4.5-hour window OR tPA contraindicated → permissive hypertension up to 220/120 (if no hemorrhage/cardiac ischemia); if LVO and within window, thrombectomy.",
+        "Maintain normothermia (treat fever >38°C aggressively).",
+        "Maintain glucose 70–180 mg/dL.",
+        "Admit to stroke unit for continued monitoring and care."
+      ]
+    }
+  ]
+}

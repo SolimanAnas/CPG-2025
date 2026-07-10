@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Wrong Epinephrine Concentration",
+      "presentation": "During a VF cardiac arrest resuscitation, a nurse grabs the wrong epinephrine vial from the code cart. She draws up 1 mL from a 1:1,000 (1 mg/mL) vial instead of the 1:10,000 (0.1 mg/mL) vial, and pushes it IV during compressions. The team continues CPR.",
+      "vitals": { "hr": "Refractory VF", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the clinical concern with this error?",
+      "options": [
+        "A. The dose is too low to have any effect",
+        "B. The patient received a 10-fold overdose (10 mg instead of 1 mg) that may cause severe hypertension, tachycardia, and increased myocardial oxygen demand",
+        "C. The 1:1,000 concentration has no effect during cardiac arrest",
+        "D. There is no difference between the two concentrations"
+      ],
+      "correct": 1,
+      "explanation": "1:1,000 epinephrine contains 1 mg/mL versus 0.1 mg/mL for 1:10,000. Drawing 1 mL from the wrong vial delivers 10 mg instead of 1 mg — a 10-fold overdose that can cause severe hypertension, increased myocardial oxygen demand, and potentially worsen outcomes. This is why concentration verification is a critical safety step in every code.",
+      "clinicalPearl": "Always verify epinephrine concentration: cardiac arrest uses 1:10,000 (0.1 mg/mL). The 1:1,000 concentration is for anaphylaxis and other indications — never for cardiac arrest."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Torsades de Pointes Arrest",
+      "presentation": "A 68-year-old woman with a history of chronic renal failure and baseline prolonged QT interval is admitted for elective cholecystectomy. In the pre-operative holding area, she suddenly collapses. The monitor shows a rapidly alternating wide-complex rhythm consistent with torsades de pointes, which degenerates into asystole.",
+      "vitals": { "hr": "Torsades → Asystole", "bp": "Unobtainable", "rr": "None", "loc": "Unresponsive" },
+      "question": "What specific drug should be given for this arrhythmia?",
+      "options": [
+        "A. Amiodarone 300 mg IV",
+        "B. Sodium bicarbonate 1 mEq/kg IV",
+        "C. Magnesium sulfate 1–2 g IV over 5–20 minutes",
+        "D. Adenosine 6 mg IV rapid push"
+      ],
+      "correct": 2,
+      "explanation": "Torsades de pointes (polymorphic VT with prolonged QT) has a specific treatment: magnesium sulfate 1–2 g IV. It stabilizes the cardiac membrane and suppresses the early afterdepolarizations that trigger torsades. Amiodarone can further prolong the QT and worsen torsades. Sodium bicarbonate and adenosine have no role here.",
+      "clinicalPearl": "Magnesium for torsades is one of the few 'one drug, one rhythm' associations in ACLS — know it cold. For pulseless torsades, give it as a bolus."
+    },
+    {
+      "id": "c08_s03",
+      "title": "TCA Overdose with Arrest",
+      "presentation": "A 22-year-old is brought to the ED after being found unresponsive with an empty bottle of amitriptyline (tricyclic antidepressant). Before arresting, the ECG showed a wide QRS (>100 ms) with sinus tachycardia. The patient arrests into asystole. IV access is obtained.",
+      "vitals": { "hr": "Asystole", "bp": "Unobtainable", "rr": "None", "loc": "Unresponsive" },
+      "question": "In addition to standard ACLS (CPR + epinephrine), what specific drug should be given for this toxidrome?",
+      "options": [
+        "A. Amiodarone 300 mg IV",
+        "B. Sodium bicarbonate 1 mEq/kg IV bolus",
+        "C. Magnesium 2 g IV",
+        "D. Vasopressin 20 IU IV"
+      ],
+      "correct": 1,
+      "explanation": "Tricyclic antidepressant (TCA) overdose causes sodium channel blockade, leading to wide QRS, bradycardia, and cardiac arrest. Sodium bicarbonate 1 mEq/kg IV is the specific antidote — it overcomes the sodium channel blockade by alkalinizing the serum and increasing sodium availability. Multiple boluses may be needed. This is one of the specific indications for NaHCO₃ in cardiac arrest.",
+      "clinicalPearl": "Wide QRS + drug ingestion + asystole = think TCA. Sodium bicarbonate is the life-saving antidote. Repeat boluses as needed until QRS narrows."
+    }
+  ]
+}

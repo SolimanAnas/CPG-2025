@@ -1,0 +1,74 @@
+{
+  "id": "c01",
+  "title": "Systems of Care & the Chain of Survival",
+  "shortTitle": "Systems of Care",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe how ACLS providers extend and strengthen every link of the 2025 AHA universal Chain of Survival.",
+    "Differentiate the systems-of-care emphasis for out-of-hospital cardiac arrest (OHCA) versus in-hospital cardiac arrest (IHCA).",
+    "Explain the rationale for regionalized cardiac arrest centers and post-arrest transfer.",
+    "Describe continuous quality improvement (CQI) and Utstein-style reporting as tools for system performance.",
+    "Explain why post-cardiac arrest care is a continuation of resuscitation rather than an afterthought.",
+    "Describe the multidisciplinary, team-based nature of an ACLS resuscitation.",
+    "Identify the role of early-warning scores and rapid-response teams in preventing in-hospital arrest."
+  ],
+  "summary": [
+    {
+      "title": "From BLS to ACLS: Extending the Chain",
+      "content": "ACLS builds directly on BLS. The first links of the 2025 universal Chain of Survival — recognition, activation, high-quality CPR, and early defibrillation — remain the strongest predictors of survival, and ACLS providers must protect them even while adding advanced airway management, IV/IO access, rhythm-specific therapy, and drug administration. Advanced interventions never replace high-quality compressions and early defibrillation; they are layered on top of a BLS foundation that cannot be interrupted for long."
+    },
+    {
+      "title": "The 2025 Universal Chain of Survival — the ACLS Provider's View",
+      "content": "The six-link universal chain (activation, high-quality CPR, defibrillation, advanced resuscitation interventions, post-cardiac arrest care, recovery) applies across all settings, with a separate Neonatal Chain of Care for newborns. ACLS providers are the primary owners of link 4 (advanced resuscitation interventions: airway, rhythm therapy, medications, treatment of reversible causes) and share ownership of link 5 (post-cardiac arrest care) with critical-care and cardiology teams. A weak link anywhere in the chain — including a delayed or interrupted advanced intervention — degrades the whole system's performance."
+    },
+    {
+      "title": "Systems of Care: OHCA versus IHCA",
+      "content": "Out-of-hospital systems depend on bystander CPR, dispatcher-assisted instructions, public-access AEDs, and EMS response times; ACLS-level care begins when advanced providers arrive and continues through transport and hospital hand-off. In-hospital systems emphasize surveillance and prevention — continuous monitoring, early-warning scores, and rapid-response or medical emergency teams — so many arrests are recognized and treated before a full arrest occurs. Both systems converge on the same standard once ACLS-level care begins: high-quality CPR, minimal interruptions, and rhythm-appropriate therapy."
+    },
+    {
+      "title": "Regionalized Cardiac Arrest Centers",
+      "content": "Evidence increasingly supports triaging resuscitated (or refractory) cardiac arrest patients to specialized cardiac arrest centers capable of 24/7 coronary angiography/PCI, targeted temperature management, multimodal neuroprognostication, and ECPR when indicated, analogous to trauma and stroke systems of care. Where such regionalized systems exist, protocols should route appropriate post-ROSC and refractory-arrest patients to these centers rather than the nearest facility alone."
+    },
+    {
+      "title": "Continuous Quality Improvement & Utstein Reporting",
+      "content": "High-performing resuscitation systems measure what they do: chest compression fraction, time to first shock, time to epinephrine, ROSC rate, survival to discharge, and neurologic outcome, using standardized Utstein-style templates so performance can be compared across systems and over time. Debriefing after real events (and after simulation), combined with data-driven feedback, is how teams and systems improve — CQI is itself a component of the chain, not a separate add-on."
+    },
+    {
+      "title": "Post-Cardiac Arrest Care as Continued Resuscitation",
+      "content": "The 2025 guidelines emphasize that post-cardiac arrest care is a direct continuation of resuscitation, not a separate phase that begins after ROSC. The same team mindset — anticipate deterioration, treat reversible causes, communicate in closed loops — carries forward into airway/ventilation management, hemodynamic support, temperature control, urgent coronary evaluation, and early planning for neuroprognostication and recovery."
+    }
+  ],
+  "clinicalPearls": [
+    "Advanced interventions are additive, not substitutive — they must never come at the cost of compression fraction or time to first shock.",
+    "In-hospital systems win by preventing arrest (surveillance, early-warning scores); out-of-hospital systems win by compressing the time from collapse to CPR and shock.",
+    "Consider regionalized cardiac arrest center transfer for post-ROSC and refractory-arrest patients where systems of care support it.",
+    "What isn't measured isn't improved — CQI metrics (CCF, time-to-shock, time-to-epinephrine) are core system components, not paperwork."
+  ],
+  "redFlags": [
+    "Advanced procedures (intubation, IV/IO attempts) causing long pauses in chest compressions.",
+    "Treating ROSC as the end of the resuscitation rather than the start of the post-arrest phase.",
+    "No local process for identifying candidates for cardiac arrest center transfer or CQI review."
+  ],
+  "commonMistakes": [
+    "Prioritizing advanced airway placement over compression quality and early defibrillation.",
+    "Assuming systems-of-care improvement is an administrative task unrelated to bedside providers.",
+    "Failing to debrief after an arrest, losing the chance to identify system gaps."
+  ],
+  "memoryAids": [
+    "'BLS first, ACLS on top' — advanced care layers onto, never replaces, compressions and defibrillation.",
+    "OHCA = bystanders and speed; IHCA = surveillance and prevention.",
+    "Measure it to improve it — CCF, time-to-shock, time-to-epi, survival, neuro outcome."
+  ],
+  "decisionTrees": [
+    {
+      "title": "ACLS Provider's Place in the System of Care",
+      "content": "Cardiac arrest recognized (OHCA or IHCA)\n  → Link 1: Activation — call for help / activate resuscitation team\n  → Link 2: High-quality CPR — protect this throughout everything that follows\n  → Link 3: Defibrillation — shock a shockable rhythm ASAP, resume compressions immediately\n  → Link 4 (ACLS provider's primary role): advanced airway when indicated, IV/IO access, rhythm-specific drugs, treat H's & T's\n  → ROSC achieved\n     → Link 5: Post-cardiac arrest care — airway/ventilation, hemodynamics, 12-lead ECG, temperature control, consider cardiac arrest center transfer\n  → Link 6: Recovery — neuroprognostication timeline, rehabilitation, survivor and family support\n  → System feedback: CQI review / Utstein-style data feeds back into training and protocols"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary and Systems of Care",
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Part 11: Post-Cardiac Arrest Care"
+  ]
+}

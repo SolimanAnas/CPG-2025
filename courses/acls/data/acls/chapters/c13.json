@@ -1,0 +1,86 @@
+{
+  "id": "c13",
+  "title": "Acute Stroke",
+  "shortTitle": "Stroke",
+  "estimatedStudyTime": 35,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the stroke chain of survival and the role of the ACLS provider in stroke recognition and stabilization.",
+    "Perform and interpret the Cincinnati Prehospital Stroke Scale and FAST screening tools.",
+    "State the IV thrombolysis (alteplase/tPA) time window, dose, and administration protocol.",
+    "List the key blood pressure management thresholds before, during, and after IV thrombolysis.",
+    "Identify indications and the time window for mechanical thrombectomy.",
+    "Recognize common stroke mimics and differentiate them from true stroke.",
+    "Apply glucose and fever management principles in the acute stroke patient."
+  ],
+  "summary": [
+    {
+      "title": "Stroke Chain of Survival",
+      "content": "The stroke chain of survival parallels the cardiac arrest chain but emphasizes speed of recognition and time to definitive reperfusion: detection and activation (recognition of stroke symptoms and EMS activation), dispatch and prehospital care (rapid EMS response, Cincinnati/FAST screening in the field, prehospital notification to the receiving stroke center), delivery of acute treatment (door-to-CT and door-to-needle for IV thrombolysis; door-to-groin-puncture for thrombectomy), and recovery and rehabilitation. The ACLS provider's role is early recognition, stabilization (airway, glucose, blood pressure), and rapid transport to the most appropriate stroke center — time is brain."
+    },
+    {
+      "title": "Stroke Screening: Cincinnati and FAST",
+      "content": "The Cincinnati Prehospital Stroke Scale (CPSS) tests three findings: facial droop (ask the patient to smile — asymmetry is abnormal), arm drift (ask the patient to close eyes and extend both arms — downward drift is abnormal), and speech abnormality (ask the patient to say 'You can't teach an old dog new tricks' — slurred or inappropriate words are abnormal). The presence of any one of these three findings has a high probability of stroke. The FAST mnemonic (Face, Arms, Speech, Time) is a public-facing equivalent. Both tools are designed for rapid identification, not for differentiating stroke subtypes — the ACLS provider does not need to distinguish ischemic from hemorrhagic stroke in the field; the priority is rapid transport and prehospital notification."
+    },
+    {
+      "title": "IV Thrombolysis: Alteplase (tPA) Protocol",
+      "content": "Intravenous alteplase (tPA) is the pharmacologic treatment for acute ischemic stroke when symptom onset is within 4.5 hours. The dose is 0.9 mg/kg IV (maximum 90 mg): 10% of the total dose is given as an IV bolus over 1 minute, and the remaining 90% is infused over 60 minutes. A non-contrast CT of the head must be obtained BEFORE tPA administration to exclude intracranial hemorrhage. Blood pressure must be lowered to <185/110 mmHg before tPA initiation and maintained at <180/105 mmHg during and for 24 hours after infusion. Key contraindications include: evidence of intracranial hemorrhage on CT, symptoms suggestive of subarachnoid hemorrhage, active internal bleeding, platelet count <100,000/mm³, INR >1.7, current use of direct thrombin inhibitors or factor Xa inhibitors with elevated lab tests, blood glucose <50 mg/dL, CT showing multilobar infarction (>1/3 of cerebral hemisphere). The 2025 AHA guidelines reaffirm the 4.5-hour window as the standard for IV thrombolysis."
+    },
+    {
+      "title": "Blood Pressure Management in Acute Stroke",
+      "content": "Blood pressure management depends on whether tPA is administered. For patients receiving tPA: pre-tPA, blood pressure must be <185/110 mmHg (use IV labetalol 10–20 mg over 1–2 min, repeat once if needed, or nicardipine infusion 5 mg/hr titrated up by 2.5 mg/hr every 5–15 min, max 15 mg/hr); post-tPA, maintain BP <180/105 mmHg for at least 24 hours and reduce blood pressure by approximately 15% in the first 24 hours after treatment. For patients NOT receiving tPA: permissive hypertension is allowed up to 220/120 mmHg in the first 24 hours if there is no evidence of intracranial hemorrhage, cardiac ischemia, or aortic dissection, to maintain cerebral perfusion. The 2025 AHA guidelines maintain these well-established thresholds."
+    },
+    {
+      "title": "Mechanical Thrombectomy: Indications and Time Window",
+      "content": "Endovascular mechanical thrombectomy is indicated for acute ischemic stroke caused by large-vessel occlusion (LVO) of the internal carotid artery or proximal middle cerebral artery (M1 segment). The standard time window is within 6 hours of symptom onset based on conventional imaging. However, advanced neuroimaging (CT perfusion or diffusion-weighted MRI) demonstrating a salvageable penumbra with limited completed infarction core can extend the thrombectomy window up to 24 hours in selected patients, as supported by the DAWN and DEFUSE-3 trials and reaffirmed in the 2025 guidelines. Patients eligible for both tPA and thrombectomy should receive tPA immediately and proceed to thrombectomy without delay — tPA should not be withheld while awaiting thrombectomy."
+    },
+    {
+      "title": "Stroke Mimics and Stabilization",
+      "content": "Common stroke mimics include hypoglycemia (always check glucose first), seizures with postictal paralysis (Todd's paralysis), migraine with aura, complex partial seizures, Bell's palsy (spares the forehead), and brain tumors. Hypoglycemia is the most important mimic to rule out because it is immediately correctable. Fever (temperature >38°C) should be treated aggressively with antipyretics and cooling measures, as hyperthermia worsens ischemic brain injury. Glucose should be maintained in the normal range (70–180 mg/dL); both hypoglycemia (<60 mg/dL) and severe hyperglycemia (>180 mg/dL) are associated with worse outcomes. The ACLS provider's role includes airway management if needed, glucose normalization, fever treatment, and rapid transport — the provider does not determine stroke subtype in the field."
+    }
+  ],
+  "clinicalPearls": [
+    "Time is brain — approximately 1.9 million neurons are lost per minute of untreated large-vessel ischemic stroke.",
+    "Always check glucose first — hypoglycemia is the most critical and treatable stroke mimic.",
+    "tPA dose: 0.9 mg/kg (max 90 mg), 10% bolus over 1 min, remainder over 60 min — do NOT use the cardiac arrest tPA dose (which is different).",
+    "Blood pressure targets: <185/110 before tPA, <180/105 during and after tPA, with ~15% reduction in the first 24 hours.",
+    "Permissive hypertension up to 220/120 in non-tPA candidates for the first 24 hours (no ICH, no cardiac ischemia).",
+    "CT head before tPA — always. The only absolute indication for tPA is acute ischemic stroke within 4.5 hours with no hemorrhage on imaging."
+  ],
+  "redFlags": [
+    "Giving tPA without a non-contrast CT — intracranial hemorrhage must be excluded first.",
+    "Blood pressure >185/110 at time of tPA administration — must be lowered first.",
+    "Suspected stroke with glucose <50 mg/dL — correct the glucose; this may be the only problem.",
+    "Symptom onset >4.5 hours with no advanced imaging — standard IV tPA window has closed.",
+    "Lateralizing deficits resolving completely (TIA) — still warrants urgent evaluation; TIAs are warning signs."
+  ],
+  "commonMistakes": [
+    "Using the cardiac arrest tPA dose (different from stroke tPA) — stroke dose is 0.9 mg/kg, not a flat dose.",
+    "Failing to check blood glucose in every suspected stroke presentation.",
+    "Delaying CT scan because 'it's obviously a stroke' — hemorrhage must be excluded before tPA.",
+    "Lowering blood pressure too aggressively in non-tPA candidates, risking cerebral hypoperfusion.",
+    "Confusing Bell's palsy (forehead spared) with central facial droop (forehead involved) — both cause unilateral weakness but the distribution differs.",
+    "Withholding tPA while awaiting thrombectomy evaluation — tPA should be given immediately if the patient meets criteria."
+  ],
+  "memoryAids": [
+    "FAST: Face, Arms, Speech, Time — if any one is abnormal, activate stroke response.",
+    "tPA dose = '0.9, max 90' — 0.9 mg/kg, max 90 mg; 10% bolus, 90% over 60 min.",
+    "BP targets = '185/110 before, 180/105 after' tPA.",
+    "Thrombectomy window = '6 standard, 24 with penumbra imaging'.",
+    "Always glucose first — 'Stroke + low sugar = sugar first.'",
+    "Permissive BP = '220/120 for non-tPA — but only if no bleed.'"
+  ],
+  "decisionTrees": [
+    {
+      "title": "Acute Stroke Initial Management (ACLS Provider)",
+      "content": "Suspected stroke identified (CPSS/FAST positive)\n  → Activate stroke alert / notify receiving stroke center\n  → Check blood glucose immediately\n     → If <50 mg/dL → administer IV dextrose; reassess (may be stroke mimic)\n  → 12-lead ECG, vital signs, SpO₂\n  → Transport to nearest stroke-capable center (preferably Comprehensive Stroke Center if LVO suspected)\n  → On arrival: non-contrast CT head (MANDATORY before any reperfusion)\n     → Intracranial hemorrhage found → no tPA; neurosurgical consultation\n     → No hemorrhage; ischemic stroke confirmed\n        → Symptom onset ≤4.5 hours AND no contraindications\n           → Blood pressure <185/110? (lower with labetalol/nicardipine if needed)\n              → YES → tPA: 0.9 mg/kg (max 90 mg), 10% bolus over 1 min, remainder over 60 min\n              → Maintain BP <180/105 during and for 24 h after tPA\n        → Large-vessel occlusion suspected and onset ≤6 h (or ≤24 h with perfusion imaging)\n           → Proceed to mechanical thrombectomy (do not delay tPA for this)\n        → Symptom onset >4.5 h or tPA contraindicated\n           → Permissive hypertension up to 220/120 if no hemorrhage/cardiac ischemia\n           → If LVO and within window → thrombectomy\n  → Maintain normothermia (treat fever >38°C aggressively)\n  → Maintain glucose 70–180 mg/dL"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC",
+    "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke (2019, reaffirmed 2025)",
+    "DAWN Trial — Thrombectomy 6–24 Hours After Stroke (NEJM 2018)",
+    "DEFUSE-3 Trial — Thrombectomy 6–16 Hours After Stroke (NEJM 2018)",
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support"
+  ]
+}

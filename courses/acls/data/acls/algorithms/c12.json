@@ -1,0 +1,49 @@
+{
+  "chapter": "c12",
+  "algorithms": [
+    {
+      "id": "c12_alg01",
+      "title": "STEMI Reperfusion Decision Pathway",
+      "description": "Decision pathway from STEMI identification to reperfusion, including primary PCI and fibrinolysis pathways.",
+      "image": "../../images/courses/acls/c12_g01.webp",
+      "steps": [
+        "Obtain and interpret 12-lead ECG within 10 minutes of first medical contact.",
+        "ST elevation or new LBBB consistent with STEMI identified.",
+        "Activate cardiac catheterization team immediately — FMC2D goal ≤90 minutes.",
+        "Administer aspirin 162–325 mg chewed.",
+        "Decision: Is primary PCI achievable within 90 minutes of FMC?",
+        "YES → Proceed to primary PCI (door-to-balloon ≤90 min).",
+        "NO → Is symptom onset <12 hours AND anticipated PPCI delay >120 minutes?",
+        "YES → Administer fibrinolysis (alteplase or tenecteplase): door-to-needle ≤30 min.",
+        "  → Assess for ≥50% ST-resolution at 60–90 minutes.",
+        "  → Successful → transfer to PCI-capable center for angiography within 3–24 hours.",
+        "  → Failed → emergent rescue PCI.",
+        "NO → Transfer to PCI-capable center as rapidly as possible; continue medical therapy.",
+        "Check right-sided leads V4R if inferior STEMI → if RV infarction, AVOID nitroglycerin.",
+        "Administer nitroglycerin for ongoing ischemic pain (CONTRAINDICATED: RV infarction, PDE5 inhibitor use within 24–48 h, SBP <90).",
+        "Add P2Y12 inhibitor (ticagrelor 180 mg or prasugrel 60 mg — prasugrel contraindicated with prior stroke/TIA or age ≥75).",
+        "Anticoagulate with unfractionated heparin (60 U/kg bolus, max 4,000 U, then 12 U/kg/hr).",
+        "Oxygen ONLY if SpO₂ <90%.",
+        "Morphine ONLY for refractory pain after nitroglycerin failure (caution: delays P2Y12 absorption)."
+      ]
+    },
+    {
+      "id": "c12_alg02",
+      "title": "NSTEMI/Unstable Angina Risk-Stratified Management",
+      "description": "Risk-stratified approach to NSTEMI and unstable angina using TIMI/GRACE scores to guide timing of invasive strategy.",
+      "steps": [
+        "Patient presents with ACS symptoms (chest pain, dyspnea) without ST elevation on ECG.",
+        "Obtain 12-lead ECG within 10 minutes.",
+        "No ST elevation → NSTEMI or unstable angina.",
+        "Immediate: aspirin 162–325 mg chewed + P2Y12 inhibitor (ticagrelor/prasugrel) + anticoagulation (heparin).",
+        "Risk stratify with TIMI and/or GRACE score.",
+        "HIGH RISK (recurrent angina, hemodynamic instability, dynamic ST/T changes, elevated troponin, GRACE >140, TIMI ≥3) → early invasive strategy within 24 hours.",
+        "INTERMEDIATE RISK → invasive strategy within 24–72 hours.",
+        "LOWER RISK → delayed invasive or ischemia-guided strategy (medical therapy + stress testing if needed).",
+        "Continue medical optimization: beta-blocker (if no contraindication), statin, ACE inhibitor as indicated.",
+        "Oxygen ONLY if SpO₂ <90%.",
+        "Serial troponins and ECGs to assess for evolution."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "A patient is found in ventricular fibrillation. What is the first intervention?",
+      "options": ["A. Administer epinephrine", "B. Establish IV access", "C. Deliver a defibrillation shock", "D. Place an advanced airway"],
+      "correct": 2,
+      "rationale": "VF and pVT are shockable rhythms. The single most important intervention is immediate defibrillation — survival declines with every minute delay.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "What biphasic energy level is recommended for the first shock in VF/pVT?",
+      "options": ["A. 50 J", "B. 100 J", "C. 120–200 J", "D. 360 J"],
+      "correct": 2,
+      "rationale": "The 2025 AHA guidelines recommend 120–200 J for the first biphasic shock, per manufacturer recommendations. 360 J is for monophasic waveforms.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q03",
+      "question": "What energy should be used for monophasic defibrillation in VF/pVT?",
+      "options": ["A. 200 J", "B. 300 J", "C. 360 J", "D. 400 J"],
+      "correct": 2,
+      "rationale": "All monophasic defibrillation shocks use 360 J regardless of the number of prior shocks.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q04",
+      "question": "Immediately after delivering a shock to a patient in VF, the team should:",
+      "options": [
+        "A. Pause to check the pulse",
+        "B. Pause to check the rhythm on the monitor",
+        "C. Resume chest compressions immediately without a pulse check",
+        "D. Administer epinephrine before resuming compressions"
+      ],
+      "correct": 2,
+      "rationale": "After defibrillation, compressions resume immediately without checking pulse or rhythm. CPR continues for approximately 2 minutes before the next rhythm check.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q05",
+      "question": "What is the minimum acceptable chest compression fraction (CCF) during VF/pVT arrest?",
+      "options": ["A. 40%", "B. 50%", "C. 60%", "D. 80%"],
+      "correct": 2,
+      "rationale": "The target CCF is ≥60%, with ≥80% being ideal. CCF is independently associated with survival to discharge.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q06",
+      "question": "During VF/pVT arrest, when should epinephrine be administered?",
+      "options": [
+        "A. Before the first shock",
+        "B. After the first shock",
+        "C. As soon as reasonably available, typically after the second shock, then every 3–5 minutes",
+        "D. Only after ROSC is achieved"
+      ],
+      "correct": 2,
+      "rationale": "Epinephrine 1 mg IV/IO is given as soon as reasonably available, typically after the second shock in a persistent VF/pVT arrest, then repeated every 3–5 minutes.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "What is the first dose of amiodarone for refractory VF/pVT?",
+      "options": ["A. 150 mg IV/IO", "B. 300 mg IV/IO", "C. 450 mg IV/IO", "D. 50 mg IV/IO"],
+      "correct": 1,
+      "rationale": "Amiodarone is given as 300 mg IV/IO as the first dose for refractory VF/pVT. A second dose of 150 mg IV/IO may follow if VF/pVT persists.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "A patient remains in VF after the third shock and amiodarone is unavailable. Which antiarrhythmic should be given instead, and at what dose?",
+      "options": ["A. Lidocaine 0.5–0.75 mg/kg IV/IO", "B. Lidocaine 1–1.5 mg/kg IV/IO", "C. Lidocaine 2–3 mg/kg IV/IO", "D. Lidocaine 50 mg flat dose IV/IO"],
+      "correct": 1,
+      "rationale": "When amiodarone is unavailable, lidocaine is an acceptable alternative antiarrhythmic for refractory VF/pVT, dosed at 1–1.5 mg/kg IV/IO for the first dose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q09",
+      "question": "What is the second dose of amiodarone if VF/pVT persists after the first 300 mg dose?",
+      "options": ["A. 300 mg IV/IO", "B. 150 mg IV/IO", "C. 50 mg IV/IO", "D. 450 mg IV/IO"],
+      "correct": 1,
+      "rationale": "The second dose of amiodarone for persistent VF/pVT is 150 mg IV/IO, which is half the first dose.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q10",
+      "question": "A pulse check during VF/pVT resuscitation should be performed:",
+      "options": [
+        "A. After every shock",
+        "B. Every minute",
+        "C. Only when a rhythm check reveals an organized (non-VF/pVT) rhythm",
+        "D. Before every drug administration"
+      ],
+      "correct": 2,
+      "rationale": "During ongoing VF/pVT, there is no pulse to check. A pulse check is only indicated when the rhythm check shows an organized rhythm that might generate a pulse.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q11",
+      "question": "Correct CPR quality parameters during VF/pVT arrest include all of the following EXCEPT:",
+      "options": [
+        "A. Compression rate of 100–120/min",
+        "B. Compression depth of 2–2.4 inches (5–6 cm)",
+        "C. Allowing full chest recoil between compressions",
+        "D. Compression rate of 60–80/min to allow adequate filling"
+      ],
+      "correct": 3,
+      "rationale": "The correct compression rate is 100–120/min. A rate of 60–80/min is too slow and does not generate adequate cardiac output during arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q12",
+      "question": "Why is minimizing the pre-shock pause important in VF/pVT defibrillation?",
+      "options": [
+        "A. To reduce patient discomfort",
+        "B. Because prolonged pauses decrease coronary perfusion pressure, reducing the likelihood of successful defibrillation and ROSC",
+        "C. Because the defibrillator charges faster with shorter pauses",
+        "D. Because the AHA recommends exactly 10-second pauses"
+      ],
+      "correct": 1,
+      "rationale": "Prolonged pre-shock pauses cause coronary perfusion pressure to fall, which decreases the likelihood of successful defibrillation and ROSC. Rescuers should keep hands on the chest until the last possible moment before shock delivery.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q13",
+      "question": "When considering refractory VF/pVT strategies after ≥3 shocks, which of the following is a Class 2b option?",
+      "options": [
+        "A. Immediate ECPR for all patients",
+        "B. Vector-change defibrillation or dual sequential external defibrillation (DSED)",
+        "C. Routine sodium bicarbonate administration",
+        "D. Transcutaneous pacing"
+      ],
+      "correct": 1,
+      "rationale": "Vector-change defibrillation and DSED are Class 2b (may be considered) options for refractory VF/pVT. They are not routine first-line steps but may be useful in selected cases.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q14",
+      "question": "What is the correct second dose of lidocaine for persistent VF/pVT?",
+      "options": ["A. 1–1.5 mg/kg IV/IO", "B. 0.5–0.75 mg/kg IV/IO", "C. 300 mg IV/IO", "D. 2 mg/kg IV/IO"],
+      "correct": 1,
+      "rationale": "After the initial lidocaine dose of 1–1.5 mg/kg, subsequent doses are 0.5–0.75 mg/kg IV/IO.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q15",
+      "question": "Which statement about epinephrine administration during VF/pVT arrest is correct?",
+      "options": [
+        "A. Epinephrine should be given during a dedicated pause in compressions",
+        "B. Epinephrine should be given as a continuous infusion throughout the arrest",
+        "C. Epinephrine 1 mg IV/IO is pushed during ongoing compressions and followed by a saline flush",
+        "D. Epinephrine is only given after ROSC is achieved"
+      ],
+      "correct": 2,
+      "rationale": "Epinephrine is pushed during ongoing compressions — it does not require a pause — and is followed by a saline flush to ensure the drug reaches the central circulation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q16",
+      "question": "How often should compressors be switched during a VF/pVT resuscitation?",
+      "options": [
+        "A. Every 5 minutes",
+        "B. Approximately every 2 minutes, timed with the rhythm check",
+        "C. Every 10 minutes",
+        "D. Only when a compressor becomes fatigued"
+      ],
+      "correct": 1,
+      "rationale": "Compressors should be switched approximately every 2 minutes to prevent fatigue-related decline in compression quality, conveniently timed with the rhythm check to minimize additional pauses.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q17",
+      "question": "What does waveform capnography indicate when placed after an advanced airway during VF/pVT arrest?",
+      "options": [
+        "A. Only confirms tube placement",
+        "B. Monitors CPR quality (ETCO₂ correlates with cardiac output) and detects ROSC (sudden sustained ETCO₂ rise)",
+        "C. Measures blood oxygen saturation",
+        "D. Determines the rhythm type"
+      ],
+      "correct": 1,
+      "rationale": "Waveform capnography serves dual roles during arrest: it monitors CPR quality because ETCO₂ correlates with cardiac output during compressions, and a sudden sustained rise in ETCO₂ may indicate ROSC.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q18",
+      "question": "A second-shock energy dose for biphasic VF/pVT that persists after the first shock should be:",
+      "options": [
+        "A. The same energy as the first shock",
+        "B. Higher than or equal to the first shock energy (escalating)",
+        "C. Lower energy to reduce myocardial damage",
+        "D. Fixed at 200 J regardless of first-shock energy"
+      ],
+      "correct": 1,
+      "rationale": "If biphasic VF/pVT persists after the first shock, the second shock energy should be equal to or higher than the first (escalating strategy) up to the maximum available. If the biphasic waveform energy is unknown, use 200 J.",
+      "difficulty": "Hard"
+    }
+  ]
+}

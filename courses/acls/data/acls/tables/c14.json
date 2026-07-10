@@ -1,0 +1,50 @@
+{
+  "chapter": "c14",
+  "tables": [
+    {
+      "id": "c14_t01",
+      "title": "Post-ROSC Management Targets",
+      "headers": ["Parameter", "Target", "Intervention", "Notes"],
+      "rows": [
+        ["MAP", "≥65 mmHg (SBP >90)", "Norepinephrine 0.1–0.5 mcg/kg/min, IV fluid bolus 250–500 mL", "Avoid MAP <60 or >100"],
+        ["ETCO₂", "35–45 mmHg", "Mechanical ventilation adjustment", "Avoid hypo- and hyperventilation"],
+        ["Temperature", "≤37.5°C (minimum); 32–37.5°C if TTM", "Active cooling, antipyretics, cooling catheters/pads", "Continuous monitoring; treat fever >37.5°C immediately"],
+        ["TTM duration", "≥36 hours", "Maintain target range", "Rewarm at ≤0.25°C/hr"],
+        ["Glucose", "70–180 mg/dL", "Insulin protocol; dextrose if hypoglycemic", "Avoid both hypo- and hyperglycemia"],
+        ["Oxygenation", "SpO₂ ≥94%", "Adjust FiO₂ as needed", "Avoid hyperoxia if possible"],
+        ["12-lead ECG", "Obtain immediately", "Identify STEMI → emergent PCI", "Present in ~25–50% of post-arrest patients"]
+      ]
+    },
+    {
+      "id": "c14_t02",
+      "title": "Multimodal Neuroprognostication After Cardiac Arrest",
+      "headers": ["Modality", "Timing", "Finding Suggesting Poor Prognosis", "Notes"],
+      "rows": [
+        ["Clinical exam", "≥72 h post-ROSC (after sedation/paralysis clearance)", "Bilateral absent pupillary + corneal reflexes; absent motor response or extensor posturing", "Must be after sedation/paralysis/metabolic clearance"],
+        ["SSEPs", "≥72 h post-ROSC", "Bilateral absence of cortical N20 response", "High specificity; less affected by sedation"],
+        ["Continuous EEG", "Within first days, interpreted at ≥72 h", "Status myoclonus, burst suppression without epileptiform discharges, malignant patterns", "Requires expert interpretation"],
+        ["NSE (neuron-specific enolase)", "48–72 h post-ROSC", ">33 mcg/L", "Must be interpreted in multimodal context; single value not sufficient"],
+        ["S-100B protein", "48–72 h post-ROSC", "Elevated levels", "Less specific than NSE; adjunctive marker"],
+        ["CT head", "First 24–48 h", "Diffuse cerebral edema, loss of gray-white differentiation", "Early CT may be normal; CT at 48–72 h more informative"],
+        ["MRI brain", "3–5 days post-ROSC", "Restricted diffusion in cortical and deep gray matter", "Most sensitive imaging modality for hypoxic-ischemic injury"]
+      ]
+    },
+    {
+      "id": "c14_t03",
+      "title": "ECPR: Indications, Contraindications, and Key Parameters",
+      "headers": ["Category", "Detail"],
+      "rows": [
+        ["Indication", "Refractory cardiac arrest (persistent VF/pVT despite standard ACLS: high-quality CPR, ≥3 shocks, epinephrine, antiarrhythmic)"],
+        ["Expected low-flow time", "<60 minutes from CPR initiation to ECMO flow"],
+        ["Reversible cause", "Required — acute MI, PE, myocarditis, drug toxicity, hypothermia, etc."],
+        ["Candidacy", "Consider age, comorbidities, pre-arrest functional status; no absolute contraindications"],
+        ["Cannulation", "Femoral: venous drainage (femoral vein) + arterial return (femoral artery), percutaneous under US guidance"],
+        ["Limb protection", "Distal perfusion catheter recommended to prevent limb ischemia"],
+        ["Complications", "Limb ischemia, bleeding, cannula malposition, hemolysis, infection"],
+        ["ECPR role", "Bridge to further therapy (PCI, TTM, recovery) — NOT destination therapy"],
+        ["Weaning", "Guided by echocardiographic recovery, hemodynamic stability on decreasing flow, clinical assessment"],
+        ["Institutional requirement", "Experienced, high-volume team with dedicated ECPR infrastructure"]
+      ]
+    }
+  ]
+}

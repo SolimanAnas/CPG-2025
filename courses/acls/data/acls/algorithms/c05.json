@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "Electrical Therapy Selection in ACLS",
+      "description": "Decision pathway for selecting the appropriate electrical therapy (defibrillation, synchronized cardioversion, or pacing) based on the clinical scenario and rhythm.",
+      "steps": [
+        "Cardiac arrest or arrhythmia identified — determine clinical context.",
+        "Is the patient in cardiac arrest (no pulse, no breathing)?",
+        "  → YES: Assess rhythm:",
+        "     → VF or pulseless VT → SHOCKABLE: Defibrillate",
+        "        → Biphasic: 120–200J (manufacturer's recommendation; if unknown, 200J)",
+        "        → Monophasic: 360J",
+        "        → Resume CPR for 2 minutes; reassess",
+        "     → Asystole or PEA → NON-SHOCKABLE: CPR + epinephrine + treat causes; do NOT defibrillate or cardiovert",
+        "  → NO: Patient has a pulse — assess stability:",
+        "     → Hemodynamically UNSTABLE (hypotension, altered mental status, chest pain, acute heart failure):",
+        "        → Narrow-regular SVT → Synchronized cardioversion at 100J biphasic",
+        "        → Monomorphic VT with pulse → Synchronized cardioversion at 100J biphasic",
+        "        → Atrial fibrillation/flutter → Synchronized cardioversion at ≥200J biphasic",
+        "        → Polymorphic VT → UNSYNCHRONIZED defibrillation at 120–200J biphasic (sync unreliable)",
+        "     → Hemodynamically STABLE:",
+        "        → Attempt medical therapy first (vagal maneuvers, adenosine for SVT; amiodarone for VT)",
+        "        → Consider elective synchronized cardioversion with sedation if medications fail",
+        "     → Symptomatic bradycardia refractory to atropine → Transcutaneous pacing (start 80 mA, titrate by 10 mA q2–3 min, max 200 mA)",
+        "     → Tachyarrhythmia amenable to overdrive pacing → ATP (pace at 10–20% above tachycardia rate)"
+      ]
+    },
+    {
+      "id": "c05_alg02",
+      "title": "Transcutaneous Pacing Protocol",
+      "description": "Step-by-step protocol for initiating and titrating transcutaneous pacing in adults with hemodynamically significant bradycardia.",
+      "image": "../../images/courses/acls/c05_g01.webp",
+      "steps": [
+        "Hemodynamically significant bradycardia identified (HR <50, symptomatic, hypotensive).",
+        "Administer atropine 1 mg IV; repeat q3–5 min up to 3 mg total.",
+        "If atropine ineffective → prepare for transcutaneous pacing.",
+        "Apply anterior-posterior pacing pads per manufacturer instructions.",
+        "Set device to demand (pacer) mode at 80 mA.",
+        "Observe monitor for electrical capture (wide QRS complex following each pacer spike).",
+        "If no electrical capture after 2–3 minutes → increase current by 10 mA (to 90 mA).",
+        "Repeat: increase by 10 mA every 2–3 minutes until electrical capture achieved.",
+        "When electrical capture achieved: immediately confirm mechanical capture (palpate pulse with each paced complex).",
+        "If mechanical capture confirmed: TCP effective — arrange transvenous pacing or cardiology consultation.",
+        "If electrical capture without mechanical capture: continue CPR/resuscitation efforts and escalate to transvenous pacing.",
+        "Maximum output: 200 mA — if no capture at 200 mA, TCP has failed → transvenous pacing or cardiology emergency.",
+        "Provide sedation/analgesia for conscious patients (TCP is painful).",
+        "Continuously monitor rhythm, blood pressure, and patient comfort."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "c09",
+  "title": "Reversible Causes: H's & T's and Refractory Arrest",
+  "shortTitle": "H's & T's / Refractory Arrest",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "List and recall the H's and T's mnemonic of reversible cardiac arrest causes.",
+    "For each H and T, identify the key diagnostic test or bedside finding that confirms it.",
+    "Describe the initial management of each reversible cause once identified.",
+    "Define refractory VF/pVT and explain when it applies during a resuscitation.",
+    "Outline the sequential pharmacologic and electrical strategies for refractory VF/pVT, including antiarrhythmic stacking and dual sequential external defibrillation (DSED).",
+    "State the AHA recommendation class for DSED and vector-change defibrillation.",
+    "Explain the role of inhaled vasodilators in refractory VF/pVT and the evidence basis.",
+    "Describe CPR quality reassessment steps during refractory arrest."
+  ],
+  "summary": [
+    {
+      "title": "The H's and T's: A Systematic Approach to Reversible Arrest",
+      "content": "Every cardiac arrest has a cause. The H's and T's mnemonic provides a systematic checklist that ensures potentially reversible etiologies are not overlooked during the chaos of resuscitation. The H's are: Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hypo-/Hyperkalemia, and Hypothermia. The T's are: Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary), and Thrombosis (coronary). The team should begin considering these causes from the moment of arrest, not only after repeated failed interventions."
+    },
+    {
+      "title": "The H's — Detailed Breakdown",
+      "content": "Hypovolemia: Recognized by clinical history (hemorrhage, dehydration) and bedside ultrasound (flat IVC); treated with volume resuscitation and blood products. Hypoxia: Common and correctable — ensure adequate oxygenation and ventilation once an advanced airway is in place. Hydrogen ion (acidosis): Severe metabolic acidosis from prolonged arrest impairs drug effectiveness and myocardial contractivity; treat with ventilation and address the underlying cause rather than empiric bicarbonate. Hypo-/Hyperkalemia: Hyperkalemia is the more immediately dangerous and common arrest electrolyte — look for peaked T waves, widened QRS; treat with calcium chloride, sodium bicarbonate, insulin/glucose, and albuterol. Hypothermia: In cold-exposure arrests, active rewarming is critical; do not declare futility until core temperature is at least 32°C."
+    },
+    {
+      "title": "The T's — Detailed Breakdown",
+      "content": "Tension pneumothorax: Suspect when there are absent breath sounds, tracheal deviation, or jugular venous distention during arrest; decompress immediately with a large-bore needle in the second intercostal space, midclavicular line, followed by chest tube. Cardiac tamponade: Suspect with muffled heart sounds, JVD, and PEA arrest; treat with emergent pericardiocentesis or thoracotomy. Toxins: Consider drug overdose (tricyclics, beta-blockers, calcium-channel blockers, digoxin, local anesthetics); treat with specific antidotes when available (e.g., digoxin immune Fab, intralipid for local anesthetic toxicity). Pulmonary embolism: Massive PE causing arrest — consider systemic thrombolysis or surgical/catheter-based embolectomy. Coronary thrombosis: Acute MI causing VF — early defibrillation and coronary reperfusion (PCI) are essential."
+    },
+    {
+      "title": "Refractory VF/pVT — Definition and Approach",
+      "content": "Refractory VF/pVT is defined as ventricular fibrillation or pulseless ventricular tachycardia that persists despite three or more consecutive defibrillation attempts with standard biphasic energies (typically 200 J). Once VF is refractory, the provider should systematically escalate through antiarrhythmic drugs (amiodarone or lidocaine), consider vector-change defibrillation, evaluate for DSED (Class 2b, LOE B-R), and reassess CPR quality, compressibility, and underlying causes before each subsequent shock."
+    },
+    {
+      "title": "Antiarrhythmic Therapy for Refractory VF/pVT",
+      "content": "After the third shock, give amiodarone 300 mg IV/IO as a bolus for the first dose (may repeat once at 150 mg). Lidocaine 1–1.5 mg/kg IV/IO is an acceptable alternative, especially if amiodarone is unavailable. Some systems use antiarrhythmic stacking — administering both amiodarone and lidocaine sequentially when VF is truly refractory — though this is an advanced, protocol-dependent strategy. Magnesium sulfate 1–2 g IV is considered specifically for polymorphic VT (torsades de pointes)."
+    },
+    {
+      "title": "Dual Sequential External Defibrillation (DSED) and Vector-Change Defibrillation",
+      "content": "For truly refractory VF/pVT (≥3 shocks), two strategies may be considered: dual sequential external defibrillation (DSED), where two defibrillators deliver asynchronous shocks in rapid succession with pads placed in different positions, and vector-change defibrillation, where pad placement is altered to change the current path through the myocardium. Both are AHA Class 2b (LOE B-R) — meaning they may be considered but are not established as routine first-line therapy. Neither should delay standard high-quality CPR and timely epinephrine."
+    },
+    {
+      "title": "Inhaled Vasodilators and Emerging Therapies",
+      "content": "Inhaled nitric oxide and other inhaled vasodilators are being investigated for refractory VF/pVT. The theoretical mechanism involves improving myocardial perfusion and reducing afterload during ongoing CPR. While promising in early studies, these remain investigational and are not yet established as standard therapy in the 2025 AHA Guidelines."
+    },
+    {
+      "title": "CPR Quality Reassessment During Refractory Arrest",
+      "content": "Before each rhythm check and shock in refractory arrest, the team must reassess CPR quality: compression rate (100–120/min), depth (at least 2 inches / 5 cm, no more than 2.4 inches / 6 cm), full chest recoil, minimizing interruptions, and adequate ventilation (1 breath every 6 seconds with an advanced airway). Check ETCO₂ — a sudden drop may indicate deterioration in compression quality or a new reversible cause. Rotate compressors every 2 minutes. Verify pad position, contact, and impedance. Consider and treat the H's and T's with each cycle."
+    }
+  ],
+  "clinicalPearls": [
+    "The H's and T's are not a post-arrest checklist — begin evaluating reversible causes from the moment of arrest.",
+    "Hyperkalemia is the most common electrolyte cause of cardiac arrest; check potassium early and treat aggressively with calcium, bicarbonate, and insulin/glucose.",
+    "DSED and vector-change defibrillation are Class 2b options — they may be considered but should not replace or delay standard defibrillation, epinephrine, and antiarrhythmic drugs.",
+    "ETCO₂ trending during CPR is the best noninvasive monitor of CPR quality — a sudden drop means compressions have degraded or a new reversible cause has appeared.",
+    "Do not declare futility in hypothermic arrest until core temperature is at least 32°C, as hypothermic patients may have neurologically intact survival after prolonged resuscitation."
+  ],
+  "redFlags": [
+    "Failing to consider and treat reversible causes (H's & T's) during ongoing arrest resuscitation.",
+    "Not escalating to antiarrhythmic drugs after the third defibrillation attempt for VF/pVT.",
+    "Neglecting CPR quality during the focus on advanced interventions in refractory arrest.",
+    "Declaring futility prematurely in hypothermic cardiac arrest before rewarming.",
+    "Using DSED or vector-change defibrillation as a substitute for rather than an adjunct to standard ACLS interventions."
+  ],
+  "commonMistakes": [
+    "Not checking ETCO₂ or failing to trend it during ongoing CPR.",
+    "Repeating defibrillation at the same energy and pad position without considering vector change or DSED after ≥3 failed shocks.",
+    "Forgetting to seek and treat the underlying cause (e.g., tension pneumothorax, tamponade, PE) when VF is refractory to electrical therapy.",
+    "Administering amiodarone too slowly during cardiac arrest — the bolus should be given rapidly during ongoing compressions.",
+    "Withholding thrombolysis in suspected massive PE arrest when catheter-based therapy is not immediately available."
+  ],
+  "memoryAids": [
+    "H's & T's: 'Hypo-Hypo-Hypo-Hypo-Hyper, Tox-Tamponade-PE-Tension-Things-coronary' — 5 H's and 5 T's.",
+    "Refractory VF = 3 shocks failed → think drugs, vector change, DSED, and always re-check the cause.",
+    "ETCO₂ is your CPR quality dashboard — if it drops, check the compressions first.",
+    "Calcium, Bicarb, Insulin/Glucose — the 'CBI-G' triad for hyperkalemic arrest."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Refractory VF/pVT Management Escalation",
+      "content": "VF/pVT identified → Defibrillate (biphasic 200 J)\n  → Resume CPR immediately for 2 minutes\n  → Rhythm check: still VF/pVT?\n     → Shock again (200 J biphasic)\n     → Resume CPR; give epinephrine 1 mg IV/IO\n     → Rhythm check: still VF/pVT after 3rd shock?\n        → REFRACTORY VF/pVT\n        → Give amiodarone 300 mg IV/IO bolus (or lidocaine 1–1.5 mg/kg)\n        → Consider vector-change defibrillation or DSED (Class 2b)\n        → REASSESS: CPR quality, ETCO₂, compressor rotation, pad position\n        → REASSESS: H's & T's — tension pneumo? tamponade? toxins? PE? hypoxia?\n        → Repeat shock (200 J) with antiarrhythmic on board\n        → Continue cycling: 2 min CPR → rhythm check → shock → reassess\n        → If still refractory: consider magnesium (polymorphic VT), additional antiarrhythmic stacking, ECPR if available"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (Refractory VF/pVT, Reversible Causes)",
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary (DSED, vector-change defibrillation)",
+    "AHA 2025 Focused Update on DSED and Antiarrhythmic Therapy for Refractory VF/pVT"
+  ],
+  "graphics": [
+    {
+      "id": "c09_g01",
+      "section": "summary",
+      "sectionIndex": 0,
+      "url": "../../images/courses/acls/c09_g01.webp",
+      "alt": "Reversible Causes: The H's & T's",
+      "caption": "Infographic displaying the 5 H's (Hypovolemia, Hypoxia, Hydrogen ion, Hypo-/Hyperkalemia, Hypothermia) and 5 T's (Tension pneumothorax, Tamponade, Toxins, Thrombosis pulmonary, Thrombosis coronary)."
+    }
+  ]
+}

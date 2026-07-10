@@ -1,0 +1,21 @@
+{
+  "chapter": "c02",
+  "cards": [
+    { "id": "c02_fc01", "question": "What is the target compression rate and depth in ACLS?", "answer": "Rate 100–120/min; depth at least 2 in (5 cm) and not more than 2.4 in (6 cm), with full recoil.", "category": "CPR Quality" },
+    { "id": "c02_fc02", "question": "What is chest compression fraction (CCF) and its target?", "answer": "The proportion of resuscitation time spent actually compressing; target at least 60%, ideally above 80%.", "category": "CPR Quality" },
+    { "id": "c02_fc03", "question": "How often should compressors switch and why?", "answer": "About every 2 minutes (or sooner if fatigued), because compression quality decays with rescuer fatigue even before it is subjectively noticed.", "category": "CPR Quality" },
+    { "id": "c02_fc04", "question": "What ventilation pattern is used once an advanced airway is placed?", "answer": "Continuous compressions with 1 breath every 6 seconds (about 10 breaths/min), no longer pausing compressions for breaths.", "category": "Ventilation" },
+    { "id": "c02_fc05", "question": "Why is over-ventilation harmful during CPR?", "answer": "It raises intrathoracic pressure, reduces venous return, and lowers cardiac output, worsening perfusion during compressions.", "category": "Ventilation" },
+    { "id": "c02_fc06", "question": "What is closed-loop communication?", "answer": "An order given to a named person, repeated back by the receiver, and confirmed once completed, to prevent missed or duplicated tasks.", "category": "Team Dynamics" },
+    { "id": "c02_fc07", "question": "Give an example of closed-loop communication for a medication order.", "answer": "Leader: 'Sarah, push epinephrine 1 mg now.' Sarah: 'Giving epinephrine 1 mg now.' Sarah (after): 'Epinephrine 1 mg given.'", "category": "Team Dynamics" },
+    { "id": "c02_fc08", "question": "What is 'knowing your limitations' in team dynamics?", "answer": "Communicating to the team when a task is beyond your training or current capability, so someone else can take it over safely.", "category": "Team Dynamics" },
+    { "id": "c02_fc09", "question": "What is constructive intervention?", "answer": "Respectfully speaking up when you notice an error or unsafe action about to happen, rather than staying silent due to hierarchy.", "category": "Team Dynamics" },
+    { "id": "c02_fc10", "question": "What is the role of a dedicated CPR coach?", "answer": "To watch and give real-time feedback on compression rate, depth, recoil, and pause duration, freeing the team leader to manage rhythm and overall care.", "category": "Team Dynamics" },
+    { "id": "c02_fc11", "question": "What compression-to-breath ratio is used before an advanced airway is placed?", "answer": "30 compressions to 2 breaths, minimizing the pause for breath delivery.", "category": "Ventilation" },
+    { "id": "c02_fc12", "question": "Why is mutual respect emphasized as a team dynamics element?", "answer": "Because a stressed, hierarchical, or disrespectful environment discourages team members from speaking up about errors, degrading patient safety.", "category": "Team Dynamics" },
+    { "id": "c02_fc13", "question": "What should a team do if compression pauses are trending longer than 10 seconds?", "answer": "Identify the cause (e.g., slow rhythm check, prolonged airway attempt) and correct it immediately — pauses over 10 seconds sharply reduce perfusion.", "category": "CPR Quality" },
+    { "id": "c02_fc14", "question": "Why is CCF called a 'team score' rather than an individual one?", "answer": "Because every team member's actions (or delays) that pause compressions reduce the shared CCF metric for the whole resuscitation.", "category": "CPR Quality" },
+    { "id": "c02_fc15", "question": "What is a common mistake with ventilation timing after an advanced airway is placed?", "answer": "Continuing to cycle 30:2 instead of switching to continuous compressions with a breath every 6 seconds.", "category": "Common Mistakes" },
+    { "id": "c02_fc16", "question": "Besides depth and rate, what other compression quality element must be maintained?", "answer": "Full chest recoil between compressions, allowing the heart to refill.", "category": "CPR Quality" }
+  ]
+}

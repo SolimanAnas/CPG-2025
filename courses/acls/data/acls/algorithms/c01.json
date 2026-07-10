@@ -1,0 +1,30 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Universal Chain of Survival (2025) — ACLS Provider View",
+      "description": "The six-link universal chain with the ACLS provider's role at each link.",
+      "steps": [
+        "Link 1 — Activation of emergency response: recognize arrest and activate the resuscitation team/EMS.",
+        "Link 2 — High-quality CPR: protect compression rate, depth, recoil, and fraction throughout the resuscitation.",
+        "Link 3 — Defibrillation: shock a shockable rhythm as soon as identified; resume compressions immediately.",
+        "Link 4 (ACLS provider's primary role) — Advanced resuscitation interventions: advanced airway when indicated, IV/IO access, rhythm-specific drugs and electrical therapy, identify and treat H's & T's.",
+        "Link 5 — Post-cardiac arrest care: airway/ventilation, hemodynamic support, 12-lead ECG, temperature control, consider cardiac arrest center transfer.",
+        "Link 6 — Recovery: neuroprognostication timeline, rehabilitation, survivor and family support.",
+        "System feedback loop: CQI review and Utstein-style data collection feed back into training and protocol updates."
+      ]
+    },
+    {
+      "id": "c01_alg02",
+      "title": "IHCA Prevention Pathway",
+      "description": "How in-hospital systems of care aim to prevent arrest before it happens.",
+      "steps": [
+        "Continuous or periodic vital-sign monitoring generates an early-warning score.",
+        "Rising score triggers a rapid-response/medical emergency team activation.",
+        "Team assesses and treats the deteriorating patient at the bedside.",
+        "If arrest still occurs, the same team transitions directly into the Chain of Survival response."
+      ]
+    }
+  ]
+}

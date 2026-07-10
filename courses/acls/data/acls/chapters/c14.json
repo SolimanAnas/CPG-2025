@@ -1,0 +1,103 @@
+{
+  "id": "c14",
+  "title": "Post-Cardiac Arrest Care, ECPR & Recovery",
+  "shortTitle": "Post-Arrest & ECPR",
+  "estimatedStudyTime": 45,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the post-ROSC bundle including airway management, hemodynamic targets, 12-lead ECG, temperature management, and neuroprognostication.",
+    "State the 2025 AHA recommended temperature management targets and duration after ROSC.",
+    "Identify hemodynamic targets (MAP, SBP) for post-ROSC patients and the rationale for hemodynamic optimization.",
+    "Explain why neuroprognostication must be deferred to ≥72 hours after ROSC and the multimodal approach used.",
+    "Describe the indications, contraindications, and procedural considerations for extracorporeal CPR (ECPR).",
+    "Outline the process for weaning from mechanical circulatory support and early rehabilitation and recovery planning."
+  ],
+  "summary": [
+    {
+      "title": "The Post-ROSC Bundle",
+      "content": "Return of spontaneous circulation (ROSC) is not the end of resuscitation — it is the beginning of post-cardiac arrest care, which the 2025 AHA guidelines frame as a direct continuation of resuscitation. The post-ROSC bundle includes: (1) airway management — confirm and secure the advanced airway with continuous waveform capnography (target ETCO₂ 35–45 mmHg during normothermic ventilation; avoid both hypo- and hyperventilation); (2) hemodynamic optimization — MAP ≥65 mmHg (SBP >90 mmHg) using IV fluid boluses and vasopressors (norepinephrine preferred) as needed; (3) 12-lead ECG — obtain immediately to identify STEMI, which is present in approximately 25–50% of cardiac arrest patients and mandates emergent coronary angiography and PCI; (4) temperature management — initiate temperature control (see below); (5) identify and treat reversible causes — ongoing H's and T's evaluation; (6) neuroprognostication — deferred to ≥72 hours after ROSC."
+    },
+    {
+      "title": "Temperature Management After Cardiac Arrest",
+      "content": "The 2025 AHA guidelines recommend maintaining temperature ≤37.5°C after cardiac arrest. Continuous temperature monitoring is mandatory (using core probes: esophageal, bladder, or pulmonary artery). If targeted temperature management (TTM) is chosen as a therapeutic strategy, the recommended target range is 32–37.5°C, maintained for at least 36 hours. Fever (>37.5°C) must be treated aggressively and immediately with active cooling measures and antipyretics, as hyperthermia exacerbates ischemic brain injury. The 2025 guidelines support an approach of controlled normothermia (≤37.5°C) as the minimum standard, with 32–37.5°C TTM as an acceptable option — neither approach has been shown to be clearly superior, and the choice should be guided by institutional protocol and individual patient factors. Rewarming, if TTM was used, should be slow and controlled (rate ≤0.25°C per hour)."
+    },
+    {
+      "title": "Hemodynamic Targets After ROSC",
+      "content": "Systemic ischemia-reperfusion injury after cardiac arrest causes vasoplegia, myocardial stunning, and distributive shock. The goal is MAP ≥65 mmHg (SBP >90 mmHg) to maintain adequate cerebral and coronary perfusion. Vasopressors — particularly norepinephrine (starting 0.1–0.5 mcg/kg/min, titrated to MAP) — are first-line; dobutamine (2.5–20 mcg/kg/min) may be added if there is myocardial dysfunction with adequate preload but persistent hypotension. IV fluid resuscitation with isotonic crystalloid boluses (250–500 mL) is used for hypovolemia but should be cautious to avoid fluid overload in the setting of myocardial stunning. Central venous pressure, mixed venous oxygen saturation (SvO₂), and point-of-care echocardiography can guide further hemodynamic management. Avoid hypotension (MAP <60) and hypertension (MAP >100) — both worsen neurological outcomes."
+    },
+    {
+      "title": "Neuroprognostication: Timing, Approach, and Modalities",
+      "content": "Neuroprognostication MUST be deferred to at least 72 hours after ROSC — or after rewarming if TTM was used — to allow clearance of sedation, paralytic agents, metabolic derangements, and hypothermia effects that confound neurological examination. The 2025 AHA guidelines emphasize a multimodal approach combining: (1) clinical examination — bilateral absent pupillary and corneal reflexes at ≥72 hours, absent motor response to painful stimuli (extensor posturing or less) at ≥72 hours; (2) electrophysiology — bilateral absent somatosensory evoked potentials (SSEPs) at ≥72 hours, continuous EEG patterns (status myoclonus, burst suppression without epileptiform discharges, malignant patterns); (3) serum biomarkers — neuron-specific enolase (NSE) >33 mcg/L at 48–72 hours and S-100B protein; (4) neuroimaging — CT showing diffuse cerebral edema or loss of gray-white differentiation, MRI showing restricted diffusion in cortical and deep gray matter. NO SINGLE modality is sufficient alone; the combination of modalities increases prognostic accuracy. An early poor examination (before 72 hours) does NOT reliably predict poor outcome and must not be used to withdraw life-sustaining therapy."
+    },
+    {
+      "title": "Extracorporeal CPR (ECPR): Indications and Approach",
+      "content": "ECPR (extracorporeal CPR) involves rapid initiation of veno-arterial extracorporeal membrane oxygenation (VA-ECMO) to provide temporary circulatory and oxygenation support during cardiac arrest. Per the 2025 AHA guidelines, ECPR may be considered for selected patients with refractory cardiac arrest (persistent VF/pVT despite standard ACLS measures including high-quality CPR, appropriate medications, and defibrillation), when low-flow time is expected to be <60 minutes, the patient has a potentially reversible cause of arrest, and the patient is a suitable candidate (age, comorbidities, functional status). ECPR requires an experienced, high-volume team and institutional infrastructure — it is NOT a standalone intervention but part of a comprehensive post-arrest care program. Cannulation is typically femoral (venous drainage from the femoral vein, arterial return to the femoral artery), performed percutaneously under ultrasound guidance. Complications include limb ischemia (distal perfusion catheter recommended), bleeding, cannula malposition, and hemolysis. ECPR is a bridge to further therapy (PCI, TTM, recovery) — weaning depends on recovery of native cardiac function."
+    },
+    {
+      "title": "Weaning, Rehabilitation, and Recovery Planning",
+      "content": "Patients on mechanical circulatory support (ECMO, IABP, Impella) are weaned as native cardiac function recovers, guided by echocardiographic assessment (ejection fraction, wall motion), hemodynamic stability on decreasing support, and ETCO₂ trends. Weaning is performed in a monitored setting (ICU or cath lab) with resuscitation equipment immediately available. Early rehabilitation begins in the ICU with passive range of motion, upright positioning when hemodynamically stable, and early mobilization as tolerated. The recovery link of the chain encompasses: comprehensive neurorehabilitation, psychological support for the survivor and family, assessment of quality of life, identification of reversible arrest causes requiring ongoing treatment (e.g., coronary disease, arrhythmia management), and advance care planning discussions. Referral to cardiac rehabilitation, neurorehabilitation, and psychosocial support services should be initiated before discharge."
+    }
+  ],
+  "clinicalPearls": [
+    "ROSC is the start of a new resuscitation, not the end of the old one — the post-ROSC bundle must be initiated immediately.",
+    "Obtain a 12-lead ECG immediately after ROSC — up to 50% of post-arrest patients have acute STEMI and need emergent PCI.",
+    "Temperature ≤37.5°C is the minimum standard; if TTM is used, 32–37.5°C for ≥36 hours.",
+    "Neuroprognostication before 72 hours is unreliable — sedation, paralysis, and metabolic derangements confound the exam.",
+    "Use MULTIPLE modalities for neuroprognostication — no single test is sufficient.",
+    "ECPR is a bridge, not a destination — it buys time for reversible causes to be treated.",
+    "MAP ≥65 mmHg is the minimum; both hypotension and hypertension worsen neurological outcomes."
+  ],
+  "redFlags": [
+    "Withdrawing life-sustaining therapy based on a neurological exam performed before 72 hours post-ROSC.",
+    "Fever (>37.5°C) in the first 72 hours after cardiac arrest — must be treated immediately.",
+    "Hypotension (MAP <60) after ROSC — aggressively support hemodynamics to protect the brain.",
+    "ECPR attempted without a reversible cause identified or with low-flow time expected >60 minutes.",
+    "Rapid rewarming after TTM — must be controlled at ≤0.25°C/hour to prevent rebound intracranial hypertension.",
+    "Ignoring STEMI on post-ROSC ECG — emergent PCI is indicated and should not be delayed."
+  ],
+  "commonMistakes": [
+    "Hyperventilating the post-arrest patient (low ETCO₂) — target ETCO₂ 35–45 mmHg; avoid both hypo- and hyperventilation.",
+    "Performing neuroprognostication too early (before 72 hours) — this leads to premature withdrawal of care.",
+    "Using a single prognostic test to determine outcome — multimodal assessment is mandatory.",
+    "Failing to check a 12-lead ECG after ROSC — STEMI may be present and treatable.",
+    "Aggressive fluid resuscitation in myocardial stunning without echocardiographic guidance — risks pulmonary edema.",
+    "Using sedation/paralysis to control temperature without documenting clearance before neuroprognostication.",
+    "Confusing ECPR with standard ACLS — ECPR is a specialized intervention requiring institutional capability."
+  ],
+  "memoryAids": [
+    "Post-ROSC bundle: 'Airway, Hemodynamics, 12-lead, Temperature, H's/T's, Prognostication' — AHTHP.",
+    "Temperature: '37.5 max, 32–36 TTM, 36 hours minimum'.",
+    "Neuroprognostication: '72 hours, then assess — multimodal, not singular'.",
+    "ECPR: 'Refractory VF/pVT, <60 min low-flow, reversible cause, experienced team'.",
+    "Hemodynamics: 'MAP 65, SBP 90 — not too low, not too high'.",
+    "Post-ROSC ECG: '25–50% have STEMI — don't miss it'."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Post-ROSC Management Bundle",
+      "content": "ROSC achieved\n  → Confirm and secure airway with waveform capnography (ETCO₂ 35–45 mmHg)\n  → IV fluid bolus (250–500 mL) + vasopressor (norepinephrine) to MAP ≥65 mmHg\n  → 12-lead ECG immediately\n     → STEMI identified → emergent coronary angiography + PCI\n     → No STEMI → continue monitoring\n  → Non-contrast CT head (exclude intracranial hemorrhage)\n  → Initiate temperature management\n     → Maintain ≤37.5°C at minimum\n     → If TTM chosen → 32–37.5°C for ≥36 hours\n     → Treat any fever >37.5°C immediately\n  → Continuous monitoring (arterial line, ETCO₂, temperature)\n  → Identify and treat reversible causes (H's and T's)\n  → Sedation/analgesia as needed for comfort and temperature management\n  → Neuroprognostication deferred ≥72 hours after ROSC (or after rewarming)\n     → Multimodal: clinical exam + SSEPs + EEG + NSE/S-100B + imaging\n  → Rehabilitation planning and family communication"
+    },
+    {
+      "title": "ECPR Selection and Initiation",
+      "content": "Refractory cardiac arrest (persistent VF/pVT despite standard ACLS)\n  → Is the arrest potentially reversible? (acute MI, PE, myocarditis, drug toxicity, hypothermia)\n     → NO → continue standard ACLS; consider cessation criteria\n     → YES → evaluate ECPR candidacy\n        → Low-flow time expected <60 minutes? (time from CPR start to ECMO flow)\n           → NO → ECPR unlikely to benefit; continue standard ACLS\n           → YES → candidate suitable? (age, comorbidities, functional status, no absolute contraindications)\n              → NO → continue standard ACLS\n              → YES → Activate ECPR team\n                 → Rapid femoral cannulation (venous + arterial) under ultrasound guidance\n                 → Initiate VA-ECMO flow\n                 → Place distal perfusion catheter to prevent limb ischemia\n                 → Continue resuscitation with ECMO support\n                 → Identify and treat reversible cause (PCI if acute MI, etc.)\n                 → Post-ROSC management bundle\n  → Weaning from ECMO: guided by echocardiographic recovery of cardiac function, hemodynamic stability on decreasing flow, and clinical assessment"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC",
+    "AHA 2025 Guidelines for CPR and ECC — Part 11: Post-Cardiac Arrest Care",
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support",
+    "TTM2 Trial — Targeted Hypothermia vs Normothermia After Cardiac Arrest (NEJM 2021)",
+    "ECPR Consensus on Patient Selection and Techniques (ILCOR 2023)",
+    "AHA/ILCOR Advisory — Extracorporeal CPR for Cardiac Arrest (2025)"
+  ],
+  "graphics": [
+    {
+      "id": "c14_g01",
+      "section": "summary",
+      "sectionIndex": 4,
+      "url": "../../images/courses/acls/c14_g01.webp",
+      "alt": "Veno-Arterial ECMO (VA-ECMO) for ECPR",
+      "caption": "Diagram of a patient receiving veno-arterial ECMO during ECPR, showing femoral venous drainage, pump, oxygenator, and femoral arterial return."
+    }
+  ]
+}

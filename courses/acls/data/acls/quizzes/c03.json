@@ -1,0 +1,188 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "What is the gold standard for confirming endotracheal tube placement during cardiac arrest?",
+      "options": ["A. Auscultation of bilateral breath sounds", "B. Observation of chest rise", "C. Waveform capnography", "D. Chest X-ray"],
+      "correct": 2,
+      "rationale": "Waveform capnography is the gold standard for ET tube placement confirmation. Auscultation and chest rise are unreliable during cardiac arrest due to poor perfusion and background noise.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "What is the target ETCO2 value during CPR that indicates adequate chest compression quality?",
+      "options": ["A. ≥5 mmHg", "B. ≥10 mmHg", "C. ≥25 mmHg", "D. ≥40 mmHg"],
+      "correct": 1,
+      "rationale": "ETCO2 ≥10 mmHg is the AHA goal during CPR, reflecting adequate cardiac output from compressions. Values below 10 mmHg suggest the need to reassess compression quality.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "During CPR, the ETCO2 suddenly rises from 8 mmHg to 45 mmHg and stays elevated. What is the most likely explanation?",
+      "options": ["A. The ET tube has become esophageal", "B. Compressions have improved", "C. Return of spontaneous circulation (ROSC)", "D. The capnography sensor is malfunctioning"],
+      "correct": 2,
+      "rationale": "A sudden, sustained ETCO2 rise to ≥40 mmHg during CPR is a reliable indicator of ROSC, reflecting restored native cardiac output delivering more CO2 to the lungs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q04",
+      "question": "What is the maximum duration recommended for a single intubation attempt during cardiac arrest?",
+      "options": ["A. 5 seconds", "B. 10 seconds", "C. 20 seconds", "D. 30 seconds"],
+      "correct": 1,
+      "rationale": "Each intubation attempt during cardiac arrest should not exceed 10 seconds to minimize chest compression interruptions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q05",
+      "question": "An ETCO2 of 6 mmHg is consistently measured during CPR despite correct compression technique by the team. What is the most appropriate next step?",
+      "options": [
+        "A. Stop compressions to troubleshoot the capnography waveform",
+        "B. Reassess compression rate, depth, recoil, and fraction; check for hypovolemia or tension pneumothorax",
+        "C. Remove the advanced airway and return to BVM",
+        "D. Administer more epinephrine"
+      ],
+      "correct": 1,
+      "rationale": "Persistent ETCO2 below 10 mmHg despite apparently correct technique warrants a systematic reassessment of CPR quality (rate, depth, recoil, fraction) and reversible causes (hypovolemia, tension pneumothorax, massive PE).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "Which laryngoscopy technique is preferred for ET intubation during cardiac arrest?",
+      "options": ["A. Direct laryngoscopy only", "B. Video laryngoscopy", "C. Fiber-optic intubation", "D. Digital (tactile) intubation"],
+      "correct": 1,
+      "rationale": "Video laryngoscopy is preferred during cardiac arrest because it may reduce first-pass failure and compression pause duration compared with direct laryngoscopy.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q07",
+      "question": "After inserting a supraglottic airway during cardiac arrest, what must you do before continuing ventilation?",
+      "options": [
+        "A. Obtain a chest X-ray",
+        "B. Confirm placement with waveform capnography",
+        "C. Listen for breath sounds only",
+        "D. Wait for the patient to breathe spontaneously"
+      ],
+      "correct": 1,
+      "rationale": "All advanced airways, including SGAs, must be confirmed with waveform capnography. The presence of a waveform indicates effective ventilation through the device.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q08",
+      "question": "What is a key advantage of supraglottic airways over ET intubation during cardiac arrest?",
+      "options": [
+        "A. They provide superior aspiration protection",
+        "B. They are faster to insert and cause fewer compression interruptions",
+        "C. They allow higher tidal volumes",
+        "D. They do not require capnography for confirmation"
+      ],
+      "correct": 1,
+      "rationale": "SGAs can be inserted in under 15 seconds without laryngoscopy, causing fewer compression interruptions — a critical advantage during CPR. They do not provide absolute aspiration protection.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q09",
+      "question": "After ET intubation, the capnography waveform is absent. What is the correct action?",
+      "options": [
+        "A. Begin ventilating and recheck in 2 minutes",
+        "B. Assume esophageal placement; reposition or replace the tube and confirm with capnography",
+        "C. The waveform may take time to appear; continue ventilation",
+        "D. Confirm placement by auscultation alone"
+      ],
+      "correct": 1,
+      "rationale": "An absent capnography waveform after intubation strongly suggests esophageal placement. The tube must be repositioned or replaced immediately, not ventilated through.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q10",
+      "question": "Why does ETCO2 correlate with CPR quality during cardiac arrest?",
+      "options": [
+        "A. ETCO2 reflects the patient's metabolic rate",
+        "B. ETCO2 reflects cardiac output from compressions, which drives CO2 delivery to the lungs",
+        "C. ETCO2 reflects the depth of the airway tube",
+        "D. ETCO2 is independent of blood flow during arrest"
+      ],
+      "correct": 1,
+      "rationale": "During cardiac arrest, CO2 delivery to the lungs depends entirely on blood flow generated by chest compressions. Higher ETCO2 indicates better compressions; lower ETCO2 suggests inadequate flow.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "The i-gel supraglottic airway differs from the King LT in which way?",
+      "options": [
+        "A. The i-gel requires cuff inflation; the King LT does not",
+        "B. The i-gel uses a non-inflatable gel cushion; the King LT uses inflatable cuffs",
+        "C. The King LT is single-lumen; the i-gel is dual-lumen",
+        "D. The King LT is placed first during cardiac arrest"
+      ],
+      "correct": 1,
+      "rationale": "The i-gel features a non-inflatable gel-filled cushion that conforms to perilaryngeal anatomy. The King LT uses a dual-lumen design with proximal and distal inflatable cuffs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q12",
+      "question": "What is the recommended ventilation rate after an advanced airway is placed during cardiac arrest?",
+      "options": [
+        "A. One breath every 2–3 seconds (20–30 breaths/min)",
+        "B. One breath every 6 seconds (10 breaths/min), delivered independently of compressions",
+        "C. Ventilations are synchronized with compressions at a 30:2 ratio",
+        "D. Continuous positive-pressure ventilation"
+      ],
+      "correct": 1,
+      "rationale": "After an advanced airway is placed, ventilations are delivered at one breath every 6 seconds (10 breaths/min) independently of chest compressions, without interrupting compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q13",
+      "question": "Which of the following would NOT be an appropriate action when ETCO2 is persistently below 10 mmHg during CPR?",
+      "options": [
+        "A. Reassess compression depth and rate",
+        "B. Check for complete chest recoil between compressions",
+        "C. Immediately remove the ET tube and switch to BVM",
+        "D. Evaluate for reversible causes such as tension pneumothorax or hypovolemia"
+      ],
+      "correct": 2,
+      "rationale": "Persistent low ETCO2 should trigger reassessment of CPR quality and reversible causes, not immediate tube removal. The airway should remain secured while the underlying issue is addressed.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q14",
+      "question": "Over-ventilation during CPR can cause all of the following EXCEPT:",
+      "options": [
+        "A. Increased intrathoracic pressure",
+        "B. Reduced venous return",
+        "C. Improved coronary perfusion pressure",
+        "D. Gastric insufflation"
+      ],
+      "correct": 2,
+      "rationale": "Over-ventilation increases intrathoracic pressure, which reduces venous return and coronary perfusion pressure — the opposite of what is needed during CPR. It also promotes gastric insufflation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q15",
+      "question": "Why is capnography more reliable than auscultation for confirming tube position during cardiac arrest?",
+      "options": [
+        "A. Auscultation is never useful in any clinical scenario",
+        "B. During cardiac arrest, poor perfusion, low flow states, and background noise make auscultation unreliable",
+        "C. Capnography does not require an intact circulation",
+        "D. Both B and C are correct"
+      ],
+      "correct": 3,
+      "rationale": "During cardiac arrest, poor perfusion means breath sounds may be faint or absent even with correct tube placement, and background noise interferes with auscultation. Capnography detects CO2 in exhaled gas regardless of perfusion status, though ETCO2 values will be low during low-flow states.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q16",
+      "question": "After successfully placing an ET tube and confirming with capnography (ETCO2 = 15 mmHg), the team notices the waveform disappears and the patient's SpO2 begins to fall. What is the most likely cause?",
+      "options": [
+        "A. The patient has achieved ROSC",
+        "B. The ET tube has become displaced or obstructed",
+        "C. The capnography circuit is disconnected but the tube is still in place",
+        "D. ETCO2 naturally fluctuates during arrest"
+      ],
+      "correct": 1,
+      "rationale": "Sudden loss of the capnography waveform with falling SpO2 after confirmed tracheal placement most strongly suggests tube displacement or obstruction, requiring immediate re-confirmation and repositioning.",
+      "difficulty": "Hard"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "c08",
+  "title": "Pharmacology of Cardiac Arrest",
+  "shortTitle": "Cardiac Arrest Pharmacology",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "State the dose, concentration, route, and timing of epinephrine during cardiac arrest.",
+    "Explain the mechanism of action and clinical indications for amiodarone and lidocaine in VF/pVT.",
+    "Describe when sodium bicarbonate is indicated during cardiac arrest and when it is not.",
+    "State the dose and indication for magnesium sulfate in cardiac arrest.",
+    "Explain why vasopressin is no longer preferred over epinephrine in cardiac arrest.",
+    "Describe the role of adenosine and explain why it is not used in pulseless arrest.",
+    "Compare IV vs IO access during cardiac arrest, including timing considerations.",
+    "Describe the correct saline flush protocol after drug administration during CPR."
+  ],
+  "summary": [
+    {
+      "title": "Epinephrine: The Primary Vasopressor",
+      "content": "Epinephrine 1 mg IV/IO (1:10,000 concentration, 0.1 mg/mL) is the primary vasopressor in all cardiac arrest rhythms. It is given every 3–5 minutes. For nonshockable rhythms (asystole/PEA), epinephrine should be given as soon as feasible — ideally within 3–5 minutes of arrest onset. For shockable rhythms (VF/pVT), it is typically administered after the second shock. Epinephrine's alpha-adrenergic vasoconstriction increases aortic diastolic pressure, improving coronary perfusion pressure during CPR. Its beta-adrenergic effects are less beneficial during arrest and may increase myocardial oxygen demand."
+    },
+    {
+      "title": "Amiodarone: Antiarrhythmic for VF/pVT",
+      "content": "Amiodarone is the preferred antiarrhythmic for refractory VF/pVT. The first dose is 300 mg IV/IO as a rapid bolus, followed by a second dose of 150 mg IV/IO if VF/pVT persists. Amiodarone has combined Class I (sodium channel blockade), Class III (potassium channel blockade/prolonged repolarization), and Class IV (calcium channel blockade) antiarrhythmic properties. It stabilizes the myocardial membrane and suppresses ventricular arrhythmias. Side effects include hypotension (associated with the solvent polysorbate 80; standard amiodarone must be diluted in 5% dextrose in water [D5W], not normal saline, as it precipitates in saline) and bradycardia."
+    },
+    {
+      "title": "Lidocaine: Alternative Antiarrhythmic",
+      "content": "Lidocaine 1–1.5 mg/kg IV/IO is an alternative to amiodarone for refractory VF/pVT. The second dose is 0.5–0.75 mg/kg IV/IO. Lidocaine is a Class Ib antiarrhythmic that blocks fast sodium channels, shortening the action potential duration in ventricular tissue. It is preferred when amiodarone is unavailable or in the setting of cardiac arrest clearly due to acute ischemia/MI. Use one agent consistently rather than alternating between amiodarone and lidocaine within the same arrest."
+    },
+    {
+      "title": "Sodium Bicarbonate: Specific Indications Only",
+      "content": "Sodium bicarbonate (NaHCO₃) 1 mEq/kg IV is NOT a routine cardiac arrest drug. It is indicated only for specific conditions: known or suspected hyperkalemia with cardiac arrest, tricyclic antidepressant overdose, and known bicarbonate-responsive acidosis. Routine use during cardiac arrest is not recommended because it can cause hypernatremia, hyperosmolality, and a paradoxical intracellular acidosis. It should be considered only after other interventions are underway, not as a first-line arrest drug."
+    },
+    {
+      "title": "Magnesium Sulfate: Torsades de Pointes",
+      "content": "Magnesium sulfate 1–2 g IV over 5–20 minutes is indicated specifically for torsades de pointes (polymorphic VT with prolonged QT) and for suspected hypomagnesemia contributing to arrhythmias. It is NOT indicated for ordinary VF or pulseless VT. In torsades, magnesium stabilizes the cardiac membrane and suppresses the early afterdepolarizations that trigger the arrhythmia. For pulseless torsades, it may be given as a bolus; for torsades with a pulse, it is given as an infusion."
+    },
+    {
+      "title": "Vasopressin: A Largely Replaced Agent",
+      "content": "Vasopressin (20 IU IV/IO) was previously used as an alternative or adjunct to epinephrine in cardiac arrest. The 2025 guidelines confirm that epinephrine alone is preferred — vasopressin offers no demonstrated survival advantage over epinephrine for most cardiac arrests. In selected in-hospital arrests, low-dose vasopressin with epinephrine and methylprednisolone followed by post-ROSC hydrocortisone may be considered (Class 2b), but this is not routine and not used for OHCA in this course."
+    },
+    {
+      "title": "Adenosine: Not for Pulseless Arrest",
+      "content": "Adenosine is aAV nodal-blocking agent used for regular, narrow-complex supraventricular tachycardia (SVT) with a pulse. It is absolutely NOT indicated in pulseless arrest (asystole, PEA, VF, or pVT). Adenosine has an extremely short half-life (6 seconds) and requires rapid IV push followed by saline flush to reach the heart. It has no role in the cardiac arrest pharmacology toolkit."
+    },
+    {
+      "title": "IV vs IO Access and Drug Delivery",
+      "content": "IV access is preferred first-line during cardiac arrest. IO access is reasonable when IV access cannot be obtained quickly — drugs delivered via IO reach the central circulation with comparable speed and bioavailability to IV access. All cardiac arrest drugs can be given by either route. After each drug bolus, a 10–20 mL normal saline flush should be administered, followed by IV/IO fluid push to ensure the drug reaches the central circulation. Position the extremity if using a peripheral IV to enhance venous return."
+    }
+  ],
+  "clinicalPearls": [
+    "Epinephrine 1:10,000 (NOT 1:1,000) — the wrong concentration can cause severe harm; always verify.",
+    "Amiodarone must be diluted in 5% dextrose in water (D5W) for infusions; standard amiodarone is incompatible with normal saline and will precipitate.",
+    "Sodium bicarbonate is not a routine arrest drug — reserve it for hyperkalemia, TCA overdose, and documented bicarbonate-responsive acidosis.",
+    "Adenosine has zero role in pulseless arrest — it is only for SVT with a pulse.",
+    "All arrest drugs can be given IV or IO; IO is faster to establish and has equivalent drug bioavailability."
+  ],
+  "redFlags": [
+    "Using epinephrine 1:1,000 instead of 1:10,000 — this is a 10-fold overdose.",
+    "Diluting standard amiodarone in normal saline instead of dextrose (D5W) — normal saline causes drug precipitation.",
+    "Administering sodium bicarbonate as a routine arrest drug without specific indications.",
+    "Attempting adenosine in a pulseless rhythm — this is ineffective and wastes time."
+  ],
+  "commonMistakes": [
+    "Giving epinephrine as a continuous infusion instead of intermittent 1 mg boluses every 3–5 minutes.",
+    "Alternating between amiodarone and lidocaine within the same arrest rather than using one consistently.",
+    "Forgetting the saline flush after drug administration — the drug may remain in peripheral veins without reaching the heart.",
+    "Using vasopressin as a first-line agent instead of epinephrine — epinephrine alone is preferred."
+  ],
+  "memoryAids": [
+    "Epi 1 mg every 3–5 min — always 1:10,000.",
+    "Amiodarone: 300 first, 150 second. Lidocaine: 1–1.5 first, 0.5–0.75 second.",
+    "Bicarb is not routine — think Hyperkalemia, TCA, Acidosis.",
+    "Adenosine = pulse only, never arrest.",
+    "After every drug: flush, flush, flush."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Cardiac Arrest Drug Selection by Rhythm",
+      "content": "Cardiac arrest confirmed\n  → Is the rhythm shockable (VF/pVT)?\n     YES:\n       → Defibrillate immediately\n       → After 2nd shock: Epinephrine 1 mg IV/IO q3–5 min\n       → If VF/pVT persists: Amiodarone 300 mg IV/IO first, then 150 mg\n         OR Lidocaine 1–1.5 mg/kg IV/IO first, then 0.5–0.75 mg/kg\n     NO (Asystole/PEA):\n       → CPR + Ventilations\n       → Epinephrine 1 mg IV/IO as soon as feasible (within 3–5 min), then q3–5 min\n       → Search for H's & T's\n       → Specific drugs for specific causes:\n          • Hyperkalemia → Calcium, insulin/glucose, NaHCO₃\n          • TCA OD → NaHCO₃ 1 mEq/kg IV\n          • Torsades → Magnesium 1–2 g IV\n  → Adenosine is NEVER used in any pulseless rhythm."
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (Pharmacology)",
+    "AHA 2025 Drug Dosing Reference for ACLS"
+  ],
+  "graphics": [
+    {
+      "id": "c08_g01",
+      "section": "summary",
+      "sectionIndex": 7,
+      "url": "../../images/courses/acls/c08_g01.webp",
+      "alt": "Intraosseous (IO) Access Sites",
+      "caption": "Anatomical diagram showing the primary insertion sites for adult IO access: proximal humerus and proximal tibia."
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "A patient has a heart rate of 45/min with normal blood pressure, clear mentation, and no chest pain. What is the correct initial action?",
+      "options": ["A. Give atropine 1 mg IV immediately", "B. Begin transcutaneous pacing", "C. Monitor and observe while investigating the cause", "D. Start a dopamine infusion"],
+      "correct": 2,
+      "rationale": "Asymptomatic bradycardia without signs of instability is observed and investigated, not immediately treated with drugs or pacing.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "What is the correct first-line drug dose for symptomatic bradycardia?",
+      "options": ["A. Atropine 0.5 mg IV once", "B. Atropine 1 mg IV/IO, may repeat q3-5min to max 3 mg", "C. Epinephrine 1 mg IV every 3-5 min", "D. Atropine 3 mg IV as a single dose"],
+      "correct": 1,
+      "rationale": "Atropine 1 mg IV or IO is given first, repeated every 3–5 minutes to a maximum total of 3 mg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "A patient with symptomatic bradycardia has a wide-QRS third-degree AV block. Atropine 1 mg has just been given. What is the best next step?",
+      "options": [
+        "A. Repeat atropine and wait to see if it works",
+        "B. Prepare for transcutaneous pacing and/or an infusion without delay, since infranodal block is unlikely to respond to atropine",
+        "C. Give a second 3 mg dose of atropine immediately",
+        "D. Discharge the patient"
+      ],
+      "correct": 1,
+      "rationale": "High-grade/third-degree block with a wide QRS is infranodal and unlikely to respond to atropine; pacing or an infusion should not be delayed by repeated ineffective atropine dosing.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q04",
+      "question": "What is the maximum total dose of atropine for bradycardia?",
+      "options": ["A. 1 mg", "B. 2 mg", "C. 3 mg", "D. 5 mg"],
+      "correct": 2,
+      "rationale": "Atropine is dosed 1 mg IV/IO, repeated every 3–5 minutes, to a maximum total of 3 mg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q05",
+      "question": "Transcutaneous pacing has been started. Pacing spikes with a wide QRS are seen on the monitor, but no pulse is palpable at the paced rate. What is the correct interpretation?",
+      "options": [
+        "A. This is adequate capture; continue as is",
+        "B. Electrical capture without mechanical capture — treat as if pacing is not working (consider PEA/shock)",
+        "C. Increase the pacing rate only",
+        "D. This confirms successful pacing"
+      ],
+      "correct": 1,
+      "rationale": "Electrical capture (spike + QRS) without a corresponding pulse means there is no effective mechanical capture; the patient's perfusion status must be reassessed.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q06",
+      "question": "Which two second-line options can be used when atropine fails in symptomatic bradycardia?",
+      "options": ["A. Amiodarone and lidocaine", "B. Transcutaneous pacing and dopamine or epinephrine infusion", "C. Adenosine and vagal maneuvers", "D. Synchronized cardioversion and magnesium"],
+      "correct": 1,
+      "rationale": "When atropine is ineffective, transcutaneous pacing and dopamine or epinephrine infusion are the recommended next-line therapies.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "A conscious patient is undergoing transcutaneous pacing. What should be provided if hemodynamically tolerated?",
+      "options": ["A. General anesthesia", "B. Analgesia/sedation for the discomfort of pacing", "C. Nothing is needed", "D. Neuromuscular blockade only"],
+      "correct": 1,
+      "rationale": "Transcutaneous pacing is uncomfortable due to skeletal muscle contraction; analgesia/sedation should be given if the patient can tolerate it hemodynamically.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "Which of the following is a reversible cause of bradycardia that should be actively sought?",
+      "options": ["A. Beta-blocker toxicity", "B. Recent tetanus vaccination", "C. Seasonal allergies", "D. Mild dehydration only"],
+      "correct": 0,
+      "rationale": "Beta-blocker, calcium-channel blocker, and digoxin toxicity, hyperkalemia, hypothyroidism, inferior MI, and increased ICP are all reversible/underlying causes to investigate.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q09",
+      "question": "Why is atropine more effective for sinus node dysfunction than for a Mobitz type II block?",
+      "options": [
+        "A. Atropine works by blocking vagal tone at the SA/AV node, and Mobitz II is an infranodal block not mediated by vagal tone",
+        "B. Atropine has no mechanism relevant to bradycardia",
+        "C. Mobitz II always resolves spontaneously",
+        "D. Atropine only works on wide-QRS rhythms"
+      ],
+      "correct": 0,
+      "rationale": "Atropine's antivagal mechanism is effective at the SA/AV node level but does not address infranodal conduction disease, which is why escalation is needed for Mobitz II/third-degree block.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q10",
+      "question": "A patient becomes hypotensive and confused with a heart rate of 38/min. What is this classified as?",
+      "options": ["A. Asymptomatic bradycardia", "B. Symptomatic (unstable) bradycardia", "C. Normal sinus rhythm", "D. Tachycardia"],
+      "correct": 1,
+      "rationale": "Hypotension and altered mental status with a slow rate meet the definition of symptomatic/unstable bradycardia requiring treatment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q11",
+      "question": "What starting pacing rate is commonly used for transcutaneous pacing?",
+      "options": ["A. 20-30/min", "B. 60-80/min", "C. 150-180/min", "D. 250/min"],
+      "correct": 1,
+      "rationale": "A common starting target for transcutaneous pacing is 60–80/min, titrated to clinical response.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q12",
+      "question": "Which statement about dopamine and epinephrine infusions in bradycardia is correct?",
+      "options": [
+        "A. They must always follow pacing and cannot be started first",
+        "B. They are alternative second-line options that may be used instead of or alongside pacing",
+        "C. They are first-line before atropine",
+        "D. They are contraindicated in bradycardia"
+      ],
+      "correct": 1,
+      "rationale": "Dopamine and epinephrine infusions are alternative second-line options, useful especially when pacing is unavailable or not tolerated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q13",
+      "question": "A bradycardic patient is found to have severe hyperkalemia. What is an important part of management?",
+      "options": [
+        "A. Ignore the potassium and only give atropine",
+        "B. Treat the hyperkalemia as part of addressing the underlying/reversible cause of bradycardia",
+        "C. Withhold all bradycardia treatment until dialysis",
+        "D. Give atropine 5 mg immediately"
+      ],
+      "correct": 1,
+      "rationale": "Bradycardia may be a manifestation of a reversible metabolic cause; treating hyperkalemia directly addresses the underlying problem.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q14",
+      "question": "What confirms successful transcutaneous pacing capture?",
+      "options": [
+        "A. A pacing spike alone on the monitor",
+        "B. A paced spike immediately followed by a wide QRS/T wave, with a palpable pulse matching the paced rate",
+        "C. Patient verbal report only",
+        "D. Any heart rate above 60/min"
+      ],
+      "correct": 1,
+      "rationale": "Both electrical capture (spike-QRS-T) and mechanical capture (a palpable pulse at the paced rate) must be confirmed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q15",
+      "question": "A patient with symptomatic bradycardia due to suspected calcium-channel blocker overdose is not responding to standard atropine dosing. What is a reasonable next consideration?",
+      "options": [
+        "A. Continue atropine indefinitely",
+        "B. Escalate to pacing/infusion and treat the toxin-specific cause per toxicology guidance in parallel",
+        "C. Give more atropine beyond 3 mg total",
+        "D. No further action is needed"
+      ],
+      "correct": 1,
+      "rationale": "Escalation to pacing or infusion should proceed without delay while the reversible toxic cause is addressed in parallel.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q16",
+      "question": "Which of these findings would classify bradycardia as symptomatic/unstable?",
+      "options": ["A. Mild fatigue only", "B. Acute heart failure signs", "C. Normal blood pressure and clear mentation", "D. Rate of 55/min with no symptoms"],
+      "correct": 1,
+      "rationale": "Acute heart failure is one of the defined signs of cardiopulmonary compromise that makes bradycardia symptomatic and warrants treatment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q17",
+      "question": "Why should a provider avoid repeatedly re-dosing atropine beyond the maximum in a deteriorating bradycardic patient?",
+      "options": [
+        "A. Because it has no ceiling effect and is always safe to keep giving",
+        "B. Because further doses beyond 3 mg add little benefit and delay effective escalation to pacing/infusion",
+        "C. Because atropine is contraindicated in all bradycardia",
+        "D. Because it must always be given with epinephrine"
+      ],
+      "correct": 1,
+      "rationale": "Atropine has a defined maximum total dose of 3 mg; exceeding this without benefit only delays more effective escalation therapy.",
+      "difficulty": "Hard"
+    }
+  ]
+}

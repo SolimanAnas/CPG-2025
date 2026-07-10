@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "SVT in the Parking Lot",
+      "presentation": "A 32-year-old woman presents to the ED after experiencing sudden-onset palpitations, lightheadedness, and near-syncope in the parking lot. She has no prior cardiac history. On arrival, she is diaphoretic with a rapid, regular heart rate on the monitor.",
+      "vitals": { "hr": 210, "bp": "84/52", "rr": 20, "spo2": "98%", "loc": "Alert but confused" },
+      "question": "What is the correct initial management?",
+      "options": [
+        "A: Give adenosine 6 mg and wait for a response.",
+        "B: Start a diltiazem drip for rate control.",
+        "C: Immediate synchronized cardioversion — this is unstable tachycardia.",
+        "D: Perform a carotid sinus massage and observe."
+      ],
+      "correct": 2,
+      "explanation": "The patient has unstable tachycardia: hypotension (BP 84/52), near-syncope, diaphoresis, and confusion all indicate hemodynamic compromise. Immediate synchronized cardioversion is indicated — do not waste time on drug therapy or vagal maneuvers.",
+      "clinicalPearl": "Unstable = shock first, ask questions later. Cardioversion takes seconds; drugs take minutes."
+    },
+    {
+      "id": "c11_s02",
+      "title": "The Wide-Complex Dilemma",
+      "presentation": "A 58-year-old man with a history of coronary artery disease presents to the ED with palpitations. He is alert, conversational, and in no acute distress. The monitor shows a regular wide-complex tachycardia.",
+      "vitals": { "hr": 148, "bp": "122/78", "rr": 18, "spo2": "97%", "loc": "Alert" },
+      "question": "What is the correct management approach?",
+      "options": [
+        "A: Give adenosine 12 mg to determine if it is SVT.",
+        "B: Assume VT until proven otherwise; give amiodarone 150 mg IV over 10 minutes since the patient is stable.",
+        "C: Immediate synchronized cardioversion at 200 J.",
+        "D: Give verapamil for rate control."
+      ],
+      "correct": 1,
+      "explanation": "Regular wide-complex tachycardia should be assumed VT until proven otherwise, especially in a patient with structural heart disease (coronary artery disease). Since the patient is stable (normal blood pressure, no symptoms of compromise), pharmacologic therapy with amiodarone 150 mg over 10 minutes is appropriate. Verapamil is dangerous if this is VT.",
+      "clinicalPearl": "When in doubt, it is VT — treating SVT as VT is less harmful than the reverse. Never give verapamil for an assumed SVT without being certain."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Chaotic Rhythm in the Elderly",
+      "presentation": "An 82-year-old woman presents to the ED with shortness of breath and palpitations. The ECG shows an irregularly irregular narrow-complex tachycardia with no discernible P waves. She has a history of hypertension and prior stroke.",
+      "vitals": { "hr": 164, "bp": "102/64", "rr": 24, "spo2": "93%", "loc": "Alert, mild distress" },
+      "question": "What is the most likely rhythm and the appropriate initial management?",
+      "options": [
+        "A: SVT — give adenosine 6 mg rapid IV.",
+        "B: Atrial fibrillation with rapid ventricular response — initiate rate control with diltiazem or metoprolol.",
+        "C: Polymorphic VT — defibrillate immediately.",
+        "D: Atrial flutter — give amiodarone 150 mg over 10 minutes."
+      ],
+      "correct": 1,
+      "explanation": "The irregularly irregular rhythm with no P waves is classic for atrial fibrillation. The patient is stable (BP 102/64), so rate control with a calcium-channel blocker (diltiazem) or beta-blocker (metoprolol) is appropriate. Adenosine is not effective for AF rate control.",
+      "clinicalPearl": "Irregularly irregular + no P waves = AF until proven otherwise. In a stable patient, rate control is the priority; cardioversion is reserved for unstable patients."
+    }
+  ]
+}

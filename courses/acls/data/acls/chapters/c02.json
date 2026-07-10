@@ -1,0 +1,73 @@
+{
+  "id": "c02",
+  "title": "High-Quality BLS Inside ACLS & Team Dynamics",
+  "shortTitle": "BLS Quality & Teams",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "State the compression rate, depth, and recoil targets that must be preserved throughout an ACLS resuscitation.",
+    "Explain chest compression fraction (CCF) and why it is a core team performance metric.",
+    "Describe the ventilation strategy once an advanced airway is placed (continuous compressions + 1 breath every 6 seconds).",
+    "List the core elements of effective resuscitation team dynamics.",
+    "Describe closed-loop communication and give an example.",
+    "Explain the concept of constructive intervention and when a team member should use it.",
+    "Describe the role of a dedicated CPR coach during a resuscitation."
+  ],
+  "summary": [
+    {
+      "title": "Why BLS Quality Doesn't Stop When ACLS Starts",
+      "content": "Every ACLS intervention is built on top of high-quality BLS. Adding drugs, airways, and rhythm therapy does not lower the bar for compressions — it raises the stakes of protecting them. Teams that let compression quality slip while focusing on advanced tasks lose the single strongest driver of survival."
+    },
+    {
+      "title": "Compression Quality Targets in ACLS",
+      "content": "Rate 100–120/min; depth at least 2 in (5 cm) and not more than 2.4 in (6 cm); full chest recoil between compressions; minimize interruptions and keep any pause under 10 seconds; switch the compressor roughly every 2 minutes (or sooner if fatigued) to prevent quality decay. Chest compression fraction (CCF) — the proportion of resuscitation time spent actually compressing — should be at least 60%, and ideally above 80%; it is one of the most important team performance metrics because every pause, no matter how well-intentioned, drops it."
+    },
+    {
+      "title": "Ventilation Once an Advanced Airway Is Placed",
+      "content": "Before an advanced airway, compressions and breaths remain cycled 30:2. Once a supraglottic airway or endotracheal tube is in place, compressions become continuous (no more pausing for breaths) and a single breath is delivered every 6 seconds (about 10 breaths/min), timed independently of the compression cycle. Avoid excessive ventilation rate or volume — over-ventilation raises intrathoracic pressure, reduces venous return, and lowers cardiac output during CPR."
+    },
+    {
+      "title": "Core Elements of Team Dynamics",
+      "content": "Effective resuscitation teams rely on: clearly defined roles known to everyone before the code; closed-loop communication (order given by name and content, receiver repeats it back, sender confirms); clear, concise messages instead of vague or shouted ones; knowing and communicating your own limitations before attempting a task; constructive intervention when an error is about to happen; frequent reevaluation of the patient and plan; and mutual respect maintained even under stress."
+    },
+    {
+      "title": "Closed-Loop Communication in Practice",
+      "content": "The team leader assigns a task to a named person ('Sarah, push epinephrine 1 mg now'), the receiver acknowledges and states the action ('Giving epinephrine 1 mg now'), and confirms completion ('Epinephrine 1 mg given'). This loop prevents duplicated or missed interventions and keeps the whole team's mental model synchronized, especially in a loud, high-stress environment."
+    },
+    {
+      "title": "Constructive Intervention and the CPR Coach",
+      "content": "Any team member who notices an error — a drug about to be given twice, a pulse check taking too long, compression depth trailing off — should speak up immediately and respectfully; a good leader invites this rather than punishing it. Many systems now designate a CPR coach whose only job is to watch compression quality (rate, depth, recoil, pauses) and give real-time feedback, freeing the team leader to focus on rhythm interpretation and overall management."
+    }
+  ],
+  "clinicalPearls": [
+    "CCF is a team score, not an individual one — everyone's pauses count against it.",
+    "Once an advanced airway is in, stop counting cycles of 30:2 — it's continuous compressions plus one breath every 6 seconds.",
+    "A closed loop takes two seconds and prevents a double dose or a missed task; skipping it to 'save time' usually costs more time later.",
+    "Silence during a resuscitation is a red flag — a quiet team is not necessarily a smooth one."
+  ],
+  "redFlags": [
+    "Compression pauses creeping past 10 seconds for pulse checks, rhythm analysis, or airway attempts.",
+    "No one has been assigned to track time and compression quality (no CPR coach or timer role).",
+    "Team members hesitating to speak up about a perceived error because of hierarchy."
+  ],
+  "commonMistakes": [
+    "Continuing 30:2 cycling after an advanced airway is already in place.",
+    "Vague, unaddressed orders ('someone give epi') instead of naming a specific person.",
+    "Allowing compression rate to drift above 120/min under adrenaline and stress, sacrificing depth and recoil."
+  ],
+  "memoryAids": [
+    "'Airway in, cycle out' — advanced airway means continuous compressions, no more 30:2.",
+    "Closed loop: Say it, do it, confirm it.",
+    "CCF ≥60%, ideally >80% — protect it like a vital sign."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Ventilation Strategy During Arrest",
+      "content": "Cardiac arrest, CPR ongoing\n  → No advanced airway yet: 30 compressions : 2 breaths, minimize pause for breaths\n  → Advanced airway placed (SGA or ETT) and confirmed\n     → Continuous compressions (no pause for breaths)\n     → 1 breath every 6 seconds (~10/min), avoid hyperventilation\n  → Reassess quality every ~2 minutes: rate, depth, recoil, CCF, switch compressor"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (CPR Quality)",
+    "AHA 2025 Guidelines for CPR and ECC — Adult Basic Life Support (Ventilation With an Advanced Airway)"
+  ]
+}

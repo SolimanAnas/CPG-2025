@@ -1,0 +1,40 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Advanced Airway Management During Cardiac Arrest",
+      "description": "Decision pathway for securing an advanced airway during CPR, integrating BVM, supraglottic airways, and ET intubation with capnography confirmation.",
+      "steps": [
+        "Cardiac arrest recognized — begin high-quality CPR with BVM ventilation (one breath every 6 seconds, visible chest rise).",
+        "Determine if an advanced airway is indicated and which device to use based on available skill and equipment.",
+        "If ET intubation is chosen and an experienced provider is available: perform laryngoscopy (video preferred) during continuous compressions; limit attempt to ≤10 seconds.",
+        "If SGA is chosen (or intubation is not immediately feasible): insert i-gel or King LT during continuous compressions (<15 seconds typical).",
+        "After device placement, confirm position with waveform capnography.",
+        "If waveform is present (characteristic rectangular CO2 waveform): continue CPR with continuous capnography monitoring.",
+        "If waveform is absent: assume esophageal placement — remove/replace the device, return to BVM between attempts.",
+        "Once advanced airway confirmed: deliver 1 breath every 6 seconds (10 breaths/min) independently of compressions.",
+        "Monitor ETCO2 throughout CPR: target ≥10 mmHg for adequate compression quality; sudden sustained rise ≥40 mmHg suggests ROSC.",
+        "If ETCO2 drops or waveform disappears: re-check tube/device position, then reassess CPR quality and reversible causes."
+      ]
+    },
+    {
+      "id": "c03_alg02",
+      "title": "ETCO2-Guided CPR Quality Monitoring",
+      "description": "Using continuous waveform capnography to assess and improve CPR quality during cardiac arrest.",
+      "image": "../../images/courses/acls/c03_g01.webp",
+      "steps": [
+        "Advanced airway placed and confirmed — continuous waveform capnography active on monitor.",
+        "Measure ETCO2 after each cycle of compressions.",
+        "If ETCO2 ≥10 mmHg: compressions are likely generating adequate cardiac output — continue current technique.",
+        "If ETCO2 persistently <10 mmHg: systematically reassess CPR quality.",
+        "Check compression rate: should be 100–120 compressions per minute.",
+        "Check compression depth: at least 2 inches (5 cm) in adults, allow full chest recoil.",
+        "Check compression fraction: should be ≥80%.",
+        "If CPR quality is adequate, evaluate for reversible causes: hypovolemia, tension pneumothorax, cardiac tamponade, massive pulmonary embolism, severe acidosis.",
+        "If ETCO2 suddenly rises to ≥40 mmHg and remains elevated: suspect ROSC — perform manual pulse check.",
+        "If pulse is confirmed: transition to post-cardiac arrest care; if no pulse, continue CPR and reassess."
+      ]
+    }
+  ]
+}

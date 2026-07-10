@@ -1,0 +1,239 @@
+{
+  "chapter": "c14",
+  "questions": [
+    {
+      "id": "c14_q01",
+      "question": "What is the recommended temperature target after cardiac arrest if TTM is chosen?",
+      "options": [
+        "A. 28–32°C",
+        "B. 30–34°C",
+        "C. 32–37.5°C for at least 36 hours",
+        "D. 36–37°C (normothermia only)"
+      ],
+      "correct": 2,
+      "rationale": "If TTM is chosen, the 2025 AHA guidelines recommend selecting and maintaining a constant temperature between 32–37.5°C for at least 36 hours. Maintaining ≤37.5°C is the minimum standard regardless of the TTM approach.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q02",
+      "question": "When must neuroprognostication be performed after cardiac arrest?",
+      "options": [
+        "A. Immediately upon ROSC",
+        "B. At 24 hours post-ROSC",
+        "C. ≥72 hours after ROSC (or after rewarming)",
+        "D. At 7 days post-ROSC"
+      ],
+      "correct": 2,
+      "rationale": "Neuroprognostication must be deferred to ≥72 hours after ROSC (or after rewarming if TTM was used), to allow clearance of sedation, paralysis, and metabolic derangements that confound the examination.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q03",
+      "question": "What is the MAP target after ROSC?",
+      "options": [
+        "A. ≥50 mmHg",
+        "B. ≥65 mmHg (SBP >90 mmHg)",
+        "C. ≥80 mmHg",
+        "D. ≥100 mmHg"
+      ],
+      "correct": 1,
+      "rationale": "MAP ≥65 mmHg (SBP >90 mmHg) is the hemodynamic target. Both hypotension (MAP <60) and excessive hypertension (MAP >100) worsen neurological outcomes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q04",
+      "question": "What percentage of cardiac arrest survivors may have STEMI on post-ROSC ECG?",
+      "options": [
+        "A. 5–10%",
+        "B. 25–50%",
+        "C. 75–90%",
+        "D. STEMI never occurs post-ROSC"
+      ],
+      "correct": 1,
+      "rationale": "Approximately 25–50% of cardiac arrest survivors have acute STEMI on post-ROSC 12-lead ECG, making immediate ECG acquisition critical.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q05",
+      "question": "What is the target ETCO₂ range during normothermic ventilation after ROSC?",
+      "options": [
+        "A. 25–35 mmHg",
+        "B. 35–45 mmHg",
+        "C. 45–55 mmHg",
+        "D. 50–60 mmHg"
+      ],
+      "correct": 1,
+      "rationale": "Target ETCO₂ is 35–45 mmHg. Both hyperventilation (ETCO₂ <35) and hypoventilation (ETCO₂ >45) worsen cerebral perfusion after cardiac arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q06",
+      "question": "What are the indications for ECPR?",
+      "options": [
+        "A. All cardiac arrests regardless of cause",
+        "B. Selected refractory VF/pVT, low-flow time <60 minutes, reversible cause, suitable candidate",
+        "C. Only asystole/PEA arrests",
+        "D. All arrests with downtime >30 minutes"
+      ],
+      "correct": 1,
+      "rationale": "ECPR is indicated for selected refractory cardiac arrest (persistent VF/pVT despite standard ACLS), expected low-flow time <60 minutes, potentially reversible cause, and suitable candidates.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q07",
+      "question": "Why should neuroprognostication NOT be performed before 72 hours?",
+      "options": [
+        "A. Because the brain has not been injured yet",
+        "B. Because sedation, paralytics, metabolic derangements, and hypothermia confound the neurological examination",
+        "C. Because 72 hours is arbitrary and has no evidence",
+        "D. Because EEG is not available before 72 hours"
+      ],
+      "correct": 1,
+      "rationale": "Multiple factors confound the neurological exam before 72 hours: sedation and paralytics depress consciousness, metabolic derangements alter exam findings, and hypothermia affects neurological function. Early exams are unreliable.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q08",
+      "question": "What is the preferred first-line vasopressor for hemodynamic support after ROSC?",
+      "options": [
+        "A. Phenylephrine",
+        "B. Norepinephrine",
+        "C. Epinephrine",
+        "D. Dopamine"
+      ],
+      "correct": 1,
+      "rationale": "Norepinephrine (starting 0.1–0.5 mcg/kg/min, titrated to MAP ≥65) is the preferred first-line vasopressor. Dobutamine may be added for myocardial dysfunction.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q09",
+      "question": "What is the maximum recommended rewarming rate after TTM?",
+      "options": [
+        "A. ≤0.1°C per hour",
+        "B. ≤0.25°C per hour",
+        "C. ≤0.5°C per hour",
+        "D. Rapid rewarming is preferred"
+      ],
+      "correct": 1,
+      "rationale": "Rewarming should be slow and controlled at ≤0.25°C per hour to prevent rebound intracranial hypertension, hemodynamic instability, and metabolic derangements.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q10",
+      "question": "What NSE (neuron-specific enolase) level at 48–72 hours suggests poor neurological prognosis?",
+      "options": [
+        "A. >10 mcg/L",
+        "B. >20 mcg/L",
+        "C. >33 mcg/L",
+        "D. >50 mcg/L"
+      ],
+      "correct": 2,
+      "rationale": "NSE >33 mcg/L at 48–72 hours post-ROSC is associated with poor neurological outcome, but must be interpreted within the multimodal prognostication framework — no single test is sufficient.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c14_q11",
+      "question": "Which clinical examination findings at ≥72 hours post-ROSC suggest poor neurological prognosis?",
+      "options": [
+        "A. Bilateral pupillary reflexes present, purposeful motor response",
+        "B. Bilateral absent pupillary and corneal reflexes with absent motor response to pain",
+        "C. Unilateral absent pupillary reflex only",
+        "D. Mildly sluggish but present reflexes"
+      ],
+      "correct": 1,
+      "rationale": "At ≥72 hours, bilateral absent pupillary and corneal reflexes combined with absent motor response to painful stimuli (or extensor posturing) are indicators of poor prognosis — but must be confirmed with multimodal assessment.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c14_q12",
+      "question": "What is the minimum temperature standard after cardiac arrest if TTM is NOT chosen?",
+      "options": [
+        "A. ≤36.0°C",
+        "B. ≤37.0°C",
+        "C. ≤37.5°C",
+        "D. ≤38.0°C"
+      ],
+      "correct": 2,
+      "rationale": "Even if TTM at 32–37.5°C is not chosen, the minimum standard is maintaining temperature ≤37.5°C with continuous monitoring and immediate treatment of any fever.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q13",
+      "question": "What imaging finding on post-arrest CT suggests severe hypoxic-ischemic brain injury?",
+      "options": [
+        "A. Focal lacunar infarcts",
+        "B. Diffuse cerebral edema or loss of gray-white matter differentiation",
+        "C. Single small vessel territory infarct",
+        "D. Normal CT appearance"
+      ],
+      "correct": 1,
+      "rationale": "Diffuse cerebral edema or loss of gray-white matter differentiation on CT indicates severe hypoxic-ischemic brain injury and is associated with poor neurological prognosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q14",
+      "question": "ECPR involves which type of circulatory support?",
+      "options": [
+        "A. Intra-aortic balloon pump only",
+        "B. Veno-arterial ECMO (VA-ECMO) via femoral cannulation",
+        "C. Impella left ventricular assist device only",
+        "D. Peripheral cardiopulmonary bypass with cardiac cooling"
+      ],
+      "correct": 1,
+      "rationale": "ECPR typically uses veno-arterial (VA-ECMO) with femoral venous drainage and femoral arterial return, placed percutaneously under ultrasound guidance. A distal perfusion catheter prevents limb ischemia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q15",
+      "question": "What is the ECMO weaning approach?",
+      "options": [
+        "A. Abrupt discontinuation after 24 hours",
+        "B. Gradual reduction guided by echocardiographic recovery, hemodynamic stability, and ETCO₂ trends",
+        "C. Weaning is not possible — ECMO is permanent",
+        "D. Weaned based on time only, regardless of cardiac function"
+      ],
+      "correct": 1,
+      "rationale": "Weaning from ECMO is guided by echocardiographic recovery of native cardiac function, hemodynamic stability on decreasing support, and clinical assessment — performed in a monitored setting with resuscitation equipment available.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c14_q16",
+      "question": "What does ECPR represent in the treatment pathway — a bridge or a destination therapy?",
+      "options": [
+        "A. Destination therapy — permanent support",
+        "B. A bridge to further therapy (PCI, TTM, native cardiac recovery)",
+        "C. An alternative to standard ACLS",
+        "D. A last resort with no further treatment options"
+      ],
+      "correct": 1,
+      "rationale": "ECPR is a bridge — it provides temporary circulatory support while the reversible cause of arrest is identified and treated. It is weaned as native cardiac function recovers.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q17",
+      "question": "Which multimodal approach is used for neuroprognostication after cardiac arrest?",
+      "options": [
+        "A. Clinical exam only",
+        "B. Clinical exam + SSEPs + EEG + NSE/S-100B + neuroimaging",
+        "C. CT scan only",
+        "D. Serum lactate level alone"
+      ],
+      "correct": 1,
+      "rationale": "Neuroprognostication requires a multimodal approach combining clinical examination, electrophysiology (SSEPs, EEG), serum biomarkers (NSE, S-100B), and neuroimaging (CT/MRI). No single modality is sufficient alone.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q18",
+      "question": "When should rehabilitation planning begin for a cardiac arrest survivor?",
+      "options": [
+        "A. Only after hospital discharge",
+        "B. Only after neuroprognostication is complete",
+        "C. Early in the ICU with passive range of motion and mobilization; formal referral before discharge",
+        "D. Rehabilitation is not part of cardiac arrest care"
+      ],
+      "correct": 2,
+      "rationale": "Rehabilitation begins early in the ICU with passive range of motion, upright positioning, and mobilization. Formal referral to cardiac rehabilitation, neurorehabilitation, and psychosocial services should be initiated before discharge.",
+      "difficulty": "Easy"
+    }
+  ]
+}

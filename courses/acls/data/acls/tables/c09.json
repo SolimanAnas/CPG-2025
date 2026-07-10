@@ -1,0 +1,44 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "The H's and T's — Reversible Causes of Cardiac Arrest",
+      "headers": ["Category", "Cause", "Key Finding / Test", "Initial Treatment"],
+      "rows": [
+        ["H", "Hypovolemia", "Flat IVC on US, hemorrhage history, dehydration", "IV fluids or blood products"],
+        ["H", "Hypoxia", "Low SpO₂, inadequate ventilation", "Ensure advanced airway, 100% O₂, confirm ETCO₂"],
+        ["H", "Hydrogen ion (acidosis)", "Low pH on blood gas, prolonged arrest", "Improve ventilation; treat the cause; avoid empiric bicarb"],
+        ["H", "Hypo-/Hyperkalemia", "ECG changes (peaked T / wide QRS for hyperkalemia)", "Ca²⁺, bicarb, insulin/glucose, albuterol for hyperkalemia"],
+        ["H", "Hypothermia", "Core temp <35°C, cold exposure", "Active rewarming; do not stop until ≥32°C"],
+        ["T", "Tension pneumothorax", "Absent breath sounds, tracheal deviation, JVD", "Needle decompression → chest tube"],
+        ["T", "Tamponade", "Muffled heart sounds, JVD, pulsus paradoxus, US effusion", "Pericardiocentesis"],
+        ["T", "Toxins", "Medication history, toxidrome findings", "Specific antidotes (Fab for digoxin, intralipid, etc.)"],
+        ["T", "Thrombosis (pulmonary)", "DVT risk factors, RV strain on US, PE history", "Thrombolysis or embolectomy"],
+        ["T", "Thrombosis (coronary)", "Acute MI on ECG, ischemic changes", "Defibrillation, emergent PCI"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "Antiarrhythmic Drugs for Refractory VF/pVT",
+      "headers": ["Drug", "Dose", "Route", "Repeat Dose", "Notes"],
+      "rows": [
+        ["Amiodarone (1st dose)", "300 mg", "IV/IO bolus", "150 mg once if needed", "First-line antiarrhythmic for refractory VF/pVT"],
+        ["Lidocaine", "1–1.5 mg/kg", "IV/IO bolus", "0.5–0.75 mg/kg up to 3 mg/kg total", "Alternative if amiodarone unavailable"],
+        ["Magnesium sulfate", "1–2 g", "IV/IO", "May repeat for torsades", "Specifically for polymorphic VT (torsades de pointes)"],
+        ["Epinephrine", "1 mg", "IV/IO", "Every 3–5 min", "Give as soon as feasible for all arrest rhythms"]
+      ]
+    },
+    {
+      "id": "c09_t03",
+      "title": "Defibrillation Strategies for Refractory VF/pVT",
+      "headers": ["Strategy", "Description", "AHA Class / LOE", "When to Consider"],
+      "rows": [
+        ["Standard biphasic", "200 J via standard anterolateral or anterior-posterior pads", "Class 1", "First-line for all VF/pVT"],
+        ["Vector-change defibrillation", "Reposition pads to alter current path through myocardium", "Class 2b / B-R", "After ≥3 failed shocks with standard placement"],
+        ["DSED", "Two defibrillators, asynchronous rapid succession, different pad positions", "Class 2b / B-R", "Selective; after ≥3 failed shocks when available"],
+        ["Escalating biphasic", "Increase energy on successive shocks (manufacturer-dependent)", "Class 2a", "Follows device manufacturer protocol"]
+      ]
+    }
+  ]
+}

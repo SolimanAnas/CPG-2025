@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "The Organized Rhythm Without a Pulse",
+      "presentation": "During a resuscitation, the monitor shows a narrow-complex regular rhythm at 55/min with visible P waves preceding each QRS. The compressor pauses for a rhythm check and the team lead announces 'organized rhythm — check for pulse.' No pulse is palpable at the carotid.",
+      "vitals": { "hr": "55 (organized, no pulse)", "rr": "None", "bp": "No pulse", "loc": "Unresponsive" },
+      "question": "What is the correct diagnosis and treatment?",
+      "options": [
+        "A: ROSC with bradycardia — prepare for post-arrest care.",
+        "B: PEA — resume CPR immediately, administer epinephrine, and search for reversible causes.",
+        "C: Asystole — begin transcutaneous pacing.",
+        "D: Fine VF — defibrillate."
+      ],
+      "correct": 1,
+      "explanation": "An organized rhythm without a palpable pulse is PEA, regardless of how 'normal' the ECG appears. The treatment is CPR, epinephrine, and a systematic search for reversible causes (H's and T's). Do not assume ROSC from the rhythm alone.",
+      "clinicalPearl": "The monitor does not replace your fingers — always check a pulse before concluding ROSC. Organized electrical activity without mechanical output is the hallmark of PEA."
+    },
+    {
+      "id": "c04_s02",
+      "title": "Artifact or VF?",
+      "presentation": "During transport of a patient in cardiac arrest, the defibrillator monitor suddenly shows a chaotic waveform at a rate that appears to be >300/min. The compressor is actively performing chest compressions. The previous rhythm strip showed organized PEA.",
+      "vitals": { "hr": "No pulse", "rr": "None", "bp": "No pulse", "loc": "Unresponsive" },
+      "question": "What is the safest initial approach?",
+      "options": [
+        "A: Immediately defibrillate at 200J biphasic.",
+        "B: Briefly pause compressions for 5–10 seconds to assess the rhythm while maintaining readiness to defibrillate if true VF is confirmed.",
+        "C: Ignore the rhythm change and continue the current resuscitation.",
+        "D: Obtain a 12-lead ECG before making any decisions."
+      ],
+      "correct": 1,
+      "explanation": "Motion artifact from compressions during transport can mimic VF. Briefly pausing compressions clarifies the rhythm — true VF persists without compressions while artifact disappears. If the patient is in arrest and VF is confirmed, defibrillate.",
+      "clinicalPearl": "Artifact-checking requires only a 5–10 second pause — short enough to maintain compression fraction while preventing unnecessary defibrillation."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Wide-Complex Tachycardia: VT or SVT?",
+      "presentation": "A 62-year-old with a history of prior anterior MI presents with palpitations and dizziness. The monitor shows a regular wide-complex tachycardia at 190/min. Blood pressure is 84/52 mmHg. No prior ECG is available for comparison.",
+      "vitals": { "hr": 190, "bp": "84/52", "rr": 22, "spo2": "94%", "loc": "Alert but dizzy" },
+      "question": "What is the most appropriate initial management?",
+      "options": [
+        "A: Vagal maneuvers to attempt rate control.",
+        "B: Adenosine 6 mg IV rapid push.",
+        "C: Synchronized cardioversion at 100J.",
+        "D: Amiodarone 150 mg IV over 10 minutes."
+      ],
+      "correct": 2,
+      "explanation": "This patient has a wide-complex tachycardia with hemodynamic instability (hypotension and dizziness) and risk factors for VT (prior MI). Immediate synchronized cardioversion at 100J is indicated regardless of the underlying rhythm.",
+      "clinicalPearl": "Prior MI + wide-complex tachycardia + hemodynamic instability = treat as VT and cardiovert. Do not waste time on vagal maneuvers or adenosine when the patient is unstable."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "Which of the following is NOT one of the H's in the H's & T's mnemonic?",
+      "options": ["A. Hypovolemia", "B. Hypoxia", "C. Hypertension", "D. Hypothermia"],
+      "correct": 2,
+      "rationale": "The five H's are Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hypo-/Hyperkalemia, and Hypothermia. Hypertension is not a reversible cause of cardiac arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q02",
+      "question": "A patient in PEA arrest has muffled heart sounds, jugular venous distention, and pulsus paradoxus on the arterial line. What is the most likely reversible cause?",
+      "options": ["A. Tension pneumothorax", "B. Hypovolemia", "C. Cardiac tamponade", "D. Pulmonary embolism"],
+      "correct": 2,
+      "rationale": "The triad of muffled heart sounds, JVD, and PEA arrest strongly suggests cardiac tamponade, which requires emergent pericardiocentesis.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q03",
+      "question": "What is the first-line treatment for a hyperkalemic cardiac arrest?",
+      "options": ["A. Atropine", "B. Calcium chloride 1 g IV", "C. Epinephrine 1 mg IV", "D. Sodium bicarbonate only"],
+      "correct": 1,
+      "rationale": "Calcium chloride 1 g IV provides rapid membrane stabilization in hyperkalemic arrest, followed by bicarbonate, insulin/glucose, and albuterol to shift potassium intracellularly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q04",
+      "question": "VF has persisted after five consecutive biphasic shocks at 200 J with ongoing high-quality CPR and epinephrine. What antiarrhythmic should be given next?",
+      "options": ["A. Atropine 1 mg", "B. Adenosine 6 mg", "C. Amiodarone 300 mg IV bolus", "D. Magnesium 2 g IV"],
+      "correct": 2,
+      "rationale": "After ≥3 shocks, amiodarone 300 mg IV/IO bolus is the first-line antiarrhythmic for refractory VF/pVT; a repeat dose of 150 mg may be given if needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q05",
+      "question": "What is the AHA recommendation class for dual sequential external defibrillation (DSED) in refractory VF/pVT?",
+      "options": ["A. Class 1 (recommended)", "B. Class 2a (probably beneficial)", "C. Class 2b (may be considered)", "D. Class 3 (harmful)"],
+      "correct": 2,
+      "rationale": "DSED is Class 2b (LOE B-R) — its usefulness is not established as routine therapy; it may be considered as a selective option.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q06",
+      "question": "A patient in cardiac arrest has absent breath sounds on the right, tracheal deviation to the left, and distended neck veins. What is the immediate treatment?",
+      "options": ["A. Pericardiocentesis", "B. Needle decompression of the right second intercostal space", "C. Thrombolysis", "D. Defibrillation"],
+      "correct": 1,
+      "rationale": "Tension pneumothorax requires immediate needle decompression (large-bore needle, 2nd intercostal space midclavicular line) followed by chest tube placement.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q07",
+      "question": "During ongoing CPR, the ETCO₂ suddenly drops from 18 mmHg to 6 mmHg. What should the team suspect first?",
+      "options": ["A. ROSC is imminent", "B. Degradation in CPR quality or a new reversible cause", "C. The endotracheal tube has shifted into the esophagus", "D. The patient has developed ventricular fibrillation"],
+      "correct": 1,
+      "rationale": "A sudden ETCO₂ drop during CPR indicates either a deterioration in compression quality or a new reversible cause — both should be checked immediately.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q08",
+      "question": "A hypothermic cardiac arrest patient has a core temperature of 28°C. After 30 minutes of CPR, what is the correct disposition?",
+      "options": ["A. Declare futility and stop resuscitation", "B. Continue resuscitation — do not declare futility until core temperature is at least 32°C", "C. Transport immediately without further CPR", "D. Give epinephrine and stop CPR"],
+      "correct": 1,
+      "rationale": "Hypothermic patients may achieve neurologically intact survival after prolonged resuscitation; do not declare futility until core temperature reaches at least 32°C.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q09",
+      "question": "Which of the following is a T in the H's & T's mnemonic?",
+      "options": ["A. Thrombosis (pulmonary)", "B. Tachycardia", "C. Trauma", "D. Thyroid storm"],
+      "correct": 0,
+      "rationale": "The five T's are Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary), and Thrombosis (coronary).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q10",
+      "question": "What is the alternative antiarrhythmic to amiodarone for refractory VF/pVT?",
+      "options": ["A. Adenosine 6 mg", "B. Lidocaine 1–1.5 mg/kg IV/IO", "C. Procainamide 100 mg", "D. Digoxin 0.5 mg"],
+      "correct": 1,
+      "rationale": "Lidocaine 1–1.5 mg/kg IV/IO is the acceptable alternative to amiodarone, particularly when amiodarone is unavailable.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q11",
+      "question": "A patient in PEA arrest is found to have a flat IVC on bedside ultrasound. What reversible cause should be suspected?",
+      "options": ["A. Cardiac tamponade", "B. Tension pneumothorax", "C. Hypovolemia", "D. Pulmonary embolism"],
+      "correct": 2,
+      "rationale": "A flat (collapsed) IVC in PEA arrest is consistent with hypovolemia — treat with volume resuscitation and identify the source of fluid loss.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q12",
+      "question": "When should vector-change defibrillation be considered?",
+      "options": [
+        "A. As the first shock for any VF arrest",
+        "B. After standard pad positions have failed to terminate refractory VF",
+        "C. Only for asystole",
+        "D. Never — it is Class 3"
+      ],
+      "correct": 1,
+      "rationale": "Vector-change defibrillation involves altering pad placement after standard positions fail; it is a Class 2b option for refractory VF.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q13",
+      "question": "Which ECG finding is most characteristic of hyperkalemia?",
+      "options": ["A. Peaked T waves and widened QRS", "B. Deep S waves in leads V1-V2", "C. ST elevation in lateral leads", "D. Shortened PR interval"],
+      "correct": 0,
+      "rationale": "Peaked T waves progressing to a wide QRS complex are the hallmark ECG findings of hyperkalemia, which may degenerate into VF or asystole.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q14",
+      "question": "During refractory VF arrest, how frequently should the compressor be rotated?",
+      "options": ["A. Every 5 minutes", "B. Every 2 minutes", "C. Every 10 minutes", "D. Only when fatigued"],
+      "correct": 1,
+      "rationale": "Compressor rotation every 2 minutes (timed with rhythm checks) prevents fatigue-related degradation of compression quality.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q15",
+      "question": "A massive pulmonary embolism causes PEA arrest. Catheter-based embolectomy is not available for at least 60 minutes. What intervention should be considered?",
+      "options": ["A. Additional epinephrine only", "B. Systemic thrombolysis", "C. A second dose of atropine", "D. Transcutaneous pacing"],
+      "correct": 1,
+      "rationale": "In suspected massive PE arrest without immediate access to catheter-based embolectomy, systemic thrombolysis should be considered.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q16",
+      "question": "What is the key mechanism by which sodium bicarbonate helps in hyperkalemic cardiac arrest?",
+      "options": ["A. It directly removes potassium from the blood", "B. It transiently shifts potassium intracellularly by alkalinizing the serum", "C. It increases heart rate", "D. It defibrillates VF"],
+      "correct": 1,
+      "rationale": "Sodium bicarbonate alkalinizes the serum, causing a transient shift of potassium into cells; it is one part of a multimodal approach that also includes calcium, insulin/glucose, and albuterol.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q17",
+      "question": "When is magnesium sulfate specifically indicated during cardiac arrest?",
+      "options": ["A. For all VF arrests", "B. For polymorphic VT (torsades de pointes)", "C. For asystole", "D. For bradycardia with a pulse"],
+      "correct": 1,
+      "rationale": "Magnesium sulfate 1–2 g IV is specifically indicated for polymorphic VT (torsades de pointes), not for routine VF/pVT.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q18",
+      "question": "In refractory arrest management, what should happen BEFORE each subsequent defibrillation attempt?",
+      "options": [
+        "A. Immediately shock again without pause",
+        "B. Reassess CPR quality, ETCO₂, compressor rotation, pad position, and consider reversible causes",
+        "C. Administer another dose of epinephrine",
+        "D. Intubate the patient"
+      ],
+      "correct": 1,
+      "rationale": "Before each shock, the team should systematically reassess CPR quality, trending ETCO₂, compressor status, pad placement, and the H's and T's.",
+      "difficulty": "Medium"
+    }
+  ]
+}

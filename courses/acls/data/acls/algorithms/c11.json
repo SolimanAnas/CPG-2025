@@ -1,0 +1,56 @@
+{
+  "chapter": "c11",
+  "algorithms": [
+    {
+      "id": "c11_alg01",
+      "title": "ACLS Tachycardia With a Pulse Algorithm",
+      "description": "Complete decision pathway for adult tachycardia with a pulse, from initial assessment through rhythm-specific treatment.",
+      "image": "../../algorithms/ACLS-Tachycardia.webp",
+      "steps": [
+        "Tachycardia identified (heart rate >100/min with a pulse) on the monitor.",
+        "Assess for hemodynamic instability: hypotension (SBP <90), acutely altered mental status, chest pain, acute heart failure, signs of shock.",
+        "UNSTABLE → Immediate synchronized cardioversion.",
+        "  Sedate if conscious and time permits (midazolam, etomidate, or propofol).",
+        "  Energy: 100 J biphasic for regular narrow-complex or regular monomorphic VT.",
+        "  Energy: ≥200 J biphasic for atrial fibrillation or atrial flutter.",
+        "  If polymorphic VT → UNSYNCHRONIZED defibrillation (synchronization contraindicated).",
+        "STABLE → Identify the rhythm category.",
+        "  NARROW-COMPLEX, REGULAR (most likely SVT):",
+        "    Step 1: Vagal maneuvers (modified Valsalva, carotid sinus massage).",
+        "    Step 2: Adenosine 6 mg rapid IV push (proximal port + rapid saline flush).",
+        "    Step 3: Adenosine 12 mg (may repeat once).",
+        "    Step 4: If still refractory: beta-blocker or calcium-channel blocker.",
+        "  NARROW-COMPLEX, IRREGULAR (AF / atrial flutter with variable block):",
+        "    Rate control: diltiazem, metoprolol, or amiodarone.",
+        "    Target resting HR <110/min (lenient) or <80/min (strict).",
+        "    Consider anticoagulation per stroke-risk guidelines.",
+        "  WIDE-COMPLEX, REGULAR (assume VT):",
+        "    Amiodarone 150 mg IV over 10 minutes (may repeat once).",
+        "    Alternative: Procainamide 20–50 mg/min IV.",
+        "    If becomes unstable → synchronized cardioversion at 100 J.",
+        "  WIDE-COMPLEX, IRREGULAR:",
+        "    If polymorphic VT → unsynchronized defibrillation + magnesium 1–2 g IV.",
+        "    If pre-excited AF (WPW) → avoid AV-nodal blockers; consider procainamide or cardioversion.",
+        "  In parallel: identify and treat reversible causes (hypoxia, electrolytes, toxins, ischemia)."
+      ]
+    },
+    {
+      "id": "c11_alg02",
+      "title": "Synchronized Cardioversion Quick-Reference",
+      "description": "Energy selection and preparation checklist for synchronized cardioversion.",
+      "image": "../../algorithms/ACLS-Electrical-Cardioversion.webp",
+      "steps": [
+        "Confirm tachycardia is UNSTABLE (hypotension, altered mentation, chest pain, heart failure, shock).",
+        "Identify the rhythm: narrow vs wide, regular vs irregular.",
+        "Set defibrillator to SYNCHRONIZED mode (confirm R-wave tracking).",
+        "Select energy based on rhythm: regular narrow (SVT) = 100 J; regular monomorphic VT = 100 J; AF/AFlutter = ≥200 J (biphasic).",
+        "Sedate the patient if conscious and time permits (midazolam, etomidate, propofol).",
+        "Announce 'synchronized cardioversion — everyone clear' and deliver the shock.",
+        "Immediately reassess rhythm, blood pressure, and clinical status.",
+        "If rhythm persists: increase energy and repeat, or add antiarrhythmic (amiodarone) between shocks.",
+        "EXCEPTION: If the rhythm converts to polymorphic VT, immediately switch to UNSYNCHRONIZED defibrillation.",
+        "Post-procedure: monitor, identify and treat reversible causes, continue ACLS if needed."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "Resuscitation Team Roles",
+      "description": "Typical defined roles around an ACLS resuscitation, adaptable to team size.",
+      "steps": [
+        "Team leader: directs the resuscitation, interprets rhythms, assigns tasks by name, maintains the overall plan.",
+        "Compressor(s): deliver high-quality compressions, rotate ~every 2 minutes.",
+        "Airway/ventilation: manages BVM or advanced airway, delivers breaths at the correct rate.",
+        "Medication/IV-IO: establishes access, prepares and administers drugs, confirms doses aloud.",
+        "CPR coach / quality monitor: watches rate, depth, recoil, and pause duration; gives real-time feedback.",
+        "Recorder/timer: documents times, rhythms, and interventions; tracks the 2-minute cycle.",
+        "All roles: use closed-loop communication and speak up via constructive intervention when needed."
+      ]
+    },
+    {
+      "id": "c02_alg02",
+      "title": "Ventilation Strategy Transition",
+      "description": "How ventilation changes the moment an advanced airway is confirmed in place.",
+      "steps": [
+        "Before advanced airway: 30 compressions : 2 breaths, minimizing pause for breaths.",
+        "Advanced airway (SGA or ETT) placed and position confirmed.",
+        "Switch to continuous compressions with no pause for ventilation.",
+        "Deliver 1 breath every 6 seconds (~10/min), avoiding hyperventilation.",
+        "Reassess capnography and compression quality together every ~2 minutes."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Asystole / PEA Cardiac Arrest Algorithm",
+      "description": "Step-by-step management of asystole and pulseless electrical activity (PEA), emphasizing nonshockable rhythm management, early epinephrine, and systematic identification and treatment of reversible causes (H's & T's).",
+      "image": "../../algorithms/ACLS-CA.webp",
+      "steps": [
+        "Identify asystole or PEA on the cardiac monitor — confirm on at least two ECG leads.",
+        "Immediately begin high-quality CPR: compressions at 100–120/min, depth 2–2.4 in, allow full recoil, with ventilations (bag-valve mask or advanced airway).",
+        "Establish IV or IO access as rapidly as possible.",
+        "Administer epinephrine 1 mg IV/IO (1:10,000) as soon as feasible — ideally within 3–5 minutes of arrest onset for nonshockable rhythms.",
+        "Continue CPR for 2 minutes, then perform a rhythm check.",
+        "If asystole or PEA persists: resume CPR, repeat epinephrine every 3–5 minutes, and systematically search for reversible causes (H's & T's).",
+        "If an organized rhythm appears: check for a pulse. If pulse present → ROSC pathway. If no pulse → continue as PEA.",
+        "If VF/pVT develops: immediately switch to the VF/pVT defibrillation algorithm.",
+        "Use waveform capnography (once advanced airway placed) to monitor CPR quality (target ETCO₂ ≥10 mmHg during compressions) and detect ROSC (sudden sustained rise).",
+        "Consider mechanical CPR only if manual compressions are impractical or unsafe (prolonged transport, limited personnel, ECPR cannulation).",
+        "Continue resuscitation with ongoing cause-directed treatment until ROSC or a decision to terminate is made."
+      ]
+    },
+    {
+      "id": "c07_alg02",
+      "title": "Systematic H's & T's Reversible Cause Evaluation",
+      "description": "A structured approach to identifying and treating the reversible causes of cardiac arrest during asystole/PEA resuscitation.",
+      "steps": [
+        "H — Hypovolemia: assess for hemorrhage, dehydration. Treat with IV/IO fluid bolus and blood products if hemorrhagic.",
+        "H — Hypoxia: ensure adequate ventilation and oxygenation. Check airway patency, confirm advanced airway placement.",
+        "H — Hydrogen ion (acidosis): assess ABG. Treat with ventilation optimization; sodium bicarbonate for severe metabolic acidosis or specific indications.",
+        "H — Hypo-/Hyperkalemia: check potassium level. Treat hypokalemia with potassium replacement; treat hyperkalemia with calcium, insulin/glucose, sodium bicarbonate.",
+        "H — Hypothermia: check core temperature. Treat with warming measures if indicated.",
+        "T — Tension pneumothorax: assess breath sounds, tracheal deviation, JVD. Treat with immediate needle decompression → chest tube.",
+        "T — Tamponade (cardiac): assess for JVD, muffled heart sounds, pulsus paradoxus. Treat with emergent pericardiocentesis.",
+        "T — Toxins: consider drug overdose or poisoning. Treat with specific antidotes when available (e.g., sodium bicarbonate for TCA OD, naloxone for opioids).",
+        "T — Thrombosis (pulmonary): consider massive PE — sudden onset, right heart strain, risk factors. Treat with systemic thrombolysis or embolectomy.",
+        "T — Thrombosis (coronary): consider acute MI — ECG changes, chest pain history. Treat with emergent PCI when ROSC achieved."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "c12",
+  "title": "Acute Coronary Syndromes",
+  "shortTitle": "ACS",
+  "estimatedStudyTime": 40,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Identify STEMI on a 12-lead ECG and activate the appropriate reperfusion pathway.",
+    "State the 2025 first-medical-contact-to-device (door-to-balloon) goal for primary PCI.",
+    "Determine when fibrinolysis is indicated (onset <12 hours, anticipated PPCI delay >120 minutes) and list key contraindications.",
+    "Apply NSTEMI/unstable angina risk-stratification tools (TIMI, GRACE) to guide timing of invasive strategy.",
+    "Select appropriate initial antiplatelet and anticoagulation therapy for ACS.",
+    "Recognize nitroglycerin contraindications and the limited role of morphine and supplemental oxygen in ACS management.",
+    "Describe the 2025 ACC/AHA companion guideline recommendations for ACS management."
+  ],
+  "summary": [
+    {
+      "title": "Recognition and Activation of the STEMI Pathway",
+      "content": "Acute coronary syndromes (ACS) encompass STEMI, NSTEMI, and unstable angina. The ACLS provider's first priority when STEMI is identified on a 12-lead ECG is immediate activation of the cardiac catheterization team for primary percutaneous coronary intervention (PPCI). The 2025 ACC/AHA companion guideline sets a first-medical-contact-to-device (FMC2D) time goal of ≤90 minutes — an aspirin-cath lab time — reflecting evidence that each 30-minute delay in reperfusion increases 1-year mortality by approximately 7.5% (relative). When ECG acquisition occurs in the prehospital setting, EMS should transmit the 12-lead to the receiving facility so the cath lab can be activated before the patient arrives."
+    },
+    {
+      "title": "Fibrinolysis: When and How",
+      "content": "Fibrinolytic therapy (alteplase, tenecteplase) is indicated when symptom onset is within 12 hours and the anticipated door-to-balloon delay exceeds 120 minutes (e.g., transfer from a non-PCI-capable facility with estimated transport plus activation time >120 minutes). The 2025 AHA guideline reaffirms this threshold. Fibrinolysis is most effective within the first 3 hours of symptom onset and must be initiated rapidly (door-to-needle ≤30 minutes). Fibrinolysis is contraindicated with active internal bleeding (excluding menses), history of hemorrhagic stroke, ischemic stroke within 3 months, intracranial neoplasm or AVM, known active peptic ulcer, aortic dissection, significant head/facial trauma within 3 months, INR >1.7, platelet count <100,000/mm³, or current use of anticoagulants with supratherapeutic levels. Successful fibrinolysis (evidenced by ≥50% ST-elevation resolution within 60–90 minutes) should be followed by transfer to a PCI-capable center for routine early angiography (within 3–24 hours). Failed fibrinolysis warrants emergent rescue PCI."
+    },
+    {
+      "title": "NSTEMI/Unstable Angina and Risk Stratification",
+      "content": "NSTEMI and unstable angina present without ST-segment elevation on ECG. Risk stratification using TIMI or GRACE scores guides the timing of invasive strategy: early invasive (within 24 hours) for high-risk features (recurrent angina, hemodynamic instability, dynamic ST/T changes, elevated troponin), and delayed invasive or ischemia-guided strategy for lower-risk presentations. Dual antiplatelet therapy (aspirin plus a P2Y12 inhibitor — ticagrelor or prasugrel preferred over clopidogrel per 2025 ACC/AHA recommendations) and anticoagulation with unfractionated heparin or enoxaparin are initiated early regardless of strategy."
+    },
+    {
+      "title": "Initial Medical Therapy: Medications That Matter",
+      "content": "Aspirin 162–325 mg chewed immediately is the universal first drug for all ACS. A P2Y12 inhibitor (ticagrelor 180 mg loading or prasugrel 60 mg loading — prasugrel contraindicated with prior stroke/TIA or age ≥75) is added. Anticoagulation with unfractionated heparin (60 U/kg bolus, max 4,000 U, then 12 U/kg/hr infusion) or enoxaparin is started. Nitroglycerin 0.4 mg sublingual every 5 minutes ×3 doses for ongoing ischemic pain, but is contraindicated with right ventricular infarction (suspected by inferior STEMI with hypotension), recent PDE5 inhibitor use (sildenafil within 24 hours, tadalafil within 48 hours), or systolic blood pressure <90 mmHg. Supplemental oxygen is recommended ONLY if SpO₂ <90% or the patient is in respiratory distress — routine supplemental oxygen in normoxic ACS patients does not improve outcomes and may be harmful (DETO2X-AMI trial). Morphine use is cautioned against due to potential for delayed drug absorption (impairing P2Y12 inhibitor bioavailability) and adverse hemodynamic effects; it should be reserved for refractory chest pain unresponsive to nitroglycerin and only when the patient is hemodynamically stable."
+    },
+    {
+      "title": "STEMI Identification at Scene: 12-Lead Interpretation",
+      "content": "The ACLS provider must acquire and interpret a 12-lead ECG rapidly. STEMI is defined as ≥1 mm ST elevation in two contiguous limb leads or ≥2 mm in two contiguous precordial leads (V2–V3: ≥2.5 mm in men ≥40, ≥1.5 mm in women). New or presumably new left bundle branch block (LBBB) in the clinical context of ischemia should be treated as STEMI-equivalent using modified Sgarbossa criteria (concordant ST elevation ≥1 mm, concordant ST depression ≥1 mm in V1–V3, or discordant ST elevation with S-wave amplitude ≥50% and ratio ST elevation/S-wave ≥0.25). Posterior MI (ST depression V1–V3) should be confirmed with posterior leads V7–V9 (ST elevation ≥0.5 mm). Right ventricular infarction should be assessed in inferior STEMI using right-sided lead V4R (ST elevation ≥1 mm)."
+    },
+    {
+      "title": "2025 ACC/AHA Companion Guideline Highlights",
+      "content": "The 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for acute coronary syndromes emphasizes: FMC2D ≤90 minutes for primary PCI; fibrinolysis when onset <12 hours and anticipated PPCI delay >120 minutes; routine early angiography within 3–24 hours after successful fibrinolysis; ticagrelor or prasugrel as preferred P2Y12 inhibitors over clopidogrel for invasive strategy; morphine use reserved for refractory pain with caution regarding drug absorption; oxygen only for SpO₂ <90%; and a shift toward risk-stratified timing of invasive intervention for NSTEMI rather than a one-size-fits-all approach."
+    }
+  ],
+  "clinicalPearls": [
+    "Each 30-minute delay in primary PCI increases 1-year mortality by approximately 7.5% — time is myocardium.",
+    "Fibrinolysis is most effective within the first 3 hours; even within the 12-hour window, earlier is better.",
+    "Nitroglycerin is contraindicated in right ventricular infarction — suspect RV infarction in any inferior STEMI with hypotension and check V4R.",
+    "Routine oxygen in normoxic ACS patients does not improve outcomes and may cause coronary vasoconstriction (DETO2X-AMI trial).",
+    "Morphine delays P2Y12 inhibitor absorption — avoid if possible; reserve for refractory pain after nitroglycerin failure.",
+    "Always transmit prehospital 12-leads so the cath lab activates before patient arrival."
+  ],
+  "redFlags": [
+    "Inferior STEMI with hypotension — suspect right ventricular infarction; nitroglycerin is contraindicated.",
+    "Patient took a PDE5 inhibitor within 24–48 hours — nitroglycerin can cause life-threatening hypotension.",
+    "Fibrinolysis given without ruling out contraindications (active bleeding, recent stroke, INR >1.7, platelets <100K).",
+    "Symptom onset >12 hours with no ongoing ischemia — fibrinolysis is not indicated.",
+    "Routine supplemental oxygen in a patient with SpO₂ 98% — provides no benefit and may worsen coronary perfusion."
+  ],
+  "commonMistakes": [
+    "Delaying ECG acquisition — a 12-lead should be obtained and interpreted within 10 minutes of first medical contact.",
+    "Giving nitroglycerin in an inferior STEMI with hypotension without checking for RV infarction first.",
+    "Using morphine as a first-line analgesic for ACS chest pain rather than after nitroglycerin failure.",
+    "Administering routine oxygen to ACS patients with normal SpO₂.",
+    "Confusing door-to-balloon (D2B) time with first-medical-contact-to-device (FMC2D) time — FMC2D starts at first medical contact, not at the emergency department door.",
+    "Failing to identify posterior MI (ST depression V1–V3) and obtain posterior leads V7–V9."
+  ],
+  "memoryAids": [
+    "'Time is myocardium' — every 30 min delay costs ~7.5% more mortality at 1 year.",
+    "'N-O-M-I' for nitroglycerin contraindications: Nitro off if RV infarct, On PDE5 inhibitors, Mean arterial pressure too low (SBP <90).",
+    "Fibrinolysis = '12 and 120' — onset within 12 hours, PPCI delay >120 minutes.",
+    "O₂ only <90% — don't oxygenate normal patients.",
+    "Aspirin first, always — 162–325 mg chewed before anything else."
+  ],
+  "decisionTrees": [
+    {
+      "title": "ACS Initial Management Pathway",
+      "content": "Chest pain / ACS presentation\n  → 12-lead ECG within 10 minutes of first medical contact\n  → ST elevation or new LBBB identified (STEMI)\n     → Activate cath lab immediately (FMC2D ≤90 min)\n     → Aspirin 162–325 mg chewed\n     → If PPCI achievable within 90 min → primary PCI\n     → If PPCI delayed >120 min AND onset <12 hours → fibrinolysis (door-to-needle ≤30 min)\n        → Successful (≥50% ST resolution) → transfer to PCI center for angiography within 3–24 h\n        → Failed → rescue PCI\n     → Check right-sided leads (V4R) if inferior STEMI → if RV infarction → NO nitroglycerin\n  → No ST elevation (NSTEMI / unstable angina)\n     → Aspirin + P2Y12 inhibitor (ticagrelor/prasugrel) + anticoagulation (heparin)\n     → Risk stratify (TIMI/GRACE)\n     → High-risk → early invasive strategy within 24 h\n     → Lower risk → delayed invasive or ischemia-guided strategy\n  → Oxygen ONLY if SpO₂ <90%\n  → Morphine ONLY for refractory pain after nitroglycerin failure; caution with P2Y12 absorption"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC",
+    "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes",
+    "DETO2X-AMI Trial — Routine Oxygen in Suspected Myocardial Infarction (NEJM 2017)",
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support"
+  ],
+  "graphics": [
+    {
+      "id": "c12_g01",
+      "section": "summary",
+      "sectionIndex": 0,
+      "url": "../../images/courses/acls/c12_g01.webp",
+      "alt": "Acute Coronary Syndrome: Coronary Angioplasty (PCI)",
+      "caption": "Cross-section of a coronary artery showing catheter balloon inflation and stent placement."
+    }
+  ]
+}

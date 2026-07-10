@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "The Eager Intern",
+      "presentation": "A code is called on an inpatient ward. Compressions begin immediately and the defibrillator pads are being applied. An intern asks to attempt endotracheal intubation right away, before the first rhythm check.",
+      "vitals": { "hr": "No pulse", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the correct team-lead response?",
+      "options": [
+        "A: Allow intubation immediately, pausing compressions as needed.",
+        "B: Continue compressions and complete the first rhythm check/shock if indicated; plan the airway attempt to minimize interruption to compressions.",
+        "C: Refuse any airway management until ROSC.",
+        "D: Stop compressions until the intern is ready."
+      ],
+      "correct": 1,
+      "explanation": "Advanced airway placement is layered onto, not substituted for, high-quality compressions and early defibrillation. The team should sequence the airway attempt so it does not create a prolonged compression pause.",
+      "clinicalPearl": "Protect compression fraction and time-to-shock first — advanced interventions fit around them, not the other way around."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Ward Deterioration",
+      "presentation": "A patient's early-warning score has been rising for two hours (increasing respiratory rate, new confusion, falling blood pressure) but no rapid-response call has been placed.",
+      "vitals": { "hr": 118, "bp": "88/54", "rr": 26, "spo2": "91%", "loc": "New confusion" },
+      "question": "What systems-of-care gap does this scenario illustrate?",
+      "options": [
+        "A: A failure of post-cardiac arrest care",
+        "B: A failure to activate the rapid-response/early-warning system that could have prevented arrest",
+        "C: A failure of the recovery link",
+        "D: A failure of defibrillation timing"
+      ],
+      "correct": 1,
+      "explanation": "In-hospital systems of care rely on early-warning scores triggering a rapid-response team before deterioration progresses to arrest. This vignette shows the surveillance/prevention system not being used as designed.",
+      "clinicalPearl": "IHCA systems win by preventing the arrest, not just responding well to one."
+    },
+    {
+      "id": "c01_s03",
+      "title": "Refractory Arrest, Regional System",
+      "presentation": "EMS is treating a witnessed VF arrest with ongoing high-quality CPR after three shocks with no ROSC. The regional system includes a cardiac arrest center capable of ECPR, coronary angiography, and temperature management, 12 minutes away, versus a community hospital 4 minutes away without these capabilities.",
+      "vitals": { "hr": "Refractory VF", "rr": "None", "loc": "Unresponsive" },
+      "question": "Within a systems-of-care framework, what should local protocol support?",
+      "options": [
+        "A: Automatic transport to the nearest hospital regardless of capability",
+        "B: A protocol-driven option to transport appropriate refractory-arrest patients to the regional cardiac arrest center when systems support it",
+        "C: Stopping resuscitation because transport time is longer",
+        "D: Ignoring hospital capability entirely"
+      ],
+      "correct": 1,
+      "explanation": "Regionalized cardiac arrest centers, analogous to trauma/stroke systems, are designed to receive refractory-arrest and post-ROSC patients who may benefit from ECPR, PCI, and advanced post-arrest care, when local protocols and transport times support it.",
+      "clinicalPearl": "Where a system exists, route the right patient to the right center — capability matters, not just proximity."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "Which of the following cardiac arrest rhythms is shockable?",
+      "options": ["A. Asystole", "B. Pulseless electrical activity (PEA)", "C. Ventricular fibrillation (VF)", "D. Sinus bradycardia without a pulse"],
+      "correct": 2,
+      "rationale": "VF and pulseless VT are the only two shockable cardiac arrest rhythms. Asystole and PEA are non-shockable and treated with CPR and epinephrine.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "The 2025 AHA Guidelines no longer distinguish between which two types of asystole?",
+      "options": ["A. Fine and coarse asystole", "B. Complete and incomplete asystole", "C. Primary and secondary asystole", "D. Atrial and ventricular asystole"],
+      "correct": 0,
+      "rationale": "The 2025 guidelines explicitly removed the fine vs coarse asystole distinction because it has no proven prognostic or therapeutic significance.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q03",
+      "question": "A patient in cardiac arrest shows an organized rhythm on the monitor at a rate of 75/min with clear P waves and QRS complexes, but no pulse is palpable. What is this rhythm?",
+      "options": ["A. Normal sinus rhythm with ROSC", "B. Pulseless electrical activity (PEA)", "C. Asystole", "D. Fine ventricular fibrillation"],
+      "correct": 1,
+      "rationale": "PEA is defined as any organized electrical activity without a palpable pulse. The ECG can appear perfectly normal while the patient has no effective cardiac output.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q04",
+      "question": "How should the team handle an organized wide-complex tachycardia at 180/min when the patient has a radial pulse but blood pressure of 72/40 mmHg?",
+      "options": [
+        "A. Administer adenosine 6 mg IV",
+        "B. Perform vagal maneuvers",
+        "C. Immediate synchronized cardioversion at 100J",
+        "D. Observe and recheck in 10 minutes"
+      ],
+      "correct": 2,
+      "rationale": "A hemodynamically unstable wide-complex tachycardia (hypotension present) should be treated with immediate synchronized cardioversion. The 2025 guidelines prioritize stability over rhythm diagnosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q05",
+      "question": "During CPR, the monitor shows what appears to be VF. What should the team do to verify this is not artifact?",
+      "options": [
+        "A. Deliver a shock immediately without further analysis",
+        "B. Briefly pause compressions for 5–10 seconds to observe the rhythm; if VF persists, defibrillate",
+        "C. Stop the resuscitation to obtain a 12-lead ECG",
+        "D. Switch to a different monitoring lead and continue compressions for 2 minutes"
+      ],
+      "correct": 1,
+      "rationale": "Briefly pausing compressions helps distinguish true VF (which persists) from artifact (which disappears). If the patient is known to be in arrest and VF is confirmed, defibrillate.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q06",
+      "question": "What is the key difference between VF and pulseless VT in terms of ACLS treatment?",
+      "options": [
+        "A. VF requires defibrillation; pVT requires antiarrhythmics only",
+        "B. VF requires CPR first; pVT requires epinephrine first",
+        "C. Both are treated identically with immediate defibrillation",
+        "D. VF is shockable; pVT is not shockable"
+      ],
+      "correct": 2,
+      "rationale": "VF and pulseless VT share an identical ACLS treatment pathway: immediate defibrillation followed by CPR, epinephrine, and antiarrhythmics for refractory cases.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q07",
+      "question": "Before diagnosing asystole, which of the following should be confirmed?",
+      "options": [
+        "A. Leads are connected, gain is adequate, and rhythm is present in at least two leads",
+        "B. The patient has received at least 3 doses of epinephrine",
+        "C. A pacemaker has been attempted",
+        "D. The defibrillator has been charged"
+      ],
+      "correct": 0,
+      "rationale": "Asystole must be confirmed with proper lead connections, adequate gain, and presence in at least two leads to avoid misdiagnosing fine VF or lead disconnection as asystole.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q08",
+      "question": "Which clinical feature on ECG most strongly suggests VT rather than SVT with aberrancy?",
+      "options": [
+        "A. Heart rate of 170/min",
+        "B. Wide QRS complexes",
+        "C. AV dissociation with independent P waves and QRS complexes",
+        "D. Regular rhythm"
+      ],
+      "correct": 2,
+      "rationale": "AV dissociation — where P waves and QRS complexes march through independently — is a strong ECG indicator of VT. Wide QRS and regular rhythm can occur in both VT and SVT with aberrancy.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q09",
+      "question": "A patient with known dilated cardiomyopathy presents with a wide-complex tachycardia at 200/min. The patient is conscious but hypotensive (BP 80/50). What is the best initial management?",
+      "options": [
+        "A. Adenosine 6 mg IV push",
+        "B. Vagal maneuvers",
+        "C. Immediate synchronized cardioversion at 100J",
+        "D. Amiodarone 150 mg IV over 10 minutes"
+      ],
+      "correct": 2,
+      "rationale": "Hemodynamic instability (hypotension) in a wide-complex tachycardia mandates immediate synchronized cardioversion regardless of the underlying rhythm. Structural heart disease further favors VT.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "Why is artifact-dropping-into-VF a particular concern during cardiac resuscitation?",
+      "options": [
+        "A. Artifact always indicates the patient is improving",
+        "B. Motion from compressions, transport, or shivering can generate electrical artifact mimicking VF",
+        "C. Artifact is only seen on defibrillator pads, not on telemetry",
+        "D. Artifact indicates the monitor is malfunctioning"
+      ],
+      "correct": 1,
+      "rationale": "During resuscitation, physical movement from compressions, transport, or shivering can create electrical artifact on the ECG that resembles VF, potentially leading to misdiagnosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q11",
+      "question": "When should a full 12-lead ECG be obtained during cardiac arrest management?",
+      "options": [
+        "A. Immediately upon recognizing the arrest, before starting CPR",
+        "B. At every rhythm check during compressions",
+        "C. Promptly after ROSC, and during prolonged resuscitation when the rhythm provides diagnostic information",
+        "D. Only after the patient is discharged from the hospital"
+      ],
+      "correct": 2,
+      "rationale": "A 12-lead ECG is most valuable after ROSC (to identify STEMI) or during prolonged resuscitation (to identify reversible causes). It is not a priority during active CPR but should be obtained as soon as clinically appropriate.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q12",
+      "question": "A patient in cardiac arrest shows a narrow-complex regular rhythm at 40/min on the monitor but has no pulse. The team diagnoses asystole. What error might they be making?",
+      "options": [
+        "A. None — this is correctly diagnosed as asystole",
+        "B. This may be PEA (an organized rhythm without a pulse) rather than asystole",
+        "C. They should be defibrillating this rhythm",
+        "D. They need to check the rhythm in only one lead"
+      ],
+      "correct": 1,
+      "rationale": "A narrow-complex regular rhythm at 40/min without a pulse is organized electrical activity — this is PEA, not asystole. The team must check a pulse and treat as PEA (CPR + epinephrine + reversible causes).",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q13",
+      "question": "Why should you never confuse an organized rhythm on the monitor with a perfusing rhythm?",
+      "options": [
+        "A. All organized rhythms are perfusing",
+        "B. PEA demonstrates that organized electrical activity can exist without effective cardiac output or a palpable pulse",
+        "C. Only VF produces loss of pulse",
+        "D. Organized rhythms always indicate ROSC"
+      ],
+      "correct": 1,
+      "rationale": "PEA is the defining example that organized electrical activity does not guarantee mechanical cardiac output. Always check for a pulse before concluding ROSC.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q14",
+      "question": "What is the correct approach when you cannot determine whether a wide-complex tachycardia is VT or SVT with aberrancy in an ACLS setting?",
+      "options": [
+        "A. Assume it is SVT and give adenosine",
+        "B. Treat as VT — synchronized cardioversion or antiarrhythmic therapy is the safer choice",
+        "C. Wait 30 minutes for the rhythm to self-resolve",
+        "D. Only shock if the patient is in cardiac arrest"
+      ],
+      "correct": 1,
+      "rationale": "When VT vs SVT with aberrancy cannot be reliably distinguished, treating as VT is the safer approach. Cardioversion is effective for both; adenosine is not effective for VT and could cause harm in some contexts.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q15",
+      "question": "A team is performing CPR and the monitor rhythm changes from asystole to a regular organized rhythm at 60/min. The team leader announces ROSC. What should the compressor do?",
+      "options": [
+        "A. Immediately stop compressions and prepare for post-arrest care",
+        "B. Pause briefly to check for a pulse — an organized rhythm without a pulse is PEA, not ROSC",
+        "C. Continue compressions for 2 more minutes regardless",
+        "D. Defibrillate the organized rhythm"
+      ],
+      "correct": 1,
+      "rationale": "An organized rhythm appearing during CPR must be confirmed with a pulse check. PEA presents as organized activity without a pulse. Do not assume ROSC without pulse confirmation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q16",
+      "question": "Which of the following is TRUE about fine VF compared to coarse VF?",
+      "options": [
+        "A. Fine VF requires different energy levels for defibrillation",
+        "B. Fine VF is treated differently than coarse VF in the 2025 guidelines",
+        "C. Both are treated identically as VF — the fine/coarse distinction has no therapeutic significance",
+        "D. Fine VF should be treated as asystole"
+      ],
+      "correct": 2,
+      "rationale": "The 2025 AHA Guidelines do not distinguish between fine and coarse VF for treatment purposes. Both are treated as VF with immediate defibrillation. Fine VF should not be misdiagnosed as asystole.",
+      "difficulty": "Medium"
+    }
+  ]
+}

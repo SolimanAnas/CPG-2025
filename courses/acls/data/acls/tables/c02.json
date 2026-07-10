@@ -1,0 +1,33 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "CPR Quality Metrics in ACLS",
+      "headers": ["Metric", "Target", "Why It Matters"],
+      "rows": [
+        ["Rate", "100–120/min", "Maintains circulation without sacrificing depth"],
+        ["Depth", "≥2 in (5 cm), ≤2.4 in (6 cm)", "Generates adequate blood flow; avoids injury"],
+        ["Recoil", "Full recoil each compression", "Allows the heart to refill between compressions"],
+        ["Pause duration", "<10 s per interruption", "Blood flow falls rapidly when compressions stop"],
+        ["Chest compression fraction", "≥60%, ideally >80%", "Reflects total time actually compressing"],
+        ["Compressor switch", "~Every 2 minutes", "Prevents fatigue-related quality decay"],
+        ["Ventilation (advanced airway)", "1 breath / 6 s (~10/min)", "Avoids over-ventilation reducing cardiac output"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "Core Team Dynamics Elements",
+      "headers": ["Element", "What It Means", "Example"],
+      "rows": [
+        ["Defined roles", "Everyone knows their job before the code starts", "Compressor, airway, medications, recorder, coach"],
+        ["Closed-loop communication", "Order → repeat-back → confirmation", "\"Give epi 1 mg\" → \"Giving epi 1 mg\" → \"Epi 1 mg given\""],
+        ["Clear/concise messages", "Direct, unambiguous language to a named person", "\"Sarah, charge to 200 J\" instead of \"someone charge it\""],
+        ["Knowing your limitations", "Say so before attempting a task beyond your skill", "\"I haven't placed an IO before — can you take this?\""],
+        ["Constructive intervention", "Speak up promptly and respectfully about an error", "\"That dose was already given two minutes ago\""],
+        ["Reevaluation", "Reassess rhythm, pulse, and plan frequently", "Rhythm and pulse check every ~2 minutes"],
+        ["Mutual respect", "Professional tone regardless of role or stress", "Calm, non-punitive correction of errors"]
+      ]
+    }
+  ]
+}

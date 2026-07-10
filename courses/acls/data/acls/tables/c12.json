@@ -1,0 +1,46 @@
+{
+  "chapter": "c12",
+  "tables": [
+    {
+      "id": "c12_t01",
+      "title": "ACS Initial Medication Summary",
+      "headers": ["Medication", "Dose", "Route", "Key Notes"],
+      "rows": [
+        ["Aspirin", "162–325 mg", "PO (chewed)", "First drug in ALL ACS — give immediately"],
+        ["Ticagrelor", "180 mg loading, then 90 mg BID", "PO", "Preferred P2Y12 inhibitor; avoid with strong CYP3A4 inhibitors"],
+        ["Prasugrel", "60 mg loading, then 10 mg daily", "PO", "CONTRAINDICATED with prior stroke/TIA, age ≥75, weight <60 kg"],
+        ["Clopidogrel", "300–600 mg loading, then 75 mg daily", "PO", "Less effective than ticagrelor/prasugrel; use if P2Y12 inhibitor needed and others contraindicated"],
+        ["Unfractionated Heparin", "60 U/kg bolus (max 4,000 U), then 12 U/kg/hr", "IV", "Titrate to aPTT; use with PCI and fibrinolysis"],
+        ["Nitroglycerin", "0.4 mg SL q5min × 3 doses", "SL", "CONTRAINDICATED: RV infarction, PDE5 inhibitors, SBP <90"],
+        ["Morphine", "2–4 mg IV", "IV", "CAUTION: delays P2Y12 absorption; reserve for refractory pain after NTG failure"],
+        ["Oxygen", "Supplemental as needed", "Nasal cannula/mask", "ONLY if SpO₂ <90% or respiratory distress — not routine"]
+      ]
+    },
+    {
+      "id": "c12_t02",
+      "title": "Nitroglycerin Contraindications in ACS",
+      "headers": ["Contraindication", "Mechanism", "Clinical Clue"],
+      "rows": [
+        ["Right ventricular infarction", "RV is preload-dependent; NTG reduces preload → catastrophic hypotension", "Inferior STEMI with hypotension; check V4R"],
+        ["PDE5 inhibitor use (sildenafil <24 h, tadalafil <48 h)", "Synergistic vasodilation → severe hypotension", "Ask about erectile dysfunction medications"],
+        ["Systolic BP <90 mmHg", "Further BP reduction risks organ hypoperfusion", "Check BP before each dose"],
+        ["Severe aortic stenosis", "Fixed cardiac output; preload reduction causes hypotension", "Known AS or systolic murmur"],
+        ["Hypertrophic obstructive cardiomyopathy", "Preload reduction worsens LVOT obstruction", "Known HCM or dynamic murmur"]
+      ]
+    },
+    {
+      "id": "c12_t03",
+      "title": "STEMI Reperfusion: Primary PCI vs Fibrinolysis",
+      "headers": ["Parameter", "Primary PCI", "Fibrinolysis"],
+      "rows": [
+        ["Time goal", "FMC2D ≤90 minutes", "Door-to-needle ≤30 minutes"],
+        ["Indication", "First choice when achievable within 90 min", "Onset <12 h AND anticipated PPCI delay >120 min"],
+        ["Drug", "None (mechanical reperfusion)", "Alteplase or tenecteplase"],
+        ["Post-treatment", "N/A", "Transfer for angiography within 3–24 h"],
+        ["If failed", "N/A", "Rescue PCI"],
+        ["Contraindications", "None specific to PCI", "Active bleeding, stroke <3 months, ICH, INR >1.7, platelets <100K, aortic dissection"],
+        ["Preferred when", "PCI-capable center within 90 min", "Non-PCI center with prolonged transfer time"]
+      ]
+    }
+  ]
+}

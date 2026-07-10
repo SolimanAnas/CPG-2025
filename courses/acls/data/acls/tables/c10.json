@@ -1,0 +1,45 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Atropine Dosing for Symptomatic Bradycardia",
+      "headers": ["Parameter", "Value", "Notes"],
+      "rows": [
+        ["Dose per administration", "1 mg IV or IO", "Single bolus injection"],
+        ["Repeat interval", "Every 3–5 minutes", "Reassess after each dose"],
+        ["Maximum total dose", "3 mg total", "Do not exceed — escalate to pacing/infusion"],
+        ["Mechanism", "Anticholinergic (vagolytic)", "Blocks vagal tone at SA and AV nodes"],
+        ["Most effective for", "Sinus node dysfunction, low-grade AV block", "Supra-Hisian / vagally-mediated bradycardia"],
+        ["Least effective for", "Mobitz II, third-degree block (wide QRS)", "Infranodal blocks are not vagally mediated"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Transcutaneous Pacing Parameters",
+      "headers": ["Parameter", "Starting Value", "Titration", "Maximum"],
+      "rows": [
+        ["Rate", "60–80/min", "Titrate to clinical response", "Per patient need"],
+        ["Output (current)", "Start at 80 mA", "Increase by 10 mA q2-3 min", "200 mA"],
+        ["Confirmation", "Paced spike → wide QRS → T wave", "PLUS palpable pulse at paced rate", "Mechanical capture required"],
+        ["Pad placement", "Anterior-posterior or anterolateral", "Reposition if no capture at max output", "Ensure good skin contact"],
+        ["Patient comfort", "N/A", "Give analgesia/sedation if conscious", "Assess hemodynamic tolerance"]
+      ]
+    },
+    {
+      "id": "c10_t03",
+      "title": "Symptomatic vs Asymptomatic Bradycardia — Decision Guide",
+      "headers": ["Feature", "Symptomatic (Unstable)", "Asymptomatic (Stable)"],
+      "rows": [
+        ["Heart rate", "Typically <50/min", "Typically <50/min"],
+        ["Blood pressure", "Hypotension (SBP <90 mmHg)", "Normal or near-normal"],
+        ["Mental status", "Acutely altered / confused", "Clear, alert"],
+        ["Perfusion signs", "Shock, diaphoresis, pallor", "No signs of poor perfusion"],
+        ["Chest pain", "Ischemic chest discomfort", "None"],
+        ["Heart failure", "Acute pulmonary edema / failure", "None"],
+        ["Initial treatment", "Atropine 1 mg IV, repeat to max 3 mg", "Monitor, observe, investigate cause"],
+        ["Escalation", "Pacing / dopamine / epinephrine infusion", "Treat underlying cause if found"]
+      ]
+    }
+  ]
+}

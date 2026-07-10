@@ -1,0 +1,208 @@
+{
+  "chapter": "c13",
+  "questions": [
+    {
+      "id": "c13_q01",
+      "question": "What is the time window for IV thrombolysis (alteplase) in acute ischemic stroke?",
+      "options": ["A. ≤2 hours", "B. ≤3 hours", "C. ≤4.5 hours", "D. ≤6 hours"],
+      "correct": 2,
+      "rationale": "IV tPA (alteplase) is approved for acute ischemic stroke within 4.5 hours of symptom onset, as reaffirmed by the 2025 AHA guidelines.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q02",
+      "question": "What is the correct dose and administration of IV tPA for stroke?",
+      "options": [
+        "A. 0.3 mg/kg, max 30 mg, all as a bolus",
+        "B. 0.9 mg/kg, max 90 mg, 10% bolus over 1 min then remainder over 60 min",
+        "C. 1.0 mg/kg, max 100 mg, infused over 30 min",
+        "D. 0.5 mg/kg, max 50 mg, 50% bolus then 50% over 60 min"
+      ],
+      "correct": 1,
+      "rationale": "The stroke tPA dose is 0.9 mg/kg IV (max 90 mg), with 10% given as a bolus over 1 minute and the remaining 90% infused over 60 minutes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q03",
+      "question": "What blood pressure must be achieved BEFORE administering tPA for stroke?",
+      "options": [
+        "A. <140/90 mmHg",
+        "B. <160/100 mmHg",
+        "C. <185/110 mmHg",
+        "D. <200/120 mmHg"
+      ],
+      "correct": 2,
+      "rationale": "Blood pressure must be <185/110 mmHg before tPA is initiated. Use IV labetalol 10–20 mg or nicardipine infusion to achieve this target.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q04",
+      "question": "What blood pressure target must be maintained DURING and AFTER tPA infusion?",
+      "options": [
+        "A. <160/90 mmHg",
+        "B. <180/105 mmHg for at least 24 hours",
+        "C. <140/90 mmHg for 48 hours",
+        "D. <200/110 mmHg for 12 hours"
+      ],
+      "correct": 1,
+      "rationale": "During and for at least 24 hours after tPA, blood pressure must be maintained <180/105 mmHg, with approximately 15% reduction in the first 24 hours.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q05",
+      "question": "What is the most important stroke mimic to rule out before initiating treatment?",
+      "options": [
+        "A. Bell's palsy",
+        "B. Complex partial seizure",
+        "C. Hypoglycemia",
+        "D. Migraine with aura"
+      ],
+      "correct": 2,
+      "rationale": "Hypoglycemia is the most critical and immediately treatable stroke mimic. Always check blood glucose in every suspected stroke presentation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q06",
+      "question": "What is the time window for mechanical thrombectomy in large-vessel occlusion with standard imaging?",
+      "options": [
+        "A. ≤3 hours",
+        "B. ≤6 hours",
+        "C. ≤12 hours",
+        "D. ≤24 hours"
+      ],
+      "correct": 1,
+      "rationale": "The standard time window for mechanical thrombectomy is within 6 hours of symptom onset using conventional imaging. Advanced perfusion imaging can extend this to 24 hours in selected patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q07",
+      "question": "What blood pressure threshold is allowed for a non-tPA stroke candidate in the first 24 hours?",
+      "options": [
+        "A. <160/100 mmHg",
+        "B. <185/110 mmHg",
+        "C. Up to 220/120 mmHg if no hemorrhage or cardiac ischemia",
+        "D. No permissive hypertension is allowed"
+      ],
+      "correct": 2,
+      "rationale": "Permissive hypertension up to 220/120 mmHg is allowed in the first 24 hours for non-tPA candidates, provided there is no evidence of intracranial hemorrhage, cardiac ischemia, or aortic dissection.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q08",
+      "question": "What imaging must be completed BEFORE administering tPA for stroke?",
+      "options": [
+        "A. MRI with diffusion-weighted imaging",
+        "B. CT angiography of the head and neck",
+        "C. Non-contrast CT of the head",
+        "D. CT perfusion scan"
+      ],
+      "correct": 2,
+      "rationale": "A non-contrast CT of the head is mandatory before tPA to exclude intracranial hemorrhage. This is the single most critical imaging step in stroke.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q09",
+      "question": "How does Bell's palsy differ from central facial droop seen in stroke?",
+      "options": [
+        "A. Bell's palsy involves the upper face; stroke spares it",
+        "B. Bell's palsy spares the forehead; stroke involves it",
+        "C. Bell's palsy affects both sides; stroke is unilateral",
+        "D. Bell's palsy affects the forehead and lower face; stroke affects only the upper face"
+      ],
+      "correct": 3,
+      "rationale": "Bell's palsy (peripheral facial nerve) affects the ENTIRE ipsilateral face including the forehead. Central facial droop (stroke) spares the forehead because the upper face receives bilateral cortical innervation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q10",
+      "question": "Should tPA be withheld while evaluating a patient for mechanical thrombectomy?",
+      "options": [
+        "A. Yes — always wait for thrombectomy evaluation first",
+        "B. No — give tPA immediately if criteria are met; proceed to thrombectomy without delay",
+        "C. Yes — tPA and thrombectomy are mutually exclusive",
+        "D. Only if thrombectomy is expected within 30 minutes"
+      ],
+      "correct": 1,
+      "rationale": "tPA should be given immediately if the patient meets criteria. Patients eligible for both tPA and thrombectomy receive tPA first and proceed to thrombectomy without delay — the two treatments are complementary.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q11",
+      "question": "What is the approximate rate of neuronal loss in untreated large-vessel ischemic stroke?",
+      "options": [
+        "A. 100,000 neurons per minute",
+        "B. 500,000 neurons per minute",
+        "C. 1.9 million neurons per minute",
+        "D. 5 million neurons per minute"
+      ],
+      "correct": 2,
+      "rationale": "Approximately 1.9 million neurons are lost per minute of untreated large-vessel ischemic stroke, underscoring the urgency of 'time is brain.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q12",
+      "question": "Which drug lowers blood pressure before tPA in stroke?",
+      "options": [
+        "A. IV nitroglycerin",
+        "B. IV labetalol 10–20 mg over 1–2 minutes or nicardipine infusion",
+        "C. IV furosemide 40 mg",
+        "D. PO amlodipine 10 mg"
+      ],
+      "correct": 1,
+      "rationale": "IV labetalol 10–20 mg over 1–2 minutes (repeat once) or nicardipine infusion (5 mg/hr, titrate up by 2.5 mg/hr q5–15 min, max 15 mg/hr) are used to lower BP before tPA.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q13",
+      "question": "A stroke patient has a glucose of 240 mg/dL. The resident says 'hyperglycemia doesn't matter in stroke.' What is the correct response?",
+      "options": [
+        "A. The resident is correct — hyperglycemia has no effect on stroke outcomes.",
+        "B. The resident is wrong — glucose should be maintained at 70–180 mg/dL; both hypo- and hyperglycemia (>180 mg/dL) worsen stroke outcomes.",
+        "C. Only hypoglycemia matters — hyperglycemia is always harmless.",
+        "D. Glucose management is not part of acute stroke care."
+      ],
+      "correct": 1,
+      "rationale": "Glucose should be maintained at 70–180 mg/dL. Both hypoglycemia (<60 mg/dL) and severe hyperglycemia (>180 mg/dL) are associated with worse outcomes in acute ischemic stroke. Insulin should be used for glucose >180 mg/dL.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q14",
+      "question": "What should be done with fever in an acute stroke patient?",
+      "options": [
+        "A. Allow permissive hyperthermia up to 39°C",
+        "B. Treat aggressively with antipyretics and cooling — >38°C worsens ischemic brain injury",
+        "C. Only treat if temperature exceeds 40°C",
+        "D. Fever is beneficial in stroke and should not be treated"
+      ],
+      "correct": 1,
+      "rationale": "Fever (>38°C) worsens ischemic brain injury and must be treated aggressively and immediately with antipyretics and active cooling measures.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q15",
+      "question": "A patient with left MCA syndrome and symptom onset 14 hours ago has CTA showing M1 occlusion. CT perfusion shows a small infarction core with large salvageable penumbra. What is the most appropriate management?",
+      "options": [
+        "A. No intervention possible — the 4.5-hour tPA and 6-hour thrombectomy windows have closed.",
+        "B. Mechanical thrombectomy — advanced perfusion imaging extends eligibility up to 24 hours in selected patients with salvageable penumbra (DAWN/DEFUSE-3 criteria).",
+        "C. Transfer to hospice — no treatment options exist beyond 6 hours.",
+        "D. Administer tPA regardless of the time window."
+      ],
+      "correct": 1,
+      "rationale": "CT perfusion showing salvageable penumbra with limited core extends the thrombectomy window to 24 hours per DAWN and DEFUSE-3 trials. This patient has LVO with favorable perfusion profile — thrombectomy is indicated.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q16",
+      "question": "A patient has normal facial symmetry, no arm drift, but abnormal speech when repeating a phrase. How many items on the Cincinnati Prehospital Stroke Scale are abnormal, and what does this indicate?",
+      "options": [
+        "A. Zero abnormal — no stroke concern",
+        "B. One abnormal — high probability of stroke; activate stroke response",
+        "C. Two abnormal — this is a TIA, not a stroke",
+        "D. Three abnormal — the scale is normal"
+      ],
+      "correct": 1,
+      "rationale": "One of three items (speech) is abnormal. The Cincinnati scale has high positive predictive value when ANY one of the three items is abnormal — this patient has a high probability of stroke and requires immediate stroke activation.",
+      "difficulty": "Hard"
+    }
+  ]
+}

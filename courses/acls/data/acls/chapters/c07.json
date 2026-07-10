@@ -1,0 +1,88 @@
+{
+  "id": "c07",
+  "title": "Cardiac Arrest: Asystole / PEA",
+  "shortTitle": "Asystole / PEA Arrest",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the immediate management sequence for asystole and pulseless electrical activity (PEA).",
+    "Explain why defibrillation is NOT indicated for asystole or PEA.",
+    "State the correct epinephrine dose, concentration, and timing for nonshockable rhythms.",
+    "List and explain the H's and T's as reversible causes of cardiac arrest.",
+    "Differentiate the PEA subtypes and explain how they may guide treatment.",
+    "Describe how early epinephrine timing (within 3–5 minutes) is prioritized for nonshockable rhythms.",
+    "Explain the role of waveform capnography in confirming true asystole and monitoring CPR quality.",
+    "Describe when mechanical CPR devices may be considered."
+  ],
+  "summary": [
+    {
+      "title": "Defining Asystole and PEA",
+      "content": "Asystole is the complete absence of ventricular electrical activity — a flatline on the ECG with no pulse. Pulseless electrical activity (PEA) is any organized electrical rhythm (normal or abnormal) on the ECG that fails to generate a palpable pulse. Both are nonshockable rhythms — the cornerstone of management is high-quality CPR and early identification and treatment of reversible causes, rather than defibrillation."
+    },
+    {
+      "title": "The Asystole/PEA Algorithm",
+      "content": "Upon identifying asystole or PEA, the team immediately begins high-quality chest compressions and ventilations. Epinephrine 1 mg IV/IO (1:10,000 concentration) is given as soon as feasible, ideally within 3–5 minutes of arrest onset for nonshockable rhythms, and repeated every 3–5 minutes. After every 2 minutes of CPR, a brief rhythm check is performed. If the rhythm transitions to VF/pVT, the VF/pVT algorithm is followed. If asystole or PEA persists, continue CPR-epinephrine cycles while actively searching for and treating reversible causes."
+    },
+    {
+      "title": "Epinephrine Timing in Nonshockable Rhythms",
+      "content": "The 2025 guidelines emphasize early epinephrine for nonshockable rhythms. Unlike VF/pVT where epinephrine is typically given after the second shock, in asystole/PEA epinephrine should be administered as soon as an IV/IO line is established — ideally within 3–5 minutes of arrest onset. Evidence suggests that earlier epinephrine in nonshockable rhythms is associated with improved survival, particularly in witnessed arrests with a likely reversible cause."
+    },
+    {
+      "title": "The H's and T's: Identifying Reversible Causes",
+      "content": "A systematic search for reversible causes is essential in asystole/PEA because these rhythms typically result from an identifiable, treatable underlying condition. The H's: Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hypo-/Hyperkalemia, Hypothermia. The T's: Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary), Thrombosis (coronary). Each cause requires a specific diagnostic and therapeutic approach, and early identification dramatically affects the chance of ROSC."
+    },
+    {
+      "title": "Confirming True Asystole with Waveform Capnography",
+      "content": "True asystole should be confirmed on at least two leads. Waveform capnography is invaluable: if there is no cardiac output (asystole or fine VF), ETCO₂ will be very low or absent despite adequate ventilations. An ETCO₂ <10 mmHg during CPR in a patient on an advanced airway is consistent with asystole and low cardiac output. ETCO₂ may also help distinguish pseudo-asystole artifacts from true asystole."
+    },
+    {
+      "title": "PEA Subtypes and Their Treatment Implications",
+      "content": "PEA encompasses a spectrum — from narrow-complex organized rhythms with relatively preserved rate (which may be closest to producing a pulse) to wide-complex agonal rhythms with very slow rates. Narrow-complex PEA may suggest hypovolemia, tension pneumothorax, or cardiac tamponade as etiologies and may respond more rapidly to treatment. Wide-complex or very slow PEA may indicate severe metabolic derangement or extensive myocardial ischemia. Regardless of subtype, the algorithm is the same: CPR, epinephrine, and treat H's & T's."
+    },
+    {
+      "title": "Mechanical CPR Considerations",
+      "content": "Routine use of mechanical CPR devices is not recommended. However, mechanical CPR (piston or load-distributing band devices) may be considered in specific circumstances where high-quality manual compressions are impractical or unsafe to sustain — such as prolonged transport, limited personnel, during ECPR cannulation, or in the catheterization lab. Performance of mechanical devices is comparable between piston and load-distributing band types."
+    }
+  ],
+  "clinicalPearls": [
+    "Asystole and PEA are nonshockable — do NOT defibrillate. Focus on CPR quality and identifying reversible causes.",
+    "Give epinephrine early for nonshockable rhythms — ideally within 3–5 minutes — do not delay to establish large-bore IV access when IO is available.",
+    "Always search for the 'why' — asystole/PEA is a symptom of an underlying cause, not a final diagnosis.",
+    "Use at least two ECG leads to confirm true asystole before removing pads; waveform capnography helps confirm absent cardiac output."
+  ],
+  "redFlags": [
+    "Defibrillating asystole or PEA — this wastes time and harms the patient.",
+    "Failing to systematically search for and treat reversible causes (H's & T's).",
+    "Delayed epinephrine administration while establishing peripheral IV access — use IO if IV is not quickly available."
+  ],
+  "commonMistakes": [
+    "Misidentifying fine VF as asystole — always check two leads and use capnography to confirm.",
+    "Failing to search for reversible causes while repeatedly giving epinephrine — drug alone without cause-directed therapy has limited benefit.",
+    "Assuming a very slow, wide-complex PEA rhythm is asystole and stopping resuscitation prematurely."
+  ],
+  "memoryAids": [
+    "'No shock, just compressions and epi' — asystole/PEA is NOT a shockable rhythm.",
+    "H's and T's mnemonic: Hypo/Hyper (volume, O₂, K⁺, pH, temp) and the 4 T's (pneumothorax, tamponade, toxins, thrombosis).",
+    "Epi early for nonshockable — within 3–5 minutes — don't wait."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Asystole / PEA Arrest Algorithm",
+      "content": "Asystole or PEA identified on the monitor (confirm on at least 2 leads)\n  → Start high-quality CPR immediately (compressions + ventilations)\n  → Establish IV/IO access\n  → Give epinephrine 1 mg IV/IO (1:10,000) as soon as feasible, ideally within 3–5 minutes\n  → Continue CPR 2 min, then rhythm check\n     → Still asystole/PEA: resume CPR, repeat epinephrine q3–5 min, search for H's & T's\n     → Organized rhythm appears: check pulse\n        → Pulse present: ROSC pathway\n        → No pulse: continue as PEA\n     → VF/pVT develops: switch to VF/pVT algorithm (shock)\n  → Consider and treat reversible causes concurrently throughout:\n     H's: Hypovolemia, Hypoxia, Hydrogen ion, Hypo-/Hyperkalemia, Hypothermia\n     T's: Tension pneumothorax, Tamponade, Toxins, Thrombosis (pulmonary), Thrombosis (coronary)\n  → Consider waveform capnography to confirm asystole and monitor CPR quality"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (Asystole/PEA management)",
+    "AHA 2025 Guidelines for CPR and ECC — Epinephrine timing in nonshockable rhythms"
+  ],
+  "graphics": [
+    {
+      "id": "c07_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/acls/c07_g01.webp",
+      "alt": "Asystole / PEA Resuscitation Flowchart",
+      "caption": "Resuscitation flowchart showing CPR, immediate Epinephrine, and search for H's and T's."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "The Displaced Tube",
+      "presentation": "During a cardiac arrest resuscitation, an ET tube was placed 3 minutes ago and confirmed with waveform capnography (ETCO2 = 12 mmHg). The team is performing CPR and the capnography waveform suddenly disappears. SpO2 begins to fall from 89% to 72%.",
+      "vitals": { "hr": "No pulse", "rr": "None", "spo2": "72%", "etco2": "0 mmHg", "loc": "Unresponsive" },
+      "question": "What is the most likely cause and what should the team do?",
+      "options": [
+        "A: The ET tube has likely become displaced; immediately reposition or replace it while continuing compressions.",
+        "B: The capnography sensor is faulty; ignore it and continue ventilating.",
+        "C: The patient is improving; continue as-is.",
+        "D: Stop compressions to perform a detailed airway assessment."
+      ],
+      "correct": 0,
+      "explanation": "Sudden loss of capnography waveform with falling SpO2 after confirmed tracheal placement strongly suggests tube displacement or obstruction. The tube must be repositioned or replaced immediately while compressions continue.",
+      "clinicalPearl": "Continuous waveform capnography is your early-warning system for tube displacement — treat a lost waveform as an airway emergency."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Low ETCO2 Despite Good Technique",
+      "presentation": "A patient is in PEA cardiac arrest. The team has been performing high-quality CPR for 5 minutes with an advanced airway in place. The monitor shows continuous waveform capnography with ETCO2 consistently reading 6–8 mmHg. The team lead confirms compressions are at the correct rate (110/min), depth (>2 inches), and full recoil is being achieved.",
+      "vitals": { "hr": "No pulse", "rr": "None", "etco2": "7 mmHg", "loc": "Unresponsive" },
+      "question": "What should the team investigate next?",
+      "options": [
+        "A: The capnography is likely inaccurate; recalibrate the sensor.",
+        "B: Reassess for reversible causes of low cardiac output during arrest — hypovolemia, tension pneumothorax, massive pulmonary embolism, cardiac tamponade.",
+        "C: The ETCO2 of 7 is acceptable; continue as-is.",
+        "D: Remove the ET tube and switch to BVM ventilation."
+      ],
+      "correct": 1,
+      "explanation": "When ETCO2 is persistently below 10 mmHg despite correct compression technique, the team must investigate reversible causes that reduce cardiac output or CO2 delivery, such as hypovolemia, tension pneumothorax, massive PE, or tamponade (the H's and T's).",
+      "clinicalPearl": "ETCO2 below 10 mmHg despite correct compressions is a signal to hunt for reversible causes, not just a measure of compression quality."
+    },
+    {
+      "id": "c03_s03",
+      "title": "The First-Attempt Failure",
+      "presentation": "A code team is managing a VF arrest. Compressions have been ongoing and defibrillation has been performed. An experienced provider attempts ET intubation, but after 12 seconds the tube is not placed. The team lead calls for a pause.",
+      "vitals": { "hr": "VF", "rr": "None", "etco2": "N/A", "loc": "Unresponsive" },
+      "question": "What is the correct next step?",
+      "options": [
+        "A: Continue the intubation attempt until successful, as the airway must be secured.",
+        "B: Return to BVM ventilation and high-quality CPR; reattempt intubation only when conditions are optimized.",
+        "C: Abandon the airway entirely and use no ventilation.",
+        "D: Insert an ET tube blindly without laryngoscopy."
+      ],
+      "correct": 1,
+      "explanation": "An intubation attempt exceeding 10 seconds without successful placement should be aborted. The team must return to BVM ventilation and high-quality CPR, optimize conditions (positioning, suction, video laryngoscopy), and reattempt only when ready.",
+      "clinicalPearl": "Failed intubation attempts are a leading cause of prolonged compression pauses — always return to BVM and CPR between attempts."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "ACLS Cardiac Arrest Rhythm Comparison",
+      "headers": ["Rhythm", "ECG Appearance", "Pulse", "Shockable?", "Initial Treatment"],
+      "rows": [
+        ["Ventricular fibrillation (VF)", "Chaotic, disorganized; no identifiable QRS", "None", "Yes", "Defibrillate (120–200J biphasic) + CPR"],
+        ["Pulseless VT", "Rapid, regular, wide-complex (>150/min)", "None", "Yes", "Defibrillate (120–200J biphasic) + CPR"],
+        ["Asystole", "Flat line; no ventricular activity in ≥2 leads", "None", "No", "CPR + epinephrine q3–5 min + treat causes"],
+        ["PEA", "Organized rhythm (any morphology) without pulse", "None", "No", "CPR + epinephrine q3–5 min + treat H's & T's"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "VT with Pulse vs SVT with Aberrancy: Distinguishing Features",
+      "headers": ["Feature", "Favors VT", "Favors SVT with Aberrancy"],
+      "rows": [
+        ["History", "Prior MI, structural heart disease, cardiomyopathy", "No structural heart disease"],
+        ["Hemodynamics", "Often unstable", "Often stable (until very fast)"],
+        ["AV dissociation", "Present (independent P and QRS)", "Absent (1:1 AV relationship)"],
+        ["Fusion/capture beats", "May be present", "Absent"],
+        ["Precordial concordance", "Positive or negative concordance V1–V6", "Variable"],
+        ["QRS width", "Very wide (≥160 ms typical)", "Wide but <160 ms typical"],
+        ["Response to adenosine", "No response", "May terminate or slow"]
+      ]
+    },
+    {
+      "id": "c04_t03",
+      "title": "Common Reversible Causes of PEA (H's and T's)",
+      "headers": ["Category", "Cause", "Key Finding"],
+      "rows": [
+        ["H's", "Hypovolemia", "Flat neck veins, poor urine output, known bleeding"],
+        ["H's", "Hypoxia", "Low SpO2, cyanosis, known respiratory failure"],
+        ["H's", "Hydrogen ion (acidosis)", "Low pH, known DKA or renal failure"],
+        ["H's", "Hypo/hyperkalemia", "ECG changes, known CKD, medication history"],
+        ["H's", "Hypothermia", "Low core temperature, environmental exposure"],
+        ["T's", "Tension pneumothorax", "Absent breath sounds unilaterally, tracheal deviation, hypotension"],
+        ["T's", "Tamponade (cardiac)", "Beats on echo, muffled heart sounds, JVD, hypotension"],
+        ["T's", "Toxins (drug overdose)", "Pupillary findings, known ingestion, toxidrome"],
+        ["T's", "Thrombosis (coronary)", "STEMI on ECG, chest pain history"],
+        ["T's", "Thrombosis (pulmonary)", "S1Q3T3, right heart strain, sudden dyspnea, DVT risk factors"]
+      ]
+    }
+  ]
+}

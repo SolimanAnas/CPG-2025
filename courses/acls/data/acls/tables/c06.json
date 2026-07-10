@@ -1,0 +1,37 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "Defibrillation Energy: Biphasic vs Monophasic",
+      "headers": ["Waveform", "First Shock", "Subsequent Shocks", "Notes"],
+      "rows": [
+        ["Biphasic", "120–200 J (manufacturer-specific)", "Same or higher energy (escalating)", "If biphasic energy unknown, use 200 J"],
+        ["Monophasic", "360 J", "360 J", "Fixed energy for all shocks"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "Antiarrhythmic Drugs for Refractory VF/pVT",
+      "headers": ["Drug", "First Dose", "Second Dose", "Route", "Key Notes"],
+      "rows": [
+        ["Amiodarone", "300 mg IV/IO", "150 mg IV/IO", "IV/IO bolus", "Preferred antiarrhythmic; use consistently"],
+        ["Lidocaine", "1–1.5 mg/kg IV/IO", "0.5–0.75 mg/kg IV/IO", "IV/IO bolus", "Alternative to amiodarone; do not alternate agents within same arrest"]
+      ]
+    },
+    {
+      "id": "c06_t03",
+      "title": "VF/pVT Resuscitation Drug & Procedure Timing",
+      "headers": ["Intervention", "Timing", "Dose", "Notes"],
+      "rows": [
+        ["Defibrillation (biphasic)", "Immediately on rhythm identification", "120–200 J", "Escalate energy if refractory"],
+        ["Defibrillation (monophasic)", "Immediately on rhythm identification", "360 J", "Fixed energy"],
+        ["Epinephrine", "After ~2nd shock (as soon as feasible), then q3–5 min", "1 mg IV/IO (1:10,000)", "Push during compressions; saline flush after"],
+        ["Amiodarone (first dose)", "After epinephrine if VF/pVT persists", "300 mg IV/IO", "Push during compressions"],
+        ["Amiodarone (second dose)", "If VF/pVT continues after first dose", "150 mg IV/IO", "Push during compressions"],
+        ["Lidocaine (first dose)", "Alternative to amiodarone", "1–1.5 mg/kg IV/IO", "Push during compressions"],
+        ["Lidocaine (second dose)", "If VF/pVT continues", "0.5–0.75 mg/kg IV/IO", "Push during compressions"]
+      ]
+    }
+  ]
+}

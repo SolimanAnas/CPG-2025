@@ -1,0 +1,43 @@
+{
+  "chapter": "c11",
+  "tables": [
+    {
+      "id": "c11_t01",
+      "title": "Synchronized Cardioversion Energy by Rhythm (2025 AHA)",
+      "headers": ["Rhythm", "Type", "Initial Energy (Biphasic)", "Notes"],
+      "rows": [
+        ["Narrow-complex regular (SVT)", "Regular", "100 J", "After failed vagal maneuvers and adenosine"],
+        ["Atrial fibrillation", "Irregular", "≥200 J", "May need higher energies on subsequent shocks"],
+        ["Atrial flutter", "Regular or irregular", "≥200 J", "Same as AF"],
+        ["Monomorphic VT with pulse", "Regular", "100 J", "Assume VT for all wide-complex regular tachycardias"],
+        ["Polymorphic VT", "Irregular", "UNSYNCHRONIZED defibrillation", "Synchronization is CONTRAINDICATED"]
+      ]
+    },
+    {
+      "id": "c11_t02",
+      "title": "Antiarrhythmic Drugs for Tachycardia With a Pulse",
+      "headers": ["Drug", "Indication", "Dose", "Key Considerations"],
+      "rows": [
+        ["Adenosine", "Stable narrow-complex regular SVT", "6 mg rapid IV, then 12 mg (repeat once)", "Proximal port + rapid flush; avoid in AF/flutter for rate control"],
+        ["Amiodarone", "Stable wide-complex tachycardia", "150 mg IV over 10 min (may repeat once)", "First-line for regular wide-complex; also used for AF rate control"],
+        ["Procainamide", "Stable wide-complex tachycardia (alternative)", "20–50 mg/min IV (max 17 mg/kg)", "Watch for hypotension; avoid in structural heart disease"],
+        ["Diltiazem", "AF/AFlutter rate control", "0.25 mg/kg IV over 2 min, then infusion", "Calcium-channel blocker; avoid in pre-excited AF"],
+        ["Metoprolol", "AF/AFlutter rate control", "5 mg IV q5min (max 15 mg)", "Beta-blocker; avoid in decompensated heart failure"],
+        ["Magnesium sulfate", "Torsades de pointes", "1–2 g IV over 5–60 min", "Specific for polymorphic VT with prolonged QT"]
+      ]
+    },
+    {
+      "id": "c11_t03",
+      "title": "Narrow vs Wide vs Irregular Tachycardia — Comparison",
+      "headers": ["Feature", "Narrow-Regular (SVT)", "Narrow-Irregular (AF/Flutter)", "Wide-Regular (assume VT)", "Wide-Irregular (Poly VT / Pre-excited AF)"],
+      "rows": [
+        ["QRS duration", "<0.12 sec", "<0.12 sec", "≥0.12 sec", "≥0.12 sec"],
+        ["Regularity", "Regular", "Irregularly irregular", "Regular", "Irregular"],
+        ["Most likely rhythm", "AVNRT, AVRT", "Atrial fibrillation", "Ventricular tachycardia", "Polymorphic VT or pre-excited AF"],
+        ["First-line (stable)", "Vagal maneuvers → adenosine", "Rate control (diltiazem, metoprolol)", "Amiodarone 150 mg over 10 min", "Defibrillate if poly VT; avoid AV-nodal blockers if pre-excited AF"],
+        ["First-line (unstable)", "Synchronized cardioversion 100 J", "Synchronized cardioversion ≥200 J", "Synchronized cardioversion 100 J", "Unsynchronized defibrillation (poly VT) or synchronized cardioversion"],
+        ["Key danger", "Misidentifying VT as SVT", "Rapid ventricular response causing ischemia", "Giving verapamil if actually VT", "AV-nodal blockers in pre-excited AF → VF"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "What is the correct concentration of epinephrine used in cardiac arrest?",
+      "options": ["A. 1:1,000 (1 mg/mL)", "B. 1:10,000 (0.1 mg/mL)", "C. 1:100,000 (0.01 mg/mL)", "D. 1:100 (10 mg/mL)"],
+      "correct": 1,
+      "rationale": "Epinephrine in cardiac arrest is given as 1 mg of 1:10,000 concentration (0.1 mg/mL). Using 1:1,000 would result in a 10-fold overdose.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q02",
+      "question": "What is the correct epinephrine dose and interval during cardiac arrest?",
+      "options": [
+        "A. 0.5 mg IV every 1 minute",
+        "B. 1 mg IV/IO every 3–5 minutes",
+        "C. 2 mg IV every 10 minutes",
+        "D. 5 mg IV once"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine 1 mg IV/IO (1:10,000) is given every 3–5 minutes for all cardiac arrest rhythms.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "The first dose of amiodarone for refractory VF/pVT is:",
+      "options": ["A. 150 mg IV/IO", "B. 300 mg IV/IO", "C. 450 mg IV/IO", "D. 50 mg IV/IO"],
+      "correct": 1,
+      "rationale": "Amiodarone first dose for refractory VF/pVT is 300 mg IV/IO as a rapid bolus. The second dose is 150 mg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q04",
+      "question": "The second dose of amiodarone for persistent VF/pVT is:",
+      "options": ["A. 300 mg IV/IO", "B. 150 mg IV/IO", "C. 50 mg IV/IO", "D. 100 mg IV/IO"],
+      "correct": 1,
+      "rationale": "After the initial 300 mg dose, the second dose of amiodarone is 150 mg IV/IO if VF/pVT persists.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q05",
+      "question": "What is the first dose of lidocaine as an alternative antiarrhythmic for refractory VF/pVT?",
+      "options": ["A. 0.5–0.75 mg/kg IV/IO", "B. 1–1.5 mg/kg IV/IO", "C. 2–3 mg/kg IV/IO", "D. 50 mg flat dose IV/IO"],
+      "correct": 1,
+      "rationale": "Lidocaine first dose is 1–1.5 mg/kg IV/IO for refractory VF/pVT, with subsequent doses of 0.5–0.75 mg/kg.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q06",
+      "question": "Sodium bicarbonate 1 mEq/kg IV is indicated during cardiac arrest for all of the following EXCEPT:",
+      "options": [
+        "A. Known hyperkalemia with cardiac arrest",
+        "B. Tricyclic antidepressant overdose",
+        "C. Routine VF arrest without specific indications",
+        "D. Known bicarbonate-responsive acidosis"
+      ],
+      "correct": 2,
+      "rationale": "Sodium bicarbonate is NOT a routine cardiac arrest drug. It is indicated only for specific conditions: hyperkalemia, TCA OD, and known bicarbonate-responsive acidosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q07",
+      "question": "Which diluent must be used for standard amiodarone infusions, and why?",
+      "options": [
+        "A. Normal saline, because dextrose degrades the active drug",
+        "B. 5% Dextrose in water (D5W), because normal saline causes the drug to precipitate",
+        "C. Lactated Ringer's, to maintain electrolyte balance",
+        "D. Sterile water, to prevent volume overload"
+      ],
+      "correct": 1,
+      "rationale": "Standard amiodarone is incompatible with sodium chloride (normal saline) and will precipitate, forming crystals. Therefore, D5W must be used as the diluent. The solvent polysorbate 80 can cause hypotension during infusion, which is a known side effect of rapid administration and not a reaction to dextrose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "Magnesium sulfate 1–2 g IV is specifically indicated for which cardiac arrest rhythm?",
+      "options": [
+        "A. Pulseless ventricular tachycardia",
+        "B. Asystole",
+        "C. Torsades de pointes (polymorphic VT with prolonged QT)",
+        "D. Fine ventricular fibrillation"
+      ],
+      "correct": 2,
+      "rationale": "Magnesium 1–2 g IV is indicated specifically for torsades de pointes. It is NOT indicated for standard VF or pulseless VT.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q09",
+      "question": "What is the dose of vasopressin in cardiac arrest, and why is it no longer preferred?",
+      "options": [
+        "A. 10 IU — it was less effective than epinephrine",
+        "B. 20 IU — it offers no demonstrated survival advantage over epinephrine alone",
+        "C. 40 IU — it causes dangerous vasoconstriction",
+        "D. 5 IU — it was too weak to be useful"
+      ],
+      "correct": 1,
+      "rationale": "Vasopressin 20 IU may replace the first or second dose of epinephrine, but epinephrine alone is preferred. Vasopressin offers no demonstrated survival advantage over epinephrine.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Why is adenosine contraindicated in pulseless arrest?",
+      "options": [
+        "A. It is too expensive for use in arrest",
+        "B. It has an extremely short half-life and requires a pulse to reach the heart effectively; it has no role in VF/pVT/asystole/PEA",
+        "C. It causes ventricular fibrillation",
+        "D. It can only be given intramuscularly"
+      ],
+      "correct": 1,
+      "rationale": "Adenosine is a short-acting AV nodal blocker for SVT with a pulse. Its 6-second half-life and mechanism of action make it completely ineffective in pulseless rhythms. It should never be used in cardiac arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q11",
+      "question": "When epinephrine is given for VF/pVT, what is the recommended timing relative to shocks?",
+      "options": [
+        "A. Before the first shock",
+        "B. After the second shock, then every 3–5 minutes",
+        "C. After the fifth shock",
+        "D. Only after ROSC"
+      ],
+      "correct": 1,
+      "rationale": "For VF/pVT, epinephrine 1 mg IV/IO is typically given after the second shock, then repeated every 3–5 minutes during ongoing CPR.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "For asystole/PEA, epinephrine timing is:",
+      "options": [
+        "A. After 10 minutes of CPR",
+        "B. As soon as feasible, ideally within 3–5 minutes of arrest onset",
+        "C. After the first shock",
+        "D. Only after confirming a reversible cause"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 guidelines emphasize early epinephrine for nonshockable rhythms, ideally within 3–5 minutes of arrest onset. Do not delay for IV access — use IO if needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q13",
+      "question": "What is the correct saline flush after an epinephrine bolus during CPR?",
+      "options": [
+        "A. No flush is needed",
+        "B. 1–2 mL flush",
+        "C. 10–20 mL normal saline flush followed by an IV/IO fluid push",
+        "D. 50 mL dextrose flush"
+      ],
+      "correct": 2,
+      "rationale": "After each drug bolus, a 10–20 mL normal saline flush followed by an IV/IO fluid push ensures the drug reaches the central circulation. Dextrose should not be used as a flush for most arrest drugs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q14",
+      "question": "Which statement about IV vs IO access during cardiac arrest is correct?",
+      "options": [
+        "A. IO access is contraindicated during cardiac arrest",
+        "B. IV is preferred first-line; IO is reasonable when IV cannot be obtained quickly, with comparable drug bioavailability",
+        "C. IO access is only for pediatric patients",
+        "D. IV access is always faster than IO access"
+      ],
+      "correct": 1,
+      "rationale": "IV access is preferred first-line. IO is reasonable when IV cannot be obtained quickly — drugs delivered via IO reach the central circulation with comparable speed and bioavailability.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q15",
+      "question": "A patient in cardiac arrest has a known history of chronic renal failure. At the third rhythm check, the ECG shows very peaked T waves. Potassium returns at 8.2 mEq/L. Which drug should be given in addition to standard ACLS?",
+      "options": [
+        "A. Amiodarone 300 mg IV",
+        "B. Sodium bicarbonate 1 mEq/kg IV (along with calcium and insulin/glucose)",
+        "C. Magnesium 2 g IV",
+        "D. Adenosine 6 mg IV"
+      ],
+      "correct": 1,
+      "rationale": "Severe hyperkalemia (K⁺ 8.2) with peaked T waves is a specific indication for sodium bicarbonate 1 mEq/kg IV, along with calcium (membrane stabilization), insulin/glucose (intracellular shift), and ultimately dialysis.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q16",
+      "question": "Why should you never give amiodarone and then lidocaine (or vice versa) within the same arrest?",
+      "options": [
+        "A. The drugs interact to cause asystole",
+        "B. Using one agent consistently maintains predictable levels and avoids cumulative toxicity without clear benefit from switching",
+        "C. They are identical drugs with different names",
+        "D. It is against the law"
+      ],
+      "correct": 1,
+      "rationale": "The ACLS guidelines recommend using one antiarrhythmic consistently rather than alternating, to maintain predictable drug levels and avoid additive toxicity without proven benefit from switching.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q17",
+      "question": "Which antiarrhythmic agent is preferred when the VF/pVT arrest is clearly due to acute ischemia/MI?",
+      "options": [
+        "A. Amiodarone",
+        "B. Lidocaine",
+        "C. Magnesium sulfate",
+        "D. Sodium bicarbonate"
+      ],
+      "correct": 1,
+      "rationale": "Lidocaine is preferred as an alternative to amiodarone when the arrest is clearly due to acute ischemia/MI, as it has particular efficacy in ischemia-related ventricular arrhythmias.",
+      "difficulty": "Hard"
+    }
+  ]
+}

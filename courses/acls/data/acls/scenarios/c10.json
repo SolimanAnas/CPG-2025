@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "The Dizzy Elderly Patient",
+      "presentation": "A 78-year-old woman presents to the ED with dizziness and near-syncope. She has a history of hypertension and osteoarthritis. On examination, she is alert but pale and diaphoretic.",
+      "vitals": { "hr": 38, "bp": "78/50", "rr": 16, "spo2": "97%", "loc": "Alert" },
+      "question": "What is the correct initial management?",
+      "options": [
+        "A: Observe and discharge with follow-up.",
+        "B: Atropine 1 mg IV, repeat q3-5 min to max 3 mg; reassess for pacing/infusion if ineffective.",
+        "C: Immediate transcutaneous pacing without trying atropine.",
+        "D: Start an amiodarone drip."
+      ],
+      "correct": 1,
+      "explanation": "This is symptomatic bradycardia (hypotension, near-syncope). Atropine 1 mg IV is first-line, repeated every 3–5 minutes to a maximum of 3 mg. Pacing/infusion is reserved for atropine failure or unlikely-to-respond rhythms.",
+      "clinicalPearl": "Always determine whether bradycardia is symptomatic before treating — symptoms of instability (hypotension, altered mentation, syncope, chest pain) drive the treatment decision."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Atropine Failure in Complete Heart Block",
+      "presentation": "A 65-year-old man with a history of coronary artery disease presents with new-onset third-degree AV block. He is confused, diaphoretic, and hypotensive. Atropine 1 mg IV has been given twice (total 2 mg) with no improvement in heart rate or blood pressure.",
+      "vitals": { "hr": 32, "bp": "70/40", "rr": 22, "spo2": "94%", "loc": "Confused" },
+      "question": "What is the best next step?",
+      "options": [
+        "A: Give a third dose of atropine 1 mg and wait.",
+        "B: Prepare transcutaneous pacing and/or start a dopamine/epinephrine infusion — atropine is unlikely to work for complete heart block.",
+        "C: Give adenosine 6 mg rapid IV.",
+        "D: Discharge the patient with a cardiology follow-up."
+      ],
+      "correct": 1,
+      "explanation": "Complete (third-degree) AV block with a wide QRS is infranodal and unlikely to respond to atropine. After 2 mg of atropine has already failed, the priority is to escalate to transcutaneous pacing and/or dopamine/epinephrine infusion without delay.",
+      "clinicalPearl": "Atropine's antivagal mechanism works at the SA and AV nodes; infranodal blocks (Mobitz II, complete heart block with wide QRS) are not vagally mediated, making atropine ineffective."
+    },
+    {
+      "id": "c10_s03",
+      "title": "Pacing Without a Pulse",
+      "presentation": "A 58-year-old woman in symptomatic bradycardia from an inferior MI has transcutaneous pacing pads applied. Pacing is initiated and electrical capture is confirmed on the monitor (paced spikes followed by wide QRS complexes). However, the team cannot feel a pulse at the paced rate.",
+      "vitals": { "hr": "Pacing at 70/min (electrical capture)", "bp": "60/palp", "rr": 24, "spo2": "88%", "loc": "Lethargic" },
+      "question": "What is the correct interpretation and next action?",
+      "options": [
+        "A: Pacing is working — continue as is.",
+        "B: Electrical capture without mechanical capture — increase the milliamp output, reassess, and consider starting a dopamine/epinephrine infusion in parallel.",
+        "C: Turn off the pacer and give atropine.",
+        "D: Shock the patient."
+      ],
+      "correct": 1,
+      "explanation": "Pacing spikes with a QRS but no palpable pulse means electrical capture without mechanical capture. The output should be increased, pad position reassessed, and a dopamine/epinephrine infusion started to support perfusion while pacing capture is being optimized.",
+      "clinicalPearl": "Electrical capture is not the goal — mechanical capture (a pulse at the paced rate) is. Always verify by feeling the pulse, not just watching the monitor."
+    }
+  ]
+}

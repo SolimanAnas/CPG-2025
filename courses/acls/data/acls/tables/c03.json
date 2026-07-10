@@ -1,0 +1,46 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "Advanced Airway Options During Cardiac Arrest",
+      "headers": ["Feature", "BVM Ventilation", "Supraglottic Airway (i-gel/King LT)", "Endotracheal Intubation"],
+      "rows": [
+        ["Speed of placement", "Immediate", "Fast (<15 seconds typical)", "Slower (requires laryngoscopy, 10–30 seconds)"],
+        ["Skill required", "Basic (BLS-level)", "Moderate", "Advanced (experienced provider)"],
+        ["Aspiration protection", "Minimal", "Partial", "Complete (cuffed tube)"],
+        ["Ventilation reliability", "Variable (mask seal dependent)", "Good seal, consistent", "Most reliable, definitive"],
+        ["Compression interruption", "Minimal (continuous compressions)", "Minimal", "Risk of prolonged pause"],
+        ["Confirmation method", "Chest rise, auscultation", "Waveform capnography required", "Waveform capnography (gold standard)"],
+        ["Recommended use in arrest", "Initial/bridge airway", "When intubation not immediately feasible", "When experienced provider can do it without prolonged pause"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "ETCO2 Interpretation During Cardiac Arrest",
+      "headers": ["ETCO2 Value", "Interpretation", "Clinical Action"],
+      "rows": [
+        ["≥10 mmHg during CPR", "Adequate compression quality", "Continue current CPR technique"],
+        ["<10 mmHg persistently", "Inadequate cardiac output from compressions", "Reassess rate, depth, recoil, fraction; evaluate for reversible causes"],
+        ["Sudden rise to ≥40 mmHg", "Possible ROSC", "Perform manual pulse check; if pulse present, transition to post-arrest care"],
+        ["Absent waveform after intubation", "Esophageal tube placement or tube displacement", "Reposition or replace tube; confirm with capnography"],
+        ["Progressive decline during CPR", "Worsening compression quality or deteriorating condition", "Reassess CPR technique and evaluate for new reversible cause"],
+        ["Consistently >60 mmHg during arrest", "May indicate prolonged arrest with CO2 retention", "Consider adequacy of ventilation; evaluate for ROSC if trending upward"]
+      ]
+    },
+    {
+      "id": "c03_t03",
+      "title": "Supraglottic Airway Comparison: i-gel vs King LT",
+      "headers": ["Feature", "i-gel", "King LT / King LTS-D"],
+      "rows": [
+        ["Seal mechanism", "Non-inflatable gel-filled cushion", "Inflatable proximal and distal cuffs"],
+        ["Lumen design", "Single lumen with integrated gastric channel", "Dual-lumen (airway and esophageal)"],
+        ["Cuff inflation required", "No", "Yes (self-inflating pilot balloon)"],
+        ["Gastric access", "Integrated gastric channel for decompression", "Distal cuff seals esophagus; separate gastric access with LTS-D"],
+        ["Typical insertion time", "<15 seconds", "<15 seconds"],
+        ["Reusable / disposable", "Single-use", "Reusable or single-use depending on model"],
+        ["Size range", "Sizes 1–5 (by patient weight)", "Sizes 3–5 (by patient height)"]
+      ]
+    }
+  ]
+}

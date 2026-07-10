@@ -1,0 +1,47 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Defibrillation and Cardioversion Energy Selection by Rhythm (Adults, Biphasic)",
+      "headers": ["Rhythm", "Synchronization", "Initial Energy (Biphasic)", "Monophasic Alternative"],
+      "rows": [
+        ["VF", "Unsynchronized (defibrillation)", "120–200J (use manufacturer's recommendation; if unknown, 200J)", "360J"],
+        ["Pulseless VT", "Unsynchronized (defibrillation)", "120–200J (use manufacturer's recommendation; if unknown, 200J)", "360J"],
+        ["Polymorphic VT (with pulse)", "Unsynchronized (defibrillation)", "120–200J", "360J"],
+        ["Monomorphic VT (with pulse)", "Synchronized (cardioversion)", "100J", "100J"],
+        ["Atrial fibrillation", "Synchronized (cardioversion)", "≥200J", "200J"],
+        ["Atrial flutter", "Synchronized (cardioversion)", "≥200J", "200J"],
+        ["Narrow-regular SVT", "Synchronized (cardioversion)", "100J", "50–100J"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "Transcutaneous Pacing Parameters",
+      "headers": ["Parameter", "Value", "Notes"],
+      "rows": [
+        ["Starting current", "80 mA", "Begin at 80 mA after atropine failure"],
+        ["Titration increment", "10 mA", "Increase every 2–3 minutes until capture"],
+        ["Maximum output (adults)", "200 mA", "If no capture at 200 mA, TCP has failed"],
+        ["Pacer mode", "Demand (asynchronous not preferred)", "Delivers pacer spikes only when intrinsic rate falls below set rate"],
+        ["Target rate", "60–80/min typical", "Set slightly above intrinsic rate"],
+        ["Pad placement", "Anterior-posterior", "Per manufacturer instructions; anterior-left chest, posterior-left scapula"],
+        ["Confirmation", "Electrical + mechanical capture", "Always palpate pulse — electrical capture does not guarantee mechanical capture"],
+        ["Patient comfort", "Sedation/analgesia required", "TCP is painful; provide midazolam, propofol, or ketamine per protocol"]
+      ]
+    },
+    {
+      "id": "c05_t03",
+      "title": "Synchronized vs Unsynchronized Electrical Therapy",
+      "headers": ["Feature", "Synchronized Cardioversion", "Unsynchronized Defibrillation"],
+      "rows": [
+        ["R-wave synchronization", "Yes — shock delivered on R wave", "No — shock delivered immediately"],
+        ["Indications", "Stable/unstable tachycardias with pulse (AF, SVT, monomorphic VT)", "VF, pulseless VT, polymorphic VT"],
+        ["Patient state", "May be conscious (requires sedation)", "Typically unconscious/arrested"],
+        ["Risk of R-on-T", "Minimized by synchronization", "Present — acceptable because no perfusing rhythm to lose"],
+        ["Energy selection", "Rhythm-specific (100–200J biphasic)", "Standard defibrillation energy (120–200J biphasic)"],
+        ["When sync fails", "If R wave cannot be reliably detected, switch to unsynchronized", "N/A — already unsynchronized"]
+      ]
+    }
+  ]
+}

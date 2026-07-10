@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "The Unknown Defibrillator",
+      "presentation": "EMS arrives at a witnessed VF cardiac arrest. They have a biphasic defibrillator, but the specific waveform type and manufacturer-recommended energy are not immediately identifiable on the device. The team must deliver the first shock.",
+      "vitals": { "hr": "VF", "rr": "None", "bp": "No pulse", "loc": "Unresponsive" },
+      "question": "What is the appropriate first-shock energy?",
+      "options": [
+        "A: 120J because it is the lowest recommended biphasic energy.",
+        "B: 360J because all defibrillators need that energy.",
+        "C: 200J biphasic, the recommended default when the waveform is unknown.",
+        "D: 50J to be conservative and avoid harm."
+      ],
+      "correct": 2,
+      "explanation": "When the biphasic waveform is unknown, the AHA recommends 200J as a safe default for the first shock. Using 360J on a biphasic defibrillator is unnecessarily high, and using 120J may be insufficient if the waveform requires higher energy.",
+      "clinicalPearl": "Unknown biphasic waveform → default to 200J. The AHA explicitly provides this fallback to prevent under- or over-dosing."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Polymorphic VT in the ED",
+      "presentation": "A 58-year-old patient with known long QT syndrome presents to the ED with syncope. The monitor shows an irregular, wide-complex tachycardia with a 'twisting' QRS axis — polymorphic VT (Torsades de Pointes). The patient has a pulse but is hypotensive (BP 78/42 mmHg).",
+      "vitals": { "hr": "Irregular, ~220", "bp": "78/42", "rr": 24, "spo2": "88%", "loc": "Confused" },
+      "question": "What is the correct electrical therapy for this rhythm?",
+      "options": [
+        "A: Synchronized cardioversion starting at 100J.",
+        "B: Unsynchronized high-energy defibrillation (120–200J biphasic) because polymorphic VT cannot be reliably synchronized.",
+        "C: Transcutaneous pacing at 80 mA.",
+        "D: No electrical therapy — treat with magnesium only."
+      ],
+      "correct": 1,
+      "explanation": "Polymorphic VT has variable, irregular QRS morphology, making reliable R-wave synchronization impossible. Synchronized cardioversion is contraindicated and risks R-on-T VF induction. Unsynchronized defibrillation at standard biphasic energy is correct.",
+      "clinicalPearl": "Polymorphic VT = unsynchronized = treat like VF. Do NOT attempt synchronized cardioversion."
+    },
+    {
+      "id": "c05_s03",
+      "title": "Bradycardia Resistant to Atropine",
+      "presentation": "A 72-year-old with known sick sinus syndrome develops symptomatic bradycardia in the ICU. Heart rate is 32/min, blood pressure is 74/40 mmHg, and the patient is confused and diaphoretic. Atropine 1 mg IV has been given twice without improvement.",
+      "vitals": { "hr": 32, "bp": "74/40", "rr": 18, "spo2": "95%", "loc": "Confused" },
+      "question": "What is the most appropriate next step?",
+      "options": [
+        "A: Continue giving atropine up to the 3 mg maximum.",
+        "B: Administer epinephrine drip and wait.",
+        "C: Initiate transcutaneous pacing starting at 80 mA.",
+        "D: Defibrillate the bradycardic rhythm."
+      ],
+      "correct": 2,
+      "explanation": "After atropine has been ineffective (two doses), transcutaneous pacing is the recommended next step for hemodynamically significant bradycardia. TCP should start at 80 mA and be titrated upward by 10 mA every 2–3 minutes until capture.",
+      "clinicalPearl": "Atropine-resistant symptomatic bradycardia → TCP as a bridge to transvenous or permanent pacing. Start at 80 mA, climb by 10, max 200."
+    }
+  ]
+}

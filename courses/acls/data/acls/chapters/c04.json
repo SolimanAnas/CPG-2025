@@ -1,0 +1,96 @@
+{
+  "id": "c04",
+  "title": "Rhythm Recognition for ACLS",
+  "shortTitle": "Rhythm Recognition",
+  "estimatedStudyTime": 40,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Identify ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT) on the cardiac monitor and understand their identical ACLS treatment pathway.",
+    "Differentiate organized ventricular tachycardia (VT) with a pulse from supraventricular tachycardia (SVT) with aberrant conduction.",
+    "Recognize asystole on the monitor and explain why the 2025 AHA Guidelines no longer distinguish between 'fine' and 'coarse' asystole.",
+    "Identify pulseless electrical activity (PEA) — organized electrical activity without a palpable pulse — and distinguish it from true asystole.",
+    "Recognize artifact-dropping-into-VF and understand the management approach.",
+    "Describe the role of 12-lead ECG acquisition during cardiac arrest for identifying reversible causes and guiding post-ROSC care.",
+    "Apply a systematic approach to rhythm identification during ACLS resuscitation."
+  ],
+  "summary": [
+    {
+      "title": "The Two Shockable Rhythms: VF and Pulseless VT",
+      "content": "Ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT) are the two shockable cardiac arrest rhythms and share an identical ACLS treatment pathway: immediate defibrillation followed by high-quality CPR, epinephrine, and antiarrhythmics for refractory cases. VF appears as chaotic, disorganized electrical activity with no identifiable QRS complexes — the waveform varies in amplitude from coarse (>0.2 mV) to fine (<0.2 mV), but this distinction has no therapeutic significance. Pulseless VT is a rapid, regular, wide-complex tachycardia at a rate typically above 150/min with no palpable pulse. Both demand immediate synchronized identification and defibrillation. The key clinical point is that any wide-complex tachycardia without a pulse should be treated as pulseless VT and defibrillated — do not delay to differentiate further."
+    },
+    {
+      "title": "Organized VT with a Pulse vs SVT with Aberrancy",
+      "content": "One of the most challenging rhythm discrimination tasks in ACLS is distinguishing monomorphic ventricular tachycardia (VT) with a pulse from supraventricular tachycardia (SVT) with aberrant conduction (e.g., bundle branch block). Both present as wide-complex tachycardias, but their treatments differ significantly. VT with a pulse is treated with synchronized cardioversion at 100J (monomorphic) or antiarrhythmic therapy, while SVT with aberrancy responds to vagal maneuvers and adenosine. Clinical features favoring VT include: history of structural heart disease or prior MI, hemodynamic instability, AV dissociation on ECG, fusion or capture beats, and concordant precordial QRS concordance. When in doubt in an ACLS setting, treat as VT — it is the safer assumption because adenosine is unlikely to harm a VT patient but cardioversion of SVT is also safe. The 2025 guidelines continue to emphasize that unstable wide-complex tachycardia of uncertain origin should be treated with immediate synchronized cardioversion."
+    },
+    {
+      "title": "Asystole: No Fine or Coarse Distinction",
+      "content": "Asystole is the complete absence of ventricular electrical activity — the monitor shows a flat line or, occasionally, isolated atrial activity (P waves without QRS). The 2025 AHA Guidelines explicitly state that the terms 'fine asystole' and 'coarse asystole' are no longer used because the distinction has no proven prognostic or therapeutic significance. All asystole is treated identically: high-quality CPR, epinephrine 1 mg IV/IO every 3–5 minutes, identification and treatment of reversible causes, and consideration of transcutaneous pacing if a bradycardic escape rhythm is suspected. Before diagnosing asystole, confirm: (1) the monitor leads are properly connected, (2) the gain/sensitivity is adequate, (3) the rhythm is present in at least two leads, and (4) it is not fine VF being under-displayed. Asystole is a non-shockable rhythm — defibrillation is contraindicated."
+    },
+    {
+      "title": "Pulseless Electrical Activity (PEA)",
+      "content": "Pulseless electrical activity (PEA) is defined as any organized electrical rhythm on the monitor in the absence of a palpable pulse. PEA encompasses a wide spectrum of ECG morphologies: normal sinus rhythm, sinus bradycardia, junctional rhythms, first-degree AV block, and even organized wide-complex rhythms — all with the critical distinction that no effective mechanical cardiac contraction is producing a pulse. The key management principle is that PEA requires immediate high-quality CPR and a systematic search for reversible causes (the H's and T's) rather than defibrillation. Common reversible causes of PEA include hypovolemia, tension pneumothorax, cardiac tamponade, massive pulmonary embolism, severe hypoxia, acidosis, and drug overdose. An organized rhythm without a pulse must never be confused with a perfusing rhythm — always check a pulse before concluding the patient has ROSC."
+    },
+    {
+      "title": "Artifact-Dropping-Into-VF",
+      "content": "Artifact-dropping-into-VF occurs when motion artifact on the cardiac monitor mimics or appears to transition into ventricular fibrillation. This is a recognized pitfall during resuscitation because patient movement during compressions, transport, or shivering can generate electrical artifact that resembles VF on the ECG. The management approach is to: (1) briefly pause compressions (no more than 5–10 seconds) while observing the rhythm — true VF persists without compressions, while artifact disappears; (2) check for a pulse; (3) if uncertain and the patient is in arrest, err on the side of treating as VF and defibrillate. A key principle is to never delay life-saving intervention for prolonged rhythm analysis. The clinical context (is the patient known to be in arrest? is there an organized rhythm on the previous strip?) should guide the team's decision."
+    },
+    {
+      "title": "12-Lead ECG During Cardiac Arrest",
+      "content": "While 12-lead ECG acquisition is not a priority during active cardiac arrest resuscitation (compressions and rhythm checks take precedence), it becomes important at two critical moments: (1) immediately after ROSC, when a 12-lead can identify ST-elevation myocardial infarction (STEMI) and guide the decision for emergent cardiac catheterization, and (2) during prolonged resuscitation, when intermittent rhythm strips and a 12-lead can help identify reversible causes such as massive PE (S1Q3T3, right heart strain), hyperkalemia (peaked T waves, wide QRS), or acute coronary ischemia. During arrest, the team should obtain a rhythm strip at every rhythm check; a full 12-lead is best obtained promptly after ROSC or when the rhythm provides diagnostic information not available from the rhythm strip alone."
+    }
+  ],
+  "clinicalPearls": [
+    "Any organized rhythm without a palpable pulse is PEA — do not be fooled by an 'organized-looking' ECG; always check a pulse.",
+    "The 2025 guidelines no longer distinguish between 'fine' and 'coarse' asystole — the distinction has no therapeutic or prognostic significance.",
+    "When in doubt between VT with a pulse and SVT with aberrancy, treat as VT — synchronized cardioversion is the safer choice.",
+    "Artifact can mimic VF — briefly pause compressions to clarify the rhythm, but never delay defibrillation if the patient is in arrest.",
+    "Asystole is confirmed in at least two leads with correct monitor settings before being diagnosed — ensure leads are connected and gain is adequate.",
+    "Obtain a 12-lead ECG promptly after ROSC to identify STEMI or other acute coronary pathology requiring emergent intervention."
+  ],
+  "redFlags": [
+    "Defibrillating asystole — it is a non-shockable rhythm and defibrillation is contraindicated.",
+    "Treating an organized rhythm as a perfusing rhythm without checking a pulse (missing PEA).",
+    "Delaying rhythm-specific therapy while attempting to differentiate VT from SVT with prolonged analysis.",
+    "Misdiagnosing artifact as VF and delivering unnecessary shocks.",
+    "Failing to obtain a post-ROSC 12-lead, missing STEMI or other reversible pathology."
+  ],
+  "commonMistakes": [
+    "Assuming an organized rhythm on the monitor indicates ROSC without confirming a pulse.",
+    "Attempting to differentiate fine vs coarse asystole and altering treatment accordingly.",
+    "Prolonging rhythm analysis for more than 10 seconds during a pause, which reduces compression fraction.",
+    "Failing to check leads and gain settings before diagnosing asystole.",
+    "Confusing artifact from compressions or transport with a new shockable rhythm."
+  ],
+  "memoryAids": [
+    "VF/pVT = shockable; asystole/PEA = non-shockable — two treatment tracks.",
+    "Organized rhythm without a pulse = PEA — always check the pulse, never trust the monitor alone.",
+    "2025 update: no fine vs coarse asystole — all asystole is asystole.",
+    "If in doubt between VT and SVT with aberrancy: treat as VT, cardiovert at 100J.",
+    "Artifact check: pause compressions for 5 seconds — if it's artifact, the rhythm clears."
+  ],
+  "decisionTrees": [
+    {
+      "title": "ACLS Rhythm Identification and Treatment Pathway",
+      "content": "Cardiac arrest — rhythm check\n  → Rhythm is chaotic, no organized complexes (VF)\n     → SHOCKABLE: Defibrillate (biphasic 120–200J), resume CPR immediately\n  → Rhythm is rapid, regular, wide-complex with no pulse (pulseless VT)\n     → SHOCKABLE: Defibrillate (biphasic 120–200J), resume CPR immediately\n  → Rhythm is absent — flat line (asystole)\n     → NON-SHOCKABLE: CPR + epinephrine q3–5 min + treat reversible causes; do NOT shock\n  → Organized rhythm present but no pulse (PEA)\n     → NON-SHOCKABLE: CPR + epinephrine q3–5 min + systematic search for H's & T's; do NOT shock\n  → Uncertain rhythm (artifact vs VF)\n     → Brief pause (<10 sec) to assess; if patient is in arrest, treat as VF and defibrillate"
+    },
+    {
+      "title": "Wide-Complex Tachycardia Decision Approach",
+      "content": "Wide-complex tachycardia identified on monitor\n  → Is the patient pulseless?\n     → YES → Pulseless VT → Defibrillate (120–200J biphasic)\n     → NO → Patient has a pulse\n        → Is the patient hemodynamically unstable (hypotension, altered mentation, chest pain, acute heart failure)?\n           → YES → Immediate synchronized cardioversion (100J monomorphic VT)\n           → NO → Attempt vagal maneuvers and adenosine for possible SVT\n              → Responds → SVT with aberrancy confirmed\n              → Does not respond → Treat as VT: amiodarone or procainamide, or synchronized cardioversion"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Part 5: Adult BLS and CPR Quality",
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary: Tachycardia and Bradycardia Algorithms"
+  ],
+  "graphics": [
+    {
+      "id": "c04_g01",
+      "section": "summary",
+      "sectionIndex": 0,
+      "url": "../../images/courses/acls/c04_g01.webp",
+      "alt": "Core ACLS ECG Rhythms",
+      "caption": "Panel of ECG strips showing VF, pulseless VT, Mobitz Type II AV Block, Complete Heart Block, SVT, and Torsades de Pointes."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "VF/pVT Cardiac Arrest Algorithm",
+      "description": "Step-by-step management of ventricular fibrillation and pulseless ventricular tachycardia, from initial rhythm identification through defibrillation, epinephrine, antiarrhythmics, and refractory-arrest considerations.",
+      "image": "../../algorithms/ACLS-CA.webp",
+      "steps": [
+        "Confirm VF or pulseless VT on the cardiac monitor.",
+        "Deliver one shock immediately — biphasic 120–200 J (manufacturer-specific or escalating); monophasic 360 J.",
+        "Resume chest compressions immediately after the shock — do NOT check a pulse or rhythm first.",
+        "Continue high-quality CPR for 2 minutes (rate 100–120/min, depth 2–2.4 in, full recoil, CCF ≥60%).",
+        "Perform a rhythm check after ~2 minutes of CPR.",
+        "If VF/pVT persists: shock again (equal to or higher energy if biphasic), then immediately resume CPR.",
+        "After the second shock (or as soon as reasonably available), administer epinephrine 1 mg IV/IO during ongoing compressions; follow with a saline flush.",
+        "Continue 2-minute CPR cycles with rhythm checks, repeating epinephrine every 3–5 minutes.",
+        "If VF/pVT persists after epinephrine and continued shocks: administer amiodarone 300 mg IV/IO (first dose) OR lidocaine 1–1.5 mg/kg IV/IO during compressions.",
+        "If VF/pVT continues: second antiarrhythmic dose — amiodarone 150 mg IV/IO or lidocaine 0.5–0.75 mg/kg IV/IO.",
+        "Continue CPR-shock-epinephrine cycles; reassess and treat reversible causes (H's & T's).",
+        "If VF/pVT persists after ≥3 shocks with standard therapy: consider refractory-arrest strategies — vector-change defibrillation or dual sequential external defibrillation (DSED), and evaluate ECPR candidacy.",
+        "If an organized rhythm appears: check for a pulse — manage as ROSC or PEA as appropriate."
+      ]
+    },
+    {
+      "id": "c06_alg02",
+      "title": "CPR Quality Optimization During VF/pVT",
+      "description": "Key parameters and strategies for maintaining high-quality chest compressions throughout VF/pVT resuscitation.",
+      "steps": [
+        "Target compression rate: 100–120 compressions per minute.",
+        "Target compression depth: 2–2.4 inches (5–6 cm) for adults.",
+        "Allow complete chest recoil between compressions — avoid leaning on the chest.",
+        "Minimize all interruptions in chest compressions — pre-shock pause should be as brief as possible.",
+        "Resume compressions immediately after shock delivery without a pulse or rhythm check.",
+        "Switch compressors every ~2 minutes, ideally timed with the rhythm check to avoid adding extra pauses.",
+        "Target chest compression fraction (CCF) ≥60%, ideally ≥80%.",
+        "Use waveform capnography after advanced airway placement: ETCO₂ 10–20 mmHg during CPR suggests adequate compressions; a sudden sustained rise may indicate ROSC.",
+        "Treat reversible causes (H's & T's) concurrently — do not defer while maintaining CPR."
+      ]
+    }
+  ]
+}

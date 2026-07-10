@@ -1,0 +1,58 @@
+{
+  "chapter": "c14",
+  "algorithms": [
+    {
+      "id": "c14_alg01",
+      "title": "Post-ROSC Management Bundle",
+      "description": "Comprehensive post-ROSC management pathway from ROSC through neuroprognostication and recovery.",
+      "image": "../../algorithms/PCAC-Algorithm-ACLS-PCAC.webp",
+      "steps": [
+        "ROSC achieved → confirm with waveform capnography (sudden rise in ETCO₂) and pulse check.",
+        "Airway management: confirm and secure advanced airway; target ETCO₂ 35–45 mmHg (avoid hypo/hyperventilation).",
+        "Hemodynamic support: IV fluid bolus (250–500 mL) + vasopressor (norepinephrine 0.1–0.5 mcg/kg/min) to MAP ≥65 mmHg.",
+        "Obtain 12-lead ECG immediately.",
+        "  → STEMI identified → emergent coronary angiography + PCI.",
+        "  → No STEMI → continue monitoring.",
+        "Non-contrast CT head to exclude intracranial hemorrhage.",
+        "Initiate temperature management: maintain ≤37.5°C at minimum.",
+        "  → If TTM chosen → 32–37.5°C for at least 36 hours.",
+        "  → Continuous temperature monitoring (esophageal, bladder, or PA probe).",
+        "  → Treat any fever >37.5°C immediately with antipyretics and active cooling.",
+        "  → Rewarming (if TTM used): ≤0.25°C per hour.",
+        "Identify and treat reversible causes (H's and T's).",
+        "Sedation/analgesia for comfort, temperature management, and ventilation.",
+        "Continuous monitoring: arterial line, ETCO₂, temperature, telemetry.",
+        "Neuroprognostication: DEFERRED to ≥72 hours after ROSC (or after rewarming).",
+        "  → Stop sedation and paralytics; allow metabolic clearance.",
+        "  → Multimodal assessment: clinical exam + SSEPs + EEG + NSE/S-100B + CT/MRI.",
+        "  → No single test is sufficient — use the combination.",
+        "Recovery planning: neurorehabilitation, cardiac rehabilitation, psychosocial support, family communication, advance care planning."
+      ]
+    },
+    {
+      "id": "c14_alg02",
+      "title": "ECPR Patient Selection and Initiation",
+      "description": "Decision pathway for extracorporeal CPR candidacy in refractory cardiac arrest.",
+      "image": "../../images/courses/acls/c14_g01.webp",
+      "steps": [
+        "Refractory cardiac arrest: persistent VF/pVT despite standard ACLS (high-quality CPR, ≥3 shocks, epinephrine, amiodarone/lidocaine).",
+        "Identify potentially reversible cause: acute MI, PE, myocarditis, drug toxicity, hypothermia, tension pneumothorax.",
+        "If no reversible cause identified → continue standard ACLS; consider cessation criteria per institutional protocol.",
+        "Reversible cause present → evaluate ECPR candidacy.",
+        "Is expected low-flow time <60 minutes? (Time from start of CPR to ECMO flow)",
+        "NO → ECPR unlikely to benefit; continue standard ACLS.",
+        "YES → Is the patient a suitable candidate? (age, comorbidities, functional status, no absolute contraindications)",
+        "NO → continue standard ACLS.",
+        "YES → Activate ECPR team.",
+        "Rapid femoral cannulation: venous drainage (femoral vein) + arterial return (femoral artery) under ultrasound guidance.",
+        "Place distal perfusion catheter to prevent limb ischemia.",
+        "Initiate VA-ECMO flow and confirm adequate perfusion.",
+        "Continue resuscitation on ECMO support.",
+        "Obtain 12-lead ECG → if STEMI → emergent PCI.",
+        "Non-contrast CT head → exclude hemorrhage.",
+        "Initiate post-ROSC management bundle (airway, hemodynamics, temperature).",
+        "Weaning: guided by echocardiographic recovery of native cardiac function, hemodynamic stability on decreasing ECMO flow, and clinical assessment."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "chapter": "c12",
+  "questions": [
+    {
+      "id": "c12_q01",
+      "question": "What is the 2025 first-medical-contact-to-device (FMC2D) time goal for primary PCI in STEMI?",
+      "options": ["A. ≤60 minutes", "B. ≤90 minutes", "C. ≤120 minutes", "D. ≤180 minutes"],
+      "correct": 1,
+      "rationale": "The 2025 ACC/AHA guideline sets the FMC2D goal at ≤90 minutes. Each 30-minute delay increases 1-year mortality by approximately 7.5%.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q02",
+      "question": "When is fibrinolysis indicated for STEMI?",
+      "options": [
+        "A. Symptom onset >12 hours regardless of PCI availability",
+        "B. Symptom onset <12 hours AND anticipated PPCI delay >120 minutes",
+        "C. Symptom onset <6 hours AND PPCI available within 30 minutes",
+        "D. Only as rescue therapy after failed PCI"
+      ],
+      "correct": 1,
+      "rationale": "Fibrinolysis is indicated when symptom onset is within 12 hours and the anticipated door-to-balloon delay exceeds 120 minutes (e.g., transfer from a non-PCI-capable facility).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q03",
+      "question": "What is the first drug to administer in any ACS presentation?",
+      "options": [
+        "A. Nitroglycerin 0.4 mg sublingual",
+        "B. Heparin 60 U/kg IV bolus",
+        "C. Aspirin 162–325 mg chewed",
+        "D. Ticagrelor 180 mg PO"
+      ],
+      "correct": 2,
+      "rationale": "Aspirin 162–325 mg chewed immediately is the universal first drug for all ACS presentations, regardless of subtype.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q04",
+      "question": "A 62-year-old man presents with inferior STEMI and hypotension (BP 78/50). What medication is contraindicated?",
+      "options": [
+        "A. Aspirin 325 mg chewed",
+        "B. Sublingual nitroglycerin",
+        "C. Heparin IV bolus",
+        "D. Ticagrelor loading dose"
+      ],
+      "correct": 1,
+      "rationale": "Inferior STEMI with hypotension should raise suspicion for right ventricular infarction, in which nitroglycerin is contraindicated because it reduces preload and can cause catastrophic hypotension. Always check V4R before giving nitroglycerin in inferior STEMI.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q05",
+      "question": "A patient with chest pain took sildenafil 12 hours ago. Which ACS medication is contraindicated?",
+      "options": [
+        "A. Aspirin",
+        "B. Nitroglycerin",
+        "C. Heparin",
+        "D. Morphine"
+      ],
+      "correct": 1,
+      "rationale": "Nitroglycerin is contraindicated within 24 hours of sildenafil (PDE5 inhibitor) use due to risk of severe, life-threatening hypotension from synergistic vasodilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q06",
+      "question": "When should supplemental oxygen be given to an ACS patient?",
+      "options": [
+        "A. All ACS patients routinely",
+        "B. Only if SpO₂ <90% or respiratory distress is present",
+        "C. Only for STEMI patients",
+        "D. Only if the patient requests it"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 guidelines recommend supplemental oxygen ONLY for SpO₂ <90% or respiratory distress. The DETO2X-AMI trial showed no benefit from routine oxygen in normoxic ACS patients and potential harm from coronary vasoconstriction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q07",
+      "question": "Why is morphine use cautioned in ACS management?",
+      "options": [
+        "A. It causes arrhythmias",
+        "B. It delays P2Y12 inhibitor absorption and has no demonstrated mortality benefit",
+        "C. It is contraindicated with heparin",
+        "D. It causes coronary vasoconstriction"
+      ],
+      "correct": 1,
+      "rationale": "Morphine may delay gastrointestinal absorption of P2Y12 inhibitors (reducing antiplatelet efficacy), cause hypotension, and has no demonstrated mortality benefit in ACS. It should be reserved for refractory chest pain after nitroglycerin failure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q08",
+      "question": "What is the minimum ST elevation in V2–V3 required for STEMI in a 45-year-old man?",
+      "options": ["A. ≥1.0 mm", "B. ≥1.5 mm", "C. ≥2.0 mm", "D. ≥2.5 mm"],
+      "correct": 2,
+      "rationale": "The threshold is ≥2 mm in precordial leads V2–V3 for men <40 years old, ≥2.5 mm for men ≥40, and ≥1.5 mm for women. For this 45-year-old man, ≥2.0 mm applies.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q09",
+      "question": "What is the loading dose of heparin for ACS?",
+      "options": [
+        "A. 30 U/kg bolus, max 2,000 U",
+        "B. 60 U/kg bolus, max 4,000 U, then 12 U/kg/hr",
+        "C. 100 U/kg bolus, max 10,000 U, then 18 U/kg/hr",
+        "D. 40 U/kg bolus, max 3,000 U, then 10 U/kg/hr"
+      ],
+      "correct": 1,
+      "rationale": "The standard unfractionated heparin dose for ACS is 60 U/kg IV bolus (max 4,000 U) followed by 12 U/kg/hr infusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q10",
+      "question": "How much does each 30-minute delay in primary PCI increase 1-year mortality?",
+      "options": ["A. ~2.5%", "B. ~5.0%", "C. ~7.5% (relative)", "D. ~15%"],
+      "correct": 2,
+      "rationale": "Each 30-minute delay in reperfusion increases 1-year mortality by approximately 7.5% relative increase — this is why the FMC2D ≤90-minute goal is critical.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q11",
+      "question": "What leads confirm a posterior MI when ST depression is seen in V1–V3?",
+      "options": [
+        "A. Leads II, III, aVF",
+        "B. Leads I, aVL",
+        "C. Posterior leads V7–V9 (ST elevation ≥0.5 mm)",
+        "D. Right-sided lead V4R"
+      ],
+      "correct": 2,
+      "rationale": "ST depression in V1–V3 is the reciprocal change of posterior MI; posterior leads V7–V9 should be obtained, with ST elevation ≥0.5 mm confirming the diagnosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q12",
+      "question": "A patient receives fibrinolysis for STEMI. What indicates successful reperfusion?",
+      "options": [
+        "A. Pain resolution only",
+        "B. ≥50% ST-elevation resolution within 60–90 minutes",
+        "C. Elevation of cardiac biomarkers",
+        "D. New arrhythmias"
+      ],
+      "correct": 1,
+      "rationale": "Successful fibrinolysis is evidenced by ≥50% resolution of ST-elevation within 60–90 minutes, accompanied by symptom relief. The patient should then be transferred for early angiography within 3–24 hours.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q13",
+      "question": "Which P2Y12 inhibitor is contraindicated with prior stroke/TIA?",
+      "options": [
+        "A. Ticagrelor",
+        "B. Prasugrel",
+        "C. Clopidogrel",
+        "D. All P2Y12 inhibitors"
+      ],
+      "correct": 1,
+      "rationale": "Prasugrel is contraindicated in patients with prior ischemic stroke or TIA due to increased risk of intracranial hemorrhage. Ticagrelor and clopidogrel do not carry this contraindication.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q14",
+      "question": "When does the clock start for FMC2D time measurement?",
+      "options": [
+        "A. When the patient arrives at the ED door",
+        "B. When first medical contact occurs (prehospital or ED)",
+        "C. When the cath lab is activated",
+        "D. When the interventional cardiologist is paged"
+      ],
+      "correct": 1,
+      "rationale": "FMC2D time starts at first medical contact — which can be in the prehospital setting when EMS acquires and transmits a 12-lead ECG. This is distinct from door-to-balloon time.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q15",
+      "question": "Which ECG finding is a STEMI-equivalent in the presence of LBBB?",
+      "options": [
+        "A. Sinus tachycardia with LBBB",
+        "B. Concordant ST elevation ≥1 mm (modified Sgarbossa criterion)",
+        "C. T-wave inversion in V5–V6",
+        "D. First-degree AV block"
+      ],
+      "correct": 1,
+      "rationale": "Concordant ST elevation ≥1 mm in the setting of LBBB is a modified Sgarbossa criterion indicating STEMI-equivalent. Other criteria include concordant ST depression ≥1 mm in V1–V3 and discordant ST/S ratio ≥0.25.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q16",
+      "question": "After successful fibrinolysis for STEMI, when should angiography be performed?",
+      "options": [
+        "A. Immediately within 1 hour",
+        "B. Within 3–24 hours (routine early angiography)",
+        "C. Within 48–72 hours",
+        "D. Angiography is not needed after successful fibrinolysis"
+      ],
+      "correct": 1,
+      "rationale": "After successful fibrinolysis, patients should be transferred to a PCI-capable center for routine early angiography within 3–24 hours. Failed fibrinolysis (no ST resolution) warrants immediate rescue PCI.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q17",
+      "question": "A patient's 12-lead ECG shows ST depression in V1–V3. Which additional leads should be placed?",
+      "options": [
+        "A. Right-sided lead V4R only",
+        "B. Posterior leads V7–V9",
+        "C. Limb leads only",
+        "D. No additional leads are needed"
+      ],
+      "correct": 1,
+      "rationale": "ST depression in V1–V3 is the reciprocal change of posterior MI. Posterior leads V7–V9 should be placed to confirm with ST elevation ≥0.5 mm. V4R is for right ventricular infarction (inferior STEMI).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q18",
+      "question": "What is the maximum dose of IV alteplase used in fibrinolysis for STEMI?",
+      "options": [
+        "A. 50 mg",
+        "B. 75 mg",
+        "C. 90 mg",
+        "D. 100 mg"
+      ],
+      "correct": 2,
+      "rationale": "For STEMI fibrinolysis, alteplase is dosed at 1.5 mg/kg (not 0.9 mg/kg as in stroke) with a maximum of 100 mg. The 0.9 mg/kg dose with 90 mg max is the stroke tPA dose — these are different protocols.",
+      "difficulty": "Hard"
+    }
+  ]
+}

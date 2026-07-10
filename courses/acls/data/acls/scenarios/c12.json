@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "Inferior STEMI with a Twist",
+      "presentation": "A 58-year-old man presents to the ED with crushing substernal chest pain radiating to the right arm, diaphoresis, and nausea. 12-lead ECG shows 3 mm ST elevation in leads II, III, and aVF. Blood pressure is 82/50 mmHg, heart rate is 52 bpm. The triage nurse reaches for sublingual nitroglycerin.",
+      "vitals": { "hr": 52, "bp": "82/50", "rr": 20, "spo2": "94%", "loc": "Alert but in distress" },
+      "question": "What is the most important next step before administering nitroglycerin?",
+      "options": [
+        "A: Administer nitroglycerin — it is always indicated for chest pain.",
+        "B: Obtain right-sided ECG lead V4R to evaluate for right ventricular infarction before giving nitroglycerin.",
+        "C: Administer morphine for pain instead.",
+        "D: Send the patient directly to the cath lab without any medications."
+      ],
+      "correct": 1,
+      "explanation": "Inferior STEMI with hypotension is the classic presentation of right ventricular infarction. Right-sided lead V4R must be obtained — ST elevation ≥1 mm confirms RV infarction, which is an absolute contraindication to nitroglycerin because reduced preload can cause catastrophic hypotension in RV-dependent patients.",
+      "clinicalPearl": "Always suspect RV infarction in inferior STEMI with hypotension. Get V4R before reaching for nitroglycerin — it could save the patient's life."
+    },
+    {
+      "id": "c12_s02",
+      "title": "The Weekend Transfer",
+      "presentation": "EMS is transporting a 67-year-old woman from a rural clinic with acute-onset chest pain. Symptom onset was 3 hours ago. The 12-lead ECG transmitted en route shows anterior STEMI. The nearest PCI-capable center is 90 minutes away by ground transport. The community hospital where the patient is currently being treated has a CT scanner but no cath lab capability.",
+      "vitals": { "hr": 98, "bp": "110/68", "rr": 22, "spo2": "96%", "loc": "Alert" },
+      "question": "What is the most appropriate management given the anticipated PPCI delay?",
+      "options": [
+        "A: Wait for transfer to PCI center — fibrinolysis is never appropriate.",
+        "B: Administer fibrinolysis (onset <12 hours, anticipated PPCI delay >120 min), then transfer to PCI center for early angiography within 3–24 hours.",
+        "C: Administer only aspirin and nitroglycerin — no fibrinolysis.",
+        "D: Perform coronary angiography at the community hospital."
+      ],
+      "correct": 1,
+      "explanation": "With symptom onset <12 hours and an anticipated PPCI delay exceeding 120 minutes (90 min transport + cath lab activation), fibrinolysis is indicated. After successful fibrinolysis (≥50% ST resolution at 60–90 min), the patient should be transferred for routine early angiography within 3–24 hours. Failed fibrinolysis warrants rescue PCI.",
+      "clinicalPearl": "Fibrinolysis = '12 and 120' — onset within 12 hours AND anticipated PPCI delay >120 minutes. Always follow fibrinolysis with transfer to a PCI center."
+    },
+    {
+      "id": "c12_s03",
+      "title": "The Normoxic Patient",
+      "presentation": "A 72-year-old man with a history of diabetes and hypertension arrives by EMS with acute chest pain. ECG shows lateral ST depression and T-wave inversions. SpO₂ is 98% on room air. The paramedic wants to place the patient on high-flow oxygen via non-rebreather mask. Troponin is pending.",
+      "vitals": { "hr": 112, "bp": "138/82", "rr": 20, "spo2": "98%", "loc": "Alert" },
+      "question": "What is the correct management regarding supplemental oxygen?",
+      "options": [
+        "A: High-flow oxygen is always beneficial in chest pain.",
+        "B: No supplemental oxygen — SpO₂ is 98%; routine oxygen in normoxic ACS patients provides no benefit and may cause coronary vasoconstriction.",
+        "C: Oxygen is mandatory for all cardiac patients regardless of SpO₂.",
+        "D: Only give oxygen if the patient requests it."
+      ],
+      "correct": 1,
+      "explanation": "The 2025 guidelines recommend supplemental oxygen ONLY for SpO₂ <90% or respiratory distress. The DETO2X-AMI trial demonstrated that routine supplemental oxygen in normoxic ACS patients provides no benefit and may increase coronary vasoconstriction. This patient's SpO₂ is 98% — oxygen is not indicated.",
+      "clinicalPearl": "O₂ only <90% — routine oxygen in normoxic ACS patients is not supported by evidence and may worsen coronary perfusion."
+    }
+  ]
+}

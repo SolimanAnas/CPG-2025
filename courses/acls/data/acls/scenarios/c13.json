@@ -1,0 +1,53 @@
+{
+  "chapter": "c13",
+  "cases": [
+    {
+      "id": "c13_s01",
+      "title": "Wake-Up Stroke",
+      "presentation": "A 71-year-old woman is brought to the ED by her husband. She was last seen normal at 11:00 PM last night (approximately 7 hours ago). At 6:00 AM, she was found unable to speak clearly and with right-sided weakness. Cincinnati Stroke Scale: facial droop (right), arm drift (right), slurred speech. BP is 178/102 mmHg. Blood glucose is 92 mg/dL. CT head shows no hemorrhage.",
+      "vitals": { "hr": 88, "bp": "178/102", "rr": 18, "spo2": "97%", "loc": "Alert, expressive aphasia" },
+      "question": "What is the most appropriate next step?",
+      "options": [
+        "A: Administer IV tPA — all ischemic strokes within 4.5 hours should receive tPA.",
+        "B: The 4.5-hour tPA window has passed based on last known normal; obtain CTA to evaluate for large-vessel occlusion and consider thrombectomy if indicated.",
+        "C: Start IV labetalol to lower BP immediately regardless of tPA candidacy.",
+        "D: Discharge home since symptoms might be a TIA."
+      ],
+      "correct": 1,
+      "explanation": "The last known normal was 7 hours ago, which exceeds the 4.5-hour tPA window. Standard IV tPA cannot be given. The next step is CT angiography to evaluate for large-vessel occlusion — if LVO is present, mechanical thrombectomy may be considered up to 24 hours with appropriate imaging. Permissive hypertension is appropriate for non-tPA candidates.",
+      "clinicalPearl": "Beyond 4.5 hours, tPA is not indicated for standard IV thrombolysis. Thrombectomy may still be an option up to 24 hours with advanced imaging and LVO."
+    },
+    {
+      "id": "c13_s02",
+      "title": "The Sugar Problem",
+      "presentation": "EMS is called for a 58-year-old man with acute-onset left-sided weakness and difficulty speaking. Onset was 45 minutes ago. Cincinnati Stroke Scale is positive (left facial droop, left arm drift, slurred speech). In the field, the paramedic checks a fingerstick glucose: it reads 38 mg/dL. BP is 168/94 mmHg.",
+      "vitals": { "hr": 102, "bp": "168/94", "rr": 20, "spo2": "96%", "loc": "Confused" },
+      "question": "What is the correct immediate management?",
+      "options": [
+        "A: Administer IV tPA — the patient clearly has a stroke.",
+        "B: Administer IV dextrose to correct hypoglycemia first; reassess — the deficit may be entirely caused by hypoglycemia (stroke mimic).",
+        "C: Lower blood pressure immediately with IV labetalol.",
+        "D: Transport without treatment — wait for CT at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "Hypoglycemia (glucose <50 mg/dL) is the most critical stroke mimic and must be corrected immediately. Severe hypoglycemia can produce lateralizing neurological deficits that closely mimic stroke. After glucose correction, reassess — the deficit may resolve entirely, confirming the diagnosis as hypoglycemic encephalopathy rather than true stroke.",
+      "clinicalPearl": "Stroke + low sugar = sugar first. Always check and correct glucose in every suspected stroke before committing to stroke-specific therapy."
+    },
+    {
+      "id": "c13_s03",
+      "title": "tPA and Blood Pressure Battle",
+      "presentation": "A 65-year-old man arrives at the ED with acute-onset right-sided paralysis and expressive aphasia. Symptom onset was 2 hours ago. CT head shows no hemorrhage. IV tPA is prepared. Initial blood pressure is 192/118 mmHg. IV labetalol 20 mg is administered, and blood pressure rechecks at 188/112 mmHg. A second dose of labetalol 20 mg is given.",
+      "vitals": { "hr": 96, "bp": "188/112", "rr": 18, "spo2": "97%", "loc": "Alert, right hemiparesis" },
+      "question": "Can tPA be administered at this blood pressure?",
+      "options": [
+        "A: Yes — tPA can be given at any blood pressure.",
+        "B: No — BP must be <185/110 before tPA; continue to lower with labetalol or start nicardipine infusion.",
+        "C: Yes — the second labetalol dose was sufficient.",
+        "D: Wait 6 hours and try again."
+      ],
+      "correct": 1,
+      "explanation": "BP must be <185/110 mmHg BEFORE tPA initiation. At 188/112, the target has not been met. Options include additional labetalol (though repeat dosing has limits), starting nicardipine infusion (5 mg/hr, titrate by 2.5 mg/hr q5–15 min, max 15 mg/hr), or using clevidipine. tPA should not be given until BP is controlled.",
+      "clinicalPearl": "185/110 before tPA — non-negotiable. Use labetalol or nicardipine to achieve this. Do not give tPA at uncontrolled blood pressure."
+    }
+  ]
+}

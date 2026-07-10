@@ -1,0 +1,50 @@
+{
+  "chapter": "c04",
+  "algorithms": [
+    {
+      "id": "c04_alg01",
+      "title": "ACLS Cardiac Arrest Rhythm Identification and Treatment Pathway",
+      "description": "Systematic approach to identifying and treating the four cardiac arrest rhythms during ACLS resuscitation.",
+      "image": "../../images/courses/acls/c04_g01.webp",
+      "steps": [
+        "Cardiac arrest recognized — begin high-quality CPR and apply defibrillator pads.",
+        "At the first opportunity, analyze the cardiac rhythm on the monitor.",
+        "RHYTHM IDENTIFICATION:",
+        "  → VF: chaotic, disorganized activity with no identifiable QRS complexes → SHOCKABLE",
+        "  → Pulseless VT: rapid, regular, wide-complex tachycardia (>150/min) with no pulse → SHOCKABLE",
+        "  → Asystole: flat line (no ventricular activity) in at least two leads with proper settings → NON-SHOCKABLE",
+        "  → PEA: any organized rhythm (sinus, bradycardia, junctional, etc.) without a palpable pulse → NON-SHOCKABLE",
+        "SHOCKABLE PATHWAY (VF / pVT):",
+        "  → Defibrillate (biphasic 120–200J; monophasic 360J)",
+        "  → Resume CPR immediately for 2 minutes",
+        "  → Epinephrine 1 mg IV/IO after the second shock",
+        "  → Consider amiodarone 300 mg IV (first dose) or lidocaine 1–1.5 mg/kg for refractory VF/pVT",
+        "NON-SHOCKABLE PATHWAY (Asystole / PEA):",
+        "  → Continue CPR — do NOT defibrillate",
+        "  → Epinephrine 1 mg IV/IO as soon as feasible, repeat every 3–5 minutes",
+        "  → Systematically identify and treat reversible causes (H's and T's)",
+        "After every 2-minute cycle: reanalyze rhythm → treat accordingly",
+        "If ROSC achieved (sustained ETCO2 ≥40 mmHg or pulse confirmed): transition to post-arrest care"
+      ]
+    },
+    {
+      "id": "c04_alg02",
+      "title": "Wide-Complex Tachycardia Evaluation",
+      "description": "Approach to evaluating and managing a wide-complex tachycardia during ACLS.",
+      "steps": [
+        "Wide-complex tachycardia identified on monitor.",
+        "STEP 1: Is the patient pulseless?",
+        "  → YES: Treat as pulseless VT → Defibrillate (120–200J biphasic) and begin CPR.",
+        "  → NO: Patient has a pulse → proceed to STEP 2.",
+        "STEP 2: Is the patient hemodynamically unstable? (hypotension, altered mental status, acute heart failure, chest pain)",
+        "  → YES: Immediate synchronized cardioversion starting at 100J (monomorphic VT).",
+        "  → NO: Proceed to STEP 3.",
+        "STEP 3: Attempt vagal maneuvers and adenosine for possible SVT.",
+        "  → If responds to adenosine: SVT with aberrancy confirmed.",
+        "  → If no response: likely VT → consider amiodarone 150 mg IV over 10 min or procainamide 20–50 mg/min, or synchronized cardioversion.",
+        "Clinical features favoring VT: prior MI or structural heart disease, AV dissociation, fusion/capture beats, concordant precordial QRS concordance.",
+        "When uncertain: treat as VT — it is the safer assumption."
+      ]
+    }
+  ]
+}

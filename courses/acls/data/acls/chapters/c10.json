@@ -1,0 +1,75 @@
+{
+  "id": "c10",
+  "title": "Bradycardia With a Pulse",
+  "shortTitle": "Bradycardia",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define symptomatic bradycardia and list the signs of cardiopulmonary compromise that make it unstable.",
+    "State the correct dose, route, and repeat interval for atropine in symptomatic bradycardia.",
+    "Identify situations where atropine is unlikely to work and the next-line therapies to use instead.",
+    "Describe how to set up and operate transcutaneous pacing.",
+    "Compare dopamine and epinephrine infusions as second-line options for refractory symptomatic bradycardia.",
+    "Explain why asymptomatic bradycardia is observed rather than treated.",
+    "Identify reversible causes of bradycardia that should be sought and treated in parallel with drug/pacing therapy."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing Symptomatic Bradycardia",
+      "content": "Bradycardia is a heart rate typically under 50/min, but the rate alone does not define the emergency — the presence of symptoms does. Symptomatic (unstable) bradycardia shows signs of poor perfusion or cardiopulmonary compromise: hypotension, acutely altered mental status, signs of shock, ongoing ischemic chest discomfort, or acute heart failure. If the patient is bradycardic but has none of these findings, the priority is to monitor and observe while investigating the cause, not to treat the number."
+    },
+    {
+      "title": "First-Line Drug Therapy: Atropine",
+      "content": "For symptomatic bradycardia, give atropine 1 mg IV or IO, and repeat every 3–5 minutes to a maximum total dose of 3 mg. Atropine works by blocking vagal tone at the sinoatrial and atrioventricular nodes, so it is most effective for sinus node dysfunction and low-grade AV block. It is unlikely to be effective for infranodal block (Mobitz type II or third-degree block with a wide QRS), where escalation to pacing or infusions should not be delayed while repeating ineffective atropine doses."
+    },
+    {
+      "title": "When Atropine Fails or Is Unlikely to Work",
+      "content": "If atropine is ineffective, if the maximum dose has been reached, or if the block pattern predicts atropine will not help (e.g., Mobitz type II, high-grade or third-degree AV block, especially with a wide QRS), move promptly to transcutaneous pacing and/or a dopamine or epinephrine infusion. These options can be used while pacing pads are applied or while awaiting expert consultation or transvenous pacing."
+    },
+    {
+      "title": "Transcutaneous Pacing",
+      "content": "Apply pacing pads in the standard anterior-posterior or anterolateral position, set the rate (commonly 60–80/min as a starting target), and increase the output (milliamps) until electrical capture is confirmed — a paced spike immediately followed by a wide QRS and a T wave, matched with a palpable pulse at the paced rate. Because it is uncomfortable, give analgesia/sedation if the patient is conscious and hemodynamically able to tolerate it."
+    },
+    {
+      "title": "Infusions: Dopamine and Epinephrine",
+      "content": "Dopamine and epinephrine infusions are alternative (not necessarily sequential) second-line options when atropine is ineffective — they may be started instead of, or while awaiting, pacing, particularly if pacing is not immediately available or tolerated. Both are titrated to the patient's heart rate and blood pressure response; the exact starting and titration ranges should follow local protocol/pharmacy references, and the underlying cause should be sought in parallel."
+    },
+    {
+      "title": "Treat the Underlying Cause in Parallel",
+      "content": "Bradycardia is often a symptom, not a primary disease: consider hypoxia, medication or toxin effect (beta-blocker, calcium-channel blocker, digoxin), electrolyte disturbance (hyperkalemia), hypothyroidism, inferior myocardial infarction, and increased intracranial pressure. Treating the reversible cause may resolve the bradycardia without needing to escalate to pacing."
+    }
+  ],
+  "clinicalPearls": [
+    "Treat the patient, not the monitor — a bradycardic rate with no instability is observed, not medicated.",
+    "Atropine's ceiling is 3 mg total; don't keep dosing past it while a patient with a wide-complex block deteriorates — move to pacing/infusion.",
+    "Confirm mechanical capture (a palpable pulse at the paced rate), not just electrical capture, before trusting the pacer.",
+    "Always screen for a reversible drug/toxin or metabolic cause — treating it may be more effective than escalating pacing."
+  ],
+  "redFlags": [
+    "Repeating atropine past 3 mg total instead of escalating therapy.",
+    "Relying on electrical capture (pacing spikes) alone without confirming a pulse.",
+    "Missing beta-blocker, calcium-channel blocker, digoxin, or hyperkalemia as a treatable cause.",
+    "Delaying pacing/infusion in a clearly unstable patient with a high-grade block while atropine is tried repeatedly."
+  ],
+  "commonMistakes": [
+    "Treating an asymptomatic bradycardic rate purely because it looks alarming on the monitor.",
+    "Giving atropine for a rhythm unlikely to respond (Mobitz II / third-degree block with wide QRS) and delaying pacing.",
+    "Forgetting analgesia/sedation for a conscious patient undergoing transcutaneous pacing.",
+    "Not seeking reversible causes (drugs, electrolytes, hypoxia) while escalating pacing/infusions."
+  ],
+  "memoryAids": [
+    "'1 and done, up to 3' — atropine 1 mg, repeat q3–5 min, max 3 mg total.",
+    "No symptoms, no treatment — observe and investigate the cause.",
+    "Atropine fails → PACE or infuse (pacing / dopamine / epinephrine) — don't stall.",
+    "Capture on the monitor isn't capture in the patient — check the pulse."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Symptomatic Bradycardia Treatment Sequence",
+      "content": "Bradycardia identified (rate typically <50/min)\n  → Assess for signs of instability: hypotension, altered mental status, shock, ischemic chest pain, acute heart failure\n     → No instability: monitor, observe, investigate cause\n     → Instability present: SYMPTOMATIC BRADYCARDIA\n        → Give atropine 1 mg IV/IO; repeat q3–5 min to max 3 mg\n        → Atropine ineffective or unlikely to work (e.g., Mobitz II / 3rd-degree block, wide QRS)\n           → Start transcutaneous pacing (confirm mechanical capture) and/or dopamine or epinephrine infusion\n           → Consider expert consultation and transvenous pacing\n        → In parallel: identify and treat the underlying/reversible cause"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (Bradycardia)"
+  ]
+}

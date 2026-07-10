@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Asystole After Massive GI Bleed",
+      "presentation": "A 72-year-old man with a history of cirrhosis and esophageal varices is brought to the ED after a massive upper GI bleed. While being triaged, he becomes unresponsive. The monitor shows asystole. IV access is established immediately with an 18-gauge peripheral line.",
+      "vitals": { "hr": "Asystole", "bp": "No measurable", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the most likely reversible cause, and what is the immediate management?",
+      "options": [
+        "A: Tension pneumothorax — needle decompression",
+        "B: Hypovolemia from massive hemorrhage — high-quality CPR, epinephrine 1 mg IV now, blood products and fluid resuscitation once ROSC achieved",
+        "C: Cardiac tamponade — emergent pericardiocentesis",
+        "D: Pulmonary embolism — systemic thrombolysis"
+      ],
+      "correct": 1,
+      "explanation": "Massive hemorrhage in a cirrhotic patient with esophageal varices is a classic cause of hypovolemic cardiac arrest (one of the H's). Management includes high-quality CPR, early epinephrine, and aggressive volume/blood product resuscitation. The arrest is a direct result of inadequate intravascular volume.",
+      "clinicalPearl": "Hypovolemia is the most common non-cardiac cause of cardiac arrest. In the setting of active hemorrhage, the cause is obvious — treat it aggressively alongside ACLS measures."
+    },
+    {
+      "id": "c07_s02",
+      "title": "PEA After Tension Pneumothorax",
+      "presentation": "A 34-year-old man arrives in the ED after a motor vehicle collision with multiple rib fractures. He suddenly decompensates — blood pressure unobtainable, heart rate 50/min on monitor, breath sounds absent on the left, trachea deviated to the right, and distended neck veins. He then arrests into PEA.",
+      "vitals": { "hr": 50, "bp": "Unobtainable", "rr": "None", "loc": "Unresponsive", "additional": "Absent left breath sounds, tracheal deviation right, JVD" },
+      "question": "What is the most likely cause of this PEA arrest, and what is the definitive immediate intervention?",
+      "options": [
+        "A: Cardiac tamponade — pericardiocentesis",
+        "B: Tension pneumothorax — immediate needle decompression followed by chest tube insertion",
+        "C: Hypovolemia — IV fluid bolus",
+        "D: Massive PE — thrombolysis"
+      ],
+      "correct": 1,
+      "explanation": "The classic triad of absent breath sounds, tracheal deviation, and JVD in a trauma patient with progressive hypotension is pathognomonic for tension pneumothorax (one of the T's). Needle decompression (second intercostal space, midclavicular line, affected side) followed by tube thoracostomy is definitive. This must be recognized and treated during CPR — it is a cause that can be fixed immediately.",
+      "clinicalPearl": "Tension pneumothorax is one of the most immediately reversible causes of cardiac arrest. Needle decompression can restore circulation — do not wait for a chest X-ray."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Asystole in a Poisoned Patient",
+      "presentation": "A 28-year-old woman is brought in after being found unresponsive next to an empty bottle of tricyclic antidepressants. In the ED, she arrests into asystole. She has a wide QRS on the initial ECG before arrest. IV access is established.",
+      "vitals": { "hr": "Asystole", "bp": "No measurable", "rr": "None", "loc": "Unresponsive" },
+      "question": "Which H or T is the most likely cause, and what specific treatment beyond standard ACLS should be prioritized?",
+      "options": [
+        "A: Hypoxia — increase ventilation",
+        "B: Toxins (tricyclic antidepressant overdose) — sodium bicarbonate 1 mEq/kg IV, consider sodium bicarbonate drip, and standard ACLS measures",
+        "C: Hypothermia — warming",
+        "D: Hyperkalemia — insulin/glucose"
+      ],
+      "correct": 1,
+      "explanation": "Tricyclic antidepressant (TCA) overdose is a classic toxin-related cause of cardiac arrest (one of the T's). TCAs cause sodium channel blockade leading to wide QRS, bradycardia, and asystole. Sodium bicarbonate (1 mEq/kg IV bolus) is the specific antidote — it overcomes the sodium channel blockade and should be given aggressively alongside standard ACLS measures.",
+      "clinicalPearl": "In any arrest of unclear etiology in a young patient, always consider toxins. A wide QRS before arrest in the setting of drug ingestion strongly suggests TCA toxicity — sodium bicarbonate is life-saving."
+    }
+  ]
+}

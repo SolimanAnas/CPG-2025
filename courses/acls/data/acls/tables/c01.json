@@ -1,0 +1,29 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "The 2025 Universal Chain of Survival — Six Links (ACLS View)",
+      "headers": ["Link", "Name", "Primary Owner", "ACLS Provider Action"],
+      "rows": [
+        ["1", "Activation of emergency response", "Bystanders / staff", "Confirm activation of resuscitation team"],
+        ["2", "High-quality CPR", "All responders", "Protect compression fraction; minimize interruptions"],
+        ["3", "Defibrillation", "First responders / ACLS team", "Shock shockable rhythms ASAP; resume compressions immediately"],
+        ["4", "Advanced resuscitation interventions", "ACLS team", "Airway, IV/IO, rhythm-specific drugs/electricity, treat H's & T's"],
+        ["5", "Post-cardiac arrest care", "ACLS / critical care / cardiology", "Airway/ventilation, hemodynamics, ECG, temperature control"],
+        ["6", "Recovery", "Rehab / hospital / family", "Support survivorship; neuroprognostication timeline"]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "OHCA vs IHCA Systems of Care",
+      "headers": ["Feature", "Out-of-Hospital (OHCA)", "In-Hospital (IHCA)"],
+      "rows": [
+        ["Front-end emphasis", "Bystander recognition and CPR, public AED", "Surveillance and prevention"],
+        ["Key early tools", "Dispatcher-assisted CPR, EMS response time", "Early-warning scores, rapid-response teams"],
+        ["Transport decision", "May route to regional cardiac arrest center", "Not applicable — care escalates in place"],
+        ["Goal", "Fast CPR and defibrillation before EMS/ACLS arrival", "Prevent arrest before it happens"]
+      ]
+    }
+  ]
+}

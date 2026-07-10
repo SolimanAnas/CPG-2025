@@ -1,0 +1,46 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "H's & T's Systematic Arrest Workup",
+      "description": "A structured checklist approach to identifying and treating reversible causes during cardiac arrest.",
+      "image": "../../images/courses/acls/c09_g01.webp",
+      "steps": [
+        "Cardiac arrest identified — begin CPR and deliver first defibrillation as indicated.",
+        "While CPR continues, team lead initiates H's & T's checklist with one team member assigned to investigate.",
+        "Hypovolemia: Check clinical history for hemorrhage, assess IVC on ultrasound, give IV fluids or blood products.",
+        "Hypoxia: Confirm advanced airway in place, ensure adequate ventilation with 100% FiO₂, check ETCO₂.",
+        "Hydrogen ion (acidosis): Assess ventilation adequacy; address the underlying cause rather than empiric bicarbonate.",
+        "Hypo-/Hyperkalemia: Check bedside potassium if available; for hyperkalemia, give calcium chloride, bicarbonate, insulin/glucose, albuterol.",
+        "Hypothermia: Measure core temperature; do not declare futility until ≥32°C; active rewarming.",
+        "Tension pneumothorax: Assess breath sounds, tracheal position, JVD; decompress if suspected.",
+        "Tamponade: Assess heart sounds, JVD; bedside ultrasound; pericardiocentesis if confirmed.",
+        "Toxins: Review medication list and clinical context; give specific antidotes when available.",
+        "Thrombosis (pulmonary): Consider massive PE — thrombolysis or embolectomy.",
+        "Thrombosis (coronary): Consider acute MI — early defibrillation and coronary reperfusion.",
+        "Reassess after each 2-minute CPR cycle — new or previously missed reversible causes may emerge.",
+        "Document findings and interventions for CQI review."
+      ]
+    },
+    {
+      "id": "c09_alg02",
+      "title": "Refractory VF/pVT Escalation Pathway",
+      "description": "Stepwise management when VF/pVT persists despite standard defibrillation attempts.",
+      "steps": [
+        "VF/pVT identified → Deliver biphasic shock (200 J) and resume CPR immediately.",
+        "After 2 minutes of CPR → rhythm check; still VF/pVT → shock again (200 J), resume CPR.",
+        "Give epinephrine 1 mg IV/IO during CPR (as soon as feasible).",
+        "After 3rd shock → rhythm check; still VF/pVT → REFRACTORY VF/pVT.",
+        "Give amiodarone 300 mg IV/IO bolus (or lidocaine 1–1.5 mg/kg if amiodarone unavailable).",
+        "REASSESS CPR quality: rate 100–120/min, depth ≥2 in, full recoil, minimize interruptions, check ETCO₂.",
+        "REASSESS compressor: rotate if ≥2 minutes elapsed.",
+        "Consider vector-change defibrillation (reposition pads) or DSED (Class 2b).",
+        "REASSESS H's & T's: tension pneumo, tamponade, toxins, PE, hypoxia, hypothermia.",
+        "Deliver shock (200 J) with antiarrhythmic on board; resume CPR.",
+        "If still refractory: consider magnesium 1–2 g IV (polymorphic VT), additional antiarrhythmic, or consider ECPR if available.",
+        "Continue cycling: 2 min CPR → rhythm check → shock → reassess, until ROSC or futility criteria met."
+      ]
+    }
+  ]
+}

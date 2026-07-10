@@ -1,0 +1,82 @@
+{
+  "id": "c06",
+  "title": "Cardiac Arrest: VF / Pulseless VT",
+  "shortTitle": "VF / pVT Arrest",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the immediate management sequence for ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT).",
+    "State the correct epinephrine dose and timing pattern during VF/pVT arrest.",
+    "State the correct antiarrhythmic doses (amiodarone and lidocaine) for refractory VF/pVT.",
+    "Explain why chest compressions resume immediately after a shock without a pulse check.",
+    "Describe the 2-minute CPR cycle structure and when rhythm/pulse checks occur.",
+    "Differentiate first-shock energy strategy from the drug-timing pattern that follows.",
+    "Identify when a VF/pVT arrest should prompt consideration of refractory-arrest strategies."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing a Shockable Rhythm",
+      "content": "Ventricular fibrillation (VF) is chaotic, disorganized electrical activity with no coordinated contraction; pulseless ventricular tachycardia (pVT) is a rapid, wide-complex rhythm without a palpable pulse. Both are shockable rhythms — the single most important intervention is immediate defibrillation, because survival from a shockable rhythm declines with every minute defibrillation is delayed."
+    },
+    {
+      "title": "The Shock-CPR Cycle",
+      "content": "Deliver one shock at the manufacturer-recommended (or escalating) biphasic energy, then resume chest compressions immediately without checking a pulse or rhythm. Continue high-quality CPR for about 2 minutes, then briefly pause to check the rhythm (and pulse only if an organized rhythm appears). If still VF/pVT, shock again and repeat the cycle. Minimizing the pre- and post-shock pause is as important as the shock itself."
+    },
+    {
+      "title": "Epinephrine Timing",
+      "content": "Give epinephrine 1 mg IV/IO as soon as it is reasonably available, typically established after the second shock in a persistent VF/pVT arrest, then repeated every 3–5 minutes for the duration of the arrest. Epinephrine does not interrupt the shock-CPR cycle — it is pushed during ongoing compressions and followed by a saline flush."
+    },
+    {
+      "title": "Antiarrhythmics for Refractory VF/pVT",
+      "content": "If VF/pVT persists after the initial shocks and epinephrine, give an antiarrhythmic: amiodarone 300 mg IV/IO as the first dose, followed by a second dose of 150 mg IV/IO if VF/pVT continues; or lidocaine 1–1.5 mg/kg IV/IO as the first dose, followed by 0.5–0.75 mg/kg IV/IO for subsequent doses. Use one agent consistently rather than alternating between them within the same arrest."
+    },
+    {
+      "title": "Maintaining CPR Quality Through the Cycle",
+      "content": "Throughout every shock-drug-CPR cycle, protect the fundamentals: rate 100–120/min, depth 2–2.4 in (5–6 cm), full recoil, chest compression fraction ≥60%, and a compressor switch about every 2 minutes (conveniently timed with the rhythm check). Waveform capnography, once an advanced airway is placed, helps monitor CPR quality and detect ROSC."
+    },
+    {
+      "title": "When to Consider Refractory-Arrest Strategies",
+      "content": "If VF/pVT persists despite standard shocks, epinephrine, and an antiarrhythmic (roughly after 3 or more shocks), the arrest is considered refractory. At this point, teams may consider selective strategies such as vector-change or dual sequential defibrillation, or evaluate the patient for ECPR candidacy where systems support it — these are detailed in the Reversible Causes & Refractory Arrest chapter rather than repeated here."
+    }
+  ],
+  "clinicalPearls": [
+    "Shock, then hands back on the chest immediately — never pause for a pulse check right after a shock.",
+    "Epinephrine and antiarrhythmics are pushed during ongoing compressions, not during a special pause.",
+    "Use one antiarrhythmic consistently (amiodarone or lidocaine) rather than switching between them mid-arrest.",
+    "Every minute of delayed defibrillation in a shockable rhythm measurably lowers survival — prioritize the shock over everything else at the first rhythm check."
+  ],
+  "redFlags": [
+    "Long pre-shock or post-shock pauses in compressions.",
+    "Withholding or delaying defibrillation to first obtain IV access or place an airway.",
+    "Alternating between amiodarone and lidocaine within the same arrest without reason."
+  ],
+  "commonMistakes": [
+    "Checking a pulse immediately after every shock instead of resuming compressions.",
+    "Giving epinephrine and the antiarrhythmic at the same moment rather than sequencing them across cycles as the rhythm persists.",
+    "Losing track of the 2-minute cycle timing and checking rhythm too frequently, adding unnecessary pauses."
+  ],
+  "memoryAids": [
+    "'Shock, then push' — no pulse check right after defibrillation.",
+    "Epi every 3–5 min; amiodarone 300 then 150; lidocaine 1–1.5 then 0.5–0.75.",
+    "Rhythm check ≈ compressor switch — piggyback the two so you don't add extra pauses."
+  ],
+  "decisionTrees": [
+    {
+      "title": "VF/pVT Arrest Cycle",
+      "content": "VF or pVT confirmed on the monitor\n  → Shock immediately (biphasic, manufacturer/escalating energy)\n  → Resume CPR immediately, no pulse check → 2 min cycle\n  → Rhythm check\n     → Still VF/pVT: shock again; give epinephrine 1 mg IV/IO (start ~after 2nd shock, then q3–5 min)\n     → Still VF/pVT after next cycle: shock again; give amiodarone 300 mg IV/IO OR lidocaine 1–1.5 mg/kg IV/IO\n     → Still VF/pVT: shock again; second antiarrhythmic dose (amiodarone 150 mg or lidocaine 0.5–0.75 mg/kg); continue epinephrine q3–5 min\n     → Persistent VF/pVT after ≥3 shocks: consider refractory-arrest strategies (see Reversible Causes & Refractory Arrest chapter)\n     → Organized rhythm appears: check pulse → ROSC pathway or PEA/asystole pathway as appropriate"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (VF/pVT management)"
+  ],
+  "graphics": [
+    {
+      "id": "c06_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/acls/c06_g01.webp",
+      "alt": "VF / Pulseless VT Resuscitation Flowchart",
+      "caption": "Resuscitation flowchart showing CPR, Shock, Epinephrine administration, and Antiarrhythmic administration (Amiodarone/Lidocaine) sequence."
+    }
+  ]
+}

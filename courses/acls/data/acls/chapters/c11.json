@@ -1,0 +1,87 @@
+{
+  "id": "c11",
+  "title": "Tachycardia With a Pulse",
+  "shortTitle": "Tachycardia",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Differentiate stable from unstable tachycardia using clinical signs of hemodynamic compromise.",
+    "State when immediate synchronized cardioversion is indicated for unstable tachycardia.",
+    "Outline the management pathway for stable regular narrow-complex tachycardia (SVT).",
+    "Describe the adenosine dosing protocol (6 mg, then 12 mg) including administration technique.",
+    "Distinguish between stable and unstable wide-complex tachycardia and the rationale for assuming VT when uncertain.",
+    "State the dose and administration of amiodarone for stable wide-complex tachycardia.",
+    "Describe the management of irregular narrow-complex tachycardia (atrial fibrillation/flutter) for rate control.",
+    "Explain why polymorphic VT is treated with unsynchronized defibrillation rather than synchronized cardioversion.",
+    "Identify procainamide as an alternative to amiodarone for stable wide-complex tachycardia."
+  ],
+  "summary": [
+    {
+      "title": "Stable vs Unstable Tachycardia — The First Decision",
+      "content": "The ACLS approach to tachycardia with a pulse begins with a single critical assessment: is the patient stable or unstable? Unstable tachycardia shows signs of hemodynamic compromise — hypotension (SBP <90 mmHg), acutely altered mental status, chest pain, acute heart failure, or signs of shock. An unstable patient with tachycardia requires immediate synchronized cardioversion regardless of the rhythm type. A stable patient allows time for diagnosis and pharmacologic or vagal therapy."
+    },
+    {
+      "title": "Immediate Synchronized Cardioversion — When and How",
+      "content": "Unstable tachycardia = immediate synchronized cardioversion. Energy levels: regular narrow-complex SVT starts at 100 J biphasic; atrial fibrillation and atrial flutter start at ≥200 J biphasic; regular monomorphic VT starts at 100 J biphasic. Sedate if the patient is conscious and time permits. Polymorphic VT, however, is treated with UNSYNCHRONIZED defibrillation (not synchronized cardioversion), because the irregular waveform makes reliable R-wave synchronization impossible and delays are dangerous."
+    },
+    {
+      "title": "Stable Narrow-Complex Regular Tachycardia — SVT",
+      "content": "Most regular narrow-complex tachycardias are supraventricular in origin (AV nodal reentrant tachycardia, AV reentrant tachycardia). For stable patients, start with vagal maneuvers (Valsalva, carotid sinus massage). If ineffective, give adenosine 6 mg rapid IV push via a proximal (near-the-heart) IV port followed by a rapid 20 mL saline flush; if no response, give 12 mg and may repeat once. Adenosine works by transiently blocking AV nodal conduction, terminating reentrant circuits that depend on the AV node."
+    },
+    {
+      "title": "Stable Narrow-Complex Irregular Tachycardia",
+      "content": "Irregular narrow-complex tachycardia is most commonly atrial fibrillation or atrial flutter with variable block. For stable patients, rate control is the priority: beta-blockers (metoprolol), calcium-channel blockers (diltiazem), or amiodarone if both rate control and rhythm control are considered. Target a resting heart rate <110/min (lenient) or <80/min (strict) per clinical context. Adenosine is not effective for AF/AFlutter rate control but can be diagnostic to unmask flutter waves."
+    },
+    {
+      "title": "Stable Wide-Complex Regular Tachycardia — VT vs SVT with Aberrancy",
+      "content": "A regular wide-complex tachycardia should be assumed to be ventricular tachycardia (VT) until proven otherwise — this is the safest assumption, as treating SVT as VT is less harmful than treating VT as SVT. Amiodarone 150 mg IV over 10 minutes is first-line for stable wide-complex tachycardia, and may be repeated once. Procainamide 20–50 mg/min IV is a reasonable alternative. If the patient becomes unstable at any point, switch to synchronized cardioversion starting at 100 J."
+    },
+    {
+      "title": "Polymorphic VT — A Special Case",
+      "content": "Polymorphic VT (including torsades de pointes) is a wide-complex tachycardia with a continuously varying QRS axis and morphology. Unlike monomorphic VT, polymorphic VT is treated with UNSYNCHRONIZED defibrillation — synchronization is unreliable on an irregular waveform and delays defibrillation. Magnesium sulfate 1–2 g IV is given specifically for torsades de pointes. Correct underlying electrolyte abnormalities (hypokalemia, hypomagnesemia) promptly."
+    },
+    {
+      "title": "Procainamide as an Alternative Antiarrhythmic",
+      "content": "Procainamide 20–50 mg/min IV (maximum cumulative dose 17 mg/kg) is an alternative to amiodarone for stable wide-complex tachycardia. It is effective for both regular and irregular wide-complex tachycardias. Monitor for hypotension (a common side effect) and QT prolongation. Procainamide is not recommended in patients with structural heart disease or significant heart failure, where amiodarone is preferred."
+    }
+  ],
+  "clinicalPearls": [
+    "Unstable tachycardia = immediate synchronized cardioversion — do not waste time on drug therapy.",
+    "When in doubt, assume VT — treating SVT as VT is safer than the reverse.",
+    "Adenosine must be given as a rapid IV push through a proximal (near-the-heart) IV port, followed by a rapid saline flush, to reach the heart before it is metabolized.",
+    "Polymorphic VT = UNSYNCHRONIZED defibrillation — synchronization is contraindicated on an irregular waveform.",
+    "Procainamide causes hypotension — give slowly and monitor blood pressure; it is a poor choice in cardiogenic shock."
+  ],
+  "redFlags": [
+    "Attempting synchronized cardioversion on polymorphic VT (synchronization is contraindicated).",
+    "Giving adenosine through a distal IV port (too slow — drug is metabolized before reaching the heart).",
+    "Assuming a wide-complex tachycardia is SVT with aberrancy and giving verapamil (may cause hemodynamic collapse if it is VT).",
+    "Delayed cardioversion in an unstable tachycardic patient while attempting drug therapy.",
+    "Not recognizing atrial fibrillation with rapid ventricular response as the cause of hemodynamic instability."
+  ],
+  "commonMistakes": [
+    "Hesitating to cardiovert an unstable patient because 'we should try drugs first.'",
+    "Using adenosine for rate control in atrial fibrillation — adenosine terminates AV-nodal-dependent reentrant tachycardias, not fibrillation.",
+    "Forgetting to set the defib to SYNCHRONIZED mode for cardioversion (risk of R-on-T precipitation of VF).",
+    "Giving procainamide too rapidly, causing hypotension in an already unstable patient.",
+    "Not confirming a regular vs irregular rhythm before choosing adenosine over rate-control agents."
+  ],
+  "memoryAids": [
+    "Unstable = shock (cardiovert), stable = treat (drugs/vagal).",
+    "Wide-complex tachycardia = VT until proven otherwise.",
+    "Adenosine 6, then 12 — rapid push, proximal port, fast flush.",
+    "Poly VT = UNSYNC defibrillation — you can't sync what isn't regular.",
+    "Amiodarone 150 over 10 for wide-complex; procainamide is the alternative, but watch the pressure."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Tachycardia With a Pulse — ACLS Decision Algorithm",
+      "content": "Tachycardia identified (rate >100/min with a pulse)\n  → Assess for instability: hypotension, altered mental status, chest pain, acute heart failure, shock\n     → UNSTABLE: Immediate synchronized cardioversion\n        → Sedate if conscious and time permits\n        → Energy: 100 J for regular narrow or regular monomorphic VT; ≥200 J for AF/AFlutter\n        → If polymorphic VT: UNSYNCHRONIZED defibrillation (not synchronized)\n     → STABLE: Assess rhythm\n        → Narrow-complex, REGULAR (SVT):\n           → Vagal maneuvers first\n           → If ineffective: Adenosine 6 mg rapid IV push (proximal port + flush)\n           → If no response: 12 mg adenosine (may repeat once)\n           → If still refractory: beta-blocker or calcium-channel blocker\n        → Narrow-complex, IRREGULAR (AF/AFlutter):\n           → Rate control: diltiazem, metoprolol, or amiodarone\n           → Target resting HR <110/min (lenient) or <80/min (strict)\n           → Consider anticoagulation per guidelines\n        → Wide-complex, REGULAR (assume VT):\n           → Amiodarone 150 mg IV over 10 min (may repeat once)\n           → Alternative: Procainamide 20–50 mg/min IV\n           → If becomes unstable → synchronized cardioversion at 100 J\n        → Wide-complex, IRREGULAR:\n           → If polymorphic VT → UNSYNCHRONIZED defibrillation + magnesium\n           → If pre-excited AF → avoid AV-nodal blockers; consider procainamide or cardioversion\n  → In parallel: seek and treat reversible causes (hypoxia, electrolytes, toxins, ischemia)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support (Tachycardia With a Pulse)",
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary (Synchronized cardioversion energies, adenosine protocol)",
+    "AHA 2025 Guidelines for CPR and ECC — Part 9 (Procainamide, polymorphic VT management)"
+  ]
+}

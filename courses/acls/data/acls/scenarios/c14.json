@@ -1,0 +1,53 @@
+{
+  "chapter": "c14",
+  "cases": [
+    {
+      "id": "c14_s01",
+      "title": "The Post-ROSC Bundle",
+      "presentation": "A 55-year-old man is brought to the ED after an out-of-hospital witnessed VF arrest. EMS performed 3 cycles of CPR and defibrillation, achieving ROSC after the third shock. On arrival, he is sedated and intubated. Heart rate is 88 bpm sinus, blood pressure is 84/52 mmHg. Post-ROSC ECG shows ST elevation in leads II, III, and aVF with reciprocal changes.",
+      "vitals": { "hr": 88, "bp": "84/52", "rr": 14, "spo2": "98%", "loc": "Sedated, intubated" },
+      "question": "What are the TWO most critical immediate interventions in the post-ROSC bundle for this patient?",
+      "options": [
+        "A: Start therapeutic hypothermia to 33°C and administer tPA.",
+        "B: Support hemodynamics with vasopressors (MAP ≥65) AND activate the cath lab for emergent PCI given the STEMI on the post-ROSC ECG.",
+        "C: Perform neuroprognostication now and prepare for withdrawal of care.",
+        "D: extubate and assess neurological status immediately."
+      ],
+      "correct": 1,
+      "explanation": "The two priorities are hemodynamic support (norepinephrine to MAP ≥65) and emergent coronary angiography/PCI given STEMI on the post-ROSC ECG (present in ~25–50% of post-arrest patients). Temperature management and neuroprognostication follow but are not the immediate first steps when STEMI is identified.",
+      "clinicalPearl": "Always get a 12-lead ECG immediately after ROSC — up to 50% of patients have STEMI and need emergent PCI. Simultaneously support hemodynamics."
+    },
+    {
+      "id": "c14_s02",
+      "title": "The Prognostication Timing Trap",
+      "presentation": "A 48-year-old woman is 48 hours post-ROSC from a VF arrest. She was cooled to 33°C for 36 hours and is now normothermic. She remains sedated (propofol and fentanyl) and on vecuronium for shivering control. Neurological examination shows no motor response to central and peripheral painful stimuli, no pupillary reflexes, and no corneal reflexes. The family asks: 'Should we withdraw care?'",
+      "vitals": { "hr": 72, "bp": "108/64", "rr": 16, "spo2": "99%", "loc": "Sedated, no visible response" },
+      "question": "What is the correct response?",
+      "options": [
+        "A: Yes — the exam is clearly prognostic for poor outcome and care should be withdrawn.",
+        "B: No — neuroprognostication must be deferred to ≥72 hours post-ROSC (or after rewarming). Current exam is unreliable due to ongoing sedation and paralytic effects.",
+        "C: Yes — 48 hours is sufficient for prognostication after TTM.",
+        "D: No — neuroprognostication can never be performed and care should continue indefinitely."
+      ],
+      "correct": 1,
+      "explanation": "The neurological exam is confounded by sedation (propofol, fentanyl) and paralytic (vecuronium). Neuroprognostication must be deferred to ≥72 hours after ROSC (or after rewarming). All sedation and paralytics should be stopped and allowed to clear before examination. An early poor exam does NOT reliably predict poor outcome.",
+      "clinicalPearl": "72 hours minimum, after sedation/paralysis clearance, multimodal assessment — never prognosticate early. Families need to understand that the current exam is not interpretable."
+    },
+    {
+      "id": "c14_s03",
+      "title": "ECPR Decision",
+      "presentation": "A 42-year-old man with no significant past medical history suffers a witnessed VF arrest at home. EMS arrives in 4 minutes, initiates CPR, and delivers 5 shocks over 15 minutes with persistent refractory VF. He receives epinephrine and amiodarone without ROSC. The receiving hospital has ECPR capability. Low-flow time from CPR initiation to potential ECMO flow is estimated at 25 minutes. The arrest appears to be potentially related to an acute coronary event (witnessed, young, no other obvious cause).",
+      "vitals": { "hr": "Refractory VF", "rr": "None", "loc": "Unresponsive" },
+      "question": "Is this patient a candidate for ECPR?",
+      "options": [
+        "A: No — ECPR is only for asystole/PEA arrests.",
+        "B: Yes — selected refractory VF/pVT, low-flow time <60 minutes, potentially reversible cause, and suitable candidate.",
+        "C: No — ECPR is only for patients >65 years old.",
+        "D: No — ECPR has no role in cardiac arrest management."
+      ],
+      "correct": 1,
+      "explanation": "This patient meets ECPR criteria: refractory VF/pVT despite standard ACLS, expected low-flow time of 25 minutes (<60 minutes threshold), potentially reversible cause (suspected acute coronary event), and a young, previously healthy candidate. ECPR provides temporary VA-ECMO support as a bridge to further therapy (PCI, TTM, recovery).",
+      "clinicalPearl": "ECPR is a bridge, not a destination. It buys time for the reversible cause to be treated. The ideal candidate: refractory VF/pVT, low-flow <60 min, reversible cause, suitable candidacy."
+    }
+  ]
+}

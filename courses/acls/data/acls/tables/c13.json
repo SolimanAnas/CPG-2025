@@ -1,0 +1,42 @@
+{
+  "chapter": "c13",
+  "tables": [
+    {
+      "id": "c13_t01",
+      "title": "Blood Pressure Management in Acute Ischemic Stroke",
+      "headers": ["Scenario", "BP Target", "Medication", "Notes"],
+      "rows": [
+        ["Pre-tPA (patient receiving tPA)", "<185/110 mmHg", "IV labetalol 10–20 mg over 1–2 min (repeat ×1) OR nicardipine 5 mg/hr (titrate ↑2.5 mg/hr q5–15 min, max 15 mg/hr)", "Must achieve BEFORE tPA initiation"],
+        ["During and post-tPA (first 24 h)", "<180/105 mmHg", "Labetalol or nicardipine as above; reduce BP by ~15% in first 24 h", "Continuous monitoring; avoid rebounds"],
+        ["Non-tPA candidate (first 24 h)", "Permissive up to 220/120 mmHg", "No treatment unless >220/120 or contraindications", "Must confirm no ICH, no cardiac ischemia, no aortic dissection"],
+        ["Post-24 hours (all patients)", "Treat according to underlying etiology", "Per institutional protocol", "Reassess goals after first 24 h"]
+      ]
+    },
+    {
+      "id": "c13_t02",
+      "title": "IV tPA (Alteplase) Dosing and Administration for Stroke",
+      "headers": ["Parameter", "Detail"],
+      "rows": [
+        ["Total dose", "0.9 mg/kg IV (maximum 90 mg)"],
+        ["Bolus", "10% of total dose IV over 1 minute"],
+        ["Infusion", "Remaining 90% of total dose IV over 60 minutes"],
+        ["Time window", "≤4.5 hours from symptom onset (last known normal)"],
+        ["Door-to-needle goal", "≤30 minutes"],
+        ["Pre-tPA BP requirement", "<185/110 mmHg"],
+        ["Post-tPA BP requirement", "<180/105 mmHg for ≥24 hours"],
+        ["Mandatory imaging", "Non-contrast CT head (exclude hemorrhage)"],
+        ["Key contraindications", "ICH on CT, active bleeding, stroke <3 months, INR >1.7, platelets <100K, glucose <50, multilobar infarction >1/3 hemisphere"]
+      ]
+    },
+    {
+      "id": "c13_t03",
+      "title": "Stroke Screening Tools Comparison",
+      "headers": ["Tool", "Components", "Setting", "Key Feature"],
+      "rows": [
+        ["Cincinnati Prehospital Stroke Scale (CPSS)", "Facial droop, arm drift, speech abnormality", "Prehospital / EMS", "Any 1 of 3 abnormal = high probability of stroke"],
+        ["FAST mnemonic", "Face, Arms, Speech, Time", "Public-facing / BLS", "Emphasizes time to activate EMS"],
+        ["NIH Stroke Scale (NIHSS)", "11 items (consciousness, gaze, visual fields, facial palsy, motor, ataxia, sensory, language, dysarthria, extinction)", "Hospital / neurology", "Quantifies stroke severity (0–42); guides treatment decisions"]
+      ]
+    }
+  ]
+}

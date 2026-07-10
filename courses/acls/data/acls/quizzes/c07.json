@@ -1,0 +1,211 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "Asystole is identified on the cardiac monitor. What is the first intervention?",
+      "options": ["A. Deliver a defibrillation shock", "B. Start high-quality CPR and administer epinephrine", "C. Place a transcutaneous pacemaker", "D. Administer amiodarone"],
+      "correct": 1,
+      "rationale": "Asystole is a nonshockable rhythm. Defibrillation is not indicated. The priority is high-quality CPR with ventilations, early epinephrine, and identification of reversible causes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "Why is defibrillation NOT appropriate for PEA?",
+      "options": [
+        "A. PEA is too slow to defibrillate",
+        "B. PEA is already an organized rhythm — the problem is mechanical failure to produce a pulse, not disorganized electrical activity",
+        "C. PEA always resolves spontaneously",
+        "D. PEA only occurs in children"
+      ],
+      "correct": 1,
+      "rationale": "PEA is an organized electrical rhythm that fails to generate a pulse. There is no chaotic or fibrillatory activity to defibrillate — the management focuses on CPR, epinephrine, and treating the underlying cause.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "What is the recommended epinephrine dose for asystole/PEA arrest?",
+      "options": [
+        "A. 0.1 mg IV every 3–5 minutes",
+        "B. 1 mg IV/IO (1:10,000) every 3–5 minutes",
+        "C. 5 mg IV every 3–5 minutes",
+        "D. 0.5 mg IV once"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine 1 mg IV/IO (1:10,000 concentration) is given every 3–5 minutes for all cardiac arrest rhythms, including asystole and PEA.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q04",
+      "question": "When should epinephrine ideally be given for a nonshockable rhythm?",
+      "options": [
+        "A. After 10 minutes of CPR",
+        "B. Only after ROSC",
+        "C. As soon as feasible, ideally within 3–5 minutes of arrest onset",
+        "D. At the same time as amiodarone"
+      ],
+      "correct": 2,
+      "rationale": "The 2025 guidelines emphasize early epinephrine for nonshockable rhythms. Evidence supports giving it as soon as IV/IO access is established, ideally within 3–5 minutes of arrest onset.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "Which of the following is NOT one of the H's of reversible causes?",
+      "options": ["A. Hypovolemia", "B. Hydrogen ion (acidosis)", "C. Hyperthermia", "D. Hypoxia"],
+      "correct": 2,
+      "rationale": "The H's are: Hypovolemia, Hypoxia, Hydrogen ion, Hypo-/Hyperkalemia, Hypothermia. Hyperthermia is not included — the correct term is Hypothermia (low temperature).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q06",
+      "question": "Which of the following is one of the T's of reversible causes?",
+      "options": [
+        "A. Tachycardia",
+        "B. Tension pneumothorax",
+        "C. Thyroid storm",
+        "D. Tetanus"
+      ],
+      "correct": 1,
+      "rationale": "The T's are: Tension pneumothorax, Tamponade (cardiac), Toxins, Thrombosis (pulmonary), Thrombosis (coronary).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q07",
+      "question": "How many ECG leads should be used to confirm true asystole?",
+      "options": ["A. One lead is sufficient", "B. At least two leads", "C. Three leads", "D. A full 12-lead ECG is mandatory"],
+      "correct": 1,
+      "rationale": "True asystole should be confirmed on at least two leads to exclude lead disconnection artifacts, fine VF, or pseudo-asystole.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "What does an ETCO₂ <10 mmHg during CPR in a patient with an advanced airway suggest?",
+      "options": [
+        "A. Excellent CPR quality",
+        "B. ROSC is imminent",
+        "C. Very low or absent cardiac output (consistent with asystole, fine VF, or poor compressions)",
+        "D. The airway is misplaced"
+      ],
+      "correct": 2,
+      "rationale": "Very low ETCO₂ during CPR indicates minimal cardiac output. In the context of known asystole, it confirms absent cardiac function and helps assess CPR quality.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q09",
+      "question": "During a code for asystole, the rhythm check at 2 minutes shows fine, barely visible oscillations. What should the team do?",
+      "options": [
+        "A. Continue treating asystole — the oscillations are artifact",
+        "B. Treat as VF/pVT and deliver a defibrillation shock",
+        "C. Stop resuscitation",
+        "D. Administer sodium bicarbonate"
+      ],
+      "correct": 1,
+      "rationale": "Fine VF can mimic asystole. If any fibrillatory activity is identified, the rhythm is shockable and should be treated with defibrillation per the VF/pVT algorithm.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q10",
+      "question": "Which reversible cause should you suspect first in a patient with narrow-complex PEA and distended neck veins after trauma?",
+      "options": [
+        "A. Hypovolemia",
+        "B. Tension pneumothorax",
+        "C. Cardiac tamponade",
+        "D. Massive pulmonary embolism"
+      ],
+      "correct": 2,
+      "rationale": "Distended neck veins (JVD) with PEA post-trauma suggest obstructive shock. Cardiac tamponade (Beck's triad: JVD, muffled heart sounds, hypotension) and tension pneumothorax (JVD + absent breath sounds + tracheal deviation) are top considerations. With distended neck veins and trauma, tamponade from penetrating injury is a primary suspect.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q11",
+      "question": "Narrow-complex PEA versus wide-complex PEA — which clinical distinction is most useful?",
+      "options": [
+        "A. Narrow-complex PEA never needs treatment",
+        "B. Wide-complex PEA should always be shocked",
+        "C. Narrow-complex PEA may suggest a more reversible etiology (hypovolemia, pneumothorax, tamponade) and may respond more rapidly to cause-directed therapy",
+        "D. The algorithm differs completely between narrow and wide PEA"
+      ],
+      "correct": 2,
+      "rationale": "While the algorithm is the same for both, narrow-complex PEA often suggests a potentially more reversible cause (hypovolemia, pneumothorax, tamponade) that may respond quickly to targeted treatment. Wide-complex/slow PEA may indicate more advanced myocardial dysfunction or metabolic derangement.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q12",
+      "question": "In which specific circumstance may a mechanical CPR device be considered during an asystole arrest?",
+      "options": [
+        "A. For all cardiac arrests as the first-line approach",
+        "B. During ECPR cannulation when manual compressions are impractical",
+        "C. When there are 5 or more providers available",
+        "D. In the emergency department only"
+      ],
+      "correct": 1,
+      "rationale": "Mechanical CPR devices are not routinely recommended but may be considered when high-quality manual compressions are impractical or unsafe to sustain — such as during ECPR cannulation, prolonged transport with limited personnel, or in the catheterization lab.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q13",
+      "question": "A patient with known severe hyperkalemia (K⁺ 7.8 mEq/L) develops asystole. Which H is the most likely cause and what is the first treatment?",
+      "options": [
+        "A. Hypovolemia — give fluids",
+        "B. Hyperkalemia — give calcium chloride, insulin/glucose, sodium bicarbonate",
+        "C. Hypothermia — warm the patient",
+        "D. Hydrogen ion — give sodium bicarbonate only"
+      ],
+      "correct": 1,
+      "rationale": "Hyperkalemia is a well-known reversible cause of cardiac arrest (one of the H's). Treatment includes IV calcium (membrane stabilization), insulin with glucose (intracellular shift), sodium bicarbonate, and dialysis. Recognizing and treating the cause is critical — epinephrine alone has limited benefit.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "Why is systematic searching for reversible causes especially important in asystole/PEA compared to VF/pVT?",
+      "options": [
+        "A. It is equally important in all arrest rhythms",
+        "B. Because asystole/PEA typically results from an identifiable, treatable underlying condition, and drug therapy alone without treating the cause has limited benefit",
+        "C. Because VF/pVT never has a reversible cause",
+        "D. Because asystole/PEA always requires surgery"
+      ],
+      "correct": 1,
+      "rationale": "While reversible causes matter in all arrests, asystole/PEA most commonly result from identifiable causes (hypovolemia, pneumothorax, PE, MI, toxins, etc.) that require specific treatment. CPR and epinephrine buy time, but ROSC depends on finding and fixing the cause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q15",
+      "question": "A patient in asystole achieves ROSC briefly but re-arrests into asystole. Epinephrine was last given 2 minutes ago. What should be done?",
+      "options": [
+        "A. Wait another minute before giving epinephrine",
+        "B. Resume CPR, repeat epinephrine now (q3–5 min interval met), and re-search for reversible causes",
+        "C. Defibrillate immediately",
+        "D. Terminate resuscitation"
+      ],
+      "correct": 1,
+      "rationale": "After re-arrest into asystole, CPR should resume immediately. Epinephrine should be repeated every 3–5 minutes. Since 2 minutes have passed, the next dose is due. Simultaneously, re-evaluate for reversible causes that may have caused re-arrest.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q16",
+      "question": "What does the 2025 AHA guideline say about routine use of mechanical CPR devices?",
+      "options": [
+        "A. They are recommended for all cardiac arrests",
+        "B. Routine use is NOT recommended — they are reasonable only in specific circumstances where manual compressions are impractical",
+        "C. They are contraindicated in all arrests",
+        "D. They should replace manual compressions in all hospitals"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 guidelines state that routine use of mechanical CPR devices is not recommended. They may be considered only in specific situations where sustained high-quality manual compressions are impractical or unsafe.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q17",
+      "question": "A patient presents with PEA arrest and has signs of acute massive pulmonary embolism (sudden dyspnea, pleuritic chest pain before arrest, right heart strain on bedside echo). Which T is the likely cause?",
+      "options": [
+        "A. Tension pneumothorax",
+        "B. Tamponade",
+        "C. Toxins",
+        "D. Thrombosis (pulmonary)"
+      ],
+      "correct": 3,
+      "rationale": "Massive pulmonary embolism (thrombosis — pulmonary) is one of the T's. Clinical clues include sudden onset, pleuritic chest pain, right heart strain, and risk factors for PE.",
+      "difficulty": "Easy"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "Cardiac Arrest Drug Reference — Doses, Indications, and Key Facts",
+      "headers": ["Drug", "Dose", "Route", "Indication", "Key Facts"],
+      "rows": [
+        ["Epinephrine", "1 mg every 3–5 min", "IV/IO", "All cardiac arrest rhythms", "1:10,000 concentration (0.1 mg/mL); alpha-adrenergic ↑ coronary perfusion"],
+        ["Amiodarone", "300 mg first dose; 150 mg second dose", "IV/IO bolus", "Refractory VF/pVT", "Preferred antiarrhythmic; dilute in NS (NOT D5W); Class I/III/IV properties"],
+        ["Lidocaine", "1–1.5 mg/kg first dose; 0.5–0.75 mg/kg subsequent", "IV/IO bolus", "Refractory VF/pVT (alternative)", "Preferred in acute ischemia/MI; Class Ib antiarrhythmic"],
+        ["Sodium bicarbonate", "1 mEq/kg IV", "IV", "Hyperkalemia, TCA OD, bicarbonate-responsive acidosis only", "NOT routine; risk of hypernatremia and paradoxical acidosis"],
+        ["Magnesium sulfate", "1–2 g IV over 5–20 min", "IV", "Torsades de pointes", "NOT for ordinary VF/pVT; stabilizes membrane in prolonged QT"],
+        ["Vasopressin", "20 IU (single dose)", "IV/IO", "May replace 1st or 2nd epi dose", "No advantage over epi alone; epinephrine preferred"],
+        ["Adenosine", "6 mg → 12 mg", "IV rapid push", "SVT with a pulse ONLY", "NEVER in pulseless arrest; 6-sec half-life; needs pulse to reach heart"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "IV vs IO Access During Cardiac Arrest",
+      "headers": ["Feature", "IV Access", "IO Access"],
+      "rows": [
+        ["Preferred?", "First-line", "Reasonable when IV not quickly obtainable"],
+        ["Speed to establish", "Dependent on patient factors (veins, edema, arrest)", "Fast — can be placed in most locations within 1–2 min"],
+        ["Drug bioavailability", "Gold standard", "Comparable to IV — drugs reach central circulation"],
+        ["Best suited for", "All patients when obtainable", "Difficult IV access, obese patients, cardiac arrest"],
+        ["Catheter size", "18–20 gauge peripheral", "15–18 gauge intraosseous needle"],
+        ["Drug flush", "10–20 mL NS + fluid push", "10–20 mL NS + fluid push"]
+      ]
+    },
+    {
+      "id": "c08_t03",
+      "title": "Drugs NOT Indicated in Cardiac Arrest",
+      "headers": ["Drug", "Why NOT Used in Arrest", "Correct Indication"],
+      "rows": [
+        ["Adenosine", "Half-life of 6 seconds; requires pulse to reach heart; no effect on VF/pVT/asystole/PEA", "Regular narrow-complex SVT with a pulse"],
+        ["Atropine", "No longer recommended for cardiac arrest (removed from ACLS algorithms)", "Symptomatic bradycardia with a pulse (1 mg IV q3–5 min, max 3 mg)"],
+        ["Epinephrine 1:1,000", "Wrong concentration — 10× overdose risk", "Anaphylaxis (0.3–0.5 mg IM); use 1:10,000 for arrest"],
+        ["Calcium chloride (routine)", "No routine role in cardiac arrest", "Hyperkalemia, calcium channel blocker OD, hypermagnesemia"]
+      ]
+    }
+  ]
+}

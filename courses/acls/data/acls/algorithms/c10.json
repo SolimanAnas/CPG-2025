@@ -1,0 +1,24 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "ACLS Bradycardia With a Pulse Algorithm",
+      "description": "Stepwise assessment and management of bradycardia in the adult patient, aligned with the 2025 AHA guidelines.",
+      "image": "../../algorithms/ACLS-Bradycardia.webp",
+      "steps": [
+        "Bradycardia identified on monitor (rate typically <50/min).",
+        "Assess for signs of instability: hypotension, acutely altered mental status, signs of shock, ischemic chest discomfort, acute heart failure.",
+        "NO instability present → monitor and observe; investigate and treat the underlying cause.",
+        "INSTABILITY present → symptomatic bradycardia — begin treatment.",
+        "FIRST LINE: Atropine 1 mg IV/IO, repeat every 3–5 minutes, to maximum total dose of 3 mg.",
+        "Reassess after each dose: improved heart rate and blood pressure?",
+        "Atropine ineffective, maximum dose reached, or block pattern predicts no response (Mobitz II, third-degree block with wide QRS)?",
+        "SECOND LINE — choose one or both: Transcutaneous pacing (confirm mechanical capture) AND/OR Dopamine 5–20 mcg/kg/min or Epinephrine 2–10 mcg/min infusion, titrated to response.",
+        "Provide analgesia/sedation for conscious patients undergoing transcutaneous pacing.",
+        "CONSIDER: Expert consultation and transvenous pacing for refractory cases.",
+        "IN PARALLEL: Identify and treat the reversible cause (hypoxia, drugs/toxins, electrolyte disturbance, hypothyroidism, inferior MI, increased ICP)."
+      ]
+    }
+  ]
+}

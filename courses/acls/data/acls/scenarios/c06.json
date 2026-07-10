@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "First-Shock VF",
+      "presentation": "A 62-year-old man collapses in a hospital corridor. The code team arrives within 1 minute. BLS is started, defibrillator pads are applied, and the monitor shows coarse ventricular fibrillation. The team has not yet established IV access.",
+      "vitals": { "hr": "No pulse — VF", "rr": "None", "loc": "Unresponsive" },
+      "question": "What is the priority action?",
+      "options": [
+        "A: Establish IV access and give epinephrine before shocking",
+        "B: Place an advanced airway first",
+        "C: Deliver a biphasic defibrillation shock immediately (120–200 J), then resume compressions",
+        "D: Perform a pulse check to confirm the rhythm"
+      ],
+      "correct": 2,
+      "explanation": "VF is a shockable rhythm and immediate defibrillation is the single most important intervention. IV access and airway management are layered in after the shock and during subsequent CPR cycles without delaying or interrupting compressions.",
+      "clinicalPearl": "Every minute of delay in defibrillating a shockable rhythm measurably lowers survival — prioritize the shock above all else at the first rhythm check."
+    },
+    {
+      "id": "c06_s02",
+      "title": "Refractory VF After Five Shocks",
+      "presentation": "A 55-year-old woman with a history of ischemic cardiomyopathy is in refractory VF. She has received five shocks at escalating biphasic energy (150 J, 150 J, 200 J, 200 J, 200 J). Epinephrine 1 mg IV was given after the second shock and repeated after the fourth. Amiodarone 300 mg IV was given after the third shock. VF persists. High-quality CPR has been maintained throughout with CCF >80%.",
+      "vitals": { "hr": "Refractory VF", "rr": "None", "loc": "Unresponsive" },
+      "question": "What antiarrhythmic dose should be given next?",
+      "options": [
+        "A: Another 300 mg amiodarone IV",
+        "B: Lidocaine 1–1.5 mg/kg IV",
+        "C: Amiodarone 150 mg IV (second dose)",
+        "D: Magnesium 1–2 g IV"
+      ],
+      "correct": 2,
+      "explanation": "After the initial amiodarone 300 mg dose, the second dose is 150 mg IV/IO if VF/pVT persists. You should use one antiarrhythmic consistently rather than switching agents within the same arrest. Magnesium is indicated for torsades de pointes, not standard VF.",
+      "clinicalPearl": "Use one antiarrhythmic consistently: amiodarone 300 then 150, or lidocaine 1–1.5 then 0.5–0.75. Don't switch agents mid-arrest."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Organized Rhythm After VF Resuscitation",
+      "presentation": "After four cycles of CPR and defibrillation for VF, the rhythm check now shows a narrow complex tachycardia at a rate of 110/min. The team pauses for a rhythm check and sees this organized rhythm on the monitor.",
+      "vitals": { "hr": 110, "loc": "Unresponsive" },
+      "question": "What is the correct next step at this rhythm check?",
+      "options": [
+        "A: Deliver another shock because the patient was previously in VF",
+        "B: Check for a pulse; if no pulse, this is PEA and should be treated accordingly",
+        "C: Immediately resume compressions without any assessment",
+        "D: Administer adenosine 6 mg IV"
+      ],
+      "correct": 1,
+      "explanation": "When an organized rhythm appears after VF resuscitation, a pulse check is indicated. If a pulse is present, the patient has achieved ROSC and should be managed accordingly. If no pulse is felt, this is PEA, and the PEA/asystole algorithm should be followed (epinephrine, identify and treat H's & T's).",
+      "clinicalPearl": "A pulse check is only performed when an organized rhythm appears — never during ongoing VF/pVT. Organized rhythm without a pulse = PEA, not VF."
+    }
+  ]
+}

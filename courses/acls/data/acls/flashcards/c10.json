@@ -1,0 +1,21 @@
+{
+  "chapter": "c10",
+  "cards": [
+    { "id": "c10_fc01", "question": "What defines 'symptomatic' bradycardia?", "answer": "A slow heart rate accompanied by signs of cardiopulmonary compromise: hypotension, acutely altered mental status, shock, ischemic chest discomfort, or acute heart failure.", "category": "Recognition" },
+    { "id": "c10_fc02", "question": "What is the atropine dose and interval for symptomatic bradycardia?", "answer": "1 mg IV or IO, repeated every 3–5 minutes, to a maximum total dose of 3 mg.", "category": "Pharmacology" },
+    { "id": "c10_fc03", "question": "In which block patterns is atropine unlikely to work?", "answer": "Infranodal blocks such as Mobitz type II or third-degree (complete) AV block, especially with a wide QRS.", "category": "Pharmacology" },
+    { "id": "c10_fc04", "question": "What should you do if atropine is ineffective or unlikely to work?", "answer": "Move promptly to transcutaneous pacing and/or a dopamine or epinephrine infusion; consider expert consultation and transvenous pacing.", "category": "Escalation" },
+    { "id": "c10_fc05", "question": "How do you confirm transcutaneous pacing is actually working?", "answer": "Confirm electrical capture (paced spike followed by a wide QRS and T wave) AND mechanical capture — a palpable pulse matching the paced rate.", "category": "Pacing" },
+    { "id": "c10_fc06", "question": "Why give analgesia/sedation during transcutaneous pacing?", "answer": "Transcutaneous pacing causes significant skeletal muscle contraction and discomfort in a conscious patient.", "category": "Pacing" },
+    { "id": "c10_fc07", "question": "What should you do for a bradycardic patient with NO signs of instability?", "answer": "Monitor and observe while investigating the cause; do not treat the rate itself.", "category": "Recognition" },
+    { "id": "c10_fc08", "question": "Name two infusion options for refractory symptomatic bradycardia.", "answer": "Dopamine infusion or epinephrine infusion, titrated to heart rate and blood pressure response.", "category": "Pharmacology" },
+    { "id": "c10_fc09", "question": "Name three reversible/underlying causes of bradycardia to screen for.", "answer": "Any three of: hypoxia, beta-blocker or calcium-channel blocker or digoxin toxicity, hyperkalemia, hypothyroidism, inferior MI, increased intracranial pressure.", "category": "Underlying Causes" },
+    { "id": "c10_fc10", "question": "Why does atropine work well for sinus node dysfunction but poorly for infranodal block?", "answer": "Atropine blocks vagal tone at the SA and AV nodes; infranodal (below-the-AV-node) blocks are not vagally mediated, so atropine has little effect there.", "category": "Pharmacology" },
+    { "id": "c10_fc11", "question": "What is the maximum total atropine dose in one bradycardia episode?", "answer": "3 mg total (1 mg doses repeated every 3–5 minutes).", "category": "Pharmacology" },
+    { "id": "c10_fc12", "question": "A patient is bradycardic at 42/min but alert, normotensive, and asymptomatic. What is the priority?", "answer": "Observe, monitor, and investigate the cause rather than immediately giving atropine or pacing.", "category": "Recognition" },
+    { "id": "c10_fc13", "question": "What rate is commonly used as a starting transcutaneous pacing rate?", "answer": "Commonly 60–80/min as a starting target, titrated to clinical response.", "category": "Pacing" },
+    { "id": "c10_fc14", "question": "Should dopamine/epinephrine infusion wait until pacing pads fail?", "answer": "No — infusions may be started instead of, or alongside, pacing, especially if pacing is not immediately available or tolerated; they are alternative second-line options, not strictly sequential.", "category": "Escalation" },
+    { "id": "c10_fc15", "question": "What toxidrome-related drugs commonly cause bradycardia that should be considered as a reversible cause?", "answer": "Beta-blockers, calcium-channel blockers, and digoxin.", "category": "Underlying Causes" },
+    { "id": "c10_fc16", "question": "What signs indicate cardiopulmonary compromise from bradycardia?", "answer": "Hypotension, acutely altered mental status, signs of shock, ongoing ischemic chest discomfort, and acute heart failure.", "category": "Recognition" }
+  ]
+}

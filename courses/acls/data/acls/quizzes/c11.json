@@ -1,0 +1,204 @@
+{
+  "chapter": "c11",
+  "questions": [
+    {
+      "id": "c11_q01",
+      "question": "A patient has a heart rate of 180/min, blood pressure 82/50 mmHg, diaphoresis, and confusion. What is the correct immediate action?",
+      "options": [
+        "A. Give adenosine 6 mg IV",
+        "B. Start a diltiazem infusion",
+        "C. Immediate synchronized cardioversion",
+        "D. Perform a vagal maneuver"
+      ],
+      "correct": 2,
+      "rationale": "This is unstable tachycardia (hypotension, altered mental status). Immediate synchronized cardioversion is indicated regardless of the rhythm type.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q02",
+      "question": "What is the correct adenosine administration technique for stable SVT?",
+      "options": [
+        "A. 6 mg IV push slowly over 5 minutes",
+        "B. 6 mg rapid IV push via a proximal IV port followed by a rapid 20 mL saline flush",
+        "C. 12 mg as the initial dose via a distal IV port",
+        "D. 6 mg subcutaneously"
+      ],
+      "correct": 1,
+      "rationale": "Adenosine must be given as a rapid push through a proximal (near-the-heart) IV port followed by a rapid saline flush, because its half-life is only ~6 seconds.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q03",
+      "question": "A patient presents with a regular wide-complex tachycardia at 160/min. Blood pressure is 118/72 mmHg. The patient is alert and comfortable. What is the safest approach?",
+      "options": [
+        "A. Assume SVT with aberrancy and give verapamil",
+        "B. Assume VT until proven otherwise and give amiodarone 150 mg IV over 10 minutes",
+        "C. Discharge the patient",
+        "D. Perform immediate cardioversion at 200 J"
+      ],
+      "correct": 1,
+      "rationale": "A regular wide-complex tachycardia should be assumed to be VT until proven otherwise. For a stable patient, amiodarone 150 mg IV over 10 minutes is first-line. The patient is stable, so cardioversion is not immediately indicated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q04",
+      "question": "What is the initial synchronized cardioversion energy for atrial fibrillation?",
+      "options": ["A. 50 J", "B. 100 J", "C. ≥200 J biphasic", "D. 360 J monophasic only"],
+      "correct": 2,
+      "rationale": "Atrial fibrillation requires ≥200 J biphasic for the initial synchronized cardioversion shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q05",
+      "question": "A patient has polymorphic ventricular tachycardia (torsades de pointes). What type of electrical therapy is indicated?",
+      "options": [
+        "A. Synchronized cardioversion at 100 J",
+        "B. Synchronized cardioversion at 200 J",
+        "C. Unsynchronized defibrillation",
+        "D. Transcutaneous pacing"
+      ],
+      "correct": 2,
+      "rationale": "Polymorphic VT requires unsynchronized defibrillation because the irregular waveform makes reliable R-wave synchronization impossible. Synchronization is contraindicated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q06",
+      "question": "What is the maximum adenosine dose that can be given for a single SVT episode?",
+      "options": ["A. 6 mg total", "B. 12 mg total", "C. 18 mg total (6 + 12)", "D. 24 mg total"],
+      "correct": 2,
+      "rationale": "The protocol is 6 mg initially, then 12 mg (may be repeated once), for a maximum total of 18 mg in a single episode.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q07",
+      "question": "A stable patient has atrial fibrillation with a ventricular rate of 150/min. What is the appropriate initial management?",
+      "options": [
+        "A. Immediate synchronized cardioversion",
+        "B. Rate control with diltiazem, metoprolol, or amiodarone",
+        "C. Adenosine 12 mg rapid IV",
+        "D. Observation without treatment"
+      ],
+      "correct": 1,
+      "rationale": "For stable AF with rapid ventricular response, rate control with beta-blockers, calcium-channel blockers, or amiodarone is appropriate.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q08",
+      "question": "What is the procainamide dose for stable wide-complex tachycardia?",
+      "options": [
+        "A. 50 mg IV push",
+        "B. 20–50 mg/min IV, maximum cumulative dose 17 mg/kg",
+        "C. 150 mg over 10 minutes",
+        "D. 1 mg/kg IV bolus"
+      ],
+      "correct": 1,
+      "rationale": "Procainamide is dosed at 20–50 mg/min IV with a maximum cumulative dose of 17 mg/kg, given slowly with blood pressure monitoring.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q09",
+      "question": "Why should adenosine NOT be used for rate control in atrial fibrillation?",
+      "options": [
+        "A. It is too dangerous",
+        "B. Adenosine terminates AV-nodal-dependent reentrant tachycardias, but does not terminate fibrillation; it may be diagnostic to unmask flutter waves",
+        "C. It is contraindicated in all tachycardias",
+        "D. It only works for wide-complex rhythms"
+      ],
+      "correct": 1,
+      "rationale": "Adenosine works by transiently blocking AV nodal conduction, which terminates reentrant SVTs dependent on the AV node. It does not terminate atrial fibrillation or flutter, though it can transiently slow the ventricular rate to unmask flutter waves for diagnosis.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q10",
+      "question": "What is the initial synchronized cardioversion energy for regular monomorphic ventricular tachycardia with a pulse?",
+      "options": ["A. 50 J", "B. 100 J biphasic", "C. 200 J", "D. 360 J"],
+      "correct": 1,
+      "rationale": "Regular monomorphic VT with a pulse is synchronized cardioverted starting at 100 J biphasic.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q11",
+      "question": "A patient with a wide-complex tachycardia becomes hypotensive (BP 74/42) mid-evaluation. What should you do?",
+      "options": [
+        "A. Continue trying amiodarone",
+        "B. Immediately switch to synchronized cardioversion",
+        "C. Give more adenosine",
+        "D. Wait for cardiology consultation"
+      ],
+      "correct": 1,
+      "rationale": "An unstable patient with tachycardia requires immediate synchronized cardioversion — do not delay for drug therapy.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q12",
+      "question": "Which of the following is a common side effect of procainamide that providers must watch for?",
+      "options": ["A. Hyperkalemia", "B. Hypotension", "C. Bradycardia", "D. Hyperglycemia"],
+      "correct": 1,
+      "rationale": "Procainamide commonly causes hypotension, especially when given too rapidly; blood pressure should be monitored throughout infusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q13",
+      "question": "A patient has a pre-excited atrial fibrillation (WPW with AF). Which drug should be AVOIDED?",
+      "options": ["A. Procainamide", "B. Amiodarone", "C. Verapamil (or any AV-nodal blocker)", "D. Synchronized cardioversion"],
+      "correct": 2,
+      "rationale": "AV-nodal blockers (verapamil, diltiazem, adenosine, digoxin) should be avoided in pre-excited AF because they can increase conduction through the accessory pathway, accelerating the ventricular rate and potentially precipitating VF.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q14",
+      "question": "What vagal maneuver is first recommended for stable regular narrow-complex tachycardia?",
+      "options": [
+        "A. Carotid sinus massage only",
+        "B. Modified Valsalva maneuver (or carotid sinus massage)",
+        "C. diving reflex with ice water",
+        "D. No vagal maneuvers are recommended"
+      ],
+      "correct": 1,
+      "rationale": "Vagal maneuvers (modified Valsalva, carotid sinus massage) are first-line for stable regular narrow-complex SVT before adenosine.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q15",
+      "question": "What drug is specifically indicated for torsades de pointes?",
+      "options": ["A. Amiodarone", "B. Lidocaine", "C. Magnesium sulfate 1–2 g IV", "D. Epinephrine"],
+      "correct": 2,
+      "rationale": "Magnesium sulfate 1–2 g IV is specifically indicated for torsades de pointes (polymorphic VT associated with prolonged QT interval), in addition to unsynchronized defibrillation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q16",
+      "question": "A patient with stable SVT does not respond to vagal maneuvers. What is the next step?",
+      "options": [
+        "A. Synchronized cardioversion",
+        "B. Adenosine 6 mg rapid IV push via proximal port with rapid flush",
+        "C. Amiodarone 150 mg IV",
+        "D. Atropine 1 mg IV"
+      ],
+      "correct": 1,
+      "rationale": "After failed vagal maneuvers, adenosine 6 mg rapid IV is the next step for stable narrow-complex regular SVT.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q17",
+      "question": "What is the lenient rate-control target for atrial fibrillation?",
+      "options": ["A. Heart rate <60/min", "B. Heart rate <80/min", "C. Heart rate <110/min", "D. Heart rate <130/min"],
+      "correct": 2,
+      "rationale": "The lenient rate-control target is resting heart rate <110/min; the strict target is <80/min, applied based on clinical context and symptom control.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q18",
+      "question": "A patient is undergoing elective synchronized cardioversion for atrial fibrillation but is awake and distressed. What should be done?",
+      "options": [
+        "A. Cardiovert immediately without sedation",
+        "B. Administer short-acting sedation (e.g., midazolam, etomidate, or propofol) before cardioversion",
+        "C. Give general anesthesia",
+        "D. Discharge and bring back tomorrow"
+      ],
+      "correct": 1,
+      "rationale": "Synchronized cardioversion is painful; short-acting sedation should be given to conscious patients before elective cardioversion, provided it does not dangerously delay the procedure.",
+      "difficulty": "Medium"
+    }
+  ]
+}

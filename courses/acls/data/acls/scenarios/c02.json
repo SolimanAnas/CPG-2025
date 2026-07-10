@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "The Silent Room",
+      "presentation": "Ten minutes into a code, the resuscitation room has gone quiet except for the monitor beeps. The team leader realizes no one has spoken up about the current rhythm or plan in over a minute.",
+      "vitals": { "hr": "PEA", "rr": "Ventilated", "loc": "Unresponsive" },
+      "question": "What team dynamics problem does this best illustrate?",
+      "options": [
+        "A: The team is functioning efficiently with no issues.",
+        "B: A breakdown in communication — silence often signals lost situational awareness, not smooth teamwork.",
+        "C: The patient has achieved ROSC.",
+        "D: Compression quality is guaranteed to be adequate."
+      ],
+      "correct": 1,
+      "explanation": "A quiet resuscitation is a warning sign, not a reassurance. Active closed-loop communication, frequent reevaluation, and verbalized plans keep the whole team's mental model synchronized; silence often means the team has lost track of the plan.",
+      "clinicalPearl": "A quiet code is not a calm code — silence is a red flag for lost situational awareness."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Airway Just Placed",
+      "presentation": "A supraglottic airway is successfully placed and confirmed during ongoing chest compressions. The rescuer bagging the patient continues to pause compressions every 30 compressions to deliver 2 breaths.",
+      "vitals": { "hr": "VF, being treated", "rr": "Ventilated via SGA", "loc": "Unresponsive" },
+      "question": "What correction should the team leader make?",
+      "options": [
+        "A: Continue the current 30:2 pattern — it is correct with any airway.",
+        "B: Direct the team to continuous compressions with 1 breath every 6 seconds now that the airway is placed.",
+        "C: Stop ventilating entirely.",
+        "D: Increase breaths to every 2 seconds."
+      ],
+      "correct": 1,
+      "explanation": "Once an advanced airway (supraglottic or endotracheal) is placed and confirmed, compressions become continuous and breaths are delivered every 6 seconds independent of the compression cycle — 30:2 cycling should stop.",
+      "clinicalPearl": "Airway in, cycle out — advanced airway means continuous compressions plus a breath every 6 seconds."
+    },
+    {
+      "id": "c02_s03",
+      "title": "The Overlooked Error",
+      "presentation": "The team leader orders a second dose of amiodarone, apparently forgetting the first dose was given 2 minutes ago. A pharmacist on the team recognizes the mistake but hesitates, unsure whether to speak up to the attending physician leading the code.",
+      "vitals": { "hr": "Refractory VF", "rr": "Ventilated", "loc": "Unresponsive" },
+      "question": "What is the correct action?",
+      "options": [
+        "A: Say nothing since the physician is the team leader.",
+        "B: Respectfully and promptly speak up to clarify the dosing history (constructive intervention).",
+        "C: Quietly give the dose without comment.",
+        "D: Wait until after the code to mention it in private."
+      ],
+      "correct": 1,
+      "explanation": "Constructive intervention means any team member — regardless of role or hierarchy — should speak up immediately and respectfully when they notice a potential error, to protect patient safety.",
+      "clinicalPearl": "Hierarchy should never silence a safety concern — speak up promptly and respectfully."
+    }
+  ]
+}

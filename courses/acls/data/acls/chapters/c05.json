@@ -1,0 +1,105 @@
+{
+  "id": "c05",
+  "title": "Defibrillation, Cardioversion & Pacing",
+  "shortTitle": "Defibrillation & Pacing",
+  "estimatedStudyTime": 40,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Differentiate between biphasic and monophasic defibrillation waveforms and explain the energy selection for each.",
+    "State the recommended biphasic first-shock energy for adults in VF/pVT (120–200J; 200J if waveform unknown) and monophasic energy (360J).",
+    "Describe synchronized cardioversion energy recommendations by rhythm: atrial fibrillation/flutter ≥200J, narrow-regular SVT 100J, monomorphic VT with a pulse 100J.",
+    "Explain why polymorphic VT is treated with unsynchronized high-energy defibrillation rather than synchronized cardioversion.",
+    "Identify the indications, technique, and safety considerations for transcutaneous pacing.",
+    "Describe overdrive pacing as a technique for managing certain tachyarrhythmias.",
+    "Integrate electrical therapy decisions with the overall ACLS algorithm for cardiac arrest and tachyarrhythmia management."
+  ],
+  "summary": [
+    {
+      "title": "Biphasic vs Monophasic Waveforms",
+      "content": "Modern defibrillators use biphasic waveforms, which deliver current in two phases — a positive phase followed by a negative phase — resulting in more effective defibrillation at lower energy levels than older monophasic waveforms. Biphasic defibrillators are the standard of care and are found in virtually all hospital and EMS settings. Monophasic defibrillators, which deliver current in a single direction, are now largely obsolete but may still be encountered in resource-limited settings. The key clinical difference is energy requirement: biphasic defibrillators achieve successful defibrillation at 120–200J, while monophasic defibrillators typically require 360J. For biphasic defibrillators, the manufacturer's recommended energy should be used for the first shock; if the waveform is unknown, 200J biphasic is recommended. All subsequent shocks should use the maximum available energy."
+    },
+    {
+      "title": "Defibrillation Energy Selection for VF/pVT",
+      "content": "For adult VF or pulseless VT, the 2025 AHA Guidelines recommend: (1) Biphasic first shock: 120–200J (use the manufacturer's recommended waveform energy; if unknown, use 200J). (2) Monophasic first shock: 360J. (3) For subsequent biphasic shocks, use the maximum available energy. The rationale for the biphasic 120–200J range is that biphasic waveforms are effective at lower energies and the optimal energy varies by waveform morphology. If the specific biphasic waveform and its recommended energy are unknown, 200J is a safe default. After the first shock, deliver CPR for 2 minutes before the next rhythm check and shock. If VF/pVT persists after the first shock, the team should consider escalating energy or at minimum using the maximum available biphasic energy for subsequent shocks."
+    },
+    {
+      "title": "Synchronized Cardioversion Energy by Rhythm",
+      "content": "Synchronized cardioversion delivers a timed electrical shock synchronized with the R wave of the QRS complex, avoiding the vulnerable repolarization period (T wave) to prevent induction of VF. The 2025 AHA Guidelines recommend the following initial energies for synchronized cardioversion: (1) Atrial fibrillation and atrial flutter: ≥200J biphasic (a shift from prior lower starting energies, reflecting evidence that higher initial energies achieve better first-shock success). (2) Narrow-regular supraventricular tachycardia (SVT): 100J biphasic — often effective on the first shock. (3) Monomorphic ventricular tachycardia with a pulse: 100J biphasic. If the first shock is unsuccessful, energy should be escalated. All synchronized cardioversion should be performed with the patient sedated and analgesed when clinically feasible. If synchronization cannot be reliably achieved (e.g., very rapid or irregular rhythm), synchronized cardioversion is contraindicated and unsynchronized defibrillation should be used instead."
+    },
+    {
+      "title": "Polymorphic VT: Unsynchronized Defibrillation",
+      "content": "Polymorphic VT (a wide-complex tachycardia with varying QRS morphology, often associated with QT prolongation as in Torsades de Pointes) presents a unique management challenge. Because the QRS morphology is variable and irregular, the defibrillator cannot reliably synchronize to the R wave, making synchronized cardioversion both technically unreliable and potentially dangerous (an unsynchronized shock delivered during the T wave could induce VF). Therefore, polymorphic VT is treated with unsynchronized high-energy defibrillation — essentially the same as treating VF. If the patient has a pulse, the team should proceed with unsynchronized defibrillation at standard biphasic energy (120–200J) while preparing for potential resuscitation if the rhythm degenerates. Treatment of the underlying cause (e.g., correcting electrolyte abnormalities, discontinuing QT-prolonging drugs, overdrive pacing for Torsades) is essential."
+    },
+    {
+      "title": "Transcutaneous Pacing",
+      "content": "Transcutaneous pacing (TCP) is a temporary, non-invasive method of electrical pacing delivered through external electrode pads placed on the chest and back. It is indicated for hemodynamically significant bradycardia that is unresponsive to atropine and as a bridge to permanent or transvenous pacing. The technique involves: (1) Place anterior and posterior pacing pads per manufacturer instructions. (2) Set the device to demand (pacer) mode. (3) Start at 80 mA (milliamps) and increase by 10 mA every 2–3 minutes until electrical capture is achieved (visible wide QRS complexes on the monitor following each pacer spike). (4) The maximum output for adults is 200 mA. (5) After electrical capture, confirm mechanical capture by checking for a pulse with each paced complex. (6) Provide sedation and analgesia for patient comfort, as TCP is painful. Important: electrical capture (visible on monitor) does not guarantee mechanical capture (effective cardiac output) — always verify a pulse. Indications include symptomatic bradycardia (heart block, sinus node dysfunction) refractory to atropine, as a bridge to transvenous pacing or permanent pacemaker placement, and as a temporizing measure during cardiac arrest due to severe bradycardia."
+    },
+    {
+      "title": "Overdrive Pacing",
+      "content": "Overdrive pacing (also called anti-tachycardia pacing or ATP) involves pacing the heart at a rate faster than the tachycardia rate to terminate re-entrant tachyarrhythmias. The pacing rate is typically set 10–20% above the tachycardia rate, delivered in brief bursts. Overdrive pacing is primarily used for: (1) organized ventricular tachycardia (monomorphic VT) that is hemodynamically tolerated — it can terminate re-entrant circuits more gently than cardioversion. (2) Certain supraventricular tachycardias resistant to medications. (3) Torsades de Pointes (polymorphic VT associated with QT prolongation) — overdrive pacing at a faster rate (pacing at 90–110/min) suppresses the premature ventricular complexes that trigger Torsades and can be both acutely therapeutic and preventive. Overdrive pacing requires a functioning pacemaker (transcutaneous or transvenous) and continuous ECG monitoring. It is performed under controlled conditions, typically in a monitored setting, and is not a first-line therapy during unstable arrest."
+    }
+  ],
+  "clinicalPearls": [
+    "Biphasic first-shock energy for adults: 120–200J (use manufacturer's recommendation; if unknown, default to 200J).",
+    "Monophasic first-shock energy: 360J — this is encountered less frequently but remains important to know.",
+    "Polymorphic VT = treat like VF with unsynchronized defibrillation — do NOT attempt synchronized cardioversion.",
+    "Synchronized cardioversion for afib/aflutter: start at ≥200J biphasic — higher initial energies improve first-shock success.",
+    "For narrow-regular SVT cardioversion: start at 100J biphasic — often effective on the first shock.",
+    "Transcutaneous pacing: start at 80 mA, increase by 10 mA every 2–3 minutes, max 200 mA — always confirm mechanical capture with a pulse.",
+    "Electrical capture on monitor does not equal mechanical capture — always check for a pulse."
+  ],
+  "redFlags": [
+    "Attempting synchronized cardioversion on polymorphic VT — the irregular rhythm prevents reliable synchronization and risks inducing VF.",
+    "Relying solely on electrical capture during transcutaneous pacing without confirming mechanical capture (pulse).",
+    "Using monophasic energy levels (360J) on a biphasic defibrillator without cause.",
+    "Starting transcutaneous pacing above 80 mA without first optimizing medical therapy (atropine).",
+    "Failing to sedate a conscious patient before synchronized cardioversion."
+  ],
+  "commonMistakes": [
+    "Using 200J for the first biphasic shock of VF/pVT when the manufacturer specifies a different energy for that waveform — always check the device if possible.",
+    "Attempting synchronized cardioversion on a patient with polymorphic VT instead of unsynchronized defibrillation.",
+    "Stopping at electrical capture during TCP without verifying mechanical capture with a pulse.",
+    "Choosing synchronized cardioversion for asystole or PEA (these are non-shockable rhythms).",
+    "Forgetting to provide sedation/analgesia before elective cardioversion in a conscious patient."
+  ],
+  "memoryAids": [
+    "Biphasic = 120–200J (if unknown → 200J); Monophasic = 360J.",
+    "Poly VT = unsynchronized = treat like VF.",
+    "Atrial fibrillation cardioversion = '200 and go' (≥200J biphasic first shock).",
+    "TCP: 'Start at 80, climb by 10, never exceed 200' — and always check the pulse.",
+    "Electrical capture is not mechanical capture — always palpate."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Electrical Therapy Decision in Cardiac Arrest (VF/pVT)",
+      "content": "Cardiac arrest — rhythm check reveals VF or pulseless VT\n  → Defibrillate:\n     → Biphasic defibrillator: 120–200J (manufacturer's recommendation; if unknown, 200J)\n     → Monophasic defibrillator: 360J\n  → Resume CPR immediately for 2 minutes after shock\n  → After 2 minutes: rhythm check\n     → VF/pVT persists → Shock again (use max biphasic energy or 360J monophasic)\n     → Give epinephrine 1 mg IV/IO (after the second shock)\n     → Consider amiodarone 300 mg IV first dose or lidocaine 1–1.5 mg/kg for refractory cases\n  → Rhythm changes to organized but no pulse (PEA) → Non-shockable pathway\n  → Rhythm changes to asystole → Non-shockable pathway\n  → ROSC confirmed → Post-arrest care"
+    },
+    {
+      "title": "Transcutaneous Pacing Setup and Titration",
+      "content": "Hemodynamically significant bradycardia identified (HR <50, symptomatic)\n  → Atropine 1 mg IV — repeat q3–5 min, max 3 mg\n  → If atropine ineffective:\n     → Prepare transcutaneous pacing pads (anterior-posterior placement)\n     → Set device to demand (pacer) mode\n     → Start at 80 mA\n     → Increase by 10 mA every 2–3 minutes until electrical capture (wide QRS following each spike)\n     → If electrical capture achieved at ≤200 mA:\n        → Confirm mechanical capture: palpate pulse with each paced complex\n        → If pulse present: TCP effective — arrange transvenous pacing or permanent pacemaker\n        → If no pulse: electrical capture without mechanical capture — continue/resume CPR and escalate care\n     → If no electrical capture at 200 mA: TCP has failed — escalate to transvenous pacing or cardiology consultation\n  → Provide sedation/analgesia for conscious patients (TCP is painful)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 9: Adult Advanced Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Part 5: Adult BLS and CPR Quality",
+    "AHA 2025 Guidelines for CPR and ECC — Executive Summary: Tachycardia and Bradycardia Algorithms"
+  ],
+  "graphics": [
+    {
+      "id": "c05_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/acls/c05_g01.webp",
+      "alt": "Defibrillation vs. Synchronized Cardioversion Pad Placement",
+      "caption": "Torso diagram demonstrating Anterolateral pad placement (defibrillation) vs. Anteroposterior placement (synchronized cardioversion)."
+    },
+    {
+      "id": "c05_g02",
+      "section": "summary",
+      "sectionIndex": 4,
+      "url": "../../images/courses/acls/c05_g02.webp",
+      "alt": "Transcutaneous Pacing Capture",
+      "caption": "ECG strip showing pacer spikes followed by wide QRS complexes (electrical capture) compared to pacing without capture."
+    }
+  ]
+}

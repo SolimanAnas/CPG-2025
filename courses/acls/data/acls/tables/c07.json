@@ -1,0 +1,35 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "The H's and T's of Reversible Causes",
+      "headers": ["Category", "Reversible Cause", "Key Clinical Clues", "Specific Treatment"],
+      "rows": [
+        ["H", "Hypovolemia", "Hemorrhage, dehydration, poor skin turgor, flat neck veins", "IV/IO fluid bolus, blood products"],
+        ["H", "Hypoxia", "Cyanosis, low SpO₂, inadequate ventilation", "Oxygen, ensure airway patency, advanced airway"],
+        ["H", "Hydrogen ion (acidosis)", "Known metabolic acidosis, pH <7.1", "Ventilation optimization, sodium bicarbonate if indicated"],
+        ["H", "Hypo-/Hyperkalemia", "Known renal failure, ECG changes (peaked T waves or flat T/U waves)", "K⁺ replacement (hypo) or calcium + insulin/glucose (hyper)"],
+        ["H", "Hypothermia", "Core temp <35°C, cold exposure", "Passive/active rewarming"],
+        ["T", "Tension pneumothorax", "Absent breath sounds, tracheal deviation, JVD, hypotension", "Needle decompression → chest tube"],
+        ["T", "Tamponade (cardiac)", "JVD, muffled heart sounds, pulsus paradoxus, hypotension", "Emergent pericardiocardiocentesis"],
+        ["T", "Toxins", "Drug ingestion history, wide QRS (TCA), pill bottles at scene", "Specific antidotes (NaHCO₃ for TCA, naloxone for opioids)"],
+        ["T", "Thrombosis (pulmonary)", "Sudden dyspnea, pleuritic pain, right heart strain, DVT risk factors", "Systemic thrombolysis, embolectomy"],
+        ["T", "Thrombosis (coronary)", "Chest pain, ST changes, known CAD, ACS history", "Emergent PCI after ROSC"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "Asystole/PEA vs VF/pVT: Key Differences",
+      "headers": ["Feature", "Asystole / PEA (Nonshockable)", "VF / pVT (Shockable)"],
+      "rows": [
+        ["Defibrillation", "NOT indicated", "First and most important intervention"],
+        ["Epinephrine timing", "As soon as feasible, ideally within 3–5 min", "After ~2nd shock, then q3–5 min"],
+        ["Primary treatment focus", "CPR + identify/treat H's & T's", "CPR + defibrillation + antiarrhythmics"],
+        ["Antiarrhythmics", "Not routinely used", "Amiodarone or lidocaine for refractory cases"],
+        ["Prognosis (typical)", "Lower survival rates", "Higher survival if defibrillated early"],
+        ["Mechanical CPR role", "May be considered if manual impractical", "Same — not routine but considered in specific circumstances"]
+      ]
+    }
+  ]
+}

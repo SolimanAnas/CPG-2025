@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "VF Storm in the ICU",
+      "presentation": "A 68-year-old man in the ICU develops sudden cardiac arrest. Initial rhythm is ventricular fibrillation. After three shocks at 200 J biphasic with high-quality CPR between each, the rhythm remains VF. Epinephrine 1 mg has been given. The team is preparing a fourth shock.",
+      "vitals": { "hr": "Refractory VF", "rr": "None (intubated)", "spo2": "N/A (arrest)", "loc": "Unresponsive" },
+      "question": "What is the BEST next step before the fourth shock?",
+      "options": [
+        "A: Shock again at the same 200 J with the same pad placement.",
+        "B: Give amiodarone 300 mg IV bolus, reassess CPR quality and ETCO₂, consider vector-change defibrillation, and then shock.",
+        "C: Stop CPR and prepare for emergent thoracotomy.",
+        "D: Switch to asynchronous pacing."
+      ],
+      "correct": 1,
+      "explanation": "After ≥3 failed shocks (refractory VF), the provider should give amiodarone 300 mg IV/IO, reassess CPR quality and ETCO₂, consider vector-change defibrillation or DSED, and ensure reversible causes have been addressed — all before the next shock.",
+      "clinicalPearl": "Refractory VF is an escalation trigger, not a reason to repeat the same approach faster — drugs, vector change, and quality reassessment are all part of the next step."
+    },
+    {
+      "id": "c09_s02",
+      "title": "PEA Arrest with Hidden Cause",
+      "presentation": "A 45-year-old woman collapses in the emergency department. CPR is started immediately and the rhythm is PEA. After two rounds of epinephrine and continued CPR, there is no ROSC. Bedroom ultrasound shows a compressing pericardial effusion and a dilated, non-collapsing IVC. Heart sounds are muffled.",
+      "vitals": { "hr": "PEA", "rr": "None", "spo2": "N/A (arrest)", "loc": "Unresponsive" },
+      "question": "What is the most likely reversible cause and the correct intervention?",
+      "options": [
+        "A: Tension pneumothorax — needle decompression.",
+        "B: Cardiac tamponade — emergent pericardiocentesis.",
+        "C: Hypovolemia — aggressive fluid bolus.",
+        "D: Pulmonary embolism — systemic thrombolysis."
+      ],
+      "correct": 1,
+      "explanation": "Muffled heart sounds, PEA, compressing pericardial effusion on ultrasound, and a non-collapsing IVC all point to cardiac tamponade. Emergent pericardiocentesis (or thoracotomy) is the definitive treatment.",
+      "clinicalPearl": "Bedside ultrasound during PEA arrest is a powerful tool for identifying tamponade, tension pneumothorax, and hypovolemia — use it early when available."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Arrest in the Cold",
+      "presentation": "EMS brings in a 55-year-old man found unresponsive in a snowbank. Core temperature is 26°C. The rhythm is fine VF. After the first defibrillation attempt, the VF persists. CPR continues and warm IV fluids are started.",
+      "vitals": { "hr": "Fine VF", "rr": "None", "spo2": "N/A", "loc": "Unresponsive", "temp": "26°C" },
+      "question": "What is the correct management approach for this arrest?",
+      "options": [
+        "A: Declare futility — the patient is too cold to survive.",
+        "B: Continue aggressive resuscitation with CPR, defibrillation, and active rewarming; do not declare futility until core temperature reaches at least 32°C.",
+        "C: Give atropine and transcutaneous pace.",
+        "D: Transport immediately without further CPR or rewarming."
+      ],
+      "correct": 1,
+      "explanation": "Hypothermic cardiac arrest requires continued aggressive resuscitation including CPR, defibrillation, and active rewarming. Futility should not be declared until core temperature is at least 32°C, as neurologically intact survival is possible.",
+      "clinicalPearl": "Hypothermia is both a cause and a protector — hypothermic patients have been successfully resuscitated after prolonged downtime that would be futile in normothermic patients."
+    }
+  ]
+}

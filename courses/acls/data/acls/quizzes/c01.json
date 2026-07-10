@@ -1,0 +1,198 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "How many links make up the 2025 AHA universal Chain of Survival?",
+      "options": ["A. Four", "B. Five", "C. Six", "D. Eight"],
+      "correct": 2,
+      "rationale": "The 2025 guidelines consolidated adult/pediatric and IHCA/OHCA chains into one universal six-link chain, with a separate Neonatal Chain of Care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Which link of the Chain of Survival does the ACLS provider primarily own?",
+      "options": ["A. Link 1 — activation", "B. Link 3 — defibrillation only", "C. Link 4 — advanced resuscitation interventions", "D. Link 6 — recovery"],
+      "correct": 2,
+      "rationale": "ACLS providers primarily deliver Link 4: advanced airway management, IV/IO access, rhythm-specific therapy, medications, and treatment of reversible causes, while also protecting the earlier links.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q03",
+      "question": "A resident wants to intubate immediately upon arrival at a code, before establishing compressions and pads. What is the correct priority?",
+      "options": [
+        "A. Intubate first to secure the airway",
+        "B. Start/continue high-quality compressions and apply the defibrillator first; intubation is layered in without interrupting compressions",
+        "C. Intubation always takes priority in ACLS",
+        "D. Wait for a physician before doing anything"
+      ],
+      "correct": 1,
+      "rationale": "Advanced interventions are additive to, not substitutes for, high-quality CPR and early defibrillation, which remain the strongest predictors of survival.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q04",
+      "question": "What is the primary systems-of-care emphasis for out-of-hospital cardiac arrest (OHCA)?",
+      "options": [
+        "A. Early-warning scores and rapid-response teams",
+        "B. Bystander recognition/CPR, dispatcher-assisted instructions, and public-access AEDs",
+        "C. Multimodal neuroprognostication",
+        "D. ECPR cannulation protocols"
+      ],
+      "correct": 1,
+      "rationale": "OHCA systems depend heavily on bystanders and dispatch to bridge the gap before EMS/ACLS providers arrive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q05",
+      "question": "What is the primary systems-of-care emphasis for in-hospital cardiac arrest (IHCA)?",
+      "options": [
+        "A. Public-access defibrillation programs",
+        "B. Surveillance and prevention using early-warning scores and rapid-response teams",
+        "C. Community CPR training",
+        "D. Regional trauma triage"
+      ],
+      "correct": 1,
+      "rationale": "IHCA systems focus on catching deterioration early through monitoring and rapid-response systems so that many arrests are prevented before they occur.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q06",
+      "question": "A patient achieves ROSC after a refractory OHCA in a system with regionalized cardiac arrest centers. What should be considered?",
+      "options": [
+        "A. Transport to the nearest facility regardless of capability",
+        "B. Consider triage/transfer to a cardiac arrest center capable of PCI, temperature control, and ECPR",
+        "C. Discharge home once a pulse returns",
+        "D. Withhold further care since ROSC was achieved"
+      ],
+      "correct": 1,
+      "rationale": "Analogous to trauma and stroke systems, regionalized cardiac arrest centers with 24/7 PCI, temperature management, and ECPR capability improve outcomes for appropriate patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q07",
+      "question": "Which of the following is an Utstein-style CQI metric?",
+      "options": ["A. Patient's insurance status", "B. Chest compression fraction", "C. Hospital parking capacity", "D. Ambulance color"],
+      "correct": 1,
+      "rationale": "Chest compression fraction, time to first shock, time to epinephrine, ROSC rate, survival to discharge, and neurologic outcome are standard Utstein-style metrics used to measure and improve system performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q08",
+      "question": "Why is post-cardiac arrest care described as a continuation of resuscitation rather than a separate phase?",
+      "options": [
+        "A. Because it uses entirely different providers and skills",
+        "B. Because the same anticipatory, team-based approach and treatment of reversible causes carries forward after ROSC",
+        "C. Because it only involves paperwork",
+        "D. Because monitoring stops once a pulse returns"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 guidelines frame post-ROSC care as continued resuscitation — airway, hemodynamics, temperature control, and cause-directed therapy all extend the same mindset used during arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q09",
+      "question": "What has replaced the previously separate adult/pediatric and IHCA/OHCA Chains of Survival?",
+      "options": [
+        "A. Four separate specialty chains",
+        "B. A single universal six-link chain plus a distinct Neonatal Chain of Care",
+        "C. No chain concept is used anymore",
+        "D. A three-link simplified chain"
+      ],
+      "correct": 1,
+      "rationale": "2025 consolidated the multiple chains into one universal chain applicable across settings and ages, with newborns following a separate Neonatal Chain of Care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "A hospital wants to reduce in-hospital arrests. Which system tool most directly supports this goal?",
+      "options": [
+        "A. Public-access AED placement in the community",
+        "B. Early-warning scores paired with a rapid-response team",
+        "C. A regional ECPR referral network",
+        "D. Dispatcher-assisted CPR scripts"
+      ],
+      "correct": 1,
+      "rationale": "Early-warning scores identify deteriorating inpatients so a rapid-response/medical emergency team can intervene before a full arrest occurs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q11",
+      "question": "During a code, the team lead notices the code documenter has not recorded times of drug administration. What system consequence does this create?",
+      "options": [
+        "A. None — timing doesn't matter for CQI",
+        "B. It weakens the CQI/Utstein data (e.g., time-to-epinephrine) needed to evaluate and improve system performance",
+        "C. It only affects billing",
+        "D. It has no effect on patient care or system review"
+      ],
+      "correct": 1,
+      "rationale": "Accurate timing data underpins CQI metrics like time-to-epinephrine and time-to-shock; without it, systems cannot measure or improve performance.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q12",
+      "question": "Which best describes the relationship between BLS and ACLS?",
+      "options": [
+        "A. ACLS replaces the need for high-quality BLS",
+        "B. ACLS layers advanced interventions onto an uninterrupted BLS foundation of compressions and defibrillation",
+        "C. BLS and ACLS are unrelated skill sets",
+        "D. ACLS is only used after BLS has failed for 30 minutes"
+      ],
+      "correct": 1,
+      "rationale": "ACLS providers must protect the BLS foundation (compressions, early defibrillation) while adding airway, IV/IO access, and drug therapy — advanced care is additive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q13",
+      "question": "What does the recovery link (Link 6) of the Chain of Survival include?",
+      "options": [
+        "A. Only hospital discharge paperwork",
+        "B. Rehabilitation, psychological support, treatment planning, and family support",
+        "C. Repeating BLS training annually",
+        "D. Nothing beyond ROSC"
+      ],
+      "correct": 1,
+      "rationale": "Recovery reframes survival as an ongoing process needing rehabilitation and psychosocial support for both the survivor and family, not just a return of pulse.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q14",
+      "question": "A busy resuscitation team performs a debrief immediately after a code using real-time data. What is the primary purpose of this debrief?",
+      "options": [
+        "A. To assign blame for errors",
+        "B. To identify system and team performance gaps and feed lessons back into training/protocols (CQI)",
+        "C. To satisfy a legal requirement only",
+        "D. To determine reimbursement"
+      ],
+      "correct": 1,
+      "rationale": "Debriefing is a core continuous-quality-improvement activity, using data from the event to improve future team and system performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Which statement about advanced airway placement during cardiac arrest is TRUE?",
+      "options": [
+        "A. It should be attempted before starting compressions",
+        "B. It must be integrated without causing prolonged pauses in chest compressions",
+        "C. It always takes priority over defibrillation",
+        "D. It replaces the need for capnography"
+      ],
+      "correct": 1,
+      "rationale": "Airway management is layered into ongoing compressions; a red flag is any advanced procedure causing a long pause in compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q16",
+      "question": "Why are trauma and stroke systems of care referenced when discussing cardiac arrest centers?",
+      "options": [
+        "A. They share no relevant similarities",
+        "B. Cardiac arrest centers are modeled on the same regionalization principle — routing time-critical patients to specialized capability",
+        "C. Cardiac arrest centers replace trauma centers",
+        "D. Only rural systems use this model"
+      ],
+      "correct": 1,
+      "rationale": "Like trauma and stroke systems, regionalized cardiac arrest centers concentrate specialized post-arrest capabilities (PCI, temperature control, neuroprognostication, ECPR) to improve outcomes.",
+      "difficulty": "Hard"
+    }
+  ]
+}

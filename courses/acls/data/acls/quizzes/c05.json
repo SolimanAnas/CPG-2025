@@ -1,0 +1,204 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "What is the recommended biphasic first-shock energy for adult VF/pVT?",
+      "options": ["A. 50–100J", "B. 120–200J", "C. 300J", "D. 360J"],
+      "correct": 1,
+      "rationale": "The 2025 AHA Guidelines recommend 120–200J biphasic for the first shock in adult VF/pVT, using the manufacturer's recommended energy for the specific waveform; if unknown, use 200J.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "A monophasic defibrillator is the only device available during a VF arrest. What energy should be used for the first shock?",
+      "options": ["A. 120J", "B. 200J", "C. 300J", "D. 360J"],
+      "correct": 3,
+      "rationale": "Monophasic defibrillators require 360J for defibrillation. This is the standard first-shock energy for monophasic devices.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q03",
+      "question": "What is the recommended initial synchronized cardioversion energy for atrial fibrillation?",
+      "options": ["A. 50J", "B. 100J", "C. ≥200J biphasic", "D. 360J"],
+      "correct": 2,
+      "rationale": "The 2025 guidelines recommend ≥200J biphasic as the initial synchronized cardioversion energy for atrial fibrillation and atrial flutter, reflecting evidence that higher initial energies improve first-shock success.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q04",
+      "question": "What energy is used for synchronized cardioversion of narrow-regular SVT?",
+      "options": ["A. 50J", "B. 100J biphasic", "C. 200J", "D. 360J"],
+      "correct": 1,
+      "rationale": "Narrow-regular SVT responds well to synchronized cardioversion starting at 100J biphasic, which is often effective on the first shock.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q05",
+      "question": "Why is synchronized cardioversion contraindicated in polymorphic VT?",
+      "options": [
+        "A. Polymorphic VT always converts spontaneously",
+        "B. The irregular, variable QRS morphology prevents reliable R-wave synchronization, risking R-on-T induction of VF",
+        "C. Polymorphic VT does not require treatment",
+        "D. Synchronized cardioversion is only for atrial arrhythmias"
+      ],
+      "correct": 1,
+      "rationale": "Polymorphic VT has variable QRS morphology, making R-wave synchronization unreliable. Delivering an unsynchronized shock during the T wave (R-on-T) could induce VF. Polymorphic VT is treated with unsynchronized defibrillation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "What is the starting current and titration schedule for transcutaneous pacing in adults?",
+      "options": [
+        "A. Start at 50 mA, increase by 5 mA every minute",
+        "B. Start at 80 mA, increase by 10 mA every 2–3 minutes, max 200 mA",
+        "C. Start at 100 mA, increase by 20 mA every minute",
+        "D. Start at 200 mA and maintain"
+      ],
+      "correct": 1,
+      "rationale": "TCP starts at 80 mA and is increased by 10 mA every 2–3 minutes until electrical capture is achieved, with a maximum output of 200 mA for adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q07",
+      "question": "A patient has electrical capture on the monitor during transcutaneous pacing (wide QRS complexes follow each pacer spike at 90/min), but no pulse is palpable. What does this indicate?",
+      "options": [
+        "A. TCP is working perfectly",
+        "B. Electrical capture without mechanical capture — the paced complexes are not producing effective cardiac output",
+        "C. The pacemaker is malfunctioning",
+        "D. The patient has ROSC"
+      ],
+      "correct": 1,
+      "rationale": "Electrical capture (visible on monitor) does not guarantee mechanical capture (effective cardiac output). Always verify by palpating a pulse with each paced complex. No pulse = no effective output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "A biphasic defibrillator's manual does not specify the recommended waveform energy. The team is treating VF. What energy should be used for the first shock?",
+      "options": ["A. 120J", "B. 150J", "C. 200J", "D. 360J"],
+      "correct": 2,
+      "rationale": "When the biphasic waveform is unknown, the AHA recommends 200J as a safe default for the first shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "What is the maximum current output for transcutaneous pacing in adults?",
+      "options": ["A. 100 mA", "B. 150 mA", "C. 200 mA", "D. 300 mA"],
+      "correct": 2,
+      "rationale": "The maximum TCP output for adults is 200 mA. If electrical capture is not achieved by this level, TCP has failed and escalation to transvenous pacing or cardiology consultation is required.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q10",
+      "question": "What is overdrive pacing (anti-tachycardia pacing) primarily used for in ACLS?",
+      "options": [
+        "A. Treating asystole",
+        "B. Terminating re-entrant tachyarrhythmias such as monomorphic VT with a pulse, certain SVTs, and Torsades de Pointes",
+        "C. Increasing heart rate in bradycardia only",
+        "D. Defibrillating VF"
+      ],
+      "correct": 1,
+      "rationale": "Overdrive pacing paces the heart at 10–20% above the tachycardia rate to interrupt re-entrant circuits. It is used for organized VT with a pulse, certain SVTs, and Torsades de Pointes (pacing at 90–110/min).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q11",
+      "question": "A patient with monomorphic VT with a pulse is hemodynamically unstable. What is the recommended initial synchronized cardioversion energy?",
+      "options": ["A. 50J", "B. 100J biphasic", "C. 200J", "D. 360J"],
+      "correct": 1,
+      "rationale": "Monomorphic VT with a pulse is cardioverted starting at 100J biphasic. If unsuccessful, energy should be escalated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q12",
+      "question": "After a successful first-shock biphasic defibrillation of VF, what is the next step before the second rhythm check?",
+      "options": [
+        "A. Immediately re-analyze the rhythm",
+        "B. Resume CPR for 2 minutes, then re-analyze",
+        "C. Administer epinephrine immediately",
+        "D. Attempt transcutaneous pacing"
+      ],
+      "correct": 1,
+      "rationale": "After each defibrillation shock, CPR should be resumed immediately for 2 minutes before the next rhythm check and potential subsequent shock.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q13",
+      "question": "Which of the following rhythms is treated with unsynchronized defibrillation rather than synchronized cardioversion?",
+      "options": [
+        "A. Monomorphic VT with a pulse",
+        "B. Atrial fibrillation",
+        "C. Polymorphic VT",
+        "D. Narrow-regular SVT"
+      ],
+      "correct": 2,
+      "rationale": "Polymorphic VT is treated with unsynchronized high-energy defibrillation because the variable QRS morphology prevents reliable R-wave synchronization, making synchronized cardioversion dangerous.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "What is the primary indication for transcutaneous pacing in ACLS?",
+      "options": [
+        "A. Ventricular fibrillation",
+        "B. Hemodynamically significant bradycardia unresponsive to atropine",
+        "C. Atrial fibrillation with rapid ventricular response",
+        "D. Asystole"
+      ],
+      "correct": 1,
+      "rationale": "TCP is indicated for symptomatic bradycardia that does not respond to atropine, as a bridge to transvenous pacing or permanent pacemaker placement.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q15",
+      "question": "A patient is in Torsades de Pointes (polymorphic VT associated with QT prolongation). What pacing strategy can be both therapeutic and preventive?",
+      "options": [
+        "A. Overdrive pacing at 90–110/min to suppress the triggering premature ventricular complexes",
+        "B. Pacing at 40/min to slow the heart rate",
+        "C. Defibrillation only — pacing is not used for Torsades",
+        "D. Synchronized cardioversion at 200J"
+      ],
+      "correct": 0,
+      "rationale": "Overdrive pacing at 90–110/min suppresses the premature ventricular complexes that trigger Torsades de Pointes, providing both acute termination and prevention of recurrence.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q16",
+      "question": "What type of sedation is recommended before elective synchronized cardioversion in a conscious patient?",
+      "options": [
+        "A. No sedation is needed",
+        "B. Sedation and analgesia (e.g., midazolam, propofol, etomidate, or ketamine) per protocol",
+        "C. General anesthesia in all cases",
+        "D. Only oral acetaminophen"
+      ],
+      "correct": 1,
+      "rationale": "Synchronized cardioversion is painful in a conscious patient. Sedation and analgesia should be provided per institutional protocol before elective cardioversion.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q17",
+      "question": "During transcutaneous pacing, the patient's wide QRS complexes are visible on the monitor following each pacer spike, but the blood pressure remains 60/30 mmHg. What is the most appropriate action?",
+      "options": [
+        "A. Increase the pacer rate to 120/min",
+        "B. Verify mechanical capture by palpating a pulse — if absent, electrical capture without mechanical capture requires further intervention",
+        "C. Stop pacing immediately",
+        "D. Defibrillate the patient"
+      ],
+      "correct": 1,
+      "rationale": "Electrical capture without adequate mechanical capture (no palpable pulse, persistent hypotension) requires further evaluation. The team must confirm mechanical capture and consider transvenous pacing or additional medical therapy.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q18",
+      "question": "After an unsuccessful first-shock biphasic defibrillation of VF at 150J, what energy should the team use for the second shock?",
+      "options": [
+        "A. 150J again",
+        "B. 120J",
+        "C. The maximum available biphasic energy",
+        "D. 360J regardless of the defibrillator type"
+      ],
+      "correct": 2,
+      "rationale": "If the first biphasic shock is unsuccessful, subsequent shocks should use the maximum available biphasic energy to maximize the chance of successful defibrillation.",
+      "difficulty": "Hard"
+    }
+  ]
+}

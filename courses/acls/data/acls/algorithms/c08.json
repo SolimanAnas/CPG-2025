@@ -1,0 +1,24 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Cardiac Arrest Drug Administration Algorithm",
+      "description": "Decision framework for selecting and administering the correct drugs based on the cardiac arrest rhythm, including dose, timing, route, and flush protocol.",
+      "image": "../../images/courses/acls/c08_g01.webp",
+      "steps": [
+        "Cardiac arrest confirmed → begin CPR and establish IV/IO access.",
+        "Determine rhythm category: Shockable (VF/pVT) or Nonshockable (Asystole/PEA).",
+        "SHOCKABLE (VF/pVT): Deliver first shock immediately → resume CPR.",
+        "After 2nd shock: Epinephrine 1 mg IV/IO (1:10,000), push during compressions, flush with 10–20 mL NS + fluid push. Repeat q3–5 min.",
+        "If VF/pVT persists after epinephrine: Amiodarone 300 mg IV/IO (preferred) OR Lidocaine 1–1.5 mg/kg IV/IO (alternative). Flush after administration.",
+        "If VF/pVT continues: Second antiarrhythmic dose — Amiodarone 150 mg IV/IO or Lidocaine 0.5–0.75 mg/kg IV/IO.",
+        "NONSHOCKABLE (Asystole/PEA): Begin CPR + ventilations immediately.",
+        "Give Epinephrine 1 mg IV/IO (1:10,000) as soon as feasible — ideally within 3–5 min. Repeat q3–5 min.",
+        "SYSTEM-SPECIFIC DRUGS: Hyperkalemia → Calcium + Insulin/Glucose + NaHCO₃ 1 mEq/kg. TCA OD → NaHCO₃ 1 mEq/kg. Torsades → Magnesium 1–2 g IV.",
+        "ALWAYS: After every drug bolus → 10–20 mL NS flush → IV/IO fluid push. Position extremity if peripheral IV.",
+        "NEVER: Use adenosine in any pulseless rhythm. Never use epinephrine 1:1,000. Never dilute amiodarone in normal saline (standard amiodarone must be diluted in D5W)."
+      ]
+    }
+  ]
+}
