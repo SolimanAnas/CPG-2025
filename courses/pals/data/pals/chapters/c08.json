@@ -1,0 +1,94 @@
+{
+  "id": "c08",
+  "title": "Pediatric Cardiac Arrest: Asystole / PEA",
+  "shortTitle": "Non-Shockable Arrest",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Differentiate asystole from pulseless electrical activity (PEA) and explain why both are classified as non-shockable arrest rhythms.",
+    "State the 2025 AHA recommendation for early epinephrine administration in nonshockable pediatric cardiac arrest, including the target time window.",
+    "Describe the dose, route, and maximum dose of epinephrine for pediatric cardiac arrest.",
+    "List and explain the H's and T's of reversible cardiac arrest causes, identifying which are especially common in pediatric patients.",
+    "Explain the role of high-quality CPR as the primary determinant of survival in asystole and PEA.",
+    "Describe how waveform capnography is used to monitor CPR quality and detect ROSC during resuscitation.",
+    "Identify the criteria and rationale for considering extracorporeal CPR (ECPR) or extracorporeal membrane oxygenation (ECMO) in selected pediatric cardiac arrest patients.",
+    "Explain why defibrillation is NOT indicated for asystole or PEA and how this differs from the shockable arrest pathway."
+  ],
+  "summary": [
+    {
+      "title": "Asystole and PEA: Non-Shockable Pediatric Arrest Rhythms",
+      "content": "Asystole is the complete absence of electrical activity in the heart — the monitor shows a flat line or only occasional P waves. Pulseless electrical activity (PEA) describes an organized cardiac rhythm on the monitor that fails to generate an effective pulse and blood pressure. Together, asystole and PEA account for the majority of pediatric cardiac arrests. Unlike VF/pVT, these rhythms do not respond to defibrillation; instead, survival depends on high-quality CPR, early epinephrine, and identification and treatment of reversible causes."
+    },
+    {
+      "title": "The 2025 Emphasis: Early Epinephrine for Non-Shockable Rhythms",
+      "content": "A major update in the 2025 AHA Guidelines is the emphasis on early epinephrine for nonshockable rhythms. The guideline states that initial epinephrine should be given as early as possible — ideally within the first 3 to 5 minutes of pulselessness — while ensuring effective compressions and ventilation. Studies associate early epinephrine with improved survival and favorable neurological outcomes in pediatric asystole and PEA. The team should establish IV/IO access and administer epinephrine without delay while maintaining high-quality CPR."
+    },
+    {
+      "title": "Epinephrine Dosing and Route",
+      "content": "The recommended dose of epinephrine for pediatric cardiac arrest is 0.01 mg/kg IV/IO, administered every 3 to 5 minutes. Using the standard concentration of 0.1 mg/mL (1:10,000), this equals 0.1 mL/kg. The maximum single dose is 1 mg. The endotracheal route is no longer preferred — IV/IO access is strongly recommended because it achieves more reliable and predictable drug delivery. If IV access is not yet established, intraosseous (IO) access provides rapid and effective drug delivery and is the recommended initial vascular access in pediatric cardiac arrest."
+    },
+    {
+      "title": "High-Quality CPR: The Foundation of Non-Shockable Arrest Survival",
+      "content": "In asystole and PEA, organized electrical and mechanical resuscitation through CPR is the primary intervention that sustains life. High-quality CPR means pushing hard (at least one-third the anterior-posterior diameter of the chest — approximately 1.5 inches in infants and 2 inches in children), pushing fast (a compression rate of 100 to 120 per minute), allowing complete chest recoil between compressions, and minimizing pauses in compressions to less than 10 seconds. The compression-to-ventilation ratio is 30:2 for a single rescuer and 15:2 for two rescuers until an advanced airway is placed, after which compressions are continuous with ventilations delivered every 2 to 3 seconds."
+    },
+    {
+      "title": "The H's and T's: Identifying Reversible Causes",
+      "content": "A systematic approach to reversible causes is essential in asystole and PEA. The H's include Hypovolemia (most common in trauma and dehydration), Hypoxia (airway obstruction or respiratory failure), Hydrogen ion (metabolic or respiratory acidosis), Hypoglycemia (especially in infants and diabetic children), Hypo/hyperkalemia (electrolyte disturbances), and Hypothermia. The T's include Tension pneumothorax (clinical diagnosis — do not delay for imaging), Tamponade (cardiac — consider pericardiocentesis), Toxins (drug ingestion or medication error), Thrombosis (pulmonary — massive PE), and Thrombosis (coronary — myocardial infarction, rare in children but possible with Kawasaki disease or anomalous coronary arteries)."
+    },
+    {
+      "title": "Waveform Capnography: Monitoring CPR Quality and Detecting ROSC",
+      "content": "Continuous waveform capnography (end-tidal CO2 monitoring) is the gold standard for monitoring CPR quality. During high-quality CPR, an ETCO2 of at least 10 to 15 mmHg indicates adequate compressions. Values below 10 mmHg suggest inadequate compression rate, depth, or recoil, and the team should be prompted to improve technique. A sudden, sustained rise in ETCO2 (typically above 35 to 40 mmHg) during CPR is a reliable indicator of ROSC — the return of spontaneous circulation. Capnography also confirms endotracheal tube placement throughout resuscitation."
+    },
+    {
+      "title": "When to Consider ECMO/ECPR",
+      "content": "Extracorporeal cardiopulmonary resuscitation (ECPR) — the institution of extracorporeal membrane oxygenation (ECMO) during ongoing cardiac arrest — is considered for selected pediatric patients when conventional resuscitation has been prolonged and the arrest is potentially reversible. Situations where ECPR may be appropriate include arrest due to myocarditis, fulminant sepsis, drug toxicity, pulmonary embolism, or hypothermia, particularly when the duration of CPR exceeds 15 to 25 minutes without ROSC in a center with ECMO capability. Early identification of potential ECMO candidates and timely activation of the ECPR team are critical."
+    }
+  ],
+  "clinicalPearls": [
+    "The 2025 Guidelines emphasize early epinephrine within 3 to 5 minutes for nonshockable rhythms — do not delay for IV access; use IO if IV is not immediately available.",
+    "Asystole on a single lead may be fine VF on another lead — always check at least two leads before diagnosing asystole.",
+    "Waveform capnography provides real-time CPR quality feedback; target ETCO2 ≥10 mmHg during compressions.",
+    "A sudden rise in ETCO2 during CPR strongly suggests ROSC — prepare to reassess for a pulse.",
+    "Tension pneumothorax is a clinical diagnosis in cardiac arrest — do not wait for a chest X-ray; decompress empirically if suspected."
+  ],
+  "redFlags": [
+    "Delaying epinephrine beyond 5 minutes in a nonshockable arrest — early administration is associated with improved outcomes in pediatric asystole/PEA.",
+    "Defibrillating asystole or PEA — these rhythms do not respond to electrical therapy; delivering a shock wastes time and causes unnecessary myocardial damage.",
+    "Ignoring reversible causes while performing CPR — without addressing the underlying cause, CPR alone rarely achieves sustained ROSC.",
+    "Failing to monitor ETCO2 during CPR — without capnography, there is no objective way to assess compression quality or detect ROSC early."
+  ],
+  "commonMistakes": [
+    "Treating the monitor instead of the patient — organized electrical activity (PEA) on the monitor does not mean there is a pulse; always check a pulse.",
+    "Assuming asystole means the arrest is hopeless — children can survive from asystole if a reversible cause is identified and treated rapidly.",
+    "Using the endotracheal route for epinephrine in arrest — IV/IO is the preferred and more reliable route; ET drug delivery is no longer recommended as the primary route during cardiac arrest.",
+    "Not having a systematic approach to reversible causes — without the H's and T's framework, reversible causes may be missed during the chaos of resuscitation."
+  ],
+  "memoryAids": [
+    "'Epi early, not late' — in nonshockable rhythms, give epinephrine within 3–5 minutes, ideally before 5 minutes of arrest.",
+    "'H's and T's save lives' — systematically review reversible causes at regular intervals during resuscitation.",
+    "'Flat line = no shock' — asystole and PEA do not respond to defibrillation; focus on CPR and epinephrine.",
+    "'ETCO2 ≥10 means you're pushing hard enough' — waveform capnography is your CPR quality dashboard."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Asystole / PEA Cardiac Arrest — Stepwise Approach",
+      "content": "Confirm cardiac arrest: unresponsive, no normal breathing, no pulse (≤10 s)\n  → Activate emergency response team\n  → Begin high-quality CPR immediately (30:2 single rescuer; 15:2 two rescuers)\n  → Attach cardiac monitor: rhythm is asystole or PEA (non-shockable)\n  → Establish IV/IO access as rapidly as possible\n  → EPINEPHRINE 0.01 mg/kg IV/IO — give as early as possible (target within 3–5 min of arrest)\n  → Resume CPR for 2 minutes; use waveform capnography to monitor quality (target ETCO2 ≥10 mmHg)\n  → At 2-minute intervals: rhythm check, pulse check, continue CPR\n  → Repeat epinephrine every 3–5 minutes\n  → Systematically assess and treat reversible causes (H's and T's)\n  → On ROSC: initiate post-arrest care (continuous monitoring, glucose check, 12-lead ECG, temperature management)\n  → If prolonged arrest (>15–25 min without ROSC) and reversible cause suspected: consider ECPR/ECMO (if available)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Pediatric Cardiac Arrest Algorithm — Non-Shockable Rhythms",
+    "AHA 2025 Guideline Highlights — Early Epinephrine for Nonshockable Rhythms",
+    "AHA 2025 Guidelines for CPR and ECC — Extracorporeal CPR Considerations"
+  ],
+  "graphics": [
+    {
+      "id": "c08_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/pals/c08_g01.webp",
+      "alt": "Pediatric Asystole / PEA Resuscitation Flowchart",
+      "caption": "Pediatric Asystole/PEA algorithm showing immediate Epinephrine within 3-5 minutes, CPR, and search for reversible causes."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "chapter": "c07",
+  "cards": [
+    { "id": "c07_fc01", "question": "What two cardiac arrest rhythms are classified as shockable?", "answer": "Ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT) are both treated with unsynchronized defibrillation.", "category": "Rhythm Recognition" },
+    { "id": "c07_fc02", "question": "Why is VF/pVT more survivable than asystole or PEA in children?", "answer": "VF/pVT often arises from a potentially reversible cardiac electrical event, and timely defibrillation can restore organized cardiac activity — survival rates are significantly higher when defibrillation occurs promptly.", "category": "Prognosis" },
+    { "id": "c07_fc03", "question": "What is the first-shock energy dose for pediatric defibrillation?", "answer": "2 J/kg using a biphasic waveform defibrillator.", "category": "Defibrillation" },
+    { "id": "c07_fc04", "question": "What is the second-shock energy dose if the first shock is unsuccessful?", "answer": "4 J/kg.", "category": "Defibrillation" },
+    { "id": "c07_fc05", "question": "What is the maximum defibrillation energy dose recommended in pediatrics?", "answer": "10 J/kg or the standard adult dose, whichever is lower.", "category": "Defibrillation" },
+    { "id": "c07_fc06", "question": "How long should CPR be performed between defibrillation attempts?", "answer": "2 minutes of high-quality CPR between each rhythm recheck and shock delivery.", "category": "CPR Quality" },
+    { "id": "c07_fc07", "question": "What should you do immediately after delivering a defibrillation shock?", "answer": "Resume CPR for 2 minutes immediately — do not pause to check for a pulse right after a shock.", "category": "CPR Quality" },
+    { "id": "c07_fc08", "question": "What is the first-line antiarrhythmic for refractory VF/pVT in children?", "answer": "Amiodarone 5 mg/kg IV/IO bolus, with a maximum initial dose of 300 mg.", "category": "Pharmacology" },
+    { "id": "c07_fc09", "question": "What is the alternative antiarrhythmic if amiodarone is unavailable or ineffective?", "answer": "Lidocaine 1 mg/kg IV/IO.", "category": "Pharmacology" },
+    { "id": "c07_fc10", "question": "How much amiodarone can be given for subsequent (repeat) doses?", "answer": "Up to 150 mg per subsequent dose (the initial bolus is capped at 300 mg; total may be repeated up to 3 times).", "category": "Pharmacology" },
+    { "id": "c07_fc11", "question": "When should epinephrine be given in a shockable arrest?", "answer": "After the second shock, or when IV/IO access becomes available — defibrillation is the priority, and epinephrine timing relative to defibrillation is uncertain in VF/pVT.", "category": "Pharmacology" },
+    { "id": "c07_fc12", "question": "What is the energy dose for the first synchronized cardioversion attempt?", "answer": "0.5–1 J/kg synchronized, for an unstable patient with a pulse and tachycardia.", "category": "Cardioversion" },
+    { "id": "c07_fc13", "question": "What energy dose is used if the first synchronized cardioversion attempt fails?", "answer": "2 J/kg synchronized.", "category": "Cardioversion" },
+    { "id": "c07_fc14", "question": "When is synchronized cardioversion indicated instead of unsynchronized defibrillation?", "answer": "When the patient has a pulse but is hemodynamically unstable with tachycardia (e.g., wide-complex tachycardia or SVT with signs of shock).", "category": "Cardioversion" },
+    { "id": "c07_fc15", "question": "Why is biphasic waveform defibrillation preferred over monophasic?", "answer": "Biphasic devices achieve successful defibrillation at lower energy levels and cause less myocardial damage than monophasic devices.", "category": "Equipment" },
+    { "id": "c07_fc16", "question": "What is the difference between coarse VF and fine VF?", "answer": "Coarse VF has large, vigorous oscillations and is more responsive to defibrillation. Fine VF has low-amplitude, degenerating waveforms and often reflects a prolonged arrest with lower likelihood of successful conversion.", "category": "Rhythm Recognition" },
+    { "id": "c07_fc17", "question": "Name three common pediatric causes of VF or pulseless VT.", "answer": "Sudden cardiac conditions (hypertrophic cardiomyopathy, long-QT syndrome), myocarditis, and electrical injury or drowning — all of which predispose to shockable rhythms in children.", "category": "Etiology" },
+    { "id": "c07_fc18", "question": "What is the memory aid for the defibrillation energy sequence?", "answer": "'2, 4, and more for the floor' — first shock 2 J/kg, second 4 J/kg, subsequent ≥4 J/kg up to 10 J/kg.", "category": "Memory Aids" }
+  ]
+}

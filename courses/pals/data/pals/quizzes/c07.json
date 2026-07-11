@@ -1,0 +1,184 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "Which two cardiac arrest rhythms are classified as shockable in the pediatric cardiac arrest algorithm?",
+      "options": ["A. Asystole and PEA", "B. VF and pulseless VT", "C. Sinus bradycardia and junctional rhythm", "D. SVT and atrial fibrillation"],
+      "correct": 1,
+      "rationale": "Ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT) are the two shockable rhythms. They respond to defibrillation, unlike asystole and PEA which are non-shockable and require CPR with epinephrine.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "A 5-year-old child (20 kg) is in ventricular fibrillation. What is the recommended energy dose for the FIRST defibrillation shock?",
+      "options": ["A. 4 J/kg (80 J)", "B. 2 J/kg (40 J)", "C. 1 J/kg (20 J)", "D. 10 J/kg (200 J)"],
+      "correct": 1,
+      "rationale": "The first shock for pediatric VF/pVT is 2 J/kg. For a 20 kg child, that equals 40 J with a biphasic defibrillator. The dose escalates on subsequent attempts.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "After the first defibrillation shock fails to convert VF in a pediatric patient, what energy dose is recommended for the second shock?",
+      "options": ["A. 2 J/kg (same dose)", "B. 3 J/kg", "C. 4 J/kg", "D. 6 J/kg"],
+      "correct": 2,
+      "rationale": "If the first shock at 2 J/kg is unsuccessful, the second shock is delivered at 4 J/kg. Subsequent shocks use ≥4 J/kg, escalating as needed up to 10 J/kg maximum.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q04",
+      "question": "What is the maximum recommended defibrillation energy dose for a child?",
+      "options": ["A. 4 J/kg", "B. 6 J/kg", "C. 8 J/kg", "D. 10 J/kg or adult dose, whichever is lower"],
+      "correct": 3,
+      "rationale": "The maximum dose is 10 J/kg or the standard adult dose, whichever is lower. Exceeding this provides no proven additional benefit and risks significant myocardial injury.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "How many minutes of CPR should be performed between defibrillation attempts in the pediatric VF/pVT algorithm?",
+      "options": ["A. 1 minute", "B. 2 minutes", "C. 3 minutes", "D. 5 minutes"],
+      "correct": 1,
+      "rationale": "After each defibrillation shock, CPR is resumed for 2 minutes before the next rhythm recheck. This 2-minute cycle optimizes myocardial perfusion and冠状动脉 perfusion pressure recovery.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q06",
+      "question": "A 3-year-old (15 kg) remains in VF after two defibrillation shocks. What is the first-line antiarrhythmic drug to administer?",
+      "options": ["A. Atropine 0.15 mg", "B. Adenosine 1.5 mg", "C. Amiodarone 75 mg IV", "D. Lidocaine 15 mg IV"],
+      "correct": 2,
+      "rationale": "Amiodarone 5 mg/kg is first-line for refractory VF/pVT. For a 15 kg child: 5 × 15 = 75 mg IV/IO. Lidocaine 1 mg/kg is the alternative if amiodarone is unavailable.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q07",
+      "question": "What is the maximum initial bolus dose of amiodarone for pediatric VF/pVT?",
+      "options": ["A. 150 mg", "B. 300 mg", "C. 450 mg", "D. 600 mg"],
+      "correct": 1,
+      "rationale": "The initial amiodarone bolus is 5 mg/kg with a maximum of 300 mg. Subsequent repeat doses are limited to a maximum of 150 mg each.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "A 7-year-old (25 kg) child has been in VF for several minutes. The team has delivered three shocks and is continuing CPR. At what energy dose was the THIRD shock delivered?",
+      "options": ["A. 2 J/kg (50 J)", "B. 4 J/kg (100 J)", "C. 6 J/kg (150 J)", "D. 8 J/kg (200 J)"],
+      "correct": 1,
+      "rationale": "The sequence is: first shock 2 J/kg, second shock 4 J/kg, subsequent shocks ≥4 J/kg. The third shock uses at least 4 J/kg (100 J for a 25 kg child) and may be escalated further.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q09",
+      "question": "When should CPR resume after a defibrillation shock is delivered?",
+      "options": ["A. After checking for a pulse", "B. After confirming the rhythm on the monitor", "C. Immediately — before checking for a pulse or rhythm", "D. After waiting 30 seconds to assess response"],
+      "correct": 2,
+      "rationale": "CPR should resume immediately after the shock is delivered, without pausing to check for a pulse. Rhythm analysis and pulse checks occur after 2 minutes of CPR.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q10",
+      "question": "Which statement about epinephrine timing in pediatric VF/pVT is MOST accurate per the 2025 Guidelines?",
+      "options": [
+        "A. Epinephrine should be given before the first defibrillation shock",
+        "B. Epinephrine should be given immediately with the first shock",
+        "C. Defibrillation should be prioritized; the optimal timing of epinephrine relative to defibrillation is unknown",
+        "D. Epinephrine is contraindicated in shockable rhythms"
+      ],
+      "correct": 2,
+      "rationale": "For shockable rhythms, the 2025 AHA Guidelines state that defibrillation should be the priority and the optimal timing of epinephrine relative to defibrillation is uncertain. Epinephrine may be given after the second shock or when IV/IO access is available.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q11",
+      "question": "What energy dose is used for the first synchronized cardioversion in a hemodynamically unstable child with a pulse and wide-complex tachycardia?",
+      "options": ["A. 0.5–1 J/kg", "B. 2 J/kg", "C. 4 J/kg", "D. 10 J/kg"],
+      "correct": 0,
+      "rationale": "Synchronized cardioversion for an unstable tachycardia with a pulse begins at 0.5–1 J/kg. If the first attempt is ineffective, the dose is increased to 2 J/kg. This is distinct from the higher doses used for unsynchronized defibrillation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q12",
+      "question": "If the first synchronized cardioversion attempt at 1 J/kg is unsuccessful in a hemodynamically unstable 10-year-old (30 kg), what is the next energy dose?",
+      "options": ["A. 1.5 J/kg", "B. 2 J/kg (60 J)", "C. 4 J/kg (120 J)", "D. Repeat 1 J/kg"],
+      "correct": 1,
+      "rationale": "When the first synchronized cardioversion at 0.5–1 J/kg fails, the dose is increased to 2 J/kg for the second attempt. For a 30 kg child, this equals 60 J synchronized.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Why is it important to use synchronized rather than unsynchronized mode for cardioversion of an unstable tachycardia WITH a pulse?",
+      "options": [
+        "A. Synchronized mode delivers more energy",
+        "B. Synchronized mode times the shock to the R wave, reducing the risk of inducing VF",
+        "C. Synchronized mode requires less energy",
+        "D. Synchronized mode is faster to deliver"
+      ],
+      "correct": 1,
+      "rationale": "Synchronized cardioversion times the electrical discharge to the R wave of the ECG, avoiding delivery during the vulnerable T-wave period. This minimizes the risk of provoking ventricular fibrillation, which is a critical safety consideration.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "What distinguishes coarse VF from fine VF on the cardiac monitor?",
+      "options": [
+        "A. Coarse VF has a regular rhythm; fine VF is irregular",
+        "B. Coarse VF has large oscillations and is more likely to convert with defibrillation; fine VF has low-amplitude waveforms and often reflects prolonged arrest",
+        "C. Coarse VF occurs only in adults; fine VF occurs only in children",
+        "D. There is no clinical difference between the two"
+      ],
+      "correct": 1,
+      "rationale": "Coarse VF shows large, vigorous oscillations indicating more viable myocardium and a higher likelihood of successful defibrillation. Fine VF has small, degenerating waveforms suggesting a longer arrest duration and reduced conversion likelihood, though defibrillation should still be attempted.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q15",
+      "question": "In a pediatric cardiac arrest, an 8-year-old (25 kg) remains in VF after receiving amiodarone 125 mg and three shocks. What alternative antiarrhythmic should be considered?",
+      "options": [
+        "A. Repeat amiodarone 125 mg",
+        "B. Atropine 0.5 mg",
+        "C. Lidocaine 25 mg IV",
+        "D. Adenosine 6 mg"
+      ],
+      "correct": 2,
+      "rationale": "Lidocaine 1 mg/kg IV is the alternative to amiodarone for refractory VF/pVT. For a 25 kg child, the dose is 25 mg IV. Atropine and adenosine are not indicated for VF/pVT.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q16",
+      "question": "A 4-year-old (16 kg) is found unresponsive with no pulse. The monitor shows a chaotic disorganized rhythm with no identifiable QRS complexes. What is the most appropriate immediate action?",
+      "options": [
+        "A. Start epinephrine and continue monitoring",
+        "B. Begin CPR and prepare for defibrillation at 2 J/kg (32 J)",
+        "C. Obtain IV access and administer amiodarone",
+        "D. Perform a synchronized cardioversion"
+      ],
+      "correct": 1,
+      "rationale": "The rhythm described is ventricular fibrillation. The immediate action is to begin high-quality CPR and defibrillate at 2 J/kg (32 J for 16 kg). CPR and defibrillation take priority over medications in shockable arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q17",
+      "question": "Which factor MOST strongly predicts successful defibrillation in pediatric VF?",
+      "options": [
+        "A. Administration of amiodarone before the first shock",
+        "B. The interval from onset of VF to the first defibrillation attempt",
+        "C. The type of endotracheal tube used",
+        "D. The number of rescuers present"
+      ],
+      "correct": 1,
+      "rationale": "The time from VF onset to defibrillation is the single most important determinant of successful conversion. Each minute of delay reduces the probability of successful resuscitation, which is why rapid rhythm recognition and prompt shocking are emphasized.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q18",
+      "question": "After successful ROSC from a shockable arrest, which of the following is NOT a recommended immediate post-ROSC intervention?",
+      "options": [
+        "A. Continuous cardiac monitoring",
+        "B. Measuring blood glucose",
+        "C. Immediate extubation and discharge from the ED",
+        "D. Active fever prevention for comatose patients"
+      ],
+      "correct": 2,
+      "rationale": "Post-ROSC care requires continuous monitoring, glucose assessment, airway management, and temperature management. Immediate extubation and discharge is dangerous — the patient needs ICU-level monitoring and multidisciplinary care.",
+      "difficulty": "Easy"
+    }
+  ]
+}

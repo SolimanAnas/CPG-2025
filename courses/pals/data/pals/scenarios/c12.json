@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "Post-ROSC Temperature Spike",
+      "presentation": "A 4-year-old child (16 kg) achieved ROSC after 12 minutes of CPR for VF cardiac arrest during a viral illness. The child is now in the PICU, intubated and sedated, on targeted temperature management at 34°C. At the 30-hour mark, the core temperature sensor reads 38.2°C despite the cooling protocol. The nurse notes the cooling blanket is functioning.",
+      "vitals": { "hr": "110 bpm", "bp": "88/52 mmHg", "rr": "20 (mechanical)", "spo2": "97%", "temp": "38.2°C" },
+      "question": "What is the MOST important immediate action?",
+      "options": [
+        "A: Discontinue TTM — the fever indicates infection, not arrest-related injury",
+        "B: Aggressively treat the fever with cooling measures and antipyretics to bring temperature below 37.5°C",
+        "C: Increase sedation to suppress shivering",
+        "D: Check blood cultures and wait for results before adjusting temperature management"
+      ],
+      "correct": 1,
+      "explanation": "A core temperature above 37.5°C in a comatose post-arrest child must be actively treated. Fever worsens neurologic injury after cardiac arrest. Immediate measures include adjusting the cooling blanket, adding ice packs if needed, and administering antipyretics. Infection should be investigated, but temperature control takes priority.",
+      "clinicalPearl": "Fever in a post-arrest patient is a medical emergency for the brain — treat it immediately while investigating the cause."
+    },
+    {
+      "id": "c12_s02",
+      "title": "Post-Arrest Hypotension",
+      "presentation": "An 8-year-old child (25 kg) achieves ROSC after 18 minutes of CPR for PEA arrest secondary to sepsis. In the PICU, the child remains comatose. An arterial line shows systolic blood pressure of 68 mmHg. A norepinephrine infusion is available. The team is debating whether to start vasopressors or give a fluid bolus.",
+      "vitals": { "hr": "130 bpm", "bp": "68/38 mmHg (arterial line)", "rr": "22 (mechanical)", "spo2": "95%", "temp": "36.8°C" },
+      "question": "What is the MOST appropriate management of blood pressure?",
+      "options": [
+        "A: Give a 20 mL/kg normal saline bolus",
+        "B: Start norepinephrine infusion to maintain SBP above the 5th percentile for age (approximately 86 mmHg for this child)",
+        "C: Do nothing — blood pressure will self-correct after ROSC",
+        "D: Switch to epinephrine 0.1 mg/kg bolus"
+      ],
+      "correct": 1,
+      "explanation": "This child's SBP of 68 mmHg is below the 5th percentile for an 8-year-old (approximately 86 mmHg using 70 + 2×8 = 86). Post-arrest hypotension requires vasoactive support. Norepinephrine is appropriate for sepsis-associated hypotension after ROSC. While a fluid bolus may be considered, sepsis with post-arrest myocardial dysfunction favors vasopressor support to avoid fluid overload.",
+      "clinicalPearl": "Post-ROSC myocardial dysfunction is common — the heart may not handle fluid boluses well, and vasopressors are often needed early."
+    },
+    {
+      "id": "c12_s03",
+      "title": "Seizures on EEG After Arrest",
+      "presentation": "A 6-month-old infant (7 kg) is on day 2 of targeted temperature management at 34°C after ROSC from a prolonged cardiac arrest. Continuous EEG monitoring shows recurrent subclinical seizure activity — bursts of generalized sharp waves lasting 30–60 seconds, occurring every 20 minutes. The infant shows no visible clinical movements. The team is debating whether to treat.",
+      "vitals": { "hr": "140 bpm", "bp": "76/44 mmHg", "rr": "28 (mechanical)", "spo2": "96%", "temp": "34.0°C" },
+      "question": "What is the MOST appropriate action?",
+      "options": [
+        "A: Do not treat — seizures during TTM are self-limited and do not require intervention",
+        "B: Treat with anticonvulsants immediately and continue EEG monitoring",
+        "C: Rewarm the infant to 37°C to stop the seizures",
+        "D: Reduce the depth of sedation to check for clinical correlates"
+      ],
+      "correct": 1,
+      "explanation": "Subclinical seizures on EEG after cardiac arrest contribute to secondary brain injury and must be treated with anticonvulsants, just like clinical seizures. Do not wait for clinical manifestations — the EEG is detecting electrical seizure activity that is damaging the brain. Continue EEG monitoring to assess treatment response.",
+      "clinicalPearl": "The EEG is the window into the post-arrest brain — subclinical seizures are just as injurious as convulsive seizures and require treatment."
+    }
+  ]
+}

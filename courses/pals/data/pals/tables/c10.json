@@ -1,0 +1,49 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Pediatric Bradycardia Management Summary",
+      "headers": ["Action", "Details", "Key Considerations"],
+      "rows": [
+        ["Threshold to act", "HR < 60 bpm with poor perfusion", "Perfusion status matters more than the number alone"],
+        ["First step", "Oxygenate and ventilate", "Hypoxia is the most common cause of pediatric bradycardia"],
+        ["Start compressions", "HR < 60 with poor perfusion despite adequate O2/ventilation", "Compression-to-ventilation ratio 3:1"],
+        ["Epinephrine", "0.01 mg/kg IV/IO (1:10,000), every 3–5 min", "Rapid push; same concentration as cardiac arrest"],
+        ["Atropine", "0.02 mg/kg IV/IO (min 0.1 mg, max 0.5 mg)", "Only for vagal tone or primary AV block; not for hypoxic bradycardia"],
+        ["Transcutaneous pacing", "When bradycardia refractory to O2, compressions, and meds", "Requires sedation if conscious; temporary bridge"],
+        ["Transvenous pacing", "Persistent or expected chronic bradycardia", "More reliable capture; requires cardiology/ICU expertise"],
+        ["Reversible causes", "Hypoxia, acidosis, electrolytes, hypothermia, drugs, ICP", "Must be treated concurrently — not just the heart rate"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Atropine Quick-Reference for Pediatric Bradycardia",
+      "headers": ["Parameter", "Value"],
+      "rows": [
+        ["Calculated dose", "0.02 mg/kg IV/IO"],
+        ["Minimum single dose", "0.1 mg"],
+        ["Maximum single dose", "0.5 mg"],
+        ["Route", "IV or IO (rapid push)"],
+        ["Best indication", "Increased vagal tone, primary AV block"],
+        ["Not effective for", "Hypoxia, acidosis, myocardial dysfunction"],
+        ["Paradoxical effect", "Doses < 0.1 mg may worsen bradycardia (vagotonic)"],
+        ["Onset", "Rapid (within 1–2 minutes)"]
+      ]
+    },
+    {
+      "id": "c10_t03",
+      "title": "Sinus Bradycardia vs Other Bradyarrhythmias",
+      "headers": ["Feature", "Sinus Bradycardia", "AV Block (1st/2nd/3rd)", "Junctional Bradycardia"],
+      "rows": [
+        ["P waves", "Normal, before every QRS", "May be normal (1st degree), dropped (2nd), or independent (3rd)", "Absent or retrograde"],
+        ["PR interval", "Normal or slightly prolonged", "Prolonged (1st degree), progressive (2nd), or variable (3rd)", "Short or absent"],
+        ["Rate", "< 60 bpm", "Variable; ventricular rate slow in high-grade block", "< 60 bpm"],
+        ["Regularity", "Regular", "May be irregular (2nd degree) or regular but dissociated (3rd)", "Regular"],
+        ["Most likely cause", "Vagal tone, medications, hypothyroidism", "Congenital heart disease, myocarditis, drug toxicity", "Post-surgical, congenital"],
+        ["Atropine response", "Often effective (vagal component)", "May improve 1st/2nd degree; usually ineffective in 3rd degree", "Variable"],
+        ["Pacing indicated?", "Rarely", "Often (especially 3rd degree with poor perfusion)", "Sometimes"]
+      ]
+    }
+  ]
+}

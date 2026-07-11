@@ -1,0 +1,93 @@
+{
+  "id": "c07",
+  "title": "Pediatric Cardiac Arrest: VF / Pulseless VT",
+  "shortTitle": "Shockable Arrest",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Define ventricular fibrillation (VF) and pulseless ventricular tachycardia (pVT) and explain why they are classified as shockable pediatric arrest rhythms.",
+    "State the recommended energy dose for the first, second, and subsequent defibrillation attempts in children.",
+    "Describe the sequence of actions in the pediatric shockable cardiac arrest algorithm, including when to resume CPR relative to rhythm analysis and shock delivery.",
+    "Explain the role and dosing of amiodarone and lidocaine in the management of refractory VF or pVT.",
+    "Differentiate the indications for unsynchronized defibrillation from synchronized cardioversion and state the energy doses for each.",
+    "Identify the indications, technique, and energy recommendations for synchronized cardioversion in pediatric patients with unstable tachycardia.",
+    "Summarize the essential elements of post-ROSC care following resuscitation from a shockable rhythm.",
+    "Recognize clinical scenarios in which pediatric VF or pVT is likely to occur and explain why it is less common in children than in adults."
+  ],
+  "summary": [
+    {
+      "title": "Why VF and Pulseless VT Occur in Children",
+      "content": "Ventricular fibrillation and pulseless ventricular tachycardia account for a smaller proportion of pediatric cardiac arrests than asystole or pulseless electrical activity, but they carry a significantly higher survival rate when recognized and treated promptly. In children, shockable rhythms most often arise from sudden cardiac conditions such as hypertrophic cardiomyopathy, long-QT syndrome, or myocarditis, or from progressive shock and hypoxia that deteriorates into VF. Electrical injury, drowning, and certain drug toxicities also predispose to shockable rhythms."
+    },
+    {
+      "title": "Recognizing a Shockable Rhythm",
+      "content": "VF appears on the monitor as a chaotic, disorganized waveform with no identifiable QRS complexes. Amplitude varies: coarse VF (large oscillations) is more responsive to defibrillation than fine VF (low-amplitude, degenerating waveform). Pulseless VT shows a rapid, organized, wide-complex rhythm without a palpable pulse. Both rhythms demand immediate defibrillation. The single most important determinant of survival in VF/pVT is the interval between onset and defibrillation — each minute without treatment reduces the probability of successful resuscitation."
+    },
+    {
+      "title": "Defibrillation Energy: The Escalating Dose Strategy",
+      "content": "Pediatric defibrillation uses weight-based, escalating energy doses. The first shock is delivered at 2 J/kg. If the first shock is unsuccessful, the second shock is given at 4 J/kg. All subsequent shocks use at least 4 J/kg, with the dose further increased as needed, up to a maximum of 10 J/kg or the standard adult dose, whichever is lower. Biphasic waveform defibrillators are preferred because they achieve successful defibrillation at lower energy levels and cause less myocardial damage than monophasic devices. After each shock, the team immediately resumes CPR for 2 minutes before the next rhythm recheck — do not pause to check for a pulse immediately after a shock."
+    },
+    {
+      "title": "Antiarrhythmic Medications: Amiodarone and Lidocaine",
+      "content": "When VF or pVT persists after at least one shock and ongoing CPR, an antiarrhythmic drug should be administered. Amiodarone 5 mg/kg IV/IO is the first-line agent, given as a bolus during CPR without interrupting compressions. The initial dose may be repeated up to 3 times, but subsequent doses are limited to a maximum of 150 mg each, with a total per-dose cap of 300 mg for the first bolus. If amiodarone is unavailable or ineffective, lidocaine 1 mg/kg IV/IO is an acceptable alternative. Both drugs should be given through a rapidly accessible IV or IO line, and CPR must continue during administration."
+    },
+    {
+      "title": "Synchronized Cardioversion for Unstable Tachycardia",
+      "content": "Synchronized cardioversion is distinct from unsynchronized defibrillation. It is indicated for a child who has a pulse but is hemodynamically unstable with a tachycardia — such as wide-complex tachycardia or supraventricular tachycardia with signs of shock. The initial energy dose is 0.5–1 J/kg synchronized. If the first attempt is unsuccessful, the dose is increased to 2 J/kg. Sedation should be provided when the clinical situation allows, though cardioversion should never be delayed in an unstable patient. Always ensure the defibrillator is in synchronized mode; in synchronized mode, the device delivers the shock timed to the R wave, reducing the risk of inducing VF."
+    },
+    {
+      "title": "Post-ROSC Care After Shockable Arrest",
+      "content": "Once return of spontaneous circulation is achieved, the focus shifts to stabilizing the patient and preventing re-arrest. Essential post-ROSC interventions include maintaining an airway and supporting oxygenation and ventilation, establishing or confirming IV/IO access, initiating continuous cardiac and hemodynamic monitoring, and obtaining a 12-lead ECG to identify ongoing ischemia or arrhythmia triggers. Blood glucose should be measured and hypoglycemia treated. For comatose children, the 2025 AHA Guidelines recommend active fever prevention and maintaining core temperature at or below 37.5 °C. Transport to a pediatric ICU with full monitoring and multidisciplinary care is essential."
+    },
+    {
+      "title": "Epinephrine and Timing in Shockable Rhythms",
+      "content": "Epinephrine remains a core cardiac arrest medication, but in shockable rhythms the optimal timing relative to defibrillation is uncertain. The 2025 AHA Guidelines emphasize that for VF/pVT, defibrillation should be the priority — do not delay a shock to establish IV/IO access or administer epinephrine. Epinephrine 0.01 mg/kg IV/IO may be given after the second shock or when IV/IO access becomes available during ongoing CPR. Continue high-quality compressions while awaiting rhythm recheck and medication administration."
+    }
+  ],
+  "clinicalPearls": [
+    "Coarse VF (large, vigorous oscillations) is more likely to convert with defibrillation than fine VF, which often reflects a prolonged arrest — do not withhold the shock either way.",
+    "CPR should be performed in 2-minute cycles between defibrillation attempts; pausing to check for a pulse immediately after a shock wastes critical compressive time.",
+    "The biphasic waveform is now standard in most pediatric defibrillators and achieves effective defibrillation at lower energy doses than monophasic devices.",
+    "Amiodarone and lidocaine suppress recurrent VF/pVT but do not terminate the arrhythmia on their own — defibrillation remains the definitive intervention.",
+    "In a hospital setting, continuous waveform capnography provides real-time feedback on CPR quality and can signal ROSC when end-tidal CO2 suddenly rises."
+  ],
+  "redFlags": [
+    "Delivering more than the maximum recommended defibrillation dose (10 J/kg or adult dose) — exceeding this risks significant myocardial injury without proven benefit.",
+    "Delaying defibrillation to establish IV/IO access or draw labs — in a shockable rhythm, the priority is the shock, not the medication.",
+    "Using synchronized mode for a pulseless patient — defibrillation for VF/pVT must be unsynchronized; synchronized mode is for unstable patients with a pulse.",
+    "Failing to resume CPR immediately after a shock — the first 2 minutes of CPR after defibrillation optimize myocardial perfusion and increase the chance the next rhythm check shows an organized rhythm."
+  ],
+  "commonMistakes": [
+    "Confusing the first-shock dose (2 J/kg) with the second-shock dose (4 J/kg) — the doses escalate, and using a flat dose misses the benefit of titration.",
+    "Assuming VF and pVT are rare in children and not preparing for them — while less common than non-shockable rhythms, they are highly treatable with the best pediatric arrest survival rates.",
+    "Forgetting the 300 mg cap on the first amiodarone bolus — a child weighing more than 60 kg would receive a dose exceeding this cap if the mg/kg dose is calculated without checking the maximum.",
+    "Not confirming the defibrillator waveform type — biphasic and monophasic devices have different dose ranges, and using monophasic doses on a biphasic device (or vice versa) is suboptimal."
+  ],
+  "memoryAids": [
+    "'2, 4, and more for the floor' — first shock 2 J/kg, second 4 J/kg, subsequent ≥4 J/kg up to 10 J/kg.",
+    "'Shock, then push for two' — defibrillate, then immediately resume CPR for 2 minutes before the next rhythm check.",
+    "'Amiodarone first, lidocaine last' — amiodarone 5 mg/kg is first-line; lidocaine 1 mg/kg is the alternative.",
+    "'Sync is for pulses' — synchronized cardioversion is for unstable tachycardia WITH a pulse; unsynchronized defibrillation is for pulseless VF/pVT."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric VF / Pulseless VT Cardiac Arrest — Stepwise Approach",
+      "content": "Confirm pulseless arrest and identify rhythm as VF or pVT on monitor\n  → Start high-quality CPR immediately (30:2 or continuous with advanced airway)\n  → Ensure IV/IO access; draw blood for labs if feasible without interrupting CPR\n  → FIRST SHOCK: 2 J/kg (unsynchronized biphasic)\n     → Resume CPR for 2 minutes immediately after shock\n  → Rhythm recheck: still VF/pVT?\n     → SECOND SHOCK: 4 J/kg (unsynchronized)\n     → Resume CPR for 2 minutes\n     → Administer epinephrine 0.01 mg/kg IV/IO during CPR (if IV/IO available)\n  → Rhythm recheck: still VF/pVT?\n     → SUBSEQUENT SHOCK: ≥4 J/kg (may escalate up to 10 J/kg or adult dose)\n     → Resume CPR for 2 minutes\n     → Administer amiodarone 5 mg/kg IV/IO (or lidocaine 1 mg/kg if unavailable)\n  → Continue cycle: 2 min CPR → rhythm check → shock (if shockable) → drugs (as indicated)\n  → On ROSC: initiate post-arrest care (monitor, labs, glucose, temperature management, transport to PICU)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Pediatric Cardiac Arrest Algorithm — Shockable Rhythms",
+    "AHA 2025 Guideline Highlights — Pediatric Defibrillation and Antiarrhythmics"
+  ],
+  "graphics": [
+    {
+      "id": "c07_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/pals/c07_g01.webp",
+      "alt": "Pediatric Pulseless VF / VT Resuscitation Flowchart",
+      "caption": "Pediatric VF/pVT algorithm showing 2 J/kg, 4 J/kg, and escalated shocks, along with CPR cycles, Epinephrine, and Amiodarone."
+    }
+  ]
+}

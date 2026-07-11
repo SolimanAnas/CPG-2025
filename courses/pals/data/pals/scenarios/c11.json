@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "Infant With Sudden-Onset Tachycardia",
+      "presentation": "A 4-month-old infant (6 kg) is brought to the pediatric ED by parents who noticed the baby became suddenly fussy and inconsolable about 30 minutes ago. On examination, the infant is pale with mottled extremities. Heart rate is 275 bpm, regular, and no P waves are visible on the cardiac monitor. Blood pressure is 62/38 mmHg.",
+      "vitals": { "hr": "275 bpm", "bp": "62/38 mmHg", "rr": "52 bpm", "spo2": "88%", "temp": "37.2°C" },
+      "question": "What is the MOST appropriate immediate management?",
+      "options": [
+        "A: Administer adenosine 0.6 mg rapid IV push",
+        "B: Apply ice packs to the face for vagal maneuver",
+        "C: Synchronized cardioversion at 3–6 J",
+        "D: Obtain a 12-lead ECG before any intervention"
+      ],
+      "correct": 2,
+      "explanation": "This infant has SVT (regular, very fast, no P waves) with hemodynamic instability — pallor, mottled skin, and hypotension. An unstable patient requires immediate synchronized cardioversion at 0.5–1 J/kg = 3–6 J. Vagal maneuvers and adenosine are for stable patients only. Waiting for an ECG delays life-saving treatment.",
+      "clinicalPearl": "In an unstable tachycardic infant, the bedside monitor rhythm strip is sufficient — do not delay cardioversion for a formal 12-lead ECG."
+    },
+    {
+      "id": "c11_s02",
+      "title": "School-Age Child With Palpitations",
+      "presentation": "A 7-year-old child (22 kg) is brought to the ED after the school nurse called parents because the child complained of chest palpitations during math class. The child appears well, is talking normally, and is in no acute distress. Heart rate is 220 bpm on the monitor, regular, with no visible P waves. Blood pressure is 98/62 mmHg. Capillary refill is 2 seconds.",
+      "vitals": { "hr": "220 bpm", "bp": "98/62 mmHg", "rr": "24 bpm", "spo2": "99%", "temp": "36.9°C" },
+      "question": "What is the correct first-line treatment?",
+      "options": [
+        "A: Synchronized cardioversion at 22 J",
+        "B: Adenosine 2.2 mg rapid IV push followed by saline flush",
+        "C: Oral metoprolol",
+        "D: Observation and discharge if heart rate normalizes"
+      ],
+      "correct": 1,
+      "explanation": "This child has stable SVT — regular tachycardia at 220 bpm with no visible P waves, but normal perfusion and no signs of instability. The first-line treatment for stable SVT is adenosine 0.1 mg/kg = 2.2 mg rapid IV push (max 6 mg), given through a proximal IV followed by saline flush. Cardioversion is not indicated for stable patients.",
+      "clinicalPearl": "Adenosine may transiently cause asystole or flushing — warn the family and team beforehand, and have resuscitation equipment immediately available."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Toddler With Recurrent SVT",
+      "presentation": "An 18-month-old child (11 kg) presents with her third episode of SVT in the past month. Heart rate is 260 bpm, regular, and the child is awake and interactive but slightly irritable. Blood pressure is 84/50 mmHg. Peripheral pulses are strong. The first adenosine dose (1.1 mg) was given as a slow push and did not convert the rhythm.",
+      "vitals": { "hr": "260 bpm", "bp": "84/50 mmHg", "rr": "30 bpm", "spo2": "97%", "temp": "37.0°C" },
+      "question": "What is the MOST appropriate next step?",
+      "options": [
+        "A: Repeat adenosine 1.1 mg as a rapid push through a proximal IV with saline flush",
+        "B: Give adenosine 2.2 mg (second dose) as a rapid push through a proximal IV with saline flush",
+        "C: Synchronized cardioversion at 11 J",
+        "D: Administer amiodarone 55 mg IV"
+      ],
+      "correct": 1,
+      "explanation": "The first adenosine dose failed, likely due to slow administration (as stated in the history). The child is stable, so a second adenosine dose is appropriate. The second dose is 0.2 mg/kg = 2.2 mg (max 12 mg). Critically, this must be given as a RAPID push through a proximal IV with saline flush — the previous dose failed likely because it was given slowly.",
+      "clinicalPearl": "When adenosine fails, always ask HOW it was given before assuming the drug won't work — a slow push is the most common reason for failure."
+    }
+  ]
+}

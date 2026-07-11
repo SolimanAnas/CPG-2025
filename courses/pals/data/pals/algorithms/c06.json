@@ -1,0 +1,25 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "Pediatric Shock Management — Fluid Resuscitation to Vasoactive Support",
+      "description": "A stepwise algorithm for managing pediatric shock, from initial fluid boluses through reassessment, escalation to vasoactive support, and ongoing monitoring of treatment goals.",
+      "steps": [
+        "Recognize shock: tachycardia, poor perfusion (prolonged CRT, weak pulses, mottled skin), altered mental status, and/or hypotension (SBP < 70 + 2 × age in years).",
+        "Establish vascular access: at least 2 large-bore peripheral IV lines or intraosseous (IO) access. IO is acceptable and should not be delayed if IV access is not rapidly achieved.",
+        "Administer isotonic crystalloid bolus (0.9% NS or LR) at 10–20 mL/kg over 5–20 minutes.",
+        "Reassess after EACH bolus: heart rate, pulse quality, CRT, blood pressure, mental status, urine output.",
+        "If improved: continue monitoring; give additional boluses as needed up to 40 mL/kg total.",
+        "If NOT improved after the first bolus: give a second bolus of 10–20 mL/kg.",
+        "If NOT improved after the second bolus (≥40 mL/kg given): FLUID-REFRACTORY SHOCK → Stop large-volume fluid boluses and escalate:",
+        "  a. Start vasoactive support:\n     • Septic shock: Epinephrine 0.1–1 mcg/kg/min OR Norepinephrine 0.05–2 mcg/kg/min IV/IO\n     • Cardiogenic shock: Epinephrine 0.1–1 mcg/kg/min ± Milrinone (load 50 mcg/kg, then 0.25–0.75 mcg/kg/min)\n     • Anaphylactic shock: IM epinephrine if not already given; IV epinephrine infusion if refractory",
+        "  b. Add adjunctive agents as needed:\n     • Vasopressin 0.0002–0.002 units/kg/min as adjunct for persistent vasodilation\n     • Hydrocortisone 2 mg/kg IV/IO (max 100 mg) if adrenal insufficiency risk",
+        "  c. For septic shock: Administer broad-spectrum antibiotics within 60 minutes of recognition.",
+        "Special consideration for cardiogenic shock: Use caution with fluid boluses (5–10 mL/kg max). Early vasoactive/inotropic support. Avoid pure vasopressors that increase afterload. Consider echocardiography to assess cardiac function.",
+        "Special consideration for obstructive shock: Fluids are temporizing. Relieve the obstruction — needle decompression for tension pneumothorax, pericardiocentesis for tamponade.",
+        "Ongoing monitoring and goals:\n  • Central venous oxygen saturation (ScvO2) ≥70%\n  • Serum lactate trending downward (recheck every 1–2 hours)\n  • Age-appropriate blood pressure restored\n  • Normal perfusion: CRT <2 sec, strong pulses, warm skin, normal mental status\n  • Urine output ≥1 mL/kg/hr"
+      ]
+    }
+  ]
+}

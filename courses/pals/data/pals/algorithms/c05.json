@@ -1,0 +1,20 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "Pediatric Shock Recognition and Classification",
+      "description": "A systematic approach to identifying, staging, and classifying shock in pediatric patients, from initial assessment through type determination and immediate intervention.",
+      "image": "../../images/courses/pals/c05_g01.webp",
+      "steps": [
+        "Perform rapid assessment using the Pediatric Assessment Triangle: evaluate appearance, work of breathing, and circulation to skin. Pallor, mottling, or cyanosis in circulation to skin suggests shock.",
+        "Assess perfusion: check capillary refill time (sternum or fingertip), pulse quality (strong vs weak/thready), skin temperature and color, mental status, and urine output.",
+        "Obtain blood pressure and apply the age-appropriate hypotension formula: SBP < 70 + (2 × age in years) for children 1–10 years; SBP < 70 mmHg for infants.",
+        "Classify the stage of shock:\n  • Compensated: tachycardia, weak pulses, prolonged CRT, cool/mottled skin, altered mental status, but BP is maintained.\n  • Decompensated: worsening perfusion, BP beginning to fall, mental status deteriorating.\n  • Hypotensive: BP below age-appropriate threshold — child is near cardiac arrest.",
+        "Determine the TYPE of shock:\n  • Blood loss, dehydration, third-spacing? → Hypovolemic\n  • Fever, infection, warm skin early then cold? → Distributive (septic)\n  • Urticaria, angioedema, wheezing after allergen? → Distributive (anaphylactic)\n  • Spinal cord injury + bradycardia + hypotension? → Distributive (neurogenic)\n  • Gallop, hepatomegaly, pulmonary edema? → Cardiogenic\n  • Muffled heart sounds, JVD, tracheal deviation? → Obstructive",
+        "Initiate immediate treatment:\n  • IV/IO access — at least 2 large-bore peripheral lines or intraosseous access.\n  • Isotonic crystalloid bolus 10–20 mL/kg (cautious in cardiogenic shock).\n  • Reassess after each bolus: perfusion, heart rate, mental status, blood pressure.",
+        "Continuously reassess: if the child is not improving or is worsening after two fluid boluses, consider vasoactive support and reassess the type and stage of shock."
+      ]
+    }
+  ]
+}

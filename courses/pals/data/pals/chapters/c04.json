@@ -1,0 +1,93 @@
+{
+  "id": "c04",
+  "title": "Respiratory Distress & Failure: The Four Categories",
+  "shortTitle": "Respiratory Distress & Failure",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Classify respiratory distress or failure into the four pathophysiologic categories: upper airway obstruction, lower airway obstruction, lung tissue disease, and disordered control of breathing.",
+    "Identify the hallmark assessment findings for each respiratory category in children.",
+    "Select appropriate first-line treatments for each of the four categories.",
+    "Recognize clinical signs that indicate progression from respiratory distress to respiratory failure.",
+    "Distinguish between stridor and wheeze and link each sound to its anatomic location.",
+    "Explain why young children decompensate from respiratory distress more rapidly than adults.",
+    "Describe the role of the Pediatric Assessment Triangle in rapidly categorizing respiratory compromise."
+  ],
+  "summary": [
+    {
+      "title": "Why the Four-Category Framework Matters",
+      "content": "Respiratory compromise in children can arise from four distinct anatomic or physiologic mechanisms. Grouping causes by their underlying pathology — upper airway obstruction, lower airway obstruction, lung tissue disease, and disordered control of breathing — lets the clinician rapidly narrow the differential, choose the right first intervention, and avoid treatments that could worsen the patient's condition. For example, administering bronchodilators to a child with epiglottitis (an upper airway cause) wastes time and provides no benefit."
+    },
+    {
+      "title": "Category 1 — Upper Airway Obstruction",
+      "content": "The upper airway extends from the nose and mouth to the subglottic region. Obstruction here produces inspiratory stridor — a high-pitched sound generated as air is forced through a narrowed segment above the vocal cords. Croup (viral laryngotracheobronchitis) is the most common cause in young children and classically produces a barking cough, hoarseness, and stridor that worsens with agitation. Epiglottitis, though rare after the Hib vaccine era, presents with drooling, tripod positioning, muffled voice, and rapid progression. Inhaled foreign bodies typically lodge at the glottis or just below it and cause acute onset of choking, coughing, and unilateral decreased breath sounds. First-line management for croup includes humidified oxygen and a single dose of oral or intramuscular dexamethasone (0.6 mg/kg, max 16 mg); nebulized racemic epinephrine is added for moderate-to-severe stridor. Epiglottitis requires maintaining the airway with minimal agitation, calling for immediate airway expertise. Foreign body obstruction mandates direct visualization and removal."
+    },
+    {
+      "title": "Category 2 — Lower Airway Obstruction",
+      "content": "Obstruction in the bronchi and bronchioles produces expiratory wheezing, prolonged expiratory phase, and air trapping visible on chest radiography. Asthma and bronchiolitis (typically caused by respiratory syncytial virus in infants) are the two most common pediatric lower airway conditions. Auscultation reveals diffuse wheezing and diminished air entry with prolonged expiration. Chest radiography may show hyperinflation with flattened diaphragms. First-line therapy is bronchodilator treatment: albuterol (salbutamol) 2.5 mg nebulized every 20 minutes for three doses in the acute setting, or 4–8 puffs via metered-dose inhaler with spacer. For severe or status asthmaticus, continuous nebulized albuterol and addition of ipratropium bromide may be warranted. Children with severe lower airway obstruction may require non-invasive or invasive positive-pressure ventilation."
+    },
+    {
+      "title": "Category 3 — Lung Tissue Disease",
+      "content": "When the alveolar-capillary membrane is the primary site of pathology, oxygen transfer is impaired. This produces crackles (rales) on auscultation, diffuse opacities on chest radiography, and hypoxemia that may be disproportionate to the degree of respiratory effort. Common pediatric causes include bacterial and viral pneumonia, pulmonary edema (from fluid overload or cardiac failure), and acute respiratory distress syndrome. Treatment is directed at the underlying cause: antibiotics are administered within one hour if bacterial pneumonia or sepsis is suspected; supplemental oxygen targets SpO2 at or above 94 percent; and positive-pressure ventilation is added if the patient cannot maintain adequate oxygenation or ventilation independently."
+    },
+    {
+      "title": "Category 4 — Disordered Control of Breathing",
+      "content": "The respiratory pump itself may be structurally normal, but the central nervous system or peripheral nerves fail to generate an adequate breathing pattern. Children in this category may have a normal or near-normal examination of the lungs and airway, yet demonstrate an abnormal respiratory rate or pattern — such as Cheyne-Stokes respirations, central apnea, or progressively shallow breathing. Neurological causes include raised intracranial pressure, traumatic brain injury, drug toxicity (opioids, sedatives), and encephalopathy. Neuromuscular conditions such as Guillain-Barré syndrome or muscular dystrophy can produce ventilatory failure despite clear lungs. First-line management focuses on airway support: positioning, bag-mask ventilation, or early intubation and mechanical ventilation. Reversing the underlying cause (such as naloxone for opioid-induced respiratory depression) is critical."
+    },
+    {
+      "title": "Progression from Distress to Failure",
+      "content": "Respiratory distress is characterized by increased work of breathing — tachypnea, retractions, nasal flaring, and accessory muscle use — with preserved oxygenation and ventilation. Respiratory failure occurs when the child can no longer maintain adequate gas exchange: hypoxemia persists despite supplemental oxygen, PaCO2 rises above 50 mmHg (or clinical signs of hypercapnia emerge), mental status declines, and the child may become apneic. The transition can be rapid, especially in infants, because their smaller airways, higher metabolic rate, and greater chest wall compliance mean they fatigue quickly. Any child whose respiratory distress is worsening despite initial interventions should be treated as progressing toward failure and prepared for advanced airway management."
+    },
+    {
+      "title": "The Pediatric Assessment Triangle in Respiratory Compromise",
+      "content": "The three components of the Pediatric Assessment Triangle — appearance (work of breathing, interactivity, gaze, speech/cry, consolability), work of breathing (abnormal sounds, retractions, flaring, positioning), and circulation to skin (color, mottling, capillary refill) — provide a rapid, bedside framework for categorizing respiratory compromise. A child with upper airway obstruction will show predominantly abnormal work of breathing with inspiratory stridor, whereas a child with lung tissue disease may have relatively quiet breathing but significant changes in circulation to skin (cyanosis, pallor) due to hypoxemia. Disordered control of breathing is often identified by an abnormal appearance — decreased responsiveness or an irregular respiratory pattern — with a normal-appearing chest."
+    }
+  ],
+  "clinicalPearls": [
+    "Inspiratory stridor points to upper airway obstruction; expiratory wheeze points to lower airway obstruction. The timing of the abnormal sound relative to the respiratory cycle is a reliable localizer.",
+    "A barking cough with stridor in a child under 3 years is croup until proven otherwise — treat with dexamethasone before pursuing further imaging.",
+    "Infants and young children decompensate faster than adults because their smaller airways, higher oxygen consumption, and more compliant chest walls lead to rapid fatigue.",
+    "Normal breath sounds with a dangerously abnormal respiratory pattern should raise immediate concern for disordered control of breathing — check for neurological causes and prepare for airway support."
+  ],
+  "redFlags": [
+    "Drooling, tripod positioning, and muffled voice — suspected epiglottitis: do not agitate the child; prepare for emergent airway management.",
+    "Sudden choking followed by unilateral absent breath sounds — foreign body aspiration: prepare for rigid bronchoscopy.",
+    "Worsening hypoxemia despite supplemental oxygen and appropriate first-line therapy — progression toward respiratory failure: prepare for positive-pressure ventilation or intubation.",
+    "Apnea or progressively shallow respirations in a child with clear lungs — disordered control: immediately support ventilation and assess for neurological or toxicological causes.",
+    "Subcostal and intercostal retractions with head bobbing in an infant — the child is using every accessory muscle and may arrest if not intervened upon urgently."
+  ],
+  "commonMistakes": [
+    "Giving bronchodilators for suspected croup or epiglottitis — wheezing is not the problem; the obstruction is at the upper airway.",
+    "Missing the foreign body because the initial choking event was not witnessed — always consider unilateral wheezing or asymmetric breath sounds in an acute presentation.",
+    "Assuming a child with normal SpO2 is not in trouble — children maintain oxygenation until they suddenly decompensate; watch the work of breathing and mental status, not just the pulse oximeter.",
+    "Delaying airway intervention in disordered control of breathing because the lungs sound clear — clear lungs do not rule out ventilatory failure when the pump is failing."
+  ],
+  "memoryAids": [
+    "Stridor = Upper, Wheeze = Lower: INSPIRATORY stridor localizes above the vocal cords; EXPIRATORY wheeze localizes to the bronchi and bronchioles.",
+    "The Four Categories: Remember 'ULDC' — Upper airway, Lower airway, (Lung) tissue Disease, Control of breathing.",
+    "Barking cough = Croup; Drooling = Epiglottitis; Sudden onset = Foreign body.",
+    "Children compensate until they crash — tachycardia and increased work of breathing may be the ONLY early signs; by the time blood pressure drops, the child is near arrest."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Categorizing Pediatric Respiratory Compromise",
+      "content": "Child presenting with abnormal breathing\n  → Is there STRIDOR (inspiratory sound)?\n     YES → Upper airway obstruction\n        → Barking cough + hoarseness? → Croup → dexamethasone + racemic epi\n        → Drooling + tripod + muffled voice? → Epiglottitis → secure airway, do not agitate\n        → Sudden onset + unilateral findings? → Foreign body → visualize and remove\n     NO → Is there WHEEZE (expiratory sound)?\n        YES → Lower airway obstruction\n           → Diffuse wheeze, prolonged expiration? → Asthma/Bronchiolitis → bronchodilators\n        NO → Are there CRACKLES or pulmonary infiltrates?\n           YES → Lung tissue disease → oxygen + treat cause (antibiotics, diuretics)\n           NO → Is the respiratory PATTERN abnormal (irregular, apneic, shallow)?\n              YES → Disordered control → support airway, ventilate, treat neurological cause\n              NO → Reassess; consider mixed or evolving pathology"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Basic and Advanced Life Support",
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "Pediatric Emergency Medicine, 5th Edition — Respiratory Disorders in Children",
+    "Nelson Textbook of Pediatrics, 22nd Edition — Respiratory Tract Diseases"
+  ],
+  "graphics": [
+    {
+      "id": "c04_g01",
+      "section": "summary",
+      "sectionIndex": 0,
+      "url": "../../images/courses/pals/c04_g01.webp",
+      "alt": "Respiratory Distress: The Four Categories",
+      "caption": "Grid illustrating the anatomical sites of the four respiratory problem categories: Upper Airway, Lower Airway, Lung Tissue Disease, and Disordered Control of Breathing."
+    }
+  ]
+}

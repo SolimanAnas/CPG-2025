@@ -1,0 +1,199 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "A 3-year-old, 14 kg boy presents with tachycardia (HR 160), weak pulses, cool mottled skin, CRT of 4 seconds, and lethargy. Blood pressure is 84/52. Is this child in shock?",
+      "options": ["A. No — the blood pressure is normal for his age", "B. Yes — this is compensated shock despite a normal BP", "C. No — these findings are consistent with fever", "D. Yes — only if the blood pressure drops further"],
+      "correct": 1,
+      "rationale": "This child has multiple signs of impaired perfusion: tachycardia, weak pulses, cool mottled skin, prolonged CRT, and altered mental status. Even though his BP is within the normal range (hypotension for age 3 starts at SBP <76), he is in compensated shock. Children maintain blood pressure until they decompensate rapidly.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "Using the pediatric hypotension formula, at what systolic blood pressure is a 7-year-old considered hypotensive?",
+      "options": ["A. SBP < 72 mmHg", "B. SBP < 84 mmHg", "C. SBP < 90 mmHg", "D. SBP < 70 mmHg"],
+      "correct": 1,
+      "rationale": "The hypotension formula is SBP < 70 + (2 × age in years). For a 7-year-old: 70 + (2 × 7) = 84 mmHg. Any systolic BP below 84 mmHg is hypotensive for this child.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q03",
+      "question": "Which of the following is the MOST important early sign of shock in a child?",
+      "options": ["A. Hypotension", "B. Tachycardia", "C. Bradycardia", "D. Hypertension"],
+      "correct": 1,
+      "rationale": "Tachycardia is typically the earliest compensatory response to decreased cardiac output or circulating volume in children. Hypotension is a late finding, and bradycardia in a shocked child (except neurogenic) is a pre-arrest rhythm.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q04",
+      "question": "A 6-year-old with suspected sepsis has warm, flushed skin, a capillary refill of 1 second, and a blood pressure of 88/50. Heart rate is 155. Which type of shock is this?",
+      "options": ["A. Hypovolemic shock", "B. Cardiogenic shock", "C. Warm (early) distributive shock", "D. Obstructive shock"],
+      "correct": 2,
+      "rationale": "Warm, flushed skin with brisk capillary refill in a septic child indicates early distributive (vasodilatory) shock. Vasodilation redirects blood to the skin, giving a deceptively warm appearance despite inadequate core perfusion. The tachycardia and relative hypotension (SBP 88 for a 6-year-old is at the threshold of 82) confirm shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "What makes neurogenic shock unique compared to other distributive shocks?",
+      "options": [
+        "A. It presents with tachycardia and warm skin",
+        "B. It presents with bradycardia and hypotension from loss of sympathetic tone",
+        "C. It is caused by anaphylaxis",
+        "D. It always includes pulmonary edema"
+      ],
+      "correct": 1,
+      "rationale": "Neurogenic shock results from loss of sympathetic tone due to spinal cord injury (typically above T6). Unlike septic or anaphylactic shock, which cause reflex tachycardia, neurogenic shock presents with hypotension and bradycardia because the heart is no longer receiving sympathetic stimulation to increase rate and contractility.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "A 10-month-old, 9 kg infant has dry mucous membranes, sunken anterior fontanelle, tachycardia (HR 180), weak pulses, and CRT of 3 seconds. The infant has had 3 days of vomiting and diarrhea. Which type of shock is most likely?",
+      "options": ["A. Distributive shock", "B. Cardiogenic shock", "C. Hypovolemic shock", "D. Obstructive shock"],
+      "correct": 2,
+      "rationale": "Prolonged vomiting and diarrhea in an infant cause significant volume depletion. The dry mucous membranes, sunken fontanelle, tachycardia, weak pulses, and prolonged CRT are consistent with hypovolemic shock from dehydration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q07",
+      "question": "Which clinical findings suggest cardiogenic shock rather than hypovolemic shock?",
+      "options": [
+        "A. Flat neck veins, cool extremities",
+        "B. Gallop rhythm, hepatomegaly, pulmonary edema",
+        "C. Warm, flushed skin, brisk CRT",
+        "D. Bruising and declining hemoglobin"
+      ],
+      "correct": 1,
+      "rationale": "Cardiogenic shock from pump failure causes venous congestion (elevated JVP, hepatomegaly) and pulmonary edema (crackles), along with poor forward flow (tachycardia, weak pulses). The gallop rhythm reflects a non-compliant or failing ventricle. Hypovolemic shock has flat neck veins, not engorged ones.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "What is the most reliable indicator that a child in shock is progressing to decompensation?",
+      "options": [
+        "A. Rising heart rate",
+        "B. Declining blood pressure",
+        "C. Worsening mental status and failing compensatory mechanisms",
+        "D. Improving capillary refill"
+      ],
+      "correct": 2,
+      "rationale": "Decompensation means the body's compensatory mechanisms are failing. Mental status changes (increasing lethargy or agitation) combined with worsening perfusion signs indicate that the child is moving from compensated to decompensated shock. Blood pressure decline is part of decompensation but is a very late marker.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "A 5-year-old, 20 kg child has a systolic blood pressure of 78 mmHg. The child is tachycardic with cool extremities. Is this child hypotensive?",
+      "options": [
+        "A. No — 78 mmHg is normal for a 5-year-old",
+        "B. Yes — hypotension for a 5-year-old is SBP below 80 mmHg (70 + 2×5)",
+        "C. No — the hypotension formula only applies to infants",
+        "D. Yes — hypotension is defined as SBP below 70 for all children"
+      ],
+      "correct": 1,
+      "rationale": "Using the formula: SBP < 70 + (2 × 5) = 80 mmHg. A systolic BP of 78 mmHg is below 80, so this child is hypotensive. The clinical signs (tachycardia, cool extremities) confirm the child is in decompensated or hypotensive shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q10",
+      "question": "Which of the following is NOT a sign of compensated shock in children?",
+      "options": [
+        "A. Tachycardia",
+        "B. Prolonged capillary refill (>2 seconds)",
+        "C. Normal or elevated blood pressure",
+        "D. Bounding pulses with warm extremities"
+      ],
+      "correct": 3,
+      "rationale": "Bounding pulses with warm extremities are NOT signs of compensated shock — they suggest volume overload, sepsis with hyperdynamic circulation, or a completely different pathophysiology. Compensated shock features tachycardia, weak pulses, prolonged CRT, cool skin, and normal (not bounding) pulses.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q11",
+      "question": "A 2-year-old is brought in after a fall. He is pale, tachycardic, and has flat neck veins. His belly is distended and tender. What type of shock is most likely?",
+      "options": ["A. Cardiogenic shock", "B. Septic shock", "C. Hypovolemic shock from hemorrhage", "D. Obstructive shock from tension pneumothorax"],
+      "correct": 2,
+      "rationale": "Post-trauma with tachycardia, pallor, flat neck veins, and an abdomen that is distended and tender strongly suggests intra-abdominal hemorrhage causing hypovolemic shock. The flat neck veins indicate low preload (volume depletion), not obstruction or pump failure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q12",
+      "question": "Why do children decompensate more suddenly than adults when shock progresses?",
+      "options": [
+        "A. Children have weaker hearts than adults",
+        "B. Children compensate more effectively but exhaust reserves rapidly, then crash abruptly",
+        "C. Adults have better compensatory mechanisms",
+        "D. Children have larger blood vessels that dilate more easily"
+      ],
+      "correct": 1,
+      "rationale": "Children have a remarkably responsive sympathetic nervous system and excellent myocardial compliance, allowing them to maintain blood pressure and perfusion through tachycardia and vasoconstriction. However, this compensation draws heavily on metabolic reserves, and when they decompensate, the transition to arrest is sudden and dramatic — like stepping off a cliff rather than sliding down a slope.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q13",
+      "question": "A 4-year-old, 16 kg child with suspected anaphylaxis has urticaria, facial angioedema, wheezing, tachycardia (HR 160), and a systolic BP of 74. What is the hypotension threshold for this child?",
+      "options": ["A. SBP < 78 mmHg", "B. SBP < 80 mmHg", "C. SBP < 82 mmHg", "D. SBP < 70 mmHg"],
+      "correct": 0,
+      "rationale": "Hypotension formula: SBP < 70 + (2 × 4) = 78 mmHg. The child's SBP of 74 is below 78, confirming hypotension. This child is in hypotensive anaphylactic (distributive) shock and needs immediate epinephrine and fluid resuscitation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q14",
+      "question": "What is the primary difference in perfusion between early (warm) septic shock and late (cold) septic shock?",
+      "options": [
+        "A. Early: vasoconstriction with cool skin; Late: vasodilation with warm skin",
+        "B. Early: vasodilation with warm skin; Late: vasoconstriction with cool/mottled skin",
+        "C. There is no difference — the skin is always cold in septic shock",
+        "D. Early: bradycardia; Late: tachycardia"
+      ],
+      "correct": 1,
+      "rationale": "In early (warm) septic shock, massive vasodilation causes warm, flushed skin with brisk CRT. As shock progresses and compensatory vasoconstriction kicks in (or cardiac dysfunction develops), the child transitions to cold shock with cool, mottled skin and prolonged CRT.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q15",
+      "question": "Which component of the Pediatric Assessment Triangle is most helpful in recognizing shock?",
+      "options": [
+        "A. Appearance only",
+        "B. Work of breathing only",
+        "C. Circulation to skin",
+        "D. All three components are equally useless for shock"
+      ],
+      "correct": 2,
+      "rationale": "Circulation to skin (color, pallor, mottling, cyanosis) is the component of the PAT that most directly reflects cardiovascular status and is typically the most visibly abnormal in shock. However, all three components contribute to the overall assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q16",
+      "question": "A 14-year-old, 50 kg male has a systolic BP of 88 mmHg after a motorcycle accident. He is pale and tachycardic. Is this hypotensive?",
+      "options": [
+        "A. No — 88 mmHg is normal for a teenager",
+        "B. Yes — the formula 70 + (2 × 14) = 98 mmHg means he is hypotensive",
+        "C. No — the formula does not apply to adolescents",
+        "D. Yes — but only because of his tachycardia"
+      ],
+      "correct": 1,
+      "rationale": "For adolescents, the formula still applies: 70 + (2 × 14) = 98 mmHg. An SBP of 88 mmHg is below this threshold, confirming hypotension. For teenagers approaching adult body habitus, some clinicians also use the adult threshold of SBP <90 mmHg, which this patient also meets.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q17",
+      "question": "Which of the following patients is in compensated shock?",
+      "options": [
+        "A. A child with SBP 60, HR 180, and no urine output — hypotensive shock",
+        "B. A child with SBP 90 (age 7), HR 145, CRT 3 sec, weak pulses, lethargic — compensated shock",
+        "C. A child with normal HR, normal CRT, playing happily — no shock",
+        "D. A child in cardiac arrest — not shock, but arrest"
+      ],
+      "correct": 1,
+      "rationale": "This 7-year-old has a normal BP (threshold is 84 mmHg, and SBP is 90), but has tachycardia, prolonged CRT, weak pulses, and altered mental status — all signs of compensated shock. The body is maintaining BP through compensation, but perfusion is already compromised.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q18",
+      "question": "A child with suspected cardiac tamponade has hypotension, muffled heart sounds, distended neck veins, and tachycardia. This is an example of which type of shock?",
+      "options": ["A. Hypovolemic", "B. Distributive", "C. Cardiogenic", "D. Obstructive"],
+      "correct": 3,
+      "rationale": "Cardiac tamponade physically obstructs cardiac filling — the pericardial effusion compresses the heart and prevents adequate ventricular filling. Along with tension pneumothorax and pulmonary embolism, tamponade is a classic cause of obstructive shock. Beck's triad (hypotension, muffled heart sounds, JVD) is present.",
+      "difficulty": "Medium"
+    }
+  ]
+}

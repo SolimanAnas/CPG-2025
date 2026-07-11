@@ -1,0 +1,213 @@
+{
+  "chapter": "c11",
+  "questions": [
+    {
+      "id": "c11_q01",
+      "question": "A 6-month-old infant (7 kg) presents to the ED with a heart rate of 280 bpm. The rhythm is regular, P waves are not visible, and the infant is lethargic with cool extremities. What is the MOST appropriate next step?",
+      "options": [
+        "A. Administer adenosine 0.7 mg IV",
+        "B. Synchronized cardioversion at 0.5–1 J/kg",
+        "C. Apply ice to the face for vagal stimulation",
+        "D. Obtain a 12-lead ECG and wait for results"
+      ],
+      "correct": 1,
+      "rationale": "This infant has a regular, very fast tachycardia (280 bpm) with no visible P waves, consistent with SVT. Critically, the infant is lethargic with cool extremities — signs of hemodynamic instability. An unstable patient with tachycardia requires immediate synchronized cardioversion. Adenosine and vagal maneuvers are for stable patients only.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q02",
+      "question": "A 4-year-old child (16 kg) has a heart rate of 240 bpm after running around the playground. The child is happy, playing, has a warm pink complexion, and strong peripheral pulses. What is the MOST likely rhythm?",
+      "options": [
+        "A. Supraventricular tachycardia",
+        "B. Sinus tachycardia",
+        "C. Ventricular tachycardia",
+        "D. Atrial flutter"
+      ],
+      "correct": 1,
+      "rationale": "A very fast heart rate during vigorous activity in a well-appearing child is most likely sinus tachycardia. Sinus tachycardia varies with activity and the child is hemodynamically stable and appropriately活跃 for the context. While SVT is possible, the history of exertional onset and normal perfusion favor sinus tachycardia. Further evaluation can confirm the rhythm.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q03",
+      "question": "A 3-year-old child (14 kg) with stable SVT at 260 bpm has failed vagal maneuvers. You decide to give adenosine. What is the correct first dose?",
+      "options": [
+        "A. 0.14 mg (1.4 mL of 1:10,000)",
+        "B. 1.4 mg (1.4 mL of 1:1,000)",
+        "C. 0.7 mg (0.7 mL of 1:10,000)",
+        "D. 2.8 mg (2.8 mL of 1:1,000)"
+      ],
+      "correct": 0,
+      "rationale": "Adenosine first dose = 0.1 mg/kg × 14 kg = 1.4 mg. Since this is less than the 6 mg maximum, give 1.4 mg. Using the standard adenosine concentration of 3 mg/mL (6 mg/2 mL vial), this is approximately 0.47 mL drawn up and given as a rapid push. The dose in option A (0.14 mg) is incorrect — that would be 0.01 mg/kg.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q04",
+      "question": "A 9-year-old child (30 kg) receives adenosine 3 mg rapid IV push for stable SVT, but the rhythm does not convert. What is the next dose?",
+      "options": [
+        "A. 3 mg again (repeat first dose)",
+        "B. 6 mg (double the first dose)",
+        "C. 0.3 mg",
+        "D. No further adenosine — switch to amiodarone"
+      ],
+      "correct": 1,
+      "rationale": "The second adenosine dose is 0.2 mg/kg = 0.2 × 30 = 6 mg (the 12 mg maximum does not apply here since 6 mg is within limit). This is double the first dose. A second attempt at a higher dose is warranted before switching to other antiarrhythmics or pursuing expert consultation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q05",
+      "question": "What is the PRIMARY reason adenosine must be given as a rapid IV push?",
+      "options": [
+        "A. It causes severe pain with slow administration",
+        "B. Its half-life is approximately 6 seconds, so a slow push allows degradation before reaching the heart",
+        "C. Slow administration causes dangerous hypotension",
+        "D. It must mix with blood quickly to be effective"
+      ],
+      "correct": 1,
+      "rationale": "Adenosine is rapidly metabolized by erythrocytes and vascular endothelium with a half-life of about 6 seconds. A slow IV push means the drug is broken down before it reaches the sinoatrial or atrioventricular node. Rapid push through a proximal IV followed by saline flush ensures adequate concentration reaches the heart.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q06",
+      "question": "A 5-year-old child (18 kg) has narrow-complex tachycardia at 250 bpm and is now hypotensive (BP 60/30 mmHg) with mottled skin. What is the MOST appropriate immediate management?",
+      "options": [
+        "A. Adenosine 1.8 mg rapid IV push",
+        "B. Synchronized cardioversion at 0.5–1 J/kg",
+        "C. Ice to the face",
+        "D. Amiodarone 5 mg/kg IV over 20 minutes"
+      ],
+      "correct": 1,
+      "rationale": "This child has unstable tachycardia — hypotension and poor perfusion (mottled skin) are clear indicators of hemodynamic instability. Synchronized cardioversion at 0.5–1 J/kg should be performed immediately. Adenosine, ice, and amiodarone are inappropriate when the patient is unstable.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q07",
+      "question": "What initial energy dose should be used for synchronized cardioversion in a 2-year-old child (12 kg) with unstable tachycardia?",
+      "options": [
+        "A. 6–12 J",
+        "B. 12–24 J",
+        "C. 24–48 J",
+        "D. 2 J (fixed dose)"
+      ],
+      "correct": 0,
+      "rationale": "Synchronized cardioversion energy = 0.5–1 J/kg. For a 12 kg child: 0.5 × 12 = 6 J (minimum) and 1 × 12 = 12 J (maximum). The first attempt should be in the range of 6–12 J. If unsuccessful, increase to 2 J/kg (24 J).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q08",
+      "question": "Which ECG finding is MOST consistent with supraventricular tachycardia?",
+      "options": [
+        "A. Gradual onset, rate that varies with activity, visible P waves",
+        "B. Sudden onset, regular rhythm, rate 260 bpm, no visible P waves",
+        "C. Irregularly irregular rhythm with variable QRS morphology",
+        "D. Progressive widening of the QRS complex with each beat"
+      ],
+      "correct": 1,
+      "rationale": "SVT is characterized by sudden onset, a very regular rhythm, rates typically between 220–300 bpm in infants (or 150–250 in older children), and absent or retrograde P waves. Option A describes sinus tachycardia. Option C suggests atrial fibrillation (rare in children). Option D suggests a degenerating rhythm.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q09",
+      "question": "A 10-year-old child (30 kg) has stable wide-complex tachycardia at 190 bpm. You are uncertain whether it is SVT with aberrancy or ventricular tachycardia. What is the BEST approach?",
+      "options": [
+        "A. Give adenosine 3 mg rapid IV push",
+        "B. Synchronized cardioversion immediately",
+        "C. Consult pediatric cardiology before administering antiarrhythmics",
+        "D. Give amiodarone 150 mg IV bolus"
+      ],
+      "correct": 2,
+      "rationale": "When the diagnosis of wide-complex tachycardia is uncertain in a stable patient, expert consultation is recommended before giving antiarrhythmics. Amiodarone in SVT with aberrancy could be harmful, and adenosine may not work for VT. The patient is stable, allowing time for expert input. If the patient becomes unstable, cardioversion is indicated regardless.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q10",
+      "question": "Through which route should adenosine ideally be administered?",
+      "options": [
+        "A. Central line in the internal jugular vein",
+        "B. Distal IV in the dorsum of the hand",
+        "C. Proximal IV in the antecubital fossa, followed by saline flush",
+        "D. Intraosseous (IO) access"
+      ],
+      "correct": 2,
+      "rationale": "Adenosine should be given through the most proximal IV available, ideally in the antecubital fossa, followed immediately by a rapid saline flush. Proximal delivery minimizes the distance the drug must travel before reaching the heart, which is critical given its 6-second half-life. A distal IV or central line adds transit time and allows more drug degradation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q11",
+      "question": "An 8-year-old child (25 kg) has stable SVT at 230 bpm. After the first adenosine dose (2.5 mg) fails, you give a second dose. What is the maximum second dose this child could receive?",
+      "options": [
+        "A. 6 mg",
+        "B. 12 mg",
+        "C. 2.5 mg",
+        "D. 5 mg"
+      ],
+      "correct": 1,
+      "rationale": "The second dose of adenosine is 0.2 mg/kg. For a 25 kg child: 0.2 × 25 = 5 mg. However, the question asks for the MAXIMUM the child COULD receive. The absolute maximum for the second dose is 12 mg regardless of weight. Since 5 mg < 12 mg, the child would receive 5 mg, but the ceiling for any child is 12 mg.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q12",
+      "question": "Which feature helps distinguish sinus tachycardia from SVT?",
+      "options": [
+        "A. Sinus tachycardia has a sudden onset and regular rate",
+        "B. SVT varies with activity and emotional state",
+        "C. Sinus tachycardia shows visible P waves before each QRS and the rate varies with clinical condition",
+        "D. SVT is always irregular"
+      ],
+      "correct": 2,
+      "rationale": "Sinus tachycardia shows visible P waves before every QRS complex, a rate that varies with activity, fever, or pain, and a gradual onset. SVT is sudden, very regular, and has absent or retrograde P waves. Option B describes sinus tachycardia, not SVT. SVT is typically regular, not irregular.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q13",
+      "question": "What is the correct sequence of interventions for a stable infant (8 kg) with narrow-complex tachycardia at 270 bpm?",
+      "options": [
+        "A. Cardioversion → vagal maneuvers → adenosine",
+        "B. Vagal maneuvers → adenosine 0.1 mg/kg → adenosine 0.2 mg/kg → cardiology consult",
+        "C. Adenosine 0.1 mg/kg → vagal maneuvers → cardioversion",
+        "D. Observation → adenosine if persists → cardioversion"
+      ],
+      "correct": 1,
+      "rationale": "For stable narrow-complex tachycardia (suspected SVT), the sequence is: attempt vagal maneuvers first (though less effective in infants), then adenosine 0.1 mg/kg rapid IV (max 6 mg), then adenosine 0.2 mg/kg (max 12 mg) if first dose fails, and cardiology consultation if pharmacologic conversion fails.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q14",
+      "question": "What is the MOST common mechanism of SVT in children?",
+      "options": [
+        "A. Automatic atrial tachycardia",
+        "B. AV re-entry using an accessory pathway",
+        "C. Ventricular re-entry",
+        "D. Atrial fibrillation"
+      ],
+      "correct": 1,
+      "rationale": "The most common mechanism of SVT in children is AV re-entry using an accessory pathway (such as in Wolff-Parkinson-White syndrome). The re-entry circuit uses the AV node in one direction and the accessory pathway in the other, creating a self-sustaining loop of rapid electrical activity.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q15",
+      "question": "A 2-month-old infant (4 kg) with SVT fails two doses of adenosine. The infant remains stable with good perfusion. What is the next MOST appropriate step?",
+      "options": [
+        "A. Cardiovert at 4 J",
+        "B. Give a third adenosine dose",
+        "C. Consult pediatric cardiology for further management",
+        "D. Start a procainamide drip"
+      ],
+      "correct": 2,
+      "rationale": "After two failed adenosine doses, the patient requires expert consultation. Cardiology can advise on additional antiarrhythmic options (such as procainamide, amiodarone, or synchronized cardioversion) based on the specific rhythm characteristics and clinical context. The patient is stable, so there is time for expert input.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q16",
+      "question": "What does the second cardioversion energy dose increase to if the first attempt at 0.5–1 J/kg fails?",
+      "options": [
+        "A. 1–2 J/kg",
+        "B. 2 J/kg",
+        "C. 4 J/kg",
+        "D. 10 J/kg"
+      ],
+      "correct": 1,
+      "rationale": "If the initial synchronized cardioversion at 0.5–1 J/kg is unsuccessful, the energy should be increased to 2 J/kg for the second attempt. Further escalation should involve expert consultation.",
+      "difficulty": "Easy"
+    }
+  ]
+}

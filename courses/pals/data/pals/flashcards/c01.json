@@ -1,0 +1,113 @@
+{
+  "chapter": "c01",
+  "cards": [
+    {
+      "id": "c01_fc01",
+      "question": "What are the three components of the Pediatric Assessment Triangle (PAT)?",
+      "answer": "Appearance, Breathing, and Circulation. The PAT is a rapid, hands-off assessment that can be performed by observing the child from across the room.",
+      "category": "PAT"
+    },
+    {
+      "id": "c01_fc02",
+      "question": "What does the TICLS mnemonic stand for?",
+      "answer": "Tone, Interactiveness, Consolability, Look/gaze, Speech/cry — the five features used to assess a child's appearance.",
+      "category": "PAT"
+    },
+    {
+      "id": "c01_fc03",
+      "question": "How is the breathing component of the PAT assessed?",
+      "answer": "By evaluating work of breathing (retractions, nasal flaring, grunting, stridor, wheezing) and, if needed, auscultating for breath sounds and air entry.",
+      "category": "PAT"
+    },
+    {
+      "id": "c01_fc04",
+      "question": "What does the circulation component of the PAT evaluate?",
+      "answer": "Skin color and mucous membranes — looking for pallor, mottling, cyanosis, or delayed capillary refill that indicate inadequate perfusion.",
+      "category": "PAT"
+    },
+    {
+      "id": "c01_fc05",
+      "question": "What does a normal PAT indicate?",
+      "answer": "That the child is well-compensated, with intact brain perfusion (normal appearance), adequate respiratory effort, and adequate circulation.",
+      "category": "PAT"
+    },
+    {
+      "id": "c01_fc06",
+      "question": "What is the four-step systematic approach to pediatric emergencies?",
+      "answer": "Assess, Categorize, Decide, Act — a framework for evaluating severity, choosing a treatment priority, and initiating intervention with continuous reassessment.",
+      "category": "Systematic Approach"
+    },
+    {
+      "id": "c01_fc07",
+      "question": "What does ABCDE stand for in the primary assessment?",
+      "answer": "Airway, Breathing, Circulation, Disability, Exposure — evaluated and managed in that order, with reassessment after each step.",
+      "category": "ABCDE"
+    },
+    {
+      "id": "c01_fc08",
+      "question": "What mnemonic is used for the secondary assessment history?",
+      "answer": "SAMPLE — Signs/symptoms, Allergies, Medications, Past medical history, Last oral intake, Events leading to illness.",
+      "category": "Secondary Assessment"
+    },
+    {
+      "id": "c01_fc09",
+      "question": "What are the three categories of respiratory distress in PALS?",
+      "answer": "Upper airway obstruction (stridor), lower airway obstruction (wheezing), and pulmonary vascular obstruction (tachypnea with clear lungs and cyanosis).",
+      "category": "Respiratory Categories"
+    },
+    {
+      "id": "c01_fc10",
+      "question": "Name a common cause for each respiratory category.",
+      "answer": "Upper: foreign body, croup, epiglottitis, anaphylaxis. Lower: asthma, bronchiolitis, pneumonia. Pulmonary vascular: pulmonary embolism, congenital heart disease with shunting.",
+      "category": "Respiratory Categories"
+    },
+    {
+      "id": "c01_fc11",
+      "question": "What are the three main types of shock in children?",
+      "answer": "Hypovolemic (fluid loss), distributive (vasodilation, primarily septic), and cardiogenic (pump failure from myocarditis or structural disease).",
+      "category": "Shock"
+    },
+    {
+      "id": "c01_fc12",
+      "question": "What is the hypotension formula for children aged 1 to 10 years?",
+      "answer": "Systolic blood pressure < 70 + (2 × age in years) mmHg. For example, a 5-year-old is hypotensive when SBP is below 80 mmHg.",
+      "category": "Shock"
+    },
+    {
+      "id": "c01_fc13",
+      "question": "Why is blood pressure unreliable as an early indicator of shock in children?",
+      "answer": "Children compensate for shock by increasing heart rate and systemic vascular resistance, maintaining blood pressure until decompensation. Tachycardia, poor pulses, and altered perfusion signs appear first.",
+      "category": "Shock"
+    },
+    {
+      "id": "c01_fc14",
+      "question": "What does grunting indicate in a child with respiratory distress?",
+      "answer": "Gunting is a compensatory mechanism where the child exhales against a partially closed glottis to create intrinsic PEEP and prevent alveolar collapse. It indicates significant lower respiratory compromise.",
+      "category": "Clinical Signs"
+    },
+    {
+      "id": "c01_fc15",
+      "question": "What is the difference between the primary and secondary assessment?",
+      "answer": "The primary assessment (ABCDE) is a rapid, life-threatening-focused evaluation and stabilization. The secondary assessment is a more detailed history (SAMPLE) and head-to-toe examination performed after the primary is stabilized.",
+      "category": "Assessment"
+    },
+    {
+      "id": "c01_fc16",
+      "question": "What are the signs of early compensated shock in a child?",
+      "answer": "Tachycardia, weak peripheral pulses, cool extremities, mottled skin, delayed capillary refill (>3 sec), altered mental status, and decreased urine output — with normal or near-normal blood pressure.",
+      "category": "Shock"
+    },
+    {
+      "id": "c01_fc17",
+      "question": "Why is a quiet, limp child potentially more alarming than a screaming, thrashing child?",
+      "answer": "A screaming child is compensating and has energy for a vigorous response. A quiet, limp, inconsolable child may have exhausted compensatory mechanisms and could be approaching decompensation or arrest.",
+      "category": "Clinical Reasoning"
+    },
+    {
+      "id": "c01_fc18",
+      "question": "What is central cyanosis, and why is it an emergency?",
+      "answer": "Central cyanosis is a blue discoloration of the tongue or lips, indicating critically low arterial oxygen saturation. It demands immediate airway and respiratory intervention because it signals severe hypoxemia.",
+      "category": "Clinical Signs"
+    }
+  ]
+}

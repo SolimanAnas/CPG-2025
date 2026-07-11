@@ -1,0 +1,116 @@
+{
+  "id": "c03",
+  "title": "Airway Management & Ventilation in Children",
+  "shortTitle": "Pediatric Airway & Ventilation",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Explain why cuffed endotracheal (ET) tubes are now preferred for most pediatric patients and describe the Duracher formula for tube sizing.",
+    "Describe the indications and technique for supraglottic airway (SGA) device placement in children.",
+    "Demonstrate proper bag-mask ventilation technique, including the importance of two-person technique for effective ventilation.",
+    "List the steps for advanced airway management during pediatric CPR, including placement and confirmation.",
+    "State the correct ventilation rate when an advanced airway is in place: 1 breath every 2–3 seconds (20–30 breaths/min).",
+    "Explain the role of end-tidal CO₂ (ETCO₂) monitoring in confirming tube placement and assessing CPR quality.",
+    "Apply the DOPE mnemonic to troubleshoot acute deterioration in a child with an advanced airway.",
+    "Identify ET tube sizes, uncuffed and cuffed, for neonates through adolescents using standard formulas."
+  ],
+  "summary": [
+    {
+      "title": "Why Pediatric Airway Management Is Different",
+      "content": "Children have anatomic and physiologic differences from adults that make airway management more challenging: a proportionally larger head and occiput, a higher and more anterior larynx, a U-shaped epiglottis, a narrower subglottic space (the narrowest point of the pediatric airway), a shorter trachea, and a more compliant chest wall. These differences affect equipment selection, positioning, and technique."
+    },
+    {
+      "title": "Cuffed ET Tubes: Now Preferred",
+      "content": "The 2025 AHA/AAP Guidelines now recommend cuffed endotracheal tubes as the preferred choice for most pediatric patients. Cuffed tubes allow more precise control of ventilation, reduce the risk of aspiration, and provide more reliable end-tidal CO₂ monitoring. The cuff should be inflated to the minimum occlusive volume — just enough to prevent a leak during positive-pressure ventilation — to reduce the risk of tracheal mucosal injury."
+    },
+    {
+      "title": "The Duracher Formula for Cuffed ET Tube Sizing",
+      "content": "For children ages 1 to 12 years, the recommended cuffed ET tube internal diameter (ID) is calculated using the Duracher formula: (age in years / 4) + 3.5 mm, rounded to the nearest 0.5 mm. For example, a 4-year-old would receive a (4/4) + 3.5 = 4.5 mm cuffed ET tube. For neonates and infants under 1 year, uncuffed tubes may still be preferred in some settings, though cuffed tubes are increasingly used even in this age group."
+    },
+    {
+      "title": "Uncuffed ET Tube Sizing",
+      "content": "When uncuffed tubes are used (neonates, or clinical preference in infants under 1 year), the formula is (age / 4) + 4.0 mm. This is 0.5 mm larger than the cuffed formula to account for the absence of a cuff. As a general reference, a 3.0 mm tube is common for neonates, 3.5 mm for infants, and 4.0–5.0 mm for toddlers and young children."
+    },
+    {
+      "title": "Supraglottic Airway Devices",
+      "content": "SGA devices (laryngeal mask airways [LMA], i-gel, and similar devices) provide an alternative when endotracheal intubation is unsuccessful or not immediately available. In pediatric cardiac arrest, an SGA should be placed if a trained provider cannot achieve endotracheal intubation within a reasonable time frame. SGA placement is faster and requires less skill than ET intubation, making it a valuable rescue device. Size selection is based on the child's weight."
+    },
+    {
+      "title": "Bag-Mask Ventilation Technique",
+      "content": "Bag-mask ventilation (BMV) is a critical skill in pediatric resuscitation. The two-person technique — one person holds the mask with both hands to create a seal while the second person squeezes the bag — is more effective than a one-person technique, especially in infants and small children. The bag should be squeezed just enough to produce visible chest rise, avoiding excessive ventilation that causes gastric insufflation and aspiration risk. A self-inflating bag with an integrated pressure-limiting valve (pop-off valve) is recommended for infants and small children to prevent excessive airway pressures."
+    },
+    {
+      "title": "Advanced Airway During CPR",
+      "content": "When an advanced airway (ET tube or SGA) is placed during CPR, compressions become continuous — they are no longer paused for ventilations. Ventilations are delivered independently at a rate of 1 breath every 2 to 3 seconds (20 to 30 breaths per minute) for both infants and children. This eliminates the pauses in compressions associated with the 30:2 or 15:2 ratio, improving the compression fraction."
+    },
+    {
+      "title": "End-Tidal CO₂ Monitoring",
+      "content": "Capnography (ETCO₂ monitoring) serves two critical functions during resuscitation: (1) confirming correct ET tube placement — a sustained, reliable waveform confirms the tube is in the trachea; and (2) assessing CPR quality — ETCO₂ values below 10 mmHg during CPR suggest inadequate compressions and should prompt a review of compression quality. An abrupt rise in ETCO₂ may indicate return of spontaneous circulation (ROSC)."
+    },
+    {
+      "title": "DOPE: Troubleshooting Acute Deterioration with an Airway",
+      "content": "When a child with an advanced airway suddenly deteriorates, use the DOPE mnemonic to systematically identify the cause: D = Displacement of the tube (the tube has moved out of the trachea); O = Obstruction of the tube (mucus plug, kinking, or biting); P = Pneumothorax (tension pneumothorax from barotrauma); E = Equipment failure (disconnect, empty oxygen tank, malfunctioning valve). Each cause has a distinct management approach."
+    }
+  ],
+  "clinicalPearls": [
+    "The narrowest point of the pediatric airway is the cricoid cartilage (subglottic region), not the vocal cords as in adults. This is why even mild edema in this area can cause significant airway resistance.",
+    "Cuffed ET tubes should be inflated to the minimum occlusive volume — just enough to prevent a leak. Over-inflation increases the risk of tracheal mucosal ischemia and post-extubation stridor.",
+    "When in doubt about tube placement during CPR, check ETCO₂ — a persistent waveform is the gold standard for confirming tracheal placement in a patient with a perfusing rhythm.",
+    "ETCO₂ < 10 mmHg during CPR is a quality indicator suggesting compressions are not generating adequate cardiac output. Check depth, rate, recoil, and hand position.",
+    "Two-person bag-mask ventilation is significantly more effective than one-person technique in children, particularly infants, because maintaining a proper mask seal with one hand while squeezing the bag is extremely difficult."
+  ],
+  "redFlags": [
+    "Sudden loss of ETCO₂ waveform during CPR — may indicate tube dislodgement, equipment disconnect, or worsening cardiac output.",
+    "Persistent desaturation despite an apparently well-placed ET tube — consider DOPE: is the tube displaced, obstructed, or is there a pneumothorax?",
+    "No chest rise during bag-mask ventilation with a good seal — suspect upper airway obstruction (tongue, foreign body) or equipment failure.",
+    "Bilateral breath sounds absent or unequal after intubation — immediately assess for tube malposition (mainstem intubation) or pneumothorax.",
+    "Cuff pressure exceeding 25 cm H₂O — risks tracheal mucosal ischemia; use the minimum occlusive volume technique."
+  ],
+  "commonMistakes": [
+    "Using the wrong ET tube size — always calculate using the Duracher formula for cuffed tubes (age/4 + 3.5, round to nearest 0.5 mm) or age/4 + 4.0 for uncuffed tubes.",
+    "Not confirming tube placement after every insertion — always use ETCO₂ (capnography) plus clinical assessment (chest rise, bilateral breath sounds, misting in the tube).",
+    "Continuing to pause compressions for ventilations after an advanced airway is placed — once the tube or SGA is confirmed in place, compressions are continuous.",
+    "Forgetting that ventilation rate with an advanced airway is 1 breath every 2–3 seconds (20–30/min), regardless of the patient's age.",
+    "Over-ventilating during bag-mask ventilation — excessive rate or volume causes gastric insufflation, aspiration risk, and increased intrathoracic pressure reducing venous return."
+  ],
+  "memoryAids": [
+    "Duracher = 'age over 4, plus 3.5' for cuffed ET tube ID in millimeters, rounded to the nearest 0.5.",
+    "DOPE for airway troubleshooting: Displacement, Obstruction, Pneumothorax, Equipment — think of these in order.",
+    "With an advanced airway in CPR: 'Compressions continuous, breaths every 2 to 3' — no more pausing for ventilations.",
+    "ETCO₂ during CPR: 'Below 10, check your scene' — low values suggest inadequate compression quality.",
+    "Bag-mask ventilation: 'Two hands on the seal, one hand on the bag' — the two-person technique is more effective."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Airway Management During Pediatric Cardiac Arrest",
+      "content": "Pediatric cardiac arrest recognized\n  → Begin BLS: airway, ventilations, compressions per BLS algorithm\n  → Establish bag-mask ventilation with two-person technique\n  → If BLS is insufficient or prolonged:\n     → Provider skilled in advanced airway available?\n        → YES: Attempt ET intubation (cuffed tube, Duracher formula)\n           → Successful → Confirm with ETCO₂, continuous compressions, ventilate 1 breath every 2–3 sec\n           → Unsuccessful after reasonable attempts → Place SGA (LMA or i-gel) as rescue device\n        → NO: Continue high-quality bag-mask ventilation\n  → Monitor ETCO₂ continuously:\n     → Sustained waveform = tube likely in correct position\n     → No waveform = troubleshoot with DOPE\n     → ETCO₂ < 10 mmHg = assess compression quality"
+    },
+    {
+      "title": "DOPE Troubleshooting Algorithm",
+      "content": "Child with advanced airway suddenly deteriorates (desaturation, loss of ETCO₂, no chest rise)\n  → D — Displacement: Look, listen, feel. Remove tube if displaced; re-intubate or place SGA.\n  → O — Obstruction: Suction the tube, check for kinking or biting. Reposition the head. Consider inline suction.\n  → P — Pneumothorax: Assess for unilateral breath sounds, tracheal deviation, hypotension. Perform needle decompression if tension pneumothorax suspected.\n  → E — Equipment: Check all connections, oxygen supply, bag function, and circuit integrity. Replace faulty equipment.\n  → Reassess after each intervention. If no cause found, consider other causes (bronchospasm, anaphylaxis, cardiac)."
+    }
+  ],
+  "references": [
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Guidelines — Cuffed Endotracheal Tubes in Pediatric Patients",
+    "AHA 2025 Guidelines — Capnography During Cardiac Arrest"
+  ],
+  "graphics": [
+    {
+      "id": "c03_g01",
+      "section": "summary",
+      "sectionIndex": 2,
+      "url": "../../images/courses/pals/c03_g01.webp",
+      "alt": "Pediatric Airway Sizing: Cuffed vs. Uncuffed Tubes",
+      "caption": "Comparison of cuffed and uncuffed endotracheal tubes showing placement inside a child's trachea and sizing formula notes."
+    },
+    {
+      "id": "c03_g02",
+      "section": "summary",
+      "sectionIndex": 8,
+      "url": "../../images/courses/pals/c03_g02.webp",
+      "alt": "Airway Troubleshooting: The DOPE Mnemonic",
+      "caption": "Infographic outlining the DOPE mnemonic: Displacement, Obstruction, Pneumothorax, and Equipment failure."
+    }
+  ]
+}

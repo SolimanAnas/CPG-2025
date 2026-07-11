@@ -1,0 +1,213 @@
+{
+  "chapter": "c13",
+  "questions": [
+    {
+      "id": "c13_q01",
+      "question": "A 6-year-old child (20 kg) is pulled from a cold swimming pool after an estimated 5-minute submersion. The child is unresponsive with no pulse. Water has been cleared from the airway. What is the MOST appropriate first intervention?",
+      "options": [
+        "A. Start chest compressions immediately",
+        "B. Provide rescue breaths before starting compressions",
+        "C. Apply the AED immediately",
+        "D. Call for help and wait for EMS"
+      ],
+      "correct": 1,
+      "rationale": "Drowning is a hypoxic arrest. The ventilation-first approach means providing rescue breaths as soon as the patient is out of water and the airway is cleared. Breaths before compressions address the primary problem — hypoxia. AED application and calling for help are important but do not take priority over initial ventilation in drowning.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q02",
+      "question": "A 4-year-old child (16 kg) is in cardiac arrest after a motor vehicle collision. Breath sounds are absent bilaterally. Chest compressions are ongoing. What is the MOST appropriate next step?",
+      "options": [
+        "A. Continue compressions and give epinephrine",
+        "B. Bilateral needle decompression before resuming compressions",
+        "C. Obtain a chest X-ray before intervening",
+        "D. Give a fluid bolus and reassess"
+      ],
+      "correct": 1,
+      "rationale": "Absent breath sounds bilaterally after trauma with cardiac arrest strongly suggests bilateral tension pneumothorax, a reversible cause of arrest. Bilateral needle decompression should be performed immediately. Do not delay for imaging — tension pneumothorax is a clinical diagnosis in this setting.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q03",
+      "question": "A 10-month-old infant (9 kg) has a respiratory arrest suspected to be from accidental transdermal fentanyl exposure. Naloxone is available. What is the correct naloxone dose?",
+      "options": [
+        "A. 0.9 mg IV",
+        "B. 0.1 mg IV (max 2 mg)",
+        "C. 0.09 mg IV",
+        "D. 9 mg IV"
+      ],
+      "correct": 1,
+      "rationale": "Naloxone dose = 0.1 mg/kg = 0.1 × 9 = 0.9 mg IV/IO. Since 0.9 mg is within the 2 mg maximum, this is the correct dose. Option A (0.9 mg) and C (0.09 mg) differ by decimal placement — dosing errors with naloxone are common and dangerous. The dose is 0.1 mg/kg, not 0.01 mg/kg.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q04",
+      "question": "A 3-year-old child (14 kg) is in full anaphylaxis with stridor, urticaria, and hypotension after a known peanut exposure. What is the FIRST-LINE treatment?",
+      "options": [
+        "A. IV diphenhydramine 25 mg",
+        "B. IM epinephrine 0.14 mg of 1:1,000 into the anterolateral thigh",
+        "C. IV methylprednisolone 1 mg/kg",
+        "D. Normal saline 500 mL IV bolus"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine is the first-line treatment for anaphylaxis — it must be given IM at 0.01 mg/kg of 1:1,000 concentration. For a 14 kg child: 0.01 × 14 = 0.14 mg = 0.14 mL of 1:1,000 (1 mg/mL) into the anterolateral thigh. Antihistamines and steroids are adjunctive. Fluid boluses are important but secondary to epinephrine.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q05",
+      "question": "During a pediatric trauma code, the team suspects cardiac tamponade. What is the definitive treatment?",
+      "options": [
+        "A. Increase IV fluid bolus rate",
+        "B. Pericardiocentesis or emergent thoracotomy",
+        "C. Administer additional epinephrine",
+        "D. Apply external cardiac massage pads"
+      ],
+      "correct": 1,
+      "rationale": "Cardiac tamponade from hemorrhagic trauma requires definitive treatment — pericardiocentesis (needle decompression of the pericardial sac) or emergent thoracotomy. Fluid and epinephrine are temporizing measures that will not resolve the mechanical obstruction. Surgical intervention is the definitive treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q06",
+      "question": "A child with known hypoplastic left heart syndrome (single-ventricle physiology) is in cardiac arrest. What circulatory principle should the resuscitation team keep in mind?",
+      "options": [
+        "A. Systemic and pulmonary circulations are in series, so standard PALS applies without modification",
+        "B. Systemic and pulmonary circulations are in parallel — reducing systemic vascular resistance can steal blood flow from the body into the lungs",
+        "C. Single-ventricle patients only have pulmonary circulation",
+        "D. No modifications are needed compared to standard PALS"
+      ],
+      "correct": 1,
+      "rationale": "In single-ventricle physiology, the systemic and pulmonary circulations are in parallel. Medications that reduce systemic vascular resistance can redirect blood flow into the low-resistance pulmonary bed, reducing systemic oxygen delivery. The team should maintain systemic vascular resistance and have cardiology consultation available.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q07",
+      "question": "A 14-year-old adolescent (50 kg) is found unresponsive with pinpoint pupils and no respiratory effort. A fentanyl patch is found on the skin. What is the correct naloxone dose via the intranasal route?",
+      "options": [
+        "A. 2 mg (0.1 mg/kg, capped at the maximum)",
+        "B. 5 mg (calculated at 0.1 mg/kg without cap)",
+        "C. 0.5 mg (one-tenth of the calculated dose)",
+        "D. 50 mg (1 mg/kg — overdose)"
+      ],
+      "correct": 0,
+      "rationale": "Intranasal naloxone = 0.1 mg/kg × 50 kg = 5 mg, but the maximum single dose is 2 mg. The correct dose is therefore 2 mg. Dose caps are critical in naloxone administration to prevent adverse effects while still providing effective opioid reversal.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q08",
+      "question": "Why does the AHA recommend a ventilation-first approach in drowning rather than the compression-first approach used in most cardiac arrests?",
+      "options": [
+        "A. Drowning victims have stronger cardiac function than other arrest patients",
+        "B. Drowning is fundamentally a hypoxic arrest — the primary problem is lack of oxygen, not cardiac dysfunction",
+        "C. Compressions are harmful in drowning",
+        "D. Drowning victims do not need chest compressions"
+      ],
+      "correct": 1,
+      "rationale": "Drowning is a hypoxic arrest — the primary pathology is respiratory failure leading to cardiac arrest. Providing ventilation first addresses the root cause. In most other cardiac arrests, the primary problem is cardiac (arrhythmia or pump failure), so compressions come first.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q09",
+      "question": "During a resuscitation, a parent asks to be in the room. What is the recommended approach according to the 2025 AHA Guidelines?",
+      "options": [
+        "A. Always refuse family presence — it distracts the team",
+        "B. Encourage family presence with a designated support person whose role is to support the family",
+        "C. Allow family presence only after the resuscitation is over",
+        "D. Allow family presence only if a psychologist is available"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 AHA Guidelines explicitly encourage family presence during resuscitation when it can be facilitated without interfering with care. A designated support person should be assigned to the family to explain events, answer questions, and provide emotional support. Evidence shows this does not impair team performance.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q10",
+      "question": "A 2-year-old child (12 kg) receives epinephrine for anaphylaxis. Using the 1:1,000 concentration, what is the correct IM dose in milliliters?",
+      "options": [
+        "A. 0.12 mL",
+        "B. 1.2 mL",
+        "C. 0.012 mL",
+        "D. 12 mL"
+      ],
+      "correct": 0,
+      "rationale": "IM epinephrine for anaphylaxis = 0.01 mg/kg of 1:1,000 (1 mg/mL). For a 12 kg child: 0.01 × 12 = 0.12 mg = 0.12 mL of 1:1,000. This is within the acceptable range (min 0.1 mL, max 0.5 mL). Never confuse with the 1:10,000 concentration used in cardiac arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q11",
+      "question": "A drowning victim achieves ROSC after prolonged resuscitation but remains deeply hypothermic at 28°C. What should the team do?",
+      "options": [
+        "A. Declare death — resuscitation is futile at this temperature",
+        "B. Continue rewarming and resuscitation — hypothermia may be protective",
+        "C. Stop CPR and allow natural rewarming",
+        "D. Give additional epinephrine at double dose"
+      ],
+      "correct": 1,
+      "rationale": "Hypothermic drowning victims should have resuscitation continued with active rewarming — 'not dead until warm and dead.' Hypothermia may be neuroprotective, and ROSC can be achieved after prolonged resuscitation with rewarming. There is no evidence that double-dose epinephrine is beneficial.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q12",
+      "question": "A child in anaphylaxis has received two doses of IM epinephrine but remains hypotensive. What is the MOST appropriate next step?",
+      "options": [
+        "A. Administer diphenhydramine IV",
+        "B. Begin aggressive IV fluid resuscitation with 20 mL/kg boluses and continue epinephrine",
+        "C. Administer methylprednisolone and wait",
+        "D. Apply a tourniquet to all four extremities"
+      ],
+      "correct": 1,
+      "rationale": "Anaphylaxis causes massive vasodilation and capillary leak. After initial epinephrine, aggressive fluid resuscitation (20 mL/kg boluses) is essential. Epinephrine should be repeated every 5–15 minutes. Antihistamines and steroids are adjunctive and should never delay fluid resuscitation or repeat epinephrine.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q13",
+      "question": "What type of blood products should be prioritized in a child with hemorrhagic shock from trauma?",
+      "options": [
+        "A. Crystalloid (normal saline) only",
+        "B. Whole blood or balanced resuscitation with pRBCs, FFP, and platelets",
+        "C. Albumin solution",
+        "D. Fresh frozen plasma only"
+      ],
+      "correct": 1,
+      "rationale": "Trauma hemorrhage requires replacing lost blood components. Whole blood or balanced resuscitation with packed red blood cells, fresh frozen plasma, and platelets in a balanced ratio (approaching 1:1:1) is preferred. Crystalloid alone dilutes clotting factors and can worsen coagulopathy.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q14",
+      "question": "A child with known single-ventricle heart disease (post-Fontan) is receiving CPR. Which statement is MOST accurate regarding medication use?",
+      "options": [
+        "A. High-dose epinephrine is always safe because it increases cardiac output",
+        "B. Medications that reduce systemic vascular resistance may worsen oxygen delivery by redirecting blood to the pulmonary bed",
+        "C. No modifications to standard PALS medications are needed",
+        "D. Vasopressin should be used instead of epinephrine in all cases"
+      ],
+      "correct": 1,
+      "rationale": "In single-ventricle physiology with parallel circulations, reducing systemic vascular resistance (SVR) can redirect blood flow from the systemic bed into the pulmonary bed, worsening systemic oxygen delivery. The team should be aware of this physiology and consult cardiology early for guidance on medication management.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q15",
+      "question": "Why is naloxone given during cardiac arrest even though it will not restart the heart?",
+      "options": [
+        "A. It is not given during cardiac arrest — only during respiratory arrest",
+        "B. It addresses the underlying cause (opioid receptor blockade) while CPR restores circulation, and the 2025 Guidelines recommend it as an adjunct",
+        "C. It acts as a pressor agent to raise blood pressure",
+        "D. It replaces the need for epinephrine in opioid arrests"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 AHA Guidelines recommend naloxone as an adjunct in opioid-associated cardiac arrest. While it does not directly restart the heart, it reverses opioid receptor blockade, addressing the underlying cause while CPR and epinephrine restore circulation. It should be given alongside, not instead of, standard PALS.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q16",
+      "question": "Children of what age can potentially be taught effective CPR and AED use?",
+      "options": [
+        "A. 5 years and older",
+        "B. 8 years and older",
+        "C. 12 years and older",
+        "D. 16 years and older"
+      ],
+      "correct": 2,
+      "rationale": "Children aged 12 years and older can be taught effective CPR and how to use an AED. Their involvement in a family emergency could save a life. Community and school-based training programs have demonstrated that adolescents can perform high-quality compressions and appropriate AED use.",
+      "difficulty": "Easy"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "The Barking Cough",
+      "presentation": "A 2-year-old, 13 kg girl is brought to the ED at 2 AM by her parents. She has had 2 days of runny nose and low-grade fever. Overnight she developed a harsh barking cough and noisy breathing. She is sitting on her mother's lap, agitated and crying, with audible inspiratory stridor even at rest. Her voice is hoarse.",
+      "vitals": { "hr": "150", "bp": "92/58", "rr": "38", "spo2": "94%", "temp": "38.4°C" },
+      "question": "What is the most likely diagnosis and the appropriate first-line treatment?",
+      "options": [
+        "A: Asthma — administer nebulized albuterol 2.5 mg",
+        "B: Epiglottitis — prepare for emergent intubation and do not agitate the child",
+        "C: Croup — give dexamethasone 0.6 mg/kg PO and nebulized racemic epinephrine",
+        "D: Foreign body aspiration — proceed to rigid bronchoscopy"
+      ],
+      "correct": 2,
+      "explanation": "The barking cough, hoarseness, inspiratory stridor, and preceding viral URI are the classic presentation of croup. This child has moderate croup with stridor at rest. Treatment is dexamethasone 0.6 mg/kg (approximately 8 mg for a 13 kg child) PO and nebulized racemic epinephrine for the stridor at rest.",
+      "clinicalPearl": "For this 13 kg child, the dexamethasone dose is 0.6 × 13 = 7.8 mg, which can be rounded to 8 mg PO."
+    },
+    {
+      "id": "c04_s02",
+      "title": "Sudden Choking at the Playground",
+      "presentation": "A 3-year-old, 14 kg boy was playing at the playground when his mother saw him put something in his mouth. He began choking and coughing violently. The coughing subsided after a few minutes, and he seemed to recover. Two hours later, his mother notices he is breathing with a slight wheeze on the right side and brings him to the ED. He is in no acute distress but has diminished breath sounds over the right lower lobe.",
+      "vitals": { "hr": "110", "bp": "88/52", "rr": "28", "spo2": "97%", "temp": "37.0°C" },
+      "question": "What is the next best step in management?",
+      "options": [
+        "A: Observe with repeat chest X-ray in 24 hours",
+        "B: Administer nebulized albuterol and re-examine",
+        "C: Proceed to rigid bronchoscopy for direct visualization and possible foreign body removal",
+        "D: Obtain a CT chest with contrast"
+      ],
+      "correct": 2,
+      "explanation": "The history of a choking event followed by focal findings (diminished breath sounds on the right) is highly suspicious for foreign body aspiration. Plain radiographs are normal in up to 50% of cases because many foreign bodies are radiolucent. Rigid bronchoscopy is both diagnostic and the gold-standard treatment for removal.",
+      "clinicalPearl": "Always suspect foreign body in a child with sudden onset of focal respiratory findings, even with a normal chest X-ray. CT may miss small objects — bronchoscopy is definitive."
+    },
+    {
+      "id": "c04_s03",
+      "title": "The Child with Clear Lungs but Failing Breaths",
+      "presentation": "A 7-year-old, 24 kg boy was admitted to the PICU after a bicycle accident with traumatic brain injury (GCS 8). He was intubated on arrival. Overnight, the nurse calls you because his respiratory rate on the ventilator has been gradually decreasing from 20/min to 12/min, and his tidal volumes are falling despite no change in ventilator settings. On auscultation, his lungs are clear bilaterally. His SpO2 is 96% on FiO2 0.4.",
+      "vitals": { "hr": "92", "bp": "108/64", "rr": "12 (on ventilator)", "spo2": "96%", "temp": "37.1°C" },
+      "question": "What respiratory category best describes this patient's problem, and what is driving it?",
+      "options": [
+        "A: Upper airway obstruction from endotracheal tube kinking",
+        "B: Lung tissue disease — early ARDS from contusions",
+        "C: Disordered control of breathing — the brainstem respiratory center is suppressed by the TBI",
+        "D: Lower airway obstruction — bronchospasm from aspiration"
+      ],
+      "correct": 2,
+      "explanation": "This child has a normal airway (intubated), clear lungs, and adequate oxygenation — but the brain is failing to drive adequate spontaneous respiratory effort. The falling respiratory rate and tidal volumes despite a set ventilator rate indicate that his central respiratory drive is diminished from the traumatic brain injury. This is disordered control of breathing.",
+      "clinicalPearl": "Clear lungs in a patient with declining respiratory effort is a red flag for neurological causes of ventilatory failure — never assume the lungs are the problem when the pump is the issue."
+    }
+  ]
+}

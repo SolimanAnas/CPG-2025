@@ -1,0 +1,46 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "Reversible Causes of Cardiac Arrest — The H's and T's (Pediatric-Specific)",
+      "headers": ["Category", "Cause", "Pediatric-Specific Considerations"],
+      "rows": [
+        ["H's", "Hypovolemia", "Most common in trauma, dehydration from gastroenteritis, hemorrhage; assess for poor turgor, sunken fontanelle in infants"],
+        ["H's", "Hypoxia", "Most common overall cause of pediatric arrest; from airway obstruction, severe pneumonia, status asthmaticus, drowning"],
+        ["H's", "Hydrogen ion (Acidosis)", "Severe metabolic or respiratory acidosis from prolonged arrest, sepsis, or ketoacidosis"],
+        ["H's", "Hypoglycemia", "Common in infants, neonates, and diabetic children; check glucose early and treat with dextrose"],
+        ["H's", "Hypo/hyperkalemia", "Hypo: digoxin toxicity, renal tubular acidosis. Hyper: renal failure, rhabdomyolysis, tumor lysis syndrome"],
+        ["H's", "Hypothermia", "Immersion in cold water, prolonged environmental exposure; may be protective — consider ECPR for severe hypothermia"],
+        ["T's", "Tension pneumothorax", "Clinical diagnosis in arrest — absent breath sounds, tracheal deviation, distended neck veins; treat with needle decompression without imaging"],
+        ["T's", "Tamponade (cardiac)", "From trauma, myocarditis, or pericardial effusion; treat with pericardiocentesis or thoracotomy"],
+        ["T's", "Toxins", "Drug ingestion, medication errors, envenomation; consider specific antidotes when the toxin is identified"],
+        ["T's", "Thrombosis (pulmonary)", "Massive pulmonary embolism; consider thrombolytics or embolectomy in appropriate patients"],
+        ["T's", "Thrombosis (coronary)", "Myocardial infarction from anomalous coronary arteries, Kawasaki disease, or thrombosis; rare in children but important to consider"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "Waveform Capnography During CPR — Interpretation Guide",
+      "headers": ["ETCO2 Value", "Interpretation", "Action"],
+      "rows": [
+        ["<10 mmHg", "Inadequate compression quality", "Improve rate, depth, and recoil; rotate compressors; verify technique"],
+        ["10–15 mmHg", "Minimum acceptable compression quality", "Maintain current technique; continue monitoring"],
+        ["15–25 mmHg", "Good compression quality", "Continue high-quality CPR; continue monitoring"],
+        [">35–40 mmHg (sustained rise)", "Likely ROSC (return of spontaneous circulation)", "Stop compressions; check for pulse; initiate post-arrest care if pulse confirmed"]
+      ]
+    },
+    {
+      "id": "c08_t03",
+      "title": "Shockable vs Non-Shockable Arrest — Key Differences",
+      "headers": ["Feature", "Shockable (VF/pVT)", "Non-Shockable (Asystole/PEA)"],
+      "rows": [
+        ["Rhythm", "Chaotic (VF) or organized wide-complex (pVT) without pulse", "Flat line (asystole) or organized rhythm without pulse (PEA)"],
+        ["Primary intervention", "Defibrillation (2 J/kg first shock)", "High-quality CPR + early epinephrine"],
+        ["Defibrillation", "Indicated — escalate energy per protocol", "NOT indicated — does not terminate these rhythms"],
+        ["Epinephrine timing", "After second shock or when IV/IO available", "ASAP — within 3–5 minutes of arrest onset"],
+        ["Survival prognosis", "Higher survival with rapid defibrillation", "Lower overall; depends on identifying and treating reversible causes"]
+      ]
+    }
+  ]
+}

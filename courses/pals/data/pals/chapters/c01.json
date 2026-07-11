@@ -1,0 +1,108 @@
+{
+  "id": "c01",
+  "title": "The Systematic Approach & Pediatric Assessment Triangle",
+  "shortTitle": "Systematic Approach & PAT",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the four-step systematic approach to pediatric emergencies: assess, categorize, decide, and act.",
+    "Identify and assess each component of the Pediatric Assessment Triangle: appearance, breathing, and circulation.",
+    "Apply the TICLS mnemonic to evaluate a child's appearance (Tone, Interactiveness, Consolability, Look/gaze, Speech/cry).",
+    "Explain how work of breathing and auscultation findings contribute to the breathing assessment.",
+    "Recognize skin color and mucous membrane signs that indicate adequate or inadequate circulation.",
+    "Perform a primary ABCDE assessment and distinguish it from the secondary assessment.",
+    "Classify a pediatric patient into one of the three respiratory distress categories: upper airway, lower airway, or pulmonary vascular.",
+    "Differentiate the three categories of shock: hypovolemic, distributive, and cardiogenic.",
+    "Use the hypotension formula to identify hypotension in children aged 1 to 10 years."
+  ],
+  "summary": [
+    {
+      "title": "Why a Systematic Approach Matters in Pediatrics",
+      "content": "Children deteriorate differently from adults. Their compensatory mechanisms can mask serious illness until sudden, precipitous collapse. A structured approach ensures that the clinician evaluates every organ system methodically, assigns the patient to a severity category, and acts on the findings before deterioration occurs."
+    },
+    {
+      "title": "The Pediatric Assessment Triangle (PAT)",
+      "content": "The PAT is a rapid visual and hands-off assessment composed of three components: Appearance, Breathing, and Circulation. It can be performed in seconds by observing the child from across the room, before any hands-on evaluation. A normal PAT suggests a well-compensated patient; an abnormal PAT signals that the child needs immediate intervention."
+    },
+    {
+      "title": "Assessing Appearance: The TICLS Mnemonic",
+      "content": "Appearance evaluates the neurological and overall perfusion status of the child through five observable features: Tone (is the child moving actively?), Interactiveness (does the child engage with the environment or caregiver?), Consolability (can the child be comforted?), Look/gaze (does the child make eye contact?), and Speech/cry (is the cry strong or weak, absent or high-pitched?). A normal appearance indicates intact brain perfusion and function."
+    },
+    {
+      "title": "Assessing Breathing and Circulation",
+      "content": "The breathing component evaluates work of breathing — nasal flaring, retractions, grunting, stridor, wheezing — and can be augmented by auscultation for breath sounds, air entry, and adventitious sounds. The circulation component assesses skin color and mucous membranes: pallor, mottling, cyanosis, or delayed capillary refill indicates inadequate perfusion. Central cyanosis visible on the tongue or lips is an emergency."
+    },
+    {
+      "title": "The Assess–Categorize–Decide–Act Framework",
+      "content": "This four-step framework guides clinical decision-making: (1) Assess the patient using the PAT and ABCDE approach; (2) Categorize the severity — is this a minor, moderate, or life-threatening problem?; (3) Decide on the treatment priority and setting; (4) Act by initiating the appropriate interventions, reassessing continuously. The framework prevents both under-triage and over-triage and keeps the team focused."
+    },
+    {
+      "title": "Primary ABCDE Assessment",
+      "content": "ABCDE stands for Airway, Breathing, Circulation, Disability, and Exposure. In a deteriorating child, evaluate and manage each letter in order: secure the airway, assess breathing quality and ventilate if needed, evaluate circulation and provide fluids or vasoactive support, assess disability (neurological status: AVPU/GCS, pupils, blood glucose), and fully expose the child to look for rashes, injuries, or other findings while preventing hypothermia. Each step includes a reassessment cycle."
+    },
+    {
+      "title": "Secondary Assessment",
+      "content": "Once the primary assessment is stabilized, the secondary assessment includes a focused history (using the mnemonic SAMPLE: Signs/symptoms, Allergies, Medications, Past medical history, Last oral intake, Events leading to illness) and a head-to-toe physical examination. This uncovers underlying causes and identifies problems not visible during the primary survey."
+    },
+    {
+      "title": "Respiratory Categories Overview",
+      "content": "PALS classifies respiratory distress into three categories based on the anatomic level of obstruction: (1) Upper airway obstruction — caused by foreign body, epiglottitis, croup, or anaphylaxis; characterized by stridor. (2) Lower airway obstruction — caused by asthma, bronchiolitis, or pneumonia; characterized by wheezing and prolonged expiratory phase. (3) Pulmonary vascular obstruction — caused by pulmonary embolism or congenital heart disease with right-to-left shunting; characterized by tachypnea with clear lungs and potential cyanosis."
+    },
+    {
+      "title": "Shock Types Overview",
+      "content": "Shock in children is classified by mechanism: (1) Hypovolemic — from dehydration, hemorrhage, or third-spacing; presents with flat neck veins, tachycardia, weak pulses, and cool extremities. (2) Distributive — primarily septic shock in pediatrics; warm/flushed initially (warm shock) then progresses to cold/mottled (cold shock); characterized by vasodilation and maldistribution of flow. (3) Cardiogenic — from myocarditis, structural heart disease, or cardiac arrest; presents with jugular venous distension, gallop rhythm, hepatomegaly, and pulmonary edema. Mixed and obstructive types exist but are less common."
+    }
+  ],
+  "clinicalPearls": [
+    "The PAT can be assessed at a distance — even before touching the child. An abnormal PAT means the child needs immediate intervention.",
+    "A child who is quiet, limp, and inconsolable may be far sicker than one who is screaming and thrashing. A loud, active child is compensating; a silent, limp child may be pre-arrest.",
+    "In pediatrics, tachycardia is often the earliest sign of hypovolemia, preceding hypotension by a significant margin. Hypotension is a late and ominous finding.",
+    "The hypotension formula (SBP < 70 + [2 × age in years] for ages 1–10) is a screening tool; clinical judgment integrates heart rate, perfusion, and mental status alongside blood pressure.",
+    "Nasal flaring, retractions, and grunting are all signs of increased work of breathing. Grunting is a compensatory mechanism that creates intrinsic PEEP and should not be dismissed."
+  ],
+  "redFlags": [
+    "A silent or weak cry in an infant — may indicate severe respiratory distress, neurological depression, or pending arrest.",
+    "Central cyanosis (blue tongue or lips) — indicates critically low oxygen saturation and demands immediate airway intervention.",
+    "Bounding pulses with tachycardia in a febrile child — may indicate early septic shock with vasodilation, not just 'fever.'",
+    "Mottling or delayed capillary refill (>3 seconds) — indicates poor peripheral perfusion and possible compensated shock.",
+    "A child who was consolable and is now inconsolable — a change in appearance status can indicate rapid deterioration."
+  ],
+  "commonMistakes": [
+    "Relying solely on blood pressure to assess perfusion in children — pediatric patients maintain blood pressure until decompensation, so tachycardia, poor pulses, and altered perfusion signs appear first.",
+    "Forgetting to assess appearance as part of the PAT — focusing only on breathing and circulation misses the neurological and perfusion component embedded in appearance.",
+    "Treating the number rather than the patient — a heart rate of 150 in a toddler playing may be normal; a heart rate of 150 in a lethargic child with cool extremities is shock.",
+    "Skipping the reassessment cycle after each ABCDE step — the child's status can change rapidly; each intervention must be followed by re-evaluation.",
+    "Missing the transition from compensated to decompensated shock — children compensate for a long time, then collapse suddenly. Watch for the downward trend."
+  ],
+  "memoryAids": [
+    "TICLS for Appearance: Tone, Interactiveness, Consolability, Look/gaze, Speech/cry — say it until it is automatic.",
+    "PAT = 'A-B-C' from across the room: Appearance, Breathing, Circulation — no hands needed for the first look.",
+    "Three respiratory categories: Upper = Stridor, Lower = Wheeze, Pulmonary vascular = Quiet lungs with distress.",
+    "Three shock types: H-D-C — Hypovolemic, Distributive, Cardiogenic. Think 'Dry, Dilated, Dying heart.'",
+    "ABCD-E: Airway first, then Breathing, then Circulation, then Disability, then full Exposure — in that order, always."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Assessment Triangle — Initial Triage",
+      "content": "Child arrives / is observed\n  → Assess PAT from across the room (no hands-on yet)\n     → Appearance (TICLS): normal?\n     → Breathing: normal work of breathing? Normal sounds?\n     → Circulation: pink skin, normal cap refill?\n  → All three normal → Minor problem; focused assessment and monitoring\n  → Any one component abnormal → Moderate problem; detailed assessment, treat, observe\n  → Two or three components abnormal → Severe / life-threatening; immediate intervention\n     → Begin ABCDE primary assessment and resuscitation\n     → Call for help early"
+    },
+    {
+      "title": "Respiratory Category Identification",
+      "content": "Child with respiratory distress\n  → Auscultate and assess work of breathing\n     → Stridor + inspiratory distress → UPPER airway obstruction\n        → Consider foreign body, croup, epiglottitis, anaphylaxis\n     → Wheeze + prolonged expiration + hyperinflation → LOWER airway obstruction\n        → Consider asthma, bronchiolitis, reactive airway disease\n     → Tachypnea + clear lungs + cyanosis → PULMONARY VASCULAR disease\n        → Consider PE, congenital heart disease with shunting"
+    }
+  ],
+  "references": [
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA Pediatric Assessment Triangle and Systematic Approach — Educational Materials 2025"
+  ],
+  "graphics": [
+    {
+      "id": "c01_g01",
+      "section": "summary",
+      "sectionIndex": 1,
+      "url": "../../images/courses/pals/c01_g01.webp",
+      "alt": "Pediatric Assessment Triangle (PAT)",
+      "caption": "Diagram of the Pediatric Assessment Triangle showing its three arms: Appearance, Work of Breathing, and Circulation to Skin."
+    }
+  ]
+}

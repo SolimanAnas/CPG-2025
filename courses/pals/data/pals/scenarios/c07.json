@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Teen Athlete Collapse During Practice",
+      "presentation": "A 14-year-old male (55 kg) collapses during football practice. Witnesses report he suddenly fell without warning. BLS providers arrive within 3 minutes and find him unresponsive with no pulse. The AED is applied and shows a rapid, disorganized, coarse oscillatory waveform with no identifiable QRS complexes.",
+      "vitals": { "hr": "No pulse", "bp": "No measurable BP", "rr": "None", "spo2": "Monitor unreadable", "temp": "37.1°C" },
+      "question": "The AED shows coarse VF. What is the most appropriate first defibrillation dose for this patient?",
+      "options": [
+        "A: 2 J/kg — deliver 110 J biphasic",
+        "B: 4 J/kg — deliver 220 J biphasic",
+        "C: 10 J/kg — deliver 550 J biphasic",
+        "D: 0.5 J/kg — deliver 28 J synchronized"
+      ],
+      "correct": 0,
+      "explanation": "The first defibrillation shock for pediatric VF/pVT is 2 J/kg. For a 55 kg adolescent, this equals 110 J with a biphasic defibrillator. This is unsynchronized defibrillation, not synchronized cardioversion (the patient has no pulse).",
+      "clinicalPearl": "Adolescent athletes who collapse suddenly should prompt consideration of hypertrophic cardiomyopathy or long-QT syndrome as the etiology of VF."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Refractory VF in a Toddler After Drowning",
+      "presentation": "A 2-year-old (12 kg) was pulled from a swimming pool after an estimated 5 minutes of submersion. After 4 minutes of bystander CPR, EMS arrives and initiates advanced resuscitation. The initial rhythm is VF. The team delivers a first shock at 2 J/kg and resumes CPR for 2 minutes. Rhythm recheck shows persistent VF. A second shock is delivered at 4 J/kg. After 2 more minutes of CPR, the rhythm remains VF and IV/IO access is now established.",
+      "vitals": { "hr": "No pulse", "bp": "No measurable BP", "rr": "None", "spo2": "Monitor unreadable", "temp": "33.8°C" },
+      "question": "VF persists after two defibrillation attempts. What antiarrhythmic drug and dose should be administered next?",
+      "options": [
+        "A: Amiodarone 60 mg IV/IO bolus",
+        "B: Lidocaine 12 mg IV/IO bolus",
+        "C: Atropine 0.24 mg IV/IO",
+        "D: Epinephrine 0.12 mg IV/IO"
+      ],
+      "correct": 0,
+      "explanation": "After at least one unsuccessful shock for refractory VF/pVT, amiodarone 5 mg/kg IV/IO is the first-line antiarrhythmic. For a 12 kg child: 5 × 12 = 60 mg. Epinephrine may also be given but amiodarone specifically suppresses recurrent VF. Lidocaine is an alternative if amiodarone is unavailable.",
+      "clinicalPearl": "Drowning-related VF can be refractory to defibrillation due to profound hypothermia and acidosis — aggressively address reversible causes while continuing defibrillation attempts."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Unstable Wide-Complex Tachycardia in a School-Age Child",
+      "presentation": "A 9-year-old (28 kg) is brought to the ED by parents after complaining of chest pain and dizziness during a school assembly. On arrival, the child is pale, diaphoretic, and confused. The cardiac monitor shows a regular, wide-complex tachycardia at 220 bpm. A pulse is present but weak and thready.",
+      "vitals": { "hr": "220 bpm", "bp": "68/42 mmHg", "rr": "34 bpm", "spo2": "89% on room air", "temp": "37.0°C" },
+      "question": "This child has a hemodynamically unstable wide-complex tachycardia. What is the recommended first intervention?",
+      "options": [
+        "A: Unynchronized defibrillation at 4 J/kg",
+        "B: Synchronized cardioversion at 0.5–1 J/kg",
+        "C: IV adenosine 6 mg push",
+        "D: Observation and IV fluids only"
+      ],
+      "correct": 1,
+      "explanation": "A hemodynamically unstable tachycardia with a pulse warrants synchronized cardioversion at 0.5–1 J/kg. The patient has signs of poor perfusion (hypotension, altered mental status, poor pulses), making this an emergency. Unsynchronized defibrillation is for pulseless rhythms; adenosine is for stable SVT.",
+      "clinicalPearl": "Never delay cardioversion in an unstable patient to establish IV access or obtain a full workup — sedation is ideal but should not delay the procedure when the patient is in extremis."
+    }
+  ]
+}

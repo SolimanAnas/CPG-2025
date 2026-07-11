@@ -1,0 +1,37 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "Pediatric BLS Algorithm — Infants and Children",
+      "description": "A structured approach to pediatric basic life support, including the decision to start compressions, compression-ventilation ratios, and quality standards. Cross-references BLS chapters c08 (child CPR) and c09 (infant CPR).",
+      "steps": [
+        "Step 1 — Recognize unresponsiveness: tap and shout. If the child does not respond and is not breathing normally (or only gasping), proceed.",
+        "Step 2 — Activate the emergency response system: call for help, assign someone to retrieve an AED and emergency equipment.",
+        "Step 3 — Open the airway: head-tilt/chin-lift (jaw-thrust if trauma is suspected). Assess breathing for no more than 10 seconds.",
+        "Step 4 — Provide positive-pressure ventilation: give 2 rescue breaths with bag-mask and supplemental oxygen. Each breath should produce visible chest rise.",
+        "Step 5 — Assess the pulse: check for a palpable brachial pulse (infants) or carotid/femoral pulse (children) for no more than 10 seconds.",
+        "Step 6 — Decision point: If pulse is absent → begin CPR. If pulse is present but < 60 bpm with poor perfusion → begin CPR. If pulse ≥ 60 bpm with good perfusion → continue rescue breathing. If pulse ≥ 60 bpm with poor perfusion → continue ventilation and reassess.",
+        "Step 7 — Begin chest compressions: use the two-thumb encircling-hands technique (preferred for infants and small children). Compress at least one-third the AP diameter of the chest, at a rate of 100–120/min, with full recoil.",
+        "Step 8 — Compression-ventilation ratio: single rescuer → 30:2 (all ages); two or more rescuers, pre-pubertal → 15:2; two or more rescuers, post-pubertal → 30:2.",
+        "Step 9 — Apply AED as soon as available: use pediatric pads/dose attenuator for children < 8 years / < 25 kg if available; otherwise use adult pads. Analyze rhythm and shock if advised.",
+        "Step 10 — Switch compressors every 2 minutes, with the transition completed in less than 5 seconds.",
+        "Step 11 — Continue cycles of CPR and rhythm checks until advanced providers take over or the child shows signs of return of spontaneous circulation (ROSC)."
+      ]
+    },
+    {
+      "id": "c02_alg02",
+      "title": "Team Dynamics and Communication During Pediatric Resuscitation",
+      "description": "A structured communication and role-assignment framework for high-performing resuscitation teams.",
+      "steps": [
+        "Step 1 — Team leader takes a position at the bedside (not performing compressions) to direct care and maintain situational awareness.",
+        "Step 2 — Assign specific roles immediately: compressions, airway/ventilation, vascular access, medication preparation, and timekeeping.",
+        "Step 3 — Use closed-loop communication for all orders: leader gives a specific order → team member repeats it back → team member executes → team member confirms completion.",
+        "Step 4 — Switch compressors every 2 minutes. The incoming compressor should be in position before the switch to keep the transition under 5 seconds.",
+        "Step 5 — The timekeeper announces each 2-minute cycle and calls out the number of CPR cycles completed.",
+        "Step 6 — After each rhythm check, the team leader announces the rhythm and treatment plan, and the team confirms understanding before acting.",
+        "Step 7 — After the resuscitation event (or during a natural pause), conduct a focused brief debrief: What went well? What could be improved? Were any orders unclear?"
+      ]
+    }
+  ]
+}

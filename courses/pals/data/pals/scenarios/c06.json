@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "Septic Shock — Fluid-Refractory",
+      "presentation": "A 3-year-old, 14 kg girl presents with a 2-day history of fever, vomiting, and decreased activity. She is now lethargic, tachycardic (HR 180), and has cool, mottled extremities with a CRT of 5 seconds. Blood pressure is 74/46. Two boluses of normal saline (20 mL/kg each = 280 mL per bolus) have been given over the past 30 minutes. After the second bolus, heart rate is 165, CRT is still 4 seconds, and BP is 78/50. Blood cultures are drawn.",
+      "vitals": { "hr": "165", "bp": "78/50", "rr": "40", "spo2": "91%", "temp": "39.8°C" },
+      "question": "What is the next step in management?",
+      "options": [
+        "A: Give a third 20 mL/kg bolus of normal saline",
+        "B: Start epinephrine or norepinephrine infusion and administer antibiotics within 60 minutes",
+        "C: Obtain a chest X-ray before starting any medications",
+        "D: Place a central venous catheter and wait for venous blood gas results"
+      ],
+      "correct": 1,
+      "explanation": "After two 20 mL/kg boluses (40 mL/kg total) with persistent signs of shock, this child has fluid-refractory septic shock. The next step is to initiate vasoactive support (epinephrine 0.1–1 mcg/kg/min or norepinephrine 0.05–2 mcg/kg/min via IO/IV) and give antibiotics within 60 minutes. Additional fluid boluses alone will not restore perfusion and risk overload.",
+      "clinicalPearl": "Time is critical in septic shock. Do not delay vasoactive support or antibiotics while pursuing additional diagnostic studies."
+    },
+    {
+      "id": "c06_s02",
+      "title": "Cardiogenic Shock — Myocarditis",
+      "presentation": "An 8-year-old, 28 kg boy presents with a 5-day history of fever and upper respiratory symptoms. Over the past 12 hours, he developed progressive shortness of breath and abdominal pain. On examination, he is pale, diaphoretic, and lethargic. HR is 170, BP is 82/54, and he has a gallop rhythm, hepatomegaly 4 cm below the costal margin, and bilateral crackles. SpO2 is 86% on room air. A 10 mL/kg bolus of normal saline (280 mL) was given. During the bolus, his SpO2 dropped to 80% and crackles worsened.",
+      "vitals": { "hr": "170", "bp": "82/54", "rr": "44", "spo2": "80%", "temp": "38.2°C" },
+      "question": "What should you do now?",
+      "options": [
+        "A: Give another 20 mL/kg bolus — he is still hypotensive",
+        "B: Stop fluids, start epinephrine infusion, and consider adding milrinone",
+        "C: Start norepinephrine at 2 mcg/kg/min and give a fluid bolus",
+        "D: Obtain an emergent CT pulmonary angiogram"
+      ],
+      "correct": 1,
+      "explanation": "This child has cardiogenic shock (gallop, hepatomegaly, pulmonary edema) — likely from fulminant myocarditis. The fluid bolus worsened his pulmonary edema (dropping SpO2, increasing crackles). Fluid boluses must be stopped. Initiate inotropic support: epinephrine (0.1–1 mcg/kg/min) for contractility and vasopressor support, and consider milrinone (50 mcg/kg load, then 0.25–0.75 mcg/kg/min) for inodilatation to improve cardiac output while reducing afterload.",
+      "clinicalPearl": "In cardiogenic shock, more fluid is often the wrong answer. The failing pump needs inotropic support, not volume."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Anaphylactic Shock in a Young Child",
+      "presentation": "A 5-year-old, 20 kg girl is at a birthday party when she develops hives and facial swelling after eating a snack containing peanuts. Within minutes, she becomes flushed, tachycardic (HR 150), and hypotensive (BP 70/40). Her parents administered her EpiPen before arriving. In the ED, she receives epinephrine 0.2 mg IM and a 20 mL/kg bolus of normal saline (400 mL). After 10 minutes, HR is 125, BP is 90/58, and hives are fading. She is alert and conversational.",
+      "vitals": { "hr": "125", "bp": "90/58", "rr": "28", "spo2": "97%", "temp": "37.0°C" },
+      "question": "What additional treatments should be considered?",
+      "options": [
+        "A: Start a dopamine infusion and give a second fluid bolus",
+        "B: Observe for 30 minutes and consider diphenhydramine, a corticosteroid, and a second-observation period for biphasic reaction",
+        "C: Intubate immediately for airway protection",
+        "D: Transfer to the ICU for 24-hour monitoring"
+      ],
+      "correct": 1,
+      "explanation": "The child is responding well to initial treatment — IM epinephrine and isotonic fluids have restored her perfusion. Additional management includes antihistamines (diphenhydramine for H1 blockage, famotidine for H2 blockage) and a corticosteroid (methylprednisolone 1–2 mg/kg or prednisone) to potentially reduce the risk of a biphasic reaction. Observation for at least 4–6 hours (some guidelines recommend longer) is warranted before discharge.",
+      "clinicalPearl": "Biphasic anaphylaxis occurs in up to 20% of cases — a second wave of symptoms hours after the initial episode. Observation and adjunctive medications help mitigate this risk."
+    }
+  ]
+}

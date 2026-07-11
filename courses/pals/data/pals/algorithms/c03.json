@@ -1,0 +1,36 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Airway Management During Pediatric Resuscitation",
+      "description": "A structured approach to pediatric airway management, from initial bag-mask ventilation through advanced airway placement and confirmation during CPR.",
+      "image": "../../images/courses/pals/c03_g01.webp",
+      "steps": [
+        "Step 1 — Position the child: place a shoulder roll or folded towel under the occiput to neutralize the head position (infants have a proportionally large occiput that causes flexion when supine).",
+        "Step 2 — Open the airway: head-tilt/chin-lift (jaw-thrust if trauma is suspected). Suction secretions if present.",
+        "Step 3 — Bag-mask ventilation with two-person technique: one provider holds the mask with both hands to create a seal, the other squeezes the bag. Ventilate just enough to produce visible chest rise. Use supplemental oxygen.",
+        "Step 4 — If ventilation is inadequate (no chest rise despite good seal): reposition the head, consider an oropharyngeal/nasopharyngeal airway adjunct, or suction. If obstruction persists, proceed to advanced airway.",
+        "Step 5 — Advanced airway decision: if a trained provider is available, attempt ET intubation using a cuffed tube sized with the Duracher formula (age/4 + 3.5, round to nearest 0.5 mm). Limit the attempt to a single breath-hold cycle.",
+        "Step 6 — If ET intubation is unsuccessful: place an SGA (LMA, i-gel, or similar) as a rescue device. Weight-based sizing applies.",
+        "Step 7 — Confirm placement: use ETCO₂ capnography (gold standard), assess bilateral chest rise, auscultate bilateral breath sounds, and look for tube misting.",
+        "Step 8 — Secure the tube: tape or commercial tube holder. Note the depth marking at the lip line and document it.",
+        "Step 9 — Initiate continuous compressions with independent ventilations: 1 breath every 2–3 seconds (20–30/min), no pauses for breaths.",
+        "Step 10 — Monitor ETCO₂ continuously: sustained waveform confirms placement; values < 10 mmHg suggest inadequate compression quality; sudden loss prompts DOPE troubleshooting."
+      ]
+    },
+    {
+      "id": "c03_alg02",
+      "title": "DOPE: Troubleshooting Acute Deterioration with an Advanced Airway",
+      "description": "A systematic approach to evaluating sudden clinical deterioration (desaturation, loss of ETCO₂, absent chest rise) in a child with an ET tube or SGA in place.",
+      "image": "../../images/courses/pals/c03_g02.webp",
+      "steps": [
+        "Step 1 — D (Displacement): Has the tube moved? Check depth marking at the lip, auscultate breath sounds bilaterally, and assess ETCO₂ waveform. If tube is out or in the right mainstem → reposition or re-intubate.",
+        "Step 2 — O (Obstruction): Is the tube blocked? Suction through the tube, check for kinking, and assess for biting. If mucus plug → inline suction. If kinked → reposition tube or circuit.",
+        "Step 3 — P (Pneumothorax): Has barotrauma caused a pneumothorax? Check for absent or asymmetric breath sounds, tracheal deviation, hypotension, and subcutaneous emphysema. If tension pneumothorax → immediate needle decompression (2nd intercostal space, midclavicular line) followed by chest tube.",
+        "Step 4 — E (Equipment): Is the equipment functioning? Check all connections between the tube and the ventilating circuit, verify the oxygen supply, check the bag-valve function, and inspect for disconnects. Replace any faulty equipment.",
+        "Step 5 — Reassess after each step: if the child stabilizes after addressing one cause, stop and monitor. If no cause is identified in DOPE, consider other causes: bronchospasm, anaphylaxis, tension pneumothorax (already in P), or a cardiac cause."
+      ]
+    }
+  ]
+}

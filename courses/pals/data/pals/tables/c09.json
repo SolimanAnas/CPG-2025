@@ -1,0 +1,44 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Complete PALS Weight-Based Drug Reference",
+      "headers": ["Drug", "Dose", "Concentration", "Route", "Max Single Dose", "Frequency", "Indication"],
+      "rows": [
+        ["Epinephrine", "0.01 mg/kg (0.1 mL/kg)", "0.1 mg/mL (1:10,000)", "IV/IO push", "1 mg", "Every 3–5 min (arrest)", "Cardiac arrest (all rhythms), severe bradycardia"],
+        ["Amiodarone", "5 mg/kg", "50 mg/mL or dilute to 10 mg/mL", "IV/IO bolus", "300 mg (1st dose); 150 mg (subsequent)", "May repeat up to 3 times", "Refractory VF/pVT"],
+        ["Lidocaine", "1 mg/kg", "10 mg/mL or 20 mg/mL", "IV/IO push", "N/A (weight-based)", "May repeat 0.5–1 mg/kg q5–10 min", "Alternative to amiodarone for VF/pVT"],
+        ["Atropine", "0.02 mg/kg", "0.1 mg/mL or 0.5 mg/mL", "IV/IO push", "0.5 mg single dose", "May repeat q5 min (max 3 doses for arrest)", "Symptomatic bradycardia (vagal/AV block)"],
+        ["Adenosine", "0.1 mg/kg (1st dose); 0.2 mg/kg (2nd)", "3 mg/mL or 6 mg/mL", "Rapid IV push + flush", "6 mg (1st dose); 12 mg (2nd dose)", "May repeat once if ineffective", "Narrow-complex or wide-complex SVT"],
+        ["Dextrose (D10W)", "2–5 mL/kg (infants); D25W 1–2 mL/kg (children)", "D10W (10%) or D25W (25%)", "IV/IO push", "N/A (weight-based volume)", "Recheck glucose; repeat as needed", "Symptomatic hypoglycemia"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "IV vs IO Access — Comparison",
+      "headers": ["Feature", "Peripheral IV", "Intraosseous (IO)"],
+      "rows": [
+        ["Speed of establishment", "Variable (minutes to >10 min if difficult)", "Rapid (30–60 seconds)"],
+        ["First-line use", "Stable patients; first attempt in emergencies", "Cardiac arrest; after 2 failed IV attempts; severe shock"],
+        ["Drug delivery reliability", "High when established", "High — bone marrow drains into central circulation"],
+        ["Fluid resuscitation", "Effective for large volumes", "Effective for large volumes under pressure"],
+        ["Medications", "All PALS drugs", "All PALS drugs"],
+        ["Blood products", "Yes", "Yes (with pressure infusion)"],
+        ["Sites", "Antecubital, hand, external jugular, saphenous", "Proximal tibia, proximal humerus, distal tibia, iliac crest"],
+        ["Complications", "Infiltration, phlebitis, extravasation", "Compartment syndrome (rare), infection, fracture"],
+        ["Duration", "Hours to days", "Up to 24–72 hours (transition to IV when possible)"]
+      ]
+    },
+    {
+      "id": "c09_t03",
+      "title": "Broselow Tape Weight Estimation vs Age-Based Formula",
+      "headers": ["Method", "How It Works", "Best For", "Limitations"],
+      "rows": [
+        ["Broselow tape", "Measures patient length; color-codes weight and drug doses", "Ages 1–12; emergency settings", "Inaccurate in obese or malnourished children; not validated for neonates or adolescents >12"],
+        ["Age-based formula", "Weight (kg) = (age in years × 2) + 8", "Children >2 years when tape is unavailable", "Less accurate than length-based; overestimates in obese children, underestimates in underweight"],
+        ["Actual weight", "Measured on a scale", "All ages when weight is known", "Gold standard — always preferred over estimated weight when available"]
+      ]
+    }
+  ]
+}

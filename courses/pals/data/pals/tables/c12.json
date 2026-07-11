@@ -1,0 +1,44 @@
+{
+  "chapter": "c12",
+  "tables": [
+    {
+      "id": "c12_t01",
+      "title": "Post-Cardiac Arrest Care Targets",
+      "headers": ["Parameter", "Target", "Key Considerations"],
+      "rows": [
+        ["Core Temperature", "≤37.5°C (99.5°F)", "TTM for 5 days: 32–34°C × 48h then 36–37.5°C, or 36–37.5°C throughout"],
+        ["SpO2", "94–99%", "Titrate FiO2; avoid hyperoxia (worsens reperfusion injury) and hypoxia"],
+        ["PaCO2", "35–45 mmHg", "Avoid hyperventilation (reduces cerebral blood flow)"],
+        ["Systolic BP", "> 5th percentile for age", "Use age-based formula: 70 + (2 × age in years) for children 1–10 years"],
+        ["Diastolic BP during CPR", "≥25 mmHg (infants), ≥30 mmHg (children ≥1 yr)", "Ensures coronary perfusion pressure during resuscitation"],
+        ["Blood Glucose", "Normal range (70–180 mg/dL)", "Both hypo- and hyperglycemia worsen neurologic outcomes"],
+        ["Temperature TTM Duration", "5 days total", "Includes initial cooling phase (if used) plus normothermic maintenance"],
+        ["Neuroprognostication", "≥72 hours post-ROSC or rewarming", "Multimodal: exam, EEG, MRI, biomarkers, evoked potentials"]
+      ]
+    },
+    {
+      "id": "c12_t02",
+      "title": "Systolic Blood Pressure Thresholds for Children",
+      "headers": ["Age", "Hypotension Threshold (approximate)", "Calculation"],
+      "rows": [
+        ["Newborn", "< 60 mmHg", "—"],
+        ["Infant (1–12 months)", "< 70 mmHg", "—"],
+        ["1–10 years", "< 70 + (2 × age) mmHg", "Example: 5 yr → 70 + 10 = 80 mmHg"],
+        ["> 10 years", "< 90 mmHg", "Approximate adult threshold"]
+      ]
+    },
+    {
+      "id": "c12_t03",
+      "title": "TTM Protocol Comparison",
+      "headers": ["Aspect", "Option A: Active Cooling", "Option B: Fever Prevention Only"],
+      "rows": [
+        ["Temperature", "32–34°C for 48 h → 36–37.5°C", "36–37.5°C throughout"],
+        ["Duration", "5 days total", "5 days total"],
+        ["Cooling method", "Surface or endovascular cooling", "Active fever prevention (antipyretics, cooling as needed)"],
+        ["Advantages", "May provide additional neuroprotection in selected cases", "Fewer complications (no shivering, coagulopathy, or infection risk from hypothermia)"],
+        ["Recommendation", "May be considered in selected cases", "Reasonable first-line approach per 2025 AHA"],
+        ["Key requirement", "Strict temperature control for full 5 days", "Strict fever prevention — temperature must never exceed 37.5°C"]
+      ]
+    }
+  ]
+}

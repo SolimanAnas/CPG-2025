@@ -1,0 +1,213 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "A 4-year-old child (16 kg) in the pediatric ICU has a heart rate of 52 bpm. SpO2 is 99% on room air, she is alert and playful, and her skin is warm and pink. What is the most appropriate next step?",
+      "options": [
+        "A. Start chest compressions immediately",
+        "B. Administer atropine 0.02 mg/kg IV",
+        "C. Closely monitor and investigate the underlying cause",
+        "D. Apply transcutaneous pacing pads"
+      ],
+      "correct": 2,
+      "rationale": "This child has bradycardia (HR < 60) but is well-perfused, alert, and adequately oxygenated. Bradycardia alone without signs of inadequate perfusion does not require compressions, medications, or pacing. The priority is to identify and treat the underlying cause while monitoring closely.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "An 8-month-old infant (9 kg) presents with a heart rate of 55 bpm, mottled skin, weak brachial pulses, and a respiratory rate of 10. An SpO2 of 72% is noted despite blow-by oxygen. What is the MOST likely cause?",
+      "options": [
+        "A. Increased vagal tone",
+        "B. Hypoxia",
+        "C. Drug toxicity",
+        "D. Primary AV block"
+      ],
+      "correct": 1,
+      "rationale": "Hypoxia is the most common cause of pediatric bradycardia. The low SpO2, shallow respiratory rate, and poor perfusion in an infant all point to inadequate oxygenation driving the slow heart rate. Optimizing oxygenation and ventilation should be the first intervention.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "A 3-year-old child (14 kg) with bradycardia at 50 bpm has been adequately oxygenated and ventilated, but HR remains low with poor perfusion. You initiate compressions and establish IO access. What dose of epinephrine do you give?",
+      "options": [
+        "A. 0.01 mg (0.1 mL of 1:10,000)",
+        "B. 0.14 mg (1.4 mL of 1:10,000)",
+        "C. 0.1 mg (0.1 mL of 1:1,000)",
+        "D. 0.02 mg (0.2 mL of 1:10,000)"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine for bradycardia is dosed at 0.01 mg/kg IV/IO. For a 14 kg child: 0.01 × 14 = 0.14 mg. Using the 1:10,000 concentration (0.1 mg/mL), this equals 1.4 mL. The 1:1,000 concentration is ten times too concentrated and could cause harm.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q04",
+      "question": "A 6-year-old child (20 kg) develops bradycardia at 48 bpm immediately after laryngoscopy and intubation. The child was previously stable. What medication is most appropriate?",
+      "options": [
+        "A. Epinephrine 0.2 mg IV",
+        "B. Atropine 0.02 mg/kg IV",
+        "C. Amiodarone 5 mg/kg IV",
+        "D. No medication — just continue to oxygenate"
+      ],
+      "correct": 1,
+      "rationale": "Bradycardia immediately following intubation is classic for increased vagal tone induced by laryngoscopy. Atropine (0.02 mg/kg = 0.4 mg for this 20 kg child) is an anticholinergic that blocks vagal input and is the appropriate first-line medication for vagally-mediated bradycardia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q05",
+      "question": "A 2-year-old child (12 kg) requires atropine for bradycardia. What is the correct single dose?",
+      "options": [
+        "A. 0.12 mg",
+        "B. 0.24 mg",
+        "C. 0.6 mg",
+        "D. 1.2 mg"
+      ],
+      "correct": 1,
+      "rationale": "Atropine dose = 0.02 mg/kg × 12 kg = 0.24 mg. This falls within the acceptable range (minimum 0.1 mg, maximum 0.5 mg per single dose). Option C (0.6 mg) exceeds the 0.5 mg maximum, and option A (0.12 mg) is within range but the calculated dose of 0.24 mg is the correct answer.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q06",
+      "question": "Why is a dose of atropine below 0.1 mg potentially dangerous in a child with bradycardia?",
+      "options": [
+        "A. It causes severe tachycardia",
+        "B. It can paradoxically worsen bradycardia through a vagotonic effect",
+        "C. It suppresses the sinoatrial node entirely",
+        "D. It causes life-threatening hypotension"
+      ],
+      "correct": 1,
+      "rationale": "At doses below the minimum effective dose of 0.1 mg, atropine can paradoxically stimulate vagal activity rather than block it, worsening the bradycardia. This is why the minimum single dose is set at 0.1 mg regardless of the patient's weight.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "On an ECG, you see P waves occurring at a rate of 110 bpm while QRS complexes occur independently at a rate of 40 bpm. What rhythm is this?",
+      "options": [
+        "A. Sinus bradycardia",
+        "B. First-degree AV block",
+        "C. Third-degree (complete) heart block",
+        "D. Junctional bradycardia"
+      ],
+      "correct": 2,
+      "rationale": "The hallmark of third-degree (complete) heart block is AV dissociation — atrial activity (P waves) and ventricular activity (QRS complexes) occur independently at different rates. The atria are beating faster than the ventricles, which are driven by a slow escape rhythm. This typically requires pacing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "A 5-year-old child (18 kg) with complete heart block has received two doses of epinephrine and atropine without improvement. HR remains 42 bpm with poor perfusion. What is the next most appropriate intervention?",
+      "options": [
+        "A. Administer a third dose of epinephrine",
+        "B. Increase the atropine dose to 1 mg",
+        "C. Initiate transcutaneous pacing",
+        "D. Start a dopamine drip"
+      ],
+      "correct": 2,
+      "rationale": "When bradycardia is refractory to oxygenation, ventilation, and medications, cardiac pacing should be initiated. Transcutaneous pacing is the quickest to set up and serves as an effective bridge. Atropine dose cannot exceed 0.5 mg per single dose (option B is incorrect), and repeating epinephrine without pacing delays effective treatment.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q09",
+      "question": "Which statement about atropine in pediatric bradycardia is CORRECT?",
+      "options": [
+        "A. It is effective for bradycardia from any cause",
+        "B. It should be used for bradycardia due to myocardial dysfunction",
+        "C. It is most effective for increased vagal tone or primary AV block",
+        "D. It should be given as a slow IV push over 5 minutes"
+      ],
+      "correct": 2,
+      "rationale": "Atropine is an anticholinergic that blocks vagal input to the heart. It is most effective for bradycardia caused by increased vagal tone (e.g., intubation, raised ICP) or primary AV conduction disease. It is not effective for hypoxia-driven or myocardial dysfunction-related bradycardia and should be given as a rapid IV push.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q10",
+      "question": "A newborn (3.5 kg) has a heart rate of 50 bpm at birth with poor tone and HR not improving despite ventilation. Compressions have been initiated. What is the correct epinephrine dose?",
+      "options": [
+        "A. 0.01 mg IV (0.1 mL of 1:10,000)",
+        "B. 0.035 mg IV (0.35 mL of 1:10,000)",
+        "C. 0.1 mg IV (0.1 mL of 1:1,000)",
+        "D. 0.35 mg IV (0.35 mL of 1:1,000)"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine dose for neonatal resuscitation is 0.01 mg/kg IV/IO. For a 3.5 kg newborn: 0.01 × 3.5 = 0.035 mg, which equals 0.35 mL of the 1:10,000 concentration. Using 1:1,000 would deliver a tenfold overdose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q11",
+      "question": "A 10-year-old child on a beta-blocker overdose presents with a heart rate of 45 bpm and hypotension. Which statement is MOST accurate?",
+      "options": [
+        "A. Atropine will be highly effective due to the drug's vagolytic action",
+        "B. Atropine may be tried but is unlikely to be sufficient; pacing may be needed",
+        "C. Epinephrine is contraindicated in beta-blocker overdose",
+        "D. Chest compressions are unnecessary as long as a pulse is present"
+      ],
+      "correct": 1,
+      "rationale": "Beta-blocker toxicity causes bradycardia through direct suppression of the sinoatrial and atrioventricular nodes, not through vagal excess. Atropine may provide some benefit but is often insufficient. Pacing may be required, and the toxicology team should be consulted early. Epinephrine is not contraindicated.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q12",
+      "question": "What is the maximum single dose of atropine for pediatric bradycardia?",
+      "options": [
+        "A. 0.5 mg",
+        "B. 1.0 mg",
+        "C. 0.02 mg",
+        "D. 0.1 mg"
+      ],
+      "correct": 0,
+      "rationale": "The maximum single dose of atropine for pediatric bradycardia is 0.5 mg. The dose is calculated as 0.02 mg/kg with a minimum of 0.1 mg and a maximum of 0.5 mg per dose, regardless of the child's size.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q13",
+      "question": "What is the minimum single dose of atropine for pediatric bradycardia?",
+      "options": [
+        "A. 0.01 mg",
+        "B. 0.02 mg",
+        "C. 0.1 mg",
+        "D. 0.5 mg"
+      ],
+      "correct": 2,
+      "rationale": "The minimum single dose of atropine is 0.1 mg. This floor is set because doses below 0.1 mg can paradoxically worsen bradycardia through vagotonic effects. If the weight-based dose (0.02 mg/kg) calculates to less than 0.1 mg, you give 0.1 mg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q14",
+      "question": "A 7-year-old child (22 kg) in sinus bradycardia at 55 bpm has normal perfusion. A nurse suggests giving atropine prophylactically before a procedure. What is the BEST response?",
+      "options": [
+        "A. Agree — prophylactic atropine prevents bradycardia",
+        "B. Decline — well-perfused sinus bradycardia does not require pharmacologic treatment",
+        "C. Give epinephrine instead for a more reliable result",
+        "D. Place pacing pads preemptively"
+      ],
+      "correct": 1,
+      "rationale": "Well-perfused sinus bradycardia in a child is not an indication for atropine or any other medication. The child is compensating adequately. Prophylactic medications carry risks without benefit in a hemodynamically stable child. Monitor and investigate the cause, but do not treat a number without clinical indication.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q15",
+      "question": "A child with suspected meningitis has an elevated intracranial pressure and develops bradycardia with hypertension (Cushing response). HR is 50 bpm. What is the priority?",
+      "options": [
+        "A. Give atropine to block the vagal response",
+        "B. Ensure ventilation, give epinephrine, and consult neurosurgery for ICP management",
+        "C. Place transcutaneous pacing immediately",
+        "D. Do nothing — bradycardia with hypertension is normal in this setting"
+      ],
+      "correct": 1,
+      "rationale": "Cushing response (bradycardia with hypertension from raised ICP) is a late, ominous sign. While atropine may partially address the vagal component, the critical priorities are ensuring adequate ventilation (to prevent further ICP rise), supporting circulation, and urgent neurosurgical consultation for ICP management. Pacing is not first-line here.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q16",
+      "question": "At what heart rate should chest compressions be started in a bradycardic child who has been adequately oxygenated and ventilated but still has poor perfusion?",
+      "options": [
+        "A. Below 80 bpm",
+        "B. Below 70 bpm",
+        "C. Below 60 bpm",
+        "D. Below 50 bpm"
+      ],
+      "correct": 2,
+      "rationale": "Chest compressions are initiated for pediatric bradycardia when the heart rate is below 60 bpm with signs of inadequate perfusion, AND the patient has received adequate oxygenation and ventilation. This threshold applies to all pediatric ages.",
+      "difficulty": "Easy"
+    }
+  ]
+}

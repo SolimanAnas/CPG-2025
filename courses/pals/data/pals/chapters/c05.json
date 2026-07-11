@@ -1,0 +1,98 @@
+{
+  "id": "c05",
+  "title": "Recognizing Shock: Types & Compensation",
+  "shortTitle": "Recognizing Shock",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Define shock as inadequate tissue perfusion relative to cellular metabolic demand.",
+    "Classify pediatric shock into hypovolemic, distributive, cardiogenic, and obstructive types.",
+    "Describe the compensatory mechanisms children use to maintain perfusion in early shock.",
+    "Distinguish compensated, decompensated, and hypotensive shock in children.",
+    "Apply the hypotension formula to identify hypotension by age: SBP < 70 + (2 × age in years).",
+    "Use capillary refill time, skin mottling, mental status, and urine output to assess perfusion.",
+    "Explain why hypotension is a late and ominous finding in pediatric shock.",
+    "Apply the Pediatric Assessment Triangle to categorize a child with suspected shock."
+  ],
+  "summary": [
+    {
+      "title": "What Is Shock?",
+      "content": "Shock is a state of inadequate tissue perfusion in which oxygen delivery fails to meet the metabolic demands of the cells. Even with a normal or elevated blood pressure, a child can be in shock if the tissues are not receiving adequate blood flow. In pediatrics, shock must be recognized and treated before the child progresses to cardiovascular collapse, because children compensate robustly and then decompensate suddenly."
+    },
+    {
+      "title": "The Four Types of Shock",
+      "content": "Hypovolemic shock results from loss of circulating volume — hemorrhage (trauma, surgical) or dehydration (vomiting, diarrhea, third-spacing). Distributive shock features pathologic vasodilation, most commonly from sepsis (septic shock), but also from anaphylaxis (IgE-mediated histamine release) and neurogenic shock (loss of sympathetic tone from spinal cord injury). Cardiogenic shock occurs when the heart itself fails as a pump — myocarditis, congenital heart disease, cardiac toxins, or post-cardiac arrest. Obstructive shock arises from physical obstruction of blood flow — tension pneumothorax, cardiac tamponade, or massive pulmonary embolism."
+    },
+    {
+      "title": "Compensatory Mechanisms in Children",
+      "content": "Children have remarkably effective compensatory mechanisms. When perfusion drops, the sympathetic nervous system increases heart rate (tachycardia), constricts peripheral arterioles (vasoconstriction), and redirects blood flow to vital organs (brain, heart, adrenal glands). Clinically, this manifests as tachycardia, weak or thready pulses, cool and mottled extremities, prolonged capillary refill (greater than 2 seconds), altered mental status (restlessness or lethargy), and decreased urine output. These are the early warning signs of shock — and they may be the ONLY signs before sudden collapse."
+    },
+    {
+      "title": "Compensated vs Decompensated vs Hypotensive Shock",
+      "content": "Compensated shock means the child's compensatory mechanisms are maintaining adequate perfusion to vital organs. Blood pressure is normal, but heart rate is elevated, pulses may be weak, capillary refill is prolonged, and the child appears altered. Decompensated shock occurs when these mechanisms begin to fail — blood pressure may start to drop, mental status deteriorates further, and perfusion worsens. Hypotensive shock is the most severe stage: blood pressure falls below the age-appropriate threshold, organ perfusion is critically compromised, and cardiac arrest is imminent. Hypotension is a LATE finding in children — by the time blood pressure drops, the child has exhausted compensatory reserves."
+    },
+    {
+      "title": "The Hypotension Formula",
+      "content": "For children aged 1 to 10 years, hypotension is defined as a systolic blood pressure less than 70 + (2 × age in years) mmHg. For example, a 5-year-old is hypotensive when SBP is below 80 mmHg; a 10-year-old when SBP is below 90 mmHg. For infants under 1 year, hypotension is generally considered when SBP is below 70 mmHg (some sources use below 60 mmHg for neonates). For adolescents over 10 years, adult thresholds may apply (SBP <90 mmHg). This formula is a critical screening tool, but it should be used alongside clinical assessment — a child with normal BP and clinical signs of shock is still in shock."
+    },
+    {
+      "title": "The Pediatric Assessment Triangle in Shock",
+      "content": "The Pediatric Assessment Triangle evaluates appearance (interaction, gaze, cry/verbalization, consolability, tunic/speech), work of breathing, and circulation to skin. In shock, circulation to skin is typically abnormal early — pallor, mottling, or cyanosis reflecting vasoconstriction and poor perfusion. Work of breathing may be increased (tachypnea from metabolic acidosis, respiratory compensation for lactic acidosis). Appearance may show restlessness, irritability, or lethargy depending on the stage of shock. A child who appears pale, mottled, and lethargic with normal respiratory effort is classic for compensated shock."
+    },
+    {
+      "title": "Capillary Refill and Skin Mottling",
+      "content": "Capillary refill time (CRT) is assessed by pressing firmly on the sternum or fingertip for 5 seconds and counting how long it takes for color to return. Normal CRT is under 2 seconds. A CRT greater than 2 seconds suggests impaired peripheral perfusion. Skin mottling — a net-like purplish discoloration of the skin, especially on the extremities — is another indicator of vasoconstriction and poor flow. In warm (early distributive) shock, the skin may paradoxically appear warm and pink with brisk capillary refill, because vasodilation redirects blood to the skin even though core perfusion is inadequate."
+    },
+    {
+      "title": "Shock in Children Is Different from Adults",
+      "content": "Children have a relatively larger myocardial compliance and a more responsive sympathetic nervous system compared to adults, meaning they maintain blood pressure longer through tachycardia and vasoconstriction. However, when compensation fails, the decline to cardiac arrest is sudden and precipitous. A child who appears 'compensated' with a normal blood pressure may actually be in significant shock — relying on the blood pressure alone misses early, treatable disease. This is why PALS emphasizes perfusion assessment over blood pressure in children."
+    }
+  ],
+  "clinicalPearls": [
+    "Hypotension is a LATE finding in pediatric shock — a child with normal blood pressure and clinical signs of poor perfusion is still in shock. Treat the perfusion, not the number.",
+    "Tachycardia is often the first sign of shock in children. A heart rate that seems 'a little fast' may be the only early clue — take it seriously.",
+    "A child with warm, flushed skin in the setting of suspected infection may be in early distributive (warm) septic shock — vasodilation is the problem, not low volume.",
+    "Always calculate the age-based hypotension threshold: SBP < 70 + (2 × age in years). Memorize this formula — it is a lifesaver at the bedside."
+  ],
+  "redFlags": [
+    "Blood pressure below the age-appropriate threshold (SBP < 70 + 2 × age in years) — this child is in hypotensive shock and will arrest without immediate intervention.",
+    "Mental status changes — restlessness, irritability, or lethargy — in a child with tachycardia and poor perfusion indicate decompensated shock.",
+    "Capillary refill greater than 4 seconds or progressive skin mottling — perfusion is critically impaired and worsening.",
+    "Urine output less than 1 mL/kg/hr in a child with suspected shock — end-organ perfusion is inadequate."
+  ],
+  "commonMistakes": [
+    "Relying solely on blood pressure to diagnose shock — most children in early shock have normal or even elevated BP due to robust compensation.",
+    "Missing warm (early) distributive shock because the skin is warm and pink — vasodilation can mask poor core perfusion; check heart rate, mental status, and urine output.",
+    "Assuming dehydration is the cause of shock in every febrile child — sepsis, myocarditis, and obstructive causes must also be considered.",
+    "Failing to apply the hypotension formula by age — treating a 5-year-old with SBP 82 as 'normotensive' when hypotension for that child starts below 80 mmHg."
+  ],
+  "memoryAids": [
+    "Shock = Stuff Isn't Getting Through — inadequate perfusion despite the pump running.",
+    "The four types: 'HOCA' — Hypovolemic, Obstructive, Cardiogenic, (distributive: Anaphylactic/Septic/Neurogenic).",
+    "Hypotension formula for ages 1–10: SBP must be at least 70 + 2 × age. Below that = hypotensive.",
+    "Tachycardia + weak pulses + cool skin + altered mental status = compensated shock, even if the BP looks 'okay.'",
+    "Children compensate until they crash — think of a cliff, not a slope."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Shock Recognition and Classification",
+      "content": "Child with suspected shock (tachycardia, altered mental status, poor perfusion)\n  → Assess blood pressure using age formula: SBP < 70 + (2 × age) mmHg?\n     YES → Hypotensive shock → immediate IV/IO access + isotonic fluid bolus 10–20 mL/kg + assess type\n     NO → Assess perfusion: CRT >2 sec, mottling, weak pulses, altered mental status, decreased UOP?\n        YES → Compensated or decompensated shock → determine type:\n           → Blood loss or dehydration? → Hypovolemic → fluid resuscitation\n           → Fever + infection + warm skin? → Distributive (septic) → fluids + antibiotics + vasoactive\n           → Gallop, hepatomegaly, pulmonary edema? → Cardiogenic → cautious fluids + vasoactive\n           → Muffled heart sounds, JVD, tracheal deviation? → Obstructive → relieve obstruction\n        NO → Reassess; consider early or evolving shock; monitor closely"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Advanced Life Support",
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "Pediatric Emergency Medicine, 5th Edition — Shock and Resuscitation",
+    "Nelson Textbook of Pediatrics, 22nd Edition — Cardiovascular Disorders"
+  ],
+  "graphics": [
+    {
+      "id": "c05_g01",
+      "section": "summary",
+      "sectionIndex": 3,
+      "url": "../../images/courses/pals/c05_g01.webp",
+      "alt": "Shock Recognition: Compensated vs. Hypotensive",
+      "caption": "Comparison infographic showing clinical features of compensated shock vs hypotensive shock in a child."
+    }
+  ]
+}

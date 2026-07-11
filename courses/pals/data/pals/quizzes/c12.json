@@ -1,0 +1,213 @@
+{
+  "chapter": "c12",
+  "questions": [
+    {
+      "id": "c12_q01",
+      "question": "A 5-year-old child (20 kg) achieves ROSC after 15 minutes of CPR for pulseless electrical activity. The child remains comatose. What is the target core temperature for the next 5 days?",
+      "options": [
+        "A. 36–37°C (normothermic, no intervention needed)",
+        "B. ≤37.5°C (99.5°F), using either 32–34°C for 48h then 36–37.5°C, or 36–37.5°C throughout",
+        "C. 28–30°C (deep hypothermia for maximum neuroprotection)",
+        "D. 38–39°C (mild hyperthermia to increase cerebral blood flow)"
+      ],
+      "correct": 1,
+      "rationale": "The 2025 AHA Guidelines recommend maintaining core temperature at or below 37.5°C for comatose children after ROSC. A 5-day TTM course is reasonable: either 32–34°C for 48 hours followed by 36–37.5°C, or 36–37.5°C throughout. Fever must be actively prevented. Deep hypothermia and hyperthermia are harmful.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q02",
+      "question": "After ROSC, a 3-year-old child's SpO2 reads 100% on 100% FiO2. The respiratory therapist suggests weaning. What is the appropriate SpO2 target?",
+      "options": [
+        "A. Maintain 100% — maximum oxygen is best for brain recovery",
+        "B. 94–99% — titrate oxygen to avoid hyperoxia",
+        "C. 88–92% — permissive hypoxemia reduces reperfusion injury",
+        "D. 100% is fine as long as PaCO2 is normal"
+      ],
+      "correct": 1,
+      "rationale": "After ROSC, oxygen should be titrated to maintain SpO2 94–99%. Hyperoxia (SpO2 100%) generates reactive oxygen species during reperfusion, worsening organ injury. Permissive hypoxemia (below 94%) risks tissue hypoxia. The target is a balance: enough oxygen to prevent hypoxia, but not so much as to cause oxidative damage.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q03",
+      "question": "A 7-year-old child (24 kg) is being mechanically ventilated after ROSC. The respiratory rate is set to 30 breaths/min with a tidal volume producing a minute ventilation of 8 L/min. The PaCO2 comes back at 24 mmHg. What is the concern?",
+      "options": [
+        "A. Hypoventilation — increase the respiratory rate",
+        "B. Hyperventilation — reduce minute ventilation to target PaCO2 35–45 mmHg",
+        "C. This is an acceptable PaCO2 for a post-arrest patient",
+        "D. The PaCO2 is irrelevant as long as SpO2 is normal"
+      ],
+      "correct": 1,
+      "rationale": "A PaCO2 of 24 mmHg indicates hyperventilation. After cardiac arrest, the target PaCO2 is 35–45 mmHg (normocapnia). Hyperventilation causes cerebral vasoconstriction and reduces cerebral blood flow, worsening neurologic injury. Reduce the minute ventilation to achieve normocapnia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q04",
+      "question": "During CPR in a 6-month-old infant (7 kg), what diastolic blood pressure should you aim for?",
+      "options": [
+        "A. ≥20 mmHg",
+        "B. ≥25 mmHg",
+        "C. ≥30 mmHg",
+        "D. ≥40 mmHg"
+      ],
+      "correct": 1,
+      "rationale": "During CPR, the target diastolic blood pressure is at least 25 mmHg for infants and at least 30 mmHg for children aged 1 year and older. Adequate diastolic pressure during CPR ensures coronary perfusion pressure, which is critical for achieving ROSC.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q05",
+      "question": "A comatose child is being monitored with continuous EEG after cardiac arrest. Subclinical seizures are detected. What is the appropriate action?",
+      "options": [
+        "A. No treatment needed — subclinical seizures are not harmful",
+        "B. Treat with anticonvulsants — subclinical seizures contribute to secondary brain injury",
+        "C. Wait 48 hours to see if they resolve spontaneously",
+        "D. Reduce sedation to make the seizures clinical so they can be observed"
+      ],
+      "correct": 1,
+      "rationale": "Both clinical and subclinical (non-convulsive) seizures after cardiac arrest contribute to ongoing brain injury and should be treated with appropriate anticonvulsants. Continuous EEG monitoring allows detection of subclinical seizures that would otherwise be missed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q06",
+      "question": "What is the recommended duration of targeted temperature management after pediatric cardiac arrest?",
+      "options": [
+        "A. 24 hours",
+        "B. 48 hours",
+        "C. 5 days",
+        "D. 7 days"
+      ],
+      "correct": 2,
+      "rationale": "The 2025 AHA Guidelines recommend a 5-day course of TTM after pediatric cardiac arrest. The initial 32–34°C phase (if used) lasts 48 hours, but the total course extends to 5 days with the temperature maintained at 36–37.5°C for the remaining time.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q07",
+      "question": "A 10-year-old child (32 kg) achieves ROSC. Systolic blood pressure is 72 mmHg. The hypotension threshold for this child using the formula is approximately what value?",
+      "options": [
+        "A. 70 + (2 × 10) = 90 mmHg",
+        "B. 60 + (2 × 10) = 80 mmHg",
+        "C. 70 + (1 × 10) = 80 mmHg",
+        "D. 50 + (2 × 10) = 70 mmHg"
+      ],
+      "correct": 0,
+      "rationale": "For children aged 1–10 years, the hypotension threshold is approximately 70 + (2 × age in years) mmHg systolic. For a 10-year-old: 70 + 20 = 90 mmHg. The child's SBP of 72 mmHg is below this threshold, indicating hypotension requiring intervention.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q08",
+      "question": "When should neuroprognostication be performed after pediatric cardiac arrest?",
+      "options": [
+        "A. Immediately upon ROSC",
+        "B. 12 hours after ROSC",
+        "C. No earlier than 72 hours after ROSC or rewarming",
+        "D. 7 days after ROSC"
+      ],
+      "correct": 2,
+      "rationale": "Neuroprognostication should be performed no earlier than 72 hours after ROSC or after rewarming is complete. This allows time for sedation and hypothermia effects to clear, providing a more accurate assessment. Prognostication too early can lead to premature withdrawal of care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q09",
+      "question": "Which of the following is NOT a component of multimodal neuroprognostication?",
+      "options": [
+        "A. Clinical neurologic examination",
+        "B. Continuous EEG monitoring",
+        "C. A single serum lactate level drawn 1 hour post-ROSC",
+        "D. Somatosensory evoked potentials"
+      ],
+      "correct": 2,
+      "rationale": "Multimodal neuroprognostication integrates multiple data sources: clinical exam (motor response, brainstem reflexes), EEG patterns, serum biomarkers (neuron-specific enolase), neuroimaging (MRI), and evoked potentials. A single lactate level at 1 hour is not a validated prognostic tool and does not contribute to formal neuroprognostication.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q10",
+      "question": "A post-arrest patient has a blood glucose of 280 mg/dL. Blood glucose was 90 mg/dL on arrival. What is the appropriate management?",
+      "options": [
+        "A. Ignore it — hyperglycemia is protective after cardiac arrest",
+        "B. Treat with insulin to maintain normal blood glucose range",
+        "C. Administer a dextrose bolus",
+        "D. Check blood glucose again in 6 hours"
+      ],
+      "correct": 1,
+      "rationale": "Hyperglycemia after cardiac arrest is associated with worse neurologic outcomes. Blood glucose should be maintained in a normal range. A glucose of 280 mg/dL requires treatment with insulin and rechecking to avoid both hyperglycemia and hypoglycemia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q11",
+      "question": "What systolic blood pressure target applies to a 4-year-old child after ROSC?",
+      "options": [
+        "A. Above the 10th percentile for age",
+        "B. Above the 5th percentile for age",
+        "C. Above 90 mmHg regardless of age",
+        "D. Above 100 mmHg regardless of age"
+      ],
+      "correct": 1,
+      "rationale": "After ROSC, systolic blood pressure should be maintained above the 5th percentile for the child's age. This ensures adequate perfusion to vital organs, especially the brain, while avoiding excessive hypertension that could worsen cerebral edema.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q12",
+      "question": "Which statement about TTM after pediatric cardiac arrest is CORRECT according to the 2025 AHA Guidelines?",
+      "options": [
+        "A. Hypothermic TTM (32–34°C) is now the only recommended approach",
+        "B. Fever prevention (36–37.5°C) is sufficient and TTM is no longer recommended",
+        "C. Either 32–34°C for 48h then 36–37.5°C, or 36–37.5°C throughout for 5 days, are both reasonable",
+        "D. TTM should last only 24 hours to minimize complications"
+      ],
+      "correct": 2,
+      "rationale": "The 2025 Guidelines state that a 5-day course of TTM is reasonable using either protocol: 32–34°C for 48 hours then 36–37.5°C, or 36–37.5°C throughout. Hypothermic TTM is not widely recommended as the only approach but may be considered in selected cases.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q13",
+      "question": "Why is hyperventilation particularly harmful in post-cardiac arrest patients?",
+      "options": [
+        "A. It increases intracranial pressure",
+        "B. It causes cerebral vasoconstriction and reduces cerebral blood flow",
+        "C. It leads to metabolic alkalosis which is cardioprotective",
+        "D. It has no significant effect on the brain"
+      ],
+      "correct": 1,
+      "rationale": "Hyperventilation lowers PaCO2, which causes cerebral vasoconstriction. In a brain already compromised by ischemia-reperfusion injury, reduced cerebral blood flow from vasoconstriction worsens neurologic injury. Target normocapnia (35–45 mmHg) is essential.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q14",
+      "question": "A 2-year-old child (12 kg) has been in TTM at 33°C for 36 hours when clinical seizures are noted. The child is on continuous EEG. What is the immediate management?",
+      "options": [
+        "A. Rewarm the patient to stop the seizures",
+        "B. Treat seizures with benzodiazepine and/or levetiracetam per protocol",
+        "C. Do nothing — seizures during TTM are expected and self-limited",
+        "D. Discontinue TTM immediately"
+      ],
+      "correct": 1,
+      "rationale": "Seizures during TTM should be treated promptly with appropriate anticonvulsants, just as they would be at any other time. Seizures contribute to secondary brain injury regardless of the temperature management protocol. Do not discontinue TTM or delay anticonvulsant treatment.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q15",
+      "question": "What imaging study is most useful for neuroprognostication after cardiac arrest?",
+      "options": [
+        "A. CT head without contrast (immediately post-ROSC)",
+        "B. MRI brain (typically 2–5 days post-ROSC)",
+        "C. Skull X-ray",
+        "D. Carotid ultrasound"
+      ],
+      "correct": 1,
+      "rationale": "MRI of the brain, typically performed 2–5 days after ROSC, is the most useful neuroimaging study for prognostication. It can demonstrate patterns of hypoxic-ischemic injury in the cortex, basal ganglia, and white matter. CT head immediately post-ROSC may be normal and has limited prognostic value.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q16",
+      "question": "What PaCO2 range should be maintained after pediatric cardiac arrest?",
+      "options": [
+        "A. 25–30 mmHg",
+        "B. 30–35 mmHg",
+        "C. 35–45 mmHg",
+        "D. 45–55 mmHg"
+      ],
+      "correct": 2,
+      "rationale": "The target PaCO2 after cardiac arrest is 35–45 mmHg (normocapnia). Hypocapnia (below 35) causes cerebral vasoconstriction and reduced cerebral blood flow. Hypercapnia (above 45) causes acidosis and may increase intracranial pressure.",
+      "difficulty": "Easy"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Infant in Asystole After Respiratory Failure",
+      "presentation": "A 4-month-old (6 kg) is brought to the ED in cardiac arrest after being found unresponsive at home. The mother reports the infant had been congested and feeding poorly for 2 days. On arrival, the infant is limp and cyanotic with no respiratory effort. BLS was initiated by EMS. The cardiac monitor shows asystole on two leads.",
+      "vitals": { "hr": "No pulse", "bp": "No measurable BP", "rr": "None", "spo2": "Not detectable", "temp": "36.0°C" },
+      "question": "This infant is in asystole. CPR has been ongoing for 3 minutes and IV/IO access has just been established. What is the most appropriate immediate medication?",
+      "options": [
+        "A: Amiodarone 30 mg IV/IO",
+        "B: Epinephrine 0.06 mg IV/IO",
+        "C: Atropine 0.1 mg IV/IO",
+        "D: No medication — continue CPR for 5 more minutes first"
+      ],
+      "correct": 1,
+      "explanation": "Epinephrine 0.01 mg/kg IV/IO is indicated. For a 6 kg infant: 0.01 × 6 = 0.06 mg. The 2025 Guidelines emphasize early epinephrine within 3–5 minutes for nonshockable rhythms, and 3 minutes have already elapsed. Amiodarone is for VF/pVT, not asystole.",
+      "clinicalPearl": "The most common cause of pediatric cardiac arrest is respiratory failure leading to hypoxia — this infant likely had progressive respiratory decompensation from a viral illness."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Child in PEA After Severe Dehydration",
+      "presentation": "A 5-year-old (20 kg) is brought to the ED in cardiac arrest after 3 days of profuse vomiting and diarrhea in a resource-limited setting. The child has sunken eyes, absent tears, and dry mucous membranes. EMS reports the child was found unresponsive at home. The cardiac monitor shows an organized rhythm at 40 bpm without a palpable pulse. CPR is in progress.",
+      "vitals": { "hr": "40 bpm (organized, no pulse)", "bp": "No measurable BP", "rr": "None", "spo2": "Not detectable", "temp": "35.5°C" },
+      "question": "This child has PEA most likely due to severe hypovolemia. Epinephrine 0.2 mg has been administered. What else is critical to address the underlying cause?",
+      "options": [
+        "A: Defibrillate at 4 J/kg",
+        "B: Aggressive IV/IO fluid resuscitation with isotonic crystalloid",
+        "C: Administer amiodarone 100 mg",
+        "D: Wait for the rhythm to spontaneously convert"
+      ],
+      "correct": 1,
+      "explanation": "Hypovolemia is the most likely cause of PEA in this scenario. Epinephrine supports circulation, but the underlying cause must be treated with aggressive volume resuscitation. Rapid IV/IO bolus of isotonic crystalloid (20 mL/kg) is essential. Defibrillation is not indicated for PEA.",
+      "clinicalPearl": "Severe dehydration in young children can progress rapidly to cardiovascular collapse — the PEA rhythm may organized but cannot generate a pulse without adequate intravascular volume."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Adolescent in Asystole After Drug Ingestion",
+      "presentation": "A 13-year-old (50 kg) is brought to the ED in cardiac arrest after a suspected intentional ingestion of an unknown medication. Family found the teenager unresponsive 15 minutes ago. EMS initiated BLS and reports asystole on the monitor. The team has been performing CPR for 8 minutes with two doses of epinephrine administered. ETCO2 during CPR is 6 mmHg.",
+      "vitals": { "hr": "No pulse", "bp": "No measurable BP", "rr": "None", "spo2": "Not detectable", "temp": "35.8°C" },
+      "question": "The ETCO2 is 6 mmHg during CPR. What does this value most likely indicate?",
+      "options": [
+        "A: ROSC is imminent",
+        "B: Chest compressions are inadequate and quality should be improved",
+        "C: The endotracheal tube is misplaced",
+        "D: The capnography device is malfunctioning"
+      ],
+      "correct": 1,
+      "explanation": "An ETCO2 below 10 mmHg during CPR indicates inadequate compression quality — the rate, depth, or recoil may be suboptimal. The team should rotate compressors, ensure adequate depth (at least 1/3 of chest diameter), and allow full recoil. ETCO2 ≥10 mmHg is the target during CPR.",
+      "clinicalPearl": "Drug ingestion in adolescents should always prompt consideration of specific toxins — knowing the suspected substance can guide targeted treatments (e.g., sodium bicarbonate for TCA overdose, lipid emulsion for local anesthetic toxicity)."
+    }
+  ]
+}

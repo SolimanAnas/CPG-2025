@@ -1,0 +1,265 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "A single rescuer finds an unresponsive 3-year-old child (14 kg) who is not breathing normally and has no palpable pulse. What is the correct compression-ventilation ratio?",
+      "options": [
+        "A. 15:2",
+        "B. 30:2",
+        "C. 30:1",
+        "D. 15:1"
+      ],
+      "correct": 1,
+      "rationale": "A single rescuer performing CPR on any age patient — infant, child, or adult — uses a 30:2 ratio. The 15:2 ratio is reserved for two or more rescuers performing CPR on a pre-pubertal patient.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "Two rescuers are performing CPR on a 4-year-old (16 kg) in cardiac arrest. What compression-ventilation ratio should they use?",
+      "options": [
+        "A. 30:2",
+        "B. 15:2",
+        "C. 30:1",
+        "D. 15:1"
+      ],
+      "correct": 1,
+      "rationale": "Two or more rescuers performing CPR on a pre-pubertal child use a 15:2 ratio. The 4-year-old is clearly pre-pubertal, and two rescuers are available, so 15:2 provides more frequent ventilations to address the respiratory origin of most pediatric arrests.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "A 6-month-old infant (7 kg) is bradycardic at 50 bpm with poor perfusion — mottled skin, weak pulses, and capillary refill of 5 seconds. Positive-pressure ventilation has been provided effectively for 60 seconds. What is the next step?",
+      "options": [
+        "A. Continue rescue breathing and reassess in 5 minutes",
+        "B. Start chest compressions immediately",
+        "C. Administer epinephrine",
+        "D. Place an advanced airway"
+      ],
+      "correct": 1,
+      "rationale": "When a child of any age has a heart rate below 60 bpm with signs of poor perfusion — despite effective ventilation and supplemental oxygen — chest compressions should be started immediately. HR < 60 is functionally inadequate cardiac output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q04",
+      "question": "Which compression technique is preferred for a lone rescuer performing CPR on a 4-month-old (6 kg) infant?",
+      "options": [
+        "A. Two-finger technique on the sternum",
+        "B. Two-thumb encircling-hands technique, if the rescuer can encircle the chest",
+        "C. Heel of one hand on the chest",
+        "D. Closed-fist compression"
+      ],
+      "correct": 1,
+      "rationale": "The two-thumb encircling-hands technique is preferred for infant and child CPR, including for a lone rescuer when the chest can be encircled. It produces more consistent depth and force than the two-finger technique.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "What is the minimum chest compression depth for an infant during CPR?",
+      "options": [
+        "A. At least 1 inch (2.5 cm)",
+        "B. At least 1.5 inches (4 cm), which is one-third the AP diameter",
+        "C. At least 2 inches (5 cm)",
+        "D. At least 2.4 inches (6 cm)"
+      ],
+      "correct": 1,
+      "rationale": "The AHA recommends compressing to a depth of at least one-third the anterior-posterior diameter of the chest, which is approximately 1.5 inches (4 cm) for an infant. Compressions that are too shallow generate insufficient cardiac output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q06",
+      "question": "Two rescuers are performing CPR on a 15-year-old (65 kg) post-pubertal adolescent. What compression-ventilation ratio should they use?",
+      "options": [
+        "A. 15:2",
+        "B. 30:2",
+        "C. 30:1",
+        "D. 15:1"
+      ],
+      "correct": 1,
+      "rationale": "Post-pubertal patients are treated with adult BLS ratios. Two or more rescuers performing CPR on a post-pubertal adolescent use 30:2, the same as adult resuscitation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q07",
+      "question": "How frequently should chest compressors be switched during prolonged pediatric CPR?",
+      "options": [
+        "A. Every 1 minute",
+        "B. Every 2 minutes",
+        "C. Every 5 minutes",
+        "D. Only when the compressor says they are tired"
+      ],
+      "correct": 1,
+      "rationale": "Compressor fatigue degrades compression quality within 1 to 2 minutes. The AHA recommends switching compressors every 2 minutes to maintain quality. Switching should be completed in less than 5 seconds.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q08",
+      "question": "Why is ventilation proportionally more important in pediatric BLS than in adult BLS?",
+      "options": [
+        "A. Because children have smaller lungs",
+        "B. Because most pediatric cardiac arrests are respiratory in origin — the child arrests from hypoxia, not a primary cardiac event",
+        "C. Because children do not need chest compressions",
+        "D. Because AEDs do not work on children"
+      ],
+      "correct": 1,
+      "rationale": "Children typically have healthy hearts; their cardiac arrests most commonly follow progressive respiratory failure or shock. Addressing the respiratory cause with adequate ventilations is essential to restoring a perfusing rhythm.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q09",
+      "question": "In closed-loop communication during resuscitation, what is the correct sequence?",
+      "options": [
+        "A. Leader gives order, team member executes immediately",
+        "B. Leader gives order, team member repeats it back, executes, and confirms completion",
+        "C. Any team member gives orders as needed",
+        "D. The team leader performs all tasks personally"
+      ],
+      "correct": 1,
+      "rationale": "Closed-loop communication follows a four-step cycle: the leader gives a specific order, the team member repeats it back (confirming they heard it correctly), executes the task, and then confirms completion. This eliminates ambiguity and ensures accountability.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q10",
+      "question": "What is the minimum acceptable compression fraction during pediatric CPR?",
+      "options": [
+        "A. At least 50%",
+        "B. At least 60%",
+        "C. At least 80%",
+        "D. At least 95%"
+      ],
+      "correct": 2,
+      "rationale": "Compression fraction — the proportion of time compressions are actually being performed — should exceed 80%. High compression fractions are associated with better outcomes because the coronary perfusion pressure must be rebuilt with each pause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q11",
+      "question": "A lone rescuer finds an unresponsive 8-month-old (8 kg) who is breathing but has a heart rate of 55 bpm and mottled skin. What is the correct action?",
+      "options": [
+        "A. Start chest compressions immediately at 30:2",
+        "B. Provide positive-pressure ventilation and reassess — the heart rate is acceptable",
+        "C. Call for an AED before doing anything",
+        "D. Administer epinephrine"
+      ],
+      "correct": 0,
+      "rationale": "HR < 60 with poor perfusion (mottled skin) despite adequate oxygenation and ventilation = start compressions. Even though the infant is breathing, the heart rate is too low to maintain adequate perfusion. A single rescuer uses 30:2.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q12",
+      "question": "What is the primary reason compressor switching is time-based (every 2 minutes) rather than symptom-based (when the compressor 'feels tired')?",
+      "options": [
+        "A. To ensure everyone gets a turn",
+        "B. Because compression quality degrades measurably within 2 minutes, and subjective fatigue is an unreliable indicator",
+        "C. To allow the team leader to check the rhythm",
+        "D. Because the guidelines require a switch with every rhythm check"
+      ],
+      "correct": 1,
+      "rationale": "Studies show that compression depth and rate deteriorate within 1 to 2 minutes. Because rescuers often underestimate their own fatigue, time-based switching at 2 minutes is more reliable than waiting for someone to 'feel tired.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q13",
+      "question": "What compression depth is recommended for a 7-year-old child (24 kg) during CPR?",
+      "options": [
+        "A. At least 1 inch (2.5 cm)",
+        "B. At least 1.5 inches (4 cm)",
+        "C. At least 2 inches (5 cm), which is approximately one-third the AP diameter",
+        "D. At least 2.4 inches (6 cm)"
+      ],
+      "correct": 2,
+      "rationale": "For children, compressions should reach a depth of at least one-third the anterior-posterior diameter of the chest, which is approximately 2 inches (5 cm). This is shallower than the adult minimum (at least 2 inches/5 cm but not exceeding 2.4 inches/6 cm) but deeper than the infant minimum.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q14",
+      "question": "Which of the following best describes why the two-thumb encircling-hands technique is preferred over the two-finger technique?",
+      "options": [
+        "A. It is easier to teach to lay rescuers",
+        "B. It produces more consistent compression depth, force, and better recoil than the two-finger technique",
+        "C. It uses less physical effort from the rescuer",
+        "D. The two-finger technique is now contraindicated in all situations"
+      ],
+      "correct": 1,
+      "rationale": "The two-thumb encircling-hands technique provides more consistent depth and force, and allows better chest recoil compared to the two-finger technique. The two-finger technique is not contraindicated but is no longer the preferred approach.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q15",
+      "question": "How quickly should the transition between compressors be completed during CPR?",
+      "options": [
+        "A. In less than 2 seconds",
+        "B. In less than 5 seconds",
+        "C. In less than 10 seconds",
+        "D. The transition time does not matter"
+      ],
+      "correct": 1,
+      "rationale": "The switch between compressors should be completed in less than 5 seconds. The incoming compressor should be in position before the current compressor stops to minimize the interruption in chest compressions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q16",
+      "question": "During a pediatric resuscitation, the team leader notices that the same rescuer has been performing compressions for 3 minutes. What should the leader do?",
+      "options": [
+        "A. Wait until the rhythm check at the next 2-minute cycle",
+        "B. Call for an immediate switch — compressors should be changed every 2 minutes to prevent quality degradation",
+        "C. Ask the compressor if they want to continue",
+        "D. Replace compressions with just ventilations"
+      ],
+      "correct": 1,
+      "rationale": "If a compressor has been pushing for more than 2 minutes, the leader should call for an immediate switch. Compression quality degrades measurably after 2 minutes, and the team should not wait for the scheduled rhythm check to address it.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q17",
+      "question": "Which statement about full chest recoil during CPR is correct?",
+      "options": [
+        "A. Full recoil is optional and can be sacrificed to increase compression rate",
+        "B. Full recoil allows the heart to refill with blood between compressions and is essential for adequate cardiac output",
+        "C. Leaning on the chest between compressions has no effect on outcomes",
+        "D. Recoil is only important in adult CPR"
+      ],
+      "correct": 1,
+      "rationale": "Complete chest recoil between compressions allows the heart to refill with venous blood. Leaning on the chest (incomplete recoil) reduces venous return and therefore reduces the cardiac output generated by subsequent compressions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q18",
+      "question": "Why is calling for help especially important in pediatric resuscitation?",
+      "options": [
+        "A. It is less important than in adult resuscitation",
+        "B. Pediatric arrests commonly require a team (airway, medications, IV access), and early activation ensures resources arrive in time",
+        "C. Pediatric patients never need advanced interventions",
+        "D. Help is only needed for documentation"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric resuscitations are team events that often require multiple simultaneous interventions — airway management, vascular access, medications, and monitoring. Calling for help early ensures the team and resources are available when needed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q19",
+      "question": "A team is performing CPR on a 6-year-old child. The two rescuers have been alternating compressions. At what point should the next switch occur?",
+      "options": [
+        "A. Immediately, since they just started",
+        "B. At the next 2-minute mark from the last switch, with the transition completed in less than 5 seconds",
+        "C. After 5 minutes to allow each rescuer adequate time",
+        "D. Only when one rescuer complains of fatigue"
+      ],
+      "correct": 1,
+      "rationale": "Compressor switching should occur every 2 minutes. The incoming compressor should be in position before the switch, and the entire transition should take less than 5 seconds to minimize the interruption in compressions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q20",
+      "question": "Why does the 15:2 compression-ventilation ratio for pre-pubertal children differ from the 30:2 ratio used in adults?",
+      "options": [
+        "A. Children need fewer ventilations than adults",
+        "B. The 15:2 ratio reflects the higher proportion of respiratory-origin arrests in children, requiring more frequent ventilations to treat the underlying cause",
+        "C. Children's hearts are stronger and need fewer compressions",
+        "D. The ratio is arbitrary and based on tradition"
+      ],
+      "correct": 1,
+      "rationale": "Most pediatric cardiac arrests are caused by respiratory failure or shock. The 15:2 ratio provides more frequent ventilations to address the respiratory cause, whereas adult arrests are more commonly cardiac in origin, where uninterrupted compressions are prioritized.",
+      "difficulty": "Hard"
+    }
+  ]
+}

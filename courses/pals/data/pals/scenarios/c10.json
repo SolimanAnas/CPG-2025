@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "Bradycardia After Intubation in a Toddler",
+      "presentation": "A 2-year-old child (12 kg) requires emergent intubation for respiratory failure secondary to bronchiolitis. During laryngoscopy, the heart rate drops from 130 bpm to 48 bpm. The child is now cyanotic with weak pulses and an SpO2 of 65%. The ET tube has just been placed and ventilation is being attempted.",
+      "vitals": { "hr": "48 bpm", "bp": "62/38 mmHg", "rr": "8 (apneic, on bag-valve)", "spo2": "65%", "temp": "37.8°C" },
+      "question": "What is the MOST appropriate immediate action?",
+      "options": [
+        "A: Continue ventilation and reassess in 2 minutes",
+        "B: Administer atropine 0.24 mg IV and continue ventilation",
+        "C: Start chest compressions and give epinephrine 0.12 mg IV",
+        "D: Apply transcutaneous pacing pads"
+      ],
+      "correct": 1,
+      "explanation": "This is bradycardia with poor perfusion caused by vagal stimulation during intubation. Atropine 0.02 mg/kg = 0.24 mg IV is the first-line medication for vagally-mediated bradycardia. The child has a pulse and the bradycardia was precipitated by laryngoscopy. While perfusion is poor, the reversible cause (vagal stimulation) should be addressed first with atropine before initiating compressions, since the underlying trigger has just occurred.",
+      "clinicalPearl": "Always have atropine drawn up and ready before pediatric intubation — vagal-mediated bradycardia is common and predictable."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Refractory Bradycardia in a Child With Heart Block",
+      "presentation": "A 7-year-old child (24 kg) is brought to the pediatric emergency department after syncope. ECG shows third-degree heart block with an atrial rate of 100 bpm and a ventricular rate of 38 bpm. The child is pale, lethargic, and has a weak radial pulse. After ensuring ventilation, the team gives atropine 0.48 mg IV, which provides no improvement. Epinephrine 0.24 mg IV has been given once.",
+      "vitals": { "hr": "38 bpm (ventricular)", "bp": "70/40 mmHg", "rr": "22 bpm", "spo2": "88%", "temp": "36.4°C" },
+      "question": "What is the MOST appropriate next intervention?",
+      "options": [
+        "A: Repeat atropine at a higher dose",
+        "B: Administer a second dose of epinephrine",
+        "C: Initiate transcutaneous pacing",
+        "D: Start an isoproterenol drip"
+      ],
+      "correct": 2,
+      "explanation": "Third-degree heart block with hemodynamic compromise refractory to medications requires cardiac pacing. Transcutaneous pacing is the fastest to initiate and provides effective ventricular capture as a bridge. Atropine has already failed and the dose cannot exceed 0.5 mg. While a second epinephrine dose could be given, pacing is more definitive for complete heart block.",
+      "clinicalPearl": "Complete heart block often requires pacing — medications are temporizing at best. Transcutaneous pacing should be set up as soon as complete block is identified with poor perfusion."
+    },
+    {
+      "id": "c10_s03",
+      "title": "Bradycardia in a Drowning Patient",
+      "presentation": "A 5-year-old child (18 kg) is pulled from a swimming pool after an estimated 4-minute submersion. The child is unresponsive with agonal respirations. EMS finds a heart rate of 42 bpm with a palpable but thready pulse. SpO2 is 60% on high-flow oxygen via non-rebreather mask. The team applies a bag-valve mask and begins assisting ventilation.",
+      "vitals": { "hr": "42 bpm", "bp": "Not measurable (weak pulses)", "rr": "6 (agonal)", "spo2": "60%", "temp": "33.8°C (hypothermic)" },
+      "question": "After beginning effective ventilation, the heart rate rises to 58 bpm but remains below 60 with poor perfusion. What is the next best step?",
+      "options": [
+        "A: Administer atropine 0.36 mg IV",
+        "B: Start chest compressions and give epinephrine 0.18 mg IV",
+        "C: Initiate transcutaneous pacing",
+        "D: Continue ventilation only and reassess temperature"
+      ],
+      "correct": 1,
+      "explanation": "Despite improving ventilation, HR remains below 60 with poor perfusion — the threshold for chest compressions has been met. Epinephrine 0.01 mg/kg = 0.18 mg IV/IO should be given. Hypothermia may be contributing, but compressions and epinephrine cannot be delayed. Atropine is not indicated here as the cause is hypoxia/hypothermia, not vagal tone.",
+      "clinicalPearl": "Drowning is a hypoxic arrest — ventilation is the first priority, but once compressions are indicated, do not delay due to hypothermia. Rewarming occurs alongside resuscitation."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "Vasoactive Medications in Pediatric Shock",
+      "headers": ["Drug", "Dose Range", "Route", "Primary Mechanism", "Indication"],
+      "rows": [
+        ["Epinephrine", "0.1–1 mcg/kg/min", "IV/IO infusion", "Beta-1 (inotropy) + Alpha-1 (vasoconstriction at higher doses)", "First-line for fluid-refractory septic shock (2025: either epi or norepi acceptable); cardiogenic shock; anaphylaxis (IM 0.01 mg/kg)"],
+        ["Norepinephrine", "0.05–2 mcg/kg/min", "IV/IO infusion", "Alpha-1 (vasoconstriction) + mild Beta-1 (inotropy)", "First-line for fluid-refractory septic shock (2025: either epi or norepi acceptable); may have mortality benefit in non-cardiac shock"],
+        ["Dopamine", "2–20 mcg/kg/min", "IV/IO infusion", "Dose-dependent: D1 (renal), Beta-1 (inotropy), Alpha-1 (vasoconstriction)", "No longer first-line; consider as second-line or adjunct. More arrhythmias than epi/norepi"],
+        ["Vasopressin", "0.0002–0.002 units/kg/min", "IV/IO infusion", "V1 receptor (vasoconstriction) — non-catecholamine", "Adjunct for vasodilatory shock refractory to catecholamine vasopressors; dose-sparing effect"],
+        ["Milrinone", "Load: 50 mcg/kg over 10–60 min; Maintenance: 0.25–0.75 mcg/kg/min", "IV/IO infusion", "PDE3 inhibitor — inodilatation (increased contractility + reduced afterload)", "Cardiogenic shock, post-arrest myocardial dysfunction, right heart failure"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "Fluid Resuscitation by Shock Type",
+      "headers": ["Shock Type", "Fluid Approach", "Caution", "Key Consideration"],
+      "rows": [
+        ["Hypovolemic", "Aggressive: 10–20 mL/kg boluses, may tolerate up to 60 mL/kg or more", "Monitor for fluid overload if hemorrhagic cause is not controlled", "Blood products for hemorrhagic shock; crystalloid for dehydration"],
+        ["Distributive (Septic)", "Aggressive: 10–20 mL/kg boluses; typical max 40–60 mL/kg before vasoactive support", "Reassess after each bolus; transition to vasoactive at 40 mL/kg if no response", "Antibiotics within 60 min; vasoactive support when fluid-refractory"],
+        ["Distributive (Anaphylactic)", "10–20 mL/kg bolus; may need more in severe cases", "Give IM epinephrine first — fluids alone are insufficient", "IM epinephrine 0.01 mg/kg (max 0.3 mg adult) is the priority treatment"],
+        ["Cardiogenic", "Cautious: 5–10 mL/kg with reassessment; avoid large boluses", "Excess volume worsens pulmonary edema; transition to inotropic support early", "Milrinone or epinephrine for inotropy; avoid pure vasopressors initially"],
+        ["Obstructive", "10–20 mL/kg as temporizing measure while relieving obstruction", "Fluids alone will not resolve the problem — relieve the obstruction", "Needle decompression (tension pneumo), pericardiocentesis (tamponade)"]
+      ]
+    },
+    {
+      "id": "c06_t03",
+      "title": "Monitoring Goals in Pediatric Shock Resuscitation",
+      "headers": ["Parameter", "Target", "Reassessment Frequency", "Clinical Significance"],
+      "rows": [
+        ["ScvO2 (central venous O2 saturation)", "≥70%", "Continuous or every 1–2 hours", "Reflects adequacy of oxygen delivery relative to consumption; below 70% suggests inadequate cardiac output or high consumption"],
+        ["Serum lactate", "Trending downward toward normal (<2 mmol/L)", "Every 1–2 hours until normalized", "Elevated or rising lactate indicates ongoing tissue hypoperfusion and anaerobic metabolism"],
+        ["Capillary refill time", "<2 seconds", "After each bolus and every 15–30 min", "Prolonged CRT reflects vasoconstriction and poor peripheral perfusion"],
+        ["Heart rate", "Age-appropriate (trending toward normal)", "Continuous", "Persistent tachycardia despite treatment suggests ongoing shock"],
+        ["Blood pressure", "SBP ≥70 + (2 × age) for ages 1–10 years", "Continuous or frequent interval", "Hypotension is a late, ominous sign; treat perfusion before BP drops"],
+        ["Urine output", "≥1 mL/kg/hr", "Hourly (Foley catheter if needed)", "Decreased UOP indicates inadequate renal perfusion; a marker of end-organ function"],
+        ["Mental status", "Normal, age-appropriate interaction", "Continuous observation", "Improving mental status is one of the best indicators of effective resuscitation"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "Limp and Blue in the Waiting Room",
+      "presentation": "A mother brings her 6-month-old (7 kg) to the emergency department waiting room. The child was 'just a little fussy this morning' but has become progressively lethargic. You are called to triage when the nurse notices the baby is limp and not moving. The child has not fed in 8 hours.",
+      "vitals": {
+        "hr": "180 bpm",
+        "bp": "Not measurable — no cuff size available yet",
+        "rr": "52/min",
+        "spo2": "82% on room air",
+        "temp": "38.9°C"
+      },
+      "question": "Using the Pediatric Assessment Triangle, which components are most likely abnormal in this infant, and what is the next step?",
+      "options": [
+        "A: Appearance and circulation are abnormal (limp, tachycardic, not feeding); initiate ABCDE assessment immediately and prepare for respiratory support.",
+        "B: Only breathing is abnormal — wait for the blood pressure before doing anything.",
+        "C: All three PAT components are normal — this is likely a tired baby.",
+        "D: Do a full secondary assessment before touching the child."
+      ],
+      "correct": 0,
+      "explanation": "The infant's limp state and poor feeding indicate an abnormal appearance (decreased tone, not interacting). Tachycardia and poor oxygen saturation suggest abnormal breathing and circulation. With multiple abnormal PAT components, immediate ABCDE assessment and respiratory support are indicated.",
+      "clinicalPearl": "A limp, hypoxic infant with tachycardia is in a pre-arrest state — do not wait for blood pressure to act. Attach the pulse oximeter, provide positive-pressure ventilation, and start the ABCDE assessment simultaneously."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Barking Cough and Stridor",
+      "presentation": "A 3-year-old (14 kg) is brought in by parents with 2 days of cough and hoarseness. Tonight the cough worsened and the child started making a loud noise when breathing in. The child is sitting on the father's lap, appears frightened, but is consolable and interactive.",
+      "vitals": {
+        "hr": "130 bpm",
+        "bp": "92/58 mmHg",
+        "rr": "32/min",
+        "spo2": "95%",
+        "temp": "38.2°C"
+      },
+      "question": "Using the respiratory categories, what is the most likely category and diagnosis, and what is the appropriate initial management?",
+      "options": [
+        "A: Lower airway obstruction — administer nebulized albuterol.",
+        "B: Upper airway obstruction, likely viral croup — administer nebulized racemic epinephrine and consider dexamethasone.",
+        "C: Pulmonary vascular obstruction — order a CT pulmonary angiogram.",
+        "D: No distress — observe and discharge."
+      ],
+      "correct": 1,
+      "explanation": "The barking cough, inspiratory stridor, and 2-day history of hoarseness are classic for viral croup, which is an upper airway obstruction. The child is still compensated (normal blood pressure, acceptable oxygen saturation), so nebulized racemic epinephrine and oral dexamethasone are appropriate initial treatments.",
+      "clinicalPearl": "The PAT shows one abnormal component (breathing — stridor) with normal appearance and circulation, categorizing this as a moderate problem. The child needs treatment but is not in immediate danger of airway loss."
+    },
+    {
+      "id": "c01_s03",
+      "title": "Warm and Bounding After Surgery",
+      "presentation": "A 5-year-old (20 kg) is 12 hours post-appendectomy. The nurse calls you because the child is 'not looking right.' The child is restless, the skin feels warm to touch, and the heart rate has been climbing over the past hour. The child was drinking earlier but now refuses fluids.",
+      "vitals": {
+        "hr": "155 bpm",
+        "bp": "88/50 mmHg",
+        "rr": "30/min",
+        "spo2": "97%",
+        "temp": "39.4°C"
+      },
+      "question": "Apply the assess–categorize–decide–act framework. What is the most likely diagnosis and the appropriate next step?",
+      "options": [
+        "A: This is normal post-surgical pain — administer morphine and observe.",
+        "B: Assess using ABCDE and PAT — the warm, flushed skin, tachycardia, and fever suggest early distributive (septic) shock; obtain cultures, start IV fluid bolus, and prepare for vasoactive support.",
+        "C: This is a lower airway problem — start a nebulizer treatment.",
+        "D: Reassess in 4 hours since the blood pressure is still normal."
+      ],
+      "correct": 1,
+      "explanation": "Warm, flushed skin, bounding pulses (inferred from the context), tachycardia, fever, and altered behavior in a post-surgical child strongly suggest early distributive (septic) shock. The BP is still above the hypotension threshold (SBP < 90 for a 5-year-old: 70 + 2×5 = 80), so this is compensated warm shock requiring immediate fluid resuscitation, cultures, and antibiotics.",
+      "clinicalPearl": "In post-surgical children, do not attribute rising heart rate and fever to 'just pain.' When tachycardia is disproportionate to fever and the child's behavior is changing, suspect sepsis early. The warm-to-cold transition in distributive shock can be rapid."
+    }
+  ]
+}

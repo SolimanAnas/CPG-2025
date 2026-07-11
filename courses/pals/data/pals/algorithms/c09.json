@@ -1,0 +1,36 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "PALS Weight-Based Drug Dosing Calculation Algorithm",
+      "description": "A step-by-step algorithm for calculating weight-based medication doses in pediatric emergencies, ensuring safety through systematic verification.",
+      "steps": [
+        "Step 1 — Determine patient weight: use actual measured weight if available. If unknown, use the Broselow tape (length-based, for ages 1–12) or the age-based formula: weight (kg) = (age in years × 2) + 8 for children >2 years.",
+        "Step 2 — Identify the required medication and its PALS dose per kilogram (e.g., epinephrine 0.01 mg/kg, amiodarone 5 mg/kg, atropine 0.02 mg/kg, adenosine 0.1 mg/kg).",
+        "Step 3 — Calculate the total dose: weight (kg) × dose per kg = total dose in mg (or mL, depending on the drug's dosing unit).",
+        "Step 4 — Check the total dose against the maximum single dose for that medication. If the calculated dose exceeds the maximum, administer the maximum dose. If it is below the maximum, administer the full calculated dose.",
+        "Step 5 — Identify the drug concentration on the vial/syringe (e.g., epinephrine 0.1 mg/mL). Calculate the volume to draw up: total dose (mg) ÷ concentration (mg/mL) = volume (mL).",
+        "Step 6 — Draw up and label the syringe. Have a second provider independently verify the weight, dose calculation, concentration, and volume.",
+        "Step 7 — Administer via the appropriate route (IV push, IO push) and immediately flush with 5–10 mL normal saline using the push-pause technique.",
+        "Step 8 — Document the weight used, drug, calculated dose, volume administered, route, and time of administration."
+      ]
+    },
+    {
+      "id": "c09_alg02",
+      "title": "IV-IO Access Decision Tree for Pediatric Emergencies",
+      "description": "Decision tree for selecting and establishing vascular access in pediatric emergencies, including cardiac arrest, shock, and stable patients.",
+      "image": "../../images/courses/pals/c09_g01.webp",
+      "steps": [
+        "Step 1 — Assess the clinical urgency: is the patient in cardiac arrest, in shock, or stable?",
+        "Step 2 — If in cardiac arrest or peri-arrest with no existing access: proceed directly to IO if peripheral IV cannot be established within 1–2 attempts (target: access within 2 minutes of first attempt).",
+        "Step 3 — If not in arrest but needing urgent access: attempt peripheral IV in a large, accessible vein (antecubital, external jugular, hand, saphenous). Limit to 2 attempts before switching to IO.",
+        "Step 4 — IO insertion sites: proximal tibia (2 cm below tibial tuberosity) for infants and young children; proximal humerus for older children and adolescents; distal tibia and iliac crest as alternatives.",
+        "Step 5 — Confirm IO placement: aspiration of bone marrow, easy saline flush without subcutaneous infiltration, and ability to infuse under pressure.",
+        "Step 6 — Use IO access for all emergency medications (epinephrine, amiodarone, lidocaine, atropine, adenosine, dextrose), fluids (crystalloid, blood products), and continuous infusions as needed.",
+        "Step 7 — Once the patient is stabilized, transition from IO to IV access when a reliable peripheral or central IV can be established.",
+        "Step 8 — Remove the IO needle when IV access is confirmed and functioning, or when no longer clinically needed."
+      ]
+    }
+  ]
+}

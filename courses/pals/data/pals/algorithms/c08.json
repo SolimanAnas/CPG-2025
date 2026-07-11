@@ -1,0 +1,25 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Pediatric Asystole / PEA Cardiac Arrest Algorithm (2025 — Early Epinephrine Emphasis)",
+      "description": "Structured steps for managing pediatric cardiac arrest with non-shockable rhythms (asystole or PEA), with the 2025 AHA emphasis on early epinephrine administration within 3–5 minutes.",
+      "image": "../../images/courses/pals/c08_g01.webp",
+      "steps": [
+        "Step 1 — Recognize cardiac arrest: confirm unresponsiveness, absence of normal breathing, and no palpable pulse within 10 seconds.",
+        "Step 2 — Activate emergency response and begin high-quality CPR immediately: 30:2 compression-to-ventilation (single rescuer) or 15:2 (two rescuers); compression rate 100–120/min; depth ≥1/3 anterior-posterior chest diameter; full recoil; minimize pauses to <10 seconds.",
+        "Step 3 — Attach cardiac monitor/defibrillator: confirm rhythm is asystole or PEA (non-shockable). Check at least two leads to rule out fine VF.",
+        "Step 4 — Establish IV/IO access as rapidly as possible without interrupting CPR. IO access is preferred if IV is not immediately available.",
+        "Step 5 — EPINEPHRINE 0.01 mg/kg IV/IO — administer as early as possible, ideally within 3–5 minutes of arrest onset (Box 9 of the 2025 algorithm: 'Give epinephrine ASAP').",
+        "Step 6 — Resume CPR for 2 minutes. Apply waveform capnography to monitor compression quality (target ETCO2 ≥10 mmHg).",
+        "Step 7 — At 2-minute intervals: perform rhythm check and pulse check. Continue CPR between checks.",
+        "Step 8 — Repeat epinephrine 0.01 mg/kg IV/IO every 3–5 minutes throughout resuscitation.",
+        "Step 9 — Systematically assess and treat reversible causes (H's and T's) at regular intervals during CPR. Reassess after each cycle.",
+        "Step 10 — If ETCO2 remains <10 mmHg during CPR, evaluate and correct compression quality: rotate compressors, verify depth and rate, ensure full chest recoil.",
+        "Step 11 — On ROSC: initiate post-cardiac arrest care — continuous monitoring, glucose assessment, 12-lead ECG, active fever prevention (target ≤37.5 °C for comatose patients), and transport to a pediatric ICU.",
+        "Step 12 — If prolonged arrest (>15–25 min without ROSC) with a suspected reversible cause and ECMO capability available: consider extracorporeal CPR (ECPR)."
+      ]
+    }
+  ]
+}

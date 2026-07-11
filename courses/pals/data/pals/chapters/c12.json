@@ -1,0 +1,82 @@
+{
+  "id": "c12",
+  "title": "Post-Cardiac Arrest Care",
+  "shortTitle": "Post-Arrest Care",
+  "estimatedStudyTime": 30,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the goals of post-cardiac arrest care after return of spontaneous circulation (ROSC) in children.",
+    "State the target core temperature range and the recommended duration of targeted temperature management (TTM) after pediatric cardiac arrest.",
+    "Explain the hemodynamic targets for blood pressure management in post-arrest children.",
+    "Describe the oxygenation, ventilation, and glucose targets in the post-arrest period.",
+    "Identify the role of neurological monitoring and seizure treatment in post-arrest care.",
+    "Explain the concept of multimodal neuroprognostication and why no single test is sufficient.",
+    "Describe the components of family support during post-cardiac arrest care."
+  ],
+  "summary": [
+    {
+      "title": "The Post-Arrest Period: When the Real Work Begins",
+      "content": "Return of spontaneous circulation (ROSC) after cardiac arrest is a milestone, not a finish line. The period immediately after ROSC is characterized by systemic ischemia-reperfusion injury, ongoing organ dysfunction, and the risk of re-arrest. Post-cardiac arrest care aims to stabilize organ systems, protect the brain, identify and treat reversible causes, and optimize the conditions for neurologic recovery. This care begins immediately upon ROSC and continues through the ICU course and beyond."
+    },
+    {
+      "title": "Temperature Management: Preventing Fever Is Non-Negotiable",
+      "content": "For comatose children after ROSC, fever must be strictly prevented. The 2025 AHA Guidelines recommend maintaining core temperature at or below 37.5°C (99.5°F). A 5-day course of targeted temperature management (TTM) is reasonable: either maintaining 32–34°C for 48 hours followed by 36–37.5°C for the remainder, or maintaining 36–37.5°C throughout the full 5 days. Hypothermic TTM (32–34°C) is no longer widely recommended as a standard approach, but may be considered in selected cases. The key message is that preventing hyperthermia is essential regardless of which TTM protocol is used."
+    },
+    {
+      "title": "Hemodynamic Support: Maintaining Adequate Perfusion",
+      "content": "After ROSC, the heart and vasculature may be dysfunctional. Systolic blood pressure should be maintained above the 5th percentile for age to ensure adequate organ perfusion. During CPR (if a diastolic blood pressure target is used), aim for diastolic BP of at least 25 mmHg in infants and at least 30 mmHg in children aged 1 year and older. Vasoactive infusions (epinephrine, dopamine, norepinephrine) may be needed. Fluid resuscitation should be judicious — overload can worsen cerebral edema."
+    },
+    {
+      "title": "Oxygenation, Ventilation, and Glucose",
+      "content": "After ROSC, oxygen should be titrated to maintain SpO2 between 94% and 99% — avoid both hypoxia and hyperoxia. Excessive supplemental oxygen can worsen reperfusion injury. Ventilation should target a normal PaCO2 (35–45 mmHg); both hyperventilation and hypoventilation are harmful — hyperventilation reduces cerebral blood flow, while hypoventilation causes hypercapnia and acidosis. Blood glucose should be maintained in a normal range; both hypoglycemia and hyperglycemia are associated with worse neurologic outcomes."
+    },
+    {
+      "title": "Neurological Monitoring and Seizure Management",
+      "content": "Seizures are common after pediatric cardiac arrest and can worsen neurologic injury. Continuous EEG monitoring is recommended when available, particularly in comatose children. Clinical seizures should be treated immediately with appropriate anticonvulsants. Even subclinical (non-convulsive) seizures detected on EEG should be treated, as they contribute to ongoing brain injury. The choice of anticonvulsant follows institutional protocols, but benzodiazepines and levetiracetam are commonly used first-line agents."
+    },
+    {
+      "title": "Multimodal Neuroprognostication",
+      "content": "Predicting neurologic outcome after cardiac arrest requires integrating multiple data points — no single test is reliable in isolation. Modalities include clinical neurologic examination (motor response, brainstem reflexes), continuous EEG patterns, serum biomarkers (neuron-specific enolase), neuroimaging (MRI), and somatosensory evoked potentials. Prognostication should be performed after adequate time has elapsed for the effects of sedation and hypothermia to clear, typically no earlier than 72 hours after ROSC or rewarming."
+    },
+    {
+      "title": "Family Support and Communication",
+      "content": "The post-arrest period is among the most stressful experiences a family can face. Designated support persons should be available to the family. Clear, honest, and compassionate communication about the child's condition, the care plan, and the uncertainty of outcomes is essential. Families should be encouraged to be present, to ask questions, and to participate in care decisions. Social work, chaplaincy, and psychology support should be offered early."
+    }
+  ],
+  "clinicalPearls": [
+    "Preventing fever after ROSC is one of the most important modifiable interventions for neuroprotection — temperature must be actively monitored and controlled.",
+    "TTM should continue for a full 5 days, not just the initial 48 hours — the 2025 guidelines emphasize the complete course for optimal benefit.",
+    "Avoid hyperoxia after ROSC — titrate oxygen to SpO2 94–99%, not 100%. Excess oxygen worsens reperfusion injury.",
+    "Hyperventilation is a common post-arrest mistake — it lowers PaCO2 and reduces cerebral blood flow, worsening brain injury.",
+    "Neuroprognostication is a multimodal process — never rely on a single finding; always integrate clinical exam, EEG, imaging, and biomarkers."
+  ],
+  "redFlags": [
+    "Fever above 37.5°C in a comatose post-arrest child — must be actively treated immediately with cooling measures.",
+    "Hypotension (SBP below 5th percentile for age) after ROSC — indicates inadequate hemodynamic support, requires vasoactive infusion.",
+    "Seizures (clinical or subclinical) after cardiac arrest — treat immediately to prevent secondary brain injury.",
+    "Premature neuroprognostication before 72 hours post-ROSC or before sedation has cleared — can lead to inaccurate and potentially premature withdrawal of care."
+  ],
+  "commonMistakes": [
+    "Allowing temperature to drift above 37.5°C during the ICU course — passive temperature monitoring without active control is insufficient.",
+    "Hyperventilating a post-arrest patient to 'buy time' — this reduces cerebral blood flow and worsens neurologic outcome.",
+    "Treating the blood pressure number without assessing perfusion — capillary refill, urine output, and mental status matter as much as the cuff reading.",
+    "Withdrawing care based on a single poor prognostic indicator before the recommended 72-hour window has elapsed."
+  ],
+  "memoryAids": [
+    "Post-arrest targets: '37.5, 94, 5th' — temperature ≤37.5°C, SpO2 ≥94%, SBP above 5th percentile.",
+    "TTM duration: '5 days, not 50 hours' — the course is 5 full days, not just the initial 48-hour cooling phase.",
+    "Oxygen: 'Titrate, don't saturate' — target 94–99%, not 100%. Too much oxygen harms.",
+    "Neuroprognostication: 'Wait, weigh, and integrate' — wait ≥72h, weigh multiple modalities, integrate findings."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Post-Cardiac Arrest Care — Systematic Approach",
+      "content": "ROSC achieved\n  → Confirm sustained ROSC (pulse + BP documented)\n  → Secure airway; continue mechanical ventilation if intubated\n  → Titrate oxygen to SpO2 94–99% (avoid hyperoxia and hypoxia)\n  → Target PaCO2 35–45 mmHg (avoid hyperventilation)\n  → Obtain 12-lead ECG and portable chest X-ray\n  → Establish continuous monitoring: ECG, SpO2, BP (arterial line preferred)\n  → Initiate targeted temperature management (TTM):\n     → Option A: 32–34°C for 48 hours → 36–37.5°C for remaining 3 days\n     → Option B: 36–37.5°C throughout the full 5-day course\n  → Maintain SBP above 5th percentile for age; start vasoactive infusion if needed\n  → Check blood glucose; maintain normal range\n  → Continuous EEG monitoring if available\n  → Treat seizures immediately if detected\n  → Obtain labs: blood gas, lactate, electrolytes, glucose, troponin, CBC\n  → Identify and treat reversible causes (cardiac, toxicologic, metabolic)\n  → Echocardiography to assess cardiac function\n  → Neuroprognostication: multimodal, no earlier than 72 hours post-ROSC\n  → Family support: designate a support person, communicate clearly, offer resources"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Post–Cardiac Arrest Care Recommendations",
+    "AHA 2025 Targeted Temperature Management Guidelines"
+  ]
+}

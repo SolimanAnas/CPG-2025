@@ -1,0 +1,113 @@
+{
+  "chapter": "c03",
+  "cards": [
+    {
+      "id": "c03_fc01",
+      "question": "Why are cuffed ET tubes now preferred for most pediatric patients?",
+      "answer": "Cuffed tubes allow more precise control of ventilation, reduce aspiration risk, and provide more reliable ETCO₂ monitoring. They should be inflated to the minimum occlusive volume to prevent tracheal injury.",
+      "category": "ET Intubation"
+    },
+    {
+      "id": "c03_fc02",
+      "question": "What is the Duracher formula for cuffed ET tube sizing?",
+      "answer": "(Age in years / 4) + 3.5 mm, rounded to the nearest 0.5 mm. For example, a 4-year-old: (4/4) + 3.5 = 4.5 mm.",
+      "category": "ET Intubation"
+    },
+    {
+      "id": "c03_fc03",
+      "question": "What is the formula for uncuffed ET tube sizing in children?",
+      "answer": "(Age in years / 4) + 4.0 mm. This is 0.5 mm larger than the cuffed formula to compensate for the absence of a cuff.",
+      "category": "ET Intubation"
+    },
+    {
+      "id": "c03_fc04",
+      "question": "Where is the narrowest point of the pediatric airway?",
+      "answer": "The cricoid cartilage (subglottic region), not the vocal cords. This is why even mild edema in this area can cause significant airway resistance in children.",
+      "category": "Pediatric Anatomy"
+    },
+    {
+      "id": "c03_fc05",
+      "question": "What ventilation rate is used when an advanced airway is in place during CPR?",
+      "answer": "1 breath every 2–3 seconds, which equals 20–30 breaths per minute. This applies to both infants and children and is delivered without pausing compressions.",
+      "category": "Ventilation"
+    },
+    {
+      "id": "c03_fc06",
+      "question": "How does CPR change once an advanced airway is confirmed in place?",
+      "answer": "Compressions become continuous — they are no longer paused for ventilations. Ventilations are delivered independently at 1 breath every 2–3 seconds, eliminating the compression pauses of 30:2 or 15:2.",
+      "category": "Advanced Airway CPR"
+    },
+    {
+      "id": "c03_fc07",
+      "question": "What is the primary role of ETCO₂ monitoring during cardiac arrest?",
+      "answer": "Two roles: confirming correct ET tube placement (sustained waveform = tracheal tube) and assessing CPR quality (ETCO₂ < 10 mmHg suggests inadequate compressions). An abrupt rise in ETCO₂ may indicate ROSC.",
+      "category": "ETCO₂ Monitoring"
+    },
+    {
+      "id": "c03_fc08",
+      "question": "What does the DOPE mnemonic stand for?",
+      "answer": "Displacement, Obstruction, Pneumothorax, Equipment — the four systematic causes of acute deterioration in a child with an advanced airway.",
+      "category": "DOPE"
+    },
+    {
+      "id": "c03_fc09",
+      "question": "What ETCO₂ value during CPR should prompt a review of compression quality?",
+      "answer": "ETCO₂ below 10 mmHg suggests inadequate cardiac output from compressions. The team should reassess compression depth, rate, recoil, and hand position.",
+      "category": "ETCO₂ Monitoring"
+    },
+    {
+      "id": "c03_fc10",
+      "question": "Why is two-person bag-mask ventilation preferred over one-person technique in children?",
+      "answer": "Maintaining a proper mask seal on a child's small face with one hand while squeezing the bag with the other is extremely difficult. Two-person technique (one on the seal, one on the bag) is significantly more effective.",
+      "category": "Bag-Mask Ventilation"
+    },
+    {
+      "id": "c03_fc11",
+      "question": "When should a supraglottic airway device (SGA) be used during pediatric resuscitation?",
+      "answer": "When endotracheal intubation is unsuccessful or not immediately available. An SGA (LMA, i-gel, or similar) is a faster rescue device that requires less skill, and should be placed by a trained provider if ET intubation fails.",
+      "category": "SGA"
+    },
+    {
+      "id": "c03_fc12",
+      "question": "How should the ET tube cuff be inflated?",
+      "answer": "To the minimum occlusive volume — just enough to prevent a leak during positive-pressure ventilation. Over-inflation risks tracheal mucosal ischemia and post-extubation stridor.",
+      "category": "ET Intubation"
+    },
+    {
+      "id": "c03_fc13",
+      "question": "What four things confirm correct ET tube placement?",
+      "answer": "1) ETCO₂ waveform on capnography, 2) bilateral chest rise, 3) bilateral breath sounds on auscultation, 4) misting inside the tube. ETCO₂ is the gold standard in a patient with a perfusing rhythm.",
+      "category": "Tube Confirmation"
+    },
+    {
+      "id": "c03_fc14",
+      "question": "What size ET tube would you select for a 6-year-old using the cuffed tube formula?",
+      "answer": "Duracher formula: (6/4) + 3.5 = 1.5 + 3.5 = 5.0 mm cuffed ET tube.",
+      "category": "ET Intubation"
+    },
+    {
+      "id": "c03_fc15",
+      "question": "What is the risk of over-ventilating during bag-mask ventilation?",
+      "answer": "Excessive rate or volume causes gastric insufflation (air entering the stomach), which increases aspiration risk and raises intrathoracic pressure, reducing venous return and cardiac output during CPR.",
+      "category": "Bag-Mask Ventilation"
+    },
+    {
+      "id": "c03_fc16",
+      "question": "What equipment difference exists between the pediatric and adult self-inflating ventilation bags?",
+      "answer": "Pediatric bags have an integrated pressure-limiting valve (pop-off valve) that releases excess pressure to prevent barotrauma to the more compliant pediatric lungs and airway.",
+      "category": "Equipment"
+    },
+    {
+      "id": "c03_fc17",
+      "question": "What does an abrupt rise in ETCO₂ during CPR most likely indicate?",
+      "answer": "Return of spontaneous circulation (ROSC). When the heart begins beating again, pulmonary blood flow increases dramatically, and CO₂ elimination rises, causing a sudden increase in the ETCO₂ reading.",
+      "category": "ETCO₂ Monitoring"
+    },
+    {
+      "id": "c03_fc18",
+      "question": "What is the first step when a child with an ET tube suddenly desaturates?",
+      "answer": "Use the DOPE mnemonic: first check for Displacement of the tube (look, listen, feel for breath sounds and chest rise), then Obstruction, Pneumothorax, and Equipment failure.",
+      "category": "DOPE"
+    }
+  ]
+}

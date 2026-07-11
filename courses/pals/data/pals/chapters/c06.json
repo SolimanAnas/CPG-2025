@@ -1,0 +1,91 @@
+{
+  "id": "c06",
+  "title": "Managing Shock: Fluids & Vasoactive Support",
+  "shortTitle": "Managing Shock",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the initial fluid resuscitation approach for pediatric shock using isotonic crystalloid boluses.",
+    "State the volume, type, and reassessment protocol for isotonic crystalloid boluses: 10–20 mL/kg per bolus.",
+    "Explain why fluid boluses must be used cautiously in cardiogenic shock.",
+    "Identify the indications for early vasoactive support in fluid-refractory septic shock.",
+    "Compare epinephrine and norepinephrine as first-line vasoactive agents, including 2025 guideline updates.",
+    "Describe the role of hydrocortisone in pediatric shock with suspected adrenal insufficiency.",
+    "State the dosing ranges for epinephrine, norepinephrine, dopamine, vasopressin, and milrinone.",
+    "Define treatment goals in shock management: ScvO2 at or above 70%, normalized lactate, and age-appropriate perfusion."
+  ],
+  "summary": [
+    {
+      "title": "The First Principle: Restore Perfusion Quickly",
+      "content": "The overarching goal of shock management is to restore adequate tissue perfusion as rapidly as possible. Every minute of untreated shock increases the risk of multiorgan failure and death. The PALS approach follows a stepwise sequence: establish vascular access, administer isotonic crystalloid boluses, reassess after each bolus, and escalate to vasoactive support if the child remains in shock despite adequate fluid resuscitation."
+    },
+    {
+      "title": "Isotonic Crystalloid Bolus: 10–20 mL/kg",
+      "content": "The initial intervention for most types of pediatric shock is an isotonic crystalloid bolus — either normal saline (0.9% NaCl) or lactated Ringer's solution — given at 10–20 mL/kg over 5 to 20 minutes. After EACH bolus, the clinician must reassess perfusion (heart rate, pulses, CRT, mental status, urine output) and blood pressure before deciding whether to give another bolus or escalate therapy. The typical maximum is three boluses (up to 60 mL/kg total), but if the child is not responding after two boluses, further fluids alone are unlikely to help and vasoactive support should be initiated."
+    },
+    {
+      "title": "Fluid Resuscitation in Specific Shock Types",
+      "content": "In hypovolemic shock, fluid boluses are the cornerstone of initial therapy and are typically well tolerated. In distributive shock (septic, anaphylactic), aggressive fluid resuscitation is also the first step to fill the dilated vascular space. In cardiogenic shock, however, fluid boluses must be given cautiously — the failing heart cannot handle increased preload, and excessive fluids will worsen pulmonary edema. Give smaller boluses (5–10 mL/kg) with careful reassessment after each, and be prepared to initiate vasoactive support early. In obstructive shock, fluids are a temporizing measure while the underlying obstruction is relieved (needle decompression, pericardiocentesis)."
+    },
+    {
+      "title": "When to Escalate: Fluid-Refractory Shock",
+      "content": "Fluid-refractory shock is defined as persistent signs of shock (tachycardia, poor perfusion, hypotension) after two or more isotonic crystalloid boluses of 20 mL/kg (total 40 mL/kg or more). In this situation, further fluid boluses will not restore perfusion and may cause harm (fluid overload, pulmonary edema). The clinician must escalate to vasoactive support. In septic shock, vasoactive medication should be started as soon as fluid-refractory shock is recognized — ideally within 60 minutes of initial recognition — and IV/IO access is established. Antibiotics for septic shock must also be given within 60 minutes."
+    },
+    {
+      "title": "First-Line Vasoactive Agents: Epinephrine or Norepinephrine",
+      "content": "The 2025 AHA guidelines state that either epinephrine or norepinephrine is acceptable as the first-line vasoactive agent for fluid-refractory septic shock in children. Epinephrine (0.1–1 mcg/kg/min IV/IO infusion) provides both inotropic (increased cardiac contractility) and vasopressor (increased SVR) effects through beta and alpha adrenergic stimulation. Norepinephrine (0.05–2 mcg/kg/min IV/IO infusion) is primarily a vasopressor with mild inotropic properties. Recent evidence suggests that norepinephrine may have a mortality benefit in children without known cardiac dysfunction, though this evidence is not yet definitive. Both should be administered via a central line when possible, though peripheral or IO administration is acceptable temporarily."
+    },
+    {
+      "title": "Dopamine: No Longer Preferred as First-Line",
+      "content": "Dopamine (2–20 mcg/kg/min IV/IO infusion) was previously a common first-line vasoactive agent in pediatric shock. However, evidence — including a large multicenter trial — has shown that dopamine is associated with more adverse events (particularly arrhythmias) and possibly higher mortality in certain subgroups compared to norepinephrine and epinephrine. The 2025 guidelines therefore do not recommend dopamine as a first-line agent. It may still be considered as a second-line or adjunctive agent in specific situations, but it should not be the default choice."
+    },
+    {
+      "title": "Adjunctive Agents: Vasopressin, Milrinone, Hydrocortisone",
+      "content": "Vasopressin (0.0002–0.002 units/kg/min IV/IO infusion) acts on V1 receptors to cause vasoconstriction and can be used as an adjunct to epinephrine or norepinephrine when higher vasopressor doses are needed. Milrinone (loading dose 50 mcg/kg over 10–60 minutes, then 0.25–0.75 mcg/kg/min IV/IO infusion) is a phosphodiesterase inhibitor that provides inodilatation — increased cardiac contractility with reduced afterload. It is particularly useful in cardiogenic shock or post-cardiac arrest myocardial dysfunction. Hydrocortisone 2 mg/kg IV/IO (max 100 mg) is recommended for children with septic shock who have or are at risk for relative adrenal insufficiency, particularly those who have not responded to fluid resuscitation and vasopressor support."
+    },
+    {
+      "title": "Monitoring Goals in Shock Management",
+      "content": "The goals of shock management include: central venous oxygen saturation (ScvO2) at or above 70% (indicating adequate oxygen delivery relative to consumption), normalization of serum lactate (reflecting resolution of anaerobic metabolism), restoration of age-appropriate perfusion (normal CRT, strong pulses, warm extremities, appropriate mental status, urine output at least 1 mL/kg/hr), and normalization of blood pressure. Continuous monitoring of heart rate, blood pressure (arterial line when available), SpO2, and urine output guides ongoing therapy. Lactate should be rechecked every 1–2 hours until normalized."
+    }
+  ],
+  "clinicalPearls": [
+    "Always reassess after EACH fluid bolus — do not give multiple boluses blindly. The child's response (or lack thereof) guides the next step.",
+    "In cardiogenic shock, more fluid is often the wrong answer. Small boluses (5–10 mL/kg) with careful reassessment, and early transition to vasoactive support.",
+    "The 2025 update allows either epinephrine OR norepinephrine as first-line in septic shock. Recent evidence favors norepinephrine when the heart is not the primary problem.",
+    "Dopamine causes more arrhythmias and may increase mortality compared to epinephrine and norepinephrine — avoid using it as first-line.",
+    "Vasopressin is a valuable adjunct when you need more vasoconstriction but want to avoid escalating the dose of your primary vasopressor to excessive levels.",
+    "Antibiotics must be given within 60 minutes for septic shock — do not delay for fluid resuscitation; do both simultaneously."
+  ],
+  "redFlags": [
+    "Persistent tachycardia and poor perfusion after 40 mL/kg of crystalloid — this is fluid-refractory shock. Do not give more fluids alone — start vasoactive support.",
+    "Worsening pulmonary edema after fluid boluses in a child with a gallop and hepatomegaly — this is cardiogenic shock. Stop fluids and start inotropic support.",
+    "No urine output after adequate resuscitation — end-organ perfusion remains critically impaired.",
+    "Lactate that is rising instead of falling after initial resuscitation — the child is not responding and needs escalation of therapy."
+  ],
+  "commonMistakes": [
+    "Giving rapid, large-volume boluses without reassessing — fluid overload can cause pulmonary edema and worsen the patient's condition.",
+    "Using dopamine as first-line vasoactive support — current evidence favors epinephrine or norepinephrine.",
+    "Delaying vasoactive support because 'we haven't given enough fluid yet' — in fluid-refractory shock, further delay increases mortality.",
+    "Ignoring the type of shock when choosing fluids — cardiogenic shock requires extreme caution with volume, while hypovolemic shock typically tolerates aggressive boluses.",
+    "Forgetting to give antibiotics within 60 minutes for septic shock — every hour of delay increases mortality."
+  ],
+  "memoryAids": [
+    "10-20-40 Rule: 10–20 mL/kg bolus, reassess after each, escalate to vasoactive after 40 mL/kg if no response.",
+    "Epi or Norepi: either is first-line for septic shock in 2025. Dopamine is OUT as first-line.",
+    "Vasopressin + Inotrope: Vasopressin for vessels, Milrinone for the pump — use them as a team.",
+    "Hydrocortisone 2 mg/kg for stress dosing in septic shock — think adrenal when the child isn't responding to fluids and vasopressors.",
+    "Fluids first, then fix the pump: the sequence is crystalloid → reassess → vasoactive → titrate."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Shock Management Algorithm",
+      "content": "Child in shock (tachycardia, poor perfusion, altered mental status)\n  → Establish IV/IO access (at least 2 large-bore peripheral or IO)\n  → Isotonic crystalloid bolus 10–20 mL/kg over 5–20 min\n  → REASSESS after each bolus (HR, perfusion, BP, mental status, UOP)\n     → Improved? → Continue monitoring; give additional boluses as needed\n     → Not improved after 1st bolus? → Give 2nd bolus (10–20 mL/kg)\n        → Improved? → Monitor closely\n        → Not improved after 2nd bolus? → Fluid-refractory shock\n           → STOP further large-volume fluid boluses\n           → Start vasoactive support:\n              → Septic shock: Epinephrine 0.1–1 mcg/kg/min OR Norepinephrine 0.05–2 mcg/kg/min\n              → Cardiogenic: Epinephrine ± Milrinone (loading 50 mcg/kg, then 0.25–0.75 mcg/kg/min)\n              → Add Vasopressin 0.0002–0.002 units/kg/min as adjunct if needed\n           → Hydrocortisone 2 mg/kg IV/IO if adrenal insufficiency risk\n           → For septic shock: Antibiotics within 60 minutes\n  → Monitor: ScvO2 ≥70%, lactate trending down, age-appropriate perfusion, adequate UOP"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric Advanced Life Support",
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "Surviving Sepsis Campaign: International Guidelines for Management of Septic Shock — Pediatric Addendum (2024)",
+    "Pediatric Critical Care Medicine, 5th Edition — Shock Management in Children"
+  ]
+}

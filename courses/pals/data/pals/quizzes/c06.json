@@ -1,0 +1,185 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "A 4-year-old, 16 kg child in septic shock receives two boluses of normal saline, 20 mL/kg each. After the second bolus (total 40 mL/kg), heart rate remains 170, CRT is still 4 seconds, and blood pressure is 76/48. What is the next step?",
+      "options": ["A. Give a third 20 mL/kg bolus", "B. Start epinephrine or norepinephrine infusion and administer antibiotics", "C. Switch to hypertonic saline", "D. Place an arterial line and wait"],
+      "correct": 1,
+      "rationale": "This child has fluid-refractory shock — persistent signs of shock after 40 mL/kg of crystalloid. The correct next step is to initiate vasoactive support (epinephrine or norepinephrine) and give antibiotics within 60 minutes. Additional fluid boluses alone will not restore perfusion and may cause overload.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q02",
+      "question": "What is the recommended volume for the initial isotonic crystalloid bolus in a child with shock?",
+      "options": ["A. 5 mL/kg", "B. 10–20 mL/kg", "C. 30 mL/kg", "D. 50 mL/kg"],
+      "correct": 1,
+      "rationale": "The initial bolus for most types of pediatric shock is 10–20 mL/kg of isotonic crystalloid (normal saline or LR), given over 5–20 minutes, with reassessment after each bolus.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q03",
+      "question": "Why must fluid boluses be given cautiously in cardiogenic shock?",
+      "options": [
+        "A. Children with cardiogenic shock have thick heart walls that reject fluid",
+        "B. The failing heart cannot handle increased preload; excess volume worsens pulmonary edema",
+        "C. Cardiogenic shock is always caused by dehydration",
+        "D. Fluids cause cardiac tamponade"
+      ],
+      "correct": 1,
+      "rationale": "In cardiogenic shock, the pump itself is failing. Increased venous return (preload) from large fluid boluses overwhelms the already dysfunctional left ventricle, causing fluid to back up into the lungs and worsening pulmonary edema. Smaller boluses (5–10 mL/kg) with careful reassessment are appropriate.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q04",
+      "question": "According to the 2025 AHA guidelines, which is an acceptable first-line vasoactive agent for fluid-refractory septic shock in children?",
+      "options": ["A. Dopamine", "B. Phenylephrine", "C. Epinephrine or norepinephrine", "D. Dobutamine"],
+      "correct": 2,
+      "rationale": "The 2025 guidelines state that either epinephrine (0.1–1 mcg/kg/min) or norepinephrine (0.05–2 mcg/kg/min) is acceptable as first-line vasoactive support for fluid-refractory septic shock. Dopamine is no longer preferred as first-line due to increased arrhythmia risk and possibly higher mortality.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q05",
+      "question": "A 7-year-old, 23 kg child in fluid-refractory septic shock with no known cardiac dysfunction. Which vasoactive agent might be preferred based on recent evidence?",
+      "options": ["A. Dopamine 10 mcg/kg/min", "B. Norepinephrine 0.5 mcg/kg/min", "C. Dobutamine 5 mcg/kg/min", "D. Vasopressin 0.005 units/kg/min"],
+      "correct": 1,
+      "rationale": "Recent evidence suggests norepinephrine may have a mortality benefit in children without known cardiac dysfunction compared to other agents. While the 2025 guidelines state either epinephrine or norepinephrine is acceptable, the emerging data favors norepinephrine in this specific scenario.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q06",
+      "question": "What is the dose range for norepinephrine as a vasoactive infusion in a child?",
+      "options": ["A. 0.01–0.1 mcg/kg/min", "B. 0.05–2 mcg/kg/min", "C. 5–20 mcg/kg/min", "D. 0.1–5 units/kg/min"],
+      "correct": 1,
+      "rationale": "Norepinephrine is dosed at 0.05–2 mcg/kg/min IV/IO infusion. It is primarily an alpha-1 agonist providing vasoconstriction with mild beta-1 inotropic effects.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "What loading dose of milrinone is recommended for a child with cardiogenic shock from myocardial dysfunction?",
+      "options": ["A. 5 mcg/kg over 5 minutes", "B. 50 mcg/kg over 10–60 minutes", "C. 500 mcg/kg over 10 minutes", "D. No loading dose is needed"],
+      "correct": 1,
+      "rationale": "Milrinone loading dose is 50 mcg/kg IV over 10–60 minutes, followed by a maintenance infusion of 0.25–0.75 mcg/kg/min. The loading dose achieves therapeutic levels more quickly, though it should be given slowly to avoid hypotension.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "Why is dopamine no longer recommended as first-line vasoactive support in pediatric shock?",
+      "options": [
+        "A. It is too expensive",
+        "B. It only works in adults",
+        "C. Evidence shows more arrhythmias and possibly higher mortality compared to epinephrine and norepinephrine",
+        "D. It is not available in pediatric formulations"
+      ],
+      "correct": 2,
+      "rationale": "Large multicenter trials have demonstrated that dopamine is associated with a higher incidence of arrhythmias and possibly increased mortality compared to norepinephrine and epinephrine. The 2025 guidelines therefore do not recommend dopamine as a first-line agent.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q09",
+      "question": "A 5-month-old, 7 kg infant in septic shock is receiving norepinephrine 1 mcg/kg/min and still has poor perfusion. What adjunctive agent could be added to increase vasoconstriction?",
+      "options": ["A. Dobutamine", "B. Milrinone", "C. Vasopressin 0.001 units/kg/min", "D. Nitroglycerin"],
+      "correct": 2,
+      "rationale": "Vasopressin (0.0002–0.002 units/kg/min) acts on V1 receptors to provide additional vasoconstriction through a mechanism independent of catecholamine receptors. It is an effective adjunct to epinephrine or norepinephrine when higher vasopressor effect is needed and allows dose-sparing of the primary agent.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q10",
+      "question": "How quickly should antibiotics be administered in a child with suspected septic shock?",
+      "options": ["A. Within 15 minutes", "B. Within 60 minutes", "C. Within 4 hours", "D. After fluid resuscitation is complete"],
+      "correct": 1,
+      "rationale": "Antibiotics should be administered within 60 minutes of recognition of septic shock. Every hour of delay increases mortality. Antibiotics and fluid resuscitation should occur simultaneously — do not delay antibiotics for fluid management.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q11",
+      "question": "Which of the following is a goal of pediatric shock resuscitation?",
+      "options": [
+        "A. ScvO2 ≥50%, lactate >4 mmol/L",
+        "B. ScvO2 ≥70%, lactate trending downward, normal CRT and mental status",
+        "C. Heart rate below 100 in all patients",
+        "D. Systolic BP above 120 mmHg regardless of age"
+      ],
+      "correct": 1,
+      "rationale": "The goals of resuscitation include ScvO2 ≥70% (adequate oxygen delivery), lactate trending down (resolution of anaerobic metabolism), age-appropriate blood pressure, and restored perfusion (normal CRT, strong pulses, warm skin, adequate UOP, normal mental status).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q12",
+      "question": "A 3-year-old, 14 kg child in cardiogenic shock from myocarditis has received a 10 mL/kg bolus of normal saline. She now has crackles and an SpO2 drop from 96% to 89%. What should you do?",
+      "options": [
+        "A. Give another 20 mL/kg bolus rapidly",
+        "B. Stop further fluid boluses and start inotropic support (epinephrine or milrinone)",
+        "C. Switch to hypertonic saline",
+        "D. Place a chest tube"
+      ],
+      "correct": 1,
+      "rationale": "Worsening crackles and dropping SpO2 after a fluid bolus in a child with suspected cardiogenic shock indicate developing pulmonary edema from volume overload. Further fluids will worsen this. The correct action is to stop fluid boluses and initiate inotropic support (epinephrine for inotropy, or milrinone for inodilatation) to improve cardiac output without adding volume.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q13",
+      "question": "What is the dose of hydrocortisone for stress dosing in a child with septic shock and suspected adrenal insufficiency?",
+      "options": ["A. 1 mg/kg IV", "B. 2 mg/kg IV/IO (max 100 mg)", "C. 5 mg/kg IV", "D. 10 mg/kg IV"],
+      "critical": false,
+      "correct": 1,
+      "rationale": "Hydrocortisone 2 mg/kg IV/IO (max 100 mg) is recommended for children with septic shock who have or are at risk for relative adrenal insufficiency, especially those who are not responding adequately to fluid resuscitation and vasopressor support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q14",
+      "question": "A 10-year-old, 32 kg child in septic shock is receiving norepinephrine 1.5 mcg/kg/min. ScvO2 is 62% and lactate is 5.8 mmol/L and rising. What does this indicate?",
+      "options": [
+        "A. The child is improving — continue current therapy",
+        "B. Inadequate oxygen delivery — consider adding an inotrope (e.g., dobutamine) or increasing the primary agent, and reassess cardiac function",
+        "C. The norepinephrine dose is too high — reduce it",
+        "D. The child needs more fluid boluses"
+      ],
+      "correct": 1,
+      "rationale": "An ScvO2 below 70% with rising lactate indicates that oxygen delivery is not meeting metabolic demand. Norepinephrine is primarily a vasopressor with limited inotropic effect. Adding an inotrope (like dobutamine or switching/adding epinephrine) or evaluating cardiac function with echocardiography may help identify and treat inadequate cardiac output.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q15",
+      "question": "Which fluid is recommended for initial resuscitation boluses in pediatric shock?",
+      "options": ["A. 5% albumin", "B. 0.9% normal saline or lactated Ringer's", "C. 3% hypertonic saline", "D. 5% dextrose in water"],
+      "correct": 1,
+      "rationale": "Isotonic crystalloid — either 0.9% normal saline or lactated Ringer's — is recommended for initial fluid boluses. These expand the intravascular volume without causing significant fluid shifts between compartments. D5W distributes throughout total body water and does not effectively expand intravascular volume.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q16",
+      "question": "How should vasopressin be dosed when used as an adjunct in pediatric shock?",
+      "options": ["A. 0.01–0.1 units/kg bolus", "B. 0.0002–0.002 units/kg/min IV/IO infusion", "C. 0.1–1 units/kg/min IV infusion", "D. 1–5 units/kg single bolus"],
+      "correct": 1,
+      "rationale": "Vasopressin is dosed as a continuous infusion at 0.0002–0.002 units/kg/min IV/IO. It acts on V1 receptors to provide vasoconstriction and is used as an adjunct to catecholamine vasopressors when additional vasoconstriction is needed.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q17",
+      "question": "What is fluid-refractory shock?",
+      "options": [
+        "A. Shock that responds immediately to one bolus of fluid",
+        "B. Shock that persists after two or more boluses of 10–20 mL/kg isotonic crystalloid (total ≥40 mL/kg)",
+        "C. Shock that only responds to blood products",
+        "D. Shock in a child who cannot receive intravenous fluids"
+      ],
+      "correct": 1,
+      "rationale": "Fluid-refractory shock is defined as persistent signs of shock (tachycardia, poor perfusion, hypotension) despite receiving at least 40 mL/kg of isotonic crystalloid (two boluses of 10–20 mL/kg each), with reassessment after each bolus showing inadequate response. This is the trigger to start vasoactive support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q18",
+      "question": "What is the primary advantage of milrinone in cardiogenic shock compared to a pure vasopressor like norepinephrine?",
+      "options": [
+        "A. Milrinone is cheaper",
+        "B. Milrinone provides inodilatation — increased contractility with reduced afterload — rather than increasing the resistance the failing heart must pump against",
+        "C. Milrinone works faster than norepinephrine",
+        "D. Milrinone has no side effects"
+      ],
+      "correct": 1,
+      "rationale": "Milrinone is a phosphodiesterase inhibitor that provides inodilatation — it increases cardiac contractility (positive inotropy) while simultaneously reducing afterload (systemic vascular resistance). Pure vasopressors like norepinephrine increase afterload, which can further burden a failing heart. Milrinone helps the pump work more effectively against less resistance.",
+      "difficulty": "Hard"
+    }
+  ]
+}

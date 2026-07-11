@@ -1,0 +1,90 @@
+{
+  "id": "c02",
+  "title": "Pediatric BLS Foundation & Team Dynamics",
+  "shortTitle": "Pediatric BLS & Teams",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the key differences between pediatric BLS and adult BLS as outlined in the AHA 2025 Guidelines.",
+    "Explain the compression-ventilation ratios for single-rescuer, two-rescuer, and post-pubertal pediatric CPR.",
+    "State the threshold heart rate (HR < 60 bpm) at which chest compressions should be initiated in a child with poor perfusion, regardless of age.",
+    "Demonstrate the two-thumb encircling-hands technique for infant and child chest compressions.",
+    "Identify the compression parameters: rate 100–120/min, depth at least one-third the anterior-posterior diameter of the chest, full recoil, and minimizing interruptions.",
+    "Apply the BLS algorithm for infants and children, including when to transition from rescue breathing to full CPR.",
+    "Describe the role of closed-loop communication in high-performing resuscitation teams.",
+    "Explain the rationale and technique for compressor switching every 2 minutes during prolonged CPR.",
+    "Cross-reference BLS chapters c08 (child CPR) and c09 (infant CPR) for detailed single-rescuer techniques."
+  ],
+  "summary": [
+    {
+      "title": "How Pediatric BLS Differs from Adult BLS",
+      "content": "Pediatric cardiac arrest is most commonly respiratory in origin — a child arrests because they stop breathing, not because of a primary cardiac event. This means ventilation is proportionally more important in pediatric BLS than in adult BLS. The compression-ventilation ratio reflects this: 30:2 for single-rescuer (all ages) but 15:2 for two or more rescuers performing CPR on a pre-pubertal child."
+    },
+    {
+      "title": "When to Start Compressions: The HR < 60 Rule",
+      "content": "If a child of any age has a heart rate less than 60 bpm with signs of poor perfusion — despite effective positive-pressure ventilation and supplemental oxygen — chest compressions should be started immediately. This applies to infants, children, and adolescents before puberty. A heart rate below 60 in a child represents inadequate cardiac output and is functionally equivalent to cardiac arrest."
+    },
+    {
+      "title": "Compression-Ventilation Ratios",
+      "content": "The ratios are: 30:2 for a single rescuer performing CPR on any age (infant, child, or adult); 15:2 for two or more rescuers performing CPR on a pre-pubertal child; and 30:2 for two or more rescuers performing CPR on a post-pubertal adolescent (same as adult). The 15:2 ratio for teams resuscitating pre-pubertal children allows more frequent ventilations to address the respiratory origin of most pediatric arrests."
+    },
+    {
+      "title": "Two-Thumb Encircling-Hands Technique",
+      "content": "The two-thumb encircling-hands technique is preferred for chest compressions in infants and small children, including when performed by a lone rescuer if the rescuer's hands can encircle the child's chest. Both thumbs compress the lower half of the sternum while the remaining fingers wrap around the back for support. This technique produces higher compression depth and more consistent force than the two-finger method. When encircling is not possible (e.g., the child is too large), heel-of-one-hand compression is an acceptable alternative."
+    },
+    {
+      "title": "Compression Quality Standards",
+      "content": "All pediatric chest compressions must meet the same quality standards as adult compressions: a rate of 100 to 120 compressions per minute, a depth of at least one-third the anterior-posterior (AP) diameter of the chest (approximately 1.5 inches in infants, 2 inches in children), allowing complete chest recoil between compressions, and minimizing interruptions in compressions to less than 10 seconds. Compression fraction — the proportion of time compressions are being performed — should exceed 80%."
+    },
+    {
+      "title": "Team Dynamics in Pediatric Resuscitation",
+      "content": "Pediatric resuscitations are team events. High-performing teams use clear role assignment, closed-loop communication, and brief focused debriefs. The team leader stands at the bedside directing care, not performing compressions. Closed-loop communication means the leader gives a specific order, the team member repeats it back, executes it, and confirms completion. This eliminates ambiguity and ensures nothing falls through the cracks."
+    },
+    {
+      "title": "Compressor Switching",
+      "content": "Compressor fatigue degrades compression quality within 1 to 2 minutes. The AHA recommends switching compressors every 2 minutes during prolonged CPR, with the transition completed in less than 5 seconds. A common strategy is a pre-designated 'switch call' on the minute or with the rhythm change check. The incoming compressor should be in position before the switch to minimize the interruption."
+    },
+    {
+      "title": "Cross-References to BLS Chapters",
+      "content": "This chapter integrates with BLS course content: BLS c08 covers single- and two-rescuer child CPR in detail, and BLS c09 covers infant CPR including the two-thumb encircling technique and the lone-rescuer approach. These chapters should be reviewed alongside this PALS chapter to build a complete foundation."
+    }
+  ],
+  "clinicalPearls": [
+    "Most pediatric cardiac arrests are respiratory in origin — this is why ventilations are not optional and the compression-ventilation ratio favors more breaths for teams resuscitating pre-pubertal children.",
+    "HR < 60 with poor perfusion = start compressions. Do not wait for the rhythm to worsen — a heart rate below 60 is inadequate cardiac output in a child.",
+    "Compressor fatigue is real and measurable. Switch at 2 minutes, not when someone 'feels tired.'",
+    "The two-thumb encircling-hands technique produces more consistent depth and force than two-finger compressions — use it whenever possible.",
+    "Closed-loop communication prevents errors: order → repeat back → execute → confirm. Every team member should practice this habit."
+  ],
+  "redFlags": [
+    "Starting compressions only after the heart rate drops below 40 bpm — the threshold is HR < 60 with poor perfusion, not 40.",
+    "Performing single-rescuer CPR at a 15:2 ratio — a lone rescuer always uses 30:2, regardless of patient age.",
+    "Allowing compression interruptions longer than 10 seconds during rhythm checks — have the AED or monitor ready before pausing.",
+    "A compressor who has been pushing for more than 2 minutes without switching — fatigue leads to shallow, incomplete compressions.",
+    "Ignoring poor perfusion signs because the blood pressure is 'still okay' — in children, tachycardia and weak pulses precede hypotension."
+  ],
+  "commonMistakes": [
+    "Using 30:2 for two-rescuer CPR on a child under 10 years old — the correct ratio is 15:2 for pre-pubertal patients with two or more rescuers.",
+    "Not pushing deep enough — at least one-third the AP diameter of the chest; in an infant this is approximately 1.5 inches (4 cm), in a child approximately 2 inches (5 cm).",
+    "Lifting hands off the chest during compressions, losing full recoil — the chest must fully recoil between compressions to allow venous return.",
+    "Failing to call for help early — pediatric arrests often require a team, and calling early ensures resources arrive in time.",
+    "Using the two-finger technique by default — the two-thumb encircling-hands technique is now preferred whenever the chest can be encircled."
+  ],
+  "memoryAids": [
+    "15:2 is for the TEAM (two+ rescuers) on a child; 30:2 is for the SOLO rescuer or a post-pubertal patient.",
+    "HR < 60 with poor perfusion: 'Sixty is the floor — push more, not less.'",
+    "Switch compressors every 2 minutes: 'Two and through' — fresh hands, better compressions.",
+    "Closed-loop: 'Say it, hear it, do it, confirm it' — the four steps of closed-loop communication.",
+    "Two-thumb encircling: 'Thumbs on the chest, fingers on the back' — the preferred hand position for infant/child compressions."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric BLS: When to Start Compressions",
+      "content": "Pediatric patient is unresponsive or has signs of poor perfusion\n  → Open airway, provide positive-pressure ventilation + supplemental O₂\n  → Reassess after 30–60 seconds of effective ventilation\n     → HR ≥ 60 with good perfusion → continue rescue breathing\n     → HR ≥ 60 with persistent poor perfusion → continue ventilation, reassess\n     → HR < 60 with poor perfusion despite adequate O₂/ventilation → START CHEST COMPRESSIONS\n        → Single rescuer: 30:2 ratio\n        → Two or more rescuers (pre-pubertal): 15:2 ratio\n        → Two or more rescuers (post-pubertal): 30:2 ratio\n  → Continue CPR cycles; switch compressors every 2 minutes; reassess rhythm after each cycle"
+    }
+  ],
+  "references": [
+    "AHA/AAP 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Guidelines for CPR and ECC — Pediatric BLS (cross-referenced with BLS chapters c08, c09)"
+  ]
+}

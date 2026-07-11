@@ -1,0 +1,36 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Pediatric Defibrillation Energy Doses (Biphasic Waveform)",
+      "headers": ["Attempt", "Energy Dose", "Maximum Dose", "Notes"],
+      "rows": [
+        ["First shock", "2 J/kg", "Adult dose if lower", "Unsynchronized; resume CPR immediately after"],
+        ["Second shock", "4 J/kg", "Adult dose if lower", "Escalated dose; give epinephrine during CPR if IV/IO available"],
+        ["Subsequent shocks", "≥4 J/kg (escalate as needed)", "10 J/kg or adult dose, whichever is lower", "Administer amiodarone or lidocaine during CPR"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "Synchronized Cardioversion Energy Doses",
+      "headers": ["Attempt", "Energy Dose", "Indication", "Key Considerations"],
+      "rows": [
+        ["First attempt", "0.5–1 J/kg synchronized", "Unstable tachycardia WITH a pulse (e.g., wide-complex tachycardia, SVT with shock)", "Sedate if clinical situation permits; never delay for sedation in an unstable patient"],
+        ["Second attempt", "2 J/kg synchronized", "If first attempt at 0.5–1 J/kg is ineffective", "Confirm synchronized mode is active; check for reversible causes"]
+      ]
+    },
+    {
+      "id": "c07_t03",
+      "title": "Amiodarone vs Lidocaine for Pediatric VF/pVT",
+      "headers": ["Feature", "Amiodarone", "Lidocaine"],
+      "rows": [
+        ["Dose", "5 mg/kg IV/IO", "1 mg/kg IV/IO"],
+        ["Initial max dose", "300 mg", "N/A (dose is weight-based)"],
+        ["Subsequent max dose", "150 mg per repeat dose (up to 3 doses)", "0.5–1 mg/kg repeat every 5–10 min"],
+        ["Role", "First-line antiarrhythmic for refractory VF/pVT", "Alternative when amiodarone is unavailable or ineffective"],
+        ["Route", "IV/IO bolus during CPR", "IV/IO bolus during CPR"]
+      ]
+    }
+  ]
+}

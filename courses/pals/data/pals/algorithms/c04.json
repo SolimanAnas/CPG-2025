@@ -1,0 +1,21 @@
+{
+  "chapter": "c04",
+  "algorithms": [
+    {
+      "id": "c04_alg01",
+      "title": "Categorizing Pediatric Respiratory Distress and Failure",
+      "description": "A systematic approach to classifying respiratory compromise in children into the four pathophysiologic categories based on clinical assessment, enabling rapid selection of appropriate first-line treatment.",
+      "image": "../../images/courses/pals/c04_g01.webp",
+      "steps": [
+        "Perform rapid primary assessment using the Pediatric Assessment Triangle: appearance, work of breathing, and circulation to skin.",
+        "Auscultate the airway and lungs: listen for stridor (inspiratory), wheeze (expiratory), or crackles (rales).",
+        "If inspiratory stridor is present → Upper Airway Obstruction.\n  • Barking cough + hoarseness → Croup → dexamethasone 0.6 mg/kg PO/IM + nebulized racemic epinephrine.\n  • Drooling + tripod + muffled voice → Epiglottitis → do not agitate; call airway team immediately.\n  • Sudden onset + choking history + asymmetric breath sounds → Foreign body → rigid bronchoscopy.",
+        "If expiratory wheezing with prolonged expiration is present → Lower Airway Obstruction.\n  • Diffuse wheezing → Asthma/Bronchiolitis → nebulized albuterol 2.5 mg q20 min × 3, supplemental O2.\n  • Assess for severity: ability to speak, retractions, SpO2 response to initial bronchodilators.",
+        "If crackles/rales are present with hypoxemia and radiographic infiltrates → Lung Tissue Disease.\n  • Pneumonia → antibiotics within 1 hour + supplemental O2.\n  • Pulmonary edema → diuretics, oxygen, identify cardiac vs non-cardiac cause.\n  • ARDS → lung-protective ventilation, treat underlying cause.",
+        "If respiratory pattern is abnormal (irregular, apneic, Cheyne-Stokes, shallow) with clear lungs → Disordered Control of Breathing.\n  • Neurological cause → secure the airway, provide mechanical ventilation.\n  • Neuromuscular cause → anticipate progressive ventilatory failure, plan for long-term support.\n  • Drug toxicity (opioids) → naloxone if opioid-induced; support ventilation.",
+        "Reassess continuously: any worsening despite category-appropriate treatment signals progression toward respiratory failure — escalate to positive-pressure ventilation and prepare for advanced airway management.",
+        "Remember: infants and small children decompensate rapidly. Do not wait for dramatic deterioration before intervening — act on early signs of distress."
+      ]
+    }
+  ]
+}

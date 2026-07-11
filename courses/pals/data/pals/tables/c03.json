@@ -1,0 +1,60 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "Endotracheal Tube Sizes by Age",
+      "headers": ["Age", "Uncuffed ID (mm)", "Cuffed ID (mm, Duracher)", "Cuffed ID (Alternative Reference)", "ETT Depth at Lip (cm)"],
+      "rows": [
+        ["Premature neonate", "2.5", "2.5", "2.5", "6.5–7"],
+        ["Term neonate (0–1 month)", "3.0", "3.0", "3.0", "7–8"],
+        ["Infant (1–12 months)", "3.5", "3.5", "3.0–3.5", "8–9"],
+        ["1 year", "4.0", "3.5–4.0", "3.5–4.0", "9–10"],
+        ["2 years", "4.0–4.5", "4.0", "4.0", "10–11"],
+        ["3 years", "4.5", "4.0–4.5", "4.5", "11–12"],
+        ["4 years", "4.5–5.0", "4.5", "4.5", "12"],
+        ["5 years", "5.0", "4.5–5.0", "5.0", "12–13"],
+        ["6 years", "5.0–5.5", "5.0", "5.0–5.5", "13"],
+        ["8 years", "5.5–6.0", "5.5", "5.5–6.0", "14"],
+        ["10 years", "6.0–6.5", "6.0", "6.0", "15"],
+        ["12+ years (adolescent)", "6.5–7.0 (cuffed)", "6.5–7.0", "7.0", "16–18"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "Ventilation Rates During Resuscitation",
+      "headers": ["Scenario", "Ventilation Rate", "Coordination with Compressions", "Notes"],
+      "rows": [
+        ["BLS (no advanced airway), single rescuer", "2 breaths per cycle (30:2)", "Ventilations pause compressions", "30 compressions, then 2 breaths"],
+        ["BLS (no advanced airway), 2+ rescuers, pre-pubertal", "2 breaths per cycle (15:2)", "Ventilations pause compressions", "15 compressions, then 2 breaths"],
+        ["BLS (no advanced airway), 2+ rescuers, post-pubertal", "2 breaths per cycle (30:2)", "Ventilations pause compressions", "Same as adult"],
+        ["Advanced airway (ETT or SGA) in place", "1 breath every 2–3 sec (20–30/min)", "Compressions continuous — no pauses for breaths", "Same rate for infants and children"],
+        ["Normal respiratory rate (reference)", "Varies by age", "N/A", "Neonate 30–60, infant 24–40, child 18–30"]
+      ]
+    },
+    {
+      "id": "c03_t03",
+      "title": "DOPE Troubleshooting Framework",
+      "headers": ["Letter", "Cause", "Key Assessment", "Immediate Action"],
+      "rows": [
+        ["D", "Displacement of the tube", "Check depth marking, auscultate breath sounds, ETCO₂ waveform", "If displaced: remove and re-intubate or place SGA"],
+        ["O", "Obstruction of the tube", "Suction, check for kinking/biting, no air movement through tube", "Suction, reposition, inline suction if mucus plug"],
+        ["P", "Pneumothorax", "Absent/asymmetric breath sounds, tracheal deviation, hypotension, subcutaneous emphysema", "Needle decompression → chest tube"],
+        ["E", "Equipment failure", "Check connections, O₂ supply, bag function, circuit integrity", "Replace faulty equipment, reconnect circuit"]
+      ]
+    },
+    {
+      "id": "c03_t04",
+      "title": "Cuffed vs Uncuffed ET Tubes — Key Comparisons",
+      "headers": ["Feature", "Cuffed ET Tube", "Uncuffed ET Tube"],
+      "rows": [
+        ["Recommended use (2025)", "Preferred for most pediatric patients", "Neonates and infants (clinical preference)"],
+        ["Sizing formula", "(age/4) + 3.5 mm, round to nearest 0.5", "(age/4) + 4.0 mm"],
+        ["Advantages", "Better ventilation control, less aspiration risk, reliable ETCO₂", "Simpler, lower risk of cuff-related injury"],
+        ["Disadvantages", "Risk of mucosal injury if over-inflated", "Leak around tube, less reliable ETCO₂"],
+        ["Cuff inflation", "Minimum occlusive volume only", "N/A — no cuff"],
+        ["Cuff pressure limit", "Keep below 25 cm H₂O to prevent ischemia", "N/A"]
+      ]
+    }
+  ]
+}

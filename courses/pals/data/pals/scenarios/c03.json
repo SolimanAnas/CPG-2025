@@ -1,0 +1,71 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Desaturation During Intubation Attempt",
+      "presentation": "An 18-month-old (10 kg) with severe pneumonia is in respiratory failure and being prepared for rapid-sequence intubation. During the intubation attempt, the SpO₂ drops from 92% to 74%. The laryngoscope is in place, and the provider has visualized the vocal cords. The heart rate is 90 bpm.",
+      "vitals": {
+        "hr": "90 bpm",
+        "bp": "72/44 mmHg",
+        "rr": "55/min",
+        "spo2": "74%",
+        "temp": "38.6°C"
+      },
+      "question": "The SpO₂ is falling rapidly during the intubation attempt. What is the MOST appropriate immediate action?",
+      "options": [
+        "A: Continue the intubation attempt — you already have a view of the cords.",
+        "B: Remove the laryngoscope, resume bag-mask ventilation with 100% oxygen, and pre-oxygenate again before reattempting.",
+        "C: Abandon airway management and start chest compressions.",
+        "D: Insert an SGA without stopping to re-oxygenate."
+      ],
+      "correct": 1,
+      "explanation": "When desaturation occurs during an intubation attempt, the priority is to restore oxygenation. Remove the laryngoscope, resume bag-mask ventilation with 100% oxygen, and re-oxygenate. A single intubation attempt should be limited in duration, especially in a child who is desaturating. Once saturation recovers, reattempt or consider an SGA as a rescue device.",
+      "clinicalPearl": "In small children, oxygen reserves are depleted rapidly due to higher metabolic demands and smaller FRC. Pre-oxygenation is critical, and intubation attempts should be brief — stop if SpO₂ drops significantly and re-oxygenate."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Sudden Desaturation After Tube Placement",
+      "presentation": "A 4-year-old (16 kg) was intubated during cardiac arrest for a primary respiratory event. The ET tube was placed, placement was confirmed with ETCO₂ (waveform present), and continuous compressions were resumed. Five minutes later, the monitor shows the ETCO₂ waveform has disappeared, the SpO₂ is falling, and breath sounds are absent on the left side.",
+      "vitals": {
+        "hr": "No pulse detected",
+        "bp": "Not applicable",
+        "rr": "No respiratory effort",
+        "spo2": "Not applicable",
+        "temp": "34.8°C"
+      },
+      "question": "Using the DOPE framework, what is the most likely cause and what is the next step?",
+      "options": [
+        "A: Equipment failure — check all connections and the oxygen supply.",
+        "B: Obstruction — suction the tube immediately.",
+        "C: Displacement — the tube has likely advanced into the right mainstem; withdraw it 1–2 cm and reassess.",
+        "D: Pneumothorax — perform needle decompression on the left."
+      ],
+      "correct": 2,
+      "explanation": "Loss of ETCO₂ waveform with absent left breath sounds and present right breath sounds (implied by the unilateral finding) is consistent with mainstem intubation — the tube has migrated too far into the right mainstem bronchus, ventilating only the right lung. Withdrawing the tube 1–2 cm should restore bilateral ventilation.",
+      "clinicalPearl": "Mainstem intubation is the most common form of tube displacement during CPR. After any movement of the child or the equipment, reconfirm tube position. In children, the trachea is short (approximately 5 cm in a young child), so even 1–2 cm of migration matters."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Low ETCO₂ Despite Confirmed Tube Placement",
+      "presentation": "A 9-year-old (28 kg) is in pulseless electrical activity (PEA) cardiac arrest. The team has placed a cuffed ET tube (6.0 mm), confirmed placement with ETCO₂, and is performing continuous compressions with ventilations at 1 breath every 2–3 seconds. The ETCO₂ reading is consistently 6 mmHg despite confirmed tube position.",
+      "vitals": {
+        "hr": "No pulse",
+        "bp": "Not applicable",
+        "rr": "Ventilated by bag at 20/min",
+        "spo2": "Not applicable",
+        "temp": "35.0°C"
+      },
+      "question": "The ETCO₂ is 6 mmHg with a confirmed tube. What does this most likely indicate, and what should the team do?",
+      "options": [
+        "A: The tube is misplaced — remove and re-intubate.",
+        "B: The oxygen supply is depleted — check equipment.",
+        "C: Compression quality is inadequate — reassess depth, rate, recoil, and hand position.",
+        "D: The child has ROSC and the monitor is malfunctioning."
+      ],
+      "correct": 2,
+      "explanation": "ETCO₂ below 10 mmHg during CPR, with confirmed tube placement, strongly suggests inadequate cardiac output from compressions. The team should systematically reassess: Is the compression depth adequate (at least ⅓ AP diameter)? Is the rate 100–120/min? Is there full recoil? Are the compressions centered on the lower sternum?",
+      "clinicalPearl": "ETCO₂ is a real-time surrogate for cardiac output during CPR. When it is low with a confirmed tube, the first thing to fix is the compressions, not the ventilations. Also check for reversible causes (hypovolemia, tension pneumothorax, tamponade, hypoxia, hypothermia, toxins)."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "c09",
+  "title": "Pharmacology & Vascular Access (IV/IO, Weight-Based Dosing)",
+  "shortTitle": "PALS Pharmacology",
+  "estimatedStudyTime": 30,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "List the six core emergency medications used in PALS and state the weight-based dose, route, and maximum dose for each.",
+    "Explain the difference between IV and IO access and identify when each is most appropriate during pediatric emergencies.",
+    "Describe the technique for intraosseous (IO) needle insertion and the sites commonly used in infants and children.",
+    "Demonstrate the ability to calculate weight-based drug doses using a patient's estimated or measured weight.",
+    "Explain the role of length-based weight estimation tools (Broselow tape) and their limitations in clinical practice.",
+    "Describe the standard IV/IO flush protocol and its importance in ensuring drug delivery.",
+    "Differentiate the indications for adenosine in SVT from atropine in bradycardia and state the dose and administration technique for each.",
+    "Explain the indications, dose, and route of dextrose administration for hypoglycemia in pediatric patients.",
+    "Identify the standard drug concentrations for PALS emergency medications and explain why concentration errors are dangerous."
+  ],
+  "summary": [
+    {
+      "title": "The Six Core PALS Emergency Medications",
+      "content": "PALS recognizes six core emergency medications that providers must know cold: (1) Epinephrine — for cardiac arrest (all rhythms) and severe bradycardia; (2) Amiodarone — for refractory VF/pVT; (3) Lidocaine — alternative antiarrhythmic for VF/pVT; (4) Atropine — for symptomatic bradycardia with increased vagal tone or primary AV block; (5) Adenosine — for stable and unstable supraventricular tachycardia (SVT); (6) Dextrose (Glucose) — for symptomatic hypoglycemia. Each drug has a specific weight-based dose, a recommended concentration, and a maximum dose that must never be exceeded."
+    },
+    {
+      "title": "Epinephrine: The Universal Resuscitation Drug",
+      "content": "Epinephrine is used in cardiac arrest for both shockable and non-shockable rhythms and for severe symptomatic bradycardia unresponsive to other interventions. The standard dose is 0.01 mg/kg IV/IO (0.1 mL/kg of 0.1 mg/mL concentration), given every 3–5 minutes during arrest with a maximum single dose of 1 mg. For bradycardia (not arrest), a lower dose of 0.01 mg/kg IV/IO is used. The endotracheal route is no longer preferred during cardiac arrest. Epinephrine works through alpha-adrenergic vasoconstriction, increasing aortic diastolic pressure and improving coronary perfusion during CPR."
+    },
+    {
+      "title": "Antiarrhythmics: Amiodarone and Lidocaine",
+      "content": "Amiodarone 5 mg/kg IV/IO is the first-line antiarrhythmic for refractory VF or pulseless VT. The initial bolus is capped at a maximum of 300 mg. Subsequent repeat doses are limited to a maximum of 150 mg each, and the drug may be repeated up to 3 times total. Lidocaine 1 mg/kg IV/IO is the alternative when amiodarone is unavailable or ineffective. Both drugs are given as rapid IV/IO boluses during CPR without interrupting chest compressions. Neither drug defibrillates the heart — defibrillation remains the primary treatment for VF/pVT; these drugs suppress recurrent arrhythmias."
+    },
+    {
+      "title": "Atropine: For Symptomatic Bradycardia",
+      "content": "Atropine is an anticholinergic (parasympatholytic) agent used for symptomatic bradycardia — specifically bradycardia caused by increased vagal tone or primary atrioventricular (AV) block. The dose is 0.02 mg/kg IV/IO, with a minimum single dose of 0.1 mg (to avoid paradoxical bradycardia at lower doses) and a maximum single dose of 0.5 mg. Atropine is not effective for bradycardia secondary to hypoxia, and the underlying cause must be identified and treated. It is not used during cardiac arrest and is no longer recommended for routine endotracheal tube suctioning in neonates."
+    },
+    {
+      "title": "Adenosine: For SVT",
+      "content": "Adenosine is the first-line medication for narrow-complex (or wide-complex) supraventricular tachycardia (SVT) in children who are stable or have pulse but show signs of poor perfusion. The initial dose is 0.1 mg/kg given as a rapid IV push (over 1–3 seconds) followed immediately by a saline flush, delivered through a proximal (central or large-bore peripheral) IV as close to the heart as possible. If the first dose is ineffective, a second dose of 0.2 mg/kg (maximum 12 mg) is given. The maximum first dose is 6 mg. Adenosine has an extremely short half-life (seconds) and works by transiently blocking AV nodal conduction, interrupting the re-entrant circuit of SVT."
+    },
+    {
+      "title": "Dextrose: For Hypoglycemia",
+      "content": "Hypoglycemia (blood glucose <60 mg/dL or symptomatic hypoglycemia) is common in critically ill infants and children, and in children with diabetes. The recommended treatment is dextrose IV: D10W (10% dextrose) at 2–5 mL/kg for infants, or D25W (25% dextrose) at 1–2 mL/kg for older children, providing approximately 0.5–1 g/kg of glucose. In cardiac arrest, D10W 1–2 mL/kg is preferred as a bolus. IO dextrose is also acceptable. Always recheck glucose after administration and monitor for recurrence. Never use D50 in neonates and young infants due to the risk of chemical sclerosis of small veins."
+    },
+    {
+      "title": "Vascular Access: IV vs IO in Pediatric Emergencies",
+      "content": "In pediatric emergencies, intravenous (IV) and intraosseous (IO) access are both effective routes for drug and fluid administration. Peripheral IV access is preferred when it can be established rapidly (within 1–2 attempts), but in cardiac arrest or severe shock, peripheral IV access is often difficult and delayed. Intraosseous (IO) access is the recommended initial route in pediatric cardiac arrest when IV access is not immediately available — it provides rapid, reliable access to the systemic circulation through the bone marrow cavity. The proximal tibia (2 cm below the tibial tuberosity) and the proximal humerus are common IO sites. IO placement takes approximately 30–60 seconds and can be used for all emergency medications, fluids, and blood products."
+    },
+    {
+      "title": "Weight Estimation and the Broselow Tape",
+      "content": "Accurate weight estimation is critical for safe weight-based dosing in pediatric emergencies. For children older than 2 years, weight can be estimated using the formula: weight (kg) = (age in years × 2) + 8. The Broselow tape (length-based resuscitation tape) estimates weight based on the child's measured length (height), which is more accurate than age-based formulas for children ages 1–12. The tape also color-codes equipment sizes and drug doses for rapid reference. Limitations include inaccuracy in obese or malnourished children and the need to use actual (not estimated) weight when available. When a child's actual weight is known, always use the actual weight for dosing calculations."
+    }
+  ],
+  "clinicalPearls": [
+    "Always double-check the epinephrine concentration: 0.1 mg/mL (1:10,000) for IV/IO, NOT 1 mg/mL (1:1,000) — using the wrong concentration (1 mg/mL) can result in a 10-fold overdose.",
+    "IO access is NOT a last resort — in pediatric cardiac arrest, it is the recommended first-line vascular access when IV cannot be established within 1–2 attempts.",
+    "Adenosine must be given as a RAPID IV push through a proximal IV site and flushed immediately — slow administration or peripheral distal IV delivery will inactivate the drug before it reaches the heart.",
+    "The minimum dose of atropine is 0.1 mg (not lower) — doses below this can cause paradoxical bradycardia through central vagal stimulation.",
+    "D50 (50% dextrose) is NOT recommended for neonates and young infants — use D10W to avoid chemical phlebitis and vein sclerosis."
+  ],
+  "redFlags": [
+    "Giving the wrong epinephrine concentration — 1 mg/mL (1:1,000) instead of 0.1 mg/mL (1:10,000) delivers a 10x overdose that can cause severe hypertension and arrhythmias.",
+    "Delaying epinephrine to establish peripheral IV access — IO access should be attempted immediately if IV is not available within 1–2 minutes in cardiac arrest.",
+    "Using atropine for bradycardia caused by hypoxia — atropine does not treat the underlying cause; always identify and treat the source of bradycardia.",
+    "Administering adenosine through a distal peripheral IV without rapid flush — the drug will be degraded before reaching the AV node."
+  ],
+  "commonMistakes": [
+    "Confusing the cardiac arrest IV/IO epinephrine concentration (0.1 mg/mL or 1:10,000) with the anaphylaxis/IM concentration (1 mg/mL or 1:1,000) — using the 1 mg/mL concentration for IV/IO delivery results in a 10-fold overdose.",
+    "Using age-based weight formulas when the Broselow tape or actual weight is available — more accurate weight means safer dosing.",
+    "Forgetting the minimum atropine dose (0.1 mg) — giving less than 0.1 mg can paradoxically slow the heart rate.",
+    "Attempting more than 2 peripheral IV sticks in a cardiac arrest — switch to IO access after 2 failed attempts to minimize delay.",
+    "Not flushing after adenosine — failure to flush ensures the drug is diluted and degraded in peripheral veins before reaching the heart."
+  ],
+  "memoryAids": [
+    "'Epi, Amio, Lidocaine, Atropine, Adeno, Dextrose — EALAD' — the six core PALS drugs in one mnemonic.",
+    "'IO is not a consolation prize — it's a frontline access route in pediatric arrest.'",
+    "'Adenosine: Push-Flush-Freeze' — rapid push, saline flush, and the heart briefly pauses (the 'freeze' is the therapeutic transient asystole).",
+    "'Atropine minimum is one-tenth (0.1 mg) — below that, paradoxical slowing.'",
+    "'D10 for little ones, D25 for bigger kids' — dextrose concentration by age."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Vascular Access Decision Tree",
+      "content": "Pediatric patient needs emergent IV/IO access\n  → Is IV access already established and functional?\n     → YES: use existing IV for medication and fluid administration\n     → NO: How many IV attempts have been made?\n        → 0–1 attempts: attempt peripheral IV (antecubital or external jugular preferred)\n           → Success: use IV\n           → Failure after 1–2 attempts: proceed to IO\n        → ≥2 attempts failed or clinical situation too urgent: proceed to IO immediately\n           → IO site: proximal tibia (2 cm below tibial tuberosity) in infants/young children\n           → IO site: proximal humerus in older children/adolescents\n           → Insert IO needle; confirm placement (aspiration of bone marrow, easy flush, no infiltration)\n           → Use IO for all emergency medications, fluids, and blood products"
+    },
+    {
+      "title": "PALS Weight-Based Dosing Calculation Algorithm",
+      "content": "Step 1 — Determine the patient's weight\n  → If actual weight is known: use it\n  → If unknown: use Broselow tape (length-based, ages 1–12) or formula: weight (kg) = (age × 2) + 8\nStep 2 — Identify the required medication and its PALS dose (mg/kg or mL/kg)\nStep 3 — Calculate the dose: weight (kg) × dose per kg = total dose (mg or mL)\nStep 4 — Check the calculated dose against the maximum single dose\n  → If calculated dose > maximum: give the maximum dose\n  → If calculated dose ≤ maximum: give the calculated dose\nStep 5 — Identify the available drug concentration\nStep 6 — Calculate the volume to administer: total dose (mg) ÷ concentration (mg/mL) = volume (mL)\nStep 7 — Draw up and label the syringe; have a second provider verify the calculation\nStep 8 — Administer via the appropriate route (IV push, IO, or diluted per protocol)"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 PALS Drug Reference Card",
+    "AHA 2025 Guidelines for Vascular Access in Pediatric Resuscitation"
+  ],
+  "graphics": [
+    {
+      "id": "c09_g01",
+      "section": "summary",
+      "sectionIndex": 6,
+      "url": "../../images/courses/pals/c09_g01.webp",
+      "alt": "Intraosseous (IO) Insertion Site in Children",
+      "caption": "Anatomical diagram of a child's knee showing the correct tibial insertion site for intraosseous access."
+    }
+  ]
+}

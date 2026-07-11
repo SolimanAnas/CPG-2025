@@ -1,0 +1,42 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "The Four Categories of Pediatric Respiratory Compromise",
+      "headers": ["Category", "Characteristic Findings", "Common Causes", "First-Line Management"],
+      "rows": [
+        ["Upper Airway Obstruction", "Inspiratory stridor, barking cough, hoarseness, drooling, tripod position, muffled voice", "Croup (viral laryngotracheobronchitis), epiglottitis, foreign body above the cords, peritonsillar abscess", "Croup: dexamethasone 0.6 mg/kg + racemic epinephrine nebulizer; Epiglottitis: secure airway; Foreign body: remove"],
+        ["Lower Airway Obstruction", "Expiratory wheezing, prolonged expiratory phase, air trapping, hyperinflation on CXR, diminished air entry", "Asthma exacerbation, bronchiolitis (RSV), anaphylaxis (bronchospasm component)", "Albuterol nebulizer 2.5 mg q20 min × 3, ipratropium if severe, supplemental O2, systemic corticosteroids"],
+        ["Lung Tissue Disease", "Crackles (rales), dullness to percussion, hypoxemia out of proportion to effort, radiographic infiltrates/edema", "Bacterial pneumonia, viral pneumonia, pulmonary edema, ARDS, aspiration pneumonitis", "Supplemental O2 targeting SpO2 ≥94%, antibiotics within 1 hour if bacterial suspected, diuretics for edema"],
+        ["Disordered Control of Breathing", "Abnormal respiratory pattern (irregular, apneic, Cheyne-Stokes, shallow), clear lung auscultation, neurological signs", "Raised ICP, traumatic brain injury, opioid/sedative toxicity, encephalopathy, neuromuscular disease (GBS, muscular dystrophy)", "Airway support (intubation + mechanical ventilation), naloxone for opioid cause, treat underlying neurological condition"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "Inspiratory Stridor vs Expiratory Wheeze",
+      "headers": ["Feature", "Inspiratory Stridor", "Expiratory Wheeze"],
+      "rows": [
+        ["Timing in respiratory cycle", "Inspiration", "Expiration"],
+        ["Anatomic location", "Upper airway (above vocal cords)", "Lower airway (bronchi and bronchioles)"],
+        ["Typical causes", "Croup, epiglottitis, foreign body, bacterial tracheitis", "Asthma, bronchiolitis, foreign body (if lodged lower)"],
+        ["Character", "High-pitched, harsh", "Musical, variable pitch"],
+        ["Key auscultation finding", "Loud over the neck, loudest at the suprasternal notch", "Diffuse, heard best over the anterior chest with forced expiration"],
+        ["First-line treatment approach", "Reduce supraglottic edema (dexa, racemic epi) or relieve mechanical obstruction", "Relax bronchial smooth muscle (bronchodilators)"]
+      ]
+    },
+    {
+      "id": "c04_t03",
+      "title": "Respiratory Distress vs Respiratory Failure",
+      "headers": ["Feature", "Respiratory Distress", "Respiratory Failure"],
+      "rows": [
+        ["Work of breathing", "Increased (retractions, flaring, accessory muscles)", "May be increased then suddenly decreased (fatigue)"],
+        ["Oxygenation", "SpO2 maintained or mildly decreased", "Hypoxemia despite supplemental O2"],
+        ["Ventilation", "Normal or mild hypocapnia (hyperventilation)", "Hypercapnia (PaCO2 >50 mmHg), rising EtCO2"],
+        ["Mental status", "Alert, may be agitated", "Lethargic, confused, or apneic"],
+        ["Respiratory pattern", "Rapid but regular", "Irregular, gasping, or absent"],
+        ["Intervention needed", "Category-specific first-line therapy + close monitoring", "Positive-pressure ventilation, prepare for intubation"]
+      ]
+    }
+  ]
+}

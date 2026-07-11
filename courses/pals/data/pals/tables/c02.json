@@ -1,0 +1,40 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "Compression-Ventilation Ratios in Pediatric and Adult BLS",
+      "headers": ["Patient Population", "Single Rescuer", "Two or More Rescuers"],
+      "rows": [
+        ["Infant (0–12 months, pre-pubertal)", "30:2", "15:2"],
+        ["Child (1 year to puberty)", "30:2", "15:2"],
+        ["Post-pubertal adolescent", "30:2", "30:2"],
+        ["Adult", "30:2", "30:2"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "Chest Compression Parameters by Age Group",
+      "headers": ["Parameter", "Infant (0–12 months)", "Child (1 year–puberty)", "Adult/Post-pubertal"],
+      "rows": [
+        ["Preferred technique", "Two-thumb encircling-hands", "Two-thumb encircling-hands or heel of one hand", "Two hands (interlocked)"],
+        ["Compression depth", "At least 1.5 inches (4 cm) — ⅓ AP diameter", "At least 2 inches (5 cm) — ⅓ AP diameter", "At least 2 inches (5 cm), not exceeding 2.4 inches (6 cm)"],
+        ["Compression rate", "100–120/min", "100–120/min", "100–120/min"],
+        ["Chest recoil", "Full recoil — no leaning", "Full recoil — no leaning", "Full recoil — no leaning"],
+        ["Compression fraction", "> 80%", "> 80%", "> 80%"]
+      ]
+    },
+    {
+      "id": "c02_t03",
+      "title": "When to Start Compressions — Decision Thresholds",
+      "headers": ["Finding", "Action", "Rationale"],
+      "rows": [
+        ["No pulse, no breathing", "Start CPR immediately (30:2 single / 15:2 team pre-pubertal)", "Cardiac arrest — no cardiac output"],
+        ["No pulse, agonal gasps", "Start CPR immediately — agonal gasps are NOT normal breathing", "Agonal gasps occur in arrest; treat as pulseless"],
+        ["Pulse < 60 bpm + poor perfusion + adequate ventilation", "Start chest compressions", "HR < 60 = inadequate cardiac output in a child"],
+        ["Pulse ≥ 60 bpm + good perfusion", "Continue rescue breathing, reassess", "Adequate cardiac output — ventilation is the priority"],
+        ["Pulse ≥ 60 bpm + poor perfusion", "Continue ventilation, reassess frequently", "Poor perfusion with acceptable HR — reassess for deterioration"]
+      ]
+    }
+  ]
+}

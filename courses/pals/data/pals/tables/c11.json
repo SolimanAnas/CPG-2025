@@ -1,0 +1,51 @@
+{
+  "chapter": "c11",
+  "tables": [
+    {
+      "id": "c11_t01",
+      "title": "Sinus Tachycardia vs Supraventricular Tachycardia — Comparison",
+      "headers": ["Feature", "Sinus Tachycardia", "Supraventricular Tachycardia (SVT)"],
+      "rows": [
+        ["Rate", "Usually < 220 bpm (infants), < 180 bpm (children)", "220–300 bpm (infants), 150–250 bpm (children)"],
+        ["Onset", "Gradual", "Sudden"],
+        ["Regularity", "May vary slightly", "Very regular"],
+        ["P waves", "Visible before every QRS", "Absent, buried in QRS, or retrograde (inverted)"],
+        ["Variability", "Rate varies with activity, fever, pain, emotion", "Fixed rate regardless of activity"],
+        ["Response to adenosine", "No conversion (may transiently slow then return)", "Often converts to sinus rhythm"],
+        ["Most common cause", "Fever, pain, dehydration, anxiety, anemia", "Re-entry circuit (accessory pathway or AV node)"],
+        ["Treatment", "Treat underlying cause", "Adenosine → cardioversion if unstable"]
+      ]
+    },
+    {
+      "id": "c11_t02",
+      "title": "Synchronized Cardioversion Energy Levels",
+      "headers": ["Attempt", "Energy Dose", "Calculation Example (20 kg child)"],
+      "rows": [
+        ["First attempt", "0.5–1 J/kg", "10–20 J"],
+        ["Second attempt", "2 J/kg", "40 J"],
+        ["Further attempts", "Consult cardiology", "Escalate under expert guidance"]
+      ]
+    },
+    {
+      "id": "c11_t03",
+      "title": "Adenosine Dosing Quick-Reference",
+      "headers": ["Dose", "Rate", "Maximum", "Route", "Administration"],
+      "rows": [
+        ["First dose", "0.1 mg/kg", "6 mg", "IV (proximal preferred)", "Rapid push + saline flush"],
+        ["Second dose", "0.2 mg/kg", "12 mg", "IV (proximal preferred)", "Rapid push + saline flush"]
+      ]
+    },
+    {
+      "id": "c11_t04",
+      "title": "Narrow vs Wide Complex Tachycardia in Children",
+      "headers": ["Feature", "Narrow Complex (< 0.09 s)", "Wide Complex (≥ 0.09 s)"],
+      "rows": [
+        ["Most likely mechanism", "SVT (supraventricular origin)", "VT or SVT with aberrancy"],
+        ["Common in children?", "Yes — most childhood tachycardias are narrow", "Less common; VT is rare but serious"],
+        ["Associated conditions", "Accessory pathway (WPW), AV node re-entry", "Structural heart disease, channelopathies, drug toxicity"],
+        ["First-line if stable", "Adenosine", "Expert consultation before antiarrhythmics"],
+        ["If unstable", "Synchronized cardioversion", "Synchronized cardioversion"]
+      ]
+    }
+  ]
+}

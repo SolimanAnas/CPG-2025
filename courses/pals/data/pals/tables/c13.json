@@ -1,0 +1,49 @@
+{
+  "chapter": "c13",
+  "tables": [
+    {
+      "id": "c13_t01",
+      "title": "Special Circumstances Quick-Reference",
+      "headers": ["Circumstance", "Key Modification", "Priority Intervention", "Medication/Dose"],
+      "rows": [
+        ["Trauma arrest", "Treat reversible causes early", "Bilateral chest decompression if pneumothorax; blood products", "Epinephrine per PALS; blood products (whole blood or balanced pRBC/FFP/platelets)"],
+        ["Drowning", "Ventilation-first (A-B-C approach)", "Rescue breaths before compressions; aggressive ventilation", "Standard PALS meds; hypothermia not a barrier to resuscitation"],
+        ["Opioid exposure", "Naloxone as adjunct to CPR", "Secure airway, provide ventilation, administer naloxone", "Naloxone 0.1 mg/kg IV/IO/IM/IN (max 2 mg)"],
+        ["Anaphylaxis", "Epinephrine IM first, repeat PRN", "IM epinephrine + aggressive fluid resuscitation + airway", "Epinephrine 0.01 mg/kg of 1:1,000 IM (min 0.1 mg, max 0.5 mg)"],
+        ["Single-ventricle CHD", "Avoid reducing SVR; cardiology consult", "Identify anatomy; maintain systemic and pulmonary flow", "Standard PALS meds with awareness of parallel circulation"]
+      ]
+    },
+    {
+      "id": "c13_t02",
+      "title": "Epinephrine Dosing: Anaphylaxis vs Cardiac Arrest",
+      "headers": ["Context", "Concentration", "Route", "Dose", "Key Difference"],
+      "rows": [
+        ["Anaphylaxis (IM)", "1:1,000 (1 mg/mL)", "Intramuscular (anterolateral thigh)", "0.01 mg/kg (min 0.1 mg, max 0.5 mg)", "Higher concentration, smaller volume, IM route"],
+        ["Cardiac arrest (IV/IO)", "1:10,000 (0.1 mg/mL)", "IV or IO rapid push", "0.01 mg/kg", "Lower concentration, larger volume, IV/IO route"]
+      ]
+    },
+    {
+      "id": "c13_t03",
+      "title": "Naloxone Dosing Quick-Reference",
+      "headers": ["Route", "Dose", "Maximum", "Onset", "Duration"],
+      "rows": [
+        ["IV/IO", "0.1 mg/kg", "2 mg", "1–2 minutes", "20–90 minutes"],
+        ["IM", "0.1 mg/kg", "2 mg", "2–5 minutes", "20–90 minutes"],
+        ["Intranasal (IN)", "0.1 mg/kg", "2 mg", "2–5 minutes", "20–90 minutes"]
+      ]
+    },
+    {
+      "id": "c13_t04",
+      "title": "Anaphylaxis Treatment Summary",
+      "headers": ["Intervention", "Dose/Details", "Timing"],
+      "rows": [
+        ["Epinephrine IM (first-line)", "0.01 mg/kg of 1:1,000 IM (min 0.1 mg, max 0.5 mg)", "Immediately — do not delay"],
+        ["Repeat epinephrine", "Same dose every 5–15 minutes", "As needed"],
+        ["IV fluid bolus", "20 mL/kg normal saline or LR", "Immediately; repeat as needed"],
+        ["Airway management", "Early intubation if stridor or edema", "Early — do not wait for complete obstruction"],
+        ["Diphenhydramine (adjunct)", "1 mg/kg IV/IM (max 50 mg)", "After epinephrine"],
+        ["Methylprednisolone (adjunct)", "1–2 mg/kg IV (max 125 mg)", "After epinephrine"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "chapter": "c12",
+  "algorithms": [
+    {
+      "id": "c12_alg01",
+      "title": "Post-Cardiac Arrest Care Checklist",
+      "description": "Systematic checklist for managing a pediatric patient after return of spontaneous circulation (ROSC), covering airway, oxygenation, ventilation, hemodynamics, temperature, neurological monitoring, and family support.",
+      "steps": [
+        "Step 1 — Confirm and document sustained ROSC with pulse and measurable blood pressure.",
+        "Step 2 — Secure the airway: intubate if not already done; continue mechanical ventilation if needed.",
+        "Step 3 — Oxygenation: titrate FiO2 to maintain SpO2 94–99%. Avoid both hypoxia and hyperoxia.",
+        "Step 4 — Ventilation: target PaCO2 35–45 mmHg (normocapnia). Avoid hyperventilation and hypoventilation.",
+        "Step 5 — Obtain 12-lead ECG and portable chest X-ray to evaluate cardiac rhythm and pulmonary status.",
+        "Step 6 — Establish continuous monitoring: continuous ECG, pulse oximetry, and arterial blood pressure (arterial line preferred).",
+        "Step 7 — Initiate targeted temperature management (TTM) within hours of ROSC: 32–34°C for 48 h then 36–37.5°C, OR 36–37.5°C throughout for 5 days.",
+        "Step 8 — Hemodynamic support: maintain SBP above 5th percentile for age. Start vasoactive infusion (epinephrine, norepinephrine, or dopamine) if needed.",
+        "Step 9 — Blood glucose: check immediately and maintain normal range. Treat hyperglycemia and hypoglycemia.",
+        "Step 10 — Obtain labs: arterial blood gas, lactate, electrolytes, glucose, troponin, CBC.",
+        "Step 11 — Echocardiography: assess cardiac function and guide vasoactive medication choices.",
+        "Step 12 — Neurological monitoring: continuous EEG if available, especially in comatose children.",
+        "Step 13 — Seizure management: treat clinical and subclinical seizures immediately with anticonvulsants.",
+        "Step 14 — Identify and treat reversible causes: cardiac, toxicologic, metabolic, and infectious etiologies.",
+        "Step 15 — Neuroprognostication: multimodal approach (clinical exam, EEG, biomarkers, MRI, evoked potentials), no earlier than 72 hours post-ROSC.",
+        "Step 16 — Family support: designate a support person, communicate openly and compassionately, offer social work and chaplaincy resources."
+      ]
+    }
+  ]
+}

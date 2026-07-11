@@ -1,0 +1,53 @@
+{
+  "chapter": "c13",
+  "cases": [
+    {
+      "id": "c13_s01",
+      "title": "Drowning in a Toddler",
+      "presentation": "A 2-year-old child (12 kg) was found floating face-down in a backyard swimming pool. Estimated submersion time is 3–4 minutes. The child was pulled from the water by a bystander who cleared the airway. The child is unresponsive with agonal respirations and a palpable but very slow pulse. The pool water temperature was 26°C (79°F).",
+      "vitals": { "hr": "45 bpm", "bp": "Not measurable", "rr": "4 (agonal)", "spo2": "55%", "temp": "33.0°C" },
+      "question": "What is the MOST appropriate initial resuscitation approach?",
+      "options": [
+        "A: Start chest compressions immediately and apply AED",
+        "B: Provide rescue breaths first, then begin CPR with ventilations (A-B-C approach)",
+        "C: Withhold resuscitation — the child is hypothermic and likely non-survivable",
+        "D: Start an epinephrine drip and transport without CPR"
+      ],
+      "correct": 1,
+      "explanation": "Drowning is a hypoxic arrest — ventilation is the priority. Rescue breaths should be provided first to oxygenate the brain and heart, then CPR with a compression-to-ventilation ratio that emphasizes breaths (30:2). The child has a pulse but is in severe bradycardia with respiratory failure. Hypothermia from cold water is common and should not deter aggressive resuscitation.",
+      "clinicalPearl": "In drowning, always provide breaths before compressions — the primary problem is lack of oxygen, not cardiac dysfunction. Cold water drowning may be protective."
+    },
+    {
+      "id": "c13_s02",
+      "title": "Anaphylaxis Progressing to Arrest",
+      "presentation": "A 5-year-old child (18 kg) with a known peanut allergy accidentally ingested peanut butter at a birthday party. Within 10 minutes, the child developed urticaria, facial swelling, wheezing, and then became unresponsive. EMS finds the child apneic with a weak pulse of 50 bpm and a blood pressure of 40/20 mmHg. An epinephrine auto-injector was administered by the family at the scene.",
+      "vitals": { "hr": "50 bpm", "bp": "40/20 mmHg", "rr": "0 (apneic)", "spo2": "60%", "temp": "37.2°C" },
+      "question": "The family administered epinephrine auto-injector (0.15 mg IM). What additional IMMEDIATE treatment is needed?",
+      "options": [
+        "A: Diphenhydramine 18 mg IV and observe",
+        "B: Begin bag-mask ventilation, prepare for intubation, start IV epinephrine, and give a 20 mL/kg fluid bolus",
+        "C: Administer methylprednisolone and wait for auto-injector to work",
+        "D: Apply AED and deliver a shock"
+      ],
+      "correct": 1,
+      "explanation": "This child has anaphylactic shock progressing to cardiac arrest. The auto-injector dose may have been insufficient. Immediate priorities: secure the airway (bag-mask ventilation, prepare for intubation due to airway edema), IV epinephrine for hemodynamic support, and aggressive fluid resuscitation for the massive vasodilation and capillary leak of anaphylaxis.",
+      "clinicalPearl": "Anaphylaxis causes massive vasodilation and capillary leak — fluid boluses of 20 mL/kg may need to be repeated. The auto-injector provides initial IM epinephrine, but IV epinephrine is needed for cardiac arrest."
+    },
+    {
+      "id": "c13_s03",
+      "title": "Trauma Arrest in a Pedestrian",
+      "presentation": "A 9-year-old child (28 kg) is brought to the trauma bay by EMS after being struck by a car while crossing the street. The child was unresponsive at the scene. EMS started CPR. On arrival: no pulse, no respiratory effort. Bilateral breath sounds are absent. The chest is hyper-resonant to percussion on the right. The team initiates CPR.",
+      "vitals": { "hr": "No pulse", "bp": "Not measurable", "rr": "0 (apneic)", "spo2": "Not detectable", "temp": "36.0°C" },
+      "question": "What is the MOST appropriate immediate intervention alongside CPR?",
+      "options": [
+        "A: Continue CPR and obtain a chest CT scan",
+        "B: Perform bilateral needle chest decompression, prepare blood products, and continue CPR",
+        "C: Give 3 liters of normal saline rapidly",
+        "D: Apply AED and defibrillate"
+      ],
+      "correct": 1,
+      "explanation": "Bilateral absent breath sounds with hyper-resonance after blunt trauma indicate bilateral tension pneumothorax — a reversible cause of arrest. Bilateral needle decompression should be performed immediately without waiting for imaging. Blood products (not crystalloid) should be prepared rapidly for suspected hemorrhagic shock. CPR continues throughout.",
+      "clinicalPearl": "In pediatric trauma arrest, always think 'blood, air, and cut' — hemorrhage (blood products), pneumothorax (decompress), and tamponade (surgical intervention)."
+    }
+  ]
+}

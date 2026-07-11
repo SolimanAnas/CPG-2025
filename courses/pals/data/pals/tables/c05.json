@@ -1,0 +1,39 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Types of Pediatric Shock",
+      "headers": ["Type", "Mechanism", "Common Causes", "Key Clinical Signs", "Treatment Approach"],
+      "rows": [
+        ["Hypovolemic", "Loss of circulating volume (hemorrhage or dehydration)", "Trauma with blood loss, surgical hemorrhage, severe dehydration (vomiting/diarrhea), burns", "Tachycardia, weak pulses, flat neck veins, cool/mottled skin, prolonged CRT, decreased UOP", "Isotonic crystalloid bolus 10–20 mL/kg; blood products if hemorrhagic; identify and stop source of loss"],
+        ["Distributive — Septic", "Pathologic vasodilation from systemic infection", "Bacterial sepsis (meningococcus, E. coli, GAS), viral sepsis, fungal infections", "Early: warm/flushed skin, brisk CRT, tachycardia, fever; Late: cool/mottled, prolonged CRT, hypotension", "Fluid resuscitation + broad-spectrum antibiotics within 60 min + vasoactive support if fluid-refractory"],
+        ["Distributive — Anaphylactic", "IgE-mediated mast cell degranulation → vasodilation + bronchospasm", "Food allergies (nuts, milk), insect stings, medications, latex", "Urticaria, angioedema, wheezing, tachycardia, hypotension, stridor, abdominal pain", "Epinephrine 0.01 mg/kg IM (max 0.3 mg adult) + isotonic fluids + antihistamines + corticosteroids"],
+        ["Distributive — Neurogenic", "Loss of sympathetic tone from spinal cord injury", "Cervical/thoracic spinal cord injury (typically above T6)", "Hypotension with BRADYCARDIA, warm dry skin (poorly responsive to fluids)", "IV fluids, atropine for bradycardia, vasopressors, spinal immobilization"],
+        ["Cardiogenic", "Pump failure — the heart cannot generate adequate output", "Myocarditis, congenital heart disease, cardiac toxins, post-cardiac arrest, arrhythmias", "Gallop rhythm, hepatomegaly, pulmonary edema (crackles), tachycardia, weak pulses, poor perfusion", "Cautious fluid boluses (may worsen pulmonary edema), vasoactive support (epinephrine, milrinone), inotropes"],
+        ["Obstructive", "Physical obstruction to cardiac filling or output", "Tension pneumothorax, cardiac tamponade, massive pulmonary embolism", "Hypotension, JVD (or flat veins if hypovolemic component), muffled heart sounds (tamponade), tracheal deviation (tension pneumo)", "Relieve the obstruction: needle decompression, pericardiocentesis, or embolectomy + fluids"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "Stages of Pediatric Shock",
+      "headers": ["Stage", "Heart Rate", "Blood Pressure", "Perfusion", "Mental Status", "Urine Output"],
+      "rows": [
+        ["Compensated", "Tachycardic (compensatory)", "Normal or elevated", "Prolonged CRT (>2 sec), weak pulses, cool/mottled skin", "Restless, irritable, or mildly lethargic", "Decreased (<1 mL/kg/hr)"],
+        ["Decompensated", "Tachycardic then may slow", "Beginning to fall", "Poor CRT (>4 sec), thready pulses, cyanosis, marked mottling", "Lethargic, confused, minimally responsive", "Absent or very low"],
+        ["Hypotensive", "Tachycardia → bradycardia (pre-arrest)", "Below age-appropriate threshold", "No palpable pulses, cold extremities, ashen/gray", "Unresponsive or obtunded", "Absent"]
+      ]
+    },
+    {
+      "id": "c05_t03",
+      "title": "Hypotension Thresholds by Age",
+      "headers": ["Age", "Formula", "Hypotension Threshold (SBP)"],
+      "rows": [
+        ["Neonate (0–28 days)", "SBP < 60 mmHg", "< 60 mmHg"],
+        ["Infant (1–12 months)", "SBP < 70 mmHg", "< 70 mmHg"],
+        ["Child (1–10 years)", "SBP < 70 + (2 × age in years)", "Varies by age (e.g., age 5: <80; age 10: <90)"],
+        ["Adolescent (>10 years)", "SBP < 90 mmHg (or adult formula if applicable)", "< 90 mmHg"]
+      ]
+    }
+  ]
+}

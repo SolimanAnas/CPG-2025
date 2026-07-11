@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "SVT in a Febrile Infant",
+      "presentation": "A 6-month-old (7 kg) is brought to the ED by panicked parents with a rapid heart rate noticed during a fever. The infant is irritable, diaphoretic, and has poor feeding for the past 4 hours. On exam, the heart rate is 280 bpm and regular. Blood pressure is 72/48 mmHg. The child is pale with delayed capillary refill (3 seconds). An IV is established in the right antecubital fossa.",
+      "vitals": { "hr": "280 bpm", "bp": "72/48 mmHg", "rr": "56 bpm", "spo2": "94% on room air", "temp": "39.2°C" },
+      "question": "This infant has narrow-complex SVT with signs of poor perfusion. Vagal maneuvers have been attempted without success. What is the next pharmacological intervention?",
+      "options": [
+        "A: Epinephrine 0.07 mg IV push",
+        "B: Adenosine 0.7 mg rapid IV push followed by saline flush",
+        "C: Atropine 0.14 mg IV push",
+        "D: Amiodarone 35 mg IV push"
+      ],
+      "correct": 1,
+      "explanation": "Adenosine 0.1 mg/kg is the first-line drug for SVT. For a 7 kg infant: 0.1 × 7 = 0.7 mg (well below the 6 mg maximum). It must be given as a rapid IV push through a proximal IV and immediately flushed with saline. Epinephrine is for cardiac arrest or severe bradycardia; atropine is for bradycardia, not tachycardia.",
+      "clinicalPearl": "SVT in infants can present with irritability, poor feeding, and diaphoresis rather than the classic 'palpitations' adults describe — a high index of suspicion is needed."
+    },
+    {
+      "id": "c09_s02",
+      "title": "Cardiac Arrest in an Infant — IO Access and Epinephrine",
+      "presentation": "An 8-month-old (8 kg) is in cardiac arrest on the pediatric ward. Two rounds of CPR have been completed, the rhythm is asystole, and two attempts at peripheral IV access in the antecubital and hand veins have failed. The team has been performing CPR for 4 minutes. The Broselow tape estimates the child at 8 kg.",
+      "vitals": { "hr": "No pulse", "bp": "No measurable BP", "rr": "None", "spo2": "Not detectable", "temp": "36.2°C" },
+      "question": "Two IV attempts have failed. What is the most appropriate next step for vascular access and drug delivery?",
+      "options": [
+        "A: Attempt a third peripheral IV in the external jugular vein",
+        "B: Insert an IO needle in the proximal tibia and administer epinephrine 0.08 mg",
+        "C: Delay all medications until a central line is placed",
+        "D: Administer epinephrine via the endotracheal tube"
+      ],
+      "correct": 1,
+      "explanation": "After 2 failed IV attempts, IO access is the recommended next step. An IO needle in the proximal tibia (2 cm below the tibial tuberosity) provides rapid access. Epinephrine 0.01 mg/kg × 8 kg = 0.08 mg IO. The team has already spent 4 minutes in arrest and should not delay further for repeated IV attempts or ET drug administration.",
+      "clinicalPearl": "IO access takes approximately 30–60 seconds to establish and can deliver all PALS emergency medications and fluids, making it a lifesaving alternative when IV access fails."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Bradycardia in a Toddler — Atropine Dosing",
+      "presentation": "A 2-year-old (12 kg) is in the ED after a syncopal episode. The child has a history of recent viral illness. On exam, the heart rate is 48 bpm, regular. The child is pale, lethargic, and has poor capillary refill (4 seconds). A 12-lead ECG shows sinus bradycardia with first-degree AV block. An IV has been established in the left hand.",
+      "vitals": { "hr": "48 bpm", "bp": "74/46 mmHg", "rr": "28 bpm", "spo2": "95% on room air", "temp": "37.8°C" },
+      "question": "This child has symptomatic bradycardia with poor perfusion. Oxygen is being administered and ventilation is being assisted. What is the correct atropine dose?",
+      "options": [
+        "A: 0.12 mg IV",
+        "B: 0.24 mg IV",
+        "C: 0.5 mg IV",
+        "D: 1.2 mg IV"
+      ],
+      "correct": 1,
+      "explanation": "Atropine dose: 0.02 mg/kg × 12 kg = 0.24 mg. The minimum single dose is 0.1 mg and the maximum is 0.5 mg. Since 0.24 mg is above the minimum and below the maximum, this is the correct dose. Atropine is appropriate here because the bradycardia is likely due to increased vagal tone from a viral illness with AV conduction delay.",
+      "clinicalPearl": "Always treat the underlying cause alongside atropine — if this child's bradycardia worsens or does not respond to atropine, assume hypoxia and focus on airway and ventilation."
+    }
+  ]
+}

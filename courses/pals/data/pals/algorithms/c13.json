@@ -1,0 +1,19 @@
+{
+  "chapter": "c13",
+  "algorithms": [
+    {
+      "id": "c13_alg01",
+      "title": "Special Circumstances — Decision Tree for Pediatric Resuscitation",
+      "description": "Quick-reference decision tree for recognizing and managing five special circumstances in pediatric resuscitation: trauma, drowning, opioid exposure, anaphylaxis, and single-ventricle congenital heart disease.",
+      "steps": [
+        "Step 1 — Recognize the special circumstance: identify whether the arrest or emergency involves trauma, drowning, opioids, anaphylaxis, or known congenital heart disease.",
+        "Step 2 — TRAUMA: start standard PALS CPR; assess for bilateral tension pneumothorax and decompress both sides immediately if suspected; obtain blood products (whole blood or balanced pRBC/FFP/platelets); consider REBOA for non-compressible torso hemorrhage; prepare for surgical intervention.",
+        "Step 3 — DROWNING: provide rescue breaths as soon as the patient is removed from the water; if no pulse, start CPR with breaths (30:2 compression-to-ventilation); do not default to compression-only CPR; continue resuscitation even if hypothermic — 'not dead until warm and dead'; treat hypothermia per TTM guidelines.",
+        "Step 4 — OPIOID EXPOSURE: secure the airway and provide ventilation; administer naloxone 0.1 mg/kg IV/IO/IM/IN (max 2 mg); continue standard PALS CPR if cardiac arrest occurs; naloxone is adjunctive and does not replace compressions, ventilation, or epinephrine.",
+        "Step 5 — ANAPHYLAXIS: administer IM epinephrine 0.01 mg/kg of 1:1,000 (min 0.1 mg, max 0.5 mg) into the anterolateral thigh; give aggressive IV fluid boluses (20 mL/kg); secure the airway early if stridor or swelling; repeat epinephrine every 5–15 minutes; antihistamines and steroids are adjunctive only.",
+        "Step 6 — SINGLE-VENTRICLE CHD: identify the specific anatomy and surgical stage (Stage 1, Glenn, Fontan); obtain cardiology consultation immediately; avoid excessive reduction in systemic vascular resistance; maintain both pulmonary and systemic blood flow.",
+        "Step 7 — FAMILY PRESENCE: encourage family presence during resuscitation with a designated support person; communicate openly; offer social work and chaplaincy resources."
+      ]
+    }
+  ]
+}

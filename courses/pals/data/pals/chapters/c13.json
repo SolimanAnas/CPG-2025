@@ -1,0 +1,84 @@
+{
+  "id": "c13",
+  "title": "Special Circumstances & Family Presence",
+  "shortTitle": "Special Circumstances",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the key modifications to standard CPR for pediatric trauma cardiac arrest, including chest decompression and blood product administration.",
+    "Explain the ventilation-first approach to pediatric drowning resuscitation and the role of hypothermia considerations.",
+    "State the indication and dose of naloxone for opioid-associated respiratory arrest in children and explain its role during CPR.",
+    "Identify the resuscitation considerations for children with single-ventricle congenital heart disease.",
+    "Describe the initial management of anaphylaxis in children, including epinephrine dosing and airway considerations.",
+    "Explain why family presence during resuscitation is encouraged and describe the role of the designated support person."
+  ],
+  "summary": [
+    {
+      "title": "Why Special Circumstances Matter",
+      "content": "Standard PALS protocols are designed for the most common cardiac arrest scenarios, but children may arrest in contexts that require specific modifications to the approach. Trauma, drowning, opioid toxicity, congenital heart disease, and anaphylaxis each present unique pathophysiology that alters the priorities and interventions during resuscitation. Recognizing these circumstances early and adapting the approach can significantly affect outcomes."
+    },
+    {
+      "title": "Trauma Arrest: Think Reversibility and Blood Loss",
+      "content": "Pediatric trauma cardiac arrest is most often caused by hypovolemia from hemorrhage, tension pneumothorax, or cardiac tamponade. The approach emphasizes rapid identification and treatment of reversible causes: bilateral needle decompression or finger thoracostomy for suspected pneumothorax, rapid administration of blood products (whole blood or balanced resuscitation with pRBCs, FFP, and platelets), and preparation for surgical intervention. CPR in trauma should follow a compression-ventilation approach, but the team must be prepared to pause compressions briefly for needle decompression if tension pneumothorax is suspected. Resuscitative endovascular balloon occlusion of the aorta (REBOA) is an emerging adjunct in selected cases of non-compressible torso hemorrhage, though evidence in pediatric patients remains limited."
+    },
+    {
+      "title": "Drowning: Ventilation First, Then Everything Else",
+      "content": "Drowning is fundamentally a hypoxic arrest — the primary problem is failure of oxygenation due to water aspiration. Unlike many other cardiac arrest etiologies, the initial approach to drowning emphasizes ventilation above all else. Rescue breaths should be provided as soon as the patient is out of the water, even before formal CPR begins in many cases. Once CPR is initiated, it follows a compression-to-ventilation ratio of 30:2 (adult-style) or 30:2 for children and infants, emphasizing breaths. Hypothermia from cold water immersion may be protective and should not deter aggressive resuscitation — 'they are not dead until they are warm and dead.' Hypothermic patients may require prolonged resuscitation."
+    },
+    {
+      "title": "Opioid Emergencies in Children: Naloxone as an Adjunct",
+      "content": "Opioid overdose can cause respiratory depression and arrest in children, whether through accidental ingestion, transdermal exposure, or other routes. For a child with suspected opioid-associated respiratory arrest, naloxone should be administered as an adjunct to standard resuscitation. In the context of cardiac arrest, naloxone is given but does not replace high-quality CPR and standard ACLS/PALS protocols — it is given in addition to, not instead of, compressions, ventilation, and epinephrine. The 2025 AHA Guidelines explicitly state that opioid antagonist administration should not interfere with standard resuscitation. Naloxone dosing varies by route: 0.1 mg/kg IV/IO (max 2 mg) or 0.1 mg/kg IM (max 2 mg), or intranasal 0.1 mg/kg (max 2 mg)."
+    },
+    {
+      "title": "Single-Ventricle Congenital Heart Disease: Know the Anatomy",
+      "content": "Children with single-ventricle physiology (such as hypoplastic left heart syndrome) have a fundamentally different circulatory setup. Their systemic and pulmonary circulations are in parallel rather than in series, meaning that changes in systemic vascular resistance directly affect pulmonary blood flow and vice versa. During resuscitation, medications that significantly reduce systemic vascular resistance (such as high-dose epinephrine) can steal blood flow from the systemic circulation into the pulmonary bed, worsening oxygen delivery. Teams should be familiar with the child's specific anatomy, surgical history (stage 1 palliation, Glenn, Fontan), and have cardiology consultation available as early as possible."
+    },
+    {
+      "title": "Anaphylaxis: Epinephrine Is the Treatment",
+      "content": "Anaphylaxis is a severe, life-threatening allergic reaction that can cause cardiovascular collapse, airway compromise, and cardiac arrest in children. The cornerstone of treatment is intramuscular epinephrine administered as early as possible. The dose is 0.01 mg/kg of the 1:1,000 concentration (0.01 mL/kg), with a minimum of 0.1 mg and a maximum of 0.5 mg per dose, injected into the anterolateral thigh. This may be repeated every 5–15 minutes. Airway management is critical — anaphylaxis can cause rapid-onset laryngeal edema. Early intubation should be considered if there are signs of airway swelling. Fluid resuscitation with aggressive IV boluses is also essential, as anaphylaxis causes massive vasodilation and capillary leak. Antihistamines and corticosteroids are adjunctive but are never first-line."
+    },
+    {
+      "title": "Family Presence During Resuscitation: A Guideline-Endorsed Practice",
+      "content": "The 2025 AHA Guidelines explicitly encourage family presence during resuscitation when it can be facilitated without interfering with care. A designated support person — separate from the resuscitation team — should be assigned to stay with the family, explain what is happening, answer questions, and provide emotional support. Evidence shows that family presence does not increase stress among resuscitation team members and may reduce family anxiety and post-traumatic stress. Families who are present during resuscitation often report greater satisfaction and a sense of having been included in their child's care. If family presence is not possible (due to space limitations, safety, or the family's preference), the team should provide regular updates outside the resuscitation area."
+    }
+  ],
+  "clinicalPearls": [
+    "Drowning is a hypoxic arrest — give rescue breaths as soon as the patient is retrieved from the water, before starting compressions when possible.",
+    "In pediatric trauma arrest, always consider bilateral tension pneumothorax — perform needle decompression early if respiratory distress precedes arrest.",
+    "Naloxone in cardiac arrest is an adjunct to CPR, not a replacement — never delay compressions or epinephrine to obtain or administer naloxone.",
+    "Children 12 years and older can be taught effective CPR and how to use an AED — their involvement can save a family member's life.",
+    "Anaphylaxis epinephrine: IM 1:1,000 at 0.01 mg/kg (min 0.1 mg, max 0.5 mg) — do not confuse with the IV 1:10,000 concentration used in cardiac arrest."
+  ],
+  "redFlags": [
+    "Trauma arrest with absent breath sounds — immediately decompress both chest before continuing compressions.",
+    "Drowning victim who appears 'fine' after removal from water — delayed respiratory deterioration is common; observe closely and provide ventilation support early.",
+    "Suspected opioid exposure in a child — secure naloxone and provide ventilation; respiratory arrest often precedes cardiac arrest.",
+    "Anaphylaxis with stridor or hoarse voice — this indicates airway edema and requires early intubation preparation."
+  ],
+  "commonMistakes": [
+    "Using the 1:10,000 epinephrine concentration for IM anaphylaxis dosing — the IM dose uses 1:1,000 (1 mg/mL), not the cardiac arrest concentration.",
+    "Withholding naloxone because 'we are doing CPR anyway' — naloxone should be given as an adjunct alongside standard resuscitation.",
+    "Assuming a drowning victim is fine because they are breathing after rescue — pulmonary edema and secondary respiratory deterioration can occur hours later.",
+    "Forgetting to consider the circulatory anatomy in a child with known congenital heart disease during a code."
+  ],
+  "memoryAids": [
+    "Drowning: 'Breath, then compress' — ventilation first, then compressions (A-B-C approach).",
+    "Trauma triad: 'Blood, air, and cut' — hemorrhage (blood products), pneumothorax (decompress), tamponade (surgical).",
+    "Naloxone: 'Naloxone with CPR, not instead of CPR' — it is an adjunct, not a replacement.",
+    "Anaphylaxis: 'Epi first, Epi fast' — intramuscular 1:1,000 epinephrine into the thigh, repeated as needed.",
+    "Family: 'A designated support person' — someone whose sole job is to be with the family, not to perform medical tasks."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Special Circumstances — Quick Decision Guide",
+      "content": "Pediatric cardiac arrest in a special circumstance:\n\n  TRAUMA:\n    → Start standard PALS CPR\n    → Assess for bilateral tension pneumothorax → decompress both sides\n    → Obtain blood products rapidly (whole blood or balanced pRBC/FFP/platelets)\n    → Prepare for surgical intervention\n    → Consider REBOA in non-compressible torso hemorrhage (expert guidance)\n\n  DROWNING:\n    → Provide rescue breaths as soon as patient is out of water\n    → If no pulse: start CPR with breaths (30:2 compression-to-ventilation)\n    → Aggressive ventilation is priority — do not default to compression-only\n    → Continue resuscitation even if hypothermic — 'not dead until warm and dead'\n    → Treat hypothermia per TTM guidelines\n\n  OPIOID EXPOSURE:\n    → Secure airway and provide ventilation\n    → Administer naloxone 0.1 mg/kg IV/IO/IM/IN (max 2 mg)\n    → Continue standard PALS CPR if cardiac arrest\n    → Naloxone is adjunctive — does not replace compressions, ventilation, or epinephrine\n\n  ANAPHYLAXIS:\n    → Epinephrine 0.01 mg/kg IM of 1:1,000 (min 0.1 mg, max 0.5 mg)\n    → Aggressive IV fluid bolus (20 mL/kg)\n    → Secure airway early if stridor or airway edema\n    → Repeat epinephrine every 5–15 min as needed\n    → Antihistamines and steroids are adjunctive only\n\n  SINGLE-VENTRICLE CHD:\n    → Identify anatomy and surgical stage\n    → Cardiology consultation immediately\n    → Avoid excessive reduction in systemic vascular resistance\n    → Maintain both pulmonary and systemic blood flow"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Special Circumstances in Resuscitation",
+    "AHA 2025 Guidelines: Family Presence During Resuscitation",
+    "AHA 2025 Guidelines: Opioid-Associated Emergencies",
+    "WAO Anaphylaxis Guidelines — Pediatric Epinephrine Dosing"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "pals",
+  "title": "PALS — Pediatric Advanced Life Support",
+  "subtitle": "The Ultimate Provider Course Reviewer",
+  "version": "1.0.0",
+  "edition": "Based on the AHA/AAP 2025 Guidelines for CPR and ECC",
+  "description": "A comprehensive, self-contained study reviewer for Pediatric Advanced Life Support. Each chapter includes a concise summary, clinical pearls, red flags, common mistakes, memory aids, decision trees, high-yield flashcards, AHA-style quiz questions, and realistic scenarios. Designed for paramedics, nurses, physicians, respiratory therapists, and pediatric/ED/ICU staff preparing for PALS Provider certification.",
+  "icon": "baby",
+  "color": "#6b4fa0",
+  "accentColor": "#e06090",
+  "estimatedHours": 16,
+  "difficulty": "Intermediate to Advanced",
+  "certification": "AHA PALS Provider",
+  "examLink": "https://cpr.heart.org/",
+  "audience": ["Paramedic", "Nurse", "Physician", "Respiratory Therapist", "Pediatric Staff", "ED Staff", "ICU Staff"],
+  "prerequisites": ["BLS provider competency (child/infant)", "Basic ECG recognition", "Basic pharmacology"],
+  "contentTypes": ["summary", "flashcards", "quizzes", "scenarios", "algorithms", "tables"],
+  "chapters": [
+    { "id": "c01", "number": 1, "title": "The Systematic Approach & Pediatric Assessment Triangle", "section": "Foundations", "difficulty": "Intermediate" },
+    { "id": "c02", "number": 2, "title": "Pediatric BLS Foundation & Team Dynamics", "section": "Foundations", "difficulty": "Intermediate" },
+    { "id": "c03", "number": 3, "title": "Airway Management & Ventilation in Children", "section": "Airway & Breathing", "difficulty": "Advanced" },
+    { "id": "c04", "number": 4, "title": "Respiratory Distress & Failure: The Four Categories", "section": "Airway & Breathing", "difficulty": "Advanced" },
+    { "id": "c05", "number": 5, "title": "Recognizing Shock: Types & Compensation", "section": "Shock", "difficulty": "Advanced" },
+    { "id": "c06", "number": 6, "title": "Managing Shock: Fluids & Vasoactive Support", "section": "Shock", "difficulty": "Advanced" },
+    { "id": "c07", "number": 7, "title": "Pediatric Cardiac Arrest: VF / Pulseless VT", "section": "Cardiac Arrest", "difficulty": "Advanced" },
+    { "id": "c08", "number": 8, "title": "Pediatric Cardiac Arrest: Asystole / PEA", "section": "Cardiac Arrest", "difficulty": "Advanced" },
+    { "id": "c09", "number": 9, "title": "Pharmacology & Vascular Access (IV/IO, Weight-Based Dosing)", "section": "Cardiac Arrest", "difficulty": "Advanced" },
+    { "id": "c10", "number": 10, "title": "Bradycardia With a Pulse", "section": "Rhythm Disturbances", "difficulty": "Intermediate" },
+    { "id": "c11", "number": 11, "title": "Tachycardia With a Pulse: SVT vs Sinus", "section": "Rhythm Disturbances", "difficulty": "Advanced" },
+    { "id": "c12", "number": 12, "title": "Post-Cardiac Arrest Care", "section": "Post-Arrest", "difficulty": "Advanced" },
+    { "id": "c13", "number": 13, "title": "Special Circumstances & Family Presence", "section": "Special Topics", "difficulty": "Intermediate" }
+  ]
+}

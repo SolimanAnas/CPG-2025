@@ -1,0 +1,92 @@
+{
+  "id": "c10",
+  "title": "Bradycardia With a Pulse",
+  "shortTitle": "Pediatric Bradycardia",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define pediatric bradycardia as a heart rate less than 60 beats per minute and explain when it becomes clinically significant.",
+    "Distinguish between sinus bradycardia and other bradyarrhythmias based on ECG morphology and clinical context.",
+    "Describe the stepwise approach to managing pediatric bradycardia with a pulse, including the indication to initiate chest compressions.",
+    "State the correct dose and route of epinephrine for pediatric bradycardia unresponsive to initial measures.",
+    "Identify patients in whom atropine is appropriate and state the correct dose, minimum, and maximum single dose.",
+    "Explain the role and indications of transcutaneous and transvenous pacing in pediatric bradycardia.",
+    "List the reversible causes that should be identified and treated concurrently during bradycardia management."
+  ],
+  "summary": [
+    {
+      "title": "When Bradycardia Matters in Children",
+      "content": "Children typically have much higher heart rates than adults, and a rate below 60 beats per minute is abnormal at any age. Bradycardia becomes clinically significant when it is accompanied by poor perfusion — signs such as altered mental status, weak pulses, mottled or cyanotic skin, or hypotension — despite adequate oxygenation and ventilation. In pediatric patients, the most common cause of bradycardia is hypoxia, so the first intervention is always ensuring effective oxygen delivery and ventilation."
+    },
+    {
+      "title": "Starting Compressions: The Key Threshold",
+      "content": "If a child has a heart rate below 60 bpm with signs of inadequate perfusion AND has received effective oxygenation and ventilation, chest compressions should be initiated. This is a critical decision point: unlike adult bradycardia, pediatric bradycardia with poor perfusion may rapidly progress to cardiac arrest. Compressions are started when the rate is below 60 and perfusion is inadequate, even if electrical activity is present."
+    },
+    {
+      "title": "Sinus Bradycardia versus Other Bradyarrhythmias",
+      "content": "Sinus bradycardia shows a normal P wave before each QRS complex, but at a rate below 60. Other bradyarrhythmias include atrioventricular (AV) block — first degree (prolonged PR interval), second degree (dropped beats), and third degree (complete heart block with independent atrial and ventricular rates). Junctional bradycardia may present without visible P waves or with retrograde P waves. Identifying the type of bradyarrhythmia guides treatment: vagal tone and AV block may respond to atropine, while complete heart block often requires pacing."
+    },
+    {
+      "title": "Initial Management: Oxygenate, Ventilate, Then Medications",
+      "content": "The management sequence is: (1) ensure oxygenation and ventilation, (2) if HR remains below 60 with poor perfusion, start chest compressions, (3) establish IV or IO access, (4) administer epinephrine at 0.01 mg/kg IV/IO every 3 to 5 minutes. Epinephrine should be given as early as possible. If the patient has increased vagal tone or a primary AV block, atropine 0.02 mg/kg IV/IO may be considered as a temporizing measure, with a minimum single dose of 0.1 mg and a maximum of 0.5 mg."
+    },
+    {
+      "title": "Atropine: When It Helps and When It Does Not",
+      "content": "Atropine is an anticholinergic (vagal blocker) that increases the firing rate of the sinoatrial node and improves AV conduction. It is most effective in bradycardia caused by increased vagal tone — such as during intubation, with raised intracranial pressure from vagal stimulation, or in primary AV block. It is not effective for bradycardia due to hypoxia, acidosis, or myocardial dysfunction. The dose is 0.02 mg/kg IV/IO, with a minimum of 0.1 mg per dose and a maximum of 0.5 mg as a single dose."
+    },
+    {
+      "title": "Pacing for Refractory Bradycardia",
+      "content": "When bradycardia does not respond to oxygenation, ventilation, compressions, and medications, cardiac pacing should be considered. Transcutaneous pacing (external pads) is the quickest to initiate and serves as a bridge. Transvenous pacing (wire threaded through a central vein into the heart) provides more reliable capture and is preferred for sustained bradycardia. Both forms of pacing require sedation and analgesia when the patient is conscious."
+    },
+    {
+      "title": "Always Treat the Underlying Cause",
+      "content": "Medications and pacing are temporizing measures. The underlying cause must be identified and treated: hypoxia (improve oxygenation and ventilation), acidosis (address ventilation and consider bicarbonate), hypothermia (rewarm), hypokalemia or hyperkalemia (electrolyte correction), drug toxicity (discontinue offending agent), and elevated intracranial pressure (neurosurgical consultation). Without addressing the etiology, bradycardia will recur or persist despite interventions."
+    }
+  ],
+  "clinicalPearls": [
+    "Hypoxia is the most common cause of pediatric bradycardia — always optimize oxygenation and ventilation before reaching for medications.",
+    "Chest compressions for bradycardia are initiated when HR < 60 with inadequate perfusion despite adequate O2 and ventilation — do not delay.",
+    "Atropine is useful for increased vagal tone and primary AV block, but not for bradycardia due to hypoxia, acidosis, or myocardial disease.",
+    "Remember atropine's floor and ceiling: minimum single dose 0.1 mg, maximum 0.5 mg — smaller doses can paradoxically worsen bradycardia.",
+    "A child with a heart rate of 55 bpm who is pink, perfusing, and alert may not need immediate intervention — always assess perfusion, not just the number."
+  ],
+  "redFlags": [
+    "Heart rate below 60 bpm with any sign of poor perfusion (altered mental status, weak pulses, cyanosis, hypotension) — start compressions immediately.",
+    "Bradycardia persisting despite effective oxygenation and ventilation — suspect a non-hypoxic cause and proceed to epinephrine and possible pacing.",
+    "Administering atropine at a dose below 0.1 mg — this can paradoxically worsen bradycardia through a vagotonic effect at low doses.",
+    "Ignoring reversible causes while focusing only on rate — always concurrently treat hypoxia, acidosis, electrolyte abnormalities, and toxins."
+  ],
+  "commonMistakes": [
+    "Failing to give effective breaths before attributing bradycardia to a cardiac cause — inadequate ventilation is the most common correctable trigger.",
+    "Administering atropine for bradycardia due to myocardial dysfunction or hypoxia, where it will not be effective.",
+    "Diluting epinephrine or giving it too slowly — the 1:10,000 concentration (0.1 mg/mL) should be given as a rapid IV/IO push.",
+    "Forgetting that children with congenital heart disease or on beta-blockers may have different perfusion thresholds — treat the patient, not just the heart rate number."
+  ],
+  "memoryAids": [
+    "Bradycardia rule: if the number is low AND perfusion is poor — PUSH (give compressions).",
+    "Atropine mnemonic: '20, 1, and 5' — 0.02 mg/kg, minimum 0.1 mg, maximum 0.5 mg.",
+    "Think 'HOPE' for bradycardia causes: Hypoxia, Overdose/medications, P (raised intracranial pressure / vagal), Electrolyte imbalance.",
+    "For pacing: Transcutaneous = Temporary bridge; Transvenous = definitive. T first, then T."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Bradycardia With a Pulse — Management Algorithm",
+      "content": "Heart rate < 60 bpm with a pulse\n  → Assess perfusion (pulse quality, skin color, mental status)\n  → If adequate perfusion: monitor closely, investigate cause, no compressions needed\n  → If inadequate perfusion:\n     → Ensure effective oxygenation and ventilation (give breaths, suction if needed)\n     → Reassess HR and perfusion\n        → HR ≥ 60 with improved perfusion: monitor\n        → HR < 60 with persistent poor perfusion: start chest compressions\n           → Establish IV/IO access\n           → Epinephrine 0.01 mg/kg IV/IO (1:10,000), repeat every 3–5 min\n           → If vagal tone or primary AV block: Atropine 0.02 mg/kg IV/IO (min 0.1 mg, max 0.5 mg)\n           → Treat reversible causes (H's and T's)\n           → If refractory: transcutaneous pacing → transvenous pacing\n           → Consider specialist consultation"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Pediatric Bradycardia With a Pulse Algorithm",
+    "AHA 2025 Guidelines: Bradycardia pharmacotherapy and pacing recommendations"
+  ],
+  "graphics": [
+    {
+      "id": "c10_g01",
+      "section": "summary",
+      "sectionIndex": 3,
+      "url": "../../images/courses/pals/c10_g01.webp",
+      "alt": "Pediatric Bradycardia with Pulse Algorithm Flowchart",
+      "caption": "Flowchart showing cardiopulmonary support, oxygenation, and pharmacological interventions (Epinephrine/Atropine) for pediatric bradycardia with cardiorespiratory compromise."
+    }
+  ]
+}

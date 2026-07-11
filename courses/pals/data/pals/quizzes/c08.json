@@ -1,0 +1,194 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "Which cardiac arrest rhythms are classified as non-shockable?",
+      "options": ["A. VF and pulseless VT", "B. Asystole and PEA", "C. SVT and atrial fibrillation", "D. Sinus bradycardia and junctional rhythm"],
+      "correct": 1,
+      "rationale": "Asystole and pulseless electrical activity (PEA) are non-shockable rhythms. They do not respond to defibrillation and are managed with high-quality CPR, epinephrine, and treatment of reversible causes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q02",
+      "question": "Per the 2025 AHA Guidelines, within what time window should the initial dose of epinephrine be given in pediatric asystole or PEA?",
+      "options": ["A. Within the first 30 seconds", "B. Within the first 1–2 minutes", "C. Within the first 3–5 minutes", "D. After 10 minutes of CPR"],
+      "correct": 2,
+      "rationale": "The 2025 Guidelines emphasize that the initial epinephrine dose should be given as early as possible — ideally within the first 3–5 minutes of pulselessness — while maintaining effective CPR and ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "What is the recommended dose of epinephrine for pediatric cardiac arrest?",
+      "options": ["A. 0.001 mg/kg IV/IO", "B. 0.01 mg/kg IV/IO", "C. 0.1 mg/kg IV/IO", "D. 1 mg/kg IV/IO"],
+      "correct": 1,
+      "rationale": "Epinephrine for pediatric cardiac arrest is dosed at 0.01 mg/kg IV/IO (0.1 mL/kg of 0.1 mg/mL concentration), given every 3–5 minutes, with a maximum single dose of 1 mg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q04",
+      "question": "A 3-year-old (14 kg) is in asystole. You have IV access. What is the correct epinephrine dose?",
+      "options": ["A. 0.14 mg", "B. 1.4 mg", "C. 14 mg", "D. 1 mg (capped at maximum)"],
+      "correct": 0,
+      "rationale": "0.01 mg/kg × 14 kg = 0.14 mg. This is well below the 1 mg maximum, so the full calculated dose of 0.14 mg (0.14 mL of 0.1 mg/mL concentration) should be administered.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q05",
+      "question": "A 10-year-old (35 kg) is in PEA. What is the correct epinephrine dose?",
+      "options": ["A. 0.35 mg", "B. 3.5 mg", "C. 1 mg (capped at maximum)", "D. 35 mg"],
+      "correct": 2,
+      "rationale": "0.01 mg/kg × 35 kg = 0.35 mg, which is below the 1 mg maximum. However, this calculation yields 0.35 mg, not 1 mg. The correct dose is 0.35 mg. Note: Only when the calculated dose exceeds 1 mg would you cap at 1 mg.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q06",
+      "question": "Which of the following is the MOST common cause of pediatric cardiac arrest?",
+      "options": ["A. Primary cardiac arrhythmia", "B. Respiratory failure and hypoxia", "C. Trauma", "D. Drug overdose"],
+      "correct": 1,
+      "rationale": "Respiratory failure and hypoxia are the most common precipitants of cardiac arrest in children. Progressive hypoxia leads to bradycardia and then asystole or PEA — which is why respiratory support is emphasized in pediatric resuscitation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q07",
+      "question": "During CPR, what ETCO2 value indicates that chest compressions are likely inadequate?",
+      "options": ["A. ETCO2 above 35 mmHg", "B. ETCO2 between 10 and 15 mmHg", "C. ETCO2 below 10 mmHg", "D. ETCO2 of exactly 20 mmHg"],
+      "correct": 2,
+      "rationale": "An ETCO2 below 10 mmHg during CPR suggests inadequate compression rate, depth, or recoil. The target is at least 10 to 15 mmHg to confirm adequate quality compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "A sudden, sustained rise in ETCO2 from 8 mmHg to 42 mmHg during CPR most likely indicates:",
+      "options": [
+        "A. Incorrect endotracheal tube placement",
+        "B. Return of spontaneous circulation (ROSC)",
+        "C. A medication error",
+        "D. Malfunction of the capnography device"
+      ],
+      "correct": 1,
+      "rationale": "A sudden, sustained increase in ETCO2 above 35–40 mmHg during CPR is a reliable indicator of ROSC. The improved cardiac output increases CO2 delivery to the lungs, raising the measured ETCO2.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q09",
+      "question": "Why is endotracheal epinephrine no longer the preferred route during pediatric cardiac arrest?",
+      "options": [
+        "A. It is too expensive",
+        "B. IV/IO provides more reliable and predictable drug delivery",
+        "C. Endotracheal epinephrine causes airway burns",
+        "D. Endotracheal epinephrine has a shorter duration of action"
+      ],
+      "correct": 1,
+      "rationale": "IV/IO routes provide more consistent and reliable drug absorption during cardiac arrest. Endotracheal drug delivery is variable and less predictable, which is why it is no longer recommended as the primary route during resuscitation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Which reversible cause should you suspect FIRST in a child with asystole after a penetrating chest injury?",
+      "options": ["A. Hypoglycemia", "B. Tension pneumothorax", "C. Hypothermia", "D. Drug toxicity"],
+      "correct": 1,
+      "rationale": "Tension pneumothorax is a critical reversible cause of PEA/asystole in trauma. It should be suspected clinically (absent breath sounds, tracheal deviation, distended neck veins) and treated with immediate needle decompression without waiting for imaging.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q11",
+      "question": "What is the maximum single dose of epinephrine in pediatric cardiac arrest, regardless of the child's weight?",
+      "options": ["A. 0.5 mg", "B. 1 mg", "C. 2 mg", "D. 5 mg"],
+      "correct": 1,
+      "rationale": "The maximum single dose of epinephrine for pediatric cardiac arrest is 1 mg IV/IO, regardless of the patient's calculated weight-based dose.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q12",
+      "question": "How frequently should epinephrine be repeated during ongoing nonshockable cardiac arrest?",
+      "options": [
+        "A. Every 1–2 minutes",
+        "B. Every 3–5 minutes",
+        "C. Every 10 minutes",
+        "D. Only once — do not repeat"
+      ],
+      "correct": 1,
+      "rationale": "Epinephrine should be repeated every 3 to 5 minutes during cardiac arrest, using the same weight-based dose of 0.01 mg/kg IV/IO.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q13",
+      "question": "A 6-month-old (7 kg) is in asystole. The team has been performing CPR for 2 minutes. No IV access is available. What is the most appropriate next vascular access attempt?",
+      "options": [
+        "A. Attempt a peripheral IV in the antecubital fossa",
+        "B. Insert an intraosseous (IO) needle in the proximal tibia",
+        "C. Delay access until the next rhythm check",
+        "D. Administer epinephrine via the endotracheal tube"
+      ],
+      "correct": 1,
+      "rationale": "IO access is the rapid, recommended initial vascular access in pediatric cardiac arrest when IV access is not immediately available. The proximal tibia is a standard IO site. Do not delay epinephrine for a difficult IV attempt.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q14",
+      "question": "Which of the following is an important reason to check at least two ECG leads before diagnosing asystole?",
+      "options": [
+        "A. Two leads confirm the heart rate",
+        "B. Fine VF may appear as asystole on a single lead — checking two leads prevents missing a shockable rhythm",
+        "C. Two leads are required by law",
+        "D. Asystole can only be diagnosed with a 12-lead ECG"
+      ],
+      "correct": 1,
+      "rationale": "Fine ventricular fibrillation may present as a flat or nearly flat line on a single ECG lead. By checking at least two leads, the provider avoids misdiagnosing a shockable rhythm as asystole and failing to defibrillate.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q15",
+      "question": "In which of the following situations might ECPR (extracorporeal CPR) be considered for a child in cardiac arrest?",
+      "options": [
+        "A. After 2 minutes of CPR with an identified reversible cause",
+        "B. After 15–25 minutes of CPR without ROSC, with a suspected reversible cause and ECMO capability available",
+        "C. As the first-line treatment for any pediatric cardiac arrest",
+        "D. Only after 60 minutes of conventional CPR has failed"
+      ],
+      "correct": 1,
+      "rationale": "ECPR is considered for selected pediatric patients after prolonged CPR (typically >15–25 minutes without ROSC) when a reversible cause is suspected and ECMO capability is available. It is not a first-line treatment but a rescue strategy when conventional measures are failing.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q16",
+      "question": "Why is treating reversible causes (the H's and T's) essential during resuscitation from asystole or PEA?",
+      "options": [
+        "A. Reversible causes can only be identified after ROSC",
+        "B. Without identifying and treating the underlying cause, CPR and epinephrine alone rarely achieve sustained ROSC",
+        "C. The H's and T's are only relevant for shockable rhythms",
+        "D. Reversible causes automatically resolve after 5 minutes of CPR"
+      ],
+      "correct": 1,
+      "rationale": "In asystole and PEA, the underlying cause drives the arrest. CPR and epinephrine provide temporary support, but without addressing the specific reversible cause (e.g., tension pneumothorax, hypovolemia), sustained ROSC is unlikely.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q17",
+      "question": "What compression rate and depth are recommended for pediatric chest compressions?",
+      "options": [
+        "A. 60–80 compressions/min, depth of 1 inch",
+        "B. 80–100 compressions/min, depth of 1.5 inches",
+        "C. 100–120 compressions/min, depth of at least one-third the anterior-posterior chest diameter",
+        "D. 120–140 compressions/min, depth of 2.5 inches"
+      ],
+      "correct": 2,
+      "rationale": "High-quality pediatric CPR requires a compression rate of 100–120 per minute and a depth of at least one-third the anterior-posterior diameter of the chest (approximately 1.5 inches in infants, 2 inches in children).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q18",
+      "question": "Which of the following best describes the difference between asystole and PEA?",
+      "options": [
+        "A. Asystole has organized electrical activity; PEA is flat",
+        "B. Asystole is the absence of electrical activity; PEA shows an organized rhythm on the monitor that fails to produce a pulse",
+        "C. There is no difference — both are the same rhythm",
+        "D. PEA only occurs in adults; asystole only occurs in children"
+      ],
+      "correct": 1,
+      "rationale": "Asystole is the complete absence of cardiac electrical activity (flat line), while PEA shows organized electrical activity (organized complexes on the monitor) without an effective pulse. Both are non-shockable rhythms requiring CPR and epinephrine.",
+      "difficulty": "Easy"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "Using the Duracher formula, what cuffed ET tube size is recommended for a 3-year-old child?",
+      "options": [
+        "A. 3.5 mm",
+        "B. 4.0 mm",
+        "C. 4.5 mm",
+        "D. 5.0 mm"
+      ],
+      "correct": 1,
+      "rationale": "Duracher formula: (age/4) + 3.5 = (3/4) + 3.5 = 0.75 + 3.5 = 4.25 mm. Rounded to the nearest 0.5 mm, this equals 4.0 mm. When the value falls exactly between two 0.5-mm increments, rounding down is the standard convention.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q02",
+      "question": "Once an advanced airway (ET tube or SGA) has been placed and confirmed during pediatric CPR, how should compressions and ventilations be coordinated?",
+      "options": [
+        "A. Pause compressions for every 2 breaths (30:2 ratio)",
+        "B. Continue compressions without interruption; deliver 1 breath every 2–3 seconds (20–30/min) independently",
+        "C. Pause compressions for every 3 breaths",
+        "D. Deliver 2 breaths after every 15 compressions"
+      ],
+      "correct": 1,
+      "rationale": "With an advanced airway confirmed, compressions become continuous and ventilations are delivered independently at 1 breath every 2–3 seconds (20–30/min). This eliminates compression pauses and improves the compression fraction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "A 5-year-old (18 kg) is in cardiac arrest. An advanced airway has been placed and confirmed. During CPR, the ETCO₂ reading is 7 mmHg. What does this indicate?",
+      "options": [
+        "A. Excellent CPR quality",
+        "B. The ET tube is likely misplaced",
+        "C. Compression quality may be inadequate — reassess compression technique",
+        "D. The child has ROSC"
+      ],
+      "correct": 2,
+      "rationale": "ETCO₂ below 10 mmHg during CPR suggests inadequate cardiac output from compressions. The team should reassess compression depth, rate, recoil, and hand position. A sustained waveform confirms the tube is in the correct position, but the low value points to poor compression quality.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q04",
+      "question": "What does the 'P' in the DOPE mnemonic stand for?",
+      "options": [
+        "A. Pneumonia",
+        "B. Pulmonary embolism",
+        "C. Pneumothorax",
+        "D. Pharyngeal obstruction"
+      ],
+      "correct": 2,
+      "rationale": "DOPE stands for Displacement, Obstruction, Pneumothorax, and Equipment. Pneumothorax (especially tension pneumothorax from barotrauma) is a critical cause of sudden deterioration in a ventilated child and requires immediate recognition and treatment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q05",
+      "question": "Why are cuffed ET tubes now preferred over uncuffed tubes for most pediatric patients?",
+      "options": [
+        "A. Cuffed tubes are smaller and easier to place",
+        "B. They provide more precise ventilation control, reduce aspiration risk, and improve ETCO₂ monitoring",
+        "C. Cuffed tubes eliminate the need for ETCO₂ confirmation",
+        "D. Uncuffed tubes are no longer available"
+      ],
+      "correct": 1,
+      "rationale": "Cuffed tubes allow more precise control of ventilation volume and pressure, reduce the risk of aspiration around the tube, and provide a more reliable ETCO₂ waveform. They should be inflated to the minimum occlusive volume to prevent tracheal injury.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q06",
+      "question": "What is the ventilation rate during CPR when an advanced airway is in place for an infant?",
+      "options": [
+        "A. 10–12 breaths per minute",
+        "B. 20–30 breaths per minute (1 breath every 2–3 seconds)",
+        "C. 40–60 breaths per minute",
+        "D. Same as BLS: 2 breaths after every 15 or 30 compressions"
+      ],
+      "correct": 1,
+      "rationale": "The ventilation rate with an advanced airway is 1 breath every 2–3 seconds (20–30 breaths per minute), regardless of whether the patient is an infant or a child. This is delivered without pausing compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q07",
+      "question": "A nurse is about to intubate a 7-year-old child (22 kg). Using the Duracher formula, what cuffed ET tube size should be selected?",
+      "options": [
+        "A. 4.5 mm",
+        "B. 5.0 mm",
+        "C. 5.5 mm",
+        "D. 6.0 mm"
+      ],
+      "correct": 2,
+      "rationale": "Duracher formula: (age/4) + 3.5 = (7/4) + 3.5 = 1.75 + 3.5 = 5.25 mm, rounded to the nearest 0.5 mm = 5.5 mm.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q08",
+      "question": "Which of the following is the GOLD STANDARD for confirming correct ET tube placement in a patient with a perfusing rhythm?",
+      "options": [
+        "A. Bilateral breath sounds on auscultation",
+        "B. Chest rise during ventilation",
+        "C. ETCO₂ waveform on capnography",
+        "D. Misting inside the ET tube"
+      ],
+      "correct": 2,
+      "rationale": "A sustained, reliable ETCO₂ waveform is the gold standard for confirming tracheal tube placement in a patient with a perfusing rhythm. Breath sounds and chest rise are supportive but can be misleading (e.g., in obesity or thick chest walls).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q09",
+      "question": "What is the most common cause of sudden ET tube displacement during pediatric resuscitation?",
+      "options": [
+        "A. The tube was the wrong size",
+        "B. Movement of the child during resuscitation, especially during CPR or positioning",
+        "C. Equipment malfunction",
+        "D. Cuff over-inflation"
+      ],
+      "correct": 1,
+      "rationale": "The most common cause of tube displacement is movement — during CPR, patient repositioning, or transport. Securing the tube firmly and reassessing placement after any movement are critical. The trachea in children is shorter and more mobile than in adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q10",
+      "question": "Why is bag-mask ventilation technique particularly important in pediatric patients?",
+      "options": [
+        "A. Children cannot tolerate an advanced airway",
+        "B. Children have a proportionally larger head, anterior larynx, and narrower airway, making ventilation more challenging and gastric insufflation more likely with poor technique",
+        "C. Bag-mask ventilation is only used in pediatric patients",
+        "D. Children need less ventilation than adults"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric anatomic differences (large head/occiput, anterior larynx, narrow subglottic space, compliant chest) make airway management more challenging. Poor technique with excessive ventilation or inadequate seal leads to gastric insufflation and ineffective oxygenation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "A child with an ET tube suddenly loses the ETCO₂ waveform, and breath sounds are absent on the left side but present on the right. What is the MOST likely cause?",
+      "options": [
+        "A. Pneumothorax",
+        "B. Equipment failure",
+        "C. Displacement — the tube has likely advanced into the right mainstem bronchus",
+        "D. Obstruction from a mucus plug"
+      ],
+      "correct": 2,
+      "rationale": "Loss of the ETCO₂ waveform with absent left breath sounds and present right breath sounds is classic for mainstem (right bronchus) intubation — the tube has been pushed too far down, bypassing the left mainstem. This is a form of displacement requiring tube withdrawal to the correct depth.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q12",
+      "question": "When is it appropriate to use a supraglottic airway device (SGA) as a rescue device during pediatric resuscitation?",
+      "options": [
+        "A. As the first-line device for all pediatric patients",
+        "B. When a trained provider cannot achieve endotracheal intubation within a reasonable time frame",
+        "C. Only after cardiac arrest has lasted more than 15 minutes",
+        "D. SGAs are not recommended in pediatric patients"
+      ],
+      "correct": 1,
+      "rationale": "An SGA (LMA, i-gel, or similar) is appropriate when ET intubation is unsuccessful or not immediately available. SGA placement is faster and requires less skill than ET intubation, making it a valuable rescue device in cardiac arrest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q13",
+      "question": "During CPR with an advanced airway, the team notices an abrupt increase in ETCO₂ from 8 mmHg to 35 mmHg. What does this most likely indicate?",
+      "options": [
+        "A. The tube has become displaced",
+        "B. Return of spontaneous circulation (ROSC)",
+        "C. Equipment failure",
+        "D. Tension pneumothorax"
+      ],
+      "correct": 1,
+      "rationale": "An abrupt, sustained rise in ETCO₂ during CPR is a strong indicator of ROSC. When the heart begins beating again, pulmonary blood flow increases dramatically, and CO₂ elimination rises. The team should immediately check for a pulse.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q14",
+      "question": "Why should you avoid over-ventilating during bag-mask ventilation in a child?",
+      "options": [
+        "A. Over-ventilation does not have significant consequences in children",
+        "B. Excessive rate or volume causes gastric insufflation, aspiration risk, and increased intrathoracic pressure that reduces venous return",
+        "C. Children have too much lung capacity to be over-ventilated",
+        "D. Over-ventilation only matters in neonates"
+      ],
+      "correct": 1,
+      "rationale": "Over-ventilation pushes air into the stomach (gastric insufflation), increasing aspiration risk. It also raises intrathoracic pressure, which reduces venous return to the heart and decreases cardiac output — particularly harmful during CPR.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q15",
+      "question": "An 8-year-old (25 kg) needs emergency intubation. Using the Duracher formula, what cuffed ET tube size is recommended?",
+      "options": [
+        "A. 5.0 mm",
+        "B. 5.5 mm",
+        "C. 6.0 mm",
+        "D. 6.5 mm"
+      ],
+      "correct": 1,
+      "rationale": "Duracher formula: (8/4) + 3.5 = 2.0 + 3.5 = 5.5 mm. Since 5.5 mm is already at a 0.5-mm increment, no rounding is needed. The correct cuffed ET tube size is 5.5 mm.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q16",
+      "question": "Which of the following is NOT a function of ETCO₂ monitoring during cardiac arrest?",
+      "options": [
+        "A. Confirming correct ET tube placement",
+        "B. Assessing CPR compression quality",
+        "C. Detecting ROSC",
+        "D. Measuring blood glucose levels"
+      ],
+      "correct": 3,
+      "rationale": "ETCO₂ monitoring serves three critical roles: confirming tube placement (sustained waveform), assessing CPR quality (values < 10 mmHg suggest poor compressions), and detecting ROSC (abrupt rise). It does not measure blood glucose.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q17",
+      "question": "A 2-year-old child with croup is being bag-mask ventilated in the emergency department. Which anatomic feature makes this child more difficult to ventilate than an adult?",
+      "options": [
+        "A. Children have a smaller tongue relative to the oral cavity",
+        "B. The pediatric airway is proportionally narrower, especially at the cricoid cartilage, and the larynx is higher and more anterior",
+        "C. Children have thicker neck muscles that obstruct the airway",
+        "D. The epiglottis is flatter and wider in children"
+      ],
+      "correct": 1,
+      "rationale": "The pediatric airway has a proportionally narrower lumen (especially at the cricoid cartilage), a higher and more anterior larynx, a U-shaped epiglottis, and a proportionally larger tongue — all of which make mask ventilation and intubation more challenging than in adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q18",
+      "question": "What is the minimum occlusive volume for inflating an ET tube cuff?",
+      "options": [
+        "A. The maximum volume listed on the cuff",
+        "B. Just enough air to prevent a leak during positive-pressure ventilation",
+        "C. 25 mL regardless of tube size",
+        "D. The cuff should not be inflated in pediatric patients"
+      ],
+      "correct": 1,
+      "rationale": "The minimum occlusive volume is the smallest amount of air needed to prevent a leak during ventilation. Over-inflation beyond this point increases tracheal mucosal pressure, risking ischemia, edema, and post-extubation stridor.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q19",
+      "question": "A child with an advanced airway suddenly develops hypotension, absent breath sounds on the right, and tracheal deviation to the left. Using DOPE, what is the most likely cause?",
+      "options": [
+        "A. Displacement of the tube",
+        "B. Obstruction of the tube",
+        "C. Tension pneumothorax (Pneumothorax)",
+        "D. Equipment failure"
+      ],
+      "correct": 2,
+      "rationale": "Absent breath sounds on one side, tracheal deviation away from the affected side, and hypotension are classic signs of tension pneumothorax — the 'P' in DOPE. This requires immediate needle decompression followed by chest tube placement.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q20",
+      "question": "What is the key difference between ventilation during BLS and ventilation once an advanced airway is placed?",
+      "options": [
+        "A. There is no difference — ventilations are always delivered with compressions paused",
+        "B. During BLS, ventilations are coordinated with compressions (30:2 or 15:2); with an advanced airway, compressions are continuous and ventilations are delivered independently at 1 breath every 2–3 seconds",
+        "C. Advanced airway ventilation requires a higher rate of 60 breaths per minute",
+        "D. BLS does not include any ventilations"
+      ],
+      "correct": 1,
+      "rationale": "BLS uses compression-ventilation ratios (30:2 or 15:2) with pauses for breaths. Once an advanced airway is confirmed, compressions are delivered continuously and ventilations are given independently at 1 breath every 2–3 seconds (20–30/min), eliminating the need to pause compressions.",
+      "difficulty": "Easy"
+    }
+  ]
+}

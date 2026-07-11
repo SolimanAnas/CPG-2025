@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "The Febrile Toddler with Cool Extremities",
+      "presentation": "A 2-year-old, 12 kg boy is brought to the ED by his mother with a history of 4 days of high fever (40.1°C), decreased oral intake, and 2 days of non-bloody, non-bilious vomiting and watery diarrhea. The child is lethargic and minimally responsive. On examination, the skin is pale and mottled, extremities are cool, and capillary refill is 5 seconds. Heart rate is 170/min. Blood pressure is 82/50.",
+      "vitals": { "hr": "170", "bp": "82/50", "rr": "36", "spo2": "95%", "temp": "40.1°C" },
+      "question": "What type of shock does this child most likely have, and what is the hypotension threshold?",
+      "options": [
+        "A: Hypovolemic shock from dehydration — hypotension threshold is SBP < 74 mmHg",
+        "B: Cardiogenic shock — hypotension threshold is SBP < 70 mmHg",
+        "C: Distributive (septic) shock — hypotension threshold is SBP < 74 mmHg",
+        "D: Obstructive shock — hypotension threshold is SBP < 70 mmHg"
+      ],
+      "correct": 2,
+      "explanation": "This child has a 4-day febrile illness with vomiting and diarrhea, now presenting with altered mental status, poor perfusion (pale, mottled, cool, CRT 5 sec), and tachycardia. The hypotension threshold is 70 + (2 × 2) = 74 mmHg — his SBP of 82 is above this, so he is in compensated shock. While dehydration contributes, the high fever and systemic illness raise sepsis as the primary distributive cause.",
+      "clinicalPearl": "In a febrile child with poor perfusion, always consider sepsis even when dehydration is also present. They often coexist and both require treatment."
+    },
+    {
+      "id": "c05_s02",
+      "title": "The Infant with a Gallop",
+      "presentation": "A 6-month-old, 7 kg girl is brought in by ambulance after 3 days of fever, cough, and decreased feeding. Over the past 6 hours, she has become increasingly irritable and then lethargic. On examination, she is pale, mottled, and limp. Heart rate is 200/min. She has a gallop rhythm on cardiac auscultation, an enlarged liver palpated 3 cm below the right costal margin, and bilateral crackles on lung auscultation. Blood pressure is 68/42.",
+      "vitals": { "hr": "200", "bp": "68/42", "rr": "50", "spo2": "88%", "temp": "38.8°C" },
+      "question": "What type of shock is this, and what makes it distinct from the most common pediatric shock type?",
+      "options": [
+        "A: Hypovolemic shock — distinct because it has flat neck veins and no gallop",
+        "B: Cardiogenic shock — distinct because the pump itself is failing (gallop, hepatomegaly, pulmonary edema) rather than a volume or vasodilation problem",
+        "C: Distributive shock — distinct because it has warm, flushed skin",
+        "D: Obstructive shock — distinct because it requires pericardiocentesis"
+      ],
+      "correct": 1,
+      "explanation": "The gallop rhythm, hepatomegaly from venous congestion, pulmonary edema (bilateral crackles, hypoxemia), and the severity of the presentation point to cardiogenic shock — likely from fulminant myocarditis following a viral infection. Unlike distributive or hypovolemic shock, the problem is pump failure: the heart cannot eject blood effectively, causing both forward failure (poor perfusion) and backward failure (congestion).",
+      "clinicalPearl": "Cardiogenic shock in an infant with a viral prodrome should raise suspicion for myocarditis. Aggressive fluid boluses may worsen pulmonary edema in this setting."
+    },
+    {
+      "id": "c05_s03",
+      "title": "The Child After Trauma",
+      "presentation": "A 9-year-old, 30 kg girl is brought to the ED after a motor vehicle collision. She is conscious but confused. She was the unrestrained back-seat passenger and struck the dashboard. On examination, she is pale and diaphoretic. Her neck veins are flat. Heart rate is 160/min and blood pressure is 84/56. Her abdomen is rigid and tender in all four quadrants. Breath sounds are equal bilaterally.",
+      "vitals": { "hr": "160", "bp": "84/56", "rr": "32", "spo2": "93%", "temp": "36.4°C" },
+      "question": "What type of shock does this patient most likely have, and what is the next critical step?",
+      "options": [
+        "A: Cardiogenic shock from cardiac contusion — obtain an echocardiogram",
+        "B: Distributive shock from sepsis — start broad-spectrum antibiotics",
+        "C: Hypovolemic shock from hemorrhage — obtain blood type and crossmatch, prepare for surgical intervention",
+        "D: Obstructive shock from tension pneumothorax — perform needle decompression"
+      ],
+      "correct": 2,
+      "explanation": "This post-trauma patient with tachycardia, hypotension (hypotension threshold for age 9: 70 + 18 = 88 mmHg; SBP 84 is below this), flat neck veins (low preload), a rigid tender abdomen (intra-abdominal hemorrhage), and altered mental status is in hypovolemic shock from likely intra-abdominal hemorrhage. Equal breath sounds rule out tension pneumothorax. The immediate priorities are IV/IO access, fluid resuscitation, blood product preparation, and emergent surgical consultation.",
+      "clinicalPearl": "The hypotension threshold for this 9-year-old is SBP < 88 mmHg. Her BP of 84 is hypotensive — she is in hypotensive shock and at imminent risk of cardiac arrest."
+    }
+  ]
+}

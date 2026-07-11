@@ -1,0 +1,71 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "Drowning Toddler",
+      "presentation": "A 2-year-old (12 kg) was found floating face-down in a backyard swimming pool. The child was in the water for approximately 5 minutes before being pulled out by a parent. The child is unresponsive and not breathing. Two bystanders are present.",
+      "vitals": {
+        "hr": "50 bpm",
+        "bp": "Not palpable",
+        "rr": "Agonal gasps",
+        "spo2": "60%",
+        "temp": "34.5°C"
+      },
+      "question": "What is the correct initial BLS management for this child?",
+      "options": [
+        "A: Begin rescue breathing alone since the child has a pulse at 50 bpm.",
+        "B: Start chest compressions and ventilations — HR < 60 with poor perfusion despite agonal gasps meets the threshold to begin compressions.",
+        "C: Wait for the AED before starting any intervention.",
+        "D: Perform abdominal thrusts to clear possible aspiration."
+      ],
+      "correct": 1,
+      "explanation": "The heart rate is 50 bpm (< 60) with poor perfusion (unresponsive, agonal gasps, SpO2 60%, hypothermic). Even though the child is agonal breathing, HR < 60 with poor perfusion meets the threshold to start compressions. Two rescuers should use a 15:2 ratio for this pre-pubertal child.",
+      "clinicalPearl": "In drowning, early ventilation is critical — the underlying cause is hypoxia. Begin with ventilations if the child has a pulse but is not breathing normally, and start compressions when HR drops below 60."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Infant in Respiratory Distress Progressing to Arrest",
+      "presentation": "A 4-month-old (6 kg) in the PICU has been receiving supplemental oxygen for bronchiolitis. Over the past 10 minutes, the child has become progressively more lethargic, the respiratory rate has dropped, and the oxygen saturation is falling despite increasing support. The nurse calls for the rapid-response team.",
+      "vitals": {
+        "hr": "55 bpm",
+        "bp": "Not measurable",
+        "rr": "8/min and shallow",
+        "spo2": "70%",
+        "temp": "37.8°C"
+      },
+      "question": "The team arrives. Two rescuers are available. What compression-ventilation ratio and technique should be used?",
+      "options": [
+        "A: 30:2 using two-finger technique",
+        "B: 15:2 using two-thumb encircling-hands technique",
+        "C: 30:2 using two-thumb encircling-hands technique",
+        "D: 15:2 using heel-of-one-hand"
+      ],
+      "correct": 1,
+      "explanation": "Two rescuers performing CPR on a pre-pubertal infant use a 15:2 ratio. The two-thumb encircling-hands technique is preferred for infants and small children whenever the chest can be encircled, as it produces more consistent depth and force.",
+      "clinicalPearl": "When the rapid-response team arrives, role assignment should happen immediately: 'You — compressions, you — airway, you — get the crash cart and prepare epinephrine.' Closed-loop communication ensures everyone knows their role."
+    },
+    {
+      "id": "c02_s03",
+      "title": "Team Fatigue During Prolonged Pediatric Arrest",
+      "presentation": "A 5-year-old (20 kg) has been in cardiac arrest for 8 minutes. The team has been performing CPR with a 15:2 ratio. The current compressor started at the 6-minute mark and is now approaching 4 minutes of continuous compressions. The team leader is preparing for the next rhythm check.",
+      "vitals": {
+        "hr": "No pulse on rhythm check",
+        "bp": "Not applicable",
+        "rr": "No respiratory effort",
+        "spo2": "Not applicable",
+        "temp": "35.2°C"
+      },
+      "question": "What should the team leader do regarding compressor management?",
+      "options": [
+        "A: Keep the current compressor going through the rhythm check to maintain continuity",
+        "B: Immediately switch compressors — the current compressor has exceeded 2 minutes and quality is likely degraded",
+        "C: Stop compressions entirely for a detailed rhythm interpretation",
+        "D: Let the compressor decide when to switch"
+      ],
+      "correct": 1,
+      "explanation": "The compressor has been pushing for approximately 4 minutes — twice the recommended maximum of 2 minutes. Compression quality degrades measurably, and the leader should call for an immediate switch. The incoming compressor should already be in position, and the transition should take less than 5 seconds.",
+      "clinicalPearl": "In prolonged resuscitations, pre-position the next compressor beside the current one so the switch takes less than 5 seconds. Assign this proactively — do not wait for the rhythm check to plan the switch."
+    }
+  ]
+}

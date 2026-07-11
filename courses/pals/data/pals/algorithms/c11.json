@@ -1,0 +1,26 @@
+{
+  "chapter": "c11",
+  "algorithms": [
+    {
+      "id": "c11_alg01",
+      "title": "Pediatric Tachycardia With a Pulse — Decision Algorithm",
+      "description": "Stepwise approach to evaluating and managing a pediatric patient with a heart rate above the normal range for age, based on the 2025 AHA PALS tachycardia algorithm.",
+      "image": "../../images/courses/pals/c11_g01.webp",
+      "steps": [
+        "Step 1 — Confirm tachycardia: heart rate above the upper limit of normal for the patient's age.",
+        "Step 2 — Assess perfusion and hemodynamic stability: check mental status, skin color and temperature, pulse quality, capillary refill, and blood pressure.",
+        "Step 3 — If UNSTABLE (poor perfusion, hypotension, altered mental status, shock, heart failure): proceed immediately to synchronized cardioversion at 0.5–1 J/kg.",
+        "Step 4 — If the first cardioversion attempt fails: increase energy to 2 J/kg and repeat synchronized cardioversion.",
+        "Step 5 — If STABLE: obtain a 12-lead ECG if possible to assess QRS width and rhythm morphology.",
+        "Step 6 — Narrow-complex tachycardia (QRS < 0.09 s): suspect SVT if sudden onset, regular, rate 220–300 bpm (infants) or 150–250 bpm (children), no visible P waves.",
+        "Step 7 — Attempt adenosine: 0.1 mg/kg rapid IV push through a proximal IV, followed by saline flush (maximum first dose 6 mg).",
+        "Step 8 — If adenosine fails: second dose at 0.2 mg/kg rapid IV push (maximum 12 mg).",
+        "Step 9 — If adenosine fails twice: cardiology consultation; consider verapamil (in children > 1 year), amiodarone, or synchronized cardioversion.",
+        "Step 10 — Wide-complex tachycardia (QRS ≥ 0.09 s): consider SVT with aberrancy versus ventricular tachycardia.",
+        "Step 11 — If stable and uncertain diagnosis: cardiology consultation before administering antiarrhythmics.",
+        "Step 12 — If stable and VT suspected with structural heart disease: amiodarone 5 mg/kg IV over 20–60 minutes with cardiac monitoring.",
+        "Step 13 — After successful conversion: continuous monitoring, cardiology follow-up, and evaluation for underlying substrate."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "c11",
+  "title": "Tachycardia With a Pulse: SVT vs Sinus",
+  "shortTitle": "Pediatric Tachycardia",
+  "estimatedStudyTime": 30,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Define pediatric tachycardia and state the upper limit of normal heart rate for each age group.",
+    "Differentiate sinus tachycardia from supraventricular tachycardia (SVT) using onset, rate, P waves, regularity, and response to adenosine.",
+    "Describe the stepwise management of stable and unstable narrow-complex tachycardia in children.",
+    "State the correct dose, route, and administration technique for adenosine in pediatric SVT.",
+    "Describe the approach to wide-complex tachycardia in children and the considerations for distinguishing SVT with aberrancy from ventricular tachycardia.",
+    "State the energy levels for synchronized cardioversion in unstable pediatric tachycardia.",
+    "Identify signs of hemodynamic instability that mandate immediate cardioversion in a child with tachycardia."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing Tachycardia in Children",
+      "content": "Tachycardia is defined as a heart rate above the upper limit of normal for the patient's age. In general, rates above 220 bpm in an infant or above 180 bpm in a school-age child should raise concern for a pathologic tachyarrhythmia rather than sinus tachycardia. The critical first question is whether the patient is stable or unstable — unstable tachycardia with signs of poor perfusion requires immediate intervention regardless of the rhythm type."
+    },
+    {
+      "title": "Sinus Tachycardia versus Supraventricular Tachycardia",
+      "content": "Sinus tachycardia (sinus mechanism) has a gradual onset, varies with activity, fever, pain, or emotional distress, and typically shows a heart rate that fluctuates. Visible P waves precede every QRS complex. Supraventricular tachycardia (SVT) has a sudden onset, is typically very regular, and often produces a heart rate between 220 and 300 bpm in children. P waves may be absent, buried in the QRS, or appear as retrograde (inverted) P waves. SVT is a true tachyarrhythmia driven by a re-entry circuit, whereas sinus tachycardia is a physiologic response."
+    },
+    {
+      "title": "Assessing Stability: The Decisive Question",
+      "content": "A child with tachycardia who has normal perfusion, adequate blood pressure, and no altered mental status is considered stable. Stable tachycardia allows time for diagnosis and initial medical management. A child with tachycardia and signs of shock — poor perfusion, hypotension, altered mental status, or acute heart failure — is unstable and requires immediate synchronized cardioversion. Do not delay cardioversion to give medications or attempt vagal maneuvers in an unstable patient."
+    },
+    {
+      "title": "Vagal Maneuvers and Adenosine",
+      "content": "For stable narrow-complex tachycardia (suspected SVT), the first medical intervention is adenosine. Vagal maneuvers (such as ice to the face or the modified Valsalva in adolescents) may be tried first, though they are less effective in infants and young children. Adenosine is given as a rapid IV push at 0.1 mg/kg, with a maximum first dose of 6 mg. If unsuccessful, a second dose of 0.2 mg/kg (maximum 12 mg) may be given. Adenosine must be given as fast as possible — ideally through a proximal (antecubital) IV followed by a saline flush — because its half-life is only seconds."
+    },
+    {
+      "title": "Synchronized Cardioversion for Unstable Tachycardia",
+      "content": "If a child with tachycardia shows signs of hemodynamic instability — including hypotension, acutely altered mental status, signs of shock, or acute heart failure — synchronized cardioversion is performed immediately. The initial energy dose is 0.5 to 1 J/kg. If the first attempt fails, increase to 2 J/kg. Sedation should be given if the patient is conscious and time permits, but cardioversion should not be delayed for sedation in a critically unstable patient."
+    },
+    {
+      "title": "Wide-Complex Tachycardia: A Different Challenge",
+      "content": "A wide-complex tachycardia (QRS > 0.09 seconds in children) is more concerning because it may represent ventricular tachycardia (VT) rather than SVT with aberrant conduction. In children, VT is rare compared to adults but does occur, particularly in those with structural heart disease, channelopathies, or drug toxicity. If the diagnosis is uncertain and the patient is unstable, treat with synchronized cardioversion. If the patient is stable and the rhythm is unclear, consultation with a pediatric cardiologist or electrophysiologist is recommended before administering antiarrhythmics."
+    },
+    {
+      "title": "Post-Conversion Management",
+      "content": "After successful conversion from SVT to sinus rhythm, the patient should be monitored continuously. Recurrence is common, especially in children with accessory pathways (such as Wolff-Parkinson-White syndrome). Consult cardiology for long-term management, including consideration of antiarrhythmic therapy, catheter ablation, or activity restriction depending on the underlying substrate."
+    }
+  ],
+  "clinicalPearls": [
+    "Adenosine must be given as a RAPID IV push followed by a saline flush — a slow push renders it ineffective due to its 6-second half-life.",
+    "Use the largest, most proximal IV available for adenosine delivery — a proximal (antecubital) site is preferred over a central line when possible.",
+    "If adenosine fails the first time, a second dose at double the concentration (0.2 mg/kg, max 12 mg) is warranted before abandoning pharmacologic conversion.",
+    "Sinus tachycardia is a DIAGNOSIS OF EXCLUSION in children with very fast heart rates — treat the underlying cause, not the rate.",
+    "An unstable child with tachycardia gets cardioversion FIRST — do not waste time on vagal maneuvers, adenosine, or sedation when perfusion is failing."
+  ],
+  "redFlags": [
+    "Heart rate above 220 bpm in an infant or above 180 bpm in an older child — suspect SVT rather than sinus tachycardia.",
+    "Tachycardia with hypotension, altered mental status, or signs of shock — immediate synchronized cardioversion, do not delay.",
+    "Wide-complex tachycardia in a child with structural heart disease — treat as ventricular tachycardia until proven otherwise.",
+    "Failed adenosine conversion after two doses — suspect an alternative rhythm or need for expert consultation."
+  ],
+  "commonMistakes": [
+    "Giving adenosine slowly or through a distal IV — the drug is degraded in seconds and must reach the heart at high concentration.",
+    "Attempting vagal maneuvers or adenosine in an unstable patient — always cardiovert first in hemodynamic instability.",
+    "Treating sinus tachycardia with adenosine — sinus tachycardia will not convert and the child receives an unnecessary medication with transient side effects.",
+    "Using a fixed energy dose for cardioversion instead of weight-based dosing — always calculate 0.5–1 J/kg for the first attempt."
+  ],
+  "memoryAids": [
+    "SVT mnemonic: 'Sudden, Regular, Very fast, No visible P waves' — SRVN.",
+    "Adenosine: '0.1 then 0.2, 6 then 12, FAST or nothing' — first dose 0.1 mg/kg (max 6 mg), second dose 0.2 mg/kg (max 12 mg), push rapidly.",
+    "Unstable tachycardia: 'Shock first, ask questions later' — synchronized cardioversion before medications.",
+    "Cardioversion energy: '0.5 to 1, then 2 if it fails' — 0.5–1 J/kg first, 2 J/kg second."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Tachycardia With a Pulse — Decision Algorithm",
+      "content": "Heart rate above normal for age\n  → Assess perfusion\n     → UNSTABLE (hypotension, altered mental status, poor perfusion, shock signs):\n        → Synchronized cardioversion 0.5–1 J/kg immediately\n        → If fails: increase to 2 J/kg\n        → Sedate if time allows and patient is conscious\n     → STABLE:\n        → Obtain 12-lead ECG if possible\n        → Narrow complex (QRS < 0.09 s):\n           → Suspect SVT if sudden onset, regular, rate 220–300 (infants) or 150–250 (children)\n           → Adenosine 0.1 mg/kg rapid IV push (max 6 mg)\n           → If fails: Adenosine 0.2 mg/kg rapid IV push (max 12 mg)\n           → If fails: cardiology consultation, consider verapamil or amiodarone\n        → Wide complex (QRS ≥ 0.09 s):\n           → Consider VT vs SVT with aberrancy\n           → If uncertain: cardiology consultation before antiarrhythmics\n           → If stable and VT suspected: amiodarone 5 mg/kg over 20–60 min\n           → If unstable: synchronized cardioversion"
+    }
+  ],
+  "references": [
+    "AHA 2025 Guidelines for CPR and ECC — Part 8: Pediatric Advanced Life Support",
+    "AHA 2025 Pediatric Tachycardia With a Pulse Algorithm",
+    "AHA 2025 Guidelines: Adenosine dosing and cardioversion recommendations"
+  ],
+  "graphics": [
+    {
+      "id": "c11_g01",
+      "section": "summary",
+      "sectionIndex": 4,
+      "url": "../../images/courses/pals/c11_g01.webp",
+      "alt": "Pediatric Tachycardia with Pulse Algorithm Flowchart",
+      "caption": "Flowchart showing evaluation of stable vs unstable pediatric tachycardia, narrow-QRS (SVT vs Sinus Tachycardia) and wide-QRS (VT) pathways."
+    }
+  ]
+}

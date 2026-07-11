@@ -1,0 +1,26 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Pediatric VF / Pulseless VT Cardiac Arrest Algorithm",
+      "description": "Structured steps for managing pediatric cardiac arrest with shockable rhythms (VF or pVT), based on the 2025 AHA Pediatric Cardiac Arrest Algorithm for shockable rhythms.",
+      "image": "../../images/courses/pals/c07_g01.webp",
+      "steps": [
+        "Step 1 — Recognize cardiac arrest: confirm unresponsiveness, absence of normal breathing, and no palpable pulse within 10 seconds.",
+        "Step 2 — Activate emergency response and begin high-quality CPR: 30:2 compression-to-ventilation ratio (single rescuer) or 15:2 (two rescuers); push hard and fast at ≥200 compressions/min for infants/children; allow full chest recoil; minimize interruptions.",
+        "Step 3 — Attach cardiac monitor/defibrillator and identify the rhythm: confirm VF or pulseless VT (shockable rhythm).",
+        "Step 4 — FIRST DEFIBRILLATION SHOCK: deliver 2 J/kg using a biphasic waveform defibrillator in unsynchronized mode.",
+        "Step 5 — Resume CPR immediately for 2 minutes after the shock — do not pause to check for a pulse.",
+        "Step 6 — Establish IV/IO access as soon as possible during CPR without interrupting compressions.",
+        "Step 7 — Rhythm recheck after 2 minutes of CPR: if VF/pVT persists, deliver SECOND SHOCK at 4 J/kg.",
+        "Step 8 — Resume CPR for 2 minutes. If IV/IO access is available, administer epinephrine 0.01 mg/kg IV/IO during CPR.",
+        "Step 9 — Rhythm recheck after 2 minutes of CPR: if VF/pVT persists, deliver SUBSEQUENT SHOCK at ≥4 J/kg (may escalate; maximum 10 J/kg or adult dose).",
+        "Step 10 — Resume CPR for 2 minutes. Administer amiodarone 5 mg/kg IV/IO bolus (max 300 mg). If amiodarone is unavailable, give lidocaine 1 mg/kg IV/IO.",
+        "Step 11 — Continue 2-minute CPR cycles with rhythm rechecks. Repeat amiodarone (max 150 mg subsequent doses) or escalate defibrillation energy as needed.",
+        "Step 12 — Actively search for and treat reversible causes (H's and T's) throughout resuscitation.",
+        "Step 13 — On ROSC: initiate post-cardiac arrest care — continuous monitoring, glucose check, 12-lead ECG, active fever prevention (target ≤37.5 °C for comatose patients), and transport to a pediatric ICU."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Pediatric Assessment Triangle and ABCDE Algorithm",
+      "description": "A structured approach to the initial assessment of an acutely ill or injured child, beginning with the rapid hands-off PAT and progressing to the systematic ABCDE primary assessment.",
+      "image": "../../images/courses/pals/c01_g01.webp",
+      "steps": [
+        "Step 1 — Observe the child from across the room (hands-off): Assess Appearance (TICLS: Tone, Interactiveness, Consolability, Look/gaze, Speech/cry), Breathing (work of breathing, audible sounds), and Circulation (skin color, mucous membranes).",
+        "Step 2 — Categorize severity based on the PAT: All normal = minor problem (monitor and reassess); One abnormal = moderate problem (detailed assessment and treatment); Two or three abnormal = severe / life-threatening (immediate intervention).",
+        "Step 3 — If the PAT is abnormal, begin the primary ABCDE assessment. A = Airway: open and assess patency; position the head, suction if needed, consider jaw thrust, foreign body, and adjuncts.",
+        "Step 4 — B = Breathing: assess rate, depth, work of breathing, oxygen saturation, and auscultate lung sounds. Provide bag-mask ventilation or advanced airway if breathing is inadequate.",
+        "Step 5 — C = Circulation: assess heart rate, pulse quality, capillary refill, skin color/temperature, blood pressure. Establish IV/IO access, administer fluid bolus if indicated (20 mL/kg isotonic crystalloid for shock).",
+        "Step 6 — D = Disability: assess neurological status (AVPU or GCS), pupil size and reactivity, and check blood glucose. Treat seizures or hypoglycemia as identified.",
+        "Step 7 — E = Exposure: fully undress the child to identify rashes, injuries, distension, or other findings while maintaining warmth.",
+        "Step 8 — Reassess after each ABCDE step and after each intervention. Children can deteriorate rapidly; continuous reassessment is essential.",
+        "Step 9 — Transition to the secondary assessment (SAMPLE history and head-to-toe exam) once the primary assessment is stabilized.",
+        "Step 10 — Re-categorize severity using the assess–categorize–decide–act framework and escalate or de-escalate care accordingly."
+      ]
+    },
+    {
+      "id": "c01_alg02",
+      "title": "Respiratory Category Identification and Initial Management",
+      "description": "Classifies pediatric respiratory distress into three anatomic categories and guides initial management based on the category identified.",
+      "steps": [
+        "Assess the child's work of breathing and auscultate lung sounds.",
+        "If stridor and inspiratory distress → Upper Airway Obstruction: consider foreign body (direct laryngoscopy), croup (nebulized epinephrine, dexamethasone), epiglottitis (do NOT agitate; prepare for controlled airway), anaphylaxis (epinephrine IM).",
+        "If wheezing and prolonged expiratory phase → Lower Airway Obstruction: consider asthma (bronchodilators, systemic corticosteroids), bronchiolitis (supportive care, consider HFNC), pneumonia (antibiotics, respiratory support).",
+        "If tachypnea with clear lungs and cyanosis → Pulmonary Vascular Obstruction: consider pulmonary embolism (anticoagulation, consultation) or congenital heart disease with right-to-left shunting (cardiology consultation, prostaglandin E1 if ductal-dependent).",
+        "Reassess after each intervention and adjust management based on the child's response."
+      ]
+    },
+    {
+      "id": "c01_alg03",
+      "title": "Assess–Categorize–Decide–Act Framework",
+      "description": "The PALS four-step clinical decision-making framework applied to any pediatric emergency encounter.",
+      "steps": [
+        "Assess: Perform the PAT and primary ABCDE assessment. Gather clinical data through observation and targeted examination.",
+        "Categorize: Classify the child's severity — mild (one system involved, well-compensated), moderate (one or two systems, partially compensated), or severe / life-threatening (multiple systems, decompensated or pre-arrest).",
+        "Decide: Choose the treatment priority — what interventions are needed, how urgently, and in what setting (emergency department, ICU, operating room). Identify reversible causes.",
+        "Act: Initiate the planned interventions — airway management, ventilation, fluids, medications, or transfer. Then reassess continuously and repeat the framework as the child's condition evolves."
+      ]
+    }
+  ]
+}

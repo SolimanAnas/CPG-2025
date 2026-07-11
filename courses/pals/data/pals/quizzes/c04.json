@@ -1,0 +1,199 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "A 2-year-old presents with a barking cough, hoarseness, and inspiratory stridor that worsened overnight. Which respiratory category does this patient most likely fall into?",
+      "options": ["A. Lower airway obstruction", "B. Lung tissue disease", "C. Upper airway obstruction", "D. Disordered control of breathing"],
+      "correct": 2,
+      "rationale": "Barking cough, hoarseness, and inspiratory stridor are the classic triad of croup, which is a viral inflammation of the larynx and trachea — the quintessential upper airway obstruction in young children.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "What is the first-line pharmacologic treatment for a child with moderate croup and persistent stridor at rest?",
+      "options": ["A. Nebulized albuterol", "B. Oral dexamethasone 0.6 mg/kg", "C. IV methylprednisolone", "D. Nebulized budesonide only"],
+      "correct": 1,
+      "rationale": "Dexamethasone (oral or IM, 0.6 mg/kg, max 16 mg) is the first-line corticosteroid for croup. It reduces airway edema over several hours. Racemic epinephrine is added for moderate-to-severe cases but dexamethasone is the cornerstone therapy.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q03",
+      "question": "A 4-year-old presents with high fever, drooling, a tripod posture, and a muffled voice. The child is anxious and refuses to lie down. What is the most likely diagnosis?",
+      "options": ["A. Viral croup", "B. Asthma exacerbation", "C. Epiglottitis", "D. Foreign body aspiration"],
+      "correct": 2,
+      "rationale": "The combination of drooling, tripod positioning, muffled voice, high fever, and acute distress in a young child is classic for epiglottitis. This is an airway emergency — do not attempt to examine the throat or agitate the child.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q04",
+      "question": "A 3-year-old is brought in after choking on a grape at lunch. He is breathing comfortably now but has decreased breath sounds on the right. Chest X-ray is normal. What should you do next?",
+      "options": ["A. Observe and repeat X-ray in 24 hours", "B. Order a CT chest", "C. Arrange rigid bronchoscopy for foreign body removal", "D. Treat with albuterol nebulizer"],
+      "correct": 2,
+      "rationale": "Sudden choking followed by asymmetric breath sounds is highly suspicious for foreign body aspiration. Many foreign bodies (food, plastic) are radiolucent and will not show on plain X-ray. Rigid bronchoscopy is both diagnostic and therapeutic.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q05",
+      "question": "An 8-month-old with bronchiolitis has expiratory wheezing, a prolonged expiratory phase, and nasal flaring. The chest X-ray shows hyperinflation with flattened diaphragms. Which respiratory category is this?",
+      "options": ["A. Upper airway obstruction", "B. Lower airway obstruction", "C. Lung tissue disease", "D. Disordered control of breathing"],
+      "correct": 1,
+      "rationale": "Expiratory wheezing, prolonged expiration, and air trapping with hyperinflation on CXR are the hallmarks of lower airway obstruction — in this case, bronchiolitis (usually RSV) causing bronchiolar inflammation and mucus plugging.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q06",
+      "question": "A 6-year-old with pneumonia has crackles over the right lower lobe, SpO2 of 88% on room air, and a respiratory rate of 44/min. Which category of respiratory compromise is this?",
+      "options": ["A. Upper airway obstruction", "B. Lower airway obstruction", "C. Lung tissue disease", "D. Disordered control of breathing"],
+      "correct": 2,
+      "rationale": "Crackles over a localized area with hypoxemia and an abnormal chest radiograph indicate lung tissue disease — the alveolar-capillary membrane is compromised, impairing oxygen transfer. Pneumonia is the most common pediatric cause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q07",
+      "question": "A child receiving a sedated procedure develops progressively shallow respirations and eventually becomes apneic. The lungs sound clear on auscultation. What is the most likely category?",
+      "options": ["A. Upper airway obstruction", "B. Lung tissue disease", "C. Disordered control of breathing", "D. Lower airway obstruction"],
+      "correct": 2,
+      "rationale": "Sedative drugs suppress the central respiratory drive, producing disordered control of breathing. The lungs are structurally normal (clear auscultation), but the brain is not generating adequate respiratory effort. This requires immediate airway support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q08",
+      "question": "A 5-year-old presents with diffuse expiratory wheezing, accessory muscle use, and a prolonged expiratory phase. The child has a history of asthma. What is the appropriate first-line treatment?",
+      "options": ["A. Oral dexamethasone alone", "B. Nebulized albuterol 2.5 mg every 20 minutes for three doses", "C. Racemic epinephrine nebulizer", "D. Racemic epinephrine and dexamethasone"],
+      "correct": 1,
+      "rationale": "This is an acute asthma exacerbation — a lower airway obstruction. First-line treatment is bronchodilator therapy with nebulized albuterol (short-acting beta-2 agonist) to relax bronchial smooth muscle and open the lower airways.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q09",
+      "question": "What differentiates respiratory distress from respiratory failure?",
+      "options": [
+        "A. Distress has tachypnea; failure has bradypnea",
+        "B. Distress has increased work of breathing with preserved gas exchange; failure shows inadequate oxygenation or ventilation",
+        "C. Distress is always lower airway; failure is always upper airway",
+        "D. There is no distinction — they are the same condition"
+      ],
+      "correct": 1,
+      "rationale": "Respiratory distress is the body's compensatory response with increased work of breathing (retractions, nasal flaring, tachypnea) but still maintaining gas exchange. Respiratory failure means the child can no longer maintain adequate PaO2 or PaCO2 despite increased effort.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "Why do infants decompensate from respiratory distress more rapidly than older children or adults?",
+      "options": [
+        "A. Infants have larger airways relative to body size",
+        "B. Infants have a lower metabolic rate and oxygen demand",
+        "C. Infants have smaller airways, higher oxygen consumption, and more compliant chest walls, leading to rapid fatigue",
+        "D. Infants have stronger accessory muscles"
+      ],
+      "correct": 2,
+      "rationale": "Infants have smaller absolute airway diameter, a higher oxygen consumption per kilogram, and a more compliant chest wall that allows paradoxical movement. When the work of breathing increases, they fatigue quickly and can progress from distress to failure in minutes to hours.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q11",
+      "question": "Which of the following is NOT a feature of upper airway obstruction?",
+      "options": [
+        "A. Inspiratory stridor",
+        "B. Barking cough",
+        "C. Expiratory wheezing",
+        "D. Hoarseness"
+      ],
+      "correct": 2,
+      "rationale": "Expiratory wheezing is a hallmark of lower airway obstruction, not upper. Upper airway obstruction produces inspiratory stridor, hoarseness, and in croup, a barking cough — all sounds generated above the vocal cords.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q12",
+      "question": "A 3-year-old has a 2-day history of fever and cough. Today he developed inspiratory stridor that worsens when agitated. His voice is hoarse. What dose of dexamethasone should be given?",
+      "options": [
+        "A. 0.15 mg/kg",
+        "B. 0.6 mg/kg (max 16 mg)",
+        "C. 1 mg/kg",
+        "D. 2 mg/kg"
+      ],
+      "correct": 1,
+      "rationale": "For croup, dexamethasone is dosed at 0.6 mg/kg orally or intramuscularly, with a maximum single dose of 16 mg. This is a well-established dose that effectively reduces laryngeal edema.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q13",
+      "question": "In the Pediatric Assessment Triangle, which component is most affected early in a child with croup?",
+      "options": [
+        "A. Appearance (interaction, gaze, cry)",
+        "B. Work of breathing",
+        "C. Circulation to skin",
+        "D. All three are equally affected from the start"
+      ],
+      "correct": 1,
+      "rationale": "Early croup primarily affects work of breathing — stridor, retractions, nasal flaring. Appearance and circulation to skin are typically preserved until the obstruction becomes severe and the child decompensates.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q14",
+      "question": "A 9-month-old is noted to have expiratory wheezing and intercostal retractions after a viral upper respiratory infection. The most likely diagnosis is:",
+      "options": [
+        "A. Croup",
+        "B. Epiglottitis",
+        "C. Bronchiolitis",
+        "D. Foreign body aspiration"
+      ],
+      "correct": 2,
+      "rationale": "Bronchiolitis, most commonly caused by RSV, is the leading cause of lower airway obstruction in infants under 12 months. It presents with wheezing, retractions, and often follows a viral URI. Croup produces stridor, not wheezing.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q15",
+      "question": "A child with clear lung auscultation but an irregular, Cheyne-Stokes breathing pattern after head trauma requires which immediate intervention?",
+      "options": [
+        "A. Nebulized albuterol",
+        "B. Oral dexamethasone",
+        "C. Airway support and mechanical ventilation",
+        "D. Chest tube insertion"
+      ],
+      "correct": 2,
+      "rationale": "An abnormal respiratory pattern with clear lungs after head trauma indicates disordered control of breathing from raised intracranial pressure or brainstem injury. The immediate priority is airway support and mechanical ventilation to maintain gas exchange.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q16",
+      "question": "Which finding suggests progression from respiratory distress to respiratory failure?",
+      "options": [
+        "A. Mild tachypnea with normal SpO2",
+        "B. Nasal flaring in an infant",
+        "C. Worsening hypoxemia despite supplemental oxygen and rising PaCO2",
+        "D. Increased respiratory rate during crying"
+      ],
+      "correct": 2,
+      "rationale": "Respiratory failure is defined by the inability to maintain adequate gas exchange: worsening hypoxemia despite supplemental O2 and rising PaCO2 (hypercapnia) are the defining features. The other findings are consistent with distress (compensation).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q17",
+      "question": "A child with suspected foreign body aspiration has a normal chest X-ray. What is the next best step?",
+      "options": [
+        "A. Reassure and discharge with follow-up",
+        "B. Repeat the chest X-ray in 1 week",
+        "C. Proceed to bronchoscopy for direct visualization and removal",
+        "D. Start a course of oral antibiotics"
+      ],
+      "correct": 2,
+      "rationale": "Many aspirated foreign bodies (food, plastic) are radiolucent and will not appear on plain radiography. Clinical suspicion based on history (choking event) and exam (asymmetric breath sounds) should prompt bronchoscopy, which is both diagnostic and therapeutic.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q18",
+      "question": "A 2-year-old with croup is receiving nebulized racemic epinephrine. Which of the following is true about this treatment?",
+      "options": [
+        "A. It is a corticosteroid that reduces inflammation over hours",
+        "B. It is an adrenergic agonist that causes vasoconstriction and reduces mucosal edema within minutes",
+        "C. It is a bronchodilator that relaxes bronchial smooth muscle",
+        "D. It is an antihistamine that reduces allergic swelling"
+      ],
+      "correct": 1,
+      "rationale": "Racemic epinephrine is an adrenergic (alpha and beta) agonist. The alpha-adrenergic effect causes vasoconstriction in the inflamed subglottic mucosa, reducing edema and relieving stridor within minutes. It is not a steroid and does not provide long-term anti-inflammatory benefit.",
+      "difficulty": "Hard"
+    }
+  ]
+}

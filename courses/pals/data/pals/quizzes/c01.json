@@ -1,0 +1,265 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "Which three components make up the Pediatric Assessment Triangle (PAT)?",
+      "options": [
+        "A. Airway, Breathing, Circulation",
+        "B. Appearance, Breathing, Circulation",
+        "C. Activity, Breathing, Color",
+        "D. Appearance, Breathing, Cardiac"
+      ],
+      "correct": 1,
+      "rationale": "The PAT is composed of Appearance, Breathing, and Circulation. Airway, Breathing, Circulation (ABC) is part of the primary ABCDE assessment, not the PAT itself. The PAT is designed for hands-off observation from across the room.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "A nurse observes a 2-year-old in the emergency department from across the room before touching the child. The child is sitting on the parent's lap, interacting with a toy, has mild nasal flaring, and pink skin. Using the PAT, how would you categorize this patient?",
+      "options": [
+        "A. All three components normal — likely a minor problem",
+        "B. Two components abnormal — life-threatening",
+        "C. One component abnormal (breathing) — moderate problem requiring detailed assessment",
+        "D. The PAT cannot be used until a full physical exam is completed"
+      ],
+      "correct": 2,
+      "rationale": "Appearance is normal (interacting, playing), circulation is normal (pink skin), but breathing shows nasal flaring, suggesting increased work of breathing. One abnormal PAT component indicates a moderate problem that warrants a detailed assessment and treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q03",
+      "question": "What does the 'T' in the TICLS mnemonic represent?",
+      "options": [
+        "A. Temperature",
+        "B. Tone",
+        "C. Trachea",
+        "D. Tachypnea"
+      ],
+      "correct": 1,
+      "rationale": "TICLS stands for Tone, Interactiveness, Consolability, Look/gaze, and Speech/cry. Tone evaluates whether the child has normal muscle tone and is moving actively, which reflects intact neurological perfusion and function.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q04",
+      "question": "Using the hypotension formula for children aged 1 to 10 years, a 6-year-old child would be considered hypotensive when systolic blood pressure falls below:",
+      "options": [
+        "A. 70 mmHg",
+        "B. 76 mmHg",
+        "C. 82 mmHg",
+        "D. 90 mmHg"
+      ],
+      "correct": 2,
+      "rationale": "The formula is SBP < 70 + (2 × age in years). For a 6-year-old: 70 + (2 × 6) = 82 mmHg. A systolic BP below 82 mmHg in this child would meet the criterion for hypotension.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q05",
+      "question": "A 4-month-old infant presents with a weak, high-pitched cry, poor tone, and inconsolable crying. Which part of the PAT is most directly affected?",
+      "options": [
+        "A. Breathing",
+        "B. Circulation",
+        "C. Appearance",
+        "D. None — these are normal findings for an infant"
+      ],
+      "correct": 2,
+      "rationale": "The TICLS mnemonic for appearance includes Tone, Interactiveness, Consolability, Look/gaze, and Speech/cry. A weak, high-pitched cry, poor tone, and inconsolability are all abnormalities of the appearance component, suggesting compromised neurological perfusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q06",
+      "question": "Which respiratory category is characterized by stridor and inspiratory distress?",
+      "options": [
+        "A. Lower airway obstruction",
+        "B. Upper airway obstruction",
+        "C. Pulmonary vascular obstruction",
+        "D. Mixed obstructive-restrictive"
+      ],
+      "correct": 1,
+      "rationale": "Upper airway obstruction produces stridor — a high-pitched sound from turbulence above the vocal cords — along with inspiratory distress. Common causes include foreign body, croup, epiglottitis, and anaphylaxis.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q07",
+      "question": "A 3-year-old child with fever, retractions, and wheezing is most likely in which respiratory distress category?",
+      "options": [
+        "A. Upper airway obstruction",
+        "B. Lower airway obstruction",
+        "C. Pulmonary vascular obstruction",
+        "D. This child is in respiratory arrest"
+      ],
+      "correct": 1,
+      "rationale": "Wheezing, retractions, and prolonged expiratory phase point to lower airway obstruction, which is most commonly caused by asthma, bronchiolitis, or pneumonia in young children.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q08",
+      "question": "A 7-year-old with chest pain, tachypnea, clear lungs on auscultation, and mild cyanosis is most likely experiencing:",
+      "options": [
+        "A. Asthma exacerbation",
+        "B. Foreign body aspiration",
+        "C. Pulmonary vascular obstruction",
+        "D. Severe pneumonia"
+      ],
+      "correct": 2,
+      "rationale": "Tachypnea with clear lungs and cyanosis in the absence of wheezing or stridor is characteristic of pulmonary vascular obstruction, which may be caused by pulmonary embolism or congenital heart disease with right-to-left shunting.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q09",
+      "question": "What is the key reason hypotension is a LATE sign of shock in children?",
+      "options": [
+        "A. Children have higher baseline blood pressure than adults",
+        "B. Children compensate by increasing heart rate and vascular resistance, maintaining blood pressure until decompensation",
+        "C. Blood pressure cannot be measured in children",
+        "D. Hypotension only occurs in cardiogenic shock"
+      ],
+      "correct": 1,
+      "rationale": "Children have robust compensatory mechanisms — they increase heart rate and systemic vascular resistance to maintain blood pressure. By the time hypotension appears, the child is in decompensated shock and may be near arrest. This is why tachycardia, poor pulses, and perfusion changes are the early warning signs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "What does the 'D' in the ABCDE primary assessment stand for?",
+      "options": [
+        "A. Defibrillation",
+        "B. Documentation",
+        "C. Disability (neurological assessment)",
+        "D. Dressing"
+      ],
+      "correct": 2,
+      "rationale": "D stands for Disability, which is the neurological assessment: level of consciousness (AVPU or GCS), pupil size and reactivity, and blood glucose. This step identifies neurological compromise that may require immediate intervention.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q11",
+      "question": "Which of the following is an appropriate description of the 'E' (Exposure) step in the primary assessment?",
+      "options": [
+        "A. Fully expose the child to identify rashes, injuries, or other findings while preventing hypothermia",
+        "B. Expose only the chest for cardiac monitoring",
+        "C. Remove all clothing only after the secondary assessment is complete",
+        "D. The exposure step is optional in pediatric assessment"
+      ],
+      "correct": 0,
+      "rationale": "The Exposure step involves fully undressing the child to perform a visual inspection for rashes, bruising, injuries, distension, or other diagnostic clues — while keeping the child warm by covering areas not being actively examined.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q12",
+      "question": "A 5-year-old in septic shock initially presents with warm, flushed skin and bounding pulses. This is best described as:",
+      "options": [
+        "A. Hypovolemic shock",
+        "B. Cardiogenic shock",
+        "C. Warm (early) distributive shock",
+        "D. Decompensated shock with hypotension"
+      ],
+      "correct": 2,
+      "rationale": "Early septic shock is distributive: vasodilation causes warm, flushed skin and bounding pulses (warm shock). As the child decompensates, cardiac output falls, and the child transitions to cold, mottled skin with weak pulses (cold shock).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q13",
+      "question": "What does the SAMPLE history mnemonic stand for in the secondary assessment?",
+      "options": [
+        "A. Signs, Medications, Allergies, Pulse, Level of consciousness, Events",
+        "B. Signs/symptoms, Allergies, Medications, Past medical history, Last oral intake, Events leading to illness",
+        "C. Symptoms, Assessment, Medications, Past history, Location, Examination",
+        "D. Skin, Airway, Mental status, Pain, Lung sounds, Exposure"
+      ],
+      "correct": 1,
+      "rationale": "SAMPLE is a systematic way to gather a focused history during the secondary assessment: Signs/symptoms, Allergies, Medications, Past medical history, Last oral intake, and Events leading to the current illness.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q14",
+      "question": "A child presents with delayed capillary refill of 5 seconds, mottled skin, and a heart rate of 170 bpm. Blood pressure is 85/50 mmHg and the child is 3 years old. Which statement is MOST accurate?",
+      "options": [
+        "A. Blood pressure is normal, so the child is not in shock",
+        "B. The child is in compensated shock — tachycardia and poor perfusion precede hypotension",
+        "C. The child is in decompensated shock with hypotension",
+        "D. Capillary refill and heart rate are normal for a 3-year-old"
+      ],
+      "correct": 1,
+      "rationale": "For a 3-year-old, hypotension threshold is SBP < 76. The BP of 85/50 is above that threshold, but the tachycardia (170 bpm), delayed cap refill, and mottling all indicate poor perfusion. This is compensated shock — blood pressure is maintained but perfusion is deteriorating.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Which sign of increased work of breathing should be considered the MOST concerning and suggests significant respiratory compromise?",
+      "options": [
+        "A. Mild nasal flaring",
+        "B. Intermittent retractions during feeding",
+        "C. Grunting",
+        "D. Slight tachypnea during crying"
+      ],
+      "correct": 2,
+      "rationale": "Grunting is a compensatory mechanism where the child exhales against a partially closed glottis to generate intrinsic PEEP and keep alveoli open. It indicates significant lower respiratory distress and should never be dismissed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q16",
+      "question": "A 9-month-old is brought in by EMS for lethargy and poor feeding for 2 days. On arrival, the child is limp, has a weak cry, and does not make eye contact. Skin is pale and mottled. Heart rate is 190 bpm, respiratory rate is 44/min. What is the MOST likely category of illness?",
+      "options": [
+        "A. Minor viral illness with dehydration",
+        "B. Compensated shock with poor perfusion — requires immediate assessment and intervention",
+        "C. This is normal for a sick infant — observe and reassess in 30 minutes",
+        "D. The child is postictal from a febrile seizure"
+      ],
+      "correct": 1,
+      "rationale": "The combination of abnormal appearance (limp, weak cry, no eye contact), abnormal circulation (pale, mottled), tachycardia, and tachypnea indicates a child in compensated shock with multiple abnormal PAT components. Immediate ABCDE assessment and intervention are required.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q17",
+      "question": "Why is it important to reassess after each step of the ABCDE primary assessment?",
+      "options": [
+        "A. It is only necessary once, at the end of the assessment",
+        "B. Because a child's clinical status can change rapidly and each intervention may alter the clinical picture",
+        "C. Reassessment is recommended only for cardiac arrest",
+        "D. It is required only for documentation purposes"
+      ],
+      "correct": 1,
+      "rationale": "Children deteriorate rapidly, and each intervention (e.g., opening the airway, providing ventilation) can change the clinical status. Reassessment after each ABCDE step ensures the team detects improvement or deterioration and adjusts the treatment plan accordingly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q18",
+      "question": "Which statement about the assess–categorize–decide–act framework is correct?",
+      "options": [
+        "A. It is used only for cardiac arrest patients",
+        "B. It guides severity classification and treatment prioritization, preventing both under-triage and over-triage",
+        "C. Categorize means assigning a triage color and nothing more",
+        "D. Action should always be delayed until a complete secondary assessment is done"
+      ],
+      "correct": 1,
+      "rationale": "The assess–categorize–decide–act framework ensures systematic evaluation, appropriate severity classification, and timely intervention. It keeps the team focused and prevents both under-triage (missing sick patients) and over-triage (unnecessary interventions).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q19",
+      "question": "A 2-year-old presents with sudden onset of high-pitched inspiratory stridor, drooling, and sitting upright in a tripod position. The child is febrile. Which respiratory category and most concerning diagnosis should be considered?",
+      "options": [
+        "A. Lower airway obstruction — asthma exacerbation",
+        "B. Upper airway obstruction — epiglottitis or severe croup",
+        "C. Pulmonary vascular obstruction — pulmonary embolism",
+        "D. No respiratory distress — this is normal toddler behavior"
+      ],
+      "correct": 1,
+      "rationale": "Stridor, drooling, tripod positioning, and fever in a toddler are classic red flags for upper airway obstruction, with epiglottitis being the most dangerous consideration. This is a potential airway emergency requiring immediate preparation for possible airway management.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q20",
+      "question": "What is the primary purpose of the 'Categorize' step in the assess–categorize–decide–act framework?",
+      "options": [
+        "A. To assign a final diagnosis before treatment",
+        "B. To determine the severity of the problem and guide the urgency and level of treatment needed",
+        "C. To count the number of abnormal PAT components",
+        "D. To decide whether to admit the patient to the hospital"
+      ],
+      "correct": 1,
+      "rationale": "Categorizing severity — mild, moderate, or life-threatening — drives the next decisions: what interventions are needed, how urgently, and in what treatment setting. It bridges the gap between assessment findings and clinical action.",
+      "difficulty": "Medium"
+    }
+  ]
+}

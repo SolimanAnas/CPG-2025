@@ -1,0 +1,113 @@
+{
+  "chapter": "c02",
+  "cards": [
+    {
+      "id": "c02_fc01",
+      "question": "What is the compression-ventilation ratio for single-rescuer CPR on any age patient?",
+      "answer": "30:2 — thirty compressions followed by two rescue breaths, regardless of whether the patient is an infant, child, or adult.",
+      "category": "CPR Ratios"
+    },
+    {
+      "id": "c02_fc02",
+      "question": "What is the compression-ventilation ratio for two or more rescuers performing CPR on a pre-pubertal child?",
+      "answer": "15:2 — fifteen compressions followed by two rescue breaths. This allows more frequent ventilations to address the respiratory origin of most pediatric arrests.",
+      "category": "CPR Ratios"
+    },
+    {
+      "id": "c02_fc03",
+      "question": "At what heart rate should chest compressions be started in a child with poor perfusion?",
+      "answer": "HR < 60 bpm with poor perfusion despite effective ventilation and supplemental oxygen. This applies to any age — infant, child, or pre-pubertal adolescent.",
+      "category": "BLS Thresholds"
+    },
+    {
+      "id": "c02_fc04",
+      "question": "What is the preferred technique for chest compressions in infants and small children?",
+      "answer": "The two-thumb encircling-hands technique — two thumbs compress the lower half of the sternum while the remaining fingers wrap around the back. This is preferred even for a lone rescuer when the chest can be encircled.",
+      "category": "Compression Technique"
+    },
+    {
+      "id": "c02_fc05",
+      "question": "What are the four quality standards for chest compressions?",
+      "answer": "Rate: 100–120/min. Depth: at least one-third the AP diameter of the chest. Recoil: allow full chest recoil between compressions. Interruptions: minimize to less than 10 seconds.",
+      "category": "Compression Quality"
+    },
+    {
+      "id": "c02_fc06",
+      "question": "How often should compressors be switched during prolonged CPR?",
+      "answer": "Every 2 minutes. The switch should be completed in less than 5 seconds, with the incoming compressor in position before the switch occurs.",
+      "category": "Team Dynamics"
+    },
+    {
+      "id": "c02_fc07",
+      "question": "Why is the compression-ventilation ratio different for pre-pubertal children compared to adults?",
+      "answer": "Because most pediatric cardiac arrests are respiratory in origin — the child arrests because of hypoxia. More frequent ventilations address this underlying cause, which is why teams use 15:2 for pre-pubertal children.",
+      "category": "CPR Ratios"
+    },
+    {
+      "id": "c02_fc08",
+      "question": "What does closed-loop communication mean in a resuscitation team?",
+      "answer": "The team leader gives a specific order, the team member repeats it back, executes it, and confirms completion. This four-step cycle (order → repeat → execute → confirm) eliminates ambiguity and ensures nothing is missed.",
+      "category": "Team Dynamics"
+    },
+    {
+      "id": "c02_fc09",
+      "question": "What ratio should be used for two-rescuer CPR on a post-pubertal adolescent?",
+      "answer": "30:2 — the same as adult CPR. Post-pubertal patients are treated with the adult compression-ventilation ratio regardless of the number of rescuers.",
+      "category": "CPR Ratios"
+    },
+    {
+      "id": "c02_fc10",
+      "question": "Why is most pediatric cardiac arrest respiratory in origin?",
+      "answer": "Children typically have healthy hearts; their arrests most commonly follow progressive respiratory failure or shock. Primary cardiac events (like sudden cardiac arrest from dysrhythmia) are less common than in adults.",
+      "category": "Pediatric BLS Concepts"
+    },
+    {
+      "id": "c02_fc11",
+      "question": "What compression depth is required for infant chest compressions?",
+      "answer": "At least one-third the anterior-posterior diameter of the chest, which is approximately 1.5 inches (4 cm) for an infant.",
+      "category": "Compression Quality"
+    },
+    {
+      "id": "c02_fc12",
+      "question": "What is the minimum acceptable compression fraction during CPR?",
+      "answer": "Greater than 80% — the proportion of time that compressions are actually being performed should exceed 80% of the resuscitation time.",
+      "category": "Compression Quality"
+    },
+    {
+      "id": "c02_fc13",
+      "question": "When should the team leader NOT be performing compressions?",
+      "answer": "The team leader should stand at the bedside directing care, making decisions, and communicating with the team — not performing chest compressions. This allows them to maintain situational awareness.",
+      "category": "Team Dynamics"
+    },
+    {
+      "id": "c02_fc14",
+      "question": "What is an acceptable alternative if the two-thumb encircling-hands technique is not possible?",
+      "answer": "Heel-of-one-hand compression on the sternum, or the two-finger technique (though the two-finger technique is no longer the preferred method).",
+      "category": "Compression Technique"
+    },
+    {
+      "id": "c02_fc15",
+      "question": "Which BLS chapters contain the detailed single-rescuer techniques for child and infant CPR?",
+      "answer": "BLS c08 covers child CPR (single and two-rescuer), and BLS c09 covers infant CPR including the two-thumb encircling technique and lone-rescuer approach.",
+      "category": "Cross-References"
+    },
+    {
+      "id": "c02_fc16",
+      "question": "Why should a lone rescuer always use 30:2, even for an infant?",
+      "answer": "With only one rescuer, the sole provider must alternate between compressions and ventilations alone. The 30:2 ratio minimizes the interruption to compressions while still providing adequate ventilation. Adding more breaths with only one rescuer would cause longer pauses in compressions.",
+      "category": "CPR Ratios"
+    },
+    {
+      "id": "c02_fc17",
+      "question": "How quickly should the transition between compressors be completed?",
+      "answer": "In less than 5 seconds. The incoming compressor should be in position before the current compressor stops, so the interruption is as brief as possible.",
+      "category": "Team Dynamics"
+    },
+    {
+      "id": "c02_fc18",
+      "question": "What is the first sign of compressor fatigue that degrades CPR quality?",
+      "answer": "Shallow compressions — as fatigue sets in, the compressor naturally pushes less deeply, which reduces cardiac output. Full recoil also decreases. This is why time-based switching at 2 minutes is recommended, rather than waiting for someone to 'feel tired.'",
+      "category": "Compression Quality"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "Pediatric Bradycardia With a Pulse — Management Algorithm",
+      "description": "Stepwise approach to evaluating and managing a pediatric patient with a heart rate below 60 bpm and a palpable pulse, based on the 2025 AHA PALS bradycardia algorithm.",
+      "image": "../../images/courses/pals/c10_g01.webp",
+      "steps": [
+        "Step 1 — Assess the patient: confirm heart rate < 60 bpm and evaluate perfusion (pulse quality, capillary refill, skin color, mental status, blood pressure if measurable).",
+        "Step 2 — If perfusion is adequate: monitor the patient closely, investigate the underlying cause, and treat accordingly. No emergent intervention is required.",
+        "Step 3 — If perfusion is inadequate: ensure effective oxygenation and ventilation — administer high-flow oxygen, assist ventilation with bag-valve mask or advanced airway as indicated.",
+        "Step 4 — Reassess heart rate and perfusion after optimizing oxygenation and ventilation.",
+        "Step 5 — If HR ≥ 60 with improved perfusion: continue monitoring.",
+        "Step 6 — If HR remains < 60 with poor perfusion despite adequate O2 and ventilation: begin chest compressions at a compression-to-ventilation ratio of 3:1 (100 compressions and 20 breaths per minute).",
+        "Step 7 — Establish vascular access (IV or IO).",
+        "Step 8 — Administer epinephrine 0.01 mg/kg IV/IO using 1:10,000 concentration. Repeat every 3–5 minutes as needed.",
+        "Step 9 — If increased vagal tone or primary AV block is suspected: administer atropine 0.02 mg/kg IV/IO (minimum single dose 0.1 mg, maximum 0.5 mg).",
+        "Step 10 — Identify and treat reversible causes concurrently: hypoxia, acidosis, hypokalemia, hyperkalemia, hypothermia, drug toxicity, elevated intracranial pressure.",
+        "Step 11 — If bradycardia is refractory to compressions and medications: initiate transcutaneous pacing.",
+        "Step 12 — For persistent or expected chronic bradycardia: prepare for transvenous pacing and cardiology consultation."
+      ]
+    }
+  ]
+}
