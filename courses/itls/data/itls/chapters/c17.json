@@ -1,0 +1,77 @@
+{
+  "id": "c17",
+  "title": "Pediatric Trauma",
+  "shortTitle": "Pediatric Trauma",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe techniques for gaining the confidence of children and their parents.",
+    "Predict pediatric injuries based on common mechanisms of injury.",
+    "Describe the ITLS Primary and Secondary Surveys in the pediatric patient.",
+    "Understand the need for immediate transport in life-threatening circumstances regardless of immediate consent.",
+    "Differentiate the equipment needs of pediatric patients from adults.",
+    "Describe spinal motion restriction in children and how it differs from adults.",
+    "Recognize signs of child abuse and the EMS role in reporting."
+  ],
+  "summary": [
+    {
+      "title": "Anatomic and Physiologic Differences",
+      "content": "Children are not small adults. They have proportionally larger heads (more head injuries and neck flexion when supine), larger tongues and smaller airways (easily obstructed), more flexible ribs (lung contusion without rib fracture), and a relatively larger body surface area (rapid heat loss). Their organs are closer together and less protected, so multisystem injury is common."
+    },
+    {
+      "title": "Robust Compensation, Then Sudden Collapse",
+      "content": "Children compensate for blood loss extremely well by raising heart rate and vasoconstricting, maintaining blood pressure until a large volume is lost—then they crash suddenly. Tachycardia is the earliest sign of shock; hypotension is a late, ominous finding. Estimate weight and drug doses with a length-based resuscitation tape to avoid dosing errors."
+    },
+    {
+      "title": "Airway and Breathing",
+      "content": "Position the airway in a neutral 'sniffing' position (pad under the torso/shoulders, not the head, because the large occiput flexes the neck). Children are prone to rapid hypoxia; respiratory failure is the leading path to pediatric arrest. Use appropriately sized equipment and ventilate at age-appropriate rates, confirming chest rise."
+    },
+    {
+      "title": "Pediatric SMR and SCIWORA",
+      "content": "Pad under the torso to maintain neutral alignment given the large head. Use size-appropriate devices (pediatric immobilizers, properly sized collars, or padding within a car seat for stable extrication). SCIWORA (Spinal Cord Injury Without Radiographic Abnormality) reflects that a child's elastic spine can stretch and injure the cord without a visible fracture—maintain a high index of suspicion based on mechanism and symptoms."
+    },
+    {
+      "title": "Fluids, Equipment, and Hypothermia",
+      "content": "For decompensated shock, give weight-based fluid boluses (commonly 20 mL/kg of warmed isotonic crystalloid, reassessed and repeated per protocol). Use length-based tape for equipment and drug sizing. Children lose heat rapidly—keep them warm. Vascular access may require intraosseous placement when peripheral access fails."
+    },
+    {
+      "title": "Consent and Child Abuse",
+      "content": "Provide immediate life-saving care regardless of the availability of parental consent (implied/emergency consent). Maintain a high index of suspicion for non-accidental trauma: injuries inconsistent with the stated mechanism or developmental stage, patterned injuries, multiple injuries in different healing stages, delayed presentation, or inconsistent histories. EMS providers are mandated reporters—document objectively and report per protocol."
+    }
+  ],
+  "clinicalPearls": [
+    "Children compensate well then crash suddenly—tachycardia is the earliest sign of shock; hypotension is late.",
+    "Pad under the torso (not the head) to keep a child's airway and spine neutral.",
+    "Use a length-based resuscitation tape for weight, drug doses, fluid volumes, and equipment sizes.",
+    "Respiratory failure is the most common path to pediatric cardiac arrest—aggressively support oxygenation/ventilation.",
+    "Provide life-saving care under implied consent when a parent is not immediately available."
+  ],
+  "redFlags": [
+    "Hypotension in a child is a late, pre-arrest sign—treat aggressively before it appears.",
+    "SCIWORA: a normal-appearing spine does not exclude cord injury in children—rely on mechanism and symptoms.",
+    "Injuries inconsistent with the history or developmental stage suggest abuse—report per mandate.",
+    "Hypothermia develops quickly in children and worsens shock—keep them warm."
+  ],
+  "commonMistakes": [
+    "Using adult drug doses or equipment instead of a length-based tape.",
+    "Padding under the head (worsening neck flexion) instead of under the torso.",
+    "Being falsely reassured by a normal blood pressure in an injured child.",
+    "Failing to recognize and report suspected non-accidental trauma."
+  ],
+  "memoryAids": [
+    "Kids: big Head, big Tongue, small Airway, flexible Ribs, big surface area (heat loss).",
+    "Shock: Tachycardia early, Hypotension late (and ominous).",
+    "Pediatric fluid bolus ≈ 20 mL/kg warmed isotonic crystalloid, reassess and repeat.",
+    "Length-based tape = weight + doses + equipment sizes."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Trauma Priorities",
+      "content": "1. Airway: neutral 'sniffing' position, pad under torso; suction; size-appropriate adjuncts.\n2. Breathing: high-flow oxygen; support ventilation early (respiratory failure → arrest).\n3. Circulation: tachycardia = early shock; control bleeding; IV/IO access; weight-based boluses (~20 mL/kg) per protocol; keep warm.\n4. SMR: pad under torso; size-appropriate device; suspect SCIWORA by mechanism.\n5. Use length-based tape for weight/doses/equipment.\n6. Provide life-saving care under implied consent; assess for and report suspected abuse.\n7. Rapid transport to a pediatric-capable trauma center."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 17: Pediatric Trauma.",
+    "Maloney, P.J., and A.M. Dietrich. Prehospital Pediatric Trauma Care."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "c07",
+  "title": "Thoracic Trauma Skills: Needle Chest Decompression",
+  "shortTitle": "Needle Decompression",
+  "estimatedStudyTime": 20,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Explain the advantages, disadvantages, and complications of needle decompression by the anterior and lateral approaches.",
+    "Describe the indications for emergency decompression of a tension pneumothorax.",
+    "Perform needle decompression of a tension pneumothorax by either the anterior or lateral approach."
+  ],
+  "summary": [
+    {
+      "title": "Purpose of Needle Decompression",
+      "content": "Needle chest decompression is a life-saving procedure that converts a tension pneumothorax into a simple (open) pneumothorax by releasing trapped pleural air, restoring venous return and cardiac output. It is a temporizing measure; definitive treatment is a chest tube at the hospital."
+    },
+    {
+      "title": "Indications",
+      "content": "Decompress when there are signs of a tension pneumothorax PLUS more than one of the following: respiratory distress and cyanosis, loss of the radial pulse (obvious shock), loss of consciousness, or an obviously decreasing level of consciousness. The indications are the same in civilian and tactical settings."
+    },
+    {
+      "title": "Anterior Approach",
+      "content": "The traditional anterior site is the second or third intercostal space at the midclavicular line, inserting just over the top of the lower rib to avoid the neurovascular bundle beneath each rib. Because chest-wall thickness varies, a large-bore catheter (about 14 gauge, 8 French) that is 6 to 9 cm (2.5 to 3.5 inches) long is recommended so it reaches the pleural space."
+    },
+    {
+      "title": "Lateral Approach",
+      "content": "The lateral approach uses the fourth or fifth intercostal space at the anterior axillary line (some courses use the third intercostal space laterally). It is favored in tactical settings because it can be performed without removing body armor and may more reliably reach the pleural space. The third intercostal lateral site has theoretically less risk of injuring the liver or spleen and may be faster in combat settings."
+    },
+    {
+      "title": "Technique and Confirmation",
+      "content": "Identify the landmark, prep the site, and insert the catheter perpendicular to the chest wall just superior to the rib. A rush of air or improvement in the patient confirms success. Secure the catheter, monitor for re-accumulation, and reassess frequently; the needle can kink, clot, or dislodge, so be prepared to repeat decompression. Systems with ultrasound can confirm pneumothorax before the procedure."
+    }
+  ],
+  "clinicalPearls": [
+    "Always insert just over the TOP of the rib to avoid the nerve, artery, and vein that run along the bottom of each rib.",
+    "Use a catheter long enough (6–9 cm) to reach the pleural space, especially in muscular or obese patients.",
+    "A successful decompression often produces an audible rush of air and rapid clinical improvement.",
+    "The lateral approach allows decompression without removing body armor in tactical care.",
+    "Needle decompression is temporary—monitor for re-accumulation and prepare to repeat it."
+  ],
+  "redFlags": [
+    "Too-short catheters frequently fail to reach the pleural space at the anterior site.",
+    "Inserting below the rib can lacerate the intercostal neurovascular bundle.",
+    "Decompression treats air, not blood—it will not help a massive hemothorax.",
+    "Failure to reassess can miss a re-tensioning pneumothorax requiring repeat decompression."
+  ],
+  "commonMistakes": [
+    "Using a catheter that is too short for the patient's chest-wall thickness.",
+    "Placing the needle medially toward the great vessels instead of straight in at the landmark.",
+    "Decompressing a hemothorax mistaken for a tension pneumothorax.",
+    "Not securing the catheter, leading to kinking or dislodgement."
+  ],
+  "memoryAids": [
+    "Anterior site: 2nd–3rd intercostal space, midclavicular line.",
+    "Lateral site: 4th–5th intercostal space, anterior axillary line.",
+    "Always go OVER the top of the lower rib.",
+    "Indications = tension signs + >1 of: distress/cyanosis, lost radial pulse, decreasing LOC."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Needle Decompression Procedure",
+      "content": "1. Confirm tension pneumothorax signs + qualifying severity criteria.\n2. Choose site: anterior (2nd–3rd ICS, midclavicular) or lateral (4th–5th ICS, anterior axillary line).\n3. Prep site; select large-bore catheter 6–9 cm long.\n4. Insert perpendicular, just over the TOP of the rib, into the pleural space.\n5. Listen/feel for air rush; reassess patient.\n6. Secure catheter; monitor for re-accumulation and repeat as needed; transport for chest tube."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 7: Thoracic Trauma Skills.",
+    "Seitz, S.R., and A. Proust. Needle Chest Decompression Technique."
+  ]
+}

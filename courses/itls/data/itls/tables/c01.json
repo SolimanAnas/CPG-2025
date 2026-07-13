@@ -1,0 +1,70 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "Table 1-1: ITLS Patient Assessment",
+      "headers": [
+        "ITLS Primary Survey",
+        "Perform a scene size-up",
+        "Perform initial assessment",
+        "Perform a rapid trauma survey or focused exam",
+        "Make critical interventions and transport decision",
+        "Contact medical direction"
+      ],
+      "rows": [
+        [
+          "ITLS Secondary Survey",
+          "Repeat initial assessment",
+          "Repeat vital signs and consider monitors",
+          "Perform a neurological exam",
+          "Perform a detailed (head-to-toe) exam"
+        ]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "Table 1-3: Mechanisms of Injury and Potential Injury Patterns",
+      "headers": [
+        "Mechanisms of Injury",
+        "Potential Injury Patterns"
+      ],
+      "rows": [
+        [
+          "Frontal impact",
+          "Deformed steering wheel, dashboard knee imprints, spider-web deformity of windscreen, cervical-spine fracture, flail chest, myocardial contusion, pneumothorax, aortic disruption, spleen or liver laceration, posterior hip dislocation, knee dislocation"
+        ],
+        [
+          "Lateral impact (T-bone)",
+          "Contralateral neck sprain, cervical-spine fracture, lateral flail chest, pneumothorax, aortic disruption, diaphragmatic rupture, laceration of spleen, liver, kidney, pelvic fracture"
+        ],
+        [
+          "Rear impact",
+          "Cervical-spine injury"
+        ],
+        [
+          "Ejection",
+          "Exposure to all mechanisms and mortality increased"
+        ],
+        [
+          "Pedestrian vs. car",
+          "Head injury, aortic disruption, abdominal visceral injuries, fracture lower extremities and pelvis"
+        ]
+      ]
+    },
+    {
+      "id": "c01_t03",
+      "title": "Table 1-4: Basic Mechanisms of Motion Injury",
+      "headers": [
+        "Blunt Injuries",
+        "Penetrating Injuries"
+      ],
+      "rows": [
+        [
+          "Rapid forward deceleration (collisions)",
+          "Projectiles, knives, falls on fixed objects"
+        ]
+      ]
+    }
+  ]
+}

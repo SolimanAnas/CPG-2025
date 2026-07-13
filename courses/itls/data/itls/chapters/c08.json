@@ -1,0 +1,79 @@
+{
+  "id": "c08",
+  "title": "Shock in the Trauma Patient",
+  "shortTitle": "Shock",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "List the four components of the vascular system necessary for normal tissue perfusion.",
+    "Describe the symptoms and signs of shock in the order they develop.",
+    "Describe the four common clinical shock syndromes.",
+    "Explain the pathophysiology of hemorrhagic shock and compare it to mechanical and neurogenic shock.",
+    "Describe the management of controllable hemorrhage, uncontrollable hemorrhage, and nonhemorrhagic shock.",
+    "Discuss the use of hemostatic agents for uncontrolled extremity hemorrhage.",
+    "Discuss current indications for IV fluids in hemorrhagic shock.",
+    "Describe when to use tranexamic acid (TXA) in hemorrhage management."
+  ],
+  "summary": [
+    {
+      "title": "What Shock Is",
+      "content": "Shock is inadequate tissue perfusion—cells do not receive enough oxygen to meet metabolic demand. Normal perfusion requires four components: an intact pump (heart), adequate volume (blood), intact pipes (blood vessels), and adequate oxygen-carrying capacity. Failure of any component produces shock and, untreated, cellular death and organ failure."
+    },
+    {
+      "title": "Progression of Shock",
+      "content": "Shock develops in a predictable order. Early (compensated) shock shows anxiety/restlessness, tachycardia, cool and pale skin, delayed capillary refill, and a narrowing pulse pressure as the body vasoconstricts to preserve blood pressure. As compensation fails, hypotension, altered mental status, and decompensated shock appear. Falling blood pressure is a late sign—do not wait for it to treat."
+    },
+    {
+      "title": "Four Shock Syndromes",
+      "content": "Hypovolemic (hemorrhagic) shock is from blood/fluid loss and is the most common in trauma. Cardiogenic (a form of mechanical) shock is pump failure. Mechanical/obstructive shock is from obstruction to filling or output (tension pneumothorax, cardiac tamponade). Distributive shock includes neurogenic shock (loss of sympathetic tone from spinal cord injury) and septic/anaphylactic causes."
+    },
+    {
+      "title": "Hemorrhagic vs. Neurogenic vs. Mechanical",
+      "content": "Hemorrhagic shock: tachycardia, cool/pale/clammy skin, narrow pulse pressure. Neurogenic shock: hypotension with a normal or slow heart rate and warm, dry skin below the injury because sympathetic tone is lost. Mechanical (obstructive) shock: hypotension with distended neck veins from a tension pneumothorax or tamponade. Recognizing the pattern guides treatment."
+    },
+    {
+      "title": "Hemorrhage Control and Resuscitation",
+      "content": "Control external bleeding first: direct pressure, then a tourniquet for uncontrolled extremity hemorrhage, and hemostatic agents/dressings for junctional or deep wounds not controllable by a tourniquet. For internal hemorrhage, the field cannot stop the bleeding—rapid transport to surgery is the priority. IV fluids are given judiciously to support perfusion (permissive/controlled hypotension targeting a palpable radial pulse or systolic ~80–90 mmHg in many protocols), avoiding over-resuscitation that worsens bleeding."
+    },
+    {
+      "title": "TXA and Special Considerations",
+      "content": "Tranexamic acid (TXA) is an antifibrinolytic that reduces mortality when given early (ideally within 3 hours of injury) to patients with significant hemorrhage or signs of hemorrhagic shock. Keep the patient warm to prevent the lethal triad (hypothermia, acidosis, coagulopathy). For head-injured patients, maintain blood pressure to preserve cerebral perfusion. For neurogenic shock, fluids plus vasopressor support per protocol may be needed."
+    }
+  ],
+  "clinicalPearls": [
+    "Falling blood pressure is a LATE sign of shock—treat based on early signs (tachycardia, cool skin, anxiety, narrowing pulse pressure).",
+    "Control catastrophic external bleeding first—tourniquets are fast and life-saving for extremity hemorrhage.",
+    "Distended neck veins with shock indicate an obstructive cause (tension pneumothorax or tamponade), not hypovolemia.",
+    "Keep the patient warm—hypothermia worsens coagulopathy and the lethal triad.",
+    "Give TXA early (within ~3 hours) in significant hemorrhage per protocol."
+  ],
+  "redFlags": [
+    "Internal hemorrhage cannot be controlled in the field—rapid surgical transport is the life-saving intervention.",
+    "Over-aggressive fluid resuscitation can pop clots, dilute clotting factors, and worsen bleeding.",
+    "Neurogenic shock (hypotension with bradycardia and warm skin) is a diagnosis of exclusion—assume hemorrhage until proven otherwise.",
+    "Do not allow head-injured patients to become hypotensive; hypotension dramatically worsens brain-injury outcomes."
+  ],
+  "commonMistakes": [
+    "Waiting for hypotension before recognizing and treating shock.",
+    "Attributing all hypotension in a spine-injured patient to neurogenic shock and missing concurrent hemorrhage.",
+    "Pouring in large fluid volumes for uncontrolled internal hemorrhage.",
+    "Forgetting to keep the patient warm during resuscitation."
+  ],
+  "memoryAids": [
+    "Four perfusion components: Pump, Volume, Pipes (vessels), and Oxygen-carrying capacity.",
+    "Early shock signs: Anxiety, Tachycardia, cool/pale skin, delayed cap refill, narrowing pulse pressure.",
+    "Hemorrhage control ladder: Direct pressure → Tourniquet → Hemostatic dressing.",
+    "Lethal triad: Hypothermia + Acidosis + Coagulopathy."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Approach to the Shock Patient",
+      "content": "1. Control catastrophic external bleeding (pressure → tourniquet → hemostatic).\n2. Airway/oxygen; assess perfusion (pulse, skin, mental status, cap refill).\n3. Distended neck veins + shock? → obstructive cause (decompress tension pneumothorax / transport for tamponade).\n4. Flat neck veins + tachycardia + cool skin → hemorrhagic shock → control bleeding, controlled IV fluids, rapid transport, TXA early.\n5. Hypotension + bradycardia + warm dry skin + spinal injury → neurogenic shock (after excluding hemorrhage).\n6. Keep warm; maintain BP in head injury; reassess frequently."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 8: Shock.",
+    "Fowler, R.L., P.E. Pepe, et al. Prehospital Management of Shock and Hemorrhage.",
+    "CRASH-2 Collaborators. Effects of tranexamic acid on death in trauma patients. Lancet 2010."
+  ]
+}

@@ -1,0 +1,473 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "What is the first step in the ITLS Primary Survey?",
+      "options": [
+        "A. Scene size-up",
+        "B. Initial assessment",
+        "C. Rapid trauma survey or focused exam",
+        "D. Airway evaluation"
+      ],
+      "correct": 0,
+      "rationale": "The first step in the ITLS Primary Survey is to perform a scene size-up, which sets the stage for the rest of the assessment. The initial assessment and rapid trauma survey follow.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "Which scale is used to assess the patient's level of consciousness during the initial assessment?",
+      "options": [
+        "A. AVPU",
+        "B. Glasgow Coma Scale",
+        "C. SAMPLE history",
+        "D. DCAP-BLS"
+      ],
+      "correct": 0,
+      "rationale": "The AVPU scale (alert, responds to verbal stimuli, responds to pain, unresponsive) is used to assess the patient's level of consciousness during the initial assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "What should be done if a patient has an altered mental status (AVPU score < A)?",
+      "options": [
+        "A. Perform a rapid trauma survey",
+        "B. Immediately transport to the hospital",
+        "C. Conduct a focused exam on the area of injury",
+        "D. Systematically search for causes during the rapid trauma survey"
+      ],
+      "correct": 3,
+      "rationale": "If an altered mental status is noted, it triggers a systematic search for the cause during the rapid trauma survey, as loss or decrease in LOC can be caused by various factors.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q04",
+      "question": "Which of the following is NOT an indication to perform a rapid trauma survey?",
+      "options": [
+        "A. Dangerous generalized mechanism of injury",
+        "B. Unconscious patient with unknown mechanism of injury",
+        "C. Patient with localized isolated injury (e.g., stab wound)",
+        "D. Multiple patients in a mass casualty event"
+      ],
+      "correct": 2,
+      "rationale": "The rapid trauma survey is not limited to only localized injuries; it should be performed for dangerous generalized mechanisms or unknown mechanisms of injury, even if the patient has an isolated injury.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "What is the primary purpose of the ITLS Ongoing Exam?",
+      "options": [
+        "A. To find all life-threatening conditions",
+        "B. To assess for changes in patient condition during transport",
+        "C. To perform a comprehensive head-to-toe exam",
+        "D. To determine initial treatment interventions"
+      ],
+      "correct": 1,
+      "rationale": "The ITLS Ongoing Exam is meant to identify any changes in the patient's condition, particularly useful when transporting critically injured patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q06",
+      "question": "Which of the following should be performed first during an initial assessment?",
+      "options": [
+        "A. Check for breathing",
+        "B. Apply a cervical collar",
+        "C. Control bleeding from lacerations",
+        "D. Perform a focused exam on the area of injury"
+      ],
+      "correct": 0,
+      "rationale": "The primary focus in the initial assessment is to ensure airway, breathing, and circulation (ABCs), starting with checking for breathing.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q07",
+      "question": "What should be done if a patient has an altered mental status during the initial assessment?",
+      "options": [
+        "A. Immediately transport to the hospital",
+        "B. Perform a focused exam on the area of injury",
+        "C. Conduct a brief neurologic exam",
+        "D. Ignore and continue with the rapid trauma survey"
+      ],
+      "correct": 2,
+      "rationale": "If an altered mental status is noted, it should trigger a brief neurologic exam to identify possible increased intracranial pressure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q08",
+      "question": "Which of the following is NOT part of the ITLS Primary Survey?",
+      "options": [
+        "A. Scene size-up",
+        "B. Initial assessment",
+        "C. Rapid trauma survey or focused exam",
+        "D. Secondary survey"
+      ],
+      "correct": 3,
+      "rationale": "The secondary survey is not part of the primary survey; it comes after and is a separate step in the patient assessment process.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q09",
+      "question": "What should be done if you identify a critical condition during the ITLS Primary Survey?",
+      "options": [
+        "A. Continue with the rapid trauma survey",
+        "B. Immediately transport to the hospital",
+        "C. Perform a focused exam on the area of injury",
+        "D. Wait for medical direction before transporting"
+      ],
+      "correct": 1,
+      "rationale": "If critical conditions are identified, immediate transportation should be performed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q10",
+      "question": "What is the purpose of the ITLS Secondary Survey?",
+      "options": [
+        "A. To find all life-threatening conditions",
+        "B. To assess for changes in patient condition during transport",
+        "C. To perform a comprehensive head-to-toe exam and establish baseline information",
+        "D. To determine initial treatment interventions"
+      ],
+      "correct": 2,
+      "rationale": "The ITLS Secondary Survey is meant to pick up additional injuries that might have been missed in the brief ITLS Primary Survey, establishing a baseline for treatment decisions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q11",
+      "question": "Which of the following should be performed during an ongoing exam?",
+      "options": [
+        "A. Perform a rapid trauma survey",
+        "B. Conduct a comprehensive head-to-toe exam",
+        "C. Reassess ABCs, mental status, and vital signs",
+        "D. Determine initial treatment interventions"
+      ],
+      "correct": 2,
+      "rationale": "The ongoing exam should reassess the patient's condition, including ABCs, mental status, and vital signs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q12",
+      "question": "What is the primary reason to interrupt the ITLS Primary Survey?",
+      "options": [
+        "A. The scene becomes unsafe",
+        "B. To perform a focused exam on the area of injury",
+        "C. The patient requests treatment",
+        "D. To obtain more information from bystanders"
+      ],
+      "correct": 0,
+      "rationale": "The primary reasons to interrupt the ITLS Primary Survey are if the scene becomes unsafe, there is exsanguinating hemorrhage, an airway obstruction, or cardiac arrest.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q13",
+      "question": "What is the first step in the ITLS Primary Survey?",
+      "options": [
+        "A. Scene size-up",
+        "B. Initial assessment",
+        "C. Rapid trauma survey or focused exam",
+        "D. Airway evaluation"
+      ],
+      "correct": 0,
+      "rationale": "The first step in the ITLS Primary Survey is to perform a scene size-up, which involves assessing hazards and determining if it's safe to enter the scene before approaching the patient.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q14",
+      "question": "Which of the following is NOT part of the initial assessment in the ITLS Primary Survey?",
+      "options": [
+        "A. Level of consciousness",
+        "B. Airway evaluation",
+        "C. Circulation check",
+        "D. Detailed history taking"
+      ],
+      "correct": 3,
+      "rationale": "Detailed history taking is not performed during the initial assessment; it's part of the ITLS Secondary Survey or ongoing exam.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q15",
+      "question": "What should be done if a patient has an altered mental status (AVPU) and is unresponsive to verbal stimuli?",
+      "options": [
+        "A. Perform a rapid trauma survey",
+        "B. Apply a cervical collar immediately",
+        "C. Use the AVPU scale to document their level of consciousness",
+        "D. Intubate the patient"
+      ],
+      "correct": 2,
+      "rationale": "The AVPU scale is used to document the level of consciousness, and if the patient is unresponsive to verbal stimuli, they are classified as 'V' (responds to verbal stimuli).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q16",
+      "question": "Which of the following interventions should be performed immediately during a load-and-go situation?",
+      "options": [
+        "A. Detailed history taking",
+        "B. Rapid trauma survey",
+        "C. Control major external bleeding",
+        "D. Full secondary survey"
+      ],
+      "correct": 2,
+      "rationale": "In a load-and-go situation, the primary focus is on controlling life-threatening conditions and transporting the patient immediately.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q17",
+      "question": "What does the term 'PE aRLS' stand for in the context of trauma assessment?",
+      "options": [
+        "A. Patient Evaluation and Rapid Life Support",
+        "B. Prehospital Emergency Assessment and Response Levels",
+        "C. Prehospital Emergency Resuscitation and Lifesaving Skills",
+        "D. Prehospital Emergency Rapid Life-Support"
+      ],
+      "correct": 0,
+      "rationale": "PE aRLS stands for 'Patient Evaluation and Rapid Life Support', which is the systematic approach used in trauma assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q18",
+      "question": "Which of the following is NOT an indication to interrupt the ITLS Primary Survey?",
+      "options": [
+        "A. Exsanguinating hemorrhage",
+        "B. Airway obstruction",
+        "C. Cardiac arrest",
+        "D. Patient's chief complaint"
+      ],
+      "correct": 3,
+      "rationale": "The patient's chief complaint is not an indication to interrupt the ITLS Primary Survey; it's part of the initial assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q19",
+      "question": "What is the purpose of the rapid trauma survey in the ITLS Primary Survey?",
+      "options": [
+        "A. To perform a detailed head-to-toe examination",
+        "B. To find all life-threatening conditions quickly",
+        "C. To document patient history",
+        "D. To provide definitive treatment"
+      ],
+      "correct": 1,
+      "rationale": "The rapid trauma survey is designed to identify all life-threatening conditions in a brief, systematic manner.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q20",
+      "question": "Which of the following is NOT part of the ITLS Ongoing Exam?",
+      "options": [
+        "A. Reassessing the airway",
+        "B. Performing a detailed head-to-toe examination",
+        "C. Monitoring vital signs",
+        "D. Checking interventions"
+      ],
+      "correct": 1,
+      "rationale": "The ITLS Ongoing Exam does not include performing a detailed head-to-toe examination; it focuses on reassessing changes in the patient's condition.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q21",
+      "question": "What is the primary goal of the ITLS Secondary Survey?",
+      "options": [
+        "A. To find all life-threatening conditions",
+        "B. To provide definitive treatment",
+        "C. To pick up additional injuries missed in the initial assessment",
+        "D. To document patient history"
+      ],
+      "correct": 2,
+      "rationale": "The primary goal of the ITLS Secondary Survey is to identify any additional injuries that may have been missed during the initial assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q22",
+      "question": "Which of the following is NOT a component of the SAMPLE history?",
+      "options": [
+        "A. Symptoms",
+        "B. Allergies",
+        "C. Medications",
+        "D. Past medical history and events preceding the incident"
+      ],
+      "correct": 3,
+      "rationale": "The 'P' in SAMPLE stands for past medical history, not 'Past medical history and events preceding the incident'.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q23",
+      "question": "What is the first step to take if a patient has an altered mental status during the initial assessment?",
+      "options": [
+        "A. Perform a rapid trauma survey",
+        "B. Apply a cervical collar",
+        "C. Check for airway patency and breathing",
+        "D. Intubate the patient"
+      ],
+      "correct": 2,
+      "rationale": "The first step is to check for airway patency and breathing, as this can quickly determine if the patient's altered mental status is due to respiratory or airway issues.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q24",
+      "question": "What should be done immediately after completing the initial assessment in a load-and-go situation?",
+      "options": [
+        "A. Perform a detailed secondary survey",
+        "B. Control major external bleeding and transport",
+        "C. Document patient history",
+        "D. Apply a cervical collar"
+      ],
+      "correct": 1,
+      "rationale": "In a load-and-go situation, the primary focus is on controlling major external bleeding and transporting the patient immediately.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q25",
+      "question": "What is the first step in the ITLS Primary Survey?",
+      "options": [
+        "A. Scene size-up",
+        "B. Initial assessment",
+        "C. Rapid trauma survey or focused exam",
+        "D. Airway evaluation"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. The first step in the ITLS Primary Survey is to perform a scene size-up, which sets the stage for the rest of the assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q26",
+      "question": "Which scale is used to assess the patient's level of consciousness during the initial assessment?",
+      "options": [
+        "A. AVPU",
+        "B. Glasgow Coma Scale",
+        "C. SAMPLE history",
+        "D. DCAP-BLS"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. The AVPU scale (alert, responds to verbal stimuli, responds to pain, unresponsive) is used to assess the patient's level of consciousness.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q27",
+      "question": "What should be done if a patient has an altered mental status during the initial assessment?",
+      "options": [
+        "A. Perform a rapid trauma survey",
+        "B. Immediately transport to the hospital",
+        "C. Check for signs of increased intracranial pressure (ICP)",
+        "D. Apply a cervical collar"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. If a patient has an altered mental status, it's important to check for possible increased intracranial pressure using the Glasgow Coma Scale and other assessments.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q28",
+      "question": "Which of the following is NOT a reason to interrupt the ITLS Primary Survey?",
+      "options": [
+        "A. Exsanguinating hemorrhage",
+        "B. Airway obstruction",
+        "C. Cardiac arrest",
+        "D. Patient's chief complaint"
+      ],
+      "correct": 3,
+      "rationale": "The correct answer is D. The patient's chief complaint does not interrupt the ITLS Primary Survey, whereas exsanguinating hemorrhage, airway obstruction, and cardiac arrest do.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q29",
+      "question": "What should be done if a patient has major external bleeding during the initial assessment?",
+      "options": [
+        "A. Control it immediately",
+        "B. Wait for medical direction",
+        "C. Perform a rapid trauma survey first",
+        "D. Transport to the hospital"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. If a patient has major external bleeding, you should control it immediately as part of the initial assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q30",
+      "question": "Which of the following is NOT included in the ITLS Ongoing Exam?",
+      "options": [
+        "A. Reassessing airway",
+        "B. Checking vital signs",
+        "C. Performing a detailed head-to-toe exam",
+        "D. Monitoring interventions"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. A detailed head-to-toe exam is not part of the ITLS Ongoing Exam, which focuses on reassessing changes in the patient's condition.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q31",
+      "question": "What should be done if a patient has an unstable pelvis during transport?",
+      "options": [
+        "A. Transport immediately",
+        "B. Perform a rapid trauma survey",
+        "C. Apply a cervical collar",
+        "D. Wait for hospital arrival"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. If a patient has an unstable pelvis, transport should be immediate as it can lead to shock and other complications.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q32",
+      "question": "Which of the following is NOT part of the ITLS Secondary Survey?",
+      "options": [
+        "A. Repeating initial assessment",
+        "B. Performing a detailed head-to-toe exam",
+        "C. Checking vital signs again",
+        "D. Applying a cervical collar"
+      ],
+      "correct": 3,
+      "rationale": "The correct answer is D. Applying a cervical collar is not part of the ITLS Secondary Survey, which focuses on finding additional injuries.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q33",
+      "question": "What should be done if a patient has a suspected tension pneumothorax during the rapid trauma survey?",
+      "options": [
+        "A. Perform chest decompression",
+        "B. Apply a cervical collar",
+        "C. Wait for hospital arrival",
+        "D. Transport immediately without intervention"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. If a patient has a suspected tension pneumothorax, immediate chest decompression should be performed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q34",
+      "question": "Which of the following is NOT a critical condition that requires immediate transport?",
+      "options": [
+        "A. Altered mental status",
+        "B. Abnormal breathing",
+        "C. Normal circulation",
+        "D. Penetrating wounds to the torso"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. Normal circulation does not require immediate transport, whereas altered mental status, abnormal breathing, and penetrating wounds do.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q35",
+      "question": "What should be done if a patient has bilateral femur fractures during the ITLS Primary Survey?",
+      "options": [
+        "A. Transport immediately",
+        "B. Perform a detailed head-to-toe exam",
+        "C. Apply traction splints",
+        "D. Wait for hospital arrival"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. If a patient has bilateral femur fractures, transport should be immediate due to the risk of shock.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q36",
+      "question": "What is the purpose of the ITLS Secondary Survey?",
+      "options": [
+        "A. To find all life-threatening conditions",
+        "B. To perform a brief exam from head to toe",
+        "C. To establish a baseline for treatment decisions",
+        "D. To assess changes in patient condition"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. The ITLS Secondary Survey is meant to pick up additional injuries and establish the baseline from which treatment decisions will be made.",
+      "difficulty": "Medium"
+    }
+  ]
+}

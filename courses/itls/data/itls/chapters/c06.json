@@ -1,0 +1,79 @@
+{
+  "id": "c06",
+  "title": "Thoracic Trauma",
+  "shortTitle": "Thoracic Trauma",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Identify the major symptoms and signs of thoracic trauma.",
+    "List the immediate life-threatening thoracic injuries.",
+    "Define flail chest and describe its findings and management.",
+    "Explain the pathophysiology and management of an open pneumothorax.",
+    "Explain the pathophysiology and management of massive hemothorax.",
+    "Describe the clinical signs and management of tension pneumothorax and contrast them with massive hemothorax.",
+    "List three indications to perform emergency chest decompression.",
+    "Identify the findings of cardiac tamponade, including Beck's triad.",
+    "Explain the cardiac involvement and management of blunt chest injury."
+  ],
+  "summary": [
+    {
+      "title": "Why the Chest Kills",
+      "content": "Thoracic injuries account for a large share of trauma deaths because the chest houses the heart, great vessels, and lungs. The mediastinum contains the heart and great vessels; the pleural space is the potential space where air or blood collects. Symptoms include chest pain, dyspnea, and a sense of impending doom; signs include tachypnea, asymmetry, contusions, crepitus, and abnormal breath sounds."
+    },
+    {
+      "title": "The Immediate Life Threats",
+      "content": "The immediately life-threatening thoracic injuries that must be found in the Primary Survey are airway obstruction, tension pneumothorax, open (sucking) pneumothorax, massive hemothorax, flail chest, and cardiac tamponade. Each can be lethal within minutes and several have field interventions—seal, decompress, or assist ventilation."
+    },
+    {
+      "title": "Tension Pneumothorax",
+      "content": "Air enters the pleural space and cannot escape, collapsing the lung and shifting the mediastinum, which compresses the great veins and drops cardiac output. Signs include severe respiratory distress, absent breath sounds and hyperresonance on the affected side, distended neck veins, and tracheal deviation (a late sign), progressing to shock. Treatment is immediate needle chest decompression."
+    },
+    {
+      "title": "Open Pneumothorax and Massive Hemothorax",
+      "content": "An open (sucking) chest wound lets air move through the wound instead of the trachea; treat by applying a vented (three-sided or commercial) occlusive dressing and watching for a developing tension pneumothorax. Massive hemothorax is large blood loss into the chest (often >1,500 mL), producing both shock (hypovolemia) and respiratory compromise; treat shock, give oxygen, and transport rapidly—decompression does not help blood."
+    },
+    {
+      "title": "Flail Chest and Pulmonary Contusion",
+      "content": "Flail chest is two or more adjacent ribs each fractured in two or more places, creating a segment that moves paradoxically. The real danger is the underlying pulmonary contusion and hypoventilation. Support ventilation, give oxygen, and consider positive-pressure ventilation; do not over-resuscitate with fluids, which worsens the contused lung."
+    },
+    {
+      "title": "Cardiac Tamponade and Blunt Cardiac Injury",
+      "content": "Pericardial tamponade is blood in the pericardial sac compressing the heart, classically producing Beck's triad: hypotension, distended neck veins, and muffled heart tones, often with a paradoxical pulse (pulsus paradoxus). It is rapidly fatal and requires rapid transport for pericardiocentesis or surgery. Blunt cardiac injury can cause dysrhythmias—apply cardiac monitoring early."
+    }
+  ],
+  "clinicalPearls": [
+    "Tension pneumothorax is a clinical diagnosis—treat it by decompression before it causes arrest; do not wait for tracheal deviation.",
+    "Seal an open chest wound with a vented occlusive dressing and monitor for tension pneumothorax.",
+    "Beck's triad (hypotension, JVD, muffled heart tones) suggests pericardial tamponade.",
+    "Distended neck veins with shock point to an obstructive cause (tension pneumothorax or tamponade), not hypovolemia.",
+    "Apply early cardiac monitoring after significant blunt chest trauma to detect dysrhythmias."
+  ],
+  "redFlags": [
+    "Hypotension + JVD + decreased/absent breath sounds + hyperresonance = tension pneumothorax → decompress now.",
+    "Hypotension + JVD + muffled heart tones (Beck's triad) = cardiac tamponade → rapid transport.",
+    "An occlusive dressing without venting can convert an open pneumothorax into a tension pneumothorax.",
+    "Massive hemothorax can exsanguinate the patient into the chest—treat shock and transport immediately."
+  ],
+  "commonMistakes": [
+    "Confusing massive hemothorax (dull, flat neck veins) with tension pneumothorax (hyperresonant, distended neck veins).",
+    "Over-resuscitating a pulmonary contusion or hemothorax patient with crystalloid fluids.",
+    "Sealing an open chest wound completely with no vent, risking a tension pneumothorax.",
+    "Delaying decompression of an obvious tension pneumothorax while awaiting more signs."
+  ],
+  "memoryAids": [
+    "Immediate life threats — 'ATOM-FC': Airway obstruction, Tension pneumothorax, Open pneumothorax, Massive hemothorax, Flail chest, Cardiac tamponade.",
+    "Beck's triad: hypoTension, JVD (distended neck veins), muffled heart Tones.",
+    "Hyperresonant + JVD = tension pneumothorax; Dull + flat veins = hemothorax.",
+    "Decompression indications: signs of tension pneumothorax PLUS respiratory distress/cyanosis, lost radial pulse, or decreasing LOC."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Unequal Breath Sounds in Chest Trauma",
+      "content": "1. Unequal breath sounds → percuss the affected side.\n2. Hyperresonant + distended neck veins + shock/respiratory distress → Tension pneumothorax → needle decompression.\n3. Dull + flat neck veins + shock → Massive hemothorax → treat shock, oxygen, rapid transport.\n4. Open wound bubbling air → Open pneumothorax → vented occlusive dressing; monitor for tension.\n5. Muffled heart tones + JVD + hypotension → Cardiac tamponade → rapid transport for pericardiocentesis/surgery."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 6: Thoracic Trauma.",
+    "Bauzá, G.M., and A.B. Peitzman. Thoracic Trauma in Prehospital Care."
+  ]
+}

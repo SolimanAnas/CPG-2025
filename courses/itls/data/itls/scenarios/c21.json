@@ -1,0 +1,53 @@
+{
+  "chapter": "c21",
+  "cases": [
+    {
+      "id": "c21_s01",
+      "title": "Arrest After Chest Trauma",
+      "presentation": "A young man stabbed in the chest loses his pulse as you arrive. He has absent breath sounds on the left, and CPR is started. There were signs of life moments ago.",
+      "vitals": { "hr": "0 (PEA)", "bp": "—", "rr": "apneic", "spo2": "—", "skin": "cyanotic" },
+      "question": "Beyond compressions, what is the most important immediate intervention?",
+      "options": [
+        "Give antiarrhythmic drugs and analyze the rhythm repeatedly",
+        "Address reversible causes—secure the airway/oxygenate and perform bilateral chest decompression, control hemorrhage, and transport rapidly for surgery",
+        "Apply a traction splint",
+        "Terminate resuscitation immediately"
+      ],
+      "correct": 1,
+      "explanation": "Traumatic arrest from chest trauma is driven by reversible mechanical causes. Secure the airway and oxygenate, perform bilateral needle decompression for likely tension pneumothorax, control hemorrhage, and transport immediately—penetrating arrest with recent signs of life may be salvageable with surgery.",
+      "clinicalPearl": "In traumatic arrest, fix the cause: decompress the chest, control bleeding, oxygenate—then transport fast. Rhythm-and-drugs is not the answer."
+    },
+    {
+      "id": "c21_s02",
+      "title": "Choking Collapse",
+      "presentation": "A man at a restaurant suddenly clutches his throat, cannot speak or breathe, and then collapses unconscious. Bystanders had seen him eating steak.",
+      "vitals": { "hr": "weak then absent", "bp": "—", "rr": "obstructed then apneic", "spo2": "falling", "skin": "cyanotic" },
+      "question": "What is the correct management once he is unconscious?",
+      "options": [
+        "Only apply oxygen by mask",
+        "Begin CPR, look for and remove a visualized obstruction, and consider laryngoscopy with Magill forceps",
+        "Apply abdominal thrusts while he lies motionless and do nothing else",
+        "Declare him unsalvageable"
+      ],
+      "correct": 1,
+      "explanation": "Foreign-body airway obstruction causes a rapidly reversible hypoxic arrest. For the unconscious patient, begin CPR, inspect the mouth and remove a visualized object, and consider direct laryngoscopy with Magill forceps to extract the obstruction—relieving it can immediately reverse the arrest.",
+      "clinicalPearl": "FBAO arrest is one of the most reversible arrests there is—clear the airway and the patient can recover instantly."
+    },
+    {
+      "id": "c21_s03",
+      "title": "Obvious Death",
+      "presentation": "You arrive at a high-speed crash to find an occupant with injuries obviously incompatible with life—decapitation. Another bystander urges you to 'do everything.'",
+      "vitals": { "hr": "0", "bp": "—", "rr": "apneic", "spo2": "—", "skin": "—" },
+      "question": "What is the appropriate action?",
+      "options": [
+        "Begin full resuscitation regardless",
+        "Withhold resuscitation per protocol for injuries obviously incompatible with life, and support the scene/family appropriately",
+        "Transport with CPR in progress",
+        "Decide entirely on your own without any protocol"
+      ],
+      "correct": 1,
+      "explanation": "Injuries obviously incompatible with life (such as decapitation) are criteria for withholding resuscitation under protocol. Resuscitation would be futile; follow local protocol, document carefully, and manage the scene and family compassionately.",
+      "clinicalPearl": "Recognize the unsalvageable patient—withholding resuscitation per protocol for injuries incompatible with life is appropriate and compassionate care."
+    }
+  ]
+}

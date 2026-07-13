@@ -1,0 +1,27 @@
+{
+  "chapter": "c16",
+  "cards": [
+    { "id": "c16_fc01", "question": "What are the two main layers of the skin?", "answer": "The epidermis (outer) and the dermis (deeper, containing nerves, vessels, hair follicles, and glands).", "category": "Anatomy" },
+    { "id": "c16_fc02", "question": "What are the major functions of the skin?", "answer": "Protection from infection/injury, temperature and fluid regulation, and sensation.", "category": "Anatomy" },
+    { "id": "c16_fc03", "question": "Describe a superficial (first-degree) burn.", "answer": "Involves only the epidermis—red, painful, dry, with no blisters (like a sunburn).", "category": "Burn Depth" },
+    { "id": "c16_fc04", "question": "Describe a partial-thickness (second-degree) burn.", "answer": "Extends into the dermis—red, moist, blistered, and very painful.", "category": "Burn Depth" },
+    { "id": "c16_fc05", "question": "Describe a full-thickness (third-degree) burn.", "answer": "Destroys the entire dermis—dry, leathery, white or charred, and painless in the burned area because nerves are destroyed.", "category": "Burn Depth" },
+    { "id": "c16_fc06", "question": "Why might a full-thickness burn be painless while the patient still reports pain?", "answer": "The full-thickness area has destroyed nerve endings (painless), but surrounding partial-thickness burns remain very painful.", "category": "Burn Depth" },
+    { "id": "c16_fc07", "question": "State the adult rule of nines percentages.", "answer": "Head 9%, each arm 9%, anterior trunk 18%, posterior trunk 18%, each leg 18%, and genitalia 1%.", "category": "Rule of Nines" },
+    { "id": "c16_fc08", "question": "How is the palm used to estimate burn size?", "answer": "The patient's palm (including fingers) is approximately 1% of total body surface area, useful for scattered burns.", "category": "Rule of Nines" },
+    { "id": "c16_fc09", "question": "Which burns are counted in TBSA estimates?", "answer": "Only partial-thickness and full-thickness burns; superficial (first-degree) burns are not counted.", "category": "Rule of Nines" },
+    { "id": "c16_fc10", "question": "Why is the rule of nines modified for children?", "answer": "Children have proportionally larger heads and smaller legs, so the percentages differ from adults.", "category": "Rule of Nines" },
+    { "id": "c16_fc11", "question": "What signs suggest inhalation/thermal airway injury?", "answer": "Facial burns, singed nasal/facial hair, soot in the mouth/nose, carbonaceous sputum, hoarseness, stridor, and a fire in an enclosed space.", "category": "Airway" },
+    { "id": "c16_fc12", "question": "Why must the airway be secured early in inhalation injury?", "answer": "Airway edema can progress rapidly and make intubation impossible—secure the airway before swelling closes it.", "category": "Airway" },
+    { "id": "c16_fc13", "question": "How does carbon monoxide cause hypoxia?", "answer": "It binds hemoglobin with about 250 times the affinity of oxygen, forming carboxyhemoglobin that cannot carry oxygen, causing tissue hypoxia.", "category": "Carbon Monoxide" },
+    { "id": "c16_fc14", "question": "Why is pulse oximetry unreliable in CO poisoning?", "answer": "Standard pulse oximeters cannot distinguish carboxyhemoglobin from oxyhemoglobin, giving a falsely normal reading.", "category": "Carbon Monoxide" },
+    { "id": "c16_fc15", "question": "What is the initial treatment for carbon monoxide poisoning?", "answer": "High-flow 100% oxygen, which greatly speeds elimination of carbon monoxide from hemoglobin.", "category": "Carbon Monoxide" },
+    { "id": "c16_fc16", "question": "How do you manage a dry chemical burn?", "answer": "Brush off the dry chemical first, then irrigate copiously with water; remove contaminated clothing.", "category": "Chemical Burns" },
+    { "id": "c16_fc17", "question": "What special hazards accompany electrical burns?", "answer": "Deep tissue damage along the current path, cardiac dysrhythmias/arrest, and entry/exit wounds—apply cardiac monitoring and ensure scene safety.", "category": "Electrical Burns" },
+    { "id": "c16_fc18", "question": "How are burns covered in the field?", "answer": "With clean, dry dressings; avoid prolonged wet cooling that causes hypothermia, and keep the patient warm.", "category": "Management" },
+    { "id": "c16_fc19", "question": "List criteria for transport to a burn center.", "answer": "Large/deep burns; burns of the face, hands, feet, genitalia, or major joints; airway/inhalation injury; electrical or chemical burns; burns with associated trauma; and burns at extremes of age.", "category": "Disposition" },
+    { "id": "c16_fc20", "question": "Why is over-cooling a burn harmful?", "answer": "Large burns lose the ability to thermoregulate; prolonged cooling causes hypothermia, which worsens outcomes.", "category": "Management" },
+    { "id": "c16_fc21", "question": "What is the first step in burn management?", "answer": "Ensure scene safety and stop the burning process—remove the patient from the source and remove smoldering clothing and jewelry.", "category": "Management" },
+    { "id": "c16_fc22", "question": "Why are circumferential full-thickness burns dangerous?", "answer": "They can restrict chest expansion (impairing breathing) or act as a tourniquet on a limb (impairing circulation), sometimes needing escharotomy.", "category": "Complications" }
+  ]
+}

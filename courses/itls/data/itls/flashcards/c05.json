@@ -1,0 +1,25 @@
+{
+  "chapter": "c05",
+  "cards": [
+    { "id": "c05_fc01", "question": "Why is finesse emphasized over force in airway management?", "answer": "Forceful, rushed attempts cause trauma and hypoxia; a calm, prepared, deliberate approach with good team communication produces better outcomes.", "category": "Principles" },
+    { "id": "c05_fc02", "question": "How do you measure a suction catheter before insertion?", "answer": "From the corner of the mouth to the earlobe (or angle of the jaw); insert without suction and apply suction only on withdrawal.", "category": "Suctioning" },
+    { "id": "c05_fc03", "question": "How long should a single suction attempt last in an adult?", "answer": "No more than about 15 seconds (less in children), because suction also removes oxygen; reoxygenate between attempts.", "category": "Suctioning" },
+    { "id": "c05_fc04", "question": "How is an oropharyngeal airway (OPA) sized?", "answer": "From the corner of the mouth to the earlobe or angle of the jaw.", "category": "Adjuncts" },
+    { "id": "c05_fc05", "question": "How is a nasopharyngeal airway (NPA) sized?", "answer": "From the nostril to the earlobe; diameter roughly matching the patient's nostril.", "category": "Adjuncts" },
+    { "id": "c05_fc06", "question": "What is the advantage of two-rescuer bag-valve-mask ventilation?", "answer": "One rescuer maintains a two-handed mask seal while the other ventilates, producing a far better seal and more effective ventilation than one rescuer.", "category": "Ventilation" },
+    { "id": "c05_fc07", "question": "What does a pulse oximeter measure and what is a concerning trauma reading?", "answer": "It measures oxygen saturation (SpO2); a reading below 95% in a trauma patient warrants supplemental oxygen and reassessment.", "category": "Monitoring" },
+    { "id": "c05_fc08", "question": "How does a supraglottic (BIAD) airway work?", "answer": "It is inserted blindly into the hypopharynx and seals over the glottic opening to allow ventilation without visualizing the cords.", "category": "Supraglottic" },
+    { "id": "c05_fc09", "question": "When are supraglottic airways especially useful?", "answer": "When intubation is difficult or unavailable, as a rapid primary or rescue airway requiring minimal neck movement.", "category": "Supraglottic" },
+    { "id": "c05_fc10", "question": "What does the mnemonic SOAP-ME stand for in airway preparation?", "answer": "Suction, Oxygen, Airways (adjuncts/tubes), Pharmacology, Monitoring, and Equipment (laryngoscope/backup).", "category": "Preparation" },
+    { "id": "c05_fc11", "question": "What cervical-spine precaution is maintained during trauma intubation?", "answer": "Manual in-line stabilization of the cervical spine throughout the procedure.", "category": "Intubation" },
+    { "id": "c05_fc12", "question": "How is endotracheal tube placement confirmed?", "answer": "Primarily by waveform capnography, plus visible chest rise and bilateral breath sounds; reconfirm after every move.", "category": "Confirmation" },
+    { "id": "c05_fc13", "question": "When is nasotracheal intubation contraindicated?", "answer": "When a basilar skull fracture is suspected and in apneic patients (it requires spontaneous breathing).", "category": "Intubation" },
+    { "id": "c05_fc14", "question": "Why must the tube be anchored and depth noted?", "answer": "To prevent displacement during movement; note centimeter depth at the teeth so dislodgement can be detected and corrected.", "category": "Confirmation" },
+    { "id": "c05_fc15", "question": "What must always be available before giving a paralytic for intubation?", "answer": "The ability to ventilate (BVM), monitoring (SpO2/capnography), suction, and a rescue airway/backup plan.", "category": "Pharmacology" },
+    { "id": "c05_fc16", "question": "What is external laryngeal manipulation used for during laryngoscopy?", "answer": "Applying pressure on the larynx (BURP) to bring the vocal cords into view and improve first-pass intubation success.", "category": "Intubation" },
+    { "id": "c05_fc17", "question": "What is a common cause of failed BVM ventilation?", "answer": "A poor mask seal; correct with a two-handed/two-rescuer technique and proper airway positioning with an adjunct.", "category": "Ventilation" },
+    { "id": "c05_fc18", "question": "Why preoxygenate before intubation?", "answer": "To build an oxygen reserve that prolongs safe apnea time and prevents desaturation during the attempt.", "category": "Optimization" },
+    { "id": "c05_fc19", "question": "What is the purpose of apneic oxygenation during intubation?", "answer": "Delivering oxygen (e.g., nasal cannula) during the attempt to extend the time before the patient desaturates.", "category": "Optimization" },
+    { "id": "c05_fc20", "question": "What should the team do if an intubation attempt fails and the patient desaturates?", "answer": "Stop, ventilate with BVM and reoxygenate, then either reattempt with optimization or place a supraglottic rescue airway.", "category": "Rescue" }
+  ]
+}

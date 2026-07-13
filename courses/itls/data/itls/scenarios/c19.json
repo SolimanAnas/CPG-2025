@@ -1,0 +1,53 @@
+{
+  "chapter": "c19",
+  "cases": [
+    {
+      "id": "c19_s01",
+      "title": "Supine and Hypotensive",
+      "presentation": "A 32-week pregnant woman was in an MVC. She is immobilized flat and supine on a backboard and becomes lightheaded, pale, and hypotensive, though there is no obvious bleeding.",
+      "vitals": { "hr": "104 bpm", "bp": "84/56 mmHg", "rr": "20/min", "spo2": "98%", "skin": "pale" },
+      "question": "What is the most likely cause and immediate action?",
+      "options": [
+        "Massive hemorrhage—give blood immediately",
+        "Supine hypotension syndrome—tilt the whole board 15–30 degrees to the left (or manually displace the uterus left)",
+        "Anxiety—reassure her",
+        "Spinal shock—give a vasopressor"
+      ],
+      "correct": 1,
+      "explanation": "Hypotension that appears when a late-pregnancy patient is supine is classic supine hypotension syndrome from caval compression by the gravid uterus. Tilt the entire board 15–30 degrees to the left (maintaining SMR) or manually displace the uterus to the left to restore venous return—while still resuscitating and looking for hemorrhage.",
+      "clinicalPearl": "If a late-pregnancy patient drops her pressure when laid flat, tilt left first—it can be instantly corrective."
+    },
+    {
+      "id": "c19_s02",
+      "title": "Possible Placental Abruption",
+      "presentation": "A 28-week pregnant woman was the restrained driver in a moderate collision. She reports abdominal pain and has noticed vaginal bleeding. Her uterus is tender and feels rigid.",
+      "vitals": { "hr": "112 bpm", "bp": "110/70 mmHg", "rr": "22/min", "spo2": "98%", "skin": "warm" },
+      "question": "What condition should you suspect and how do you manage it?",
+      "options": [
+        "A simple bruise—reassure and release",
+        "Abruptio placenta—give oxygen, resuscitate the mother, tilt left, and transport rapidly to maternal/fetal care",
+        "Supine hypotension only",
+        "Preterm labor that needs no transport"
+      ],
+      "correct": 1,
+      "explanation": "Vaginal bleeding, abdominal pain, and a tender/rigid uterus after trauma indicate possible placental abruption—a maternal and fetal emergency. Provide high-flow oxygen, resuscitate the mother (fluids), transport in left-tilt, and go to a facility capable of maternal and fetal care, even though maternal vitals are only mildly abnormal.",
+      "clinicalPearl": "Bleeding + pain + a rigid, tender uterus after trauma is abruption until proven otherwise—resuscitate the mother and move fast."
+    },
+    {
+      "id": "c19_s03",
+      "title": "Reassuring Vitals, Worrying Mechanism",
+      "presentation": "A 34-week pregnant woman was a pedestrian struck at low speed. She feels 'fine' and her vital signs look normal, but she sustained a direct blow to the abdomen.",
+      "vitals": { "hr": "96 bpm", "bp": "118/74 mmHg", "rr": "18/min", "spo2": "99%", "skin": "normal" },
+      "question": "What is the appropriate disposition?",
+      "options": [
+        "Clear her on scene since she feels fine",
+        "Transport for evaluation despite normal vitals, because abruption and fetal compromise can occur with few external signs",
+        "Tell her pregnancy protects against injury",
+        "Only treat if she develops bleeding"
+      ],
+      "correct": 1,
+      "explanation": "Normal maternal vitals are reassuring but not definitive—the mother's expanded volume masks early shock, and placental abruption can occur without external signs. A direct abdominal blow in late pregnancy warrants oxygen, left-tilt transport, and evaluation at a maternal/fetal-capable facility.",
+      "clinicalPearl": "In pregnancy, the mechanism outranks reassuring vitals—evaluate even when she looks well."
+    }
+  ]
+}

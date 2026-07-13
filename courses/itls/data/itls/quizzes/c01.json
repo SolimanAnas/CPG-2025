@@ -1,0 +1,473 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "What is the first step in performing a scene size-up according to the text?",
+      "options": [
+        "A. Assessing the patient",
+        "B. Determining the total number of patients",
+        "C. Evaluating the scene for dangers",
+        "D. Performing initial assessment"
+      ],
+      "correct": 2,
+      "rationale": "The text states, 'Scene size-up includes taking standard precautions to prevent exposure to blood and other potentially infective material, evaluating the scene for dangers, determining the total number of patients, determining essential equipment needed for the particular scene, and identifying the mechanisms of injuries.' The first step is clearly stated as evaluating the scene for dangers.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Which mechanism of injury involves a rapid forward deceleration in an MVC?",
+      "options": [
+        "A. Penetrating",
+        "B. Blunt",
+        "C. Lateral impact",
+        "D. Frontal impact"
+      ],
+      "correct": 3,
+      "rationale": "The text mentions, 'Frontal-impact or head-on collision: In an MVC involving a frontal-impact collision, an unrestrained body is brought to a sudden halt. The energy transfer is capable of producing multiple injuries.' This describes the rapid forward deceleration mechanism.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q03",
+      "question": "What type of injury can be caused by the steering wheel in an MVC, according to the text?",
+      "options": [
+        "A. Cervical spine fracture",
+        "B. Facial laceration",
+        "C. Both A and B",
+        "D. Pelvic fracture"
+      ],
+      "correct": 2,
+      "rationale": "The text states, 'Steering-wheel injuries most often occur to an unrestrained driver of a vehicle in a head-on collision. The driver may subsequently impact with the windshield. The steering wheel is the vehicle’s most lethal weapon for the unrestrained driver, and any degree of steering-wheel deformity (check under collapsed airbags) must be treated with a high index of suspicion for face, neck, thoracic, or abdominal injury.' This indicates that facial lacerations can occur.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q04",
+      "question": "What is the primary concern when assessing a patient involved in a rear-impact collision?",
+      "options": [
+        "A. Cervical spine injury",
+        "B. Pelvic fracture",
+        "C. Head injury",
+        "D. Abdominal trauma"
+      ],
+      "correct": 0,
+      "rationale": "The text states, 'In rear-impact collisions, the potential exists for neck and back injury. The mechanism of cervical-spine injury in a rear-impact collision is explained.' This indicates that cervical spine injuries are the primary concern.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q05",
+      "question": "What equipment should be carried to the scene according to the text?",
+      "options": [
+        "A. Personal protective equipment only",
+        "B. Patient transport device and trauma box",
+        "C. Only oxygen and airway equipment",
+        "D. All essential equipment"
+      ],
+      "correct": 3,
+      "rationale": "The text states, 'If possible, carry all essential equipment to the scene. This prevents loss of time returning to the vehicle.' Essential equipment includes personal protective equipment, patient transport device, trauma box, and other necessary items.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q06",
+      "question": "What is a key factor in determining the mechanism of injury for a penetrating wound?",
+      "options": [
+        "A. The size of the entry wound",
+        "B. The velocity and type of projectile",
+        "C. The distance from which it was fired",
+        "D. The angle at which it entered the body"
+      ],
+      "correct": 1,
+      "rationale": "The text states, 'Bullet factors that contribute to tissue damage include the following: Missile size, Missile deformity, Semijacket, Tumbling, Yaw. The velocity and type of projectile are key factors in determining the mechanism of injury for a penetrating wound.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q07",
+      "question": "What is the primary concern when managing a patient with a blast injury?",
+      "options": [
+        "A. Airway compromise",
+        "B. Secondary shrapnel injuries",
+        "C. Tertiary impact injuries",
+        "D. Quaternary burn injuries"
+      ],
+      "correct": 0,
+      "rationale": "The text states, 'Primary blast injury is less common in the civilian setting than in combat. Injuries due to the primary air blast are almost exclusive to the air-containing organs. The auditory system often involves ruptured tympanic membranes. Once thought of as a marker of exposure to blasts sufficient to cause primary injury, recent data suggests that this is not a good triage tool. Lung injuries resulting from primary blast injury can include pneumothorax, parenchymal hemorrhage, and especially alveolar rupture.' This indicates that airway compromise is the primary concern.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q08",
+      "question": "What are two common forms of MVCs mentioned in the text?",
+      "options": [
+        "A. Frontal-impact and rear-impact",
+        "B. Rear-impact and rollover",
+        "C. Lateral-impact and frontal-impact",
+        "D. Rollover and rotational"
+      ],
+      "correct": 2,
+      "rationale": "The text states, 'The five common forms of MVCs are the following: Frontal-impact or head-on collision, Lateral-impact or T-bone collision, Rear-impact collision, Rollover collision, Rotational collision.' This indicates that frontal-impact and lateral-impact are two common forms.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q09",
+      "question": "What is the potential risk of a lap belt in a frontal deceleration crash?",
+      "options": [
+        "A. Head injury",
+        "B. Pelvic fracture",
+        "C. Abdominal injury",
+        "D. Cervical spine injury"
+      ],
+      "correct": 2,
+      "rationale": "The text states, 'If the lap belt is in place and the victim is subjected to a frontal deceleration crash, the body tends to fold together like a clasp knife (Figure 1-11). The head may be thrown forward into the steering wheel or dashboard. Facial, head, or neck injuries are common. Abdominal injuries also occur if the lap belt is positioned improperly.' This indicates that abdominal injury can occur.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "What mechanism of motion injury involves a rapid vertical deceleration?",
+      "options": [
+        "A. Blunt",
+        "B. Penetrating",
+        "C. Fall",
+        "D. Rear impact"
+      ],
+      "correct": 2,
+      "rationale": "The text states, 'Potential Injury Patterns: Frontal impact: Cervical-spine fracture, Flail chest, Myocardial contusion, Pneumothorax, Aortic disruption, Spleen or liver laceration, Posterior hip dislocation, Knee dislocation. These injuries are caused by rapid vertical deceleration.' This indicates that falls involve a rapid vertical deceleration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q11",
+      "question": "What is the primary concern when managing a patient involved in a tractor accident?",
+      "options": [
+        "A. Airway compromise",
+        "B. Crush injuries",
+        "C. Head injury",
+        "D. Pelvic fracture"
+      ],
+      "correct": 1,
+      "rationale": "The text states, 'The primary mechanism of injury in a tractor accident is the crush injury. Severity depends on the part of the anatomy involved.' This indicates that crush injuries are the primary concern.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q12",
+      "question": "What is the potential risk when managing a patient with a gunshot wound?",
+      "options": [
+        "A. Airway compromise",
+        "B. Secondary shrapnel injuries",
+        "C. Tertiary impact injuries",
+        "D. Quaternary burn injuries"
+      ],
+      "correct": 0,
+      "rationale": "The text states, 'Injuries caused by the secondary factors may be penetrating or blunt. Fragments of shrapnel from an explosion may attain velocities of 14,000 feet (4,270 meters) per second. This is over four times the velocity of the most powerful high-velocity rifle bullets. A piece of shrapnel traveling at this velocity would impart more than 16 times the energy of a similarly sized high-velocity rifle bullet. Any shrapnel wound should be considered serious.' This indicates that airway compromise can occur.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q13",
+      "question": "What is the first step in performing a scene size-up according to the chapter?",
+      "options": [
+        "A. Approach the patient immediately",
+        "B. Determine if the scene is safe",
+        "C. Assess the total number of patients",
+        "D. Identify the mechanism of injury"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'Scene size-up includes taking standard precautions to prevent exposure to blood and other potentially infective material, evaluating the scene for dangers, determining the total number of patients, determining essential equipment needed for the particular scene, and identifying the mechanisms of injuries.' The first step is clearly stated as 'evaluating the scene for dangers'.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q14",
+      "question": "Which of the following is NOT a form of MVC mentioned in the chapter?",
+      "options": [
+        "A. Frontal-impact collision",
+        "B. Rear-impact collision",
+        "C. Lateral-impact collision",
+        "D. Rotational collision involving only one vehicle"
+      ],
+      "correct": 3,
+      "rationale": "The chapter lists five common forms of MVCs: frontal-impact, lateral-impact (T-bone), rear-impact, rollover, and rotational. A rotational collision involving only one vehicle is not mentioned as a form of MVC.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q15",
+      "question": "What type of injuries are most commonly associated with the steering wheel in head-on collisions?",
+      "options": [
+        "A. Facial and neck injuries",
+        "B. Chest and abdominal injuries",
+        "C. Lower extremity fractures",
+        "D. Spinal cord injuries"
+      ],
+      "correct": 0,
+      "rationale": "The text mentions that 'The driver may subsequently impact with the windshield. The steering wheel is the vehicle’s most lethal weapon for the unrestrained driver, and any degree of steering-wheel deformity (check under collapsed airbags) must be treated with a high index of suspicion for face, neck, thoracic, or abdominal injury.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q16",
+      "question": "What is the primary mechanism of injury in rear-impact collisions according to the chapter?",
+      "options": [
+        "A. Deceleration injuries",
+        "B. Compression injuries",
+        "C. Penetrating injuries",
+        "D. Axial loading"
+      ],
+      "correct": 0,
+      "rationale": "The text states that 'The sudden increase in acceleration produces posterior displacement of the occupants and possible hyperextension of the cervical spine if the headrest is not properly adjusted.' This indicates deceleration injuries as a primary mechanism.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q17",
+      "question": "Which of the following is NOT a potential injury associated with seat restraints in MVCs?",
+      "options": [
+        "A. Cervical spine fractures",
+        "B. Rib fractures",
+        "C. Pelvic fractures",
+        "D. Concussions"
+      ],
+      "correct": 3,
+      "rationale": "The text mentions that 'In rear-impact collisions, the potential exists for neck and back injury.' It does not specifically mention concussions as a common injury from seat restraints.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q18",
+      "question": "What is the significance of a deformed steering wheel in an MVC?",
+      "options": [
+        "A. It indicates the vehicle was not involved in any collision",
+        "B. It suggests potential injuries to the driver's face, neck, or thorax",
+        "C. It means the airbags did not deploy",
+        "D. It is irrelevant to patient assessment"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'A deformed steering wheel is just as important a clue in an auto equipped with an air bag as in those that are not. This clue may be missed because the deflated air bag covers the steering wheel.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q19",
+      "question": "What is the primary cause of injuries in tractor accidents according to the chapter?",
+      "options": [
+        "A. Penetrating injuries",
+        "B. Crush injuries",
+        "C. Blast injuries",
+        "D. Fall-related injuries"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'The primary mechanism of injury in a tractor accident is the crush injury.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q20",
+      "question": "What type of injuries are most common with motorcycle accidents according to the chapter?",
+      "options": [
+        "A. Head and neck injuries",
+        "B. Lower extremity fractures",
+        "C. Chest and abdominal injuries",
+        "D. Spinal cord injuries"
+      ],
+      "correct": 0,
+      "rationale": "The text mentions that 'Injuries depend on the part of the anatomy subjected to kinetic energy. The lack of protective encasement leads to a higher frequency of head, neck, and extremity injuries.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q21",
+      "question": "What is the significance of the steering wheel in MVCs according to the chapter?",
+      "options": [
+        "A. It is a minor injury risk",
+        "B. It can cause severe injuries due to its design as a 'lethal weapon'",
+        "C. It only affects passengers, not drivers",
+        "D. It has no significant role in injury patterns"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'The steering wheel is the vehicle’s most lethal weapon for the unrestrained driver, and any degree of steering-wheel deformity (check under collapsed airbags) must be treated with a high index of suspicion for face, neck, thoracic, or abdominal injury.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q22",
+      "question": "What is the primary concern when assessing a patient after a fall according to the chapter?",
+      "options": [
+        "A. Immediate pain management",
+        "B. Determining the height of the fall and surface struck",
+        "C. Checking for superficial abrasions",
+        "D. Ensuring the airway is clear"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'The types of injuries sustained depend on the following three factors, which you must identify and relay to medical direction: • Distance of fall • Anatomic area impacted • Surface struck.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q23",
+      "question": "What is a key factor in determining the severity of a knife wound according to the chapter?",
+      "options": [
+        "A. The type of blade",
+        "B. The angle and depth of penetration",
+        "C. The presence of blood",
+        "D. The location on the body"
+      ],
+      "correct": 1,
+      "rationale": "The text states that 'The severity of a knife wound depends on the anatomic area penetrated, length of the blade, and angle of penetration.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q24",
+      "question": "What is the primary mechanism of injury in blast explosions according to the chapter?",
+      "options": [
+        "A. Penetrating injuries",
+        "B. Crush injuries",
+        "C. Air blast overpressure on air-filled structures",
+        "D. Thermal burns"
+      ],
+      "correct": 2,
+      "rationale": "The text states that 'Primary. Caused by the initial air blast, a primary blast injury is caused by the direct effect of blast overpressure on tissue.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q25",
+      "question": "What is the first step in the ITLS Primary Survey according to the chapter?",
+      "options": [
+        "A. Performing a rapid trauma survey",
+        "B. Conducting an initial assessment",
+        "C. Performing a scene size-up",
+        "D. Making critical interventions and transporting decision"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. The ITLS Primary Survey begins with performing a scene size-up, as stated in the chapter: 'Scene size-up is the first step in the ItLs Primary survey (Table 1-1).'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q26",
+      "question": "Which of the following is NOT a component of the scene safety assessment during scene size-up?",
+      "options": [
+        "A. Determining if it's safe to approach the patient",
+        "B. Evaluating for potential hazards such as fire or toxic substances",
+        "C. Checking for the presence of bystanders",
+        "D. Assessing the total number of patients"
+      ],
+      "correct": 3,
+      "rationale": "The correct answer is D. Assessing the total number of patients is part of determining the total number of patients, not a component of scene safety.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q27",
+      "question": "What type of injuries are primarily responsible for most deaths from trauma in most countries?",
+      "options": [
+        "A. Penetrating injuries",
+        "B. Blast injuries",
+        "C. Motion (mechanical) injuries",
+        "D. Fall-related injuries"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. The chapter states: 'Motion (mechanical) injuries are by and large responsible for the majority of deaths from trauma in most countries.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q28",
+      "question": "What mechanism of injury involves a sudden stop that can result in multiple injuries, such as those seen in head-on collisions?",
+      "options": [
+        "A. Lateral impact",
+        "B. Rear impact",
+        "C. Frontal impact",
+        "D. Rotational collision"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. The chapter explains that frontal-impact or head-on collisions involve rapid forward deceleration, which can result in multiple injuries.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q29",
+      "question": "What type of injury is most likely to occur when a pedestrian is struck by a car at low speed?",
+      "options": [
+        "A. Head injury",
+        "B. Pelvic fracture",
+        "C. Femur fracture",
+        "D. Multiple fractures in the lower leg or knee"
+      ],
+      "correct": 4,
+      "rationale": "The correct answer is D. The chapter states that a pedestrian struck by a car, even at low speed, almost always suffers severe internal injuries as well as fractures, with bilateral lower leg or knee fractures being common.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q30",
+      "question": "What is the primary mechanism of injury in a tractor accident?",
+      "options": [
+        "A. Penetrating injuries",
+        "B. Crush injuries",
+        "C. Blast injuries",
+        "D. Fall-related injuries"
+      ],
+      "correct": 1,
+      "rationale": "The correct answer is B. The chapter states: 'The primary mechanism of injury in a tractor accident is the crush injury.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q31",
+      "question": "What type of injuries are commonly associated with motorcycle accidents, according to the text?",
+      "options": [
+        "A. Head and neck injuries",
+        "B. Pelvic fractures",
+        "C. Upper arm and shoulder injuries",
+        "D. Lower leg and knee injuries"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. The chapter mentions that motorcycle operators are much like ejected automobile occupants, with severe head and neck injuries being common.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q32",
+      "question": "What type of injury can occur when a pedestrian falls from a height?",
+      "options": [
+        "A. Cervical spine injury",
+        "B. Pelvic fracture",
+        "C. Femur fracture",
+        "D. Axial loading to the lumbar and cervical spine"
+      ],
+      "correct": 3,
+      "rationale": "The correct answer is D. The chapter describes that in a 'lover’s leap' fall, the victim typically impacts initially on the feet and then falls backward, landing on the buttocks and outstretched hands, resulting in axial loading to the lumbar and cervical spine.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q33",
+      "question": "What is a key factor to consider when evaluating a gunshot wound?",
+      "options": [
+        "A. The type of weapon",
+        "B. The distance from which the weapon was fired",
+        "C. The size and construction of the bullet",
+        "D. All of the above"
+      ],
+      "correct": 3,
+      "rationale": "The correct answer is D. The chapter states: 'Important factors to obtain, if possible, are the type of weapon, its caliber (size of bullet), and the distance from which the weapon was fired.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q34",
+      "question": "What is the primary mechanism of injury in a rear-impact collision according to the chapter?",
+      "options": [
+        "A. Deceleration injuries",
+        "B. Compression injuries",
+        "C. Axial loading",
+        "D. Blast injuries"
+      ],
+      "correct": 0,
+      "rationale": "The correct answer is A. The chapter explains that in a rear-impact collision, there is an increase in acceleration and possible hyperextension of the cervical spine due to the headrest not being properly adjusted.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q35",
+      "question": "What type of injuries are most commonly associated with a rollover collision?",
+      "options": [
+        "A. Crush injuries",
+        "B. Deceleration injuries",
+        "C. Axial loading to the spine",
+        "D. Blast injuries"
+      ],
+      "correct": 2,
+      "rationale": "The correct answer is C. The chapter states that during a vehicle rollover, there is an increased chance for axial-loading injuries of the spine.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q36",
+      "question": "What type of injury can be caused by a knife wound according to the text?",
+      "options": [
+        "A. Blast injury",
+        "B. Penetrating injury",
+        "C. Crush injury",
+        "D. Deceleration injury"
+      ],
+      "correct": 1,
+      "rationale": "The correct answer is B. The chapter states that stab wounds are low-energy injuries, and tissue damage is confined to the direct path of the blade.",
+      "difficulty": "Easy"
+    }
+  ]
+}

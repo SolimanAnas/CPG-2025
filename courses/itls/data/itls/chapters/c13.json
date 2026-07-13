@@ -1,0 +1,77 @@
+{
+  "id": "c13",
+  "title": "Abdominal Trauma",
+  "shortTitle": "Abdominal Trauma",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Identify the basic anatomy of the abdomen and explain how abdominal and chest injuries may be related.",
+    "Differentiate blunt and penetrating injuries and their characteristic complications.",
+    "Describe the treatment for a patient with protruding viscera (evisceration).",
+    "Describe how to identify and stabilize a pelvic fracture, why it matters, and contraindications.",
+    "Relate external abdominal findings to possible underlying structural damage.",
+    "Describe findings indicating intra-abdominal injury based on history, exam, and mechanism of injury.",
+    "List the critical interventions for patients with abdominal injuries."
+  ],
+  "summary": [
+    {
+      "title": "Abdominal Anatomy Regions",
+      "content": "The abdomen is divided into the true abdomen (the peritoneal cavity), the intrathoracic abdomen (upper abdomen protected by the lower ribs—liver, spleen, stomach, diaphragm), and the retroperitoneal abdomen (kidneys, pancreas, great vessels, duodenum). Because the lower ribs overlie upper-abdominal organs, chest and abdominal injuries are frequently linked."
+    },
+    {
+      "title": "Blunt vs. Penetrating Trauma",
+      "content": "Blunt trauma compresses and shears solid organs (liver, spleen), causing internal hemorrhage that may be occult. Penetrating trauma (stab, gunshot) injures whatever the object crosses and can perforate hollow organs, causing bleeding and contamination/peritonitis. The abdomen is a place where large volumes of blood can be lost with few external signs."
+    },
+    {
+      "title": "Assessment and the Hidden Hemorrhage",
+      "content": "Suspect intra-abdominal injury from mechanism, a seat-belt sign (bruising across the abdomen), distention, tenderness, rigidity, guarding, or unexplained shock. The abdominal exam is unreliable in intoxicated or head-injured patients. Serious intra-abdominal bleeding can present only as developing shock—do not wait for a rigid abdomen to act."
+    },
+    {
+      "title": "Evisceration Management",
+      "content": "For protruding viscera (evisceration), do NOT push the organs back in. Cover them with a moist, sterile dressing and then an occlusive layer to retain warmth and moisture; keep the patient still, flex the knees if helpful, and transport. Treat for shock and handle gently to avoid further injury and contamination."
+    },
+    {
+      "title": "Pelvic Fractures",
+      "content": "An unstable (open-book) pelvic fracture can lacerate the rich pelvic venous plexus and arteries, causing massive, life-threatening hemorrhage. Assess the pelvis gently once; if unstable or there is concerning mechanism with signs of shock, apply a pelvic binder at the level of the greater trochanters to close the pelvic volume and tamponade bleeding. Do not rock or repeatedly spring the pelvis."
+    },
+    {
+      "title": "Critical Interventions",
+      "content": "The field cannot stop intra-abdominal or pelvic hemorrhage—rapid transport to surgery is the life-saving intervention. Provide oxygen, control external bleeding, stabilize the pelvis if indicated, give judicious IV fluids/TXA per protocol, keep the patient warm, and transport to a trauma center. Stabilize impaled objects in place; never remove them in the field."
+    }
+  ],
+  "clinicalPearls": [
+    "The abdomen can hide massive hemorrhage with minimal external signs—rely on mechanism and developing shock.",
+    "A seat-belt sign across the abdomen suggests underlying bowel, mesenteric, or solid-organ injury.",
+    "Do NOT push eviscerated organs back in—cover with a moist sterile then occlusive dressing.",
+    "Apply a pelvic binder at the greater trochanters for an unstable pelvis with shock to tamponade bleeding.",
+    "Stabilize impaled objects in place; removal can cause uncontrollable hemorrhage."
+  ],
+  "redFlags": [
+    "Unexplained shock with a concerning mechanism is intra-abdominal/pelvic hemorrhage until proven otherwise.",
+    "Repeatedly springing/rocking the pelvis can dislodge clots and worsen hemorrhage—assess gently once.",
+    "A normal-appearing abdomen does not exclude serious injury, especially in intoxicated or head-injured patients.",
+    "Penetrating abdominal trauma can perforate bowel, causing delayed peritonitis and sepsis."
+  ],
+  "commonMistakes": [
+    "Pushing eviscerated organs back into the abdomen.",
+    "Waiting for abdominal rigidity before treating for shock.",
+    "Removing an impaled object in the field.",
+    "Repeatedly manipulating an unstable pelvis."
+  ],
+  "memoryAids": [
+    "Three abdominal regions: True (peritoneal), Intrathoracic (under lower ribs), Retroperitoneal.",
+    "Seat-belt sign = suspect bowel/mesenteric/solid-organ injury.",
+    "Evisceration: Moist sterile dressing → occlusive cover → do NOT replace organs.",
+    "Unstable pelvis + shock = binder at the greater trochanters + rapid transport."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Abdominal/Pelvic Injury",
+      "content": "1. Mechanism + exam (seat-belt sign, distention, tenderness, guarding) or unexplained shock → suspect intra-abdominal hemorrhage.\n2. Evisceration → moist sterile dressing + occlusive cover; do not replace organs.\n3. Assess pelvis gently ONCE. Unstable + shock → apply pelvic binder at greater trochanters.\n4. Impaled object → stabilize in place, do not remove.\n5. Treat shock (oxygen, controlled fluids/TXA per protocol), keep warm.\n6. Rapid transport to surgical/trauma center—field cannot control internal bleeding."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 13: Abdominal Trauma.",
+    "Bloom, I., M. White, and A.H. Yancey. Prehospital Abdominal and Pelvic Trauma."
+  ]
+}

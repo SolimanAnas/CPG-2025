@@ -1,0 +1,69 @@
+{
+  "id": "c21",
+  "title": "Trauma Arrest (Traumatic Cardiopulmonary Arrest)",
+  "shortTitle": "Trauma Arrest",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Identify the treatable causes of traumatic cardiopulmonary arrest.",
+    "Describe the proper evaluation and management of the patient in traumatic cardiopulmonary arrest.",
+    "Identify patients in traumatic cardiac arrest for whom resuscitation should be withheld."
+  ],
+  "summary": [
+    {
+      "title": "Trauma Arrest Is Different",
+      "content": "Traumatic cardiopulmonary arrest (TCPA) differs fundamentally from medical cardiac arrest. The cause is usually a mechanical or reversible problem (hypovolemia, hypoxia, obstructive shock), not a primary cardiac dysrhythmia. Survival depends on rapidly identifying and correcting the treatable cause and getting the patient to definitive surgical care—chest compressions alone rarely help if the underlying cause is not addressed."
+    },
+    {
+      "title": "Treatable Causes",
+      "content": "Focus on the reversible causes of TCPA: severe hypoxia (airway obstruction, including foreign-body airway obstruction/FBAO), tension pneumothorax, cardiac tamponade, and massive hemorrhage/hypovolemia. These map onto the classic 'H's and T's' but with a trauma emphasis. Each has a specific intervention: secure/clear the airway and oxygenate, decompress the chest bilaterally, relieve tamponade (surgical), and control hemorrhage with rapid transport for surgery and blood."
+    },
+    {
+      "title": "Evaluation and Management",
+      "content": "Work efficiently and simultaneously: open and secure the airway with oxygenation/ventilation; decompress both sides of the chest if tension pneumothorax is suspected; control external hemorrhage (pressure, tourniquet, hemostatic, pelvic binder); and provide rapid transport to a trauma center for definitive surgical control and blood products. High-quality compressions are provided, but the priority is correcting the mechanical cause. For penetrating trauma with recent signs of life, rapid transport for possible surgical intervention may be life-saving."
+    },
+    {
+      "title": "When to Withhold or Terminate Resuscitation",
+      "content": "Some trauma patients are unsalvageable, and resuscitation may be withheld. Generally, withhold resuscitation for injuries obviously incompatible with life (decapitation, hemicorporectomy, incineration, dependent lividity, rigor mortis, decomposition) and for blunt or penetrating trauma patients found apneic, pulseless, and without other signs of life with prolonged arrest. Follow local protocol; involving medical direction is appropriate when criteria are unclear."
+    },
+    {
+      "title": "Foreign-Body Airway Obstruction",
+      "content": "FBAO can cause a hypoxic arrest that is rapidly reversible. For a conscious choking patient with a severe obstruction, deliver abdominal thrusts (chest thrusts for pregnant/obese patients); for the unconscious patient, begin CPR and look for/remove the visualized obstruction. Direct laryngoscopy with Magill forceps can remove an obstructing object. Restoring the airway can immediately reverse the arrest."
+    }
+  ],
+  "clinicalPearls": [
+    "In trauma arrest, fix the mechanical cause—compressions alone rarely work if hypovolemia or obstruction persists.",
+    "Suspect and decompress bilateral tension pneumothorax in any traumatic arrest with chest trauma.",
+    "Control hemorrhage aggressively and transport rapidly for surgery and blood.",
+    "FBAO arrest is rapidly reversible—relieve the obstruction immediately.",
+    "Know your local criteria for withholding/terminating resuscitation in unsalvageable trauma."
+  ],
+  "redFlags": [
+    "Failure to address hypovolemia, tension pneumothorax, or tamponade makes compressions futile.",
+    "Injuries obviously incompatible with life (decapitation, incineration) warrant withholding resuscitation per protocol.",
+    "Penetrating-trauma arrest with recent signs of life is time-critical—transport immediately for possible surgery.",
+    "Do not delay transport of a salvageable trauma-arrest patient for prolonged on-scene efforts."
+  ],
+  "commonMistakes": [
+    "Treating trauma arrest like medical arrest (focusing on rhythm/drugs instead of the mechanical cause).",
+    "Failing to decompress the chest in a traumatic arrest with chest injury.",
+    "Continuing prolonged resuscitation on an obviously unsalvageable patient against protocol.",
+    "Delaying transport for a salvageable penetrating-trauma arrest."
+  ],
+  "memoryAids": [
+    "Treatable TCPA causes: Hypoxia (airway/FBAO), Tension pneumothorax, Tamponade, Hypovolemia (hemorrhage).",
+    "Fix the cause → then compressions matter.",
+    "Chest trauma arrest → decompress BOTH sides.",
+    "Unsalvageable signs: decapitation, hemicorporectomy, incineration, rigor, dependent lividity, decomposition."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Traumatic Cardiac Arrest Management",
+      "content": "1. Injuries incompatible with life or protocol criteria met? → withhold resuscitation per protocol.\n2. Otherwise, address treatable causes simultaneously:\n   - Airway: open/secure, oxygenate/ventilate; relieve FBAO if present.\n   - Breathing: suspect tension pneumothorax → bilateral chest decompression.\n   - Circulation: control hemorrhage (pressure, tourniquet, hemostatic, pelvic binder); IV/IO; blood per protocol.\n3. Provide high-quality CPR while correcting the mechanical cause.\n4. Penetrating trauma with recent signs of life → immediate transport for possible surgery.\n5. Rapid transport to a trauma center; consider termination per protocol if no response and criteria met."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 21: Trauma Arrest.",
+    "Fowler, R., A. Idris, and J. Brywczynski. Management of Traumatic Cardiopulmonary Arrest."
+  ]
+}

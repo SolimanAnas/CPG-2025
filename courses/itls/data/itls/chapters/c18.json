@@ -1,0 +1,70 @@
+{
+  "id": "c18",
+  "title": "Geriatric Trauma",
+  "shortTitle": "Geriatric Trauma",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the physiologic changes that occur with aging.",
+    "Explain how these changes affect assessment and management of the geriatric trauma patient.",
+    "Describe the assessment of the geriatric trauma patient.",
+    "Describe the management of the geriatric trauma patient."
+  ],
+  "summary": [
+    {
+      "title": "The Pathophysiology of Aging",
+      "content": "Aging reduces physiologic reserve in every system: stiffer blood vessels and a less responsive heart, decreased lung elasticity and respiratory reserve, reduced kidney function, brain atrophy, thinning skin, and osteoporosis with kyphotic deformity of the spine. These changes mean older patients tolerate injury poorly and deteriorate faster, even from seemingly minor mechanisms."
+    },
+    {
+      "title": "Blunted Compensation and Masking Medications",
+      "content": "Older adults have a limited ability to compensate for blood loss; a 'normal' heart rate may actually be inappropriately slow for the degree of shock. Beta-blockers and other medications blunt the tachycardic response, masking shock. A pacemaker fixes the heart rate. Anticoagulants and antiplatelet agents dramatically increase bleeding, especially intracranial hemorrhage after head trauma."
+    },
+    {
+      "title": "Deceptive Vital Signs and Baseline Hypertension",
+      "content": "A blood pressure that looks normal may be low for a chronically hypertensive patient—relative hypotension. Maintain a high index of suspicion for occult injury and shock. Brain atrophy stretches bridging veins, so subdural hematomas can develop slowly after minor head trauma; symptoms may be delayed."
+    },
+    {
+      "title": "Assessment Challenges",
+      "content": "Sensory deficits (hearing, vision), dementia, and baseline cognitive impairment complicate history and exam—obtain the patient's baseline from caregivers. Kyphosis requires padding to achieve comfortable, neutral spinal alignment. Osteoporotic bones fracture easily, including ribs (impairing ventilation) and the pelvis/hip from low-energy falls."
+    },
+    {
+      "title": "Management Priorities",
+      "content": "Manage ABCs as in any trauma, but anticipate rapid decompensation and limited reserve. Provide oxygen, support ventilation (fragile ribs/low reserve), handle gently, and pad bony prominences and spinal curves. Maintain perfusion while avoiding over-aggressive fluids that can precipitate heart failure. Have a low threshold for transport to a trauma center, and account for anticoagulation when assessing head injury risk."
+    }
+  ],
+  "clinicalPearls": [
+    "Older patients have little physiologic reserve—they tolerate injury poorly and crash quickly.",
+    "Beta-blockers and pacemakers can mask the tachycardia of shock—do not be reassured by a 'normal' heart rate.",
+    "Anticoagulants/antiplatelets greatly increase bleeding, especially intracranial hemorrhage after head trauma.",
+    "A 'normal' blood pressure may be relative hypotension in a chronically hypertensive patient.",
+    "Pad kyphotic curves to achieve comfortable, neutral spinal alignment."
+  ],
+  "redFlags": [
+    "A minor mechanism can cause major injury in the elderly—low-energy falls can fracture the hip, pelvis, or ribs.",
+    "Subdural hematoma can develop slowly after minor head trauma due to brain atrophy—symptoms may be delayed.",
+    "Rib fractures in the elderly markedly increase morbidity from impaired ventilation and pneumonia.",
+    "Over-aggressive fluid resuscitation can precipitate pulmonary edema/heart failure."
+  ],
+  "commonMistakes": [
+    "Being falsely reassured by 'normal' vital signs that are actually abnormal for the patient.",
+    "Forgetting to ask about anticoagulants and antiplatelet medications.",
+    "Forcing a kyphotic spine flat against a board.",
+    "Underestimating the severity of low-energy mechanisms."
+  ],
+  "memoryAids": [
+    "Aging = decreased reserve in every system.",
+    "Masked shock: Beta-blockers + Pacemaker = no tachycardia.",
+    "Anticoagulants + head injury = high intracranial bleeding risk.",
+    "Normal BP may be relative hypotension in the chronically hypertensive elder."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Geriatric Trauma Considerations",
+      "content": "1. Assume limited reserve—anticipate rapid decompensation even with minor mechanisms.\n2. Ask about medications (beta-blockers, anticoagulants/antiplatelets) and pacemaker.\n3. Interpret vitals relative to baseline (normal BP may be relative hypotension; HR may be masked).\n4. Support oxygenation/ventilation (fragile ribs, low reserve); avoid fluid overload.\n5. Pad kyphosis/bony prominences for comfortable neutral alignment.\n6. Low threshold for trauma-center transport; heightened concern for head injury on blood thinners."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 18: Geriatric Trauma.",
+    "Heimbach, L.J., J.G. Newman, and J.F. Baldwin. Trauma in the Older Adult."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "To Immobilize or Not?",
+      "presentation": "A 25-year-old rear-ended at low speed is walking around the scene. He is alert and sober, denies neck or back pain, has no midline tenderness, no numbness or weakness, and no other distracting injuries.",
+      "vitals": { "hr": "82 bpm", "bp": "126/78 mmHg", "rr": "16/min", "spo2": "99%", "gcs": "15" },
+      "question": "What is the appropriate spinal management?",
+      "options": [
+        "Full immobilization on a long backboard regardless of findings",
+        "Patient-centered assessment supports NOT applying SMR; monitor and transport as appropriate",
+        "Apply a cervical collar and discharge on scene",
+        "Rapid extrication"
+      ],
+      "correct": 1,
+      "explanation": "This reliable, alert, sober patient has no midline tenderness, no neurologic deficit, and no distracting injury. Selective (patient-centered) criteria support withholding full SMR, avoiding the harms of unnecessary immobilization.",
+      "clinicalPearl": "SMR is selective—an alert, reliable patient with a normal spinal exam and no distracting injury usually does not need a backboard."
+    },
+    {
+      "id": "c11_s02",
+      "title": "Penetrating Trauma Pitfall",
+      "presentation": "A 30-year-old was shot once in the abdomen. He is in shock and needs rapid transport. He moves all extremities normally and has no neurologic complaints, but a new EMT wants to fully immobilize him on a board.",
+      "vitals": { "hr": "128 bpm", "bp": "88/60 mmHg", "rr": "24/min", "spo2": "96%", "skin": "pale" },
+      "question": "What is the correct approach?",
+      "options": [
+        "Fully immobilize him before transport",
+        "Do not apply routine SMR for isolated penetrating trauma without deficit—expedite transport",
+        "Apply a traction splint",
+        "Delay transport to place a short device"
+      ],
+      "correct": 1,
+      "explanation": "Routine immobilization of isolated penetrating trauma without a neurologic deficit delays transport and is associated with higher mortality. With no deficit and a critical hemorrhagic state, expedite transport to surgical care.",
+      "clinicalPearl": "Penetrating torso/neck trauma without a neuro deficit should not be routinely immobilized—time to surgery saves lives."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Shock in a Diving Injury",
+      "presentation": "A young man struck his head diving and cannot feel or move his legs. He is hypotensive with warm, dry, pink skin and a slow heart rate. There is no external bleeding and the abdomen is soft and nontender.",
+      "vitals": { "hr": "50 bpm", "bp": "84/58 mmHg", "rr": "16/min", "spo2": "98%", "skin": "warm, dry, pink" },
+      "question": "What does this presentation indicate and how do you proceed?",
+      "options": [
+        "Hemorrhagic shock — ignore the spine",
+        "Neurogenic shock from cord injury — maintain SMR, support BP per protocol, keep warm, and still exclude hemorrhage",
+        "Cardiac tamponade — pericardiocentesis",
+        "Simple vasovagal episode"
+      ],
+      "correct": 1,
+      "explanation": "Hypotension with bradycardia and warm, dry skin plus a sensorimotor deficit after a cervical mechanism indicates neurogenic shock from cord injury. Maintain spinal motion restriction, support perfusion per protocol, keep the patient warm, and continue to exclude hemorrhage since both can coexist.",
+      "clinicalPearl": "Neurogenic shock looks 'warm and slow'; hemorrhagic shock looks 'cold and fast'—but always rule out bleeding first."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "c10",
+  "title": "Head Trauma and Traumatic Brain Injury",
+  "shortTitle": "Head Trauma / TBI",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the anatomy of the head and brain.",
+    "Describe the pathophysiology of traumatic brain injury.",
+    "Explain the difference between primary and secondary brain injury.",
+    "Describe the mechanisms that produce secondary brain injury.",
+    "Describe the assessment of the head-injured patient.",
+    "Describe the prehospital management of traumatic brain injury.",
+    "Recognize and manage the cerebral herniation syndrome.",
+    "Identify potential pitfalls in managing the head-injured patient."
+  ],
+  "summary": [
+    {
+      "title": "Anatomy and the Monro-Kellie Doctrine",
+      "content": "The skull is a rigid box containing brain tissue, blood, and cerebrospinal fluid. The Monro-Kellie Doctrine states that because the skull cannot expand, an increase in any one component (such as a hematoma or swelling) must be offset by a decrease in another; once compensation is exhausted, intracranial pressure (ICP) rises sharply."
+    },
+    {
+      "title": "Primary vs. Secondary Brain Injury",
+      "content": "Primary brain injury is the damage that occurs at the moment of impact (coup and contrecoup contusions, diffuse axonal injury, lacerations)—it cannot be reversed in the field. Secondary brain injury develops afterward from hypoxia, hypotension, hypoglycemia/hyperglycemia, hyper/hypocapnia, increased ICP, and edema. Preventing secondary injury is the central goal of prehospital care."
+    },
+    {
+      "title": "ICP, CPP, and Cushing's Reflex",
+      "content": "Cerebral perfusion pressure (CPP) = mean arterial pressure (MAP) − intracranial pressure (ICP). As ICP rises, CPP falls and the brain becomes ischemic. Cushing's reflex—hypertension, bradycardia, and irregular respirations—is a late sign of dangerously raised ICP. The no-reflow phenomenon describes failure of microcirculation after severe injury."
+    },
+    {
+      "title": "Assessment",
+      "content": "Assess level of consciousness with the Glasgow Coma Scale (eyes, verbal, motor), pupil size/reactivity, and motor function. Look for signs of basilar skull fracture (raccoon eyes, Battle's sign, CSF leak). Obtain a blood glucose. A GCS of 8 or less indicates severe TBI and an inability to protect the airway. Reassess frequently—a deteriorating GCS signals expanding injury."
+    },
+    {
+      "title": "Management: Prevent Secondary Injury",
+      "content": "Maintain oxygenation (SpO2 ≥ 94%) and ventilation at a normal rate; avoid both hypoxia and routine hyperventilation. Prevent hypotension—maintain systolic blood pressure (commonly ≥ 110–120 mmHg)—because a single episode of hypotension dramatically worsens outcome. Elevate the head ~30 degrees if not contraindicated, treat seizures, keep the patient normothermic and euglycemic, and transport to an appropriate trauma/neurosurgical center."
+    },
+    {
+      "title": "Cerebral Herniation Syndrome",
+      "content": "Herniation presents with a decreasing GCS (often <8) plus a dilated/unequal or fixed pupil, abnormal (extensor) posturing, and Cushing's signs. Only in this setting is controlled mild hyperventilation appropriate—target an ETCO2 of about 30–35 mmHg—while maintaining oxygenation and blood pressure. Otherwise ventilate to normal ETCO2 (35–45 mmHg)."
+    }
+  ],
+  "clinicalPearls": [
+    "The brain's worst enemies are hypoxia and hypotension—prevent both at all costs.",
+    "Cerebral perfusion pressure = MAP − ICP; keep MAP up and ICP down.",
+    "A single episode of hypotension can double mortality in severe TBI—maintain systolic ~110–120 mmHg.",
+    "Cushing's reflex (hypertension, bradycardia, irregular respirations) is a late sign of rising ICP.",
+    "Hyperventilation is reserved ONLY for signs of active cerebral herniation."
+  ],
+  "redFlags": [
+    "A decreasing GCS with a blown (dilated, fixed) pupil signals herniation—act immediately.",
+    "Routine hyperventilation lowers CPP and worsens ischemia—avoid it unless herniation signs are present.",
+    "Hypoglycemia and hyperglycemia both worsen brain injury—check and correct glucose.",
+    "GCS ≤ 8 means the patient cannot protect the airway—secure it."
+  ],
+  "commonMistakes": [
+    "Allowing the head-injured patient to become hypoxic or hypotensive.",
+    "Hyperventilating all head-injured patients rather than only those herniating.",
+    "Failing to recheck the GCS and pupils frequently to detect deterioration.",
+    "Overlooking other injuries causing hypotension while focusing on the head."
+  ],
+  "memoryAids": [
+    "GCS components: Eyes (4), Verbal (5), Motor (6) = max 15.",
+    "CPP = MAP − ICP.",
+    "Cushing's triad: Hypertension, Bradycardia, irregular Respirations.",
+    "Herniation = decreasing GCS + dilated/fixed pupil + posturing → controlled hyperventilation (ETCO2 30–35)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "TBI Management Priorities",
+      "content": "1. Secure airway if GCS ≤ 8; oxygenate to SpO2 ≥ 94%; ventilate to normal ETCO2 (35–45).\n2. Prevent hypotension — maintain systolic ~110–120 mmHg; treat hemorrhage.\n3. Check glucose; treat seizures; keep normothermic.\n4. Elevate head ~30° if not contraindicated.\n5. Signs of herniation (decreasing GCS, dilated/fixed pupil, posturing)? → controlled mild hyperventilation to ETCO2 30–35 while maintaining BP and oxygenation.\n6. Rapid transport to a trauma/neurosurgical center; reassess GCS and pupils frequently."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 10: Head Trauma and Traumatic Brain Injury.",
+    "Brain Trauma Foundation. Guidelines for Prehospital Management of Traumatic Brain Injury."
+  ]
+}

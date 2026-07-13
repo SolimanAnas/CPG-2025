@@ -1,0 +1,53 @@
+{
+  "chapter": "c15",
+  "cases": [
+    {
+      "id": "c15_s01",
+      "title": "Isolated Femur Fracture in a Stable Patient",
+      "presentation": "A 20-year-old soccer player has an isolated, painful, deformed mid-thigh. Distal pulses, motor, and sensation are intact. He is otherwise stable with normal vitals, and transport time is 25 minutes.",
+      "vitals": { "hr": "92 bpm", "bp": "126/78 mmHg", "rr": "16/min", "spo2": "99%", "skin": "warm" },
+      "question": "What is the appropriate management of the leg?",
+      "options": [
+        "Apply a traction splint after confirming no hip/knee/pelvis involvement, rechecking PMS before and after",
+        "Apply traction across the knee",
+        "Skip assessment of distal pulses",
+        "Defer all splinting and do nothing"
+      ],
+      "correct": 0,
+      "explanation": "An isolated mid-shaft femur fracture in a stable patient is the ideal indication for a traction splint. Confirm the hip, knee, and pelvis are not involved, assess distal PMS before and after, and apply only enough traction to realign and relieve pain.",
+      "clinicalPearl": "Traction splints shine for the isolated mid-shaft femur fracture—but only after you've excluded hip, knee, and pelvic involvement."
+    },
+    {
+      "id": "c15_s02",
+      "title": "Wrong Splint for the Injury",
+      "presentation": "A patient has an obviously deformed, painful knee after a fall. A trainee reaches for a traction splint to 'pull it straight.'",
+      "vitals": { "hr": "96 bpm", "bp": "130/82 mmHg", "rr": "16/min", "spo2": "98%", "skin": "warm" },
+      "question": "Why is the traction splint the wrong choice here?",
+      "options": [
+        "Traction splints are only for arms",
+        "Traction across a fractured/dislocated knee can tear the popliteal vessels—immobilize the knee in position instead",
+        "It is too slow",
+        "Knees never need immobilization"
+      ],
+      "correct": 1,
+      "explanation": "Traction splints are only for mid-shaft femur fractures. Applying traction to a knee injury can lacerate the popliteal artery. Immobilize the knee in the position found (if pulses are intact) and reassess distal PMS.",
+      "clinicalPearl": "Never apply traction across the knee—splint joint injuries in the position found when perfusion is intact."
+    },
+    {
+      "id": "c15_s03",
+      "title": "Massive Extremity Hemorrhage",
+      "presentation": "A worker's arm was caught in machinery, leaving a deep, spurting wound at the upper arm. Direct pressure has not controlled the bleeding and he is becoming pale.",
+      "vitals": { "hr": "128 bpm", "bp": "96/64 mmHg", "rr": "22/min", "spo2": "97%", "skin": "pale" },
+      "question": "What is the correct sequence of hemorrhage control?",
+      "options": [
+        "Loosely wrap gauze and transport",
+        "Apply a tourniquet 2–3 inches proximal to the wound, tighten until bleeding stops and pulse is gone, note the time",
+        "Apply a traction splint",
+        "Periodically loosen pressure to check the wound"
+      ],
+      "correct": 1,
+      "explanation": "Arterial extremity hemorrhage uncontrolled by direct pressure requires a tourniquet placed 2–3 inches proximal to the wound (not over a joint), tightened until bleeding stops and the distal pulse disappears, with the time recorded. If a tourniquet cannot control a junctional component, pack with a hemostatic dressing.",
+      "clinicalPearl": "A tourniquet works only when tight enough to abolish the distal pulse—an under-tightened tourniquet bleeds more than none at all."
+    }
+  ]
+}

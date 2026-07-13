@@ -1,0 +1,53 @@
+{
+  "chapter": "c22",
+  "cases": [
+    {
+      "id": "c22_s01",
+      "title": "Needlestick After an IV",
+      "presentation": "While starting an IV on a bleeding trauma patient of unknown history, you sustain a needlestick to your finger. The patient's infection status is unknown.",
+      "vitals": { "hr": "—", "bp": "—", "rr": "—", "spo2": "—", "skin": "small puncture, bleeding" },
+      "question": "What is the correct immediate sequence of actions?",
+      "options": [
+        "Ignore it and finish the shift",
+        "Wash the site with soap and water, report the exposure per protocol, and seek prompt evaluation including consideration of HIV PEP",
+        "Apply a tourniquet to your arm",
+        "Wait several days to see if symptoms develop"
+      ],
+      "correct": 1,
+      "explanation": "A needlestick is a true bloodborne exposure. Immediately wash the site with soap and water, report per protocol, and seek prompt evaluation. HIV post-exposure prophylaxis is time-sensitive and most effective when started as soon as possible; hepatitis B status and testing are addressed based on your vaccination status.",
+      "clinicalPearl": "Wash, report, evaluate—and remember HIV PEP works best within hours. Never sit on an exposure."
+    },
+    {
+      "id": "c22_s02",
+      "title": "Choosing the Right Precautions",
+      "presentation": "You respond to a patient with several weeks of cough, fever, night sweats, and weight loss who lives in a shelter. He is coughing frequently in the back of your ambulance.",
+      "vitals": { "hr": "98 bpm", "bp": "124/78 mmHg", "rr": "20/min", "spo2": "96%", "skin": "thin, diaphoretic" },
+      "question": "Which precautions are most appropriate?",
+      "options": [
+        "Standard precautions only",
+        "Airborne precautions—fit-tested N95 for you and a surgical mask on the patient—because of suspected tuberculosis",
+        "Contact precautions only",
+        "No precautions needed"
+      ],
+      "correct": 1,
+      "explanation": "Chronic cough with fever, night sweats, and weight loss in a high-risk setting suggests tuberculosis, which is spread by the airborne route. Don a fit-tested N95 respirator, place a surgical mask on the patient, and ventilate the patient compartment—standard precautions alone are insufficient.",
+      "clinicalPearl": "Match the precaution to the route: suspected TB means airborne precautions—N95 for you, surgical mask for the patient."
+    },
+    {
+      "id": "c22_s03",
+      "title": "Splash Risk During Active Hemorrhage",
+      "presentation": "You are managing a patient with a spurting arterial wound and active airway bleeding. There is significant potential for blood splash to your face and eyes.",
+      "vitals": { "hr": "128 bpm", "bp": "92/60 mmHg", "rr": "24/min", "spo2": "95%", "skin": "actively bleeding" },
+      "question": "What PPE level is appropriate?",
+      "options": [
+        "Gloves alone are sufficient",
+        "Gloves plus face/eye protection and a gown, because splashing of blood and OPIM is likely",
+        "No PPE is needed if you work quickly",
+        "Only a surgical mask"
+      ],
+      "correct": 1,
+      "explanation": "When splashing of blood or other potentially infectious materials is likely, standard precautions escalate to include face/eye protection and a gown in addition to gloves and hand hygiene. Active arterial and airway bleeding clearly warrant full barrier protection.",
+      "clinicalPearl": "Standard precautions scale to the risk—when blood can splash, protect your eyes, face, and body, not just your hands."
+    }
+  ]
+}

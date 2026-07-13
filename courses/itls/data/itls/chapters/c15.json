@@ -1,0 +1,71 @@
+{
+  "id": "c15",
+  "title": "Extremity Trauma Skills: Traction Splinting and Hemorrhage Control",
+  "shortTitle": "Traction & Hemorrhage Skills",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain when to use a traction splint and describe its complications.",
+    "Apply the most common traction splints (Hare, Sager, and Thomas).",
+    "Demonstrate pelvic stabilization techniques.",
+    "Explain the use of and demonstrate tourniquet application.",
+    "Explain the use of and demonstrate hemostatic agent application."
+  ],
+  "summary": [
+    {
+      "title": "Indications for Traction Splints",
+      "content": "Traction splints are designed to immobilize mid-shaft femur fractures. They realign the fracture, reduce pain, decrease blood loss into the thigh, and prevent further soft-tissue injury. They are NOT useful for fractures of the hip, knee, or lower leg, and should not be used when those areas or the pelvis are involved."
+    },
+    {
+      "title": "Contraindications and Complications",
+      "content": "Do not apply a traction splint with a suspected pelvic fracture, hip injury/dislocation, knee injury, lower-leg or ankle fracture, or partial amputation. Applying traction across a fractured or dislocated knee can tear the popliteal vessels. Complications include neurovascular compromise from excessive traction, pressure injury at the ischium/ankle hitch, and delay of a critical patient—so they are deferred in load-and-go situations."
+    },
+    {
+      "title": "Traction Splint Types",
+      "content": "The Hare and Thomas splints are unipolar/bipolar frame splints that apply traction against the ischium with an ankle hitch. The Sager splint applies traction from a single bar between the legs, can splint both legs, and is lower-profile. Always assess distal pulses, motor, and sensation before and after application, and apply only enough traction to realign and relieve pain."
+    },
+    {
+      "title": "Pelvic Stabilization",
+      "content": "For a suspected unstable pelvic fracture, apply a commercial pelvic binder (or an improvised sheet) centered over the greater trochanters to close the pelvic ring and tamponade hemorrhage. Assess the pelvis gently only once. Handle the patient minimally, use a scoop stretcher for transfer, and treat for shock with rapid transport."
+    },
+    {
+      "title": "Tourniquets and Hemostatic Agents",
+      "content": "For life-threatening extremity hemorrhage not controlled by direct pressure, apply a tourniquet 2–3 inches proximal to the wound (not over a joint), tighten until bleeding stops and the distal pulse is gone, and note the time. For junctional or deep wounds where a tourniquet cannot be placed, pack the wound with a hemostatic dressing and hold firm, direct pressure for the recommended time. Do not periodically loosen a tourniquet."
+    }
+  ],
+  "clinicalPearls": [
+    "Traction splints are for mid-shaft femur fractures only—never for hip, knee, lower-leg, or pelvic injuries.",
+    "Assess distal PMS before and after applying any splint.",
+    "Apply a tourniquet tight enough to eliminate the distal pulse, and write down the time of application.",
+    "Center a pelvic binder over the greater trochanters, not the iliac crests.",
+    "Pack hemostatic dressings directly into the bleeding source and hold sustained pressure."
+  ],
+  "redFlags": [
+    "Applying traction across a fractured/dislocated knee can lacerate the popliteal artery.",
+    "Do not use a traction splint when a pelvic fracture is suspected.",
+    "Never periodically loosen a properly applied tourniquet to 'let blood flow.'",
+    "Do not delay a critical, load-and-go patient to apply a traction splint."
+  ],
+  "commonMistakes": [
+    "Using a traction splint for a lower-leg, knee, hip, or pelvic injury.",
+    "Applying too little tourniquet pressure (venous tourniquet) that increases bleeding.",
+    "Placing a pelvic binder too high over the iliac crests instead of the trochanters.",
+    "Failing to reassess distal neurovascular status after splinting."
+  ],
+  "memoryAids": [
+    "Traction splint = femur shaft ONLY.",
+    "Tourniquet: 2–3 inches proximal, not over a joint, tighten until pulse gone, note the TIME.",
+    "Pelvic binder = greater TROCHANTERS.",
+    "Hemorrhage control ladder: Pressure → Tourniquet → Hemostatic packing."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Extremity Hemorrhage and Splinting",
+      "content": "1. Life-threatening extremity bleeding? → direct pressure → tourniquet (2–3 in proximal, note time) → hemostatic packing for junctional wounds.\n2. Isolated mid-shaft femur fracture, stable patient? → traction splint (assess PMS before/after).\n3. Hip/knee/lower-leg/pelvis involved? → do NOT use traction splint; immobilize appropriately.\n4. Suspected unstable pelvis? → pelvic binder at greater trochanters, minimal handling, scoop transfer.\n5. Critical/load-and-go patient? → package and transport; defer traction splinting."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 15: Extremity Trauma Skills.",
+    "Committee on Tactical Combat Casualty Care. Guidelines for Tourniquet and Hemostatic Use."
+  ]
+}

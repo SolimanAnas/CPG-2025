@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Early Shock, Normal Pressure",
+      "presentation": "A 30-year-old motorcyclist with a deformed thigh is anxious and restless. His skin is cool and pale, capillary refill is 3 seconds, and his pulse is rapid—but his blood pressure is 118/96.",
+      "vitals": { "hr": "124 bpm", "bp": "118/96 mmHg", "rr": "22/min", "spo2": "97%", "skin": "cool, pale" },
+      "question": "How should you interpret and act on these findings?",
+      "options": [
+        "He is stable because his blood pressure is normal — no urgency",
+        "He is in compensated (early) shock — treat aggressively and transport promptly",
+        "He has neurogenic shock — give a vasopressor",
+        "He is simply anxious — reassure and release"
+      ],
+      "correct": 1,
+      "explanation": "Tachycardia, anxiety, cool/pale skin, delayed capillary refill, and a NARROW pulse pressure (118/96) are early compensated shock. A 'normal' systolic pressure is reassuring but misleading—treat now and transport rather than waiting for hypotension.",
+      "clinicalPearl": "A narrowing pulse pressure with tachycardia is an early red flag—do not be falsely reassured by a normal systolic reading."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Uncontrolled Extremity Hemorrhage",
+      "presentation": "A construction worker has a mangled forearm with pulsatile bright-red bleeding that soaks through gauze despite firm direct pressure. He is pale and lightheaded.",
+      "vitals": { "hr": "130 bpm", "bp": "94/70 mmHg", "rr": "24/min", "spo2": "96%", "skin": "pale, diaphoretic" },
+      "question": "What is the next best action?",
+      "options": [
+        "Continue direct pressure indefinitely",
+        "Apply a tourniquet proximal to the wound and note the time",
+        "Elevate the limb and apply ice",
+        "Start a large fluid bolus before controlling bleeding"
+      ],
+      "correct": 1,
+      "explanation": "Arterial extremity hemorrhage not controlled by direct pressure requires prompt tourniquet application proximal to the wound, tightened until bleeding stops, with the time recorded. Controlling the source precedes fluid resuscitation.",
+      "clinicalPearl": "Stop the bleeding first. A tourniquet applied early is fast, effective, and life-saving for extremity hemorrhage."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Hypotension After a Diving Injury",
+      "presentation": "A young man dove into shallow water and cannot move his legs. He is hypotensive but his skin is warm and dry and his heart rate is slow. There is no external bleeding and the abdomen is soft.",
+      "vitals": { "hr": "52 bpm", "bp": "82/60 mmHg", "rr": "18/min", "spo2": "98%", "skin": "warm, dry" },
+      "question": "What is the most likely cause of his hypotension and the appropriate first consideration?",
+      "options": [
+        "Hemorrhagic shock — give a rapid 2-liter bolus and search for bleeding",
+        "Neurogenic shock from spinal cord injury — support BP per protocol while still excluding hemorrhage",
+        "Cardiac tamponade — perform pericardiocentesis",
+        "Simple fainting — no treatment needed"
+      ],
+      "correct": 1,
+      "explanation": "Hypotension with bradycardia and warm, dry skin after a cervical mechanism suggests neurogenic shock from loss of sympathetic tone. Support perfusion (judicious fluids ± vasopressor per protocol), maintain spinal motion restriction, and keep warm—while still excluding occult hemorrhage, since neurogenic shock is a diagnosis of exclusion.",
+      "clinicalPearl": "Warm, dry skin with bradycardic hypotension after a spinal mechanism suggests neurogenic shock—but always rule out bleeding first."
+    }
+  ]
+}

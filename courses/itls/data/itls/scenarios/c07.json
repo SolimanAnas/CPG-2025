@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Tactical Casualty Behind Cover",
+      "presentation": "A casualty wearing body armor was shot in the left chest. He has severe respiratory distress, cyanosis, and you cannot palpate a radial pulse. Breath sounds are absent on the left with hyperresonance. You are still in a tactical environment.",
+      "vitals": { "hr": "140 bpm", "bp": "unobtainable radial", "rr": "36/min labored", "spo2": "80%", "skin": "cyanotic" },
+      "question": "What is the best approach to decompression here?",
+      "options": [
+        "Remove the body armor to use the anterior site",
+        "Use the lateral approach (4th–5th ICS anterior axillary line) without removing armor",
+        "Apply a chest seal and wait",
+        "Start IV fluids only"
+      ],
+      "correct": 1,
+      "explanation": "This is a tension pneumothorax with shock and respiratory distress—decompression is indicated. In a tactical setting the lateral approach can be performed without removing body armor and may more reliably reach the pleural space.",
+      "clinicalPearl": "Know both approaches: the lateral site is invaluable when armor or positioning makes the anterior site impractical."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Failed First Attempt — Catheter Too Short",
+      "presentation": "You decompress a muscular 110-kg patient anteriorly with a short 3-cm catheter, but there is no air rush and no improvement. He remains in extremis with absent left breath sounds and JVD.",
+      "vitals": { "hr": "136 bpm", "bp": "84/60 mmHg", "rr": "34/min", "spo2": "82%", "skin": "dusky" },
+      "question": "What is the most likely problem and the fix?",
+      "options": [
+        "The diagnosis is wrong — stop decompression",
+        "The catheter was too short to reach the pleural space — repeat with a 6–9 cm catheter",
+        "He needs a traction splint",
+        "Give insulin for hyperglycemia"
+      ],
+      "correct": 1,
+      "explanation": "A short catheter frequently fails to reach the pleural space in muscular or obese patients. Repeat the decompression with an adequately long large-bore catheter (6–9 cm), or use the lateral approach.",
+      "clinicalPearl": "Match catheter length to chest-wall thickness—the most common reason for a 'failed' decompression is a catheter that never reached the pleura."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Re-accumulation En Route",
+      "presentation": "A blunt-trauma patient improved dramatically after needle decompression, with a returning radial pulse. Twenty minutes later en route he again becomes hypoxic and hypotensive with rising JVD and absent breath sounds on the same side.",
+      "vitals": { "hr": "128 bpm", "bp": "90/64 mmHg", "rr": "30/min", "spo2": "86%", "skin": "pale" },
+      "question": "What is the appropriate action?",
+      "options": [
+        "Assume the original device fixed it permanently",
+        "Reassess and repeat decompression for a re-accumulating tension pneumothorax",
+        "Remove the original catheter and do nothing",
+        "Hyperventilate aggressively"
+      ],
+      "correct": 1,
+      "explanation": "The catheter can kink, clot, or dislodge, allowing the tension pneumothorax to re-accumulate. Recurrent signs warrant reassessment and repeat decompression, with continued transport for definitive chest tube placement.",
+      "clinicalPearl": "Decompression is temporary—reassess frequently and be ready to decompress again if tension returns."
+    }
+  ]
+}

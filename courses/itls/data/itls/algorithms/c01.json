@@ -1,0 +1,18 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Scene Size-Up Algorithm",
+      "description": "The scene size-up is the first step in the ITLS Primary survey and involves taking standard precautions, evaluating the scene for dangers, determining the total number of patients, identifying essential equipment needed, and assessing the mechanism of injury.",
+      "steps": [
+        "Take standard precautions to prevent exposure to blood and other potentially infectious material (OPIM).",
+        "Evaluate the scene for potential hazards such as fire, toxic substances, unstable structures, low oxygen levels, or other dangers.",
+        "Determine the total number of patients present at the scene.",
+        "Identify essential equipment needed based on the type of incident and number of patients.",
+        "Assess the mechanism of injury (MOI) to predict potential injuries. Consider the direction and speed of impact, patient kinetics, and signs of energy release.",
+        "If necessary, call for additional resources or special equipment."
+      ]
+    }
+  ]
+}

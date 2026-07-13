@@ -1,0 +1,77 @@
+{
+  "id": "c16",
+  "title": "Burns",
+  "shortTitle": "Burns",
+  "estimatedStudyTime": 30,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Identify the basic anatomy and functions of the skin.",
+    "Describe types of burns by depth and estimate burn depth from appearance.",
+    "Estimate the extent of a burn using the rule of nines.",
+    "Identify complications and describe initial management of thermal, chemical, and electrical burns.",
+    "Identify signs of thermal airway/inhalation injury and carbon monoxide poisoning.",
+    "Explain how carbon monoxide causes hypoxia and describe its initial treatment.",
+    "Identify which patients require transport to a burn center."
+  ],
+  "summary": [
+    {
+      "title": "Skin Anatomy and Function",
+      "content": "The skin has two main layers: the epidermis (outer) and the dermis (deeper, containing nerves, vessels, hair follicles, and glands). It protects against infection and injury, regulates temperature and fluid balance, and provides sensation. Burns disrupt these functions, leading to fluid loss, infection risk, and impaired thermoregulation."
+    },
+    {
+      "title": "Burn Depth",
+      "content": "Superficial (first-degree) burns involve only the epidermis—red, painful, no blisters (like sunburn). Partial-thickness (second-degree) burns extend into the dermis—red, blistered, moist, very painful. Full-thickness (third-degree) burns destroy the entire dermis—dry, leathery, white/charred, and painless in the burned area because nerves are destroyed; surrounding partial-thickness areas remain painful."
+    },
+    {
+      "title": "Estimating Extent: Rule of Nines",
+      "content": "The rule of nines estimates the percentage of total body surface area (TBSA) burned in adults: head 9%, each arm 9%, anterior trunk 18%, posterior trunk 18%, each leg 18%, and genitalia 1%. The patient's palm (including fingers) is roughly 1% TBSA for scattered burns. Children have proportionally larger heads, so a modified chart or a pediatric rule is used. Only partial- and full-thickness burns are counted."
+    },
+    {
+      "title": "Airway and Inhalation Injury",
+      "content": "Suspect inhalation/thermal airway injury with facial burns, singed nasal/facial hair, soot in the mouth/nose, carbonaceous sputum, hoarseness, stridor, or a history of fire in an enclosed space. The airway can swell rapidly—secure it early, before edema makes intubation impossible. Give high-flow oxygen and monitor closely."
+    },
+    {
+      "title": "Carbon Monoxide and Cyanide",
+      "content": "Carbon monoxide binds hemoglobin with ~250 times the affinity of oxygen, forming carboxyhemoglobin and causing tissue hypoxia despite a normal (falsely reassuring) pulse oximeter reading. Treat with 100% oxygen, which speeds CO elimination. Closed-space fires can also cause cyanide toxicity. Headache, confusion, and altered mental status in a fire victim should raise suspicion."
+    },
+    {
+      "title": "Burn Management and Burn-Center Criteria",
+      "content": "Stop the burning process (remove from source, remove smoldering clothing/jewelry), ensure airway/breathing, and cover burns with clean dry dressings—avoid prolonged cooling that causes hypothermia. Provide fluid resuscitation for large burns per protocol and keep the patient warm. Chemical burns: brush off dry chemical, then irrigate copiously. Electrical burns: ensure scene safety, expect deep tissue and cardiac injury (monitor). Transport to a burn center for large/deep burns, burns of the face/hands/feet/genitalia/major joints, airway involvement, electrical/chemical burns, and burns with associated trauma or in extremes of age."
+    }
+  ],
+  "clinicalPearls": [
+    "Full-thickness burns are painless in the burned area—pain usually comes from surrounding partial-thickness burns.",
+    "Secure the airway EARLY in inhalation injury—waiting for edema can make intubation impossible.",
+    "A normal pulse oximeter reading does NOT exclude carbon monoxide poisoning—treat with 100% oxygen.",
+    "Use the rule of nines for adults and the palm (~1%) for scattered burns.",
+    "Cover burns with clean, dry dressings and keep the patient warm—avoid prolonged wet cooling."
+  ],
+  "redFlags": [
+    "Facial burns, soot, singed hairs, hoarseness, or stridor signal impending airway obstruction—act before swelling closes the airway.",
+    "Pulse oximetry reads falsely normal in CO poisoning—rely on history and treat empirically with high-flow oxygen.",
+    "Circumferential full-thickness burns can compromise breathing (chest) or circulation (limbs).",
+    "Electrical injury causes deep tissue damage and dysrhythmias far beyond visible skin burns—apply cardiac monitoring."
+  ],
+  "commonMistakes": [
+    "Underestimating airway risk and delaying intubation in inhalation injury.",
+    "Over-cooling burns and inducing hypothermia.",
+    "Trusting a normal SpO2 in a fire victim with possible CO poisoning.",
+    "Counting superficial (first-degree) burns in TBSA estimates."
+  ],
+  "memoryAids": [
+    "Rule of Nines (adult): Head 9, each Arm 9, Front trunk 18, Back trunk 18, each Leg 18, Genitals 1.",
+    "Burn depth: Superficial (red), Partial (blisters, painful), Full (leathery, painless).",
+    "Inhalation clues: Face burns, Soot, Singed hairs, Hoarseness, enclosed-Space fire.",
+    "CO poisoning → 100% oxygen (don't trust the SpO2)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Initial Burn Management",
+      "content": "1. Scene safety; stop the burning process (remove source, smoldering clothing, jewelry).\n2. Airway: signs of inhalation injury (facial burns, soot, hoarseness)? → high-flow oxygen, secure airway EARLY.\n3. Suspected CO? → 100% oxygen regardless of SpO2.\n4. Estimate depth and TBSA (rule of nines; count partial + full thickness).\n5. Cover with clean dry dressings; keep warm; fluid resuscitation for large burns per protocol.\n6. Chemical: brush off dry agent, irrigate copiously. Electrical: monitor for dysrhythmias, expect deep injury.\n7. Meets burn-center criteria? → transport to burn center."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 16: Burns.",
+    "American Burn Association. Burn Center Referral Criteria."
+  ]
+}

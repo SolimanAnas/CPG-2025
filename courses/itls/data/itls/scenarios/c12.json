@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "Order of Securing",
+      "presentation": "Your team has log-rolled an SMR-eligible patient onto a long backboard. A new provider immediately tapes the head down with blocks and is about to walk away before strapping the chest and hips.",
+      "vitals": { "hr": "88 bpm", "bp": "130/80 mmHg", "rr": "16/min", "spo2": "98%", "gcs": "15" },
+      "question": "What correction is needed?",
+      "options": [
+        "Nothing—head first is correct",
+        "Secure the torso (chest and hips) and legs first, then immobilize the head last",
+        "Remove the blocks and skip strapping",
+        "Apply a traction splint"
+      ],
+      "correct": 1,
+      "explanation": "The head must be secured last. If the head is anchored before the torso, any shift of the body loads the cervical spine. Strap the torso and legs first, then immobilize the head with blocks and tape.",
+      "clinicalPearl": "Torso before head, every time—the head should never be the anchor point of immobilization."
+    },
+    {
+      "id": "c12_s02",
+      "title": "Helmet Decision in a Motorcyclist",
+      "presentation": "A motorcyclist is down and unresponsive, still wearing a full-face helmet. You cannot access his airway, and his breathing is becoming noisy.",
+      "vitals": { "hr": "110 bpm", "bp": "124/78 mmHg", "rr": "noisy, 12/min", "spo2": "90%", "gcs": "7" },
+      "question": "What is the appropriate action regarding the helmet?",
+      "options": [
+        "Leave the helmet on and transport",
+        "Remove the helmet with two rescuers maintaining in-line stabilization to access the airway",
+        "Cut a hole in the visor only",
+        "Wait for the hospital to remove it"
+      ],
+      "correct": 1,
+      "explanation": "The helmet prevents airway access in a patient with a compromised airway (GCS 7, noisy breathing, falling SpO2)—a clear indication for removal. Two rescuers remove it together: one maintains in-line stabilization from below while the other spreads and lifts the helmet.",
+      "clinicalPearl": "Airway access trumps the helmet—when it blocks the airway, remove it with two rescuers and continuous stabilization."
+    },
+    {
+      "id": "c12_s03",
+      "title": "Comfort and Pressure on a Long Transport",
+      "presentation": "An elderly patient with a kyphotic spine and SMR criteria faces a 60-minute transport. He is alert and complains of severe back pain lying flat on the rigid board, and gaps are visible behind his head and lower back.",
+      "vitals": { "hr": "84 bpm", "bp": "150/86 mmHg", "rr": "18/min", "spo2": "97%", "gcs": "15" },
+      "question": "What is the best management?",
+      "options": [
+        "Force his spine flat against the board",
+        "Pad the voids to maintain neutral alignment and consider a vacuum mattress/padded stretcher for comfort and pressure relief",
+        "Remove all SMR",
+        "Apply additional straps tightly across the abdomen"
+      ],
+      "correct": 1,
+      "explanation": "Kyphosis creates gaps that must be padded to support neutral alignment without forcing the spine flat. For a long transport, a vacuum mattress or padded surface reduces pressure injury and pain while maintaining motion restriction.",
+      "clinicalPearl": "Pad the patient's natural curves—never force the spine flat—and choose a conforming surface for long transports."
+    }
+  ]
+}

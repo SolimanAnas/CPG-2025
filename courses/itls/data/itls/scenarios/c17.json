@@ -1,0 +1,53 @@
+{
+  "chapter": "c17",
+  "cases": [
+    {
+      "id": "c17_s01",
+      "title": "The Deceptively Stable Child",
+      "presentation": "A 5-year-old struck by a car has a tender, bruised abdomen. He is quiet and pale with a fast heart rate, but his blood pressure reads 'normal' for his age.",
+      "vitals": { "hr": "158 bpm", "bp": "92/64 mmHg", "rr": "30/min", "spo2": "97%", "skin": "pale, cool" },
+      "question": "How should you interpret his normal blood pressure?",
+      "options": [
+        "He is stable—no urgent concern",
+        "He is in compensated shock and can decompensate suddenly—treat aggressively and transport rapidly",
+        "He has neurogenic shock",
+        "Tachycardia in children is always benign"
+      ],
+      "correct": 1,
+      "explanation": "Children maintain blood pressure until a large volume is lost, then crash. Marked tachycardia with pallor and cool skin signals compensated shock from likely intra-abdominal injury. Provide oxygen, obtain IV/IO access, give a weight-based fluid bolus per protocol, keep him warm, and transport rapidly to a pediatric trauma center.",
+      "clinicalPearl": "In children, a normal blood pressure with tachycardia is a warning, not reassurance—treat before hypotension appears."
+    },
+    {
+      "id": "c17_s02",
+      "title": "Suspicious Injuries",
+      "presentation": "You are called for a 9-month-old who is 'not acting right.' The caregiver says the infant rolled off a couch, but you note bruises of differing colors on the back and a spiral arm fracture. The story keeps changing.",
+      "vitals": { "hr": "150 bpm", "bp": "—", "rr": "36/min", "spo2": "98%", "skin": "multiple bruises, varying ages" },
+      "question": "What should you do?",
+      "options": [
+        "Confront and accuse the caregiver on scene",
+        "Provide appropriate medical care, document findings objectively, transport, and report suspected abuse per mandate",
+        "Ignore the injuries since the caregiver explained them",
+        "Refuse to transport"
+      ],
+      "correct": 1,
+      "explanation": "Injuries inconsistent with the stated mechanism and developmental stage, bruises in different healing stages, a spiral fracture, and an inconsistent history are red flags for non-accidental trauma. Care for the child, document objectively without accusation, transport, and report per your mandatory-reporter obligations.",
+      "clinicalPearl": "Treat, document objectively, transport, and report—do not investigate or accuse. EMS providers are mandated reporters."
+    },
+    {
+      "id": "c17_s03",
+      "title": "Pediatric Airway Positioning",
+      "presentation": "An unresponsive toddler with a head injury is placed flat on a backboard. You notice his large head flexes his neck forward and his breathing becomes noisy and partially obstructed.",
+      "vitals": { "hr": "140 bpm", "bp": "—", "rr": "noisy 26/min", "spo2": "91%", "gcs": "8" },
+      "question": "What adjustment improves his airway and alignment?",
+      "options": [
+        "Place additional padding under his head",
+        "Pad under his torso/shoulders to bring the airway and spine into neutral alignment",
+        "Hyperextend the neck",
+        "Remove all immobilization"
+      ],
+      "correct": 1,
+      "explanation": "A toddler's large occiput flexes the neck when supine on a flat board, obstructing the airway and malaligning the spine. Padding under the torso/shoulders restores a neutral 'sniffing' position, opening the airway while maintaining SMR.",
+      "clinicalPearl": "For young children, pad under the torso—not the head—to achieve neutral airway and spinal alignment."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c18",
+  "cases": [
+    {
+      "id": "c18_s01",
+      "title": "Masked Shock on Beta-Blockers",
+      "presentation": "An 80-year-old fell down stairs and has a tender abdomen and pelvic pain. He looks pale and diaphoretic, but his heart rate is only 78 and his blood pressure is 118/76. His medication list includes metoprolol.",
+      "vitals": { "hr": "78 bpm", "bp": "118/76 mmHg", "rr": "22/min", "spo2": "96%", "skin": "pale, diaphoretic" },
+      "question": "How should you interpret these vitals?",
+      "options": [
+        "He is stable—the heart rate and pressure are normal",
+        "His beta-blocker is masking compensatory tachycardia; pallor and diaphoresis suggest shock—treat aggressively and transport",
+        "He has neurogenic shock",
+        "He needs only reassurance"
+      ],
+      "correct": 1,
+      "explanation": "Metoprolol blunts the tachycardic response, so a 'normal' heart rate is misleading. Pallor and diaphoresis with a concerning mechanism indicate shock from likely intra-abdominal/pelvic hemorrhage. Treat for shock, anticipate rapid decompensation, and transport to a trauma center.",
+      "clinicalPearl": "Don't trust the heart rate in a patient on beta-blockers or with a pacemaker—look at skin, mentation, and mechanism."
+    },
+    {
+      "id": "c18_s02",
+      "title": "Minor Bump, Major Risk",
+      "presentation": "A 76-year-old on apixaban tripped and struck her head on a doorframe. She has a small forehead hematoma, is alert, and has a normal neurologic exam. She wants to refuse transport.",
+      "vitals": { "hr": "84 bpm", "bp": "150/88 mmHg", "rr": "16/min", "spo2": "98%", "gcs": "15" },
+      "question": "What is the most appropriate guidance?",
+      "options": [
+        "Agree she is fine and clear her on scene",
+        "Explain the high risk of delayed intracranial bleeding on anticoagulants, strongly recommend transport, and monitor closely",
+        "Tell her head injuries never matter at her age",
+        "Give a fluid bolus and leave"
+      ],
+      "correct": 1,
+      "explanation": "Anticoagulants greatly increase the risk of intracranial hemorrhage, which can be delayed even after a minor mechanism with a currently normal exam. Strongly recommend transport for evaluation/observation and document the discussion if she still declines.",
+      "clinicalPearl": "A normal exam does not exclude bleeding in an anticoagulated elder—delayed intracranial hemorrhage is the danger."
+    },
+    {
+      "id": "c18_s03",
+      "title": "Immobilizing the Kyphotic Spine",
+      "presentation": "An 84-year-old with severe kyphosis needs spinal motion restriction after a fall. When laid flat on a rigid board, her head hangs well off the surface and she is in obvious distress.",
+      "vitals": { "hr": "88 bpm", "bp": "140/82 mmHg", "rr": "18/min", "spo2": "97%", "gcs": "15" },
+      "question": "What is the correct technique?",
+      "options": [
+        "Strap her head down forcibly to meet the board",
+        "Pad the voids behind the head and back to support her natural curvature in a comfortable neutral position",
+        "Skip SMR entirely",
+        "Apply heavy traction to straighten the spine"
+      ],
+      "correct": 1,
+      "explanation": "Forcing a kyphotic spine flat can cause injury and severe pain. Pad the gaps behind the head and back to maintain her baseline curvature in a comfortable, neutral position, and consider a conforming device for transport.",
+      "clinicalPearl": "Immobilize the elderly spine in its natural position—pad the curves, never force them flat."
+    }
+  ]
+}

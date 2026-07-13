@@ -1,0 +1,27 @@
+{
+  "chapter": "c10",
+  "cards": [
+    { "id": "c10_fc01", "question": "What does the Monro-Kellie Doctrine state?", "answer": "Because the skull is rigid, an increase in any intracranial component (brain, blood, or CSF—e.g., from a hematoma or swelling) must be offset by a decrease in another; once compensation is exhausted, ICP rises sharply.", "category": "Pathophysiology" },
+    { "id": "c10_fc02", "question": "What three components occupy the rigid skull?", "answer": "Brain tissue, blood, and cerebrospinal fluid (CSF).", "category": "Anatomy" },
+    { "id": "c10_fc03", "question": "Define primary brain injury.", "answer": "Damage occurring at the moment of impact (contusions, coup/contrecoup, diffuse axonal injury, lacerations)—it cannot be reversed in the field.", "category": "Injury Types" },
+    { "id": "c10_fc04", "question": "Define secondary brain injury.", "answer": "Injury that develops after the initial impact from hypoxia, hypotension, abnormal glucose, abnormal CO2, raised ICP, and edema—largely preventable with good prehospital care.", "category": "Injury Types" },
+    { "id": "c10_fc05", "question": "What are the major causes of secondary brain injury?", "answer": "Hypoxia, hypotension, hypo/hyperglycemia, hyper/hypocapnia, increased intracranial pressure, and cerebral edema.", "category": "Injury Types" },
+    { "id": "c10_fc06", "question": "What is the formula for cerebral perfusion pressure (CPP)?", "answer": "CPP = Mean Arterial Pressure (MAP) − Intracranial Pressure (ICP).", "category": "Physiology" },
+    { "id": "c10_fc07", "question": "Why are hypoxia and hypotension so dangerous in TBI?", "answer": "They are the leading causes of preventable secondary brain injury; even a single episode of hypotension can dramatically increase mortality.", "category": "Management" },
+    { "id": "c10_fc08", "question": "What is Cushing's reflex (triad)?", "answer": "Hypertension, bradycardia, and irregular respirations—a late sign of dangerously elevated intracranial pressure.", "category": "ICP" },
+    { "id": "c10_fc09", "question": "What is the difference between coup and contrecoup injury?", "answer": "Coup injury occurs at the site of impact; contrecoup injury occurs on the opposite side as the brain rebounds within the skull.", "category": "Injury Types" },
+    { "id": "c10_fc10", "question": "What are the three components scored by the Glasgow Coma Scale?", "answer": "Eye opening (max 4), Verbal response (max 5), and Motor response (max 6), for a maximum of 15.", "category": "Assessment" },
+    { "id": "c10_fc11", "question": "What GCS indicates severe TBI and inability to protect the airway?", "answer": "A GCS of 8 or less.", "category": "Assessment" },
+    { "id": "c10_fc12", "question": "What are the signs of cerebral herniation syndrome?", "answer": "Decreasing GCS (often <8), a dilated/unequal or fixed pupil, abnormal (extensor) posturing, and Cushing's signs.", "category": "Herniation" },
+    { "id": "c10_fc13", "question": "When is hyperventilation appropriate in TBI, and to what target?", "answer": "Only when there are signs of active cerebral herniation; use controlled mild hyperventilation targeting an ETCO2 of about 30–35 mmHg.", "category": "Herniation" },
+    { "id": "c10_fc14", "question": "What is the normal ETCO2 target for a head-injured patient WITHOUT herniation?", "answer": "Normal ventilation to an ETCO2 of about 35–45 mmHg—avoid both hyper- and hypoventilation.", "category": "Management" },
+    { "id": "c10_fc15", "question": "What blood pressure goal helps protect the injured brain?", "answer": "Avoid hypotension; maintain systolic blood pressure (commonly ≥ 110–120 mmHg) to preserve cerebral perfusion.", "category": "Management" },
+    { "id": "c10_fc16", "question": "What oxygen saturation should be maintained in TBI?", "answer": "At least 94%; avoid hypoxia, which worsens secondary injury.", "category": "Management" },
+    { "id": "c10_fc17", "question": "What signs suggest a basilar skull fracture?", "answer": "Raccoon eyes (periorbital bruising), Battle's sign (mastoid bruising), and CSF or blood draining from the ears or nose.", "category": "Assessment" },
+    { "id": "c10_fc18", "question": "Why check and correct blood glucose in head injury?", "answer": "Both hypoglycemia and hyperglycemia worsen brain injury; glucose should be measured and abnormal values corrected.", "category": "Management" },
+    { "id": "c10_fc19", "question": "What is the no-reflow phenomenon?", "answer": "Failure of microcirculatory blood flow to the brain after severe injury despite restored perfusion pressure, contributing to ischemia.", "category": "Pathophysiology" },
+    { "id": "c10_fc20", "question": "What head positioning may help reduce ICP if not contraindicated?", "answer": "Elevating the head of the bed/board about 30 degrees and keeping the head midline to promote venous drainage.", "category": "Management" },
+    { "id": "c10_fc21", "question": "Why must the GCS and pupils be reassessed frequently?", "answer": "A declining GCS or a newly dilated pupil signals an expanding lesion or herniation requiring immediate action.", "category": "Assessment" },
+    { "id": "c10_fc22", "question": "Why is it a mistake to attribute hypotension to an isolated head injury?", "answer": "Isolated brain injury rarely causes hypotension (except as a terminal event); hypotension usually means hemorrhage elsewhere that must be found and treated.", "category": "Pitfalls" }
+  ]
+}

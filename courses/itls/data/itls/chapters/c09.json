@@ -1,0 +1,71 @@
+{
+  "id": "c09",
+  "title": "Vascular Access Skills: IV and Intraosseous Access",
+  "shortTitle": "Vascular Access",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Perform cannulation of the external jugular vein.",
+    "Recite indications for intraosseous (IO) infusion.",
+    "Perform IO infusion using a drill device at tibial and humeral sites.",
+    "Perform sternal IO infusion using an approved sternal device.",
+    "Use length-based resuscitation tape to estimate a child's weight."
+  ],
+  "summary": [
+    {
+      "title": "When and Why to Obtain Access",
+      "content": "Vascular access allows fluid resuscitation and medication delivery, but in trauma it should rarely delay transport—start IVs en route whenever possible. Providers are expected to already be proficient at peripheral IVs of the forearm and antecubital fossa; this chapter focuses on alternatives when peripheral access fails: the external jugular vein and intraosseous routes."
+    },
+    {
+      "title": "External Jugular (EJ) Cannulation",
+      "content": "The external jugular vein runs from the angle of the jaw to the junction of the medial and middle third of the clavicle and is usually visible through the skin. Pressing just above the clavicle distends it. It is indicated for the adult or pediatric patient who needs IV access when no suitable peripheral vein is found. Position the patient supine, head turned away, and cannulate toward the clavicle/shoulder."
+    },
+    {
+      "title": "Intraosseous (IO) Access",
+      "content": "IO infusion delivers fluids and drugs into the marrow cavity, providing rapid access when peripheral and EJ access fail or in critical patients who need immediate access. Drill devices place catheters in the proximal tibia or proximal humerus; sternal devices use the manubrium. The marrow acts as a non-collapsible vein with rapid central circulation."
+    },
+    {
+      "title": "IO Sites and Technique",
+      "content": "Common drill sites are the proximal tibia (flat medial surface below the tuberosity) and the proximal humerus (greater tubercle, arm adducted). Confirm placement by needle stability, marrow aspiration, and free flow without extravasation. IO infusion is painful in conscious patients—consider lidocaine through the IO per protocol before flushing. Flush briskly to open the marrow channel."
+    },
+    {
+      "title": "Pediatric Weight Estimation",
+      "content": "A length-based resuscitation tape (e.g., Broselow) estimates a child's weight from length and provides corresponding drug doses, fluid volumes, and equipment sizes. This reduces dosing errors in the high-stress pediatric resuscitation. Measure the child from head to heel and read the corresponding color zone."
+    }
+  ],
+  "clinicalPearls": [
+    "In trauma, establish IV access en route—do not delay transport of a critical patient to start a line.",
+    "Distend the external jugular by pressing just above the clavicle, and cannulate pointing toward the shoulder.",
+    "IO access is fast and reliable when peripheral veins collapse in shock.",
+    "Give IO lidocaine (per protocol) before flushing in a conscious patient—IO infusion is painful.",
+    "Use a length-based tape to estimate pediatric weight and reduce dosing errors."
+  ],
+  "redFlags": [
+    "Avoid IO placement in a bone that is fractured or has had a recent IO attempt (fluid will extravasate).",
+    "Avoid IO at sites with overlying infection or in bones with known osteoporosis-related fragility where appropriate.",
+    "Air embolism and infiltration are risks of EJ cannulation—watch the site and secure the line.",
+    "Never let vascular access attempts delay surgical transport for uncontrolled internal hemorrhage."
+  ],
+  "commonMistakes": [
+    "Spending excessive on-scene time attempting access on a load-and-go patient.",
+    "Failing to confirm IO placement before infusing, causing extravasation into soft tissue.",
+    "Not flushing the IO briskly, resulting in poor flow.",
+    "Using adult drug doses for children instead of a length-based tape estimate."
+  ],
+  "memoryAids": [
+    "Access priority when peripheral fails: External Jugular → Intraosseous.",
+    "IO drill sites: proximal Tibia and proximal Humerus; sternal device on the manubrium.",
+    "Confirm IO: stands upright, aspirate marrow, flows freely without swelling.",
+    "Length-based tape = weight + doses + equipment sizes for kids."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Vascular Access Algorithm",
+      "content": "1. Need access? Attempt peripheral IV (forearm/antecubital) — preferably en route.\n2. No peripheral vein found → external jugular cannulation.\n3. Critical patient or EJ unavailable/failed → intraosseous (proximal tibia/humerus, or sternal device).\n4. Confirm IO placement (stability, aspiration, free flow); give IO lidocaine if conscious; flush.\n5. Pediatric patient → use length-based tape for weight, doses, and equipment sizes."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 9: Vascular Access Skills.",
+    "Seitz, S.R., and K. Han. Prehospital Vascular Access Techniques."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "c14",
+  "title": "Extremity Trauma",
+  "shortTitle": "Extremity Trauma",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Prioritize extremity trauma within the assessment and management of life-threatening injuries.",
+    "Discuss the complications and treatment of amputations, crush injuries, dislocations, fractures, impaled objects, neurovascular injuries, open wounds, and sprains/strains.",
+    "Discuss the pathophysiology of compartment syndrome and which injuries most often cause it.",
+    "Describe the potential blood loss from pelvic and femur fractures.",
+    "Discuss mechanisms, associated injuries, complications, and management of injuries to the major bones and joints."
+  ],
+  "summary": [
+    {
+      "title": "Priorities: Life Before Limb",
+      "content": "Extremity injuries are dramatic but rarely immediately life-threatening except when they bleed massively or accompany other injuries. Address airway, breathing, circulation, and major hemorrhage first. Only life-threatening extremity hemorrhage is managed during the Primary Survey (direct pressure, tourniquet); definitive splinting is done after life threats are controlled or en route for critical patients."
+    },
+    {
+      "title": "Fractures, Dislocations, and Open Wounds",
+      "content": "A closed fracture has intact overlying skin; an open fracture has a wound communicating with the bone (higher infection risk—cover with sterile dressing). Joint dislocations threaten the neurovascular structures crossing the joint. Assess and document distal pulses, motor function, and sensation (PMS) before and after any splinting or movement. Splint to immobilize the joint above and below the injury."
+    },
+    {
+      "title": "Blood Loss From Major Fractures",
+      "content": "Long-bone and pelvic fractures can cause significant internal blood loss: a closed femur fracture can lose roughly 1 to 1.5 liters, and an unstable pelvic fracture can lose enough to cause exsanguinating hemorrhage. Bilateral femur fractures or an unstable pelvis should make you anticipate and treat for shock."
+    },
+    {
+      "title": "Amputations and Crush Injuries",
+      "content": "Control bleeding from amputations with direct pressure and a tourniquet if needed. Preserve the amputated part: wrap in moist sterile gauze, seal in a bag, and keep cool (on ice but not frozen or directly on ice). Crush injuries can cause rhabdomyolysis and, on release of prolonged compression, crush syndrome with hyperkalemia and renal failure—coordinate fluid resuscitation with medical direction."
+    },
+    {
+      "title": "Compartment Syndrome and Neurovascular Injury",
+      "content": "Compartment syndrome is rising pressure within a closed muscle compartment (often the lower leg or forearm after fractures or crush) that compromises perfusion. The hallmark is pain out of proportion to injury, worsened by passive stretch, with later paresthesia, pallor, pulselessness, and paralysis (the 'P's'). It is a surgical emergency—recognize early and transport. Always reassess distal neurovascular status after splinting; a splint too tight can cause it."
+    },
+    {
+      "title": "Splinting Principles and Special Injuries",
+      "content": "Realign grossly angulated long-bone fractures with gentle traction to restore distal circulation if there is no pulse, then splint; immobilize dislocations in the position found if pulses are intact. Stabilize impaled objects in place. Cover open wounds with sterile dressings. For most critical patients, rapid packaging and transport take priority over meticulous splinting—do not delay a load-and-go patient to apply a traction splint."
+    }
+  ],
+  "clinicalPearls": [
+    "Life before limb—manage ABCs and major hemorrhage before splinting.",
+    "Always check and document distal pulses, motor, and sensation (PMS) before and after splinting.",
+    "A closed femur fracture can lose 1–1.5 liters of blood; anticipate shock with bilateral femur or pelvic fractures.",
+    "Pain out of proportion to injury, worsened by passive stretch, is the earliest sign of compartment syndrome.",
+    "Preserve amputated parts moist, bagged, and cool—not frozen and not directly on ice."
+  ],
+  "redFlags": [
+    "An absent distal pulse after a fracture/dislocation requires prompt realignment and rapid transport—limb-threatening ischemia.",
+    "Pulselessness and paralysis are LATE signs of compartment syndrome—act on early pain before they appear.",
+    "Release of a prolonged crush can precipitate crush syndrome (hyperkalemia, dysrhythmias)—coordinate with medical direction.",
+    "Do not apply time-consuming traction splints to critical, load-and-go patients."
+  ],
+  "commonMistakes": [
+    "Becoming distracted by a dramatic extremity injury and missing life threats.",
+    "Failing to reassess distal PMS after splinting (a too-tight splint can cause ischemia).",
+    "Freezing or placing an amputated part directly on ice, causing tissue damage.",
+    "Forcing a dislocation with intact pulses into alignment rather than splinting as found."
+  ],
+  "memoryAids": [
+    "The 6 P's of compartment syndrome / ischemia: Pain, Paresthesia, Pallor, Pulselessness, Paralysis, Poikilothermia (cool).",
+    "Check PMS (Pulses, Motor, Sensation) before AND after splinting.",
+    "Femur fracture ≈ 1–1.5 L blood loss.",
+    "Amputated part: Moist sterile gauze → sealed bag → cool (not frozen)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Extremity Injury Management",
+      "content": "1. Manage ABCs and control life-threatening hemorrhage (pressure → tourniquet) first.\n2. Assess distal PMS.\n3. Open wound → cover with sterile dressing. Impaled object → stabilize in place.\n4. Angulated long bone with absent distal pulse → gentle traction realignment, then splint; recheck pulse.\n5. Dislocation with intact pulse → splint in position found.\n6. Splint joint above and below; reassess PMS after splinting.\n7. Suspect compartment syndrome (pain out of proportion) or crush syndrome → rapid transport, notify destination.\n8. Critical patient → package and transport; defer time-consuming splints."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 14: Extremity Trauma.",
+    "Braithwaite, S., and S.R. Seitz. Prehospital Management of Extremity Injuries."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "No Veins in a Crashing Patient",
+      "presentation": "A 55-year-old with severe internal bleeding is profoundly hypotensive. After two failed peripheral attempts and a failed external jugular attempt, he urgently needs access for fluids.",
+      "vitals": { "hr": "138 bpm", "bp": "70/40 mmHg", "rr": "26/min", "spo2": "93%", "skin": "cold, mottled" },
+      "question": "What is the best next step for access?",
+      "options": [
+        "Keep attempting peripheral IVs on scene",
+        "Place an intraosseous line (proximal tibia or humerus)",
+        "Delay all access until the hospital",
+        "Give oral fluids"
+      ],
+      "correct": 1,
+      "explanation": "Peripheral veins collapse in profound shock. After failed peripheral and EJ attempts, intraosseous access provides rapid, reliable delivery via the non-collapsible marrow. Obtain it en route—do not delay transport.",
+      "clinicalPearl": "When veins collapse in shock, go to the bone early—IO is fast and dependable, and the marrow stays patent."
+    },
+    {
+      "id": "c09_s02",
+      "title": "Painful IO in an Awake Patient",
+      "presentation": "You successfully place a proximal tibial IO in an awake, talking trauma patient. As you begin to flush saline, he cries out in severe pain at the site.",
+      "vitals": { "hr": "120 bpm", "bp": "96/62 mmHg", "rr": "22/min", "spo2": "96%", "skin": "pale" },
+      "question": "What is the appropriate management?",
+      "options": [
+        "Remove the IO immediately—it must be misplaced",
+        "Administer slow IO lidocaine per protocol before continuing the flush",
+        "Flush faster to get it over with",
+        "Stop all fluids permanently"
+      ],
+      "correct": 1,
+      "explanation": "IO infusion is intensely painful in conscious patients because of pressure in the marrow. Provided placement is confirmed (stable needle, free flow, no swelling), give slow IO lidocaine per protocol before flushing and infusing.",
+      "clinicalPearl": "Pain on flushing a confirmed IO is expected—pretreat the awake patient with slow IO lidocaine, not removal."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Sizing a Pediatric Trauma Patient",
+      "presentation": "A 4-year-old was struck by a car and is unresponsive. The team needs medication doses, fluid volumes, and equipment sizes quickly, and no reliable weight is available.",
+      "vitals": { "hr": "150 bpm", "bp": "80/50 mmHg", "rr": "30/min", "spo2": "94%", "skin": "pale" },
+      "question": "What tool best supports rapid, accurate dosing?",
+      "options": [
+        "Guess the weight from age alone",
+        "Use a length-based resuscitation tape measured head to heel",
+        "Use adult doses",
+        "Wait for a scale at the hospital"
+      ],
+      "correct": 1,
+      "explanation": "A length-based resuscitation tape estimates the child's weight from length and provides corresponding drug doses, fluid volumes, and equipment sizes—reducing the dosing errors common in pediatric resuscitation.",
+      "clinicalPearl": "In pediatric emergencies, the length-based tape replaces guesswork—measure head to heel and read the color zone."
+    }
+  ]
+}

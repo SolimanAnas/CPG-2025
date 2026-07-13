@@ -1,0 +1,21 @@
+{
+  "chapter": "c07",
+  "cards": [
+    { "id": "c07_fc01", "question": "What does needle chest decompression accomplish?", "answer": "It releases trapped pleural air, converting a life-threatening tension pneumothorax into a simple pneumothorax and restoring venous return and cardiac output.", "category": "Purpose" },
+    { "id": "c07_fc02", "question": "Is needle decompression definitive treatment?", "answer": "No—it is a temporizing measure. Definitive treatment is a chest tube (tube thoracostomy) at the hospital.", "category": "Purpose" },
+    { "id": "c07_fc03", "question": "What are the indications for emergency chest decompression?", "answer": "Signs of tension pneumothorax PLUS more than one of: respiratory distress and cyanosis, loss of radial pulse (shock), loss of consciousness, or obviously decreasing LOC.", "category": "Indications" },
+    { "id": "c07_fc04", "question": "Where is the anterior decompression site?", "answer": "The second or third intercostal space at the midclavicular line.", "category": "Anterior Approach" },
+    { "id": "c07_fc05", "question": "Where is the lateral decompression site?", "answer": "The fourth or fifth intercostal space at the anterior axillary line (some courses use the third intercostal space laterally).", "category": "Lateral Approach" },
+    { "id": "c07_fc06", "question": "Why insert the needle just over the top of the rib?", "answer": "The intercostal nerve, artery, and vein run along the underside (inferior margin) of each rib; going over the top avoids injuring them.", "category": "Technique" },
+    { "id": "c07_fc07", "question": "What catheter length and gauge are recommended for the anterior approach?", "answer": "A large-bore catheter about 14 gauge (8 French) and 6 to 9 cm (2.5 to 3.5 inches) long to reach the pleural space.", "category": "Equipment" },
+    { "id": "c07_fc08", "question": "Why is catheter length important?", "answer": "Chest-wall thickness varies; a too-short catheter may not reach the pleural space, causing a failed decompression—common with shorter anterior catheters.", "category": "Equipment" },
+    { "id": "c07_fc09", "question": "What confirms a successful needle decompression?", "answer": "An audible rush of air on insertion and rapid clinical improvement (better breathing, return of radial pulse, improved LOC).", "category": "Confirmation" },
+    { "id": "c07_fc10", "question": "Why is the lateral approach favored in tactical settings?", "answer": "It can be performed without removing body armor and may more reliably enter the pleural space.", "category": "Lateral Approach" },
+    { "id": "c07_fc11", "question": "What is a theoretical advantage of the third intercostal lateral site?", "answer": "Less risk of injuring solid organs (liver, spleen) than a lower site, and potentially faster access in combat.", "category": "Lateral Approach" },
+    { "id": "c07_fc12", "question": "Will needle decompression help a massive hemothorax?", "answer": "No—decompression releases air, not blood. A hemothorax requires shock management and rapid transport for surgical care.", "category": "Pitfalls" },
+    { "id": "c07_fc13", "question": "What should you do after a successful decompression?", "answer": "Secure the catheter, reassess frequently, and be prepared to repeat decompression if the pneumothorax re-accumulates.", "category": "Aftercare" },
+    { "id": "c07_fc14", "question": "How can ultrasound assist with this procedure?", "answer": "Prehospital ultrasound can confirm the presence of a pneumothorax before decompression, improving accuracy.", "category": "Adjuncts" },
+    { "id": "c07_fc15", "question": "What are common complications of needle decompression?", "answer": "Failure to reach the pleural space (too-short catheter), neurovascular injury (inserting below the rib), catheter kinking/clotting/dislodgement, and creating a pneumothorax if one was not present.", "category": "Complications" },
+    { "id": "c07_fc16", "question": "Are the indications for decompression different in tactical versus civilian care?", "answer": "No—the indications are the same regardless of the environment.", "category": "Indications" }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "Pedestrian Hit by Car with Suspected Spinal Injury",
+      "presentation": "A pedestrian was struck by a car in the middle of a road. Fire service has contained hazards, and the scene is safe to enter. The patient is unresponsive and lying on their back. You approach the scene and find that the patient has a large hematoma over the right eye and a contusion at the front of the neck. There are no obvious open wounds or penetrating injuries.",
+      "vitals": {
+        "hr": "105 bpm",
+        "bp": "98/62 mmHg",
+        "rr": "24 bpm",
+        "spo2": "96%",
+        "temp": "98.3 F"
+      },
+      "question": "What is the most appropriate next action?",
+      "options": [
+        "A: Perform a rapid trauma survey.",
+        "B: Apply a cervical collar and begin an ongoing assessment.",
+        "C: Transport immediately to the hospital.",
+        "D: Check for signs of internal bleeding."
+      ],
+      "correct": 1,
+      "explanation": "Given that the patient is unresponsive, has a large hematoma over the right eye, and a contusion at the front of the neck, which could indicate spinal injury, the most appropriate next action is to apply a cervical collar and begin an ongoing assessment. This ensures proper immobilization while assessing for any changes in condition.",
+      "clinicalPearl": "Always prioritize spinal immobilization when there are signs of potential spinal injury."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Multiple Casualties from a Vehicle Collision",
+      "presentation": "You arrive at the scene of a vehicle collision with multiple casualties. The fire service has contained hazards, and the scene is safe to enter. You identify two patients: one patient is lying on their back with no obvious external injuries but is unresponsive; the other patient is conscious and complaining of chest pain.",
+      "vitals": {
+        "hr": "120 bpm",
+        "bp": "85/60 mmHg",
+        "rr": "30 bpm",
+        "spo2": "94%",
+        "temp": "97.8 F"
+      },
+      "question": "What is the most appropriate initial action?",
+      "options": [
+        "A: Perform a rapid trauma survey on both patients.",
+        "B: Prioritize the patient with chest pain and perform an ongoing assessment.",
+        "C: Transport the unresponsive patient immediately to the hospital.",
+        "D: Apply a cervical collar to the conscious patient."
+      ],
+      "correct": 0,
+      "explanation": "The most appropriate initial action is to prioritize the patient who is unresponsive, as they are at higher risk for life-threatening conditions. Perform an initial assessment on this patient first before moving on to the other.",
+      "clinicalPearl": "In multiple casualty situations, prioritize patients based on their level of consciousness and potential for immediate life-threatening injuries."
+    },
+    {
+      "id": "c02_s03",
+      "title": "Patient with Suspected Internal Bleeding from a Fall",
+      "presentation": "You are called to the scene of a fall from a height. The patient is lying on their back and appears pale, with cold extremities. There is no obvious external bleeding, but the patient is unresponsive.",
+      "vitals": {
+        "hr": "130 bpm",
+        "bp": "78/52 mmHg",
+        "rr": "26 bpm",
+        "spo2": "92%",
+        "temp": "97.4 F"
+      },
+      "question": "What is the most appropriate next step?",
+      "options": [
+        "A: Perform a rapid trauma survey.",
+        "B: Apply a cervical collar and begin an ongoing assessment.",
+        "C: Transport immediately to the hospital.",
+        "D: Check for signs of internal bleeding."
+      ],
+      "correct": 3,
+      "explanation": "Given the patient's pale appearance, cold extremities, unresponsiveness, and history of a fall from height, it is most appropriate to check for signs of internal bleeding. This can be done during an ongoing assessment while ensuring spinal immobilization.",
+      "clinicalPearl": "In cases with potential internal bleeding, always perform a thorough ongoing assessment to monitor for changes in condition."
+    }
+  ]
+}

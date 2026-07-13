@@ -1,0 +1,74 @@
+{
+  "id": "c12",
+  "title": "Spine Management Skills",
+  "shortTitle": "Spine Management Skills",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the essential components of a spinal motion-restriction (SMR) system.",
+    "Describe the goals and principles of SMR and explain when to use it.",
+    "Explain when to perform an Emergency Rescue and a rapid extrication.",
+    "Perform SMR with a short extrication device and log roll a patient onto a long backboard.",
+    "Properly secure a patient to a long backboard and transfer using a scoop stretcher.",
+    "Stabilize the head and neck when neutral position cannot be safely attained.",
+    "Perform a rapid extrication.",
+    "Explain when helmets should and should not be removed and remove a motorcycle helmet properly."
+  ],
+  "summary": [
+    {
+      "title": "Components of an SMR System",
+      "content": "Effective SMR uses a combination of devices and techniques: manual in-line stabilization, a properly sized rigid cervical collar, and a full-body device (long backboard, scoop stretcher, or vacuum mattress) with straps and head blocks. The long backboard is primarily an extrication and transfer tool; patients can often be transported on a padded stretcher with the collar and straps rather than left on a rigid board."
+    },
+    {
+      "title": "Goals and Principles",
+      "content": "The goals are to maintain neutral in-line alignment, limit harmful movement of a potentially unstable spine, and do so without causing pressure injury, pain, or airway compromise. Maintain manual stabilization from first contact until the patient is fully secured. Secure the torso before the head so the head is never the anchor point."
+    },
+    {
+      "title": "Log Roll and Securing to a Board",
+      "content": "Log rolling moves the patient as a unit while a leader maintains head/neck alignment and gives commands. Use the roll to inspect the posterior (DCAP-BLS, TIC) and slide the board. Secure the torso (chest, hips), then the legs, and finally immobilize the head with blocks/tape—never strap the head first. Reassess distal pulses, motor, and sensation before and after."
+    },
+    {
+      "title": "Short Devices, Scoop, and Vacuum Mattress",
+      "content": "A short extrication device (vest-type) provides SMR to a seated, stable patient before extrication. The scoop stretcher splits to slide under the patient with minimal movement and is excellent for transfers. A vacuum mattress conforms to the body, distributes pressure, and is comfortable for prolonged transport while maintaining alignment."
+    },
+    {
+      "title": "Emergency Rescue, Rapid Extrication, and Helmets",
+      "content": "Emergency Rescue removes a patient from immediate danger (life over spine). Rapid extrication uses manual stabilization to quickly move a critical patient or one in an unstable scene. Remove a helmet if it prevents airway access or assessment, does not fit snugly (allowing head movement), or interferes with immobilization—remove it with two rescuers maintaining alignment. Leave a well-fitting helmet in place if the airway is accessible and the head is held securely, padding as needed."
+    }
+  ],
+  "clinicalPearls": [
+    "Secure the torso before the head—the head should never be the anchor point of immobilization.",
+    "Maintain manual in-line stabilization from first contact until the patient is fully secured.",
+    "Use the log roll to inspect and palpate the posterior (DCAP-BLS, TIC).",
+    "Reassess distal PMS (pulses, motor, sensation) before and after moving the patient.",
+    "Two rescuers remove a helmet together—one maintains alignment while the other spreads and removes it."
+  ],
+  "redFlags": [
+    "Strapping the head before the torso allows torso shift that loads the neck—always torso first.",
+    "Do not force neutral alignment if it causes pain or new neuro symptoms—stabilize as found.",
+    "Leaving a patient on a rigid backboard for prolonged transport risks pressure injury and respiratory compromise.",
+    "Removing a helmet by a single rescuer risks dangerous head/neck movement."
+  ],
+  "commonMistakes": [
+    "Immobilizing the head first, then the body.",
+    "Using a long backboard as the transport surface rather than transferring to a padded stretcher/vacuum mattress.",
+    "Failing to recheck distal neurovascular status after packaging.",
+    "Improper collar sizing leading to flexion or extension."
+  ],
+  "memoryAids": [
+    "Order of securing: Torso → Hips/Legs → Head (last).",
+    "Helmet removal indications: Airway access, poor fit, interferes with immobilization.",
+    "Log roll = move as a unit, leader at the head gives commands.",
+    "Devices: collar + manual stabilization + full-body device (board/scoop/vacuum) + straps + head blocks."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Packaging the Spine-Injured Patient",
+      "content": "1. Manual in-line stabilization + sized cervical collar.\n2. Choose device: short device (seated stable) / rapid extrication (critical/unstable) / Emergency Rescue (immediate danger).\n3. Log roll as a unit → inspect posterior → place board/scoop.\n4. Secure torso → hips/legs → head blocks/tape LAST.\n5. Reassess distal pulses, motor, sensation.\n6. Consider transfer to padded stretcher or vacuum mattress for transport.\n7. Helmet: remove if it blocks airway/assessment, fits poorly, or impairs immobilization (two rescuers)."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 12: Spine Management Skills.",
+    "Seitz, S.R., and D.L. Copeland. Spinal Motion Restriction Techniques."
+  ]
+}

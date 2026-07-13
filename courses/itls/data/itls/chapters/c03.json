@@ -1,0 +1,76 @@
+{
+  "id": "c03",
+  "title": "ITLS Primary and Secondary Survey: Assessment Skills",
+  "shortTitle": "Assessment Skills",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Correctly perform the ITLS Primary Survey and identify within two minutes which patients require load-and-go.",
+    "Describe when to perform critical interventions during the survey.",
+    "Correctly perform the ITLS Ongoing (reassessment) Exam.",
+    "Correctly perform the ITLS Secondary Survey.",
+    "Demonstrate proper communication with medical direction.",
+    "Demonstrate the proper sequence of rapid assessment and management of the multiple-trauma patient."
+  ],
+  "summary": [
+    {
+      "title": "Structure of the ITLS Primary Survey",
+      "content": "The ITLS Primary Survey is a rapid, prioritized assessment built from the scene size-up, the initial assessment (general impression, level of consciousness, airway, breathing, circulation), and either a rapid trauma survey (for generalized/unknown mechanism) or a focused exam (for localized mechanism). Its purpose is to find and treat immediate threats to life and to identify load-and-go patients within about two minutes of patient contact."
+    },
+    {
+      "title": "Initial Assessment and CABC",
+      "content": "After forming a general impression, address obvious life-threatening external bleeding immediately (the C in C-A-B-C), then assess level of consciousness using AVPU. Evaluate the airway for snoring, gurgling, stridor, or silence; assess breathing for presence, rate, depth, and effort; and assess circulation by checking radial and carotid pulses, skin color/temperature/moisture, and capillary refill. Fix airway and breathing problems the moment you find them."
+    },
+    {
+      "title": "Rapid Trauma Survey vs. Focused Exam",
+      "content": "When the mechanism is generalized or unknown, perform a head-to-toe rapid trauma survey (head/neck, chest, abdomen, pelvis, extremities, posterior). When the mechanism is localized (for example an isolated extremity injury), perform a focused exam of the injured area. The decision between the two is driven by the mechanism of injury and findings in the initial assessment."
+    },
+    {
+      "title": "Load-and-Go Decision",
+      "content": "At the end of the ITLS Primary Survey, decide whether the patient is critical (load-and-go) or stable. Critical trauma situations demand immediate transport, with only essential critical interventions performed on scene. Every procedure done on scene trades minutes of the patient's Golden Period, so judgment is essential."
+    },
+    {
+      "title": "ITLS Ongoing Exam (Reassessment)",
+      "content": "The Ongoing Exam reassesses subjective changes, mental status and pupils, the ABCs, the neck and chest, the abdomen, identified injuries, all interventions (tube position, oxygen, IVs, dressings, decompression needle, splints), and monitors. Repeat it whenever the patient's condition changes, after any intervention, and after any move (scene to ambulance, ambulance to ED)."
+    },
+    {
+      "title": "ITLS Secondary Survey",
+      "content": "The Secondary Survey is a detailed head-to-toe exam (DCAP-BLS and TIC) performed after life threats are managed. Quickly repeat the initial assessment, complete the SAMPLE history and vital signs, calculate the Glasgow Coma Scale for altered patients, and examine head, neck, chest, abdomen, pelvis, and extremities for distal pulses/motor/sensation. Critical patients receive it en route only if time permits; stable patients may receive it on scene."
+    }
+  ],
+  "clinicalPearls": [
+    "Do not approach the patient until the scene size-up is complete.",
+    "Give ventilation instructions as soon as you assess airway and breathing—do not wait until the survey is finished.",
+    "Use DCAP-BLS (Deformities, Contusions, Abrasions, Punctures/Penetrations, Burns, Lacerations, Swelling) and TIC (Tenderness, Instability, Crepitation) as your inspection/palpation checklist.",
+    "Repeat the Ongoing Exam after every intervention, every condition change, and every patient move.",
+    "Communicate early with medical direction and the receiving facility when you have a critical patient."
+  ],
+  "redFlags": [
+    "Do not interrupt the ITLS Primary Survey except for immediate threats to life—airway obstruction, cardiac arrest, severe hemorrhage—or if the scene becomes unsafe.",
+    "Prophylactic hyperventilation is not recommended; reserve it for head-injured patients showing signs of cerebral herniation.",
+    "Unequal or fixed/dilated pupils with a GCS of 8 or less suggest cerebral herniation.",
+    "Critical patients should not have traction splints applied on scene—they take too long."
+  ],
+  "commonMistakes": [
+    "Spending too long on scene performing non-essential interventions on a load-and-go patient.",
+    "Failing to reassess interventions (tube, IV, dressings, decompression needle) during the Ongoing Exam.",
+    "Skipping the posterior exam, which is done during the log roll onto or off the backboard.",
+    "Forgetting to obtain a blood glucose level on any patient with a decreased level of consciousness."
+  ],
+  "memoryAids": [
+    "C-A-B-C: control Catastrophic bleeding first, then Airway, Breathing, Circulation.",
+    "AVPU: Alert, responds to Voice, responds to Pain, Unresponsive.",
+    "DCAP-BLS + TIC for the detailed exam of each body region.",
+    "SAMPLE: Symptoms, Allergies, Medications, Past history, Last oral intake, Events leading up."
+  ],
+  "decisionTrees": [
+    {
+      "title": "ITLS Patient Assessment Flow",
+      "content": "1. Scene Size-Up → standard precautions, hazards, # patients, resources, mechanism of injury.\n2. Initial Assessment → general impression, control life-threatening bleeding, LOC (AVPU), Airway, Breathing, Circulation.\n3. Decide: critical situation? SMR indicated? Generalized vs. localized MOI?\n4. Generalized/unknown MOI → Rapid Trauma Survey.   Localized MOI → Focused Exam.\n5. Critical → load-and-go, transport immediately, interventions en route.\n6. En route → Ongoing Exam (repeat as needed) and, if time permits, Secondary Survey."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 3: Assessment Skills.",
+    "Campbell, J.E., and R.L. Alson. International Trauma Life Support for Emergency Care Providers."
+  ]
+}

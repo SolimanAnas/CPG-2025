@@ -1,0 +1,25 @@
+{
+  "chapter": "c22",
+  "cards": [
+    { "id": "c22_fc01", "question": "What is the core principle of standard precautions?", "answer": "Treat the blood and body fluids of every patient as potentially infectious, applying protective measures universally regardless of known diagnosis.", "category": "Standard Precautions" },
+    { "id": "c22_fc02", "question": "What measures make up standard precautions?", "answer": "Hand hygiene, gloves, and—when splashing is possible—face/eye protection, masks, and gowns.", "category": "Standard Precautions" },
+    { "id": "c22_fc03", "question": "What does OPIM stand for?", "answer": "Other Potentially Infectious Materials—body fluids besides blood that can transmit pathogens.", "category": "Definitions" },
+    { "id": "c22_fc04", "question": "What are the three most important bloodborne viral illnesses for providers?", "answer": "Hepatitis B virus (HBV), hepatitis C virus (HCV), and human immunodeficiency virus (HIV).", "category": "Bloodborne Viruses" },
+    { "id": "c22_fc05", "question": "Which bloodborne virus is vaccine-preventable?", "answer": "Hepatitis B (HBV)—providers should be vaccinated; HCV and HIV have no vaccine.", "category": "Bloodborne Viruses" },
+    { "id": "c22_fc06", "question": "Which of the three bloodborne viruses is the most transmissible?", "answer": "Hepatitis B (HBV) is the most readily transmitted of the three.", "category": "Bloodborne Viruses" },
+    { "id": "c22_fc07", "question": "How are bloodborne viruses transmitted to providers?", "answer": "Through blood and certain body fluids via needlesticks, splashes to mucous membranes, or contact with non-intact skin.", "category": "Bloodborne Viruses" },
+    { "id": "c22_fc08", "question": "What are the three types of transmission-based precautions?", "answer": "Contact precautions, droplet precautions, and airborne precautions.", "category": "Transmission Precautions" },
+    { "id": "c22_fc09", "question": "When are contact precautions used?", "answer": "For organisms spread by direct or indirect touch—use gloves and a gown.", "category": "Transmission Precautions" },
+    { "id": "c22_fc10", "question": "When are droplet precautions used and what PPE is required?", "answer": "For diseases spread by large respiratory droplets (e.g., influenza, meningococcus); wear a surgical mask and eye protection.", "category": "Transmission Precautions" },
+    { "id": "c22_fc11", "question": "When are airborne precautions used and what respirator is required?", "answer": "For small-particle airborne diseases (TB, measles, varicella); wear a fit-tested N95/respirator and place a surgical mask on the patient.", "category": "Transmission Precautions" },
+    { "id": "c22_fc12", "question": "Which diseases require airborne precautions?", "answer": "Tuberculosis, measles, and varicella (chickenpox).", "category": "Transmission Precautions" },
+    { "id": "c22_fc13", "question": "What symptoms should make you suspect tuberculosis?", "answer": "Chronic cough, fever, night sweats, and weight loss—apply airborne precautions.", "category": "Tuberculosis" },
+    { "id": "c22_fc14", "question": "How can the BCG vaccine complicate TB screening?", "answer": "BCG (used in some countries) can cause a positive TB skin test, so results must be interpreted with clinical context.", "category": "Tuberculosis" },
+    { "id": "c22_fc15", "question": "What are the first steps after a needlestick or splash exposure?", "answer": "Immediately wash the site with soap and water (flush mucous membranes with water/saline), then report the exposure per protocol and seek evaluation promptly.", "category": "Exposure Response" },
+    { "id": "c22_fc16", "question": "What is post-exposure prophylaxis (PEP) for HIV and why is timing critical?", "answer": "Medication started after a significant exposure to reduce HIV transmission risk; it is most effective when started as soon as possible (within hours).", "category": "PEP" },
+    { "id": "c22_fc17", "question": "Is there PEP for hepatitis C?", "answer": "No—there is no PEP for HCV, but early identification allows monitoring and effective treatment if infection occurs.", "category": "PEP" },
+    { "id": "c22_fc18", "question": "How are HBV-vaccinated providers protected after exposure?", "answer": "Vaccination provides strong protection; immune globulin/vaccination and follow-up testing are arranged as indicated based on status.", "category": "PEP" },
+    { "id": "c22_fc19", "question": "Why apply standard precautions even to 'low-risk' patients?", "answer": "Infection status is frequently unknown, so universal precautions protect against unrecognized infections.", "category": "Standard Precautions" },
+    { "id": "c22_fc20", "question": "What is the correct mask for a suspected measles patient?", "answer": "Airborne precautions—a fit-tested N95 respirator for the provider, with a surgical mask on the patient.", "category": "Transmission Precautions" }
+  ]
+}

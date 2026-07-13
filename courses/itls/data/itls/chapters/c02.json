@@ -1,0 +1,78 @@
+{
+  "id": "c02",
+  "title": "Trauma Assessment and Management",
+  "shortTitle": "Trauma Assessment",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Outline the steps in trauma assessment and management.",
+    "Describe the ITLS Primary Survey.",
+    "Explain the initial assessment and how it relates to the rapid trauma survey and the focused exam.",
+    "Describe when the initial assessment can be interrupted.",
+    "Describe when critical interventions should be made and where to make them.",
+    "Identify which patients have critical conditions and how they should be managed.",
+    "Describe the ITLS Ongoing Exam.",
+    "Describe the ITLS Secondary Survey."
+  ],
+  "summary": [
+    {
+      "title": "Scene Size-Up",
+      "content": "The scene size-up is performed before approaching a patient to ensure safety. It includes identifying hazards, assessing the number of patients, and determining if additional resources are needed. The mechanism of injury (MOI) should be identified."
+    },
+    {
+      "title": "Initial Assessment",
+      "content": "The initial assessment evaluates the patient's general impression, level of consciousness (LOC), airway, breathing, and circulation (ABCs). It is performed quickly to prioritize treatment and identify life-threatening conditions. The AVPU scale is used to assess LOC."
+    },
+    {
+      "title": "Rapid Trauma Survey or Focused Exam",
+      "content": "The rapid trauma survey is a brief exam from head to toe, while the focused exam is limited to areas affected by specific injuries. Both are performed based on the mechanism of injury and initial assessment findings. The goal is to identify life-threatening conditions."
+    },
+    {
+      "title": "Critical Interventions",
+      "content": "Critical interventions include controlling major external bleeding, maintaining an open airway, ventilating if necessary, applying oxygen, sealing sucking chest wounds, stabilizing flail segments, decompressing tension pneumothorax, and managing penetrating objects. These should be performed immediately."
+    },
+    {
+      "title": "ITLS Ongoing Exam",
+      "content": "The ITLS Ongoing Exam is an abbreviated exam to assess for changes in the patient’s condition during transport. It includes reassessing ABCs, mental status, vital signs, and interventions. This should be performed every 5-15 minutes."
+    },
+    {
+      "title": "ITLS Secondary Survey",
+      "content": "The ITLS Secondary Survey is a more comprehensive exam to identify additional injuries not found in the primary survey. It includes a detailed head-to-toe examination, vital signs, and neurological assessment. This may be performed if time allows."
+    }
+  ],
+  "clinicalPearls": [
+    "Always perform a scene size-up before approaching a patient.",
+    "Use the AVPU scale to assess the level of consciousness.",
+    "Maintain spinal motion restriction (SMR) during assessments and interventions.",
+    "Delegate tasks to team members while continuing the assessment sequence."
+  ],
+  "redFlags": [
+    "Do not interrupt the initial assessment for interventions unless it is an emergency.",
+    "Be aware that patients with altered mental status may have non-traumatic causes such as hypoglycemia or drug overdose."
+  ],
+  "commonMistakes": [
+    "Failing to perform a scene size-up before approaching the patient.",
+    "Interrupting the initial assessment for interventions without completing it.",
+    "Overlooking critical signs during the rapid trauma survey."
+  ],
+  "memoryAids": [
+    "Use the AVPU scale to assess LOC: Alert, Verbal, Pain, Unresponsive.",
+    "Remember the ABCs: Airway, Breathing, Circulation.",
+    "Perform a scene size-up before approaching any patient."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Decision Tree for Initial Assessment",
+      "content": "1. Perform scene size-up.\n2. Identify mechanism of injury (MOI).\n3. Approach the patient and perform initial assessment: General impression, LOC, airway, breathing, circulation.\n4. Determine if rapid trauma survey or focused exam is needed based on MOI."
+    },
+    {
+      "title": "Decision Tree for Critical Interventions",
+      "content": "1. Control major external bleeding.\n2. Maintain an open and patent airway (position, sweep, suction; intubate if necessary).\n3. Ventilate the patient if needed.\n4. Apply oxygen, CP, seal sucking chest wounds, stabilize flail segments, decompress tension pneumothorax when indicated."
+    }
+  ],
+  "references": [
+    "Alam, H. B., D. Burris, J. A. DaCorta, and P. Rhee. “Hemorrhage Control in the Battlefield: Role of New Hemostatic Agents.” Military Medicine 170, no. 1 (January 2005): 63–69.",
+    "Brooke, M., J. Walton, and D. Scutt. “Paramedic Application of Ultrasound in the Management of Patients in the Prehospital Setting: A Review of the Literature.” Emergency Medicine Journal 27, no. 9 (September 2010): 702–7.",
+    "Jansen, T. C., J. van Bommel, P. G. Mulder, J. H. Rommes, S. J. Schieveld, and J. Bakker. “The Prognostic Value of Blood Lactate Levels Relative to That of Vital Signs in the Prehospital Setting: A Pilot Study.” Critical Care 12, no. 6 (2008): 160–66."
+  ]
+}

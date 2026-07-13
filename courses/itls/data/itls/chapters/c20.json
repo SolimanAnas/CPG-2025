@@ -1,0 +1,70 @@
+{
+  "id": "c20",
+  "title": "The Impaired Patient",
+  "shortTitle": "Impaired Patient",
+  "estimatedStudyTime": 20,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "List the signs and symptoms of patients under the influence of alcohol and/or drugs.",
+    "Describe strategies to gain cooperation during assessment and management.",
+    "Define excited delirium.",
+    "List special considerations for assessing and managing patients with suspected substance abuse."
+  ],
+  "summary": [
+    {
+      "title": "Why Impairment Is Dangerous in Trauma",
+      "content": "Alcohol and drugs impair judgment, mask pain, and cloud the mental status exam, making it dangerous to attribute altered behavior to intoxication alone. Impaired patients are at higher risk of trauma and of having serious injuries (head injury, hemorrhage, hypoxia, hypoglycemia) hidden behind the assumption that they are 'just drunk.' Always assume a medical or traumatic cause for altered behavior until proven otherwise."
+    },
+    {
+      "title": "Signs of Alcohol and Drug Influence",
+      "content": "Signs include slurred speech, unsteady gait, the odor of alcohol, dilated or constricted pupils, altered mental status, mood lability, agitation or somnolence, and abnormal vital signs. Different substances produce different patterns (stimulants cause tachycardia/agitation/hyperthermia; opioids cause sedation, pinpoint pupils, and respiratory depression). These signs overlap with head injury, hypoglycemia, hypoxia, and shock."
+    },
+    {
+      "title": "Gaining Cooperation",
+      "content": "Use a calm, nonjudgmental, and reassuring interactive style. Introduce yourself, explain what you are doing, set clear and simple expectations, and use closed-ended questions when the patient is difficult. Minimize stimulation, avoid confrontation, allow personal space when safe, and enlist trusted bystanders. Maintain scene safety and your own safety at all times."
+    },
+    {
+      "title": "Excited Delirium",
+      "content": "Excited delirium is a life-threatening state of extreme agitation, aggression, paranoia, hyperthermia, and apparent superhuman strength, often associated with stimulant use or psychiatric illness. It can rapidly progress to cardiovascular collapse and sudden death. It is a true medical emergency requiring rapid, coordinated control, sedation per protocol, cooling, and continuous monitoring—not simply prolonged physical restraint."
+    },
+    {
+      "title": "Capacity, Restraint, and Special Considerations",
+      "content": "An impaired patient may lack the decision-making capacity to refuse care; involve medical direction and follow local protocol and law. Use restraint only when necessary for the safety of the patient or crew, applying it humanely and never in a position that compromises breathing (avoid prone/hog-tie positioning, which risks positional asphyxia). Continuously reassess the restrained patient. Always check glucose and oxygenation, and search diligently for occult injury."
+    }
+  ],
+  "clinicalPearls": [
+    "Never assume altered behavior is 'just intoxication'—rule out head injury, hypoglycemia, hypoxia, and shock first.",
+    "Check a blood glucose and oxygen saturation on every impaired patient.",
+    "A calm, nonjudgmental approach gains more cooperation than confrontation.",
+    "Excited delirium is a medical emergency that can cause sudden death—act rapidly and cool the patient.",
+    "Never restrain a patient prone or in a hog-tie position—risk of positional asphyxia."
+  ],
+  "redFlags": [
+    "Attributing a deteriorating mental status to alcohol while missing an expanding intracranial hemorrhage.",
+    "Excited delirium can progress to cardiovascular collapse and sudden death—do not under-triage it.",
+    "Prone/hog-tie restraint and excessive struggle can cause positional asphyxia and death.",
+    "Opioid-impaired patients can have life-threatening respiratory depression—support ventilation and consider naloxone."
+  ],
+  "commonMistakes": [
+    "Dismissing serious injury or illness as intoxication.",
+    "Failing to check glucose and oxygenation.",
+    "Escalating confrontation instead of de-escalating.",
+    "Leaving a restrained patient unmonitored or in a dangerous position."
+  ],
+  "memoryAids": [
+    "Impaired + altered = assume a treatable cause (Head injury, Hypoglycemia, Hypoxia, Shock) until proven otherwise.",
+    "Always check glucose and SpO2.",
+    "De-escalate: Calm, Nonjudgmental, Clear, Space, Safety.",
+    "Excited delirium = agitation + hyperthermia + collapse risk → medical emergency."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Approach to the Impaired Patient",
+      "content": "1. Ensure scene and personal safety.\n2. Assume a medical/traumatic cause for altered behavior—do not blame intoxication.\n3. Check glucose and SpO2; support airway/ventilation (especially opioids).\n4. De-escalate with a calm, nonjudgmental approach; use closed-ended questions if needed.\n5. Excited delirium (extreme agitation, hyperthermia)? → medical emergency: control, sedate per protocol, cool, monitor.\n6. Restraint only if necessary; never prone/hog-tie; reassess continuously.\n7. Address capacity with medical direction; search for and treat occult injury; transport."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 20: The Impaired Patient.",
+    "Newman, J.G. Assessment and Management of the Impaired Patient."
+  ]
+}

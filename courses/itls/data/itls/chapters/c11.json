@@ -1,0 +1,76 @@
+{
+  "id": "c11",
+  "title": "Spinal Trauma and Patient-Centered Spinal Motion Restriction",
+  "shortTitle": "Spinal Trauma & SMR",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Explain the normal anatomy and physiology of the spinal column and spinal cord.",
+    "Define spinal motion restriction (SMR) and its relationship to patient safety.",
+    "Describe injury, history, and assessment elements that identify patients who benefit from SMR.",
+    "Describe at least one mechanism for which SMR can significantly decrease survival.",
+    "Explain the difference between Emergency Rescue and rapid extrication and when to use each.",
+    "Differentiate neurogenic shock from hemorrhagic shock using clinical evaluation."
+  ],
+  "summary": [
+    {
+      "title": "Spinal Anatomy",
+      "content": "The spinal column is 33 vertebrae (cervical, thoracic, lumbar, sacral, coccygeal) protecting the spinal cord, which carries motor and sensory pathways between the brain and body. The cervical region is the most mobile and most vulnerable. Damage to the cord causes loss of motor function, sensation, and autonomic control below the level of injury."
+    },
+    {
+      "title": "Primary vs. Secondary Cord Injury",
+      "content": "Primary spinal-cord injury occurs at the moment of trauma. Secondary spinal-cord injury results from movement of an unstable spine, hypoxia, hypotension, and edema after the event. The goal of spinal motion restriction is to prevent secondary injury by limiting movement of a potentially unstable spine while not harming the patient with unnecessary immobilization."
+    },
+    {
+      "title": "Patient-Centered SMR (Selective Immobilization)",
+      "content": "Not every trauma patient needs full immobilization. Apply SMR when there is a concerning mechanism PLUS any of: altered mental status/intoxication, midline spinal tenderness or deformity, neurologic deficit (numbness, weakness, paresthesia), a distracting injury, or an unreliable exam. A reliable, alert patient with no midline tenderness, no neuro deficit, no intoxication, and no distracting injury may not require SMR."
+    },
+    {
+      "title": "Harms of Over-Immobilization",
+      "content": "Rigid backboards and full immobilization can cause pressure sores, pain, agitation, aspiration risk, and impaired breathing. In penetrating trauma to the torso/neck without neurologic deficit, immobilization can delay transport and has been associated with increased mortality—so routine SMR is not applied to isolated penetrating trauma."
+    },
+    {
+      "title": "Emergency Rescue vs. Rapid Extrication",
+      "content": "Emergency Rescue is the immediate removal of a patient from a scene that is too dangerous to allow normal care (fire, drowning, hostile environment)—life over spine. Rapid extrication is a controlled, faster removal (manual stabilization, no full device) used when the patient is critical/load-and-go or the scene is unstable. Standard extrication with a short device is reserved for stable patients in a stable scene."
+    },
+    {
+      "title": "Neurogenic vs. Hemorrhagic Shock",
+      "content": "Neurogenic shock results from loss of sympathetic tone after cord injury: hypotension with a normal or slow heart rate and warm, dry, pink skin below the lesion. Hemorrhagic shock presents with tachycardia and cool, pale, clammy skin. Because the two can coexist, always assume and exclude hemorrhage first in a hypotensive spine-injured patient."
+    }
+  ],
+  "clinicalPearls": [
+    "SMR aims to prevent secondary cord injury without the harms of unnecessary immobilization.",
+    "Maintain neutral in-line alignment; pad behind the head/torso as needed (especially children and the elderly).",
+    "Isolated penetrating trauma without neurologic deficit generally should NOT be immobilized.",
+    "Neurogenic shock = hypotension + bradycardia + warm, dry skin; hemorrhagic shock = hypotension + tachycardia + cool, clammy skin.",
+    "Emergency Rescue prioritizes life over spine when the scene is immediately dangerous."
+  ],
+  "redFlags": [
+    "Routine spinal immobilization of penetrating torso/neck trauma can increase mortality—avoid it without neuro deficit.",
+    "A distracting injury or intoxication makes the spinal exam unreliable—apply SMR.",
+    "Hypotension in a spine-injured patient is hemorrhage until proven otherwise.",
+    "Forcing a patient into neutral alignment against resistance or worsening pain/neuro symptoms is contraindicated—immobilize in the position found."
+  ],
+  "commonMistakes": [
+    "Immobilizing every trauma patient regardless of selective criteria.",
+    "Attributing all shock in a spinal patient to neurogenic causes and missing hemorrhage.",
+    "Forcing neutral alignment when it causes pain or neurologic change.",
+    "Performing a slow standard extrication on a critical/load-and-go patient."
+  ],
+  "memoryAids": [
+    "SMR criteria (apply if any): Altered mental status, Intoxication, Midline tenderness/deformity, Neuro deficit, Distracting injury.",
+    "Neurogenic shock = warm, dry, slow (bradycardia). Hemorrhagic shock = cool, clammy, fast (tachycardia).",
+    "Emergency Rescue = life over spine (immediate danger). Rapid extrication = critical patient/unstable scene.",
+    "Penetrating trauma + no deficit = no routine SMR."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Do I Apply SMR?",
+      "content": "1. Concerning mechanism? If clearly none and exam reliable → SMR may not be needed.\n2. Any of: altered mental status/intoxication, midline spinal tenderness/deformity, neuro deficit (numbness/weakness/paresthesia), distracting injury, unreliable exam? → Apply SMR.\n3. Isolated penetrating trauma without neuro deficit → do NOT routinely immobilize.\n4. Scene immediately dangerous → Emergency Rescue (life over spine).\n5. Critical patient or unstable scene → Rapid extrication.\n6. Stable patient, stable scene → standard extrication with short device, neutral in-line alignment."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 11: Spinal Trauma and Patient-Centered SMR.",
+    "National Association of EMS Physicians & ACS-COT. EMS Spinal Precautions and the Use of the Long Backboard (position statement)."
+  ]
+}

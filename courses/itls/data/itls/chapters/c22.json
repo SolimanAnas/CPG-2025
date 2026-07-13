@@ -1,0 +1,70 @@
+{
+  "id": "c22",
+  "title": "Standard Precautions and Transmission-Based Precautions",
+  "shortTitle": "Standard Precautions",
+  "estimatedStudyTime": 20,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Discuss the three most common bloodborne viral illnesses to which providers may be exposed.",
+    "Discuss signs/symptoms of airborne and droplet-transmitted diseases and protective measures.",
+    "Describe precautions to prevent exposure to blood and other potentially infectious materials.",
+    "Describe the steps to take after an exposure, including post-exposure prophylaxis (PEP)."
+  ],
+  "summary": [
+    {
+      "title": "Standard Precautions",
+      "content": "Standard precautions treat the blood and body fluids of every patient as potentially infectious. They include hand hygiene, gloves, and—when splashing is possible—face/eye protection, gowns, and masks. Apply them universally regardless of a patient's known diagnosis, because infection status is often unknown. They protect against exposure to blood and other potentially infectious materials (OPIM)."
+    },
+    {
+      "title": "Bloodborne Viral Illnesses",
+      "content": "The three most important bloodborne viral illnesses for providers are hepatitis B virus (HBV), hepatitis C virus (HCV), and human immunodeficiency virus (HIV). HBV is the most transmissible of the three and is vaccine-preventable—providers should be vaccinated. HCV has no vaccine. HIV has a lower transmission risk per exposure but serious consequences. All are spread through blood and certain body fluids via needlesticks, mucous membranes, or non-intact skin."
+    },
+    {
+      "title": "Transmission-Based Precautions",
+      "content": "When standard precautions are not enough, add transmission-based precautions: Contact precautions (gowns/gloves for organisms spread by touch), Droplet precautions (a surgical mask for diseases spread by large respiratory droplets, e.g., influenza, meningococcus), and Airborne precautions (a fit-tested N95/respirator and patient masking for small-particle diseases such as tuberculosis, measles, and varicella). Recognize symptoms (cough, fever, rash) and apply the right level early."
+    },
+    {
+      "title": "Tuberculosis and the BCG Note",
+      "content": "Tuberculosis (TB) is spread by the airborne route; suspect it in patients with chronic cough, fever, night sweats, and weight loss, and use airborne precautions (N95 for the provider, surgical mask on the patient). The bacille Calmette-Guérin (BCG) vaccine, used in some countries, can cause a positive TB skin test, complicating screening—interpretation requires clinical context."
+    },
+    {
+      "title": "Post-Exposure Management",
+      "content": "After a significant exposure (needlestick, splash to mucous membranes or non-intact skin): immediately wash the site with soap and water (flush mucous membranes with water/saline), report the exposure per protocol, and seek evaluation promptly. Post-exposure prophylaxis (PEP) for HIV is time-sensitive and most effective when started as soon as possible (within hours). HBV-vaccinated providers have strong protection; HBV immune globulin/vaccination and follow-up testing are arranged as indicated. There is no PEP for HCV, but early identification allows monitoring and treatment."
+    }
+  ],
+  "clinicalPearls": [
+    "Treat every patient's blood and body fluids as potentially infectious—apply standard precautions universally.",
+    "HBV is vaccine-preventable—be vaccinated; HCV and HIV have no vaccine.",
+    "Match the precaution to the route: Contact (touch), Droplet (surgical mask), Airborne (fit-tested N95).",
+    "Suspect TB with chronic cough/fever/night sweats/weight loss—use airborne precautions early.",
+    "Start HIV post-exposure prophylaxis as soon as possible after a significant exposure—time matters."
+  ],
+  "redFlags": [
+    "A needlestick or mucous-membrane splash is a true exposure—wash, report, and seek evaluation immediately.",
+    "Delaying HIV PEP reduces its effectiveness—it is time-sensitive.",
+    "Failing to don a fit-tested N95 for a suspected TB/measles patient risks airborne transmission.",
+    "Assuming a patient is 'low risk' and skipping precautions—infection status is frequently unknown."
+  ],
+  "commonMistakes": [
+    "Selectively applying precautions based on assumptions about a patient instead of universally.",
+    "Using a surgical mask when a fit-tested N95 (airborne) is required.",
+    "Delaying reporting and PEP after an exposure.",
+    "Not being vaccinated against hepatitis B."
+  ],
+  "memoryAids": [
+    "Three bloodborne viruses: HBV (vaccine), HCV (no vaccine), HIV (time-sensitive PEP).",
+    "Transmission precautions: Contact (gown/gloves), Droplet (surgical mask), Airborne (N95).",
+    "Airborne diseases: TB, Measles, Varicella ('My Chicken-pox TB').",
+    "After exposure: Wash → Report → Evaluate → PEP (start HIV PEP ASAP)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Precautions and Exposure Response",
+      "content": "1. Every patient → standard precautions (hand hygiene, gloves; add eye/face/gown for splash risk).\n2. Suspected transmissible disease → add precautions: Contact (touch organisms), Droplet (surgical mask: influenza, meningococcus), Airborne (N95 + patient mask: TB, measles, varicella).\n3. Exposure occurs (needlestick/splash) → wash site with soap and water / flush mucous membranes.\n4. Report per protocol and seek evaluation immediately.\n5. Start HIV PEP as soon as possible; arrange HBV prophylaxis/testing as indicated; monitor for HCV (no PEP)."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 22: Standard Precautions and Transmission-Based Precautions.",
+    "CDC. Guideline for Isolation Precautions and Bloodborne Pathogen Standards (OSHA)."
+  ]
+}

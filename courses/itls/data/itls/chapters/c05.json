@@ -1,0 +1,78 @@
+{
+  "id": "c05",
+  "title": "Airway Management Skills",
+  "shortTitle": "Airway Skills",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Suction the airway safely and effectively.",
+    "Insert nasopharyngeal and oropharyngeal airways.",
+    "Use the pocket mask and the bag-valve mask.",
+    "Use the pulse oximeter.",
+    "Perform airway management using supraglottic (BIAD) devices.",
+    "Prepare for and perform laryngoscopic orotracheal and nasotracheal intubation.",
+    "Confirm endotracheal tube placement using capnography and anchor the tube.",
+    "Understand the use of medications to assist with intubation."
+  ],
+  "summary": [
+    {
+      "title": "Finesse Over Force",
+      "content": "Loss of airway is a leading cause of preventable trauma death. Successful airway management depends on clear team communication and a calm, deliberate approach—finesse is more important than force. Never rush an airway; prepare equipment, assign roles, and have a backup plan before acting."
+    },
+    {
+      "title": "Suctioning Technique",
+      "content": "Test the suction unit, measure the catheter (corner of mouth to earlobe), insert without suction, then apply suction while withdrawing. Limit suctioning to about 15 seconds (less in children) because it removes oxygen as well as fluid. Reoxygenate between attempts and keep a rigid (Yankauer) tip ready for thick blood and debris."
+    },
+    {
+      "title": "Basic Adjuncts and Ventilation",
+      "content": "Size an OPA from the corner of the mouth to the earlobe/angle of jaw; size an NPA from the nostril to the earlobe. Use the pocket mask or two-rescuer bag-valve mask for assisted ventilation, maintaining a good seal and confirming chest rise. Monitor oxygenation continuously with a pulse oximeter."
+    },
+    {
+      "title": "Supraglottic (BIAD) Airways",
+      "content": "Supraglottic airways are inserted blindly into the hypopharynx and seal over the glottic opening, providing rapid ventilation when intubation is difficult or unavailable. They are effective primary or rescue airways, require minimal neck movement, and are confirmed and monitored with waveform capnography."
+    },
+    {
+      "title": "Endotracheal Intubation",
+      "content": "Preoxygenate, prepare equipment (tube, stylet, laryngoscope, suction, capnography, backup), and maintain in-line cervical stabilization. Perform laryngoscopy with external laryngeal manipulation to visualize the cords, pass the tube, inflate the cuff, and confirm placement. Nasotracheal intubation is an option in select spontaneously breathing patients but is avoided with suspected basilar skull fracture."
+    },
+    {
+      "title": "Confirmation, Anchoring, and Medications",
+      "content": "Confirm tube placement with waveform capnography plus chest rise and bilateral breath sounds; reconfirm after every move. Anchor the tube securely and note depth at the teeth. Medications (sedatives and paralytics) may facilitate intubation through drug-assisted intubation, RSI, or RSA within scope and protocol; have suction, monitoring, and rescue devices ready before administering."
+    }
+  ],
+  "clinicalPearls": [
+    "Measure the suction catheter and limit each pass to ~15 seconds; reoxygenate between attempts.",
+    "Confirm every advanced airway with waveform capnography and reconfirm after each patient move.",
+    "Two-rescuer BVM (one seals the mask, one ventilates) provides a far better seal than one rescuer alone.",
+    "Maintain manual in-line cervical stabilization throughout intubation in trauma.",
+    "Have a backup airway device immediately available before the first attempt."
+  ],
+  "redFlags": [
+    "Prolonged suctioning or intubation attempts cause hypoxia—limit attempts and re-oxygenate.",
+    "Avoid nasotracheal intubation and NPAs when a basilar skull fracture is suspected.",
+    "Never administer a paralytic without the ability to ventilate and a rescue airway plan.",
+    "An esophageal tube without capnographic detection is rapidly fatal."
+  ],
+  "commonMistakes": [
+    "Poor mask seal during BVM, leading to inadequate ventilation and gastric insufflation.",
+    "Failing to preoxygenate before an intubation attempt.",
+    "Not measuring the OPA/NPA, causing airway trauma or worsened obstruction.",
+    "Forgetting to re-confirm tube placement after moving the patient."
+  ],
+  "memoryAids": [
+    "Suction: measure, insert without suction, suction on withdrawal, ≤15 seconds.",
+    "OPA size = corner of mouth to earlobe; NPA size = nostril to earlobe.",
+    "Confirm tube: capnography + chest rise + bilateral breath sounds.",
+    "Prepare = SOAP ME (Suction, Oxygen, Airways, Pharmacology, Monitoring, Equipment)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Stepwise Airway Skill Selection",
+      "content": "1. Open + suction; insert OPA/NPA.\n2. Apneic/inadequate → two-rescuer BVM with oxygen, confirm chest rise.\n3. Need advanced airway → preoxygenate, prepare, maintain in-line stabilization.\n4. Attempt intubation (ELM, apneic oxygenation) → confirm with capnography → anchor.\n5. Failed/difficult → insert supraglottic (BIAD) → confirm with capnography.\n6. Cannot ventilate by any means → surgical airway per protocol."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 5: Airway Skills.",
+    "Seitz, S.R., B. Page, and R.L. Alson. Prehospital Airway Skills."
+  ]
+}

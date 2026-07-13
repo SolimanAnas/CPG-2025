@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "Vomiting Unresponsive Patient",
+      "presentation": "An unresponsive 50-year-old ejected from a vehicle suddenly vomits. You hear loud gurgling. Your partner is maintaining in-line cervical stabilization.",
+      "vitals": { "hr": "112 bpm", "bp": "118/76 mmHg", "rr": "10/min", "spo2": "89%", "gcs": "5" },
+      "question": "What is the immediate priority?",
+      "options": [
+        "Insert an OPA without suctioning",
+        "Suction with a rigid tip, then ventilate with BVM and oxygen",
+        "Attempt nasotracheal intubation immediately",
+        "Apply a nonrebreather and reassess"
+      ],
+      "correct": 1,
+      "explanation": "Active vomiting and gurgling require immediate suctioning with a rigid (Yankauer) tip to protect the airway from aspiration, followed by assisted ventilation with BVM and oxygen. Definitive airway management follows once the airway is clear.",
+      "clinicalPearl": "Keep a working rigid suction within arm's reach for every obtunded trauma patient—aspiration can occur in seconds."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Failed Intubation, Rescue Plan",
+      "presentation": "You are managing a difficult trauma airway. After one intubation attempt the SpO2 falls from 96% to 84% and you could not visualize the cords.",
+      "vitals": { "hr": "124 bpm", "bp": "126/82 mmHg", "rr": "assisted", "spo2": "84%", "gcs": "3T attempt" },
+      "question": "What is the best next action?",
+      "options": [
+        "Immediately reattempt intubation",
+        "Stop, ventilate with BVM to reoxygenate, then place a supraglottic rescue airway",
+        "Perform a surgical airway right away",
+        "Withhold ventilation and transport"
+      ],
+      "correct": 1,
+      "explanation": "When an attempt fails and the patient desaturates, the priority is reoxygenation by BVM. A supraglottic (BIAD) rescue airway is the appropriate next device. A surgical airway is reserved for true cannot-intubate, cannot-ventilate situations.",
+      "clinicalPearl": "Oxygenation, not tube placement, is the goal. Reoxygenate between attempts and move to a rescue device early."
+    },
+    {
+      "id": "c05_s03",
+      "title": "Confirming the Tube After a Move",
+      "presentation": "You intubated a crash patient on the ground and confirmed placement with capnography. After lifting him onto the stretcher and into the ambulance, the capnography waveform suddenly flattens and breath sounds are now absent.",
+      "vitals": { "hr": "130 bpm", "bp": "104/70 mmHg", "rr": "assisted", "spo2": "falling", "gcs": "3T" },
+      "question": "What is the most likely problem and action?",
+      "options": [
+        "Equipment artifact — ignore it",
+        "Tube dislodgement during the move — reassess placement and re-intubate or rescue-ventilate",
+        "Normal finding after transport",
+        "Hyperglycemia — give insulin"
+      ],
+      "correct": 1,
+      "explanation": "A sudden loss of waveform and breath sounds after moving the patient signals tube dislodgement (a leading cause of airway disaster). Reassess immediately: visualize/re-confirm, re-intubate, or ventilate with BVM/BIAD while reoxygenating.",
+      "clinicalPearl": "Reconfirm tube placement with capnography after every move—the flat waveform is your early-warning system."
+    }
+  ]
+}

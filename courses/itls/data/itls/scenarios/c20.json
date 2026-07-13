@@ -1,0 +1,53 @@
+{
+  "chapter": "c20",
+  "cases": [
+    {
+      "id": "c20_s01",
+      "title": "Not Just Drunk",
+      "presentation": "A man found outside a bar smells of alcohol and is slurring his words. Bystanders say he 'just had too much.' On exam you note a boggy scalp hematoma, and his level of consciousness is worsening over a few minutes.",
+      "vitals": { "hr": "58 bpm", "bp": "176/98 mmHg", "rr": "12/min", "spo2": "95%", "gcs": "11 and falling" },
+      "question": "What is the most appropriate interpretation and action?",
+      "options": [
+        "He is simply intoxicated—let him sleep it off",
+        "Suspect a serious head injury (the bradycardia, hypertension, scalp hematoma, and falling GCS) despite alcohol—manage as TBI and transport rapidly",
+        "Restrain him prone and wait",
+        "Withhold oxygen"
+      ],
+      "correct": 1,
+      "explanation": "Alcohol odor does not explain a boggy scalp hematoma, bradycardia, hypertension, and a declining GCS—these suggest an expanding intracranial injury (Cushing's reflex). Never attribute deterioration to intoxication; check glucose, support the airway/oxygenation, and transport as a head injury.",
+      "clinicalPearl": "The smell of alcohol is not a diagnosis—an intoxicated patient who deteriorates has a head injury until proven otherwise."
+    },
+    {
+      "id": "c20_s02",
+      "title": "Excited Delirium",
+      "presentation": "Police request EMS for a man who is violently agitated, paranoid, sweating profusely, and stripping off his clothes after suspected stimulant use. He shows remarkable strength and his skin is hot to the touch.",
+      "vitals": { "hr": "150 bpm", "bp": "168/96 mmHg", "rr": "30/min", "spo2": "—", "skin": "hot, diaphoretic" },
+      "question": "What is the correct approach?",
+      "options": [
+        "Restrain him prone and leave him face-down until he tires",
+        "Recognize excited delirium as a medical emergency—coordinate rapid control, sedate per protocol, cool him, oxygenate, and monitor continuously",
+        "Ignore it; he will calm down",
+        "Withhold all treatment"
+      ],
+      "correct": 1,
+      "explanation": "Extreme agitation, paranoia, hyperthermia, and apparent superhuman strength after stimulant use indicate excited delirium, which can progress to sudden cardiovascular collapse. Treat it as a medical emergency: rapid, coordinated control, sedation per protocol, active cooling, oxygenation, and continuous monitoring—never prolonged prone restraint.",
+      "clinicalPearl": "Excited delirium kills—treat the hyperthermia and agitation aggressively, and never restrain the patient prone."
+    },
+    {
+      "id": "c20_s03",
+      "title": "Restraint Done Safely",
+      "presentation": "An impaired, combative trauma patient must be restrained for the safety of himself and the crew so you can manage a bleeding head wound.",
+      "vitals": { "hr": "118 bpm", "bp": "138/84 mmHg", "rr": "20/min", "spo2": "96%", "gcs": "13" },
+      "question": "Which restraint practice is correct?",
+      "options": [
+        "Place him prone in a hog-tie position",
+        "Restrain him supine or on his side, never compromising breathing, and continuously reassess his airway and circulation",
+        "Restrain and stop monitoring",
+        "Use the tightest possible restraints and leave him"
+      ],
+      "correct": 1,
+      "explanation": "Restraint is appropriate only for safety and must be applied humanely without compromising breathing—never prone or hog-tied (positional asphyxia risk). Restrain supine or lateral, monitor continuously, and reassess airway, breathing, and circulation throughout.",
+      "clinicalPearl": "Safe restraint is never prone—position to protect breathing and keep monitoring the patient continuously."
+    }
+  ]
+}

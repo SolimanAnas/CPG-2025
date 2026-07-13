@@ -1,0 +1,53 @@
+{
+  "chapter": "c16",
+  "cases": [
+    {
+      "id": "c16_s01",
+      "title": "House Fire with Airway Risk",
+      "presentation": "A man was pulled from a burning bedroom. He has facial burns, singed nasal hairs, soot around his mouth, and a hoarse voice. He is coughing up black sputum.",
+      "vitals": { "hr": "112 bpm", "bp": "138/84 mmHg", "rr": "24/min", "spo2": "98%", "gcs": "14" },
+      "question": "What is the priority intervention?",
+      "options": [
+        "Apply a dry dressing to the face and reassess in 20 minutes",
+        "Anticipate airway swelling—give high-flow oxygen and secure the airway early; treat for possible CO poisoning",
+        "Trust the 98% SpO2 and provide only routine care",
+        "Cool the face with prolonged wet dressings"
+      ],
+      "correct": 1,
+      "explanation": "Facial burns, singed hairs, soot, hoarseness, and carbonaceous sputum signal impending airway obstruction from inhalation injury. Give high-flow oxygen and secure the airway early before edema closes it. The 98% SpO2 is falsely reassuring—carbon monoxide poisoning must be treated empirically with 100% oxygen.",
+      "clinicalPearl": "In inhalation injury, the window for an easy airway closes fast—intubate early and never trust the pulse oximeter for CO."
+    },
+    {
+      "id": "c16_s02",
+      "title": "Estimating Burn Size",
+      "presentation": "An adult has partial- and full-thickness burns covering the entire front of the torso, the entire left arm, and the entire anterior aspect of one leg.",
+      "vitals": { "hr": "118 bpm", "bp": "120/78 mmHg", "rr": "22/min", "spo2": "99%", "skin": "burned areas as described" },
+      "question": "Using the adult rule of nines, approximately what TBSA is burned?",
+      "options": [
+        "About 18%",
+        "About 36%",
+        "About 50%",
+        "About 9%"
+      ],
+      "correct": 1,
+      "explanation": "Anterior trunk = 18%, entire left arm = 9%, anterior of one leg = 9% (half of 18%), totaling approximately 36% TBSA. Only partial- and full-thickness burns are counted. This large burn warrants fluid resuscitation per protocol and burn-center transport.",
+      "clinicalPearl": "Memorize the rule of nines cold—accurate TBSA drives fluid resuscitation and triage decisions."
+    },
+    {
+      "id": "c16_s03",
+      "title": "Electrical Injury",
+      "presentation": "A lineman contacted a high-voltage wire. He has a small charred entry wound on one hand and an exit wound on his foot, and he is now having palpitations. The scene has been confirmed safe by the power company.",
+      "vitals": { "hr": "irregular, 130 bpm", "bp": "126/80 mmHg", "rr": "20/min", "spo2": "98%", "skin": "small entry/exit wounds" },
+      "question": "What is the key concern despite small-appearing skin wounds?",
+      "options": [
+        "The injury is minor because the skin wounds are small",
+        "Extensive deep tissue injury along the current path and cardiac dysrhythmias—apply cardiac monitoring and transport",
+        "Only a dressing is needed",
+        "Apply a traction splint"
+      ],
+      "correct": 1,
+      "explanation": "Electrical injury causes deep tissue destruction along the current's path far beyond the visible entry/exit wounds, plus a high risk of dysrhythmias and cardiac arrest. Apply cardiac monitoring, treat dysrhythmias, anticipate rhabdomyolysis, and transport—ideally to a burn center.",
+      "clinicalPearl": "In electrical injury, the skin lies—deep tissue and the heart bear the real damage. Always monitor the rhythm."
+    }
+  ]
+}

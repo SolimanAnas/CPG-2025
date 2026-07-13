@@ -1,0 +1,77 @@
+{
+  "id": "c04",
+  "title": "Airway Management in the Trauma Patient",
+  "shortTitle": "Airway Management",
+  "estimatedStudyTime": 35,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the anatomy and physiology of the respiratory system.",
+    "Explain the importance of observation as it relates to airway control.",
+    "Describe methods to deliver supplemental oxygen to the trauma patient.",
+    "Describe the indications, contraindications, advantages, and disadvantages of bag-valve masks, blind insertion airway devices, endotracheal intubation, FROPVDs, nasopharyngeal airways, and oropharyngeal airways.",
+    "Describe the predictors of difficult mask ventilation and endotracheal intubation.",
+    "Describe apneic oxygenation and external laryngeal manipulation.",
+    "Describe the essential components of an airway kit."
+  ],
+  "summary": [
+    {
+      "title": "Airway Is the First Priority",
+      "content": "Of all field tasks, airway control is the most important because it cannot wait for hospital arrival. Maintaining an open airway and adequate ventilation prevents hypoxia, which is rapidly fatal and worsens outcomes in shock and brain injury. The trauma airway is challenging due to blood, vomitus, facial injuries, the need for cervical-spine motion restriction, and difficult field conditions."
+    },
+    {
+      "title": "Respiratory Anatomy and Physiology",
+      "content": "The airway is divided into upper (nose, mouth, pharynx, larynx) and lower (trachea, bronchi, alveoli) structures. Ventilation moves air; oxygenation loads hemoglobin and tissues with oxygen. Tidal volume is the air moved per breath; minute volume is tidal volume times respiratory rate. Adequate minute ventilation and lung compliance are required for gas exchange at the alveoli."
+    },
+    {
+      "title": "Observation and Basic Airway Maneuvers",
+      "content": "Look, listen, and feel for air movement, chest rise, and abnormal sounds (snoring, gurgling, stridor). In trauma, open the airway with a modified jaw thrust to protect the cervical spine. Suction blood and secretions. Insert an oropharyngeal airway (no gag reflex) or nasopharyngeal airway (intact gag, but avoid with suspected basilar skull fracture)."
+    },
+    {
+      "title": "Oxygen Delivery and Ventilation Devices",
+      "content": "Deliver high-concentration oxygen by nonrebreather mask at 15 L/min for the spontaneously breathing trauma patient. Assist inadequate ventilations with a bag-valve mask (BVM) and supplemental oxygen at 8–10 breaths/min for adults. Flow-restricted oxygen-powered ventilation devices (FROPVDs) and pulse oximetry/capnography monitor and support ventilation. Confirm adequate tidal volume by visible chest rise and fall."
+    },
+    {
+      "title": "Advanced Airways: BIAD and Endotracheal Intubation",
+      "content": "Blind insertion airway devices (BIADs, e.g., supraglottic airways) provide a rescue or primary airway without visualizing the cords. Endotracheal intubation is the gold standard for airway protection and ventilatory control in the adult but is more difficult; placement must be confirmed with waveform capnography. Drug-assisted intubation (DAI), rapid sequence intubation (RSI), and rapid sequence airway (RSA) are advanced techniques used within scope and protocol."
+    },
+    {
+      "title": "Predicting Difficulty and Optimizing First-Pass Success",
+      "content": "Use MMAP and related predictors to anticipate a difficult airway: Mallampati/mouth opening, Mask seal/obstruction/obesity, Anatomic problems (neck/short, immobilization), and Position. Apneic oxygenation (nasal cannula oxygen during intubation attempts) and external laryngeal manipulation (ELM/BURP) improve success and prolong safe apnea time. Always have a backup plan and a stocked airway kit."
+    }
+  ],
+  "clinicalPearls": [
+    "Open the trauma airway with a modified jaw thrust, not a head-tilt, to protect the cervical spine.",
+    "Confirm and continuously monitor endotracheal tube placement with waveform capnography.",
+    "Apneic oxygenation via nasal cannula during laryngoscopy extends safe apnea time.",
+    "A nonrebreather at 15 L/min provides high-concentration oxygen for the spontaneously breathing trauma patient.",
+    "Adequate tidal volume is confirmed by visible, symmetric chest rise—not by squeezing the bag harder or faster."
+  ],
+  "redFlags": [
+    "Avoid nasopharyngeal airways and nasotracheal intubation when a basilar skull fracture is suspected (raccoon eyes, Battle's sign, CSF rhinorrhea).",
+    "Hyperventilation drops cerebral perfusion and increases intrathoracic pressure—avoid it unless treating cerebral herniation.",
+    "An unrecognized esophageal intubation is rapidly fatal—capnography is mandatory for confirmation and ongoing monitoring.",
+    "Repeated prolonged intubation attempts cause hypoxia; if unsuccessful, ventilate by BVM or insert a BIAD."
+  ],
+  "commonMistakes": [
+    "Ventilating too fast or with too much volume, causing gastric insufflation and decreased venous return.",
+    "Failing to suction before attempting to visualize the airway.",
+    "Relying on chest auscultation alone instead of capnography to confirm tube placement.",
+    "Not preparing a backup airway plan before the first attempt."
+  ],
+  "memoryAids": [
+    "MMAP for difficult-airway prediction: Mallampati, Mask seal/Obstruction/Obesity, Anatomy, Position.",
+    "LOOK-LISTEN-FEEL to assess air movement and chest rise.",
+    "Adult BVM rate: 8–10 breaths per minute with oxygen; confirm chest rise.",
+    "BURP/ELM = Backward, Upward, Rightward Pressure on the larynx to improve the view."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Trauma Airway Management",
+      "content": "1. Open airway with modified jaw thrust; suction as needed.\n2. Insert OPA (no gag) or NPA (gag intact, no basilar skull fracture).\n3. Spontaneous and adequate? → Oxygen by nonrebreather 15 L/min.\n4. Inadequate/absent ventilation? → BVM with oxygen, 8–10/min, confirm chest rise.\n5. Need definitive airway → attempt intubation (apneic oxygenation + ELM) → confirm with capnography.\n6. Failed intubation → BVM or insert BIAD; consider surgical airway per protocol."
+    }
+  ],
+  "references": [
+    "International Trauma Life Support, 8th ed. Chapter 4: Airway Management.",
+    "Magee, K., and R.D. Stewart. Airway Management in Prehospital Trauma Care."
+  ]
+}

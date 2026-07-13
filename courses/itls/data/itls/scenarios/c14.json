@@ -1,0 +1,53 @@
+{
+  "chapter": "c14",
+  "cases": [
+    {
+      "id": "c14_s01",
+      "title": "Don't Be Distracted by the Obvious",
+      "presentation": "A motorcyclist has a grotesquely angulated open tibia fracture with bone exposed. He is also pale, anxious, and breathing fast. Your new partner kneels to splint the leg immediately.",
+      "vitals": { "hr": "126 bpm", "bp": "100/82 mmHg", "rr": "26/min", "spo2": "94%", "skin": "pale" },
+      "question": "What is the correct priority?",
+      "options": [
+        "Splint the dramatic leg fracture first",
+        "Complete the Primary Survey for life threats and treat shock; control bleeding, then address the fracture",
+        "Apply a traction splint before assessing ABCs",
+        "Transport without any assessment"
+      ],
+      "correct": 1,
+      "explanation": "A dramatic extremity injury must not distract from life threats. Tachycardia, pallor, tachypnea, and a narrowing pulse pressure suggest shock—complete the Primary Survey, control hemorrhage, and treat for shock. The open fracture is covered and managed after life threats.",
+      "clinicalPearl": "The most eye-catching injury is rarely the most lethal—finish the Primary Survey before splinting."
+    },
+    {
+      "id": "c14_s02",
+      "title": "Pulseless Angulated Forearm",
+      "presentation": "A teenager fell off a skateboard with a severely angulated forearm. The hand is pale and cool, and you cannot palpate a radial pulse distal to the deformity. Capillary refill is delayed.",
+      "vitals": { "hr": "104 bpm", "bp": "122/76 mmHg", "rr": "18/min", "spo2": "99%", "skin": "hand pale, cool" },
+      "question": "What is the appropriate management?",
+      "options": [
+        "Splint exactly as found and transport",
+        "Apply gentle in-line traction to realign and attempt to restore distal circulation, then splint and recheck the pulse",
+        "Forcefully snap it straight",
+        "Apply a tourniquet above the elbow"
+      ],
+      "correct": 1,
+      "explanation": "An absent distal pulse with a pale, cool hand is limb-threatening ischemia. Gentle in-line traction to realign the angulated fracture may restore circulation; then splint and recheck PMS. If the pulse does not return, splint and transport rapidly.",
+      "clinicalPearl": "A pulseless, angulated long-bone fracture warrants gentle realignment to restore perfusion—then recheck and document the pulse."
+    },
+    {
+      "id": "c14_s03",
+      "title": "Prolonged Entrapment and Crush",
+      "presentation": "A worker's legs were pinned under a collapsed wall for over two hours. Heavy machinery is about to free him. He is alert with crushed, insensate legs.",
+      "vitals": { "hr": "110 bpm", "bp": "118/74 mmHg", "rr": "20/min", "spo2": "98%", "skin": "legs cold, mottled" },
+      "question": "What is the key concern as the crushing force is released?",
+      "options": [
+        "Nothing changes on release",
+        "Crush syndrome with hyperkalemia and dysrhythmias—coordinate fluid resuscitation and monitoring with medical direction before/at release",
+        "Compartment syndrome is impossible here",
+        "He needs only a splint"
+      ],
+      "correct": 1,
+      "explanation": "Prolonged crush causes rhabdomyolysis; releasing the compression washes potassium and myoglobin into the circulation, risking hyperkalemia, lethal dysrhythmias, and renal failure (crush syndrome). Establish IV access, begin fluids, apply cardiac monitoring, and coordinate management with medical direction around the moment of release.",
+      "clinicalPearl": "The dangerous moment in a prolonged crush is the release—pre-treat with fluids and monitoring for hyperkalemia per medical direction."
+    }
+  ]
+}

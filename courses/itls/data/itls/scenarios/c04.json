@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "Facial Trauma with Bloody Airway",
+      "presentation": "A 32-year-old male struck in the face during an assault is semi-conscious with blood and broken teeth in his mouth. He has gurgling respirations and is maintaining his own airway poorly. The cervical spine is being held in line.",
+      "vitals": { "hr": "104 bpm", "bp": "128/80 mmHg", "rr": "22/min gurgling", "spo2": "90%", "gcs": "11" },
+      "question": "What is the most appropriate immediate airway action?",
+      "options": [
+        "Insert a nasopharyngeal airway",
+        "Suction the airway and open it with a modified jaw thrust",
+        "Perform immediate surgical cricothyrotomy",
+        "Place the patient supine and apply a nonrebreather only"
+      ],
+      "correct": 1,
+      "explanation": "Gurgling means fluid in the airway—suction first, and open the airway with a modified jaw thrust to protect the cervical spine. Definitive airway management follows once the airway is cleared and the patient is preoxygenated.",
+      "clinicalPearl": "Suction before you visualize. You cannot intubate or ventilate effectively through a mouth full of blood and debris."
+    },
+    {
+      "id": "c04_s02",
+      "title": "Hypoventilating Head-Injured Patient",
+      "presentation": "An 18-year-old fell from a roof. He is unresponsive with slow, shallow breathing at 6 per minute and snoring respirations. SpO2 is dropping.",
+      "vitals": { "hr": "58 bpm", "bp": "168/96 mmHg", "rr": "6/min shallow", "spo2": "85%", "gcs": "6" },
+      "question": "What is the priority intervention?",
+      "options": [
+        "Hyperventilate at 24 breaths/min routinely",
+        "Open the airway, then assist ventilations with BVM and oxygen at 8–10/min confirming chest rise",
+        "Apply a nonrebreather and reassess in 5 minutes",
+        "Withhold ventilation until intubation equipment arrives"
+      ],
+      "correct": 1,
+      "explanation": "Snoring indicates the tongue obstructing the airway—open it (jaw thrust/adjunct). A rate of 6/min with hypoxia is inadequate ventilation, so assist with BVM and oxygen at 8–10/min. The bradycardia and hypertension hint at rising intracranial pressure; avoid routine hyperventilation unless herniation signs appear.",
+      "clinicalPearl": "Hypoventilation worsens secondary brain injury. Support ventilation to normal rates and oxygenation—do not over-ventilate."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Anticipating a Difficult Airway",
+      "presentation": "A 60-year-old obese patient with a short, thick neck is in a cervical collar after a motorcycle crash. He is breathing but tiring, with SpO2 92% on a nonrebreather. Your protocol allows drug-assisted intubation.",
+      "vitals": { "hr": "110 bpm", "bp": "138/84 mmHg", "rr": "24/min", "spo2": "92%", "gcs": "13" },
+      "question": "Which step best optimizes a safe first intubation attempt?",
+      "options": [
+        "Remove the collar and hyperextend the neck",
+        "Apply apneic oxygenation by nasal cannula and prepare external laryngeal manipulation plus a backup BIAD",
+        "Skip preoxygenation to save time",
+        "Attempt intubation repeatedly regardless of saturation"
+      ],
+      "correct": 1,
+      "explanation": "Obesity, short neck, and in-line immobilization predict a difficult airway (MMAP). Apneic oxygenation prolongs safe apnea, ELM improves the glottic view, and a backup BIAD/plan must be ready. The collar/in-line stabilization is maintained, not removed.",
+      "clinicalPearl": "Predict difficulty before you act: optimize position, preoxygenate, use apneic oxygenation and ELM, and always have a rescue device ready."
+    }
+  ]
+}

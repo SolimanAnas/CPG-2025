@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Rollover MVC — Sequencing the Primary Survey",
+      "presentation": "You arrive at a single-vehicle rollover. A restrained 28-year-old male is still in the driver's seat, awake but confused, with noisy breathing and a bleeding scalp laceration that is soaking his collar. The scene is secured by fire.",
+      "vitals": { "hr": "118 bpm", "bp": "104/70 mmHg", "rr": "26/min noisy", "spo2": "92%", "gcs": "13" },
+      "question": "After scene size-up, what is the correct first action in the initial assessment?",
+      "options": [
+        "Apply a traction splint to the legs",
+        "Control the actively bleeding scalp laceration, then assess LOC and airway",
+        "Obtain a full SAMPLE history",
+        "Perform a detailed neurologic exam"
+      ],
+      "correct": 1,
+      "explanation": "Using CABC, life-threatening external bleeding is controlled first (direct pressure to the scalp), then you assess level of consciousness and immediately address the noisy airway. The generalized mechanism warrants a rapid trauma survey to follow.",
+      "clinicalPearl": "Noisy breathing is obstructed breathing—address airway sounds the moment you hear them rather than waiting to finish the survey."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Deciding Load-and-Go",
+      "presentation": "A 45-year-old struck by a car is found supine. During the rapid trauma survey you note a tender, rigid abdomen and an unstable pelvis. He is pale and diaphoretic with a thready radial pulse.",
+      "vitals": { "hr": "132 bpm", "bp": "86/58 mmHg", "rr": "24/min", "spo2": "94%", "skin": "pale, cool, clammy" },
+      "question": "What is the most appropriate decision at this point?",
+      "options": [
+        "Complete a full secondary survey on scene before moving",
+        "Declare load-and-go, package, and transport immediately with IV access en route",
+        "Apply bilateral traction splints first",
+        "Stay on scene to start two large-bore IVs and infuse 2 liters"
+      ],
+      "correct": 1,
+      "explanation": "A tender/rigid abdomen and unstable pelvis with signs of shock indicate internal hemorrhage—a critical trauma situation. This patient is load-and-go: transport immediately, begin IV fluid therapy en route, and notify the trauma center early.",
+      "clinicalPearl": "Unstable pelvis plus bilateral femur fractures or a rigid abdomen should make you anticipate and treat for hemorrhagic shock."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Ongoing Exam Catches a Deteriorating Patient",
+      "presentation": "En route, your previously stable chest-trauma patient becomes increasingly anxious and short of breath. On your Ongoing Exam, breath sounds are now absent on the right and his neck veins appear more distended than before.",
+      "vitals": { "hr": "128 bpm", "bp": "92/64 mmHg", "rr": "30/min labored", "spo2": "88%", "skin": "pale" },
+      "question": "What does the Ongoing Exam most likely reveal, and what is indicated?",
+      "options": [
+        "Hyperglycemia — give insulin",
+        "Developing tension pneumothorax — prepare for needle decompression",
+        "Normal progression — no action",
+        "Simple anxiety — administer a sedative"
+      ],
+      "correct": 1,
+      "explanation": "New absent breath sounds on one side with rising JVD, hypoxia, and hypotension indicate a developing tension pneumothorax. The Ongoing Exam exists precisely to catch this evolution so you can decompress promptly.",
+      "clinicalPearl": "Repeat the Ongoing Exam after every condition change—deterioration during transport is common and treatable when caught early."
+    }
+  ]
+}

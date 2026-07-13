@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "Stabbing with Deteriorating Vitals",
+      "presentation": "A 24-year-old male was stabbed in the right anterior chest. He is anxious and severely short of breath. Breath sounds are absent on the right, the right chest is hyperresonant, and his neck veins are distended.",
+      "vitals": { "hr": "138 bpm", "bp": "82/54 mmHg", "rr": "34/min labored", "spo2": "84%", "skin": "cyanotic" },
+      "question": "What is the most appropriate immediate intervention?",
+      "options": [
+        "Apply a fully airtight occlusive dressing only",
+        "Perform needle chest decompression of the right side",
+        "Start two liters of IV fluid before any other action",
+        "Apply a traction splint"
+      ],
+      "correct": 1,
+      "explanation": "Absent breath sounds and hyperresonance on the right with JVD, hypotension, cyanosis, and respiratory distress are a tension pneumothorax. With signs plus respiratory distress/cyanosis and shock, emergency needle decompression is indicated immediately.",
+      "clinicalPearl": "Tension pneumothorax is a clinical diagnosis—decompress on signs and shock; do not wait for tracheal deviation."
+    },
+    {
+      "id": "c06_s02",
+      "title": "Distinguishing Hemothorax from Tension",
+      "presentation": "A 40-year-old was shot in the left chest. He is pale and diaphoretic. The left chest is dull to percussion with decreased breath sounds, and his neck veins are flat.",
+      "vitals": { "hr": "130 bpm", "bp": "78/50 mmHg", "rr": "28/min", "spo2": "90%", "skin": "pale, cool" },
+      "question": "What is the most likely injury and the correct management?",
+      "options": [
+        "Tension pneumothorax — needle decompression",
+        "Massive hemothorax — treat shock, give oxygen, rapid transport",
+        "Cardiac tamponade — pericardiocentesis on scene",
+        "Flail chest — tape the segment"
+      ],
+      "correct": 1,
+      "explanation": "Dullness to percussion, decreased breath sounds, FLAT neck veins, and hypovolemic shock indicate massive hemothorax. Decompression does not relieve blood; manage shock, oxygenate, and transport rapidly to surgical care.",
+      "clinicalPearl": "Flat neck veins + dullness = blood (hemothorax). Distended neck veins + hyperresonance = air (tension pneumothorax)."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Beck's Triad After Blunt Trauma",
+      "presentation": "A restrained driver struck the steering wheel. He is confused and dusky. You note distended neck veins, muffled heart tones, and a narrowing pulse pressure. Breath sounds are equal bilaterally.",
+      "vitals": { "hr": "126 bpm", "bp": "88/72 mmHg", "rr": "26/min", "spo2": "93%", "skin": "dusky" },
+      "question": "What condition does this presentation indicate?",
+      "options": [
+        "Tension pneumothorax",
+        "Cardiac (pericardial) tamponade",
+        "Simple pneumothorax",
+        "Pulmonary contusion"
+      ],
+      "correct": 1,
+      "explanation": "Hypotension with a narrow pulse pressure, distended neck veins, and muffled heart tones (Beck's triad) with EQUAL breath sounds points to pericardial tamponade rather than a tension pneumothorax. Provide supportive care and transport rapidly for pericardiocentesis/surgery.",
+      "clinicalPearl": "Equal breath sounds with Beck's triad favor tamponade; absent unilateral breath sounds with hyperresonance favor tension pneumothorax."
+    }
+  ]
+}

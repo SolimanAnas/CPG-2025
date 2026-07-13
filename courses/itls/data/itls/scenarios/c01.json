@@ -1,0 +1,71 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "Multiple Patient Scene with Potential Hazards",
+      "presentation": "Upon arrival at a road traffic accident scene, you find a slight fuel odor and no fire danger. The senior fire officer reports that the driver is uninjured but the pedestrian appears to be unresponsive with an airway compromise. You have donned gloves and are proceeding to assess the pedestrian.",
+      "vitals": {
+        "hr": "108 bpm",
+        "bp": "95/62 mmHg",
+        "rr": "24 bpm",
+        "spo2": "93%",
+        "temp": "97.8 F"
+      },
+      "question": "What is the most appropriate next action?",
+      "options": [
+        "A: Perform a focused exam on the driver.",
+        "B: Secure the scene and initiate primary survey on the pedestrian.",
+        "C: Request additional resources for the vehicle spill.",
+        "D: Conduct a rapid trauma survey of both patients."
+      ],
+      "correct": 1,
+      "explanation": "The most appropriate next action is to secure the scene and initiate a primary survey on the pedestrian. The patient's unresponsiveness and airway compromise are critical concerns that require immediate attention, even though the driver appears uninjured.",
+      "clinicalPearl": "In multiple patient scenes, prioritize patients based on their level of consciousness and airway status."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Head-on Collision with Potential Cervical Spine Injury",
+      "presentation": "You arrive at the scene of a head-on collision where an ambulance is staged approximately one-half mile upwind. Upon arrival, you smell diesel fuel and see a four-door sedan damaged in the front and left fender with a starred windshield. A man on the ground 30 feet behind the car is not moving.",
+      "vitals": {
+        "hr": "120 bpm",
+        "bp": "85/60 mmHg",
+        "rr": "28 bpm",
+        "spo2": "94%",
+        "temp": "97.3 F"
+      },
+      "question": "What should be your initial assessment focus?",
+      "options": [
+        "A: Check for consciousness and airway.",
+        "B: Perform a rapid trauma survey of the vehicle's interior.",
+        "C: Look for signs of cervical spine injury in the driver.",
+        "D: Assess the fuel spill and potential hazards."
+      ],
+      "correct": 0,
+      "explanation": "The initial assessment should focus on checking for consciousness and airway. The patient is unresponsive, which requires immediate attention.",
+      "clinicalPearl": "In head-on collisions, maintain a high index of suspicion for cervical spine injuries due to the rapid forward deceleration mechanism."
+    },
+    {
+      "id": "c01_s03",
+      "title": "Rear-impact Collision with Potential Spinal Injury",
+      "presentation": "You are dispatched to a rear-end collision where two vehicles are involved. The driver of the rear vehicle is complaining of neck pain and tingling in his right arm. He states that he was hit from behind while driving.",
+      "vitals": {
+        "hr": "105 bpm",
+        "bp": "120/80 mmHg",
+        "rr": "16 bpm",
+        "spo2": "98%",
+        "temp": "98.7 F"
+      },
+      "question": "What is the most appropriate next step?",
+      "options": [
+        "A: Perform a focused exam on the driver.",
+        "B: Conduct a rapid trauma survey of both vehicles.",
+        "C: Check for seat belt usage and airbag deployment in the rear vehicle.",
+        "D: Assess the potential for spinal injury based on the mechanism of injury."
+      ],
+      "correct": 3,
+      "explanation": "The most appropriate next step is to assess the potential for spinal injury based on the mechanism of injury. Rear-impact collisions can cause significant cervical spine injuries, especially if the driver was not properly restrained.",
+      "clinicalPearl": "In rear-end collisions, consider the possibility of cervical spine injury due to the rapid forward deceleration and hyperextension mechanisms."
+    }
+  ]
+}

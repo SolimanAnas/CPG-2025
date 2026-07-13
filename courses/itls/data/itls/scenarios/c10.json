@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "The Talk-and-Deteriorate Patient",
+      "presentation": "A 22-year-old fell from a ladder, was briefly knocked out, then woke and talked normally. Twenty minutes later he becomes increasingly drowsy and confused, and his right pupil is now larger than the left.",
+      "vitals": { "hr": "54 bpm", "bp": "178/100 mmHg", "rr": "12/min irregular", "spo2": "96%", "gcs": "9 and falling" },
+      "question": "What is happening and what is the priority?",
+      "options": [
+        "Simple intoxication — let him sleep it off",
+        "Expanding intracranial hematoma with early herniation — secure airway, maintain BP/oxygenation, rapid neurosurgical transport, controlled hyperventilation for herniation signs",
+        "Neurogenic shock — give fluids only",
+        "Hyperglycemia — administer insulin"
+      ],
+      "correct": 1,
+      "explanation": "A lucid interval followed by deterioration with a dilated pupil, bradycardia, hypertension, and irregular respirations (Cushing's reflex) signals an expanding hematoma and herniation. Protect the airway, maintain oxygenation and blood pressure, apply controlled mild hyperventilation (ETCO2 30–35) for herniation signs, and transport emergently to neurosurgery.",
+      "clinicalPearl": "A lucid interval that ends in deterioration is the classic epidural hematoma course—every minute to the operating room counts."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Don't Let the Brain Get Hypoxic or Hypotensive",
+      "presentation": "An unrestrained driver has a severe head injury (GCS 6) and a femur fracture. SpO2 reads 88% and systolic pressure is 84.",
+      "vitals": { "hr": "120 bpm", "bp": "84/56 mmHg", "rr": "8/min shallow", "spo2": "88%", "gcs": "6" },
+      "question": "Which combination best protects this brain?",
+      "options": [
+        "Hyperventilate to ETCO2 of 25 and withhold fluids",
+        "Secure the airway, oxygenate to ≥94%, ventilate to normal ETCO2, and restore blood pressure",
+        "Focus only on the femur",
+        "Allow permissive hypotension to a systolic of 70"
+      ],
+      "correct": 1,
+      "explanation": "Hypoxia (88%) and hypotension (84 systolic) are the two biggest causes of secondary brain injury. Secure the airway (GCS 6), oxygenate to ≥94%, ventilate to a normal ETCO2, and treat the hypotension/hemorrhage to maintain cerebral perfusion. Routine hyperventilation and permissive hypotension are wrong here.",
+      "clinicalPearl": "In the head-injured trauma patient, the usual permissive-hypotension strategy is modified—protect cerebral perfusion by keeping blood pressure up."
+    },
+    {
+      "id": "c10_s03",
+      "title": "Scoring and Trending the GCS",
+      "presentation": "You assess a head-injured patient who opens his eyes to pain, makes incomprehensible sounds, and withdraws from painful stimulus.",
+      "vitals": { "hr": "98 bpm", "bp": "140/88 mmHg", "rr": "16/min", "spo2": "97%", "gcs": "calculate" },
+      "question": "What is this patient's Glasgow Coma Scale score?",
+      "options": [
+        "GCS 5 (E1 V1 M3)",
+        "GCS 8 (E2 V2 M4)",
+        "GCS 11 (E3 V3 M5)",
+        "GCS 14 (E4 V4 M6)"
+      ],
+      "correct": 1,
+      "explanation": "Eyes open to pain = 2, incomprehensible sounds = 2, withdraws from pain = 4, totaling GCS 8. A GCS of 8 indicates severe TBI and inability to protect the airway. Trending the GCS over time is more important than any single value.",
+      "clinicalPearl": "Always document the GCS by its components (E/V/M) and trend it—the direction of change drives decisions."
+    }
+  ]
+}

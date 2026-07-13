@@ -1,0 +1,53 @@
+{
+  "chapter": "c13",
+  "cases": [
+    {
+      "id": "c13_s01",
+      "title": "Seat-Belt Sign and Hidden Bleeding",
+      "presentation": "A restrained 35-year-old in a high-speed MVC has a bruise across her lower abdomen from the lap belt. She is mildly tender but says she feels 'okay.' Her heart rate is climbing and her skin is becoming cool.",
+      "vitals": { "hr": "120 bpm", "bp": "108/86 mmHg", "rr": "22/min", "spo2": "98%", "skin": "cool" },
+      "question": "How should you proceed?",
+      "options": [
+        "Reassure and release—she feels fine",
+        "Treat as potential intra-abdominal injury: oxygen, IV en route, keep warm, rapid transport to a trauma center",
+        "Apply a traction splint",
+        "Wait for the abdomen to become rigid before acting"
+      ],
+      "correct": 1,
+      "explanation": "A seat-belt sign with rising heart rate, narrowing pulse pressure, and cool skin signals possible intra-abdominal injury and early shock—even with a benign-feeling exam. Treat for shock and transport rapidly; do not wait for rigidity.",
+      "clinicalPearl": "A seat-belt sign plus early shock signs is intra-abdominal injury until proven otherwise—mechanism beats a reassuring exam."
+    },
+    {
+      "id": "c13_s02",
+      "title": "Evisceration After a Stabbing",
+      "presentation": "A young man was stabbed in the abdomen and has a loop of bowel protruding through the wound. He is anxious and in pain.",
+      "vitals": { "hr": "118 bpm", "bp": "112/74 mmHg", "rr": "22/min", "spo2": "98%", "skin": "warm" },
+      "question": "What is the correct wound management?",
+      "options": [
+        "Gently push the bowel back into the abdomen",
+        "Cover the exposed bowel with a moist sterile dressing and an occlusive layer; treat for shock and transport",
+        "Apply a dry tight pressure dressing",
+        "Pack the wound with hemostatic gauze around the bowel"
+      ],
+      "correct": 1,
+      "explanation": "Never replace eviscerated organs. Cover them with a moist sterile dressing and an occlusive layer to keep them warm and moist, prevent contamination, treat for shock, and transport. Flexing the knees may reduce tension.",
+      "clinicalPearl": "Moist, cover, transport—never replace eviscerated organs into the abdomen."
+    },
+    {
+      "id": "c13_s03",
+      "title": "Unstable Pelvis in Shock",
+      "presentation": "A pedestrian struck by a car has pelvic pain and is in shock. On a single gentle assessment the pelvis feels unstable. There is no external bleeding.",
+      "vitals": { "hr": "134 bpm", "bp": "84/58 mmHg", "rr": "24/min", "spo2": "96%", "skin": "pale, cool" },
+      "question": "What is the priority intervention?",
+      "options": [
+        "Spring the pelvis several times to confirm instability",
+        "Apply a pelvic binder at the greater trochanters, treat for shock, and transport rapidly",
+        "Apply bilateral traction splints",
+        "Delay transport to obtain IV access"
+      ],
+      "correct": 1,
+      "explanation": "An unstable pelvis with shock indicates major pelvic hemorrhage. Apply a pelvic binder at the level of the greater trochanters to close the pelvic volume and tamponade bleeding, treat for shock, and transport rapidly to surgical care. Avoid repeated pelvic manipulation.",
+      "clinicalPearl": "Bind early, assess once: a pelvic binder at the trochanters can be life-saving—repeated springing only worsens bleeding."
+    }
+  ]
+}
