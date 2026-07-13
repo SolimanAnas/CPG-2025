@@ -1,5 +1,5 @@
 /**
- * DCAS Clinical ECG Engine v3.0
+ * SmartCare Clinical ECG Engine v3.0
  * Real-time physics-based ECG synthesis
  * Based on ecg.md (physics model) + ecg-data.md (clinical data)
  *
@@ -146,19 +146,31 @@ const ECGEngine = (() => {
       // ════════════════════════════════════════
 
       case 'svt': {
-        // HR=180 → RR=0.333s.
-        // P waves: NOT VISIBLE — buried inside the QRS complex (retrograde conduction).
-        // No discernible P wave before or after QRS. Narrow QRS. Rapid regular rate.
-        // T wave is slightly deformed by the hidden retrograde P (small negative notch at T end).
-        const rr = 60 / 180;
+        // Narrow-complex SVT at ~200 bpm. NO P waves. Sharp QRS spike followed by a broad
+        // rounded DOME (fused T / retrograde P) filling the gap. Perfectly regular RR.
+        const rr = 60 / 200;
         const p = t % rr;
-        // Sharp narrow QRS — no preceding P wave
-        v  = G(p, 0.016, 0.007, -0.06); // Q
-        v += G(p, 0.028, 0.007,  1.65); // R — sharp, narrow
-        v += G(p, 0.040, 0.008, -0.22); // S
-        // T wave with slight terminal notch = retrograde P buried at end of T
-        v += AG(p, 0.130, 0.035, 0.052, 0.22); // T wave
-        v += G(p,  0.175, 0.010, -0.06); // retrograde P notch buried at T end (barely visible)
+        v  = G(p, 0.016, 0.007,  -0.09); // Q
+        v += G(p, 0.036, 0.0085,  1.55); // R — narrow ~70ms, marches tightly
+        v += G(p, 0.058, 0.011,  -0.32); // S
+        v += G(p, 0.170, 0.052,   0.36); // broad rounded dome between QRS complexes
+        break;
+      }
+
+      case 'psvt': {
+        // Paroxysmal SVT: a few NORMAL SINUS beats, then an abrupt onset into SVT
+        // (the "paroxysm"). One-shot — once SVT starts it STAYS in SVT (no return to sinus).
+        const sinusRR = 0.80, sinusDur = sinusRR * 3; // ~3 sinus beats (~75 bpm) = 2.40s, then SVT forever
+        const svtRR = 0.30;                           // SVT cycle = 0.30s (~200 bpm)
+        if (t < sinusDur) {
+          v = sinusComplex(t % sinusRR, { pr: 0.16, rAmp: 1.6 }); // normal sinus onset (with P waves)
+        } else {
+          const p = (t - sinusDur) % svtRR;           // SVT continues indefinitely: narrow QRS, no P, dome
+          v  = G(p, 0.016, 0.007,  -0.09);
+          v += G(p, 0.036, 0.0085,  1.55);
+          v += G(p, 0.058, 0.011,  -0.32);
+          v += G(p, 0.170, 0.052,   0.36);
+        }
         break;
       }
 

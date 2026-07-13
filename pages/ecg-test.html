@@ -1,11 +1,71 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- General SEO Meta Tags -->
+    <meta name="description" content="ECG rhythm recognition tests � practice identifying cardiac rhythms, conduction abnormalities, and myocardial infarction patterns.">
+    <meta name="keywords" content="DCAS, pages, ecg-test, clinical learning, EMS, NREMT, paramedic study, EMT exam, healthcare education">
+    <meta name="author" content="Soliman Anas">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solimananas.github.io/CPG-2025/pages/ecg-test">
+    <meta property="og:title" content="DCAS · ECG Tests">
+    <meta property="og:description" content="ECG rhythm recognition tests � practice identifying cardiac rhythms, conduction abnormalities, and myocardial infarction patterns.">
+    <meta property="og:image" content="https://solimananas.github.io/CPG-2025/images/og.jpg">
+    <meta property="og:image:width" content="1538">
+    <meta property="og:image:height" content="1022">
+    <meta property="og:image:alt" content="DCAS · Clinical Learning Platform">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="DCAS">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://solimananas.github.io/CPG-2025/pages/ecg-test">
+    <meta name="twitter:title" content="DCAS · ECG Tests">
+    <meta name="twitter:description" content="ECG rhythm recognition tests � practice identifying cardiac rhythms, conduction abnormalities, and myocardial infarction patterns.">
+    <meta name="twitter:image" content="https://solimananas.github.io/CPG-2025/images/og.jpg">
+    <meta name="twitter:image:alt" content="DCAS · Clinical Learning Platform">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://solimananas.github.io/CPG-2025/pages/ecg-test">
+
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../icons/icon.png">
+    <link rel="shortcut icon" href="../icons/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../icons/icon.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "DCAS · ECG Tests",
+  "url": "https://solimananas.github.io/CPG-2025/pages/ecg-test",
+  "description": "ECG rhythm recognition tests � practice identifying cardiac rhythms, conduction abnormalities, and myocardial infarction patterns.",
+  "image": "https://solimananas.github.io/CPG-2025/images/og.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Soliman Anas"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DCAS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solimananas.github.io/CPG-2025/icons/icon.png"
+    }
+  },
+  "inLanguage": "en-US"
+}
+    </script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>DCAS · ECG Tests</title>
 <style>
-/* ── TOKENS ── */
+/* -- TOKENS -- */
 :root,[data-theme="dark"]{
   --bg:#0f172a;--card:#1e293b;--border:#334155;
   --tx:#f1f5f9;--mu:#94a3b8;--primary:#3b82f6;
@@ -27,7 +87,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
      background:var(--bg);color:var(--tx);min-height:100vh;
      overscroll-behavior:none;line-height:1.6;}
 
-/* ── HEADER ── */
+/* -- HEADER -- */
 .hdr{position:sticky;top:0;z-index:100;background:var(--card);
      border-bottom:1px solid var(--border);
      display:flex;align-items:center;gap:12px;padding:10px 16px;}
@@ -39,11 +99,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 .theme-cycle{background:none;border:1px solid var(--border);border-radius:20px;
              padding:5px 12px;cursor:pointer;font-size:.8rem;color:var(--mu);}
 
-/* ── SELECT SCREEN ── */
+/* -- SELECT SCREEN -- */
 #selectScreen{max-width:640px;margin:0 auto;padding:32px 16px;}
 .hero{text-align:center;margin-bottom:32px;}
 .hero h1{font-size:2rem;font-weight:900;margin-bottom:8px;}
 .hero p{color:var(--mu);font-size:.95rem;}
+.hero .disclaimer-link{display:inline-block;margin-top:10px;color:var(--mu);font-size:.72rem;text-decoration:underline;text-underline-offset:2px;}
+.hero .disclaimer-link:hover{color:var(--tx);}
 .test-cards{display:grid;gap:16px;}
 .test-card{background:var(--card);border:1px solid var(--border);
            border-radius:var(--radius);padding:24px;cursor:pointer;
@@ -58,7 +120,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
            border-radius:20px;padding:3px 10px;font-size:.75rem;
            font-weight:600;color:var(--mu);}
 
-/* ── EXAM SCREEN ── */
+/* -- EXAM SCREEN -- */
 #examScreen{display:none;}
 .progress-bar{height:3px;background:var(--border);}
 .progress-fill{height:100%;background:var(--primary);transition:width .3s;}
@@ -115,7 +177,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 .btn-next{background:var(--success);color:#fff;}
 .btn-next:hover{opacity:.88;}
 
-/* ── STICKY FOOTER NAV ── */
+/* -- STICKY FOOTER NAV -- */
 .sticky-nav{position:fixed;bottom:0;left:0;right:0;
             background:var(--card);border-top:1px solid var(--border);
             padding:10px 16px;display:flex;align-items:center;
@@ -125,7 +187,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
             padding:4px 10px;border-radius:20px;
             background:var(--bg);border:1px solid var(--border);}
 
-/* ── RESULT SCREEN ── */
+/* -- RESULT SCREEN -- */
 #resultScreen{display:none;max-width:640px;margin:0 auto;padding:32px 16px 80px;}
 .score-hero{text-align:center;margin-bottom:32px;}
 .score-circle{width:130px;height:130px;border-radius:50%;
@@ -160,7 +222,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 .btn-outline{background:none;border:2px solid var(--border);color:var(--tx);}
 .btn-outline:hover{border-color:var(--primary);color:var(--primary);}
 
-/* ── TOAST ── */
+/* -- TOAST -- */
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(16px);
        padding:9px 20px;border-radius:50px;font-weight:700;font-size:.9rem;
        opacity:0;transition:all .22s;z-index:999;pointer-events:none;}
@@ -177,45 +239,64 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   <button class="theme-cycle" onclick="cycleTheme()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#palette"/></svg> Theme</button>
 </div>
 
-<!-- ── SELECT SCREEN ── -->
+<!-- -- SELECT SCREEN -- -->
 <div id="selectScreen">
   <div class="hero">
     <h1><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#trending-up"/></svg> ECG Tests</h1>
-    <p>Two 30-question practice tests covering ECG interpretation,<br>arrhythmias, ischaemia, and advanced ECG patterns.</p>
+    <p>Four 30-question practice tests (120 questions) covering ECG interpretation,<br>arrhythmias, ischaemia, ACLS management, and advanced 12-lead patterns.</p>
+    <a class="disclaimer-link" href="about.html#disclaimer">Study aid only � not for direct patient care</a>
   </div>
   <div class="test-cards">
     <div class="test-card" onclick="startTest('../src/ECG/ecg-test-1.json','ECG Test 1')">
-      <h2>Test 1 — Rhythm & Blocks</h2>
-      <p>Normal sinus rhythm, heart blocks (1°–3°), tachyarrhythmias, bradyarrhythmias, bundle branch blocks, and ECG fundamentals.</p>
+      <h2>Test 1 � Rhythm & Blocks</h2>
+      <p>Normal sinus rhythm, heart blocks (1��3�), tachyarrhythmias, bradyarrhythmias, bundle branch blocks, and ECG fundamentals.</p>
       <div class="test-meta">
         <span class="meta-chip">30 Questions</span>
         <span class="meta-chip">60 min</span>
-        <span class="meta-chip">Rhythms • Blocks • Arrhythmias</span>
+        <span class="meta-chip">Rhythms � Blocks � Arrhythmias</span>
       </div>
     </div>
     <div class="test-card" onclick="startTest('../src/ECG/ecg-test-2.json','ECG Test 2')">
-      <h2>Test 2 — Ischaemia & Advanced</h2>
+      <h2>Test 2 � Ischaemia & Advanced</h2>
       <p>STEMI patterns, Wellens', de Winter, Brugada, electrolyte effects, pacemaker rhythms, ARVC, WPW, and Sgarbossa criteria.</p>
       <div class="test-meta">
         <span class="meta-chip">30 Questions</span>
         <span class="meta-chip">60 min</span>
-        <span class="meta-chip">STEMI • Electrolytes • Advanced</span>
+        <span class="meta-chip">STEMI � Electrolytes � Advanced</span>
+      </div>
+    </div>
+    <div class="test-card" onclick="startTest('../src/ECG/ecg-test-3.json','ECG Test 3')">
+      <h2>Test 3 � ACLS Rhythm Management</h2>
+      <p>Cardiac arrest (VF, pulseless VT, PEA, asystole), the H's &amp; T's, tachycardia &amp; bradycardia algorithms, drug doses, cardioversion vs defibrillation, and transcutaneous pacing.</p>
+      <div class="test-meta">
+        <span class="meta-chip">30 Questions</span>
+        <span class="meta-chip">60 min</span>
+        <span class="meta-chip">Arrest � Algorithms � Drugs</span>
+      </div>
+    </div>
+    <div class="test-card" onclick="startTest('../src/ECG/ecg-test-4.json','ECG Test 4')">
+      <h2>Test 4 � 12-Lead, Axis & Chambers</h2>
+      <p>Lead territories &amp; reciprocal change, axis deviation, LVH/RVH &amp; atrial enlargement, fascicular and bundle branch blocks, ECG mimics (PE, pericarditis, hypothermia), and integrated vignettes.</p>
+      <div class="test-meta">
+        <span class="meta-chip">30 Questions</span>
+        <span class="meta-chip">60 min</span>
+        <span class="meta-chip">12-Lead � Axis � Integration</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── EXAM SCREEN ── -->
+<!-- -- EXAM SCREEN -- -->
 <div id="examScreen">
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
   <div class="exam-wrap" id="examWrap"></div>
   <div class="sticky-nav">
     <span class="nav-info" id="navInfo">Q 1 / 30</span>
-    <span class="live-score" id="liveScore">Score: –</span>
+    <span class="live-score" id="liveScore">Score: �</span>
   </div>
 </div>
 
-<!-- ── RESULT SCREEN ── -->
+<!-- -- RESULT SCREEN -- -->
 <div id="resultScreen">
   <div class="score-hero">
     <div class="score-circle" id="scoreCircle"></div>
@@ -231,13 +312,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 </div>
 
 <script>
-// ── State ──
+// -- State --
 const THEMES = ['dark','light','sepia'];
 let themeIdx = THEMES.indexOf(localStorage.getItem('ecg-test-theme')||'dark');
 
 let questions=[], currentQ=0, answers=[], submitted=[], lastFile='', lastTitle='';
 
-// ── Theme ──
+// -- Theme --
 function cycleTheme(){
   themeIdx=(themeIdx+1)%THEMES.length;
   const t=THEMES[themeIdx];
@@ -250,12 +331,12 @@ function cycleTheme(){
   document.documentElement.setAttribute('data-theme',t);
 })();
 
-// ── Load & Start ──
+// -- Load & Start --
 async function startTest(file, title){
   try {
     const r = await fetch(file);
     const db = await r.json();
-    questions = shuffle([...db.questions]);
+    questions = shuffle([...db.questions]).map(shuffleOptions);
     answers = new Array(questions.length).fill(null);
     submitted = new Array(questions.length).fill(false);
     currentQ = 0;
@@ -271,7 +352,16 @@ async function startTest(file, title){
 
 function shuffle(arr){return arr.sort(()=>Math.random()-.5);}
 
-// ── Render Question ──
+// Shuffle a question's options and remap correct_answer so the answer key
+// is never positionally predictable (different on every attempt).
+function shuffleOptions(q){
+  const letters=['A','B','C','D','E','F'];
+  const correctText = q.options[letters.indexOf(q.correct_answer)];
+  const opts = shuffle([...q.options]);
+  return {...q, options:opts, correct_answer:letters[opts.indexOf(correctText)]};
+}
+
+// -- Render Question --
 function renderQuestion(){
   const q = questions[currentQ];
   const isSubmitted = submitted[currentQ];
@@ -354,13 +444,13 @@ function nextQuestion(){
 
 function updateLiveScore(){
   const done=submitted.filter(Boolean).length;
-  if(!done){document.getElementById('liveScore').textContent='Score: –';return;}
+  if(!done){document.getElementById('liveScore').textContent='Score: �';return;}
   const correct=submitted.filter((s,i)=>s && answers[i]===questions[i].correct_answer).length;
   const pct=Math.round((correct/done)*100);
   document.getElementById('liveScore').textContent=`Score: ${pct}% (${correct}/${done})`;
 }
 
-// ── Results ──
+// -- Results --
 function showResults(){
   const total=questions.length;
   const correct=submitted.filter((s,i)=>s && answers[i]===questions[i].correct_answer).length;
@@ -388,7 +478,7 @@ function showResults(){
       <div class="rev-q">${i+1}. ${q.text}</div>
       <div class="rev-ans">
         <span>Your answer:</span>
-        <span class="${isCorrect?'rev-correct':'rev-wrong'}">${userAns||'–'}: ${userText}</span>
+        <span class="${isCorrect?'rev-correct':'rev-wrong'}">${userAns||'�'}: ${userText}</span>
       </div>
       ${!isCorrect?`<div class="rev-ans"><span>Correct:</span><span class="rev-correct">${q.correct_answer}: ${correctText}</span></div>`:''}
       ${q.explanation?`<div class="rev-exp">${q.explanation}</div>`:''}
@@ -404,7 +494,7 @@ function backToSelect(){
   show('selectScreen');
 }
 
-// ── Utilities ──
+// -- Utilities --
 function show(id){
   ['selectScreen','examScreen','resultScreen'].forEach(s=>{
     document.getElementById(s).style.display = s===id ? (s==='examScreen'||s==='resultScreen'?'block':'block') : 'none';

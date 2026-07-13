@@ -1,0 +1,307 @@
+{
+  "title": "ECG Interpretation Test 3",
+  "description": "30-question ACLS rhythm recognition and emergency management test covering cardiac arrest, tachycardia and bradycardia algorithms, drug therapy, cardioversion, and pacing",
+  "categories": ["Cardiac Arrest","Tachycardia Management","Bradycardia Management","ACLS Pharmacology","Electrical Therapy"],
+  "questions": [
+    {
+      "id": 61,
+      "text": "A monitored patient suddenly collapses and the rhythm is ventricular fibrillation. What is the single most important immediate intervention?",
+      "options": ["Administer epinephrine 1 mg IV","Immediate defibrillation (unsynchronised shock) with high-quality CPR","Synchronised cardioversion","Give amiodarone 300 mg IV"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "VF Management",
+      "explanation": "VF and pulseless VT are shockable rhythms. The priority is high-quality CPR plus EARLY defibrillation (unsynchronised). Epinephrine 1 mg every 3-5 min and amiodarone 300 mg are given but never delay or replace prompt defibrillation. Each minute without defibrillation lowers survival ~7-10%."
+    },
+    {
+      "id": 62,
+      "text": "A patient has a regular wide-complex tachycardia at 200 bpm and then loses their pulse. The correct immediate management is:",
+      "options": ["Synchronised cardioversion","Defibrillation and CPR","Adenosine 6 mg rapid push","Amiodarone infusion over 10 minutes"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "Pulseless VT",
+      "explanation": "Pulseless VT is treated identically to VF as a shockable cardiac arrest rhythm: immediate defibrillation and CPR. Synchronised cardioversion is reserved for UNSTABLE VT that still has a pulse. If a wide-complex tachycardia patient loses their pulse, switch immediately to the cardiac arrest algorithm."
+    },
+    {
+      "id": 63,
+      "text": "The monitor shows an organised narrow-complex rhythm at 50 bpm, but no pulse is palpable despite a good seal. This is:",
+      "options": ["Asystole","Pulseless electrical activity (PEA)","Fine ventricular fibrillation","Sinus bradycardia"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "PEA",
+      "explanation": "PEA is organised electrical activity on the monitor with no palpable pulse. It is non-shockable. Treat with CPR and epinephrine 1 mg every 3-5 minutes while aggressively searching for and correcting a reversible cause (the H's and T's), which is the key to survival."
+    },
+    {
+      "id": 64,
+      "text": "Which is the correct management of confirmed asystole?",
+      "options": ["Defibrillate immediately","High-quality CPR and epinephrine 1 mg every 3-5 minutes; do NOT shock","Synchronised cardioversion","Atropine 3 mg then defibrillate"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Cardiac Arrest",
+      "topic": "Asystole",
+      "explanation": "Asystole is non-shockable: CPR plus epinephrine. First confirm it is not fine VF by checking lead connections, gain, and a second lead. Atropine is no longer recommended for asystole. Identify and treat reversible causes; check DNAR status."
+    },
+    {
+      "id": 65,
+      "text": "The recommended dose of epinephrine (adrenaline) in adult cardiac arrest is:",
+      "options": ["1 mg IV every 3-5 minutes","0.5 mg IV once","3 mg IV every 10 minutes","1 mg IV every minute"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "ACLS Pharmacology",
+      "topic": "Epinephrine",
+      "explanation": "Epinephrine 1 mg IV/IO every 3-5 minutes is given in all cardiac arrest rhythms. In non-shockable rhythms (PEA/asystole) it is given as soon as possible; in shockable rhythms it is given after the first or second shock. Its alpha effect improves coronary and cerebral perfusion during CPR."
+    },
+    {
+      "id": 66,
+      "text": "In refractory VF persisting after the third shock, the recommended first dose of amiodarone is:",
+      "options": ["150 mg IV","300 mg IV bolus","900 mg IV","50 mg IV"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ACLS Pharmacology",
+      "topic": "Amiodarone in Arrest",
+      "explanation": "Refractory VF/pulseless VT: amiodarone 300 mg IV/IO bolus after the third shock, with a further 150 mg dose if needed. Lidocaine is an acceptable alternative. These antiarrhythmics are adjuncts to defibrillation, not substitutes for it."
+    },
+    {
+      "id": 67,
+      "text": "Which of the following is one of the reversible causes of cardiac arrest (the H's and T's)?",
+      "options": ["Hyperthermia","Tension pneumothorax","Hypertension","Tachycardia"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "H's and T's",
+      "explanation": "The 5 H's: Hypovolaemia, Hypoxia, Hydrogen ion (acidosis), Hypo-/Hyperkalaemia, Hypothermia. The 5 T's: Tablets/Toxins, Tamponade (cardiac), Tension pneumothorax, Thrombosis-coronary (ACS), Thrombosis-pulmonary (PE). Hyperthermia, hypertension, and tachycardia are not on the list."
+    },
+    {
+      "id": 68,
+      "text": "Which pair contains ONLY shockable cardiac arrest rhythms?",
+      "options": ["VF and pulseless VT","PEA and asystole","Asystole and VF","VT with a pulse and PEA"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "Shockable Rhythms",
+      "explanation": "Shockable arrest rhythms = VF and pulseless VT (defibrillate). Non-shockable = PEA and asystole (CPR + epinephrine, treat causes). VT with a pulse is not an arrest rhythm; if unstable it is treated with synchronised cardioversion, not defibrillation."
+    },
+    {
+      "id": 69,
+      "text": "A patient with a heart rate of 190 bpm is hypotensive, diaphoretic, and has ischaemic chest pain. The most appropriate immediate treatment is:",
+      "options": ["Adenosine 6 mg rapid push","Synchronised cardioversion","Continued observation","Amiodarone infusion over 20 minutes"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachycardia Management",
+      "topic": "Unstable Tachycardia",
+      "explanation": "Serious features (hypotension, altered mental status, ischaemic chest pain, signs of shock, acute heart failure) define an UNSTABLE tachycardia. The treatment is immediate synchronised cardioversion, regardless of whether the rhythm is SVT, AF, flutter, or VT with a pulse."
+    },
+    {
+      "id": 70,
+      "text": "How does synchronised cardioversion differ from defibrillation?",
+      "options": ["Cardioversion always uses higher energy","Cardioversion delivers the shock timed to the R wave to avoid the vulnerable T wave","Defibrillation is used only for organised rhythms","There is no meaningful difference"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Electrical Therapy",
+      "topic": "Cardioversion vs Defibrillation",
+      "explanation": "Synchronised cardioversion times the shock to the R wave, avoiding the relative refractory period (T wave) so it does not induce VF. It is used for unstable organised rhythms with a pulse (AF, flutter, SVT, VT with pulse). Defibrillation is UNSYNCHRONISED and used for VF/pulseless VT."
+    },
+    {
+      "id": 71,
+      "text": "A stable patient has a regular narrow-complex tachycardia at 175 bpm with no visible P waves. First-line management is:",
+      "options": ["Immediate cardioversion","Vagal manoeuvres, then adenosine if unsuccessful","Amiodarone bolus","Digoxin loading"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Tachycardia Management",
+      "topic": "Stable SVT",
+      "explanation": "Stable, regular, narrow-complex tachycardia (likely SVT/AVNRT): try vagal manoeuvres first (modified Valsalva, carotid sinus massage), then adenosine. If these fail, a rate-limiting agent (beta-blocker or diltiazem) or cardioversion may be used. Cardioversion is reserved for instability."
+    },
+    {
+      "id": 72,
+      "text": "The correct initial adult dose of adenosine for SVT is:",
+      "options": ["6 mg rapid IV push followed immediately by a saline flush","12 mg slow IV over 2 minutes","0.5 mg IV","150 mg over 10 minutes"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "ACLS Pharmacology",
+      "topic": "Adenosine",
+      "explanation": "Adenosine 6 mg by RAPID IV push followed immediately by a 20 mL saline flush and arm elevation, because its half-life is under 10 seconds. If unsuccessful, give 12 mg, which may be repeated once. Warn the patient about transient flushing, chest tightness, and a sense of impending doom."
+    },
+    {
+      "id": 73,
+      "text": "In a patient with pre-excited atrial fibrillation (WPW with AF), which group of drugs is contraindicated?",
+      "options": ["Procainamide and ibutilide","AV-nodal blockers (adenosine, verapamil, diltiazem, digoxin, beta-blockers)","Synchronised cardioversion","Intravenous fluids"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Tachycardia Management",
+      "topic": "WPW with AF",
+      "explanation": "In pre-excited AF, AV-nodal blockers remove the AV node's protective rate-limiting effect, promoting rapid conduction down the accessory pathway, which can accelerate the ventricular rate and degenerate into VF. Avoid adenosine, verapamil, diltiazem, digoxin, and beta-blockers. Use procainamide or ibutilide, or cardiovert if unstable."
+    },
+    {
+      "id": 74,
+      "text": "A stable patient with atrial fibrillation and a rapid ventricular response of 140 bpm and normal LV function needs rate control. An appropriate agent is:",
+      "options": ["Adenosine","Diltiazem or a beta-blocker","Defibrillation","Atropine"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachycardia Management",
+      "topic": "AF Rate Control",
+      "explanation": "For AF with rapid ventricular response and preserved LV function, rate control with a calcium-channel blocker (diltiazem) or a beta-blocker is appropriate. Adenosine does not control AF (it only transiently blocks the AV node). In impaired LV function, amiodarone or digoxin are alternatives."
+    },
+    {
+      "id": 75,
+      "text": "Before elective cardioversion of atrial fibrillation that has been present for more than 48 hours, the patient should:",
+      "options": ["Receive adenosine first","Be anticoagulated for ~3 weeks beforehand, OR have a TOE to exclude atrial thrombus","Be given atropine","Receive an immediate unsynchronised shock"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachycardia Management",
+      "topic": "AF Cardioversion Timing",
+      "explanation": "AF lasting more than 48 hours (or unknown duration) carries a risk of atrial thrombus and embolic stroke on cardioversion. Anticoagulate for at least 3 weeks before and 4 weeks after, OR perform transoesophageal echo (TOE) to exclude thrombus before cardioverting. AF under 48 hours can be cardioverted earlier. Unstable patients are cardioverted immediately."
+    },
+    {
+      "id": 76,
+      "text": "A stable patient with WPW develops atrial fibrillation (irregular, wide, very rapid complexes). The preferred pharmacological agent is:",
+      "options": ["Digoxin","Procainamide (or ibutilide)","Verapamil","Adenosine"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Tachycardia Management",
+      "topic": "Pre-excited AF Therapy",
+      "explanation": "In pre-excited AF, procainamide (or ibutilide) slows conduction through the accessory pathway and is preferred. AV-nodal blockers (digoxin, verapamil, adenosine, beta-blockers) are contraindicated because they can accelerate accessory-pathway conduction and precipitate VF. Cardiovert if the patient becomes unstable."
+    },
+    {
+      "id": 77,
+      "text": "A haemodynamically stable patient has monomorphic ventricular tachycardia with a pulse. Reasonable pharmacological options include:",
+      "options": ["Adenosine","Amiodarone, procainamide, or sotalol","Verapamil","Digoxin"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachycardia Management",
+      "topic": "Stable VT",
+      "explanation": "Stable VT with a pulse: antiarrhythmics such as amiodarone, procainamide, or sotalol, with preparation for synchronised cardioversion. Verapamil and other AV-nodal blockers are contraindicated in wide-complex tachycardia of uncertain origin because they can cause haemodynamic collapse if the rhythm is VT."
+    },
+    {
+      "id": 78,
+      "text": "The treatment of choice for Torsades de Pointes is:",
+      "options": ["Amiodarone","Intravenous magnesium sulphate","Adenosine","Digoxin"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Tachycardia Management",
+      "topic": "Torsades de Pointes",
+      "explanation": "Torsades (polymorphic VT on a long QT) is treated with IV magnesium sulphate (1-2 g), correction of electrolytes (K, Mg), withdrawal of QT-prolonging drugs, and overdrive pacing or isoproterenol to shorten the QT. If pulseless, defibrillate. Amiodarone is avoided as it can further prolong the QT."
+    },
+    {
+      "id": 79,
+      "text": "Polymorphic VT occurring with a NORMAL baseline QT interval is most often caused by, and treated by, addressing:",
+      "options": ["Long QT; magnesium","Acute myocardial ischaemia; treat the ischaemia (revascularisation), beta-blockade, amiodarone","Hyperkalaemia; calcium","Digoxin toxicity; Fab fragments"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Tachycardia Management",
+      "topic": "Polymorphic VT",
+      "explanation": "Polymorphic VT with a normal QT is usually driven by acute ischaemia, so the priority is treating the ischaemia (urgent revascularisation), with beta-blockade and amiodarone. Polymorphic VT with a long QT is Torsades, treated with magnesium, electrolyte correction, and removal of offending drugs."
+    },
+    {
+      "id": 80,
+      "text": "The first-line drug for symptomatic bradycardia is:",
+      "options": ["Atropine 0.5 mg IV","Adenosine 6 mg IV","Amiodarone 300 mg IV","Magnesium 2 g IV"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "Bradycardia Management",
+      "topic": "Atropine",
+      "explanation": "Symptomatic bradycardia: atropine 0.5 mg IV, repeated every 3-5 minutes to a maximum of 3 mg. If atropine is ineffective, proceed to transcutaneous pacing and/or a dopamine or epinephrine infusion. Treatment is only indicated when the bradycardia causes serious signs or symptoms."
+    },
+    {
+      "id": 81,
+      "text": "In which bradycardia is atropine LEAST likely to work, warranting early pacing?",
+      "options": ["Sinus bradycardia from high vagal tone","Mobitz II and third-degree (infranodal) AV block","First-degree AV block","Bradycardia caused by a beta-blocker"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Bradycardia Management",
+      "topic": "Atropine Limitations",
+      "explanation": "Atropine acts at the AV node. In infranodal block (Mobitz II, complete heart block with a wide escape) the block is below the node, so atropine is usually ineffective and may even worsen the situation by increasing the atrial rate without improving conduction. Move early to transcutaneous pacing and arrange transvenous pacing."
+    },
+    {
+      "id": 82,
+      "text": "During transcutaneous pacing, the best way to confirm MECHANICAL capture (a perfusing beat) is to:",
+      "options": ["See a pacing spike on the monitor","See a wide QRS after each spike","Palpate a pulse (or confirm an arterial/SpO2 waveform) matching the paced rate","Increase the pacing rate"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "Electrical Therapy",
+      "topic": "Pacing Capture",
+      "explanation": "Electrical capture = a pacing spike followed by a broad QRS with a T wave of opposite polarity on the monitor. Mechanical capture = that depolarisation actually produces a pulse, confirmed by palpating a central pulse or observing the arterial line or SpO2 pleth. Both are required. TCP is painful, so give analgesia and sedation."
+    },
+    {
+      "id": 83,
+      "text": "If atropine and pacing are unavailable or ineffective in symptomatic bradycardia, acceptable second-line therapy is:",
+      "options": ["Adenosine or verapamil","A dopamine or epinephrine (adrenaline) infusion","Digoxin or diltiazem","Magnesium or calcium"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Bradycardia Management",
+      "topic": "Bradycardia Infusions",
+      "explanation": "Second-line for refractory symptomatic bradycardia: chronotropic infusions such as dopamine (5-20 mcg/kg/min) or epinephrine (2-10 mcg/min), or isoproterenol. These bridge to transvenous pacing. AV-nodal blockers (verapamil, diltiazem, digoxin, adenosine) would worsen bradycardia."
+    },
+    {
+      "id": 84,
+      "text": "Which statement about sinus tachycardia is correct?",
+      "options": ["It should be treated with synchronised cardioversion","It is treated by addressing the underlying cause and is NEVER countershocked","It always requires adenosine","It is a primary arrhythmia requiring ablation"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Tachycardia Management",
+      "topic": "Sinus Tachycardia",
+      "explanation": "Sinus tachycardia is a physiological response, not a primary arrhythmia. Look for and treat the cause: fever, pain, hypovolaemia, hypoxia, anxiety, anaemia, hyperthyroidism, drugs. It should never be cardioverted, and the rate itself is not the target of treatment."
+    },
+    {
+      "id": 85,
+      "text": "Which arrhythmia should NOT be treated with DC cardioversion because it arises from enhanced automaticity rather than reentry?",
+      "options": ["Atrial flutter","Multifocal atrial tachycardia / junctional tachycardia","Monomorphic VT with a pulse","Atrial fibrillation"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Tachycardia Management",
+      "topic": "Automatic Tachycardias",
+      "explanation": "MAT and junctional tachycardia arise from abnormal automaticity (multiple atrial foci, often hypoxia/COPD; or digoxin toxicity), so DC cardioversion is ineffective and not indicated. Treat the cause, correct electrolytes/hypoxia, and rate control. Reentrant rhythms (flutter, AF, AVNRT, VT) do respond to cardioversion."
+    },
+    {
+      "id": 86,
+      "text": "A patient with an inferior STEMI develops sinus bradycardia with first-degree AV block. The most likely explanation is:",
+      "options": ["LAD occlusion","RCA occlusion affecting SA/AV nodal supply plus increased vagal tone","Left main occlusion","Pulmonary embolism"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Bradycardia Management",
+      "topic": "Inferior MI and Bradycardia",
+      "explanation": "In most people the RCA supplies the SA node and AV node, and inferior MI is associated with increased vagal tone (Bezold-Jarisch reflex). Bradyarrhythmias and AV block are therefore common with inferior MI. Because the block is usually nodal, it is often atropine-responsive and frequently transient."
+    },
+    {
+      "id": 87,
+      "text": "Which best describes high-quality CPR in an adult?",
+      "options": ["Rate 60/min, depth 1 inch, continuous ventilation","Rate 100-120/min, depth at least 2 inches (5 cm), full chest recoil, minimal interruptions","Compressions as fast as possible without allowing recoil","Ventilate continuously before starting compressions"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Cardiac Arrest",
+      "topic": "CPR Quality",
+      "explanation": "High-quality CPR: compress at 100-120/min, to a depth of at least 5 cm (2 in) but no more than 6 cm, allow full recoil between compressions, minimise interruptions (aim for a chest-compression fraction over 60%), avoid excessive ventilation, and rotate compressors every 2 minutes."
+    },
+    {
+      "id": 88,
+      "text": "A dying patient shows a slow (25 bpm), wide, regular rhythm with no P waves that often precedes asystole. This is:",
+      "options": ["Accelerated junctional rhythm","Idioventricular (agonal) escape rhythm","Sinus bradycardia","Atrial flutter"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Cardiac Arrest",
+      "topic": "Agonal Rhythm",
+      "explanation": "An idioventricular/agonal escape rhythm (20-40 bpm, wide QRS, no P waves) is often the last ventricular activity before asystole. Treat the patient and reversible causes. Do NOT suppress an escape rhythm with antiarrhythmics; it may be the only activity maintaining any cardiac output."
+    },
+    {
+      "id": 89,
+      "text": "A dialysis patient who missed sessions arrests in PEA; the pre-arrest ECG showed peaked T waves and a widened QRS. The most important reversible cause to treat is:",
+      "options": ["Hypothermia","Hyperkalaemia (give IV calcium, then insulin/dextrose, etc.)","Tension pneumothorax","Hypovolaemia"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Cardiac Arrest",
+      "topic": "Reversible Causes",
+      "explanation": "The clinical context (missed dialysis) plus peaked T waves and a wide QRS point to severe hyperkalaemia as the cause of PEA. Give IV calcium (chloride or gluconate) for immediate membrane stabilisation, then insulin with dextrose, salbutamol, and sodium bicarbonate, and arrange urgent dialysis."
+    },
+    {
+      "id": 90,
+      "text": "In third-degree AV block with a ventricular escape rhythm, why should lidocaine be avoided?",
+      "options": ["It prolongs the QT interval","It can suppress the ventricular escape focus and precipitate asystole","It causes hyperkalaemia","It is only effective for atrial arrhythmias"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Bradycardia Management",
+      "topic": "Complete Heart Block",
+      "explanation": "In complete heart block the ventricular escape beats may be the only rhythm sustaining the patient. Lidocaine and other ventricular antiarrhythmics can abolish this escape focus and cause asystole. Manage with pacing (transcutaneous then transvenous), not ventricular suppression."
+    }
+  ]
+}

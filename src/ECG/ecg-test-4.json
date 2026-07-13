@@ -1,0 +1,307 @@
+{
+  "title": "ECG Interpretation Test 4",
+  "description": "30-question advanced 12-lead test covering lead territories, axis, chamber enlargement, fascicular and bundle branch blocks, ECG mimics, and integrated clinical vignettes",
+  "categories": ["Lead Territories","ECG Axis","Chamber Enlargement","Conduction Blocks","ECG Mimics & Integration"],
+  "questions": [
+    {
+      "id": 91,
+      "text": "Which leads view the inferior wall of the left ventricle?",
+      "options": ["V1 and V2","I and aVL","II, III, and aVF","V3 and V4"],
+      "correct_answer": "C",
+      "difficulty": "easy",
+      "subject": "Lead Territories",
+      "topic": "Inferior Wall",
+      "explanation": "Leads II, III, and aVF face the inferior wall and are usually supplied by the right coronary artery (RCA). I and aVL view the high lateral wall, V1-V2 the septum, V3-V4 the anterior wall, and V5-V6 the low lateral wall."
+    },
+    {
+      "id": 92,
+      "text": "ST elevation in V3-V4 localises to which wall and culprit artery?",
+      "options": ["Inferior wall; RCA","Anterior wall; LAD","Lateral wall; circumflex","Posterior wall; PDA"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Lead Territories",
+      "topic": "Anterior Wall",
+      "explanation": "V3-V4 face the anterior wall, supplied by the left anterior descending (LAD) artery. Septal leads V1-V2 are also LAD territory; a proximal LAD lesion can produce anteroseptal changes and carries high mortality due to the large territory at risk."
+    },
+    {
+      "id": 93,
+      "text": "Which leads represent the lateral wall of the left ventricle?",
+      "options": ["I, aVL, V5, and V6","II, III, and aVF","V1 and V2","aVR only"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "Lead Territories",
+      "topic": "Lateral Wall",
+      "explanation": "The lateral wall is seen by I and aVL (high lateral) and V5-V6 (low lateral), usually supplied by the left circumflex (or a diagonal of the LAD). Lateral changes often accompany anterior (anterolateral) or inferior (inferolateral) infarcts."
+    },
+    {
+      "id": 94,
+      "text": "Leads V1-V2 primarily view the:",
+      "options": ["Lateral wall","Interventricular septum","Inferior wall","Posterior wall"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "Lead Territories",
+      "topic": "Septum",
+      "explanation": "V1-V2 sit over the interventricular septum, which is supplied by septal perforators of the LAD. They are also the best leads for seeing right-heart phenomena such as RBBB, Brugada pattern, and the mirror image of a posterior MI."
+    },
+    {
+      "id": 95,
+      "text": "Reciprocal ST depression during an acute STEMI:",
+      "options": ["Excludes a true infarction","Supports a true STEMI and appears in leads electrically opposite the infarct","Is diagnostic of pericarditis","Is only seen in NSTEMI"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Lead Territories",
+      "topic": "Reciprocal Change",
+      "explanation": "Reciprocal ST depression is the mirror image of the injury current seen from leads opposite the infarct (e.g., I and aVL in inferior STEMI). Its presence increases the specificity of a STEMI diagnosis and helps distinguish it from pericarditis, which lacks reciprocal change (except in aVR)."
+    },
+    {
+      "id": 96,
+      "text": "New ST elevation in aVR with widespread ST depression in the other leads suggests:",
+      "options": ["Benign early repolarisation","Left main or proximal LAD occlusion, or severe three-vessel disease","Isolated inferior MI","A normal variant"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Lead Territories",
+      "topic": "aVR Elevation",
+      "explanation": "STE in aVR with diffuse ST depression reflects global subendocardial ischaemia, typically from left main coronary occlusion, severe three-vessel disease, or proximal LAD disease. It is a high-risk pattern requiring urgent catheterisation; aVR is otherwise often ignored ('the forgotten lead')."
+    },
+    {
+      "id": 97,
+      "text": "In a patient with inferior STEMI, which additional leads detect right ventricular involvement?",
+      "options": ["Posterior leads V7-V9","Right-sided chest leads (V3R-V4R)","Lewis leads","aVR and aVL"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Lead Territories",
+      "topic": "Right Ventricular MI",
+      "explanation": "Inferior MI can extend to the RV when the lesion is in the proximal RCA. Right-sided leads (especially V4R) showing ST elevation of at least 1 mm indicate RV infarction. RV infarcts are preload-dependent, so give fluids and AVOID nitrates and opioids that drop preload."
+    },
+    {
+      "id": 98,
+      "text": "Posterior leads V7-V9 should be applied when the standard ECG shows:",
+      "options": ["ST elevation in V3-V4","Tall R waves with horizontal ST depression in V1-V3","Q waves in lead III","Delta waves"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Lead Territories",
+      "topic": "Posterior MI",
+      "explanation": "A posterior MI appears on the standard ECG as its mirror image in V1-V3: tall broad R waves, horizontal ST depression, and upright T waves. Applying posterior leads V7-V9 reveals true ST elevation (at least 0.5 mm), confirming the diagnosis. The culprit is usually the circumflex or PDA."
+    },
+    {
+      "id": 99,
+      "text": "The normal QRS axis lies approximately between:",
+      "options": ["-30 degrees and +90 degrees","+90 degrees and +180 degrees","-90 degrees and -180 degrees","0 degrees and -90 degrees"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "ECG Axis",
+      "topic": "Normal Axis",
+      "explanation": "The normal QRS axis is roughly -30 to +90 degrees. Left axis deviation is -30 to -90, right axis deviation is +90 to +180, and a 'northwest' (extreme) axis is -90 to +-180. A quick check uses leads I and aVF: positive in both means a normal axis."
+    },
+    {
+      "id": 100,
+      "text": "Marked left axis deviation with a small q in I/aVL and an rS pattern in II/III/aVF, with a normal QRS width, indicates:",
+      "options": ["Left posterior fascicular block","Left anterior fascicular block (LAFB)","Right bundle branch block","Right ventricular hypertrophy"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "Conduction Blocks",
+      "topic": "Left Anterior Fascicular Block",
+      "explanation": "LAFB blocks the anterior fascicle of the left bundle, leaving the inferior wall to depolarise first (small inferior r) then the rest superiorly-leftward, producing marked left axis deviation (about -45 to -90), qR in I/aVL and rS in II/III/aVF, with a near-normal QRS width. It is a common, usually benign finding."
+    },
+    {
+      "id": 101,
+      "text": "Right axis deviation may be caused by all of the following EXCEPT:",
+      "options": ["Right ventricular hypertrophy","Acute pulmonary embolism / cor pulmonale","Left anterior fascicular block","Lateral wall myocardial infarction"],
+      "correct_answer": "C",
+      "difficulty": "medium",
+      "subject": "ECG Axis",
+      "topic": "Right Axis Deviation",
+      "explanation": "Left anterior fascicular block causes LEFT axis deviation, not right. Causes of right axis deviation include RVH, RV strain/PE, left posterior fascicular block, lateral MI (loss of lateral forces), a vertically oriented heart, and it is a normal finding in children and tall thin adults."
+    },
+    {
+      "id": 102,
+      "text": "By Sokolow-Lyon voltage criteria, left ventricular hypertrophy is suggested when:",
+      "options": ["S wave in V1 plus R wave in V5 or V6 is at least 35 mm","R wave in V1 exceeds 7 mm","QRS duration exceeds 0.12 s","The P wave is taller than 2.5 mm"],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "subject": "Chamber Enlargement",
+      "topic": "LVH",
+      "explanation": "Sokolow-Lyon: S in V1 + R in V5 or V6 of at least 35 mm (or R in aVL of at least 11 mm) suggests LVH. Supportive findings include a strain pattern (downsloping ST depression and asymmetric T inversion in lateral leads), left axis deviation, and left atrial enlargement."
+    },
+    {
+      "id": 103,
+      "text": "Which finding best supports right ventricular hypertrophy?",
+      "options": ["A dominant R wave in V1 (R/S greater than 1) with right axis deviation","A deep S wave in V1","Left axis deviation","A tall R wave confined to V6"],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "subject": "Chamber Enlargement",
+      "topic": "RVH",
+      "explanation": "RVH produces a dominant R wave in V1 (R/S greater than 1), right axis deviation, a deep S wave in V6, and often a right ventricular strain pattern (ST depression/T inversion in V1-V3). Causes include pulmonary hypertension, pulmonary stenosis, and chronic lung disease."
+    },
+    {
+      "id": 104,
+      "text": "Left atrial enlargement ('P mitrale') is recognised by:",
+      "options": ["Tall peaked P waves greater than 2.5 mm in lead II","A broad (greater than 0.12 s) notched bifid P wave in lead II and a deep, wide negative terminal P in V1","Absent P waves","An inverted P wave in aVR"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Chamber Enlargement",
+      "topic": "Left Atrial Enlargement",
+      "explanation": "Left atrial enlargement (P mitrale) widens the P wave to at least 0.12 s with an 'M-shaped' notch in lead II, and produces a deep, broad negative terminal deflection of the biphasic P in V1. Classic causes are mitral valve disease and LV failure."
+    },
+    {
+      "id": 105,
+      "text": "Right atrial enlargement ('P pulmonale') produces:",
+      "options": ["Tall, peaked P waves greater than 2.5 mm in lead II","A broad notched P wave in lead I","A biphasic P in V1 with a wide negative terminal component","A sawtooth baseline"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "Chamber Enlargement",
+      "topic": "Right Atrial Enlargement",
+      "explanation": "Right atrial enlargement (P pulmonale) produces tall, peaked P waves greater than 2.5 mm in the inferior leads (II, III, aVF) and a prominent initial positive deflection of the P in V1. Causes include pulmonary hypertension, COPD, and tricuspid disease."
+    },
+    {
+      "id": 106,
+      "text": "Which statement about left bundle branch block (LBBB) is TRUE?",
+      "options": ["ST and T changes should be interpreted exactly as in a normal QRS","Appropriate discordant ST/T changes are expected; use the Sgarbossa criteria to diagnose superimposed MI","LBBB has a narrow QRS","LBBB shows an RSR' pattern in V1"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "Conduction Blocks",
+      "topic": "LBBB",
+      "explanation": "In LBBB the QRS is at least 0.12 s with broad notched R waves in lateral leads and QS/rS in V1, and the ST segment and T wave are normally discordant (opposite the main QRS deflection). Because of this, MI cannot be read in the usual way; the Sgarbossa criteria are used to detect a superimposed infarct."
+    },
+    {
+      "id": 107,
+      "text": "Right bundle branch block (RBBB) is characterised by:",
+      "options": ["QRS at least 0.12 s with an RSR' ('M') pattern in V1 and a broad slurred S wave in I and V6","QRS under 0.10 s with a tall R in V1","Left axis deviation with qR in aVL","A delta wave with short PR"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "Conduction Blocks",
+      "topic": "RBBB",
+      "explanation": "RBBB: QRS at least 0.12 s, RSR' ('rabbit ears'/M pattern) in V1-V2, and a broad slurred S wave in the lateral leads (I, V5-V6). The right ventricle depolarises late. Causes include normal variant, right heart strain/PE, and ischaemic or structural heart disease."
+    },
+    {
+      "id": 108,
+      "text": "Poor R-wave progression across the precordial leads may be caused by:",
+      "options": ["Prior anterior MI, LVH, or incorrect lead placement","Hyperkalaemia","Atrial flutter","First-degree AV block"],
+      "correct_answer": "A",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "R-Wave Progression",
+      "explanation": "Normally the R wave grows in amplitude from V1 to V5-V6 (transition around V3-V4). Poor R-wave progression (failure of the R to grow) can indicate prior anterior MI, LVH, RVH, LBBB, COPD, or simply incorrect precordial lead placement, so always check lead positions."
+    },
+    {
+      "id": 109,
+      "text": "Low QRS voltage (limb leads under 5 mm) is associated with all of the following EXCEPT:",
+      "options": ["Pericardial effusion","Obesity or COPD (emphysema)","Hypothyroidism (myxoedema)","Left ventricular hypertrophy"],
+      "correct_answer": "D",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Low Voltage",
+      "explanation": "LVH produces HIGH voltage, not low. Low-voltage causes include pericardial or pleural effusion, obesity, COPD/emphysema (hyperinflated lungs insulating the heart), myxoedema, and infiltrative cardiomyopathy such as amyloidosis, as well as a large prior infarct."
+    },
+    {
+      "id": 110,
+      "text": "Beat-to-beat alternation of the QRS amplitude (electrical alternans) together with sinus tachycardia suggests:",
+      "options": ["A large pericardial effusion / cardiac tamponade","Hyperkalaemia","WPW syndrome","First-degree AV block"],
+      "correct_answer": "A",
+      "difficulty": "hard",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Electrical Alternans",
+      "explanation": "Electrical alternans (alternating QRS amplitude) reflects the heart swinging within a large pericardial effusion. Combined with sinus tachycardia and low voltage, it should raise strong concern for cardiac tamponade, a clinical (not purely ECG) diagnosis requiring urgent echo and pericardiocentesis."
+    },
+    {
+      "id": 111,
+      "text": "Which feature favours acute pericarditis over STEMI?",
+      "options": ["Regional ST elevation with reciprocal depression","Diffuse, concave (saddle-shaped) ST elevation with PR depression and no reciprocal change (except aVR)","Convex ('tombstone') ST elevation","Pathological Q-wave formation"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Pericarditis vs STEMI",
+      "explanation": "Pericarditis produces widespread concave (saddle-shaped) ST elevation with PR-segment depression (PR elevation in aVR), and crucially no reciprocal ST depression and no regional territory. STEMI is regional, often convex, shows reciprocal change, and evolves with Q waves."
+    },
+    {
+      "id": 112,
+      "text": "The classic, though insensitive, ECG pattern of acute pulmonary embolism is:",
+      "options": ["A delta wave","S1Q3T3 with sinus tachycardia","Osborn (J) waves","A short PR interval"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Pulmonary Embolism",
+      "explanation": "The most common ECG finding in PE is sinus tachycardia. The classic but insensitive S1Q3T3 pattern (S in I, Q and inverted T in III) reflects acute right heart strain; other clues include new RBBB, right axis deviation, and T inversions in V1-V4. The ECG cannot exclude PE; imaging is required."
+    },
+    {
+      "id": 113,
+      "text": "The earliest ECG change of hyperkalaemia is:",
+      "options": ["Flattened P waves","Tall, peaked (tented) T waves","Prominent U waves","ST elevation"],
+      "correct_answer": "B",
+      "difficulty": "easy",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Hyperkalaemia",
+      "explanation": "Hyperkalaemia progresses as: tall peaked (tented) T waves first, then P-wave flattening and PR prolongation, then QRS widening, then a sinusoidal pattern, and finally VF/asystole. Calcium gluconate or chloride stabilises the myocardium within minutes; insulin/dextrose and salbutamol shift potassium intracellularly."
+    },
+    {
+      "id": 114,
+      "text": "A 'scooped' (reverse-tick) ST depression with a short QT interval in a patient on cardiac medication is the characteristic effect of:",
+      "options": ["Hypokalaemia","Therapeutic digoxin","Hypercalcaemia","Quinidine"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Digoxin Effect",
+      "explanation": "The digoxin effect is a downsloping 'scooped' (reverse-tick) ST depression with a short QT and T-wave changes; it indicates the drug is present, not toxicity. Digoxin TOXICITY causes arrhythmias such as PVC bigeminy, atrial tachycardia with block, and the pathognomonic bidirectional VT."
+    },
+    {
+      "id": 115,
+      "text": "Osborn (J) waves are most characteristically seen with:",
+      "options": ["Hyperthermia","Hypothermia","Hyperkalaemia","Hypocalcaemia"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Hypothermia",
+      "explanation": "Osborn (J) waves are positive deflections at the J-point (junction of QRS and ST), most prominent in the inferolateral leads, and are characteristic of hypothermia (they can also appear in hypercalcaemia and CNS injury). Other hypothermia features include bradycardia, slow AF, and prolonged intervals."
+    },
+    {
+      "id": 116,
+      "text": "The resting-ECG triad of Wolff-Parkinson-White (WPW) is:",
+      "options": ["Short PR interval, delta wave, and widened QRS","Long PR, peaked T waves, and a narrow QRS","Short QT, U waves, and bradycardia","Saddle-shaped ST elevation and PR depression"],
+      "correct_answer": "A",
+      "difficulty": "easy",
+      "subject": "Conduction Blocks",
+      "topic": "WPW Pre-excitation",
+      "explanation": "WPW results from an accessory pathway (bundle of Kent) that bypasses the AV node, giving a short PR (under 0.12 s), a delta wave (slurred QRS upstroke), and a widened QRS. The main danger is very rapid conduction if atrial fibrillation develops, which can degenerate into VF."
+    },
+    {
+      "id": 117,
+      "text": "Which is a recognised cause of an ACQUIRED long QT interval?",
+      "options": ["Hypercalcaemia","Hypokalaemia/hypomagnesaemia and QT-prolonging drugs","Hyperkalaemia","Therapeutic digoxin"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Long QT",
+      "explanation": "Acquired long QT is caused by hypokalaemia, hypomagnesaemia, hypocalcaemia, and many drugs (amiodarone, sotalol, macrolides, antipsychotics, methadone, tricyclics). A prolonged QT predisposes to Torsades de Pointes. By contrast, hypercalcaemia, hyperkalaemia, and digoxin all SHORTEN the QT."
+    },
+    {
+      "id": 118,
+      "text": "An ECG shows a negative P wave and a negative QRS in lead I with reversed precordial R-wave progression. The most likely explanation is:",
+      "options": ["Acute anterior MI","Dextrocardia, or left/right arm lead reversal","Hyperkalaemia","Left bundle branch block"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "ECG Mimics & Integration",
+      "topic": "Lead Reversal / Dextrocardia",
+      "explanation": "Negative P and QRS in lead I points to either dextrocardia or left-right arm lead reversal. The differentiator is the chest leads: reversed/poor precordial R-wave progression suggests true dextrocardia, whereas NORMAL precordial progression with the limb findings suggests simple arm-lead reversal. Repeat with correct placement (and right-sided leads) to clarify."
+    },
+    {
+      "id": 119,
+      "text": "A patient with ischaemic-sounding chest pain has a NEW left bundle branch block. The correct approach is:",
+      "options": ["Reassure the patient, since LBBB always hides MI and nothing can be done","Treat as a possible STEMI-equivalent: apply Sgarbossa criteria and obtain urgent cardiology/PCI review","Give adenosine","Discharge the patient if the first troponin is normal"],
+      "correct_answer": "B",
+      "difficulty": "medium",
+      "subject": "ECG Mimics & Integration",
+      "topic": "New LBBB with Chest Pain",
+      "explanation": "A new LBBB with an ischaemic presentation should be treated as a possible STEMI-equivalent. Apply the (modified Smith-) Sgarbossa criteria to look for concordant ST changes or excessively discordant ST elevation, and obtain urgent cardiology/PCI review. A single normal troponin does not exclude evolving MI."
+    },
+    {
+      "id": 120,
+      "text": "A patient has a regular wide-complex tachycardia. Which single feature, if present, most strongly confirms ventricular tachycardia rather than SVT with aberrancy?",
+      "options": ["Rate above 150 bpm","AV dissociation (independent P waves marching through the QRS)","A short PR interval","A narrow initial QRS deflection"],
+      "correct_answer": "B",
+      "difficulty": "hard",
+      "subject": "ECG Mimics & Integration",
+      "topic": "VT vs SVT (Integration)",
+      "explanation": "AV dissociation is the most specific sign of VT: the atria and ventricles beat independently, so P waves march through the QRS unrelated to it. Capture beats and fusion beats are equally diagnostic. Other supportive features include a very wide QRS (over 0.16 s), an extreme/northwest axis, and precordial concordance. When in doubt, treat a wide-complex tachycardia as VT."
+    }
+  ]
+}
