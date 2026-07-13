@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<script>
-  // ── DCAS Security Guard: runs before anything else renders ──
-  // [TEMPORARILY DISABLED FOR TESTING]
-  /*
-  (function() {
-    const AUTH_KEY = 'dcas_local_auth';
-    try {
-      const sessionRaw = localStorage.getItem(AUTH_KEY);
-      if (!sessionRaw) { window.location.replace('login.html'); return; }
-      const session = JSON.parse(sessionRaw);
-      if (!session.loggedIn || Date.now() > session.expiresAt) {
-        localStorage.removeItem(AUTH_KEY);
-        window.location.replace('login.html');
-      }
-    } catch (e) {
-      window.location.replace('login.html');
+    <!-- General SEO Meta Tags -->
+    <meta name="description" content="Medical courses and study programs — EMS, nursing, and healthcare professional development with NREMT-style practice exams.">
+    <meta name="keywords" content="DCAS, pages, courses, clinical learning, EMS, NREMT, paramedic study, EMT exam, healthcare education">
+    <meta name="author" content="Soliman Anas">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solimananas.github.io/CPG-2025/pages/courses">
+    <meta property="og:title" content="DCAS · Medical Courses">
+    <meta property="og:description" content="Medical courses and study programs — EMS, nursing, and healthcare professional development with NREMT-style practice exams.">
+    <meta property="og:image" content="https://solimananas.github.io/CPG-2025/images/og.jpg">
+    <meta property="og:image:width" content="1538">
+    <meta property="og:image:height" content="1022">
+    <meta property="og:image:alt" content="DCAS · Clinical Learning Platform">
+    <meta property="og:locale" content="en-US">
+    <meta property="og:site_name" content="DCAS">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://solimananas.github.io/CPG-2025/pages/courses">
+    <meta name="twitter:title" content="DCAS · Medical Courses">
+    <meta name="twitter:description" content="Medical courses and study programs — EMS, nursing, and healthcare professional development with NREMT-style practice exams.">
+    <meta name="twitter:image" content="https://solimananas.github.io/CPG-2025/images/og.jpg">
+    <meta name="twitter:image:alt" content="DCAS · Clinical Learning Platform">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://solimananas.github.io/CPG-2025/pages/courses">
+
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../icons/icon.png">
+    <link rel="shortcut icon" href="../icons/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../icons/icon.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "DCAS · Medical Courses",
+  "url": "https://solimananas.github.io/CPG-2025/pages/courses",
+  "description": "Medical courses and study programs — EMS, nursing, and healthcare professional development with NREMT-style practice exams.",
+  "image": "https://solimananas.github.io/CPG-2025/images/og.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Soliman Anas"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DCAS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solimananas.github.io/CPG-2025/icons/icon.png"
     }
-  })();
-  */
-</script>
+  },
+  "inLanguage": "en-US"
+}
+    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>DCAS · Medical Courses</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../src/theme.js"></script>
+    <script>SmartTheme.init();</script>
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0891b2">
     <link rel="apple-touch-icon" href="../icons/icon.png">
@@ -199,45 +241,55 @@
 
         /* ── Section Header ── */
         .section-header {
-            font-size: 0.72rem;
-            font-weight: 800;
-            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
             letter-spacing: 1.5px;
-            color: var(--text-secondary);
-            padding: 16px 8px 10px;
+            text-transform: uppercase;
+            margin: 20px 0 14px 0;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            opacity: 0.7;
-            grid-column: 1 / -1; /* Spans full grid width on desktop */
+            gap: 10px;
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(255,255,255,0.06));
+            border-radius: 8px;
+            border-left: 3px solid var(--cat-color, var(--primary-accent));
+            color: #e2e8f0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            grid-column: 1 / -1;
+        }
+        [data-theme="light"] .section-header {
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 8%, rgba(0,0,0,0.04));
+            border-left-color: var(--cat-color, var(--primary-accent));
+            color: #1e293b;
+            text-shadow: none;
         }
         .section-header::after {
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, var(--glass-border), transparent);
+            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 35%, transparent), transparent);
         }
 
         /* ── Course Grid System ── */
         #courseList {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr;   /* single column by default (mobile) */
             gap: 12px;
             width: 100%;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 600px) {
             #courseList {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
+                grid-template-columns: 1fr 1fr;   /* two columns on tablets/desktop */
+                gap: 18px;
             }
         }
 
         /* ── Course Card ── */
         .course-card {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 16px;
-            padding: 16px 18px;
+            padding: 20px;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: var(--card-radius);
@@ -246,9 +298,11 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
-            min-height: 72px;
             box-sizing: border-box;
             overflow: hidden;
+            width: 100%;
+            max-width: 460px;
+            justify-self: center;
             animation: cardIn 0.5s cubic-bezier(0.16,1,0.3,1) both;
         }
         .course-card::before {
@@ -298,44 +352,67 @@
             to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* ── Icon ── */
+        /* ── Icon ── branded course badge in a glass tile ── */
         .cc-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 14px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, transparent);
+            position: relative;
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, transparent);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             color: var(--cat-color, var(--primary-accent));
-            transition: all 0.3s ease;
-            border: 1px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 18%, transparent);
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease, border-color 0.4s ease;
+            border: 1px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 24%, transparent);
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+        }
+        /* soft category-coloured halo bleeding out behind the badge */
+        .cc-icon::after {
+            content: "";
+            position: absolute;
+            inset: -35%;
+            z-index: -1;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 35%,
+                color-mix(in srgb, var(--cat-color, var(--primary-accent)) 32%, transparent), transparent 62%);
+            opacity: 0.45;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .cc-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 19px;
+            display: block;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
         }
         .cc-icon svg.lucide {
-            width: 22px;
-            height: 22px;
-            stroke: currentColor;
+            width: 44px;
+            height: 44px;
             stroke-width: 2.25;
         }
         .course-card:hover .cc-icon {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 20%, transparent);
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 30%, transparent);
-            transform: scale(1.08) rotate(-4deg);
-            box-shadow: 0 0 16px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 15%, transparent);
+            transform: translateY(-2px) scale(1.07);
+            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 48%, transparent);
+            box-shadow: 0 8px 22px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 30%, transparent);
         }
+        .course-card:hover .cc-icon::after { opacity: 0.85; transform: scale(1.12); }
 
         /* ── Card Body ── */
         .cc-body {
             flex: 1;
+            width: 100%;
             min-width: 0;
             display: flex;
             flex-direction: column;
-            gap: 2px;
+            gap: 3px;
         }
         .cc-top {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 6px;
         }
         .cc-title {
@@ -376,28 +453,22 @@
             letter-spacing: 0.3px;
             font-variant-numeric: tabular-nums;
             box-shadow: 0 0 10px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 4%, transparent);
-            margin-left: auto; /* Push badge and chevron to right */
+            position: absolute;   /* pin the count to the tile's top-right corner */
+            top: 16px;
+            right: 16px;
+            margin-left: 0;
         }
-        .cc-chevron {
-            width: 16px;
-            height: 16px;
-            flex-shrink: 0;
-            color: var(--text-secondary);
-            opacity: 0.3;
-            transition: opacity 0.25s, transform 0.25s;
-        }
-        .course-card:hover .cc-chevron {
-            opacity: 0.7;
-            transform: translateX(4px);
-        }
+        /* chevron is redundant in the tile layout */
+        .cc-chevron { display: none; }
 
         .cc-sub {
             font-size: 0.75rem;
             color: var(--text-secondary);
-            white-space: nowrap;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
             overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.3;
+            line-height: 1.35;
             opacity: 0.8;
         }
 
@@ -405,18 +476,20 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-top: 8px;
+            margin-top: auto;
+            padding-top: 12px;
+            width: 100%;
         }
         .cc-progress-track {
             flex: 1;
             height: 6px;
             border-radius: 100px;
-            background: rgba(255, 255, 255, 0.07);
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, rgba(255, 255, 255, 0.06));
             overflow: hidden;
             position: relative;
         }
         [data-theme="light"] .cc-progress-track {
-            background: rgba(0, 0, 0, 0.06);
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(0, 0, 0, 0.05));
         }
         .cc-progress-fill {
             height: 100%;
@@ -459,22 +532,35 @@
             grid-column: 1 / -1; /* Spans full grid width on desktop */
         }
         .continue-label {
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
             letter-spacing: 1.5px;
-            color: var(--text-secondary);
-            padding: 0 8px 10px;
+            text-transform: uppercase;
+            margin: 0 0 14px 0;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            opacity: 0.8;
+            gap: 10px;
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(255,255,255,0.06));
+            border-radius: 8px;
+            border-left: 3px solid var(--cat-color, var(--primary-accent));
+            color: #e2e8f0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        [data-theme="light"] .continue-label {
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 8%, rgba(0,0,0,0.04));
+            border-left-color: var(--cat-color, var(--primary-accent));
+            color: #1e293b;
+            text-shadow: none;
         }
         .continue-label::after {
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, var(--glass-border), transparent);
+            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 35%, transparent), transparent);
+        }
+        [data-theme="light"] .continue-label::after {
+            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 25%, transparent), transparent);
         }
         .continue-card {
             display: flex;
@@ -565,6 +651,76 @@
             font-weight: 500;
             opacity: 0.7;
             grid-column: 1 / -1;
+        }
+
+        /* ── Card Header Layout (Icon + Text beside it) ── */
+        .cc-header {
+            display: flex;
+            gap: 16px;
+            width: 100%;
+            align-items: center;
+            position: relative;
+        }
+        .cc-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            min-width: 0;
+            padding-right: 48px; /* Leave space for absolute badge */
+        }
+
+        /* ITLS Actions (bottom of card) */
+        .itls-actions {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            margin-top: 4px;
+        }
+        .itls-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: var(--font-display);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        .itls-btn-review {
+            background: color-mix(in srgb, var(--primary-accent) 15%, var(--glass-bg));
+            border: 1.5px solid color-mix(in srgb, var(--primary-accent) 30%, var(--glass-border));
+            color: var(--primary-accent);
+        }
+        .itls-btn-review:hover {
+            background: var(--primary-accent);
+            color: #fff;
+            border-color: var(--primary-accent);
+            box-shadow: 0 4px 14px color-mix(in srgb, var(--primary-accent) 40%, transparent);
+            transform: translateY(-1.5px);
+        }
+        .itls-btn-review:active {
+            transform: translateY(0) scale(0.97);
+        }
+        .itls-btn-exam {
+            background: color-mix(in srgb, #EA580C 15%, var(--glass-bg));
+            border: 1.5px solid color-mix(in srgb, #EA580C 30%, var(--glass-border));
+            color: #EA580C;
+        }
+        .itls-btn-exam:hover {
+            background: linear-gradient(135deg, #EA580C, #DC2626);
+            color: #fff;
+            border-color: #EA580C;
+            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+            transform: translateY(-1.5px);
+        }
+        .itls-btn-exam:active {
+            transform: translateY(0) scale(0.97);
         }
 
         footer {
@@ -940,14 +1096,14 @@
             font-weight: 750;
             padding: 2px 8px;
             border-radius: 8px;
-            background: rgba(255,255,255,0.08);
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 14%, transparent);
+            color: var(--cat-color, var(--primary-accent));
             text-transform: none;
             letter-spacing: 0;
             margin-left: 6px;
-            color: var(--text-primary);
         }
         [data-theme="light"] .section-count {
-            background: rgba(0,0,0,0.05);
+            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, transparent);
         }
 
         /* ── Lucide sizing ── */
@@ -1088,49 +1244,60 @@
                 }
             }
 
-            /* 5. Compact Course Cards */
+            /* 5. Course Tiles (mobile) */
+            #courseList { gap: 12px; }
             .course-card {
-                padding: 12px 14px;
-                border-radius: 16px;
-                gap: 12px;
-                min-height: 64px;
+                padding: 16px;
+                border-radius: 18px;
+                gap: 14px;
             }
             .course-card::before {
-                border-radius: 16px 0 0 16px;
+                border-radius: 18px 0 0 18px;
             }
             .course-card .cc-icon {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
+                width: 76px;
+                height: 76px;
+                border-radius: 17px;
+            }
+            .course-card .cc-icon .cc-img {
+                border-radius: 15px;
             }
             .course-card .cc-icon svg.lucide {
-                width: 18px;
-                height: 18px;
+                width: 38px;
+                height: 38px;
             }
+            .cc-badge { top: 12px; right: 12px; }
             .cc-title {
-                font-size: 0.88rem;
+                font-size: 0.95rem;
             }
             .cc-tag {
-                font-size: 0.58rem;
-                padding: 1.5px 5px;
-            }
-            .cc-badge {
-                font-size: 0.62rem;
+                font-size: 0.6rem;
                 padding: 2px 6px;
             }
+            .cc-badge {
+                font-size: 0.65rem;
+                padding: 3px 7px;
+            }
             .cc-sub {
-                font-size: 0.7rem;
+                font-size: 0.72rem;
             }
             .cc-progress {
-                margin-top: 6px;
-                gap: 6px;
+                margin-top: 4px;
+                gap: 8px;
             }
             .cc-progress-track {
-                height: 5px;
+                height: 6px;
             }
             .cc-pct {
-                font-size: 0.62rem;
-                min-width: 28px;
+                font-size: 0.68rem;
+                min-width: 30px;
+            }
+
+            /* ITLS Mobile Buttons */
+            .itls-btn {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+                border-radius: 10px;
             }
 
             /* 6. Control Center Drawer adjustments */
@@ -1179,6 +1346,8 @@
             .drawer-trigger:hover .trigger-line.bottom { width: 14px; }
         }
     </style>
+    <script src="supabase-config.js"></script>
+    <script src="supabase-client.js"></script>
 </head>
 <body>
 
@@ -1189,7 +1358,7 @@
             <span class="pwa-icon-fallback" style="display:none;"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#shield"/></svg>️</span>
         </div>
         <div class="pwa-banner-text">
-            <strong class="pwa-banner-title">Install DCAS Hub</strong>
+            <strong class="pwa-banner-title">Install DCAS</strong>
             <span class="pwa-banner-sub" id="pwaBannerSub">Add to home screen · works offline</span>
         </div>
         <div class="pwa-banner-actions">
@@ -1305,7 +1474,7 @@
 
 <footer>
     <div>Created by Soliman Anas · for study aid only</div>
-    <div><a href="about.html">About &amp; Disclaimer</a></div>
+    <div><a href="about.html">About &amp; Disclaimer</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div>
 </footer>
 
 <button class="float-btn" id="scrollToTopBtn" title="Go to top"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-up"/></svg></button>
@@ -1317,20 +1486,17 @@
 
     const COURSES = [
         { id: 'prometric', shortTitle: 'Prometric', title: 'Prometric Mock Exam',          link: '../src/prometric/exam.html', icon: 'clipboard-list',  count: 2559, category: 'general' },
-        { id: 'itls',      shortTitle: 'ITLS',    title: 'International Trauma Life Support', link: 'itls.html',             icon: 'bandage',        count: 200,  category: 'trauma' },
+        { id: 'itls',      shortTitle: 'ITLS',    title: 'International Trauma Life Support', link: '../courses/itls/index.html',  icon: 'bandage',        count: 455,  category: 'trauma' },
         { id: 'empact',    shortTitle: 'EMPACT',  title: 'Emergency Medical Patients: Assessment, Care & Transport', link: 'empact.html', icon: 'stethoscope', count: 50,   category: 'medical' },
         { id: 'bls',       shortTitle: 'BLS',     title: 'Basic Life Support',                link: 'bls.html',              icon: 'heart-pulse',    count: 284,  category: 'cardiac' },
-        { id: 'bls-reviewer', shortTitle: 'BLS Reviewer', title: 'Basic Life Support — Course Reviewer', link: '../courses/bls/index.html', icon: 'heart-pulse', count: 220, category: 'cardiac' },
         { id: 'acls',      shortTitle: 'ACLS',    title: 'Advanced Cardiovascular Life Support', link: 'acls.html',         icon: 'heart',          count: 33,   category: 'cardiac' },
-        { id: 'acls-reviewer', shortTitle: 'ACLS Reviewer', title: 'Advanced Cardiovascular Life Support — Course Reviewer', link: '../courses/acls/index.html', icon: 'heart', count: 241, category: 'cardiac' },
         { id: 'bdls',      shortTitle: 'BDLS',    title: 'Basic Disaster Life Support',       link: 'bdls.html',             icon: 'tornado',        count: 40,   category: 'trauma' },
         { id: 'pepp',      shortTitle: 'PEPP',    title: 'Pediatric Education for Prehospital Professionals', link: 'pepp.html', icon: 'smile-plus', count: 200, category: 'pediatrics' },
         { id: 'ppet',      shortTitle: 'PPET',    title: 'Prehospital Pediatric Emergency Transport', link: 'ppet.html',    icon: 'ambulance',      count: 57,   category: 'pediatrics' },
         { id: 'pals',      shortTitle: 'PALS',    title: 'Pediatric Advanced Life Support',   link: 'pals.html',             icon: 'hand-heart',     count: 57,   category: 'pediatrics' },
-        { id: 'pals-reviewer', shortTitle: 'PALS Reviewer', title: 'Pediatric Advanced Life Support — Course Reviewer', link: '../courses/pals/index.html', icon: 'hand-heart', count: 215, category: 'pediatrics' },
         { id: 'medical',   shortTitle: 'Medical', title: 'Medical Emergencies Review',       link: 'medical.html',          icon: 'pill',           count: 45,   category: 'medical' },
-        { id: 'ecg',       shortTitle: 'ECG',     title: 'ECG Interpretation',                link: 'ecg.html',              icon: 'activity',       count: 0,    category: 'ecg' },
-        { id: 'ecg-test',  shortTitle: 'ECG Test',title: 'ECG Interpretation Practice Tests', link: 'ecg-test.html',         icon: 'activity',       count: 60,   category: 'ecg' }
+        { id: 'ecg-course', shortTitle: 'ECG Course', title: 'ECG Interpretation & Practice Tests', link: '',                        icon: 'activity',       count: 120,  category: 'ecg' },
+        { id: 'ecg',        shortTitle: 'ECG Simulator',   title: 'ECG Rhythm Simulator',               link: 'ecg.html',               icon: 'activity',       count: 0,    category: 'ecg' }
     ];
 
     const CATEGORY_LABELS = {
@@ -1347,8 +1513,27 @@
         general: '#2563EB'
     };
 
+    const CAT_EMOJI = {
+        cardiac: '\u{1FAC0}', trauma: '\u{1F691}', pediatrics: '\u{1F476}',
+        medical: '\u{1F48A}', ecg: '\u{1F4C8}', general: '\u{1F4DA}'
+    };
     const CATEGORY_ORDER = ['cardiac', 'trauma', 'pediatrics', 'medical', 'ecg', 'general'];
-    const PROGRESS_KEY = 'dcas_course_progress';
+    const PROGRESS_KEY = 'smartcare_course_progress';
+
+    // Branded course icons (optimized thumbnails). ecg-test reuses the ecg art.
+    const COURSE_IMG = {
+        prometric: 'prometric', itls: 'itls', empact: 'empact', bls: 'bls', acls: 'acls',
+        bdls: 'bdls', pepp: 'pepp', ppet: 'ppet', pals: 'pals', medical: 'medical',
+        ecg: 'ecg', 'ecg-course': 'ecg'
+    };
+    function courseIcon(course) {
+        const key = COURSE_IMG[course.id];
+        if (key) {
+            return `<img class="cc-img" src="../icons/courses/thumb/${key}.png" alt="" loading="lazy" decoding="async" width="160" height="160">`;
+        }
+        // Fallback (e.g. Medical) — keep the themed lucide glyph.
+        return `<svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#${course.icon}"/></svg>`;
+    }
 
     function getAllProgress() {
         try { return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {}; }
@@ -1450,7 +1635,9 @@
                 const items = grouped[cat];
                 if (!items || items.length === 0) return;
                 const label = CATEGORY_LABELS[cat] || cat;
-                html += `<div class="section-header"><span>${label}</span><span class="section-count">${items.length}</span></div>`;
+                const emoji = CAT_EMOJI[cat] || '';
+                const catColor = CAT_COLORS[cat] || CAT_COLORS.general;
+                html += `<div class="section-header" style="--cat-color:${catColor}"><span>${emoji} ${label}</span><span class="section-count">${items.length}</span></div>`;
                 html += items.map(course => renderCard(course)).join('');
             });
         } else {
@@ -1491,7 +1678,7 @@
 
         const prog = all[bestId];
         const pct = prog.pct || 0;
-        const iconHtml = `<svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#${course.icon}"/></svg>`;
+        const iconHtml = courseIcon(course);
         const ago = timeAgo(prog.lastStudied);
         const cat = course.category || 'general';
         let detail = pct + '% complete';
@@ -1503,9 +1690,9 @@
         const catLabel = CATEGORY_LABELS[course.category] || course.category;
 
         return `
-            <div class="continue-section">
+            <div class="continue-section" style="--cat-color:${catColor}">
                 <div class="continue-label">Continue Learning</div>
-                <a href="${course.link}" class="continue-card" style="--cat-color:${catColor}" data-id="${course.id}">
+                <a href="${course.link}" class="continue-card" data-id="${course.id}">
                     <div class="cc-icon">${iconHtml}</div>
                     <div class="continue-body">
                         <div class="cc-top">
@@ -1531,8 +1718,7 @@
         const prog = getProgress(course.id);
         const pct = prog.pct || 0;
         const badge = course.count > 0 ? `<span class="cc-badge">${course.count}</span>` : '';
-        const chevron = '<svg class="lucide cc-chevron" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>';
-        const iconHtml = `<svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#${course.icon}"/></svg>`;
+        const iconHtml = courseIcon(course);
         const cat = course.category || 'general';
         const catLabel = CATEGORY_LABELS[course.category] || course.category;
 
@@ -1545,21 +1731,61 @@
 
         const catColor = CAT_COLORS[course.category] || CAT_COLORS.general;
 
-        return `
-            <a href="${course.link}" class="course-card" data-id="${course.id}" style="--cat-color:${catColor}">
-                <div class="cc-icon">${iconHtml}</div>
-                <div class="cc-body">
-                    <div class="cc-top">
-                        <span class="cc-title">${course.shortTitle}</span>
-                        <span class="cc-tag">${catLabel}</span>
+        // Courses that offer both a self-study Reviewer and an Exam get dual action buttons.
+        const REVIEWER_LINKS = {
+            itls:      { review: '../courses/itls/index.html', exam: 'itls.html' },
+            bls:       { review: '../courses/bls/index.html',  exam: 'bls.html' },
+            pals:      { review: '../courses/pals/index.html',  exam: 'pals.html' },
+            acls:      { review: '../courses/acls/index.html',  exam: 'acls.html' },
+            'ecg-course': { review: 'ECG-study.html', exam: 'ecg-test.html' }
+        };
+        if (REVIEWER_LINKS[course.id]) {
+            const links = REVIEWER_LINKS[course.id];
+            return `
+                <div class="course-card" data-id="${course.id}" style="--cat-color:${catColor}; cursor: default;">
+                    <div class="cc-header">
+                        <div class="cc-icon">${iconHtml}</div>
+                        <div class="cc-info">
+                            <div class="cc-top">
+                                <span class="cc-title">${course.shortTitle}</span>
+                                <span class="cc-tag">${catLabel}</span>
+                            </div>
+                            <div class="cc-sub">${course.title}</div>
+                        </div>
                         ${badge}
-                        ${chevron}
                     </div>
-                    <div class="cc-sub">${course.title}</div>
                     <div class="cc-progress">
                         <div class="cc-progress-track"><div class="cc-progress-fill" data-fill="${pct}"></div></div>
                         <span class="cc-pct">${progressLabel || (pct > 0 ? pct + '%' : '')}</span>
                     </div>
+                    <div class="itls-actions">
+                        <a href="${links.review}" class="itls-btn itls-btn-review">
+                            <span>📚 Review</span>
+                        </a>
+                        <a href="${links.exam}" class="itls-btn itls-btn-exam">
+                            <span>📝 Exam</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        return `
+            <a href="${course.link}" class="course-card" data-id="${course.id}" style="--cat-color:${catColor}">
+                <div class="cc-header">
+                    <div class="cc-icon">${iconHtml}</div>
+                    <div class="cc-info">
+                        <div class="cc-top">
+                            <span class="cc-title">${course.shortTitle}</span>
+                            <span class="cc-tag">${catLabel}</span>
+                        </div>
+                        <div class="cc-sub">${course.title}</div>
+                    </div>
+                    ${badge}
+                </div>
+                <div class="cc-progress">
+                    <div class="cc-progress-track"><div class="cc-progress-fill" data-fill="${pct}"></div></div>
+                    <span class="cc-pct">${progressLabel || (pct > 0 ? pct + '%' : '')}</span>
                 </div>
             </a>
         `;
@@ -1608,8 +1834,8 @@
     renderCourses();
 
     // ── PWA Install Banner ──
-    const PWA_KEY       = 'dcas_pwa_install';
-    const PWA_NEVER_KEY = 'dcas_pwa_never';
+    const PWA_KEY       = 'smartcare_pwa_install';
+    const PWA_NEVER_KEY = 'smartcare_pwa_never';
     const PWA_DELAY_MS  = 4000;
     const PWA_SNOOZE_MS = 24 * 60 * 60 * 1000;
 
@@ -1692,15 +1918,11 @@
         document.getElementById('drawerOverlay').classList.remove('active');
     });
 
-    // ── Theme System ──
+    // ── Theme System (src/theme.js — window.SmartTheme is the source of truth) ──
     const themeBtn = document.getElementById('themeToggle');
     const html     = document.documentElement;
-    const themes   = ['dark', 'amoled', 'light', 'sepia', 'forest'];
 
-    function setTheme(theme) {
-        if (!themes.includes(theme)) theme = 'dark';
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+    function syncThemeUI(theme) {
         document.querySelectorAll('.toggle-btn[id^="toggle"]').forEach(b => b.classList.remove('active'));
         const activeBtn = document.getElementById('toggle' + theme.charAt(0).toUpperCase() + theme.slice(1));
         if (activeBtn) activeBtn.classList.add('active');
@@ -1708,17 +1930,14 @@
         if (amoledBadge) amoledBadge.style.display = theme === 'amoled' ? 'inline-flex' : 'none';
     }
 
-    themeBtn.addEventListener('click', function() {
-        const cur = html.getAttribute('data-theme') || 'dark';
-        setTheme(themes[(themes.indexOf(cur) + 1) % themes.length]);
-    });
+    themeBtn.addEventListener('click', () => syncThemeUI(SmartTheme.next()));
 
-    setTheme(localStorage.getItem('theme') || 'dark');
-    document.getElementById('toggleDark').addEventListener('click',   () => setTheme('dark'));
-    document.getElementById('toggleAmoled').addEventListener('click', () => setTheme('amoled'));
-    document.getElementById('toggleLight').addEventListener('click',  () => setTheme('light'));
-    document.getElementById('toggleSepia').addEventListener('click',  () => setTheme('sepia'));
-    document.getElementById('toggleForest').addEventListener('click', () => setTheme('forest'));
+    syncThemeUI(html.getAttribute('data-theme') || 'dark');
+    document.getElementById('toggleDark').addEventListener('click',   () => syncThemeUI(SmartTheme.set('dark')));
+    document.getElementById('toggleAmoled').addEventListener('click', () => syncThemeUI(SmartTheme.set('amoled')));
+    document.getElementById('toggleLight').addEventListener('click',  () => syncThemeUI(SmartTheme.set('light')));
+    document.getElementById('toggleSepia').addEventListener('click',  () => syncThemeUI(SmartTheme.set('sepia')));
+    document.getElementById('toggleForest').addEventListener('click', () => syncThemeUI(SmartTheme.set('forest')));
 
     // ── Drawer ──
     const drawer  = document.getElementById('notificationDrawer');
@@ -1735,8 +1954,10 @@
 
     document.getElementById('qsHome').addEventListener('click', () => { window.location.href = '../index.html'; });
     document.getElementById('qsAbout').addEventListener('click', () => { window.location.href = 'about.html'; });
-    document.getElementById('qsLogout').addEventListener('click', () => {
-        localStorage.removeItem('dcas_local_auth');
+    document.getElementById('qsLogout').addEventListener('click', async () => {
+        if (window.DCASCloud) {
+            try { await DCASCloud.signOut(); } catch (e) { /* offline or not configured */ }
+        }
         window.location.replace('login.html');
     });
 
@@ -1789,7 +2010,46 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('../sw.js')
+            .then(function(r) { initSWUpdateToast(r); })
             .catch(e => console.log('SW failed', e));
+    });
+
+    let swRefreshing = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+        if (swRefreshing) return;
+        swRefreshing = true;
+        window.location.reload();
+    });
+}
+
+function initSWUpdateToast(reg) {
+    function showToast(worker) {
+        if (document.getElementById('sw-update-toast')) return;
+        const toast = document.createElement('div');
+        toast.id = 'sw-update-toast';
+        toast.setAttribute('role', 'status');
+        toast.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);' +
+            'background:#1e293b;color:#fff;padding:12px 16px;border-radius:10px;' +
+            'box-shadow:0 4px 20px rgba(0,0,0,.35);z-index:99999;display:flex;' +
+            'align-items:center;gap:12px;font:14px/1.4 system-ui,-apple-system,sans-serif;';
+        toast.innerHTML = '<span>Update ready</span>' +
+            '<button id="sw-update-btn" style="background:#3b82f6;color:#fff;border:none;' +
+            'padding:6px 14px;border-radius:6px;cursor:pointer;font:inherit;font-weight:600;">Refresh</button>';
+        document.body.appendChild(toast);
+        document.getElementById('sw-update-btn').addEventListener('click', function() {
+            worker.postMessage({ type: 'SKIP_WAITING' });
+            toast.remove();
+        });
+    }
+    if (reg.waiting) showToast(reg.waiting);
+    reg.addEventListener('updatefound', function() {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener('statechange', function() {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                showToast(newWorker);
+            }
+        });
     });
 }
 </script>
