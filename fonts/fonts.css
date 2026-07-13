@@ -1,0 +1,27 @@
+/* Self-hosted fonts — replaces the fonts.googleapis.com/fonts.gstatic.com
+   round-trip. Inter is Google's variable font, so one file covers the
+   whole 100–900 weight range instead of shipping a static file per weight. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('inter-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('dm-mono-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('dm-mono-500.woff2') format('woff2');
+}
