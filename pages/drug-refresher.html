@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ScopeRx · DCAS Drug Refresher</title>
+    <meta name="description" content="All-in-one DCAS drug refresher: pick your clinical level (EMR to EP) and study, flip flashcards or take a quiz on every medication in your DCAS Scope of Practice.">
+    <script>
+        (function () {
+            try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark'); } catch (e) {}
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#0056b3">
+    <link rel="apple-touch-icon" href="../icons/icon.png">
+
+    <style>
+        /* ════════════════════════════════════════════════════════
+           ScopeRx – DCAS Drug Refresher
+           Builds on ../styles.css (themes, header, glass cards,
+           quiz options, 3D flashcards). Page-only parts use dr-.
+        ════════════════════════════════════════════════════════ */
+        .bottom-nav { display: none !important; }
+        main { padding-bottom: 40px; }
+
+        .dr-view { animation: fadeInUp 0.45s ease both; }
+        .dr-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: var(--glass-shadow);
+            color: var(--text-primary);
+            margin-bottom: 18px;
+        }
+        .dr-eyebrow {
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+            text-transform: uppercase; color: var(--text-secondary);
+        }
+        .dr-title { font-size: 1.55rem; font-weight: 800; letter-spacing: -0.02em; margin: 4px 0 6px; line-height: 1.2; }
+        .dr-lead { color: var(--text-secondary); line-height: 1.55; margin: 0; font-size: 0.95rem; }
+        .dr-section-title {
+            color: var(--header-text); font-weight: 800; font-size: 1.05rem;
+            margin: 26px 4px 12px; display: flex; align-items: center; gap: 8px;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.15);
+        }
+        .dr-section-title .lucide { width: 1.1em; height: 1.1em; }
+        .dr-muted { color: var(--text-secondary); }
+
+        /* ── Hero ── */
+        .dr-hero { position: relative; overflow: hidden; }
+        .dr-hero::after {
+            content: ""; position: absolute; right: -40px; top: -40px; width: 180px; height: 180px;
+            border-radius: 50%; background: radial-gradient(circle, rgba(0,86,179,0.18), transparent 70%);
+            pointer-events: none;
+        }
+        .dr-hero-row { display: flex; align-items: center; gap: 14px; }
+        .dr-hero-icon {
+            width: 54px; height: 54px; border-radius: 16px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #0056b3, #00a3c4); color: #fff;
+            box-shadow: 0 8px 20px rgba(0,86,179,0.35);
+        }
+        .dr-hero-icon .lucide { width: 28px; height: 28px; }
+        .dr-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .dr-chip {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 12px; border-radius: 999px; font-size: 0.78rem; font-weight: 600;
+            background: rgba(0,0,0,0.05); color: var(--text-primary); border: 1px solid rgba(0,0,0,0.06);
+        }
+        .dr-chip b { font-weight: 800; }
+
+        /* ── Level picker ── */
+        .dr-level-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 620px) { .dr-level-grid { grid-template-columns: repeat(3, 1fr); } }
+        .dr-level {
+            --lv: #0056b3;
+            position: relative; text-align: left; cursor: pointer;
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 16px 16px 14px; box-shadow: var(--glass-shadow);
+            color: var(--text-primary); font-family: inherit; overflow: hidden;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+            display: flex; flex-direction: column; gap: 4px; min-height: 128px;
+        }
+        .dr-level::before {
+            content: ""; position: absolute; inset: 0 0 auto 0; height: 5px; background: var(--lv);
+        }
+        .dr-level:hover { transform: translateY(-3px); }
+        .dr-level:active { transform: scale(0.98); }
+        .dr-level-code {
+            display: inline-flex; align-self: flex-start; align-items: center; justify-content: center;
+            min-width: 46px; height: 30px; padding: 0 10px; border-radius: 10px;
+            background: var(--lv); color: #fff; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em;
+            margin: 4px 0 6px;
+        }
+        .dr-level-name { font-weight: 700; font-size: 0.92rem; line-height: 1.25; }
+        .dr-level-meta { font-size: 0.76rem; color: var(--text-secondary); margin-top: auto; padding-top: 6px; }
+        .dr-level-meta b { color: var(--text-primary); }
+        .dr-level.is-last { box-shadow: 0 0 0 2px var(--lv), var(--glass-shadow); }
+        .dr-level .dr-last-tag {
+            position: absolute; top: 12px; right: 12px; font-size: 0.62rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.08em; color: var(--lv);
+        }
+        .dr-level[disabled] { cursor: not-allowed; opacity: 0.62; }
+        .dr-level[disabled]:hover { transform: none; }
+
+        /* ── Status pills / legend ── */
+        .dr-pill {
+            display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+            padding: 3px 9px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.02em;
+        }
+        .dr-pill .lucide { width: 0.95em; height: 0.95em; }
+        .dr-pill.st-I { background: rgba(22,163,74,0.14); color: #15803d; border: 1px solid rgba(22,163,74,0.35); }
+        .dr-pill.st-T { background: rgba(234,88,12,0.13); color: #c2410c; border: 1px solid rgba(234,88,12,0.4); }
+        .dr-pill.st-N { background: rgba(100,116,139,0.13); color: #475569; border: 1px solid rgba(100,116,139,0.3); }
+        .dr-pill.st-new { background: rgba(0,86,179,0.12); color: #0056b3; border: 1px solid rgba(0,86,179,0.35); }
+        .dr-pill.st-form { background: rgba(124,58,237,0.12); color: #6d28d9; border: 1px solid rgba(124,58,237,0.35); }
+        .dr-legend { display: grid; gap: 10px; margin-top: 14px; }
+        .dr-legend-row { display: flex; gap: 10px; align-items: flex-start; font-size: 0.86rem; line-height: 1.45; color: var(--text-secondary); }
+        .dr-legend-row .dr-pill { flex-shrink: 0; margin-top: 1px; }
+
+        /* ── Hub ── */
+        .dr-banner {
+            --lv: #0056b3;
+            border-radius: 24px; padding: 22px; color: #fff; margin-bottom: 18px;
+            background: var(--lv);
+            background: linear-gradient(135deg, var(--lv) 0%, color-mix(in srgb, var(--lv) 55%, #000) 100%);
+            box-shadow: 0 14px 34px rgba(0,0,0,0.28); position: relative; overflow: hidden;
+        }
+        .dr-banner::after {
+            content: ""; position: absolute; right: -30px; bottom: -60px; width: 200px; height: 200px;
+            border-radius: 50%; background: rgba(255,255,255,0.08);
+        }
+        .dr-banner-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+        .dr-banner-code { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+        .dr-banner-name { font-size: 0.95rem; opacity: 0.9; font-weight: 600; margin-top: 6px; }
+        .dr-banner-btn {
+            background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 12px; padding: 8px 12px; font-weight: 700; font-size: 0.8rem; cursor: pointer;
+            font-family: inherit; display: inline-flex; align-items: center; gap: 6px; position: relative; z-index: 1;
+        }
+        .dr-banner-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 18px; position: relative; z-index: 1; }
+        .dr-bstat { background: rgba(255,255,255,0.14); border-radius: 14px; padding: 10px 8px; text-align: center; }
+        .dr-bstat b { display: block; font-size: 1.35rem; font-weight: 800; }
+        .dr-bstat span { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.9; font-weight: 700; }
+
+        .dr-modes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .dr-mode {
+            text-align: left; cursor: pointer; font-family: inherit; color: var(--text-primary);
+            background: var(--glass-bg); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+            border-radius: 20px; padding: 18px 16px; display: flex; flex-direction: column; gap: 6px;
+            transition: transform 0.18s ease; min-height: 148px;
+        }
+        .dr-mode:hover { transform: translateY(-3px); }
+        .dr-mode:active { transform: scale(0.98); }
+        .dr-mode-icon {
+            width: 44px; height: 44px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 4px;
+        }
+        .dr-mode-icon .lucide { width: 22px; height: 22px; }
+        .dr-mode h3 { margin: 0; font-size: 1.02rem; font-weight: 800; }
+        .dr-mode p { margin: 0; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+        .dr-mode .dr-mode-meta { margin-top: auto; font-size: 0.74rem; font-weight: 700; color: var(--text-secondary); }
+        .m-study .dr-mode-icon { background: var(--btn-grad-sum); color: var(--text-sum); border: 1px solid var(--border-sum); }
+        .m-flash .dr-mode-icon { background: var(--btn-grad-flash); color: var(--text-flash); border: 1px solid var(--border-flash); }
+        .m-quiz  .dr-mode-icon { background: var(--btn-grad-quiz); color: var(--text-quiz); border: 1px solid var(--border-quiz); }
+        .m-scope .dr-mode-icon { background: var(--btn-grad-scen); color: var(--text-scen); border: 1px solid var(--border-scen); }
+
+        .dr-taglist { display: flex; flex-wrap: wrap; gap: 8px; }
+        .dr-tag {
+            border: 1px solid rgba(0,0,0,0.08); background: rgba(255,255,255,0.7); color: var(--text-primary);
+            border-radius: 12px; padding: 7px 11px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: inherit;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .dr-tag:hover { border-color: var(--primary-accent); }
+        .dr-tag small { font-weight: 700; color: var(--text-secondary); }
+
+        /* ── Toolbar: search + filter chips ── */
+        .dr-search {
+            display: flex; align-items: center; gap: 8px;
+            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 40px;
+            padding: 4px 6px 4px 18px; box-shadow: var(--glass-shadow); margin-bottom: 12px;
+        }
+        .dr-search .lucide { color: var(--text-secondary); }
+        .dr-search input {
+            flex: 1; min-width: 0; background: transparent; border: none; outline: none;
+            padding: 12px 0; font-size: 1rem; color: var(--text-primary); font-family: inherit;
+            user-select: text; -webkit-user-select: text;
+        }
+        .dr-search input::placeholder { color: var(--text-secondary); opacity: 0.75; }
+        .dr-search button {
+            width: 34px; height: 34px; border-radius: 50%; border: none; background: transparent;
+            color: var(--text-secondary); cursor: pointer; display: none; align-items: center; justify-content: center;
+        }
+        .dr-filters { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 8px; margin: 0 -2px 6px; }
+        .dr-filters::-webkit-scrollbar { display: none; }
+        .dr-filter {
+            flex-shrink: 0; border-radius: 999px; padding: 8px 14px; font-size: 0.82rem; font-weight: 700; cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.2); color: var(--header-text);
+            font-family: inherit; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+        }
+        .dr-filter .lucide { width: 1em; height: 1em; }
+        .dr-filter.active { background: var(--primary-accent); border-color: transparent; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .dr-filter .n { opacity: 0.75; font-weight: 600; }
+
+        /* ── Study: drug accordion ── */
+        .dr-group-h {
+            color: var(--header-text); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em;
+            text-transform: uppercase; margin: 22px 6px 10px; display: flex; align-items: center; gap: 8px; opacity: 0.95;
+        }
+        .dr-drug {
+            background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 18px;
+            box-shadow: var(--glass-shadow); margin-bottom: 10px; overflow: hidden; color: var(--text-primary);
+        }
+        .dr-drug-head {
+            width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px 16px; cursor: pointer;
+            background: transparent; border: none; font-family: inherit; text-align: left; color: inherit;
+        }
+        .dr-mnum {
+            width: 42px; height: 42px; flex-shrink: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 0.82rem; background: rgba(0,86,179,0.1); color: var(--primary-accent);
+        }
+        .dr-drug-name { font-weight: 800; font-size: 1rem; line-height: 1.25; }
+        .dr-drug-class { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; }
+        .dr-drug-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+        .dr-chev { margin-left: auto; flex-shrink: 0; color: var(--text-secondary); transition: transform 0.25s ease; }
+        .dr-drug.open .dr-chev { transform: rotate(90deg); }
+        .dr-drug-body { display: none; padding: 0 16px 16px; }
+        .dr-drug.open .dr-drug-body { display: block; animation: fadeInUp 0.3s ease both; }
+
+        .dr-scopebox {
+            border-radius: 14px; padding: 12px 14px; margin-bottom: 12px;
+            background: rgba(0,86,179,0.07); border: 1px solid rgba(0,86,179,0.18);
+        }
+        .dr-scopebox h5, .dr-sec h5 {
+            margin: 0 0 8px; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 6px; color: var(--text-secondary);
+        }
+        .dr-scoperow { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0; font-size: 0.88rem; }
+        .dr-scoperow + .dr-scoperow { border-top: 1px dashed rgba(0,0,0,0.1); }
+        .dr-scoperow .lbl { font-weight: 600; }
+        .dr-tele-note { font-size: 0.8rem; color: #c2410c; font-weight: 600; margin-top: 8px; display: flex; gap: 6px; align-items: flex-start; }
+
+        .dr-dose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+        @media (max-width: 560px) { .dr-dose-grid { grid-template-columns: 1fr; } }
+        .dr-sec { border-radius: 14px; padding: 12px 14px; margin-bottom: 10px; background: rgba(0,0,0,0.035); border: 1px solid rgba(0,0,0,0.05); }
+        .dr-sec.dose { background: rgba(0,86,179,0.07); border-color: rgba(0,86,179,0.2); }
+        .dr-sec.dose h5 { color: var(--primary-accent); }
+        .dr-sec.peds { background: rgba(217,119,6,0.08); border-color: rgba(217,119,6,0.25); }
+        .dr-sec.peds h5 { color: #b45309; }
+        .dr-sec.ci { border-left: 4px solid #dc3545; }
+        .dr-sec.ci h5 { color: #dc3545; }
+        .dr-sec.prec { border-left: 4px solid #e68c00; }
+        .dr-sec.prec h5 { color: #c97a00; }
+        .dr-sec.ind { border-left: 4px solid #16a34a; }
+        .dr-sec.ind h5 { color: #15803d; }
+        .dr-lines { margin: 0; padding: 0; list-style: none; font-size: 0.9rem; line-height: 1.5; }
+        .dr-lines li { position: relative; padding-left: 14px; margin: 3px 0; color: var(--text-primary); }
+        .dr-lines li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.45; }
+        .dr-lines li.sub { margin-left: 14px; color: var(--text-secondary); }
+        .dr-lines li.subh { padding-left: 0; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-secondary); margin-top: 10px; }
+        .dr-lines li.subh:first-child { margin-top: 0; }
+        .dr-lines li.subh::before { display: none; }
+        .dr-lines b.q { color: var(--primary-accent); font-weight: 800; }
+        .dr-sec.peds .dr-lines b.q { color: #b45309; }
+        .dr-more { margin-top: 4px; }
+        .dr-more summary {
+            cursor: pointer; font-weight: 700; font-size: 0.85rem; color: var(--primary-accent);
+            padding: 8px 2px; list-style: none; display: flex; align-items: center; gap: 6px;
+        }
+        .dr-more summary::-webkit-details-marker { display: none; }
+        .dr-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .dr-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+            padding: 10px 14px; border-radius: 12px; font-weight: 700; font-size: 0.84rem; cursor: pointer;
+            text-decoration: none; font-family: inherit; border: 1px solid transparent; transition: transform 0.15s;
+        }
+        .dr-btn:active { transform: scale(0.97); }
+        .dr-btn .lucide { width: 1.1em; height: 1.1em; }
+        .dr-btn img { width: 18px; height: 18px; }
+        .dr-btn.ghost { background: rgba(0,0,0,0.05); color: var(--text-primary); border-color: rgba(0,0,0,0.08); }
+        .dr-btn.quiz { background: var(--btn-grad-quiz); color: var(--text-quiz); border-color: var(--border-quiz); }
+        .dr-btn.primary { background: var(--primary-accent); color: #fff; box-shadow: 0 6px 16px rgba(0,86,179,0.3); }
+        .dr-btn.big { padding: 15px 20px; font-size: 1rem; border-radius: 16px; width: 100%; }
+        .dr-empty { text-align: center; padding: 30px 10px; color: var(--text-secondary); font-style: italic; }
+
+        /* ── Setup panels (quiz / flashcards) ── */
+        .dr-opt-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin: 18px 0 8px; }
+        .dr-opt-label:first-of-type { margin-top: 6px; }
+        .dr-seg { display: flex; flex-wrap: wrap; gap: 8px; }
+        .dr-seg button {
+            flex: 1 1 auto; min-width: 64px; padding: 11px 12px; border-radius: 12px; cursor: pointer; font-family: inherit;
+            font-weight: 700; font-size: 0.86rem; background: rgba(255,255,255,0.75); color: var(--text-primary);
+            border: 1px solid rgba(0,0,0,0.08); display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+        }
+        .dr-seg button small { font-weight: 600; color: var(--text-secondary); }
+        .dr-seg button.active { background: var(--primary-accent); color: #fff; border-color: transparent; }
+        .dr-seg button.active small { color: rgba(255,255,255,0.85); }
+        .dr-seg button:disabled { opacity: 0.4; cursor: not-allowed; }
+        .dr-pool { margin-top: 16px; font-size: 0.85rem; color: var(--text-secondary); text-align: center; }
+
+        /* ── Quiz ── */
+        .dr-qtop { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); }
+        .dr-qprog { height: 8px; border-radius: 8px; background: rgba(0,0,0,0.07); overflow: hidden; margin-bottom: 18px; }
+        .dr-qprog > div { height: 100%; border-radius: 8px; background: linear-gradient(90deg, #3b82f6, #0056b3); transition: width 0.4s ease; }
+        .dr-qmeta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+        .dr-q { font-size: 1.15rem; font-weight: 700; line-height: 1.45; margin: 0 0 6px; }
+        .option-btn { display: flex; gap: 12px; align-items: flex-start; width: 100%; font-family: inherit; }
+        .option-btn .k {
+            flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
+            font-size: 0.78rem; font-weight: 800; background: rgba(0,0,0,0.06); color: #475569;
+        }
+        .option-btn.correct .k { background: #16a34a; color: #fff; }
+        .option-btn.wrong .k { background: #dc2626; color: #fff; }
+        .option-btn:disabled { cursor: default; }
+        .option-btn.dim { opacity: 0.55; }
+        .dr-fb { margin-top: 16px; padding: 14px 16px; border-radius: 14px; font-size: 0.9rem; line-height: 1.5; }
+        .dr-fb.ok { background: rgba(22,163,74,0.1); border-left: 4px solid #16a34a; }
+        .dr-fb.bad { background: rgba(220,38,38,0.08); border-left: 4px solid #dc2626; }
+        .dr-fb strong { display: block; margin-bottom: 4px; }
+        .dr-fb .ref { display: block; margin-top: 6px; font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); }
+        .dr-qnav { display: flex; gap: 10px; margin-top: 18px; }
+        .dr-qnav .dr-btn { flex: 1; }
+
+        .dr-result-top { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .dr-ring { --p: 0; --c: #16a34a; width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center;
+            background: conic-gradient(var(--c) calc(var(--p) * 1%), rgba(0,0,0,0.08) 0); }
+        .dr-ring > div { width: 94px; height: 94px; border-radius: 50%; background: var(--glass-bg); display: grid; place-items: center; text-align: center; }
+        .dr-ring b { font-size: 1.7rem; font-weight: 800; line-height: 1; }
+        .dr-ring span { font-size: 0.7rem; color: var(--text-secondary); font-weight: 700; }
+        .dr-bars { display: grid; gap: 10px; margin-top: 18px; }
+        .dr-bar { display: grid; grid-template-columns: 120px 1fr 48px; gap: 10px; align-items: center; font-size: 0.82rem; font-weight: 600; }
+        .dr-bar .track { height: 8px; border-radius: 8px; background: rgba(0,0,0,0.07); overflow: hidden; }
+        .dr-bar .track > div { height: 100%; border-radius: 8px; }
+        .dr-bar .v { text-align: right; color: var(--text-secondary); }
+        .dr-miss { border-radius: 14px; padding: 12px 14px; margin-top: 10px; background: rgba(220,38,38,0.06); border: 1px solid rgba(220,38,38,0.15); font-size: 0.88rem; line-height: 1.45; }
+        .dr-miss .qq { font-weight: 700; margin-bottom: 6px; }
+        .dr-miss .yours { color: #b91c1c; }
+        .dr-miss .right { color: #15803d; font-weight: 700; }
+        .dr-miss .ex { color: var(--text-secondary); margin-top: 4px; font-size: 0.82rem; }
+        .dr-history { display: flex; gap: 6px; align-items: flex-end; height: 48px; margin-top: 8px; }
+        .dr-history div { flex: 1; border-radius: 4px 4px 0 0; min-height: 4px; }
+
+        /* ── Flashcards (reuses .scene/.card from styles.css) ── */
+        .dr-fc-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 4px; }
+        .card__face--front .dr-fc-drug { font-size: 1.5rem; font-weight: 800; color: #0f2c4c; line-height: 1.2; }
+        .card__face--front .dr-fc-prompt { font-size: 1.02rem; font-weight: 600; color: #475569; margin-top: 10px; }
+        .card__face--front .dr-fc-hint { position: absolute; bottom: 14px; font-size: 0.72rem; color: #94a3b8; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .card__face--back { justify-content: flex-start; white-space: normal; text-align: left; align-items: stretch; }
+        .card__face--back .dr-fc-back-h { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-bottom: 8px; text-align: center; }
+        .card__face--back .dr-lines { font-size: 0.95rem; }
+        .card__face--back .dr-lines li, .card__face--back .dr-lines li.sub, .card__face--back .dr-lines li.subh { color: #fff; }
+        .card__face--back .dr-lines b.q { color: #ffe08a; }
+        .scene { height: 60vh; max-height: 420px; }
+        .card { cursor: pointer; }
+        .dr-fc-rate { display: flex; gap: 10px; margin-top: 6px; }
+        .dr-fc-rate .dr-btn { flex: 1; padding: 13px; font-size: 0.92rem; }
+        .dr-btn.again { background: rgba(255,255,255,0.88); color: #b91c1c; border-color: rgba(220,38,38,0.25); }
+        .dr-btn.know { background: rgba(255,255,255,0.88); color: #15803d; border-color: rgba(22,163,74,0.3); }
+        .dr-fc-nav { display: flex; gap: 10px; margin-top: 10px; }
+        .dr-fc-nav .dr-btn { flex: 1; }
+
+        /* ── Scope matrix ── */
+        .dr-matrix-wrap { overflow-x: auto; margin: 0 -8px; padding: 0 8px; }
+        .dr-matrix { width: 100%; border-collapse: separate; border-spacing: 2px; font-size: 0.76rem; table-layout: auto; }
+        .dr-matrix th { font-size: 0.6rem; font-weight: 800; color: #fff; padding: 7px 1px; border-radius: 6px; width: 27px; min-width: 25px; }
+        .dr-matrix th.lbl { background: transparent; color: var(--text-secondary); text-align: left; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; }
+        .dr-matrix td { border-radius: 6px; height: 28px; text-align: center; background: rgba(0,0,0,0.06); }
+        .dr-matrix td.lbl { background: transparent; text-align: left; padding: 2px 6px 2px 2px; font-weight: 600; line-height: 1.2; min-width: 96px; cursor: pointer; }
+        .dr-matrix td.lbl:hover { color: var(--primary-accent); }
+        .dr-matrix td.on { background: var(--c); }
+        .dr-matrix td.tele { background: var(--c); color: #fff; }
+        .dr-matrix td.tele .lucide { width: 14px; height: 14px; }
+        .dr-matrix .mine { box-shadow: 0 0 0 2px var(--text-primary); }
+        .dr-matrix tr.out td.lbl { opacity: 0.45; }
+        .dr-matrix tr.sep td { background: transparent; height: 8px; }
+
+        /* ── Misc ── */
+        .dr-backrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+        .dr-crumb {
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.2); color: var(--header-text);
+            border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 7px 14px 7px 10px; font-weight: 700; font-size: 0.84rem;
+            cursor: pointer; font-family: inherit;
+        }
+        .dr-crumb .lv { width: 10px; height: 10px; border-radius: 50%; }
+        .dr-disclaimer { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; margin-top: 12px; display: flex; gap: 8px; }
+        .float-btn { position: fixed; width: 40px; height: 40px; border-radius: 50%; background: rgba(61,100,115,0.7); color: white; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: opacity 0.2s; z-index: 999; opacity: 0.85; }
+        .float-btn.hidden { opacity: 0; pointer-events: none; }
+        #scrollToTopBtn { bottom: 20px; right: 15px; }
+        @media (max-width: 420px) {
+            .dr-card { padding: 18px; border-radius: 20px; }
+            .dr-title { font-size: 1.35rem; }
+            .dr-banner-stats { grid-template-columns: repeat(2, 1fr); }
+            .dr-mode { min-height: 138px; padding: 16px 14px; }
+            .dr-bar { grid-template-columns: 96px 1fr 42px; }
+            .dr-matrix { font-size: 0.7rem; }
+            .dr-matrix th { width: 23px; min-width: 22px; font-size: 0.55rem; }
+            .dr-matrix td { height: 26px; }
+            .dr-matrix td.lbl { min-width: 0; }
+            .dr-matrix-wrap { margin: 0 -6px; padding: 0 2px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .dr-view, .dr-drug.open .dr-drug-body { animation: none; }
+            .card { transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <button class="icon-btn" id="homeBtn" title="Back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="header-text">
+            <h1 id="pageTitle">ScopeRx</h1>
+            <p id="pageSubtitle">DCAS Drug Refresher</p>
+        </div>
+    </div>
+    <div class="header-right">
+        <button class="icon-btn" id="themeToggle" title="Switch Theme"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#palette"/></svg></button>
+        <a href="../chapters/c-index.html?view=summary" class="icon-btn" title="Index"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#clipboard-list"/></svg></a>
+        <a href="about.html" class="icon-btn" title="About"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-help"/></svg></a>
+    </div>
+</header>
+
+<main id="mainContent" aria-live="polite"></main>
+
+<footer>
+    <div>Created by Soliman Anas · for study aid only</div>
+    <div><a href="about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
+</footer>
+
+<button class="float-btn hidden" id="scrollToTopBtn" title="Go to top"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-up"/></svg></button>
+
+<script src="drug-refresher-data.js"></script>
+<script>
+(function () {
+    'use strict';
+
+    /* ════════════════ DATA ════════════════ */
+    var LEVELS = window.DR_LEVELS, ITEMS = window.DR_ITEMS, MONO = window.DR_MONO;
+    var FORM = window.DR_FORMULARY_ONLY, GROUPS = window.DR_GROUPS, QBANK = window.DR_QBANK;
+    var LV_IDX = {}; LEVELS.forEach(function (l, i) { LV_IDX[l.id] = i; });
+    var ITEM_BY_ID = {}; ITEMS.forEach(function (it) { ITEM_BY_ID[it.id] = it; });
+    var TOPICS = { dose: 'Adult dose', peds: 'Pediatric', ind: 'Indications', ci: 'Contraindications', pharm: 'Pharmacology', safety: 'Safety & admin', scope: 'Scope of practice' };
+    var TOPIC_COLOR = { dose: '#0056b3', peds: '#d97706', ind: '#16a34a', ci: '#dc2626', pharm: '#7c3aed', safety: '#0891b2', scope: '#475569' };
+    var $main = document.getElementById('mainContent');
+
+    /* ════════════════ UTIL ════════════════ */
+    function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function icon(id, cls) { return '<svg class="lucide' + (cls ? ' ' + cls : '') + '" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#' + id + '"/></svg>'; }
+    function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+    function store(k, v) { try { if (v === undefined) { var r = localStorage.getItem(k); return r ? JSON.parse(r) : null; } localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
+    /* bold the numbers-with-units so doses jump out */
+    var DOSE_RE = /(\d+(?:\.\d+)?(?:\s?[-–]\s?\d+(?:\.\d+)?)?\s?(?:mcg\/kg\/min|mg\/kg\/min|mcg\/min|mg\/kg|ml\/kg|mcg\/kg|mg\/ml|mg|mcg|ml|mls|g)\b)/gi;
+    function fmt(s) { return esc(s).replace(DOSE_RE, '<b class="q">$1</b>'); }
+    function lines(arr) {
+        if (!arr || !arr.length) return '<ul class="dr-lines"><li>Nil</li></ul>';
+        return '<ul class="dr-lines">' + arr.map(function (s) {
+            if (s.indexOf('## ') === 0) return '<li class="subh">' + esc(s.slice(3)) + '</li>';
+            if (s.indexOf('-- ') === 0) return '<li class="sub">' + fmt(s.slice(3)) + '</li>';
+            return '<li>' + fmt(s) + '</li>';
+        }).join('') + '</ul>';
+    }
+    function plain(arr) { return (arr || []).map(function (s) { return s.replace(/^(## |-- )/, ''); }).join(' · '); }
+    function mLabel(m) { return 'M' + MONO[m].num; }
+
+    /* ════════════════ SCOPE LOGIC ════════════════ */
+    function statusAt(item, li) { var c = item.s.charAt(li); return c === '.' ? 'N' : c; }
+    function stLabel(st) { return st === 'I' ? 'Independent' : st === 'T' ? 'Tele-EMS' : 'Not in scope'; }
+    function stIcon(st) { return st === 'I' ? 'circle-check-big' : st === 'T' ? 'phone' : 'ban'; }
+    function pill(st, text) { return '<span class="dr-pill st-' + st + '">' + icon(stIcon(st)) + esc(text || stLabel(st)) + '</span>'; }
+    function firstLevel(item) { for (var i = 0; i < 7; i++) if (item.s.charAt(i) !== '.') return i; return -1; }
+    function firstIndep(item) { for (var i = 0; i < 7; i++) if (item.s.charAt(i) === 'I') return i; return -1; }
+
+    /* Everything a level may give, grouped by monograph */
+    function levelDrugs(li) {
+        var out = {};
+        ITEMS.forEach(function (it) {
+            var st = statusAt(it, li);
+            if (st === 'N') return;
+            var d = out[it.m] || (out[it.m] = { m: it.m, items: [], tele: false, indep: false, isNew: false, nowIndep: false, formulary: false });
+            d.items.push(it);
+            if (st === 'T') d.tele = true; else d.indep = true;
+            if (li > 0 && statusAt(it, li - 1) === 'N') d.isNew = true;
+            if (li > 0 && st === 'I' && statusAt(it, li - 1) === 'T') d.nowIndep = true;
+        });
+        FORM.forEach(function (f) {
+            var from = LV_IDX[f.from];
+            if (li >= from && !out[f.m]) out[f.m] = { m: f.m, items: [], tele: false, indep: true, isNew: li === from, nowIndep: false, formulary: true, fLabel: f.label, fFrom: f.from };
+        });
+        return out;
+    }
+    function levelSummary(li) {
+        var inScope = ITEMS.filter(function (it) { return statusAt(it, li) !== 'N'; });
+        var tele = inScope.filter(function (it) { return statusAt(it, li) === 'T'; });
+        var nw = li > 0 ? inScope.filter(function (it) { return statusAt(it, li - 1) === 'N'; }) : inScope;
+        return { rows: inScope.length, tele: tele.length, indep: inScope.length - tele.length, isNew: nw.length, drugs: Object.keys(levelDrugs(li)).length, teleItems: tele, newItems: nw };
+    }
+
+    /* ════════════════ QUESTIONS ════════════════ */
+    function qInScope(q, li, drugs) {
+        if (q.req) { var it = ITEM_BY_ID[q.req]; return it && statusAt(it, li) !== 'N'; }
+        return !!drugs[q.m];
+    }
+    function scopeQuestions(li) {
+        var L = LEVELS[li], qs = [];
+        var inS = ITEMS.filter(function (it) { return statusAt(it, li) !== 'N'; });
+        var tele = inS.filter(function (it) { return statusAt(it, li) === 'T'; });
+        var indep = inS.filter(function (it) { return statusAt(it, li) === 'I'; });
+        /* boundary: out-of-scope rows that open up at the next one or two levels */
+        var out = ITEMS.filter(function (it) { var f = firstLevel(it); return statusAt(it, li) === 'N' && f > li && f <= li + 2; });
+        function trail(it) { return LEVELS.map(function (l, i) { var s = statusAt(it, i); return l.id + ' ' + (s === 'I' ? '✓' : s === 'T' ? '☎' : '✗'); }).join(' · '); }
+        inS.concat(out).forEach(function (it) {
+            var st = statusAt(it, li);
+            var opts = { I: 'Independent practice', T: 'Only after Tele-EMS consultation', N: 'Not within ' + L.id + ' scope' };
+            qs.push({ m: it.m, t: 'scope', scopeItem: it.id, q: 'As ' + (/^[AEIOU]/.test(L.id) ? 'an ' : 'a ') + L.id + ', what is your authority for ' + it.label + '?',
+                a: opts[st], d: ['I', 'T', 'N'].filter(function (k) { return k !== st; }).map(function (k) { return opts[k]; }),
+                x: 'S1 matrix – ' + it.label + ': ' + trail(it) + '. (✓ independent, ☎ Tele-EMS first, ✗ not authorised)' });
+        });
+        shuffle(tele).forEach(function (t) {
+            if (indep.length < 3) return;
+            var ds = shuffle(indep).slice(0, 3);
+            qs.push({ m: t.m, t: 'scope', q: 'At ' + L.id + ' level, which of these requires Tele-EMS consultation BEFORE administration?', a: t.label, d: ds.map(function (x) { return x.label; }),
+                x: t.label + ' is marked with the Tele-EMS symbol in the ' + L.id + ' column; the others are independent practice.' });
+        });
+        shuffle(out).slice(0, 6).forEach(function (o) {
+            if (inS.length < 3) return;
+            var ds = shuffle(inS).slice(0, 3);
+            qs.push({ m: o.m, t: 'scope', q: 'Which of these is NOT within ' + L.id + ' scope of practice?', a: o.label, d: ds.map(function (x) { return x.label; }),
+                x: o.label + ' starts at ' + LEVELS[firstLevel(o)].id + ' level. The others are within ' + L.id + ' scope.' });
+        });
+        return qs;
+    }
+    function questionPool(li) {
+        var drugs = levelDrugs(li);
+        var pool = QBANK.filter(function (q) { return qInScope(q, li, drugs); });
+        return pool.concat(scopeQuestions(li));
+    }
+
+    /* ════════════════ FLASHCARDS ════════════════ */
+    function flashDeck(li) {
+        var drugs = levelDrugs(li), L = LEVELS[li], cards = [];
+        orderedDrugs(drugs).forEach(function (d) {
+            var mo = MONO[d.m], name = mo.name;
+            function add(k, prompt, body, head) { cards.push({ id: d.m + ':' + k, m: d.m, k: k, drug: name, prompt: prompt, body: body, head: head || prompt, isNew: d.isNew, tele: d.tele }); }
+            var scopeLines = d.formulary ? ['Formulary only – not a row in the S1 matrix (monograph scope: ' + d.fFrom + ')']
+                : ITEMS.filter(function (it) { return it.m === d.m; }).map(function (it) {
+                    var st = statusAt(it, li);
+                    return it.label + ': ' + (st === 'N' ? 'from ' + LEVELS[firstLevel(it)].id : stLabel(st) + (st === 'T' ? ' – consult first' : ''));
+                });
+            add('scope', 'Your ' + L.id + ' scope?', scopeLines, L.id + ' scope');
+            add('class', 'Class & presentation?', ['## Class'].concat(mo.class, ['## Presentation'], mo.pres), 'Class & presentation');
+            add('ind', 'Indications?', mo.ind);
+            add('ci', 'Contraindications?', mo.ci);
+            add('dose', 'Adult dose?', mo.adult, 'Adult dose & administration');
+            add('peds', 'Pediatric dose?', mo.peds, 'Pediatric dose & administration');
+        });
+        return cards;
+    }
+
+    /* ════════════════ ROUTER ════════════════ */
+    /* #/                → level picker
+       #/EMT             → hub
+       #/EMT/study[/m2]  → study (optionally opened on a drug)
+       #/EMT/flash       → flashcards
+       #/EMT/quiz[/m2]   → quiz (optionally one drug)
+       #/EMT/matrix      → scope matrix                                 */
+    function parseHash() {
+        var h = (location.hash || '').replace(/^#\/?/, '');
+        var p = h ? h.split('/') : [];
+        return { level: p[0] ? decodeURIComponent(p[0]) : null, mode: p[1] || null, arg: p[2] || null };
+    }
+    function go(path) { location.hash = '#/' + path; }
+    function setHeader(title, sub) {
+        document.getElementById('pageTitle').textContent = title;
+        document.getElementById('pageSubtitle').textContent = sub;
+        document.title = title + ' · ' + sub;
+    }
+    var quizState = null, flashState = null;
+
+    function route() {
+        var r = parseHash();
+        if (!r.level) {
+            var q = new URLSearchParams(location.search).get('level');
+            if (q && LV_IDX[q.toUpperCase()] > 0) { go(q.toUpperCase()); return; }
+            return renderPicker();
+        }
+        var li = LV_IDX[r.level];
+        if (li === undefined || li === 0) return go('');
+        store('dr_level', r.level);
+        if (r.mode !== 'quiz') quizState = null;
+        if (r.mode !== 'flash') flashState = null;
+        switch (r.mode) {
+            case 'study': return renderStudy(li, r.arg);
+            case 'flash': return renderFlash(li);
+            case 'quiz': return renderQuiz(li, r.arg);
+            case 'matrix': return renderMatrix(li);
+            default: return renderHub(li);
+        }
+    }
+    function mount(html, keepScroll) {
+        $main.innerHTML = '<div class="dr-view">' + html + '</div>';
+        if (!keepScroll) window.scrollTo(0, 0);
+    }
+    function crumb(li, label) {
+        var L = LEVELS[li];
+        return '<div class="dr-backrow"><button class="dr-crumb" data-go="' + L.id + '">' + icon('arrow-left') +
+            '<span class="lv" style="background:' + L.color + '"></span>' + esc(L.id) + ' hub</button>' +
+            (label ? '<span class="dr-eyebrow" style="color:var(--header-text);opacity:.85">' + esc(label) + '</span>' : '') + '</div>';
+    }
+
+    /* ════════════════ VIEW: LEVEL PICKER ════════════════ */
+    function renderPicker() {
+        setHeader('ScopeRx', 'DCAS Drug Refresher');
+        var last = store('dr_level');
+        var html = '<div class="dr-card dr-hero"><div class="dr-hero-row"><div class="dr-hero-icon">' + icon('pill') + '</div>' +
+            '<div><div class="dr-eyebrow">All-in-one · DCAS CPG 2025</div><div class="dr-title">ScopeRx Drug Refresher</div></div></div>' +
+            '<p class="dr-lead" style="margin-top:12px">Pick your clinical level. Everything that follows – study cards, flashcards and quizzes – is filtered to the medications in <b>your</b> DCAS Scope of Practice, including which ones need Tele-EMS first.</p>' +
+            '<div class="dr-chips"><span class="dr-chip">' + icon('pill') + '<b>' + Object.keys(MONO).length + '</b> monographs</span>' +
+            '<span class="dr-chip">' + icon('clipboard-list') + '<b>' + ITEMS.length + '</b> scope rows</span>' +
+            '<span class="dr-chip">' + icon('target') + '<b>' + QBANK.length + '+</b> questions</span></div></div>';
+
+        html += '<div class="dr-section-title">' + icon('user') + 'Select your level</div><div class="dr-level-grid">';
+        LEVELS.forEach(function (L, li) {
+            var s = levelSummary(li);
+            if (li === 0) {
+                html += '<button class="dr-level" style="--lv:' + L.color + '" disabled title="No medications in ER scope">' +
+                    '<span class="dr-level-code">' + L.id + '</span><span class="dr-level-name">' + esc(L.name) + '</span>' +
+                    '<span class="dr-level-meta">No medications in the S1 matrix for ER</span></button>';
+                return;
+            }
+            html += '<button class="dr-level' + (last === L.id ? ' is-last' : '') + '" style="--lv:' + L.color + '" data-go="' + L.id + '">' +
+                (last === L.id ? '<span class="dr-last-tag">Last used</span>' : '') +
+                '<span class="dr-level-code">' + L.id + '</span><span class="dr-level-name">' + esc(L.name) + '</span>' +
+                '<span class="dr-level-meta"><b>' + s.drugs + '</b> drugs' + (s.tele ? ' · <b>' + s.tele + '</b> Tele-EMS' : '') + ' · <b>' + s.isNew + '</b> new</span></button>';
+        });
+        html += '</div>';
+
+        html += '<div class="dr-card" style="margin-top:18px"><div class="dr-eyebrow">How to read your scope</div>' +
+            '<div class="dr-legend">' +
+            '<div class="dr-legend-row">' + pill('I') + '<span>May be given <b>independently</b>, without supervision or consultation. Tele-EMS remains available for guidance.</span></div>' +
+            '<div class="dr-legend-row">' + pill('T') + '<span>Authorised, but <b>only after prior consultation with Tele-EMS</b>.</span></div>' +
+            '<div class="dr-legend-row">' + pill('N') + '<span>Not authorised at that clinical level.</span></div></div>' +
+            '<div class="dr-disclaimer">' + icon('triangle-alert') + '<span>Based on the DCAS CPG 2025 S1 Scope of Practice Matrix and monographs M1–M38. Study aid only – always follow the current CPG and DCAS memos.</span></div>' +
+            '<div class="dr-actions"><a class="dr-btn ghost" href="../pdf_sections/12_1_Scope_of_Practice_Matrix.pdf" target="_blank" rel="noopener"><img src="../images/pdf.png" alt="">S1 Scope Matrix PDF</a></div></div>';
+        mount(html);
+    }
+
+    /* ════════════════ VIEW: HUB ════════════════ */
+    function renderHub(li) {
+        var L = LEVELS[li], s = levelSummary(li), drugs = levelDrugs(li);
+        setHeader('ScopeRx · ' + L.id, L.name);
+        var best = store('dr_best_' + L.id), known = (store('dr_known_' + L.id) || []).length, deckSize = Object.keys(drugs).length * 6;
+        var html = '<div class="dr-banner" style="--lv:' + L.color + '"><div class="dr-banner-top"><div>' +
+            '<div class="dr-banner-code">' + L.id + '</div><div class="dr-banner-name">' + esc(L.name) + '</div></div>' +
+            '<button class="dr-banner-btn" data-go="">' + icon('refresh-ccw') + 'Change level</button></div>' +
+            '<div class="dr-banner-stats">' +
+            '<div class="dr-bstat"><b>' + s.drugs + '</b><span>Drugs</span></div>' +
+            '<div class="dr-bstat"><b>' + s.rows + '</b><span>Scope rows</span></div>' +
+            '<div class="dr-bstat"><b>' + s.tele + '</b><span>Tele-EMS rows</span></div>' +
+            '<div class="dr-bstat"><b>' + s.isNew + '</b><span>New rows</span></div></div></div>';
+
+        html += '<div class="dr-modes">' +
+            modeTile('study', 'book-open', 'Study mode', 'Monograph cards filtered to your scope, doses highlighted.', s.drugs + ' drugs') +
+            modeTile('flash', 'zap', 'Flashcards', 'Flip, rate, repeat. Tracks what you already know.', known + ' / ' + deckSize + ' known') +
+            modeTile('quiz', 'target', 'Take a quiz', 'Doses, contraindications & scope questions for ' + L.id + '.', best ? 'Best ' + best.pct + '%' : questionPool(li).length + ' questions') +
+            modeTile('matrix', 'clipboard-list', 'My scope matrix', 'The S1 matrix with your column highlighted.', ITEMS.length + ' rows') +
+            '</div>';
+
+        if (li > 0) {
+            var newList = s.newItems;
+            html += '<div class="dr-section-title">' + icon('sparkles') + 'New at ' + L.id + '<span class="dr-muted" style="color:var(--header-text);opacity:.7;font-weight:600;font-size:.85rem">vs ' + LEVELS[li - 1].id + '</span></div>' +
+                '<div class="dr-card"><div class="dr-taglist">' + (newList.length ? newList.map(function (it) {
+                    return '<button class="dr-tag" data-go="' + L.id + '/study/' + it.m + '">' + (statusAt(it, li) === 'T' ? icon('phone') : icon('circle-check-big')) + esc(it.label) + '</button>';
+                }).join('') : '<span class="dr-muted">No new medication rows at this level.</span>') + '</div>' + nowIndepNote(li) + '</div>';
+        }
+        if (s.tele) {
+            html += '<div class="dr-section-title">' + icon('phone') + 'Call Tele-EMS first</div><div class="dr-card"><div class="dr-taglist">' +
+                s.teleItems.map(function (it) { return '<button class="dr-tag" data-go="' + L.id + '/study/' + it.m + '">' + icon('phone') + esc(it.label) + '</button>'; }).join('') +
+                '</div><div class="dr-disclaimer" style="margin-top:12px">' + icon('triangle-alert') + '<span>At ' + L.id + ' level these may be administered <b>only after Tele-EMS consultation</b>.</span></div></div>';
+        }
+        mount(html);
+    }
+    function nowIndepNote(li) {
+        var list = ITEMS.filter(function (it) { return statusAt(it, li) === 'I' && statusAt(it, li - 1) === 'T'; });
+        if (!list.length) return '';
+        return '<div class="dr-disclaimer" style="margin-top:12px">' + icon('trending-up') + '<span><b>Now independent</b> (Tele-EMS needed at ' + LEVELS[li - 1].id + '): ' + list.map(function (it) { return esc(it.label); }).join(', ') + '.</span></div>';
+    }
+    function modeTile(mode, ic, title, desc, meta) {
+        var lv = parseHash().level;
+        return '<button class="dr-mode m-' + (mode === 'matrix' ? 'scope' : mode) + '" data-go="' + lv + '/' + mode + '"><div class="dr-mode-icon">' + icon(ic) + '</div>' +
+            '<h3>' + title + '</h3><p>' + desc + '</p><div class="dr-mode-meta">' + meta + '</div></button>';
+    }
+
+    /* ════════════════ VIEW: STUDY ════════════════ */
+    var studyFilter = 'all', studyQuery = '';
+    function orderedDrugs(drugs) {
+        var out = [];
+        GROUPS.forEach(function (g) { g.ms.forEach(function (m) { if (drugs[m]) { drugs[m].group = g; out.push(drugs[m]); } }); });
+        return out;
+    }
+    function renderStudy(li, openM) {
+        var L = LEVELS[li], drugs = levelDrugs(li);
+        setHeader('Study · ' + L.id, 'ScopeRx · ' + L.name);
+        var list = orderedDrugs(drugs);
+        var counts = { all: list.length, 'new': list.filter(function (d) { return d.isNew; }).length, tele: list.filter(function (d) { return d.tele; }).length };
+        var filters = [['all', 'All', 'pill'], ['new', 'New at ' + L.id, 'sparkles'], ['tele', 'Tele-EMS', 'phone']];
+        GROUPS.forEach(function (g) { var n = list.filter(function (d) { return d.group === g; }).length; if (n) { counts[g.id] = n; filters.push([g.id, g.name, g.icon]); } });
+        if (openM) studyFilter = 'all';
+        var html = crumb(li, 'Study mode') +
+            '<div class="dr-search">' + icon('search') + '<input id="drSearch" type="search" placeholder="Search drug, indication, dose…" autocomplete="off" value="' + esc(studyQuery) + '"><button id="drSearchClear" aria-label="Clear">' + icon('x') + '</button></div>' +
+            '<div class="dr-filters" role="tablist">' + filters.map(function (f) {
+                if (f[0] !== 'all' && !counts[f[0]]) return '';
+                return '<button class="dr-filter' + (studyFilter === f[0] ? ' active' : '') + '" data-filter="' + f[0] + '">' + icon(f[2]) + esc(f[1]) + ' <span class="n">' + counts[f[0]] + '</span></button>';
+            }).join('') + '</div><div id="drList"></div>';
+        mount(html);
+        drawStudyList(li, list, openM);
+        var inp = document.getElementById('drSearch'), clr = document.getElementById('drSearchClear');
+        clr.style.display = studyQuery ? 'flex' : 'none';
+        inp.addEventListener('input', function () { studyQuery = inp.value; clr.style.display = studyQuery ? 'flex' : 'none'; drawStudyList(li, list); });
+        clr.addEventListener('click', function () { inp.value = ''; studyQuery = ''; clr.style.display = 'none'; drawStudyList(li, list); inp.focus(); });
+        $main.querySelectorAll('.dr-filter').forEach(function (b) {
+            b.addEventListener('click', function () {
+                studyFilter = b.getAttribute('data-filter');
+                $main.querySelectorAll('.dr-filter').forEach(function (x) { x.classList.toggle('active', x === b); });
+                drawStudyList(li, list);
+            });
+        });
+    }
+    function drugText(d) {
+        var mo = MONO[d.m];
+        return [mo.name, 'm' + mo.num, mo.class, mo.ind, mo.ci, mo.adult, mo.peds, mo.pres, d.items.map(function (i) { return i.label; })].join(' ').toLowerCase();
+    }
+    function drawStudyList(li, list, openM) {
+        var q = studyQuery.trim().toLowerCase(), L = LEVELS[li];
+        var shown = list.filter(function (d) {
+            if (studyFilter === 'new' && !d.isNew) return false;
+            if (studyFilter === 'tele' && !d.tele) return false;
+            if (GROUPS.some(function (g) { return g.id === studyFilter; }) && d.group.id !== studyFilter) return false;
+            return !q || q.split(/\s+/).every(function (w) { return drugText(d).indexOf(w) >= 0; });
+        });
+        var html = '', lastG = null;
+        shown.forEach(function (d) {
+            if (d.group !== lastG) { lastG = d.group; html += '<div class="dr-group-h">' + icon(d.group.icon) + esc(d.group.name) + '</div>'; }
+            html += drugCard(d, li, d.m === openM);
+        });
+        if (!shown.length) html = '<div class="dr-card dr-empty">No medications match' + (q ? ' “' + esc(q) + '”' : '') + ' in ' + L.id + ' scope.</div>';
+        var box = document.getElementById('drList');
+        box.innerHTML = html;
+        box.querySelectorAll('.dr-drug-head').forEach(function (h) {
+            h.addEventListener('click', function () { var c = h.parentNode; c.classList.toggle('open'); h.setAttribute('aria-expanded', c.classList.contains('open')); });
+        });
+        if (openM) {
+            var el = document.getElementById('drug-' + openM);
+            if (el) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); window.scrollBy(0, -86); }, 60);
+        }
+    }
+    function drugCard(d, li, open) {
+        var mo = MONO[d.m], L = LEVELS[li];
+        var pills = '';
+        if (d.formulary) pills += '<span class="dr-pill st-form">' + icon('book') + 'Formulary only</span>';
+        else pills += d.tele && !d.indep ? pill('T') : d.tele ? pill('I', 'Independent*') + pill('T', 'Tele-EMS*') : pill('I');
+        if (d.isNew) pills += '<span class="dr-pill st-new">' + icon('sparkles') + 'New at ' + L.id + '</span>';
+        var scopeRows = d.formulary
+            ? '<div class="dr-scoperow"><span class="lbl">' + esc(d.fLabel) + '</span><span class="dr-pill st-form">Monograph scope ' + d.fFrom + '</span></div><div class="dr-disclaimer" style="margin-top:6px">' + icon('circle-help') + '<span>Not listed as a row in the S1 matrix – shown from the level printed on its monograph.</span></div>'
+            : ITEMS.filter(function (it) { return it.m === d.m; }).map(function (it) {
+                var st = statusAt(it, li);
+                return '<div class="dr-scoperow"><span class="lbl">' + esc(it.label) + '</span>' + (st === 'N' ? pill('N', 'From ' + LEVELS[firstLevel(it)].id) : pill(st)) + '</div>';
+            }).join('') + (d.tele ? '<div class="dr-tele-note">' + icon('phone') + '<span>Consult Tele-EMS before giving the rows marked Tele-EMS.</span></div>' : '');
+        return '<div class="dr-drug' + (open ? ' open' : '') + '" id="drug-' + d.m + '">' +
+            '<button class="dr-drug-head" aria-expanded="' + !!open + '"><span class="dr-mnum">' + mLabel(d.m) + '</span><span style="min-width:0"><div class="dr-drug-name">' + esc(mo.name) + '</div>' +
+            '<div class="dr-drug-class">' + esc(plain(mo.class)) + '</div><div class="dr-drug-pills">' + pills + '</div></span>' + icon('arrow-right', 'dr-chev') + '</button>' +
+            '<div class="dr-drug-body">' +
+            '<div class="dr-scopebox"><h5>' + icon('shield') + 'Your ' + L.id + ' scope</h5>' + scopeRows + '</div>' +
+            '<div class="dr-sec ind"><h5>' + icon('circle-check-big') + 'Indications</h5>' + lines(mo.ind) + '</div>' +
+            '<div class="dr-sec ci"><h5>' + icon('ban') + 'Contraindications</h5>' + lines(mo.ci) + '</div>' +
+            '<div class="dr-dose-grid"><div class="dr-sec dose"><h5>' + icon('syringe') + 'Adult dose</h5>' + lines(mo.adult) + '</div>' +
+            '<div class="dr-sec peds"><h5>' + icon('baby') + 'Pediatric dose</h5>' + lines(mo.peds) + '</div></div>' +
+            '<div class="dr-sec prec"><h5>' + icon('triangle-alert') + 'Precautions</h5>' + lines(mo.prec) + '</div>' +
+            '<details class="dr-more"><summary>' + icon('book-open') + 'Presentation, mechanism, side effects & more</summary>' +
+            '<div class="dr-sec"><h5>' + icon('pill') + 'Presentation</h5>' + lines(mo.pres) + '</div>' +
+            '<div class="dr-sec"><h5>' + icon('activity') + 'Mechanism of action</h5>' + lines(mo.moa) + '</div>' +
+            '<div class="dr-sec"><h5>' + icon('frown') + 'Side effects</h5>' + lines(mo.se) + '</div>' +
+            '<div class="dr-sec"><h5>' + icon('hand-heart') + 'Pregnancy & lactation</h5>' + lines(mo.preg) + '</div>' +
+            '<div class="dr-sec"><h5>' + icon('lightbulb') + 'Additional information</h5>' + lines(mo.info) + '</div></details>' +
+            '<div class="dr-actions"><button class="dr-btn quiz" data-go="' + L.id + '/quiz/' + d.m + '">' + icon('target') + 'Quiz me</button>' +
+            '<a class="dr-btn ghost" href="../pdf_sections/' + encodeURI(mo.pdf) + '" target="_blank" rel="noopener"><img src="../images/pdf.png" alt="">' + mLabel(d.m) + ' PDF</a>' +
+            '<a class="dr-btn ghost" href="../chapters/m' + mo.num + '.html?view=summary">' + icon('book') + 'Full page</a></div>' +
+            '</div></div>';
+    }
+
+    /* ════════════════ VIEW: FLASHCARDS ════════════════ */
+    var FC_TYPES = [['all', 'All cards'], ['dose', 'Adult doses'], ['peds', 'Pediatric'], ['ci', 'Contraindications'], ['ind', 'Indications'], ['scope', 'My scope']];
+    function renderFlash(li) {
+        var L = LEVELS[li];
+        setHeader('Flashcards · ' + L.id, 'ScopeRx · ' + L.name);
+        if (flashState && flashState.li === li && flashState.cards) return drawCard();
+        var cfg = store('dr_fc_cfg') || { type: 'all', scope: 'all', order: 'shuffle' };
+        var deck = flashDeck(li), known = store('dr_known_' + L.id) || [];
+        function count(c) { return filterDeck(deck, c, known).length; }
+        var html = crumb(li, 'Flashcards') + '<div class="quiz-setup-container"><div class="dr-eyebrow">Build your deck</div><div class="dr-title" style="font-size:1.3rem">' + L.id + ' flashcards</div>' +
+            '<p class="dr-lead">Tap a card to flip it, then rate yourself. “Know it” cards are skipped next time when you choose <b>Still learning</b>.</p>' +
+            '<div class="dr-opt-label">Card type</div><div class="dr-seg" data-k="type">' + FC_TYPES.map(function (t) { return '<button data-v="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div>' +
+            '<div class="dr-opt-label">Which drugs</div><div class="dr-seg" data-k="scope"><button data-v="all">All in scope</button><button data-v="new">New at ' + L.id + '</button><button data-v="tele">Tele-EMS</button><button data-v="learning">Still learning</button></div>' +
+            '<div class="dr-opt-label">Order</div><div class="dr-seg" data-k="order"><button data-v="shuffle">' + icon('refresh-ccw') + 'Shuffle</button><button data-v="drug">By drug</button></div>' +
+            '<div class="dr-pool" id="fcPool"></div>' +
+            '<div class="dr-actions" style="margin-top:14px"><button class="dr-btn primary big" id="fcStart">' + icon('zap') + 'Start flashcards</button></div>' +
+            '<div class="dr-actions" style="justify-content:center"><button class="dr-btn ghost" id="fcReset">' + icon('rotate-ccw') + 'Reset “known” (' + known.length + ')</button></div></div>';
+        mount(html);
+        function sync() {
+            $main.querySelectorAll('.dr-seg').forEach(function (seg) {
+                var k = seg.getAttribute('data-k');
+                seg.querySelectorAll('button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-v') === cfg[k]); });
+            });
+            var n = count(cfg);
+            document.getElementById('fcPool').innerHTML = '<b>' + n + '</b> cards in this deck';
+            document.getElementById('fcStart').disabled = !n;
+        }
+        $main.querySelectorAll('.dr-seg button').forEach(function (b) {
+            b.addEventListener('click', function () { cfg[b.parentNode.getAttribute('data-k')] = b.getAttribute('data-v'); store('dr_fc_cfg', cfg); sync(); });
+        });
+        document.getElementById('fcReset').addEventListener('click', function () { store('dr_known_' + L.id, []); known = []; this.innerHTML = icon('rotate-ccw') + 'Reset “known” (0)'; sync(); });
+        document.getElementById('fcStart').addEventListener('click', function () {
+            var cards = filterDeck(deck, cfg, known);
+            if (cfg.order === 'shuffle') cards = shuffle(cards);
+            flashState = { li: li, cards: cards, i: 0, flipped: false, known: 0, again: 0 };
+            drawCard();
+        });
+        sync();
+    }
+    function filterDeck(deck, cfg, known) {
+        return deck.filter(function (c) {
+            if (cfg.type !== 'all' && c.k !== cfg.type) return false;
+            if (cfg.scope === 'new' && !c.isNew) return false;
+            if (cfg.scope === 'tele' && !c.tele) return false;
+            if (cfg.scope === 'learning' && known.indexOf(c.id) >= 0) return false;
+            return true;
+        });
+    }
+    function drawCard() {
+        var st = flashState, L = LEVELS[st.li];
+        if (st.i >= st.cards.length) {
+            mount(crumb(st.li, 'Flashcards') + '<div class="dr-card" style="text-align:center"><div class="dr-hero-icon" style="margin:0 auto 12px">' + icon('party-popper') + '</div>' +
+                '<div class="dr-title">Deck complete</div><p class="dr-lead">' + st.cards.length + ' cards · <b style="color:#15803d">' + st.known + ' known</b> · <b style="color:#b91c1c">' + st.again + ' to review</b></p>' +
+                '<div class="dr-actions" style="justify-content:center;margin-top:18px"><button class="dr-btn primary" id="fcAgain">' + icon('rotate-ccw') + 'New deck</button>' +
+                '<button class="dr-btn quiz" data-go="' + L.id + '/quiz">' + icon('target') + 'Take a quiz</button></div></div>');
+            document.getElementById('fcAgain').addEventListener('click', function () { flashState = null; renderFlash(st.li); });
+            return;
+        }
+        var c = st.cards[st.i], mo = MONO[c.m];
+        var html = crumb(st.li, 'Flashcards') +
+            '<div class="dr-fc-meta"><span class="fc-progress" style="margin:0">' + (st.i + 1) + ' / ' + st.cards.length + '</span>' +
+            '<span class="dr-pill st-I" style="background:rgba(255,255,255,.7)">' + icon('check') + st.known + '</span></div>' +
+            '<div class="scene"><div class="card' + (st.flipped ? ' is-flipped' : '') + '" id="fcCard" role="button" tabindex="0" aria-label="Flip card">' +
+            '<div class="card__face card__face--front"><span class="category-badge">' + mLabel(c.m) + (c.isNew ? ' · New' : '') + (c.tele ? ' · ☎ Tele-EMS' : '') + '</span>' +
+            '<div class="dr-fc-drug">' + esc(c.drug) + '</div><div class="dr-fc-prompt">' + esc(c.prompt) + '</div>' +
+            '<div class="dr-fc-hint">' + icon('refresh-ccw') + 'Tap to flip</div></div>' +
+            '<div class="card__face card__face--back"><div class="dr-fc-back-h">' + esc(mo.name) + ' · ' + esc(c.head) + '</div>' + lines(c.body) + '</div>' +
+            '</div></div>' +
+            '<div class="dr-fc-rate"><button class="dr-btn again" id="fcNo">' + icon('rotate-ccw') + 'Review again</button><button class="dr-btn know" id="fcYes">' + icon('check') + 'Know it</button></div>' +
+            '<div class="dr-fc-nav"><button class="dr-btn ghost" id="fcPrev" style="background:rgba(255,255,255,.7)"' + (st.i ? '' : ' disabled') + '>' + icon('arrow-left') + 'Prev</button>' +
+            '<button class="dr-btn ghost" id="fcSkip" style="background:rgba(255,255,255,.7)">Skip' + icon('arrow-right') + '</button></div>';
+        mount(html, true);
+        var card = document.getElementById('fcCard');
+        function flip() { st.flipped = !st.flipped; card.classList.toggle('is-flipped', st.flipped); }
+        card.addEventListener('click', flip);
+        card.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); flip(); } });
+        function next(rate) {
+            var key = 'dr_known_' + L.id, known = store(key) || [];
+            if (rate === 'yes') { st.known++; if (known.indexOf(c.id) < 0) known.push(c.id); store(key, known); }
+            if (rate === 'no') { st.again++; known = known.filter(function (x) { return x !== c.id; }); store(key, known); }
+            st.i++; st.flipped = false; drawCard();
+        }
+        document.getElementById('fcYes').addEventListener('click', function () { next('yes'); });
+        document.getElementById('fcNo').addEventListener('click', function () { next('no'); });
+        document.getElementById('fcSkip').addEventListener('click', function () { next(); });
+        document.getElementById('fcPrev').addEventListener('click', function () { if (st.i) { st.i--; st.flipped = false; drawCard(); } });
+        /* swipe: right = know, left = review */
+        var sx = null;
+        card.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+        card.addEventListener('touchend', function (e) {
+            if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; sx = null;
+            if (Math.abs(dx) > 70) next(dx > 0 ? 'yes' : 'no');
+        });
+    }
+
+    /* ════════════════ VIEW: QUIZ ════════════════ */
+    var QZ_FOCUS = [['mixed', 'Mixed', 'sparkles'], ['dose', 'Adult doses', 'syringe'], ['peds', 'Pediatric', 'baby'], ['ci', 'Contraindications', 'ban'],
+        ['scope', 'Scope & Tele-EMS', 'shield'], ['new', 'New at my level', 'trending-up'], ['tele', 'Tele-EMS drugs', 'phone']];
+    function focusPool(li, focus, onlyM) {
+        var pool = questionPool(li), drugs = levelDrugs(li);
+        if (onlyM) return pool.filter(function (q) { return q.m === onlyM && q.t !== 'scope'; });
+        switch (focus) {
+            case 'dose': return pool.filter(function (q) { return q.t === 'dose'; });
+            case 'peds': return pool.filter(function (q) { return q.t === 'peds'; });
+            case 'ci': return pool.filter(function (q) { return q.t === 'ci'; });
+            case 'scope': return pool.filter(function (q) { return q.t === 'scope'; });
+            case 'new': return pool.filter(function (q) {
+                if (q.t === 'scope') return q.scopeItem ? li > 0 && statusAt(ITEM_BY_ID[q.scopeItem], li) !== 'N' && statusAt(ITEM_BY_ID[q.scopeItem], li - 1) === 'N' : false;
+                return drugs[q.m] && drugs[q.m].isNew;
+            });
+            case 'tele': return pool.filter(function (q) { return drugs[q.m] && drugs[q.m].tele && q.t !== 'scope'; });
+            default: return pool;
+        }
+    }
+    function renderQuiz(li, onlyM) {
+        var L = LEVELS[li];
+        setHeader('Quiz · ' + L.id, 'ScopeRx · ' + L.name);
+        if (quizState && quizState.li === li && quizState.onlyM === onlyM) return quizState.done ? drawResults() : drawQuestion();
+        var cfg = store('dr_qz_cfg') || { n: '20', focus: 'mixed' };
+        if (onlyM) {
+            var pool = focusPool(li, 'mixed', onlyM);
+            if (!pool.length) return go(L.id + '/study/' + onlyM);
+            return startQuiz(li, shuffle(pool), onlyM);
+        }
+        var hist = store('dr_hist_' + L.id) || [], best = store('dr_best_' + L.id);
+        var html = crumb(li, 'Quiz') + '<div class="quiz-setup-container"><div class="dr-eyebrow">' + L.id + ' · ' + esc(L.name) + '</div><div class="dr-title" style="font-size:1.3rem">Set up your quiz</div>' +
+            '<p class="dr-lead">Only questions about medications in your ' + L.id + ' scope – plus scope-of-practice questions built from the S1 matrix.</p>' +
+            '<div class="dr-opt-label">Focus</div><div class="dr-seg" data-k="focus">' + QZ_FOCUS.map(function (f) {
+                if ((f[0] === 'tele' || f[0] === 'new') && !focusPool(li, f[0]).length) return '';
+                return '<button data-v="' + f[0] + '">' + icon(f[2]) + f[1] + '</button>';
+            }).join('') + '</div>' +
+            '<div class="dr-opt-label">Questions</div><div class="dr-seg" data-k="n"><button data-v="10">10</button><button data-v="20">20</button><button data-v="40">40</button><button data-v="all">All</button></div>' +
+            '<div class="dr-pool" id="qzPool"></div>' +
+            '<div class="dr-actions" style="margin-top:14px"><button class="dr-btn primary big" id="qzStart">' + icon('target') + 'Start quiz</button></div>';
+        if (hist.length) {
+            html += '<div class="dr-opt-label">Your recent scores' + (best ? ' · best ' + best.pct + '%' : '') + '</div><div class="dr-history">' +
+                hist.slice(-12).map(function (h) { return '<div title="' + h.pct + '%" style="height:' + Math.max(8, h.pct) + '%;background:' + (h.pct >= 80 ? '#16a34a' : h.pct >= 60 ? '#d97706' : '#dc2626') + '"></div>'; }).join('') + '</div>';
+        }
+        html += '</div>';
+        mount(html);
+        function sync() {
+            $main.querySelectorAll('.dr-seg').forEach(function (seg) {
+                var k = seg.getAttribute('data-k');
+                seg.querySelectorAll('button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-v') === cfg[k]); });
+            });
+            var n = focusPool(li, cfg.focus).length, take = cfg.n === 'all' ? n : Math.min(n, +cfg.n);
+            document.getElementById('qzPool').innerHTML = '<b>' + take + '</b> of ' + n + ' available questions';
+            document.getElementById('qzStart').disabled = !n;
+        }
+        $main.querySelectorAll('.dr-seg button').forEach(function (b) {
+            b.addEventListener('click', function () { cfg[b.parentNode.getAttribute('data-k')] = b.getAttribute('data-v'); store('dr_qz_cfg', cfg); sync(); });
+        });
+        if (!$main.querySelector('.dr-seg[data-k="focus"] button[data-v="' + cfg.focus + '"]')) cfg.focus = 'mixed';
+        document.getElementById('qzStart').addEventListener('click', function () {
+            var pool = focusPool(li, cfg.focus);
+            startQuiz(li, balancedPick(pool, cfg.n === 'all' ? pool.length : +cfg.n), null);
+        });
+        sync();
+    }
+    /* spread questions across drugs so one drug does not dominate */
+    function balancedPick(pool, n) {
+        var byM = {}; shuffle(pool).forEach(function (q) { (byM[q.m] = byM[q.m] || []).push(q); });
+        var keys = shuffle(Object.keys(byM)), out = [];
+        while (out.length < n) {
+            var added = false;
+            keys.forEach(function (k) { if (out.length < n && byM[k].length) { out.push(byM[k].shift()); added = true; } });
+            if (!added) break;
+        }
+        return shuffle(out);
+    }
+    function startQuiz(li, qs, onlyM) {
+        quizState = { li: li, onlyM: onlyM, qs: qs.map(function (q) { return { src: q, opts: shuffle([q.a].concat(q.d)) }; }), i: 0, answers: [], done: false };
+        drawQuestion();
+    }
+    function drawQuestion() {
+        var st = quizState, L = LEVELS[st.li], item = st.qs[st.i], q = item.src, ans = st.answers[st.i];
+        var score = st.answers.filter(function (a) { return a && a.ok; }).length;
+        var html = crumb(st.li, st.onlyM ? MONO[st.onlyM].name + ' quiz' : 'Quiz') + '<div class="quiz-container">' +
+            '<div class="dr-qtop"><span>Question ' + (st.i + 1) + ' of ' + st.qs.length + '</span><span>' + icon('circle-check-big') + ' ' + score + ' correct</span></div>' +
+            '<div class="dr-qprog"><div style="width:' + ((st.i + (ans ? 1 : 0)) / st.qs.length * 100) + '%"></div></div>' +
+            '<div class="dr-qmeta"><span class="dr-pill" style="background:' + TOPIC_COLOR[q.t] + '1a;color:' + TOPIC_COLOR[q.t] + ';border:1px solid ' + TOPIC_COLOR[q.t] + '55">' + TOPICS[q.t] + '</span>' +
+            (q.t !== 'scope' ? '<span class="dr-pill st-N">' + mLabel(q.m) + ' · ' + esc(MONO[q.m].name) + '</span>' : '') + '</div>' +
+            '<p class="dr-q">' + esc(q.q) + '</p><div class="quiz-options">' +
+            item.opts.map(function (o, i) {
+                var cls = '';
+                if (ans) { if (o === q.a) cls = ' correct'; else if (o === ans.pick) cls = ' wrong'; else cls = ' dim'; }
+                return '<button class="option-btn' + cls + '" data-i="' + i + '"' + (ans ? ' disabled' : '') + '><span class="k">' + 'ABCD'.charAt(i) + '</span><span>' + esc(o) + '</span></button>';
+            }).join('') + '</div>';
+        if (ans) {
+            html += '<div class="dr-fb ' + (ans.ok ? 'ok' : 'bad') + '"><strong>' + (ans.ok ? '✓ Correct' : '✗ Not quite – correct answer: ' + esc(q.a)) + '</strong>' + esc(q.x) +
+                '<span class="ref">Source: ' + (q.t === 'scope' ? 'S1 Scope of Practice Matrix' : mLabel(q.m) + ' ' + esc(MONO[q.m].name)) + '</span></div>' +
+                '<div class="dr-qnav"><button class="dr-btn primary" id="qzNext">' + (st.i + 1 < st.qs.length ? 'Next question' + icon('arrow-right') : 'See results' + icon('trophy')) + '</button></div>';
+        }
+        html += '</div>';
+        mount(html, true);
+        if (!ans) {
+            $main.querySelectorAll('.option-btn').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var pick = item.opts[+b.getAttribute('data-i')];
+                    st.answers[st.i] = { pick: pick, ok: pick === q.a };
+                    drawQuestion();
+                    var fb = $main.querySelector('.dr-fb'); if (fb && fb.getBoundingClientRect().bottom > window.innerHeight) fb.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            });
+        } else {
+            document.getElementById('qzNext').addEventListener('click', function () {
+                if (st.i + 1 < st.qs.length) { st.i++; drawQuestion(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+                else finishQuiz();
+            });
+        }
+    }
+    function finishQuiz() {
+        var st = quizState, L = LEVELS[st.li];
+        var ok = st.answers.filter(function (a) { return a && a.ok; }).length, pct = Math.round(ok / st.qs.length * 100);
+        st.done = true; st.score = { ok: ok, pct: pct };
+        if (!st.onlyM && st.qs.length >= 5) {
+            var hist = store('dr_hist_' + L.id) || []; hist.push({ pct: pct, n: st.qs.length, at: Date.now() }); store('dr_hist_' + L.id, hist.slice(-20));
+            var best = store('dr_best_' + L.id); if (!best || pct > best.pct) store('dr_best_' + L.id, { pct: pct, n: st.qs.length, at: Date.now() });
+        }
+        try { /* feed the app-wide attempts counter shown on other pages */
+            var s = store('dcas_cpg_stats') || { totalAttempts: 0, chapters: {}, critical: { total: 0, correct: 0 } };
+            s.totalAttempts = (s.totalAttempts || 0) + 1; store('dcas_cpg_stats', s);
+        } catch (e) {}
+        drawResults();
+        window.scrollTo(0, 0);
+    }
+    function drawResults() {
+        var st = quizState, L = LEVELS[st.li], pct = st.score.pct;
+        var color = pct >= 80 ? '#16a34a' : pct >= 60 ? '#d97706' : '#dc2626';
+        var msg = pct >= 90 ? 'Outstanding – you own your ' + L.id + ' formulary.' : pct >= 80 ? 'Solid – ready for the road. Review the misses below.' : pct >= 60 ? 'Getting there – revisit the drugs you missed.' : 'Time for a refresher – start with Study mode.';
+        var byT = {};
+        st.qs.forEach(function (it, i) { var t = it.src.t; byT[t] = byT[t] || { n: 0, ok: 0 }; byT[t].n++; if (st.answers[i] && st.answers[i].ok) byT[t].ok++; });
+        var missed = st.qs.map(function (it, i) { return { it: it, a: st.answers[i] }; }).filter(function (x) { return !x.a || !x.a.ok; });
+        var html = crumb(st.li, 'Quiz results') + '<div class="dr-card"><div class="dr-result-top"><div class="dr-ring" style="--p:' + pct + ';--c:' + color + '"><div><div><b>' + pct + '%</b><br><span>' + st.score.ok + ' / ' + st.qs.length + '</span></div></div></div>' +
+            '<div style="flex:1;min-width:180px"><div class="dr-eyebrow">' + L.id + (st.onlyM ? ' · ' + esc(MONO[st.onlyM].name) : '') + '</div><div class="dr-title" style="font-size:1.25rem">' + msg + '</div></div></div>' +
+            '<div class="dr-bars">' + Object.keys(byT).map(function (t) {
+                var p = Math.round(byT[t].ok / byT[t].n * 100);
+                return '<div class="dr-bar"><span>' + TOPICS[t] + '</span><div class="track"><div style="width:' + p + '%;background:' + TOPIC_COLOR[t] + '"></div></div><span class="v">' + byT[t].ok + '/' + byT[t].n + '</span></div>';
+            }).join('') + '</div>' +
+            '<div class="dr-actions" style="margin-top:18px">' + (missed.length ? '<button class="dr-btn primary" id="qzRetry">' + icon('rotate-ccw') + 'Retry missed (' + missed.length + ')</button>' : '') +
+            '<button class="dr-btn quiz" id="qzNew">' + icon('target') + 'New quiz</button><button class="dr-btn ghost" data-go="' + L.id + '/study">' + icon('book-open') + 'Study</button></div></div>';
+        if (missed.length) {
+            html += '<div class="dr-section-title">' + icon('notebook-pen') + 'Review your misses</div><div class="dr-card">' + missed.map(function (x) {
+                var q = x.it.src;
+                return '<div class="dr-miss"><div class="qq">' + esc(q.q) + '</div>' + (x.a ? '<div class="yours">✗ ' + esc(x.a.pick) + '</div>' : '') +
+                    '<div class="right">✓ ' + esc(q.a) + '</div><div class="ex">' + esc(q.x) + '</div>' +
+                    (q.t !== 'scope' ? '<div class="dr-actions" style="margin-top:6px"><button class="dr-btn ghost" data-go="' + L.id + '/study/' + q.m + '">' + icon('book-open') + 'Study ' + mLabel(q.m) + '</button></div>' : '') + '</div>';
+            }).join('') + '</div>';
+        }
+        mount(html, true);
+        var retry = document.getElementById('qzRetry');
+        if (retry) retry.addEventListener('click', function () { startQuiz(st.li, shuffle(missed.map(function (x) { return x.it.src; })), st.onlyM); window.scrollTo(0, 0); });
+        document.getElementById('qzNew').addEventListener('click', function () {
+            quizState = null;
+            if (st.onlyM) go(L.id + '/quiz'); else renderQuiz(st.li, null);
+        });
+    }
+
+    /* ════════════════ VIEW: MATRIX ════════════════ */
+    var matrixMine = false;
+    function renderMatrix(li) {
+        var L = LEVELS[li];
+        setHeader('Scope · ' + L.id, 'S1 Scope of Practice Matrix');
+        var html = crumb(li, 'Scope matrix') + '<div class="dr-card" style="padding:18px 14px">' +
+            '<div style="padding:0 6px"><div class="dr-eyebrow">S1 · Medications</div><div class="dr-title" style="font-size:1.25rem">Scope of Practice Matrix</div>' +
+            '<p class="dr-lead" style="font-size:.88rem">Your <b>' + L.id + '</b> column is outlined. ' + icon('phone') + ' = only after Tele-EMS consultation. Tap a medication to study it.</p>' +
+            '<div class="dr-seg" style="margin:14px 0 12px"><button data-v="all" class="' + (!matrixMine ? 'active' : '') + '">All rows</button><button data-v="mine" class="' + (matrixMine ? 'active' : '') + '">Only my scope</button></div></div>' +
+            '<div class="dr-matrix-wrap"><table class="dr-matrix"><thead><tr><th class="lbl">Medication</th>' +
+            LEVELS.map(function (l, i) { return '<th style="background:' + l.color + '"' + (i === li ? ' class="mine"' : '') + '>' + l.id + '</th>'; }).join('') + '</tr></thead><tbody>';
+        ITEMS.forEach(function (it) {
+            var mineSt = statusAt(it, li);
+            if (matrixMine && mineSt === 'N') return;
+            html += '<tr class="' + (mineSt === 'N' ? 'out' : '') + '"><td class="lbl" data-go="' + L.id + '/study/' + it.m + '">' + esc(it.label) + '</td>' +
+                LEVELS.map(function (l, i) {
+                    var s = statusAt(it, i), mine = i === li ? ' mine' : '';
+                    if (s === 'N') return '<td class="' + mine.trim() + '" aria-label="' + l.id + ' not authorised"></td>';
+                    return '<td class="' + (s === 'T' ? 'tele' : 'on') + mine + '" style="--c:' + l.color + '" aria-label="' + l.id + ' ' + stLabel(s) + '">' + (s === 'T' ? icon('phone') : '') + '</td>';
+                }).join('') + '</tr>';
+        });
+        html += '</tbody></table></div>' +
+            '<div class="dr-disclaimer" style="padding:0 6px">' + icon('circle-help') + '<span>D5W (M7) and Magnesium Sulphate (M24) have monographs (scope AP) but no row in the S1 matrix; they appear in AP/EP study decks flagged “Formulary only”.</span></div>' +
+            '<div class="dr-actions" style="padding:0 6px"><a class="dr-btn ghost" href="../pdf_sections/12_1_Scope_of_Practice_Matrix.pdf" target="_blank" rel="noopener"><img src="../images/pdf.png" alt="">Open S1 PDF</a></div></div>';
+        mount(html, true);
+        $main.querySelectorAll('.dr-seg button').forEach(function (b) {
+            b.addEventListener('click', function () { matrixMine = b.getAttribute('data-v') === 'mine'; renderMatrix(li); });
+        });
+    }
+
+    /* ════════════════ GLOBAL WIRING ════════════════ */
+    $main.addEventListener('click', function (e) {
+        var t = e.target.closest('[data-go]');
+        if (!t || t.disabled) return;
+        e.preventDefault();
+        var path = t.getAttribute('data-go');
+        if ('#/' + path === location.hash) route(); else go(path);
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.target.tagName === 'INPUT') return;
+        var r = parseHash();
+        if (r.mode === 'quiz' && quizState && !quizState.done) {
+            var k = e.key.toUpperCase(), idx = 'ABCD'.indexOf(k); if (idx < 0 && /^[1-4]$/.test(e.key)) idx = +e.key - 1;
+            if (idx >= 0) { var b = $main.querySelectorAll('.option-btn')[idx]; if (b && !b.disabled) b.click(); }
+            if (e.key === 'Enter') { var n = document.getElementById('qzNext'); if (n) { e.preventDefault(); n.click(); } }
+        }
+        if (r.mode === 'flash' && flashState && document.getElementById('fcCard')) {
+            if (e.key === ' ') { e.preventDefault(); document.getElementById('fcCard').click(); }
+            if (e.key === 'ArrowRight') document.getElementById('fcYes').click();
+            if (e.key === 'ArrowLeft') document.getElementById('fcNo').click();
+        }
+    });
+    window.addEventListener('hashchange', route);
+
+    document.getElementById('homeBtn').addEventListener('click', function () {
+        var r = parseHash();
+        if (r.mode) go(r.level);
+        else if (r.level) go('');
+        else if (document.referrer && document.referrer.indexOf(location.host) >= 0) history.back();
+        else location.href = '../chapters/c-index.html?view=summary';
+    });
+    (function theme() {
+        var themes = ['dark', 'light', 'sepia', 'forest'], html = document.documentElement;
+        document.getElementById('themeToggle').addEventListener('click', function () {
+            var next = themes[(themes.indexOf(html.getAttribute('data-theme')) + 1) % themes.length];
+            html.setAttribute('data-theme', next); try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+    })();
+    (function floatBtn() {
+        var b = document.getElementById('scrollToTopBtn');
+        function upd() { b.classList.toggle('hidden', window.scrollY <= 300); }
+        window.addEventListener('scroll', upd, { passive: true });
+        b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () { navigator.serviceWorker.register('../sw.js').catch(function () {}); });
+    }
+
+    route();
+})();
+</script>
+</body>
+</html>

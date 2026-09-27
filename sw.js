@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.0';   // Major offline hardening
+const CACHE_VERSION = 'dcas-cpg-v6.1';   // Major offline hardening
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
@@ -38,6 +38,7 @@ const CONTENT_CACHE = [
   'pages/medical.html', 'pages/pepp.html', 'pages/ppet.html', 'pages/itls.html',
   'pages/empact.html', 'pages/ecg.html', 'pages/ecg-test.html',
   'pages/drug-calculator.html', 'pages/drug-index.html', 'pages/med-index.html',
+  'pages/drug-refresher.html', 'pages/drug-refresher-data.js',
   'pages/ecg-engine.js', 'pages/ecg-engine2.js',
   'pages/drug-calculator.js', 'pages/drug-data.json',
   // Prometric engine + bank
