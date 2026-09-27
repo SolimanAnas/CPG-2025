@@ -253,10 +253,13 @@
       "id": 80,
       "text": "What is the 1st thing you do when a kid with a tracheostomy is in respiratory distress and his ventilator alarms are going off?",
       "options": [
-        "Ventilate the trach tube"
+        "Ventilate the trach tube",
+        "Troubleshoot the ventilator connections",
+        "Administer high-flow oxygen via non-rebreather mask over the mouth and nose",
+        "Perform a blind finger sweep of the stoma"
       ],
       "correct_answer": "A",
-      "explanation": "Disconnect from the ventilator and immediately begin manual ventilation via the tracheostomy tube.",
+      "explanation": "Disconnect the ventilator first, then manually ventilate through the tracheostomy. This ensures oxygenation and rules out ventilator failure.",
       "hint": "Trach emergency → ventilate"
     },
     {
@@ -276,10 +279,13 @@
       "id": 82,
       "text": "What medication can be administered intranasal?",
       "options": [
-        "Midazolam"
+        "Midazolam",
+        "Epinephrine 1:10,000",
+        "Amiodarone",
+        "Adenosine"
       ],
       "correct_answer": "A",
-      "explanation": "Midazolam is commonly administered intranasally for seizure control.",
+      "explanation": "Midazolam is commonly administered intranasally using a mucosal atomization device (MAD). The other listed medications are not routinely administered via the intranasal route in standard EMS practice.",
       "hint": "Intranasal → midazolam"
     },
     {

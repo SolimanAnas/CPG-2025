@@ -233,8 +233,8 @@
         "Initiate bag-mask ventilation and then reassess skin color and heart rate."
       ],
       "correct_answer": "D",
-      "explanation": "A newborn with a heart rate below 60 bpm and apnea requires immediate cardiopulmonary resuscitation (chest compressions coordinated with bag-mask ventilation), per NRP guidelines. Ventilation alone is insufficient for severe bradycardia.",
-      "hint": "HR <60 newborn → CPR"
+      "explanation": "Per NRP guidelines, a newborn with HR <100 and apnea or inadequate respirations needs immediate positive pressure ventilation with a bag-mask. Most newborn bradycardia is caused by hypoxia, so effective ventilation is the priority. Chest compressions are only started if the heart rate remains <60 after 30 seconds of effective ventilation.",
+      "hint": "Newborn HR <100 → ventilate first"
     },
     {
       "id": 19,

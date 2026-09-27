@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "BLS Exam - Basic Life Support",
   "description": "Basic Life Support exam questions",
   "questions": [
@@ -2519,11 +2519,15 @@
       "id": 196,
       "text": "What is the 1st thing you do when a kid with a tracheostomy is in respiratory distress and his ventilator alarms are going off?",
       "options": [
-        "Ventilate the trach tube"
+        "Ventilate the trach tube",
+        "Troubleshoot the ventilator connections",
+        "Administer high-flow oxygen via non-rebreather mask over the mouth and nose",
+        "Perform a blind finger sweep of the stoma"
       ],
       "correct_answer": "A",
       "difficulty": "medium",
-      "topic": "CPR"
+      "topic": "CPR",
+      "explanation": "Disconnect the ventilator first, then manually ventilate through the tracheostomy. This ensures oxygenation and rules out ventilator failure."
     },
     {
       "id": 197,
@@ -2555,41 +2559,57 @@
       "id": 199,
       "text": "A 5 year old boy has wheezing and looks uncomfortable. What is the appropriate treatment?",
       "options": [
-        "Give O2"
+        "Administer oxygen while preparing nebulized bronchodilator therapy",
+        "Administer epinephrine 1:1,000 IM",
+        "Insert an oropharyngeal airway",
+        "Place the patient in a supine position"
       ],
       "correct_answer": "A",
       "difficulty": "medium",
-      "topic": "CPR"
+      "topic": "CPR",
+      "explanation": "The initial management of a patient in respiratory distress is to ensure adequate oxygenation. Oxygen should be administered concurrently while preparing definitive bronchodilator therapy, unless signs of severe anaphylaxis are immediately present."
     },
     {
       "id": 200,
       "text": "What is one of the 1st signs of compensated shock in children?",
       "options": [
-        "Tachycardia"
+        "Tachycardia",
+        "Hypotension",
+        "Bradycardia",
+        "Capillary refill of 1 second"
       ],
       "correct_answer": "A",
       "difficulty": "medium",
-      "topic": "Shock"
+      "topic": "Shock",
+      "explanation": "Tachycardia is an early, primary compensatory mechanism in pediatric shock. Hypotension is a late sign indicating the child has entered decompensated shock."
     },
     {
       "id": 201,
       "text": "A 9 year old looks uncomfortable with accessory muscle use and moderate trouble breathing. What position should you transport him in?",
       "options": [
-        "Position of comfort"
+        "Position of comfort",
+        "Supine with legs elevated",
+        "Left lateral recumbent",
+        "Prone"
       ],
       "correct_answer": "A",
       "difficulty": "medium",
-      "topic": "Rescue Breathing"
+      "topic": "Rescue Breathing",
+      "explanation": "Patients in respiratory distress should be allowed to assume a position of comfort (often seated or \"tripod\"), which maximizes their anatomical ability to ventilate."
     },
     {
       "id": 202,
       "text": "A newborn comes out with blue extremities but is breathing and has a heart beat. What is your first step?",
       "options": [
-        "Dry and swaddle the baby"
+        "Dry and swaddle the baby",
+        "Initiate positive pressure ventilation",
+        "Begin chest compressions",
+        "Administer blow-by oxygen at 15 L/min"
       ],
       "correct_answer": "A",
       "difficulty": "medium",
-      "topic": "Rescue Breathing"
+      "topic": "Rescue Breathing",
+      "explanation": "Blue extremities (acrocyanosis) are normal in a newly delivered infant with adequate breathing and heart rate. The priority is to prevent hypothermia by drying and warming the infant."
     },
     {
       "id": 203,

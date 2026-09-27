@@ -435,10 +435,13 @@
       "id": 34,
       "text": "What is the initial airway management of an unrestrained child in a motor vehicle collision who has blood and broken teeth noted in the airway along with gurgling respirations?",
       "options": [
-        "Suction the oropharynx"
+        "Suction the oropharynx",
+        "Perform a head-tilt chin-lift maneuver",
+        "Begin bag-valve-mask ventilation",
+        "Perform a blind finger sweep"
       ],
       "correct_answer": "A",
-      "explanation": "Gurgling respirations indicate liquid or debris in the upper airway. Immediate suctioning is required to clear blood and foreign material.",
+      "explanation": "Gurgling indicates fluid in the upper airway. Suctioning is the immediate priority to prevent aspiration, especially before attempting positive pressure ventilation.",
       "hint": "Blood airway → suction"
     },
     {
@@ -575,140 +578,182 @@
       "id": 45,
       "text": "A 7-year-old semi-conscious patient rolled off of a 4-foot embankment when he fell off of his father's all-terrain vehicle. He was not wearing a helmet and has begun vomiting. How should you manage this patient?",
       "options": [
-        "Begin suctioning the airway"
+        "Begin suctioning the airway",
+        "Apply a rigid cervical collar immediately",
+        "Insert an oropharyngeal airway",
+        "Perform a jaw-thrust maneuver and ventilate"
       ],
       "correct_answer": "A",
-      "explanation": "Vomiting in a patient with altered mental status and potential head/spine injury poses a high aspiration risk. Immediate suctioning is the priority.",
+      "explanation": "While c-spine precautions are necessary, clearing the airway of vomitus takes precedence to prevent aspiration, which is an immediate life threat. An OPA is contraindicated in a semi-conscious patient with an intact gag reflex.",
       "hint": "Vomiting trauma → suction"
     },
     {
       "id": 46,
       "text": "After a seizure, patients are in a lethargic and confused state. What is this state known as?",
       "options": [
-        "Postictal"
+        "Postictal",
+        "Aura phase",
+        "Status epilepticus",
+        "Tonic-clonic phase"
       ],
       "correct_answer": "A",
-      "explanation": "The postictal state is the period of altered consciousness, lethargy, and confusion that follows a seizure.",
+      "explanation": "The postictal state is the altered state of consciousness after an epileptic seizure. The aura is a preceding sensation, and tonic-clonic refers to the active motor activity.",
       "hint": "Post-seizure → postictal"
     },
     {
       "id": 47,
       "text": "A 5 year old boy has wheezing and looks uncomfortable. What is the appropriate treatment?",
       "options": [
-        "Give O2"
+        "Administer oxygen while preparing nebulized bronchodilator therapy",
+        "Administer epinephrine 1:1,000 IM",
+        "Insert an oropharyngeal airway",
+        "Place the patient in a supine position"
       ],
       "correct_answer": "A",
-      "explanation": "Initial management includes supplemental oxygen. However, wheezing indicates bronchospasm, and definitive treatment requires bronchodilators (e.g., nebulized beta-agonists), which should be administered as soon as possible.",
+      "explanation": "The initial management of a patient in respiratory distress is to ensure adequate oxygenation. Oxygen should be administered concurrently while preparing definitive bronchodilator therapy, unless signs of severe anaphylaxis are immediately present.",
       "hint": "Wheezing → O₂ first"
     },
     {
       "id": 48,
       "text": "What is the correct way to safely transport a child in the ambulance?",
       "options": [
-        "In an age appropriate car seat secured to the stretcher with 2 straps"
+        "In an age appropriate car seat secured to the stretcher with 2 straps",
+        "Held firmly in the parent's arms on the bench seat",
+        "Strapped directly to the stretcher using standard adult seatbelts",
+        "In a car seat secured sideways on the CPR seat"
       ],
       "correct_answer": "A",
-      "explanation": "The safest method is an age-appropriate car seat secured to the ambulance stretcher with at least two straps.",
+      "explanation": "Children should be secured in size-appropriate child restraint systems anchored correctly to the cot. Holding a child is extremely dangerous in the event of a collision.",
       "hint": "Transport child → car seat + straps"
     },
     {
       "id": 49,
       "text": "A 3 year old boy has been seizing for approximately 2 minutes. What is the first priority for treatment?",
       "options": [
-        "Suction airway"
+        "Suction airway",
+        "Insert a bite block or oropharyngeal airway",
+        "Restrain the child's extremities to prevent injury",
+        "Check a blood glucose level"
       ],
       "correct_answer": "A",
-      "explanation": "The first priority during a seizure is airway protection. Positioning and clearing the airway (including suction if secretions are present) help prevent aspiration.",
+      "explanation": "Airway protection is always the first priority during an active seizure to manage secretions. Inserting objects into the mouth or physically restraining the child can cause severe injury.",
       "hint": "Seizure → airway"
     },
     {
       "id": 50,
       "text": "A 9 year old boy is screaming and crying after falling into a backyard bonfire. He has full and partial thickness burns on his arms and legs his hair and eyebrows are singed. His vitals are as follows: HR 140, BP 101/70, RR 36. What would be an appropriate first treatment?",
       "options": [
-        "Give 100% O2"
+        "Give 100% O2",
+        "Apply sterile burn sheets to all affected areas",
+        "Irrigate the burns with cold water for 15 minutes",
+        "Administer weight-based IV pain medication"
       ],
       "correct_answer": "A",
-      "explanation": "Singed hair and eyebrows indicate potential inhalation injury. High-flow 100% oxygen is indicated for possible carbon monoxide exposure and to support oxygenation.",
+      "explanation": "Singed hair and eyebrows indicate high suspicion of an inhalation injury and impending airway compromise. High-flow oxygen is the primary intervention before addressing the dermal burns.",
       "hint": "Burns + singed hair → O₂"
     },
     {
       "id": 51,
       "text": "High pitched respiratory sound on expiration is best described as?",
       "options": [
-        "Wheezing"
+        "Wheezing",
+        "Stridor",
+        "Crackles",
+        "Rhonchi"
       ],
       "correct_answer": "A",
-      "explanation": "Wheezing is a high-pitched musical sound heard primarily on expiration, caused by narrowing of the lower airways.",
+      "explanation": "Wheezing is a high-pitched, musical sound typically heard on expiration, indicating lower airway constriction (like asthma). Stridor is high-pitched but heard predominantly on inspiration (upper airway).",
       "hint": "High-pitched expiration → wheeze"
     },
     {
       "id": 52,
       "text": "What is one of the 1st signs of compensated shock in children?",
       "options": [
-        "Tachycardia"
+        "Tachycardia",
+        "Hypotension",
+        "Bradycardia",
+        "Capillary refill of 1 second"
       ],
       "correct_answer": "A",
-      "explanation": "Tachycardia is one of the earliest signs of compensated shock in children.",
+      "explanation": "Tachycardia is an early, primary compensatory mechanism in pediatric shock. Hypotension is a late sign indicating the child has entered decompensated shock.",
       "hint": "Compensated shock → tachycardia"
     },
     {
       "id": 53,
       "text": "A 9 year old looks uncomfortable with accessory muscle use and moderate trouble breathing. What position should you transport him in?",
       "options": [
-        "Position of comfort"
+        "Position of comfort",
+        "Supine with legs elevated",
+        "Left lateral recumbent",
+        "Prone"
       ],
       "correct_answer": "A",
-      "explanation": "Allowing a child in respiratory distress to assume a position of comfort optimizes ventilation mechanics and minimizes anxiety.",
+      "explanation": "Patients in respiratory distress should be allowed to assume a position of comfort (often seated or \"tripod\"), which maximizes their anatomical ability to ventilate.",
       "hint": "Respiratory distress → position of comfort"
     },
     {
       "id": 54,
       "text": "A newborn comes out with blue extremities but is breathing and has a heart beat. What is your first step?",
       "options": [
-        "Dry and swaddle the baby"
+        "Dry and swaddle the baby",
+        "Initiate positive pressure ventilation",
+        "Begin chest compressions",
+        "Administer blow-by oxygen at 15 L/min"
       ],
       "correct_answer": "A",
-      "explanation": "Acrocyanosis (blue hands/feet) in a breathing newborn is normal. The first step is to dry and swaddle the baby to prevent heat loss.",
+      "explanation": "Blue extremities (acrocyanosis) are normal in a newly delivered infant with adequate breathing and heart rate. The priority is to prevent hypothermia by drying and warming the infant.",
       "hint": "Newborn acrocyanosis → dry & warm"
     },
     {
       "id": 55,
       "text": "When is activated charcoal contraindicated?",
       "options": [
-        "ALOC"
+        "ALOC",
+        "Ingestion of acetaminophen",
+        "Tachycardia",
+        "Abdominal pain"
       ],
       "correct_answer": "A",
-      "explanation": "Activated charcoal is contraindicated in patients with altered level of consciousness due to the risk of aspiration.",
+      "explanation": "An Altered Level of Consciousness (ALOC) eliminates the patient's ability to protect their airway, making aspiration of the charcoal a fatal risk.",
       "hint": "Activated charcoal → avoid if ALOC"
     },
     {
       "id": 56,
       "text": "A girl gets her foot caught in a lawnmower and suffers a near amputation injury to her lower leg. She is bleeding profusely even after applying a pressure dressing. What should you do next?",
       "options": [
-        "Apply a tourniquet on the calf"
+        "Apply a tourniquet proximal to the wound",
+        "Elevate the extremity above the heart",
+        "Apply a second pressure dressing over the first",
+        "Apply pressure to the femoral artery"
       ],
       "correct_answer": "A",
-      "explanation": "Apply a tourniquet proximal to the injury, 5–7 cm above the wound, avoiding joints.",
+      "explanation": "When direct pressure fails to control profuse, life-threatening extremity hemorrhage, a tourniquet should be applied immediately proximal to the injury.",
       "hint": "Uncontrolled bleeding → tourniquet proximal"
     },
     {
       "id": 57,
       "text": "What is a sign of an improperly placed IO?",
       "options": [
-        "Swelling around the site"
+        "Swelling around the site",
+        "Blood or marrow return in the hub",
+        "The needle resting firmly without wobbling",
+        "Fluid infusing freely without resistance"
       ],
       "correct_answer": "A",
-      "explanation": "Swelling around the IO site indicates extravasation of fluid into soft tissues, suggesting improper placement or dislodgement.",
+      "explanation": "Swelling around the insertion site indicates extravasation, meaning the fluid is leaking into the surrounding tissue rather than flowing into the intramedullary space.",
       "hint": "IO site swelling → extravasation"
     },
     {
       "id": 58,
       "text": "What is the 1st thing you do when a kid with a tracheostomy is in respiratory distress and his ventilator alarms are going off?",
       "options": [
-        "Ventilate the trach tube"
+        "Ventilate the trach tube",
+        "Troubleshoot the ventilator connections",
+        "Administer high-flow oxygen via non-rebreather mask over the mouth and nose",
+        "Perform a blind finger sweep of the stoma"
       ],
       "correct_answer": "A",
-      "explanation": "Disconnect from the ventilator and immediately begin manual ventilation via the tracheostomy tube with a bag-mask device.",
+      "explanation": "Disconnect the ventilator first, then manually ventilate through the tracheostomy. This ensures oxygenation and rules out ventilator failure.",
       "hint": "Trach alarm → manual ventilate"
     },
     {
@@ -728,10 +773,13 @@
       "id": 60,
       "text": "What medication can be administered intranasal?",
       "options": [
-        "Midazolam"
+        "Midazolam",
+        "Epinephrine 1:10,000",
+        "Amiodarone",
+        "Adenosine"
       ],
       "correct_answer": "A",
-      "explanation": "Midazolam is commonly administered intranasally for seizure control when IV access is unavailable.",
+      "explanation": "Midazolam is commonly administered intranasally using a mucosal atomization device (MAD). The other listed medications are not routinely administered via the intranasal route in standard EMS practice.",
       "hint": "Intranasal → midazolam"
     }
   ]
