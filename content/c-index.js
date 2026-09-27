@@ -108,6 +108,7 @@ function generateIndexHTML() {
 
         // Scope & Medications
         { id: "s1", shortTitle: "S1 Scope of Practice", title: "Scope of Practice Matrix", chapterFile: "s1", chapterGroup: "scope" },
+        { id: "drug-refresher", shortTitle: "ScopeRx · Drug Refresher", title: "All-in-One DCAS Drug Refresher – study, flashcards and quiz by clinical level (EMR, EMT, EMT-A, P, AP, EP)", href: "../pages/drug-refresher.html", badge: "All-in-One", chapterGroup: "meds" },
         { id: "m1", shortTitle: "M1 ActiMaris", title: "ActiMaris (Wound Irrigation)", chapterFile: "m1", chapterGroup: "meds" },
         { id: "m2", shortTitle: "M2 Adenosine", title: "Adenosine", chapterFile: "m2", chapterGroup: "meds" },
         { id: "m3", shortTitle: "M3 Amiodarone", title: "Amiodarone", chapterFile: "m3", chapterGroup: "meds" },
@@ -272,6 +273,18 @@ function generateIndexHTML() {
                 opacity: 1;
                 transform: scale(1.15);
             }
+            .index-badge {
+                display: inline-block;
+                margin-left: 8px;
+                flex-shrink: 0;
+                padding: 2px 8px;
+                border-radius: 999px;
+                font-size: 0.68rem;
+                font-weight: 700;
+                vertical-align: 2px;
+                background: var(--primary-accent);
+                color: #fff;
+            }
             .index-no-results {
                 padding: 30px;
                 text-align: center;
@@ -360,6 +373,7 @@ function generateIndexHTML() {
         'c11-1': '11_1_START_Triage_MCI_Triage.pdf',
         'c12-1': '12_1_Scope_of_Practice_Matrix.pdf',
         s1:      '12_1_Scope_of_Practice_Matrix.pdf',
+        'drug-refresher': '12_1_Scope_of_Practice_Matrix.pdf',
         m1:  'M1_ActiMaris_Wound_Irrigation.pdf',
         m2:  'M2_Adenosine.pdf',
         m3:  'M3_Amiodarone.pdf',
@@ -410,7 +424,7 @@ function generateIndexHTML() {
         groupChapters.forEach(ch => {
             const baseFile = ch.chapterFile || ch.id;
             const sectionParam = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
-            const link = `${baseFile}.html?view=summary${sectionParam}`;
+            const link = ch.href || `${baseFile}.html?view=summary${sectionParam}`;
             const pdfFile = PDF_MAP[ch.id];
             const pdfLink = pdfFile ? `../pdf_sections/${pdfFile}` : '';
 
@@ -420,6 +434,7 @@ function generateIndexHTML() {
                         <a href="${link}" class="index-topic-link" data-original="${ch.shortTitle}">
                             ${ch.shortTitle}
                         </a>
+                        ${ch.badge ? `<span class="index-badge">${ch.badge}</span>` : ''}
                         ${pdfLink ? `<a href="${pdfLink}" class="index-pdf-link" title="Open PDF" target="_blank"><img src="../images/pdf.png" alt="PDF"></a>` : ''}
                     </td>
                 </tr>
