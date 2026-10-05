@@ -202,38 +202,11 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .start-cat{font-size:1.1rem;font-weight:900;margin-bottom:4px}
 .start-sub{font-size:.78rem;color:var(--muted);margin-bottom:14px}
 
-/* ═══════════════════════════ DEFIBRILLATION ═════════════════════════════ */
+/* ──── FEATURED TOOL CARD ──────────────────────────── */
 .tool-card.feat{grid-column:1/-1;flex-direction:row;text-align:left;gap:14px;border-color:rgba(244,63,94,.35);background:linear-gradient(135deg,rgba(244,63,94,.14),rgba(234,179,8,.06))}
 .tool-card.feat .tc-icon{font-size:2rem;color:#fb7185}
 .tool-card.feat .tc-body{flex:1;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
 .tool-card.feat .tc-tag{align-self:flex-start}
-.df-lbl{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:2px 0 6px 2px}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
-.seg-btn{background:rgba(0,0,0,.2);border:1.5px solid rgba(255,255,255,.1);border-radius:13px;padding:13px 8px;font-family:inherit;color:var(--text);cursor:pointer;text-align:center;transition:all .15s;-webkit-user-select:none;user-select:none}
-.seg-btn:active{transform:scale(.97)}
-.seg-btn b{display:block;font-size:.92rem;font-weight:800}
-.seg-btn small{display:block;font-size:.64rem;color:var(--muted);margin-top:2px}
-.seg-btn.sel{border-color:rgba(6,182,212,.6);background:rgba(6,182,212,.14);box-shadow:0 0 0 2px rgba(6,182,212,.12)}
-.seg-btn.sel b{color:#fff}
-.wchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.wchip{background:rgba(0,0,0,.2);border:1px solid var(--br);border-radius:9px;padding:7px 10px;font-family:var(--mono);font-size:.78rem;color:var(--text);cursor:pointer}
-.wchip:active{transform:scale(.95)}
-.wchip.sel{border-color:rgba(6,182,212,.6);background:rgba(6,182,212,.14);color:#fff}
-.df-banner{border-radius:12px;padding:10px 13px;font-size:.8rem;font-weight:700;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start;line-height:1.4}
-.df-banner.r{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#fca5a5}
-.df-banner.b{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#93c5fd}
-.dose-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.dose-tile{background:var(--sf);border:1.5px solid var(--br);border-radius:14px;padding:10px 6px;text-align:center;transition:all .2s}
-.dose-tile .dt-n{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
-.dose-tile .dt-v{font-size:1.45rem;font-weight:900;font-family:var(--mono);color:#fde047;letter-spacing:-1px;line-height:1.15;margin-top:4px}
-.dose-tile .dt-v small{font-size:.7rem;color:var(--muted);font-weight:600;letter-spacing:0}
-.dose-tile .dt-s{font-size:.6rem;color:var(--muted);margin-top:3px;line-height:1.3}
-.dose-tile.cur{border-color:#facc15;background:rgba(234,179,8,.13);box-shadow:0 0 18px rgba(234,179,8,.25)}
-.shock-row{display:flex;gap:8px;margin-bottom:12px}
-.shock-btn{flex:1;background:rgba(234,179,8,.14);border:1.5px solid rgba(234,179,8,.45);color:#fde047;border-radius:12px;padding:12px;font-size:.88rem;font-weight:800;font-family:inherit;cursor:pointer}
-.shock-btn:active{transform:scale(.98)}
-.shock-undo{background:var(--sf2);border:1px solid var(--br);color:var(--muted);border-radius:12px;padding:12px 14px;font-family:inherit;font-weight:700;cursor:pointer}
-.df-src{font-size:.6rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -252,7 +225,7 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
   <p class="sec-hdr">Clinical Calculators</p>
 
   <div class="tool-grid">
-    <div class="tool-card feat" onclick="openDefib()">
+    <div class="tool-card feat" onclick="window.location.href='defib.html'">
       <div class="tc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg></div>
       <div class="tc-body">
         <div class="tc-title">Defibrillation Doses</div>
@@ -333,145 +306,6 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
     <div class="bs-scroll" id="bsContent"></div>
   </div>
 </div>
-
-<script>
-"use strict";
-/* ═══════════════════════════════════════════════════════════
-   DEFIBRILLATION — DCAS Memo DCAS/MD/2025/09 (6 Nov 2025)
-   Paed ≤13 y: manual only, 2 → 4 → 4–10 J/kg, capped at the
-   device's adult dose for that shock. Adult >13 y: fixed doses.
-═══════════════════════════════════════════════════════════ */
-const DEFIB_DEV = {
-  LP15:{name:"LIFEPAK 15",    padMax:15, padRule:"Paed pads ≤15 kg · Adult pads >15 kg",               adult:[200,300,360]},
-  ZOLL:{name:"ZOLL X-Series", padMax:25, padRule:"Paed pads ≤25 kg (or ≤8 yrs) · Adult pads >25 kg", adult:[120,150,200]}
-};
-const DF = {dev:null, age:null, wt:"", shocks:0};
-try { const d = localStorage.getItem("dfDev"); if (DEFIB_DEV[d]) DF.dev = d; } catch(e) {}
-
-function dfIcon(n){ return `<svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#${n}'/></svg>`; }
-function dfTap(){ if (navigator.vibrate) navigator.vibrate(10); }
-
-function openDefib(){ renderDefib(); }
-function dfSet(k, v){
-  dfTap();
-  DF[k] = v;
-  if (k === "dev") { try { localStorage.setItem("dfDev", v); } catch(e) {} }
-  renderDefib();
-}
-function dfWeight(v){
-  DF.wt = String(v);
-  const inp = document.getElementById("dfWt");
-  if (inp && inp.value !== DF.wt) inp.value = DF.wt;
-  document.querySelectorAll(".wchip").forEach(c => c.classList.toggle("sel", c.dataset.w === DF.wt));
-  dfOut();
-}
-function dfShock(d){
-  dfTap();
-  DF.shocks = Math.max(0, DF.shocks + d);
-  dfOut();
-}
-function dfReset(){
-  DF.age = null; DF.wt = ""; DF.shocks = 0;
-  renderDefib();
-}
-
-function renderDefib(){
-  let html = `<div class="df-lbl">1 · Defibrillator</div><div class="seg">
-    ${Object.keys(DEFIB_DEV).map(k => `<button class="seg-btn${DF.dev===k?" sel":""}" onclick="dfSet('dev','${k}')">
-      <b>${DEFIB_DEV[k].name}</b><small>Adult ${DEFIB_DEV[k].adult.join(" → ")} J</small></button>`).join("")}
-  </div>
-  <div class="df-lbl">2 · Patient</div><div class="seg">
-    <button class="seg-btn${DF.age==="A"?" sel":""}" onclick="dfSet('age','A')"><b>Adult</b><small>&gt;13 years</small></button>
-    <button class="seg-btn${DF.age==="P"?" sel":""}" onclick="dfSet('age','P')"><b>Paediatric</b><small>≤13 years</small></button>
-  </div>`;
-
-  if (DF.age === "P") {
-    html += `<div class="df-lbl">3 · Weight (kg)</div>
-    <div class="wt-row">
-      <input class="wt-input" id="dfWt" type="number" inputmode="decimal" min="1" max="150" placeholder="Weight" value="${DF.wt}"
-        oninput="dfWeight(this.value)" onkeydown="if(event.key==='Enter')this.blur()">
-      <span class="wt-lbl">kg</span>
-    </div>
-    <div class="wchips">${[3,5,10,15,20,25,30,40,50].map(w =>
-      `<button class="wchip${DF.wt===String(w)?" sel":""}" data-w="${w}" onclick="dfTap();dfWeight(${w})">${w}</button>`).join("")}</div>`;
-  }
-
-  html += `<div id="dfOut"></div>`;
-  html += `<button class="reset-btn" onclick="dfReset()">${dfIcon("rotate-ccw")} New Patient</button>
-  <div class="df-src">DCAS Memo DCAS/MD/2025/09 · 6 Nov 2025 · VF / pulseless VT<br>Synchronised cardioversion: privilege-based, per DCAS CPG</div>`;
-
-  openSheet("Defibrillation Doses", html);
-  dfOut();
-}
-
-function dfOut(){
-  const out = document.getElementById("dfOut");
-  if (!out) return;
-  const dev = DEFIB_DEV[DF.dev];
-  if (!dev || !DF.age) {
-    out.innerHTML = `<div class="df-banner b">${dfIcon("arrow-up")} Select ${!dev?"defibrillator":""}${!dev&&!DF.age?" and ":""}${!DF.age?"patient age group":""}</div>`;
-    return;
-  }
-
-  let html = "", tiles, pads, mode;
-  const cur = Math.min(DF.shocks, 2);
-
-  if (DF.age === "A") {
-    mode = `<div class="df-banner b">${dfIcon("circle-check-big")} Manual or AED mode</div>`;
-    pads = `<strong>Adult pads</strong>`;
-    tiles = [
-      {n:"1st", v:dev.adult[0]},
-      {n:"2nd", v:dev.adult[1]},
-      {n:"3rd +", v:dev.adult[2]}
-    ];
-  } else {
-    mode = `<div class="df-banner r">${dfIcon("siren")} MANUAL mode only — do NOT press ANALYZE / use AED (gives adult doses)</div>`;
-    const w = parseFloat(DF.wt);
-    if (!(w > 0 && w <= 150)) {
-      out.innerHTML = mode + `<div class="cat-card"><div class="cat-title">${dfIcon("plug")} Pads — ${dev.name}</div>
-        <div class="act-t">${dev.padRule}</div></div>
-        <div class="df-banner b">${dfIcon("arrow-up")} Enter weight to calculate joules (2 → 4 → 4–10 J/kg)</div>`;
-      return;
-    }
-    const cap = (jkg, max) => Math.min(Math.round(jkg * w), max);
-    const lo = cap(4, dev.adult[2]), hi = cap(10, dev.adult[2]);
-    const s1 = cap(2, dev.adult[0]), s2 = cap(4, dev.adult[1]);
-    tiles = [
-      {n:"1st", v:s1, s:s1===dev.adult[0]?"capped (max)":"2 J/kg"},
-      {n:"2nd", v:s2, s:s2===dev.adult[1]?"capped (max)":"4 J/kg"},
-      {n:"3rd +", v:lo===hi?lo:`${lo}<small>–</small>${hi}`, s:`4–10 J/kg · max ${dev.adult[2]}`}
-    ];
-    const paedPads = w <= dev.padMax;
-    pads = paedPads
-      ? `<strong>Paediatric pads</strong> (≤${dev.padMax} kg) — antero-posterior placement`
-      : `<strong>Adult pads</strong> (&gt;${dev.padMax} kg) — antero-posterior if pads would overlap`;
-  }
-
-  html += mode;
-  html += `<div class="cat-card"><div class="cat-title">${dfIcon("plug")} Pads — ${dev.name}</div><div class="act-t">${pads}</div></div>`;
-  html += `<div class="df-lbl">Energy (Joules) · ${dev.name}</div><div class="dose-grid">
-    ${tiles.map((t,i) => `<div class="dose-tile${i===cur?" cur":""}"><div class="dt-n">${t.n} shock</div>
-      <div class="dt-v">${t.v}<small> J</small></div>${t.s?`<div class="dt-s">${t.s}</div>`:""}</div>`).join("")}
-  </div>
-  <div class="shock-row">
-    <button class="shock-btn" onclick="dfShock(1)">${dfIcon("zap")} Shock delivered · ${DF.shocks} given</button>
-    ${DF.shocks>0?`<button class="shock-undo" onclick="dfShock(-1)" aria-label="Undo">${dfIcon("rotate-ccw")}</button>`:""}
-  </div>`;
-
-  const notes = [
-    {i:"activity", t:"No ECG on pads?", d:"Press the <strong>LEAD</strong> button to select pads."},
-    {i:"zap", t:"Joules are device-specific", d:"Different biphasic waveforms — never apply one device's joules to the other."}
-  ];
-  if (DF.age === "P") notes.unshift({i:"triangle-alert", t:"No paediatric pads?", d:"Do not delay — use adult pads and set weight-based joules manually (justify in ePCR)."});
-  notes.push({i:"clipboard-list", t:"Document in ePCR", d:"Age, pad type, mode (manual/AED), joules delivered, rhythm."});
-  html += `<div class="cat-card"><div class="cat-title">${dfIcon("lightbulb")} Reminders</div>
-    ${notes.map(n => `<div class="act-row"><div class="act-i">${dfIcon(n.i)}</div><div class="act-t"><strong>${n.t}</strong><br><span style="color:var(--muted);font-size:.71rem">${n.d}</span></div></div>`).join("")}
-  </div>`;
-  out.innerHTML = html;
-}
-
-if (location.hash === "#defib") window.addEventListener("DOMContentLoaded", openDefib);
-</script>
 
 <script>
 "use strict";
