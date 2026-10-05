@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>DCAS · Defibrillation Doses</title>
+<script>
+  (function(){
+    var t='dark';
+    try{ t=localStorage.getItem('theme')||'dark'; }catch(e){}
+    document.documentElement.setAttribute('data-theme',t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DCAS Defibrillation Doses — DCAS Memo DCAS/MD/2025/09
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:#07111f;--hdr-bg:rgba(7,17,31,.94);
+  --sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--strong:#fff;--muted:#8095a8;
+  --cyan:#06b6d4;--cyan-bg:rgba(6,182,212,.14);--cyan-br:rgba(6,182,212,.6);
+  --amber:#facc15;--amber-ink:#fde047;--amber-bg:rgba(234,179,8,.12);--amber-br:rgba(234,179,8,.5);
+  --red:#ef4444;--red-ink:#fca5a5;--red-bg:rgba(239,68,68,.12);--red-br:rgba(239,68,68,.4);
+  --green:#22c55e;--green-ink:#86efac;
+  --blue-ink:#93c5fd;--blue-bg:rgba(59,130,246,.1);--blue-br:rgba(59,130,246,.3);
+  --figure:rgba(255,255,255,.14);--figure-br:rgba(255,255,255,.28);
+  --mono:"DM Mono",ui-monospace,monospace;--hdr:60px;--r:18px;
+  --dock-h:84px;
+}
+[data-theme="light"]{
+  --bg:#f3f6fa;--hdr-bg:rgba(243,246,250,.94);
+  --sf:#fff;--sf2:#eef2f7;
+  --br:rgba(15,30,50,.12);--br2:rgba(15,30,50,.22);
+  --text:#1b2a3a;--strong:#0b1726;--muted:#5b6b7c;
+  --cyan:#0891b2;--cyan-bg:rgba(8,145,178,.1);--cyan-br:rgba(8,145,178,.55);
+  --amber:#ca8a04;--amber-ink:#a16207;--amber-bg:rgba(234,179,8,.14);--amber-br:rgba(202,138,4,.55);
+  --red:#dc2626;--red-ink:#b91c1c;--red-bg:rgba(239,68,68,.09);--red-br:rgba(220,38,38,.4);
+  --green:#16a34a;--green-ink:#15803d;
+  --blue-ink:#1d4ed8;--blue-bg:rgba(59,130,246,.08);--blue-br:rgba(59,130,246,.3);
+  --figure:rgba(15,30,50,.08);--figure-br:rgba(15,30,50,.3);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:"Inter",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(70,10,30,.45),transparent);pointer-events:none;z-index:-1}
+[data-theme="light"] body::before{display:none}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.lucide{display:inline-block;vertical-align:-.125em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── HEADER ─────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:var(--hdr-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;flex-shrink:0}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#be123c,#f59e0b);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;box-shadow:0 4px 12px rgba(225,29,72,.4)}
+.hdr-info{flex:1;min-width:0}
+.hdr-title{font-size:.95rem;font-weight:800;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:380px){.hdr-new span{display:none}.hdr-new{padding:0 11px}}
+.hdr-sub{font-size:.64rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr-new{display:flex;align-items:center;gap:6px;background:var(--sf2);border:1px solid var(--br);border-radius:11px;padding:0 12px;height:36px;font-size:.74rem;font-weight:700;cursor:pointer;flex-shrink:0}
+.hdr-new:active{transform:scale(.96)}
+
+/* ── LAYOUT ─────────────────────────────────────────── */
+main{flex:1;width:100%;max-width:560px;margin:0 auto;padding:14px 16px calc(var(--dock-h) + 28px)}
+.field{margin-bottom:14px}
+.lbl{display:flex;align-items:center;gap:8px;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:0 0 7px 2px}
+.lbl .step{width:17px;height:17px;border-radius:50%;background:var(--sf2);border:1px solid var(--br2);display:inline-flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:0;color:var(--text)}
+.lbl .step.ok{background:var(--cyan);border-color:var(--cyan);color:#fff}
+
+/* Segmented choice */
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{min-height:62px;background:var(--sf);border:1.5px solid var(--br);border-radius:14px;padding:10px 8px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s;-webkit-user-select:none;user-select:none}
+.opt:active{transform:scale(.97)}
+.opt b{display:block;font-size:.98rem;font-weight:800;letter-spacing:-.2px}
+.opt small{display:block;font-size:.66rem;color:var(--muted);margin-top:3px}
+.opt[aria-checked="true"]{border-color:var(--cyan-br);background:var(--cyan-bg);box-shadow:0 0 0 3px var(--cyan-bg)}
+.opt[aria-checked="true"] b{color:var(--strong)}
+
+/* Weight */
+.wt-row{display:grid;grid-template-columns:56px 1fr 56px;gap:8px;margin-bottom:8px}
+.wt-step{height:56px;border-radius:14px;background:var(--sf);border:1.5px solid var(--br);font-size:1.5rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.wt-step:active{transform:scale(.95);background:var(--sf2)}
+.wt-box{position:relative}
+.wt-input{width:100%;height:56px;border-radius:14px;background:var(--sf);border:1.5px solid var(--br);color:var(--strong);font-family:var(--mono);font-size:1.6rem;font-weight:500;text-align:center;padding:0 40px;outline:none;-moz-appearance:textfield;appearance:textfield}
+.wt-input::-webkit-outer-spin-button,.wt-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.wt-input:focus{border-color:var(--cyan-br)}
+.wt-input::placeholder{color:var(--muted);font-size:1rem;font-family:"Inter",sans-serif}
+.wt-unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--muted);font-weight:700;pointer-events:none}
+.chips{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.chip{height:40px;min-width:0;border-radius:10px;background:var(--sf);border:1px solid var(--br);font-family:var(--mono);font-size:.86rem;cursor:pointer}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{border-color:var(--cyan-br);background:var(--cyan-bg);color:var(--strong)}
+
+/* Prompt */
+.prompt{border:1.5px dashed var(--br2);border-radius:var(--r);padding:22px 16px;text-align:center;color:var(--muted);font-size:.84rem;line-height:1.5}
+.prompt b{color:var(--text)}
+
+/* Mode banner */
+.banner{display:flex;gap:10px;align-items:center;border-radius:14px;padding:11px 14px;font-size:.82rem;font-weight:700;line-height:1.35;margin-bottom:10px}
+.banner .lucide{font-size:1.15rem;flex-shrink:0}
+.banner.red{background:var(--red-bg);border:1.5px solid var(--red-br);color:var(--red-ink)}
+.banner.blue{background:var(--blue-bg);border:1px solid var(--blue-br);color:var(--blue-ink)}
+
+/* Hero — the next dose */
+.hero{position:relative;overflow:hidden;border-radius:22px;padding:16px 16px 18px;background:linear-gradient(160deg,var(--amber-bg),transparent 70%),var(--sf);border:1.5px solid var(--amber-br);margin-bottom:10px;text-align:center}
+.hero-top{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--amber-ink)}
+.hero-dev{color:var(--muted);font-weight:700;letter-spacing:.6px}
+.hero-j{font-family:var(--mono);font-weight:500;color:var(--strong);line-height:1;margin:14px 0 6px;letter-spacing:-3px;font-size:clamp(3.6rem,19vw,5.4rem);white-space:nowrap}
+.hero-j.range{font-size:clamp(2.6rem,13vw,3.9rem);letter-spacing:-2px}
+.hero-j .u{font-size:.36em;letter-spacing:0;color:var(--amber-ink);margin-left:6px;font-weight:500}
+.hero-j.empty{color:var(--muted);font-size:2.4rem;letter-spacing:0;font-family:"Inter",sans-serif;font-weight:700;margin:22px 0 12px}
+.hero-sub{font-size:.8rem;color:var(--muted);line-height:1.45}
+.hero-sub b{color:var(--text)}
+.cap{display:inline-block;margin-top:8px;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:20px;background:var(--red-bg);border:1px solid var(--red-br);color:var(--red-ink)}
+
+/* Sequence */
+.seq{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.seq li{position:relative;background:var(--sf);border:1.5px solid var(--br);border-radius:14px;padding:9px 6px 10px;text-align:center;transition:all .2s}
+.seq .n{font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}
+.seq .v{font-family:var(--mono);font-size:1.12rem;font-weight:500;color:var(--strong);margin-top:4px;white-space:nowrap;letter-spacing:-.5px}
+.seq .v small{font-size:.66rem;color:var(--muted)}
+.seq .k{font-size:.6rem;color:var(--muted);margin-top:2px}
+.seq li.cur{border-color:var(--amber);background:var(--amber-bg)}
+.seq li.cur .n{color:var(--amber-ink)}
+.seq li.done{opacity:.55}
+.seq li.done::after{content:"✓";position:absolute;top:5px;right:8px;font-size:.72rem;font-weight:900;color:var(--green)}
+
+/* Cards */
+.card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:14px;margin-bottom:10px}
+.card-t{display:flex;align-items:center;gap:7px;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;color:var(--muted);margin-bottom:10px}
+.pads{display:flex;gap:14px;align-items:center}
+.pads svg.fig{width:132px;height:84px;flex-shrink:0}
+.pad-type{font-size:1.02rem;font-weight:800;color:var(--strong);letter-spacing:-.2px}
+.pad-type.paed{color:var(--cyan)}
+.pad-place{font-size:.78rem;color:var(--text);margin-top:3px;line-height:1.4}
+.pad-rule{font-size:.68rem;color:var(--muted);margin-top:6px;line-height:1.4}
+.fig .body{fill:var(--figure);stroke:var(--figure-br);stroke-width:1.2}
+.fig .pad{fill:var(--amber);opacity:.9}
+.fig text{fill:var(--muted);font:700 7px "Inter",sans-serif;text-anchor:middle;letter-spacing:.5px}
+
+/* Reminders */
+.rem{display:flex;gap:11px;padding:9px 0;border-top:1px solid var(--br);font-size:.79rem;line-height:1.45}
+.rem:first-of-type{border-top:none;padding-top:0}
+.rem .lucide{font-size:1rem;flex-shrink:0;margin-top:2px;color:var(--muted)}
+.rem b{color:var(--strong);font-weight:700}
+.rem span{color:var(--muted)}
+.rem.warn .lucide{color:var(--red)}
+
+/* Quick reference */
+details.card{padding:0}
+details.card>summary{list-style:none;cursor:pointer;padding:14px;display:flex;align-items:center;gap:7px;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:1.1px;color:var(--muted)}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+details[open].card>summary::after{transform:rotate(-135deg)}
+.ref-body{padding:0 14px 14px}
+table.ref{width:100%;border-collapse:collapse;font-size:.78rem}
+.ref th,.ref td{padding:8px 6px;border-top:1px solid var(--br);text-align:center}
+.ref th:first-child,.ref td:first-child{text-align:left;color:var(--muted);font-weight:600}
+.ref thead th{border-top:none;font-size:.7rem;font-weight:800;color:var(--text)}
+.ref td{font-family:var(--mono)}
+.ref .hl{background:var(--cyan-bg);color:var(--strong)}
+.ref-note{font-size:.72rem;color:var(--muted);margin-top:10px;line-height:1.5}
+.ref-note b{color:var(--text)}
+
+.src{font-size:.64rem;color:var(--muted);text-align:center;line-height:1.6;margin-top:16px}
+
+/* Bottom dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px max(12px,env(safe-area-inset-bottom));background:linear-gradient(to top,var(--bg) 65%,transparent);display:none}
+.dock.on{display:block}
+.dock-in{max-width:528px;margin:0 auto;display:flex;gap:8px}
+.shock{flex:1;height:60px;border-radius:16px;border:none;cursor:pointer;background:linear-gradient(135deg,#f59e0b,#facc15);color:#1c1405;font-size:1rem;font-weight:900;letter-spacing:-.2px;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 8px 24px rgba(234,179,8,.32)}
+.shock:active{transform:scale(.98)}
+.shock .cnt{font-family:var(--mono);font-size:.78rem;font-weight:500;background:rgba(0,0,0,.14);border-radius:8px;padding:3px 8px}
+.shock:disabled{opacity:.4;box-shadow:none;cursor:not-allowed}
+.undo{width:60px;height:60px;border-radius:16px;background:var(--sf2);border:1px solid var(--br2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;backdrop-filter:blur(10px)}
+.undo:disabled{opacity:.35;cursor:not-allowed}
+.timer{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.timer.due{color:var(--red-ink);font-weight:500;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="hdr-back" href="ems-tools.html" aria-label="Back to EMS Tools"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#arrow-left"/></svg></a>
+  <div class="hdr-badge"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#zap"/></svg></div>
+  <div class="hdr-info">
+    <div class="hdr-title">Defibrillation Doses</div>
+    <div class="hdr-sub">VF / pulseless VT · LIFEPAK 15 · ZOLL X-Series</div>
+  </div>
+  <button class="hdr-new" id="newPt" type="button"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#rotate-ccw"/></svg><span>New</span></button>
+</header>
+
+<main>
+  <div class="field">
+    <div class="lbl"><span class="step" id="st1">1</span> Defibrillator</div>
+    <div class="seg" role="radiogroup" aria-label="Defibrillator">
+      <button class="opt" type="button" role="radio" data-dev="LP15" aria-checked="false"><b>LIFEPAK 15</b><small>Adult 200 · 300 · 360 J</small></button>
+      <button class="opt" type="button" role="radio" data-dev="ZOLL" aria-checked="false"><b>ZOLL X-Series</b><small>Adult 120 · 150 · 200 J</small></button>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="lbl"><span class="step" id="st2">2</span> Patient</div>
+    <div class="seg" role="radiogroup" aria-label="Patient age group">
+      <button class="opt" type="button" role="radio" data-age="A" aria-checked="false"><b>Adult</b><small>&gt; 13 years</small></button>
+      <button class="opt" type="button" role="radio" data-age="P" aria-checked="false"><b>Paediatric</b><small>≤ 13 years</small></button>
+    </div>
+  </div>
+
+  <div class="field" id="wtField" hidden>
+    <div class="lbl"><span class="step" id="st3">3</span> Weight</div>
+    <div class="wt-row">
+      <button class="wt-step" type="button" data-step="-1" aria-label="Decrease weight">−</button>
+      <div class="wt-box">
+        <input class="wt-input" id="wt" type="number" inputmode="decimal" min="1" max="150" step="any" placeholder="kg" aria-label="Weight in kg" autocomplete="off">
+        <span class="wt-unit">kg</span>
+      </div>
+      <button class="wt-step" type="button" data-step="1" aria-label="Increase weight">+</button>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <div class="prompt" id="prompt"></div>
+
+  <section id="result" hidden>
+    <div id="banner"></div>
+
+    <div class="hero" aria-live="polite">
+      <div class="hero-top"><span id="heroN">Next · 1st shock</span><span class="timer" id="timer"></span></div>
+      <div class="hero-j" id="heroJ"></div>
+      <div class="hero-sub" id="heroSub"></div>
+    </div>
+
+    <ol class="seq" id="seq" aria-label="Shock sequence"></ol>
+
+    <div class="card">
+      <div class="card-t"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#plug"/></svg> Pads</div>
+      <div class="pads">
+        <svg class="fig" id="padFig" viewBox="0 0 132 84" aria-hidden="true"></svg>
+        <div>
+          <div class="pad-type" id="padType"></div>
+          <div class="pad-place" id="padPlace"></div>
+          <div class="pad-rule" id="padRule"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="rems"></div>
+
+    <details class="card" id="ref">
+      <summary><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#clipboard-list"/></svg> Memo at a glance</summary>
+      <div class="ref-body">
+        <table class="ref">
+          <thead><tr><th></th><th data-col="LP15">LIFEPAK 15</th><th data-col="ZOLL">ZOLL X</th></tr></thead>
+          <tbody>
+            <tr><td>Paed pads</td><td data-col="LP15">≤15 kg</td><td data-col="ZOLL">≤25 kg / ≤8 y</td></tr>
+            <tr><td>Adult 1st</td><td data-col="LP15">200 J</td><td data-col="ZOLL">120 J</td></tr>
+            <tr><td>Adult 2nd</td><td data-col="LP15">300 J</td><td data-col="ZOLL">150 J</td></tr>
+            <tr><td>Adult 3rd +</td><td data-col="LP15">360 J</td><td data-col="ZOLL">200 J</td></tr>
+          </tbody>
+        </table>
+        <p class="ref-note"><b>Paediatric (≤13 y), manual only:</b> 2 J/kg → 4 J/kg → ≥4 J/kg escalating to 10 J/kg. Each shock is capped at the device's adult dose for that shock.<br><b>Adult (&gt;13 y):</b> manual or AED, fixed doses above.</p>
+      </div>
+    </details>
+  </section>
+
+  <p class="src">DCAS Memo DCAS/MD/2025/09 · 6 Nov 2025<br>Synchronised cardioversion is privilege-based — follow DCAS CPG.</p>
+</main>
+
+<div class="dock" id="dock">
+  <div class="dock-in">
+    <button class="undo" id="undo" type="button" aria-label="Undo last shock"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#undo-2"/></svg></button>
+    <button class="shock" id="shock" type="button"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#zap"/></svg> Shock delivered <span class="cnt" id="cnt">0</span></button>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* Doses per DCAS Memo DCAS/MD/2025/09 (6 Nov 2025).
+   Paediatric ≤13 y: 2 → 4 → 4–10 J/kg, each capped at the device's adult dose
+   for that shock. Adult >13 y: fixed device doses. */
+const DEV = {
+  LP15:{name:"LIFEPAK 15",    padMax:15, padRule:"Paed pads ≤15 kg · Adult pads >15 kg",              adult:[200,300,360]},
+  ZOLL:{name:"ZOLL X-Series", padMax:25, padRule:"Paed pads ≤25 kg (or ≤8 yrs) · Adult pads >25 kg", adult:[120,150,200]}
+};
+const CHIPS = [3,4,5,7,10,12,15,18,20,25,30,35,40,50];
+const RHYTHM_CHECK_S = 120;
+
+const $ = id => document.getElementById(id);
+const icon = n => `<svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#${n}"/></svg>`;
+const ord = n => n + ((n%100 >= 11 && n%100 <= 13) ? "th" : ({1:"st",2:"nd",3:"rd"}[n%10] || "th"));
+const buzz = p => { if (navigator.vibrate) navigator.vibrate(p); };
+
+/* ── State: device remembered across sessions; case survives an accidental reload ── */
+const S = {dev:null, age:null, wt:"", shocks:0, last:null};
+try { Object.assign(S, JSON.parse(sessionStorage.getItem("dfCase") || "{}")); } catch(e) {}
+try { const d = localStorage.getItem("dfDev"); if (DEV[d]) S.dev = d; } catch(e) {}
+function save(){
+  try { sessionStorage.setItem("dfCase", JSON.stringify(S)); } catch(e) {}
+  try { if (S.dev) localStorage.setItem("dfDev", S.dev); } catch(e) {}
+}
+
+function weight(){
+  const w = parseFloat(S.wt);
+  return w > 0 && w <= 150 ? w : null;
+}
+
+/* ── Dose model ── */
+function plan(){
+  const d = DEV[S.dev];
+  if (S.age === "A") {
+    return {
+      paed:false,
+      steps:d.adult.map((j,i) => ({v:String(j), k:"fixed", sub:`Adult fixed dose · <b>${d.name}</b>`})),
+      pad:{type:"Adult pads", paed:false, place:"Standard anterolateral placement", fig:"al"}
+    };
+  }
+  const w = weight();
+  const paedPads = w === null ? null : w <= d.padMax;
+  const pad = w === null
+    ? {type:"Enter weight", paed:false, place:"Pad type depends on weight", fig:"ap"}
+    : paedPads
+      ? {type:"Paediatric pads", paed:true, place:"Antero-posterior placement", fig:"ap"}
+      : {type:"Adult pads", paed:false, place:"Antero-posterior if pads would overlap", fig:"ap"};
+  if (w === null) return {paed:true, needW:true, pad};
+
+  const dose = (jkg, max) => { const raw = Math.round(jkg * w); return {j:Math.min(raw, max), raw, capped:raw > max}; };
+  const s1 = dose(2, d.adult[0]), s2 = dose(4, d.adult[1]);
+  const lo = dose(4, d.adult[2]), hi = dose(10, d.adult[2]);
+  const capTxt = (x, max) => x.capped ? `${x.raw} J calculated → capped at adult max ${max} J` : "";
+  return {
+    paed:true, pad,
+    steps:[
+      {v:String(s1.j), k:"2 J/kg", capped:s1.capped, sub:`2 J/kg × <b>${w} kg</b>`, capTxt:capTxt(s1, d.adult[0])},
+      {v:String(s2.j), k:"4 J/kg", capped:s2.capped, sub:`4 J/kg × <b>${w} kg</b>`, capTxt:capTxt(s2, d.adult[1])},
+      {v:lo.j === hi.j ? String(lo.j) : `${lo.j}–${hi.j}`, k:"4–10 J/kg", range:lo.j !== hi.j, capped:hi.capped,
+       sub:`≥4 J/kg, escalate up to 10 J/kg · <b>${w} kg</b>`, capTxt:hi.capped ? `Never exceed ${d.adult[2]} J on ${d.name}` : ""}
+    ]
+  };
+}
+
+/* ── Pad placement figure: AP (front + back) or anterolateral (front) ── */
+function torso(x, label){
+  return `<g transform="translate(${x} 0)">
+    <circle class="body" cx="30" cy="11" r="8"/>
+    <path class="body" d="M12 24 Q30 18 48 24 L52 66 Q30 72 8 66 Z"/>
+    <text x="30" y="82">${label}</text></g>`;
+}
+function padFig(type){
+  if (type === "al") {
+    return torso(36, "FRONT")
+      + `<rect class="pad" x="${36+15}" y="27" width="11" height="14" rx="2.5"/>`
+      + `<rect class="pad" x="${36+36}" y="42" width="11" height="16" rx="2.5" transform="rotate(-12 ${36+41} 50)"/>`;
+  }
+  return torso(2, "FRONT") + torso(70, "BACK")
+    + `<rect class="pad" x="${2+29}" y="33" width="12" height="14" rx="2.5"/>`
+    + `<rect class="pad" x="${70+23}" y="31" width="14" height="16" rx="2.5"/>`;
+}
+
+/* ── Render ── */
+function render(){
+  document.querySelectorAll("[data-dev]").forEach(b => b.setAttribute("aria-checked", String(b.dataset.dev === S.dev)));
+  document.querySelectorAll("[data-age]").forEach(b => b.setAttribute("aria-checked", String(b.dataset.age === S.age)));
+  document.querySelectorAll("[data-col]").forEach(c => c.classList.toggle("hl", c.dataset.col === S.dev));
+  $("st1").classList.toggle("ok", !!S.dev);
+  $("st2").classList.toggle("ok", !!S.age);
+  $("st3").classList.toggle("ok", weight() !== null);
+
+  $("wtField").hidden = S.age !== "P";
+  const inp = $("wt");
+  if (document.activeElement !== inp) inp.value = S.wt;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.w === String(weight()))));
+
+  const ready = S.dev && S.age;
+  $("prompt").hidden = !!ready;
+  $("result").hidden = !ready;
+  $("dock").classList.toggle("on", !!ready);
+  if (!ready) {
+    const miss = [!S.dev && "<b>defibrillator</b>", !S.age && "<b>patient age group</b>"].filter(Boolean).join(" and ");
+    $("prompt").innerHTML = `Select the ${miss} to see pads and joules.`;
+    return;
+  }
+
+  const d = DEV[S.dev], p = plan();
+
+  $("banner").innerHTML = p.paed
+    ? `<div class="banner red">${icon("siren")}<span>MANUAL mode only — do NOT press ANALYZE. AED mode delivers adult doses.</span></div>`
+    : `<div class="banner blue">${icon("circle-check-big")}<span>Manual or AED mode</span></div>`;
+
+  // Hero + sequence
+  const cur = Math.min(S.shocks, 2);
+  if (p.needW) {
+    $("heroN").textContent = "Next · 1st shock";
+    $("heroJ").className = "hero-j empty";
+    $("heroJ").textContent = "Enter weight";
+    $("heroSub").innerHTML = "2 J/kg → 4 J/kg → 4–10 J/kg";
+    $("seq").innerHTML = ["1st","2nd","3rd +"].map((n,i) =>
+      `<li class="${i===0?"cur":""}"><div class="n">${n}</div><div class="v">—</div><div class="k">${["2","4","4–10"][i]} J/kg</div></li>`).join("");
+  } else {
+    const st = p.steps[cur];
+    $("heroN").textContent = `Next · ${ord(S.shocks + 1)} shock`;
+    $("heroJ").className = "hero-j" + (st.range ? " range" : "");
+    $("heroJ").innerHTML = `${st.v}<span class="u">J</span>`;
+    $("heroSub").innerHTML = st.sub + (st.capTxt ? `<br><span class="cap">${st.capTxt}</span>` : "");
+    $("seq").innerHTML = p.steps.map((s,i) =>
+      `<li class="${i===cur?"cur":i<S.shocks?"done":""}"><div class="n">${["1st","2nd","3rd +"][i]}</div>
+        <div class="v">${s.v}<small> J</small></div><div class="k">${s.capped?"capped":s.k}</div></li>`).join("");
+  }
+  tick();
+
+  // Pads
+  $("padFig").innerHTML = padFig(p.pad.fig);
+  $("padType").textContent = p.pad.type;
+  $("padType").className = "pad-type" + (p.pad.paed ? " paed" : "");
+  $("padPlace").textContent = p.pad.place;
+  $("padRule").textContent = d.padRule;
+
+  // Reminders
+  const rems = [];
+  if (p.paed) rems.push({i:"triangle-alert", warn:true, t:"No paediatric pads?", d:"Don't delay — use adult pads and set the weight-based joules manually. Justify in ePCR."});
+  rems.push({i:"activity", t:"No ECG through pads?", d:"Press the LEAD button to select pads."});
+  rems.push({i:"zap", t:"Joules are device-specific", d:"Different biphasic waveforms — never carry one device's joules over to the other."});
+  rems.push({i:"clipboard-list", t:"Document in ePCR", d:"Age, pad type, mode (manual/AED), joules delivered, rhythm."});
+  $("rems").innerHTML = `<div class="card-t">${icon("lightbulb")} Reminders</div>` +
+    rems.map(r => `<div class="rem${r.warn?" warn":""}">${icon(r.i)}<div><b>${r.t}</b> <span>${r.d}</span></div></div>`).join("");
+
+  // Dock
+  $("cnt").textContent = S.shocks;
+  $("shock").disabled = !!p.needW;
+  $("undo").disabled = S.shocks === 0;
+}
+
+/* Time since last shock — flags the 2-minute rhythm check */
+function tick(){
+  const t = $("timer");
+  if (!S.last || S.shocks === 0) { t.textContent = ""; t.classList.remove("due"); return; }
+  const s = Math.max(0, Math.floor((Date.now() - S.last) / 1000));
+  const due = s >= RHYTHM_CHECK_S;
+  t.textContent = (due ? "Rhythm check · " : "Last shock ") + `${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`;
+  t.classList.toggle("due", due);
+}
+setInterval(tick, 1000);
+
+/* ── Events ── */
+document.querySelectorAll("[data-dev]").forEach(b => b.addEventListener("click", () => {
+  buzz(10); S.dev = b.dataset.dev; save(); render();
+}));
+document.querySelectorAll("[data-age]").forEach(b => b.addEventListener("click", () => {
+  buzz(10); S.age = b.dataset.age; save(); render();
+  if (S.age === "P" && weight() === null) $("wtField").scrollIntoView({behavior:"smooth", block:"nearest"});
+}));
+
+$("chips").innerHTML = CHIPS.map(w => `<button class="chip" type="button" data-w="${w}" aria-pressed="false">${w}</button>`).join("");
+$("chips").addEventListener("click", e => {
+  const c = e.target.closest(".chip"); if (!c) return;
+  buzz(10); S.wt = c.dataset.w; $("wt").value = S.wt; save(); render();
+});
+$("wt").addEventListener("input", e => { S.wt = e.target.value; save(); render(); });
+$("wt").addEventListener("keydown", e => { if (e.key === "Enter") e.target.blur(); });
+document.querySelectorAll("[data-step]").forEach(b => b.addEventListener("click", () => {
+  buzz(10);
+  const w = parseFloat(S.wt) || 0;
+  const next = Math.min(150, Math.max(1, Math.round(w) + Number(b.dataset.step)));
+  S.wt = String(next); $("wt").value = S.wt; save(); render();
+}));
+
+$("shock").addEventListener("click", () => {
+  buzz([30,40,30]); S.shocks++; S.last = Date.now(); save(); render();
+});
+$("undo").addEventListener("click", () => {
+  if (S.shocks === 0) return;
+  buzz(10); S.shocks--; if (S.shocks === 0) S.last = null; save(); render();
+});
+$("newPt").addEventListener("click", () => {
+  if (S.shocks > 0 && !confirm("Start a new patient? The shock count will be cleared.")) return;
+  buzz(10);
+  Object.assign(S, {age:null, wt:"", shocks:0, last:null});
+  save(); render(); window.scrollTo({top:0, behavior:"smooth"});
+});
+
+render();
+</script>
+</body>
+</html>

@@ -39,6 +39,7 @@ const CONTENT_CACHE = [
   'pages/empact.html', 'pages/ecg.html', 'pages/ecg-test.html',
   'pages/drug-calculator.html', 'pages/drug-index.html', 'pages/med-index.html',
   'pages/drug-refresher.html', 'pages/drug-refresher-data.js',
+  'pages/ems-tools.html', 'pages/defib.html',
   'pages/ecg-engine.js', 'pages/ecg-engine2.js',
   'pages/drug-calculator.js', 'pages/drug-data.json',
   // Prometric engine + bank
