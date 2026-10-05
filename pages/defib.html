@@ -166,6 +166,18 @@ table.ref{width:100%;border-collapse:collapse;font-size:.78rem}
 .ref-note{font-size:.72rem;color:var(--muted);margin-top:10px;line-height:1.5}
 .ref-note b{color:var(--text)}
 
+/* Quick reference PDF */
+.pdf{display:flex;align-items:center;gap:12px;background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:12px 14px;margin-top:10px}
+.pdf-ic{width:42px;height:42px;border-radius:12px;background:var(--red-bg);border:1px solid var(--red-br);color:var(--red-ink);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.pdf-t{flex:1;min-width:0}
+.pdf-t b{display:block;font-size:.86rem;font-weight:800;color:var(--strong)}
+.pdf-t span{display:block;font-size:.68rem;color:var(--muted);margin-top:2px}
+.pdf-acts{display:flex;gap:6px;flex-shrink:0}
+.pdf-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:40px;padding:0 12px;border-radius:11px;font-size:.76rem;font-weight:700;text-decoration:none;color:var(--text);background:var(--sf2);border:1px solid var(--br2)}
+.pdf-btn.pri{background:var(--cyan-bg);border-color:var(--cyan-br);color:var(--strong)}
+.pdf-btn:active{transform:scale(.96)}
+@media (max-width:400px){.pdf{flex-wrap:wrap}.pdf-acts{width:100%}.pdf-btn{flex:1}}
+
 .src{font-size:.64rem;color:var(--muted);text-align:center;line-height:1.6;margin-top:16px}
 
 /* Bottom dock */
@@ -271,6 +283,15 @@ table.ref{width:100%;border-collapse:collapse;font-size:.78rem}
       </div>
     </details>
   </section>
+
+  <div class="pdf">
+    <div class="pdf-ic"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#book-open"/></svg></div>
+    <div class="pdf-t"><b>Quick Reference PDF</b><span>A4 · 2 pages · pads, modes &amp; dose table by weight</span></div>
+    <div class="pdf-acts">
+      <a class="pdf-btn pri" href="../pdf_sections/Defibrillation-Quick-Reference.pdf" target="_blank" rel="noopener"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#eye"/></svg> View</a>
+      <a class="pdf-btn" href="../pdf_sections/Defibrillation-Quick-Reference.pdf" download="Defibrillation-Quick-Reference.pdf"><svg class="lucide" width="1em" height="1em" aria-hidden="true"><use href="../icons/sprite.svg#download"/></svg> Download</a>
+    </div>
+  </div>
 
   <p class="src">DCAS Memo DCAS/MD/2025/09 · 6 Nov 2025<br>Synchronised cardioversion is privilege-based — follow DCAS CPG.</p>
 </main>
