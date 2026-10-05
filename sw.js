@@ -41,6 +41,7 @@ const CONTENT_CACHE = [
   'pages/drug-refresher.html', 'pages/drug-refresher-data.js',
   'pages/ems-tools.html', 'pages/defib.html',
   'images/defib/pads-adult-anterolateral.webp', 'images/defib/pads-paed-anteroposterior.webp',
+  'pdf_sections/Defibrillation-Quick-Reference.pdf',
   'pages/ecg-engine.js', 'pages/ecg-engine2.js',
   'pages/drug-calculator.js', 'pages/drug-data.json',
   // Prometric engine + bank
