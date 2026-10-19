@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "Normal Blood Pressure, Abnormal Perfusion",
+      "presentation": "A 4-year-old has had three days of vomiting and diarrhea. She is irritable, has dry mucous membranes, capillary refill of 3 seconds, and cool extremities. Blood pressure is 92/60 mmHg.",
+      "vitals": { "hr": "150 bpm", "bp": "92/60 mmHg", "capRefill": "3 seconds", "appearance": "Irritable" },
+      "question": "How should this presentation be interpreted?",
+      "options": [
+        "A: No shock is present because the blood pressure is normal.",
+        "B: Compensated shock is present — tachycardia and delayed capillary refill indicate poor perfusion despite a normal blood pressure for age.",
+        "C: This is decompensated shock since the blood pressure is abnormal.",
+        "D: These findings are unrelated and require no action."
+      ],
+      "correct": 1,
+      "explanation": "Tachycardia, delayed capillary refill, cool extremities, and irritability all indicate poor perfusion — compensated shock — even though the blood pressure remains normal for age. Waiting for hypotension would mean missing shock at a treatable stage.",
+      "clinicalPearl": "Normal blood pressure does not rule out shock in a child — it may just mean compensation hasn't failed yet."
+    },
+    {
+      "id": "c06_s02",
+      "title": "Warm and Flushed, Not Reassuring",
+      "presentation": "A 7-year-old with a high fever is lethargic, with warm, flushed skin, bounding peripheral pulses, and a capillary refill that is brisk but the child remains difficult to arouse.",
+      "vitals": { "hr": "160 bpm", "temp": "39.8°C", "appearance": "Lethargic, difficult to arouse", "skin": "Warm, flushed" },
+      "question": "What should this presentation suggest?",
+      "options": [
+        "A: This cannot be shock since the skin is warm and pulses are bounding.",
+        "B: Early septic (distributive) shock, which can present with warm, flushed skin and bounding pulses rather than the cold, mottled pattern of hypovolemic shock.",
+        "C: Simple febrile illness requiring only antipyretics.",
+        "D: Cardiogenic shock from a primary cardiac problem."
+      ],
+      "correct": 1,
+      "explanation": "Warm, flushed skin and bounding pulses can be misleadingly reassuring — combined with fever and altered mental status (lethargy), this presentation is consistent with early septic shock, a distributive shock subtype that does not always look like the classic cold, mottled hypovolemic pattern.",
+      "clinicalPearl": "Don't let warm skin fool you — early septic shock can look 'well-perfused' on the skin while the brain is already showing signs of poor perfusion."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Sudden Hypotension After Trauma",
+      "presentation": "A 10-year-old struck by a car has unilateral absent breath sounds on the right, tracheal deviation to the left, tachycardia, and a blood pressure that just dropped to 78/50 mmHg.",
+      "vitals": { "hr": "155 bpm", "bp": "78/50 mmHg", "breathSounds": "Absent on right", "trachea": "Deviated left" },
+      "question": "What is the most likely cause of shock, and what is the priority intervention?",
+      "options": [
+        "A: Hypovolemic shock from external bleeding — apply direct pressure and give fluids.",
+        "B: Obstructive shock from a tension pneumothorax — needle decompression per protocol, in addition to supportive care.",
+        "C: Anaphylactic shock — administer epinephrine.",
+        "D: This is a normal post-traumatic vital sign pattern requiring no intervention."
+      ],
+      "correct": 1,
+      "explanation": "Unilateral absent breath sounds, tracheal deviation, and hypotension after trauma are classic for tension pneumothorax causing obstructive shock. Needle decompression per protocol is the priority intervention to relieve the obstruction, alongside oxygen and rapid transport.",
+      "clinicalPearl": "Tracheal deviation plus absent breath sounds plus shock after trauma — think tension pneumothorax and decompress, don't just give fluids."
+    }
+  ]
+}

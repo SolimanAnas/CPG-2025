@@ -1,0 +1,68 @@
+{
+  "id": "c02",
+  "title": "Airway Management in the Medical Patient",
+  "shortTitle": "Airway Management",
+  "estimatedStudyTime": 26,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "List the indications for bag-valve-mask (BVM) ventilation.",
+    "Differentiate the use and contraindications of oropharyngeal (OPA) and nasopharyngeal (NPA) airway adjuncts.",
+    "Describe the correct positioning for a patient with vomit or blood in the airway.",
+    "Recognize stridor as a marker of upper airway obstruction requiring urgent action.",
+    "Explain how altered mental status changes airway risk and management priority."
+  ],
+  "summary": [
+    {
+      "title": "When to Assist Ventilation: BVM Indications",
+      "content": "Bag-valve-mask ventilation is indicated for apnea, bradypnea (too slow to sustain adequate minute ventilation), inadequate tidal volume (shallow breathing that fails to move sufficient air despite a normal-looking rate), cyanosis, and altered mental status with poor respiratory effort. The decision to assist ventilations is not based on rate alone — a patient breathing 14 times a minute with minimal chest rise may need just as much support as one breathing 6 times a minute."
+    },
+    {
+      "title": "Airway Adjuncts: OPA vs NPA",
+      "content": "An oropharyngeal airway (OPA) is used in unresponsive patients without a gag reflex; if a patient gags or resists the OPA, remove it — it is not tolerated with an intact gag reflex. A nasopharyngeal airway (NPA) is used in patients with an intact gag reflex or who are semi-conscious, since it is generally better tolerated. The NPA is contraindicated in suspected basilar skull fracture or significant mid-face trauma, where inserting a tube through the nasal passage risks intracranial placement — a consideration to keep in mind even on 'medical' calls that follow a fall."
+    },
+    {
+      "title": "Positioning for Vomit or Blood in the Airway",
+      "content": "When a patient has vomit, blood, or other fluid in the airway — whether from a medical cause (seizure, decreased LOC, GI bleed) or trauma — turn the patient onto their side (recovery position, or a modified logroll if spinal precautions are needed) to allow fluid to drain out of the mouth rather than pool in the posterior pharynx or be aspirated. Suction is used to clear what positioning alone cannot manage, but positioning is the first, fastest response and should not be delayed while equipment is prepared."
+    },
+    {
+      "title": "Stridor: A Red-Flag Sound",
+      "content": "Stridor — a high-pitched sound typically heard on inspiration — indicates a partial upper airway obstruction (above the vocal cords), and is a potentially life-threatening finding requiring rapid action. Causes range from anaphylaxis-related angioedema to epiglottitis, foreign body, or airway burns. Unlike lower-airway wheezing, stridor signals that the obstruction is proximal and can progress to complete obstruction quickly — this finding should escalate urgency and prompt preparation for advanced airway support."
+    },
+    {
+      "title": "Altered Mental Status Changes Everything About Airway Risk",
+      "content": "A decreased level of consciousness removes the patient's own protective airway reflexes — the ability to cough, swallow, and maintain tongue tone. This is why altered mental status appears repeatedly as an airway-management trigger across many medical conditions (overdose, stroke, post-ictal state, metabolic derangement, sepsis): the underlying diagnosis may differ, but the airway risk and the need for positioning, suction readiness, and possible adjunct use is a common thread that must be assessed independently of the cause."
+    }
+  ],
+  "clinicalPearls": [
+    "Indications for BVM include apnea, bradypnea, inadequate tidal volume, cyanosis, or altered mental status with poor respiratory effort.",
+    "NPA is for patients with an intact gag reflex or who are semi-conscious; it is contraindicated in suspected basilar skull fracture.",
+    "For a foreign body in the airway such as vomit or blood, turn the patient onto their side to allow drainage.",
+    "Stridor indicates upper airway obstruction and is a potentially life-threatening finding requiring urgent action."
+  ],
+  "redFlags": [
+    "New-onset stridor in any patient — treat as a rapidly evolving airway emergency.",
+    "Forcing an OPA into a patient who is gagging or biting down on it.",
+    "Delaying positioning/suction for an airway full of vomit while gathering equipment."
+  ],
+  "commonMistakes": [
+    "Judging ventilation adequacy by respiratory rate alone rather than tidal volume and effort.",
+    "Inserting an NPA in a patient with suspected basilar skull fracture or significant facial trauma.",
+    "Assuming a 'medical' patient cannot have a contraindication to an airway adjunct that is usually taught in the trauma context."
+  ],
+  "memoryAids": [
+    "BVM triggers: Apnea, Bradypnea, inadequate Volume, Cyanosis, Altered LOC with poor effort.",
+    "OPA = no gag. NPA = gag present, but not with a skull-base fracture.",
+    "Stridor = STOP and act — proximal airway trouble.",
+    "Vomit/blood in the airway: turn them, then suction."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Airway Adjunct and Ventilation Decision",
+      "content": "Assess breathing adequacy (rate, depth, effort, color, LOC)\n  → Inadequate (apnea/bradypnea/poor tidal volume/cyanosis/altered LOC with poor effort): assist with BVM\n  → Airway adjunct needed?\n     → No gag reflex (unresponsive): OPA\n     → Gag reflex present / semi-conscious: NPA\n        → Suspected basilar skull fracture or significant facial trauma: AVOID NPA\n  → Fluid/vomit/blood present: position on side (or logroll with spinal precautions) + suction\n  → Stridor present: treat as urgent upper-airway emergency, prepare for advanced airway support"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Airway and Respiratory categories",
+    "National EMS Education Standards — Airway, Respiration, and Ventilation domain"
+  ]
+}

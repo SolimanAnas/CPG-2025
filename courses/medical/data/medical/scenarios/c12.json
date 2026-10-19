@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "Low Temperature, High Concern",
+      "presentation": "A 71-year-old man with a known productive cough for three days is found confused, with a temperature of 95.8°F, heart rate of 122 bpm, and respiratory rate of 26/min. His family says he seemed fine yesterday.",
+      "vitals": { "temp": "95.8°F (35.4°C)", "hr": "122 bpm", "rr": "26/min", "appearance": "New confusion" },
+      "question": "How should the low temperature be interpreted in this context?",
+      "options": [
+        "A: As reassuring, since he does not have a fever.",
+        "B: As a possible sign of sepsis — hypothermia combined with tachycardia, tachypnea, and altered mental status in the setting of a likely respiratory infection is a concerning pattern, not a reassuring one.",
+        "C: As unrelated to his cough and breathing symptoms.",
+        "D: As simple age-related temperature dysregulation requiring no action."
+      ],
+      "correct": 1,
+      "explanation": "A low temperature in a patient with a likely infection source (productive cough) combined with tachycardia, tachypnea, and new altered mental status is a concerning sepsis pattern — hypothermia, not just fever, can indicate sepsis. This should prompt supportive care and rapid transport with early hospital notification.",
+      "clinicalPearl": "A low temperature with signs of infection is not reassuring — it can be sepsis just as much as a fever can."
+    },
+    {
+      "id": "c12_s02",
+      "title": "Black, Tarry Stool",
+      "presentation": "A 63-year-old man reports several days of black, tarry, foul-smelling stools and now feels lightheaded when standing. He appears pale.",
+      "vitals": { "hr": "116 bpm (supine), 138 bpm (standing)", "bp": "98/62 mmHg (supine)", "appearance": "Pale" },
+      "question": "What does this presentation suggest, and what is the priority?",
+      "options": [
+        "A: A benign dietary issue unrelated to bleeding.",
+        "B: Melena suggesting upper GI bleeding — assess perfusion status (not just the visible history) and treat for possible hypovolemic shock per protocol.",
+        "C: A urinary tract problem requiring no GI evaluation.",
+        "D: No action needed since there is no visible active bleeding right now."
+      ],
+      "correct": 1,
+      "explanation": "Black, tarry, foul-smelling stool (melena) is classic for upper GI bleeding. The positional heart rate change and low-normal blood pressure suggest significant blood loss with early compensated shock — perfusion status, not just the history of visible bleeding, should guide the urgency of field management.",
+      "clinicalPearl": "Melena plus orthostatic vital sign changes means real blood loss — treat the shock, not just the stool description."
+    },
+    {
+      "id": "c12_s03",
+      "title": "Flank Pain in an At-Risk Patient",
+      "presentation": "A 68-year-old man with a history of hypertension and smoking presents with sudden, severe left flank pain radiating to his groin. He is restless, unable to find a comfortable position, and reports similar pain to a prior kidney stone.",
+      "vitals": { "bp": "156/94 mmHg", "hr": "108 bpm", "appearance": "Restless, unable to find comfortable position" },
+      "question": "Should this presentation be assumed to be a recurrence of renal colic given his prior history?",
+      "options": [
+        "A: Yes, since he has a prior history of similar pain, no further consideration is needed.",
+        "B: No — while renal colic is plausible, his age and vascular risk factors (hypertension, smoking history) warrant considering a dangerous mimic such as ruptured or dissecting abdominal aortic aneurysm before settling on a benign diagnosis.",
+        "C: This presentation requires no urgency regardless of the cause.",
+        "D: This is clearly a psychiatric presentation given his restlessness."
+      ],
+      "correct": 1,
+      "explanation": "Although the presentation is consistent with renal colic and matches the patient's prior history, his age and vascular risk factors (hypertension, smoking) mean a dangerous mimic like AAA must be considered rather than assumed away based on prior similar episodes. Field providers should maintain vigilance and monitor closely rather than treating this as routinely benign.",
+      "clinicalPearl": "A prior kidney stone history doesn't rule out AAA today — in an older vascular-risk patient, flank pain deserves a broader differential every time."
+    }
+  ]
+}

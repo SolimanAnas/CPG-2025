@@ -1,0 +1,187 @@
+{
+  "chapter": "c14",
+  "questions": [
+    {
+      "id": "c14_q01",
+      "question": "What factors guide pediatric transport destination decisions?",
+      "options": [
+        "A. Only the distance to the nearest hospital",
+        "B. The severity/type of condition weighed against nearby facilities' pediatric-specific capabilities",
+        "C. The child's insurance status",
+        "D. Random assignment among available hospitals"
+      ],
+      "correct": 1,
+      "rationale": "Transport decisions weigh clinical severity/type against which nearby facilities have pediatric-specific resources.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q02",
+      "question": "What should guide a decision to bypass a closer general hospital for a significantly injured child?",
+      "options": [
+        "A. Personal preference of the crew",
+        "B. Local protocol defining pediatric-capable/pediatric trauma center bypass criteria, with medical direction consultation as needed",
+        "C. Always transport to the nearest facility regardless of capability",
+        "D. The caregiver's insurance network only"
+      ],
+      "correct": 1,
+      "rationale": "Local protocols define bypass criteria for pediatric-capable destinations; providers should follow protocol and consult medical direction as needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q03",
+      "question": "Why do children require specific consideration in disaster planning?",
+      "options": [
+        "A. They have identical needs to adults in every respect",
+        "B. Unique vulnerabilities including exposure susceptibility, evacuation dependence, psychological impact, and different equipment/medication needs",
+        "C. Children are not affected by disasters",
+        "D. Disaster planning cannot realistically account for children"
+      ],
+      "correct": 1,
+      "rationale": "Children have distinct vulnerabilities that must be explicitly planned for in disaster response, beyond simply scaling down adult plans.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q04",
+      "question": "What is JumpSTART?",
+      "options": [
+        "A. An adult-only MCI triage tool",
+        "B. A pediatric-specific adaptation of the adult START MCI triage algorithm",
+        "C. A cardiac arrest algorithm",
+        "D. A neonatal resuscitation protocol"
+      ],
+      "correct": 1,
+      "rationale": "JumpSTART adapts the adult START MCI triage tool specifically for pediatric patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c14_q05",
+      "question": "Why was JumpSTART developed rather than applying adult START directly to children?",
+      "options": [
+        "A. Children's physiologic norms and injury/arrest patterns differ enough from adults to need adjusted criteria",
+        "B. Adult START works identically well for children",
+        "C. JumpSTART was developed before START and adapted for adults",
+        "D. There is no meaningful difference between adult and pediatric triage needs"
+      ],
+      "correct": 0,
+      "rationale": "Pediatric physiologic differences justify a separate, adapted triage tool rather than direct application of adult criteria.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q06",
+      "question": "What special step does JumpSTART include for an apneic child with a pulse?",
+      "options": [
+        "A. Immediate categorization as expectant with no intervention",
+        "B. Five rescue breaths before categorizing as expectant",
+        "C. Thirty chest compressions before reassessment",
+        "D. Immediate transport with no triage category assigned"
+      ],
+      "correct": 1,
+      "rationale": "JumpSTART includes five rescue breaths for an apneic child with a pulse before an expectant categorization, since pediatric arrest is often respiratory and reversible.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q07",
+      "question": "Why does JumpSTART include the five-rescue-breaths step, unlike adult START?",
+      "options": [
+        "A. Because pediatric arrest is often respiratory in origin and may be reversible with ventilation alone",
+        "B. Because children never have reversible causes of apnea",
+        "C. Because adult START also includes this step identically",
+        "D. Because rescue breaths are only for training purposes, not real triage"
+      ],
+      "correct": 0,
+      "rationale": "This step reflects the pediatric-specific insight that respiratory causes of arrest are common and potentially reversible with ventilation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c14_q08",
+      "question": "What scale does JumpSTART use for mental status assessment, and why?",
+      "options": [
+        "A. AVPU, since it is more developmentally appropriate than command-following",
+        "B. GCS motor score only",
+        "C. Command-following only, identical to adult START",
+        "D. No mental status assessment is included in JumpSTART"
+      ],
+      "correct": 0,
+      "rationale": "JumpSTART uses AVPU rather than command-following, since young children may not reliably follow commands regardless of clinical status.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q09",
+      "question": "What respiratory rate consideration differs between JumpSTART and adult START?",
+      "options": [
+        "A. JumpSTART ignores respiratory rate entirely",
+        "B. JumpSTART uses pediatric-specific respiratory rate thresholds rather than the adult cutoff",
+        "C. JumpSTART and adult START use identical respiratory rate thresholds",
+        "D. JumpSTART only assesses respiratory rate in adolescents"
+      ],
+      "correct": 1,
+      "rationale": "JumpSTART adjusts respiratory rate thresholds to reflect normal pediatric ranges rather than using the adult cutoff.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q10",
+      "question": "What operational risk exists if triage personnel apply adult START criteria directly to pediatric MCI patients?",
+      "options": [
+        "A. No risk — the criteria are interchangeable",
+        "B. Misclassification of children, since adult thresholds don't match pediatric physiologic norms",
+        "C. Children would automatically be triaged as minor",
+        "D. Adult criteria are always more conservative for children"
+      ],
+      "correct": 1,
+      "rationale": "Applying adult respiratory rate thresholds and other adult criteria to children can misclassify their triage category, since normal pediatric physiology differs.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c14_q11",
+      "question": "What equipment/medication risk is heightened in pediatric MCI response if not planned for in advance?",
+      "options": [
+        "A. Inadequate pediatric-sized equipment and medication dosing errors under stress",
+        "B. No specific pediatric risks exist in MCI response",
+        "C. Adult equipment works identically well for pediatric patients",
+        "D. Medication dosing is simpler for children than adults"
+      ],
+      "correct": 0,
+      "rationale": "Without specific pediatric MCI planning, equipment sizing and medication dosing errors become more likely under high-stress conditions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q12",
+      "question": "How should family reunification after a pediatric-involving MCI generally be handled?",
+      "options": [
+        "A. Through an established incident reunification process coordinated by incident command/emergency management",
+        "B. Ad hoc matching by individual field providers during active response",
+        "C. Reunification is not a priority during MCI response",
+        "D. Only law enforcement should be involved, with no coordination process"
+      ],
+      "correct": 0,
+      "rationale": "Reunification is coordinated through an established incident process (tracking systems, designated points) rather than improvised individually.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q13",
+      "question": "What should a field provider do for an unaccompanied child during an MCI?",
+      "options": [
+        "A. Document identifying information when possible and follow the established incident reunification process",
+        "B. Attempt to personally locate the caregiver before continuing triage duties",
+        "C. Ignore the child's identification needs entirely",
+        "D. Release the child to any adult who claims to be a relative without verification"
+      ],
+      "correct": 0,
+      "rationale": "Documenting identifying information and following the incident's established reunification process is the appropriate field-level action.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c14_q14",
+      "question": "A triage provider at an MCI applies adult START respiratory rate thresholds to a 2-year-old, missing an abnormal pediatric rate. What does this illustrate?",
+      "options": [
+        "A. The importance of using JumpSTART's pediatric-specific criteria rather than adult thresholds for children",
+        "B. That adult START is equally valid for all ages",
+        "C. That respiratory rate is not a useful triage criterion",
+        "D. That this child should automatically be triaged as minor"
+      ],
+      "correct": 0,
+      "rationale": "This scenario demonstrates why JumpSTART's pediatric-specific respiratory rate thresholds exist — using adult criteria on children risks misclassification.",
+      "difficulty": "Hard"
+    }
+  ]
+}

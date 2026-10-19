@@ -1,0 +1,68 @@
+{
+  "id": "c11",
+  "title": "Neonatal Care & Resuscitation Basics",
+  "shortTitle": "Neonatal Care",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the normal physiologic transition a newborn undergoes at birth.",
+    "Identify the three initial questions used to assess a newborn's need for resuscitation.",
+    "Describe the initial steps of newborn stabilization in the field.",
+    "Recognize when positive-pressure ventilation is indicated for a newborn.",
+    "Explain why warmth and drying are high-priority interventions for every newborn."
+  ],
+  "summary": [
+    {
+      "title": "Normal Newborn Transition",
+      "content": "At birth, a newborn must transition from placental gas exchange to independent breathing, with fluid clearing from the lungs and a shift in circulation as fetal shunts close. Most newborns make this transition without assistance — vigorous crying, good tone, and pink color within the first minute are the expected pattern. A field delivery requires the provider to assess this transition promptly and be ready to intervene if it does not proceed normally."
+    },
+    {
+      "title": "The Three Initial Questions",
+      "content": "Immediately after delivery, three rapid questions guide the need for resuscitation: Is the newborn term gestation? Does the newborn have good tone? Is the newborn breathing or crying? If the answer to all three is yes, the newborn can stay with the mother for routine care (dry, warm, skin-to-skin). If any answer is no, the newborn is moved to a warmer for the initial steps of stabilization."
+    },
+    {
+      "title": "Initial Steps of Stabilization",
+      "content": "The initial steps are: provide warmth, position the airway (sniffing position), clear secretions only if needed (suction is not routine), dry the newborn thoroughly, and stimulate (rubbing the back, flicking the soles of the feet). These steps take about 30 seconds, after which breathing and heart rate are reassessed to determine the next step. Keeping the newborn warm is a high priority throughout — a wet, uncovered newborn loses heat extremely rapidly, and hypothermia worsens outcomes."
+    },
+    {
+      "title": "When Positive-Pressure Ventilation Is Indicated",
+      "content": "If, after the initial steps, the newborn is apneic, gasping, or has a heart rate below 100 beats per minute, positive-pressure ventilation (PPV) with a bag-mask device is indicated — this is the single most important intervention in newborn resuscitation. Chest compressions are added only if the heart rate remains below 60 beats per minute despite 30 seconds of effective PPV; this progression (ventilation first, compressions only if ventilation alone is insufficient) differs from the compressions-first emphasis common in adult and older-child cardiac arrest and reflects that most newborn compromise originates from inadequate ventilation, not a primary cardiac problem."
+    },
+    {
+      "title": "Field Priorities and Scope",
+      "content": "This chapter covers field recognition and the initial steps of newborn stabilization. Detailed neonatal resuscitation algorithms (including medication dosing, umbilical line considerations, and advanced airway specifics) are beyond this chapter's scope; providers should follow their local neonatal resuscitation protocol and refer to the PALS reviewer for related pediatric-arrest-adjacent concepts where applicable, while recognizing that dedicated neonatal resuscitation training (e.g., NRP) is the authoritative source for this specific skill set."
+    }
+  ],
+  "clinicalPearls": [
+    "Three initial questions: term gestation? good tone? breathing/crying? All yes = routine care; any no = move to warmer for initial steps.",
+    "Warmth is a top priority for every newborn — a wet, uncovered newborn loses heat extremely rapidly.",
+    "Positive-pressure ventilation is the single most important intervention in newborn resuscitation — most newborn compromise is a ventilation problem, not a primary cardiac one.",
+    "Chest compressions are added only if the heart rate stays below 60 bpm despite 30 seconds of effective PPV."
+  ],
+  "redFlags": [
+    "A newborn who is not vigorous, not breathing/crying well, or has poor tone at birth.",
+    "Heart rate below 100 bpm after the initial steps of stabilization.",
+    "A wet, uncovered newborn — heat loss risk requires immediate attention."
+  ],
+  "commonMistakes": [
+    "Routine deep suctioning of every newborn regardless of need.",
+    "Delaying positive-pressure ventilation while focusing on other interventions first.",
+    "Starting chest compressions before ensuring ventilation is effective."
+  ],
+  "memoryAids": [
+    "Term? Tone? Breathing/crying? — the three questions.",
+    "Warm, position, clear (if needed), dry, stimulate — the initial steps.",
+    "Ventilation first, compressions only if HR stays under 60 despite good PPV.",
+    "Newborn problems are usually breathing problems, not heart problems."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Newborn Resuscitation Initial Steps",
+      "content": "Delivery occurs\n  → Ask: Term gestation? Good tone? Breathing/crying?\n     All yes → Routine care: dry, warm, skin-to-skin with mother\n     Any no → Move to warmer, begin initial steps (warmth, position airway, clear secretions if needed, dry, stimulate) — about 30 seconds\n  → Reassess breathing and heart rate:\n     Breathing well, HR ≥100 → Routine care, monitor\n     Apneic/gasping OR HR <100 → Begin positive-pressure ventilation (PPV)\n  → Reassess after 30 seconds of effective PPV:\n     HR ≥60 → Continue PPV, reassess frequently\n     HR <60 → Begin chest compressions coordinated with PPV\n  → For detailed neonatal resuscitation algorithm/medication depth: follow local neonatal resuscitation protocol"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Neonatal Care",
+    "American Academy of Pediatrics Neonatal Resuscitation Program (NRP) — authoritative source for detailed neonatal resuscitation depth"
+  ]
+}

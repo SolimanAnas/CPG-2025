@@ -1,0 +1,25 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "DSM-5-TR Personality Disorder Clusters",
+      "headers": ["Cluster", "Description", "Disorders Included"],
+      "rows": [
+        ["Cluster A", "Odd/eccentric", "Paranoid, schizoid, schizotypal"],
+        ["Cluster B", "Dramatic/emotional/erratic", "Antisocial, borderline, histrionic, narcissistic"],
+        ["Cluster C", "Anxious/fearful", "Avoidant, dependent, obsessive-compulsive"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "Substance Intoxication Patterns — Field Recognition",
+      "headers": ["Class", "Classic Findings", "Field Priority"],
+      "rows": [
+        ["Opioids", "Respiratory depression, pinpoint pupils, altered mental status", "Airway/ventilation support (naloxone per protocol)"],
+        ["Stimulants", "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils", "Monitor for cardiac risk, calm approach"],
+        ["Alcohol/sedative withdrawal", "Tremor, anxiety progressing to seizures/DTs (48-96+ hrs)", "Supportive care, monitor for DTs, transport"]
+      ]
+    }
+  ]
+}

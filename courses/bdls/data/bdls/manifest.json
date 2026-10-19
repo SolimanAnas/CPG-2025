@@ -1,0 +1,30 @@
+{
+  "id": "bdls",
+  "title": "BDLS — Basic Disaster Life Support",
+  "subtitle": "The Ultimate Course Reviewer",
+  "version": "1.0.0",
+  "edition": "Based on the NDLSF BDLS v4.0 curriculum",
+  "description": "A comprehensive, self-contained study reviewer for Basic Disaster Life Support. Each chapter includes a concise summary, clinical pearls, red flags, common mistakes, memory aids, decision trees, high-yield flashcards, course-style quiz questions, and realistic disaster scenarios. Built around the PRE-DISASTER and DISASTER paradigms, SALT mass-casualty triage, and the all-hazards approach for EMS providers, nurses, physicians, and public-health professionals.",
+  "icon": "tornado",
+  "color": "#c8102e",
+  "accentColor": "#1f6feb",
+  "estimatedHours": 10,
+  "difficulty": "Beginner to Intermediate",
+  "certification": "NDLSF BDLS",
+  "examLink": "https://www.ndlsf.org/bdls",
+  "audience": ["EMT", "AEMT", "Paramedic", "Nurse", "Physician", "Public Health Professional", "Hospital Staff"],
+  "prerequisites": ["None — BDLS is an awareness-level course; clinical background helpful"],
+  "contentTypes": ["summary", "flashcards", "quizzes", "scenarios", "algorithms", "tables"],
+  "chapters": [
+    { "id": "c01", "number": 1, "title": "Disaster Medicine Foundations & the PRE-DISASTER Paradigm", "section": "Foundations", "difficulty": "Beginner" },
+    { "id": "c02", "number": 2, "title": "The DISASTER Paradigm", "section": "Foundations", "difficulty": "Beginner" },
+    { "id": "c03", "number": 3, "title": "Incident Command & Emergency Management (ICS/NIMS)", "section": "Foundations", "difficulty": "Intermediate" },
+    { "id": "c04", "number": 4, "title": "Mass-Casualty Triage: SALT", "section": "Response Core", "difficulty": "Intermediate" },
+    { "id": "c05", "number": 5, "title": "Natural Disasters", "section": "All-Hazards", "difficulty": "Beginner" },
+    { "id": "c06", "number": 6, "title": "Traumatic & Explosive Events", "section": "All-Hazards", "difficulty": "Intermediate" },
+    { "id": "c07", "number": 7, "title": "Chemical Events & Decontamination", "section": "All-Hazards", "difficulty": "Intermediate" },
+    { "id": "c08", "number": 8, "title": "Biological Events & Pandemics", "section": "All-Hazards", "difficulty": "Intermediate" },
+    { "id": "c09", "number": 9, "title": "Nuclear & Radiological Events", "section": "All-Hazards", "difficulty": "Intermediate" },
+    { "id": "c10", "number": 10, "title": "Surge Capacity, Psychosocial Care & Vulnerable Populations", "section": "Response Core", "difficulty": "Intermediate" }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "c05",
+  "title": "Obstetric Medical Emergencies — Preeclampsia & Eclampsia",
+  "shortTitle": "Preeclampsia & Eclampsia",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define preeclampsia and identify its core diagnostic features.",
+    "Define eclampsia and describe how it differs from preeclampsia.",
+    "Recognize field-relevant warning signs of worsening preeclampsia.",
+    "Describe field management priorities for a pregnant patient with suspected preeclampsia or an active eclamptic seizure.",
+    "Identify positioning and general supportive care considerations specific to pregnancy."
+  ],
+  "summary": [
+    {
+      "title": "Preeclampsia — Hypertension Plus Proteinuria in Pregnancy",
+      "content": "Preeclampsia is a pregnancy-specific condition defined by new-onset hypertension (typically after 20 weeks of gestation) plus proteinuria, or hypertension plus evidence of other organ dysfunction (e.g., liver involvement, low platelets, kidney impairment, pulmonary edema, or new headache/visual disturbance) even without proteinuria. It is a systemic condition, not simply 'high blood pressure in pregnancy' — the field-relevant point is that it reflects a broader process that can progress toward severe complications, including eclampsia."
+    },
+    {
+      "title": "Eclampsia — Preeclampsia Plus Seizures or Coma",
+      "content": "Eclampsia is defined as preeclampsia with the addition of new seizures or coma that cannot be attributed to another cause. It represents a severe progression of the same underlying process and is a true obstetric emergency. Eclamptic seizures are generally managed like any other seizure in terms of airway protection and injury prevention, but with pregnancy-specific considerations for positioning and the recognition that magnesium sulfate (not typically a benzodiazepine alone) is the definitive treatment used in the hospital/ALS setting for eclamptic seizures, per local protocol."
+    },
+    {
+      "title": "Warning Signs of Worsening Preeclampsia",
+      "content": "Field-relevant warning signs that preeclampsia may be worsening toward severe disease or eclampsia include: severe or persistent headache, visual disturbances (blurred vision, seeing spots, temporary vision loss), right upper quadrant or epigastric pain (suggesting liver involvement), sudden significant swelling (especially of the face and hands), and markedly elevated blood pressure. Any of these in a pregnant patient (typically past 20 weeks) should prompt treating the situation as a potential obstetric emergency rather than a routine complaint."
+    },
+    {
+      "title": "Field Management — Preeclampsia",
+      "content": "For a pregnant patient with suspected preeclampsia (hypertension with any of the warning signs above): position the patient in a left lateral tilt or with manual uterine displacement if late in pregnancy (to avoid aortocaval compression from the gravid uterus reducing venous return), minimize stimulation (bright lights, loud noise) since these can precipitate seizure in severe preeclampsia, monitor blood pressure closely, and transport promptly to an appropriate facility with obstetric capability."
+    },
+    {
+      "title": "Field Management — Eclamptic Seizure",
+      "content": "For an active eclamptic seizure: protect the airway and the patient from injury (standard seizure precautions), position in left lateral tilt if feasible once the seizure allows, minimize stimulation, and transport rapidly — magnesium sulfate administration for eclampsia follows local ALS protocol. After the seizure, continue to monitor for a repeat seizure and for signs of ongoing severe preeclampsia, and maintain left lateral positioning during transport when possible."
+    }
+  ],
+  "clinicalPearls": [
+    "Preeclampsia = hypertension + proteinuria (or hypertension + other organ dysfunction) after 20 weeks — a systemic condition, not just high blood pressure.",
+    "Eclampsia = preeclampsia + new seizures or coma not attributable to another cause.",
+    "Severe headache, visual changes, and right upper quadrant/epigastric pain in a pregnant patient are obstetric red flags, not routine complaints.",
+    "Left lateral positioning helps prevent aortocaval compression in a pregnant patient late in pregnancy."
+  ],
+  "redFlags": [
+    "New severe headache or visual disturbance in a pregnant patient past 20 weeks.",
+    "Right upper quadrant or epigastric pain in a pregnant patient with hypertension.",
+    "Any new seizure activity in a pregnant or recently pregnant patient — treat as possible eclampsia until proven otherwise."
+  ],
+  "commonMistakes": [
+    "Treating a pregnant patient's headache or visual complaint as routine without considering preeclampsia.",
+    "Transporting a late-pregnancy patient supine without left lateral tilt/uterine displacement.",
+    "Managing an eclamptic seizure exactly like a standard seizure without positioning/stimulation considerations specific to pregnancy."
+  ],
+  "memoryAids": [
+    "Preeclampsia: pressure + protein (or pressure + organ trouble).",
+    "Eclampsia: preeclampsia plus a seizure.",
+    "Headache, vision changes, RUQ pain in pregnancy = red flags, not routine.",
+    "Tilt left to protect the vena cava."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Preeclampsia/Eclampsia Field Approach",
+      "content": "Pregnant patient (typically >20 weeks) with hypertension and/or seizure\n  → Hypertension + proteinuria (or other organ dysfunction: headache, visual changes, RUQ/epigastric pain, edema) → suspect preeclampsia → left lateral positioning, minimize stimulation, monitor BP closely, transport to obstetric-capable facility\n  → New seizure or coma in a patient with preeclampsia (or unexplained pregnancy-associated seizure) → suspect eclampsia → protect airway/injury per standard seizure precautions, left lateral positioning once feasible, minimize stimulation, rapid transport (magnesium sulfate per local ALS protocol)\n  → Continue monitoring for repeat seizure and worsening signs during transport"
+    }
+  ],
+  "references": [
+    "Standard obstetric emergency teaching on preeclampsia/eclampsia definitions and field management (hypertensive disorders of pregnancy)"
+  ]
+}

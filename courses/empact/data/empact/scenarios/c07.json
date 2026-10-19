@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "The Fruity Breath",
+      "presentation": "A 17-year-old boy has felt increasingly unwell over the past day, with excessive thirst, frequent urination, and abdominal pain. His breathing is deep, rapid, and labored, and you notice a fruity odor on his breath.",
+      "vitals": { "hr": "118 bpm", "rr": "28 bpm, deep and labored (Kussmaul)", "glucose": "512 mg/dL", "loc": "Alert but lethargic" },
+      "question": "What is the most likely diagnosis?",
+      "options": [
+        "A: HHNS, since his glucose is very high.",
+        "B: Diabetic ketoacidosis (DKA) — Kussmaul respirations, fruity breath, abdominal pain, and 1-day onset are classic, possibly a first presentation of Type 1 diabetes.",
+        "C: Simple hypoglycemia.",
+        "D: A respiratory infection unrelated to glucose."
+      ],
+      "correct": 1,
+      "explanation": "Kussmaul respirations (deep, rapid, labored breathing) occur in DKA, not HHNS or hypoglycemia. Combined with the fruity (ketotic) breath odor, abdominal pain, and roughly one-day onset, this presentation is classic DKA — possibly the first sign of previously undiagnosed Type 1 diabetes in this teenager.",
+      "clinicalPearl": "Kussmaul breathing plus fruity breath is DKA's signature — HHNS doesn't breathe like this."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Days of Confusion in an Elderly Patient",
+      "presentation": "An 82-year-old woman with no known diabetes history has become progressively more confused over three days, with poor oral intake and dry mucous membranes. Her breathing is unremarkable — not deep or labored.",
+      "vitals": { "hr": "104 bpm", "rr": "18 bpm, normal pattern", "glucose": "780 mg/dL", "loc": "Confused, lethargic", "skin": "Dry, poor turgor" },
+      "question": "What is the most likely diagnosis?",
+      "options": [
+        "A: DKA, given the extremely high glucose.",
+        "B: HHNS — extreme hyperglycemia and profound dehydration with an insidious multi-day onset in an older adult, without Kussmaul respirations, suggests undiagnosed Type 2 diabetes.",
+        "C: Simple hypoglycemia.",
+        "D: A primary stroke unrelated to glucose."
+      ],
+      "correct": 1,
+      "explanation": "The absence of Kussmaul respirations, the insidious multi-day onset, profound dehydration, and extreme hyperglycemia in an elderly patient point to HHNS rather than DKA. HHNS is classically associated with undiagnosed Type 2 diabetes and can produce severe altered mental status from dehydration and hyperosmolarity alone.",
+      "clinicalPearl": "Extreme glucose plus days of decline plus normal breathing, in an older adult — think HHNS, not DKA."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Sudden Weakness Reversed",
+      "presentation": "A 60-year-old insulin-dependent diabetic is found with left-sided facial droop and slurred speech that began 15 minutes ago per his wife. His glucose reads 32 mg/dL. After receiving glucose, his facial droop and speech fully normalize within 10 minutes.",
+      "vitals": { "hr": "96 bpm", "glucose (initial)": "32 mg/dL", "loc (initial)": "Altered, dysarthric" },
+      "question": "What does the full resolution after glucose administration tell you?",
+      "options": [
+        "A: This confirms a true ischemic stroke.",
+        "B: This confirms the presentation was a hypoglycemic stroke mimic, not a true stroke, since true strokes do not resolve with glucose.",
+        "C: The glucose reading was likely inaccurate.",
+        "D: No further monitoring is needed now that he has improved."
+      ],
+      "correct": 1,
+      "explanation": "Diabetic emergencies can present with stroke-like symptoms. The rapid, complete resolution of his facial droop and slurred speech after glucose administration confirms this was a hypoglycemic mimic — a true stroke would not respond this way. Continued monitoring is still warranted given the rapid swings in glucose.",
+      "clinicalPearl": "If glucose fixes the 'stroke' in minutes, it wasn't a stroke — it was hypoglycemia wearing a stroke's mask."
+    }
+  ]
+}

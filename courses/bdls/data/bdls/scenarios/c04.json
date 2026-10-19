@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "Thirty Down at the Stadium",
+      "presentation": "A structural collapse at a stadium exit leaves roughly 30 casualties. You are the designated triage officer. Some victims are screaming, several lie motionless, and dozens of others mill around dazed.",
+      "vitals": { "casualties": "~30", "your role": "Triage officer", "resources": "First units arriving" },
+      "question": "What is your first triage action?",
+      "options": [
+        "A: Begin detailed head-to-toe exams on the nearest patient.",
+        "B: Global sort by voice: ask those who can to walk to a designated area, then ask the rest to wave — assessing the still and obviously bleeding first.",
+        "C: Start CPR on the first pulseless casualty.",
+        "D: Transport the loudest patient first."
+      ],
+      "correct": 1,
+      "explanation": "SALT starts with global sorting: walkers are prioritized last, wavers second, and the still or obviously hemorrhaging first. This sorts 30 casualties in seconds and directs individual assessment where it matters most.",
+      "clinicalPearl": "Let your voice triage the crowd before your hands triage a patient."
+    },
+    {
+      "id": "c04_s02",
+      "title": "The Apneic Adult and the Apneic Child",
+      "presentation": "During your assessment pass you find two apneic casualties near each other: a middle-aged man and a 6-year-old girl. You open each airway with positioning. The man remains apneic. After the girl's airway is opened you consider further action.",
+      "vitals": { "man": "Apneic after airway opening", "child": "Apneic, airway just opened", "scene": "Active MCI, resources scarce" },
+      "question": "Per SALT, what is correct?",
+      "options": [
+        "A: Start CPR on both.",
+        "B: The man is Dead (black); for the child, consider two rescue breaths — if breathing resumes she is triaged as living (likely Immediate); if not, she is Dead.",
+        "C: Both are Expectant.",
+        "D: Tag both Immediate and move on."
+      ],
+      "correct": 1,
+      "explanation": "In mass-casualty triage, an apneic adult after airway opening is Dead — CPR would consume many rescuers for one arrest. Children get consideration of two rescue breaths because pediatric arrest is typically hypoxic and may reverse with ventilation alone.",
+      "clinicalPearl": "SALT's only 'CPR' is two breaths for a child — the highest-yield seconds in pediatric triage."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Gray, Not Black",
+      "presentation": "A casualty has an open skull injury with exposed brain tissue, agonal-pattern breathing, and no radial pulse. Your only transport is 40 minutes out, and three Immediate patients await treatment. Later, two helicopters and a surgical team arrive.",
+      "vitals": { "initial resources": "Minimal", "later resources": "2 helicopters + surgical team", "patient": "Breathing, catastrophic head injury" },
+      "question": "How is this casualty triaged initially, and what happens when resources improve?",
+      "options": [
+        "A: Dead initially and finally.",
+        "B: Expectant (gray) initially — comfort care, not abandonment; on resource arrival, re-triage and potentially upgrade to Immediate.",
+        "C: Immediate initially, Expectant later.",
+        "D: Minimal — he is breathing."
+      ],
+      "correct": 1,
+      "explanation": "Survival is unlikely with the resources initially available, so the casualty is Expectant with comfort care. Expectant is resource-relative: when helicopters and a surgical team arrive, re-triage may upgrade the patient to Immediate.",
+      "clinicalPearl": "Expectant is a statement about your resources, not a verdict on the patient — re-triage when the math changes."
+    }
+  ]
+}

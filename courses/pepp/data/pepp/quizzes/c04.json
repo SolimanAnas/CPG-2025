@@ -1,0 +1,177 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "What does the SAMPLE history mnemonic stand for?",
+      "options": [
+        "A. Signs/Symptoms, Allergies, Medications, Past history, Last intake, Events",
+        "B. Scene, Assessment, Monitoring, Priority, Location, Evaluation",
+        "C. Safety, Airway, Motion, Perfusion, Life threats, Exposure",
+        "D. Support, Attitude, Medication, Prognosis, Location, Escalation"
+      ],
+      "correct": 0,
+      "rationale": "SAMPLE stands for Signs/Symptoms, Allergies, Medications, Past medical history, Last oral intake, and Events leading up to the incident.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "What pediatric-specific elements are added to the standard SAMPLE history?",
+      "options": [
+        "A. Employment history",
+        "B. Birth history/developmental milestones, immunization status, and growth/weight trends",
+        "C. Credit history",
+        "D. Nothing is added for children"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric SAMPLE histories add emphasis on birth/developmental history for infants, immunization status, and growth/weight trends relevant to medication dosing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q03",
+      "question": "Who should be asked directly about their symptoms whenever possible?",
+      "options": [
+        "A. Only caregivers, never the child",
+        "B. School-age children and adolescents, with caregiver accounts supplementing rather than replacing their report",
+        "C. Only infants",
+        "D. No one should be asked directly; observation alone suffices"
+      ],
+      "correct": 1,
+      "rationale": "Older children and adolescents can usually provide reliable direct history, and their own report should be sought and supplemented (not replaced) by caregiver information.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q04",
+      "question": "Which exam order is preferred for a frightened toddler?",
+      "options": ["A. Head-to-toe", "B. Toe-to-head", "C. Random order", "D. Only auscultation, no other exam"],
+      "correct": 1,
+      "rationale": "Starting with less threatening body areas (toe-to-head) improves cooperation in young, frightened children compared to the standard head-to-toe order.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q05",
+      "question": "Which exam order is typically appropriate for a cooperative school-age child or adolescent?",
+      "options": ["A. Toe-to-head only", "B. Standard head-to-toe sequence", "C. No physical exam is needed", "D. Only exam areas the child requests"],
+      "correct": 1,
+      "rationale": "Older, more cooperative children can typically tolerate the standard head-to-toe exam sequence used in adult care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q06",
+      "question": "What is family-centered care?",
+      "options": [
+        "A. Excluding caregivers from all pediatric encounters",
+        "B. Treating the caregiver as a partner in the child's care, including presence during many procedures",
+        "C. Allowing caregivers to make all treatment decisions without provider input",
+        "D. A billing category unrelated to clinical practice"
+      ],
+      "correct": 1,
+      "rationale": "Family-centered care partners with caregivers rather than excluding them, recognizing their presence typically benefits the child without meaningfully slowing care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q07",
+      "question": "Does allowing a caregiver to remain present during care typically slow things down?",
+      "options": [
+        "A. Yes, significantly",
+        "B. No — it usually reduces distress and improves cooperation without meaningfully slowing care",
+        "C. Only for infants",
+        "D. Only during transport, never during assessment"
+      ],
+      "correct": 1,
+      "rationale": "Family-centered care research and practice support that caregiver presence generally improves the encounter without materially delaying care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q08",
+      "question": "A family does not speak English. What is the correct approach to communication?",
+      "options": [
+        "A. Have the child interpret for their caregiver",
+        "B. Use professional interpretation services",
+        "C. Speak louder in English",
+        "D. Skip history-taking entirely"
+      ],
+      "correct": 1,
+      "rationale": "Relying on a child to interpret medical information places an inappropriate burden on them and risks inaccurate communication; professional interpretation services are the correct approach.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q09",
+      "question": "How should a provider approach a child with autism spectrum differences?",
+      "options": [
+        "A. Use the identical approach for every patient regardless of the caregiver's input",
+        "B. Take cues from the caregiver about the child's usual communication style, minimize sensory overload, and allow extra time",
+        "C. Speak only to the caregiver and ignore the child entirely",
+        "D. Rush the exam to minimize contact time"
+      ],
+      "correct": 1,
+      "rationale": "Individualized communication guided by the caregiver, reduced sensory overload, and allowing extra time improve the encounter for children with developmental differences.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "What is the difference between the focused exam and the rapid exam in secondary assessment?",
+      "options": [
+        "A. They are identical",
+        "B. The focused exam targets the chief complaint for stable/low-priority patients; the rapid exam is more limited, for high-priority patients often performed en route",
+        "C. The rapid exam is only for infants",
+        "D. The focused exam is only used in the hospital"
+      ],
+      "correct": 1,
+      "rationale": "The secondary assessment adapts to patient priority: a focused exam for stable patients on scene, versus a rapid, more limited exam for high-priority patients, often continued during transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q11",
+      "question": "How should a provider communicate with a hearing-impaired caregiver?",
+      "options": [
+        "A. Speak as loudly as possible from across the room",
+        "B. Face them directly, speak clearly, and use written notes or interpreter services as needed",
+        "C. Avoid direct communication entirely",
+        "D. Only communicate through the child"
+      ],
+      "correct": 1,
+      "rationale": "Facing the person directly and speaking clearly (not necessarily loudly), supplemented by written notes or interpreter services, is the appropriate communication approach.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q12",
+      "question": "What four steps make up PEPP's complete pediatric assessment sequence?",
+      "options": [
+        "A. History, exam, transport, documentation",
+        "B. PAT, primary assessment, history, secondary assessment",
+        "C. Scene safety, vitals, treatment, discharge",
+        "D. Appearance, breathing, circulation, disability"
+      ],
+      "correct": 1,
+      "rationale": "The full PEPP sequence is: Pediatric Assessment Triangle, primary assessment (ABCDE), history-taking, and secondary assessment — each building on the last.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q13",
+      "question": "Why is growth/weight trend information part of a thorough pediatric SAMPLE history?",
+      "options": [
+        "A. It is irrelevant to prehospital care",
+        "B. It informs weight-based medication dosing considerations",
+        "C. It is only used for insurance billing",
+        "D. It replaces the need for a chief complaint"
+      ],
+      "correct": 1,
+      "rationale": "Weight/growth information is directly relevant to weight-based dosing considerations that may apply during subsequent care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q14",
+      "question": "Why is adapting communication for special needs considered a clinical skill rather than an optional courtesy?",
+      "options": [
+        "A. It has no effect on care quality",
+        "B. It materially affects the quality and accuracy of the history and exam obtained",
+        "C. It is only relevant for documentation purposes",
+        "D. It is required only by hospital policy, not clinical necessity"
+      ],
+      "correct": 1,
+      "rationale": "Communication adaptation directly impacts how much accurate, useful clinical information a provider can gather — making it a core clinical skill, not a courtesy.",
+      "difficulty": "Hard"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "Seizure and Altered Mental Status Field Approach",
+      "description": "Sequence for assessing and managing a seizing or newly altered adult patient.",
+      "steps": [
+        "If actively seizing: protect the airway with positioning and suction as needed (never place anything in the mouth), protect the patient from injury, and time the seizure.",
+        "Check blood glucose as soon as feasible; treat hypoglycemia per protocol if present.",
+        "If the seizure resolves in under 5 minutes: provide postictal supportive care, monitor for gradual improvement, and transport.",
+        "If seizure activity reaches 5 minutes or repeats without return to baseline: treat as status epilepticus — escalate per local ALS protocol (airway/oxygen support, benzodiazepine per protocol) and transport rapidly.",
+        "If altered but not seizing: check glucose immediately, then work through AEIOU-TIPS for reversible causes.",
+        "Gather a focused history from bystanders/family: medications, known seizure disorder, substance use, recent illness or head injury.",
+        "Reassess mental status trend continuously; a lack of gradual improvement warrants continued investigation and prompt transport."
+      ]
+    }
+  ]
+}

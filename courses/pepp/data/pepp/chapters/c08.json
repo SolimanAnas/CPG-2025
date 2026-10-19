@@ -1,0 +1,68 @@
+{
+  "id": "c08",
+  "title": "Neurologic Emergencies: Altered Mental Status & Seizures",
+  "shortTitle": "Neurologic Emergencies",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Apply the AVPU scale and PAT Appearance findings to recognize altered mental status in children.",
+    "List the common reversible causes of pediatric altered mental status using the AEIOU-TIPS framework.",
+    "Describe field management of active pediatric seizures, including status epilepticus.",
+    "Recognize febrile seizures as generally benign and distinguish them from more concerning seizure presentations.",
+    "Identify field priorities for a child with suspected increased intracranial pressure."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing Altered Mental Status",
+      "content": "The PAT's Appearance leg is often the first clue to altered mental status, before a formal AVPU (Alert, Voice, Pain, Unresponsive) assessment is completed. Any child who is not appropriately alert and interactive for their developmental stage — or who has an abnormal TICLS finding such as poor eye contact or an abnormal cry — should prompt a full neurologic assessment. Serial reassessment matters: a trend toward decreasing responsiveness is more concerning than a single snapshot value."
+    },
+    {
+      "title": "Reversible Causes: AEIOU-TIPS",
+      "content": "A useful framework for reversible causes of pediatric altered mental status is AEIOU-TIPS: Alcohol/substance use, Epilepsy/seizure (postictal state), Infection, Overdose/opioids, Uremia/metabolic, Trauma/temperature, Insulin/hypoglycemia, Psychiatric, Shock/stroke. Hypoglycemia deserves particular emphasis in children because it is common, rapidly reversible, and easily checked in the field with a glucose meter — every altered child should have a glucose check when available."
+    },
+    {
+      "title": "Seizures: Field Management",
+      "content": "Most pediatric seizures are brief and self-limited. Field priorities during an active seizure are protecting the airway (positioning, suction as needed — do not put anything in the mouth), protecting the child from injury, checking glucose, and timing the seizure. A seizure lasting more than 5 minutes, or repeated seizures without return to baseline between them, meets the definition of status epilepticus and is a time-critical emergency requiring rapid escalation of care and transport; benzodiazepine dosing for status epilepticus is detailed in the PALS reviewer."
+    },
+    {
+      "title": "Febrile Seizures",
+      "content": "Febrile seizures are the most common pediatric seizure type, typically occurring in children 6 months to 5 years with a rapidly rising fever. A simple febrile seizure is generalized, lasts less than 15 minutes, and does not recur within 24 hours — these are generally benign, and the child typically returns to baseline mental status afterward. A complex febrile seizure (focal features, lasting more than 15 minutes, or recurring within 24 hours) or any seizure in a child who does not return to baseline warrants a higher level of concern and should not be assumed to be a simple febrile seizure."
+    },
+    {
+      "title": "Suspected Increased Intracranial Pressure",
+      "content": "Signs suggesting increased intracranial pressure include a bulging fontanelle (infants), a decreasing level of consciousness, an irregular respiratory pattern, and — as a late and ominous finding — the Cushing triad (hypertension, bradycardia, irregular respirations). Field priorities are avoiding hypoxia and hypotension (both worsen secondary brain injury), positioning to avoid jugular venous compression, and rapid transport; specific hyperventilation/hyperosmolar therapy parameters are beyond this chapter's field-recognition scope."
+    }
+  ],
+  "clinicalPearls": [
+    "Every altered child gets a glucose check when available — hypoglycemia is common and rapidly reversible.",
+    "AEIOU-TIPS is a useful recall framework for reversible causes of altered mental status.",
+    "A seizure lasting more than 5 minutes, or repeated seizures without return to baseline, is status epilepticus — a time-critical emergency.",
+    "Simple febrile seizures are generalized, under 15 minutes, don't recur in 24 hours, and the child returns to baseline — anything more should raise concern."
+  ],
+  "redFlags": [
+    "Any altered child without a glucose check performed when a meter is available.",
+    "Seizure activity lasting more than 5 minutes or recurring without return to baseline (status epilepticus).",
+    "Bulging fontanelle, irregular respirations, or the Cushing triad (hypertension, bradycardia, irregular respirations) suggesting increased intracranial pressure."
+  ],
+  "commonMistakes": [
+    "Assuming all pediatric seizures with fever are simple febrile seizures without checking duration/recurrence/focality.",
+    "Delaying a glucose check in an altered child when a meter is available.",
+    "Placing an object in the mouth of a seizing child (unnecessary and can cause injury)."
+  ],
+  "memoryAids": [
+    "AEIOU-TIPS: reversible causes of altered mental status.",
+    "5 minutes = status epilepticus — the clock matters.",
+    "Simple febrile seizure: generalized, under 15 minutes, no recurrence in 24 hours, back to baseline after.",
+    "Cushing triad = late and bad: high BP, low HR, irregular breathing."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Altered Mental Status and Seizure Field Approach",
+      "content": "Altered mental status noted (PAT Appearance abnormal / AVPU below Alert)\n  → Check glucose when available → treat hypoglycemia per protocol if present\n  → Consider AEIOU-TIPS causes: Alcohol/substance, Epilepsy/postictal, Infection, Overdose, Uremia/metabolic, Trauma/temperature, Insulin/hypoglycemia, Psychiatric, Shock/stroke\n  → If actively seizing:\n     Protect airway/position, protect from injury, time the seizure, check glucose\n     <5 minutes and resolves, returns to baseline, fits simple febrile seizure pattern → supportive care, transport for evaluation\n     ≥5 minutes OR repeated seizures without return to baseline → Status epilepticus → time-critical emergency, escalate immediately (see PALS reviewer for benzodiazepine dosing)\n  → If signs of increased intracranial pressure (bulging fontanelle, irregular respirations, Cushing triad) → avoid hypoxia/hypotension, position to avoid jugular compression, rapid transport"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Neurologic Emergencies",
+    "courses/pals/data/pals — cross-referenced for status epilepticus drug dosing and advanced resuscitation depth"
+  ]
+}

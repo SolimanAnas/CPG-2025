@@ -1,0 +1,33 @@
+{
+  "chapter": "c11",
+  "algorithms": [
+    {
+      "id": "c11_alg01",
+      "title": "Suspected Toxic Exposure Field Approach",
+      "description": "Sequence for assessing and managing a suspected poisoning or overdose.",
+      "steps": [
+        "Ensure scene safety, especially for exposures involving unknown chemicals or gases.",
+        "Support airway, breathing, and circulation as the priority over exact substance identification.",
+        "Identify the substance, amount, and time of exposure when possible; bring containers/pills to the hospital.",
+        "Check blood glucose regardless of a presumed toxic cause.",
+        "Recognize toxidrome patterns (opioid, sympathomimetic, anticholinergic, cholinergic) to guide urgency and specific interventions (e.g., naloxone for opioid toxidrome per protocol).",
+        "Transport promptly with all identified substances/containers accompanying the patient."
+      ]
+    },
+    {
+      "id": "c11_alg02",
+      "title": "Heat and Cold Environmental Emergency Field Approach",
+      "description": "Sequence for assessing and managing heat-related and cold-related environmental emergencies.",
+      "steps": [
+        "Remove the patient from the ongoing environmental extreme.",
+        "Assess mental status and estimate severity along the relevant spectrum (heat cramps → exhaustion → stroke; mild → moderate → severe hypothermia).",
+        "For heat illness: if altered mental status plus significantly elevated core temperature is present, treat as heat stroke — begin aggressive cooling and rapid transport regardless of sweating status.",
+        "For milder heat illness (cramps, exhaustion): rest, cooling, and fluids (oral if tolerated and alert).",
+        "For cold illness: handle the patient gently, especially if severe hypothermia is suspected, given arrhythmia risk with rough movement.",
+        "Apply passive/active external rewarming appropriate to severity.",
+        "For a hypothermic patient in apparent cardiac arrest: provide resuscitation per protocol rather than presuming futility, since hypothermia can mimic death.",
+        "Transport promptly with a lower threshold for more severe classifications on either spectrum."
+      ]
+    }
+  ]
+}

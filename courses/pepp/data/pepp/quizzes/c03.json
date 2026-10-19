@@ -1,0 +1,182 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "What does the pediatric primary assessment sequence ABCDE stand for?",
+      "options": [
+        "A. Appearance, Breathing, Color, Development, Exam",
+        "B. Airway, Breathing, Circulation, Disability, Exposure",
+        "C. Assessment, Baseline, Care, Documentation, Evaluation",
+        "D. Alertness, Body, Chest, Digits, Extremities"
+      ],
+      "correct": 1,
+      "rationale": "The pediatric primary assessment follows the ABCDE sequence: Airway, Breathing, Circulation, Disability, Exposure — the same spine used across PALS and PEPP.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "During the primary assessment, you find an obstructed airway while assessing 'A'. What should you do?",
+      "options": [
+        "A. Note it and continue through B, C, D, E first",
+        "B. Treat the airway obstruction immediately before proceeding",
+        "C. Wait until the secondary assessment to address it",
+        "D. Only address it if breathing is also abnormal"
+      ],
+      "correct": 1,
+      "rationale": "Life threats found at any step of ABCDE are treated immediately, not deferred until the full sequence is complete.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "What is assessed under the 'Disability' step of pediatric ABCDE?",
+      "options": [
+        "A. Skin color only",
+        "B. Rapid neurologic status (e.g., AVPU), pupils, and glucose if altered",
+        "C. Chest wall retractions",
+        "D. External hemorrhage"
+      ],
+      "correct": 1,
+      "rationale": "Disability covers a rapid neurologic check, pupillary assessment, and blood glucose measurement when mental status is altered.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q04",
+      "question": "What is the primary assessment's main deliverable?",
+      "options": [
+        "A. A specific final diagnosis",
+        "B. An overall priority decision (high vs. low acuity)",
+        "C. A completed transport report",
+        "D. A medication administration record"
+      ],
+      "correct": 1,
+      "rationale": "The primary assessment concludes with a priority determination that drives the pace of subsequent care, rather than a definitive diagnosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q05",
+      "question": "How does a high-acuity PAT (e.g., cardiopulmonary failure pattern) change how the primary assessment proceeds?",
+      "options": [
+        "A. It has no effect on the primary assessment",
+        "B. The primary assessment proceeds immediately and rapidly, often with simultaneous interventions",
+        "C. The primary assessment is skipped entirely",
+        "D. Only the Exposure step is performed"
+      ],
+      "correct": 1,
+      "rationale": "A high-acuity PAT sets urgency, prompting rapid primary assessment with interventions occurring simultaneously rather than in strict sequence.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "Which additional considerations are part of pediatric scene size-up beyond standard safety and precautions?",
+      "options": [
+        "A. Only the child's exact age in months",
+        "B. Mechanism/nature of illness, patient count, and environmental clues",
+        "C. Only the caregiver's insurance information",
+        "D. Nothing additional beyond adult scene size-up"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric scene size-up adds attention to mechanism/nature of illness, potential multiple patients, and environmental clues (medications, hazards, caregiver affect).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q07",
+      "question": "A reassuring PAT is obtained. Should the primary assessment still be performed?",
+      "options": [
+        "A. No, it can be skipped",
+        "B. Yes — the PAT sets pace, it does not replace the hands-on ABCDE exam",
+        "C. Only if the caregiver requests it",
+        "D. Only for children under 1 year old"
+      ],
+      "correct": 1,
+      "rationale": "The PAT never substitutes for the primary assessment; a reassuring PAT simply allows the exam to proceed at a calmer pace.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q08",
+      "question": "What is assessed under 'Circulation' in pediatric ABCDE?",
+      "options": [
+        "A. Pupil size only",
+        "B. Pulse rate/quality, skin perfusion, capillary refill, and external bleeding",
+        "C. Respiratory rate",
+        "D. Level of consciousness"
+      ],
+      "correct": 1,
+      "rationale": "Circulation assessment covers pulse characteristics, perfusion indicators like capillary refill and skin, and control of external hemorrhage.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q09",
+      "question": "Where should a provider look for cardiac-arrest-specific ABCDE depth beyond field recognition?",
+      "options": ["A. The PEPP reviewer alone covers this fully", "B. The PALS reviewer", "C. The BDLS reviewer", "D. No resource covers this"],
+      "correct": 1,
+      "rationale": "PEPP frames ABCDE as a field assessment/transport-decision tool; resuscitation-team algorithm depth is intentionally deferred to the PALS reviewer to avoid duplicating or contradicting it.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q10",
+      "question": "What should happen to the priority decision as new findings emerge during the encounter?",
+      "options": [
+        "A. It should never change once set",
+        "B. It should be reassessed and updated as new information becomes available",
+        "C. Priority is only assigned at the very end of the call",
+        "D. Priority does not affect subsequent care"
+      ],
+      "correct": 1,
+      "rationale": "Priority is not a one-time determination; it should be reassessed as the exam, treatment, and reassessment reveal new findings.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "What is assessed under the 'Exposure' step of ABCDE?",
+      "options": [
+        "A. Blood glucose",
+        "B. Undressing as needed to check for injury/rash, then keeping the child warm",
+        "C. Airway patency",
+        "D. Pupil reactivity"
+      ],
+      "correct": 1,
+      "rationale": "Exposure involves assessing the body for injury or rash by undressing as clinically indicated, followed by re-covering the child to prevent heat loss.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q12",
+      "question": "A child has abnormal breath sounds found during the 'B' step. What is the correct action?",
+      "options": [
+        "A. Continue to 'C' and address breathing at the end",
+        "B. Address the breathing problem immediately before continuing",
+        "C. Only address it during the secondary assessment",
+        "D. Ignore it if the PAT appeared reassuring"
+      ],
+      "correct": 1,
+      "rationale": "Any abnormal or life-threatening finding at a given ABCDE step is treated immediately rather than deferred, regardless of the preceding PAT impression.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q13",
+      "question": "Why is patient count an important scene size-up consideration in pediatric calls specifically?",
+      "options": [
+        "A. Children are never involved in multi-victim events",
+        "B. Children are frequently involved in multi-victim events (e.g., car crashes, household incidents)",
+        "C. Only adult patient counts matter for resource allocation",
+        "D. This consideration is unique to adult scenes"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric events often involve multiple patients (e.g., siblings in a car crash), making early patient-count assessment operationally important.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q14",
+      "question": "Which best describes the relationship between the PAT and primary assessment as a two-step process?",
+      "options": [
+        "A. They are identical and redundant",
+        "B. The PAT is hands-off and sets urgency/pace; the primary assessment is the hands-on ABCDE exam that follows and is never skipped",
+        "C. The primary assessment always comes first",
+        "D. Only one of the two is ever performed per patient"
+      ],
+      "correct": 1,
+      "rationale": "The PAT and primary assessment are sequential, complementary steps — the PAT's hands-off impression sets the tone, and the hands-on ABCDE exam always follows.",
+      "difficulty": "Hard"
+    }
+  ]
+}

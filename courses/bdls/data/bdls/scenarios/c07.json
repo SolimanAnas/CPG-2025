@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Collapse at the Station",
+      "presentation": "Dispatch reports multiple people down at a subway platform. Arriving first, you see from the stairwell at least eight casualties — several seizing or twitching, others drooling heavily with constricted pupils. A faint chemical odor drifts up. Commuters are fleeing past you.",
+      "vitals": { "casualties": "8+ visible", "toxidrome": "Miosis, secretions, twitching", "your PPE": "None" },
+      "question": "What is your correct action?",
+      "options": [
+        "A: Go down to the platform and start triage immediately.",
+        "B: Do not enter — stage upwind/uphill, declare a suspected nerve-agent MCI, establish zones, and direct fleeing casualties toward a decon point.",
+        "C: Begin CPR on the nearest casualty carried up by bystanders.",
+        "D: Ventilate the station by propping doors."
+      ],
+      "correct": 1,
+      "explanation": "A cluster of collapsing casualties with cholinergic signs is a chemical scene. Unprotected entry adds you to the casualty count. Stage, declare, zone, and channel ambulatory casualties to decon — protected teams extract the rest.",
+      "clinicalPearl": "The toxidrome you can see from the stairs is the warning to stay on the stairs."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Soaked and Seizing",
+      "presentation": "A protected team brings a farm worker from a pesticide tank rupture to the decon corridor. He is soaked in liquid, seizing intermittently, with massive salivation, pinpoint pupils, and audible bronchorrhea.",
+      "vitals": { "hr": "48 bpm", "rr": "Labored, gurgling", "pupils": "Pinpoint", "skin": "Liquid-soaked" },
+      "question": "What is the correct management sequence?",
+      "options": [
+        "A: Transport immediately to the ED as-is.",
+        "B: Strip clothing and flush with copious water while giving atropine (titrated to dry secretions) plus pralidoxime via auto-injector and a benzodiazepine for seizures.",
+        "C: Give antidotes only — decon can wait until the hospital.",
+        "D: Withhold atropine because his heart rate is low."
+      ],
+      "correct": 1,
+      "explanation": "Liquid organophosphate keeps absorbing through skin, so gross decon (clothes off, copious water) proceeds together with antidotes: atropine titrated until secretions dry (bradycardia is an indication, not a contraindication), pralidoxime to reactivate the enzyme, benzodiazepines for seizures.",
+      "clinicalPearl": "In cholinergic poisoning, atropine's endpoint is dry lungs — and a slow heart is a reason to give it, not to hold it."
+    },
+    {
+      "id": "c07_s03",
+      "title": "The 'Recovered' Chlorine Worker",
+      "presentation": "After a chlorine leak at a pool-supply warehouse, a 35-year-old worker had burning eyes, cough, and throat irritation. After 30 minutes on scene air, he feels 'fine' and wants to go home. Six hours later, similar patients from the same leak begin arriving with severe dyspnea.",
+      "vitals": { "initial": "Irritation only, improving", "6 h later (cohort)": "Dyspnea, crackles, hypoxia" },
+      "question": "What should have been done with the 'recovered' worker, and why?",
+      "options": [
+        "A: Discharge on scene — irritant effects are always immediate and complete.",
+        "B: Observation with return precautions — pulmonary agents like chlorine and especially phosgene can cause delayed pulmonary edema hours after apparent recovery.",
+        "C: Prophylactic antibiotics.",
+        "D: Immediate intubation of all exposed."
+      ],
+      "correct": 1,
+      "explanation": "Choking agents injure the lower airways with a latent period: apparent recovery can precede pulmonary edema by hours. Significant exposures earn observation or, at minimum, explicit return precautions — as the six-hour wave demonstrates.",
+      "clinicalPearl": "With chlorine and phosgene, 'feeling fine' is a phase, not an outcome — respect the latent period."
+    }
+  ]
+}

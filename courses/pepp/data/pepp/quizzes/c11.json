@@ -1,0 +1,177 @@
+{
+  "chapter": "c11",
+  "questions": [
+    {
+      "id": "c11_q01",
+      "question": "What must a newborn transition from and to at birth?",
+      "options": [
+        "A. From placental gas exchange to independent breathing",
+        "B. From independent breathing to placental gas exchange",
+        "C. No transition occurs at birth",
+        "D. From bottle feeding to breastfeeding"
+      ],
+      "correct": 0,
+      "rationale": "At birth, a newborn transitions from placental gas exchange to independent breathing, with lung fluid clearing and circulatory shunt changes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q02",
+      "question": "What are the three initial questions asked immediately after delivery?",
+      "options": [
+        "A. Term gestation? Good tone? Breathing/crying?",
+        "B. Weight? Length? Head circumference?",
+        "C. Apgar score at 1 minute? 5 minutes? 10 minutes?",
+        "D. Male or female? Single or multiple birth? Time of day?"
+      ],
+      "correct": 0,
+      "rationale": "The three rapid initial questions are: term gestation, good tone, and breathing or crying.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q03",
+      "question": "If the answers to all three initial questions are yes, what is the appropriate action?",
+      "options": [
+        "A. Move the newborn to a warmer immediately for stabilization",
+        "B. Begin positive-pressure ventilation as a precaution",
+        "C. The newborn can stay with the mother for routine care (dry, warm, skin-to-skin)",
+        "D. Begin chest compressions"
+      ],
+      "correct": 2,
+      "rationale": "A vigorous, term, breathing/crying newborn can remain with the mother for routine care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q04",
+      "question": "What are the initial steps of newborn stabilization?",
+      "options": [
+        "A. Warmth, position airway, clear secretions if needed, dry, stimulate",
+        "B. Immediate intubation for all newborns",
+        "C. Routine deep suctioning for every newborn",
+        "D. Immediate chest compressions"
+      ],
+      "correct": 0,
+      "rationale": "The initial steps are providing warmth, positioning the airway, clearing secretions only if needed, drying, and stimulating.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q05",
+      "question": "Is routine deep suctioning recommended for every newborn?",
+      "options": ["A. Yes, for all newborns", "B. No — suctioning is performed only if needed", "C. Only for preterm newborns", "D. Only if the mother requests it"],
+      "correct": 1,
+      "rationale": "Clearing secretions is done only if needed, not as a routine step for every newborn.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q06",
+      "question": "Why is keeping a newborn warm such a high priority?",
+      "options": [
+        "A. A wet, uncovered newborn loses heat extremely rapidly, and hypothermia worsens outcomes",
+        "B. Warmth has no effect on newborn outcomes",
+        "C. Only preterm newborns are at risk of heat loss",
+        "D. Warming is only relevant after the first hour of life"
+      ],
+      "correct": 0,
+      "rationale": "Newborns lose heat rapidly when wet and uncovered, and hypothermia is associated with worse outcomes, making warmth a top priority.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q07",
+      "question": "When is positive-pressure ventilation indicated for a newborn?",
+      "options": [
+        "A. Only if the newborn is crying vigorously",
+        "B. If, after initial steps, the newborn is apneic, gasping, or has a heart rate below 100 bpm",
+        "C. For every newborn regardless of condition",
+        "D. Only after chest compressions have been started"
+      ],
+      "correct": 1,
+      "rationale": "PPV is indicated when the newborn remains apneic, gasping, or has a heart rate below 100 bpm after the initial steps.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q08",
+      "question": "What is the single most important intervention in newborn resuscitation?",
+      "options": ["A. Chest compressions", "B. Positive-pressure ventilation", "C. Epinephrine administration", "D. Umbilical line placement"],
+      "correct": 1,
+      "rationale": "PPV is considered the single most important intervention in newborn resuscitation, since most newborn compromise originates from inadequate ventilation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q09",
+      "question": "When are chest compressions added during newborn resuscitation?",
+      "options": [
+        "A. Immediately upon any bradycardia",
+        "B. Only if heart rate remains below 60 bpm despite 30 seconds of effective PPV",
+        "C. Before ventilation is attempted",
+        "D. Compressions are never used in newborns"
+      ],
+      "correct": 1,
+      "rationale": "Chest compressions are added only if the heart rate stays below 60 bpm despite 30 seconds of effective positive-pressure ventilation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q10",
+      "question": "How does the newborn resuscitation sequence differ from adult/older-child cardiac arrest management?",
+      "options": [
+        "A. Ventilation is prioritized first, with compressions added only if ventilation alone is insufficient",
+        "B. Compressions are always started first, identical to adult arrest",
+        "C. There is no difference between the sequences",
+        "D. Defibrillation is the first step in newborn resuscitation"
+      ],
+      "correct": 0,
+      "rationale": "Newborn resuscitation emphasizes ventilation first, reflecting that most newborn compromise is a ventilation problem rather than a primary cardiac one — unlike the compressions-first emphasis in other arrest contexts.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q11",
+      "question": "A newborn is not vigorous, has poor tone, and is not crying at delivery. What is the correct next step?",
+      "options": [
+        "A. Leave the newborn with the mother for routine care",
+        "B. Move the newborn to a warmer to begin the initial steps of stabilization",
+        "C. Begin chest compressions immediately without assessment",
+        "D. Wait 5 minutes before taking any action"
+      ],
+      "correct": 1,
+      "rationale": "Any 'no' answer to the three initial questions (term, tone, breathing/crying) means the newborn should be moved to a warmer for the initial stabilization steps.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q12",
+      "question": "After 30 seconds of effective PPV, the newborn's heart rate is 50 bpm. What is the next step?",
+      "options": [
+        "A. Continue PPV alone without adding compressions",
+        "B. Begin chest compressions coordinated with PPV",
+        "C. Stop all resuscitation efforts",
+        "D. Switch immediately to medication administration without compressions"
+      ],
+      "correct": 1,
+      "rationale": "A heart rate below 60 bpm despite 30 seconds of effective PPV is the threshold for adding chest compressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q13",
+      "question": "Where should providers turn for detailed neonatal resuscitation algorithms, medication dosing, and advanced airway specifics?",
+      "options": [
+        "A. This PEPP chapter covers it fully",
+        "B. Local neonatal resuscitation protocol / the Neonatal Resuscitation Program (NRP)",
+        "C. The BLS reviewer",
+        "D. No resource addresses this"
+      ],
+      "correct": 1,
+      "rationale": "This chapter covers field recognition and initial stabilization; detailed neonatal resuscitation depth is covered by dedicated NRP training and local protocol.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q14",
+      "question": "Why is warmth emphasized even before assessing breathing and heart rate in the initial steps?",
+      "options": [
+        "A. Warmth is not actually part of the initial steps",
+        "B. Heat loss is extremely rapid in newborns and worsens overall resuscitation outcomes, making it a foundational priority alongside assessment",
+        "C. Warmth is only relevant after resuscitation is complete",
+        "D. Newborns cannot lose heat significantly in the first few minutes"
+      ],
+      "correct": 1,
+      "rationale": "Because newborns lose heat extremely rapidly and hypothermia worsens outcomes, warmth is treated as a foundational, high-priority step integrated into the initial stabilization sequence.",
+      "difficulty": "Hard"
+    }
+  ]
+}

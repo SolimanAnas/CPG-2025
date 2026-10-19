@@ -1,0 +1,180 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "Are most adult seizures life-threatening events requiring aggressive intervention?",
+      "options": ["A. Yes, all seizures require immediate medication", "B. No — most are brief, self-limited, and stop on their own", "C. Only seizures in elderly patients are self-limited", "D. Seizures are always a sign of stroke"],
+      "correct": 1,
+      "rationale": "Most adult seizures are brief and self-terminating; field management for these focuses on protection, not stopping an already-resolved seizure.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "Which of the following is a common cause of adult seizures?",
+      "options": ["A. Hypoglycemia", "B. Normal blood pressure", "C. Adequate sleep", "D. Mild dehydration alone"],
+      "correct": 0,
+      "rationale": "Hypoglycemia is a common and important cause of adult seizures, alongside epilepsy, head trauma, intoxication/withdrawal, infection, and stroke.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "What is the postictal state?",
+      "options": [
+        "A. A period of transient confusion/drowsiness following a seizure that typically resolves gradually",
+        "B. The seizure itself",
+        "C. A permanent neurologic deficit",
+        "D. A medication used to stop seizures"
+      ],
+      "correct": 0,
+      "rationale": "The postictal state is a transient period of confusion or drowsiness after a seizure that generally resolves gradually without specific intervention.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q04",
+      "question": "What should worsening postictal confusion (rather than gradual improvement) prompt?",
+      "options": [
+        "A. No action, since postictal confusion is always benign",
+        "B. Reconsideration of other causes: ongoing subclinical seizure, structural injury, or hypoglycemia",
+        "C. Immediate discharge from care",
+        "D. Assumption that the patient is malingering"
+      ],
+      "correct": 1,
+      "rationale": "The postictal state should improve gradually; worsening confusion should prompt investigation of alternative or coexisting causes.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "What defines status epilepticus?",
+      "options": [
+        "A. Any seizure lasting more than 30 seconds",
+        "B. A seizure lasting 5 minutes or longer, or repeated seizures without return to baseline",
+        "C. Only seizures caused by epilepsy",
+        "D. A seizure that occurs during sleep"
+      ],
+      "correct": 1,
+      "rationale": "Status epilepticus is defined as a seizure lasting 5 minutes or more, or repeated seizures without return to baseline between them.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q06",
+      "question": "Why is status epilepticus considered a time-critical emergency?",
+      "options": [
+        "A. It carries risk of ongoing neuronal injury and cardiorespiratory compromise the longer it continues",
+        "B. It has no clinical significance beyond a brief seizure",
+        "C. It only affects patients with a prior seizure history",
+        "D. It resolves faster than a brief seizure"
+      ],
+      "correct": 0,
+      "rationale": "The longer status epilepticus continues, the greater the risk of neuronal injury and cardiorespiratory compromise, making rapid recognition and escalation important.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q07",
+      "question": "What are the correct field priorities for an actively seizing patient?",
+      "options": [
+        "A. Place a bite block in the mouth and restrain the limbs",
+        "B. Protect the airway/position, protect from injury, time the seizure, check glucose",
+        "C. Administer oral medication immediately",
+        "D. Perform chest compressions"
+      ],
+      "correct": 1,
+      "rationale": "Correct seizure management is airway protection/positioning, injury protection, timing the seizure, and checking glucose — never placing objects in the mouth or restraining limbs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q08",
+      "question": "What does the AEIOU-TIPS mnemonic help a provider recall?",
+      "options": [
+        "A. Steps of CPR",
+        "B. Reversible causes of altered mental status",
+        "C. Categories of shock",
+        "D. Stroke scale components"
+      ],
+      "correct": 1,
+      "rationale": "AEIOU-TIPS recalls reversible causes of altered mental status: Alcohol, Epilepsy, Insulin, Overdose, Uremia, Trauma/temperature, Infection, Psychiatric, Stroke/shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q09",
+      "question": "What is the main clinical value of the AEIOU-TIPS framework?",
+      "options": [
+        "A. It replaces the need for any physical exam",
+        "B. It prompts a glucose check and search for a reversible cause before assuming an irreversible explanation",
+        "C. It is used only for pediatric patients",
+        "D. It is a stroke scale"
+      ],
+      "correct": 1,
+      "rationale": "AEIOU-TIPS is valuable primarily because it prompts systematic consideration of reversible causes, starting with glucose, before assuming a fixed or purely psychiatric cause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q10",
+      "question": "What should be checked immediately in a newly altered, non-seizing adult patient?",
+      "options": ["A. Blood glucose", "B. Blood type", "C. Recent dental history", "D. Vaccination status"],
+      "correct": 0,
+      "rationale": "Blood glucose is a fast, safe, high-value check that can immediately explain (and treat) altered mental status.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q11",
+      "question": "Should an object be placed in the mouth of a seizing patient to prevent tongue-biting?",
+      "options": ["A. Yes, always use a bite block", "B. No — never place anything in the mouth during a seizure", "C. Only for pediatric patients", "D. Only if the patient requests it"],
+      "correct": 1,
+      "rationale": "Placing objects in the mouth during a seizure is unnecessary and can cause injury; this is a common and important mistake to avoid.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q12",
+      "question": "A patient seized for 2 minutes and stopped before EMS arrival, now in a gradually clearing postictal state. What is the appropriate management?",
+      "options": [
+        "A. Administer a benzodiazepine to stop the ongoing seizure",
+        "B. Protect and monitor, check glucose, and transport — no seizure-stopping medication is needed since the seizure has already resolved",
+        "C. Perform immediate advanced airway placement",
+        "D. Restrain the patient to prevent further seizure activity"
+      ],
+      "correct": 1,
+      "rationale": "A brief seizure that has already terminated does not require abortive medication; management is supportive with glucose check and monitoring for gradual improvement.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q13",
+      "question": "A patient has been continuously seizing for 7 minutes. What should this be treated as?",
+      "options": [
+        "A. A normal, self-limited seizure requiring no escalation",
+        "B. Status epilepticus — a time-critical emergency requiring escalation per local ALS protocol",
+        "C. A postictal state",
+        "D. A psychiatric emergency"
+      ],
+      "correct": 1,
+      "rationale": "Seizure activity exceeding the 5-minute threshold is status epilepticus, requiring escalation and rapid transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q14",
+      "question": "A patient remains altered and confused 45 minutes after an observed seizure, with no improvement. What should this prompt?",
+      "options": [
+        "A. Assumption this is normal, prolonged postictal state requiring no further evaluation",
+        "B. Investigation of other causes since postictal confusion should gradually improve, not persist unchanged",
+        "C. Immediate discharge since seizures are self-limited",
+        "D. Assumption the patient is intentionally faking symptoms"
+      ],
+      "correct": 1,
+      "rationale": "Persistent, non-improving altered mental status well beyond the expected postictal window should prompt investigation for another or coexisting cause (e.g., ongoing subclinical seizure, structural injury, hypoglycemia).",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q15",
+      "question": "Why is a focused history from bystanders/family (medications, seizure history, substance use, recent illness/injury) valuable in an altered patient?",
+      "options": [
+        "A. It has no clinical value in the field",
+        "B. It can point toward a specific reversible cause and guide field management priorities",
+        "C. It replaces the need for a glucose check",
+        "D. It is only relevant for pediatric patients"
+      ],
+      "correct": 1,
+      "rationale": "A focused collateral history can quickly point toward a likely cause (e.g., known epilepsy with medication non-compliance, or a substance use history), guiding field priorities alongside the AEIOU-TIPS framework.",
+      "difficulty": "Medium"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "Shock Recognition and Category-Matched Management",
+      "description": "Recognizing shock before hypotension develops and matching treatment to the underlying category.",
+      "steps": [
+        "Look for compensated shock signs even with a normal blood pressure: pale skin, tachycardia, tachypnea.",
+        "Do not wait for hypotension to begin treatment — falling BP signals decompensated (late-stage) shock.",
+        "Identify the shock category from history and exam: hypovolemic (bleeding/fluid loss), distributive (septic/anaphylactic/neurogenic), cardiogenic (pump failure), or obstructive (mechanical).",
+        "Match treatment to category: fluids for hypovolemic; epinephrine for anaphylactic; source control/fluids/antibiotics per protocol for septic; inotropes/vasopressors with cautious fluids for cardiogenic; mechanical correction for obstructive.",
+        "Keep the patient warm (blanket) throughout — hypothermia worsens coagulopathy and cardiac function.",
+        "Reassess frequently for progression from compensated to decompensated shock."
+      ]
+    }
+  ]
+}

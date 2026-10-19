@@ -1,0 +1,32 @@
+{
+  "id": "medical",
+  "title": "Medical Emergencies Review — Medical, Behavioral & Geriatric",
+  "subtitle": "The Ultimate Provider Course Reviewer",
+  "version": "1.0.0",
+  "edition": "Aligned with current GINA, ADA, AHA/ASA stroke, and DSM-5-TR guidance; scoped to the NREMT Paramedic Medical/OB-GYN domain",
+  "description": "A comprehensive, self-contained study reviewer for adult medical, behavioral, and geriatric emergencies. Each chapter includes a concise summary, clinical pearls, red flags, common mistakes, memory aids, high-yield flashcards, exam-style quiz questions with rationales, realistic scenarios, and comparison tables. Designed for EMTs, paramedics, and nursing/allied-health students preparing for licensing-style cognitive exams (Prometric-administered, NREMT-aligned).",
+  "icon": "stethoscope",
+  "color": "#2563eb",
+  "accentColor": "#e06090",
+  "estimatedHours": 10,
+  "difficulty": "Intermediate",
+  "certification": "EMT/Paramedic licensing exam preparation (Prometric-administered, NREMT-aligned)",
+  "examLink": "https://www.nremt.org/",
+  "audience": ["EMT", "Paramedic", "Nursing Student", "Allied Health Student"],
+  "prerequisites": ["BLS provider competency", "Basic patient assessment (see EMPACT reviewer)"],
+  "contentTypes": ["summary", "flashcards", "quizzes", "scenarios", "algorithms", "tables"],
+  "chapters": [
+    { "id": "c01", "number": 1, "title": "Neurological Emergencies I — Stroke & TIA", "section": "Neurological", "difficulty": "Intermediate" },
+    { "id": "c02", "number": 2, "title": "Neurological Emergencies II — Seizures & Altered Mental Status", "section": "Neurological", "difficulty": "Intermediate" },
+    { "id": "c03", "number": 3, "title": "Endocrine Emergencies — Hypoglycemia, DKA & HHS", "section": "Endocrine", "difficulty": "Advanced" },
+    { "id": "c04", "number": 4, "title": "Respiratory Medical Emergencies — Asthma & COPD", "section": "Respiratory", "difficulty": "Intermediate" },
+    { "id": "c05", "number": 5, "title": "Obstetric Medical Emergencies — Preeclampsia & Eclampsia", "section": "Medical/OB", "difficulty": "Intermediate" },
+    { "id": "c06", "number": 6, "title": "Behavioral Emergencies I — Assessment & De-escalation", "section": "Behavioral", "difficulty": "Beginner to Intermediate" },
+    { "id": "c07", "number": 7, "title": "Behavioral Emergencies II — Psychotic & Mood Disorders", "section": "Behavioral", "difficulty": "Intermediate" },
+    { "id": "c08", "number": 8, "title": "Behavioral Emergencies III — Personality, Substance-Related & High-Risk Presentations", "section": "Behavioral", "difficulty": "Advanced" },
+    { "id": "c09", "number": 9, "title": "Geriatric Emergencies I — Delirium vs. Dementia & Atypical Presentations", "section": "Geriatric", "difficulty": "Intermediate" },
+    { "id": "c10", "number": 10, "title": "Geriatric Emergencies II — Polypharmacy, Falls & Elder Abuse Recognition", "section": "Geriatric", "difficulty": "Intermediate" },
+    { "id": "c11", "number": 11, "title": "Toxicological & Environmental Medical Presentations", "section": "Toxicology", "difficulty": "Intermediate" },
+    { "id": "c12", "number": 12, "title": "Sepsis, GI/Renal Emergencies & General Medical Red Flags", "section": "Medical", "difficulty": "Intermediate" }
+  ]
+}

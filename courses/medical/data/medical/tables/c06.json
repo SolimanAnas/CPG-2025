@@ -1,0 +1,17 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "SEA-3 Behavioral Assessment Framework",
+      "headers": ["Component", "What It Assesses"],
+      "rows": [
+        ["Safety", "Scene and patient safety — weapons, exits, escalation risk"],
+        ["Emotional state", "Observable mood/affect"],
+        ["Appearance", "Grooming, hygiene, dress as clues to functioning"],
+        ["Activity", "Psychomotor activity — agitation, retardation, restlessness"],
+        ["Speech", "Rate, volume, coherence, content"]
+      ]
+    }
+  ]
+}

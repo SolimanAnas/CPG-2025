@@ -975,6 +975,10 @@
         bls:       { review: '../courses/bls/index.html',     exam: 'bls.html',     chapters: 12 },
         pals:      { review: '../courses/pals/index.html',    exam: 'pals.html',    chapters: 13 },
         acls:      { review: '../courses/acls/index.html',    exam: 'acls.html',    chapters: 14 },
+        bdls:      { review: '../courses/bdls/index.html',    exam: 'bdls.html',    chapters: 10 },
+        empact:    { review: '../courses/empact/index.html',  exam: 'empact.html',  chapters: 10 },
+        pepp:      { review: '../courses/pepp/index.html',    exam: 'pepp.html',    chapters: 14 },
+        medical:   { review: '../courses/medical/index.html', exam: 'medical.html', chapters: 12 },
         'ecg-course': { review: 'ECG-study.html', exam: 'ecg-test.html' }
     };
     const BADGE_TEXT = { megacode: '12 cases', ecg: 'Live' };
@@ -1168,11 +1172,7 @@
         megacode:  [['Scenarios', 'play', 'megacode.html'], ['Random case', 'zap', 'megacode.html?s=random']],
         ecg:       [['Open simulator', 'activity', 'ecg.html']],
         prometric: [['Start mock exam', 'notebook-pen', '../src/prometric/exam.html']],
-        ppet:      [['Start exam', 'notebook-pen', 'ppet.html']],
-        bdls:      [['Start exam', 'notebook-pen', 'bdls.html']],
-        empact:    [['Start exam', 'notebook-pen', 'empact.html']],
-        pepp:      [['Start exam', 'notebook-pen', 'pepp.html']],
-        medical:   [['Start exam', 'notebook-pen', 'medical.html']]
+        ppet:      [['Start exam', 'notebook-pen', 'ppet.html']]
     };
     function actionsFor(course) {
         const rv = REVIEWER_LINKS[course.id];

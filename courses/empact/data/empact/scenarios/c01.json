@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "Not Himself Today",
+      "presentation": "You are called to a home for an 84-year-old man whose daughter says, 'He's just not himself today.' He has no specific complaint, is alert but slower to answer than usual, and his vital signs are within his normal range.",
+      "vitals": { "hr": "76 bpm", "bp": "134/82 mmHg", "rr": "16 bpm", "spo2": "97%", "loc": "Alert, slower responses" },
+      "question": "What is the most useful next question to ask?",
+      "options": [
+        "A: 'Do you have chest pain?' and nothing else.",
+        "B: 'What is different about him today compared to his usual baseline?'",
+        "C: No further questions are needed since vitals are normal.",
+        "D: Ask only about his medication list."
+      ],
+      "correct": 1,
+      "explanation": "With normal vitals and no specific complaint, the change in ADLs/baseline function is the real clue. Asking what's different from baseline can surface subtle findings (early stroke, infection, metabolic change) that a single closed question would miss.",
+      "clinicalPearl": "Activities of Daily Living that are altered is often exactly why people call EMS — ask what's different today."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Three Sick at the Same Table",
+      "presentation": "You respond to a restaurant where three coworkers who ate lunch together are now nauseated, dizzy, and complaining of headache within the same 30-minute window. No trauma is involved.",
+      "vitals": { "patient1_hr": "98 bpm", "patient2_hr": "102 bpm", "patient3_hr": "94 bpm", "symptoms": "Nausea, dizziness, headache in all three" },
+      "question": "What should you specifically investigate?",
+      "options": [
+        "A: Treat each patient as an isolated, unrelated case.",
+        "B: Inquire about a shared cause — common food, a gas leak, or another environmental exposure (e.g., carbon monoxide) affecting all three.",
+        "C: Assume food poisoning and transport without further scene assessment.",
+        "D: Ignore the pattern since vitals are only mildly abnormal."
+      ],
+      "correct": 1,
+      "explanation": "Multiple people with the same signs and symptoms at one scene is a red flag for a shared cause rather than coincidence. Investigating a common source (shared meal, gas leak, CO) protects both patients and responders before further exposure occurs.",
+      "clinicalPearl": "Same symptoms, same time, same place, different people — think shared cause, not coincidence."
+    },
+    {
+      "id": "c01_s03",
+      "title": "History First, Then Hands",
+      "presentation": "A 55-year-old woman is conscious, alert, and reports intermittent chest discomfort over the past two days. She is calm, breathing comfortably, and hemodynamically stable on your primary assessment.",
+      "vitals": { "hr": "82 bpm", "bp": "128/78 mmHg", "rr": "16 bpm", "spo2": "98%", "loc": "Alert" },
+      "question": "Given no immediate life threats, what is the recommended assessment sequence?",
+      "options": [
+        "A: Perform a full head-to-toe physical exam before asking any questions.",
+        "B: Ask a directed history (onset, quality, duration, associated symptoms) first, then perform a physical exam guided by her answers.",
+        "C: Skip the history since vitals are stable.",
+        "D: Transport immediately without further assessment."
+      ],
+      "correct": 1,
+      "explanation": "With no primary-assessment life threats, the recommended approach is history first — it carries about 80% of the diagnostic value in medical patients — followed by a physical exam directed by what the history reveals, rather than an undirected full exam.",
+      "clinicalPearl": "No life threat found? Let the history lead the exam, not the other way around."
+    }
+  ]
+}

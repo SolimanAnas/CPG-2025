@@ -1,0 +1,175 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "Which findings are signs of compensated shock?",
+      "options": [
+        "A. Hypotension and bradycardia",
+        "B. Pale skin, tachycardia, and tachypnea",
+        "C. Normal skin color and normal heart rate",
+        "D. Bright red skin and bradypnea"
+      ],
+      "correct": 1,
+      "rationale": "Compensated shock presents with pale skin, tachycardia, and tachypnea — the body is compensating and blood pressure may still be normal.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "What does a falling blood pressure indicate in a shock patient?",
+      "options": ["A. Compensated shock", "B. Decompensated (progressive) shock", "C. Full recovery", "D. Nothing significant"],
+      "correct": 1,
+      "rationale": "Falling blood pressure marks decompensated shock, the stage where compensatory mechanisms have failed to maintain perfusion pressure.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q03",
+      "question": "Why should shock patients be kept warm?",
+      "options": [
+        "A. For comfort only, with no physiologic benefit",
+        "B. Hypothermia worsens coagulopathy and impairs cardiac function, compounding shock",
+        "C. Warmth increases blood loss",
+        "D. It has no effect on outcome"
+      ],
+      "correct": 1,
+      "rationale": "Covering shock patients with a blanket prevents heat loss, which otherwise worsens coagulopathy and cardiac function — this is a physiologic intervention, not just comfort.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q04",
+      "question": "When are inotropic vasopressors like dopamine indicated?",
+      "options": [
+        "A. All types of shock equally",
+        "B. Persistent hypotension in cardiogenic shock",
+        "C. Only in hypovolemic shock",
+        "D. Only in anaphylaxis"
+      ],
+      "correct": 1,
+      "rationale": "Inotropic vasopressors are indicated for persistent hypotension specifically in cardiogenic shock, where the heart's pumping ability is the underlying problem.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "Why is blood pressure considered a 'late' indicator of shock?",
+      "options": [
+        "A. It changes before any other vital sign",
+        "B. Compensatory mechanisms maintain BP initially, so by the time it falls the patient has already been in shock",
+        "C. Blood pressure never changes in shock",
+        "D. It is the first and most sensitive sign of shock"
+      ],
+      "correct": 1,
+      "rationale": "Because tachycardia and vasoconstriction compensate early, blood pressure remains normal until compensation fails — making it a late, not early, marker.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "A trauma patient is pale, tachycardic, and tachypneic, but their blood pressure is 118/76. What is the correct interpretation?",
+      "options": [
+        "A. No shock is present because BP is normal",
+        "B. Compensated shock is likely present despite the normal blood pressure",
+        "C. This patient is stable and needs no further monitoring",
+        "D. These findings are unrelated to shock"
+      ],
+      "correct": 1,
+      "rationale": "Pale skin, tachycardia, and tachypnea with a still-normal BP are the classic presentation of compensated shock — treatment should not wait for hypotension to develop.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q07",
+      "question": "A patient in cardiogenic shock is given a large fluid bolus similar to what a hypovolemic patient would receive. What is the risk?",
+      "options": [
+        "A. No risk — fluids are always beneficial in shock",
+        "B. Worsening pulmonary edema, since the heart cannot pump the extra volume effectively",
+        "C. Immediate improvement in all cases",
+        "D. Fluids have no effect on a failing heart"
+      ],
+      "correct": 1,
+      "rationale": "In cardiogenic shock, the pump itself has failed, so large fluid volumes can precipitate or worsen pulmonary edema rather than improve perfusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "Which shock category is suggested by fever and a likely infectious source?",
+      "options": ["A. Hypovolemic", "B. Distributive (septic)", "C. Obstructive", "D. Cardiogenic"],
+      "correct": 1,
+      "rationale": "Fever with an infectious source points toward septic shock, a distributive shock category caused by pathologic vasodilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q09",
+      "question": "Which shock category requires mechanical correction (e.g., decompression) rather than primarily fluids or vasopressors?",
+      "options": ["A. Hypovolemic", "B. Obstructive (e.g., tension pneumothorax, tamponade)", "C. Septic", "D. Anaphylactic"],
+      "correct": 1,
+      "rationale": "Obstructive shock is caused by a mechanical problem (tamponade, tension pneumothorax) that requires a mechanical fix — fluids and vasopressors alone will not correct the underlying obstruction.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q10",
+      "question": "What accompanies the falling blood pressure of decompensated shock?",
+      "options": ["A. Improved mental status", "B. Altered mental status from inadequate cerebral perfusion", "C. No change in mentation", "D. Increased urine output"],
+      "correct": 1,
+      "rationale": "As perfusion pressure falls in decompensated shock, cerebral perfusion suffers, producing altered mental status alongside the hypotension.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q11",
+      "question": "Why is it important to identify the SPECIFIC category of shock rather than treating 'shock' generically?",
+      "options": [
+        "A. All shock categories are treated identically",
+        "B. Fluids, vasopressors, epinephrine, and mechanical correction are not interchangeable — matching treatment to category matters",
+        "C. Category identification is only for documentation",
+        "D. Treatment never depends on the cause"
+      ],
+      "correct": 1,
+      "rationale": "Each shock category has a different primary intervention; using the wrong one (e.g., large fluid boluses in cardiogenic shock) can worsen the patient's condition.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q12",
+      "question": "A patient in shock is left uncovered on a cold ambulance floor during a long transport. What physiologic consequence is most likely?",
+      "options": [
+        "A. Improved cardiac function",
+        "B. Worsening coagulopathy and cardiac function from hypothermia, compounding the shock state",
+        "C. No effect on outcome",
+        "D. Faster recovery"
+      ],
+      "correct": 1,
+      "rationale": "Allowing a shock patient to become hypothermic worsens coagulopathy and cardiac performance — keeping the patient warm is an active treatment step, not just comfort.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q13",
+      "question": "Which statement about compensated vs decompensated shock is TRUE?",
+      "options": [
+        "A. Decompensated shock always precedes compensated shock",
+        "B. Compensated shock precedes decompensated shock as compensatory mechanisms progressively fail",
+        "C. They are unrelated stages",
+        "D. Blood pressure falls first in compensated shock"
+      ],
+      "correct": 1,
+      "rationale": "Shock progresses from compensated (BP maintained, subtle signs present) to decompensated (BP falls, mental status affected) as the body's compensatory mechanisms are overwhelmed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "A patient with known heart failure develops hypotension, cool extremities, and pulmonary crackles. Which shock category and initial management approach fit best?",
+      "options": [
+        "A. Hypovolemic shock — give a large crystalloid bolus",
+        "B. Cardiogenic shock — consider inotropic/vasopressor support and cautious fluid administration",
+        "C. Anaphylactic shock — give epinephrine",
+        "D. Obstructive shock — needle decompression"
+      ],
+      "correct": 1,
+      "rationale": "Heart failure history with hypotension and pulmonary crackles suggests cardiogenic shock (pump failure), where inotropic/vasopressor support is favored over aggressive fluid boluses, which risk worsening pulmonary edema.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q15",
+      "question": "Which of the following is an example of distributive shock?",
+      "options": ["A. Bleeding from a laceration", "B. Anaphylaxis causing widespread vasodilation", "C. Myocardial infarction with pump failure", "D. Tension pneumothorax"],
+      "correct": 1,
+      "rationale": "Anaphylaxis causes distributive shock through pathologic vasodilation, distinct from hypovolemic (bleeding), cardiogenic (MI), or obstructive (tension pneumothorax) shock.",
+      "difficulty": "Medium"
+    }
+  ]
+}

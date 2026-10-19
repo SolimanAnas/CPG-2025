@@ -1,0 +1,18 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Diabetic Emergency Differentiation Sequence",
+      "description": "Distinguishing hypoglycemia, DKA, and HHNS in the field using glucose, respiratory pattern, and history.",
+      "steps": [
+        "Check blood glucose immediately in any altered mental status or stroke-like presentation.",
+        "If glucose is LOW: administer glucose promptly and reassess mental status/deficits for reversal.",
+        "If glucose is HIGH: assess the respiratory pattern.",
+        "Deep, rapid, labored (Kussmaul) respirations + ketotic breath + hours-to-1-2-day onset + abdominal pain/polyuria/polydipsia → consider DKA.",
+        "No Kussmaul pattern + profound dehydration + days-long insidious onset + often older adult → consider HHNS.",
+        "Treat as time-sensitive regardless of type: supportive care, transport, and frequent reassessment."
+      ]
+    }
+  ]
+}

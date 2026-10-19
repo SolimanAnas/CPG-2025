@@ -1,0 +1,68 @@
+{
+  "id": "c09",
+  "title": "Pediatric Trauma",
+  "shortTitle": "Trauma",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain why children have distinct injury patterns compared to adults.",
+    "Identify the anatomic and physiologic factors that make children uniquely vulnerable to specific injuries.",
+    "Recognize the field presentation of pediatric head, chest, abdominal, and extremity trauma.",
+    "Describe why children can maintain normal vital signs despite significant blood loss.",
+    "Apply appropriate spinal motion restriction and immobilization considerations for children."
+  ],
+  "summary": [
+    {
+      "title": "Why Pediatric Trauma Patterns Differ",
+      "content": "A child's larger head-to-body ratio, more pliable ribcage, less protected abdominal organs, and thinner subcutaneous tissue create injury patterns distinct from adults. Falls and motor vehicle collisions more often produce head injury as the dominant problem in children because of the relatively larger, heavier head. The pliable, elastic ribcage means significant internal chest injury (pulmonary contusion) can occur without rib fractures — the absence of fractures does not exclude serious injury."
+    },
+    {
+      "title": "Blood Loss Compensation Mirrors Shock Physiology",
+      "content": "Because children compensate for volume loss so effectively (as discussed in the shock chapter), a child can lose a significant percentage of circulating blood volume while maintaining a normal blood pressure. Tachycardia, delayed capillary refill, and cool extremities may be the only clues to significant hemorrhage before hypotension appears — treat these perfusion findings as seriously as you would hypotension in an adult trauma patient."
+    },
+    {
+      "title": "Head, Chest, and Abdominal Trauma",
+      "content": "Head trauma: the proportionally larger head increases both injury risk and the leverage effect on the cervical spine; watch for a bulging fontanelle (infants) or decreasing mental status as signs of evolving intracranial injury. Chest trauma: rib fractures are less common than in adults due to ribcage pliability, but their presence signals a high-energy mechanism and raises concern for significant underlying pulmonary or cardiac injury. Abdominal trauma: the abdominal organs (liver, spleen) are proportionally larger and less protected by the ribcage in children, making blunt abdominal trauma a common source of occult hemorrhage — a soft, non-tender abdomen does not exclude significant injury, especially early after the event."
+    },
+    {
+      "title": "Spinal Motion Restriction Considerations",
+      "content": "A child's proportionally larger head can force the neck into flexion when lying flat on a standard adult backboard; padding under the torso (not just the head) helps maintain neutral alignment. Selective spinal motion restriction criteria (mechanism, mental status, distracting injury, midline tenderness, neurologic complaint) are applied thoughtfully in children, recognizing that young children may not reliably report pain or tenderness, so mechanism and mental status carry more weight in the decision."
+    },
+    {
+      "title": "Field Management Priorities",
+      "content": "Standard trauma priorities apply — scene safety, hemorrhage control, airway/breathing/circulation support, and rapid transport to an appropriate (ideally pediatric-capable) trauma center — with attention to the pediatric-specific patterns above. Recognize evolving shock from perfusion signs, not blood pressure alone, and maintain a high index of suspicion for internal injury even when external findings appear minor."
+    }
+  ],
+  "clinicalPearls": [
+    "A child's proportionally larger head drives both head-injury risk and cervical spine leverage — pad under the torso for neutral spinal alignment.",
+    "No rib fractures does not mean no chest injury — the pliable pediatric ribcage can allow significant pulmonary contusion without fractures.",
+    "A soft, non-tender abdomen does not exclude serious abdominal injury — the liver and spleen are proportionally larger and less protected in children.",
+    "Perfusion signs (tachycardia, delayed cap refill, cool extremities) can signal major blood loss well before blood pressure falls."
+  ],
+  "redFlags": [
+    "Any rib fracture in a child — signals a high-energy mechanism and raises concern for underlying injury.",
+    "Tachycardia and delayed capillary refill after trauma, even with normal blood pressure.",
+    "A bulging fontanelle or decreasing mental status after head trauma in an infant."
+  ],
+  "commonMistakes": [
+    "Assuming the absence of rib fractures rules out significant chest injury.",
+    "Reassuring a caregiver based on a normal blood pressure alone after significant trauma.",
+    "Placing a young child flat on a standard backboard without torso padding, forcing neck flexion."
+  ],
+  "memoryAids": [
+    "Big head, big risk — head injury and cervical spine leverage go together in young children.",
+    "Bendy ribs hide big injuries — no fracture doesn't mean no contusion.",
+    "Soft belly, hidden bleed — abdominal exam can look reassuring despite real injury.",
+    "Pad the torso, not just the head, to keep the spine neutral."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Trauma Field Assessment",
+      "content": "Trauma mechanism identified\n  → Scene safety, hemorrhage control\n  → Primary assessment (ABCDE) with attention to pediatric patterns:\n     Head: check fontanelle (infants), mental status trend\n     Chest: any rib fracture = high suspicion for underlying injury even if breath sounds seem normal\n     Abdomen: soft/non-tender does not exclude occult injury — reassess serially\n  → Assess perfusion (heart rate, capillary refill, skin) — do not rely on blood pressure alone\n  → Apply selective spinal motion restriction criteria, weighting mechanism/mental status heavily in young children; pad torso for neutral alignment if restricting\n  → Rapid transport to appropriate (ideally pediatric-capable) trauma center with continuous reassessment"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Trauma",
+    "courses/pepp/data/pepp/chapters/c06.json — cross-referenced shock/perfusion recognition principles"
+  ]
+}

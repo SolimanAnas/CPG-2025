@@ -1,0 +1,68 @@
+{
+  "id": "c05",
+  "title": "Shock Recognition & Management",
+  "shortTitle": "Shock",
+  "estimatedStudyTime": 28,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Distinguish compensated from decompensated shock.",
+    "Explain why keeping shock patients warm matters physiologically.",
+    "Describe the role of inotropic vasopressors in cardiogenic shock.",
+    "Recognize early (compensated) shock signs before blood pressure falls.",
+    "Explain why blood pressure is a late, not early, indicator of shock."
+  ],
+  "summary": [
+    {
+      "title": "Compensated Shock: The Early Warning Signs",
+      "content": "In compensated shock, the body's compensatory mechanisms (tachycardia, peripheral vasoconstriction) are still maintaining blood pressure, even though perfusion is already inadequate. Pale skin, tachycardia, and tachypnea are signs of compensated shock — the patient looks and feels sick, but the blood pressure number itself may still look reassuring. Recognizing compensated shock from these subtler signs, before the blood pressure drops, is what allows early intervention."
+    },
+    {
+      "title": "Decompensated Shock: When Compensation Fails",
+      "content": "Falling blood pressure is indicative of decompensated shock — the progressive stage where compensatory mechanisms can no longer maintain perfusion pressure. Altered mental status frequently accompanies this progression, reflecting inadequate cerebral perfusion. By the time hypotension is measured, the patient has already been in shock for some time; waiting for a low blood pressure reading to diagnose shock means the diagnosis comes late."
+    },
+    {
+      "title": "Why Warmth Matters in Shock",
+      "content": "Keep shock patients warm by covering them with a blanket to prevent heat loss. Hypothermia in a shock patient worsens coagulopathy, impairs cardiac function, and shifts the oxygen-hemoglobin dissociation curve unfavorably — compounding the physiologic insult of shock itself. This is a simple, easily overlooked intervention with real physiologic benefit, not just comfort."
+    },
+    {
+      "title": "Inotropic Vasopressors in Cardiogenic Shock",
+      "content": "Inotropic vasopressors (e.g., dopamine) are indicated for persistent hypotension in cardiogenic shock — shock caused by the heart's failure to pump effectively, as opposed to volume loss or vasodilation. Unlike hypovolemic shock, where fluid resuscitation is central, cardiogenic shock often cannot tolerate large fluid volumes without worsening pulmonary edema, making inotropic/vasopressor support the more central pharmacologic tool once the cause is identified as cardiac."
+    },
+    {
+      "title": "Matching Shock Type to Management",
+      "content": "Shock is not a single entity — hypovolemic (fluid loss), distributive (vasodilation from sepsis, anaphylaxis, or neurogenic causes), cardiogenic (pump failure), and obstructive (mechanical, e.g., tamponade, tension pneumothorax) shock require different primary interventions. Recognizing which category applies, using history and exam clues (fever suggests septic, chest pain suggests cardiogenic, a known allergen exposure suggests anaphylactic), guides whether the immediate priority is fluids, vasopressors, epinephrine, or a mechanical fix like decompression."
+    }
+  ],
+  "clinicalPearls": [
+    "Pale skin, tachycardia, and tachypnea are signs of compensated shock — the blood pressure may still look normal.",
+    "Falling blood pressure is indicative of decompensated shock (progressive stage).",
+    "Keep shock patients warm by covering them with a blanket to prevent heat loss.",
+    "Inotropic vasopressors (e.g., dopamine) are indicated for persistent hypotension in cardiogenic shock."
+  ],
+  "redFlags": [
+    "Waiting for hypotension to appear before recognizing and treating shock.",
+    "Giving large fluid boluses to a patient in cardiogenic shock without considering pump failure.",
+    "Leaving a shock patient uncovered and allowing heat loss to compound coagulopathy."
+  ],
+  "commonMistakes": [
+    "Assuming a normal blood pressure rules out significant shock.",
+    "Treating all shock the same way regardless of the underlying category (hypovolemic vs distributive vs cardiogenic vs obstructive).",
+    "Overlooking passive rewarming as part of shock management."
+  ],
+  "memoryAids": [
+    "Compensated shock: Pale, Fast pulse, Fast breathing — BP still 'normal.'",
+    "Decompensated shock: BP finally drops, mental status follows.",
+    "Blanket = treatment, not just comfort.",
+    "Cardiogenic shock: pump problem → inotropes/vasopressors, not big fluid boluses."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Recognizing and Categorizing Shock",
+      "content": "Suspicious presentation (pale, tachycardic, tachypneic)\n  → BP still normal? → COMPENSATED shock — treat now, don't wait for BP to fall\n  → BP falling + altered mental status? → DECOMPENSATED shock — aggressive intervention\n  → Identify shock category from history/exam:\n     Fever/infection source → distributive (septic)\n     Known allergen exposure, stridor/hives → distributive (anaphylactic) → epinephrine\n     Chest pain, cardiac history, pulmonary edema → cardiogenic → inotropes/vasopressors, cautious fluids\n     Bleeding/fluid loss → hypovolemic → fluid resuscitation\n     Tamponade/tension pneumothorax signs → obstructive → mechanical correction\n  → In all types: keep the patient warm (blanket) to prevent heat loss"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Shock and Pharmacology/Shock categories",
+    "National EMS Education Standards — Shock recognition and management"
+  ]
+}

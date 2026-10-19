@@ -1,0 +1,18 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "Neurological Emergency Assessment Sequence",
+      "description": "A structured approach to altered neurological presentations, including stroke and elevated ICP recognition.",
+      "steps": [
+        "Check blood glucose immediately in any stroke-like presentation to rule out a hypoglycemic/hyperglycemic mimic.",
+        "Apply FAST: assess Face, Arm, and Speech findings, and establish an exact last known well Time.",
+        "Assess vital signs for Cushing's Triad (hypertension, bradycardia, altered respiratory pattern) suggesting elevated intracranial pressure.",
+        "In a headache patient, perform a full neurological exam; escalate concern for red flags (worst-ever headache, focal deficit, fever with neck stiffness).",
+        "If fever, nuchal rigidity, and altered mental status are present together, suspect meningitis and apply appropriate precautions.",
+        "Transport promptly with reassessment en route, given the time-sensitive nature of stroke and elevated-ICP emergencies."
+      ]
+    }
+  ]
+}

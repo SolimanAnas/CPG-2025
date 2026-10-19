@@ -1,0 +1,27 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Mechanical Fall vs. Fall With Possible Medical Cause",
+      "headers": ["Feature", "More Consistent With Mechanical Fall", "More Consistent With Medical Cause"],
+      "rows": [
+        ["Preceding symptoms", "None reported — clear trip/slip mechanism", "Dizziness, palpitations, chest discomfort, or vision changes before the fall"],
+        ["Recall of event", "Patient recalls the trip/slip clearly", "Patient cannot recall the moment of the fall (possible loss of consciousness)"],
+        ["Vital signs", "Normal", "Arrhythmia, hypotension, or hypoxia present"],
+        ["Glucose", "Normal", "Low or markedly abnormal"],
+        ["Field approach", "Standard injury assessment and care", "Full medical workup (cardiac, glucose, infection screen) in addition to injury assessment"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "High-Risk Medication Classes in Geriatric Trauma",
+      "headers": ["Medication Class", "Key Risk", "Field Relevance"],
+      "rows": [
+        ["Anticoagulants / antiplatelets", "Bleeding, including intracranial hemorrhage", "Elevated risk after even minor head injury; can present with delayed symptoms"],
+        ["Sedatives/hypnotics", "Fall risk from sedation/impaired balance", "Consider as a contributing factor in unexplained falls"],
+        ["Antihypertensives", "Orthostatic hypotension", "Consider as a cause of dizziness/fall, especially with position changes"]
+      ]
+    }
+  ]
+}

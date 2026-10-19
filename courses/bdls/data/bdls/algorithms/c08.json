@@ -1,0 +1,31 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Recognizing and Reporting a Biological Event",
+      "description": "The clinician-centered detection and initial-response flow for suspected biological events.",
+      "steps": [
+        "Watch for epidemiologic clues: disease unusual for the area/season, unusually severe/rapidly fatal illness, point-source cluster, unexpected population, unusual exposure route, or simultaneous multi-site outbreaks.",
+        "Notify public health immediately — do not wait for laboratory confirmation.",
+        "Isolate the ill; apply route-appropriate PPE (contact, droplet, or airborne), defaulting to higher protection if the agent is unknown.",
+        "Support public-health measures: quarantine of exposed contacts, post-exposure prophylaxis/vaccination, POD operations, and contact tracing.",
+        "Communicate clearly to reduce spread and panic.",
+        "Document exposures and cases for surveillance and epidemiologic investigation."
+      ]
+    },
+    {
+      "id": "c08_alg02",
+      "title": "Pandemic Sustained-Response Priorities",
+      "description": "Principles for a prolonged, system-stressing biological event.",
+      "steps": [
+        "Protect the workforce: PPE (with conservation/extended use when scarce), vaccination, and mental-health support.",
+        "Expand surge capacity — space, staff, supplies, and systems.",
+        "Maintain continuity of essential clinical and public services.",
+        "Apply non-pharmaceutical interventions (distancing, hygiene, masking, isolation/quarantine), especially before vaccines/therapeutics.",
+        "Invoke crisis standards of care under legal/ethical frameworks only if demand overwhelms resources.",
+        "Plan for sustainable staffing and responder recovery over the long event."
+      ]
+    }
+  ]
+}

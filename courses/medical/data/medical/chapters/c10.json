@@ -1,0 +1,67 @@
+{
+  "id": "c10",
+  "title": "Geriatric Emergencies II — Polypharmacy, Falls & Elder Abuse Recognition",
+  "shortTitle": "Polypharmacy, Falls & Elder Abuse",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain why polypharmacy increases risk for older adults.",
+    "Describe field priorities when assessing a geriatric fall.",
+    "Distinguish a mechanical fall from a fall with an underlying medical cause.",
+    "Recognize general findings that may raise concern for elder abuse or neglect.",
+    "Describe the EMS provider's role (recognize and report, not investigate) regarding elder abuse."
+  ],
+  "summary": [
+    {
+      "title": "Polypharmacy — More Medications, More Risk",
+      "content": "Polypharmacy (typically defined as taking five or more medications) is common in older adults and increases risk of adverse drug interactions, side effects, and confusion about proper dosing/adherence. Certain medication classes carry particular fall and bleeding risk relevant to EMS: sedatives/hypnotics and some psychiatric medications increase fall risk through sedation or impaired balance; anticoagulants and antiplatelet medications increase bleeding risk after even minor trauma, including head injury. Gathering an accurate medication list (bring bottles when possible) is a high-value field task, particularly for anticoagulant use in any geriatric trauma or head injury."
+    },
+    {
+      "title": "Geriatric Falls — Not Just a Mechanical Event",
+      "content": "A fall in an older adult is never assumed to be purely mechanical (simply tripping) without consideration of an underlying cause — falls can be the presenting symptom of a medical emergency (arrhythmia, stroke, hypoglycemia, orthostatic hypotension, infection, or medication effect). Field assessment of a geriatric fall should include: the circumstances of the fall (witnessed vs. unwitnessed, any warning symptoms beforehand such as dizziness or palpitations, ability to recall the event), vital signs and glucose, a search for injury (including occult injury, since older adults may have blunted pain response), and medication review (especially anticoagulants, given increased head-injury bleeding risk even from a low-energy fall)."
+    },
+    {
+      "title": "Anticoagulant Use and Head Injury",
+      "content": "A geriatric patient on an anticoagulant (or antiplatelet medication) who sustains even a seemingly minor head injury carries meaningfully elevated risk of intracranial hemorrhage, and this risk can present with delayed onset of symptoms. This is a field-relevant red flag independent of how the patient appears immediately after the fall — a normal initial neurologic exam does not exclude a developing bleed, and this history should be clearly communicated during hospital handoff."
+    },
+    {
+      "title": "Recognizing Possible Elder Abuse or Neglect",
+      "content": "General, non-diagnostic findings that may raise concern for elder abuse or neglect include: injuries inconsistent with the stated mechanism, poor hygiene or evidence of neglect (malnutrition, dehydration, unaddressed medical needs, unsanitary living conditions), unexplained or patterned bruising, a caregiver who is reluctant to leave the patient alone with EMS or answers all questions on the patient's behalf, and signs of financial exploitation noted incidentally. As with pediatric maltreatment, no single finding is diagnostic — the EMS role is recognition and objective documentation, not investigation or accusation."
+    },
+    {
+      "title": "The EMS Role: Recognize and Report",
+      "content": "As with suspected child maltreatment, EMS providers are mandatory reporters of suspected elder abuse or neglect in essentially all jurisdictions. The role is to provide standard medical care, document objectively (exact observations, quotes, scene details) rather than draw conclusions, maintain calm and non-accusatory communication with all parties, and report reasonable suspicion through the appropriate channel per local law and agency policy — not to confront a caregiver or attempt to determine what happened."
+    }
+  ],
+  "clinicalPearls": [
+    "Polypharmacy = 5+ medications — a real risk factor for interactions, falls, and bleeding, not just a documentation detail.",
+    "A geriatric fall is a symptom to investigate, not just an event to treat — ask what happened before the fall.",
+    "Anticoagulant use plus head injury, even minor, is a red flag independent of the initial exam — bleeds can develop with delay.",
+    "Elder abuse recognition, like child maltreatment: recognize and report, don't investigate or accuse."
+  ],
+  "redFlags": [
+    "Any anticoagulant/antiplatelet use in a geriatric patient with head injury, regardless of initial exam findings.",
+    "A fall with preceding symptoms (dizziness, palpitations, chest discomfort) suggesting a medical cause rather than a purely mechanical trip.",
+    "Injuries inconsistent with the stated mechanism, poor hygiene/neglect signs, or a caregiver unwilling to allow private conversation with the patient."
+  ],
+  "commonMistakes": [
+    "Assuming every geriatric fall is purely mechanical without asking about preceding symptoms.",
+    "Failing to ask about or document anticoagulant use in a geriatric head injury.",
+    "Confronting a caregiver directly about suspected elder abuse instead of documenting objectively and reporting through appropriate channels."
+  ],
+  "memoryAids": [
+    "5+ meds = polypharmacy, a real risk factor.",
+    "Why did they fall, not just that they fell.",
+    "Blood thinner plus bumped head is a red flag no matter how they look right now.",
+    "Recognize and report, don't investigate or accuse — same rule as pediatric maltreatment."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Geriatric Fall and Elder Abuse Recognition Field Approach",
+      "content": "Geriatric patient after a fall\n  → Ask about circumstances: witnessed/unwitnessed, preceding symptoms (dizziness, palpitations, chest discomfort), ability to recall the event\n  → Check vital signs and glucose\n  → Review medications, specifically asking about anticoagulant/antiplatelet use\n  → Search for injury including occult injury, given possible blunted pain response\n  → Any anticoagulant use + head injury (even minor) → treat as elevated intracranial hemorrhage risk regardless of initial exam, communicate clearly at handoff\n  → During assessment, note any findings raising concern for abuse/neglect (injury-mechanism inconsistency, neglect signs, unexplained bruising, controlling caregiver behavior)\n  → Provide standard care, document objectively, maintain calm non-accusatory communication, report reasonable suspicion of abuse/neglect through appropriate channel per local law/policy"
+    }
+  ],
+  "references": [
+    "Standard geriatric emergency medicine teaching on polypharmacy, fall assessment, and elder abuse recognition"
+  ]
+}

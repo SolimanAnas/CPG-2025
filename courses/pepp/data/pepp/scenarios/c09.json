@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "The Soft Abdomen",
+      "presentation": "A 6-year-old was struck by a bicycle handlebar in the abdomen 20 minutes ago. The abdomen appears soft and non-tender on exam, but the child is mildly tachycardic with slightly delayed capillary refill.",
+      "vitals": { "hr": "132 bpm", "capRefill": "2.5 seconds", "abdomen": "Soft, non-tender" },
+      "question": "What is the appropriate interpretation and next step?",
+      "options": [
+        "A: The soft, non-tender abdomen rules out significant injury — no further concern needed.",
+        "B: The soft abdomen does not rule out significant occult abdominal injury, and the tachycardia/delayed capillary refill are early perfusion warning signs — treat as potential internal hemorrhage and transport promptly.",
+        "C: Reassess again in one hour before deciding on transport.",
+        "D: Only treat if the blood pressure drops."
+      ],
+      "correct": 1,
+      "explanation": "A soft, non-tender abdomen can be falsely reassuring in pediatric blunt abdominal trauma, especially early on. The tachycardia and delayed capillary refill are perfusion findings that may be the first clue to significant blood loss, well before hypotension develops.",
+      "clinicalPearl": "Soft abdomen plus subtle perfusion changes after blunt trauma — trust the perfusion signs, not the abdominal exam alone."
+    },
+    {
+      "id": "c09_s02",
+      "title": "A Single Rib Fracture",
+      "presentation": "An 8-year-old was involved in a moderate-speed motor vehicle collision. Exam reveals one tender rib on the left with normal breath sounds bilaterally and stable vital signs.",
+      "vitals": { "hr": "104 bpm", "spo2": "98%", "breathSounds": "Equal bilaterally" },
+      "question": "How should this single rib fracture be interpreted?",
+      "options": [
+        "A: A single rib fracture with normal breath sounds means no further concern is needed.",
+        "B: Any rib fracture in a child signals a high-energy mechanism and warrants suspicion for underlying pulmonary or cardiac injury, even with currently reassuring findings.",
+        "C: Rib fractures are common and unimportant in pediatric trauma.",
+        "D: This finding should be disregarded since vital signs are stable."
+      ],
+      "correct": 1,
+      "explanation": "Because a child's ribcage is pliable and normally resists fracture, any rib fracture indicates a high-energy mechanism and should raise suspicion for significant underlying chest injury (e.g., pulmonary contusion), even when initial vitals and breath sounds appear reassuring.",
+      "clinicalPearl": "In a child, a rib fracture is a marker of high-energy transfer — treat it as a warning sign, not a minor injury."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Positioning for Transport",
+      "presentation": "A 3-year-old requires spinal motion restriction after a fall from a second-story window. The crew places the child directly flat on a standard adult backboard.",
+      "vitals": { "positioning": "Flat on adult backboard, no padding" },
+      "question": "What adjustment should be made to properly maintain spinal alignment?",
+      "options": [
+        "A: No adjustment needed — the standard backboard is appropriate as-is.",
+        "B: Add padding under the torso (not just the head) to compensate for the child's proportionally larger head and maintain neutral spinal alignment.",
+        "C: Remove all padding to keep the child as flat as possible.",
+        "D: Place padding only under the head."
+      ],
+      "correct": 1,
+      "explanation": "A young child's proportionally larger head forces the neck into flexion when lying flat on a standard adult backboard. Padding under the torso (not just the head) helps achieve neutral spinal alignment during spinal motion restriction.",
+      "clinicalPearl": "Big head, flat board, flexed neck — pad the torso to correct for the mismatch and keep the spine neutral."
+    }
+  ]
+}

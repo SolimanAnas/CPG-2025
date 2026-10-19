@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "Shortness of Breath on Chemotherapy",
+      "presentation": "A 52-year-old woman undergoing chemotherapy for breast cancer reports recent-onset shortness of breath with exertion. Exam reveals jugular venous distention and muffled heart sounds.",
+      "vitals": { "hr": "118 bpm", "bp": "88/62 mmHg", "rr": "22 bpm", "spo2": "93%", "exam": "JVD, muffled heart tones" },
+      "question": "What is the most likely diagnosis and what triad supports it?",
+      "options": [
+        "A: Pneumothorax, supported by absent breath sounds.",
+        "B: Cardiac tamponade, supported by Beck's triad (JVD, muffled heart tones, hypotension).",
+        "C: Pulmonary embolism, supported by pleuritic chest pain.",
+        "D: Pericarditis, supported by pain worse lying flat."
+      ],
+      "correct": 1,
+      "explanation": "JVD, muffled heart tones, and hypotension are Beck's triad, classic for cardiac tamponade. Chemotherapy can cause pericardial effusion leading to tamponade. Pneumothorax presents with absent breath sounds instead of muffled heart tones, and this patient lacks the pleuritic pain typical of PE.",
+      "clinicalPearl": "A chemotherapy history plus Beck's triad should immediately raise tamponade on your differential."
+    },
+    {
+      "id": "c04_s02",
+      "title": "The Non-Diagnostic 12-Lead",
+      "presentation": "A 61-year-old man reports crushing substernal chest pain radiating to his jaw. His initial 12-lead ECG is borderline/non-diagnostic, but his presentation strongly suggests an inferior MI, and his blood pressure is on the low side.",
+      "vitals": { "hr": "58 bpm", "bp": "98/64 mmHg", "rr": "18 bpm", "ecg": "Non-diagnostic 12-lead" },
+      "question": "What is the next best diagnostic step?",
+      "options": [
+        "A: Assume the ECG rules out MI and transport without further workup.",
+        "B: Obtain a right-sided ECG to assess for right ventricular involvement, especially given the relative hypotension.",
+        "C: Give nitroglycerin immediately regardless of blood pressure.",
+        "D: Repeat the same 12-lead in the identical position."
+      ],
+      "correct": 1,
+      "explanation": "A non-diagnostic standard 12-lead with strong clinical suspicion for inferior MI — especially with relative hypotension — should prompt a right-sided ECG to evaluate right ventricular involvement, which would also caution against nitrate administration.",
+      "clinicalPearl": "Non-diagnostic ECG plus inferior-MI suspicion: flip to the right side before you flip through the differential."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Depression Instead of Elevation",
+      "presentation": "A 58-year-old woman with chest pain has a 12-lead ECG showing ST depression in V1 through V4, without clear ST elevation anywhere else. The crew initially considers the ECG unremarkable.",
+      "vitals": { "hr": "92 bpm", "bp": "126/80 mmHg", "ecg": "ST depression V1-V4" },
+      "question": "What should this ECG pattern make you consider?",
+      "options": [
+        "A: A completely normal tracing — no further action.",
+        "B: Possible posterior MI, since it can present as a mirror-image ST depression pattern in V1-V4 rather than elevation.",
+        "C: Right bundle branch block with no ischemic significance.",
+        "D: An artifact requiring only lead replacement."
+      ],
+      "correct": 1,
+      "explanation": "Posterior MI is a commonly missed pattern because standard anterior leads show ST depression (a mirror image of the posterior elevation) rather than the elevation clinicians expect to see. This ECG should not be dismissed as normal — posterior leads or additional workup are warranted.",
+      "clinicalPearl": "Depression in V1-V4 without a clear culprit elsewhere: flip your thinking to the posterior wall."
+    }
+  ]
+}

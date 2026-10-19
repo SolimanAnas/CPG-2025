@@ -1,0 +1,203 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "What are the four S's of surge capacity?",
+      "options": [
+        "A. Speed, Skill, Safety, Support",
+        "B. Staff, Stuff, Space, Systems",
+        "C. Sort, Signal, Stage, Send",
+        "D. Scene, Size, Supply, Standard"
+      ],
+      "correct": 1,
+      "rationale": "Surge capacity rests on Staff, Stuff (supplies/equipment), Space, and Systems (command, communications, tracking).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "A hospital has doubled its bed count for a surge but has no additional nurses or physicians. What principle does this violate?",
+      "options": [
+        "A. None — beds are what matter",
+        "B. The weakest of the four S's caps the surge; without Staff, extra Space is unusable",
+        "C. Crisis standards of care",
+        "D. CMIST"
+      ],
+      "correct": 1,
+      "rationale": "Surge is limited by its weakest pillar. Beds without staff to work them do not expand real capacity.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "Repurposing a post-anesthesia unit as extra ICU space and substituting equivalent equipment describes which level of care?",
+      "options": ["A. Conventional", "B. Contingency", "C. Crisis", "D. Normal"],
+      "correct": 1,
+      "rationale": "Contingency care uses functionally equivalent adaptations — repurposed spaces and substituted supplies — before resources are truly overwhelmed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q04",
+      "question": "Crisis standards of care are characterized by:",
+      "options": [
+        "A. Slightly adapted but equivalent care",
+        "B. A formally declared, ethically/legally framed allocation of scarce resources for population benefit when demand overwhelms resources",
+        "C. Normal operations",
+        "D. Reduced documentation for convenience"
+      ],
+      "correct": 1,
+      "rationale": "Crisis standards represent a deliberate, declared shift used only when needs exceed resources despite all adaptations, allocating scarce resources to maximize population benefit.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q05",
+      "question": "How should a health system transition into crisis standards of care?",
+      "options": [
+        "A. Gradually and informally as things get busy",
+        "B. Deliberately and formally, under an ethical and legal framework",
+        "C. Only after a lawsuit",
+        "D. It should never be used"
+      ],
+      "correct": 1,
+      "rationale": "Crisis standards must be entered by explicit declaration under governance frameworks, not by unplanned drift, to protect patients, providers, and fairness.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q06",
+      "question": "After a terrorist bombing, an emergency department is flooded with people who have minimal or no physical injury but severe anxiety. This illustrates:",
+      "options": [
+        "A. Malingering that should be ignored",
+        "B. Psychological casualties/'worried well' — which can outnumber the physically injured and require behavioral-health capacity",
+        "C. A billing opportunity",
+        "D. A reason to close the ED"
+      ],
+      "correct": 1,
+      "rationale": "Fear generates large numbers of psychological casualties, especially after terrorism/CBRN events; planning must include behavioral-health surge.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "Which action is part of psychological first aid?",
+      "options": [
+        "A. Requiring survivors to describe the traumatic event in detail",
+        "B. Ensuring safety and basic needs, providing calm, connecting people to loved ones, and linking to services",
+        "C. Prescribing sedatives to everyone",
+        "D. Isolating survivors from information"
+      ],
+      "correct": 1,
+      "rationale": "PFA promotes safety, calm, connectedness, self-efficacy, and hope — and specifically does NOT force people to recount their trauma.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "What does CMIST stand for?",
+      "options": [
+        "A. Command, Medical, Incident, Safety, Transport",
+        "B. Communication, Maintaining health, Independence, Support/Safety/Self-determination, Transportation",
+        "C. Chemical, Microbial, Irradiation, Shock, Trauma",
+        "D. Contact, Mask, Isolate, Screen, Treat"
+      ],
+      "correct": 1,
+      "rationale": "CMIST is a functional-needs framework: Communication, Maintaining health, Independence, Support/Safety/Self-determination, and Transportation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q09",
+      "question": "Why does BDLS teach planning for functional needs (CMIST) rather than by diagnosis?",
+      "options": [
+        "A. Diagnoses are secret",
+        "B. Functional needs capture who actually needs help and how — across many diagnoses and situations — making planning equitable and practical",
+        "C. To avoid treating illness",
+        "D. It is only for documentation"
+      ],
+      "correct": 1,
+      "rationale": "A functional lens (e.g., 'cannot self-evacuate,' 'depends on power for a device') groups people by the support they need, which is more actionable than a list of diagnoses.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q10",
+      "question": "Which is an example of the 'Transportation' element of CMIST?",
+      "options": [
+        "A. A patient on home oxygen",
+        "B. A person without a vehicle or independent means to evacuate",
+        "C. A person who is deaf",
+        "D. A person needing a wheelchair"
+      ],
+      "correct": 1,
+      "rationale": "Transportation covers people who cannot independently evacuate and depend on others or public systems to move to safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q11",
+      "question": "A person dependent on a power-requiring home ventilator represents which CMIST need?",
+      "options": ["A. Communication", "B. Maintaining health", "C. Transportation", "D. Independence only"],
+      "correct": 1,
+      "rationale": "Maintaining health covers dependence on medications, oxygen, dialysis, and power-dependent medical devices that fail when infrastructure does.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q12",
+      "question": "Which is a recognized responder resilience measure?",
+      "options": [
+        "A. Continuous shifts without breaks",
+        "B. Work-rest cycles, buddy systems, leadership support, and post-event follow-up",
+        "C. Discouraging any discussion of the event",
+        "D. Ignoring signs of burnout"
+      ],
+      "correct": 1,
+      "rationale": "Sustaining responders requires managed work-rest cycles, peer support, engaged leadership, and follow-up — burnout degrades safety and performance.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q13",
+      "question": "Continuity of operations planning primarily ensures:",
+      "options": [
+        "A. Maximal individual care for one patient",
+        "B. Essential services keep running during a disaster and are restored afterward",
+        "C. That crisis standards are always used",
+        "D. That documentation stops"
+      ],
+      "correct": 1,
+      "rationale": "Continuity of operations keeps critical functions going and plans their restoration — a bridge between response and recovery.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q14",
+      "question": "A disaster response should be considered complete when:",
+      "options": [
+        "A. The last acute casualty leaves the ED",
+        "B. The community and its responders have recovered, with after-action lessons fed back into preparedness",
+        "C. The media loses interest",
+        "D. The incident commander goes home"
+      ],
+      "correct": 1,
+      "rationale": "Recovery — rebuilding, chronic-care continuity, behavioral health, and after-action review — extends well past the acute phase and closes the disaster cycle.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q15",
+      "question": "Which evacuation-planning failure reflects ignoring vulnerable populations?",
+      "options": [
+        "A. Providing accessible transport and backup power for device-dependent residents",
+        "B. A plan that strands people dependent on dialysis, mobility aids, or transportation",
+        "C. Translating alerts into multiple languages",
+        "D. Including personal-care attendants in shelter plans"
+      ],
+      "correct": 1,
+      "rationale": "Plans that overlook access and functional needs leave the most vulnerable behind — precisely what the CMIST framework is designed to prevent.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q16",
+      "question": "During a mass-casualty psychological response, a well-meaning volunteer insists survivors each narrate the event in detail 'to process it.' This is:",
+      "options": [
+        "A. Correct psychological first aid",
+        "B. Not part of PFA — forcing trauma recounting can be harmful; PFA provides safety, calm, connection, and linkage instead",
+        "C. Required by law",
+        "D. The definition of resilience"
+      ],
+      "correct": 1,
+      "rationale": "Psychological first aid deliberately avoids compelling trauma narration; it focuses on safety, comfort, connectedness, and practical linkage to services.",
+      "difficulty": "Hard"
+    }
+  ]
+}

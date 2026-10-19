@@ -1,0 +1,33 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Pediatric Altered Mental Status Field Approach",
+      "description": "Sequence for evaluating and managing a child with altered mental status.",
+      "steps": [
+        "Note Appearance abnormalities on the PAT and confirm level of consciousness using AVPU.",
+        "Check blood glucose when a meter is available; treat hypoglycemia per protocol if present.",
+        "Work through AEIOU-TIPS to consider reversible causes: Alcohol/substance, Epilepsy/postictal, Infection, Overdose, Uremia/metabolic, Trauma/temperature, Insulin/hypoglycemia, Psychiatric, Shock/stroke.",
+        "Assess for signs of increased intracranial pressure: bulging fontanelle, decreasing consciousness, irregular respirations, Cushing triad.",
+        "Support airway, breathing, and circulation as needed; avoid hypoxia and hypotension.",
+        "Reassess mental status serially and treat a worsening trend as more concerning than any single value.",
+        "Transport rapidly with continuous monitoring."
+      ]
+    },
+    {
+      "id": "c08_alg02",
+      "title": "Pediatric Seizure Field Management",
+      "description": "Sequence for managing an actively seizing child and recognizing status epilepticus.",
+      "steps": [
+        "Protect the airway with positioning and suction as needed; do not place anything in the mouth.",
+        "Protect the child from injury during the seizure.",
+        "Check blood glucose when available.",
+        "Time the seizure from onset.",
+        "If the seizure resolves in under 5 minutes and the child returns to baseline, assess for simple vs complex febrile seizure criteria if fever is present, and transport for evaluation.",
+        "If the seizure lasts 5 minutes or longer, or seizures repeat without return to baseline, treat as status epilepticus — a time-critical emergency requiring immediate escalation (refer to PALS reviewer for benzodiazepine dosing).",
+        "Reassess airway, breathing, and mental status continuously during and after the seizure."
+      ]
+    }
+  ]
+}

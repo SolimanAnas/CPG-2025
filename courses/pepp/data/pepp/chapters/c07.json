@@ -1,0 +1,68 @@
+{
+  "id": "c07",
+  "title": "Cardiac Emergencies & Rhythm Recognition",
+  "shortTitle": "Cardiac Emergencies",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain why primary cardiac events are rare in children compared to adults.",
+    "Recognize field presentations of pediatric bradycardia, tachycardia, and cardiac arrest.",
+    "Identify congenital heart disease as a risk factor for pediatric cardiac emergencies.",
+    "Describe the field priority of treating the underlying cause of bradycardia (usually hypoxia) rather than the rhythm alone.",
+    "Understand when to defer to the PALS reviewer for arrest algorithms and drug dosing."
+  ],
+  "summary": [
+    {
+      "title": "Primary Cardiac Events Are Rare in Children",
+      "content": "Unlike adults, where primary cardiac events (e.g., myocardial infarction, primary ventricular fibrillation) are a common cause of sudden collapse, primary cardiac disease is a rare cause of pediatric emergencies. Most pediatric cardiac problems are secondary — bradycardia from hypoxia, or arrhythmia in a child with known congenital heart disease. This chapter focuses on field recognition of these secondary presentations; it does not replace the PALS reviewer's depth on arrest rhythms, defibrillation, and drug dosing."
+    },
+    {
+      "title": "Bradycardia: Treat the Cause, Not Just the Rhythm",
+      "content": "The most common serious pediatric dysrhythmia encountered in the field is bradycardia, and it is almost always caused by hypoxia (or less commonly, increased vagal tone, hypothermia, or increased intracranial pressure). The field priority for symptomatic bradycardia is to address the underlying cause — oxygenate and ventilate first — rather than treating the rhythm number in isolation. A bradycardic, poorly perfusing infant is usually a respiratory or hypoxia problem until proven otherwise."
+    },
+    {
+      "title": "Tachycardia: Sinus vs Supraventricular",
+      "content": "Sinus tachycardia is a compensatory response (fever, pain, anxiety, dehydration, shock) and resolves as the underlying cause is treated; rates are usually variable and rarely exceed about 220 bpm in infants. Supraventricular tachycardia (SVT) is a primary rhythm disturbance with a fixed, very rapid rate (often >220 bpm in infants, >180 bpm in older children) that does not vary with stimulation, and can itself cause poor perfusion if sustained. Distinguishing the two by history (fever/pain/dehydration vs sudden onset with no clear trigger) and rate pattern guides field urgency."
+    },
+    {
+      "title": "Congenital Heart Disease as a Risk Factor",
+      "content": "Children with known congenital heart disease (repaired or unrepaired) are at elevated risk for arrhythmia, heart failure, and cardiogenic shock, and may have baseline vital signs or oxygen saturations that differ from typical pediatric norms — always ask caregivers about the child's 'normal' baseline. Family history clues (sudden unexplained death in young relatives) can also suggest an underlying cardiac channelopathy risk in an otherwise unexplained pediatric collapse."
+    },
+    {
+      "title": "Field Recognition and Initial Stabilization",
+      "content": "Field priorities are recognition (PAT + primary assessment + monitor/rhythm strip if available), identifying reversible causes (especially hypoxia), and rapid transport with continuous reassessment. This chapter deliberately does not reproduce arrest algorithms, defibrillation/cardioversion energy doses, or antiarrhythmic drug dosing — these are covered in full depth in the PALS reviewer, which should be used for any patient in or approaching cardiac arrest."
+    }
+  ],
+  "clinicalPearls": [
+    "Primary cardiac events are rare in children — most pediatric bradycardia is caused by hypoxia, not primary heart disease.",
+    "Treat the cause of bradycardia (usually oxygenation/ventilation) before treating the number.",
+    "Sinus tachycardia varies with the underlying cause and stimulation; SVT is fixed, very rapid, and doesn't vary.",
+    "Ask about a child's known congenital heart disease and their personal 'normal' baseline vitals/SpO2 — it changes what's abnormal for them."
+  ],
+  "redFlags": [
+    "Bradycardia with poor perfusion in an infant — treat as a hypoxia/respiratory emergency until proven otherwise.",
+    "A fixed, very rapid heart rate that does not vary with stimulation — suspect SVT.",
+    "Family history of sudden unexplained death in a young relative, in a child with unexplained collapse or syncope."
+  ],
+  "commonMistakes": [
+    "Treating bradycardia as a primary cardiac rhythm problem without first addressing oxygenation/ventilation.",
+    "Failing to distinguish sinus tachycardia (variable, has a clear trigger) from SVT (fixed, very rapid).",
+    "Not asking about a child's baseline vitals/SpO2 when they have known congenital heart disease."
+  ],
+  "memoryAids": [
+    "Bradycardia in a child = hypoxia until proven otherwise — fix the airway/breathing first.",
+    "Sinus tachy varies with the cause; SVT doesn't vary and is very fast.",
+    "Know their normal — congenital heart disease patients may have a different baseline.",
+    "For arrest rhythms and drug doses, go to PALS — this chapter is recognition, not resuscitation depth."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Cardiac Emergency Field Recognition",
+      "content": "Abnormal heart rate or rhythm noted\n  → Bradycardia + poor perfusion → Suspect hypoxia (or vagal tone/hypothermia/increased ICP) → prioritize oxygenation/ventilation, treat underlying cause\n  → Tachycardia:\n     Variable rate, clear trigger (fever/pain/dehydration/shock) → Sinus tachycardia → treat underlying cause\n     Fixed, very rapid rate, no clear trigger, does not vary with stimulation → Suspect SVT → rapid transport, notify receiving facility\n  → Known congenital heart disease or family history of sudden unexplained death → heightened suspicion for cardiac cause, ask caregiver for patient's normal baseline\n  → Any patient in or approaching cardiac arrest → transition immediately to PALS arrest algorithms (not covered in this chapter)"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Cardiac Emergencies",
+    "courses/pals/data/pals — authoritative source for arrest algorithms, defibrillation/cardioversion dosing, and antiarrhythmic drug dosing (not duplicated here)"
+  ]
+}

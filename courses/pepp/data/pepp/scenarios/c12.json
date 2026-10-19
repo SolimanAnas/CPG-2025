@@ -1,0 +1,53 @@
+{
+  "chapter": "c12",
+  "cases": [
+    {
+      "id": "c12_s01",
+      "title": "The Non-Mobile Infant's Fracture",
+      "presentation": "A caregiver reports their 3-month-old 'rolled off the changing table and broke their arm.' The infant shows no signs of being able to roll independently on exam or per developmental history.",
+      "vitals": { "age": "3 months", "developmentalStage": "Not yet rolling independently" },
+      "question": "How should this history be evaluated?",
+      "options": [
+        "A: Accept the history as given since falls are common in infants.",
+        "B: Recognize the inconsistency between the stated mechanism and the infant's developmental stage, document objectively, and report through appropriate channels.",
+        "C: Confront the caregiver immediately about the inconsistency.",
+        "D: Ignore the finding since a single detail should not raise concern."
+      ],
+      "correct": 1,
+      "explanation": "A 3-month-old is not developmentally capable of rolling independently, making this history inconsistent with the injury mechanism. This should be documented objectively (exact quotes, findings) and reported through appropriate mandatory-reporting channels — not directly confronted on scene.",
+      "clinicalPearl": "When the story doesn't match the child's developmental stage, document the facts and report — don't accuse, and don't dismiss."
+    },
+    {
+      "id": "c12_s02",
+      "title": "Changing History Between Caregivers",
+      "presentation": "One caregiver tells you the child 'fell down the stairs,' while another caregiver on scene separately says the child 'fell off a bike.' The child has a significant head injury.",
+      "vitals": { "history": "Inconsistent between two caregivers" },
+      "question": "What should this inconsistency prompt?",
+      "options": [
+        "A: Dismissal, since caregivers often misremember details under stress.",
+        "B: Objective documentation of both accounts as given, continued standard medical care, and reporting through appropriate channels given the inconsistency.",
+        "C: Immediate accusation of one caregiver of lying.",
+        "D: Refusal to transport until the story is clarified."
+      ],
+      "correct": 1,
+      "explanation": "A history that changes between different caregivers is a recognized concern-raising factor. The appropriate response is to document both accounts objectively and exactly as given, continue providing standard medical care, and report the inconsistency through appropriate channels — not to accuse anyone directly on scene or delay necessary care.",
+      "clinicalPearl": "Two different stories from two different caregivers is worth documenting precisely — let the receiving team and reporting process sort out the discrepancy."
+    },
+    {
+      "id": "c12_s03",
+      "title": "Delay in Seeking Care",
+      "presentation": "A child has a fracture that appears, on exam, to be several days old, but the caregiver states the injury 'just happened this morning.'",
+      "vitals": { "injury": "Fracture with signs consistent with several days' healing", "reportedTiming": "Said to have occurred this morning" },
+      "question": "What should this discrepancy prompt?",
+      "options": [
+        "A: No action, since exact injury timing is often hard to determine.",
+        "B: Objective documentation of the discrepancy between exam findings and reported timing, continued care, and reporting through appropriate channels.",
+        "C: Immediate confrontation of the caregiver about the inconsistency.",
+        "D: Assumption that the caregiver caused the injury."
+      ],
+      "correct": 1,
+      "explanation": "A delay in seeking care that is inconsistent with the reported timeline is a recognized concern-raising finding. The correct response is objective documentation of the discrepancy (exam findings vs. reported history), continued appropriate medical care, and reporting through the correct channel — without directly accusing the caregiver or assuming intent.",
+      "clinicalPearl": "An injury that looks older than the story suggests is a documentation-and-report finding, not a confrontation cue."
+    }
+  ]
+}

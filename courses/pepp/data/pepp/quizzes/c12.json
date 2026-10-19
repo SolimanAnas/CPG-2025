@@ -1,0 +1,182 @@
+{
+  "chapter": "c12",
+  "questions": [
+    {
+      "id": "c12_q01",
+      "question": "What is the EMS provider's role regarding suspected child maltreatment?",
+      "options": [
+        "A. Investigate the case fully before providing care",
+        "B. Recognize concerning findings, document objectively, and report through appropriate channels",
+        "C. Confront the caregiver directly to obtain a confession",
+        "D. Make a final determination of whether maltreatment occurred"
+      ],
+      "correct": 1,
+      "rationale": "EMS providers recognize and report concerns; they are not investigators and do not make final determinations.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q02",
+      "question": "What is a central concept for recognizing possibly concerning pediatric injuries?",
+      "options": [
+        "A. The severity of the injury alone",
+        "B. Comparing the stated mechanism/history to the child's developmental capability and the injury pattern",
+        "C. The caregiver's income level",
+        "D. Whether the injury requires hospital transport"
+      ],
+      "correct": 1,
+      "rationale": "History-injury-developmental consistency is a central recognition concept — mismatches raise concern more than severity alone.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q03",
+      "question": "A caregiver reports a non-mobile 2-month-old 'rolled off the couch' and sustained a femur fracture. What should this raise?",
+      "options": [
+        "A. No concern, since falls are common in infants",
+        "B. Concern, since this mechanism is inconsistent with a non-mobile infant's developmental capability",
+        "C. Concern only if the caregiver seems nervous",
+        "D. This should be dismissed unless the child has prior injuries"
+      ],
+      "correct": 1,
+      "rationale": "A non-mobile infant cannot roll off a couch under their own power, making this history inconsistent with the infant's developmental stage and a concern-raising finding.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q04",
+      "question": "Besides mechanism inconsistency, what other general findings may raise concern?",
+      "options": [
+        "A. A history that changes between tellings/caregivers, or an unexplained delay in seeking care",
+        "B. A single bruise on the shin of an active toddler",
+        "C. A caregiver who asks many questions about treatment",
+        "D. A child who is shy during the assessment"
+      ],
+      "correct": 0,
+      "rationale": "A changing history and unexplained delay in seeking care are recognized general concern-raising categories, distinct from common, low-concern findings like a toddler's shin bruise.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q05",
+      "question": "Is any single finding diagnostic of child maltreatment on its own?",
+      "options": [
+        "A. Yes, certain findings are always diagnostic",
+        "B. No — providers document objectively and let appropriate professionals evaluate the full picture",
+        "C. Only bruising is diagnostic",
+        "D. Only fractures are diagnostic"
+      ],
+      "correct": 1,
+      "rationale": "No single finding is diagnostic; the full clinical and social picture must be evaluated by appropriately trained professionals.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q06",
+      "question": "How should EMS providers communicate with caregivers when maltreatment is suspected?",
+      "options": [
+        "A. Confront them directly and accusingly",
+        "B. Calmly, professionally, and non-accusatorially",
+        "C. Refuse to speak with the caregiver at all",
+        "D. Interrogate the caregiver extensively before treating the child"
+      ],
+      "correct": 1,
+      "rationale": "Non-judgmental, professional communication is recommended, since confrontation can compromise the child's care and any subsequent investigation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q07",
+      "question": "What kind of documentation is recommended when maltreatment is suspected?",
+      "options": [
+        "A. Subjective conclusions about the caregiver's guilt",
+        "B. Objective documentation — exact quotes, observed findings, scene details",
+        "C. No documentation, to avoid legal complications",
+        "D. Only a checkbox indicating 'suspected abuse'"
+      ],
+      "correct": 1,
+      "rationale": "Objective, factual documentation (quotes, findings, scene details) is more useful and appropriate than subjective conclusions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q08",
+      "question": "Are EMS providers mandatory reporters of suspected child maltreatment?",
+      "options": [
+        "A. No, reporting is always optional",
+        "B. Yes, in essentially all jurisdictions",
+        "C. Only physicians are mandatory reporters",
+        "D. Only if the child requests it"
+      ],
+      "correct": 1,
+      "rationale": "EMS providers are mandatory reporters in essentially all jurisdictions, legally required to report reasonable suspicion.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q09",
+      "question": "Does this chapter specify exact jurisdiction-specific reporting procedures?",
+      "options": [
+        "A. Yes, in full detail for every state",
+        "B. No — providers must follow their own agency policy and local/state law, which vary by location",
+        "C. Reporting procedures are identical everywhere",
+        "D. This chapter replaces the need for agency policy"
+      ],
+      "correct": 1,
+      "rationale": "Reporting mechanics vary by jurisdiction; this chapter is general and educational, and providers must follow their specific local law and agency policy.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q10",
+      "question": "Who should be involved when suspicion of maltreatment arises during a call?",
+      "options": [
+        "A. No one beyond the treating provider",
+        "B. Medical direction and receiving-facility staff, per local protocol",
+        "C. Only law enforcement, never medical staff",
+        "D. Only the child's school"
+      ],
+      "correct": 1,
+      "rationale": "Medical direction and receiving-facility staff should be involved per local protocol when maltreatment is suspected.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q11",
+      "question": "Should EMS providers confront caregivers directly about suspected maltreatment on scene?",
+      "options": ["A. Yes, always", "B. No — this can compromise the child's care and any investigation", "C. Only if backup is present", "D. Only for severe injuries"],
+      "correct": 1,
+      "rationale": "Direct confrontation is a common mistake to avoid; recognition and reporting are the provider's role, not confrontation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q12",
+      "question": "What is the correct balance between medical care and addressing suspicion of maltreatment on scene?",
+      "options": [
+        "A. Withhold medical care until the suspicion is resolved",
+        "B. Continue standard medical care for the presenting condition while separately documenting and reporting through appropriate channels",
+        "C. Provide care but omit any documentation of concerning findings",
+        "D. Refuse to transport until police arrive"
+      ],
+      "correct": 1,
+      "rationale": "Medical care continues as usual for the child's condition, with concerning findings addressed separately through objective documentation and appropriate reporting.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q13",
+      "question": "A history changes between what the caregiver initially reported and what they report to the receiving facility. What should this be treated as?",
+      "options": [
+        "A. Irrelevant, since minor detail changes are always expected",
+        "B. A potential concern-raising factor, to be documented objectively",
+        "C. Definitive proof of maltreatment",
+        "D. Grounds for immediate confrontation of the caregiver"
+      ],
+      "correct": 1,
+      "rationale": "A changing history is a recognized concern-raising category and should be documented objectively rather than either dismissed or treated as definitive proof.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q14",
+      "question": "Why does PEPP frame this chapter as general and educational rather than providing a definitive checklist for confirming maltreatment?",
+      "options": [
+        "A. Because maltreatment recognition is not important",
+        "B. Because no single finding is diagnostic, and jurisdiction-specific reporting/legal processes vary, requiring providers to rely on local training and policy",
+        "C. Because maltreatment never occurs in prehospital patients",
+        "D. Because only law enforcement needs this training"
+      ],
+      "correct": 1,
+      "rationale": "Given the complexity and jurisdictional variation of this topic, and that no single finding is diagnostic, the chapter deliberately stays general and educational, deferring specifics to local law, agency policy, and specialized training.",
+      "difficulty": "Hard"
+    }
+  ]
+}

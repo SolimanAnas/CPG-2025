@@ -1,0 +1,21 @@
+{
+  "chapter": "c11",
+  "algorithms": [
+    {
+      "id": "c11_alg01",
+      "title": "Newborn Resuscitation Initial Sequence",
+      "description": "Field sequence for assessing and stabilizing a newborn immediately after delivery.",
+      "steps": [
+        "Ask the three initial questions: Term gestation? Good tone? Breathing or crying?",
+        "If all three are yes: keep the newborn with the mother for routine care (dry, warm, skin-to-skin).",
+        "If any answer is no: move the newborn to a warmer.",
+        "Perform the initial steps over about 30 seconds: provide warmth, position the airway, clear secretions only if needed, dry thoroughly, and stimulate.",
+        "Reassess breathing and heart rate.",
+        "If breathing well and heart rate ≥100 bpm: continue routine care and monitoring.",
+        "If apneic/gasping or heart rate <100 bpm: begin positive-pressure ventilation (PPV).",
+        "Reassess heart rate after 30 seconds of effective PPV; if <60 bpm, begin chest compressions coordinated with PPV.",
+        "For detailed medication dosing and advanced steps, follow local neonatal resuscitation protocol (NRP)."
+      ]
+    }
+  ]
+}

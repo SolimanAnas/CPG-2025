@@ -1,0 +1,73 @@
+{
+  "id": "c10",
+  "title": "Surge Capacity, Psychosocial Care & Vulnerable Populations",
+  "shortTitle": "Surge, Psychosocial & CMIST",
+  "estimatedStudyTime": 32,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define surge capacity and the four S's (staff, stuff, space, systems).",
+    "Describe conventional, contingency, and crisis standards of care.",
+    "Recognize the psychological impact of disasters on survivors and responders.",
+    "Describe psychological first aid and responder resilience measures.",
+    "Explain the CMIST framework for at-risk and vulnerable populations.",
+    "Integrate these concepts into recovery and continuity planning."
+  ],
+  "summary": [
+    {
+      "title": "Surge Capacity and the Four S's",
+      "content": "Surge capacity is a health system's ability to rapidly expand beyond normal services to meet a sudden increase in demand. It is built on four pillars — the four S's: Staff (clinical and support personnel, including callback and credentialed volunteers), Stuff (supplies, medications, equipment, PPE), Space (beds, alternate care sites, treatment areas), and Systems (command, communications, tracking, policies). A weakness in any one S caps the whole surge — plenty of beds are useless without staff to work them."
+    },
+    {
+      "title": "Conventional, Contingency, Crisis Standards",
+      "content": "As demand rises, care moves along a continuum. Conventional care uses normal spaces, staff, and supplies. Contingency care uses adaptations that are functionally equivalent — repurposed spaces, substituted equipment, adjusted staffing ratios. Crisis standards of care are reached when demand overwhelms resources despite all adaptations, requiring a formally declared, ethically and legally framed shift to allocating scarce resources for population benefit. The goal throughout is to stay in conventional/contingency as long as possible and enter crisis standards deliberately, not by drift."
+    },
+    {
+      "title": "The Psychological Toll",
+      "content": "Disasters injure minds as well as bodies. Survivors may experience acute stress reactions, grief, anxiety, depression, and later post-traumatic stress; the 'worried well' and psychological casualties can outnumber the physically injured, especially after radiological, chemical, or terrorist events. Pre-existing mental illness may decompensate when medications and routines are lost. Behavioral-health needs are part of the casualty count, not an afterthought."
+    },
+    {
+      "title": "Psychological First Aid and Responder Resilience",
+      "content": "Psychological first aid (PFA) is the evidence-informed early response: ensure safety and basic needs, provide calm and comfort, connect people to loved ones and information, and link them to services — without forcing people to recount trauma. Responders themselves are at risk: cumulative stress, moral distress, and burnout degrade performance and health. Resilience measures include realistic training, work-rest cycles, buddy systems, leadership support, and post-event debriefing and follow-up. The recovery link of the disaster cycle includes caring for the caregivers."
+    },
+    {
+      "title": "Vulnerable Populations and the CMIST Framework",
+      "content": "Disasters fall hardest on those least able to cope. The CMIST framework organizes access and functional needs across populations rather than by diagnosis: Communication (people with limited English, hearing, or vision needs), Maintaining health (those dependent on medications, oxygen, dialysis, or medical devices/power), Independence (people who rely on mobility aids, assistive devices, or personal-care attendants), Support/Safety/Self-determination (people needing supervision, including some with cognitive or psychiatric conditions, and children), and Transportation (those without independent means to evacuate). Planning to CMIST — not to labels — makes response equitable and effective."
+    },
+    {
+      "title": "Tying It Together: Recovery and Continuity",
+      "content": "Surge, psychosocial care, and vulnerable-population planning all extend into the recovery phase. Continuity of operations keeps essential services running and restores the rest. Recovery addresses the long tail: rebuilding, chronic-care continuity, behavioral-health services for survivors and responders, and after-action review to feed lessons back into mitigation and preparedness. A response is not over when the last acute casualty is treated — it is over when the community and its responders have recovered."
+    }
+  ],
+  "clinicalPearls": [
+    "The four S's cap each other: staff, stuff, space, systems — the weakest S limits your surge.",
+    "Enter crisis standards of care deliberately and formally, never by accidental drift.",
+    "After many disasters the psychological casualties outnumber the physical ones — plan behavioral-health capacity.",
+    "Plan to CMIST functional needs, not to diagnostic labels — it captures who actually needs help and how."
+  ],
+  "redFlags": [
+    "Surge plans that count beds (space) but ignore staff and systems.",
+    "Responders showing burnout, moral distress, or acute stress — performance and safety degrade.",
+    "Evacuation plans that strand people dependent on power, dialysis, mobility aids, or transportation."
+  ],
+  "commonMistakes": [
+    "Treating behavioral-health needs as optional rather than as part of the casualty load.",
+    "Forcing survivors to recount their trauma in the name of 'debriefing' — not part of psychological first aid.",
+    "Planning for an 'average' patient and missing the access and functional needs of vulnerable groups."
+  ],
+  "memoryAids": [
+    "Surge = four S's: Staff, Stuff, Space, Systems.",
+    "Standards continuum: Conventional → Contingency → Crisis.",
+    "CMIST: Communication, Maintaining health, Independence, Support/safety/self-determination, Transportation.",
+    "PFA: safety, calm, connectedness, self-efficacy, hope — comfort, don't interrogate."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Escalating Demand and Standards of Care",
+      "content": "Demand rising against capacity\n  → Maximize surge across the four S's: Staff, Stuff, Space, Systems\n  → Conventional care (normal resources) → if exceeded:\n  → Contingency care (functionally equivalent adaptations) → if exceeded:\n  → Crisis standards of care: FORMALLY declared; ethical/legal framework; allocate scarce resources for population benefit\n  → Throughout: address behavioral health (survivors + responders) and CMIST functional needs\n  → De-escalate back toward conventional as resources recover; after-action review"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Surge Capacity and Standards of Care",
+    "NDLSF BDLS v4.0 — Psychosocial Issues and At-Risk/Vulnerable Populations (CMIST)"
+  ]
+}

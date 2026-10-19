@@ -1,0 +1,27 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Common Pediatric Toxidromes",
+      "headers": ["Toxidrome", "Key Findings", "Example Exposure"],
+      "rows": [
+        ["Opioid", "Altered mental status, pinpoint pupils, respiratory depression", "Opioid medication"],
+        ["Anticholinergic", "Altered mental status, dilated pupils, dry flushed skin, tachycardia", "Antihistamines, certain plants"],
+        ["Cholinergic", "Salivation, lacrimation, urination, defecation, GI upset, bradycardia", "Organophosphate pesticides"],
+        ["Sympathomimetic", "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils", "Stimulant medications"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Pediatric Heat Illness vs Hypothermia — Key Field Differences",
+      "headers": ["Feature", "Heat Illness", "Hypothermia"],
+      "rows": [
+        ["Skin", "Hot, flushed (or pale/clammy in heat exhaustion)", "Cool/cold, pale"],
+        ["Mental status", "May be altered in severe heat stroke", "May be altered in severe hypothermia"],
+        ["Key risk factor", "Hot vehicle, high ambient temperature, limited sweating", "Cold exposure, limited shivering (infants)"],
+        ["Field priority", "Remove from heat, active cooling, ABC support", "Remove from cold, gentle rewarming, ABC support"]
+      ]
+    }
+  ]
+}

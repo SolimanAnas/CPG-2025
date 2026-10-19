@@ -1,0 +1,74 @@
+{
+  "id": "c01",
+  "title": "Why Children Are Different: Developmental & Anatomic Considerations",
+  "shortTitle": "Why Children Are Different",
+  "estimatedStudyTime": 26,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Explain why 'children are not small adults' as an organizing principle of pediatric prehospital care.",
+    "Describe key airway anatomic differences between children and adults.",
+    "Describe key differences in pediatric breathing mechanics and metabolic demand.",
+    "Describe key differences in pediatric circulating blood volume and compensatory capacity.",
+    "Relate developmental stage to communication and cooperation during assessment.",
+    "Use age-banded normal vital signs as a baseline for recognizing abnormal findings."
+  ],
+  "summary": [
+    {
+      "title": "Children Are Not Small Adults",
+      "content": "The single organizing idea behind PEPP is that children differ from adults anatomically, physiologically, developmentally, and psychosocially — not just in size. A treatment or assessment approach scaled down from an adult protocol without accounting for these differences will miss findings or cause harm. This chapter lays the anatomic and developmental groundwork that every later PEPP chapter builds on."
+    },
+    {
+      "title": "Airway: Small, Anterior, and Easily Obstructed",
+      "content": "A child's tongue is proportionally larger relative to the oropharynx, the airway is narrower at every level, and the larynx sits more anterior and cephalad (higher in the neck) than in an adult. The narrowest part of the pediatric airway is subglottic (below the vocal cords) in young children, unlike the adult airway, which narrows at the cords. These differences make children more prone to airway obstruction from secretions, a large tongue, or swelling, and require different airway-positioning and equipment-sizing approaches than adult care."
+    },
+    {
+      "title": "Breathing: Higher Demand, Less Reserve",
+      "content": "Children have a higher metabolic rate and oxygen consumption per kilogram than adults, but smaller functional residual capacity (oxygen reserve in the lungs). Infants are primarily diaphragmatic breathers with a more compliant (flexible) chest wall, meaning they generate less effective negative pressure and fatigue faster during increased work of breathing. The practical result: children desaturate faster than adults when breathing is compromised, and respiratory problems are the leading pathway to pediatric cardiac arrest."
+    },
+    {
+      "title": "Circulation: Small Volume, Strong Compensation, Then Collapse",
+      "content": "A child's absolute circulating blood volume is small, so even modest-seeming blood or fluid losses represent a larger percentage of total volume than the same loss would in an adult. Children compensate remarkably well for volume loss through tachycardia and vasoconstriction, often maintaining a normal blood pressure until a large percentage of volume is lost — meaning blood pressure is a late and unreliable early warning sign in children. When compensation fails, children can decompensate rapidly and with little warning."
+    },
+    {
+      "title": "Developmental Stage Shapes the Encounter",
+      "content": "How a child responds to assessment, and how a provider should approach them, changes by developmental stage: infants respond to caregivers' calm presence and are assessed largely by observation; toddlers and preschoolers fear separation from caregivers and unfamiliar equipment, and benefit from keeping the caregiver close and demonstrating equipment on a doll or the caregiver first; school-age children can usually cooperate with direct, honest explanation; adolescents want privacy, respect, and honesty, and may be interviewed partly apart from caregivers. Matching the approach to developmental stage improves both cooperation and the accuracy of the assessment."
+    },
+    {
+      "title": "Why Age-Banded Vital Signs Matter",
+      "content": "Because normal heart rate, respiratory rate, and blood pressure change substantially across childhood, a single 'normal vitals' reference is useless in pediatrics. Every vital sign must be interpreted against the age-appropriate normal range (see the table in this chapter), and — critically — trends and the overall clinical picture (the Pediatric Assessment Triangle, covered next chapter) matter more than any single vital sign in isolation."
+    }
+  ],
+  "clinicalPearls": [
+    "'Children are not small adults' — anatomic, physiologic, developmental, and psychosocial differences change assessment and care at every step.",
+    "The pediatric airway's narrowest point is subglottic, below the vocal cords, unlike the adult airway.",
+    "Respiratory problems are the leading pathway to pediatric cardiac arrest — protecting breathing protects the whole child.",
+    "Blood pressure is a late sign in pediatric shock; children compensate well, then decompensate fast.",
+    "Match your approach to developmental stage — a toddler and an adolescent need very different communication styles."
+  ],
+  "redFlags": [
+    "Using an unmodified adult mental model for airway, breathing, or circulation assessment in a child.",
+    "Reassurance from a 'normal' blood pressure in a child with tachycardia and other perfusion concerns.",
+    "Approaching a toddler by separating them from a caregiver or leading with unfamiliar equipment."
+  ],
+  "commonMistakes": [
+    "Treating a single vital sign as normal or abnormal without checking it against the age-appropriate range.",
+    "Assuming a calm-appearing infant is not working hard to breathe, when diaphragmatic breathing and chest-wall compliance mask early distress.",
+    "Ignoring developmental stage and using the same communication approach for a toddler and a teenager."
+  ],
+  "memoryAids": [
+    "Children are not small adults — different anatomy, physiology, development, and psychosocial needs.",
+    "Pediatric airway = narrow, anterior, subglottic narrowest point.",
+    "Compensate hard, then collapse fast — blood pressure lags in pediatric shock.",
+    "Match communication to developmental stage, not just to age in years."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Applying Age-Appropriate Context to Any Finding",
+      "content": "Vital sign or exam finding obtained\n  → Identify the child's age band (see Age-Banded Normal Vital Signs table)\n  → Compare the finding to that age band's normal range — NOT an adult or generic pediatric range\n  → Consider developmental stage for how the assessment itself was obtained (cooperative vs. observed-only)\n  → Weigh the finding within the overall clinical gestalt (Pediatric Assessment Triangle), not in isolation"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Developmental and Anatomic Considerations",
+    "courses/pals/data/pals/tables/c01.json — Age-Banded Normal Pediatric Vital Signs (reused exactly)"
+  ]
+}

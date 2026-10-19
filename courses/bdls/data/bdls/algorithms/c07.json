@@ -1,0 +1,33 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Chemical Scene Response Sequence",
+      "description": "From detection through decontamination and toxidrome-based care.",
+      "steps": [
+        "Detect: casualty cluster + one location + similar sudden symptoms (± odors, dead animals) = chemical release.",
+        "Stage uphill, upwind, upstream; no unprotected entry; establish hot/warm/cold zones.",
+        "Direct ambulatory casualties to the decon corridor; protected teams extract the rest.",
+        "Decontaminate: clothing off (removes most contamination), brush dry agents, then copious head-to-toe water.",
+        "Triage with SALT; give antidote auto-injectors during lifesaving interventions for the cholinergic toxidrome.",
+        "Treat by toxidrome in the cold zone: nerve agent → atropine (titrate to secretions) + pralidoxime + benzodiazepines; cyanide → hydroxocobalamin; pulmonary agents/vesicants → oxygen and supportive care.",
+        "Notify hospitals of agent and decon status; intercept self-presenters for decon outside the ED.",
+        "Observe exposures with delayed-onset potential (phosgene, chlorine, mustard)."
+      ]
+    },
+    {
+      "id": "c07_alg02",
+      "title": "Casualty Decontamination Sequence",
+      "description": "Gross decontamination in the warm zone.",
+      "steps": [
+        "Remove casualties from the source; prioritize symptomatic liquid exposures for immediate decon.",
+        "Remove all clothing and jewelry — bag and label as contaminated evidence.",
+        "Brush off any dry/powdered agent before water.",
+        "Flush with copious water head to toe (gentle soap for oily agents); protect airway; mind runoff.",
+        "Move the deconned casualty across the line into the cold zone for full assessment and care.",
+        "Never allow undeconned casualties or their clothing into clean areas or the ED."
+      ]
+    }
+  ]
+}

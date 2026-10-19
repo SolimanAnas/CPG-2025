@@ -1,0 +1,28 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "The Four Phases of the Disaster Cycle",
+      "headers": ["Phase", "When", "Examples"],
+      "rows": [
+        ["Mitigation", "Before (ongoing)", "Building codes, flood barriers, immunization programs"],
+        ["Preparedness", "Before", "Plans, drills, training, stockpiles, family go-kits"],
+        ["Response", "During / immediately after", "Incident command, triage, treatment, evacuation"],
+        ["Recovery", "After (weeks to years)", "Restoring services, rebuilding, mental-health support, lessons learned"]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "Everyday Emergency Care vs Disaster Care",
+      "headers": ["Aspect", "Everyday Care", "Disaster Care"],
+      "rows": [
+        ["Goal", "Maximal care for each patient", "Greatest good for the greatest number"],
+        ["Resources", "Assumed adequate", "Explicitly limited; allocated by triage"],
+        ["Documentation", "Complete records", "Abbreviated (triage tags)"],
+        ["Roles", "Fixed daily roles", "Flexible, assigned by incident command"],
+        ["Care standard", "Conventional", "May shift to contingency or crisis standards"]
+      ]
+    }
+  ]
+}

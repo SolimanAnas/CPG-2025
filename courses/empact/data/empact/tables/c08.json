@@ -1,0 +1,26 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "Abdominal Pain Location Differential",
+      "headers": ["Location", "Classic Diagnosis", "Notes"],
+      "rows": [
+        ["Periumbilical → RLQ", "Appendicitis", "Migration pattern over hours to ~2 days"],
+        ["Right upper quadrant (RUQ)", "Cholecystitis", "Gallbladder inflammation"],
+        ["Left lower quadrant (LLQ)", "Diverticulitis", "Especially in older adults"],
+        ["Epigastric radiating to back", "Pancreatitis", "Often with nausea/vomiting"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "Non-Abdominal Mimics of Abdominal Pain",
+      "headers": ["True Cause", "Presents As", "Key Screening Step"],
+      "rows": [
+        ["Inferior MI", "Epigastric discomfort, nausea", "12-lead ECG in at-risk patients"],
+        ["Diabetic ketoacidosis", "Abdominal pain, Kussmaul respirations", "Blood glucose check"],
+        ["Lower lobe pneumonia", "Upper abdominal pain (diaphragmatic irritation)", "Lung sounds, respiratory assessment"]
+      ]
+    }
+  ]
+}

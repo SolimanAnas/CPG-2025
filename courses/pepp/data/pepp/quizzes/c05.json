@@ -1,0 +1,170 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "What best distinguishes respiratory distress from respiratory failure?",
+      "options": [
+        "A. Distress means compensating with adequate oxygenation/mentation; failure means compensation has failed",
+        "B. Distress always requires intubation; failure never does",
+        "C. Distress only occurs in infants; failure only in adolescents",
+        "D. There is no clinical difference"
+      ],
+      "correct": 0,
+      "rationale": "Respiratory distress is a compensated state (increased work of breathing but adequate oxygenation/mentation); respiratory failure is a decompensated state where oxygenation/ventilation is now inadequate.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "Which finding is classic for upper airway obstruction?",
+      "options": ["A. Wheezing", "B. Stridor", "C. Crackles", "D. Irregular rate with no abnormal sound"],
+      "correct": 1,
+      "rationale": "Upper airway obstruction (e.g., croup, foreign body, epiglottitis) classically produces stridor.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q03",
+      "question": "Which finding is classic for lower airway disease?",
+      "options": ["A. Stridor", "B. Wheezing with prolonged expiration", "C. Grunting", "D. Lethargy alone"],
+      "correct": 1,
+      "rationale": "Lower airway disease (e.g., asthma, bronchiolitis) classically produces wheezing with prolonged expiration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q04",
+      "question": "Which findings are classic for lung tissue (parenchymal) disease?",
+      "options": ["A. Stridor and barking cough", "B. Wheezing only", "C. Grunting, crackles, and diminished breath sounds", "D. No abnormal sounds at all"],
+      "correct": 2,
+      "rationale": "Parenchymal disease (e.g., pneumonia, pulmonary edema) classically produces grunting, crackles, and diminished breath sounds.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "What characterizes disordered control of breathing?",
+      "options": [
+        "A. Stridor with barking cough",
+        "B. Wheezing with prolonged expiration",
+        "C. An irregular rate/pattern without the classic sounds of the other three categories",
+        "D. Grunting and crackles"
+      ],
+      "correct": 2,
+      "rationale": "Disordered control of breathing (from a CNS problem, toxin, or neuromuscular disease) causes an irregular rate/pattern without the classic sounds seen in the other three categories.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "A child who was struggling hard to breathe now appears to have less work of breathing. What should this prompt?",
+      "options": [
+        "A. Immediate reassurance that the child is improving",
+        "B. Suspicion of exhaustion/impending failure rather than automatic reassurance",
+        "C. Discharge from EMS care",
+        "D. No further assessment is needed"
+      ],
+      "correct": 1,
+      "rationale": "Decreasing work of breathing in a previously struggling child can reflect exhaustion rather than improvement — a dangerous, easily misread sign requiring close reassessment.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q07",
+      "question": "Which PAT change suggests impending respiratory failure?",
+      "options": [
+        "A. Appearance shifting from anxious/agitated to lethargic",
+        "B. Appearance shifting from lethargic to anxious",
+        "C. Improved skin color",
+        "D. No PAT change is relevant"
+      ],
+      "correct": 0,
+      "rationale": "A shift in Appearance from anxious/agitated to lethargic on repeat PAT is a warning sign of impending respiratory failure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "Should a provider wait for SpO2 to drop before escalating respiratory support?",
+      "options": [
+        "A. Yes, SpO2 is the only reliable indicator",
+        "B. No — other findings often precede a measurable SpO2 drop and should prompt earlier escalation",
+        "C. Only in infants",
+        "D. Only during interfacility transport"
+      ],
+      "correct": 1,
+      "rationale": "Grunting, decreasing WOB after struggling, and PAT Appearance changes often precede a measurable drop in SpO2 and should prompt escalation before saturation falls.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "What is appropriate field management for respiratory distress (not failure)?",
+      "options": [
+        "A. Immediate bag-mask ventilation for all patients",
+        "B. Positioning of comfort, supplemental oxygen, and category-targeted treatment with close monitoring",
+        "C. No treatment until arrival at the hospital",
+        "D. Immediate advanced airway placement"
+      ],
+      "correct": 1,
+      "rationale": "Distress is managed with positioning of comfort, oxygen, and treatment targeted to the likely category, with close monitoring for transition to failure.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q10",
+      "question": "What is appropriate field management for respiratory failure?",
+      "options": [
+        "A. Positioning of comfort and observation only",
+        "B. Assisted ventilation (BVM with high-flow oxygen) and rapid transport",
+        "C. Withholding oxygen until intubation",
+        "D. Discharge at scene"
+      ],
+      "correct": 1,
+      "rationale": "Respiratory failure requires assisted ventilation with high-flow oxygen and rapid transport; PEPP frames deeper airway/arrest management as PALS-reviewer content.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q11",
+      "question": "Where does PEPP direct providers for drug-assisted airway management and arrest-specific ventilation parameters?",
+      "options": ["A. The BLS reviewer", "B. The PALS reviewer", "C. This is fully covered in PEPP itself", "D. No resource is referenced"],
+      "correct": 1,
+      "rationale": "PEPP frames respiratory failure management as field recognition and initial stabilization, deferring drug-assisted airway management and arrest-specific ventilation depth to the PALS reviewer.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q12",
+      "question": "Why are respiratory problems especially significant in pediatric prehospital care?",
+      "options": [
+        "A. They are the leading pathway to pediatric cardiac arrest",
+        "B. They never progress to failure in children",
+        "C. They are less common in children than adults",
+        "D. They have no relationship to cardiac arrest in children"
+      ],
+      "correct": 0,
+      "rationale": "Unlike adults, where a primary cardiac event is more common, respiratory problems are the leading pathway to pediatric cardiac arrest, making early recognition high-yield.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q13",
+      "question": "Why is categorizing a respiratory problem by mechanism (upper airway, lower airway, tissue, control) clinically useful?",
+      "options": [
+        "A. It has no treatment implications",
+        "B. It guides both expected exam findings and which field treatment is appropriate",
+        "C. It only matters for documentation",
+        "D. It replaces the need for a primary assessment"
+      ],
+      "correct": 1,
+      "rationale": "Categorizing by mechanism helps providers anticipate exam findings and select the appropriate targeted treatment (e.g., bronchodilator for lower airway disease).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "A toddler has stridor and a barking cough. Which category of respiratory compromise is most likely?",
+      "options": ["A. Lower airway disease", "B. Upper airway obstruction", "C. Lung tissue disease", "D. Disordered control of breathing"],
+      "correct": 1,
+      "rationale": "Stridor with a barking cough is classic for upper airway obstruction, such as croup.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q15",
+      "question": "An infant has an irregular breathing pattern with no wheeze, stridor, grunting, or crackles, following a suspected toxic ingestion. Which category fits best?",
+      "options": ["A. Upper airway obstruction", "B. Lower airway disease", "C. Lung tissue disease", "D. Disordered control of breathing"],
+      "correct": 3,
+      "rationale": "An irregular rate/pattern without classic sounds, especially with a toxin as the suspected cause, fits disordered control of breathing.",
+      "difficulty": "Hard"
+    }
+  ]
+}

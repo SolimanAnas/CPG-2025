@@ -1,0 +1,19 @@
+{
+  "chapter": "c07",
+  "cards": [
+    { "id": "c07_fc01", "question": "What is a delusion?", "answer": "A fixed, false belief that persists despite clear evidence against it.", "category": "Psychotic" },
+    { "id": "c07_fc02", "question": "What is a hallucination?", "answer": "A false sensory perception with no external stimulus (e.g., hearing or seeing something that isn't there).", "category": "Psychotic" },
+    { "id": "c07_fc03", "question": "What is the key difference between a delusion and a hallucination?", "answer": "A delusion involves belief; a hallucination involves sensory perception.", "category": "Psychotic" },
+    { "id": "c07_fc04", "question": "What causes can produce psychotic symptoms?", "answer": "Primary psychotic disorders (e.g., schizophrenia), mood disorders with psychotic features, or an organic/medical cause (substance intoxication/withdrawal, delirium).", "category": "Psychotic" },
+    { "id": "c07_fc05", "question": "Are prehospital providers expected to diagnose the underlying cause of psychotic symptoms?", "answer": "No — the priority is safe assessment, ruling out organic/reversible causes when feasible, and safe transport.", "category": "Psychotic" },
+    { "id": "c07_fc06", "question": "What are core features of a major depressive episode?", "answer": "Persistent low mood, loss of interest/pleasure, changes in sleep/appetite, low energy, and possibly suicidal ideation.", "category": "Mood Disorders" },
+    { "id": "c07_fc07", "question": "What are core features of a manic episode?", "answer": "Elevated or irritable mood, decreased need for sleep, rapid/pressured speech, grandiosity, and risky or impulsive behavior.", "category": "Mood Disorders" },
+    { "id": "c07_fc08", "question": "Why is mania field-relevant beyond the mood change itself?", "answer": "Impaired judgment during mania can create acute safety risks — reckless behavior, risk-taking, occasionally aggression if grandiose beliefs are challenged.", "category": "Mood Disorders" },
+    { "id": "c07_fc09", "question": "What symptoms characterize a panic attack?", "answer": "Recurrent, discrete episodes of intense fear with tachycardia, dyspnea, chest tightness, dizziness, and a sense of impending doom.", "category": "Panic/PTSD" },
+    { "id": "c07_fc10", "question": "Should a patient's chest pain/dyspnea be assumed to be 'just a panic attack' based on history alone?", "answer": "No — true medical emergencies should still be ruled out (ECG, vitals, glucose), since panic attacks can mimic or coexist with real medical emergencies.", "category": "Panic/PTSD" },
+    { "id": "c07_fc11", "question": "What are core features of PTSD?", "answer": "Re-experiencing symptoms, avoidance, negative mood/cognition changes, and hyperarousal following a traumatic event.", "category": "Panic/PTSD" },
+    { "id": "c07_fc12", "question": "Why might aspects of the EMS encounter itself trigger or worsen PTSD symptoms?", "answer": "Uniforms, restraint, or physical contact can serve as trauma reminders — explaining actions calmly before performing them can help.", "category": "Panic/PTSD" },
+    { "id": "c07_fc13", "question": "Does asking a patient directly about suicidal thoughts increase their risk?", "answer": "No — direct, non-judgmental questioning does not increase risk and is appropriate when clinically indicated.", "category": "Suicide Risk" },
+    { "id": "c07_fc14", "question": "What factors make a suicidal patient a high-risk presentation?", "answer": "A specific plan, access to lethal means, or a prior attempt history.", "category": "Suicide Risk" }
+  ]
+}

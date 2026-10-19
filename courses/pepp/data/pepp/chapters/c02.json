@@ -1,0 +1,73 @@
+{
+  "id": "c02",
+  "title": "The Pediatric Assessment Triangle",
+  "shortTitle": "Pediatric Assessment Triangle",
+  "estimatedStudyTime": 35,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Define the Pediatric Assessment Triangle (PAT) and its three legs.",
+    "Assess Appearance using observable behavioral characteristics.",
+    "Assess Work of Breathing using visual and auditory cues, without a stethoscope.",
+    "Assess Circulation to Skin using color and temperature cues.",
+    "Use the PAT to form a general impression of 'sick vs. not sick' and likely physiologic category.",
+    "Explain why the PAT is performed before, not instead of, hands-on primary assessment."
+  ],
+  "summary": [
+    {
+      "title": "What the PAT Is",
+      "content": "The Pediatric Assessment Triangle (PAT) is PEPP's signature tool: a rapid, hands-off, across-the-room visual and auditory assessment performed within the first seconds of encountering a child, before you ever touch the patient. It has three legs — Appearance, Work of Breathing, and Circulation to Skin — assessed together to form a general impression of how sick the child is and which body system is likely involved, guiding the pace and priority of everything that follows."
+    },
+    {
+      "title": "Leg 1 — Appearance",
+      "content": "Appearance captures the child's overall level of interaction with the environment and is often summarized with the mnemonic TICLS: Tone (moving spontaneously or limp), Interactiveness (alert and engaged, or uninterested), Consolability (can they be comforted, or are they inconsolable), Look/Gaze (do they fix their gaze on you or a caregiver, or stare blankly), and Speech/Cry (strong and appropriate for age, or weak/muffled/absent). Appearance is the single most sensitive PAT leg for detecting adequacy of oxygenation, ventilation, brain perfusion, and CNS function — an abnormal Appearance is a red flag even when the other two legs look normal."
+    },
+    {
+      "title": "Leg 2 — Work of Breathing",
+      "content": "Work of Breathing is assessed by listening and looking, without a stethoscope: abnormal airway sounds (stridor, grunting, wheezing, muffled voice), abnormal positioning (tripod position, sniffing position, refusal to lie down), retractions (visible pulling in at the suprasternal, intercostal, or subcostal areas), and nasal flaring or head bobbing. Work of Breathing reflects the child's effort to compensate for an oxygenation or ventilation problem, and increases before oxygen saturation necessarily falls — it is an early window into respiratory status."
+    },
+    {
+      "title": "Leg 3 — Circulation to Skin",
+      "content": "Circulation to Skin assesses perfusion by looking at skin and mucous membrane color: pallor (pale, poor perfusion), mottling (patchy discoloration), and cyanosis (bluish, indicating significant hypoxemia), assessed against the child's baseline skin tone in adequate lighting. This leg reflects how well the core is perfusing the periphery and is an early clue to shock, sometimes appearing before other perfusion signs are measurable."
+    },
+    {
+      "title": "Putting the Three Legs Together",
+      "content": "No single leg is assessed in isolation — the pattern across all three legs points toward a likely physiologic category. Abnormal Appearance with normal Work of Breathing and Circulation suggests a primarily CNS/metabolic problem. Abnormal Appearance and Work of Breathing with normal Circulation suggests a respiratory problem. Abnormal Appearance and Circulation with normal Work of Breathing suggests a circulatory/shock problem. Abnormal findings across all three legs suggest a severe, multi-system problem (cardiopulmonary failure) requiring the most urgent response. This pattern recognition takes seconds and drives the pace of everything that follows."
+    },
+    {
+      "title": "The PAT Comes First, Not Instead",
+      "content": "The PAT is completed before hands-on primary assessment (ABCDE) begins — it sets the general impression and urgency level that shapes how quickly and in what order the primary assessment proceeds, but it does not replace it. A child who looks fine on PAT still gets a full primary assessment; a child who looks critically ill on PAT gets that primary assessment started immediately and rapidly, potentially with simultaneous life-saving interventions. The PAT is the 'from the doorway' first 15 seconds of every pediatric encounter in PEPP."
+    }
+  ],
+  "clinicalPearls": [
+    "PAT = Appearance + Work of Breathing + Circulation to Skin — hands-off, done from across the room, in the first seconds of contact.",
+    "TICLS for Appearance: Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry.",
+    "Abnormal Appearance alone, even with normal breathing and circulation, is a red flag — it's the most sensitive PAT leg.",
+    "The PAT sets your pace; it never replaces the hands-on primary assessment that follows it."
+  ],
+  "redFlags": [
+    "An inconsolable, limp, or gaze-unfocused child (abnormal Appearance) — treat as high acuity regardless of vital signs not yet obtained.",
+    "Retractions, grunting, or head bobbing (abnormal Work of Breathing) — signs of significant respiratory effort, act before full desaturation occurs.",
+    "Mottled or cyanotic skin (abnormal Circulation to Skin) — a perfusion problem is already underway."
+  ],
+  "commonMistakes": [
+    "Reaching for a stethoscope or BP cuff before completing the hands-off PAT.",
+    "Treating one PAT leg as the whole picture instead of reading the pattern across all three.",
+    "Skipping the primary assessment because the PAT looked reassuring."
+  ],
+  "memoryAids": [
+    "PAT legs: Appearance, Work of Breathing, Circulation to Skin.",
+    "TICLS: Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry.",
+    "1 abnormal leg = CNS/metabolic; 2 legs (Appearance+WOB) = respiratory; 2 legs (Appearance+Circ) = shock; all 3 = cardiopulmonary failure.",
+    "PAT is the first 15 seconds — from the doorway, before you touch the child."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Assessment Triangle Pattern Recognition",
+      "content": "From across the room, assess all three legs simultaneously:\n  Appearance (TICLS) | Work of Breathing | Circulation to Skin\n\nPattern → Likely category:\n  Abnormal Appearance ONLY → CNS/metabolic problem\n  Abnormal Appearance + Work of Breathing → Respiratory problem\n  Abnormal Appearance + Circulation → Shock (circulatory problem)\n  Abnormal ALL THREE → Cardiopulmonary failure (highest urgency)\n  All THREE normal → Stable general impression, proceed to routine primary assessment\n\n  → In every case, PAT sets urgency, then proceed to full ABCDE primary assessment"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — The Pediatric Assessment Triangle",
+    "courses/pals/data/pals/tables/c01.json — Pediatric Assessment Triangle: Components and Findings (cross-referenced, not duplicated verbatim)"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "Just the Cancer? Not This Time",
+      "presentation": "A 64-year-old woman with known lung cancer reports three days of worsening shortness of breath. Her family assumes it is 'just the cancer progressing.' On exam, you find decreased breath sounds and dullness to percussion at her right lung base.",
+      "vitals": { "hr": "102 bpm", "rr": "24 bpm", "spo2": "91%", "exam": "Decreased breath sounds, dullness right base" },
+      "question": "What should be high on your differential, and why shouldn't you simply defer to the family's assumption?",
+      "options": [
+        "A: Accept that it is disease progression and transport without further assessment.",
+        "B: Consider pleural effusion, which is often associated with lung cancer — a specific, potentially treatable finding, not just vague 'progression.'",
+        "C: Assume anxiety is the cause.",
+        "D: Assume dehydration is the cause."
+      ],
+      "correct": 1,
+      "explanation": "Pleural effusion is frequently associated with lung cancer, and her decreased breath sounds and dullness to percussion at the base fit this specific, identifiable, and often treatable diagnosis. Accepting 'it's just the cancer' as a catch-all would miss a finding worth actively naming and reporting.",
+      "clinicalPearl": "'Just the cancer' is not a diagnosis — pleural effusion is, and it's common in exactly this patient."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Two Diagnoses, One New Symptom",
+      "presentation": "A 71-year-old man with a history of mediastinal lymphoma undergoing chemotherapy reports new dyspnea on exertion. Exam reveals both muffled heart tones with JVD and decreased breath sounds at one lung base.",
+      "vitals": { "hr": "112 bpm", "bp": "94/64 mmHg", "rr": "22 bpm", "exam": "JVD, muffled heart tones, decreased breath sounds one side" },
+      "question": "What two related oncology-associated complications should both be on your differential?",
+      "options": [
+        "A: Only anxiety — no specific pathology need be considered.",
+        "B: Cardiac tamponade (Beck's triad: JVD, muffled heart tones, hypotension) AND pleural effusion — both recognized complications in mediastinal cancer/chemotherapy patients.",
+        "C: Only appendicitis.",
+        "D: Only a simple upper respiratory infection."
+      ],
+      "correct": 1,
+      "explanation": "Mediastinal cancer patients on chemotherapy carry elevated risk for both pericardial effusion (tamponade, marked by Beck's triad) and pleural effusion. This patient shows findings suggestive of both, and both should be actively assessed and reported rather than assuming a single simple cause.",
+      "clinicalPearl": "In mediastinal cancer, effusions can hit both the pericardium and the pleura — check for both Beck's triad and lung findings."
+    },
+    {
+      "id": "c10_s03",
+      "title": "The Whole Course, One Patient",
+      "presentation": "A 68-year-old man with diabetes, a history of dialysis, and recently diagnosed lung cancer calls because he 'just doesn't feel right,' with no single specific complaint. His daughter, at his side, mentions he missed his last dialysis appointment.",
+      "vitals": { "hr": "96 bpm, irregular", "bp": "128/78 mmHg", "glucose": "Not yet checked", "loc": "Alert, vague complaints" },
+      "question": "Applying the course's full assessment approach, what should guide your evaluation?",
+      "options": [
+        "A: Assume it is only cancer-related fatigue and transport without further workup.",
+        "B: Use the systematic approach: check glucose (diabetic emergency), assess for hyperkalemia given missed dialysis, ask about ADL changes and get a careful history via active listening, and keep a wide differential rather than anchoring on any one diagnosis.",
+        "C: Only ask about his cancer symptoms.",
+        "D: Skip the physical exam since the complaint is vague."
+      ],
+      "correct": 1,
+      "explanation": "This patient embodies the course's central lesson: with multiple overlapping conditions (diabetes, dialysis, cancer) and a vague complaint, the systematic, unanchored approach — glucose check, hyperkalemia screening given missed dialysis, ADL-focused history, active listening, and trusting your exam — is what actually finds the answer, rather than assuming any single label explains everything.",
+      "clinicalPearl": "The vaguer the complaint and the longer the problem list, the more the systematic approach — not a shortcut — is what saves the patient."
+    }
+  ]
+}

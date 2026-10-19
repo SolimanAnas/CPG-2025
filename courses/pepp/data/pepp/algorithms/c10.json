@@ -1,0 +1,31 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "Suspected Pediatric Ingestion/Exposure Field Approach",
+      "description": "Sequence for assessing and managing a suspected toxic ingestion or exposure.",
+      "steps": [
+        "Ensure scene safety, especially for exposures involving chemicals or gases.",
+        "Identify the substance, amount, and time of exposure when possible; collect containers/pills/remnants to bring to the hospital.",
+        "Assess for toxidrome patterns (e.g., altered mental status + pinpoint pupils + respiratory depression suggesting opioid exposure) to guide urgency even without definitive identification.",
+        "If button battery ingestion is suspected: treat as a time-critical emergency regardless of current symptoms — rapid transport and hospital notification.",
+        "Support airway, breathing, and circulation as needed.",
+        "Transport promptly, bringing all identified substances/containers with the patient."
+      ]
+    },
+    {
+      "id": "c10_alg02",
+      "title": "Pediatric Submersion (Drowning) Field Management",
+      "description": "Sequence for managing a child after a submersion event.",
+      "steps": [
+        "Ensure rescuer safety before entering the water/scene.",
+        "Remove the child from the water and begin airway/breathing support immediately — treat hypoxia as the core problem.",
+        "Apply spinal motion restriction only if the mechanism suggests trauma (e.g., diving injury).",
+        "Assess for hypothermia and begin gentle rewarming if present.",
+        "Transport for observation even if the child currently appears well, since pulmonary complications can evolve over hours.",
+        "Reassess respiratory status continuously during transport."
+      ]
+    }
+  ]
+}

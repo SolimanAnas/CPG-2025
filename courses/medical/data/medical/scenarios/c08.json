@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Three Days Since the Last Drink",
+      "presentation": "A 52-year-old man with a history of heavy alcohol use is found by family severely confused, tremulous, diaphoretic, and reportedly 'seeing bugs crawling on the walls.' Family reports his last drink was about 72 hours ago.",
+      "vitals": { "hr": "128 bpm", "bp": "168/98 mmHg", "temp": "38.6°C", "appearance": "Severely confused, tremulous, diaphoretic" },
+      "question": "What should this presentation be recognized as, and how should it be managed?",
+      "options": [
+        "A: Mild, expected alcohol withdrawal requiring only reassurance and observation.",
+        "B: Delirium tremens — a life-threatening emergency requiring prompt recognition, supportive care (IV access, monitoring), and transport.",
+        "C: A primary psychiatric break unrelated to his alcohol use.",
+        "D: A normal finding requiring no intervention."
+      ],
+      "correct": 1,
+      "explanation": "Severe confusion, autonomic instability (tachycardia, hypertension, fever, diaphoresis), tremor, and tactile hallucinations beginning 72 hours after the last drink are classic for delirium tremens — a true, life-threatening medical emergency, not simple withdrawal to be managed with reassurance alone.",
+      "clinicalPearl": "DTs shows up days later, not hours later — and it's a real medical emergency, not just 'bad withdrawal.'"
+    },
+    {
+      "id": "c08_s02",
+      "title": "Pinpoint Pupils and Slow Breathing",
+      "presentation": "A 24-year-old man is found unresponsive with slow, shallow respirations and pinpoint pupils near a scene with drug paraphernalia present.",
+      "vitals": { "rr": "6/min, shallow", "pupils": "Pinpoint, bilateral", "spo2": "82% room air" },
+      "question": "What is the correct field priority?",
+      "options": [
+        "A: Focus primarily on obtaining a full medication history before intervening.",
+        "B: Treat as opioid intoxication and prioritize airway/ventilation support immediately, since this is fundamentally a respiratory emergency.",
+        "C: Assume a primary cardiac event and prepare for defibrillation.",
+        "D: Wait for family to arrive before starting any intervention."
+      ],
+      "correct": 1,
+      "explanation": "Pinpoint pupils, respiratory depression, and altered mental status near drug paraphernalia are classic for opioid intoxication. This is fundamentally a respiratory/airway emergency, and ventilatory support is the immediate priority (with naloxone administration per local protocol as adjunct treatment).",
+      "clinicalPearl": "Pinpoint pupils plus slow breathing is a breathing emergency first — support ventilation, don't wait on history-taking."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Palpitations in a Patient With Anorexia",
+      "presentation": "A 19-year-old woman with a known history of anorexia nervosa reports palpitations and lightheadedness. A new EMT suggests this is 'just anxiety' given her psychiatric history and considers skipping cardiac assessment.",
+      "vitals": { "hr": "irregular, 118 bpm", "appearance": "Thin, fatigued" },
+      "question": "What is the correct approach?",
+      "options": [
+        "A: Treat this as anxiety related to her eating disorder and skip cardiac evaluation.",
+        "B: Evaluate her cardiac symptoms with the same seriousness as any other patient, including ECG/monitoring where available, given the real arrhythmia risk from electrolyte disturbances in eating disorders.",
+        "C: Refuse assessment since her presentation is primarily psychiatric.",
+        "D: Only check her weight and skip vital signs."
+      ],
+      "correct": 1,
+      "explanation": "Patients with eating disorders carry genuine cardiac arrhythmia risk from electrolyte disturbances such as hypokalemia. Palpitations and lightheadedness in this population should be evaluated with full medical seriousness, including ECG monitoring where available, rather than being dismissed as purely anxiety-related.",
+      "clinicalPearl": "Eating disorder plus cardiac symptoms is a real medical emergency risk — don't let the psychiatric history distract from a genuine arrhythmia workup."
+    }
+  ]
+}

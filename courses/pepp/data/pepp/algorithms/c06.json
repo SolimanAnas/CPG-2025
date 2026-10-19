@@ -1,0 +1,33 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "Pediatric Shock Recognition",
+      "description": "Sequence for recognizing shock from perfusion findings rather than waiting for hypotension.",
+      "steps": [
+        "Complete the PAT, noting Appearance and Circulation to Skin.",
+        "Assess perfusion directly: capillary refill, skin color/temperature, peripheral pulse quality compared to central pulses, mental status.",
+        "Check heart rate for tachycardia out of proportion to fever/anxiety.",
+        "Check blood pressure for age — remember normal BP does not exclude shock.",
+        "If perfusion findings are abnormal with normal BP: compensated shock — begin treatment now, do not wait for hypotension.",
+        "If perfusion findings are abnormal with low BP for age: decompensated shock — treat as a time-critical emergency and escalate immediately.",
+        "Reassess perfusion frequently throughout care and transport."
+      ]
+    },
+    {
+      "id": "c06_alg02",
+      "title": "Category-Matched Shock Treatment",
+      "description": "Matching the suspected shock category to the appropriate field intervention.",
+      "steps": [
+        "Gather history and exam clues to identify the likely shock category: fluid/blood loss (hypovolemic), fever or allergen exposure (distributive), cardiac history (cardiogenic), trauma with unilateral chest findings (obstructive).",
+        "Hypovolemic or septic (distributive): administer isotonic fluid bolus per local protocol; reassess perfusion after each bolus.",
+        "Anaphylactic (distributive): administer epinephrine as the priority treatment.",
+        "Cardiogenic: give fluids cautiously, watching for signs of volume overload; avoid aggressive bolusing.",
+        "Obstructive from tension pneumothorax: perform needle decompression per protocol/scope of practice.",
+        "In all categories: supplemental oxygen, positioning, keep the child warm, and rapid transport.",
+        "For advanced resuscitation and drug dosing depth, refer to the PALS reviewer."
+      ]
+    }
+  ]
+}

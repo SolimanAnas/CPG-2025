@@ -1,0 +1,30 @@
+{
+  "id": "empact",
+  "title": "EMPACT — Emergency Medical Patients: Assessment, Care & Transport",
+  "subtitle": "The Ultimate Course Reviewer",
+  "version": "1.0.0",
+  "edition": "Systematic medical-patient assessment for EMS providers",
+  "description": "A comprehensive, self-contained study reviewer for the systematic assessment and management of the medical patient. Each chapter includes a concise summary, clinical pearls, red flags, common mistakes, memory aids, decision trees, high-yield flashcards, differential-diagnosis quiz questions, and realistic patient scenarios. Built for EMTs, paramedics, and nursing/PA students who need to move from possibilities to probabilities at the bedside.",
+  "icon": "stethoscope",
+  "color": "#1f6feb",
+  "accentColor": "#c8102e",
+  "estimatedHours": 10,
+  "difficulty": "Intermediate",
+  "certification": null,
+  "examLink": "empact.html",
+  "audience": ["EMT", "AEMT", "Paramedic", "Nursing Student", "PA Student"],
+  "prerequisites": ["Basic anatomy and physiology", "BLS provider competency"],
+  "contentTypes": ["summary", "flashcards", "quizzes", "scenarios", "algorithms", "tables"],
+  "chapters": [
+    { "id": "c01", "number": 1, "title": "The Systematic Approach & Differential Diagnosis", "section": "Foundations", "difficulty": "Beginner" },
+    { "id": "c02", "number": 2, "title": "Airway Management in the Medical Patient", "section": "Airway & Breathing", "difficulty": "Intermediate" },
+    { "id": "c03", "number": 3, "title": "Respiratory Emergencies", "section": "Airway & Breathing", "difficulty": "Intermediate" },
+    { "id": "c04", "number": 4, "title": "Cardiovascular Emergencies", "section": "Cardiovascular", "difficulty": "Advanced" },
+    { "id": "c05", "number": 5, "title": "Shock Recognition & Management", "section": "Cardiovascular", "difficulty": "Advanced" },
+    { "id": "c06", "number": 6, "title": "Neurological Emergencies", "section": "Neurological", "difficulty": "Intermediate" },
+    { "id": "c07", "number": 7, "title": "Endocrine Emergencies", "section": "Metabolic", "difficulty": "Intermediate" },
+    { "id": "c08", "number": 8, "title": "Abdominal & Gastrointestinal Emergencies", "section": "Abdominal", "difficulty": "Intermediate" },
+    { "id": "c09", "number": 9, "title": "Infectious Disease, Sepsis & Anaphylaxis", "section": "Immune & Infectious", "difficulty": "Intermediate" },
+    { "id": "c10", "number": 10, "title": "Oncologic & Special Medical Considerations", "section": "Special Topics", "difficulty": "Intermediate" }
+  ]
+}

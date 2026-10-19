@@ -1,0 +1,68 @@
+{
+  "id": "c04",
+  "title": "Respiratory Medical Emergencies — Asthma & COPD",
+  "shortTitle": "Asthma & COPD",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe current GINA 2025 stepwise asthma management framework.",
+    "Contrast current asthma-control framing with legacy 'phase 1-4' severity language.",
+    "Distinguish chronic bronchitis from emphysema on classic exam presentation.",
+    "Explain why the 'hypoxic drive' teaching is outdated and describe current oxygen guidance for COPD.",
+    "Describe field management priorities for acute asthma and COPD exacerbations."
+  ],
+  "summary": [
+    {
+      "title": "Current Asthma Framework: Control-Based, Not Severity-Labeled",
+      "content": "GINA 2025 organizes asthma treatment around a dual-track, ICS (inhaled corticosteroid)-formoterol-centered stepwise approach (Steps 1-4), graded primarily by how well symptoms are controlled rather than a fixed severity label assigned once. This represents a shift away from the older 'intermittent / mild-moderate-severe persistent' classification language that many EMS courses historically taught. For field purposes, what matters most is recognizing the acute presentation and its severity in the moment (mild, moderate, severe, or life-threatening/respiratory failure), not classifying the patient's long-term asthma control category."
+    },
+    {
+      "title": "Legacy 'Phase 1-4' Language — Historical, Not Current Guideline Terminology",
+      "content": "Some EMS exam banks use a legacy four-phase asthma framework: phase 1 (resolves spontaneously or with bronchodilators within 1-2 hours), phase 2 (does not respond to bronchodilators alone, needs anti-inflammatory treatment), phase 3 and 4 progressing toward severe, treatment-refractory presentations and respiratory failure. This framework is a simplified historical teaching tool, not current GINA terminology — it is presented here as vocabulary you may encounter on an exam, while the clinically current framework is GINA's step-based, control-oriented approach."
+    },
+    {
+      "title": "Chronic Bronchitis vs. Emphysema",
+      "content": "Both fall under the umbrella of COPD, and many patients have features of both. Chronic bronchitis is strongly associated with cigarette-smoke exposure, presents with a chronic productive cough, and classically produces a stockier, sometimes cyanotic appearance sometimes nicknamed 'blue bloater.' Emphysema classically produces a thin, barrel-chested appearance with pursed-lip breathing, sometimes nicknamed 'pink puffer,' reflecting different degrees of air-trapping, gas-exchange impairment, and compensatory work of breathing between the two classic (and overlapping, in practice) presentations."
+    },
+    {
+      "title": "The 'Hypoxic Drive' Myth",
+      "content": "The traditional teaching that COPD patients rely on hypoxia (rather than CO2) to drive their respiratory effort, and that supplemental oxygen will therefore cause respiratory arrest, is an outdated oversimplification not supported by current evidence. Oxygen-induced hypercapnia in COPD, when it occurs, results primarily from ventilation-perfusion mismatch and increased dead space — not loss of respiratory drive. Current guidance is titrated oxygen therapy targeting an SpO2 of roughly 88-92% in acute COPD exacerbation: enough to avoid dangerous hypoxia, without unnecessary over-oxygenation. Deliberately withholding oxygen from a hypoxic COPD patient out of fear of 'hypoxic drive' creates a real risk of harmful, prolonged tissue hypoxia and is not current best practice."
+    },
+    {
+      "title": "Field Management",
+      "content": "For acute asthma exacerbation: assess severity (ability to speak in full sentences, accessory muscle use, wheeze intensity — note that a 'silent chest' with minimal air movement is more ominous than a loud wheeze), administer bronchodilator therapy per protocol, and escalate rapidly for signs of impending respiratory failure (altered mental status, exhaustion, decreasing wheeze with worsening distress). For acute COPD exacerbation: titrated oxygen to target saturation, bronchodilator therapy per protocol, and monitoring for signs of respiratory failure requiring ventilatory support. Both conditions can progress quickly from distress to failure — reassess frequently."
+    }
+  ],
+  "clinicalPearls": [
+    "GINA 2025 uses a control-based step framework (Steps 1-4), not the older 'intermittent/mild/moderate/severe persistent' labels.",
+    "The legacy 'asthma phase 1-4' bank language is historical/simplified vocabulary, not current guideline terminology.",
+    "A silent chest (minimal air movement) is more dangerous than a loud wheeze — it means too little air is moving to make noise.",
+    "'Hypoxic drive' is an outdated myth — titrate COPD oxygen to 88-92% SpO2, don't withhold it out of fear."
+  ],
+  "redFlags": [
+    "A silent chest or rapidly decreasing wheeze with worsening distress — signals near-complete airway obstruction, not improvement.",
+    "Inability to speak in full sentences, accessory muscle use, or altered mental status in an asthma/COPD exacerbation.",
+    "Withholding oxygen from a hypoxic COPD patient — this itself is a red flag in provider practice, not a safety measure."
+  ],
+  "commonMistakes": [
+    "Reassurance from a quieting wheeze without checking for exhaustion/impending failure (same pattern as pediatric respiratory failure).",
+    "Applying the outdated binary 'true/false hypoxic drive' framing instead of titrated-target oxygen guidance.",
+    "Confusing the legacy 'phase 1-4' asthma language with GINA's current step-based framework."
+  ],
+  "memoryAids": [
+    "Steps, not stages — GINA 2025 is step-based and control-oriented.",
+    "Blue bloater = chronic bronchitis; pink puffer = emphysema.",
+    "88-92% is the COPD oxygen target — titrate, don't withhold.",
+    "Silent chest is scarier than loud wheeze."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Acute Asthma/COPD Exacerbation Field Approach",
+      "content": "Respiratory distress with wheeze/known asthma or COPD history\n  → Assess severity: ability to speak in full sentences, accessory muscle use, wheeze intensity (silent chest = more severe, not less)\n  → Mild-moderate distress → bronchodilator therapy per protocol, position of comfort, monitor closely\n  → Severe distress or signs of impending failure (altered mental status, exhaustion, silent chest) → escalate rapidly, prepare for ventilatory support, rapid transport\n  → If known/suspected COPD: apply titrated oxygen targeting ~88-92% SpO2 — do not withhold oxygen from a hypoxic patient\n  → Reassess frequently; a quieting wheeze with worsening distress is a warning sign, not reassurance"
+    }
+  ],
+  "references": [
+    "GINA 2025 Global Strategy for Asthma Management and Prevention",
+    "Current EMS/respiratory literature on oxygen-induced hypercapnia in COPD and titrated oxygen targets"
+  ]
+}

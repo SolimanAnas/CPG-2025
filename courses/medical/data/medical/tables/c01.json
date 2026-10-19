@@ -1,0 +1,28 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "Prehospital Stroke Scale Comparison",
+      "headers": ["Scale", "What It Adds", "Components Checked", "Primary Use"],
+      "rows": [
+        ["CPSS (Cincinnati Prehospital Stroke Scale)", "Baseline stroke screening", "Facial droop, arm drift, speech abnormality", "General stroke recognition"],
+        ["LAPSS (Los Angeles Prehospital Stroke Screen)", "Adds exclusion criteria (age, glucose, symptom duration, prior seizure/wheelchair history)", "Facial droop, grip strength, arm drift, plus exclusion criteria", "General stroke recognition with mimic screening"],
+        ["RACE (Rapid Arterial oCclusion Evaluation)", "Adds LVO-sensitive items", "Facial palsy, arm motor, leg motor, gaze deviation, aphasia/agnosia", "Large-vessel occlusion (LVO) screening"],
+        ["FAST-ED", "Adds eye deviation and denial/neglect to FAST", "Face, Arm, Speech, Time + Eye deviation, Denial/neglect", "Large-vessel occlusion (LVO) screening"]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "Ischemic vs. Hemorrhagic Stroke — Field Perspective",
+      "headers": ["Feature", "Ischemic Stroke", "Hemorrhagic Stroke"],
+      "rows": [
+        ["Mechanism", "Obstruction (clot) blocking blood flow", "Bleeding into or around brain tissue"],
+        ["Relative frequency", "Majority of strokes", "Minority of strokes"],
+        ["Field distinguishability by symptoms", "Not reliably distinguishable from hemorrhagic by symptoms alone", "Not reliably distinguishable from ischemic by symptoms alone"],
+        ["Determination method", "Hospital imaging (CT/MRI)", "Hospital imaging (CT/MRI)"],
+        ["Field priority", "Same: recognize, check glucose, document LKW time, transport rapidly", "Same: recognize, check glucose, document LKW time, transport rapidly"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "Pediatric ABCDE Primary Assessment Components",
+      "headers": ["Step", "What's Assessed", "Immediate Action if Abnormal"],
+      "rows": [
+        ["Airway", "Patency, maintainability", "Open/clear/position; adjunct if needed"],
+        ["Breathing", "Rate, effort, sounds, SpO2", "Assist ventilation; supplemental oxygen"],
+        ["Circulation", "Pulse, perfusion, capillary refill, bleeding", "Control hemorrhage; support perfusion"],
+        ["Disability", "Neuro status (AVPU), pupils, glucose if altered", "Treat identified cause (e.g., glucose for hypoglycemia)"],
+        ["Exposure", "Injury/rash survey", "Re-cover promptly to prevent heat loss"]
+      ]
+    }
+  ]
+}

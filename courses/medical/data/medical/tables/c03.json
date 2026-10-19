@@ -1,0 +1,30 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "DKA vs. HHS Comparison",
+      "headers": ["Feature", "DKA", "HHS"],
+      "rows": [
+        ["Glucose", "≥200 mg/dL typically (can be <200 mg/dL — euglycemic DKA, ~10% of cases)", "Often >600 mg/dL"],
+        ["Ketosis", "Present — beta-hydroxybutyrate ≥3.0 mmol/L or urine ketones ≥2+", "Minimal or absent"],
+        ["Acid-base status", "Metabolic acidosis — pH <7.3 and/or bicarbonate <18 mEq/L", "Near-normal pH/bicarbonate"],
+        ["Osmolality", "Variable, less central to diagnosis", "Significant hyperosmolality — >320 mOsm/kg"],
+        ["Typical patient", "More classic in type 1 diabetes, but occurs in type 2 as well", "More typical in older adults with type 2 diabetes"],
+        ["Onset", "Faster, often over hours", "Slower, often over days"],
+        ["Classic exam findings", "Kussmaul respirations, fruity breath, vomiting/abdominal pain", "Profound dehydration, prominent altered mental status/obtundation"],
+        ["Field management", "Supportive care, IV fluids per protocol, airway protection, rapid transport", "Supportive care, IV fluids per protocol, airway protection, rapid transport"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "Hypoglycemia Symptom Progression",
+      "headers": ["Severity", "Findings"],
+      "rows": [
+        ["Mild", "Shakiness, diaphoresis, hunger, anxiety"],
+        ["Moderate", "Irritability, poor coordination, difficulty concentrating"],
+        ["Severe", "Confusion, combativeness, seizure, unresponsiveness"]
+      ]
+    }
+  ]
+}

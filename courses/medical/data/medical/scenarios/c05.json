@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "Headache and Vision Changes at 34 Weeks",
+      "presentation": "A 29-year-old woman at 34 weeks gestation reports a severe headache and 'seeing spots' for the past hour. Her blood pressure reads 162/108 mmHg. She has no prior history of hypertension.",
+      "vitals": { "bp": "162/108 mmHg", "gestation": "34 weeks", "symptoms": "Severe headache, visual spots" },
+      "question": "How should this presentation be managed?",
+      "options": [
+        "A: Reassure her that headaches are common in pregnancy and no action is needed.",
+        "B: Treat as suspected preeclampsia — position in left lateral tilt, minimize stimulation, monitor BP closely, and transport to an obstetric-capable facility.",
+        "C: Administer an oral analgesic and observe without transport.",
+        "D: Delay any action until the headache worsens further."
+      ],
+      "correct": 1,
+      "explanation": "New-onset severe headache and visual disturbances combined with markedly elevated blood pressure past 20 weeks gestation are classic warning signs of preeclampsia. This should prompt left lateral positioning, minimizing stimulation, close BP monitoring, and transport to a facility with obstetric capability — not reassurance or delay.",
+      "clinicalPearl": "Headache plus visual changes plus high blood pressure in pregnancy is a preeclampsia pattern until proven otherwise."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Seizure at 37 Weeks",
+      "presentation": "A 33-year-old woman at 37 weeks gestation, with a known diagnosis of preeclampsia, is witnessed having a generalized tonic-clonic seizure that is now ongoing for about 90 seconds.",
+      "vitals": { "gestation": "37 weeks", "activity": "Active generalized seizure", "history": "Known preeclampsia" },
+      "question": "What is the correct field approach?",
+      "options": [
+        "A: Place the patient supine and wait for the seizure to resolve on its own with no positioning considerations.",
+        "B: Apply standard seizure airway/injury precautions, use left lateral positioning once feasible, minimize stimulation, and transport rapidly — this is eclampsia until proven otherwise.",
+        "C: Delay any intervention since seizures in pregnancy are expected and benign.",
+        "D: Administer oral glucose as the primary intervention."
+      ],
+      "correct": 1,
+      "explanation": "A new seizure in a patient with known preeclampsia meets the definition of eclampsia — a true obstetric emergency. Field management follows standard seizure precautions (airway protection, injury prevention) with pregnancy-specific left lateral positioning once feasible, minimized stimulation, and rapid transport; magnesium sulfate is the definitive treatment per local ALS protocol.",
+      "clinicalPearl": "A seizure in a preeclamptic patient is eclampsia until proven otherwise — treat it as the true obstetric emergency it is."
+    },
+    {
+      "id": "c05_s03",
+      "title": "Epigastric Pain Overlooked",
+      "presentation": "A 26-year-old woman at 31 weeks gestation presents with epigastric pain that she and her family initially attribute to heartburn. Her blood pressure reads 150/98 mmHg, which is new for her.",
+      "vitals": { "bp": "150/98 mmHg", "gestation": "31 weeks", "symptoms": "Epigastric pain, attributed to heartburn by family" },
+      "question": "How should the epigastric pain be interpreted in this context?",
+      "options": [
+        "A: As simple heartburn requiring no further evaluation, per the family's assessment.",
+        "B: As a possible sign of liver involvement in worsening preeclampsia, given the new hypertension — this should not be dismissed as routine heartburn.",
+        "C: As unrelated to her pregnancy or blood pressure.",
+        "D: As a sign of labor onset requiring no blood pressure monitoring."
+      ],
+      "correct": 1,
+      "explanation": "Right upper quadrant or epigastric pain combined with new hypertension in pregnancy should raise concern for liver involvement in worsening preeclampsia, not be dismissed as simple heartburn. This warrants treating the situation as a potential obstetric emergency with appropriate monitoring and transport.",
+      "clinicalPearl": "Epigastric pain plus new hypertension in pregnancy is not 'just heartburn' — it can be a preeclampsia warning sign."
+    }
+  ]
+}

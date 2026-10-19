@@ -1,0 +1,20 @@
+{
+  "chapter": "c05",
+  "cards": [
+    { "id": "c05_fc01", "question": "What is respiratory distress?", "answer": "A state where a child is working hard to breathe (increased work of breathing) but is still compensating, generally with adequate oxygenation and mental status.", "category": "Respiratory" },
+    { "id": "c05_fc02", "question": "What is respiratory failure?", "answer": "A state where compensation has failed — inadequate oxygenation and/or ventilation, marked by altered mental status, cyanosis, bradypnea/irregular breathing, and profound fatigue.", "category": "Respiratory" },
+    { "id": "c05_fc03", "question": "What are the four categories of pediatric respiratory compromise?", "answer": "Upper airway obstruction, lower airway disease, lung tissue (parenchymal) disease, and disordered control of breathing.", "category": "Respiratory" },
+    { "id": "c05_fc04", "question": "What sound is classically associated with upper airway obstruction?", "answer": "Stridor.", "category": "Respiratory" },
+    { "id": "c05_fc05", "question": "What sound is classically associated with lower airway disease?", "answer": "Wheezing, with prolonged expiration.", "category": "Respiratory" },
+    { "id": "c05_fc06", "question": "What findings are classically associated with lung tissue (parenchymal) disease?", "answer": "Grunting, crackles, and diminished breath sounds.", "category": "Respiratory" },
+    { "id": "c05_fc07", "question": "What characterizes disordered control of breathing?", "answer": "An irregular rate/pattern without the classic sounds of the other three categories, often from a CNS problem, toxin, or neuromuscular disease.", "category": "Respiratory" },
+    { "id": "c05_fc08", "question": "Give two examples of causes of upper airway obstruction.", "answer": "Croup and foreign body aspiration (also epiglottitis).", "category": "Respiratory" },
+    { "id": "c05_fc09", "question": "Give two examples of causes of lower airway disease.", "answer": "Asthma and bronchiolitis.", "category": "Respiratory" },
+    { "id": "c05_fc10", "question": "Why is decreasing work of breathing in a previously struggling child a red flag?", "answer": "It can reflect exhaustion rather than improvement — a dangerous, easily misread sign of impending respiratory failure.", "category": "Respiratory" },
+    { "id": "c05_fc11", "question": "What PAT change signals impending respiratory failure?", "answer": "A shift in Appearance from anxious/agitated to lethargic on repeat assessment.", "category": "Respiratory" },
+    { "id": "c05_fc12", "question": "Should a provider wait for SpO2 to fall before escalating support in a deteriorating child?", "answer": "No — other findings (grunting, decreasing WOB after struggling, altered Appearance) often precede a measurable drop in SpO2 and should prompt escalation first.", "category": "Respiratory" },
+    { "id": "c05_fc13", "question": "What is the field management for respiratory distress?", "answer": "Positioning of comfort, supplemental oxygen, and treatment targeted to the likely category (e.g., nebulized bronchodilator for suspected lower-airway disease), with close monitoring.", "category": "Field Management" },
+    { "id": "c05_fc14", "question": "What is the field management for respiratory failure?", "answer": "Assisted ventilation with bag-mask ventilation and high-flow oxygen, plus rapid transport; drug-assisted airway management and arrest-specific ventilation are covered in depth by the PALS reviewer.", "category": "Field Management" },
+    { "id": "c05_fc15", "question": "Why do respiratory problems matter so much in pediatric prehospital care?", "answer": "They are the leading pathway to pediatric cardiac arrest, unlike adults where a primary cardiac event is more common.", "category": "Respiratory" }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "The Bradycardic, Blue Infant",
+      "presentation": "A 2-month-old is found limp and dusky by a caregiver. Heart rate is 60 bpm, respiratory effort is minimal, and the infant is unresponsive to stimulation.",
+      "vitals": { "hr": "60 bpm", "rr": "minimal effort", "color": "Dusky/cyanotic", "appearance": "Unresponsive" },
+      "question": "What is the correct first priority?",
+      "options": [
+        "A: Immediately prepare for cardioversion.",
+        "B: Support oxygenation and ventilation first — bradycardia in this context is most likely due to hypoxia.",
+        "C: Give an antiarrhythmic medication before assessing breathing.",
+        "D: Wait for a 12-lead ECG before intervening."
+      ],
+      "correct": 1,
+      "explanation": "A dusky, bradycardic infant with poor respiratory effort should be treated as a hypoxia-driven bradycardia — support oxygenation and ventilation immediately, since this is the most common and rapidly reversible cause. Rhythm-specific interventions are addressed in the PALS reviewer if bradycardia persists despite adequate oxygenation/ventilation.",
+      "clinicalPearl": "Bradycardia plus cyanosis plus poor effort in an infant is a breathing problem first — fix oxygenation before assuming a primary cardiac cause."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Sudden Rapid Heart Rate, No Trigger",
+      "presentation": "A previously well 4-month-old is fussy and poorly feeding. The monitor shows a heart rate fixed at 230 bpm that does not change with stimulation. There is no fever, and the caregiver reports no illness.",
+      "vitals": { "hr": "230 bpm, fixed", "temp": "Afebrile", "appearance": "Fussy, poor feeding" },
+      "question": "What does this presentation most likely represent?",
+      "options": [
+        "A: Sinus tachycardia from an underlying fever.",
+        "B: Supraventricular tachycardia (SVT) — a fixed, very rapid rate with no clear trigger that does not vary with stimulation.",
+        "C: A normal finding in a 4-month-old.",
+        "D: Bradycardia."
+      ],
+      "correct": 1,
+      "explanation": "A fixed, very rapid heart rate (over 220 bpm in an infant) that does not vary with stimulation, without a fever or other clear trigger, is characteristic of SVT rather than sinus tachycardia. This warrants rapid transport and notification of the receiving facility; specific rhythm management is detailed in the PALS reviewer.",
+      "clinicalPearl": "No fever, no clear cause, and a rate that won't budge with stimulation — think SVT, not sinus tachycardia."
+    },
+    {
+      "id": "c07_s03",
+      "title": "Known Heart Disease, Different Baseline",
+      "presentation": "An 8-year-old with a history of repaired congenital heart disease is brought in after a minor fall, mildly anxious. Pulse oximetry reads 89%. The caregiver states this is normal for the child.",
+      "vitals": { "spo2": "89% (caregiver states this is baseline)", "hr": "110 bpm", "appearance": "Mildly anxious, otherwise well" },
+      "question": "How should the SpO2 reading be interpreted?",
+      "options": [
+        "A: This must be treated as severe hypoxia requiring aggressive intervention regardless of history.",
+        "B: Compare it to the child's known personal baseline as reported by the caregiver — children with congenital heart disease may normally run lower saturations.",
+        "C: Ignore the reading since pulse oximetry is unreliable in children with heart disease.",
+        "D: Assume the caregiver is mistaken and treat as an emergency."
+      ],
+      "correct": 1,
+      "explanation": "Children with congenital heart disease may have a baseline oxygen saturation that differs from typical norms. Providers should ask about and compare findings to the child's known baseline rather than assuming abnormality outright, while still monitoring for any acute change from that baseline.",
+      "clinicalPearl": "Always ask 'what's normal for this child?' when there's known congenital heart disease — a number that looks alarming may be their everyday baseline."
+    }
+  ]
+}

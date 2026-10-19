@@ -1,0 +1,18 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "Geriatric Fall Assessment Field Approach",
+      "description": "Sequence for assessing a geriatric patient after a fall, considering both traumatic and underlying medical causes.",
+      "steps": [
+        "Ask about the circumstances of the fall: witnessed vs. unwitnessed, any preceding symptoms (dizziness, palpitations, chest discomfort), and ability to recall the event.",
+        "Check vital signs and blood glucose to screen for a medical cause of the fall.",
+        "Review the patient's medication list, specifically asking about anticoagulant/antiplatelet use.",
+        "Perform a thorough injury exam, keeping in mind that older adults may have a blunted pain response masking occult injury.",
+        "If anticoagulant use is present with any head injury, treat as elevated intracranial hemorrhage risk regardless of the initial exam, and communicate this clearly at handoff.",
+        "If findings suggest a medical cause (arrhythmia, orthostatic hypotension, hypoglycemia, infection), evaluate and manage accordingly rather than treating the fall as purely mechanical."
+      ]
+    }
+  ]
+}

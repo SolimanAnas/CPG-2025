@@ -1,0 +1,28 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Delirium vs. Dementia",
+      "headers": ["Feature", "Delirium", "Dementia"],
+      "rows": [
+        ["Onset", "Acute — hours to days", "Chronic — months to years"],
+        ["Course", "Fluctuating", "Slowly progressive, generally stable day-to-day"],
+        ["Reversibility", "Often reversible once cause is treated", "Generally not reversible"],
+        ["Attention/awareness", "Prominently impaired, fluctuates", "Relatively preserved until later stages"],
+        ["Common causes", "Infection, medication effects, hypoxia, electrolyte disturbance, dehydration, urinary retention/constipation, pain", "Neurodegenerative disease (e.g., Alzheimer's), vascular changes, other chronic processes"],
+        ["Field default", "Assume delirium for any new/acute confusion until proven otherwise", "Known, stable baseline — sudden worsening should prompt a delirium workup, not be assumed as dementia progression"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "Atypical Geriatric Presentations of Common Conditions",
+      "headers": ["Condition", "Classic Presentation", "Atypical Geriatric Presentation"],
+      "rows": [
+        ["Myocardial infarction", "Chest pain", "Confusion, weakness, or dyspnea alone ('silent MI')"],
+        ["Infection", "Fever", "Absent or blunted fever response"],
+        ["Acute abdomen", "Significant pain", "Minimal pain despite significant pathology"]
+      ]
+    }
+  ]
+}

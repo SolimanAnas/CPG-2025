@@ -1,0 +1,68 @@
+{
+  "id": "c06",
+  "title": "Behavioral Emergencies I — Assessment & De-escalation",
+  "shortTitle": "Behavioral Assessment & De-escalation",
+  "estimatedStudyTime": 25,
+  "difficulty": "Beginner to Intermediate",
+  "learningObjectives": [
+    "Describe the general approach to assessing a patient in behavioral crisis.",
+    "List the SEA-3 framework components for behavioral assessment.",
+    "Describe de-escalation techniques appropriate for prehospital behavioral emergencies.",
+    "Recognize when scene safety concerns should take priority over immediate patient contact.",
+    "Define abandonment in the context of behavioral-health patient care."
+  ],
+  "summary": [
+    {
+      "title": "Scene Safety First, Always",
+      "content": "Behavioral emergencies carry a scene-safety dimension that other medical calls may not: agitated, psychotic, or intoxicated patients can become unpredictably violent. Before approaching, assess for weapons, exits, and the patient's affect from a distance; involve law enforcement per local protocol when there is any credible safety concern. This is not optional caution — provider safety is a prerequisite for being able to help the patient at all."
+    },
+    {
+      "title": "SEA-3: A Structured Behavioral Assessment Framework",
+      "content": "SEA-3 is a widely taught framework organizing behavioral assessment around: Safety (scene and patient safety), Emotional state (the patient's observable mood/affect), Appearance (grooming, hygiene, dress as clues to functioning), Activity (psychomotor activity — agitation, retardation, restlessness), and Speech (rate, volume, coherence, content). Working through these systematically, rather than fixating only on the chief complaint, produces a more complete picture and helps identify risk (e.g., disorganized speech plus poor grooming plus psychomotor agitation together paint a different risk picture than any single finding alone)."
+    },
+    {
+      "title": "De-escalation Technique",
+      "content": "Core de-escalation principles: approach calmly and non-confrontationally, use open-ended questions rather than rapid-fire closed questions, maintain a non-threatening posture and appropriate distance, avoid sudden movements, speak in a calm and even tone, and avoid arguing with or directly challenging delusional content. The goal is to reduce the patient's perceived threat level and build enough cooperation to complete an assessment and safely transport, not to resolve the underlying psychiatric condition in the field."
+    },
+    {
+      "title": "Physical Restraint — Last Resort, Not First Response",
+      "content": "Premature physical restraint escalates risk for both patient and provider and should be avoided as a first response. Restraint is reserved for situations where de-escalation has failed and the patient poses an immediate danger to self or others, and should follow local protocol regarding technique, monitoring, and documentation. Chemical or physical restraint decisions and technique are governed by local protocol and are not detailed further in this reviewer beyond this recognition-level framing."
+    },
+    {
+      "title": "Abandonment and Duty to Act",
+      "content": "Abandonment is terminating patient care without ensuring that an equal or higher level of care continues — a legally and ethically significant concept in EMS generally, with particular relevance in behavioral emergencies where a patient may refuse care or attempt to leave. Providers must understand the difference between a competent patient exercising the right to refuse care (with proper informed-refusal documentation) and inappropriately discontinuing care for a patient who lacks capacity to refuse or who is being handed off improperly. This distinction is a common exam topic and a real clinical/legal issue in the field."
+    }
+  ],
+  "clinicalPearls": [
+    "Scene safety comes before patient contact in behavioral emergencies — assess from a distance first.",
+    "SEA-3: Safety, Emotional state, Appearance, Activity, Speech.",
+    "De-escalate with calm, open-ended questions and non-threatening posture — don't argue with delusional content.",
+    "Abandonment = terminating care without ensuring an equal-or-higher level of care continues."
+  ],
+  "redFlags": [
+    "Visible weapons or an unpredictable, escalating patient — involve law enforcement before approaching.",
+    "Disorganized speech, poor grooming, and psychomotor agitation together — a higher-risk combination than any single finding.",
+    "A patient attempting to leave or refusing care whose capacity to make that decision is in question."
+  ],
+  "commonMistakes": [
+    "Approaching an agitated patient without first assessing scene safety from a distance.",
+    "Arguing with or directly challenging a patient's delusional content during de-escalation.",
+    "Jumping to physical restraint before attempting de-escalation techniques."
+  ],
+  "memoryAids": [
+    "SEA-3: Safety, Emotional state, Appearance, Activity, Speech.",
+    "Distance first, approach second.",
+    "Restraint is last resort, not first response.",
+    "Abandonment = leaving without an equal-or-higher level of care taking over."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Behavioral Emergency Field Approach",
+      "content": "Dispatched to a behavioral emergency\n  → Assess scene safety from a distance first: weapons, exits, patient affect\n  → Safety concern present → involve law enforcement per local protocol before approaching\n  → Scene safe → approach calmly, apply SEA-3 assessment (Safety, Emotional state, Appearance, Activity, Speech)\n  → Apply de-escalation technique: open-ended questions, non-threatening posture, calm tone, avoid arguing with delusional content\n  → De-escalation successful → complete assessment, transport with continued calm approach\n  → De-escalation fails, immediate danger to self/others → restraint per local protocol as last resort, with appropriate monitoring/documentation\n  → Patient refuses care → assess capacity, follow informed-refusal protocol; do not terminate care without ensuring appropriate continuity (avoid abandonment)"
+    }
+  ],
+  "references": [
+    "SEA-3 behavioral assessment framework — standard EMS/paramedic behavioral-emergency teaching",
+    "Standard EMS legal/ethical teaching on abandonment and duty to act"
+  ]
+}

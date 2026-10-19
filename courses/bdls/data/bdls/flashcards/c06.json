@@ -1,0 +1,21 @@
+{
+  "chapter": "c06",
+  "cards": [
+    { "id": "c06_fc01", "question": "Name the five blast injury mechanisms.", "answer": "Primary (pressure wave), Secondary (fragments/debris), Tertiary (body thrown), Quaternary (burns, crush, inhalation, everything else), Quinary (device additives — radiological/chemical/biological).", "category": "Classification" },
+    { "id": "c06_fc02", "question": "Which blast mechanism causes the most injuries and deaths?", "answer": "Secondary — fragments and debris propelled by the explosion.", "category": "Classification" },
+    { "id": "c06_fc03", "question": "Which organs does primary blast injury target?", "answer": "Air-filled organs: ears (tympanic membrane), lungs (blast lung), and gastrointestinal tract.", "category": "Primary Blast" },
+    { "id": "c06_fc04", "question": "What is the most common primary blast injury?", "answer": "Tympanic membrane rupture — though its absence does NOT rule out other primary blast injury.", "category": "Primary Blast" },
+    { "id": "c06_fc05", "question": "What is blast lung and how does it present?", "answer": "Pulmonary contusion/hemorrhage with alveolar rupture from the pressure wave: dyspnea, hypoxia, hemoptysis — sometimes delayed by hours.", "category": "Primary Blast" },
+    { "id": "c06_fc06", "question": "Why must blast lung be ventilated cautiously?", "answer": "Positive pressure can extend alveolar rupture, causing pneumothorax or arterial air embolism — use the lowest effective pressures.", "category": "Primary Blast" },
+    { "id": "c06_fc07", "question": "Why are enclosed-space explosions worse?", "answer": "Reflected pressure waves multiply the blast dose, increasing the incidence and severity of primary blast injury.", "category": "Primary Blast" },
+    { "id": "c06_fc08", "question": "What can cause stroke-like deficits or sudden death after a blast?", "answer": "Arterial air embolism from disrupted alveoli entering the circulation.", "category": "Primary Blast" },
+    { "id": "c06_fc09", "question": "What scene hazard is unique to intentional bombings?", "answer": "Secondary devices deliberately placed to injure responders — stage until law enforcement clears the scene.", "category": "Scene" },
+    { "id": "c06_fc10", "question": "What is 'upside-down triage' at hospitals after a bombing?", "answer": "Walking wounded self-transport and arrive first; the critical casualties arrive 30–60 minutes later — hospitals must reserve capacity for the second wave.", "category": "Casualty Flow" },
+    { "id": "c06_fc11", "question": "What is the leading cause of preventable death in blast/penetrating MCIs?", "answer": "Extremity hemorrhage — controlled by early tourniquets (a SALT lifesaving intervention and Stop the Bleed skill).", "category": "Hemorrhage" },
+    { "id": "c06_fc12", "question": "What are quinary blast injuries?", "answer": "Injuries from device additives — radiological ('dirty bomb'), chemical, or biological contamination added to the explosive.", "category": "Classification" },
+    { "id": "c06_fc13", "question": "Being thrown against a wall by a blast is which mechanism?", "answer": "Tertiary blast injury.", "category": "Classification" },
+    { "id": "c06_fc14", "question": "Burns and smoke inhalation at a bombing are which mechanism?", "answer": "Quaternary — the 'everything else' category including burns, crush from collapse, and inhalation.", "category": "Classification" },
+    { "id": "c06_fc15", "question": "Why observe initially-well survivors of significant blasts?", "answer": "Primary blast injuries — especially blast lung and GI injury — can present hours after exposure.", "category": "Primary Blast" },
+    { "id": "c06_fc16", "question": "How does care proceed in active-violence events?", "answer": "Phased: threat suppression first, hemorrhage control in warm zones, full care in cold zones — coordinated with law enforcement.", "category": "Scene" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Hypoglycemia vs DKA vs HHNS",
+      "headers": ["Feature", "Hypoglycemia", "DKA", "HHNS"],
+      "rows": [
+        ["Glucose", "Low", "High", "Extremely high"],
+        ["Onset", "Minutes", "Hours to 1-2 days", "Days (insidious)"],
+        ["Respiratory pattern", "Normal/diaphoretic", "Kussmaul (deep, rapid, labored)", "Typically normal"],
+        ["Breath odor", "None specific", "Fruity/acetone", "None specific"],
+        ["Typical population", "Insulin/sulfonylurea users", "Type 1 diabetics (may be first presentation)", "Undiagnosed Type 2, often elderly"],
+        ["Key associated findings", "Diaphoresis, altered LOC", "Polyuria, polydipsia, abdominal pain", "Profound dehydration, severe altered LOC"]
+      ]
+    }
+  ]
+}

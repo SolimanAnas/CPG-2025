@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Fix It As You Find It",
+      "presentation": "A 4-year-old is struck by a car at low speed. Your PAT shows abnormal Appearance and Work of Breathing. On primary assessment, you find her airway is partially obstructed by blood and secretions from a facial injury.",
+      "vitals": { "appearance": "Lethargic (abnormal)", "wob": "Gurgling respirations (abnormal)", "airway": "Partially obstructed" },
+      "question": "What should you do upon finding the airway obstruction during the 'A' step?",
+      "options": [
+        "A: Note the finding and continue to assess breathing, circulation, disability, and exposure first.",
+        "B: Clear the airway immediately before continuing to the next steps of the primary assessment.",
+        "C: Wait until the secondary assessment to address the airway.",
+        "D: Only address it if her oxygen saturation is also abnormal."
+      ],
+      "correct": 1,
+      "explanation": "Life threats found during the primary assessment are treated the moment they are identified — an obstructed airway found at 'A' is cleared immediately before proceeding to 'B' and beyond, rather than completing the checklist first.",
+      "clinicalPearl": "ABCDE is not a form to fill out top to bottom — it's an ordered scan that stops for treatment the instant it finds a problem."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Setting the Pace",
+      "presentation": "You respond to two children after a household chemical exposure. The PAT on the first child shows all three legs normal; the PAT on the second child shows abnormal Appearance, Work of Breathing, and Circulation to Skin together.",
+      "vitals": { "child1_PAT": "All three legs normal", "child2_PAT": "All three legs abnormal (cardiopulmonary failure pattern)" },
+      "question": "How should the primary assessment differ between these two children?",
+      "options": [
+        "A: Identically — the PAT has no bearing on how the primary assessment proceeds.",
+        "B: The second child's primary assessment should proceed immediately and rapidly, potentially with simultaneous interventions, while the first child's primary assessment can proceed at a calmer, still-thorough pace.",
+        "C: Only the first child needs a primary assessment.",
+        "D: Only the second child needs a primary assessment."
+      ],
+      "correct": 1,
+      "explanation": "The PAT sets the urgency and pace for the primary assessment that follows. The child with the cardiopulmonary-failure PAT pattern needs an immediate, rapid, simultaneous-intervention approach, while the child with a reassuring PAT can be assessed thoroughly but at a normal pace — both still receive a full ABCDE exam.",
+      "clinicalPearl": "The PAT is your triage dial for the primary assessment's speed — it never decides whether the exam happens, only how fast."
+    },
+    {
+      "id": "c03_s03",
+      "title": "The Priority Decision",
+      "presentation": "After completing ABCDE on an 8-year-old with a minor laceration and stable vital signs across the board, you must decide how to proceed.",
+      "vitals": { "airway": "Patent", "breathing": "Normal rate/effort", "circulation": "Normal perfusion, controlled minor bleeding", "disability": "Alert, normal", "exposure": "Minor laceration only" },
+      "question": "What is the correct next step based on this primary assessment?",
+      "options": [
+        "A: Assign a high-priority designation and initiate rapid transport with ALS intercept.",
+        "B: Assign a low-priority designation, allowing a more complete secondary assessment (history, focused exam) on scene.",
+        "C: Skip the secondary assessment entirely since ABCDE is complete.",
+        "D: Repeat the PAT indefinitely instead of proceeding."
+      ],
+      "correct": 1,
+      "explanation": "Stable findings across the ABCDE primary assessment support a low-priority designation, which allows time for a more complete secondary assessment (history-taking, focused exam) to be performed on scene rather than rushing to transport.",
+      "clinicalPearl": "The primary assessment's real output is a priority label — 'high' means move fast and treat en route; 'low' means you can afford the thorough secondary assessment on scene."
+    }
+  ]
+}

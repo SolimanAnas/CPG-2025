@@ -1,0 +1,20 @@
+{
+  "chapter": "c03",
+  "cards": [
+    { "id": "c03_fc01", "question": "What does ABCDE stand for in the pediatric primary assessment?", "answer": "Airway, Breathing, Circulation, Disability, Exposure.", "category": "Primary Assessment" },
+    { "id": "c03_fc02", "question": "When is a life threat found during ABCDE treated?", "answer": "Immediately, the moment it is found — not after completing the rest of the checklist.", "category": "Primary Assessment" },
+    { "id": "c03_fc03", "question": "What is assessed under 'Disability' in pediatric ABCDE?", "answer": "A rapid neurologic check (e.g., AVPU), pupils, and blood glucose if mental status is altered.", "category": "Primary Assessment" },
+    { "id": "c03_fc04", "question": "What is assessed under 'Exposure'?", "answer": "Undressing as needed to check for injury or rash, then keeping the child warm.", "category": "Primary Assessment" },
+    { "id": "c03_fc05", "question": "How does the PAT relate to the primary assessment?", "answer": "The PAT (hands-off) comes first and sets urgency/pace; the primary assessment (hands-on ABCDE) follows and does not get skipped even with a reassuring PAT.", "category": "Assessment" },
+    { "id": "c03_fc06", "question": "What is the main deliverable of the primary assessment?", "answer": "An overall priority decision — high vs. low acuity — not a specific diagnosis.", "category": "Primary Assessment" },
+    { "id": "c03_fc07", "question": "What pediatric-specific factors are added to scene size-up?", "answer": "Mechanism of injury/nature of illness, number of patients (multi-victim events are common), and environmental clues (medications, hazards, caregiver affect).", "category": "Scene Size-Up" },
+    { "id": "c03_fc08", "question": "What determines whether the primary assessment proceeds rapidly with simultaneous interventions vs. at a calmer pace?", "answer": "The urgency level established by the preceding PAT.", "category": "Assessment" },
+    { "id": "c03_fc09", "question": "What are components of the 'Circulation' step in ABCDE?", "answer": "Pulse rate/quality, skin perfusion, capillary refill, and external bleeding.", "category": "Primary Assessment" },
+    { "id": "c03_fc10", "question": "What are components of the 'Breathing' step in ABCDE?", "answer": "Rate, effort, breath sounds, and oxygen saturation.", "category": "Primary Assessment" },
+    { "id": "c03_fc11", "question": "Where should a provider look for depth on cardiac-arrest-specific ABCDE content?", "answer": "The PALS reviewer — PEPP's ABCDE is a field assessment/transport-decision tool, not a resuscitation-team algorithm.", "category": "Cross-Reference" },
+    { "id": "c03_fc12", "question": "Why should priority be reassessed throughout the encounter?", "answer": "New findings can emerge as the exam and treatment proceed, changing the acuity picture.", "category": "Assessment" },
+    { "id": "c03_fc13", "question": "Why involve a calm caregiver early in the scene, when safe?", "answer": "It often improves both scene safety and the child's cooperation during assessment.", "category": "Scene Size-Up" },
+    { "id": "c03_fc14", "question": "What is assessed under 'Airway' in pediatric ABCDE?", "answer": "Patency — whether the airway is open, maintainable, or requires positioning/intervention.", "category": "Primary Assessment" },
+    { "id": "c03_fc15", "question": "What pediatric-specific consideration applies during the scene size-up for a suspected multi-victim event?", "answer": "Actively count and account for all children present, since multi-victim pediatric events (e.g., daycare, school, family incidents) are common and easy to under-triage.", "category": "Scene Size-Up" }
+  ]
+}

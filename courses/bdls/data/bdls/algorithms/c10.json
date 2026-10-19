@@ -1,0 +1,33 @@
+{
+  "chapter": "c10",
+  "algorithms": [
+    {
+      "id": "c10_alg01",
+      "title": "Building and Escalating Surge Capacity",
+      "description": "Balancing the four S's and moving along the standards-of-care continuum.",
+      "steps": [
+        "Assess demand against current capacity.",
+        "Expand across all four S's together — Staff, Stuff, Space, Systems — recognizing the weakest caps the surge.",
+        "Deliver conventional care with normal resources as long as possible.",
+        "Shift to contingency care with functionally equivalent adaptations (repurposed space, substituted supplies, adjusted ratios) as demand grows.",
+        "If demand overwhelms all adaptations, enter crisis standards of care by formal declaration under an ethical/legal framework.",
+        "Continuously address behavioral-health needs and CMIST functional needs.",
+        "De-escalate toward conventional care as resources recover; conduct after-action review."
+      ]
+    },
+    {
+      "id": "c10_alg02",
+      "title": "Psychological First Aid (PFA)",
+      "description": "The early, non-intrusive behavioral-health response for survivors and responders.",
+      "steps": [
+        "Ensure physical safety and meet basic needs (shelter, food, water).",
+        "Provide a calm, reassuring presence; reduce arousal.",
+        "Connect people with loved ones, accurate information, and each other.",
+        "Support self-efficacy — help people take practical next steps.",
+        "Foster hope and link individuals to ongoing services.",
+        "Do NOT force survivors to recount the traumatic event.",
+        "Extend the same care to responders; monitor for cumulative stress and burnout."
+      ]
+    }
+  ]
+}

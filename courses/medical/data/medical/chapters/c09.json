@@ -1,0 +1,67 @@
+{
+  "id": "c09",
+  "title": "Geriatric Emergencies I — Delirium vs. Dementia & Atypical Presentations",
+  "shortTitle": "Delirium vs. Dementia",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish delirium from dementia on onset, course, and reversibility.",
+    "Apply the default assumption that acute confusion in a geriatric patient is delirium until proven otherwise.",
+    "Recognize common reversible causes of geriatric delirium.",
+    "Describe why geriatric patients often present atypically for common conditions.",
+    "Explain why baseline cognitive/functional status matters for accurate field assessment."
+  ],
+  "summary": [
+    {
+      "title": "Delirium vs. Dementia — The Core Distinction",
+      "content": "Delirium is an acute-onset, fluctuating disturbance in attention and awareness that develops over hours to days and is often reversible once the underlying cause is treated. Dementia is a chronic, progressive decline in cognitive function that develops over months to years and is generally not reversible. The two can coexist (a patient with baseline dementia can also develop superimposed delirium from an acute illness), which is part of why the distinction matters clinically — a sudden worsening in a known dementia patient is not simply 'their dementia getting worse today,' it should prompt a delirium workup."
+    },
+    {
+      "title": "Default Assumption: Acute Confusion Is Delirium Until Proven Otherwise",
+      "content": "An acutely confused geriatric patient with a normal cognitive baseline (per family/caregiver report) should be treated as delirium until proven otherwise — this drives an active search for a reversible cause rather than passive acceptance of confusion as 'just old age' or an assumed new dementia diagnosis made in the field. This default assumption is one of the most important field teaching points in geriatric care, since missing a reversible cause of delirium can have serious consequences."
+    },
+    {
+      "title": "Common Reversible Causes of Delirium",
+      "content": "Common and field-relevant reversible causes include infection (especially urinary tract infection and pneumonia, which can present with confusion as the primary or only symptom in older adults), medication effects (polypharmacy, new medications, or drug interactions), hypoglycemia, hypoxia, electrolyte disturbances, dehydration, urinary retention or constipation (surprisingly common precipitants), pain, and unfamiliar environment/sensory deprivation (e.g., a patient without their usual glasses or hearing aids). A glucose check and a focused search for these causes are core field priorities in any acutely confused older patient."
+    },
+    {
+      "title": "Atypical Presentations in Geriatric Patients",
+      "content": "Older adults frequently present atypically for common conditions: a myocardial infarction may present without chest pain (instead as confusion, weakness, or shortness of breath alone — 'silent MI'); infection may present without fever (blunted febrile response); an acute abdomen may present with minimal pain despite significant pathology. This means a lower threshold of suspicion and a broader differential are warranted for geriatric patients whose presentation seems 'too mild' for what turns out to be a serious underlying process."
+    },
+    {
+      "title": "Why Baseline Matters",
+      "content": "As with children with special healthcare needs, the single most useful reference point for an older adult is their own personal cognitive and functional baseline, reported by a caregiver or family member — not a generic 'normal for age' assumption. A patient who is 'confused' by an unfamiliar provider's standard may actually be at their unchanged baseline, while a patient who seems 'fine' to a stranger may actually be significantly altered from their usual sharp baseline. Always ask what's normal for this specific patient before deciding what's abnormal today."
+    }
+  ],
+  "clinicalPearls": [
+    "Delirium: acute, fluctuating, often reversible. Dementia: chronic, progressive, generally not reversible.",
+    "Acute confusion in a geriatric patient = delirium until proven otherwise — actively search for a reversible cause.",
+    "UTI and pneumonia can present as confusion alone in older adults, without the 'typical' symptoms.",
+    "Older adults can have a heart attack without chest pain, an infection without fever, or an acute abdomen without much pain."
+  ],
+  "redFlags": [
+    "New, acute confusion in a patient with a previously normal cognitive baseline.",
+    "Sudden worsening of confusion in a known dementia patient — treat as possible superimposed delirium, not just dementia progression.",
+    "A 'mild' presentation in a geriatric patient that doesn't add up — consider atypical presentation of a serious condition."
+  ],
+  "commonMistakes": [
+    "Assuming all confusion in an older patient is 'just dementia' or 'just old age' without investigating.",
+    "Failing to check glucose and consider infection/medication causes in an acutely confused older patient.",
+    "Ruling out MI, infection, or acute abdomen in a geriatric patient based on the absence of 'typical' symptoms."
+  ],
+  "memoryAids": [
+    "Delirium: sudden and fixable. Dementia: slow and not.",
+    "New confusion = delirium until proven otherwise.",
+    "UTI can look like confusion, not burning — in the elderly.",
+    "No chest pain doesn't mean no heart attack in an older patient."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Geriatric Acute Confusion Field Approach",
+      "content": "Geriatric patient with new or worsening confusion\n  → Establish baseline cognitive/functional status from caregiver/family — do not assume based on the patient's presentation to a stranger alone\n  → Confusion is new or represents an acute change from baseline → treat as delirium until proven otherwise\n  → Check glucose immediately\n  → Search for reversible causes: infection (UTI, pneumonia), medication effects, hypoxia, electrolyte disturbance, dehydration, urinary retention/constipation, pain, unfamiliar environment/sensory deprivation\n  → Consider atypical presentations of serious conditions (silent MI, afebrile infection, painless acute abdomen) even with mild-seeming symptoms\n  → Transport for evaluation; do not dismiss acute confusion as simply 'dementia' or 'old age' in the field"
+    }
+  ],
+  "references": [
+    "Standard geriatric emergency medicine teaching on delirium vs. dementia and atypical presentation in older adults"
+  ]
+}

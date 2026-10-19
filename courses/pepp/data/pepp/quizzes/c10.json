@@ -1,0 +1,172 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "Which age group is at peak risk for unintentional poisoning?",
+      "options": ["A. Neonates", "B. Toddlers (1-3 years)", "C. School-age children", "D. Adolescents"],
+      "correct": 1,
+      "rationale": "Toddlers are at peak risk due to their mobility, curiosity, and tendency to mouth objects, combined with accessible household substances.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "What should field assessment of a suspected ingestion prioritize?",
+      "options": [
+        "A. Waiting for definitive lab identification before any assessment",
+        "B. Identifying the substance, amount, and time of exposure, and bringing containers to the hospital",
+        "C. Ignoring the exposure if the child appears well",
+        "D. Inducing vomiting in all cases"
+      ],
+      "correct": 1,
+      "rationale": "Field assessment should focus on identifying substance, amount, and timing when possible, and bringing physical evidence (containers/pills) to the hospital.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "A child has altered mental status, pinpoint pupils, and respiratory depression. What toxidrome does this suggest?",
+      "options": ["A. Anticholinergic", "B. Opioid", "C. Sympathomimetic", "D. Cholinergic"],
+      "correct": 1,
+      "rationale": "Pinpoint pupils with respiratory depression and altered mental status is the classic opioid toxidrome.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q04",
+      "question": "Why is button battery ingestion especially dangerous?",
+      "options": [
+        "A. It only causes minor, self-limited irritation",
+        "B. A lodged battery can cause severe tissue injury within hours via an electrical current effect",
+        "C. Button batteries pass through the GI tract without any risk",
+        "D. It is dangerous only if swallowed with food"
+      ],
+      "correct": 1,
+      "rationale": "A lodged esophageal button battery can cause severe injury within hours through an electrical current effect, not just direct chemical burn.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q05",
+      "question": "How should a suspected button battery ingestion be managed if the child currently appears asymptomatic?",
+      "options": [
+        "A. No transport needed since symptoms are absent",
+        "B. Still treated as a time-critical emergency requiring rapid transport and hospital notification",
+        "C. Wait 24 hours to reassess",
+        "D. Manage at home with observation only"
+      ],
+      "correct": 1,
+      "rationale": "Button battery ingestion is treated as time-critical regardless of current symptoms, since injury can progress even in an asymptomatic child.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q06",
+      "question": "Why are children more vulnerable to heat illness than adults?",
+      "options": [
+        "A. Higher surface-area-to-mass ratio, less efficient sweating, dependence on caregivers to escape heat",
+        "B. Children sweat more efficiently than adults",
+        "C. Children have a lower surface-area-to-mass ratio",
+        "D. Heat illness does not occur in children"
+      ],
+      "correct": 0,
+      "rationale": "A higher surface-area-to-mass ratio, less efficient sweating, and reliance on caregivers to remove them from heat increase pediatric heat illness risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "Why is a child left in a hot vehicle a particularly dangerous scenario?",
+      "options": [
+        "A. Vehicle interior temperatures rise slowly, giving ample time to intervene",
+        "B. Internal vehicle temperatures can become life-threatening within minutes",
+        "C. This scenario poses no unique risk compared to being outdoors",
+        "D. Only adults are at risk in hot vehicles"
+      ],
+      "correct": 1,
+      "rationale": "Vehicle interiors can reach life-threatening temperatures within minutes, making this a high-stakes, preventable pediatric emergency.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "Why are infants especially vulnerable to hypothermia?",
+      "options": [
+        "A. Higher surface-area-to-mass ratio plus limited ability to shiver for heat generation",
+        "B. Infants generate excess body heat compared to adults",
+        "C. Infants have thicker subcutaneous fat than adults",
+        "D. Hypothermia does not affect infants"
+      ],
+      "correct": 0,
+      "rationale": "Infants share the pediatric surface-area-to-mass vulnerability and have a limited ability to shiver, increasing hypothermia risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q09",
+      "question": "Which age groups are at highest risk for drowning?",
+      "options": [
+        "A. Toddlers (bathtubs, pools) and adolescents (open water, risk-taking/alcohol)",
+        "B. Only neonates",
+        "C. Only school-age children",
+        "D. Drowning risk is equal across all pediatric ages and contexts"
+      ],
+      "correct": 0,
+      "rationale": "Toddlers (bathtubs, pools) and adolescents (open water, often with risk-taking or alcohol) represent the highest-risk drowning groups.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q10",
+      "question": "What is the core physiologic problem in drowning?",
+      "options": ["A. Hypothermia", "B. Hypoxia", "C. Hypoglycemia", "D. Hypertension"],
+      "correct": 1,
+      "rationale": "Drowning is fundamentally a respiratory event, with hypoxia as the primary problem to treat.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q11",
+      "question": "When should spinal motion restriction be applied after a submersion event?",
+      "options": [
+        "A. In every submersion case regardless of mechanism",
+        "B. Only if the mechanism suggests trauma, such as a diving injury",
+        "C. Never, regardless of mechanism",
+        "D. Only in adolescents"
+      ],
+      "correct": 1,
+      "rationale": "Spinal motion restriction after submersion is applied selectively, based on a mechanism suggesting trauma (e.g., diving into shallow water).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q12",
+      "question": "Should a well-appearing child be transported after a submersion event?",
+      "options": [
+        "A. No, if the child appears completely normal",
+        "B. Yes — pulmonary complications can evolve over hours even in a well-appearing child",
+        "C. Only if the child requests transport",
+        "D. Only if hypothermia is present"
+      ],
+      "correct": 1,
+      "rationale": "Delayed pulmonary complications can develop after submersion even in children who appear well initially, so transport for observation is recommended.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q13",
+      "question": "What is the general field management framework across toxic and environmental emergencies?",
+      "options": [
+        "A. Identify the exposure/mechanism, support ABCs, remove from ongoing hazard, bring materials to hospital, transport promptly",
+        "B. Treat only the presenting symptom without further assessment",
+        "C. Delay transport until the child is fully asymptomatic",
+        "D. Rely solely on caregiver reassurance to determine need for transport"
+      ],
+      "correct": 0,
+      "rationale": "This bundle of priorities — exposure/mechanism identification, ABC support, hazard removal, bringing evidence, and prompt transport — applies across toxic and environmental emergencies.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q14",
+      "question": "Why does PEPP recommend a lower threshold for transport/observation in pediatric toxic/environmental emergencies compared to adults?",
+      "options": [
+        "A. Children are more likely to fabricate symptoms",
+        "B. Children can appear deceptively well before deteriorating",
+        "C. Pediatric transport is always free of cost considerations",
+        "D. There is no difference in threshold between children and adults"
+      ],
+      "correct": 1,
+      "rationale": "Children's capacity to appear well before rapid deterioration (e.g., button battery, submersion, early heat illness) supports a lower threshold for transport/observation.",
+      "difficulty": "Hard"
+    }
+  ]
+}

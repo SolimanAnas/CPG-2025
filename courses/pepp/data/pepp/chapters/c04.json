@@ -1,0 +1,68 @@
+{
+  "id": "c04",
+  "title": "History Taking, Secondary Assessment & Family-Centered Communication",
+  "shortTitle": "History & Secondary Assessment",
+  "estimatedStudyTime": 28,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Obtain a pediatric-focused history using SAMPLE and event-specific questions.",
+    "Perform a developmentally appropriate secondary assessment/focused exam.",
+    "Apply family-centered care principles during assessment and treatment.",
+    "Recognize special communication needs (hearing-impaired, non-English-speaking, developmentally delayed).",
+    "Explain how caregiver presence and involvement can improve both assessment and the child's experience."
+  ],
+  "summary": [
+    {
+      "title": "SAMPLE History in Children",
+      "content": "The SAMPLE history — Signs/Symptoms, Allergies, Medications, Past medical history, Last oral intake, Events leading up to the incident — applies to pediatric patients with added emphasis on birth history and developmental milestones for infants, immunization status, and growth/weight trends for medication dosing. Caregivers are usually the primary historians for young children, but school-age children and adolescents should be asked directly whenever possible, with the caregiver's account used to confirm or supplement rather than replace the child's own report."
+    },
+    {
+      "title": "The Secondary Assessment: Focused or Detailed Exam",
+      "content": "The secondary assessment follows the primary assessment and history, and is either a focused exam (targeted to the chief complaint, for stable/low-priority patients) or a rapid, more limited exam (for high-priority patients, performed en route). The physical exam order itself is often developmentally adjusted: for infants and toddlers, a toe-to-head sequence (least threatening areas first) improves cooperation, while school-age children and adolescents can typically tolerate a standard head-to-toe sequence."
+    },
+    {
+      "title": "Family-Centered Care",
+      "content": "Family-centered care treats the caregiver as a partner in the child's care rather than an obstacle to manage. In most situations, allowing a caregiver to remain present (including during many procedures and even resuscitation, with a dedicated support person when feasible) reduces the child's distress and improves cooperation, without meaningfully slowing care. Explaining what you are doing and why, in age-appropriate and caregiver-appropriate language, builds trust and improves the accuracy of the history you receive."
+    },
+    {
+      "title": "Special Communication Needs",
+      "content": "Some encounters require adapted communication: for a hearing-impaired child or caregiver, face the person directly, speak clearly (not necessarily loudly), and use written notes or an interpreter service as needed; for a non-English-speaking family, use professional interpretation services rather than relying on a child to interpret for their own care; for a child with developmental delay or autism spectrum differences, take cues from the caregiver about the child's usual communication style, minimize sensory overload where possible, and allow extra time. Adapting communication is a clinical skill, not an optional courtesy — it materially affects the quality of the history and exam you obtain."
+    },
+    {
+      "title": "Building the Full Picture",
+      "content": "History-taking and secondary assessment together answer the question the primary assessment could not: not just 'how sick is this child right now,' but 'why, and what has been happening.' Combined with the PAT and primary assessment, this completes PEPP's four-part assessment sequence — PAT, primary assessment, history, secondary assessment — which then informs the treatment and transport decisions covered later in this course."
+    }
+  ],
+  "clinicalPearls": [
+    "SAMPLE in pediatrics adds emphasis on birth history/milestones (infants), immunizations, and growth/weight for dosing.",
+    "Ask school-age children and adolescents directly; use caregiver accounts to supplement, not replace, the child's own report.",
+    "Toe-to-head exam order reduces distress in infants/toddlers; head-to-toe works for school-age children and adolescents.",
+    "Family-centered care — keeping a caregiver present, including during many procedures — reduces distress without slowing care."
+  ],
+  "redFlags": [
+    "Relying on a child to interpret medical information for their own non-English-speaking caregiver.",
+    "Excluding a calm, cooperative caregiver from the room by default rather than by clinical necessity.",
+    "Ignoring a caregiver's guidance on a developmentally different child's usual communication style."
+  ],
+  "commonMistakes": [
+    "Using a head-to-toe exam order on a frightened toddler when toe-to-head would improve cooperation.",
+    "Treating the caregiver's account as automatically more reliable than an age-appropriate child's own report.",
+    "Skipping professional interpretation services when a family member could 'informally translate.'"
+  ],
+  "memoryAids": [
+    "SAMPLE: Signs/Symptoms, Allergies, Medications, Past history, Last intake, Events.",
+    "Toe-to-head for the young and scared; head-to-toe for the older and cooperative.",
+    "Family-centered care: partner with the caregiver, don't just tolerate them.",
+    "Interpretation services, not a frightened child, translate for a non-English-speaking parent."
+  ],
+  "decisionTrees": [
+    {
+      "title": "History & Secondary Assessment Sequence",
+      "content": "After primary assessment and priority assignment:\n  → Obtain SAMPLE history (ask child directly if age-appropriate; caregiver supplements)\n  → Choose exam order by development: infant/toddler → toe-to-head; school-age/adolescent → head-to-toe\n  → Perform focused (stable) or rapid (high-priority) secondary exam accordingly\n  → Apply family-centered care: keep caregiver present/involved when feasible\n  → Adapt communication for special needs: interpretation services, hearing-impaired accommodations, developmental differences\n  → Integrate findings with PAT + primary assessment to finalize treatment/transport plan"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — History Taking and Secondary Assessment",
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Family-Centered Care and Communication"
+  ]
+}

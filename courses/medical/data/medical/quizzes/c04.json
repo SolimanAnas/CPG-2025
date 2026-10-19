@@ -1,0 +1,190 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "What treatment framework does GINA 2025 use for asthma management?",
+      "options": [
+        "A. A dual-track, ICS-formoterol-centered stepwise approach graded by symptom control",
+        "B. A fixed severity label assigned once at diagnosis",
+        "C. Treatment based solely on peak flow readings",
+        "D. No standardized framework exists"
+      ],
+      "correct": 0,
+      "rationale": "GINA 2025 uses a dual-track, ICS-formoterol-centered stepwise approach (Steps 1-4) graded by symptom control rather than a fixed severity label.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q02",
+      "question": "What classification language has GINA 2025 moved away from?",
+      "options": [
+        "A. The step-based framework",
+        "B. The 'intermittent / mild-moderate-severe persistent' severity classification",
+        "C. ICS-formoterol therapy",
+        "D. Symptom-control grading"
+      ],
+      "correct": 1,
+      "rationale": "GINA 2025 shifted away from the older intermittent/mild/moderate/severe persistent severity labels toward a control-based step framework.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q03",
+      "question": "What does the legacy 'phase 1' asthma classification (found in some exam banks) describe?",
+      "options": [
+        "A. Asthma that resolves spontaneously or with bronchodilators within 1-2 hours",
+        "B. Asthma requiring immediate intubation",
+        "C. Asthma unresponsive to all treatment",
+        "D. Asthma only occurring in children"
+      ],
+      "correct": 0,
+      "rationale": "The legacy phase 1 classification describes asthma that resolves spontaneously or with bronchodilators within 1-2 hours.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q04",
+      "question": "Is the legacy 'phase 1-4' asthma framework current GINA guideline terminology?",
+      "options": [
+        "A. Yes, it is the exact current terminology",
+        "B. No — it's a simplified historical teaching tool; current guideline language is GINA's step-based, control-oriented framework",
+        "C. It was never used in any EMS curriculum",
+        "D. It replaced GINA's framework in 2025"
+      ],
+      "correct": 1,
+      "rationale": "The phase 1-4 framework is historical/simplified vocabulary that predates and differs from GINA's current step-based approach.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q05",
+      "question": "What is chronic bronchitis classically associated with?",
+      "options": [
+        "A. Cigarette-smoke exposure, chronic productive cough, 'blue bloater' appearance",
+        "B. Viral infection only",
+        "C. Thin, barrel-chested appearance",
+        "D. Pursed-lip breathing as the defining feature"
+      ],
+      "correct": 0,
+      "rationale": "Chronic bronchitis is strongly linked to cigarette-smoke exposure and classically produces a chronic productive cough with a stockier, sometimes cyanotic ('blue bloater') appearance.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q06",
+      "question": "What appearance does emphysema classically produce?",
+      "options": ["A. Stocky, cyanotic ('blue bloater')", "B. Thin, barrel-chested with pursed-lip breathing ('pink puffer')", "C. Normal body habitus with no distinguishing features", "D. Obese with peripheral edema"],
+      "correct": 1,
+      "rationale": "Emphysema classically produces a thin, barrel-chested appearance with pursed-lip breathing, nicknamed 'pink puffer.'",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q07",
+      "question": "What is the 'hypoxic drive' theory?",
+      "options": [
+        "A. The (outdated) teaching that COPD patients rely on hypoxia to drive breathing and that oxygen causes respiratory arrest",
+        "B. A current, evidence-based mechanism explaining all COPD hypercapnia",
+        "C. A treatment protocol for asthma",
+        "D. A stroke scale component"
+      ],
+      "correct": 0,
+      "rationale": "The hypoxic drive theory is the traditional but outdated teaching that oxygen administration removes COPD patients' respiratory drive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q08",
+      "question": "What actually causes oxygen-induced hypercapnia in COPD, per current evidence?",
+      "options": [
+        "A. Loss of respiratory drive from oxygen administration",
+        "B. Primarily ventilation-perfusion mismatch and increased dead space",
+        "C. Increased cardiac output",
+        "D. Bronchospasm caused by oxygen"
+      ],
+      "correct": 1,
+      "rationale": "Current evidence attributes oxygen-induced hypercapnia in COPD mainly to V/Q mismatch and increased dead space, not loss of respiratory drive.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q09",
+      "question": "What is the current recommended SpO2 target for titrated oxygen therapy in acute COPD exacerbation?",
+      "options": ["A. 95-100%", "B. 88-92%", "C. 70-80%", "D. No target — maximize oxygen delivery always"],
+      "correct": 1,
+      "rationale": "Current guidance recommends titrated oxygen targeting roughly 88-92% SpO2 in acute COPD exacerbation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "Should oxygen be withheld from a hypoxic COPD patient out of fear of hypoxic drive?",
+      "options": [
+        "A. Yes, always withhold oxygen from hypoxic COPD patients",
+        "B. No — withholding oxygen creates real risk of harmful, prolonged tissue hypoxia and is not current best practice",
+        "C. Only withhold if the patient requests it",
+        "D. Only withhold in patients over 80"
+      ],
+      "correct": 1,
+      "rationale": "Deliberate under-oxygenation due to hypoxic-drive fears is not supported by current evidence and risks harmful tissue hypoxia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q11",
+      "question": "Why is a 'silent chest' in an asthma patient more concerning than a loud wheeze?",
+      "options": [
+        "A. It means the patient is improving and moving more air",
+        "B. It means too little air is moving to produce noise, signaling near-complete airway obstruction",
+        "C. It has no clinical significance",
+        "D. It only occurs in mild asthma"
+      ],
+      "correct": 1,
+      "rationale": "A silent chest reflects minimal air movement — a more ominous finding than a loud wheeze, which at least indicates airflow.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q12",
+      "question": "Which findings suggest severe asthma distress requiring rapid escalation?",
+      "options": [
+        "A. Ability to speak in full sentences and mild wheeze",
+        "B. Inability to speak in full sentences, accessory muscle use, altered mental status, or silent chest",
+        "C. Normal mental status and loud wheeze only",
+        "D. Mild cough without wheeze"
+      ],
+      "correct": 1,
+      "rationale": "Inability to speak in full sentences, accessory muscle use, altered mental status, and a silent chest are all signs of severe distress warranting rapid escalation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q13",
+      "question": "An asthma patient's wheeze suddenly becomes much quieter while their distress visibly worsens. How should this be interpreted?",
+      "options": [
+        "A. As reassuring improvement",
+        "B. As a warning sign of worsening obstruction (approaching silent chest), not improvement",
+        "C. As unrelated to their respiratory status",
+        "D. As an indication to discontinue bronchodilator therapy"
+      ],
+      "correct": 1,
+      "rationale": "A quieting wheeze with worsening distress mirrors the pediatric respiratory-failure pattern — it signals worsening obstruction, not improvement, and should prompt escalation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q14",
+      "question": "What is the field management priority for acute COPD exacerbation regarding oxygen?",
+      "options": [
+        "A. Titrated oxygen therapy targeting ~88-92% SpO2",
+        "B. Maximal oxygen delivery regardless of saturation",
+        "C. No oxygen under any circumstances",
+        "D. Oxygen only if the patient requests it"
+      ],
+      "correct": 0,
+      "rationale": "Titrated oxygen to a target of roughly 88-92% SpO2 balances avoiding hypoxia against avoiding unnecessary hyperoxia in COPD exacerbation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q15",
+      "question": "A patient has both a chronic productive cough with cyanotic appearance and a thin, barrel-chested build with pursed-lip breathing. What does this suggest?",
+      "options": [
+        "A. Pure emphysema only",
+        "B. Overlapping features of chronic bronchitis and emphysema, both under the COPD umbrella",
+        "C. This presentation is impossible in a single patient",
+        "D. Pure asthma with no COPD component"
+      ],
+      "correct": 1,
+      "rationale": "Chronic bronchitis and emphysema are classic teaching archetypes; many real COPD patients have overlapping features of both.",
+      "difficulty": "Hard"
+    }
+  ]
+}

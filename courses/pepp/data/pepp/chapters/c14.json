@@ -1,0 +1,68 @@
+{
+  "id": "c14",
+  "title": "EMS Operations: Transport Decisions, Disaster & MCI Triage",
+  "shortTitle": "EMS Operations & MCI Triage",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe factors that guide pediatric transport destination decisions.",
+    "Explain why children require specific consideration in disaster planning.",
+    "Describe the JumpSTART pediatric MCI triage algorithm and how it differs from adult START triage.",
+    "Identify pediatric-specific challenges in mass casualty incident (MCI) management.",
+    "Describe general principles of family reunification after a pediatric-involving MCI."
+  ],
+  "summary": [
+    {
+      "title": "Pediatric Transport Destination Decisions",
+      "content": "Transport destination decisions weigh the severity and type of the child's condition against the capabilities of nearby facilities — not every hospital has pediatric-specific resources (pediatric trauma center, pediatric ICU, pediatric surgical subspecialists). Local protocols typically define which conditions or severity thresholds require bypass to a pediatric-capable or pediatric trauma center, even if a closer general facility is available. When in doubt, providers should follow local protocol and consult medical direction rather than defaulting to the nearest facility for a child with significant illness or injury."
+    },
+    {
+      "title": "Why Children Need Specific Disaster Planning Consideration",
+      "content": "Children are not simply small adults in a disaster context — they have unique vulnerabilities (increased susceptibility to chemical/radiological exposure due to surface-area-to-mass ratio and breathing zone proximity to the ground, dependence on caregivers for evacuation and decision-making, psychological vulnerability, and equipment/medication needs that differ from adult supplies). Disaster and MCI plans that do not explicitly address pediatric patients risk inadequate pediatric-sized equipment, medication dosing errors under stress, and prolonged, traumatic family separation."
+    },
+    {
+      "title": "JumpSTART: Pediatric MCI Triage",
+      "content": "JumpSTART is a pediatric-specific adaptation of the adult START (Simple Triage and Rapid Treatment) MCI triage algorithm, developed because children's physiologic norms and injury/arrest patterns differ enough from adults to require adjusted triage criteria. Key JumpSTART-specific adjustments include: a different respiratory rate threshold for triage category assignment (using pediatric norms rather than the adult cutoff), a step for apneic children with a pulse to receive five rescue breaths before being categorized as expectant (reflecting that pediatric arrest is often respiratory in origin and may be reversible), and use of the AVPU scale (rather than command-following) to assess mental status appropriately for developmental stage."
+    },
+    {
+      "title": "Pediatric-Specific MCI Challenges",
+      "content": "MCIs involving children present distinct operational challenges: distinguishing a child's baseline developmental behavior from a triage-relevant abnormal finding under chaotic conditions, ensuring pediatric-sized equipment and correctly dosed medications are available at the scene, and managing the emotional and logistical complexity of children separated from caregivers during the incident. Triage personnel should be familiar with JumpSTART specifically, since applying adult START criteria to pediatric patients can misclassify children (e.g., under standard adult respiratory rate thresholds)."
+    },
+    {
+      "title": "Family Reunification",
+      "content": "Reunifying separated children with caregivers after an MCI is a recognized priority within disaster response, typically coordinated through a designated reunification process (tracking systems, designated reunification points) established by incident command or emergency management partners rather than improvised individually by field providers. Field providers should document identifying information for unaccompanied children when possible and follow the established incident reunification process rather than attempting ad hoc reunification during active response operations."
+    }
+  ],
+  "clinicalPearls": [
+    "Not every hospital has pediatric-specific capabilities — follow local protocol for pediatric-capable/pediatric trauma center bypass decisions.",
+    "Children have unique disaster vulnerabilities: exposure risk, evacuation dependence, psychological impact, and pediatric-specific equipment/medication needs.",
+    "JumpSTART adapts adult START triage for pediatric physiology: different RR thresholds, five rescue breaths for the apneic-with-pulse child, AVPU for mental status.",
+    "Family reunification after an MCI follows an established incident process, not ad hoc field-level matching."
+  ],
+  "redFlags": [
+    "Applying adult START triage criteria directly to a pediatric patient without adjustment.",
+    "An apneic child with a pulse triaged as expectant without first attempting five rescue breaths per JumpSTART.",
+    "Any unaccompanied child at an MCI scene without identifying documentation for reunification."
+  ],
+  "commonMistakes": [
+    "Defaulting to the nearest hospital for a significantly ill/injured child without considering pediatric-capable destination requirements per local protocol.",
+    "Treating pediatric disaster/MCI planning as identical to adult planning without pediatric-specific equipment, dosing, and psychological considerations.",
+    "Attempting individual, ad hoc caregiver reunification during active MCI response instead of following the incident's established process."
+  ],
+  "memoryAids": [
+    "Pediatric-capable destination, not just nearest destination.",
+    "JumpSTART = START adapted for kids: different RR cutoffs, 5 rescue breaths, AVPU.",
+    "Kids aren't small adults in a disaster — plan for their specific needs.",
+    "Reunification follows the incident process, not individual improvisation."
+  ],
+  "decisionTrees": [
+    {
+      "title": "JumpSTART Pediatric MCI Triage Overview",
+      "content": "Pediatric patient at MCI scene\n  → Able to walk? → Yes → Minor (green)\n  → Not walking → Assess breathing:\n     Breathing → Assess respiratory rate (pediatric-specific threshold) → Normal for age → assess perfusion/mental status → Perfusion/AVPU abnormal → Immediate (red); Normal → Delayed (yellow)\n     Abnormal RR for age → Immediate (red)\n     Not breathing → Position airway, reassess:\n        Breathing resumes → Immediate (red)\n        Still apneic, no pulse → Expectant (black/gray)\n        Still apneic, pulse present → Give 5 rescue breaths → Breathing resumes → Immediate (red); Still apneic → Expectant (black/gray)\n  → Continue reassessment as resources allow"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — EMS Operations",
+    "JumpSTART Pediatric MCI Triage Tool — Lou Romig, MD (original developer); widely adopted pediatric MCI triage standard"
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "How common are primary cardiac events as a cause of pediatric emergencies compared to adults?",
+      "options": ["A. Equally common", "B. More common in children", "C. Rare in children compared to adults", "D. Primary cardiac events never occur in children"],
+      "correct": 2,
+      "rationale": "Unlike adults, where primary cardiac events are a common cause of collapse, primary cardiac disease is a rare cause of pediatric emergencies; most pediatric cardiac problems are secondary.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "What is the most common cause of pediatric bradycardia?",
+      "options": ["A. Primary conduction system disease", "B. Hypoxia", "C. Electrolyte imbalance", "D. Medication overdose"],
+      "correct": 1,
+      "rationale": "Hypoxia is the most common cause of pediatric bradycardia encountered in the field.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "What is the correct field priority for a symptomatic bradycardic infant?",
+      "options": [
+        "A. Treat the rhythm number directly without addressing breathing",
+        "B. Oxygenate and ventilate first, addressing the underlying cause",
+        "C. Wait for a 12-lead ECG before any intervention",
+        "D. Apply ice to the chest"
+      ],
+      "correct": 1,
+      "rationale": "Because pediatric bradycardia is usually caused by hypoxia, the priority is oxygenation and ventilation to treat the underlying cause, not treating the rhythm number alone.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q04",
+      "question": "Besides hypoxia, what other factors can cause pediatric bradycardia?",
+      "options": ["A. Increased vagal tone, hypothermia, increased ICP", "B. Dehydration alone", "C. Fever alone", "D. Anxiety alone"],
+      "correct": 0,
+      "rationale": "Increased vagal tone, hypothermia, and increased intracranial pressure are other recognized causes of pediatric bradycardia, in addition to hypoxia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "How does sinus tachycardia typically present?",
+      "options": [
+        "A. A fixed, very rapid rate with no clear trigger",
+        "B. A variable rate with a clear trigger (fever, pain, anxiety, dehydration, shock) that resolves as the cause is treated",
+        "C. Always slower than 150 bpm",
+        "D. Only seen in adolescents"
+      ],
+      "correct": 1,
+      "rationale": "Sinus tachycardia is a compensatory response with a variable rate tied to an identifiable trigger, resolving as that trigger is treated.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q06",
+      "question": "How does SVT typically present, in contrast to sinus tachycardia?",
+      "options": [
+        "A. A fixed, very rapid rate that does not vary with stimulation",
+        "B. A slow, variable rate",
+        "C. Identical to sinus tachycardia in every way",
+        "D. Only occurs during exercise"
+      ],
+      "correct": 0,
+      "rationale": "SVT is a primary rhythm disturbance with a fixed, very rapid rate that does not vary with stimulation, distinguishing it from sinus tachycardia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q07",
+      "question": "An infant has a heart rate fixed at 240 bpm that does not change with stimulation and no clear triggering illness. What should this suggest?",
+      "options": ["A. Sinus tachycardia from fever", "B. Supraventricular tachycardia (SVT)", "C. Normal infant heart rate", "D. Bradycardia"],
+      "correct": 1,
+      "rationale": "A fixed, very rapid rate (often >220 bpm in infants) that does not vary with stimulation and lacks a clear trigger is characteristic of SVT.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q08",
+      "question": "Why should a provider ask about a child's known congenital heart disease?",
+      "options": [
+        "A. It is not clinically relevant in the field",
+        "B. The child may have a baseline vital signs/SpO2 that differs from typical norms, and is at elevated risk for arrhythmia, heart failure, and cardiogenic shock",
+        "C. It only matters for billing purposes",
+        "D. Congenital heart disease patients never develop arrhythmias"
+      ],
+      "correct": 1,
+      "rationale": "Children with congenital heart disease may have different baseline vitals/oxygen saturations and are at higher risk for arrhythmia, heart failure, and cardiogenic shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q09",
+      "question": "What family history finding raises suspicion for a cardiac channelopathy in a child with unexplained collapse?",
+      "options": ["A. Family history of diabetes", "B. Family history of sudden unexplained death in a young relative", "C. Family history of asthma", "D. Family history of migraine"],
+      "correct": 1,
+      "rationale": "Sudden unexplained death in a young relative is a recognized clue suggesting an underlying cardiac channelopathy risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q10",
+      "question": "What are the field priorities for a suspected pediatric cardiac emergency?",
+      "options": [
+        "A. Recognition, identifying reversible causes (especially hypoxia), and rapid transport with reassessment",
+        "B. Immediate antiarrhythmic drug administration without assessment",
+        "C. Delaying transport until a definitive diagnosis is made",
+        "D. Ignoring the rhythm and focusing only on blood pressure"
+      ],
+      "correct": 0,
+      "rationale": "Field priorities are recognition via PAT/primary assessment, identifying reversible causes like hypoxia, and rapid transport with ongoing reassessment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q11",
+      "question": "Where should a provider look for arrest algorithms, defibrillation/cardioversion dosing, and antiarrhythmic drug dosing?",
+      "options": ["A. This PEPP chapter covers it fully", "B. The PALS reviewer", "C. The BLS reviewer", "D. No resource covers this"],
+      "correct": 1,
+      "rationale": "This chapter deliberately does not reproduce arrest algorithms or drug dosing; the PALS reviewer covers this in full depth.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q12",
+      "question": "A bradycardic infant has poor perfusion and diminished respiratory effort. What should the provider suspect first?",
+      "options": [
+        "A. A primary cardiac conduction disorder requiring immediate cardioversion",
+        "B. A respiratory or hypoxia problem, treatable by supporting oxygenation/ventilation",
+        "C. Nothing is wrong since bradycardia is normal in infants",
+        "D. A toxic ingestion is the only possible cause"
+      ],
+      "correct": 1,
+      "rationale": "A bradycardic, poorly perfusing infant is usually a respiratory or hypoxia problem until proven otherwise, so oxygenation/ventilation is the priority.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Why does PEPP limit its cardiac chapter to recognition rather than full resuscitation depth?",
+      "options": [
+        "A. To avoid duplicating PALS's authoritative arrest-algorithm and drug-dosing content",
+        "B. Because cardiac emergencies are not important in pediatrics",
+        "C. Because PALS does not cover cardiac arrest",
+        "D. Because field providers never encounter cardiac emergencies"
+      ],
+      "correct": 0,
+      "rationale": "PEPP's guardrail is to avoid duplicating PALS's resuscitation content, focusing instead on field recognition and initial stabilization, with PALS as the authoritative depth resource.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "A school-age child with known repaired congenital heart disease has a caregiver report of a resting SpO2 of 88% at baseline. What does this mean for field assessment?",
+      "options": [
+        "A. 88% must always be treated as an emergency abnormal finding",
+        "B. This may be the child's normal baseline, so it should be compared to their known baseline rather than typical pediatric norms",
+        "C. This value should be ignored entirely",
+        "D. It indicates the caregiver is providing inaccurate information"
+      ],
+      "correct": 1,
+      "rationale": "Children with congenital heart disease may have a baseline SpO2 different from typical norms; providers should ask about and compare to the child's known personal baseline.",
+      "difficulty": "Hard"
+    }
+  ]
+}

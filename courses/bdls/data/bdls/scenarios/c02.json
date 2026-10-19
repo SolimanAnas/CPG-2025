@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "First on Scene at the Market Explosion",
+      "presentation": "You are the first EMS unit at an explosion in a crowded market. Smoke is rising, dozens of people are down or fleeing, and bystanders scream for you to help a bleeding man at your feet.",
+      "vitals": { "casualties": "Est. 30+", "hazards": "Smoke, unstable stalls, possible 2nd device", "resources": "Your unit only" },
+      "question": "What is your correct first sequence of actions?",
+      "options": [
+        "A: Immediately treat the bleeding man in front of you.",
+        "B: Size up and report (detection), establish and announce incident command, address safety/security and hazards — before individual patient care.",
+        "C: Drive the nearest casualty to the hospital.",
+        "D: Wait outside the area until the police arrive."
+      ],
+      "correct": 1,
+      "explanation": "The DISASTER Paradigm runs in order: detection (size-up and report), incident command, safety/security, and hazard assessment come before touching the first patient. At a bombing, secondary devices make staging discipline and scene control lifesaving for responders — and effective command saves more victims than one-at-a-time care.",
+      "clinicalPearl": "The hardest BDLS skill is stepping past the first casualty to run the checklist — command and safety save more lives than immediate hands-on care."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Everyone to Mercy General",
+      "presentation": "At a highway pile-up MCI with 25 casualties, transporting crews begin taking every patient to Mercy General, 5 minutes away. Two other hospitals, 15 and 20 minutes away, have received no patients. Mercy's ED calls: they are saturated.",
+      "vitals": { "casualties": "25", "nearest ED": "Saturated", "other EDs": "Idle" },
+      "question": "What has gone wrong, and what should command do?",
+      "options": [
+        "A: Nothing — nearest hospital is always correct.",
+        "B: Evacuation failed: casualties were not distributed. Command should assign destinations by acuity across all appropriate receiving facilities.",
+        "C: Mercy General should simply work faster.",
+        "D: Stop all transports until Mercy clears."
+      ],
+      "correct": 1,
+      "explanation": "Sending every casualty to the closest facility relocates the disaster into its ED. The evacuation component requires command-directed distribution: match patient acuity to facility capability and spread the load across the system.",
+      "clinicalPearl": "An MCI transported badly becomes a hospital MCI — distribution is a command function, not a driver's choice."
+    },
+    {
+      "id": "c02_s03",
+      "title": "The Second Wave",
+      "presentation": "Twenty minutes into a response at an industrial fire, crews have settled into patient care. A responder notices a storage tank near the treatment area beginning to vent vapor. The initial hazard assessment had cleared this area.",
+      "vitals": { "scene": "Evolving", "new hazard": "Venting tank near treatment area", "initial assessment": "20 min old" },
+      "question": "What does this development demonstrate?",
+      "options": [
+        "A: The initial assessment was negligent.",
+        "B: Hazard assessment is continuous — scenes evolve, so the treatment area must be relocated and command notified immediately.",
+        "C: Vapor clouds are harmless once patients are triaged.",
+        "D: Only the safety officer may notice hazards."
+      ],
+      "correct": 1,
+      "explanation": "The 'Assess hazards' component never ends: an area safe on arrival can become dangerous. Any responder who spots a new hazard reports it at once; command relocates operations and updates the safety perimeter.",
+      "clinicalPearl": "Your scene size-up has an expiration time — keep looking up from the patient."
+    }
+  ]
+}

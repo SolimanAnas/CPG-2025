@@ -1,0 +1,27 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "Airway Adjunct Selection: OPA vs NPA",
+      "headers": ["Feature", "OPA", "NPA"],
+      "rows": [
+        ["Patient state", "Unresponsive, no gag reflex", "Gag reflex present or semi-conscious"],
+        ["Tolerance", "Poor if gag reflex present", "Generally better tolerated"],
+        ["Key contraindication", "Intact gag reflex", "Suspected basilar skull fracture / significant mid-face trauma"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "BVM Ventilation Indications",
+      "headers": ["Finding", "Why It Matters"],
+      "rows": [
+        ["Apnea", "No spontaneous breathing"],
+        ["Bradypnea", "Rate too slow for adequate minute ventilation"],
+        ["Inadequate tidal volume", "Shallow breaths fail to move sufficient air, even at a normal rate"],
+        ["Cyanosis", "Sign of inadequate oxygenation"],
+        ["Altered LOC + poor effort", "Reduced drive/effort compounding ventilation failure"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "Pediatric Trauma Primary Assessment with Injury-Pattern Awareness",
+      "description": "Sequence for assessing a pediatric trauma patient with attention to pediatric-specific anatomic vulnerabilities.",
+      "steps": [
+        "Ensure scene safety and control obvious hemorrhage.",
+        "Perform primary assessment (ABCDE), watching for pediatric patterns: head injury dominance, chest injury without rib fractures, occult abdominal injury despite a soft exam.",
+        "Assess perfusion directly (heart rate, capillary refill, skin) rather than relying on blood pressure alone — significant blood loss can occur with a normal BP.",
+        "Check the fontanelle (infants) and trend mental status for evolving head injury.",
+        "Note any rib fracture as a marker of high-energy mechanism requiring heightened suspicion for chest injury.",
+        "Apply selective spinal motion restriction criteria, weighting mechanism and mental status heavily given limited reliability of pain reporting in young children.",
+        "Transport rapidly to an appropriate, ideally pediatric-capable, trauma center with continuous reassessment."
+      ]
+    },
+    {
+      "id": "c09_alg02",
+      "title": "Pediatric Spinal Motion Restriction Positioning",
+      "description": "Steps for maintaining neutral spinal alignment in a young child requiring spinal motion restriction.",
+      "steps": [
+        "Determine the need for spinal motion restriction using selective criteria (mechanism, mental status, distracting injury, midline tenderness, neurologic complaint), weighting mechanism/mental status heavily in young children.",
+        "If restriction is indicated, prepare the backboard/device and recognize that a young child's proportionally larger head will force neck flexion if placed flat without adjustment.",
+        "Add padding under the torso (not just the head) to raise the torso relative to the head and restore neutral alignment.",
+        "Secure the child appropriately for age/size, avoiding excessive restriction that could compromise breathing.",
+        "Reassess neurovascular status and comfort throughout transport."
+      ]
+    }
+  ]
+}

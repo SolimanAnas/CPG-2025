@@ -1,0 +1,27 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "The Five Blast Injury Mechanisms",
+      "headers": ["Class", "Mechanism", "Typical Injuries"],
+      "rows": [
+        ["Primary", "Blast pressure wave at air-tissue interfaces", "TM rupture, blast lung, GI perforation/hemorrhage, air embolism"],
+        ["Secondary", "Fragments and debris propelled by the blast", "Penetrating trauma — the most common cause of death/injury"],
+        ["Tertiary", "Body thrown against objects/ground", "Blunt trauma, fractures, head injury"],
+        ["Quaternary", "Everything else from the event", "Burns, crush (collapse), smoke inhalation, exacerbated illness"],
+        ["Quinary", "Device additives", "Radiological/chemical/biological contamination ('dirty' additives)"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "Bombing Casualty Flow — Planning Points",
+      "headers": ["Phase", "Who Arrives", "Hospital Action"],
+      "rows": [
+        ["Minutes 0–15", "Self-transported walking wounded (largest group)", "Cohort in fast-track; rapid assessment; don't fill resus bays"],
+        ["Minutes 30–60+", "Critical casualties via EMS after extrication", "Protected resuscitation/OR capacity; trauma teams ready"],
+        ["Hours", "Delayed presenters (blast lung, GI injury, anxiety)", "Observation pathways; return precautions for discharged"]
+      ]
+    }
+  ]
+}

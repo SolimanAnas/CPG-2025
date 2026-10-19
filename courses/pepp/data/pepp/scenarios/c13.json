@@ -1,0 +1,53 @@
+{
+  "chapter": "c13",
+  "cases": [
+    {
+      "id": "c13_s01",
+      "title": "The Plugged Tracheostomy",
+      "presentation": "A 5-year-old with a chronic tracheostomy suddenly develops increased work of breathing and desaturation. The caregiver reports the tube was working fine an hour ago.",
+      "vitals": { "spo2": "85% (baseline reported as 98%)", "appearance": "Increased work of breathing" },
+      "question": "What is the correct first troubleshooting step?",
+      "options": [
+        "A: Immediately remove and replace the tracheostomy tube without any other assessment.",
+        "B: Attempt suctioning first to clear a possible mucus plug, the most common cause of sudden tracheostomy-related distress.",
+        "C: Transport without attempting any field intervention.",
+        "D: Cover the tracheostomy stoma completely and ventilate through the mouth instead."
+      ],
+      "correct": 1,
+      "explanation": "Mucus plugging is the most common cause of sudden respiratory distress in a child with a tracheostomy, so suctioning is the appropriate first troubleshooting step, before considering tube replacement if suctioning does not resolve the problem.",
+      "clinicalPearl": "Suction first for sudden trach distress — it's the most common fixable cause and the fastest first step."
+    },
+    {
+      "id": "c13_s02",
+      "title": "Headache and Vomiting With a Known Shunt",
+      "presentation": "A 6-year-old with a history of a VP shunt for hydrocephalus presents with a severe headache, repeated vomiting, and increasing lethargy over the past few hours.",
+      "vitals": { "appearance": "Increasingly lethargic", "symptoms": "Headache, repeated vomiting" },
+      "question": "What should this presentation suggest, and what is the appropriate field management?",
+      "options": [
+        "A: A benign viral illness requiring only supportive care at home.",
+        "B: Possible VP shunt malfunction with increased intracranial pressure — apply standard increased-ICP precautions and transport rapidly.",
+        "C: A feeding intolerance related to a G-tube.",
+        "D: No action needed since the child has a shunt and this is expected."
+      ],
+      "correct": 1,
+      "explanation": "Headache, vomiting, and altered mental status in a child with a known VP shunt should raise strong suspicion for shunt malfunction with resulting increased intracranial pressure. Field management includes standard increased-ICP precautions (avoiding hypoxia/hypotension, appropriate positioning) and rapid transport, since shunt-specific correction is a hospital-level intervention.",
+      "clinicalPearl": "Known shunt plus headache, vomiting, and lethargy is shunt malfunction until proven otherwise — treat it as a rising-ICP emergency."
+    },
+    {
+      "id": "c13_s03",
+      "title": "A Saturation That Isn't What It Seems",
+      "presentation": "A 4-year-old with chronic lung disease and home oxygen dependence has a pulse oximetry reading of 90%. The caregiver states this is the child's normal baseline saturation on room air with their usual supplemental oxygen in place.",
+      "vitals": { "spo2": "90% (caregiver-reported baseline)", "appearance": "Comfortable, interactive" },
+      "question": "How should this finding be interpreted?",
+      "options": [
+        "A: As an emergency requiring aggressive escalation regardless of history.",
+        "B: As the child's known personal baseline, to be compared against for any acute change rather than judged against typical population norms.",
+        "C: As proof that the pulse oximeter is malfunctioning.",
+        "D: As irrelevant since the child appears comfortable."
+      ],
+      "correct": 1,
+      "explanation": "For CSHCN, personal baseline function is the most useful reference point. A caregiver-reported baseline SpO2 of 90% with a comfortable, interactive appearance should be compared against that baseline for any acute deterioration, rather than automatically treated as abnormal by typical pediatric standards.",
+      "clinicalPearl": "Ask 'what's normal for this child?' before reacting to a number that would be abnormal in a typically developing child."
+    }
+  ]
+}

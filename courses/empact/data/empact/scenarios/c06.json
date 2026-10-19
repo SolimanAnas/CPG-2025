@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "The Not-Quite-Stroke",
+      "presentation": "A 58-year-old diabetic man is found with right-sided facial droop, slurred speech, and arm weakness. His family says he last seemed normal about 40 minutes ago.",
+      "vitals": { "hr": "88 bpm", "bp": "138/84 mmHg", "glucose": "Not yet checked", "loc": "Altered, slurred speech" },
+      "question": "What is the correct FIRST diagnostic step before assuming stroke?",
+      "options": [
+        "A: Begin stroke-center transport immediately without checking anything else.",
+        "B: Check blood glucose — a diabetic emergency (hypoglycemia or hyperglycemia) can present with identical stroke-like symptoms.",
+        "C: Perform a 12-lead ECG first.",
+        "D: Wait for the hospital to check glucose."
+      ],
+      "correct": 1,
+      "explanation": "Diabetic emergencies are classic stroke mimics. Given his diabetes history and stroke-like presentation, glucose must be checked immediately — a low glucose could fully explain and potentially reverse his symptoms, which a true stroke would not do.",
+      "clinicalPearl": "Every 'stroke' call gets a glucose check — it's the fastest way to catch the great stroke mimic."
+    },
+    {
+      "id": "c06_s02",
+      "title": "Rising Pressure",
+      "presentation": "A 24-year-old man involved in a fall from height is found with a blood pressure of 190/60, a heart rate of 48, and an irregular, gasping respiratory pattern.",
+      "vitals": { "hr": "48 bpm", "bp": "190/60 mmHg", "rr": "Irregular, gasping pattern", "loc": "Decreasing" },
+      "question": "What does this combination of vital signs represent?",
+      "options": [
+        "A: A normal stress response to trauma.",
+        "B: Cushing's Triad — hypertension, bradycardia, and altered respirations — indicating significantly elevated intracranial pressure.",
+        "C: Early compensated shock.",
+        "D: A simple vasovagal episode."
+      ],
+      "correct": 1,
+      "explanation": "Hypertension, bradycardia, and an altered respiratory pattern together constitute Cushing's triad, reflecting brainstem compression from severely elevated intracranial pressure — a neurosurgical emergency requiring rapid transport and airway readiness.",
+      "clinicalPearl": "High BP + low HR + weird breathing after head trauma is never 'just a stress response' — it's Cushing's triad."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Headache With a Stiff Neck",
+      "presentation": "A 19-year-old college student presents with a severe headache, fever of 102.5°F, and pain when you attempt to passively flex her neck. She is intermittently confused.",
+      "vitals": { "temp": "102.5 F", "hr": "112 bpm", "exam": "Nuchal rigidity", "loc": "Intermittently confused" },
+      "question": "What should be strongly suspected, and what should guide your approach?",
+      "options": [
+        "A: A simple tension headache — treat with reassurance only.",
+        "B: Meningitis — fever, nuchal rigidity, and altered mental status form the classic triad; use appropriate precautions and transport promptly.",
+        "C: Dehydration alone, unrelated to infection.",
+        "D: Migraine with no infectious concern."
+      ],
+      "correct": 1,
+      "explanation": "Fever, nuchal rigidity, and altered mental status together are the classic meningitis presentation. This warrants prompt recognition, appropriate standard/droplet precautions given possible bacterial causes, and rapid transport rather than treating it as a benign headache.",
+      "clinicalPearl": "Headache plus fever plus stiff neck plus confusion is meningitis until proven otherwise."
+    }
+  ]
+}

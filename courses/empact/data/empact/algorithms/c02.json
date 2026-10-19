@@ -1,0 +1,18 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "Medical Patient Airway Management Sequence",
+      "description": "Assessing and supporting the airway and ventilation in a medical patient.",
+      "steps": [
+        "Assess rate, depth, effort, color, and level of consciousness — not rate alone.",
+        "If apnea, bradypnea, inadequate tidal volume, cyanosis, or altered LOC with poor effort: begin BVM ventilation.",
+        "Select an adjunct: OPA if unresponsive with no gag reflex; NPA if gag reflex present or semi-conscious.",
+        "Avoid NPA if basilar skull fracture or significant mid-face trauma is suspected.",
+        "If vomit, blood, or fluid is present: turn the patient onto their side (or logroll with spinal precautions) and suction.",
+        "If stridor is present: treat as an urgent, potentially rapidly progressing airway emergency and prepare for advanced airway support."
+      ]
+    }
+  ]
+}

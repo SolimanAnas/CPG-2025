@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "The Lethargic Toddler",
+      "presentation": "A 2-year-old is found unusually quiet and difficult to arouse by a caregiver. No fever is reported. A glucose meter is available on the unit.",
+      "vitals": { "avpu": "Responds to voice only", "temp": "Afebrile", "appearance": "Poor eye contact, decreased interactiveness" },
+      "question": "What is the appropriate next step?",
+      "options": [
+        "A: Transport without further assessment since no fever is present.",
+        "B: Check the child's blood glucose, since hypoglycemia is a common and rapidly reversible cause of altered mental status.",
+        "C: Assume the child is simply tired and reassess in 30 minutes.",
+        "D: Withhold any intervention until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "Any altered child should have a glucose check when a meter is available, since hypoglycemia is common in children and rapidly reversible. This should be done promptly rather than assuming a benign cause without checking.",
+      "clinicalPearl": "Glucose check first, every time, when altered mental status is present and a meter is available — it's fast, easy, and can immediately explain (and treat) the problem."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Seizure at the Six-Minute Mark",
+      "presentation": "A 3-year-old has been having generalized tonic-clonic seizure activity for 6 minutes with no sign of stopping. The caregiver reports no fever and this has never happened before.",
+      "vitals": { "duration": "6 minutes and ongoing", "temp": "Afebrile", "activity": "Generalized tonic-clonic, continuous" },
+      "question": "What does this presentation represent, and what is the priority?",
+      "options": [
+        "A: A simple febrile seizure requiring only observation.",
+        "B: Status epilepticus — a time-critical emergency requiring rapid escalation of care and transport.",
+        "C: A normal pediatric seizure pattern requiring no escalation.",
+        "D: This should be timed for another 10 minutes before taking any action."
+      ],
+      "correct": 1,
+      "explanation": "A seizure lasting more than 5 minutes meets the definition of status epilepticus, a time-critical emergency. This is not a simple febrile seizure (there is no fever, and duration alone already exceeds the definition), and requires immediate escalation of care; benzodiazepine dosing is addressed in the PALS reviewer.",
+      "clinicalPearl": "Five minutes is the line — once a seizure crosses it, treat it as status epilepticus and escalate, don't keep waiting."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Bulging Fontanelle After a Fall",
+      "presentation": "A 5-month-old fell from a changing table an hour ago. The infant is increasingly difficult to arouse, has a bulging fontanelle, and now has an irregular breathing pattern.",
+      "vitals": { "fontanelle": "Bulging", "rr": "Irregular pattern", "appearance": "Decreasing responsiveness" },
+      "question": "What should this presentation prompt, and what should be avoided?",
+      "options": [
+        "A: Suspicion for increased intracranial pressure — avoid hypoxia and hypotension, position to avoid jugular compression, and transport rapidly.",
+        "B: No specific concern since infants commonly have bulging fontanelles.",
+        "C: Aggressive fluid restriction and permissive hypoxia.",
+        "D: Delay transport until the fontanelle returns to normal."
+      ],
+      "correct": 0,
+      "explanation": "A bulging fontanelle with decreasing responsiveness and an irregular respiratory pattern after a fall suggests increased intracranial pressure. Field priorities are avoiding hypoxia and hypotension (both worsen secondary brain injury), positioning to avoid jugular venous compression, and rapid transport.",
+      "clinicalPearl": "After head trauma, a bulging fontanelle plus a change in responsiveness is not incidental — treat it as rising intracranial pressure and protect the brain from secondary injury."
+    }
+  ]
+}

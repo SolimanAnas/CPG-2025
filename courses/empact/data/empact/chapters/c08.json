@@ -1,0 +1,68 @@
+{
+  "id": "c08",
+  "title": "Abdominal & Gastrointestinal Emergencies",
+  "shortTitle": "Abdominal & GI",
+  "estimatedStudyTime": 26,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the classic pain migration pattern of appendicitis.",
+    "Recognize hyperkalemia risk in dialysis patients who miss treatment.",
+    "Recognize dehydration on physical exam.",
+    "Apply differential diagnosis by abdominal pain location.",
+    "Explain why abdominal complaints can be referred from non-abdominal sources."
+  ],
+  "summary": [
+    {
+      "title": "Appendicitis: Pain That Migrates",
+      "content": "Appendicitis often initially presents with periumbilical pain that transitions into right lower quadrant pain, classically localizing near McBurney's point. This migration pattern — vague central pain becoming sharp and focal over hours — is a key differentiator from other causes of abdominal pain that are focal from the start. A 20-year-old with a two-day history of diffuse abdominal pain that has now localized to the lower right quadrant fits this classic pattern closely."
+    },
+    {
+      "title": "Hyperkalemia in the Dialysis Patient",
+      "content": "Hyperkalemia is relatively common in patients who miss dialysis and is associated with paresthesias, weakness, and dangerous cardiac dysrhythmias. Any dialysis-dependent patient presenting with a missed treatment, generalized weakness, or cardiac irregularity should raise immediate concern for hyperkalemia, which can progress to life-threatening arrhythmias. This is a metabolic/renal emergency that frequently masquerades as a vague 'weak and tired' complaint rather than an obviously cardiac one."
+    },
+    {
+      "title": "Recognizing Dehydration on Exam",
+      "content": "Indications of dehydration include skin tenting (poor turgor) and dry mucous membranes. These simple bedside findings, combined with history (vomiting, diarrhea, poor intake, heat exposure), help estimate the severity of fluid loss even before formal vital sign changes like tachycardia or hypotension appear — dehydration, like shock, has an early phase that a careful exam can catch before the numbers change."
+    },
+    {
+      "title": "Localizing Abdominal Pain to Build a Differential",
+      "content": "Abdominal pain location provides strong differential clues: right lower quadrant suggests appendicitis; right upper quadrant suggests cholecystitis (gallbladder); left lower quadrant, especially in older patients, suggests diverticulitis; and epigastric pain radiating to the back suggests pancreatitis. While these are generalizations rather than absolute rules, using location as an organizing framework — rather than treating 'abdominal pain' as one undifferentiated complaint — speeds the formation of a useful differential diagnosis."
+    },
+    {
+      "title": "When Abdominal Pain Isn't Abdominal",
+      "content": "Not all abdominal pain originates in the abdomen. Referred and mimicking presentations include inferior MI (which can present with epigastric discomfort and nausea rather than classic chest pain), diabetic ketoacidosis (abdominal pain is a recognized DKA symptom), and lower lobe pneumonia (which can cause upper abdominal pain from diaphragmatic irritation). A systematic assessment — vital signs, ECG when cardiac risk factors are present, glucose check — protects against anchoring on a GI diagnosis when the actual source lies elsewhere."
+    }
+  ],
+  "clinicalPearls": [
+    "Appendicitis often initially presents with periumbilical pain that transitions into right lower quadrant pain.",
+    "Hyperkalemia is relatively common in patients who miss dialysis and is associated with paresthesias, weakness, and dysrhythmias.",
+    "Indications of dehydration include skin tenting (poor turgor) and dry mucous membranes.",
+    "Abdominal pain location (RLQ, RUQ, LLQ, epigastric) provides strong differential clues."
+  ],
+  "redFlags": [
+    "A dialysis patient with a missed treatment and new generalized weakness — screen for hyperkalemia.",
+    "Epigastric pain with nausea in a patient with cardiac risk factors — consider inferior MI before assuming a GI cause.",
+    "Abdominal pain with Kussmaul respirations or a fruity breath odor — consider DKA, not primary GI disease."
+  ],
+  "commonMistakes": [
+    "Treating all abdominal pain as a single undifferentiated complaint rather than using location to narrow the differential.",
+    "Missing hyperkalemia in a dialysis patient because the complaint sounds vague ('weak and tired') rather than obviously cardiac.",
+    "Anchoring on a GI diagnosis for epigastric pain without checking a 12-lead ECG when cardiac risk factors are present."
+  ],
+  "memoryAids": [
+    "Appendicitis: pain starts in the middle, ends in the lower right (McBurney's point).",
+    "RLQ = appendix, RUQ = gallbladder, LLQ = diverticulitis, epigastric-to-back = pancreatitis.",
+    "Missed dialysis + weakness = check for hyperkalemia.",
+    "Dry mouth + tenting skin = dehydration, even before the vitals change."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Abdominal Pain Differential by Location",
+      "content": "Abdominal pain complaint\n  → Check vitals, glucose, and consider ECG if cardiac risk factors present (rule out non-abdominal mimics: inferior MI, DKA, pneumonia)\n  → Localize pain:\n     Periumbilical → RLQ migration: appendicitis\n     RUQ: cholecystitis\n     LLQ (esp. older patient): diverticulitis\n     Epigastric radiating to back: pancreatitis\n  → Dialysis patient + missed treatment + weakness: screen for hyperkalemia (cardiac monitor)\n  → Assess for dehydration: skin tenting, dry mucous membranes, history of losses\n  → Manage supportively; transport with reassessment"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Gastrointestinal, Metabolic/Renal, and Dehydration categories",
+    "National EMS Education Standards — Abdominal emergencies"
+  ]
+}

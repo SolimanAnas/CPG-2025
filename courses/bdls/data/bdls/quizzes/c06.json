@@ -1,0 +1,178 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "Injury caused directly by the blast pressure wave is classified as:",
+      "options": ["A. Primary", "B. Secondary", "C. Tertiary", "D. Quaternary"],
+      "correct": 0,
+      "rationale": "Primary blast injury is caused by the overpressure wave itself, targeting air-filled organs (ears, lungs, GI tract).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "A casualty struck by bolts and glass propelled by an explosion has which mechanism of injury?",
+      "options": ["A. Primary", "B. Secondary", "C. Tertiary", "D. Quinary"],
+      "correct": 1,
+      "rationale": "Secondary blast injury — fragments and debris — is also the most common cause of injury and death in bombings.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q03",
+      "question": "A victim thrown by the blast against a concrete pillar suffers which mechanism?",
+      "options": ["A. Primary", "B. Secondary", "C. Tertiary", "D. Quaternary"],
+      "correct": 2,
+      "rationale": "Tertiary injury results from bodily displacement — being thrown against objects or the ground.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q04",
+      "question": "Radiological material packed around an explosive ('dirty bomb') produces which class of injury?",
+      "options": ["A. Quaternary", "B. Quinary", "C. Primary", "D. Tertiary"],
+      "correct": 1,
+      "rationale": "Quinary injuries come from additives to the device — radiological, chemical, or biological contaminants.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q05",
+      "question": "Which organs are most vulnerable to the primary blast wave?",
+      "options": [
+        "A. Solid organs — liver and spleen",
+        "B. Air-filled organs — ears, lungs, GI tract",
+        "C. Bones",
+        "D. Skin"
+      ],
+      "correct": 1,
+      "rationale": "The pressure wave does its work at air-tissue interfaces: tympanic membranes, alveoli, and bowel.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q06",
+      "question": "A blast survivor from inside a bus develops dyspnea, falling SpO2, and hemoptysis 2 hours later. Most likely diagnosis?",
+      "options": ["A. Anxiety", "B. Blast lung (primary pulmonary blast injury)", "C. Simple rib fracture", "D. Asthma"],
+      "correct": 1,
+      "rationale": "Enclosed-space blast plus delayed respiratory deterioration with hemoptysis is classic blast lung — pulmonary contusion and alveolar disruption that can present hours after exposure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "When ventilating a patient with suspected blast lung, the provider should:",
+      "options": [
+        "A. Use maximal pressures to recruit the lungs",
+        "B. Use the lowest effective pressures and monitor for pneumothorax and air embolism",
+        "C. Avoid oxygen",
+        "D. Hyperventilate at 30 breaths/min"
+      ],
+      "correct": 1,
+      "rationale": "Positive pressure can extend alveolar rupture, causing tension pneumothorax or arterial air embolism — gentle ventilation is the rule.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "An intact tympanic membrane after a blast means:",
+      "options": [
+        "A. No primary blast injury occurred",
+        "B. Other primary blast injuries (lung, GI) are still possible — TM status is not a reliable rule-out",
+        "C. The patient can be discharged immediately",
+        "D. The blast was small"
+      ],
+      "correct": 1,
+      "rationale": "TM rupture is the most common primary injury, but its absence does not exclude blast lung or GI injury — clinical assessment and observation still apply.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q09",
+      "question": "Why do enclosed-space explosions cause worse primary blast injury?",
+      "options": [
+        "A. Less oxygen indoors",
+        "B. Reflected pressure waves multiply the blast dose delivered to victims",
+        "C. Victims are older indoors",
+        "D. They do not — open air is worse"
+      ],
+      "correct": 1,
+      "rationale": "Walls reflect and re-reflect the pressure wave, so victims receive multiple wave exposures, raising primary injury incidence and severity.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q10",
+      "question": "Minutes after a downtown bombing, the nearest ED receives 25 walking wounded. What should hospital command anticipate?",
+      "options": [
+        "A. The event is over — these are all the casualties",
+        "B. The critical casualties will arrive later (30–60 min) by EMS; capacity must be reserved for that second wave",
+        "C. No more patients will come",
+        "D. Only pediatric patients will follow"
+      ],
+      "correct": 1,
+      "rationale": "Bombing arrivals are 'upside-down': self-transporting minor casualties come first, while the critical ones — needing extrication and EMS — arrive later into an already-crowded ED unless capacity is protected.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q11",
+      "question": "The greatest cause of PREVENTABLE death in blast and penetrating mass casualties is:",
+      "options": [
+        "A. Head injury",
+        "B. Uncontrolled extremity hemorrhage",
+        "C. Burns",
+        "D. Hearing loss"
+      ],
+      "correct": 1,
+      "rationale": "Extremity exsanguination is rapidly fatal and rapidly fixable — early tourniquets (including bystander Stop the Bleed response) save the most salvageable lives.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q12",
+      "question": "At a confirmed intentional bombing, EMS should initially:",
+      "options": [
+        "A. Rush straight to the epicenter",
+        "B. Stage until law enforcement addresses secondary devices, then operate under unified command",
+        "C. Ignore law enforcement",
+        "D. Wait 24 hours"
+      ],
+      "correct": 1,
+      "rationale": "Secondary devices target responders. Staging, perimeter control, and unified command with law enforcement precede casualty care in the hot area.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q13",
+      "question": "A blast survivor suddenly develops focal weakness and then collapses. A key blast-specific cause to consider is:",
+      "options": ["A. Arterial air embolism from disrupted alveoli", "B. Simple faint", "C. Dehydration", "D. Migraine"],
+      "correct": 0,
+      "rationale": "Alveolar disruption can admit air into pulmonary veins and the arterial circulation, causing stroke-like deficits, myocardial ischemia, or sudden death.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q14",
+      "question": "Burns, crush from structural collapse, and smoke inhalation at a bombing are classified as:",
+      "options": ["A. Primary", "B. Secondary", "C. Tertiary", "D. Quaternary"],
+      "correct": 3,
+      "rationale": "Quaternary covers all explosion-related injuries not in the first three classes — burns, crush, inhalation, and exacerbated chronic disease.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q15",
+      "question": "During the warm-zone phase of an active-violence response, the care priority is:",
+      "options": [
+        "A. Full trauma workups",
+        "B. Rapid hemorrhage control (tourniquets/packing) before movement to the cold zone",
+        "C. Detailed documentation",
+        "D. Psychological counseling"
+      ],
+      "correct": 1,
+      "rationale": "Phased care: suppress threat (hot), control life-threatening bleeding with seconds-long interventions (warm), full care once in the cold zone.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q16",
+      "question": "Which blast casualty most needs prolonged observation despite looking well?",
+      "options": [
+        "A. A bystander 500 m away with no symptoms",
+        "B. A survivor from within the enclosed blast space with ringing ears but normal vitals",
+        "C. A responder who arrived after detonation",
+        "D. A patient with an isolated small hand laceration from 200 m away"
+      ],
+      "correct": 1,
+      "rationale": "Significant (especially enclosed-space) exposure risks delayed blast lung and GI injury; TM symptoms mark real wave exposure. Observation catches the late presenters.",
+      "difficulty": "Hard"
+    }
+  ]
+}

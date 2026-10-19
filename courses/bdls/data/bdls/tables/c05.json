@@ -1,0 +1,28 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Natural Hazard Signatures",
+      "headers": ["Hazard", "Primary Killer", "Other Key Injuries/Illness", "Responder Hazards"],
+      "rows": [
+        ["Hurricane / flood", "Drowning (often vehicle-related)", "Debris trauma, electrocution, CO poisoning, contaminated wounds, chronic-care collapse", "Moving water, downed lines"],
+        ["Earthquake", "Structural collapse", "Crush injury/syndrome, fractures, head injury, dust inhalation", "Aftershocks, unstable structures"],
+        ["Tornado", "Ballistic debris", "Penetrating trauma, contaminated wounds, fractures", "Damaged structures, blocked access"],
+        ["Heat wave", "Heat stroke", "Chronic-disease decompensation, dehydration", "Responder heat stress"],
+        ["Cold event", "Hypothermia", "CO poisoning from improvised heat, house fires, falls", "Ice, cold exposure"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "Crush Injury vs Crush Syndrome",
+      "headers": ["Feature", "Crush Injury", "Crush Syndrome"],
+      "rows": [
+        ["What it is", "Local tissue damage from compression", "Systemic reperfusion illness after release"],
+        ["Timing", "During entrapment", "At and after extrication"],
+        ["Key threats", "Fractures, soft-tissue damage, compartment syndrome", "Hyperkalemia → dysrhythmia; myoglobinuria → renal failure; shock"],
+        ["Critical intervention", "Safe extrication", "IV fluids BEFORE release; monitoring; renal protection"]
+      ]
+    }
+  ]
+}

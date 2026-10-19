@@ -1,0 +1,68 @@
+{
+  "id": "c04",
+  "title": "Cardiovascular Emergencies",
+  "shortTitle": "Cardiovascular Emergencies",
+  "estimatedStudyTime": 32,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Apply the CBIGK mnemonic to chest pain assessment.",
+    "Recognize Beck's triad and cardiac tamponade.",
+    "Identify inferior, anterior, and posterior MI patterns on a 12-lead ECG.",
+    "Explain the role of a right-sided ECG when the standard tracing is non-diagnostic.",
+    "Differentiate cardiac tamponade from other causes of chest pain and dyspnea."
+  ],
+  "summary": [
+    {
+      "title": "CBIGK: A Chest Pain Assessment Mnemonic",
+      "content": "CBIGK is a memory aid for key elements to assess in a chest pain patient: Chest pain characteristics, Blood pressure, Irregular pulse, Glucose, and Potassium. This mnemonic pulls together the vital signs and point-of-care findings most likely to change immediate management — for example, an irregular pulse may indicate a dysrhythmia complicating a cardiac event, and glucose/potassium abnormalities can both mimic and complicate cardiac presentations."
+    },
+    {
+      "title": "Beck's Triad and Cardiac Tamponade",
+      "content": "Beck's triad — jugular venous distention (JVD), muffled heart tones, and hypotension — indicates cardiac tamponade, a build-up of fluid in the pericardial sac that compresses the heart and impairs filling. A classic setup is a patient undergoing chemotherapy who develops a pericardial effusion, presenting with dyspnea on exertion; the triad distinguishes tamponade from pneumothorax (which has absent breath sounds, not muffled heart tones) or straightforward pulmonary embolism."
+    },
+    {
+      "title": "Localizing MI on the 12-Lead ECG",
+      "content": "ECG lead groups localize the area of myocardial injury. An inferior MI shows changes in leads II, III, and aVF. An anterior MI shows changes in V1 through V4. A posterior MI is often missed on a standard 12-lead because it shows as ST depression in V1–V4 (a mirror-image pattern) rather than the expected elevation — confirmatory posterior leads may be needed. Recognizing these patterns quickly focuses both field treatment decisions and the receiving facility's activation of cardiac resources."
+    },
+    {
+      "title": "The Right-Sided ECG",
+      "content": "When a standard 12-lead ECG is non-diagnostic in a patient with a strong clinical suspicion for inferior MI, obtaining a right-sided ECG can reveal right ventricular involvement — important because right ventricular infarction changes fluid management (these patients are often preload-dependent and can worsen with nitrates or other vasodilators). A right-sided ECG is a targeted, inexpensive next step that changes treatment, not just an academic exercise."
+    },
+    {
+      "title": "Distinguishing Cardiac Causes of Chest Pain and Dyspnea",
+      "content": "Chest pain and dyspnea share a differential that spans cardiac tamponade, MI, pulmonary embolism, pneumothorax, and pericarditis. Beck's triad points to tamponade; pleuritic pain with sudden dyspnea and risk factors points to PE; absent (not muffled) breath sounds with sudden dyspnea point to pneumothorax; positional chest pain worse lying flat and improved sitting forward points to pericarditis. Building this differential systematically, rather than anchoring on the most common cause, is what protects against missing the less common but immediately dangerous diagnosis."
+    }
+  ],
+  "clinicalPearls": [
+    "Know the mnemonic CBIGK (Chest pain, Blood pressure, Irregular pulse, Glucose, Potassium) for chest pain assessment.",
+    "JVD, muffled heart tones, and hypotension (Beck's Triad) indicate cardiac tamponade.",
+    "Inferior MI: leads II, III, aVF. Anterior MI: V1–V4. Posterior MI: ST depression in V1–V4 or confirmatory posterior leads.",
+    "If an ECG is non-diagnostic, try to obtain a right-sided ECG (to evaluate right ventricular involvement)."
+  ],
+  "redFlags": [
+    "Beck's triad in a patient with a cancer or chemotherapy history — think tamponade, not just heart failure.",
+    "ST depression in V1–V4 without obvious elevation — consider posterior MI, not 'normal' ECG.",
+    "Giving nitrates to a hypotensive patient with suspected right ventricular infarction."
+  ],
+  "commonMistakes": [
+    "Treating muffled heart tones and JVD as simple heart failure without considering tamponade.",
+    "Missing posterior MI because the standard 12-lead shows depression rather than elevation.",
+    "Skipping the right-sided ECG when the initial 12-lead is non-diagnostic but suspicion remains high."
+  ],
+  "memoryAids": [
+    "CBIGK: Chest pain, Blood pressure, Irregular pulse, Glucose, Potassium.",
+    "Beck's Triad: JVD + muffled heart tones + hypotension = tamponade.",
+    "II, III, aVF = inferior. V1–V4 = anterior. Depression in V1–V4 = think posterior (flip it).",
+    "Non-diagnostic ECG + inferior suspicion → flip to the right side."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Chest Pain / Cardiac Assessment Approach",
+      "content": "Chest pain or cardiac-concerning complaint\n  → Assess CBIGK: Chest pain characteristics, BP, pulse regularity, glucose, potassium\n  → Obtain 12-lead ECG\n     → Inferior pattern (II, III, aVF): consider right-sided ECG if non-diagnostic or hypotensive\n     → Anterior pattern (V1-V4 elevation)\n     → Depression in V1-V4 without clear elevation: consider POSTERIOR MI\n  → JVD + muffled heart tones + hypotension: consider Beck's Triad → cardiac TAMPONADE\n  → Treat per findings; avoid nitrates if right ventricular involvement/hypotension suspected"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Cardiology and Cardiology/ECG categories",
+    "National EMS Education Standards — Cardiovascular emergencies"
+  ]
+}

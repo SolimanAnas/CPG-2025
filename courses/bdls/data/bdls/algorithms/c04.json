@@ -1,0 +1,23 @@
+{
+  "chapter": "c04",
+  "algorithms": [
+    {
+      "id": "c04_alg01",
+      "title": "SALT Mass-Casualty Triage",
+      "description": "The CDC-sponsored national standard triage flow, from global sorting through category assignment.",
+      "steps": [
+        "STEP 1 — Sort globally: 'If you can hear me and need help, walk to this area' (assess these third). 'Wave your arm or move' (assess these second). Still casualties or obvious life threats: assess FIRST.",
+        "STEP 2 — Assess each casualty individually, performing lifesaving interventions that take only seconds:",
+        "Control massive hemorrhage (tourniquet/direct pressure).",
+        "Open the airway by positioning; for a child, consider 2 rescue breaths.",
+        "Needle decompression for tension pneumothorax (trained providers).",
+        "Auto-injector antidotes if chemical exposure indicated.",
+        "Not breathing after airway opening (adult, or child after breaths) → DEAD (black).",
+        "Breathing: ask — obeys commands/purposeful movement? peripheral pulse? no respiratory distress? major hemorrhage controlled?",
+        "All YES + minor injuries → MINIMAL (green). All YES + significant injuries → DELAYED (yellow).",
+        "Any NO + survivable with current resources → IMMEDIATE (red). Any NO + survival unlikely with current resources → EXPECTANT (gray, comfort care).",
+        "Tag/mark, move to the next casualty, and RE-TRIAGE at the treatment area, before transport, and on arrival."
+      ]
+    }
+  ]
+}

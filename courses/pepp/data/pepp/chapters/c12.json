@@ -1,0 +1,68 @@
+{
+  "id": "c12",
+  "title": "Child Maltreatment Recognition",
+  "shortTitle": "Child Maltreatment",
+  "estimatedStudyTime": 25,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the role of the EMS provider in recognizing possible child maltreatment.",
+    "Identify general categories of findings that may raise concern for maltreatment.",
+    "Explain why history-injury inconsistency is a key concern-raising factor.",
+    "Describe appropriate, non-judgmental communication when maltreatment is suspected.",
+    "Understand mandatory reporting as a professional responsibility, in general terms."
+  ],
+  "summary": [
+    {
+      "title": "The EMS Role: Recognize and Report, Not Investigate",
+      "content": "EMS providers are not investigators — their role is to recognize findings that raise concern, document objectively, and report through appropriate channels (mandatory reporting requirements, medical direction, and receiving facility handoff). This chapter covers only general, educational recognition concepts; it does not provide a checklist for accusing caregivers or a substitute for local mandatory-reporting law, agency policy, or child protective services training, all of which vary by jurisdiction and must be followed directly."
+    },
+    {
+      "title": "General Categories That May Raise Concern",
+      "content": "Concern-raising categories, in general terms, include: an injury inconsistent with the stated mechanism or the child's developmental stage (e.g., a injury pattern implausible for a non-mobile infant), a history that changes between tellings or between different caregivers, a delay in seeking care that is not otherwise explained, and patterns of injury in unusual locations or of unusual types. No single finding is diagnostic on its own — providers document what they observe and let the appropriate professionals evaluate the full picture."
+    },
+    {
+      "title": "Why History-Injury Inconsistency Matters",
+      "content": "A central, widely taught concept is comparing the stated mechanism to the child's developmental capability and the injury pattern itself. A history that a non-mobile young infant 'rolled off the couch and broke their leg,' for example, is inconsistent with that infant's developmental stage. This kind of mismatch — not the injury itself — is what should raise concern and prompt careful, objective documentation."
+    },
+    {
+      "title": "Non-Judgmental Communication and Documentation",
+      "content": "Regardless of suspicion level, EMS providers should maintain calm, professional, non-accusatory communication with caregivers throughout the encounter — providers are not there to confront or accuse, and doing so can compromise both the child's ongoing care and any subsequent investigation. Objective documentation (exact quotes, observed findings, scene details) is more useful than subjective conclusions, and should be factual rather than speculative."
+    },
+    {
+      "title": "Mandatory Reporting as a Professional Responsibility",
+      "content": "EMS providers are mandatory reporters in essentially all jurisdictions, meaning they are legally required to report reasonable suspicion of child maltreatment through the appropriate channel. This chapter does not specify particular jurisdictional reporting mechanics or thresholds, since these vary by location — providers must know and follow their own agency's policy and local/state law, and should involve medical direction and receiving-facility staff when suspicion arises."
+    }
+  ],
+  "clinicalPearls": [
+    "The EMS role is to recognize and report, not to investigate or accuse.",
+    "History-injury inconsistency — mechanism not matching developmental stage or injury pattern — is a key concern-raising factor.",
+    "No single finding is diagnostic; document objectively and let appropriate professionals evaluate the full picture.",
+    "EMS providers are mandatory reporters in essentially all jurisdictions — know your local law and agency policy."
+  ],
+  "redFlags": [
+    "An injury inconsistent with the stated mechanism or the child's developmental capability.",
+    "A history that changes between tellings or between different caregivers.",
+    "An unexplained delay in seeking care for a significant injury or illness."
+  ],
+  "commonMistakes": [
+    "Confronting or accusing caregivers directly on scene.",
+    "Documenting subjective conclusions instead of objective, factual observations.",
+    "Assuming a single unusual finding is diagnostic of maltreatment without considering the full picture."
+  ],
+  "memoryAids": [
+    "Recognize and report — not investigate or accuse.",
+    "Does the story match the injury and the child's stage of development?",
+    "Document facts, not conclusions.",
+    "Mandatory reporter — know your jurisdiction's process."
+  ],
+  "decisionTrees": [
+    {
+      "title": "General Approach When Maltreatment Is a Concern",
+      "content": "Concerning finding noted (history-injury mismatch, changing history, unexplained delay in care, unusual injury pattern)\n  → Maintain calm, professional, non-accusatory communication with caregivers\n  → Document objectively: exact quotes, observed findings, scene details — avoid speculative conclusions\n  → Provide standard medical care for the child's presenting condition\n  → Report reasonable suspicion through appropriate channels per local mandatory-reporting law and agency policy\n  → Communicate findings factually during receiving-facility handoff\n  → Involve medical direction as appropriate per local protocol"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Child Maltreatment",
+    "Local/state mandatory reporting law and agency policy — authoritative source for jurisdiction-specific reporting requirements (not detailed in this general educational chapter)"
+  ]
+}

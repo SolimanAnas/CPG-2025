@@ -1,0 +1,36 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Irradiation vs External vs Internal Contamination",
+      "headers": ["Type", "What It Means", "Risk to Others", "Management"],
+      "rows": [
+        ["Irradiation (exposure)", "Was in a radiation field (like an X-ray)", "None — patient not radioactive", "Normal care; reassurance"],
+        ["External contamination", "Radioactive material on skin/clothing", "Can spread to responders/surfaces", "Remove clothing, wash; standard precautions"],
+        ["Internal contamination", "Material inhaled/ingested/in wounds", "Minimal to others; medical concern for patient", "Medical management; specialist involvement; KI if radioiodine"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "Responder Radiation Protection: Time, Distance, Shielding",
+      "headers": ["Principle", "How It Works", "Practical Action"],
+      "rows": [
+        ["Time", "Dose accumulates with exposure duration", "Work efficiently; rotate responders; minimize time near source"],
+        ["Distance", "Dose falls with the inverse square of distance", "Step back; keep the maximum practical distance from the source"],
+        ["Shielding", "Mass absorbs radiation", "Use walls, vehicles, or earth between you and the source"]
+      ]
+    },
+    {
+      "id": "c09_t03",
+      "title": "Acute Radiation Syndrome by Increasing Dose",
+      "headers": ["Sub-syndrome", "System", "Features"],
+      "rows": [
+        ["Prodrome", "Whole body", "Nausea/vomiting; earlier onset = higher dose"],
+        ["Hematopoietic", "Bone marrow", "Falling blood counts → infection, bleeding (lowest ARS doses)"],
+        ["Gastrointestinal", "GI tract", "Severe diarrhea, fluid/electrolyte loss (higher dose)"],
+        ["Cardiovascular/CNS", "Heart/brain", "Rapid collapse; usually fatal (highest dose)"]
+      ]
+    }
+  ]
+}

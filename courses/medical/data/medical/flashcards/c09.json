@@ -1,0 +1,19 @@
+{
+  "chapter": "c09",
+  "cards": [
+    { "id": "c09_fc01", "question": "What is delirium?", "answer": "An acute-onset, fluctuating disturbance in attention and awareness that develops over hours to days and is often reversible.", "category": "Delirium vs. Dementia" },
+    { "id": "c09_fc02", "question": "What is dementia?", "answer": "A chronic, progressive decline in cognitive function that develops over months to years and is generally not reversible.", "category": "Delirium vs. Dementia" },
+    { "id": "c09_fc03", "question": "Can delirium and dementia coexist?", "answer": "Yes — a patient with baseline dementia can also develop superimposed delirium from an acute illness.", "category": "Delirium vs. Dementia" },
+    { "id": "c09_fc04", "question": "How should acute confusion in a geriatric patient with a normal baseline be treated by default?", "answer": "As delirium until proven otherwise, prompting an active search for a reversible cause.", "category": "Delirium vs. Dementia" },
+    { "id": "c09_fc05", "question": "What should a sudden worsening of confusion in a known dementia patient prompt?", "answer": "A delirium workup, not just an assumption that 'their dementia is getting worse today.'", "category": "Delirium vs. Dementia" },
+    { "id": "c09_fc06", "question": "What infections classically present with confusion as a primary or only symptom in older adults?", "answer": "Urinary tract infection (UTI) and pneumonia.", "category": "Delirium Causes" },
+    { "id": "c09_fc07", "question": "List common reversible causes of geriatric delirium.", "answer": "Infection, medication effects/polypharmacy, hypoglycemia, hypoxia, electrolyte disturbance, dehydration, urinary retention/constipation, pain, unfamiliar environment/sensory deprivation.", "category": "Delirium Causes" },
+    { "id": "c09_fc08", "question": "What surprisingly common conditions can precipitate delirium?", "answer": "Urinary retention and constipation.", "category": "Delirium Causes" },
+    { "id": "c09_fc09", "question": "What is a 'silent MI'?", "answer": "A myocardial infarction presenting without chest pain — instead as confusion, weakness, or shortness of breath alone, more common in older adults.", "category": "Atypical Presentations" },
+    { "id": "c09_fc10", "question": "How might infection present atypically in an older adult?", "answer": "Without fever, due to a blunted febrile response.", "category": "Atypical Presentations" },
+    { "id": "c09_fc11", "question": "How might an acute abdomen present atypically in an older adult?", "answer": "With minimal pain despite significant underlying pathology.", "category": "Atypical Presentations" },
+    { "id": "c09_fc12", "question": "Why does baseline cognitive/functional status matter more than a generic 'normal for age' assumption?", "answer": "A patient's own personal baseline, reported by a caregiver, is the most useful reference point for determining what's actually abnormal today.", "category": "Baseline Assessment" },
+    { "id": "c09_fc13", "question": "What should be checked immediately in an acutely confused geriatric patient?", "answer": "Blood glucose.", "category": "Field Management" },
+    { "id": "c09_fc14", "question": "Why is a lower threshold of suspicion warranted for 'mild-seeming' geriatric presentations?", "answer": "Because atypical presentations can mask serious underlying conditions (silent MI, afebrile infection, painless acute abdomen).", "category": "Atypical Presentations" }
+  ]
+}

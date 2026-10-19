@@ -1,0 +1,25 @@
+{
+  "chapter": "c01",
+  "tables": [
+    {
+      "id": "c01_t01",
+      "title": "The Four Stages of Assessment",
+      "headers": ["Stage", "Purpose", "Key Actions"],
+      "rows": [
+        ["Scene size-up", "Protect responders; gather scene clues", "Safety check, standard precautions, nature-of-illness clues"],
+        ["Primary assessment", "Find and treat life threats", "General impression, LOC, A-B-C threats, assign priority"],
+        ["Secondary assessment", "Build the differential diagnosis", "History, physical exam, vital signs"],
+        ["Reassessment", "Track trends and treatment response", "Repeat key elements; more frequent if unstable"]
+      ]
+    },
+    {
+      "id": "c01_t02",
+      "title": "Diagnostic Value: History vs Physical Exam (Medical Patient)",
+      "headers": ["Source", "Approximate Contribution"],
+      "rows": [
+        ["History", "~80%"],
+        ["Physical examination", "~20%"]
+      ]
+    }
+  ]
+}

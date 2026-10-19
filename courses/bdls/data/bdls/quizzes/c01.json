@@ -1,0 +1,203 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "Which statement best defines a disaster from a health-system perspective?",
+      "options": [
+        "A. Any event involving more than 100 casualties",
+        "B. An event in which needs exceed the immediately available resources",
+        "C. Any weather-related emergency",
+        "D. An event declared by the federal government"
+      ],
+      "correct": 1,
+      "rationale": "The health-system definition centers on the imbalance between needs and resources. Casualty counts, weather, or declarations do not define it — a small event can be a disaster where resources are scarce.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "What is the correct order of the four phases of the disaster cycle?",
+      "options": [
+        "A. Response, Recovery, Mitigation, Preparedness",
+        "B. Mitigation, Preparedness, Response, Recovery",
+        "C. Preparedness, Mitigation, Recovery, Response",
+        "D. Detection, Response, Recovery, Review"
+      ],
+      "correct": 1,
+      "rationale": "The classic cycle runs Mitigation → Preparedness → Response → Recovery, then feeds back into mitigation for the next event.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q03",
+      "question": "Installing flood barriers and enforcing seismic building codes are examples of which phase?",
+      "options": ["A. Response", "B. Recovery", "C. Mitigation", "D. Triage"],
+      "correct": 2,
+      "rationale": "Mitigation comprises actions taken to reduce the impact of future events — structural and policy measures like barriers and building codes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q04",
+      "question": "The PRE-DISASTER Paradigm emphasizes which pre-event elements?",
+      "options": [
+        "A. Planning and practice, resilience, and education and training",
+        "B. Triage, treatment, and transport",
+        "C. Detection and evacuation",
+        "D. Response and recovery only"
+      ],
+      "correct": 0,
+      "rationale": "PRE-DISASTER frames readiness before an event: exercised plans, resilient people and infrastructure, and competency-based education such as the NDLS courses.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q05",
+      "question": "How do care priorities change in a disaster compared with daily emergency care?",
+      "options": [
+        "A. They do not change",
+        "B. From maximal care for each individual to the greatest good for the greatest number",
+        "C. From triage to first-come, first-served",
+        "D. All patients receive identical care"
+      ],
+      "correct": 1,
+      "rationale": "Disaster care allocates limited resources to benefit the most patients. Triage, deferred care, and abbreviated documentation follow from this shift.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q06",
+      "question": "Why does the same tornado count as a disaster for a rural hospital but not for a metropolitan trauma system?",
+      "options": [
+        "A. Because tornado severity varies by region",
+        "B. Because the definition depends on the balance between needs and locally available resources",
+        "C. Because rural hospitals use different triage colors",
+        "D. Because federal declarations differ"
+      ],
+      "correct": 1,
+      "rationale": "Disaster is relative to resources: casualties that overwhelm a small facility may be absorbed routinely by a large system.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q07",
+      "question": "What is the purpose of the all-hazards approach?",
+      "options": [
+        "A. To write a unique plan for every conceivable event",
+        "B. To use one common management framework across all disaster types, with hazard-specific annexes",
+        "C. To focus planning only on the most likely hazard",
+        "D. To eliminate the need for training"
+      ],
+      "correct": 1,
+      "rationale": "All-hazards planning builds one flexible framework that applies to natural, explosive, chemical, biological, and radiological events, supplemented by specific annexes — more robust and efficient than separate plans.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q08",
+      "question": "A hospital's disaster plan is thorough but has never been exercised. What is the main risk?",
+      "options": [
+        "A. None — a written plan is sufficient",
+        "B. The plan will fail under stress because gaps were never revealed and staff lack practiced roles",
+        "C. The plan will expire legally",
+        "D. Exercises are only for EMS agencies"
+      ],
+      "correct": 1,
+      "rationale": "Exercising is what converts paper plans into performance: it exposes gaps, builds familiarity, and creates the muscle memory needed during a real response.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q09",
+      "question": "Which is a component of a responder's personal preparedness?",
+      "options": [
+        "A. A family communication plan and go-kit",
+        "B. Memorizing every federal regulation",
+        "C. Owning specialized rescue vehicles",
+        "D. Avoiding disaster training to stay flexible"
+      ],
+      "correct": 0,
+      "rationale": "Personal preparedness — communication plan, go-kit, dependent care arrangements, knowledge of workplace roles — keeps responders able to report for duty.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q10",
+      "question": "Why is staff personal preparedness a facility-level concern?",
+      "options": [
+        "A. It is not — it is purely private",
+        "B. Surge capacity depends on staff reporting for duty, and staff with unprepared families often cannot",
+        "C. It reduces insurance premiums",
+        "D. It replaces the need for a hospital plan"
+      ],
+      "correct": 1,
+      "rationale": "A hospital's surge plan assumes staff availability. Personal and family readiness directly affects whether the workforce shows up in a crisis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q11",
+      "question": "A mass-casualty incident (MCI) is best defined as:",
+      "options": [
+        "A. Any incident with fatalities",
+        "B. An event producing more patients than local resources can manage using routine procedures",
+        "C. An incident involving hazardous materials",
+        "D. Any incident requiring more than one ambulance"
+      ],
+      "correct": 1,
+      "rationale": "The MCI definition parallels the disaster definition: patient load beyond what routine local procedures can handle.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q12",
+      "question": "During a disaster response, a provider is asked to work in a role outside their usual daily assignment, under incident command. This is:",
+      "options": [
+        "A. A violation of disaster principles",
+        "B. An expected feature of disaster response within the command structure",
+        "C. Only allowed for physicians",
+        "D. Evidence of a failed plan"
+      ],
+      "correct": 1,
+      "rationale": "Disasters routinely require flexible role assignment under incident command; preparing providers for this shift is part of BDLS training.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q13",
+      "question": "Which activity belongs to the RECOVERY phase?",
+      "options": [
+        "A. Field triage of casualties",
+        "B. Restoring health-system function and community services after the event, potentially over years",
+        "C. Stockpiling supplies before an event",
+        "D. Building levees"
+      ],
+      "correct": 1,
+      "rationale": "Recovery restores the community and health system to normal or improved function. Triage is response; stockpiling is preparedness; levees are mitigation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q14",
+      "question": "Immunization campaigns that reduce a community's vulnerability to epidemics are an example of:",
+      "options": ["A. Response", "B. Mitigation", "C. Triage", "D. Evacuation"],
+      "correct": 1,
+      "rationale": "Reducing the future impact of a hazard — including biological hazards — is mitigation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Health professionals converging on a disaster scene without being requested or integrated into incident command are:",
+      "options": [
+        "A. Always helpful",
+        "B. A known hazard — self-dispatched responders complicate scene management and safety",
+        "C. Required by law",
+        "D. The preferred staffing method"
+      ],
+      "correct": 1,
+      "rationale": "Spontaneous, unintegrated responders burden scene safety, accountability, and coordination. Responding through the system — when requested, into an assigned role — is the professional standard.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q16",
+      "question": "Which best captures why mitigation and preparedness 'save more lives than response'?",
+      "options": [
+        "A. Response is unimportant",
+        "B. Pre-event actions shrink the needs-versus-resources gap before it opens, preventing casualties that no response could later recover",
+        "C. Responders are usually unavailable",
+        "D. It is a slogan without basis"
+      ],
+      "correct": 1,
+      "rationale": "Codes that keep buildings standing, plans that speed evacuation, and trained staff prevent deaths outright; even a perfect response can only salvage what the event has already done.",
+      "difficulty": "Hard"
+    }
+  ]
+}

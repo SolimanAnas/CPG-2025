@@ -1,0 +1,72 @@
+{
+  "id": "c01",
+  "title": "Disaster Medicine Foundations & the PRE-DISASTER Paradigm",
+  "shortTitle": "Foundations & PRE-DISASTER",
+  "estimatedStudyTime": 30,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Define disaster and mass-casualty incident (MCI) from a health-system perspective.",
+    "Explain the all-hazards approach and why BDLS teaches a common lexicon.",
+    "List the four classic phases of the disaster cycle.",
+    "Describe the components of the PRE-DISASTER Paradigm for mitigation and preparedness.",
+    "Distinguish disaster response from conventional emergency care priorities.",
+    "Describe the health professional's roles before, during, and after a disaster."
+  ],
+  "summary": [
+    {
+      "title": "What Makes an Event a Disaster",
+      "content": "From the health-system perspective, a disaster is an event in which the needs generated — casualties, destroyed infrastructure, displaced people — exceed the resources immediately available to meet them. The same tornado may be a routine emergency for a large trauma system and a disaster for a rural hospital. A mass-casualty incident (MCI) is an event producing more patients than local resources can manage using routine procedures. The defining feature is the imbalance between needs and resources, not the size of the event itself."
+    },
+    {
+      "title": "The All-Hazards Approach",
+      "content": "Rather than writing a separate plan for every possible event, modern disaster medicine uses an all-hazards approach: a common management framework that works across natural disasters, explosions, chemical releases, epidemics, and radiological events, supplemented by hazard-specific annexes. BDLS exists to give all health professionals a shared vocabulary and knowledge base so that physicians, nurses, EMS providers, and public-health workers can integrate smoothly during a response."
+    },
+    {
+      "title": "The Disaster Cycle: Four Phases",
+      "content": "Emergency management describes a continuous cycle of four phases. Mitigation: actions that reduce the impact of future events (building codes, flood barriers, immunization programs). Preparedness: planning, training, exercising, and stockpiling before an event. Response: the actions taken during and immediately after the event — the DISASTER Paradigm operates here. Recovery: restoring the community and health system to normal (or improved) function, which can take years. Health professionals have roles in every phase, not only in response."
+    },
+    {
+      "title": "The PRE-DISASTER Paradigm",
+      "content": "BDLS frames what should happen before an event with the PRE-DISASTER Paradigm: Planning and practice — realistic, exercised plans at personal, facility, and community levels; Resilience — building the personal, infrastructure, and community capacity to absorb and recover from shocks; Education and training — competency-based learning such as the NDLS course family, so responders share a common playbook. Preparedness done well shrinks the gap between needs and resources when the event arrives."
+    },
+    {
+      "title": "How Disaster Care Differs From Everyday Care",
+      "content": "Conventional emergency care applies maximal resources to each individual patient. In a disaster, the goal shifts to achieving the greatest good for the greatest number: triage allocates limited resources, some care is deferred, documentation is abbreviated, and providers may work outside their usual roles under an incident command structure. Recognizing and accepting this shift — before the event — is itself a preparedness skill."
+    },
+    {
+      "title": "Personal and Family Preparedness",
+      "content": "A responder whose own family is unprepared is a responder who may not report for duty. Personal preparedness includes a family communication plan, a go-kit with supplies and medications, arrangements for dependents and pets, and knowledge of workplace disaster roles. Health facilities depend on their staff showing up; individual readiness is a system-level asset."
+    }
+  ],
+  "clinicalPearls": [
+    "A disaster is defined by the needs-versus-resources imbalance, not by the event's size or drama.",
+    "The greatest-good-for-the-greatest-number principle governs disaster care and justifies triage decisions that would be unacceptable in daily practice.",
+    "Mitigation and preparedness — the quiet phases — save more lives than heroic response.",
+    "Your family's preparedness plan is part of your hospital's surge plan: unprepared staff don't show up."
+  ],
+  "redFlags": [
+    "Facilities that plan for only one hazard instead of using an all-hazards framework.",
+    "Plans that exist on paper but have never been exercised.",
+    "Responders self-dispatching to a scene without integration into incident command."
+  ],
+  "commonMistakes": [
+    "Confusing a mass-casualty incident (resource strain) with any large emergency.",
+    "Treating disaster response as the only phase that matters and ignoring mitigation, preparedness, and recovery.",
+    "Assuming everyday clinical priorities (maximal care per patient) carry over unchanged into disasters."
+  ],
+  "memoryAids": [
+    "Disaster = Demand > Resources.",
+    "The disaster cycle: Mitigate → Prepare → Respond → Recover, then repeat.",
+    "PRE-DISASTER: Planning/practice, Resilience, Education — do the work before the sirens."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Is This a Disaster (for You)?",
+      "content": "Event occurs\n  → Estimate needs: casualties, hazards, infrastructure loss, displaced people\n  → Compare with immediately available resources (staff, space, supplies, systems)\n     → Needs ≤ resources: manage as a conventional (possibly large) emergency\n     → Needs > resources: DISASTER footing\n        → Activate emergency operations / incident command\n        → Shift to greatest-good priorities and formal triage\n        → Request mutual aid and escalate through the system"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Disaster Medicine Principles and the PRE-DISASTER Paradigm",
+    "NDLSF BDLS v4.0 — All-Hazards Preparedness and the Disaster Cycle"
+  ]
+}

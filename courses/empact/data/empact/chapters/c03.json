@@ -1,0 +1,76 @@
+{
+  "id": "c03",
+  "title": "Respiratory Emergencies",
+  "shortTitle": "Respiratory Emergencies",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize wheezing as the hallmark sign of asthma and describe first-line treatment.",
+    "Identify respiratory failure from a very slow respiratory rate with shallow, ineffective breaths.",
+    "Distinguish spontaneous pneumothorax presentation, especially in COPD patients.",
+    "Recognize pulmonary embolism's classic presentation.",
+    "Explain the relationship between sepsis, fever, and altered LOC in a respiratory-complaint patient.",
+    "Explain why hypoxia is a common thread across respiratory complaints."
+  ],
+  "summary": [
+    {
+      "title": "Asthma and Wheezing",
+      "content": "Wheezing is the hallmark sign of asthma, produced by bronchospasm and airway inflammation narrowing the lower airways. When wheezing does not respond to a patient's home rescue inhaler, nebulized beta-2 agonists (such as albuterol) are first-line prehospital treatment. If bronchospasm is severe enough that air movement is markedly diminished, wheezing may actually become quiet ('silent chest') — a sign of critical obstruction, not improvement, and a marker of an even more urgent emergency."
+    },
+    {
+      "title": "Respiratory Failure: The Silent Danger of Bradypnea",
+      "content": "Respiratory failure can be identified by a very slow respiratory rate (bradypnea) combined with shallow, ineffective breaths — a pattern that is easy to miss because the patient may appear calm rather than distressed. Unlike the visibly labored tachypneic patient, the bradypneic patient in respiratory failure is running out of reserve; this presentation demands immediate ventilatory support rather than reassurance that a 'slow, quiet' patient is stable."
+    },
+    {
+      "title": "Spontaneous Pneumothorax in COPD",
+      "content": "Spontaneous pneumothorax commonly occurs in patients with underlying COPD, where weakened lung tissue (blebs) can rupture without any trauma. It presents with sudden shortness of breath, often with pleuritic chest pain, and on exam may show diminished or absent breath sounds on the affected side. Because these patients already have reduced pulmonary reserve, even a small pneumothorax can produce disproportionate respiratory distress."
+    },
+    {
+      "title": "Pulmonary Embolism",
+      "content": "Pulmonary embolism typically presents with sudden-onset dyspnea and pleuritic chest pain, often with tachycardia and sometimes hemoptysis, in a patient with risk factors such as recent immobility, surgery, malignancy, or a history of clotting disorders. It is a key differential to consider whenever dyspnea and pleuritic chest pain appear suddenly without an obvious respiratory infection or asthma trigger, since it can rapidly progress to hemodynamic collapse."
+    },
+    {
+      "title": "Sepsis Presenting as a Respiratory Complaint",
+      "content": "Sepsis is frequently associated with fever and altered level of consciousness, and can present initially as a respiratory complaint (tachypnea, hypoxia) when the source is pneumonia or another infection. Because sepsis's respiratory findings can mimic primary lung disease, always screen for fever, altered mentation, and a possible infectious source in any respiratory patient, especially the elderly or those with indwelling devices."
+    },
+    {
+      "title": "Hypoxia as the Common Thread",
+      "content": "Hypoxia is a common problem across nearly all respiratory complaints, regardless of the specific underlying cause — asthma, pneumothorax, PE, pneumonia, or heart failure can all ultimately produce it. Supplemental oxygen and continuous pulse oximetry monitoring are therefore standard across this entire chapter's conditions, even while the specific differential diagnosis is still being narrowed."
+    }
+  ],
+  "clinicalPearls": [
+    "Wheezing is the hallmark sign of asthma; nebulized beta-2 agonists are first-line if home therapy hasn't worked.",
+    "Respiratory failure can be identified by a very slow respiratory rate (bradypnea) with shallow, ineffective breaths.",
+    "Spontaneous pneumothorax commonly occurs in COPD patients and presents with sudden shortness of breath.",
+    "Pulmonary embolism typically presents with sudden onset dyspnea and pleuritic chest pain.",
+    "Sepsis is frequently associated with fever and altered level of consciousness.",
+    "Hypoxia is a common problem with respiratory complaints."
+  ],
+  "redFlags": [
+    "A 'quiet chest' in a known asthmatic — absence of wheeze can mean critical, not improving, obstruction.",
+    "A calm-appearing patient breathing very slowly and shallowly — respiratory failure, not stability.",
+    "Sudden pleuritic chest pain and dyspnea with risk factors for clotting — treat as possible PE until ruled out."
+  ],
+  "commonMistakes": [
+    "Reassuring a bradypneic patient as 'calm' instead of recognizing impending respiratory failure.",
+    "Missing sepsis as the underlying cause of a 'pneumonia' respiratory presentation with fever and confusion.",
+    "Attributing sudden dyspnea only to anxiety without considering PE or pneumothorax."
+  ],
+  "memoryAids": [
+    "Wheeze = asthma's hallmark; SILENT chest = worse, not better.",
+    "Slow AND shallow = failure, not calm.",
+    "COPD + sudden SOB = think spontaneous pneumothorax.",
+    "Sudden dyspnea + pleuritic pain = think PE.",
+    "Fever + altered LOC + respiratory complaint = think sepsis."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Respiratory Complaint Differential Approach",
+      "content": "Patient with dyspnea\n  → Wheezing present? → Consider asthma/COPD; nebulized beta-2 agonist if not improved by home therapy\n     → Wheeze becomes silent: WORSENING, escalate care\n  → Sudden onset + pleuritic pain?\n     → COPD history + diminished breath sounds one side: consider spontaneous pneumothorax\n     → Risk factors for clot (immobility, surgery, malignancy): consider pulmonary embolism\n  → Fever + altered LOC: consider sepsis (e.g., pneumonia source)\n  → Very slow, shallow breathing, calm appearance: RESPIRATORY FAILURE — assist ventilation now\n  → In all cases: apply supplemental oxygen, monitor SpO2, reassess frequently"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Respiratory and Respiratory/Cardio categories",
+    "National EMS Education Standards — Respiratory emergencies"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "chapter": "c07",
+  "algorithms": [
+    {
+      "id": "c07_alg01",
+      "title": "Pediatric Bradycardia Field Approach",
+      "description": "Sequence for recognizing and initially managing symptomatic pediatric bradycardia in the field.",
+      "steps": [
+        "Confirm bradycardia for age and assess perfusion (color, capillary refill, mental status).",
+        "Assess airway and breathing first — most pediatric bradycardia is caused by hypoxia.",
+        "Support oxygenation and ventilation immediately (supplemental oxygen, assisted ventilation if indicated).",
+        "Consider other reversible causes if oxygenation/ventilation does not resolve bradycardia: increased vagal tone, hypothermia, increased intracranial pressure.",
+        "If bradycardia with poor perfusion persists despite adequate oxygenation and ventilation, this is a time-critical emergency — refer to the PALS reviewer for arrest-level bradycardia algorithms and drug dosing.",
+        "Reassess continuously and transport rapidly."
+      ]
+    },
+    {
+      "id": "c07_alg02",
+      "title": "Distinguishing and Responding to Pediatric Tachycardia",
+      "description": "Field approach to differentiating sinus tachycardia from SVT and responding appropriately.",
+      "steps": [
+        "Identify the heart rate and assess for a clear triggering cause (fever, pain, anxiety, dehydration, shock).",
+        "If the rate is variable and a clear trigger is present: treat as sinus tachycardia by addressing the underlying cause (e.g., antipyretics for fever per protocol, fluids for dehydration/shock).",
+        "If the rate is fixed, very rapid (often >220 bpm in infants, >180 bpm in older children), and does not vary with stimulation or have a clear trigger: suspect SVT.",
+        "For suspected SVT with adequate perfusion: supportive care, monitor closely, rapid transport, notify receiving facility.",
+        "For suspected SVT with poor perfusion or altered mental status: this is a time-critical emergency — refer to the PALS reviewer for rhythm-specific interventions (e.g., vagal maneuvers, cardioversion, adenosine dosing).",
+        "Reassess frequently during transport."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "The 'Calmer' Toddler",
+      "presentation": "A 2-year-old with a two-day history of cough and wheeze was working very hard to breathe 20 minutes ago (retractions, tachypnea). On reassessment, the retractions look less pronounced and the child seems 'calmer,' though still tachypneic and now slightly less interactive.",
+      "vitals": { "hr": "168 bpm", "rr": "44/min", "spo2": "93% room air", "appearance": "Less interactive than 20 minutes ago" },
+      "question": "How should this change be interpreted?",
+      "options": [
+        "A: The child is genuinely improving; no action is needed.",
+        "B: The apparent decrease in work of breathing combined with decreasing interactivity suggests exhaustion and impending failure, not improvement — escalate support immediately.",
+        "C: Discharge from EMS care since the child looks calmer.",
+        "D: Wait for SpO2 to fall further before acting."
+      ],
+      "correct": 1,
+      "explanation": "A previously struggling child who appears 'calmer' but is also less interactive, still tachypneic, and hypoxic is showing signs of exhaustion, not genuine improvement. This should prompt immediate escalation of respiratory support rather than reassurance.",
+      "clinicalPearl": "'Calmer' after hard work of breathing is a red flag until proven otherwise — check mental status and oxygenation before you relax."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Stridor at Rest",
+      "presentation": "A 3-year-old with a barking cough develops audible stridor at rest, with mild suprasternal retractions. The child is alert, interactive, and consolable in the caregiver's lap.",
+      "vitals": { "hr": "128 bpm", "rr": "32/min", "spo2": "97% room air", "appearance": "Alert, interactive" },
+      "question": "What category of respiratory compromise does this represent, and what is the appropriate field approach?",
+      "options": [
+        "A: Lower airway disease — give a nebulized bronchodilator.",
+        "B: Upper airway obstruction — keep the child calm and in a position of comfort with the caregiver, minimize agitation, and monitor closely.",
+        "C: Lung tissue disease — expect crackles and diminished breath sounds.",
+        "D: Disordered control of breathing — expect an irregular respiratory pattern."
+      ],
+      "correct": 1,
+      "explanation": "Stridor with a barking cough is classic for upper airway obstruction (e.g., croup). Since the child is still compensating well (alert, adequate oxygenation), the priority is keeping the child calm — agitation can worsen upper airway obstruction — with close monitoring rather than aggressive intervention.",
+      "clinicalPearl": "For upper airway obstruction, calm beats aggressive — crying and agitation can worsen the obstruction."
+    },
+    {
+      "id": "c05_s03",
+      "title": "From Distress to Failure",
+      "presentation": "A 6-month-old with bronchiolitis has been tachypneic with nasal flaring and grunting for the past hour. On your arrival, the infant is now cyanotic around the lips, limp, and breathing irregularly with long pauses.",
+      "vitals": { "hr": "70 bpm", "rr": "irregular with apneic pauses", "spo2": "80% room air", "appearance": "Limp, cyanotic" },
+      "question": "What is the correct immediate field management?",
+      "options": [
+        "A: Continue observation since bronchiolitis is usually self-limited.",
+        "B: Provide assisted ventilation with bag-mask and high-flow oxygen, and initiate rapid transport.",
+        "C: Administer an oral bronchodilator and reassess in 15 minutes.",
+        "D: Withhold intervention until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "Cyanosis, limp appearance, bradycardia, and an irregular breathing pattern with apneic pauses indicate respiratory failure. This requires immediate assisted ventilation with high-flow oxygen and rapid transport; deeper arrest-specific airway management is covered by the PALS reviewer if arrest occurs.",
+      "clinicalPearl": "Bradycardia in a sick infant is a respiratory problem until proven otherwise — ventilate first."
+    }
+  ]
+}

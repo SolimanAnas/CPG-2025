@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "Pinpoint Pupils in an Alley",
+      "presentation": "A 29-year-old man is found unresponsive in an alley with a respiratory rate of 4/min, pinpoint pupils, and drug paraphernalia nearby.",
+      "vitals": { "rr": "4/min", "pupils": "Pinpoint, bilateral", "spo2": "78% room air" },
+      "question": "What toxidrome does this match, and what is the field priority?",
+      "options": [
+        "A: Anticholinergic toxidrome — administer IV fluids as the priority.",
+        "B: Opioid toxidrome — prioritize airway/ventilation support immediately, since this is fundamentally a respiratory emergency.",
+        "C: Cholinergic toxidrome — administer atropine as the sole intervention.",
+        "D: Sympathomimetic toxidrome — sedate the patient."
+      ],
+      "correct": 1,
+      "explanation": "Pinpoint pupils, severe respiratory depression, and altered mental status match the opioid toxidrome. This is fundamentally a respiratory emergency, so airway/ventilation support is the immediate priority, with naloxone as an adjunct per local protocol.",
+      "clinicalPearl": "Recognize the pattern and act — pinpoint pupils plus slow breathing means ventilate first, identify the exact substance later."
+    },
+    {
+      "id": "c11_s02",
+      "title": "Confused and Sweating on the Trail",
+      "presentation": "A 34-year-old hiker is found confused and stumbling on a hot afternoon. She is still visibly sweating, and her core temperature reads 105.2°F (40.7°C).",
+      "vitals": { "temp": "105.2°F (40.7°C)", "mentalStatus": "Confused, stumbling", "skin": "Sweating" },
+      "question": "Does the presence of sweating change the diagnosis?",
+      "options": [
+        "A: Yes, sweating rules out heat stroke and this should be treated as heat exhaustion.",
+        "B: No — altered mental status combined with a significantly elevated core temperature still meets the definition of heat stroke, regardless of sweating. Begin aggressive cooling and rapid transport.",
+        "C: Sweating means this is not a heat-related illness at all.",
+        "D: This finding is irrelevant to field management."
+      ],
+      "correct": 1,
+      "explanation": "The presence of sweating does not rule out heat stroke — some heat stroke patients, especially with exertional causes, continue to sweat. The defining combination is altered mental status plus significantly elevated core temperature, both present here. This is heat stroke, a true emergency requiring aggressive cooling and rapid transport.",
+      "clinicalPearl": "Don't let sweating fool you — confused plus very hot is heat stroke, sweaty or not."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Found Cold and Unresponsive",
+      "presentation": "A 58-year-old man is found unresponsive outdoors after an unknown period of cold exposure. He has no palpable pulse and no visible respirations. His core temperature reads 79°F (26°C).",
+      "vitals": { "temp": "79°F (26°C)", "pulse": "None palpable", "breathing": "None visible" },
+      "question": "What is the correct field approach?",
+      "options": [
+        "A: Withhold resuscitation since the patient is severely hypothermic and appears dead.",
+        "B: Begin resuscitation per protocol, handling the patient gently — severe hypothermia can mimic death, and patients have survived with good outcomes after rewarming.",
+        "C: Immediately declare death without further assessment.",
+        "D: Move the patient rapidly and vigorously to the ambulance to begin transport as fast as possible."
+      ],
+      "correct": 1,
+      "explanation": "Severe hypothermia can mimic death, and patients have survived prolonged downtime with good neurologic outcomes after rewarming — resuscitation should generally proceed per local protocol rather than being presumed futile. The patient should also be handled gently throughout, since rough movement can trigger a fatal arrhythmia in a severely hypothermic heart.",
+      "clinicalPearl": "Not dead until warm and dead — resuscitate a hypothermic arrest patient per protocol, and handle them gently while you do."
+    }
+  ]
+}

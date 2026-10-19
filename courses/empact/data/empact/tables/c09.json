@@ -1,0 +1,27 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Sepsis vs Anaphylaxis: Both Distributive Shock",
+      "headers": ["Feature", "Sepsis", "Anaphylaxis"],
+      "rows": [
+        ["Trigger", "Infection (e.g., pneumonia, UTI)", "Allergen exposure (food, medication, sting)"],
+        ["Onset", "Hours to days", "Minutes"],
+        ["Classic findings", "Fever, altered mental status", "Hypotension, airway swelling (stridor/angioedema), hives"],
+        ["First-line treatment", "Source control, fluids, antibiotics per protocol", "IM epinephrine"],
+        ["Shared physiology", "Distributive shock (pathologic vasodilation)", "Distributive shock (pathologic vasodilation)"]
+      ]
+    },
+    {
+      "id": "c09_t02",
+      "title": "Anaphylaxis Medications: Roles",
+      "headers": ["Medication", "Role", "Onset"],
+      "rows": [
+        ["IM Epinephrine", "First-line, life-saving", "Rapid — reverses hypotension and airway compromise"],
+        ["Antihistamines", "Adjunct", "Slower — does not reverse acute hypotension/airway compromise"],
+        ["Corticosteroids", "Adjunct (helps prevent biphasic reaction)", "Slow — hours"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "Radiological/Nuclear Casualty Management",
+      "description": "Responder protection and casualty care at a radiological or nuclear event.",
+      "steps": [
+        "Protect responders with time, distance, and shielding; wear standard PPE and use radiation monitoring.",
+        "Remember PPE prevents contamination but does not stop penetrating gamma radiation — distance and shielding do.",
+        "Assess for life-threatening injury: treat airway, breathing, and hemorrhage FIRST, before decontamination.",
+        "Decontaminate once stable: remove clothing (most contamination), then wash gently with soap and water from wounds outward.",
+        "Address internal contamination via wounds/orifices; consider potassium iodide ONLY for radioiodine exposure.",
+        "Estimate severity with time-to-vomiting and lymphocyte-count trends; stage acute radiation syndrome.",
+        "Reassure and educate: irradiated (uncontaminated) patients are not a radiation hazard to others; manage worried-well and psychological casualties."
+      ]
+    },
+    {
+      "id": "c09_alg02",
+      "title": "Distinguishing Exposure From Contamination",
+      "description": "The decision that drives responder risk and patient management.",
+      "steps": [
+        "Ask: was the patient only in a radiation field (irradiation) or is radioactive material present on/in them (contamination)?",
+        "Irradiation only, contamination survey negative → patient is NOT radioactive; provide normal care.",
+        "External contamination → material on skin/clothing; remove clothing and wash; responders use standard precautions.",
+        "Internal contamination → material inhaled/ingested/embedded; manage medically and involve specialists.",
+        "In all cases, treat life-threatening injuries before decontamination."
+      ]
+    }
+  ]
+}

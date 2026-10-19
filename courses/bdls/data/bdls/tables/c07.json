@@ -1,0 +1,37 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Chemical Agent Classes",
+      "headers": ["Class", "Examples", "Presentation", "Key Treatment"],
+      "rows": [
+        ["Nerve agents / organophosphates", "Sarin, VX, pesticides", "Cholinergic toxidrome: SLUDGE/DUMBELS, miosis, twitching, seizures, apnea", "Decon; atropine (titrate to secretions) + pralidoxime; benzodiazepines"],
+        ["Vesicants (blister)", "Mustard, lewisite", "Skin/eye/airway blistering; mustard effects DELAYED hours", "Decon; supportive care (no antidote for mustard)"],
+        ["Pulmonary / choking", "Chlorine, phosgene", "Airway irritation → pulmonary edema; phosgene classically delayed", "Remove from exposure; oxygen; observation; supportive"],
+        ["Asphyxiants", "Cyanide, CO", "Rapid collapse, seizures, arrest; SpO2 may look normal", "Hydroxocobalamin (cyanide); high-flow O2"],
+        ["Riot-control", "CS, OC (pepper)", "Intense eye/skin/airway irritation, usually self-limited", "Fresh air; irrigation; supportive"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "Scene Zones at a Hazmat/Chemical Event",
+      "headers": ["Zone", "What It Is", "Who Works There"],
+      "rows": [
+        ["Hot", "Contamination present", "Only teams with hazard-appropriate PPE"],
+        ["Warm", "Decontamination corridor", "Decon teams in appropriate PPE"],
+        ["Cold", "Clean support and treatment area", "Unprotected clinical providers, command, staging"]
+      ]
+    },
+    {
+      "id": "c07_t03",
+      "title": "Cholinergic Toxidrome Mnemonics",
+      "headers": ["Mnemonic", "Stands For"],
+      "rows": [
+        ["SLUDGE", "Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis"],
+        ["DUMBELS", "Defecation, Urination, Miosis, Bronchorrhea/Bronchospasm, Emesis, Lacrimation, Salivation"],
+        ["Killer B's", "Bronchorrhea, Bronchospasm, Bradycardia"]
+      ]
+    }
+  ]
+}

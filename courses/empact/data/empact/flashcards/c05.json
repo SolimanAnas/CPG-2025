@@ -1,0 +1,20 @@
+{
+  "chapter": "c05",
+  "cards": [
+    { "id": "c05_fc01", "question": "What are the signs of compensated shock?", "answer": "Pale skin, tachycardia, and tachypnea — blood pressure may still appear normal.", "category": "Shock" },
+    { "id": "c05_fc02", "question": "What indicates decompensated shock?", "answer": "A falling blood pressure — the progressive stage where compensatory mechanisms fail.", "category": "Shock" },
+    { "id": "c05_fc03", "question": "Why keep shock patients warm?", "answer": "Hypothermia worsens coagulopathy and impairs cardiac function, compounding the shock state — cover with a blanket.", "category": "Shock" },
+    { "id": "c05_fc04", "question": "What are inotropic vasopressors used for in shock?", "answer": "Persistent hypotension in cardiogenic shock (e.g., dopamine).", "category": "Pharmacology/Shock" },
+    { "id": "c05_fc05", "question": "Why is blood pressure a late indicator of shock?", "answer": "Compensatory mechanisms (tachycardia, vasoconstriction) maintain BP initially; by the time BP falls, the patient has been in shock for some time already.", "category": "Shock" },
+    { "id": "c05_fc06", "question": "What accompanies decompensated shock's falling blood pressure?", "answer": "Altered mental status, reflecting inadequate cerebral perfusion.", "category": "Shock" },
+    { "id": "c05_fc07", "question": "Why can't cardiogenic shock be treated with large fluid boluses like hypovolemic shock?", "answer": "The heart cannot pump effectively; excess fluid can worsen pulmonary edema instead of improving perfusion.", "category": "Pharmacology/Shock" },
+    { "id": "c05_fc08", "question": "Name the four broad categories of shock.", "answer": "Hypovolemic, distributive (septic/anaphylactic/neurogenic), cardiogenic, and obstructive.", "category": "Shock" },
+    { "id": "c05_fc09", "question": "What clinical clue points toward septic (distributive) shock?", "answer": "Fever and a likely infection source.", "category": "Shock" },
+    { "id": "c05_fc10", "question": "What clinical clue points toward cardiogenic shock?", "answer": "Chest pain, cardiac history, and possible pulmonary edema.", "category": "Shock" },
+    { "id": "c05_fc11", "question": "What is the primary management focus for hypovolemic shock?", "answer": "Fluid resuscitation to restore circulating volume.", "category": "Shock" },
+    { "id": "c05_fc12", "question": "What is the primary management focus for obstructive shock (e.g., tamponade, tension pneumothorax)?", "answer": "Mechanical correction of the obstruction (e.g., decompression, pericardiocentesis) rather than fluids or vasopressors alone.", "category": "Shock" },
+    { "id": "c05_fc13", "question": "Why does recognizing the shock category matter for treatment?", "answer": "Because fluids, vasopressors, epinephrine, and mechanical correction are not interchangeable — the wrong intervention for the category can worsen outcomes.", "category": "Shock" },
+    { "id": "c05_fc14", "question": "Is a normal blood pressure enough to rule out significant shock?", "answer": "No — compensated shock can have a normal blood pressure while perfusion is already inadequate.", "category": "Shock" },
+    { "id": "c05_fc15", "question": "What causes distributive shock in anaphylaxis?", "answer": "Pathologic, widespread vasodilation from the allergic reaction, dropping systemic vascular resistance and blood pressure.", "category": "Shock" }
+  ]
+}

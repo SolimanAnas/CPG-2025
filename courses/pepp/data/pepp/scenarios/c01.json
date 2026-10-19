@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "The 'Reassuring' Blood Pressure",
+      "presentation": "A 6-year-old boy fell from a bicycle and has an obviously deformed thigh with visible bruising. He is pale and anxious. His blood pressure reads within the normal range for his age, but his heart rate is elevated.",
+      "vitals": { "hr": "128 bpm (elevated for age)", "bp": "94/62 mmHg (age-normal)", "rr": "26 bpm", "skin": "Pale, cool" },
+      "question": "How should the 'normal' blood pressure be interpreted?",
+      "options": [
+        "A: It rules out significant blood loss or shock.",
+        "B: It should NOT be reassuring — children compensate well and maintain blood pressure until a large percentage of volume is lost; the tachycardia and pale, cool skin suggest early compensated shock.",
+        "C: It means his heart rate reading is inaccurate.",
+        "D: It indicates he is anxious only, with no physiologic concern."
+      ],
+      "correct": 1,
+      "explanation": "Blood pressure is a late sign in pediatric shock. This child's tachycardia and pale, cool skin — despite a numerically normal blood pressure for his age — suggest early compensated shock from his femur fracture, and should prompt close monitoring and volume assessment rather than reassurance from the BP alone.",
+      "clinicalPearl": "In children, don't let a 'normal' blood pressure talk you out of what the rest of the exam is telling you."
+    },
+    {
+      "id": "c01_s02",
+      "title": "The Screaming Toddler",
+      "presentation": "A 2-year-old girl with a fever is screaming and clinging to her mother, arching away whenever you approach with your stethoscope.",
+      "vitals": { "temp": "102.6 F", "hr": "Elevated, difficult to auscultate due to crying", "loc": "Alert, distressed" },
+      "question": "What is the best approach to complete a useful assessment?",
+      "options": [
+        "A: Separate her from her mother to get a controlled exam.",
+        "B: Keep her on her mother's lap, demonstrate the stethoscope on the mother first, and assess from a distance (appearance, work of breathing, color) before hands-on exam.",
+        "C: Restrain her firmly to listen to her lungs.",
+        "D: Skip the exam since she won't cooperate."
+      ],
+      "correct": 1,
+      "explanation": "Toddlers fear separation and unfamiliar equipment. Keeping her with her caregiver, demonstrating tools first, and starting with an across-the-room observational assessment (matching the developmental-stage approach in this chapter) both calms the child and yields more reliable findings than forcing a hands-on exam immediately.",
+      "clinicalPearl": "With toddlers, the best exam often starts before you ever touch them — watch first, demonstrate second, touch last."
+    },
+    {
+      "id": "c01_s03",
+      "title": "Small Loss, Big Percentage",
+      "presentation": "A 9 kg infant has been vomiting and having diarrhea for 18 hours. The caregiver estimates about 300 mL of combined fluid loss, which they describe as 'not that much.'",
+      "vitals": { "weight": "9 kg", "estimated loss": "~300 mL", "hr": "elevated", "skin": "dry mucous membranes, decreased tears" },
+      "question": "Why is this fluid loss more significant than the caregiver's framing suggests?",
+      "options": [
+        "A: 300 mL is trivial regardless of the infant's size.",
+        "B: A child's absolute circulating blood/fluid volume is small, so 300 mL represents a much larger percentage of this infant's total volume than the same amount would in an adult.",
+        "C: Fluid loss is never clinically significant in infants.",
+        "D: This amount is only concerning if the infant is over 1 year old."
+      ],
+      "correct": 1,
+      "explanation": "Because total circulating volume scales with body size, an absolute loss that sounds modest can represent a dangerously large percentage of a small infant's total volume — one of the core anatomic/physiologic reasons children are not small adults when estimating losses.",
+      "clinicalPearl": "Always translate an absolute fluid loss into a percentage of THIS child's estimated total volume — the same number means very different things at different weights."
+    }
+  ]
+}

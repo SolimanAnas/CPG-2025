@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "Dizzy Before the Fall",
+      "presentation": "An 80-year-old man fell in his kitchen. He tells you he felt lightheaded and had heart palpitations just before he went down, and doesn't recall hitting the floor.",
+      "vitals": { "hr": "irregular, 132 bpm", "bp": "108/68 mmHg", "glucose": "102 mg/dL" },
+      "question": "How should this fall be approached?",
+      "options": [
+        "A: As a simple mechanical trip requiring only wound care.",
+        "B: As a possible medical cause of the fall (e.g., cardiac arrhythmia), given the preceding dizziness and palpitations — investigate the cardiac cause in addition to any injury.",
+        "C: As unrelated to any cardiac issue since he is currently conscious.",
+        "D: As a psychiatric event."
+      ],
+      "correct": 1,
+      "explanation": "Preceding dizziness and palpitations, along with an irregular, rapid heart rate, suggest this fall may have been caused by a cardiac arrhythmia rather than a simple mechanical trip. The fall should be treated as a potential symptom of an underlying medical emergency, with full cardiac evaluation alongside injury assessment.",
+      "clinicalPearl": "Ask what happened right before the fall — preceding symptoms can reveal a medical cause you'd otherwise miss."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Minor Bump, Major Medication",
+      "presentation": "A 76-year-old woman on warfarin for atrial fibrillation reports a minor bump to her forehead after tripping on a rug. She feels completely fine and has no current neurologic complaints.",
+      "vitals": { "mentalStatus": "Alert, oriented x4, no deficits", "medication": "Warfarin for atrial fibrillation" },
+      "question": "What is the correct approach given her anticoagulant use?",
+      "options": [
+        "A: No further concern needed since she feels fine and the bump was minor.",
+        "B: Recognize the elevated intracranial hemorrhage risk from anticoagulation despite the minor mechanism and reassuring current exam, and communicate this clearly to the receiving facility.",
+        "C: Discontinue her warfarin immediately in the field.",
+        "D: Assume anticoagulant use is irrelevant to a minor head bump."
+      ],
+      "correct": 1,
+      "explanation": "Anticoagulant use combined with head injury — even a seemingly minor bump with a currently normal exam — carries meaningfully elevated risk of intracranial hemorrhage that can develop with delayed onset. This should be clearly flagged and communicated at handoff rather than dismissed based on the reassuring initial presentation.",
+      "clinicalPearl": "A normal exam right after a minor head bump doesn't rule out a bleed in a patient on blood thinners — always flag the anticoagulant history."
+    },
+    {
+      "id": "c10_s03",
+      "title": "A Caregiver Who Won't Step Away",
+      "presentation": "EMS is called for an 88-year-old woman with a new bruise pattern on her upper arms that seems inconsistent with the reported mechanism (a fall from standing). Her adult son insists on staying in the room and answers every question before she can respond, despite her being alert and able to speak.",
+      "vitals": { "mentalStatus": "Alert, oriented", "exam": "Bruise pattern on bilateral upper arms, inconsistent with reported fall mechanism" },
+      "question": "What is the correct approach to this situation?",
+      "options": [
+        "A: Confront the son directly about the inconsistent bruising and controlling behavior.",
+        "B: Provide standard medical care, document the objective findings (bruise pattern, mechanism inconsistency, caregiver behavior) factually, and report reasonable suspicion through appropriate channels per local policy.",
+        "C: Ignore the findings since the patient has not directly stated any concern.",
+        "D: Refuse to treat the patient until the son leaves the room."
+      ],
+      "correct": 1,
+      "explanation": "Bruise pattern inconsistent with the stated mechanism, combined with a caregiver who won't allow the patient to answer independently, are recognized concern-raising findings for possible elder abuse. The correct EMS response is standard care, objective documentation, and reporting through appropriate channels — not direct confrontation or assumption of guilt.",
+      "clinicalPearl": "Recognize and report, don't investigate or accuse — document exactly what you see and let the appropriate channel handle it from there."
+    }
+  ]
+}

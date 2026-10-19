@@ -1,0 +1,21 @@
+{
+  "chapter": "c08",
+  "cards": [
+    { "id": "c08_fc01", "question": "What is the difference between an overt and a covert biological event?", "answer": "Overt: an announced release or obvious outbreak. Covert: revealed only later as people fall ill after the incubation period — detected as a population pattern, not a scene.", "category": "Detection" },
+    { "id": "c08_fc02", "question": "Who are often the 'first responders' to a covert biological event?", "answer": "Clinicians and epidemiologists who recognize an unusual illness pattern — not EMS at a cordon.", "category": "Detection" },
+    { "id": "c08_fc03", "question": "What is syndromic surveillance?", "answer": "Monitoring patterns (ED visits, pharmacy sales, absenteeism) for early signals of an emerging biological event before diagnoses are confirmed.", "category": "Detection" },
+    { "id": "c08_fc04", "question": "Name epidemiologic clues to an intentional/unusual biological event.", "answer": "Disease unusual for the area/season, unusually severe or rapidly fatal illness, point-source cluster, unexpected population, unusual exposure route, and simultaneous outbreaks in separate places.", "category": "Detection" },
+    { "id": "c08_fc05", "question": "What are the Category A bioterrorism agents?", "answer": "Anthrax, Botulism (botulinum toxin), Plague, Smallpox (variola), Tularemia, and Viral hemorrhagic fevers — 'A B PLoT'.", "category": "Agents" },
+    { "id": "c08_fc06", "question": "What makes an agent Category A?", "answer": "Easily disseminated or transmitted person-to-person, high mortality, potential for public panic, and need for special public-health preparedness.", "category": "Agents" },
+    { "id": "c08_fc07", "question": "What PPE addresses an airborne agent like smallpox?", "answer": "Airborne precautions: a fitted respirator (N95 or higher) and a negative-pressure room.", "category": "PPE" },
+    { "id": "c08_fc08", "question": "What PPE addresses a droplet-spread agent like pneumonic plague?", "answer": "Droplet precautions: a surgical mask within close range, plus standard precautions.", "category": "PPE" },
+    { "id": "c08_fc09", "question": "What is the difference between isolation and quarantine?", "answer": "Isolation separates people who are ill; quarantine restricts people who were exposed but are not yet ill.", "category": "Public Health" },
+    { "id": "c08_fc10", "question": "What is post-exposure prophylaxis in a biological event?", "answer": "Preventive treatment (e.g., antibiotics after anthrax exposure, vaccination for smallpox) given to exposed people to prevent disease.", "category": "Public Health" },
+    { "id": "c08_fc11", "question": "What is the Strategic National Stockpile?", "answer": "A national cache of medications, vaccines, and supplies deployable to supplement local resources during a large public-health emergency.", "category": "Public Health" },
+    { "id": "c08_fc12", "question": "What is a POD (point of dispensing)?", "answer": "A mass site for rapidly dispensing prophylactic medications or vaccines to a large exposed population.", "category": "Public Health" },
+    { "id": "c08_fc13", "question": "What should a clinician do when a biological event is suspected?", "answer": "Notify public health immediately — do not wait for laboratory confirmation — while isolating the ill and using route-appropriate PPE.", "category": "Detection" },
+    { "id": "c08_fc14", "question": "What are non-pharmaceutical interventions (NPIs) in a pandemic?", "answer": "Distancing, hygiene, masking, and isolation/quarantine — especially important before specific vaccines or therapeutics exist.", "category": "Pandemic" },
+    { "id": "c08_fc15", "question": "Why is workforce protection central to pandemic response?", "answer": "A long event depends on sustaining staff; PPE, vaccination, PPE conservation/extended use, and mental-health support keep the workforce functional.", "category": "Pandemic" },
+    { "id": "c08_fc16", "question": "What are crisis standards of care?", "answer": "A formally declared shift in care standards when demand overwhelms resources, allocating scarce resources for population benefit under legal/ethical frameworks.", "category": "Pandemic" }
+  ]
+}

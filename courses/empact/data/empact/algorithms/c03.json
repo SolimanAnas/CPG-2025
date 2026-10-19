@@ -1,0 +1,20 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Respiratory Complaint Differential Sequence",
+      "description": "A stepwise approach to narrowing the cause of a respiratory complaint while supporting oxygenation throughout.",
+      "steps": [
+        "Apply supplemental oxygen and continuous pulse oximetry regardless of cause — hypoxia is a common thread.",
+        "Assess for wheezing: if present and not improved by home rescue therapy, give nebulized beta-2 agonists.",
+        "Watch for a silent chest in a wheezing patient — this signals WORSENING obstruction, not improvement; escalate care.",
+        "Assess rate and depth: very slow, shallow breathing (bradypnea) in a calm-appearing patient indicates respiratory failure — assist ventilation immediately.",
+        "Consider spontaneous pneumothorax in a COPD patient with sudden dyspnea, pleuritic pain, and diminished unilateral breath sounds.",
+        "Consider pulmonary embolism in sudden dyspnea with pleuritic pain, tachycardia, and clot risk factors (immobility, surgery, malignancy).",
+        "Screen for sepsis (fever, altered LOC) as an underlying cause of a respiratory presentation, especially with a possible pneumonia source.",
+        "Reassess frequently and escalate ventilatory support as needed."
+      ]
+    }
+  ]
+}

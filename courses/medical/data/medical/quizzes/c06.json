@@ -1,0 +1,180 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "What should be assessed before approaching a patient in behavioral crisis?",
+      "options": [
+        "A. Scene safety from a distance — weapons, exits, patient affect",
+        "B. Nothing — approach immediately to begin assessment",
+        "C. Only the chief complaint reported by dispatch",
+        "D. The patient's insurance status"
+      ],
+      "correct": 0,
+      "rationale": "Scene safety assessment from a distance precedes patient contact in behavioral emergencies, given the elevated risk of unpredictable violence.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "What should happen when a credible safety concern is identified on a behavioral call?",
+      "options": [
+        "A. Proceed with patient contact regardless",
+        "B. Involve law enforcement per local protocol before approaching",
+        "C. Ignore the concern if the call seems urgent",
+        "D. Wait indefinitely with no action"
+      ],
+      "correct": 1,
+      "rationale": "Credible safety concerns should prompt law enforcement involvement per local protocol before EMS approaches the patient.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q03",
+      "question": "What does SEA-3 stand for?",
+      "options": [
+        "A. Safety, Emotional state, Appearance, Activity, Speech",
+        "B. Scene, Exam, Assessment, Airway, Attitude",
+        "C. Signs, Events, Allergies, Age, Activity",
+        "D. Safety, Escalation, Anxiety, Agitation, Awareness"
+      ],
+      "correct": 0,
+      "rationale": "SEA-3 stands for Safety, Emotional state, Appearance, Activity, and Speech.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q04",
+      "question": "What is assessed under 'Appearance' in the SEA-3 framework?",
+      "options": ["A. Grooming, hygiene, and dress as clues to functioning", "B. Blood pressure and heart rate", "C. Pupil size", "D. Skin color only"],
+      "correct": 0,
+      "rationale": "Appearance in SEA-3 refers to grooming, hygiene, and dress, which can indicate a patient's level of functioning.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q05",
+      "question": "What is assessed under 'Activity' in the SEA-3 framework?",
+      "options": ["A. Psychomotor activity — agitation, retardation, restlessness", "B. Recent physical exercise history", "C. Employment status", "D. Medication compliance"],
+      "correct": 0,
+      "rationale": "Activity in SEA-3 refers to psychomotor activity level, such as agitation or retardation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q06",
+      "question": "What type of questioning is preferred during de-escalation?",
+      "options": ["A. Rapid-fire closed questions", "B. Open-ended questions", "C. No questions at all", "D. Only yes/no questions"],
+      "correct": 1,
+      "rationale": "Open-ended questions are preferred during de-escalation, as they invite the patient to share more and feel less interrogated.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q07",
+      "question": "Should a provider argue with or directly challenge a patient's delusional content?",
+      "options": ["A. Yes, to correct the misperception", "B. No — avoid arguing with or directly challenging delusional content", "C. Only if the delusion seems dangerous", "D. Only during transport"],
+      "correct": 1,
+      "rationale": "De-escalation avoids arguing with or challenging delusional content directly, as this tends to increase agitation rather than help.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "What is the primary goal of field de-escalation?",
+      "options": [
+        "A. To resolve the underlying psychiatric condition",
+        "B. To reduce the patient's perceived threat level and build cooperation for safe assessment and transport",
+        "C. To convince the patient they are wrong",
+        "D. To sedate the patient immediately"
+      ],
+      "correct": 1,
+      "rationale": "De-escalation aims to reduce perceived threat and build cooperation, not to treat or resolve the psychiatric condition itself in the field.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q09",
+      "question": "When is physical restraint an appropriate first response in a behavioral emergency?",
+      "options": [
+        "A. It is always the first response for agitated patients",
+        "B. It is a last resort, used only after de-escalation fails and the patient poses immediate danger",
+        "C. It should be used for every behavioral call to prevent injury",
+        "D. It is never appropriate under any circumstances"
+      ],
+      "correct": 1,
+      "rationale": "Restraint is reserved for situations where de-escalation has failed and immediate danger exists — not a first response.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q10",
+      "question": "What is abandonment in the EMS context?",
+      "options": [
+        "A. Refusing to transport a patient who declines care",
+        "B. Terminating patient care without ensuring an equal or higher level of care continues",
+        "C. Documenting a patient's refusal of care",
+        "D. Calling for additional resources on scene"
+      ],
+      "correct": 1,
+      "rationale": "Abandonment specifically means stopping care without transferring the patient to an equal or higher level of care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q11",
+      "question": "What distinction matters when a patient refuses care?",
+      "options": [
+        "A. Whether the patient competently refuses (with informed-refusal documentation) versus lacking capacity to refuse",
+        "B. Only whether the patient is polite about refusing",
+        "C. Whether the refusal happens indoors or outdoors",
+        "D. There is no meaningful distinction to make"
+      ],
+      "correct": 0,
+      "rationale": "Distinguishing a competent, informed refusal from a refusal by a patient lacking capacity is central to avoiding both inappropriate care and abandonment.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q12",
+      "question": "A patient shows disorganized speech, poor grooming, and marked psychomotor agitation together. How should this combination be interpreted?",
+      "options": [
+        "A. As no more significant than any single finding alone",
+        "B. As a higher-risk overall picture than any one finding in isolation",
+        "C. As evidence the patient is exaggerating symptoms",
+        "D. As irrelevant to behavioral risk assessment"
+      ],
+      "correct": 1,
+      "rationale": "The SEA-3 framework's value comes from viewing findings together — multiple concerning findings combined paint a higher-risk picture than any single element alone.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q13",
+      "question": "Why is scene safety assessment from a distance emphasized in behavioral emergencies specifically?",
+      "options": [
+        "A. Because agitated, psychotic, or intoxicated patients can become unpredictably violent, and provider safety is a prerequisite for helping the patient",
+        "B. Because behavioral patients are never dangerous",
+        "C. Because it is only a formality with no real safety benefit",
+        "D. Because it delays care unnecessarily and should be skipped when possible"
+      ],
+      "correct": 0,
+      "rationale": "Behavioral emergencies carry elevated unpredictability risk; assessing safety before approach protects providers so they can actually deliver care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q14",
+      "question": "What non-verbal de-escalation techniques are recommended?",
+      "options": [
+        "A. Maintaining a non-threatening posture and appropriate distance, avoiding sudden movements",
+        "B. Standing very close and making direct, prolonged eye contact",
+        "C. Crossing arms and standing directly in front of the patient",
+        "D. Moving quickly to physically guide the patient"
+      ],
+      "correct": 0,
+      "rationale": "Non-threatening posture, appropriate distance, and avoiding sudden movements are core non-verbal de-escalation techniques.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q15",
+      "question": "A behavioral-emergency patient competently and clearly refuses transport after a thorough capacity assessment and informed-refusal discussion. What should the provider do?",
+      "options": [
+        "A. Physically restrain and transport against the patient's will regardless of capacity",
+        "B. Document the informed refusal per protocol and provide appropriate resources/follow-up guidance, respecting the patient's autonomy",
+        "C. Abandon the patient without any documentation",
+        "D. Ignore the refusal and repeat the same questions indefinitely"
+      ],
+      "correct": 1,
+      "rationale": "A competent, informed refusal should be respected and properly documented — this is different from abandonment, which involves terminating care inappropriately without ensuring continuity for a patient who needs it.",
+      "difficulty": "Hard"
+    }
+  ]
+}

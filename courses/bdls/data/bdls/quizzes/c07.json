@@ -1,0 +1,198 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "Multiple people collapse within minutes at a transit station; several have pinpoint pupils and copious secretions. Bystanders report a strange odor. The FIRST responder priority is:",
+      "options": [
+        "A. Rush in and start treating",
+        "B. Stage uphill/upwind, avoid unprotected entry, and establish zones — this is a chemical scene",
+        "C. Begin CPR on the nearest victim",
+        "D. Open windows and doors"
+      ],
+      "correct": 1,
+      "rationale": "A toxidrome cluster tied to one location is a chemical release until proven otherwise. Unprotected entry adds responders to the casualty count; staging and zoning come first.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "Pinpoint pupils, salivation, lacrimation, bronchorrhea, and muscle twitching indicate which toxidrome?",
+      "options": ["A. Anticholinergic", "B. Cholinergic (nerve agent/organophosphate)", "C. Opioid", "D. Sympathomimetic"],
+      "correct": 1,
+      "rationale": "Acetylcholinesterase inhibition floods synapses with acetylcholine: SLUDGE/DUMBELS muscarinic signs plus nicotinic twitching — the nerve-agent signature.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "The 'killer B's' of nerve-agent poisoning are:",
+      "options": [
+        "A. Blisters, burns, bruising",
+        "B. Bronchorrhea, bronchospasm, bradycardia",
+        "C. Bleeding, blindness, bradypnea",
+        "D. Bacteremia, botulism, burns"
+      ],
+      "correct": 1,
+      "rationale": "Victims drown in secretions with constricted airways and a slowing heart — the lethal triad that atropine directly treats.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q04",
+      "question": "How should atropine be dosed in severe nerve-agent poisoning?",
+      "options": [
+        "A. One fixed dose only",
+        "B. Titrated repeatedly until bronchial secretions dry",
+        "C. Until pupils dilate",
+        "D. Atropine is contraindicated"
+      ],
+      "correct": 1,
+      "rationale": "The endpoint is dried secretions and ventilability — not pupil size and not a fixed maximum; severe poisonings need repeated dosing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "Which drug pair constitutes the classic nerve-agent antidote kit?",
+      "options": [
+        "A. Naloxone and flumazenil",
+        "B. Atropine and pralidoxime (2-PAM)",
+        "C. Epinephrine and amiodarone",
+        "D. Calcium and insulin"
+      ],
+      "correct": 1,
+      "rationale": "Atropine blocks muscarinic effects; pralidoxime reactivates acetylcholinesterase — packaged together in auto-injectors, with benzodiazepines for seizures.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q06",
+      "question": "What proportion-level of contamination is removed by clothing removal alone?",
+      "options": ["A. Almost none", "B. A large majority of it", "C. Exactly 10%", "D. Clothing removal spreads contamination"],
+      "correct": 1,
+      "rationale": "Disrobing eliminates a large majority of contamination in seconds — the fastest, highest-yield decon step, done before water.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q07",
+      "question": "A casualty is covered in a dry powdered agent. Before water flushing, you should:",
+      "options": [
+        "A. Apply lotion",
+        "B. Brush off the powder first",
+        "C. Wrap the patient in plastic",
+        "D. Nothing — go straight to water"
+      ],
+      "correct": 1,
+      "rationale": "Some dry agents react with water; brushing removes the bulk safely before copious irrigation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "Decontamination takes place in which zone?",
+      "options": ["A. Hot zone", "B. Warm zone", "C. Cold zone", "D. Green zone"],
+      "correct": 1,
+      "rationale": "The warm zone is the decon corridor between the contaminated hot zone and the clean cold zone where treatment occurs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q09",
+      "question": "A soaked, symptomatic patient from a liquid nerve-agent release needs antidote. The correct sequencing principle is:",
+      "options": [
+        "A. Full treatment first, decon later",
+        "B. Gross decon (clothing off, flush) with antidote auto-injector during triage — decon and lifesaving interventions go hand in hand, and antidotes cannot outrun ongoing absorption",
+        "C. Wait for hospital arrival for both",
+        "D. Decon can be skipped for nerve agents"
+      ],
+      "correct": 1,
+      "rationale": "Continued skin absorption defeats antidotes. SALT permits auto-injectors during triage, but gross decon of liquid exposure is itself lifesaving and must not wait.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q10",
+      "question": "Mustard (vesicant) exposure typically presents:",
+      "options": [
+        "A. Immediately with blisters",
+        "B. After a delay of hours — skin, eye, and airway injury declare late",
+        "C. Never symptomatically",
+        "D. Only with pinpoint pupils"
+      ],
+      "correct": 1,
+      "rationale": "Mustard's cellular damage is immediate but clinical effects are classically delayed hours — casualties may leave the scene before blistering starts, so exposure history matters.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q11",
+      "question": "A worker exposed to phosgene feels better after initial eye/throat irritation. The key risk is:",
+      "options": [
+        "A. None — recovery is complete",
+        "B. Delayed pulmonary edema hours later — observation is required",
+        "C. Immediate paralysis",
+        "D. Blistering of the skin"
+      ],
+      "correct": 1,
+      "rationale": "Phosgene classically causes delayed non-cardiogenic pulmonary edema after a deceptive latent period; 'improved' patients still need observation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q12",
+      "question": "Several firefighters collapse after an enclosed-space fire; they are comatose with normal pulse oximetry readings. A key consideration is:",
+      "options": [
+        "A. Cyanide toxicity — treat with hydroxocobalamin",
+        "B. Simple exhaustion",
+        "C. Vesicant exposure",
+        "D. Riot-control agent"
+      ],
+      "correct": 0,
+      "rationale": "Combustion of synthetics releases cyanide, which blocks cellular oxygen use — collapse with deceptively normal SpO2. Hydroxocobalamin is the preferred antidote.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Which agent class has NO specific antidote, relying on decon, oxygen, and supportive care?",
+      "options": [
+        "A. Nerve agents",
+        "B. Pulmonary/choking agents and vesicants",
+        "C. Cyanide",
+        "D. Opioids"
+      ],
+      "correct": 1,
+      "rationale": "Chlorine, phosgene, and blister agents are managed supportively — no antidote exists; decon and respiratory support are the treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "An undeconned, visibly wet casualty is driven by bystanders to the ED doors. The correct facility action is:",
+      "options": [
+        "A. Bring him straight to a resuscitation bay",
+        "B. Intercept and decon outside (clothes off, wash) before entry — protecting staff and the facility from secondary contamination",
+        "C. Refuse all care",
+        "D. Admit him and decon tomorrow"
+      ],
+      "correct": 1,
+      "rationale": "One contaminated patient can poison staff and close the department. Hospitals must decon self-presenting casualties outside before entry — care and decon proceed together.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q15",
+      "question": "Which statement about PPE and zones is correct?",
+      "options": [
+        "A. Unprotected clinicians may enter the hot zone briefly",
+        "B. Unprotected providers remain in the cold zone; hot-zone entry requires hazard-appropriate protection",
+        "C. Surgical masks suffice for hot-zone entry",
+        "D. Zones are optional at small scenes"
+      ],
+      "correct": 1,
+      "rationale": "PPE is matched to the hazard; providers without appropriate protection work only in the cold zone. Zone discipline is what keeps rescuers from becoming casualties.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q16",
+      "question": "Antidote auto-injectors during SALT triage are appropriate for:",
+      "options": [
+        "A. Every chemical casualty",
+        "B. Casualties with the nerve-agent (cholinergic) toxidrome",
+        "C. Vesicant burns",
+        "D. Riot-control agent tearing"
+      ],
+      "correct": 1,
+      "rationale": "The triage-phase auto-injector is a seconds-long lifesaving intervention aimed at the cholinergic toxidrome; other agent classes lack injectable field antidotes.",
+      "difficulty": "Medium"
+    }
+  ]
+}

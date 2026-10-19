@@ -1,0 +1,17 @@
+{
+  "chapter": "c08",
+  "algorithms": [
+    {
+      "id": "c08_alg01",
+      "title": "Abdominal Pain Systematic Assessment",
+      "description": "Building a differential for abdominal pain while screening for non-abdominal mimics and metabolic emergencies.",
+      "steps": [
+        "Obtain vital signs and screen for non-abdominal mimics: consider a 12-lead ECG if cardiac risk factors are present, and check glucose.",
+        "Localize the pain: periumbilical migrating to RLQ suggests appendicitis; RUQ suggests cholecystitis; LLQ (especially in older patients) suggests diverticulitis; epigastric radiating to the back suggests pancreatitis.",
+        "Ask about dialysis status and missed treatments; if present with weakness or paresthesias, screen for hyperkalemia and apply a cardiac monitor.",
+        "Assess for dehydration: skin tenting, dry mucous membranes, and history of vomiting/diarrhea/poor intake.",
+        "Reassess vital signs and pain character over time; treat supportively and transport."
+      ]
+    }
+  ]
+}

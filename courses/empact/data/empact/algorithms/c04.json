@@ -1,0 +1,19 @@
+{
+  "chapter": "c04",
+  "algorithms": [
+    {
+      "id": "c04_alg01",
+      "title": "Cardiac Chest Pain Assessment Sequence",
+      "description": "A systematic approach to the chest pain patient using CBIGK and 12-lead interpretation.",
+      "steps": [
+        "Assess CBIGK: Chest pain characteristics, Blood pressure, Irregular pulse, Glucose, Potassium.",
+        "Obtain a 12-lead ECG promptly.",
+        "Identify inferior changes (II, III, aVF) or anterior changes (V1-V4).",
+        "If ST depression appears in V1-V4 without clear elevation elsewhere, consider posterior MI.",
+        "If the 12-lead is non-diagnostic but suspicion for inferior MI remains (especially with hypotension), obtain a right-sided ECG.",
+        "Check for Beck's triad (JVD, muffled heart tones, hypotension) — if present, consider cardiac tamponade.",
+        "Avoid nitrates/vasodilators if right ventricular involvement or hypotension is suspected."
+      ]
+    }
+  ]
+}

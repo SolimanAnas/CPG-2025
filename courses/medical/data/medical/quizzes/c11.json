@@ -1,0 +1,170 @@
+{
+  "chapter": "c11",
+  "questions": [
+    {
+      "id": "c11_q01",
+      "question": "What is a toxidrome?",
+      "options": [
+        "A. A recognizable cluster of signs/symptoms associated with a category of toxic exposure",
+        "B. A specific antidote for a poison",
+        "C. A type of laboratory test",
+        "D. A rare, single-symptom presentation"
+      ],
+      "correct": 0,
+      "rationale": "A toxidrome is a symptom cluster that lets providers act on a recognizable pattern without knowing the exact substance.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q02",
+      "question": "What is the opioid toxidrome?",
+      "options": ["A. Respiratory depression, pinpoint pupils, altered mental status", "B. Agitation, tachycardia, dilated pupils", "C. Bradycardia with excessive secretions", "D. Dry, flushed skin with urinary retention"],
+      "correct": 0,
+      "rationale": "The opioid toxidrome is respiratory depression, pinpoint (miotic) pupils, and altered mental status.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c11_q03",
+      "question": "What is the sympathomimetic (stimulant) toxidrome?",
+      "options": ["A. Bradycardia and pinpoint pupils", "B. Agitation, tachycardia, hypertension, diaphoresis, dilated pupils", "C. Excessive salivation and lacrimation", "D. Dry skin and urinary retention alone"],
+      "correct": 1,
+      "rationale": "Sympathomimetic toxidrome features agitation, tachycardia, hypertension, diaphoresis, and dilated pupils.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q04",
+      "question": "What findings characterize the anticholinergic toxidrome?",
+      "options": [
+        "A. Altered mental status, dilated pupils, dry flushed skin, tachycardia, urinary retention",
+        "B. Excessive secretions and bradycardia",
+        "C. Pinpoint pupils and respiratory depression",
+        "D. Normal mental status with hypotension"
+      ],
+      "correct": 0,
+      "rationale": "The anticholinergic toxidrome ('hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter') includes altered mental status, dilated pupils, dry flushed skin, tachycardia, and urinary retention.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q05",
+      "question": "What is the cholinergic toxidrome associated with?",
+      "options": ["A. Opioid medications", "B. Organophosphate exposure", "C. Antihistamine overdose", "D. Cocaine use"],
+      "correct": 1,
+      "rationale": "The cholinergic toxidrome (excessive secretions, bradycardia, muscle twitching) is classically associated with organophosphate exposure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q06",
+      "question": "What is the field priority order for suspected poisoning/overdose?",
+      "options": [
+        "A. Identify the exact substance first, before any other action",
+        "B. Scene safety first, then support ABCs, identify substance/amount/time when possible, check glucose",
+        "C. Transport immediately with no on-scene assessment",
+        "D. Wait for poison control before taking any action"
+      ],
+      "correct": 1,
+      "rationale": "Scene safety and ABC support take priority over exact substance identification, with glucose checked regardless of presumed cause.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q07",
+      "question": "What distinguishes heat exhaustion from heat stroke?",
+      "options": [
+        "A. Heat stroke involves altered mental status plus significantly elevated core temperature; heat exhaustion has normal-to-mildly-altered mental status",
+        "B. Heat exhaustion is always more severe than heat stroke",
+        "C. Heat stroke never involves elevated temperature",
+        "D. There is no meaningful clinical distinction"
+      ],
+      "correct": 0,
+      "rationale": "Heat stroke is the life-threatening endpoint defined by significant altered mental status plus significantly elevated core temperature, distinguishing it from milder heat exhaustion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q08",
+      "question": "Does the presence of sweating rule out heat stroke?",
+      "options": ["A. Yes, heat stroke patients never sweat", "B. No — some heat stroke patients still sweat, especially with exertional causes", "C. Only in patients over 65", "D. Sweating is irrelevant to heat illness diagnosis"],
+      "correct": 1,
+      "rationale": "Sweating does not exclude heat stroke; altered mental status plus significantly elevated temperature is the defining combination regardless of sweating status.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q09",
+      "question": "What is the appropriate field management for heat exhaustion (normal-to-mildly-altered mental status)?",
+      "options": ["A. Cooling, rest, and fluids (oral if tolerated and alert)", "B. Aggressive ice-water immersion only", "C. No treatment needed", "D. Immediate advanced airway management"],
+      "correct": 0,
+      "rationale": "Heat exhaustion is managed with cooling, rest, and fluids, distinguishing it from the aggressive cooling needed for heat stroke.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q10",
+      "question": "What features characterize mild hypothermia?",
+      "options": ["A. Absent shivering and unresponsiveness", "B. Shivering, mild confusion, intact coordination", "C. Cardiac arrest", "D. Severe muscle rigidity with no shivering"],
+      "correct": 1,
+      "rationale": "Mild hypothermia presents with shivering, mild confusion, and intact coordination, distinguishing it from more severe stages.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q11",
+      "question": "What features characterize severe hypothermia?",
+      "options": [
+        "A. Vigorous shivering with clear mentation",
+        "B. Absent shivering, significantly altered/unresponsive mental status, risk of cardiac arrhythmia and arrest",
+        "C. Mild confusion only, with normal cardiac rhythm",
+        "D. Normal vital signs with intact coordination"
+      ],
+      "correct": 1,
+      "rationale": "Severe hypothermia is marked by absent shivering, severe mental status changes, and significant cardiac risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q12",
+      "question": "Why must a severely hypothermic patient be handled gently?",
+      "options": [
+        "A. Rough movement can trigger a fatal arrhythmia in a severely hypothermic heart",
+        "B. Gentle handling has no physiologic basis and is purely a comfort measure",
+        "C. Rough handling only matters for trauma patients, not hypothermia",
+        "D. Hypothermic patients cannot develop arrhythmias"
+      ],
+      "correct": 0,
+      "rationale": "A severely hypothermic heart is prone to arrhythmia, and rough movement/handling can precipitate a fatal rhythm disturbance.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q13",
+      "question": "Should resuscitation be withheld from a hypothermic patient found in apparent cardiac arrest?",
+      "options": [
+        "A. Yes, hypothermic arrest patients cannot be resuscitated",
+        "B. No — hypothermia can mimic death, and patients have survived prolonged downtime with good outcomes after rewarming; resuscitate per protocol",
+        "C. Only attempt resuscitation if the patient is under 40",
+        "D. Resuscitation should never be attempted in cold environments"
+      ],
+      "correct": 1,
+      "rationale": "Hypothermia's protective, death-mimicking effect means resuscitation efforts should generally proceed per protocol rather than being presumed futile based on presentation alone.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c11_q14",
+      "question": "A patient found unresponsive with pinpoint pupils and a respiratory rate of 4/min near drug paraphernalia. What toxidrome does this match, and what is the priority?",
+      "options": [
+        "A. Anticholinergic toxidrome; priority is IV fluids",
+        "B. Opioid toxidrome; priority is airway/ventilation support",
+        "C. Cholinergic toxidrome; priority is atropine only",
+        "D. Sympathomimetic toxidrome; priority is sedation"
+      ],
+      "correct": 1,
+      "rationale": "Pinpoint pupils and severe respiratory depression match the opioid toxidrome, making airway/ventilation support the immediate priority.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c11_q15",
+      "question": "A hiker in hot weather has a temperature of 105°F, is confused, and is still visibly sweating. Should the sweating change the diagnosis of heat stroke?",
+      "options": [
+        "A. Yes, sweating rules out heat stroke by definition",
+        "B. No — altered mental status plus significantly elevated temperature still meets the definition of heat stroke regardless of sweating",
+        "C. Sweating means this must be heat exhaustion instead",
+        "D. Sweating is not relevant to any heat illness assessment"
+      ],
+      "correct": 1,
+      "rationale": "Sweating does not exclude heat stroke; the combination of altered mental status and significantly elevated core temperature defines heat stroke regardless of sweating status.",
+      "difficulty": "Hard"
+    }
+  ]
+}

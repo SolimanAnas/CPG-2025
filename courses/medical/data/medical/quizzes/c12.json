@@ -1,0 +1,195 @@
+{
+  "chapter": "c12",
+  "questions": [
+    {
+      "id": "c12_q01",
+      "question": "What is sepsis?",
+      "options": [
+        "A. A localized skin infection",
+        "B. A life-threatening response to infection that can progress rapidly to septic shock",
+        "C. A chronic autoimmune condition",
+        "D. A type of allergic reaction"
+      ],
+      "correct": 1,
+      "rationale": "Sepsis is a life-threatening systemic response to infection with potential to progress to septic shock.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q02",
+      "question": "Can hypothermia, rather than fever, be a sign of sepsis?",
+      "options": [
+        "A. No, sepsis always causes fever",
+        "B. Yes — both fever and hypothermia can indicate sepsis; a low temperature with infection is not reassuring",
+        "C. Only in pediatric patients",
+        "D. Hypothermia rules out any infectious cause"
+      ],
+      "correct": 1,
+      "rationale": "Both fever and hypothermia can be seen in sepsis; a low temperature should not be treated as reassuring in the setting of suspected infection.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q03",
+      "question": "What systemic signs, combined with a suspected infection source, suggest sepsis?",
+      "options": [
+        "A. Fever/hypothermia, tachycardia, tachypnea, altered mental status",
+        "B. Isolated mild headache with normal vitals",
+        "C. Normal mental status and normal heart rate",
+        "D. Improved appetite and energy"
+      ],
+      "correct": 0,
+      "rationale": "These systemic findings combined with a suspected infection source raise concern for sepsis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q04",
+      "question": "Why is sepsis considered as time-sensitive as stroke or trauma?",
+      "options": [
+        "A. Outcomes worsen with delayed recognition and treatment, since early antibiotics/fluids are time-sensitive",
+        "B. Sepsis has no time-sensitive component",
+        "C. Sepsis only matters if treated within a week",
+        "D. Sepsis resolves on its own regardless of treatment timing"
+      ],
+      "correct": 0,
+      "rationale": "Time-sensitive treatment (early antibiotics, fluid resuscitation) drives outcomes in sepsis, similar to stroke and trauma.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q05",
+      "question": "How can sepsis present atypically in older adults?",
+      "options": [
+        "A. With dramatic high fever always present",
+        "B. Confusion as the primary sign, without a dramatic fever",
+        "C. Identically to younger patients in all cases",
+        "D. Sepsis cannot occur in older adults"
+      ],
+      "correct": 1,
+      "rationale": "Consistent with geriatric atypical presentation patterns, sepsis may present primarily as confusion in older adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q06",
+      "question": "What is melena, and what does it suggest?",
+      "options": [
+        "A. Bright red blood per rectum, suggesting lower GI bleeding",
+        "B. Black, tarry, foul-smelling stool, suggesting upper GI bleeding",
+        "C. Clear vomit with no blood",
+        "D. A type of skin rash"
+      ],
+      "correct": 1,
+      "rationale": "Melena is black, tarry stool classically associated with upper GI bleeding.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c12_q07",
+      "question": "What is hematochezia, and what does it typically suggest?",
+      "options": [
+        "A. Black, tarry stool from upper GI bleeding",
+        "B. Bright red blood per rectum, typically lower GI bleeding (though a brisk upper bleed can also cause it)",
+        "C. Vomiting without blood",
+        "D. A urinary symptom unrelated to GI bleeding"
+      ],
+      "correct": 1,
+      "rationale": "Hematochezia is bright red rectal bleeding, typically from a lower GI source, though brisk upper GI bleeds can also present this way.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q08",
+      "question": "What should be assessed in significant GI bleeding beyond the visible amount of blood?",
+      "options": ["A. Perfusion status, since significant bleeding can cause hypovolemic shock", "B. Only the patient's dietary history", "C. Only recent medication changes", "D. Nothing further is needed once bleeding is confirmed"],
+      "correct": 0,
+      "rationale": "Perfusion assessment is critical since significant GI bleeding can lead to hypovolemic shock, which may not correlate directly with visible blood volume.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q09",
+      "question": "What is the classic presentation pattern of bowel obstruction?",
+      "options": [
+        "A. Colicky abdominal pain, distension, vomiting, absence of bowel movements/flatus",
+        "B. Painless abdominal fullness with normal bowel function",
+        "C. Isolated diarrhea with no pain",
+        "D. Chest pain radiating to the back"
+      ],
+      "correct": 0,
+      "rationale": "Bowel obstruction classically presents with colicky pain, distension, vomiting, and absent bowel movements/flatus.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q10",
+      "question": "What is the correct field management for suspected bowel obstruction?",
+      "options": [
+        "A. Encourage oral fluids to prevent dehydration",
+        "B. Supportive care (IV fluids, antiemetics per protocol), no oral intake, prompt transport",
+        "C. No treatment needed until symptoms resolve",
+        "D. Administer a laxative in the field"
+      ],
+      "correct": 1,
+      "rationale": "Bowel obstruction is a surgical emergency managed with supportive care and no oral intake, with prompt transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q11",
+      "question": "What is the classic presentation of acute renal colic?",
+      "options": [
+        "A. Painless flank fullness",
+        "B. Sudden, severe, colicky flank pain radiating to the groin, with the patient unable to find a comfortable position",
+        "C. Chronic, dull back pain relieved by rest",
+        "D. Bilateral leg swelling"
+      ],
+      "correct": 1,
+      "rationale": "Renal colic classically causes sudden severe colicky flank pain, often radiating to the groin, with restless patient movement.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q12",
+      "question": "What dangerous condition should be considered before assuming flank pain is simple renal colic, especially in an older patient?",
+      "options": [
+        "A. Ruptured or dissecting abdominal aortic aneurysm (AAA)",
+        "B. Common cold",
+        "C. Simple muscle strain only",
+        "D. Mild dehydration"
+      ],
+      "correct": 0,
+      "rationale": "AAA is a critical mimic of renal colic, especially in older patients with vascular risk factors, and must be considered before assuming a benign cause.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q13",
+      "question": "What does 'pain out of proportion to exam findings' classically suggest?",
+      "options": [
+        "A. The patient is exaggerating their symptoms",
+        "B. A more dangerous underlying process (e.g., mesenteric ischemia, compartment syndrome)",
+        "C. A benign, self-limited condition",
+        "D. No clinical significance"
+      ],
+      "correct": 1,
+      "rationale": "Pain out of proportion to exam findings is a classic red flag for serious underlying pathology, not a sign of exaggeration.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c12_q14",
+      "question": "Why is a general 'red flag' mindset valuable across all medical complaints?",
+      "options": [
+        "A. Because atypical and subtle presentations of serious illness are common, and this mindset catches what a specific checklist might miss",
+        "B. Because red flags only apply to trauma patients",
+        "C. Because all patients present identically for the same condition",
+        "D. Because red flags replace the need for vital sign assessment"
+      ],
+      "correct": 0,
+      "rationale": "A systematic red-flag mindset helps recognize serious illness across varied and atypical presentations that a narrow, complaint-specific checklist might miss.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c12_q15",
+      "question": "A 74-year-old with a urinary tract infection presents with new confusion, a temperature of 96.2°F, and a heart rate of 118 bpm. What should this raise concern for?",
+      "options": [
+        "A. Nothing concerning, since there is no fever",
+        "B. Possible sepsis — hypothermia plus tachycardia and altered mental status with a known infection source is a concerning pattern, not reassuring",
+        "C. A purely psychiatric event unrelated to the UTI",
+        "D. Simple dehydration requiring no further evaluation"
+      ],
+      "correct": 1,
+      "rationale": "Hypothermia (not fever), tachycardia, and altered mental status with a known infection source together suggest sepsis — a low temperature does not exclude this diagnosis.",
+      "difficulty": "Hard"
+    }
+  ]
+}

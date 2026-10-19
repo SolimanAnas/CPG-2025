@@ -1,0 +1,28 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "Compensated vs Decompensated Shock",
+      "headers": ["Feature", "Compensated Shock", "Decompensated Shock"],
+      "rows": [
+        ["Blood pressure", "Normal for age", "Low for age (late finding)"],
+        ["Heart rate", "Elevated (tachycardia)", "Elevated, may become bradycardic terminally"],
+        ["Capillary refill", "Delayed (>2 sec)", "Markedly delayed"],
+        ["Mental status", "May be normal or mildly irritable", "Often altered — lethargic or unresponsive"],
+        ["Field urgency", "Treat now — do not wait for BP to drop", "Time-critical emergency, immediate escalation"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "Categories of Pediatric Shock",
+      "headers": ["Category", "Mechanism", "Example Causes", "Priority Field Treatment"],
+      "rows": [
+        ["Hypovolemic", "Fluid/blood volume loss", "Dehydration (vomiting/diarrhea), hemorrhage, burns", "Isotonic fluid bolus per protocol"],
+        ["Distributive", "Abnormal vessel tone/permeability", "Septic shock, anaphylactic shock, neurogenic shock (rare)", "Fluid bolus (septic); epinephrine (anaphylactic)"],
+        ["Cardiogenic", "Pump failure", "Congenital heart disease, myocarditis, arrhythmia", "Cautious fluids, avoid volume overload"],
+        ["Obstructive", "Physical obstruction to blood flow", "Tension pneumothorax, cardiac tamponade, massive PE (rare)", "Needle decompression (tension pneumothorax) per protocol"]
+      ]
+    }
+  ]
+}

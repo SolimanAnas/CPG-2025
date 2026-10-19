@@ -1,0 +1,170 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "What are early/mild symptoms of hypoglycemia?",
+      "options": ["A. Shakiness, diaphoresis, hunger, anxiety", "B. Fever and rash", "C. Chest pain and dyspnea", "D. Joint pain and swelling"],
+      "correct": 0,
+      "rationale": "Mild hypoglycemia classically presents with shakiness, diaphoresis, hunger, and anxiety before progressing to more severe neurologic symptoms.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "What is the field treatment for hypoglycemia in an awake, cooperative patient with intact airway reflexes?",
+      "options": ["A. IM glucagon only", "B. Oral glucose", "C. Withhold treatment until hospital arrival", "D. IV insulin"],
+      "correct": 1,
+      "rationale": "Oral glucose is appropriate for an awake, cooperative patient who can safely swallow.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "What three features together define DKA?",
+      "options": [
+        "A. Hyperglycemia, ketosis, and metabolic acidosis",
+        "B. Hypoglycemia, ketosis, and alkalosis",
+        "C. Hyperglycemia alone",
+        "D. Fever, tachycardia, and hypertension"
+      ],
+      "correct": 0,
+      "rationale": "DKA requires all three: hyperglycemia (or known diabetes), ketosis, and metabolic acidosis together.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q04",
+      "question": "What glucose threshold is generally used to define hyperglycemia in DKA (absent a prior diabetes diagnosis)?",
+      "options": ["A. ≥100 mg/dL", "B. ≥140 mg/dL", "C. ≥200 mg/dL", "D. ≥600 mg/dL"],
+      "correct": 2,
+      "rationale": "The DKA hyperglycemia criterion is glucose ≥200 mg/dL, or a prior history of diabetes even without meeting this threshold.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q05",
+      "question": "What are Kussmaul respirations, and why do they occur in DKA?",
+      "options": [
+        "A. Shallow, slow breathing from CNS depression",
+        "B. Deep, rapid respirations as a compensatory response to metabolic acidosis",
+        "C. Irregular gasping unrelated to acid-base status",
+        "D. Normal breathing pattern with no clinical significance"
+      ],
+      "correct": 1,
+      "rationale": "Kussmaul respirations are deep, rapid breaths that compensate for metabolic acidosis by blowing off CO2.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "What breath odor is classically associated with DKA?",
+      "options": ["A. Ammonia", "B. Fruity (acetone)", "C. Rotten eggs", "D. No characteristic odor"],
+      "correct": 1,
+      "rationale": "A fruity, acetone-like breath odor is a classic finding in DKA due to ketone production.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q07",
+      "question": "What percentage of DKA presentations occur with euglycemic DKA (glucose <200 mg/dL)?",
+      "options": ["A. About 1%", "B. About 10%", "C. About 50%", "D. About 90%"],
+      "correct": 1,
+      "rationale": "Approximately 10% of DKA presentations are euglycemic, with glucose under 200 mg/dL.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q08",
+      "question": "What medication class is most classically associated with euglycemic DKA?",
+      "options": ["A. SGLT2 inhibitors", "B. Beta-blockers", "C. ACE inhibitors", "D. Statins"],
+      "correct": 0,
+      "rationale": "SGLT2-inhibitor diabetes medications are the classic association with euglycemic DKA.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q09",
+      "question": "Does a normal or only mildly elevated glucose rule out DKA?",
+      "options": [
+        "A. Yes, DKA cannot occur without a very high glucose",
+        "B. No — if the clinical picture fits (Kussmaul respirations, fruity breath, vomiting/abdominal pain), DKA should still be suspected",
+        "C. Yes, but only in type 1 diabetics",
+        "D. Glucose has no relationship to DKA diagnosis"
+      ],
+      "correct": 1,
+      "rationale": "Because of euglycemic DKA, a normal or mildly elevated glucose does not rule out DKA if other clinical features are present.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q10",
+      "question": "What four features together define HHS?",
+      "options": [
+        "A. Severe hyperglycemia, significant hyperosmolality, minimal ketosis, near-normal pH/bicarbonate",
+        "B. Hypoglycemia, ketosis, acidosis, hypotension",
+        "C. Fever, tachycardia, hyperglycemia, ketosis",
+        "D. Normal glucose, high ketones, severe acidosis"
+      ],
+      "correct": 0,
+      "rationale": "HHS is defined by severe hyperglycemia (often >600 mg/dL), hyperosmolality (>320 mOsm/kg), minimal ketosis, and near-normal pH/bicarbonate — distinguishing it from DKA's acidosis picture.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "Which patient population is HHS more typically seen in?",
+      "options": [
+        "A. Younger patients with type 1 diabetes and rapid onset",
+        "B. Older adults with type 2 diabetes and slower onset over days",
+        "C. Children with new-onset diabetes",
+        "D. HHS occurs equally across all diabetic populations and onset patterns"
+      ],
+      "correct": 1,
+      "rationale": "HHS is more typical in older adults with type 2 diabetes, with a slower onset over days and profound dehydration.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q12",
+      "question": "How does the mental status picture in HHS typically compare to DKA?",
+      "options": [
+        "A. HHS typically has a more prominent altered mental status/obtundation picture than DKA",
+        "B. DKA always causes more severe altered mental status than HHS",
+        "C. Neither condition affects mental status",
+        "D. Mental status changes are identical and cannot be distinguished"
+      ],
+      "correct": 0,
+      "rationale": "HHS's severe hyperosmolar state has a direct effect on the brain, often producing more prominent altered mental status/obtundation than typical DKA.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q13",
+      "question": "What is the field management priority for both DKA and HHS?",
+      "options": [
+        "A. Oral glucose administration",
+        "B. Supportive care (oxygen, IV access/isotonic fluids per protocol, cardiac monitoring), airway protection, and rapid transport",
+        "C. Withholding all fluids until hospital arrival",
+        "D. Immediate insulin administration in the field"
+      ],
+      "correct": 1,
+      "rationale": "Field management for DKA/HHS is supportive — fluids, oxygen, monitoring, airway protection given vomiting risk, and rapid transport; definitive treatment (insulin, careful correction) happens in the hospital.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q14",
+      "question": "A known diabetic patient presents with confusion. Should the provider assume hypoglycemia without checking glucose?",
+      "options": [
+        "A. Yes, all diabetic confusion is hypoglycemia",
+        "B. No — check glucose, since altered mental status could reflect hypoglycemia, DKA, or HHS",
+        "C. Yes, but only if the patient is elderly",
+        "D. No check is needed if the patient appears calm"
+      ],
+      "correct": 1,
+      "rationale": "Altered mental status in a diabetic patient could reflect either direction of glucose abnormality (or DKA/HHS); a glucose check is required rather than assuming the direction.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q15",
+      "question": "A type 2 diabetic patient on an SGLT2 inhibitor presents with vomiting, abdominal pain, and Kussmaul respirations, with a glucose of 180 mg/dL. What should this raise suspicion for?",
+      "options": [
+        "A. This cannot be DKA since the glucose is under 200 mg/dL",
+        "B. Euglycemic DKA, given the SGLT2-inhibitor use and fitting clinical picture despite a near-normal glucose",
+        "C. Simple gastroenteritis with no endocrine involvement",
+        "D. HHS, given the diabetes history"
+      ],
+      "correct": 1,
+      "rationale": "SGLT2-inhibitor use plus a DKA-consistent clinical picture (vomiting, abdominal pain, Kussmaul respirations) despite a near-normal glucose is the classic presentation of euglycemic DKA.",
+      "difficulty": "Hard"
+    }
+  ]
+}

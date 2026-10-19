@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "Slow and Shallow",
+      "presentation": "A 68-year-old man is found unresponsive after an apparent overdose. His respiratory rate is 6 breaths per minute, shallow, with cyanosis around the lips.",
+      "vitals": { "rr": "6/min, shallow", "spo2": "82%", "skin": "Cyanotic lips", "loc": "Unresponsive" },
+      "question": "What is the correct airway/ventilation management?",
+      "options": [
+        "A: No intervention needed since he is still breathing.",
+        "B: Begin BVM ventilation given bradypnea, inadequate tidal volume, and cyanosis; consider an OPA since he is unresponsive.",
+        "C: Wait for him to breathe faster on his own.",
+        "D: Insert an NPA only, with no ventilatory support."
+      ],
+      "correct": 1,
+      "explanation": "Bradypnea, shallow (inadequate tidal volume) breathing, and cyanosis are all BVM indications. Since he is unresponsive, an OPA is appropriate if there is no gag reflex, supporting effective bag-mask ventilation.",
+      "clinicalPearl": "Rate, depth, AND color all factor into the decision to assist ventilations — cyanosis alone is enough to act."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Vomiting Mid-Seizure",
+      "presentation": "A 30-year-old woman is postictal after a generalized seizure and begins vomiting while still minimally responsive, lying supine.",
+      "vitals": { "hr": "104 bpm", "rr": "18 bpm, irregular", "loc": "Postictal, minimally responsive" },
+      "question": "What is the correct immediate action?",
+      "options": [
+        "A: Sit her upright immediately.",
+        "B: Turn her onto her side to allow the vomit to drain, then suction as needed.",
+        "C: Insert an OPA while she is actively vomiting.",
+        "D: Wait for her to become fully alert before intervening."
+      ],
+      "correct": 1,
+      "explanation": "Vomit in the airway calls for immediate positioning onto the side to allow drainage and reduce aspiration risk, followed by suction for anything positioning alone can't clear. Placing an OPA during active vomiting risks triggering more vomiting/aspiration.",
+      "clinicalPearl": "Turn first, suction second — positioning is faster than any equipment setup."
+    },
+    {
+      "id": "c02_s03",
+      "title": "The New Sound",
+      "presentation": "A 4-year-old with a known bee-sting allergy was stung 10 minutes ago. She now has a harsh, high-pitched sound on inhalation, facial swelling, and increasing anxiety.",
+      "vitals": { "hr": "138 bpm", "rr": "28 bpm, harsh inspiratory sound", "loc": "Anxious, alert" },
+      "question": "What does this sound indicate and what is the priority?",
+      "options": [
+        "A: Normal breath sounds — reassure and monitor.",
+        "B: Stridor indicating upper airway obstruction (likely anaphylaxis-related angioedema) — treat as an urgent, rapidly progressing airway emergency.",
+        "C: Lower airway wheezing requiring only a bronchodilator.",
+        "D: A sound requiring no immediate escalation of care."
+      ],
+      "correct": 1,
+      "explanation": "A new high-pitched inspiratory sound is stridor, signaling upper airway obstruction — here, likely angioedema from anaphylaxis. This is potentially life-threatening and can progress to complete obstruction quickly, requiring urgent treatment and readiness for advanced airway support.",
+      "clinicalPearl": "Stridor plus a known allergen exposure is an airway emergency in progress, not a wait-and-see finding."
+    }
+  ]
+}

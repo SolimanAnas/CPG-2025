@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Pain That Moved",
+      "presentation": "A 22-year-old woman describes vague periumbilical pain that started two days ago and has now settled into a sharp pain in her right lower quadrant, worse with movement.",
+      "vitals": { "hr": "98 bpm", "temp": "100.8 F", "exam": "RLQ tenderness, guarding" },
+      "question": "What is the most likely diagnosis based on this pain pattern?",
+      "options": [
+        "A: Cholecystitis, given her age.",
+        "B: Appendicitis — the classic migration from periumbilical to right lower quadrant pain.",
+        "C: Pancreatitis.",
+        "D: Simple gastroenteritis, no further concern."
+      ],
+      "correct": 1,
+      "explanation": "The migration from vague periumbilical pain to focal right lower quadrant pain over roughly two days is the classic appendicitis pattern, distinguishing it from conditions that are focal from onset.",
+      "clinicalPearl": "Pain that starts in the middle and moves to the lower right is appendicitis until proven otherwise."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Missed Dialysis, New Weakness",
+      "presentation": "A 55-year-old man on hemodialysis missed his last two scheduled sessions due to transportation issues. He now reports generalized weakness and tingling in his hands and feet.",
+      "vitals": { "hr": "58 bpm, irregular", "bp": "142/88 mmHg", "exam": "Generalized weakness, paresthesias" },
+      "question": "What should be your top concern and immediate action?",
+      "options": [
+        "A: Simple fatigue — no specific workup needed.",
+        "B: Hyperkalemia — place on a cardiac monitor immediately given the risk of dangerous dysrhythmias, and transport urgently.",
+        "C: A stroke, unrelated to his dialysis status.",
+        "D: Anxiety related to missing appointments."
+      ],
+      "correct": 1,
+      "explanation": "Missed dialysis strongly raises the risk of hyperkalemia, which presents with weakness and paresthesias and can produce dangerous cardiac dysrhythmias — his irregular, slow pulse is an additional red flag. Cardiac monitoring and urgent transport are indicated.",
+      "clinicalPearl": "Missed dialysis plus weakness is a cardiac emergency in waiting — get him on the monitor."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Not Just Heartburn",
+      "presentation": "A 62-year-old man with hypertension and diabetes reports 'bad indigestion' with epigastric discomfort and nausea for the past hour. He denies classic chest pain.",
+      "vitals": { "hr": "92 bpm", "bp": "138/86 mmHg", "rr": "18 bpm", "pain": "Epigastric, no radiation reported" },
+      "question": "Given his risk factors, what should be done despite the absence of classic chest pain?",
+      "options": [
+        "A: Treat as simple indigestion with antacids only.",
+        "B: Obtain a 12-lead ECG to rule out inferior MI presenting atypically as epigastric discomfort.",
+        "C: Assume this is unrelated to his heart since there is no chest pain.",
+        "D: Discharge with reassurance."
+      ],
+      "correct": 1,
+      "explanation": "Inferior MI can present with epigastric discomfort and nausea instead of classic chest pain, especially in patients with diabetes (which can blunt typical pain perception) and hypertension. A 12-lead ECG is warranted before assuming a purely GI cause.",
+      "clinicalPearl": "In a patient with cardiac risk factors, 'indigestion' gets a 12-lead before it gets antacids."
+    }
+  ]
+}
