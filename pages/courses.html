@@ -135,593 +135,283 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
 
-        /* ── Search Bar ── */
-        .search-wrap {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--glass-bg);
-            border: 1.5px solid var(--glass-border);
-            border-radius: 50px;
-            padding: 11px 18px;
-            margin-bottom: 16px;
-            box-shadow: var(--glass-shadow);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+        /* ── Opaque surfaces + readable text per theme. The shared --glass-bg is
+              75% white over the dark default gradient, which turned cards grey and
+              washed out secondary text; these keep the glass feel but stay legible. ── */
+        :root {
+            --cc-surface: rgba(248, 250, 252, 0.97); --cc-surface-2: #eef2f7;
+            --cc-text: #0f1b2a; --cc-text-2: #3e4c5e; --cc-muted: #64748b;
+            --cc-line: rgba(15, 27, 42, 0.11); --cc-drawer: rgba(246, 249, 252, 0.98);
         }
-        .search-wrap:focus-within {
-            border-color: var(--primary-accent);
-            box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary-accent) 15%, transparent), var(--glass-shadow);
-            transform: translateY(-1px);
+        [data-theme="amoled"] {
+            --cc-surface: rgba(16, 19, 24, 0.97); --cc-surface-2: #1a1f27;
+            --cc-text: #eef4fa; --cc-text-2: #b3c0cf; --cc-muted: #8593a5;
+            --cc-line: rgba(255, 255, 255, 0.11); --cc-drawer: rgba(12, 14, 18, 0.98);
         }
-        .search-wrap svg.lucide { width: 18px; height: 18px; opacity: 0.45; flex-shrink: 0; transition: opacity 0.25s, color 0.25s; }
-        .search-wrap:focus-within svg.lucide { opacity: 0.8; color: var(--primary-accent); }
-        #searchInput {
-            flex: 1;
-            background: none;
-            border: none;
-            outline: none;
-            color: var(--text-primary);
-            font-size: 0.92rem;
-            font-family: var(--font-body);
-            font-weight: 500;
-            min-width: 0;
+        [data-theme="light"] {
+            --cc-surface: #ffffff; --cc-surface-2: #f1f5f9;
+            --cc-text: #0f1b2a; --cc-text-2: #3e4c5e; --cc-muted: #64748b;
+            --cc-line: rgba(15, 27, 42, 0.10); --cc-drawer: rgba(255, 255, 255, 0.98);
         }
-        #searchInput::placeholder { color: var(--text-secondary); opacity: 0.55; }
-        .search-clear {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            border: none;
-            background: rgba(255,255,255,0.06);
-            color: var(--text-secondary);
-            font-size: 0.6rem;
-            cursor: pointer;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            padding: 0;
-            line-height: 1;
-            transition: all 0.2s;
+        [data-theme="sepia"] {
+            --cc-surface: #fff9ee; --cc-surface-2: #f5e9d3;
+            --cc-text: #33281c; --cc-text-2: #5e4d3b; --cc-muted: #7c6a56;
+            --cc-line: rgba(74, 60, 44, 0.16); --cc-drawer: rgba(255, 249, 238, 0.98);
         }
-        [data-theme="light"] .search-clear { background: rgba(0,0,0,0.05); }
-        .search-clear:hover { background: rgba(255,255,255,0.14); transform: scale(1.1); color: var(--text-primary); }
-        [data-theme="light"] .search-clear:hover { background: rgba(0,0,0,0.1); }
-        .search-clear:active { transform: scale(0.92); }
-        .search-clear.visible { display: flex; }
+        [data-theme="forest"] {
+            --cc-surface: #eef6e4; --cc-surface-2: #dfecca;
+            --cc-text: #0d281b; --cc-text-2: #2a4f36; --cc-muted: #4b6b53;
+            --cc-line: rgba(13, 40, 27, 0.15); --cc-drawer: rgba(238, 246, 228, 0.98);
+        }
 
-        /* ── Filter Chips ── */
+        /* ══════════════ Courses v2 — compact, collapsible, sticky search ══════════════ */
+        :root { --hdr-h: 72px; }
+        body.compact { --hdr-h: 56px; }
+        header {
+            height: var(--hdr-h) !important;
+            transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+        .header-text h1 { transition: font-size 0.25s ease; }
+        .header-text p { transition: opacity 0.2s ease, max-height 0.25s ease; max-height: 20px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+        body.compact .header-text h1 { font-size: 1.05rem; }
+        body.compact .header-text p { opacity: 0; max-height: 0; }
+
+        /* Menu: was a pull-tab hanging over the search box — now a normal header button */
+        #drawerTrigger.hdr-menu {
+            position: static; transform: none; animation: none;
+            width: 38px; height: 38px; bottom: auto;
+            border-radius: 12px; border: 1px solid var(--glass-border);
+            background: var(--glass-bg); box-shadow: none;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
+            padding: 0; cursor: pointer;
+        }
+        #drawerTrigger.hdr-menu:hover { height: 38px; bottom: auto; background: color-mix(in srgb, var(--primary-accent) 15%, var(--glass-bg)); }
+        #drawerTrigger.hdr-menu .trigger-line { margin: 2px 0; }
+        #drawerTrigger.hdr-menu .trigger-line.top { width: 18px; }
+        #drawerTrigger.hdr-menu .trigger-line.bottom { width: 12px; }
+
+        /* overflow:clip (not hidden) so <main> doesn't become the sticky toolbar's scroll container */
+        main { padding-top: 0 !important; overflow: visible !important; overflow-x: clip !important; }
+
+        /* ── Sticky toolbar: search + collapse/expand + filter chips ── */
+        .toolbar {
+            position: sticky; top: var(--hdr-h); z-index: 50;
+            margin: 0 -16px 6px; padding: 10px 16px 0;
+            background: color-mix(in srgb, var(--cc-surface) 88%, transparent);
+            backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(150%);
+            border-bottom: 1px solid transparent;
+            transition: top 0.25s cubic-bezier(0.23, 1, 0.32, 1), padding 0.25s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s;
+        }
+        body.compact .toolbar { border-bottom-color: var(--cc-line); }
+        .tb-row { display: flex; gap: 8px; align-items: center; }
+        .search-wrap {
+            flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px;
+            height: 42px; padding: 0 8px 0 14px;
+            background: var(--cc-surface); border: 1.5px solid var(--cc-line); border-radius: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .search-wrap:focus-within { border-color: var(--primary-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-accent) 18%, transparent); }
+        .search-wrap svg.lucide { width: 17px; height: 17px; opacity: 0.5; flex-shrink: 0; }
+        .search-wrap:focus-within svg.lucide { opacity: 0.85; color: var(--primary-accent); }
+        #searchInput { flex: 1; min-width: 0; height: 100%; background: none; border: none; outline: none; color: var(--cc-text); font: 500 0.92rem var(--font-body); }
+        #searchInput::placeholder { color: var(--cc-text-2); opacity: 0.6; }
+        #searchInput::-webkit-search-cancel-button { display: none; }
+        .search-key { font: 700 0.62rem var(--font-body); color: var(--cc-text-2); opacity: 0.55; border: 1px solid var(--cc-line); border-radius: 6px; padding: 2px 6px; }
+        .search-clear { width: 28px; height: 28px; border-radius: 9px; border: none; background: rgba(127,127,127,0.14); color: var(--cc-text-2); font-size: 0.7rem; cursor: pointer; display: none; align-items: center; justify-content: center; flex-shrink: 0; padding: 0; }
+        .search-clear.visible { display: flex; }
+        .search-wrap:has(.search-clear.visible) .search-key { display: none; }
+        @media (hover: none) { .search-key { display: none; } }
+        .tb-btn {
+            height: 42px; flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 0 12px;
+            border-radius: 14px; border: 1.5px solid var(--cc-line); background: var(--cc-surface);
+            color: var(--cc-text-2); font: 700 0.76rem var(--font-body); cursor: pointer;
+            transition: color 0.15s, border-color 0.15s, transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .tb-btn:hover { color: var(--cc-text); border-color: color-mix(in srgb, var(--primary-accent) 45%, var(--cc-line)); }
+        .tb-btn:active { transform: scale(0.96); }
+        .tb-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+        .tb-btn[hidden] { display: none; }
+
+        .filter-wrap { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.25s cubic-bezier(0.23, 1, 0.32, 1); }
+        body.chips-hidden .filter-wrap { grid-template-rows: 0fr; }
+        body.chips-hidden .filter-row { padding-top: 0; padding-bottom: 0; }
+        body.chips-hidden .toolbar { padding-bottom: 8px; }
         .filter-row {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding: 4px 4px 18px;
-            margin: 0 -4px;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
+            min-height: 0; overflow-x: auto; overflow-y: hidden; display: flex; gap: 6px;
+            padding: 8px 2px 10px; scrollbar-width: none;
+            transition: padding 0.25s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .filter-row::-webkit-scrollbar { display: none; }
         .chip {
-            position: relative;
-            flex-shrink: 0;
-            padding: 8px 18px;
-            border-radius: 100px;
-            border: 1.5px solid var(--glass-border);
-            background: var(--glass-bg);
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            font-weight: 600;
-            font-family: var(--font-body);
-            white-space: nowrap;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            flex-shrink: 0; height: 32px; padding: 0 14px; border-radius: 100px;
+            border: 1.5px solid var(--cc-line); background: var(--cc-surface); color: var(--cc-text-2);
+            font: 650 0.78rem var(--font-body); white-space: nowrap; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 6px;
+            transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        /* Dynamic categories filters */
-        .chip[data-filter="cardiac"]:hover { border-color: rgba(248, 113, 113, 0.6); color: #f87171; }
-        .chip[data-filter="cardiac"].active { background: #ef4444; border-color: #ef4444; color: #fff; box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4); }
+        .chip:active { transform: scale(0.96); }
+        .chip .n { font-size: 0.66rem; opacity: 0.65; font-variant-numeric: tabular-nums; }
+        .chip[data-filter="cardiac"]    { --chip: #ef4444; }
+        .chip[data-filter="trauma"]     { --chip: #f97316; }
+        .chip[data-filter="pediatrics"] { --chip: #8b5cf6; }
+        .chip[data-filter="medical"]    { --chip: #10b981; }
+        .chip[data-filter="ecg"]        { --chip: #f59e0b; }
+        .chip[data-filter="general"]    { --chip: #3b82f6; }
+        .chip[data-filter="all"]        { --chip: var(--primary-accent); }
+        .chip:hover { border-color: color-mix(in srgb, var(--chip) 60%, transparent); color: var(--chip); }
+        .chip.active { background: var(--chip); border-color: var(--chip); color: #fff; }
+        .chip.active .n { opacity: 0.85; }
 
-        .chip[data-filter="trauma"]:hover { border-color: rgba(251, 146, 60, 0.6); color: #fb923c; }
-        .chip[data-filter="trauma"].active { background: #f97316; border-color: #f97316; color: #fff; box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4); }
-
-        .chip[data-filter="pediatrics"]:hover { border-color: rgba(167, 139, 250, 0.6); color: #a78bfa; }
-        .chip[data-filter="pediatrics"].active { background: #8b5cf6; border-color: #8b5cf6; color: #fff; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4); }
-
-        .chip[data-filter="medical"]:hover { border-color: rgba(52, 211, 153, 0.6); color: #34d399; }
-        .chip[data-filter="medical"].active { background: #10b981; border-color: #10b981; color: #fff; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); }
-
-        .chip[data-filter="ecg"]:hover { border-color: rgba(251, 191, 36, 0.6); color: #fbbf24; }
-        .chip[data-filter="ecg"].active { background: #f59e0b; border-color: #f59e0b; color: #fff; box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4); }
-
-        .chip[data-filter="all"]:hover { border-color: color-mix(in srgb, var(--primary-accent) 60%, transparent); color: var(--primary-accent); }
-        .chip[data-filter="all"].active { background: var(--primary-accent); border-color: var(--primary-accent); color: #fff; box-shadow: 0 4px 14px color-mix(in srgb, var(--primary-accent) 40%, transparent); }
-
-        /* ── Section Header ── */
-        .section-header {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin: 20px 0 14px 0;
-            padding: 8px 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(255,255,255,0.06));
-            border-radius: 8px;
-            border-left: 3px solid var(--cat-color, var(--primary-accent));
-            color: #e2e8f0;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            grid-column: 1 / -1;
-        }
-        [data-theme="light"] .section-header {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 8%, rgba(0,0,0,0.04));
-            border-left-color: var(--cat-color, var(--primary-accent));
-            color: #1e293b;
-            text-shadow: none;
-        }
-        .section-header::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 35%, transparent), transparent);
-        }
-
-        /* ── Course Grid System ── */
-        #courseList {
-            display: grid;
-            grid-template-columns: 1fr;   /* single column by default (mobile) */
-            gap: 12px;
-            width: 100%;
-        }
-        @media (min-width: 600px) {
-            #courseList {
-                grid-template-columns: 1fr 1fr;   /* two columns on tablets/desktop */
-                gap: 18px;
-            }
-        }
-
-        /* ── Course Card ── */
-        .course-card {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 20px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--card-radius);
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            box-sizing: border-box;
-            overflow: hidden;
-            width: 100%;
-            max-width: 460px;
-            justify-self: center;
-            animation: cardIn 0.5s cubic-bezier(0.16,1,0.3,1) both;
-        }
-        .course-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--cat-color, var(--primary-accent));
-            border-radius: var(--card-radius) 0 0 var(--card-radius);
-            opacity: 0.8;
-            transition: width 0.2s ease, opacity 0.2s;
-        }
-        .course-card:hover::before {
-            width: 6px;
-            opacity: 1;
-        }
-        .course-card:focus-visible {
-            outline: 2px solid var(--cat-color, var(--primary-accent));
-            outline-offset: 2px;
-        }
-        .course-card:hover {
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 40%, transparent);
-            box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, rgba(0,0,0,0.15)),
-                        0 0 0 1px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 6%, transparent);
-            transform: translateY(-3px);
-        }
-        .course-card:active {
-            transform: translateY(-1px);
-        }
-        .course-card.disabled { opacity: 0.4; cursor: default; pointer-events: none; }
-
-        /* Staggered entrance */
-        .course-card:nth-child(2) { animation-delay: 0.04s; }
-        .course-card:nth-child(3) { animation-delay: 0.08s; }
-        .course-card:nth-child(4) { animation-delay: 0.12s; }
-        .course-card:nth-child(5) { animation-delay: 0.16s; }
-        .course-card:nth-child(6) { animation-delay: 0.2s; }
-        .course-card:nth-child(7) { animation-delay: 0.24s; }
-        .course-card:nth-child(8) { animation-delay: 0.28s; }
-        .course-card:nth-child(9) { animation-delay: 0.32s; }
-        .course-card:nth-child(10) { animation-delay: 0.36s; }
-
-        @keyframes cardIn {
-            from { opacity: 0; transform: translateY(16px) scale(0.97); }
-            to   { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* ── Icon ── branded course badge in a glass tile ── */
-        .cc-icon {
-            position: relative;
-            width: 88px;
-            height: 88px;
-            border-radius: 22px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, transparent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--cat-color, var(--primary-accent));
-            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease, border-color 0.4s ease;
-            border: 1px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 24%, transparent);
-            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
-        }
-        /* soft category-coloured halo bleeding out behind the badge */
-        .cc-icon::after {
-            content: "";
-            position: absolute;
-            inset: -35%;
-            z-index: -1;
-            border-radius: 50%;
-            background: radial-gradient(circle at 50% 35%,
-                color-mix(in srgb, var(--cat-color, var(--primary-accent)) 32%, transparent), transparent 62%);
-            opacity: 0.45;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-        .cc-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 19px;
-            display: block;
-            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
-        }
-        .cc-icon svg.lucide {
-            width: 44px;
-            height: 44px;
-            stroke-width: 2.25;
-        }
-        .course-card:hover .cc-icon {
-            transform: translateY(-2px) scale(1.07);
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 48%, transparent);
-            box-shadow: 0 8px 22px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 30%, transparent);
-        }
-        .course-card:hover .cc-icon::after { opacity: 0.85; transform: scale(1.12); }
-
-        /* ── Card Body ── */
-        .cc-body {
-            flex: 1;
-            width: 100%;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-        }
-        .cc-top {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .cc-title {
-            font-size: 0.95rem;
-            font-weight: 750;
-            font-family: var(--font-display);
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-        .cc-tag {
-            font-size: 0.62rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            padding: 2px 7px;
-            border-radius: 100px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-secondary);
-            margin-left: 2px;
-            opacity: 0.8;
-            white-space: nowrap;
-        }
-        [data-theme="light"] .cc-tag {
-            background: rgba(0, 0, 0, 0.04);
-            border-color: rgba(0, 0, 0, 0.06);
-        }
-        .cc-badge {
-            font-size: 0.68rem;
-            font-weight: 800;
-            padding: 3px 9px;
-            border-radius: 8px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 14%, transparent);
-            color: var(--cat-color, var(--primary-accent));
-            white-space: nowrap;
-            flex-shrink: 0;
-            border: 1px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 20%, transparent);
-            letter-spacing: 0.3px;
-            font-variant-numeric: tabular-nums;
-            box-shadow: 0 0 10px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 4%, transparent);
-            position: absolute;   /* pin the count to the tile's top-right corner */
-            top: 16px;
-            right: 16px;
-            margin-left: 0;
-        }
-        /* chevron is redundant in the tile layout */
-        .cc-chevron { display: none; }
-
-        .cc-sub {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            line-height: 1.35;
-            opacity: 0.8;
-        }
-
-        .cc-progress {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: auto;
-            padding-top: 12px;
-            width: 100%;
-        }
-        .cc-progress-track {
-            flex: 1;
-            height: 6px;
-            border-radius: 100px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, rgba(255, 255, 255, 0.06));
-            overflow: hidden;
-            position: relative;
-        }
-        [data-theme="light"] .cc-progress-track {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(0, 0, 0, 0.05));
-        }
-        .cc-progress-fill {
-            height: 100%;
-            border-radius: inherit;
-            background: linear-gradient(90deg, var(--cat-color, var(--primary-accent)), color-mix(in srgb, var(--cat-color, var(--primary-accent)) 70%, #fff));
-            transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            width: 0%;
-            position: relative;
-        }
-        .cc-progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background-image: linear-gradient(
-                90deg,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.15) 50%,
-                rgba(255,255,255,0) 100%
-            );
-            animation: progressShine 2.5s infinite linear;
-            background-size: 200% 100%;
-        }
-        @keyframes progressShine {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-        .cc-pct {
-            font-size: 0.68rem;
-            font-weight: 800;
-            font-variant-numeric: tabular-nums;
-            color: var(--cat-color, var(--primary-accent));
-            min-width: 34px;
-            text-align: right;
-            flex-shrink: 0;
-        }
-
-        /* ── Continue Learning Premium Widget ── */
-        .continue-section {
-            margin-bottom: 24px;
-            grid-column: 1 / -1; /* Spans full grid width on desktop */
-        }
-        .continue-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin: 0 0 14px 0;
-            padding: 8px 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(255,255,255,0.06));
-            border-radius: 8px;
-            border-left: 3px solid var(--cat-color, var(--primary-accent));
-            color: #e2e8f0;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        }
-        [data-theme="light"] .continue-label {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 8%, rgba(0,0,0,0.04));
-            border-left-color: var(--cat-color, var(--primary-accent));
-            color: #1e293b;
-            text-shadow: none;
-        }
-        .continue-label::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 35%, transparent), transparent);
-        }
-        [data-theme="light"] .continue-label::after {
-            background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 25%, transparent), transparent);
-        }
+        /* ── Continue learning (one compact row) ── */
         .continue-card {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 20px 22px;
-            background: linear-gradient(135deg, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, var(--glass-bg)), var(--glass-bg));
-            border: 1.5px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 25%, var(--glass-border));
-            border-radius: 24px;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 8px 32px -8px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, rgba(0,0,0,0.15)),
-                        0 0 0 1px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 6%, transparent);
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            animation: cardIn 0.5s cubic-bezier(0.16,1,0.3,1) both;
+            display: flex; align-items: center; gap: 12px; padding: 10px 12px; margin: 6px 0 4px;
+            border-radius: 16px; text-decoration: none; color: inherit;
+            background: linear-gradient(120deg, color-mix(in srgb, var(--cat-color) 16%, var(--cc-surface)), var(--cc-surface) 70%);
+            border: 1.5px solid color-mix(in srgb, var(--cat-color) 32%, var(--cc-line));
+            transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s;
         }
-        .continue-card::after {
-            content: '';
-            position: absolute;
-            top: -50px; right: -50px;
-            width: 130px; height: 130px;
-            background: radial-gradient(circle, color-mix(in srgb, var(--cat-color, var(--primary-accent)) 15%, transparent) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        .continue-card:hover {
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 45%, transparent);
-            box-shadow: 0 12px 36px -6px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 20%, rgba(0,0,0,0.25)),
-                        0 0 0 1px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, transparent);
-            transform: translateY(-3px) scale(1.01);
-        }
-        .continue-card:active {
-            transform: translateY(-1px);
-        }
-        .continue-card .cc-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 16px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 18%, transparent);
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 28%, transparent);
-            color: var(--cat-color, var(--primary-accent));
-            box-shadow: 0 0 20px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 12%, transparent);
-        }
-        .continue-card .cc-icon svg.lucide { width: 26px; height: 26px; stroke-width: 2.25; }
-        .continue-card:hover .cc-icon {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 26%, transparent);
-            border-color: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 40%, transparent);
-            transform: scale(1.05) rotate(-3deg);
-            box-shadow: 0 0 24px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 20%, transparent);
-        }
-        .continue-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-        .continue-body .cc-title { font-size: 1.05rem; font-weight: 800; }
-        .continue-resume {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            font-family: var(--font-display);
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, rgba(255,255,255,0.05));
-            border: 1px solid color-mix(in srgb, var(--cat-color, var(--primary-accent)) 20%, rgba(255,255,255,0.1));
-            padding: 8px 14px;
-            border-radius: 50px;
-            color: var(--cat-color, var(--primary-accent));
-            white-space: nowrap;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-        .continue-card:hover .continue-resume {
-            background: var(--cat-color, var(--primary-accent));
-            color: #fff;
-            gap: 12px;
-            border-color: var(--cat-color, var(--primary-accent));
-            box-shadow: 0 4px 12px color-mix(in srgb, var(--cat-color, var(--primary-accent)) 30%, transparent);
-        }
-        .continue-resume svg.lucide { width: 14px; height: 14px; stroke-width: 2.5; transition: transform 0.2s; }
-        .continue-card:hover .continue-resume svg.lucide { transform: translateX(3px); }
+        .continue-card:hover { border-color: color-mix(in srgb, var(--cat-color) 55%, transparent); }
+        .continue-card:active { transform: scale(0.985); }
+        .continue-card .cc-icon { width: 44px; height: 44px; border-radius: 12px; }
+        .continue-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+        .continue-k { font: 800 0.6rem var(--font-body); letter-spacing: 1.1px; text-transform: uppercase; color: var(--cat-color); }
+        .continue-body .cc-title { font-size: 0.95rem; }
+        .continue-go { width: 34px; height: 34px; border-radius: 11px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--cat-color); color: #fff; }
+        .continue-go svg.lucide { width: 16px; height: 16px; stroke-width: 2.5; }
 
-        /* ── Empty / No Results ── */
-        .empty-state {
-            text-align: center;
-            padding: 60px 24px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-            opacity: 0.7;
-            grid-column: 1 / -1;
+        /* ── Category sections (collapsible) ── */
+        #courseList { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+        .cat { --cat-color: var(--primary-accent); }
+        .cat-h {
+            width: 100%; display: flex; align-items: center; gap: 10px; padding: 9px 12px;
+            border-radius: 12px; border: 1px solid transparent; cursor: pointer; text-align: left;
+            background: color-mix(in srgb, var(--cat-color) 13%, var(--cc-surface));
+            border-color: var(--cc-line);
+            color: var(--cc-text); font-family: var(--font-body);
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .cat-h:hover { border-color: color-mix(in srgb, var(--cat-color) 35%, transparent); }
+        .cat-h:focus-visible { outline: 2px solid var(--cat-color); outline-offset: 2px; }
+        .cat-name { font: 800 0.74rem var(--font-body); letter-spacing: 1.2px; text-transform: uppercase; }
+        .cat-count { font: 800 0.64rem var(--font-body); min-width: 20px; height: 20px; padding: 0 6px; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--cat-color) 22%, transparent); color: var(--cat-color); font-variant-numeric: tabular-nums; }
+        .cat-meta { margin-left: auto; display: flex; align-items: center; gap: 8px; font: 650 0.68rem var(--font-body); color: var(--cc-text-2); white-space: nowrap; }
+        .cat-thumbs { display: none; }
+        .cat.collapsed .cat-thumbs { display: flex; }
+        .cat-thumbs img { width: 22px; height: 22px; border-radius: 7px; margin-left: -7px; box-shadow: 0 0 0 2px var(--cc-surface); }
+        .cat-thumbs img:first-child { margin-left: 0; }
+        .cat-chev { width: 18px; height: 18px; flex-shrink: 0; color: var(--cc-text-2); transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1); }
+        .cat.collapsed .cat-chev { transform: rotate(-90deg); }
+        .cat-body { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+        .cat.collapsed .cat-body { grid-template-rows: 0fr; }
+        .cat-inner { min-height: 0; overflow: hidden; }
+        .cat-grid { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 8px 0 6px; }
+        @media (min-width: 640px) { .cat-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+        .results-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        @media (min-width: 640px) { .results-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+        .results-h { align-self: flex-start; font: 700 0.72rem var(--font-body); color: var(--cc-text-2); padding: 5px 10px; border-radius: 9px; background: var(--cc-surface); border: 1px solid var(--cc-line); }
+
+        /* ── Course card (compact) ── */
+        .course-card {
+            position: relative; display: flex; flex-direction: column; gap: 10px;
+            padding: 11px 12px 11px 14px; border-radius: 16px; overflow: hidden;
+            background: var(--cc-surface); border: 1px solid var(--cc-line);
+            color: inherit; text-decoration: none;
+            transition: border-color 0.2s, transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.2s;
+            animation: cardIn 0.35s cubic-bezier(0.23, 1, 0.32, 1) both;
+        }
+        .course-card::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 0 3px 3px 0; background: var(--cat-color); }
+        @media (hover: hover) {
+            .course-card:hover { border-color: color-mix(in srgb, var(--cat-color) 45%, transparent); transform: translateY(-2px); box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--cat-color) 45%, rgba(0,0,0,0.3)); }
+        }
+        a.course-card:active, .cc-main:active { transform: scale(0.985); }
+        @keyframes cardIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .cc-main { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; min-width: 0; transition: transform 0.15s; }
+        .cc-icon {
+            width: 54px; height: 54px; border-radius: 14px; flex-shrink: 0; position: relative;
+            display: flex; align-items: center; justify-content: center; color: var(--cat-color);
+            background: color-mix(in srgb, var(--cat-color) 12%, transparent);
+            border: 1px solid color-mix(in srgb, var(--cat-color) 22%, transparent);
+        }
+        .cc-img { width: 100%; height: 100%; object-fit: cover; border-radius: 13px; display: block; }
+        .cc-icon svg.lucide { width: 26px; height: 26px; stroke-width: 2.25; }
+        .cc-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+        .cc-top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+        .cc-title { font: 800 0.98rem/1.2 var(--font-display); color: var(--cc-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cc-tag { font: 700 0.58rem var(--font-body); text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 6px; color: var(--cat-color); background: color-mix(in srgb, var(--cat-color) 12%, transparent); white-space: nowrap; }
+        .cc-badge {
+            margin-left: auto; flex-shrink: 0; font: 750 0.64rem var(--font-body); font-variant-numeric: tabular-nums;
+            padding: 3px 7px; border-radius: 7px; white-space: nowrap;
+            color: var(--cc-text-2); background: rgba(127,127,127,0.12); border: 1px solid rgba(127,127,127,0.16);
+        }
+        .cc-sub { font-size: 0.74rem; line-height: 1.3; color: var(--cc-text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        /* Progress row — one layout, three states (+ "untracked" for exams/simulators):
+           .is-new  0 done   → empty track, muted "0/N"      .is-going → category colour
+           .is-done all done → green track, "✓ Completed"    .is-untracked → status dot + text */
+        .cc-progress { display: flex; align-items: center; gap: 8px; margin-top: 5px; height: 16px; }
+        .cc-progress-track { flex: 1; height: 6px; border-radius: 99px; overflow: hidden; background: color-mix(in srgb, var(--cat-color) 14%, var(--cc-surface-2)); box-shadow: inset 0 0 0 1px var(--cc-line); }
+        .cc-progress-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, color-mix(in srgb, var(--cat-color) 85%, #000), var(--cat-color)); transition: width 0.9s cubic-bezier(0.23, 1, 0.32, 1); }
+        .cc-pct { font: 750 0.68rem var(--font-body); font-variant-numeric: tabular-nums; white-space: nowrap; color: color-mix(in srgb, var(--cat-color) 70%, var(--cc-text)); }
+        .is-new .cc-pct, .is-untracked .cc-pct { color: var(--cc-muted); font-weight: 650; }
+        .is-done .cc-progress-fill { background: linear-gradient(90deg, #16a34a, #22c55e); }
+        .is-done .cc-pct { color: #15803d; }
+        [data-theme="amoled"] .is-done .cc-pct { color: #4ade80; }
+        .cc-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--cc-muted); opacity: 0.6; }
+        .is-untracked.was-opened .cc-dot { background: var(--cat-color); opacity: 1; }
+
+        /* Actions — every card gets one row: primary (filled) + secondary (outlined),
+           or a single full-width primary. */
+        .cc-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .cc-actions.single { grid-template-columns: 1fr; }
+        .cc-btn {
+            height: 36px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 10px;
+            border-radius: 11px; text-decoration: none; font: 750 0.8rem/1 var(--font-display); letter-spacing: 0.1px; white-space: nowrap;
+            transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, filter 0.2s, transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .cc-btn:active { transform: scale(0.97); }
+        .cc-btn:focus-visible { outline: 2px solid var(--cat-color); outline-offset: 2px; }
+        .cc-btn svg.lucide { width: 15px; height: 15px; stroke-width: 2.4; flex-shrink: 0; }
+        /* darkened 18% so white text keeps ≥ 4.5:1 on every category colour */
+        .cc-btn-primary {
+            color: #fff; background: color-mix(in srgb, var(--cat-color) 82%, #000);
+            border: 1px solid color-mix(in srgb, var(--cat-color) 70%, #000);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 4px 12px -6px color-mix(in srgb, var(--cat-color) 75%, transparent);
+        }
+        .cc-btn-secondary {
+            color: color-mix(in srgb, var(--cat-color) 68%, var(--cc-text)); background: var(--cc-surface-2);
+            border: 1px solid color-mix(in srgb, var(--cat-color) 38%, var(--cc-line));
+        }
+        @media (hover: hover) {
+            .cc-btn-primary:hover { filter: brightness(1.08); box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 8px 18px -8px color-mix(in srgb, var(--cat-color) 85%, transparent); }
+            .cc-btn-secondary:hover { border-color: var(--cat-color); background: color-mix(in srgb, var(--cat-color) 10%, var(--cc-surface-2)); }
         }
 
-        /* ── Card Header Layout (Icon + Text beside it) ── */
-        .cc-header {
-            display: flex;
-            gap: 16px;
-            width: 100%;
-            align-items: center;
-            position: relative;
-        }
-        .cc-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            flex: 1;
-            min-width: 0;
-            padding-right: 48px; /* Leave space for absolute badge */
-        }
+        /* ── Toggles panel (control-center drawer): it used var(--bg), which no theme
+              defines, so the panel rendered fully transparent over blurred content. ── */
+        .notification-drawer { background: var(--cc-drawer) !important; border-bottom: 1px solid var(--cc-line) !important; box-shadow: 0 24px 60px -12px rgba(0,0,0,0.5) !important; }
+        .drawer-overlay { background: rgba(4, 10, 18, 0.62) !important; backdrop-filter: blur(4px) !important; -webkit-backdrop-filter: blur(4px) !important; }
+        .drawer-section-title { color: var(--cc-text-2) !important; opacity: 1 !important; }
+        .toggle-btn { background: var(--cc-surface-2) !important; border: 1px solid var(--cc-line) !important; color: var(--cc-text) !important; box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important; }
+        .toggle-btn:hover { border-color: color-mix(in srgb, var(--primary-accent) 50%, var(--cc-line)) !important; }
+        .toggle-btn.active { background: var(--primary-accent) !important; border-color: var(--primary-accent) !important; color: #fff !important; box-shadow: 0 6px 18px color-mix(in srgb, var(--primary-accent) 45%, transparent) !important; }
+        #qsLogout { background: color-mix(in srgb, #ef4444 14%, var(--cc-surface-2)) !important; border-color: color-mix(in srgb, #ef4444 40%, var(--cc-line)) !important; color: #dc2626 !important; }
+        .toggle-label { color: var(--cc-text) !important; font-weight: 650 !important; }
+        .toggle-item:has(.toggle-btn.active) .toggle-label { color: var(--primary-accent) !important; font-weight: 800 !important; }
+        .close-drawer-btn { opacity: 0.7 !important; }
+        .close-drawer-btn svg { stroke: var(--cc-text) !important; }
+        .amoled-circle-icon { box-shadow: 0 0 0 1px var(--cc-line); }
 
-        /* ITLS Actions (bottom of card) */
-        .itls-actions {
-            display: flex;
-            gap: 12px;
-            width: 100%;
-            margin-top: 4px;
+        .empty-state { text-align: center; padding: 36px 20px; color: var(--cc-text-2); font-size: 0.88rem; background: var(--cc-surface); border: 1px solid var(--cc-line); border-radius: 16px; }
+        .empty-state button { margin-top: 12px; }
+        @media (prefers-reduced-motion: reduce) {
+            .course-card, .cat-body, .filter-wrap, header, .toolbar, .cc-progress-fill { animation: none !important; transition: none !important; }
         }
-        .itls-btn {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 16px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 700;
-            font-family: var(--font-display);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        @media (max-width: 480px) {
+            main { padding: 0 12px 30px !important; }
+            .toolbar { margin: 0 -12px 6px; padding: 8px 12px 0; }
+            .tb-btn .lbl-long { display: none; }
         }
-        .itls-btn-review {
-            background: color-mix(in srgb, var(--primary-accent) 15%, var(--glass-bg));
-            border: 1.5px solid color-mix(in srgb, var(--primary-accent) 30%, var(--glass-border));
-            color: var(--primary-accent);
-        }
-        .itls-btn-review:hover {
-            background: var(--primary-accent);
-            color: #fff;
-            border-color: var(--primary-accent);
-            box-shadow: 0 4px 14px color-mix(in srgb, var(--primary-accent) 40%, transparent);
-            transform: translateY(-1.5px);
-        }
-        .itls-btn-review:active {
-            transform: translateY(0) scale(0.97);
-        }
-        .itls-btn-exam {
-            background: color-mix(in srgb, #EA580C 15%, var(--glass-bg));
-            border: 1.5px solid color-mix(in srgb, #EA580C 30%, var(--glass-border));
-            color: #EA580C;
-        }
-        .itls-btn-exam:hover {
-            background: linear-gradient(135deg, #EA580C, #DC2626);
-            color: #fff;
-            border-color: #EA580C;
-            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
-            transform: translateY(-1.5px);
-        }
-        .itls-btn-exam:active {
-            transform: translateY(0) scale(0.97);
-        }
+        @media (min-width: 481px) { .tb-btn .lbl-short { display: none; } }
+        @media (min-width: 932px) { .toolbar { border-radius: 0 0 18px 18px; } }
 
         footer {
             position: relative;
@@ -1002,110 +692,6 @@
         [data-cat="ecg"]         { --cat-color: #fbbf24; }
         [data-cat="general"]     { --cat-color: var(--primary-accent); }
 
-        /* ── Stats Strip Redesign ── */
-        .stats-strip {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 14px 10px;
-            margin-bottom: 20px;
-            box-shadow: var(--glass-shadow);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .stats-strip.visible { display: flex; }
-        .stat-item {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 4px 8px;
-            transition: transform 0.2s ease;
-        }
-        .stat-item:hover {
-            transform: scale(1.03);
-        }
-        .stat-icon-wrapper {
-            width: 38px;
-            height: 38px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-        }
-        .stat-item[data-stat="courses"] .stat-icon-wrapper {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: rgba(37, 99, 235, 0.2);
-            color: #3b82f6;
-        }
-        .stat-item[data-stat="questions"] .stat-icon-wrapper {
-            background: rgba(249, 115, 22, 0.1);
-            border-color: rgba(249, 115, 22, 0.2);
-            color: #f97316;
-        }
-        .stat-item[data-stat="studied"] .stat-icon-wrapper {
-            background: rgba(16, 185, 129, 0.1);
-            border-color: rgba(16, 185, 129, 0.2);
-            color: #10b981;
-        }
-        .stat-item .stat-icon-wrapper svg.lucide {
-            width: 20px;
-            height: 20px;
-        }
-        .stat-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .stat-num {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            font-variant-numeric: tabular-nums;
-            line-height: 1.1;
-        }
-        .stat-lab {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            opacity: 0.6;
-        }
-        .stat-divider {
-            width: 1px;
-            height: 32px;
-            background: var(--glass-border);
-            flex-shrink: 0;
-            opacity: 0.4;
-        }
-
-        /* ── Section count badge ── */
-        .section-count {
-            font-size: 0.62rem;
-            font-weight: 750;
-            padding: 2px 8px;
-            border-radius: 8px;
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 14%, transparent);
-            color: var(--cat-color, var(--primary-accent));
-            text-transform: none;
-            letter-spacing: 0;
-            margin-left: 6px;
-        }
-        [data-theme="light"] .section-count {
-            background: color-mix(in srgb, var(--cat-color, var(--primary-accent)) 10%, transparent);
-        }
-
         /* ── Lucide sizing ── */
         .icon-btn svg.lucide,
         .toggle-btn svg.lucide { width: 60%; height: 60%; }
@@ -1150,156 +736,6 @@
 
         /* ── Mobile Phone Friendly (Small Screens) Optimizations ── */
         @media (max-width: 480px) {
-            /* 1. Main Page padding & safe areas */
-            main {
-                padding: 12px 12px 30px;
-            }
-
-            /* 2. Compact Search & Filter Row */
-            .search-wrap {
-                padding: 9px 15px;
-                margin-bottom: 12px;
-                gap: 10px;
-            }
-            .chip {
-                padding: 6px 14px;
-                font-size: 0.76rem;
-            }
-            .filter-row {
-                padding-bottom: 12px;
-            }
-
-            /* 3. Compact Stats Strip */
-            .stats-strip {
-                padding: 10px 4px;
-                border-radius: 16px;
-                margin-bottom: 16px;
-            }
-            .stat-item {
-                gap: 6px;
-                padding: 2px;
-            }
-            .stat-icon-wrapper {
-                width: 30px;
-                height: 30px;
-                border-radius: 9px;
-            }
-            .stat-icon-wrapper svg.lucide {
-                width: 15px;
-                height: 15px;
-            }
-            .stat-num {
-                font-size: 0.95rem;
-            }
-            .stat-lab {
-                font-size: 0.56rem;
-                letter-spacing: 0.3px;
-            }
-            .stat-divider {
-                height: 24px;
-            }
-
-            /* 4. Compact Continue Learning Card */
-            .continue-section {
-                margin-bottom: 18px;
-            }
-            .continue-label {
-                font-size: 0.68rem;
-                letter-spacing: 1.2px;
-                padding: 0 4px 8px;
-            }
-            .continue-card {
-                padding: 14px 14px;
-                border-radius: 20px;
-                gap: 12px;
-            }
-            .continue-card .cc-icon {
-                width: 42px;
-                height: 42px;
-                border-radius: 12px;
-            }
-            .continue-card .cc-icon svg.lucide {
-                width: 20px;
-                height: 20px;
-            }
-            .continue-body {
-                gap: 2px;
-            }
-            .continue-body .cc-title {
-                font-size: 0.95rem;
-            }
-            .continue-resume {
-                padding: 6px 10px;
-                font-size: 0.72rem;
-                border-radius: 20px;
-            }
-            /* Hide the word 'Resume' on very narrow screens (e.g. iPhone SE / 320px-375px width) to prevent squeezing */
-            @media (max-width: 390px) {
-                .continue-resume span {
-                    display: none;
-                }
-                .continue-resume {
-                    padding: 8px;
-                    border-radius: 50%;
-                }
-            }
-
-            /* 5. Course Tiles (mobile) */
-            #courseList { gap: 12px; }
-            .course-card {
-                padding: 16px;
-                border-radius: 18px;
-                gap: 14px;
-            }
-            .course-card::before {
-                border-radius: 18px 0 0 18px;
-            }
-            .course-card .cc-icon {
-                width: 76px;
-                height: 76px;
-                border-radius: 17px;
-            }
-            .course-card .cc-icon .cc-img {
-                border-radius: 15px;
-            }
-            .course-card .cc-icon svg.lucide {
-                width: 38px;
-                height: 38px;
-            }
-            .cc-badge { top: 12px; right: 12px; }
-            .cc-title {
-                font-size: 0.95rem;
-            }
-            .cc-tag {
-                font-size: 0.6rem;
-                padding: 2px 6px;
-            }
-            .cc-badge {
-                font-size: 0.65rem;
-                padding: 3px 7px;
-            }
-            .cc-sub {
-                font-size: 0.72rem;
-            }
-            .cc-progress {
-                margin-top: 4px;
-                gap: 8px;
-            }
-            .cc-progress-track {
-                height: 6px;
-            }
-            .cc-pct {
-                font-size: 0.68rem;
-                min-width: 30px;
-            }
-
-            /* ITLS Mobile Buttons */
-            .itls-btn {
-                padding: 8px 12px;
-                font-size: 0.8rem;
-                border-radius: 10px;
-            }
-
             /* 6. Control Center Drawer adjustments */
             .notification-drawer {
                 padding: 24px 18px 25px;
@@ -1345,7 +781,8 @@
             .drawer-trigger:hover .trigger-line.top { width: 24px; }
             .drawer-trigger:hover .trigger-line.bottom { width: 14px; }
         }
-    </style>
+    
+</style>
 </head>
 <body>
 
@@ -1401,69 +838,40 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </button>
         <div class="header-text">
-            <h1 id="pageTitle">Courses Preparation</h1>
-            <p id="pageSubtitle">Study &amp; Mock Exams</p>
+            <h1 id="pageTitle">Courses</h1>
+            <p id="pageSubtitle">Study &amp; mock exams</p>
         </div>
     </div>
 
-    <div class="drawer-trigger" id="drawerTrigger">
-        <div class="trigger-line top"></div>
-        <div class="trigger-line bottom"></div>
-    </div>
 
     <div class="header-right" id="headerShortcuts">
         <div class="bat-indicator" id="batteryIndicator" style="display:none;" title="Battery"></div>
         <span class="amoled-badge" id="amoledBadge" style="display:none;" title="AMOLED Power Saving"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg>&nbsp;AMOLED</span>
         <button class="icon-btn" id="themeToggle" title="Switch Theme"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#palette"/></svg></button>
+        <button type="button" class="drawer-trigger hdr-menu" id="drawerTrigger" title="Menu" aria-label="Open menu">
+            <span class="trigger-line top"></span>
+            <span class="trigger-line bottom"></span>
+        </button>
         <a href="about.html" class="icon-btn" id="headerAboutBtn" title="About"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-help"/></svg></a>
     </div>
 </header>
 
 <main id="mainContent">
-    <div class="search-wrap">
-        <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#search"/></svg>
-        <input type="search" id="searchInput" placeholder="Search courses…" aria-label="Search courses" autocomplete="off">
-        <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
-    </div>
-
-    <div class="filter-row" id="filterRow" role="tablist" aria-label="Filter by category">
-        <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="chip" data-filter="cardiac" role="tab" aria-selected="false">Cardiac</button>
-        <button class="chip" data-filter="trauma" role="tab" aria-selected="false">Trauma</button>
-        <button class="chip" data-filter="pediatrics" role="tab" aria-selected="false">Pediatrics</button>
-        <button class="chip" data-filter="medical" role="tab" aria-selected="false">Medical</button>
-        <button class="chip" data-filter="ecg" role="tab" aria-selected="false">ECG</button>
-    </div>
-
-    <div class="stats-strip" id="statsStrip">
-        <div class="stat-item" data-stat="courses">
-            <div class="stat-icon-wrapper">
-                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#graduation-cap"/></svg>
-            </div>
-            <div class="stat-text">
-                <span class="stat-num" id="statCourses">—</span>
-                <span class="stat-lab">Courses</span>
-            </div>
+    <div class="toolbar" id="toolbar">
+        <div class="tb-row">
+            <label class="search-wrap">
+                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#search"/></svg>
+                <input type="search" id="searchInput" placeholder="Search courses…" aria-label="Search courses" autocomplete="off" enterkeyhint="search">
+                <kbd class="search-key" aria-hidden="true">/</kbd>
+                <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+            </label>
+            <button type="button" class="tb-btn" id="toggleAllBtn" aria-label="Collapse all sections">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 20 5-5 5 5"/><path d="m7 4 5 5 5-5"/></svg>
+                <span class="lbl-long">Collapse all</span><span class="lbl-short">Collapse</span>
+            </button>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item" data-stat="questions">
-            <div class="stat-icon-wrapper">
-                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-help"/></svg>
-            </div>
-            <div class="stat-text">
-                <span class="stat-num" id="statQuestions">—</span>
-                <span class="stat-lab">Questions</span>
-            </div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item" data-stat="studied">
-            <div class="stat-icon-wrapper">
-                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-check-big"/></svg>
-            </div>
-            <div class="stat-text">
-                <span class="stat-num" id="statStudied">—</span>
-                <span class="stat-lab">Studied</span>
-            </div>
+        <div class="filter-wrap">
+            <div class="filter-row" id="filterRow" role="tablist" aria-label="Filter by category"></div>
         </div>
     </div>
 
@@ -1488,6 +896,7 @@
         { id: 'empact',    shortTitle: 'EMPACT',  title: 'Emergency Medical Patients: Assessment, Care & Transport', link: 'empact.html', icon: 'stethoscope', count: 50,   category: 'medical' },
         { id: 'bls',       shortTitle: 'BLS',     title: 'Basic Life Support',                link: 'bls.html',              icon: 'heart-pulse',    count: 284,  category: 'cardiac' },
         { id: 'acls',      shortTitle: 'ACLS',    title: 'Advanced Cardiovascular Life Support', link: 'acls.html',         icon: 'heart',          count: 33,   category: 'cardiac' },
+        { id: 'megacode',  shortTitle: 'ACLS Megacode', title: '12 live-monitor megacode scenarios', link: 'megacode.html', icon: 'zap', count: 0, category: 'cardiac' },
         { id: 'bdls',      shortTitle: 'BDLS',    title: 'Basic Disaster Life Support',       link: 'bdls.html',             icon: 'tornado',        count: 40,   category: 'trauma' },
         { id: 'pepp',      shortTitle: 'PEPP',    title: 'Pediatric Education for Prehospital Professionals', link: 'pepp.html', icon: 'smile-plus', count: 200, category: 'pediatrics' },
         { id: 'ppet',      shortTitle: 'PPET',    title: 'Prehospital Pediatric Emergency Transport', link: 'ppet.html',    icon: 'ambulance',      count: 57,   category: 'pediatrics' },
@@ -1520,8 +929,8 @@
 
     // Branded course icons (optimized thumbnails). ecg-test reuses the ecg art.
     const COURSE_IMG = {
-        prometric: 'prometric', itls: 'itls', empact: 'empact', bls: 'bls', acls: 'acls',
-        bdls: 'bdls', pepp: 'pepp', ppet: 'ppet', pals: 'pals', medical: 'medical',
+        prometric: 'prometric', itls: 'itls', empact: 'empact', bls: 'bls', acls: 'acls', megacode: 'megacode',
+        bdls: 'bdls', mci: 'mci', pepp: 'pepp', ppet: 'ppet', pals: 'pals', medical: 'medical',
         ecg: 'ecg', 'ecg-course': 'ecg'
     };
     function courseIcon(course) {
@@ -1558,97 +967,149 @@
         saveAllProgress(all);
     }
 
+    // Courses with a self-study Reviewer (courses/<id>/) + an Exam page get dual
+    // actions. `chapters` is the reviewer's chapter count — the reviewer stores
+    // `<id>_progress` = { chapterId: { viewed: true } }, which drives the bar.
+    const REVIEWER_LINKS = {
+        itls:      { review: '../courses/itls/index.html',    exam: 'itls.html',    chapters: 22 },
+        bls:       { review: '../courses/bls/index.html',     exam: 'bls.html',     chapters: 12 },
+        pals:      { review: '../courses/pals/index.html',    exam: 'pals.html',    chapters: 13 },
+        acls:      { review: '../courses/acls/index.html',    exam: 'acls.html',    chapters: 14 },
+        'ecg-course': { review: 'ECG-study.html', exam: 'ecg-test.html' }
+    };
+    const BADGE_TEXT = { megacode: '12 cases', ecg: 'Live' };
+    const COLLAPSE_KEY = 'dcas_courses_collapsed';
+
+    function readJSON(key) {
+        try { return JSON.parse(localStorage.getItem(key)) || {}; } catch { return {}; }
+    }
+    // Real progress for a course, or null when that course doesn't track any.
+    function courseProgress(course) {
+        const rv = REVIEWER_LINKS[course.id];
+        if (rv && rv.chapters) {
+            const viewed = Object.values(readJSON(course.id + '_progress')).filter(v => v && v.viewed).length;
+            const done = Math.min(rv.chapters, viewed);
+            return { done, total: rv.chapters, pct: Math.round(done / rv.chapters * 100), unit: 'chapters' };
+        }
+        if (course.id === 'megacode') {
+            const passed = Object.values(readJSON('megacode.best')).filter(b => b && b.pass).length;
+            return { done: passed, total: 12, pct: Math.round(passed / 12 * 100), unit: 'passed' };
+        }
+        const g = getProgress(course.id);
+        if (g.total > 0) return { done: g.completed, total: g.total, pct: Math.round(g.completed / g.total * 100), unit: 'done' };
+        return null;
+    }
+    function isStarted(course) {
+        const p = courseProgress(course);
+        return (p && p.done > 0) || !!getProgress(course.id).lastStudied;
+    }
+
     let activeFilter = 'all';
     let searchQuery = '';
+    let collapsed;
+    try { collapsed = new Set(JSON.parse(localStorage.getItem(COLLAPSE_KEY)) || []); } catch { collapsed = new Set(); }
+    function saveCollapsed() { try { localStorage.setItem(COLLAPSE_KEY, JSON.stringify([...collapsed])); } catch { /* private mode */ } }
 
-    function updateStats(courses) {
-        const strip = document.getElementById('statsStrip');
-        if (!strip) return;
-        const totalQ = courses.reduce(function(s, c) { return s + (c.count || 0); }, 0);
-        const progress = getAllProgress();
-        const studiedCount = courses.filter(function(c) { return progress[c.id] && (progress[c.id].pct || 0) > 0; }).length;
-        document.getElementById('statCourses').textContent = courses.length;
-        document.getElementById('statQuestions').textContent = totalQ >= 1000
-            ? (totalQ / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-            : totalQ;
-        document.getElementById('statStudied').textContent = studiedCount + '/' + courses.length;
-        strip.classList.toggle('visible', courses.length > 0);
+    const fmtK = n => n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n);
+
+    function updateStats() {
+        const all = COURSES.filter(c => c.available !== false);
+        const totalQ = all.reduce((s, c) => s + (c.count || 0), 0);
+        const started = all.filter(isStarted).length;
+        document.getElementById('pageSubtitle').textContent =
+            all.length + ' courses · ' + fmtK(totalQ) + ' questions · ' + started + ' started';
+    }
+
+    function renderChips() {
+        const row = document.getElementById('filterRow');
+        const avail = COURSES.filter(c => c.available !== false);
+        const cats = CATEGORY_ORDER.filter(cat => avail.some(c => (c.category || 'general') === cat));
+        row.innerHTML = ['all', ...cats].map(cat => {
+            const n = cat === 'all' ? avail.length : avail.filter(c => (c.category || 'general') === cat).length;
+            const on = activeFilter === cat;
+            return `<button type="button" class="chip${on ? ' active' : ''}" data-filter="${cat}" role="tab" aria-selected="${on}">${cat === 'all' ? 'All' : CATEGORY_LABELS[cat]}<span class="n">${n}</span></button>`;
+        }).join('');
     }
 
     function animateFills(container) {
-        requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-                container.querySelectorAll('.cc-progress-fill[data-fill]').forEach(function(el) {
-                    const w = parseFloat(el.getAttribute('data-fill'));
-                    if (w > 0) el.style.width = w + '%';
-                });
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            container.querySelectorAll('.cc-progress-fill[data-fill]').forEach(el => {
+                el.style.width = parseFloat(el.getAttribute('data-fill')) + '%';
             });
-        });
+        }));
     }
+
+    const CHEV = '<svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
     function renderCourses() {
         const container = document.getElementById('courseList');
         if (!container) return;
-
         let filtered = COURSES.filter(c => c.available !== false);
+        const q = searchQuery.trim().toLowerCase();
+        if (activeFilter !== 'all') filtered = filtered.filter(c => (c.category || 'general') === activeFilter);
+        if (q) filtered = filtered.filter(c => (c.shortTitle + ' ' + c.title + ' ' + (CATEGORY_LABELS[c.category] || '')).toLowerCase().includes(q));
 
-        if (activeFilter !== 'all') {
-            filtered = filtered.filter(c => c.category === activeFilter);
-        }
+        updateStats();
+        const grouped = activeFilter === 'all' && !q;
+        document.getElementById('toggleAllBtn').hidden = !grouped;
+        let html = grouped ? renderContinueLearning() : '';
 
-        if (searchQuery.trim()) {
-            const q = searchQuery.trim().toLowerCase();
-            filtered = filtered.filter(c =>
-                c.shortTitle.toLowerCase().includes(q) ||
-                c.title.toLowerCase().includes(q)
-            );
-        }
-
-        updateStats(filtered);
-
-        let html = '';
-
-        if (activeFilter === 'all' && !searchQuery.trim()) {
-            html += renderContinueLearning();
-        }
-
-        if (filtered.length === 0) {
+        if (!filtered.length) {
             html += `<div class="empty-state">
-                <svg class="lucide" style="width:36px;height:36px;opacity:0.25;display:block;margin:0 auto 12px" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#search"/></svg>
-                No courses match your search.
+                <svg class="lucide" style="width:34px;height:34px;opacity:0.3;display:block;margin:0 auto 10px" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#search"/></svg>
+                No courses match “${esc(searchQuery.trim())}”.<br><button type="button" class="tb-btn" id="resetSearch">Clear search</button>
             </div>`;
             container.innerHTML = html;
             return;
         }
 
-        if (activeFilter === 'all' && !searchQuery.trim()) {
-            const grouped = {};
-            filtered.forEach(c => {
-                const cat = c.category || 'general';
-                if (!grouped[cat]) grouped[cat] = [];
-                grouped[cat].push(c);
-            });
-
+        if (grouped) {
             CATEGORY_ORDER.forEach(cat => {
-                const items = grouped[cat];
-                if (!items || items.length === 0) return;
-                const label = CATEGORY_LABELS[cat] || cat;
-                const emoji = CAT_EMOJI[cat] || '';
-                const catColor = CAT_COLORS[cat] || CAT_COLORS.general;
-                html += `<div class="section-header" style="--cat-color:${catColor}"><span>${emoji} ${label}</span><span class="section-count">${items.length}</span></div>`;
-                html += items.map(course => renderCard(course)).join('');
+                const items = filtered.filter(c => (c.category || 'general') === cat);
+                if (!items.length) return;
+                const isC = collapsed.has(cat);
+                const started = items.filter(isStarted).length;
+                const thumbs = items.slice(0, 4).map(c => COURSE_IMG[c.id] ? `<img src="../icons/courses/thumb/${COURSE_IMG[c.id]}.png" alt="" loading="lazy" width="22" height="22">` : '').join('');
+                html += `<section class="cat${isC ? ' collapsed' : ''}" data-cat="${cat}" style="--cat-color:${CAT_COLORS[cat] || CAT_COLORS.general}">
+                    <button type="button" class="cat-h" aria-expanded="${!isC}" aria-controls="cat-${cat}">
+                        <span aria-hidden="true">${CAT_EMOJI[cat] || ''}</span>
+                        <span class="cat-name">${CATEGORY_LABELS[cat] || cat}</span>
+                        <span class="cat-count">${items.length}</span>
+                        <span class="cat-meta"><span class="cat-thumbs" aria-hidden="true">${thumbs}</span>${started ? `<span>${started} started</span>` : ''}${CHEV}</span>
+                    </button>
+                    <div class="cat-body" id="cat-${cat}"><div class="cat-inner"${isC ? ' inert' : ''}><div class="cat-grid">${items.map(c => renderCard(c, false)).join('')}</div></div></div>
+                </section>`;
             });
         } else {
-            html += filtered.map(course => renderCard(course)).join('');
+            html += `<div class="results-h">${filtered.length} course${filtered.length === 1 ? '' : 's'}${q ? ` for “${esc(searchQuery.trim())}”` : ''}</div>
+                <div class="results-grid">${filtered.map(c => renderCard(c, true)).join('')}</div>`;
         }
-
         container.innerHTML = html;
+        updateToggleAll();
         animateFills(container);
     }
 
+    function esc(s) { return String(s).replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch])); }
+
+    function updateToggleAll() {
+        const btn = document.getElementById('toggleAllBtn');
+        const secs = [...document.querySelectorAll('#courseList .cat')];
+        const anyOpen = secs.some(s => !s.classList.contains('collapsed'));
+        btn.querySelector('.lbl-long').textContent = anyOpen ? 'Collapse all' : 'Expand all';
+        btn.querySelector('.lbl-short').textContent = anyOpen ? 'Collapse' : 'Expand';
+        btn.setAttribute('aria-label', anyOpen ? 'Collapse all sections' : 'Expand all sections');
+        btn.dataset.mode = anyOpen ? 'collapse' : 'expand';
+    }
+    function setCollapsed(sec, on) {
+        sec.classList.toggle('collapsed', on);
+        sec.querySelector('.cat-h').setAttribute('aria-expanded', String(!on));
+        const inner = sec.querySelector('.cat-inner');
+        if (on) inner.setAttribute('inert', ''); else inner.removeAttribute('inert');
+        if (on) collapsed.add(sec.dataset.cat); else collapsed.delete(sec.dataset.cat);
+    }
+
     function timeAgo(ts) {
-        const diff = Date.now() - ts;
-        const mins = Math.floor(diff / 60000);
+        const mins = Math.floor((Date.now() - ts) / 60000);
         if (mins < 1) return 'just now';
         if (mins < 60) return mins + 'm ago';
         const hrs = Math.floor(mins / 60);
@@ -1659,176 +1120,157 @@
         return Math.floor(days / 30) + 'mo ago';
     }
 
+    // One progress row for every card. Tracked courses always show the bar in one
+    // of three states (is-new / is-going / is-done) with the same "done/total unit"
+    // label; exams and simulators that don't track progress show a status dot.
+    function progressLabel(p) {
+        return (p.done >= p.total ? '✓ ' : '') + p.done + '/' + p.total + ' ' + p.unit;
+    }
+    function progressHtml(course) {
+        const p = courseProgress(course);
+        if (p) {
+            const state = p.done >= p.total ? 'is-done' : p.done > 0 ? 'is-going' : 'is-new';
+            return `<div class="cc-progress ${state}">
+                <div class="cc-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="${p.total}" aria-valuenow="${p.done}" aria-label="${esc(course.shortTitle)}: ${p.done} of ${p.total} ${p.unit}"><div class="cc-progress-fill" data-fill="${p.pct}"></div></div>
+                <span class="cc-pct">${progressLabel(p)}</span></div>`;
+        }
+        const last = getProgress(course.id).lastStudied;
+        return `<div class="cc-progress is-untracked${last ? ' was-opened' : ''}"><span class="cc-dot" aria-hidden="true"></span><span class="cc-pct">${last ? 'Opened ' + timeAgo(last) : 'Not started yet'}</span></div>`;
+    }
+
     function renderContinueLearning() {
         const all = getAllProgress();
         let bestId = null, bestTs = 0;
         for (const id in all) {
-            const p = all[id];
-            if (p.lastStudied && p.lastStudied > bestTs) {
-                bestTs = p.lastStudied;
-                bestId = id;
-            }
+            if (all[id].lastStudied > bestTs && COURSES.some(c => c.id === id)) { bestTs = all[id].lastStudied; bestId = id; }
         }
         if (!bestId) return '';
-
         const course = COURSES.find(c => c.id === bestId);
-        if (!course) return '';
-
-        const prog = all[bestId];
-        const pct = prog.pct || 0;
-        const iconHtml = courseIcon(course);
-        const ago = timeAgo(prog.lastStudied);
-        const cat = course.category || 'general';
-        let detail = pct + '% complete';
-        if (prog.completed > 0 && prog.total > 0) {
-            detail = prog.completed + ' / ' + prog.total + ' completed';
-        }
-
-        const catColor = CAT_COLORS[course.category] || CAT_COLORS.general;
-        const catLabel = CATEGORY_LABELS[course.category] || course.category;
-
-        return `
-            <div class="continue-section" style="--cat-color:${catColor}">
-                <div class="continue-label">Continue Learning</div>
-                <a href="${course.link}" class="continue-card" data-id="${course.id}">
-                    <div class="cc-icon">${iconHtml}</div>
-                    <div class="continue-body">
-                        <div class="cc-top">
-                            <span class="cc-title">${course.shortTitle}</span>
-                            <span class="cc-tag">${catLabel}</span>
-                        </div>
-                        <div class="cc-sub">${detail} · ${ago}</div>
-                        <div class="cc-progress">
-                            <div class="cc-progress-track"><div class="cc-progress-fill" data-fill="${pct}"></div></div>
-                            <span class="cc-pct">${pct}%</span>
-                        </div>
-                    </div>
-                    <span class="continue-resume">
-                        <span>Resume</span>
-                        <svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>
-                    </span>
-                </a>
-            </div>
-        `;
+        const rv = REVIEWER_LINKS[course.id];
+        const href = rv ? rv.review : course.link;
+        if (!href) return '';
+        const p = courseProgress(course);
+        const detail = p && p.done > 0 ? progressLabel(p) : 'Pick up where you left off';
+        return `<a href="${href}" class="continue-card" data-id="${course.id}" style="--cat-color:${CAT_COLORS[course.category] || CAT_COLORS.general}">
+                <div class="cc-icon">${courseIcon(course)}</div>
+                <div class="continue-body">
+                    <span class="continue-k">Continue · ${timeAgo(bestTs)}</span>
+                    <span class="cc-title">${course.shortTitle}</span>
+                    <span class="cc-sub">${detail}</span>
+                </div>
+                <span class="continue-go" aria-hidden="true"><svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg></span>
+            </a>`;
     }
 
-    function renderCard(course) {
-        const prog = getProgress(course.id);
-        const pct = prog.pct || 0;
-        const badge = course.count > 0 ? `<span class="cc-badge">${course.count}</span>` : '';
-        const iconHtml = courseIcon(course);
-        const cat = course.category || 'general';
-        const catLabel = CATEGORY_LABELS[course.category] || course.category;
-
-        let progressLabel = '';
-        if (prog.completed > 0 && prog.total > 0) {
-            progressLabel = prog.completed + '/' + prog.total;
-        } else if (pct > 0) {
-            progressLabel = pct + '%';
-        }
-
+    // Every card has the same structure: tappable header (opens the first action)
+    // + an action row. Reviewer courses get Review + Exam; the rest get their own.
+    const SINGLE_ACTIONS = {
+        megacode:  [['Scenarios', 'play', 'megacode.html'], ['Random case', 'zap', 'megacode.html?s=random']],
+        ecg:       [['Open simulator', 'activity', 'ecg.html']],
+        prometric: [['Start mock exam', 'notebook-pen', '../src/prometric/exam.html']],
+        ppet:      [['Start exam', 'notebook-pen', 'ppet.html']],
+        bdls:      [['Start exam', 'notebook-pen', 'bdls.html']],
+        empact:    [['Start exam', 'notebook-pen', 'empact.html']],
+        pepp:      [['Start exam', 'notebook-pen', 'pepp.html']],
+        medical:   [['Start exam', 'notebook-pen', 'medical.html']]
+    };
+    function actionsFor(course) {
+        const rv = REVIEWER_LINKS[course.id];
+        if (rv) return [['Review', 'book-open', rv.review], ['Exam', 'notebook-pen', rv.exam]];
+        return SINGLE_ACTIONS[course.id] || [['Open', 'arrow-right', course.link]];
+    }
+    function renderCard(course, showTag) {
         const catColor = CAT_COLORS[course.category] || CAT_COLORS.general;
-
-        // Courses that offer both a self-study Reviewer and an Exam get dual action buttons.
-        const REVIEWER_LINKS = {
-            itls:      { review: '../courses/itls/index.html', exam: 'itls.html' },
-            bls:       { review: '../courses/bls/index.html',  exam: 'bls.html' },
-            pals:      { review: '../courses/pals/index.html',  exam: 'pals.html' },
-            acls:      { review: '../courses/acls/index.html',  exam: 'acls.html' },
-            'ecg-course': { review: 'ECG-study.html', exam: 'ecg-test.html' }
-        };
-        if (REVIEWER_LINKS[course.id]) {
-            const links = REVIEWER_LINKS[course.id];
-            return `
-                <div class="course-card" data-id="${course.id}" style="--cat-color:${catColor}; cursor: default;">
-                    <div class="cc-header">
-                        <div class="cc-icon">${iconHtml}</div>
-                        <div class="cc-info">
-                            <div class="cc-top">
-                                <span class="cc-title">${course.shortTitle}</span>
-                                <span class="cc-tag">${catLabel}</span>
-                            </div>
-                            <div class="cc-sub">${course.title}</div>
-                        </div>
-                        ${badge}
-                    </div>
-                    <div class="cc-progress">
-                        <div class="cc-progress-track"><div class="cc-progress-fill" data-fill="${pct}"></div></div>
-                        <span class="cc-pct">${progressLabel || (pct > 0 ? pct + '%' : '')}</span>
-                    </div>
-                    <div class="itls-actions">
-                        <a href="${links.review}" class="itls-btn itls-btn-review">
-                            <span>📚 Review</span>
-                        </a>
-                        <a href="${links.exam}" class="itls-btn itls-btn-exam">
-                            <span>📝 Exam</span>
-                        </a>
-                    </div>
-                </div>
-            `;
-        }
-
-        return `
-            <a href="${course.link}" class="course-card" data-id="${course.id}" style="--cat-color:${catColor}">
-                <div class="cc-header">
-                    <div class="cc-icon">${iconHtml}</div>
+        const badgeTxt = BADGE_TEXT[course.id] || (course.count > 0 ? course.count + ' Q' : '');
+        const badge = badgeTxt ? `<span class="cc-badge">${badgeTxt}</span>` : '';
+        const tag = showTag ? `<span class="cc-tag">${CATEGORY_LABELS[course.category] || course.category}</span>` : '';
+        const acts = actionsFor(course).filter(a => a[2]);
+        const btns = acts.map(([label, icon, href], k) =>
+            `<a href="${href}" class="cc-btn ${k === 0 ? 'cc-btn-primary' : 'cc-btn-secondary'}"><svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#${icon}"/></svg>${label}</a>`).join('');
+        return `<div class="course-card" data-id="${course.id}" style="--cat-color:${catColor}">
+                <a class="cc-main" href="${acts[0] ? acts[0][2] : '#'}" aria-label="${esc(course.shortTitle)} — ${acts[0] ? acts[0][0] : 'open'}">
+                    <div class="cc-icon">${courseIcon(course)}</div>
                     <div class="cc-info">
-                        <div class="cc-top">
-                            <span class="cc-title">${course.shortTitle}</span>
-                            <span class="cc-tag">${catLabel}</span>
-                        </div>
+                        <div class="cc-top"><span class="cc-title">${course.shortTitle}</span>${tag}${badge}</div>
                         <div class="cc-sub">${course.title}</div>
+                        ${progressHtml(course)}
                     </div>
-                    ${badge}
-                </div>
-                <div class="cc-progress">
-                    <div class="cc-progress-track"><div class="cc-progress-fill" data-fill="${pct}"></div></div>
-                    <span class="cc-pct">${progressLabel || (pct > 0 ? pct + '%' : '')}</span>
-                </div>
-            </a>
-        `;
+                </a>
+                <div class="cc-actions${acts.length === 1 ? ' single' : ''}">${btns}</div>
+            </div>`;
     }
 
     function setupFilterAndSearch() {
-        const chips = document.querySelectorAll('.chip');
         const searchInput = document.getElementById('searchInput');
         const searchClear = document.getElementById('searchClear');
-
-        chips.forEach(chip => {
-            chip.addEventListener('click', function() {
-                chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected', 'false'); });
-                this.classList.add('active');
-                this.setAttribute('aria-selected', 'true');
-                activeFilter = this.getAttribute('data-filter');
-                renderCourses();
-                // Smooth scroll to top of list after filter
-                document.getElementById('courseList').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            });
+        document.getElementById('filterRow').addEventListener('click', e => {
+            const chip = e.target.closest('.chip');
+            if (!chip) return;
+            activeFilter = chip.getAttribute('data-filter');
+            renderChips();
+            renderCourses();
+            const active = document.querySelector('.chip.active');
+            if (active) active.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+            if (window.scrollY > 120) window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
         searchInput.addEventListener('input', function() {
             searchQuery = this.value;
             searchClear.classList.toggle('visible', this.value.length > 0);
             renderCourses();
         });
-
-        searchClear.addEventListener('click', function() {
-            searchInput.value = '';
-            searchQuery = '';
+        searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') { searchClear.click(); searchInput.blur(); } });
+        searchClear.addEventListener('click', e => {
+            e.preventDefault();
+            searchInput.value = ''; searchQuery = '';
             searchClear.classList.remove('visible');
             renderCourses();
             searchInput.focus();
         });
+        document.addEventListener('keydown', e => {
+            if (e.key === '/' && !e.target.matches('input,textarea,select')) { e.preventDefault(); searchInput.focus(); }
+        });
+        document.getElementById('toggleAllBtn').addEventListener('click', function() {
+            const collapse = this.dataset.mode !== 'expand';
+            document.querySelectorAll('#courseList .cat').forEach(s => setCollapsed(s, collapse));
+            saveCollapsed(); updateToggleAll();
+        });
+        document.getElementById('courseList').addEventListener('click', e => {
+            const h = e.target.closest('.cat-h');
+            if (h) { const sec = h.closest('.cat'); setCollapsed(sec, !sec.classList.contains('collapsed')); saveCollapsed(); updateToggleAll(); return; }
+            if (e.target.closest('#resetSearch')) searchClear.click();
+        });
+    }
+
+    // Compact header on scroll; filter chips hide while scrolling down and come
+    // back on scroll-up (or at the top). Hysteresis keeps it from flickering.
+    function setupCompactScroll() {
+        let lastY = window.scrollY, ticking = false, travel = 0;
+        function apply() {
+            ticking = false;
+            const y = window.scrollY, dy = y - lastY;
+            lastY = y;
+            const b = document.body;
+            if (y > 48) b.classList.add('compact'); else if (y < 12) b.classList.remove('compact');
+            travel = Math.sign(dy) === Math.sign(travel) ? travel + dy : dy;
+            if (y < 80 || travel < -24) b.classList.remove('chips-hidden');
+            else if (travel > 24 && document.activeElement !== document.getElementById('searchInput')) b.classList.add('chips-hidden');
+        }
+        window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }, { passive: true });
+        document.getElementById('searchInput').addEventListener('focus', () => document.body.classList.remove('chips-hidden'));
     }
 
     document.addEventListener('click', function(e) {
-        const card = e.target.closest('.course-card[data-id]');
-        if (card) {
-            recordAccess(card.getAttribute('data-id'));
-        }
+        const card = e.target.closest('[data-id]');
+        if (card && e.target.closest('a')) recordAccess(card.getAttribute('data-id'));
     });
+    // Reviewer/exam pages update their own progress keys — refresh when the
+    // user comes back via the back button (bfcache) or another tab.
+    window.addEventListener('pageshow', e => { if (e.persisted) renderCourses(); });
+    window.addEventListener('storage', e => { if (e.key && /_progress$|^megacode\.best$/.test(e.key)) renderCourses(); });
 
+    renderChips();
     setupFilterAndSearch();
+    setupCompactScroll();
     renderCourses();
 
     // ── PWA Install Banner ──
@@ -2012,8 +1454,13 @@ if ('serviceWorker' in navigator) {
             .catch(e => console.log('SW failed', e));
     });
 
+    // Reload only when an updated worker replaces an existing one. On a first
+    // visit the page was already served from the network, and reloading would
+    // wipe whatever the visitor has started doing (e.g. typing a search).
+    let swHadController = !!navigator.serviceWorker.controller;
     let swRefreshing = false;
     navigator.serviceWorker.addEventListener('controllerchange', function() {
+        if (!swHadController) { swHadController = true; return; }
         if (swRefreshing) return;
         swRefreshing = true;
         window.location.reload();
