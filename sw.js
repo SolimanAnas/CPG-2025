@@ -39,7 +39,7 @@ const CONTENT_CACHE = [
   'pages/empact.html', 'pages/ecg.html', 'pages/ecg-test.html',
   'pages/drug-calculator.html', 'pages/drug-index.html', 'pages/med-index.html',
   'pages/drug-refresher.html', 'pages/drug-refresher-data.js',
-  'pages/ems-tools.html', 'pages/defib.html',
+  'pages/ems-tools.html', 'pages/defib.html', 'pages/methane.html',
   'images/defib/pads-adult-anterolateral.webp', 'images/defib/pads-paed-anteroposterior.webp',
   'pdf_sections/Defibrillation-Quick-Reference.pdf',
   'pages/ecg-engine.js', 'pages/ecg-engine2.js',

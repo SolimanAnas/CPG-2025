@@ -1036,12 +1036,20 @@
     function loadStorage(key, def) { try { return JSON.parse(localStorage.getItem(key)) || def; } catch(e) { return def; } }
     function saveStorage(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {} }
 
+    // Only count completion flags for chapters that still exist; stale ids
+    // (c0, renamed/removed chapters) otherwise push progress past 100%.
+    function chapterProgress() {
+        const chapters   = CHAPTERS.filter(c => !c.isSpecial && c.id !== 'c0' && c.id !== 'c-index');
+        const completion = loadStorage(COMPLETION_KEY, {});
+        const done       = chapters.filter(c => completion[c.id]).length;
+        const total      = chapters.length;
+        return { done, total, pct: total ? Math.min(100, Math.round((done / total) * 100)) : 0 };
+    }
+
     function updateAllProgress() {
         const stats    = loadStorage(STATS_KEY, { totalAttempts:0, critical:{total:0,correct:0} });
         const critAcc  = stats.critical.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
-        const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
-        const completion = loadStorage(COMPLETION_KEY, {});
-        const done     = Object.values(completion).filter(v => v).length;
+        const { done, total: totalChaps } = chapterProgress();
         const quote    = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
         document.getElementById('popupChaptersDone').innerText = `${done}/${totalChaps}`;
         document.getElementById('popupAttempts').innerText     = stats.totalAttempts || 0;
@@ -1085,9 +1093,7 @@
         const stats      = loadStorage(STATS_KEY, { chapters:{} });
         const completion = loadStorage(COMPLETION_KEY, {});
 
-        const totalChaps     = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
-        const completedCount = Object.values(completion).filter(v => v).length;
-        const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+        const { done: completedCount, total: totalChaps, pct: overallPercent } = chapterProgress();
         const { C, offset } = buildRingPath(overallPercent);
 
         // ── Hero progress card ──
@@ -1364,9 +1370,7 @@
         const completion = loadStorage(COMPLETION_KEY, {});
         const examFromEngine = loadStorage(EXAM_STATS_KEY, []);
         
-        const totalChaps = CHAPTERS.filter(c => c.id !== 'c0' && c.id !== 'c-index').length;
-        const completedCount = Object.values(completion).filter(v => v).length;
-        const overallPercent = totalChaps ? Math.round((completedCount / totalChaps) * 100) : 0;
+        const { done: completedCount, total: totalChaps, pct: overallPercent } = chapterProgress();
         
         const critAcc = stats.critical?.total ? Math.round((stats.critical.correct / stats.critical.total) * 100) : 0;
         
