@@ -1,0 +1,167 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "What is the core organizing principle of PEPP's approach to pediatric patients?",
+      "options": [
+        "A. Children should be treated with scaled-down adult protocols",
+        "B. Children differ from adults anatomically, physiologically, developmentally, and psychosocially — not just in size",
+        "C. Pediatric care is identical to adult care below a certain weight threshold",
+        "D. Only infants require a different assessment approach"
+      ],
+      "correct": 1,
+      "rationale": "PEPP's foundational premise is that children are not small adults — differences span anatomy, physiology, development, and psychosocial needs, requiring a distinct approach at every stage of care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Where is the narrowest point of a young child's airway located?",
+      "options": ["A. At the vocal cords, same as adults", "B. Subglottic, below the vocal cords", "C. At the nostrils", "D. At the epiglottis only"],
+      "correct": 1,
+      "rationale": "Unlike adults, whose airway narrows at the vocal cords, a young child's airway is narrowest below the cords (subglottic), an important anatomic difference for airway management.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q03",
+      "question": "Why do children desaturate faster than adults when breathing is compromised?",
+      "options": [
+        "A. They have larger oxygen reserves",
+        "B. Higher metabolic rate/oxygen consumption combined with smaller functional residual capacity",
+        "C. They breathe more slowly than adults",
+        "D. Their chest walls are stiffer than adults'"
+      ],
+      "correct": 1,
+      "rationale": "Children consume more oxygen per kilogram than adults but have less reserve capacity in the lungs, so oxygenation drops faster when ventilation is impaired.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q04",
+      "question": "What is the leading pathway to cardiac arrest in children, distinct from adults?",
+      "options": ["A. Primary cardiac dysrhythmia", "B. Respiratory problems", "C. Toxic ingestion", "D. Congenital heart disease in all cases"],
+      "correct": 1,
+      "rationale": "Unlike adults where primary cardiac events predominate, pediatric arrest is most often the end result of progressive respiratory failure or shock.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q05",
+      "question": "Why is blood pressure considered a late and unreliable early sign of shock in children?",
+      "options": [
+        "A. Children cannot mount a compensatory response",
+        "B. Children compensate well via tachycardia and vasoconstriction, maintaining normal BP until significant volume is lost",
+        "C. Blood pressure is always elevated in pediatric shock",
+        "D. Children's blood pressure cannot be measured accurately"
+      ],
+      "correct": 1,
+      "rationale": "Robust compensatory mechanisms keep blood pressure normal-appearing until a substantial percentage of circulating volume is lost, making BP a poor early screening tool in children.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q06",
+      "question": "What happens once a child's shock compensation fails?",
+      "options": ["A. Gradual, well-tolerated decline", "B. Rapid decompensation with little warning", "C. Spontaneous recovery", "D. No change in clinical status"],
+      "correct": 1,
+      "rationale": "Because compensation in children is so effective until it isn't, decompensation — once it begins — tends to occur rapidly, giving little advance warning.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q07",
+      "question": "What is the best approach to assessing a frightened toddler?",
+      "options": [
+        "A. Separate the child from caregivers immediately for an accurate exam",
+        "B. Keep the caregiver close and demonstrate equipment on a doll or the caregiver first",
+        "C. Use complex medical terminology to build trust",
+        "D. Approach with unfamiliar equipment first to desensitize the child"
+      ],
+      "correct": 1,
+      "rationale": "Toddlers fear separation and unfamiliar equipment; keeping caregivers close and demonstrating equipment first reduces distress and improves cooperation and assessment accuracy.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q08",
+      "question": "What is the best approach to interviewing an adolescent patient?",
+      "options": [
+        "A. Always keep a parent present for every question",
+        "B. Provide privacy, respect, and honesty, considering some interview time apart from caregivers",
+        "C. Speak only to the caregiver, not the patient",
+        "D. Use the same approach as with a toddler"
+      ],
+      "correct": 1,
+      "rationale": "Adolescents value privacy, respect, and direct honesty, and may disclose more accurately when interviewed partly apart from caregivers.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q09",
+      "question": "Why is a single 'normal vital signs' reference not useful in pediatrics?",
+      "options": [
+        "A. Vital signs don't matter in children",
+        "B. Normal heart rate, respiratory rate, and blood pressure vary substantially across pediatric age bands",
+        "C. Pediatric vital signs cannot be measured in the field",
+        "D. All children have identical vital signs regardless of age"
+      ],
+      "correct": 1,
+      "rationale": "Because normal ranges shift significantly from neonate through adolescent, every vital sign must be compared against an age-appropriate reference range.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q10",
+      "question": "What matters more than a single isolated vital sign reading in pediatric assessment?",
+      "options": [
+        "A. The exact numeric value alone",
+        "B. Trends over time and the overall clinical picture (e.g., the Pediatric Assessment Triangle)",
+        "C. Only the respiratory rate",
+        "D. The child's stated pain level alone"
+      ],
+      "correct": 1,
+      "rationale": "A single vital sign can be misleading in isolation; trends and the broader clinical gestalt provide more reliable information about the child's true status.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q11",
+      "question": "Why does a modest-seeming blood loss matter more in a child than in an adult?",
+      "options": [
+        "A. Children have larger total blood volumes",
+        "B. A child's absolute circulating blood volume is small, so the same loss is a larger percentage of total volume",
+        "C. Children's blood clots more slowly",
+        "D. This is not actually true — losses are equivalent"
+      ],
+      "correct": 1,
+      "rationale": "Because total circulating volume is smaller in children, an amount of blood loss that would be minor in an adult can represent a much larger fraction of a child's total volume.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q12",
+      "question": "How does the pediatric larynx position differ anatomically from an adult's?",
+      "options": ["A. More posterior and lower", "B. More anterior and cephalad (higher)", "C. Identical position", "D. Absent in infants"],
+      "correct": 1,
+      "rationale": "The pediatric larynx sits more anterior and cephalad than the adult larynx, an important consideration for airway positioning and visualization.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q13",
+      "question": "Why are infants at particular risk of fatigue during increased work of breathing?",
+      "options": [
+        "A. They have highly rigid chest walls",
+        "B. They are diaphragmatic breathers with a compliant chest wall, generating less effective negative pressure and fatiguing faster",
+        "C. Infants never show signs of respiratory distress",
+        "D. Infant lungs have unusually large reserve capacity"
+      ],
+      "correct": 1,
+      "rationale": "The compliant infant chest wall and diaphragm-dependent breathing generate less effective ventilatory force, so infants tire more quickly when working hard to breathe.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q14",
+      "question": "A provider uses an adult mental model unmodified when assessing an infant's airway. What is the risk?",
+      "options": [
+        "A. No risk — pediatric and adult airways are identical",
+        "B. Missing anatomic differences (large tongue, anterior/cephalad larynx, subglottic narrowing) that change positioning and equipment needs",
+        "C. Improved outcomes from consistency",
+        "D. The risk only applies to children over age 10"
+      ],
+      "correct": 1,
+      "rationale": "Anatomic differences unique to the pediatric airway change how it should be assessed and managed; applying an unmodified adult model risks missing or mismanaging obstruction.",
+      "difficulty": "Hard"
+    }
+  ]
+}

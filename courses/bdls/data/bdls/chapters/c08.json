@@ -1,0 +1,72 @@
+{
+  "id": "c08",
+  "title": "Biological Events & Pandemics",
+  "shortTitle": "Biological Events",
+  "estimatedStudyTime": 34,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish an overt from a covert biological event.",
+    "Explain the role of syndromic surveillance and epidemiologic clues in detection.",
+    "List the CDC bioterrorism agent categories and name key Category A agents.",
+    "Describe isolation precautions and personal protective equipment for biological threats.",
+    "Explain the public-health tools of a biological response (isolation, quarantine, prophylaxis).",
+    "Describe pandemic principles: surge, PPE conservation, and continuity."
+  ],
+  "summary": [
+    {
+      "title": "Overt vs Covert Biological Events",
+      "content": "A biological event may be overt — an announced release or an obvious outbreak — or covert, revealing itself only days later as patients fall ill. Because most biological agents have an incubation period, the 'scene' of a covert event is not a place but a pattern in the population: the first responders are often clinicians and epidemiologists, not EMS at a cordon. This makes recognition the pivotal skill."
+    },
+    {
+      "title": "Detection: Surveillance and Epidemiologic Clues",
+      "content": "Syndromic surveillance monitors patterns — ED visits, pharmacy sales, absenteeism — for signals of an emerging event. Epidemiologic clues that should raise suspicion of an intentional or unusual biological event include: a disease unusual for the area or season; an unusually severe or rapidly fatal illness; a point-source outbreak with many people ill at once; illness in an unexpected population; unusual routes of exposure; and simultaneous clusters in separate locations. Reporting suspicions to public health early is the health professional's key contribution."
+    },
+    {
+      "title": "CDC Agent Categories",
+      "content": "The CDC classifies bioterrorism agents by risk. Category A — highest priority — are easily disseminated or transmitted, cause high mortality, and require special public-health preparedness: anthrax, botulism (botulinum toxin), plague, smallpox, tularemia, and viral hemorrhagic fevers (a useful mnemonic is 'A B PLoT' — Anthrax, Botulism, Plague, smallpox [variola], Tularemia, and viral hemorrhagic fevers). Category B agents are moderately easy to disseminate with lower mortality; Category C are emerging pathogens that could be engineered for mass spread."
+    },
+    {
+      "title": "Isolation Precautions and PPE",
+      "content": "Protection matches the transmission route. Standard precautions always apply. Contact precautions (gown, gloves) address organisms spread by touch. Droplet precautions (surgical mask within close range) address agents like plague pneumonia. Airborne precautions (negative-pressure room and a fitted respirator such as an N95 or higher) address smallpox, tuberculosis, and measles. Some high-consequence pathogens (e.g., viral hemorrhagic fevers) require enhanced ensembles. Knowing which precaution a suspected agent demands — before the patient is in your face — is a core competency."
+    },
+    {
+      "title": "Public-Health Response Tools",
+      "content": "Biological events are managed with public-health tools layered on clinical care: isolation (separating the ill), quarantine (restricting the exposed-but-well), post-exposure prophylaxis and vaccination (e.g., antibiotics for anthrax exposure, vaccination for smallpox), the Strategic National Stockpile for medications and supplies, and mass prophylaxis dispensing sites (points of dispensing, PODs). Contact tracing and clear risk communication limit spread and panic. These operate at the population level, coordinated by public-health authorities within the incident-management structure."
+    },
+    {
+      "title": "Pandemic Principles",
+      "content": "A pandemic is a prolonged, widespread biological event that stresses the health system for months. Principles: protect the workforce (PPE, vaccination, and PPE conservation/extended use when supplies are constrained), expand surge capacity, maintain continuity of essential services, use crisis standards of care if demand overwhelms resources, and rely on non-pharmaceutical interventions (distancing, hygiene, masking, isolation) especially before specific vaccines or therapeutics exist. Responder mental health and sustainable staffing are strategic assets over a long event."
+    }
+  ],
+  "clinicalPearls": [
+    "In a covert biological event, the clinician IS the detector — an unusual case reported early can trigger the whole response.",
+    "Category A mnemonic: 'A B PLoT' — Anthrax, Botulism, Plague, smallpox, Tularemia, viral hemorrhagic fevers.",
+    "Match PPE to route: contact, droplet, or airborne — and default to higher protection when the agent is unknown.",
+    "Isolation is for the ill; quarantine is for the exposed-but-well — don't mix the terms."
+  ],
+  "redFlags": [
+    "A disease appearing out of season, out of region, or in an unexpected population.",
+    "A point-source cluster: many previously well people acutely ill in the same short window.",
+    "Simultaneous outbreaks of the same illness in geographically separate places."
+  ],
+  "commonMistakes": [
+    "Waiting for laboratory confirmation before notifying public health — early suspicion drives the response.",
+    "Applying the wrong precaution level (e.g., a surgical mask for an airborne agent like smallpox).",
+    "Confusing isolation with quarantine, or assuming quarantine applies to the sick."
+  ],
+  "memoryAids": [
+    "Category A = 'A B PLoT': Anthrax, Botulism, Plague, smallpox, Tularemia, viral hemorrhagic fevers.",
+    "Epi clues: wrong disease, wrong place, wrong season, wrong population, too many at once, or in two places at once.",
+    "PPE by route: touch → contact; close-range spray → droplet; air → airborne (N95+ and negative pressure)."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Biological Event",
+      "content": "Unusual illness pattern observed\n  → Recognize epi clues (wrong disease/place/season/population; point source; multi-site)\n  → NOTIFY public health immediately — do not wait for confirmation\n  → Isolate the ill; apply route-appropriate PPE (default higher if unknown)\n     Touch → contact | Close droplets → droplet | Airborne (smallpox/TB) → airborne + N95/negative pressure\n  → Support public-health measures: quarantine of exposed, prophylaxis/vaccination, PODs, contact tracing\n  → For pandemics: protect and conserve the workforce, surge, continuity, crisis standards if overwhelmed"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Biological Events and Pandemics",
+    "CDC — Bioterrorism agent categories and isolation precautions (as taught in BDLS v4.0)"
+  ]
+}

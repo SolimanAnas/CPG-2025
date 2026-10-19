@@ -1,0 +1,31 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "The DISASTER Paradigm at a Glance",
+      "headers": ["Component", "Core Question", "Key Actions"],
+      "rows": [
+        ["Detection", "Do needs exceed resources?", "Size up, estimate casualties/hazards, report, declare MCI"],
+        ["Incident command", "Who is in charge?", "Establish, announce, transfer as needed"],
+        ["Safety & security", "Who must be protected first?", "Self → team → public → patients; PPE; perimeter"],
+        ["Assess hazards", "What can still hurt us?", "Ongoing + secondary hazards; continuous reassessment"],
+        ["Support", "What will we need?", "Early requests: staff, supplies, transport, special teams"],
+        ["Triage & treatment", "Who first, with what?", "SALT; greatest good for greatest number"],
+        ["Evacuation", "Who goes where?", "Acuity-matched, distributed destinations"],
+        ["Recovery", "How do we restore?", "Begins during response; systems, people, lessons"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "Obvious vs Insidious Detection",
+      "headers": ["Feature", "Obvious Event", "Insidious Event"],
+      "rows": [
+        ["Example", "Explosion, tornado", "Covert biological release, epidemic"],
+        ["Signal", "Immediate scene chaos", "Syndromic clusters across EDs over days"],
+        ["Detector", "First responders on scene", "Clinicians + public-health surveillance"],
+        ["Key action", "Size-up and MCI declaration", "Recognize pattern, notify public health"]
+      ]
+    }
+  ]
+}

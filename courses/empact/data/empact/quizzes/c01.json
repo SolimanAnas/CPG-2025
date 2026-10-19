@@ -1,0 +1,229 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "What best describes the process of differential diagnosis in the field?",
+      "options": [
+        "A. Guessing the single correct diagnosis immediately",
+        "B. Narrowing a wide field of possible causes down to the most probable explanation(s)",
+        "C. Only ruling out cardiac causes",
+        "D. Waiting for hospital lab results before forming any impression"
+      ],
+      "correct": 1,
+      "rationale": "Differential diagnosis is a process — moving from possibilities to probabilities using history, exam, and vitals — not a single instant guess.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Which stage of assessment identifies and treats immediate life threats?",
+      "options": ["A. Scene size-up", "B. Primary assessment", "C. Secondary assessment", "D. Reassessment"],
+      "correct": 1,
+      "rationale": "The primary assessment establishes a general impression, level of consciousness, and identifies/treats airway, breathing, and circulation threats, also setting patient priority.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q03",
+      "question": "In the medical patient, approximately what percentage of diagnostic information comes from the history?",
+      "options": ["A. 20%", "B. 50%", "C. 80%", "D. 100%"],
+      "correct": 2,
+      "rationale": "For medical patients, roughly 80% of the diagnostic information comes from the history, with about 20% from the physical exam — the reverse emphasis often seen in trauma.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q04",
+      "question": "What should you do first when encountering a patient with an airway obstruction, before taking their full history?",
+      "options": [
+        "A. Ask about past medical history",
+        "B. Treat the airway threat immediately",
+        "C. Obtain a complete medication list",
+        "D. Perform a detailed head-to-toe exam"
+      ],
+      "correct": 1,
+      "rationale": "Life threats are treated first, regardless of how much history remains to be taken — airway, breathing, and circulation problems are addressed immediately in the primary assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q05",
+      "question": "You arrive at an apartment and find three family members all reporting headache, nausea, and dizziness that began around the same time. What should you suspect?",
+      "options": [
+        "A. Three unrelated coincidental illnesses",
+        "B. A possible shared environmental/toxic exposure (e.g., carbon monoxide)",
+        "C. Anxiety spreading socially",
+        "D. Nothing unusual — treat each in isolation"
+      ],
+      "correct": 1,
+      "rationale": "When multiple people share the same signs and symptoms, a common cause such as CO, a gas leak, or a shared food source should be suspected and investigated before entering blindly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q06",
+      "question": "What is included in the secondary assessment?",
+      "options": [
+        "A. Scene safety only",
+        "B. History, physical examination, and vital signs",
+        "C. Airway management exclusively",
+        "D. Transport decision only"
+      ],
+      "correct": 1,
+      "rationale": "The secondary assessment gathers history, performs a physical exam, and obtains vital signs — building the data needed for the differential diagnosis.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q07",
+      "question": "Why is reassessment performed more frequently in unstable patients?",
+      "options": [
+        "A. To satisfy documentation requirements",
+        "B. To track trends and detect deterioration or response to treatment promptly",
+        "C. It is not actually more frequent",
+        "D. Because unstable patients complain more"
+      ],
+      "correct": 1,
+      "rationale": "Frequent reassessment in unstable patients catches trends — improving or worsening — allowing timely intervention changes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q08",
+      "question": "A family calls EMS saying their elderly father 'just isn't himself' but cannot name a specific complaint. What is the most useful question?",
+      "options": [
+        "A. 'Do you have chest pain?' only",
+        "B. 'What is different today compared to his usual baseline?'",
+        "C. 'What is his diagnosis?'",
+        "D. No further questions are needed"
+      ],
+      "correct": 1,
+      "rationale": "Asking about functional change from baseline (ADLs) often surfaces the real problem, especially when the patient or family cannot self-diagnose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q09",
+      "question": "What does 'trust YOUR exam' mean in patient assessment?",
+      "options": [
+        "A. Ignore the patient's reported history entirely",
+        "B. Give weight to your own primary assessment and findings rather than discounting them in favor of a mismatched complaint",
+        "C. Only trust findings confirmed by a second provider",
+        "D. Physical exam findings are never reliable"
+      ],
+      "correct": 1,
+      "rationale": "Your direct findings from the primary assessment are a critical, reliable data source — a mismatched or vague chief complaint shouldn't override what you actually observe.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "What is the correct order of the four stages of patient assessment?",
+      "options": [
+        "A. Primary, scene size-up, secondary, reassessment",
+        "B. Scene size-up, primary assessment, secondary assessment, reassessment",
+        "C. Secondary, primary, reassessment, scene size-up",
+        "D. Reassessment, scene size-up, primary, secondary"
+      ],
+      "correct": 1,
+      "rationale": "The stages proceed scene size-up → primary assessment → secondary assessment → reassessment, each building on the last.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q11",
+      "question": "Why does the key to active listening involve getting on the patient's level?",
+      "options": [
+        "A. It has no real effect on communication",
+        "B. It builds rapport and comfort, encouraging fuller, more accurate answers to follow-up questions",
+        "C. It is only a courtesy with no clinical value",
+        "D. It replaces the need for physical exam"
+      ],
+      "correct": 1,
+      "rationale": "Physical positioning and engaged follow-up questions improve the quality and completeness of the history — the highest-yield tool in medical assessment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q12",
+      "question": "Which best explains why ADLs (Activities of Daily Living) matter in medical assessment?",
+      "options": [
+        "A. They are irrelevant to EMS calls",
+        "B. A change in ADLs (walking, eating, dressing, thinking) is often the actual reason a call was made, even without a named diagnosis",
+        "C. ADLs only matter for pediatric patients",
+        "D. ADLs replace the need for vital signs"
+      ],
+      "correct": 1,
+      "rationale": "Patients and families frequently call because functional status has changed, not because a diagnosis was made — asking about ADL changes captures this directly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q13",
+      "question": "During assessment of a conscious medical patient, what is the recommended order?",
+      "options": [
+        "A. Physical exam first, then questions",
+        "B. Ask questions first, then perform a directed physical exam",
+        "C. Vital signs only, skip both history and exam",
+        "D. Simultaneously perform exam and questions with no particular order"
+      ],
+      "correct": 1,
+      "rationale": "Given history's outsized diagnostic value in medical patients, asking questions first lets the subsequent physical exam be targeted and efficient.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q14",
+      "question": "A crew skips checking for life threats and goes straight into a 10-minute history. What is the risk?",
+      "options": [
+        "A. None — history is more important than life threats",
+        "B. A time-critical airway, breathing, or circulation problem may go untreated while history is gathered",
+        "C. This is the recommended approach for all patients",
+        "D. It only matters for trauma patients"
+      ],
+      "correct": 1,
+      "rationale": "Regardless of history's diagnostic value, life threats must be identified and treated first — delaying this for history-taking risks patient deterioration.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Which scenario best demonstrates appropriate use of the differential-diagnosis approach?",
+      "options": [
+        "A. Assuming a single cause immediately and ignoring new exam findings",
+        "B. Building a list of possible causes, then using history/exam/vitals to raise or lower the likelihood of each",
+        "C. Never forming any clinical impression until arrival at the hospital",
+        "D. Diagnosing definitively in the field every time"
+      ],
+      "correct": 1,
+      "rationale": "The differential-diagnosis approach is iterative: a list of possibilities is narrowed by evidence, not fixed on a single early guess or deferred entirely.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q16",
+      "question": "What is the primary purpose of the scene size-up on a medical call?",
+      "options": [
+        "A. To begin taking vital signs early",
+        "B. To assess safety, apply standard precautions, and identify clues to the nature of the illness before patient contact",
+        "C. To determine transport destination",
+        "D. To complete documentation"
+      ],
+      "correct": 1,
+      "rationale": "Scene size-up happens before hands-on patient care and focuses on safety, precautions, and situational clues — protecting the responder and informing the coming assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q17",
+      "question": "What best describes the relationship between the four assessment stages?",
+      "options": [
+        "A. They are independent and can be performed in any order",
+        "B. Each stage builds on the information and actions of the one before it",
+        "C. Only the primary assessment matters; the rest are optional",
+        "D. Reassessment replaces the need for a primary assessment"
+      ],
+      "correct": 1,
+      "rationale": "Scene size-up informs safe approach, the primary assessment sets priority and treats life threats, the secondary assessment builds the differential, and reassessment tracks the response — each stage depends on the ones before it.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q18",
+      "question": "A patient's chief complaint doesn't match your physical findings. What should guide your next action?",
+      "options": [
+        "A. Always defer entirely to the stated chief complaint",
+        "B. Trust your own exam findings and investigate the discrepancy further",
+        "C. Ignore your findings since the patient knows their body best",
+        "D. Document the mismatch and take no further action"
+      ],
+      "correct": 1,
+      "rationale": "Trusting your own primary assessment and findings — while still listening actively — is a core principle when the story and the exam don't align.",
+      "difficulty": "Medium"
+    }
+  ]
+}

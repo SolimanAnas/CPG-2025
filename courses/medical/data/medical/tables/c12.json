@@ -1,0 +1,27 @@
+{
+  "chapter": "c12",
+  "tables": [
+    {
+      "id": "c12_t01",
+      "title": "GI Bleeding Presentations",
+      "headers": ["Presentation", "Description", "Typical Source"],
+      "rows": [
+        ["Hematemesis", "Vomiting blood, may look like coffee grounds if partially digested", "Upper GI"],
+        ["Melena", "Black, tarry, foul-smelling stool", "Upper GI"],
+        ["Hematochezia", "Bright red blood per rectum", "Typically lower GI (brisk upper GI bleed can also present this way)"]
+      ]
+    },
+    {
+      "id": "c12_t02",
+      "title": "General Medical Red Flags — 'Sicker Than They Look'",
+      "headers": ["Red Flag", "Why It Matters"],
+      "rows": [
+        ["Altered mental status", "Can signal a wide range of serious underlying causes regardless of chief complaint"],
+        ["Vital signs out of proportion to apparent severity", "Tachycardia/tachypnea disproportionate to the complaint suggests a more serious process"],
+        ["Pain out of proportion to exam findings", "Classic marker for conditions like mesenteric ischemia or compartment syndrome"],
+        ["Inability to find a comfortable position", "Contrasts with peritoneal irritation (patient lies still); seen in renal colic and other conditions"],
+        ["'This feels different/worse than usual'", "A chronic-condition patient's own comparison to their baseline is a valuable, often-overlooked signal"]
+      ]
+    }
+  ]
+}

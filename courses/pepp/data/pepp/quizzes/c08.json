@@ -1,0 +1,167 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "What does AVPU stand for?",
+      "options": ["A. Alert, Voice, Pain, Unresponsive", "B. Airway, Vitals, Pulse, Unconsciousness", "C. Appearance, Ventilation, Perfusion, Urgency", "D. Alert, Vital, Perfused, Unstable"],
+      "correct": 0,
+      "rationale": "AVPU is a simple scale for level of consciousness: Alert, responds to Voice, responds to Pain, or Unresponsive.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q02",
+      "question": "Which PAT leg often provides the earliest clue to altered mental status?",
+      "options": ["A. Work of Breathing", "B. Circulation to Skin", "C. Appearance", "D. None of the PAT legs relate to mental status"],
+      "correct": 2,
+      "rationale": "Appearance findings (eye contact, interactiveness, cry quality) often reveal altered mental status before a formal AVPU assessment.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "What does the AEIOU-TIPS mnemonic help a provider recall?",
+      "options": [
+        "A. Steps of the primary assessment",
+        "B. Reversible causes of altered mental status",
+        "C. PAT legs",
+        "D. Categories of respiratory compromise"
+      ],
+      "correct": 1,
+      "rationale": "AEIOU-TIPS recalls reversible causes of altered mental status: Alcohol, Epilepsy, Infection, Overdose, Uremia/metabolic, Trauma/temperature, Insulin/hypoglycemia, Psychiatric, Shock/stroke.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q04",
+      "question": "Why is a glucose check emphasized for every altered pediatric patient when a meter is available?",
+      "options": [
+        "A. Hypoglycemia is rare and unimportant in children",
+        "B. Hypoglycemia is common and rapidly reversible",
+        "C. Glucose checks are only relevant for diabetic patients",
+        "D. It is required for billing, not clinical reasons"
+      ],
+      "correct": 1,
+      "rationale": "Hypoglycemia is a common, easily and rapidly reversible cause of pediatric altered mental status, making a glucose check a high-value, low-cost intervention.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q05",
+      "question": "What are the field priorities during an active pediatric seizure?",
+      "options": [
+        "A. Place an object in the mouth to prevent tongue biting",
+        "B. Protect the airway and from injury, check glucose, time the seizure",
+        "C. Restrain the child's limbs firmly",
+        "D. Administer oral medication during the seizure"
+      ],
+      "correct": 1,
+      "rationale": "Correct field management is protecting the airway/positioning, protecting from injury, checking glucose, and timing the seizure — never placing objects in the mouth.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q06",
+      "question": "What defines status epilepticus?",
+      "options": [
+        "A. Any seizure lasting more than 1 minute",
+        "B. A seizure lasting more than 5 minutes, or repeated seizures without return to baseline",
+        "C. Only seizures with fever",
+        "D. Only seizures in infants under 6 months"
+      ],
+      "correct": 1,
+      "rationale": "Status epilepticus is defined as a seizure lasting more than 5 minutes, or repeated seizures without the patient returning to baseline between them.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q07",
+      "question": "Where is benzodiazepine dosing for status epilepticus detailed?",
+      "options": ["A. This PEPP chapter", "B. The PALS reviewer", "C. The BLS reviewer", "D. No resource covers it"],
+      "correct": 1,
+      "rationale": "Consistent with PEPP's guardrail against duplicating PALS content, drug dosing for status epilepticus is detailed in the PALS reviewer.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "What is the typical age range for febrile seizures?",
+      "options": ["A. 6 months to 5 years", "B. Birth to 1 month", "C. 10 to 18 years", "D. Only over age 10"],
+      "correct": 0,
+      "rationale": "Febrile seizures are most typical in children 6 months to 5 years, associated with a rapidly rising fever.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q09",
+      "question": "Which description fits a simple febrile seizure?",
+      "options": [
+        "A. Focal, lasting 20 minutes, recurs within hours",
+        "B. Generalized, lasting less than 15 minutes, no recurrence in 24 hours, returns to baseline",
+        "C. Any seizure with a fever regardless of duration",
+        "D. A seizure that does not return to baseline afterward"
+      ],
+      "correct": 1,
+      "rationale": "A simple febrile seizure is generalized, brief (under 15 minutes), non-recurrent within 24 hours, with return to baseline mental status afterward.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q10",
+      "question": "A febrile child has a focal seizure lasting 20 minutes. How should this be classified?",
+      "options": [
+        "A. A simple febrile seizure requiring no special concern",
+        "B. A complex febrile seizure, warranting a higher level of concern",
+        "C. Not a seizure at all",
+        "D. Status epilepticus by definition regardless of duration criteria"
+      ],
+      "correct": 1,
+      "rationale": "Focal features and duration over 15 minutes meet the definition of a complex febrile seizure, which warrants greater concern than a simple febrile seizure (though it may also cross into status epilepticus if it continues beyond 5 minutes without stopping).",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q11",
+      "question": "What signs suggest increased intracranial pressure in an infant?",
+      "options": [
+        "A. Sunken fontanelle and tachypnea",
+        "B. Bulging fontanelle, decreasing consciousness, irregular respiratory pattern",
+        "C. Normal fontanelle and improved alertness",
+        "D. Warm, flushed skin"
+      ],
+      "correct": 1,
+      "rationale": "A bulging fontanelle, decreasing level of consciousness, and an irregular respiratory pattern suggest increased intracranial pressure in an infant.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "What is the Cushing triad?",
+      "options": [
+        "A. Hypotension, tachycardia, tachypnea",
+        "B. Hypertension, bradycardia, irregular respirations",
+        "C. Fever, rash, vomiting",
+        "D. Tachycardia, hypertension, diaphoresis"
+      ],
+      "correct": 1,
+      "rationale": "The Cushing triad — hypertension, bradycardia, and irregular respirations — is a late and ominous sign of increased intracranial pressure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q13",
+      "question": "Why should hypoxia and hypotension be avoided in a child with suspected increased intracranial pressure?",
+      "options": [
+        "A. They have no effect on brain injury",
+        "B. Both worsen secondary brain injury",
+        "C. They only affect cardiac function, not the brain",
+        "D. They are unavoidable and not a treatment priority"
+      ],
+      "correct": 1,
+      "rationale": "Both hypoxia and hypotension worsen secondary brain injury in a child with elevated intracranial pressure, making their avoidance a key field priority.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q14",
+      "question": "Why does a trend of decreasing responsiveness across serial reassessments matter more than a single mental status snapshot?",
+      "options": [
+        "A. It doesn't — only the first assessment matters",
+        "B. A worsening trend indicates ongoing deterioration that a single value could miss",
+        "C. Trends are only relevant in adults",
+        "D. Serial reassessment is not recommended in pediatric care"
+      ],
+      "correct": 1,
+      "rationale": "A single mental status value can miss an evolving problem; a trend toward decreasing responsiveness reveals ongoing deterioration and should prompt escalation.",
+      "difficulty": "Hard"
+    }
+  ]
+}

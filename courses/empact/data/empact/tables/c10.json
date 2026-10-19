@@ -1,0 +1,28 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "Oncology-Associated Complications Affecting Chest Findings",
+      "headers": ["Complication", "Key Exam Findings", "Associated Cancer/Treatment"],
+      "rows": [
+        ["Pleural effusion", "Decreased breath sounds, dullness to percussion at a lung base", "Lung cancer, mediastinal cancer"],
+        ["Cardiac tamponade (pericardial effusion)", "Beck's triad: JVD, muffled heart tones, hypotension", "Mediastinal cancer, certain chemotherapy regimens"],
+        ["Pulmonary embolism", "Sudden dyspnea, pleuritic pain, tachycardia", "Malignancy as a clotting risk factor"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Course Capstone: Core Principles Across All Chapters",
+      "headers": ["Principle", "First Introduced", "Applies Throughout"],
+      "rows": [
+        ["Systematic 4-stage assessment", "c01", "Every chapter"],
+        ["Differential diagnosis (possibilities → probabilities)", "c01", "Every chapter"],
+        ["History dominates (~80%) in medical patients", "c01", "Every chapter, especially complex patients"],
+        ["Trust YOUR exam", "c01", "Every chapter, especially vague complaints"],
+        ["Shared-cause pattern recognition", "c01", "Any multi-patient scene"],
+        ["Life threats first (A-B-C)", "c01", "Every chapter"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Four Categories of Pediatric Respiratory Compromise",
+      "headers": ["Category", "Classic Finding", "Example Causes", "Field Treatment Focus"],
+      "rows": [
+        ["Upper airway obstruction", "Stridor", "Croup, foreign body, epiglottitis", "Keep calm, position of comfort, minimize agitation"],
+        ["Lower airway disease", "Wheeze, prolonged expiration", "Asthma, bronchiolitis", "Nebulized bronchodilator per protocol, position of comfort"],
+        ["Lung tissue (parenchymal) disease", "Grunting, crackles, diminished breath sounds", "Pneumonia, pulmonary edema", "Supplemental oxygen, close monitoring for hypoxia"],
+        ["Disordered control of breathing", "Irregular rate/pattern, no classic sound", "CNS problem, toxin, neuromuscular disease", "Address underlying cause where possible, support ventilation"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "Respiratory Distress vs Respiratory Failure",
+      "headers": ["Feature", "Distress (Compensating)", "Failure (Compensation Failed)"],
+      "rows": [
+        ["Work of breathing", "Increased (retractions, flaring, grunting)", "May appear decreased due to exhaustion"],
+        ["Mental status", "Generally normal/anxious", "Altered — lethargic or unresponsive"],
+        ["Color", "Usually normal or slightly pale", "Cyanosis"],
+        ["Respiratory rate/pattern", "Tachypnea, regular", "Bradypnea or irregular, may have apnea"],
+        ["Field priority", "Position of comfort, O2, targeted treatment, monitor", "Assisted ventilation, rapid transport"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "c01",
+  "title": "Neurological Emergencies I — Stroke & TIA",
+  "shortTitle": "Stroke & TIA",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish stroke from TIA and explain why prehospital care treats both as time-critical.",
+    "Differentiate ischemic from hemorrhagic stroke and its field-relevant implications.",
+    "Apply a validated prehospital stroke scale to recognize likely stroke.",
+    "Recognize findings suggestive of a large-vessel occlusion (LVO) stroke.",
+    "Describe field priorities: last-known-well time, glucose check, and rapid transport/notification."
+  ],
+  "summary": [
+    {
+      "title": "Stroke vs. TIA — Same Urgency, Different Duration",
+      "content": "A stroke is an acute disruption of blood flow to the brain causing neurologic deficit; a transient ischemic attack (TIA) produces the same type of deficit but resolves completely, classically within minutes to an hour, without lasting tissue injury on imaging. Because a TIA cannot be reliably distinguished from an evolving stroke in the field — and because TIA carries a significant short-term risk of a subsequent completed stroke — both are treated with the same urgency: rapid recognition, rapid transport, and rapid hospital notification."
+    },
+    {
+      "title": "Ischemic vs. Hemorrhagic Stroke",
+      "content": "Ischemic stroke (the large majority of strokes) results from a clot or other obstruction blocking blood flow; hemorrhagic stroke results from bleeding into or around brain tissue. The two cannot be reliably distinguished in the field by symptoms alone — both cause focal neurologic deficits — which is why field care focuses on rapid recognition and transport rather than attempting to guess the stroke type, leaving that determination to hospital imaging."
+    },
+    {
+      "title": "Validated Prehospital Stroke Scales",
+      "content": "The Cincinnati Prehospital Stroke Scale (CPSS) checks three findings — facial droop, arm drift, and speech abnormality — and is widely taught as the entry-level prehospital screening tool. Other validated scales add sensitivity for detecting a large-vessel occlusion (LVO), which may change the destination decision in systems with endovascular-capable centers: the Los Angeles Prehospital Stroke Screen (LAPSS), RACE (Rapid Arterial oCclusion Evaluation), and FAST-ED (which adds eye deviation and denial/neglect to the FAST components). Current stroke guidance continues to endorse using a validated scale for prehospital stroke recognition and LVO screening, with the specific scale and any destination threshold set by the local EMS system."
+    },
+    {
+      "title": "Recognizing Possible Large-Vessel Occlusion",
+      "content": "Findings that raise suspicion for LVO stroke — beyond a simple facial droop/arm drift/speech finding — include gaze deviation toward one side, severe unilateral weakness affecting both the face and arm together, and neglect/denial of the deficit (the patient not recognizing or acknowledging a weak limb). Systems with access to an endovascular-capable stroke center may use an LVO-screening scale to decide whether to bypass a closer, non-endovascular-capable hospital, per local protocol."
+    },
+    {
+      "title": "Field Priorities",
+      "content": "Once stroke is suspected: determine and document the last-known-well time precisely (this drives eligibility for time-sensitive hospital treatments), check blood glucose (hypoglycemia is a well-known stroke mimic and is rapidly correctable), perform a validated stroke scale, and transport rapidly with early hospital notification (a 'stroke alert') so the receiving facility can prepare. Avoid delaying transport for a full neurologic exam beyond the screening scale — time is the central variable in stroke outcome."
+    }
+  ],
+  "clinicalPearls": [
+    "TIA and stroke get the same field urgency — a resolved deficit does not rule out a serious ongoing process.",
+    "Field care cannot reliably distinguish ischemic from hemorrhagic stroke — treat both as time-critical and let hospital imaging sort it out.",
+    "Always check glucose in a suspected stroke patient — hypoglycemia is a correctable stroke mimic.",
+    "Last-known-well time is one of the single most important pieces of information you can gather and document."
+  ],
+  "redFlags": [
+    "Any new focal neurologic deficit (facial droop, arm drift, speech abnormality), even if it has since resolved.",
+    "Gaze deviation, severe unilateral face+arm weakness, or neglect of a weak limb — possible LVO.",
+    "An unclear or unknown last-known-well time — document what is known and keep gathering it en route."
+  ],
+  "commonMistakes": [
+    "Dismissing a resolved deficit (possible TIA) as no longer urgent.",
+    "Failing to check glucose before assuming a deficit is purely neurologic.",
+    "Delaying transport to complete an extensive neurologic exam instead of a rapid validated screening scale."
+  ],
+  "memoryAids": [
+    "FAST: Face, Arm, Speech, Time.",
+    "TIA = stroke symptoms that resolved, not a stroke that didn't happen — same urgency.",
+    "Glucose first — a fast, correctable stroke mimic.",
+    "Time is brain — last-known-well time drives everything downstream."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Stroke Field Approach",
+      "content": "Focal neurologic deficit noted (current or recently resolved)\n  → Check blood glucose → treat hypoglycemia per protocol if present, reassess\n  → Determine and document last-known-well time precisely\n  → Perform validated prehospital stroke scale (e.g., CPSS ± LVO-screening scale per local protocol)\n  → Positive screen → early hospital notification ('stroke alert'), rapid transport per local destination protocol (nearest stroke center vs. EVT-capable center bypass, per LVO screen and system design)\n  → Continue serial reassessment en route; do not delay transport for an extensive exam"
+    }
+  ],
+  "references": [
+    "2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke",
+    "Cincinnati Prehospital Stroke Scale (CPSS); RACE and FAST-ED as examples of LVO-screening scales"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "Subway Blast Survivor",
+      "presentation": "A bomb detonates in a subway car. A 30-year-old survivor walks out with ringing ears and mild chest tightness. Vitals are initially normal. Ninety minutes later in the treatment area he is dyspneic, tachypneic, and coughing blood-streaked sputum.",
+      "vitals": { "initial": "Normal, TM symptoms", "90 min": "RR 32, SpO2 88%, hemoptysis", "exposure": "Enclosed-space blast" },
+      "question": "What is happening and what caution applies?",
+      "options": [
+        "A: Anxiety attack — reassure him.",
+        "B: Delayed blast lung — give oxygen, escalate care, and if ventilation is needed use the lowest effective pressures, watching for pneumothorax and air embolism.",
+        "C: Asthma — bronchodilators only.",
+        "D: He was fine initially, so no blast injury is possible."
+      ],
+      "correct": 1,
+      "explanation": "Enclosed-space blasts multiply primary injury, and blast lung classically declares itself hours later with dyspnea, hypoxia, and hemoptysis. Oxygenate and escalate, but ventilate gently — positive pressure can extend alveolar rupture into pneumothorax or arterial air embolism.",
+      "clinicalPearl": "The blast survivor who 'walked away' hasn't finished declaring himself — enclosed-space exposures earn observation."
+    },
+    {
+      "id": "c06_s02",
+      "title": "The Second Package",
+      "presentation": "A package bomb detonates outside a courthouse, downing several victims. As the first EMS crew arrives, a police officer points out an unattended second backpack 20 meters from the casualties.",
+      "vitals": { "casualties": "Visible, some moving", "second device": "Suspected, 20 m away", "scene": "Uncleared" },
+      "question": "What is the correct EMS action?",
+      "options": [
+        "A: Rush to the casualties — seconds count.",
+        "B: Stage at a safe distance until law enforcement addresses the suspected device; operate under unified command; enter only when directed.",
+        "C: Move the backpack away from the casualties.",
+        "D: Have bystanders carry the victims to you through the uncleared zone."
+      ],
+      "correct": 1,
+      "explanation": "Secondary devices are placed to kill responders. EMS stages until the device threat is addressed, integrates with law enforcement under unified command, and enters per the coordinated plan. A blown-up medic rescues no one.",
+      "clinicalPearl": "At intentional scenes, the first casualties you protect are your own crew — stage, coordinate, then treat."
+    },
+    {
+      "id": "c06_s03",
+      "title": "First Wave at Memorial ED",
+      "presentation": "Eight minutes after a marketplace bombing, 30 self-transported patients with lacerations and TM complaints crowd Memorial's ED. The charge physician wants to assign every open bed. You are the hospital incident commander.",
+      "vitals": { "arrivals": "30 walking wounded", "elapsed": "8 min", "EMS units on scene": "Still extricating critical casualties" },
+      "question": "What is the correct capacity decision?",
+      "options": [
+        "A: Fill all beds now with the walking wounded.",
+        "B: Cohort the minor casualties in a fast-track area and hold resuscitation bays and OR capacity for the critical wave arriving by EMS in 30-60 minutes.",
+        "C: Close the ED to further arrivals.",
+        "D: Send the walking wounded home without assessment."
+      ],
+      "correct": 1,
+      "explanation": "Bombing arrivals run upside-down: the self-evacuated minor casualties arrive first, and the critical patients — still being extricated — arrive later. Command protects resuscitation capacity for that second wave while safely cohorting and assessing the first.",
+      "clinicalPearl": "After a bombing, your first 30 patients are rarely your sickest 30 — plan beds for the wave you haven't met yet."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "Normal Blood Pressure, Sick Patient",
+      "presentation": "A 35-year-old man involved in a motorcycle crash is pale, anxious, tachycardic, and breathing fast. His blood pressure is 116/74.",
+      "vitals": { "hr": "124 bpm", "bp": "116/74 mmHg", "rr": "26 bpm", "skin": "Pale, cool" },
+      "question": "How should this presentation be interpreted?",
+      "options": [
+        "A: No shock present since the blood pressure is normal.",
+        "B: Compensated shock — pale skin, tachycardia, and tachypnea indicate inadequate perfusion despite a still-normal blood pressure.",
+        "C: This is simple anxiety with no physiologic significance.",
+        "D: Wait until blood pressure drops before treating."
+      ],
+      "correct": 1,
+      "explanation": "Pale skin, tachycardia, and tachypnea are the signs of compensated shock — the body's compensatory mechanisms are maintaining blood pressure even though perfusion is already compromised. Treating only once BP falls means treating late.",
+      "clinicalPearl": "A normal blood pressure doesn't mean a normal perfusion state — compensated shock hides behind normal numbers."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Heart Failure Patient Crashing",
+      "presentation": "A 70-year-old woman with a history of congestive heart failure presents with hypotension, cool extremities, and bilateral crackles on lung auscultation. She appears fluid-overloaded, not dehydrated.",
+      "vitals": { "hr": "104 bpm", "bp": "82/58 mmHg", "rr": "24 bpm", "lungs": "Bilateral crackles" },
+      "question": "What shock category is most likely, and what is the management concern?",
+      "options": [
+        "A: Hypovolemic shock — give an aggressive 2-liter fluid bolus.",
+        "B: Cardiogenic shock — favor inotropic/vasopressor support and avoid large fluid boluses, which could worsen pulmonary edema.",
+        "C: Anaphylactic shock — give epinephrine.",
+        "D: Obstructive shock — perform needle decompression."
+      ],
+      "correct": 1,
+      "explanation": "A heart-failure history with hypotension, cool extremities, and pulmonary crackles points to cardiogenic shock. Because the heart's pumping ability is impaired, large fluid boluses risk worsening pulmonary edema; inotropic vasopressors (e.g., dopamine) are the more appropriate pharmacologic approach for persistent hypotension.",
+      "clinicalPearl": "Crackles plus hypotension in a heart-failure patient is cardiogenic shock, not a volume problem — don't fluid-bolus a failing pump."
+    },
+    {
+      "id": "c05_s03",
+      "title": "The Overlooked Blanket",
+      "presentation": "A trauma patient in early compensated shock is being managed appropriately for bleeding and airway, but remains uncovered on a cold backboard during a 25-minute transport in winter conditions.",
+      "vitals": { "hr": "116 bpm", "bp": "108/70 mmHg", "temp": "Trending down, uncovered" },
+      "question": "What additional intervention is being missed, and why does it matter?",
+      "options": [
+        "A: Nothing is missing — temperature is not a priority in shock.",
+        "B: The patient should be covered with a blanket; hypothermia worsens coagulopathy and cardiac function, compounding the shock state.",
+        "C: The patient should be given more oxygen instead of a blanket.",
+        "D: Warming has no physiologic effect during shock."
+      ],
+      "correct": 1,
+      "explanation": "Keeping shock patients warm is an active treatment, not just comfort — allowing heat loss worsens coagulopathy and cardiac function, compounding the underlying shock physiology. A simple blanket is a meaningful intervention that is easy to overlook.",
+      "clinicalPearl": "In shock management, the blanket is a treatment, not an amenity."
+    }
+  ]
+}

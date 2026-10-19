@@ -1,0 +1,53 @@
+{
+  "chapter": "c11",
+  "cases": [
+    {
+      "id": "c11_s01",
+      "title": "The Vigorous Newborn",
+      "presentation": "You arrive to assist with an unplanned home delivery. The term newborn is immediately crying vigorously, with good tone and pink color.",
+      "vitals": { "gestation": "Term", "tone": "Good", "cry": "Vigorous" },
+      "question": "What is the appropriate management for this newborn?",
+      "options": [
+        "A: Move the newborn to a warmer for the initial steps of stabilization.",
+        "B: The newborn can stay with the mother for routine care — dry, warm, and skin-to-skin.",
+        "C: Begin positive-pressure ventilation as a precaution.",
+        "D: Perform routine deep suctioning before any other action."
+      ],
+      "correct": 1,
+      "explanation": "All three initial questions (term gestation, good tone, breathing/crying) are answered yes, so the newborn can remain with the mother for routine care rather than being moved to a warmer for stabilization steps.",
+      "clinicalPearl": "Term, good tone, vigorous cry — three yeses means routine care with mom, not intervention."
+    },
+    {
+      "id": "c11_s02",
+      "title": "The Limp, Quiet Newborn",
+      "presentation": "A newborn delivered five minutes ago is limp, not crying, and has poor tone. The newborn is wet and uncovered on the bed.",
+      "vitals": { "tone": "Poor", "cry": "None", "color": "Pale" },
+      "question": "What is the correct initial management sequence?",
+      "options": [
+        "A: Leave the newborn with the mother and reassess in 10 minutes.",
+        "B: Move to a warmer and begin the initial steps: provide warmth, position the airway, clear secretions if needed, dry, and stimulate.",
+        "C: Begin chest compressions immediately.",
+        "D: Delay any action until a full assessment is complete."
+      ],
+      "correct": 1,
+      "explanation": "Poor tone and absence of crying are 'no' answers to the initial questions, indicating the newborn should be moved to a warmer to begin the initial steps of stabilization — warmth, airway positioning, secretion clearing if needed, drying, and stimulation — with warmth being a particular priority since the newborn is currently wet and uncovered.",
+      "clinicalPearl": "Wet, limp, and quiet — get this newborn to the warmer and start the initial steps without delay; heat loss is happening right now."
+    },
+    {
+      "id": "c11_s03",
+      "title": "Persistent Bradycardia Despite Ventilation",
+      "presentation": "After the initial steps, a newborn remains apneic with a heart rate of 90 bpm. Positive-pressure ventilation is started. After 30 seconds of effective PPV, the heart rate is reassessed at 50 bpm.",
+      "vitals": { "hrBeforePPV": "90 bpm", "hrAfter30secPPV": "50 bpm" },
+      "question": "What is the correct next step?",
+      "options": [
+        "A: Continue PPV alone without adding any other intervention.",
+        "B: Begin chest compressions coordinated with continued PPV, since the heart rate remains below 60 bpm despite effective ventilation.",
+        "C: Stop resuscitation efforts.",
+        "D: Switch to abdominal thrusts."
+      ],
+      "correct": 1,
+      "explanation": "Because the heart rate remains below 60 bpm despite 30 seconds of effective PPV, chest compressions are added, coordinated with continued ventilation, per the newborn resuscitation sequence.",
+      "clinicalPearl": "Ventilation first, always — but once you've given it 30 good seconds and the heart rate is still under 60, add compressions."
+    }
+  ]
+}

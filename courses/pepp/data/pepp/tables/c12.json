@@ -1,0 +1,16 @@
+{
+  "chapter": "c12",
+  "tables": [
+    {
+      "id": "c12_t01",
+      "title": "General Concern-Raising Categories (Educational, Non-Diagnostic)",
+      "headers": ["Category", "Example", "Appropriate Provider Response"],
+      "rows": [
+        ["History-injury-developmental inconsistency", "Non-mobile infant reportedly 'rolled off' furniture and fractured a limb", "Document objectively, continue care, report per policy"],
+        ["Changing history", "Different accounts from different caregivers or over time", "Document each account exactly as given, report per policy"],
+        ["Unexplained delay in seeking care", "Significant injury with care sought well after expected", "Document timeline discrepancy, continue care, report per policy"],
+        ["Unusual injury pattern/location", "Pattern atypical for the reported mechanism", "Document objectively, avoid speculative conclusions, report per policy"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "CDC Bioterrorism Agent Categories",
+      "headers": ["Category", "Characteristics", "Examples"],
+      "rows": [
+        ["A (highest priority)", "Easily disseminated/transmitted, high mortality, public-health impact", "Anthrax, botulism, plague, smallpox, tularemia, viral hemorrhagic fevers"],
+        ["B", "Moderately easy to disseminate, moderate morbidity, lower mortality", "Q fever, brucellosis, ricin, food/water-safety threats"],
+        ["C", "Emerging pathogens that could be engineered for mass spread", "Emerging infectious diseases (e.g., novel viruses)"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "Isolation Precautions by Transmission Route",
+      "headers": ["Precaution", "PPE / Setting", "Example Agents"],
+      "rows": [
+        ["Standard", "Hand hygiene, gloves/PPE per task", "All patients, always"],
+        ["Contact", "Gown and gloves", "Agents spread by touch/contaminated surfaces"],
+        ["Droplet", "Surgical mask within close range", "Pneumonic plague, influenza"],
+        ["Airborne", "N95+ respirator, negative-pressure room", "Smallpox, tuberculosis, measles"]
+      ]
+    },
+    {
+      "id": "c08_t03",
+      "title": "Isolation vs Quarantine vs Prophylaxis",
+      "headers": ["Tool", "Applies To", "Purpose"],
+      "rows": [
+        ["Isolation", "People who are ill", "Prevent them from infecting others"],
+        ["Quarantine", "Exposed but not yet ill", "Watch and contain in case they become infectious"],
+        ["Post-exposure prophylaxis", "Exposed but well", "Prevent disease from developing (antibiotics/vaccine)"]
+      ]
+    }
+  ]
+}

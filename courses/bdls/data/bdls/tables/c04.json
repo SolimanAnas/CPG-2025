@@ -1,0 +1,39 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "SALT Triage Categories",
+      "headers": ["Category", "Color", "Meaning", "Action"],
+      "rows": [
+        ["Immediate", "Red", "Life threat, survivable with prompt care", "First priority treatment and transport"],
+        ["Delayed", "Yellow", "Significant injuries; care can wait", "Treat/transport after Immediate"],
+        ["Minimal", "Green", "Walking wounded, minor injuries", "Assess, treat minor issues, monitor for deterioration"],
+        ["Expectant", "Gray", "Alive; survival unlikely with CURRENT resources", "Comfort care; re-triage if resources improve"],
+        ["Dead", "Black", "Not breathing after airway opening", "No further care; preserve scene/identification"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "SALT Global Sort Priorities",
+      "headers": ["Response to Commands", "Assessment Priority"],
+      "rows": [
+        ["Still / obvious life threat", "1st — assess first"],
+        ["Waves / purposeful movement", "2nd"],
+        ["Walks to designated area", "3rd (last) — still gets assessed"]
+      ]
+    },
+    {
+      "id": "c04_t03",
+      "title": "Triage-Phase Lifesaving Interventions (Seconds Only)",
+      "headers": ["Intervention", "Indication"],
+      "rows": [
+        ["Tourniquet / direct pressure", "Massive external hemorrhage"],
+        ["Airway positioning", "Obstructed airway in an unresponsive casualty"],
+        ["2 rescue breaths (child only)", "Apneic child after airway opening"],
+        ["Needle chest decompression (trained)", "Suspected tension pneumothorax"],
+        ["Antidote auto-injector", "Nerve-agent/organophosphate toxidrome"]
+      ]
+    }
+  ]
+}

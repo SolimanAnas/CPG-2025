@@ -1,0 +1,73 @@
+{
+  "id": "c02",
+  "title": "The DISASTER Paradigm",
+  "shortTitle": "DISASTER Paradigm",
+  "estimatedStudyTime": 35,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "List the eight components of the DISASTER Paradigm in order.",
+    "Describe the detection questions a first-arriving responder must answer.",
+    "Explain why establishing incident command early is critical.",
+    "Apply safety-and-security thinking to self, scene, and survivors.",
+    "Describe hazard assessment, including the risk of secondary events.",
+    "Explain the support and triage/treatment components.",
+    "Describe evacuation priorities and the transition to recovery."
+  ],
+  "summary": [
+    {
+      "title": "One Framework for Every Event",
+      "content": "The DISASTER Paradigm is the BDLS all-hazards response framework — a mental checklist that applies whether the event is a flood, a bombing, or an epidemic. Its components are: Detection, Incident command, Safety and security, Assess hazards, Support, Triage and treatment, Evacuation, and Recovery. It gives every responder, from any discipline, the same ordered set of priorities."
+    },
+    {
+      "title": "Detection",
+      "content": "Detection asks: does this event exceed available resources — is it a disaster or MCI? Detection can be obvious (an explosion) or insidious (a slowly building epidemic, patients presenting with unusual symptoms across multiple emergency departments). The first-arriving responder estimates the number of casualties, hazards present, and resources needed, and communicates that picture early. Recognizing an event for what it is triggers everything downstream."
+    },
+    {
+      "title": "Incident Command",
+      "content": "Someone must be in charge, immediately. The first trained responder on scene establishes incident command and announces it, transferring command later as more senior officers arrive. Incident command creates a single point of coordination, prevents freelancing, and connects the scene to the wider emergency-management system. Health professionals must know how to work inside this structure rather than around it."
+    },
+    {
+      "title": "Safety and Security",
+      "content": "The priority order is: yourself, your team, the public/bystanders, then the patients. A responder who becomes a casualty consumes resources rather than adding them. Safety includes appropriate PPE, staging until the scene is cleared, controlling perimeters, and awareness of violence or secondary devices intended to target responders. Security also protects scarce resources — supplies, vehicles, and facilities — from being overwhelmed."
+    },
+    {
+      "title": "Assess Hazards",
+      "content": "Actively search for ongoing and secondary hazards: fire, structural collapse, downed power lines, hazardous materials, rising water, aftershocks, and intentional secondary devices timed to strike responders. Hazard assessment is continuous — scenes evolve, and the assessment that was true on arrival may be false an hour later."
+    },
+    {
+      "title": "Support, Triage & Treatment, Evacuation, Recovery",
+      "content": "Support: identify what resources — people, supplies, vehicles, facilities, special teams — are needed and request them early, because everything arrives with a delay. Triage and treatment: sort casualties with a standardized method (SALT) and provide the greatest good for the greatest number. Evacuation: move patients to appropriate destinations — distributing them across receiving hospitals rather than overwhelming the nearest one — and consider evacuation of populations at risk. Recovery: begins during the response, restoring systems, supporting responders and survivors, and documenting lessons learned."
+    }
+  ],
+  "clinicalPearls": [
+    "The DISASTER Paradigm is a checklist you run in order — detection and command come before any patient care.",
+    "The nearest hospital is not automatically the right destination; distribute casualties or you simply move the disaster indoors.",
+    "Request support early: every resource arrives after a lag, so order for the incident you will have in an hour.",
+    "Reassess hazards continuously — secondary devices and evolving scenes target the moment responders relax."
+  ],
+  "redFlags": [
+    "Rushing to treat the first casualty seen before command, safety, and hazard assessment are addressed.",
+    "Multiple EDs seeing clusters of unusual symptoms — a detection signal for a covert biological or chemical event.",
+    "All casualties transported to the closest hospital, overwhelming it while others sit idle."
+  ],
+  "commonMistakes": [
+    "Skipping the announcement of incident command because the scene 'seems manageable.'",
+    "Treating safety as a one-time check instead of a continuous process.",
+    "Forgetting that recovery planning starts during the response, not after it."
+  ],
+  "memoryAids": [
+    "D-I-S-A-S-T-E-R: Detection, Incident command, Safety/security, Assess hazards, Support, Triage & treatment, Evacuation, Recovery.",
+    "Safety order: me, my team, bystanders, then patients.",
+    "Detect → Direct → Protect → Assess → Supply → Sort → Move → Restore."
+  ],
+  "decisionTrees": [
+    {
+      "title": "First Responder's DISASTER Sequence",
+      "content": "Arrive at possible MCI\n  → DETECTION: needs vs resources — declare MCI/disaster if exceeded\n  → INCIDENT COMMAND: establish and announce (transfer later as needed)\n  → SAFETY & SECURITY: self → team → public → patients; PPE; perimeter\n  → ASSESS HAZARDS: ongoing + secondary (devices, collapse, hazmat); reassess continuously\n  → SUPPORT: request staff, supplies, transport, special teams EARLY\n  → TRIAGE & TREATMENT: SALT; greatest good for greatest number\n  → EVACUATION: right patient, right destination — distribute, don't dump\n  → RECOVERY: begins during response; restore, support, learn"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — The DISASTER Paradigm",
+    "NDLSF BDLS v4.0 — Response Principles and Scene Management"
+  ]
+}

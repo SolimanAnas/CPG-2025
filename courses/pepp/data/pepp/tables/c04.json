@@ -1,0 +1,28 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "SAMPLE History Components (Pediatric-Adapted)",
+      "headers": ["Letter", "Element", "Pediatric Addition"],
+      "rows": [
+        ["S", "Signs/Symptoms", "Ask the child directly when age-appropriate"],
+        ["A", "Allergies", "Include reactions to foods/environmental allergens common in childhood"],
+        ["M", "Medications", "Include dosing by weight where relevant"],
+        ["P", "Past medical history", "Birth history/developmental milestones (infants); immunization status"],
+        ["L", "Last oral intake", "Important for procedural/anesthesia planning"],
+        ["E", "Events leading up to incident", "Include caregiver supervision context where relevant"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "Exam Order by Developmental Stage",
+      "headers": ["Stage", "Preferred Exam Order", "Rationale"],
+      "rows": [
+        ["Infant/Toddler", "Toe-to-head", "Less threatening areas first improves cooperation"],
+        ["Preschool", "Toe-to-head, or head-to-toe with explanation", "Some tolerance for direct explanation begins"],
+        ["School-age/Adolescent", "Standard head-to-toe", "Generally cooperative with direct explanation"]
+      ]
+    }
+  ]
+}

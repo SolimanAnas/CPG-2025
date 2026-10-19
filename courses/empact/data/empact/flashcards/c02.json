@@ -1,0 +1,20 @@
+{
+  "chapter": "c02",
+  "cards": [
+    { "id": "c02_fc01", "question": "List the indications for BVM ventilation.", "answer": "Apnea, bradypnea, inadequate tidal volume, cyanosis, or altered mental status with poor respiratory effort.", "category": "Respiratory" },
+    { "id": "c02_fc02", "question": "When is an OPA appropriate?", "answer": "In unresponsive patients without a gag reflex.", "category": "Airway" },
+    { "id": "c02_fc03", "question": "When is an NPA appropriate?", "answer": "In patients with an intact gag reflex or who are semi-conscious.", "category": "Airway" },
+    { "id": "c02_fc04", "question": "What is the NPA contraindicated in?", "answer": "Suspected basilar skull fracture or significant mid-face trauma.", "category": "Airway" },
+    { "id": "c02_fc05", "question": "What should you do if a patient has vomit or blood in the airway?", "answer": "Turn the patient onto their side to allow drainage, then suction as needed.", "category": "Airway" },
+    { "id": "c02_fc06", "question": "What does stridor indicate?", "answer": "Upper airway obstruction — a potentially life-threatening finding requiring urgent action.", "category": "Respiratory" },
+    { "id": "c02_fc07", "question": "Why can a normal-looking respiratory rate still require BVM support?", "answer": "Because tidal volume and effort matter as much as rate — shallow breathing at a normal rate can still be inadequate.", "category": "Respiratory" },
+    { "id": "c02_fc08", "question": "Why does altered mental status increase airway risk?", "answer": "It removes protective airway reflexes (cough, swallow, tongue tone), raising aspiration and obstruction risk regardless of the underlying cause.", "category": "Assessment" },
+    { "id": "c02_fc09", "question": "Why should an OPA be removed if the patient gags on it?", "answer": "A gag reflex means the OPA is not tolerated and can trigger vomiting/aspiration — it's reserved for patients without a gag reflex.", "category": "Airway" },
+    { "id": "c02_fc10", "question": "Is stridor more concerning than wheezing for airway obstruction location?", "answer": "Stridor signals a proximal (upper airway) obstruction that can progress to complete obstruction quickly, unlike lower-airway wheezing.", "category": "Respiratory" },
+    { "id": "c02_fc11", "question": "What causes can produce stridor?", "answer": "Anaphylaxis-related angioedema, epiglottitis, foreign body, or airway burns, among others.", "category": "Respiratory" },
+    { "id": "c02_fc12", "question": "Why should positioning come before waiting to set up suction equipment?", "answer": "Positioning (turning the patient) is the fastest first response to drain fluid and should not be delayed while suction is prepared.", "category": "Airway" },
+    { "id": "c02_fc13", "question": "Why is airway risk from altered LOC a 'common thread' across different diagnoses?", "answer": "Overdose, stroke, post-ictal state, metabolic derangement, and sepsis can all cause altered LOC — the airway management priority is the same regardless of the underlying cause.", "category": "Assessment" },
+    { "id": "c02_fc14", "question": "What is a modified logroll used for in airway management?", "answer": "Turning a patient with vomit/blood in the airway onto their side to drain fluid while maintaining spinal precautions if trauma is suspected.", "category": "Airway" },
+    { "id": "c02_fc15", "question": "Is a mildly elevated respiratory rate alone enough to justify BVM ventilation?", "answer": "No — adequacy depends on rate, depth, effort, and color together, not rate alone.", "category": "Respiratory" }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "Asking the Teenager Directly",
+      "presentation": "A 15-year-old girl comes to the ambulance with her mother after a syncopal episode at school. The mother immediately begins answering all your questions about symptoms and events before the patient can speak.",
+      "vitals": { "hr": "88 bpm", "bp": "108/68 mmHg", "loc": "Alert, oriented" },
+      "question": "What is the best approach to history-taking here?",
+      "options": [
+        "A: Rely entirely on the mother's account since she is the legal guardian.",
+        "B: Direct questions to the teenager herself, using the mother's account to supplement rather than replace her report — and consider some private conversation time.",
+        "C: Ignore the mother's input entirely.",
+        "D: Skip history-taking since vitals are stable."
+      ],
+      "correct": 1,
+      "explanation": "Adolescents should be asked directly about their symptoms whenever possible; the caregiver's account supplements rather than replaces the patient's own report. Given adolescents' preference for privacy, some interview time apart from the caregiver may also yield more complete and honest information (e.g., about substance use, stress, or other sensitive factors relevant to a syncopal episode).",
+      "clinicalPearl": "A teenager who can speak for herself should be given the chance to — caregivers supplement the history, they don't own it."
+    },
+    {
+      "id": "c04_s02",
+      "title": "Keeping Mom in the Room",
+      "presentation": "A 3-year-old boy needs an IV start for dehydration. A new EMT suggests asking the mother to step out 'so she doesn't get upset.' The mother is calm and has been comforting the child effectively throughout the encounter.",
+      "vitals": { "child": "Anxious but calming with mother present", "mother": "Calm, cooperative" },
+      "question": "What does family-centered care recommend here?",
+      "options": [
+        "A: Ask the mother to leave to avoid her becoming upset.",
+        "B: Keep the calm, cooperative mother present during the procedure — family-centered care treats her as a partner, and her presence is likely to reduce the child's distress without slowing the procedure.",
+        "C: Only allow the father to be present, not the mother.",
+        "D: Perform the procedure in a separate room without any caregiver present."
+      ],
+      "correct": 1,
+      "explanation": "Family-centered care supports keeping a calm, cooperative caregiver present during most procedures, including IV starts — this typically reduces the child's distress and improves cooperation without meaningfully slowing the procedure. Removing a helpful caregiver by default (rather than for a specific clinical reason) works against this principle.",
+      "clinicalPearl": "A calm caregiver is usually your best assistant during a procedure, not an obstacle to remove."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Interpreting for the Family",
+      "presentation": "A family speaking only Spanish brings in their feverish 6-year-old. Their 10-year-old sibling, who speaks some English, offers to translate for the parents.",
+      "vitals": { "patient": "6-year-old, febrile", "family": "Spanish-speaking only", "sibling": "10-year-old, offers to translate" },
+      "question": "What is the correct approach to communication in this scenario?",
+      "options": [
+        "A: Use the 10-year-old sibling as the interpreter since they volunteered.",
+        "B: Use a professional interpretation service rather than relying on a child family member to interpret medical information.",
+        "C: Proceed without any interpretation since the situation seems routine.",
+        "D: Wait for the family to learn English before continuing care."
+      ],
+      "correct": 1,
+      "explanation": "Relying on a child — especially one who is also a family member of the patient — to interpret medical information is inappropriate and risks miscommunication and undue burden on the child. Professional interpretation services should be used to ensure accurate, appropriate communication with the family.",
+      "clinicalPearl": "A willing child interpreter is still the wrong interpreter — professional services protect both accuracy and the child from an inappropriate role."
+    }
+  ]
+}

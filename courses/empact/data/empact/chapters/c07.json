@@ -1,0 +1,68 @@
+{
+  "id": "c07",
+  "title": "Endocrine Emergencies",
+  "shortTitle": "Endocrine Emergencies",
+  "estimatedStudyTime": 26,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize hypoglycemia's presentation and the need for immediate glucose administration.",
+    "Recognize diabetic ketoacidosis (DKA), including Kussmaul respirations.",
+    "Recognize HHNS (Hyperglycemic Hyperosmolar Nonketotic Syndrome) and its typical population.",
+    "Differentiate DKA, HHNS, and hypoglycemia from one another.",
+    "Explain why diabetic emergencies are included in every altered-mental-status and stroke-like differential."
+  ],
+  "summary": [
+    {
+      "title": "Hypoglycemia: Fast Onset, Fast Fix",
+      "content": "Hypoglycemia presents with altered mental status and requires immediate glucose administration. Onset can be rapid — irritability, diaphoresis, confusion, or focal neurological deficits mimicking stroke can develop over minutes, especially in patients on insulin or sulfonylureas. Because correction is fast and low-risk when glucose is truly low, checking glucose early and treating promptly when confirmed low is one of the highest-yield interventions in the altered patient."
+    },
+    {
+      "title": "Diabetic Ketoacidosis (DKA) and Kussmaul Respirations",
+      "content": "Kussmaul respirations — deep, rapid, labored breathing — can be seen in diabetic ketoacidosis (DKA) but not in HHNS or hypoglycemia. This breathing pattern is the body's attempt to blow off carbon dioxide and compensate for the profound metabolic acidosis that develops when insulin deficiency forces the body to break down fat for energy, producing ketones. DKA typically develops over hours to days, often with polyuria, polydipsia, abdominal pain, and a fruity (acetone) breath odor, most classically in Type 1 diabetics, sometimes as a first presentation of previously undiagnosed diabetes."
+    },
+    {
+      "title": "HHNS: The Undiagnosed Type 2 Presentation",
+      "content": "HHNS (Hyperglycemic Hyperosmolar Nonketotic Syndrome) is associated with undiagnosed Type 2 diabetes and presents with extremely high blood glucose, profound dehydration, and altered mental status — but without the significant ketosis or acidosis of DKA, and typically without Kussmaul respirations. HHNS tends to develop more insidiously over days, often in older adults, and the resulting dehydration and hyperosmolarity can itself produce severe altered mental status resembling a primary neurological event."
+    },
+    {
+      "title": "Distinguishing the Three Diabetic Emergencies",
+      "content": "Hypoglycemia develops quickly and reverses quickly with glucose. DKA develops over hours to a day or two, with Kussmaul respirations, ketotic breath, and significant acidosis, typically in Type 1 diabetics. HHNS develops more slowly, with extreme hyperglycemia and dehydration but without the acidotic breathing pattern, typically in older Type 2 diabetics. Blood glucose measurement, combined with the respiratory pattern and history, is usually enough to distinguish among the three in the field, even without laboratory ketone or pH testing."
+    },
+    {
+      "title": "Diabetic Emergencies as a Universal Differential",
+      "content": "Diabetic emergencies (hypoglycemia or hyperglycemia) can present with stroke-like symptoms, and altered mental status from any diabetic emergency can also mimic sepsis, intoxication, or a primary neurological event. This is why a glucose check is treated as a near-universal step across the altered-mental-status differential in this course — it is fast, cheap, and can immediately explain (and sometimes immediately reverse) a presentation that would otherwise generate a much longer, slower workup."
+    }
+  ],
+  "clinicalPearls": [
+    "Kussmaul respirations can be seen in DKA but not in HHNS or hypoglycemia.",
+    "HHNS is associated with undiagnosed Type 2 diabetes.",
+    "Diabetic emergencies (hypoglycemia or hyperglycemia) can present with stroke-like symptoms.",
+    "Hypoglycemia presents with altered mental status and requires immediate glucose administration."
+  ],
+  "redFlags": [
+    "Deep, rapid, labored (Kussmaul) breathing in a diabetic patient — think DKA and significant acidosis.",
+    "Profound dehydration with extreme hyperglycemia in an elderly patient — think HHNS.",
+    "Any altered mental status without a glucose check yet performed."
+  ],
+  "commonMistakes": [
+    "Attributing Kussmaul respirations to a primary respiratory cause instead of DKA.",
+    "Missing HHNS in an elderly patient because there's no ketotic breath odor or acidotic breathing.",
+    "Treating a stroke-like presentation without first ruling out a diabetic emergency."
+  ],
+  "memoryAids": [
+    "Kussmaul = Ketoacidosis (DKA) — deep, rapid, labored breathing blowing off acid.",
+    "HHNS = Hyperglycemic, Hyperosmolar, Nonketotic — no acidotic breathing, older Type 2 patients.",
+    "Low sugar = fast fix; DKA = hours-to-days plus acid breathing; HHNS = days plus dehydration, no acid breathing.",
+    "Altered mental status? Check glucose before you chase anything else."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Diabetic Emergency Differentiation",
+      "content": "Altered mental status / suspected diabetic emergency\n  → Check blood glucose immediately\n     → LOW: hypoglycemia — give glucose promptly; reassess mental status\n     → HIGH: assess respiratory pattern and history\n        → Kussmaul (deep, rapid, labored) respirations + ketotic breath + hours-to-days onset: consider DKA\n        → No Kussmaul pattern, profound dehydration, insidious days-long onset, often elderly: consider HHNS\n  → Regardless of type, treat as time-sensitive: transport, supportive care, reassess frequently"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Endocrine/Diabetes category",
+    "National EMS Education Standards — Endocrine emergencies"
+  ]
+}

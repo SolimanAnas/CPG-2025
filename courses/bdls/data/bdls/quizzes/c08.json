@@ -1,0 +1,203 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "A covert biological release differs from most other disasters because:",
+      "options": [
+        "A. It is always announced in advance",
+        "B. Its 'scene' is a pattern of illness in the population, revealed after an incubation period",
+        "C. It causes immediate visible casualties at one location",
+        "D. It requires no public-health involvement"
+      ],
+      "correct": 1,
+      "rationale": "Incubation periods mean a covert event surfaces as scattered illness over days; the detectors are clinicians and epidemiologists recognizing the pattern, not responders at a scene.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q02",
+      "question": "Which is a Category A bioterrorism agent?",
+      "options": ["A. Salmonella", "B. Anthrax", "C. Ricin", "D. Common cold virus"],
+      "correct": 1,
+      "rationale": "Anthrax is Category A ('A B PLoT': Anthrax, Botulism, Plague, smallpox, Tularemia, viral hemorrhagic fevers) — high mortality with special preparedness needs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "Which set lists Category A agents?",
+      "options": [
+        "A. Anthrax, botulism, plague, smallpox, tularemia, viral hemorrhagic fevers",
+        "B. Influenza, measles, mumps, rubella",
+        "C. Salmonella, E. coli, cholera, ricin",
+        "D. HIV, hepatitis, tuberculosis, malaria"
+      ],
+      "correct": 0,
+      "rationale": "The Category A group is anthrax, botulism, plague, smallpox, tularemia, and viral hemorrhagic fevers — the highest-priority threats.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q04",
+      "question": "Which epidemiologic finding should raise suspicion of an intentional biological event?",
+      "options": [
+        "A. A few influenza cases during flu season",
+        "B. A large point-source cluster of a severe illness that is unusual for the area and season",
+        "C. One case of the common cold",
+        "D. Seasonal allergy complaints"
+      ],
+      "correct": 1,
+      "rationale": "Point-source clusters, unusual diseases for the region/season, and unexpected severity are classic red flags for an intentional or unusual biological event.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q05",
+      "question": "A patient with suspected smallpox requires which precautions?",
+      "options": [
+        "A. Contact only",
+        "B. Droplet only",
+        "C. Airborne precautions (N95+ respirator and negative-pressure room) plus contact",
+        "D. Standard precautions only"
+      ],
+      "correct": 2,
+      "rationale": "Smallpox spreads by the airborne route (and contact with lesions), requiring a fitted respirator, negative-pressure isolation, and contact precautions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q06",
+      "question": "What is the difference between isolation and quarantine?",
+      "options": [
+        "A. They are the same",
+        "B. Isolation separates the ill; quarantine restricts the exposed-but-well",
+        "C. Isolation is for the exposed; quarantine is for the ill",
+        "D. Both apply only to responders"
+      ],
+      "correct": 1,
+      "rationale": "Isolation applies to people who are sick; quarantine applies to people who were exposed but are not yet symptomatic.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q07",
+      "question": "A clinician strongly suspects a case of inhalational anthrax. The most important early action is to:",
+      "options": [
+        "A. Wait for blood cultures before telling anyone",
+        "B. Notify public health immediately while isolating and protecting staff",
+        "C. Discharge the patient to avoid alarm",
+        "D. Treat and say nothing until three cases appear"
+      ],
+      "correct": 1,
+      "rationale": "Early notification — before confirmation — lets public health investigate, initiate prophylaxis for others, and mount the response. Delay costs exposed people their prophylaxis window.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "Antibiotics given to people exposed to anthrax before they become ill is an example of:",
+      "options": ["A. Isolation", "B. Post-exposure prophylaxis", "C. Quarantine", "D. Crisis standards of care"],
+      "correct": 1,
+      "rationale": "Preventive treatment of the exposed-but-well to stop disease from developing is post-exposure prophylaxis, often dispensed at PODs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q09",
+      "question": "The Strategic National Stockpile exists to:",
+      "options": [
+        "A. Store weapons",
+        "B. Supplement local medications, vaccines, and supplies during large public-health emergencies",
+        "C. Replace hospital pharmacies permanently",
+        "D. Fund research"
+      ],
+      "correct": 1,
+      "rationale": "The SNS is a national cache deployed to bolster local resources during major events — for example, antibiotics or vaccines for mass prophylaxis.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Which PPE is appropriate for a patient with pneumonic plague (droplet spread)?",
+      "options": [
+        "A. Airborne precautions with negative pressure",
+        "B. Droplet precautions — surgical mask within close range plus standard precautions",
+        "C. No precautions",
+        "D. Contact precautions only"
+      ],
+      "correct": 1,
+      "rationale": "Pneumonic plague transmits by respiratory droplets at close range, so droplet precautions (surgical mask) are used — reserving airborne PPE for truly airborne agents.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q11",
+      "question": "During a pandemic with constrained supplies, protecting the workforce includes:",
+      "options": [
+        "A. Removing all PPE requirements to save stock",
+        "B. PPE with conservation/extended-use strategies, vaccination, and mental-health support",
+        "C. Sending symptomatic staff to work",
+        "D. Ignoring staffing sustainability"
+      ],
+      "correct": 1,
+      "rationale": "A months-long event depends on the workforce: appropriate PPE (with conservation when scarce), vaccination, and mental-health/sustainable-staffing measures keep responders functional.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "Non-pharmaceutical interventions (NPIs) are MOST important:",
+      "options": [
+        "A. Never — only drugs work",
+        "B. Before specific vaccines or therapeutics are available",
+        "C. Only after the pandemic ends",
+        "D. Only for responders"
+      ],
+      "correct": 1,
+      "rationale": "Distancing, hygiene, masking, and isolation/quarantine are the primary tools to slow spread early, especially before targeted vaccines or treatments exist.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q13",
+      "question": "Simultaneous outbreaks of the same unusual illness in three distant cities most strongly suggests:",
+      "options": [
+        "A. Ordinary seasonal illness",
+        "B. A possible intentional/multi-site biological release warranting public-health investigation",
+        "C. Laboratory error only",
+        "D. No cause for concern"
+      ],
+      "correct": 1,
+      "rationale": "Geographically separate simultaneous clusters of the same rare disease are a hallmark epidemiologic clue for an intentional or point-source event.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q14",
+      "question": "When the transmission route of a suspected biological agent is unknown, the safest PPE approach is to:",
+      "options": [
+        "A. Use standard precautions only",
+        "B. Default to a higher level of protection until the route is known",
+        "C. Use no PPE to avoid alarming patients",
+        "D. Wait for lab results before wearing PPE"
+      ],
+      "correct": 1,
+      "rationale": "Uncertainty warrants higher precaution: it is safer to step down PPE once the agent/route is characterized than to under-protect against an airborne threat.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q15",
+      "question": "Crisis standards of care are invoked when:",
+      "options": [
+        "A. A single patient is critically ill",
+        "B. Demand overwhelms resources, requiring formally declared allocation of scarce resources for population benefit",
+        "C. A hospital wants to reduce documentation",
+        "D. Staff prefer a simpler workflow"
+      ],
+      "correct": 1,
+      "rationale": "Crisis standards are a declared, framework-governed shift used only when needs exceed resources, allocating scarce resources to maximize population benefit.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q16",
+      "question": "Which best captures the clinician's pivotal role in a covert biological event?",
+      "options": [
+        "A. Waiting for authorities to announce the event",
+        "B. Recognizing an unusual case/pattern and reporting it early to trigger the public-health response",
+        "C. Managing the scene perimeter",
+        "D. Performing decontamination"
+      ],
+      "correct": 1,
+      "rationale": "Because covert events surface in clinics and EDs, the alert clinician who recognizes and reports an unusual illness is frequently what starts the entire response.",
+      "difficulty": "Medium"
+    }
+  ]
+}

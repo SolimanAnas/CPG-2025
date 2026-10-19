@@ -1,0 +1,53 @@
+{
+  "chapter": "c06",
+  "cases": [
+    {
+      "id": "c06_s01",
+      "title": "Weapon Visible on Approach",
+      "presentation": "EMS is dispatched for a 'person acting erratically.' On approach, the crew observes the patient pacing on the porch, shouting, and appears to be holding a knife.",
+      "vitals": { "scene": "Weapon visible, patient agitated and shouting" },
+      "question": "What is the correct first action?",
+      "options": [
+        "A: Approach immediately to begin a medical assessment.",
+        "B: Stage at a safe distance and involve law enforcement per local protocol before any approach.",
+        "C: Call out to the patient to drop the weapon and walk toward them.",
+        "D: Attempt de-escalation techniques while standing close to the patient."
+      ],
+      "correct": 1,
+      "explanation": "A visible weapon and an agitated, shouting patient represent a credible scene-safety concern. The correct response is to stage at a safe distance and involve law enforcement per local protocol before any provider approaches — provider safety must be established before patient contact can safely occur.",
+      "clinicalPearl": "A visible weapon changes everything — stage and call for law enforcement before you get close, no matter how urgent the call sounds."
+    },
+    {
+      "id": "c06_s02",
+      "title": "SEA-3 in Practice",
+      "presentation": "EMS is called to check on a 45-year-old man reported as 'not himself.' On scene, he is disheveled, has not bathed in what appears to be days, paces continuously, and speaks in a rapid, tangential, difficult-to-follow manner.",
+      "vitals": { "appearance": "Disheveled, poor hygiene", "activity": "Continuous pacing", "speech": "Rapid, tangential" },
+      "question": "How should this presentation be organized using the SEA-3 framework?",
+      "options": [
+        "A: These findings are unrelated and should be assessed independently with no combined significance.",
+        "B: Appearance (disheveled/poor hygiene), Activity (pacing), and Speech (rapid, tangential) together suggest a higher-risk overall picture than any single finding alone, warranting careful, calm assessment.",
+        "C: This presentation requires no further behavioral assessment since no weapon is present.",
+        "D: This is simply a medical complaint requiring no behavioral framework."
+      ],
+      "correct": 1,
+      "explanation": "Using SEA-3, the poor grooming/hygiene (Appearance), continuous pacing (Activity), and rapid tangential speech (Speech) together paint a more complete and concerning clinical picture than any single finding alone, guiding a careful, calm, structured assessment.",
+      "clinicalPearl": "SEA-3 findings compound — several concerning findings together tell you more than any one finding does alone."
+    },
+    {
+      "id": "c06_s03",
+      "title": "Respecting a Competent Refusal",
+      "presentation": "A 38-year-old woman called EMS during a panic attack that has since resolved. She is alert, oriented, and coherent, and after discussing risks and benefits, clearly and repeatedly declines transport to the hospital.",
+      "vitals": { "mentalStatus": "Alert, oriented x4, coherent", "decision": "Repeated, clear refusal after risk/benefit discussion" },
+      "question": "What is the correct approach?",
+      "options": [
+        "A: Physically restrain and transport her against her wishes.",
+        "B: Document the informed refusal per protocol, provide appropriate resources/follow-up guidance, and respect her autonomy as a competent patient.",
+        "C: Leave without any documentation or resource information, considering the call complete.",
+        "D: Continue to ask the same questions repeatedly until she agrees to transport."
+      ],
+      "correct": 1,
+      "explanation": "This patient demonstrates capacity (alert, oriented, coherent) and has made a clear, informed decision to refuse transport. The correct approach is to document the informed refusal per protocol and provide appropriate resources — respecting her autonomy. Leaving without documentation, however, would risk being interpreted as inadequate care, distinct from abandonment (which involves an incompetent or higher-need patient losing continuity of care).",
+      "clinicalPearl": "A competent, informed refusal isn't abandonment — but skipping the documentation and resource-sharing step is still bad practice."
+    }
+  ]
+}

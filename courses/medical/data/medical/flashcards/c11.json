@@ -1,0 +1,19 @@
+{
+  "chapter": "c11",
+  "cards": [
+    { "id": "c11_fc01", "question": "What is a toxidrome?", "answer": "A recognizable cluster of signs and symptoms associated with a category of toxic exposure, allowing action on a pattern without knowing the exact substance.", "category": "Toxicology" },
+    { "id": "c11_fc02", "question": "What is the opioid toxidrome?", "answer": "Respiratory depression, pinpoint pupils, altered mental status.", "category": "Toxicology" },
+    { "id": "c11_fc03", "question": "What is the sympathomimetic (stimulant) toxidrome?", "answer": "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils.", "category": "Toxicology" },
+    { "id": "c11_fc04", "question": "What is the anticholinergic toxidrome mnemonic and meaning?", "answer": "'Hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter' — altered mental status, dilated pupils, dry flushed skin, tachycardia, urinary retention.", "category": "Toxicology" },
+    { "id": "c11_fc05", "question": "What is the cholinergic toxidrome, and what is it associated with?", "answer": "Excessive secretions (salivation, lacrimation, urination, defecation, GI upset), bradycardia, muscle twitching — associated with organophosphate exposure.", "category": "Toxicology" },
+    { "id": "c11_fc06", "question": "What is the field priority order for a suspected poisoning/overdose?", "answer": "Scene safety first, then support ABCs, identify substance/amount/time when possible, check glucose regardless of presumed cause.", "category": "Field Management" },
+    { "id": "c11_fc07", "question": "What defines heat cramps?", "answer": "Painful muscle spasms during/after exertion in heat, generally with normal mental status.", "category": "Heat Illness" },
+    { "id": "c11_fc08", "question": "What defines heat exhaustion?", "answer": "Heavy sweating, weakness, nausea, headache, normal-to-mildly-altered mental status, elevated but not extreme core temperature.", "category": "Heat Illness" },
+    { "id": "c11_fc09", "question": "What defines heat stroke?", "answer": "Significantly elevated core temperature plus altered mental status (confusion, seizure, or coma) — a life-threatening emergency.", "category": "Heat Illness" },
+    { "id": "c11_fc10", "question": "Does the presence of sweating rule out heat stroke?", "answer": "No — some heat stroke patients still sweat, especially with exertional causes.", "category": "Heat Illness" },
+    { "id": "c11_fc11", "question": "What are features of mild hypothermia?", "answer": "Shivering, mild confusion, intact coordination.", "category": "Hypothermia" },
+    { "id": "c11_fc12", "question": "What are features of severe hypothermia?", "answer": "Absent shivering, significantly altered/unresponsive mental status, risk of cardiac arrhythmia and arrest.", "category": "Hypothermia" },
+    { "id": "c11_fc13", "question": "Why must a severely hypothermic patient be handled gently?", "answer": "Rough movement can trigger a fatal arrhythmia in a severely hypothermic heart.", "category": "Hypothermia" },
+    { "id": "c11_fc14", "question": "Should resuscitation be withheld from a hypothermic cardiac arrest patient based on presentation alone?", "answer": "No — hypothermia can mimic death, and patients have survived prolonged downtime with good neurologic outcome after rewarming; provide resuscitation per protocol.", "category": "Hypothermia" }
+  ]
+}

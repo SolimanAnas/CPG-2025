@@ -1,0 +1,53 @@
+{
+  "chapter": "c04",
+  "cases": [
+    {
+      "id": "c04_s01",
+      "title": "The Quiet Chest",
+      "presentation": "A 24-year-old woman with known asthma has been wheezing loudly for the past hour. On reassessment, the wheeze is now much quieter, and she appears more distressed, using accessory muscles heavily and unable to speak more than one word at a time.",
+      "vitals": { "rr": "34/min", "spo2": "89% on room air", "appearance": "Severe distress, one-word speech" },
+      "question": "How should the quieter wheeze be interpreted?",
+      "options": [
+        "A: As a sign of improvement — the wheeze is quieter, so escalate down.",
+        "B: As a warning sign of worsening obstruction approaching a silent chest, requiring immediate escalation of treatment and transport.",
+        "C: As unrelated to her respiratory status.",
+        "D: As an indication that bronchodilator therapy should be stopped."
+      ],
+      "correct": 1,
+      "explanation": "A quieting wheeze combined with worsening distress, accessory muscle use, and inability to speak in full sentences indicates worsening airway obstruction — not improvement. This pattern (mirroring the pediatric respiratory-failure teaching point) should prompt immediate escalation rather than reassurance.",
+      "clinicalPearl": "A quieter wheeze with more distress is a red flag, not relief — check for a developing silent chest before you relax."
+    },
+    {
+      "id": "c04_s02",
+      "title": "The Hesitant Oxygen Decision",
+      "presentation": "A 68-year-old man with known COPD presents with increased dyspnea and an SpO2 of 84% on room air. A new EMT hesitates to apply oxygen, citing concern about 'knocking out his hypoxic drive.'",
+      "vitals": { "spo2": "84% room air", "rr": "26/min", "appearance": "Increased work of breathing" },
+      "question": "What is the correct approach to oxygen administration here?",
+      "options": [
+        "A: Withhold oxygen entirely to avoid suppressing his respiratory drive.",
+        "B: Apply titrated oxygen targeting approximately 88-92% SpO2 — withholding oxygen from a hypoxic patient risks harmful tissue hypoxia and is not supported by current evidence.",
+        "C: Apply 100% oxygen with no titration.",
+        "D: Delay oxygen until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "The 'hypoxic drive' concern is an outdated oversimplification. Current guidance is titrated oxygen therapy to a target of roughly 88-92% SpO2 in COPD exacerbation — enough to correct dangerous hypoxia without unnecessary over-oxygenation. Withholding oxygen due to hypoxic-drive fears creates real risk of harmful tissue hypoxia.",
+      "clinicalPearl": "Don't withhold oxygen from a hypoxic COPD patient — titrate to 88-92%, don't avoid treatment altogether."
+    },
+    {
+      "id": "c04_s03",
+      "title": "Blue Bloater vs. Pink Puffer",
+      "presentation": "Two patients present with dyspnea and known COPD. Patient A is stocky with a chronic productive cough and cyanotic lips. Patient B is thin, barrel-chested, and breathing through pursed lips.",
+      "vitals": { "patientA": "Productive cough, cyanotic, stocky build", "patientB": "Thin, barrel chest, pursed-lip breathing" },
+      "question": "What classic COPD phenotypes do these two presentations represent?",
+      "options": [
+        "A: Both patients have identical presentations with no distinguishing features.",
+        "B: Patient A fits the classic 'blue bloater' (chronic bronchitis) pattern; Patient B fits the classic 'pink puffer' (emphysema) pattern — both are under the COPD umbrella and often overlap in practice.",
+        "C: Patient A has asthma; Patient B has pneumonia.",
+        "D: These presentations are unrelated to COPD."
+      ],
+      "correct": 1,
+      "explanation": "Patient A's productive cough and cyanotic, stocky appearance is classic for chronic bronchitis ('blue bloater'); Patient B's thin, barrel-chested build with pursed-lip breathing is classic for emphysema ('pink puffer'). Both fall under COPD, and real patients often show overlapping features of both classic archetypes.",
+      "clinicalPearl": "Blue bloater and pink puffer are teaching archetypes, not strict categories — most real COPD patients show a mix of both patterns."
+    }
+  ]
+}

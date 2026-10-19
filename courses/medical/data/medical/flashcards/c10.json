@@ -1,0 +1,19 @@
+{
+  "chapter": "c10",
+  "cards": [
+    { "id": "c10_fc01", "question": "What is polypharmacy?", "answer": "Typically defined as taking five or more medications; increases risk of adverse drug interactions, side effects, and dosing confusion.", "category": "Polypharmacy" },
+    { "id": "c10_fc02", "question": "What medication classes carry particular fall risk?", "answer": "Sedatives/hypnotics and some psychiatric medications, through sedation or impaired balance.", "category": "Polypharmacy" },
+    { "id": "c10_fc03", "question": "What medication classes carry particular bleeding risk after trauma?", "answer": "Anticoagulants and antiplatelet medications.", "category": "Polypharmacy" },
+    { "id": "c10_fc04", "question": "Why is gathering an accurate medication list a high-value field task?", "answer": "It reveals fall/bleeding risk factors, particularly anticoagulant use, that directly affect clinical decision-making.", "category": "Polypharmacy" },
+    { "id": "c10_fc05", "question": "Should a geriatric fall be assumed to be purely mechanical?", "answer": "No — falls can be the presenting symptom of a medical emergency (arrhythmia, stroke, hypoglycemia, orthostatic hypotension, infection, medication effect).", "category": "Falls" },
+    { "id": "c10_fc06", "question": "What should be asked about the circumstances of a geriatric fall?", "answer": "Witnessed vs. unwitnessed, any preceding warning symptoms (dizziness, palpitations), and ability to recall the event.", "category": "Falls" },
+    { "id": "c10_fc07", "question": "Why might occult injury be more likely to be missed in older adults?", "answer": "Older adults may have a blunted pain response.", "category": "Falls" },
+    { "id": "c10_fc08", "question": "Why is anticoagulant use plus head injury a significant red flag, even if minor?", "answer": "It carries meaningfully elevated risk of intracranial hemorrhage that can present with delayed onset of symptoms.", "category": "Falls" },
+    { "id": "c10_fc09", "question": "Does a normal initial neurologic exam exclude a developing intracranial bleed in an anticoagulated patient after head injury?", "answer": "No — a normal initial exam does not exclude a developing bleed, and this history must be clearly communicated at handoff.", "category": "Falls" },
+    { "id": "c10_fc10", "question": "What general findings may raise concern for elder abuse or neglect?", "answer": "Injury-mechanism inconsistency, poor hygiene/neglect signs, unexplained/patterned bruising, a controlling caregiver, signs of financial exploitation.", "category": "Elder Abuse" },
+    { "id": "c10_fc11", "question": "Is any single finding diagnostic of elder abuse?", "answer": "No — as with pediatric maltreatment, no single finding is diagnostic; the EMS role is recognition and objective documentation.", "category": "Elder Abuse" },
+    { "id": "c10_fc12", "question": "Are EMS providers mandatory reporters of suspected elder abuse?", "answer": "Yes, in essentially all jurisdictions.", "category": "Elder Abuse" },
+    { "id": "c10_fc13", "question": "What is the EMS provider's role regarding suspected elder abuse?", "answer": "Provide standard care, document objectively, maintain calm non-accusatory communication, and report reasonable suspicion through appropriate channels — not to investigate or confront.", "category": "Elder Abuse" },
+    { "id": "c10_fc14", "question": "What caregiver behavior may raise concern during an elder abuse assessment?", "answer": "Reluctance to leave the patient alone with EMS or answering all questions on the patient's behalf.", "category": "Elder Abuse" }
+  ]
+}

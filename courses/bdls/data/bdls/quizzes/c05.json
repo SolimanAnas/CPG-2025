@@ -1,0 +1,193 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "What is the leading cause of death in floods and hurricanes?",
+      "options": ["A. Electrocution", "B. Drowning, often vehicle-related", "C. Building collapse", "D. Lightning"],
+      "correct": 1,
+      "rationale": "Most flood/hurricane deaths are drownings, and a large share involve vehicles driven into floodwater — hence 'turn around, don't drown.'",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "A family presents after a storm with headache, nausea, and confusion. Their power is out and a generator runs in the garage. Most likely diagnosis?",
+      "options": ["A. Food poisoning", "B. Carbon monoxide poisoning", "C. Heat stroke", "D. Influenza"],
+      "correct": 1,
+      "rationale": "Indoor/attached-space generator use after outages is the classic post-storm CO scenario: nonspecific symptoms in multiple household members.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q03",
+      "question": "Crush syndrome after release of a compressed limb is driven by:",
+      "options": [
+        "A. Air embolism",
+        "B. Reperfusion washout of potassium, myoglobin, and acids from damaged muscle",
+        "C. Fat embolism only",
+        "D. Anaphylaxis"
+      ],
+      "correct": 1,
+      "rationale": "Releasing compression flushes muscle breakdown products into the circulation: hyperkalemia (dysrhythmias), myoglobinuric renal injury, acidosis, and shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q04",
+      "question": "For a casualty entrapped under rubble for 3 hours, when should aggressive IV fluids ideally begin?",
+      "options": [
+        "A. After hospital arrival",
+        "B. Before the compression is released",
+        "C. Only if urine output falls",
+        "D. Fluids are contraindicated"
+      ],
+      "correct": 1,
+      "rationale": "Pre-release volume loading protects the kidneys and blunts the reperfusion insult; release without preparation risks sudden hyperkalemic arrest and shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "The most dangerous immediate complication at the moment of extrication of a prolonged crush patient is:",
+      "options": ["A. Wound infection", "B. Hyperkalemic dysrhythmia and cardiovascular collapse", "C. Tetanus", "D. Kidney stones"],
+      "correct": 1,
+      "rationale": "The potassium surge at reperfusion can cause immediate fatal dysrhythmias — the reason for pre-release fluids and monitoring.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "The characteristic tornado injury pattern is:",
+      "options": [
+        "A. Drowning",
+        "B. Penetrating trauma and heavily contaminated complex wounds from ballistic debris",
+        "C. Pure thermal burns",
+        "D. Radiation sickness"
+      ],
+      "correct": 1,
+      "rationale": "Tornadoes accelerate debris to ballistic speeds, producing penetrating injuries and soil-contaminated wounds concentrated along the damage path.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q07",
+      "question": "Heat stroke is distinguished from heat exhaustion by:",
+      "options": [
+        "A. Sweating",
+        "B. Altered mental status with severe hyperthermia",
+        "C. Thirst",
+        "D. Muscle cramps"
+      ],
+      "correct": 1,
+      "rationale": "Central nervous system dysfunction (confusion, seizures, coma) with hyperthermia defines heat stroke — a true emergency demanding immediate active cooling.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "The correct prehospital priority for heat stroke is:",
+      "options": [
+        "A. Transport first, cool at hospital",
+        "B. Rapid active cooling started immediately, continued during transport",
+        "C. Oral rehydration only",
+        "D. Antipyretics like acetaminophen"
+      ],
+      "correct": 1,
+      "rationale": "Outcome tracks time above critical temperature — cool first (ice-water immersion where feasible) and keep cooling en route. Antipyretics do not work for environmental hyperthermia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "Which population is at highest risk of dying in a heat wave?",
+      "options": [
+        "A. Young athletes only",
+        "B. Elderly, isolated people without cooling, and those on thermoregulation-impairing medications",
+        "C. Office workers",
+        "D. Children in schools"
+      ],
+      "correct": 1,
+      "rationale": "Heat-wave mortality concentrates among the isolated elderly and chronically ill, who decompensate quietly at home — a case for community outreach during events.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q10",
+      "question": "What continuing hazard specifically threatens rescuers during earthquake response?",
+      "options": ["A. Lightning", "B. Aftershocks causing further collapse", "C. Storm surge", "D. Hail"],
+      "correct": 1,
+      "rationale": "Aftershocks can drop already-weakened structures onto rescuers — hazard assessment must be continuous and entry decisions disciplined.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q11",
+      "question": "Wounds sustained in floodwater should be treated as:",
+      "options": [
+        "A. Clean",
+        "B. Contaminated — high infection risk, aggressive cleaning, tetanus review",
+        "C. Requiring no follow-up",
+        "D. Immediately sutured without irrigation"
+      ],
+      "correct": 1,
+      "rationale": "Floodwater carries sewage, chemicals, and debris; wounds are contaminated with elevated infection risk, warranting thorough cleansing and tetanus prophylaxis review.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q12",
+      "question": "Two weeks after a hurricane, EDs remain over capacity. The MOST likely driver is:",
+      "options": [
+        "A. Ongoing storm trauma",
+        "B. Decompensated chronic disease — lost medications, dialysis, oxygen, and power-dependent devices",
+        "C. Tourist injuries",
+        "D. Insurance visits"
+      ],
+      "correct": 1,
+      "rationale": "The medical surge outlasts the trauma surge: chronic conditions decompensate when the care infrastructure fails — a planning target often missed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q13",
+      "question": "Fever clusters appearing in a crowded post-disaster shelter should prompt:",
+      "options": [
+        "A. No action — fevers are expected",
+        "B. Outbreak evaluation, isolation measures, and public-health notification",
+        "C. Closing the shelter immediately without assessment",
+        "D. Antibiotics for everyone"
+      ],
+      "correct": 1,
+      "rationale": "Crowded shelters breed respiratory and gastrointestinal outbreaks; clusters demand evaluation, infection-control measures, and health-department involvement.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "Which pairing of hazard and signature is correct?",
+      "options": [
+        "A. Flood — crush syndrome",
+        "B. Earthquake — entrapment with crush injury",
+        "C. Tornado — drowning",
+        "D. Heat wave — penetrating debris trauma"
+      ],
+      "correct": 1,
+      "rationale": "Earthquakes produce structural collapse with entrapment and crush. Floods drown, tornadoes shred with debris, heat waves cook.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q15",
+      "question": "Why does knowing a hazard's signature matter operationally?",
+      "options": [
+        "A. It is academic trivia",
+        "B. It lets command anticipate casualty types, request the right support, and warn hospitals before patients arrive",
+        "C. It replaces triage",
+        "D. It only matters for documentation"
+      ],
+      "correct": 1,
+      "rationale": "Signatures convert hazard type into predicted needs — burn beds, dialysis, pediatric capability — driving the Support component of the DISASTER Paradigm early.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q16",
+      "question": "A rescued crush patient develops dark tea-colored urine. This indicates:",
+      "options": [
+        "A. Normal dehydration",
+        "B. Myoglobinuria — muscle pigment threatening the kidneys; aggressive fluids and renal protection needed",
+        "C. Bladder infection",
+        "D. Dietary cause"
+      ],
+      "correct": 1,
+      "rationale": "Dark urine after crush = myoglobin from ruptured muscle. Untreated it precipitates acute kidney injury; management centers on volume expansion.",
+      "difficulty": "Hard"
+    }
+  ]
+}

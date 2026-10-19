@@ -1,0 +1,28 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "Asthma: Current GINA Step Framework vs. Legacy Phase Language",
+      "headers": ["GINA 2025 Step (Current)", "Symptom Control Pattern", "Legacy 'Phase' Language (Historical)", "Legacy Phase Description"],
+      "rows": [
+        ["Step 1", "Symptoms 1-2 days/week or less", "Phase 1", "Resolves spontaneously or with bronchodilators within 1-2 hours"],
+        ["Step 2", "Symptoms <3-5 days/week, normal/slightly reduced lung function", "Phase 2", "Does not respond to bronchodilators alone; needs anti-inflammatory treatment"],
+        ["Step 3", "Symptoms most days, night waking ≥1x/week, or reduced lung function", "Phase 3", "More refractory, escalating severity toward respiratory compromise"],
+        ["Step 4", "Daily symptoms, night waking ≥1x/week, low lung function, or recent exacerbation", "Phase 4", "Severe, treatment-refractory presentation approaching respiratory failure"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "Chronic Bronchitis vs. Emphysema — Classic Presentations",
+      "headers": ["Feature", "Chronic Bronchitis ('Blue Bloater')", "Emphysema ('Pink Puffer')"],
+      "rows": [
+        ["Strongest association", "Cigarette-smoke exposure", "Cigarette-smoke exposure"],
+        ["Classic cough", "Chronic productive cough", "Minimal productive cough"],
+        ["Classic body habitus", "Stockier build", "Thin, barrel-chested"],
+        ["Classic color", "Cyanotic ('blue')", "Pink, with pursed-lip breathing"],
+        ["Note", "Real patients often show overlapping features of both", "Real patients often show overlapping features of both"]
+      ]
+    }
+  ]
+}

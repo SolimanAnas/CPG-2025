@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "Sudden Confusion, Normal Baseline",
+      "presentation": "An 84-year-old woman, described by her daughter as 'sharp as a tack' until this morning, is now acutely confused, unable to recognize familiar family members, with symptoms fluctuating over the past several hours.",
+      "vitals": { "glucose": "88 mg/dL", "hr": "104 bpm", "temp": "38.2°C", "appearance": "Acutely confused, fluctuating" },
+      "question": "How should this presentation be classified and approached?",
+      "options": [
+        "A: As new-onset dementia, since she is elderly and confused.",
+        "B: As delirium until proven otherwise, given the acute onset and fluctuating course in a patient with a previously normal baseline — actively search for a reversible cause.",
+        "C: As normal aging requiring no further evaluation.",
+        "D: As a purely psychiatric presentation."
+      ],
+      "correct": 1,
+      "explanation": "Acute onset, fluctuating confusion in a patient with a documented normal cognitive baseline is delirium until proven otherwise — not a new dementia diagnosis made in the field. The mild fever and tachycardia should prompt investigation for a reversible cause such as infection.",
+      "clinicalPearl": "A previously sharp patient who's suddenly confused is delirium until proven otherwise — go looking for the reversible cause."
+    },
+    {
+      "id": "c09_s02",
+      "title": "Worsening in a Known Dementia Patient",
+      "presentation": "A 78-year-old man with known moderate dementia is brought in by his caregiver, who reports he is 'much more confused than his usual self' over the past day, along with new urinary urgency and mild suprapubic discomfort.",
+      "vitals": { "baseline": "Moderate dementia per caregiver, previously stable", "appearance": "More confused than usual baseline", "symptoms": "New urinary urgency, suprapubic discomfort" },
+      "question": "What is the correct interpretation of this acute change?",
+      "options": [
+        "A: This is simply his dementia progressing naturally and requires no further workup.",
+        "B: This represents a possible superimposed delirium — likely triggered by a urinary tract infection given the new urinary symptoms — and warrants evaluation rather than dismissal.",
+        "C: This is unrelated to his cognitive baseline and requires no action.",
+        "D: This should be treated only as a behavioral emergency."
+      ],
+      "correct": 1,
+      "explanation": "A sudden worsening from a known, stable dementia baseline — especially with new urinary symptoms suggesting a possible UTI — should be recognized as possible superimposed delirium rather than simply attributed to dementia progression. UTI is a classic reversible cause of delirium in older adults.",
+      "clinicalPearl": "Known dementia doesn't mean 'nothing to investigate' when a caregiver reports a real change from baseline — look for a delirium trigger like UTI."
+    },
+    {
+      "id": "c09_s03",
+      "title": "No Chest Pain, But Something's Wrong",
+      "presentation": "A 81-year-old man reports only mild fatigue and slight shortness of breath for the past day, with no chest pain. His family says he 'just doesn't seem himself.'",
+      "vitals": { "hr": "96 bpm, irregular", "rr": "20/min", "appearance": "Mildly fatigued, no distress" },
+      "question": "Should the absence of chest pain reassure the provider that this is not a cardiac event?",
+      "options": [
+        "A: Yes, absence of chest pain reliably rules out MI at any age.",
+        "B: No — older adults can present with 'silent MI' (confusion, weakness, or dyspnea alone, without chest pain), so this warrants full cardiac evaluation despite the mild-seeming presentation.",
+        "C: Yes, but only in patients under 70.",
+        "D: The family's report is irrelevant to the clinical picture."
+      ],
+      "correct": 1,
+      "explanation": "Older adults frequently present with 'silent MI' — myocardial infarction without chest pain, instead showing as vague symptoms like fatigue, weakness, or mild dyspnea. The family's observation that he 'doesn't seem himself,' combined with an irregular heart rate, warrants full cardiac evaluation despite the deceptively mild presentation.",
+      "clinicalPearl": "No chest pain doesn't mean no heart attack in an older patient — a vague 'not himself' complaint deserves a full workup."
+    }
+  ]
+}

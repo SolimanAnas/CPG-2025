@@ -1,0 +1,69 @@
+{
+  "id": "c06",
+  "title": "Neurological Emergencies",
+  "shortTitle": "Neurological Emergencies",
+  "estimatedStudyTime": 28,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize Cushing's triad and its significance for increased intracranial pressure.",
+    "Apply the FAST stroke assessment mnemonic.",
+    "Explain the importance of a neurological exam in a patient with headache.",
+    "Recognize meningitis's classic triad of findings.",
+    "Distinguish stroke-mimicking presentations, especially diabetic emergencies."
+  ],
+  "summary": [
+    {
+      "title": "Cushing's Triad: A Sign of Rising Intracranial Pressure",
+      "content": "Cushing's triad — hypertension, bradycardia, and an altered respiratory pattern — is a late but ominous sign of significantly increased intracranial pressure. It reflects the brainstem's response to being compressed as pressure inside the skull rises, often from bleeding, swelling, or a mass effect. Recognizing this triad means recognizing a neurological emergency that may need rapid neurosurgical intervention; by the time it fully appears, the pressure elevation is already severe."
+    },
+    {
+      "title": "FAST: Rapid Stroke Recognition",
+      "content": "Stroke assessment protocols commonly use FAST — Face (drooping), Arm (drift or weakness), Speech (slurred or difficulty), Time (note last known well time) — as a rapid field screening tool. The 'Time' component is as important as the physical findings, because eligibility for time-sensitive stroke treatments depends on precisely knowing when the patient was last seen normal, not just when symptoms were discovered."
+    },
+    {
+      "title": "The Neurological Exam in Headache",
+      "content": "When assessing a patient with a headache, a neurological exam should be performed to rule out more serious causes — a headache alone is common and usually benign, but red flags such as the 'worst headache of my life,' new focal neurological deficits, altered mental status, fever with neck stiffness, or a headache with a Cushing's-triad pattern change the calculus entirely. The exam is what separates a benign headache from a stroke, bleed, or infection presenting as head pain."
+    },
+    {
+      "title": "Meningitis: Fever, Nuchal Rigidity, and Altered Mentation",
+      "content": "Meningitis is an infection and is associated with fever, nuchal rigidity (neck stiffness), and altered mental status. Because it is an infectious, potentially rapidly progressive condition, recognizing this pattern — rather than dismissing it as a simple headache or viral illness — is important for early treatment and, when suspected, appropriate provider protection with standard/droplet precautions given possible bacterial causes."
+    },
+    {
+      "title": "Stroke Mimics: Diabetic Emergencies",
+      "content": "Diabetic emergencies (hypoglycemia or hyperglycemia) can present with stroke-like symptoms — unilateral weakness, slurred speech, or altered mental status that closely mimics an acute stroke. Checking blood glucose is therefore a mandatory, rapid step in any suspected stroke presentation, since correcting a low glucose can fully reverse the neurological deficit in minutes, while a true stroke would not respond to glucose administration at all."
+    }
+  ],
+  "clinicalPearls": [
+    "Cushing's Triad includes hypertension, bradycardia, and an altered respiratory pattern — indicating significantly elevated intracranial pressure.",
+    "Review the stroke assessment protocol (e.g., FAST: Face, Arm, Speech, Time).",
+    "When assessing a patient with a headache, perform a neurological exam to rule out serious causes.",
+    "Meningitis is associated with fever, nuchal rigidity, and altered mental status.",
+    "Diabetic emergencies can present with stroke-like symptoms — always check glucose."
+  ],
+  "redFlags": [
+    "Hypertension with bradycardia and an irregular respiratory pattern together — Cushing's triad, a neurosurgical emergency.",
+    "A headache described as the 'worst of my life' or with new focal deficits.",
+    "Fever, neck stiffness, and altered mental status together — think meningitis."
+  ],
+  "commonMistakes": [
+    "Treating stroke-like symptoms without first checking glucose, missing a reversible hypoglycemic mimic.",
+    "Dismissing a severe or unusual headache without a neurological exam.",
+    "Missing the 'Time' component of FAST by not establishing a precise last-known-well time."
+  ],
+  "memoryAids": [
+    "Cushing's Triad: high BP, low HR, irregular breathing — pressure is rising.",
+    "FAST: Face, Arm, Speech, Time.",
+    "Headache + fever + stiff neck = think meningitis.",
+    "Glucose first in every 'stroke' call — hypoglycemia is the great stroke mimic."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Neurological Emergency Assessment",
+      "content": "Altered neurological presentation\n  → Check glucose FIRST if any stroke-like symptoms (rule out hypo/hyperglycemia mimic)\n  → Apply FAST: Face, Arm, Speech, Time (last known well)\n  → Vitals show hypertension + bradycardia + abnormal respiratory pattern? → Cushing's Triad — suspect elevated ICP, urgent transport\n  → Headache present? → Perform full neuro exam; red flags (worst-ever, focal deficit, fever+stiff neck) escalate concern\n  → Fever + nuchal rigidity + altered mental status? → Suspect meningitis — precautions + rapid transport"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Neurology category",
+    "National EMS Education Standards — Neurological emergencies"
+  ]
+}

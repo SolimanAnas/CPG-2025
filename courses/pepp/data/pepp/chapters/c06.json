@@ -1,0 +1,68 @@
+{
+  "id": "c06",
+  "title": "Shock Recognition & Field Management",
+  "shortTitle": "Shock Recognition & Management",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define shock as inadequate tissue perfusion rather than a specific blood pressure value.",
+    "Distinguish compensated from decompensated (hypotensive) shock in children.",
+    "Recognize the major categories of pediatric shock and their field-relevant distinguishing features.",
+    "Identify the PAT and vital sign findings that suggest shock.",
+    "Describe field management priorities for compensated and decompensated shock."
+  ],
+  "summary": [
+    {
+      "title": "Shock Is a Perfusion Problem, Not a Blood Pressure Number",
+      "content": "Shock is inadequate delivery of oxygen and nutrients to meet tissue demands — it is a clinical diagnosis based on perfusion, not a specific blood pressure. Children compensate for shock remarkably well through tachycardia and vasoconstriction, which means blood pressure can remain normal well into shock. By the time hypotension appears, a child has exhausted their compensatory mechanisms and is decompensating rapidly. This is why PEPP emphasizes recognizing compensated shock from perfusion signs — capillary refill, skin color/temperature, pulse quality, mental status — rather than waiting for a low blood pressure reading."
+    },
+    {
+      "title": "Compensated vs Decompensated Shock",
+      "content": "Compensated shock: tachycardia, delayed capillary refill, cool/mottled skin (or warm/flushed in early distributive/septic shock), narrowed pulse pressure, and a normal systolic blood pressure for age. Decompensated shock: the same perfusion findings plus hypotension for age, and typically altered mental status. The transition from compensated to decompensated shock can be abrupt, and hypotension in a child is a late and ominous sign, not an early warning."
+    },
+    {
+      "title": "Major Categories of Pediatric Shock",
+      "content": "Hypovolemic shock (most common in children overall) results from fluid or blood loss — vomiting/diarrhea with dehydration, hemorrhage, or burns. Distributive shock results from abnormal vessel tone/permeability — septic shock, anaphylactic shock, and neurogenic shock (rare in children). Cardiogenic shock results from pump failure — congenital heart disease, myocarditis, or arrhythmia. Obstructive shock results from a physical obstruction to blood flow — tension pneumothorax, cardiac tamponade, or massive pulmonary embolism (rare in children). Recognizing the likely category from history and exam guides field treatment (e.g., fluid resuscitation for hypovolemic shock versus needle decompression for obstructive shock from tension pneumothorax)."
+    },
+    {
+      "title": "Field Recognition",
+      "content": "On the PAT, shock often first appears as an Appearance abnormality (irritability progressing to lethargy) with normal-appearing work of breathing, or as abnormal Circulation to Skin (pallor, mottling, cyanosis). On the primary assessment, look for tachycardia out of proportion to fever/anxiety, delayed capillary refill (over 2 seconds), weak or absent peripheral pulses with strong central pulses, cool extremities with a temperature gradient, and narrowed pulse pressure. Fever plus poor perfusion with warm, flushed skin and bounding pulses suggests early septic (distributive) shock rather than hypovolemic shock."
+    },
+    {
+      "title": "Field Management",
+      "content": "General priorities: supplemental oxygen, positioning (supine, legs elevated if tolerated), keep the child warm, and rapid transport. For suspected hypovolemic or septic shock, isotonic fluid boluses are indicated per local protocol. For suspected anaphylactic shock, epinephrine is the priority treatment. For suspected obstructive shock from tension pneumothorax, needle decompression is indicated per protocol/scope of practice. PEPP frames this chapter as field recognition and initial stabilization; drug dosing tables and advanced resuscitation algorithms for shock and arrest are the domain of the PALS reviewer."
+    }
+  ],
+  "clinicalPearls": [
+    "Shock is a perfusion problem — blood pressure can be normal in compensated shock. Don't wait for hypotension to recognize shock.",
+    "Hypotension in a child is a late, ominous sign — it means decompensation, not the first sign of shock.",
+    "Warm, flushed skin with bounding pulses and fever can be shock too — early distributive (septic) shock often looks different from cold, mottled hypovolemic shock.",
+    "Match treatment to category: fluids for hypovolemic/septic, epinephrine for anaphylactic, needle decompression for obstructive tension pneumothorax."
+  ],
+  "redFlags": [
+    "Delayed capillary refill (>2 seconds) with normal blood pressure — compensated shock until proven otherwise.",
+    "Tachycardia out of proportion to fever or anxiety.",
+    "Any hypotension for age — this represents decompensated shock and is a late finding."
+  ],
+  "commonMistakes": [
+    "Waiting for hypotension before recognizing and treating shock.",
+    "Assuming all shock presents as cold and mottled, missing warm, flushed early septic shock.",
+    "Treating every shock category with fluids alone, without considering epinephrine (anaphylactic) or needle decompression (obstructive) when indicated."
+  ],
+  "memoryAids": [
+    "Normal BP does not mean no shock — compensated shock hides behind a normal number.",
+    "Cold and mottled or warm and flushed — both can be shock.",
+    "Four categories: low volume (hypovolemic), bad tone (distributive), bad pump (cardiogenic), blocked flow (obstructive).",
+    "Hypotension = decompensating now, not a warning of shock to come — it already arrived."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Shock Recognition and Category-Matched Management",
+      "content": "Suspect shock from PAT/primary assessment (abnormal Appearance and/or Circulation to Skin, tachycardia, delayed cap refill, weak pulses)\n  → Check blood pressure for age:\n     Normal BP + perfusion signs → Compensated shock\n     Low BP for age + perfusion signs (+ often altered mentation) → Decompensated shock (late, ominous)\n  → Identify likely category from history/exam:\n     Fluid/blood loss history → Hypovolemic → isotonic fluid bolus per protocol\n     Fever + warm/flushed or cold/mottled + poor perfusion → Distributive/septic → isotonic fluid bolus per protocol\n     Allergen exposure + rash/angioedema/wheeze → Anaphylactic (distributive) → epinephrine priority\n     Cardiac history/muffled heart sounds/JVD → Cardiogenic → cautious fluids, avoid overload\n     Trauma + unilateral absent breath sounds/tracheal deviation → Obstructive (tension pneumothorax) → needle decompression per protocol\n  → Supportive care: oxygen, positioning, keep warm, rapid transport\n  → For advanced shock/arrest resuscitation depth: see PALS reviewer"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Shock",
+    "courses/pals/data/pals — cross-referenced for advanced shock/arrest management depth"
+  ]
+}

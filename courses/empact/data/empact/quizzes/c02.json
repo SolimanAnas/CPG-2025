@@ -1,0 +1,175 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "Which of the following is an indication for BVM ventilation?",
+      "options": ["A. Normal rate and depth of breathing", "B. Inadequate tidal volume", "C. Mild anxiety", "D. A patient who is talking in full sentences"],
+      "correct": 1,
+      "rationale": "Inadequate tidal volume is a core BVM indication, along with apnea, bradypnea, cyanosis, and altered mental status with poor respiratory effort.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "A patient is unresponsive with no gag reflex. Which airway adjunct is appropriate?",
+      "options": ["A. NPA", "B. OPA", "C. Neither is appropriate", "D. Only an advanced airway"],
+      "correct": 1,
+      "rationale": "An OPA is used in unresponsive patients without a gag reflex.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "A semi-conscious patient with an intact gag reflex needs an airway adjunct. Which is preferred?",
+      "options": ["A. OPA", "B. NPA", "C. No adjunct can be used", "D. Endotracheal tube only"],
+      "correct": 1,
+      "rationale": "The NPA is generally better tolerated in patients with an intact gag reflex or who are semi-conscious.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q04",
+      "question": "In which situation is the NPA contraindicated?",
+      "options": [
+        "A. Simple nosebleed",
+        "B. Suspected basilar skull fracture or significant mid-face trauma",
+        "C. Intact gag reflex",
+        "D. Semi-consciousness"
+      ],
+      "correct": 1,
+      "rationale": "Suspected basilar skull fracture or significant mid-face trauma is a contraindication to the NPA due to the risk of intracranial tube placement.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "A patient having a seizure vomits during the postictal period. What is the immediate airway action?",
+      "options": [
+        "A. Insert an OPA immediately regardless of gag reflex",
+        "B. Turn the patient onto their side to allow drainage, then suction as needed",
+        "C. Sit the patient fully upright",
+        "D. Withhold any airway intervention until fully alert"
+      ],
+      "correct": 1,
+      "rationale": "Positioning on the side allows vomit to drain out rather than pool or be aspirated; suction addresses what positioning alone cannot clear.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q06",
+      "question": "What does stridor indicate?",
+      "options": ["A. Lower airway bronchospasm", "B. Upper airway obstruction", "C. Normal breath sounds", "D. Pleural effusion"],
+      "correct": 1,
+      "rationale": "Stridor is a high-pitched sound indicating upper airway (proximal) obstruction, distinct from lower-airway wheezing, and is potentially life-threatening.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q07",
+      "question": "A patient is breathing 14 times per minute but with minimal visible chest rise. What should you consider?",
+      "options": [
+        "A. Breathing is adequate since the rate is normal",
+        "B. Tidal volume may be inadequate despite a normal rate, warranting assisted ventilation",
+        "C. No further assessment is needed",
+        "D. This always indicates cardiac arrest"
+      ],
+      "correct": 1,
+      "rationale": "Rate alone does not confirm adequate ventilation; poor tidal volume at a normal rate can still require BVM support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q08",
+      "question": "Why does altered mental status increase airway management priority across many different diagnoses?",
+      "options": [
+        "A. It doesn't — airway risk depends only on the specific diagnosis",
+        "B. Altered LOC removes protective airway reflexes (cough, swallow, tongue tone), regardless of the underlying cause",
+        "C. Only trauma patients with altered LOC have airway risk",
+        "D. Altered mental status has no bearing on airway management"
+      ],
+      "correct": 1,
+      "rationale": "Loss of protective reflexes is a common risk factor across overdose, stroke, sepsis, and other causes of altered LOC — the airway priority is consistent even when the diagnosis differs.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q09",
+      "question": "A patient bites down and gags on an inserted OPA. What should you do?",
+      "options": [
+        "A. Force it further in",
+        "B. Remove it — a gag reflex means the OPA is not tolerated",
+        "C. Leave it in place and proceed",
+        "D. Switch to a larger OPA"
+      ],
+      "correct": 1,
+      "rationale": "An OPA is only for patients without a gag reflex; if gagging occurs, the OPA should be removed to avoid triggering vomiting or aspiration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q10",
+      "question": "Which finding should make you treat an airway complaint with the highest urgency?",
+      "options": ["A. Mild wheeze on exhalation", "B. New-onset stridor", "C. A slightly elevated respiratory rate", "D. A cough with clear sputum"],
+      "correct": 1,
+      "rationale": "New stridor signals proximal airway obstruction that can progress to complete obstruction rapidly, requiring urgent escalation and preparation for advanced airway support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q11",
+      "question": "A fall victim with suspected basilar skull fracture needs an airway adjunct and has an intact gag reflex. What should you use?",
+      "options": [
+        "A. NPA, since gag reflex is present",
+        "B. OPA is not appropriate (gag present) and NPA is contraindicated (skull fracture); manage the airway by positioning/suction and consider other adjuncts per protocol",
+        "C. Force an NPA regardless of the fracture risk",
+        "D. No airway management is needed"
+      ],
+      "correct": 1,
+      "rationale": "With an intact gag reflex, OPA is inappropriate; with suspected basilar skull fracture, NPA is contraindicated due to intracranial placement risk — positioning, suction, and other protocol-appropriate measures apply instead.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q12",
+      "question": "Cyanosis in a breathing patient is significant because it suggests:",
+      "options": [
+        "A. Adequate oxygenation",
+        "B. Inadequate oxygenation, an indication to consider assisted ventilation",
+        "C. A normal finding in all patients",
+        "D. A skin allergy"
+      ],
+      "correct": 1,
+      "rationale": "Cyanosis reflects inadequate oxygenation and is one of the listed indications for BVM ventilation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q13",
+      "question": "Which pairing is correct regarding airway adjunct selection?",
+      "options": [
+        "A. Gag reflex present → OPA",
+        "B. Gag reflex absent (unresponsive) → OPA; gag reflex present/semi-conscious → NPA",
+        "C. Both adjuncts are interchangeable regardless of gag reflex",
+        "D. Neither adjunct depends on gag reflex status"
+      ],
+      "correct": 1,
+      "rationale": "OPA use requires absence of a gag reflex; NPA is chosen when a gag reflex is present or the patient is semi-conscious, as it is generally better tolerated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q14",
+      "question": "Why is stridor described as a 'red flag' finding rather than a routine respiratory sound?",
+      "options": [
+        "A. Because it is always benign",
+        "B. Because it indicates a proximal airway problem that can rapidly progress to complete obstruction",
+        "C. Because it only occurs in healthy patients",
+        "D. Because it requires no further action"
+      ],
+      "correct": 1,
+      "rationale": "The proximal location of the obstruction causing stridor means airway compromise can worsen quickly, demanding urgent recognition and action.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q15",
+      "question": "A patient is breathing 22 times per minute with good tidal volume and no distress. Is BVM ventilation indicated?",
+      "options": [
+        "A. Yes, all patients need BVM support",
+        "B. No — adequate rate, volume, and effort without distress do not meet BVM indications",
+        "C. Yes, because the rate is above 20",
+        "D. Only if the patient requests it"
+      ],
+      "correct": 1,
+      "rationale": "BVM ventilation is reserved for apnea, bradypnea, inadequate tidal volume, cyanosis, or altered mental status with poor effort — not simply an elevated but adequate respiratory rate.",
+      "difficulty": "Medium"
+    }
+  ]
+}

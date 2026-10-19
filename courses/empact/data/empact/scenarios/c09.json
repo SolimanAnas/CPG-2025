@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "The Fall That Wasn't Just a Fall",
+      "presentation": "An 86-year-old nursing home resident with a chronic indwelling urinary catheter was found on the floor by staff. She has no obvious injury but is more confused than her baseline and mildly warm to the touch.",
+      "vitals": { "hr": "108 bpm", "bp": "96/60 mmHg", "temp": "99.9 F (mildly elevated)", "loc": "More confused than baseline" },
+      "question": "What should be strongly suspected despite the seemingly mild fever?",
+      "options": [
+        "A: A simple mechanical fall with no other workup needed.",
+        "B: Sepsis, likely from a catheter-associated urinary tract infection — elderly patients can present atypically without a robust fever.",
+        "C: Dehydration only, unrelated to infection.",
+        "D: Normal age-related confusion."
+      ],
+      "correct": 1,
+      "explanation": "An indwelling catheter is a classic sepsis source in elderly patients, who may not mount a strong fever response. The combination of a fall (which can itself be a sepsis presentation), new confusion, tachycardia, and borderline hypotension should raise strong suspicion for sepsis despite the only mildly elevated temperature.",
+      "clinicalPearl": "In the elderly, a 'fall' can BE the sepsis presentation — don't let a mild temperature reassure you."
+    },
+    {
+      "id": "c09_s02",
+      "title": "Swelling After the Sting",
+      "presentation": "A 28-year-old man was stung by a wasp 5 minutes ago. He now has hives across his chest, a harsh inspiratory sound, and feels lightheaded.",
+      "vitals": { "hr": "126 bpm", "bp": "82/50 mmHg", "rr": "26 bpm, stridor present", "skin": "Hives, flushed" },
+      "question": "What is the correct FIRST treatment?",
+      "options": [
+        "A: Diphenhydramine by mouth, then reassess.",
+        "B: IM epinephrine immediately — hypotension and airway swelling (stridor) are the most diagnostic, life-threatening findings of anaphylaxis.",
+        "C: Wait 10 minutes to see if symptoms resolve on their own.",
+        "D: Ice packs to the sting site only."
+      ],
+      "correct": 1,
+      "explanation": "This patient shows the two most diagnostic anaphylaxis findings — hypotension and airway swelling (stridor) — following a known allergen exposure. IM epinephrine is the first-line treatment and should not be delayed for an antihistamine, which acts too slowly to address the acute threat.",
+      "clinicalPearl": "Stridor plus hypotension after a sting is not a 'wait and see' — it's an epinephrine now."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Antihistamine First, By Mistake",
+      "presentation": "A rookie provider gives an anaphylaxis patient oral diphenhydramine as the first treatment, planning to 'see how she does' before considering epinephrine. The patient's blood pressure continues to fall and her airway swelling appears to be worsening.",
+      "vitals": { "hr": "134 bpm", "bp": "76/44 mmHg and falling", "rr": "Increasing effort, worsening stridor" },
+      "question": "What is the correct correction to this approach?",
+      "options": [
+        "A: Continue with antihistamines and add a second oral dose.",
+        "B: Administer IM epinephrine immediately — it should never have been delayed, since antihistamines do not reverse acute hypotension or airway compromise.",
+        "C: Wait longer to see if the antihistamine takes effect.",
+        "D: Switch directly to oral corticosteroids instead."
+      ],
+      "correct": 1,
+      "explanation": "Delaying epinephrine for an antihistamine is a recognized, dangerous error. Epinephrine must be given immediately once anaphylaxis is identified by its most diagnostic findings (hypotension, airway swelling) — antihistamines and corticosteroids are adjuncts that act too slowly for this acute, life-threatening presentation.",
+      "clinicalPearl": "There is no 'see how she does' step between recognizing anaphylaxis and giving epinephrine."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c05",
+  "cases": [
+    {
+      "id": "c05_s01",
+      "title": "Under the Slab",
+      "presentation": "After an earthquake, a 40-year-old man has been pinned across both thighs by a concrete slab for 4 hours. Rescue crews are 10 minutes from lifting the slab. He is alert, in pain, with stable vitals.",
+      "vitals": { "hr": "104 bpm", "bp": "128/84 mmHg", "entrapment": "4 hours, both thighs", "extrication": "10 min away" },
+      "question": "What must happen BEFORE the slab is lifted?",
+      "options": [
+        "A: Nothing — lift immediately, he is stable.",
+        "B: Establish IV access and begin aggressive isotonic fluids, with cardiac monitoring ready, anticipating hyperkalemia and hypotension at release.",
+        "C: Give potassium supplements for his muscle damage.",
+        "D: Apply heat packs to the legs."
+      ],
+      "correct": 1,
+      "explanation": "Four hours of compression means crush syndrome physiology is loaded and waiting. Pre-release volume expansion and monitoring blunt the reperfusion surge of potassium, myoglobin, and acid — lifting first and treating later risks arrest at the moment of rescue.",
+      "clinicalPearl": "In prolonged crush, the rescue itself is the resuscitation event — prepare the patient before you free him."
+    },
+    {
+      "id": "c05_s02",
+      "title": "Quiet Apartment, Third Heat Day",
+      "presentation": "On day 3 of a heat wave, you find an 82-year-old woman alone in a top-floor apartment with no air conditioning. She is hot to the touch, confused, and mumbling. Skin is flushed and dry.",
+      "vitals": { "temp": "41.2 C (106.2 F)", "hr": "128 bpm", "bp": "96/60 mmHg", "loc": "Confused" },
+      "question": "What is the diagnosis and priority?",
+      "options": [
+        "A: Heat exhaustion — oral fluids and rest.",
+        "B: Heat stroke — begin rapid active cooling immediately and continue during transport.",
+        "C: Sepsis — antibiotics first.",
+        "D: Stroke — thrombolytics."
+      ],
+      "correct": 1,
+      "explanation": "Severe hyperthermia plus altered mental status is heat stroke. Survival tracks how fast core temperature is lowered: start aggressive active cooling on scene (evaporative/ice packs; immersion where feasible) and keep cooling en route — 'cool first, transport cooling.'",
+      "clinicalPearl": "Heat waves kill the isolated elderly quietly at home — and minutes of cooling matter more than minutes of driving."
+    },
+    {
+      "id": "c05_s03",
+      "title": "The Second Week Surge",
+      "presentation": "Twelve days after a major hurricane, the regional hospital remains 40% over capacity. Today's arrivals include dialysis patients who missed sessions, COPD patients without power for oxygen concentrators, diabetics without insulin refrigeration, and several shelter residents with febrile gastroenteritis.",
+      "vitals": { "days post-storm": "12", "ED status": "140% capacity", "trauma cases": "Few" },
+      "question": "What does this pattern represent and what should planners learn?",
+      "options": [
+        "A: An unrelated coincidence.",
+        "B: The public-health tail — chronic-disease decompensation and shelter outbreaks outlast the trauma phase and must be planned for.",
+        "C: Evidence the hurricane response failed.",
+        "D: A reason to discharge chronic patients faster."
+      ],
+      "correct": 1,
+      "explanation": "The medical surge after a natural disaster outlasts the injury surge: interrupted dialysis, oxygen, refrigeration, and medications decompensate chronic disease, while shelters incubate outbreaks. Preparedness must include chronic-care continuity, shelter health services, and multi-week staffing plans.",
+      "clinicalPearl": "Storms injure for a day and decompensate for a month — plan the tail, not just the landfall."
+    }
+  ]
+}

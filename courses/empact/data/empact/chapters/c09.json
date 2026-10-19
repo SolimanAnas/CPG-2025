@@ -1,0 +1,68 @@
+{
+  "id": "c09",
+  "title": "Infectious Disease, Sepsis & Anaphylaxis",
+  "shortTitle": "Sepsis & Anaphylaxis",
+  "estimatedStudyTime": 28,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize sepsis's association with fever and altered mental status.",
+    "Identify common sources of sepsis in the elderly.",
+    "Recognize the most diagnostic findings of anaphylaxis.",
+    "State first-line treatment for anaphylaxis and the role of adjunct medications.",
+    "Explain why anaphylaxis and sepsis both belong in the distributive shock category."
+  ],
+  "summary": [
+    {
+      "title": "Sepsis: Fever Plus Altered Mental Status",
+      "content": "Sepsis is frequently associated with fever and altered level of consciousness. The combination of these two findings — even without an obvious source at first glance — should prompt an active search for infection and consideration of sepsis, since early recognition and treatment meaningfully change outcomes. Tachycardia, tachypnea, and hypotension may follow as the septic process progresses toward distributive shock."
+    },
+    {
+      "title": "Common Sepsis Sources in the Elderly",
+      "content": "A common cause of sepsis in the elderly is pneumonia or a urinary tract infection secondary to an indwelling urinary catheter. Elderly patients may not mount a classic fever response and can present instead with vague complaints — falls, generalized weakness, or new confusion — making a high index of suspicion and a deliberate search for a source (lungs, urinary tract, skin/wounds, abdomen) especially important in this population."
+    },
+    {
+      "title": "Anaphylaxis: The Most Diagnostic Findings",
+      "content": "Hypotension and airway swelling (stridor, angioedema) are most diagnostic for anaphylaxis. Anaphylaxis is a rapid-onset, systemic allergic reaction involving multiple organ systems — skin (hives, flushing), respiratory (wheeze, stridor, angioedema), cardiovascular (hypotension, tachycardia), and gastrointestinal (nausea, vomiting) — typically following exposure to a known or suspected allergen (food, medication, insect sting)."
+    },
+    {
+      "title": "Anaphylaxis Treatment: Epinephrine First",
+      "content": "Anaphylaxis treatment: IM epinephrine is first-line. Antihistamines and corticosteroids are adjuncts, not substitutes — they have a slower onset of action and do not reverse the acute hypotension and airway compromise the way epinephrine does. Delaying epinephrine in favor of an antihistamine is a recognized, dangerous error, since anaphylaxis can progress to complete airway obstruction or cardiovascular collapse within minutes."
+    },
+    {
+      "title": "Anaphylaxis and Sepsis: Both Distributive Shock",
+      "content": "Anaphylaxis and sepsis are both forms of distributive shock — pathologic vasodilation that drops systemic vascular resistance and blood pressure despite (initially) normal or even increased cardiac output. Recognizing this shared physiology connects this chapter to the shock chapter: keeping the patient warm, aggressive fluid resuscitation as indicated, and rapid identification and treatment of the underlying trigger (allergen removal/epinephrine for anaphylaxis; source control/antibiotics for sepsis) are all part of managing distributive shock, whichever cause is driving it."
+    }
+  ],
+  "clinicalPearls": [
+    "Sepsis is frequently associated with fever and altered level of consciousness.",
+    "A common cause of sepsis in the elderly is pneumonia or UTI secondary to an indwelling urinary catheter.",
+    "Hypotension and airway swelling (stridor, angioedema) are most diagnostic for anaphylaxis.",
+    "Anaphylaxis treatment: IM epinephrine is first-line. Antihistamines and corticosteroids are adjuncts."
+  ],
+  "redFlags": [
+    "An elderly patient with new confusion or a fall and no other obvious cause — actively search for a sepsis source.",
+    "Any allergen exposure with stridor, angioedema, or hypotension — treat as anaphylaxis and give epinephrine without delay.",
+    "Reaching for an antihistamine before epinephrine in a patient with airway or cardiovascular findings of anaphylaxis."
+  ],
+  "commonMistakes": [
+    "Missing sepsis in an elderly patient because fever is absent or the complaint seems vague.",
+    "Treating anaphylaxis with antihistamines alone while withholding epinephrine.",
+    "Not connecting sepsis and anaphylaxis to the shared distributive-shock framework and its warming/fluid principles."
+  ],
+  "memoryAids": [
+    "Fever + confusion = think sepsis, find the source.",
+    "Elderly + confusion/fall + no clear cause = look for pneumonia or a catheter-associated UTI.",
+    "Anaphylaxis's most diagnostic pair: hypotension + airway swelling.",
+    "Epi first, always — antihistamines and steroids are backup, not the opener."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Sepsis and Anaphylaxis Recognition and Treatment",
+      "content": "Fever + altered mental status? → Suspect SEPSIS\n  → Actively search for source: lungs, urinary tract (esp. indwelling catheter), skin/wounds, abdomen — especially in elderly patients\n  → Support ABCs, fluids per protocol, rapid transport\n\nKnown/suspected allergen exposure + reaction?\n  → Hypotension AND/OR airway swelling (stridor, angioedema) present? → ANAPHYLAXIS\n     → Give IM epinephrine FIRST-LINE without delay\n     → Antihistamines/corticosteroids as ADJUNCTS only\n  → Both sepsis and anaphylaxis = distributive shock: keep warm, support fluids, treat the underlying cause"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Infectious Disease, Anaphylaxis, and Pharmacology categories",
+    "National EMS Education Standards — Immunologic and infectious emergencies"
+  ]
+}

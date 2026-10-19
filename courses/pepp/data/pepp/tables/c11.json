@@ -1,0 +1,17 @@
+{
+  "chapter": "c11",
+  "tables": [
+    {
+      "id": "c11_t01",
+      "title": "Newborn Resuscitation Decision Thresholds",
+      "headers": ["Finding", "Threshold", "Action"],
+      "rows": [
+        ["Initial questions", "Term + good tone + breathing/crying, all yes", "Routine care with mother"],
+        ["Initial questions", "Any answer is no", "Move to warmer, begin initial steps"],
+        ["Heart rate after initial steps", "< 100 bpm, or apneic/gasping", "Begin positive-pressure ventilation (PPV)"],
+        ["Heart rate after 30 sec effective PPV", "< 60 bpm", "Begin chest compressions coordinated with PPV"],
+        ["Heart rate after 30 sec effective PPV", "≥ 60 bpm", "Continue PPV, reassess frequently"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "chapter": "c01",
+  "cards": [
+    { "id": "c01_fc01", "question": "What is differential diagnosis?", "answer": "The process of narrowing a wide field of possible causes down to the most probable explanation(s) — going from possibilities to probabilities.", "category": "Core Concepts" },
+    { "id": "c01_fc02", "question": "What is the highest priority in the primary assessment?", "answer": "Identifying and treating life threats first — airway, breathing, circulation — before proceeding to history and exam.", "category": "Core Concepts" },
+    { "id": "c01_fc03", "question": "What roughly is the split between history and physical exam value in the medical patient?", "answer": "About 80% of the information comes from the history and about 20% from the physical examination.", "category": "Assessment" },
+    { "id": "c01_fc04", "question": "What does scene size-up include?", "answer": "Initial observations for safety, standard precautions, the nature of the illness, and clues to the cause.", "category": "Assessment" },
+    { "id": "c01_fc05", "question": "What does the primary assessment establish?", "answer": "General impression, level of consciousness, identification/treatment of life threats (A-B-C), and the patient's overall priority.", "category": "Assessment" },
+    { "id": "c01_fc06", "question": "What does the secondary assessment consist of?", "answer": "History, physical examination, and vital signs.", "category": "Assessment" },
+    { "id": "c01_fc07", "question": "What is reassessment and when is it done more frequently?", "answer": "Ongoing assessment to track trends and response to treatment; done more frequently in unstable patients.", "category": "Assessment" },
+    { "id": "c01_fc08", "question": "What is the key to active listening in a patient interview?", "answer": "Getting on your patient's level and asking follow-up questions.", "category": "Clinical Pearls" },
+    { "id": "c01_fc09", "question": "Why should you 'trust YOUR exam'?", "answer": "Your own primary assessment and findings are the most reliable data you have — don't discount them in favor of a chief complaint that doesn't match what you observe.", "category": "Clinical Pearls" },
+    { "id": "c01_fc10", "question": "What should you consider if multiple people at one scene share the same signs and symptoms?", "answer": "A shared environmental or toxic cause (e.g., carbon monoxide, gas leak, common food source) rather than coincidental separate illnesses — inquire about a shared cause.", "category": "Safety/Scene" },
+    { "id": "c01_fc11", "question": "What are Activities of Daily Living (ADLs)?", "answer": "Basic functional activities — walking, eating, dressing, toileting, thinking clearly — whose alteration by illness is often why people call EMS.", "category": "Assessment" },
+    { "id": "c01_fc12", "question": "What question surfaces an ADL-based functional change?", "answer": "'What is different today compared to your usual baseline?'", "category": "Assessment" },
+    { "id": "c01_fc13", "question": "In a conscious medical patient exam, what comes first — questions or physical exam?", "answer": "Ask questions first, then perform a physical exam directed by the answers.", "category": "Assessment" },
+    { "id": "c01_fc14", "question": "Why is history so valuable in patients who cannot self-diagnose (children, dementia, non-verbal patients)?", "answer": "Asking about functional/ADL changes from baseline reveals what's wrong even when the patient cannot describe or name a specific complaint.", "category": "Assessment" },
+    { "id": "c01_fc15", "question": "Why treat life threats before taking a full history?", "answer": "A patient in respiratory failure or shock needs immediate intervention — a complete history can wait, but airway/breathing/circulation failure cannot.", "category": "Core Concepts" }
+  ]
+}

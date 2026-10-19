@@ -1,0 +1,19 @@
+{
+  "chapter": "c01",
+  "cards": [
+    { "id": "c01_fc01", "question": "What is a TIA?", "answer": "A transient ischemic attack — stroke-like neurologic deficit that resolves completely, classically within minutes to an hour, without lasting tissue injury.", "category": "Stroke" },
+    { "id": "c01_fc02", "question": "Why is a TIA treated with the same urgency as a stroke in the field?", "answer": "It cannot be reliably distinguished from an evolving stroke in the field, and it carries a significant short-term risk of a subsequent completed stroke.", "category": "Stroke" },
+    { "id": "c01_fc03", "question": "What are the two broad categories of stroke?", "answer": "Ischemic (clot/obstruction blocking blood flow) and hemorrhagic (bleeding into or around brain tissue).", "category": "Stroke" },
+    { "id": "c01_fc04", "question": "Can ischemic and hemorrhagic stroke be reliably distinguished by field symptoms alone?", "answer": "No — both cause focal neurologic deficits; the distinction is made by hospital imaging.", "category": "Stroke" },
+    { "id": "c01_fc05", "question": "What three findings does the Cincinnati Prehospital Stroke Scale (CPSS) check?", "answer": "Facial droop, arm drift, and speech abnormality.", "category": "Stroke Scales" },
+    { "id": "c01_fc06", "question": "Name two prehospital stroke scales beyond CPSS that add sensitivity for detecting large-vessel occlusion (LVO).", "answer": "LAPSS (Los Angeles Prehospital Stroke Screen) and RACE (Rapid Arterial oCclusion Evaluation); FAST-ED is another example.", "category": "Stroke Scales" },
+    { "id": "c01_fc07", "question": "What does FAST-ED add to the standard FAST components?", "answer": "Eye deviation and denial/neglect.", "category": "Stroke Scales" },
+    { "id": "c01_fc08", "question": "What findings raise suspicion for a large-vessel occlusion (LVO) stroke?", "answer": "Gaze deviation toward one side, severe unilateral weakness affecting both face and arm together, and neglect/denial of the deficit.", "category": "Stroke" },
+    { "id": "c01_fc09", "question": "Why might an LVO-screening scale change the destination decision?", "answer": "In systems with an endovascular-capable stroke center, a positive LVO screen may justify bypassing a closer, non-endovascular-capable hospital, per local protocol.", "category": "Stroke" },
+    { "id": "c01_fc10", "question": "Why is checking blood glucose a field priority in suspected stroke?", "answer": "Hypoglycemia is a well-known, rapidly correctable stroke mimic.", "category": "Field Management" },
+    { "id": "c01_fc11", "question": "Why is the last-known-well time so important to document precisely?", "answer": "It drives eligibility for time-sensitive hospital treatments.", "category": "Field Management" },
+    { "id": "c01_fc12", "question": "What is a 'stroke alert'?", "answer": "Early hospital notification of a suspected stroke patient so the receiving facility can prepare.", "category": "Field Management" },
+    { "id": "c01_fc13", "question": "Should transport be delayed to complete an extensive neurologic exam in suspected stroke?", "answer": "No — use a rapid validated screening scale and prioritize rapid transport; time is the central variable in stroke outcome.", "category": "Field Management" },
+    { "id": "c01_fc14", "question": "What is the 2026 guideline governing stroke management referenced in this course?", "answer": "The 2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke.", "category": "Guidelines" }
+  ]
+}

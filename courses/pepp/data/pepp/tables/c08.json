@@ -1,0 +1,33 @@
+{
+  "chapter": "c08",
+  "tables": [
+    {
+      "id": "c08_t01",
+      "title": "AEIOU-TIPS: Reversible Causes of Altered Mental Status",
+      "headers": ["Letter", "Cause"],
+      "rows": [
+        ["A", "Alcohol/substance use"],
+        ["E", "Epilepsy/seizure (postictal state)"],
+        ["I", "Infection"],
+        ["O", "Overdose/opioids"],
+        ["U", "Uremia/metabolic derangement"],
+        ["T", "Trauma/temperature (hyperthermia/hypothermia)"],
+        ["I", "Insulin/hypoglycemia"],
+        ["P", "Psychiatric"],
+        ["S", "Shock/stroke"]
+      ]
+    },
+    {
+      "id": "c08_t02",
+      "title": "Simple vs Complex Febrile Seizure",
+      "headers": ["Feature", "Simple Febrile Seizure", "Complex Febrile Seizure"],
+      "rows": [
+        ["Pattern", "Generalized", "May be focal"],
+        ["Duration", "Less than 15 minutes", "More than 15 minutes"],
+        ["Recurrence", "Does not recur within 24 hours", "May recur within 24 hours"],
+        ["Return to baseline", "Yes, afterward", "May not return promptly to baseline"],
+        ["Level of concern", "Generally benign", "Warrants higher level of concern/evaluation"]
+      ]
+    }
+  ]
+}

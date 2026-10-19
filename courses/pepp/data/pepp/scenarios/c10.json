@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "The Asymptomatic Battery Swallow",
+      "presentation": "A caregiver reports witnessing their 18-month-old put a small, round button battery from a remote control into their mouth about 30 minutes ago. The child appears completely well, playing normally with no distress.",
+      "vitals": { "appearance": "Well-appearing, playing normally", "distress": "None currently" },
+      "question": "What is the correct approach given the child's current well appearance?",
+      "options": [
+        "A: Reassure the caregiver and recommend no further action since the child is asymptomatic.",
+        "B: Treat this as a time-critical emergency requiring rapid transport and hospital notification, regardless of the child's current symptoms.",
+        "C: Advise the caregiver to monitor at home for 24 hours and call back only if symptoms develop.",
+        "D: Induce vomiting on scene to remove the battery."
+      ],
+      "correct": 1,
+      "explanation": "Button battery ingestion is treated as time-critical regardless of current symptoms, because a lodged battery can cause severe electrical-current tissue injury within hours even in a child who currently appears completely well.",
+      "clinicalPearl": "A button battery doesn't wait for symptoms to cause damage — treat every suspected ingestion as urgent, no matter how the child looks."
+    },
+    {
+      "id": "c10_s02",
+      "title": "Found in a Hot Car",
+      "presentation": "A 2-year-old is found in a car that has been parked in direct sun for 45 minutes. The child is lethargic, flushed, and hot to the touch, with dry mucous membranes.",
+      "vitals": { "temp": "40.5°C (104.9°F)", "appearance": "Lethargic", "skin": "Hot, flushed, dry" },
+      "question": "What is the priority field management?",
+      "options": [
+        "A: Transport without any active cooling measures.",
+        "B: Remove from the hot environment immediately, begin active cooling measures, support ABCs, and transport promptly.",
+        "C: Cover the child in warm blankets to prevent shivering.",
+        "D: Delay treatment until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "This presentation is consistent with severe heat illness/heat stroke. Priority management includes immediate removal from the hot environment, active cooling measures, ABC support, and prompt transport — vehicle interiors can become life-threatening within minutes, and this presentation reflects that danger.",
+      "clinicalPearl": "A hot, flushed, altered child from a hot car needs cooling now, not just transport — every minute of delay matters."
+    },
+    {
+      "id": "c10_s03",
+      "title": "The Well-Appearing Pool Rescue",
+      "presentation": "A 4-year-old was briefly submerged in a backyard pool and pulled out coughing but breathing well, with normal oxygen saturation and no distress. The family asks if transport is really necessary since the child 'seems totally fine now.'",
+      "vitals": { "spo2": "99% room air", "rr": "Normal", "appearance": "Alert, playful" },
+      "question": "What is the correct recommendation?",
+      "options": [
+        "A: No transport is needed since the child currently appears completely normal.",
+        "B: Recommend transport for observation, since pulmonary complications after submersion can evolve over hours even in a currently well-appearing child.",
+        "C: Recommend transport only if the child develops a cough.",
+        "D: Recommend the family monitor at home overnight instead of transport."
+      ],
+      "correct": 1,
+      "explanation": "Even a well-appearing child after a submersion event should be transported for observation, since drowning-related pulmonary complications can develop over the following hours despite an initially reassuring presentation.",
+      "clinicalPearl": "'Fine right now' isn't the same as 'fine' after a submersion — observation catches delayed pulmonary complications before they become dangerous."
+    }
+  ]
+}

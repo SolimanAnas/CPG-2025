@@ -1,0 +1,180 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "What three findings make up Cushing's Triad?",
+      "options": [
+        "A. Hypotension, tachycardia, tachypnea",
+        "B. Hypertension, bradycardia, and an altered respiratory pattern",
+        "C. Fever, rash, and vomiting",
+        "D. Hypoglycemia, diaphoresis, tachycardia"
+      ],
+      "correct": 1,
+      "rationale": "Cushing's triad — hypertension, bradycardia, and altered respirations — signals significantly increased intracranial pressure.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "What does the FAST stroke mnemonic assess?",
+      "options": [
+        "A. Fever, Airway, Speech, Temperature",
+        "B. Face, Arm, Speech, Time",
+        "C. Fatigue, Anxiety, Sweating, Tremor",
+        "D. Family history, Age, Symptoms, Treatment"
+      ],
+      "correct": 1,
+      "rationale": "FAST stands for Face, Arm, Speech, Time — a rapid field stroke screening tool.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q03",
+      "question": "Why is establishing the 'Time' (last known well) so critical in a stroke assessment?",
+      "options": [
+        "A. It has no clinical importance",
+        "B. Eligibility for time-sensitive stroke treatments depends on precisely knowing when the patient was last normal",
+        "C. It only matters for documentation purposes",
+        "D. Time is only relevant for cardiac arrest calls"
+      ],
+      "correct": 1,
+      "rationale": "Time-sensitive stroke treatments have windows defined from last known well, not from symptom discovery, making this the single most treatment-relevant data point in FAST.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q04",
+      "question": "A patient presents with a headache. What should be performed to rule out serious causes?",
+      "options": ["A. No further assessment is needed", "B. A neurological exam", "C. An abdominal exam only", "D. A cardiac 12-lead only"],
+      "correct": 1,
+      "rationale": "A neurological exam in a headache patient helps distinguish a benign headache from stroke, hemorrhage, or infection presenting as head pain.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q05",
+      "question": "Which triad of findings is classic for meningitis?",
+      "options": [
+        "A. Fever, nuchal rigidity, and altered mental status",
+        "B. Hypertension, bradycardia, altered respirations",
+        "C. JVD, muffled heart tones, hypotension",
+        "D. Wheeze, stridor, cyanosis"
+      ],
+      "correct": 0,
+      "rationale": "Meningitis is associated with fever, nuchal rigidity (neck stiffness), and altered mental status.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q06",
+      "question": "A patient presents with unilateral weakness and slurred speech. What must be checked immediately, before assuming stroke?",
+      "options": ["A. Temperature", "B. Blood glucose", "C. Pulse oximetry only", "D. Weight"],
+      "correct": 1,
+      "rationale": "Diabetic emergencies (hypoglycemia/hyperglycemia) can mimic stroke symptoms; glucose must be checked because hypoglycemia is rapidly reversible while true stroke is not.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "A patient with stroke-like symptoms has their glucose corrected and the deficit fully resolves within minutes. What does this suggest?",
+      "options": [
+        "A. A true ischemic stroke",
+        "B. The symptoms were a hypoglycemic stroke mimic, not a true stroke",
+        "C. A hemorrhagic stroke",
+        "D. Nothing — strokes commonly resolve this quickly"
+      ],
+      "correct": 1,
+      "rationale": "True strokes do not resolve with glucose administration; rapid full resolution after correcting glucose indicates the presentation was a hypoglycemic mimic.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "What does Cushing's Triad physiologically represent?",
+      "options": [
+        "A. A normal physiologic response to exercise",
+        "B. The brainstem's response to compression from significantly increased intracranial pressure",
+        "C. A sign of dehydration",
+        "D. An allergic reaction"
+      ],
+      "correct": 1,
+      "rationale": "Cushing's triad reflects brainstem compression from rising intracranial pressure — often due to bleeding, swelling, or a mass effect — and is a late, ominous sign.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q09",
+      "question": "Which headache presentation should raise the MOST concern for a serious underlying cause?",
+      "options": [
+        "A. Mild headache that improves with rest",
+        "B. 'Worst headache of my life' with new focal neurological deficits",
+        "C. A headache the patient has had many times before with the same character",
+        "D. A headache relieved by over-the-counter analgesics"
+      ],
+      "correct": 1,
+      "rationale": "A sudden, severe ('worst of my life') headache with new focal deficits is a classic red flag for hemorrhage or another serious neurological emergency.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q10",
+      "question": "A patient has fever, neck stiffness, and confusion. What should be strongly suspected?",
+      "options": ["A. Simple tension headache", "B. Meningitis", "C. Migraine", "D. Dehydration alone"],
+      "correct": 1,
+      "rationale": "Fever, nuchal rigidity, and altered mental status together form the classic meningitis triad and should prompt suspicion of this infectious, potentially rapidly progressive condition.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q11",
+      "question": "Why is Cushing's Triad considered a LATE sign rather than an early warning?",
+      "options": [
+        "A. It appears at the very onset of any brain injury",
+        "B. By the time all three findings fully manifest, intracranial pressure elevation is already severe",
+        "C. It is unrelated to intracranial pressure",
+        "D. It only occurs in children"
+      ],
+      "correct": 1,
+      "rationale": "Cushing's triad reflects an advanced physiologic response to significantly elevated ICP — its full appearance indicates the process is already severe, not just beginning.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q12",
+      "question": "Which combination of vital sign changes should make you suspect rising intracranial pressure?",
+      "options": [
+        "A. Hypotension and tachycardia",
+        "B. Hypertension, bradycardia, and an irregular respiratory pattern",
+        "C. Normal blood pressure and normal heart rate",
+        "D. Hypertension and tachycardia only"
+      ],
+      "correct": 1,
+      "rationale": "This combination is Cushing's triad, a hallmark of significantly elevated intracranial pressure requiring urgent recognition and transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q13",
+      "question": "In a suspected stroke call, what is the correct order of priority for the FIRST two actions?",
+      "options": [
+        "A. Full head-to-toe exam, then glucose check",
+        "B. Check blood glucose and perform FAST assessment (including establishing last known well time)",
+        "C. Transport immediately with no assessment",
+        "D. Obtain a detailed medication list before any exam"
+      ],
+      "correct": 1,
+      "rationale": "Checking glucose (to rule out a reversible mimic) and performing the FAST assessment with a precise last-known-well time are the priority early actions in a suspected stroke.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q14",
+      "question": "Which statement correctly relates diabetic emergencies to stroke assessment?",
+      "options": [
+        "A. Diabetic emergencies never affect neurological presentation",
+        "B. Diabetic emergencies can present with stroke-like symptoms, making glucose checks mandatory in suspected stroke",
+        "C. Only hyperglycemia can mimic stroke, never hypoglycemia",
+        "D. Glucose checks are optional in stroke assessment"
+      ],
+      "correct": 1,
+      "rationale": "Both hypoglycemia and hyperglycemia can present with stroke-like symptoms (weakness, slurred speech, altered mentation), so glucose must always be checked in a suspected stroke.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q15",
+      "question": "Which finding is NOT part of Cushing's Triad?",
+      "options": ["A. Hypertension", "B. Bradycardia", "C. Tachypnea with regular pattern", "D. Altered respiratory pattern"],
+      "correct": 2,
+      "rationale": "Cushing's Triad consists of hypertension, bradycardia, and an ALTERED (irregular) respiratory pattern — not a regular tachypnea.",
+      "difficulty": "Medium"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapter": "c02",
+  "algorithms": [
+    {
+      "id": "c02_alg01",
+      "title": "Performing the Pediatric Assessment Triangle",
+      "description": "The hands-off, from-the-doorway assessment performed within the first seconds of any pediatric encounter.",
+      "steps": [
+        "Approach the child without touching; observe from across the room.",
+        "Assess Appearance using TICLS: Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry.",
+        "Assess Work of Breathing: listen for abnormal sounds (stridor, grunting, wheeze, muffled voice); look for abnormal positioning, retractions, nasal flaring, head bobbing.",
+        "Assess Circulation to Skin: look for pallor, mottling, or cyanosis compared to the child's baseline, in adequate lighting.",
+        "Combine all three legs into a pattern to identify the likely physiologic category and urgency.",
+        "Proceed immediately to the full hands-on primary assessment (ABCDE), paced according to the PAT's urgency level."
+      ]
+    },
+    {
+      "id": "c02_alg02",
+      "title": "PAT Pattern-to-Category Recognition",
+      "description": "Translating the combination of abnormal PAT legs into a likely physiologic category.",
+      "steps": [
+        "Abnormal Appearance only → likely CNS/metabolic problem.",
+        "Abnormal Appearance + Work of Breathing → likely respiratory problem.",
+        "Abnormal Appearance + Circulation to Skin → likely shock/circulatory problem.",
+        "Abnormal Appearance + Work of Breathing + Circulation to Skin → cardiopulmonary failure (highest urgency).",
+        "All three legs normal → reassuring general impression; proceed to primary assessment at a routine pace."
+      ]
+    }
+  ]
+}

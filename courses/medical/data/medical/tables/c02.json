@@ -1,0 +1,21 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "AEIOU-TIPS: Reversible Causes of Altered Mental Status",
+      "headers": ["Letter", "Cause"],
+      "rows": [
+        ["A", "Alcohol"],
+        ["E", "Epilepsy/seizure (postictal state)"],
+        ["I", "Insulin (hypoglycemia or hyperglycemia)"],
+        ["O", "Overdose/opioids"],
+        ["U", "Uremia/metabolic derangement"],
+        ["T", "Trauma/temperature (hyperthermia/hypothermia)"],
+        ["I", "Infection"],
+        ["P", "Psychiatric"],
+        ["S", "Stroke/shock"]
+      ]
+    }
+  ]
+}

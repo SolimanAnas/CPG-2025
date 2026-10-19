@@ -1,0 +1,33 @@
+{
+  "chapter": "c12",
+  "algorithms": [
+    {
+      "id": "c12_alg01",
+      "title": "Suspected Sepsis Field Recognition and Management",
+      "description": "Sequence for recognizing and managing suspected sepsis in the field.",
+      "steps": [
+        "Identify a suspected or known infection source (respiratory, urinary, wound, etc.).",
+        "Check temperature — recognize that both fever and hypothermia can indicate sepsis.",
+        "Assess for tachycardia, tachypnea, and altered mental status.",
+        "Assess perfusion for signs of progression toward septic shock (delayed capillary refill, cool/mottled or warm/flushed skin, hypotension).",
+        "If the pattern fits sepsis: provide supportive care (oxygen as needed, IV access and fluids per protocol, cardiac monitoring).",
+        "Transport rapidly with early hospital notification, given the time-sensitive nature of sepsis treatment.",
+        "Maintain heightened suspicion in older adults, who may present atypically (e.g., confusion without dramatic fever)."
+      ]
+    },
+    {
+      "id": "c12_alg02",
+      "title": "Abdominal/Flank Pain Field Differential Approach",
+      "description": "Sequence for evaluating abdominal or flank pain with attention to dangerous mimics.",
+      "steps": [
+        "Characterize the pain: location, radiation, quality (colicky vs. constant), and associated symptoms (vomiting, hematuria, bowel changes).",
+        "Assess vital signs and perfusion status.",
+        "If GI bleeding signs present (hematemesis, melena, hematochezia): assess perfusion for hypovolemic shock and treat per protocol.",
+        "If bowel obstruction pattern present (colicky pain, distension, vomiting, no BM/flatus): provide supportive care, no oral intake, prompt transport.",
+        "If flank pain present: consider renal colic, but evaluate for dangerous mimics — especially AAA in older/vascular-risk patients, and pyelonephritis with systemic infection signs.",
+        "Apply the general red-flag framework (pain out of proportion to exam, inability to find a comfortable position, altered mental status) regardless of the presumed diagnosis.",
+        "Transport promptly, especially when red flags or dangerous mimics cannot be confidently excluded in the field."
+      ]
+    }
+  ]
+}

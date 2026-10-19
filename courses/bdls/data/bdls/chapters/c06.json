@@ -1,0 +1,72 @@
+{
+  "id": "c06",
+  "title": "Traumatic & Explosive Events",
+  "shortTitle": "Explosive Events",
+  "estimatedStudyTime": 34,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Classify blast injuries into primary through quinary mechanisms.",
+    "Describe the organs most vulnerable to primary blast injury.",
+    "Recognize blast lung and its management cautions.",
+    "Describe scene priorities at an intentional explosive event, including secondary devices.",
+    "Explain the typical casualty distribution of bombings and its triage implications.",
+    "Apply hemorrhage-control priorities to blast and active-violence casualties."
+  ],
+  "summary": [
+    {
+      "title": "The Five Blast Injury Mechanisms",
+      "content": "Blast injuries are classified by mechanism. Primary: the blast pressure wave itself, damaging air-filled organs. Secondary: fragments and debris propelled by the explosion — the most common cause of injury and death. Tertiary: the body being thrown against objects or the ground. Quaternary: everything else — burns, crush from collapse, smoke inhalation, exacerbated chronic illness. Quinary: injuries from additives to the device such as radiological material, chemicals, or biological contamination ('dirty' additives)."
+    },
+    {
+      "title": "Primary Blast Injury: Air-Filled Organs",
+      "content": "The pressure wave injures where air meets tissue. Tympanic membrane rupture is the most common primary injury (though its absence does not exclude other blast injury). Blast lung — pulmonary contusion, hemorrhage, and alveolar rupture — is the most lethal, presenting with dyspnea, hypoxia, and hemoptysis, sometimes hours after exposure. The gastrointestinal tract can perforate or hemorrhage, especially in enclosed-space or underwater blasts. Air emboli from disrupted alveoli can cause stroke-like deficits or sudden death."
+    },
+    {
+      "title": "Blast Lung Cautions",
+      "content": "Suspect blast lung in any survivor of a significant blast — especially enclosed-space — with respiratory symptoms. Give oxygen, but ventilate cautiously: positive pressure can worsen alveolar rupture and precipitate air embolism or pneumothorax, so use the lowest effective pressures and watch for tension physiology. Enclosed-space explosions multiply the pressure wave by reflection, raising the incidence and severity of primary injury."
+    },
+    {
+      "title": "The Intentional Scene",
+      "content": "Bombings are crime scenes with responder-targeting risk. Priorities: stage until law enforcement addresses secondary devices, control the perimeter, preserve evidence where care allows, and coordinate with law enforcement under unified command. The DISASTER Paradigm's safety and hazard components dominate the first minutes. In active-violence events, casualty care follows the phased approach — threat suppression first, hemorrhage control in warm zones, full care in cold zones."
+    },
+    {
+      "title": "Casualty Distribution and 'Upside-Down' Triage",
+      "content": "Bombings characteristically produce a wave of walking wounded who self-transport to the nearest hospital within minutes — arriving BEFORE the critical casualties, who need extrication and EMS transport. Hospitals must anticipate this 'upside-down' arrival order: the first patients through the door are usually the least injured, and the sickest arrive 30–60 minutes later, when the ED is already saturated. Reserving capacity for the delayed critical wave is a command decision."
+    },
+    {
+      "title": "Hemorrhage Control Priorities",
+      "content": "Preventable death in blast and penetrating MCIs is dominated by extremity hemorrhage. Tourniquets applied early — including by bystanders, per Stop the Bleed principles — save lives, and they are one of SALT's triage-phase lifesaving interventions. Junctional wounds need packing and direct pressure. Whole-scene thinking applies: distribute casualties, re-triage relentlessly, and remember occult primary blast injury in anyone near the detonation."
+    }
+  ],
+  "clinicalPearls": [
+    "Secondary (fragment) injury — not the pressure wave — is the most common cause of bombing death and injury.",
+    "Enclosed-space blast = worse primary injury: reflected pressure waves multiply the dose.",
+    "Blast lung can declare itself hours later — observe significant exposures even if initially well.",
+    "Expect the walking wounded to reach the hospital before the critical patients; hold capacity for the second wave."
+  ],
+  "redFlags": [
+    "Dyspnea, hypoxia, or hemoptysis after a blast — blast lung until proven otherwise.",
+    "Responders converging on the scene before secondary-device clearance.",
+    "Neurologic deficits or sudden collapse after a blast — consider arterial air embolism."
+  ],
+  "commonMistakes": [
+    "Using an intact tympanic membrane to rule out primary blast injury — it cannot.",
+    "Ventilating blast lung with high pressures, precipitating pneumothorax or air embolism.",
+    "Filling every hospital bed with the first (walking) wave, leaving nothing for the delayed critical wave."
+  ],
+  "memoryAids": [
+    "Blast 1-2-3-4-5: 1 pressure (air organs), 2 fragments, 3 thrown, 4 everything else, 5 dirty additives.",
+    "Primary blast targets the 3 airspaces: Ears, Lungs, Gut.",
+    "Bombing arrivals are upside-down: green wave first, red wave later."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Blast Casualty Assessment",
+      "content": "Blast survivor\n  → Scene: staged? secondary devices addressed? unified command with LE?\n  → Massive hemorrhage: tourniquet/packing FIRST (SALT lifesaving intervention)\n  → Airway/breathing: O2; suspect blast lung (dyspnea, hypoxia, hemoptysis)\n     → Ventilate gently if needed — low pressures; watch for pneumothorax\n  → Circulation: treat shock; consider GI blast injury in enclosed-space exposure\n  → Neuro deficit/sudden collapse: consider air embolism\n  → Ears ringing/TM rupture: marker of exposure, NOT a rule-out for other injury\n  → Enclosed-space or significant exposure: observe even if initially well"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Explosive and Traumatic Events",
+    "CDC — Blast Injury classification (as taught in BDLS v4.0)"
+  ]
+}

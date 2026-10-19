@@ -1,0 +1,27 @@
+{
+  "chapter": "c14",
+  "tables": [
+    {
+      "id": "c14_t01",
+      "title": "JumpSTART Pediatric MCI Triage Categories",
+      "headers": ["Category", "Color", "Criteria"],
+      "rows": [
+        ["Minor", "Green", "Able to walk (use judgment for infants/toddlers not yet walking at baseline)"],
+        ["Immediate", "Red", "Apneic but breathing resumes with airway repositioning or 5 rescue breaths; abnormal respiratory rate for age; abnormal perfusion or AVPU with normal respiratory rate"],
+        ["Delayed", "Yellow", "Normal respiratory rate for age, normal perfusion, and normal AVPU"],
+        ["Expectant", "Black/Gray", "Apneic with no pulse; or apneic with pulse that does not resume breathing after 5 rescue breaths"]
+      ]
+    },
+    {
+      "id": "c14_t02",
+      "title": "JumpSTART vs Adult START — Key Differences",
+      "headers": ["Feature", "Adult START", "JumpSTART (Pediatric)"],
+      "rows": [
+        ["Respiratory rate threshold", "Adult-specific cutoff (e.g., >30/min = immediate)", "Pediatric-specific thresholds by age"],
+        ["Apneic patient with a pulse", "Reposition airway once; if still apneic, expectant", "Reposition airway; if still apneic, give 5 rescue breaths before expectant"],
+        ["Mental status assessment", "Ability to follow commands", "AVPU scale (developmentally appropriate)"],
+        ["Rationale for adjustments", "N/A", "Reflects that pediatric arrest is often respiratory in origin and potentially reversible"]
+      ]
+    }
+  ]
+}

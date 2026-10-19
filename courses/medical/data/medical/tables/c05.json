@@ -1,0 +1,17 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Preeclampsia vs. Eclampsia",
+      "headers": ["Feature", "Preeclampsia", "Eclampsia"],
+      "rows": [
+        ["Core definition", "New-onset hypertension (typically >20 weeks) + proteinuria, or hypertension + other organ dysfunction", "Preeclampsia + new seizures or coma not attributable to another cause"],
+        ["Seizure activity", "Absent", "Present (defining feature)"],
+        ["Warning signs", "Severe headache, visual disturbance, RUQ/epigastric pain, sudden edema", "Same warning signs, plus active or recent seizure/coma"],
+        ["Field priority", "Left lateral positioning, minimize stimulation, monitor BP, transport", "Seizure precautions, left lateral positioning once feasible, minimize stimulation, rapid transport"],
+        ["Definitive treatment", "Hospital-level management, often including magnesium sulfate for severe disease", "Magnesium sulfate (per local ALS protocol)"]
+      ]
+    }
+  ]
+}

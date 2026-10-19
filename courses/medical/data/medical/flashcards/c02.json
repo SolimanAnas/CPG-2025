@@ -1,0 +1,19 @@
+{
+  "chapter": "c02",
+  "cards": [
+    { "id": "c02_fc01", "question": "Are most adult seizures life-threatening?", "answer": "No — most are brief, self-limited events that stop on their own within a couple of minutes.", "category": "Seizures" },
+    { "id": "c02_fc02", "question": "List common causes of adult seizures.", "answer": "Idiopathic epilepsy (often with medication non-compliance), hypoglycemia, head trauma, intoxication/withdrawal (especially alcohol withdrawal), fever/infection, stroke, structural brain lesions.", "category": "Seizures" },
+    { "id": "c02_fc03", "question": "What is the postictal state?", "answer": "A period of transient confusion, drowsiness, and sometimes agitation following a seizure, typically resolving gradually over minutes without specific intervention.", "category": "Seizures" },
+    { "id": "c02_fc04", "question": "Is the postictal state itself an emergency?", "answer": "No — it's a normal, expected part of the seizure process, but should gradually improve.", "category": "Seizures" },
+    { "id": "c02_fc05", "question": "What should worsening (rather than gradually improving) postictal confusion prompt?", "answer": "Reconsideration of other causes: ongoing subclinical seizure activity, structural injury, or a coexisting problem like hypoglycemia.", "category": "Seizures" },
+    { "id": "c02_fc06", "question": "What defines status epilepticus?", "answer": "A seizure lasting 5 minutes or longer, or repeated seizures without return to baseline between them.", "category": "Seizures" },
+    { "id": "c02_fc07", "question": "Is status epilepticus a time-critical emergency?", "answer": "Yes — it carries real risk of ongoing neuronal injury and cardiorespiratory compromise the longer it continues.", "category": "Seizures" },
+    { "id": "c02_fc08", "question": "What are the field priorities for an actively seizing patient?", "answer": "Protect the airway (positioning, suction as needed, nothing in the mouth), protect from injury, time the seizure, check glucose as feasible.", "category": "Field Management" },
+    { "id": "c02_fc09", "question": "What does AEIOU-TIPS help a provider recall?", "answer": "Reversible causes of altered mental status: Alcohol, Epilepsy/postictal, Insulin (hypo/hyperglycemia), Overdose, Uremia/metabolic, Trauma/temperature, Infection, Psychiatric, Stroke/shock.", "category": "AMS" },
+    { "id": "c02_fc10", "question": "What is the main clinical value of the AEIOU-TIPS framework?", "answer": "Prompting a glucose check and a search for a reversible cause before assuming an irreversible or purely psychiatric explanation.", "category": "AMS" },
+    { "id": "c02_fc11", "question": "What should be checked immediately in a newly altered, non-seizing patient?", "answer": "Blood glucose.", "category": "AMS" },
+    { "id": "c02_fc12", "question": "What history elements are useful to gather from bystanders/family for an altered patient?", "answer": "Medications, known seizure disorder, substance use, recent illness or head injury.", "category": "AMS" },
+    { "id": "c02_fc13", "question": "Should something be placed in the mouth of a seizing patient?", "answer": "No — never place anything in the mouth during a seizure.", "category": "Field Management" },
+    { "id": "c02_fc14", "question": "What is the field priority once seizure activity is identified as status epilepticus?", "answer": "Escalate per local ALS protocol with rapid transport; benzodiazepine administration follows local protocol.", "category": "Field Management" }
+  ]
+}

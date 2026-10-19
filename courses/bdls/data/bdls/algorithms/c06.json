@@ -1,0 +1,32 @@
+{
+  "chapter": "c06",
+  "algorithms": [
+    {
+      "id": "c06_alg01",
+      "title": "Explosive Event Scene Sequence",
+      "description": "Responder priorities at an intentional or suspected-intentional explosion.",
+      "steps": [
+        "Stage at a safe distance; assume secondary devices until law enforcement clears the scene.",
+        "Establish/join unified command with law enforcement and fire.",
+        "Enter per the coordinated plan; preserve evidence where care allows.",
+        "Apply SALT triage; the dominant lifesaving intervention is hemorrhage control (tourniquets, packing).",
+        "Anticipate the casualty pattern: many fragment injuries, occult primary blast injury in survivors near/inside the blast space.",
+        "Warn receiving hospitals early and distribute casualties; flag enclosed-space survivors for observation.",
+        "Reassess the scene continuously for structural, fire, and device hazards."
+      ]
+    },
+    {
+      "id": "c06_alg02",
+      "title": "Blast Lung Recognition and Care",
+      "description": "Detecting and safely managing primary pulmonary blast injury.",
+      "steps": [
+        "Suspect in any significant blast exposure — especially enclosed-space — with dyspnea, hypoxia, chest pain, or hemoptysis (may be delayed hours).",
+        "Administer high-flow oxygen; monitor SpO2 continuously.",
+        "If ventilation is required, use the lowest effective pressures/volumes.",
+        "Monitor for tension pneumothorax; decompress if it develops.",
+        "Consider arterial air embolism with neuro deficits or sudden collapse.",
+        "Observe significant exposures even when initially asymptomatic."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "chapter": "c14",
+  "algorithms": [
+    {
+      "id": "c14_alg01",
+      "title": "JumpSTART Pediatric MCI Triage",
+      "description": "Sequence for triaging a pediatric patient at a mass casualty incident using the JumpSTART algorithm.",
+      "steps": [
+        "Assess ability to walk. If the child can walk, assign Minor (green) — but note that very young children may not yet walk independently at baseline, so use judgment for infants/toddlers.",
+        "If not walking, assess breathing. If not breathing, reposition the airway and reassess.",
+        "If breathing resumes after repositioning, assign Immediate (red).",
+        "If still not breathing and no pulse is present, assign Expectant (black/gray).",
+        "If still not breathing but a pulse is present, give five rescue breaths, then reassess.",
+        "If breathing resumes after rescue breaths, assign Immediate (red). If still apneic, assign Expectant (black/gray).",
+        "If breathing spontaneously, assess respiratory rate using pediatric-specific thresholds for age. If abnormal, assign Immediate (red).",
+        "If respiratory rate is normal for age, assess perfusion (peripheral pulse presence, capillary refill) and mental status using AVPU.",
+        "If perfusion or AVPU is abnormal, assign Immediate (red). If both are normal, assign Delayed (yellow).",
+        "Continue reassessment as resources and scene conditions allow."
+      ]
+    },
+    {
+      "id": "c14_alg02",
+      "title": "Pediatric Transport Destination Decision",
+      "description": "Sequence for determining appropriate transport destination for a pediatric patient.",
+      "steps": [
+        "Assess the severity and type of the child's condition.",
+        "Identify nearby facilities and their pediatric-specific capabilities (pediatric trauma center, PICU, pediatric surgical subspecialists).",
+        "Apply local protocol criteria for pediatric-capable/pediatric trauma center bypass.",
+        "Consult medical direction if the decision is unclear or the situation falls outside routine protocol.",
+        "Transport to the destination indicated by protocol, even if a closer general facility is available, when bypass criteria are met."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "chapter": "c01",
+  "questions": [
+    {
+      "id": "c01_q01",
+      "question": "What defines a TIA (transient ischemic attack)?",
+      "options": [
+        "A. A stroke that leaves permanent deficits",
+        "B. Stroke-like neurologic deficit that resolves completely, classically within minutes to an hour",
+        "C. A minor headache with no neurologic findings",
+        "D. A seizure followed by confusion"
+      ],
+      "correct": 1,
+      "rationale": "A TIA produces stroke-like focal neurologic deficit that resolves completely without lasting tissue injury, classically within minutes to an hour.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q02",
+      "question": "Why is a TIA treated with the same field urgency as an ongoing stroke?",
+      "options": [
+        "A. It cannot be reliably distinguished from an evolving stroke in the field, and carries short-term risk of a completed stroke",
+        "B. TIAs are more dangerous than strokes",
+        "C. TIA is simply an outdated term for stroke",
+        "D. There is no urgency difference because TIAs are never serious"
+      ],
+      "correct": 0,
+      "rationale": "Because a TIA can't be reliably distinguished from an evolving stroke in the field, and TIA patients face a meaningful short-term risk of a subsequent completed stroke, both are managed with the same urgency.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q03",
+      "question": "What are the two broad categories of stroke?",
+      "options": ["A. Ischemic and hemorrhagic", "B. Acute and chronic", "C. Central and peripheral", "D. Primary and secondary"],
+      "correct": 0,
+      "rationale": "Stroke is broadly categorized as ischemic (obstruction of blood flow) or hemorrhagic (bleeding into/around brain tissue).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q04",
+      "question": "Can ischemic and hemorrhagic stroke be reliably distinguished in the field by symptoms alone?",
+      "options": ["A. Yes, symptoms are always distinct", "B. No — both cause focal neurologic deficits; imaging is needed to distinguish them", "C. Only hemorrhagic stroke causes a facial droop", "D. Only ischemic stroke causes speech abnormality"],
+      "correct": 1,
+      "rationale": "Field symptoms cannot reliably distinguish the two stroke types; both produce focal neurologic deficits, and hospital imaging is required to differentiate them.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q05",
+      "question": "What three findings does the Cincinnati Prehospital Stroke Scale (CPSS) assess?",
+      "options": ["A. Facial droop, arm drift, speech abnormality", "B. Blood pressure, heart rate, respiratory rate", "C. Pupil size, gag reflex, grip strength", "D. Gaze deviation, neglect, ataxia"],
+      "correct": 0,
+      "rationale": "CPSS checks facial droop, arm drift, and speech abnormality as its three core findings.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q06",
+      "question": "What is the purpose of an LVO-screening scale like RACE or FAST-ED?",
+      "options": [
+        "A. To diagnose the exact stroke type in the field",
+        "B. To add sensitivity for detecting a large-vessel occlusion, which may inform destination decisions",
+        "C. To replace blood glucose checks",
+        "D. To determine the patient's code status"
+      ],
+      "correct": 1,
+      "rationale": "LVO-screening scales add sensitivity for detecting large-vessel occlusion strokes, which may influence a destination decision toward an endovascular-capable center per local protocol.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q07",
+      "question": "What does FAST-ED add to the standard FAST components?",
+      "options": ["A. Eye deviation and denial/neglect", "B. Blood glucose and temperature", "C. Pupil reactivity", "D. Grip strength bilaterally"],
+      "correct": 0,
+      "rationale": "FAST-ED extends FAST by adding eye (gaze) deviation and denial/neglect to improve LVO detection sensitivity.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q08",
+      "question": "Which findings raise suspicion for a large-vessel occlusion (LVO) stroke?",
+      "options": [
+        "A. Isolated mild facial droop only",
+        "B. Gaze deviation, severe combined face+arm weakness, and neglect of the deficit",
+        "C. A resolved speech abnormality with normal exam otherwise",
+        "D. Isolated numbness without weakness"
+      ],
+      "correct": 1,
+      "rationale": "Gaze deviation, severe unilateral face+arm weakness together, and neglect/denial of the deficit are findings that raise LVO suspicion beyond a basic FAST-positive screen.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q09",
+      "question": "Why should blood glucose be checked in a suspected stroke patient?",
+      "options": [
+        "A. Hypoglycemia is a well-known, rapidly correctable stroke mimic",
+        "B. Glucose has no relevance to neurologic presentations",
+        "C. It replaces the need for a stroke scale",
+        "D. It is only relevant in diabetic patients"
+      ],
+      "correct": 0,
+      "rationale": "Hypoglycemia can mimic a focal neurologic deficit and is rapidly correctable, making a glucose check a high-value field step in suspected stroke.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q10",
+      "question": "Why is documenting the last-known-well time so important?",
+      "options": [
+        "A. It drives eligibility for time-sensitive hospital treatments",
+        "B. It is only used for billing purposes",
+        "C. It has no bearing on hospital treatment decisions",
+        "D. It replaces the need for a stroke scale"
+      ],
+      "correct": 0,
+      "rationale": "Last-known-well time is a key driver of eligibility for time-sensitive interventions at the receiving hospital, making precise documentation a high priority.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q11",
+      "question": "What is a 'stroke alert'?",
+      "options": [
+        "A. A patient-initiated emergency call",
+        "B. Early hospital notification of a suspected stroke patient so the receiving facility can prepare",
+        "C. A specific stroke medication",
+        "D. A type of cardiac monitor alarm"
+      ],
+      "correct": 1,
+      "rationale": "A stroke alert is early notification to the receiving hospital, allowing the stroke team to prepare before patient arrival.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c01_q12",
+      "question": "Should transport be delayed to perform a full, extensive neurologic exam on a suspected stroke patient?",
+      "options": [
+        "A. Yes, always complete a full exam before transport",
+        "B. No — use a rapid validated screening scale and prioritize rapid transport, since time is central to stroke outcome",
+        "C. Only if the patient requests it",
+        "D. Only for hemorrhagic strokes"
+      ],
+      "correct": 1,
+      "rationale": "Time is the central variable in stroke outcomes, so field care uses a rapid screening scale rather than delaying transport for an extensive exam.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c01_q13",
+      "question": "A patient had left-sided facial droop and slurred speech that fully resolved 20 minutes before EMS arrival. How should this be treated?",
+      "options": [
+        "A. As a non-urgent complaint since symptoms resolved",
+        "B. With the same urgency as an active stroke, given the possibility of TIA and risk of a subsequent stroke",
+        "C. Only urgent if the patient becomes symptomatic again",
+        "D. As a psychiatric complaint given full resolution"
+      ],
+      "correct": 1,
+      "rationale": "A resolved deficit consistent with TIA still carries meaningful short-term stroke risk and should be treated with full stroke-protocol urgency.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q14",
+      "question": "A stroke patient has gaze deviation to the right, severe right face and arm weakness, and does not acknowledge the weak arm. What should this presentation raise suspicion for?",
+      "options": [
+        "A. A simple TIA with no further workup needed",
+        "B. Possible large-vessel occlusion (LVO) stroke, potentially warranting an LVO-screening-based destination decision",
+        "C. A hypoglycemic event with no stroke involvement",
+        "D. A behavioral/psychiatric emergency"
+      ],
+      "correct": 1,
+      "rationale": "Gaze deviation, combined severe face+arm weakness, and neglect of the deficit are classic LVO-suspicious findings that may change the transport destination decision per local protocol.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c01_q15",
+      "question": "Which guideline is the authoritative current source for stroke management referenced in this course?",
+      "options": [
+        "A. The 2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke",
+        "B. GINA 2025",
+        "C. DSM-5-TR",
+        "D. ADA Standards of Care 2026"
+      ],
+      "correct": 0,
+      "rationale": "The 2026 AHA/ASA Guideline for the Early Management of Patients With Acute Ischemic Stroke is the current authoritative source, replacing the 2018/2019 guideline.",
+      "difficulty": "Easy"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "What is a delusion?",
+      "options": [
+        "A. A false sensory perception with no external stimulus",
+        "B. A fixed, false belief that persists despite clear evidence against it",
+        "C. A normal variation in mood",
+        "D. A memory impairment"
+      ],
+      "correct": 1,
+      "rationale": "A delusion is a fixed, false belief maintained despite contrary evidence — distinct from a hallucination, which is a sensory phenomenon.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "What is a hallucination?",
+      "options": [
+        "A. A fixed, false belief",
+        "B. A false sensory perception with no external stimulus",
+        "C. A memory of a past traumatic event",
+        "D. A mood disturbance"
+      ],
+      "correct": 1,
+      "rationale": "A hallucination is a false sensory perception (e.g., hearing or seeing something not actually present) — distinct from a delusion, which is a belief.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "What is the core distinction between a delusion and a hallucination?",
+      "options": [
+        "A. Delusion = belief; hallucination = sensory perception",
+        "B. They are interchangeable terms for the same phenomenon",
+        "C. Delusion only occurs in mood disorders; hallucination only in schizophrenia",
+        "D. Delusion is always visual; hallucination is always auditory"
+      ],
+      "correct": 0,
+      "rationale": "The key distinction is that a delusion is a belief phenomenon, while a hallucination is a sensory phenomenon.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q04",
+      "question": "What causes can produce psychotic symptoms?",
+      "options": [
+        "A. Only primary psychotic disorders like schizophrenia",
+        "B. Primary psychotic disorders, mood disorders with psychotic features, or organic/medical causes",
+        "C. Only substance intoxication",
+        "D. Psychotic symptoms have no identifiable causes"
+      ],
+      "correct": 1,
+      "rationale": "Psychotic symptoms can arise from primary psychotic disorders, mood disorders with psychotic features, or organic/medical causes such as substance use or delirium.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q05",
+      "question": "Are prehospital providers expected to diagnose the underlying cause of psychotic symptoms?",
+      "options": [
+        "A. Yes, definitive diagnosis is a required field skill",
+        "B. No — the priority is safe assessment, ruling out organic/reversible causes when feasible, and safe transport",
+        "C. Only paramedics are expected to diagnose, not EMTs",
+        "D. Diagnosis is irrelevant to prehospital care"
+      ],
+      "correct": 1,
+      "rationale": "Field providers focus on safe assessment and recognition, not definitive psychiatric diagnosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q06",
+      "question": "What are core features of a major depressive episode?",
+      "options": [
+        "A. Persistent low mood, loss of interest/pleasure, sleep/appetite changes, low energy",
+        "B. Elevated mood and decreased need for sleep",
+        "C. Recurrent panic episodes with tachycardia",
+        "D. Re-experiencing symptoms following trauma"
+      ],
+      "correct": 0,
+      "rationale": "A major depressive episode is characterized by persistent low mood, anhedonia, sleep/appetite changes, and low energy.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q07",
+      "question": "What are core features of a manic episode?",
+      "options": [
+        "A. Persistent low mood and low energy",
+        "B. Elevated or irritable mood, decreased need for sleep, rapid/pressured speech, grandiosity, risky behavior",
+        "C. Recurrent discrete episodes of fear with physical symptoms",
+        "D. Avoidance and hyperarousal following trauma"
+      ],
+      "correct": 1,
+      "rationale": "A manic episode features elevated/irritable mood, reduced sleep need, pressured speech, grandiosity, and risky/impulsive behavior.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "Why is mania field-relevant beyond the mood elevation itself?",
+      "options": [
+        "A. Impaired judgment during mania can create acute safety risks",
+        "B. Mania has no impact on safety or behavior",
+        "C. Manic patients are always cooperative",
+        "D. Mania only affects sleep patterns"
+      ],
+      "correct": 0,
+      "rationale": "Impaired judgment during mania can lead to reckless behavior and occasional aggression, creating field-relevant safety considerations.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q09",
+      "question": "What symptoms characterize a panic attack?",
+      "options": [
+        "A. Recurrent, discrete episodes of intense fear with tachycardia, dyspnea, chest tightness, sense of impending doom",
+        "B. Persistent low mood over weeks",
+        "C. Fixed false beliefs",
+        "D. Memory impairment"
+      ],
+      "correct": 0,
+      "rationale": "Panic attacks are discrete episodes of intense fear accompanied by physical symptoms including tachycardia, dyspnea, and chest tightness.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q10",
+      "question": "A patient with known panic disorder presents with chest pain and dyspnea. What is the correct approach?",
+      "options": [
+        "A. Assume it is a panic attack based on history and skip medical evaluation",
+        "B. Still rule out true medical emergencies (ECG, vitals, glucose) rather than assuming panic disorder from history alone",
+        "C. Refuse to treat since the patient has a psychiatric history",
+        "D. Only assess mental status, not vital signs"
+      ],
+      "correct": 1,
+      "rationale": "Panic attacks can mimic or coexist with genuine medical emergencies, so appropriate medical rule-out is still required despite a known panic disorder history.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q11",
+      "question": "What are core features of PTSD?",
+      "options": [
+        "A. Re-experiencing symptoms, avoidance, negative mood/cognition changes, hyperarousal following trauma",
+        "B. Elevated mood and grandiosity",
+        "C. Fixed false beliefs without sensory changes",
+        "D. Recurrent discrete panic episodes only"
+      ],
+      "correct": 0,
+      "rationale": "PTSD is defined by re-experiencing, avoidance, negative mood/cognition changes, and hyperarousal symptoms following a traumatic event.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q12",
+      "question": "Why might aspects of an EMS encounter trigger or worsen PTSD symptoms?",
+      "options": [
+        "A. Uniforms, restraint, or physical contact can serve as trauma reminders",
+        "B. EMS encounters have no relationship to PTSD symptoms",
+        "C. Only ambulance sirens can trigger PTSD symptoms",
+        "D. PTSD symptoms cannot be triggered by external events"
+      ],
+      "correct": 0,
+      "rationale": "Certain aspects of the EMS encounter can serve as trauma reminders for PTSD patients, making calm explanation of actions beneficial when feasible.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Does asking a patient directly about suicidal thoughts increase their risk of suicide?",
+      "options": [
+        "A. Yes, asking plants the idea",
+        "B. No — direct, non-judgmental questioning does not increase risk and is appropriate when indicated",
+        "C. Only increases risk in adolescents",
+        "D. Only increases risk if asked more than once"
+      ],
+      "correct": 1,
+      "rationale": "Evidence and standard teaching indicate that asking directly about suicidal ideation does not increase risk — it is an appropriate and necessary assessment question.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q14",
+      "question": "What factors make a suicidal patient a high-risk presentation?",
+      "options": [
+        "A. A specific plan, access to lethal means, or a prior attempt history",
+        "B. Any mention of sadness without further detail",
+        "C. A history of seeking therapy",
+        "D. Being over the age of 65"
+      ],
+      "correct": 0,
+      "rationale": "A specific plan, access to lethal means, and prior attempt history are recognized high-risk factors warranting careful safety consideration and transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q15",
+      "question": "A patient describes hearing voices commanding them to act, while also holding an unshakeable belief that neighbors are monitoring them through the walls. What phenomena are present?",
+      "options": [
+        "A. Only a delusion (the monitoring belief) — the voices are a memory",
+        "B. Both a hallucination (hearing voices) and a delusion (the monitoring belief)",
+        "C. Only a hallucination — beliefs are not part of psychosis",
+        "D. Neither — this is a normal stress response"
+      ],
+      "correct": 1,
+      "rationale": "Hearing voices with no external source is a hallucination; the fixed false belief of being monitored despite no evidence is a delusion — both can co-occur in a psychotic presentation.",
+      "difficulty": "Hard"
+    }
+  ]
+}

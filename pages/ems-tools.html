@@ -37,15 +37,38 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .sec-hdr{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin:0 0 10px 2px}
 
 /* ──── TOOL GRID ─────────────────────────────────────── */
-.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.tools-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}
+.tools-bar .sec-hdr{margin:0 0 0 2px}
+/* Animated two-state view toggle: the thumb slides under the active icon */
+.view-toggle{position:relative;display:inline-flex;padding:3px;border-radius:11px;background:var(--sf);border:1px solid var(--br);flex-shrink:0}
+.view-toggle::before{content:"";position:absolute;top:3px;left:3px;width:32px;height:28px;border-radius:8px;background:linear-gradient(135deg,#b45309,#d97706);box-shadow:0 2px 10px rgba(217,119,6,.45);transition:transform .32s cubic-bezier(.34,1.56,.64,1)}
+.view-toggle[data-view="list"]::before{transform:translateX(32px)}
+.vt-btn{position:relative;z-index:1;width:32px;height:28px;border:0;background:none;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:.95rem;cursor:pointer;border-radius:8px;transition:color .25s}
+.vt-btn svg{transition:transform .32s cubic-bezier(.34,1.56,.64,1)}
+.vt-btn[aria-pressed="true"]{color:#fff}
+.vt-btn[aria-pressed="true"] svg{transform:scale(1.1)}
+.vt-btn:not([aria-pressed="true"]):hover{color:var(--text)}
+
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
 @media(min-width:500px){.tool-grid{grid-template-columns:repeat(3,1fr)}}
-.tool-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px 14px 14px;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.tool-card{background:var(--sf);border:1px solid var(--br);border-radius:14px;padding:11px 10px 10px;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px}
 .tool-card:active{transform:scale(.97)}
 .tool-card:hover{border-color:var(--br2)}
-.tc-icon{font-size:1.6rem;line-height:1}
-.tc-title{font-size:.88rem;font-weight:800;line-height:1.2}
-.tc-desc{font-size:.7rem;color:var(--muted);line-height:1.4}
-.tc-tag{align-self:center;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:3px 9px;border-radius:20px;border:1px solid;margin-top:2px}
+.tc-icon{font-size:1.25rem;line-height:1}
+.tc-title{font-size:.82rem;font-weight:800;line-height:1.2}
+.tc-desc{font-size:.66rem;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+
+/* List view: one compact row per tool — icon | title/desc | tag */
+.tool-grid.is-list{grid-template-columns:1fr;gap:7px}
+.tool-grid.is-list .tool-card{display:grid;grid-template-columns:34px 1fr auto;grid-template-areas:"i t g" "i d g";align-items:center;column-gap:11px;row-gap:1px;text-align:left;padding:9px 12px;border-radius:12px}
+.tool-grid.is-list .tc-icon{grid-area:i;width:34px;height:34px;border-radius:10px;background:var(--sf2);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.tool-grid.is-list .tc-title{grid-area:t;align-self:end}
+.tool-grid.is-list .tc-desc{grid-area:d;align-self:start}
+.tool-grid.is-list .tc-tag{grid-area:g;margin-top:0}
+.tool-grid.anim .tool-card{animation:tcIn .34s cubic-bezier(.25,1,.5,1) both;animation-delay:calc(var(--i,0) * 22ms)}
+@keyframes tcIn{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view-toggle::before,.vt-btn svg{transition:none}.tool-grid.anim .tool-card{animation:none}}
+.tc-tag{align-self:center;font-size:.56rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:2px 8px;border-radius:20px;border:1px solid;margin-top:2px;white-space:nowrap}
 .tag-neo{color:#a78bfa;border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.1)}
 .tag-trauma{color:#f87171;border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.1)}
 .tag-mci{color:#fbbf24;border-color:rgba(251,191,36,.3);background:rgba(251,191,36,.1)}
@@ -207,6 +230,11 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 .tool-card.feat .tc-icon{font-size:2rem;color:#fb7185}
 .tool-card.feat .tc-body{flex:1;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
 .tool-card.feat .tc-tag{align-self:flex-start}
+.tool-card.feat .tc-desc{-webkit-line-clamp:2}
+.tool-grid.is-list .tool-card.feat{display:flex;flex-direction:row;align-items:center;text-align:left;gap:12px;padding:10px 12px}
+.tool-grid.is-list .tool-card.feat .tc-icon{font-size:1.25rem}
+.tool-grid.is-list .tool-card.feat .tc-title,.tool-grid.is-list .tool-card.feat .tc-desc{align-self:flex-start}
+.tool-grid.is-list .tool-card.feat .tc-desc{-webkit-line-clamp:1}
 </style>
 </head>
 <body>
@@ -222,9 +250,15 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
 
 <main class="page-body">
 
-  <p class="sec-hdr">Clinical Calculators</p>
+  <div class="tools-bar">
+    <p class="sec-hdr">Clinical Calculators</p>
+    <div class="view-toggle" id="viewToggle" role="group" aria-label="Layout" data-view="grid">
+      <button type="button" class="vt-btn" data-view="grid" aria-pressed="true" aria-label="Grid view" title="Grid view"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#layout-grid"/></svg></button>
+      <button type="button" class="vt-btn" data-view="list" aria-pressed="false" aria-label="List view" title="List view"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#list"/></svg></button>
+    </div>
+  </div>
 
-  <div class="tool-grid">
+  <div class="tool-grid" id="toolGrid">
     <div class="tool-card feat" onclick="window.location.href='defib.html'">
       <div class="tc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg></div>
       <div class="tc-body">
@@ -281,12 +315,26 @@ body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(
       <div class="tc-desc">MCI step-by-step triage flow</div>
       <span class="tc-tag tag-mci">MCI</span>
     </div>
+
+    <div class="tool-card" onclick="window.location.href='methane.html'">
+      <div class="tc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#radio"/></svg></div>
+      <div class="tc-title">METHANE Report</div>
+      <div class="tc-desc">Major incident scene report builder</div>
+      <span class="tc-tag tag-mci">MCI</span>
+    </div>
 	
     <div class="tool-card" onclick="window.location.href='Carevent.html'">
       <div class="tc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#wind"/></svg></div>
       <div class="tc-title">O₂ Calculator</div>
       <div class="tc-desc">Cylinder duration &amp; planning</div>
       <span class="tc-tag tag-calc">Airway</span>
+    </div>
+
+    <div class="tool-card" onclick="window.location.href='megacode.html'">
+      <div class="tc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg></div>
+      <div class="tc-title">ACLS Megacode</div>
+      <div class="tc-desc">12 live-monitor arrest scenarios</div>
+      <span class="tc-tag tag-cardio">Simulator</span>
     </div>
 
 	
@@ -321,6 +369,35 @@ function closeSheet(){
   document.getElementById("bsOverlay").classList.remove("open");
 }
 document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeSheet(); });
+
+/* ── Grid / list view toggle (remembered per device) ── */
+(function(){
+  const KEY = "dcas_ems_tools_view";
+  const grid = document.getElementById("toolGrid");
+  const tog  = document.getElementById("viewToggle");
+  if (!grid || !tog) return;
+  grid.querySelectorAll(".tool-card").forEach((c,i)=>c.style.setProperty("--i", i));
+  function apply(view, animate){
+    tog.dataset.view = view;
+    tog.querySelectorAll(".vt-btn").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.view===view)));
+    grid.classList.toggle("is-list", view==="list");
+    if (animate){
+      grid.classList.remove("anim"); void grid.offsetWidth; grid.classList.add("anim");
+    }
+  }
+  let saved = "grid";
+  try { saved = localStorage.getItem(KEY)==="list" ? "list" : "grid"; } catch(e){}
+  apply(saved, false);
+  tog.addEventListener("click", e=>{
+    const b = e.target.closest(".vt-btn");
+    if (!b || b.dataset.view===tog.dataset.view) return;
+    apply(b.dataset.view, true);
+    try { localStorage.setItem(KEY, b.dataset.view); } catch(e){}
+  });
+  grid.addEventListener("animationend", e=>{
+    if (e.target===grid.lastElementChild) grid.classList.remove("anim");
+  });
+})();
 
 function cls(v){ return v>=7?"g": v>=4?"y":"r"; }
 function sColor(c){ return {g:"var(--green)",y:"var(--yellow)",r:"var(--red)",k:"#6b7280"}[c]; }

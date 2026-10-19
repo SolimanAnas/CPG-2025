@@ -1,0 +1,157 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "A 20-year-old male reports two days of diffuse abdominal pain that today localized to the lower right quadrant. What is the most likely diagnosis?",
+      "options": ["A. Cholecystitis", "B. Appendicitis", "C. Diverticulitis", "D. Pancreatitis"],
+      "correct": 1,
+      "rationale": "Appendicitis classically presents with periumbilical pain migrating to the right lower quadrant near McBurney's point, matching this presentation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q02",
+      "question": "Which abdominal quadrant is classically associated with cholecystitis?",
+      "options": ["A. Right lower quadrant", "B. Right upper quadrant", "C. Left lower quadrant", "D. Epigastric radiating to back"],
+      "correct": 1,
+      "rationale": "Cholecystitis (gallbladder inflammation) classically presents with right upper quadrant pain.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q03",
+      "question": "Which abdominal pain pattern is classic for pancreatitis?",
+      "options": ["A. RLQ pain", "B. RUQ pain", "C. Epigastric pain radiating to the back", "D. Suprapubic pain"],
+      "correct": 2,
+      "rationale": "Pancreatitis classically presents with epigastric pain that radiates to the back.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q04",
+      "question": "A dialysis patient missed his last two treatments and now reports generalized weakness and tingling. What should you specifically screen for?",
+      "options": ["A. Hypoglycemia only", "B. Hyperkalemia", "C. Anaphylaxis", "D. Simple dehydration"],
+      "correct": 1,
+      "rationale": "Missed dialysis raises hyperkalemia risk, presenting with weakness, paresthesias, and potentially dangerous cardiac dysrhythmias — this patient needs a cardiac monitor and urgent evaluation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q05",
+      "question": "What physical exam findings indicate dehydration?",
+      "options": [
+        "A. Bounding pulses and moist mucous membranes",
+        "B. Skin tenting (poor turgor) and dry mucous membranes",
+        "C. Warm, flushed, well-perfused skin",
+        "D. Normal capillary refill only"
+      ],
+      "correct": 1,
+      "rationale": "Skin tenting and dry mucous membranes are classic bedside indicators of dehydration, useful even before formal vital sign changes appear.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q06",
+      "question": "Which abdominal quadrant is classically associated with diverticulitis, especially in older patients?",
+      "options": ["A. Right upper quadrant", "B. Right lower quadrant", "C. Left lower quadrant", "D. Epigastric"],
+      "correct": 2,
+      "rationale": "Diverticulitis classically presents with left lower quadrant pain, especially in older adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q07",
+      "question": "A middle-aged man with cardiac risk factors reports epigastric discomfort and nausea, without classic chest pain. What should be considered?",
+      "options": [
+        "A. Simple indigestion only, no further workup needed",
+        "B. Inferior MI presenting atypically as epigastric pain",
+        "C. This can only be a GI complaint",
+        "D. Anxiety, with no cardiac workup needed"
+      ],
+      "correct": 1,
+      "rationale": "Inferior MI can present with epigastric discomfort and nausea rather than classic chest pain, so an ECG should be obtained in patients with cardiac risk factors presenting this way.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "Why can lower lobe pneumonia cause upper abdominal pain?",
+      "options": [
+        "A. It cannot — pneumonia never causes abdominal pain",
+        "B. Diaphragmatic irritation from the adjacent lung inflammation can refer pain to the upper abdomen",
+        "C. Pneumonia always presents exclusively with chest pain",
+        "D. This is caused by direct bacterial spread to the abdomen"
+      ],
+      "correct": 1,
+      "rationale": "Diaphragmatic irritation from lower lobe pneumonia can refer pain to the upper abdomen, making a respiratory assessment important in some abdominal-pain presentations.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q09",
+      "question": "Which endocrine condition commonly presents with abdominal pain as a symptom, alongside Kussmaul respirations?",
+      "options": ["A. Hypoglycemia", "B. HHNS", "C. Diabetic ketoacidosis (DKA)", "D. Hypothyroidism"],
+      "correct": 2,
+      "rationale": "Abdominal pain is a recognized DKA symptom, often accompanying Kussmaul respirations, polyuria, and polydipsia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Why is using abdominal pain location as an organizing framework clinically useful?",
+      "options": [
+        "A. It has no real diagnostic value",
+        "B. It provides strong differential clues (RLQ, RUQ, LLQ, epigastric) that speed formation of a useful differential diagnosis",
+        "C. Location never correlates with the underlying cause",
+        "D. It replaces the need for vital signs"
+      ],
+      "correct": 1,
+      "rationale": "While not absolute, pain location (RLQ→appendicitis, RUQ→cholecystitis, LLQ→diverticulitis, epigastric-to-back→pancreatitis) is a strong organizing tool for building a differential quickly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q11",
+      "question": "What cardiac risk does hyperkalemia in a missed-dialysis patient carry?",
+      "options": [
+        "A. No cardiac risk at all",
+        "B. Dangerous cardiac dysrhythmias",
+        "C. Only mild palpitations with no clinical significance",
+        "D. Guaranteed cardiac arrest in all cases"
+      ],
+      "correct": 1,
+      "rationale": "Hyperkalemia is associated with dangerous cardiac dysrhythmias, making cardiac monitoring and urgent evaluation important in at-risk dialysis patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "A patient with vomiting and diarrhea over two days has dry mucous membranes and tenting skin, but normal blood pressure and heart rate. What is the correct interpretation?",
+      "options": [
+        "A. No dehydration is present since vital signs are normal",
+        "B. Early/mild dehydration is likely present based on exam findings, even before vital sign changes appear",
+        "C. This patient requires no further monitoring",
+        "D. These findings are unrelated to fluid status"
+      ],
+      "correct": 1,
+      "rationale": "Skin turgor and mucous membrane findings can reveal dehydration before compensatory vital sign changes (tachycardia, hypotension) appear — similar to how compensated shock can precede a falling blood pressure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q13",
+      "question": "Which practice best protects against missing a non-abdominal cause of an 'abdominal pain' complaint?",
+      "options": [
+        "A. Assuming all abdominal pain is gastrointestinal in origin",
+        "B. Systematic assessment including vital signs, glucose check, and ECG when cardiac risk factors are present",
+        "C. Skipping vital signs to save time",
+        "D. Treating every abdominal complaint identically regardless of history"
+      ],
+      "correct": 1,
+      "rationale": "A systematic assessment — not anchoring on 'GI' — catches referred/mimicking causes like inferior MI, DKA, or pneumonia presenting as abdominal pain.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q14",
+      "question": "A patient presents with vomiting for two days, dry mucous membranes, and tenting skin. What is the best interpretation?",
+      "options": [
+        "A. No clinical significance",
+        "B. Signs consistent with dehydration",
+        "C. Signs consistent with anaphylaxis",
+        "D. Signs consistent with hyperkalemia specifically"
+      ],
+      "correct": 1,
+      "rationale": "Dry mucous membranes and skin tenting are classic bedside indicators of dehydration from ongoing fluid losses.",
+      "difficulty": "Easy"
+    }
+  ]
+}

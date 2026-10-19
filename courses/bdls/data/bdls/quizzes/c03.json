@@ -1,0 +1,188 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "Which are the five major functional sections of ICS?",
+      "options": [
+        "A. Command, Operations, Planning, Logistics, Finance/Administration",
+        "B. Triage, Treatment, Transport, Staging, Morgue",
+        "C. Police, Fire, EMS, Hospital, Public Health",
+        "D. Detection, Safety, Support, Evacuation, Recovery"
+      ],
+      "correct": 0,
+      "rationale": "ICS organizes all incident work into Command, Operations, Planning, Logistics, and Finance/Administration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "Field triage, treatment, and transport belong to which ICS section?",
+      "options": ["A. Planning", "B. Operations", "C. Logistics", "D. Finance/Administration"],
+      "correct": 1,
+      "rationale": "Operations performs the tactical, hands-on work of the response, including all patient-care activities.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "Obtaining ventilators, food for responders, and portable radios is the job of:",
+      "options": ["A. Command", "B. Operations", "C. Logistics", "D. Planning"],
+      "correct": 2,
+      "rationale": "Logistics acquires the resources the response needs — supplies, facilities, communications, and responder support.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q04",
+      "question": "What is the recommended ICS span of control?",
+      "options": ["A. 1–2 direct reports", "B. About 3–7 (optimally ~5)", "C. 10–15", "D. Unlimited"],
+      "correct": 1,
+      "rationale": "One supervisor should directly manage roughly 3–7 people, classically 5. Larger spans trigger subdivision of the structure.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q05",
+      "question": "A hazmat incident involves fire, police, EMS, and an environmental agency, each with legal authority. The best command arrangement is:",
+      "options": [
+        "A. Four separate command posts",
+        "B. Unified command — agencies share objectives under one plan with a single Operations section",
+        "C. Whoever arrived first commands alone forever",
+        "D. No command until the state arrives"
+      ],
+      "correct": 1,
+      "rationale": "Unified command lets multiple jurisdictions/disciplines jointly command while preserving one coordinated plan — the fix for competing command posts.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "Which ICS role can immediately halt an unsafe operation?",
+      "options": ["A. Public information officer", "B. Safety officer", "C. Finance chief", "D. Staging manager"],
+      "correct": 1,
+      "rationale": "The safety officer, part of the command staff, holds authority to stop any operation posing imminent danger.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q07",
+      "question": "What is NIMS?",
+      "options": [
+        "A. A hospital bed-tracking software",
+        "B. The national doctrine standardizing incident management — ICS, resource typing, credentialing, mutual aid, EOCs",
+        "C. A triage algorithm",
+        "D. A federal response team"
+      ],
+      "correct": 1,
+      "rationale": "NIMS standardizes how all agencies and levels of government manage incidents so systems interoperate — ICS is its on-scene management component.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q08",
+      "question": "During a hospital disaster activation, a nurse receives conflicting instructions from her everyday manager and her assigned incident supervisor. Per ICS, she should:",
+      "options": [
+        "A. Follow her everyday manager",
+        "B. Follow her assigned incident supervisor — unity of command",
+        "C. Follow whichever instruction is easier",
+        "D. Do both"
+      ],
+      "correct": 1,
+      "rationale": "ICS unity of command means each person reports to exactly one incident supervisor during the response, regardless of daily reporting lines.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q09",
+      "question": "What must occur when command is transferred to a more senior officer?",
+      "options": [
+        "A. Nothing — it is automatic",
+        "B. A formal briefing of the incoming commander and an announcement to all",
+        "C. A written exam",
+        "D. Approval from the hospital CEO"
+      ],
+      "correct": 1,
+      "rationale": "Command transfer requires a briefing (situation, resources, plan) and notification so every responder knows who now commands.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q10",
+      "question": "The incident action plan is produced by which section?",
+      "options": ["A. Planning", "B. Operations", "C. Logistics", "D. Command staff only"],
+      "correct": 0,
+      "rationale": "Planning collects information, tracks resources and the situation, and prepares the incident action plan for command approval.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "An Emergency Operations Center (EOC) primarily:",
+      "options": [
+        "A. Replaces the on-scene incident commander",
+        "B. Coordinates off-scene support — resources, information, and policy — for incident command",
+        "C. Performs field triage",
+        "D. Is only activated for federal disasters"
+      ],
+      "correct": 1,
+      "rationale": "The EOC supports and coordinates from off-scene; it does not take over tactical command of the incident.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q12",
+      "question": "In hospital incident command (e.g., HICS), a job action sheet is:",
+      "options": [
+        "A. A billing document",
+        "B. A role card defining the incident duties, reporting line, and tasks for an assigned position",
+        "C. A triage tag",
+        "D. A federal form"
+      ],
+      "correct": 1,
+      "rationale": "Job action sheets translate the ICS structure into concrete role instructions so staff can step into incident positions quickly.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q13",
+      "question": "A treatment group supervisor now directly manages 12 providers and is overwhelmed. The ICS-correct fix is:",
+      "options": [
+        "A. Work harder",
+        "B. Subdivide — create additional units/leaders to restore a 3–7 span of control",
+        "C. Remove the supervisor",
+        "D. Ignore it — span of control is advisory"
+      ],
+      "correct": 1,
+      "rationale": "ICS is modular: when span of control exceeds ~7, the structure subdivides so every supervisor manages a workable number.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q14",
+      "question": "Why does ICS insist on common terminology (plain language, no codes)?",
+      "options": [
+        "A. Tradition",
+        "B. So responders from different agencies understand each other without translation errors",
+        "C. To shorten radio traffic",
+        "D. To comply with billing rules"
+      ],
+      "correct": 1,
+      "rationale": "Agencies have different internal codes; plain, common terminology prevents dangerous misunderstandings in multi-agency operations.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q15",
+      "question": "Which statement about ICS scalability is TRUE?",
+      "options": [
+        "A. Every incident must activate all five sections fully",
+        "B. ICS expands and contracts modularly — small incidents may need only an incident commander",
+        "C. ICS applies only to incidents with over 100 casualties",
+        "D. Sections cannot be combined"
+      ],
+      "correct": 1,
+      "rationale": "ICS is modular: functions are activated only as needed, growing with the incident and demobilizing as it resolves.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q16",
+      "question": "A physician arrives at a hospital disaster and begins working wherever she sees need, without checking in. The ICS problem is:",
+      "options": [
+        "A. None — initiative is always good",
+        "B. No check-in means no accountability, no assigned supervisor, and broken resource tracking",
+        "C. Physicians are exempt from ICS",
+        "D. She should have gone to the EOC"
+      ],
+      "correct": 1,
+      "rationale": "Check-in establishes accountability and puts responders into the structure with a defined role and supervisor; unassigned helpers are untracked and can be unsafe.",
+      "difficulty": "Hard"
+    }
+  ]
+}

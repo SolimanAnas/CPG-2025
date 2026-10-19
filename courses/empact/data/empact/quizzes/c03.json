@@ -1,0 +1,168 @@
+{
+  "chapter": "c03",
+  "questions": [
+    {
+      "id": "c03_q01",
+      "question": "What is the hallmark sign of asthma?",
+      "options": ["A. Stridor", "B. Wheezing", "C. Crackles", "D. Absent breath sounds"],
+      "correct": 1,
+      "rationale": "Wheezing, from bronchospasm and airway inflammation narrowing the lower airways, is the hallmark sign of asthma.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q02",
+      "question": "A patient with a known asthma history has been using her rescue inhaler without relief. What is first-line prehospital treatment?",
+      "options": ["A. Oral antihistamines", "B. Nebulized beta-2 agonists", "C. Aspirin", "D. IV antibiotics"],
+      "correct": 1,
+      "rationale": "When home rescue inhaler therapy fails, nebulized beta-2 agonists (e.g., albuterol) are first-line prehospital treatment for asthma.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q03",
+      "question": "A known asthmatic in severe distress suddenly has NO audible wheezing. What does this mean?",
+      "options": [
+        "A. The asthma attack has resolved",
+        "B. Critical airway obstruction with minimal air movement — a worsening, not improving, sign",
+        "C. The patient is fully compensated and stable",
+        "D. Nothing significant"
+      ],
+      "correct": 1,
+      "rationale": "A 'silent chest' means airflow is so restricted that wheezing can no longer be generated — this is a marker of critical, worsening obstruction requiring urgent escalation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q04",
+      "question": "How is respiratory failure identified?",
+      "options": [
+        "A. A rapid respiratory rate with deep breaths",
+        "B. A very slow respiratory rate (bradypnea) with shallow, ineffective breaths",
+        "C. Normal respiratory rate and depth",
+        "D. Loud wheezing only"
+      ],
+      "correct": 1,
+      "rationale": "Bradypnea combined with shallow, ineffective breathing is the classic pattern of respiratory failure, and can be deceptively easy to miss since the patient may appear calm.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q05",
+      "question": "Why is a calm-appearing, slow-breathing patient potentially more concerning than a visibly labored, fast-breathing one?",
+      "options": [
+        "A. It never is more concerning",
+        "B. Bradypnea with shallow breaths can indicate the patient is running out of respiratory reserve — impending failure",
+        "C. Calm patients are always stable",
+        "D. Rate is irrelevant to ventilation adequacy"
+      ],
+      "correct": 1,
+      "rationale": "Unlike the visibly distressed tachypneic patient, bradypnea with shallow breathing signals exhaustion and impending respiratory failure, which demands immediate ventilatory support.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q06",
+      "question": "A COPD patient develops sudden shortness of breath and pleuritic chest pain with diminished breath sounds on one side, without trauma. What should you suspect?",
+      "options": ["A. Pulmonary embolism", "B. Spontaneous pneumothorax", "C. Asthma exacerbation", "D. Sepsis"],
+      "correct": 1,
+      "rationale": "Spontaneous pneumothorax commonly occurs in COPD patients from ruptured blebs, presenting with sudden dyspnea, pleuritic pain, and unilateral diminished breath sounds — without any trauma.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q07",
+      "question": "A patient recently immobilized after surgery develops sudden dyspnea and pleuritic chest pain with tachycardia. What is the leading concern?",
+      "options": ["A. Simple anxiety", "B. Pulmonary embolism", "C. Asthma", "D. Common cold"],
+      "correct": 1,
+      "rationale": "Sudden dyspnea and pleuritic chest pain in a patient with clot risk factors (recent immobility, surgery) is the classic presentation of pulmonary embolism.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q08",
+      "question": "Which two findings should raise suspicion for sepsis in a patient presenting with respiratory symptoms?",
+      "options": ["A. Fever and altered level of consciousness", "B. Normal temperature and full alertness", "C. Wheezing only", "D. Pleuritic pain only"],
+      "correct": 0,
+      "rationale": "Sepsis is frequently associated with fever and altered LOC, and can present as a respiratory complaint when pneumonia or another infection is the source.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q09",
+      "question": "What common physiologic problem underlies nearly all respiratory complaints, regardless of specific cause?",
+      "options": ["A. Hyperglycemia", "B. Hypoxia", "C. Hyperkalemia", "D. Hypertension"],
+      "correct": 1,
+      "rationale": "Hypoxia is a common thread across asthma, pneumothorax, PE, pneumonia, and heart failure — supplemental oxygen and pulse oximetry apply broadly to this chapter's conditions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q10",
+      "question": "An elderly patient with an indwelling urinary catheter presents with tachypnea, hypoxia, fever, and new confusion. What should be strongly considered?",
+      "options": ["A. Isolated asthma exacerbation", "B. Sepsis, possibly from a UTI or pneumonia source", "C. Simple dehydration only", "D. Anxiety attack"],
+      "correct": 1,
+      "rationale": "Fever plus altered LOC in a respiratory-complaint patient — especially elderly with an indwelling device — should prompt strong consideration of sepsis from a urinary or pulmonary source.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q11",
+      "question": "Why can pulmonary embolism be mistaken for a primary respiratory infection?",
+      "options": [
+        "A. It cannot be mistaken for anything else",
+        "B. Both can present with dyspnea, but PE's sudden onset with pleuritic pain and clot risk factors should distinguish it",
+        "C. PE always presents with a cough and fever identical to pneumonia",
+        "D. PE never causes dyspnea"
+      ],
+      "correct": 1,
+      "rationale": "Overlapping dyspnea symptoms make PE a key differential; the sudden onset, pleuritic pain, and risk-factor history help distinguish it from infectious causes.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q12",
+      "question": "A COPD patient with a small spontaneous pneumothorax shows disproportionately severe distress. Why?",
+      "options": [
+        "A. COPD patients overreact to minor findings",
+        "B. Their baseline pulmonary reserve is already reduced, so even a small additional insult has a larger clinical impact",
+        "C. Pneumothorax is always mild in COPD",
+        "D. This is unrelated to COPD"
+      ],
+      "correct": 1,
+      "rationale": "Reduced baseline reserve in COPD means a small pneumothorax can tip a marginal patient into significant distress, unlike in a patient with normal lung function.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c03_q13",
+      "question": "Which action applies broadly across nearly all respiratory emergencies in this chapter?",
+      "options": [
+        "A. Withholding oxygen until a definitive diagnosis is reached",
+        "B. Supplemental oxygen and continuous pulse oximetry monitoring",
+        "C. Immediate antibiotics for all patients",
+        "D. Avoiding reassessment until hospital arrival"
+      ],
+      "correct": 1,
+      "rationale": "Because hypoxia is a common thread, oxygen therapy and SpO2 monitoring are standard supportive measures while the specific differential is narrowed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q14",
+      "question": "A patient's asthma wheeze becomes progressively quieter as she becomes more anxious and tired. What is the correct interpretation and action?",
+      "options": [
+        "A. Improvement — prepare for discharge",
+        "B. Worsening obstruction (approaching silent chest) — escalate treatment and prepare for advanced airway support",
+        "C. No clinical significance",
+        "D. A sign to stop bronchodilator treatment"
+      ],
+      "correct": 1,
+      "rationale": "Progressively quieter wheeze in a tiring, anxious asthma patient suggests worsening obstruction toward a silent chest — treatment should escalate, not stop.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c03_q15",
+      "question": "What is the standard supportive measure across nearly every respiratory emergency in this chapter?",
+      "options": ["A. Withholding oxygen until diagnosis is certain", "B. Supplemental oxygen with pulse oximetry monitoring", "C. Immediate intubation of every patient", "D. No monitoring is required"],
+      "correct": 1,
+      "rationale": "Because hypoxia is a common thread across these conditions, supplemental oxygen and SpO2 monitoring are broadly applied supportive measures.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c03_q16",
+      "question": "A patient with a history of COPD reports acute dyspnea after a coughing fit, with no chest trauma. What should be high on the differential?",
+      "options": ["A. Pulmonary embolism only", "B. Spontaneous pneumothorax", "C. Meningitis", "D. Appendicitis"],
+      "correct": 1,
+      "rationale": "Spontaneous pneumothorax is common in COPD patients due to rupture of weakened lung tissue, and can be triggered by exertion such as a coughing fit, without any external trauma.",
+      "difficulty": "Medium"
+    }
+  ]
+}

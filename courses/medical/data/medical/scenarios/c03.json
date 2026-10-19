@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Shaky and Sweaty",
+      "presentation": "A 29-year-old woman with type 1 diabetes is found shaky, diaphoretic, and anxious after skipping breakfast before a workout. She is alert and able to swallow safely.",
+      "vitals": { "glucose": "52 mg/dL", "hr": "104 bpm", "appearance": "Alert, diaphoretic, shaky" },
+      "question": "What is the appropriate field treatment?",
+      "options": [
+        "A: IM glucagon, since she is diabetic.",
+        "B: Oral glucose, since she is alert, cooperative, and able to swallow safely.",
+        "C: IV dextrose only, bypassing oral options.",
+        "D: No treatment needed since symptoms are mild."
+      ],
+      "correct": 1,
+      "explanation": "This is mild hypoglycemia in an alert patient with intact airway reflexes who can safely swallow — oral glucose is the appropriate first-line treatment rather than IM glucagon or IV dextrose, which are reserved for patients who cannot safely take oral glucose.",
+      "clinicalPearl": "If they're awake and can swallow safely, oral glucose is simpler and just as effective as IV or IM routes."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Vomiting With a Near-Normal Glucose",
+      "presentation": "A 41-year-old man with type 2 diabetes on an SGLT2-inhibitor medication presents with two days of vomiting, abdominal pain, and unusually deep, rapid breathing. His glucose reads 175 mg/dL.",
+      "vitals": { "glucose": "175 mg/dL", "rr": "28/min, deep pattern", "breath": "Fruity odor noted" },
+      "question": "What should this presentation raise suspicion for, despite the near-normal glucose?",
+      "options": [
+        "A: This cannot be a diabetic emergency since the glucose is not significantly elevated.",
+        "B: Euglycemic DKA, given the SGLT2-inhibitor use, Kussmaul-pattern breathing, fruity breath odor, and vomiting/abdominal pain.",
+        "C: Simple viral gastroenteritis unrelated to his diabetes.",
+        "D: HHS, given his type 2 diabetes history."
+      ],
+      "correct": 1,
+      "explanation": "SGLT2-inhibitor use combined with Kussmaul respirations, fruity breath odor, and vomiting/abdominal pain is the classic presentation of euglycemic DKA — a normal or near-normal glucose does not rule out DKA in this context, and roughly 10% of DKA presents this way.",
+      "clinicalPearl": "SGLT2 inhibitor plus a DKA-looking picture with a normal-ish glucose is the textbook setup for euglycemic DKA — don't let the glucose number reassure you."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Days of Decline",
+      "presentation": "An 78-year-old woman with type 2 diabetes has become progressively more confused and lethargic over three days, with poor oral intake and profound dry mucous membranes. Her glucose reads 720 mg/dL.",
+      "vitals": { "glucose": "720 mg/dL", "appearance": "Obtunded, severely dehydrated", "rr": "Near-normal pattern" },
+      "question": "What does this presentation most likely represent, and what is the field management priority?",
+      "options": [
+        "A: DKA — administer field insulin immediately.",
+        "B: HHS — provide supportive care (oxygen, IV fluids per protocol, monitoring), protect the airway, and transport rapidly for definitive hospital treatment.",
+        "C: Simple hypoglycemia — administer oral glucose.",
+        "D: A primary psychiatric condition unrelated to her diabetes."
+      ],
+      "correct": 1,
+      "explanation": "Severe hyperglycemia, profound dehydration, slower multi-day onset, prominent obtundation, and a near-normal respiratory pattern (rather than Kussmaul) in an older type 2 diabetic patient are classic for HHS rather than DKA. Field management is supportive care and rapid transport — insulin administration is a hospital-level intervention, not a field one.",
+      "clinicalPearl": "Slow onset, severe dehydration, profound confusion, and sky-high glucose without Kussmaul breathing points toward HHS, not DKA — support and transport, don't try to fix the glucose in the field."
+    }
+  ]
+}

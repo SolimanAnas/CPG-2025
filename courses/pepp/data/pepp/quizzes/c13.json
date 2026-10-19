@@ -1,0 +1,152 @@
+{
+  "chapter": "c13",
+  "questions": [
+    {
+      "id": "c13_q01",
+      "question": "What does CSHCN stand for?",
+      "options": ["A. Children with special healthcare needs", "B. Critical severity healthcare notification", "C. Chronic surgical healthcare network", "D. Community special healthcare navigation"],
+      "correct": 0,
+      "rationale": "CSHCN stands for children with special healthcare needs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q02",
+      "question": "Why are caregivers of CSHCN a critical resource on scene?",
+      "options": [
+        "A. They are legally required to answer all questions",
+        "B. They are frequently the most knowledgeable resource about the child's baseline, equipment, and typical presentation",
+        "C. They have no relevant medical knowledge",
+        "D. They should be excluded from the encounter"
+      ],
+      "correct": 1,
+      "rationale": "Caregivers of CSHCN typically manage the child's condition and equipment daily and are the best source of baseline information.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q03",
+      "question": "What are common tracheostomy problems encountered in the field?",
+      "options": ["A. Mucus plugging, accidental decannulation, tube malposition", "B. Only infection", "C. Tracheostomies never malfunction", "D. Only overinflation of the cuff"],
+      "correct": 0,
+      "rationale": "Mucus plugging, accidental decannulation, and tube malposition are common tracheostomy problems.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q04",
+      "question": "What is the first step for a child with a tracheostomy in respiratory distress?",
+      "options": ["A. Immediately remove the tracheostomy tube", "B. Attempt suctioning to clear a possible mucus plug", "C. Call for a surgical consult before any action", "D. Replace the tube regardless of findings"],
+      "correct": 1,
+      "rationale": "Suctioning to address a possible mucus plug is the first troubleshooting step for tracheostomy-related respiratory distress.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q05",
+      "question": "If suctioning does not resolve tracheostomy-related distress, what should be checked next?",
+      "options": ["A. Accidental decannulation (tube fully or partially out)", "B. The child's blood type", "C. The caregiver's employment status", "D. Whether the child has eaten recently"],
+      "correct": 0,
+      "rationale": "Checking for accidental decannulation is the next troubleshooting step after suctioning fails to resolve distress.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q06",
+      "question": "What does a ventriculoperitoneal (VP) shunt treat, and how?",
+      "options": [
+        "A. Hydrocephalus, by diverting cerebrospinal fluid",
+        "B. Diabetes, by delivering insulin",
+        "C. Asthma, by delivering bronchodilators",
+        "D. Seizures, by delivering anticonvulsants"
+      ],
+      "correct": 0,
+      "rationale": "A VP shunt treats hydrocephalus by diverting cerebrospinal fluid, typically to the peritoneal cavity.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q07",
+      "question": "What signs suggest VP shunt malfunction in a child with a known shunt?",
+      "options": [
+        "A. Headache, vomiting, altered mental status, bulging fontanelle",
+        "B. Improved alertness and appetite",
+        "C. Normal fontanelle and no symptoms",
+        "D. Isolated mild fever alone"
+      ],
+      "correct": 0,
+      "rationale": "These findings suggest increased intracranial pressure from shunt malfunction, since the shunt is failing to drain CSF normally.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q08",
+      "question": "What is the appropriate field management for suspected VP shunt malfunction?",
+      "options": [
+        "A. Standard increased-ICP precautions and rapid transport",
+        "B. Attempt to manually adjust the shunt valve in the field",
+        "C. No action needed since shunts never malfunction",
+        "D. Aggressive fluid restriction only"
+      ],
+      "correct": 0,
+      "rationale": "Field management is standard increased-ICP precautions (avoiding hypoxia/hypotension, positioning) with rapid transport; shunt-specific intervention is a hospital-level treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q09",
+      "question": "What is a gastrostomy (G-) tube used for?",
+      "options": ["A. Enteral feeding directly into the stomach", "B. Cardiac monitoring", "C. Cerebrospinal fluid diversion", "D. Mechanical ventilation"],
+      "correct": 0,
+      "rationale": "A gastrostomy tube provides enteral (stomach) feeding access.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q10",
+      "question": "Why is baseline function more useful than population norms when assessing a CSHCN patient?",
+      "options": [
+        "A. Population norms are always more accurate",
+        "B. A CSHCN patient's normal vitals/interactiveness may differ substantially from typically developing children",
+        "C. Baseline function is irrelevant to assessment",
+        "D. CSHCN patients never have an altered baseline"
+      ],
+      "correct": 1,
+      "rationale": "CSHCN patients can have a baseline that differs meaningfully from population norms, making their own baseline the more useful reference.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q11",
+      "question": "What question should providers always ask when assessing a CSHCN patient?",
+      "options": ["A. 'What is normal for this child?'", "B. 'What grade is this child in?'", "C. 'Does this child have insurance?'", "D. 'How many siblings does this child have?'"],
+      "correct": 0,
+      "rationale": "Asking about the child's personal baseline is the key question for accurately interpreting findings in a CSHCN patient.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c13_q12",
+      "question": "A CSHCN patient with a home ventilator via tracheostomy is in distress. Who is often best positioned to help troubleshoot the specific device quickly?",
+      "options": ["A. The caregiver, who typically manages the equipment daily", "B. A bystander with no medical training", "C. No one can help — the equipment must be ignored until hospital arrival", "D. Only the original prescribing physician, by phone"],
+      "correct": 0,
+      "rationale": "Caregivers of CSHCN typically manage their child's equipment daily and are often the fastest, most knowledgeable troubleshooting resource on scene.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c13_q13",
+      "question": "A child with a known VP shunt has a resting SpO2 of 91% at baseline per the caregiver, with no other acute findings. How should this be interpreted?",
+      "options": [
+        "A. As an emergency requiring immediate aggressive intervention",
+        "B. As the child's reported personal baseline, warranting comparison rather than automatic alarm",
+        "C. As proof the shunt is malfunctioning",
+        "D. As irrelevant information"
+      ],
+      "correct": 1,
+      "rationale": "Consistent with the baseline-over-population-norms principle, a caregiver-reported baseline value should be used as the comparison point rather than assumed abnormal on its own.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c13_q14",
+      "question": "Which population is included under 'children with special healthcare needs'?",
+      "options": [
+        "A. Only children with tracheostomies",
+        "B. A broad population, from a child with well-controlled asthma to a child with complex technology dependence",
+        "C. Only children with cancer",
+        "D. Only children who use a wheelchair"
+      ],
+      "correct": 1,
+      "rationale": "CSHCN is a broad category encompassing a wide range of chronic conditions and care needs, not limited to any single diagnosis or technology.",
+      "difficulty": "Medium"
+    }
+  ]
+}

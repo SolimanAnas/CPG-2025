@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>DCAS · METHANE Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════ DESIGN SYSTEM ═════════════════════════════ */
+:root{
+  --bg:#07111f;--sf:rgba(255,255,255,.055);--sf2:rgba(255,255,255,.09);
+  --br:rgba(255,255,255,.10);--br2:rgba(255,255,255,.18);
+  --text:#dde6f0;--muted:#6b8193;
+  --green:#22c55e;--yellow:#eab308;--red:#ef4444;
+  --blue:#3b82f6;--amber:#d97706;
+  --mono:"DM Mono",ui-monospace,monospace;--hdr:60px;--r:16px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid #3b82f6;outline-offset:2px}
+html{height:100%;scroll-padding-top:120px}
+body{font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);min-height:100%;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(ellipse 90% 50% at 15% 0%,rgba(15,39,68,.8),transparent),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(70,30,10,.45),transparent);pointer-events:none;z-index:-1}
+
+/* ──── HEADER ────────────────────────────────────────── */
+.app-header{height:var(--hdr);background:rgba(7,17,31,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 14px;gap:10px;position:sticky;top:0;z-index:60;flex-shrink:0}
+.hdr-back{width:36px;height:36px;border-radius:11px;background:var(--sf2);border:1px solid var(--br);color:var(--text);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.85rem;flex-shrink:0}
+.hdr-badge{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#b45309,#d97706);display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(217,119,6,.4)}
+.hdr-info{flex:1;min-width:0}
+.hdr-title{font-size:.93rem;font-weight:800;letter-spacing:-.3px}
+.hdr-sub{font-size:.62rem;color:var(--muted)}
+.hdr-time{font-family:var(--mono);font-size:.72rem;color:var(--muted);flex-shrink:0}
+
+/* ──── LETTER NAV ────────────────────────────────────── */
+.mnav{position:sticky;top:var(--hdr);z-index:50;background:rgba(7,17,31,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--br);padding:8px 14px}
+.mnav-in{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:6px}
+.mnav a{flex:1;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;text-decoration:none;color:var(--muted);background:var(--sf);border:1px solid var(--br);transition:background .25s,color .25s,border-color .25s}
+.mnav a.done{color:#fff;background:linear-gradient(135deg,#b45309,#d97706);border-color:transparent}
+.mprog{height:3px;border-radius:2px;background:var(--sf2);margin:8px auto 0;max-width:680px;overflow:hidden}
+.mprog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#d97706,#fbbf24);transition:width .35s ease}
+
+/* ──── PAGE BODY ─────────────────────────────────────── */
+.page-body{flex:1;padding:14px 14px 40px;max-width:680px;width:100%;margin:0 auto}
+.intro{font-size:.74rem;color:var(--muted);line-height:1.5;margin:0 2px 14px}
+.intro b{color:var(--text)}
+
+.sec{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:12px;margin-bottom:10px;transition:border-color .25s}
+.sec.done{border-color:rgba(217,119,6,.45)}
+.sec-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ltr{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.05rem;background:var(--sf2);color:#fbbf24;flex-shrink:0;transition:background .25s,color .25s}
+.sec.done .ltr{background:linear-gradient(135deg,#b45309,#d97706);color:#fff}
+.sec-h{font-size:.88rem;font-weight:800;line-height:1.2}
+.sec-hint{font-size:.66rem;color:var(--muted);line-height:1.35;margin-top:1px}
+
+label.fl{display:block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);margin:8px 0 4px 2px}
+input[type=text],textarea{width:100%;font:inherit;font-size:.85rem;color:var(--text);background:rgba(0,0,0,.25);border:1px solid var(--br);border-radius:10px;padding:9px 11px;outline:none;transition:border-color .2s}
+input[type=text]:focus,textarea:focus{border-color:var(--amber)}
+textarea{resize:vertical;min-height:58px;line-height:1.4}
+::placeholder{color:#4a5d6d}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:.74rem;font-weight:600;padding:6px 11px;border-radius:20px;border:1px solid var(--br);background:var(--sf);color:var(--text);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip[aria-pressed="true"]{background:rgba(217,119,6,.2);border-color:#d97706;color:#fbbf24}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.seg .chip{border-radius:10px;padding:9px 6px;text-align:center}
+.seg .chip.m-yes[aria-pressed="true"]{background:rgba(239,68,68,.2);border-color:var(--red);color:#fca5a5}
+.seg .chip.m-stby[aria-pressed="true"]{background:rgba(234,179,8,.18);border-color:var(--yellow);color:#fde047}
+.seg .chip.m-no[aria-pressed="true"]{background:rgba(34,197,94,.16);border-color:var(--green);color:#86efac}
+
+.row{display:flex;gap:6px;align-items:stretch}
+.row input{flex:1}
+.gps-btn{font:inherit;font-size:.72rem;font-weight:700;padding:0 12px;border-radius:10px;border:1px solid var(--br);background:var(--sf2);color:var(--text);cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.gps-btn:disabled{opacity:.6;cursor:progress}
+
+/* Casualty counters */
+.cas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.cas{min-width:0;border-radius:12px;padding:8px;border:1px solid;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.cas-l{min-width:0;font-size:.7rem;font-weight:800;line-height:1.15}
+.cas-l small{display:block;font-size:.58rem;font-weight:600;opacity:.75}
+.cas-c{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.cas-c button{width:26px;height:26px;border-radius:8px;border:0;background:rgba(0,0,0,.3);color:inherit;font-size:1rem;font-weight:800;cursor:pointer}
+.cas-c input{width:32px;text-align:center;font:inherit;font-family:var(--mono);font-size:.95rem;font-weight:700;color:inherit;background:transparent;border:0;outline:none;-moz-appearance:textfield}
+.cas-c input::-webkit-outer-spin-button,.cas-c input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.c-p1{color:#fca5a5;border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.12)}
+.c-p2{color:#fde047;border-color:rgba(234,179,8,.4);background:rgba(234,179,8,.1)}
+.c-p3{color:#86efac;border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.1)}
+.c-d{color:#cbd5e1;border-color:rgba(148,163,184,.35);background:rgba(55,65,81,.3)}
+.cas-total{margin-top:8px;font-size:.72rem;color:var(--muted);text-align:right}
+.cas-total b{font-family:var(--mono);color:var(--text);font-size:.9rem}
+
+/* Report output */
+.out{background:#0c1a2e;border:1px solid var(--br2);border-radius:var(--r);padding:12px;margin-top:16px}
+.out-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.out-t{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted)}
+#report{font-family:var(--mono);font-size:.74rem;line-height:1.55;white-space:pre-wrap;word-break:break-word;color:var(--text)}
+.acts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:12px}
+.act{font:inherit;font-size:.78rem;font-weight:700;padding:10px 6px;border-radius:11px;border:1px solid var(--br);background:var(--sf2);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.act.pri{background:linear-gradient(135deg,#b45309,#d97706);border-color:transparent;color:#fff}
+.act.warn{color:#fca5a5}
+.toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translate(-50%,20px);background:#0f2340;border:1px solid var(--br2);color:var(--text);font-size:.78rem;font-weight:600;padding:9px 16px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:100}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <a class="hdr-back" href="ems-tools.html" aria-label="Back to EMS Tools">&#8592;</a>
+  <div class="hdr-badge"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#radio"/></svg></div>
+  <div class="hdr-info">
+    <div class="hdr-title">METHANE Report</div>
+    <div class="hdr-sub">Major incident scene report</div>
+  </div>
+  <div class="hdr-time" id="clock" aria-hidden="true">--:--</div>
+</header>
+
+<nav class="mnav" aria-label="METHANE sections">
+  <div class="mnav-in" id="mnav">
+    <a href="#s-M" data-k="M" title="Major incident">M</a>
+    <a href="#s-E1" data-k="E1" title="Exact location">E</a>
+    <a href="#s-T" data-k="T" title="Type of incident">T</a>
+    <a href="#s-H" data-k="H" title="Hazards">H</a>
+    <a href="#s-A" data-k="A" title="Access">A</a>
+    <a href="#s-N" data-k="N" title="Number of casualties">N</a>
+    <a href="#s-E2" data-k="E2" title="Emergency services">E</a>
+  </div>
+  <div class="mprog"><i id="mprog"></i></div>
+</nav>
+
+<main class="page-body">
+  <p class="intro">First crew on scene: <b>assess, don't treat</b>. Send this report to control as early as possible, then update it as the picture changes. Your draft is saved on this device.</p>
+
+  <!-- M -->
+  <section class="sec" id="s-M">
+    <div class="sec-top"><div class="ltr">M</div><div><div class="sec-h">Major incident</div><div class="sec-hint">Declared, on standby, or not declared</div></div></div>
+    <div class="seg" data-single="major">
+      <button type="button" class="chip m-yes" data-v="DECLARED" aria-pressed="false">Declared</button>
+      <button type="button" class="chip m-stby" data-v="STANDBY" aria-pressed="false">Standby</button>
+      <button type="button" class="chip m-no" data-v="NOT DECLARED" aria-pressed="false">Not declared</button>
+    </div>
+  </section>
+
+  <!-- E -->
+  <section class="sec" id="s-E1">
+    <div class="sec-top"><div class="ltr">E</div><div><div class="sec-h">Exact location</div><div class="sec-hint">Address, landmark, grid reference or GPS</div></div></div>
+    <label class="fl" for="loc">Location</label>
+    <input type="text" id="loc" data-f="loc" placeholder="e.g. Sheikh Zayed Rd, northbound, near Exit 41" autocomplete="off">
+    <label class="fl" for="gps">Coordinates</label>
+    <div class="row">
+      <input type="text" id="gps" data-f="gps" placeholder="lat, long" autocomplete="off" inputmode="decimal">
+      <button type="button" class="gps-btn" id="gpsBtn"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#pin"/></svg> GPS</button>
+    </div>
+  </section>
+
+  <!-- T -->
+  <section class="sec" id="s-T">
+    <div class="sec-top"><div class="ltr">T</div><div><div class="sec-h">Type of incident</div><div class="sec-hint">Nature of the incident, vehicles/buildings involved</div></div></div>
+    <div class="chips" data-multi="type">
+      <button type="button" class="chip" aria-pressed="false">Road traffic collision</button>
+      <button type="button" class="chip" aria-pressed="false">Fire</button>
+      <button type="button" class="chip" aria-pressed="false">Explosion</button>
+      <button type="button" class="chip" aria-pressed="false">Building collapse</button>
+      <button type="button" class="chip" aria-pressed="false">Rail</button>
+      <button type="button" class="chip" aria-pressed="false">Aircraft</button>
+      <button type="button" class="chip" aria-pressed="false">CBRN</button>
+      <button type="button" class="chip" aria-pressed="false">Flood / water</button>
+      <button type="button" class="chip" aria-pressed="false">Crowd / crush</button>
+      <button type="button" class="chip" aria-pressed="false">Shooting / attack</button>
+    </div>
+    <label class="fl" for="typeTxt">Details</label>
+    <textarea id="typeTxt" data-f="typeTxt" placeholder="e.g. Bus vs 2 cars, bus on its side"></textarea>
+  </section>
+
+  <!-- H -->
+  <section class="sec" id="s-H">
+    <div class="sec-top"><div class="ltr">H</div><div><div class="sec-h">Hazards</div><div class="sec-hint">Present and potential</div></div></div>
+    <div class="chips" data-multi="haz">
+      <button type="button" class="chip" aria-pressed="false">Fire / smoke</button>
+      <button type="button" class="chip" aria-pressed="false">Fuel spill</button>
+      <button type="button" class="chip" aria-pressed="false">Gas leak</button>
+      <button type="button" class="chip" aria-pressed="false">Chemical</button>
+      <button type="button" class="chip" aria-pressed="false">Electrical</button>
+      <button type="button" class="chip" aria-pressed="false">Structural</button>
+      <button type="button" class="chip" aria-pressed="false">Moving traffic</button>
+      <button type="button" class="chip" aria-pressed="false">Water</button>
+      <button type="button" class="chip" aria-pressed="false">Weather</button>
+      <button type="button" class="chip" aria-pressed="false">Violence</button>
+      <button type="button" class="chip" aria-pressed="false">None seen</button>
+    </div>
+    <label class="fl" for="hazTxt">Details</label>
+    <textarea id="hazTxt" data-f="hazTxt" placeholder="e.g. Diesel leaking from bus tank, wind blowing east"></textarea>
+  </section>
+
+  <!-- A -->
+  <section class="sec" id="s-A">
+    <div class="sec-top"><div class="ltr">A</div><div><div class="sec-h">Access</div><div class="sec-hint">Safe routes in and out, RVP, staging area</div></div></div>
+    <label class="fl" for="accIn">Access / egress route</label>
+    <input type="text" id="accIn" data-f="accIn" placeholder="e.g. Approach from south via Exit 40, exit north" autocomplete="off">
+    <label class="fl" for="rvp">Rendezvous point (RVP)</label>
+    <input type="text" id="rvp" data-f="rvp" placeholder="e.g. ENOC station, Exit 40" autocomplete="off">
+    <label class="fl" for="stg">Staging / ambulance loading point</label>
+    <input type="text" id="stg" data-f="stg" placeholder="e.g. Service road west side" autocomplete="off">
+  </section>
+
+  <!-- N -->
+  <section class="sec" id="s-N">
+    <div class="sec-top"><div class="ltr">N</div><div><div class="sec-h">Number of casualties</div><div class="sec-hint">Estimated number, severity and type</div></div></div>
+    <div class="cas-grid">
+      <div class="cas c-p1"><div class="cas-l">P1<small>Immediate</small></div><div class="cas-c"><button type="button" data-step="-1" aria-label="Decrease P1">&minus;</button><input type="number" min="0" inputmode="numeric" data-n="p1" value="0" aria-label="P1 count"><button type="button" data-step="1" aria-label="Increase P1">+</button></div></div>
+      <div class="cas c-p2"><div class="cas-l">P2<small>Urgent</small></div><div class="cas-c"><button type="button" data-step="-1" aria-label="Decrease P2">&minus;</button><input type="number" min="0" inputmode="numeric" data-n="p2" value="0" aria-label="P2 count"><button type="button" data-step="1" aria-label="Increase P2">+</button></div></div>
+      <div class="cas c-p3"><div class="cas-l">P3<small>Delayed</small></div><div class="cas-c"><button type="button" data-step="-1" aria-label="Decrease P3">&minus;</button><input type="number" min="0" inputmode="numeric" data-n="p3" value="0" aria-label="P3 count"><button type="button" data-step="1" aria-label="Increase P3">+</button></div></div>
+      <div class="cas c-d"><div class="cas-l">Dead<small>Deceased</small></div><div class="cas-c"><button type="button" data-step="-1" aria-label="Decrease dead">&minus;</button><input type="number" min="0" inputmode="numeric" data-n="dead" value="0" aria-label="Dead count"><button type="button" data-step="1" aria-label="Increase dead">+</button></div></div>
+    </div>
+    <div class="cas-total">Total casualties: <b id="casTotal">0</b></div>
+    <label class="fl" for="casTxt">Injury types / special groups</label>
+    <textarea id="casTxt" data-f="casTxt" placeholder="e.g. Multiple crush injuries, 3 children, 2 entrapped"></textarea>
+  </section>
+
+  <!-- E -->
+  <section class="sec" id="s-E2">
+    <div class="sec-top"><div class="ltr">E</div><div><div class="sec-h">Emergency services</div><div class="sec-hint">Who is on scene and who else is required</div></div></div>
+    <label class="fl">On scene</label>
+    <div class="chips" data-multi="svcOn">
+      <button type="button" class="chip" aria-pressed="false">Ambulance</button>
+      <button type="button" class="chip" aria-pressed="false">Police</button>
+      <button type="button" class="chip" aria-pressed="false">Fire &amp; Rescue</button>
+      <button type="button" class="chip" aria-pressed="false">Air ambulance</button>
+      <button type="button" class="chip" aria-pressed="false">Civil defence</button>
+    </div>
+    <label class="fl">Required</label>
+    <div class="chips" data-multi="svcReq">
+      <button type="button" class="chip" aria-pressed="false">More ambulances</button>
+      <button type="button" class="chip" aria-pressed="false">Police</button>
+      <button type="button" class="chip" aria-pressed="false">Fire &amp; Rescue</button>
+      <button type="button" class="chip" aria-pressed="false">Air ambulance</button>
+      <button type="button" class="chip" aria-pressed="false">HAZMAT / CBRN</button>
+      <button type="button" class="chip" aria-pressed="false">USAR / heavy rescue</button>
+      <button type="button" class="chip" aria-pressed="false">Medical team</button>
+      <button type="button" class="chip" aria-pressed="false">Utilities</button>
+      <button type="button" class="chip" aria-pressed="false">Hospital alert</button>
+    </div>
+    <label class="fl" for="svcTxt">Details</label>
+    <textarea id="svcTxt" data-f="svcTxt" placeholder="e.g. 6 more ambulances, 1 supervisor"></textarea>
+  </section>
+
+  <section class="sec">
+    <label class="fl" for="callsign" style="margin-top:0">Reported by (call sign)</label>
+    <input type="text" id="callsign" data-f="callsign" placeholder="e.g. Unit 214" autocomplete="off">
+  </section>
+
+  <div class="out" aria-live="polite">
+    <div class="out-h"><span class="out-t">Report preview</span></div>
+    <pre id="report"></pre>
+    <div class="acts">
+      <button type="button" class="act pri" id="copyBtn"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#clipboard-list"/></svg> Copy</button>
+      <button type="button" class="act" id="shareBtn"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#upload"/></svg> Share</button>
+      <button type="button" class="act warn" id="resetBtn"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#rotate-ccw"/></svg> New</button>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+"use strict";
+(function(){
+  const KEY = "dcas_methane_draft";
+  const $  = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+
+  /* ── State: text fields, chip groups, casualty counts ── */
+  const blank = () => ({ f:{}, multi:{}, major:"", n:{p1:0,p2:0,p3:0,dead:0} });
+  let S = blank();
+  try { const d = JSON.parse(localStorage.getItem(KEY)); if (d && d.f) S = Object.assign(blank(), d); } catch(e){}
+
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+
+  /* ── Restore UI from state ── */
+  function hydrate(){
+    $$("[data-f]").forEach(el => { el.value = S.f[el.dataset.f] || ""; });
+    $$("[data-multi]").forEach(g => {
+      const sel = S.multi[g.dataset.multi] || [];
+      g.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(sel.includes(c.textContent.trim()))));
+    });
+    $$("[data-single] .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.v === S.major)));
+    $$("[data-n]").forEach(el => { el.value = S.n[el.dataset.n] || 0; });
+    render();
+  }
+
+  /* ── Wiring ── */
+  $$("[data-f]").forEach(el => el.addEventListener("input", () => { S.f[el.dataset.f] = el.value; render(); save(); }));
+
+  $$("[data-multi]").forEach(g => g.addEventListener("click", e => {
+    const c = e.target.closest(".chip"); if (!c) return;
+    const on = c.getAttribute("aria-pressed") !== "true";
+    c.setAttribute("aria-pressed", String(on));
+   
+    S.multi[g.dataset.multi] = Array.from(g.querySelectorAll('.chip[aria-pressed="true"]')).map(x => x.textContent.trim());
+    render(); save();
+  }));
+
+  $$("[data-single]").forEach(g => g.addEventListener("click", e => {
+    const c = e.target.closest(".chip"); if (!c) return;
+    S.major = S.major === c.dataset.v ? "" : c.dataset.v;
+    g.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.v === S.major)));
+    render(); save();
+  }));
+
+  function setN(el, v){
+    v = Math.max(0, Math.min(9999, parseInt(v, 10) || 0));
+    el.value = v; S.n[el.dataset.n] = v; render(); save();
+  }
+  $$(".cas-c").forEach(box => {
+    const inp = box.querySelector("input");
+    box.addEventListener("click", e => {
+      const b = e.target.closest("button[data-step]"); if (!b) return;
+      setN(inp, (parseInt(inp.value, 10) || 0) + Number(b.dataset.step));
+    });
+    inp.addEventListener("input", () => setN(inp, inp.value));
+  });
+
+  /* ── GPS ── */
+  const gpsBtn = $("#gpsBtn");
+  if (!("geolocation" in navigator)) gpsBtn.hidden = true;
+  gpsBtn.addEventListener("click", () => {
+    gpsBtn.disabled = true;
+    navigator.geolocation.getCurrentPosition(p => {
+      gpsBtn.disabled = false;
+      const v = p.coords.latitude.toFixed(5) + ", " + p.coords.longitude.toFixed(5);
+      $("#gps").value = v; S.f.gps = v; render(); save();
+    }, () => { gpsBtn.disabled = false; toast("Location unavailable"); }, { enableHighAccuracy:true, timeout:10000 });
+  });
+
+  /* ── Report ── */
+  const hhmm = d => d.toTimeString().slice(0,5);
+  const join = (arr, txt) => [ (arr||[]).join(", "), (txt||"").trim() ].filter(Boolean).join(" — ");
+
+  function sections(){
+    const f = S.f, m = S.multi, n = S.n;
+    const total = n.p1 + n.p2 + n.p3 + n.dead;
+    const loc = [ (f.loc||"").trim(), (f.gps||"").trim() && "GPS " + f.gps.trim() ].filter(Boolean).join(" · ");
+    const acc = [ (f.accIn||"").trim(), (f.rvp||"").trim() && "RVP: " + f.rvp.trim(), (f.stg||"").trim() && "Staging: " + f.stg.trim() ].filter(Boolean).join(" · ");
+    const cas = total || (f.casTxt||"").trim()
+      ? [ total ? `${total} total (P1 ${n.p1} · P2 ${n.p2} · P3 ${n.p3} · Dead ${n.dead})` : "", (f.casTxt||"").trim() ].filter(Boolean).join(" — ")
+      : "";
+    const svc = [ (m.svcOn||[]).length ? "On scene: " + m.svcOn.join(", ") : "", (m.svcReq||[]).length ? "Required: " + m.svcReq.join(", ") : "", (f.svcTxt||"").trim() ].filter(Boolean).join(" · ");
+    return [
+      ["M", "Major incident",     S.major],
+      ["E1","Exact location",     loc],
+      ["T", "Type of incident",   join(m.type, f.typeTxt)],
+      ["H", "Hazards",            join(m.haz, f.hazTxt)],
+      ["A", "Access",             acc],
+      ["N", "Number of casualties", cas],
+      ["E2","Emergency services", svc]
+    ];
+  }
+
+  function render(){
+    const secs = sections();
+    let done = 0;
+    secs.forEach(([k,, v]) => {
+      const ok = !!v; if (ok) done++;
+      const a = document.querySelector(`#mnav a[data-k="${k}"]`); if (a) a.classList.toggle("done", ok);
+      const s = document.getElementById("s-" + k); if (s) s.classList.toggle("done", ok);
+    });
+    $("#mprog").style.width = (done / secs.length * 100) + "%";
+    $("#casTotal").textContent = S.n.p1 + S.n.p2 + S.n.p3 + S.n.dead;
+    $("#report").textContent = reportText();
+  }
+
+  function reportText(){
+    const t = new Date();
+    const lines = ["METHANE REPORT — " + hhmm(t) + " " + t.toLocaleDateString()];
+    if ((S.f.callsign||"").trim()) lines.push("From: " + S.f.callsign.trim());
+    lines.push("");
+    sections().forEach(([k, label, v]) => lines.push(k[0] + " – " + label + ": " + (v || "—")));
+    return lines.join("\n");
+  }
+
+  /* ── Actions ── */
+  let tId;
+  function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(tId); tId = setTimeout(() => t.classList.remove("show"), 1800); }
+
+  $("#copyBtn").addEventListener("click", () => {
+    const txt = reportText();
+    const fallback = () => {
+      const ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); toast("Report copied"); } catch(e){ toast("Copy failed"); }
+      ta.remove();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => toast("Report copied"), fallback);
+    else fallback();
+  });
+
+  const shareBtn = $("#shareBtn");
+  if (!navigator.share) { shareBtn.hidden = true; $(".acts").style.gridTemplateColumns = "1fr 1fr"; }
+  shareBtn.addEventListener("click", () => { navigator.share({ title:"METHANE Report", text: reportText() }).catch(() => {}); });
+
+  $("#resetBtn").addEventListener("click", () => {
+    if (!confirm("Start a new METHANE report? The current draft will be cleared.")) return;
+    S = blank(); save(); hydrate(); window.scrollTo({ top:0, behavior:"smooth" });
+  });
+
+  /* ── Clock ── */
+  const clock = $("#clock");
+  const tick = () => { clock.textContent = hhmm(new Date()); };
+  tick(); setInterval(() => { tick(); $("#report").textContent = reportText(); }, 30000);
+
+  hydrate();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "Small Town, Big Bus Crash",
+      "presentation": "A bus crash outside a small rural town produces 22 injured passengers. The local critical-access hospital has one physician on duty, four nurses, and two ambulances. The nearest trauma center is 90 minutes away.",
+      "vitals": { "patients": "22 injured", "staff": "1 MD, 4 RNs", "transport": "2 ambulances" },
+      "question": "How should this event be classified and managed?",
+      "options": [
+        "A: A routine emergency — treat patients in order of arrival.",
+        "B: A disaster/MCI for this community — needs exceed local resources, so activate the emergency plan, use formal triage, and request mutual aid.",
+        "C: Not a disaster because there are fewer than 100 casualties.",
+        "D: Wait for a federal declaration before changing procedures."
+      ],
+      "correct": 1,
+      "explanation": "Twenty-two casualties overwhelm one physician, four nurses, and two ambulances — needs exceed resources, which is the definition of a disaster regardless of absolute numbers. The correct posture is plan activation, triage for the greatest good, and early mutual-aid requests.",
+      "clinicalPearl": "Disaster is a local arithmetic problem: the same crash near a level-1 trauma center might be just a busy afternoon."
+    },
+    {
+      "id": "c01_s02",
+      "title": "The Plan on the Shelf",
+      "presentation": "During accreditation review, a hospital presents a comprehensive 200-page disaster plan. Interviews reveal no staff member has participated in a drill for three years, and the plan's phone tree lists departed employees.",
+      "vitals": { "plan": "Comprehensive on paper", "exercises": "None in 3 years", "contacts": "Outdated" },
+      "question": "What is the most important corrective action?",
+      "options": [
+        "A: Add more chapters to the plan.",
+        "B: Exercise the plan regularly, update contacts, and train staff — planning and practice are inseparable.",
+        "C: Nothing — a written plan satisfies preparedness.",
+        "D: Replace the plan with verbal instructions."
+      ],
+      "correct": 1,
+      "explanation": "The PRE-DISASTER Paradigm pairs planning with practice. An unexercised, outdated plan fails under stress; drills reveal gaps (like the dead phone tree) and build the role familiarity a real response requires.",
+      "clinicalPearl": "A disaster plan is only as good as its last exercise."
+    },
+    {
+      "id": "c01_s03",
+      "title": "The Responder Who Couldn't Respond",
+      "presentation": "After an earthquake, a hospital activates its surge plan, but a third of the staff do not report: schools are closed, roads are damaged, and many have no family emergency arrangements. Care capacity collapses despite an intact building.",
+      "vitals": { "building": "Intact", "staff reporting": "~66%", "surge plan": "Activated" },
+      "question": "What preparedness lesson does this illustrate?",
+      "options": [
+        "A: Surge capacity is only about beds and supplies.",
+        "B: Staff personal and family preparedness is a core component of facility surge capacity.",
+        "C: Staff who stay home should be dismissed.",
+        "D: The surge plan was unnecessary."
+      ],
+      "correct": 1,
+      "explanation": "Surge capacity = space, supplies, systems, AND staff. Employees without family communication plans, dependent-care arrangements, and go-kits often cannot report, so facility preparedness programs must include personal preparedness.",
+      "clinicalPearl": "Beds don't treat patients — people do. Personal preparedness is institutional capacity."
+    }
+  ]
+}

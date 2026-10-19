@@ -1,0 +1,21 @@
+{
+  "chapter": "c04",
+  "cards": [
+    { "id": "c04_fc01", "question": "What does SALT stand for?", "answer": "Sort, Assess, Lifesaving interventions, Treatment and/or transport — the CDC-sponsored national mass-casualty triage standard.", "category": "Framework" },
+    { "id": "c04_fc02", "question": "What are the two global sorting commands?", "answer": "1) 'If you can hear me and need help, walk to this area' (walkers assessed last). 2) 'Wave your arm or move' (wavers assessed second). Still casualties or obvious life threats are assessed first.", "category": "Sort" },
+    { "id": "c04_fc03", "question": "List the rapid lifesaving interventions permitted during SALT triage.", "answer": "Control massive hemorrhage, open the airway by positioning (child: consider 2 rescue breaths), chest decompression for tension pneumothorax (trained providers), and auto-injector antidotes.", "category": "Lifesaving Interventions" },
+    { "id": "c04_fc04", "question": "Name the five SALT triage categories with colors.", "answer": "Immediate (red), Delayed (yellow), Minimal (green), Expectant (gray), Dead (black).", "category": "Categories" },
+    { "id": "c04_fc05", "question": "What are the SALT assessment questions after lifesaving interventions?", "answer": "Breathing? Obeys commands/purposeful movement? Peripheral pulse? No respiratory distress? Major hemorrhage controlled?", "category": "Assess" },
+    { "id": "c04_fc06", "question": "An adult remains apneic after airway opening during SALT. Category?", "answer": "Dead (black). CPR is not performed during mass-casualty triage of an apneic adult.", "category": "Categories" },
+    { "id": "c04_fc07", "question": "How does SALT treat an apneic child differently from an adult?", "answer": "For a child, consider giving two rescue breaths after opening the airway; if breathing does not resume, the child is Dead. This reflects the hypoxic nature of pediatric arrest.", "category": "Pediatric" },
+    { "id": "c04_fc08", "question": "What does the Expectant (gray) category mean?", "answer": "Alive, but survival is unlikely with the resources CURRENTLY available. Comfort care is provided, and the patient is re-triaged if resources improve — it is not the same as Dead.", "category": "Categories" },
+    { "id": "c04_fc09", "question": "A casualty answers all assessment questions 'yes' and has only minor injuries. Category?", "answer": "Minimal (green).", "category": "Categories" },
+    { "id": "c04_fc10", "question": "A casualty answers all questions 'yes' but has significant injuries. Category?", "answer": "Delayed (yellow) — significant care needed, but it can wait.", "category": "Categories" },
+    { "id": "c04_fc11", "question": "A casualty fails one assessment question but is salvageable with current resources. Category?", "answer": "Immediate (red) — first priority for treatment and transport.", "category": "Categories" },
+    { "id": "c04_fc12", "question": "Why must triage be repeated (re-triage)?", "answer": "Patients deteriorate or improve and resources change; categories are reassessed at the scene, treatment area, transport, and hospital arrival.", "category": "Dynamics" },
+    { "id": "c04_fc13", "question": "How is everyday triage different from mass-casualty triage?", "answer": "Everyday triage finds the sickest patient for maximal individual care; mass-casualty triage rations limited resources to produce the most survivors overall.", "category": "Concepts" },
+    { "id": "c04_fc14", "question": "Why doesn't the triage officer stop to treat patients?", "answer": "Beyond seconds-long lifesaving interventions, stopping halts triage for everyone still unsorted — the officer tags and moves on.", "category": "Concepts" },
+    { "id": "c04_fc15", "question": "Are the walking wounded 'cleared' by walking?", "answer": "No — walking assigns them the last assessment priority, but every casualty still receives individual assessment; injuries hide in the green group.", "category": "Sort" },
+    { "id": "c04_fc16", "question": "What tools communicate triage categories on scene?", "answer": "Triage tags, colored tape/tarps, or other visible markings, updated at each re-triage.", "category": "Dynamics" }
+  ]
+}

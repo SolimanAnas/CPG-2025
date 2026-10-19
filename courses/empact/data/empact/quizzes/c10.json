@@ -1,0 +1,172 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "Pleural effusion is often associated with which malignancy?",
+      "options": ["A. Skin cancer", "B. Lung cancer", "C. Bone cancer", "D. Thyroid cancer"],
+      "correct": 1,
+      "rationale": "Pleural effusion is frequently associated with lung cancer, and mediastinal cancer specifically carries a higher incidence of it.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "Which cancer type carries a particularly higher incidence of pleural effusion?",
+      "options": ["A. Skin cancer", "B. Mediastinal cancer", "C. Prostate cancer", "D. Bladder cancer"],
+      "correct": 1,
+      "rationale": "Patients with mediastinal cancer have a higher incidence of pleural effusion, an important consideration in oncology patients with dyspnea.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q03",
+      "question": "An oncology patient on chemotherapy presents with progressive dyspnea. What TWO conditions from earlier chapters should be actively considered alongside disease progression?",
+      "options": [
+        "A. Simple anxiety and dehydration only",
+        "B. Pleural effusion and cardiac tamponade (pericardial effusion)",
+        "C. Appendicitis and cholecystitis",
+        "D. Hypoglycemia and DKA only"
+      ],
+      "correct": 1,
+      "rationale": "Both pleural effusion and pericardial effusion/tamponade are recognized oncology-related complications that can cause dyspnea, connecting this chapter back to the cardiovascular chapter's Beck's triad content.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q04",
+      "question": "Why is cancer considered a risk factor for pulmonary embolism?",
+      "options": [
+        "A. It has no relationship to clotting",
+        "B. Malignancy is a recognized clotting risk factor, alongside immobility and surgery",
+        "C. Cancer only affects bleeding risk, never clotting",
+        "D. This relationship applies only to skin cancer"
+      ],
+      "correct": 1,
+      "rationale": "Malignancy is one of the classic risk factors for venous thromboembolism, making PE an important differential in oncology patients with sudden dyspnea.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q05",
+      "question": "Why is it a mistake to attribute every new symptom in a cancer patient to 'the cancer'?",
+      "options": [
+        "A. Cancer patients never develop unrelated new problems",
+        "B. New symptoms may reflect a different, treatable cause that would be missed by anchoring on the known diagnosis",
+        "C. It is always correct to attribute symptoms to the cancer",
+        "D. This has no bearing on patient care"
+      ],
+      "correct": 1,
+      "rationale": "Anchoring on a known diagnosis risks missing a new, unrelated, and potentially treatable cause of the patient's current complaint.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q06",
+      "question": "What is the key to active listening, as emphasized throughout this course?",
+      "options": [
+        "A. Asking only closed yes/no questions quickly",
+        "B. Getting on your patient's level and asking follow-up questions",
+        "C. Interrupting frequently to move the interview along",
+        "D. Avoiding eye contact to reduce patient anxiety"
+      ],
+      "correct": 1,
+      "rationale": "Active listening — engaging at the patient's level with genuine follow-up questions — surfaces the nuance needed for an accurate history, especially in complex patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q07",
+      "question": "Why does 'trust YOUR exam' remain an important principle even in complicated, multi-diagnosis patients?",
+      "options": [
+        "A. Your findings become unreliable in complex patients",
+        "B. Your own primary assessment findings are a consistent, reliable data source regardless of how complicated the history is",
+        "C. Complex patients should only be assessed by specialists",
+        "D. This principle only applies to simple patients"
+      ],
+      "correct": 1,
+      "rationale": "Regardless of how many diagnoses or medications a patient has, your direct findings remain a dependable anchor for clinical decision-making.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "Which safety/scene principle from the first chapter reappears as a course-wide theme?",
+      "options": [
+        "A. Multiple patients with the same signs and symptoms should prompt inquiry into a shared cause",
+        "B. Every scene is automatically safe",
+        "C. Only the first patient at a scene needs assessment",
+        "D. Scene safety only matters for trauma calls"
+      ],
+      "correct": 0,
+      "rationale": "The shared-cause pattern-recognition principle applies across every category of medical call covered in this course, not just the foundational chapter.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q09",
+      "question": "What is the recurring 'skeleton' approach that applies across every chapter in this course?",
+      "options": [
+        "A. A unique, unrelated protocol for every diagnosis",
+        "B. Systematic assessment, differential diagnosis from possibilities to probabilities, trusting your exam, active listening, and treating life threats first",
+        "C. Skipping the history in favor of only physical exam",
+        "D. Treating every complaint identically regardless of findings"
+      ],
+      "correct": 1,
+      "rationale": "The course's core assessment skeleton — systematic assessment, differential thinking, trusting your exam, active listening, and life-threats-first — recurs across every body-system chapter.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q10",
+      "question": "An oncology patient presents with decreased breath sounds at one lung base and dullness to percussion, with progressive dyspnea. What should be high on your differential?",
+      "options": ["A. Simple anxiety", "B. Pleural effusion", "C. Appendicitis", "D. Hypoglycemia"],
+      "correct": 1,
+      "rationale": "Decreased breath sounds and dullness to percussion with progressive dyspnea in an oncology patient are classic findings for pleural effusion, especially given the lung/mediastinal cancer association.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q11",
+      "question": "Why is unhurried, open-ended history-taking especially valuable in complex, chronically ill patients?",
+      "options": [
+        "A. It wastes valuable field time with no benefit",
+        "B. Complex histories with multiple diagnoses and medications hide nuance that only unhurried, open-ended questioning surfaces",
+        "C. Complex patients should be assessed with fewer questions, not more",
+        "D. It is only useful for pediatric patients"
+      ],
+      "correct": 1,
+      "rationale": "The more complex the patient's history, the more valuable careful, open-ended listening becomes for finding the detail that changes the differential.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q12",
+      "question": "Which statement best summarizes the intended takeaway of this capstone chapter?",
+      "options": [
+        "A. Each medical specialty requires an entirely separate, unrelated assessment method",
+        "B. The same disciplined, systematic assessment approach applies across every category of medical complaint, from respiratory to oncologic",
+        "C. Oncology patients require no differential diagnosis since the cause is always known",
+        "D. Active listening and trusting your exam are only relevant to the first chapter"
+      ],
+      "correct": 1,
+      "rationale": "This chapter ties the course together: the same core assessment principles introduced early apply, undiminished, to every subsequent body-system chapter, including oncologic and complex presentations.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q13",
+      "question": "A patient with multiple chronic diagnoses presents with a vague 'not feeling right' complaint. What is the recommended approach?",
+      "options": [
+        "A. Assume the most recently diagnosed condition explains everything",
+        "B. Apply the systematic assessment approach: history-heavy interview, active listening, wide differential, trust your exam",
+        "C. Skip the history since there are too many diagnoses to sort through",
+        "D. Treat only for the condition the family suggests"
+      ],
+      "correct": 1,
+      "rationale": "Complex, multi-diagnosis patients benefit most from the disciplined systematic approach — the framework does not change just because the patient's history is complicated.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q14",
+      "question": "Why does this course repeatedly return to the same assessment principles (systematic approach, differential diagnosis, active listening, trust your exam) across different body systems?",
+      "options": [
+        "A. Because each chapter actually requires a completely different, unrelated method",
+        "B. Because these principles are the actual engine of good field decision-making, regardless of which body system is involved",
+        "C. Because repetition is only for memorization, with no clinical purpose",
+        "D. Because oncologic patients don't need any of these principles"
+      ],
+      "correct": 1,
+      "rationale": "The recurring principles are not filler — they are the actual clinical reasoning process, and every chapter's specific facts (drug names, exam findings) are applied inside that same reasoning framework.",
+      "difficulty": "Hard"
+    }
+  ]
+}

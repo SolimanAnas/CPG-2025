@@ -1,0 +1,53 @@
+{
+  "chapter": "c08",
+  "cases": [
+    {
+      "id": "c08_s01",
+      "title": "Three Cities, One Rash",
+      "presentation": "Over 24 hours, EDs in three cities several hundred miles apart each report several previously healthy adults with high fever and a progressing vesicular rash that started on the face and hands. None have travel links to each other.",
+      "vitals": { "onset": "Synchronous across sites", "illness": "Febrile vesicular rash", "epi links": "None between cities" },
+      "question": "What should a clinician who recognizes this do?",
+      "options": [
+        "A: Treat each case locally and wait for lab confirmation before contacting anyone.",
+        "B: Immediately notify public health of a possible smallpox/high-consequence event, isolate patients with airborne + contact precautions, and protect staff.",
+        "C: Discharge the patients to reduce ED crowding.",
+        "D: Assume it is chickenpox and take no special action."
+      ],
+      "correct": 1,
+      "explanation": "Simultaneous multi-site clusters of an unusual, severe illness are a classic epidemiologic clue. A centrifugal vesicular rash raises smallpox concern — an airborne, high-consequence Category A agent. Early notification, airborne + contact isolation, and staff protection are the pivotal actions; waiting for confirmation squanders the response window.",
+      "clinicalPearl": "Three separated clusters at once is the population's way of shouting 'point source' — report before you confirm."
+    },
+    {
+      "id": "c08_s02",
+      "title": "Powder in the Mailroom",
+      "presentation": "An office reports an envelope leaking white powder; the mailroom worker who opened it is well but frightened. Public health later confirms Bacillus anthracis. Twelve coworkers shared the space.",
+      "vitals": { "index worker": "Asymptomatic", "exposed coworkers": "12, asymptomatic", "agent": "Anthrax (confirmed)" },
+      "question": "What is the appropriate management of the exposed but well coworkers?",
+      "options": [
+        "A: Isolate them as if they were infectious to others.",
+        "B: Post-exposure prophylaxis (antibiotics ± vaccination) through public health, with monitoring — anthrax is not spread person-to-person.",
+        "C: No action unless they become ill.",
+        "D: Immediate ICU admission for all."
+      ],
+      "correct": 1,
+      "explanation": "Inhalational anthrax is not transmitted person-to-person, so isolating exposed-but-well contacts is unnecessary; the priority is timely post-exposure prophylaxis (antibiotics, possibly vaccine) dispensed via public health, with monitoring. Prophylaxis is time-sensitive.",
+      "clinicalPearl": "Anthrax spreads from the envelope, not from the patient — the intervention for the exposed is prophylaxis, not isolation."
+    },
+    {
+      "id": "c08_s03",
+      "title": "Month Two of the Pandemic",
+      "presentation": "Two months into a respiratory pandemic, your hospital faces N95 shortages, one-third of staff out sick or caring for family, and ICU demand exceeding ventilator supply. Administrators ask how to sustain the response.",
+      "vitals": { "PPE": "N95 shortage", "staffing": "~66% available", "ICU demand": "Exceeds ventilators" },
+      "question": "Which combination of principles applies?",
+      "options": [
+        "A: Abandon PPE and treat everyone in the ICU regardless of resources.",
+        "B: Protect and conserve the workforce (PPE conservation/extended use, vaccination, mental-health support), expand surge capacity and continuity plans, and prepare crisis standards of care for resource allocation.",
+        "C: Close the hospital until supplies arrive.",
+        "D: Ignore staffing and focus only on beds."
+      ],
+      "correct": 1,
+      "explanation": "Prolonged events are won by sustaining the workforce and the system: PPE conservation and vaccination protect staff, surge and continuity plans expand and preserve essential services, and crisis standards of care provide an ethical/legal framework for allocating scarce resources like ventilators.",
+      "clinicalPearl": "In a pandemic the scarce resource is often the staff — protect the people and the beds follow."
+    }
+  ]
+}

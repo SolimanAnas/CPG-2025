@@ -1,0 +1,30 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "The Five ICS Functional Sections",
+      "headers": ["Section", "One-Line Job", "Health Examples"],
+      "rows": [
+        ["Command", "Sets objectives; overall authority (+ safety, PIO, liaison)", "Declares surge levels; approves the plan"],
+        ["Operations", "Does the tactical work", "Triage, treatment, transport, decon"],
+        ["Planning", "Tracks situation/resources; writes the action plan", "Bed counts, patient tracking, next operational period"],
+        ["Logistics", "Gets what the response needs", "Ventilators, staff food, radios, supplies"],
+        ["Finance/Admin", "Tracks costs, claims, time", "Emergency procurement, staff hours, reimbursement"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "ICS Core Principles",
+      "headers": ["Principle", "Meaning"],
+      "rows": [
+        ["Common terminology", "Plain language, no agency codes"],
+        ["Modular organization", "Activate only what the incident needs; expand/contract"],
+        ["Unity of command", "Every person reports to exactly one incident supervisor"],
+        ["Span of control", "~3–7 direct reports per supervisor (optimally ~5)"],
+        ["Unified command", "Multi-agency incidents share objectives under one plan"],
+        ["Accountability", "Check-in, assignment, tracking, formal handoffs"]
+      ]
+    }
+  ]
+}

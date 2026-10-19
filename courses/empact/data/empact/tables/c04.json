@@ -1,0 +1,39 @@
+{
+  "chapter": "c04",
+  "tables": [
+    {
+      "id": "c04_t01",
+      "title": "MI Localization by ECG Leads",
+      "headers": ["MI Location", "Leads Showing Changes", "Notes"],
+      "rows": [
+        ["Inferior", "II, III, aVF", "Consider right-sided ECG if non-diagnostic or hypotensive"],
+        ["Anterior", "V1–V4", "Often larger territory, higher-risk pattern"],
+        ["Posterior", "ST depression in V1–V4 (mirror image)", "Confirmatory posterior leads may be needed; easily missed"]
+      ]
+    },
+    {
+      "id": "c04_t02",
+      "title": "Cardiac Tamponade vs Pneumothorax vs Pulmonary Embolism",
+      "headers": ["Feature", "Tamponade", "Pneumothorax", "Pulmonary Embolism"],
+      "rows": [
+        ["Heart sounds", "Muffled", "Normal", "Normal"],
+        ["Breath sounds", "Normal", "Absent/diminished (one side)", "Normal (may have pleuritic pain)"],
+        ["JVD", "Present", "May be present (tension)", "Usually absent unless massive"],
+        ["Blood pressure", "Hypotension (Beck's triad)", "Variable, hypotension if tension", "Variable, can be hypotensive if massive"],
+        ["Classic trigger", "Effusion (e.g., malignancy)", "COPD/bleb rupture or trauma", "Immobility, surgery, malignancy"]
+      ]
+    },
+    {
+      "id": "c04_t03",
+      "title": "CBIGK Chest Pain Assessment Mnemonic",
+      "headers": ["Letter", "Element", "Why It Matters"],
+      "rows": [
+        ["C", "Chest pain characteristics", "Quality, onset, radiation, associated symptoms"],
+        ["B", "Blood pressure", "Hypotension changes drug choices (e.g., avoid nitrates)"],
+        ["I", "Irregular pulse", "May indicate a complicating dysrhythmia"],
+        ["G", "Glucose", "Can mimic or complicate cardiac presentations"],
+        ["K", "Potassium", "Abnormalities can cause/worsen dysrhythmias"]
+      ]
+    }
+  ]
+}

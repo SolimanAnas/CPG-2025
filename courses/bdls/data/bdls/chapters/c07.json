@@ -1,0 +1,74 @@
+{
+  "id": "c07",
+  "title": "Chemical Events & Decontamination",
+  "shortTitle": "Chemical & Decon",
+  "estimatedStudyTime": 36,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize scene clues suggesting a chemical release.",
+    "Describe the major chemical agent classes and their toxidromes.",
+    "Recognize the cholinergic toxidrome of nerve agents and organophosphates.",
+    "Explain the principles and priority of decontamination.",
+    "Describe hot, warm, and cold zone organization and PPE concepts.",
+    "Explain antidote principles at the awareness level."
+  ],
+  "summary": [
+    {
+      "title": "Detecting a Chemical Event",
+      "content": "Chemical releases announce themselves through pattern: multiple casualties collapsing in one area with similar sudden symptoms, dead animals or insects, unusual odors or visible clouds, and symptom onset tied to a location. The BDLS detection mindset — recognizing that a toxidrome cluster means a chemical scene, not a medical coincidence — protects responders from walking into the agent."
+    },
+    {
+      "title": "Agent Classes and Toxidromes",
+      "content": "Nerve agents and organophosphate pesticides cause the cholinergic toxidrome. Vesicants (mustard, lewisite) blister skin, eyes, and airways — mustard's effects are typically delayed hours. Pulmonary/choking agents (chlorine, phosgene) injure the airways and cause pulmonary edema, phosgene often after a delay. Asphyxiants such as cyanide block cellular oxygen use, causing rapid collapse, seizures, and cardiac arrest despite normal-appearing oxygenation. Riot-control agents cause intense but usually self-limited eye, skin, and airway irritation."
+    },
+    {
+      "title": "The Cholinergic Toxidrome",
+      "content": "Nerve agents inhibit acetylcholinesterase, flooding synapses with acetylcholine. The muscarinic signs are captured by SLUDGE (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis) or DUMBELS (Defecation, Urination, Miosis, Bronchorrhea/Bronchospasm, Emesis, Lacrimation, Salivation) — with the killer B's: bronchorrhea, bronchospasm, and bradycardia. Nicotinic effects add muscle twitching, weakness, and paralysis; central effects add seizures and apnea. Pinpoint pupils in a collapsing casualty cluster should scream nerve agent."
+    },
+    {
+      "title": "Decontamination: The Core Intervention",
+      "content": "Decontamination protects the patient from continued absorption and protects responders and hospitals from secondary contamination. Removing clothing eliminates a large majority of contamination; the remainder is addressed with copious water (with gentle soap for oily agents), from head down, ideally within minutes. Gross decon before or during triage takes priority for symptomatic liquid exposures — an antidote given to a still-contaminated patient is a losing race. Dry powder agents are brushed off before water. Never delay life-saving decon to wait for a perfect setup."
+    },
+    {
+      "title": "Zones and PPE",
+      "content": "Chemical scenes are organized into a hot zone (contamination present — entry only with appropriate protection), a warm zone (decontamination corridor), and a cold zone (clean support and treatment area). Casualties flow hot → warm (decon) → cold (treatment). PPE is selected for the hazard: the highest protection levels include self-contained breathing apparatus; most healthcare decon teams operate in lower levels with powered air-purifying respirators per facility protocol. Unprotected providers stay in the cold zone — a contaminated hospital is a closed hospital."
+    },
+    {
+      "title": "Antidote Principles",
+      "content": "Awareness-level antidote knowledge: nerve agents — atropine (dries secretions, treats bradycardia; dosed to effect on secretions) plus pralidoxime (reactivates the enzyme), commonly packaged in auto-injectors that SALT triage permits during the lifesaving-interventions step, and benzodiazepines for seizures. Cyanide — hydroxocobalamin is the preferred antidote. Pulmonary agents and vesicants have no specific antidote: care is decon, oxygen, and supportive management. Antidote stockpiles (e.g., CHEMPACK-type caches) exist regionally; knowing they exist is a BDLS competency."
+    }
+  ],
+  "clinicalPearls": [
+    "Multiple casualties + one location + same sudden toxidrome = chemical scene; stage uphill, upwind, and upstream.",
+    "Clothing removal alone eliminates the large majority of contamination — it is the fastest, highest-yield decon step.",
+    "Pinpoint pupils, secretions everywhere, twitching: think nerve agent; atropine is dosed to dry secretions, not to a fixed number.",
+    "Cyanide collapse in an enclosed-space fire victim: consider hydroxocobalamin early."
+  ],
+  "redFlags": [
+    "Responders or ED staff developing symptoms after touching an undeconned casualty — secondary contamination.",
+    "Sudden collapse of multiple workers in a confined space — asphyxiant until proven otherwise; do not enter unprotected.",
+    "Delayed dyspnea hours after a 'minor' chlorine or phosgene exposure — evolving pulmonary edema."
+  ],
+  "commonMistakes": [
+    "Transporting contaminated patients directly to the ED, contaminating the facility.",
+    "Waiting for a formal decon corridor before removing clothing from a soaked, symptomatic patient.",
+    "Underdosing atropine in severe nerve-agent poisoning — titrate to drying of secretions.",
+    "Water-flushing a dry powder agent before brushing it off."
+  ],
+  "memoryAids": [
+    "SLUDGE / DUMBELS for muscarinic signs; the killer B's — bronchorrhea, bronchospasm, bradycardia.",
+    "Decon order: clothes off (most of the job), then water head-to-toe.",
+    "Zones: Hot = agent, Warm = decon, Cold = care.",
+    "Stage uphill, upwind, upstream."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Chemical Release Response",
+      "content": "Cluster of collapsing casualties / unusual odor / dead animals\n  → STAGE uphill, upwind, upstream; do NOT enter unprotected\n  → Establish zones: hot / warm (decon) / cold\n  → Protected teams: extract casualties to decon corridor\n  → DECON: clothing off → copious water (brush dry powder first)\n  → SALT triage with lifesaving interventions incl. antidote auto-injectors\n  → Toxidrome-based care in cold zone:\n     Cholinergic → atropine (to secretions) + pralidoxime + benzos for seizures\n     Cyanide → hydroxocobalamin\n     Pulmonary agents/vesicants → oxygen + supportive; observe for delayed edema\n  → Notify hospitals: decon status of incoming patients"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Chemical Events",
+    "NDLSF BDLS v4.0 — Decontamination and Personal Protective Equipment"
+  ]
+}

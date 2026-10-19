@@ -1,0 +1,16 @@
+{
+  "chapter": "c09",
+  "tables": [
+    {
+      "id": "c09_t01",
+      "title": "Pediatric vs Adult Trauma Anatomic Differences",
+      "headers": ["Region", "Pediatric Difference", "Clinical Implication"],
+      "rows": [
+        ["Head", "Larger head-to-body ratio", "Head injury dominates; increased cervical spine leverage"],
+        ["Chest", "More pliable, elastic ribcage", "Internal injury (pulmonary contusion) can occur without rib fractures"],
+        ["Abdomen", "Proportionally larger liver/spleen, less ribcage protection", "Higher risk of occult blunt abdominal injury; soft exam does not exclude it"],
+        ["Overall", "Effective compensatory mechanisms", "Normal BP can mask significant blood loss; watch perfusion signs"]
+      ]
+    }
+  ]
+}

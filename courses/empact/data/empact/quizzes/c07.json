@@ -1,0 +1,175 @@
+{
+  "chapter": "c07",
+  "questions": [
+    {
+      "id": "c07_q01",
+      "question": "What does hypoglycemia require as immediate treatment?",
+      "options": ["A. Insulin", "B. Glucose administration", "C. Antibiotics", "D. IV fluids only, no glucose"],
+      "correct": 1,
+      "rationale": "Hypoglycemia presents with altered mental status and requires immediate glucose administration to reverse the deficit.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q02",
+      "question": "Kussmaul respirations are classically seen in which condition?",
+      "options": ["A. HHNS", "B. Hypoglycemia", "C. Diabetic ketoacidosis (DKA)", "D. Asthma"],
+      "correct": 2,
+      "rationale": "Kussmaul respirations (deep, rapid, labored breathing) are seen in DKA but not in HHNS or hypoglycemia — they compensate for metabolic acidosis.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q03",
+      "question": "Why does DKA produce Kussmaul respirations?",
+      "options": [
+        "A. To increase oxygen delivery only",
+        "B. To blow off CO2 and compensate for the metabolic acidosis from ketone production",
+        "C. Kussmaul respirations are unrelated to acid-base status",
+        "D. To increase blood glucose"
+      ],
+      "correct": 1,
+      "rationale": "Insulin deficiency forces fat breakdown, producing ketones and metabolic acidosis; Kussmaul breathing is the compensatory hyperventilation blowing off CO2.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q04",
+      "question": "HHNS is most classically associated with which population?",
+      "options": [
+        "A. Undiagnosed Type 1 diabetics in DKA",
+        "B. Undiagnosed Type 2 diabetics, often older adults",
+        "C. Non-diabetic healthy adults",
+        "D. Pediatric patients only"
+      ],
+      "correct": 1,
+      "rationale": "HHNS is associated with undiagnosed Type 2 diabetes, typically presenting in older adults with extreme hyperglycemia and dehydration.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q05",
+      "question": "Which of the following distinguishes DKA from HHNS on exam?",
+      "options": [
+        "A. DKA has Kussmaul respirations; HHNS typically does not",
+        "B. HHNS always has a faster onset than DKA",
+        "C. Only HHNS produces a fruity breath odor",
+        "D. There is no clinical way to distinguish them"
+      ],
+      "correct": 0,
+      "rationale": "DKA's significant ketoacidosis produces Kussmaul respirations, while HHNS (without significant ketosis) typically does not show this breathing pattern.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q06",
+      "question": "A patient with slurred speech and left-sided weakness is found to have a blood glucose of 38 mg/dL. What is the most appropriate next step?",
+      "options": [
+        "A. Treat as a stroke and transport immediately without treating the glucose",
+        "B. Administer glucose and reassess the neurological deficit",
+        "C. Withhold glucose because stroke is suspected",
+        "D. Wait for hospital arrival to address glucose"
+      ],
+      "correct": 1,
+      "rationale": "Hypoglycemia can produce stroke-like symptoms; treating the confirmed low glucose and reassessing is appropriate, since correction can rapidly reverse a hypoglycemic mimic.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q07",
+      "question": "A patient presents with days of increasing confusion, extreme thirst, very high blood glucose, and profound dehydration, without abnormal breathing pattern. What is most likely?",
+      "options": ["A. Hypoglycemia", "B. DKA", "C. HHNS", "D. Simple viral illness"],
+      "correct": 2,
+      "rationale": "Insidious onset over days, extreme hyperglycemia, profound dehydration, and altered mental status without Kussmaul respirations is classic for HHNS.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q08",
+      "question": "A patient presents with a fruity breath odor, deep and labored breathing, abdominal pain, and a 1-day history of excessive thirst and urination. What is most likely?",
+      "options": ["A. Hypoglycemia", "B. Diabetic ketoacidosis (DKA)", "C. HHNS", "D. Simple dehydration"],
+      "correct": 1,
+      "rationale": "Fruity breath odor, Kussmaul respirations, polyuria/polydipsia, and abdominal pain over roughly a day's onset are classic DKA findings.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q09",
+      "question": "Why is checking blood glucose considered a near-universal step in altered mental status assessment?",
+      "options": [
+        "A. It rarely provides useful information",
+        "B. It is fast, low-risk, and can immediately explain or reverse a presentation that would otherwise need a longer workup",
+        "C. It replaces the need for any other assessment",
+        "D. It is only relevant in known diabetics"
+      ],
+      "correct": 1,
+      "rationale": "Glucose testing is quick and can be immediately actionable, making it one of the highest-yield early steps regardless of whether the patient has a known diabetes history.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q10",
+      "question": "What differentiates hypoglycemia from DKA and HHNS in terms of onset?",
+      "options": [
+        "A. Hypoglycemia develops over days like HHNS",
+        "B. Hypoglycemia can develop rapidly (minutes), while DKA (hours-to-days) and HHNS (days) develop more slowly",
+        "C. All three develop at the same rate",
+        "D. DKA is the fastest-onset of the three"
+      ],
+      "correct": 1,
+      "rationale": "Hypoglycemia can develop over minutes, especially with insulin or sulfonylurea use, while DKA and HHNS develop more gradually over hours to days.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q11",
+      "question": "Which finding would you NOT expect in HHNS?",
+      "options": ["A. Extreme hyperglycemia", "B. Profound dehydration", "C. Prominent Kussmaul respirations", "D. Altered mental status"],
+      "correct": 2,
+      "rationale": "HHNS typically lacks the significant ketoacidosis that produces Kussmaul respirations in DKA, distinguishing the two conditions despite both causing severe hyperglycemia and altered mentation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c07_q12",
+      "question": "A previously undiagnosed diabetic teenager presents with polyuria, polydipsia, abdominal pain, and deep rapid breathing over the past day. What should be strongly suspected as a first presentation?",
+      "options": [
+        "A. HHNS as an initial presentation of Type 2 diabetes",
+        "B. DKA as a first presentation of previously undiagnosed Type 1 diabetes",
+        "C. Simple gastroenteritis unrelated to diabetes",
+        "D. Hypoglycemia from unknown insulin use"
+      ],
+      "correct": 1,
+      "rationale": "DKA with Kussmaul respirations, polyuria/polydipsia, and abdominal pain over about a day is a classic first presentation of previously undiagnosed Type 1 diabetes, especially in younger patients.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q13",
+      "question": "Why must altered mental status in a diabetic patient be evaluated with the same urgency as a primary neurological event?",
+      "options": [
+        "A. It should not be — diabetic causes are always benign",
+        "B. Severe hypoglycemia, DKA, and HHNS can all produce presentations mimicking stroke or other neurological emergencies and are themselves time-sensitive",
+        "C. Diabetic causes of altered mental status never require transport",
+        "D. Glucose checks eliminate the need for any other assessment"
+      ],
+      "correct": 1,
+      "rationale": "All three diabetic emergencies are time-sensitive and can closely mimic primary neurological events, so they warrant urgent, systematic evaluation rather than assumption of a benign cause.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c07_q14",
+      "question": "A patient with known Type 1 diabetes has a glucose of 45 mg/dL and mild confusion, with no abnormal breathing pattern. What is the correct immediate treatment?",
+      "options": [
+        "A. IV insulin",
+        "B. Glucose administration",
+        "C. IV fluids alone with no glucose",
+        "D. Withhold treatment until hospital arrival"
+      ],
+      "correct": 1,
+      "rationale": "Confirmed hypoglycemia with altered mental status requires immediate glucose administration — insulin would worsen the problem, and delaying treatment risks further neurological compromise.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c07_q15",
+      "question": "Which onset pattern and finding combination best distinguishes DKA from HHNS in the field?",
+      "options": [
+        "A. Both present identically in onset and breathing pattern",
+        "B. DKA: hours-to-days onset with Kussmaul respirations; HHNS: days-long onset without Kussmaul respirations",
+        "C. DKA: days-long onset; HHNS: minutes-long onset",
+        "D. Only urine ketone testing can distinguish them in the field"
+      ],
+      "correct": 1,
+      "rationale": "The combination of onset speed and respiratory pattern — DKA's faster onset with Kussmaul breathing versus HHNS's slower onset without it — allows field differentiation without lab testing.",
+      "difficulty": "Medium"
+    }
+  ]
+}

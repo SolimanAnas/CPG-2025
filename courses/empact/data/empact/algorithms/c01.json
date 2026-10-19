@@ -1,0 +1,17 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Systematic Patient Assessment Sequence",
+      "description": "The four-stage assessment framework applied to every medical patient encounter.",
+      "steps": [
+        "Scene size-up: assess safety, apply standard precautions, note the nature of the illness and scene clues before contact.",
+        "Primary assessment: form a general impression, determine level of consciousness, identify and treat life threats (airway, breathing, circulation), and assign patient priority.",
+        "Secondary assessment: obtain a directed history (history dominates in medical patients), perform a focused physical exam, and obtain vital signs.",
+        "Build and refine a differential diagnosis: move from possibilities toward probabilities using the gathered information.",
+        "Reassessment: repeat the key elements on an ongoing basis, more frequently if the patient is unstable, tracking trends and treatment response."
+      ]
+    }
+  ]
+}

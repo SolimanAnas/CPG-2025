@@ -1,0 +1,19 @@
+{
+  "chapter": "c13",
+  "cards": [
+    { "id": "c13_fc01", "question": "What does CSHCN stand for?", "answer": "Children with special healthcare needs.", "category": "Special Needs" },
+    { "id": "c13_fc02", "question": "Why are caregivers of CSHCN a critical information resource?", "answer": "They are frequently the most knowledgeable resource on scene about the child's baseline, equipment, and typical emergency presentation.", "category": "Special Needs" },
+    { "id": "c13_fc03", "question": "What is a tracheostomy, and what are common field problems with one?", "answer": "A surgical airway bypassing the upper airway; common problems include mucus plugging, accidental decannulation, and tube malposition.", "category": "Technology" },
+    { "id": "c13_fc04", "question": "What is a gastrostomy (G-) tube used for?", "answer": "Enteral feeding directly into the stomach.", "category": "Technology" },
+    { "id": "c13_fc05", "question": "What condition does a ventriculoperitoneal (VP) shunt treat, and how?", "answer": "Hydrocephalus, by diverting cerebrospinal fluid.", "category": "Technology" },
+    { "id": "c13_fc06", "question": "What is the field priority for a child with a tracheostomy in respiratory distress?", "answer": "Attempt suctioning first, then check for accidental decannulation and replace the tube (or ventilate via the stoma) if needed.", "category": "Technology" },
+    { "id": "c13_fc07", "question": "Who can often assist rapidly with tracheostomy troubleshooting?", "answer": "The caregiver, who manages this equipment daily.", "category": "Special Needs" },
+    { "id": "c13_fc08", "question": "What signs suggest VP shunt malfunction in a child with a known shunt?", "answer": "Headache, vomiting, altered mental status, irritability (infants), or a bulging fontanelle (infants).", "category": "Technology" },
+    { "id": "c13_fc09", "question": "Why does VP shunt malfunction cause signs of increased intracranial pressure?", "answer": "Shunt failure prevents normal cerebrospinal fluid drainage.", "category": "Technology" },
+    { "id": "c13_fc10", "question": "What is the field management for suspected VP shunt malfunction?", "answer": "Standard increased-ICP precautions (avoid hypoxia/hypotension, positioning) and rapid transport; shunt-specific fixes are hospital-level.", "category": "Technology" },
+    { "id": "c13_fc11", "question": "Why is baseline function more useful than population norms when assessing a CSHCN patient?", "answer": "A CSHCN patient's 'normal' resting vitals or interactiveness may differ substantially from typically developing children, so their own baseline is the most meaningful reference point.", "category": "Special Needs" },
+    { "id": "c13_fc12", "question": "What question should providers always ask when assessing a CSHCN patient?", "answer": "'What is normal for this child?'", "category": "Special Needs" },
+    { "id": "c13_fc13", "question": "What does a central venous catheter provide, and what are common field concerns?", "answer": "Vascular access for children needing frequent IV therapy; field concerns include infection signs and line malfunction.", "category": "Technology" },
+    { "id": "c13_fc14", "question": "What is a home ventilator used for, and who is typically expert in troubleshooting it?", "answer": "It provides mechanical ventilation via tracheostomy for children with chronic respiratory failure; caregivers are typically expert in troubleshooting their specific device.", "category": "Technology" }
+  ]
+}

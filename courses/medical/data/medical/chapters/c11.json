@@ -1,0 +1,68 @@
+{
+  "id": "c11",
+  "title": "Toxicological & Environmental Medical Presentations",
+  "shortTitle": "Toxicology & Environmental",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize common adult toxidrome patterns.",
+    "Describe field priorities for a suspected acute poisoning or overdose.",
+    "Recognize field presentations of heat-related illness across its severity spectrum.",
+    "Recognize field presentations of hypothermia across its severity spectrum.",
+    "Describe field management priorities for environmental emergencies in adults."
+  ],
+  "summary": [
+    {
+      "title": "Toxidrome Recognition",
+      "content": "A toxidrome is a recognizable cluster of signs and symptoms associated with a category of toxic exposure, useful because it lets a provider act on a pattern even without knowing the exact substance. Opioid toxidrome: respiratory depression, pinpoint pupils, altered mental status. Sympathomimetic (stimulant) toxidrome: agitation, tachycardia, hypertension, diaphoresis, dilated pupils. Anticholinergic toxidrome: altered mental status, dilated pupils, dry flushed skin, tachycardia, urinary retention ('hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter'). Cholinergic toxidrome: excessive secretions (salivation, lacrimation, urination, defecation, GI upset), bradycardia, muscle twitching — associated with organophosphate exposure."
+    },
+    {
+      "title": "Field Priorities for Suspected Poisoning/Overdose",
+      "content": "Ensure scene safety first, especially for exposures involving unknown chemicals or gases. Identify the substance, amount, and time of exposure when possible, and bring containers/pills to the hospital. Support airway, breathing, and circulation as the priority over identifying the exact substance. Check glucose in any altered patient regardless of a presumed toxic cause. Recognize toxidrome patterns to guide urgency and specific interventions (e.g., naloxone for suspected opioid toxicity per protocol) even without a confirmed substance identity."
+    },
+    {
+      "title": "Heat-Related Illness Spectrum",
+      "content": "Heat illness exists on a spectrum. Heat cramps: painful muscle spasms during/after exertion in heat, generally with normal mental status — treat with rest, fluids, and gentle stretching. Heat exhaustion: heavy sweating, weakness, nausea, headache, and normal-to-mildly-altered mental status, with core temperature usually elevated but not extreme — treat with cooling, rest, and fluids (oral if tolerated and alert). Heat stroke: the life-threatening endpoint, defined by significantly elevated core temperature plus altered mental status (confusion, seizure, or coma) — this is a true emergency requiring aggressive cooling and rapid transport; the presence of sweating does not rule out heat stroke, since some heat stroke patients still sweat, especially with exertional causes."
+    },
+    {
+      "title": "Hypothermia Spectrum",
+      "content": "Hypothermia is also a spectrum by core temperature. Mild hypothermia: shivering, mild confusion, intact coordination. Moderate hypothermia: shivering may stop, worsening confusion, muscle rigidity, slowed heart rate/breathing. Severe hypothermia: absent shivering, significantly altered or unresponsive mental status, risk of cardiac arrhythmia (including a heart especially prone to arrhythmia with rough handling) and cardiac arrest. Field management is gentle handling (rough movement can trigger arrhythmia in a severely hypothermic heart), passive/active external rewarming as appropriate to severity, and rapid transport — a severely hypothermic patient in apparent cardiac arrest should still receive resuscitation efforts per protocol, since hypothermia can mimic death and patients have survived prolonged downtime with good neurologic outcome after rewarming."
+    },
+    {
+      "title": "General Environmental Emergency Priorities",
+      "content": "Across heat and cold emergencies: remove the patient from the ongoing environmental extreme, support ABCs, treat per the severity spectrum above, and transport promptly with a lower threshold for more severe classifications, since patients can deteriorate along the spectrum. Field temperature assessment (when available) helps classify severity and guide treatment intensity, but the overall clinical picture (mental status, specific symptoms) remains central when precise temperature measurement isn't available."
+    }
+  ],
+  "clinicalPearls": [
+    "Toxidromes let you act on a pattern without knowing the exact substance — recognize the cluster, not just one finding.",
+    "Sweating does not rule out heat stroke — altered mental status plus significantly elevated temperature is the defining combination.",
+    "Handle a severely hypothermic patient gently — rough movement can trigger a fatal arrhythmia.",
+    "A hypothermic cardiac arrest patient may still be resuscitatable — hypothermia can mimic death; don't presume futility based on presentation alone."
+  ],
+  "redFlags": [
+    "Altered mental status plus significantly elevated core temperature — heat stroke until proven otherwise, regardless of sweating.",
+    "Absent shivering with altered mental status in a cold-exposed patient — possible severe hypothermia.",
+    "Pinpoint pupils with respiratory depression — treat as an airway emergency, not just an overdose to observe."
+  ],
+  "commonMistakes": [
+    "Ruling out heat stroke because the patient is still sweating.",
+    "Handling a severely hypothermic patient roughly, risking arrhythmia.",
+    "Withholding resuscitation efforts from a hypothermic cardiac arrest patient based on presentation alone."
+  ],
+  "memoryAids": [
+    "Opioid: pinpoint pupils, slow breathing. Stimulant: wide pupils, fast everything.",
+    "Anticholinergic: hot, dry, red, blind, mad.",
+    "Cholinergic: wet everywhere (SLUDGE-type secretions).",
+    "Not dead until warm and dead — don't presume futility in hypothermic arrest."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Toxic Exposure and Environmental Emergency Field Approach",
+      "content": "Suspected toxic exposure or environmental emergency\n  → Ensure scene safety\n  → Toxic exposure: identify substance/amount/time if possible, support ABCs, recognize toxidrome pattern to guide urgency and specific treatment (e.g., naloxone for opioid toxidrome per protocol), check glucose regardless of presumed cause\n  → Heat-related illness: assess mental status and estimate severity (cramps → exhaustion → stroke); heat stroke (altered mental status + high temp, sweating does not exclude) = aggressive cooling + rapid transport\n  → Cold-related illness: assess mental status and shivering status to estimate severity (mild → moderate → severe); handle gently, especially if severe; rewarm appropriately; transport rapidly\n  → Hypothermic cardiac arrest: do not presume futility — provide resuscitation per protocol given hypothermia's protective/mimicking effect"
+    }
+  ],
+  "references": [
+    "Standard EMS/toxicology teaching on toxidrome recognition",
+    "Standard EMS environmental emergency teaching on heat illness and hypothermia severity spectrums"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "Heat Stroke Response",
+      "description": "Recognition and cool-first management of environmental heat stroke.",
+      "steps": [
+        "Suspect heat stroke in any hot-environment patient with altered mental status.",
+        "Confirm severe hyperthermia; move the patient out of the heat.",
+        "Begin rapid active cooling immediately — ice-water immersion where feasible, otherwise ice packs to neck/axillae/groin plus evaporative cooling.",
+        "Manage airway and breathing; check glucose; avoid antipyretics (ineffective for environmental hyperthermia).",
+        "Continue cooling during transport ('cool first, transport cooling'); monitor temperature to avoid overshoot.",
+        "During heat events, pair clinical response with outreach to isolated, at-risk residents."
+      ]
+    },
+    {
+      "id": "c05_alg02",
+      "title": "Post-Storm Carbon Monoxide Screen",
+      "description": "Detecting the silent post-disaster killer in outage conditions.",
+      "steps": [
+        "After storms/outages, ask every symptomatic household about generators, charcoal, or heaters used indoors or in attached garages.",
+        "Suspect CO with headache, nausea, dizziness, confusion — especially multiple household members or pets affected.",
+        "Remove everyone from the environment; give high-flow oxygen.",
+        "Transport for evaluation (consider CO-oximetry); alert responders to the source.",
+        "Push prevention messaging: generators outdoors, away from windows, with CO alarms."
+      ]
+    }
+  ]
+}

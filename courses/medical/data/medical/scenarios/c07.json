@@ -1,0 +1,53 @@
+{
+  "chapter": "c07",
+  "cases": [
+    {
+      "id": "c07_s01",
+      "title": "Voices and Beliefs",
+      "presentation": "A 27-year-old man reports hearing voices telling him to leave his apartment, and separately states with complete conviction that his neighbors have installed cameras to spy on him, despite no evidence of this.",
+      "vitals": { "mentalStatus": "Alert, oriented to self only", "affect": "Guarded, suspicious" },
+      "question": "How should these two findings be classified?",
+      "options": [
+        "A: Both findings are delusions.",
+        "B: The voices are a hallucination; the belief about being watched is a delusion.",
+        "C: Both findings are hallucinations.",
+        "D: Neither finding is clinically significant."
+      ],
+      "correct": 1,
+      "explanation": "Hearing voices with no external source is a hallucination (a false sensory perception); the fixed, evidence-resistant belief about being surveilled is a delusion (a false belief). Field management for both is the same calm, non-confrontational, non-arguing approach, with attention to safe assessment and transport.",
+      "clinicalPearl": "Voices = hallucination (perception); unshakeable belief = delusion (belief) — different phenomena, same calm approach."
+    },
+    {
+      "id": "c07_s02",
+      "title": "Chest Tightness With a Panic History",
+      "presentation": "A 31-year-old woman with a known history of panic disorder calls EMS for sudden chest tightness, rapid breathing, dizziness, and a feeling of impending doom. She has had similar episodes before that resolved without treatment.",
+      "vitals": { "hr": "128 bpm", "rr": "26/min", "spo2": "97%", "ecg": "Not yet obtained" },
+      "question": "What is the correct approach given her panic disorder history?",
+      "options": [
+        "A: Assume this is another panic attack and skip further evaluation given her history.",
+        "B: Still perform a medical rule-out (ECG, vitals, glucose) rather than assuming panic disorder from history alone, since panic-like symptoms can mimic or coexist with real medical emergencies.",
+        "C: Refuse care since panic disorder is a psychiatric, not medical, condition.",
+        "D: Transport without any assessment since her history is already known."
+      ],
+      "correct": 1,
+      "explanation": "Even with a known panic disorder history, chest tightness, tachycardia, and dyspnea warrant a proper medical rule-out (ECG, vital signs, glucose) rather than assuming the presentation is 'just' a panic attack, since true medical emergencies can present identically or coexist with panic symptoms.",
+      "clinicalPearl": "A panic disorder history doesn't exempt a patient from a cardiac rule-out — treat the symptoms, not just the label."
+    },
+    {
+      "id": "c07_s03",
+      "title": "The Direct Question",
+      "presentation": "A 22-year-old man appears withdrawn and tearful after a recent breakup, describing feeling hopeless. A new EMT hesitates to ask about suicidal thoughts, worried that asking might 'give him the idea.'",
+      "vitals": { "affect": "Tearful, withdrawn", "mentalStatus": "Alert, oriented" },
+      "question": "What is the correct approach to assessing suicide risk here?",
+      "options": [
+        "A: Avoid the topic entirely to prevent 'planting the idea.'",
+        "B: Ask directly and non-judgmentally about suicidal thoughts — this does not increase risk and is an appropriate, necessary assessment step.",
+        "C: Only ask if the patient brings it up first.",
+        "D: Assume there is no risk since he has not mentioned self-harm."
+      ],
+      "correct": 1,
+      "explanation": "Direct, non-judgmental questioning about suicidal ideation does not increase risk — this is a well-established finding and standard EMS teaching. It is an appropriate and necessary part of assessing a patient presenting with hopelessness and low mood.",
+      "clinicalPearl": "Asking about suicide doesn't cause it — avoiding the question just means you might miss a high-risk patient."
+    }
+  ]
+}

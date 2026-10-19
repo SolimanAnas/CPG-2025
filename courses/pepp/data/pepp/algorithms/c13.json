@@ -1,0 +1,30 @@
+{
+  "chapter": "c13",
+  "algorithms": [
+    {
+      "id": "c13_alg01",
+      "title": "Tracheostomy Emergency Troubleshooting",
+      "description": "Field sequence for a child with a tracheostomy in respiratory distress.",
+      "steps": [
+        "Recognize respiratory distress in a child with a tracheostomy and engage the caregiver immediately for baseline and equipment information.",
+        "Attempt suctioning through the tracheostomy tube to clear a possible mucus plug.",
+        "If suctioning does not resolve distress, check for accidental decannulation (tube fully or partially displaced).",
+        "If decannulated, replace with a same-size tracheostomy tube (or appropriately sized endotracheal tube) if trained and equipped.",
+        "If the tube cannot be quickly replaced, provide supplemental oxygen/ventilation via the tracheostomy stoma.",
+        "Reassess oxygenation and work of breathing continuously; transport rapidly."
+      ]
+    },
+    {
+      "id": "c13_alg02",
+      "title": "CSHCN Field Assessment Using Caregiver-Reported Baseline",
+      "description": "Approach for interpreting findings in a child with special healthcare needs by anchoring to personal baseline.",
+      "steps": [
+        "Ask the caregiver about the child's usual baseline vital signs, oxygen saturation, mental status, and typical emergency presentation.",
+        "Compare current findings to the reported baseline rather than typical population norms.",
+        "Identify any acute change from that baseline as the primary marker of a new problem.",
+        "Use the caregiver as an active partner in troubleshooting equipment (tracheostomy, ventilator, shunt, feeding tube, central line) throughout the call.",
+        "Communicate the child's baseline and any acute changes clearly during receiving-facility handoff."
+      ]
+    }
+  ]
+}

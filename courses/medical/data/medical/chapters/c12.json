@@ -1,0 +1,68 @@
+{
+  "id": "c12",
+  "title": "Sepsis, GI/Renal Emergencies & General Medical Red Flags",
+  "shortTitle": "Sepsis, GI/Renal & Red Flags",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize prehospital signs suggestive of sepsis.",
+    "Describe field priorities for suspected sepsis.",
+    "Recognize field presentations of common GI emergencies (GI bleeding, bowel obstruction).",
+    "Recognize field presentations of acute renal colic and describe its distinguishing features.",
+    "Apply a general 'red flag' framework for recognizing a medical patient who is sicker than they initially appear."
+  ],
+  "summary": [
+    {
+      "title": "Recognizing Sepsis in the Field",
+      "content": "Sepsis is a life-threatening response to infection that can progress rapidly to septic shock. Field-relevant recognition combines a suspected or known infection source (e.g., cough/productive sputum, dysuria, wound with surrounding redness/warmth) with signs of systemic illness: fever or hypothermia (both can indicate sepsis — a very low temperature in the setting of infection is not reassuring), tachycardia, tachypnea, altered mental status, and — as sepsis progresses toward septic shock — hypotension and poor perfusion (delayed capillary refill, cool/mottled skin, or paradoxically warm/flushed skin in early distributive shock). Sepsis is time-sensitive: outcomes worsen with delayed recognition and treatment, similar in urgency to stroke or trauma."
+    },
+    {
+      "title": "Field Management for Suspected Sepsis",
+      "content": "Field priorities are early recognition (using the pattern above rather than waiting for a formal score), supportive care (oxygen as needed, IV access and fluids per protocol, cardiac monitoring), and rapid transport with early hospital notification, since early antibiotics and fluid resuscitation in the hospital setting are time-sensitive. Older adults and patients with altered mental status can present with sepsis atypically (e.g., confusion as the primary sign, without a dramatic fever), reinforcing the geriatric atypical-presentation principle from earlier in this course."
+    },
+    {
+      "title": "GI Emergencies — Bleeding and Obstruction",
+      "content": "GI bleeding presents as hematemesis (vomiting blood, which may look like coffee grounds if partially digested), melena (black, tarry, foul-smelling stool from upper GI bleeding), or hematochezia (bright red blood per rectum, typically lower GI bleeding, though a brisk upper GI bleed can also present this way). Significant GI bleeding can cause hypovolemic shock — assess perfusion (not just visible blood volume) and treat shock per protocol. Bowel obstruction presents with colicky abdominal pain, distension, vomiting (which may become feculent in advanced cases), and absence of bowel movements/flatus — this is a surgical emergency requiring prompt transport, with supportive care (IV fluids, antiemetics per protocol) rather than oral intake."
+    },
+    {
+      "title": "Renal Colic",
+      "content": "Acute renal colic (kidney stone) classically presents with sudden, severe, colicky flank pain that may radiate to the groin, often with nausea/vomiting and hematuria, and the patient is often unable to find a comfortable position (in contrast to peritoneal irritation, where patients typically lie still). While renal colic is usually not immediately life-threatening, it should not be assumed without considering more dangerous mimics presenting with similar flank/back pain — most notably a ruptured or dissecting abdominal aortic aneurysm (AAA), especially in an older patient with vascular risk factors, and pyelonephritis with systemic infection signs."
+    },
+    {
+      "title": "General 'Sicker Than They Look' Red Flags",
+      "content": "Across all medical complaints, certain findings should raise the index of suspicion regardless of the specific diagnosis: any altered mental status, tachycardia or tachypnea out of proportion to the apparent severity of complaint, pain out of proportion to exam findings (a classic teaching point for conditions like mesenteric ischemia or compartment syndrome), inability to find a comfortable position, and a patient or family stating 'this feels different/worse than usual' for someone with a known chronic condition. These general red flags exist precisely because atypical and subtle presentations of serious illness are common, and a systematic red-flag mindset catches what a single vital sign or complaint-specific checklist might miss."
+    }
+  ],
+  "clinicalPearls": [
+    "Both fever and hypothermia can indicate sepsis — a low temperature with infection is not reassuring.",
+    "Sepsis is time-sensitive, like stroke or trauma — early recognition and rapid transport matter.",
+    "Melena = upper GI bleed (black, tarry); hematochezia = usually lower GI bleed (bright red), though a brisk upper bleed can look the same.",
+    "Pain out of proportion to exam findings is a classic red flag for a more dangerous underlying process."
+  ],
+  "redFlags": [
+    "Suspected infection plus altered mental status, tachycardia/tachypnea, or hypotension — think sepsis, not 'just an infection.'",
+    "Colicky flank pain in an older patient with vascular risk factors — don't assume renal colic without considering AAA.",
+    "Pain out of proportion to exam findings, or a patient unable to find a comfortable position."
+  ],
+  "commonMistakes": [
+    "Reassurance from a normal or low temperature in a patient with suspected infection.",
+    "Assuming flank pain is always renal colic without considering AAA in an at-risk patient.",
+    "Underestimating GI bleeding severity by focusing on visible blood volume rather than perfusion status."
+  ],
+  "memoryAids": [
+    "Fever OR hypothermia plus infection signs = think sepsis either way.",
+    "Melena is black and from up high; hematochezia is red and usually from down low.",
+    "Flank pain in an older vascular-risk patient — rule out AAA before settling on 'just a stone.'",
+    "Pain that doesn't match the exam is a red flag, not a reassurance."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Sepsis and General Medical Red Flag Field Approach",
+      "content": "Suspected infection or vague/serious-seeming medical complaint\n  → Suspected infection source + fever OR hypothermia + tachycardia/tachypnea/altered mental status → suspect sepsis → supportive care (O2, IV fluids per protocol, monitoring), rapid transport, early hospital notification\n  → GI bleeding (hematemesis, melena, hematochezia) → assess perfusion (not just visible blood), treat shock per protocol, rapid transport\n  → Bowel obstruction pattern (colicky pain, distension, vomiting, no BM/flatus) → supportive care, no oral intake, prompt transport\n  → Flank pain → consider renal colic, but rule out AAA (especially older/vascular-risk patient) and pyelonephritis (systemic infection signs) before settling on a benign cause\n  → Any general red flag present (altered mental status, vital signs out of proportion, pain out of proportion, inability to find comfortable position, 'feels different than usual') → raise index of suspicion regardless of specific diagnosis, transport promptly"
+    }
+  ],
+  "references": [
+    "Standard EMS sepsis-recognition teaching (early recognition and rapid transport, paralleling stroke/trauma time-sensitivity)",
+    "Standard EMS teaching on GI bleeding, bowel obstruction, and renal colic recognition and AAA mimicry"
+  ]
+}

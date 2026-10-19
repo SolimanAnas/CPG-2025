@@ -1,0 +1,68 @@
+{
+  "id": "c08",
+  "title": "Behavioral Emergencies III — Personality, Substance-Related & High-Risk Presentations",
+  "shortTitle": "Personality, Substance & High-Risk",
+  "estimatedStudyTime": 30,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Describe the DSM-5-TR personality disorder cluster framework at a recognition level.",
+    "Recognize delirium tremens (DTs) and its timing relative to alcohol cessation.",
+    "Describe field-relevant recognition of substance intoxication and withdrawal presentations.",
+    "Recognize eating-disorder-related cardiac risk as a field-relevant medical concern.",
+    "Apply appropriate scene-safety and de-escalation adaptations for high-risk substance-related presentations."
+  ],
+  "summary": [
+    {
+      "title": "Personality Disorder Clusters — Recognition Vocabulary, Not a Field Diagnostic Tool",
+      "content": "DSM-5-TR groups personality disorders into three clusters. Cluster A ('odd/eccentric'): paranoid, schizoid, and schizotypal — patients may appear suspicious, socially detached, or odd in thinking/behavior. Cluster B ('dramatic/emotional/erratic'): antisocial, borderline, histrionic, and narcissistic — patients may show intense emotional reactivity, impulsivity, attention-seeking behavior, or disregard for others' rights. Cluster C ('anxious/fearful'): avoidant, dependent, and obsessive-compulsive — patients may show excessive anxiety, dependency, or rigid perfectionism. This framework is exam-relevant recognition vocabulary — field providers are not expected to diagnose a specific personality disorder, only to recognize that a patient's presentation may reflect a longstanding pattern rather than an acute crisis alone, and to maintain calm, consistent, non-judgmental care regardless."
+    },
+    {
+      "title": "Delirium Tremens (DTs)",
+      "content": "Delirium tremens is a severe, life-threatening alcohol withdrawal syndrome, classically beginning 48-96 hours after the last drink (later than milder withdrawal symptoms, which can start within hours). Features include severe confusion/disorientation, autonomic instability (tachycardia, hypertension, fever, diaphoresis), tremor, and often visual/tactile hallucinations. DTs carries meaningful mortality risk if untreated and is a true medical emergency requiring prompt recognition, supportive care (IV access, monitoring), and transport — it is not simply 'bad withdrawal' to be managed with reassurance alone."
+    },
+    {
+      "title": "Substance Intoxication and Withdrawal — Field Recognition",
+      "content": "Field providers should recognize general patterns rather than memorize every substance: stimulant intoxication (agitation, tachycardia, hypertension, diaphoresis, dilated pupils) can look similar to severe anxiety or psychosis and carries cardiac risk; opioid intoxication (respiratory depression, pinpoint pupils, altered mental status) is a respiratory/airway emergency; alcohol or sedative withdrawal can progress from mild tremor/anxiety to seizures and DTs; and any of these can coexist with trauma, psychiatric illness, or an unrelated medical emergency, so vital signs and glucose remain part of the assessment regardless of a presumed substance cause."
+    },
+    {
+      "title": "Eating Disorder Cardiac Risk",
+      "content": "Patients with eating disorders (particularly anorexia nervosa and bulimia nervosa) carry a field-relevant risk of cardiac arrhythmia from electrolyte disturbances (e.g., hypokalemia from purging behaviors or malnutrition) — this is a genuine medical risk, not merely a psychiatric consideration, and any cardiac symptom (palpitations, syncope, chest discomfort) in a patient with a known or suspected eating disorder should be evaluated with the same seriousness as in any other patient, including ECG monitoring where available."
+    },
+    {
+      "title": "Scene Safety and De-escalation Adaptations",
+      "content": "High-risk presentations — active substance intoxication, personality-disorder-associated impulsivity or emotional intensity, or a patient in DTs with autonomic instability and hallucinations — call for the same core de-escalation principles as other behavioral emergencies (calm approach, open-ended questions, avoid arguing with hallucinatory/delusional content) plus heightened vigilance for rapid changes in presentation, since intoxicated or withdrawing patients can deteriorate quickly and unpredictably. Consistent, calm, non-judgmental care — regardless of the underlying condition — reduces escalation risk across all of these presentations."
+    }
+  ],
+  "clinicalPearls": [
+    "Personality disorder clusters (A: odd/eccentric, B: dramatic/emotional/erratic, C: anxious/fearful) are recognition vocabulary, not a field diagnostic checklist.",
+    "DTs classically starts 48-96 hours after the last drink — later than milder withdrawal — and is a life-threatening emergency, not simple withdrawal.",
+    "Opioid intoxication is a respiratory emergency (pinpoint pupils, respiratory depression); stimulant intoxication is a cardiac-risk emergency (tachycardia, hypertension).",
+    "Eating-disorder patients carry real cardiac arrhythmia risk from electrolyte disturbance — take cardiac symptoms seriously."
+  ],
+  "redFlags": [
+    "Severe confusion, autonomic instability, and hallucinations 48-96+ hours after last alcohol use — think DTs.",
+    "Pinpoint pupils with respiratory depression and altered mental status — think opioid intoxication.",
+    "Cardiac symptoms (palpitations, syncope, chest discomfort) in a patient with known/suspected eating disorder — evaluate seriously, don't dismiss as anxiety."
+  ],
+  "commonMistakes": [
+    "Attempting to diagnose a specific personality disorder in the field rather than focusing on calm, consistent care.",
+    "Treating DTs as simple withdrawal requiring only reassurance rather than as a life-threatening emergency.",
+    "Dismissing eating-disorder-related cardiac symptoms as purely psychiatric/anxiety-related."
+  ],
+  "memoryAids": [
+    "Cluster A odd, Cluster B dramatic, Cluster C anxious.",
+    "DTs: 48-96 hours, not day one.",
+    "Pinpoint pupils = opioids = breathing problem; wide pupils + fast heart = stimulants = cardiac risk.",
+    "Eating disorder + cardiac symptom = real medical risk, evaluate fully."
+  ],
+  "decisionTrees": [
+    {
+      "title": "High-Risk Behavioral/Substance Presentation Field Approach",
+      "content": "Patient with substance-related, personality-disorder-associated, or eating-disorder-related presentation\n  → Assess scene safety and vital signs/glucose regardless of presumed cause\n  → Alcohol withdrawal 48-96+ hours out with confusion, autonomic instability, hallucinations → suspect DTs → treat as life-threatening emergency, supportive care, monitoring, transport\n  → Pinpoint pupils, respiratory depression, altered mental status → suspect opioid intoxication → airway/ventilation priority\n  → Agitation, tachycardia, hypertension, diaphoresis, dilated pupils → suspect stimulant intoxication → monitor for cardiac risk\n  → Known/suspected eating disorder with cardiac symptoms → evaluate seriously (ECG/monitoring if available), do not dismiss as anxiety\n  → Personality-disorder-associated presentation → maintain calm, consistent, non-judgmental care; do not attempt field diagnosis of a specific disorder\n  → All high-risk presentations: apply core de-escalation principles with heightened vigilance for rapid deterioration"
+    }
+  ],
+  "references": [
+    "DSM-5-TR — personality disorder cluster framework",
+    "Standard EMS teaching on delirium tremens timing/features and substance intoxication/withdrawal recognition"
+  ]
+}

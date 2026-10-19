@@ -1,0 +1,172 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "Sepsis is frequently associated with which two findings?",
+      "options": ["A. Rash and joint pain", "B. Fever and altered level of consciousness", "C. Hypoglycemia and bradycardia", "D. Cough and sore throat only"],
+      "correct": 1,
+      "rationale": "Fever and altered LOC are the classic sepsis association, prompting an active search for an infectious source.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q02",
+      "question": "What is a common cause of sepsis in the elderly?",
+      "options": [
+        "A. Simple viral cold",
+        "B. Pneumonia or a UTI secondary to an indwelling urinary catheter",
+        "C. Migraine headache",
+        "D. Seasonal allergies"
+      ],
+      "correct": 1,
+      "rationale": "Pneumonia and catheter-associated urinary tract infections are common sepsis sources in elderly patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q03",
+      "question": "Which findings are MOST diagnostic for anaphylaxis?",
+      "options": [
+        "A. Mild rash only",
+        "B. Hypotension and airway swelling (stridor, angioedema)",
+        "C. Fever and cough",
+        "D. Isolated abdominal pain"
+      ],
+      "correct": 1,
+      "rationale": "Hypotension combined with airway swelling (stridor, angioedema) are the most diagnostic findings for anaphylaxis, reflecting the cardiovascular and respiratory system involvement.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q04",
+      "question": "What is first-line treatment for anaphylaxis?",
+      "options": ["A. Oral antihistamine", "B. IM epinephrine", "C. IV corticosteroids", "D. Nebulized saline"],
+      "correct": 1,
+      "rationale": "IM epinephrine is first-line for anaphylaxis; antihistamines and corticosteroids are adjuncts, not substitutes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q05",
+      "question": "Why are antihistamines and corticosteroids NOT considered first-line for anaphylaxis?",
+      "options": [
+        "A. They work faster than epinephrine",
+        "B. They have a slower onset of action and do not reverse the acute hypotension and airway compromise",
+        "C. They are more effective than epinephrine",
+        "D. They are contraindicated in all allergic reactions"
+      ],
+      "correct": 1,
+      "rationale": "Antihistamines and corticosteroids act more slowly and do not address the acute life threats (hypotension, airway compromise) the way epinephrine does — they support but do not replace it.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q06",
+      "question": "An elderly nursing home resident presents with a fall and new confusion but no fever. What should still be considered?",
+      "options": [
+        "A. Sepsis can be ruled out since there is no fever",
+        "B. Sepsis remains a possibility — elderly patients may not mount a classic fever response and can present atypically",
+        "C. This is always simple dementia progression",
+        "D. No further workup is needed"
+      ],
+      "correct": 1,
+      "rationale": "Elderly patients can present with vague findings like falls or confusion without a robust fever response, so sepsis should remain on the differential despite the absent fever.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q07",
+      "question": "What underlying physiologic process do sepsis and anaphylaxis share?",
+      "options": [
+        "A. Cardiogenic pump failure",
+        "B. Distributive shock from pathologic vasodilation",
+        "C. Obstructive shock from mechanical compression",
+        "D. They share no common physiology"
+      ],
+      "correct": 1,
+      "rationale": "Both sepsis and anaphylaxis cause distributive shock through pathologic vasodilation that drops systemic vascular resistance and blood pressure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q08",
+      "question": "A patient develops hives, stridor, and a blood pressure of 78/40 after a bee sting. What is the correct FIRST treatment?",
+      "options": [
+        "A. Diphenhydramine (antihistamine) only",
+        "B. IM epinephrine",
+        "C. Oral corticosteroids",
+        "D. Wait and observe before treating"
+      ],
+      "correct": 1,
+      "rationale": "With hypotension and airway swelling (stridor) after a known allergen exposure, this is anaphylaxis — IM epinephrine is the first-line, life-saving treatment, given without delay.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q09",
+      "question": "Which body systems can be involved in anaphylaxis?",
+      "options": [
+        "A. Only the skin",
+        "B. Skin, respiratory, cardiovascular, and gastrointestinal systems",
+        "C. Only the cardiovascular system",
+        "D. Only the respiratory system"
+      ],
+      "correct": 1,
+      "rationale": "Anaphylaxis is a systemic reaction affecting skin (hives), respiratory (wheeze/stridor/angioedema), cardiovascular (hypotension/tachycardia), and GI (nausea/vomiting) systems.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q10",
+      "question": "Where should you actively search for a sepsis source in an elderly patient with fever and confusion?",
+      "options": [
+        "A. Only the skin",
+        "B. Lungs, urinary tract (especially with an indwelling catheter), skin/wounds, and abdomen",
+        "C. Only the abdomen",
+        "D. No source search is needed once sepsis is suspected"
+      ],
+      "correct": 1,
+      "rationale": "A deliberate search across likely sources (respiratory, urinary, skin/wound, abdominal) is part of sepsis assessment, especially in elderly patients with device-related infection risk.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q11",
+      "question": "Why is delaying epinephrine in favor of an antihistamine considered a dangerous error in anaphylaxis?",
+      "options": [
+        "A. It is not dangerous — antihistamines work just as fast",
+        "B. Anaphylaxis can progress to complete airway obstruction or cardiovascular collapse within minutes, and only epinephrine reverses this acutely",
+        "C. Antihistamines are contraindicated entirely in anaphylaxis",
+        "D. Epinephrine has no advantage over antihistamines"
+      ],
+      "correct": 1,
+      "rationale": "Because anaphylaxis can rapidly progress to life-threatening airway or cardiovascular compromise, and epinephrine is the only agent that acutely reverses this, delaying it for a slower-acting antihistamine risks patient deterioration.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q12",
+      "question": "What connects the management of sepsis and anaphylaxis to the broader shock chapter?",
+      "options": [
+        "A. Nothing connects them",
+        "B. Both are distributive shock, sharing principles like keeping the patient warm and fluid resuscitation while treating the underlying cause",
+        "C. Both require identical drug treatment",
+        "D. Only sepsis is a form of shock"
+      ],
+      "correct": 1,
+      "rationale": "Recognizing sepsis and anaphylaxis as distributive shock connects their management to shared shock principles (warming, fluids) while still requiring cause-specific treatment (epinephrine vs. source control/antibiotics).",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q13",
+      "question": "A patient with an indwelling urinary catheter develops fever and new lethargy. What should be on your differential?",
+      "options": [
+        "A. Sepsis from a catheter-associated urinary tract infection",
+        "B. Simple dehydration only, unrelated to the catheter",
+        "C. Anaphylaxis from the catheter material",
+        "D. No concern since a catheter cannot cause infection"
+      ],
+      "correct": 0,
+      "rationale": "Indwelling urinary catheters are a recognized common source of sepsis in patients with fever and altered mental status, particularly in elderly populations.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q14",
+      "question": "Which route is used for the first-line epinephrine dose in anaphylaxis?",
+      "options": ["A. Oral", "B. Intramuscular (IM)", "C. Topical", "D. Subcutaneous only, never IM"],
+      "correct": 1,
+      "rationale": "IM epinephrine is the first-line route for anaphylaxis treatment, providing rapid absorption to reverse hypotension and airway compromise.",
+      "difficulty": "Easy"
+    }
+  ]
+}

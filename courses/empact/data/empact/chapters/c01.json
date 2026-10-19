@@ -1,0 +1,75 @@
+{
+  "id": "c01",
+  "title": "The Systematic Approach & Differential Diagnosis",
+  "shortTitle": "Systematic Approach",
+  "estimatedStudyTime": 28,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Describe the four stages of patient assessment: scene size-up, primary assessment, secondary assessment, reassessment.",
+    "Explain the concept of differential diagnosis as moving from possibilities to probabilities.",
+    "State the relative contribution of history versus physical exam in the medical patient.",
+    "Explain why life threats are identified and treated before a detailed history is taken.",
+    "Describe scene safety considerations specific to medical calls.",
+    "Explain why activities of daily living (ADLs) matter in medical assessment."
+  ],
+  "summary": [
+    {
+      "title": "Differential Diagnosis: Possibilities to Probabilities",
+      "content": "Differential diagnosis is the process of narrowing a wide field of possible causes for a patient's presentation down to the most probable one (or few) explanations. It is not about reaching a single certain diagnosis in the field — it is about building an organized list of what could be happening, then using the history, physical exam, and vital signs to raise or lower the likelihood of each possibility, so that treatment and transport decisions are appropriately targeted."
+    },
+    {
+      "title": "The Four Stages of Assessment",
+      "content": "Assessment proceeds through four stages. Scene size-up: initial observations for safety, standard precautions, the nature of the illness, and clues to the cause, performed before patient contact. Primary assessment: forming a general impression, determining level of consciousness, and identifying and treating immediate life threats (airway, breathing, circulation) — this stage also sets the patient's overall priority. Secondary assessment: a focused or detailed history, physical examination, and vital signs. Reassessment: ongoing monitoring, repeated more frequently in unstable patients, tracking trends and response to treatment."
+    },
+    {
+      "title": "History Dominates in the Medical Patient",
+      "content": "For the medical patient, approximately 80% of the diagnostic information comes from the history, and only about 20% from the physical examination — the reverse emphasis from many trauma presentations. This means a structured, unhurried history (chief complaint, history of present illness, past medical history, medications, allergies) is often the single highest-yield tool available in the field. Active listening — getting on the patient's level and asking follow-up questions — is what makes that history useful."
+    },
+    {
+      "title": "Life Threats First, Always",
+      "content": "Regardless of how compelling the history sounds, the primary assessment's job is to identify and treat immediate threats to airway, breathing, and circulation before proceeding to a detailed history and exam. A patient in respiratory failure or shock needs intervention now, not a complete past medical history first. This ordering — treat what will kill first — is the organizing principle underneath every other assessment skill in this course."
+    },
+    {
+      "title": "Scene Safety and Pattern Recognition on Medical Calls",
+      "content": "Medical calls carry their own scene-safety considerations: standard precautions against blood and body fluids, awareness of the environment (hoarding, aggressive family members, drug paraphernalia), and — critically — recognizing when more than one person at a scene has the same signs and symptoms. A cluster of similarly ill people is a red flag for a shared environmental or toxic exposure (carbon monoxide, a gas leak, a common food source) rather than several unrelated coincidental illnesses, and should prompt inquiry into a shared cause before entering blindly."
+    },
+    {
+      "title": "Why People Call: Activities of Daily Living",
+      "content": "Patients and families often call EMS not because a specific diagnosis has changed, but because the patient's Activities of Daily Living (ADLs) — the ability to walk, eat, dress, toilet, or think clearly — have become altered by illness. Asking 'what is different today compared to your usual baseline?' surfaces this functional change and is often more revealing than asking for a self-diagnosis, especially in patients who cannot articulate their complaint precisely (young children, patients with dementia, non-verbal patients)."
+    }
+  ],
+  "clinicalPearls": [
+    "Differential diagnosis is going from possibilities to probabilities — not guessing a single answer.",
+    "Always identify and treat life threats first (Airway — Breathing — Circulation).",
+    "In the medical patient, about 80% of the information comes from the history and 20% from the physical examination.",
+    "Always trust YOUR exam — your own primary assessment and findings, not just what you're told.",
+    "The key to active listening is getting on your patient's level and asking follow-up questions.",
+    "If more than one person presents with the same signs and symptoms, inquire about a shared cause."
+  ],
+  "redFlags": [
+    "Skipping the primary assessment's life-threat check to jump straight into history-taking.",
+    "Multiple patients at one location with the same symptoms — treat as a possible shared exposure until ruled out.",
+    "Discounting your own physical findings in favor of a chief complaint that doesn't match what you're seeing."
+  ],
+  "commonMistakes": [
+    "Treating assessment as a single event instead of a continuous, four-stage process with reassessment.",
+    "Spending exam time on find-everything physical exams when the history would answer the question faster.",
+    "Asking closed yes/no questions instead of open-ended questions that invite the patient to describe their own experience."
+  ],
+  "memoryAids": [
+    "Possibilities → Probabilities: that is what 'differential diagnosis' means.",
+    "Size-up, Primary, Secondary, Reassess — the four assessment stages, in order.",
+    "History 80%, exam 20% — for the medical patient, listen first.",
+    "ADLs changed = why they called: what's different today?"
+  ],
+  "decisionTrees": [
+    {
+      "title": "The Four Stages of Patient Assessment",
+      "content": "Arrive on scene\n  → Scene size-up: safety, precautions, nature of illness, clues\n  → Primary assessment: general impression, LOC, identify/treat life threats (A-B-C), assign priority\n     → Life threat found: treat immediately before proceeding\n  → Secondary assessment: focused/detailed history + physical exam + vital signs\n     → Build differential diagnosis: possibilities → probabilities\n  → Reassessment: repeat, more frequently if unstable; track trends and response to treatment"
+    }
+  ],
+  "references": [
+    "National EMS Education Standards — Assessment domain (systematic patient assessment)",
+    "EMPACT clinical pearls collection — Core Concepts and Assessment"
+  ]
+}

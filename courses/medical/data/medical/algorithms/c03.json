@@ -1,0 +1,18 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Suspected Diabetic Emergency Field Approach",
+      "description": "Sequence for evaluating altered mental status, vomiting, abdominal pain, or unexplained rapid breathing in a known or possible diabetic patient.",
+      "steps": [
+        "Check blood glucose immediately in any altered, vomiting, or unusually tachypneic patient with known or suspected diabetes.",
+        "If glucose is low: treat hypoglycemia per protocol (oral glucose if awake/cooperative; IV dextrose or IM glucagon per protocol if not) and reassess.",
+        "If glucose is high or only mildly elevated with Kussmaul respirations, fruity breath odor, vomiting/abdominal pain, and dehydration: suspect DKA, including euglycemic DKA if glucose is near-normal.",
+        "If glucose is very high with profound dehydration, slower onset, minimal respiratory compensation, and prominent altered mental status/obtundation: suspect HHS.",
+        "For suspected DKA or HHS: provide supportive care (oxygen as needed, IV access and isotonic fluids per protocol, cardiac monitoring), protect the airway given vomiting risk.",
+        "Transport rapidly for definitive hospital treatment (insulin, careful fluid/electrolyte correction) — do not attempt to correct DKA/HHS glucose with field insulin."
+      ]
+    }
+  ]
+}

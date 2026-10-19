@@ -1,0 +1,27 @@
+{
+  "chapter": "c02",
+  "tables": [
+    {
+      "id": "c02_t01",
+      "title": "Pediatric Assessment Triangle — Legs and Findings",
+      "headers": ["Leg", "Mnemonic/Focus", "Normal", "Abnormal"],
+      "rows": [
+        ["Appearance", "TICLS: Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry", "Alert, interactive, consolable, strong cry/speech", "Limp, uninterested, inconsolable, weak/absent cry"],
+        ["Work of Breathing", "Sounds, position, retractions, flaring, head bobbing", "Quiet, comfortable position, no retractions", "Stridor/grunting/wheeze, tripod position, retractions, flaring, head bobbing"],
+        ["Circulation to Skin", "Color compared to baseline", "Pink, normal color for the child", "Pallor, mottling, cyanosis"]
+      ]
+    },
+    {
+      "id": "c02_t02",
+      "title": "PAT Pattern → Likely Category",
+      "headers": ["Abnormal Leg(s)", "Likely Category", "Urgency"],
+      "rows": [
+        ["Appearance only", "CNS/metabolic problem", "Elevated"],
+        ["Appearance + Work of Breathing", "Respiratory problem", "Urgent"],
+        ["Appearance + Circulation to Skin", "Shock/circulatory problem", "Urgent"],
+        ["Appearance + Work of Breathing + Circulation to Skin", "Cardiopulmonary failure", "Highest — immediate action"],
+        ["None (all normal)", "Reassuring general impression", "Routine pace"]
+      ]
+    }
+  ]
+}

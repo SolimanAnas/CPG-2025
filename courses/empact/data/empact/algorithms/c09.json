@@ -1,0 +1,30 @@
+{
+  "chapter": "c09",
+  "algorithms": [
+    {
+      "id": "c09_alg01",
+      "title": "Sepsis Recognition Sequence",
+      "description": "Identifying and responding to suspected sepsis, especially in elderly patients.",
+      "steps": [
+        "Screen for fever and altered level of consciousness in any at-risk patient.",
+        "Consider atypical presentations in the elderly: falls, generalized weakness, or new confusion without a robust fever.",
+        "Actively search for a source: lungs, urinary tract (especially with an indwelling catheter), skin/wounds, abdomen.",
+        "Assess for progression toward distributive shock: tachycardia, tachypnea, hypotension.",
+        "Support ABCs, provide fluids per protocol, keep the patient warm, and transport promptly for source identification and treatment."
+      ]
+    },
+    {
+      "id": "c09_alg02",
+      "title": "Anaphylaxis Recognition and Treatment",
+      "description": "Rapid recognition and epinephrine-first management of anaphylaxis.",
+      "steps": [
+        "Identify a known or suspected allergen exposure with a systemic reaction.",
+        "Look for the most diagnostic findings: hypotension and/or airway swelling (stridor, angioedema).",
+        "Give IM epinephrine immediately as first-line treatment — do not delay for other medications.",
+        "Add antihistamines and corticosteroids as adjuncts only, after epinephrine.",
+        "Manage the airway, support blood pressure with fluids as needed, and reassess frequently for recurrence or worsening.",
+        "Transport promptly given the risk of biphasic or progressive reactions."
+      ]
+    }
+  ]
+}

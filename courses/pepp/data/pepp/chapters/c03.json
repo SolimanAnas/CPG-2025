@@ -1,0 +1,68 @@
+{
+  "id": "c03",
+  "title": "Primary Assessment (ABCDE) & Scene Size-Up",
+  "shortTitle": "Primary Assessment (ABCDE)",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Perform a pediatric-appropriate scene size-up.",
+    "Perform the hands-on primary assessment in ABCDE order.",
+    "Identify and immediately treat life threats found during the primary assessment.",
+    "Explain the relationship between the PAT and the primary assessment.",
+    "Determine an overall patient priority (high vs. low acuity) from the primary assessment."
+  ],
+  "summary": [
+    {
+      "title": "Scene Size-Up in the Pediatric Setting",
+      "content": "Scene size-up for a pediatric call includes standard precautions and hazard assessment, plus pediatric-specific attention: the mechanism of injury or nature of illness, the number of patients (children are frequently involved in multi-victim events like car crashes or household incidents), and early clues from the environment (medication bottles, home safety hazards, caregiver affect). Involving a calm caregiver early, when safe to do so, often improves both scene safety and the child's cooperation."
+    },
+    {
+      "title": "The Primary Assessment: ABCDE",
+      "content": "After the PAT gives a general impression, the hands-on primary assessment follows the ABCDE sequence: Airway (patent? maintainable?), Breathing (rate, effort, breath sounds, oxygen saturation), Circulation (pulse rate/quality, skin perfusion, capillary refill, external bleeding), Disability (rapid neurologic check — AVPU or similar, pupils, blood glucose if altered), and Exposure (undress as needed to assess for injury/rash/other findings, then keep the child warm). This is the same spine used in PALS, but PEPP frames it as a field assessment and transport-decision tool rather than a resuscitation-team algorithm — see the PALS reviewer for cardiac-arrest-specific ABCDE depth."
+    },
+    {
+      "title": "Treating Life Threats Immediately",
+      "content": "Any life threat identified during the primary assessment — an obstructed airway, absent or grossly inadequate breathing, uncontrolled hemorrhage — is treated the moment it is found, before moving to the next letter of ABCDE. The primary assessment is not a checklist to complete before acting; it is an ordered scan that triggers immediate intervention at whichever step reveals the problem."
+    },
+    {
+      "title": "How the PAT and Primary Assessment Fit Together",
+      "content": "The PAT (previous chapter) is the hands-off, from-the-doorway general impression; the primary assessment is the hands-on, structured ABCDE exam that follows it. A high-acuity PAT (e.g., cardiopulmonary failure pattern) means the primary assessment proceeds immediately and rapidly, often with simultaneous interventions rather than a strict sequential exam. A reassuring PAT means the primary assessment proceeds at a calmer, still-thorough pace. Neither tool substitutes for the other."
+    },
+    {
+      "title": "Assigning Priority",
+      "content": "The primary assessment concludes with an overall priority determination: high-priority (unstable PAT and/or ABCDE findings, needing rapid transport and possibly ALS intercept) versus low-priority (stable findings, allowing a more complete secondary assessment on scene). This priority decision — not a specific diagnosis — is the primary assessment's main deliverable, and it directly drives the pace of everything in the next chapter (history-taking and secondary assessment)."
+    }
+  ],
+  "clinicalPearls": [
+    "Scene size-up for pediatric calls includes hazard assessment plus early attention to mechanism/nature of illness and caregiver affect.",
+    "ABCDE: Airway, Breathing, Circulation, Disability, Exposure — treat each life threat the moment it's found, don't wait to finish the checklist.",
+    "The PAT sets the pace; the primary assessment is the hands-on exam that follows it — neither replaces the other.",
+    "The primary assessment's main output is a priority decision (high vs. low), not a diagnosis."
+  ],
+  "redFlags": [
+    "An obstructed or threatened airway found during 'A' — stop and treat before continuing to 'B'.",
+    "Absent breath sounds or grossly inadequate breathing found during 'B' — treat immediately.",
+    "Uncontrolled external hemorrhage found during 'C' — control it before moving on."
+  ],
+  "commonMistakes": [
+    "Completing the entire ABCDE sequence before treating a life threat found early in the exam.",
+    "Skipping the primary assessment because the PAT looked reassuring.",
+    "Failing to reassess priority as new findings emerge."
+  ],
+  "memoryAids": [
+    "ABCDE: Airway, Breathing, Circulation, Disability, Exposure.",
+    "Find it, fix it — treat the life threat the moment you find it, not after finishing the alphabet.",
+    "PAT sets the pace, ABCDE does the exam.",
+    "Primary assessment's job: decide priority, not diagnosis."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Primary Assessment Sequence",
+      "content": "Scene size-up (safety, precautions, MOI/NOI, patient count)\n  → PAT (from previous chapter) sets urgency\n  → Primary assessment, ABCDE, in order:\n     A — Airway: patent? maintainable? → fix immediately if not\n     B — Breathing: rate, effort, sounds, SpO2 → fix immediately if inadequate\n     C — Circulation: pulse, perfusion, cap refill, bleeding → fix immediately if compromised\n     D — Disability: rapid neuro check, glucose if altered\n     E — Exposure: assess for injury/rash, then keep warm\n  → Assign priority: HIGH (rapid transport/ALS intercept) or LOW (proceed to secondary assessment on scene)"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Primary Assessment",
+    "courses/pals/ — ABCDE spine cross-referenced, not duplicated for cardiac-arrest-specific depth"
+  ]
+}

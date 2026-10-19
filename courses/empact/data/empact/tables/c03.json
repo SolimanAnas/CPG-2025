@@ -1,0 +1,27 @@
+{
+  "chapter": "c03",
+  "tables": [
+    {
+      "id": "c03_t01",
+      "title": "Respiratory Emergency Differential at a Glance",
+      "headers": ["Condition", "Classic Presentation", "Key Distinguishing Clue"],
+      "rows": [
+        ["Asthma", "Wheezing, dyspnea, prior triggers", "Improves with nebulized beta-2 agonist; silent chest = critical"],
+        ["Respiratory failure", "Slow, shallow breathing, calm appearance", "Bradypnea + poor tidal volume"],
+        ["Spontaneous pneumothorax", "Sudden dyspnea, pleuritic pain", "COPD history; diminished unilateral breath sounds; no trauma"],
+        ["Pulmonary embolism", "Sudden dyspnea, pleuritic pain, tachycardia", "Immobility/surgery/malignancy risk factors"],
+        ["Sepsis (respiratory presentation)", "Tachypnea, hypoxia, fever", "Altered LOC; possible pneumonia/UTI source"]
+      ]
+    },
+    {
+      "id": "c03_t02",
+      "title": "Wheeze Progression: What It Means",
+      "headers": ["Finding", "Interpretation"],
+      "rows": [
+        ["Loud wheeze", "Airway narrowing with some air movement"],
+        ["Wheeze quieting as patient tires/becomes anxious", "Worsening obstruction — a warning sign"],
+        ["Silent chest", "Critical obstruction, minimal air movement — most severe"]
+      ]
+    }
+  ]
+}

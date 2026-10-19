@@ -1,0 +1,36 @@
+{
+  "chapter": "c11",
+  "tables": [
+    {
+      "id": "c11_t01",
+      "title": "Common Adult Toxidromes",
+      "headers": ["Toxidrome", "Key Findings", "Example Exposure"],
+      "rows": [
+        ["Opioid", "Respiratory depression, pinpoint pupils, altered mental status", "Opioid medications/drugs"],
+        ["Sympathomimetic (stimulant)", "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils", "Cocaine, amphetamines"],
+        ["Anticholinergic", "Altered mental status, dilated pupils, dry flushed skin, tachycardia, urinary retention", "Antihistamines, certain plants/medications"],
+        ["Cholinergic", "Excessive secretions (salivation, lacrimation, urination, defecation, GI upset), bradycardia, muscle twitching", "Organophosphate pesticides"]
+      ]
+    },
+    {
+      "id": "c11_t02",
+      "title": "Heat Illness Spectrum",
+      "headers": ["Stage", "Mental Status", "Core Temperature", "Field Management"],
+      "rows": [
+        ["Heat cramps", "Normal", "Usually normal", "Rest, fluids, gentle stretching"],
+        ["Heat exhaustion", "Normal to mildly altered", "Elevated, not extreme", "Cooling, rest, fluids (oral if tolerated/alert)"],
+        ["Heat stroke", "Significantly altered (confusion, seizure, coma)", "Significantly elevated", "Aggressive cooling, rapid transport — sweating does not exclude"]
+      ]
+    },
+    {
+      "id": "c11_t03",
+      "title": "Hypothermia Spectrum",
+      "headers": ["Stage", "Shivering", "Mental Status", "Key Risk"],
+      "rows": [
+        ["Mild", "Present", "Mild confusion, intact coordination", "Low"],
+        ["Moderate", "May stop", "Worsening confusion, muscle rigidity", "Slowed heart rate/breathing"],
+        ["Severe", "Absent", "Significantly altered/unresponsive", "Cardiac arrhythmia and arrest; handle gently"]
+      ]
+    }
+  ]
+}

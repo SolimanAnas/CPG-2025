@@ -1,0 +1,19 @@
+{
+  "chapter": "c04",
+  "cards": [
+    { "id": "c04_fc01", "question": "What does the CBIGK mnemonic stand for?", "answer": "Chest pain, Blood pressure, Irregular pulse, Glucose, Potassium.", "category": "Cardiology" },
+    { "id": "c04_fc02", "question": "What is Beck's Triad?", "answer": "Jugular venous distention (JVD), muffled heart tones, and hypotension — indicating cardiac tamponade.", "category": "Cardiology" },
+    { "id": "c04_fc03", "question": "What causes cardiac tamponade in a chemotherapy patient?", "answer": "A pericardial effusion compressing the heart, sometimes as a complication of certain chemotherapy agents.", "category": "Cardiology" },
+    { "id": "c04_fc04", "question": "Which ECG leads show an inferior MI?", "answer": "Leads II, III, and aVF.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc05", "question": "Which ECG leads show an anterior MI?", "answer": "Leads V1 through V4.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc06", "question": "How does posterior MI appear on a standard 12-lead?", "answer": "As ST depression in V1–V4 (a mirror-image pattern) rather than elevation; confirmatory posterior leads may be needed.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc07", "question": "When should you obtain a right-sided ECG?", "answer": "When the standard 12-lead is non-diagnostic, especially with suspected inferior MI, to assess right ventricular involvement.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc08", "question": "Why does right ventricular infarction change fluid/drug management?", "answer": "These patients are often preload-dependent and can worsen (become hypotensive) with nitrates or other vasodilators.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc09", "question": "How does tamponade differ from pneumothorax on exam?", "answer": "Tamponade shows muffled heart tones with JVD and hypotension; pneumothorax shows absent breath sounds, not muffled heart tones.", "category": "Cardiology" },
+    { "id": "c04_fc10", "question": "Why is glucose part of chest pain assessment (CBIGK)?", "answer": "Glucose abnormalities can mimic or complicate cardiac presentations and change immediate management.", "category": "Cardiology" },
+    { "id": "c04_fc11", "question": "Why is potassium part of chest pain assessment (CBIGK)?", "answer": "Potassium abnormalities can cause or worsen dysrhythmias and complicate a cardiac event.", "category": "Cardiology" },
+    { "id": "c04_fc12", "question": "Why does an irregular pulse matter in chest pain assessment?", "answer": "It may indicate a dysrhythmia complicating a cardiac event, affecting both diagnosis and treatment.", "category": "Cardiology" },
+    { "id": "c04_fc13", "question": "What is the danger of giving nitrates without considering right ventricular infarction?", "answer": "In a preload-dependent right ventricular infarction, nitrates can cause severe hypotension.", "category": "Cardiology/ECG" },
+    { "id": "c04_fc14", "question": "What historical clue raises suspicion for tamponade in a dyspneic patient?", "answer": "A history of cancer/chemotherapy, which can predispose to pericardial effusion.", "category": "Cardiology" }
+  ]
+}

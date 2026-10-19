@@ -1,0 +1,53 @@
+{
+  "chapter": "c01",
+  "cases": [
+    {
+      "id": "c01_s01",
+      "title": "The Resolved Deficit",
+      "presentation": "A 68-year-old man had sudden right-sided facial droop and slurred speech about 40 minutes ago while at a family lunch. By the time EMS arrives, his speech is clear and his face appears symmetric. He feels fine and wants to cancel the ambulance.",
+      "vitals": { "bp": "148/86 mmHg", "hr": "78 bpm", "glucose": "98 mg/dL", "exam": "Currently normal facial symmetry and speech" },
+      "question": "What is the appropriate approach to this patient?",
+      "options": [
+        "A: Cancel transport since the exam is now normal.",
+        "B: Treat this as a possible TIA with the same urgency as an active stroke, document the last-known-well/onset time precisely, and transport with hospital notification.",
+        "C: Advise the patient to see his primary doctor within the week.",
+        "D: Transport only if symptoms recur during the encounter."
+      ],
+      "correct": 1,
+      "explanation": "A resolved facial droop and speech abnormality is classic for a possible TIA, which cannot be reliably distinguished from an evolving stroke in the field and carries meaningful short-term risk of a subsequent completed stroke. This should be treated with the same urgency as an active stroke, with precise onset-time documentation and prompt transport.",
+      "clinicalPearl": "A resolved deficit is not a reason to relax — it's a reason to document the timeline precisely and transport with full urgency."
+    },
+    {
+      "id": "c01_s02",
+      "title": "Confusion With a Normal Glucose Twist",
+      "presentation": "A 74-year-old woman is found by family with new left arm weakness and confusion. Initial impression suggests possible stroke. On scene, her blood glucose reads 42 mg/dL.",
+      "vitals": { "bp": "132/78 mmHg", "hr": "92 bpm", "glucose": "42 mg/dL", "exam": "Left arm weakness, confusion" },
+      "question": "What is the correct next step?",
+      "options": [
+        "A: Proceed directly to stroke-alert transport without addressing the glucose value.",
+        "B: Treat the hypoglycemia per protocol first, since it is a well-known, rapidly correctable stroke mimic, and reassess neurologic status afterward.",
+        "C: Ignore the glucose reading since the presentation looks like a clear stroke.",
+        "D: Withhold treatment until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "Hypoglycemia is a well-known stroke mimic that is rapidly correctable in the field. Treating the hypoglycemia and reassessing neurologic status is the correct next step before finalizing the working diagnosis and destination decision — a focal deficit that resolves with glucose correction is not treated as a stroke alert.",
+      "clinicalPearl": "Always check glucose before you commit to a stroke diagnosis in the field — a fixable stroke mimic can save this patient a stroke-center transport they don't need."
+    },
+    {
+      "id": "c01_s03",
+      "title": "Gaze Deviation and Neglect",
+      "presentation": "A 59-year-old man has sudden onset of right gaze deviation, severe left face and arm weakness, and does not acknowledge that his left arm is weak when asked. Local EMS protocol uses an LVO-screening scale to determine bypass eligibility to an endovascular-capable stroke center.",
+      "vitals": { "bp": "168/94 mmHg", "hr": "88 bpm", "glucose": "110 mg/dL", "exam": "Gaze deviation, severe left face+arm weakness, neglect of left arm" },
+      "question": "What should this constellation of findings prompt?",
+      "options": [
+        "A: A routine transport to the nearest hospital regardless of capability.",
+        "B: Application of the LVO-screening scale per protocol, since these findings (gaze deviation, combined severe face+arm weakness, neglect) suggest possible large-vessel occlusion, potentially justifying bypass to an endovascular-capable center.",
+        "C: Assumption that this cannot be a stroke because the deficit is too severe.",
+        "D: Delaying the stroke alert until arrival at the hospital."
+      ],
+      "correct": 1,
+      "explanation": "Gaze deviation, severe combined face and arm weakness, and neglect of the affected limb are LVO-suspicious findings. Per local protocol using an LVO-screening scale, this presentation may justify bypassing a closer, non-endovascular-capable hospital in favor of an endovascular-capable stroke center.",
+      "clinicalPearl": "Gaze deviation plus neglect plus severe combined weakness is the pattern that makes an LVO-screening scale worth applying — it can change where this patient needs to go."
+    }
+  ]
+}

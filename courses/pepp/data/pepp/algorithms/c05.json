@@ -1,0 +1,34 @@
+{
+  "chapter": "c05",
+  "algorithms": [
+    {
+      "id": "c05_alg01",
+      "title": "Categorizing and Managing Pediatric Respiratory Compromise",
+      "description": "Field approach to categorizing a respiratory complaint by mechanism and matching treatment accordingly.",
+      "steps": [
+        "Complete the PAT and primary assessment to identify a respiratory problem.",
+        "Listen and look for the category-defining pattern: stridor (upper airway), wheeze with prolonged expiration (lower airway), grunting/crackles/diminished sounds (lung tissue), or irregular pattern without classic sounds (disordered control).",
+        "For upper airway obstruction: keep the child calm, position of comfort with caregiver, minimize agitation, avoid invasive exam of the airway in the field.",
+        "For lower airway disease: consider nebulized bronchodilator per local protocol, position of comfort, monitor for fatigue.",
+        "For lung tissue disease: supplemental oxygen, position of comfort, monitor closely for hypoxia progression.",
+        "For disordered control of breathing: identify and address the underlying cause where possible (e.g., naloxone for suspected opioid exposure per protocol), support ventilation as needed.",
+        "Reassess PAT and vital signs frequently for any transition from distress toward failure."
+      ]
+    },
+    {
+      "id": "c05_alg02",
+      "title": "Recognizing and Responding to Impending Respiratory Failure",
+      "description": "Sequence for identifying early warning signs of failure and escalating support before deterioration is severe.",
+      "steps": [
+        "Reassess a child in respiratory distress at frequent intervals, not just once.",
+        "Watch for new or worsening grunting.",
+        "Watch for decreasing work of breathing in a child who was previously struggling hard — treat this as a sign of exhaustion, not improvement, until proven otherwise.",
+        "Watch for a shift in PAT Appearance from anxious/agitated to lethargic.",
+        "Watch for a falling or irregular respiratory rate after a period of tachypnea.",
+        "If any of these signs are present, escalate immediately: assist ventilation with BVM and high-flow oxygen, prepare for rapid transport.",
+        "Do not wait for SpO2 to fall before escalating support — treat these clinical signs as leading indicators.",
+        "For drug-assisted airway management or arrest-specific ventilation parameters, refer to the PALS reviewer."
+      ]
+    }
+  ]
+}

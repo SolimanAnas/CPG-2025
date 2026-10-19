@@ -1,0 +1,21 @@
+{
+  "chapter": "c07",
+  "cards": [
+    { "id": "c07_fc01", "question": "What scene clues suggest a chemical release?", "answer": "Multiple casualties collapsing in one area with similar sudden symptoms, dead animals/insects, unusual odors or clouds, and location-linked onset.", "category": "Detection" },
+    { "id": "c07_fc02", "question": "Where should responders stage at a chemical scene?", "answer": "Uphill, upwind, and upstream of the release — never entering unprotected.", "category": "Scene" },
+    { "id": "c07_fc03", "question": "Name the major chemical agent classes.", "answer": "Nerve agents/organophosphates, vesicants (blister agents), pulmonary/choking agents, asphyxiants (e.g., cyanide), and riot-control agents.", "category": "Agents" },
+    { "id": "c07_fc04", "question": "What toxidrome do nerve agents cause?", "answer": "Cholinergic: SLUDGE/DUMBELS muscarinic signs, nicotinic twitching/weakness, plus seizures and apnea — with miosis (pinpoint pupils).", "category": "Nerve Agents" },
+    { "id": "c07_fc05", "question": "What are the 'killer B's' of nerve agent poisoning?", "answer": "Bronchorrhea, bronchospasm, and bradycardia — the respiratory drowning and circulatory failure that kill.", "category": "Nerve Agents" },
+    { "id": "c07_fc06", "question": "What are the nerve-agent antidotes?", "answer": "Atropine (titrated until secretions dry) plus pralidoxime (2-PAM), often in auto-injectors; benzodiazepines for seizures.", "category": "Antidotes" },
+    { "id": "c07_fc07", "question": "How is atropine dosed in nerve-agent poisoning?", "answer": "Titrated to effect — repeated until bronchial secretions dry and ventilation is possible, not to a fixed maximum.", "category": "Antidotes" },
+    { "id": "c07_fc08", "question": "What single decon step removes most contamination?", "answer": "Removing the clothing — it eliminates a large majority of the contamination in seconds.", "category": "Decon" },
+    { "id": "c07_fc09", "question": "What is the decon sequence for a dry powder agent?", "answer": "Brush off the powder FIRST, then flush with copious water — some dry agents react with water.", "category": "Decon" },
+    { "id": "c07_fc10", "question": "Define the hot, warm, and cold zones.", "answer": "Hot: contamination present (protected entry only). Warm: the decontamination corridor. Cold: clean area for treatment and support. Casualties flow hot → warm → cold.", "category": "Zones" },
+    { "id": "c07_fc11", "question": "What is secondary contamination?", "answer": "Transfer of agent from a contaminated casualty to responders, equipment, or facilities — the reason undeconned patients must not enter the ED.", "category": "Decon" },
+    { "id": "c07_fc12", "question": "How do vesicants like mustard present?", "answer": "Blistering of skin, eyes, and airways — with mustard the effects are typically DELAYED several hours after exposure.", "category": "Agents" },
+    { "id": "c07_fc13", "question": "How do pulmonary agents like chlorine and phosgene injure?", "answer": "Airway irritation and pulmonary edema; phosgene classically causes delayed pulmonary edema hours after exposure.", "category": "Agents" },
+    { "id": "c07_fc14", "question": "How does cyanide kill, and what is the preferred antidote?", "answer": "It blocks cellular oxygen utilization causing rapid collapse, seizures, and arrest; hydroxocobalamin is the preferred antidote.", "category": "Antidotes" },
+    { "id": "c07_fc15", "question": "When may antidote auto-injectors be given during triage?", "answer": "During SALT's lifesaving-interventions step — a seconds-long intervention for casualties with the nerve-agent toxidrome.", "category": "Triage" },
+    { "id": "c07_fc16", "question": "Why must gross decon precede ED entry?", "answer": "A contaminated hospital becomes part of the incident: staff are poisoned, the facility may close, and regional capacity collapses.", "category": "Decon" }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "What does the CBIGK mnemonic help you remember?",
+      "options": [
+        "A. Airway adjuncts",
+        "B. Key chest pain assessment elements: Chest pain, Blood pressure, Irregular pulse, Glucose, Potassium",
+        "C. Shock stages",
+        "D. Stroke scale components"
+      ],
+      "correct": 1,
+      "rationale": "CBIGK organizes the vital assessment elements for a chest pain patient: Chest pain characteristics, Blood pressure, Irregular pulse, Glucose, and Potassium.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "A patient with breast cancer on chemotherapy presents with dyspnea on exertion, JVD, muffled heart tones, and hypotension. What is the most likely diagnosis?",
+      "options": ["A. Pneumothorax", "B. Cardiac tamponade", "C. Simple anxiety", "D. Asthma exacerbation"],
+      "correct": 1,
+      "rationale": "JVD, muffled heart tones, and hypotension constitute Beck's triad, classic for cardiac tamponade — here likely from a chemotherapy-associated pericardial effusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q03",
+      "question": "Which three findings make up Beck's triad?",
+      "options": [
+        "A. Fever, tachycardia, hypotension",
+        "B. Jugular venous distention, muffled heart tones, hypotension",
+        "C. Wheeze, stridor, cyanosis",
+        "D. Chest pain, diaphoresis, nausea"
+      ],
+      "correct": 1,
+      "rationale": "Beck's triad — JVD, muffled heart tones, and hypotension — indicates cardiac tamponade.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q04",
+      "question": "Which ECG leads correspond to an inferior MI?",
+      "options": ["A. V1-V4", "B. II, III, aVF", "C. I, aVL", "D. V5-V6"],
+      "correct": 1,
+      "rationale": "Leads II, III, and aVF show changes in an inferior wall myocardial infarction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q05",
+      "question": "Which ECG leads correspond to an anterior MI?",
+      "options": ["A. II, III, aVF", "B. V1-V4", "C. aVR only", "D. Lead I only"],
+      "correct": 1,
+      "rationale": "Leads V1 through V4 show changes in an anterior wall myocardial infarction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q06",
+      "question": "A 12-lead ECG shows ST depression in V1-V4 without obvious elevation elsewhere. What should you consider?",
+      "options": [
+        "A. A completely normal ECG",
+        "B. Posterior MI, which can appear as a mirror-image depression pattern in these leads",
+        "C. Right bundle branch block only",
+        "D. This pattern always means the patient is fine"
+      ],
+      "correct": 1,
+      "rationale": "Posterior MI classically shows as ST depression in V1-V4 (mirror-image of the elevation that would appear on true posterior leads) rather than obvious elevation — a commonly missed pattern.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q07",
+      "question": "When should you consider obtaining a right-sided ECG?",
+      "options": [
+        "A. Only in trauma patients",
+        "B. When the standard 12-lead is non-diagnostic, especially with suspected inferior MI",
+        "C. Never — it adds no useful information",
+        "D. Only after hospital arrival"
+      ],
+      "correct": 1,
+      "rationale": "A right-sided ECG helps identify right ventricular involvement when the standard 12-lead is non-diagnostic and inferior MI is suspected, directly changing fluid/drug management.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q08",
+      "question": "Why is right ventricular infarction clinically important to identify?",
+      "options": [
+        "A. It has no treatment implications",
+        "B. These patients are often preload-dependent and can become severely hypotensive with nitrates or other vasodilators",
+        "C. It always requires immediate surgery",
+        "D. It only matters for documentation"
+      ],
+      "correct": 1,
+      "rationale": "Right ventricular infarction patients depend on adequate preload; giving nitrates or other vasodilators can precipitate dangerous hypotension.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q09",
+      "question": "How does cardiac tamponade differ from pneumothorax on physical exam?",
+      "options": [
+        "A. They present identically",
+        "B. Tamponade shows muffled heart tones with JVD and hypotension; pneumothorax shows absent breath sounds instead",
+        "C. Pneumothorax always causes JVD and tamponade never does",
+        "D. Neither causes any exam findings"
+      ],
+      "correct": 1,
+      "rationale": "Tamponade's hallmark is muffled heart tones with JVD and hypotension (Beck's triad); pneumothorax instead shows absent/diminished breath sounds on the affected side — a key distinguishing feature.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "Why is glucose included in the CBIGK chest pain assessment mnemonic?",
+      "options": [
+        "A. It is irrelevant to cardiac presentations",
+        "B. Glucose abnormalities can mimic or complicate cardiac presentations, changing management",
+        "C. It only matters for pediatric patients",
+        "D. Glucose testing replaces the need for an ECG"
+      ],
+      "correct": 1,
+      "rationale": "Glucose abnormalities (hypo/hyperglycemia) can present with cardiac-like symptoms or complicate an actual cardiac event, so checking it is part of a thorough chest pain assessment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q11",
+      "question": "Why does an irregular pulse matter during a chest pain assessment?",
+      "options": [
+        "A. It has no clinical significance",
+        "B. It may indicate a dysrhythmia complicating the cardiac event and affecting treatment decisions",
+        "C. It only matters in pediatric patients",
+        "D. Irregular pulses are always benign"
+      ],
+      "correct": 1,
+      "rationale": "An irregular pulse can signal a dysrhythmia (e.g., atrial fibrillation, ectopy) that changes both the differential and the immediate management plan.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q12",
+      "question": "A patient with suspected right ventricular MI and borderline blood pressure is being considered for nitroglycerin. What is the concern?",
+      "options": [
+        "A. No concern — nitrates are always safe in MI",
+        "B. Nitrates can cause severe hypotension in preload-dependent right ventricular infarction",
+        "C. Nitrates are only dangerous in anterior MI",
+        "D. Nitrates have no effect on blood pressure"
+      ],
+      "correct": 1,
+      "rationale": "Because right ventricular infarction patients depend on adequate preload to maintain cardiac output, nitrates (which reduce preload) can precipitate dangerous hypotension.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q13",
+      "question": "A patient presents with sudden dyspnea. Which finding would point AWAY from cardiac tamponade and toward pneumothorax instead?",
+      "options": [
+        "A. Muffled heart tones",
+        "B. Absent breath sounds on one side",
+        "C. Jugular venous distention",
+        "D. Hypotension"
+      ],
+      "correct": 1,
+      "rationale": "Absent/diminished breath sounds point to pneumothorax, whereas tamponade's hallmark exam findings are muffled heart tones, JVD, and hypotension (Beck's triad).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q14",
+      "question": "What is the practical value of systematically building a chest pain/dyspnea differential rather than anchoring on the most common cause?",
+      "options": [
+        "A. It wastes time in the field",
+        "B. It protects against missing a less common but immediately dangerous diagnosis, such as tamponade or PE",
+        "C. It is only useful for documentation, not patient care",
+        "D. It has no practical value"
+      ],
+      "correct": 1,
+      "rationale": "Because chest pain and dyspnea share overlapping presentations across several dangerous diagnoses (tamponade, PE, pneumothorax, MI), a systematic differential approach catches conditions that anchoring on the most common cause would miss.",
+      "difficulty": "Hard"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "c10",
+  "title": "Oncologic & Special Medical Considerations",
+  "shortTitle": "Oncologic & Special Topics",
+  "estimatedStudyTime": 24,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Recognize the association between mediastinal cancer and pleural effusion.",
+    "Explain why cancer patients require broadened differential thinking for common complaints.",
+    "Apply active listening and trust-your-exam principles as a capstone assessment skill.",
+    "Recognize scene patterns suggesting a shared cause among multiple patients.",
+    "Synthesize the course's core assessment principles into a single approach for any medical patient."
+  ],
+  "summary": [
+    {
+      "title": "Cancer and Pleural Effusion",
+      "content": "Pleural effusion is often associated with lung cancer, and patients with mediastinal cancer have a higher incidence of pleural effusion specifically. In an oncology patient presenting with progressive dyspnea, decreased breath sounds at a lung base, or dullness to percussion, pleural effusion should be high on the differential — and, as covered in the cardiovascular chapter, a pericardial effusion causing tamponade (Beck's triad) is a related, more immediately dangerous possibility in the same patient population, particularly with certain chemotherapy regimens."
+    },
+    {
+      "title": "The Oncology Patient's Broadened Differential",
+      "content": "A cancer diagnosis changes the baseline probability of many common complaints. Dyspnea might be effusion, pulmonary embolism (cancer is a clotting risk factor), pneumonia (from immunosuppression), or disease progression; abdominal pain might reflect the primary malignancy, a bowel obstruction, or an unrelated cause. Rather than assuming every symptom is 'just the cancer,' the systematic assessment approach from this course — history-heavy, life-threats-first, then a directed exam — remains the right tool, now applied with a wider set of possibilities in mind."
+    },
+    {
+      "title": "Active Listening as a Capstone Skill",
+      "content": "The key to active listening is getting on your patient's level and asking follow-up questions — a principle introduced early in this course that applies with special force in patients who have complex histories (multiple diagnoses, medications, and prior hospitalizations, as many oncology and chronically ill patients do). A rushed, closed-question interview will miss the nuance that distinguishes a benign symptom from a dangerous one in a complicated patient; unhurried, open-ended listening is what surfaces it."
+    },
+    {
+      "title": "Scene Patterns: A Recurring Safety Principle",
+      "content": "If more than one person presents with the same signs and symptoms, you should inquire about a shared cause — a principle from the first chapter that applies just as much to a family cluster of food poisoning as to a multi-patient toxic exposure. Revisiting this here reinforces that assessment principles introduced early (scene safety, pattern recognition) are not confined to a single chapter; they apply across every category of medical call in this course."
+    },
+    {
+      "title": "Bringing It Together: One Approach for Every Medical Patient",
+      "content": "Across every chapter in this course, the same skeleton recurs: assess systematically (scene, primary, secondary, reassessment), build a differential from possibilities to probabilities, trust your own exam, listen actively, treat life threats first, and never assume a single complaint has a single cause. Whether the presenting problem is respiratory, cardiac, neurological, endocrine, abdominal, infectious, or oncologic, this same disciplined approach — not a separate protocol for every diagnosis — is what actually drives good field decision-making."
+    }
+  ],
+  "clinicalPearls": [
+    "Pleural effusion is often associated with lung cancer.",
+    "Patients with mediastinal cancer have a higher incidence of pleural effusion.",
+    "The key to active listening is getting on your patient's level and asking follow-up questions.",
+    "Always trust YOUR exam — your own primary assessment and findings.",
+    "If more than one person presents with the same signs and symptoms, inquire about a shared cause."
+  ],
+  "redFlags": [
+    "Progressive dyspnea in an oncology patient — consider effusion, PE, and pneumonia, not just 'the cancer.'",
+    "Attributing every new symptom in a cancer patient to their known diagnosis without a fresh differential.",
+    "Rushing the history in a complex, multi-diagnosis patient where nuance matters most."
+  ],
+  "commonMistakes": [
+    "Anchoring on the cancer diagnosis and missing a new, treatable, unrelated problem.",
+    "Skipping active listening technique in patients who 'already have a chart full of problems.'",
+    "Forgetting that early-course principles (scene patterns, trust-your-exam, differential diagnosis) apply to every later chapter, not just the foundational one."
+  ],
+  "memoryAids": [
+    "Mediastinal cancer → higher pleural effusion risk; consider tamponade too.",
+    "'Just the cancer' is a trap — reassess every complaint on its own merits.",
+    "Course capstone: Systematic assessment + differential thinking + trust your exam + listen actively + life threats first.",
+    "Same symptoms, same scene, different people → shared cause, every time you see it."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Applying the Full Course Framework to Any Medical Patient",
+      "content": "Any medical patient, any complaint\n  → Scene size-up (safety, shared-cause pattern check)\n  → Primary assessment: life threats first (A-B-C)\n  → Secondary assessment: history-heavy (80% of the answer), active listening, directed exam\n  → Build differential: possibilities → probabilities, informed by known conditions (e.g., cancer) WITHOUT anchoring exclusively on them\n  → Trust your own findings over a mismatched or vague chief complaint\n  → Reassessment: repeat, especially if unstable or complex\n  → Treat and transport per the specific chapter's guidance for the leading diagnosis"
+    }
+  ],
+  "references": [
+    "EMPACT clinical pearls collection — Oncology and remaining Clinical Pearls categories",
+    "National EMS Education Standards — Assessment-based patient management (synthesis)"
+  ]
+}

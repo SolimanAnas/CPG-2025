@@ -1,0 +1,19 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Pediatric Primary Assessment (ABCDE) Sequence",
+      "description": "The hands-on structured exam following the PAT, with immediate treatment of any life threat found.",
+      "steps": [
+        "Airway: assess patency; open/clear/manage immediately if compromised.",
+        "Breathing: assess rate, effort, breath sounds, SpO2; assist ventilation immediately if inadequate.",
+        "Circulation: assess pulse, skin perfusion, capillary refill, external bleeding; control hemorrhage and support perfusion immediately if compromised.",
+        "Disability: rapid neurologic check (e.g., AVPU), pupils, glucose if altered.",
+        "Exposure: assess for injury/rash as needed, then re-cover to maintain warmth.",
+        "Assign overall priority (high vs. low acuity) based on combined PAT + ABCDE findings.",
+        "Proceed to secondary assessment (history-taking, focused exam) if priority allows, or continue rapid transport/intervention if high priority."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "chapter": "c06",
+  "questions": [
+    {
+      "id": "c06_q01",
+      "question": "How is shock best defined?",
+      "options": [
+        "A. Systolic blood pressure below a fixed threshold",
+        "B. Inadequate delivery of oxygen and nutrients to meet tissue demands",
+        "C. Any heart rate above normal for age",
+        "D. A specific respiratory rate cutoff"
+      ],
+      "correct": 1,
+      "rationale": "Shock is a clinical diagnosis based on inadequate tissue perfusion, not a specific blood pressure value.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q02",
+      "question": "Why can a child be in shock despite a normal blood pressure?",
+      "options": [
+        "A. Children cannot develop shock",
+        "B. Children compensate well via tachycardia and vasoconstriction, keeping BP normal until late",
+        "C. Blood pressure is not a useful vital sign in children",
+        "D. Normal BP always excludes shock"
+      ],
+      "correct": 1,
+      "rationale": "Pediatric compensatory mechanisms (tachycardia, vasoconstriction) maintain blood pressure well into shock — this is compensated shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q03",
+      "question": "What does hypotension indicate in a child with suspected shock?",
+      "options": [
+        "A. An early warning sign that appears well before other findings",
+        "B. Decompensated shock — a late, ominous sign",
+        "C. That the child is not in shock",
+        "D. A benign finding requiring no action"
+      ],
+      "correct": 1,
+      "rationale": "Hypotension in pediatric shock is a late finding, indicating exhausted compensatory mechanisms — decompensated shock.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q04",
+      "question": "Which finding is part of recognizing compensated shock?",
+      "options": ["A. Delayed capillary refill with normal BP", "B. Hypotension with bradycardia", "C. Normal capillary refill and normal heart rate", "D. Hypertension"],
+      "correct": 0,
+      "rationale": "Compensated shock presents with perfusion abnormalities like delayed capillary refill while blood pressure remains normal for age.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q05",
+      "question": "Which shock category is most common in children overall?",
+      "options": ["A. Cardiogenic", "B. Hypovolemic", "C. Obstructive", "D. Neurogenic"],
+      "correct": 1,
+      "rationale": "Hypovolemic shock, from fluid or blood loss, is the most common category of pediatric shock overall.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q06",
+      "question": "Which of the following is a type of distributive shock?",
+      "options": ["A. Hemorrhagic shock", "B. Septic shock", "C. Tension pneumothorax", "D. Myocarditis-related shock"],
+      "correct": 1,
+      "rationale": "Septic shock, along with anaphylactic and neurogenic shock, falls under the distributive category (abnormal vessel tone/permeability).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q07",
+      "question": "What causes cardiogenic shock in children?",
+      "options": ["A. Fluid loss from vomiting/diarrhea", "B. Pump failure from congenital heart disease, myocarditis, or arrhythmia", "C. Allergen exposure", "D. Tension pneumothorax"],
+      "correct": 1,
+      "rationale": "Cardiogenic shock results from the heart's failure to pump effectively, due to causes like congenital heart disease, myocarditis, or arrhythmia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q08",
+      "question": "Which shock category is caused by a physical obstruction to blood flow?",
+      "options": ["A. Hypovolemic", "B. Distributive", "C. Obstructive", "D. Cardiogenic"],
+      "correct": 2,
+      "rationale": "Obstructive shock results from a physical blockage to blood flow, such as tension pneumothorax, cardiac tamponade, or massive pulmonary embolism.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q09",
+      "question": "A febrile child has warm, flushed skin, bounding pulses, and altered mental status. What should this suggest?",
+      "options": [
+        "A. This cannot be shock since the skin is warm",
+        "B. Early septic (distributive) shock, which can present differently from cold, mottled hypovolemic shock",
+        "C. Definite hypovolemic shock",
+        "D. Normal findings requiring no action"
+      ],
+      "correct": 1,
+      "rationale": "Early septic shock can present with warm, flushed skin and bounding pulses rather than the cold, mottled presentation typical of hypovolemic shock, despite poor perfusion.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q10",
+      "question": "What PAT findings are most suggestive of shock?",
+      "options": [
+        "A. Abnormal work of breathing only",
+        "B. Abnormal Appearance and/or abnormal Circulation to Skin, often with normal-appearing work of breathing",
+        "C. Stridor and wheeze",
+        "D. Normal Appearance and normal Circulation to Skin"
+      ],
+      "correct": 1,
+      "rationale": "Shock often first appears on the PAT as an Appearance abnormality and/or abnormal Circulation to Skin, frequently with normal-appearing work of breathing (distinguishing it from a primary respiratory problem).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q11",
+      "question": "What is the priority field treatment for suspected anaphylactic shock?",
+      "options": ["A. Isotonic fluid bolus only", "B. Epinephrine", "C. Needle decompression", "D. Oral antihistamine only"],
+      "correct": 1,
+      "rationale": "Epinephrine is the priority treatment for anaphylactic shock; fluids and other supportive measures are adjuncts.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q12",
+      "question": "A trauma patient has unilateral absent breath sounds, tracheal deviation, and signs of shock. What is the suspected category and priority intervention?",
+      "options": [
+        "A. Hypovolemic shock — fluid bolus",
+        "B. Obstructive shock from tension pneumothorax — needle decompression per protocol",
+        "C. Cardiogenic shock — cautious fluids",
+        "D. Anaphylactic shock — epinephrine"
+      ],
+      "correct": 1,
+      "rationale": "Unilateral absent breath sounds and tracheal deviation in a trauma patient with shock suggest tension pneumothorax (obstructive shock), requiring needle decompression per protocol.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c06_q13",
+      "question": "What is the general supportive field management for a child in shock, regardless of category?",
+      "options": [
+        "A. Withhold oxygen until cause is confirmed",
+        "B. Supplemental oxygen, positioning, keep warm, and rapid transport",
+        "C. Cooling measures and fluid restriction",
+        "D. No supportive care is needed before hospital arrival"
+      ],
+      "correct": 1,
+      "rationale": "General shock management includes supplemental oxygen, positioning (supine, legs elevated if tolerated), keeping the child warm, and rapid transport.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c06_q14",
+      "question": "Where does PEPP direct providers for drug dosing and advanced shock/arrest resuscitation algorithms?",
+      "options": ["A. The BLS reviewer", "B. The PALS reviewer", "C. This chapter covers it fully", "D. No resource is referenced"],
+      "correct": 1,
+      "rationale": "PEPP covers field recognition and initial stabilization of shock, deferring drug dosing tables and advanced resuscitation algorithms to the PALS reviewer.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c06_q15",
+      "question": "Why does PEPP emphasize perfusion signs over blood pressure for recognizing shock?",
+      "options": [
+        "A. Blood pressure cuffs are unreliable in children",
+        "B. Perfusion signs (capillary refill, skin findings, pulse quality, mental status) change earlier than blood pressure in pediatric shock",
+        "C. Blood pressure is more important than perfusion signs",
+        "D. Perfusion signs are only relevant in adults"
+      ],
+      "correct": 1,
+      "rationale": "Because children compensate so effectively, perfusion signs deteriorate well before blood pressure falls, making them the earlier and more reliable indicators of shock.",
+      "difficulty": "Hard"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "chapter": "c03",
+  "algorithms": [
+    {
+      "id": "c03_alg01",
+      "title": "Standing Up Incident Command",
+      "description": "From first arrival to a fully functioning command structure.",
+      "steps": [
+        "First trained responder establishes command and announces it on the designated channel.",
+        "Perform initial size-up and transmit the detection report.",
+        "Appoint command staff as needed: safety officer first, then public information and liaison officers.",
+        "Activate functional sections modularly as workload requires: Operations first, then Planning, Logistics, Finance/Administration.",
+        "Maintain span of control (~3–7 per supervisor); subdivide with branches/divisions/groups as the incident grows.",
+        "Use unified command when multiple jurisdictions/disciplines hold authority.",
+        "Transfer command formally with a briefing and announcement when a more qualified/designated officer arrives.",
+        "Demobilize modularly as the incident resolves; document through Planning and Finance."
+      ]
+    },
+    {
+      "id": "c03_alg02",
+      "title": "Health Professional Check-In Flow (Hospital ICS)",
+      "description": "How clinical staff enter and work inside the hospital incident command structure.",
+      "steps": [
+        "On activation, report to the designated check-in point / labor pool — never self-assign.",
+        "Receive your incident role and job action sheet.",
+        "Identify your single incident supervisor and your reporting channel.",
+        "Perform assigned tasks; escalate resource needs and hazards up the chain.",
+        "Decline tasks outside your competence and say so — reassignment is a safety function.",
+        "At relief or shift end: give a formal handoff and demobilize through the system."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "chapter": "c03",
+  "cards": [
+    { "id": "c03_fc01", "question": "What are early/mild symptoms of hypoglycemia?", "answer": "Shakiness, diaphoresis, hunger, anxiety.", "category": "Hypoglycemia" },
+    { "id": "c03_fc02", "question": "What are severe symptoms of hypoglycemia?", "answer": "Confusion, combativeness, seizure, unresponsiveness.", "category": "Hypoglycemia" },
+    { "id": "c03_fc03", "question": "What is the field treatment for hypoglycemia in an awake, cooperative patient?", "answer": "Oral glucose.", "category": "Hypoglycemia" },
+    { "id": "c03_fc04", "question": "What is the field treatment for hypoglycemia in a patient who cannot safely take oral glucose?", "answer": "IV dextrose or IM glucagon per protocol.", "category": "Hypoglycemia" },
+    { "id": "c03_fc05", "question": "What three features together define DKA?", "answer": "Hyperglycemia (glucose ≥200 mg/dL or known diabetes), ketosis (beta-hydroxybutyrate ≥3.0 mmol/L or urine ketones ≥2+), and metabolic acidosis (pH <7.3 and/or bicarbonate <18 mEq/L).", "category": "DKA" },
+    { "id": "c03_fc06", "question": "What are classic field findings of DKA?", "answer": "Polyuria/polydipsia, nausea/vomiting, abdominal pain, Kussmaul respirations, fruity (acetone) breath odor, dehydration.", "category": "DKA" },
+    { "id": "c03_fc07", "question": "What are Kussmaul respirations, and why do they occur in DKA?", "answer": "Deep, rapid respirations that occur as a compensatory response to the metabolic acidosis.", "category": "DKA" },
+    { "id": "c03_fc08", "question": "What common precipitants trigger DKA?", "answer": "Infection, missed insulin doses, or new-onset diabetes.", "category": "DKA" },
+    { "id": "c03_fc09", "question": "What is euglycemic DKA?", "answer": "DKA presenting with a glucose under 200 mg/dL — occurs in about 10% of DKA cases.", "category": "DKA" },
+    { "id": "c03_fc10", "question": "What medication class is most classically associated with euglycemic DKA?", "answer": "SGLT2 inhibitors.", "category": "DKA" },
+    { "id": "c03_fc11", "question": "Does a normal glucose rule out DKA?", "answer": "No — if the clinical picture fits (Kussmaul respirations, fruity breath, vomiting/abdominal pain, known diabetes), DKA should still be suspected.", "category": "DKA" },
+    { "id": "c03_fc12", "question": "What four features together define HHS?", "answer": "Severe hyperglycemia (often >600 mg/dL), significant hyperosmolality (>320 mOsm/kg), minimal or absent ketosis, and near-normal pH/bicarbonate.", "category": "HHS" },
+    { "id": "c03_fc13", "question": "How does HHS's typical patient and onset differ from DKA's?", "answer": "HHS is more typical in older adults with type 2 diabetes, with a slower onset over days, profound dehydration, and more prominent altered mental status/obtundation than DKA.", "category": "HHS" },
+    { "id": "c03_fc14", "question": "What is the field management priority for both DKA and HHS?", "answer": "Supportive care (oxygen as needed, IV access and isotonic fluids per protocol, cardiac monitoring), airway protection given vomiting risk, and rapid transport — definitive treatment happens in the hospital.", "category": "Field Management" }
+  ]
+}

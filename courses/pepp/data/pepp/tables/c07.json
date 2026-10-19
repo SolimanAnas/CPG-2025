@@ -1,0 +1,30 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Sinus Tachycardia vs Supraventricular Tachycardia (SVT)",
+      "headers": ["Feature", "Sinus Tachycardia", "SVT"],
+      "rows": [
+        ["Rate pattern", "Variable, changes with stimulation/treatment", "Fixed, does not vary with stimulation"],
+        ["Typical rate", "Rarely exceeds ~220 bpm (infants)", "Often >220 bpm (infants), >180 bpm (older children)"],
+        ["Trigger", "Clear cause: fever, pain, anxiety, dehydration, shock", "Often no clear trigger, may be sudden onset"],
+        ["Response to treating cause", "Resolves as underlying cause is treated", "Does not resolve by treating a triggering illness"],
+        ["Field approach", "Treat underlying cause", "Supportive care; refer to PALS for rhythm-specific treatment if poorly perfusing"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "BLS vs ALS Scope of Practice — Pediatric Cardiac Emergencies",
+      "headers": ["Intervention", "BLS Scope", "ALS Scope"],
+      "rows": [
+        ["Oxygen administration / BVM ventilation", "Yes", "Yes"],
+        ["AED use for pulseless arrest", "Yes", "Yes"],
+        ["Cardiac monitoring / rhythm interpretation", "Limited/not typical", "Yes"],
+        ["IV/IO access", "No", "Yes"],
+        ["Antiarrhythmic medication administration", "No", "Yes (per PALS protocols)"],
+        ["Manual defibrillation / synchronized cardioversion", "No", "Yes (per PALS protocols)"]
+      ]
+    }
+  ]
+}

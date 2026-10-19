@@ -1,0 +1,201 @@
+{
+  "chapter": "c04",
+  "questions": [
+    {
+      "id": "c04_q01",
+      "question": "What does SALT stand for?",
+      "options": [
+        "A. Safety, Airway, Lifting, Transport",
+        "B. Sort, Assess, Lifesaving interventions, Treatment and/or transport",
+        "C. Scene, Alert, Look, Treat",
+        "D. Stabilize, Assess, Load, Triage"
+      ],
+      "correct": 1,
+      "rationale": "SALT — Sort, Assess, Lifesaving interventions, Treatment and/or transport — is the CDC-sponsored standardized mass-casualty triage method taught in BDLS.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q02",
+      "question": "In the global sort, casualties who walk to the designated area are assessed:",
+      "options": ["A. First", "B. Second", "C. Last", "D. Never"],
+      "correct": 2,
+      "rationale": "Walkers demonstrate perfusion, airway, and the ability to follow commands, so they receive the lowest individual-assessment priority — but they are still assessed.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q03",
+      "question": "Which casualties are assessed FIRST after global sorting?",
+      "options": [
+        "A. Those who walked",
+        "B. Those who waved",
+        "C. Those who are still or have obvious life threats (e.g., massive bleeding)",
+        "D. Those who talk loudest"
+      ],
+      "correct": 2,
+      "rationale": "Still casualties and those with obvious life threats have the highest probability of needing immediate lifesaving intervention, so they are assessed first.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q04",
+      "question": "Which is a permitted lifesaving intervention DURING SALT triage?",
+      "options": [
+        "A. Splinting a femur fracture",
+        "B. Applying a tourniquet to massive extremity hemorrhage",
+        "C. Full spinal immobilization",
+        "D. Starting an IV infusion"
+      ],
+      "correct": 1,
+      "rationale": "Triage-phase interventions take only seconds: hemorrhage control, airway positioning (child: consider 2 breaths), chest decompression, auto-injector antidotes. Splints, IVs, and immobilization wait for the treatment phase.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q05",
+      "question": "An adult casualty is not breathing after you open the airway. In SALT, this casualty is categorized as:",
+      "options": ["A. Immediate", "B. Expectant", "C. Dead", "D. Delayed"],
+      "correct": 2,
+      "rationale": "An apneic adult after airway opening is Dead (black) in mass-casualty triage; CPR for one arrest would consume resources needed by many salvageable casualties.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q06",
+      "question": "How does SALT modify the apnea assessment for a child?",
+      "options": [
+        "A. No difference from adults",
+        "B. Consider giving 2 rescue breaths after opening the airway; if breathing does not resume, the child is Dead",
+        "C. Perform 10 minutes of CPR",
+        "D. All apneic children are Expectant"
+      ],
+      "correct": 1,
+      "rationale": "Because pediatric arrest is usually hypoxic, SALT allows consideration of two rescue breaths for an apneic child — a seconds-long intervention that can restore breathing.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q07",
+      "question": "A breathing casualty obeys commands, has a radial pulse, no respiratory distress, controlled bleeding, and only abrasions. Category?",
+      "options": ["A. Immediate", "B. Delayed", "C. Minimal", "D. Expectant"],
+      "correct": 2,
+      "rationale": "All assessment questions are 'yes' and the injuries are minor — Minimal (green).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q08",
+      "question": "A breathing casualty obeys commands, has a pulse, no distress, controlled hemorrhage — but has an obviously fractured femur. Category?",
+      "options": ["A. Minimal", "B. Delayed", "C. Immediate", "D. Dead"],
+      "correct": 1,
+      "rationale": "All questions 'yes' with significant (but not immediately life-threatening) injuries = Delayed (yellow).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q09",
+      "question": "A casualty is breathing but does not obey commands and has no radial pulse. Resources are adequate for prompt care. Category?",
+      "options": ["A. Minimal", "B. Delayed", "C. Immediate", "D. Expectant"],
+      "correct": 2,
+      "rationale": "Any 'no' answer with a reasonable chance of survival given current resources = Immediate (red) — top priority for treatment and transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q10",
+      "question": "What does the Expectant (gray) category signify?",
+      "options": [
+        "A. The casualty is deceased",
+        "B. Alive, but survival unlikely with currently available resources; provide comfort care and re-triage if resources improve",
+        "C. The casualty refused care",
+        "D. Minor injuries only"
+      ],
+      "correct": 1,
+      "rationale": "Expectant is a resource-driven category, not abandonment: comfort care is given, and the patient is upgraded if the resource picture changes.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q11",
+      "question": "Why is mass-casualty triage repeated at multiple stages (re-triage)?",
+      "options": [
+        "A. Regulatory paperwork",
+        "B. Because patients deteriorate or improve and resources change over time",
+        "C. To keep responders busy",
+        "D. It is not repeated"
+      ],
+      "correct": 1,
+      "rationale": "Triage is a snapshot with incomplete data. Re-triage at the treatment area, before transport, and at hospital arrival catches deterioration and allows upgrades.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q12",
+      "question": "The fundamental goal of mass-casualty triage is to:",
+      "options": [
+        "A. Give every patient maximal individual care",
+        "B. Produce the greatest number of survivors with the available resources",
+        "C. Transport patients in order of arrival",
+        "D. Identify patients for research"
+      ],
+      "correct": 1,
+      "rationale": "Triage rations limited resources to maximize total survival — a deliberate departure from everyday maximal individual care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c04_q13",
+      "question": "A triage officer stops to splint fractures and bandage minor wounds during the assessment pass. The problem is:",
+      "options": [
+        "A. None — treatment is always good",
+        "B. Triage halts for everyone not yet sorted; only seconds-long lifesaving interventions belong in the triage pass",
+        "C. Splinting requires physician orders",
+        "D. Bandaging is a logistics function"
+      ],
+      "correct": 1,
+      "rationale": "The triage officer's job is sorting the whole scene. Prolonged care during triage leaves unsorted casualties — possibly Immediate ones — undiscovered.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q14",
+      "question": "Which casualty is at greatest risk of being mishandled by an untrained crowd-driven response?",
+      "options": [
+        "A. The loudly screaming walking wounded",
+        "B. The silent, still casualty who cannot call for help",
+        "C. The casualty with a minor laceration",
+        "D. The bystander"
+      ],
+      "correct": 1,
+      "rationale": "Noise attracts attention, but the still and silent are often the most critical — which is why SALT assesses them first.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c04_q15",
+      "question": "More ambulances and a second trauma team arrive. What should happen to Expectant-category patients?",
+      "options": [
+        "A. Nothing — categories are final",
+        "B. Re-triage them; with more resources some may now be Immediate",
+        "C. Move them to the morgue",
+        "D. Discharge them"
+      ],
+      "correct": 1,
+      "rationale": "Expectant is defined relative to available resources. When resources improve, re-triage can and should upgrade salvageable patients.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q16",
+      "question": "A casualty walked to the green area, but 20 minutes later is pale, tachycardic, and confused. What does this demonstrate?",
+      "options": [
+        "A. Walking wounded never deteriorate",
+        "B. The need for ongoing assessment and re-triage — green patients can harbor evolving internal injuries",
+        "C. The initial sort was illegal",
+        "D. The patient should be moved to Dead"
+      ],
+      "correct": 1,
+      "rationale": "The global sort is a first pass, not a clearance. Occult injuries (e.g., internal hemorrhage) evolve — monitoring and re-triage of the green area is mandatory.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c04_q17",
+      "question": "Auto-injector antidotes given during the SALT lifesaving-intervention step are most relevant to which event type?",
+      "options": [
+        "A. Earthquake",
+        "B. Nerve-agent / organophosphate chemical exposure",
+        "C. Flood",
+        "D. Heat wave"
+      ],
+      "correct": 1,
+      "rationale": "Antidote auto-injectors (e.g., for nerve agents) are seconds-long, potentially lifesaving triage interventions in chemical events.",
+      "difficulty": "Medium"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "The Already-Stopped Seizure",
+      "presentation": "A 34-year-old man with known epilepsy is found postictal by coworkers after a witnessed generalized seizure that lasted about 90 seconds and has since stopped. He is confused but gradually becoming more oriented over the next few minutes.",
+      "vitals": { "glucose": "104 mg/dL", "hr": "96 bpm", "appearance": "Postictal, gradually clearing" },
+      "question": "What is the correct field management?",
+      "options": [
+        "A: Administer a benzodiazepine to stop the seizure.",
+        "B: Protect and monitor, confirm glucose is normal, and allow the postictal state to clear while transporting.",
+        "C: Restrain the patient to prevent another seizure.",
+        "D: Delay transport until the patient is fully back to baseline on scene."
+      ],
+      "correct": 1,
+      "explanation": "This is a brief, self-terminated seizure with a normally clearing postictal state in a patient with known epilepsy — no seizure-stopping medication is needed since the seizure has already resolved. Confirming glucose and monitoring for gradual improvement while transporting is appropriate.",
+      "clinicalPearl": "A seizure that's already over doesn't need to be 'stopped' — confirm glucose, protect, and let the postictal state clear en route."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Confusion With a Hidden Cause",
+      "presentation": "A 52-year-old woman with type 1 diabetes is found confused and diaphoretic by her spouse. There is no witnessed seizure. She is oriented to name only.",
+      "vitals": { "glucose": "38 mg/dL", "hr": "110 bpm", "skin": "Diaphoretic" },
+      "question": "What is the most appropriate first action?",
+      "options": [
+        "A: Assume a primary psychiatric cause and proceed to a mental health facility.",
+        "B: Treat the hypoglycemia per protocol, given the low glucose reading and diaphoresis, then reassess mental status.",
+        "C: Perform a full neurologic exam before any treatment.",
+        "D: Wait to see if she improves spontaneously without intervention."
+      ],
+      "correct": 1,
+      "explanation": "Diaphoresis and confusion with a documented glucose of 38 mg/dL point to hypoglycemia as the cause of altered mental status — consistent with the AEIOU-TIPS framework's emphasis on checking and treating glucose early. Treating the hypoglycemia is the priority before further workup.",
+      "clinicalPearl": "Diaphoresis plus confusion in a diabetic patient is hypoglycemia until proven otherwise — treat first, then reassess."
+    },
+    {
+      "id": "c02_s03",
+      "title": "Six Minutes and Counting",
+      "presentation": "A 45-year-old man is having continuous generalized tonic-clonic seizure activity. Bystanders report it began approximately 6 minutes before EMS arrival, and it is still ongoing.",
+      "vitals": { "duration": "6+ minutes, ongoing", "spo2": "89% during active seizure" },
+      "question": "How should this presentation be classified and managed?",
+      "options": [
+        "A: A normal seizure requiring only observation.",
+        "B: Status epilepticus — a time-critical emergency requiring airway/oxygen support, glucose check, and escalation per local ALS protocol with rapid transport.",
+        "C: A postictal state requiring no intervention.",
+        "D: A psychiatric event requiring police involvement rather than EMS treatment."
+      ],
+      "correct": 1,
+      "explanation": "Continuous seizure activity exceeding 5 minutes meets the definition of status epilepticus, a time-critical emergency. Field priorities are airway protection, oxygen, a glucose check, and escalation per local ALS protocol (e.g., benzodiazepine per protocol) with rapid transport.",
+      "clinicalPearl": "Once a seizure crosses the 5-minute mark, stop waiting and start escalating — status epilepticus doesn't resolve itself reliably."
+    }
+  ]
+}

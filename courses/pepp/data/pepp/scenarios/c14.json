@@ -1,0 +1,53 @@
+{
+  "chapter": "c14",
+  "cases": [
+    {
+      "id": "c14_s01",
+      "title": "Bypassing the Closer Hospital",
+      "presentation": "A 7-year-old with a severe traumatic brain injury is 8 minutes from a general community hospital and 18 minutes from a designated pediatric trauma center. Local protocol specifies pediatric trauma center bypass criteria for this injury severity.",
+      "vitals": { "gcs": "8", "mechanism": "Severe head trauma" },
+      "question": "What is the appropriate transport decision?",
+      "options": [
+        "A: Transport to the closer general hospital since it is nearer.",
+        "B: Follow local protocol and bypass to the pediatric trauma center, consulting medical direction as needed given the injury severity.",
+        "C: Let the family decide the destination.",
+        "D: Transport to whichever facility has shorter wait times."
+      ],
+      "correct": 1,
+      "explanation": "When local protocol specifies pediatric trauma center bypass criteria for a given injury severity, that protocol should guide the transport decision even when a closer general facility is available, since pediatric-specific trauma resources significantly affect outcomes for severe pediatric trauma.",
+      "clinicalPearl": "Closer isn't always better for a critically injured child — follow your pediatric-capable destination protocol."
+    },
+    {
+      "id": "c14_s02",
+      "title": "Applying JumpSTART at the Scene",
+      "presentation": "At a multi-vehicle MCI, a triage provider encounters a 4-year-old who is not walking, is breathing at a rate that would be considered abnormal only by pediatric standards (not adult standards), and has delayed capillary refill.",
+      "vitals": { "mobility": "Not walking", "rr": "Abnormal for pediatric age, would appear normal by adult standards", "capRefill": "Delayed" },
+      "question": "How should this child be triaged?",
+      "options": [
+        "A: Using adult START respiratory rate thresholds, which would classify the rate as normal.",
+        "B: Using JumpSTART's pediatric-specific respiratory rate thresholds, correctly identifying the abnormal rate and assigning an appropriate triage category.",
+        "C: By skipping respiratory rate assessment entirely for young children.",
+        "D: By assuming all non-ambulatory children are automatically immediate regardless of other findings."
+      ],
+      "correct": 1,
+      "explanation": "JumpSTART uses pediatric-specific respiratory rate thresholds rather than adult cutoffs. Applying adult START criteria here would misclassify this child as having a normal respiratory rate when, by pediatric standards, it is abnormal — potentially under-triaging a child who needs more urgent care.",
+      "clinicalPearl": "A rate that looks 'normal' by adult standards can be abnormal for a 4-year-old — always apply JumpSTART's pediatric thresholds, not adult ones."
+    },
+    {
+      "id": "c14_s03",
+      "title": "The Apneic Child With a Pulse",
+      "presentation": "During MCI triage, a 6-year-old is found not breathing but has a palpable pulse. A new triage provider is about to categorize the child as expectant immediately.",
+      "vitals": { "breathing": "Apneic", "pulse": "Present" },
+      "question": "What should happen before this child is categorized as expectant?",
+      "options": [
+        "A: Categorize as expectant immediately without further intervention, matching adult START protocol for apnea.",
+        "B: Give five rescue breaths first, per JumpSTART, since pediatric arrest is often respiratory in origin and may be reversible.",
+        "C: Perform two minutes of CPR before reassessing.",
+        "D: Wait for additional personnel before taking any action."
+      ],
+      "correct": 1,
+      "explanation": "JumpSTART specifically includes a step of giving five rescue breaths to an apneic child with a pulse before categorizing as expectant, reflecting that pediatric respiratory arrest is often reversible with ventilation alone — a key difference from adult START, where apnea alone typically leads directly to an expectant categorization.",
+      "clinicalPearl": "Apneic plus a pulse in a child means five rescue breaths first — don't skip straight to expectant like you would under adult START."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "chapter": "c07",
+  "cards": [
+    { "id": "c07_fc01", "question": "Are primary cardiac events common in children?", "answer": "No — unlike adults, primary cardiac disease is a rare cause of pediatric emergencies; most cardiac problems are secondary.", "category": "Cardiac" },
+    { "id": "c07_fc02", "question": "What is the most common cause of pediatric bradycardia?", "answer": "Hypoxia.", "category": "Cardiac" },
+    { "id": "c07_fc03", "question": "Besides hypoxia, what else can cause pediatric bradycardia?", "answer": "Increased vagal tone, hypothermia, or increased intracranial pressure.", "category": "Cardiac" },
+    { "id": "c07_fc04", "question": "What is the field priority for symptomatic bradycardia in a child?", "answer": "Address the underlying cause — oxygenate and ventilate first — rather than treating the rhythm number alone.", "category": "Cardiac" },
+    { "id": "c07_fc05", "question": "How does sinus tachycardia typically behave?", "answer": "It is a compensatory response (fever, pain, anxiety, dehydration, shock) with a variable rate that resolves as the underlying cause is treated.", "category": "Cardiac" },
+    { "id": "c07_fc06", "question": "How does supraventricular tachycardia (SVT) typically behave?", "answer": "It is a primary rhythm disturbance with a fixed, very rapid rate that does not vary with stimulation and can itself cause poor perfusion.", "category": "Cardiac" },
+    { "id": "c07_fc07", "question": "What infant heart rate threshold is often used to raise suspicion for SVT?", "answer": ">220 bpm in infants (compared to >180 bpm in older children), as a fixed rate not varying with stimulation.", "category": "Cardiac" },
+    { "id": "c07_fc08", "question": "Why should a provider ask about a child's known congenital heart disease?", "answer": "Because such children may have a baseline vital signs or oxygen saturation that differs from typical pediatric norms, and are at elevated risk for arrhythmia, heart failure, and cardiogenic shock.", "category": "Cardiac" },
+    { "id": "c07_fc09", "question": "What family history clue raises suspicion for an underlying cardiac cause of unexplained pediatric collapse?", "answer": "Sudden unexplained death in a young relative (suggesting a possible cardiac channelopathy).", "category": "Cardiac" },
+    { "id": "c07_fc10", "question": "What are the field priorities for a pediatric cardiac emergency?", "answer": "Recognition (PAT + primary assessment + monitor/rhythm strip if available), identifying reversible causes (especially hypoxia), and rapid transport with continuous reassessment.", "category": "Field Management" },
+    { "id": "c07_fc11", "question": "Does this PEPP chapter cover arrest algorithms and antiarrhythmic drug dosing in depth?", "answer": "No — those are covered in full depth by the PALS reviewer; this chapter covers field recognition and initial stabilization only.", "category": "Field Management" },
+    { "id": "c07_fc12", "question": "What is a poor-perfusion bradycardic infant most likely to represent until proven otherwise?", "answer": "A respiratory or hypoxia problem, not a primary cardiac rhythm problem.", "category": "Cardiac" },
+    { "id": "c07_fc13", "question": "What older-child heart rate threshold is often used to raise suspicion for SVT?", "answer": ">180 bpm in older children (compared to >220 bpm in infants), as a fixed rate not varying with stimulation.", "category": "Cardiac" },
+    { "id": "c07_fc14", "question": "Why does PEPP avoid reproducing PALS's arrest-algorithm and drug-dosing content in this chapter?", "answer": "To avoid duplicating PALS's authoritative resuscitation depth, keeping this chapter scoped to field recognition and initial stabilization.", "category": "Field Management" }
+  ]
+}

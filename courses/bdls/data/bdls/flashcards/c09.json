@@ -1,0 +1,21 @@
+{
+  "chapter": "c09",
+  "cards": [
+    { "id": "c09_fc01", "question": "What is irradiation (radiation exposure)?", "answer": "Being in a radiation field, like an X-ray. Once out of the field the person is NOT radioactive and poses no risk to others.", "category": "Concepts" },
+    { "id": "c09_fc02", "question": "What is external contamination?", "answer": "Radioactive material on the skin or clothing — it can be removed and can spread to responders and surfaces.", "category": "Concepts" },
+    { "id": "c09_fc03", "question": "What is internal contamination?", "answer": "Radioactive material taken into the body by inhalation, ingestion, or through wounds — managed medically.", "category": "Concepts" },
+    { "id": "c09_fc04", "question": "What are the three principles of responder radiation protection?", "answer": "Time (minimize exposure duration), Distance (dose falls sharply with distance), and Shielding (put mass between you and the source).", "category": "Protection" },
+    { "id": "c09_fc05", "question": "Does standard PPE stop penetrating gamma radiation?", "answer": "No — PPE prevents skin/airway contamination but does not stop gamma rays; distance and shielding are what reduce penetrating dose.", "category": "Protection" },
+    { "id": "c09_fc06", "question": "What is a radiological dispersal device (RDD)?", "answer": "A 'dirty bomb' — conventional explosives scattering radioactive material; the immediate harm is the blast, with contamination as a secondary and psychological threat.", "category": "Event Types" },
+    { "id": "c09_fc07", "question": "What is the cardinal rule for a contaminated trauma patient?", "answer": "Treat life-threatening injuries FIRST; radiological decontamination comes after stabilization.", "category": "Care Priorities" },
+    { "id": "c09_fc08", "question": "What are the stages of acute radiation syndrome?", "answer": "Prodrome (nausea/vomiting), latent period, and manifest illness — hematopoietic, then GI, then cardiovascular/CNS with increasing dose.", "category": "ARS" },
+    { "id": "c09_fc09", "question": "What does time-to-vomiting indicate in ARS?", "answer": "Dose severity — the sooner and more severe the vomiting, the higher the radiation dose and the worse the prognosis.", "category": "ARS" },
+    { "id": "c09_fc10", "question": "Which body system fails first in ARS?", "answer": "The hematopoietic system — falling blood counts leading to infection and bleeding.", "category": "ARS" },
+    { "id": "c09_fc11", "question": "Is an externally irradiated (exposed) patient dangerous to staff?", "answer": "No — like a patient who had an X-ray, they are not radioactive and cannot contaminate others.", "category": "Concepts" },
+    { "id": "c09_fc12", "question": "What single step removes most external radiological contamination?", "answer": "Removing the clothing.", "category": "Decon" },
+    { "id": "c09_fc13", "question": "What does potassium iodide (KI) protect against?", "answer": "It blocks the thyroid's uptake of RADIOACTIVE IODINE only — it does not protect against other radionuclides or external radiation.", "category": "Countermeasures" },
+    { "id": "c09_fc14", "question": "How should you wash radiological contamination?", "answer": "Gently with soap and water, working from wounds outward, avoiding abrasion that could drive material inward.", "category": "Decon" },
+    { "id": "c09_fc15", "question": "Why is psychological care emphasized in radiological events?", "answer": "Radiation fear is powerful and often exceeds the actual physical risk, driving worried-well surges and panic; clear communication is essential.", "category": "Psychosocial" },
+    { "id": "c09_fc16", "question": "How does distance reduce radiation dose?", "answer": "Dose falls with the inverse square of distance — moving farther from the source cuts exposure dramatically.", "category": "Protection" }
+  ]
+}

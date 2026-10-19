@@ -1,0 +1,185 @@
+{
+  "chapter": "c05",
+  "questions": [
+    {
+      "id": "c05_q01",
+      "question": "What defines preeclampsia?",
+      "options": [
+        "A. Any blood pressure elevation during pregnancy",
+        "B. New-onset hypertension after 20 weeks gestation plus proteinuria, or hypertension plus other organ dysfunction",
+        "C. Seizures occurring during pregnancy",
+        "D. Gestational diabetes"
+      ],
+      "correct": 1,
+      "rationale": "Preeclampsia requires new-onset hypertension (typically after 20 weeks) plus proteinuria, or hypertension plus evidence of other organ dysfunction.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q02",
+      "question": "Is preeclampsia simply 'high blood pressure in pregnancy'?",
+      "options": [
+        "A. Yes, that is the complete definition",
+        "B. No — it is a systemic condition that can progress toward severe complications including eclampsia",
+        "C. It refers only to blood pressure after delivery",
+        "D. It only occurs in the first trimester"
+      ],
+      "correct": 1,
+      "rationale": "Preeclampsia reflects a broader systemic process, not isolated blood pressure elevation, and can progress to severe complications.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q03",
+      "question": "What defines eclampsia?",
+      "options": [
+        "A. Preeclampsia plus new seizures or coma not attributable to another cause",
+        "B. Any seizure during pregnancy regardless of blood pressure",
+        "C. Hypertension alone without other findings",
+        "D. Gestational diabetes with seizures"
+      ],
+      "correct": 0,
+      "rationale": "Eclampsia is defined as preeclampsia with the addition of new seizures or coma that cannot be attributed to another cause.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c05_q04",
+      "question": "What medication is the definitive hospital/ALS treatment for eclamptic seizures?",
+      "options": ["A. A benzodiazepine alone", "B. Magnesium sulfate, per local protocol", "C. Insulin", "D. Epinephrine"],
+      "correct": 1,
+      "rationale": "Magnesium sulfate is the definitive treatment for eclamptic seizures, distinct from typical benzodiazepine-first seizure management.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q05",
+      "question": "Which finding suggests liver involvement in worsening preeclampsia?",
+      "options": ["A. Right upper quadrant or epigastric pain", "B. Ankle swelling alone", "C. Mild headache only", "D. Normal blood pressure"],
+      "correct": 0,
+      "rationale": "Right upper quadrant or epigastric pain suggests liver involvement and is a warning sign of worsening preeclampsia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q06",
+      "question": "Which of the following is a warning sign of worsening preeclampsia?",
+      "options": [
+        "A. Severe or persistent headache with visual disturbances",
+        "B. Mild fatigue with normal blood pressure",
+        "C. Normal proteinuria and normal blood pressure",
+        "D. Mild nausea without other findings"
+      ],
+      "correct": 0,
+      "rationale": "Severe/persistent headache and visual disturbances are recognized warning signs that preeclampsia may be worsening toward severe disease or eclampsia.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q07",
+      "question": "Why is left lateral positioning used for a pregnant patient late in pregnancy?",
+      "options": [
+        "A. To avoid aortocaval compression from the gravid uterus, which reduces venous return",
+        "B. It has no physiologic benefit and is purely for comfort",
+        "C. To reduce fetal heart rate",
+        "D. To prevent preeclampsia from developing"
+      ],
+      "correct": 0,
+      "rationale": "Left lateral positioning (or manual uterine displacement) helps avoid aortocaval compression, improving venous return and cardiac output.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q08",
+      "question": "Why should stimulation (bright lights, loud noise) be minimized in a patient with severe preeclampsia?",
+      "options": [
+        "A. Stimulation can precipitate a seizure in severe preeclampsia",
+        "B. It has no clinical relevance",
+        "C. It only matters postpartum",
+        "D. It is purely a comfort measure with no seizure risk"
+      ],
+      "correct": 0,
+      "rationale": "Minimizing external stimulation is a recognized precaution in severe preeclampsia because such stimulation can precipitate a seizure.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q09",
+      "question": "What is the field management for a pregnant patient with suspected preeclampsia?",
+      "options": [
+        "A. Left lateral positioning, minimize stimulation, monitor BP, transport to obstetric-capable facility",
+        "B. Supine positioning with no monitoring",
+        "C. Withhold transport until symptoms resolve",
+        "D. Immediate magnesium sulfate administration by BLS providers"
+      ],
+      "correct": 0,
+      "rationale": "Field management includes positioning, minimizing stimulation, close BP monitoring, and transport to an obstetric-capable facility.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q10",
+      "question": "What is the field management for an active eclamptic seizure?",
+      "options": [
+        "A. Standard seizure airway/injury precautions, left lateral positioning once feasible, minimize stimulation, rapid transport",
+        "B. Immediate defibrillation",
+        "C. Withhold all intervention until hospital arrival",
+        "D. Prone positioning throughout"
+      ],
+      "correct": 0,
+      "rationale": "Eclamptic seizure management follows standard seizure precautions with pregnancy-specific positioning and stimulation considerations, plus rapid transport.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q11",
+      "question": "How should a new seizure in a pregnant patient past 20 weeks be treated until proven otherwise?",
+      "options": ["A. As a routine seizure unrelated to pregnancy", "B. As possible eclampsia", "C. As a psychiatric event", "D. As a normal finding requiring no action"],
+      "correct": 1,
+      "rationale": "A new seizure in this context should be treated as possible eclampsia until proven otherwise, given the severity of the condition.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q12",
+      "question": "A 32-week pregnant patient reports sudden significant facial and hand swelling along with a blood pressure of 158/102 mmHg. What should this raise concern for?",
+      "options": [
+        "A. Normal pregnancy-related swelling requiring no further evaluation",
+        "B. Possible preeclampsia, given the combination of hypertension and sudden significant edema",
+        "C. Definite eclampsia, since edema is present",
+        "D. A cardiac arrhythmia unrelated to pregnancy"
+      ],
+      "correct": 1,
+      "rationale": "Sudden significant swelling combined with markedly elevated blood pressure late in pregnancy is a recognized warning sign of preeclampsia.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c05_q13",
+      "question": "A pregnant patient with known preeclampsia develops a generalized seizure. What should ongoing field priorities include after the seizure resolves?",
+      "options": [
+        "A. No further monitoring is needed once the seizure stops",
+        "B. Continued monitoring for repeat seizure and worsening signs, maintaining left lateral positioning during transport",
+        "C. Immediate discharge from care",
+        "D. Placing the patient supine for the remainder of transport"
+      ],
+      "correct": 1,
+      "rationale": "After an eclamptic seizure, ongoing monitoring for recurrence and worsening severe-preeclampsia signs is essential, along with maintaining left lateral positioning.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q14",
+      "question": "Why is it important not to dismiss a pregnant patient's severe headache as a routine complaint?",
+      "options": [
+        "A. Because severe headache is a recognized warning sign of worsening preeclampsia",
+        "B. Headaches in pregnancy are never clinically significant",
+        "C. Headache is only relevant if accompanied by fever",
+        "D. Headache in pregnancy always indicates labor"
+      ],
+      "correct": 0,
+      "rationale": "A severe or persistent headache is a warning sign that should prompt evaluation for preeclampsia rather than dismissal as routine.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c05_q15",
+      "question": "What distinguishes eclampsia from preeclampsia?",
+      "options": [
+        "A. Eclampsia requires proteinuria while preeclampsia does not",
+        "B. Eclampsia is preeclampsia plus new seizures or coma not attributable to another cause",
+        "C. Eclampsia occurs before 20 weeks gestation while preeclampsia occurs after",
+        "D. There is no meaningful distinction between the two"
+      ],
+      "correct": 1,
+      "rationale": "Eclampsia is specifically defined as preeclampsia with the addition of new seizures or coma, representing a severe progression of the same process.",
+      "difficulty": "Medium"
+    }
+  ]
+}

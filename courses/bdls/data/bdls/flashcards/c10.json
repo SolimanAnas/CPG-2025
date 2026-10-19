@@ -1,0 +1,21 @@
+{
+  "chapter": "c10",
+  "cards": [
+    { "id": "c10_fc01", "question": "What is surge capacity?", "answer": "A health system's ability to rapidly expand beyond normal services to meet a sudden increase in demand.", "category": "Surge" },
+    { "id": "c10_fc02", "question": "What are the four S's of surge capacity?", "answer": "Staff, Stuff (supplies/equipment), Space, and Systems (command, communications, tracking, policies).", "category": "Surge" },
+    { "id": "c10_fc03", "question": "Why is the 'weakest S' concept important?", "answer": "A shortfall in any one S caps the entire surge — e.g., extra beds are useless without staff to work them.", "category": "Surge" },
+    { "id": "c10_fc04", "question": "Define conventional, contingency, and crisis standards of care.", "answer": "Conventional: normal resources. Contingency: functionally equivalent adaptations. Crisis: formally declared allocation of scarce resources when demand overwhelms all adaptations.", "category": "Standards of Care" },
+    { "id": "c10_fc05", "question": "How should a system enter crisis standards of care?", "answer": "Deliberately and formally, under an ethical/legal framework — never by accidental drift.", "category": "Standards of Care" },
+    { "id": "c10_fc06", "question": "Why can psychological casualties outnumber physical ones?", "answer": "Fear, acute stress, and the 'worried well' — especially after terrorist, chemical, or radiological events — generate large behavioral-health demand.", "category": "Psychosocial" },
+    { "id": "c10_fc07", "question": "What is psychological first aid (PFA)?", "answer": "An early, evidence-informed response: ensure safety and basic needs, provide calm and comfort, connect people to loved ones and information, and link to services — without forcing trauma recounting.", "category": "Psychosocial" },
+    { "id": "c10_fc08", "question": "What are the core aims of PFA?", "answer": "Promote safety, calm, connectedness, self-efficacy, and hope.", "category": "Psychosocial" },
+    { "id": "c10_fc09", "question": "What threatens responders psychologically?", "answer": "Cumulative stress, moral distress, and burnout, which degrade performance, health, and safety.", "category": "Responder Care" },
+    { "id": "c10_fc10", "question": "Name responder resilience measures.", "answer": "Realistic training, work-rest cycles, buddy systems, leadership support, and post-event debriefing and follow-up.", "category": "Responder Care" },
+    { "id": "c10_fc11", "question": "What does the CMIST framework organize?", "answer": "The access and functional needs of at-risk/vulnerable populations by function rather than by diagnosis.", "category": "CMIST" },
+    { "id": "c10_fc12", "question": "What does CMIST stand for?", "answer": "Communication, Maintaining health, Independence, Support/Safety/Self-determination, and Transportation.", "category": "CMIST" },
+    { "id": "c10_fc13", "question": "Give an example of the 'Maintaining health' CMIST need.", "answer": "People dependent on medications, oxygen, dialysis, or power-dependent medical devices who decompensate when infrastructure fails.", "category": "CMIST" },
+    { "id": "c10_fc14", "question": "Why plan to functional needs (CMIST) rather than diagnoses?", "answer": "Function captures who actually needs help and how (e.g., anyone who can't self-evacuate), across many diagnoses and situations, making planning equitable and practical.", "category": "CMIST" },
+    { "id": "c10_fc15", "question": "What is continuity of operations?", "answer": "Keeping essential services running during a disaster and restoring the rest — a core part of surge and recovery planning.", "category": "Recovery" },
+    { "id": "c10_fc16", "question": "When is a disaster response truly 'over'?", "answer": "Not when the last acute casualty is treated, but when the community and its responders have recovered — including after-action review feeding back into preparedness.", "category": "Recovery" }
+  ]
+}

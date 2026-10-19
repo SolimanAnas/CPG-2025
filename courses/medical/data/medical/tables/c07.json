@@ -1,0 +1,27 @@
+{
+  "chapter": "c07",
+  "tables": [
+    {
+      "id": "c07_t01",
+      "title": "Delusion vs. Hallucination",
+      "headers": ["Feature", "Delusion", "Hallucination"],
+      "rows": [
+        ["Type of phenomenon", "False belief", "False sensory perception"],
+        ["Example", "Fixed conviction of being surveilled without evidence", "Hearing voices or seeing things with no external stimulus"],
+        ["Persists despite evidence?", "Yes, by definition", "Not applicable — a perception, not a belief"],
+        ["Field approach", "Calm, non-confrontational; avoid arguing with the content", "Calm, non-confrontational; avoid arguing with the content"]
+      ]
+    },
+    {
+      "id": "c07_t02",
+      "title": "Major Depressive Episode vs. Manic Episode — Field Recognition",
+      "headers": ["Feature", "Major Depressive Episode", "Manic Episode"],
+      "rows": [
+        ["Mood", "Persistent low mood", "Elevated or irritable mood"],
+        ["Energy/sleep", "Low energy, sleep disturbance", "Decreased need for sleep"],
+        ["Speech", "Often slowed", "Rapid, pressured"],
+        ["Key risk", "Suicidal ideation", "Impaired judgment, risky/impulsive behavior"]
+      ]
+    }
+  ]
+}

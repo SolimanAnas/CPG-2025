@@ -1,0 +1,53 @@
+{
+  "chapter": "c09",
+  "cases": [
+    {
+      "id": "c09_s01",
+      "title": "Dirty Bomb Downtown",
+      "presentation": "An explosion in a plaza injures many people; a detector confirms radioactive contamination scattered by the blast. A critically injured man has an obstructed airway and a bleeding leg wound, and a radiation monitor reads positive over his clothing.",
+      "vitals": { "airway": "Obstructed", "hemorrhage": "Active leg wound", "contamination": "Positive on clothing" },
+      "question": "What is the correct sequence of care?",
+      "options": [
+        "A: Complete full decontamination before touching him.",
+        "B: With standard precautions, manage the airway and control hemorrhage FIRST, then remove clothing (most contamination) and decontaminate.",
+        "C: Give potassium iodide and wait.",
+        "D: Refuse care because he is contaminated."
+      ],
+      "correct": 1,
+      "explanation": "Trauma before decon: the airway and bleeding will kill long before external contamination does. Responders use standard precautions, treat the life threats, then remove clothing (which eliminates most contamination) and wash. An RDD's dominant injury is the blast, not radiation.",
+      "clinicalPearl": "A dirty bomb is a bombing first and a radiation event second — resuscitate the trauma, then decontaminate."
+    },
+    {
+      "id": "c09_s02",
+      "title": "The Frightened Nurse",
+      "presentation": "A worker was briefly in a radiation field during an industrial source accident but has no contamination on monitoring. He needs a laceration repaired. A nurse refuses to enter the room, afraid of 'catching radiation.'",
+      "vitals": { "contamination survey": "Negative", "exposure": "Brief field exposure", "injury": "Laceration" },
+      "question": "What is the correct teaching and action?",
+      "options": [
+        "A: The nurse is right — quarantine the patient for a week.",
+        "B: Explain that an irradiated, non-contaminated patient is not radioactive (like after an X-ray) and poses no risk; proceed with normal wound care.",
+        "C: Give the patient KI before anyone enters.",
+        "D: Transfer the patient to a specialized facility for the laceration."
+      ],
+      "correct": 1,
+      "explanation": "Exposure is not contamination. With a negative contamination survey, the patient carries no radioactive material and cannot irradiate staff — exactly like a patient who received a diagnostic X-ray. Normal care proceeds; the teaching point calms the team.",
+      "clinicalPearl": "You don't 'catch' radiation from an X-ray — and you don't catch it from an irradiated, uncontaminated patient either."
+    },
+    {
+      "id": "c09_s03",
+      "title": "Estimating the Dose",
+      "presentation": "After a criticality accident, a worker begins vomiting within 20 minutes and has watery diarrhea an hour later. A repeat lymphocyte count shows a sharp drop over several hours.",
+      "vitals": { "time to vomiting": "20 min", "GI": "Early diarrhea", "lymphocytes": "Falling rapidly" },
+      "question": "What do these findings indicate?",
+      "options": [
+        "A: A trivial exposure — reassure and discharge.",
+        "B: A high radiation dose and severe acute radiation syndrome — early vomiting, GI involvement, and a rapid lymphocyte drop predict a poor prognosis; urgent specialized care.",
+        "C: Food poisoning unrelated to radiation.",
+        "D: Only thyroid injury — give KI and discharge."
+      ],
+      "correct": 1,
+      "explanation": "Very early vomiting, early GI symptoms, and a rapidly falling lymphocyte count are hallmarks of a high-dose exposure and severe ARS. Time-to-vomiting and lymphocyte kinetics are practical dose/prognosis estimators, and this patient needs urgent specialized management.",
+      "clinicalPearl": "The clock and the lymphocyte count are your field dosimeters — the faster the vomiting and the count's fall, the higher the dose."
+    }
+  ]
+}

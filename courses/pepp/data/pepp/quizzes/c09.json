@@ -1,0 +1,157 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "Why do children have distinct trauma injury patterns compared to adults?",
+      "options": [
+        "A. Larger head-to-body ratio, more pliable ribcage, less protected abdominal organs, thinner subcutaneous tissue",
+        "B. Children have identical anatomy proportions to adults",
+        "C. Children never sustain internal injuries",
+        "D. Children's bones are less flexible than adults'"
+      ],
+      "correct": 0,
+      "rationale": "Pediatric anatomic differences — larger head-to-body ratio, more pliable ribcage, less protected abdominal organs, thinner subcutaneous tissue — create distinct injury patterns.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q02",
+      "question": "Why does head injury often dominate in pediatric trauma?",
+      "options": ["A. Children rarely fall", "B. The relatively larger, heavier head increases injury risk and force absorbed", "C. Children have thicker skulls than adults", "D. Head injury is actually less common in children"],
+      "correct": 1,
+      "rationale": "A child's proportionally larger, heavier head increases the likelihood and severity of head injury in falls and collisions.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q03",
+      "question": "Why can a child have significant pulmonary contusion without rib fractures?",
+      "options": [
+        "A. Children's ribs are more rigid than adults'",
+        "B. The pediatric ribcage is more pliable/elastic, transmitting energy to internal structures without fracturing",
+        "C. Pulmonary contusion cannot occur in children",
+        "D. Rib fractures always occur first in children"
+      ],
+      "correct": 1,
+      "rationale": "The elastic, pliable pediatric ribcage can allow significant internal chest injury without rib fractures.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q04",
+      "question": "Does the absence of rib fractures rule out significant chest injury in a child?",
+      "options": ["A. Yes, always", "B. No — absence of fractures does not exclude serious injury", "C. Only in infants", "D. Only if breath sounds are normal"],
+      "correct": 1,
+      "rationale": "Because of ribcage pliability, the absence of fractures does not exclude serious underlying chest injury in children.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q05",
+      "question": "Why are the liver and spleen more vulnerable to blunt trauma in children than adults?",
+      "options": [
+        "A. They are proportionally larger and less protected by the ribcage",
+        "B. They are located outside the abdominal cavity in children",
+        "C. Children do not have a spleen",
+        "D. They are smaller and better protected than in adults"
+      ],
+      "correct": 0,
+      "rationale": "The pediatric liver and spleen are proportionally larger and less shielded by the ribcage, increasing vulnerability to blunt abdominal trauma.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q06",
+      "question": "Does a soft, non-tender abdominal exam exclude significant abdominal injury after pediatric blunt trauma?",
+      "options": [
+        "A. Yes, always",
+        "B. No — significant injury can be present despite a falsely reassuring exam, especially early after the event",
+        "C. Only in adolescents",
+        "D. Only if the child is crying"
+      ],
+      "correct": 1,
+      "rationale": "A soft, non-tender abdomen can be falsely reassuring; occult abdominal injury is common in pediatric blunt trauma and may not be apparent immediately.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q07",
+      "question": "Can a child maintain a normal blood pressure despite significant blood loss?",
+      "options": ["A. No, hypotension always appears first", "B. Yes — effective compensation can maintain BP well into significant hemorrhage", "C. Only in adolescents", "D. Only if the injury is minor"],
+      "correct": 1,
+      "rationale": "Children compensate for blood loss effectively, similar to shock physiology, so normal blood pressure does not exclude significant hemorrhage.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q08",
+      "question": "Which findings should be treated as seriously as hypotension after pediatric trauma?",
+      "options": ["A. Normal heart rate and warm skin", "B. Tachycardia, delayed capillary refill, and cool extremities", "C. Slow heart rate and flushed skin", "D. Normal capillary refill alone"],
+      "correct": 1,
+      "rationale": "Tachycardia, delayed capillary refill, and cool extremities may be the only clues to significant hemorrhage before hypotension develops.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q09",
+      "question": "Why does torso padding matter when placing a young child on a standard backboard?",
+      "options": [
+        "A. It has no effect on spinal alignment",
+        "B. The proportionally larger head can force neck flexion when lying flat; torso padding helps maintain neutral alignment",
+        "C. It is only for comfort, not alignment",
+        "D. It is only needed for adolescents"
+      ],
+      "correct": 1,
+      "rationale": "A child's larger head relative to body forces neck flexion on a flat surface; padding under the torso helps achieve neutral spinal alignment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q10",
+      "question": "Why does mechanism and mental status carry more weight than reported pain in pediatric spinal motion restriction decisions?",
+      "options": [
+        "A. Young children may not reliably report pain or tenderness",
+        "B. Children always overreport pain",
+        "C. Pain reporting is more reliable in children than adults",
+        "D. Mechanism is irrelevant in pediatric trauma decisions"
+      ],
+      "correct": 0,
+      "rationale": "Because young children may not reliably communicate pain or tenderness, mechanism of injury and mental status become more heavily weighted in the decision.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q11",
+      "question": "What signs in an infant after head trauma suggest evolving intracranial injury?",
+      "options": ["A. Bulging fontanelle or decreasing mental status", "B. Sunken fontanelle and increased alertness", "C. Warm, flushed skin", "D. Improved feeding"],
+      "correct": 0,
+      "rationale": "A bulging fontanelle and decreasing mental status are concerning signs of evolving intracranial injury in an infant after head trauma.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q12",
+      "question": "What is the appropriate destination consideration for significant pediatric trauma when available?",
+      "options": ["A. Any facility regardless of pediatric capability", "B. An appropriate, ideally pediatric-capable trauma center", "C. Only adult trauma centers", "D. Destination does not matter for pediatric patients"],
+      "correct": 1,
+      "rationale": "Transport to an appropriate, ideally pediatric-capable trauma center is a field management priority for significant pediatric trauma.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q13",
+      "question": "A child struck by a car has normal vital signs but a history of high-energy mechanism and a single rib fracture. What is the appropriate level of concern?",
+      "options": [
+        "A. Low concern since vital signs are normal",
+        "B. High concern — a rib fracture signals a high-energy mechanism and raises suspicion for underlying injury despite normal vitals",
+        "C. No concern needed if the child is not in pain",
+        "D. Concern only if the abdomen is tender"
+      ],
+      "correct": 1,
+      "rationale": "Any rib fracture in a child signals a high-energy mechanism and should raise suspicion for underlying pulmonary or cardiac injury, even with reassuring vitals.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q14",
+      "question": "What is the overall field management framework for pediatric trauma?",
+      "options": [
+        "A. Standard trauma priorities (scene safety, hemorrhage control, ABC support, rapid transport) with attention to pediatric-specific injury patterns",
+        "B. A completely different framework unrelated to standard trauma care",
+        "C. Delayed transport until all injuries are definitively identified",
+        "D. Reliance solely on blood pressure to guide urgency"
+      ],
+      "correct": 0,
+      "rationale": "Pediatric trauma management follows standard trauma priorities, adapted with awareness of pediatric-specific anatomic and physiologic injury patterns.",
+      "difficulty": "Medium"
+    }
+  ]
+}

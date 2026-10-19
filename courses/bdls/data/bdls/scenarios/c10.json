@@ -1,0 +1,53 @@
+{
+  "chapter": "c10",
+  "cases": [
+    {
+      "id": "c10_s01",
+      "title": "Beds Without Nurses",
+      "presentation": "During a regional mass-casualty event, a hospital administrator proudly reports 60 newly opened surge beds in a converted conference center. But the nursing supervisor notes there are no additional nurses, the supply room is nearly empty of monitors, and there is no patient-tracking process for the new area.",
+      "vitals": { "space": "+60 beds", "staff": "None added", "stuff": "Monitors short", "systems": "No tracking" },
+      "question": "What is the core problem?",
+      "options": [
+        "A: There is no problem — the beds solve the surge.",
+        "B: Only one of the four S's (Space) was addressed; without Staff, Stuff, and Systems, real surge capacity has not increased.",
+        "C: The hospital should open even more beds.",
+        "D: Crisis standards of care should be declared immediately."
+      ],
+      "correct": 1,
+      "explanation": "Surge capacity requires all four S's — Staff, Stuff, Space, Systems. Sixty beds without nurses, monitors, or a tracking system is empty capacity. Command must balance the pillars, not just add space.",
+      "clinicalPearl": "Counting beds is the easiest and most misleading surge metric — capacity is set by your scarcest S."
+    },
+    {
+      "id": "c10_s02",
+      "title": "The Home on the Evacuation List",
+      "presentation": "A wildfire evacuation is ordered. On one street live: a man on home dialysis, an elderly woman who is deaf, a wheelchair-dependent veteran with no car, and a family whose child has autism and needs constant supervision. The standard evacuation notice was a single loud siren and an English-language text alert.",
+      "vitals": { "dialysis patient": "Power/treatment dependent", "deaf resident": "Missed audio alert", "wheelchair user": "No transportation", "child": "Needs supervision" },
+      "question": "Which framework best guides planning for these residents, and what does it reveal?",
+      "options": [
+        "A: Triage colors — tag each red/yellow/green.",
+        "B: CMIST — Communication (deaf resident, non-English family), Maintaining health (dialysis), Independence (wheelchair), Support/Safety (child), Transportation (no car) — the siren-and-text plan fails all of them.",
+        "C: The four S's of surge.",
+        "D: Time, distance, shielding."
+      ],
+      "correct": 1,
+      "explanation": "CMIST organizes access and functional needs: the residents need accessible communication, power/treatment continuity, mobility and transportation assistance, and supervision support. A single audio siren and English text alert reaches none of them — planning to CMIST closes those gaps.",
+      "clinicalPearl": "An evacuation plan that assumes everyone can hear, drive, walk, and self-manage leaves the most vulnerable behind — plan to CMIST."
+    },
+    {
+      "id": "c10_s03",
+      "title": "The Exhausted Crew",
+      "presentation": "Three weeks into a prolonged disaster response, a paramedic supervisor notices her crews are short-tempered, making uncharacteristic errors, sleeping poorly, and one medic quietly says the work feels 'pointless now.' Physical resources are adequate.",
+      "vitals": { "duration": "3 weeks", "signs": "Irritability, errors, insomnia, hopelessness", "physical resources": "Adequate" },
+      "question": "What is happening and what should the supervisor do?",
+      "options": [
+        "A: Ignore it — responders should be tough.",
+        "B: Recognize cumulative stress/burnout and moral distress; implement work-rest cycles, peer/buddy support, leadership check-ins, and access to behavioral-health follow-up.",
+        "C: Discipline the medic for negativity.",
+        "D: Add more shifts to catch up."
+      ],
+      "correct": 1,
+      "explanation": "Cumulative stress, moral distress, and burnout degrade judgment, safety, and health over a long response. Resilience measures — managed work-rest cycles, buddy systems, supportive leadership, and behavioral-health follow-up — protect the workforce, which is itself a critical resource. Caring for caregivers is part of the recovery link.",
+      "clinicalPearl": "The responders are part of the casualty count over a long event — protecting their minds sustains the whole response."
+    }
+  ]
+}

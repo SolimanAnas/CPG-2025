@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "The Quiet Chest",
+      "presentation": "A 22-year-old known asthmatic has been struggling to breathe for an hour, using his home inhaler repeatedly without relief. On your arrival he is exhausted, sitting tripod, and you notice his chest is now nearly silent on auscultation where it was loudly wheezing 10 minutes ago per his mother.",
+      "vitals": { "hr": "128 bpm", "rr": "10 bpm, shallow", "spo2": "88%", "loc": "Exhausted, minimal responses" },
+      "question": "What does the disappearance of wheezing mean, and what should you do?",
+      "options": [
+        "A: He is improving — no further treatment needed.",
+        "B: A silent chest means critical obstruction with minimal air movement — escalate treatment aggressively and prepare for advanced airway/ventilatory support.",
+        "C: The absence of wheezing rules out asthma.",
+        "D: Discontinue oxygen since he appears calmer."
+      ],
+      "correct": 1,
+      "explanation": "A silent chest in a severe asthmatic is a critical sign — airflow has dropped so low that wheezing can no longer be generated. Combined with his exhaustion, falling SpO2, and slow shallow breathing, this is impending respiratory failure requiring aggressive treatment and ventilatory support readiness.",
+      "clinicalPearl": "In severe asthma, silence is not golden — a silent chest is worse than a loud wheeze."
+    },
+    {
+      "id": "c03_s02",
+      "title": "Calm but Failing",
+      "presentation": "A 74-year-old man with COPD is found sitting quietly, breathing 8 times per minute with very shallow chest movement. He is not distressed-appearing but is slow to respond to questions.",
+      "vitals": { "hr": "92 bpm", "rr": "8 bpm, shallow", "spo2": "84%", "loc": "Slow responses" },
+      "question": "How should this presentation be interpreted?",
+      "options": [
+        "A: He is stable because he appears calm.",
+        "B: Bradypnea with shallow, ineffective breathing indicates respiratory failure — begin assisted ventilation.",
+        "C: This is a normal finding for COPD patients.",
+        "D: No intervention is needed since he is not gasping for air."
+      ],
+      "correct": 1,
+      "explanation": "Calm appearance is deceptive here — the slow rate and shallow depth reflect exhaustion and failing respiratory drive, the classic pattern of respiratory failure. This patient needs immediate ventilatory assistance, not reassurance.",
+      "clinicalPearl": "The dangerous respiratory failure patient is often the quiet one, not the one gasping loudly."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Sudden Pain After the Flight",
+      "presentation": "A 45-year-old woman returns from a 12-hour international flight and develops sudden shortness of breath and sharp chest pain that worsens with deep breaths, with a resting heart rate of 118.",
+      "vitals": { "hr": "118 bpm", "rr": "26 bpm", "spo2": "91%", "pain": "Sharp, pleuritic, sudden onset" },
+      "question": "What diagnosis should be strongly considered?",
+      "options": [
+        "A: Simple muscle strain from the flight.",
+        "B: Pulmonary embolism — sudden dyspnea, pleuritic pain, tachycardia, with a major risk factor (prolonged immobility).",
+        "C: Asthma exacerbation.",
+        "D: Anxiety attack, no further workup needed."
+      ],
+      "correct": 1,
+      "explanation": "Sudden-onset dyspnea with pleuritic chest pain, tachycardia, and a significant immobility risk factor (long flight) is the classic pulmonary embolism presentation. This diagnosis must be actively considered and can progress to hemodynamic collapse if untreated.",
+      "clinicalPearl": "Long flight, sudden pleuritic dyspnea, tachycardia — think PE until proven otherwise."
+    }
+  ]
+}

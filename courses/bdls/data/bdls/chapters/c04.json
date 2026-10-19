@@ -1,0 +1,72 @@
+{
+  "id": "c04",
+  "title": "Mass-Casualty Triage: SALT",
+  "shortTitle": "SALT Triage",
+  "estimatedStudyTime": 40,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain the purpose of mass-casualty triage and how it differs from everyday triage.",
+    "Describe the SALT acronym and the global sorting step.",
+    "List the rapid lifesaving interventions permitted during SALT triage.",
+    "Assign casualties to the five SALT categories using the assessment questions.",
+    "Explain the expectant category and when it is used.",
+    "Describe re-triage and the dynamic nature of triage decisions."
+  ],
+  "summary": [
+    {
+      "title": "Why a Standardized Triage Method",
+      "content": "When casualties outnumber resources, providers must decide who is treated and transported first. SALT — Sort, Assess, Lifesaving interventions, Treatment and/or transport — is the CDC-sponsored national standard taught in BDLS, designed so that responders from any agency triage the same way. Unlike daily triage (which finds the sickest patient for maximal care), mass-casualty triage rations care to produce the most survivors overall."
+    },
+    {
+      "title": "Step 1 — Sort: Global Sorting by Voice and Movement",
+      "content": "SALT begins with a global sort of the whole scene using two commands. First: 'If you can hear me and need help, walk to this area' — those who walk are assessed last (lowest priority for individual assessment, often Minimal). Second, to those remaining: 'Wave your arm or move so we can find you' — those who wave or make purposeful movements are assessed second. Casualties who are still, or with obvious life threats such as massive bleeding, are assessed first. Sorting prioritizes individual assessment without touching anyone yet."
+    },
+    {
+      "title": "Step 2/3 — Assess with Lifesaving Interventions",
+      "content": "Each casualty gets a rapid individual assessment combined with only those lifesaving interventions that take seconds: control massive hemorrhage (tourniquet or direct pressure), open the airway with positioning (for a child, consider giving two rescue breaths), chest decompression for tension pneumothorax (trained providers), and auto-injector antidotes (such as for nerve agents). These are done immediately, during triage, before assigning a category — and the triage officer then moves on rather than staying to treat."
+    },
+    {
+      "title": "Assigning Categories: The Assessment Questions",
+      "content": "After lifesaving interventions, ask in sequence: Is the casualty breathing? If not (adult) — Dead. Does the casualty obey commands or make purposeful movements? Is there a peripheral pulse? Are they not in respiratory distress? Is major hemorrhage controlled? If ALL yes: the casualty is Minimal if the injuries are minor, otherwise Delayed. If ANY no: the casualty is Immediate — unless the injuries are so severe that survival is unlikely given the resources currently available, in which case Expectant."
+    },
+    {
+      "title": "The Five SALT Categories",
+      "content": "Immediate (red): life-threatening injuries, likely to survive with prompt care — first priority for treatment and transport. Delayed (yellow): significant injuries, but care can wait without immediate threat to life. Minimal (green): walking wounded with minor injuries. Expectant (gray): alive, but survival unlikely with the resources currently available — receives comfort care and is re-triaged if resources improve. Dead (black): not breathing after airway opening. The expectant category exists precisely because resources are limited; it is a resource decision, not an abandonment."
+    },
+    {
+      "title": "Triage Is Dynamic",
+      "content": "Triage decisions are made with incomplete information and changing resources, so they must be repeated: at the scene, at the treatment area, before transport, and on hospital arrival. A Delayed patient can deteriorate to Immediate; an Expectant patient can be upgraded when more resources arrive. Triage tags or visible markings communicate categories, and re-triage keeps them honest."
+    }
+  ],
+  "clinicalPearls": [
+    "SALT's global sort triages the crowd before you touch a single patient — voice commands do the first pass for you.",
+    "Lifesaving interventions during triage are limited to seconds-long actions: hemorrhage control, airway positioning (± 2 breaths for a child), chest decompression, auto-injector antidotes.",
+    "An apneic adult after airway opening is Dead in SALT; a child gets consideration of two rescue breaths first — consistent with the hypoxic nature of pediatric arrest.",
+    "Expectant is not Dead: comfort care always, and re-triage when resources improve."
+  ],
+  "redFlags": [
+    "The triage officer stopping to provide prolonged care — triage halts and the scene backs up.",
+    "Ignoring the quiet, still casualties while treating the loudest ones.",
+    "Never re-triaging: categories assigned in the first 10 minutes silently become wrong."
+  ],
+  "commonMistakes": [
+    "Treating walking wounded as 'fine' — they are assessed last, but they still get assessed.",
+    "Confusing Expectant (gray, alive) with Dead (black).",
+    "Spending minutes on CPR during mass-casualty triage — resource-intensive care for one apneic casualty costs many salvageable lives."
+  ],
+  "memoryAids": [
+    "SALT: Sort, Assess, Lifesaving interventions, Treatment/transport.",
+    "Sort commands: 'Walk' → assess third; 'Wave' → assess second; Still/obvious threat → assess first.",
+    "Categories: Red now, Yellow later, Green walks, Gray waits with comfort, Black is gone."
+  ],
+  "decisionTrees": [
+    {
+      "title": "SALT Individual Assessment",
+      "content": "Casualty (after global sort)\n  → Lifesaving interventions as needed (seconds only):\n     bleeding control | airway positioning (child: consider 2 breaths) | chest decompression | auto-injector\n  → Breathing?\n     → No (adult): DEAD (black)\n     → No (child, after breaths): DEAD\n     → Yes:\n        → Obeys commands / purposeful movement?\n        → Peripheral pulse present?\n        → No respiratory distress?\n        → Major hemorrhage controlled?\n           → ALL yes + minor injuries only: MINIMAL (green)\n           → ALL yes + significant injuries: DELAYED (yellow)\n           → ANY no + likely to survive with current resources: IMMEDIATE (red)\n           → ANY no + survival unlikely with current resources: EXPECTANT (gray)\n  → Tag, move on, and RE-TRIAGE at every stage"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Mass-Casualty Triage and SALT",
+    "CDC-sponsored SALT Mass Casualty Triage consensus guideline"
+  ]
+}

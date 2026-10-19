@@ -1,0 +1,73 @@
+{
+  "id": "c09",
+  "title": "Nuclear & Radiological Events",
+  "shortTitle": "Nuclear & Radiological",
+  "estimatedStudyTime": 34,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish irradiation, external contamination, and internal contamination.",
+    "Apply the principles of time, distance, and shielding to responder protection.",
+    "Describe the types of radiological/nuclear events, including RDDs and improvised nuclear devices.",
+    "Recognize acute radiation syndrome and its dose-dependent course.",
+    "Explain that trauma care takes priority over decontamination in contaminated patients.",
+    "Describe radiological decontamination and the role of potassium iodide."
+  ],
+  "summary": [
+    {
+      "title": "Three Distinct Concepts: Irradiation vs Contamination",
+      "content": "Radiation injury is confused when three ideas are blurred. Irradiation (exposure) is being in a radiation field — like an X-ray; once the person leaves the field, they are NOT radioactive and pose no risk to others. External contamination is radioactive material on the skin or clothing — it can be removed and can spread to responders. Internal contamination is radioactive material taken into the body by inhalation, ingestion, or wounds — it must be managed medically. Understanding which is present drives the entire response and calms unfounded fear of 'catching' radiation from an irradiated patient."
+    },
+    {
+      "title": "Time, Distance, Shielding",
+      "content": "Responder protection rests on three levers. Time: minimize the duration of exposure. Distance: dose falls sharply with distance from the source (inverse-square relationship) — stepping back is powerful protection. Shielding: put mass (walls, vehicles, earth) between you and the source. These principles let responders work safely near radiological hazards. Standard PPE prevents contamination of skin and airway but does NOT stop penetrating gamma radiation — for that, distance and shielding matter most."
+    },
+    {
+      "title": "Types of Radiological/Nuclear Events",
+      "content": "Events span a wide range. A radiological exposure device is a hidden source irradiating people without their knowledge. A radiological dispersal device (RDD, or 'dirty bomb') uses conventional explosives to scatter radioactive material — its immediate harm is the blast, with contamination as a secondary and psychological threat. Nuclear reactor or transport accidents release material over an area. An improvised nuclear device or nuclear detonation combines blast, thermal burns, and radiation on a catastrophic scale. Most realistic events are contamination and exposure problems layered on conventional trauma."
+    },
+    {
+      "title": "Acute Radiation Syndrome (ARS)",
+      "content": "High whole-body doses cause acute radiation syndrome, which unfolds in stages: a prodrome (nausea, vomiting — the sooner and more severe the vomiting, the higher the dose), a latent period of apparent improvement, then manifest illness affecting the most radiosensitive systems. The hematopoietic system fails first (dropping blood counts, infection, bleeding), then at higher doses the gastrointestinal system (severe diarrhea, fluid loss), and at the highest doses the cardiovascular/central nervous system (rapidly fatal). Time-to-vomiting and lymphocyte-count trends help estimate dose and prognosis."
+    },
+    {
+      "title": "Trauma First, Then Decontamination",
+      "content": "The cardinal rule: life-threatening injuries are treated before radiological decontamination. External contamination is rarely an immediate threat to the patient or, with standard precautions, to the provider — so airway, breathing, and hemorrhage control come first. Removing clothing eliminates most external contamination, and gentle washing handles the rest. Responders use standard precautions and radiation monitoring; wounds and body orifices are addressed to limit internal contamination. Stabilize the patient, then decontaminate."
+    },
+    {
+      "title": "Radiological Decontamination and KI",
+      "content": "Decontamination mirrors chemical decon in principle: remove clothing (eliminating the majority of contamination), then wash gently with soap and water, working from wounds outward and avoiding abrasion that could drive material inward. Contaminated waste and clothing are contained. Potassium iodide (KI) is a specific, limited countermeasure: it saturates the thyroid to block uptake of radioactive iodine, protecting against thyroid cancer — it does NOT protect against other radionuclides or against external radiation, and it is most useful for exposures involving radioiodine (e.g., reactor releases). Psychological care and clear communication are major components, as radiation fear is powerful and often exceeds the physical risk."
+    }
+  ],
+  "clinicalPearls": [
+    "An irradiated (exposed) patient is not radioactive — like someone who had an X-ray, they cannot contaminate you.",
+    "Time, distance, shielding: doubling your distance cuts dose dramatically — step back before you do anything else.",
+    "Treat life threats before decontamination — trauma kills faster than external contamination.",
+    "Time-to-vomiting is a rapid dose estimator: earlier and more severe vomiting means a higher dose."
+  ],
+  "redFlags": [
+    "Vomiting within minutes of a suspected high-dose exposure — a marker of severe ARS.",
+    "A rapidly falling lymphocyte count over the first day — poor prognostic sign in ARS.",
+    "Responders neglecting distance/shielding because they are wearing PPE — PPE does not stop gamma rays."
+  ],
+  "commonMistakes": [
+    "Delaying resuscitation of a contaminated trauma patient to decontaminate first.",
+    "Believing an externally irradiated patient is dangerous to staff.",
+    "Giving potassium iodide as if it protected against all radiation (it only blocks thyroid radioiodine uptake)."
+  ],
+  "memoryAids": [
+    "Three ideas: Irradiation (exposed, not radioactive), External contamination (on you), Internal contamination (in you).",
+    "Protect yourself with Time, Distance, Shielding.",
+    "Trauma before decon. Clothes off = most of the contamination gone.",
+    "KI protects one gland from one isotope — the thyroid from radioiodine."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Radiological/Nuclear Casualty Approach",
+      "content": "Suspected radiological event\n  → Protect responders: TIME, DISTANCE, SHIELDING; standard PPE; radiation monitoring\n  → Is the patient injured?\n     → Life-threatening injury: TREAT FIRST (airway, breathing, hemorrhage) — decon can wait\n     → Stable: proceed to decontamination\n  → Decontaminate: clothing off (most contamination) → gentle soap-and-water wash → contain waste\n  → Address internal contamination (wounds, orifices); consider KI ONLY for radioiodine exposure\n  → Estimate severity: time-to-vomiting, lymphocyte trend → ARS staging\n  → Reassure: irradiated (exposed) patients are not a hazard to others; manage radiation fear"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Nuclear and Radiological Events",
+    "NDLSF BDLS v4.0 — Radiation Protection and Acute Radiation Syndrome"
+  ]
+}

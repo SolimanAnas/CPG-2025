@@ -1,0 +1,67 @@
+{
+  "id": "c10",
+  "title": "Toxic Exposures & Environmental Emergencies",
+  "shortTitle": "Toxic & Environmental Emergencies",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Explain why toddlers are the peak age group for unintentional poisoning.",
+    "Describe field assessment and management of a suspected pediatric ingestion or exposure.",
+    "Recognize field presentations of pediatric heat-related and cold-related illness.",
+    "Identify pediatric-specific risk factors for drowning and submersion injury.",
+    "Describe field management priorities for common pediatric environmental emergencies."
+  ],
+  "summary": [
+    {
+      "title": "Toxic Exposures: Toddlers at Peak Risk",
+      "content": "Toddlers (roughly 1-3 years) are at peak risk for unintentional poisoning because of their mobility, curiosity, and tendency to put objects in their mouths, combined with household medications and chemicals often within reach. Common household exposures include medications (especially caregivers' or grandparents' medications), cleaning products, and button batteries. Field assessment focuses on identifying the substance, amount, and time of exposure when possible (bring containers/pills to the hospital), and recognizing toxidrome patterns (e.g., altered mental status plus pinpoint pupils and respiratory depression suggesting opioid exposure) rather than waiting for a definitive substance identification."
+    },
+    {
+      "title": "Button Battery Ingestion — A Time-Critical Exposure",
+      "content": "Button battery ingestion deserves special emphasis because a lodged battery in the esophagus can cause severe tissue injury within hours through an electrical current effect, not just direct chemical burn. Any suspected button battery ingestion is treated as a time-critical emergency requiring rapid transport and hospital notification, regardless of the child's current symptoms, since the child may appear asymptomatic early on despite a lodged, actively injuring battery."
+    },
+    {
+      "title": "Heat-Related and Cold-Related Illness",
+      "content": "Children are more vulnerable to heat illness than adults because of a higher surface-area-to-mass ratio, less efficient sweating, and reliance on caregivers to remove them from hot environments — including the specific and preventable risk of a child left in a hot vehicle, where internal temperatures can become life-threatening within minutes. Cold-related illness (hypothermia) is similarly amplified by the same surface-area-to-mass ratio, plus limited ability to generate heat through shivering in infants. Field management for both is rapid recognition, removal from the environmental extreme, and temperature-appropriate supportive care (cooling measures for heat illness, gentle rewarming for hypothermia) alongside standard ABC support."
+    },
+    {
+      "title": "Drowning and Submersion",
+      "content": "Drowning is a leading cause of unintentional death in young children, particularly toddlers (bathtubs, pools) and adolescents (open water, often associated with risk-taking or alcohol). Field priorities after submersion are airway/breathing support (drowning is fundamentally a respiratory event — hypoxia is the primary problem), spinal motion restriction only if the mechanism suggests trauma (e.g., diving injury), and rewarming if hypothermic, with transport for observation even in an apparently well-appearing child, since pulmonary complications can evolve over hours."
+    },
+    {
+      "title": "Field Management Priorities",
+      "content": "Across toxic and environmental emergencies, field priorities are: identify the exposure/mechanism when possible, support the ABCs, remove the child from the ongoing hazard (contaminated environment, hot/cold environment, water), bring relevant materials (pill bottles, chemical containers) to the hospital, and transport promptly — with a lower threshold for transport/observation than might apply to an adult, given children's capacity to appear deceptively well before deteriorating."
+    }
+  ],
+  "clinicalPearls": [
+    "Toddlers are the peak age group for unintentional poisoning due to mobility, curiosity, and mouthing behavior.",
+    "Button battery ingestion is time-critical regardless of current symptoms — electrical injury can progress within hours even in an asymptomatic child.",
+    "Children left in hot vehicles can develop life-threatening hyperthermia within minutes — this is a preventable, high-stakes scenario.",
+    "Drowning is fundamentally a respiratory event — hypoxia, not water in the lungs mechanically, is the core problem to treat."
+  ],
+  "redFlags": [
+    "Any suspected button battery ingestion, regardless of current symptoms.",
+    "A child found in a hot vehicle, even if currently appearing alert.",
+    "Any submersion event, even in an apparently well-appearing child — observe for delayed pulmonary complications."
+  ],
+  "commonMistakes": [
+    "Delaying transport for a suspected button battery ingestion because the child seems asymptomatic.",
+    "Underestimating heat illness severity in a child due to their smaller size.",
+    "Assuming a well-appearing post-submersion child does not need transport/evaluation."
+  ],
+  "memoryAids": [
+    "Toddlers + curiosity + mouths = peak poisoning risk.",
+    "Button battery: time-critical no matter how the child looks right now.",
+    "Hot car, minutes matter — pediatric heat illness escalates fast.",
+    "Drowning is a breathing problem first — treat hypoxia, transport even if 'fine.'"
+  ],
+  "decisionTrees": [
+    {
+      "title": "Pediatric Toxic Exposure and Environmental Emergency Field Approach",
+      "content": "Suspected exposure or environmental emergency\n  → Toxic ingestion/exposure suspected:\n     Identify substance/amount/time if possible; bring containers to hospital\n     Button battery suspected → treat as time-critical regardless of symptoms → rapid transport, hospital notification\n     Recognize toxidrome patterns (e.g., altered mental status + pinpoint pupils + resp depression → opioid) to guide urgency\n  → Heat illness suspected → remove from hot environment, cooling measures, ABC support, rapid transport\n  → Cold illness (hypothermia) suspected → remove from cold environment, gentle rewarming, ABC support, rapid transport\n  → Submersion/drowning → prioritize airway/breathing (hypoxia is the core problem), spinal motion restriction only if trauma mechanism suspected, transport even if well-appearing"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Toxic Exposures and Environmental Emergencies"
+  ]
+}

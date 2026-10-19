@@ -1,0 +1,165 @@
+{
+  "chapter": "c08",
+  "questions": [
+    {
+      "id": "c08_q01",
+      "question": "Which personality disorders fall under DSM-5-TR Cluster A?",
+      "options": ["A. Paranoid, schizoid, schizotypal", "B. Antisocial, borderline, histrionic, narcissistic", "C. Avoidant, dependent, obsessive-compulsive", "D. Bipolar and major depressive"],
+      "correct": 0,
+      "rationale": "Cluster A ('odd/eccentric') includes paranoid, schizoid, and schizotypal personality disorders.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q02",
+      "question": "Which personality disorders fall under DSM-5-TR Cluster B?",
+      "options": ["A. Paranoid, schizoid, schizotypal", "B. Antisocial, borderline, histrionic, narcissistic", "C. Avoidant, dependent, obsessive-compulsive", "D. Panic and PTSD"],
+      "correct": 1,
+      "rationale": "Cluster B ('dramatic/emotional/erratic') includes antisocial, borderline, histrionic, and narcissistic personality disorders.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q03",
+      "question": "Which personality disorders fall under DSM-5-TR Cluster C?",
+      "options": ["A. Paranoid, schizoid, schizotypal", "B. Antisocial, borderline, histrionic, narcissistic", "C. Avoidant, dependent, obsessive-compulsive", "D. Schizophrenia spectrum"],
+      "correct": 2,
+      "rationale": "Cluster C ('anxious/fearful') includes avoidant, dependent, and obsessive-compulsive personality disorders.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q04",
+      "question": "Are field providers expected to diagnose a patient's specific personality disorder?",
+      "options": [
+        "A. Yes, this is a required field skill",
+        "B. No — this is recognition-level exam vocabulary; field care focuses on calm, consistent, non-judgmental care",
+        "C. Only paramedics diagnose personality disorders",
+        "D. Personality disorder diagnosis is irrelevant to any EMS context"
+      ],
+      "correct": 1,
+      "rationale": "This framework is recognition-level material; providers are not expected to diagnose, only to maintain consistent calm care.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q05",
+      "question": "When does delirium tremens (DTs) classically begin relative to the last drink?",
+      "options": ["A. Within the first few hours", "B. 48-96 hours after the last drink", "C. Only after 2 weeks", "D. DTs occurs only during active drinking"],
+      "correct": 1,
+      "rationale": "DTs classically begins 48-96 hours after the last drink, later than milder withdrawal symptoms which can start within hours.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q06",
+      "question": "What are the features of delirium tremens?",
+      "options": [
+        "A. Severe confusion, autonomic instability, tremor, visual/tactile hallucinations",
+        "B. Mild anxiety and tremor only",
+        "C. Isolated hypertension without other findings",
+        "D. Painless, asymptomatic confusion"
+      ],
+      "correct": 0,
+      "rationale": "DTs features severe confusion/disorientation, autonomic instability (tachycardia, hypertension, fever, diaphoresis), tremor, and hallucinations.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q07",
+      "question": "Is delirium tremens a life-threatening condition?",
+      "options": ["A. No, it always resolves without treatment", "B. Yes — it carries meaningful mortality risk if untreated", "C. Only in patients under 30", "D. Only if hallucinations are visual, not tactile"],
+      "correct": 1,
+      "rationale": "DTs is a true medical emergency with meaningful mortality risk, requiring prompt recognition and treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q08",
+      "question": "What is the classic presentation of stimulant intoxication?",
+      "options": ["A. Pinpoint pupils and respiratory depression", "B. Agitation, tachycardia, hypertension, diaphoresis, dilated pupils", "C. Slow heart rate and constricted pupils", "D. Isolated nausea without other findings"],
+      "correct": 1,
+      "rationale": "Stimulant intoxication classically presents with agitation, tachycardia, hypertension, diaphoresis, and dilated pupils.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q09",
+      "question": "What is the classic presentation of opioid intoxication?",
+      "options": ["A. Agitation and dilated pupils", "B. Respiratory depression, pinpoint pupils, altered mental status", "C. Hypertension and tachycardia", "D. Hyperthermia and diaphoresis"],
+      "correct": 1,
+      "rationale": "Opioid intoxication classically presents with respiratory depression, pinpoint (miotic) pupils, and altered mental status.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c08_q10",
+      "question": "Why should vital signs and glucose still be checked in a patient with an obvious substance-related presentation?",
+      "options": [
+        "A. It is unnecessary once a substance cause is presumed",
+        "B. Substance-related presentations can coexist with trauma, psychiatric illness, or an unrelated medical emergency",
+        "C. Vital signs are only relevant for cardiac patients",
+        "D. Glucose is irrelevant to substance-related presentations"
+      ],
+      "correct": 1,
+      "rationale": "A presumed substance cause does not exclude a coexisting or alternative medical problem, so standard assessment continues.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q11",
+      "question": "What cardiac risk is associated with eating disorders?",
+      "options": [
+        "A. Arrhythmia from electrolyte disturbances (e.g., hypokalemia from purging or malnutrition)",
+        "B. No cardiac risk is associated with eating disorders",
+        "C. Only hypertension, never arrhythmia",
+        "D. Risk only occurs in male patients"
+      ],
+      "correct": 0,
+      "rationale": "Electrolyte disturbances (like hypokalemia) from purging behaviors or malnutrition create real cardiac arrhythmia risk in eating disorder patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q12",
+      "question": "A patient with a known eating disorder reports palpitations and dizziness. How should this be evaluated?",
+      "options": [
+        "A. Dismissed as anxiety related to their eating disorder",
+        "B. Evaluated with the same seriousness as any other patient, including ECG/monitoring where available, given real arrhythmia risk",
+        "C. Ignored unless the patient loses consciousness",
+        "D. Treated only with reassurance and no assessment"
+      ],
+      "correct": 1,
+      "rationale": "Cardiac symptoms in eating disorder patients reflect a genuine medical risk and should be evaluated thoroughly, not dismissed as purely psychiatric.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q13",
+      "question": "Why do high-risk substance-related presentations require heightened vigilance beyond standard de-escalation?",
+      "options": [
+        "A. Intoxicated or withdrawing patients can deteriorate quickly and unpredictably",
+        "B. These patients are always calm and predictable",
+        "C. Vigilance is unnecessary once de-escalation begins",
+        "D. Only trauma patients require vigilance"
+      ],
+      "correct": 0,
+      "rationale": "Because intoxicated/withdrawing patients can change status rapidly, heightened vigilance is added to standard de-escalation practices.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c08_q14",
+      "question": "A patient is 60 hours out from their last alcoholic drink and now shows severe confusion, tremor, tachycardia, hypertension, and visual hallucinations. What should this be recognized as?",
+      "options": [
+        "A. Mild, expected alcohol withdrawal requiring only reassurance",
+        "B. Delirium tremens — a life-threatening emergency requiring prompt recognition and supportive care",
+        "C. A primary psychotic disorder unrelated to alcohol use",
+        "D. Normal anxiety with no medical significance"
+      ],
+      "correct": 1,
+      "rationale": "The 48-96 hour timing plus severe confusion, autonomic instability, and hallucinations are classic for DTs, a life-threatening emergency distinct from mild withdrawal.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c08_q15",
+      "question": "What common approach reduces escalation risk across personality-disorder, substance-related, and DTs presentations?",
+      "options": [
+        "A. Consistent, calm, non-judgmental care regardless of the underlying condition",
+        "B. Confrontational questioning to establish authority",
+        "C. Avoiding all interaction with the patient",
+        "D. Immediate physical restraint in every case"
+      ],
+      "correct": 0,
+      "rationale": "Calm, consistent, non-judgmental care is the common thread that reduces escalation risk across these varied high-risk presentations.",
+      "difficulty": "Medium"
+    }
+  ]
+}

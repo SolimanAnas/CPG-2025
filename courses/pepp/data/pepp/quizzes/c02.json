@@ -1,0 +1,178 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "What are the three legs of the Pediatric Assessment Triangle?",
+      "options": [
+        "A. Airway, Breathing, Circulation",
+        "B. Appearance, Work of Breathing, Circulation to Skin",
+        "C. History, Exam, Vital Signs",
+        "D. Tone, Color, Cry"
+      ],
+      "correct": 1,
+      "rationale": "The PAT's three legs are Appearance, Work of Breathing, and Circulation to Skin — assessed together from across the room before any hands-on contact.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "What does the TICLS mnemonic help assess?",
+      "options": ["A. Work of Breathing", "B. Circulation to Skin", "C. Appearance", "D. Vital signs"],
+      "correct": 2,
+      "rationale": "TICLS (Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry) breaks down the Appearance leg of the PAT into observable components.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "A child is limp, will not make eye contact, and is inconsolable, but breathing appears effortless and skin color is normal. What does this pattern suggest?",
+      "options": [
+        "A. A respiratory problem",
+        "B. A primarily CNS/metabolic problem",
+        "C. A shock/circulatory problem",
+        "D. Cardiopulmonary failure"
+      ],
+      "correct": 1,
+      "rationale": "Abnormal Appearance alone, with normal Work of Breathing and Circulation, points toward a CNS/metabolic category rather than a respiratory or circulatory problem.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q04",
+      "question": "A child has abnormal Appearance (lethargic) AND visible retractions with nasal flaring, but normal skin color. What is the likely category?",
+      "options": ["A. CNS/metabolic problem", "B. Respiratory problem", "C. Shock", "D. Cardiopulmonary failure"],
+      "correct": 1,
+      "rationale": "Abnormal Appearance combined with abnormal Work of Breathing (retractions, flaring), with normal circulation, points to a respiratory category.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q05",
+      "question": "A child is lethargic and has mottled, cool skin, but breathing appears unlabored with no retractions. What is the likely category?",
+      "options": ["A. Respiratory problem", "B. Shock/circulatory problem", "C. Normal finding", "D. Isolated CNS problem only"],
+      "correct": 1,
+      "rationale": "Abnormal Appearance plus abnormal Circulation to Skin, with normal Work of Breathing, suggests a shock/circulatory category.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q06",
+      "question": "A child shows abnormal findings across ALL three PAT legs. What does this represent?",
+      "options": ["A. A mild, self-limited illness", "B. Cardiopulmonary failure — the highest-urgency category", "C. Normal variation", "D. An isolated skin condition"],
+      "correct": 1,
+      "rationale": "Abnormality across all three legs indicates a severe, multi-system problem — cardiopulmonary failure — requiring the most urgent response.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q07",
+      "question": "Is the PAT performed with a stethoscope or blood pressure cuff?",
+      "options": ["A. Yes, both are required", "B. No — it is entirely hands-off, visual and auditory, from across the room", "C. Only a stethoscope is used", "D. Only a BP cuff is used"],
+      "correct": 1,
+      "rationale": "The PAT is deliberately hands-off, performed by observation and listening from a distance before any equipment or touching begins.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q08",
+      "question": "A child looks well on the PAT. What should the provider do next?",
+      "options": [
+        "A. Skip the primary assessment since the PAT was reassuring",
+        "B. Proceed to a full hands-on primary assessment at a calmer pace",
+        "C. Discharge the patient immediately",
+        "D. Only check vital signs, skip any exam"
+      ],
+      "correct": 1,
+      "rationale": "The PAT never replaces the hands-on primary assessment — a reassuring PAT sets a calmer pace, but the full ABCDE assessment still follows.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q09",
+      "question": "Why is Work of Breathing considered an 'early window' into respiratory status?",
+      "options": [
+        "A. It only becomes abnormal after the child has already desaturated",
+        "B. Increased effort reflects compensation and can appear before oxygen saturation falls",
+        "C. It has no relationship to oxygenation",
+        "D. It is only useful in adults"
+      ],
+      "correct": 1,
+      "rationale": "Increased work of breathing is a compensatory response that often precedes a measurable drop in SpO2, making it an early indicator of respiratory compromise.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q10",
+      "question": "Which finding is part of the Circulation to Skin leg of the PAT?",
+      "options": ["A. Retractions", "B. Nasal flaring", "C. Mottling", "D. Stridor"],
+      "correct": 2,
+      "rationale": "Mottling is a skin-color finding assessed under Circulation to Skin; retractions, flaring, and stridor belong to the Work of Breathing leg.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q11",
+      "question": "Why is Appearance considered the most sensitive PAT leg?",
+      "options": [
+        "A. It is the easiest to measure with equipment",
+        "B. It reflects the adequacy of oxygenation, ventilation, brain perfusion, and CNS function all at once",
+        "C. It is only relevant in trauma",
+        "D. It replaces the need for the other two legs"
+      ],
+      "correct": 1,
+      "rationale": "Appearance integrates multiple physiologic systems, making it a highly sensitive early indicator — an abnormal Appearance is a red flag even if the other two legs look normal.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q12",
+      "question": "What is meant by assessing the PAT 'from the doorway'?",
+      "options": [
+        "A. Only assessing patients who are near an actual doorway",
+        "B. The PAT is completed within the first seconds of encountering the child, before approaching or touching them",
+        "C. The PAT requires the child to be standing in a doorway",
+        "D. This phrase has no specific meaning in PEPP"
+      ],
+      "correct": 1,
+      "rationale": "The 'from the doorway' framing captures how quickly and unobtrusively the PAT is performed — a rapid visual/auditory read taken immediately upon encountering the child.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q13",
+      "question": "A muffled, weak cry in an infant is a finding under which PAT leg?",
+      "options": ["A. Work of Breathing", "B. Circulation to Skin", "C. Appearance (Speech/Cry component of TICLS)", "D. None of the legs"],
+      "correct": 2,
+      "rationale": "Speech/Cry is one of the five TICLS components under the Appearance leg; a weak or muffled cry is an abnormal Appearance finding.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q14",
+      "question": "Why does the PAT drive 'the pace of everything that follows' rather than the content of care?",
+      "options": [
+        "A. It determines drug doses directly",
+        "B. It sets the general impression and urgency level, shaping how quickly the primary assessment proceeds and whether interventions happen simultaneously",
+        "C. It has no influence on subsequent care",
+        "D. It replaces vital sign measurement entirely"
+      ],
+      "correct": 1,
+      "rationale": "The PAT's purpose is to establish urgency and likely category quickly, which shapes the speed and sequencing of the ensuing primary assessment and interventions — not to dictate specific treatments by itself.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q15",
+      "question": "Which combination of PAT findings would most strongly suggest the HIGHEST acuity requiring the most urgent response?",
+      "options": [
+        "A. Normal Appearance, normal Work of Breathing, normal Circulation",
+        "B. Abnormal Appearance, Work of Breathing, AND Circulation to Skin all together",
+        "C. Mild nasal flaring only, otherwise normal",
+        "D. Slightly pale skin with normal Appearance and breathing"
+      ],
+      "correct": 1,
+      "rationale": "Abnormalities across all three PAT legs together represent the cardiopulmonary failure category, the highest-urgency PAT pattern.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q16",
+      "question": "How should skin color findings under Circulation to Skin be interpreted?",
+      "options": [
+        "A. Against a universal standard regardless of the individual child",
+        "B. Against the child's own baseline skin tone, in adequate lighting",
+        "C. Only cyanosis matters; pallor and mottling are irrelevant",
+        "D. Skin color cannot be reliably assessed in the field"
+      ],
+      "correct": 1,
+      "rationale": "Skin findings are compared to the individual child's baseline tone under good lighting, since a fixed universal standard would not account for normal variation between children.",
+      "difficulty": "Medium"
+    }
+  ]
+}

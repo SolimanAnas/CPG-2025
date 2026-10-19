@@ -1,0 +1,20 @@
+{
+  "chapter": "c02",
+  "cards": [
+    { "id": "c02_fc01", "question": "What does the DISASTER mnemonic stand for?", "answer": "Detection, Incident command, Safety and security, Assess hazards, Support, Triage and treatment, Evacuation, Recovery.", "category": "Framework" },
+    { "id": "c02_fc02", "question": "What question does the Detection step answer?", "answer": "Do the needs of this event exceed the available resources — is this a disaster/MCI?", "category": "Detection" },
+    { "id": "c02_fc03", "question": "Give an example of insidious (non-obvious) detection.", "answer": "A covert biological event detected only as clusters of unusual symptoms across multiple emergency departments.", "category": "Detection" },
+    { "id": "c02_fc04", "question": "Who establishes incident command initially?", "answer": "The first trained responder on scene — command is announced and later transferred as more senior officers arrive.", "category": "Incident Command" },
+    { "id": "c02_fc05", "question": "What is the safety priority order at a disaster scene?", "answer": "Yourself first, then your team, then the public/bystanders, then the patients.", "category": "Safety" },
+    { "id": "c02_fc06", "question": "Why does responder safety come before patient care?", "answer": "An injured responder stops adding resources and starts consuming them, worsening the needs-resources gap.", "category": "Safety" },
+    { "id": "c02_fc07", "question": "What are secondary devices?", "answer": "Explosives or hazards deliberately timed/placed to injure responders after the initial event — a key reason hazard assessment is continuous.", "category": "Hazards" },
+    { "id": "c02_fc08", "question": "Why must support be requested early?", "answer": "Every resource arrives with a delay, so requests should anticipate the incident's needs an hour ahead, not its needs right now.", "category": "Support" },
+    { "id": "c02_fc09", "question": "What triage method does BDLS teach for the Triage & treatment step?", "answer": "SALT — Sort, Assess, Lifesaving interventions, Treatment and/or transport.", "category": "Triage" },
+    { "id": "c02_fc10", "question": "What is the key principle of disaster evacuation/transport?", "answer": "Distribute casualties across appropriate receiving facilities — sending everyone to the nearest hospital just relocates the disaster.", "category": "Evacuation" },
+    { "id": "c02_fc11", "question": "When does recovery begin?", "answer": "During the response — restoring systems, supporting responders and survivors, and capturing lessons learned start before the scene is closed.", "category": "Recovery" },
+    { "id": "c02_fc12", "question": "What should the first radio report from a scene include?", "answer": "The detection picture: estimated casualties, hazards present, resources needed, and that command is established.", "category": "Detection" },
+    { "id": "c02_fc13", "question": "Why is 'freelancing' dangerous at a disaster scene?", "answer": "Responders acting outside incident command break accountability, duplicate work, and endanger themselves and the operation.", "category": "Incident Command" },
+    { "id": "c02_fc14", "question": "Name hazards to actively reassess during a response.", "answer": "Fire, structural collapse, downed lines, hazmat, rising water, aftershocks, violence, and secondary devices.", "category": "Hazards" },
+    { "id": "c02_fc15", "question": "Why is the DISASTER Paradigm called 'all-hazards'?", "answer": "The same ordered checklist applies to any event type — flood, bombing, epidemic — giving all responders shared priorities.", "category": "Framework" }
+  ]
+}

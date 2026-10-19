@@ -1,0 +1,208 @@
+{
+  "chapter": "c02",
+  "questions": [
+    {
+      "id": "c02_q01",
+      "question": "What does the 'D' in the DISASTER Paradigm stand for?",
+      "options": ["A. Decontamination", "B. Detection", "C. Defibrillation", "D. Documentation"],
+      "correct": 1,
+      "rationale": "The paradigm begins with Detection — recognizing that an event's needs exceed available resources.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q02",
+      "question": "Which is the correct order of the DISASTER Paradigm components?",
+      "options": [
+        "A. Triage, Detection, Safety, Command, Support, Hazards, Evacuation, Recovery",
+        "B. Detection, Incident command, Safety and security, Assess hazards, Support, Triage and treatment, Evacuation, Recovery",
+        "C. Detection, Safety, Triage, Command, Hazards, Support, Recovery, Evacuation",
+        "D. Incident command, Detection, Triage, Evacuation, Safety, Support, Hazards, Recovery"
+      ],
+      "correct": 1,
+      "rationale": "The ordered checklist is Detection → Incident command → Safety and security → Assess hazards → Support → Triage and treatment → Evacuation → Recovery.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q03",
+      "question": "You are the first trained responder at a building collapse with many casualties. After sizing up the scene, what comes next?",
+      "options": [
+        "A. Begin treating the nearest casualty",
+        "B. Establish and announce incident command",
+        "C. Start evacuating patients to the closest hospital",
+        "D. Wait for a supervisor before doing anything"
+      ],
+      "correct": 1,
+      "rationale": "After detection, the first trained responder establishes incident command, creating a coordination point; command transfers later as senior officers arrive. Patient care before command and safety leads to chaos.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q04",
+      "question": "What is the correct safety priority order at a disaster scene?",
+      "options": [
+        "A. Patients, bystanders, team, self",
+        "B. Self, team, public/bystanders, patients",
+        "C. Team, patients, self, public",
+        "D. There is no priority order"
+      ],
+      "correct": 1,
+      "rationale": "Protect yourself first, then your team, then the public, then patients — an injured rescuer consumes resources instead of providing them.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q05",
+      "question": "At a bombing scene, hazard assessment must specifically consider:",
+      "options": [
+        "A. Only the original blast site",
+        "B. Secondary devices deliberately targeting responders",
+        "C. Weather forecasts for next week",
+        "D. Hospital bed counts"
+      ],
+      "correct": 1,
+      "rationale": "Intentional events may include secondary devices timed to strike responders — a core reason hazard assessment is continuous and staging discipline matters.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q06",
+      "question": "Why should resource support be requested early in an incident?",
+      "options": [
+        "A. To impress command",
+        "B. Because resources arrive with a delay — order for the incident you will have, not the one you see",
+        "C. Because requests expire",
+        "D. It should actually be requested last"
+      ],
+      "correct": 1,
+      "rationale": "Mutual aid, supplies, and transport all take time to arrive. Anticipatory requests keep resources flowing in phase with the incident's growth.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q07",
+      "question": "Which transport decision best reflects disaster evacuation principles?",
+      "options": [
+        "A. Send all 40 casualties to the nearest hospital",
+        "B. Distribute casualties by severity across multiple appropriate receiving facilities",
+        "C. Transport only the walking wounded",
+        "D. Hold all patients on scene until every one is fully stabilized"
+      ],
+      "correct": 1,
+      "rationale": "Dumping every casualty on the closest hospital recreates the disaster inside it. Command distributes patients by acuity and capability across the system.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q08",
+      "question": "Clusters of patients with similar unusual symptoms appearing at several EDs across a city over two days most likely represents:",
+      "options": [
+        "A. Coincidence requiring no action",
+        "B. The detection phase of an insidious (possibly biological/chemical) event",
+        "C. A staffing problem",
+        "D. Normal seasonal variation always"
+      ],
+      "correct": 1,
+      "rationale": "Covert releases and epidemics announce themselves as syndromic clusters. Recognizing them as a detection signal — and notifying public health — triggers the response system.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c02_q09",
+      "question": "A physician bypasses the incident command post and begins directing ambulances personally. This behavior is:",
+      "options": [
+        "A. Ideal physician leadership",
+        "B. Freelancing — it breaks unified coordination and accountability",
+        "C. Required by medical ethics",
+        "D. The definition of unified command"
+      ],
+      "correct": 1,
+      "rationale": "Acting outside the command structure (freelancing) fragments the operation, duplicates or contradicts orders, and endangers the responder. Clinical skills are contributed inside assigned roles.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q10",
+      "question": "When should recovery activities begin?",
+      "options": [
+        "A. Only after the scene is fully closed",
+        "B. During the response itself",
+        "C. One year after the event",
+        "D. Never — recovery is not a responder concern"
+      ],
+      "correct": 1,
+      "rationale": "Recovery starts during response: restoring systems, tracking patients, supporting responders and survivors, and documenting lessons learned.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q11",
+      "question": "The first radio report from the initial responder at an MCI should communicate:",
+      "options": [
+        "A. A complete list of patient names",
+        "B. Estimated casualty count, hazards, resources needed, and that command is established",
+        "C. Only the responder's unit number",
+        "D. The names of the deceased"
+      ],
+      "correct": 1,
+      "rationale": "The early size-up report paints the detection picture and mobilizes the system: casualties, hazards, needs, and command status.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q12",
+      "question": "Which action violates the Safety and security component?",
+      "options": [
+        "A. Staging until the scene is declared safe",
+        "B. Entering an unstable collapsed structure alone to reach a casualty faster",
+        "C. Wearing appropriate PPE",
+        "D. Establishing a perimeter"
+      ],
+      "correct": 1,
+      "rationale": "Entering an uncleared, unstable structure alone risks converting a rescuer into a casualty — the exact failure the safety hierarchy exists to prevent.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q13",
+      "question": "In the DISASTER Paradigm, triage and treatment are performed using:",
+      "options": [
+        "A. First-come, first-served order",
+        "B. A standardized method (SALT) serving the greatest good for the greatest number",
+        "C. Alphabetical order",
+        "D. Insurance status"
+      ],
+      "correct": 1,
+      "rationale": "BDLS teaches SALT, the CDC-sponsored national standard, to sort casualties so limited resources produce the most total benefit.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c02_q14",
+      "question": "Why is hazard assessment described as continuous rather than one-time?",
+      "options": [
+        "A. To create paperwork",
+        "B. Scenes evolve — collapse, fire spread, aftershocks, or secondary devices can appear after arrival",
+        "C. Because the first assessment is always wrong",
+        "D. It is actually one-time"
+      ],
+      "correct": 1,
+      "rationale": "The hazard picture changes: what was safe on arrival may become lethal. Continuous reassessment protects responders throughout the operation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q15",
+      "question": "Which pairing of paradigm component and action is correct?",
+      "options": [
+        "A. Support — establishing a perimeter",
+        "B. Evacuation — distributing patients to appropriate facilities",
+        "C. Detection — providing definitive care",
+        "D. Recovery — initial scene size-up"
+      ],
+      "correct": 1,
+      "rationale": "Evacuation covers moving the right patient to the right destination. Perimeters are safety/security; size-up is detection; definitive care follows triage/treatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c02_q16",
+      "question": "The DISASTER Paradigm applies to which events?",
+      "options": [
+        "A. Only explosions",
+        "B. Only natural disasters",
+        "C. All hazards — floods, bombings, epidemics, chemical and radiological events alike",
+        "D. Only declared federal disasters"
+      ],
+      "correct": 2,
+      "rationale": "The paradigm is BDLS's all-hazards checklist: the same ordered priorities regardless of the event's cause.",
+      "difficulty": "Easy"
+    }
+  ]
+}

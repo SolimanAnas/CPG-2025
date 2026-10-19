@@ -1,0 +1,30 @@
+{
+  "chapter": "c05",
+  "tables": [
+    {
+      "id": "c05_t01",
+      "title": "Compensated vs Decompensated Shock",
+      "headers": ["Feature", "Compensated Shock", "Decompensated Shock"],
+      "rows": [
+        ["Blood pressure", "Normal (compensation intact)", "Falling"],
+        ["Skin", "Pale, cool", "Pale/mottled, cooler"],
+        ["Heart rate", "Tachycardic", "Tachycardic (may become irregular/bradycardic terminally)"],
+        ["Respiratory rate", "Tachypneic", "Tachypneic or irregular"],
+        ["Mental status", "Usually intact, may be anxious", "Altered"],
+        ["Clinical significance", "Perfusion already compromised despite normal BP", "Compensatory mechanisms have failed"]
+      ]
+    },
+    {
+      "id": "c05_t02",
+      "title": "Shock Categories and Primary Management Focus",
+      "headers": ["Category", "Cause", "Primary Management Focus"],
+      "rows": [
+        ["Hypovolemic", "Blood/fluid loss", "Fluid/blood resuscitation"],
+        ["Distributive — septic", "Infection, vasodilation", "Source control, fluids, antibiotics per protocol"],
+        ["Distributive — anaphylactic", "Allergic vasodilation", "IM epinephrine first-line"],
+        ["Cardiogenic", "Pump failure", "Inotropes/vasopressors; cautious fluids"],
+        ["Obstructive", "Mechanical (tamponade, tension pneumothorax)", "Mechanical correction (decompression, etc.)"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "chapter": "c10",
+  "tables": [
+    {
+      "id": "c10_t01",
+      "title": "The Four S's of Surge Capacity",
+      "headers": ["Pillar", "Includes", "Failure Example"],
+      "rows": [
+        ["Staff", "Clinical + support personnel, callback, credentialed volunteers", "Beds open but no one to staff them"],
+        ["Stuff", "Supplies, medications, equipment, PPE", "Ventilators unavailable for ICU surge"],
+        ["Space", "Beds, alternate care sites, treatment areas", "No room to place incoming casualties"],
+        ["Systems", "Command, communications, tracking, policies", "No patient tracking or coordination"]
+      ]
+    },
+    {
+      "id": "c10_t02",
+      "title": "Standards of Care Continuum",
+      "headers": ["Level", "Resources", "Care Delivered"],
+      "rows": [
+        ["Conventional", "Normal", "Usual standard of care"],
+        ["Contingency", "Adapted but functionally equivalent", "Repurposed space, substituted supplies, adjusted staffing"],
+        ["Crisis", "Overwhelmed despite adaptation", "Formally declared allocation of scarce resources for population benefit"]
+      ]
+    },
+    {
+      "id": "c10_t03",
+      "title": "CMIST Functional-Needs Framework",
+      "headers": ["Element", "Population Need", "Example"],
+      "rows": [
+        ["Communication", "Access to alerts and information", "Deaf/limited-English/blind residents"],
+        ["Maintaining health", "Ongoing medical dependence", "Medications, oxygen, dialysis, powered devices"],
+        ["Independence", "Assistive equipment/support to function", "Wheelchairs, assistive devices, personal-care attendants"],
+        ["Support/Safety/Self-determination", "Supervision and support", "Some cognitive/psychiatric conditions; children"],
+        ["Transportation", "Means to evacuate", "People without independent transport"]
+      ]
+    }
+  ]
+}

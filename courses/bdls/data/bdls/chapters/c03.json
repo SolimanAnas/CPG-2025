@@ -1,0 +1,72 @@
+{
+  "id": "c03",
+  "title": "Incident Command & Emergency Management (ICS/NIMS)",
+  "shortTitle": "ICS / NIMS",
+  "estimatedStudyTime": 32,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Describe the purpose and core features of the Incident Command System (ICS).",
+    "Name the five major ICS functional sections and their responsibilities.",
+    "Explain span of control and modular expansion.",
+    "Define unified command and when it is used.",
+    "Describe NIMS and how it standardizes response across agencies.",
+    "Explain the hospital's version of ICS and the health professional's place in it."
+  ],
+  "summary": [
+    {
+      "title": "Why Incident Command Exists",
+      "content": "Large events involve many agencies — fire, EMS, police, public works, hospitals, public health — that must act as one organization. The Incident Command System (ICS) is a standardized, scalable management structure that provides common terminology, clear chain of command, defined roles, and integrated communications. It prevents the classic failure of disasters: multiple groups working hard at cross purposes."
+    },
+    {
+      "title": "The Five Functional Sections",
+      "content": "ICS organizes work into five functions. Command sets objectives and holds overall authority; it includes the command staff — safety officer, public information officer, and liaison officer. Operations does the tactical work: rescue, triage, treatment, transport. Planning collects information, tracks resources, and writes the incident action plan. Logistics obtains everything the response needs — supplies, facilities, food, communications. Finance/Administration tracks costs, contracts, claims, and time records. Every task in a response lives somewhere in these five functions."
+    },
+    {
+      "title": "Modular, Scalable, Span of Control",
+      "content": "ICS expands and contracts with the incident: a small event may need only an incident commander, while a catastrophe activates every section with branches, divisions, and groups. The guiding rule is span of control: one supervisor should directly manage roughly three to seven people (five is the classic optimum). When a supervisor's span grows too large, the structure subdivides."
+    },
+    {
+      "title": "Unified Command and Transfer of Command",
+      "content": "When an incident crosses jurisdictions or disciplines — a hazmat spill involving fire, police, EMS, and environmental agencies — unified command lets the key agencies share command decisions while maintaining a single coordinated plan and one Operations section. Command transfers formally, with a briefing, when a more qualified or designated officer assumes it; everyone is told who now commands."
+    },
+    {
+      "title": "NIMS: The National Framework",
+      "content": "The National Incident Management System (NIMS) is the U.S. doctrine that standardizes incident management across all levels of government and the private sector. It incorporates ICS, defines resource typing (so a requested 'strike team' means the same thing everywhere), credentialing, mutual aid, and emergency operations centers (EOCs) that support on-scene command. For health professionals, NIMS means your hospital's system plugs into the same structure the fire service uses."
+    },
+    {
+      "title": "Hospital Incident Command (HICS)",
+      "content": "Hospitals use an ICS adaptation (commonly the Hospital Incident Command System, HICS) with the same five functions applied to facility problems: bed surge, staff callback, supply shortages, evacuation. Clinicians in a disaster work within assigned roles — often defined by job action sheets — reporting through the structure rather than to their everyday supervisors. Knowing your facility's command structure before the event is a core BDLS competency."
+    }
+  ],
+  "clinicalPearls": [
+    "In ICS you report to your incident supervisor, not your everyday boss — one person, one supervisor.",
+    "Span of control 3–7 (optimally ~5): when a leader has more direct reports than that, the structure should subdivide.",
+    "The safety officer can halt any operation immediately — the one role with that authority besides command.",
+    "Job action sheets convert your clinical skills into a defined incident role; read yours before the disaster."
+  ],
+  "redFlags": [
+    "Multiple agencies each running their own separate command posts for the same incident.",
+    "A supervisor directly managing 15 people — span of control has collapsed.",
+    "Staff bypassing the command structure to act on hallway instructions."
+  ],
+  "commonMistakes": [
+    "Confusing the incident commander (on-scene authority) with the EOC (off-scene support and coordination).",
+    "Assuming ICS is only for fire services — it is designed for all disciplines including hospitals.",
+    "Forgetting the formal briefing when command transfers."
+  ],
+  "memoryAids": [
+    "Five functions — C-O-P-L-F: Command, Operations, Planning, Logistics, Finance/Admin.",
+    "'Command thinks, Operations does, Planning tracks, Logistics gets, Finance pays.'",
+    "Span of control: one hand — about five fingers, about five reports."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Fitting Into Incident Command as a Health Professional",
+      "content": "Disaster activation announced\n  → Report to your designated check-in point (never self-dispatch)\n  → Receive assignment + job action sheet\n  → Identify YOUR incident supervisor (one person)\n  → Perform assigned role; communicate up the chain\n     → Task outside your competence? Say so — constructive refusal is safety\n     → New hazard or resource need? Report to your supervisor\n  → At shift end: formal handoff + demobilization through the system"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Incident Command and Emergency Management Systems",
+    "FEMA — NIMS and ICS doctrine (as taught in BDLS v4.0)"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "chapter": "c10",
+  "questions": [
+    {
+      "id": "c10_q01",
+      "question": "What is polypharmacy typically defined as?",
+      "options": ["A. Taking any prescription medication", "B. Taking five or more medications", "C. Taking only over-the-counter medications", "D. Taking medications from more than one pharmacy"],
+      "correct": 1,
+      "rationale": "Polypharmacy is typically defined as taking five or more medications, increasing risk of interactions and side effects.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q02",
+      "question": "What medication classes carry particular fall risk in older adults?",
+      "options": ["A. Sedatives/hypnotics and some psychiatric medications", "B. Vitamins and supplements", "C. Topical creams", "D. Eye drops"],
+      "correct": 0,
+      "rationale": "Sedatives, hypnotics, and certain psychiatric medications increase fall risk through sedation or impaired balance.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q03",
+      "question": "What medication classes carry particular bleeding risk after trauma?",
+      "options": ["A. Antibiotics", "B. Anticoagulants and antiplatelet medications", "C. Antihistamines", "D. Antacids"],
+      "correct": 1,
+      "rationale": "Anticoagulant and antiplatelet medications increase bleeding risk after trauma, including minor head injury.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q04",
+      "question": "Should a geriatric fall be assumed to be purely mechanical without further investigation?",
+      "options": [
+        "A. Yes, falls in older adults are always mechanical",
+        "B. No — falls can be the presenting symptom of a medical emergency (arrhythmia, stroke, hypoglycemia, etc.)",
+        "C. Only if the patient is under 75",
+        "D. Only if there were no witnesses"
+      ],
+      "correct": 1,
+      "rationale": "A fall should not be assumed purely mechanical; it may be the presenting symptom of an underlying medical emergency.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q05",
+      "question": "What should be asked about the circumstances of a geriatric fall?",
+      "options": [
+        "A. Witnessed vs. unwitnessed, preceding symptoms, ability to recall the event",
+        "B. Only the exact time of day",
+        "C. Only whether the patient was wearing shoes",
+        "D. Nothing beyond confirming the fall occurred"
+      ],
+      "correct": 0,
+      "rationale": "A thorough fall history includes whether it was witnessed, any preceding warning symptoms, and the patient's recall of the event.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q06",
+      "question": "Why might occult injury be more likely to be missed in older adults after a fall?",
+      "options": ["A. Older adults may have a blunted pain response", "B. Older adults always report pain accurately", "C. Occult injury cannot occur in geriatric patients", "D. Older adults are less likely to have any injury"],
+      "correct": 0,
+      "rationale": "A blunted pain response in older adults can mask significant injury, making thorough exam important regardless of reported pain.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q07",
+      "question": "Why is anticoagulant use plus head injury (even minor) a significant field red flag?",
+      "options": [
+        "A. It carries meaningfully elevated risk of intracranial hemorrhage with possible delayed symptom onset",
+        "B. Anticoagulants have no effect on head injury risk",
+        "C. It only matters for injuries above the neck in adults under 50",
+        "D. This combination is not clinically significant"
+      ],
+      "correct": 0,
+      "rationale": "Anticoagulated patients face elevated intracranial hemorrhage risk after even minor head trauma, and symptoms can be delayed.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q08",
+      "question": "Does a normal initial neurologic exam exclude a developing intracranial bleed in an anticoagulated patient after head injury?",
+      "options": [
+        "A. Yes, a normal exam rules out any bleed",
+        "B. No — a normal initial exam does not exclude a developing bleed",
+        "C. Only if the patient is under 60",
+        "D. Only if no anticoagulant is involved"
+      ],
+      "correct": 1,
+      "rationale": "Intracranial hemorrhage in an anticoagulated patient can develop with delayed onset, so an initially normal exam does not exclude it.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q09",
+      "question": "What general findings may raise concern for elder abuse or neglect?",
+      "options": [
+        "A. Injury-mechanism inconsistency, neglect signs, unexplained/patterned bruising, controlling caregiver behavior",
+        "B. A clean, well-maintained living environment",
+        "C. A caregiver who welcomes private conversation with the patient",
+        "D. Consistent, corroborated injury history"
+      ],
+      "correct": 0,
+      "rationale": "These findings are recognized general categories that may raise concern for elder abuse or neglect, similar to pediatric maltreatment recognition.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q10",
+      "question": "Is any single finding diagnostic of elder abuse?",
+      "options": ["A. Yes, bruising alone is diagnostic", "B. No — no single finding is diagnostic; the EMS role is recognition and objective documentation", "C. Yes, but only in patients with dementia", "D. Yes, if the caregiver seems nervous"],
+      "correct": 1,
+      "rationale": "As with pediatric maltreatment, no single finding confirms elder abuse; providers document objectively and let appropriate professionals evaluate.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q11",
+      "question": "Are EMS providers mandatory reporters of suspected elder abuse?",
+      "options": ["A. No, reporting is optional", "B. Yes, in essentially all jurisdictions", "C. Only if the patient requests it", "D. Only social workers are mandatory reporters"],
+      "correct": 1,
+      "rationale": "EMS providers are mandatory reporters of suspected elder abuse in essentially all jurisdictions.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c10_q12",
+      "question": "What is the correct EMS approach when elder abuse is suspected?",
+      "options": [
+        "A. Confront the caregiver directly to obtain a confession",
+        "B. Provide standard care, document objectively, communicate calmly and non-accusatorially, and report through appropriate channels",
+        "C. Refuse to treat the patient until the situation is clarified",
+        "D. Make a definitive determination of abuse before transport"
+      ],
+      "correct": 1,
+      "rationale": "The EMS role is recognition and reporting, not investigation or confrontation — mirroring the approach to pediatric maltreatment.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c10_q13",
+      "question": "A caregiver insists on answering every question for an alert, oriented geriatric patient and will not leave the room. What should this prompt?",
+      "options": [
+        "A. No concern — caregivers should always answer for patients",
+        "B. Consideration as a potential concern-raising finding, to be documented objectively rather than confronted directly",
+        "C. Immediate accusation of the caregiver",
+        "D. Refusal to provide care until the caregiver leaves"
+      ],
+      "correct": 1,
+      "rationale": "A controlling caregiver dynamic is a recognized concern-raising finding that should be documented objectively rather than acted on with direct confrontation.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q14",
+      "question": "A geriatric patient on warfarin reports a minor bump to the head with no current symptoms. What is the correct approach?",
+      "options": [
+        "A. No transport needed since there are no symptoms",
+        "B. Recognize the elevated intracranial hemorrhage risk from anticoagulation despite the minor mechanism and current absence of symptoms, and communicate this clearly at handoff",
+        "C. Assume the medication is irrelevant to this injury",
+        "D. Delay documentation of the anticoagulant use"
+      ],
+      "correct": 1,
+      "rationale": "Anticoagulant use with head injury — even seemingly minor and currently asymptomatic — carries meaningful bleed risk that should be evaluated and clearly communicated.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c10_q15",
+      "question": "A patient reports feeling dizzy and having heart palpitations just before falling. How should this fall be approached differently from a simple trip?",
+      "options": [
+        "A. Identically, since all falls are treated the same regardless of preceding symptoms",
+        "B. As a potential medical cause of the fall (e.g., arrhythmia), warranting cardiac evaluation in addition to injury assessment",
+        "C. As purely a trauma case with no cardiac relevance",
+        "D. As unrelated to any medical condition"
+      ],
+      "correct": 1,
+      "rationale": "Preceding symptoms like dizziness and palpitations suggest the fall may be a symptom of an underlying medical cause (e.g., arrhythmia), requiring broader evaluation beyond just the traumatic injury.",
+      "difficulty": "Medium"
+    }
+  ]
+}

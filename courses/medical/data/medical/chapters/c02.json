@@ -1,0 +1,68 @@
+{
+  "id": "c02",
+  "title": "Neurological Emergencies II — Seizures & Altered Mental Status",
+  "shortTitle": "Seizures & AMS",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "List common causes of adult seizures and altered mental status.",
+    "Describe the postictal state and distinguish it from ongoing seizure activity.",
+    "Define status epilepticus and describe its field management priorities.",
+    "Apply a structured framework (AEIOU-TIPS) for reversible causes of altered mental status.",
+    "Describe field priorities for a seizing or newly altered adult patient."
+  ],
+  "summary": [
+    {
+      "title": "Not All Seizures Are Life-Threatening",
+      "content": "Most adult seizures are brief, self-limited events that stop on their own within a couple of minutes. Common causes include idiopathic epilepsy (a known seizure disorder, often with medication non-compliance as a trigger), hypoglycemia, head trauma, intoxication or withdrawal (especially alcohol withdrawal), fever (more classically pediatric but relevant in adults with underlying infection), stroke, and structural brain lesions. Field management for a brief, self-terminating seizure focuses on protecting the patient from injury and airway compromise during the event, not stopping a seizure that has already stopped."
+    },
+    {
+      "title": "The Postictal State",
+      "content": "The postictal state is a period of transient confusion, drowsiness, and sometimes agitation that follows a seizure, typically resolving gradually over minutes without specific intervention. It is a normal, expected part of the seizure process, not a separate emergency — but a patient who does not gradually improve, or whose mental status worsens rather than clears, should prompt reconsideration of other causes (ongoing subclinical seizure activity, structural injury, or a coexisting problem like hypoglycemia)."
+    },
+    {
+      "title": "Status Epilepticus",
+      "content": "Status epilepticus — a seizure lasting 5 minutes or longer, or repeated seizures without return to baseline between them — is a time-critical emergency distinct from an ordinary brief seizure. It carries real risk of ongoing neuronal injury and cardiorespiratory compromise the longer it continues. Field priorities are airway protection/positioning, oxygen, glucose check, and rapid transport; benzodiazepine administration for status epilepticus follows local ALS protocol."
+    },
+    {
+      "title": "AEIOU-TIPS: A Framework for Altered Mental Status",
+      "content": "AEIOU-TIPS is a widely taught mnemonic for reversible causes of altered mental status: Alcohol, Epilepsy/seizure (postictal), Insulin (hypo/hyperglycemia), Overdose/opioids, Uremia (metabolic), Trauma/temperature, Infection, Psychiatric, Stroke/shock. Its main clinical value is prompting a glucose check and a search for a reversible cause before assuming an irreversible or purely psychiatric explanation for a change in mental status."
+    },
+    {
+      "title": "Field Priorities",
+      "content": "For an actively seizing patient: protect the airway with positioning and suction as needed (never place anything in the mouth), protect from injury, time the seizure, and check glucose as soon as feasible. For a newly altered but non-seizing patient: check glucose immediately, work through reversible causes, and gather a focused history (medications, known seizure disorder, substance use, recent illness or head injury) from bystanders or family. Any seizure activity lasting 5 minutes or longer, or that does not resolve with usual measures, should prompt escalation as status epilepticus per local protocol."
+    }
+  ],
+  "clinicalPearls": [
+    "A brief seizure that has already stopped by EMS arrival does not need seizure-stopping medication — protect and reassess.",
+    "The postictal state should gradually improve — if it doesn't, look for another cause.",
+    "5 minutes is the threshold for status epilepticus — treat it as a time-critical emergency.",
+    "Check glucose in every altered or postictal patient — it's fast, safe, and can immediately explain the presentation."
+  ],
+  "redFlags": [
+    "Seizure activity lasting 5 minutes or longer, or repeated seizures without return to baseline (status epilepticus).",
+    "Postictal confusion that worsens instead of gradually improving.",
+    "New focal neurologic deficit after a seizure that doesn't resolve as the postictal state clears (consider Todd's paralysis vs. stroke, but don't assume)."
+  ],
+  "commonMistakes": [
+    "Placing an object in the mouth of a seizing patient.",
+    "Assuming all confusion after a seizure is 'just postictal' without checking glucose.",
+    "Waiting well past 5 minutes of continuous seizure activity before escalating care."
+  ],
+  "memoryAids": [
+    "AEIOU-TIPS: reversible causes of altered mental status.",
+    "5 minutes = status epilepticus.",
+    "Postictal should get better, not worse — a worsening trend means look further.",
+    "Protect, don't restrain, don't put anything in the mouth."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Seizure and Altered Mental Status Field Approach",
+      "content": "Seizure activity or altered mental status noted\n  → If actively seizing: protect airway/position, protect from injury, time the seizure, check glucose\n     <5 minutes, self-terminates → postictal care, monitor for gradual improvement, transport\n     ≥5 minutes or repeated without return to baseline → Status epilepticus → time-critical emergency, escalate per local ALS protocol, rapid transport\n  → If altered but not seizing: check glucose immediately, treat hypoglycemia if present\n     Work through AEIOU-TIPS for reversible causes; gather focused history from bystanders/family\n  → Reassess mental status trend — gradual improvement is reassuring, no improvement or worsening warrants continued investigation and rapid transport"
+    }
+  ],
+  "references": [
+    "General EMS/paramedic teaching on seizure classification and status epilepticus (5-minute threshold widely adopted in current EMS education)",
+    "AEIOU-TIPS mnemonic — standard EMS teaching framework for altered mental status"
+  ]
+}

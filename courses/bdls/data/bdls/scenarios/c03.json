@@ -1,0 +1,53 @@
+{
+  "chapter": "c03",
+  "cases": [
+    {
+      "id": "c03_s01",
+      "title": "Two Command Posts",
+      "presentation": "At a train derailment with a chemical leak, the fire department has set up a command post on the east side while police run a separate post on the west side. EMS crews receive conflicting orders about staging locations.",
+      "vitals": { "agencies": "Fire, Police, EMS, Environmental", "command posts": "2 (conflicting)", "orders": "Contradictory" },
+      "question": "What is the correct structural fix?",
+      "options": [
+        "A: Let each agency keep its own command post.",
+        "B: Establish unified command — the agencies jointly set objectives at one command post with a single coordinated plan and one Operations section.",
+        "C: EMS should create a third command post.",
+        "D: Wait for a federal coordinator."
+      ],
+      "correct": 1,
+      "explanation": "Multi-jurisdiction, multi-discipline incidents call for unified command: shared decision-making, one incident action plan, one Operations section. Parallel command posts guarantee conflicting orders and gaps.",
+      "clinicalPearl": "One incident, one plan — unified command merges authority without merging agencies."
+    },
+    {
+      "id": "c03_s02",
+      "title": "The Overloaded Supervisor",
+      "presentation": "In the hospital's disaster response, the treatment area leader is directly supervising 14 clinicians. Requests are being missed, two patients were nearly given duplicate medications, and the leader cannot say who is assigned where.",
+      "vitals": { "direct reports": "14", "errors": "Near-misses occurring", "tracking": "Lost" },
+      "question": "What ICS principle is violated and what is the fix?",
+      "options": [
+        "A: Nothing is wrong; busy leaders are normal in disasters.",
+        "B: Span of control is broken — subdivide into units of ~5 with unit leaders reporting to the treatment leader.",
+        "C: Replace the leader with two co-equal leaders over the same 14 people.",
+        "D: Send half the staff home."
+      ],
+      "correct": 1,
+      "explanation": "Span of control should stay around 3–7 direct reports. The modular fix is subdividing: create unit leaders, each managing a workable group, restoring accountability and safe communication.",
+      "clinicalPearl": "When a leader can't name their people, the span has already failed — subdivide before the error happens."
+    },
+    {
+      "id": "c03_s03",
+      "title": "Where Do I Go?",
+      "presentation": "A hospital activates its incident command for a mass-casualty event. An off-duty nurse hears the news and drives straight to the ED, walking into the treatment area to help without telling anyone.",
+      "vitals": { "activation": "HICS active", "nurse status": "Not checked in", "assignment": "None" },
+      "question": "What should the nurse have done?",
+      "options": [
+        "A: Exactly what she did — every hand helps.",
+        "B: Report to the designated staff check-in/labor pool, receive an assignment and job action sheet, and work under an assigned supervisor.",
+        "C: Call the CEO for instructions.",
+        "D: Stay home under all circumstances."
+      ],
+      "correct": 1,
+      "explanation": "Willing staff are valuable only when integrated: check-in establishes accountability, matches skills to needs via job action sheets, and places the responder under one incident supervisor. Untracked helpers break safety and resource management.",
+      "clinicalPearl": "In a disaster, checking in IS helping — the labor pool is where good intentions become usable capacity."
+    }
+  ]
+}

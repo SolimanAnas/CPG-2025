@@ -1,0 +1,68 @@
+{
+  "id": "c07",
+  "title": "Behavioral Emergencies II — Psychotic & Mood Disorders",
+  "shortTitle": "Psychotic & Mood Disorders",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish a delusion from a hallucination.",
+    "Recognize common presentations of psychotic disorders relevant to prehospital care.",
+    "Describe mood disorder presentations (major depressive episode, manic episode) relevant to field recognition.",
+    "Recognize panic disorder and PTSD presentations and distinguish them from other emergencies.",
+    "Apply a structured suicide-risk recognition approach appropriate to the EMT/paramedic scope."
+  ],
+  "summary": [
+    {
+      "title": "Delusion vs. Hallucination",
+      "content": "A delusion is a fixed, false belief that persists despite clear evidence against it (e.g., a conviction of being surveilled or persecuted without any factual basis). A hallucination is a false sensory perception with no external stimulus (e.g., hearing voices that aren't there, seeing things that aren't present) — it involves the senses, while a delusion involves belief. Both can occur in psychotic disorders, and distinguishing them matters for accurate recognition-level vocabulary, though field management (calm, non-confrontational approach, avoid arguing with the content) is similar for both."
+    },
+    {
+      "title": "Psychotic Disorder Presentations",
+      "content": "Psychotic symptoms — delusions, hallucinations, disorganized speech/behavior, diminished emotional expression — can occur in primary psychotic disorders (such as schizophrenia), as part of a mood disorder with psychotic features, or secondary to a medical cause (substance intoxication/withdrawal, delirium, or another organic process). Prehospital providers are not expected to differentiate the underlying diagnosis — the priority is safe assessment, ruling out or recognizing an organic/reversible cause (glucose, vital signs, evidence of trauma or substance use) when feasible, and safe transport."
+    },
+    {
+      "title": "Mood Disorder Presentations",
+      "content": "A major depressive episode presents with persistent low mood, loss of interest/pleasure, changes in sleep/appetite, low energy, and in more severe cases, suicidal ideation — field-relevant because it is a leading risk factor for suicide risk assessment. A manic episode presents with elevated or irritable mood, decreased need for sleep, rapid/pressured speech, grandiosity, and risky or impulsive behavior — field-relevant because impaired judgment during mania can create acute safety risks (reckless behavior, financial/legal risk-taking, occasionally aggression when the patient's grandiose beliefs are challenged)."
+    },
+    {
+      "title": "Panic Disorder and PTSD",
+      "content": "Panic disorder presents with recurrent, discrete episodes of intense fear accompanied by physical symptoms (tachycardia, dyspnea, chest tightness, dizziness, a sense of impending doom) that can closely mimic a cardiac or respiratory emergency — field providers should still rule out true medical emergencies (ECG, vitals, glucose) rather than assuming panic disorder based on history alone, since panic attacks and genuine medical emergencies can coexist or be mistaken for one another. PTSD (post-traumatic stress disorder) involves re-experiencing symptoms, avoidance, negative mood/cognition changes, and hyperarousal following a traumatic event, and can be triggered or worsened by reminders of the trauma — including, sometimes, aspects of the EMS encounter itself (uniforms, restraint, physical contact), which is a reason to explain actions calmly before performing them when feasible."
+    },
+    {
+      "title": "Suicide Risk Recognition",
+      "content": "At the EMT/paramedic level, the goal is risk recognition, not risk stratification or diagnosis. Direct, non-judgmental questioning about suicidal thoughts does not increase risk and is appropriate when clinically indicated — asking does not 'put the idea in their head.' Any patient expressing suicidal ideation, especially with a specific plan, access to lethal means, or a prior attempt history, should be treated as a high-risk presentation requiring careful scene safety consideration, a calm and supportive approach, and transport for evaluation; local protocol governs specifics such as means restriction and involuntary-hold criteria."
+    }
+  ],
+  "clinicalPearls": [
+    "Delusion = false belief; hallucination = false sensory perception. Different phenomena, similar calm non-confrontational approach.",
+    "Prehospital providers don't need to diagnose the underlying psychotic condition — focus on safe assessment and ruling out reversible/organic causes when feasible.",
+    "Panic attacks can look exactly like cardiac emergencies — rule out true medical causes rather than assuming panic disorder from history alone.",
+    "Asking directly about suicidal ideation does not increase risk — it's an appropriate, necessary question when indicated."
+  ],
+  "redFlags": [
+    "Suicidal ideation with a specific plan, access to lethal means, or a prior attempt history.",
+    "New psychotic symptoms with an unclear cause — don't assume purely psychiatric without considering an organic/reversible cause.",
+    "Chest pain/dyspnea in a patient with known panic disorder — still rule out a true cardiac/respiratory emergency."
+  ],
+  "commonMistakes": [
+    "Confusing delusions and hallucinations as interchangeable terms.",
+    "Assuming a patient's chest pain/dyspnea is 'just a panic attack' without appropriate medical rule-out.",
+    "Avoiding direct questions about suicidal ideation out of a mistaken belief that asking increases risk."
+  ],
+  "memoryAids": [
+    "Delusion = belief; hallucination = perception.",
+    "Rule out the body before you settle on the mind — especially for panic-like presentations.",
+    "Asking about suicide doesn't cause it — silence doesn't prevent it.",
+    "Mania: less sleep needed, more risk taken."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Psychotic/Mood Disorder Field Recognition Approach",
+      "content": "Patient with psychotic symptoms, mood symptoms, or panic-like presentation\n  → Assess scene safety and vital signs/glucose first — rule out organic/reversible causes when feasible\n  → Panic-like presentation (chest tightness, dyspnea, tachycardia, fear) → still perform medical rule-out (ECG, vitals, glucose) rather than assuming panic disorder from history alone\n  → Psychotic symptoms present → calm, non-confrontational approach, avoid arguing with delusional/hallucinatory content, transport for evaluation\n  → Mood symptoms present → assess for suicidal ideation directly and non-judgmentally when indicated\n  → Suicidal ideation with plan/means/prior attempt → treat as high-risk, apply scene safety considerations, calm supportive approach, transport per local protocol"
+    }
+  ],
+  "references": [
+    "DSM-5-TR — definitions of delusion, hallucination, major depressive episode, manic episode, panic disorder, PTSD",
+    "Standard EMS teaching on suicide risk recognition (recognition-level, not diagnostic)"
+  ]
+}

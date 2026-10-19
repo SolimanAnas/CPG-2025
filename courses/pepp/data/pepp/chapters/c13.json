@@ -1,0 +1,67 @@
+{
+  "id": "c13",
+  "title": "Children With Special Healthcare Needs",
+  "shortTitle": "Special Healthcare Needs",
+  "estimatedStudyTime": 25,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Define children with special healthcare needs (CSHCN) and explain why caregivers are a critical information resource.",
+    "Identify common medical technology encountered in the field (tracheostomy, gastrostomy tube, ventriculoperitoneal shunt, central venous catheter, home ventilator).",
+    "Describe general field troubleshooting priorities for a malfunctioning tracheostomy.",
+    "Recognize field presentations suggesting ventriculoperitoneal (VP) shunt malfunction.",
+    "Explain why baseline function matters more than population norms when assessing a CSHCN patient."
+  ],
+  "summary": [
+    {
+      "title": "Who Are Children With Special Healthcare Needs?",
+      "content": "Children with special healthcare needs (CSHCN) have or are at increased risk for a chronic physical, developmental, behavioral, or emotional condition, and often require health and related services beyond what is typical for children generally. This population is broad — from a child with well-controlled asthma to a child with complex technology dependence (tracheostomy, home ventilator, feeding tube). Caregivers of CSHCN are frequently the most knowledgeable resource on scene about the child's baseline, equipment, and typical emergency presentation, and should be engaged as partners in care from the start."
+    },
+    {
+      "title": "Common Medical Technology in the Field",
+      "content": "Tracheostomy: a surgical airway that bypasses the upper airway; problems include mucus plugging, accidental decannulation, and tube malposition. Gastrostomy (G-) tube: provides enteral feeding directly into the stomach; field concerns include tube dislodgement and leakage, rarely acute emergencies unless associated with peritoneal signs. Ventriculoperitoneal (VP) shunt: diverts cerebrospinal fluid to treat hydrocephalus; malfunction can cause increased intracranial pressure. Central venous catheter: provides vascular access for children needing frequent IV therapy; field concerns include infection signs and line malfunction. Home ventilator: provides mechanical ventilation via tracheostomy for children with chronic respiratory failure; caregivers are typically expert in troubleshooting their specific device."
+    },
+    {
+      "title": "Tracheostomy Troubleshooting",
+      "content": "For a child in respiratory distress with a tracheostomy, field priorities are: attempt suctioning to clear a possible mucus plug, check for accidental decannulation (tube fully or partially out) and replace with a same-size trach tube or appropriately sized endotracheal tube if trained and equipped to do so, and provide supplemental oxygen/ventilation via the tracheostomy stoma if the tube cannot be quickly replaced. Caregivers can often assist rapidly with troubleshooting since they manage this equipment daily."
+    },
+    {
+      "title": "Recognizing VP Shunt Malfunction",
+      "content": "VP shunt malfunction should be suspected in a child with a known shunt who presents with signs of increased intracranial pressure — headache, vomiting, altered mental status, irritability (infants), or a bulging fontanelle (infants with open fontanelles) — since shunt failure prevents normal cerebrospinal fluid drainage. Field management is standard increased-ICP precautions (avoid hypoxia/hypotension, positioning) and rapid transport; shunt-specific interventions are a hospital-level intervention."
+    },
+    {
+      "title": "Baseline Function Over Population Norms",
+      "content": "For CSHCN, the single most useful assessment reference point is often the child's own personal baseline — reported by the caregiver — rather than typical pediatric norms. A CSHCN patient's 'normal' resting SpO2, respiratory pattern, or level of interactiveness may differ substantially from a typically developing child of the same age, and providers should always ask 'what is normal for this child?' before deciding whether a finding represents an acute change."
+    }
+  ],
+  "clinicalPearls": [
+    "Caregivers of CSHCN are often the most knowledgeable resource on scene — engage them as partners, not bystanders.",
+    "For tracheostomy distress: suction first, check for decannulation, replace the tube or ventilate via the stoma if needed.",
+    "Suspect VP shunt malfunction in a child with a known shunt and signs of increased intracranial pressure (headache, vomiting, altered mental status, bulging fontanelle).",
+    "Always ask 'what is normal for this child?' — baseline function matters more than population norms for CSHCN."
+  ],
+  "redFlags": [
+    "Respiratory distress in a child with a tracheostomy — assess for mucus plug or decannulation immediately.",
+    "Headache, vomiting, altered mental status, or bulging fontanelle in a child with a known VP shunt.",
+    "Any acute change from a CSHCN patient's caregiver-reported baseline."
+  ],
+  "commonMistakes": [
+    "Comparing a CSHCN patient's vitals/findings only to typical population norms instead of their known personal baseline.",
+    "Not engaging the caregiver early as a resource for equipment troubleshooting and baseline information.",
+    "Failing to consider VP shunt malfunction in a child with a known shunt presenting with vague neurologic symptoms."
+  ],
+  "memoryAids": [
+    "Ask the expert in the room — the caregiver usually knows this child's equipment and baseline best.",
+    "Trach distress: suction, check decannulation, replace or ventilate via stoma.",
+    "Known shunt + headache/vomiting/altered mental status = suspect shunt malfunction.",
+    "Normal for THIS child, not normal for children in general."
+  ],
+  "decisionTrees": [
+    {
+      "title": "CSHCN Field Assessment Approach",
+      "content": "Child with special healthcare needs encountered\n  → Engage caregiver early: ask about baseline function, equipment, and typical emergency presentation\n  → If tracheostomy present and in distress: attempt suctioning → check for decannulation → replace tube or ventilate via stoma if needed\n  → If known VP shunt and signs of increased ICP (headache, vomiting, altered mental status, bulging fontanelle): suspect shunt malfunction → standard increased-ICP precautions, rapid transport\n  → If G-tube or central venous catheter related concern: assess for infection signs, dislodgement, or malfunction; treat any associated acute presentation per general principles\n  → Compare all findings to the child's caregiver-reported personal baseline, not population norms, before determining significance\n  → Transport with caregiver involvement maintained throughout when feasible"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Children With Special Healthcare Needs"
+  ]
+}

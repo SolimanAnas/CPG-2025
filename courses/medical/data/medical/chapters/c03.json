@@ -1,0 +1,68 @@
+{
+  "id": "c03",
+  "title": "Endocrine Emergencies — Hypoglycemia, DKA & HHS",
+  "shortTitle": "Hypoglycemia, DKA & HHS",
+  "estimatedStudyTime": 35,
+  "difficulty": "Advanced",
+  "learningObjectives": [
+    "Recognize the field presentation of hypoglycemia and describe its treatment.",
+    "Describe the diagnostic framework for diabetic ketoacidosis (DKA).",
+    "Describe the diagnostic framework for hyperosmolar hyperglycemic state (HHS).",
+    "Differentiate DKA from HHS on field-relevant grounds.",
+    "Explain euglycemic DKA and why a normal glucose does not rule out DKA."
+  ],
+  "summary": [
+    {
+      "title": "Hypoglycemia — Fast to Recognize, Fast to Fix",
+      "content": "Hypoglycemia presents with a spectrum from mild symptoms (shakiness, diaphoresis, hunger, anxiety) to severe presentations (confusion, combativeness, seizure, unresponsiveness) as glucose falls further. It is common, rapidly correctable, and a well-known mimic of stroke, seizure, and behavioral emergencies — which is why a glucose check is a near-universal first step for any altered patient. Field treatment is oral glucose in an awake, cooperative patient with intact airway reflexes, or IV dextrose / IM glucagon per protocol for a patient who cannot safely take oral glucose."
+    },
+    {
+      "title": "Diabetic Ketoacidosis (DKA)",
+      "content": "DKA is a hyperglycemic emergency defined by three features together: hyperglycemia (glucose ≥200 mg/dL, or a prior history of diabetes even without meeting this threshold), ketosis (elevated ketones — beta-hydroxybutyrate ≥3.0 mmol/L or urine ketones 2+ or greater), and metabolic acidosis (pH <7.3 and/or bicarbonate <18 mEq/L). Classic field findings include polyuria/polydipsia leading up to the event, nausea/vomiting, abdominal pain, deep rapid (Kussmaul) respirations as a compensatory response to the acidosis, a fruity (acetone) breath odor, and dehydration. DKA is most classically associated with type 1 diabetes but can occur in type 2 diabetes as well, often precipitated by infection, missed insulin doses, or new-onset diabetes."
+    },
+    {
+      "title": "Euglycemic DKA",
+      "content": "Approximately 10% of DKA presentations occur with a glucose under 200 mg/dL — euglycemic DKA — most classically associated with SGLT2-inhibitor diabetes medications, but also seen with reduced oral intake, pregnancy, or partial insulin treatment before presentation. This means a normal or only mildly elevated glucose does not rule out DKA if the clinical picture otherwise fits (Kussmaul respirations, fruity breath, vomiting/abdominal pain, known diabetes) — glucose alone is an incomplete screening tool for this condition."
+    },
+    {
+      "title": "Hyperosmolar Hyperglycemic State (HHS)",
+      "content": "HHS is a hyperglycemic emergency defined by severe hyperglycemia (often glucose >600 mg/dL), significant hyperosmolality (>320 mOsm/kg), minimal or absent ketosis, and near-normal pH/bicarbonate — distinguishing it from DKA's acidosis-driven picture. HHS is more typically seen in older adults with type 2 diabetes, often with a slower onset over days, profound dehydration, and a more prominent altered-mental-status/obtundation picture than DKA, reflecting the severe hyperosmolar state's direct effect on the brain. Some patients present with mixed features of both DKA and HHS."
+    },
+    {
+      "title": "Field Management",
+      "content": "For both DKA and HHS: supportive care (oxygen as needed, IV access and isotonic fluids per protocol, cardiac monitoring), careful attention to mental status and airway protection given the risk of vomiting, and rapid transport — definitive treatment (insulin, careful fluid/electrolyte correction) happens in the hospital. Field providers should always check glucose in any patient with altered mental status, vomiting, abdominal pain, or unexplained rapid breathing, since DKA/HHS can mimic other conditions and the reverse is also true (do not assume every diabetic patient with altered mental status is hypoglycemic without checking)."
+    }
+  ],
+  "clinicalPearls": [
+    "Hypoglycemia is common, fast, and correctable — check glucose early in any altered patient.",
+    "DKA = hyperglycemia (or known diabetes) + ketosis + acidosis, together — not any one feature alone.",
+    "About 10% of DKA is euglycemic (glucose <200 mg/dL) — don't rule out DKA on a normal glucose alone if the clinical picture fits.",
+    "HHS = severe hyperglycemia + hyperosmolality + minimal ketosis + near-normal pH — a different mechanism than DKA's acidosis."
+  ],
+  "redFlags": [
+    "Kussmaul respirations, fruity breath odor, vomiting/abdominal pain in a known or new diabetic patient — think DKA even with a near-normal glucose.",
+    "Profound dehydration with severe altered mental status/obtundation in an older type 2 diabetic — think HHS.",
+    "Any diabetic patient with altered mental status — check glucose rather than assuming the direction of the abnormality."
+  ],
+  "commonMistakes": [
+    "Ruling out DKA because the glucose is 'not that high,' without considering euglycemic DKA.",
+    "Assuming every altered diabetic patient is hypoglycemic without checking glucose.",
+    "Treating DKA/HHS field management as identical to a simple hypoglycemia treat-and-reassess — both need IV fluids and rapid transport, not just glucose correction."
+  ],
+  "memoryAids": [
+    "DKA: hyperglycemia + ketosis + acidosis, all together.",
+    "Kussmaul + fruity breath = think DKA.",
+    "HHS: sky-high glucose, sky-high osmolality, minimal ketones.",
+    "10% of DKA hides behind a normal-ish glucose — euglycemic DKA is real."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Suspected Diabetic Emergency Field Approach",
+      "content": "Altered mental status, vomiting, abdominal pain, or unexplained rapid breathing in a known or possible diabetic\n  → Check blood glucose immediately\n  → Low glucose → treat hypoglycemia per protocol (oral glucose if awake/cooperative; IV dextrose or IM glucagon per protocol if not) → reassess\n  → High or near-normal glucose with Kussmaul respirations, fruity breath, vomiting/abdominal pain, dehydration → suspect DKA (consider euglycemic DKA even if glucose is only mildly elevated) → supportive care, IV fluids per protocol, rapid transport\n  → Very high glucose with severe dehydration, minimal respiratory compensation, and profound altered mental status in an older type 2 diabetic → suspect HHS → supportive care, IV fluids per protocol, rapid transport\n  → All suspected DKA/HHS: monitor airway closely given vomiting risk, transport for definitive hospital treatment"
+    }
+  ],
+  "references": [
+    "ADA Standards of Care in Diabetes—2026, Section 16 (Diabetes Care in the Hospital)",
+    "2024 ADA Consensus Report: Hyperglycemic Crises in Adults With Diabetes"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "chapter": "c03",
+  "cards": [
+    { "id": "c03_fc01", "question": "What is the hallmark sign of asthma?", "answer": "Wheezing.", "category": "Respiratory" },
+    { "id": "c03_fc02", "question": "What is first-line prehospital treatment for asthma not responding to home therapy?", "answer": "Nebulized beta-2 agonists (e.g., albuterol).", "category": "Respiratory" },
+    { "id": "c03_fc03", "question": "What does a 'silent chest' in an asthmatic mean?", "answer": "Critical airway obstruction with minimal air movement — a worse sign than audible wheezing, not an improvement.", "category": "Respiratory" },
+    { "id": "c03_fc04", "question": "How is respiratory failure identified?", "answer": "A very slow respiratory rate (bradypnea) with shallow, ineffective breaths.", "category": "Respiratory" },
+    { "id": "c03_fc05", "question": "Why is bradypneic respiratory failure easy to miss?", "answer": "The patient may appear calm rather than visibly distressed, unlike a tachypneic patient working hard to breathe.", "category": "Respiratory" },
+    { "id": "c03_fc06", "question": "In which patient population does spontaneous pneumothorax commonly occur?", "answer": "COPD patients, due to rupture of weakened lung tissue (blebs) without trauma.", "category": "Respiratory" },
+    { "id": "c03_fc07", "question": "How does spontaneous pneumothorax present?", "answer": "Sudden shortness of breath, often with pleuritic chest pain, and diminished/absent breath sounds on the affected side.", "category": "Respiratory" },
+    { "id": "c03_fc08", "question": "What is the classic presentation of pulmonary embolism?", "answer": "Sudden onset dyspnea and pleuritic chest pain, often with tachycardia; risk factors include immobility, surgery, malignancy.", "category": "Respiratory/Cardio" },
+    { "id": "c03_fc09", "question": "What two findings should make you suspect sepsis in a respiratory patient?", "answer": "Fever and altered level of consciousness.", "category": "Respiratory" },
+    { "id": "c03_fc10", "question": "What is a common thread across almost all respiratory complaints?", "answer": "Hypoxia — supplemental oxygen and pulse oximetry monitoring apply broadly.", "category": "Respiratory" },
+    { "id": "c03_fc11", "question": "Why is a slow, shallow, 'calm' breathing pattern dangerous?", "answer": "It can represent respiratory failure — the patient is running out of reserve, not stabilizing.", "category": "Respiratory" },
+    { "id": "c03_fc12", "question": "What underlying source commonly causes sepsis presenting with respiratory symptoms?", "answer": "Pneumonia or another infectious source, especially in elderly patients.", "category": "Infectious Disease" },
+    { "id": "c03_fc13", "question": "What risk factors raise suspicion for pulmonary embolism?", "answer": "Recent immobility, surgery, malignancy, or a history of clotting disorders.", "category": "Respiratory/Cardio" },
+    { "id": "c03_fc14", "question": "Why does a COPD patient with even a small pneumothorax show disproportionate distress?", "answer": "Their baseline pulmonary reserve is already reduced, so a small additional insult produces a larger clinical impact.", "category": "Respiratory" },
+    { "id": "c03_fc15", "question": "What should you always screen for in a respiratory-complaint patient with fever and confusion?", "answer": "Sepsis, with attention to a possible infectious source such as pneumonia.", "category": "Respiratory" }
+  ]
+}

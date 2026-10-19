@@ -1,0 +1,198 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "A patient stood in a radiation field but has no radioactive material on or in them. This is:",
+      "options": ["A. External contamination", "B. Internal contamination", "C. Irradiation (exposure) — the patient is not radioactive", "D. A dirty bomb injury"],
+      "correct": 2,
+      "rationale": "Irradiation is exposure to a radiation field, like an X-ray. Once out of the field, the patient carries no radioactive material and cannot contaminate others.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q02",
+      "question": "Which three principles protect responders from radiation?",
+      "options": [
+        "A. Time, distance, shielding",
+        "B. Airway, breathing, circulation",
+        "C. Detect, decon, dispose",
+        "D. Isolate, quarantine, prophylax"
+      ],
+      "correct": 0,
+      "rationale": "Minimizing time, maximizing distance, and interposing shielding are the fundamental radiation-protection levers.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q03",
+      "question": "A contaminated patient also has an obstructed airway and severe hemorrhage. What is the correct priority?",
+      "options": [
+        "A. Full decontamination before any care",
+        "B. Treat the life-threatening injuries first, then decontaminate",
+        "C. Give potassium iodide before anything else",
+        "D. Refuse care until a radiation officer arrives"
+      ],
+      "correct": 1,
+      "rationale": "Trauma kills faster than external contamination. With standard precautions, airway and hemorrhage control come first; decon follows stabilization.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q04",
+      "question": "Does standard PPE protect a responder from penetrating gamma radiation?",
+      "options": [
+        "A. Yes, completely",
+        "B. No — PPE prevents contamination but distance and shielding reduce penetrating dose",
+        "C. Only if double-gloved",
+        "D. Only N95 respirators do"
+      ],
+      "correct": 1,
+      "rationale": "PPE stops particles from landing on skin/airway (contamination) but does not block gamma rays; time, distance, and shielding govern penetrating dose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q05",
+      "question": "A 'dirty bomb' (radiological dispersal device) causes its GREATEST immediate harm through:",
+      "options": [
+        "A. Acute radiation syndrome in everyone nearby",
+        "B. The conventional explosive blast, with contamination as a secondary and psychological threat",
+        "C. Thyroid cancer within hours",
+        "D. Internal contamination only"
+      ],
+      "correct": 1,
+      "rationale": "An RDD's immediate casualties come from the blast; the scattered radioactive material is usually a contamination and fear problem rather than an immediate lethal radiation dose.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q06",
+      "question": "In acute radiation syndrome, an earlier onset of vomiting indicates:",
+      "options": [
+        "A. A lower dose and better prognosis",
+        "B. A higher dose and worse prognosis",
+        "C. Nothing about dose",
+        "D. Internal contamination only"
+      ],
+      "correct": 1,
+      "rationale": "Time-to-vomiting is a rapid dose surrogate: the sooner and more severe the prodromal vomiting, the higher the dose received.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q07",
+      "question": "Which body system is affected first (at the lowest whole-body doses causing ARS)?",
+      "options": ["A. Cardiovascular/CNS", "B. Gastrointestinal", "C. Hematopoietic", "D. Renal"],
+      "correct": 2,
+      "rationale": "The hematopoietic system is most radiosensitive: falling blood counts cause infection and bleeding. GI and CV/CNS syndromes appear at progressively higher doses.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q08",
+      "question": "What does potassium iodide (KI) protect against?",
+      "options": [
+        "A. All radiation exposure",
+        "B. External gamma radiation",
+        "C. Thyroid uptake of radioactive iodine only",
+        "D. Blast injury"
+      ],
+      "correct": 2,
+      "rationale": "KI saturates the thyroid to block radioiodine uptake, reducing thyroid-cancer risk. It does nothing for other radionuclides or external radiation.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q09",
+      "question": "A nurse fears 'catching radiation' from a patient who was irradiated (exposed) but is not contaminated. The correct education is:",
+      "options": [
+        "A. The fear is justified — avoid the patient",
+        "B. An irradiated, non-contaminated patient is not radioactive and poses no risk, like someone who had an X-ray",
+        "C. The patient must be isolated for a week",
+        "D. Only lead aprons allow contact"
+      ],
+      "correct": 1,
+      "rationale": "Exposure is not contamination. A person who leaves a radiation field carries no source and cannot irradiate others — a key point for calming staff and enabling care.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q10",
+      "question": "The single most effective step to reduce external radiological contamination on a patient is:",
+      "options": ["A. Administering KI", "B. Removing the clothing", "C. Giving antibiotics", "D. Shaving the head"],
+      "correct": 1,
+      "rationale": "Clothing removal eliminates the large majority of external contamination, mirroring chemical decon; gentle washing addresses the rest.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q11",
+      "question": "When washing radiological contamination from intact skin and wounds, you should:",
+      "options": [
+        "A. Scrub abrasively to remove every particle",
+        "B. Wash gently with soap and water, working from wounds outward, avoiding abrasion",
+        "C. Use only alcohol",
+        "D. Avoid water entirely"
+      ],
+      "correct": 1,
+      "rationale": "Gentle washing prevents driving contamination into the skin or wounds; working from wounds outward protects against internal contamination.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q12",
+      "question": "Doubling your distance from a point radiation source affects dose how?",
+      "options": [
+        "A. Halves it",
+        "B. Reduces it dramatically (roughly to one quarter — inverse-square)",
+        "C. Has no effect",
+        "D. Doubles it"
+      ],
+      "correct": 1,
+      "rationale": "Dose from a point source follows the inverse-square law, so doubling distance cuts dose to about one-quarter — distance is a powerful, immediate protection.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q13",
+      "question": "Internal contamination occurs when radioactive material is:",
+      "options": [
+        "A. In a field around the patient",
+        "B. On the patient's clothing only",
+        "C. Taken into the body via inhalation, ingestion, or wounds",
+        "D. Detected by a monitor across the room"
+      ],
+      "correct": 2,
+      "rationale": "Internal contamination means the material is inside the body and requires medical management, unlike external contamination (removable) or irradiation (no material present).",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q14",
+      "question": "For which event is potassium iodide MOST relevant?",
+      "options": [
+        "A. A cobalt-60 external exposure",
+        "B. A release involving radioactive iodine (e.g., a reactor accident)",
+        "C. A pure blast injury",
+        "D. Any radiation event regardless of isotope"
+      ],
+      "correct": 1,
+      "rationale": "KI is useful specifically when radioiodine is released; it blocks thyroid uptake. It is irrelevant for isotopes that are not iodine or for external exposure.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q15",
+      "question": "Why is psychological/behavioral care a major component of radiological response?",
+      "options": [
+        "A. It is not important",
+        "B. Radiation fear is powerful and often exceeds the physical risk, generating worried-well surges and panic",
+        "C. Because radiation causes immediate psychosis",
+        "D. Only to reduce paperwork"
+      ],
+      "correct": 1,
+      "rationale": "The dread associated with radiation frequently produces large worried-well surges and psychological casualties that can overwhelm systems even when physical doses are low — clear communication is essential.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q16",
+      "question": "A responder is wearing full PPE near a strong sealed gamma source and feels fully protected. The flaw is:",
+      "options": [
+        "A. None — PPE is sufficient",
+        "B. PPE does not stop gamma radiation; the responder still needs to limit time, maximize distance, and use shielding",
+        "C. PPE increases the dose",
+        "D. Gamma radiation is harmless"
+      ],
+      "correct": 1,
+      "rationale": "Contamination PPE gives a false sense of safety against penetrating gamma rays. Only time, distance, and shielding reduce that dose.",
+      "difficulty": "Medium"
+    }
+  ]
+}

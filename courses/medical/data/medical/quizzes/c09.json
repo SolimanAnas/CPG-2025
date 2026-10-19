@@ -1,0 +1,175 @@
+{
+  "chapter": "c09",
+  "questions": [
+    {
+      "id": "c09_q01",
+      "question": "What is delirium?",
+      "options": [
+        "A. A chronic, progressive decline developing over months to years",
+        "B. An acute-onset, fluctuating disturbance in attention/awareness developing over hours to days, often reversible",
+        "C. A permanent cognitive impairment with no reversible causes",
+        "D. A normal part of aging requiring no evaluation"
+      ],
+      "correct": 1,
+      "rationale": "Delirium is acute, fluctuating, and often reversible once the underlying cause is treated.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q02",
+      "question": "What is dementia?",
+      "options": [
+        "A. An acute, fluctuating disturbance developing over hours",
+        "B. A chronic, progressive decline in cognitive function developing over months to years, generally not reversible",
+        "C. A condition always caused by medication effects",
+        "D. Always caused by infection"
+      ],
+      "correct": 1,
+      "rationale": "Dementia is a chronic, progressive cognitive decline, generally not reversible, unlike delirium.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q03",
+      "question": "Can delirium and dementia coexist in the same patient?",
+      "options": ["A. No, they are mutually exclusive", "B. Yes — a patient with baseline dementia can develop superimposed delirium from an acute illness", "C. Only in patients under 65", "D. Only if the patient has no prior cognitive history"],
+      "correct": 1,
+      "rationale": "Delirium can be superimposed on baseline dementia, which is part of why distinguishing acute change from chronic baseline matters.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q04",
+      "question": "How should acute confusion in a geriatric patient with a previously normal cognitive baseline be treated by default?",
+      "options": [
+        "A. As expected age-related decline requiring no further workup",
+        "B. As delirium until proven otherwise, prompting a search for a reversible cause",
+        "C. As a new diagnosis of dementia to be confirmed in the field",
+        "D. As a purely psychiatric condition"
+      ],
+      "correct": 1,
+      "rationale": "New acute confusion in a previously cognitively normal older adult should default to a delirium workup, not an assumption of dementia or normal aging.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q05",
+      "question": "What should a sudden worsening of confusion in a known dementia patient prompt?",
+      "options": [
+        "A. No action, since dementia patients are expected to fluctuate",
+        "B. A delirium workup, since this is not simply 'their dementia getting worse today'",
+        "C. Immediate psychiatric referral only",
+        "D. Assumption of a new dementia diagnosis"
+      ],
+      "correct": 1,
+      "rationale": "A sudden change in a dementia patient's baseline should prompt consideration of superimposed delirium and its reversible causes.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q06",
+      "question": "Which infections classically present with confusion as a primary or only symptom in older adults?",
+      "options": ["A. Common cold and sinusitis", "B. Urinary tract infection and pneumonia", "C. Only meningitis", "D. Infections never present with confusion"],
+      "correct": 1,
+      "rationale": "UTI and pneumonia are classic infections that can present primarily or only as confusion in geriatric patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q07",
+      "question": "Which of the following is a surprisingly common precipitant of delirium in older adults?",
+      "options": ["A. Urinary retention or constipation", "B. Regular exercise", "C. Adequate hydration", "D. Normal sleep patterns"],
+      "correct": 0,
+      "rationale": "Urinary retention and constipation are often-overlooked but common precipitants of geriatric delirium.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q08",
+      "question": "What should be checked immediately in an acutely confused geriatric patient?",
+      "options": ["A. Blood glucose", "B. Vaccination history", "C. Recent dental visits", "D. Employment status"],
+      "correct": 0,
+      "rationale": "A glucose check is a core, fast, high-value step in evaluating acute confusion in any patient, including geriatric patients.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "c09_q09",
+      "question": "What is a 'silent MI'?",
+      "options": [
+        "A. A myocardial infarction presenting without chest pain, instead as confusion, weakness, or shortness of breath",
+        "B. An MI that never causes any symptoms at all",
+        "C. An MI that only occurs in young patients",
+        "D. A minor, clinically insignificant cardiac event"
+      ],
+      "correct": 0,
+      "rationale": "A silent MI presents atypically without chest pain, more common in older adults, and may show as confusion, weakness, or dyspnea alone.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q10",
+      "question": "How might infection present atypically in an older adult?",
+      "options": ["A. With an exaggerated fever response", "B. Without fever, due to a blunted febrile response", "C. Identically to younger patients in all cases", "D. With no other symptoms possible"],
+      "correct": 1,
+      "rationale": "Older adults often have a blunted febrile response, so infection can present without the expected fever.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q11",
+      "question": "How might an acute abdomen present atypically in an older adult?",
+      "options": [
+        "A. With more severe pain than in younger patients",
+        "B. With minimal pain despite significant underlying pathology",
+        "C. Identically to a young, healthy adult",
+        "D. Acute abdomen cannot occur in older adults"
+      ],
+      "correct": 1,
+      "rationale": "Older adults may have minimal pain despite significant intra-abdominal pathology, warranting a lower threshold of suspicion.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q12",
+      "question": "Why does an older adult's own personal baseline matter more than a generic 'normal for age' assumption?",
+      "options": [
+        "A. It doesn't matter — all older adults should be assessed identically",
+        "B. The patient's own baseline (per caregiver report) is the most useful reference point for determining what's abnormal today",
+        "C. Baseline information is only relevant for pediatric patients",
+        "D. Baseline assessment replaces the need for a glucose check"
+      ],
+      "correct": 1,
+      "rationale": "Comparing to the patient's own known baseline, rather than a generic assumption, is the most accurate way to identify a true acute change.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "c09_q13",
+      "question": "An 82-year-old with known mild dementia (per family) is found more confused than usual, with a low-grade fever and new urinary symptoms. What should this prompt?",
+      "options": [
+        "A. Assumption that this is simply dementia progression, no further workup needed",
+        "B. A delirium workup, given the acute change from baseline and possible UTI as a reversible cause",
+        "C. Immediate diagnosis of a new psychiatric condition",
+        "D. No action since the patient has a known dementia diagnosis"
+      ],
+      "correct": 1,
+      "rationale": "Acute worsening from a known dementia baseline, combined with signs suggesting infection, should prompt a delirium workup rather than dismissal as dementia progression.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q14",
+      "question": "A 79-year-old presents with only mild fatigue and confusion, no chest pain, but is later found to be having a myocardial infarction. What does this illustrate?",
+      "options": [
+        "A. Older adults always present with classic MI symptoms",
+        "B. The atypical presentation phenomenon — a lower threshold of suspicion is warranted in geriatric patients",
+        "C. MI cannot occur without chest pain in any patient",
+        "D. This presentation should be dismissed as unrelated to cardiac disease"
+      ],
+      "correct": 1,
+      "rationale": "This scenario illustrates 'silent MI' and the broader principle that geriatric patients often present atypically, requiring a lower threshold of clinical suspicion.",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "c09_q15",
+      "question": "What distinguishes the field approach to 'mild-seeming' symptoms in a geriatric patient from a younger adult?",
+      "options": [
+        "A. No difference — the same threshold of suspicion applies to all ages",
+        "B. A lower threshold of suspicion and broader differential are warranted, since atypical presentations can mask serious conditions",
+        "C. Geriatric patients should always be assumed to be exaggerating symptoms",
+        "D. Mild symptoms in geriatric patients can always be safely dismissed"
+      ],
+      "correct": 1,
+      "rationale": "Given the tendency toward atypical presentation in older adults, providers should maintain a lower threshold of suspicion for serious underlying conditions.",
+      "difficulty": "Medium"
+    }
+  ]
+}

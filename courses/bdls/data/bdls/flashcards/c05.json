@@ -1,0 +1,20 @@
+{
+  "chapter": "c05",
+  "cards": [
+    { "id": "c05_fc01", "question": "What is a disaster 'signature'?", "answer": "The predictable injury/illness pattern of a hazard type — e.g., drowning in floods, crush in earthquakes — which lets responders anticipate casualties.", "category": "Concepts" },
+    { "id": "c05_fc02", "question": "What is the leading cause of death in hurricanes and floods?", "answer": "Drowning — frequently involving vehicles driven into floodwater.", "category": "Floods" },
+    { "id": "c05_fc03", "question": "Why does carbon monoxide poisoning spike after storms?", "answer": "Power outages lead people to run generators or charcoal indoors; CO is odorless and can poison whole families.", "category": "Floods" },
+    { "id": "c05_fc04", "question": "What is crush injury?", "answer": "Direct muscle and tissue damage from prolonged compression, typically in structural collapse entrapment.", "category": "Earthquakes" },
+    { "id": "c05_fc05", "question": "What is crush syndrome?", "answer": "The systemic reperfusion effects after compression release: hyperkalemia (dysrhythmias), myoglobinuria (kidney injury), acidosis, and shock.", "category": "Earthquakes" },
+    { "id": "c05_fc06", "question": "When should fluid resuscitation begin for an entrapped crush patient?", "answer": "Before extrication/release of the compression whenever possible — release is the physiologic danger point.", "category": "Earthquakes" },
+    { "id": "c05_fc07", "question": "What electrolyte emergency kills crush patients at release?", "answer": "Hyperkalemia — potassium from damaged muscle floods the circulation and can cause fatal dysrhythmias.", "category": "Earthquakes" },
+    { "id": "c05_fc08", "question": "What is the tornado injury signature?", "answer": "Ballistic debris: penetrating trauma, complex heavily contaminated wounds, fractures, and head injuries along a narrow damage path.", "category": "Tornadoes" },
+    { "id": "c05_fc09", "question": "Why do tornado wounds need special attention?", "answer": "They are contaminated with soil and foreign material — tetanus prophylaxis and consideration of delayed closure are important.", "category": "Tornadoes" },
+    { "id": "c05_fc10", "question": "Define heat stroke.", "answer": "Life-threatening hyperthermia with altered mental status — treated with immediate rapid active cooling, then transport (cool first).", "category": "Heat & Cold" },
+    { "id": "c05_fc11", "question": "Who dies in heat waves?", "answer": "The elderly, isolated people without cooling, and those on medications impairing thermoregulation — often quietly at home.", "category": "Heat & Cold" },
+    { "id": "c05_fc12", "question": "What kills in cold events besides hypothermia?", "answer": "Carbon monoxide poisoning from improvised indoor heating and house fires.", "category": "Heat & Cold" },
+    { "id": "c05_fc13", "question": "What ongoing hazard endangers earthquake rescuers?", "answer": "Aftershocks and progressive structural collapse — hazard assessment must be continuous.", "category": "Earthquakes" },
+    { "id": "c05_fc14", "question": "What is the 'public-health tail' of a natural disaster?", "answer": "Weeks of shelter health needs, water/sanitation failures, interrupted chronic care (dialysis, oxygen, medications), vectors, mold, and mental-health impacts.", "category": "Public Health" },
+    { "id": "c05_fc15", "question": "Why do EDs surge for weeks after a hurricane?", "answer": "Chronic disease decompensates when medications, dialysis, oxygen, and power-dependent devices are lost — the medical surge outlasts the trauma surge.", "category": "Public Health" }
+  ]
+}

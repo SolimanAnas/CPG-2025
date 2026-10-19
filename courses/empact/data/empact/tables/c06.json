@@ -1,0 +1,27 @@
+{
+  "chapter": "c06",
+  "tables": [
+    {
+      "id": "c06_t01",
+      "title": "Neurological Emergency Key Findings",
+      "headers": ["Condition", "Classic Finding(s)", "Key Action"],
+      "rows": [
+        ["Elevated ICP", "Cushing's Triad: hypertension, bradycardia, altered respirations", "Urgent transport; airway readiness"],
+        ["Stroke", "FAST positive: face/arm/speech deficit", "Establish last known well time; check glucose first"],
+        ["Meningitis", "Fever, nuchal rigidity, altered mental status", "Precautions; rapid transport"],
+        ["Diabetic emergency (stroke mimic)", "Stroke-like deficit + abnormal glucose", "Correct glucose; reassess deficit"]
+      ]
+    },
+    {
+      "id": "c06_t02",
+      "title": "FAST Stroke Assessment",
+      "headers": ["Letter", "Assessment", "What to Look For"],
+      "rows": [
+        ["F", "Face", "Facial droop, asymmetry"],
+        ["A", "Arm", "Drift or weakness on one side"],
+        ["S", "Speech", "Slurred speech, word-finding difficulty"],
+        ["T", "Time", "Exact last known well time — drives treatment eligibility"]
+      ]
+    }
+  ]
+}

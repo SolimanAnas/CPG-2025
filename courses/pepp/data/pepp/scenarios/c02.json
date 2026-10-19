@@ -1,0 +1,53 @@
+{
+  "chapter": "c02",
+  "cases": [
+    {
+      "id": "c02_s01",
+      "title": "From the Doorway",
+      "presentation": "You enter a home and see a 3-year-old boy sitting quietly in his mother's lap. He is looking around the room, tracking your movement, and reaches for a toy his sister offers. His breathing looks effortless and his skin has a normal pink color.",
+      "vitals": { "appearance": "Alert, interactive, tracks movement", "wob": "No retractions, no abnormal sounds", "circulation": "Normal color" },
+      "question": "What does this PAT pattern suggest, and what should you do next?",
+      "options": [
+        "A: All three legs normal — this is a reassuring PAT; proceed to a full hands-on primary assessment at a normal pace.",
+        "B: This is enough information to clear the child without further assessment.",
+        "C: You should immediately begin aggressive interventions given the visit itself is concerning.",
+        "D: Skip vital signs since the child looks fine."
+      ],
+      "correct": 0,
+      "explanation": "All three PAT legs (Appearance, Work of Breathing, Circulation to Skin) appear normal, giving a reassuring general impression. This sets a calmer pace for the encounter, but a full hands-on primary assessment (ABCDE) still follows — the PAT never substitutes for it.",
+      "clinicalPearl": "A reassuring PAT buys you time and calm, not an exemption from the primary assessment."
+    },
+    {
+      "id": "c02_s02",
+      "title": "Two Legs Down",
+      "presentation": "A 5-year-old girl with a history of asthma is sitting in the tripod position, with visible subcostal and intercostal retractions and audible wheezing. She is alert, tracking you, and answering questions appropriately. Her skin color looks normal.",
+      "vitals": { "appearance": "Alert, interactive (normal)", "wob": "Tripod position, retractions, wheeze (abnormal)", "circulation": "Normal color" },
+      "question": "Which PAT category does this pattern suggest, and how urgent is it?",
+      "options": [
+        "A: CNS/metabolic problem — treat as a neurologic emergency.",
+        "B: Respiratory problem (abnormal Work of Breathing with normal Appearance and Circulation) — urgent but with intact compensation reflected by her normal Appearance.",
+        "C: Cardiopulmonary failure — the most urgent category.",
+        "D: A normal, reassuring PAT."
+      ],
+      "correct": 1,
+      "explanation": "Only the Work of Breathing leg is abnormal here; her Appearance remaining normal suggests she is still compensating well despite significant respiratory effort. This points to a respiratory category requiring urgent treatment (e.g., bronchodilator therapy) rather than the higher-urgency multi-leg patterns.",
+      "clinicalPearl": "A normal Appearance despite visible respiratory effort is a relatively reassuring sign — it means the compensation is still working."
+    },
+    {
+      "id": "c02_s03",
+      "title": "All Three Legs Abnormal",
+      "presentation": "A 7-month-old infant is limp and unresponsive to his mother's voice, with slow, irregular, gasping-appearing breaths and dusky, mottled skin.",
+      "vitals": { "appearance": "Limp, unresponsive (abnormal)", "wob": "Irregular, gasping breaths (abnormal)", "circulation": "Dusky, mottled (abnormal)" },
+      "question": "What does this pattern indicate, and what is the priority?",
+      "options": [
+        "A: A mild, self-limited illness requiring routine transport.",
+        "B: Cardiopulmonary failure — abnormal findings across all three PAT legs — the highest-acuity pattern, requiring the most immediate, aggressive response.",
+        "C: A purely circulatory problem with no respiratory component.",
+        "D: This pattern is not clinically meaningful without vital signs first."
+      ],
+      "correct": 1,
+      "explanation": "Abnormal findings across all three PAT legs (Appearance, Work of Breathing, Circulation to Skin) together indicate cardiopulmonary failure, the most severe PAT pattern, demanding the most urgent, simultaneous life-saving response — this recognition happens before any vital sign is even obtained.",
+      "clinicalPearl": "All three legs abnormal is the PAT's loudest alarm — it means go now, with everything, before you've measured a single vital sign."
+    }
+  ]
+}

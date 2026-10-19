@@ -1,0 +1,20 @@
+{
+  "chapter": "c03",
+  "cards": [
+    { "id": "c03_fc01", "question": "What is the Incident Command System (ICS)?", "answer": "A standardized, scalable management structure providing common terminology, clear chain of command, defined roles, and integrated communications for any incident.", "category": "ICS Basics" },
+    { "id": "c03_fc02", "question": "Name the five ICS functional sections.", "answer": "Command, Operations, Planning, Logistics, and Finance/Administration.", "category": "ICS Structure" },
+    { "id": "c03_fc03", "question": "What does the Operations section do?", "answer": "The tactical work of the response: rescue, triage, treatment, and transport.", "category": "ICS Structure" },
+    { "id": "c03_fc04", "question": "What does the Planning section do?", "answer": "Collects and evaluates information, tracks resources, and prepares the incident action plan.", "category": "ICS Structure" },
+    { "id": "c03_fc05", "question": "What does the Logistics section do?", "answer": "Obtains everything the response needs — supplies, facilities, communications, food, and medical support for responders.", "category": "ICS Structure" },
+    { "id": "c03_fc06", "question": "What does Finance/Administration handle?", "answer": "Cost tracking, contracts and procurement, compensation/claims, and time records.", "category": "ICS Structure" },
+    { "id": "c03_fc07", "question": "Who makes up the command staff?", "answer": "The safety officer, public information officer, and liaison officer, working directly for the incident commander.", "category": "ICS Structure" },
+    { "id": "c03_fc08", "question": "What unique authority does the safety officer hold?", "answer": "The authority to immediately stop any operation that poses imminent danger.", "category": "Safety" },
+    { "id": "c03_fc09", "question": "What is span of control in ICS?", "answer": "One supervisor should directly manage about 3–7 people (classically 5); beyond that, the structure subdivides.", "category": "ICS Principles" },
+    { "id": "c03_fc10", "question": "What is unified command?", "answer": "A shared command arrangement in which key agencies/jurisdictions jointly set objectives under one coordinated plan with a single Operations section.", "category": "ICS Principles" },
+    { "id": "c03_fc11", "question": "What is NIMS?", "answer": "The National Incident Management System — the U.S. doctrine standardizing incident management (ICS, resource typing, credentialing, mutual aid, EOCs) across agencies and levels of government.", "category": "NIMS" },
+    { "id": "c03_fc12", "question": "How does a hospital use incident command?", "answer": "Through an ICS adaptation (e.g., HICS) applying the same five functions to facility problems — surge, staffing, supplies, evacuation — with roles defined by job action sheets.", "category": "Hospital ICS" },
+    { "id": "c03_fc13", "question": "In ICS, who do you take direction from?", "answer": "Your single assigned incident supervisor — not your everyday manager (unity of command).", "category": "ICS Principles" },
+    { "id": "c03_fc14", "question": "How is command transferred?", "answer": "Formally, with a briefing of the incoming commander, and an announcement so everyone knows who now commands.", "category": "ICS Principles" },
+    { "id": "c03_fc15", "question": "What is the role of an Emergency Operations Center (EOC)?", "answer": "Off-scene coordination and support — resources, information, policy — supporting (not replacing) on-scene incident command.", "category": "NIMS" }
+  ]
+}

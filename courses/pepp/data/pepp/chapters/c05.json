@@ -1,0 +1,68 @@
+{
+  "id": "c05",
+  "title": "Respiratory Distress & Respiratory Failure",
+  "shortTitle": "Respiratory Distress & Failure",
+  "estimatedStudyTime": 30,
+  "difficulty": "Intermediate",
+  "learningObjectives": [
+    "Distinguish respiratory distress from respiratory failure.",
+    "Recognize the four categories of pediatric respiratory compromise.",
+    "Identify early PAT/exam findings that predict impending respiratory failure.",
+    "Describe field management appropriate for respiratory distress and failure.",
+    "Explain why respiratory problems are the leading pathway to pediatric cardiac arrest."
+  ],
+  "summary": [
+    {
+      "title": "Distress vs Failure",
+      "content": "Respiratory distress describes a child who is working hard to breathe but is still compensating — increased work of breathing (retractions, nasal flaring, grunting), often with tachypnea, but generally adequate oxygenation and mental status. Respiratory failure describes a child whose compensation has failed — inadequate oxygenation and/or ventilation is now present, marked by altered mental status, cyanosis, bradypnea or irregular breathing, and profound fatigue. The transition from distress to failure can happen quickly, and PEPP teaches recognizing the early warning signs of that transition as a top priority."
+    },
+    {
+      "title": "The Four Categories of Pediatric Respiratory Compromise",
+      "content": "Pediatric respiratory problems are organized into four categories by the level of the problem. Upper airway obstruction (e.g., croup, foreign body, epiglottitis) typically causes stridor. Lower airway disease (e.g., asthma, bronchiolitis) typically causes wheezing and prolonged expiration. Lung tissue (parenchymal) disease (e.g., pneumonia, pulmonary edema) typically causes grunting, crackles, and diminished breath sounds. Disordered control of breathing (e.g., from a CNS problem, toxin, or neuromuscular disease) causes an irregular rate/pattern without the classic sounds of the other three categories. Categorizing by mechanism guides both what to expect on exam and which field treatment is appropriate."
+    },
+    {
+      "title": "Early Warning Signs of Impending Failure",
+      "content": "Signals that a child is approaching respiratory failure, even before oxygen saturation drops: worsening or new grunting, decreasing (not increasing) work of breathing in a child who was previously struggling hard — reflecting exhaustion rather than improvement — a change in Appearance on the PAT (from anxious/agitated to lethargic), and a falling or irregular respiratory rate after a period of tachypnea. Any of these should prompt immediate escalation of support, since they often precede a measurable drop in SpO2."
+    },
+    {
+      "title": "Field Management",
+      "content": "For respiratory distress, field management is generally positioning of comfort, supplemental oxygen, and treatment targeted to the likely category (e.g., nebulized bronchodilator for suspected lower-airway disease), with close monitoring for any sign of transition toward failure. For respiratory failure, field management is assisted ventilation — bag-mask ventilation with high-flow oxygen — and rapid transport; PEPP frames this as the field recognition and initial stabilization step, with drug-assisted airway management and cardiac-arrest-specific ventilation parameters covered in depth by the PALS reviewer."
+    },
+    {
+      "title": "Why This Matters So Much in Pediatrics",
+      "content": "Respiratory problems are the leading pathway to pediatric cardiac arrest — unlike adults, where a primary cardiac event is more common. This means that recognizing and treating respiratory distress before it becomes failure is one of the single highest-yield interventions in all of pediatric prehospital care, and is a recurring theme across nearly every later chapter in this course."
+    }
+  ],
+  "clinicalPearls": [
+    "Respiratory distress = compensating; respiratory failure = compensation has failed. The transition can happen fast.",
+    "Four categories: upper airway (stridor), lower airway (wheeze), lung tissue (grunting/crackles), disordered control of breathing (irregular pattern, no classic sounds).",
+    "Decreasing work of breathing in a previously struggling child can mean exhaustion, not improvement — a dangerous, easily misread sign.",
+    "Respiratory problems are the leading pathway to pediatric cardiac arrest — early recognition and treatment prevent the arrest, not just treat it."
+  ],
+  "redFlags": [
+    "A child who was struggling hard to breathe now appears calmer and less effortful — verify this isn't exhaustion before feeling reassured.",
+    "New or worsening grunting.",
+    "Appearance shifting from anxious/agitated to lethargic on repeat PAT."
+  ],
+  "commonMistakes": [
+    "Mistaking a fatiguing child's 'calmer' appearance for genuine improvement.",
+    "Treating all four respiratory categories the same way instead of matching treatment to the likely mechanism.",
+    "Waiting for SpO2 to fall before escalating support, when other findings already signal deterioration."
+  ],
+  "memoryAids": [
+    "Distress compensates, failure collapses.",
+    "Stridor = upper, wheeze = lower, grunt/crackles = tissue, irregular-no-sound = control problem.",
+    "'Calmer' after struggling hard is a red flag, not relief — check for exhaustion.",
+    "Respiratory first, cardiac second — that's the pediatric arrest pathway."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Respiratory Distress vs Failure Recognition and Management",
+      "content": "Respiratory complaint\n  → Categorize: Upper airway (stridor) | Lower airway (wheeze) | Lung tissue (grunt/crackles) | Disordered control (irregular, no classic sound)\n  → Assess for distress vs failure signs:\n     Distress: increased WOB, tachypnea, adequate oxygenation/mentation → position of comfort, O2, category-targeted treatment, close monitoring\n     Failure (or transitioning): altered mentation, cyanosis, bradypnea/irregular pattern, exhaustion (including 'improving' WOB after struggling) → assist ventilation (BVM + high-flow O2), rapid transport\n  → For arrest-level airway/ventilation depth beyond field stabilization: see PALS reviewer"
+    }
+  ],
+  "references": [
+    "AAP Pediatric Education for Prehospital Professionals (PEPP), 4th Edition — Respiratory Emergencies",
+    "courses/pals/data/pals/tables/c04.json — Four Categories of Pediatric Respiratory Compromise (cross-referenced terminology)"
+  ]
+}

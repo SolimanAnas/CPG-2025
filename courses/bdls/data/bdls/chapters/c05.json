@@ -1,0 +1,72 @@
+{
+  "id": "c05",
+  "title": "Natural Disasters",
+  "shortTitle": "Natural Disasters",
+  "estimatedStudyTime": 32,
+  "difficulty": "Beginner",
+  "learningObjectives": [
+    "Describe the characteristic injury and illness patterns of major natural disaster types.",
+    "Explain why most flood and hurricane deaths are preventable drownings.",
+    "Recognize crush injury and crush syndrome after structural collapse.",
+    "Describe health effects of extreme heat and cold events.",
+    "Explain the public-health consequences that follow natural disasters.",
+    "Apply the DISASTER Paradigm to natural events."
+  ],
+  "summary": [
+    {
+      "title": "Each Hazard Has a Signature",
+      "content": "Natural disasters produce predictable injury patterns — the 'signature' of the hazard. Knowing the signature lets responders anticipate casualties before assessment: drowning in floods, crush and dust injuries in earthquakes, penetrating debris trauma in tornadoes, and heat illness in heat waves. Anticipation drives the support requests and hospital warnings of the DISASTER Paradigm."
+    },
+    {
+      "title": "Hurricanes and Floods",
+      "content": "Most hurricane and flood deaths are drownings, and many involve vehicles driven into floodwater — which is why 'turn around, don't drown' is a mitigation message. Other threats: blunt trauma from debris, electrocution from downed lines and generators, carbon monoxide poisoning from indoor generator use, wound infections from contaminated water, and the exacerbation of chronic disease when medications, dialysis, and oxygen supplies are lost. The health system impact often outlasts the storm by weeks."
+    },
+    {
+      "title": "Earthquakes: Crush Injury and Crush Syndrome",
+      "content": "Earthquake casualties cluster around structural collapse: fractures, head injuries, and entrapment. Prolonged compression of muscle causes crush injury; when the compression is released, the systemic reperfusion of muscle breakdown products — potassium, myoglobin, acids — produces crush syndrome: hyperkalemia with dysrhythmias, myoglobinuric kidney injury, and shock. Aggressive fluid resuscitation ideally begins BEFORE extrication, and sudden death at release is a known hazard. Aftershocks endanger rescuers and demand continuous hazard reassessment."
+    },
+    {
+      "title": "Tornadoes and Severe Wind",
+      "content": "Tornadoes hurl debris at ballistic speeds, producing penetrating trauma, complex contaminated wounds, fractures, and head injuries. Casualties are often concentrated along a narrow damage path, and wounds are heavily contaminated with soil and foreign material — tetanus prophylaxis and delayed closure considerations matter. Damaged infrastructure complicates access and transport."
+    },
+    {
+      "title": "Extreme Heat and Cold",
+      "content": "Heat waves are among the deadliest natural hazards, killing through heat stroke — hyperthermia with altered mental status, a true emergency treated with rapid active cooling. The vulnerable die quietly at home: the elderly, the isolated, those without air conditioning, people on medications impairing thermoregulation. Cold events kill through hypothermia and carbon monoxide poisoning from improvised heating. Both extremes surge EDs with exacerbations of cardiac, respiratory, and renal disease."
+    },
+    {
+      "title": "The Public-Health Tail",
+      "content": "After the acute phase, natural disasters leave a long public-health tail: displaced populations in shelters (with infectious disease, medication, and mental-health needs), damaged water and sanitation systems, vector increases, interrupted chronic care, and mold and remediation hazards. Disaster medicine includes anticipating and staffing this tail, not just the first 24 hours."
+    }
+  ],
+  "clinicalPearls": [
+    "Ask what the hazard's signature is and you will know your casualties before they arrive.",
+    "In crush entrapment, start aggressive IV fluids before releasing the compression — the release is the physiologic danger point.",
+    "After storms, think carbon monoxide: generators run indoors kill quietly, often whole families.",
+    "Heat stroke = hyperthermia + altered mental status: cool first, transport cooling."
+  ],
+  "redFlags": [
+    "Rescuers entering unstable structures between aftershocks without engineering clearance.",
+    "A 'rescued' entrapped patient who deteriorates suddenly after release — reperfusion hyperkalemia.",
+    "Shelter populations with fever clusters — infectious outbreaks follow crowding."
+  ],
+  "commonMistakes": [
+    "Treating floodwater as clean — wounds exposed to it are contaminated and infection-prone.",
+    "Releasing prolonged compression before fluid resuscitation and monitoring are ready.",
+    "Planning only for storm-day casualties and ignoring the weeks-long chronic-care surge."
+  ],
+  "memoryAids": [
+    "Floods drown, quakes crush, tornadoes shred, heat cooks, cold + generators poison.",
+    "Crush syndrome: released muscle sends up the 3 M's — myoglobin, metabolic acid, and (hyper)kalemia (K⁺).",
+    "'Turn around, don't drown' — vehicles are where flood deaths happen."
+  ],
+  "decisionTrees": [
+    {
+      "title": "Entrapped Casualty With Prolonged Compression",
+      "content": "Casualty entrapped with compressed limb/torso (>~1 hour)\n  → Scene/structural safety first (aftershocks, collapse)\n  → BEFORE release: IV access + aggressive isotonic fluids; cardiac monitoring if available\n  → Anticipate at release: hyperkalemia (dysrhythmia), hypotension, myoglobinuria\n  → Release → reassess immediately; treat dysrhythmias per protocol\n  → Rapid transport — flag as crush syndrome risk (renal protection, potassium management)"
+    }
+  ],
+  "references": [
+    "NDLSF BDLS v4.0 — Natural Disasters",
+    "NDLSF BDLS v4.0 — Public Health Consequences of Disasters"
+  ]
+}

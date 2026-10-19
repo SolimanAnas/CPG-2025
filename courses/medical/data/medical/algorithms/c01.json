@@ -1,0 +1,19 @@
+{
+  "chapter": "c01",
+  "algorithms": [
+    {
+      "id": "c01_alg01",
+      "title": "Suspected Stroke Field Recognition and Transport Decision",
+      "description": "Sequence for recognizing suspected stroke, ruling out a correctable mimic, and deciding on transport destination.",
+      "steps": [
+        "Identify a new focal neurologic deficit (current or recently resolved) using a validated stroke scale (e.g., CPSS: facial droop, arm drift, speech abnormality).",
+        "Check blood glucose immediately; treat hypoglycemia per protocol if present and reassess neurologic status.",
+        "Determine and precisely document the last-known-well time from the patient/bystanders.",
+        "Assess for LVO-suspicious findings (gaze deviation, severe combined face+arm weakness, neglect/denial) using a local LVO-screening scale if available.",
+        "Provide early hospital notification ('stroke alert') so the receiving facility can prepare.",
+        "Transport per local destination protocol — nearest stroke-capable hospital, or bypass to an endovascular-capable center if LVO screen is positive and system design supports it.",
+        "Reassess neurologic status serially en route without delaying transport for an extensive exam."
+      ]
+    }
+  ]
+}

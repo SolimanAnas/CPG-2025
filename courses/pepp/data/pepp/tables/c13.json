@@ -1,0 +1,17 @@
+{
+  "chapter": "c13",
+  "tables": [
+    {
+      "id": "c13_t01",
+      "title": "Common Pediatric Medical Technology and Field Concerns",
+      "headers": ["Device", "Purpose", "Common Field Concerns"],
+      "rows": [
+        ["Tracheostomy", "Surgical airway bypassing upper airway", "Mucus plugging, accidental decannulation, tube malposition"],
+        ["Gastrostomy (G-) tube", "Enteral feeding into the stomach", "Dislodgement, leakage; rarely acute unless peritoneal signs present"],
+        ["Ventriculoperitoneal (VP) shunt", "Diverts CSF to treat hydrocephalus", "Malfunction causing increased intracranial pressure"],
+        ["Central venous catheter", "Vascular access for frequent IV therapy", "Infection signs, line malfunction"],
+        ["Home ventilator", "Mechanical ventilation via tracheostomy", "Device-specific malfunction; caregiver usually expert in troubleshooting"]
+      ]
+    }
+  ]
+}
