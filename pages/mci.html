@@ -192,8 +192,10 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .tag-strips .s-yellow{background:var(--tri-yellow);color:var(--stock-ink)}
 .tag-strips .s-green{background:var(--tri-green)}
 
-.hub-h{font:600 1.5625rem/1.1 var(--f-display);letter-spacing:.005em;color:var(--text);margin:32px 2px 4px}
-.hub-note{font:400 1rem/1.45 var(--f-ui);color:var(--dim);margin:0 2px 12px;max-width:60ch}
+.hub-sec{margin-top:28px}
+.hub-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 2px 10px}
+.hub-h{margin:0;font:600 1.5625rem/1.1 var(--f-display);letter-spacing:.005em;color:var(--text)}
+.hub-aside{font:400 .9375rem/1.3 var(--f-ui);color:var(--dim);text-align:right}
 .hub-panel{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:12px}
 
 .mode-row{
@@ -210,9 +212,17 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .mode-btn.active-study{background:var(--green-d);color:var(--green);box-shadow:inset 0 0 0 1.5px var(--green)}
 .mode-btn.active-exam{background:var(--blue-d);color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
 
-.qcount{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 4px}
-.qcount label{font:500 1rem var(--f-ui);color:var(--text)}
-.qcount .q-select{flex:0 0 auto;min-width:156px;min-height:44px;padding:0 12px;border-radius:10px;border-color:var(--border2);font:500 1rem var(--f-ui)}
+/* Question count: one tap, no dropdown */
+.qcount{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 12px 4px}
+.qcount-l{font:500 1rem var(--f-ui);color:var(--text)}
+.seg{display:flex;gap:4px;padding:4px;border-radius:12px;background:var(--panel);border:1px solid var(--border2)}
+.seg button{
+  min-width:50px;min-height:40px;padding:0 12px;border:0;border-radius:9px;background:transparent;
+  color:var(--dim);cursor:pointer;font:600 1.125rem/1 var(--f-display);font-variant-numeric:tabular-nums;
+  transition:background-color .15s ease,color .15s ease;
+}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
 
 .start-btn{
   display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;
@@ -221,23 +231,73 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .start-btn:hover{filter:brightness(1.08)}
 .start-btn:active{transform:scale(.99)}
+.hub-last{margin:12px 4px 2px;font:400 .9375rem/1.4 var(--f-ui);color:var(--dim)}
+.hub-last b{font:600 1.125rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.hub-last b.ok{color:var(--green)}
+.hub-last b.low{color:var(--red)}
 
+/* Field tools: each tile shows a piece of its tool */
+.tool-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tool-tile{
+  display:flex;flex-direction:column;gap:4px;min-height:148px;padding:14px;border-radius:16px;
+  background:var(--card);border:1px solid var(--border2);color:inherit;text-decoration:none;
+  transition:border-color .15s ease;
+}
+.tool-tile:hover{border-color:var(--blue)}
+.tool-tile:hover .tt-title{color:var(--blue)}
+.tt-art{display:flex;gap:3px;margin-bottom:auto;padding-bottom:16px}
+.tt-art i{flex:1;min-width:0;height:26px;border-radius:5px}
+.tt-start i:nth-child(1){background:var(--tri-red)}
+.tt-start i:nth-child(2){background:var(--tri-yellow)}
+.tt-start i:nth-child(3){background:var(--tri-green)}
+.tt-start i:nth-child(4){background:var(--tri-black);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.tt-methane i{
+  display:flex;align-items:center;justify-content:center;border:1px solid var(--border2);
+  background:var(--panel);color:var(--text);font:700 .9375rem/1 var(--f-display);font-style:normal;
+}
+.tt-title{font:600 1.375rem/1.05 var(--f-display);color:var(--text)}
+.tt-sub{font:400 .9375rem/1.35 var(--f-ui);color:var(--dim)}
+
+/* Pearls topics and Officer roles */
 .hub-list{background:var(--card);border:1px solid var(--border2);border-radius:16px;overflow:hidden}
-.hub-list > .hub-row + .hub-row{border-top:1px solid var(--border2)}
-.hub-row{display:flex;align-items:center;gap:12px;min-height:76px;padding:14px 16px;color:inherit;text-decoration:none}
-.hub-row:hover .hub-row-title{color:var(--blue)}
-.hub-row-main{flex:1;min-width:0}
-.hub-row-title{display:block;font:600 1.375rem/1.1 var(--f-display);color:var(--text)}
-.hub-row-sub{display:block;margin-top:3px;font:400 .9375rem/1.4 var(--f-ui);color:var(--dim)}
+/* gap + background draw the row rules */
+.topics{display:grid;grid-template-columns:1fr 1fr;row-gap:1px;background:var(--border);border-bottom:1px solid var(--border2)}
+.topics:empty{display:none}
+.topics a{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:50px;padding:7px 14px;
+  background:var(--card);color:var(--text);text-decoration:none;font:500 1rem/1.25 var(--f-ui);
+}
+.topics a:nth-child(odd){padding-right:8px}
+.topics a:hover{color:var(--blue)}
+.topics .chev{width:16px;height:16px}
+.hub-row{display:flex;align-items:center;gap:12px;min-height:56px;padding:12px 16px;color:var(--blue);text-decoration:none;font:600 1rem/1.3 var(--f-ui)}
+.hub-row span{flex:1;min-width:0}
+.hub-row:hover{background:var(--blue-d)}
 .chev{width:20px;height:20px;flex-shrink:0;color:var(--dim)}
-.roles-block{border-top:1px solid var(--border2)}
-.role-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+.hub-row .chev{color:currentColor}
+.role-chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px}
 .role-chips a{
-  display:inline-flex;align-items:center;min-height:42px;padding:0 14px;border-radius:999px;
+  display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border-radius:999px;
   border:1px solid var(--border2);background:var(--panel);color:var(--text);
   font:600 1rem/1 var(--f-ui);text-decoration:none;
 }
 .role-chips a:hover{border-color:var(--blue);color:var(--blue)}
+
+@media (max-width:399px){
+  .topics a{font-size:.9375rem}
+  .topics .chev{display:none}
+}
+@media (max-width:359px){
+  .tt-art{gap:2px}
+  .tool-tile{padding:12px}
+  .seg button{min-width:44px;padding:0 9px}
+}
+/* Wide screens: tag, exam and tools on the left; study on the right */
+@media (min-width:920px){
+  .hub{max-width:1040px}
+  .hub-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px;align-items:start}
+  .hub-col + .hub-col > .hub-sec:first-child{margin-top:0}
+}
 
 /* Pearls & Officer roles screens */
 #pearlsScreen{flex:1;display:none;flex-direction:column;overflow:hidden;background:var(--bg)}
@@ -776,77 +836,83 @@ input:checked+.slider:before{transform:translateX(20px)}
       </div>
     </div>
 
-    <div class="tag-wrap">
-      <header class="tag">
-        <span class="tag-hole" aria-hidden="true"></span>
-        <h1 class="tag-title">MCI</h1>
-        <p class="tag-sub">Mass casualty incident management</p>
-        <div class="tag-strips" aria-hidden="true">
-          <span class="s-black">Expectant</span>
-          <span class="s-red">Immediate</span>
-          <span class="s-yellow">Delayed</span>
-          <span class="s-green">Minor</span>
+    <div class="hub-cols">
+      <div class="hub-col">
+        <div class="tag-wrap">
+          <header class="tag">
+            <span class="tag-hole" aria-hidden="true"></span>
+            <h1 class="tag-title">MCI</h1>
+            <p class="tag-sub">Mass casualty incident management</p>
+            <div class="tag-strips" aria-hidden="true">
+              <span class="s-black">Expectant</span>
+              <span class="s-red">Immediate</span>
+              <span class="s-yellow">Delayed</span>
+              <span class="s-green">Minor</span>
+            </div>
+          </header>
         </div>
-      </header>
+
+        <section class="hub-sec" aria-labelledby="examH">
+          <div class="hub-head"><h2 class="hub-h" id="examH">Course exam</h2><span class="hub-aside">105 questions</span></div>
+          <div class="hub-panel">
+            <div class="mode-row" role="group" aria-label="Exam mode">
+              <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Study<span class="mode-hint">Hints and answers as you go</span></button>
+              <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">Exam<span class="mode-hint">Timed, scored when you submit</span></button>
+            </div>
+            <div class="qcount">
+              <span class="qcount-l" id="qCountL">Questions</span>
+              <div class="seg" id="qSeg" role="group" aria-labelledby="qCountL">
+                <button type="button" data-n="20" aria-pressed="false">20</button>
+                <button type="button" data-n="40" aria-pressed="true">40</button>
+                <button type="button" data-n="9999" aria-pressed="false">All 105</button>
+              </div>
+              <input type="hidden" id="qCount" value="40">
+            </div>
+            <button type="button" class="exam-card start-btn" id="startBtn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start studying</button>
+            <p class="hub-last" id="hubLast" hidden></p>
+          </div>
+        </section>
+
+        <section class="hub-sec" aria-labelledby="toolsH">
+          <div class="hub-head"><h2 class="hub-h" id="toolsH">Field tools</h2><span class="hub-aside">Work offline</span></div>
+          <div class="tool-tiles">
+            <a class="tool-tile" href="#start-triage">
+              <span class="tt-art tt-start" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span class="tt-title">START triage</span>
+              <span class="tt-sub">Triage one patient, step by step</span>
+            </a>
+            <a class="tool-tile" href="#methane">
+              <span class="tt-art tt-methane" aria-hidden="true"><i>M</i><i>E</i><i>T</i><i>H</i><i>A</i><i>N</i><i>E</i></span>
+              <span class="tt-title">METHANE report</span>
+              <span class="tt-sub">Build the report for Main Dispatch</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="hub-col">
+        <section class="hub-sec" aria-labelledby="pearlsH">
+          <div class="hub-head"><h2 class="hub-h" id="pearlsH">Pearls</h2><span class="hub-aside">Key facts by topic</span></div>
+          <div class="hub-list">
+            <nav class="topics" id="hubTopics" aria-label="Pearl topics"></nav>
+            <a class="hub-row" href="#pearls"><span id="pearlsAll">Read all the pearls</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </section>
+
+        <section class="hub-sec" aria-labelledby="rolesH">
+          <div class="hub-head"><h2 class="hub-h" id="rolesH">Officer roles</h2><span class="hub-aside">Duties for each sector</span></div>
+          <div class="hub-list">
+            <nav class="role-chips" aria-label="Open an officer role">
+              <a href="#officers/incident-commander">Incident Commander</a>
+              <a href="#officers/triage-officer">Triage</a>
+              <a href="#officers/treatment-officer">Treatment</a>
+              <a href="#officers/staging-officer">Staging</a>
+              <a href="#officers/transport-officer">Transport</a>
+            </nav>
+          </div>
+        </section>
+      </div>
     </div>
-
-    <section aria-labelledby="examH">
-      <h2 class="hub-h" id="examH">Course exam</h2>
-      <p class="hub-note">105 questions from the MCI course for new medics.</p>
-      <div class="hub-panel">
-        <div class="mode-row" role="group" aria-label="Exam mode">
-          <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Study<span class="mode-hint">Hints and answers as you go</span></button>
-          <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">Exam<span class="mode-hint">Timed, scored when you submit</span></button>
-        </div>
-        <div class="qcount">
-          <label for="qCount">Questions</label>
-          <select id="qCount" class="q-select">
-            <option value="20">20</option>
-            <option value="40" selected>40</option>
-            <option value="9999">All 105</option>
-          </select>
-        </div>
-        <button type="button" class="exam-card start-btn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start exam</button>
-      </div>
-    </section>
-
-    <section aria-labelledby="studyH">
-      <h2 class="hub-h" id="studyH">Study</h2>
-      <div class="hub-list">
-        <a class="hub-row" href="#pearls">
-          <span class="hub-row-main"><span class="hub-row-title">Pearls</span><span class="hub-row-sub">68 key facts on triage, command, HAZMAT and the disaster buses</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-        <div class="roles-block">
-          <a class="hub-row" href="#officers">
-            <span class="hub-row-main"><span class="hub-row-title">Officer roles</span><span class="hub-row-sub">Duties for each sector officer. Tap your role to open it.</span></span>
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
-          <nav class="role-chips" aria-label="Open an officer role">
-            <a href="#officers/incident-commander">Incident Commander</a>
-            <a href="#officers/triage-officer">Triage</a>
-            <a href="#officers/treatment-officer">Treatment</a>
-            <a href="#officers/staging-officer">Staging</a>
-            <a href="#officers/transport-officer">Transport</a>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="toolsH">
-      <h2 class="hub-h" id="toolsH">Field tools</h2>
-      <p class="hub-note">For use on scene. They work offline.</p>
-      <div class="hub-list">
-        <a class="hub-row" href="#start-triage">
-          <span class="hub-row-main"><span class="hub-row-title">START triage</span><span class="hub-row-sub">Step through triage for one patient and get their category</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-        <a class="hub-row" href="#methane">
-          <span class="hub-row-main"><span class="hub-row-title">METHANE report</span><span class="hub-row-sub">Build the report to send to Main Dispatch</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-      </div>
-    </section>
   </div>
 </div>
 
@@ -1097,11 +1163,39 @@ function setModeUI(m) {
     examBtn.classList.remove('active-exam');
     examBtn.setAttribute('aria-pressed', 'false');
   }
+  document.getElementById('startBtn').textContent = m === 'exam' ? 'Start the exam' : 'Start studying';
 }
 
 // Load saved mode
 let savedMode = localStorage.getItem('mci-mode');
 setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'study');
+
+// Question count (20 / 40 / all), remembered on this device
+function setQCount(n) {
+  n = ['20', '40', '9999'].includes(String(n)) ? String(n) : '40';
+  document.getElementById('qCount').value = n;
+  document.querySelectorAll('#qSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.n === n));
+  localStorage.setItem('mci-qcount', n);
+}
+document.getElementById('qSeg').addEventListener('click', e => {
+  const b = e.target.closest('button[data-n]');
+  if (b) setQCount(b.dataset.n);
+});
+setQCount(localStorage.getItem('mci-qcount'));
+
+// "Last score" line on the hub, from the last submitted exam on this device
+function renderHubLast() {
+  const el = document.getElementById('hubLast');
+  let r = null;
+  try { r = JSON.parse(localStorage.getItem('mci-last-score')); } catch {}
+  if (!r || typeof r.pct !== 'number') { el.hidden = true; return; }
+  const days = Math.floor((new Date().setHours(0, 0, 0, 0) - new Date(r.t).setHours(0, 0, 0, 0)) / 86400000);
+  const when = days <= 0 ? 'today' : days === 1 ? 'yesterday'
+    : days < 7 ? `${days} days ago` : new Date(r.t).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+  el.innerHTML = `Last score <b class="${r.pct >= 75 ? 'ok' : 'low'}">${r.pct}%</b> on ${Number(r.n) || 0} questions, ${when}.`;
+  el.hidden = false;
+}
+renderHubLast();
 
 // Load hints toggle preference
 ST.hintsEnabled = localStorage.getItem('itls-hints-enabled') !== 'false';
@@ -1141,7 +1235,7 @@ function showScreen(s) {
 }
 
 // Pearls, Officer roles and the field tools. Each view has a direct link that can be shared:
-//   mci.html#pearls · #officers · #officers/<role-slug> · #start-triage · #methane
+//   mci.html#pearls · #pearls/<topic-slug> · #officers · #officers/<role-slug> · #start-triage · #methane
 const PEARL_VIEWS = {
   pearls:         { src: '../src/MCI/pearls.json',   title: 'MCI Pearls' },
   officers:       { src: '../src/MCI/officers.json', title: 'Officer roles' },
@@ -1213,10 +1307,28 @@ async function openPearls(view = 'pearls', role = '') {
     if (cfgView === 'officers') renderOfficers(pearlsCache[cfgView].pearls, role);
     else renderPearls(pearlsCache[cfgView].pearls, pearlsCache[cfgView].sections || {});
     container.scrollTop = 0;
+    // #pearls/<topic>: open at that topic
+    if (cfgView === 'pearls' && role) document.getElementById('sec-' + slugify(role))?.scrollIntoView({ block: 'start' });
   } catch(e) {
     container.innerHTML = `<p class="p-empty">Couldn't load ${escapeHtml(cfg.title)} (${escapeHtml(e.message)}). Check your connection, then <button class="study-btn" onclick="openPearls('${cfgView}')">try again</button>.</p>`;
   }
 }
+
+// The hub lists the pearl topics; each one opens Pearls at that topic.
+async function renderHubTopics() {
+  try {
+    if (!pearlsCache.pearls) {
+      const res = await fetch(PEARL_VIEWS.pearls.src);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      pearlsCache.pearls = await res.json();
+    }
+  } catch { return; } // "Read all the pearls" still works
+  const items = pearlsCache.pearls.pearls;
+  document.getElementById('hubTopics').innerHTML = [...groupByCategory(items).keys()].map(cat =>
+    `<a href="#pearls/${slugify(cat)}">${escapeHtml(cat)}${CHEV_SVG}</a>`).join('');
+  document.getElementById('pearlsAll').textContent = `Read all ${items.length} pearls`;
+}
+renderHubTopics();
 
 // Optional image (tap to open full size) and a link to the matching field tool.
 function sectionMedia(meta) {
@@ -2282,6 +2394,8 @@ function submitExam() {
   });
   
   const pct = Math.round(c/n*100), pass = pct>=75;
+  localStorage.setItem('mci-last-score', JSON.stringify({ pct, n, t: Date.now() }));
+  renderHubLast();
   const flagged = qs.filter(q => ST.marked[q.id]).length;
   const seg = (k, cls) => k ? `<span class="${cls}" style="flex:${k}"></span>` : '';
   
