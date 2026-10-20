@@ -192,8 +192,10 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .tag-strips .s-yellow{background:var(--tri-yellow);color:var(--stock-ink)}
 .tag-strips .s-green{background:var(--tri-green)}
 
-.hub-h{font:600 1.5625rem/1.1 var(--f-display);letter-spacing:.005em;color:var(--text);margin:32px 2px 4px}
-.hub-note{font:400 1rem/1.45 var(--f-ui);color:var(--dim);margin:0 2px 12px;max-width:60ch}
+.hub-sec{margin-top:28px}
+.hub-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 2px 10px}
+.hub-h{margin:0;font:600 1.5625rem/1.1 var(--f-display);letter-spacing:.005em;color:var(--text)}
+.hub-aside{font:400 .9375rem/1.3 var(--f-ui);color:var(--dim);text-align:right}
 .hub-panel{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:12px}
 
 .mode-row{
@@ -210,9 +212,17 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .mode-btn.active-study{background:var(--green-d);color:var(--green);box-shadow:inset 0 0 0 1.5px var(--green)}
 .mode-btn.active-exam{background:var(--blue-d);color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
 
-.qcount{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 4px}
-.qcount label{font:500 1rem var(--f-ui);color:var(--text)}
-.qcount .q-select{flex:0 0 auto;min-width:156px;min-height:44px;padding:0 12px;border-radius:10px;border-color:var(--border2);font:500 1rem var(--f-ui)}
+/* Question count: one tap, no dropdown */
+.qcount{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 12px 4px}
+.qcount-l{font:500 1rem var(--f-ui);color:var(--text)}
+.seg{display:flex;gap:4px;padding:4px;border-radius:12px;background:var(--panel);border:1px solid var(--border2)}
+.seg button{
+  min-width:50px;min-height:40px;padding:0 12px;border:0;border-radius:9px;background:transparent;
+  color:var(--dim);cursor:pointer;font:600 1.125rem/1 var(--f-display);font-variant-numeric:tabular-nums;
+  transition:background-color .15s ease,color .15s ease;
+}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
 
 .start-btn{
   display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;
@@ -221,23 +231,73 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .start-btn:hover{filter:brightness(1.08)}
 .start-btn:active{transform:scale(.99)}
+.hub-last{margin:12px 4px 2px;font:400 .9375rem/1.4 var(--f-ui);color:var(--dim)}
+.hub-last b{font:600 1.125rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.hub-last b.ok{color:var(--green)}
+.hub-last b.low{color:var(--red)}
 
+/* Field tools: each tile shows a piece of its tool */
+.tool-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tool-tile{
+  display:flex;flex-direction:column;gap:4px;min-height:148px;padding:14px;border-radius:16px;
+  background:var(--card);border:1px solid var(--border2);color:inherit;text-decoration:none;
+  transition:border-color .15s ease;
+}
+.tool-tile:hover{border-color:var(--blue)}
+.tool-tile:hover .tt-title{color:var(--blue)}
+.tt-art{display:flex;gap:3px;margin-bottom:auto;padding-bottom:16px}
+.tt-art i{flex:1;min-width:0;height:26px;border-radius:5px}
+.tt-start i:nth-child(1){background:var(--tri-red)}
+.tt-start i:nth-child(2){background:var(--tri-yellow)}
+.tt-start i:nth-child(3){background:var(--tri-green)}
+.tt-start i:nth-child(4){background:var(--tri-black);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.tt-methane i{
+  display:flex;align-items:center;justify-content:center;border:1px solid var(--border2);
+  background:var(--panel);color:var(--text);font:700 .9375rem/1 var(--f-display);font-style:normal;
+}
+.tt-title{font:600 1.375rem/1.05 var(--f-display);color:var(--text)}
+.tt-sub{font:400 .9375rem/1.35 var(--f-ui);color:var(--dim)}
+
+/* Pearls topics and Officer roles */
 .hub-list{background:var(--card);border:1px solid var(--border2);border-radius:16px;overflow:hidden}
-.hub-list > .hub-row + .hub-row{border-top:1px solid var(--border2)}
-.hub-row{display:flex;align-items:center;gap:12px;min-height:76px;padding:14px 16px;color:inherit;text-decoration:none}
-.hub-row:hover .hub-row-title{color:var(--blue)}
-.hub-row-main{flex:1;min-width:0}
-.hub-row-title{display:block;font:600 1.375rem/1.1 var(--f-display);color:var(--text)}
-.hub-row-sub{display:block;margin-top:3px;font:400 .9375rem/1.4 var(--f-ui);color:var(--dim)}
+/* gap + background draw the row rules */
+.topics{display:grid;grid-template-columns:1fr 1fr;row-gap:1px;background:var(--border);border-bottom:1px solid var(--border2)}
+.topics:empty{display:none}
+.topics a{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:50px;padding:7px 14px;
+  background:var(--card);color:var(--text);text-decoration:none;font:500 1rem/1.25 var(--f-ui);
+}
+.topics a:nth-child(odd){padding-right:8px}
+.topics a:hover{color:var(--blue)}
+.topics .chev{width:16px;height:16px}
+.hub-row{display:flex;align-items:center;gap:12px;min-height:56px;padding:12px 16px;color:var(--blue);text-decoration:none;font:600 1rem/1.3 var(--f-ui)}
+.hub-row span{flex:1;min-width:0}
+.hub-row:hover{background:var(--blue-d)}
 .chev{width:20px;height:20px;flex-shrink:0;color:var(--dim)}
-.roles-block{border-top:1px solid var(--border2)}
-.role-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+.hub-row .chev{color:currentColor}
+.role-chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px}
 .role-chips a{
-  display:inline-flex;align-items:center;min-height:42px;padding:0 14px;border-radius:999px;
+  display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border-radius:999px;
   border:1px solid var(--border2);background:var(--panel);color:var(--text);
   font:600 1rem/1 var(--f-ui);text-decoration:none;
 }
 .role-chips a:hover{border-color:var(--blue);color:var(--blue)}
+
+@media (max-width:399px){
+  .topics a{font-size:.9375rem}
+  .topics .chev{display:none}
+}
+@media (max-width:359px){
+  .tt-art{gap:2px}
+  .tool-tile{padding:12px}
+  .seg button{min-width:44px;padding:0 9px}
+}
+/* Wide screens: tag, exam and tools on the left; study on the right */
+@media (min-width:920px){
+  .hub{max-width:1040px}
+  .hub-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 40px;align-items:start}
+  .hub-col + .hub-col > .hub-sec:first-child{margin-top:0}
+}
 
 /* Pearls & Officer roles screens */
 #pearlsScreen{flex:1;display:none;flex-direction:column;overflow:hidden;background:var(--bg)}
@@ -309,6 +369,110 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   border-radius:12px;border:1px solid var(--blue);background:var(--blue-d);color:var(--blue);font:600 1rem/1.2 var(--f-ui);text-decoration:none;
 }
 .p-tool .chev{color:currentColor}
+/* START triage tool */
+.st-wrap{max-width:560px;margin:0 auto;padding-top:20px}
+.st-step{font:600 1rem var(--f-display);color:var(--dim);margin:0 0 6px}
+.st-q{margin:0 0 6px;font:600 2rem/1.1 var(--f-display);color:var(--text)}
+.st-sub{margin:0 0 22px;font:400 1.0625rem/1.5 var(--f-ui);color:var(--dim)}
+.st-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.st-btn{
+  min-height:72px;border-radius:16px;border:1.5px solid var(--border2);background:var(--card);color:var(--text);
+  cursor:pointer;font:600 1.75rem/1 var(--f-display);transition:border-color .15s ease,background-color .15s ease;
+}
+.st-btn:hover{border-color:var(--text)}
+.st-btn:active{background:var(--card2)}
+.st-link{
+  display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:10px;padding:0 4px;border:0;background:transparent;
+  color:var(--blue);cursor:pointer;font:600 1rem var(--f-ui);
+}
+.st-link svg{width:17px;height:17px}
+.st-h{margin:26px 0 10px;font:600 1.375rem/1.1 var(--f-display);color:var(--text)}
+.st-path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+.st-path li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 14px;background:var(--card);font:400 1rem/1.4 var(--f-ui);color:var(--text)}
+.st-path b{flex-shrink:0;font:600 1.0625rem var(--f-display)}
+.st-path .ans-yes{color:var(--green)}
+.st-path .ans-no{color:var(--red)}
+.st-result{padding:20px 20px 18px;border-radius:16px;color:#fff}
+.st-result.res-red{background:var(--tri-red)}
+.st-result.res-yellow{background:var(--tri-yellow);color:var(--stock-ink)}
+.st-result.res-green{background:var(--tri-green)}
+.st-result.res-black{background:var(--tri-black);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.st-cat{font:700 3rem/1 var(--f-display)}
+.st-col{margin-top:4px;font:600 1.25rem var(--f-display);opacity:.9}
+.st-acts{margin:0;padding-left:1.15em;font:400 1.0625rem/1.55 var(--f-ui);color:var(--text)}
+.st-acts li{margin-bottom:6px}
+.st-next{margin-top:24px}
+
+/* METHANE report tool */
+.mt-letters{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding:4px 0 12px}
+.mt-letters a{
+  display:flex;align-items:center;justify-content:center;height:40px;border-radius:10px;border:1px solid var(--border2);
+  color:var(--dim);text-decoration:none;font:700 1.25rem/1 var(--f-display);
+}
+.mt-letters a.done{background:var(--text);border-color:var(--text);color:var(--bg)}
+.mt-wrap{max-width:620px;margin:0 auto;padding-top:14px}
+.mt-intro{margin:0 2px 14px;font:400 1rem/1.5 var(--f-ui);color:var(--dim)}
+.mt-sec{margin-bottom:12px;padding:14px;border-radius:16px;background:var(--card);border:1px solid var(--border2);scroll-margin-top:12px}
+.mt-sec.done{border-color:var(--green)}
+.mt-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.mt-ltr{
+  flex-shrink:0;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:var(--panel);border:1px solid var(--border2);color:var(--text);font:700 1.375rem/1 var(--f-display);
+}
+.mt-sec.done .mt-ltr{background:var(--green-d);border-color:var(--green);color:var(--green)}
+.mt-h{font:600 1.25rem/1.1 var(--f-display);color:var(--text)}
+.mt-hint{margin-top:2px;font:400 .9375rem/1.35 var(--f-ui);color:var(--dim)}
+.mt-label{display:block;margin:12px 2px 6px;font:500 .9375rem var(--f-ui);color:var(--dim)}
+.mt-input{
+  display:block;width:100%;min-height:46px;padding:10px 12px;border-radius:10px;border:1px solid var(--border2);
+  background:var(--panel);color:var(--text);font:400 1rem/1.4 var(--f-ui);outline:none;
+}
+.mt-input:focus{border-color:var(--blue);box-shadow:var(--focus)}
+textarea.mt-input{min-height:64px;resize:vertical}
+.mt-input::placeholder{color:var(--dim);opacity:.8}
+.mt-row{display:flex;gap:8px}
+.mt-row .mt-input{flex:1;min-width:0}
+.mt-gps{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;padding:0 14px;border-radius:10px;border:1px solid var(--border2);background:var(--panel);color:var(--text);cursor:pointer;font:600 .9375rem var(--f-ui)}
+.mt-gps svg{width:16px;height:16px}
+.mt-gps:disabled{opacity:.6;cursor:progress}
+.mt-chips{display:flex;flex-wrap:wrap;gap:8px}
+.mt-chips button,.mt-seg button{
+  min-height:40px;padding:0 13px;border-radius:999px;border:1px solid var(--border2);background:transparent;color:var(--text);
+  cursor:pointer;font:500 .9375rem/1 var(--f-ui);
+}
+.mt-chips button[aria-pressed="true"],.mt-seg button[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.mt-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mt-seg button{border-radius:10px;min-height:48px;font-weight:600}
+.mt-count{display:flex;align-items:center;gap:10px;padding:8px 0}
+.mt-count + .mt-count{border-top:1px solid var(--border)}
+.mt-sw{flex-shrink:0;width:14px;height:36px;border-radius:4px}
+.mt-sw.red{background:var(--tri-red)} .mt-sw.yellow{background:var(--tri-yellow)} .mt-sw.green{background:var(--tri-green)} .mt-sw.black{background:var(--tri-black);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.mt-cl{flex:1;min-width:0;font:600 1.125rem/1.1 var(--f-display);color:var(--text)}
+.mt-cl small{display:block;font:400 .875rem var(--f-ui);color:var(--dim)}
+.mt-step{width:44px;height:44px;border-radius:10px;border:1px solid var(--border2);background:var(--panel);color:var(--text);cursor:pointer;font:600 1.5rem/1 var(--f-display)}
+.mt-num{width:56px;height:44px;text-align:center;border-radius:10px;border:1px solid var(--border2);background:transparent;color:var(--text);font:600 1.25rem var(--f-display);-moz-appearance:textfield}
+.mt-num::-webkit-outer-spin-button,.mt-num::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.mt-total{margin-top:6px;text-align:right;font:400 .9375rem var(--f-ui);color:var(--dim)}
+.mt-total b{font:600 1.25rem var(--f-display);color:var(--text)}
+.mt-out{margin-top:18px;padding:14px;border-radius:16px;background:var(--panel);border:1px solid var(--border2)}
+.mt-out h2{margin:0 0 8px;font:600 1.25rem var(--f-display);color:var(--text)}
+#mtReport{margin:0;white-space:pre-wrap;word-break:break-word;font:400 .9375rem/1.55 var(--f-ui);color:var(--text)}
+.mt-acts{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px;margin-top:14px}
+.mt-acts button{min-height:48px;border-radius:12px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;font:600 1.0625rem/1 var(--f-display)}
+.mt-acts .pri{background:var(--primary-bg);border-color:var(--primary-bg);color:var(--primary-fg)}
+.mt-msg{margin:8px 2px 0;font:400 .875rem var(--f-ui);color:var(--red)}
+
+/* Photo viewer: stays inside the page, so Back closes it instead of leaving the app */
+.lb{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;background:#05080e}
+.lb[hidden]{display:none}
+.lb-bar{flex-shrink:0;display:flex;align-items:center;gap:10px;padding:max(8px,env(safe-area-inset-top)) 10px 8px}
+.lb-close{width:44px;height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.lb-close svg{width:22px;height:22px}
+.lb-hint{font:400 .9375rem var(--f-ui);color:rgba(255,255,255,.75)}
+.lb-scroll{flex:1;overflow:auto;touch-action:pan-x pan-y;overscroll-behavior:contain}
+.lb-inner{min-width:100%;min-height:100%;display:flex;align-items:center;justify-content:center}
+.lb-inner img{display:block;max-width:none;height:auto;background:#fff;border-radius:6px;user-select:none;-webkit-user-drag:none}
+
 .p-tool:hover{background:var(--blue-2)}
 .tri{
   display:inline-block;padding:0 .38em;border-radius:4px;color:#fff;
@@ -672,77 +836,83 @@ input:checked+.slider:before{transform:translateX(20px)}
       </div>
     </div>
 
-    <div class="tag-wrap">
-      <header class="tag">
-        <span class="tag-hole" aria-hidden="true"></span>
-        <h1 class="tag-title">MCI</h1>
-        <p class="tag-sub">Mass casualty incident management</p>
-        <div class="tag-strips" aria-hidden="true">
-          <span class="s-black">Expectant</span>
-          <span class="s-red">Immediate</span>
-          <span class="s-yellow">Delayed</span>
-          <span class="s-green">Minor</span>
+    <div class="hub-cols">
+      <div class="hub-col">
+        <div class="tag-wrap">
+          <header class="tag">
+            <span class="tag-hole" aria-hidden="true"></span>
+            <h1 class="tag-title">MCI</h1>
+            <p class="tag-sub">Mass casualty incident management</p>
+            <div class="tag-strips" aria-hidden="true">
+              <span class="s-black">Expectant</span>
+              <span class="s-red">Immediate</span>
+              <span class="s-yellow">Delayed</span>
+              <span class="s-green">Minor</span>
+            </div>
+          </header>
         </div>
-      </header>
+
+        <section class="hub-sec" aria-labelledby="examH">
+          <div class="hub-head"><h2 class="hub-h" id="examH">Course exam</h2><span class="hub-aside">105 questions</span></div>
+          <div class="hub-panel">
+            <div class="mode-row" role="group" aria-label="Exam mode">
+              <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Study<span class="mode-hint">Hints and answers as you go</span></button>
+              <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">Exam<span class="mode-hint">Timed, scored when you submit</span></button>
+            </div>
+            <div class="qcount">
+              <span class="qcount-l" id="qCountL">Questions</span>
+              <div class="seg" id="qSeg" role="group" aria-labelledby="qCountL">
+                <button type="button" data-n="20" aria-pressed="false">20</button>
+                <button type="button" data-n="40" aria-pressed="true">40</button>
+                <button type="button" data-n="9999" aria-pressed="false">All 105</button>
+              </div>
+              <input type="hidden" id="qCount" value="40">
+            </div>
+            <button type="button" class="exam-card start-btn" id="startBtn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start studying</button>
+            <p class="hub-last" id="hubLast" hidden></p>
+          </div>
+        </section>
+
+        <section class="hub-sec" aria-labelledby="toolsH">
+          <div class="hub-head"><h2 class="hub-h" id="toolsH">Field tools</h2><span class="hub-aside">Work offline</span></div>
+          <div class="tool-tiles">
+            <a class="tool-tile" href="#start-triage">
+              <span class="tt-art tt-start" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <span class="tt-title">START triage</span>
+              <span class="tt-sub">Triage one patient, step by step</span>
+            </a>
+            <a class="tool-tile" href="#methane">
+              <span class="tt-art tt-methane" aria-hidden="true"><i>M</i><i>E</i><i>T</i><i>H</i><i>A</i><i>N</i><i>E</i></span>
+              <span class="tt-title">METHANE report</span>
+              <span class="tt-sub">Build the report for Main Dispatch</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="hub-col">
+        <section class="hub-sec" aria-labelledby="pearlsH">
+          <div class="hub-head"><h2 class="hub-h" id="pearlsH">Pearls</h2><span class="hub-aside">Key facts by topic</span></div>
+          <div class="hub-list">
+            <nav class="topics" id="hubTopics" aria-label="Pearl topics"></nav>
+            <a class="hub-row" href="#pearls"><span id="pearlsAll">Read all the pearls</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </section>
+
+        <section class="hub-sec" aria-labelledby="rolesH">
+          <div class="hub-head"><h2 class="hub-h" id="rolesH">Officer roles</h2><span class="hub-aside">Duties for each sector</span></div>
+          <div class="hub-list">
+            <nav class="role-chips" aria-label="Open an officer role">
+              <a href="#officers/incident-commander">Incident Commander</a>
+              <a href="#officers/triage-officer">Triage</a>
+              <a href="#officers/treatment-officer">Treatment</a>
+              <a href="#officers/staging-officer">Staging</a>
+              <a href="#officers/transport-officer">Transport</a>
+            </nav>
+          </div>
+        </section>
+      </div>
     </div>
-
-    <section aria-labelledby="examH">
-      <h2 class="hub-h" id="examH">Course exam</h2>
-      <p class="hub-note">105 questions from the MCI course for new medics.</p>
-      <div class="hub-panel">
-        <div class="mode-row" role="group" aria-label="Exam mode">
-          <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Study<span class="mode-hint">Hints and answers as you go</span></button>
-          <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">Exam<span class="mode-hint">Timed, scored when you submit</span></button>
-        </div>
-        <div class="qcount">
-          <label for="qCount">Questions</label>
-          <select id="qCount" class="q-select">
-            <option value="20">20</option>
-            <option value="40" selected>40</option>
-            <option value="9999">All 105</option>
-          </select>
-        </div>
-        <button type="button" class="exam-card start-btn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start exam</button>
-      </div>
-    </section>
-
-    <section aria-labelledby="studyH">
-      <h2 class="hub-h" id="studyH">Study</h2>
-      <div class="hub-list">
-        <a class="hub-row" href="#pearls">
-          <span class="hub-row-main"><span class="hub-row-title">Pearls</span><span class="hub-row-sub">68 key facts on triage, command, HAZMAT and the disaster buses</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-        <div class="roles-block">
-          <a class="hub-row" href="#officers">
-            <span class="hub-row-main"><span class="hub-row-title">Officer roles</span><span class="hub-row-sub">Duties for each sector officer. Tap your role to open it.</span></span>
-            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
-          <nav class="role-chips" aria-label="Open an officer role">
-            <a href="#officers/incident-commander">Incident Commander</a>
-            <a href="#officers/triage-officer">Triage</a>
-            <a href="#officers/treatment-officer">Treatment</a>
-            <a href="#officers/staging-officer">Staging</a>
-            <a href="#officers/transport-officer">Transport</a>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="toolsH">
-      <h2 class="hub-h" id="toolsH">Field tools</h2>
-      <p class="hub-note">From EMS tools, for use on scene.</p>
-      <div class="hub-list">
-        <a class="hub-row" href="ems-tools.html#start">
-          <span class="hub-row-main"><span class="hub-row-title">START triage</span><span class="hub-row-sub">Step through triage for one patient and get their category</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-        <a class="hub-row" href="methane.html">
-          <span class="hub-row-main"><span class="hub-row-title">METHANE report</span><span class="hub-row-sub">Build the report to send to Main Dispatch</span></span>
-          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-      </div>
-    </section>
   </div>
 </div>
 
@@ -876,6 +1046,15 @@ input:checked+.slider:before{transform:translateX(20px)}
   <div class="pearls-scroll" id="pearlsContainer"></div>
 </div>
 
+<!-- Photo viewer -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <div class="lb-bar">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close image"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#x"/></svg></button>
+    <span class="lb-hint">Pinch or double-tap to zoom</span>
+  </div>
+  <div class="lb-scroll" id="lbScroll"><div class="lb-inner" id="lbInner"><img id="lbImg" alt=""></div></div>
+</div>
+
 <!-- Modal -->
 <div class="modal-bg" id="endModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
@@ -984,11 +1163,39 @@ function setModeUI(m) {
     examBtn.classList.remove('active-exam');
     examBtn.setAttribute('aria-pressed', 'false');
   }
+  document.getElementById('startBtn').textContent = m === 'exam' ? 'Start the exam' : 'Start studying';
 }
 
 // Load saved mode
 let savedMode = localStorage.getItem('mci-mode');
 setModeUI(['exam','study'].includes(savedMode) ? savedMode : 'study');
+
+// Question count (20 / 40 / all), remembered on this device
+function setQCount(n) {
+  n = ['20', '40', '9999'].includes(String(n)) ? String(n) : '40';
+  document.getElementById('qCount').value = n;
+  document.querySelectorAll('#qSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.n === n));
+  localStorage.setItem('mci-qcount', n);
+}
+document.getElementById('qSeg').addEventListener('click', e => {
+  const b = e.target.closest('button[data-n]');
+  if (b) setQCount(b.dataset.n);
+});
+setQCount(localStorage.getItem('mci-qcount'));
+
+// "Last score" line on the hub, from the last submitted exam on this device
+function renderHubLast() {
+  const el = document.getElementById('hubLast');
+  let r = null;
+  try { r = JSON.parse(localStorage.getItem('mci-last-score')); } catch {}
+  if (!r || typeof r.pct !== 'number') { el.hidden = true; return; }
+  const days = Math.floor((new Date().setHours(0, 0, 0, 0) - new Date(r.t).setHours(0, 0, 0, 0)) / 86400000);
+  const when = days <= 0 ? 'today' : days === 1 ? 'yesterday'
+    : days < 7 ? `${days} days ago` : new Date(r.t).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+  el.innerHTML = `Last score <b class="${r.pct >= 75 ? 'ok' : 'low'}">${r.pct}%</b> on ${Number(r.n) || 0} questions, ${when}.`;
+  el.hidden = false;
+}
+renderHubLast();
 
 // Load hints toggle preference
 ST.hintsEnabled = localStorage.getItem('itls-hints-enabled') !== 'false';
@@ -1027,11 +1234,13 @@ function showScreen(s) {
   }
 }
 
-// Pearls & Officer roles. Each view has a direct link that can be shared:
-//   mci.html#pearls · mci.html#officers · mci.html#officers/<role-slug>
+// Pearls, Officer roles and the field tools. Each view has a direct link that can be shared:
+//   mci.html#pearls · #pearls/<topic-slug> · #officers · #officers/<role-slug> · #start-triage · #methane
 const PEARL_VIEWS = {
-  pearls:   { src: '../src/MCI/pearls.json',   title: 'MCI Pearls' },
-  officers: { src: '../src/MCI/officers.json', title: 'Officer roles' }
+  pearls:         { src: '../src/MCI/pearls.json',   title: 'MCI Pearls' },
+  officers:       { src: '../src/MCI/officers.json', title: 'Officer roles' },
+  'start-triage': { tool: () => renderStartTool(),   title: 'START triage' },
+  methane:        { tool: () => renderMethaneTool(), title: 'METHANE report' }
 };
 const DEFAULT_TITLE = document.title;
 const pearlsCache = {};
@@ -1082,6 +1291,12 @@ async function openPearls(view = 'pearls', role = '') {
     </div>
   `;
 
+  if (cfg.tool) {
+    cfg.tool();
+    container.scrollTop = 0;
+    return;
+  }
+
   try {
     if (!pearlsCache[cfgView]) {
       const res = await fetch(cfg.src);
@@ -1092,10 +1307,28 @@ async function openPearls(view = 'pearls', role = '') {
     if (cfgView === 'officers') renderOfficers(pearlsCache[cfgView].pearls, role);
     else renderPearls(pearlsCache[cfgView].pearls, pearlsCache[cfgView].sections || {});
     container.scrollTop = 0;
+    // #pearls/<topic>: open at that topic
+    if (cfgView === 'pearls' && role) document.getElementById('sec-' + slugify(role))?.scrollIntoView({ block: 'start' });
   } catch(e) {
     container.innerHTML = `<p class="p-empty">Couldn't load ${escapeHtml(cfg.title)} (${escapeHtml(e.message)}). Check your connection, then <button class="study-btn" onclick="openPearls('${cfgView}')">try again</button>.</p>`;
   }
 }
+
+// The hub lists the pearl topics; each one opens Pearls at that topic.
+async function renderHubTopics() {
+  try {
+    if (!pearlsCache.pearls) {
+      const res = await fetch(PEARL_VIEWS.pearls.src);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      pearlsCache.pearls = await res.json();
+    }
+  } catch { return; } // "Read all the pearls" still works
+  const items = pearlsCache.pearls.pearls;
+  document.getElementById('hubTopics').innerHTML = [...groupByCategory(items).keys()].map(cat =>
+    `<a href="#pearls/${slugify(cat)}">${escapeHtml(cat)}${CHEV_SVG}</a>`).join('');
+  document.getElementById('pearlsAll').textContent = `Read all ${items.length} pearls`;
+}
+renderHubTopics();
 
 // Optional image (tap to open full size) and a link to the matching field tool.
 function sectionMedia(meta) {
@@ -1204,7 +1437,8 @@ function renderOfficers(items, roleSlug) {
     document.title = `${role} duties`;
     document.querySelector('.pearls-share').setAttribute('aria-label', `Share a link to ${role} duties`);
     if (fromUser) {
-      history.replaceState(null, '', `#officers/${slug}`);
+      history.replaceState(history.state, '', `#officers/${slug}`);
+      lastRoute = location.hash;
       container.scrollTop = 0;
       if (reducedMotion()) fill();
       else { panel.classList.add('switching'); setTimeout(fill, 120); }
@@ -1229,8 +1463,13 @@ function renderOfficers(items, roleSlug) {
   show(start, false);
 }
 
+// Back: if we got here from inside the MCI page, step back to where we came from.
+// If the page was opened on this view (a shared link), go to the MCI home instead
+// of leaving the app.
 function closePearls() {
+  if (history.state && history.state.mciInApp) { history.back(); return; }
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  lastRoute = '';
   document.title = DEFAULT_TITLE;
   showScreen('sel');
 }
@@ -1256,7 +1495,10 @@ async function sharePearlsLink(btn) {
   }
 }
 
+let lastRoute = null;
 function routeFromHash() {
+  if (location.hash === lastRoute) return; // popstate and hashchange can both fire for one Back
+  lastRoute = location.hash;
   const [view, role] = decodeURIComponent(location.hash.slice(1)).split('/');
   if (PEARL_VIEWS[view]) openPearls(view, role || '');
   else if (document.getElementById('pearlsScreen').style.display === 'flex') {
@@ -1265,6 +1507,319 @@ function routeFromHash() {
   }
 }
 window.addEventListener('hashchange', routeFromHash);
+window.addEventListener('popstate', () => {
+  if (!lightbox.hidden && !(history.state && history.state.lightbox)) closeLightbox(true);
+  routeFromHash();
+});
+
+// In-page links (#pearls, #methane, …) add a history entry we can step back through.
+document.addEventListener('click', e => {
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const fig = e.target.closest('.p-fig a');
+  if (fig) {
+    e.preventDefault();
+    const img = fig.querySelector('img');
+    openLightbox(fig.getAttribute('href'), img ? img.alt : '', fig);
+    return;
+  }
+  const a = e.target.closest('a[href^="#"]');
+  if (!a || a.target) return;
+  const href = a.getAttribute('href');
+  if (href.length < 2 || href.startsWith('#mt-')) return;
+  e.preventDefault();
+  if (href !== location.hash) history.pushState({ mciInApp: true }, '', href);
+  routeFromHash();
+});
+
+/* ── Photo viewer (pinch / double-tap zoom). It adds a history entry, so Back closes it. ── */
+const lightbox = document.getElementById('lightbox');
+const lbScroll = document.getElementById('lbScroll');
+const lbInner = document.getElementById('lbInner');
+const lbImg = document.getElementById('lbImg');
+let lbScale = 1, lbPinch = null, lbOpener = null;
+
+function lbFitWidth() {
+  const r = (lbImg.naturalWidth / lbImg.naturalHeight) || 1;
+  return Math.max(1, Math.min(lbScroll.clientWidth - 16, (lbScroll.clientHeight - 16) * r));
+}
+// Zoom to `scale`, keeping the point (x, y) inside the viewer where it is on screen.
+function lbZoom(scale, x, y) {
+  scale = Math.max(1, Math.min(5, scale));
+  const box = lbScroll.getBoundingClientRect();
+  const ox = x === undefined ? box.width / 2 : x, oy = y === undefined ? box.height / 2 : y;
+  const fx = (lbScroll.scrollLeft + ox) / Math.max(1, lbInner.offsetWidth);
+  const fy = (lbScroll.scrollTop + oy) / Math.max(1, lbInner.offsetHeight);
+  lbScale = scale;
+  lbImg.style.width = Math.round(lbFitWidth() * scale) + 'px';
+  lbScroll.scrollLeft = fx * lbInner.offsetWidth - ox;
+  lbScroll.scrollTop = fy * lbInner.offsetHeight - oy;
+}
+function openLightbox(src, alt, opener) {
+  lbOpener = opener || null;
+  lbImg.alt = alt || '';
+  lbImg.onload = () => lbZoom(1);
+  lbImg.src = src;
+  lightbox.hidden = false;
+  if (lbImg.complete && lbImg.naturalWidth) lbZoom(1);
+  history.pushState({ mciInApp: true, lightbox: true }, '', location.href);
+  document.getElementById('lbClose').focus();
+}
+function closeLightbox(fromHistory) {
+  if (lightbox.hidden) return;
+  lightbox.hidden = true;
+  lbImg.removeAttribute('src');
+  if (lbOpener) lbOpener.focus();
+  if (!fromHistory) history.back();
+}
+document.getElementById('lbClose').addEventListener('click', () => closeLightbox(false));
+lightbox.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(false); });
+lbScroll.addEventListener('dblclick', e => {
+  const box = lbScroll.getBoundingClientRect();
+  lbZoom(lbScale > 1 ? 1 : 2.5, e.clientX - box.left, e.clientY - box.top);
+});
+const touchDist = t => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+lbScroll.addEventListener('touchstart', e => {
+  if (e.touches.length === 2) lbPinch = { d: touchDist(e.touches), s: lbScale };
+}, { passive: true });
+lbScroll.addEventListener('touchmove', e => {
+  if (!lbPinch || e.touches.length !== 2) return;
+  e.preventDefault();
+  const box = lbScroll.getBoundingClientRect();
+  lbZoom(lbPinch.s * touchDist(e.touches) / lbPinch.d,
+    (e.touches[0].clientX + e.touches[1].clientX) / 2 - box.left,
+    (e.touches[0].clientY + e.touches[1].clientY) / 2 - box.top);
+}, { passive: false });
+lbScroll.addEventListener('touchend', e => { if (e.touches.length < 2) lbPinch = null; });
+window.addEventListener('resize', () => { if (!lightbox.hidden) lbZoom(lbScale); });
+
+/* ── START triage tool (same decision steps as the EMS tools version) ── */
+const ST_STEPS = {
+  walk:      { q: 'Can the patient walk?', sub: 'Tell everyone who can walk to move to a set point.', yes: 'GREEN', no: 'breathing' },
+  breathing: { q: 'Is the patient breathing?', sub: 'Look, listen and feel.', yes: 'rr', no: 'airway' },
+  airway:    { q: 'Open the airway. Does breathing start?', sub: 'Head-tilt chin-lift or jaw thrust. One attempt only.', yes: 'RED', no: 'BLACK' },
+  rr:        { q: 'Breathing faster than 30 a minute?', sub: 'Count for 15 seconds and multiply by 4.', yes: 'RED', no: 'perfusion' },
+  perfusion: { q: 'No radial pulse, or capillary refill over 2 seconds?', sub: 'Press the nail bed, release, and count the seconds until the colour returns.', yes: 'RED', no: 'mental' },
+  mental:    { q: 'Unable to follow simple commands?', sub: 'Ask them to squeeze your hand or open their eyes.', yes: 'RED', no: 'YELLOW' }
+};
+const ST_RESULTS = {
+  RED:    { cat: 'Immediate', col: 'Red', cls: 'res-red', acts: [
+    'First priority for the treatment area and for transport.',
+    'In triage, only open the airway, control severe bleeding and position the patient.',
+    'Goes on the red tarp, nearest the loading area.' ] },
+  YELLOW: { cat: 'Delayed', col: 'Yellow', cls: 'res-yellow', acts: [
+    'Serious but stable for now. Treatment can wait until the red patients are cared for.',
+    'Re-triage in the treatment area. A delayed patient can become immediate.' ] },
+  GREEN:  { cat: 'Minor', col: 'Green', cls: 'res-green', acts: [
+    'Walking wounded. Direct them to the collection point and the green area.',
+    'Keep them at a safe distance for re-assessment. They can still deteriorate.' ] },
+  BLACK:  { cat: 'Expectant', col: 'Black', cls: 'res-black', acts: [
+    'Not breathing after the airway is opened. No CPR during MCI triage.',
+    'Move the body only if it blocks access to a living patient. Mark it and move on.' ] }
+};
+let stStep = 'walk', stPath = [];
+
+function renderStartTool() {
+  document.querySelector('.pearls-share').setAttribute('aria-label', 'Share a link to the START triage tool');
+  stStep = 'walk'; stPath = [];
+  drawStart();
+}
+function drawStart() {
+  const c = document.getElementById('pearlsContainer');
+  const pathHtml = stPath.length ? `<h2 class="st-h">Your answers</h2><ol class="st-path">${stPath.map(p =>
+    `<li><span>${escapeHtml(ST_STEPS[p.id].q)}</span><b class="${p.a === 'yes' ? 'ans-yes' : 'ans-no'}">${p.a === 'yes' ? 'Yes' : 'No'}</b></li>`).join('')}</ol>` : '';
+  const undo = stPath.length ? `<button type="button" class="st-link" data-st="undo"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> Change the last answer</button>` : '';
+  const result = ST_RESULTS[stStep];
+  if (result) {
+    c.innerHTML = `<div class="st-wrap">
+      <div class="st-result ${result.cls}" role="status"><div class="st-cat">${result.cat}</div><div class="st-col">${result.col}</div></div>
+      <h2 class="st-h">What to do</h2>
+      <ul class="st-acts">${result.acts.map(a => `<li>${escapeHtml(a)}</li>`).join('')}</ul>
+      ${pathHtml}
+      <button type="button" class="start-btn st-next" data-st="restart">Triage the next patient</button>
+      ${undo}
+    </div>`;
+  } else {
+    const step = ST_STEPS[stStep];
+    c.innerHTML = `<div class="st-wrap">
+      <p class="st-step">Question ${stPath.length + 1}</p>
+      <h2 class="st-q" tabindex="-1">${escapeHtml(step.q)}</h2>
+      <p class="st-sub">${escapeHtml(step.sub)}</p>
+      <div class="st-btns">
+        <button type="button" class="st-btn" data-st="yes">Yes</button>
+        <button type="button" class="st-btn" data-st="no">No</button>
+      </div>
+      ${undo}
+      ${pathHtml}
+    </div>`;
+  }
+  c.querySelector('.st-wrap').addEventListener('click', e => {
+    const b = e.target.closest('[data-st]');
+    if (!b) return;
+    const act = b.dataset.st;
+    if (act === 'yes' || act === 'no') {
+      if (navigator.vibrate) navigator.vibrate(10);
+      stPath.push({ id: stStep, a: act });
+      stStep = ST_STEPS[stStep][act];
+    } else if (act === 'undo') {
+      const last = stPath.pop();
+      if (last) stStep = last.id;
+    } else if (act === 'restart') {
+      stStep = 'walk'; stPath = [];
+    }
+    drawStart();
+    c.scrollTop = 0;
+    const focusEl = c.querySelector('.st-q, .st-result');
+    if (focusEl && act !== 'restart') focusEl.focus?.();
+  });
+}
+
+/* ── METHANE report tool (same report as the EMS tools version; draft kept on this device) ── */
+const MT_KEY = 'mci-methane-draft';
+const MT_CHIPS = {
+  type: ['Road traffic collision', 'Fire', 'Explosion', 'Building collapse', 'Rail', 'Aircraft', 'CBRN', 'Flood / water', 'Crowd / crush', 'Shooting / attack'],
+  haz: ['Fire / smoke', 'Fuel spill', 'Gas leak', 'Chemical', 'Electrical', 'Structural', 'Moving traffic', 'Water', 'Weather', 'Violence', 'None seen'],
+  svcOn: ['Ambulance', 'Police', 'Civil Defense', 'Air ambulance'],
+  svcReq: ['More ambulances', 'Disaster bus', 'Police', 'Civil Defense', 'Air ambulance', 'HAZMAT / CBRN', 'Heavy rescue', 'Medical team', 'Hospital alert']
+};
+const MT_COUNTS = [['p1', 'Immediate', 'Red', 'red'], ['p2', 'Delayed', 'Yellow', 'yellow'], ['p3', 'Minor', 'Green', 'green'], ['dead', 'Dead', 'Black', 'black']];
+const mtBlank = () => ({ f: {}, multi: {}, major: '', n: { p1: 0, p2: 0, p3: 0, dead: 0 } });
+let MT = mtBlank();
+
+function renderMethaneTool() {
+  try { const d = JSON.parse(localStorage.getItem(MT_KEY)); if (d && d.f) MT = Object.assign(mtBlank(), d); } catch {}
+  document.querySelector('.pearls-share').setAttribute('aria-label', 'Share a link to the METHANE report tool');
+  const tools = document.getElementById('pearlsTools');
+  const c = document.getElementById('pearlsContainer');
+  const L = [['M', 'M'], ['E1', 'E'], ['T', 'T'], ['H', 'H'], ['A', 'A'], ['N', 'N'], ['E2', 'E']];
+  tools.innerHTML = `<nav class="mt-letters" aria-label="METHANE sections">${L.map(([k, l]) => `<a href="#mt-${k}" data-k="${k}">${l}</a>`).join('')}</nav>`;
+  const field = (id, label, ph, area) => `<label class="mt-label" for="mt_${id}">${label}</label>` + (area
+    ? `<textarea class="mt-input" id="mt_${id}" data-f="${id}" placeholder="${ph}"></textarea>`
+    : `<input class="mt-input" type="text" id="mt_${id}" data-f="${id}" placeholder="${ph}" autocomplete="off">`);
+  const chips = (k, label) => (label ? `<span class="mt-label">${label}</span>` : '') +
+    `<div class="mt-chips" data-multi="${k}" role="group" aria-label="${label || k}">${MT_CHIPS[k].map(t => `<button type="button" aria-pressed="false">${escapeHtml(t)}</button>`).join('')}</div>`;
+  const sec = (k, l, h, hint, body) => `<section class="mt-sec" id="mt-${k}" aria-labelledby="mth-${k}">
+      <div class="mt-top"><div class="mt-ltr" aria-hidden="true">${l}</div><div><div class="mt-h" id="mth-${k}">${h}</div><div class="mt-hint">${hint}</div></div></div>${body}</section>`;
+  c.innerHTML = `<div class="mt-wrap">
+    <p class="mt-intro">Send this to Main Dispatch as soon as you can, then update it as the picture changes. Your draft stays on this phone.</p>
+    ${sec('M', 'M', 'Major incident', 'Declared, on standby, or not declared', `<div class="mt-seg" data-single="major" role="group" aria-label="Major incident">
+        <button type="button" data-v="DECLARED" aria-pressed="false">Declared</button><button type="button" data-v="STANDBY" aria-pressed="false">Standby</button><button type="button" data-v="NOT DECLARED" aria-pressed="false">Not declared</button></div>`)}
+    ${sec('E1', 'E', 'Exact location', 'Address, landmark or GPS', field('loc', 'Location', 'e.g. Sheikh Zayed Rd, northbound, near Exit 41') +
+      `<label class="mt-label" for="mt_gps">Coordinates</label><div class="mt-row"><input class="mt-input" type="text" id="mt_gps" data-f="gps" placeholder="lat, long" autocomplete="off" inputmode="decimal"><button type="button" class="mt-gps" id="mtGps"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#pin"/></svg> GPS</button></div><p class="mt-msg" id="mtGpsMsg" hidden></p>`)}
+    ${sec('T', 'T', 'Type of incident', 'What happened; vehicles or buildings involved', chips('type') + field('typeTxt', 'Details', 'e.g. Bus vs 2 cars, bus on its side', true))}
+    ${sec('H', 'H', 'Hazards', 'Present and potential', chips('haz') + field('hazTxt', 'Details', 'e.g. Diesel leaking from the bus, wind blowing east', true))}
+    ${sec('A', 'A', 'Access', 'Safe routes in and out, rendezvous point, staging', field('accIn', 'Route in and out', 'e.g. Approach from the south via Exit 40') + field('rvp', 'Rendezvous point', 'e.g. ENOC station, Exit 40') + field('stg', 'Staging / loading area', 'e.g. Service road, west side'))}
+    ${sec('N', 'N', 'Number of casualties', 'Estimated number and severity', MT_COUNTS.map(([k, cat, col, cls]) => `<div class="mt-count">
+        <span class="mt-sw ${cls}" aria-hidden="true"></span><span class="mt-cl">${cat}<small>${col}</small></span>
+        <button type="button" class="mt-step" data-n="${k}" data-d="-1" aria-label="One fewer ${cat}">−</button>
+        <input class="mt-num" type="number" min="0" inputmode="numeric" data-nv="${k}" aria-label="${cat} casualties" value="0">
+        <button type="button" class="mt-step" data-n="${k}" data-d="1" aria-label="One more ${cat}">+</button></div>`).join('') +
+      `<div class="mt-total">Total: <b id="mtTotal">0</b></div>` + field('casTxt', 'Injury types / special groups', 'e.g. Crush injuries, 3 children, 2 trapped', true))}
+    ${sec('E2', 'E', 'Emergency services', 'On scene and still needed', chips('svcOn', 'On scene') + chips('svcReq', 'Needed') + field('svcTxt', 'Details', 'e.g. 6 more ambulances, 1 supervisor', true))}
+    <section class="mt-sec">${field('callsign', 'Reported by (call sign)', 'e.g. Unit 214')}</section>
+    <section class="mt-out" aria-live="polite"><h2>Report</h2><pre id="mtReport"></pre>
+      <div class="mt-acts"><button type="button" class="pri" id="mtCopy">Copy report</button><button type="button" id="mtShare">Share</button><button type="button" id="mtNew">New</button></div>
+    </section>
+  </div>`;
+
+  const save = () => { try { localStorage.setItem(MT_KEY, JSON.stringify(MT)); } catch {} };
+  const $$ = sel => [...c.querySelectorAll(sel)];
+  const hydrate = () => {
+    $$('[data-f]').forEach(el => { el.value = MT.f[el.dataset.f] || ''; });
+    $$('[data-multi]').forEach(g => { const on = MT.multi[g.dataset.multi] || []; g.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', on.includes(b.textContent))); });
+    $$('[data-single] button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === MT.major));
+    $$('[data-nv]').forEach(el => { el.value = MT.n[el.dataset.nv] || 0; });
+    mtRender();
+  };
+  $$('[data-f]').forEach(el => el.addEventListener('input', () => { MT.f[el.dataset.f] = el.value; mtRender(); save(); }));
+  $$('[data-multi]').forEach(g => g.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
+    MT.multi[g.dataset.multi] = [...g.querySelectorAll('button[aria-pressed="true"]')].map(x => x.textContent);
+    mtRender(); save();
+  }));
+  c.querySelector('[data-single]').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    MT.major = MT.major === b.dataset.v ? '' : b.dataset.v;
+    $$('[data-single] button').forEach(x => x.setAttribute('aria-pressed', x.dataset.v === MT.major));
+    mtRender(); save();
+  });
+  const setN = (k, v) => {
+    v = Math.max(0, Math.min(9999, parseInt(v, 10) || 0));
+    MT.n[k] = v; c.querySelector(`[data-nv="${k}"]`).value = v; mtRender(); save();
+  };
+  $$('.mt-step').forEach(b => b.addEventListener('click', () => setN(b.dataset.n, (MT.n[b.dataset.n] || 0) + Number(b.dataset.d))));
+  $$('[data-nv]').forEach(el => el.addEventListener('input', () => setN(el.dataset.nv, el.value)));
+  tools.querySelector('.mt-letters').addEventListener('click', e => {
+    const a = e.target.closest('a[data-k]'); if (!a) return;
+    e.preventDefault();
+    document.getElementById('mt-' + a.dataset.k).scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
+  });
+
+  const gps = document.getElementById('mtGps'), gpsMsg = document.getElementById('mtGpsMsg');
+  if (!('geolocation' in navigator)) gps.hidden = true;
+  gps.addEventListener('click', () => {
+    gps.disabled = true; gpsMsg.hidden = true;
+    navigator.geolocation.getCurrentPosition(p => {
+      gps.disabled = false;
+      setGps(p.coords.latitude.toFixed(5) + ', ' + p.coords.longitude.toFixed(5));
+    }, () => { gps.disabled = false; gpsMsg.textContent = 'Location unavailable. Type the coordinates instead.'; gpsMsg.hidden = false; },
+    { enableHighAccuracy: true, timeout: 10000 });
+  });
+  const setGps = v => { document.getElementById('mt_gps').value = v; MT.f.gps = v; mtRender(); save(); };
+
+  const flash = (btn, msg) => { const was = btn.textContent; btn.textContent = msg; setTimeout(() => { btn.textContent = was; }, 1600); };
+  document.getElementById('mtCopy').addEventListener('click', e => {
+    const txt = mtText(), btn = e.currentTarget;
+    const fallback = () => {
+      const ta = document.createElement('textarea'); ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); flash(btn, 'Copied'); } catch { flash(btn, 'Copy failed'); }
+      ta.remove();
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => flash(btn, 'Copied'), fallback);
+    else fallback();
+  });
+  const share = document.getElementById('mtShare');
+  if (!navigator.share) { share.hidden = true; c.querySelector('.mt-acts').style.gridTemplateColumns = '2fr 1fr'; }
+  share.addEventListener('click', () => navigator.share({ title: 'METHANE report', text: mtText() }).catch(() => {}));
+  document.getElementById('mtNew').addEventListener('click', () => {
+    if (!confirm('Start a new METHANE report? The current draft will be cleared.')) return;
+    MT = mtBlank(); save(); hydrate(); c.scrollTop = 0;
+  });
+  hydrate();
+}
+function mtSections() {
+  const f = MT.f, m = MT.multi, n = MT.n, t = s => (s || '').trim();
+  const total = n.p1 + n.p2 + n.p3 + n.dead;
+  const list = (arr, txt) => [(arr || []).join(', '), t(txt)].filter(Boolean).join('. ');
+  return [
+    ['M', 'Major incident', MT.major],
+    ['E1', 'Exact location', [t(f.loc), t(f.gps) && 'GPS ' + t(f.gps)].filter(Boolean).join(', ')],
+    ['T', 'Type of incident', list(m.type, f.typeTxt)],
+    ['H', 'Hazards', list(m.haz, f.hazTxt)],
+    ['A', 'Access', [t(f.accIn), t(f.rvp) && 'RVP: ' + t(f.rvp), t(f.stg) && 'Staging: ' + t(f.stg)].filter(Boolean).join('. ')],
+    ['N', 'Number of casualties', [total ? `${total} total (Immediate ${n.p1}, Delayed ${n.p2}, Minor ${n.p3}, Dead ${n.dead})` : '', t(f.casTxt)].filter(Boolean).join('. ')],
+    ['E2', 'Emergency services', [(m.svcOn || []).length ? 'On scene: ' + m.svcOn.join(', ') : '', (m.svcReq || []).length ? 'Needed: ' + m.svcReq.join(', ') : '', t(f.svcTxt)].filter(Boolean).join('. ')]
+  ];
+}
+function mtText() {
+  const d = new Date();
+  const lines = ['METHANE REPORT ' + d.toTimeString().slice(0, 5) + ' ' + d.toLocaleDateString()];
+  if ((MT.f.callsign || '').trim()) lines.push('From: ' + MT.f.callsign.trim());
+  lines.push('');
+  mtSections().forEach(([k, label, v]) => lines.push(k[0] + ' - ' + label + ': ' + (v || '-')));
+  return lines.join('\n');
+}
+function mtRender() {
+  mtSections().forEach(([k, , v]) => {
+    document.querySelector(`.mt-letters a[data-k="${k}"]`)?.classList.toggle('done', !!v);
+    document.getElementById('mt-' + k)?.classList.toggle('done', !!v);
+  });
+  const tot = document.getElementById('mtTotal');
+  if (tot) tot.textContent = MT.n.p1 + MT.n.p2 + MT.n.p3 + MT.n.dead;
+  const rep = document.getElementById('mtReport');
+  if (rep) rep.textContent = mtText();
+}
 
 // Save/Load progress
 function saveProgress() {
@@ -1839,6 +2394,8 @@ function submitExam() {
   });
   
   const pct = Math.round(c/n*100), pass = pct>=75;
+  localStorage.setItem('mci-last-score', JSON.stringify({ pct, n, t: Date.now() }));
+  renderHubLast();
   const flagged = qs.filter(q => ST.marked[q.id]).length;
   const seg = (k, cls) => k ? `<span class="${cls}" style="flex:${k}"></span>` : '';
   

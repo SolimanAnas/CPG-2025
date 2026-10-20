@@ -890,20 +890,6 @@ function renderStartResult(resultKey, lastStep){
   html += `<button class="reset-btn" onclick="openStart()"><svg class='lucide' width='1em' height='1em' aria-hidden='true' focusable='false'><use href='../icons/sprite.svg#rotate-ccw'/></svg> New Patient Triage</button>`;
   openSheet("START Triage — MCI", html);
 }
-
-/* ── Direct links to a tool, e.g. ems-tools.html#start (linked from the MCI pages).
-      The hash is cleared after opening, so Back returns to the page that linked here. ── */
-(function(){
-  const TOOL_LINKS = { start: openStart };
-  function openFromHash(){
-    const open = TOOL_LINKS[location.hash.slice(1)];
-    if (!open) return;
-    history.replaceState(null, "", location.pathname + location.search);
-    open();
-  }
-  window.addEventListener("hashchange", openFromHash);
-  openFromHash();
-})();
 </script>
 </body>
 </html>
