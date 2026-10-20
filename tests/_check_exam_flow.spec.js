@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const PAGES = [
   'pages/pals.html', 'pages/itls.html', 'pages/bls.html',
-  'pages/acls.html', 'pages/medical.html', 'pages/bdls.html',
+  'pages/acls.html', 'pages/medical.html', 'pages/bdls.html', 'pages/mci.html',
   'pages/pepp.html', 'pages/ppet.html', 'pages/empact.html'
 ];
 

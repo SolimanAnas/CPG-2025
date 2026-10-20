@@ -1,0 +1,1581 @@
+{
+  "title": "MCI — DCAS MCI Course Exam (Exam 1)",
+  "description": "DCAS Crisis & Disaster Management Division MCI course exam for new medics — Triage Tag/Triaging test plus Module 1 (105 questions): triage, START/RPM, triage tags, sector officers, command, staging, HAZMAT and DCAS resources. Answers follow standard START/ICS teaching; where the course answer sheet differs, the explanation says so.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "The use of the triage tag during an MCI is the sole responsibility of the:",
+      "options": [
+        "Treatment Officer",
+        "Transport Officer",
+        "Triage Officer",
+        "Incident Commander"
+      ],
+      "correct_answer": "C",
+      "explanation": "Tagging is the Triage Officer's job; the Treatment Officer re-triages, the Transport Officer moves patients.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 2,
+      "text": "Which is most important?",
+      "options": [
+        "The safety of the team",
+        "The victim's safety",
+        "Your safety",
+        "The CEO's safety"
+      ],
+      "correct_answer": "C",
+      "explanation": "Personal safety comes first — an injured rescuer becomes another casualty.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "easy",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 3,
+      "text": "The first step for you to do in triage is:",
+      "options": [
+        "Start where you stand",
+        "Take care of the worst-looking victim",
+        "Conduct voice triage",
+        "Stop, look, listen and think"
+      ],
+      "correct_answer": "C",
+      "explanation": "START begins with a voice command so the walking wounded move to a set point; the remaining patients are then assessed one by one. Stopping to look, listen and think belongs to the scene size-up before triage starts. (Note: the DCAS course answer sheet marks D.)",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 4,
+      "text": "You conduct voice triage:",
+      "options": [
+        "To separate the males from the females",
+        "To separate victims who have a hearing difficulty/disability",
+        "To separate out the victims who are able to ambulate on their own",
+        "To separate the athletes from the stage actors"
+      ],
+      "correct_answer": "C",
+      "explanation": "Directing everyone who can walk to a set point quickly sorts out the walking wounded (GREEN).",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 5,
+      "text": "In RPM, what does P relate to?",
+      "options": [
+        "Respiration",
+        "Voice triage",
+        "Capillary refill",
+        "Number of chest compressions"
+      ],
+      "correct_answer": "C",
+      "explanation": "P = Perfusion, assessed by radial pulse or capillary refill (< 2 s).",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 6,
+      "text": "In the START memorization rhyme (30 – 2 – Can do), what does \"can do\" relate to?",
+      "options": [
+        "Mental status",
+        "Marital status",
+        "Memorization skill",
+        "Master's degree"
+      ],
+      "correct_answer": "A",
+      "explanation": "30 = respirations, 2 = capillary refill seconds, Can do = follows simple commands (mental status).",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 7,
+      "text": "Which is a part of dealing with bleeding during triage?",
+      "options": [
+        "Control heavy bleeding",
+        "Rinse a minor wound",
+        "Apply bandaging",
+        "A and C"
+      ],
+      "correct_answer": "A",
+      "explanation": "During triage you only stop life-threatening haemorrhage (direct pressure or tourniquet). Bandaging and wound care wait for the treatment area. (Note: the DCAS course answer sheet marks D.)",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 8,
+      "text": "Which is a part of dealing with broken bones during triage?",
+      "options": [
+        "Remove jewelry before the part starts to swell",
+        "Splint the affected part",
+        "A and B",
+        "None of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "Triage is a 30–60 second sort; splinting and other fracture care are left to the treatment area.",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 9,
+      "text": "It is imperative that you remove/retain this portion of the triage tag when considering transportation to a hospital not equipped to handle such cases, or to better prepare the receiving hospital:",
+      "options": [
+        "Contaminated",
+        "Personal property receipt",
+        "Destination / Via",
+        "Personal information"
+      ],
+      "correct_answer": "A",
+      "explanation": "The contaminated section warns the destination so a contaminated patient is not sent to an unprepared facility.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "medium",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 10,
+      "text": "During triaging, if you are to upgrade a patient's priority, you are to:",
+      "options": [
+        "Remove the lowest portion of your triage tag",
+        "Dispose of the old tag and provide a new tag",
+        "Inform the Incident Commander so he can call for backup",
+        "Perform a detailed assessment"
+      ],
+      "correct_answer": "A",
+      "explanation": "Tear-off tags are upgraded by removing the lower colour strip(s) so the higher priority shows.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "medium",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 11,
+      "text": "When a patient's condition improves during an MCI, what are you going to do to his/her triage tag?",
+      "options": [
+        "Remove the lowest portion of your triage tag",
+        "Dispose of the old tag and provide a new tag",
+        "Keep the old triage tag and attach it with the new one",
+        "Perform a detailed assessment"
+      ],
+      "correct_answer": "C",
+      "explanation": "Torn strips can't be re-attached, so a new tag is applied while the old one is kept with it as a record.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "hard",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 12,
+      "text": "What is the tool first responders and medical personnel use to segregate patients during an MCI?",
+      "options": [
+        "Ribbon",
+        "Lipstick",
+        "Triage tag",
+        "Responder bag"
+      ],
+      "correct_answer": "C",
+      "explanation": "Triage tags record priority colour and travel with the patient.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "easy",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 13,
+      "text": "Triage is a French word which means:",
+      "options": [
+        "Divide",
+        "Sort",
+        "Select",
+        "Treat"
+      ],
+      "correct_answer": "B",
+      "explanation": "From the French \"trier\" — to sort.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "easy",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 14,
+      "text": "Refers to an event that overwhelms the local healthcare system, with a number of casualties that vastly exceeds the local resources and capabilities in a short period of time:",
+      "options": [
+        "Mass Casualty Incident",
+        "Crisis",
+        "Plane crash",
+        "Road traffic accident"
+      ],
+      "correct_answer": "A",
+      "explanation": "An MCI is defined by casualties exceeding available resources.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "easy",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 15,
+      "text": "DCAS Disaster Bus-C can accommodate how many patients?",
+      "options": [
+        "15",
+        "33",
+        "25",
+        "35"
+      ],
+      "correct_answer": "B",
+      "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "medium",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 16,
+      "text": "DCAS Disaster Bus-A can accommodate how many patients?",
+      "options": [
+        "15",
+        "33",
+        "25",
+        "35"
+      ],
+      "correct_answer": "A",
+      "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "medium",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 17,
+      "text": "DCAS Disaster Bus-B can accommodate how many patients?",
+      "options": [
+        "15",
+        "33",
+        "25",
+        "35"
+      ],
+      "correct_answer": "C",
+      "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "medium",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 18,
+      "text": "The triage tag is mainly used during:",
+      "options": [
+        "MVA",
+        "MIT",
+        "MCI",
+        "MMA"
+      ],
+      "correct_answer": "C",
+      "explanation": "Triage tags are an MCI tool.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "easy",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 19,
+      "text": "In an MCI, who is responsible for communicating with dispatch about which hospitals patients will be transported to?",
+      "options": [
+        "Treatment Officer",
+        "Staging Officer",
+        "Transport Officer",
+        "Liaison Officer"
+      ],
+      "correct_answer": "C",
+      "explanation": "The Transport Officer coordinates destinations with dispatch/hospitals.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "easy",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 20,
+      "text": "Which sector officer is responsible for sorting and segregating all victims?",
+      "options": [
+        "Treatment Officer",
+        "EMS Commander",
+        "Triage Officer",
+        "Transport Officer"
+      ],
+      "correct_answer": "C",
+      "explanation": "Sorting = triage.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "easy",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 21,
+      "text": "Any event that is expected to lead to an unstable and dangerous situation is called a:",
+      "options": [
+        "Terrorist attack",
+        "Crisis",
+        "Disaster",
+        "MCI"
+      ],
+      "correct_answer": "B",
+      "explanation": "A crisis is an event expected to lead to an unstable, dangerous situation.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "medium",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 22,
+      "text": "A sudden accident or natural catastrophe that causes great damage or loss of life is a:",
+      "options": [
+        "Terrorist attack",
+        "Crisis",
+        "Disaster",
+        "MCI"
+      ],
+      "correct_answer": "C",
+      "explanation": "That is the definition of a disaster.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "medium",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 23,
+      "text": "What is the immediate or urgent movement of people away from the threat or actual hazard?",
+      "options": [
+        "Escape",
+        "Emergency",
+        "Evacuation",
+        "Get away"
+      ],
+      "correct_answer": "C",
+      "explanation": "Evacuation is the organised, urgent movement of people away from a hazard.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "easy",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 24,
+      "text": "DCAS ISUZU support units are located in:",
+      "options": [
+        "Airport/Muhaisnah",
+        "Hatta/Jebel Ali",
+        "Warzan/Hatta",
+        "Jebel Ali/Warzan"
+      ],
+      "correct_answer": "B",
+      "explanation": "ISUZU support units are based at Hatta and Jebel Ali.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "hard",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 25,
+      "text": "The DCAS DELTA support unit is located in:",
+      "options": [
+        "Airport",
+        "Hatta",
+        "Mina",
+        "Warzan"
+      ],
+      "correct_answer": "D",
+      "explanation": "DELTA support unit: Warzan.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "hard",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 26,
+      "text": "The DCAS MAN support unit is located in:",
+      "options": [
+        "Airport",
+        "Warzan",
+        "Hatta",
+        "Mina"
+      ],
+      "correct_answer": "B",
+      "explanation": "MAN support unit: Warzan.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "hard",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 27,
+      "text": "Which sector officer is in charge of coordinating with other responding agencies?",
+      "options": [
+        "Staging",
+        "Incident Commander",
+        "Treatment",
+        "Safety Officer"
+      ],
+      "correct_answer": "B",
+      "explanation": "The Incident Commander coordinates with other agencies/stakeholders (per the DCAS IC checklist).",
+      "hint": "Topic: Command.",
+      "difficulty": "medium",
+      "topic": "Command"
+    },
+    {
+      "id": 28,
+      "text": "Monitors workplace activities to ensure that medics comply with safety procedures:",
+      "options": [
+        "Rehab Officer",
+        "Safety Officer",
+        "Security Officer",
+        "Instructors"
+      ],
+      "correct_answer": "B",
+      "explanation": "The Safety Officer monitors operations for hazards and compliance.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "easy",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 29,
+      "text": "Triage which victim first?",
+      "options": [
+        "The closest victim",
+        "The worst-looking victim",
+        "The youngest victim",
+        "The worst-sounding victim"
+      ],
+      "correct_answer": "A",
+      "explanation": "Start where you stand — triage the nearest victim and work outward systematically.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 30,
+      "text": "In METHANE, N stands for:",
+      "options": [
+        "Number of cars",
+        "Number of casualties",
+        "Nuclear",
+        "Nature of accident"
+      ],
+      "correct_answer": "B",
+      "explanation": "METHANE: Major incident, Exact location, Type, Hazards, Access, Number of casualties, Emergency services.",
+      "hint": "Topic: METHANE.",
+      "difficulty": "easy",
+      "topic": "METHANE"
+    },
+    {
+      "id": 31,
+      "text": "In triaging, how long will you spend triaging a patient?",
+      "options": [
+        "1 min",
+        "30 – 60 secs",
+        "2 mins",
+        "No time limit"
+      ],
+      "correct_answer": "B",
+      "explanation": "START triage should take under a minute per patient.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 32,
+      "text": "Example of a natural disaster:",
+      "options": [
+        "Earthquake",
+        "Flood",
+        "Typhoon",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "All are natural disasters.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "easy",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 33,
+      "text": "Types of hazardous material/hazards:",
+      "options": [
+        "Radiation",
+        "Volcanic eruption",
+        "Fire",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "All may pose hazards to life, property or environment.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 34,
+      "text": "In staging, what is the proper/ideal distance between tarp and tarp?",
+      "options": [
+        "3 meters",
+        "4 meters",
+        "5 meters",
+        "6 meters"
+      ],
+      "correct_answer": "C",
+      "explanation": "Tarps are laid 5 m apart.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "medium",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 35,
+      "text": "In staging, what is the proper/ideal distance between backboard and backboard?",
+      "options": [
+        "1 meter",
+        "2 meters",
+        "1 foot apart",
+        "2 feet"
+      ],
+      "correct_answer": "A",
+      "explanation": "Backboards are placed 1 m apart.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "medium",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 36,
+      "text": "In the SLUDGEM part of the triage tag, D stands for:",
+      "options": [
+        "Decapitation",
+        "Debilitation",
+        "Defecation",
+        "Disorientation"
+      ],
+      "correct_answer": "C",
+      "explanation": "SLUDGEM: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis.",
+      "hint": "Topic: Triage Tag.",
+      "difficulty": "medium",
+      "topic": "Triage Tag"
+    },
+    {
+      "id": 37,
+      "text": "The GOAL of DCAS Crisis and Disaster creation is:",
+      "options": [
+        "For outbreaks and MCI",
+        "Readiness and Preparedness",
+        "Crisis and Disaster",
+        "None of the above"
+      ],
+      "correct_answer": "B",
+      "explanation": "The division exists for readiness and preparedness.",
+      "hint": "Topic: DCAS Organisation.",
+      "difficulty": "medium",
+      "topic": "DCAS Organisation"
+    },
+    {
+      "id": 38,
+      "text": "The primary goal of TRIAGE in a mass casualty incident is to:",
+      "options": [
+        "Ensure that all victims have immediate access to medical care",
+        "Treat and release the patient immediately",
+        "Do the most good for the greatest number of potential survivors",
+        "Notify the receiving facilities of the total number of casualties"
+      ],
+      "correct_answer": "C",
+      "explanation": "Triage rations scarce resources to save the most lives.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 39,
+      "text": "At an MCI scene, you find a man walking with two fingers amputated and several fingers severely crushed. He follows commands. The most appropriate category is:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "A",
+      "explanation": "In START, anyone who can walk is initially GREEN.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "medium",
+      "topic": "START Triage"
+    },
+    {
+      "id": 40,
+      "text": "What would be collected in the STAGING AREA?",
+      "options": [
+        "Patients who need to be triaged",
+        "Personnel, equipment and supplies",
+        "Supplies and members of the media",
+        "None of the above"
+      ],
+      "correct_answer": "B",
+      "explanation": "Staging holds incoming resources — people, vehicles, equipment — until assigned.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "easy",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 41,
+      "text": "This is the location from which the Incident Commander oversees all operations:",
+      "options": [
+        "Staging area",
+        "Emergency operations center",
+        "Incident command base",
+        "Incident command post"
+      ],
+      "correct_answer": "D",
+      "explanation": "The ICP is the on-scene command location.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 42,
+      "text": "An emergency incident that produces a number of casualties and/or a severity of injuries exceeding the capacity of the initial crew or crews, preventing effective management and transport:",
+      "options": [
+        "Large-scale disaster",
+        "Multiple injury event",
+        "Multiple casualty incident",
+        "Mass casualty incident"
+      ],
+      "correct_answer": "C",
+      "explanation": "Exceeding the initial crews' capacity defines a multiple casualty incident.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "hard",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 43,
+      "text": "What is the only position that is always staffed in every incident?",
+      "options": [
+        "Triage Officer",
+        "Incident Commander",
+        "Transport Manager",
+        "Staging Director"
+      ],
+      "correct_answer": "B",
+      "explanation": "Every incident has an Incident Commander.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 44,
+      "text": "Gold command is considered:",
+      "options": [
+        "Strategic",
+        "Tactical",
+        "Operational",
+        "Unified command"
+      ],
+      "correct_answer": "A",
+      "explanation": "Gold = strategic, Silver = tactical, Bronze = operational.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 45,
+      "text": "In a HAZMAT incident, when do patients need to be decontaminated?",
+      "options": [
+        "Before they are triaged",
+        "Prior to entering the treatment area",
+        "After they are treated on the scene",
+        "Upon arrival at the hospital"
+      ],
+      "correct_answer": "B",
+      "explanation": "Decontamination is done in the warm zone before patients enter the clean treatment area. A quick initial triage may happen before decontamination to set its order. (Note: the DCAS course answer sheet marks A.)",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "medium",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 46,
+      "text": "You find a patient at the scene of a mass casualty event with a severe head injury, a pulse of 10 bpm, and he is apneic. Under the triage system he is classified as:",
+      "options": [
+        "Minimal (green)",
+        "Delayed (yellow)",
+        "Immediate (red)",
+        "Expectant (black)"
+      ],
+      "correct_answer": "D",
+      "explanation": "Apneic with a non-survivable injury = expectant/deceased.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "medium",
+      "topic": "START Triage"
+    },
+    {
+      "id": 47,
+      "text": "Which do you NOT do during triage?",
+      "options": [
+        "CPR",
+        "Apply cool dressing",
+        "Give IV",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "Triage is limited to airway opening, bleeding control and positioning.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 48,
+      "text": "A group of physicians from Rashid Hospital has arrived at the scene of an MCI and is wondering where to go. The best place for a physician to be located is the:",
+      "options": [
+        "Triage area",
+        "Treatment area",
+        "Transport area",
+        "Command post"
+      ],
+      "correct_answer": "B",
+      "explanation": "Physicians add most value treating patients in the treatment area.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "easy",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 49,
+      "text": "In HAZMAT, H stands for:",
+      "options": [
+        "Hospital",
+        "Hazards",
+        "Helicopter needed",
+        "None of the above"
+      ],
+      "correct_answer": "B",
+      "explanation": "HAZMAT = HAZardous MATerials.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 50,
+      "text": "A mass casualty incident which overwhelms the resources both on-scene and at the receiving facilities/hospitals is the typical definition of:",
+      "options": [
+        "Multiple casualty incident",
+        "Mass casualty incident",
+        "Disaster",
+        "All of the above"
+      ],
+      "correct_answer": "C",
+      "explanation": "When resources at the scene AND at the receiving hospitals are overwhelmed and outside help is needed, the event is a disaster. A multiple casualty incident only exceeds the initial crews. (Note: the DCAS course answer sheet marks B.)",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "hard",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 51,
+      "text": "Provides the Incident Commander with a risk assessment of the incident action plan:",
+      "options": [
+        "Staging Officer",
+        "Safety Officer",
+        "Triage Officer",
+        "Liaison Officer"
+      ],
+      "correct_answer": "B",
+      "explanation": "Risk assessment is the Safety Officer's role.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "easy",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 52,
+      "text": "In triaging, what are the 3 immediate management steps that can be performed?",
+      "options": [
+        "Airway, breathing, circulation",
+        "Open airway, control bleeding, positioning",
+        "Airway, bleeding control, transportation",
+        "None of the above"
+      ],
+      "correct_answer": "B",
+      "explanation": "START allows only opening the airway, controlling major bleeding and positioning.",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 53,
+      "text": "Secondary triaging should be performed in the:",
+      "options": [
+        "Triage area",
+        "Treatment area",
+        "Inside the ambulance",
+        "Hospital emergency department"
+      ],
+      "correct_answer": "B",
+      "explanation": "Patients are re-triaged on arrival in the treatment area.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 54,
+      "text": "RPM in triage stands for:",
+      "options": [
+        "Rest, Perspiration and Motor ability",
+        "Respiration, Perfusion and Mental status",
+        "Respiration, Palpation and Memory",
+        "Rehabilitate, Plan and Mobilize"
+      ],
+      "correct_answer": "B",
+      "explanation": "The three START parameters.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 55,
+      "text": "In responding to any emergency, what is the most important thing to consider?",
+      "options": [
+        "Wellness of your patient",
+        "Patient's safety",
+        "Your own safety",
+        "Driver's safety"
+      ],
+      "correct_answer": "C",
+      "explanation": "Self first, then team, then bystanders, then patient.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "easy",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 56,
+      "text": "In METHANE, T stands for:",
+      "options": [
+        "Time",
+        "Threat",
+        "Triage tag",
+        "Type of incident"
+      ],
+      "correct_answer": "D",
+      "explanation": "T = Type of incident.",
+      "hint": "Topic: METHANE.",
+      "difficulty": "easy",
+      "topic": "METHANE"
+    },
+    {
+      "id": 57,
+      "text": "A material or substance that poses a danger and harmful effect to life, property or the environment:",
+      "options": [
+        "Poison",
+        "Hazmat",
+        "Pollution",
+        "Ozone layer"
+      ],
+      "correct_answer": "B",
+      "explanation": "Definition of hazardous material.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 58,
+      "text": "Your first responsibility when arriving at an MCI is:",
+      "options": [
+        "Do triaging",
+        "Secure that the scene is safe",
+        "Transport a RED case",
+        "Report to DCD"
+      ],
+      "correct_answer": "B",
+      "explanation": "Scene safety precedes all patient care.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "easy",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 59,
+      "text": "The START triage system stands for:",
+      "options": [
+        "Simple Transport And Rapid Treatment",
+        "Simple Triage And Rapid Treatment",
+        "Simple Triage And Rapid Transport",
+        "Simple Treatment And Rapid Transport"
+      ],
+      "correct_answer": "B",
+      "explanation": "START = Simple Triage And Rapid Treatment.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 60,
+      "text": "What year was DCAS Crisis and Disaster created?",
+      "options": [
+        "2009",
+        "2014",
+        "2017",
+        "2015"
+      ],
+      "correct_answer": "A",
+      "explanation": "Established in 2009.",
+      "hint": "Topic: DCAS Organisation.",
+      "difficulty": "hard",
+      "topic": "DCAS Organisation"
+    },
+    {
+      "id": 61,
+      "text": "Food and clean water are needed for medical responders during an MCI. Which section would be responsible for acquiring these supplies?",
+      "options": [
+        "Rehab",
+        "Finance",
+        "Operations",
+        "Logistics"
+      ],
+      "correct_answer": "D",
+      "explanation": "Logistics provides facilities, services, food and supplies.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 62,
+      "text": "In an MCI, disaster buses (especially buses A and C) can be used as:",
+      "options": [
+        "Transportation of patients",
+        "Treatment area for patients",
+        "Surgical area for patients",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "Per the course key, they serve as transport, treatment and surgical space.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "medium",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 63,
+      "text": "In the command structure, BRONZE is considered:",
+      "options": [
+        "Strategic",
+        "Tactical",
+        "Operational",
+        "Dispatch"
+      ],
+      "correct_answer": "C",
+      "explanation": "Gold = strategic, Silver = tactical, Bronze = operational.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 64,
+      "text": "If someone fails the mental status test, you should tag them:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "C",
+      "explanation": "Unable to follow simple commands = RED (immediate).",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 65,
+      "text": "You are the first ambulance at the scene. What role will you assume?",
+      "options": [
+        "Triage Officer",
+        "Treatment Officer",
+        "Incident Commander",
+        "Safety Officer"
+      ],
+      "correct_answer": "C",
+      "explanation": "The first-arriving crew assumes command until relieved.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 66,
+      "text": "You assumed the role of Incident Commander. When senior staff/the shift in-charge arrives, what will you do?",
+      "options": [
+        "Still assume the Incident Command role",
+        "Transfer command and responsibility and transport available patients to hospital",
+        "Transfer command and responsibility and act as IC assistant",
+        "Assign the shift in-charge to the treatment area"
+      ],
+      "correct_answer": "C",
+      "explanation": "Formal transfer of command; the former IC stays to assist.",
+      "hint": "Topic: Command.",
+      "difficulty": "medium",
+      "topic": "Command"
+    },
+    {
+      "id": 67,
+      "text": "In HAZMAT, how can hazardous material enter your body?",
+      "options": [
+        "Injection only",
+        "Ingestion only",
+        "Inhalation only",
+        "All routes: injection, ingestion, absorption and inhalation"
+      ],
+      "correct_answer": "D",
+      "explanation": "All four routes of exposure apply.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 68,
+      "text": "Which of the following best defines a \"Mass Casualty Incident\"? An MCI is a situation…",
+      "options": [
+        "With major loss of community property and revenue",
+        "For which the President declares a disaster area",
+        "Where healthcare needs exceed healthcare resources",
+        "Caused by an act of global terrorism"
+      ],
+      "correct_answer": "C",
+      "explanation": "Needs exceeding resources defines an MCI.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "easy",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 69,
+      "text": "You are a bystander responding to an explosion. Which of these should you do first?",
+      "options": [
+        "Begin giving first aid to the injured at the scene",
+        "Remove debris from the scene that might cause injury",
+        "Enter the scene and then communicate with 999 or dispatch",
+        "Stop curious onlookers going near the scene"
+      ],
+      "correct_answer": "D",
+      "explanation": "Prevent more casualties first (secondary devices, collapse); don't enter the scene.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "medium",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 70,
+      "text": "You are responding to a mass casualty emergency. According to our triage system, victims should initially be grouped according to which of the following?",
+      "options": [
+        "Their ability to move",
+        "Their ability to speak",
+        "Their age and gender",
+        "Their pre-existing health conditions"
+      ],
+      "correct_answer": "A",
+      "explanation": "START begins by separating those who can walk.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 71,
+      "text": "A young lady at a disaster scene who was triaged as a green patient should be:",
+      "options": [
+        "Sent home immediately",
+        "Advised to go to the nearest hospital",
+        "Advised to contact her private doctor",
+        "Kept at a safe distance from the scene, to be further evaluated"
+      ],
+      "correct_answer": "D",
+      "explanation": "GREEN patients are held in a safe area for re-triage — conditions can deteriorate.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 72,
+      "text": "What parameters will you take into consideration to triage victims as BLACK?",
+      "options": [
+        "Decapitation",
+        "Incineration",
+        "Rigor mortis",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "All are injuries/signs incompatible with life.",
+      "hint": "Topic: Triage.",
+      "difficulty": "easy",
+      "topic": "Triage"
+    },
+    {
+      "id": 73,
+      "text": "This is an example of a crisis:",
+      "options": [
+        "Personal problem",
+        "Fighting",
+        "Riot",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "Per the course key, all can be crises.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "medium",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 74,
+      "text": "At a fire incident, a police officer saw one patient along the hallway of the building and asks you to help. What is your initial action?",
+      "options": [
+        "Immediately help the patient because he needs medical attention",
+        "Ask Civil Defense to bring the patient to you",
+        "Ignore the policeman because this is not your responsibility",
+        "Tell the police officer to get the patient"
+      ],
+      "correct_answer": "B",
+      "explanation": "Medics don't enter the hot zone; Civil Defense (fire/rescue) extracts the patient.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "medium",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 75,
+      "text": "Signs that identify the hazardous material contained within a transport vehicle are called:",
+      "options": [
+        "Warning signs",
+        "Memo",
+        "Placards",
+        "Hazmat"
+      ],
+      "correct_answer": "C",
+      "explanation": "Placards display the UN/hazard class on vehicles.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 76,
+      "text": "Which patient should be transported first during an MCI?",
+      "options": [
+        "Patient with a broken femur, conscious",
+        "8-year-old boy crying loudly",
+        "Patient with head injury, apneic",
+        "80-year-old lady with VS: BP 140/90, RR 20, coherent"
+      ],
+      "correct_answer": "A",
+      "explanation": "The femur fracture is the highest salvageable priority; the apneic patient is expectant.",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 77,
+      "text": "In which of the following zones is the EMT expected to be staged at the scene of a hazardous materials incident?",
+      "options": [
+        "Warm zone",
+        "Hot zone",
+        "Cold zone",
+        "Ground zero"
+      ],
+      "correct_answer": "C",
+      "explanation": "EMS stages and treats in the cold (support) zone.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "easy",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 78,
+      "text": "Using START triage guidelines, a patient at a mass-casualty incident who is alert and has a capillary refill time of less than 2 seconds is deemed:",
+      "options": [
+        "Green category",
+        "Yellow category",
+        "Red category",
+        "Black category"
+      ],
+      "correct_answer": "B",
+      "explanation": "Normal RPM but not ambulatory = YELLOW (delayed).",
+      "hint": "Topic: START Triage.",
+      "difficulty": "medium",
+      "topic": "START Triage"
+    },
+    {
+      "id": 79,
+      "text": "The area in which patients are treated at a multiple-casualty incident (MCI):",
+      "options": [
+        "Collection area",
+        "Triage area",
+        "Treatment area",
+        "Transport area"
+      ],
+      "correct_answer": "C",
+      "explanation": "Self-explanatory.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "easy",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 80,
+      "text": "A 15-year-old boy with a broken arm walking around the scene:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "A",
+      "explanation": "Ambulatory = GREEN.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 81,
+      "text": "A responsive 35-year-old male has pale, moist skin and respirations of 32/min:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "C",
+      "explanation": "RR > 30 = RED.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 82,
+      "text": "An unresponsive male has snoring respirations. His breathing improves when you open his airway:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "C",
+      "explanation": "Breathes only after airway positioning = RED.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 83,
+      "text": "As a Triage Officer at an MCI, you find a patient unconscious, with no obvious injuries and without a carotid pulse. What action will you take?",
+      "options": [
+        "Do CPR immediately",
+        "Consider as expectant and go to another patient",
+        "Call one ambulance and load this patient immediately",
+        "Tag as red and make him your priority"
+      ],
+      "correct_answer": "B",
+      "explanation": "No CPR in MCI triage — pulseless/apneic = expectant.",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 84,
+      "text": "Which of the following events would MOST likely cause an open, or uncontained, multiple casualty incident?",
+      "options": [
+        "Bus wreck",
+        "Tornado",
+        "Small explosion",
+        "Two-car collision"
+      ],
+      "correct_answer": "B",
+      "explanation": "A tornado affects a wide, evolving area — the number of victims isn't known up front.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "medium",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 85,
+      "text": "A multiple casualty incident is MOST accurately defined as an event in which:",
+      "options": [
+        "Mutual aid from other agencies is required to care for numerous patients",
+        "There are more patients who require advanced life support than patients who do not",
+        "The number of patients exceeds the resources available to the initial responders",
+        "There are at least 25 patients, more than half of whom are critically injured"
+      ],
+      "correct_answer": "C",
+      "explanation": "Defined by resources, not a number.",
+      "hint": "Topic: Fundamentals.",
+      "difficulty": "medium",
+      "topic": "Fundamentals"
+    },
+    {
+      "id": 86,
+      "text": "Which of the following is NOT a responsibility of the Incident Commander?",
+      "options": [
+        "Establishing strategic objectives and priorities",
+        "Developing a plan to manage the incident",
+        "Assessing the entire incident scene",
+        "Authorizing medical treatment interventions"
+      ],
+      "correct_answer": "D",
+      "explanation": "The IC sets objectives, plans and assesses the scene; authorizing specific treatments is medical direction, not command. (Note: the DCAS course answer sheet marks A, which is itself an IC duty.)",
+      "hint": "Topic: Command.",
+      "difficulty": "hard",
+      "topic": "Command"
+    },
+    {
+      "id": 87,
+      "text": "During a small-scale incident, the Incident Commander:",
+      "options": [
+        "Delegates all authority to the senior paramedic",
+        "Primarily assumes the role of safety officer",
+        "May perform all the command functions",
+        "Will likely not respond to the scene"
+      ],
+      "correct_answer": "C",
+      "explanation": "ICS is scalable — on small incidents the IC may cover every function.",
+      "hint": "Topic: Command.",
+      "difficulty": "medium",
+      "topic": "Command"
+    },
+    {
+      "id": 88,
+      "text": "You are the first responder to an MCI. What is your priority action from the following?",
+      "options": [
+        "Perform triage immediately",
+        "Call for back-up ambulances",
+        "Inform dispatch via METHANE",
+        "Scene size-up"
+      ],
+      "correct_answer": "D",
+      "explanation": "Size up the scene first; METHANE, backup and triage follow.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "medium",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 89,
+      "text": "When to activate the Disaster Bus:",
+      "options": [
+        "You have 10 or more RED patients",
+        "You have 10 or more yellow patients",
+        "You have 10 or more green patients",
+        "All of the above"
+      ],
+      "correct_answer": "D",
+      "explanation": "Any category reaching 10+ patients triggers bus activation.",
+      "hint": "Topic: DCAS Resources.",
+      "difficulty": "medium",
+      "topic": "DCAS Resources"
+    },
+    {
+      "id": 90,
+      "text": "He has the authority and responsibility to stop a rescuer if he believes that he is in danger:",
+      "options": [
+        "Incident Commander",
+        "Staging Officer",
+        "Treatment Officer",
+        "Safety Officer"
+      ],
+      "correct_answer": "D",
+      "explanation": "The Safety Officer can halt unsafe acts immediately.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "easy",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 91,
+      "text": "At an MCI, staff from Khaleej News approach you and ask for an interview regarding the incident. What is your appropriate action?",
+      "options": [
+        "Answer the questions in a polite manner",
+        "Ignore and leave him",
+        "Instruct him to contact the CEO",
+        "Direct him to talk to the Information Officer"
+      ],
+      "correct_answer": "D",
+      "explanation": "All media enquiries go to the Public Information Officer.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 92,
+      "text": "As a Staging Officer, you are responsible for:",
+      "options": [
+        "Advising the Incident Commander that the patient is already transported",
+        "Making sure that all patients have been triaged",
+        "Advising the Incident Commander of the status of resources",
+        "Advising the Treatment Officer when and where to transport the patients"
+      ],
+      "correct_answer": "C",
+      "explanation": "Staging tracks available resources and reports to the IC.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "medium",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 93,
+      "text": "When responding to a car accident, the proper way to approach a driver trapped inside the car is from the front. Why?",
+      "options": [
+        "You can see and feel if the car engine is running",
+        "For you to see if there is a car from behind",
+        "To prevent him from turning his head sideways",
+        "Both A and C"
+      ],
+      "correct_answer": "C",
+      "explanation": "Approaching from the front keeps the patient looking straight ahead, protecting the C-spine. (Note: left unmarked on the DCAS course answer sheet.)",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "medium",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 94,
+      "text": "When responding to a road traffic accident, what is the most important equipment to bring?",
+      "options": [
+        "LP12, responder bag, carevent, backboard",
+        "Responder bag, LP12, backboard, carevent",
+        "Responder bag, backboard, carevent, C-collar",
+        "C-collar, LP12, responder bag, carevent"
+      ],
+      "correct_answer": "C",
+      "explanation": "Trauma-focused kit: responder bag, backboard, carevent and C-collar.",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "medium",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 95,
+      "text": "As Incident Commander, what designation will you assign to the 2nd ambulance unit that arrives?",
+      "options": [
+        "Staging and Treatment",
+        "Triage and Transport",
+        "Triage and Treatment",
+        "Staging and Triage"
+      ],
+      "correct_answer": "A",
+      "explanation": "Per the DCAS course key: second unit takes Staging and Treatment.",
+      "hint": "Topic: Command.",
+      "difficulty": "hard",
+      "topic": "Command"
+    },
+    {
+      "id": 96,
+      "text": "When you arrive at an MCI as a backup ambulance, you will directly report to the:",
+      "options": [
+        "Triage Officer",
+        "Incident Commander",
+        "Transport Officer",
+        "Civil Defense IC"
+      ],
+      "correct_answer": "B",
+      "explanation": "Arriving units report to the IC (or staging when established) for assignment.",
+      "hint": "Topic: Command.",
+      "difficulty": "easy",
+      "topic": "Command"
+    },
+    {
+      "id": 97,
+      "text": "Which of the following patients requires KED extrication?",
+      "options": [
+        "RED patient suspected of spinal injury",
+        "GREEN agile patient trapped inside the car",
+        "Stable, conversant patient seated in the car who is unable to move his lower extremities",
+        "RED patient lying on the ground"
+      ],
+      "correct_answer": "C",
+      "explanation": "Short spinal devices (KED) are for stable, seated patients with suspected spinal injury. Unstable RED patients need rapid extrication, and a walking GREEN patient with no spinal concern doesn't need a KED. (Note: the DCAS course answer sheet marks B.)",
+      "hint": "Topic: Scene Safety.",
+      "difficulty": "hard",
+      "topic": "Scene Safety"
+    },
+    {
+      "id": 98,
+      "text": "Which of the following is NOT the role of the first-arriving EMT at the scene of a possible hazardous materials emergency?",
+      "options": [
+        "Requesting special resources to respond",
+        "Recognizing a hazardous materials emergency",
+        "Establishing a safe zone",
+        "Rescuing any victims still in the area of the spill"
+      ],
+      "correct_answer": "D",
+      "explanation": "Entry and rescue in the hot zone is for trained HAZMAT teams.",
+      "hint": "Topic: HAZMAT.",
+      "difficulty": "medium",
+      "topic": "HAZMAT"
+    },
+    {
+      "id": 99,
+      "text": "In most cases, the only reason for which the remains of the dead should be moved during the initial triage phase of an MCI is to:",
+      "options": [
+        "Retrieve the victim's personal effects",
+        "Allow family members to view the body",
+        "Obtain access to a possible living victim",
+        "Obtain a positive identification of the victim"
+      ],
+      "correct_answer": "C",
+      "explanation": "Bodies stay in place (evidence/ID) unless blocking access to the living.",
+      "hint": "Topic: Triage.",
+      "difficulty": "medium",
+      "topic": "Triage"
+    },
+    {
+      "id": 100,
+      "text": "A 50-year-old man has bilateral fractured femurs. He has a faint radial pulse, a respiratory rate of 24 and follows commands. By START criteria he is:",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "B",
+      "explanation": "By strict START: cannot walk, RR under 30, radial pulse present and follows commands = YELLOW. Watch closely and re-triage — bilateral femur fractures can cause shock and he may soon become RED. (Note: the DCAS course answer sheet marks C (Red).)",
+      "hint": "Topic: START Triage.",
+      "difficulty": "medium",
+      "topic": "START Triage"
+    },
+    {
+      "id": 101,
+      "text": "START is a system that relies on simple commands and which 3 physiological parameters?",
+      "options": [
+        "Respiration, pain, and mental status",
+        "Circulation, sensory, and motor status",
+        "Respiration, sensory, and motor status",
+        "Respiration, pulse, and mental status"
+      ],
+      "correct_answer": "D",
+      "explanation": "RPM: respiration, pulse/perfusion, mental status.",
+      "hint": "Topic: START Triage.",
+      "difficulty": "easy",
+      "topic": "START Triage"
+    },
+    {
+      "id": 102,
+      "text": "What colour TARP in the treatment area should be placed close to the loading/transportation area?",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "C",
+      "explanation": "RED patients leave first, so their tarp is nearest the loading zone.",
+      "hint": "Topic: Scene Layout.",
+      "difficulty": "easy",
+      "topic": "Scene Layout"
+    },
+    {
+      "id": 103,
+      "text": "Sector officer responsible for collecting the destination control/tracking number:",
+      "options": [
+        "Triage Officer",
+        "Treatment Officer",
+        "Transport Officer",
+        "Staging Officer"
+      ],
+      "correct_answer": "C",
+      "explanation": "Transport tracks each patient's destination.",
+      "hint": "Topic: Sector Officers.",
+      "difficulty": "medium",
+      "topic": "Sector Officers"
+    },
+    {
+      "id": 104,
+      "text": "Sector officer responsible for liaising with other stakeholders:",
+      "options": [
+        "Triage Officer",
+        "Treatment Officer",
+        "Transport Officer",
+        "Incident Commander"
+      ],
+      "correct_answer": "D",
+      "explanation": "Coordinating with other stakeholders is on the IC checklist.",
+      "hint": "Topic: Command.",
+      "difficulty": "medium",
+      "topic": "Command"
+    },
+    {
+      "id": 105,
+      "text": "Ideally, the first ambulance on scene will be the:",
+      "options": [
+        "Transport officer because he knows the location",
+        "First ambulance to transport the RED patient",
+        "Last ambulance to leave the scene",
+        "First to be relieved"
+      ],
+      "correct_answer": "C",
+      "explanation": "The first crew becomes command and stays until the incident closes.",
+      "hint": "Topic: Command.",
+      "difficulty": "medium",
+      "topic": "Command"
+    }
+  ]
+}
