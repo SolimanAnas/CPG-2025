@@ -350,7 +350,7 @@
       "height": 918,
       "alt": "METHANE: Major incident, Exact location, Type of incident, Hazards, Access, Number of casualties, Emergency services.",
       "tool": {
-        "href": "methane.html",
+        "href": "#methane",
         "label": "Open the METHANE report tool"
       }
     },
@@ -360,7 +360,7 @@
       "height": 1317,
       "alt": "START adult triage flowchart. Able to walk: Minor, then secondary triage. Not breathing: position the airway; breathing starts: Immediate; still apneic: Expectant. Respiratory rate over 30: Immediate. Absent radial pulse or capillary refill over 2 seconds: Immediate. Cannot follow simple commands: Immediate. Otherwise: Delayed.",
       "tool": {
-        "href": "ems-tools.html#start",
+        "href": "#start-triage",
         "label": "Open the START triage tool"
       }
     },

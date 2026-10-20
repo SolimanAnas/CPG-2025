@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.4';   // MCI exam redesign + section images
+const CACHE_VERSION = 'dcas-cpg-v6.5';   // MCI: START + METHANE tools in-page, photo viewer
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
