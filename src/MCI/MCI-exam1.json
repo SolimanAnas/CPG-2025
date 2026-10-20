@@ -1,6 +1,6 @@
 {
   "title": "MCI — DCAS MCI Course Exam (Exam 1)",
-  "description": "DCAS Crisis & Disaster Management Division MCI course exam for new medics — Triage Tag/Triaging test plus Module 1 (110 questions): triage, START/RPM, triage tags, sector officers, command, staging, HAZMAT and DCAS resources. Answers follow standard START/ICS teaching; where the course answer sheet differs, the explanation says so.",
+  "description": "DCAS MCI course exam for new medics (105 questions): triage, START/RPM, triage tags, sector officers, command, staging, HAZMAT and DCAS resources.",
   "questions": [
     {
       "id": 1,
@@ -42,7 +42,7 @@
         "Stop, look, listen and think"
       ],
       "correct_answer": "C",
-      "explanation": "START begins with a voice command so the walking wounded move to a set point; the remaining patients are then assessed one by one. Stopping to look, listen and think belongs to the scene size-up before triage starts. (Note: the DCAS course answer sheet marks D.)",
+      "explanation": "START begins with a voice command so the walking wounded move to a set point; the remaining patients are then assessed one by one. Stopping to look, listen and think belongs to the scene size-up before triage starts.",
       "hint": "Topic: Triage.",
       "difficulty": "medium",
       "topic": "Triage"
@@ -102,7 +102,7 @@
         "A and C"
       ],
       "correct_answer": "A",
-      "explanation": "During triage you only stop life-threatening haemorrhage (direct pressure or tourniquet). Bandaging and wound care wait for the treatment area. (Note: the DCAS course answer sheet marks D.)",
+      "explanation": "During triage you only stop life-threatening haemorrhage (direct pressure or tourniquet). Bandaging and wound care wait for the treatment area.",
       "hint": "Topic: Triage.",
       "difficulty": "medium",
       "topic": "Triage"
@@ -672,7 +672,7 @@
         "Upon arrival at the hospital"
       ],
       "correct_answer": "B",
-      "explanation": "Decontamination is done in the warm zone before patients enter the clean treatment area. A quick initial triage may happen before decontamination to set its order. (Note: the DCAS course answer sheet marks A.)",
+      "explanation": "Decontamination is done in the warm zone before patients enter the clean treatment area. A quick initial triage may happen before decontamination to set its order.",
       "hint": "Topic: HAZMAT.",
       "difficulty": "medium",
       "topic": "HAZMAT"
@@ -747,7 +747,7 @@
         "All of the above"
       ],
       "correct_answer": "C",
-      "explanation": "When resources at the scene AND at the receiving hospitals are overwhelmed and outside help is needed, the event is a disaster. A multiple casualty incident only exceeds the initial crews. (Note: the DCAS course answer sheet marks B.)",
+      "explanation": "When resources at the scene AND at the receiving hospitals are overwhelmed and outside help is needed, the event is a disaster. A multiple casualty incident only exceeds the initial crews.",
       "hint": "Topic: Fundamentals.",
       "difficulty": "hard",
       "topic": "Fundamentals"
@@ -927,7 +927,7 @@
         "All of the above"
       ],
       "correct_answer": "D",
-      "explanation": "Per the course key, they serve as transport, treatment and surgical space.",
+      "explanation": "They can serve as transport, treatment and surgical space.",
       "hint": "Topic: DCAS Resources.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
@@ -1092,7 +1092,7 @@
         "All of the above"
       ],
       "correct_answer": "D",
-      "explanation": "Per the course key, all can be crises.",
+      "explanation": "All can be crises.",
       "hint": "Topic: Fundamentals.",
       "difficulty": "medium",
       "topic": "Fundamentals"
@@ -1287,7 +1287,7 @@
         "Authorizing medical treatment interventions"
       ],
       "correct_answer": "D",
-      "explanation": "The IC sets objectives, plans and assesses the scene; authorizing specific treatments is medical direction, not command. (Note: the DCAS course answer sheet marks A, which is itself an IC duty.)",
+      "explanation": "The IC sets objectives, plans and assesses the scene; authorizing specific treatments is medical direction, not command.",
       "hint": "Topic: Command.",
       "difficulty": "hard",
       "topic": "Command"
@@ -1392,7 +1392,7 @@
         "Both A and C"
       ],
       "correct_answer": "C",
-      "explanation": "Approaching from the front keeps the patient looking straight ahead, protecting the C-spine. (Note: left unmarked on the DCAS course answer sheet.)",
+      "explanation": "Approaching from the front keeps the patient looking straight ahead, protecting the C-spine.",
       "hint": "Topic: Scene Safety.",
       "difficulty": "medium",
       "topic": "Scene Safety"
@@ -1422,7 +1422,7 @@
         "Staging and Triage"
       ],
       "correct_answer": "A",
-      "explanation": "Per the DCAS course key: second unit takes Staging and Treatment.",
+      "explanation": "DCAS protocol: the second unit takes Staging and Treatment.",
       "hint": "Topic: Command.",
       "difficulty": "hard",
       "topic": "Command"
@@ -1452,7 +1452,7 @@
         "RED patient lying on the ground"
       ],
       "correct_answer": "C",
-      "explanation": "Short spinal devices (KED) are for stable, seated patients with suspected spinal injury. Unstable RED patients need rapid extrication, and a walking GREEN patient with no spinal concern doesn't need a KED. (Note: the DCAS course answer sheet marks B.)",
+      "explanation": "Short spinal devices (KED) are for stable, seated patients with suspected spinal injury. Unstable RED patients need rapid extrication, and a walking GREEN patient with no spinal concern doesn't need a KED.",
       "hint": "Topic: Scene Safety.",
       "difficulty": "hard",
       "topic": "Scene Safety"
@@ -1497,7 +1497,7 @@
         "Black"
       ],
       "correct_answer": "B",
-      "explanation": "By strict START: cannot walk, RR under 30, radial pulse present and follows commands = YELLOW. Watch closely and re-triage — bilateral femur fractures can cause shock and he may soon become RED. (Note: the DCAS course answer sheet marks C (Red).)",
+      "explanation": "By strict START: cannot walk, RR under 30, radial pulse present and follows commands = YELLOW. Watch closely and re-triage — bilateral femur fractures can cause shock and he may soon become RED..)",
       "hint": "Topic: START Triage.",
       "difficulty": "medium",
       "topic": "START Triage"
@@ -1519,66 +1519,6 @@
     },
     {
       "id": 102,
-      "text": "DCAS Crisis and Disaster Management Head of Division:",
-      "options": [
-        "Majid Alzarooni",
-        "Mishal Abdul Karim Julfar",
-        "Juma Essa Ahmed Al Belooshi",
-        "Khalid Al Qassim"
-      ],
-      "correct_answer": "C",
-      "explanation": "As per the course material.",
-      "hint": "Topic: DCAS Organisation.",
-      "difficulty": "hard",
-      "topic": "DCAS Organisation"
-    },
-    {
-      "id": 103,
-      "text": "Who is the current CEO of DCAS?",
-      "options": [
-        "Majid Alzarooni",
-        "Mishal Abdul Karim Julfar",
-        "Khalifa Bin Darrai",
-        "Khalid Al Qassim"
-      ],
-      "correct_answer": "C",
-      "explanation": "As per the course material.",
-      "hint": "Topic: DCAS Organisation.",
-      "difficulty": "hard",
-      "topic": "DCAS Organisation"
-    },
-    {
-      "id": 104,
-      "text": "\"Creative & internationally leading ambulance services\" is the:",
-      "options": [
-        "Motto of DCAS",
-        "Vision of DCAS",
-        "Mission of DCAS",
-        "Goal of DCAS"
-      ],
-      "correct_answer": "B",
-      "explanation": "That statement is the DCAS vision.",
-      "hint": "Topic: DCAS Organisation.",
-      "difficulty": "medium",
-      "topic": "DCAS Organisation"
-    },
-    {
-      "id": 105,
-      "text": "\"Providing and regulating emergency medical services professionally and sustainably within a stimulated environment for creativity, supported with qualified human resources and effective partnerships for distinguished ambulance services\" is the:",
-      "options": [
-        "Motto of DCAS",
-        "Vision of DCAS",
-        "Mission of DCAS",
-        "Goal of DCAS"
-      ],
-      "correct_answer": "C",
-      "explanation": "That statement is the DCAS mission.",
-      "hint": "Topic: DCAS Organisation.",
-      "difficulty": "medium",
-      "topic": "DCAS Organisation"
-    },
-    {
-      "id": 106,
       "text": "What colour TARP in the treatment area should be placed close to the loading/transportation area?",
       "options": [
         "Green",
@@ -1593,22 +1533,7 @@
       "topic": "Scene Layout"
     },
     {
-      "id": 107,
-      "text": "Happiness, patient focus, justice, governance, social responsibility and professionalism are examples of:",
-      "options": [
-        "Motto of DCAS",
-        "Vision of DCAS",
-        "Mission of DCAS",
-        "Values of DCAS"
-      ],
-      "correct_answer": "D",
-      "explanation": "These are the DCAS values.",
-      "hint": "Topic: DCAS Organisation.",
-      "difficulty": "medium",
-      "topic": "DCAS Organisation"
-    },
-    {
-      "id": 108,
+      "id": 103,
       "text": "Sector officer responsible for collecting the destination control/tracking number:",
       "options": [
         "Triage Officer",
@@ -1623,7 +1548,7 @@
       "topic": "Sector Officers"
     },
     {
-      "id": 109,
+      "id": 104,
       "text": "Sector officer responsible for liaising with other stakeholders:",
       "options": [
         "Triage Officer",
@@ -1638,7 +1563,7 @@
       "topic": "Command"
     },
     {
-      "id": 110,
+      "id": 105,
       "text": "Ideally, the first ambulance on scene will be the:",
       "options": [
         "Transport officer because he knows the location",
