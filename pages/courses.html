@@ -165,15 +165,14 @@
         }
 
         /* ══════════════ Courses v2 — compact, collapsible, sticky search ══════════════ */
-        :root { --hdr-h: 72px; }
-        body.compact { --hdr-h: 56px; }
-        header {
-            height: var(--hdr-h) !important;
-            transition: height 0.25s cubic-bezier(0.23, 1, 0.32, 1) !important;
-        }
-        .header-text h1 { transition: font-size 0.25s ease; }
-        .header-text p { transition: opacity 0.2s ease, max-height 0.25s ease; max-height: 20px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-        body.compact .header-text h1 { font-size: 1.05rem; }
+        /* Fixed, slim header: its height never changes on scroll. The header is
+           sticky (in flow), so resizing it shifted the page and fed back into the
+           scroll handler. */
+        :root { --hdr-h: 54px; }
+        header { height: var(--hdr-h) !important; }
+        header .icon-btn, #drawerTrigger.hdr-menu { width: 36px !important; height: 36px !important; }
+        .header-text h1 { font-size: 1.1rem; line-height: 1.2; }
+        .header-text p { font-size: 0.68rem; transition: opacity 0.2s ease, max-height 0.25s ease; max-height: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
         body.compact .header-text p { opacity: 0; max-height: 0; }
 
         /* Menu: was a pull-tab hanging over the search box — now a normal header button */
@@ -1243,18 +1242,36 @@
     }
 
     // Compact header on scroll; filter chips hide while scrolling down and come
-    // back on scroll-up (or at the top). Hysteresis keeps it from flickering.
+    // back on scroll-up (or at the top). Collapsing the chips shrinks the sticky
+    // toolbar, and the browser's scroll anchoring then nudges scrollY back by
+    // that amount — which used to read as an upward scroll and re-show the chips
+    // (flicker loop). So after each toggle, ignore scroll events until the
+    // 0.25s collapse transition has finished, then resync — including once when
+    // the lock ends, in case scrolling stopped (e.g. back at the top) meanwhile.
     function setupCompactScroll() {
-        let lastY = window.scrollY, ticking = false, travel = 0;
+        let lastY = window.scrollY, ticking = false, travel = 0, lockUntil = 0, unlockTimer = 0;
+        function setChipsHidden(b, hide) {
+            if (b.classList.contains('chips-hidden') === hide) return;
+            b.classList.toggle('chips-hidden', hide);
+            lockUntil = performance.now() + 350;
+            travel = 0;
+            clearTimeout(unlockTimer);
+            unlockTimer = setTimeout(() => {
+                lastY = window.scrollY;
+                if (lastY < 80) setChipsHidden(document.body, false);
+            }, 360);
+        }
         function apply() {
             ticking = false;
             const y = window.scrollY, dy = y - lastY;
             lastY = y;
             const b = document.body;
-            if (y > 48) b.classList.add('compact'); else if (y < 12) b.classList.remove('compact');
+            const compact = b.classList.contains('compact');
+            if (!compact && y > 48) b.classList.add('compact'); else if (compact && y < 12) b.classList.remove('compact');
+            if (performance.now() < lockUntil) { travel = 0; return; }
             travel = Math.sign(dy) === Math.sign(travel) ? travel + dy : dy;
-            if (y < 80 || travel < -24) b.classList.remove('chips-hidden');
-            else if (travel > 24 && document.activeElement !== document.getElementById('searchInput')) b.classList.add('chips-hidden');
+            if (y < 80 || travel < -40) setChipsHidden(b, false);
+            else if (y > 160 && travel > 24 && document.activeElement !== document.getElementById('searchInput')) setChipsHidden(b, true);
         }
         window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }, { passive: true });
         document.getElementById('searchInput').addEventListener('focus', () => document.body.classList.remove('chips-hidden'));
