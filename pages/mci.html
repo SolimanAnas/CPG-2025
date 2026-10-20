@@ -114,7 +114,10 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
   --tri-red:#D62828;--tri-yellow:#F4C20D;--tri-green:#2B9348;--tri-black:#14171C;
   --f-ui:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-display:'Barlow Condensed','Barlow',system-ui,sans-serif;
+  --primary-bg:#2563eb;--primary-fg:#fff;
 }
+[data-theme="sepia"]{--primary-bg:#8b5e00}
+[data-theme="green"]{--primary-bg:#22c55e;--primary-fg:#04120a}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* Theme dots (hub + exam header) */
@@ -213,15 +216,14 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 
 .start-btn{
   display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;
-  border:0;border-radius:12px;background:#2563eb;color:#fff;cursor:pointer;
+  border:0;border-radius:12px;background:var(--primary-bg);color:var(--primary-fg);cursor:pointer;
   font:600 1.3125rem/1 var(--f-display);letter-spacing:.01em;
 }
 .start-btn:hover{filter:brightness(1.08)}
 .start-btn:active{transform:scale(.99)}
-[data-theme="sepia"] .start-btn{background:#8b5e00}
-[data-theme="green"] .start-btn{background:#22c55e;color:#04120a}
 
 .hub-list{background:var(--card);border:1px solid var(--border2);border-radius:16px;overflow:hidden}
+.hub-list > .hub-row + .hub-row{border-top:1px solid var(--border2)}
 .hub-row{display:flex;align-items:center;gap:12px;min-height:76px;padding:14px 16px;color:inherit;text-decoration:none}
 .hub-row:hover .hub-row-title{color:var(--blue)}
 .hub-row-main{flex:1;min-width:0}
@@ -298,6 +300,16 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .p-list li{padding:14px 16px;background:var(--card);font:400 1rem/1.55 var(--f-ui);color:var(--text)}
 .p-lead{font-weight:600}
+.p-fig{margin:0 0 10px}
+.p-fig a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--border2);background:#fff}
+.p-fig img{display:block;width:auto;max-width:100%;height:auto;max-height:560px;margin:0 auto}
+.p-fig figcaption{margin:6px 2px 0;font:400 .875rem var(--f-ui);color:var(--dim)}
+.p-tool{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;margin:0 0 12px;padding:0 14px 0 16px;
+  border-radius:12px;border:1px solid var(--blue);background:var(--blue-d);color:var(--blue);font:600 1rem/1.2 var(--f-ui);text-decoration:none;
+}
+.p-tool .chev{color:currentColor}
+.p-tool:hover{background:var(--blue-2)}
 .tri{
   display:inline-block;padding:0 .38em;border-radius:4px;color:#fff;
   font:600 .98em/1.35 var(--f-display);letter-spacing:.02em;
@@ -325,363 +337,274 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 .duty-points{margin:8px 0 0;padding-left:1.15em;font:400 1rem/1.5 var(--f-ui);color:var(--dim)}
 .duty-points li{margin-top:4px}
 
-/* Toast notifications */
+/* Toast: bottom centre, above the question nav, so it never covers the header */
 #toastContainer{
-  position:fixed;top:12px;right:12px;z-index:1000;
-  display:flex;flex-direction:column;gap:6px;max-width:280px;
-  pointer-events:none;
+  position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:1000;
+  display:flex;flex-direction:column;align-items:center;gap:6px;max-width:calc(100vw - 32px);pointer-events:none;
 }
 .toast{
-  background:var(--toast-bg);border:1px solid var(--toast-border);
-  border-radius:10px;padding:8px 12px;box-shadow:var(--shadow-sm);
-  display:flex;align-items:center;gap:8px;font-size:.8rem;
-  animation:slideIn 0.15s ease, fadeOut 0.2s ease 1.3s forwards;
-  opacity:0;transform:translateX(15px);
-  pointer-events:auto;
+  display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;
+  background:var(--toast-bg);border:1px solid var(--toast-border);box-shadow:var(--shadow-sm);
+  font:500 .9375rem/1.2 var(--f-ui);color:var(--text);white-space:nowrap;
+  opacity:0;animation:slideIn .15s ease forwards, fadeOut .2s ease 1.3s forwards;
 }
-.toast.show{opacity:1;transform:translateX(0)}
-@keyframes slideIn{to{opacity:1;transform:translateX(0)}}
-@keyframes fadeOut{to{opacity:0;transform:translateX(15px)}}
-.toast-icon{font-size:1rem}
-.toast.success{border-color:var(--green);color:var(--green)}
-.toast.info{border-color:var(--blue);color:var(--blue);opacity:0.85}
-.toast.warning{border-color:var(--yellow);color:var(--yellow)}
+.toast svg{width:16px;height:16px}
+@keyframes slideIn{to{opacity:1}}
+@keyframes fadeOut{to{opacity:0}}
+.toast.success{border-color:var(--green)} .toast.success svg{color:var(--green)}
+.toast.info{border-color:var(--blue)}
+.toast.warning{border-color:var(--yellow)} .toast.warning svg{color:var(--yellow)}
 
-/* Exam & Results screens */
-#examScreen,#resultsScreen{flex:1;display:none;flex-direction:column;overflow:hidden}
+/* Exam screen */
+#examScreen,#resultsScreen{flex:1;display:none;flex-direction:column;overflow:hidden;background:var(--bg)}
 #examScreen.active,#resultsScreen.active{display:flex}
 .exam-header{
-  height:52px;background:var(--panel);border-bottom:1px solid var(--border);
-  display:flex;align-items:center;padding:0 14px;gap:8px;
-  position:relative;z-index:50;
+  flex-shrink:0;height:56px;display:flex;align-items:center;gap:6px;padding:0 10px 0 6px;
+  background:var(--panel);border-bottom:1px solid var(--border);position:relative;z-index:50;
 }
-.eh-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
-.hdr-brand{font-size:.78rem;font-weight:900;color:var(--blue);white-space:nowrap}
-.hdr-exam{font-size:.74rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
-.hdr-mode{font-size:.6rem;font-weight:800;border-radius:20px;padding:2px 8px;border:1px solid;white-space:nowrap}
-.hdr-mode.m-exam{color:var(--blue);border-color:var(--blue-d);background:var(--blue-d)}
-.hdr-mode.m-study{color:var(--green);border-color:var(--green-d);background:var(--green-d)}
-.hdr-timer{
-  font-family:'DM Mono',monospace;font-size:.82rem;
-  background:var(--sb-bg);border:1px solid var(--border);border-radius:8px;
-  padding:3px 10px;min-width:60px;text-align:center;
-  transition:background 0.3s, border-color 0.3s;
-}
-.hdr-timer.warning{background:var(--yellow-d);border-color:var(--yellow);color:var(--yellow);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.7}}
-.eh-right{display:flex;align-items:center;gap:6px}
-.hdr-themes{display:flex;gap:5px;background:var(--card);border:1px solid var(--border2);border-radius:10px;padding:5px 8px}
-.hdr-themes .tp{width:16px;height:16px;border-width:1.5px}
+.eh-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0;padding-left:6px}
+.hdr-brand{display:none}
+.hdr-exam{min-width:0;font:600 1.25rem/1.1 var(--f-display);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr-mode{flex-shrink:0;display:inline-flex;align-items:center;padding:4px 9px;border-radius:999px;font:600 .8125rem/1 var(--f-ui)}
+.hdr-mode svg{display:none}
+.hdr-mode.m-exam{color:var(--blue);background:var(--blue-d)}
+.hdr-mode.m-study{color:var(--green);background:var(--green-d)}
+.eh-center{flex-shrink:0}
+.hdr-timer{min-width:56px;padding:6px 6px;border-radius:8px;text-align:center;font:600 1.125rem/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--dim)}
+.hdr-timer.warning{color:var(--yellow);background:var(--yellow-d)}
+.eh-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.hdr-themes{display:flex;gap:8px;padding:0 6px}
+.hdr-themes .tp{width:18px;height:18px;border-width:1.5px;box-shadow:none}
 .hbtn{
-  padding:6px 11px;border-radius:8px;font-size:.74rem;font-weight:600;
-  cursor:pointer;border:1.5px solid;background:transparent;
-  transition:all 0.15s;display:inline-flex;align-items:center;gap:4px;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;min-width:40px;padding:0 12px;
+  border-radius:10px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;font:600 .9375rem/1 var(--f-ui);
 }
-.hbtn:hover{background:var(--card);border-color:var(--border)}
-.hbtn:active{transform:scale(0.98)}
-.hbtn-flag{border-color:var(--border2);color:var(--dim)}
-.hbtn-flag.flagged{border-color:var(--yellow);color:var(--yellow);background:var(--yellow-d);box-shadow:0 0 0 3px var(--yellow-2)}
-.hbtn-end{background:var(--red-d);border-color:rgba(239,68,68,.4);color:#fca5a5}
-.hbtn-end:hover{background:var(--red-2)}
-.hbtn-back{background:var(--blue-d);border-color:rgba(59,130,246,.4);color:var(--blue)}
-.hbtn-back:hover{background:var(--blue-2)}
-.sb-toggle {
-  display: none;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--border2);
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-size: 1.6rem;
-  line-height: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+.hbtn svg{width:17px;height:17px}
+.hbtn:hover{background:var(--card)}
+.hbtn-flag.flagged{color:var(--yellow);border-color:var(--yellow);background:var(--yellow-d)}
+.sb-toggle{
+  display:none;width:44px;height:44px;padding:0;border:0;border-radius:12px;background:transparent;color:var(--text);
+  cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;
 }
-.sb-toggle:hover{background:var(--card);border-color:var(--border)}
+.sb-toggle svg{width:22px;height:22px}
+.sb-toggle:hover{background:var(--card)}
 
 .exam-body{flex:1;display:flex;overflow:hidden;position:relative}
-.sidebar{
-  width:220px;background:var(--panel);border-right:1px solid var(--border);
-  display:flex;flex-direction:column;transition:transform 0.28s ease;
-}
-.sb-hdr{padding:12px;border-bottom:1px solid var(--border)}
-.sb-ttl{font-size:.65rem;font-weight:800;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
-.sb-filters{display:flex;gap:4px;margin-top:8px}
+.sidebar{width:236px;flex-shrink:0;display:flex;flex-direction:column;background:var(--panel);border-right:1px solid var(--border);transition:transform .25s ease}
+.sb-hdr{padding:14px 14px 12px;border-bottom:1px solid var(--border)}
+.sb-ttl{margin:0 0 10px;font:600 1.25rem/1 var(--f-display);color:var(--text)}
+.sb-filters{display:flex;gap:6px;margin-bottom:12px}
 .sb-filter-btn{
-  flex:1;padding:4px 6px;font-size:.65rem;border-radius:6px;
-  border:1px solid var(--border2);background:transparent;cursor:pointer;
-  transition:all 0.15s;color:var(--dim);
+  flex:1;min-height:34px;padding:0 6px;border-radius:8px;border:1px solid var(--border2);background:transparent;
+  color:var(--dim);cursor:pointer;font:600 .8125rem/1 var(--f-ui);
 }
-.sb-filter-btn:hover,.sb-filter-btn.active{background:var(--card);border-color:var(--border);color:var(--text)}
-.sb-legend{display:flex;flex-direction:column;gap:5px}
-.sb-leg{display:flex;align-items:center;gap:7px;font-size:.66rem}
-.leg-dot{width:12px;height:12px;border-radius:3px;border:1.5px solid;transition:transform 0.15s}
-.sb-leg:hover .leg-dot{transform:scale(1.2)}
-.ld-unseen{border-color:var(--border2);background:transparent}
-.ld-current{border-color:var(--blue);background:var(--blue-d)}
+.sb-filter-btn:hover{color:var(--text)}
+.sb-filter-btn.active{background:var(--text);border-color:var(--text);color:var(--bg)}
+.sb-legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px}
+.sb-leg{display:flex;align-items:center;gap:7px;font:400 .8125rem var(--f-ui);color:var(--dim)}
+.leg-dot{width:12px;height:12px;border-radius:4px;border:1.5px solid}
+.ld-unseen{border-color:var(--border2)}
+.ld-current{border-color:var(--blue);background:var(--blue)}
 .ld-done{border-color:var(--green);background:var(--green-d)}
 .ld-flag{border-color:var(--yellow);background:var(--yellow-d)}
-.sb-scroll{flex:1;overflow-y:auto;padding:10px}
-.q-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.sb-scroll{flex:1;overflow-y:auto;padding:12px 14px}
+.q-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
 .qn{
-  aspect-ratio:1;border-radius:6px;font-size:.7rem;font-weight:700;
-  cursor:pointer;border:1.5px solid var(--border2);background:transparent;
-  color:var(--dim);position:relative;transition:all 0.15s;
+  aspect-ratio:1;min-height:36px;position:relative;border-radius:8px;border:1.5px solid var(--border2);background:transparent;
+  color:var(--dim);cursor:pointer;font:600 1rem/1 var(--f-display);font-variant-numeric:tabular-nums;
 }
-.qn:hover{border-color:var(--border);background:var(--card)}
-.qn.cur{border-color:var(--blue);background:var(--blue-d);color:var(--blue);box-shadow:0 0 0 2px var(--blue-2)}
+.qn:hover{color:var(--text);border-color:var(--dim)}
 .qn.done{border-color:var(--green);background:var(--green-d);color:var(--green)}
 .qn.flg{border-color:var(--yellow);background:var(--yellow-d);color:var(--yellow)}
-.flag-pip{position:absolute;top:1px;right:2px;width:5px;height:5px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px var(--yellow-2)}
-.sb-stats{padding:9px 12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:3px}
-.sb-stat{display:flex;justify-content:space-between;font-size:.69rem}
+.qn.cur{border-color:var(--blue);background:var(--blue);color:#fff}
+.flag-pip{position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:var(--yellow)}
+.sb-stats{display:flex;flex-direction:column;gap:4px;padding:10px 14px;border-top:1px solid var(--border)}
+.sb-stat{display:flex;justify-content:space-between;font:400 .875rem var(--f-ui);color:var(--dim)}
+.sb-stat .ss-val{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
 
-.q-main{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.q-scroll{flex:1;overflow-y:auto;padding:20px 24px;scroll-behavior:smooth}
-.q-hdr{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.q-badge{
-  font-size:.68rem;font-family:monospace;
-  background:var(--blue-d);border-radius:6px;padding:3px 10px;
-  border:1px solid var(--blue-d);
-}
-.q-pbar{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden;position:relative}
-.q-pfill{
-  height:100%;background:linear-gradient(90deg,var(--blue),var(--green));
-  width:0;transition:width 0.3s ease;position:relative;
-}
-.q-pfill::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
-  animation:shimmer 1.5s infinite;
-}
-@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.q-box{
-  font-size:.97rem;line-height:1.75;padding:18px 20px;
-  background:var(--card);border-radius:12px;
-  border-left:4px solid var(--blue);margin-bottom:18px;
-  position:relative;transition:border-left-color 0.2s;
-}
-.q-box.is-study{border-left-color:var(--green)}
-.study-watermark{
-  display:none;position:absolute;top:-15px;right:12px;
-  font-size:.6rem;font-weight:800;
-  background:var(--green-d);border-radius:6px;padding:2px 8px;
-  border:1px solid var(--green-d);
-}
-.is-study .study-watermark{display:block}
-.opts{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.q-main{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
+.q-scroll{flex:1;overflow-y:auto;padding:16px 18px 32px}
+.q-scroll > *{max-width:680px;margin-left:auto;margin-right:auto}
+.q-hdr{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.q-badge{flex-shrink:0;font:600 1rem/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--dim)}
+.q-pbar{flex:1;height:4px;border-radius:2px;background:var(--border2);overflow:hidden}
+.q-pfill{height:100%;width:0;background:var(--blue);transition:width .3s ease}
+.q-box{margin-bottom:20px}
+#qText{display:block;font:500 1.3125rem/1.45 var(--f-ui);color:var(--text)}
+.study-watermark{display:none}
+
+.opts{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
 .opt{
-  display:flex;align-items:stretch;border:1.5px solid var(--border2);
-  border-radius:11px;background:var(--opt-bg);cursor:pointer;
-  transition:all 0.15s ease;position:relative;overflow:hidden;
+  display:flex;align-items:stretch;overflow:hidden;cursor:pointer;
+  border:1.5px solid var(--border2);border-radius:14px;background:var(--card);
+  transition:border-color .15s ease,background-color .15s ease;
 }
-.opt::before{
-  content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,.05),transparent);
-  transform:translateX(-100%);transition:transform 0.3s;pointer-events:none;
-}
-.opt:hover::before{transform:translateX(100%)}
-.opt:hover{border-color:var(--border);transform:translateY(-1px)}
-.opt.selected{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-d);background:var(--blue-2)}
-.opt.selected .opt-letter{background:var(--blue);color:#fff}
-.opt.eliminated{opacity:.38;filter:grayscale(0.3)}
-.elim-btn{
-  width:32px;border:none;border-right:1px solid var(--border);
-  background:var(--elim-bg);cursor:pointer;font-weight:900;
-  transition:background 0.15s;display:flex;align-items:center;justify-content:center;
-}
-.elim-btn:hover{background:var(--red-d);color:var(--red)}
+.opt:hover{border-color:var(--dim)}
 .opt-letter{
-  width:36px;display:flex;align-items:center;justify-content:center;
-  font-weight:800;font-family:monospace;
-  background:var(--opt-inner);border-right:1px solid var(--border);
-  transition:background 0.15s, color 0.15s;
+  flex-shrink:0;align-self:center;width:32px;height:32px;margin-left:12px;border-radius:50%;border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;font:700 1rem/1 var(--f-display);color:var(--dim);
 }
-.opt-wrap{
-  flex:1;padding:12px 14px;display:flex;align-items:center;gap:10px;
-  cursor:pointer;position:relative;
+.opt-wrap{flex:1;min-width:0;min-height:58px;display:flex;align-items:center;gap:10px;padding:14px 14px 14px 12px;cursor:pointer}
+.opt-txt{flex:1;font:400 1.0625rem/1.45 var(--f-ui);color:var(--text)}
+.opt.selected{border-color:var(--blue);background:var(--blue-d)}
+.opt.selected .opt-letter{background:var(--blue);border-color:var(--blue);color:#fff}
+.opt.eliminated{opacity:.55}
+.opt.eliminated .opt-txt{text-decoration:line-through;color:var(--dim)}
+.elim-btn{
+  flex-shrink:0;width:40px;border:0;border-right:1px solid var(--border);background:transparent;color:var(--dim);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
 }
-.opt.rev-correct{border-color:rgba(34,197,94,.5);background:var(--green-d);box-shadow:0 0 0 2px var(--green-2)}
-.opt.rev-correct .opt-letter{background:var(--green);color:#fff}
-.opt.rev-wrong{border-color:rgba(239,68,68,.45);background:var(--red-d);box-shadow:0 0 0 2px var(--red-2)}
-.opt.rev-wrong .opt-letter{background:var(--red);color:#fff}
-.rev-tag{font-size:.6rem;font-weight:900;padding:3px 8px;border-radius:20px}
-.rev-tag-ok{color:var(--green);background:rgba(34,197,94,.15)}
-.rev-tag-ng{color:var(--red);background:var(--red-d)}
-.rev-tag-ans{color:var(--green);background:rgba(34,197,94,.12)}
+.elim-btn svg{width:16px;height:16px}
+.elim-btn:hover{color:var(--red);background:var(--red-d)}
+.opt.rev-correct{border-color:var(--green);background:var(--green-d)}
+.opt.rev-correct .opt-letter{background:var(--green);border-color:var(--green);color:#fff}
+.opt.rev-wrong{border-color:var(--red);background:var(--red-d)}
+.opt.rev-wrong .opt-letter{background:var(--red);border-color:var(--red);color:#fff}
+.rev-tag{flex-shrink:0;display:inline-flex;align-items:center;gap:4px;font:600 .875rem/1 var(--f-ui)}
+.rev-tag svg{width:15px;height:15px}
+.rev-tag-ok,.rev-tag-ans{color:var(--green)}
+.rev-tag-ng{color:var(--red)}
 
-/* Study mode enhancements */
-.study-actions{display:flex;gap:8px;margin:12px 0}
+.study-actions{display:flex;gap:8px;margin-top:4px;margin-bottom:14px}
 .study-btn{
-  flex:1;padding:8px 12px;border-radius:8px;font-size:.75rem;
-  font-weight:600;border:1.5px solid var(--border2);
-  background:transparent;cursor:pointer;transition:all 0.15s;
-  display:flex;align-items:center;justify-content:center;gap:4px;
+  flex:1;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--border2);background:transparent;color:var(--text);
+  cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 .9375rem/1 var(--f-ui);
 }
-.study-btn:hover{background:var(--card);border-color:var(--border)}
-.study-btn.primary{background:var(--blue-d);border-color:var(--blue);color:var(--blue)}
-.study-btn.primary:hover{background:var(--blue-2)}
-.confidence-row{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.study-btn svg{width:17px;height:17px}
+.study-btn:hover:not(:disabled){background:var(--card)}
+.study-btn:disabled{opacity:.45;cursor:not-allowed}
+.study-btn.primary{border-color:var(--blue);color:var(--blue)}
+.study-btn.primary:hover:not(:disabled){background:var(--blue-d)}
+.confidence-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.conf-label{flex-basis:100%;margin-bottom:2px;font:500 .9375rem var(--f-ui);color:var(--dim)}
 .confidence-btn{
-  padding:4px 10px;border-radius:20px;font-size:.7rem;
-  border:1px solid var(--border2);background:transparent;
-  cursor:pointer;transition:all 0.15s;
+  display:inline-flex;align-items:center;gap:5px;min-height:36px;padding:0 12px;border-radius:999px;
+  border:1px solid var(--border2);background:transparent;color:var(--dim);cursor:pointer;font:600 .875rem/1 var(--f-ui);
 }
-.confidence-btn:hover,.confidence-btn.active{border-color:var(--blue);background:var(--blue-d);color:var(--blue)}
-.confidence-btn[data-level="high"]{border-color:var(--green)}
-.confidence-btn[data-level="high"]:hover,.confidence-btn[data-level="high"].active{background:var(--green-d);color:var(--green)}
-.confidence-btn[data-level="low"]{border-color:var(--red)}
-.confidence-btn[data-level="low"]:hover,.confidence-btn[data-level="low"].active{background:var(--red-d);color:var(--red)}
-
-.study-exp{
-  border-radius:12px;border:1px solid var(--study-bdr);
-  background:var(--study-box);padding:15px 18px;margin-top:6px;
-  animation:fadeIn 0.25s ease;
-}
-.exp-label{font-size:.62rem;font-weight:800;color:var(--study-lbl);margin-bottom:8px;display:flex;align-items:center;gap:4px}
-.exp-label::before{content: ""; display: inline-block; width: 1em; height: 1em; background-color: currentColor; -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%207v14'%20/%3E%20%20%3Cpath%20d='M3%2018a1%201%200%200%201-1-1V4a1%201%200%200%201%201-1h5a4%204%200%200%201%204%204%204%204%200%200%201%204-4h5a1%201%200%200%201%201%201v13a1%201%200%200%201-1%201h-6a3%203%200%200%200-3%203%203%203%200%200%200-3-3z'%20/%3E%3C/svg%3E") no-repeat center/contain; mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='black'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%207v14'%20/%3E%20%20%3Cpath%20d='M3%2018a1%201%200%200%201-1-1V4a1%201%200%200%201%201-1h5a4%204%200%200%201%204%204%204%204%200%200%201%204-4h5a1%201%200%200%201%201%201v13a1%201%200%200%201-1%201h-6a3%203%200%200%200-3%203%203%203%200%200%200-3-3z'%20/%3E%3C/svg%3E") no-repeat center/contain; vertical-align: -0.125em}
-.study-hint{
-  text-align:center;padding:16px;border:1px dashed var(--border2);
-  border-radius:12px;margin-top:6px;color:var(--muted);
-  transition:all 0.2s;cursor:pointer;
-}
-.study-hint:hover{border-style:solid;background:var(--card)}
+.confidence-btn svg{width:15px;height:15px}
+.confidence-btn:hover{color:var(--text)}
+.confidence-btn.active{color:var(--text);border-color:var(--text);background:var(--card)}
+.confidence-btn[data-level="high"].active{color:var(--green);border-color:var(--green);background:var(--green-d)}
+.confidence-btn[data-level="low"].active{color:var(--red);border-color:var(--red);background:var(--red-d)}
+#expArea{margin-bottom:14px}
+.study-exp{padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--border2);border-left:4px solid var(--green);animation:fadeIn .2s ease}
+.exp-label{display:block;margin-bottom:6px;font:600 1.125rem/1 var(--f-display);color:var(--green)}
+.exp-body{font:400 1rem/1.55 var(--f-ui);color:var(--text)}
+.exp-conf{margin-top:10px;font:400 .9375rem var(--f-ui);color:var(--dim)}
+.study-hint{padding:2px 2px 0;font:400 .9375rem/1.5 var(--f-ui);color:var(--dim)}
+.study-hint.has-hint{padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--border2);border-left:4px solid var(--yellow);color:var(--text);cursor:pointer}
+.hint-cta{margin-top:8px;font:600 .9375rem var(--f-ui);color:var(--blue)}
 
 .q-nav{
-  border-top:1px solid var(--border);background:var(--panel);
-  padding:10px 24px;display:flex;justify-content:space-between;
-  align-items:center;gap:12px;position:sticky;bottom:0;z-index:30;
+  flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 16px max(10px,env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--border);position:relative;z-index:30;
 }
 .nav-btn{
-  padding:8px 20px;border-radius:9px;font-size:.8rem;font-weight:700;
-  cursor:pointer;border:1.5px solid;background:transparent;
-  transition:all 0.15s;min-width:100px;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;min-width:112px;padding:0 18px;
+  border-radius:12px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;font:600 1.125rem/1 var(--f-display);
 }
-.nav-btn:hover:not(:disabled){background:var(--card);border-color:var(--border)}
-.nav-btn:disabled{opacity:0.4;cursor:not-allowed}
-.nav-prev{border-color:var(--border2);color:var(--dim)}
-.nav-next{background:var(--blue-d);border-color:rgba(59,130,246,.35);color:var(--blue)}
-.nav-next:hover{background:var(--blue-2)}
-.nav-ctr{font-family:monospace;font-size:.74rem;color:var(--muted)}
+.nav-btn svg{width:18px;height:18px}
+.nav-btn:disabled{opacity:.4;cursor:not-allowed}
+.nav-prev:hover:not(:disabled){background:var(--card)}
+.nav-next{background:var(--primary-bg);border-color:var(--primary-bg);color:var(--primary-fg)}
+.nav-next:hover:not(:disabled){filter:brightness(1.08)}
+.nav-ctr{font:600 1rem var(--f-display);font-variant-numeric:tabular-nums;color:var(--dim)}
 
-/* Modal improvements */
-.modal-bg{
-  position:fixed;inset:0;background:var(--modal-bg);
-  backdrop-filter:blur(7px);z-index:200;
-  display:none;align-items:center;justify-content:center;
-  animation:fadeIn 0.2s ease;
-}
-.modal-bg.open{display:flex}
-.modal{
-  background:var(--card);border-radius:20px;padding:28px;
-  max-width:400px;width:90%;max-height:90vh;overflow-y:auto;
-  box-shadow:var(--shadow);animation:slideUp 0.25s ease;
-  border:1px solid var(--border2);
-}
-@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.modal-ico{font-size:2rem;text-align:center;margin-bottom:8px}
-.modal-ttl{font-size:1.1rem;font-weight:800;text-align:center;margin-bottom:6px}
-.modal-sub{color:var(--muted);font-size:.85rem;text-align:center;margin-bottom:20px;line-height:1.5}
-.modal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
-.ms-box{text-align:center;background:var(--sb-bg);border-radius:12px;padding:12px;transition:transform 0.15s}
-.ms-box:hover{transform:translateY(-2px)}
-.ms-num{font-size:1.5rem;font-weight:900}
-.ms-lbl{font-size:.65rem;color:var(--muted)}
-.modal-btns{display:flex;gap:9px}
-.mbtn{flex:1;padding:11px;border-radius:9px;font-weight:700;cursor:pointer;border:1.5px solid;transition:all 0.15s}
-.mbtn:hover{transform:translateY(-1px)}
-.mbtn:active{transform:translateY(0)}
-.mbtn-cancel{background:transparent;border-color:var(--border2)}
-.mbtn-cancel:hover{background:var(--card);border-color:var(--border)}
-.mbtn-submit{background:var(--green-d);border-color:rgba(34,197,94,.4);color:var(--green)}
-.mbtn-submit:hover{background:var(--green-2)}
+/* Modals: a bottom sheet on phones, centred on wider screens */
+.modal-bg{position:fixed;inset:0;z-index:200;display:none;align-items:flex-end;justify-content:center;padding:16px;background:var(--modal-bg)}
+.modal-bg.open{display:flex;animation:fadeIn .2s ease}
+@media(min-width:560px){.modal-bg{align-items:center}}
+.modal{width:100%;max-width:420px;max-height:90vh;overflow-y:auto;padding:22px 20px 18px;border-radius:20px;background:var(--card);border:1px solid var(--border2);box-shadow:var(--shadow)}
+.modal-ico{display:none}
+.modal-ttl{margin-bottom:6px;font:600 1.75rem/1.1 var(--f-display);color:var(--text)}
+.modal-sub{margin-bottom:16px;font:400 1rem/1.5 var(--f-ui);color:var(--dim)}
+.modal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:0 0 18px;background:var(--border2);border:1px solid var(--border2);border-radius:12px;overflow:hidden}
+.ms-box{padding:12px 8px;text-align:center;background:var(--card)}
+.ms-num{font:600 1.75rem/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--text)}
+.ms-lbl{margin-top:4px;font:400 .8125rem var(--f-ui);color:var(--dim)}
+.modal-btns{display:flex;gap:10px}
+.mbtn{flex:1;min-height:48px;border-radius:12px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;font:600 1.125rem/1 var(--f-display)}
+.mbtn-cancel:hover{background:var(--card2)}
+.mbtn-submit{background:var(--primary-bg);border-color:var(--primary-bg);color:var(--primary-fg)}
+.mbtn-submit:hover{filter:brightness(1.08)}
 
 /* Results screen */
-.res-hdr{background:var(--panel);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;gap:14px}
-.res-ttl{font-size:1rem;font-weight:800}
-.res-back{margin-left:auto;padding:7px 16px;border-radius:8px;border:1.5px solid var(--border2);cursor:pointer;transition:all 0.15s;font-size:.8rem}
-.res-back:hover{background:var(--card);border-color:var(--border)}
-.res-scroll{flex:1;overflow-y:auto;padding:22px 24px}
-.score-banner{
-  display:flex;gap:20px;background:var(--card);border-radius:18px;
-  padding:22px;margin-bottom:22px;flex-wrap:wrap;
-  border:1px solid var(--border2);box-shadow:var(--shadow-sm);
+.res-hdr{flex-shrink:0;display:flex;align-items:center;gap:10px;min-height:56px;padding:6px 12px 6px 16px;background:var(--panel);border-bottom:1px solid var(--border)}
+.res-ttl{font:600 1.375rem/1.1 var(--f-display);color:var(--text)}
+.res-ttl svg{display:none}
+#resExamName{flex:1;min-width:0;font:400 .9375rem var(--f-ui);color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.res-back{
+  flex-shrink:0;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:10px;
+  border:1px solid var(--border2);background:var(--card);color:var(--text);cursor:pointer;font:600 .9375rem/1 var(--f-ui);
 }
-.score-ring{
-  width:96px;height:96px;border-radius:50%;display:flex;
-  flex-direction:column;align-items:center;justify-content:center;
-  border:4px solid;position:relative;transition:border-color 0.3s, background 0.3s;
+.res-back svg{width:17px;height:17px}
+.res-scroll{flex:1;overflow-y:auto;padding:18px 16px 48px}
+#resContent{max-width:680px;margin:0 auto}
+.score{padding:18px;border-radius:18px;background:var(--card);border:1px solid var(--border2)}
+.score-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.score-pct{font:700 3.5rem/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--text)}
+.score-verdict{font:600 1.375rem/1.15 var(--f-display)}
+.score-verdict.pass{color:var(--green)}
+.score-verdict.fail{color:var(--red)}
+.score-note{margin-top:2px;font:400 .9375rem var(--f-ui);color:var(--dim)}
+.score-bar{display:flex;gap:2px;height:10px;margin:16px 0 12px;border-radius:5px;overflow:hidden;background:var(--border2)}
+.score-bar span{display:block;min-width:4px}
+.sb-c{background:var(--green)} .sb-x{background:var(--red)} .sb-o{background:var(--dim)}
+.score-legend{display:flex;gap:18px;flex-wrap:wrap;font:400 .9375rem var(--f-ui);color:var(--dim)}
+.score-legend b{margin-right:4px;font:600 1.25rem var(--f-display);font-variant-numeric:tabular-nums;color:var(--text)}
+.res-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0 12px}
+.res-filters button{
+  min-height:38px;padding:0 13px;border-radius:999px;border:1px solid var(--border2);background:transparent;color:var(--dim);
+  cursor:pointer;display:inline-flex;align-items:center;gap:6px;font:600 1.0625rem/1 var(--f-display);
 }
-.score-ring::after{
-  content:'';position:absolute;inset:-4px;border-radius:50%;
-  border:4px solid transparent;border-top-color:currentColor;
-  animation:rotate 1s linear infinite;opacity:0.3;
-}
-@keyframes rotate{to{transform:rotate(360deg)}}
-.ring-pass{border-color:var(--green);background:var(--green-d);color:var(--green)}
-.ring-fail{border-color:var(--red);background:var(--red-d);color:var(--red)}
-.ring-num{font-size:1.55rem;font-weight:900;font-family:monospace}
-.ring-lbl{font-size:.56rem}
-.score-stats{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.ss-box{background:var(--sb-bg);border-radius:11px;padding:12px;text-align:center;transition:transform 0.15s}
-.ss-box:hover{transform:translateY(-2px)}
-.ss-num{font-size:1.3rem;font-weight:800}
-.ss-lbl{font-size:.65rem;color:var(--muted)}
-.rq-list{display:flex;flex-direction:column;gap:8px}
-.rq-item{background:var(--card);border:1px solid var(--border2);border-radius:13px;overflow:hidden;transition:box-shadow 0.2s}
-.rq-item:hover{box-shadow:var(--shadow-sm)}
-.rq-row{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;transition:background 0.15s}
+.res-filters button svg{width:16px;height:16px}
+.res-filters button:hover{color:var(--text)}
+.res-filters button[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.res-filters .res-print{margin-left:auto;border-color:transparent}
+.rq-list{display:flex;flex-direction:column;gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:14px;overflow:hidden}
+.rq-item{background:var(--card)}
+.rq-row{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;cursor:pointer}
 .rq-row:hover{background:var(--card2)}
-.rq-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.66rem;font-weight:900;flex-shrink:0}
+.rq-n{flex-shrink:0;min-width:1.4em;font:600 1rem/1.5 var(--f-display);font-variant-numeric:tabular-nums;color:var(--dim)}
+.rq-dot{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.rq-dot svg{width:14px;height:14px}
 .dot-c{background:var(--green-d);color:var(--green)}
 .dot-x{background:var(--red-d);color:var(--red)}
-.dot-o{background:var(--sb-bg);color:var(--muted)}
-.rq-q{font-size:.82rem;flex:1;min-width:0}
-.rq-badge{font-size:.6rem;font-weight:700;padding:2px 9px;border-radius:20px;border:1px solid;flex-shrink:0}
-.rqb-c{color:var(--green);border-color:var(--green-d)}
-.rqb-x{color:var(--red);border-color:var(--red-d)}
-.rqb-o{color:var(--muted);border-color:var(--border)}
-.rq-chev{transition:transform 0.22s;flex-shrink:0}
+.dot-o{background:var(--card2);color:var(--dim)}
+.rq-q{flex:1;min-width:0;font:400 1rem/1.5 var(--f-ui);color:var(--text)}
+.rq-badge{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.rq-chev{flex-shrink:0;width:20px;height:20px;margin-top:2px;color:var(--dim);transition:transform .2s ease}
 .rq-row.expanded .rq-chev{transform:rotate(180deg)}
-.rq-body{display:none;padding:0 14px 14px;border-top:1px dashed var(--border)}
-.rq-body.open{display:block;animation:fadeIn 0.2s ease}
-.res-opts{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
-.res-opt{
-  display:flex;align-items:center;gap:9px;padding:9px 13px;
-  border-radius:9px;border:1.5px solid var(--border);
-  background:var(--sb-bg);transition:transform 0.15s;
-}
-.res-opt:hover{transform:translateX(2px)}
-.res-opt.ro-correct{border-color:rgba(34,197,94,.4);background:var(--green-d)}
-.res-opt.ro-wrong{border-color:rgba(239,68,68,.38);background:var(--red-d)}
-.ro-ltr{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800;background:var(--elim-bg);flex-shrink:0}
-.res-opt.ro-correct .ro-ltr{background:var(--green);color:#fff}
-.res-opt.ro-wrong .ro-ltr{background:var(--red);color:#fff}
-.ro-tag{font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:20px}
-.exp-box{background:var(--study-box);border-radius:9px;padding:12px 14px}
+.rq-body{display:none;padding:0 16px 16px}
+.rq-body.open{display:block}
+.res-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.res-opt{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;border:1px solid var(--border2);font:400 .9375rem/1.4 var(--f-ui)}
+.res-opt.ro-correct{border-color:var(--green);background:var(--green-d)}
+.res-opt.ro-wrong{border-color:var(--red);background:var(--red-d)}
+.ro-ltr{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;font:700 .9375rem/1 var(--f-display);color:var(--dim)}
+.res-opt.ro-correct .ro-ltr{background:var(--green);border-color:var(--green);color:#fff}
+.res-opt.ro-wrong .ro-ltr{background:var(--red);border-color:var(--red);color:#fff}
+.ro-tag{flex-shrink:0;display:inline-flex;align-items:center;gap:4px;font:600 .8125rem var(--f-ui)}
+.ro-tag svg{width:14px;height:14px}
+.exp-box{padding:12px 14px;border-radius:12px;background:var(--card2);border-left:4px solid var(--green)}
 .exp-box .exp-label{margin-bottom:6px}
+.res-empty{padding:18px 16px;background:var(--card);font:400 1rem var(--f-ui);color:var(--dim)}
 
 /* Responsive */
 @media(max-width:720px){
-  .sidebar{
-    position:fixed;top:52px;left:0;bottom:0;
-    transform:translateX(-100%);z-index:40;
-    box-shadow:8px 0 32px rgba(0,0,0,.4);
-  }
+  .sidebar{position:fixed;top:56px;left:0;bottom:0;z-index:40;transform:translateX(-100%);box-shadow:8px 0 32px rgba(0,0,0,.4)}
   .sidebar.open{transform:translateX(0)}
   .sb-toggle{display:flex!important}
-  .hdr-exam,.hdr-themes{display:none}
-  .hbtn .btn-txt{display:none}
-  .q-nav{padding:10px 16px;gap:8px}
-  .nav-btn{padding:8px 12px;min-width:auto;font-size:.75rem}
-  .score-banner{padding:16px;gap:16px}
-  .score-ring{width:80px;height:80px}
-  .ring-num{font-size:1.3rem}
-  .score-stats{grid-template-columns:repeat(3,1fr);gap:6px}
-  .ss-num{font-size:1.1rem}
-  .mode-row{max-width:100%}
+  .eh-left{padding-left:0}
+  .hdr-themes{display:none}
+  .hbtn-flag .btn-txt{display:none}
+  .hbtn-flag{padding:0}
+  .q-nav{padding-left:12px;padding-right:12px}
+  .nav-btn{min-width:100px}
+}
+@media(max-width:380px){
+  .hdr-mode{display:none}
+  .nav-btn{min-width:88px;padding:0 12px}
 }
 
 /* Toggle switch for hints */
@@ -787,7 +710,7 @@ input:checked+.slider:before{transform:translateX(20px)}
       <h2 class="hub-h" id="studyH">Study</h2>
       <div class="hub-list">
         <a class="hub-row" href="#pearls">
-          <span class="hub-row-main"><span class="hub-row-title">Pearls</span><span class="hub-row-sub">69 key facts on triage, command, HAZMAT and the disaster buses</span></span>
+          <span class="hub-row-main"><span class="hub-row-title">Pearls</span><span class="hub-row-sub">68 key facts on triage, command, HAZMAT and the disaster buses</span></span>
           <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>
         <div class="roles-block">
@@ -803,6 +726,21 @@ input:checked+.slider:before{transform:translateX(20px)}
             <a href="#officers/transport-officer">Transport</a>
           </nav>
         </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="toolsH">
+      <h2 class="hub-h" id="toolsH">Field tools</h2>
+      <p class="hub-note">From EMS tools, for use on scene.</p>
+      <div class="hub-list">
+        <a class="hub-row" href="ems-tools.html#start">
+          <span class="hub-row-main"><span class="hub-row-title">START triage</span><span class="hub-row-sub">Step through triage for one patient and get their category</span></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a class="hub-row" href="methane.html">
+          <span class="hub-row-main"><span class="hub-row-title">METHANE report</span><span class="hub-row-sub">Build the report to send to Main Dispatch</span></span>
+          <svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
       </div>
     </section>
   </div>
@@ -831,21 +769,19 @@ input:checked+.slider:before{transform:translateX(20px)}
         <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#flag"/></svg> <span class="btn-txt">Flag</span>
       </button>
       <!-- Back button for study mode -->
-      <button class="hbtn hbtn-back" id="backBtn" onclick="confirmExit()" style="display:none"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> Back</button>
-      <button class="hbtn hbtn-end" id="endBtn" onclick="openEndModal()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#upload"/></svg> <span class="btn-txt">End</span></button>
+      <button class="hbtn hbtn-back" id="backBtn" onclick="confirmExit()" style="display:none"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> Exit</button>
+      <button class="hbtn hbtn-end" id="endBtn" onclick="openEndModal()">Submit</button>
     </div>
   </header>
   
   <div class="exam-body">
     <aside class="sidebar" id="sidebar" aria-label="Question navigator">
       <div class="sb-hdr">
-        <div class="sb-ttl">
-          <span>Navigator</span>
+        <h2 class="sb-ttl">Questions</h2>
+        <div class="sb-filters" role="group" aria-label="Show questions">
           <button class="sb-filter-btn active" data-filter="all" onclick="filterGrid('all')" aria-pressed="true">All</button>
-        </div>
-        <div class="sb-filters">
-          <button class="sb-filter-btn" data-filter="unanswered" onclick="filterGrid('unanswered')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-dot"/></svg></button>
-          <button class="sb-filter-btn" data-filter="flagged" onclick="filterGrid('flagged')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#flag"/></svg></button>
+          <button class="sb-filter-btn" data-filter="unanswered" onclick="filterGrid('unanswered')" aria-pressed="false">To do</button>
+          <button class="sb-filter-btn" data-filter="flagged" onclick="filterGrid('flagged')" aria-pressed="false">Flagged</button>
         </div>
         <div class="sb-legend" aria-label="Question status legend">
           <div class="sb-leg"><div class="leg-dot ld-unseen" aria-hidden="true"></div>Unanswered</div>
@@ -887,22 +823,23 @@ input:checked+.slider:before{transform:translateX(20px)}
 		<span id="qText" aria-live="polite">Loading…</span>
 		</div>
         
-        <!-- Study mode actions -->
-        <div id="studyActions" class="study-actions" style="display:none">
-          <button class="study-btn" id="hintBtn" onclick="showHint()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Show Hint</button>
-          <button class="study-btn primary" id="answerBtn" onclick="revealAnswer()" disabled><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-check-big"/></svg> Reveal Answer</button>
-        </div>
-        
         <div class="opts" id="optsList" role="radiogroup" aria-label="Answer choices"></div>
         
+        <div id="expArea" aria-live="polite"></div>
+
+        <!-- Study mode actions -->
+        <div id="studyActions" class="study-actions" style="display:none">
+          <button class="study-btn" id="hintBtn" onclick="showHint()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Show hint</button>
+          <button class="study-btn primary" id="answerBtn" onclick="revealAnswer()" disabled><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-check-big"/></svg> Reveal answer</button>
+        </div>
+        
         <!-- Confidence rating for study mode -->
-        <div id="confidenceRow" class="confidence-row" style="display:none" aria-label="How confident were you?">
+        <div id="confidenceRow" class="confidence-row" style="display:none" aria-label="How sure are you?">
+          <span class="conf-label" aria-hidden="true">How sure are you?</span>
           <button class="confidence-btn" data-level="high" onclick="setConfidence('high')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg> Sure</button>
           <button class="confidence-btn" data-level="medium" onclick="setConfidence('medium')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#message-circle-question"/></svg> Maybe</button>
           <button class="confidence-btn" data-level="low" onclick="setConfidence('low')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#frown"/></svg> Guessed</button>
         </div>
-        
-        <div id="expArea" aria-live="polite"></div>
       </div>
       
       <div class="q-nav">
@@ -917,9 +854,9 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Results screen -->
 <div id="resultsScreen">
   <div class="res-hdr">
-    <span class="res-ttl"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#chart-no-axes-column"/></svg> Exam Results</span>
+    <span class="res-ttl">Results</span>
     <span id="resExamName" aria-live="polite"></span>
-    <button class="res-back" onclick="goSelector()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> New Exam</button>
+    <button class="res-back" onclick="goSelector()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> MCI home</button>
   </div>
   <div class="res-scroll">
     <div id="resContent">
@@ -943,16 +880,16 @@ input:checked+.slider:before{transform:translateX(20px)}
 <div class="modal-bg" id="endModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
     <div class="modal-ico" aria-hidden="true"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#upload"/></svg></div>
-    <div class="modal-ttl" id="modalTitle">Submit Exam Block?</div>
-    <div class="modal-sub">You are about to submit your answers. This action cannot be undone.</div>
+    <div class="modal-ttl" id="modalTitle">Submit your answers?</div>
+    <div class="modal-sub">You can't change answers after you submit.</div>
     <div class="modal-stats" aria-live="polite">
       <div class="ms-box"><div class="ms-num" id="mAns">0</div><div class="ms-lbl">Answered</div></div>
-      <div class="ms-box"><div class="ms-num" id="mUns">0</div><div class="ms-lbl">Unanswered</div></div>
+      <div class="ms-box"><div class="ms-num" id="mUns">0</div><div class="ms-lbl">To do</div></div>
       <div class="ms-box"><div class="ms-num" id="mFlg">0</div><div class="ms-lbl">Flagged</div></div>
     </div>
     <div class="modal-btns">
-      <button class="mbtn mbtn-cancel" onclick="closeModal()">Cancel</button>
-      <button class="mbtn mbtn-submit" onclick="submitExam()">Submit Answers</button>
+      <button class="mbtn mbtn-cancel" onclick="closeModal()">Keep going</button>
+      <button class="mbtn mbtn-submit" onclick="submitExam()">Submit</button>
     </div>
   </div>
 </div>
@@ -961,8 +898,8 @@ input:checked+.slider:before{transform:translateX(20px)}
 <div class="modal-bg" id="exitModal" onclick="if(event.target===this)closeExitModal()" role="dialog" aria-modal="true" aria-labelledby="exitModalTitle">
   <div class="modal">
     <div class="modal-ico" aria-hidden="true"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#triangle-alert"/></svg>️</div>
-    <div class="modal-ttl" id="exitModalTitle">Leave Exam?</div>
-    <div class="modal-sub" id="exitModalSub">Your progress will be saved. You can resume later.</div>
+    <div class="modal-ttl" id="exitModalTitle">Leave this exam?</div>
+    <div class="modal-sub" id="exitModalSub">Your progress is saved. You can pick up where you left off.</div>
     <div class="modal-btns">
       <button class="mbtn mbtn-cancel" onclick="closeExitModal()">Stay</button>
       <button class="mbtn mbtn-submit" onclick="confirmExitNow()">Leave</button>
@@ -1103,6 +1040,7 @@ let currentRole = '';
 const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const SEARCH_ICON = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#search"/></svg>';
+const CHEV_SVG = '<svg class="chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>';
 const CLEAR_ICON = '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#x"/></svg>';
 
 function groupByCategory(items) {
@@ -1148,18 +1086,31 @@ async function openPearls(view = 'pearls', role = '') {
     if (!pearlsCache[cfgView]) {
       const res = await fetch(cfg.src);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      pearlsCache[cfgView] = (await res.json()).pearls;
+      pearlsCache[cfgView] = await res.json();
     }
     if (cfgView !== pearlsView) return; // user switched views while this one was loading
-    if (cfgView === 'officers') renderOfficers(pearlsCache[cfgView], role);
-    else renderPearls(pearlsCache[cfgView]);
+    if (cfgView === 'officers') renderOfficers(pearlsCache[cfgView].pearls, role);
+    else renderPearls(pearlsCache[cfgView].pearls, pearlsCache[cfgView].sections || {});
     container.scrollTop = 0;
   } catch(e) {
     container.innerHTML = `<p class="p-empty">Couldn't load ${escapeHtml(cfg.title)} (${escapeHtml(e.message)}). Check your connection, then <button class="study-btn" onclick="openPearls('${cfgView}')">try again</button>.</p>`;
   }
 }
 
-function renderPearls(items) {
+// Optional image (tap to open full size) and a link to the matching field tool.
+function sectionMedia(meta) {
+  if (!meta) return '';
+  const fig = meta.image ? `<figure class="p-fig">
+      <a href="${escapeHtml(meta.image)}" target="_blank" rel="noopener" aria-label="Open the image full size">
+        <img src="${escapeHtml(meta.image)}" alt="${escapeHtml(meta.alt || '')}" width="${meta.width || ''}" height="${meta.height || ''}" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Tap the image to open it full size.</figcaption>
+    </figure>` : '';
+  const tool = meta.tool ? `<a class="p-tool" href="${escapeHtml(meta.tool.href)}">${escapeHtml(meta.tool.label)}${CHEV_SVG}</a>` : '';
+  return fig + tool;
+}
+
+function renderPearls(items, sections) {
   const cats = groupByCategory(items);
   const tools = document.getElementById('pearlsTools');
   const container = document.getElementById('pearlsContainer');
@@ -1178,6 +1129,7 @@ function renderPearls(items) {
   container.innerHTML = `<div class="p-wrap">${[...cats].map(([cat, list]) => `
     <section class="p-sec" id="sec-${slugify(cat)}" aria-labelledby="h-${slugify(cat)}">
       <h2 class="p-sec-h" id="h-${slugify(cat)}">${escapeHtml(cat)}<span class="p-sec-n" aria-label="${list.length} pearls">${list.length}</span></h2>
+      ${sectionMedia(sections[cat])}
       <ul class="p-list">${list.map(p => `<li data-q="${escapeHtml((cat + ' ' + p.text).toLowerCase())}">${pearlHtml(p.text)}</li>`).join('')}</ul>
     </section>`).join('')}
     <p class="p-empty" id="pearlEmpty" role="status" hidden></p></div>`;
@@ -1426,7 +1378,7 @@ async function startExam(path, name) {
       ST.autoSaveInterval = setInterval(saveProgress, 30000);
     }
     
-    showToast(restored ? 'Progress restored' : 'Exam started', 'success', 1200);
+    if (restored) showToast('Progress restored', 'success', 1200);
     
   } catch(e) {
     document.getElementById('qLoading').style.display = 'none';
@@ -1471,7 +1423,6 @@ function filterGrid(filter) {
     btn.setAttribute('aria-pressed', isActive);
   });
   applyGridFilter();
-  showToast(`Showing ${filter === 'all' ? 'all' : filter}`, 'info', 1000);
 }
 
 function applyGridFilter() {
@@ -1565,6 +1516,9 @@ function renderQ() {
     const answerBtn = document.getElementById('answerBtn');
     hintBtn.disabled = hintShown || revealed;
     answerBtn.disabled = revealed;
+    document.getElementById('studyActions').style.display = revealed ? 'none' : 'flex';
+    document.getElementById('confidenceRow').style.display = revealed ? 'none' : 'flex';
+    document.querySelectorAll('.confidence-btn').forEach(b => b.classList.toggle('active', b.dataset.level === confidence));
   }
 
   const optsDiv = document.getElementById('optsList');
@@ -1620,42 +1574,35 @@ function renderQ() {
   const expDiv = document.getElementById('expArea');
   if (isStudy) {
     if (revealed) {
+      const confLabels = { high: 'Sure', medium: 'Maybe', low: 'Guessed' };
       expDiv.innerHTML = `
         <div class="study-exp">
           <div class="exp-label">Explanation</div>
-          <div class="exp-body">${escapeHtml(q.explanation || 'No explanation provided.')}</div>
+          <div class="exp-body">${escapeHtml(q.explanation || 'No explanation for this question.')}</div>
+          ${confidence ? `<div class="exp-conf">You said: ${confLabels[confidence]}</div>` : ''}
         </div>`;
     } else if (hintShown) {
-      const hint = q.hint || 'Remember pediatric assessment triangle: Appearance, Work of Breathing, Circulation to Skin.';
+      const hint = q.hint || 'Think about which principle the question is testing.';
       expDiv.innerHTML = `
-        <div class="study-hint" onclick="revealAnswer()" style="cursor:pointer">
-          <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> <strong>Hint:</strong> ${escapeHtml(hint)}
-          <div style="margin-top:8px;font-size:.75rem;color:var(--blue)">Click to reveal answer</div>
+        <div class="study-hint has-hint" onclick="revealAnswer()" role="button" tabindex="0">
+          <strong>Hint:</strong> ${escapeHtml(hint)}
+          <div class="hint-cta">Tap to reveal the answer</div>
         </div>`;
     } else {
-      expDiv.innerHTML = '<div class="study-hint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Select an answer, then use the buttons above to get help</div>';
+      expDiv.innerHTML = '<div class="study-hint">Pick an answer, then tap Check answer. Stuck? Show a hint.</div>';
     }
   } else {
     expDiv.innerHTML = '';
   }
 
-  if (isStudy && revealed && confidence) {
-    const confLabels = { high: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg> Sure', medium: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#message-circle-question"/></svg> Maybe', low: '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#frown"/></svg> Guessed' };
-    expDiv.innerHTML += `
-      <div style="margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)">
-        <span style="font-size:.7rem;color:var(--muted)">Your confidence: <strong>${confLabels[confidence]}</strong></span>
-      </div>`;
-  }
-
   document.getElementById('prevBtn').disabled = ST.idx === 0;
   
   const nextBtn = document.getElementById('nextBtn');
-  // Update Next button text based on mode and reveal status
   if (isStudy && !revealed) {
-    nextBtn.textContent = 'Check Answer';
+    nextBtn.textContent = 'Check answer';
     nextBtn.disabled = false;
   } else {
-    nextBtn.innerHTML ='Next <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>';
+    nextBtn.innerHTML = 'Next <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg>';
     nextBtn.disabled = ST.idx === total - 1;
   }
   
@@ -1700,10 +1647,8 @@ function doElim(qi, oi, e) {
   
   if (idx === -1) {
     arr.push(oi);
-    showToast(`Eliminated ${['A','B','C','D'][oi]}`, 'info', 1000);
   } else {
     arr.splice(idx,1);
-    showToast('Restored', 'info', 1000);
   }
   renderQ();
 }
@@ -1715,10 +1660,8 @@ function toggleMark() {
   
   if (wasMarked) {
     delete ST.marked[q.id];
-    showToast('Flag removed', 'info', 1000);
   } else {
     ST.marked[q.id] = true;
-    showToast('Flagged', 'info', 1000);
   }
   
   const markBtn = document.getElementById('markBtn');
@@ -1738,7 +1681,6 @@ function showHint() {
   ST.hintsShown[q.id] = true;
   renderQ();
   const hint = q.hint || 'Think about age-appropriate vital signs and pediatric assessment priorities.';
-  showToast('Hint: ' + hint, 'info', 2000);
 }
 
 // Study mode: Reveal answer
@@ -1751,7 +1693,6 @@ function revealAnswer() {
   }
   
   renderQ();
-  showToast('Answer revealed', 'success', 1000);
 }
 
 // Study mode: Set confidence
@@ -1898,34 +1839,29 @@ function submitExam() {
   });
   
   const pct = Math.round(c/n*100), pass = pct>=75;
+  const flagged = qs.filter(q => ST.marked[q.id]).length;
+  const seg = (k, cls) => k ? `<span class="${cls}" style="flex:${k}"></span>` : '';
   
   let html = `
-    <div class="score-banner">
-      <div class="score-ring ${pass?'ring-pass':'ring-fail'}" role="img" aria-label="Score: ${pct}%, ${pass?'Pass':'Fail'}">
-        <div class="ring-num">${pct}%</div>
-        <div class="ring-lbl">${pass?'PASS':'FAIL'}</div>
-      </div>
-      <div class="score-stats">
-        <div class="ss-box">
-          <div class="ss-num" style="color:var(--green)">${c}</div>
-          <div class="ss-lbl">Correct</div>
-        </div>
-        <div class="ss-box">
-          <div class="ss-num" style="color:var(--red)">${x}</div>
-          <div class="ss-lbl">Incorrect</div>
-        </div>
-        <div class="ss-box">
-          <div class="ss-num" style="color:var(--muted)">${o}</div>
-          <div class="ss-lbl">Omitted</div>
+    <section class="score" aria-label="Your score">
+      <div class="score-top">
+        <div class="score-pct">${pct}%</div>
+        <div>
+          <div class="score-verdict ${pass ? 'pass' : 'fail'}">${pass ? 'Pass' : 'Below the pass mark'}</div>
+          <div class="score-note">The pass mark is 75%. ${n} questions.</div>
         </div>
       </div>
-    </div>
+      <div class="score-bar" aria-hidden="true">${seg(c, 'sb-c')}${seg(x, 'sb-x')}${seg(o, 'sb-o')}</div>
+      <div class="score-legend">
+        <span><b>${c}</b>correct</span><span><b>${x}</b>incorrect</span><span><b>${o}</b>skipped</span>
+      </div>
+    </section>
     
-    <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
-      <button class="study-btn" onclick="filterResults('all')">All Questions</button>
-      <button class="study-btn" onclick="filterResults('incorrect')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-x"/></svg> Incorrect Only</button>
-      <button class="study-btn" onclick="filterResults('flagged')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#flag"/></svg> Flagged</button>
-      <button class="study-btn" onclick="window.print()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#printer"/></svg>️ Print</button>
+    <div class="res-filters" role="group" aria-label="Show questions">
+      <button type="button" data-f="all" aria-pressed="true" onclick="filterResults('all')">All ${n}</button>
+      <button type="button" data-f="incorrect" aria-pressed="false" onclick="filterResults('incorrect')">Incorrect ${x}</button>
+      <button type="button" data-f="flagged" aria-pressed="false" onclick="filterResults('flagged')">Flagged ${flagged}</button>
+      <button type="button" class="res-print" onclick="window.print()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#printer"/></svg> Print</button>
     </div>
     
     <div class="rq-list" id="resultsList">`;
@@ -1934,51 +1870,46 @@ function submitExam() {
     const ua = ST.answers[q.id];
     const isC = ua && ua === q.correct_answer, isX = ua && !isC, isO = !ua;
     const dotClass = isC ? 'dot-c' : isX ? 'dot-x' : 'dot-o';
-    const ind = isC ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#check"/></svg>' : isX ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#x"/></svg>' : '—';
-    const badgeClass = isC ? 'rqb-c' : isX ? 'rqb-x' : 'rqb-o';
-    const badgeText = isC ? 'Correct' : isX ? 'Incorrect' : 'Omitted';
-    const confidence = ST.confidence[q.id];
-    const confDisplay = confidence ? ` <span style="font-size:.65rem;color:var(--muted)">[${confidence}]</span>` : '';
+    const ind = isC ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#check"/></svg>' : isX ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#x"/></svg>' : '–';
+    const badgeText = isC ? 'Correct' : isX ? 'Incorrect' : 'Skipped';
     
     html += `<div class="rq-item" data-status="${isC?'correct':isX?'incorrect':'omitted'}" data-flagged="${!!ST.marked[q.id]}">
-      <div class="rq-row" onclick="xpand(this,${i})" role="button" tabindex="0" aria-expanded="false">
+      <div class="rq-row" onclick="xpand(this,${i})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();xpand(this,${i})}" role="button" tabindex="0" aria-expanded="false">
         <span class="rq-n">${i+1}</span>
         <span class="rq-dot ${dotClass}" aria-hidden="true">${ind}</span>
         <span class="rq-q">${escapeHtml(q.text)}</span>
-        <span class="rq-badge ${badgeClass}">${badgeText}${confDisplay}</span>
-        <span class="rq-chev" aria-hidden="true">▼</span>
+        <span class="rq-badge">${badgeText}</span>
+        <svg class="rq-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </div>
       <div class="rq-body" id="rb${i}">
         ${buildResOpts(q,ua)}
         <div class="exp-box">
           <div class="exp-label">Explanation</div>
-          <div class="exp-body">${escapeHtml(q.explanation||'No explanation provided.')}</div>
+          <div class="exp-body">${escapeHtml(q.explanation||'No explanation for this question.')}</div>
         </div>
       </div>
     </div>`;
   });
   
-  html += '</div>';
+  html += '<p class="res-empty" id="resEmpty" hidden></p></div>';
   document.getElementById('resContent').innerHTML = html;
   showScreen('res');
-  showToast('Submitted!', 'success', 1000);
 }
 
 // Results filtering
 function filterResults(filter) {
-  const items = document.querySelectorAll('.rq-item');
-  items.forEach(item => {
-    const status = item.dataset.status;
-    const flagged = item.dataset.flagged === 'true';
-    let show = true;
-    
-    if (filter === 'incorrect' && status !== 'incorrect') show = false;
-    if (filter === 'flagged' && !flagged) show = false;
-    
+  let shown = 0;
+  document.querySelectorAll('.rq-item').forEach(item => {
+    const show = filter === 'all'
+      || (filter === 'incorrect' && item.dataset.status === 'incorrect')
+      || (filter === 'flagged' && item.dataset.flagged === 'true');
     item.style.display = show ? '' : 'none';
+    if (show) shown++;
   });
-  
-  showToast(`Showing ${filter === 'all' ? 'all' : filter}`, 'info', 1000);
+  document.querySelectorAll('.res-filters [data-f]').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === filter));
+  const empty = document.getElementById('resEmpty');
+  empty.hidden = shown > 0;
+  if (!shown) empty.textContent = filter === 'flagged' ? 'You didn\'t flag any questions.' : 'No incorrect answers. Nice work.';
 }
 
 function buildResOpts(q, ua) {
