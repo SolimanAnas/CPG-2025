@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.3';   // Add MCI pearls + officer roles
+const CACHE_VERSION = 'dcas-cpg-v6.4';   // MCI exam redesign + section images
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
@@ -54,6 +54,7 @@ const CONTENT_CACHE = [
   'src/PALS/pals.json',
   'src/BDLS/BDLS.json',
   'src/MCI/MCI-exam1.json', 'src/MCI/pearls.json', 'src/MCI/officers.json',
+  'images/mci/start-adult-triage.webp', 'images/mci/methane-report.webp', 'images/mci/hazmat-placards.webp',
   'src/Medical/medical.json',
   'src/PEPP/exam_a.json', 'src/PEPP/exam_b.json', 'src/PEPP/exam_c.json',
   'src/PEPP/exam_d.json', 'src/PEPP/pearls.json',
