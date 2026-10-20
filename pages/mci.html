@@ -253,6 +253,21 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .pearl-item:hover::before{opacity:1}
 .pearl-text{font-size:.86rem;line-height:1.55}
+a.exam-card{display:block;color:inherit;text-decoration:none}
+.pearls-title{min-width:0}
+#pearlsTitleText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pearls-share{margin-left:auto;flex-shrink:0;background:var(--blue-d);border:1.5px solid var(--blue);color:var(--blue);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:.8rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:all 0.2s}
+.pearls-share:hover{background:var(--blue-2)}
+.pearls-share + .pearls-back{margin-left:0;flex-shrink:0;color:var(--text)}
+.role-link{margin-left:auto;background:transparent;border:1px solid var(--border2);border-radius:7px;padding:3px 9px;font-size:.72rem;font-weight:700;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.role-link:hover{color:var(--blue);border-color:var(--blue)}
+.pearl-item.numbered{display:flex;align-items:flex-start;gap:12px}
+.pearl-num{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:1.7em;height:1.7em;border-radius:50%;background:var(--blue-d);color:var(--blue);font-weight:800;font-size:.75rem}
+.pearl-points{margin:8px 0 0 18px;padding:0;font-size:.82rem;line-height:1.5;color:var(--muted)}
+.pearls-category.targeted{animation:roleFlash 1.8s ease}
+@keyframes roleFlash{0%,40%{background:var(--blue-d);border-radius:12px}100%{background:transparent}}
+@media (max-width:420px){.pearls-header{padding:10px 14px;gap:8px}}
+@media (max-width:359px){.pearls-share .lbl{display:none}}
 
 /* Toast notifications */
 #toastContainer{
@@ -709,6 +724,18 @@ input:checked+.slider:before{transform:translateX(20px)}
       <div class="ec-meta">105 DCAS MCI course exam questions · Exam & Study modes</div>
       <span class="ec-tag tag-exam">Course Exam</span>
     </div>
+    <a class="exam-card" href="#pearls" aria-label="Open MCI Pearls">
+      <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#gem"/></svg></div>
+      <div class="ec-title">MCI Pearls</div>
+      <div class="ec-meta">69 key facts · triage, command, HAZMAT, buses</div>
+      <span class="ec-tag tag-pearl">Study Guide</span>
+    </a>
+    <a class="exam-card" href="#officers" aria-label="Open MCI Officer Roles">
+      <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#shield"/></svg></div>
+      <div class="ec-title">Officer Roles</div>
+      <div class="ec-meta">IC · Triage · Treatment · Staging · Transport</div>
+      <span class="ec-tag tag-pearl">Duties</span>
+    </a>
   </div>
   <a href="courses.html" class="back-link"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> Back to Courses</a>
 </div>
@@ -836,7 +863,8 @@ input:checked+.slider:before{transform:translateX(20px)}
 <!-- Pearls screen -->
 <div id="pearlsScreen">
   <div class="pearls-header">
-    <span class="pearls-title"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#ambulance"/></svg> ITLS Clinical Pearls</span>
+    <span class="pearls-title"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use id="pearlsTitleIcon" href="../icons/sprite.svg#gem"/></svg> <span id="pearlsTitleText">MCI Pearls</span></span>
+    <button type="button" class="pearls-share" onclick="sharePearlsLink(this)" aria-label="Share a direct link to this page"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#link"/></svg> <span class="lbl">Share</span></button>
     <button class="pearls-back" onclick="closePearls()"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-left"/></svg> Back</button>
   </div>
   <div class="pearls-scroll" id="pearlsContainer">
@@ -1000,8 +1028,24 @@ function showScreen(s) {
   }
 }
 
-// Pearls loader
-async function openPearls() {
+// Pearls & Officer Roles. Each view has a direct link that can be shared:
+//   mci.html#pearls · mci.html#officers · mci.html#officers/<role-slug>
+const PEARL_VIEWS = {
+  pearls:   { src: '../src/MCI/pearls.json',   title: 'MCI Pearls',        icon: 'gem' },
+  officers: { src: '../src/MCI/officers.json', title: 'MCI Officer Roles', icon: 'shield', numbered: true }
+};
+const DEFAULT_TITLE = document.title;
+const pearlsCache = {};
+let pearlsView = 'pearls';
+const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+async function openPearls(view = 'pearls', role = '') {
+  pearlsView = PEARL_VIEWS[view] ? view : 'pearls';
+  const cfgView = pearlsView;
+  const cfg = PEARL_VIEWS[cfgView];
+  document.getElementById('pearlsTitleText').textContent = cfg.title;
+  document.getElementById('pearlsTitleIcon').setAttribute('href', '../icons/sprite.svg#' + cfg.icon);
+  document.title = cfg.title;
   showScreen('pearls');
   const container = document.getElementById('pearlsContainer');
   
@@ -1014,10 +1058,13 @@ async function openPearls() {
   `;
   
   try {
-    const res = await fetch('../src/ITLS/pearls.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const pearls = data.pearls;
+    if (!pearlsCache[cfgView]) {
+      const res = await fetch(cfg.src);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      pearlsCache[cfgView] = (await res.json()).pearls;
+    }
+    if (cfgView !== pearlsView) return; // user switched views while this one was loading
+    const pearls = pearlsCache[cfgView];
     
     const cats = {};
     pearls.forEach(p => { 
@@ -1027,24 +1074,74 @@ async function openPearls() {
     
     let html = '';
     for (let cat in cats) {
-      html += `<div class="pearls-category">
-        <div class="cat-header">${escapeHtml(cat)}</div>
+      const slug = slugify(cat);
+      const roleLink = cfg.numbered
+        ? `<button type="button" class="role-link" data-role="${slug}" data-name="${escapeHtml(cat)}" onclick="sharePearlsLink(this)" aria-label="Share a direct link to ${escapeHtml(cat)}"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#link"/></svg> <span class="lbl">Link</span></button>`
+        : '';
+      html += `<div class="pearls-category" id="role-${slug}">
+        <div class="cat-header">${escapeHtml(cat)}${roleLink}</div>
         <div class="pearl-list" role="list">`;
       cats[cat].forEach((p, idx) => { 
-        html += `<div class="pearl-item" role="listitem" tabindex="0">
-          <div class="pearl-text">${escapeHtml(p.text)}</div>
+        const points = Array.isArray(p.points)
+          ? `<ul class="pearl-points">${p.points.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>`
+          : '';
+        html += `<div class="pearl-item${cfg.numbered ? ' numbered' : ''}" role="listitem" tabindex="0">
+          ${cfg.numbered ? `<span class="pearl-num">${idx + 1}</span>` : ''}
+          <div class="pearl-text">${escapeHtml(p.text)}${points}</div>
         </div>`; 
       });
       html += `</div></div>`;
     }
     container.innerHTML = html || '<div style="text-align:center;padding:40px;color:var(--muted)">No pearls found.</div>';
-    showToast('Pearls loaded', 'success', 1200);
+    container.scrollTop = 0;
+    const target = role && document.getElementById('role-' + slugify(role));
+    if (target) {
+      target.scrollIntoView({ block: 'start' });
+      target.classList.add('targeted');
+    }
   } catch(e) {
-    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--red)">Failed to load pearls: ${escapeHtml(e.message)}<br><button class="study-btn" onclick="openPearls()" style="margin-top:12px">Retry</button></div>`;
+    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--red)">Failed to load: ${escapeHtml(e.message)}<br><button class="study-btn" onclick="openPearls('${pearlsView}')" style="margin-top:12px">Retry</button></div>`;
     showToast('Load failed', 'warning', 1200);
   }
 }
-function closePearls() { showScreen('sel'); }
+
+function closePearls() {
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  document.title = DEFAULT_TITLE;
+  showScreen('sel');
+}
+
+// Share (native share sheet on phones) or copy the direct link.
+async function sharePearlsLink(btn) {
+  const role = btn.dataset.role || '';
+  const url = location.origin + location.pathname + '#' + pearlsView + (role ? '/' + role : '');
+  const title = PEARL_VIEWS[pearlsView].title + (role ? ' — ' + btn.dataset.name : '');
+  if (navigator.share) {
+    try { await navigator.share({ title, url }); return; }
+    catch (e) { if (e && e.name === 'AbortError') return; }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    const lbl = btn.querySelector('.lbl');
+    if (lbl) {
+      const was = lbl.textContent;
+      lbl.textContent = 'Copied ✓';
+      setTimeout(() => { lbl.textContent = was; }, 1600);
+    }
+  } catch {
+    window.prompt('Copy this link:', url);
+  }
+}
+
+function routeFromHash() {
+  const [view, role] = decodeURIComponent(location.hash.slice(1)).split('/');
+  if (PEARL_VIEWS[view]) openPearls(view, role || '');
+  else if (document.getElementById('pearlsScreen').style.display === 'flex') {
+    document.title = DEFAULT_TITLE;
+    showScreen('sel');
+  }
+}
+window.addEventListener('hashchange', routeFromHash);
 
 // Save/Load progress
 function saveProgress() {
@@ -1814,6 +1911,7 @@ function escapeHtml(s) {
 
 // Initialize
 showScreen('sel');
+routeFromHash();
 
 // Cleanup on page unload
 window.addEventListener('beforeunload', () => {
