@@ -13,7 +13,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Tagging is the Triage Officer's job; the Treatment Officer re-triages, the Transport Officer moves patients.",
-      "hint": "Topic: Triage.",
+      "hint": "Tagging happens during the first sort of the patients. Which officer runs that sort?",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -28,7 +28,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Personal safety comes first — an injured rescuer becomes another casualty.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "If you get hurt, you become one more casualty and one less rescuer.",
       "difficulty": "easy",
       "topic": "Scene Safety"
     },
@@ -43,7 +43,7 @@
       ],
       "correct_answer": "C",
       "explanation": "START begins with a voice command so the walking wounded move to a set point; the remaining patients are then assessed one by one. Stopping to look, listen and think belongs to the scene size-up before triage starts.",
-      "hint": "Topic: Triage.",
+      "hint": "START begins with a single instruction to the whole crowd, before you touch anyone.",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -58,7 +58,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Directing everyone who can walk to a set point quickly sorts out the walking wounded (GREEN).",
-      "hint": "Topic: Triage.",
+      "hint": "What does asking everyone to walk to a set point quickly tell you about them?",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -73,7 +73,7 @@
       ],
       "correct_answer": "C",
       "explanation": "P = Perfusion, assessed by radial pulse or capillary refill (< 2 s).",
-      "hint": "Topic: START Triage.",
+      "hint": "P is for perfusion. How do you check it in seconds at a fingertip?",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -88,7 +88,7 @@
       ],
       "correct_answer": "A",
       "explanation": "30 = respirations, 2 = capillary refill seconds, Can do = follows simple commands (mental status).",
-      "hint": "Topic: START Triage.",
+      "hint": "30 is the breathing rate and 2 is the refill time. The third check asks the patient to do something simple.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -103,7 +103,7 @@
       ],
       "correct_answer": "A",
       "explanation": "During triage you only stop life-threatening haemorrhage (direct pressure or tourniquet). Bandaging and wound care wait for the treatment area.",
-      "hint": "Topic: Triage.",
+      "hint": "During triage you only do what saves a life in seconds. Which option is truly life-saving?",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -118,7 +118,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Triage is a 30–60 second sort; splinting and other fracture care are left to the treatment area.",
-      "hint": "Topic: Triage.",
+      "hint": "Fracture care takes time. Does it happen during the triage sort, or later?",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -133,7 +133,7 @@
       ],
       "correct_answer": "A",
       "explanation": "The contaminated section warns the destination so a contaminated patient is not sent to an unprepared facility.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "Which condition must a hospital prepare for before the patient arrives, and might not be able to handle at all?",
       "difficulty": "medium",
       "topic": "Triage Tag"
     },
@@ -148,7 +148,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Tear-off tags are upgraded by removing the lower colour strip(s) so the higher priority shows.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "Tear-off tags show the priority by the colour strip left at the bottom.",
       "difficulty": "medium",
       "topic": "Triage Tag"
     },
@@ -163,7 +163,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Torn strips can't be re-attached, so a new tag is applied while the old one is kept with it as a record.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "Torn strips can't be put back, but the record of the first triage still matters.",
       "difficulty": "hard",
       "topic": "Triage Tag"
     },
@@ -178,7 +178,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Triage tags record priority colour and travel with the patient.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "It travels with the patient and shows their priority colour.",
       "difficulty": "easy",
       "topic": "Triage Tag"
     },
@@ -193,7 +193,7 @@
       ],
       "correct_answer": "B",
       "explanation": "From the French \"trier\" — to sort.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "Triage puts patients into groups by priority. Which word describes that?",
       "difficulty": "easy",
       "topic": "Fundamentals"
     },
@@ -208,7 +208,7 @@
       ],
       "correct_answer": "A",
       "explanation": "An MCI is defined by casualties exceeding available resources.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "Only one option names an event by the gap between casualties and the resources available.",
       "difficulty": "easy",
       "topic": "Fundamentals"
     },
@@ -223,7 +223,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "The buses get bigger from A to C, and Bus C is the largest.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
     },
@@ -238,7 +238,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "The buses get bigger from A to C, and Bus A is the smallest.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
     },
@@ -253,7 +253,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Bus-A: 15, Bus-B: 25, Bus-C: 33.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "Bus B sits in the middle: bigger than Bus A, smaller than Bus C.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
     },
@@ -268,7 +268,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Triage tags are an MCI tool.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "Tags are needed when there are too many patients to track from memory.",
       "difficulty": "easy",
       "topic": "Triage Tag"
     },
@@ -283,7 +283,7 @@
       ],
       "correct_answer": "C",
       "explanation": "The Transport Officer coordinates destinations with dispatch/hospitals.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Which officer decides where each ambulance is heading?",
       "difficulty": "easy",
       "topic": "Sector Officers"
     },
@@ -298,7 +298,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Sorting = triage.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Sorting patients is the literal meaning of one officer's title.",
       "difficulty": "easy",
       "topic": "Sector Officers"
     },
@@ -313,7 +313,7 @@
       ],
       "correct_answer": "B",
       "explanation": "A crisis is an event expected to lead to an unstable, dangerous situation.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "This word describes a situation that is still developing, not one that has already caused the damage.",
       "difficulty": "medium",
       "topic": "Fundamentals"
     },
@@ -328,7 +328,7 @@
       ],
       "correct_answer": "C",
       "explanation": "That is the definition of a disaster.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "This term describes the event together with the damage and loss of life it has already caused.",
       "difficulty": "medium",
       "topic": "Fundamentals"
     },
@@ -343,7 +343,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Evacuation is the organised, urgent movement of people away from a hazard.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "It's the organised term emergency plans use for moving people out of danger.",
       "difficulty": "easy",
       "topic": "Fundamentals"
     },
@@ -358,7 +358,7 @@
       ],
       "correct_answer": "B",
       "explanation": "ISUZU support units are based at Hatta and Jebel Ali.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "Isnad 4 and Isnad 5 are the ISUZU units: one is in the mountains, the other by the port.",
       "difficulty": "hard",
       "topic": "DCAS Resources"
     },
@@ -373,7 +373,7 @@
       ],
       "correct_answer": "D",
       "explanation": "DELTA support unit: Warsan.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "DELTA (Isnad 3) shares its base with the MAN unit, inland east of the city.",
       "difficulty": "hard",
       "topic": "DCAS Resources"
     },
@@ -388,7 +388,7 @@
       ],
       "correct_answer": "B",
       "explanation": "MAN support unit: Warsan.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "MAN (Isnad 2) shares its base with the DELTA unit, inland east of the city.",
       "difficulty": "hard",
       "topic": "DCAS Resources"
     },
@@ -403,7 +403,7 @@
       ],
       "correct_answer": "B",
       "explanation": "The Incident Commander coordinates with other agencies/stakeholders (per the DCAS IC checklist).",
-      "hint": "Topic: Command.",
+      "hint": "Other agencies need one EMS point of contact who sees the whole incident.",
       "difficulty": "medium",
       "topic": "Command"
     },
@@ -418,7 +418,7 @@
       ],
       "correct_answer": "B",
       "explanation": "The Safety Officer monitors operations for hazards and compliance.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Which officer's whole job is watching for hazards and unsafe practice?",
       "difficulty": "easy",
       "topic": "Sector Officers"
     },
@@ -433,7 +433,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Start where you stand — triage the nearest victim and work outward systematically.",
-      "hint": "Topic: Triage.",
+      "hint": "Working systematically beats chasing the loudest or the worst-looking patient.",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -448,7 +448,7 @@
       ],
       "correct_answer": "B",
       "explanation": "METHANE: Major incident, Exact location, Type, Hazards, Access, Number of casualties, Emergency services.",
-      "hint": "Topic: METHANE.",
+      "hint": "METHANE tells dispatch how big a response to send.",
       "difficulty": "easy",
       "topic": "METHANE"
     },
@@ -463,7 +463,7 @@
       ],
       "correct_answer": "B",
       "explanation": "START triage should take under a minute per patient.",
-      "hint": "Topic: Triage.",
+      "hint": "Triage is a quick sort, not an assessment. Think seconds, not minutes.",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -478,7 +478,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All are natural disasters.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "Check each option: is it caused by nature or by people?",
       "difficulty": "easy",
       "topic": "Fundamentals"
     },
@@ -493,7 +493,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All may pose hazards to life, property or environment.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Could each option harm life, property or the environment?",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -508,7 +508,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Tarps are laid 5 m apart.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "Leave room for stretchers and staff to move between the tarps, more than a couple of steps.",
       "difficulty": "medium",
       "topic": "Scene Layout"
     },
@@ -523,7 +523,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Backboards are placed 1 m apart.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "Leave just enough room for one medic to kneel between two patients.",
       "difficulty": "medium",
       "topic": "Scene Layout"
     },
@@ -538,7 +538,7 @@
       ],
       "correct_answer": "C",
       "explanation": "SLUDGEM: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis.",
-      "hint": "Topic: Triage Tag.",
+      "hint": "SLUDGEM lists the body fluids and functions a nerve agent sets off.",
       "difficulty": "medium",
       "topic": "Triage Tag"
     },
@@ -553,7 +553,7 @@
       ],
       "correct_answer": "B",
       "explanation": "The division exists for readiness and preparedness.",
-      "hint": "Topic: DCAS Organisation.",
+      "hint": "The division's work starts long before any incident happens.",
       "difficulty": "medium",
       "topic": "DCAS Organisation"
     },
@@ -568,7 +568,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Triage rations scarce resources to save the most lives.",
-      "hint": "Topic: Triage.",
+      "hint": "With too few resources, triage aims to save as many lives as possible rather than treat everyone at once.",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -583,7 +583,7 @@
       ],
       "correct_answer": "A",
       "explanation": "In START, anyone who can walk is initially GREEN.",
-      "hint": "Topic: START Triage.",
+      "hint": "In START, the very first question is whether the patient can walk.",
       "difficulty": "medium",
       "topic": "START Triage"
     },
@@ -598,7 +598,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Staging holds incoming resources — people, vehicles, equipment — until assigned.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "Staging holds incoming resources until the Incident Commander assigns them.",
       "difficulty": "easy",
       "topic": "Scene Layout"
     },
@@ -613,7 +613,7 @@
       ],
       "correct_answer": "D",
       "explanation": "The ICP is the on-scene command location.",
-      "hint": "Topic: Command.",
+      "hint": "It's on scene, not the off-site centre, and it isn't where resources wait.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -628,7 +628,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Exceeding the initial crews' capacity defines a multiple casualty incident.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "This definition is measured against the first crews on scene, not the whole health system.",
       "difficulty": "hard",
       "topic": "Fundamentals"
     },
@@ -643,7 +643,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Every incident has an Incident Commander.",
-      "hint": "Topic: Command.",
+      "hint": "Even a single-ambulance call has someone in charge.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -658,7 +658,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Gold = strategic, Silver = tactical, Bronze = operational.",
-      "hint": "Topic: Command.",
+      "hint": "Gold, Silver and Bronze run from the big picture down to the hands-on work.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -673,7 +673,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Decontamination is done in the warm zone before patients enter the clean treatment area. A quick initial triage may happen before decontamination to set its order.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Keep the clean treatment area clean.",
       "difficulty": "medium",
       "topic": "HAZMAT"
     },
@@ -688,7 +688,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Apneic with a non-survivable injury = expectant/deceased.",
-      "hint": "Topic: START Triage.",
+      "hint": "In START, what happens to a patient who still isn't breathing after the airway is opened?",
       "difficulty": "medium",
       "topic": "START Triage"
     },
@@ -703,7 +703,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Triage is limited to airway opening, bleeding control and positioning.",
-      "hint": "Topic: Triage.",
+      "hint": "Triage interventions take seconds. Do any of these?",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -718,7 +718,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Physicians add most value treating patients in the treatment area.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "Where would a doctor's advanced skills help the most patients at once?",
       "difficulty": "easy",
       "topic": "Scene Layout"
     },
@@ -733,7 +733,7 @@
       ],
       "correct_answer": "B",
       "explanation": "HAZMAT = HAZardous MATerials.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Split the word: HAZ + MAT.",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -748,7 +748,7 @@
       ],
       "correct_answer": "C",
       "explanation": "When resources at the scene AND at the receiving hospitals are overwhelmed and outside help is needed, the event is a disaster. A multiple casualty incident only exceeds the initial crews.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "When even the receiving hospitals are overwhelmed, the whole community needs outside help.",
       "difficulty": "hard",
       "topic": "Fundamentals"
     },
@@ -763,7 +763,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Risk assessment is the Safety Officer's role.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Assessing risk is this officer's specialty.",
       "difficulty": "easy",
       "topic": "Sector Officers"
     },
@@ -778,7 +778,7 @@
       ],
       "correct_answer": "B",
       "explanation": "START allows only opening the airway, controlling major bleeding and positioning.",
-      "hint": "Topic: Triage.",
+      "hint": "Only quick, life-saving actions. Transport and a full ABC assessment come later.",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -793,7 +793,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Patients are re-triaged on arrival in the treatment area.",
-      "hint": "Topic: Triage.",
+      "hint": "It happens after patients are moved off the incident site, but before they leave the scene.",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -808,7 +808,7 @@
       ],
       "correct_answer": "B",
       "explanation": "The three START parameters.",
-      "hint": "Topic: START Triage.",
+      "hint": "These are the three things START checks after asking who can walk.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -823,7 +823,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Self first, then team, then bystanders, then patient.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "An injured rescuer helps no one.",
       "difficulty": "easy",
       "topic": "Scene Safety"
     },
@@ -838,7 +838,7 @@
       ],
       "correct_answer": "D",
       "explanation": "T = Type of incident.",
-      "hint": "Topic: METHANE.",
+      "hint": "After saying where it is, dispatch needs to know what kind of event this is: crash, fire, explosion…",
       "difficulty": "easy",
       "topic": "METHANE"
     },
@@ -853,7 +853,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Definition of hazardous material.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Which option covers solids, liquids and gases that can harm life, property or the environment?",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -868,7 +868,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Scene safety precedes all patient care.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "Nothing else can start until it's safe to work.",
       "difficulty": "easy",
       "topic": "Scene Safety"
     },
@@ -883,7 +883,7 @@
       ],
       "correct_answer": "B",
       "explanation": "START = Simple Triage And Rapid Treatment.",
-      "hint": "Topic: START Triage.",
+      "hint": "The first part is the sorting itself; the second part is what you do quickly afterwards.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -898,7 +898,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Established in 2009.",
-      "hint": "Topic: DCAS Organisation.",
+      "hint": "It's the earliest of the four years listed.",
       "difficulty": "hard",
       "topic": "DCAS Organisation"
     },
@@ -913,7 +913,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Logistics provides facilities, services, food and supplies.",
-      "hint": "Topic: Command.",
+      "hint": "Which section provides facilities, food and equipment for the responders?",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -928,7 +928,7 @@
       ],
       "correct_answer": "D",
       "explanation": "They can serve as transport, treatment and surgical space.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "Buses A and C each have a surgical room, as well as space to treat and carry patients.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
     },
@@ -943,7 +943,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Gold = strategic, Silver = tactical, Bronze = operational.",
-      "hint": "Topic: Command.",
+      "hint": "Bronze is the level working hands-on at the scene.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -958,7 +958,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Unable to follow simple commands = RED (immediate).",
-      "hint": "Topic: START Triage.",
+      "hint": "Not being able to follow simple commands means a serious problem that needs care now.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -973,7 +973,7 @@
       ],
       "correct_answer": "C",
       "explanation": "The first-arriving crew assumes command until relieved.",
-      "hint": "Topic: Command.",
+      "hint": "Someone has to take charge from the very first minute.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -988,7 +988,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Formal transfer of command; the former IC stays to assist.",
-      "hint": "Topic: Command.",
+      "hint": "Hand over command, but don't take your knowledge of the scene away with you.",
       "difficulty": "medium",
       "topic": "Command"
     },
@@ -1003,7 +1003,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All four routes of exposure apply.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Breathing, swallowing, skin and eyes, and penetrating wounds: count the routes.",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -1018,7 +1018,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Needs exceeding resources defines an MCI.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "An MCI is defined by the gap between patient needs and resources, not by its cause.",
       "difficulty": "easy",
       "topic": "Fundamentals"
     },
@@ -1033,7 +1033,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Prevent more casualties first (secondary devices, collapse); don't enter the scene.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "First stop the number of casualties from growing. Think secondary devices and collapse.",
       "difficulty": "medium",
       "topic": "Scene Safety"
     },
@@ -1048,7 +1048,7 @@
       ],
       "correct_answer": "A",
       "explanation": "START begins by separating those who can walk.",
-      "hint": "Topic: START Triage.",
+      "hint": "The very first sort in START uses a single voice command.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -1063,7 +1063,7 @@
       ],
       "correct_answer": "D",
       "explanation": "GREEN patients are held in a safe area for re-triage — conditions can deteriorate.",
-      "hint": "Topic: Triage.",
+      "hint": "Patients with minor injuries can still deteriorate.",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -1078,7 +1078,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All are injuries/signs incompatible with life.",
-      "hint": "Topic: Triage.",
+      "hint": "Which of these are signs of death that no treatment can reverse?",
       "difficulty": "easy",
       "topic": "Triage"
     },
@@ -1093,7 +1093,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All can be crises.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "A crisis is any developing unstable or dangerous situation. Check each option against that.",
       "difficulty": "medium",
       "topic": "Fundamentals"
     },
@@ -1108,7 +1108,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Medics don't enter the hot zone; Civil Defense (fire/rescue) extracts the patient.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "Who has the protective equipment and training to enter a burning building?",
       "difficulty": "medium",
       "topic": "Scene Safety"
     },
@@ -1123,7 +1123,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Placards display the UN/hazard class on vehicles.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "The diamond-shaped or orange signs on the outside of tankers have a specific name.",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -1138,7 +1138,7 @@
       ],
       "correct_answer": "A",
       "explanation": "The femur fracture is the highest salvageable priority; the apneic patient is expectant.",
-      "hint": "Topic: Triage.",
+      "hint": "Rule out the expectant and the minor patients first. Who is serious but still saveable?",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -1153,7 +1153,7 @@
       ],
       "correct_answer": "C",
       "explanation": "EMS stages and treats in the cold (support) zone.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "EMS works where there is no contamination.",
       "difficulty": "easy",
       "topic": "HAZMAT"
     },
@@ -1168,7 +1168,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Normal RPM but not ambulatory = YELLOW (delayed).",
-      "hint": "Topic: START Triage.",
+      "hint": "Breathing, perfusion and mental status are fine, but the question doesn't say the patient can walk.",
       "difficulty": "medium",
       "topic": "START Triage"
     },
@@ -1183,7 +1183,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Self-explanatory.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "The area is named after what happens there.",
       "difficulty": "easy",
       "topic": "Scene Layout"
     },
@@ -1198,7 +1198,7 @@
       ],
       "correct_answer": "A",
       "explanation": "Ambulatory = GREEN.",
-      "hint": "Topic: START Triage.",
+      "hint": "Can he walk?",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -1213,7 +1213,7 @@
       ],
       "correct_answer": "C",
       "explanation": "RR > 30 = RED.",
-      "hint": "Topic: START Triage.",
+      "hint": "Compare the breathing rate with START's cut-off of 30 a minute.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -1228,7 +1228,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Breathes only after airway positioning = RED.",
-      "hint": "Topic: START Triage.",
+      "hint": "A patient who only breathes properly once you position the airway needs help now.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -1243,7 +1243,7 @@
       ],
       "correct_answer": "B",
       "explanation": "No CPR in MCI triage — pulseless/apneic = expectant.",
-      "hint": "Topic: Triage.",
+      "hint": "During MCI triage, would CPR on one patient be the best use of your time?",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -1258,7 +1258,7 @@
       ],
       "correct_answer": "B",
       "explanation": "A tornado affects a wide, evolving area — the number of victims isn't known up front.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "Which event covers a wide area where you can't know at first how many victims there are?",
       "difficulty": "medium",
       "topic": "Fundamentals"
     },
@@ -1273,7 +1273,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Defined by resources, not a number.",
-      "hint": "Topic: Fundamentals.",
+      "hint": "It's measured against the first responders' resources, not against a fixed patient count.",
       "difficulty": "medium",
       "topic": "Fundamentals"
     },
@@ -1288,7 +1288,7 @@
       ],
       "correct_answer": "D",
       "explanation": "The IC sets objectives, plans and assesses the scene; authorizing specific treatments is medical direction, not command.",
-      "hint": "Topic: Command.",
+      "hint": "The IC manages the incident. Individual clinical decisions sit with the clinicians.",
       "difficulty": "hard",
       "topic": "Command"
     },
@@ -1303,7 +1303,7 @@
       ],
       "correct_answer": "C",
       "explanation": "ICS is scalable — on small incidents the IC may cover every function.",
-      "hint": "Topic: Command.",
+      "hint": "The command system scales down as well as up.",
       "difficulty": "medium",
       "topic": "Command"
     },
@@ -1318,7 +1318,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Size up the scene first; METHANE, backup and triage follow.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "You need information before you can triage, report or ask for help.",
       "difficulty": "medium",
       "topic": "Scene Safety"
     },
@@ -1333,7 +1333,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Any category reaching 10+ patients triggers bus activation.",
-      "hint": "Topic: DCAS Resources.",
+      "hint": "The trigger is the number of patients in a category, whatever the colour.",
       "difficulty": "medium",
       "topic": "DCAS Resources"
     },
@@ -1348,7 +1348,7 @@
       ],
       "correct_answer": "D",
       "explanation": "The Safety Officer can halt unsafe acts immediately.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "This officer can halt unsafe work on the spot.",
       "difficulty": "easy",
       "topic": "Sector Officers"
     },
@@ -1363,7 +1363,7 @@
       ],
       "correct_answer": "D",
       "explanation": "All media enquiries go to the Public Information Officer.",
-      "hint": "Topic: Command.",
+      "hint": "All media questions go to one designated person.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -1378,7 +1378,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Staging tracks available resources and reports to the IC.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Staging manages the ambulances and crews waiting to be used.",
       "difficulty": "medium",
       "topic": "Sector Officers"
     },
@@ -1393,7 +1393,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Approaching from the front keeps the patient looking straight ahead, protecting the C-spine.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "Think about the patient's neck.",
       "difficulty": "medium",
       "topic": "Scene Safety"
     },
@@ -1408,7 +1408,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Trauma-focused kit: responder bag, backboard, carevent and C-collar.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "Pick the set that covers trauma: airway and breathing support plus spinal motion restriction.",
       "difficulty": "medium",
       "topic": "Scene Safety"
     },
@@ -1423,7 +1423,7 @@
       ],
       "correct_answer": "A",
       "explanation": "DCAS protocol: the second unit takes Staging and Treatment.",
-      "hint": "Topic: Command.",
+      "hint": "The first crew already covers command and triage. Which two jobs are still uncovered?",
       "difficulty": "hard",
       "topic": "Command"
     },
@@ -1438,7 +1438,7 @@
       ],
       "correct_answer": "B",
       "explanation": "Arriving units report to the IC (or staging when established) for assignment.",
-      "hint": "Topic: Command.",
+      "hint": "Arriving units check in with whoever is in charge to get an assignment.",
       "difficulty": "easy",
       "topic": "Command"
     },
@@ -1453,7 +1453,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Short spinal devices (KED) are for stable, seated patients with suspected spinal injury. Unstable RED patients need rapid extrication, and a walking GREEN patient with no spinal concern doesn't need a KED.",
-      "hint": "Topic: Scene Safety.",
+      "hint": "The KED takes time to apply. Which patient is stable enough to wait for it and still needs spinal protection?",
       "difficulty": "hard",
       "topic": "Scene Safety"
     },
@@ -1468,7 +1468,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Entry and rescue in the hot zone is for trained HAZMAT teams.",
-      "hint": "Topic: HAZMAT.",
+      "hint": "Which action needs protective equipment and HAZMAT training?",
       "difficulty": "medium",
       "topic": "HAZMAT"
     },
@@ -1483,7 +1483,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Bodies stay in place (evidence/ID) unless blocking access to the living.",
-      "hint": "Topic: Triage.",
+      "hint": "Bodies are evidence and help identification. What single reason justifies moving one early?",
       "difficulty": "medium",
       "topic": "Triage"
     },
@@ -1498,7 +1498,7 @@
       ],
       "correct_answer": "B",
       "explanation": "By strict START: cannot walk, RR under 30, radial pulse present and follows commands = YELLOW. Watch closely and re-triage — bilateral femur fractures can cause shock and he may soon become RED..)",
-      "hint": "Topic: START Triage.",
+      "hint": "Go through RPM strictly: breathing rate, radial pulse, then commands. The injuries alone don't decide the colour.",
       "difficulty": "medium",
       "topic": "START Triage"
     },
@@ -1513,7 +1513,7 @@
       ],
       "correct_answer": "D",
       "explanation": "RPM: respiration, pulse/perfusion, mental status.",
-      "hint": "Topic: START Triage.",
+      "hint": "These are the R, P and M of RPM.",
       "difficulty": "easy",
       "topic": "START Triage"
     },
@@ -1528,7 +1528,7 @@
       ],
       "correct_answer": "C",
       "explanation": "RED patients leave first, so their tarp is nearest the loading zone.",
-      "hint": "Topic: Scene Layout.",
+      "hint": "Which patients leave the scene first?",
       "difficulty": "easy",
       "topic": "Scene Layout"
     },
@@ -1543,7 +1543,7 @@
       ],
       "correct_answer": "C",
       "explanation": "Transport tracks each patient's destination.",
-      "hint": "Topic: Sector Officers.",
+      "hint": "Which officer knows where each patient went?",
       "difficulty": "medium",
       "topic": "Sector Officers"
     },
@@ -1558,7 +1558,7 @@
       ],
       "correct_answer": "D",
       "explanation": "Coordinating with other stakeholders is on the IC checklist.",
-      "hint": "Topic: Command.",
+      "hint": "Coordinating with other stakeholders sits with whoever is in overall charge.",
       "difficulty": "medium",
       "topic": "Command"
     },
@@ -1573,7 +1573,7 @@
       ],
       "correct_answer": "C",
       "explanation": "The first crew becomes command and stays until the incident closes.",
-      "hint": "Topic: Command.",
+      "hint": "The first crew takes command. When does command leave the scene?",
       "difficulty": "medium",
       "topic": "Command"
     }
