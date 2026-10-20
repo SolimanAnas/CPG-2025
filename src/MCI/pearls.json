@@ -1,0 +1,351 @@
+{
+  "title": "MCI Pearls",
+  "description": "Key MCI facts: definitions, command structure, METHANE, START triage and tags, scene layout, disaster buses and support units, HAZMAT, radiation protection, evacuation and recovery, KED.",
+  "pearls": [
+    {
+      "id": 1,
+      "category": "MCI Basics",
+      "text": "MCI (Multi- or Mass Casualty Incident): any incident in which EMS resources — personnel and equipment — are overwhelmed by the number and severity of casualties."
+    },
+    {
+      "id": 2,
+      "category": "MCI Basics",
+      "text": "Multi Casualty Incident: the number and/or severity of casualties exceeds the capacity of the initial crew(s), preventing effective management and transport."
+    },
+    {
+      "id": 3,
+      "category": "MCI Basics",
+      "text": "Scale by patient count: MCI 1–10 patients · Multi Casualty 10–100 · Mass Casualty more than 100."
+    },
+    {
+      "id": 4,
+      "category": "MCI Basics",
+      "text": "Crisis: any event expected to lead to an unstable and dangerous situation. Types: natural, technological, rumors, confrontations, workplace violence, terrorist attack, financial."
+    },
+    {
+      "id": 5,
+      "category": "MCI Basics",
+      "text": "Disaster: a sudden accident or natural catastrophe that causes great damage or loss of life. Natural examples: earthquake, flood, typhoon."
+    },
+    {
+      "id": 6,
+      "category": "MCI Basics",
+      "text": "Man-made disasters: outbreak, fire, landslide, industrial/construction disaster, multiple RTA (train, plane crash, ship), pollution (environmental), public disturbance (riot, rally), event disaster (stampede)."
+    },
+    {
+      "id": 7,
+      "category": "MCI Basics",
+      "text": "Impacts of disaster: loss of life · loss of property or livelihood · disruption of lifestyle · disruption of government systems · national economic loss · sociological and psychological effects."
+    },
+    {
+      "id": 8,
+      "category": "MCI Basics",
+      "text": "Resilience: the ability of individuals to withstand hazards or to recover from the disruption a disaster causes."
+    },
+    {
+      "id": 9,
+      "category": "Command Structure",
+      "text": "Gold = Strategic (CEO) · Silver = Tactical (Head of Operations / Disaster — EMS Commander) · Bronze = Operational (Incident Commander on scene)."
+    },
+    {
+      "id": 10,
+      "category": "Command Structure",
+      "text": "First unit on scene temporarily assumes command: the senior medic becomes Incident Commander and the 2nd medic becomes Triage Officer."
+    },
+    {
+      "id": 11,
+      "category": "Command Structure",
+      "text": "The Incident Commander is the only position staffed at every incident. The IC runs everything from the Incident Command Post."
+    },
+    {
+      "id": 12,
+      "category": "Command Structure",
+      "text": "Operation flow: Emergency → DCAS Main Dispatch → first unit on scene (temporary IC) → METHANE report → Main Dispatch → DCAS Disaster Plan → field support units + private hospitals & EMS companies hotline → treatment & transport → recovery phase."
+    },
+    {
+      "id": 13,
+      "category": "Command Structure",
+      "text": "Sector officers: Triage sorts and tags all victims · Treatment runs the treatment area · Transport tells dispatch which hospital each patient goes to · Staging manages incoming resources · Safety gives the IC a risk assessment and monitors that medics follow safety procedures."
+    },
+    {
+      "id": 14,
+      "category": "Command Structure",
+      "text": "Tactical report sheet: relay METHANE to Main Dispatch, then keep counts by Immediate / Delayed / Minor / Involved / Morgue, log ambulance units (time arrived / departed) and the services requested."
+    },
+    {
+      "id": 15,
+      "category": "METHANE Report",
+      "text": "M – Major incident declared · E – Exact location · T – Type of incident · H – Hazards · A – Access · N – Number of casualties · E – Emergency services needed."
+    },
+    {
+      "id": 16,
+      "category": "METHANE Report",
+      "text": "Send METHANE to Main Dispatch as soon as the MCI is confirmed — it is what activates the DCAS Disaster Plan."
+    },
+    {
+      "id": 17,
+      "category": "START Triage",
+      "text": "START = Simple Triage And Rapid Treatment. \"Triage\" is French for \"to sort\"."
+    },
+    {
+      "id": 18,
+      "category": "START Triage",
+      "text": "Goal: do the most good for the greatest number of potential survivors. Spend 30–60 seconds per patient and start with the closest victim."
+    },
+    {
+      "id": 19,
+      "category": "START Triage",
+      "text": "Step 1 — Voice triage: tell everyone who can walk to move to a set point. Walking wounded = GREEN, even with dramatic injuries (e.g., amputated fingers)."
+    },
+    {
+      "id": 20,
+      "category": "START Triage",
+      "text": "Step 2 — Respiration: not breathing after the airway is opened = BLACK. Breathing over 30/min (or very slow, under 10/min) = RED. Otherwise check perfusion."
+    },
+    {
+      "id": 21,
+      "category": "START Triage",
+      "text": "Step 3 — Perfusion: capillary refill over 2 seconds (or no radial pulse) = RED — control bleeding. Under 2 seconds = check mental status."
+    },
+    {
+      "id": 22,
+      "category": "START Triage",
+      "text": "Step 4 — Mental status: follows simple commands = YELLOW. Cannot follow commands = RED."
+    },
+    {
+      "id": 23,
+      "category": "START Triage",
+      "text": "Memory aid: RPM — \"30 · 2 · Can do\" (Respiration 30, Perfusion 2 seconds, Mental status: can do)."
+    },
+    {
+      "id": 24,
+      "category": "START Triage",
+      "text": "Only three interventions during triage: open the airway, control severe bleeding, position the patient. No CPR, IV, cooling dressings or splinting."
+    },
+    {
+      "id": 25,
+      "category": "START Triage",
+      "text": "Secondary triage is done in the treatment area. Physicians arriving on scene work in the treatment area."
+    },
+    {
+      "id": 26,
+      "category": "Triage Tags",
+      "text": "Upgrading a patient's priority: tear off the lowest portion of the triage tag."
+    },
+    {
+      "id": 27,
+      "category": "Triage Tags",
+      "text": "Patient improves: apply a new tag and keep the old one attached to it."
+    },
+    {
+      "id": 28,
+      "category": "Triage Tags",
+      "text": "Contaminated portion: complete it before transport so a contaminated patient is not sent to a hospital that cannot handle the case, and the receiving hospital can prepare."
+    },
+    {
+      "id": 29,
+      "category": "Triage Tags",
+      "text": "SLUDGEM on the tag (nerve-agent signs): Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis."
+    },
+    {
+      "id": 30,
+      "category": "Scene Layout",
+      "text": "Treatment tarps from the exit/loading side: RED nearest the exit, then YELLOW, then GREEN. BLACK is kept away from the others."
+    },
+    {
+      "id": 31,
+      "category": "Scene Layout",
+      "text": "Spacing: 5 m between tarps · 1 m between patients (backboard to backboard)."
+    },
+    {
+      "id": 32,
+      "category": "Scene Layout",
+      "text": "Areas to set up: collection area, triage area, treatment area (red / yellow / green), loading area, and the command post (Bronze command)."
+    },
+    {
+      "id": 33,
+      "category": "Scene Layout",
+      "text": "Staging area: holds incoming personnel, equipment and supplies — divided into Medics / Paramedics / Advanced Paramedics."
+    },
+    {
+      "id": 34,
+      "category": "Disaster Buses & Support Units",
+      "text": "Bus A: 15 patients · 1 surgical room · treatment, surgical, transport."
+    },
+    {
+      "id": 35,
+      "category": "Disaster Buses & Support Units",
+      "text": "Bus B: 25 patients · no surgical room · treatment, transport."
+    },
+    {
+      "id": 36,
+      "category": "Disaster Buses & Support Units",
+      "text": "Bus C: 33 patients · 1 surgical room · treatment, surgical, transport."
+    },
+    {
+      "id": 37,
+      "category": "Disaster Buses & Support Units",
+      "text": "Isnad 5 — ISUZU (Jebel Ali / Mina): 100–150 patients."
+    },
+    {
+      "id": 38,
+      "category": "Disaster Buses & Support Units",
+      "text": "Isnad 4 — ISUZU (Hatta): 100–150 patients."
+    },
+    {
+      "id": 39,
+      "category": "Disaster Buses & Support Units",
+      "text": "Isnad 3 — DELTA (Warsan): 80–100 patients."
+    },
+    {
+      "id": 40,
+      "category": "Disaster Buses & Support Units",
+      "text": "Isnad 2 — MAN (Warsan): about 400 patients."
+    },
+    {
+      "id": 41,
+      "category": "HAZMAT — Basics",
+      "text": "HAZMAT: any material or substance — solid, liquid or gas — that poses danger to life, property or the environment if improperly stored, shipped or handled."
+    },
+    {
+      "id": 42,
+      "category": "HAZMAT — Basics",
+      "text": "Hazardous material types: chemical, biological, radiation, nuclear."
+    },
+    {
+      "id": 43,
+      "category": "HAZMAT — Basics",
+      "text": "Routes into the body: Inhalation (breathing — the most rapid) · Ingestion (swallowing) · Injection (penetrating the skin) · Absorption (through skin or eyes)."
+    },
+    {
+      "id": 44,
+      "category": "HAZMAT — Basics",
+      "text": "Chemical Protective Suit (CPS): protects against hazardous materials in solid, liquid and gas form."
+    },
+    {
+      "id": 45,
+      "category": "HAZMAT — Approach & Scene",
+      "text": "Approaching: stay 100 m away, ensure scene safety and size up. Observe the wind direction and park uphill / upwind."
+    },
+    {
+      "id": 46,
+      "category": "HAZMAT — Approach & Scene",
+      "text": "Stop at a safe distance and try to identify the material: look for warning signs or placards, company files, or ask the driver of the vehicle."
+    },
+    {
+      "id": 47,
+      "category": "HAZMAT — Approach & Scene",
+      "text": "Know the number of casualties, inform dispatch via METHANE, and request backup and the DCD / HAZMAT team. Once HAZMAT is confirmed, upgrade your PPE."
+    },
+    {
+      "id": 48,
+      "category": "HAZMAT — Approach & Scene",
+      "text": "Paramedic goals: Know (evaluate the hazard if possible) · Notification (inform dispatch, request assistance) · Isolation (set a perimeter, deny entry, evacuate) · Protection (no intentional contact)."
+    },
+    {
+      "id": 49,
+      "category": "HAZMAT — Approach & Scene",
+      "text": "On scene: no electronic devices · no eating, drinking or smoking · do not touch the materials · secure the area and let in emergency responders only · guide any casualty to the decon area and minimise contact."
+    },
+    {
+      "id": 50,
+      "category": "HAZMAT — Zones & Decon",
+      "text": "Hot (red) zone: the contaminated area — 100 m."
+    },
+    {
+      "id": 51,
+      "category": "HAZMAT — Zones & Decon",
+      "text": "Warm zone: 200 m — contains the contamination-reduction corridor where decontamination happens."
+    },
+    {
+      "id": 52,
+      "category": "HAZMAT — Zones & Decon",
+      "text": "Cold zone: 300–500 m, upwind and uphill — EMS staging and treatment work here."
+    },
+    {
+      "id": 53,
+      "category": "HAZMAT — Zones & Decon",
+      "text": "Decontamination area: for emergency responders and for casualties, by dry-spray or shower decontamination."
+    },
+    {
+      "id": 54,
+      "category": "HAZMAT — Placards",
+      "text": "Four kinds of placards: HAZMAT · ADR · U-KISS · NFPA."
+    },
+    {
+      "id": 55,
+      "category": "HAZMAT — Placards",
+      "text": "HAZMAT placard: hazard class / division plus the international (UN) code, company name and contact number."
+    },
+    {
+      "id": 56,
+      "category": "HAZMAT — Placards",
+      "text": "ADR placard: for hazardous materials transported by road (started in Europe). Orange plate: top = hazard code (e.g., 33), bottom = UN number (e.g., 1203)."
+    },
+    {
+      "id": 57,
+      "category": "HAZMAT — Placards",
+      "text": "U-KISS placard: for storage of hazardous materials (introduced in the UK) — shows management when exposed, proper PPE, and evacuation when at risk."
+    },
+    {
+      "id": 58,
+      "category": "HAZMAT — Placards",
+      "text": "NFPA 704 \"fire diamond\": Blue = health · Red = fire · Yellow = instability · White = specific hazard. Ratings run 0 (normal / will not burn / stable) to 4 (deadly / below 73°F / may detonate)."
+    },
+    {
+      "id": 59,
+      "category": "HAZMAT — Placards",
+      "text": "NFPA white section: ACID · ALK (alkali) · COR (corrosive) · OX (oxidizer) · radiation symbol · W with a line through it (use no water)."
+    },
+    {
+      "id": 60,
+      "category": "Radiation Protection",
+      "text": "Time: minimise time in the hazardous environment — also key when assessing contamination of civilians who self-evacuated from the hot zone."
+    },
+    {
+      "id": 61,
+      "category": "Radiation Protection",
+      "text": "Distance: radiation hazard drops sharply with distance from the source — evacuate and set an appropriate hot zone immediately."
+    },
+    {
+      "id": 62,
+      "category": "Radiation Protection",
+      "text": "Shielding: solid objects may shield from the source depending on the radiation type — a secondary measure after time and distance."
+    },
+    {
+      "id": 63,
+      "category": "Evacuation & Recovery",
+      "text": "Evacuation: the immediate, urgent movement of people away from a threat or actual hazard."
+    },
+    {
+      "id": 64,
+      "category": "Evacuation & Recovery",
+      "text": "Evacuation sequence: detection → decision → alarm → reaction → movement to an area of refuge or assembly station → transportation."
+    },
+    {
+      "id": 65,
+      "category": "Evacuation & Recovery",
+      "text": "Recovery: returning an organization to normal after a disaster — Relief, Rehabilitation, Restoration."
+    },
+    {
+      "id": 66,
+      "category": "KED Application",
+      "text": "Prepare: universal precautions · explain the procedure and tell the patient not to move · manual C-spine in neutral · check circulation, motor and sensation (CMS) in all extremities · apply the C-collar."
+    },
+    {
+      "id": 67,
+      "category": "KED Application",
+      "text": "Position: tilt the patient forward as a unit and examine the back · slide the KED behind, smooth side toward the patient · drop the leg straps down and to the side · pull the device up snug under the armpits."
+    },
+    {
+      "id": 68,
+      "category": "KED Application",
+      "text": "Strap order: Middle → Bottom → Leg straps (each looped around the same-side leg) → pad behind the head as needed → Head & chin → Thoracic last (push/pull while the patient breathes out)."
+    },
+    {
+      "id": 69,
+      "category": "KED Application",
+      "text": "Finish: hands together (tie thumbs/wrists) · recheck CMS in all extremities · turn patient and device as a unit onto the backboard · loosen the leg straps so the legs extend flat · secure to the backboard."
+    }
+  ]
+}
