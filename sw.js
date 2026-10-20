@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.1';   // Major offline hardening
+const CACHE_VERSION = 'dcas-cpg-v6.2';   // Add MCI exam
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
@@ -34,7 +34,7 @@ const APP_SHELL = [
 //    even without a prior visit. Non-blocking; failures are ignored.
 const CONTENT_CACHE = [
   // Exam & tool pages
-  'pages/acls.html', 'pages/bls.html', 'pages/pals.html', 'pages/bdls.html',
+  'pages/acls.html', 'pages/bls.html', 'pages/pals.html', 'pages/bdls.html', 'pages/mci.html',
   'pages/medical.html', 'pages/pepp.html', 'pages/ppet.html', 'pages/itls.html',
   'pages/empact.html', 'pages/ecg.html', 'pages/ecg-test.html',
   'pages/drug-calculator.html', 'pages/drug-index.html', 'pages/med-index.html',
@@ -53,6 +53,7 @@ const CONTENT_CACHE = [
   'src/BLS/bls.json',
   'src/PALS/pals.json',
   'src/BDLS/BDLS.json',
+  'src/MCI/MCI-exam1.json',
   'src/Medical/medical.json',
   'src/PEPP/exam_a.json', 'src/PEPP/exam_b.json', 'src/PEPP/exam_c.json',
   'src/PEPP/exam_d.json', 'src/PEPP/pearls.json',
