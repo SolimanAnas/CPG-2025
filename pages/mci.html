@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="MCI Exam Review - DCAS Mass Casualty Incident course exam">
 <title>MCI Exam Review</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../fonts/fonts.css">
 
 <style>
 /* ================================================================
@@ -344,8 +345,9 @@ button:focus-visible, [tabindex]:focus-visible, .opt-wrap:focus-visible, .qn:foc
 }
 .chip-row button:hover{color:var(--text);border-color:var(--text)}
 .chip-row button[aria-selected="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
-.role-tabs{flex-wrap:wrap;overflow:visible}
-.pearls-scroll{flex:1;overflow-y:auto;padding:4px 16px 56px}
+.role-tabs{flex-wrap:wrap;overflow:visible;gap:6px;padding:8px 0 10px}
+.role-tabs button{min-height:36px;padding:0 12px}
+.pearls-scroll{flex:1;overflow-y:auto;overscroll-behavior-x:none;padding:4px 16px 56px}
 .p-wrap{max-width:680px;margin:0 auto}
 .p-sec{margin-top:24px;scroll-margin-top:16px}
 .p-sec-h{
@@ -484,8 +486,11 @@ textarea.mt-input{min-height:64px;resize:vertical}
 .tri-black{background:var(--tri-black);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
 .p-empty{margin:32px 2px;font:400 1rem/1.5 var(--f-ui);color:var(--dim)}
 
-.role-panel{max-width:680px;margin:0 auto;padding-top:20px;transition:opacity .16s ease}
+/* pan-y: sideways swipes on the duties change the role instead of browser history */
+.role-panel{max-width:680px;margin:0 auto;padding-top:20px;transition:opacity .16s ease,transform .16s ease;touch-action:pan-y}
 .role-panel.switching{opacity:0}
+.role-panel.switching.to-next{transform:translateX(-28px)}
+.role-panel.switching.to-prev{transform:translateX(28px)}
 .role-name{margin:0 0 4px;font:700 2.25rem/1 var(--f-display);color:var(--text)}
 .role-meta{margin:0 0 22px;font:400 1rem var(--f-ui);color:var(--dim)}
 .duty-list{list-style:none;margin:0;padding:0;counter-reset:duty}
@@ -1412,7 +1417,9 @@ function renderOfficers(items, roleSlug) {
   container.innerHTML = '<section class="role-panel" id="rolePanel" role="tabpanel"></section>';
 
   const tabs = [...tools.querySelectorAll('[role="tab"]')];
-  const show = (role, fromUser) => {
+  const swipeHint = window.matchMedia('(pointer: coarse)').matches ? '. Swipe for the next role.' : '';
+  // dir: 'next' or 'prev' slides the duties that way when the user switches role
+  const show = (role, fromUser, dir) => {
     const panel = document.getElementById('rolePanel');
     const slug = slugify(role);
     const list = cats.get(role);
@@ -1421,11 +1428,17 @@ function renderOfficers(items, roleSlug) {
       panel.dataset.role = slug;
       panel.innerHTML = `
         <h2 class="role-name">${escapeHtml(role)}</h2>
-        <p class="role-meta">${list.length} duties</p>
+        <p class="role-meta">${list.length} duties${swipeHint}</p>
         <ol class="duty-list">${list.map(d => `<li><div class="duty-text">${escapeHtml(d.text)}${
           Array.isArray(d.points) ? `<ul class="duty-points">${d.points.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>` : ''
         }</div></li>`).join('')}</ol>`;
-      panel.classList.remove('switching');
+      if (dir) { // enter from the other side
+        panel.style.transition = 'none';
+        panel.style.transform = `translateX(${dir === 'next' ? 28 : -28}px)`;
+        void panel.offsetWidth;
+        panel.style.transition = panel.style.transform = '';
+      }
+      panel.classList.remove('switching', 'to-next', 'to-prev');
     };
     tabs.forEach(t => {
       const on = t.dataset.role === role;
@@ -1440,15 +1453,16 @@ function renderOfficers(items, roleSlug) {
       history.replaceState(history.state, '', `#officers/${slug}`);
       lastRoute = location.hash;
       container.scrollTop = 0;
-      if (reducedMotion()) fill();
-      else { panel.classList.add('switching'); setTimeout(fill, 120); }
+      if (reducedMotion()) { dir = ''; fill(); }
+      else { panel.classList.add('switching'); if (dir) panel.classList.add(`to-${dir}`); setTimeout(fill, 120); }
     } else fill();
   };
+  const dirTo = role => roles.indexOf(role) > roles.indexOf(currentRole) ? 'next' : 'prev';
 
   const tablist = tools.querySelector('[role="tablist"]');
   tablist.addEventListener('click', e => {
     const t = e.target.closest('[role="tab"]');
-    if (t && t.dataset.role !== currentRole) show(t.dataset.role, true);
+    if (t && t.dataset.role !== currentRole) show(t.dataset.role, true, dirTo(t.dataset.role));
   });
   tablist.addEventListener('keydown', e => {
     const i = tabs.indexOf(document.activeElement);
@@ -1458,7 +1472,22 @@ function renderOfficers(items, roleSlug) {
     e.preventDefault();
     const t = tabs[(next + tabs.length) % tabs.length];
     t.focus();
-    show(t.dataset.role, true);
+    show(t.dataset.role, true, dirTo(t.dataset.role));
+  });
+
+  // Swipe left / right on the duties for the next / previous role
+  const panel = document.getElementById('rolePanel');
+  let touch = null;
+  panel.addEventListener('touchstart', e => {
+    touch = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null;
+  }, { passive: true });
+  panel.addEventListener('touchend', e => {
+    if (!touch) return;
+    const dx = e.changedTouches[0].clientX - touch.x, dy = e.changedTouches[0].clientY - touch.y;
+    touch = null;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const role = roles[roles.indexOf(currentRole) + (dx < 0 ? 1 : -1)];
+    if (role) show(role, true, dx < 0 ? 'next' : 'prev');
   });
   show(start, false);
 }
