@@ -861,7 +861,7 @@ input:checked+.slider:before{transform:translateX(20px)}
           <div class="hub-head"><h2 class="hub-h" id="examH">Course exam</h2><span class="hub-aside">105 questions</span></div>
           <div class="hub-panel">
             <div class="mode-row" role="group" aria-label="Exam mode">
-              <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Study<span class="mode-hint">Hints and answers as you go</span></button>
+              <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">Practice<span class="mode-hint">Answer and explanation after each question</span></button>
               <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">Exam<span class="mode-hint">Timed, scored when you submit</span></button>
             </div>
             <div class="qcount">
@@ -873,7 +873,7 @@ input:checked+.slider:before{transform:translateX(20px)}
               </div>
               <input type="hidden" id="qCount" value="40">
             </div>
-            <button type="button" class="exam-card start-btn" id="startBtn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start studying</button>
+            <button type="button" class="exam-card start-btn" id="startBtn" onclick="startExam('../src/MCI/MCI-exam1.json', 'MCI Exam 1')">Start practice</button>
             <p class="hub-last" id="hubLast" hidden></p>
           </div>
         </section>
@@ -1168,7 +1168,7 @@ function setModeUI(m) {
     examBtn.classList.remove('active-exam');
     examBtn.setAttribute('aria-pressed', 'false');
   }
-  document.getElementById('startBtn').textContent = m === 'exam' ? 'Start the exam' : 'Start studying';
+  document.getElementById('startBtn').textContent = m === 'exam' ? 'Start the exam' : 'Start practice';
 }
 
 // Load saved mode
@@ -1923,7 +1923,7 @@ async function startExam(path, name) {
     document.getElementById('resExamName').textContent = name;
     
     const modeBadge = document.getElementById('modeBadge');
-    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
+    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     
     const isStudy = ST.mode === 'study';

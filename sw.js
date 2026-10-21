@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.6';   // MCI: self-hosted Barlow fonts, swipe between officer roles
+const CACHE_VERSION = 'dcas-cpg-v6.7';   // Exam pages: Practice / Exam wording
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 

@@ -682,10 +682,10 @@ input:checked+.slider:before{transform:translateX(20px)}
   <div class="sel-sub">Basic Disaster Life Support</div>
   
   <!-- Mode row - identical size -->
-  <div class="mode-row" role="group" aria-label="Study mode selection">
+  <div class="mode-row" role="group" aria-label="Practice or exam mode">
     <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">
-      <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study Mode
-      <span class="mode-hint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Hints & Review answers</span>
+      <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice Mode
+      <span class="mode-hint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Answer and explanation after each question</span>
     </button>
     <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">
       <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam Mode
@@ -705,7 +705,7 @@ input:checked+.slider:before{transform:translateX(20px)}
     <div class="exam-card" onclick="startExam('../src/BDLS/BDLS.json', 'BDLS Exam')" role="listitem" tabindex="0" aria-label="Start BDLS Exam">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#tornado"/></svg>️</div>
       <div class="ec-title">BDLS Exam</div>
-      <div class="ec-meta">40 questions · Exam & Study modes</div>
+      <div class="ec-meta">40 questions · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
@@ -1118,7 +1118,7 @@ async function startExam(path, name) {
     document.getElementById('resExamName').textContent = name;
     
     const modeBadge = document.getElementById('modeBadge');
-    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
+    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     
     const isStudy = ST.mode === 'study';
