@@ -667,10 +667,10 @@ input:checked+.slider:before{transform:translateX(20px)}
   <div class="sel-sub">Pediatric Education for Prehospital Professionals</div>
   
   <!-- Mode row - identical size -->
-  <div class="mode-row" role="group" aria-label="Study mode selection">
+  <div class="mode-row" role="group" aria-label="Practice or exam mode">
     <button class="mode-btn active-study" id="modeStudyBtn" onclick="setModeUI('study')" aria-pressed="true">
-      <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study Mode
-      <span class="mode-hint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Hints & Review answers</span>
+      <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice Mode
+      <span class="mode-hint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#lightbulb"/></svg> Answer and explanation after each question</span>
     </button>
     <button class="mode-btn" id="modeExamBtn" onclick="setModeUI('exam')" aria-pressed="false">
       <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam Mode
@@ -682,25 +682,25 @@ input:checked+.slider:before{transform:translateX(20px)}
     <div class="exam-card" onclick="startExam('../src/PEPP/exam_a.json', 'PEPP Exam — Form A')" role="listitem" tabindex="0" aria-label="Start PEPP Exam Form A">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg></div>
       <div class="ec-title">PEPP Exam — Form A</div>
-      <div class="ec-meta">Pediatric scenarios · Exam & Study modes</div>
+      <div class="ec-meta">Pediatric scenarios · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
     <div class="exam-card" onclick="startExam('../src/PEPP/exam_b.json', 'PEPP Exam — Form B')" role="listitem" tabindex="0" aria-label="Start PEPP Exam Form B">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg></div>
       <div class="ec-title">PEPP Exam — Form B</div>
-      <div class="ec-meta">Pediatric scenarios · Exam & Study modes</div>
+      <div class="ec-meta">Pediatric scenarios · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
     <div class="exam-card" onclick="startExam('../src/PEPP/exam_c.json', 'PEPP Exam — Form C')" role="listitem" tabindex="0" aria-label="Start PEPP Exam Form C">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg></div>
       <div class="ec-title">PEPP Exam — Form C</div>
-      <div class="ec-meta">Pediatric scenarios · Exam & Study modes</div>
+      <div class="ec-meta">Pediatric scenarios · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
     <div class="exam-card" onclick="startExam('../src/PEPP/exam_d.json', 'PEPP Exam — Form D')" role="listitem" tabindex="0" aria-label="Start PEPP Exam Form D">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#smile"/></svg></div>
       <div class="ec-title">PEPP Exam — Form D</div>
-      <div class="ec-meta">Pediatric scenarios · Exam & Study modes</div>
+      <div class="ec-meta">Pediatric scenarios · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Practice Exam</span>
     </div>
   </div>
@@ -1108,7 +1108,7 @@ async function startExam(path, name) {
     document.getElementById('resExamName').textContent = name;
     
     const modeBadge = document.getElementById('modeBadge');
-    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
+    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     
     const isStudy = ST.mode === 'study';

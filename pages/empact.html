@@ -330,7 +330,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);displ
   <!-- Mode row -->
   <div class="mode-row">
     <button class="mode-btn active-exam" id="modeExamBtn" onclick="setModeUI('exam')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam Mode</button>
-    <button class="mode-btn" id="modeStudyBtn" onclick="setModeUI('study')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study Mode</button>
+    <button class="mode-btn" id="modeStudyBtn" onclick="setModeUI('study')"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice Mode</button>
   </div>
 
   <div class="exam-q-selector">
@@ -345,7 +345,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);displ
     <div class="exam-card" onclick="startExam('../src/EMPACT/exam1.json', 'EMPACT Mock Exam')">
       <div class="ec-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#clipboard-list"/></svg></div>
       <div class="ec-title">EMPACT Mock Exam</div>
-      <div class="ec-meta">50 questions · Exam & Study modes</div>
+      <div class="ec-meta">50 questions · Exam & Practice modes</div>
       <span class="ec-tag tag-exam">Mock Test</span>
     </div>
     <div class="exam-card" onclick="openPearls()">
@@ -400,7 +400,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);displ
     <main class="q-main">
       <div class="q-scroll" id="qScroll">
         <div class="q-hdr"><span class="q-badge" id="qBadge">Question 1 of 50</span><div class="q-pbar"><div class="q-pfill" id="qPfill"></div></div></div>
-        <div class="q-box" id="qBox"><span class="study-watermark">Study Mode</span><span id="qText">Loading…</span></div>
+        <div class="q-box" id="qBox"><span class="study-watermark">Practice Mode</span><span id="qText">Loading…</span></div>
         <div class="opts" id="optsList"></div>
         <div id="expArea"></div>
       </div>
@@ -534,7 +534,7 @@ async function startExam(path, name) {
     document.getElementById('examName').textContent = name;
     document.getElementById('resExamName').textContent = name;
     const modeBadge = document.getElementById('modeBadge');
-    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Study' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
+    modeBadge.innerHTML =ST.mode === 'study' ? '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book-open"/></svg> Practice' : '<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#notebook-pen"/></svg> Exam';
     modeBadge.className = 'hdr-mode ' + (ST.mode === 'study' ? 'm-study' : 'm-exam');
     const isStudy = ST.mode === 'study';
     document.getElementById('endBtn').style.display = isStudy ? 'none' : '';
