@@ -1,383 +1,801 @@
-/* ========== Chapter 8.4 � Calcium Channel Blocker Overdose ========== */
+/* ========== CPG 8.4 – Calcium Channel Blocker Overdose ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c8-4",
-    title: "Calcium Channel Blocker Overdose",
-    shortTitle: "8.4 Calcium Channel Blocker Overdose",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Calcium Channel Blocker Overdose</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and stabilize patients with suspected calcium channel blocker (CCB) overdose to prevent progression to severe hemodynamic instability, shock, or cardiac arrest.</li>
-                <li>Provide supportive care to maintain airway, breathing, circulation.</li>
-                <li>Ensure timely transport to a facility capable of advanced interventions.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms suggestive of CCB overdose, including:
-                    <ul>
-                        <li>Ingestion of CCBs (e.g., verapamil, diltiazem, amlodipine, nifedipine) in amounts exceeding therapeutic doses.</li>
-                        <li>Hemodynamic instability: bradycardia, hypotension, heart block, or shock.</li>
-                        <li>Systemic symptoms: altered mental status, hyperglycemia, seizures, nausea/vomiting, or metabolic acidosis.</li>
-                        <li>History of intentional overdose or accidental ingestion (e.g., in children).</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>History and Exposure:</strong> Obtain details: Type of CCB (immediate vs. sustained-release), time and quantity ingested, co-ingestants (e.g., beta-blockers, digoxin).</li>
-                <li><strong>Vital Signs Assessment:</strong> Continuous cardiac monitoring, 12-lead ECG (to identify bradycardia, heart block, or arrhythmias). Check blood glucose (hyperglycemia is common in CCB toxicity).</li>
-                <li><strong>Neurological Status:</strong> Assess for altered mental status, seizures.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for any symptomatic bradycardia, hypotension, or arrhythmias following CCB overdose.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary & Secondary Survey:</strong> As per Universal Care CPG & General Toxicology Management CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> Routinely for symptomatic patients.</li>
-                <li><strong>IV Access:</strong> Establish large-bore IV access; consider IO if IV not readily available.</li>
-                <li><strong>Fluid Resuscitation:</strong> Indicated for signs of shock.
-                    <ul>
-                        <li>Adults: 500 mL bolus of normal saline, repeat as required (max 2000 mL).</li>
-                        <li>Pediatrics: 20 mL/kg bolus, repeat as required (max 80 mL/kg).</li>
-                    </ul>
-                </li>
-                <li><strong>Atropine:</strong> Indicated for symptomatic bradycardia.
-                    <ul>
-                        <li>Adults: 0.5-1 mg IV/IO every 3-5 minutes (max 3 mg).</li>
-                        <li>Pediatrics: 0.02 mg/kg IV/IO (max 0.5 mg per dose), every 3-5 minutes (max 1 mg total).</li>
-                    </ul>
-                </li>
-                <li><strong>IV Adrenaline (Epinephrine):</strong> Indicated if patient remains hypotensive after adequate fluid resuscitation.
-                    <ul>
-                        <li><strong>Infusion:</strong> 0.05�0.3 mcg/kg/min IV/IO (use syringe driver when available).</li>
-                        <li><strong>Push Dose:</strong> Adults 0.1 mg IV/IO; Pediatrics 0.01 mg/kg IV/IO, every 2-5 minutes as needed.</li>
-                    </ul>
-                </li>
-                <li><strong>Glucagon:</strong> Indicated if patient remains hypotensive after IV adrenaline.
-                    <ul>
-                        <li><strong>IV Glucagon:</strong> Adults 5 mg IVP, then 1 mg IV/IO every 5 minutes (may require 5�15 mg). Pediatrics: (25�40 kg) 1 mg IV; (<25 kg) 0.5 mg IV, repeat every 5 minutes as required.</li>
-                        <li><strong>IM Glucagon (if IV not available):</strong> Adults 1 mg IM; can increase to 5 mg IM (different sites) if additional available. Repeat every 10-15 minutes. Pediatrics (<20 kg) 0.5 mg IM; (>20 kg) 1 mg IM.</li>
-                    </ul>
-                </li>
-                <li><strong>Calcium:</strong> Consider calcium gluconate or calcium chloride in severe toxicity (hospital intervention; not routinely available prehospital in DCAS).</li>
-                <li><strong>Transcutaneous Pacing:</strong> Implement if refractory to pharmacologic interventions.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, ECG, and mental status.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Rapid transport is required for symptomatic patients; do not delay transport for prolonged on-scene interventions.</li>
-                <li>Monitor for vomiting (common with glucagon); have suction ready.</li>
-                <li>Be prepared for cardiac arrest; have defibrillator and resuscitation equipment ready.</li>
-                <li>Hyperglycemia is common but not treated prehospital; focus on hemodynamics.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li><strong>Differentiation by CCB Type:</strong> Verapamil/diltiazem are more cardiotoxic (bradycardia, heart block); dihydropyridines (e.g., amlodipine, nifedipine) cause more vasodilation and reflex tachycardia initially, but later may cause bradycardia and shock.</li>
-                <li><strong>Delayed Toxicity:</strong> Monitor closely during transport, especially for sustained-release formulations; symptoms may develop hours after ingestion.</li>
-                <li><strong>Calcium Administration:</strong> Calcium is a specific antidote for CCB overdose; may be given in hospital; not part of DCAS prehospital formulary.</li>
-                <li><strong>Co-ingestants:</strong> Beta-blockers, digoxin, or other cardiotoxic drugs worsen toxicity.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>CCB type, dose, time of ingestion, co-ingestants.</li>
-                <li>Vital signs, ECG findings, glucose levels, severity of symptoms.</li>
-                <li>Interventions: atropine, fluids, adrenaline, glucagon, pacing.</li>
-                <li>Response to treatment.</li>
-                <li>Allergies, medications, background medical history.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Investigate and document substance type, route, amount, and exposure/ingestion time.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c8-4",
+    "title": "Calcium Channel Blocker Overdose",
+    "shortTitle": "8.4 Calcium Channel Blocker Overdose",
+    "guide": {
+        "cpg": "8.4",
+        "group": "environmental",
+        "groupLabel": "Toxicology",
+        "title": "Calcium Channel Blocker Overdose",
+        "lead": "CCB overdose causes bradycardia, vasodilation and shock, often with hyperglycemia, and can deteriorate late. Support ABC with ECG monitoring and escalate step by step: fluid, atropine, adrenaline, glucagon, pacing. Transport symptomatic patients rapidly. A single tablet can be dangerous in a child.",
+        "source": {
+            "label": "CPG 8.4",
+            "pages": "259–262",
+            "pdf": "../pdf_sections/8_4_Calcium_Channel_Blocker_Overdose.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Ingestion of CCBs (verapamil, diltiazem, amlodipine, nifedipine) above therapeutic doses, intentional or accidental (e.g. children).",
+                    "Bradycardia, hypotension, heart block or shock; altered mental status, hyperglycemia, seizures, nausea or vomiting, metabolic acidosis."
+                ],
+                "exclude": [
+                    "None noted."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "History",
+                        "items": [
+                            "Which CCB, immediate or sustained release, time and amount, co-ingestants (beta-blockers, digoxin)."
+                        ]
+                    },
+                    {
+                        "title": "Monitoring",
+                        "items": [
+                            "Continuous ECG and 12-lead for bradycardia and arrhythmias.",
+                            "Blood glucose: hyperglycemia is common in CCB toxicity."
+                        ]
+                    },
+                    {
+                        "title": "Which CCB",
+                        "items": [
+                            "Verapamil and diltiazem: more cardiotoxic, bradycardia.",
+                            "Dihydropyridines (amlodipine): vasodilation and reflex tachycardia at first."
+                        ]
+                    },
+                    {
+                        "title": "Triage",
+                        "items": [
+                            "Moderate bradycardia or arrhythmias after a CCB overdose: Red priority."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Step-up management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ABC and monitoring",
+                        "text": "SpO<sub>2</sub> 94–98%, EtCO<sub>2</sub>, IV (IO if needed), 12-lead and continuous ECG. Consider ALS back-up."
+                    },
+                    {
+                        "title": "Shock: fluid",
+                        "level": "EMT",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500 mL bolus, repeat, maximum 2000 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg, repeat, maximum 80 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Symptomatic bradycardia: atropine",
+                        "level": "EMT-A",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "0.5–1 mg IV/IO every 3–5 minutes (maximum 3 mg)",
+                                "note": "Flowchart: 1 mg",
+                                "level": "EMT-A"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "0.02 mg/kg (maximum 0.5 mg per dose) every 3–5 minutes (maximum 1 mg)",
+                                "level": "EMT-A"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Refractory: IV adrenaline",
+                        "level": "AP",
+                        "text": "Hypotension after adequate fluid (flowchart: also bradycardia refractory to atropine). Syringe driver preferred.",
+                        "doses": [
+                            {
+                                "drug": "Push dose, adult",
+                                "dose": "0.1 mg IV/IO",
+                                "note": "The Adult Bradycardia CPG gives a ten-fold smaller push dose: confirm",
+                                "level": "AP"
+                            },
+                            {
+                                "drug": "Push dose, pediatric",
+                                "dose": "0.01 mg/kg IV/IO",
+                                "note": "Flowchart: 0.001 mg/kg, a ten-fold difference",
+                                "level": "AP"
+                            },
+                            {
+                                "drug": "Infusion",
+                                "dose": "0.05–0.3 mcg/kg/min",
+                                "level": "AP"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Still hypotensive: glucagon",
+                        "level": "EMT",
+                        "text": "Doses as in the table; it may cause vomiting."
+                    },
+                    {
+                        "title": "Ongoing symptomatic bradycardia: pacing",
+                        "text": "Transcutaneous pacing if refractory to drugs."
+                    },
+                    {
+                        "title": "Transport",
+                        "text": "Rapid for symptomatic patients; sustained-release tablets can deteriorate late."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Glucagon",
+                "icon": "syringe",
+                "columns": [
+                    "",
+                    "IV (if available)",
+                    "IM"
+                ],
+                "rows": [
+                    [
+                        "Adult",
+                        "5 mg IV push, then 1 mg every 5 minutes (5–15 mg may be needed)",
+                        "1 mg; up to 5 mg at different sites if available; repeat every 10–15 minutes"
+                    ],
+                    [
+                        "Child 25–40 kg",
+                        "1 mg IV every 5 minutes as required",
+                        "&gt;20 kg: 1 mg (flowchart &gt;25 kg)"
+                    ],
+                    [
+                        "Child &lt;25 kg",
+                        "0.5 mg IV every 5 minutes as required",
+                        "&lt;20 kg: 0.5 mg (flowchart &lt;25 kg)"
+                    ]
+                ],
+                "stack": true
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Rhythms",
+                        "items": [
+                            {
+                                "ecg": "chb",
+                                "label": "Complete heart block",
+                                "sub": "Verapamil or diltiazem toxicity"
+                            },
+                            {
+                                "ecg": "stach",
+                                "label": "Sinus tachycardia",
+                                "sub": "Amlodipine: reflex tachycardia with hypotension"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: atropine",
+                                "sub": "0.02 mg/kg",
+                                "href": "../pages/drug-calculator.html?drug=Atropine",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: glucagon",
+                                "sub": "0.5 or 1 mg",
+                                "href": "../pages/drug-calculator.html?drug=Glucagon",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pacing practice",
+                                "sub": "Defibrillator and pacing simulator",
+                                "href": "../pages/defib.html",
+                                "icon": "zap"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Substance, route, amount and time of ingestion investigated and documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "8.1 General Toxicology",
+                        "href": "c8-1.html"
+                    },
+                    {
+                        "label": "8.3 Beta-Blocker Overdose",
+                        "href": "c8-3.html"
+                    },
+                    {
+                        "label": "3.2 Adult Bradycardia",
+                        "href": "c3-2.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first-line medication for symptomatic bradycardia in calcium channel blocker overdose?",
-            options: ["Atropine", "Adrenaline", "Glucagon", "Calcium"],
-            correct: 0,
-            explanation: "Atropine is the first-line for symptomatic bradycardia; if ineffective, consider adrenaline or glucagon."
+            "q": "Which drug is used first for symptomatic bradycardia?",
+            "options": [
+                "Atropine",
+                "Calcium",
+                "Glucagon",
+                "Insulin"
+            ],
+            "correct": 0,
+            "explanation": "EMT-A level."
         },
         {
-            q: "What is the dose of atropine for an adult with bradycardia from CCB overdose?",
-            options: ["0.5-1 mg", "2 mg", "0.1 mg", "0.25 mg"],
-            correct: 0,
-            explanation: "Atropine 0.5-1 mg IV/IO every 3-5 minutes, max 3 mg."
+            "q": "What adult atropine dose does the text give?",
+            "options": [
+                "0.5–1 mg every 3–5 minutes, maximum 3 mg",
+                "2 mg once",
+                "0.1 mg",
+                "5 mg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 1 mg."
         },
         {
-            q: "A patient with CCB overdose has hypotension after 2 L normal saline. What is the next step?",
-            options: ["Give atropine", "Start adrenaline infusion", "Give glucagon", "Transcutaneous pacing"],
-            correct: 1,
-            explanation: "Fluid-refractory hypotension requires vasopressor support (adrenaline)."
+            "q": "Hypotension persists after adequate fluid. What next?",
+            "options": [
+                "IV adrenaline (AP)",
+                "Glucagon first",
+                "Stop",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Then glucagon, then pacing."
         },
         {
-            q: "What is the dose of glucagon for an adult with CCB overdose when IV access is available?",
-            options: ["1 mg IV", "5 mg IV bolus, then 1 mg every 5 minutes", "10 mg IV", "0.5 mg IV"],
-            correct: 1,
-            explanation: "IV glucagon: initial 5 mg bolus, then 1 mg every 5 minutes as needed."
+            "q": "What is the adult IV glucagon regimen?",
+            "options": [
+                "5 mg IV push, then 1 mg every 5 minutes",
+                "1 mg once",
+                "50 mg",
+                "0.1 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "5–15 mg may be needed."
         },
         {
-            q: "What is the pediatric dose of glucagon IM for CCB overdose in a child <20 kg?",
-            options: ["0.25 mg", "0.5 mg", "1 mg", "2 mg"],
-            correct: 1,
-            explanation: "For children <20 kg, IM glucagon dose is 0.5 mg."
+            "q": "What IM glucagon dose for a child under 20 kg (text)?",
+            "options": [
+                "0.5 mg",
+                "5 mg",
+                "0.05 mg",
+                "2 mg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart uses 25 kg."
         },
         {
-            q: "Which ECG finding is expected in verapamil or diltiazem overdose?",
-            options: ["Tachycardia", "Bradycardia and AV block", "ST elevation", "Wide QRS"],
-            correct: 1,
-            explanation: "Verapamil and diltiazem cause bradycardia and varying degrees of AV block."
+            "q": "What ECG is expected with verapamil or diltiazem?",
+            "options": [
+                "Bradycardia and AV block",
+                "Reflex tachycardia only",
+                "Delta waves",
+                "Peaked T waves"
+            ],
+            "correct": 0,
+            "explanation": "They are the more cardiotoxic CCBs."
         },
         {
-            q: "A patient with amlodipine overdose presents with hypotension and reflex tachycardia. What is the mechanism?",
-            options: ["Vasodilation from dihydropyridine", "Cardiogenic shock", "Beta-blocker co-ingestion", "Hypovolemia"],
-            correct: 0,
-            explanation: "Dihydropyridines like amlodipine cause peripheral vasodilation, leading to hypotension and reflex tachycardia."
+            "q": "Amlodipine overdose with hypotension and tachycardia. Why?",
+            "options": [
+                "Vasodilation with reflex tachycardia",
+                "Opioid effect",
+                "Sepsis",
+                "Anxiety only"
+            ],
+            "correct": 0,
+            "explanation": "Dihydropyridines cause vasodilation first."
         },
         {
-            q: "What is the maximum total dose of atropine for an adult with CCB overdose?",
-            options: ["1 mg", "2 mg", "3 mg", "5 mg"],
-            correct: 2,
-            explanation: "Maximum total atropine dose is 3 mg."
+            "q": "What is the adult atropine maximum?",
+            "options": [
+                "3 mg",
+                "1 mg",
+                "10 mg",
+                "0.5 mg"
+            ],
+            "correct": 0,
+            "explanation": "Every 3–5 minutes."
         },
         {
-            q: "What is the initial fluid bolus for an adult with CCB overdose and hypotension?",
-            options: ["250 mL", "500 mL", "1000 mL", "2000 mL"],
-            correct: 1,
-            explanation: "Adults receive 500 mL crystalloid bolus; repeat as needed up to 2000 mL."
+            "q": "What is the adult fluid bolus?",
+            "options": [
+                "500 mL, maximum 2000 mL",
+                "100 mL",
+                "5 L",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "For signs of shock."
         },
         {
-            q: "Why should calcium be considered in CCB overdose?",
-            options: ["It increases heart rate", "It reverses calcium channel blockade", "It causes vasodilation", "It treats hypoglycemia"],
-            correct: 1,
-            explanation: "Calcium is a specific antidote that reverses the effects of CCBs by increasing extracellular calcium; it is typically given in hospital."
+            "q": "Which glucose finding is common?",
+            "options": [
+                "Hyperglycemia",
+                "Hypoglycemia always",
+                "Normal always",
+                "Not checked"
+            ],
+            "correct": 0,
+            "explanation": "Check blood glucose."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with CCB overdose and signs of shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "Initial pediatric bolus is 20 mL/kg crystalloid; repeat as needed up to 80 mL/kg."
+            "q": "What is the pediatric fluid bolus?",
+            "options": [
+                "20 mL/kg, maximum 80 mL/kg",
+                "5 mL/kg",
+                "40 mL/kg once",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "As per this CPG."
         },
         {
-            q: "Which calcium channel blocker is most likely to cause hyperglycemia?",
-            options: ["Amlodipine", "Nifedipine", "Verapamil", "All can cause hyperglycemia"],
-            correct: 3,
-            explanation: "CCB overdose commonly causes hyperglycemia due to impaired insulin release; it is a marker of severity."
+            "q": "Which CCBs are more cardiotoxic?",
+            "options": [
+                "Verapamil and diltiazem",
+                "Amlodipine and nifedipine",
+                "All equally",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "A patient with CCB overdose has a heart rate of 35 and BP 70/40. Atropine is ineffective. What is the next step?",
-            options: ["Give adrenaline infusion", "Transcutaneous pacing", "Give glucagon", "All of the above"],
-            correct: 3,
-            explanation: "Refractory bradycardia may require multiple interventions; pacing is often effective."
+            "q": "HR 35, BP 70/40, atropine ineffective. Next?",
+            "options": [
+                "IV adrenaline, then glucagon, then pacing",
+                "Discharge",
+                "More atropine beyond 3 mg",
+                "Wait"
+            ],
+            "correct": 0,
+            "explanation": "Step up."
         },
         {
-            q: "What is the dose of adrenaline infusion for an adult with CCB overdose?",
-            options: ["0.05-0.3 mcg/kg/min", "1-5 mcg/min", "5-20 mcg/min", "0.5-1 mcg/kg/min"],
-            correct: 0,
-            explanation: "Adrenaline infusion is 0.05-0.3 mcg/kg/min IV/IO."
+            "q": "What is the adrenaline infusion dose?",
+            "options": [
+                "0.05–0.3 mcg/kg/min",
+                "2–10 mg/min",
+                "5 mcg/kg/min fixed",
+                "1 mg/hour"
+            ],
+            "correct": 0,
+            "explanation": "Syringe driver preferred."
         },
         {
-            q: "What is the dose of push-dose adrenaline for an adult with CCB overdose?",
-            options: ["0.01 mg", "0.1 mg", "1 mg", "0.001 mg"],
-            correct: 1,
-            explanation: "Adult push dose adrenaline is 0.1 mg IV/IO."
+            "q": "What adult push dose does this CPG list?",
+            "options": [
+                "0.1 mg",
+                "1 mg",
+                "10 mg",
+                "0.5 mg IM"
+            ],
+            "correct": 0,
+            "explanation": "The Adult Bradycardia CPG gives a ten-fold smaller dose: confirm."
         },
         {
-            q: "A child with CCB overdose weighs 30 kg. What is the appropriate IM glucagon dose?",
-            options: ["0.25 mg", "0.5 mg", "1 mg", "2 mg"],
-            correct: 2,
-            explanation: "For children >20 kg, IM glucagon dose is 1 mg."
+            "q": "A 30 kg child needs IM glucagon. Dose?",
+            "options": [
+                "1 mg",
+                "0.5 mg",
+                "5 mg",
+                "0.1 mg"
+            ],
+            "correct": 0,
+            "explanation": ">20 kg (text) or >25 kg (flowchart)."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with CCB overdose?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "What is the adult fluid maximum?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Then adrenaline."
         },
         {
-            q: "Why is transcutaneous pacing considered in CCB overdose?",
-            options: ["To increase heart rate when pharmacotherapy fails", "To treat hypotension", "To prevent ventricular tachycardia", "To improve cardiac output"],
-            correct: 0,
-            explanation: "Pacing is used for refractory bradycardia that does not respond to atropine, fluids, or inotropes."
+            "q": "When is pacing used?",
+            "options": [
+                "Ongoing symptomatic bradycardia despite drugs",
+                "First line",
+                "Never",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "Refractory to pharmacological treatment."
         },
         {
-            q: "What is the key performance indicator for CCB overdose?",
-            options: ["Administer atropine", "Investigate and document substance type, route, amount, and time", "Start adrenaline infusion", "Perform 12-lead ECG"],
-            correct: 1,
-            explanation: "Documenting the exposure details is a key KPI to guide hospital management."
+            "q": "What is the KPI?",
+            "options": [
+                "Substance, route, amount and time documented",
+                "Calcium for all",
+                "Pacing for all",
+                "Insulin for all"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         },
         {
-            q: "A patient with CCB overdose has a blood glucose of 300 mg/dL. What should you do?",
-            options: ["Give insulin", "Administer dextrose", "Monitor and transport", "Give fluids only"],
-            correct: 2,
-            explanation: "Hyperglycemia is common in CCB toxicity but is not treated prehospital; focus on hemodynamic support."
+            "q": "RBS 300 mg/dL in CCB overdose. What does it mean?",
+            "options": [
+                "Common in CCB toxicity: monitor and transport",
+                "Give insulin",
+                "Give dextrose",
+                "Ignore all glucose"
+            ],
+            "correct": 0,
+            "explanation": "Hyperglycemia is common."
         },
         {
-            q: "Which of the following is a sign of severe CCB toxicity?",
-            options: ["Tachycardia", "Hypertension", "Hypotension and bradycardia", "Fever"],
-            correct: 2,
-            explanation: "Severe CCB overdose causes bradycardia, hypotension, and shock."
+            "q": "What signals severe toxicity?",
+            "options": [
+                "Hypotension and bradycardia",
+                "Hypertension",
+                "Fever",
+                "Normal vitals"
+            ],
+            "correct": 0,
+            "explanation": "Hemodynamic instability."
         },
         {
-            q: "What is the role of calcium in prehospital CCB overdose?",
-            options: ["First-line treatment", "Used for refractory hypotension", "Not routinely available prehospital; hospital intervention", "Given for bradycardia"],
-            correct: 2,
-            explanation: "Calcium is not in the DCAS prehospital formulary; it is a hospital intervention."
+            "q": "Which glucagon effect needs airway care?",
+            "options": [
+                "Vomiting",
+                "Bradycardia",
+                "Hypertension",
+                "Rash"
+            ],
+            "correct": 0,
+            "explanation": "Protect the airway."
         },
         {
-            q: "A patient with CCB overdose is on an adrenaline infusion but remains hypotensive. What should you consider?",
-            options: ["Increase adrenaline dose", "Add glucagon", "Add dopamine", "All of the above"],
-            correct: 3,
-            explanation: "Refractory shock may require combination therapy; consult Tele-EMS."
+            "q": "What pediatric push-dose adrenaline does the text give?",
+            "options": [
+                "0.01 mg/kg",
+                "0.1 mg/kg",
+                "1 mg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart prints 0.001 mg/kg: a ten-fold discrepancy."
         },
         {
-            q: "What is the pediatric dose of atropine for bradycardia in CCB overdose?",
-            options: ["0.01 mg/kg", "0.02 mg/kg", "0.1 mg/kg", "0.5 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric atropine dose is 0.02 mg/kg (max 0.5 mg per dose)."
+            "q": "What is the pediatric atropine dose?",
+            "options": [
+                "0.02 mg/kg",
+                "0.2 mg/kg",
+                "1 mg",
+                "0.001 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 0.5 mg per dose, 1 mg total."
         },
         {
-            q: "A patient with CCB overdose has a QRS duration of 120 ms. What does this suggest?",
-            options: ["CCB toxicity", "Co-ingestion of TCA or beta-blocker", "Hypokalemia", "Normal finding"],
-            correct: 1,
-            explanation: "Widened QRS suggests co-ingestion of sodium channel blockers (TCAs) or other toxins."
+            "q": "Which co-ingestants matter?",
+            "options": [
+                "Beta-blockers, digoxin",
+                "Water",
+                "Vitamins",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Obtain the history."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with CCB overdose?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 3,
-            explanation: "Maximum 80 mL/kg total crystalloid (four 20 mL/kg boluses)."
+            "q": "What is the pediatric fluid maximum here?",
+            "options": [
+                "80 mL/kg",
+                "20 mL/kg",
+                "40 mL/kg",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "As per this CPG."
         },
         {
-            q: "Why should sustained-release CCB formulations be a concern?",
-            options: ["They cause faster toxicity", "They have delayed and prolonged effects", "They are less toxic", "No difference"],
-            correct: 1,
-            explanation: "Sustained-release formulations can cause delayed toxicity for many hours after ingestion."
+            "q": "Why are sustained-release tablets a concern?",
+            "options": [
+                "Delayed deterioration",
+                "They are inactive",
+                "They act instantly",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Monitor closely during transport."
         },
         {
-            q: "What is the dose of push-dose adrenaline for a pediatric patient with CCB overdose?",
-            options: ["0.001 mg/kg", "0.01 mg/kg", "0.1 mg/kg", "0.005 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric push dose adrenaline is 0.01 mg/kg (10 mcg/kg)."
+            "q": "Which is Red priority?",
+            "options": [
+                "Moderate bradycardia or arrhythmias after overdose",
+                "Asymptomatic",
+                "Mild nausea",
+                "Normal ECG"
+            ],
+            "correct": 0,
+            "explanation": "Triage note."
         },
         {
-            q: "A patient with CCB overdose has a heart rate of 30 and is unconscious. What is the priority?",
-            options: ["Atropine", "Transcutaneous pacing", "Adrenaline infusion", "Glucagon"],
-            correct: 1,
-            explanation: "Unconscious with severe bradycardia: pacing is often the fastest intervention; atropine may be given simultaneously."
+            "q": "Which IM glucagon adult maximum is listed?",
+            "options": [
+                "Up to 5 mg at different sites",
+                "50 mg",
+                "1 mg only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "If additional glucagon is available."
         },
         {
-            q: "What is the maximum single dose of atropine for a pediatric patient?",
-            options: ["0.1 mg", "0.5 mg", "1 mg", "2 mg"],
-            correct: 1,
-            explanation: "Maximum single pediatric dose is 0.5 mg."
+            "q": "How urgent is transport for symptomatic patients?",
+            "options": [
+                "Rapid",
+                "Routine",
+                "Next day",
+                "Not needed"
+            ],
+            "correct": 0,
+            "explanation": "Time-sensitive."
         }
     ],
-    flashcards: [
-        { category: "Toxidrome", question: "What are signs of calcium channel blocker overdose?", answer: "Bradycardia, hypotension, heart block, hyperglycemia, altered mental status." },
-        { category: "Types of CCB", question: "What are the two main classes of CCBs?", answer: "Non-dihydropyridines (verapamil, diltiazem) � more cardiotoxic; dihydropyridines (amlodipine, nifedipine) � more vasodilatory." },
-        { category: "Atropine dose � adult", question: "What is the adult atropine dose for CCB overdose?", answer: "0.5-1 mg IV/IO every 3-5 minutes, max 3 mg." },
-        { category: "Atropine dose � pediatric", question: "What is the pediatric atropine dose?", answer: "0.02 mg/kg IV/IO (max 0.5 mg per dose), every 3-5 minutes (max 1 mg total)." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial fluid bolus for an adult with CCB overdose?", answer: "500 mL normal saline; repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation � pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg; repeat as needed up to 80 mL/kg." },
-        { category: "Adrenaline infusion", question: "What is the adrenaline infusion dose for CCB overdose?", answer: "0.05-0.3 mcg/kg/min IV/IO." },
-        { category: "Glucagon dose � adult IV", question: "What is the IV glucagon dose for an adult?", answer: "5 mg IV bolus, then 1 mg every 5 minutes as needed." },
-        { category: "Glucagon dose � adult IM", question: "What is the IM glucagon dose if IV not available?", answer: "1 mg IM; can increase to 5 mg (different sites) if additional available; repeat every 10-15 minutes." },
-        { category: "Glucagon dose � pediatric IV", question: "What is the IV glucagon dose for a child?", answer: "<25 kg: 0.5 mg; 25-40 kg: 1 mg; repeat every 5 minutes." },
-        { category: "Glucagon dose � pediatric IM", question: "What is the IM glucagon dose for a child?", answer: "<20 kg: 0.5 mg; >20 kg: 1 mg; repeat every 10-15 minutes." },
-        { category: "Calcium", question: "What is the role of calcium in CCB overdose?", answer: "Reverses calcium channel blockade; given in hospital (not in DCAS prehospital formulary)." },
-        { category: "Hyperglycemia", question: "Why is hyperglycemia common in CCB overdose?", answer: "CCBs impair insulin release, leading to hyperglycemia; it is a marker of severity." },
-        { category: "Sustained-release", question: "Why monitor sustained-release formulations?", answer: "Delayed toxicity; symptoms may appear hours after ingestion." },
-        { category: "Co-ingestants", question: "What co-ingestants worsen toxicity?", answer: "Beta-blockers, digoxin, TCAs, alcohol." },
-        { category: "ECG findings", question: "What ECG findings are seen in CCB overdose?", answer: "Bradycardia, AV block, prolonged PR interval, widened QRS (if co-ingestants)." },
-        { category: "KPI", question: "What is the key performance indicator for CCB overdose?", answer: "Investigate and document substance type, route, amount, and exposure/ingestion time." },
-        { category: "Transport decision", question: "Should all symptomatic patients be transported?", answer: "Yes, all patients with CCB overdose and symptoms require transport." },
-        { category: "Glucagon side effects", question: "What are common side effects of glucagon?", answer: "Nausea, vomiting, hyperglycemia." },
-        { category: "Pediatric considerations", question: "What is special about pediatric CCB overdose?", answer: "Even small doses can cause severe bradycardia and hypotension; use Broselow tape for dosing." }
+    "flashcards": [
+        {
+            "question": "Features",
+            "answer": "Bradycardia, hypotension, heart block, shock; AMS, hyperglycemia, seizures, vomiting, acidosis."
+        },
+        {
+            "question": "Two types",
+            "answer": "Verapamil/diltiazem: cardiotoxic, bradycardia. Dihydropyridines (amlodipine): vasodilation, reflex tachycardia."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Hyperglycemia is common."
+        },
+        {
+            "question": "Fluid",
+            "answer": "Adult 500 mL (max 2000 mL); child 20 mL/kg (max 80 mL/kg) (EMT)."
+        },
+        {
+            "question": "Adult atropine",
+            "answer": "0.5–1 mg every 3–5 min, max 3 mg (EMT-A)."
+        },
+        {
+            "question": "Pediatric atropine",
+            "answer": "0.02 mg/kg, max 0.5 mg per dose, 1 mg total."
+        },
+        {
+            "question": "Adrenaline indication",
+            "answer": "Hypotension after adequate fluid (and bradycardia refractory to atropine)."
+        },
+        {
+            "question": "Adrenaline doses",
+            "answer": "Push: adult 0.1 mg; child 0.01 mg/kg (flowchart 0.001 mg/kg). Infusion 0.05–0.3 mcg/kg/min (AP)."
+        },
+        {
+            "question": "Glucagon indication",
+            "answer": "Still hypotensive after adrenaline (EMT)."
+        },
+        {
+            "question": "Adult IV glucagon",
+            "answer": "5 mg push, then 1 mg every 5 min."
+        },
+        {
+            "question": "Adult IM glucagon",
+            "answer": "1 mg; up to 5 mg at different sites; every 10–15 min."
+        },
+        {
+            "question": "Pediatric glucagon",
+            "answer": "IV: 0.5 mg (<25 kg), 1 mg (25–40 kg). IM: 0.5 mg (<20 kg), 1 mg (>20 kg)."
+        },
+        {
+            "question": "Pacing",
+            "answer": "If refractory to drugs."
+        },
+        {
+            "question": "Monitoring",
+            "answer": "12-lead and continuous ECG; SpO₂ 94–98%; EtCO₂; glucose."
+        },
+        {
+            "question": "Red priority",
+            "answer": "Moderate bradycardia or arrhythmias."
+        },
+        {
+            "question": "History",
+            "answer": "Drug, release type, time, amount, co-ingestants."
+        },
+        {
+            "question": "Children",
+            "answer": "Accidental ingestion is included: treat seriously."
+        },
+        {
+            "question": "Transport",
+            "answer": "Rapid for symptomatic patients."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "None noted."
+        },
+        {
+            "question": "KPI",
+            "answer": "Substance, route, amount, time documented."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_8_4_1",
-            scenario: "A 50-year-old male is found unresponsive with an empty bottle of verapamil. He has a heart rate of 38, BP 70/40, and a respiratory rate of 10. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer atropine 0.5-1 mg IV", f: "Correct. Symptomatic bradycardia requires atropine." },
-                { t: "Start transcutaneous pacing", f: "Pacing may be needed, but atropine should be given first." },
-                { t: "Give glucagon 5 mg IV", f: "Glucagon is second-line after atropine and fluids." },
-                { t: "Intubate", f: "Airway is important, but bradycardia and hypotension are the immediate threats." }
+            "id": "crit_8_4_1",
+            "scenario": "A 50-year-old beside an empty verapamil bottle: HR 38, BP 70/40, RR 10. The monitor shows the rhythm below.",
+            "ecg": "chb",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "ABC, ALS, IV, 500 mL bolus, atropine; escalate to adrenaline, glucagon, pacing",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Glucagon first",
+                    "f": "It comes after adrenaline."
+                },
+                {
+                    "t": "Observe",
+                    "f": "He is in shock."
+                },
+                {
+                    "t": "Pacing before any drugs",
+                    "f": "Pacing follows failed drug treatment."
+                }
             ],
-            correct: 0,
-            explanation: "Symptomatic bradycardia with hypotension from CCB overdose requires atropine as first-line therapy.",
-            kpi: "Atropine administered."
+            "correct": 0,
+            "explanation": "Verapamil is among the more cardiotoxic CCBs.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_4_2",
-            scenario: "A 45-year-old female ingests an unknown amount of diltiazem. She is lethargic, heart rate 42, BP 80/50. After atropine 0.5 mg, her heart rate increases to 48 and BP remains 80/55. What should you do next?",
-            question: "What is the next step?",
-            options: [
-                { t: "Repeat atropine", f: "Correct. Atropine may be repeated every 3-5 minutes." },
-                { t: "Start adrenaline infusion", f: "Consider after atropine maximum." },
-                { t: "Give glucagon", f: "Consider after atropine and fluids." },
-                { t: "Transcutaneous pacing", f: "Consider if pharmacotherapy fails." }
+            "id": "crit_8_4_2",
+            "scenario": "A diltiazem overdose: HR 48 after atropine 0.5 mg, BP 80/50 despite 2000 mL.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "IV adrenaline (AP): push dose or infusion 0.05–0.3 mcg/kg/min",
+                    "f": "Correct."
+                },
+                {
+                    "t": "More fluid",
+                    "f": "The maximum is reached."
+                },
+                {
+                    "t": "Discharge",
+                    "f": "No."
+                },
+                {
+                    "t": "Stop atropine forever",
+                    "f": "Escalate."
+                }
             ],
-            correct: 0,
-            explanation: "Atropine can be repeated up to 3 mg total before considering other interventions.",
-            kpi: "Repeat atropine administered."
+            "correct": 0,
+            "explanation": "Hypotension after adequate fluid.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_4_3",
-            scenario: "A 35-year-old male takes a large overdose of amlodipine. He is hypotensive (BP 85/50) with a heart rate of 110. He has no chest pain. What is the mechanism and next step?",
-            question: "What is the most appropriate next step?",
-            options: [
-                { t: "Give atropine", f: "Atropine is for bradycardia; this patient has tachycardia." },
-                { t: "Give fluid bolus", f: "Correct. Amlodipine causes vasodilation; fluids are first-line." },
-                { t: "Give adrenaline infusion", f: "Consider after fluids if no response." },
-                { t: "Give calcium", f: "Calcium is not prehospital." }
+            "id": "crit_8_4_3",
+            "scenario": "A large amlodipine overdose: BP 85/50, HR 110, alert; RBS 260 mg/dL.",
+            "ecg": "stach",
+            "question": "What fits?",
+            "options": [
+                {
+                    "t": "Dihydropyridine vasodilation with reflex tachycardia and hyperglycemia: fluid, monitor, transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Atropine for tachycardia",
+                    "f": "Atropine is for symptomatic bradycardia."
+                },
+                {
+                    "t": "Insulin",
+                    "f": "Not in this CPG."
+                },
+                {
+                    "t": "Sepsis only",
+                    "f": "The history fits a CCB."
+                }
             ],
-            correct: 1,
-            explanation: "Amlodipine overdose causes vasodilation and reflex tachycardia; fluids are the initial treatment.",
-            kpi: "Fluid bolus administered."
+            "correct": 0,
+            "explanation": "Expect deterioration; transport rapidly.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_4_4",
-            scenario: "A 2-year-old child ingests several amlodipine tablets. The child is drowsy with a heart rate of 110, BP 80/50, and is pale. What is the appropriate initial fluid bolus?",
-            question: "What volume of fluid should be given?",
-            options: [
-                { t: "5 mL/kg", f: "Too low." },
-                { t: "10 mL/kg", f: "10-20 mL/kg is standard; 20 mL/kg is preferred." },
-                { t: "20 mL/kg", f: "Correct. Initial pediatric fluid bolus is 20 mL/kg." },
-                { t: "40 mL/kg", f: "Too high for initial bolus." }
+            "id": "crit_8_4_4",
+            "scenario": "A 2-year-old (12 kg) swallowed several amlodipine tablets: drowsy, BP 70/40, pale.",
+            "question": "What fluid?",
+            "options": [
+                {
+                    "t": "20 mL/kg bolus, repeat (maximum 80 mL/kg); Red priority; rapid transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adult 500 mL",
+                    "f": "Weight-based."
+                },
+                {
+                    "t": "No fluid in children",
+                    "f": "Shock needs fluid."
+                },
+                {
+                    "t": "Wait for symptoms",
+                    "f": "He is symptomatic."
+                }
             ],
-            correct: 2,
-            explanation: "Pediatric fluid resuscitation for shock is 20 mL/kg crystalloid.",
-            kpi: "Fluid bolus administered."
+            "correct": 0,
+            "explanation": "Small amounts of CCBs can be lethal in children.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_4_5",
-            scenario: "A 60-year-old male with CCB overdose has received atropine 3 mg, 2 L normal saline, and adrenaline infusion at 0.2 mcg/kg/min. His heart rate remains 40, BP 70/40. What is the next intervention?",
-            question: "What should you do next?",
-            options: [
-                { t: "Increase adrenaline infusion", f: "Possible, but consider other therapies." },
-                { t: "Administer glucagon 5 mg IV", f: "Correct. Glucagon is indicated for refractory cases." },
-                { t: "Start dopamine", f: "Not first-line." },
-                { t: "Transcutaneous pacing", f: "Also appropriate, but glucagon may be given concurrently." }
+            "id": "crit_8_4_5",
+            "scenario": "After atropine 3 mg, 2000 mL, adrenaline and glucagon, a CCB overdose still has HR 30 and poor perfusion.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Transcutaneous pacing",
+                    "f": "Correct."
+                },
+                {
+                    "t": "More atropine",
+                    "f": "Maximum reached."
+                },
+                {
+                    "t": "More fluid",
+                    "f": "Maximum reached."
+                },
+                {
+                    "t": "Nothing",
+                    "f": "Pace."
+                }
             ],
-            correct: 1,
-            explanation: "Refractory bradycardia and hypotension despite atropine, fluids, and adrenaline warrant glucagon administration.",
-            kpi: "Glucagon administered."
+            "correct": 0,
+            "explanation": "Refractory to pharmacological interventions.",
+            "kpi": "Substance, route, amount and time documented."
         }
     ]
 };
