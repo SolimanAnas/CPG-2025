@@ -1,405 +1,753 @@
-/* ========== Chapter 8.8 � Envenomation ========== */
+/* ========== CPG 8.8 – Envenomation ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c8-8",
-    title: "Envenomation",
-    shortTitle: "8.8 Envenomation",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Envenomation</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and manage suspected envenomation to prevent systemic complications and facilitate time-sensitive interventions.</li>
-                <li>Minimize secondary injury through supportive care, including airway management, pain control, and prevention of venom spread.</li>
-                <li>Ensure rapid transport to an appropriate medical facility for definitive evaluation and treatment, such as antivenom administration when indicated.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms suggestive of envenomation from insect bites, snake bites, or marine animal stings, including:
-                    <ul>
-                        <li>Localized pain, swelling, redness, or bruising at the site of injury.</li>
-                        <li>Systemic symptoms such as nausea, vomiting, muscle cramps, weakness, respiratory distress, or neurological changes (e.g., paralysis, convulsions).</li>
-                        <li>History of exposure to venomous animals (e.g., snakes, spiders, scorpions, jellyfish, or stingrays).</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Bites or traumatic injuries from non-venomous animals such as dogs or cats.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Envenomation Screening:</strong> Obtain detailed history: type of animal/insect involved (if known), time of exposure, location of bite/sting, progression of symptoms.</li>
-                <li><strong>Focused Assessment:</strong>
-                    <ul>
-                        <li>Inspect the site: Look for puncture wounds, fang marks, stingers, tentacles, or embedded spines.</li>
-                        <li>Vital signs: Monitor for tachycardia, hypotension, respiratory rate changes, or fever.</li>
-                        <li>Neurological: Assess for weakness, paralysis, fasciculations, altered mental status, or seizures.</li>
-                        <li>Respiratory: Evaluate for bronchospasm, stridor, or hypoxia.</li>
-                        <li>Cardiovascular: Check for shock, arrhythmias, or edema.</li>
-                    </ul>
-                </li>
-                <li><strong>Consider Alternative Causes:</strong> Infections (e.g., cellulitis), trauma.</li>
-                <li><strong>Determine Triage Category:</strong>
-                    <ul>
-                        <li><strong>Red Priority:</strong> Severe systemic toxicity (e.g., neurotoxicity, hemotoxicity, respiratory failure, anaphylaxis).</li>
-                        <li><strong>Yellow Priority:</strong> Progressive swelling, mild systemic effects (e.g., nausea, mild weakness).</li>
-                        <li><strong>Green Priority:</strong> Localized pain/swelling without systemic symptoms.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Scene Safety and Patient Removal:</strong> Ensure scene safety; do not engage in search for the animal. Remove patient to a safe environment (away from animals or water) before treatment.</li>
-                <li><strong>Primary & Secondary Survey:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> For severe envenomation, systemic toxicity, respiratory distress, or anaphylaxis.</li>
-                <li><strong>Supportive Care:</strong> Maintain adequate airway, breathing, and circulation. Treat anaphylaxis as per Allergy / Anaphylaxis CPG.</li>
-                <li><strong>General Management:</strong>
-                    <ul>
-                        <li>Remove constricting items (e.g., rings) from area of bite/swelling.</li>
-                        <li>Mark area of swelling and record progression over time.</li>
-                        <li>Irrigate with sterile saline or clean water.</li>
-                    </ul>
-                </li>
-                <li><strong>If: Insect Bite/Sting:</strong>
-                    <ul>
-                        <li>Remove stinger if visible (scrape with edge, do not squeeze).</li>
-                        <li>Apply ice for symptomatic relief.</li>
-                        <li>Monitor for anaphylaxis � treat as per Allergy / Anaphylaxis CPG if required.</li>
-                        <li>Scorpion & Spider Bites: Monitor for autonomic storm (hypertension, salivation, arrhythmias); benzodiazepines may be required for agitation.</li>
-                    </ul>
-                </li>
-                <li><strong>If: Snake Bite:</strong>
-                    <ul>
-                        <li>Immobilize and splint the injured extremity.</li>
-                        <li>Use pressure bandage technique for possible neurotoxic snakes.</li>
-                        <li>Do NOT apply ice to snake bites.</li>
-                        <li>Do NOT incise wound or try to �suck� the venom out.</li>
-                        <li>Do NOT wash or clean the bite site: Venom residues on the skin or fang marks are often needed for snake venom detection kits (used in labs/hospitals to identify the snake species and guide antivenom choice). Washing may remove venom traces and make identification difficult. Exception: If there�s gross contamination with dirt, mud, or foreign material ? gentle cleaning around (not scrubbing the fang punctures themselves).</li>
-                    </ul>
-                </li>
-                <li><strong>If: Marine Animal Envenomation:</strong>
-                    <ul>
-                        <li>Remove any pieces of debris or tentacles (gloved hands or forceps).</li>
-                        <li>If the stinger or tentacle cannot be removed easily with gentle traction, do not compress with bandages as additional envenomation may occur.</li>
-                        <li>For jellyfish/stingers: Rinse with vinegar or seawater (not freshwater).</li>
-                        <li>Use hot water immersion (40-45�C) for 20-30 minutes if tolerated. Rinse a small portion of the affected area with hot water. If the patient gets relief, continue with a larger area and then progressively to the entire area.</li>
-                        <li>Bandage loosely and splint injured extremity.</li>
-                    </ul>
-                </li>
-                <li><strong>Pain Management:</strong> Administer analgesics as per Pain Management CPG.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess redness/swelling every 15 minutes, vital signs, and systemic symptoms.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Time-Sensitive Transport: Patients with suspected severe envenomation or worsening symptoms should be rapidly transported to a facility capable of antivenom administration. Clearly communicate with Dispatch identifying envenomation type, symptoms, and onset time.</li>
-                <li>Avoid Harmful Interventions: Prohibit traditional remedies (e.g., cutting, sucking venom, tourniquets) as they can worsen outcomes.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li><strong>Snake bites:</strong> Most snakebites are �dry,� i.e., no venom is injected. If envenomated, some of the following should occur in 5�30 minutes: severe burning pain out of proportion to the wound; edema around the bite out of proportion to the wound; small, non-blanching purple spots (petechiae), bruising, or continued oozing from site; numbness or tingling of the mouth, extremities, or bite site; metallic taste in the mouth; involuntary twitching of the mouth, extremities, or bite site; generalized weakness. Exotic snakes (Cobra, Krait, etc.) or Coral may cause neurologic and respiratory depression prior to a local reaction. Observe for mental status change, respiratory depression, convulsions, or paralysis.</li>
-                <li><strong>Marine Animal Envenomation:</strong> Portuguese man-of-war, although often mistaken for a �jellyfish�, is treated differently than most Coelenterates, using hot water and not vinegar. Stonefish envenomation can cause systemic toxicity with hypotension, tachycardia, cardiac arrhythmias, diaphoresis, dyspnea and pulmonary edema. Most cases are successfully managed with hot water immersion and symptomatic care, however some may require a specific antivenom.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Patient�s full name, age, and gender.</li>
-                <li>Description of bite/sting, animal type (if known), time of exposure.</li>
-                <li>Site of injury, symptoms progression, envenomation mimics considered (e.g., allergy, infection).</li>
-                <li>Wound appearance, swelling measurement, vital signs, neurological exam, respiratory status.</li>
-                <li>Interventions (e.g., immobilization, hot water, ice, oxygen), IV access and fluids administered, pain management provided.</li>
-                <li>Hospital notification and envenomation alert.</li>
-                <li>Allergies, medications, background (previous envenomations, comorbidities like coagulopathies).</li>
-                <li>Scene details and witness statements; accurate timeline of exposure and symptom onset.</li>
-                <li>Communication with poison control or receiving facility.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Assess and document bite type and severity.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c8-8",
+    "title": "Envenomation",
+    "shortTitle": "8.8 Envenomation",
+    "guide": {
+        "cpg": "8.8",
+        "group": "environmental",
+        "groupLabel": "Environmental",
+        "title": "Envenomation",
+        "lead": "Make the scene safe and don't hunt the animal. Support ABC, treat shock and anaphylaxis per their CPGs, then care for the bite by type: ice for insects; splint, no ice and no washing for snakes; hot water for most marine stings. Mark the swelling, and move severe or worsening cases fast to an antivenom-capable hospital.",
+        "source": {
+            "label": "CPG 8.8",
+            "pages": "277–280",
+            "pdf": "../pdf_sections/8_8_Envenomation.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Insect bites, snake bites or marine stings with local pain, swelling, redness or bruising.",
+                    "Systemic symptoms: nausea, vomiting, cramps, weakness, respiratory distress, paralysis or convulsions.",
+                    "Exposure to snakes, spiders, scorpions, jellyfish or stingrays."
+                ],
+                "exclude": [
+                    "Bites from non-venomous animals such as dogs or cats."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "History and site",
+                        "items": [
+                            "Animal, time, site, symptom progression.",
+                            "Puncture or fang marks, stingers, tentacles, spines."
+                        ]
+                    },
+                    {
+                        "title": "Systems",
+                        "items": [
+                            "Tachycardia, hypotension, RR changes, fever.",
+                            "Weakness, paralysis, fasciculations, altered mental status, seizures.",
+                            "Bronchospasm, stridor, hypoxia; shock, arrhythmias, edema."
+                        ]
+                    },
+                    {
+                        "title": "Mimics",
+                        "items": [
+                            "Cellulitis, trauma."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Triage",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Priority",
+                    "Features"
+                ],
+                "rows": [
+                    [
+                        "Red (severe)",
+                        "Systemic toxicity: neurotoxicity, hemotoxicity, respiratory failure, anaphylaxis"
+                    ],
+                    [
+                        "Yellow (moderate)",
+                        "Progressive swelling, mild systemic effects (nausea, mild weakness)"
+                    ],
+                    [
+                        "Green (mild)",
+                        "Local pain or swelling without systemic symptoms"
+                    ]
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "All bites and stings",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Scene safety",
+                        "text": "Don't search for the animal; move the patient away from animals or water."
+                    },
+                    {
+                        "title": "ABC and back-up",
+                        "text": "Primary and secondary survey; consider ALS. Shock: Non-Traumatic Shock CPG. Allergic reaction: Anaphylaxis CPG."
+                    },
+                    {
+                        "title": "General care",
+                        "text": "Remove rings and constricting items; mark the swelling and record its progression; irrigate with sterile saline or clean water (not snake bites)."
+                    },
+                    {
+                        "title": "Pain",
+                        "text": "As per the Pain Management CPG."
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Redness and swelling every 15 minutes."
+                    },
+                    {
+                        "title": "Transport",
+                        "text": "Severe or worsening: rapidly to an antivenom-capable facility; tell Dispatch the type, symptoms and onset time."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "By type (EMT)",
+                "icon": "search",
+                "groups": [
+                    {
+                        "title": "Insect",
+                        "items": [
+                            "Remove a visible stinger by scraping (don't squeeze); ice for symptoms; watch for anaphylaxis.",
+                            "Scorpion and spider: watch for autonomic storm (hypertension, salivation, arrhythmias); benzodiazepines may be needed for agitation."
+                        ]
+                    },
+                    {
+                        "title": "Snake",
+                        "items": [
+                            "Immobilise and splint the limb; pressure bandage for possible neurotoxic snakes.",
+                            "No ice, no cutting or sucking, no tourniquet.",
+                            "Don't wash the bite: venom traces help hospital kits identify the snake. Clean gently around gross dirt only."
+                        ]
+                    },
+                    {
+                        "title": "Marine",
+                        "items": [
+                            "Remove debris or tentacles with gloves or forceps; if a stinger won't come out with gentle traction, don't compress it.",
+                            "Jellyfish: vinegar or seawater, not fresh water. Portuguese man-of-war: hot water, not vinegar.",
+                            "Hot water immersion (40–45°C) for 20–30 minutes if tolerated: test a small area first, then extend.",
+                            "Bandage loosely and splint."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Recognise envenomation",
+                "icon": "lightbulb",
+                "groups": [
+                    {
+                        "title": "Snake bites",
+                        "items": [
+                            "Most are dry (no venom).",
+                            "Envenomation within 5–30 minutes: pain or swelling out of proportion; petechiae, bruising or oozing; numbness or tingling; metallic taste; twitching; weakness.",
+                            "Cobra, krait or coral snakes can cause neurological and respiratory depression before any local reaction."
+                        ]
+                    },
+                    {
+                        "title": "Marine",
+                        "items": [
+                            "Stonefish: hypotension, tachycardia, arrhythmias, sweating, dyspnea, pulmonary edema; most respond to hot water and supportive care."
+                        ]
+                    },
+                    {
+                        "title": "Never",
+                        "items": [
+                            "Traditional remedies: cutting, sucking, tourniquets."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Bite type and severity assessed and documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.4 Anaphylaxis",
+                        "href": "c6-4.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "7.4 Limb Injuries",
+                        "href": "c7-4.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first step in managing a snake bite?",
-            options: ["Apply ice", "Incise the wound", "Immobilize and splint the extremity", "Apply a tourniquet"],
-            correct: 2,
-            explanation: "Immobilization and splinting reduce venom spread; tourniquets and incisions are harmful."
+            "q": "What is the first-aid step for a snake bite?",
+            "options": [
+                "Immobilise and splint the limb",
+                "Apply ice",
+                "Incise the wound",
+                "Tourniquet"
+            ],
+            "correct": 0,
+            "explanation": "Pressure bandage for possible neurotoxic snakes."
         },
         {
-            q: "What is the recommended treatment for a jellyfish sting?",
-            options: ["Freshwater irrigation", "Vinegar or seawater rinse", "Apply ice directly", "Rub with sand"],
-            correct: 1,
-            explanation: "Vinegar (or seawater) inactivates nematocysts; freshwater may cause further discharge."
+            "q": "How is a jellyfish sting rinsed?",
+            "options": [
+                "Vinegar or seawater",
+                "Fresh water",
+                "Alcohol",
+                "Urine"
+            ],
+            "correct": 0,
+            "explanation": "Not fresh water."
         },
         {
-            q: "A patient with a snake bite has progressive swelling and bruising. What is the priority?",
-            options: ["Apply a tourniquet", "Transport urgently", "Give oral fluids", "Apply ice"],
-            correct: 1,
-            explanation: "Signs of envenomation require rapid transport for possible antivenom administration."
+            "q": "Progressive swelling and bruising after a snake bite. Priority?",
+            "options": [
+                "Rapid transport to an antivenom-capable facility",
+                "Tourniquet",
+                "Ice",
+                "Cut and suck"
+            ],
+            "correct": 0,
+            "explanation": "Worsening symptoms."
         },
         {
-            q: "Why should you not wash a snake bite wound?",
-            options: ["It increases pain", "It removes venom that may be needed for identification", "It causes infection", "It delays transport"],
-            correct: 1,
-            explanation: "Venom residues help identify the snake species; washing may interfere with antivenom selection."
+            "q": "Why not wash a snake bite?",
+            "options": [
+                "Venom traces help identify the snake",
+                "Water spreads venom",
+                "It hurts",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Hospital detection kits use them."
         },
         {
-            q: "What is the initial fluid bolus for an adult with severe envenomation and hypotension?",
-            options: ["250-500 mL", "1000 mL", "2000 mL", "No fluids"],
-            correct: 0,
-            explanation: "Adults should receive 250-500 mL crystalloid bolus; repeat as needed."
+            "q": "Hypotension after envenomation. Which CPG?",
+            "options": [
+                "Non-Traumatic Shock",
+                "Burns",
+                "Childbirth",
+                "Stroke"
+            ],
+            "correct": 0,
+            "explanation": "Treat shock per that CPG."
         },
         {
-            q: "Which of the following is a sign of neurotoxic envenomation?",
-            options: ["Local swelling", "Bruising", "Ptosis, difficulty swallowing, weakness", "Fever"],
-            correct: 2,
-            explanation: "Neurotoxins cause descending paralysis, ptosis, dysphagia, and respiratory failure."
+            "q": "Which suggests neurotoxic envenomation?",
+            "options": [
+                "Weakness, paralysis, respiratory depression",
+                "Local redness only",
+                "Fever only",
+                "Itch"
+            ],
+            "correct": 0,
+            "explanation": "Cobra, krait, coral snakes."
         },
         {
-            q: "How should a scorpion sting be managed?",
-            options: ["Apply ice", "Monitor for autonomic storm, consider benzodiazepines", "Apply tourniquet", "Incision and suction"],
-            correct: 1,
-            explanation: "Scorpion venom can cause autonomic storm (hypertension, tachycardia, agitation); benzodiazepines may be needed."
+            "q": "How are scorpion stings managed?",
+            "options": [
+                "Watch for autonomic storm; benzodiazepines may be needed for agitation",
+                "Tourniquet",
+                "Ice and cut",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Hypertension, salivation, arrhythmias."
         },
         {
-            q: "What is the target SpO2 for a patient with envenomation?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What is the marine hot-water regime?",
+            "options": [
+                "40–45°C for 20–30 minutes if tolerated",
+                "Boiling water",
+                "Ice",
+                "Cold water 5 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Test a small area first."
         },
         {
-            q: "A patient with a marine animal sting develops severe pain. What is the appropriate first-line treatment?",
-            options: ["Hot water immersion (40-45�C)", "Ice packs", "Vinegar rinse", "Pressure immobilization"],
-            correct: 0,
-            explanation: "Hot water immersion denatures heat-labile toxins and provides significant pain relief."
+            "q": "How should a bee stinger be removed?",
+            "options": [
+                "Scrape it out; don't squeeze",
+                "Squeeze with fingers",
+                "Leave it",
+                "Cut the skin"
+            ],
+            "correct": 0,
+            "explanation": "Then ice for symptoms."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with envenomation and signs of shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "Initial pediatric bolus is 20 mL/kg crystalloid."
+            "q": "Which is NOT recommended for snake bites?",
+            "options": [
+                "Ice",
+                "Splinting",
+                "Marking the swelling",
+                "Removing rings"
+            ],
+            "correct": 0,
+            "explanation": "Ice is for insect bites, not snakes."
         },
         {
-            q: "Which of the following is NOT recommended for snake bite first aid?",
-            options: ["Splint the limb", "Mark swelling progression", "Apply pressure immobilization bandage", "Apply ice"],
-            correct: 3,
-            explanation: "Ice is not recommended for snake bites; it can worsen tissue damage."
+            "q": "Why are tourniquets avoided?",
+            "options": [
+                "Traditional remedies like tourniquets worsen outcomes",
+                "They are expensive",
+                "They are slow",
+                "They are allowed"
+            ],
+            "correct": 0,
+            "explanation": "Prohibited, like cutting and sucking."
         },
         {
-            q: "A patient with a spider bite has muscle cramps, diaphoresis, and hypertension. What type of spider is most likely?",
-            options: ["Black widow", "Brown recluse", "Tarantula", "Wolf spider"],
-            correct: 0,
-            explanation: "Black widow venom causes systemic effects (muscle cramps, hypertension, diaphoresis)."
+            "q": "Why mark the swelling?",
+            "options": [
+                "To track progression over time",
+                "To guide a tourniquet",
+                "For photos",
+                "Not needed"
+            ],
+            "correct": 0,
+            "explanation": "Reassess every 15 minutes."
         },
         {
-            q: "What is the role of antivenom in envenomation?",
-            options: ["Given prehospital", "Given in hospital after identification", "Not effective", "Given only for local symptoms"],
-            correct: 1,
-            explanation: "Antivenom is a hospital intervention; prehospital care focuses on supportive management and transport."
+            "q": "Which marine sting uses hot water, not vinegar?",
+            "options": [
+                "Portuguese man-of-war",
+                "Box jellyfish only",
+                "None",
+                "Sea urchin only"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with envenomation?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Where does antivenom come from?",
+            "options": [
+                "A capable hospital: transport severe cases rapidly",
+                "The ambulance",
+                "Not used",
+                "The pharmacy"
+            ],
+            "correct": 0,
+            "explanation": "Rapid transport to an antivenom-capable facility."
         },
         {
-            q: "Why should a tourniquet not be applied to a snake bite?",
-            options: ["It causes pain", "It increases venom concentration", "It may cause ischemia and worsen necrosis", "It delays transport"],
-            correct: 2,
-            explanation: "Tourniquets can cause ischemia and increase the risk of limb necrosis; they are not recommended."
+            "q": "A tentacle won't come off with gentle traction. What do you do?",
+            "options": [
+                "Don't compress it with bandages",
+                "Bandage tightly",
+                "Pull hard",
+                "Rub with sand"
+            ],
+            "correct": 0,
+            "explanation": "Compression can cause more envenomation."
         },
         {
-            q: "A patient with a jellyfish sting has a raised, red, painful rash. What is the appropriate irrigation solution?",
-            options: ["Fresh water", "Vinegar or seawater", "Alcohol", "Hydrogen peroxide"],
-            correct: 1,
-            explanation: "Vinegar or seawater is recommended to inactivate nematocysts; fresh water may trigger further stinging."
+            "q": "What does 'dry bite' mean?",
+            "options": [
+                "No venom injected",
+                "Bite on dry land",
+                "Infected bite",
+                "Old bite"
+            ],
+            "correct": 0,
+            "explanation": "Most snake bites are dry."
         },
         {
-            q: "What is the dose of morphine for an adult with severe pain from envenomation?",
-            options: ["2.5 mg IV increments", "10 mg IV push", "5 mg IM", "0.1 mg/kg"],
-            correct: 0,
-            explanation: "Morphine is titrated in 2.5 mg IV increments every 5-10 minutes."
+            "q": "How soon do envenomation signs appear after a snake bite?",
+            "options": [
+                "5–30 minutes",
+                "After 3 days",
+                "Never",
+                "Immediately only"
+            ],
+            "correct": 0,
+            "explanation": "Per the clinical insights."
         },
         {
-            q: "A patient with a snake bite has ptosis and difficulty swallowing. What is the priority?",
-            options: ["Administer antivenom", "Airway management and transport", "Apply pressure bandage", "Give IV fluids"],
-            correct: 1,
-            explanation: "Neurotoxic envenomation can cause respiratory failure; airway protection and rapid transport are critical."
+            "q": "Ptosis and difficulty swallowing after a snake bite. Priority?",
+            "options": [
+                "Airway, ALS and rapid transport",
+                "Ice",
+                "Wash the wound",
+                "Wait"
+            ],
+            "correct": 0,
+            "explanation": "Neurotoxicity: Red priority."
         },
         {
-            q: "What is the key performance indicator for envenomation?",
-            options: ["Administer antivenom", "Assess and document bite type and severity", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Documenting the bite type and severity is a key KPI to guide hospital management."
+            "q": "What is the KPI?",
+            "options": [
+                "Bite type and severity documented",
+                "Antivenom given",
+                "Ice applied",
+                "Tourniquet applied"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         },
         {
-            q: "A child is stung by a scorpion and is agitated with tachycardia. What is the appropriate management?",
-            options: ["Apply ice", "Give oral fluids", "Consider benzodiazepines for agitation", "Apply tourniquet"],
-            correct: 2,
-            explanation: "Scorpion envenomation may cause autonomic storm; benzodiazepines may be needed for agitation."
+            "q": "Which signs suggest snake envenomation?",
+            "options": [
+                "Pain and swelling out of proportion, petechiae, metallic taste",
+                "No symptoms",
+                "Fever after a week",
+                "Itch only"
+            ],
+            "correct": 0,
+            "explanation": "Within 5–30 minutes."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with envenomation?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum 60 mL/kg crystalloid in the prehospital setting."
+            "q": "What is removed first in general care?",
+            "options": [
+                "Rings and constricting items",
+                "Nothing",
+                "Shoes only",
+                "Hat"
+            ],
+            "correct": 0,
+            "explanation": "Before swelling increases."
         },
         {
-            q: "Why should you mark the area of swelling after a snake bite?",
-            options: ["To monitor progression of envenomation", "To guide tourniquet placement", "To apply ice", "To clean the wound"],
-            correct: 0,
-            explanation: "Marking swelling progression helps assess the severity and rate of envenomation."
+            "q": "How often is swelling reassessed?",
+            "options": [
+                "Every 15 minutes",
+                "Every hour",
+                "Once",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Specific reassessment point."
         },
         {
-            q: "A patient with a marine animal sting has hypotension. What is the first step?",
-            options: ["Give hot water immersion", "Administer adrenaline", "Start IV fluids", "Apply pressure bandage"],
-            correct: 2,
-            explanation: "Hypotension requires fluid resuscitation; other treatments are adjunctive."
+            "q": "Which is Yellow priority?",
+            "options": [
+                "Progressive swelling with mild nausea",
+                "Respiratory failure",
+                "Anaphylaxis",
+                "No symptoms"
+            ],
+            "correct": 0,
+            "explanation": "Moderate."
         },
         {
-            q: "What is the preferred method for removing a bee stinger?",
-            options: ["Squeeze with fingers", "Scrape with a blunt edge (e.g., credit card)", "Use tweezers", "Leave it"],
-            correct: 1,
-            explanation: "Scraping avoids squeezing more venom into the wound."
+            "q": "Anaphylaxis after a sting. Which CPG?",
+            "options": [
+                "Anaphylaxis / Allergic Reaction",
+                "Burns",
+                "Epistaxis",
+                "Childbirth"
+            ],
+            "correct": 0,
+            "explanation": "Treat per that CPG."
         },
         {
-            q: "A patient with a snake bite has a blood pressure of 80/50. What should you do?",
-            options: ["Give 250-500 mL normal saline bolus", "Start adrenaline infusion", "Apply tourniquet", "Transport only"],
-            correct: 0,
-            explanation: "Hypotension should be treated with a fluid bolus; repeat as needed."
+            "q": "Which bites are excluded?",
+            "options": [
+                "Dog or cat bites",
+                "Scorpion",
+                "Snake",
+                "Jellyfish"
+            ],
+            "correct": 0,
+            "explanation": "Non-venomous animals."
         },
         {
-            q: "Which of the following is a sign of hemotoxic envenomation?",
-            options: ["Ptosis", "Bleeding, bruising, petechiae", "Muscle cramps", "Agitation"],
-            correct: 1,
-            explanation: "Hemotoxins cause coagulopathy, bleeding, and local tissue damage."
+            "q": "Should you search for the snake?",
+            "options": [
+                "No: scene safety",
+                "Yes, always",
+                "Only if small",
+                "Catch it alive"
+            ],
+            "correct": 0,
+            "explanation": "Don't engage in searching."
         },
         {
-            q: "What is the role of pressure immobilization in snake bite?",
-            options: ["For all snake bites", "For neurotoxic snake bites (e.g., elapids)", "For hemorrhagic snake bites", "Not recommended"],
-            correct: 1,
-            explanation: "Pressure immobilization is used for neurotoxic snake bites to delay venom absorption."
+            "q": "What should Dispatch be told?",
+            "options": [
+                "Envenomation type, symptoms, onset time",
+                "Nothing",
+                "The weather",
+                "Only the address"
+            ],
+            "correct": 0,
+            "explanation": "Clear communication."
         },
         {
-            q: "A patient with a snake bite develops anaphylaxis. What is the first-line treatment?",
-            options: ["Antivenom", "Adrenaline IM", "Diphenhydramine", "Hydrocortisone"],
-            correct: 1,
-            explanation: "Anaphylaxis is treated with IM adrenaline as per Allergy CPG."
+            "q": "Stonefish envenomation can cause…",
+            "options": [
+                "Hypotension, arrhythmias, pulmonary edema",
+                "Only itch",
+                "Hypertension only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Systemic toxicity."
         },
         {
-            q: "What is the dose of adrenaline for an adult with anaphylaxis from a sting?",
-            options: ["0.1 mg IM", "0.3-0.5 mg IM", "1 mg IM", "0.01 mg/kg IM"],
-            correct: 1,
-            explanation: "Adult IM adrenaline dose is 0.3-0.5 mg (1:1000)."
+            "q": "Which level performs bite-specific care on the flowchart?",
+            "options": [
+                "EMT",
+                "EP only",
+                "AP only",
+                "ER"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "A patient with a jellyfish sting has no relief with hot water. What is the next step?",
-            options: ["Apply ice", "Repeat hot water", "Give pain medication", "Transport with supportive care"],
-            correct: 3,
-            explanation: "If hot water is ineffective, transport with analgesia and supportive care."
+            "q": "When may a snake bite area be cleaned?",
+            "options": [
+                "Gently around gross dirt only, not the fang marks",
+                "Always scrub",
+                "With alcohol",
+                "Never touched"
+            ],
+            "correct": 0,
+            "explanation": "The exception for gross contamination."
         }
     ],
-    flashcards: [
-        { category: "Snake bite � do not", question: "What should you NOT do for a snake bite?", answer: "Do not apply ice, do not incise or suck, do not apply tourniquet, do not wash the wound (preserve venom for identification)." },
-        { category: "Snake bite � do", question: "What should you do for a snake bite?", answer: "Immobilize and splint, mark swelling, transport urgently, consider pressure immobilization for neurotoxic snakes." },
-        { category: "Marine sting � jellyfish", question: "How should a jellyfish sting be treated?", answer: "Rinse with vinegar or seawater, remove tentacles with gloved hands, apply hot water immersion (40-45�C) for pain." },
-        { category: "Scorpion sting", question: "What is the management for scorpion sting?", answer: "Supportive care, monitor for autonomic storm (hypertension, tachycardia), consider benzodiazepines for agitation." },
-        { category: "Black widow spider", question: "What are signs of black widow envenomation?", answer: "Muscle cramps, hypertension, diaphoresis, agitation." },
-        { category: "Brown recluse spider", question: "What are signs of brown recluse envenomation?", answer: "Local necrosis, pain, blistering; systemic effects uncommon." },
-        { category: "Neurotoxic snake", question: "What are signs of neurotoxic envenomation?", answer: "Ptosis, dysphagia, descending paralysis, respiratory failure." },
-        { category: "Hemotoxic snake", question: "What are signs of hemotoxic envenomation?", answer: "Swelling, bruising, bleeding, coagulopathy, petechiae." },
-        { category: "Pressure immobilization", question: "When is pressure immobilization used?", answer: "For neurotoxic snake bites (e.g., elapids) to delay venom absorption." },
-        { category: "Antivenom", question: "Is antivenom given prehospital?", answer: "No; it is a hospital intervention after identification of the snake species." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial fluid bolus for an adult with hypotension?", answer: "250-500 mL normal saline." },
-        { category: "Fluid resuscitation � pediatric", question: "What is the initial fluid bolus for a child?", answer: "20 mL/kg normal saline." },
-        { category: "Pain management", question: "What analgesic is used for severe pain from envenomation?", answer: "Morphine IV titrated per Pain Management CPG." },
-        { category: "Anaphylaxis from sting", question: "What is the first-line treatment for anaphylaxis?", answer: "IM adrenaline 0.3-0.5 mg (adult), 0.01 mg/kg (pediatric)." },
-        { category: "Hot water immersion", question: "What is hot water immersion used for?", answer: "Pain relief for marine animal stings (jellyfish, stonefish)." },
-        { category: "KPI", question: "What is the key performance indicator for envenomation?", answer: "Assess and document bite type and severity." },
-        { category: "Transport decision", question: "Should all envenomated patients be transported?", answer: "Yes, even with mild symptoms, due to risk of delayed systemic effects." },
-        { category: "Scorpion autonomic storm", question: "How is scorpion-induced hypertension managed?", answer: "Benzodiazepines for agitation; antivenom is a hospital intervention." },
-        { category: "Snake bite � dry bite", question: "What is a dry bite?", answer: "Snake bite where no venom is injected; still requires observation." },
-        { category: "Vinegar for jellyfish", question: "Why is vinegar used for jellyfish stings?", answer: "It inactivates nematocysts, preventing further venom discharge." }
+    "flashcards": [
+        {
+            "question": "Scene",
+            "answer": "Safety first; don't hunt the animal; move away from animals or water."
+        },
+        {
+            "question": "General care",
+            "answer": "Remove rings, mark swelling, irrigate (not snake bites), pain relief."
+        },
+        {
+            "question": "Insect",
+            "answer": "Scrape out the stinger; ice; watch for anaphylaxis."
+        },
+        {
+            "question": "Scorpion and spider",
+            "answer": "Watch for autonomic storm; benzodiazepines may be needed for agitation."
+        },
+        {
+            "question": "Snake: do",
+            "answer": "Immobilise and splint; pressure bandage for possible neurotoxic snakes."
+        },
+        {
+            "question": "Snake: don't",
+            "answer": "No ice, no cutting or sucking, no tourniquet, no washing."
+        },
+        {
+            "question": "Why not wash",
+            "answer": "Venom traces help identify the species for antivenom."
+        },
+        {
+            "question": "Jellyfish",
+            "answer": "Vinegar or seawater, not fresh water."
+        },
+        {
+            "question": "Portuguese man-of-war",
+            "answer": "Hot water, not vinegar."
+        },
+        {
+            "question": "Hot water immersion",
+            "answer": "40–45°C for 20–30 minutes if tolerated; test a small area first."
+        },
+        {
+            "question": "Stuck tentacle",
+            "answer": "Don't compress with bandages."
+        },
+        {
+            "question": "Dry bite",
+            "answer": "No venom injected: most snake bites."
+        },
+        {
+            "question": "Envenomation signs",
+            "answer": "Within 5–30 min: disproportionate pain/swelling, petechiae, oozing, numbness, metallic taste, twitching, weakness."
+        },
+        {
+            "question": "Neurotoxic snakes",
+            "answer": "Cobra, krait, coral: paralysis and respiratory depression may come first."
+        },
+        {
+            "question": "Stonefish",
+            "answer": "Hypotension, arrhythmias, sweating, dyspnea, pulmonary edema."
+        },
+        {
+            "question": "Red priority",
+            "answer": "Systemic toxicity, respiratory failure, anaphylaxis."
+        },
+        {
+            "question": "Reassessment",
+            "answer": "Swelling every 15 minutes."
+        },
+        {
+            "question": "Shock and anaphylaxis",
+            "answer": "Non-Traumatic Shock and Anaphylaxis CPGs."
+        },
+        {
+            "question": "Transport",
+            "answer": "Severe or worsening: rapidly to an antivenom-capable hospital."
+        },
+        {
+            "question": "KPI",
+            "answer": "Bite type and severity documented."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_8_8_1",
-            scenario: "A 35-year-old male is bitten on the leg by a snake while hiking. He is now complaining of progressive swelling, bruising, and bleeding from the bite site. He is anxious with a heart rate of 110, BP 100/70. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Apply a tourniquet", f: "Harmful; not recommended." },
-                { t: "Immobilize the leg and transport urgently", f: "Correct. Immobilization and rapid transport are priorities." },
-                { t: "Administer antivenom", f: "Antivenom is a hospital intervention." },
-                { t: "Wash the wound with alcohol", f: "Not recommended; may interfere with identification." }
+            "id": "crit_8_8_1",
+            "scenario": "A labourer was bitten on the hand by a snake 15 minutes ago. Pain and swelling are spreading; there is oozing at the fang marks.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Remove rings, splint and immobilise, mark the swelling, don't wash or ice, rapid transport with an alert",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Tourniquet above the bite",
+                    "f": "Prohibited."
+                },
+                {
+                    "t": "Ice and wash the bite",
+                    "f": "No ice; don't wash."
+                },
+                {
+                    "t": "Cut and suck",
+                    "f": "Never."
+                }
             ],
-            correct: 1,
-            explanation: "Immobilization reduces venom spread; rapid transport is essential for possible antivenom administration.",
-            kpi: "Limb immobilized and transport initiated."
+            "correct": 0,
+            "explanation": "Signs of envenomation within 5–30 minutes.",
+            "kpi": "Bite type and severity documented."
         },
         {
-            id: "crit_8_8_2",
-            scenario: "A 20-year-old female is stung by a jellyfish on her arm. She is in severe pain, with a raised red rash. What is the best initial intervention?",
-            question: "What should you do?",
-            options: [
-                { t: "Apply ice", f: "Ineffective; hot water is preferred." },
-                { t: "Rinse with freshwater", f: "May worsen nematocyst discharge." },
-                { t: "Rinse with vinegar and immerse in hot water (40-45�C)", f: "Correct. Vinegar inactivates nematocysts; hot water relieves pain." },
-                { t: "Apply a pressure bandage", f: "Not indicated for jellyfish stings." }
+            "id": "crit_8_8_2",
+            "scenario": "A swimmer was stung by a jellyfish: red, painful welts on the leg; tentacles still attached.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Remove tentacles with gloves or forceps, rinse with vinegar or seawater, then hot water if tolerated",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Rinse with fresh water",
+                    "f": "Not fresh water."
+                },
+                {
+                    "t": "Bandage tightly over the tentacles",
+                    "f": "Compression can cause more envenomation."
+                },
+                {
+                    "t": "Ice and rub",
+                    "f": "No."
+                }
             ],
-            correct: 2,
-            explanation: "Vinegar rinse and hot water immersion are the standard first-aid measures for jellyfish stings.",
-            kpi: "Appropriate first aid provided."
+            "correct": 0,
+            "explanation": "If it is a Portuguese man-of-war, use hot water, not vinegar.",
+            "kpi": "Bite type and severity documented."
         },
         {
-            id: "crit_8_8_3",
-            scenario: "A 45-year-old male is stung by a scorpion. He is agitated, has a heart rate of 130, BP 160/90, and is sweating profusely. What is the appropriate management?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer nitroglycerin", f: "Not indicated." },
-                { t: "Administer benzodiazepines for agitation", f: "Correct. Benzodiazepines may be needed for autonomic storm." },
-                { t: "Give adrenaline", f: "Not indicated unless anaphylaxis." },
-                { t: "Apply a tourniquet", f: "Harmful." }
+            "id": "crit_8_8_3",
+            "scenario": "A child stung by a scorpion is agitated, hypertensive and drooling, with an irregular pulse.",
+            "question": "What do you suspect?",
+            "options": [
+                {
+                    "t": "Autonomic storm: ABC, monitor, ALS for benzodiazepines, rapid transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Simple local sting: ice and home",
+                    "f": "These are systemic signs."
+                },
+                {
+                    "t": "Tourniquet",
+                    "f": "Never."
+                },
+                {
+                    "t": "Anaphylaxis only",
+                    "f": "This picture fits autonomic storm."
+                }
             ],
-            correct: 1,
-            explanation: "Scorpion envenomation can cause autonomic storm; benzodiazepines are used for agitation and hypertension.",
-            kpi: "Agitation managed and patient transported."
+            "correct": 0,
+            "explanation": "Red priority: systemic toxicity.",
+            "kpi": "Bite type and severity documented."
         },
         {
-            id: "crit_8_8_4",
-            scenario: "A child is bitten by a snake and develops ptosis, difficulty swallowing, and weakness in the arms. What is the priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer antivenom", f: "Hospital intervention." },
-                { t: "Protect airway and transport urgently", f: "Correct. Neurotoxic envenomation can cause respiratory failure." },
-                { t: "Apply pressure immobilization", f: "May be used, but airway is priority." },
-                { t: "Give IV fluids", f: "Secondary." }
+            "id": "crit_8_8_4",
+            "scenario": "A man bitten by an unknown snake has drooping eyelids and slurred speech but almost no local swelling.",
+            "question": "What does this mean?",
+            "options": [
+                {
+                    "t": "Possible neurotoxic snake: pressure bandage and splint, airway watch, ALS, rapid transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Dry bite: discharge",
+                    "f": "Neurological signs mean envenomation."
+                },
+                {
+                    "t": "Ice",
+                    "f": "No ice."
+                },
+                {
+                    "t": "Wash vigorously",
+                    "f": "Don't wash."
+                }
             ],
-            correct: 1,
-            explanation: "Neurological symptoms indicate neurotoxic envenomation; airway protection and rapid transport are critical.",
-            kpi: "Airway managed and transport expedited."
+            "correct": 0,
+            "explanation": "Neurotoxicity can precede any local reaction.",
+            "kpi": "Bite type and severity documented."
         },
         {
-            id: "crit_8_8_5",
-            scenario: "A patient with a snake bite has a blood pressure of 80/50 and is confused. You have immobilized the limb and started transport. What is the next step?",
-            question: "What should you do next?",
-            options: [
-                { t: "Give 250-500 mL normal saline bolus", f: "Correct. Hypotension requires fluid resuscitation." },
-                { t: "Administer adrenaline", f: "Not first-line." },
-                { t: "Apply a tourniquet", f: "Harmful." },
-                { t: "Give oral fluids", f: "Not appropriate if altered mental status." }
+            "id": "crit_8_8_5",
+            "scenario": "After a bee sting, a woman has hives, wheeze and BP 80/50.",
+            "question": "What comes first?",
+            "options": [
+                {
+                    "t": "Anaphylaxis: treat per the Anaphylaxis CPG (IM adrenaline), then remove the stinger",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Ice only",
+                    "f": "This is anaphylaxis."
+                },
+                {
+                    "t": "Squeeze the stinger out first",
+                    "f": "Treat the anaphylaxis first; scrape, don't squeeze."
+                },
+                {
+                    "t": "Observe",
+                    "f": "Life-threatening."
+                }
             ],
-            correct: 0,
-            explanation: "Hypotension with altered mental status indicates shock; fluid resuscitation is indicated.",
-            kpi: "IV fluids administered."
+            "correct": 0,
+            "explanation": "Monitor for anaphylaxis after insect stings.",
+            "kpi": "Bite type and severity documented."
         }
     ]
 };
