@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v7.2';   // Chapters 3–4 rewritten from the official CPG
+const CACHE_VERSION = 'dcas-cpg-v7.3';   // Chapters 5–6 rewritten from the official CPG
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
