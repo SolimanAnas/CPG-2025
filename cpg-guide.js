@@ -162,9 +162,12 @@
         </section>`;
     }
 
+    // `src.texts` instead of `src.pdf`: a page drawn from several sections.
     function source(src) {
-        return `<a class="g-source" href="${src.pdf}" target="_blank" rel="noopener">
-            ${ICON('book-open')}<span>Source: ${src.label}, p. ${src.pages}</span></a>`;
+        const body = `${ICON('book-open')}<span>Source: ${src.label}, p. ${src.pages}</span>`;
+        return src.pdf
+            ? `<a class="g-source" href="${src.pdf}" target="_blank" rel="noopener">${body}</a>`
+            : `<p class="g-source">${body}</p>`;
     }
 
     function legend(levels) {
@@ -183,7 +186,7 @@
     function renderGuide(g) {
         return `<article class="cpg-guide" data-group="${g.group || ''}">
             <div class="g-head">
-                <p class="g-kicker">CPG ${g.cpg} · ${g.groupLabel}</p>
+                <p class="g-kicker">${g.cpg ? `CPG ${g.cpg} · ` : ''}${g.groupLabel}</p>
                 <h2>${g.title}</h2>
                 ${g.lead ? `<p class="g-lead">${g.lead}</p>` : ''}
                 ${legend(usedLevels(g))}

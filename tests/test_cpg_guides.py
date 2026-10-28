@@ -26,6 +26,7 @@ SKIP_KEYS = {
     "id",
     "href",
     "pdf",
+    "texts",
     "pages",
     "group",
     "type",
@@ -149,13 +150,18 @@ def test_study_sets_are_well_formed(name, data):
 
 @pytest.mark.parametrize("name,data", PAGES, ids=IDS)
 def test_numbers_match_the_official_text(name, data):
-    pdf = Path(data["page"]["source"]["pdf"]).name
-    source_file = SOURCES / pdf.replace(".pdf", ".txt")
-    assert source_file.is_file(), (
-        f"Missing {source_file.relative_to(ROOT)}: run scripts/extract_cpg_source.py {pdf[:-4]}"
-    )
+    # One PDF section, or (an index page) the texts of several sections.
+    src = data["page"]["source"]
+    names = src.get("texts") or [Path(src["pdf"]).stem]
+    texts = []
+    for name in names:
+        source_file = SOURCES / f"{name}.txt"
+        assert source_file.is_file(), (
+            f"Missing {source_file.relative_to(ROOT)}: run scripts/extract_cpg_source.py {name}"
+        )
+        texts.append(source_file.read_text(encoding="utf-8"))
     # Plain text: "<" and ">" in it are values ("<10 seconds"), never tags.
-    source = squash(unify(source_file.read_text(encoding="utf-8")))
+    source = squash(unify("\n".join(texts)))
 
     missing = []
     for text in [*strings(data["page"]), *study_strings(data)]:
