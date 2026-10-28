@@ -1,390 +1,801 @@
-/* ========== Chapter 7.2 � Burns ========== */
+/* ========== CPG 7.2 – Burns ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c7-2",
-    title: "Burns",
-    shortTitle: "7.2 Burns",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Burns</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Ensure airway protection and support oxygenation, especially with inhalation injuries.</li>
-                <li>Accurately assess burn severity and classify burn depth and total body surface area (TBSA).</li>
-                <li>Manage pain and prevent hypothermia.</li>
-                <li>Initiate timely fluid resuscitation based on burn size and severity.</li>
-                <li>Identify and manage life-threatening complications (e.g., airway compromise, shock, electrical injury).</li>
-                <li>Facilitate prompt transport to an appropriate facility with early notification if major burns are suspected.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients of all ages with:
-                    <ul>
-                        <li>Thermal burns (flame, scald, contact).</li>
-                        <li>Chemical burns (acid, alkali).</li>
-                        <li>Electrical burns (including lightning).</li>
-                        <li>Inhalation injury (smoke, steam, chemical).</li>
-                        <li>Radiation burns.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Isolated minor sunburns or abrasions without functional or cosmetic risk.</li>
-                <li>Chronic skin ulcers unrelated to acute burn injury.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Airway Assessment:</strong> Look for facial burns, singed nasal hairs, carbonaceous sputum, stridor, hoarseness (suggest inhalation injury). Consider early airway protection.</li>
-                <li><strong>Breathing:</strong> Listen for voice changes, wheezing, or stridor. Evaluate for carbon monoxide (CO) exposure � suspect in enclosed-space fires; headache, nausea, confusion; SpO2 may be normal.</li>
-                <li><strong>Circulation:</strong> Check for hypovolemia, especially in large burns or electrical injuries. Evaluate peripheral pulses in circumferential limb burns (risk of compartment syndrome).</li>
-                <li><strong>Neurological Status:</strong> Assess for altered mental status (suggests hypoxia, CO poisoning, or associated trauma).</li>
-                <li><strong>Burn Depth Classification:</strong>
-                    <ul>
-                        <li>Superficial (1st degree): red, dry, painful.</li>
-                        <li>Partial thickness (2nd degree): blistered, moist, very painful.</li>
-                        <li>Full thickness (3rd degree): leathery, dry, insensate.</li>
-                    </ul>
-                </li>
-                <li><strong>Burn Size (TBSA):</strong> Use Rule of Nines for adults; use Lund & Browder chart in children. Exclude superficial burns from TBSA calculation.</li>
-                <li><strong>Associated Trauma or Electrical Injury:</strong> Suspect occult injuries, fractures, arrhythmias. Prolonged cardiac monitoring in high-voltage cases.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for airway compromise, burns >25% TBSA, circumferential burns, or electrical injury with arrhythmias.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back-up:</strong> For threats to airway, major burns >20% TBSA, need for narcotic analgesia, electrical injuries with arrhythmias.</li>
-                <li><strong>Airway Management:</strong> If airway involvement suspected, request ALS early for possible intubation; do not delay transport for definitive airway control.</li>
-                <li><strong>Oxygen Therapy:</strong> Administer 100% oxygen via non-rebreather mask to all patients with suspected inhalation injury or CO exposure. Continue throughout transport.</li>
-                <li><strong>Pain Management:</strong> Assess and manage pain as per Pain Management CPG.</li>
-                <li><strong>Burn Cooling (First Aid):</strong> Cool thermal burns with cool running water for up to 20 minutes if within 3 hours of injury. Avoid ice, prolonged cooling, or soaking (may cause hypothermia).</li>
-                <li><strong>Chemical Burns:</strong> Remove clothing and brush off dry chemicals; irrigate continuously with copious water for at least 15�30 minutes.</li>
-                <li><strong>Electrical Burns:</strong> Monitor for cardiac arrhythmias; assume deep tissue injury regardless of surface appearance; treat for associated trauma (fall, blast).</li>
-                <li><strong>Establish IV Access:</strong> Indicated for fluid or medication administration. Consider IO access if IV cannot be attained.</li>
-                <li><strong>Fluid Resuscitation:</strong> Indicated for burns >10% TBSA in children or >15% in adults. Start fluids prehospital if transport time >30 min or patient is hypotensive.
-                    <ul>
-                        <li>Adults: 250-500 mL bolus, repeat as needed (up to 2000 mL).</li>
-                        <li>Pediatrics: 10-20 mL/kg bolus, repeat as needed (max 40 mL/kg).</li>
-                        <li>If time permits, use Parkland Formula (4 mL � weight kg � % TBSA) � give first half over 8 hours.</li>
-                    </ul>
-                </li>
-                <li><strong>Prevent Hypothermia:</strong> Cover patient with foil blanket or clean sheets; keep ambient temperature warm.</li>
-                <li><strong>Transport:</strong> Prioritize rapid transport in red and yellow priority cases; notify hospital early if airway or major burns present.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess pain score, SpO2, respiratory rate, mental status, fluid response, and burn progression.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Avoid ice packs or creams in the field; use only sterile or clean coverings � no cotton.</li>
-                <li>Do not break blisters or debride.</li>
-                <li>Avoid overhydration � titrate fluids carefully.</li>
-                <li>Always consider airway risk even in the absence of early symptoms.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Be alert for signs of airway compromise even in patients who initially appear stable.</li>
-                <li>Burns in children, elderly, or involving hands/face/genitals require urgent evaluation and transport.</li>
-                <li>Electrical burns may have minimal surface damage with significant internal injury.</li>
-                <li>Chemical burns may continue tissue damage until thoroughly irrigated.</li>
-                <li>Pediatric doses and fluid calculations can be guided using Broselow tape.</li>
-                <li>When in doubt, consult Tele-EMS and request ALS backup.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Burn type and cause (flame, scald, chemical, etc.).</li>
-                <li>TBSA, depth, location, inhalation injury, associated trauma.</li>
-                <li>Vital signs, SpO2, airway status, pain scale.</li>
-                <li>Treatment: oxygen, analgesia, fluids, dressings, decontamination.</li>
-                <li>Allergies, medications, background medical history.</li>
-                <li>Response to treatment, need for ALS, handover information.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Assess and document burn TBSA for all burn patients.</li>
-                <li>Administer appropriate analgesia within 10 minutes of arrival at patient.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c7-2",
+    "title": "Burns",
+    "shortTitle": "7.2 Burns",
+    "guide": {
+        "cpg": "7.2",
+        "group": "trauma",
+        "groupLabel": "Trauma",
+        "title": "Burns",
+        "lead": "Airway first: inhalation injury can close the airway after a calm start. Stop the burning (cool running water up to 20 minutes), give 100% oxygen for smoke or CO exposure, size the burn (partial and full thickness only), treat pain early, give fluid for large burns or shock, and keep the patient warm.",
+        "source": {
+            "label": "CPG 7.2",
+            "pages": "219–222",
+            "pdf": "../pdf_sections/7_2_Burns.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "All ages: thermal (flame, scald, contact), chemical (acid, alkali), electrical (including lightning), inhalation (smoke, steam, chemical) and radiation burns."
+                ],
+                "exclude": [
+                    "Isolated minor sunburn or abrasions without functional or cosmetic risk.",
+                    "Chronic skin ulcers unrelated to an acute burn."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Airway and breathing",
+                        "items": [
+                            "Facial burns, singed nasal hairs, carbonaceous sputum, stridor, hoarseness, voice change, wheeze: inhalation injury.",
+                            "Consider early airway protection in severe facial or inhalation burns."
+                        ]
+                    },
+                    {
+                        "title": "Carbon monoxide",
+                        "items": [
+                            "Suspect in anyone exposed to smoke in an enclosed space, or when several people are affected.",
+                            "Headache, nausea, vomiting, dizziness, confusion, unconsciousness. SpO<sub>2</sub> may look normal: it is unreliable."
+                        ]
+                    },
+                    {
+                        "title": "Circulation and neurology",
+                        "items": [
+                            "Hypovolemia in large or electrical burns; distal pulses in circumferential limb burns (compartment syndrome).",
+                            "Altered mental status: hypoxia, CO or associated trauma."
+                        ]
+                    },
+                    {
+                        "title": "Electrical and other trauma",
+                        "items": [
+                            "Occult injuries, fractures, arrhythmias; prolonged monitoring in high-voltage injury."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Depth and size",
+                "icon": "search",
+                "columns": [
+                    "Depth",
+                    "Appearance",
+                    "In TBSA?"
+                ],
+                "rows": [
+                    [
+                        "Superficial",
+                        "Red, dry, painful",
+                        "No"
+                    ],
+                    [
+                        "Partial thickness",
+                        "Blistered, moist, very painful",
+                        "Yes"
+                    ],
+                    [
+                        "Full thickness",
+                        "Leathery, dry, insensate",
+                        "Yes"
+                    ]
+                ],
+                "notes": [
+                    "Size with the Rule of Nines in adults and the Lund & Browder chart in children."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely for airway threats, burns &gt;20% TBSA, narcotic analgesia, and electrical injury with arrhythmias. Do not delay transport for definitive airway control."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "text": "100% via non-rebreather for suspected inhalation injury or CO, whatever the SpO<sub>2</sub>; continue throughout and tell the hospital."
+                    },
+                    {
+                        "title": "Stop the burning",
+                        "text": "Cool running water for up to 20 minutes if within 3 hours of injury. No ice, prolonged cooling or soaking."
+                    },
+                    {
+                        "title": "Chemical burns",
+                        "text": "Remove clothing, brush off dry chemical, irrigate with copious water for at least 15–30 minutes."
+                    },
+                    {
+                        "title": "Electrical burns",
+                        "text": "12-lead ECG and continuous 4-lead monitoring; treat arrhythmias per the relevant CPG. Assume deep injury whatever the skin shows; treat fall or blast trauma."
+                    },
+                    {
+                        "title": "Dressing",
+                        "text": "Remove clothing from burned areas; burn gel and sterile, non-adherent dressings or plastic wrap. No cotton, creams or ice; do not break blisters."
+                    },
+                    {
+                        "title": "Pain",
+                        "text": "As per the Pain Management CPG, within 10 minutes of arrival (KPI)."
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "For fluid or drugs; IO if IV fails."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Fluid for burns",
+                "icon": "droplet",
+                "columns": [
+                    "",
+                    "Adult",
+                    "Pediatric"
+                ],
+                "rows": [
+                    [
+                        "Altered mental status or shock",
+                        "250–500 mL bolus, repeat to maximum 2000 mL",
+                        "10–20 mL/kg bolus, repeat to maximum 40 mL/kg"
+                    ],
+                    [
+                        "Large burns",
+                        "&gt;15% TBSA: 250–500 mL",
+                        "&gt;10% TBSA: 10–20 mL/kg"
+                    ]
+                ],
+                "stack": true,
+                "notes": [
+                    "Text: start prehospital if transport is over 30 minutes or the patient is hypotensive.",
+                    "If time allows, Parkland formula: 4 mL × weight (kg) × % TBSA; half over the first 8 hours, the rest over the next 16 hours.",
+                    "Avoid overhydration: titrate carefully."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Triage and transport",
+                "icon": "ambulance",
+                "groups": [
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "Airway compromise.",
+                            "Burns &gt;25% TBSA.",
+                            "Circumferential burns."
+                        ]
+                    },
+                    {
+                        "title": "Transport",
+                        "items": [
+                            "Rapid for Red and Yellow; notify early with airway involvement or major burns.",
+                            "Children, the elderly, and burns to hands, face or genitals need urgent evaluation.",
+                            "Keep warm: foil blanket or clean sheets, warm ambient temperature."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Electrical injury: watch the monitor",
+                        "items": [
+                            {
+                                "ecg": "pvc",
+                                "label": "Premature ventricular complexes",
+                                "sub": "Arrhythmia after electrical injury"
+                            },
+                            {
+                                "ecg": "vfFine",
+                                "label": "Ventricular fibrillation",
+                                "sub": "Cardiac arrest CPG"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: normal saline",
+                                "sub": "10–20 mL/kg",
+                                "href": "../pages/drug-calculator.html?drug=Normal%20Saline",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Burn TBSA assessed and documented for every burn patient.",
+                    "Appropriate analgesia within 10 minutes of arrival at the patient."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "7.1 General Trauma Management",
+                        "href": "c7-1.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "2.1 Airway and Breathing",
+                        "href": "c2.html?section=c2s1"
+                    },
+                    {
+                        "label": "4.3 Adult Cardiac Arrest",
+                        "href": "c4-3.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first priority in a patient with suspected inhalation injury?",
-            options: ["Fluid resuscitation", "Airway management", "Pain control", "Burn cooling"],
-            correct: 1,
-            explanation: "Airway compromise from inhalation injury can be rapidly fatal; early airway assessment and management are critical."
+            "q": "What is the first priority with suspected inhalation injury?",
+            "options": [
+                "Airway: request ALS early",
+                "Fluids",
+                "Cooling",
+                "Dressings"
+            ],
+            "correct": 0,
+            "explanation": "Do not delay transport for definitive airway control."
         },
         {
-            q: "What is the initial fluid bolus for an adult with burns >15% TBSA?",
-            options: ["250-500 mL", "500-1000 mL", "1000-2000 mL", "No fluids"],
-            correct: 0,
-            explanation: "Adults receive 250-500 mL crystalloid bolus; repeat as needed to maintain perfusion."
+            "q": "What adult bolus is given for large burns?",
+            "options": [
+                "250–500 mL",
+                "1000–2000 mL",
+                "50 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": ">15% TBSA."
         },
         {
-            q: "What is the pediatric fluid bolus for burns >10% TBSA?",
-            options: ["5-10 mL/kg", "10-20 mL/kg", "20-30 mL/kg", "30-40 mL/kg"],
-            correct: 1,
-            explanation: "Pediatric initial bolus is 10-20 mL/kg crystalloid."
+            "q": "What pediatric bolus is given for burns >10% TBSA?",
+            "options": [
+                "10–20 mL/kg",
+                "40 mL/kg",
+                "2 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 40 mL/kg."
         },
         {
-            q: "How should a thermal burn be cooled?",
-            options: ["Ice packs for 20 minutes", "Cool running water for up to 20 minutes", "Ice water immersion", "Apply butter or oil"],
-            correct: 1,
-            explanation: "Cool running water (not ice) for up to 20 minutes is recommended within 3 hours of injury."
+            "q": "How is a thermal burn cooled?",
+            "options": [
+                "Cool running water up to 20 minutes (within 3 hours)",
+                "Ice packs",
+                "Ice-water soak",
+                "Butter"
+            ],
+            "correct": 0,
+            "explanation": "No ice, prolonged cooling or soaking."
         },
         {
-            q: "Which of the following is a sign of inhalation injury?",
-            options: ["Facial burns", "Singed nasal hairs", "Carbonaceous sputum", "All of the above"],
-            correct: 3,
-            explanation: "All are signs of potential inhalation injury and airway compromise."
+            "q": "Which suggests inhalation injury?",
+            "options": [
+                "Singed nasal hairs and carbonaceous sputum",
+                "Sunburned arms",
+                "Blister on a finger",
+                "Itchy skin"
+            ],
+            "correct": 0,
+            "explanation": "Also facial burns, stridor, hoarseness."
         },
         {
-            q: "What is the oxygen therapy for a patient with suspected carbon monoxide poisoning?",
-            options: ["Nasal cannula 2-6 L/min", "Non-rebreather mask 10-15 L/min", "Venturi mask", "Room air"],
-            correct: 1,
-            explanation: "High-flow oxygen (NRB) reduces the half-life of carboxyhemoglobin."
+            "q": "Suspected carbon monoxide poisoning. Oxygen?",
+            "options": [
+                "100% via non-rebreather regardless of SpO₂",
+                "Nasal cannula",
+                "Only if SpO₂ <90%",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "SpO₂ is unreliable in CO poisoning."
         },
         {
-            q: "What is the dose of morphine for an adult with severe burn pain?",
-            options: ["2.5 mg IV increments", "10 mg IV push", "5 mg IM", "0.1 mg/kg"],
-            correct: 0,
-            explanation: "Morphine is titrated in 2.5 mg IV increments every 5-10 minutes."
+            "q": "Why is SpO₂ unreliable in CO poisoning?",
+            "options": [
+                "It may appear normal",
+                "It always reads zero",
+                "It overheats",
+                "It is reliable"
+            ],
+            "correct": 0,
+            "explanation": "Do not rely on it."
         },
         {
-            q: "Which of the following is a red flag requiring urgent transport in a burn patient?",
-            options: ["Burns to hands or feet", "Burns >15% TBSA in adult", "Inhalation injury", "All of the above"],
-            correct: 3,
-            explanation: "All are indications for transport to a burn centre."
+            "q": "Which is Red priority?",
+            "options": [
+                "Circumferential burns",
+                "A small scald on a finger",
+                "Superficial sunburn",
+                "A 2% partial-thickness burn"
+            ],
+            "correct": 0,
+            "explanation": "Also airway compromise and >25% TBSA."
         },
         {
-            q: "What is the target SpO2 for a burn patient?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "How long are chemical burns irrigated?",
+            "options": [
+                "At least 15–30 minutes with copious water",
+                "2 minutes",
+                "Not at all",
+                "With a neutraliser"
+            ],
+            "correct": 0,
+            "explanation": "Brush off dry chemical first."
         },
         {
-            q: "How should a chemical burn be managed?",
-            options: ["Neutralize with acid/base", "Irrigate with copious water for 15-30 minutes", "Apply burn cream", "Cover with dry gauze"],
-            correct: 1,
-            explanation: "Copious water irrigation for at least 15-30 minutes is the standard decontamination."
+            "q": "What is the adult fluid maximum with shock?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "No limit"
+            ],
+            "correct": 0,
+            "explanation": "In 250–500 mL boluses."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult burn patient?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "What monitoring for electrical burns?",
+            "options": [
+                "12-lead ECG and continuous 4-lead ECG",
+                "None",
+                "Temperature only",
+                "Glucose only"
+            ],
+            "correct": 0,
+            "explanation": "Treat arrhythmias per the relevant CPG."
         },
         {
-            q: "A patient with an electrical burn should have what monitoring?",
-            options: ["Continuous ECG", "Pulse oximetry", "Blood pressure", "All of the above"],
-            correct: 3,
-            explanation: "Electrical burns can cause arrhythmias; continuous ECG monitoring is mandatory."
+            "q": "What is the Parkland formula?",
+            "options": [
+                "4 mL × kg × % TBSA",
+                "2 mL × kg",
+                "10 mL × % TBSA",
+                "20 mL/kg"
+            ],
+            "correct": 0,
+            "explanation": "Half over the first 8 hours, the rest over 16 hours."
         },
         {
-            q: "What is the Parkland formula for fluid resuscitation in burns?",
-            options: ["2 mL � kg � %TBSA", "4 mL � kg � %TBSA", "6 mL � kg � %TBSA", "10 mL � kg � %TBSA"],
-            correct: 1,
-            explanation: "Parkland formula: 4 mL � weight (kg) � %TBSA (second and third degree)."
+            "q": "When does the text say to start fluids prehospital?",
+            "options": [
+                "Transport over 30 minutes, or hypotension",
+                "Always for any burn",
+                "Never",
+                "Only for chemical burns"
+            ],
+            "correct": 0,
+            "explanation": "For burns >10% (child) or >15% (adult)."
         },
         {
-            q: "Which of the following is NOT a reason to start fluids prehospital in a burn patient?",
-            options: ["Transport time >30 minutes", "Hypotension", "Burns <10% TBSA", "Burns >15% TBSA"],
-            correct: 2,
-            explanation: "Fluids are indicated for burns >15% TBSA in adults, >10% in children, or if hypotensive."
+            "q": "Which dressing is used?",
+            "options": [
+                "Sterile non-adherent dressing or plastic wrap (and burn gel)",
+                "Cotton wool",
+                "Butter",
+                "Ice"
+            ],
+            "correct": 0,
+            "explanation": "No cotton."
         },
         {
-            q: "What is the preferred dressing for a burn wound?",
-            options: ["Cotton gauze", "Sterile non-adherent dressing or plastic wrap", "Petroleum jelly", "Dry gauze only"],
-            correct: 1,
-            explanation: "Sterile non-adherent dressings or clean plastic wrap reduce contamination and pain."
+            "q": "Which burns count in TBSA?",
+            "options": [
+                "Partial and full thickness",
+                "Superficial only",
+                "All burns",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Exclude superficial burns."
         },
         {
-            q: "A patient with circumferential full-thickness burns of the chest may develop what complication?",
-            options: ["Hypovolemic shock", "Respiratory compromise due to eschar restriction", "Infection", "Hypothermia"],
-            correct: 1,
-            explanation: "Circumferential chest burns can restrict chest wall movement and impair ventilation."
+            "q": "Which TBSA tool is used in children?",
+            "options": [
+                "Lund & Browder",
+                "Rule of Nines only",
+                "APGAR",
+                "GCS"
+            ],
+            "correct": 0,
+            "explanation": "Rule of Nines for adults."
         },
         {
-            q: "What is the dose of fentanyl for an adult with severe burn pain?",
-            options: ["Not in DCAS formulary", "50 mcg IV", "100 mcg IV", "25 mcg IV"],
-            correct: 0,
-            explanation: "Fentanyl is not in the DCAS formulary; morphine is the opioid of choice."
+            "q": "What does a full-thickness burn look like?",
+            "options": [
+                "Leathery, dry, insensate",
+                "Red and painful",
+                "Moist blisters",
+                "Normal skin"
+            ],
+            "correct": 0,
+            "explanation": "Partial: blistered, moist, very painful."
         },
         {
-            q: "How should a patient with burns and trauma be managed?",
-            options: ["Treat burns first", "Treat trauma first", "Manage both simultaneously", "Transport only"],
-            correct: 2,
-            explanation: "Life-threatening injuries (airway, breathing, circulation) take priority regardless of mechanism."
+            "q": "When is ALS requested?",
+            "options": [
+                "Airway threat, >20% TBSA, narcotic analgesia, electrical injury with arrhythmia",
+                "Never",
+                "Any burn",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "Routinely for these."
         },
         {
-            q: "What is the key performance indicator for burns?",
-            options: ["Administer antibiotics", "Assess and document TBSA", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Assessing and documenting TBSA is a key KPI for burn management."
+            "q": "Electrical burn with a small entry wound. Assumption?",
+            "options": [
+                "Deep tissue injury regardless of the surface",
+                "Minor injury",
+                "No monitoring",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Plus fall or blast trauma."
         },
         {
-            q: "Which of the following is a sign of carbon monoxide poisoning?",
-            options: ["Cherry-red skin", "Headache", "Nausea", "All of the above"],
-            correct: 3,
-            explanation: "CO poisoning causes headache, nausea, confusion, and occasionally cherry-red skin; pulse oximetry is unreliable."
+            "q": "What is the pediatric fluid maximum?",
+            "options": [
+                "40 mL/kg",
+                "60 mL/kg",
+                "20 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "On the burns flowchart."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric burn patient?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 1,
-            explanation: "Maximum 40 mL/kg crystalloid in the prehospital setting."
+            "q": "Which CO sign is listed?",
+            "options": [
+                "Headache, nausea, confusion",
+                "Cherry-red skin as the key sign",
+                "Bradycardia only",
+                "Rash"
+            ],
+            "correct": 0,
+            "explanation": "Also dizziness, vomiting, unconsciousness."
         },
         {
-            q: "Why should you avoid breaking blisters in a burn patient?",
-            options: ["Increases pain", "Increases infection risk", "Delays healing", "All of the above"],
-            correct: 3,
-            explanation: "Intact blisters protect underlying tissue and reduce infection risk."
+            "q": "Blisters: what do you do?",
+            "options": [
+                "Leave them intact",
+                "Break them",
+                "Debride",
+                "Apply cream"
+            ],
+            "correct": 0,
+            "explanation": "Do not break blisters or debride."
         },
         {
-            q: "A patient with an electrical burn has a fall from height. What should you suspect?",
-            options: ["Spinal injury", "Head injury", "Fractures", "All of the above"],
-            correct: 3,
-            explanation: "Electrical shocks can cause violent muscle contractions leading to falls and associated trauma."
+            "q": "What does circumferential limb burn risk?",
+            "options": [
+                "Compartment syndrome: check distal pulses",
+                "Nothing",
+                "Hyperthermia",
+                "Hypoglycemia"
+            ],
+            "correct": 0,
+            "explanation": "Evaluate peripheral pulses."
         },
         {
-            q: "What is the dose of hydrocortisone for an adult with severe burns?",
-            options: ["Not indicated routinely", "100 mg IV", "200 mg IV", "500 mg IV"],
-            correct: 0,
-            explanation: "Steroids are not routinely indicated for burns; they may impair wound healing."
+            "q": "What is the analgesia KPI?",
+            "options": [
+                "Within 10 minutes of arrival",
+                "Within 1 hour",
+                "At hospital",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Plus TBSA documented."
         },
         {
-            q: "A patient with burns to the face and neck should be transported in what position?",
-            options: ["Supine", "Semi-Fowler's", "Prone", "Left lateral"],
-            correct: 1,
-            explanation: "Semi-Fowler's (head elevated) helps reduce facial edema and maintain airway."
+            "q": "How is hypothermia prevented?",
+            "options": [
+                "Foil blanket or clean sheets, warm ambient temperature",
+                "Prolonged cooling",
+                "Wet sheets",
+                "Fans"
+            ],
+            "correct": 0,
+            "explanation": "Avoid prolonged cooling."
         },
         {
-            q: "What is the role of tetanus prophylaxis in burn patients?",
-            options: ["Given prehospital", "Given in hospital", "Not needed", "Only for deep burns"],
-            correct: 1,
-            explanation: "Tetanus prophylaxis is given in hospital; not part of prehospital care."
+            "q": "Which burns need urgent evaluation?",
+            "options": [
+                "Hands, face or genitals; children; elderly",
+                "Superficial sunburn",
+                "Healed scars",
+                "Old ulcers"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "Which of the following is a contraindication to using ice on a burn?",
-            options: ["Causes vasoconstriction and worsens injury", "Increases pain", "Increases infection risk", "Delays cooling"],
-            correct: 0,
-            explanation: "Ice causes vasoconstriction and can deepen tissue damage; cool water is preferred."
+            "q": "Several people from the same room have headaches. What do you suspect?",
+            "options": [
+                "Carbon monoxide poisoning",
+                "Food poisoning only",
+                "Migraine",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Multiple people affected is suggestive."
         },
         {
-            q: "How is TBSA estimated in an adult using the Rule of Nines?",
-            options: ["Head 9%, each arm 9%, each leg 18%, trunk 36%", "Head 9%, each arm 9%, each leg 9%, trunk 18%", "Head 18%, each arm 9%, each leg 18%, trunk 36%", "Head 9%, each arm 9%, each leg 9%, trunk 27%"],
-            correct: 0,
-            explanation: "Rule of Nines: head 9%, each arm 9%, each leg 18%, trunk 36%, perineum 1%."
+            "q": "Which is excluded?",
+            "options": [
+                "Minor sunburn without risk",
+                "Scald",
+                "Chemical burn",
+                "Inhalation injury"
+            ],
+            "correct": 0,
+            "explanation": "And chronic ulcers."
         },
         {
-            q: "What is the most common cause of death in burn patients in the prehospital setting?",
-            options: ["Hypovolemia", "Airway obstruction", "Infection", "Hypothermia"],
-            correct: 1,
-            explanation: "Airway compromise from inhalation injury or edema is the immediate life threat."
+            "q": "What must be documented?",
+            "options": [
+                "TBSA, depth, location, inhalation injury, weight",
+                "Only the cause",
+                "Only vitals",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Plus treatment and response."
         },
         {
-            q: "A patient with burns >20% TBSA should have what fluid started?",
-            options: ["Oral rehydration", "IV crystalloid", "Blood products", "Colloids"],
-            correct: 1,
-            explanation: "IV crystalloid resuscitation is indicated for major burns."
+            "q": "Burns with an altered mental status. Fluid?",
+            "options": [
+                "250–500 mL bolus (adult), repeat to 2000 mL",
+                "None",
+                "4 L at once",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Altered mental status or shock."
         }
     ],
-    flashcards: [
-        { category: "Burn depth", question: "What are the characteristics of a superficial (1st degree) burn?", answer: "Red, dry, painful; no blistering." },
-        { category: "Partial thickness burn", question: "What are the characteristics of a partial thickness (2nd degree) burn?", answer: "Blistered, moist, very painful." },
-        { category: "Full thickness burn", question: "What are the characteristics of a full thickness (3rd degree) burn?", answer: "Leathery, dry, insensate; may appear white or charred." },
-        { category: "Rule of Nines � adult", question: "What are the TBSA percentages in the Rule of Nines for adults?", answer: "Head 9%, each arm 9%, each leg 18%, trunk 36%, perineum 1%." },
-        { category: "Inhalation injury signs", question: "What are signs of inhalation injury?", answer: "Facial burns, singed nasal hairs, carbonaceous sputum, hoarseness, stridor." },
-        { category: "CO poisoning", question: "How is carbon monoxide poisoning treated?", answer: "High-flow oxygen (100% via NRB) to reduce carboxyhemoglobin half-life." },
-        { category: "Burn cooling", question: "How should thermal burns be cooled?", answer: "Cool running water for up to 20 minutes within 3 hours of injury." },
-        { category: "Chemical burn irrigation", question: "How long should chemical burns be irrigated?", answer: "At least 15-30 minutes with copious water." },
-        { category: "Electrical burn monitoring", question: "What monitoring is required for electrical burns?", answer: "Continuous ECG, SpO2, blood pressure; assume deep tissue injury." },
-        { category: "Fluid resuscitation indication", question: "When should fluids be given for burns?", answer: "Burns >15% TBSA in adults, >10% in children, or hypotension." },
-        { category: "Parkland formula", question: "What is the Parkland formula?", answer: "4 mL � weight (kg) � %TBSA; first half given over 8 hours." },
-        { category: "Adult fluid bolus", question: "What is the initial fluid bolus for an adult burn patient?", answer: "250-500 mL crystalloid; may repeat up to 2000 mL." },
-        { category: "Pediatric fluid bolus", question: "What is the initial fluid bolus for a pediatric burn patient?", answer: "10-20 mL/kg crystalloid; may repeat up to 40 mL/kg." },
-        { category: "Hypothermia prevention", question: "How can hypothermia be prevented in burn patients?", answer: "Remove wet clothing, cover with thermal blanket, limit exposure, warm environment." },
-        { category: "Circumferential burns", question: "What complication can circumferential burns cause?", answer: "Compartment syndrome (limbs) or restrictive breathing (chest); may require escharotomy." },
-        { category: "Airway priority", question: "What is the top priority in burn patients with facial burns?", answer: "Airway assessment and early intubation if signs of obstruction." },
-        { category: "KPI", question: "What are key performance indicators for burns?", answer: "Assess and document TBSA; administer analgesia within 10 minutes." },
-        { category: "Pediatric burns", question: "Why are children at higher risk from burns?", answer: "Thinner skin, larger body surface area relative to weight, higher risk of hypothermia and fluid shifts." },
-        { category: "Elderly burns", question: "Why are elderly burn patients at increased risk?", answer: "Thinner skin, comorbidities, decreased physiological reserve, higher mortality." },
-        { category: "Transport decision", question: "Which burn patients should be transported to a burn centre?", answer: "Partial/full thickness burns >10% TBSA in children, >15% in adults; burns to face, hands, feet, perineum; inhalation injury; electrical burns; chemical burns." }
+    "flashcards": [
+        {
+            "question": "Inhalation injury signs",
+            "answer": "Facial burns, singed nasal hairs, carbonaceous sputum, stridor, hoarseness, voice change, wheeze."
+        },
+        {
+            "question": "CO poisoning",
+            "answer": "Enclosed-space smoke; headache, nausea, vomiting, dizziness, confusion; SpO₂ unreliable."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "100% via NRB for inhalation injury or CO; continue; notify hospital."
+        },
+        {
+            "question": "Cooling",
+            "answer": "Cool running water up to 20 minutes, within 3 hours; no ice or soaking."
+        },
+        {
+            "question": "Chemical burns",
+            "answer": "Remove clothing, brush off powder, irrigate at least 15–30 minutes."
+        },
+        {
+            "question": "Electrical burns",
+            "answer": "12-lead + continuous 4-lead ECG; assume deep injury; look for trauma."
+        },
+        {
+            "question": "Depth",
+            "answer": "Superficial: red, dry, painful. Partial: blistered, moist, very painful. Full: leathery, dry, insensate."
+        },
+        {
+            "question": "TBSA",
+            "answer": "Rule of Nines (adult), Lund & Browder (child); exclude superficial burns."
+        },
+        {
+            "question": "Fluid: shock or AMS",
+            "answer": "Adult 250–500 mL to max 2000 mL; child 10–20 mL/kg to max 40 mL/kg."
+        },
+        {
+            "question": "Fluid: large burns",
+            "answer": "Adult >15% TBSA 250–500 mL; child >10% TBSA 10–20 mL/kg."
+        },
+        {
+            "question": "Parkland",
+            "answer": "4 mL × kg × % TBSA; half over 8 h, rest over 16 h."
+        },
+        {
+            "question": "ALS triggers",
+            "answer": "Airway threat, >20% TBSA, narcotic analgesia, electrical injury with arrhythmia."
+        },
+        {
+            "question": "Red priority",
+            "answer": "Airway compromise, >25% TBSA, circumferential burns."
+        },
+        {
+            "question": "Dressings",
+            "answer": "Burn gel, sterile non-adherent dressing or plastic wrap; no cotton."
+        },
+        {
+            "question": "Don'ts",
+            "answer": "No ice or creams; no breaking blisters; no overhydration."
+        },
+        {
+            "question": "Circumferential limb burn",
+            "answer": "Check distal pulses: compartment syndrome risk."
+        },
+        {
+            "question": "Hypothermia",
+            "answer": "Foil blanket or clean sheets; warm ambient temperature."
+        },
+        {
+            "question": "Urgent groups",
+            "answer": "Children, elderly; hands, face, genitals."
+        },
+        {
+            "question": "Pediatric dosing aid",
+            "answer": "Broselow tape."
+        },
+        {
+            "question": "KPIs",
+            "answer": "TBSA documented; analgesia within 10 minutes."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_7_2_1",
-            scenario: "A 40-year-old male rescued from a house fire has facial burns, singed nasal hairs, and carbonaceous sputum. He is coughing and has a hoarse voice. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer oxygen via non-rebreather", f: "Oxygen is important, but airway management is the priority." },
-                { t: "Assess airway and prepare for early intubation", f: "Correct. Signs of inhalation injury indicate impending airway compromise." },
-                { t: "Start IV fluids", f: "Fluids are secondary." },
-                { t: "Apply burn dressings", f: "Not the priority." }
+            "id": "crit_7_2_1",
+            "scenario": "A man rescued from a house fire has facial burns, singed nasal hairs and carbonaceous sputum; his voice is hoarse. SpO₂ 98%.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "100% oxygen via NRB, request ALS early for the airway, rapid transport with notification",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Reassure: SpO₂ is 98%",
+                    "f": "SpO₂ is unreliable with CO; the airway is threatened."
+                },
+                {
+                    "t": "Cool the face for 20 minutes before moving",
+                    "f": "Airway first; don't delay transport."
+                },
+                {
+                    "t": "Nasal cannula",
+                    "f": "Use 100% via NRB."
+                }
             ],
-            correct: 1,
-            explanation: "Hoarseness, facial burns, and carbonaceous sputum indicate potential airway edema; early intubation should be anticipated.",
-            kpi: "Airway assessed and ALS backup requested."
+            "correct": 0,
+            "explanation": "Inhalation injury can close the airway even if he looks stable now.",
+            "kpi": "Burn TBSA documented."
         },
         {
-            id: "crit_7_2_2",
-            scenario: "A 35-year-old male sustained 30% TBSA partial thickness burns in a flash fire. He is alert, BP 110/70, HR 110. Transport time to hospital is 45 minutes. Should you start IV fluids?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "No fluids; transport only", f: "Major burns require fluid resuscitation, especially with long transport." },
-                { t: "Start 250-500 mL normal saline bolus", f: "Correct. Fluid resuscitation is indicated for burns >15% TBSA and transport >30 minutes." },
-                { t: "Start 1 L normal saline immediately", f: "Start with a smaller bolus and reassess." },
-                { t: "Give oral fluids", f: "Not appropriate." }
+            "id": "crit_7_2_2",
+            "scenario": "A 35-year-old has 30% TBSA partial-thickness flash burns; alert, BP 110/70, HR 110. Transport will take 45 minutes.",
+            "question": "Fluids?",
+            "options": [
+                {
+                    "t": "Yes: 250–500 mL bolus, then Parkland-based fluid if time allows",
+                    "f": "Correct. Large burn and transport over 30 minutes."
+                },
+                {
+                    "t": "No: he is normotensive",
+                    "f": ">15% TBSA with a long transport needs fluid."
+                },
+                {
+                    "t": "2000 mL at once",
+                    "f": "Bolus and titrate."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "IV."
+                }
             ],
-            correct: 1,
-            explanation: "Major burns require fluid resuscitation; start with 250-500 mL crystalloid and reassess.",
-            kpi: "IV fluids initiated."
+            "correct": 0,
+            "explanation": "Avoid overhydration: titrate.",
+            "kpi": "Burn TBSA documented."
         },
         {
-            id: "crit_7_2_3",
-            scenario: "A 50-year-old male with 20% TBSA burns is in severe pain (9/10). His BP is 100/70, HR 110. What is the appropriate pain management?",
-            question: "What should you administer?",
-            options: [
-                { t: "Paracetamol 1 g PO", f: "Inadequate for severe pain." },
-                { t: "Morphine 2.5 mg IV titrated", f: "Correct. Severe burn pain requires IV opioids." },
-                { t: "Diclofenac 75 mg IM", f: "NSAIDs are not first-line for severe pain." },
-                { t: "Methoxyflurane only", f: "May be used as adjunct, but morphine is indicated." }
+            "id": "crit_7_2_3",
+            "scenario": "A 50-year-old with 20% TBSA burns scores pain 9/10. BP 100/70.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Analgesia per the Pain Management CPG within 10 minutes; ALS for narcotic analgesia",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Analgesia only at hospital",
+                    "f": "KPI: within 10 minutes."
+                },
+                {
+                    "t": "Ice packs for pain",
+                    "f": "No ice."
+                },
+                {
+                    "t": "Cream",
+                    "f": "No creams."
+                }
             ],
-            correct: 1,
-            explanation: "Severe pain from burns requires IV opioids; titrate morphine to effect.",
-            kpi: "Analgesia administered within 10 minutes."
+            "correct": 0,
+            "explanation": "Also cool (if within 3 hours), dress and keep warm.",
+            "kpi": "Analgesia within 10 minutes of arrival."
         },
         {
-            id: "crit_7_2_4",
-            scenario: "A 25-year-old male sustains an electrical burn from a high-voltage power line. He is alert with a small entry wound on his hand and exit wound on his foot. He has no complaints. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Discharge with follow-up", f: "Electrical burns can cause deep tissue injury and arrhythmias." },
-                { t: "Apply ECG monitoring and transport", f: "Correct. Electrical burns require cardiac monitoring and transport." },
-                { t: "Apply burn dressings and transport", f: "Monitoring is essential." },
-                { t: "Give IV fluids", f: "Fluids may be needed, but monitoring is priority." }
+            "id": "crit_7_2_4",
+            "scenario": "A worker touched a high-voltage line: small burns on the hand and foot, no complaints. The monitor shows the rhythm below.",
+            "ecg": "pvc",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "12-lead and continuous ECG, assume deep injury, ALS for arrhythmia, transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Dress and discharge",
+                    "f": "Electrical injury can hide deep damage."
+                },
+                {
+                    "t": "No monitoring needed",
+                    "f": "Arrhythmias are a risk."
+                },
+                {
+                    "t": "Cool for an hour",
+                    "f": "Avoid prolonged cooling."
+                }
             ],
-            correct: 1,
-            explanation: "Electrical burns can cause delayed arrhythmias and deep tissue injury; continuous ECG monitoring and transport are required.",
-            kpi: "ECG monitoring applied and patient transported."
+            "correct": 0,
+            "explanation": "Prolonged cardiac monitoring in high-voltage injury.",
+            "kpi": "Burn TBSA documented."
         },
         {
-            id: "crit_7_2_5",
-            scenario: "A 5-year-old child sustains a scald burn to the chest and abdomen. Estimated TBSA is 12%. The child is crying, BP 90/60, HR 140. What is the appropriate fluid bolus?",
-            question: "What is the correct fluid management?",
-            options: [
-                { t: "No fluids", f: "Burns >10% in children require fluid resuscitation." },
-                { t: "10-20 mL/kg normal saline", f: "Correct. Pediatric fluid bolus is 10-20 mL/kg for burns." },
-                { t: "5 mL/kg normal saline", f: "Too low." },
-                { t: "40 mL/kg normal saline", f: "Too high for initial bolus." }
+            "id": "crit_7_2_5",
+            "scenario": "A 5-year-old has a 12% TBSA scald of the chest and abdomen; crying, HR 140.",
+            "question": "What fluid?",
+            "options": [
+                {
+                    "t": "10–20 mL/kg IV bolus (pediatric >10% TBSA), maximum 40 mL/kg",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adult 500 mL",
+                    "f": "Use weight-based dosing."
+                },
+                {
+                    "t": "No fluid in children",
+                    "f": "Over 10% TBSA qualifies."
+                },
+                {
+                    "t": "60 mL/kg",
+                    "f": "Above the burns maximum."
+                }
             ],
-            correct: 1,
-            explanation: "Pediatric burns >10% TBSA require fluid resuscitation; give 10-20 mL/kg crystalloid bolus.",
-            kpi: "IV fluids administered."
+            "correct": 0,
+            "explanation": "Size with Lund & Browder; keep warm; analgesia.",
+            "kpi": "Burn TBSA documented."
         }
     ]
 };
