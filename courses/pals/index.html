@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PALS Reviewer â€” Pediatric Advanced Life Support</title>
-<meta name="description" content="PALS clinical reviewer â€” study Pediatric Advanced Life Support chapter by chapter with summaries, flashcards, quizzes, and scenarios aligned to the AHA/AAP 2025 Guidelines for CPR and ECC." />
+<title>PALS Reviewer — Pediatric Advanced Life Support</title>
+<meta name="description" content="PALS clinical reviewer — study Pediatric Advanced Life Support chapter by chapter with summaries, flashcards, quizzes, and scenarios aligned to the AHA/AAP 2025 Guidelines for CPR and ECC." />
 <style>
   :root {
     --red: #c8102e;
@@ -319,18 +319,18 @@
       </div>
       <p id="brandSub" style="margin-top: 6px;">Pediatric Advanced Life Support</p>
     </div>
-    <div class="search"><input id="search" type="text" placeholder="Search chaptersâ€¦" /></div>
+    <div class="search"><input id="search" type="text" placeholder="Search chapters…" /></div>
     <nav class="chapters" id="chapters"></nav>
   </aside>
 
   <main class="main">
     <div class="topbar">
       <div class="crumbs" id="crumbs">PALS Provider Course</div>
-      <div class="ctitle" id="ctitle">Loadingâ€¦</div>
+      <div class="ctitle" id="ctitle">Loading…</div>
       <div class="csub" id="csub"></div>
     </div>
     <div class="tabs" id="tabs"></div>
-    <div class="content" id="content"><div class="empty">Loading course dataâ€¦</div></div>
+    <div class="content" id="content"><div class="empty">Loading course data…</div></div>
   </main>
 </div>
 
@@ -338,7 +338,7 @@
 <script src="../../src/theme.js"></script>
 <script>
 (function() {
-    // Theme toggle (src/theme.js â€” window.SmartTheme)
+    // Theme toggle (src/theme.js — window.SmartTheme)
     SmartTheme.init();
     const themeBtn = document.getElementById('themeToggle');
     if (themeBtn) themeBtn.addEventListener('click', () => SmartTheme.next());
@@ -376,7 +376,9 @@ async function boot() {
     }
   }
   renderSidebar();
-  const first = DATA.manifest.chapters.find(c => DATA.chapters[c.id]) || DATA.manifest.chapters[0];
+  // index.html#c04 opens that chapter (the PALS exam page links to each one)
+  const linked = DATA.manifest.chapters.find(c => c.id === location.hash.slice(1) && DATA.chapters[c.id]);
+  const first = linked || DATA.manifest.chapters.find(c => DATA.chapters[c.id]) || DATA.manifest.chapters[0];
   selectChapter(first.id);
   document.getElementById("brandSub").textContent = DATA.manifest.subtitle || "";
 }
@@ -411,7 +413,7 @@ function selectChapter(id) {
   const meta = DATA.manifest.chapters.find(c => c.id === id);
   const ch = DATA.chapters[id];
   document.getElementById("crumbs").textContent =
-    `${DATA.manifest.title} â€º ${meta.section || ""}`;
+    `${DATA.manifest.title} › ${meta.section || ""}`;
   document.getElementById("ctitle").textContent =
     (ch && ch.title) ? ch.title : `Chapter ${meta.number}: ${meta.title}`;
   const csub = document.getElementById("csub");
@@ -536,7 +538,7 @@ function renderFlashcards(el) {
     <div class="fc-wrap">
       <div class="fc-bar">
         <div class="fc-progress">Card <b>${fcIndex+1}</b> of ${cards.length}</div>
-        <button class="btn ghost" id="fcShuffle">â¤® Shuffle</button>
+        <button class="btn ghost" id="fcShuffle">⤮ Shuffle</button>
       </div>
       <div class="flashcard ${fcFlipped?'flipped':''}" id="flashcard">
         <div class="fc-inner">
@@ -546,9 +548,9 @@ function renderFlashcards(el) {
       </div>
       <div class="fc-hint">Click the card to flip</div>
       <div class="fc-controls">
-        <button class="btn" id="fcPrev">â† Prev</button>
+        <button class="btn" id="fcPrev">← Prev</button>
         <button class="btn primary" id="fcFlip">Flip</button>
-        <button class="btn" id="fcNext">Next â†’</button>
+        <button class="btn" id="fcNext">Next →</button>
       </div>
     </div>`;
   document.getElementById("flashcard").onclick = () => { fcFlipped=!fcFlipped; renderFlashcards(el); };
@@ -571,7 +573,7 @@ function renderQuiz(el) {
     const pct = Math.round(correct/qs.length*100);
     html += `<div class="quiz-summary"><div class="score" style="color:${pct>=80?'var(--green)':pct>=60?'var(--amber)':'var(--red)'}">${pct}%</div>
       <div>You scored <b>${correct}</b> / ${qs.length}</div>
-      <div class="topbtns" style="justify-content:center"><button class="btn" id="quizReset">â†» Retake quiz</button></div></div>`;
+      <div class="topbtns" style="justify-content:center"><button class="btn" id="quizReset">↻ Retake quiz</button></div></div>`;
   }
   html += qs.map((q,i) => {
     const a = st.answers[q.id];
@@ -588,7 +590,7 @@ function renderQuiz(el) {
       <div class="q-head"><span class="q-num">Question ${i+1} of ${qs.length}</span><span class="q-diff">${esc(q.difficulty||"")}</span></div>
       <div class="q-text">${esc(q.question)}</div>
       ${opts}
-      <div class="rationale ${a?'show':''}"><b>${a?(a.correct?'âœ“ Correct. ':'âœ— Incorrect. '):''}</b>${esc(q.rationale||"")}</div>
+      <div class="rationale ${a?'show':''}"><b>${a?(a.correct?'✓ Correct. ':'✗ Incorrect. '):''}</b>${esc(q.rationale||"")}</div>
     </div>`;
   }).join("");
   el.innerHTML = html;
@@ -617,13 +619,13 @@ function renderScenarios() {
       return `<button class="opt" data-s="${c.id}" data-o="${oi}">${esc(txt)}</button>`;
     }).join("");
     return `<div class="sc-card" data-case="${c.id}">
-      <div class="sc-title">ðŸ«€ ${esc(c.title)}</div>
+      <div class="sc-title">🫀 ${esc(c.title)}</div>
       <div class="sc-pres">${esc(c.presentation)}</div>
       ${vit}
       <div class="q-text" style="font-size:14.5px">${esc(c.question)}</div>
       ${opts}
       <div class="rationale" data-exp="${c.id}"></div>
-      ${c.clinicalPearl?`<div class="sc-pearl" data-pearl="${c.id}" style="display:none">ðŸ’¡ <b>Clinical Pearl:</b> ${esc(c.clinicalPearl)}</div>`:""}
+      ${c.clinicalPearl?`<div class="sc-pearl" data-pearl="${c.id}" style="display:none">💡 <b>Clinical Pearl:</b> ${esc(c.clinicalPearl)}</div>`:""}
     </div>`;
   }).join("");
 }
@@ -675,7 +677,7 @@ document.addEventListener("click", e => {
     else if (oi === choice) o.classList.add("wrong");
   });
   const exp = card.querySelector(`[data-exp="${c.id}"]`);
-  exp.innerHTML = `<b>${choice===c.correct?'âœ“ Correct. ':'âœ— Incorrect. '}</b>${esc(c.explanation||"")}`;
+  exp.innerHTML = `<b>${choice===c.correct?'✓ Correct. ':'✗ Incorrect. '}</b>${esc(c.explanation||"")}`;
   exp.classList.add("show");
   const pearl = card.querySelector(`[data-pearl="${c.id}"]`);
   if (pearl) pearl.style.display = "block";
