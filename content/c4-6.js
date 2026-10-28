@@ -113,9 +113,9 @@ window.CPG_DATA = {
                 "stack": true,
                 "columns": [
                     "Sign",
-                    "2",
-                    "1",
-                    "0"
+                    "2 points",
+                    "1 point",
+                    "0 points"
                 ],
                 "rows": [
                     [

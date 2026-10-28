@@ -84,12 +84,17 @@ window.CPG_DATA = {
                                 "level": "EMT"
                             }
                         ]
+                    },
+                    {
+                        "title": "Consider a vasopressor",
+                        "level": "AP",
+                        "text": "Shock that does not respond to fluid, or volume overload: adrenaline or dopamine (doses below)."
                     }
                 ]
             },
             {
                 "type": "table",
-                "title": "Vasopressors (AP)",
+                "title": "Vasopressor doses (AP)",
                 "icon": "syringe",
                 "columns": [
                     "",

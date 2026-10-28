@@ -146,3 +146,37 @@ for (const [chapter, sections] of Object.entries(CHAPTER_SECTIONS)) {
     });
   }
 }
+
+// The single-page guidelines of chapters 3 and 4: summary, study tabs,
+// related links and source PDF, phone layout, and any rhythm strips.
+const FLAT_PAGES = ['c3-1', 'c3-3', 'c3-4', 'c4-1', 'c4-2', 'c4-4', 'c4-5', 'c4-6', 'c4-7', 'c4-8', 'c4-9'];
+for (const id of FLAT_PAGES) {
+  test(`${id}: summary, study tabs, links, strips and phone layout`, async ({ page, request }) => {
+    const errors = trackErrors(page);
+    await page.setViewportSize({ width: 360, height: 780 });
+    const url = `chapters/${id}.html`;
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await expect(page.locator('.cpg-guide h2')).toBeVisible();
+    await expect(page.locator('.bottom-nav .nav-pill')).toHaveCount(4);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+    for (const s of await page.locator('.g-strip').all()) {
+      const d = await s.locator('path.ecg-trace').getAttribute('d');
+      expect(d && d.length, 'empty strip').toBeGreaterThan(1000);
+    }
+
+    const hrefs = new Set();
+    for (const a of await page.locator('.g-related a, a.g-source, .g-tools a, .g-strip figcaption a').all()) {
+      hrefs.add(new URL(await a.getAttribute('href'), page.url()).href);
+    }
+    for (const href of hrefs) expect((await request.get(href)).status(), href).toBe(200);
+
+    await page.goto(`${url}?view=flashcards`, { waitUntil: 'networkidle' });
+    await expect(page.locator('.fc-progress')).toContainText('Card 1 of');
+    await page.goto(`${url}?view=quiz`, { waitUntil: 'networkidle' });
+    await expect(page.locator('.setup-btn').first()).toBeVisible();
+    await page.goto(`${url}?view=critical`, { waitUntil: 'networkidle' });
+    await expect(page.locator('.critical-card')).toBeVisible();
+    await page.locator('#criticalOptionsContainer .option-btn').first().click();
+    expect(errors).toEqual([]);
+  });
+}
