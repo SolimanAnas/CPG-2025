@@ -1,396 +1,917 @@
-/* ========== Chapter 3.3 – Adult Tachycardia with a Pulse ========== */
+/* ========== CPG 3.3 – Adult Tachycardia with a Pulse ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c3-3",
-    title: "Adult Tachycardia with a Pulse",
-    shortTitle: "3.3 Adult Tachycardia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg> Adult Tachycardia with a Pulse</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify patients with tachycardia requiring intervention.</li>
-                <li>Identify and treat underlying causes (e.g., shock, sepsis, toxins).</li>
-                <li>Restore normal rhythm and hemodynamic stability.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <p>Adult patients (≥13 years) presenting with tachycardia (typically HR >150 bpm) and a palpable pulse, conscious or unconscious.</p>
-
-            <h4>Exclusion Criteria</h4>
-            <p>Tachycardia due to a non‑cardiac cause that requires other treatment (e.g., sepsis, pain, hypovolaemia) before rhythm management; paediatric patients (<13 years).</p>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>12‑lead ECG</strong> – identify rhythm: VT, SVT, sinus tachycardia, atrial fibrillation, etc.</li>
-                <li><strong>Identify and treat reversible causes</strong> – toxins, sepsis, pain, hypovolaemia, anaemia, hyperthyroidism.</li>
-                <li><strong>Signs of instability</strong> – hypotension, acutely altered mental status, chest pain, shock.</li>
-                <li><strong>Determine triage category</strong> – Red priority if VT, SVT, or dysrhythmia with severe shock/hypotension.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary survey</strong> – manage ABC as per Universal Care CPG.</li>
-                <li><strong>Attach cardiac monitor</strong> – assess rhythm and vital signs; obtain 12‑lead ECG (may be deferred in unstable patient).</li>
-                <li><strong>Consider ALS back‑up</strong> – as per Universal Care CPG.</li>
-                <li><strong>Identify and treat underlying causes</strong> – e.g., pain, fever, hypovolaemia.</li>
-                <li><strong>Establish IV access</strong> – consider IO if delayed.</li>
-                <li><strong>Assess for signs of instability</strong> – hypotension, altered mental status.</li>
-            </ul>
-
-            <h5>Unstable Patient (with tachycardia and hypotension/shock)</h5>
-            <ul>
-                <li>Request ALS back‑up.</li>
-                <li><strong>Synchronized cardioversion</strong> – with sedation if time permits (see Joule settings table).</li>
-                <li>If rhythm does not revert, increase energy and repeat.</li>
-                <li>If patient deteriorates into cardiac arrest, go to Adult Cardiac Arrest CPG.</li>
-                <li><strong>Adenosine</strong> – may be considered if regular tachycardia and not severely compromised, or if sedation unavailable.</li>
-            </ul>
-
-            <h5>Stable Patient</h5>
-            <ul>
-                <li><strong>Narrow complex tachycardia (QRS <0.12 sec, HR >150)</strong>:
-                    <ul>
-                        <li>Vagal manoeuvres (modified Valsalva) – if regular.</li>
-                        <li>IV fluid bolus 250 mL (cautiously, avoid overload).</li>
-                        <li>Adenosine 6 mg rapid IV, then 12 mg if no effect (if regular).</li>
-                    </ul>
-                </li>
-                <li><strong>Wide complex tachycardia (QRS >0.12 sec, HR >150)</strong>:
-                    <ul>
-                        <li>If regular and monomorphic, consider adenosine 6 mg then 12 mg.</li>
-                        <li>IV fluid bolus 250 mL.</li>
-                        <li>Amiodarone 150 mg IV/IO over 10 minutes (diluted in D5W 100 mL). May repeat once.</li>
-                    </ul>
-                </li>
-                <li><strong>Torsades de pointes</strong>:
-                    <ul>
-                        <li>Consider asynchronous defibrillation.</li>
-                        <li>Magnesium sulfate 2 g IV over 10 minutes.</li>
-                    </ul>
-                </li>
-                <li><strong>Refractory rhythms</strong> – consider underlying causes and Tele‑EMS consultation.</li>
-            </ul>
-
-            <h5>Joule Settings for Synchronized Cardioversion</h5>
-            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-                <tr style="background:var(--glass-bg);"><th>Device</th><th>Rhythm</th><th>Initial Dose</th><th>Subsequent Dose</th></tr>
-                <tr><td rowspan="3">LIFEPAK 15</td><td>Wide complex tachycardia</td><td>100 J</td><td>200 J, 300 J, 360 J</td></tr>
-                <tr><td>SVT</td><td>50 J</td><td>100 J, 200 J, 300 J, 360 J</td></tr>
-                <tr><td>Atrial fibrillation</td><td>120 J</td><td>200 J, 300 J, 360 J</td></tr>
-                <tr><td rowspan="3">ZOLL X‑SERIES</td><td>Wide complex tachycardia</td><td>100 J</td><td>120 J, 150 J, 200 J</td></tr>
-                <tr><td>SVT</td><td>50 J</td><td>120 J, 150 J, 200 J</td></tr>
-                <tr><td>Atrial fibrillation</td><td>120 J</td><td>150 J, 180 J, 200 J</td></tr>
-            </table>
-
-            <h5>Patient Safety Considerations</h5>
-            <ul>
-                <li>Have equipment for cardiac arrest management immediately available during cardioversion.</li>
-                <li>Monitor for fluid overload with IV fluid administration.</li>
-                <li>Avoid vagal stimulation if R‑R interval varies or atrial fibrillation present.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism, injuries/illness, signs (rhythm, vitals), treatment (medications, cardioversion), allergies, medications, background, other (ALS back‑up, Tele‑EMS).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Perform synchronized cardioversion on all hemodynamically compromised patients with tachycardia.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c3-3",
+    "title": "Adult Tachycardia with a Pulse",
+    "shortTitle": "3.3 Adult Tachycardia",
+    "guide": {
+        "cpg": "3.3",
+        "group": "cardio",
+        "groupLabel": "Cardiovascular",
+        "title": "Adult Tachycardia with a Pulse",
+        "lead": "Tachycardias needing intervention are typically above 150 bpm. Look for a cause first, then decide: unstable patients get adenosine or synchronized cardioversion; stable patients are treated by QRS width.",
+        "source": {
+            "label": "CPG 3.3",
+            "pages": "83–87",
+            "pdf": "../pdf_sections/3_3_Adult_Tachycardia_with_a_Pulse.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Adults, conscious or unconscious, with tachycardia and a palpable pulse (typically &gt;150 bpm)."
+                ],
+                "exclude": [
+                    "Tachycardia with a likely non-cardiac cause needing other treatment (e.g. sepsis).",
+                    "Pediatric patients &lt;13 years."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assessment",
+                "icon": "stethoscope",
+                "items": [
+                    "<b>Monitor and 12-lead ECG</b> (not an immediate priority if unconscious, with major primary-survey problems, or in a life-threatening arrhythmia). Identify the rhythm: VT, SVT, sinus tachycardia, other.",
+                    "<b>Look for causes:</b> toxins or drugs; sepsis, pain or anxiety, hypovolemia, anemia, street drugs, hyperthyroidism.",
+                    "<b>Signs of instability:</b> hypotension, acutely altered mental state, signs of shock, ischemic chest discomfort, acute heart failure.",
+                    "<b>Red priority:</b> VT, SVT, or any dysrhythmia with severe shock or hypotension."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Initial care",
+                "icon": "activity",
+                "steps": [
+                    {
+                        "title": "Primary survey",
+                        "text": "Airway and breathing; oxygen to SpO<sub>2</sub> &gt;94%; routine vital signs."
+                    },
+                    {
+                        "title": "Consider ALS back-up",
+                        "text": "Request it if the patient is unstable."
+                    },
+                    {
+                        "title": "Treat the underlying cause",
+                        "text": "Consider tachycardia due to shock (e.g. sepsis)."
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "Consider IO if IV access would be delayed or is not feasible."
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Unstable",
+                "icon": "siren",
+                "tone": "alert",
+                "steps": [
+                    {
+                        "title": "Adenosine",
+                        "level": "P",
+                        "text": "For regular tachycardias, patients not significantly compromised, or where cardioversion without sedation would be inappropriate.",
+                        "doses": [
+                            {
+                                "drug": "Adenosine 1st dose",
+                                "dose": "6 mg IV/IO",
+                                "note": "Rapid, with 20 ml saline flush",
+                                "level": "P"
+                            },
+                            {
+                                "drug": "Adenosine 2nd dose",
+                                "dose": "12 mg IV/IO",
+                                "note": "Rapid, with 20 ml saline flush",
+                                "level": "P"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Synchronized cardioversion",
+                        "level": "AP",
+                        "text": "Generally first line for compromised patients. Consider sedation. Choose joules for the rhythm (table below) and step up if it does not revert. Have cardiac arrest equipment ready. Arrest: go to the Cardiac Arrest CPG."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Stable",
+                "icon": "heart-pulse",
+                "groups": [
+                    {
+                        "title": "Narrow complex (QRS &lt;0.12 s)",
+                        "items": [
+                            "<b>Vagal manoeuvres, if regular</b> (EMT): modified Valsalva preferred; alternatives are Valsalva, ice water to the face, coughing, breath-holding.",
+                            "<b>Fluid bolus</b> (EMT): 250 ml IV/IO crystalloid; stop if fluid overload appears.",
+                            "<b>Adenosine, if regular</b> (P): 6 mg, then 12 mg, rapid IV/IO with 20 ml flush."
+                        ]
+                    },
+                    {
+                        "title": "Wide complex (QRS &gt;0.12 s)",
+                        "items": [
+                            "<b>Adenosine, if regular</b> (P): 6 mg, then 12 mg.",
+                            "<b>Fluid bolus</b> (EMT): 250 ml IV/IO.",
+                            "<b>Amiodarone</b> (AP): 150 mg in 100 ml D5W over 10 minutes (15 mg/min); repeat 150 mg if it does not revert; follow with 1 mg/min infusion."
+                        ]
+                    },
+                    {
+                        "title": "Torsades de pointes",
+                        "items": [
+                            "Consider asynchronous defibrillation.",
+                            "Magnesium 2 g IV over 10 minutes."
+                        ]
+                    },
+                    {
+                        "title": "Refractory",
+                        "items": [
+                            "Consider underlying causes and Tele-EMS consultation."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Synchronized cardioversion energies",
+                "icon": "zap",
+                "stack": true,
+                "columns": [
+                    "Device and rhythm",
+                    "Initial",
+                    "Then"
+                ],
+                "rows": [
+                    {
+                        "group": "LIFEPAK 15"
+                    },
+                    [
+                        "Wide complex tachycardia",
+                        "100 J",
+                        "200 J, 300 J, 360 J"
+                    ],
+                    [
+                        "SVT",
+                        "50 J",
+                        "100 J, 200 J, 300 J, 360 J"
+                    ],
+                    [
+                        "Atrial fibrillation",
+                        "120 J",
+                        "200 J, 300 J, 360 J"
+                    ],
+                    {
+                        "group": "ZOLL X-Series"
+                    },
+                    [
+                        "Wide complex tachycardia",
+                        "100 J",
+                        "120 J, 150 J, 200 J"
+                    ],
+                    [
+                        "SVT",
+                        "50 J",
+                        "120 J, 150 J, 200 J"
+                    ],
+                    [
+                        "Atrial fibrillation",
+                        "120 J",
+                        "150 J, 180 J, 200 J"
+                    ]
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Safety",
+                "icon": "triangle-alert",
+                "items": [
+                    "Electrical and chemical cardioversion can cause cardiac arrest: have arrest equipment ready.",
+                    "Watch for fluid overload with IV fluids.",
+                    "No vagal manoeuvres if R-R intervals vary or the rhythm is atrial fibrillation."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "The rhythms, as drawn by the ECG Simulator",
+                        "items": [
+                            {
+                                "ecg": "svt",
+                                "label": "SVT",
+                                "sub": "Regular, narrow: vagal manoeuvres, adenosine"
+                            },
+                            {
+                                "ecg": "afib",
+                                "label": "Atrial fibrillation",
+                                "sub": "Irregular: no vagal manoeuvres"
+                            },
+                            {
+                                "ecg": "vt",
+                                "label": "Monomorphic VT (with pulse)",
+                                "sub": "Regular, wide: adenosine, amiodarone"
+                            },
+                            {
+                                "ecg": "torsades",
+                                "label": "Torsades de pointes",
+                                "sub": "Magnesium; consider asynchronous defibrillation"
+                            },
+                            {
+                                "ecg": "stach",
+                                "label": "Sinus tachycardia",
+                                "sub": "Look for the cause"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Defibrillation Doses",
+                                "sub": "Energies for LIFEPAK 15 and ZOLL X-Series",
+                                "href": "../pages/defib.html",
+                                "icon": "zap"
+                            },
+                            {
+                                "label": "Megacode: SVT in an Asthmatic",
+                                "sub": "A tachycardia case on the live monitor",
+                                "href": "../pages/megacode.html?s=9",
+                                "icon": "siren"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Synchronized cardioversion for all hemodynamically compromised patients."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs and drug sheets",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "3.2 Adult Bradycardia",
+                        "href": "c3-2.html"
+                    },
+                    {
+                        "label": "4.3 Adult Cardiac Arrest",
+                        "href": "c4-3.html"
+                    },
+                    {
+                        "label": "M2 Adenosine",
+                        "href": "m2.html"
+                    },
+                    {
+                        "label": "M3 Amiodarone",
+                        "href": "m3.html"
+                    },
+                    {
+                        "label": "M24 Magnesium Sulphate",
+                        "href": "m24.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What heart rate typically defines tachycardia requiring intervention?",
-            options: [">100 bpm", ">120 bpm", ">150 bpm", ">180 bpm"],
-            correct: 2,
-            explanation: "Symptomatic tachycardia usually occurs at rates >150 bpm, though lower rates may cause symptoms in some patients."
+            "q": "Tachycardias that need intervention are typically:",
+            "options": [
+                ">100 bpm",
+                ">120 bpm",
+                ">150 bpm",
+                ">180 bpm"
+            ],
+            "correct": 2,
+            "explanation": "Tachycardias requiring intervention are typically >150 bpm."
         },
         {
-            q: "Which of the following is a sign of instability in a tachycardic patient?",
-            options: ["Heart rate 155 bpm", "SBP 110 mmHg", "Altered mental status", "Respiratory rate 18"],
-            correct: 2,
-            explanation: "Hypotension, altered mental status, shock, chest pain, or heart failure indicate instability."
+            "q": "Which is a sign of instability in tachycardia?",
+            "options": [
+                "Heart rate 155",
+                "Acutely altered mental state",
+                "Systolic BP 120",
+                "Palpitations alone"
+            ],
+            "correct": 1,
+            "explanation": "Instability: hypotension, acutely altered mental state, shock, ischemic chest discomfort, acute heart failure."
         },
         {
-            q: "What is the first‑line treatment for unstable tachycardia with a pulse?",
-            options: ["Adenosine", "Amiodarone", "Synchronized cardioversion", "Vagal manoeuvres"],
-            correct: 2,
-            explanation: "Synchronized cardioversion is the treatment of choice for unstable tachycardia with a pulse."
+            "q": "What is generally first line for a compromised (unstable) patient?",
+            "options": [
+                "Vagal manoeuvres",
+                "Synchronized cardioversion",
+                "Fluid bolus",
+                "Amiodarone"
+            ],
+            "correct": 1,
+            "explanation": "Synchronized cardioversion is generally first-line for compromised/unstable patients."
         },
         {
-            q: "A 65‑year‑old male presents with narrow complex tachycardia at 180 bpm, regular rhythm, and SBP 95 mmHg. He is alert but anxious. What is the most appropriate next step?",
-            options: ["Synchronized cardioversion", "Adenosine 6 mg IV", "Vagal manoeuvres", "Amiodarone 150 mg IV"],
-            correct: 2,
-            explanation: "For stable narrow complex tachycardia, vagal manoeuvres (modified Valsalva) should be attempted first. If ineffective, proceed to adenosine."
+            "q": "When can adenosine be considered in an unstable patient?",
+            "options": [
+                "Never",
+                "Regular tachycardia, not significantly compromised, or when cardioversion without sedation would be inappropriate",
+                "Only irregular rhythms",
+                "Only in torsades"
+            ],
+            "correct": 1,
+            "explanation": "Adenosine in unstable patients: regular tachycardias, not significantly compromised, or no sedation available."
         },
         {
-            q: "What is the correct initial dose of adenosine for stable narrow complex tachycardia?",
-            options: ["3 mg", "6 mg", "12 mg", "18 mg"],
-            correct: 1,
-            explanation: "Adenosine initial dose is 6 mg rapid IV push, followed by a 20 mL saline flush. If no effect, give 12 mg."
+            "q": "What is the first adenosine dose?",
+            "options": [
+                "3 mg",
+                "6 mg",
+                "12 mg",
+                "18 mg"
+            ],
+            "correct": 1,
+            "explanation": "1st dose 6 mg, 2nd dose 12 mg, rapid IV/IO with 20 ml saline flush."
         },
         {
-            q: "A patient with stable wide complex tachycardia (monomorphic) does not respond to adenosine. What is the next recommended medication?",
-            options: ["Lidocaine", "Amiodarone 150 mg IV over 10 minutes", "Magnesium sulfate", "Diltiazem"],
-            correct: 1,
-            explanation: "Amiodarone 150 mg IV/IO over 10 minutes (diluted in D5W) is indicated for stable monomorphic VT after adenosine."
+            "q": "What is the second adenosine dose?",
+            "options": [
+                "6 mg",
+                "12 mg",
+                "18 mg",
+                "24 mg"
+            ],
+            "correct": 1,
+            "explanation": "2nd dose: 12 mg."
         },
         {
-            q: "What is the recommended energy for the first synchronized cardioversion of unstable SVT using a LIFEPAK 15?",
-            options: ["50 J", "100 J", "120 J", "200 J"],
-            correct: 0,
-            explanation: "For SVT, initial dose is 50 J (biphasic). Subsequent doses may be increased."
+            "q": "How is adenosine given?",
+            "options": [
+                "Slow IV over 5 minutes",
+                "Rapid IV/IO injection with a 20 ml saline flush",
+                "IM",
+                "Infusion over 10 minutes"
+            ],
+            "correct": 1,
+            "explanation": "Rapid injection with 20 ml normal saline flush."
         },
         {
-            q: "A patient with torsades de pointes requires immediate treatment. Which medication should be given?",
-            options: ["Amiodarone", "Lidocaine", "Magnesium sulfate 2 g IV", "Potassium chloride"],
-            correct: 2,
-            explanation: "Magnesium sulfate 2 g IV over 10 minutes is the drug of choice for torsades de pointes."
+            "q": "What is the lowest clinical level for adenosine?",
+            "options": [
+                "EMT",
+                "EMT-A",
+                "P",
+                "AP"
+            ],
+            "correct": 2,
+            "explanation": "Adenosine is P on the flowchart."
         },
         {
-            q: "What is the correct dose of amiodarone for stable wide complex tachycardia?",
-            options: ["300 mg IV push", "150 mg IV over 10 minutes", "1 mg/kg", "5 mg/kg"],
-            correct: 1,
-            explanation: "Amiodarone 150 mg diluted in 100 mL D5W given over 10 minutes. Repeat once if needed."
+            "q": "What is the lowest clinical level for synchronized cardioversion?",
+            "options": [
+                "P",
+                "AP",
+                "EP",
+                "EMT-A"
+            ],
+            "correct": 1,
+            "explanation": "Synchronized cardioversion is AP."
         },
         {
-            q: "Which of the following rhythms is NOT an indication for synchronized cardioversion?",
-            options: ["Unstable VT", "Unstable SVT", "Atrial fibrillation with rapid rate and instability", "Sinus tachycardia at 150 bpm with fever"],
-            correct: 3,
-            explanation: "Sinus tachycardia is a physiologic response; treat the underlying cause (e.g., fever)."
+            "q": "Which is first for a stable, regular narrow complex tachycardia?",
+            "options": [
+                "Amiodarone",
+                "Vagal manoeuvres",
+                "Cardioversion",
+                "Magnesium"
+            ],
+            "correct": 1,
+            "explanation": "Narrow complex: vagal manoeuvres if regular, fluid bolus, then adenosine if regular."
         },
         {
-            q: "What is the maximum total dose of adenosine that can be given for stable tachycardia?",
-            options: ["6 mg", "12 mg", "18 mg", "24 mg"],
-            correct: 1,
-            explanation: "After 6 mg and 12 mg, if no effect, consider alternative diagnosis; do not exceed 12 mg."
+            "q": "Which vagal manoeuvre is preferred?",
+            "options": [
+                "Carotid massage",
+                "Modified Valsalva",
+                "Eyeball pressure",
+                "Breath-holding"
+            ],
+            "correct": 1,
+            "explanation": "Modified Valsalva is preferred; alternatives are Valsalva, ice water, coughing, breath-holding."
         },
         {
-            q: "A 70‑year‑old with wide complex tachycardia at 170 bpm becomes unresponsive and pulseless. What should you do?",
-            options: ["Give amiodarone", "Perform synchronized cardioversion", "Start CPR and defibrillate as per cardiac arrest protocol", "Give adenosine"],
-            correct: 2,
-            explanation: "This is now cardiac arrest. Follow Adult Cardiac Arrest CPG: start CPR and defibrillate if VF/VT."
+            "q": "When must vagal manoeuvres be avoided?",
+            "options": [
+                "Regular SVT",
+                "Varying R-R intervals or atrial fibrillation",
+                "Heart rate above 150",
+                "Young patients"
+            ],
+            "correct": 1,
+            "explanation": "Avoid vagal stimulation if R-R intervals vary or AF is present."
         },
         {
-            q: "What is the initial joule setting for unstable atrial fibrillation using a ZOLL X‑SERIES?",
-            options: ["50 J", "100 J", "120 J", "150 J"],
-            correct: 2,
-            explanation: "For AF, initial dose is 120 J (biphasic) on ZOLL X‑SERIES."
+            "q": "What fluid bolus is used in stable tachycardia?",
+            "options": [
+                "1 litre",
+                "250 ml IV/IO crystalloid",
+                "500 ml colloid",
+                "None"
+            ],
+            "correct": 1,
+            "explanation": "250 ml IV/IO crystalloid; reassess for fluid overload."
         },
         {
-            q: "Which of the following is a contraindication to vagal manoeuvres?",
-            options: ["Irregular narrow complex tachycardia", "Regular narrow complex tachycardia", "Hypotension", "History of myocardial infarction"],
-            correct: 0,
-            explanation: "Vagal manoeuvres are effective only for regular SVT; they are not indicated for atrial fibrillation or flutter."
+            "q": "What QRS width defines a wide complex tachycardia?",
+            "options": [
+                ">0.08 s",
+                ">0.10 s",
+                ">0.12 s",
+                ">0.20 s"
+            ],
+            "correct": 2,
+            "explanation": "Wide complex: QRS >0.12 s; narrow: <0.12 s."
         },
         {
-            q: "A patient with stable regular wide complex tachycardia receives adenosine 6 mg with no effect. What is the next appropriate dose?",
-            options: ["12 mg", "18 mg", "Amiodarone", "Repeat 6 mg"],
-            correct: 0,
-            explanation: "If no response, give adenosine 12 mg. If still no response, consider amiodarone."
+            "q": "What is the amiodarone dose for stable wide complex tachycardia?",
+            "options": [
+                "300 mg push",
+                "150 mg over 10 minutes IV/IO",
+                "5 mg/kg",
+                "1 g over 1 hour"
+            ],
+            "correct": 1,
+            "explanation": "150 mg infused over 10 minutes (15 mg/min) in 100 ml D5W."
         },
         {
-            q: "What is the primary purpose of a fluid bolus in stable tachycardia?",
-            options: ["Increase heart rate", "Treat possible hypovolaemia", "Decrease afterload", "Prevent adenosine side effects"],
-            correct: 1,
-            explanation: "Hypovolaemia may contribute to tachycardia; a fluid bolus (250 mL) can help identify and treat this cause."
+            "q": "In what is amiodarone diluted?",
+            "options": [
+                "Normal saline",
+                "100 ml D5W",
+                "Ringer's lactate",
+                "Water for injection 10 ml"
+            ],
+            "correct": 1,
+            "explanation": "Diluted in 100 ml 5% dextrose (D5W)."
         },
         {
-            q: "A patient with unstable wide complex tachycardia has received sedation and is being cardioverted. What energy should be used for the first shock with a LIFEPAK 15?",
-            options: ["50 J", "100 J", "120 J", "200 J"],
-            correct: 1,
-            explanation: "Initial dose for wide complex tachycardia (VT) is 100 J (biphasic)."
+            "q": "The rhythm does not revert after amiodarone 150 mg. Next?",
+            "options": [
+                "Stop",
+                "Repeat 150 mg, then follow with 1 mg/min infusion",
+                "Give 300 mg push",
+                "Adenosine 18 mg"
+            ],
+            "correct": 1,
+            "explanation": "Repeat dose (150 mg) if it fails to revert; follow with a 1 mg/min infusion."
         },
         {
-            q: "Which of the following is a potential cause of sinus tachycardia?",
-            options: ["Sepsis", "Myocardial infarction", "Pain", "All of the above"],
-            correct: 3,
-            explanation: "Sinus tachycardia can result from fever, pain, hypovolaemia, anaemia, hyperthyroidism, etc."
+            "q": "What is given for torsades de pointes?",
+            "options": [
+                "Adenosine",
+                "Magnesium 2 g IV over 10 minutes; consider asynchronous defibrillation",
+                "Vagal manoeuvres",
+                "Amiodarone 300 mg push"
+            ],
+            "correct": 1,
+            "explanation": "Torsades: consider asynchronous defibrillation; magnesium 2 g IV over 10 minutes."
         },
         {
-            q: "A patient with stable narrow complex tachycardia and a history of asthma presents. Which medication should be used with caution?",
-            options: ["Adenosine", "Amiodarone", "Verapamil", "Magnesium"],
-            correct: 0,
-            explanation: "Adenosine can cause bronchospasm; use with caution in asthmatics. Have bronchodilators ready."
+            "q": "What is the first cardioversion energy for SVT on a LIFEPAK 15?",
+            "options": [
+                "50 J",
+                "100 J",
+                "120 J",
+                "200 J"
+            ],
+            "correct": 0,
+            "explanation": "SVT: 50 J, then 100, 200, 300, 360 J (LIFEPAK 15)."
         },
         {
-            q: "What is the correct dose of magnesium sulfate for torsades de pointes?",
-            options: ["1 g IV over 1 minute", "2 g IV over 10 minutes", "4 g IV bolus", "500 mg IV"],
-            correct: 1,
-            explanation: "Give 2 g diluted in D5W or NS over 10 minutes for torsades."
+            "q": "What is the first cardioversion energy for wide complex tachycardia?",
+            "options": [
+                "50 J",
+                "100 J",
+                "120 J",
+                "360 J"
+            ],
+            "correct": 1,
+            "explanation": "Wide complex tachycardia: 100 J on both devices."
         },
         {
-            q: "A patient with stable wide complex tachycardia has an irregular rhythm. What should you do?",
-            options: ["Give adenosine", "Give amiodarone", "Consider Tele‑EMS and possible cardioversion", "Start vagal manoeuvres"],
-            correct: 2,
-            explanation: "Irregular wide complex tachycardia may be atrial fibrillation with aberrancy or polymorphic VT. Consult Tele‑EMS and prepare for cardioversion."
+            "q": "What is the first cardioversion energy for atrial fibrillation?",
+            "options": [
+                "50 J",
+                "100 J",
+                "120 J",
+                "200 J"
+            ],
+            "correct": 2,
+            "explanation": "AF: 120 J on both devices."
         },
         {
-            q: "What is the maximum number of adenosine doses recommended before considering alternative therapy?",
-            options: ["1", "2", "3", "4"],
-            correct: 1,
-            explanation: "Adenosine can be given as 6 mg then 12 mg. If no response, consider other causes (e.g., atrial flutter, VT) and alternative treatment."
+            "q": "On a ZOLL X-Series, what follows 120 J for AF?",
+            "options": [
+                "200 J, 300 J, 360 J",
+                "150 J, 180 J, 200 J",
+                "120 J again",
+                "360 J"
+            ],
+            "correct": 1,
+            "explanation": "ZOLL AF: 120 J, then 150, 180, 200 J."
         },
         {
-            q: "A patient with unstable tachycardia is too unstable to wait for sedation. What should you do?",
-            options: ["Delay cardioversion until sedation available", "Proceed with cardioversion without sedation", "Give opioids only", "Start CPR"],
-            correct: 1,
-            explanation: "If the patient is critically unstable, cardioversion should not be delayed for sedation."
+            "q": "On a LIFEPAK 15, what follows 100 J for wide complex tachycardia?",
+            "options": [
+                "120 J, 150 J, 200 J",
+                "200 J, 300 J, 360 J",
+                "50 J",
+                "100 J repeated"
+            ],
+            "correct": 1,
+            "explanation": "LIFEPAK 15 wide complex: 100 J, then 200, 300, 360 J."
         },
         {
-            q: "Which of the following is a sign of adequate perfusion in a tachycardic patient?",
-            options: ["Delayed capillary refill", "Cool extremities", "Normal mental status", "SBP 80 mmHg"],
-            correct: 2,
-            explanation: "Normal mental status indicates adequate cerebral perfusion. Hypotension and poor perfusion suggest instability."
+            "q": "Cardioversion fails to revert the rhythm. What do you do?",
+            "options": [
+                "Stop",
+                "Increase the joule setting and repeat synchronized cardioversion",
+                "Switch to unsynchronized at once",
+                "Give adenosine 24 mg"
+            ],
+            "correct": 1,
+            "explanation": "If the rhythm does not revert, increase the joules and cardiovert again."
         },
         {
-            q: "What is the dose of amiodarone for refractory VF/VT during cardiac arrest?",
-            options: ["150 mg", "300 mg", "450 mg", "5 mg/kg"],
-            correct: 1,
-            explanation: "In cardiac arrest, the first dose of amiodarone is 300 mg IV/IO; second dose is 150 mg."
+            "q": "What must be ready whenever you cardiovert (electrically or with drugs)?",
+            "options": [
+                "A second ambulance",
+                "Cardiac arrest equipment",
+                "Police",
+                "Nothing extra"
+            ],
+            "correct": 1,
+            "explanation": "Cardioversion risks deterioration into cardiac arrest."
         },
         {
-            q: "A patient with stable SVT at 190 bpm fails vagal manoeuvres and has no IV access. What should you do?",
-            options: ["Attempt IO access", "Transport without medication", "Give adenosine IM", "Perform cardioversion"],
-            correct: 1,
-            explanation: "If IV access is not available and the patient is stable, transport while attempting access en route. Adenosine must be given IV."
+            "q": "IV access will be delayed in an unstable patient. What does CPG 3.3 suggest?",
+            "options": [
+                "Wait",
+                "Consider IO access",
+                "IM adenosine",
+                "Transport without access"
+            ],
+            "correct": 1,
+            "explanation": "Consider IO access if IV access may be delayed or is not feasible."
         },
         {
-            q: "What is the main risk of using adenosine in a patient with atrial fibrillation?",
-            options: ["Accelerated ventricular rate", "Hypotension", "Bronchospasm", "Ventricular fibrillation"],
-            correct: 0,
-            explanation: "Adenosine may increase AV conduction in AF, leading to a rapid ventricular response."
+            "q": "Which rhythm is Red priority under CPG 3.3?",
+            "options": [
+                "Sinus tachycardia 110 with pain",
+                "SVT",
+                "Sinus rhythm",
+                "Anxiety"
+            ],
+            "correct": 1,
+            "explanation": "Red: VT, SVT, dysrhythmia with severe shock or hypotension."
         },
         {
-            q: "A 55‑year‑old with narrow complex tachycardia at 160 bpm and SBP 100 mmHg is alert. After vagal manoeuvres fail, what is the next step?",
-            options: ["Synchronized cardioversion", "Adenosine 6 mg", "Amiodarone", "Fluid bolus"],
-            correct: 1,
-            explanation: "He remains stable; adenosine is appropriate after vagal manoeuvres."
+            "q": "When might a 12-lead not be the immediate priority?",
+            "options": [
+                "Stable SVT",
+                "Unconscious patient, major primary-survey problems, or life-threatening arrhythmia",
+                "Never",
+                "Any patient over 65"
+            ],
+            "correct": 1,
+            "explanation": "A 12-lead may not be an immediate priority in these situations."
         },
         {
-            q: "What is the purpose of using a 20 mL saline flush after adenosine?",
-            options: ["Prevent phlebitis", "Rapidly deliver drug to central circulation", "Dilute the drug", "Prevent bradycardia"],
-            correct: 1,
-            explanation: "Adenosine has an extremely short half‑life; a rapid flush ensures it reaches the heart quickly."
+            "q": "Which is listed as a physiological cause of tachycardia?",
+            "options": [
+                "Hypothyroidism",
+                "Anemia",
+                "Hypothermia",
+                "Bradycardia"
+            ],
+            "correct": 1,
+            "explanation": "Sepsis, pain/anxiety, hypovolemia, anemia, street drugs, hyperthyroidism."
         },
         {
-            q: "A patient with stable wide complex tachycardia has a history of heart failure. Which medication should be avoided?",
-            options: ["Amiodarone", "Lidocaine", "Verapamil", "Magnesium"],
-            correct: 2,
-            explanation: "Verapamil can worsen heart failure and should be avoided in wide complex tachycardia of uncertain origin."
+            "q": "The tachycardia is refractory to treatment. What next?",
+            "options": [
+                "Repeat everything",
+                "Consider underlying causes and Tele-EMS",
+                "Stop all treatment",
+                "Discharge"
+            ],
+            "correct": 1,
+            "explanation": "Refractory: consider underlying causes; consider Tele-EMS consultation."
         },
         {
-            q: "After successful cardioversion of unstable SVT, what is the priority?",
-            options: ["Repeat cardioversion", "Administer amiodarone", "Reassess patient and vital signs", "Start a lidocaine infusion"],
-            correct: 2,
-            explanation: "Reassess the patient for stability and signs of ROSC or deterioration."
+            "q": "What is the KPI of CPG 3.3?",
+            "options": [
+                "Adenosine for all SVT",
+                "Synchronized cardioversion for all hemodynamically compromised patients",
+                "12-lead within 1 minute",
+                "Amiodarone for all VT"
+            ],
+            "correct": 1,
+            "explanation": "KPI: perform synchronized cardioversion on all hemodynamically compromised patients."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What heart rate typically defines symptomatic tachycardia?", answer: ">150 bpm (though lower rates may cause symptoms)." },
-        { category: "Rhythms", question: "Name three types of narrow complex tachycardia.", answer: "SVT, atrial fibrillation, atrial flutter, junctional tachycardia." },
-        { category: "Rhythms", question: "Name three types of wide complex tachycardia.", answer: "VT, SVT with aberrancy, pre‑excited AF (WPW)." },
-        { category: "Instability", question: "What are the signs of unstable tachycardia?", answer: "Hypotension, altered mental status, chest pain, shock, acute heart failure." },
-        { category: "Management", question: "What is the first step in unstable tachycardia?", answer: "Synchronized cardioversion with sedation if time permits." },
-        { category: "Cardioversion", question: "What energy is used for unstable VT (LIFEPAK 15)?", answer: "100 J initially, then 200 J, 300 J, 360 J." },
-        { category: "Cardioversion", question: "What energy is used for unstable SVT (LIFEPAK 15)?", answer: "50 J initially, then 100 J, 200 J, 300 J, 360 J." },
-        { category: "Cardioversion", question: "What energy is used for unstable AF (ZOLL X‑SERIES)?", answer: "120 J initially, then 150 J, 180 J, 200 J." },
-        { category: "Adenosine", question: "What is the dose of adenosine for stable SVT?", answer: "6 mg rapid IV, then 12 mg if no effect." },
-        { category: "Adenosine", question: "How should adenosine be administered?", answer: "Rapid IV push over 1‑2 seconds, followed by 20 mL saline flush." },
-        { category: "Adenosine", question: "What are common side effects of adenosine?", answer: "Facial flushing, chest tightness, dyspnoea, transient asystole." },
-        { category: "Vagal manoeuvres", question: "Name two vagal manoeuvres.", answer: "Modified Valsalva, ice water to face, coughing, breath‑holding." },
-        { category: "Amiodarone", question: "What is the dose of amiodarone for stable VT?", answer: "150 mg IV/IO over 10 minutes (diluted in D5W)." },
-        { category: "Amiodarone", question: "How is amiodarone diluted for infusion?", answer: "150 mg in 100 mL D5W given over 10 minutes." },
-        { category: "Magnesium", question: "What is the dose of magnesium for torsades?", answer: "2 g IV over 10 minutes." },
-        { category: "Torsades", question: "What rhythm is torsades de pointes?", answer: "Polymorphic VT associated with prolonged QT." },
-        { category: "Causes", question: "Name four causes of sinus tachycardia.", answer: "Pain, fever, hypovolaemia, anxiety, anaemia, hyperthyroidism." },
-        { category: "Causes", question: "Name three toxins that can cause tachycardia.", answer: "Cocaine, amphetamines, theophylline, caffeine, atropine." },
-        { category: "Precautions", question: "Why is adenosine contraindicated in asthma?", answer: "Can cause bronchospasm." },
-        { category: "Precautions", question: "What should be available when giving adenosine?", answer: "Defibrillator and resuscitation equipment." },
-        { category: "Fluid", question: "What is the initial fluid bolus for stable tachycardia?", answer: "250 mL IV crystalloid (cautiously)." },
-        { category: "Wide complex", question: "What is the first medication for stable monomorphic VT after adenosine?", answer: "Amiodarone 150 mg IV." },
-        { category: "Narrow complex", question: "What is the sequence for stable narrow complex tachycardia?", answer: `Vagal manoeuvres <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> adenosine 6 mg <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> 12 mg <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> consider alternative.` },
-        { category: "Refractory", question: "What should you do if tachycardia is refractory to initial treatment?", answer: "Consider underlying causes, consult Tele‑EMS." },
-        { category: "KPI", question: "What is the key performance indicator for unstable tachycardia?", answer: "Perform synchronized cardioversion on all hemodynamically compromised patients." },
-        { category: "Safety", question: "Why must resuscitation equipment be ready during cardioversion?", answer: "Risk of inducing VF or asystole." },
-        { category: "Atrial fib", question: "What is the initial cardioversion energy for AF (LIFEPAK 15)?", answer: "120 J." },
-        { category: "WPW", question: "What drug should be avoided in AF with WPW?", answer: "AV nodal blockers (adenosine, verapamil, diltiazem) – may accelerate conduction." },
-        { category: "Sedation", question: "What sedation can be used for cardioversion?", answer: "Midazolam, ketamine, or opioids." },
-        { category: "Documentation", question: "What must be documented after cardioversion?", answer: "Energy used, number of shocks, rhythm before/after, sedation given." }
+    "flashcards": [
+        {
+            "category": "Definition",
+            "question": "Tachycardia needing intervention?",
+            "answer": "Typically >150 bpm, with a palpable pulse."
+        },
+        {
+            "category": "Instability",
+            "question": "Signs of instability?",
+            "answer": "Hypotension, acutely altered mental state, signs of shock, ischemic chest discomfort, acute heart failure."
+        },
+        {
+            "category": "Unstable",
+            "question": "First line for compromised patients?",
+            "answer": "Synchronized cardioversion (AP), considering sedation."
+        },
+        {
+            "category": "Unstable",
+            "question": "Adenosine in an unstable patient?",
+            "answer": "Regular rhythm, not significantly compromised, or cardioversion without sedation inappropriate."
+        },
+        {
+            "category": "Adenosine",
+            "question": "Adenosine doses?",
+            "answer": "6 mg then 12 mg, rapid IV/IO with 20 ml saline flush (P)."
+        },
+        {
+            "category": "Narrow",
+            "question": "Stable narrow complex sequence?",
+            "answer": "Vagal manoeuvres if regular → 250 ml fluid → adenosine if regular."
+        },
+        {
+            "category": "Vagal",
+            "question": "Vagal manoeuvres?",
+            "answer": "Modified Valsalva preferred; Valsalva, ice water to face, coughing, breath-holding (EMT)."
+        },
+        {
+            "category": "Vagal",
+            "question": "When to avoid vagal manoeuvres?",
+            "answer": "Varying R-R intervals or atrial fibrillation."
+        },
+        {
+            "category": "Wide",
+            "question": "Stable wide complex sequence?",
+            "answer": "Adenosine if regular → 250 ml fluid → amiodarone."
+        },
+        {
+            "category": "Amiodarone",
+            "question": "Amiodarone for wide complex tachycardia?",
+            "answer": "150 mg in 100 ml D5W over 10 minutes (15 mg/min); repeat once if needed; then 1 mg/min infusion (AP)."
+        },
+        {
+            "category": "QRS",
+            "question": "Narrow vs wide QRS?",
+            "answer": "Narrow <0.12 s; wide >0.12 s."
+        },
+        {
+            "category": "Torsades",
+            "question": "Torsades de pointes?",
+            "answer": "Consider asynchronous defibrillation; magnesium 2 g IV over 10 minutes."
+        },
+        {
+            "category": "Fluids",
+            "question": "Fluid bolus?",
+            "answer": "250 ml IV/IO crystalloid; stop if fluid overload (EMT)."
+        },
+        {
+            "category": "Energies",
+            "question": "LIFEPAK 15: wide complex?",
+            "answer": "100 J, then 200, 300, 360 J."
+        },
+        {
+            "category": "Energies",
+            "question": "LIFEPAK 15: SVT?",
+            "answer": "50 J, then 100, 200, 300, 360 J."
+        },
+        {
+            "category": "Energies",
+            "question": "LIFEPAK 15: AF?",
+            "answer": "120 J, then 200, 300, 360 J."
+        },
+        {
+            "category": "Energies",
+            "question": "ZOLL X-Series: wide complex?",
+            "answer": "100 J, then 120, 150, 200 J."
+        },
+        {
+            "category": "Energies",
+            "question": "ZOLL X-Series: SVT?",
+            "answer": "50 J, then 120, 150, 200 J."
+        },
+        {
+            "category": "Energies",
+            "question": "ZOLL X-Series: AF?",
+            "answer": "120 J, then 150, 180, 200 J."
+        },
+        {
+            "category": "Cardioversion",
+            "question": "Rhythm does not revert?",
+            "answer": "Increase joules and repeat synchronized cardioversion."
+        },
+        {
+            "category": "Safety",
+            "question": "Before any cardioversion?",
+            "answer": "Cardiac arrest equipment ready: electrical or chemical cardioversion can cause arrest."
+        },
+        {
+            "category": "Causes",
+            "question": "Physiological causes to treat?",
+            "answer": "Sepsis, pain/anxiety, hypovolemia, anemia, street drugs, hyperthyroidism; also toxins/drugs."
+        },
+        {
+            "category": "Exclusions",
+            "question": "Who is excluded?",
+            "answer": "Likely non-cardiac cause needing other treatment (e.g. sepsis); children <13."
+        },
+        {
+            "category": "Access",
+            "question": "IV access delayed?",
+            "answer": "Consider IO access."
+        },
+        {
+            "category": "Triage",
+            "question": "Red priority in tachycardia?",
+            "answer": "VT, SVT, dysrhythmia with severe shock or hypotension."
+        },
+        {
+            "category": "Oxygen",
+            "question": "Oxygen target in tachycardia?",
+            "answer": "SpO2 >94%."
+        },
+        {
+            "category": "Refractory",
+            "question": "Refractory tachycardia?",
+            "answer": "Consider underlying causes; Tele-EMS consultation."
+        },
+        {
+            "category": "Scope",
+            "question": "Levels in CPG 3.3?",
+            "answer": "Vagal manoeuvres and fluids EMT; adenosine P; cardioversion and amiodarone AP."
+        },
+        {
+            "category": "Arrest",
+            "question": "Patient arrests?",
+            "answer": "Go to the Cardiac Arrest CPG."
+        },
+        {
+            "category": "KPI",
+            "question": "CPG 3.3 KPI?",
+            "answer": "Synchronized cardioversion for all hemodynamically compromised patients."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_3_3_1",
-            scenario: "A 60‑year‑old male presents with palpitations and lightheadedness. HR 190 bpm, BP 85/50, RR 22, SpO₂ 96%. ECG shows a regular wide complex tachycardia at 190 bpm. He is pale and diaphoretic. What is your immediate action?",
-            question: "What is the priority intervention?",
-            options: [
-                { t: "Give adenosine 6 mg IV", f: "Patient is unstable; cardioversion is first‑line." },
-                { t: "Start amiodarone infusion", f: "Amiodarone is for stable VT; this patient is unstable." },
-                { t: "Perform synchronized cardioversion", f: "Correct. Unstable wide complex tachycardia requires immediate cardioversion." },
-                { t: "Administer fluid bolus", f: "Fluids may help but will not terminate the rhythm." }
+            "id": "crit_3_3_1",
+            "scenario": "A 60-year-old man has palpitations and light-headedness. HR 190, BP 85/50, pale and sweaty. The monitor shows a regular wide complex tachycardia. An AP is on scene.",
+            "ecg": "vt",
+            "question": "What is the priority?",
+            "options": [
+                {
+                    "t": "Synchronized cardioversion at 100 J (with sedation if possible), cardiac arrest equipment ready",
+                    "f": "Correct. He is unstable (hypotension, shock); cardioversion is first-line, starting at 100 J for wide complex tachycardia."
+                },
+                {
+                    "t": "Vagal manoeuvres",
+                    "f": "Vagal manoeuvres are for stable narrow complex tachycardia."
+                },
+                {
+                    "t": "Amiodarone 150 mg over 10 minutes first",
+                    "f": "Amiodarone is for stable wide complex tachycardia."
+                },
+                {
+                    "t": "Fluid bolus and observe",
+                    "f": "He is unstable: treat the rhythm."
+                }
             ],
-            correct: 2,
-            explanation: "This patient has unstable tachycardia (hypotension, diaphoresis). Synchronized cardioversion should be performed immediately; sedation can be given if time permits.",
-            kpi: "Cardioversion performed within 2 minutes."
+            "correct": 0,
+            "explanation": "Unstable tachycardia: request ALS back-up and perform synchronized cardioversion (AP), stepping up energy if it does not revert. Wide complex: 100 J then 200, 300, 360 J (LIFEPAK 15).",
+            "kpi": "Synchronized cardioversion for all hemodynamically compromised patients."
         },
         {
-            id: "crit_3_3_2",
-            scenario: "A 45‑year‑old female with a history of SVT presents with sudden palpitations. HR 210 bpm, BP 115/70, regular narrow complex. She is anxious but otherwise well. Vagal manoeuvres fail. IV access is obtained. What is the next step?",
-            question: "What is the appropriate treatment?",
-            options: [
-                { t: "Synchronized cardioversion 50 J", f: "Patient is stable; cardioversion is not first‑line." },
-                { t: "Adenosine 6 mg rapid IV", f: "Correct. Stable narrow complex tachycardia after failed vagal manoeuvres should receive adenosine." },
-                { t: "Amiodarone 150 mg IV", f: "Not indicated for stable SVT." },
-                { t: "Metoprolol 5 mg IV", f: "Not first‑line; adenosine is preferred." }
+            "id": "crit_3_3_2",
+            "scenario": "A 45-year-old woman with known SVT has palpitations. HR 210, BP 115/70, regular narrow complex, otherwise well. Modified Valsalva has not worked; IV access is in.",
+            "ecg": "svt",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Adenosine 6 mg rapid IV with a 20 ml flush, then 12 mg if needed",
+                    "f": "Correct. Stable regular narrow complex: vagal manoeuvres, fluid, then adenosine."
+                },
+                {
+                    "t": "Synchronized cardioversion now",
+                    "f": "She is stable; cardioversion is for compromised patients."
+                },
+                {
+                    "t": "Amiodarone",
+                    "f": "Amiodarone is used for wide complex tachycardia in CPG 3.3."
+                },
+                {
+                    "t": "Repeat Valsalva for 20 minutes",
+                    "f": "Move on to adenosine (P level)."
+                }
             ],
-            correct: 1,
-            explanation: "This is stable SVT. After vagal manoeuvres, adenosine 6 mg is the drug of choice. Monitor for transient asystole.",
-            kpi: "Adenosine administered within 5 minutes."
+            "correct": 0,
+            "explanation": "Stable narrow complex (QRS <0.12 s) and regular: vagal manoeuvres, 250 ml fluid bolus, then adenosine 6 mg then 12 mg.",
+            "kpi": "Synchronized cardioversion for all hemodynamically compromised patients."
         },
         {
-            id: "crit_3_3_3",
-            scenario: "You are called to a 55‑year‑old male with chest pain and palpitations. ECG shows atrial fibrillation at 150 bpm, BP 100/70, alert. He has a history of Wolff‑Parkinson‑White syndrome. What medication should be avoided?",
-            question: "Which drug is contraindicated?",
-            options: [
-                { t: "Amiodarone", f: "Amiodarone is safe in WPW." },
-                { t: "Adenosine", f: "Correct. Adenosine can accelerate conduction via accessory pathway, causing VF." },
-                { t: "Magnesium", f: "Magnesium is safe." },
-                { t: "Lidocaine", f: "Lidocaine is not first‑line but not contraindicated." }
+            "id": "crit_3_3_3",
+            "scenario": "A 70-year-old has an irregular narrow complex tachycardia at 160. BP 128/80, alert, no chest pain.",
+            "ecg": "afib",
+            "question": "Which is NOT appropriate?",
+            "options": [
+                {
+                    "t": "Vagal manoeuvres",
+                    "f": "Correct. Avoid vagal stimulation with varying R-R intervals or atrial fibrillation."
+                },
+                {
+                    "t": "A 12-lead ECG and monitoring",
+                    "f": "Appropriate."
+                },
+                {
+                    "t": "Looking for underlying causes",
+                    "f": "Appropriate."
+                },
+                {
+                    "t": "Considering Tele-EMS if refractory",
+                    "f": "Appropriate."
+                }
             ],
-            correct: 1,
-            explanation: "In AF with WPW, AV nodal blockers (adenosine, verapamil, diltiazem) can increase ventricular rate and precipitate VF. Use amiodarone or cardioversion if unstable.",
-            kpi: "Recognition of WPW and avoidance of inappropriate drugs."
+            "correct": 0,
+            "explanation": "Vagal manoeuvres are only for regular narrow complex tachycardia, and adenosine is also for regular rhythms. In AF, look for causes and consider Tele-EMS if refractory.",
+            "kpi": "Synchronized cardioversion for all hemodynamically compromised patients."
         },
         {
-            id: "crit_3_3_4",
-            scenario: "A 70‑year‑old with stable monomorphic VT at 160 bpm receives amiodarone 150 mg IV over 10 minutes. After the infusion, the rate is still 155 bpm. What should you do next?",
-            question: "What is the most appropriate action?",
-            options: [
-                { t: "Give a second dose of amiodarone 150 mg", f: "Correct. A repeat dose can be given if no effect." },
-                { t: "Perform synchronized cardioversion", f: "Patient is stable; can repeat amiodarone before cardioversion." },
-                { t: "Give adenosine", f: "Adenosine is not indicated for VT." },
-                { t: "Start dopamine", f: "Dopamine may increase rate." }
+            "id": "crit_3_3_4",
+            "scenario": "A stable patient with a regular wide complex tachycardia at 160 has had adenosine 6 mg and 12 mg and a 250 ml bolus. Amiodarone 150 mg over 10 minutes has just finished; the rhythm continues.",
+            "ecg": "vt",
+            "question": "What next (AP on scene)?",
+            "options": [
+                {
+                    "t": "Repeat amiodarone 150 mg over 10 minutes",
+                    "f": "Correct. Repeat the dose if the rhythm fails to revert, then follow with 1 mg/min if it reverts."
+                },
+                {
+                    "t": "Amiodarone 300 mg push",
+                    "f": "That is the cardiac arrest dose, not for a perfusing rhythm."
+                },
+                {
+                    "t": "A third adenosine dose of 18 mg",
+                    "f": "CPG 3.3 gives two doses: 6 mg and 12 mg."
+                },
+                {
+                    "t": "Vagal manoeuvres",
+                    "f": "These are for narrow complex tachycardia."
+                }
             ],
-            correct: 0,
-            explanation: "If amiodarone is ineffective, a repeat dose (150 mg) can be given. If still no response, consider cardioversion or Tele‑EMS consultation.",
-            kpi: "Repeat amiodarone considered."
+            "correct": 0,
+            "explanation": "Stable wide complex: adenosine if regular, fluid bolus, amiodarone 150 mg over 10 minutes, repeat once if needed, then 1 mg/min infusion. If it becomes unstable, cardiovert.",
+            "kpi": "Synchronized cardioversion for all hemodynamically compromised patients."
         },
         {
-            id: "crit_3_3_5",
-            scenario: "A 50‑year‑old female with a history of long QT presents with recurrent episodes of polymorphic VT (torsades). She is conscious but dizzy. BP 90/60. What is the priority treatment?",
-            question: "What should you administer immediately?",
-            options: [
-                { t: "Amiodarone 150 mg IV", f: "Amiodarone may prolong QT and worsen torsades." },
-                { t: "Magnesium sulfate 2 g IV over 10 minutes", f: "Correct. Magnesium is first‑line for torsades." },
-                { t: "Synchronized cardioversion", f: "If unstable, cardioversion may be needed, but magnesium should be given first if patient is conscious." },
-                { t: "Lidocaine 100 mg IV", f: "Lidocaine is not first‑line for torsades." }
+            "id": "crit_3_3_5",
+            "scenario": "A 50-year-old woman has recurrent runs of polymorphic VT that twist around the baseline. She is conscious but dizzy, BP 90/60.",
+            "ecg": "torsades",
+            "question": "What does CPG 3.3 give for torsades de pointes?",
+            "options": [
+                {
+                    "t": "Magnesium 2 g IV over 10 minutes, and consider asynchronous defibrillation",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adenosine 6 mg",
+                    "f": "Adenosine is for regular tachycardias, not torsades."
+                },
+                {
+                    "t": "Vagal manoeuvres",
+                    "f": "Not for torsades."
+                },
+                {
+                    "t": "Amiodarone 300 mg",
+                    "f": "CPG 3.3 gives magnesium for torsades."
+                }
             ],
-            correct: 1,
-            explanation: "For torsades de pointes, magnesium sulfate 2 g IV is the drug of choice. If the patient becomes unstable, proceed to cardioversion.",
-            kpi: "Magnesium given within 5 minutes."
+            "correct": 0,
+            "explanation": "Torsades de pointes: consider asynchronous defibrillation and give magnesium 2 g IV over 10 minutes. Have arrest equipment ready.",
+            "kpi": "Synchronized cardioversion for all hemodynamically compromised patients."
         }
     ]
 };
