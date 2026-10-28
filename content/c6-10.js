@@ -1,362 +1,720 @@
-/* ========== Chapter 6.10 � Nausea and Vomiting ========== */
+/* ========== CPG 6.10 – Nausea and Vomiting ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-10",
-    title: "Nausea and Vomiting",
-    shortTitle: "6.10 Nausea and Vomiting",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Nausea and Vomiting</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify life-threatening causes associated with nausea and vomiting.</li>
-                <li>Improve patient comfort.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with nausea and/or vomiting, including traumatic and non-traumatic causes.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Secondary Survey:</strong> Perform a focused physical examination to identify potential causes of nausea and vomiting.</li>
-                <li><strong>Patient History:</strong> Use OPQRST and SAMPLE history to identify potentially serious underlying causes.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for persistent vomiting, hematemesis, signs of shock, or suspected pregnancy complications.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Consider Red Flags:</strong> Persistent vomiting or hematemesis; suspected pregnancy complications (e.g., ectopic pregnancy, miscarriage).</li>
-                <li><strong>Evaluate for Signs of Shock or Instability:</strong> Hypotension (SBP <90 mmHg in adults, or age-specific for pediatrics); tachycardia (HR >100 in adults, or age-specific); altered mental status; poor perfusion (cool, clammy skin, delayed capillary refill).</li>
-                <li><strong>Consider ALS back-up:</strong> For unstable patients or those requiring advanced care. It is generally not appropriate to request ALS back-up for the administration of antiemetics alone.</li>
-                <li><strong>Establish IV Access:</strong> Indicated for dehydration, hypotension, or anticipated medication administration.</li>
-                <li><strong>Fluid Resuscitation:</strong> For signs of shock or dehydration:
-                    <ul>
-                        <li>Adults: 500-1000 mL bolus of normal saline or Ringer's lactate, reassess, repeat as needed.</li>
-                        <li>Pediatrics: 20 mL/kg bolus, reassess, repeat as needed.</li>
-                    </ul>
-                </li>
-                <li><strong>Medication Administration:</strong> For nausea/vomiting, administer metoclopramide:
-                    <ul>
-                        <li>Adults: 10 mg IV/IM (slow IV over 3 minutes, or diluted in 100 mL normal saline as an infusion).</li>
-                        <li>Pediatrics: Not recommended for routine pediatric administration due to risk of extrapyramidal effects; use only if clearly indicated and after consultation.</li>
-                    </ul>
-                </li>
-                <li><strong>Pain Management:</strong> Assess and manage pain as per Pain Management CPG.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, hydration status, and response to interventions.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Nausea and vomiting typically have an underlying cause; do not assume it is benign.</li>
-                <li>Prophylactic administration of anti-nausea medications for opiates (e.g., morphine) is not recommended.</li>
-                <li>Metoclopramide should not be mixed with morphine.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Common causes: gastroenteritis, appendicitis, bowel obstruction, pancreatitis, DKA, pregnancy, head injury, myocardial infarction, and medication side effects.</li>
-                <li>In children, consider intussusception, pyloric stenosis, or viral illness.</li>
-                <li>In elderly, consider myocardial infarction, infection, or bowel obstruction.</li>
-                <li>Vomiting can lead to dehydration and electrolyte disturbances; assess for signs of hypovolemia.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Onset, duration, frequency, character of vomitus (e.g., bilious, bloody, projectile).</li>
-                <li>Associated symptoms (abdominal pain, headache, fever, diarrhea).</li>
-                <li>Vital signs, signs of dehydration, mental status.</li>
-                <li>Fluids administered, antiemetics given, response.</li>
-                <li>Transport decision and hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer an antiemetic to all patients with moderate to severe nausea or vomiting (unless contraindicated or inappropriate).</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-10",
+    "title": "Nausea and Vomiting",
+    "shortTitle": "6.10 Nausea and Vomiting",
+    "guide": {
+        "cpg": "6.10",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Nausea and Vomiting",
+        "lead": "Vomiting is a symptom with a cause: find it (OPQRST, SAMPLE, focused exam) and look for red flags and shock. Treat dehydration with fluid, and give metoclopramide (P, adults only) for moderate to severe symptoms.",
+        "source": {
+            "label": "CPG 6.10",
+            "pages": "189–191",
+            "pdf": "../pdf_sections/6_10_Nausea_and_Vomiting.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Nausea and/or vomiting, traumatic or non-traumatic."
+                ],
+                "exclude": [
+                    "None noted."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Find the cause",
+                        "items": [
+                            "Focused examination; OPQRST and SAMPLE history to uncover serious causes.",
+                            "Pregnancy status where relevant."
+                        ]
+                    },
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Persistent vomiting or hematemesis.",
+                            "Suspected pregnancy complications (ectopic pregnancy, miscarriage)."
+                        ]
+                    },
+                    {
+                        "title": "Shock or instability",
+                        "items": [
+                            "SBP &lt;90 mmHg (adults) or age-specific; HR &gt;100 (adults) or age-specific.",
+                            "Altered mental status; poor perfusion (cool, clammy skin, delayed capillary refill)."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Surveys",
+                        "text": "Primary and secondary survey as per the Universal Care CPG."
+                    },
+                    {
+                        "title": "ALS back-up",
+                        "text": "As per Universal Care; generally not appropriate just to give an antiemetic."
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "For dehydration, hypotension or expected medication."
+                    },
+                    {
+                        "title": "Fluid for shock or dehydration",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate; reassess and repeat as needed.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL bolus",
+                                "note": "Flowchart: 250–500 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg bolus",
+                                "note": "Flowchart: 5–10 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Pain",
+                        "text": "As per the Pain Management CPG."
+                    },
+                    {
+                        "title": "Metoclopramide",
+                        "level": "P",
+                        "doses": [
+                            {
+                                "drug": "Metoclopramide",
+                                "dose": "10 mg IV/IM",
+                                "note": "Adults only: not recommended for children",
+                                "level": "P"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Good practice",
+                "icon": "lightbulb",
+                "items": [
+                    "Nausea and vomiting usually have an underlying cause: treat that too.",
+                    "No prophylactic antiemetic with opioids such as morphine."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: metoclopramide",
+                                "sub": "Adults 10 mg IV/IM",
+                                "href": "../pages/drug-calculator.html?drug=Metoclopramide",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Antiemetic for every patient with moderate to severe nausea or vomiting, unless contraindicated or inappropriate."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.1 Abdominal Pain",
+                        "href": "c6-1.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "6.9 Hyperglycemia",
+                        "href": "c6-9.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first step in managing a patient with nausea and vomiting?",
-            options: ["Administer antiemetic", "Perform primary survey (ABC)", "Establish IV access", "Transport immediately"],
-            correct: 1,
-            explanation: "The primary survey (Airway, Breathing, Circulation) is always the priority to identify life threats."
+            "q": "What comes first in a vomiting patient?",
+            "options": [
+                "Primary survey",
+                "Antiemetic",
+                "Oral fluids",
+                "Transport without assessment"
+            ],
+            "correct": 0,
+            "explanation": "Then the secondary survey."
         },
         {
-            q: "Which of the following is a red flag in a patient with nausea and vomiting?",
-            options: ["Vomiting after eating", "Hematemesis (blood in vomit)", "Nausea without vomiting", "Vomiting lasting 1 hour"],
-            correct: 1,
-            explanation: "Hematemesis indicates possible upper GI bleeding and requires urgent evaluation."
+            "q": "Which is a red flag?",
+            "options": [
+                "Hematemesis",
+                "One episode after a large meal",
+                "Nausea without vomiting",
+                "Mild motion sickness"
+            ],
+            "correct": 0,
+            "explanation": "Also persistent vomiting and suspected pregnancy complications."
         },
         {
-            q: "What is the dose of metoclopramide for an adult with nausea?",
-            options: ["5 mg IV", "10 mg IV/IM", "20 mg IV", "2 mg IV"],
-            correct: 1,
-            explanation: "Adult dose of metoclopramide is 10 mg IV/IM."
+            "q": "What is the metoclopramide dose?",
+            "options": [
+                "10 mg IV/IM, adults only",
+                "1 mg/kg in children",
+                "50 mg IV",
+                "2 mg orally"
+            ],
+            "correct": 0,
+            "explanation": "Paramedic level."
         },
         {
-            q: "A 25-year-old female with nausea and vomiting has a BP of 90/60 and HR 110. What should you do?",
-            options: ["Give metoclopramide", "Start fluid resuscitation", "Transport without intervention", "Give oral fluids"],
-            correct: 1,
-            explanation: "Hypotension and tachycardia suggest hypovolemia; fluid resuscitation is indicated."
+            "q": "BP 90/60 and HR 110 in a vomiting adult. What do you do?",
+            "options": [
+                "IV access and fluid bolus",
+                "Antiemetic only",
+                "Oral fluids",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Signs of shock or dehydration."
         },
         {
-            q: "What is the initial fluid bolus for an adult with signs of dehydration from vomiting?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults with dehydration should receive 500-1000 mL crystalloid bolus."
+            "q": "What adult bolus does the text give?",
+            "options": [
+                "500–1000 mL",
+                "100 mL",
+                "3 L",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 250–500 mL."
         },
         {
-            q: "Which of the following is a contraindication to metoclopramide?",
-            options: ["History of epilepsy", "Nausea from gastroenteritis", "Post-operative nausea", "Pregnancy"],
-            correct: 0,
-            explanation: "Metoclopramide is contraindicated in epilepsy due to risk of seizures."
+            "q": "Is metoclopramide used in children?",
+            "options": [
+                "No: not recommended for pediatrics",
+                "Yes, 10 mg",
+                "Yes, 1 mg/kg",
+                "Only IM"
+            ],
+            "correct": 0,
+            "explanation": "Adults only."
         },
         {
-            q: "A patient with nausea and vomiting has a history of head trauma. What should you suspect?",
-            options: ["Increased intracranial pressure", "Gastroenteritis", "Migraine", "Food poisoning"],
-            correct: 0,
-            explanation: "Vomiting after head trauma may indicate increased ICP; assess neurological status."
+            "q": "Vomiting after a head injury. Is it covered?",
+            "options": [
+                "Yes: traumatic causes are included",
+                "No",
+                "Only children",
+                "Only with fever"
+            ],
+            "correct": 0,
+            "explanation": "Traumatic and non-traumatic causes are included."
         },
         {
-            q: "What is the pediatric dose of metoclopramide?",
-            options: ["0.1 mg/kg", "0.5 mg/kg", "Not routinely recommended", "1 mg/kg"],
-            correct: 2,
-            explanation: "Metoclopramide is not routinely recommended for pediatrics due to risk of extrapyramidal effects."
+            "q": "What is the pediatric bolus in the text?",
+            "options": [
+                "20 mL/kg",
+                "50 mL/kg",
+                "1 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 5–10 mL/kg."
         },
         {
-            q: "Which of the following is a sign of dehydration in a child with vomiting?",
-            options: ["Sunken fontanelle", "Dry mucous membranes", "Decreased urine output", "All of the above"],
-            correct: 3,
-            explanation: "All are signs of dehydration in children."
+            "q": "Vomiting with RBS 450 mg/dL and deep breathing. Which CPG?",
+            "options": [
+                "Hyperglycemia (DKA)",
+                "Stroke",
+                "Epistaxis",
+                "Seizures"
+            ],
+            "correct": 0,
+            "explanation": "Look for the underlying cause."
         },
         {
-            q: "A patient with nausea and vomiting has a blood glucose of 450 mg/dL and deep breathing. What is the likely cause?",
-            options: ["Gastroenteritis", "Diabetic ketoacidosis (DKA)", "Appendicitis", "Pancreatitis"],
-            correct: 1,
-            explanation: "Nausea, vomiting, hyperglycemia, and deep breathing are classic for DKA."
+            "q": "Should ALS be requested just to give an antiemetic?",
+            "options": [
+                "Generally not",
+                "Always",
+                "Only at night",
+                "Only for children"
+            ],
+            "correct": 0,
+            "explanation": "Consider ALS per Universal Care."
         },
         {
-            q: "What is the target SpO2 for a patient with nausea and vomiting?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Is a prophylactic antiemetic given with morphine?",
+            "options": [
+                "No",
+                "Always",
+                "Only IM",
+                "Only in children"
+            ],
+            "correct": 0,
+            "explanation": "Not recommended."
         },
         {
-            q: "Why should metoclopramide not be mixed with morphine?",
-            options: ["They form a precipitate", "They cause respiratory depression", "They cause arrhythmias", "No interaction"],
-            correct: 0,
-            explanation: "Metoclopramide and morphine should not be mixed in the same syringe as they may precipitate."
+            "q": "Which shock sign is listed?",
+            "options": [
+                "HR >100 in adults",
+                "HR 70",
+                "SBP 130",
+                "Warm pink skin"
+            ],
+            "correct": 0,
+            "explanation": "Also SBP <90, AMS, poor perfusion."
         },
         {
-            q: "A patient with nausea and vomiting has a history of migraine. What is a common associated symptom?",
-            options: ["Photophobia", "Aura", "Unilateral headache", "All of the above"],
-            correct: 3,
-            explanation: "Migraine often presents with nausea, vomiting, headache, photophobia, and aura."
+            "q": "Vomiting in early pregnancy with pain and pallor. What is it?",
+            "options": [
+                "A red flag: suspected pregnancy complication",
+                "Normal morning sickness",
+                "No concern",
+                "Food poisoning only"
+            ],
+            "correct": 0,
+            "explanation": "Ectopic pregnancy or miscarriage."
         },
         {
-            q: "Which of the following is a potential cause of vomiting in a pregnant patient?",
-            options: ["Hyperemesis gravidarum", "Ectopic pregnancy", "Appendicitis", "All of the above"],
-            correct: 3,
-            explanation: "All are possible; early pregnancy requires consideration of ectopic pregnancy."
+            "q": "Which history tool is used?",
+            "options": [
+                "OPQRST and SAMPLE",
+                "APGAR",
+                "BEFAST only",
+                "GCS only"
+            ],
+            "correct": 0,
+            "explanation": "To identify serious causes."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with dehydration from vomiting?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Which level gives fluid boluses?",
+            "options": [
+                "EMT",
+                "P only",
+                "EMR",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "Metoclopramide is P."
         },
         {
-            q: "A patient with nausea and vomiting has a BP of 80/50 after 1000 mL normal saline. What should you do?",
-            options: ["Give another fluid bolus", "Start vasopressors", "Transport without further fluids", "Give metoclopramide"],
-            correct: 0,
-            explanation: "Continue fluid resuscitation up to 2000 mL; if no response, consider other causes."
+            "q": "BP 80/50 after 1000 mL. What next?",
+            "options": [
+                "Reassess and repeat the bolus",
+                "Metoclopramide only",
+                "Stop fluids",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Repeat as needed."
         },
         {
-            q: "Which of the following is a side effect of metoclopramide?",
-            options: ["Extrapyramidal symptoms (dystonia)", "Tachycardia", "Hypotension", "All of the above"],
-            correct: 3,
-            explanation: "Metoclopramide can cause extrapyramidal symptoms, tachycardia, and hypotension."
+            "q": "When is IV access indicated?",
+            "options": [
+                "Dehydration, hypotension or expected drugs",
+                "Never",
+                "Every patient",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "As per the CPG."
         },
         {
-            q: "A patient with nausea and vomiting has a history of alcohol abuse and presents with epigastric pain. What should you suspect?",
-            options: ["Gastritis", "Pancreatitis", "Hepatitis", "All of the above"],
-            correct: 3,
-            explanation: "Alcohol use can cause gastritis, pancreatitis, and hepatitis, all of which may present with nausea and vomiting."
+            "q": "Vomiting with pain. What else is managed?",
+            "options": [
+                "Pain, per the Pain Management CPG",
+                "Nothing",
+                "Only nausea",
+                "Only fluids"
+            ],
+            "correct": 0,
+            "explanation": "Assess and manage pain."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with vomiting and signs of shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "Initial bolus is 20 mL/kg crystalloid."
+            "q": "Vomiting and RBS 45 mg/dL. What first?",
+            "options": [
+                "Treat hypoglycemia (Hypoglycemia CPG)",
+                "Metoclopramide",
+                "Oral fluids",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Treat the cause."
         },
         {
-            q: "Which of the following is a red flag in a patient with vomiting?",
-            options: ["Projectile vomiting in an infant", "Bilious vomitus", "Vomiting after head injury", "All of the above"],
-            correct: 3,
-            explanation: "All are red flags requiring urgent evaluation."
+            "q": "Vomiting with chest pain and sweating. What do you consider?",
+            "options": [
+                "A cardiac cause: Chest Pain CPG",
+                "Gastritis only",
+                "Motion sickness",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Look for serious underlying causes."
         },
         {
-            q: "A patient with nausea and vomiting is on chemotherapy. What should you consider?",
-            options: ["They may be immunocompromised", "They may have electrolyte abnormalities", "They may have a central line infection", "All of the above"],
-            correct: 3,
-            explanation: "Chemotherapy patients are at risk for infection, electrolyte imbalance, and complications from central lines."
+            "q": "Who is the antiemetic KPI for?",
+            "options": [
+                "Moderate to severe nausea or vomiting",
+                "Every patient",
+                "Only children",
+                "Only after opioids"
+            ],
+            "correct": 0,
+            "explanation": "Unless contraindicated or inappropriate."
         },
         {
-            q: "What is the role of ondansetron in prehospital nausea management?",
-            options: ["It is available in DCAS formulary", "It is not in DCAS formulary; metoclopramide is used", "It is first-line", "It is only for pediatrics"],
-            correct: 1,
-            explanation: "Ondansetron is not part of the DCAS formulary; metoclopramide is the antiemetic of choice."
+            "q": "Which fluids?",
+            "options": [
+                "Normal saline or Ringer's lactate",
+                "Dextrose",
+                "Colloids",
+                "Oral rehydration only"
+            ],
+            "correct": 0,
+            "explanation": "Crystalloid boluses."
         },
         {
-            q: "A patient with nausea and vomiting has a history of appendectomy. What condition should you consider?",
-            options: ["Bowel obstruction", "Gastroenteritis", "Pancreatitis", "Renal colic"],
-            correct: 0,
-            explanation: "Previous abdominal surgery increases risk of adhesive bowel obstruction."
+            "q": "What does the CPG say about the cause?",
+            "options": [
+                "It usually has an underlying cause",
+                "It is always benign",
+                "It is always viral",
+                "It never needs treatment"
+            ],
+            "correct": 0,
+            "explanation": "A patient safety point."
         },
         {
-            q: "What is the maximum single dose of metoclopramide for an adult?",
-            options: ["5 mg", "10 mg", "20 mg", "50 mg"],
-            correct: 1,
-            explanation: "Single dose is 10 mg; may repeat if needed, but total daily dose should not exceed 30-40 mg."
+            "q": "Which route for metoclopramide?",
+            "options": [
+                "IV or IM",
+                "Oral only",
+                "Inhaled",
+                "Rectal"
+            ],
+            "correct": 0,
+            "explanation": "10 mg IV/IM."
         },
         {
-            q: "A patient with nausea and vomiting has a potassium level of 2.8 mmol/L. What is the risk?",
-            options: ["Cardiac arrhythmias", "Muscle weakness", "Paralytic ileus", "All of the above"],
-            correct: 3,
-            explanation: "Hypokalemia can cause arrhythmias, weakness, and ileus."
+            "q": "A child vomiting, lethargic, HR 160, dry. What do you give?",
+            "options": [
+                "20 mL/kg fluid bolus and reassess",
+                "Metoclopramide",
+                "Adult bolus",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Metoclopramide is not recommended for children."
         },
         {
-            q: "Which of the following is a contraindication to metoclopramide?",
-            options: ["Suspected bowel obstruction", "Parkinson's disease", "Pheochromocytoma", "All of the above"],
-            correct: 3,
-            explanation: "Metoclopramide is contraindicated in bowel obstruction, Parkinson's, and pheochromocytoma."
+            "q": "Which documentation item is listed?",
+            "options": [
+                "Pain scale before and after",
+                "Shoe size",
+                "Home address only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Plus medications, fluids, exam findings."
         },
         {
-            q: "A patient with nausea and vomiting has a blood glucose of 45 mg/dL. What should you do?",
-            options: ["Give metoclopramide", "Treat hypoglycemia first", "Give IV fluids", "Transport only"],
-            correct: 1,
-            explanation: "Hypoglycemia is a life threat and must be treated before antiemetics."
+            "q": "Is anyone excluded?",
+            "options": [
+                "No: none noted",
+                "Children",
+                "Trauma",
+                "Pregnancy"
+            ],
+            "correct": 0,
+            "explanation": "No exclusions."
         },
         {
-            q: "What is the key performance indicator for nausea and vomiting?",
-            options: ["Administer oxygen", "Give IV fluids for dehydration", "Administer antiemetic for moderate to severe symptoms", "Perform 12-lead ECG"],
-            correct: 2,
-            explanation: "Administering an antiemetic to patients with moderate to severe nausea or vomiting is a key KPI."
+            "q": "Which exam findings are documented?",
+            "options": [
+                "Tenderness, guarding, rebound; head injury findings if relevant",
+                "Only pupils",
+                "Only skin",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Abdominal and head findings."
         },
         {
-            q: "A patient with nausea and vomiting has chest pain and diaphoresis. What should you suspect?",
-            options: ["Gastroesophageal reflux", "Myocardial infarction", "Peptic ulcer", "Pancreatitis"],
-            correct: 1,
-            explanation: "Nausea and vomiting can be atypical symptoms of myocardial infarction, especially in women and diabetics."
+            "q": "Which allergy is especially recorded?",
+            "options": [
+                "Antiemetic or analgesic allergies",
+                "Pollen",
+                "None",
+                "Latex only"
+            ],
+            "correct": 0,
+            "explanation": "Medication-related allergies."
         },
         {
-            q: "Why should you avoid giving oral antiemetics to a patient with vomiting?",
-            options: ["They may be vomited before absorption", "They cause sedation", "They interact with other drugs", "They are less effective"],
-            correct: 0,
-            explanation: "Oral medications may be vomited; IV/IM route is preferred."
+            "q": "What is the KPI?",
+            "options": [
+                "Antiemetic for moderate to severe symptoms",
+                "Fluids for all",
+                "Transport within 10 minutes",
+                "12-lead in all"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is nausea?", answer: "Subjective sensation of wanting to vomit." },
-        { category: "Causes", question: "Name three common causes of nausea and vomiting.", answer: "Gastroenteritis, pregnancy, medication side effects, bowel obstruction, DKA, head injury." },
-        { category: "Red flags", question: "What are red flags in nausea and vomiting?", answer: "Hematemesis, severe abdominal pain, altered mental status, hypotension, projectile vomiting, bilious vomiting." },
-        { category: "Dehydration signs", question: "What are signs of dehydration from vomiting?", answer: "Dry mucous membranes, decreased skin turgor, tachycardia, hypotension, oliguria." },
-        { category: "Metoclopramide dose", question: "What is the dose of metoclopramide for an adult?", answer: "10 mg IV/IM (slow IV over 3 minutes)." },
-        { category: "Metoclopramide contraindications", question: "What are contraindications to metoclopramide?", answer: "Epilepsy, bowel obstruction, Parkinson's disease, pheochromocytoma, allergy." },
-        { category: "Fluid resuscitation", question: "What is the initial fluid bolus for an adult with vomiting and signs of dehydration?", answer: "500-1000 mL normal saline." },
-        { category: "Pediatric fluid bolus", question: "What is the pediatric fluid bolus for vomiting with dehydration?", answer: "20 mL/kg crystalloid." },
-        { category: "Extrapyramidal symptoms", question: "What are extrapyramidal symptoms (EPS)?", answer: "Dystonia, oculogyric crisis, torticollis, akathisia; can occur with metoclopramide." },
-        { category: "Treatment of EPS", question: "How are extrapyramidal symptoms treated?", answer: "Diphenhydramine 1 mg/kg IV/IM." },
-        { category: "Pregnancy considerations", question: "What conditions in pregnancy can cause nausea and vomiting?", answer: "Hyperemesis gravidarum, ectopic pregnancy, pre-eclampsia, appendicitis." },
-        { category: "Head injury", question: "Why is vomiting after head injury concerning?", answer: "May indicate increased intracranial pressure." },
-        { category: "Diabetic ketoacidosis", question: "How does DKA present with nausea and vomiting?", answer: "Nausea, vomiting, abdominal pain, hyperglycemia, acidosis, Kussmaul respirations." },
-        { category: "Myocardial infarction", question: "Why can myocardial infarction cause nausea and vomiting?", answer: "Vagal stimulation or inferior wall ischemia can cause GI symptoms." },
-        { category: "Bowel obstruction", question: "What are signs of bowel obstruction?", answer: "Vomiting (bilious or feculent), abdominal distension, pain, obstipation." },
-        { category: "Documentation", question: "What should be documented in nausea and vomiting?", answer: "Onset, character of vomitus, associated symptoms, vital signs, hydration status, treatment." },
-        { category: "KPI", question: "What is the key performance indicator for nausea and vomiting?", answer: "Administer antiemetic to patients with moderate to severe symptoms (unless contraindicated)." },
-        { category: "Pediatric note", question: "Why is metoclopramide not recommended in children?", answer: "High risk of extrapyramidal side effects." },
-        { category: "Elderly considerations", question: "What should be considered in elderly with vomiting?", answer: "Increased risk of dehydration, electrolyte imbalance, and aspiration." },
-        { category: "Prophylactic antiemetics", question: "Should antiemetics be given prophylactically with opioids?", answer: "No, routine prophylactic antiemetics are not recommended; give only if nausea occurs." }
+    "flashcards": [
+        {
+            "question": "Scope",
+            "answer": "Nausea and/or vomiting from any cause, traumatic or not."
+        },
+        {
+            "question": "Red flags",
+            "answer": "Persistent vomiting or hematemesis; suspected pregnancy complications."
+        },
+        {
+            "question": "Shock signs",
+            "answer": "SBP <90, HR >100 (adult), AMS, poor perfusion."
+        },
+        {
+            "question": "Adult fluid",
+            "answer": "500–1000 mL NS or RL (text); 250–500 mL (flowchart); EMT."
+        },
+        {
+            "question": "Pediatric fluid",
+            "answer": "20 mL/kg (text); 5–10 mL/kg (flowchart)."
+        },
+        {
+            "question": "Metoclopramide",
+            "answer": "10 mg IV/IM, adults only (P)."
+        },
+        {
+            "question": "Children and metoclopramide",
+            "answer": "Not recommended."
+        },
+        {
+            "question": "ALS for antiemetics",
+            "answer": "Generally not appropriate."
+        },
+        {
+            "question": "Opioids and antiemetics",
+            "answer": "No prophylactic antiemetic."
+        },
+        {
+            "question": "History",
+            "answer": "OPQRST and SAMPLE."
+        },
+        {
+            "question": "IV access",
+            "answer": "Dehydration, hypotension, expected medication."
+        },
+        {
+            "question": "Pain",
+            "answer": "Pain Management CPG."
+        },
+        {
+            "question": "Underlying cause",
+            "answer": "Nausea and vomiting usually have one: find and treat it."
+        },
+        {
+            "question": "Fluid repeat",
+            "answer": "Reassess and repeat as needed."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "None noted."
+        },
+        {
+            "question": "Documentation",
+            "answer": "Duration, severity, intake, medications, vitals, exam, drugs and fluids, pain scores, pregnancy status, transport rationale."
+        },
+        {
+            "question": "KPI",
+            "answer": "Antiemetic for moderate to severe symptoms unless contraindicated."
+        },
+        {
+            "question": "Fluid level",
+            "answer": "EMT."
+        },
+        {
+            "question": "Metoclopramide level",
+            "answer": "P."
+        },
+        {
+            "question": "Fluid types",
+            "answer": "Normal saline or Ringer's lactate."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_10_1",
-            scenario: "A 30-year-old female presents with severe nausea, vomiting, and abdominal pain. She is 8 weeks pregnant. BP 90/60, HR 110, pale. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Give metoclopramide", f: "Antiemetic is not the priority; she may have ectopic pregnancy." },
-                { t: "Establish IV access and give fluid bolus", f: "Correct. She is in shock; fluid resuscitation is critical." },
-                { t: "Perform a pelvic exam", f: "Not within EMS scope; transport promptly." },
-                { t: "Give oral glucose", f: "Not indicated." }
+            "id": "crit_6_10_1",
+            "scenario": "A 30-year-old woman, 8 weeks pregnant, has severe vomiting and abdominal pain; BP 90/60, HR 110, pale.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Treat as a red flag: IV access, fluid bolus, urgent transport",
+                    "f": "Correct. Suspected pregnancy complication with shock."
+                },
+                {
+                    "t": "Metoclopramide and leave",
+                    "f": "Red flags and shock need transport."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "She is shocked."
+                },
+                {
+                    "t": "Reassure: morning sickness",
+                    "f": "Consider ectopic pregnancy."
+                }
             ],
-            correct: 1,
-            explanation: "Hypotension and tachycardia in early pregnancy with abdominal pain suggest possible ectopic pregnancy; treat shock and transport urgently.",
-            kpi: "IV fluids administered and patient transported."
+            "correct": 0,
+            "explanation": "Shock signs and a suspected pregnancy complication.",
+            "kpi": "Antiemetic for moderate to severe symptoms."
         },
         {
-            id: "crit_6_10_2",
-            scenario: "A 60-year-old male with nausea and vomiting for 12 hours. He has a history of diabetes and is on insulin. RBS 450 mg/dL, BP 100/70, HR 110, dry mucous membranes. He is alert. What is the likely cause?",
-            question: "What is the most likely diagnosis and next step?",
-            options: [
-                { t: "Gastroenteritis; give metoclopramide", f: "Hyperglycemia suggests DKA." },
-                { t: "Diabetic ketoacidosis; give fluid bolus and transport", f: "Correct. Nausea, vomiting, and hyperglycemia in a diabetic suggest DKA." },
-                { t: "Pancreatitis; give pain relief", f: "Possible, but DKA is more likely given history." },
-                { t: "Myocardial infarction; perform ECG", f: "Not the priority." }
+            "id": "crit_6_10_2",
+            "scenario": "A 60-year-old insulin-treated diabetic has vomited for 12 hours. RBS 450 mg/dL, dry, HR 110.",
+            "question": "What do you treat?",
+            "options": [
+                {
+                    "t": "The cause: Hyperglycemia CPG fluids; antiemetic as needed",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Antiemetic only",
+                    "f": "Treat the underlying cause."
+                },
+                {
+                    "t": "Insulin",
+                    "f": "Not in these CPGs."
+                },
+                {
+                    "t": "Nothing",
+                    "f": "He is dehydrated."
+                }
             ],
-            correct: 1,
-            explanation: "DKA presents with nausea, vomiting, hyperglycemia, and dehydration; fluid resuscitation is key.",
-            kpi: "IV fluids administered."
+            "correct": 0,
+            "explanation": "Nausea and vomiting usually have an underlying cause.",
+            "kpi": "Antiemetic for moderate to severe symptoms."
         },
         {
-            id: "crit_6_10_3",
-            scenario: "A 5-year-old child with vomiting and diarrhea for 1 day. He is lethargic, has dry mucous membranes, and a sunken fontanelle. BP 80/50, HR 140. What should you do?",
-            question: "What is the priority?",
-            options: [
-                { t: "Give oral rehydration solution", f: "He is in shock; oral is unsafe." },
-                { t: "Establish IV access and give 20 mL/kg normal saline bolus", f: "Correct. The child is in hypovolemic shock." },
-                { t: "Administer metoclopramide", f: "Not indicated; fluids are priority." },
-                { t: "Transport without intervention", f: "Fluids should be given en route." }
+            "id": "crit_6_10_3",
+            "scenario": "A 5-year-old with vomiting and diarrhea is lethargic and dry; HR 140, cool peripheries.",
+            "question": "What is the priority?",
+            "options": [
+                {
+                    "t": "IV access and 20 mL/kg fluid bolus, reassess",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Metoclopramide",
+                    "f": "Not recommended for children."
+                },
+                {
+                    "t": "Adult 1000 mL bolus",
+                    "f": "Use weight-based dosing."
+                },
+                {
+                    "t": "Oral fluids while lethargic",
+                    "f": "He needs IV fluid."
+                }
             ],
-            correct: 1,
-            explanation: "Signs of shock in a child require immediate fluid resuscitation.",
-            kpi: "IV fluids administered."
+            "correct": 0,
+            "explanation": "Signs of shock or dehydration: fluid resuscitation.",
+            "kpi": "Antiemetic for moderate to severe symptoms."
         },
         {
-            id: "crit_6_10_4",
-            scenario: "A 45-year-old male with nausea and vomiting after heavy alcohol use. He has epigastric pain radiating to the back. BP 110/70, HR 100, tender epigastrium. What is the likely cause?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Acute pancreatitis; give pain relief and transport", f: "Correct. Epigastric pain radiating to back after alcohol suggests pancreatitis." },
-                { t: "Gastroenteritis; give metoclopramide", f: "Pain pattern is more consistent with pancreatitis." },
-                { t: "Peptic ulcer; give antacid", f: "Not a prehospital intervention." },
-                { t: "Myocardial infarction; perform ECG", f: "Less likely given history and pain pattern." }
+            "id": "crit_6_10_4",
+            "scenario": "A 45-year-old adult with gastroenteritis is vomiting repeatedly and miserable; vital signs are normal. You are a Paramedic.",
+            "question": "What do you give?",
+            "options": [
+                {
+                    "t": "Metoclopramide 10 mg IV/IM",
+                    "f": "Correct: moderate to severe symptoms (KPI)."
+                },
+                {
+                    "t": "Nothing",
+                    "f": "The KPI expects an antiemetic."
+                },
+                {
+                    "t": "Request ALS for the antiemetic",
+                    "f": "Generally not appropriate; you can give it."
+                },
+                {
+                    "t": "A 2000 mL bolus",
+                    "f": "No shock or dehydration signs."
+                }
             ],
-            correct: 0,
-            explanation: "Pancreatitis presents with epigastric pain radiating to back, nausea, vomiting, and history of alcohol use or gallstones.",
-            kpi: "Pain assessed and patient transported."
+            "correct": 0,
+            "explanation": "Antiemetic for moderate to severe nausea or vomiting unless contraindicated.",
+            "kpi": "Antiemetic for moderate to severe symptoms."
         },
         {
-            id: "crit_6_10_5",
-            scenario: "A 70-year-old female with nausea and vomiting. She is on warfarin and has a history of atrial fibrillation. She has severe headache and confusion. BP 180/100, HR 80. What should you suspect?",
-            question: "What is the most likely diagnosis?",
-            options: [
-                { t: "Gastroenteritis", f: "Headache and confusion are not typical." },
-                { t: "Intracranial hemorrhage", f: "Correct. Patient on anticoagulant with headache and confusion suggests possible intracranial bleed." },
-                { t: "Migraine", f: "Not likely given age and anticoagulation." },
-                { t: "Hypertensive emergency", f: "Possible, but anticoagulation increases bleed risk." }
+            "id": "crit_6_10_5",
+            "scenario": "Your patient received morphine for a fracture and has no nausea.",
+            "question": "Do you give a prophylactic antiemetic?",
+            "options": [
+                {
+                    "t": "No",
+                    "f": "Correct. Prophylactic antiemetics for opiates are not recommended."
+                },
+                {
+                    "t": "Yes, always with morphine",
+                    "f": "Not recommended."
+                },
+                {
+                    "t": "Yes, double dose",
+                    "f": "Not indicated."
+                },
+                {
+                    "t": "Yes, in children",
+                    "f": "Metoclopramide is adults only anyway."
+                }
             ],
-            correct: 1,
-            explanation: "Anticoagulated patient with new headache, confusion, and vomiting should be evaluated for intracranial hemorrhage.",
-            kpi: "Stroke/bleed assessment performed and patient transported urgently."
+            "correct": 0,
+            "explanation": "Give an antiemetic if nausea or vomiting develops.",
+            "kpi": "Antiemetic for moderate to severe symptoms."
         }
     ]
 };
