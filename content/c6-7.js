@@ -1,386 +1,783 @@
-/* ========== Chapter 6.7 � Fever and Sepsis ========== */
+/* ========== CPG 6.7 – Fever and Sepsis ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-7",
-    title: "Fever and Sepsis",
-    shortTitle: "6.7 Fever and Sepsis",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">??? Fever and Sepsis</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify and manage sepsis or septic shock.</li>
-                <li>Identify patients at risk of sepsis.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with fever or suspected sepsis, including:
-                    <ul>
-                        <li>Documented or reported fever (temperature >38�C) or hypothermia (<36�C).</li>
-                        <li>Symptoms suggestive of infection (e.g., chills, rigors, malaise, or localized symptoms like cough, dysuria, or wound infection).</li>
-                        <li>Signs of systemic inflammatory response or sepsis, such as tachycardia, tachypnea, hypotension, or altered mental status.</li>
-                        <li>Suspected septic shock with hypotension (SBP <90 mmHg in adults, or age-specific for pediatrics) and signs of poor perfusion.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Fever or symptoms attributable to a non-infectious cause (e.g., heat stroke, drug reaction).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Infection History:</strong> Identify potential sources of infection (respiratory, urinary, skin, abdominal). Recent illness, surgery, invasive procedures, immunocompromised states (diabetes, cancer, HIV).</li>
-                <li><strong>Sepsis Screening (SIRS Criteria):</strong> Assess for systemic inflammatory response syndrome (SIRS) � two or more of:
-                    <ul>
-                        <li>Temperature >38�C or <36�C.</li>
-                        <li>Heart rate >90 beats/min (or age-specific for pediatrics).</li>
-                        <li>Respiratory rate >20 breaths/min (or age-specific for pediatrics).</li>
-                        <li>Altered mental status or confusion.</li>
-                    </ul>
-                </li>
-                <li><strong>Organ Dysfunction:</strong> Look for signs of end-organ hypoperfusion: decreased urine output, mottled skin, hypoxia, hypotension.</li>
-                <li><strong>Temperature Assessment:</strong> Measure body temperature; note subjective reports if unavailable.</li>
-                <li><strong>Source Identification:</strong> Look for localized signs of infection (erythema, purulent discharge, cough with sputum). Check for medical devices (catheters, central lines).</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for septic shock, hypotension, or altered mental status.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Oxygen:</strong> Titrate to maintain SpO2 =94% if hypoxia or respiratory distress.</li>
-                <li><strong>Consider ALS back-up:</strong> For septic shock, severe respiratory distress, or altered mental status.</li>
-                <li><strong>IV Access:</strong> Establish IV/IO access for fluid resuscitation and medication.</li>
-                <li><strong>Fluid Resuscitation:</strong> Administer Normal Saline or Ringer's Lactate for signs of sepsis or septic shock:
-                    <ul>
-                        <li>Adults: 500-1000 mL bolus IV, repeat as needed (up to 2000 mL).</li>
-                        <li>Pediatrics: 20 mL/kg bolus IV, repeat as needed (max 60 mL/kg).</li>
-                        <li>Monitor for fluid overload, especially in patients with cardiac or renal comorbidities.</li>
-                    </ul>
-                </li>
-                <li><strong>Paracetamol:</strong> Indicated to reduce fever and improve patient comfort.
-                    <ul>
-                        <li>Adults: 1 g IV/PO.</li>
-                        <li>Pediatrics: 15 mg/kg IV/PO (max 1 g).</li>
-                    </ul>
-                </li>
-                <li><strong>Vasopressors (Adrenaline):</strong> Indicated for fluid-refractory hypotension.
-                    <ul>
-                        <li>Push dose: Adults 0.01 mg every 2-5 minutes; Pediatrics 0.005 mg/kg every 2-5 minutes.</li>
-                        <li>Infusion: Adults 2-10 mcg/min; Pediatrics 0.05-0.3 mcg/kg/min (use syringe driver when possible).</li>
-                    </ul>
-                </li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, mental status, and response to interventions.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Patients who meet SIRS criteria must be recommended transfer to hospital.</li>
-                <li>Use caution with fluid resuscitation in patients with cardiac or renal disease.</li>
-                <li>Adrenaline infusions require careful monitoring; reduce doses in patients with underlying cardiac disease.</li>
-                <li>In children <5 years, IV push adrenaline is preferred over infusion when a syringe driver is not available.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li><strong>Elderly patients:</strong> Fever may be absent; present with lethargy, confusion, or falls. Tachycardia may be masked by beta-blockers. Baseline hypertension may mask hypotension.</li>
-                <li><strong>Pediatric patients:</strong> Fever may be the only sign; assess for irritability, poor feeding, or lethargy.</li>
-                <li>Clearly identify to Dispatch 2 that the patient meets SIRS criteria when coordinating hospital admission.</li>
-                <li>Early recognition and treatment of sepsis improves outcomes; do not delay transport.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>SIRS criteria met, temperature, vital signs, mental status.</li>
-                <li>Suspected source of infection, recent procedures, immunosuppression.</li>
-                <li>Fluids administered (type, volume), medications given (paracetamol, adrenaline).</li>
-                <li>Response to treatment, hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Assess and document SIRS criteria for all suspected sepsis patients.</li>
-                <li>Assess and document temperature for all suspected sepsis patients.</li>
-                <li>Administer fluid for hypotension (where appropriate).</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-7",
+    "title": "Fever and Sepsis",
+    "shortTitle": "6.7 Fever and Sepsis",
+    "guide": {
+        "cpg": "6.7",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Fever and Sepsis",
+        "lead": "Screen every febrile or unwell patient with SIRS: two or more criteria means suspected sepsis, monitoring, and transfer. Treat poor perfusion with fluid boluses up to 2000 mL (child 60 mL/kg); if perfusion stays poor, adrenaline (AP). Tell Dispatch 2 that SIRS criteria are met.",
+        "source": {
+            "label": "CPG 6.7",
+            "pages": "176–179",
+            "pdf": "../pdf_sections/6_7_Fever_and_Sepsis.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Fever (&gt;38°C) or hypothermia (&lt;36°C), measured or reported.",
+                    "Symptoms of infection: chills, rigors, malaise; cough, dysuria, wound infection.",
+                    "Tachycardia, tachypnea, hypotension or altered mental status; suspected septic shock."
+                ],
+                "exclude": [
+                    "Fever from a non-infectious cause (heat stroke, drug reaction)."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "SIRS: 2 or more = criteria met",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Criterion",
+                    "Threshold"
+                ],
+                "rows": [
+                    [
+                        "Temperature",
+                        "&gt;38°C or &lt;36°C (flowchart: &gt;38.3)"
+                    ],
+                    [
+                        "Heart rate",
+                        "&gt;90 beats/min (age-specific in children)"
+                    ],
+                    [
+                        "Respiratory rate",
+                        "&gt;20 breaths/min (age-specific in children)"
+                    ],
+                    [
+                        "Mental status",
+                        "Acutely altered or confused"
+                    ]
+                ],
+                "notes": [
+                    "SIRS met: add ECG, EtCO<sub>2</sub> and SpO<sub>2</sub> to routine vital signs; recommend transfer; tell Dispatch 2 the patient meets SIRS criteria.",
+                    "Look for organ dysfunction: reduced urine output, mottled skin, hypoxia."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Find the source",
+                "icon": "search",
+                "items": [
+                    "Respiratory, urinary, skin or abdominal; erythema, pus, productive cough.",
+                    "Catheters and central lines.",
+                    "Recent illness, surgery or procedures; immunocompromise (diabetes, cancer, HIV).",
+                    "Suspected meningitis: mask and goggles."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Oxygen",
+                        "text": "If hypoxic or distressed: SpO<sub>2</sub> ≥94%."
+                    },
+                    {
+                        "title": "Paracetamol for fever",
+                        "level": "EMT",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "1 g IV/PO",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "15 mg/kg IV/PO (maximum 1 g)",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Fluid for poor perfusion",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate, repeated as needed. Watch for overload in cardiac or renal disease. Septic shock: aggressive fluids and prioritise transport.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL IV",
+                                "note": "Maximum 2000 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg IV",
+                                "note": "Maximum 60 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Adrenaline for fluid-refractory hypotension",
+                        "level": "AP",
+                        "text": "When poor perfusion remains after 2000 mL (adult) or 40 mL/kg (child). Titrate to MAP &gt;65, better perfusion or returning urine output."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Adrenaline (AP)",
+                "icon": "syringe",
+                "columns": [
+                    "",
+                    "Adult",
+                    "Pediatric"
+                ],
+                "rows": [
+                    [
+                        "Push dose",
+                        "0.01 mg IV/IO every 2–5 minutes",
+                        "0.005 mg/kg IV/IO every 2–5 minutes"
+                    ],
+                    [
+                        "Infusion",
+                        "2–10 mcg/min IV",
+                        "0.05–0.3 mcg/kg/min IV"
+                    ]
+                ],
+                "notes": [
+                    "Use a syringe driver where possible. Through a drip set: cross-check the rate calculation and guard it from accidental change.",
+                    "Under 5 years without a syringe driver: push doses rather than a drip-set infusion.",
+                    "Reduce adrenaline in underlying cardiac disease."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and the elderly",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "SBP &lt;90 mmHg (adult) despite fluids.",
+                            "Altered mental status or unresponsiveness.",
+                            "Severe respiratory distress or SpO<sub>2</sub> &lt;90%.",
+                            "Septic shock: mottled skin, capillary refill &gt;2 seconds.",
+                            "Immunocompromised with fever and systemic symptoms."
+                        ]
+                    },
+                    {
+                        "title": "Elderly: signs hide",
+                        "items": [
+                            "Fever and chills may show as lethargy or poor appetite; the fever response may be impaired.",
+                            "Confusion masked by dementia; tachycardia by beta-blockers; tachypnea by lung disease; hypotension by usual hypertension."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: paracetamol",
+                                "sub": "15 mg/kg, maximum 1 g",
+                                "href": "../pages/drug-calculator.html?drug=Paracetamol",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: adrenaline",
+                                "sub": "Push dose 0.005 mg/kg",
+                                "href": "../pages/drug-calculator.html?drug=Epinephrine%20(Adrenaline)",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "SIRS criteria assessed and documented in suspected sepsis.",
+                    "Temperature measured and documented in suspected sepsis.",
+                    "Fluid given for hypotension where appropriate."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "8.10 Hyperthermia",
+                        "href": "c8-10.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What are the SIRS criteria?",
-            options: ["Fever >38�C or <36�C, HR >90, RR >20, altered mental status", "SBP <90, HR >100, RR >24, temperature >39�C", "WBC >12,000, lactate >2, hypotension, oliguria", "Cough, fever, dyspnea, chest pain"],
-            correct: 0,
-            explanation: "SIRS criteria include temperature >38�C or <36�C, heart rate >90, respiratory rate >20, and altered mental status (or WBC abnormalities, though not typically measured prehospital)."
+            "q": "What are the SIRS criteria?",
+            "options": [
+                "Temperature >38 or <36°C, HR >90, RR >20, acute confusion",
+                "SBP <90, HR >120, RR >30, fever",
+                "Cough, fever, dyspnea",
+                "Lactate, WBC, urine output"
+            ],
+            "correct": 0,
+            "explanation": "Two or more are needed."
         },
         {
-            q: "A patient with suspected sepsis has a BP of 85/50 after 1000 mL normal saline. What is the next step?",
-            options: ["Give another fluid bolus", "Start adrenaline infusion", "Transport without further intervention", "Administer paracetamol"],
-            correct: 1,
-            explanation: "Fluid-refractory hypotension in septic shock requires vasopressor support (adrenaline)."
+            "q": "BP 85/50 after 1000 mL in an adult with sepsis. What next?",
+            "options": [
+                "Another bolus (up to 2000 mL), reassess",
+                "Adrenaline straight away",
+                "Stop fluids",
+                "Paracetamol only"
+            ],
+            "correct": 0,
+            "explanation": "Adrenaline is for poor perfusion after 2000 mL in adults."
         },
         {
-            q: "What is the initial fluid bolus for an adult with septic shock?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults with septic shock should receive 500-1000 mL crystalloid bolus, repeated as needed."
+            "q": "What is the adult bolus?",
+            "options": [
+                "500–1000 mL",
+                "100 mL",
+                "3000 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Repeat as needed, maximum 2000 mL."
         },
         {
-            q: "Which of the following is a red flag for sepsis?",
-            options: ["Temperature 38.5�C", "Heart rate 100", "Hypotension (SBP <90)", "Respiratory rate 22"],
-            correct: 2,
-            explanation: "Hypotension indicates septic shock and requires immediate intervention."
+            "q": "Which is a red flag?",
+            "options": [
+                "SBP <90 despite fluids",
+                "Temperature 38.2°C alone",
+                "HR 92 alone",
+                "RR 21 alone"
+            ],
+            "correct": 0,
+            "explanation": "Hypotension despite fluid resuscitation."
         },
         {
-            q: "What is the target SpO2 for a patient with sepsis?",
-            options: ["=88%", "=90%", "=94%", "100%"],
-            correct: 2,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia and support tissue oxygenation."
+            "q": "What is the oxygen target?",
+            "options": [
+                "SpO₂ ≥94% if hypoxic or distressed",
+                "100% always",
+                "88–92%",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Titrate."
         },
         {
-            q: "A 70-year-old with suspected sepsis has a BP of 100/70, HR 110, RR 24, temperature 38.5�C, and is confused. How many SIRS criteria does she meet?",
-            options: ["1", "2", "3", "4"],
-            correct: 3,
-            explanation: "She meets criteria for temperature (38.5�C), HR >90, RR >20, and altered mental status � all four."
+            "q": "BP 100/70, HR 110, RR 24, 38.5°C, confused. How many SIRS criteria?",
+            "options": [
+                "4",
+                "1",
+                "2",
+                "3"
+            ],
+            "correct": 0,
+            "explanation": "Temperature, HR, RR and confusion."
         },
         {
-            q: "What is the dose of paracetamol for an adult with fever?",
-            options: ["500 mg", "1 g", "2 g", "500 mg IV only"],
-            correct: 1,
-            explanation: "Adult dose of paracetamol is 1 g IV/PO for fever or pain."
+            "q": "What is the adult paracetamol dose?",
+            "options": [
+                "1 g IV/PO",
+                "500 mg IM",
+                "2 g IV",
+                "100 mg"
+            ],
+            "correct": 0,
+            "explanation": "Paracetamol is EMT."
         },
         {
-            q: "Which of the following is a common source of sepsis in elderly patients?",
-            options: ["Urinary tract infection", "Pneumonia", "Skin/soft tissue infection", "All of the above"],
-            correct: 3,
-            explanation: "UTI, pneumonia, and skin infections are frequent sources of sepsis in the elderly."
+            "q": "Which is a source of infection to look for?",
+            "options": [
+                "A urinary catheter",
+                "A wristwatch",
+                "A plaster cast without wound",
+                "Glasses"
+            ],
+            "correct": 0,
+            "explanation": "Medical devices are potential sources."
         },
         {
-            q: "What is the pediatric fluid bolus dose for septic shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "The initial bolus is 20 mL/kg crystalloid, repeated as needed up to 60 mL/kg total."
+            "q": "What is the pediatric bolus?",
+            "options": [
+                "20 mL/kg",
+                "5 mL/kg",
+                "50 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Repeat as needed, maximum 60 mL/kg."
         },
         {
-            q: "A patient with sepsis has a heart rate of 40 and BP 80/50. What should you suspect?",
-            options: ["Septic shock", "Cardiogenic shock secondary to myocardial depression", "Beta-blocker overdose", "All of the above"],
-            correct: 2,
-            explanation: "Bradycardia in sepsis is unusual; consider beta-blocker toxicity or other causes of bradycardia."
+            "q": "A septic patient on beta-blockers has HR 80 and low BP. What does it mean?",
+            "options": [
+                "Tachycardia may be masked: still treat as shock",
+                "No shock",
+                "Bradycardia protocol only",
+                "Stop fluids"
+            ],
+            "correct": 0,
+            "explanation": "Beta-blockers mask tachycardia."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with septic shock?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid is recommended in the prehospital setting, with reassessment after each bolus."
+            "q": "What is the adult maximum fluid?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "Then consider adrenaline (AP)."
         },
         {
-            q: "When should vasopressors be initiated in septic shock?",
-            options: ["Immediately upon diagnosis", "After 1 L fluid in adults", "After 2 L fluid", "Only in hospital"],
-            correct: 1,
-            explanation: "Vasopressors are indicated if hypotension persists after adequate fluid resuscitation (usually 1-2 L)."
+            "q": "When is adrenaline considered in a child?",
+            "options": [
+                "Poor perfusion after 40 mL/kg of fluid",
+                "Immediately",
+                "After 100 mL/kg",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Per the flowchart."
         },
         {
-            q: "What is the preferred vasopressor for septic shock?",
-            options: ["Dopamine", "Norepinephrine", "Adrenaline", "Phenylephrine"],
-            correct: 2,
-            explanation: "Adrenaline (epinephrine) is the preferred vasopressor in the DCAS setting for septic shock."
+            "q": "Which vasopressor does this CPG use?",
+            "options": [
+                "Adrenaline",
+                "Dopamine",
+                "Atropine",
+                "Vasopressin"
+            ],
+            "correct": 0,
+            "explanation": "AP level."
         },
         {
-            q: "What is the dose of adrenaline push dose for an adult with septic shock?",
-            options: ["0.01 mg", "0.1 mg", "1 mg", "0.001 mg"],
-            correct: 1,
-            explanation: "Adult push dose adrenaline is 0.1 mg (100 mcg) IV every 2-5 minutes as needed."
+            "q": "What is the adult push-dose adrenaline?",
+            "options": [
+                "0.01 mg IV/IO every 2–5 minutes",
+                "0.1 mg",
+                "1 mg",
+                "0.5 mg IM"
+            ],
+            "correct": 0,
+            "explanation": "Titrate to MAP >65."
         },
         {
-            q: "A child with sepsis has a BP of 70/40 after 40 mL/kg fluids. What is the next step?",
-            options: ["Give another fluid bolus", "Start adrenaline infusion", "Administer dopamine", "Transport without further intervention"],
-            correct: 1,
-            explanation: "Fluid-refractory shock requires vasopressor support; adrenaline infusion is appropriate."
+            "q": "What is the adult adrenaline infusion?",
+            "options": [
+                "2–10 mcg/min",
+                "0.05–0.3 mcg/min",
+                "20 mcg/kg/min",
+                "1 mg/min"
+            ],
+            "correct": 0,
+            "explanation": "Children: 0.05–0.3 mcg/kg/min."
         },
         {
-            q: "Which of the following is a sign of organ dysfunction in sepsis?",
-            options: ["Mottled skin", "Altered mental status", "Oliguria", "All of the above"],
-            correct: 3,
-            explanation: "Mottled skin, altered mental status, and decreased urine output indicate end-organ hypoperfusion."
+            "q": "Which is a sign of organ dysfunction?",
+            "options": [
+                "Mottled skin or reduced urine output",
+                "Warm pink skin",
+                "Normal mental status",
+                "Normal SpO₂"
+            ],
+            "correct": 0,
+            "explanation": "Also hypoxia."
         },
         {
-            q: "What is the dose of adrenaline infusion for an adult with septic shock?",
-            options: ["0.05-0.3 mcg/kg/min", "1-2 mcg/min", "5-10 mcg/min", "2-10 mcg/min"],
-            correct: 3,
-            explanation: "Adrenaline infusion for septic shock is typically 2-10 mcg/min in adults."
+            "q": "What are the adrenaline titration targets?",
+            "options": [
+                "MAP >65, improving shock, returning urine output",
+                "SBP 200",
+                "HR 150",
+                "Normal temperature"
+            ],
+            "correct": 0,
+            "explanation": "As listed."
         },
         {
-            q: "A patient with suspected sepsis has a temperature of 35.5�C. Is this a SIRS criterion?",
-            options: ["Yes, hypothermia qualifies", "No, only fever qualifies", "Only if patient is also hypotensive", "Only in pediatrics"],
-            correct: 0,
-            explanation: "SIRS includes temperature <36�C (hypothermia) as well as fever."
+            "q": "Temperature 35.5°C: does it count?",
+            "options": [
+                "Yes: below 36°C",
+                "No",
+                "Only in children",
+                "Only with fever"
+            ],
+            "correct": 0,
+            "explanation": "Hypothermia is a SIRS criterion."
         },
         {
-            q: "What is the recommended initial fluid for septic shock?",
-            options: ["Dextrose 5%", "Normal saline", "Ringer's lactate", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid (normal saline or Ringer's lactate) is recommended for initial resuscitation."
+            "q": "Which fluids are used?",
+            "options": [
+                "Normal saline or Ringer's lactate",
+                "Dextrose 5%",
+                "Colloids",
+                "Oral only"
+            ],
+            "correct": 0,
+            "explanation": "Crystalloid boluses."
         },
         {
-            q: "A patient with sepsis has a lactate level of 4.2 mmol/L. What does this indicate?",
-            options: ["Normal", "Hypoglycemia", "Tissue hypoperfusion", "Liver failure"],
-            correct: 2,
-            explanation: "Elevated lactate indicates anaerobic metabolism due to hypoperfusion; a marker of severe sepsis."
+            "q": "A child under 5, no syringe driver, needs adrenaline. Which form?",
+            "options": [
+                "Push doses",
+                "Drip-set infusion",
+                "IM",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Push dose preferred over a drip-set infusion."
         },
         {
-            q: "Which of the following is a risk factor for sepsis?",
-            options: ["Age >65", "Immunosuppression", "Diabetes", "All of the above"],
-            correct: 3,
-            explanation: "Elderly, immunosuppressed, and diabetic patients are at increased risk for sepsis."
+            "q": "Which patient is at higher risk?",
+            "options": [
+                "Immunocompromised (diabetes, cancer, HIV)",
+                "Healthy athlete",
+                "Teenager after a cold",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "And recent surgery or procedures."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with septic shock?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Up to 60 mL/kg crystalloid may be given in the prehospital setting, with reassessment after each 20 mL/kg bolus."
+            "q": "What is the pediatric maximum fluid?",
+            "options": [
+                "60 mL/kg",
+                "20 mL/kg",
+                "100 mL/kg",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "Reassess after each 20 mL/kg."
         },
         {
-            q: "A patient with sepsis is on a beta-blocker and has a HR of 80 with hypotension. What is the significance?",
-            options: ["Tachycardia is masked; patient may still be in shock", "Beta-blockers protect the heart", "No significance", "Patient is stable"],
-            correct: 0,
-            explanation: "Beta-blockers can blunt the tachycardic response to shock; hypotension despite a normal heart rate indicates severe illness."
+            "q": "What PPE for suspected meningitis?",
+            "options": [
+                "Mask and goggles",
+                "None",
+                "Gloves only",
+                "Full hazmat"
+            ],
+            "correct": 0,
+            "explanation": "As on the flowchart."
         },
         {
-            q: "What is the first-line antipyretic for fever in sepsis?",
-            options: ["Aspirin", "Ibuprofen", "Paracetamol", "Diclofenac"],
-            correct: 2,
-            explanation: "Paracetamol is preferred for fever reduction in sepsis due to its safety profile."
+            "q": "Which antipyretic is in this CPG?",
+            "options": [
+                "Paracetamol",
+                "Aspirin",
+                "Ibuprofen",
+                "Diclofenac"
+            ],
+            "correct": 0,
+            "explanation": "Adults 1 g; children 15 mg/kg."
         },
         {
-            q: "A patient with sepsis has a respiratory rate of 32. What does this indicate?",
-            options: ["Compensatory tachypnea", "Metabolic acidosis", "Hypoxia", "All of the above"],
-            correct: 3,
-            explanation: "Tachypnea in sepsis can be due to hypoxia, metabolic acidosis, or respiratory distress."
+            "q": "SIRS met. What extra monitoring?",
+            "options": [
+                "ECG, EtCO₂ and SpO₂",
+                "None",
+                "Temperature only",
+                "Blood cultures"
+            ],
+            "correct": 0,
+            "explanation": "Plus routine vital signs."
         },
         {
-            q: "Which of the following is a contraindication to fluid resuscitation in septic shock?",
-            options: ["Pulmonary edema", "Cardiogenic shock", "Renal failure", "All of the above are relative contraindications"],
-            correct: 3,
-            explanation: "Fluid administration should be cautious in patients with pulmonary edema, cardiogenic shock, or severe renal impairment."
+            "q": "What is the caution with fluids?",
+            "options": [
+                "Overload in cardiac or renal disease",
+                "None",
+                "Hyperglycemia",
+                "Hyperthermia"
+            ],
+            "correct": 0,
+            "explanation": "Monitor for fluid overload."
         },
         {
-            q: "What is the dose of adrenaline push dose for a pediatric patient with septic shock?",
-            options: ["0.001 mg/kg", "0.005 mg/kg", "0.01 mg/kg", "0.1 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric push dose adrenaline is 0.005 mg/kg (5 mcg/kg) IV every 2-5 minutes."
+            "q": "What is the pediatric push-dose adrenaline?",
+            "options": [
+                "0.005 mg/kg every 2–5 minutes",
+                "0.01 mg/kg every minute",
+                "0.1 mg/kg",
+                "1 mg"
+            ],
+            "correct": 0,
+            "explanation": "AP level."
         },
         {
-            q: "A patient with suspected sepsis has a fever of 39�C and is shivering. What should you do?",
-            options: ["Administer paracetamol", "Cover with blankets", "Cool the patient with tepid sponging", "Administer adrenaline"],
-            correct: 0,
-            explanation: "Antipyretics like paracetamol help reduce fever and patient discomfort; avoid overcooling."
+            "q": "What must Dispatch 2 be told?",
+            "options": [
+                "That the patient meets SIRS criteria",
+                "Nothing",
+                "Only the address",
+                "The temperature only"
+            ],
+            "correct": 0,
+            "explanation": "When coordinating ED admission."
         },
         {
-            q: "What is the key performance indicator for sepsis?",
-            options: ["Administer antibiotics", "Measure lactate", "Administer fluids for hypotension", "Perform a chest X-ray"],
-            correct: 2,
-            explanation: "Administering fluid for hypotension is a key prehospital KPI for sepsis management."
+            "q": "Which is a KPI?",
+            "options": [
+                "SIRS criteria documented",
+                "Antibiotics given",
+                "Lactate measured",
+                "Chest X-ray"
+            ],
+            "correct": 0,
+            "explanation": "Also temperature and fluids for hypotension."
         },
         {
-            q: "A patient with sepsis has a BP of 80/50 after 2 L normal saline. What should you do?",
-            options: ["Give another fluid bolus", "Start adrenaline infusion", "Transport without further intervention", "Administer dopamine"],
-            correct: 1,
-            explanation: "Fluid-refractory hypotension requires vasopressor support; adrenaline infusion is indicated."
+            "q": "Is adrenaline adjusted in cardiac disease?",
+            "options": [
+                "Yes: reduce it",
+                "No",
+                "Double it",
+                "Never give it"
+            ],
+            "correct": 0,
+            "explanation": "Reduce adrenaline in underlying cardiac disease."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is sepsis?", answer: "Life-threatening organ dysfunction caused by a dysregulated host response to infection." },
-        { category: "Septic shock", question: "What is septic shock?", answer: "Sepsis with persistent hypotension requiring vasopressors to maintain MAP =65 mmHg and lactate >2 mmol/L despite adequate fluid resuscitation." },
-        { category: "SIRS criteria", question: "What are the SIRS criteria?", answer: "Temperature >38�C or <36�C, heart rate >90, respiratory rate >20, and altered mental status or WBC >12,000 or <4,000." },
-        { category: "Risk factors", question: "Name three risk factors for sepsis.", answer: "Age >65, immunosuppression, diabetes, chronic kidney disease, recent surgery." },
-        { category: "Common sources", question: "What are common sources of sepsis?", answer: "Pneumonia, urinary tract infection, intra-abdominal infection, skin/soft tissue infection." },
-        { category: "Fluid resuscitation", question: "What is the initial fluid bolus for adult septic shock?", answer: "500-1000 mL crystalloid, repeated as needed up to 2000 mL." },
-        { category: "Pediatric fluid bolus", question: "What is the pediatric fluid bolus for septic shock?", answer: "20 mL/kg, repeated as needed up to 60 mL/kg total." },
-        { category: "Vasopressor", question: "What is the preferred vasopressor for septic shock?", answer: "Adrenaline (epinephrine)." },
-        { category: "Adrenaline push dose", question: "What is the adult push dose of adrenaline for septic shock?", answer: "0.1 mg IV every 2-5 minutes." },
-        { category: "Adrenaline infusion", question: "What is the adult adrenaline infusion rate for septic shock?", answer: "2-10 mcg/min." },
-        { category: "Pediatric adrenaline push", question: "What is the pediatric push dose of adrenaline for septic shock?", answer: "0.005 mg/kg (5 mcg/kg) IV every 2-5 minutes." },
-        { category: "Pediatric adrenaline infusion", question: "What is the pediatric adrenaline infusion rate for septic shock?", answer: "0.05-0.3 mcg/kg/min." },
-        { category: "Paracetamol dose", question: "What is the dose of paracetamol for fever in sepsis?", answer: "Adults 1 g, pediatrics 15 mg/kg (max 1 g)." },
-        { category: "Red flags", question: "What are red flags for sepsis?", answer: "Hypotension, altered mental status, hypoxia, respiratory distress, mottled skin." },
-        { category: "Elderly considerations", question: "How does sepsis present differently in the elderly?", answer: "Fever may be absent; may present with falls, confusion, lethargy, or decreased appetite." },
-        { category: "Pediatric considerations", question: "What are signs of sepsis in children?", answer: "Fever or hypothermia, lethargy, irritability, poor feeding, tachypnea, tachycardia." },
-        { category: "Lactate", question: "What does elevated lactate indicate in sepsis?", answer: "Tissue hypoperfusion due to anaerobic metabolism; marker of severity." },
-        { category: "Source control", question: "What is source control in sepsis?", answer: "Identifying and managing the infection source (e.g., drainage, antibiotics, removal of infected device)." },
-        { category: "KPI", question: "What is a key performance indicator for sepsis?", answer: "Administer fluid for hypotension (where appropriate)." },
-        { category: "Transport decision", question: "Should all patients with suspected sepsis be transported?", answer: "Yes, all patients meeting SIRS criteria should be transported to hospital for further evaluation." }
+    "flashcards": [
+        {
+            "question": "SIRS criteria",
+            "answer": "Temperature >38 or <36°C; HR >90; RR >20; acute confusion. Two or more = met."
+        },
+        {
+            "question": "SIRS met: monitoring",
+            "answer": "Routine vitals plus ECG, EtCO₂ and SpO₂."
+        },
+        {
+            "question": "SIRS met: transport",
+            "answer": "Recommend transfer; tell Dispatch 2."
+        },
+        {
+            "question": "Adult fluid",
+            "answer": "500–1000 mL NS or RL, repeat, maximum 2000 mL (EMT)."
+        },
+        {
+            "question": "Pediatric fluid",
+            "answer": "20 mL/kg, repeat, maximum 60 mL/kg (EMT)."
+        },
+        {
+            "question": "When adrenaline",
+            "answer": "Poor perfusion after 2000 mL (adult) or 40 mL/kg (child): AP."
+        },
+        {
+            "question": "Adult adrenaline",
+            "answer": "Push 0.01 mg IV/IO every 2–5 minutes; infusion 2–10 mcg/min."
+        },
+        {
+            "question": "Pediatric adrenaline",
+            "answer": "Push 0.005 mg/kg every 2–5 minutes; infusion 0.05–0.3 mcg/kg/min."
+        },
+        {
+            "question": "Titration targets",
+            "answer": "MAP >65, improving shock, returning urine output."
+        },
+        {
+            "question": "Infusion safety",
+            "answer": "Syringe driver preferred; cross-check drip rates; under 5 years without a driver: push doses."
+        },
+        {
+            "question": "Paracetamol",
+            "answer": "Adult 1 g IV/PO; child 15 mg/kg (maximum 1 g) (EMT)."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "SpO₂ ≥94% if hypoxic or distressed."
+        },
+        {
+            "question": "Red flags",
+            "answer": "SBP <90 despite fluid; AMS; SpO₂ <90%; mottling or CRT >2 s; immunocompromise with fever."
+        },
+        {
+            "question": "Elderly pitfalls",
+            "answer": "Impaired fever; confusion masked by dementia; HR by beta-blockers; RR by lung disease; BP by hypertension."
+        },
+        {
+            "question": "Sources",
+            "answer": "Respiratory, urinary, skin, abdominal; catheters and central lines."
+        },
+        {
+            "question": "Meningitis PPE",
+            "answer": "Mask and goggles."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Non-infectious fever: heat stroke, drug reaction."
+        },
+        {
+            "question": "Organ dysfunction",
+            "answer": "Reduced urine output, mottled skin, hypoxia."
+        },
+        {
+            "question": "Cardiac disease",
+            "answer": "Reduce adrenaline."
+        },
+        {
+            "question": "KPIs",
+            "answer": "SIRS documented; temperature documented; fluid for hypotension."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_7_1",
-            scenario: "A 55-year-old male with diabetes presents with fever, chills, and productive cough for 2 days. On arrival, BP 85/50, HR 120, RR 28, SpO2 91% on room air, temperature 39�C. He is confused. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer paracetamol", f: "Antipyretics are secondary; the priority is to support circulation and oxygenation." },
-                { t: "Start fluid resuscitation and high-flow oxygen", f: "Correct. This patient is in septic shock; fluids and oxygen are critical." },
-                { t: "Perform a 12-lead ECG", f: "Not a priority in the unstable septic patient." },
-                { t: "Transport immediately without intervention", f: "Interventions should be initiated on scene or en route." }
+            "id": "crit_6_7_1",
+            "scenario": "A 55-year-old diabetic has fever, rigors and a productive cough. BP 85/50, HR 120, RR 28, SpO₂ 91%, 39°C, confused.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Oxygen to ≥94%, IV access, 500–1000 mL fluid bolus, monitoring, and early transport with a SIRS alert",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Paracetamol only",
+                    "f": "He is in shock."
+                },
+                {
+                    "t": "Adrenaline before fluid",
+                    "f": "Fluid first."
+                },
+                {
+                    "t": "Wait on scene for ALS",
+                    "f": "Prioritise transport."
+                }
             ],
-            correct: 1,
-            explanation: "Septic shock requires immediate fluid resuscitation and oxygen to improve perfusion and oxygenation.",
-            kpi: "Fluids and oxygen administered."
+            "correct": 0,
+            "explanation": "SIRS criteria met with septic shock: aggressive fluid and prioritised transport.",
+            "kpi": "SIRS criteria and temperature documented; fluid for hypotension."
         },
         {
-            id: "crit_6_7_2",
-            scenario: "A 40-year-old female with a history of IV drug use presents with fever, tachycardia, and hypotension. She has a red, swollen arm at an injection site. After 1000 mL normal saline, her BP is 85/55. What should you do next?",
-            question: "What is the appropriate next step?",
-            options: [
-                { t: "Give another 500 mL fluid bolus", f: "Fluid-refractory shock requires vasopressors." },
-                { t: "Start adrenaline infusion", f: "Correct. After adequate fluids, vasopressors are indicated." },
-                { t: "Administer antibiotics", f: "Not available prehospital." },
-                { t: "Transport without further intervention", f: "Vasopressors should be started en route." }
+            "id": "crit_6_7_2",
+            "scenario": "A 40-year-old with an infected injection site is hypotensive. After 1000 mL her BP is 85/55.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Another 500–1000 mL bolus (up to 2000 mL) and reassess",
+                    "f": "Correct. Adrenaline comes after 2000 mL."
+                },
+                {
+                    "t": "Adrenaline infusion now",
+                    "f": "Too early on this CPG."
+                },
+                {
+                    "t": "Stop fluids",
+                    "f": "She is still hypotensive."
+                },
+                {
+                    "t": "Paracetamol only",
+                    "f": "Treat the shock."
+                }
             ],
-            correct: 1,
-            explanation: "Fluid-refractory septic shock requires vasopressor support (adrenaline) to maintain perfusion.",
-            kpi: "Adrenaline infusion started."
+            "correct": 0,
+            "explanation": "Poor perfusion after 2000 mL: consider adrenaline (AP).",
+            "kpi": "Fluid for hypotension where appropriate."
         },
         {
-            id: "crit_6_7_3",
-            scenario: "A 75-year-old female from a nursing home is found lethargic. Her temperature is 37.5�C, BP 100/60, HR 110, RR 24. She has a urinary catheter in place. Staff reports she was 'not herself' today. What should you suspect?",
-            question: "What is the most likely diagnosis?",
-            options: [
-                { t: "Stroke", f: "No focal deficits." },
-                { t: "Sepsis secondary to urinary tract infection", f: "Correct. Elderly patients often present with lethargy and no fever; urinary source is common." },
-                { t: "Hypoglycemia", f: "Check glucose, but not the most likely." },
-                { t: "Dehydration", f: "Possible, but SIRS criteria are met." }
+            "id": "crit_6_7_3",
+            "scenario": "A 75-year-old from a care home with a urinary catheter is lethargic and 'not herself'. Temperature 37.5°C, HR 110, RR 24.",
+            "question": "What do you suspect?",
+            "options": [
+                {
+                    "t": "Sepsis from the catheter: SIRS met (HR, RR, confusion); transport and alert",
+                    "f": "Correct."
+                },
+                {
+                    "t": "No sepsis: no fever",
+                    "f": "The elderly may not mount a fever."
+                },
+                {
+                    "t": "Dementia only",
+                    "f": "Acute change needs assessment."
+                },
+                {
+                    "t": "Dehydration only",
+                    "f": "Look for the source."
+                }
             ],
-            correct: 1,
-            explanation: "Altered mental status with SIRS criteria and a catheter suggests urosepsis; transport for evaluation.",
-            kpi: "Sepsis screening performed and documented."
+            "correct": 0,
+            "explanation": "Fever response may be impaired in the elderly; devices are infection sources.",
+            "kpi": "SIRS criteria documented."
         },
         {
-            id: "crit_6_7_4",
-            scenario: "A 2-year-old child with fever, irritability, and poor feeding. Temperature 39.5�C, HR 160, RR 40, SpO2 95%, BP 85/50. The child is lethargic. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer paracetamol", f: "Antipyretics are secondary; fluid resuscitation is critical." },
-                { t: "Start fluid resuscitation with 20 mL/kg normal saline", f: "Correct. The child is in septic shock." },
-                { t: "Administer adrenaline push dose", f: "Fluids first unless pulseless." },
-                { t: "Transport without intervention", f: "Interventions should be initiated." }
+            "id": "crit_6_7_4",
+            "scenario": "A 2-year-old (12 kg) is febrile, lethargic, HR 170, capillary refill 4 seconds.",
+            "question": "What do you give?",
+            "options": [
+                {
+                    "t": "20 mL/kg fluid IV, reassess, repeat (maximum 60 mL/kg); paracetamol 15 mg/kg",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adult 1000 mL bolus",
+                    "f": "Use 20 mL/kg."
+                },
+                {
+                    "t": "Adrenaline first",
+                    "f": "Fluid first; adrenaline after 40 mL/kg if still poorly perfused."
+                },
+                {
+                    "t": "Nothing until hospital",
+                    "f": "Treat poor perfusion."
+                }
             ],
-            correct: 1,
-            explanation: "Pediatric septic shock requires early fluid resuscitation. Give 20 mL/kg bolus and reassess.",
-            kpi: "Fluid bolus administered."
+            "correct": 0,
+            "explanation": "Use the drug calculator for weight-based doses.",
+            "kpi": "Fluid for hypotension where appropriate."
         },
         {
-            id: "crit_6_7_5",
-            scenario: "A 50-year-old male with sepsis has received 2 L normal saline and is on an adrenaline infusion at 5 mcg/min. His BP is now 100/70, HR 100, and mental status improving. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Stop the adrenaline infusion", f: "Do not stop abruptly; monitor and titrate." },
-                { t: "Continue current management and transport", f: "Correct. Continue monitoring and transport to definitive care." },
-                { t: "Increase the adrenaline infusion", f: "Not needed; BP is improving." },
-                { t: "Give another fluid bolus", f: "Not indicated; patient is responding to vasopressors." }
+            "id": "crit_6_7_5",
+            "scenario": "After 2000 mL an adult is still hypotensive and mottled. An AP is with you.",
+            "question": "What is given?",
+            "options": [
+                {
+                    "t": "Adrenaline: push 0.01 mg IV/IO every 2–5 minutes or infusion 2–10 mcg/min, titrated to MAP >65",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Push 0.1 mg",
+                    "f": "Ten times the listed push dose."
+                },
+                {
+                    "t": "More fluid beyond 2000 mL",
+                    "f": "The maximum is reached."
+                },
+                {
+                    "t": "Dopamine",
+                    "f": "This CPG uses adrenaline."
+                }
             ],
-            correct: 1,
-            explanation: "Continue current management, monitor vital signs, and transport. Vasopressor should be weaned only under medical supervision.",
-            kpi: "Patient stabilized and transported."
+            "correct": 0,
+            "explanation": "Use a syringe driver if possible; reduce adrenaline in cardiac disease.",
+            "kpi": "Fluid for hypotension where appropriate."
         }
     ]
 };
