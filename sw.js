@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v7.7';   // Medication formulary and scope of practice from the official CPG
+const CACHE_VERSION = 'dcas-cpg-v7.9';   // What's New page rebuilt as a linked guide
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 

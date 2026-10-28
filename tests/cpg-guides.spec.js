@@ -219,3 +219,28 @@ test('S1 scope of practice: every matrix row, levels as in the PDF', async ({ pa
   await expect(row('Labetalol')).toHaveAttribute('data-lvl', '5');
   expect(errors).toEqual([]);
 });
+
+test('M1–38 formulary: every drug sheet listed once and linked', async ({ page, request }) => {
+  const errors = trackErrors(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('chapters/m1-38.html', { waitUntil: 'networkidle' });
+  const hrefs = [];
+  for (const a of await page.locator('.g-tools a[href^="m"]').all()) hrefs.push(await a.getAttribute('href'));
+  expect(hrefs.sort()).toEqual(Array.from({ length: 38 }, (_, i) => `m${i + 1}.html`).sort());
+  for (const href of hrefs) expect((await request.get(new URL(href, page.url()).href)).status(), href).toBe(200);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+  expect(errors).toEqual([]);
+});
+
+test("c0 what's new: every chapter listed and every guideline link opens", async ({ page, request }) => {
+  const errors = trackErrors(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('chapters/c0.html', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cpg-guide h2')).toHaveText("What's New in 2025");
+  const hrefs = new Set();
+  for (const a of await page.locator('.g-related a, .g-tools a').all()) hrefs.add(new URL(await a.getAttribute('href'), page.url()).href);
+  expect(hrefs.size).toBeGreaterThan(60);
+  for (const href of hrefs) expect((await request.get(href)).status(), href).toBe(200);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+  expect(errors).toEqual([]);
+});
