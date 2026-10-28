@@ -1,361 +1,745 @@
-/* ========== Chapter 6.9 � Hyperglycemia ========== */
+/* ========== CPG 6.9 – Hyperglycemia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-9",
-    title: "Hyperglycemia",
-    shortTitle: "6.9 Hyperglycemia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Hyperglycemia (DKA / HHS)</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify and manage hyperglycemia to prevent progression to diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS).</li>
-                <li>Correct dehydration and support perfusion.</li>
-                <li>Recognize and escalate care in critical hyperglycemia presentations.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients with elevated blood glucose >250 mg/dL.</li>
-                <li>Symptoms of polyuria, polydipsia, vomiting, weakness, or altered mental status.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Hypoglycemia (RBS <70 mg/dL).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Glucose Measurement:</strong> Check RBS to confirm hyperglycemia (>250 mg/dL). Repeat after interventions to monitor response.</li>
-                <li><strong>History Specific to Glycemic Disorders:</strong> Confirm history of diabetes (type 1 or type 2), insulin use, or oral hypoglycemic agents. Inquire about recent medication compliance (e.g., missed insulin doses). Identify precipitating factors (comorbidities, infection, stress, dietary changes).</li>
-                <li><strong>Symptoms of Hyperglycemia:</strong> Signs of dehydration (dry mucous membranes, thirst, hypotension, sunken eyes). Symptoms of diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS), such as fruity breath, Kussmaul respirations, or severe lethargy. Evaluate mental status (GCS or AVPU).</li>
-                <li><strong>Signs of DKA:</strong> Fruity odor on breath, Kussmaul respirations, confusion/altered mental status, dehydration, tachycardia/shock.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for hyperglycemia >324 mg/dL WITH symptoms of DKA/HHS, or signs of shock.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary Survey:</strong> For unresponsive patients, perform airway assessment and initiate appropriate airway management. Place unconscious patients in the recovery position at minimum while treatment is being initiated.</li>
-                <li><strong>Secondary Survey:</strong> Complete a focused assessment, including full vital signs, glucose level, and mental status (GCS/AVPU). Perform a 12-lead ECG to evaluate for signs of hyperkalemia (e.g., peaked T-waves, widened QRS) or acute coronary syndrome, especially in elderly or high-risk patients.</li>
-                <li><strong>Consider ALS back-up:</strong> For severe hyperglycemia with altered mental status, shock, or respiratory distress.</li>
-                <li><strong>Oxygen:</strong> Administer if SpO2 <94% or signs of respiratory distress; titrate to maintain SpO2 =94%.</li>
-                <li><strong>Establish IV Access:</strong> For fluid resuscitation and medication administration.</li>
-                <li><strong>Fluid Resuscitation:</strong> Administer Normal Saline or Ringer's Lactate for hyperglycemia with signs of dehydration, shock, or DKA:
-                    <ul>
-                        <li>Adults: 500-1000 mL IV bolus (up to 2000 mL), reassess and repeat as needed.</li>
-                        <li>Pediatrics: 10-20 mL/kg IV bolus (up to 1000 mL), reassess and repeat as needed (maximum 60 mL/kg).</li>
-                        <li>Monitor for signs of fluid overload, especially in patients with cardiac or renal disease.</li>
-                    </ul>
-                </li>
-                <li><strong>Patient Reassessment:</strong> Reassess blood glucose every 15 minutes after treatment or fluid administration. Frequently reassess vital signs and mental status.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Monitor for signs of hypoglycemia if patient receives treatment prior to EMS arrival.</li>
-                <li>Avoid aggressive fluid resuscitation in patients with renal or cardiac comorbidities.</li>
-                <li>Do not delay transport to initiate full fluid replacement therapy.</li>
-                <li>Escalate early in patients with altered mental status or suspected DKA/HHS.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Document suspected cause of hyperglycemia (infection, missed insulin, stress).</li>
-                <li>Confirm recent medication compliance or omission (insulin or oral agents).</li>
-                <li>Assess for abdominal pain or vomiting in DKA patients.</li>
-                <li>Avoid oral fluids if patient has altered mental status.</li>
-                <li>Inform receiving facility if patient meets criteria for DKA/HHS for early preparation.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>RBS, vital signs, dehydration indicators, mental status (AVPU/GCS).</li>
-                <li>History of diabetes, insulin/oral agents, precipitating factors.</li>
-                <li>Fluids administered (type, volume), oxygen therapy, repeat glucose levels.</li>
-                <li>Response to treatment, hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer IV fluid for patients with dehydration or signs of shock.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-9",
+    "title": "Hyperglycemia",
+    "shortTitle": "6.9 Hyperglycemia",
+    "guide": {
+        "cpg": "6.9",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Hyperglycemia",
+        "lead": "RBS above 250 mg/dL with ketoacidosis, dehydration or shock needs fluid: normal saline boluses up to 2000 mL (child 60 mL/kg). Record a 12-lead for hyperkalemia, escalate early in DKA or HHS, and do not delay transport to finish fluids.",
+        "source": {
+            "label": "CPG 6.9",
+            "pages": "185–187",
+            "pdf": "../pdf_sections/6_9_Hyperglycemia.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "RBS &gt;250 mg/dL.",
+                    "Polyuria, polydipsia, vomiting, weakness or altered mental status."
+                ],
+                "exclude": [
+                    "Hypoglycemia (RBS &lt;70 mg/dL)."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "History",
+                        "items": [
+                            "Diabetes type, insulin or oral agents, missed doses.",
+                            "Precipitants: infection, comorbidities, stress, diet change."
+                        ]
+                    },
+                    {
+                        "title": "Dehydration",
+                        "items": [
+                            "Dry mucous membranes, thirst, sunken eyes, hypotension."
+                        ]
+                    },
+                    {
+                        "title": "Signs of DKA",
+                        "items": [
+                            "Fruity breath, Kussmaul respirations, confusion, dehydration, tachycardia or shock; abdominal pain or vomiting.",
+                            "HHS: severe lethargy with dehydration."
+                        ]
+                    },
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "Hyperglycemia &gt;324 mg/dL with DKA/HHS symptoms, or signs of shock."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Airway",
+                        "text": "Unresponsive: airway management; recovery position at least."
+                    },
+                    {
+                        "title": "Focused assessment",
+                        "text": "Full vital signs, RBS, GCS or AVPU."
+                    },
+                    {
+                        "title": "12-lead ECG",
+                        "text": "Look for hyperkalemia (peaked T waves, widened QRS), arrhythmias, or ACS, especially in the elderly or high-risk."
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "Hypotension, persistent altered mental status or severe hyperglycemia; IO if IV fails."
+                    },
+                    {
+                        "title": "Fluid for dehydration, shock or DKA",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate; reassess and repeat. Avoid aggressive fluid in renal or cardiac disease.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL IV bolus",
+                                "note": "Up to 2000 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "10–20 mL/kg IV bolus",
+                                "note": "Up to 1000 mL per bolus; maximum 60 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "RBS every 15 minutes after treatment or fluid. Consider Tele-EMS."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and safety",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "RBS &gt;400 mg/dL with signs of DKA or HHS.",
+                            "SBP &lt;90 mmHg or shock: delayed capillary refill, cold extremities.",
+                            "Fever or infection: sepsis as the trigger.",
+                            "Persistent symptoms; recurrent vomiting or reduced urine output."
+                        ]
+                    },
+                    {
+                        "title": "Safety",
+                        "items": [
+                            "Do not delay transport to complete fluid replacement.",
+                            "Escalate early with altered mental status or suspected DKA/HHS; tell the receiving facility.",
+                            "Treated before EMS arrival: watch for hypoglycemia.",
+                            "No oral fluids with altered mental status."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "On the 12-lead",
+                        "items": [
+                            {
+                                "ecg": "hyperK",
+                                "label": "Hyperkalemia",
+                                "sub": "Peaked T waves, widening QRS"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: normal saline",
+                                "sub": "10–20 mL/kg",
+                                "href": "../pages/drug-calculator.html?drug=Normal%20Saline",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "IV fluid given to patients with dehydration or signs of shock."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "6.7 Fever and Sepsis",
+                        "href": "c6-7.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What glucose level defines hyperglycemia requiring evaluation?",
-            options: [">150 mg/dL", ">200 mg/dL", ">250 mg/dL", ">300 mg/dL"],
-            correct: 2,
-            explanation: "Hyperglycemia is typically considered >250 mg/dL in the prehospital setting, though DKA can occur at lower levels in some patients."
+            "q": "What RBS defines hyperglycemia here?",
+            "options": [
+                ">250 mg/dL",
+                ">150 mg/dL",
+                ">120 mg/dL",
+                ">600 mg/dL"
+            ],
+            "correct": 0,
+            "explanation": "Inclusion threshold."
         },
         {
-            q: "Which of the following is a sign of diabetic ketoacidosis (DKA)?",
-            options: ["Fruity breath odor", "Kussmaul respirations", "Altered mental status", "All of the above"],
-            correct: 3,
-            explanation: "DKA is characterized by hyperglycemia, metabolic acidosis, ketonemia, and often presents with fruity breath, deep rapid breathing, and altered mental status."
+            "q": "Which is a sign of DKA?",
+            "options": [
+                "Fruity breath and Kussmaul respirations",
+                "Pinpoint pupils",
+                "Bradycardia only",
+                "Hypothermia only"
+            ],
+            "correct": 0,
+            "explanation": "Also confusion, dehydration, tachycardia or shock."
         },
         {
-            q: "What is the initial fluid bolus for an adult with hyperglycemia and signs of shock?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults with hyperglycemia and dehydration or shock should receive 500-1000 mL crystalloid bolus."
+            "q": "What is the adult bolus?",
+            "options": [
+                "500–1000 mL",
+                "100 mL",
+                "3000 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Repeat up to 2000 mL."
         },
         {
-            q: "A patient with hyperglycemia has a blood glucose of 450 mg/dL, is confused, and has Kussmaul respirations. What is the most likely diagnosis?",
-            options: ["Hypoglycemia", "Diabetic ketoacidosis (DKA)", "Hyperosmolar hyperglycemic state (HHS)", "Lactic acidosis"],
-            correct: 1,
-            explanation: "Kussmaul respirations and confusion suggest DKA with metabolic acidosis."
+            "q": "RBS 450 mg/dL, confused, Kussmaul breathing. Most likely?",
+            "options": [
+                "DKA",
+                "Hypoglycemia",
+                "Opioid overdose",
+                "Stroke"
+            ],
+            "correct": 0,
+            "explanation": "Classic signs of DKA."
         },
         {
-            q: "What is the pediatric fluid bolus for hyperglycemia with signs of dehydration?",
-            options: ["5 mL/kg", "10-20 mL/kg", "30 mL/kg", "40 mL/kg"],
-            correct: 1,
-            explanation: "Pediatric initial bolus is 10-20 mL/kg crystalloid, repeated as needed."
+            "q": "What is the pediatric bolus?",
+            "options": [
+                "10–20 mL/kg",
+                "5 mL/kg",
+                "40 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 60 mL/kg."
         },
         {
-            q: "Which of the following is a red flag in hyperglycemia?",
-            options: ["Polyuria", "Polydipsia", "Hypotension", "Blurred vision"],
-            correct: 2,
-            explanation: "Hypotension indicates severe dehydration or shock and is a red flag requiring urgent intervention."
+            "q": "Which is a red flag?",
+            "options": [
+                "SBP <90 mmHg or shock",
+                "Mild thirst only",
+                "RBS 260 with no symptoms",
+                "Polyuria alone"
+            ],
+            "correct": 0,
+            "explanation": "Hypotension or clinical shock."
         },
         {
-            q: "What is the target SpO2 for a patient with hyperglycemia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Which ECG change suggests hyperkalemia?",
+            "options": [
+                "Peaked T waves, widened QRS",
+                "ST elevation in II, III, aVF only",
+                "Delta waves",
+                "U waves"
+            ],
+            "correct": 0,
+            "explanation": "Record a 12-lead."
         },
         {
-            q: "A patient with hyperglycemia is on an insulin pump. What should you do?",
-            options: ["Remove the pump", "Leave the pump in place, but document", "Disconnect the pump and give insulin", "Turn off the pump"],
-            correct: 1,
-            explanation: "Do not disconnect the pump; leave it in place and document for hospital staff."
+            "q": "What is the adult maximum fluid?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "Reassess after each bolus."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with hyperglycemic crisis?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Which is a precipitant?",
+            "options": [
+                "Infection or missed insulin",
+                "Excess food only",
+                "Too much exercise only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Also stress and comorbidities."
         },
         {
-            q: "Which of the following is a common precipitating factor for DKA?",
-            options: ["Infection", "Missed insulin doses", "Stress", "All of the above"],
-            correct: 3,
-            explanation: "Infection, insulin omission, and physical/emotional stress are common triggers for DKA."
+            "q": "What is the pediatric maximum fluid?",
+            "options": [
+                "60 mL/kg",
+                "20 mL/kg",
+                "100 mL/kg",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "Each bolus up to 1000 mL."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with hyperglycemia?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum 60 mL/kg total crystalloid in the prehospital setting."
+            "q": "BP stays low after 1 L in DKA. What next?",
+            "options": [
+                "Another bolus, reassess (up to 2000 mL)",
+                "Insulin",
+                "Stop fluids",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Repeat as needed."
         },
         {
-            q: "A patient with DKA has a blood glucose of 650 mg/dL. After 1 L normal saline, the patient remains hypotensive. What should you do?",
-            options: ["Give another fluid bolus", "Start insulin infusion", "Administer sodium bicarbonate", "Transport without further fluids"],
-            correct: 0,
-            explanation: "Fluid resuscitation is the priority; repeat boluses as needed to improve perfusion."
+            "q": "How often is RBS rechecked?",
+            "options": [
+                "Every 15 minutes after treatment or fluid",
+                "Once only",
+                "Hourly",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Specific reassessment point."
         },
         {
-            q: "Which electrolyte abnormality is commonly seen in DKA?",
-            options: ["Hyperkalemia", "Hypokalemia", "Hyponatremia", "Hypercalcemia"],
-            correct: 0,
-            explanation: "Initial hyperkalemia may be present due to acidosis, but total body potassium is depleted."
+            "q": "Which RBS is Red priority with DKA/HHS symptoms?",
+            "options": [
+                ">324 mg/dL",
+                ">200 mg/dL",
+                ">1000 mg/dL",
+                "Any"
+            ],
+            "correct": 0,
+            "explanation": "Or signs of shock."
         },
         {
-            q: "What is the significance of Kussmaul respirations in DKA?",
-            options: ["Compensatory response to metabolic acidosis", "Sign of hypoxia", "Indicates brain herniation", "Normal breathing pattern"],
-            correct: 0,
-            explanation: "Deep, rapid respirations (Kussmaul) are the body's attempt to blow off CO2 to compensate for metabolic acidosis."
+            "q": "What causes Kussmaul breathing?",
+            "options": [
+                "Compensation for ketoacidosis",
+                "Hypoxia",
+                "Pain",
+                "Anxiety only"
+            ],
+            "correct": 0,
+            "explanation": "A sign of DKA."
         },
         {
-            q: "A patient with hyperglycemia has a blood glucose of 800 mg/dL, is elderly, and has profound dehydration but no ketosis. What is the likely diagnosis?",
-            options: ["DKA", "HHS (hyperosmolar hyperglycemic state)", "Lactic acidosis", "Sepsis"],
-            correct: 1,
-            explanation: "HHS is more common in elderly type 2 diabetics and presents with severe hyperglycemia, hyperosmolality, and dehydration without significant ketosis."
+            "q": "Profound dehydration, severe lethargy, RBS very high. Which state?",
+            "options": [
+                "HHS",
+                "Hypoglycemia",
+                "Anaphylaxis",
+                "Asthma"
+            ],
+            "correct": 0,
+            "explanation": "Hyperosmolar hyperglycemic state."
         },
         {
-            q: "What is the dose of 0.9% normal saline for an adult with DKA?",
-            options: ["250 mL bolus", "500-1000 mL bolus", "1-2 L/h infusion", "No fluids"],
-            correct: 1,
-            explanation: "Initial fluid resuscitation is 500-1000 mL bolus, repeated as needed."
+            "q": "Which fluids are used?",
+            "options": [
+                "Normal saline or Ringer's lactate",
+                "Dextrose",
+                "Colloids",
+                "Oral water"
+            ],
+            "correct": 0,
+            "explanation": "Crystalloid boluses."
         },
         {
-            q: "Which of the following is a sign of severe dehydration in hyperglycemia?",
-            options: ["Dry mucous membranes", "Poor skin turgor", "Hypotension", "All of the above"],
-            correct: 3,
-            explanation: "All are signs of significant volume depletion."
+            "q": "Which is a sign of dehydration?",
+            "options": [
+                "Dry mucous membranes and sunken eyes",
+                "Moist tongue",
+                "Bounding pulses",
+                "Edema"
+            ],
+            "correct": 0,
+            "explanation": "Also thirst and hypotension."
         },
         {
-            q: "A patient with hyperglycemia has a history of heart failure. How should fluid resuscitation be approached?",
-            options: ["Give full boluses as usual", "Give smaller boluses and monitor for pulmonary edema", "Avoid fluids entirely", "Use colloids instead"],
-            correct: 1,
-            explanation: "Cautious fluid administration with smaller boluses and close monitoring for signs of fluid overload is recommended."
+            "q": "A hyperglycemic patient has heart failure. How do you give fluid?",
+            "options": [
+                "Avoid aggressive fluid; reassess for overload",
+                "Full boluses regardless",
+                "No fluid ever",
+                "Colloids"
+            ],
+            "correct": 0,
+            "explanation": "Avoid aggressive resuscitation with cardiac or renal disease."
         },
         {
-            q: "What is the target blood pressure for an adult with hyperglycemic crisis?",
-            options: ["SBP >90 mmHg", "SBP >100 mmHg", "MAP >65 mmHg", "Both A and C"],
-            correct: 3,
-            explanation: "Goal is to maintain adequate perfusion (SBP >90 mmHg or MAP >65 mmHg)."
+            "q": "Is transport delayed to finish fluids?",
+            "options": [
+                "No",
+                "Yes",
+                "Only in children",
+                "Only for HHS"
+            ],
+            "correct": 0,
+            "explanation": "Do not delay transport."
         },
         {
-            q: "A patient with DKA presents with abdominal pain. What is the appropriate action?",
-            options: ["Treat as appendicitis", "Administer analgesia and transport", "Suspect DKA as cause; transport for evaluation", "Give nothing and transport"],
-            correct: 2,
-            explanation: "Abdominal pain is common in DKA and usually resolves with treatment; still requires transport for evaluation."
+            "q": "DKA with abdominal pain. What do you do?",
+            "options": [
+                "Recognise it as a DKA feature and transport",
+                "Treat as appendicitis only",
+                "Ignore it",
+                "Give food"
+            ],
+            "correct": 0,
+            "explanation": "Assess for abdominal pain or vomiting in DKA."
         },
         {
-            q: "What is the recommended fluid for initial resuscitation in hyperglycemic crisis?",
-            options: ["5% dextrose", "0.9% normal saline", "Ringer's lactate", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid (normal saline) is preferred for initial volume replacement."
+            "q": "Who is told about DKA/HHS?",
+            "options": [
+                "The receiving facility",
+                "Nobody",
+                "Only the family",
+                "Police"
+            ],
+            "correct": 0,
+            "explanation": "For early preparation."
         },
         {
-            q: "A patient with hyperglycemia has a blood glucose of 300 mg/dL and is alert with no symptoms. What is the appropriate management?",
-            options: ["IV fluids", "Insulin", "Transport for evaluation", "Treat at scene and discharge"],
-            correct: 2,
-            explanation: "Even asymptomatic hyperglycemia requires evaluation to identify underlying cause and prevent progression."
+            "q": "When are oral fluids avoided?",
+            "options": [
+                "With altered mental status",
+                "Never",
+                "Always",
+                "Only in children"
+            ],
+            "correct": 0,
+            "explanation": "Aspiration risk."
         },
         {
-            q: "What is the role of insulin in prehospital management of DKA?",
-            options: ["Routinely given IV", "Given IM if glucose >500", "Not given prehospital; focus on fluids and transport", "Given only with physician order"],
-            correct: 2,
-            explanation: "Insulin is not administered prehospital; fluid resuscitation and transport are the priorities."
+            "q": "Which level gives the fluid bolus?",
+            "options": [
+                "EMT",
+                "EMR",
+                "AP only",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "Which of the following ECG changes may be seen in hyperkalemia associated with DKA?",
-            options: ["Peaked T waves", "Widened QRS", "Loss of P waves", "All of the above"],
-            correct: 3,
-            explanation: "Hyperkalemia can cause peaked T waves, widened QRS, and loss of P waves."
+            "q": "When is IV access indicated?",
+            "options": [
+                "Hypotension, persistent AMS or severe hyperglycemia",
+                "Every patient",
+                "Never",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "IO if IV fails."
         },
         {
-            q: "A patient with DKA has a respiratory rate of 32 and SpO2 96%. What should you do?",
-            options: ["Administer high-flow oxygen", "Apply CPAP", "Monitor and treat underlying DKA", "Intubate"],
-            correct: 2,
-            explanation: "Tachypnea is compensatory; oxygen is not needed if SpO2 is normal. Treat the DKA with fluids."
+            "q": "The patient had insulin before you arrived. What do you watch for?",
+            "options": [
+                "Hypoglycemia",
+                "Hyperthermia",
+                "Bradycardia only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "A safety consideration."
         },
         {
-            q: "What is the pediatric fluid bolus dose for a 10 kg child with hyperglycemia and poor perfusion?",
-            options: ["50 mL", "100-200 mL", "200-300 mL", "500 mL"],
-            correct: 1,
-            explanation: "10-20 mL/kg = 100-200 mL for a 10 kg child."
+            "q": "Which red flag suggests sepsis?",
+            "options": [
+                "Fever or signs of infection",
+                "Thirst",
+                "Polyuria",
+                "RBS 260"
+            ],
+            "correct": 0,
+            "explanation": "Infection is a common precipitant."
         },
         {
-            q: "Why should you avoid giving insulin prehospital?",
-            options: ["Risk of hypoglycemia", "Requires monitoring of electrolytes", "Fluid resuscitation is more urgent", "All of the above"],
-            correct: 3,
-            explanation: "Insulin can cause rapid shifts in electrolytes and glucose; fluids are the priority in the prehospital setting."
+            "q": "Unresponsive hyperglycemic patient. First?",
+            "options": [
+                "Airway and recovery position",
+                "Oral fluids",
+                "Insulin",
+                "Leave"
+            ],
+            "correct": 0,
+            "explanation": "Primary survey first."
         },
         {
-            q: "A patient with hyperglycemia is vomiting and has altered mental status. What is the priority?",
-            options: ["Administer antiemetic", "Protect airway and give fluids", "Give insulin", "Transport only"],
-            correct: 1,
-            explanation: "Airway protection and fluid resuscitation are priorities in a patient with vomiting and altered mental status."
+            "q": "Which RBS is excluded?",
+            "options": [
+                "<70 mg/dL",
+                "300 mg/dL",
+                "400 mg/dL",
+                "600 mg/dL"
+            ],
+            "correct": 0,
+            "explanation": "Hypoglycemia CPG."
         },
         {
-            q: "What is the key performance indicator for hyperglycemia?",
-            options: ["Administer insulin", "Give IV fluids for dehydration or shock", "Perform 12-lead ECG", "Check ketones"],
-            correct: 1,
-            explanation: "Administering IV fluid for patients with dehydration or signs of shock is a key KPI."
+            "q": "What does the 12-lead also look for?",
+            "options": [
+                "Acute coronary syndrome",
+                "Asthma",
+                "Fracture",
+                "Nothing else"
+            ],
+            "correct": 0,
+            "explanation": "Especially in the elderly or high-risk."
         },
         {
-            q: "A patient with hyperglycemia has a glucose of 450 mg/dL and is drowsy. After 1000 mL normal saline, the patient is more alert. What should you do?",
-            options: ["Stop fluids", "Continue fluids and transport", "Give insulin", "Check glucose again"],
-            correct: 1,
-            explanation: "Continue fluid resuscitation and transport; improvement indicates response to volume replacement."
+            "q": "What is the KPI?",
+            "options": [
+                "IV fluid for dehydration or shock",
+                "Insulin given",
+                "Ketones measured",
+                "Transport in 10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is hyperglycemia?", answer: "Elevated blood glucose level, typically >250 mg/dL." },
-        { category: "DKA", question: "What is diabetic ketoacidosis (DKA)?", answer: "Life-threatening complication of diabetes characterized by hyperglycemia, metabolic acidosis, and ketosis." },
-        { category: "HHS", question: "What is hyperosmolar hyperglycemic state (HHS)?", answer: "Severe hyperglycemia (>600 mg/dL) with hyperosmolality and dehydration, without significant ketosis; more common in type 2 diabetes." },
-        { category: "Kussmaul respirations", question: "What are Kussmaul respirations?", answer: "Deep, rapid breathing seen in DKA as compensation for metabolic acidosis." },
-        { category: "Precipitating factors", question: "Name three common triggers of DKA.", answer: "Infection, missed insulin doses, myocardial infarction, stress, surgery." },
-        { category: "Symptoms", question: "What are symptoms of DKA?", answer: "Polyuria, polydipsia, weakness, nausea, vomiting, abdominal pain, confusion, Kussmaul respirations, fruity breath." },
-        { category: "Fluid resuscitation", question: "What is the initial fluid for hyperglycemic crisis?", answer: "0.9% normal saline." },
-        { category: "Adult fluid bolus", question: "What is the initial fluid bolus for an adult with DKA/HHS?", answer: "500-1000 mL crystalloid." },
-        { category: "Pediatric fluid bolus", question: "What is the pediatric fluid bolus for DKA/HHS?", answer: "10-20 mL/kg crystalloid." },
-        { category: "Maximum adult fluids", question: "What is the maximum total fluid bolus for an adult?", answer: "2000 mL, with reassessment after each bolus." },
-        { category: "Maximum pediatric fluids", question: "What is the maximum total fluid bolus for a child?", answer: "60 mL/kg total." },
-        { category: "Electrolyte abnormalities", question: "What electrolyte abnormalities are common in DKA?", answer: "Initial hyperkalemia (with total body potassium depletion), hyponatremia (pseudo)." },
-        { category: "ECG changes", question: "What ECG changes may occur in DKA due to hyperkalemia?", answer: "Peaked T waves, widened QRS, loss of P waves." },
-        { category: "Insulin in prehospital", question: "Is insulin given prehospital for DKA?", answer: "No; focus is on fluid resuscitation and transport." },
-        { category: "Red flags", question: "What are red flags in hyperglycemia?", answer: "Hypotension, altered mental status, Kussmaul respirations, severe dehydration." },
-        { category: "Elderly considerations", question: "Why are elderly patients at risk for HHS?", answer: "Age-related decline in thirst, polypharmacy, and comorbidities." },
-        { category: "Pediatric DKA", question: "What is a common presentation of DKA in children?", answer: "Abdominal pain, vomiting, dehydration, and altered mental status." },
-        { category: "Documentation", question: "What must be documented in hyperglycemia?", answer: "RBS, vital signs, fluids given, mental status, precipitating factors." },
-        { category: "KPI", question: "What is the key performance indicator for hyperglycemia?", answer: "Administer IV fluid for patients with dehydration or signs of shock." },
-        { category: "Transport decision", question: "Should all hyperglycemic patients be transported?", answer: "Yes, especially those with symptoms, DKA/HHS, or underlying causes requiring evaluation." }
+    "flashcards": [
+        {
+            "question": "Hyperglycemia",
+            "answer": "RBS >250 mg/dL."
+        },
+        {
+            "question": "Signs of DKA",
+            "answer": "Fruity breath, Kussmaul respirations, confusion, dehydration, tachycardia or shock."
+        },
+        {
+            "question": "HHS",
+            "answer": "Severe hyperglycemia with dehydration and severe lethargy."
+        },
+        {
+            "question": "Adult fluid",
+            "answer": "NS or RL 500–1000 mL, repeat up to 2000 mL (EMT)."
+        },
+        {
+            "question": "Pediatric fluid",
+            "answer": "10–20 mL/kg (up to 1000 mL per bolus), maximum 60 mL/kg."
+        },
+        {
+            "question": "12-lead",
+            "answer": "Hyperkalemia (peaked T, wide QRS), arrhythmias, ACS."
+        },
+        {
+            "question": "RBS recheck",
+            "answer": "Every 15 minutes after treatment or fluid."
+        },
+        {
+            "question": "Red priority",
+            "answer": ">324 mg/dL with DKA/HHS symptoms, or shock."
+        },
+        {
+            "question": "Red flags",
+            "answer": ">400 mg/dL with DKA/HHS signs; SBP <90 or shock; infection; persistent symptoms; recurrent vomiting or low urine output."
+        },
+        {
+            "question": "Fluid caution",
+            "answer": "Avoid aggressive fluid in renal or cardiac disease."
+        },
+        {
+            "question": "Transport",
+            "answer": "Do not delay it to complete fluids."
+        },
+        {
+            "question": "Escalation",
+            "answer": "Early with AMS or suspected DKA/HHS; notify the receiving facility."
+        },
+        {
+            "question": "Pre-arrival insulin",
+            "answer": "Watch for hypoglycemia."
+        },
+        {
+            "question": "Oral fluids",
+            "answer": "Not with altered mental status."
+        },
+        {
+            "question": "Precipitants",
+            "answer": "Infection, missed insulin, comorbidities, stress, diet."
+        },
+        {
+            "question": "Dehydration signs",
+            "answer": "Dry mucosa, thirst, sunken eyes, hypotension."
+        },
+        {
+            "question": "IV access",
+            "answer": "Hypotension, persistent AMS, severe hyperglycemia; IO if needed."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Hypoglycemia (RBS <70 mg/dL)."
+        },
+        {
+            "question": "Tele-EMS",
+            "answer": "Consider after reassessment."
+        },
+        {
+            "question": "KPI",
+            "answer": "IV fluid for dehydration or shock."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_9_1",
-            scenario: "A 25-year-old type 1 diabetic is found by friends. She is drowsy, has deep rapid breathing, and smells of acetone. RBS is 450 mg/dL. BP 100/60, HR 110, SpO2 96%. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer insulin IV", f: "Insulin is not given prehospital; fluids are the priority." },
-                { t: "Start fluid resuscitation with normal saline", f: "Correct. Fluid resuscitation is critical in DKA." },
-                { t: "Give 50% dextrose", f: "Contraindicated; glucose is already high." },
-                { t: "Transport immediately without intervention", f: "Fluids should be started en route." }
+            "id": "crit_6_9_1",
+            "scenario": "A 25-year-old type 1 diabetic is drowsy with deep rapid breathing and a fruity smell. RBS 450 mg/dL, BP 100/60, HR 110.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "IV access and normal saline 500–1000 mL, 12-lead, early transport with a DKA alert",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Insulin",
+                    "f": "Not part of this CPG."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Not with altered mental status."
+                },
+                {
+                    "t": "Wait to complete 2000 mL on scene",
+                    "f": "Do not delay transport."
+                }
             ],
-            correct: 1,
-            explanation: "DKA with dehydration requires fluid resuscitation; 500-1000 mL normal saline bolus is indicated.",
-            kpi: "IV fluids administered."
+            "correct": 0,
+            "explanation": "DKA: fluid, ECG for hyperkalemia, escalate early, RBS every 15 minutes.",
+            "kpi": "IV fluid for dehydration or shock."
         },
         {
-            id: "crit_6_9_2",
-            scenario: "A 60-year-old male with type 2 diabetes is found confused and lethargic. His wife states he has been vomiting and not eating for 2 days. RBS is 800 mg/dL, BP 90/60, HR 120, dry mucous membranes. No fruity breath. What is the most likely diagnosis?",
-            question: "What is the most likely diagnosis and next step?",
-            options: [
-                { t: "DKA; give fluids and insulin", f: "No ketosis, more likely HHS." },
-                { t: "HHS; give fluids and transport", f: "Correct. HHS presents with severe hyperglycemia, dehydration, and altered mental status without significant ketosis." },
-                { t: "Sepsis; give antibiotics", f: "No signs of infection." },
-                { t: "Stroke; perform BEFAST", f: "No focal deficits." }
+            "id": "crit_6_9_2",
+            "scenario": "A 60-year-old type 2 diabetic has vomited for 2 days, is confused and very dry. RBS 800 mg/dL, BP 90/60, no fruity breath.",
+            "question": "What fits and what do you do?",
+            "options": [
+                {
+                    "t": "HHS: fluid boluses, reassess, early escalation and transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Hypoglycemia",
+                    "f": "The RBS is high."
+                },
+                {
+                    "t": "Gastroenteritis only: oral fluids",
+                    "f": "Confused: no oral fluids."
+                },
+                {
+                    "t": "No treatment",
+                    "f": "He is dehydrated and hypotensive."
+                }
             ],
-            correct: 1,
-            explanation: "HHS is more common in elderly type 2 diabetics; fluid resuscitation is the priority.",
-            kpi: "IV fluids administered and patient transported."
+            "correct": 0,
+            "explanation": "Severe lethargy and dehydration with very high glucose suggests HHS.",
+            "kpi": "IV fluid for dehydration or shock."
         },
         {
-            id: "crit_6_9_3",
-            scenario: "A 35-year-old female with DKA has received 1 L normal saline. Her BP is now 100/70, HR 100, and she is more alert. Her RBS remains 400 mg/dL. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Give another 500 mL fluid bolus", f: "Correct. Continue fluid resuscitation; BP is improving but still needs volume." },
-                { t: "Administer insulin", f: "Not indicated prehospital." },
-                { t: "Stop fluids", f: "Not enough; still dehydrated." },
-                { t: "Give dextrose", f: "No; glucose is still high." }
+            "id": "crit_6_9_3",
+            "scenario": "After 1000 mL a DKA patient is more alert; BP 100/70, HR 100; RBS 400 mg/dL.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Reassess, give a further bolus if still dehydrated (up to 2000 mL), recheck RBS every 15 minutes, transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop all monitoring",
+                    "f": "Reassess frequently."
+                },
+                {
+                    "t": "Insulin",
+                    "f": "Not in this CPG."
+                },
+                {
+                    "t": "Discharge",
+                    "f": "DKA needs hospital care."
+                }
             ],
-            correct: 0,
-            explanation: "Continued fluid resuscitation is needed; reassess after each bolus up to 2000 mL total.",
-            kpi: "Fluids continued."
+            "correct": 0,
+            "explanation": "Repeat fluid as needed while transporting.",
+            "kpi": "IV fluid for dehydration or shock."
         },
         {
-            id: "crit_6_9_4",
-            scenario: "A 50-year-old with DKA is vomiting and has a decreased level of consciousness. You are unable to obtain IV access after two attempts. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Continue attempting IV access", f: "Delay is harmful; consider IO." },
-                { t: "Establish IO access", f: "Correct. IO access is indicated when IV is difficult." },
-                { t: "Transport without fluids", f: "Fluids are critical; IO should be used." },
-                { t: "Give oral fluids", f: "Unsafe with altered mental status." }
+            "id": "crit_6_9_4",
+            "scenario": "A drowsy DKA patient is vomiting. Two IV attempts have failed.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Protect the airway (recovery position) and consider IO access for fluid",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Altered mental status: no oral fluids."
+                },
+                {
+                    "t": "Abandon fluids",
+                    "f": "IO is an option."
+                },
+                {
+                    "t": "Lie flat on the back",
+                    "f": "Recovery position protects the airway."
+                }
             ],
-            correct: 1,
-            explanation: "IO access provides a rapid route for fluid resuscitation in critically ill patients.",
-            kpi: "IO access established and fluids given."
+            "correct": 0,
+            "explanation": "IO if peripheral IV access is not obtainable.",
+            "kpi": "IV fluid for dehydration or shock."
         },
         {
-            id: "crit_6_9_5",
-            scenario: "A 45-year-old with DKA is now alert after 1 L normal saline. However, you note that he has an irregular pulse and ECG shows peaked T waves. What should you suspect?",
-            question: "What is the likely cause and next step?",
-            options: [
-                { t: "Hyperkalemia; continue fluids and transport", f: "Correct. Hyperkalemia is common in DKA and usually improves with fluids and insulin." },
-                { t: "Myocardial infarction; give aspirin", f: "Peaked T waves are not typical of STEMI." },
-                { t: "Pulmonary embolism; give oxygen", f: "Not likely." },
-                { t: "Hypokalemia; give potassium", f: "Peaked T waves suggest hyperkalemia, not hypokalemia." }
+            "id": "crit_6_9_5",
+            "scenario": "A DKA patient's monitor shows the pattern below.",
+            "ecg": "hyperK",
+            "question": "What do you suspect?",
+            "options": [
+                {
+                    "t": "Hyperkalemia: continue fluids, monitor closely, transport and notify",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Normal ECG",
+                    "f": "Peaked T waves suggest hyperkalemia."
+                },
+                {
+                    "t": "STEMI only",
+                    "f": "Look at the T waves and QRS."
+                },
+                {
+                    "t": "Hypokalemia",
+                    "f": "Peaked T waves point to hyperkalemia."
+                }
             ],
-            correct: 0,
-            explanation: "Peaked T waves indicate hyperkalemia; continue fluid resuscitation and transport for definitive care.",
-            kpi: "ECG findings documented and patient transported."
+            "correct": 0,
+            "explanation": "The CPG asks for a 12-lead to watch for hyperkalemia and arrhythmias.",
+            "kpi": "IV fluid for dehydration or shock."
         }
     ]
 };
