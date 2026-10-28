@@ -1,381 +1,803 @@
-/* ========== Chapter 10.4 � Eclampsia / Pre-eclampsia ========== */
+/* ========== CPG 10.4 – Pre-eclampsia and Eclampsia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c10-4",
-    title: "Eclampsia / Pre-eclampsia",
-    shortTitle: "10.4 Eclampsia / Pre-eclampsia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Eclampsia / Pre-eclampsia</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Recognize serious conditions associated with pregnancy and hypertension.</li>
-                <li>Prevention of eclampsia-related seizures.</li>
-                <li>Provide adequate treatment for eclampsia-related seizures.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Female patient, more than 20 weeks' gestation, presenting with hypertension and evidence of end-organ dysfunction, including renal insufficiency, liver involvement, neurological, or hematological involvement.</li>
-                <li>May occur up to 6 weeks postpartum, but is rare after 48 hours post-delivery.</li>
-                <li>Presenting symptoms of pre-eclampsia, including:
-                    <ul>
-                        <li>Severe hypertension (SBP >160, DBP >110).</li>
-                        <li>Headache.</li>
-                        <li>Confusion/altered mental status.</li>
-                        <li>Vision changes including blurred vision, spots/floaters, loss of vision (often a precursor to seizure).</li>
-                        <li>Right upper quadrant or epigastric pain.</li>
-                        <li>Shortness of breath/Pulmonary edema.</li>
-                        <li>Ecchymosis suggestive of low platelets (bruising, petechiae).</li>
-                        <li>Vaginal bleeding suggestive of placental abruption.</li>
-                        <li>Focal neurologic deficits suggesting hemorrhagic or thromboembolic stroke.</li>
-                    </ul>
-                </li>
-                <li>Presenting symptoms of eclampsia, including:
-                    <ul>
-                        <li>Any pregnant patient who is seizing should be assumed to have eclampsia and treated as such.</li>
-                        <li>Seizure in any late term pregnancy or postpartum patient.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Non-pregnant patients with hypertension or seizures.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Obtain Obstetric History:</strong> Gestational age in weeks or recent post-partum; symptoms suggestive of end organ involvement (headache, confusion, visual disturbances, seizure, epigastric pain, right upper quadrant pain, nausea/vomiting, stroke symptoms, shortness of breath); previous history of hypertension or known pre-eclampsia.</li>
-                <li><strong>Focused Obstetric Assessment:</strong> Constitutional: vital signs, skin color; Abdomen: distension, tenderness, uterine rigidity; Genitourinary: visible bleeding; Neurologic: mental status, focal deficits.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for eclampsia / seizures in pregnancy; severe hypertension (SBP >160 or DBP >110).</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Survey:</strong> As per Universal Care CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> Routinely for eclampsia and pre-eclampsia with severe hypertension.</li>
-                <li><strong>Administer Oxygen:</strong> 10-15 L/min via NRB mask; titrate to maintain SpO2 >94%.</li>
-                <li><strong>Establish IV Access:</strong> Consider IO if IV cannot be easily gained.</li>
-                <li><strong>Position Patient:</strong> Left lateral tilt position (if in second or third trimester).</li>
-                <li><strong>Pre-Eclampsia without Severe Hypertension:</strong> Inclusion: SBP 140-170 mmHg, DBP 90-110 mmHg. Management: Maintain quiet environment, ensure position of comfort, semi-recumbent or left lateral if in second or third trimester.</li>
-                <li><strong>Pre-Eclampsia with Severe Hypertension:</strong> Inclusion: Severe hypertension (SBP >160 or DBP >110) lasting more than 15 min with associated pre-eclampsia symptoms. Management Goals: Severely elevated BP must be treated to reduce maternal stroke risk; target BP roughly 140/90 to maintain uterine perfusion. Administer Labetalol or Magnesium Sulphate (routine Mg for pre-eclampsia not recommended). Labetalol: 20 mg IV over 2 minutes; may repeat every 10 minutes (max 80 mg total); ensure HR >60 bpm before administration. Goal is to reduce MAP by 20-25% initially.</li>
-                <li><strong>Eclampsia:</strong> Management Inclusion Criteria: Seizures associated with pregnancy >20 weeks gestation. First-line intervention: Magnesium Sulphate:
-                    <ul>
-                        <li>Magnesium Sulphate: 6 g IV over 5-10 minutes OR 8 g IM (4 g in each gluteal area). IV preferred if access available; administer via syringe driver when available, otherwise dilute in 100 mL Normal Saline.</li>
-                        <li>Refractory seizures or Magnesium Sulphate not available: Administer Benzodiazepines: Diazepam 5 mg IV (slow push over 2 minutes) or 10 mg IM; OR Midazolam 5 mg IV/IM. May repeat once if still seizing after 5 minutes.</li>
-                    </ul>
-                </li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, mental status, and response to treatment; recheck BP every 5-10 minutes.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Patients in the second or third trimester of pregnancy should be transported on the left side or with the uterus manually displaced to the left to ensure adequate uterine perfusion.</li>
-                <li>Magnesium toxicity may develop with administration. Progression of toxicity: hypotension ? loss of deep tendon reflexes ? somnolence, slurred speech ? respiratory paralysis ? cardiac arrest. Treatment: stop magnesium drip; give calcium gluconate 3 g IV or calcium chloride 1 g IV if available; support respiratory effort.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Delivery of the placenta is the only definitive management for pre-eclampsia and eclampsia.</li>
-                <li>Early treatment of severe pre-eclampsia with Magnesium for seizure prophylaxis and anti-hypertensives significantly reduces the rate of eclampsia. Use of Magnesium is encouraged if signs of severe pre-eclampsia are present to prevent seizures.</li>
-                <li>Patients with a history of chronic hypertension may have superimposed pre-eclampsia.</li>
-                <li>Eclampsia, including eclampsia-related seizures, can occur in postpartum patients (up to 6 weeks).</li>
-                <li>Magnesium toxicity: stop magnesium drip, give calcium gluconate (3 g IV) or calcium chloride (1 g IV) if available, support breathing.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Age, gestational age (in weeks or recent postpartum status), known history of hypertension or pre-eclampsia.</li>
-                <li>Onset and duration of symptoms (hypertension, seizures, headache); associated events (trauma, placental abruption).</li>
-                <li>Specific findings: severe hypertension (SBP >160, DBP >110), neurological changes (confusion, vision loss), respiratory distress, signs of end-organ involvement.</li>
-                <li>Vital signs (repeat BP every 5-10 minutes), level of consciousness, deep tendon reflexes (if checked), response to treatment (magnesium sulfate, labetalol).</li>
-                <li>Interventions: magnesium sulfate (dose, route, time), antihypertensive therapy (labetalol 20 mg IV), IV fluids, oxygen, benzodiazepines for seizures.</li>
-                <li>Allergies, medications (prenatal vitamins, antihypertensives), background obstetric history, current pregnancy details.</li>
-                <li>Transport details (left lateral position, ALS back-up requested), magnesium toxicity signs, communication with receiving facility.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer antihypertensive treatment (e.g., Labetalol) for patients with severe hypertension (SBP >160 or DBP >110).</li>
-                <li>Position second and third trimester patients with left lateral tilt or manual uterine displacement.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c10-4",
+    "title": "Pre-eclampsia and Eclampsia",
+    "shortTitle": "10.4 Eclampsia / Pre-eclampsia",
+    "guide": {
+        "cpg": "10.4",
+        "group": "obstetric",
+        "groupLabel": "Obstetrics",
+        "title": "Pre-eclampsia and Eclampsia",
+        "lead": "Pre-eclampsia is hypertension with end-organ involvement after 20 weeks of pregnancy, or up to 6 weeks postpartum. Treat severe hypertension (SBP >160 or DBP >110) with labetalol, aiming for about 140/90. Assume any seizing pregnant patient has eclampsia: magnesium sulphate is first line, with a benzodiazepine for refractory seizures. Use left lateral tilt throughout.",
+        "source": {
+            "label": "CPG 10.4",
+            "pages": "328–332",
+            "pdf": "../pdf_sections/10_4_Eclampsia___Pre-eclampsia.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "More than 20 weeks' gestation (or up to 6 weeks postpartum, rare after 48 hours) with hypertension and end-organ involvement: renal, liver, neurological or hematological.",
+                    "Severe features: SBP &gt;160 or DBP &gt;110, headache, confusion, visual changes (often precede seizures), RUQ or epigastric pain, shortness of breath or pulmonary edema, bruising or petechiae, vaginal bleeding (abruption), focal deficits (stroke).",
+                    "Any seizing pregnant or postpartum patient: assume eclampsia."
+                ],
+                "exclude": [
+                    "Non-pregnant patients with hypertension or seizures."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Categories",
+                "icon": "clipboard-list",
+                "columns": [
+                    "",
+                    "Blood pressure",
+                    "Management"
+                ],
+                "rows": [
+                    [
+                        "Pre-eclampsia without severe hypertension",
+                        "SBP 140–170, DBP 90–110 mmHg",
+                        "Quiet environment, minimal movement, semi-recumbent or left lateral"
+                    ],
+                    [
+                        "Pre-eclampsia with severe hypertension",
+                        "SBP &gt;160 or DBP &gt;110 for more than 15 min, with symptoms",
+                        "Labetalol; target about 140/90; Red priority"
+                    ],
+                    [
+                        "Eclampsia",
+                        "Seizures after 20 weeks or postpartum",
+                        "Magnesium sulphate first line; Red priority"
+                    ]
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "All patients",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "History",
+                        "text": "Gestation or recent delivery, headache, visual change, epigastric or RUQ pain, nausea, shortness of breath, stroke symptoms, seizure onset and duration, previous hypertension or pre-eclampsia."
+                    },
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely for eclampsia and for pre-eclampsia with severe hypertension."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "Left lateral tilt, or the uterus displaced manually to the left."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "text": "10–15 lpm via NRB; titrate to SpO<sub>2</sub> &gt;94%. Airway management and suction if needed."
+                    },
+                    {
+                        "title": "Access",
+                        "text": "Large-bore IV above the diaphragm (bilateral, 16–18 gauge, in eclampsia); IO if IV is difficult."
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Vital signs every 10 minutes during transport; deep tendon reflexes after magnesium."
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Severe hypertension",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Labetalol",
+                        "level": "AP",
+                        "text": "Only if HR &gt;60 bpm. Lower MAP by 20–25% initially; target about 140/90 to cut stroke risk while keeping uterine perfusion.",
+                        "doses": [
+                            {
+                                "drug": "Labetalol IV/IO",
+                                "dose": "20 mg over 2 minutes",
+                                "note": "Repeat every 10 minutes as required; max 80 mg"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Magnesium",
+                        "text": "Not routine for pre-eclampsia, but encouraged for seizure prevention when severe features are present: 4 g IV over 5–10 min, then 2 g/hr."
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Eclampsia (seizures)",
+                "icon": "zap",
+                "steps": [
+                    {
+                        "title": "Magnesium sulphate, first line",
+                        "level": "AP",
+                        "text": "IV preferred if access is available.",
+                        "doses": [
+                            {
+                                "drug": "Magnesium sulphate IV/IO",
+                                "dose": "6 g over 5–10 minutes",
+                                "note": "Syringe driver, or diluted in 100 mL normal saline"
+                            },
+                            {
+                                "drug": "Magnesium sulphate IM",
+                                "dose": "8 g",
+                                "note": "4 g in each gluteal area"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Refractory seizures or no magnesium",
+                        "level": "EP",
+                        "text": "Benzodiazepine.",
+                        "doses": [
+                            {
+                                "drug": "Diazepam (or midazolam) IV/IO",
+                                "dose": "5 mg slow push over 2 minutes",
+                                "note": "Repeat once if still seizing after 5 minutes"
+                            },
+                            {
+                                "drug": "Diazepam (or midazolam) IM",
+                                "dose": "10 mg",
+                                "note": "Repeat once if still seizing after 5 minutes"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "After the seizure",
+                        "level": "EP",
+                        "text": "SBP &gt;160 or DBP &gt;110: labetalol 20 mg IV/IO over 2 minutes, every 10 minutes, max 80 mg total."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Magnesium toxicity",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Progression",
+                        "items": [
+                            "Hypotension",
+                            "Loss of deep tendon reflexes",
+                            "Somnolence, slurred speech",
+                            "Respiratory paralysis",
+                            "Cardiac arrest"
+                        ]
+                    },
+                    {
+                        "title": "Treatment",
+                        "items": [
+                            "Stop the magnesium.",
+                            "Support breathing.",
+                            "Impending respiratory arrest: calcium gluconate 3 g IV or calcium chloride 1 g IV, if available."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Clinical notes",
+                "icon": "lightbulb",
+                "items": [
+                    "Delivery of the placenta is the only definitive treatment.",
+                    "Chronic hypertension can have pre-eclampsia superimposed.",
+                    "Eclampsia can occur postpartum."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: labetalol",
+                                "sub": "20 mg, max 80 mg",
+                                "href": "../pages/drug-calculator.html?drug=Labetalol",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Drug calculator: magnesium sulphate",
+                                "sub": "6 g IV or 8 g IM",
+                                "href": "../pages/drug-calculator.html?drug=Magnesium Sulphate",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Drug calculator: diazepam",
+                                "sub": "Refractory seizures",
+                                "href": "../pages/drug-calculator.html?drug=Diazepam",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Antihypertensive (e.g. labetalol) for severe hypertension: SBP &gt;160 or DBP &gt;110.",
+                    "Second and third trimester patients in left lateral tilt or with manual uterine displacement."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "10.1 Childbirth",
+                        "href": "c10-1.html"
+                    },
+                    {
+                        "label": "10.3 PV Hemorrhage in Pregnancy",
+                        "href": "c10-3.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the definition of severe hypertension in pregnancy?",
-            options: ["SBP >140 or DBP >90", "SBP >150 or DBP >100", "SBP >160 or DBP >110", "SBP >170 or DBP >120"],
-            correct: 2,
-            explanation: "Severe hypertension in pregnancy is defined as systolic blood pressure >160 mmHg or diastolic >110 mmHg."
+            "q": "Severe hypertension in pregnancy?",
+            "options": [
+                "SBP >160 or DBP >110",
+                "SBP >140 or DBP >90",
+                "SBP >150 or DBP >100",
+                "SBP >180 only"
+            ],
+            "correct": 0,
+            "explanation": "Red priority."
         },
         {
-            q: "A 30-year-old female at 34 weeks gestation presents with a blood pressure of 170/110, headache, and visual disturbances. What is the priority?",
-            options: ["Administer labetalol", "Position left lateral", "Administer magnesium sulphate", "All of the above"],
-            correct: 3,
-            explanation: "Severe pre-eclampsia requires multiple interventions: antihypertensive therapy, positioning, and magnesium for seizure prophylaxis."
+            "q": "34 weeks, BP 170/110, headache, visual disturbance, HR 88. What do you do?",
+            "options": [
+                "Left lateral, oxygen, IV, labetalol 20 mg (AP), ALS, transport",
+                "Supine and observe",
+                "Diazepam",
+                "Fluids 2 L"
+            ],
+            "correct": 0,
+            "explanation": "Severe hypertension with symptoms."
         },
         {
-            q: "What is the first-line medication for eclamptic seizures?",
-            options: ["Diazepam", "Magnesium sulphate", "Labetalol", "Phenytoin"],
-            correct: 1,
-            explanation: "Magnesium sulphate is the first-line treatment for eclampsia; benzodiazepines are used if refractory or magnesium unavailable."
+            "q": "First-line treatment for eclamptic seizures?",
+            "options": [
+                "Magnesium sulphate",
+                "Diazepam",
+                "Labetalol",
+                "Phenytoin"
+            ],
+            "correct": 0,
+            "explanation": "Benzodiazepines for refractory seizures."
         },
         {
-            q: "What is the dose of labetalol for severe hypertension in pre-eclampsia?",
-            options: ["10 mg IV", "20 mg IV over 2 minutes", "50 mg IV", "100 mg IV"],
-            correct: 1,
-            explanation: "Labetalol is given as 20 mg IV over 2 minutes, may repeat every 10 minutes (max 80 mg)."
+            "q": "Labetalol dose?",
+            "options": [
+                "20 mg IV over 2 minutes",
+                "10 mg",
+                "50 mg",
+                "100 mg"
+            ],
+            "correct": 0,
+            "explanation": "Every 10 minutes, max 80 mg."
         },
         {
-            q: "What is the preferred position for a patient in the third trimester with severe pre-eclampsia?",
-            options: ["Supine", "Left lateral tilt", "Trendelenburg", "Prone"],
-            correct: 1,
-            explanation: "Left lateral tilt prevents aortocaval compression and improves venous return."
+            "q": "Position for a third-trimester patient?",
+            "options": [
+                "Left lateral tilt",
+                "Supine",
+                "Trendelenburg",
+                "Prone"
+            ],
+            "correct": 0,
+            "explanation": "KPI."
         },
         {
-            q: "What is the dose of magnesium sulphate for eclampsia via IV route?",
-            options: ["2 g over 5-10 minutes", "4 g over 5-10 minutes", "6 g over 5-10 minutes", "8 g over 5-10 minutes"],
-            correct: 2,
-            explanation: "IV magnesium sulphate dose for eclampsia is 6 g over 5-10 minutes."
+            "q": "IV magnesium dose for eclampsia?",
+            "options": [
+                "6 g over 5–10 minutes",
+                "2 g",
+                "4 g",
+                "8 g IV push"
+            ],
+            "correct": 0,
+            "explanation": "Or 8 g IM."
         },
         {
-            q: "A patient with eclampsia receives magnesium sulphate. Which of the following is a sign of magnesium toxicity?",
-            options: ["Tachycardia", "Loss of deep tendon reflexes", "Hypertension", "Agitation"],
-            correct: 1,
-            explanation: "Loss of deep tendon reflexes is an early sign of magnesium toxicity; others include hypotension, respiratory depression."
+            "q": "Early sign of magnesium toxicity?",
+            "options": [
+                "Loss of deep tendon reflexes (after hypotension)",
+                "Tachycardia",
+                "Hypertension",
+                "Agitation"
+            ],
+            "correct": 0,
+            "explanation": "Then somnolence and respiratory paralysis."
         },
         {
-            q: "What is the treatment for magnesium toxicity?",
-            options: ["Stop magnesium, give calcium gluconate", "Increase magnesium dose", "Give potassium", "Administer naloxone"],
-            correct: 0,
-            explanation: "Magnesium toxicity is treated by stopping the infusion and administering calcium (calcium gluconate or calcium chloride)."
+            "q": "Magnesium toxicity treatment?",
+            "options": [
+                "Stop magnesium, support breathing, calcium if available for impending arrest",
+                "More magnesium",
+                "Potassium",
+                "Naloxone"
+            ],
+            "correct": 0,
+            "explanation": "Calcium gluconate 3 g or calcium chloride 1 g IV."
         },
         {
-            q: "What is the target SpO2 for a patient with eclampsia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Oxygen target?",
+            "options": [
+                "SpO₂ >94%",
+                ">88%",
+                ">90%",
+                "No oxygen"
+            ],
+            "correct": 0,
+            "explanation": "10–15 lpm via NRB."
         },
         {
-            q: "A patient with pre-eclampsia has a blood pressure of 150/95 and no symptoms. What is the appropriate management?",
-            options: ["Administer labetalol", "Administer magnesium", "Monitor and transport", "Give oral antihypertensive"],
-            correct: 2,
-            explanation: "Pre-eclampsia without severe hypertension or symptoms may be monitored during transport; treatment is usually not initiated prehospital."
+            "q": "BP 150/95, no symptoms, 30 weeks. Management?",
+            "options": [
+                "Quiet environment, left lateral or semi-recumbent, monitor, transport",
+                "Labetalol",
+                "Magnesium",
+                "Diazepam"
+            ],
+            "correct": 0,
+            "explanation": "Pre-eclampsia without severe hypertension."
         },
         {
-            q: "What is the dose of magnesium sulphate via IM route for eclampsia?",
-            options: ["4 g in one gluteal area", "8 g in one gluteal area", "4 g in each gluteal area (total 8 g)", "2 g in each gluteal area"],
-            correct: 2,
-            explanation: "IM magnesium sulphate is given as 8 g total: 4 g in each gluteal area."
+            "q": "IM magnesium?",
+            "options": [
+                "8 g: 4 g in each gluteal area",
+                "4 g in one buttock",
+                "8 g in one site",
+                "2 g each side"
+            ],
+            "correct": 0,
+            "explanation": "When IV isn't available."
         },
         {
-            q: "Which of the following is a symptom of severe pre-eclampsia?",
-            options: ["Headache", "Epigastric pain", "Visual disturbances", "All of the above"],
-            correct: 3,
-            explanation: "All are symptoms of severe pre-eclampsia and indicate end-organ dysfunction."
+            "q": "Which is a severe feature?",
+            "options": [
+                "RUQ or epigastric pain",
+                "Ankle swelling alone",
+                "Back ache",
+                "Heartburn after a meal"
+            ],
+            "correct": 0,
+            "explanation": "Also headache, visual change, confusion."
         },
         {
-            q: "A patient with eclampsia has a seizure lasting 2 minutes. After the seizure, she remains unresponsive with a GCS of 10. What is the priority?",
-            options: ["Administer magnesium", "Airway management and oxygen", "Administer labetalol", "Check blood glucose"],
-            correct: 1,
-            explanation: "Airway protection and oxygenation are the immediate priorities post-seizure."
+            "q": "After a 2-minute seizure, GCS 10. First priority?",
+            "options": [
+                "Airway, suction and oxygen in left lateral",
+                "Labetalol first",
+                "Glucose first",
+                "Leave her supine"
+            ],
+            "correct": 0,
+            "explanation": "Then magnesium."
         },
         {
-            q: "What is the maximum total dose of labetalol for severe hypertension in pre-eclampsia?",
-            options: ["40 mg", "60 mg", "80 mg", "100 mg"],
-            correct: 2,
-            explanation: "Maximum total labetalol dose is 80 mg (four 20 mg doses)."
+            "q": "Maximum labetalol?",
+            "options": [
+                "80 mg",
+                "40 mg",
+                "60 mg",
+                "100 mg"
+            ],
+            "correct": 0,
+            "explanation": "In 20 mg doses."
         },
         {
-            q: "Why should you avoid giving labetalol if the heart rate is less than 60 bpm?",
-            options: ["It may cause bradycardia", "It may cause hypotension", "It may cause heart block", "All of the above"],
-            correct: 3,
-            explanation: "Labetalol can further lower heart rate and cause heart block; check HR before administration."
+            "q": "Minimum HR for labetalol?",
+            "options": [
+                ">60 bpm",
+                ">40 bpm",
+                ">100 bpm",
+                "Any"
+            ],
+            "correct": 0,
+            "explanation": "Ensure HR >60 before giving."
         },
         {
-            q: "A patient with eclampsia receives magnesium sulphate. Which reflex should be assessed to monitor for toxicity?",
-            options: ["Biceps reflex", "Patellar reflex", "Ankle reflex", "All of the above"],
-            correct: 1,
-            explanation: "Patellar (knee) reflex is commonly used to assess magnesium toxicity; loss of deep tendon reflexes is an early sign."
+            "q": "What do you monitor after magnesium?",
+            "options": [
+                "Deep tendon reflexes, breathing and BP",
+                "Only temperature",
+                "Glucose only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Toxicity progression."
         },
         {
-            q: "What is the initial fluid bolus for a patient with eclampsia and signs of shock?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "If hypovolemic shock is present, administer 500-1000 mL crystalloid; caution in pulmonary edema."
+            "q": "Initial goal of labetalol?",
+            "options": [
+                "Lower MAP by 20–25%",
+                "Normal BP within minutes",
+                "Lower SBP below 100",
+                "Raise HR"
+            ],
+            "correct": 0,
+            "explanation": "Then about 140/90."
         },
         {
-            q: "What is the target blood pressure after treatment for severe pre-eclampsia?",
-            options: ["120/80", "140/90", "160/100", "100/60"],
-            correct: 1,
-            explanation: "Target BP is approximately 140/90 to reduce stroke risk while maintaining placental perfusion."
+            "q": "Target BP?",
+            "options": [
+                "About 140/90",
+                "120/80",
+                "100/60",
+                "160/110"
+            ],
+            "correct": 0,
+            "explanation": "Protects uterine perfusion."
         },
         {
-            q: "A patient with pre-eclampsia develops pulmonary edema. What is the priority?",
-            options: ["Furosemide", "Oxygen and CPAP", "Labetalol", "Magnesium"],
-            correct: 1,
-            explanation: "Pulmonary edema requires oxygen and positive pressure support; furosemide may be given in hospital."
+            "q": "Who gives benzodiazepines for refractory eclampsia?",
+            "options": [
+                "EP",
+                "EMT",
+                "EMR",
+                "AP"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "What is the key performance indicator for pre-eclampsia/eclampsia?",
-            options: ["Administer magnesium", "Administer antihypertensive for severe hypertension", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Administering antihypertensive treatment for severe hypertension is a key KPI."
+            "q": "Which KPI applies?",
+            "options": [
+                "Antihypertensive for severe hypertension",
+                "Magnesium for every pregnant patient",
+                "12-lead ECG",
+                "Glucose"
+            ],
+            "correct": 0,
+            "explanation": "And left lateral positioning."
         },
         {
-            q: "A patient at 36 weeks gestation presents with a blood pressure of 180/110, severe headache, and confusion. What is the appropriate management?",
-            options: ["Labetalol 20 mg IV", "Magnesium sulphate IV", "Oxygen and left lateral position", "All of the above"],
-            correct: 3,
-            explanation: "Severe pre-eclampsia requires antihypertensives, magnesium for seizure prophylaxis, and supportive measures."
+            "q": "BP 180/110, severe headache and confusion at 36 weeks, HR 90. Management?",
+            "options": [
+                "Oxygen, left lateral, IV, labetalol, consider magnesium, ALS",
+                "Observe",
+                "Fluids",
+                "Diazepam only"
+            ],
+            "correct": 0,
+            "explanation": "Severe pre-eclampsia."
         },
         {
-            q: "What is the dose of diazepam for eclampsia if magnesium is not available?",
-            options: ["2 mg IV", "5 mg IV over 2 minutes", "10 mg IV push", "20 mg IV"],
-            correct: 1,
-            explanation: "Diazepam 5 mg IV slow push over 2 minutes; may repeat once if still seizing."
+            "q": "Benzodiazepine IV dose for eclampsia?",
+            "options": [
+                "5 mg IV/IO over 2 minutes",
+                "2 mg",
+                "10 mg IV push",
+                "20 mg"
+            ],
+            "correct": 0,
+            "explanation": "IM 10 mg."
         },
         {
-            q: "A patient with eclampsia has a seizure that does not stop after magnesium sulphate. What should you do?",
-            options: ["Repeat magnesium", "Give benzodiazepine (diazepam or midazolam)", "Increase labetalol", "Intubate"],
-            correct: 1,
-            explanation: "Refractory seizures require benzodiazepines; magnesium may be continued."
+            "q": "Seizure continues after magnesium. Next?",
+            "options": [
+                "Benzodiazepine (EP)",
+                "More labetalol",
+                "Wait",
+                "Fluids"
+            ],
+            "correct": 0,
+            "explanation": "Repeat once after 5 minutes if needed."
         },
         {
-            q: "Why should you avoid placing a pregnant patient with pre-eclampsia in a supine position?",
-            options: ["It may cause hypotension", "It may reduce uterine blood flow", "It may worsen supine hypotension syndrome", "All of the above"],
-            correct: 3,
-            explanation: "Supine position causes aortocaval compression, reducing cardiac output and uterine perfusion."
+            "q": "Why avoid the supine position?",
+            "options": [
+                "Uterine compression of vessels lowers BP and uterine perfusion",
+                "It causes seizures",
+                "It is uncomfortable only",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Left lateral or manual displacement."
         },
         {
-            q: "What is the dose of midazolam for eclampsia if magnesium is not available?",
-            options: ["2 mg IV", "5 mg IV/IM", "10 mg IV", "0.1 mg/kg"],
-            correct: 1,
-            explanation: "Midazolam 5 mg IV/IM may be given; may repeat once after 5 minutes."
+            "q": "Benzodiazepine IM dose?",
+            "options": [
+                "10 mg IM",
+                "5 mg IM",
+                "2 mg IM",
+                "20 mg IM"
+            ],
+            "correct": 0,
+            "explanation": "Repeat once after 5 minutes."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with eclampsia?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 1,
-            explanation: "Cautious fluid administration is advised; up to 1000 mL unless signs of shock persist and no pulmonary edema."
+            "q": "How long postpartum can eclampsia occur?",
+            "options": [
+                "Up to 6 weeks (rare after 48 hours)",
+                "Never",
+                "Only 1 hour",
+                "1 year"
+            ],
+            "correct": 0,
+            "explanation": "Inclusion criteria."
         },
         {
-            q: "A patient with pre-eclampsia has a platelet count of 80,000. What does this indicate?",
-            options: ["Normal", "Mild thrombocytopenia", "Severe thrombocytopenia (HELLP syndrome)", "No significance"],
-            correct: 2,
-            explanation: "Thrombocytopenia <100,000 is a feature of HELLP syndrome (hemolysis, elevated liver enzymes, low platelets)."
+            "q": "Definitive treatment?",
+            "options": [
+                "Delivery of the placenta",
+                "Labetalol",
+                "Magnesium",
+                "Oxygen"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "What is the role of magnesium sulphate in pre-eclampsia?",
-            options: ["Antihypertensive", "Seizure prophylaxis", "Diuretic", "Anti-inflammatory"],
-            correct: 1,
-            explanation: "Magnesium is used for seizure prophylaxis in severe pre-eclampsia and treatment of eclampsia."
+            "q": "What does magnesium do in pre-eclampsia?",
+            "options": [
+                "Seizure prophylaxis",
+                "Lowers BP as first-line",
+                "Diuresis",
+                "Pain relief"
+            ],
+            "correct": 0,
+            "explanation": "Encouraged with severe features."
         },
         {
-            q: "A patient with eclampsia has a respiratory rate of 8 after magnesium administration. What is the likely cause and treatment?",
-            options: ["Magnesium toxicity; give calcium", "Seizure; give diazepam", "Pulmonary edema; give furosemide", "Stroke; transport"],
-            correct: 0,
-            explanation: "Respiratory depression is a sign of magnesium toxicity; stop magnesium and give calcium."
+            "q": "RR 8, drowsy and areflexic after magnesium. Likely cause and action?",
+            "options": [
+                "Magnesium toxicity: stop it, support breathing, calcium if available",
+                "Seizure: diazepam",
+                "Edema: furosemide",
+                "Stroke: no action"
+            ],
+            "correct": 0,
+            "explanation": "Toxicity progression."
         },
         {
-            q: "What is the maximum total dose of labetalol that can be given in the prehospital setting?",
-            options: ["20 mg", "40 mg", "80 mg", "100 mg"],
-            correct: 2,
-            explanation: "Maximum 80 mg total (four doses of 20 mg)."
+            "q": "Pre-eclampsia magnesium regimen in the text?",
+            "options": [
+                "4 g IV over 5–10 min, then 2 g/hr",
+                "6 g IM",
+                "1 g push",
+                "8 g IV push"
+            ],
+            "correct": 0,
+            "explanation": "Eclampsia uses 6 g IV or 8 g IM."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is pre-eclampsia?", answer: "Hypertension (SBP =140 or DBP =90) with proteinuria or end-organ dysfunction after 20 weeks gestation." },
-        { category: "Severe pre-eclampsia", question: "What defines severe pre-eclampsia?", answer: "SBP =160 or DBP =110 with symptoms (headache, visual changes, epigastric pain, thrombocytopenia, renal insufficiency, etc.)." },
-        { category: "Eclampsia", question: "What is eclampsia?", answer: "Seizures occurring in a patient with pre-eclampsia, not attributable to other causes." },
-        { category: "HELLP syndrome", question: "What is HELLP syndrome?", answer: "Hemolysis, Elevated Liver enzymes, Low Platelets � a severe complication of pre-eclampsia." },
-        { category: "Symptoms of pre-eclampsia", question: "What are common symptoms of pre-eclampsia?", answer: "Headache, visual disturbances, epigastric or right upper quadrant pain, nausea/vomiting, shortness of breath." },
-        { category: "First-line antihypertensive", question: "What is the first-line antihypertensive for severe pre-eclampsia?", answer: "Labetalol 20 mg IV over 2 minutes; may repeat every 10 minutes (max 80 mg)." },
-        { category: "Magnesium sulphate dose � IV", question: "What is the IV dose of magnesium for eclampsia?", answer: "6 g IV over 5-10 minutes." },
-        { category: "Magnesium sulphate dose � IM", question: "What is the IM dose of magnesium for eclampsia?", answer: "8 g total: 4 g in each gluteal area." },
-        { category: "Magnesium toxicity signs", question: "What are signs of magnesium toxicity?", answer: "Loss of deep tendon reflexes, respiratory depression, hypotension, altered mental status." },
-        { category: "Magnesium toxicity treatment", question: "How is magnesium toxicity treated?", answer: "Stop magnesium infusion; give calcium gluconate 3 g IV or calcium chloride 1 g IV; support ventilation." },
-        { category: "Seizure management", question: "How are eclamptic seizures managed if magnesium is not available?", answer: "Benzodiazepines: diazepam 5 mg IV or midazolam 5 mg IV/IM; may repeat once." },
-        { category: "Positioning", question: "What position is recommended for a pregnant patient with pre-eclampsia?", answer: "Left lateral tilt to prevent aortocaval compression." },
-        { category: "Oxygen", question: "What oxygen therapy is given for pre-eclampsia/eclampsia?", answer: "High-flow oxygen (10-15 L/min via NRB) if hypoxic or in shock." },
-        { category: "BP target", question: "What is the target blood pressure after treatment?", answer: "Approximately 140/90 to balance stroke risk and placental perfusion." },
-        { category: "Postpartum eclampsia", question: "When can eclampsia occur postpartum?", answer: "Up to 6 weeks after delivery, though rare after 48 hours." },
-        { category: "KPI", question: "What is a key performance indicator for pre-eclampsia/eclampsia?", answer: "Administer antihypertensive treatment for severe hypertension (SBP >160 or DBP >110)." },
-        { category: "Magnesium administration", question: "What is the preferred route for magnesium in eclampsia?", answer: "IV if access available; IM if not." },
-        { category: "Fluid resuscitation", question: "When are IV fluids given in pre-eclampsia/eclampsia?", answer: "If hypovolemic shock is present; use caution to avoid pulmonary edema." },
-        { category: "Differential diagnosis", question: "What conditions can mimic pre-eclampsia?", answer: "Chronic hypertension, gestational hypertension, thrombotic thrombocytopenic purpura (TTP), hemolytic uremic syndrome (HUS), and other causes of seizures." },
-        { category: "Delivery", question: "What is the definitive treatment for pre-eclampsia/eclampsia?", answer: "Delivery of the placenta." }
+    "flashcards": [
+        {
+            "question": "Pre-eclampsia",
+            "answer": "Hypertension with end-organ involvement after 20 weeks, or up to 6 weeks postpartum."
+        },
+        {
+            "question": "Severe hypertension",
+            "answer": "SBP >160 or DBP >110 (for more than 15 min with symptoms)."
+        },
+        {
+            "question": "Eclampsia",
+            "answer": "Seizures with pregnancy >20 weeks or postpartum: assume it in any seizing pregnant patient."
+        },
+        {
+            "question": "Severe features",
+            "answer": "Headache, confusion, visual change, RUQ/epigastric pain, pulmonary edema, bruising, vaginal bleeding, focal deficit."
+        },
+        {
+            "question": "Labetalol",
+            "answer": "20 mg IV over 2 minutes, every 10 minutes, max 80 mg; HR must be >60 (AP)."
+        },
+        {
+            "question": "BP goal",
+            "answer": "Lower MAP 20–25% initially; target about 140/90."
+        },
+        {
+            "question": "Magnesium IV (eclampsia)",
+            "answer": "6 g over 5–10 minutes via syringe driver or in 100 mL NS (AP)."
+        },
+        {
+            "question": "Magnesium IM (eclampsia)",
+            "answer": "8 g: 4 g in each gluteal area."
+        },
+        {
+            "question": "Magnesium toxicity",
+            "answer": "Hypotension → loss of reflexes → somnolence, slurred speech → respiratory paralysis → arrest."
+        },
+        {
+            "question": "Toxicity treatment",
+            "answer": "Stop magnesium; support breathing; calcium gluconate 3 g or calcium chloride 1 g IV if available."
+        },
+        {
+            "question": "Refractory seizures",
+            "answer": "Diazepam (or midazolam) 5 mg IV over 2 min or 10 mg IM; repeat once after 5 minutes (EP)."
+        },
+        {
+            "question": "Position",
+            "answer": "Left lateral tilt or manual uterine displacement."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "10–15 lpm via NRB; SpO₂ >94%."
+        },
+        {
+            "question": "Target BP reasoning",
+            "answer": "Reduce stroke risk while keeping uterine perfusion."
+        },
+        {
+            "question": "Postpartum timing",
+            "answer": "Up to 6 weeks; rare after 48 hours."
+        },
+        {
+            "question": "KPIs",
+            "answer": "Antihypertensive for severe hypertension; left lateral tilt in the second and third trimester."
+        },
+        {
+            "question": "IV route",
+            "answer": "Preferred for magnesium when access is available; IO if IV is difficult."
+        },
+        {
+            "question": "Mild pre-eclampsia",
+            "answer": "SBP 140–170, DBP 90–110: quiet, minimal movement, semi-recumbent or left lateral."
+        },
+        {
+            "question": "Magnesium for pre-eclampsia",
+            "answer": "Not routine; encouraged with severe features: 4 g IV then 2 g/hr."
+        },
+        {
+            "question": "Definitive treatment",
+            "answer": "Delivery of the placenta."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_10_4_1",
-            scenario: "A 32-year-old female at 38 weeks gestation presents with a blood pressure of 180/110, severe headache, and visual spots. She is alert. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer labetalol 20 mg IV", f: "Correct, but positioning and oxygen also needed." },
-                { t: "Position left lateral and administer oxygen", f: "Also correct; all are priorities." },
-                { t: "Administer magnesium sulphate", f: "Indicated for severe pre-eclampsia for seizure prophylaxis." },
-                { t: "All of the above", f: "Correct. Severe pre-eclampsia requires simultaneous interventions." }
+            "id": "crit_10_4_1",
+            "scenario": "At 38 weeks: BP 180/110 sustained for 20 minutes, severe headache, visual spots, HR 88, alert.",
+            "question": "What do you do first?",
+            "options": [
+                {
+                    "t": "Left lateral, oxygen, IV, ALS; labetalol 20 mg IV over 2 minutes, repeat every 10 minutes to max 80 mg",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Lower BP to normal fast",
+                    "f": "Lower MAP by 20–25% initially."
+                },
+                {
+                    "t": "Diazepam",
+                    "f": "She is not seizing."
+                },
+                {
+                    "t": "Supine and transport only",
+                    "f": "Treat severe hypertension."
+                }
             ],
-            correct: 3,
-            explanation: "Severe pre-eclampsia with neurological symptoms requires immediate antihypertensive therapy, seizure prophylaxis, oxygen, and left lateral positioning.",
-            kpi: "Antihypertensive administered and patient positioned."
+            "correct": 0,
+            "explanation": "KPI: antihypertensive for severe hypertension.",
+            "kpi": "Antihypertensive for severe hypertension."
         },
         {
-            id: "crit_10_4_2",
-            scenario: "A 28-year-old female at 36 weeks gestation is found seizing. The seizure lasts 90 seconds and stops spontaneously. She is post-ictal with a GCS of 12. BP 170/100. What is the priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer magnesium sulphate 6 g IV", f: "Correct. Eclampsia requires magnesium." },
-                { t: "Administer labetalol 20 mg IV", f: "Also needed, but magnesium is first for seizures." },
-                { t: "Protect airway and give oxygen", f: "Airway is priority, but magnesium should be given simultaneously." },
-                { t: "All of the above", f: "Correct. Manage airway, give oxygen, magnesium, and antihypertensive." }
+            "id": "crit_10_4_2",
+            "scenario": "At 36 weeks, found after a 90-second seizure that stopped by itself. GCS 12, BP 170/100.",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Airway and oxygen in left lateral, IV, magnesium sulphate 6 g IV over 5–10 minutes (or 8 g IM), ALS",
+                    "f": "Correct: eclampsia."
+                },
+                {
+                    "t": "No treatment: the seizure stopped",
+                    "f": "Magnesium prevents recurrence."
+                },
+                {
+                    "t": "Diazepam first",
+                    "f": "Magnesium is first line."
+                },
+                {
+                    "t": "Supine",
+                    "f": "Left lateral."
+                }
             ],
-            correct: 3,
-            explanation: "Eclampsia requires simultaneous airway management, magnesium sulphate, and antihypertensive therapy.",
-            kpi: "Magnesium administered."
+            "correct": 0,
+            "explanation": "Any seizing pregnant patient: assume eclampsia.",
+            "kpi": "Second and third trimester patients in left lateral tilt."
         },
         {
-            id: "crit_10_4_3",
-            scenario: "A 25-year-old female at 32 weeks gestation with severe pre-eclampsia receives magnesium sulphate 6 g IV. Thirty minutes later, she becomes drowsy, has a respiratory rate of 10, and areflexia. What is the likely cause?",
-            question: "What should you do?",
-            options: [
-                { t: "Eclamptic seizure; give diazepam", f: "No seizure; symptoms are of magnesium toxicity." },
-                { t: "Magnesium toxicity; stop infusion and give calcium gluconate", f: "Correct. Respiratory depression and areflexia indicate magnesium toxicity." },
-                { t: "Stroke; transport immediately", f: "Not likely." },
-                { t: "Pulmonary edema; give furosemide", f: "Not indicated." }
+            "id": "crit_10_4_3",
+            "scenario": "Thirty minutes after magnesium sulphate, the patient is drowsy, RR 10, with absent reflexes.",
+            "question": "What is happening, and what do you do?",
+            "options": [
+                {
+                    "t": "Magnesium toxicity: stop it, support breathing, calcium gluconate 3 g IV if available",
+                    "f": "Correct."
+                },
+                {
+                    "t": "More magnesium",
+                    "f": "Toxicity."
+                },
+                {
+                    "t": "Diazepam",
+                    "f": "Would worsen breathing."
+                },
+                {
+                    "t": "Labetalol",
+                    "f": "Not the problem."
+                }
             ],
-            correct: 1,
-            explanation: "Loss of reflexes and respiratory depression are classic signs of magnesium toxicity; stop magnesium and administer calcium.",
-            kpi: "Magnesium toxicity recognized and calcium given."
+            "correct": 0,
+            "explanation": "Loss of reflexes then respiratory depression.",
+            "kpi": "Antihypertensive for severe hypertension."
         },
         {
-            id: "crit_10_4_4",
-            scenario: "A patient with severe pre-eclampsia has a blood pressure of 170/110 and a heart rate of 55. What should you consider before giving labetalol?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Give labetalol as usual", f: "Bradycardia is a relative contraindication." },
-                { t: "Give atropine first", f: "Not indicated." },
-                { t: "Hold labetalol and consider alternative antihypertensive (e.g., hydralazine) in hospital", f: "Correct. Labetalol may worsen bradycardia." },
-                { t: "Give magnesium only", f: "Antihypertensive may still be needed." }
+            "id": "crit_10_4_4",
+            "scenario": "Severe pre-eclampsia: BP 170/110 for 20 minutes, HR 55.",
+            "ecg": "sbrady",
+            "question": "What about labetalol?",
+            "options": [
+                {
+                    "t": "Withhold labetalol (HR must be >60); left lateral, oxygen, consider magnesium, ALS and Tele-EMS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Give labetalol 20 mg anyway",
+                    "f": "HR must be >60."
+                },
+                {
+                    "t": "Give 80 mg at once",
+                    "f": "Never."
+                },
+                {
+                    "t": "Atropine then labetalol",
+                    "f": "Not in this CPG."
+                }
             ],
-            correct: 2,
-            explanation: "Labetalol can cause bradycardia and heart block; if HR <60, consider alternative therapy or consult Tele-EMS.",
-            kpi: "Appropriate antihypertensive decision made."
+            "correct": 0,
+            "explanation": "Ensure HR >60 before labetalol.",
+            "kpi": "Antihypertensive for severe hypertension."
         },
         {
-            id: "crit_10_4_5",
-            scenario: "A 30-year-old female at 40 weeks gestation with pre-eclampsia is in active labor. She suddenly becomes unconscious and has a generalized tonic-clonic seizure. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer magnesium sulphate", f: "Important, but airway is priority." },
-                { t: "Protect airway, give oxygen, and position left lateral", f: "Correct. Airway and oxygenation are the immediate priorities." },
-                { t: "Administer labetalol", f: "Not first." },
-                { t: "Start CPR", f: "Patient has a pulse." }
+            "id": "crit_10_4_5",
+            "scenario": "In active labor at 40 weeks with pre-eclampsia, she has a generalised tonic-clonic seizure. Magnesium 6 g IV has been given; she is still seizing 5 minutes later.",
+            "question": "Next?",
+            "options": [
+                {
+                    "t": "Protect the airway, oxygen, left lateral; EP gives diazepam 5 mg IV over 2 minutes",
+                    "f": "Correct: refractory seizure."
+                },
+                {
+                    "t": "Another 6 g magnesium push",
+                    "f": "Benzodiazepine for refractory seizures."
+                },
+                {
+                    "t": "Labetalol to stop the seizure",
+                    "f": "Doesn't treat seizures."
+                },
+                {
+                    "t": "Wait",
+                    "f": "Treat."
+                }
             ],
-            correct: 1,
-            explanation: "During an eclamptic seizure, protect the airway, give oxygen, and position left lateral; then administer magnesium.",
-            kpi: "Airway managed and seizure treated."
+            "correct": 0,
+            "explanation": "Repeat once if still seizing after 5 minutes.",
+            "kpi": "Second and third trimester patients in left lateral tilt."
         }
     ]
 };

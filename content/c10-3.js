@@ -1,361 +1,774 @@
-/* ========== Chapter 10.3 � PV Hemorrhage in Pregnancy ========== */
+/* ========== CPG 10.3 – PV Hemorrhage in Pregnancy ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c10-3",
-    title: "PV Hemorrhage in Pregnancy",
-    shortTitle: "10.3 PV Hemorrhage in Pregnancy",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? PV Hemorrhage in Pregnancy</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Recognize serious conditions associated with hemorrhage during pregnancy, even when the cause is not apparent (e.g., ectopic pregnancy, abruptio placenta, placenta previa).</li>
-                <li>Provide adequate resuscitation for hypovolemia and stabilize the patient.</li>
-                <li>Ensure rapid transport to an appropriate receiving facility to address potential fetal compromise and maternal shock.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Female patient with vaginal bleeding in any trimester.</li>
-                <li>Female patient with pelvic pain or possible ectopic pregnancy.</li>
-                <li>Consider pregnancy in any female between the ages of 10-60 years.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Childbirth and active labor (See Childbirth CPG).</li>
-                <li>Postpartum hemorrhage (See Post-Partum Hemorrhage CPG).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Determine Obstetric / Gynecologic History:</strong> Gestation, gravidity/parity, past obstetric history, last menstrual period (LMP), previous PV bleeds, last fetal movements.</li>
-                <li><strong>Estimation of Blood Loss & Bleeding Severity:</strong> Quantify vaginal bleeding (number of soaked pads, passing clots >5 cm, or estimated loss >500 mL). Assess the rate of PV bleeding.</li>
-                <li><strong>Evaluate for Signs of Shock or Instability:</strong> Mental status (confusion, agitation, lethargy); pallor, sweating, clammy skin; tachycardia (>100 bpm) or hypotension (<90/60 mmHg). Postural blood pressure assessment: a drop in BP >20 mmHg and/or a rise in heart rate between lying and standing indicates significant hypovolemia.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for estimated blood loss >500 mL or ongoing bleeding with signs of shock.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Survey:</strong> As per Universal Care CPG; determine obstetric history.</li>
-                <li><strong>Consider ALS back-up:</strong> Routinely for significant PV hemorrhage.</li>
-                <li><strong>General Management:</strong> Place absorbent pad to perineum; calm and reassure mother; ensure mother is in a position of comfort (left lateral tilt if possible).</li>
-                <li><strong>Administer high-flow oxygen:</strong> 10-15 L/min via non-rebreather (NRB) mask.</li>
-                <li><strong>Establish large-bore IV access.</strong> Consider second large-bore IV if patient is hemodynamically unstable.</li>
-                <li><strong>If Hemodynamically Unstable:</strong> Administer 500-1000 mL boluses of normal saline as needed (max 2000 mL), while monitoring perfusion and mental status.</li>
-                <li><strong>Consider Tranexamic Acid (TXA):</strong> Indicated for profuse bleeding with signs of shock or significant shock symptoms. Dose: 1 gram IV, diluted in 100 mL NaCl, administered over 10 minutes.</li>
-                <li><strong>Avoid vaginal examination:</strong> Do not place hand/fingers into the vagina to stop bleeding; this may worsen hemorrhage or dislodge a placenta previa.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, mental status, and estimated blood loss.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Patients in the third trimester of pregnancy should be transported on their left side or with the uterus manually displaced to the left if hypotensive.</li>
-                <li>Do not place hand/fingers into the vagina to stop bleeding.</li>
-                <li>Syncope can be a presenting symptom of intra-abdominal hemorrhage from ectopic pregnancy or antepartum hemorrhage.</li>
-                <li>Postural BP assessment is a critical indicator of hypovolemia.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Vaginal bleeding in early pregnancy may indicate ectopic pregnancy, miscarriage, or molar pregnancy. Ectopic pregnancy can cause intra-abdominal hemorrhage with minimal external bleeding.</li>
-                <li>Antepartum hemorrhage (>20 weeks) may be due to placenta previa (painless bleeding) or placental abruption (painful, with uterine tenderness).</li>
-                <li>If the patient is in the third trimester and bleeding is painless, suspect placenta previa; avoid digital examination.</li>
-                <li>If the patient has severe abdominal pain, uterine tenderness, and bleeding, suspect placental abruption.</li>
-                <li>Consider the possibility of ectopic pregnancy in any woman of childbearing age with abdominal pain and syncope, even if bleeding is minimal.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Patient�s full name, age, gender.</li>
-                <li>Obstetric/gynecologic history: gestation, gravidity, parity, last menstrual period, past obstetric history, previous PV bleeds, last fetal movements.</li>
-                <li>Estimated blood loss, rate of PV bleeding, signs of hypovolemia.</li>
-                <li>Vital signs, mental status, abdominal pain, uterine tenderness.</li>
-                <li>Treatment: oxygen, IV fluids, TXA, position.</li>
-                <li>Allergies, medications, background medical history.</li>
-                <li>Transport details, hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer IV fluids for all hemodynamically unstable patients.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c10-3",
+    "title": "PV Hemorrhage in Pregnancy",
+    "shortTitle": "10.3 PV Hemorrhage in Pregnancy",
+    "guide": {
+        "cpg": "10.3",
+        "group": "obstetric",
+        "groupLabel": "Obstetrics",
+        "title": "PV Hemorrhage in Pregnancy",
+        "lead": "Bleeding at any stage of pregnancy can hide serious causes such as ectopic pregnancy, placental abruption or placenta previa. Take a focused history, estimate the loss and avoid vaginal examination. If unstable (HR ≥100 or BP ≤90/60), use left lateral tilt, give oxygen, saline boluses and TXA, and transport rapidly.",
+        "source": {
+            "label": "CPG 10.3",
+            "pages": "324–327",
+            "pdf": "../pdf_sections/10_3_PV_Hemorrhage_in_Pregnancy.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Vaginal bleeding in any trimester.",
+                    "Pelvic pain or possible ectopic pregnancy.",
+                    "Consider pregnancy in any female aged 10–60 years."
+                ],
+                "exclude": [
+                    "Childbirth and active labor: Childbirth CPG.",
+                    "Post-partum hemorrhage: Post-Partum Hemorrhage CPG."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Classification",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Type",
+                    "Gestation"
+                ],
+                "rows": [
+                    [
+                        "Early pregnancy hemorrhage",
+                        "&lt;20 weeks"
+                    ],
+                    [
+                        "Antepartum hemorrhage",
+                        "&gt;20 weeks"
+                    ]
+                ],
+                "notes": [
+                    "Possible causes include ectopic pregnancy, spontaneous abortion, placental abruption and placenta previa. Syncope may be the presenting sign of intra-abdominal bleeding from an ectopic pregnancy."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "History",
+                        "items": [
+                            "Gestation, gravidity/parity, past obstetric history, LMP.",
+                            "Previous PV bleeds, last fetal movements."
+                        ]
+                    },
+                    {
+                        "title": "Bleeding",
+                        "items": [
+                            "Amount, rate and nature: soaked pads, clots &gt;5 cm, estimated loss &gt;500 mL.",
+                            "Absorbent pad to the perineum. Avoid PV examination."
+                        ]
+                    },
+                    {
+                        "title": "Shock",
+                        "items": [
+                            "Confusion, agitation or lethargy; pallor, sweating, clammy skin, dizziness, palpitations.",
+                            "HR &gt;100 bpm or BP &lt;90/60 mmHg.",
+                            "Postural drop &gt;20 mmHg or a rise in HR from lying to standing: significant hypovolemia."
+                        ]
+                    },
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "Estimated loss &gt;500 mL, or ongoing bleeding with shock."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Hemodynamically stable?",
+                "icon": "triangle-alert",
+                "question": "Heart rate &lt;100 bpm and blood pressure &gt;90/60 mmHg?",
+                "yes": "Absorbent pad, calm and reassure, position of comfort (left lateral tilt if possible), transport.",
+                "no": "Unstable pathway below."
+            },
+            {
+                "type": "steps",
+                "title": "Unstable",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Consider."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "Left lateral tilt, or manual displacement of the uterus to the left."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "text": "High flow, 10–15 lpm via NRB (flowchart target SpO<sub>2</sub> 94–98%)."
+                    },
+                    {
+                        "title": "IV/IO access",
+                        "text": "Large bore; a second line if unstable."
+                    },
+                    {
+                        "title": "Normal saline",
+                        "text": "500 mL boluses, max 2000 mL."
+                    },
+                    {
+                        "title": "Tranexamic acid",
+                        "level": "P",
+                        "text": "Profuse bleeding with shock, or significant shock.",
+                        "doses": [
+                            {
+                                "drug": "TXA IV/IO",
+                                "dose": "1 gram in 100 mL NaCl",
+                                "note": "Over 10 minutes"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Analgesia",
+                        "text": "Consider, per the Pain Management CPG."
+                    },
+                    {
+                        "title": "Metoclopramide",
+                        "level": "P",
+                        "text": "If significant nausea.",
+                        "doses": [
+                            {
+                                "drug": "Metoclopramide IV/IO/IM",
+                                "dose": "10 mg",
+                                "note": "IV/IO as an infusion in 100 mL NaCl over 10 minutes"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Safety",
+                "icon": "shield",
+                "items": [
+                    "Never put a hand or fingers into the vagina to stop bleeding; avoid unnecessary vaginal manipulation.",
+                    "Third trimester and hypotensive: transport on the left side or with the uterus displaced to the left."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: tranexamic acid",
+                                "sub": "1 gram over 10 minutes",
+                                "href": "../pages/drug-calculator.html?drug=Tranexamic Acid",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Drug calculator: normal saline",
+                                "sub": "500 mL boluses",
+                                "href": "../pages/drug-calculator.html?drug=Normal Saline",
+                                "icon": "droplet"
+                            },
+                            {
+                                "label": "Drug calculator: metoclopramide",
+                                "sub": "10 mg",
+                                "href": "../pages/drug-calculator.html?drug=Metoclopramide",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "IV fluids for every hemodynamically unstable patient."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "10.1 Childbirth",
+                        "href": "c10-1.html"
+                    },
+                    {
+                        "label": "10.2 Post-Partum Hemorrhage",
+                        "href": "c10-2.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "A 25-year-old female at 8 weeks gestation presents with abdominal pain and syncope. Vaginal bleeding is minimal. What is the most likely diagnosis?",
-            options: ["Placenta previa", "Placental abruption", "Ectopic pregnancy", "Molar pregnancy"],
-            correct: 2,
-            explanation: "Ectopic pregnancy can present with abdominal pain, syncope, and minimal external bleeding; consider it in any woman of childbearing age."
+            "q": "At 8 weeks, abdominal pain and syncope with minimal bleeding. Which serious cause must you consider?",
+            "options": [
+                "Ectopic pregnancy with intra-abdominal bleeding",
+                "Placenta previa",
+                "Normal pregnancy",
+                "Indigestion"
+            ],
+            "correct": 0,
+            "explanation": "Syncope can be the presenting symptom."
         },
         {
-            q: "What is the initial fluid bolus for an adult with PV hemorrhage and signs of shock?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults should receive 500-1000 mL crystalloid bolus; repeat as needed up to 2000 mL."
+            "q": "Fluid if hemodynamically unstable?",
+            "options": [
+                "Normal saline 500 mL boluses",
+                "250 mL once",
+                "2000 mL at once",
+                "No fluids"
+            ],
+            "correct": 0,
+            "explanation": "Max 2000 mL."
         },
         {
-            q: "What is the dose of TXA for PV hemorrhage with shock?",
-            options: ["0.5 g IV", "1 g IV over 10 minutes", "2 g IV", "5 g IV"],
-            correct: 1,
-            explanation: "TXA 1 gram IV diluted in 100 mL normal saline over 10 minutes is indicated for significant bleeding with shock."
+            "q": "TXA dose?",
+            "options": [
+                "1 gram IV in 100 mL NaCl over 10 minutes",
+                "0.5 g",
+                "2 g push",
+                "5 g"
+            ],
+            "correct": 0,
+            "explanation": "Paramedic level."
         },
         {
-            q: "A patient at 32 weeks gestation presents with painless vaginal bleeding. What should you suspect?",
-            options: ["Placenta previa", "Placental abruption", "Uterine rupture", "Ectopic pregnancy"],
-            correct: 0,
-            explanation: "Painless bleeding in the third trimester is characteristic of placenta previa."
+            "q": "Bleeding before 20 weeks is classified as…",
+            "options": [
+                "Early pregnancy hemorrhage",
+                "Antepartum hemorrhage",
+                "Post-partum hemorrhage",
+                "Normal"
+            ],
+            "correct": 0,
+            "explanation": "After 20 weeks: antepartum hemorrhage."
         },
         {
-            q: "What is the target SpO2 for a patient with PV hemorrhage?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Flowchart SpO₂ target?",
+            "options": [
+                "94–98%",
+                "88–92%",
+                "100%",
+                "No oxygen"
+            ],
+            "correct": 0,
+            "explanation": "High-flow oxygen 10–15 lpm via NRB in the text."
         },
         {
-            q: "A 30-year-old female at 28 weeks gestation has vaginal bleeding, severe abdominal pain, and a tense, tender uterus. What is the likely diagnosis?",
-            options: ["Placenta previa", "Placental abruption", "Ectopic pregnancy", "Molar pregnancy"],
-            correct: 1,
-            explanation: "Placental abruption presents with painful bleeding and uterine tenderness."
+            "q": "Which examination should you avoid?",
+            "options": [
+                "PV (vaginal) examination",
+                "Pulse",
+                "BP",
+                "Abdominal inspection"
+            ],
+            "correct": 0,
+            "explanation": "Avoid vaginal manipulation."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with PV hemorrhage?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Maximum total saline?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "In 500 mL boluses."
         },
         {
-            q: "Why should you avoid vaginal examination in a patient with PV hemorrhage in the third trimester?",
-            options: ["It may cause infection", "It may worsen bleeding", "It may dislodge a placenta previa", "It is unnecessary"],
-            correct: 2,
-            explanation: "Vaginal examination can provoke severe hemorrhage in placenta previa; it should be avoided prehospital."
+            "q": "Why avoid vaginal manipulation?",
+            "options": [
+                "It may worsen hemorrhage",
+                "It is too slow",
+                "It is painful only",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "What is the preferred position for a patient in the third trimester with PV hemorrhage and hypotension?",
-            options: ["Supine", "Left lateral tilt", "Trendelenburg", "Prone"],
-            correct: 1,
-            explanation: "Left lateral tilt or manual uterine displacement prevents aortocaval compression and improves venous return."
+            "q": "Position for a hypotensive third-trimester patient?",
+            "options": [
+                "Left lateral, or uterus displaced to the left",
+                "Supine",
+                "Trendelenburg",
+                "Prone"
+            ],
+            "correct": 0,
+            "explanation": "Safety consideration."
         },
         {
-            q: "A patient with PV hemorrhage has a heart rate of 120 and BP 90/60. After 1000 mL normal saline, BP is 95/65. What should you do?",
-            options: ["Give another 500 mL fluid bolus", "Start vasopressors", "Administer TXA", "Transport only"],
-            correct: 0,
-            explanation: "Continue fluid resuscitation up to 2000 mL if signs of shock persist."
+            "q": "BP 95/65 after 1000 mL, HR 115, still bleeding. Next?",
+            "options": [
+                "Another 500 mL bolus (max 2000 mL) and consider TXA",
+                "Vasopressors",
+                "Stop",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Still unstable."
         },
         {
-            q: "Which of the following is a red flag in PV hemorrhage?",
-            options: ["Syncope", "Hypotension", "Tachycardia", "All of the above"],
-            correct: 3,
-            explanation: "All indicate significant hypovolemia and require urgent intervention."
+            "q": "What defines hemodynamically stable on the flowchart?",
+            "options": [
+                "HR <100 bpm and BP >90/60 mmHg",
+                "HR <120 and BP >80/50",
+                "Any BP",
+                "SpO₂ >90%"
+            ],
+            "correct": 0,
+            "explanation": "Otherwise unstable pathway."
         },
         {
-            q: "What is the dose of oxygen for a patient with PV hemorrhage and signs of shock?",
-            options: ["2-4 L/min via nasal cannula", "10-15 L/min via non-rebreather", "6-8 L/min via mask", "No oxygen needed"],
-            correct: 1,
-            explanation: "High-flow oxygen (10-15 L/min via NRB) is indicated for shock."
+            "q": "Oxygen?",
+            "options": [
+                "10–15 lpm via NRB",
+                "2 L/min cannula",
+                "None",
+                "4 L/min mask"
+            ],
+            "correct": 0,
+            "explanation": "High flow."
         },
         {
-            q: "A patient at 10 weeks gestation has PV bleeding and severe lower abdominal pain. What should you consider?",
-            options: ["Miscarriage", "Ectopic pregnancy", "Molar pregnancy", "All of the above"],
-            correct: 3,
-            explanation: "All are possible causes of first-trimester bleeding; ectopic pregnancy is life-threatening."
+            "q": "What history items are key?",
+            "options": [
+                "Gestation, gravidity/parity, LMP, previous bleeds, last fetal movements",
+                "Only age",
+                "Diet",
+                "Shoe size"
+            ],
+            "correct": 0,
+            "explanation": "Focused history."
         },
         {
-            q: "What is the key performance indicator for PV hemorrhage?",
-            options: ["Administer TXA", "Administer IV fluids for hemodynamically unstable patients", "Perform ultrasound", "Check blood glucose"],
-            correct: 1,
-            explanation: "Administering IV fluids to hypotensive patients is a key KPI."
+            "q": "KPI?",
+            "options": [
+                "IV fluids for every hemodynamically unstable patient",
+                "TXA for all",
+                "Ultrasound",
+                "Glucose"
+            ],
+            "correct": 0,
+            "explanation": "Single KPI."
         },
         {
-            q: "A patient with PV hemorrhage has a blood pressure of 80/50 after 1500 mL normal saline. What should you do?",
-            options: ["Give another 500 mL fluid bolus", "Start dopamine", "Administer TXA", "All of the above"],
-            correct: 3,
-            explanation: "Persistent shock requires continued fluid, TXA, and consideration of vasopressors; transport urgently."
+            "q": "BP 80/50 after 1500 mL saline. Next?",
+            "options": [
+                "Final 500 mL bolus, TXA if not given, rapid transport",
+                "Dopamine",
+                "Stop all fluids",
+                "Pelvic exam"
+            ],
+            "correct": 0,
+            "explanation": "Max 2000 mL."
         },
         {
-            q: "What is the dose of TXA for a patient weighing 100 kg?",
-            options: ["0.5 g", "1 g", "1.5 g", "2 g"],
-            correct: 1,
-            explanation: "TXA dose is 1 gram regardless of weight (adult dose)."
+            "q": "TXA dose for a 100 kg patient?",
+            "options": [
+                "1 gram",
+                "2 g",
+                "1.5 g",
+                "0.5 g"
+            ],
+            "correct": 0,
+            "explanation": "Fixed dose."
         },
         {
-            q: "A 20-year-old female with syncope and mild abdominal pain has a positive pregnancy test. What is the priority?",
-            options: ["Oral fluids", "IV access and transport", "Pelvic exam", "Ultrasound"],
-            correct: 1,
-            explanation: "Syncope in early pregnancy suggests possible ectopic with intra-abdominal hemorrhage; rapid transport and IV access are critical."
+            "q": "Syncope and mild pain with a positive pregnancy test. Priority?",
+            "options": [
+                "Assess for shock, IV access and transport",
+                "Oral fluids and home",
+                "Pelvic exam",
+                "Wait"
+            ],
+            "correct": 0,
+            "explanation": "Possible ectopic."
         },
         {
-            q: "What is the maximum total fluid bolus for a patient with PV hemorrhage?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Which TXA indication applies?",
+            "options": [
+                "Profuse bleeding with shock, or significant shock",
+                "Any spotting",
+                "Before every transport",
+                "Only after 20 weeks"
+            ],
+            "correct": 0,
+            "explanation": "Per the CPG."
         },
         {
-            q: "Why is postural blood pressure assessment important in PV hemorrhage?",
-            options: ["To diagnose orthostatic hypotension", "To detect early hypovolemia", "To guide fluid therapy", "All of the above"],
-            correct: 3,
-            explanation: "A drop in BP with standing indicates significant blood loss, even if supine BP is normal."
+            "q": "Postural BP finding of significant hypovolemia?",
+            "options": [
+                "Drop >20 mmHg or HR rise from lying to standing",
+                "Any change",
+                "Drop of 2 mmHg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Assessment point."
         },
         {
-            q: "A patient with PV hemorrhage at 34 weeks is hypotensive and has a fundal height that is greater than expected. What should you suspect?",
-            options: ["Placenta previa", "Placental abruption with concealed hemorrhage", "Uterine rupture", "Polyhydramnios"],
-            correct: 1,
-            explanation: "Concealed abruption can cause uterine enlargement and shock without external bleeding."
+            "q": "Which clot size suggests significant bleeding?",
+            "options": [
+                ">5 cm",
+                ">1 cm",
+                "Any clot",
+                ">20 cm"
+            ],
+            "correct": 0,
+            "explanation": "Estimation of blood loss."
         },
         {
-            q: "What is the role of TXA in PV hemorrhage?",
-            options: ["Reduce bleeding by promoting clotting", "Reverse coagulopathy", "Treat infection", "None"],
-            correct: 0,
-            explanation: "TXA is an antifibrinolytic that reduces bleeding in obstetric hemorrhage."
+            "q": "What does TXA do?",
+            "options": [
+                "Reduces bleeding (antifibrinolytic)",
+                "Treats infection",
+                "Raises BP directly",
+                "Relieves nausea"
+            ],
+            "correct": 0,
+            "explanation": "Reduces clot breakdown."
         },
         {
-            q: "A patient with PV hemorrhage has a blood pressure of 100/70 and heart rate 110. Is she in shock?",
-            options: ["No, BP is normal", "Yes, tachycardia indicates shock", "Only if BP drops", "No, if she is lying down"],
-            correct: 1,
-            explanation: "Tachycardia is an early sign of shock; hypotension may occur later."
+            "q": "BP 100/70, HR 110. Stable by the flowchart?",
+            "options": [
+                "No: HR is not <100",
+                "Yes: BP is normal",
+                "Only if lying",
+                "Only if pale"
+            ],
+            "correct": 0,
+            "explanation": "Both criteria must be met."
         },
         {
-            q: "What is the recommended time to administer TXA for PV hemorrhage?",
-            options: ["Within 1 hour", "Within 3 hours", "Within 6 hours", "Within 12 hours"],
-            correct: 1,
-            explanation: "TXA is most effective when given within 3 hours of onset of bleeding."
+            "q": "Significant nausea in an unstable patient. What can a paramedic give?",
+            "options": [
+                "Metoclopramide 10 mg",
+                "Ondansetron 40 mg",
+                "Nothing",
+                "Haloperidol"
+            ],
+            "correct": 0,
+            "explanation": "IV/IO as an infusion over 10 minutes."
         },
         {
-            q: "A patient at 20 weeks gestation has PV bleeding and is in shock. What is the most likely cause?",
-            options: ["Placenta previa", "Placental abruption", "Ectopic pregnancy", "Molar pregnancy"],
-            correct: 1,
-            explanation: "Placental abruption can occur after 20 weeks and cause significant hemorrhage and shock."
+            "q": "Which is Red priority?",
+            "options": [
+                "Estimated loss >500 mL or ongoing bleeding with shock",
+                "Spotting only",
+                "Stable, minimal loss",
+                "Pain only"
+            ],
+            "correct": 0,
+            "explanation": "Triage."
         },
         {
-            q: "What is the initial fluid of choice for PV hemorrhage?",
-            options: ["5% dextrose", "Normal saline", "Ringer's lactate", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid (normal saline or Ringer's lactate) is preferred for resuscitation."
+            "q": "Fluid of choice?",
+            "options": [
+                "Normal saline",
+                "5% dextrose",
+                "Colloid",
+                "Water orally"
+            ],
+            "correct": 0,
+            "explanation": "500 mL boluses."
         },
         {
-            q: "A patient with PV hemorrhage has a blood pressure of 110/70 supine, but when sitting up becomes dizzy and BP drops to 90/60. What does this indicate?",
-            options: ["Normal pregnancy", "Significant blood loss", "Autonomic dysfunction", "Anxiety"],
-            correct: 1,
-            explanation: "A postural drop indicates significant hypovolemia."
+            "q": "BP 110/70 supine; dizzy with BP 90/60 when sitting up. Meaning?",
+            "options": [
+                "Significant hypovolemia",
+                "Normal pregnancy",
+                "Anxiety",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Postural drop >20 mmHg."
         },
         {
-            q: "Why should you not delay transport for IV access in a patient with severe PV hemorrhage?",
-            options: ["IV can be established en route", "Fluids can be given at hospital", "Time is critical", "All of the above"],
-            correct: 3,
-            explanation: "Rapid transport is essential; start IV en route if time allows."
+            "q": "Pain in PV hemorrhage?",
+            "options": [
+                "Consider analgesia per the Pain CPG",
+                "Never treat",
+                "Only after hospital",
+                "Paracetamol PR"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "What is the pediatric fluid bolus for a pregnant adolescent with PV hemorrhage and shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "Initial bolus is 20 mL/kg crystalloid, even in pregnancy."
+            "q": "Who should be considered possibly pregnant?",
+            "options": [
+                "Any female aged 10–60 years",
+                "Only married women",
+                "Only over 18",
+                "Only with a test"
+            ],
+            "correct": 0,
+            "explanation": "Inclusion criteria."
         },
         {
-            q: "A patient with PV hemorrhage has a heart rate of 130 and BP 80/50. After 500 mL normal saline, BP is 90/60 and HR 110. What should you do?",
-            options: ["Give another 500 mL bolus", "Start dopamine", "Administer TXA", "Transport only"],
-            correct: 0,
-            explanation: "Continue fluid resuscitation; repeat bolus as needed up to 2000 mL."
+            "q": "HR 130, BP 80/50; after 500 mL, HR 110 and BP 90/60. Next?",
+            "options": [
+                "Another 500 mL bolus and reassess",
+                "Dopamine",
+                "Stop",
+                "Transport only without fluids"
+            ],
+            "correct": 0,
+            "explanation": "Still unstable."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with PV hemorrhage?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum 60 mL/kg crystalloid (three 20 mL/kg boluses) in the prehospital setting."
+            "q": "Can you pack the vagina with your fingers to stop bleeding?",
+            "options": [
+                "No, never",
+                "Yes",
+                "Only for heavy bleeding",
+                "Only after 20 weeks"
+            ],
+            "correct": 0,
+            "explanation": "Safety consideration."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is PV hemorrhage?", answer: "Vaginal bleeding in pregnancy (antepartum or early pregnancy)." },
-        { category: "Ectopic pregnancy", question: "What are signs of ectopic pregnancy?", answer: "Abdominal pain, syncope, minimal external bleeding, positive pregnancy test." },
-        { category: "Placenta previa", question: "What are signs of placenta previa?", answer: "Painless vaginal bleeding in third trimester." },
-        { category: "Placental abruption", question: "What are signs of placental abruption?", answer: "Painful vaginal bleeding, uterine tenderness, rigid abdomen, signs of shock." },
-        { category: "Initial management", question: "What is the first step in PV hemorrhage?", answer: "Primary survey (ABCs), oxygen, IV access, fluid resuscitation." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial fluid bolus for an adult with PV hemorrhage?", answer: "500-1000 mL crystalloid; repeat up to 2000 mL." },
-        { category: "TXA dose", question: "What is the dose of TXA for PV hemorrhage?", answer: "1 g IV diluted in 100 mL normal saline over 10 minutes." },
-        { category: "Positioning", question: "How should a pregnant patient be positioned?", answer: "Left lateral tilt to prevent supine hypotension." },
-        { category: "Avoid vaginal exam", question: "Why avoid vaginal exam in third trimester bleeding?", answer: "May dislodge placenta previa and cause massive hemorrhage." },
-        { category: "Signs of shock", question: "What are early signs of shock in PV hemorrhage?", answer: "Tachycardia, tachypnea, anxiety, delayed capillary refill; hypotension is late." },
-        { category: "Postural BP", question: "What does a postural BP drop indicate?", answer: "Significant blood loss (=15-20%)." },
-        { category: "Ectopic risk", question: "What is the risk of ectopic pregnancy?", answer: "Rupture can cause intra-abdominal hemorrhage with minimal external bleeding." },
-        { category: "KPI", question: "What is the key performance indicator for PV hemorrhage?", answer: "Administer IV fluids for hemodynamically unstable patients." },
-        { category: "Oxygen", question: "What oxygen therapy is given for PV hemorrhage?", answer: "High-flow oxygen (10-15 L/min via NRB) if hypoxic or in shock." },
-        { category: "TXA timing", question: "When should TXA be given?", answer: "Within 3 hours of onset of bleeding." },
-        { category: "First trimester bleeding", question: "What causes first-trimester bleeding?", answer: "Miscarriage, ectopic pregnancy, molar pregnancy." },
-        { category: "Third trimester bleeding", question: "What causes third-trimester bleeding?", answer: "Placenta previa, placental abruption, uterine rupture." },
-        { category: "Syncope", question: "What does syncope in early pregnancy suggest?", answer: "Possible ruptured ectopic pregnancy." },
-        { category: "Uterine tenderness", question: "What does uterine tenderness with bleeding suggest?", answer: "Placental abruption." },
-        { category: "Painless bleeding", question: "What does painless bleeding in late pregnancy suggest?", answer: "Placenta previa." }
+    "flashcards": [
+        {
+            "question": "Early pregnancy hemorrhage",
+            "answer": "<20 weeks' gestation."
+        },
+        {
+            "question": "Antepartum hemorrhage",
+            "answer": ">20 weeks' gestation."
+        },
+        {
+            "question": "Serious causes",
+            "answer": "Ectopic pregnancy, spontaneous abortion, placental abruption, placenta previa."
+        },
+        {
+            "question": "Syncope",
+            "answer": "May be the first sign of intra-abdominal bleeding (e.g. ectopic)."
+        },
+        {
+            "question": "Stable",
+            "answer": "HR <100 bpm and BP >90/60 mmHg."
+        },
+        {
+            "question": "Unstable pathway",
+            "answer": "Left lateral tilt, oxygen, saline boluses, TXA, analgesia, antiemetic, transport."
+        },
+        {
+            "question": "Fluids",
+            "answer": "Normal saline 500 mL boluses, max 2000 mL."
+        },
+        {
+            "question": "TXA",
+            "answer": "1 gram IV/IO in 100 mL NaCl over 10 minutes (P)."
+        },
+        {
+            "question": "TXA indication",
+            "answer": "Profuse bleeding with shock, or significant shock."
+        },
+        {
+            "question": "Metoclopramide",
+            "answer": "10 mg IV/IO/IM for significant nausea; IV/IO infused over 10 minutes (P)."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "10–15 lpm via NRB; flowchart target 94–98%."
+        },
+        {
+            "question": "Vaginal examination",
+            "answer": "Avoid; never put fingers in to stop bleeding."
+        },
+        {
+            "question": "Positioning",
+            "answer": "Left lateral tilt or manual uterine displacement to the left."
+        },
+        {
+            "question": "Postural BP",
+            "answer": "Drop >20 mmHg or HR rise: significant hypovolemia."
+        },
+        {
+            "question": "Blood loss estimate",
+            "answer": "Soaked pads, clots >5 cm, loss >500 mL."
+        },
+        {
+            "question": "KPI",
+            "answer": "IV fluids for every hemodynamically unstable patient."
+        },
+        {
+            "question": "Red priority",
+            "answer": "Loss >500 mL, or ongoing bleeding with shock."
+        },
+        {
+            "question": "History",
+            "answer": "Gestation, gravidity/parity, LMP, previous bleeds, last fetal movements."
+        },
+        {
+            "question": "Inclusion",
+            "answer": "PV bleeding in any trimester; pelvic pain or possible ectopic; consider pregnancy aged 10–60."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Active labor and post-partum hemorrhage."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_10_3_1",
-            scenario: "A 28-year-old female at 10 weeks gestation presents with sudden onset of lower abdominal pain and syncope. She has minimal vaginal spotting. She is pale, HR 130, BP 85/50. What is the most likely diagnosis?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Miscarriage; give fluids and transport", f: "Possible, but syncope and hypotension suggest ectopic rupture." },
-                { t: "Ectopic pregnancy; establish IV access, give fluids, and transport urgently", f: "Correct. Ectopic rupture can cause intra-abdominal hemorrhage." },
-                { t: "Placenta previa; avoid vaginal exam", f: "Unlikely at 10 weeks." },
-                { t: "Appendicitis; give fluids", f: "Not likely with pregnancy and bleeding." }
+            "id": "crit_10_3_1",
+            "scenario": "A woman 10 weeks pregnant has sudden lower abdominal pain, fainted, and has minimal spotting. Pale, HR 130, BP 85/50.",
+            "ecg": "stach",
+            "question": "What do you suspect, and what do you do?",
+            "options": [
+                {
+                    "t": "Possible ruptured ectopic: left lateral, oxygen, large-bore IV, 500 mL saline boluses, TXA, rapid transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Minimal bleeding, so reassure and leave",
+                    "f": "Bleeding may be intra-abdominal."
+                },
+                {
+                    "t": "Vaginal examination",
+                    "f": "Avoid."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "She is in shock."
+                }
             ],
-            correct: 1,
-            explanation: "Syncope, abdominal pain, and hypotension in early pregnancy are classic for ruptured ectopic pregnancy.",
-            kpi: "IV fluids administered and transport expedited."
+            "correct": 0,
+            "explanation": "Syncope can be the presenting sign.",
+            "kpi": "IV fluids for every hemodynamically unstable patient."
         },
         {
-            id: "crit_10_3_2",
-            scenario: "A 32-year-old female at 34 weeks gestation has painless vaginal bleeding. She is alert, BP 110/70, HR 100. What is the likely diagnosis and appropriate management?",
-            question: "What should you do?",
-            options: [
-                { t: "Placental abruption; transport urgently", f: "Painless bleeding suggests previa, not abruption." },
-                { t: "Placenta previa; avoid vaginal exam, transport with left lateral tilt", f: "Correct. Do not perform vaginal exam." },
-                { t: "Perform vaginal exam to assess bleeding", f: "Contraindicated; may provoke hemorrhage." },
-                { t: "Administer TXA", f: "Not indicated without signs of shock." }
+            "id": "crit_10_3_2",
+            "scenario": "At 34 weeks, painless vaginal bleeding. Alert, BP 110/70, HR 96.",
+            "question": "Management?",
+            "options": [
+                {
+                    "t": "Absorbent pad, no PV examination, reassure, left lateral tilt, monitor and transport",
+                    "f": "Correct: stable pathway."
+                },
+                {
+                    "t": "Vaginal examination",
+                    "f": "Avoid."
+                },
+                {
+                    "t": "TXA and 2 L saline",
+                    "f": "She is stable."
+                },
+                {
+                    "t": "Leave on scene",
+                    "f": "Transport."
+                }
             ],
-            correct: 1,
-            explanation: "Painless bleeding in third trimester is placenta previa until proven otherwise; avoid vaginal examination and transport.",
-            kpi: "Patient transported without vaginal exam."
+            "correct": 0,
+            "explanation": "HR <100 and BP >90/60: stable.",
+            "kpi": "IV fluids for every hemodynamically unstable patient."
         },
         {
-            id: "crit_10_3_3",
-            scenario: "A 30-year-old female at 32 weeks gestation presents with severe abdominal pain, vaginal bleeding, and a rigid, tender uterus. BP 90/60, HR 120. What is the most likely diagnosis?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Placenta previa; transport", f: "Pain and rigidity suggest abruption." },
-                { t: "Placental abruption; give oxygen, IV fluids, TXA, and transport urgently", f: "Correct. Abruption can cause significant hemorrhage and fetal distress." },
-                { t: "Uterine rupture; immediate surgery", f: "Less likely without trauma or previous scar." },
-                { t: "Appendicitis; transport", f: "Not the priority." }
+            "id": "crit_10_3_3",
+            "scenario": "At 32 weeks, severe abdominal pain, vaginal bleeding, and a rigid tender uterus. BP 90/60, HR 120.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Unstable: left lateral tilt, oxygen, IV, 500 mL saline boluses, TXA (P), analgesia, rapid transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Supine and observe",
+                    "f": "She is unstable."
+                },
+                {
+                    "t": "Vaginal examination",
+                    "f": "Avoid."
+                },
+                {
+                    "t": "Dopamine",
+                    "f": "Not in this CPG."
+                }
             ],
-            correct: 1,
-            explanation: "Placental abruption presents with painful bleeding, uterine tenderness, and signs of shock; treat with fluids, oxygen, TXA, and urgent transport.",
-            kpi: "IV fluids and TXA administered."
+            "correct": 0,
+            "explanation": "A serious cause such as abruption is likely.",
+            "kpi": "IV fluids for every hemodynamically unstable patient."
         },
         {
-            id: "crit_10_3_4",
-            scenario: "A 22-year-old female at 16 weeks gestation has been bleeding for 2 hours. She is now dizzy, with a HR of 110, BP 90/60. She has passed several large clots. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Perform pelvic exam to assess bleeding", f: "Not indicated; may cause further bleeding." },
-                { t: "Establish IV access and give 500-1000 mL normal saline", f: "Correct. Fluid resuscitation is urgent." },
-                { t: "Administer TXA", f: "Also indicated, but fluids first." },
-                { t: "Place in Trendelenburg", f: "Not recommended." }
+            "id": "crit_10_3_4",
+            "scenario": "At 16 weeks, bleeding for 2 hours with large clots. Dizzy, HR 110, BP 90/60.",
+            "question": "First?",
+            "options": [
+                {
+                    "t": "Large-bore IV and 500 mL normal saline boluses, oxygen, left lateral tilt",
+                    "f": "Correct: unstable."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "She is unstable."
+                },
+                {
+                    "t": "PV examination",
+                    "f": "Avoid."
+                },
+                {
+                    "t": "2 L saline at once",
+                    "f": "500 mL boluses."
+                }
             ],
-            correct: 1,
-            explanation: "Hypovolemic shock requires immediate fluid resuscitation; TXA can be given simultaneously.",
-            kpi: "IV fluids initiated."
+            "correct": 0,
+            "explanation": "KPI: fluids for every unstable patient.",
+            "kpi": "IV fluids for every hemodynamically unstable patient."
         },
         {
-            id: "crit_10_3_5",
-            scenario: "A 35-year-old female at 38 weeks gestation has sudden onset of painless bright red bleeding. She is in no distress, BP 110/70, HR 90. She is lying flat. What is the appropriate management?",
-            question: "What should you do?",
-            options: [
-                { t: "Perform a speculum exam", f: "Contraindicated; may cause hemorrhage." },
-                { t: "Transport with left lateral tilt, administer oxygen, and monitor", f: "Correct. Do not examine; transport for evaluation." },
-                { t: "Administer TXA", f: "Not indicated without signs of shock." },
-                { t: "Give fluids", f: "Not needed at this time." }
+            "id": "crit_10_3_5",
+            "scenario": "At 38 weeks, sudden painless bright red bleeding. No distress, BP 110/70, HR 90, lying flat.",
+            "question": "Management?",
+            "options": [
+                {
+                    "t": "Left lateral tilt, absorbent pad, no PV examination, monitor for deterioration and transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Keep her supine",
+                    "f": "Use left lateral tilt."
+                },
+                {
+                    "t": "TXA immediately",
+                    "f": "Indicated for shock."
+                },
+                {
+                    "t": "Vaginal examination",
+                    "f": "Avoid."
+                }
             ],
-            correct: 1,
-            explanation: "Painless bleeding suggests placenta previa; avoid vaginal exam, position left lateral tilt, and transport for evaluation.",
-            kpi: "Patient transported with appropriate positioning."
+            "correct": 0,
+            "explanation": "Stable now, but watch closely.",
+            "kpi": "IV fluids for every hemodynamically unstable patient."
         }
     ]
 };

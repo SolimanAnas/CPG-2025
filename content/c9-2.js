@@ -1,388 +1,825 @@
-/* ========== Chapter 9.2 � Pediatric Bradycardia ========== */
+/* ========== CPG 9.2 – Pediatric Bradycardia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c9-2",
-    title: "Pediatric Bradycardia",
-    shortTitle: "9.2 Pediatric Bradycardia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Pediatric Bradycardia</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Recognize and promptly treat symptomatic bradycardia to prevent progression to cardiac arrest.</li>
-                <li>Identify and address reversible causes.</li>
-                <li>Support oxygenation, ventilation, and perfusion.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Age: Infants and children =13 years.</li>
-                <li>Heart rate below normal for age, with associated signs of poor perfusion:
-                    <ul>
-                        <li>Altered mental status.</li>
-                        <li>Pallor, cyanosis, weak pulses, prolonged capillary refill.</li>
-                        <li>Hypotension or respiratory failure.</li>
-                    </ul>
-                </li>
-                <li>Bradycardia due to reversible causes: hypoxia, vagal stimulation, hypothermia, toxins, heart block.</li>
-                <li>Unstable bradycardia: not tolerating low HR, progressing to shock or cardiac arrest.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Heart rate appropriate for age without signs of hypoperfusion.</li>
-                <li>Known congenital heart disease with stable baseline bradycardia without deterioration.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Initial Impression:</strong> Assess responsiveness, appearance, and distress using the Pediatric Assessment Triangle (PAT): tone, interactiveness, breathing effort, skin color. Look for signs of instability: lethargy, cyanosis, poor perfusion.</li>
-                <li><strong>Airway & Breathing Assessment:</strong> Ensure airway patent; assess for respiratory distress or failure. Look for hypoxia, apnea, or shallow respirations � the most common cause of bradycardia. Normal respiratory rate ranges: 1-12 months 30-53, 1-3yrs 22-37, 3-5yrs 20-28, 5-11yrs 18-25, >11yrs 12-20.</li>
-                <li><strong>Circulation Assessment:</strong> Palpate central and peripheral pulses for rate, rhythm, quality. Capillary refill time (>3 seconds suggests poor perfusion). Blood pressure if possible. Hypotension: <1 month SBP <60, 1-12 months <70, 1-10yrs <(70+(age yrs x 2)), >10yrs <90.</li>
-                <li><strong>Heart Rate Assessment:</strong> Count accurately over a full minute. Normal ranges: <1 month 100-205, 1-12 months 100-180, 1-3yrs 100-140, 3-5yrs 80-120, 5-11yrs 75-120, >11yrs 60-100. A heart rate below these thresholds with poor perfusion is significant and warrants immediate intervention.</li>
-                <li><strong>ECG Monitoring:</strong> Apply ECG to identify rhythm (e.g., sinus bradycardia, heart block).</li>
-                <li><strong>Reversible Causes:</strong> Hypoxia, hypovolemia, hypothermia, toxins/drugs, increased vagal tone, elevated intracranial pressure.</li>
-                <li><strong>Patient History:</strong> Alternative pathology or events: recent choking, respiratory infection, toxin/medication ingestion, congenital heart disease, prior episodes.</li>
-                <li><strong>Level of Consciousness:</strong> Assess alertness, confusion, lethargy, or unresponsiveness, indicating cerebral hypoperfusion.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for bradycardia with poor perfusion, altered mental status, hypotension, or impending cardiac arrest; Yellow for stable bradycardia with normal perfusion.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Request ALS back-up:</strong> Routinely for pediatric patients with bradycardia.</li>
-                <li><strong>Maintain a Calm, Systematic Approach:</strong> Minimize stress, keep child warm, allow caregiver to stay if calming.</li>
-                <li><strong>Support Oxygenation & Ventilation:</strong> Ensure patent airway. Administer high-flow oxygen to maintain SpO2 >94%. If respiratory effort inadequate or apnea, start bag-valve-mask ventilation with 100% oxygen. Correct hypoxia promptly � most pediatric bradycardia is secondary to hypoxia.</li>
-                <li><strong>Start CPR if Indicated:</strong> If HR <60 bpm with signs of poor perfusion despite oxygenation & ventilation, begin chest compressions immediately. Use appropriate compression depth and ratio for age (15:2 if two rescuers, 30:2 if alone).</li>
-                <li><strong>Obtain IV/IO access:</strong> As soon as possible.</li>
-                <li><strong>Administer Adrenaline (Epinephrine):</strong> If bradycardia persists despite adequate oxygenation & ventilation:
-                    <ul>
-                        <li>IV/IO: 0.01 mg/kg of 1:10,000 (0.1 mL/kg) every 3�5 minutes as needed.</li>
-                        <li>If no IV/IO access, via ETT: 0.1 mg/kg of 1:1,000 diluted in 3�5 mL saline.</li>
-                    </ul>
-                </li>
-                <li><strong>Administer Atropine:</strong> If vagal-mediated or suspected heart block:
-                    <ul>
-                        <li>Dose: Atropine 0.02 mg/kg IV/IO (minimum 0.1 mg; maximum single dose 0.5 mg).</li>
-                        <li>May repeat once after 3�5 minutes.</li>
-                        <li>Maximum total dose: 1 mg in children, 3 mg in adolescents.</li>
-                    </ul>
-                </li>
-                <li><strong>Advanced Airway:</strong> Prepare for endotracheal intubation if respiratory failure persists or airway not maintained.</li>
-                <li><strong>Consider Transcutaneous Pacing:</strong> If refractory to oxygenation, ventilation, chest compressions, epinephrine, and atropine, and if equipment and physician or advanced paramedic are available.</li>
-                <li><strong>Identify & Treat Reversible Causes:</strong> Hypoxia ? oxygen & ventilation; Hypothermia ? rewarming; Toxins ? antidotes if appropriate; Vagal stimulation ? remove stimulus.</li>
-                <li><strong>If Pulselessness Develops:</strong> Go to Pediatric Cardiac Arrest CPG.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess; continuous ECG monitoring required. Reassess for profound bradycardia, cardiac arrest, or worsening perfusion. Be prepared to resume or escalate resuscitation if condition worsens.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Avoid excessive ventilation; maintain normocapnia (EtCO2 35-45 mmHg).</li>
-                <li>Minimize delays in initiating chest compressions when indicated.</li>
-                <li>Use appropriate drug dosing based on weight; use Broselow tape.</li>
-                <li>Recognize bradycardia may indicate impending cardiac arrest in children.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Pediatric bradycardia is usually secondary to hypoxia; ensure oxygenation and ventilation first.</li>
-                <li>Bradycardia may precede cardiac arrest; act promptly.</li>
-                <li>Consult Tele-EMS if in doubt, if the patient does not respond to initial measures, or if advanced interventions (e.g., pacing) may be needed.</li>
-                <li>Distinguish between stable sinus bradycardia and symptomatic, unstable bradycardia requiring intervention.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Age, sex, weight.</li>
-                <li>Suspected cause of bradycardia.</li>
-                <li>Associated findings, vital signs.</li>
-                <li>Heart rate, blood pressure, SpO2, mental status.</li>
-                <li>Treatment: oxygen, medications, CPR, airway interventions.</li>
-                <li>Allergies, medications administered prehospital.</li>
-                <li>Background medical history.</li>
-                <li>Time of onset, response to treatment, handover to hospital.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Start CPR for unconscious patients with HR <60 bpm.</li>
-                <li>Administer oxygen for patients with SpO2 <94%.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c9-2",
+    "title": "Pediatric Bradycardia",
+    "shortTitle": "9.2 Pediatric Bradycardia",
+    "guide": {
+        "cpg": "9.2",
+        "group": "pediatric",
+        "groupLabel": "Pediatrics",
+        "title": "Pediatric Bradycardia",
+        "lead": "In children, bradycardia is usually caused by hypoxia and often comes before cardiac arrest. Oxygenate and ventilate first. If HR stays below 60 bpm with poor perfusion despite good ventilation, start CPR, then give adrenaline. Atropine is for vagal causes or primary AV block.",
+        "source": {
+            "label": "CPG 9.2",
+            "pages": "296–300",
+            "pdf": "../pdf_sections/9_2_Pediatric_Bradycardia.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Infants and children ≤13 years with a heart rate below normal for age and poor perfusion: altered mental status, pallor, cyanosis, weak pulses, prolonged capillary refill, hypotension or respiratory failure.",
+                    "Bradycardia from reversible causes: hypoxia, vagal stimulation, hypothermia, toxins, heart block."
+                ],
+                "exclude": [
+                    "Heart rate appropriate for age without hypoperfusion.",
+                    "Known congenital heart disease with stable baseline bradycardia, not deteriorating."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Normal heart rate and hypotension by age",
+                "icon": "stethoscope",
+                "stack": true,
+                "columns": [
+                    "Age",
+                    "Normal HR (bpm)",
+                    "Hypotension (systolic)"
+                ],
+                "rows": [
+                    [
+                        "&lt;1 month",
+                        "100–205",
+                        "&lt;60"
+                    ],
+                    [
+                        "1–12 months",
+                        "100–180",
+                        "&lt;70"
+                    ],
+                    [
+                        "1–3 years",
+                        "100–140",
+                        "&lt;70 + (age × 2)"
+                    ],
+                    [
+                        "3–5 years",
+                        "80–120",
+                        "&lt;70 + (age × 2)"
+                    ],
+                    [
+                        "5–11 years",
+                        "75–120",
+                        "&lt;70 + (age × 2) to 10 years; then &lt;90"
+                    ],
+                    [
+                        "&gt;11 years",
+                        "60–100",
+                        "&lt;90"
+                    ]
+                ],
+                "notes": [
+                    "Count HR over a full minute. Capillary refill &gt;3 seconds suggests poor perfusion.",
+                    "Normal respiratory rate: 30–53 (1–12 months), 22–37 (1–3 years), 20–28 (3–5 years), 18–25 (5–11 years), 12–20 (&gt;11 years)."
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Cardiopulmonary compromise?",
+                "icon": "triangle-alert",
+                "question": "Any sign of cardiopulmonary compromise?",
+                "items": [
+                    "Acutely altered mental status",
+                    "Signs of shock",
+                    "Hypotension"
+                ],
+                "yes": "Support airway and breathing with oxygen and positive-pressure ventilation; cardiac monitor. Then reassess heart rate.",
+                "no": "Support ABCs: consider oxygen, 12-lead ECG, identify and treat underlying causes, monitor closely."
+            },
+            {
+                "type": "steps",
+                "title": "Compromised child",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely for pediatric bradycardia."
+                    },
+                    {
+                        "title": "Airway",
+                        "level": "EMT",
+                        "text": "Patent airway; OPA, NPA or LT airway if required."
+                    },
+                    {
+                        "title": "Oxygen and ventilation",
+                        "text": "High-flow oxygen to SpO<sub>2</sub> &gt;94%. Inadequate effort or apnea: BVM with 100% oxygen. Avoid over-ventilation: EtCO<sub>2</sub> 35–45 mmHg (4.6–6 kPa)."
+                    },
+                    {
+                        "title": "Monitor",
+                        "text": "Cardiac monitor for rhythm (sinus bradycardia, heart block), pulse, BP and SpO<sub>2</sub>."
+                    },
+                    {
+                        "title": "HR &lt;60 bpm despite oxygenation and ventilation",
+                        "text": "Start CPR: 15:2 with two rescuers, 30:2 alone. Continue while HR &lt;60. Pulseless: Pediatric Cardiac Arrest CPG."
+                    },
+                    {
+                        "title": "IV/IO access",
+                        "level": "EMT",
+                        "text": "As soon as possible."
+                    },
+                    {
+                        "title": "Adrenaline",
+                        "level": "EMT",
+                        "text": "Bradycardia persists despite oxygenation and ventilation.",
+                        "doses": [
+                            {
+                                "drug": "Adrenaline IV/IO",
+                                "dose": "0.01 mg/kg of 1:10,000 (0.1 mL/kg)",
+                                "note": "Every 3–5 minutes"
+                            },
+                            {
+                                "drug": "Adrenaline via ETT (no IV/IO)",
+                                "dose": "0.1 mg/kg of 1:1,000",
+                                "note": "Diluted in 3–5 mL saline"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Atropine",
+                        "level": "EMT-A",
+                        "text": "Increased vagal tone or primary AV block.",
+                        "doses": [
+                            {
+                                "drug": "Atropine IV/IO",
+                                "dose": "0.02 mg/kg",
+                                "note": "Min 0.1 mg, max single dose 0.5 mg; may repeat once after 3–5 minutes; max total 1 mg (child), 3 mg (adolescent)"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Refractory",
+                        "text": "Prepare for intubation if respiratory failure persists. Transcutaneous pacing only if equipment and a physician or advanced paramedic are available. Consult Tele-EMS."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Reversible causes",
+                "icon": "search",
+                "groups": [
+                    {
+                        "title": "Find and treat",
+                        "items": [
+                            "Hypoxia: oxygen and ventilation (the most common cause).",
+                            "Hypothermia: rewarm.",
+                            "Toxins: antidotes where appropriate.",
+                            "Vagal stimulation: remove the stimulus.",
+                            "Also hypovolemia and raised intracranial pressure."
+                        ]
+                    },
+                    {
+                        "title": "History",
+                        "items": [
+                            "Recent choking, respiratory infection, toxin or medication ingestion, congenital heart disease, prior episodes."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Triage",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Priority",
+                    "Features"
+                ],
+                "rows": [
+                    [
+                        "Red",
+                        "Poor perfusion, altered mental status, hypotension or impending arrest"
+                    ],
+                    [
+                        "Yellow",
+                        "Stable perfusion, normal mental status, no shock: monitor closely"
+                    ]
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Rhythms",
+                        "items": [
+                            {
+                                "ecg": "sbrady",
+                                "label": "Sinus bradycardia",
+                                "sub": "Usually hypoxic: ventilate first"
+                            },
+                            {
+                                "ecg": "chb",
+                                "label": "Complete heart block",
+                                "sub": "Atropine; pacing if refractory"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: adrenaline",
+                                "sub": "0.01 mg/kg IV/IO",
+                                "href": "../pages/drug-calculator.html?drug=Epinephrine (Adrenaline)",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: atropine",
+                                "sub": "0.02 mg/kg",
+                                "href": "../pages/drug-calculator.html?drug=Atropine",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Defibrillator and pacing",
+                                "sub": "Transcutaneous pacing",
+                                "href": "../pages/defib.html",
+                                "icon": "zap"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "CPR for unconscious patients with HR &lt;60 bpm.",
+                    "Oxygen for SpO<sub>2</sub> &lt;94%."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "4.4 Pediatric Cardiac Arrest",
+                        "href": "c4-4.html"
+                    },
+                    {
+                        "label": "9.3 Pediatric Tachycardia",
+                        "href": "c9-3.html"
+                    },
+                    {
+                        "label": "8.9 Hypothermia",
+                        "href": "c8-9.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the most common cause of symptomatic bradycardia in children?",
-            options: ["Hypothermia", "Hypoxia", "Heart block", "Vagal stimulation"],
-            correct: 1,
-            explanation: "Hypoxia is the most common cause; airway and breathing are the priority."
+            "q": "Most common cause of symptomatic bradycardia in children?",
+            "options": [
+                "Hypoxia",
+                "Hypothermia",
+                "Heart block",
+                "Vagal stimulation"
+            ],
+            "correct": 0,
+            "explanation": "Oxygenate and ventilate first."
         },
         {
-            q: "A 3-year-old child has a heart rate of 50 bpm with poor perfusion. What is the first step?",
-            options: ["Atropine 0.02 mg/kg IV", "Epinephrine 0.01 mg/kg IV", "Support airway and provide oxygen/ventilation", "Transcutaneous pacing"],
-            correct: 2,
-            explanation: "Ensure oxygenation and ventilation first; most pediatric bradycardia is due to hypoxia."
+            "q": "A 3-year-old: HR 50, poor perfusion. First step?",
+            "options": [
+                "Support the airway with oxygen and ventilation",
+                "Atropine",
+                "Adrenaline",
+                "Pacing"
+            ],
+            "correct": 0,
+            "explanation": "Correct hypoxia promptly."
         },
         {
-            q: "What is the target SpO2 for a child with bradycardia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Oxygen target?",
+            "options": [
+                "SpO₂ >94%",
+                "SpO₂ >88%",
+                "SpO₂ >90%",
+                "No oxygen"
+            ],
+            "correct": 0,
+            "explanation": "High-flow oxygen."
         },
         {
-            q: "After ensuring adequate oxygenation and ventilation, a child with bradycardia (HR 45) and poor perfusion remains. What is the next step?",
-            options: ["Start chest compressions", "Give atropine", "Give epinephrine", "Transcutaneous pacing"],
-            correct: 0,
-            explanation: "If HR <60 with poor perfusion despite oxygenation/ventilation, start CPR."
+            "q": "HR 45 with poor perfusion despite good oxygenation and ventilation. Next?",
+            "options": [
+                "Start chest compressions",
+                "Atropine",
+                "Wait",
+                "Pacing"
+            ],
+            "correct": 0,
+            "explanation": "HR <60 despite ventilation: CPR."
         },
         {
-            q: "What is the dose of epinephrine (1:10,000) IV/IO for pediatric bradycardia?",
-            options: ["0.001 mg/kg", "0.01 mg/kg", "0.1 mg/kg", "0.5 mg/kg"],
-            correct: 1,
-            explanation: "Epinephrine IV/IO dose is 0.01 mg/kg (0.1 mL/kg of 1:10,000)."
+            "q": "Adrenaline IV/IO dose?",
+            "options": [
+                "0.01 mg/kg of 1:10,000 (0.1 mL/kg)",
+                "0.001 mg/kg",
+                "0.1 mg/kg of 1:10,000",
+                "0.5 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Every 3–5 minutes."
         },
         {
-            q: "What is the atropine dose for a 15 kg child with symptomatic bradycardia?",
-            options: ["0.1 mg", "0.3 mg", "0.5 mg", "1 mg"],
-            correct: 1,
-            explanation: "Atropine dose is 0.02 mg/kg = 0.3 mg for 15 kg; max single dose 0.5 mg."
+            "q": "Atropine for a 30 kg child?",
+            "options": [
+                "0.5 mg (the maximum single dose)",
+                "0.6 mg",
+                "1 mg",
+                "0.1 mg"
+            ],
+            "correct": 0,
+            "explanation": "0.02 mg/kg, max single dose 0.5 mg."
         },
         {
-            q: "What is the maximum total atropine dose for a child?",
-            options: ["0.5 mg", "1 mg", "2 mg", "3 mg"],
-            correct: 1,
-            explanation: "Maximum total dose in children is 1 mg."
+            "q": "Maximum total atropine in a child?",
+            "options": [
+                "1 mg",
+                "0.5 mg",
+                "2 mg",
+                "3 mg"
+            ],
+            "correct": 0,
+            "explanation": "3 mg in adolescents."
         },
         {
-            q: "A child with bradycardia has a heart rate of 40 and is pulseless. What should you do?",
-            options: ["Give atropine", "Give epinephrine", "Start CPR per pediatric cardiac arrest guidelines", "Transcutaneous pacing"],
-            correct: 2,
-            explanation: "Pulseless bradycardia is cardiac arrest; follow pediatric cardiac arrest CPG."
+            "q": "A bradycardic child becomes pulseless. What now?",
+            "options": [
+                "Pediatric Cardiac Arrest CPG",
+                "Atropine",
+                "Pacing",
+                "Observe"
+            ],
+            "correct": 0,
+            "explanation": "Step 10."
         },
         {
-            q: "What is the correct compression-to-ventilation ratio for a single rescuer in pediatric CPR?",
-            options: ["15:2", "30:2", "5:1", "Continuous compressions only"],
-            correct: 1,
-            explanation: "Single rescuer ratio is 30:2; two rescuers 15:2."
+            "q": "Compression-to-ventilation ratio with a single rescuer?",
+            "options": [
+                "30:2",
+                "15:2",
+                "5:1",
+                "Continuous"
+            ],
+            "correct": 0,
+            "explanation": "15:2 with two rescuers."
         },
         {
-            q: "A 5-year-old child has a heart rate of 55 and is lethargic with delayed capillary refill. SpO2 88% on room air. What is the priority?",
-            options: ["Atropine", "Epinephrine", "Oxygen and assisted ventilation", "Transcutaneous pacing"],
-            correct: 2,
-            explanation: "Hypoxia is likely the cause; correct with oxygen and ventilation."
+            "q": "A 5-year-old: HR 55, lethargic, slow capillary refill, SpO₂ 88%. Priority?",
+            "options": [
+                "Oxygen and assisted ventilation",
+                "Atropine",
+                "Adrenaline",
+                "Pacing"
+            ],
+            "correct": 0,
+            "explanation": "Hypoxia first; CPR if HR stays <60."
         },
         {
-            q: "What is the dose of epinephrine via endotracheal tube if IV access is not available?",
-            options: ["0.01 mg/kg of 1:10,000", "0.1 mg/kg of 1:1,000", "0.5 mg/kg of 1:10,000", "0.05 mg/kg of 1:1,000"],
-            correct: 1,
-            explanation: "ETT dose is 0.1 mg/kg of 1:1,000 (10 times IV dose)."
+            "q": "Adrenaline via ETT when there's no IV/IO?",
+            "options": [
+                "0.1 mg/kg of 1:1,000, diluted in 3–5 mL saline",
+                "0.01 mg/kg of 1:10,000",
+                "0.5 mg/kg",
+                "Not possible"
+            ],
+            "correct": 0,
+            "explanation": "Ten times the IV/IO dose."
         },
         {
-            q: "Which ECG finding is associated with heart block in pediatric bradycardia?",
-            options: ["Peaked T waves", "Prolonged PR interval", "ST elevation", "U waves"],
-            correct: 1,
-            explanation: "Heart block may present with prolonged PR interval or dropped beats."
+            "q": "What does the cardiac monitor help identify?",
+            "options": [
+                "Rhythm such as sinus bradycardia or heart block",
+                "Temperature",
+                "Glucose",
+                "Weight"
+            ],
+            "correct": 0,
+            "explanation": "ECG monitoring."
         },
         {
-            q: "A child with bradycardia has a history of recent choking. What should you suspect?",
-            options: ["Foreign body airway obstruction", "Anaphylaxis", "Asthma", "Seizure"],
-            correct: 0,
-            explanation: "Choking can cause hypoxic bradycardia; assess airway for foreign body."
+            "q": "A bradycardic child recently choked. What do you suspect?",
+            "options": [
+                "Airway obstruction causing hypoxia",
+                "Anaphylaxis",
+                "Asthma",
+                "Seizure"
+            ],
+            "correct": 0,
+            "explanation": "History guides treatment."
         },
         {
-            q: "What is the preferred method for obtaining vascular access in a critically ill child with difficult IV access?",
-            options: ["Central line", "IO access", "External jugular", "Femoral artery"],
-            correct: 1,
-            explanation: "Intraosseous (IO) access is quick and reliable in pediatric emergencies."
+            "q": "Vascular access in a critically ill child?",
+            "options": [
+                "IV or IO, as soon as possible",
+                "Central line",
+                "Femoral artery",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "IV/IO access, EMT level."
         },
         {
-            q: "A child with bradycardia has a blood glucose of 45 mg/dL. What should you do?",
-            options: ["Give 50% dextrose 0.5 g/kg IV", "Give glucagon IM", "Give oral glucose", "Transport only"],
-            correct: 0,
-            explanation: "Treat hypoglycemia with IV dextrose; 0.5-1 g/kg of 10% or 0.5 g/kg of 50% dextrose diluted."
+            "q": "Minimum atropine dose for a 4 kg infant?",
+            "options": [
+                "0.1 mg",
+                "0.08 mg",
+                "0.05 mg",
+                "0.5 mg"
+            ],
+            "correct": 0,
+            "explanation": "Minimum 0.1 mg."
         },
         {
-            q: "What is the target EtCO2 during bag-valve-mask ventilation?",
-            options: ["30-35 mmHg", "35-45 mmHg", "45-55 mmHg", ">50 mmHg"],
-            correct: 1,
-            explanation: "Maintain normocapnia (35-45 mmHg) to prevent cerebral vasoconstriction or vasodilation."
+            "q": "EtCO₂ target during ventilation?",
+            "options": [
+                "35–45 mmHg",
+                "20–25 mmHg",
+                "45–55 mmHg",
+                ">60 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Normocapnia: avoid over-ventilation."
         },
         {
-            q: "Which of the following is a reversible cause of bradycardia in children?",
-            options: ["Hypothermia", "Increased ICP", "Toxins", "All of the above"],
-            correct: 3,
-            explanation: "All are reversible causes; address accordingly."
+            "q": "Which is a reversible cause?",
+            "options": [
+                "Hypothermia",
+                "Fever",
+                "Teething",
+                "Crying"
+            ],
+            "correct": 0,
+            "explanation": "Also hypoxia, toxins, vagal stimulation, raised ICP."
         },
         {
-            q: "What is the key performance indicator for pediatric bradycardia?",
-            options: ["Administer atropine", "Start CPR for unconscious patients with HR <60 bpm", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Starting CPR for bradycardia with poor perfusion is a key KPI."
+            "q": "Which is a KPI?",
+            "options": [
+                "CPR for unconscious patients with HR <60",
+                "Atropine for all",
+                "12-lead ECG for all",
+                "Glucose for all"
+            ],
+            "correct": 0,
+            "explanation": "And oxygen for SpO₂ <94%."
         },
         {
-            q: "A child with bradycardia has a heart rate of 50 and is in shock. After 2 minutes of CPR, the rhythm is unchanged. What should you do?",
-            options: ["Give epinephrine", "Give atropine", "Continue CPR", "Defibrillate"],
-            correct: 0,
-            explanation: "Epinephrine is indicated every 3-5 minutes during CPR for bradycardia with poor perfusion."
+            "q": "HR 50 with shock after 2 minutes of CPR. Next?",
+            "options": [
+                "Adrenaline 0.01 mg/kg IV/IO",
+                "Atropine first",
+                "Stop CPR",
+                "Defibrillate"
+            ],
+            "correct": 0,
+            "explanation": "Persistent bradycardia despite ventilation."
         },
         {
-            q: "What is the maximum single atropine dose for an adolescent?",
-            options: ["0.5 mg", "1 mg", "2 mg", "3 mg"],
-            correct: 0,
-            explanation: "Maximum single dose is 0.5 mg for children; can repeat up to total 1 mg in children, 3 mg in adolescents."
+            "q": "Maximum single atropine dose?",
+            "options": [
+                "0.5 mg",
+                "1 mg",
+                "2 mg",
+                "3 mg"
+            ],
+            "correct": 0,
+            "explanation": "Even in adolescents."
         },
         {
-            q: "A child with bradycardia has a heart rate of 40 and is unresponsive. The airway is patent and oxygen is given. What is the next step?",
-            options: ["Atropine", "Epinephrine", "Start CPR", "Transcutaneous pacing"],
-            correct: 2,
-            explanation: "If HR <60 with poor perfusion despite oxygenation, start CPR."
+            "q": "Unresponsive, HR 40, airway patent and oxygenated. Next?",
+            "options": [
+                "Start CPR",
+                "Atropine",
+                "Observe",
+                "Pacing"
+            ],
+            "correct": 0,
+            "explanation": "HR <60 with poor perfusion."
         },
         {
-            q: "What is the dose of atropine for a 25 kg child with symptomatic bradycardia?",
-            options: ["0.2 mg", "0.5 mg", "0.75 mg", "1 mg"],
-            correct: 1,
-            explanation: "0.02 mg/kg = 0.5 mg; max single dose 0.5 mg."
+            "q": "Atropine for a 25 kg child?",
+            "options": [
+                "0.5 mg",
+                "0.2 mg",
+                "0.75 mg",
+                "1 mg"
+            ],
+            "correct": 0,
+            "explanation": "0.02 mg/kg."
         },
         {
-            q: "Why should you avoid excessive ventilation in pediatric bradycardia?",
-            options: ["It may cause gastric distension", "It may decrease venous return", "It may cause hypercapnia", "All of the above"],
-            correct: 3,
-            explanation: "Excessive ventilation can cause gastric distension, decreased cardiac output, and respiratory alkalosis."
+            "q": "Why avoid excessive ventilation?",
+            "options": [
+                "Keep normocapnia",
+                "It wastes oxygen",
+                "It is too slow",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "EtCO₂ 35–45 mmHg."
         },
         {
-            q: "A child with bradycardia has a core temperature of 32�C. What is the priority?",
-            options: ["Atropine", "Epinephrine", "Rewarming", "Pacing"],
-            correct: 2,
-            explanation: "Hypothermic bradycardia requires rewarming; atropine and epinephrine may be less effective until normothermic."
+            "q": "Bradycardic child with core temperature 32°C. Priority alongside ABCs?",
+            "options": [
+                "Rewarming",
+                "Atropine",
+                "Pacing",
+                "Adrenaline before oxygen"
+            ],
+            "correct": 0,
+            "explanation": "Reversible cause."
         },
         {
-            q: "What is the preferred initial fluid bolus for a child with bradycardia and signs of shock?",
-            options: ["5% dextrose", "Normal saline 20 mL/kg", "Ringer's lactate 10 mL/kg", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid 20 mL/kg is used for fluid resuscitation in shock."
+            "q": "When is atropine indicated?",
+            "options": [
+                "Increased vagal tone or primary AV block",
+                "Every bradycardia",
+                "Before oxygen",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "EMT-A."
         },
         {
-            q: "A child with bradycardia has a heart rate of 55 and is awake but pale and weak. What is the appropriate action?",
-            options: ["Observation", "Atropine", "Oxygen and prepare for possible deterioration", "Transport only"],
-            correct: 2,
-            explanation: "Signs of poor perfusion require intervention; give oxygen and prepare for possible escalation."
+            "q": "HR 55, awake but pale and weak, no shock or altered mental status. Action?",
+            "options": [
+                "Oxygen, monitor, find causes, be ready to escalate",
+                "Atropine",
+                "CPR",
+                "No treatment"
+            ],
+            "correct": 0,
+            "explanation": "No cardiopulmonary compromise branch."
         },
         {
-            q: "What is the role of transcutaneous pacing in pediatric bradycardia?",
-            options: ["First-line treatment", "If refractory to atropine and epinephrine", "For all bradycardia", "Not indicated"],
-            correct: 1,
-            explanation: "Pacing is considered if pharmacotherapy fails and patient remains unstable."
+            "q": "When can transcutaneous pacing be considered?",
+            "options": [
+                "Refractory to oxygenation, ventilation, CPR, adrenaline and atropine, with a physician or advanced paramedic",
+                "First line",
+                "Every bradycardia",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Consult Tele-EMS."
         },
         {
-            q: "A 10-year-old child has a heart rate of 35 and is symptomatic. After oxygenation and ventilation, the HR remains 35. What is the next step?",
-            options: ["Atropine 0.5 mg IV", "Epinephrine 0.01 mg/kg IV", "Start CPR", "All of the above"],
-            correct: 3,
-            explanation: "Start CPR if HR <60 with poor perfusion; atropine and epinephrine may also be given."
+            "q": "10-year-old: HR 35 with poor perfusion despite good ventilation. What sequence?",
+            "options": [
+                "CPR, IV/IO access, adrenaline; atropine if vagal or AV block",
+                "Atropine only",
+                "Pacing first",
+                "Observe"
+            ],
+            "correct": 0,
+            "explanation": "Per the flowchart."
         },
         {
-            q: "What is the correct depth of chest compressions for an infant?",
-            options: ["1.5 inches", "2 inches", "At least 1/3 of chest depth (~4 cm)", "2.5 inches"],
-            correct: 2,
-            explanation: "Compression depth should be at least 1/3 the anterior-posterior diameter of the chest (~4 cm in infants)."
+            "q": "Two rescuers. Ratio?",
+            "options": [
+                "15:2",
+                "30:2",
+                "5:1",
+                "3:1"
+            ],
+            "correct": 0,
+            "explanation": "30:2 if alone."
         },
         {
-            q: "A child with bradycardia has a heart rate of 40 after 2 minutes of CPR. What should you do?",
-            options: ["Give epinephrine", "Give atropine", "Continue CPR", "All of the above"],
-            correct: 3,
-            explanation: "Continue CPR, give epinephrine every 3-5 minutes, and consider atropine if vagal etiology."
+            "q": "HR 40 after 2 minutes of CPR and one dose of adrenaline. What next?",
+            "options": [
+                "Continue CPR and repeat adrenaline every 3–5 minutes",
+                "Stop CPR",
+                "Defibrillate",
+                "Wait 10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Continue CPR while HR <60."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is symptomatic bradycardia in children?", answer: "Heart rate below normal for age with signs of poor perfusion (altered mental status, hypotension, pallor, delayed capillary refill)." },
-        { category: "Normal HR infant", question: "What is a normal heart rate for an infant (<1 month)?", answer: "100-205 bpm." },
-        { category: "Normal HR child 1-3yrs", question: "What is a normal heart rate for a child 1-3 years?", answer: "100-140 bpm." },
-        { category: "Normal HR child 3-5yrs", question: "What is a normal heart rate for a child 3-5 years?", answer: "80-120 bpm." },
-        { category: "Normal HR child 5-11yrs", question: "What is a normal heart rate for a child 5-11 years?", answer: "75-120 bpm." },
-        { category: "Normal HR >11yrs", question: "What is a normal heart rate for an adolescent?", answer: "60-100 bpm." },
-        { category: "Common cause", question: "What is the most common cause of pediatric bradycardia?", answer: "Hypoxia." },
-        { category: "Initial action", question: "What is the first step in pediatric bradycardia?", answer: "Support airway, breathing, and oxygenation." },
-        { category: "CPR indication", question: "When should CPR be started in pediatric bradycardia?", answer: "HR <60 bpm with signs of poor perfusion despite oxygenation and ventilation." },
-        { category: "Epinephrine dose", question: "What is the IV/IO dose of epinephrine for pediatric bradycardia?", answer: "0.01 mg/kg (0.1 mL/kg of 1:10,000) every 3-5 minutes." },
-        { category: "Atropine dose", question: "What is the IV/IO dose of atropine for pediatric bradycardia?", answer: "0.02 mg/kg (minimum 0.1 mg, max 0.5 mg per dose)." },
-        { category: "Atropine maximum total", question: "What is the maximum total atropine dose in a child?", answer: "1 mg." },
-        { category: "ETT epinephrine dose", question: "What is the epinephrine dose if given via endotracheal tube?", answer: "0.1 mg/kg of 1:1,000." },
-        { category: "Hypoxia", question: "How does hypoxia cause bradycardia?", answer: "Myocardial hypoxia leads to decreased automaticity and conduction." },
-        { category: "Reversible causes", question: "What are the Hs and Ts for pediatric bradycardia?", answer: "Hypoxia, hypovolemia, hypothermia, hydrogen ion (acidosis), toxins, tamponade, tension pneumothorax, thrombosis." },
-        { category: "Fluid resuscitation", question: "What is the initial fluid bolus for pediatric shock?", answer: "20 mL/kg isotonic crystalloid." },
-        { category: "Transcutaneous pacing", question: "When is transcutaneous pacing indicated?", answer: "Refractory symptomatic bradycardia after atropine and epinephrine, if available." },
-        { category: "KPI", question: "What is a key performance indicator for pediatric bradycardia?", answer: "Start CPR for unconscious patients with HR <60 bpm." },
-        { category: "Broselow tape", question: "What is the Broselow tape used for?", answer: "Estimate weight and guide medication dosing and equipment size in pediatric emergencies." },
-        { category: "Sedation for pacing", question: "What may be needed during transcutaneous pacing?", answer: "Sedation (midazolam, ketamine) to manage pain and anxiety." }
+    "flashcards": [
+        {
+            "question": "Definition",
+            "answer": "HR below normal for age with poor perfusion; children ≤13 years."
+        },
+        {
+            "question": "Normal HR <1 month",
+            "answer": "100–205 bpm."
+        },
+        {
+            "question": "Normal HR 1–3 years",
+            "answer": "100–140 bpm."
+        },
+        {
+            "question": "Normal HR 3–5 years",
+            "answer": "80–120 bpm."
+        },
+        {
+            "question": "Normal HR 5–11 years",
+            "answer": "75–120 bpm."
+        },
+        {
+            "question": "Normal HR >11 years",
+            "answer": "60–100 bpm."
+        },
+        {
+            "question": "Commonest cause",
+            "answer": "Hypoxia."
+        },
+        {
+            "question": "First step",
+            "answer": "Airway, high-flow oxygen, ventilation (BVM with 100% oxygen if needed)."
+        },
+        {
+            "question": "When to start CPR",
+            "answer": "HR <60 bpm with poor perfusion despite oxygenation and ventilation."
+        },
+        {
+            "question": "Adrenaline IV/IO",
+            "answer": "0.01 mg/kg of 1:10,000 (0.1 mL/kg) every 3–5 minutes (EMT)."
+        },
+        {
+            "question": "Atropine",
+            "answer": "0.02 mg/kg; min 0.1 mg, max single 0.5 mg; repeat once after 3–5 minutes (EMT-A)."
+        },
+        {
+            "question": "Atropine total maximum",
+            "answer": "1 mg child; 3 mg adolescent."
+        },
+        {
+            "question": "Adrenaline via ETT",
+            "answer": "0.1 mg/kg of 1:1,000 diluted in 3–5 mL saline."
+        },
+        {
+            "question": "Compromise criteria",
+            "answer": "Acutely altered mental status, signs of shock, hypotension."
+        },
+        {
+            "question": "Reversible causes",
+            "answer": "Hypoxia, hypovolemia, hypothermia, toxins, vagal tone, raised ICP."
+        },
+        {
+            "question": "Hypotension",
+            "answer": "<60 (<1 month), <70 (1–12 months), <70 + (age × 2) (1–10 years), <90 (>10 years)."
+        },
+        {
+            "question": "Pacing",
+            "answer": "Refractory cases, only with a physician or advanced paramedic; consult Tele-EMS."
+        },
+        {
+            "question": "KPIs",
+            "answer": "CPR for unconscious patients with HR <60; oxygen for SpO₂ <94%."
+        },
+        {
+            "question": "Weight-based dosing",
+            "answer": "Use a length-based tape (Broselow) to estimate weight."
+        },
+        {
+            "question": "EtCO₂",
+            "answer": "35–45 mmHg (4.6–6 kPa): avoid over-ventilation."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_9_2_1",
-            scenario: "A 6-month-old infant is found lethargic with a heart rate of 45, weak pulses, and capillary refill 4 seconds. SpO2 88% on room air. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Give atropine 0.02 mg/kg IV", f: "Not first; hypoxia must be corrected." },
-                { t: "Administer oxygen and assist ventilation with BVM", f: "Correct. Hypoxia is the likely cause; correct it first." },
-                { t: "Start chest compressions", f: "Not yet; address hypoxia first." },
-                { t: "Give epinephrine 0.01 mg/kg IV", f: "Not first; ventilation is priority." }
+            "id": "crit_9_2_1",
+            "scenario": "A 6-month-old is lethargic: HR 45, weak pulses, capillary refill 4 seconds, SpO₂ 88%.",
+            "ecg": "sbrady",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Open the airway and ventilate with BVM and 100% oxygen; request ALS",
+                    "f": "Correct: hypoxia is the usual cause."
+                },
+                {
+                    "t": "Atropine",
+                    "f": "Oxygenate first; atropine is for vagal causes or AV block."
+                },
+                {
+                    "t": "Adrenaline before oxygen",
+                    "f": "Ventilation comes first."
+                },
+                {
+                    "t": "Pacing",
+                    "f": "Refractory cases only."
+                }
             ],
-            correct: 1,
-            explanation: "Hypoxia is the most common cause of pediatric bradycardia; provide oxygen and ventilation immediately.",
-            kpi: "Oxygen and ventilation initiated."
+            "correct": 0,
+            "explanation": "Then reassess: CPR if HR stays <60 bpm with poor perfusion.",
+            "kpi": "Oxygen for SpO₂ <94%."
         },
         {
-            id: "crit_9_2_2",
-            scenario: "A 4-year-old child with bradycardia (HR 40) receives BVM ventilation with 100% oxygen. After 30 seconds, HR remains 40 with poor perfusion. What is the next step?",
-            question: "What should you do?",
-            options: [
-                { t: "Give atropine", f: "CPR comes before atropine in unstable bradycardia." },
-                { t: "Start chest compressions", f: "Correct. HR <60 with poor perfusion despite oxygenation requires CPR." },
-                { t: "Give epinephrine", f: "Epinephrine is given during CPR." },
-                { t: "Transcutaneous pacing", f: "Not first-line." }
+            "id": "crit_9_2_2",
+            "scenario": "A 4-year-old with HR 40 is ventilated with BVM and 100% oxygen. After 30 seconds, HR is still 40 with poor perfusion.",
+            "question": "Next?",
+            "options": [
+                {
+                    "t": "Start chest compressions (15:2 with two rescuers)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Keep ventilating and wait",
+                    "f": "HR <60 with poor perfusion despite ventilation needs CPR."
+                },
+                {
+                    "t": "Atropine only",
+                    "f": "Not first line."
+                },
+                {
+                    "t": "Transport without CPR",
+                    "f": "Start CPR."
+                }
             ],
-            correct: 1,
-            explanation: "If HR <60 with poor perfusion despite adequate oxygenation and ventilation, start CPR.",
-            kpi: "CPR initiated."
+            "correct": 0,
+            "explanation": "Then IV/IO access and adrenaline.",
+            "kpi": "CPR for unconscious patients with HR <60 bpm."
         },
         {
-            id: "crit_9_2_3",
-            scenario: "A 10-year-old child has a heart rate of 30, is drowsy, and has weak pulses. After BVM ventilation, HR remains 30. CPR is started and epinephrine 0.01 mg/kg is given. The rhythm is sinus bradycardia with a palpable pulse but HR still 35. What is the next step?",
-            question: "What should you do?",
-            options: [
-                { t: "Repeat epinephrine", f: "Epinephrine can be repeated every 3-5 minutes." },
-                { t: "Give atropine 0.5 mg IV", f: "Consider if vagal etiology; may be given concurrently." },
-                { t: "Continue CPR and consider pacing", f: "If persistent instability, consider pacing." },
-                { t: "All of the above", f: "Correct; continue resuscitation, consider atropine, and prepare for pacing." }
+            "id": "crit_9_2_3",
+            "scenario": "A 10-year-old (30 kg) with complete heart block: HR 35 despite ventilation. CPR is running and adrenaline 0.01 mg/kg has been given.",
+            "ecg": "chb",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Atropine 0.5 mg IV/IO (primary AV block), continue CPR while HR <60, repeat adrenaline every 3–5 minutes, Tele-EMS about pacing",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Atropine 0.6 mg",
+                    "f": "Max single dose 0.5 mg."
+                },
+                {
+                    "t": "Stop CPR: there is a pulse",
+                    "f": "Continue while HR <60 with poor perfusion."
+                },
+                {
+                    "t": "Pace now without a physician or advanced paramedic",
+                    "f": "Pacing needs one of them present."
+                }
             ],
-            correct: 3,
-            explanation: "Refractory bradycardia requires continued CPR, repeat epinephrine, atropine for possible vagal cause, and preparation for pacing.",
-            kpi: "Continued resuscitation and preparation for pacing."
+            "correct": 0,
+            "explanation": "Atropine is indicated for primary AV block.",
+            "kpi": "CPR for unconscious patients with HR <60 bpm."
         },
         {
-            id: "crit_9_2_4",
-            scenario: "A child with bradycardia has a history of heart block and a permanent pacemaker. The monitor shows a paced rhythm but the rate is 30. The child is pale and lethargic. What is the most likely cause and management?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Pacemaker malfunction; apply external pacing", f: "Correct. External pacing may be needed." },
-                { t: "Battery failure; replace battery", f: "Not prehospital." },
-                { t: "Lead displacement; transport only", f: "External pacing may be required." },
-                { t: "Magnet needed; apply magnet", f: "Not recommended." }
+            "id": "crit_9_2_4",
+            "scenario": "A child with a permanent pacemaker has a paced rhythm at 30, is pale and lethargic, and doesn't improve with oxygen and ventilation.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "CPR, IV/IO and adrenaline as per the CPG; ALS and Tele-EMS for possible transcutaneous pacing",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Observe",
+                    "f": "She is compromised."
+                },
+                {
+                    "t": "Atropine only",
+                    "f": "Follow the full sequence."
+                },
+                {
+                    "t": "Transport without treatment",
+                    "f": "HR <60 with poor perfusion needs CPR."
+                }
             ],
-            correct: 0,
-            explanation: "Symptomatic bradycardia with a pacemaker may indicate failure; apply external pacing pads and consider pacing.",
-            kpi: "External pacing considered."
+            "correct": 0,
+            "explanation": "Pacing needs equipment and a physician or advanced paramedic.",
+            "kpi": "CPR for unconscious patients with HR <60 bpm."
         },
         {
-            id: "crit_9_2_5",
-            scenario: "A 2-year-old child has a heart rate of 50 with poor perfusion. You have provided oxygen and ventilation and started CPR. The rhythm is sinus bradycardia. After 2 minutes of CPR, the HR is 45. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Give epinephrine 0.01 mg/kg IV", f: "Correct. Epinephrine is indicated during CPR for persistent bradycardia." },
-                { t: "Give atropine 0.02 mg/kg IV", f: "May be considered, but epinephrine is first." },
-                { t: "Continue CPR without medication", f: "Medication should be given." },
-                { t: "Stop CPR and reassess", f: "No; continue resuscitation." }
+            "id": "crit_9_2_5",
+            "scenario": "A 2-year-old with HR 50 and poor perfusion is ventilated, and CPR is running. After 2 minutes, HR is 45 in sinus rhythm.",
+            "question": "Next?",
+            "options": [
+                {
+                    "t": "IV/IO access and adrenaline 0.01 mg/kg; continue CPR",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop CPR",
+                    "f": "HR still <60."
+                },
+                {
+                    "t": "Atropine first",
+                    "f": "No vagal cause or AV block identified."
+                },
+                {
+                    "t": "Defibrillate",
+                    "f": "Not a shockable rhythm."
+                }
             ],
-            correct: 0,
-            explanation: "Epinephrine is given every 3-5 minutes during CPR for persistent bradycardia.",
-            kpi: "Epinephrine administered."
+            "correct": 0,
+            "explanation": "Repeat adrenaline every 3–5 minutes.",
+            "kpi": "CPR for unconscious patients with HR <60 bpm."
         }
     ]
 };
