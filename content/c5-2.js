@@ -1,378 +1,830 @@
-/* ========== Chapter 5.2 – Seizures ========== */
+/* ========== CPG 5.2 – Seizures ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c5-2",
-    title: "Seizures",
-    shortTitle: "5.2 Seizures",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#zap"/></svg> Seizures</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Terminate active seizures or prevent recurrence in the prehospital setting to protect the patient from injury and hypoxia.</li>
-                <li>Ensure safe transport to an appropriate medical facility for further evaluation and management of underlying causes.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with seizures or post‑ictal states, including:
-                    <ul>
-                        <li>Active generalized tonic‑clonic seizures (e.g., convulsions, rhythmic jerking).</li>
-                        <li>Focal seizures (e.g., localized twitching, sensory disturbances).</li>
-                        <li>Status epilepticus (seizures lasting >5 minutes or recurrent without recovery).</li>
-                        <li>Post‑ictal state (e.g., confusion, lethargy, or weakness following a seizure).</li>
-                        <li>History of epilepsy, recent seizure activity, or precipitating factors (e.g., medication non‑compliance, fever, or trauma).</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Patients without history or description of seizure activity.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Seizure characteristics:</strong> Confirm active seizure activity (tonic‑clonic, focal), duration, frequency, pattern (single, recurrent, status epilepticus).</li>
-                <li><strong>Seizure history:</strong> History of epilepsy, anticonvulsant use, precipitating factors (missed meds, sleep deprivation, fever, alcohol withdrawal, head trauma). Check for medical alert bracelets.</li>
-                <li><strong>Post‑ictal assessment:</strong> Evaluate for confusion, lethargy, focal deficits, injuries sustained during seizure (tongue biting, head trauma, fractures).</li>
-                <li><strong>Glucose assessment:</strong> Check random blood sugar (RBS) to rule out hypoglycemia (<70 mg/dL), which can trigger seizures or mimic seizure activity.</li>
-                <li><strong>Non‑epileptic causes:</strong> Consider meningitis, head injury, hypoglycemia, eclampsia, pyrexia, poisons, alcohol, drug withdrawal.</li>
-                <li><strong>Triage category:</strong> Red priority: ongoing active seizures, status epilepticus.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary survey:</strong> As per Universal Care CPG. Administer oxygen to maintain SpO₂ ≥94%.</li>
-                <li><strong>Consider red flags:</strong> Status epilepticus (>5 min or recurrent without recovery), respiratory depression/hypoxia, suspected head trauma, first‑time seizure, pregnancy with seizures.</li>
-                <li><strong>Consider ALS back‑up:</strong> Routinely for active seizures; early benzodiazepines improve outcomes; meet ALS en route.</li>
-                <li><strong>Active seizure management:</strong>
-                    <ul>
-                        <li>Protect patient: remove hazards, pad surroundings, avoid restraining movements.</li>
-                        <li>Position in recovery position post‑seizure to protect airway.</li>
-                        <li>Suction oral secretions/vomit to maintain airway patency.</li>
-                        <li>Use nasopharyngeal or oropharyngeal airway if needed in unresponsive patients.</li>
-                        <li>Establish IV access for active seizures, status epilepticus, or anticipated medication.</li>
-                    </ul>
-                </li>
-                <li><strong>Medication administration:</strong>
-                    <ul>
-                        <li><strong>Midazolam:</strong> Adults: IM 10 mg (single dose, do not repeat), IV 5 mg (repeat once after 5‑10 min, max 10 mg). Pediatrics: IM 0.2 mg/kg (max 10 mg), repeat once after 10‑20 min; IV 0.1 mg/kg (max 5 mg), repeat once after 10‑20 min.</li>
-                        <li><strong>Diazepam:</strong> Adults: IV 5 mg (repeat once after 5 min, max 10 mg). Pediatrics: IV 0.1 mg/kg (max 5 mg), repeat once after 5 min; PR 0.5 mg/kg (max 5 mg), repeat once after 5 min.</li>
-                    </ul>
-                </li>
-                <li><strong>Post‑seizure/post‑ictal management:</strong> Recovery position, oxygen, basic airway adjuncts if needed. Advanced airways rarely required unless airway compromise persists.</li>
-                <li><strong>Patient reassessment:</strong> Continuous monitoring of vital signs, level of consciousness, and for recurrence.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>ALS back‑up routinely requested for active seizures; meet en route.</li>
-                <li>Check blood glucose prior to benzodiazepine administration.</li>
-                <li>Diazepam IM not recommended (slow onset); use IM midazolam.</li>
-                <li>Pediatric febrile seizures: consider in children <5 years; assess for fever and infection.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism/medical complaint (seizure characteristics, duration), injuries/information (trauma, medication history).</li>
-                <li>Signs: GCS/AVPU, post‑ictal findings, vital signs, pupil response, glucose level.</li>
-                <li>Treatment: time seizure started/stopped, benzodiazepines (type, route, dose, time), airway interventions, oxygen.</li>
-                <li>Allergies, medications (home AEDs, last dose), background (epilepsy history, comorbidities), other (scene safety, witness account, ALS coordination).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer benzodiazepines for all patients in status epilepticus.</li>
-                <li>Request ALS back‑up for all patients with active seizures.</li>
-                <li>Perform an RBS for all seizure patients.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c5-2",
+    "title": "Seizures",
+    "shortTitle": "5.2 Seizures",
+    "guide": {
+        "cpg": "5.2",
+        "group": "neuro",
+        "groupLabel": "Neurology",
+        "title": "Seizures",
+        "lead": "Protect the patient and the airway, give oxygen, check glucose before any benzodiazepine, and request ALS for every active seizure. A seizure over 5 minutes, or seizures without recovery, is status epilepticus: benzodiazepines are a KPI.",
+        "source": {
+            "label": "CPG 5.2",
+            "pages": "143–146",
+            "pdf": "../pdf_sections/5_2_Seizures.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Active generalized tonic-clonic or focal seizures.",
+                    "Status epilepticus: seizure &gt;5 minutes, or recurrent seizures without recovery.",
+                    "Post-ictal state: confusion, lethargy or weakness after a seizure.",
+                    "Known epilepsy, recent seizures or precipitants (missed medication, fever, trauma)."
+                ],
+                "exclude": [
+                    "No history or description of seizure activity."
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Is the patient seizing now?",
+                "icon": "circle-help",
+                "question": "Active seizure?",
+                "no": "Airway, breathing, circulation; recovery position if unresponsive; OPA/NPA if deeply unconscious; check glucose; IV access; look for the cause.",
+                "yes": "Consider ALS back-up and follow the active seizure steps below."
+            },
+            {
+                "type": "steps",
+                "title": "Active seizure",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Request routinely for any active seizure; meet ALS en route if it is not immediately available. Early benzodiazepines improve outcomes."
+                    },
+                    {
+                        "title": "Protect",
+                        "text": "Remove hazards, pad the surroundings; do not restrain movements."
+                    },
+                    {
+                        "title": "Airway",
+                        "level": "EMR",
+                        "text": "Suction secretions or vomit; consider an OPA or NPA."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "level": "EMR",
+                        "text": "Titrate to SpO<sub>2</sub> ≥94% during and after the seizure."
+                    },
+                    {
+                        "title": "Glucose",
+                        "text": "Check before giving a benzodiazepine. &lt;70 mg/dL: correct it (Hypoglycemia CPG)."
+                    },
+                    {
+                        "title": "IV access",
+                        "level": "EMT",
+                        "text": "For active seizures, status epilepticus or expected medication; IO if IV fails."
+                    },
+                    {
+                        "title": "Benzodiazepine",
+                        "level": "EP",
+                        "text": "See the dose table. If the seizure does not stop, repeat the dose once."
+                    },
+                    {
+                        "title": "Continued seizure or deeply unconscious",
+                        "text": "OPA/NPA, or an advanced airway."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Benzodiazepines",
+                "icon": "syringe",
+                "columns": [
+                    "",
+                    "Adult",
+                    "Pediatric"
+                ],
+                "rows": [
+                    {
+                        "group": "Midazolam"
+                    },
+                    [
+                        "IM",
+                        "10 mg, single dose, do not repeat",
+                        "0.2 mg/kg (maximum 10 mg); repeat once after 10–20 minutes"
+                    ],
+                    [
+                        "IV",
+                        "5 mg; repeat once after 5–10 minutes (maximum 10 mg)",
+                        "0.1 mg/kg (maximum 5 mg); repeat once after 10–20 minutes"
+                    ],
+                    {
+                        "group": "Diazepam"
+                    },
+                    [
+                        "IV",
+                        "5 mg; repeat once after 5 minutes (maximum 10 mg)",
+                        "0.1 mg/kg (maximum 5 mg); repeat once after 5 minutes"
+                    ],
+                    [
+                        "PR",
+                        "–",
+                        "0.5 mg/kg (maximum 5 mg); repeat once after 5 minutes"
+                    ]
+                ],
+                "stack": true,
+                "notes": [
+                    "Use IM midazolam, not IM diazepam: diazepam is slow by the IM route. If it must be given IM: adults 10 mg, children 0.2 mg/kg (maximum 10 mg).",
+                    "The flowchart gives a pediatric IM midazolam maximum of 5 mg; the text gives 10 mg.",
+                    "Benzodiazepines are marked EP on the flowchart; the text expects them from the ALS back-up."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "After the seizure",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Airway first",
+                        "text": "Recovery position; oxygen to SpO<sub>2</sub> &gt;94%; OPA/NPA if needed. Advanced airways are rarely needed unless compromise persists."
+                    },
+                    {
+                        "title": "Look for injury",
+                        "text": "Tongue biting, head trauma, fractures; post-ictal confusion or focal deficits (Todd's paralysis)."
+                    },
+                    {
+                        "title": "Monitor continuously",
+                        "text": "Mandatory for reduced consciousness or after a benzodiazepine."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Causes and red flags",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Non-epileptic causes",
+                        "items": [
+                            "Meningitis, head injury, hypoglycemia, eclampsia, pyrexia, poisons, alcohol, drug withdrawal.",
+                            "Precipitants: missed medication, sleep deprivation, fever, alcohol withdrawal, head trauma.",
+                            "Children &lt;5 years: consider febrile seizures; look for fever and infection."
+                        ]
+                    },
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Status epilepticus.",
+                            "Respiratory depression or SpO<sub>2</sub> &lt;90%.",
+                            "Head trauma or injury during the seizure.",
+                            "First seizure, or no known epilepsy.",
+                            "Seizures in pregnancy."
+                        ]
+                    },
+                    {
+                        "title": "Triage",
+                        "items": [
+                            "Red: ongoing seizures and status epilepticus."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator",
+                                "sub": "Weight-based diazepam",
+                                "href": "../pages/drug-calculator.html?drug=Diazepam",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Documentation",
+                "icon": "notebook-pen",
+                "items": [
+                    "Seizure type, start and stop times, duration, frequency; witness account.",
+                    "Medical alert tag, injuries, epilepsy history, home anti-epileptic drugs and last dose.",
+                    "GCS or AVPU, post-ictal findings, pupils, SpO<sub>2</sub>, glucose.",
+                    "Each benzodiazepine: drug, route, dose, time; airway interventions; oxygen."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Benzodiazepines given to every patient in status epilepticus.",
+                    "ALS back-up requested for every active seizure.",
+                    "RBS for every seizure patient."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "10.4 Eclampsia / Pre-eclampsia",
+                        "href": "c10-4.html"
+                    },
+                    {
+                        "label": "6.7 Fever and Sepsis",
+                        "href": "c6-7.html"
+                    },
+                    {
+                        "label": "5.1 Stroke",
+                        "href": "c5-1.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the definition of status epilepticus?",
-            options: ["Seizure lasting >2 minutes", "Seizure lasting >5 minutes or recurrent without recovery", "Two seizures in 24 hours", "Any seizure with loss of consciousness"],
-            correct: 1,
-            explanation: "Status epilepticus is defined as a seizure lasting longer than 5 minutes or recurrent seizures without return to baseline."
+            "q": "What defines status epilepticus?",
+            "options": [
+                "A seizure over 5 minutes, or recurrent seizures without recovery",
+                "Any seizure over 1 minute",
+                "Two seizures in a year",
+                "Any seizure with incontinence"
+            ],
+            "correct": 0,
+            "explanation": "Benzodiazepines for every patient in status epilepticus is a KPI."
         },
         {
-            q: "What is the first‑line medication for active seizures?",
-            options: ["Phenytoin", "Benzodiazepines", "Levetiracetam", "Magnesium"],
-            correct: 1,
-            explanation: "Benzodiazepines (midazolam, diazepam) are first‑line for terminating active seizures."
+            "q": "Which drug class terminates an active seizure in this CPG?",
+            "options": [
+                "Benzodiazepines",
+                "Opioids",
+                "Antihistamines",
+                "Beta-blockers"
+            ],
+            "correct": 0,
+            "explanation": "Midazolam or diazepam."
         },
         {
-            q: "What is the initial dose of IM midazolam for an adult with active seizures?",
-            options: ["5 mg", "10 mg", "15 mg", "20 mg"],
-            correct: 1,
-            explanation: "The initial IM dose of midazolam for adults is 10 mg, single dose (do not repeat)."
+            "q": "What is the adult IM midazolam dose?",
+            "options": [
+                "10 mg, single dose, do not repeat",
+                "5 mg, repeat every 5 minutes",
+                "2 mg",
+                "20 mg"
+            ],
+            "correct": 0,
+            "explanation": "IM midazolam is a single 10 mg dose."
         },
         {
-            q: "What is the initial IV dose of midazolam for an adult with active seizures?",
-            options: ["2 mg", "5 mg", "10 mg", "15 mg"],
-            correct: 1,
-            explanation: "Initial IV dose is 5 mg, may repeat once after 5‑10 minutes (max 10 mg)."
+            "q": "What is the adult IV midazolam dose?",
+            "options": [
+                "5 mg, repeat once after 5–10 minutes (maximum 10 mg)",
+                "10 mg, repeat twice",
+                "1 mg every minute",
+                "15 mg once"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 10 mg IV."
         },
         {
-            q: "What is the pediatric IM dose of midazolam for seizures?",
-            options: ["0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg", "1 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric IM dose is 0.2 mg/kg (maximum 10 mg)."
+            "q": "What is the pediatric IM midazolam dose?",
+            "options": [
+                "0.2 mg/kg",
+                "0.02 mg/kg",
+                "1 mg/kg",
+                "2 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 10 mg in the text (5 mg on the flowchart); repeat once after 10–20 minutes."
         },
         {
-            q: "What is the pediatric IV dose of diazepam for seizures?",
-            options: ["0.05 mg/kg", "0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric IV diazepam dose is 0.1 mg/kg (maximum 5 mg)."
+            "q": "What is the pediatric IV diazepam dose?",
+            "options": [
+                "0.1 mg/kg (maximum 5 mg)",
+                "0.5 mg/kg",
+                "1 mg/kg",
+                "10 mg"
+            ],
+            "correct": 0,
+            "explanation": "Repeat once after 5 minutes."
         },
         {
-            q: "Why should blood glucose be checked in a seizing patient?",
-            options: ["To rule out hyperglycemia", "To rule out hypoglycemia as a cause", "To guide fluid therapy", "Not necessary"],
-            correct: 1,
-            explanation: "Hypoglycemia can cause seizures and must be treated; check RBS before benzodiazepines if possible."
+            "q": "When must glucose be checked?",
+            "options": [
+                "Before giving a benzodiazepine",
+                "Only after transport",
+                "Only in diabetics",
+                "Never during seizures"
+            ],
+            "correct": 0,
+            "explanation": "Hypoglycemia can cause or mimic seizures; RBS in every seizure patient is a KPI."
         },
         {
-            q: "What is the preferred IM benzodiazepine for seizures?",
-            options: ["Diazepam", "Midazolam", "Lorazepam", "Clonazepam"],
-            correct: 1,
-            explanation: "IM midazolam is preferred over diazepam due to faster and more reliable absorption."
+            "q": "Which benzodiazepine is preferred by the IM route?",
+            "options": [
+                "Midazolam",
+                "Diazepam",
+                "Both equally",
+                "Neither"
+            ],
+            "correct": 0,
+            "explanation": "IM diazepam acts slowly."
         },
         {
-            q: "A patient with active seizures has a blood glucose of 45 mg/dL. What should you do?",
-            options: ["Give benzodiazepines first", "Give dextrose and then benzodiazepines if seizing continues", "Only give dextrose", "Transport immediately"],
-            correct: 1,
-            explanation: "Treat hypoglycemia with dextrose; if seizing continues, administer benzodiazepines."
+            "q": "A seizing patient has glucose 45 mg/dL. What do you do first?",
+            "options": [
+                "Correct the hypoglycemia (Hypoglycemia CPG)",
+                "Benzodiazepine only",
+                "Nothing until hospital",
+                "Oxygen only"
+            ],
+            "correct": 0,
+            "explanation": "Glucose <70 mg/dL: correct it."
         },
         {
-            q: "What is the maximum total dose of IV midazolam for an adult with seizures?",
-            options: ["5 mg", "10 mg", "15 mg", "20 mg"],
-            correct: 1,
-            explanation: "Maximum total dose of IV midazolam is 10 mg (5 mg initial, 5 mg repeat)."
+            "q": "What is the adult maximum IV midazolam?",
+            "options": [
+                "10 mg",
+                "5 mg",
+                "20 mg",
+                "No maximum"
+            ],
+            "correct": 0,
+            "explanation": "5 mg, repeated once."
         },
         {
-            q: "How should you position a patient after a seizure?",
-            options: ["Supine", "Recovery position", "Trendelenburg", "Prone"],
-            correct: 1,
-            explanation: "Recovery position helps maintain airway and prevent aspiration."
+            "q": "How do you position the patient after the seizure?",
+            "options": [
+                "Recovery position",
+                "Supine flat",
+                "Sitting upright",
+                "Prone"
+            ],
+            "correct": 0,
+            "explanation": "Protects the airway."
         },
         {
-            q: "What is a common post‑ictal finding?",
-            options: ["Confusion", "Focal weakness (Todd's paralysis)", "Headache", "All of the above"],
-            correct: 3,
-            explanation: "Post‑ictal state may include confusion, drowsiness, headache, and temporary focal deficits."
+            "q": "Which is a post-ictal finding?",
+            "options": [
+                "Confusion or focal weakness",
+                "Rising GCS to 15 instantly",
+                "Hypertension only",
+                "Rash"
+            ],
+            "correct": 0,
+            "explanation": "Confusion, lethargy or focal deficits (Todd's paralysis)."
         },
         {
-            q: "Which of the following is a potential cause of seizures?",
-            options: ["Hypoglycemia", "Fever", "Head trauma", "All of the above"],
-            correct: 3,
-            explanation: "Seizures can be provoked by hypoglycemia, fever (febrile seizures), head injury, toxins, and many other causes."
+            "q": "Which is a non-epileptic cause of seizures?",
+            "options": [
+                "Eclampsia",
+                "Asthma",
+                "Epistaxis",
+                "Gout"
+            ],
+            "correct": 0,
+            "explanation": "Also meningitis, head injury, hypoglycemia, pyrexia, poisons, alcohol, drug withdrawal."
         },
         {
-            q: "When should ALS back‑up be requested for a seizure patient?",
-            options: ["Only if status epilepticus", "For all active seizures", "Only if first seizure", "Not necessary"],
-            correct: 1,
-            explanation: "ALS back‑up should be routinely requested for any patient with active seizures."
+            "q": "When is ALS back-up requested?",
+            "options": [
+                "For every active seizure",
+                "Only for status epilepticus",
+                "Only for first seizures",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "A KPI; meet ALS en route if needed."
         },
         {
-            q: "What is the pediatric PR dose of diazepam?",
-            options: ["0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg", "1 mg/kg"],
-            correct: 2,
-            explanation: "Pediatric PR diazepam dose is 0.5 mg/kg (maximum 5 mg)."
+            "q": "What is the pediatric PR diazepam dose?",
+            "options": [
+                "0.5 mg/kg (maximum 5 mg)",
+                "0.1 mg/kg",
+                "5 mg/kg",
+                "10 mg"
+            ],
+            "correct": 0,
+            "explanation": "Repeat once after 5 minutes."
         },
         {
-            q: "A child with a febrile seizure has stopped seizing and is now alert. What should you do?",
-            options: ["Transport for evaluation", "Discharge with fever advice", "Give antibiotics", "No action needed"],
-            correct: 0,
-            explanation: "All children with a first febrile seizure should be transported for evaluation; even recurrent ones may need assessment."
+            "q": "A 3-year-old with fever had a seizure and is now alert. What should you consider?",
+            "options": [
+                "A febrile seizure: look for fever and infection",
+                "No assessment needed",
+                "Status epilepticus",
+                "Stroke"
+            ],
+            "correct": 0,
+            "explanation": "Consider febrile seizures in children under 5."
         },
         {
-            q: "What is Todd's paralysis?",
-            options: ["Post‑ictal paralysis", "Seizure type", "Anticonvulsant", "EEG finding"],
-            correct: 0,
-            explanation: "Todd's paralysis is temporary focal weakness after a seizure, which can mimic stroke."
+            "q": "What is Todd's paralysis?",
+            "options": [
+                "Post-ictal focal weakness",
+                "A drug reaction",
+                "A type of epilepsy",
+                "Spinal injury"
+            ],
+            "correct": 0,
+            "explanation": "It can mimic stroke."
         },
         {
-            q: "Which benzodiazepine can be administered rectally?",
-            options: ["Midazolam", "Diazepam", "Lorazepam", "Clonazepam"],
-            correct: 1,
-            explanation: "Diazepam can be given rectally (PR) when IV/IO access is not available."
+            "q": "Which benzodiazepine route is listed for children only?",
+            "options": [
+                "Rectal diazepam",
+                "IV midazolam",
+                "IM midazolam",
+                "IV diazepam"
+            ],
+            "correct": 0,
+            "explanation": "PR diazepam 0.5 mg/kg."
         },
         {
-            q: "What is the maximum single dose of IV diazepam for a child?",
-            options: ["2 mg", "5 mg", "10 mg", "15 mg"],
-            correct: 1,
-            explanation: "Maximum single dose of IV diazepam for pediatrics is 5 mg."
+            "q": "What is the pediatric maximum IV diazepam dose?",
+            "options": [
+                "5 mg",
+                "2 mg",
+                "10 mg",
+                "20 mg"
+            ],
+            "correct": 0,
+            "explanation": "0.1 mg/kg, maximum 5 mg."
         },
         {
-            q: "A patient with a known seizure disorder has a brief seizure and is now alert. Should you transport?",
-            options: ["Yes, if first seizure", "Yes, if prolonged", "Yes, if requested", "Transport is not always required, but recommend evaluation"],
-            correct: 3,
-            explanation: "Patients with known epilepsy may not require transport after a brief, self‑limited seizure if they return to baseline, but evaluation is often recommended. Follow local protocol."
+            "q": "What should you do during the seizure?",
+            "options": [
+                "Remove hazards and pad surroundings; do not restrain",
+                "Hold the limbs still",
+                "Put something in the mouth",
+                "Pour water on the face"
+            ],
+            "correct": 0,
+            "explanation": "Protect the patient."
         },
         {
-            q: "What is the primary risk during a generalized tonic‑clonic seizure?",
-            options: ["Hypoxia", "Hypotension", "Hyperglycemia", "Bradycardia"],
-            correct: 0,
-            explanation: "Hypoxia from apnea or airway obstruction is the main risk during a seizure."
+            "q": "What is the main danger of a generalized seizure?",
+            "options": [
+                "Hypoxia and injury",
+                "Hyperglycemia",
+                "Hypothermia",
+                "Bradycardia only"
+            ],
+            "correct": 0,
+            "explanation": "The aim is to protect the patient from injury and hypoxia."
         },
         {
-            q: "How long should you wait before repeating a dose of IV midazolam?",
-            options: ["1‑2 minutes", "5‑10 minutes", "15‑20 minutes", "30 minutes"],
-            correct: 1,
-            explanation: "Repeat IV midazolam after 5‑10 minutes if seizure persists."
+            "q": "When is adult IV midazolam repeated?",
+            "options": [
+                "Once, after 5–10 minutes",
+                "Every 2 minutes",
+                "After 30 minutes",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 10 mg."
         },
         {
-            q: "Which of the following is a contraindication to IM diazepam?",
-            options: ["Hypotension", "Bradycardia", "Not recommended due to slow absorption", "Hypoglycemia"],
-            correct: 2,
-            explanation: "IM diazepam has slow and erratic absorption; IM midazolam is preferred."
+            "q": "Why is IM diazepam not recommended?",
+            "options": [
+                "Slow onset by the IM route",
+                "It is too strong",
+                "It causes hyperglycemia",
+                "It is not a benzodiazepine"
+            ],
+            "correct": 0,
+            "explanation": "Use IM midazolam."
         },
         {
-            q: "What is the most common cause of status epilepticus in children?",
-            options: ["Febrile seizures", "Epilepsy", "Infection", "Trauma"],
-            correct: 0,
-            explanation: "Febrile seizures are common in young children, but prolonged febrile seizures can lead to status epilepticus."
+            "q": "Which seizure patient is Red priority?",
+            "options": [
+                "Ongoing seizures or status epilepticus",
+                "Fully recovered known epileptic",
+                "Post-ictal with GCS 15",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Triage as per the Patient Triage Categories CPG."
         },
         {
-            q: "A pregnant patient has a seizure. What condition must be considered?",
-            options: ["Eclampsia", "Epilepsy", "Hypoglycemia", "All of the above"],
-            correct: 3,
-            explanation: "Eclampsia is a possibility in pregnancy; also consider epilepsy and other causes."
+            "q": "A pregnant woman seizes. How is this classed?",
+            "options": [
+                "A red flag: consider eclampsia",
+                "A routine epileptic seizure",
+                "A stroke mimic only",
+                "Not significant"
+            ],
+            "correct": 0,
+            "explanation": "Seizures in pregnancy are a red flag; eclampsia is a non-epileptic cause."
         },
         {
-            q: "What is the role of oxygen in a seizing patient?",
-            options: ["Routine", "Only if hypoxic", "To prevent brain damage", "Not needed"],
-            correct: 1,
-            explanation: "Administer oxygen to maintain SpO₂ ≥94% if hypoxic; avoid hyperoxia."
+            "q": "What oxygen target applies?",
+            "options": [
+                "SpO₂ ≥94% during and after the seizure",
+                "100% at all times",
+                "No oxygen",
+                "SpO₂ 85%"
+            ],
+            "correct": 0,
+            "explanation": "Titrate oxygen to prevent hypoxia."
         },
         {
-            q: "What is the maximum total dose of diazepam for an adult?",
-            options: ["5 mg", "10 mg", "20 mg", "30 mg"],
-            correct: 1,
-            explanation: "Maximum total dose of IV diazepam is 10 mg (5 mg initial, 5 mg repeat)."
+            "q": "What is the adult maximum IV diazepam?",
+            "options": [
+                "10 mg",
+                "5 mg",
+                "20 mg",
+                "30 mg"
+            ],
+            "correct": 0,
+            "explanation": "5 mg, repeated once after 5 minutes."
         },
         {
-            q: "A patient with alcohol withdrawal presents with a seizure. What is the likely cause?",
-            options: ["Hypoglycemia", "Electrolyte imbalance", "Alcohol withdrawal", "All of the above"],
-            correct: 2,
-            explanation: "Alcohol withdrawal can cause seizures; also consider associated hypoglycemia and electrolyte imbalances."
+            "q": "A seizure after stopping heavy drinking. Which cause is listed?",
+            "options": [
+                "Alcohol (withdrawal)",
+                "Asthma",
+                "Epistaxis",
+                "Anaphylaxis only"
+            ],
+            "correct": 0,
+            "explanation": "Alcohol and drug withdrawal are listed causes."
         },
         {
-            q: "What is the initial management for a seizing patient with no IV access?",
-            options: ["Attempt IO", "Give IM midazolam", "Wait for IV access", "Give rectal diazepam"],
-            correct: 1,
-            explanation: "IM midazolam is effective and can be given rapidly without IV access."
+            "q": "A seizing adult has no IV. Which benzodiazepine route?",
+            "options": [
+                "IM midazolam 10 mg",
+                "IM diazepam first",
+                "Oral diazepam",
+                "Wait for IV"
+            ],
+            "correct": 0,
+            "explanation": "IM midazolam is the IM option of choice."
         },
         {
-            q: "How often should you reassess a patient after a seizure?",
-            options: ["Every 5 minutes", "Every 10 minutes", "Every 15 minutes", "Continuously"],
-            correct: 3,
-            explanation: "Continuous monitoring is required, with frequent reassessments of airway, breathing, and level of consciousness."
+            "q": "How is the patient monitored after a benzodiazepine?",
+            "options": [
+                "Continuously",
+                "Once at hospital",
+                "Every 30 minutes",
+                "Not needed"
+            ],
+            "correct": 0,
+            "explanation": "Continuous monitoring is mandatory."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is status epilepticus?", answer: "Seizure lasting >5 minutes or recurrent seizures without return to baseline." },
-        { category: "Causes", question: "Name five causes of seizures.", answer: "Epilepsy, hypoglycemia, fever, head trauma, toxins, alcohol withdrawal, electrolyte imbalance." },
-        { category: "Assessment", question: "What is the first step in assessing a seizing patient?", answer: "Protect airway, ensure safety, note time seizure started." },
-        { category: "Glucose", question: "Why check blood glucose in a seizing patient?", answer: "To rule out hypoglycemia as a cause." },
-        { category: "Benzodiazepines", question: "What are first‑line drugs for active seizures?", answer: "Benzodiazepines (midazolam, diazepam)." },
-        { category: "Midazolam IM adult", question: "What is the adult IM dose of midazolam for seizures?", answer: "10 mg, single dose (do not repeat)." },
-        { category: "Midazolam IV adult", question: "What is the adult IV dose of midazolam?", answer: "5 mg, may repeat once after 5‑10 min (max 10 mg)." },
-        { category: "Midazolam IM pediatric", question: "What is the pediatric IM dose of midazolam?", answer: "0.2 mg/kg (max 10 mg), repeat once after 10‑20 min." },
-        { category: "Midazolam IV pediatric", question: "What is the pediatric IV dose of midazolam?", answer: "0.1 mg/kg (max 5 mg), repeat once after 10‑20 min." },
-        { category: "Diazepam IV adult", question: "What is the adult IV dose of diazepam?", answer: "5 mg, repeat once after 5 min (max 10 mg)." },
-        { category: "Diazepam IV pediatric", question: "What is the pediatric IV dose of diazepam?", answer: "0.1 mg/kg (max 5 mg), repeat once after 5 min." },
-        { category: "Diazepam PR pediatric", question: "What is the pediatric PR dose of diazepam?", answer: "0.5 mg/kg (max 5 mg), repeat once after 5 min." },
-        { category: "IM diazepam", question: "Why is IM diazepam not recommended?", answer: "Slow and erratic absorption; IM midazolam preferred." },
-        { category: "Post‑ictal state", question: "What is the post‑ictal state?", answer: "Period of confusion, drowsiness, headache, or focal deficits after a seizure." },
-        { category: "Todd's paralysis", question: "What is Todd's paralysis?", answer: "Temporary focal weakness after a seizure, mimicking stroke." },
-        { category: "Recovery position", question: "Why place a patient in recovery position after a seizure?", answer: "To maintain airway and prevent aspiration." },
-        { category: "Airway adjuncts", question: "When are airway adjuncts used after a seizure?", answer: "If patient remains unresponsive and cannot maintain airway." },
-        { category: "Oxygen", question: "What is the oxygen target in a seizing patient?", answer: "Maintain SpO₂ ≥94% if hypoxic." },
-        { category: "ALS backup", question: "When should ALS back‑up be requested for seizures?", answer: "For all active seizures." },
-        { category: "Febrile seizure", question: "What is a febrile seizure?", answer: "Seizure associated with fever in children aged 6 months to 5 years." },
-        { category: "Eclampsia", question: "What is eclampsia?", answer: "Seizures in a pregnant patient with pre‑eclampsia." },
-        { category: "Alcohol withdrawal", question: "When do alcohol withdrawal seizures typically occur?", answer: "6‑48 hours after last drink." },
-        { category: "Hypoglycemia", question: "What glucose level defines hypoglycemia?", answer: "<70 mg/dL." },
-        { category: "Dextrose", question: "What is the initial dextrose dose for hypoglycemia?", answer: "D10 100‑200 mL (adults) or 2‑4 mL/kg (pediatrics)." },
-        { category: "Seizure duration", question: "When is a seizure considered prolonged?", answer: ">5 minutes." },
-        { category: "Status epilepticus treatment", question: "What is the first step in status epilepticus?", answer: "Benzodiazepines (midazolam or diazepam)." },
-        { category: "KPI", question: "What are the KPIs for seizure management?", answer: "Benzodiazepines for status epilepticus, ALS back‑up for active seizures, RBS checked." },
-        { category: "Safety", question: "What safety measures during a seizure?", answer: "Remove hazards, pad surroundings, do not restrain." },
-        { category: "Suction", question: "When is suctioning needed during a seizure?", answer: "If patient has excessive secretions or vomit." },
-        { category: "Documentation", question: "What seizure details must be documented?", answer: "Time onset/duration, type, medications given, post‑ictal status." }
+    "flashcards": [
+        {
+            "question": "Status epilepticus",
+            "answer": "Seizure >5 minutes, or recurrent seizures without recovery."
+        },
+        {
+            "question": "Causes to consider",
+            "answer": "Meningitis, head injury, hypoglycemia, eclampsia, pyrexia, poisons, alcohol, drug withdrawal."
+        },
+        {
+            "question": "First actions in an active seizure",
+            "answer": "ALS back-up, protect from injury, airway (EMR), oxygen to ≥94% (EMR), glucose, IV (EMT)."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Check before any benzodiazepine; <70 mg/dL: Hypoglycemia CPG."
+        },
+        {
+            "question": "Adult IM midazolam",
+            "answer": "10 mg, single dose, do not repeat."
+        },
+        {
+            "question": "Adult IV midazolam",
+            "answer": "5 mg; repeat once after 5–10 minutes (maximum 10 mg)."
+        },
+        {
+            "question": "Pediatric IM midazolam",
+            "answer": "0.2 mg/kg (maximum 10 mg in the text; 5 mg on the flowchart); repeat once after 10–20 minutes."
+        },
+        {
+            "question": "Pediatric IV midazolam",
+            "answer": "0.1 mg/kg (maximum 5 mg); repeat once after 10–20 minutes."
+        },
+        {
+            "question": "Adult IV diazepam",
+            "answer": "5 mg; repeat once after 5 minutes (maximum 10 mg)."
+        },
+        {
+            "question": "Pediatric IV diazepam",
+            "answer": "0.1 mg/kg (maximum 5 mg); repeat once after 5 minutes."
+        },
+        {
+            "question": "Pediatric PR diazepam",
+            "answer": "0.5 mg/kg (maximum 5 mg); repeat once after 5 minutes."
+        },
+        {
+            "question": "IM diazepam",
+            "answer": "Not recommended (slow). If required: adults 10 mg, children 0.2 mg/kg (maximum 10 mg)."
+        },
+        {
+            "question": "Seizure not stopping",
+            "answer": "Repeat the benzodiazepine dose once; OPA/NPA or advanced airway if it continues."
+        },
+        {
+            "question": "Protect the patient",
+            "answer": "Remove hazards, pad surroundings, do not restrain."
+        },
+        {
+            "question": "After the seizure",
+            "answer": "Recovery position, oxygen to >94%, OPA/NPA if needed; continuous monitoring."
+        },
+        {
+            "question": "Advanced airway after a seizure",
+            "answer": "Rarely needed, unless airway compromise persists."
+        },
+        {
+            "question": "Post-ictal state",
+            "answer": "Confusion, lethargy, focal deficits (Todd's paralysis)."
+        },
+        {
+            "question": "Injuries to look for",
+            "answer": "Tongue biting, head trauma, fractures."
+        },
+        {
+            "question": "Febrile seizures",
+            "answer": "Consider in children <5 years; look for fever and infection."
+        },
+        {
+            "question": "Red flags",
+            "answer": "Status epilepticus; SpO₂ <90% or respiratory depression; head trauma; first seizure; pregnancy."
+        },
+        {
+            "question": "ALS back-up",
+            "answer": "Routinely for every active seizure; meet en route if not immediately available."
+        },
+        {
+            "question": "Benzodiazepine level on the flowchart",
+            "answer": "EP."
+        },
+        {
+            "question": "Triage",
+            "answer": "Red: ongoing seizures or status epilepticus."
+        },
+        {
+            "question": "Precipitants",
+            "answer": "Missed medication, sleep deprivation, fever, alcohol withdrawal, head trauma."
+        },
+        {
+            "question": "Medical alert",
+            "answer": "Check bracelets or documents for epilepsy."
+        },
+        {
+            "question": "Monitoring",
+            "answer": "Continuous, especially with reduced consciousness or after benzodiazepines."
+        },
+        {
+            "question": "Documentation of drugs",
+            "answer": "Type, route, dose and time of each benzodiazepine; home anti-epileptics and last dose."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "No history or description of seizure activity."
+        },
+        {
+            "question": "Hypoglycemia threshold",
+            "answer": "<70 mg/dL."
+        },
+        {
+            "question": "KPIs",
+            "answer": "Benzodiazepines in status epilepticus; ALS for active seizures; RBS in all."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_5_2_1",
-            scenario: "You are called to a 30‑year‑old male having a generalized tonic‑clonic seizure. Bystanders state the seizure has been ongoing for 4 minutes. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer midazolam 10 mg IM", f: "Correct. Seizure >5 minutes is status epilepticus; give benzodiazepine." },
-                { t: "Wait for seizure to stop", f: "Active seizure requires intervention." },
-                { t: "Check blood glucose", f: "Important but not first priority." },
-                { t: "Start oxygen", f: "Oxygen can be given while preparing medication." }
+            "id": "crit_5_2_1",
+            "scenario": "A 30-year-old man has been in a generalized tonic-clonic seizure for 6 minutes. No IV access yet. Glucose is 110 mg/dL.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat as status epilepticus: protect, airway, oxygen, ALS back-up, and midazolam 10 mg IM (single dose)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Wait for the seizure to stop on its own",
+                    "f": "Over 5 minutes: benzodiazepines are a KPI."
+                },
+                {
+                    "t": "Diazepam IM",
+                    "f": "Use IM midazolam."
+                },
+                {
+                    "t": "Restrain his limbs",
+                    "f": "Do not restrain."
+                }
             ],
-            correct: 0,
-            explanation: "With seizure duration approaching 5 minutes, administer a benzodiazepine immediately. Midazolam 10 mg IM is appropriate.",
-            kpi: "Benzodiazepine given within 5 minutes of EMS arrival."
+            "correct": 0,
+            "explanation": "Status epilepticus needs a benzodiazepine. Without IV access, IM midazolam 10 mg is the adult option.",
+            "kpi": "Benzodiazepines for every patient in status epilepticus."
         },
         {
-            id: "crit_5_2_2",
-            scenario: "A 5‑year‑old child presents with a generalized seizure that has been ongoing for 3 minutes. Weight approximately 20 kg. IV access is not yet obtained. What is your next action?",
-            question: "What should you do?",
-            options: [
-                { t: "Attempt IO access", f: "IM route is faster." },
-                { t: "Give midazolam 4 mg IM", f: "Correct. 0.2 mg/kg = 4 mg IM." },
-                { t: "Give diazepam 5 mg PR", f: "PR is an option but IM midazolam is preferred." },
-                { t: "Wait for seizure to stop", f: "Active seizure requires intervention." }
+            "id": "crit_5_2_2",
+            "scenario": "A 5-year-old (about 20 kg) has been seizing for 7 minutes. There is no IV. Glucose is normal.",
+            "question": "What do you give?",
+            "options": [
+                {
+                    "t": "Midazolam 0.2 mg/kg IM, repeat once after 10–20 minutes if needed",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adult dose of 10 mg IM",
+                    "f": "Use the weight-based dose."
+                },
+                {
+                    "t": "Diazepam IM",
+                    "f": "IM diazepam is slow."
+                },
+                {
+                    "t": "Nothing until IV access",
+                    "f": "IM or PR routes are available."
+                }
             ],
-            correct: 1,
-            explanation: "IM midazolam is the preferred route without IV access. Dose 0.2 mg/kg = 4 mg.",
-            kpi: "Benzodiazepine given within 5 minutes."
+            "correct": 0,
+            "explanation": "Pediatric IM midazolam 0.2 mg/kg; alternatively diazepam PR 0.5 mg/kg (maximum 5 mg). Use the drug calculator.",
+            "kpi": "Benzodiazepines for every patient in status epilepticus."
         },
         {
-            id: "crit_5_2_3",
-            scenario: "A 25‑year‑old female with a known seizure disorder had a 2‑minute seizure and is now post‑ictal, confused, with a blood glucose of 45 mg/dL. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Give midazolam for potential further seizures", f: "Seizure stopped; treat hypoglycemia first." },
-                { t: "Give dextrose IV", f: "Correct. Hypoglycemia is a reversible cause." },
-                { t: "Transport only", f: "Hypoglycemia needs treatment." },
-                { t: "Give oral glucose", f: "Patient is confused; IV dextrose safer." }
+            "id": "crit_5_2_3",
+            "scenario": "A 25-year-old woman with known epilepsy had a 2-minute seizure. She is post-ictal and confused. Glucose 45 mg/dL.",
+            "question": "What is your management?",
+            "options": [
+                {
+                    "t": "Correct the hypoglycemia (Hypoglycemia CPG), recovery position, oxygen, monitor",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Benzodiazepine now",
+                    "f": "She is no longer seizing; correct the glucose."
+                },
+                {
+                    "t": "Ignore the glucose: she is epileptic",
+                    "f": "Hypoglycemia can trigger seizures."
+                },
+                {
+                    "t": "Sit her upright and leave",
+                    "f": "Monitor and transport."
+                }
             ],
-            correct: 1,
-            explanation: "Treat hypoglycemia with IV dextrose. Reassess mental status; if seizing recurs, then benzodiazepines.",
-            kpi: "RBS checked and hypoglycemia treated."
+            "correct": 0,
+            "explanation": "Check glucose in every seizure patient; <70 mg/dL needs correcting.",
+            "kpi": "RBS for every seizure patient."
         },
         {
-            id: "crit_5_2_4",
-            scenario: "A 32‑week pregnant patient presents with a seizure. She is post‑ictal, BP 160/110, and has proteinuria. What is the likely diagnosis and priority?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Epilepsy – give midazolam", f: "Eclampsia is more likely." },
-                { t: "Eclampsia – treat with magnesium and transport urgently", f: "Correct. Eclampsia requires magnesium and rapid transport." },
-                { t: "Hypoglycemia – give dextrose", f: "Check glucose but likely eclampsia." },
-                { t: "Transport without treatment", f: "Magnesium should be given if available." }
+            "id": "crit_5_2_4",
+            "scenario": "A woman 32 weeks pregnant had a seizure. She is post-ictal; BP 160/110 mmHg.",
+            "question": "What do you suspect and do?",
+            "options": [
+                {
+                    "t": "Eclampsia: a red flag; airway, oxygen, ALS back-up and the Eclampsia CPG",
+                    "f": "Correct."
+                },
+                {
+                    "t": "A simple faint",
+                    "f": "Seizures in pregnancy are a red flag."
+                },
+                {
+                    "t": "Lie her flat on her back",
+                    "f": "Recovery position protects the airway."
+                },
+                {
+                    "t": "No transport needed",
+                    "f": "She needs urgent transport."
+                }
             ],
-            correct: 1,
-            explanation: "Eclampsia is suspected in a pregnant patient with hypertension and proteinuria. Administer magnesium sulfate (if available per protocol) and transport urgently.",
-            kpi: "Magnesium considered; hospital notified."
+            "correct": 0,
+            "explanation": "Eclampsia is a listed non-epileptic cause; follow the Eclampsia / Pre-eclampsia CPG.",
+            "kpi": "ALS back-up requested for every active seizure."
         },
         {
-            id: "crit_5_2_5",
-            scenario: "You give midazolam 10 mg IM to a seizing adult. After 3 minutes, the seizure has not stopped. What is your next action?",
-            question: "What should you do?",
-            options: [
-                { t: "Give another 10 mg IM", f: "IM midazolam should not be repeated." },
-                { t: "Establish IV and give 5 mg IV midazolam", f: "Correct. IV access and repeat dose." },
-                { t: "Wait another 2 minutes", f: "Seizure ongoing; intervene." },
-                { t: "Start CPR", f: "Not indicated." }
+            "id": "crit_5_2_5",
+            "scenario": "An adult in status epilepticus received midazolam 5 mg IV. Ten minutes later he is still seizing.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Repeat midazolam 5 mg IV once (maximum 10 mg); support the airway",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Give 10 mg IV now",
+                    "f": "Repeat the 5 mg dose once."
+                },
+                {
+                    "t": "Repeat every 2 minutes until it stops",
+                    "f": "Only one repeat."
+                },
+                {
+                    "t": "Switch to IM diazepam",
+                    "f": "Not recommended."
+                }
             ],
-            correct: 1,
-            explanation: "If IM midazolam is ineffective, obtain IV access and give 5 mg IV midazolam. Prepare for further doses and ALS back‑up.",
-            kpi: "Repeat dose administered appropriately."
+            "correct": 0,
+            "explanation": "If the seizure does not stop, repeat the benzodiazepine once; consider OPA/NPA or an advanced airway.",
+            "kpi": "Benzodiazepines for every patient in status epilepticus."
         }
     ]
 };
