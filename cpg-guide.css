@@ -1,0 +1,198 @@
+/* ========== cpg-guide.css – guideline and drug sheet pages (cpg-guide.js) ==========
+ * Uses the theme tokens from styles.css, so it follows all five themes.
+ * Tints are mixed from --text-primary so they read on light and dark cards.
+ */
+.cpg-guide {
+    --g-accent: var(--primary-accent);
+    --g-line: color-mix(in srgb, var(--text-primary) 14%, transparent);
+    --g-tint: color-mix(in srgb, var(--text-primary) 5%, transparent);
+    --g-red: #c92a2a;
+    --g-amber: #b7791f;
+    --g-green: #2b8a3e;
+    color: var(--text-primary);
+    max-width: 860px;
+    margin: 0 auto;
+    animation: fadeInUp 0.4s ease forwards;
+}
+.cpg-guide[data-group="cardio"] { --g-accent: var(--accent-cardio); }
+.cpg-guide[data-group="resus"]  { --g-accent: var(--accent-resus); }
+[data-theme="amoled"] .cpg-guide { --g-red: #ff6b6b; --g-amber: #fcc419; --g-green: #69db7c; }
+
+/* ---------- Header ---------- */
+.g-head {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-top: 4px solid var(--g-accent);
+    border-radius: 18px;
+    box-shadow: var(--glass-shadow);
+    padding: 22px 22px 18px;
+    margin-bottom: 14px;
+}
+.g-kicker {
+    margin: 0 0 4px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--g-accent);
+}
+.g-head h2 { margin: 0; font-size: 1.65rem; font-weight: 800; line-height: 1.2; color: var(--text-primary); }
+.g-lead { margin: 10px 0 0; font-size: 1rem; line-height: 1.55; color: var(--text-secondary); }
+.g-legend {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--g-line);
+    font-size: .8rem; color: var(--text-secondary);
+}
+.g-legend span:last-child { flex-basis: 100%; }
+
+/* ---------- Clinical level badge ---------- */
+.g-lvl {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 2.6em; padding: 2px 7px; border-radius: 6px;
+    font-size: .72rem; font-weight: 800; letter-spacing: .03em; line-height: 1.4;
+    color: #fff; background: #5c6773; white-space: nowrap; flex-shrink: 0;
+}
+.g-lvl[data-lvl="EMT"]   { background: #3d72b8; }
+.g-lvl[data-lvl="EMT-A"] { background: #1f4e79; }
+.g-lvl[data-lvl="P"]     { background: #c92a2a; }
+.g-lvl[data-lvl="AP"]    { background: #7a1f1f; }
+.g-lvl[data-lvl="EP"]    { background: #16705f; }
+
+/* ---------- Sections ---------- */
+.g-sec {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    box-shadow: var(--glass-shadow);
+    padding: 18px 22px;
+    margin-bottom: 14px;
+}
+.g-sec > h3 {
+    display: flex; align-items: center; gap: 10px;
+    margin: 0 0 12px; font-size: 1.15rem; font-weight: 750; color: var(--text-primary);
+}
+.g-sec > h3 .lucide { width: 1.15em; height: 1.15em; color: var(--g-accent); }
+.g-sec[data-tone="alert"] { border-left: 4px solid var(--g-red); }
+.g-sec[data-tone="alert"] > h3 .lucide { color: var(--g-red); }
+.g-intro { margin: -4px 0 12px; color: var(--text-secondary); line-height: 1.5; }
+.g-sec h4 { margin: 0 0 6px; font-size: .95rem; font-weight: 700; color: var(--text-primary); }
+.g-sec p { margin: 0; line-height: 1.55; color: var(--text-secondary); }
+.g-sec b { color: var(--text-primary); font-weight: 650; }
+
+.g-list { margin: 0; padding-left: 1.15em; }
+.g-list li { margin: 0 0 6px; line-height: 1.5; color: var(--text-secondary); }
+.g-list li:last-child { margin-bottom: 0; }
+.g-list li::marker { color: var(--g-accent); }
+
+/* ---------- Include / exclude ---------- */
+.g-criteria { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.g-criteria > div { padding: 12px 14px; border-radius: 12px; background: var(--g-tint); }
+.g-criteria > div:first-child h4 { color: var(--g-green); }
+.g-criteria > div:last-child h4 { color: var(--g-red); }
+
+/* ---------- Numbered steps ---------- */
+.g-steps { list-style: none; margin: 0; padding: 0; }
+.g-step { display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid var(--g-line); }
+.g-step:first-child { border-top: 0; padding-top: 0; }
+.g-step:last-child { padding-bottom: 0; }
+.g-num {
+    flex: 0 0 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 800; color: #fff; background: var(--g-accent);
+}
+.g-step-body { flex: 1; min-width: 0; }
+.g-step-h { display: flex; align-items: center; gap: 8px; justify-content: space-between; font-weight: 700; margin: 3px 0 4px; }
+.g-step-body > .g-list { margin-top: 6px; }
+.g-dose-line { margin-top: 2px !important; font-variant-numeric: tabular-nums; }
+.g-dose-line b { font-weight: 750; }
+
+/* ---------- Decision ---------- */
+.g-gate-q { font-weight: 650; color: var(--text-primary) !important; margin-bottom: 6px !important; }
+.g-gate .g-list { columns: 2; column-gap: 24px; margin-bottom: 12px; }
+.g-gate-a { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.g-gate-a > div { padding: 10px 12px; border-radius: 10px; line-height: 1.45; color: var(--text-secondary); background: var(--g-tint); }
+.g-gate-a b { display: block; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
+.g-no b { color: var(--g-green); }
+.g-yes { box-shadow: inset 3px 0 0 var(--g-red); }
+.g-yes b { color: var(--g-red); }
+
+/* ---------- Dose table ---------- */
+.g-doses { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: .92rem; }
+.g-doses thead th {
+    text-align: left; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--text-secondary); padding: 0 8px 6px 0; border-bottom: 1px solid var(--g-line);
+}
+.g-doses td, .g-doses tbody th { padding: 8px 8px 8px 0; border-bottom: 1px solid var(--g-line); vertical-align: top; text-align: left; line-height: 1.4; color: var(--text-secondary); }
+.g-doses tbody tr:last-child > * { border-bottom: 0; }
+.g-doses tbody th { font-weight: 650; color: var(--text-primary); }
+.g-doses .g-dose { font-weight: 750; color: var(--text-primary); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.g-doses td:last-child { width: 1%; padding-right: 0; text-align: right; }
+.g-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ---------- Two pathways ---------- */
+.g-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.g-path { border-radius: 12px; padding: 12px 14px; background: var(--g-tint); border-top: 4px solid var(--g-line); }
+.g-path[data-tone="shock"] { border-top-color: var(--g-red); }
+.g-path[data-tone="noshock"] { border-top-color: var(--g-accent); }
+.g-path h4 { margin-bottom: 8px; }
+.g-path ol { margin: 0; padding-left: 1.3em; }
+.g-path li { margin-bottom: 7px; line-height: 1.45; color: var(--text-secondary); }
+.g-path li > span:first-child { margin-right: 6px; }
+.g-path li .g-lvl { vertical-align: 1px; }
+.g-after { margin-top: 12px !important; padding: 10px 12px; border-radius: 10px; background: var(--g-tint); }
+
+/* ---------- Grouped notes ---------- */
+.g-group + .g-group { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--g-line); }
+
+/* ---------- Related and source ---------- */
+.g-related { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.g-related a {
+    display: inline-block; padding: 7px 12px; border-radius: 999px; text-decoration: none;
+    font-size: .88rem; font-weight: 600; color: var(--text-primary);
+    background: var(--g-tint); border: 1px solid var(--g-line);
+}
+.g-related a:hover { border-color: var(--g-accent); }
+.g-source {
+    display: flex; align-items: center; gap: 8px; justify-content: center;
+    width: fit-content; margin: 4px auto 24px; padding: 9px 16px; border-radius: 999px;
+    font-size: .88rem; font-weight: 600; color: var(--text-primary); text-decoration: none;
+    background: var(--glass-bg); border: 1px solid var(--glass-border);
+}
+.g-source .lucide { width: 1.1em; height: 1.1em; color: var(--g-accent); }
+.g-source:hover span { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Drug sheet ---------- */
+.d-scope { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.d-scope li { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.d-sheet { padding: 6px 22px; }
+.d-row { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--g-line); }
+.d-row:first-child { border-top: 0; }
+.d-row > h4 { margin: 2px 0 0; font-size: .82rem; letter-spacing: .05em; text-transform: uppercase; color: var(--text-secondary); }
+.d-row[data-tone="ok"] > h4 { color: var(--g-green); }
+.d-row[data-tone="stop"] > h4 { color: var(--g-red); }
+.d-row[data-tone="warn"] > h4 { color: var(--g-amber); }
+.d-dose + .d-dose { margin-top: 8px; }
+.d-dose > b { display: block; margin-bottom: 2px; }
+.d-dose .g-list li { color: var(--text-primary); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px) {
+    .g-head, .g-sec { padding-left: 16px; padding-right: 16px; border-radius: 16px; }
+    .g-head h2 { font-size: 1.4rem; }
+    .g-criteria, .g-paths, .g-gate-a { grid-template-columns: 1fr; }
+    .g-gate .g-list { columns: 1; }
+    .d-row { grid-template-columns: 1fr; gap: 4px; }
+    .g-doses thead { display: none; }
+    .g-doses tr { display: grid; grid-template-columns: 1fr auto; column-gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--g-line); }
+    .g-doses tbody tr:last-child { border-bottom: 0; }
+    .g-doses td, .g-doses tbody th { border: 0; padding: 0; }
+    .g-doses tbody th { grid-column: 1; }
+    .g-doses td:last-child { grid-column: 2; grid-row: 1; }
+    .g-doses .g-dose { grid-column: 1 / -1; white-space: normal; margin-top: 2px; }
+    .g-doses td:nth-child(3) { grid-column: 1 / -1; font-size: .86rem; }
+}
+
+@media print {
+    .cpg-guide { animation: none; }
+    .g-head, .g-sec { box-shadow: none; break-inside: avoid; }
+}
