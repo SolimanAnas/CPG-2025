@@ -263,6 +263,7 @@
 .cpg-guide[data-group="neuro"]     { --g-accent: var(--accent-neuro); }
 .cpg-guide[data-group="medical"]   { --g-accent: var(--accent-medical); }
 .cpg-guide[data-group="trauma"]    { --g-accent: var(--g-amber); }
+.cpg-guide[data-group="environmental"] { --g-accent: var(--accent-environmental); }
 @media (max-width: 600px) {
     .g-table { font-size: .78rem; }
     .g-table th, .g-table td { padding: 6px 5px; white-space: normal; }

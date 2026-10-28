@@ -1,380 +1,827 @@
-/* ========== Chapter 8.1 � General Toxicology Management ========== */
+/* ========== CPG 8.1 – General Toxicology Management ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c8-1",
-    title: "General Toxicology Management",
-    shortTitle: "8.1 General Toxicology",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? General Toxicology Management</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapid recognition of toxic exposure and early supportive management.</li>
-                <li>Maintain airway, breathing, and circulation.</li>
-                <li>Minimize toxin absorption when appropriate (e.g., decontamination).</li>
-                <li>Identify high-risk features requiring ALS backup or early transport.</li>
-                <li>Provide early notification and accurate history to the hospital team.</li>
-                <li>Ensure patient safety and prevent aspiration or secondary harm.</li>
-                <li>Monitor and reassess regularly to detect deterioration early.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Suspected or confirmed ingestion, inhalation, injection, or dermal exposure to a toxin, including medications, naturally occurring or manufactured substances.</li>
-                <li>Intentional or unintentional poisoning.</li>
-                <li>Symptoms consistent with toxic exposure (e.g., altered mental status, seizures, bradycardia, respiratory depression).</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Isolated opioid overdose (see Opioid Overdose CPG).</li>
-                <li>Isolated alcohol intoxication (see Suspected Alcohol Intoxication CPG).</li>
-                <li>Decontamination of patients after hazardous material exposure (requires decontamination team managed by Civil Defense).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>General Impression:</strong> Observe level of consciousness, breathing pattern, and behavior on approach. Assess environment for scene safety and exposure risks (fumes, spills, paraphernalia, multiple patients). Look for signs of distress: agitation, respiratory depression, altered mental status, seizures.</li>
-                <li><strong>Airway, Breathing & Circulation (ABC):</strong> Is the airway patent? Suction needed? Risk of aspiration? Count RR, assess for shallow or irregular breathing. Snoring or slow respirations may indicate opioid or sedative overdose; tachypnea may indicate metabolic acidosis. Heart rate and BP: bradycardia suggests beta-blocker/CCB; tachycardia suggests anticholinergic/sympathomimetic. Check capillary refill, skin color, temperature.</li>
-                <li><strong>Disability / Neurological Status:</strong> Assess GCS; if <13, treat as high-risk. Pupils: pinpoint (opioids, organophosphates), dilated (stimulants, withdrawal), unequal (possible stroke, herniation). Seizures or muscle twitching suggest TCA, isoniazid, or withdrawal. Observe for agitation, hallucinations, bizarre behavior (anticholinergic or hallucinogen).</li>
-                <li><strong>Exposure & Skin Assessment:</strong> Inspect for track marks, rashes, blistering; remove contaminated clothing if dermal toxin suspected. Check temperature: hyperthermia suggests sympathomimetic or serotonin syndrome.</li>
-                <li><strong>Toxidrome Assessment:</strong>
-                    <ul>
-                        <li><strong>Opioid:</strong> CNS depression, miosis, ?RR, ?HR (e.g., heroin, morphine, fentanyl).</li>
-                        <li><strong>Anticholinergic:</strong> Dry skin, hyperthermia, delirium, tachycardia, dilated pupils (antihistamines, TCAs, atropine).</li>
-                        <li><strong>Sympathomimetic:</strong> Agitation, tachycardia, hypertension, diaphoresis, dilated pupils (cocaine, amphetamines, MDMA).</li>
-                        <li><strong>Cholinergic:</strong> SLUDGE (salivation, lacrimation, urination, diarrhea, GI upset, emesis), bronchospasm (organophosphates, nerve agents).</li>
-                        <li><strong>Sedative-hypnotic:</strong> CNS depression, normal pupils, hypotension, bradycardia (benzodiazepines, barbiturates).</li>
-                    </ul>
-                </li>
-                <li><strong>Blood Glucose:</strong> Mandatory for all patients with altered mental status; hypoglycemia may mimic or complicate overdose.</li>
-                <li><strong>SAMPLE History (Targeted for Toxicology):</strong> Symptoms, Allergies, Medications, Past history (psychiatric, substance use, renal/liver), Last oral intake, Events (suicide attempt, peer pressure, unknown ingestion, multiple patients affected).</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for GCS <9, RR <10, seizures, bradycardia/hypotension, pediatric ingestion; Yellow for mild symptoms; Green for alert, asymptomatic, known non-toxic ingestion.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back-up:</strong> For GCS <13 or rapidly dropping, seizures, dysrhythmias, or cardiovascular instability.</li>
-                <li><strong>Decontamination:</strong> Remove contaminated clothing and irrigate skin/eyes with water if dermal exposure suspected (note: patient decontamination of harmful substances should be performed by Civil Defense).</li>
-                <li><strong>Primary Survey:</strong> As per Universal Care CPG.</li>
-                <li><strong>Oxygen Therapy:</strong> High-flow oxygen for altered LOC, respiratory distress, or suspected CO poisoning; target SpO2 =94%.</li>
-                <li><strong>Specific Therapy / Medication Administration:</strong> If opioid overdose suspected ? go to Opioid Overdose CPG. If calcium channel blocker or beta-blocker overdose suspected ? go to specific CPGs. If organophosphate poisoning suspected ? go to Organophosphate Poisoning CPG.</li>
-                <li><strong>IV Access:</strong> Obtain IV access if patient is hypotensive, vomiting, or unconscious.</li>
-                <li><strong>Fluid Administration:</strong> If signs of shock present, administer 10�20 mL/kg 0.9% NaCl bolus (adults 250-500 mL, pediatrics 10-20 mL/kg).</li>
-                <li><strong>ECG Monitoring:</strong> Monitor for bradycardia, wide QRS, arrhythmias; perform 12-lead ECG if patient is stable enough.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess pupil size/reactivity, seizures/twitching, response to interventions, signs of deterioration, and scene/crew safety.</li>
-                <li><strong>Transport & Early Notification:</strong> Transport all symptomatic patients; notify hospital if ingestion of cardiotoxic agents or pediatric patient with possible toxic ingestion.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Wear gloves and PPE with unknown substance exposure.</li>
-                <li>Avoid triggering vomiting or giving anything orally unless directed.</li>
-                <li>Be prepared for airway compromise even in initially stable patients.</li>
-                <li>Pediatric patients can get worse very quickly; when unsure, treat seriously and act early.</li>
-                <li>Avoid judgmental questioning; treat as a medical emergency.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Many overdoses are mixed; don�t focus on one substance unless confirmed.</li>
-                <li>ECG changes may indicate sodium channel or potassium channel toxicity (e.g., TCA, lithium).</li>
-                <li>In pediatric ingestions, even small amounts can be lethal (e.g., calcium channel blockers, opioids, hydrocarbons).</li>
-                <li>Consider scene safety: hazardous substances, paraphernalia, agitated patients.</li>
-                <li>Consult Tele-EMS early in ambiguous or critical cases.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Age, weight (if pediatric), sex.</li>
-                <li>Toxic exposure: type of toxin, route, amount, timing.</li>
-                <li>Signs: GCS, HR, RR, BP, pupils, SpO2.</li>
-                <li>Treatment: oxygen, IV access, fluids, airway management, specific antidotes if given.</li>
-                <li>Allergies, medications, background (psychiatric history, renal/liver disease).</li>
-                <li>Suicidal intent, family present, police notified.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Investigate and document substance type, route, amount, and exposure/ingestion time.</li>
-                <li>Request ALS back-up for unstable or GCS <13 cases.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c8-1",
+    "title": "General Toxicology Management",
+    "shortTitle": "8.1 General Toxicology",
+    "guide": {
+        "cpg": "8.1",
+        "group": "environmental",
+        "groupLabel": "Toxicology",
+        "title": "General Toxicology Management",
+        "lead": "Scene safety first, then ABC. Read the patient (GCS, pupils, skin, temperature, ECG) to recognise the toxidrome, check glucose, and go to the specific CPG when one fits. Many overdoses are mixed. Every symptomatic patient goes to hospital, with an early alert for cardiotoxic drugs and children.",
+        "source": {
+            "label": "CPG 8.1",
+            "pages": "245–249",
+            "pdf": "../pdf_sections/8_1_General_Toxicology_Management.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Suspected or confirmed ingestion, inhalation, injection or skin exposure to a toxin (medications, natural or manufactured substances), intentional or not.",
+                    "Symptoms of toxic exposure: altered mental status, seizures, bradycardia, respiratory depression."
+                ],
+                "exclude": [
+                    "Isolated opioid overdose: Opioid Overdose CPG.",
+                    "Isolated alcohol intoxication: Suspected Alcohol Intoxication CPG.",
+                    "Hazardous-material decontamination: Civil Defense team."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Scene and impression",
+                        "items": [
+                            "Fumes, spills, paraphernalia, several patients affected.",
+                            "Agitation, respiratory depression, altered mental status, seizures."
+                        ]
+                    },
+                    {
+                        "title": "Airway and breathing",
+                        "items": [
+                            "Patent and protected? Suction, aspiration risk.",
+                            "Snoring or slow breathing: opioids or sedatives. Fast breathing: metabolic acidosis (salicylates, methanol)."
+                        ]
+                    },
+                    {
+                        "title": "Circulation",
+                        "items": [
+                            "Bradycardia: beta-blocker or CCB. Tachycardia: anticholinergic or sympathomimetic.",
+                            "Arrhythmias, wide QRS, prolonged QT."
+                        ]
+                    },
+                    {
+                        "title": "Neurology",
+                        "items": [
+                            "GCS &lt;13: treat as high-risk.",
+                            "Pinpoint pupils: opioids, organophosphates. Dilated: stimulants, withdrawal. Unequal: stroke or herniation.",
+                            "Seizures or twitching: TCA, isoniazid, withdrawal. Hallucinations or bizarre behavior: anticholinergic or hallucinogen."
+                        ]
+                    },
+                    {
+                        "title": "Skin",
+                        "items": [
+                            "Track marks; rashes or blisters; sweating (cholinergic, sympathomimetic) vs dry skin (anticholinergic).",
+                            "Hyperthermia: sympathomimetic or serotonin syndrome.",
+                            "Remove contaminated clothing if a skin toxin is suspected."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Toxidromes",
+                "icon": "search",
+                "columns": [
+                    "Toxidrome",
+                    "Common signs",
+                    "Examples"
+                ],
+                "rows": [
+                    [
+                        "Opioid",
+                        "CNS depression, miosis, low RR, low HR",
+                        "Heroin, morphine, fentanyl"
+                    ],
+                    [
+                        "Anticholinergic",
+                        "Dry skin, hyperthermia, delirium, tachycardia, dilated pupils",
+                        "Antihistamines, TCAs, atropine"
+                    ],
+                    [
+                        "Sympathomimetic",
+                        "Agitation, tachycardia, hypertension, sweating, dilated pupils",
+                        "Cocaine, amphetamines, MDMA"
+                    ],
+                    [
+                        "Cholinergic",
+                        "SLUDGE: salivation, lacrimation, urination, diarrhea, GI upset, emesis",
+                        "Organophosphates, nerve agents"
+                    ],
+                    [
+                        "Sedative-hypnotic",
+                        "CNS depression, normal pupils, hypotension, bradycardia",
+                        "Benzodiazepines, barbiturates"
+                    ]
+                ],
+                "stack": true
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely for GCS &lt;13 or falling, seizures, dysrhythmias, or cardiovascular instability."
+                    },
+                    {
+                        "title": "Decontamination",
+                        "text": "Remove contaminated clothing; irrigate skin or eyes with water. Formal decontamination is by Civil Defense."
+                    },
+                    {
+                        "title": "Primary survey and oxygen",
+                        "text": "High-flow oxygen for reduced consciousness, respiratory distress or suspected CO; target SpO<sub>2</sub> ≥94%."
+                    },
+                    {
+                        "title": "Glucose",
+                        "text": "Mandatory with altered mental status: hypoglycemia mimics or complicates overdose."
+                    },
+                    {
+                        "title": "Specific CPG",
+                        "text": "Opioid, calcium channel blocker, beta-blocker or organophosphate: go to that CPG. Otherwise manage per Universal Care."
+                    },
+                    {
+                        "title": "IV access and fluid",
+                        "text": "IV if hypotensive, vomiting or unconscious. Shock: 10–20 mL/kg 0.9% NaCl bolus."
+                    },
+                    {
+                        "title": "ECG monitoring",
+                        "text": "Bradycardia, wide QRS, arrhythmias."
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Pupils, seizures or twitching, response to treatment, deterioration, and crew safety (especially after reversal agents)."
+                    },
+                    {
+                        "title": "Transport",
+                        "text": "Every symptomatic patient. Notify the hospital for cardiotoxic drugs or a child with a possible toxic ingestion."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Triage",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Priority",
+                    "Features"
+                ],
+                "rows": [
+                    [
+                        "Red",
+                        "GCS &lt;9, RR &lt;10, seizures, bradycardia or hypotension, pediatric ingestion"
+                    ],
+                    [
+                        "Yellow",
+                        "Mild symptoms, GCS 9–13, isolated vomiting"
+                    ],
+                    [
+                        "Green",
+                        "Alert, asymptomatic, known non-toxic ingestion"
+                    ]
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Safety and pearls",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Safety",
+                        "items": [
+                            "Gloves and PPE for unknown substances.",
+                            "Do not induce vomiting or give anything by mouth unless directed.",
+                            "Expect airway compromise even if stable now.",
+                            "Non-judgemental: this is a medical emergency."
+                        ]
+                    },
+                    {
+                        "title": "Pearls",
+                        "items": [
+                            "Many overdoses are mixed.",
+                            "ECG changes may mean sodium- or potassium-channel toxicity (TCA, lithium).",
+                            "In children, small amounts can kill (calcium channel blockers, opioids, hydrocarbons): act early.",
+                            "Consult Tele-EMS early in unclear or critical cases."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "SAMPLE for toxicology",
+                "icon": "notebook-pen",
+                "items": [
+                    "Symptoms: onset, seizures, vomiting, hallucinations.",
+                    "Allergies; Medications (prescription, OTC, supplements, recreational).",
+                    "Past history: psychiatric illness, substance use, diabetes, renal or liver failure.",
+                    "Last intake: what, how much, when; alcohol? Events: self-harm, peer pressure, unknown ingestion, several patients."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "ECG clues",
+                        "items": [
+                            {
+                                "ecg": "longQt",
+                                "label": "Prolonged QT",
+                                "sub": "Potassium-channel toxicity"
+                            },
+                            {
+                                "ecg": "sbrady",
+                                "label": "Sinus bradycardia",
+                                "sub": "Beta-blocker or CCB"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Substance, route, amount and time of exposure investigated and documented.",
+                    "ALS back-up for unstable patients or GCS &lt;13."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "8.2 Opioid Overdose",
+                        "href": "c8-2.html"
+                    },
+                    {
+                        "label": "8.3 Beta-Blocker Overdose",
+                        "href": "c8-3.html"
+                    },
+                    {
+                        "label": "8.4 Calcium Channel Blocker Overdose",
+                        "href": "c8-4.html"
+                    },
+                    {
+                        "label": "8.5 Organophosphate Poisoning",
+                        "href": "c8-5.html"
+                    },
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first priority in managing a patient with suspected toxic ingestion?",
-            options: ["Administer activated charcoal", "Assess and maintain airway, breathing, and circulation", "Identify the toxin", "Administer an antidote"],
-            correct: 1,
-            explanation: "The primary survey (ABCs) is always the priority to address life threats before specific interventions."
+            "q": "What comes first in suspected poisoning?",
+            "options": [
+                "Scene safety, then airway, breathing, circulation",
+                "Charcoal",
+                "Identify the pill",
+                "Induce vomiting"
+            ],
+            "correct": 0,
+            "explanation": "Manage life threats as they are identified."
         },
         {
-            q: "Which toxidrome presents with pinpoint pupils, respiratory depression, and CNS depression?",
-            options: ["Anticholinergic", "Sympathomimetic", "Opioid", "Cholinergic"],
-            correct: 2,
-            explanation: "Opioid toxidrome includes miosis, respiratory depression, and CNS depression."
+            "q": "Pinpoint pupils, slow breathing, CNS depression. Which toxidrome?",
+            "options": [
+                "Opioid",
+                "Anticholinergic",
+                "Sympathomimetic",
+                "Cholinergic"
+            ],
+            "correct": 0,
+            "explanation": "Go to the Opioid Overdose CPG."
         },
         {
-            q: "What is the recommended initial fluid bolus for an adult with toxic ingestion and signs of shock?",
-            options: ["250-500 mL", "1000 mL", "2000 mL", "No fluids"],
-            correct: 0,
-            explanation: "Adults with signs of shock should receive a 250-500 mL crystalloid bolus."
+            "q": "What fluid does this CPG give for shock?",
+            "options": [
+                "10–20 mL/kg 0.9% NaCl bolus",
+                "2000 mL fixed",
+                "Dextrose",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "As per the CPG."
         },
         {
-            q: "A patient presents with dry skin, dilated pupils, tachycardia, and delirium. What toxidrome is this?",
-            options: ["Opioid", "Anticholinergic", "Sympathomimetic", "Cholinergic"],
-            correct: 1,
-            explanation: "Anticholinergic toxidrome: dry skin, hyperthermia, delirium, tachycardia, dilated pupils."
+            "q": "Dry skin, dilated pupils, tachycardia, delirium. Which toxidrome?",
+            "options": [
+                "Anticholinergic",
+                "Opioid",
+                "Cholinergic",
+                "Sedative-hypnotic"
+            ],
+            "correct": 0,
+            "explanation": "E.g. antihistamines, TCAs, atropine."
         },
         {
-            q: "Which of the following ECG findings is associated with tricyclic antidepressant overdose?",
-            options: ["Peaked T waves", "Widened QRS", "U waves", "ST elevation"],
-            correct: 1,
-            explanation: "TCA overdose causes sodium channel blockade leading to widened QRS and prolonged QT."
+            "q": "Seizures or twitching suggest…",
+            "options": [
+                "TCA, isoniazid or withdrawal",
+                "Opioids",
+                "Benzodiazepines",
+                "Alcohol only"
+            ],
+            "correct": 0,
+            "explanation": "Per the neurological assessment."
         },
         {
-            q: "What is the target SpO2 for a patient with toxic ingestion?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What SpO₂ target?",
+            "options": [
+                "≥94%",
+                "88–92%",
+                "100% always",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "High flow for reduced consciousness, distress or CO."
         },
         {
-            q: "A patient with a history of depression has taken an unknown number of pills. He is agitated, has a heart rate of 140, BP 160/90, and dilated pupils. What toxidrome is most likely?",
-            options: ["Opioid", "Anticholinergic", "Sympathomimetic", "Sedative-hypnotic"],
-            correct: 2,
-            explanation: "Sympathomimetic toxidrome: agitation, tachycardia, hypertension, dilated pupils, diaphoresis."
+            "q": "Agitated, HR 140, BP 160/90, sweating, dilated pupils. Which toxidrome?",
+            "options": [
+                "Sympathomimetic",
+                "Anticholinergic",
+                "Opioid",
+                "Sedative-hypnotic"
+            ],
+            "correct": 0,
+            "explanation": "Sweating distinguishes it from anticholinergic."
         },
         {
-            q: "When should ALS back-up be requested for a toxicology patient?",
-            options: ["GCS <13", "Seizures", "Cardiovascular instability", "All of the above"],
-            correct: 3,
-            explanation: "ALS back-up is indicated for any patient with significant CNS depression, seizures, or unstable vitals."
+            "q": "When is ALS routinely requested?",
+            "options": [
+                "GCS <13 or falling, seizures, dysrhythmias, CV instability",
+                "Every patient",
+                "Never",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "Also a KPI."
         },
         {
-            q: "What is the dose of 0.9% normal saline bolus for a pediatric patient with toxic ingestion and signs of shock?",
-            options: ["5 mL/kg", "10-20 mL/kg", "40 mL/kg", "No fluids"],
-            correct: 1,
-            explanation: "Pediatric initial bolus is 10-20 mL/kg."
+            "q": "What GCS marks a high-risk patient?",
+            "options": [
+                "<13",
+                "<15",
+                "<5",
+                "<3"
+            ],
+            "correct": 0,
+            "explanation": "Treat as high-risk."
         },
         {
-            q: "Which of the following is a sign of cholinergic toxidrome?",
-            options: ["Dry skin", "Mydriasis", "Salivation, lacrimation, urination, defecation", "Hypertension"],
-            correct: 2,
-            explanation: "Cholinergic toxidrome presents with SLUDGE: salivation, lacrimation, urination, defecation, GI upset, emesis."
+            "q": "SLUDGE describes which toxidrome?",
+            "options": [
+                "Cholinergic",
+                "Anticholinergic",
+                "Opioid",
+                "Sympathomimetic"
+            ],
+            "correct": 0,
+            "explanation": "Organophosphates, nerve agents."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with toxic ingestion?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Is glucose checked?",
+            "options": [
+                "Yes: mandatory with altered mental status",
+                "Only in diabetics",
+                "Never",
+                "Only at hospital"
+            ],
+            "correct": 0,
+            "explanation": "Hypoglycemia mimics or complicates overdose."
         },
         {
-            q: "A patient with suspected overdose has a GCS of 8. What is the priority?",
-            options: ["Administer naloxone", "Protect airway and consider advanced airway", "Check blood glucose", "Obtain ECG"],
-            correct: 1,
-            explanation: "GCS =8 indicates severe CNS depression and airway compromise; airway protection is the priority."
+            "q": "GCS 8 after an overdose. What is the priority?",
+            "options": [
+                "Protect the airway and request ALS",
+                "Charcoal",
+                "Oral fluids",
+                "Leave"
+            ],
+            "correct": 0,
+            "explanation": "Expect airway compromise."
         },
         {
-            q: "What is the role of activated charcoal in prehospital care?",
-            options: ["Routinely given for all ingestions", "Given only if patient is alert and within 1 hour of ingestion", "Not in DCAS formulary", "Given via IV"],
-            correct: 2,
-            explanation: "Activated charcoal is not part of the DCAS prehospital formulary; focus is on supportive care."
+            "q": "Should you induce vomiting?",
+            "options": [
+                "No",
+                "Yes, always",
+                "Only in children",
+                "Only for pills"
+            ],
+            "correct": 0,
+            "explanation": "Avoid triggering vomiting or giving anything orally unless directed."
         },
         {
-            q: "Which of the following is a red flag requiring urgent transport in a pediatric ingestion?",
-            options: ["Small amount of non-toxic substance", "Ingestion of a single ibuprofen tablet", "Ingestion of calcium channel blocker", "Ingestion of vitamin C"],
-            correct: 2,
-            explanation: "Calcium channel blockers can be lethal in small doses; even a single pill can cause severe toxicity in children."
+            "q": "Which pediatric ingestion is Red priority?",
+            "options": [
+                "Any pediatric ingestion",
+                "None",
+                "Only above 5 tablets",
+                "Only liquids"
+            ],
+            "correct": 0,
+            "explanation": "Red: pediatric ingestion."
         },
         {
-            q: "A patient with suspected toxic ingestion has a heart rate of 40 and BP 80/50. What is the priority?",
-            options: ["Administer atropine", "Give fluid bolus", "Start dopamine", "Transport immediately"],
-            correct: 0,
-            explanation: "Symptomatic bradycardia requires atropine; refer to specific CPG for beta-blocker/CCB overdose."
+            "q": "Bradycardia and hypotension after an overdose suggest…",
+            "options": [
+                "Beta-blocker or CCB",
+                "Cocaine",
+                "Antihistamine",
+                "Amphetamine"
+            ],
+            "correct": 0,
+            "explanation": "Go to the relevant CPG."
         },
         {
-            q: "What is the preferred method for decontamination of a chemical splash to the skin?",
-            options: ["Neutralize with vinegar", "Irrigate with copious water for at least 15-30 minutes", "Apply oil", "Cover with dry gauze"],
-            correct: 1,
-            explanation: "Copious water irrigation is the standard decontamination for chemical exposures."
+            "q": "How is a chemical on the skin managed?",
+            "options": [
+                "Remove clothing and irrigate with water",
+                "Neutralise with vinegar",
+                "Cream",
+                "Ignore"
+            ],
+            "correct": 0,
+            "explanation": "Formal decontamination by Civil Defense."
         },
         {
-            q: "Which toxidrome presents with CNS depression, normal pupils, and hypotension?",
-            options: ["Opioid", "Anticholinergic", "Sedative-hypnotic", "Sympathomimetic"],
-            correct: 2,
-            explanation: "Sedative-hypnotics (benzodiazepines, barbiturates) cause CNS depression, normal or small pupils, and hypotension."
+            "q": "CNS depression, normal pupils, hypotension, bradycardia. Which toxidrome?",
+            "options": [
+                "Sedative-hypnotic",
+                "Opioid",
+                "Anticholinergic",
+                "Sympathomimetic"
+            ],
+            "correct": 0,
+            "explanation": "Benzodiazepines, barbiturates."
         },
         {
-            q: "A patient with overdose has a wide QRS complex on ECG. What is a potential cause?",
-            options: ["Tricyclic antidepressant", "Opioid", "Acetaminophen", "Aspirin"],
-            correct: 0,
-            explanation: "TCA overdose causes sodium channel blockade leading to widened QRS."
+            "q": "What may a wide QRS or long QT indicate?",
+            "options": [
+                "Sodium- or potassium-channel toxicity (TCA, lithium)",
+                "Opioids only",
+                "Alcohol",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Monitor the ECG."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with toxic ingestion and shock?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum 60 mL/kg crystalloid (three 20 mL/kg boluses) in the prehospital setting."
+            "q": "Fast breathing after an ingestion may suggest…",
+            "options": [
+                "Metabolic acidosis (salicylates, methanol)",
+                "Opioids",
+                "Benzodiazepines",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Breathing assessment."
         },
         {
-            q: "A patient with suspected organophosphate poisoning has excessive secretions and bradycardia. What is the first-line medication?",
-            options: ["Atropine", "Pralidoxime", "Diazepam", "Naloxone"],
-            correct: 0,
-            explanation: "Atropine is first-line for cholinergic symptoms; pralidoxime is a hospital intervention."
+            "q": "Hyperthermia in a poisoned patient suggests…",
+            "options": [
+                "Sympathomimetic or serotonin syndrome",
+                "Opioids",
+                "Sedatives",
+                "Hypoglycemia"
+            ],
+            "correct": 0,
+            "explanation": "Check temperature."
         },
         {
-            q: "Why is blood glucose checked in all patients with altered mental status due to possible overdose?",
-            options: ["Hypoglycemia can mimic overdose", "Hyperglycemia requires insulin", "To guide fluid resuscitation", "To assess kidney function"],
-            correct: 0,
-            explanation: "Hypoglycemia can cause altered mental status similar to drug overdose; it is a reversible cause."
+            "q": "Who must be transported?",
+            "options": [
+                "Every symptomatic patient",
+                "Nobody",
+                "Only unconscious",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "Notify early for cardiotoxic drugs or children."
         },
         {
-            q: "Which of the following is a sign of serotonin syndrome?",
-            options: ["Miosis", "Bradycardia", "Agitation, hyperthermia, clonus", "Hypotension"],
-            correct: 2,
-            explanation: "Serotonin syndrome presents with agitation, hyperthermia, clonus, hyperreflexia, and tachycardia."
+            "q": "Which is excluded from this CPG?",
+            "options": [
+                "Isolated opioid overdose",
+                "Mixed overdose",
+                "Unknown pills",
+                "Chemical skin exposure"
+            ],
+            "correct": 0,
+            "explanation": "Opioid Overdose CPG."
         },
         {
-            q: "What is the key performance indicator for general toxicology management?",
-            options: ["Administer activated charcoal", "Investigate and document substance type, route, amount, and time", "Perform gastric lavage", "Give naloxone"],
-            correct: 1,
-            explanation: "Documenting the exposure details is a key KPI to guide hospital management."
+            "q": "Which KPI applies?",
+            "options": [
+                "Document substance, route, amount and time",
+                "Charcoal for all",
+                "Naloxone for all",
+                "Transport in 10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "And ALS for GCS <13 or instability."
         },
         {
-            q: "A patient with a history of asthma takes an overdose of a beta-blocker. What is the concern?",
-            options: ["Bronchospasm", "Hypotension", "Bradycardia", "All of the above"],
-            correct: 3,
-            explanation: "Beta-blocker overdose can cause bradycardia, hypotension, and bronchospasm, especially in asthmatics."
+            "q": "A toddler swallowed one amlodipine tablet and looks well. What do you do?",
+            "options": [
+                "Transport and notify: small amounts can kill",
+                "Reassure and leave",
+                "Induce vomiting",
+                "Charcoal"
+            ],
+            "correct": 0,
+            "explanation": "Pediatric ingestion is Red priority."
         },
         {
-            q: "What is the dose of normal saline for an adult with toxic ingestion and signs of shock?",
-            options: ["250-500 mL", "1 L", "2 L", "No fluids"],
-            correct: 0,
-            explanation: "Initial bolus is 250-500 mL; repeat as needed up to 2000 mL."
+            "q": "When is IV access obtained?",
+            "options": [
+                "Hypotensive, vomiting or unconscious",
+                "Never",
+                "Every patient",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "As per the CPG."
         },
         {
-            q: "Which of the following is a contraindication to gastric decontamination in the field?",
-            options: ["Ingestion of caustic substance", "Altered mental status", "Risk of aspiration", "All of the above"],
-            correct: 3,
-            explanation: "Gastric decontamination (e.g., activated charcoal) is not recommended in the field; it carries aspiration risk and is not in DCAS protocol."
+            "q": "What is reassessed after a reversal agent?",
+            "options": [
+                "Scene and crew safety",
+                "Nothing",
+                "Only BP",
+                "Only glucose"
+            ],
+            "correct": 0,
+            "explanation": "Patients may wake agitated."
         },
         {
-            q: "A patient with suspected toxic ingestion has a seizure. What is the first step?",
-            options: ["Administer lorazepam", "Protect airway and give benzodiazepine", "Check glucose", "Give naloxone"],
-            correct: 1,
-            explanation: "Seizure management: protect airway, position, and administer benzodiazepine if prolonged."
+            "q": "How many substances should you assume?",
+            "options": [
+                "Consider mixed overdose",
+                "Always only one",
+                "None",
+                "Exactly two"
+            ],
+            "correct": 0,
+            "explanation": "Many overdoses are mixed."
         },
         {
-            q: "What is the role of Tele-EMS in toxicology cases?",
-            options: ["To confirm diagnosis", "To advise on specific antidotes or management", "To decide on transport", "All of the above"],
-            correct: 3,
-            explanation: "Tele-EMS can assist with complex cases, antidote advice, and transport decisions."
+            "q": "Which Yellow-priority feature is listed?",
+            "options": [
+                "GCS 9–13",
+                "GCS <9",
+                "Seizures",
+                "RR <10"
+            ],
+            "correct": 0,
+            "explanation": "Also mild symptoms, isolated vomiting."
         },
         {
-            q: "Which of the following is a sign of lithium toxicity?",
-            options: ["Tremor", "Ataxia", "Confusion", "All of the above"],
-            correct: 3,
-            explanation: "Lithium toxicity causes neurological symptoms: tremor, ataxia, confusion, and in severe cases, seizures and coma."
+            "q": "When should Tele-EMS be consulted?",
+            "options": [
+                "Early in unclear or critical cases",
+                "Never",
+                "Only after arrival",
+                "Only for children"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with toxic ingestion?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "What attitude is required?",
+            "options": [
+                "Non-judgemental: a medical emergency",
+                "Judgemental questioning",
+                "Indifference",
+                "Police first"
+            ],
+            "correct": 0,
+            "explanation": "Safety consideration."
         }
     ],
-    flashcards: [
-        { category: "Toxidrome � Opioid", question: "What are the signs of opioid toxidrome?", answer: "CNS depression, miosis (pinpoint pupils), respiratory depression, bradycardia." },
-        { category: "Toxidrome � Anticholinergic", question: "What are the signs of anticholinergic toxidrome?", answer: "Dry skin, hyperthermia, delirium, tachycardia, dilated pupils (blind as a bat, dry as a bone, red as a beet, mad as a hatter)." },
-        { category: "Toxidrome � Sympathomimetic", question: "What are the signs of sympathomimetic toxidrome?", answer: "Agitation, tachycardia, hypertension, diaphoresis, dilated pupils." },
-        { category: "Toxidrome � Cholinergic", question: "What are the signs of cholinergic toxidrome?", answer: "SLUDGE: salivation, lacrimation, urination, defecation, GI upset, emesis; also bronchospasm, miosis." },
-        { category: "Toxidrome � Sedative-hypnotic", question: "What are the signs of sedative-hypnotic toxidrome?", answer: "CNS depression, normal or small pupils, hypotension, bradycardia." },
-        { category: "Decontamination", question: "How should a chemical skin exposure be managed?", answer: "Remove contaminated clothing, irrigate with copious water for at least 15-30 minutes." },
-        { category: "Indications for ALS backup", question: "When should ALS be requested in toxicology?", answer: "GCS <13, seizures, dysrhythmias, cardiovascular instability, or need for advanced airway." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial fluid bolus for an adult with toxic ingestion and shock?", answer: "250-500 mL crystalloid, repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation � pediatric", question: "What is the initial fluid bolus for a pediatric patient with toxic ingestion and shock?", answer: "10-20 mL/kg crystalloid, repeat as needed up to 60 mL/kg." },
-        { category: "ECG in TCA overdose", question: "What ECG finding is concerning in TCA overdose?", answer: "Widened QRS (>100 ms), prolonged QT, right axis deviation." },
-        { category: "ECG in calcium channel blocker overdose", question: "What ECG findings are seen in CCB overdose?", answer: "Bradycardia, heart block, hypotension." },
-        { category: "Pediatric ingestions", question: "Why are pediatric ingestions particularly dangerous?", answer: "Small body weight means even a single adult pill can cause severe toxicity." },
-        { category: "Hypoglycemia", question: "Why check glucose in all altered mental status patients?", answer: "Hypoglycemia can mimic drug overdose and is rapidly reversible." },
-        { category: "Scene safety", question: "What should you look for on scene?", answer: "Pill bottles, syringes, drug paraphernalia, environmental hazards, multiple affected patients." },
-        { category: "KPI", question: "What is the key performance indicator for toxicology?", answer: "Investigate and document substance type, route, amount, and exposure/ingestion time." },
-        { category: "Activated charcoal", question: "Is activated charcoal part of DCAS prehospital care?", answer: "No; supportive care and transport are the priorities." },
-        { category: "Naloxone", question: "When is naloxone indicated?", answer: "Suspected opioid overdose with respiratory depression or CNS depression." },
-        { category: "Atropine", question: "When is atropine indicated?", answer: "Organophosphate poisoning or symptomatic bradycardia from other causes (beta-blocker, CCB)." },
-        { category: "Benzodiazepines", question: "What is the role of benzodiazepines in toxicology?", answer: "For seizures (e.g., TCA overdose, withdrawal) and sedation for agitation." },
-        { category: "Tele-EMS consultation", question: "When should Tele-EMS be consulted?", answer: "For complex cases, ambiguous diagnosis, or when specific antidote advice is needed." }
+    "flashcards": [
+        {
+            "question": "Opioid toxidrome",
+            "answer": "CNS depression, miosis, low RR, low HR."
+        },
+        {
+            "question": "Anticholinergic toxidrome",
+            "answer": "Dry skin, hyperthermia, delirium, tachycardia, dilated pupils."
+        },
+        {
+            "question": "Sympathomimetic toxidrome",
+            "answer": "Agitation, tachycardia, hypertension, sweating, dilated pupils."
+        },
+        {
+            "question": "Cholinergic toxidrome",
+            "answer": "SLUDGE: salivation, lacrimation, urination, diarrhea, GI upset, emesis."
+        },
+        {
+            "question": "Sedative-hypnotic toxidrome",
+            "answer": "CNS depression, normal pupils, hypotension, bradycardia."
+        },
+        {
+            "question": "Pupils",
+            "answer": "Pinpoint: opioids, organophosphates. Dilated: stimulants, withdrawal. Unequal: stroke or herniation."
+        },
+        {
+            "question": "Seizures/twitching",
+            "answer": "TCA, isoniazid, withdrawal."
+        },
+        {
+            "question": "High-risk GCS",
+            "answer": "<13."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Mandatory in altered mental status."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "High flow for reduced consciousness, distress or CO; SpO₂ ≥94%."
+        },
+        {
+            "question": "Fluid for shock",
+            "answer": "10–20 mL/kg 0.9% NaCl."
+        },
+        {
+            "question": "ECG",
+            "answer": "Watch for bradycardia, wide QRS, arrhythmias, long QT."
+        },
+        {
+            "question": "ALS triggers",
+            "answer": "GCS <13 or falling, seizures, dysrhythmias, CV instability."
+        },
+        {
+            "question": "Decontamination",
+            "answer": "Remove clothing, irrigate; formal decon by Civil Defense."
+        },
+        {
+            "question": "Specific CPGs",
+            "answer": "Opioid, beta-blocker, CCB, organophosphate."
+        },
+        {
+            "question": "Red priority",
+            "answer": "GCS <9, RR <10, seizures, bradycardia/hypotension, pediatric ingestion."
+        },
+        {
+            "question": "Transport",
+            "answer": "All symptomatic patients; notify for cardiotoxic drugs and children."
+        },
+        {
+            "question": "Don'ts",
+            "answer": "No induced vomiting or oral intake unless directed."
+        },
+        {
+            "question": "Children",
+            "answer": "Small amounts can kill (CCBs, opioids, hydrocarbons): act early."
+        },
+        {
+            "question": "KPIs",
+            "answer": "Substance, route, amount, time documented; ALS for GCS <13 or instability."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_8_1_1",
-            scenario: "A 35-year-old male is found unresponsive with a respiratory rate of 6, pinpoint pupils, and track marks on arms. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer naloxone 0.4 mg IV", f: "Correct. Opioid overdose is likely; naloxone should be given while supporting ventilation." },
-                { t: "Start CPR", f: "Patient has a pulse; CPR is not indicated." },
-                { t: "Check blood glucose", f: "Important, but airway and breathing are priority." },
-                { t: "Establish IV access", f: "Secondary to ventilation and naloxone." }
+            "id": "crit_8_1_1",
+            "scenario": "A 20-year-old took unknown pills: agitated, HR 140, BP 160/90, dilated pupils, sweating, 39°C.",
+            "question": "What is the toxidrome and your approach?",
+            "options": [
+                {
+                    "t": "Sympathomimetic: ABC, ECG, glucose, ALS, cooling as needed, transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Opioid: naloxone",
+                    "f": "Pupils are dilated, not pinpoint."
+                },
+                {
+                    "t": "Cholinergic",
+                    "f": "No SLUDGE features."
+                },
+                {
+                    "t": "Leave: she is awake",
+                    "f": "Symptomatic patients go to hospital."
+                }
             ],
-            correct: 0,
-            explanation: "Pinpoint pupils and respiratory depression are classic for opioid overdose; naloxone should be given immediately.",
-            kpi: "Naloxone administered within 1 minute."
+            "correct": 0,
+            "explanation": "Sweating with dilated pupils and hypertension fits sympathomimetic.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_1_2",
-            scenario: "A 20-year-old female is brought in by friends after taking an unknown number of pills. She is agitated, with a heart rate of 140, BP 160/90, dilated pupils, and diaphoretic. What toxidrome is this and what is the initial management?",
-            question: "What is the most likely toxidrome and next step?",
-            options: [
-                { t: "Opioid; give naloxone", f: "Not opioid; sympathomimetic." },
-                { t: "Anticholinergic; give physostigmine", f: "Physostigmine not in prehospital formulary." },
-                { t: "Sympathomimetic; provide supportive care, consider benzodiazepines for agitation", f: "Correct. Sympathomimetic toxidrome; focus on sedation and supportive care." },
-                { t: "Cholinergic; give atropine", f: "Not cholinergic." }
+            "id": "crit_8_1_2",
+            "scenario": "A depressed 45-year-old is drowsy beside an empty amitriptyline box; HR 110, BP 100/70. The ECG shows a broad, abnormal pattern.",
+            "ecg": "longQt",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "ABC, continuous ECG, glucose, ALS (dysrhythmia risk), IV access, early notification",
+                    "f": "Correct. TCAs cause sodium- and potassium-channel toxicity."
+                },
+                {
+                    "t": "Induce vomiting",
+                    "f": "Never."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Nothing by mouth."
+                },
+                {
+                    "t": "Observe at home",
+                    "f": "Symptomatic and cardiotoxic."
+                }
             ],
-            correct: 2,
-            explanation: "Sympathomimetic toxidrome (agitation, tachycardia, hypertension, dilated pupils). Benzodiazepines may be used for agitation; avoid beta-blockers.",
-            kpi: "Toxidrome identified and appropriate sedation considered."
+            "correct": 0,
+            "explanation": "Notify the hospital for cardiotoxic ingestions.",
+            "kpi": "ALS back-up for unstable patients or GCS <13."
         },
         {
-            id: "crit_8_1_3",
-            scenario: "A 45-year-old male with a history of depression is found with an empty bottle of amitriptyline. He is drowsy, with a heart rate of 110, BP 100/70, and a wide QRS on ECG. What is the priority?",
-            question: "What is the most appropriate next step?",
-            options: [
-                { t: "Administer sodium bicarbonate", f: "Sodium bicarbonate is a hospital treatment; not in prehospital formulary." },
-                { t: "Protect airway, give fluid bolus, and transport urgently", f: "Correct. TCA overdose with wide QRS requires airway protection and rapid transport." },
-                { t: "Administer activated charcoal", f: "Not in prehospital protocol; aspiration risk." },
-                { t: "Give naloxone", f: "Not indicated." }
+            "id": "crit_8_1_3",
+            "scenario": "A 2-year-old was found with an open bottle of amlodipine; one tablet is missing. The child is well.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Transport (Red: pediatric ingestion) and notify the hospital",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Reassure and leave",
+                    "f": "One tablet can be lethal in a toddler."
+                },
+                {
+                    "t": "Induce vomiting",
+                    "f": "Never."
+                },
+                {
+                    "t": "Wait for symptoms",
+                    "f": "Act early."
+                }
             ],
-            correct: 1,
-            explanation: "Tricyclic antidepressant overdose can cause widened QRS and seizures; airway protection and rapid transport are critical.",
-            kpi: "Airway managed and transport expedited."
+            "correct": 0,
+            "explanation": "Calcium channel blockers can be lethal in small amounts.",
+            "kpi": "Substance, route, amount and time documented."
         },
         {
-            id: "crit_8_1_4",
-            scenario: "A 2-year-old child is found with an open bottle of amlodipine; one tablet is missing. The child is asymptomatic. What is the appropriate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Observe at home", f: "Even one tablet can be fatal in a child." },
-                { t: "Transport to hospital urgently", f: "Correct. Calcium channel blockers can cause severe hypotension and bradycardia; even asymptomatic children require evaluation." },
-                { t: "Give activated charcoal", f: "Not in prehospital formulary." },
-                { t: "Induce vomiting", f: "Not recommended." }
+            "id": "crit_8_1_4",
+            "scenario": "A man with hypertension took many metoprolol tablets: HR 40, BP 80/50, lethargic.",
+            "ecg": "sbrady",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "ABC, ALS, IV, 10–20 mL/kg NaCl, and the Beta-Blocker Overdose CPG",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Treat as opioid",
+                    "f": "Bradycardia and hypotension point to the beta-blocker."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Not with reduced consciousness."
+                },
+                {
+                    "t": "Wait",
+                    "f": "Unstable."
+                }
             ],
-            correct: 1,
-            explanation: "Pediatric ingestions of calcium channel blockers are dangerous; all require hospital evaluation.",
-            kpi: "Patient transported for evaluation."
+            "correct": 0,
+            "explanation": "Use the specific CPG when one fits.",
+            "kpi": "ALS back-up for unstable patients or GCS <13."
         },
         {
-            id: "crit_8_1_5",
-            scenario: "A 55-year-old male with a history of hypertension takes an overdose of metoprolol. He presents with a heart rate of 40, BP 80/50, and is lethargic. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer atropine 1 mg IV", f: "Correct. Symptomatic bradycardia requires atropine; refer to Beta-Blocker Overdose CPG." },
-                { t: "Give fluid bolus", f: "Fluids are important but bradycardia treatment is priority." },
-                { t: "Start dopamine infusion", f: "Second-line after atropine and fluids." },
-                { t: "Transport without intervention", f: "Interventions should be given." }
+            "id": "crit_8_1_5",
+            "scenario": "Three people in one room have headache, vomiting and confusion; there is a gas heater.",
+            "question": "What do you do first?",
+            "options": [
+                {
+                    "t": "Scene safety: suspect a toxic gas (CO); remove people safely, high-flow oxygen",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Enter and treat in the room",
+                    "f": "Scene safety first."
+                },
+                {
+                    "t": "Assume food poisoning",
+                    "f": "Several patients in one place suggests a toxic exposure."
+                },
+                {
+                    "t": "Glucose only",
+                    "f": "Oxygen for suspected CO."
+                }
             ],
-            correct: 0,
-            explanation: "Beta-blocker overdose with symptomatic bradycardia and hypotension requires atropine and then fluids/vasopressors.",
-            kpi: "Atropine administered."
+            "correct": 0,
+            "explanation": "Multiple patients are a scene-safety clue.",
+            "kpi": "Substance, route, amount and time documented."
         }
     ]
 };

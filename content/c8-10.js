@@ -1,386 +1,775 @@
-/* ========== Chapter 8.10 � Hyperthermia / Heat Exposure ========== */
+/* ========== CPG 8.10 – Hyperthermia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c8-10",
-    title: "Hyperthermia / Heat Exposure",
-    shortTitle: "8.10 Hyperthermia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">??? Hyperthermia / Heat Exposure</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and manage suspected heat exposure or hyperthermia to prevent progression to severe complications like heat stroke.</li>
-                <li>Provide immediate cooling and supportive care to reduce core body temperature and minimize secondary injury.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms suggestive of heat exposure or hyperthermia, including:
-                    <ul>
-                        <li>Exposure to hot environments (e.g., high ambient temperatures, exertion in heat).</li>
-                        <li>Clinical features such as elevated body temperature, headache, nausea/vomiting, syncope, heat cramps, CNS involvement (e.g., ataxia, confusion, seizures), hot/dry skin, or hypotension.</li>
-                        <li>Core temperature above 37�C, often >40�C in heat stroke, as measured or estimated.</li>
-                        <li>History of prolonged heat exposure, physical exertion, or inadequate hydration in hot conditions.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Hyperthermia or fever secondary to an intrinsic cause such as sepsis.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Primary and Secondary Survey:</strong> Perform as per Universal Care CPG. Consider non-environmental causes of hyperthermia (e.g., infections, medications).</li>
-                <li><strong>Differentiation of Conditions:</strong>
-                    <ul>
-                        <li><strong>Heat Exhaustion:</strong> Elevated body temperature (typically 37�40�C), headache, nausea/vomiting, syncope, heat cramps, poor circulation, dehydration.</li>
-                        <li><strong>Heat Stroke:</strong> Core temperature usually >40�C, neurological dysfunction (delirium, confusion, seizures, loss of consciousness), hot/dry skin, hypotension; recognize exertional (from activity) vs. non-exertional (vulnerable populations like elderly).</li>
-                    </ul>
-                </li>
-                <li><strong>Severity Grading:</strong>
-                    <ul>
-                        <li><strong>Mild (Heat Cramps/Exhaustion):</strong> Localized symptoms without CNS involvement.</li>
-                        <li><strong>Severe (Heat Stroke):</strong> Systemic effects with CNS dysfunction, potential for multi-organ failure.</li>
-                    </ul>
-                </li>
-                <li><strong>Monitoring:</strong> Assess for dehydration, electrolyte imbalances, and altered mental status. Monitor ECG for arrhythmias secondary to electrolyte imbalances.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for heat stroke (CNS involvement, core temperature >40�C, hypotension).</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary & Secondary Survey:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> For heat stroke, seizures, altered mental status, or cardiovascular instability.</li>
-                <li><strong>Initial Care:</strong> Remove patient from hot environment, prevent further heat exposure.</li>
-                <li><strong>Cooling Interventions:</strong>
-                    <ul>
-                        <li><strong>General Cooling:</strong> Strip/remove clothing and loosen restrictive garments; spray/mist skin with tepid water; fan to promote evaporation; apply ice/cold packs to axilla, groin, and posterior neck.</li>
-                        <li><strong>Heat Exhaustion:</strong> Passive cooling (remove from heat, fan, remove clothing).</li>
-                        <li><strong>Heat Stroke:</strong> Aggressive active cooling as priority ("cool first, transport second"). Aim for cooling rate of 0.15�C/min or more. Target reduction to 38.6�39.4�C to avoid overcooling. Methods include: cold water immersion (gold standard if available), or ice packs/fans during transport.</li>
-                    </ul>
-                </li>
-                <li><strong>PO Fluids and Electrolytes:</strong> Indicated for heat exhaustion (provided patient is alert and able to swallow).</li>
-                <li><strong>IV Fluids:</strong> Use Normal Saline or Lactated Ringers.
-                    <ul>
-                        <li>Indications: Heat exhaustion if signs of dehydration or shock; heat stroke (signs of heat stroke).</li>
-                        <li>Adults: 500 mL IV/IO bolus (repeat as required, maximum 2000 mL).</li>
-                        <li>Pediatrics: 10 mL/kg bolus (repeat as required, maximum 40 mL/kg).</li>
-                    </ul>
-                </li>
-                <li><strong>Seizure Management:</strong> Manage seizures or agitation with benzodiazepines as per Seizures CPG.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, core temperature (if available), mental status, and response to cooling.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li><strong>Progression Risk:</strong> Heat exhaustion can rapidly deteriorate to heat stroke if untreated; focus on rehydration and gentle cooling.</li>
-                <li><strong>Heat Stroke Emergency:</strong> This is a life-threatening condition with high risk of arrhythmias, electrolyte derangements, seizures, and multi-organ failure; aggressive treatment is required.</li>
-                <li><strong>Non-Environmental Hyperthermia:</strong> Consider intrinsic causes (e.g., malignant hyperthermia, drug toxicity) and manage accordingly.</li>
-                <li><strong>Special Populations:</strong> Elderly, children, and those with comorbidities are at higher risk; exertional heat stroke common in athletes.</li>
-                <li><strong>Antipyretics:</strong> Avoid antipyretics (e.g., acetaminophen) as they are ineffective; focus on external cooling.</li>
-                <li><strong>Cooling Goal:</strong> Aim for cooling rate of 0.15�C/min or more; target temperature 38.6�39.4�C to avoid overcooling.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Patient�s full name, age, and gender.</li>
-                <li>Description of heat exposure (e.g., environment, exertion), duration.</li>
-                <li>Initial temperature (if measured), clinical features, non-environmental causes considered.</li>
-                <li>Vital signs, neurological status, skin condition, severity classification.</li>
-                <li>Cooling methods used (e.g., strip/spray/fan/ice, immersion).</li>
-                <li>Fluids administered (PO/IV, type, volume).</li>
-                <li>Any additional interventions (e.g., benzodiazepines for agitation).</li>
-                <li>Allergies, medications, background (prior heat illness, comorbidities like heart disease).</li>
-                <li>Accurate timeline of exposure and symptom onset; communication with receiving facility.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Assess and document body temperature.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c8-10",
+    "title": "Hyperthermia",
+    "shortTitle": "8.10 Hyperthermia",
+    "guide": {
+        "cpg": "8.10",
+        "group": "environmental",
+        "groupLabel": "Environmental",
+        "title": "Hyperthermia",
+        "lead": "Remove from the heat and cool: strip, spray, fan, ice. Heat stroke (CNS dysfunction, usually above 40°C) is life-threatening: cool first, transport second, aiming for at least 0.15°C/min and stopping at 38.6–39.4°C. Give crystalloid for dehydration or shock, treat seizures with benzodiazepines, and do not give antipyretics.",
+        "source": {
+            "label": "CPG 8.10",
+            "pages": "286–289",
+            "pdf": "../pdf_sections/8_10_Hyperthermia___Heat_Exposure.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Heat exposure: high ambient temperature, exertion in heat, prolonged exposure or inadequate hydration.",
+                    "Raised temperature, headache, nausea or vomiting, syncope, heat cramps, CNS involvement, hot dry skin or hypotension.",
+                    "Core temperature above 37°C, often &gt;40°C in heat stroke, measured or estimated."
+                ],
+                "exclude": [
+                    "Hyperthermia or fever from an intrinsic cause such as sepsis."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Heat exhaustion or heat stroke",
+                "icon": "stethoscope",
+                "columns": [
+                    "",
+                    "Heat exhaustion (mild)",
+                    "Heat stroke (severe)"
+                ],
+                "rows": [
+                    [
+                        "Temperature",
+                        "Typically 37–40°C",
+                        "Usually &gt;40°C"
+                    ],
+                    [
+                        "Features",
+                        "Headache, nausea or vomiting, syncope, heat cramps, poor circulation, dehydration",
+                        "CNS dysfunction (ataxia, confusion, delirium, irritability, seizures, coma), hot dry skin, hypotension"
+                    ],
+                    [
+                        "CNS involvement",
+                        "No",
+                        "Yes: the key difference"
+                    ],
+                    [
+                        "Cooling",
+                        "Passive: remove from heat, fan, remove clothing",
+                        "Aggressive active cooling: cool first, transport second"
+                    ]
+                ],
+                "notes": [
+                    "Heat stroke may be exertional (athletes) or non-exertional (elderly and other vulnerable people).",
+                    "Consider non-environmental causes: infection, medications, drug toxicity, malignant hyperthermia."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Cool: strip, spray, fan, ice",
+                "icon": "wind",
+                "groups": [
+                    {
+                        "title": "All patients",
+                        "items": [
+                            "Strip: remove clothing and loosen restrictive garments.",
+                            "Spray: mist the skin with tepid water.",
+                            "Fan: a cool, well-ventilated area; fan to promote evaporation.",
+                            "Ice: cold packs to the axilla, groin and posterior neck."
+                        ]
+                    },
+                    {
+                        "title": "Heat stroke",
+                        "items": [
+                            "Cooling rate 0.15°C/min or more.",
+                            "Cold water immersion is the gold standard if available; otherwise ice packs and fans during transport.",
+                            "Stop at 38.6–39.4°C to avoid overcooling."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Fluids and drugs",
+                "icon": "droplet",
+                "steps": [
+                    {
+                        "title": "Oral fluids",
+                        "text": "Heat exhaustion: PO fluids with electrolytes if alert and able to swallow."
+                    },
+                    {
+                        "title": "IV crystalloid",
+                        "level": "EMT",
+                        "text": "Normal saline or Lactated Ringer's for heat exhaustion with dehydration or shock, or for heat stroke.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500 mL IV/IO bolus",
+                                "note": "Repeat as required"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "10 mL/kg bolus",
+                                "note": "Repeat as required, max 40 mL/kg"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Seizures or agitation",
+                        "text": "Benzodiazepines as per the Seizures CPG."
+                    },
+                    {
+                        "title": "Antipyretics",
+                        "text": "Avoid (e.g. paracetamol): ineffective. Rely on external cooling."
+                    },
+                    {
+                        "title": "ALS back-up",
+                        "text": "Consider for heat stroke."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Monitor",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Reassess",
+                        "items": [
+                            "Dehydration, electrolyte imbalance and mental status.",
+                            "ECG for arrhythmias from electrolyte imbalance.",
+                            "Altered mental status not improving: consider other causes."
+                        ]
+                    },
+                    {
+                        "title": "Higher risk",
+                        "items": [
+                            "Elderly, children and people with comorbidities.",
+                            "Heat exhaustion can progress rapidly to heat stroke if untreated."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Rhythms",
+                        "items": [
+                            {
+                                "ecg": "stach",
+                                "label": "Sinus tachycardia",
+                                "sub": "Dehydration, heat stress"
+                            },
+                            {
+                                "ecg": "hyperK",
+                                "label": "Hyperkalemia",
+                                "sub": "Electrolyte arrhythmia risk"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: normal saline",
+                                "sub": "Pediatric 10 mL/kg",
+                                "href": "../pages/drug-calculator.html?drug=Normal Saline",
+                                "icon": "droplet"
+                            },
+                            {
+                                "label": "Drug calculator: diazepam",
+                                "sub": "Seizures CPG",
+                                "href": "../pages/drug-calculator.html?drug=Diazepam",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Body temperature assessed and documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "8.9 Hypothermia",
+                        "href": "c8-9.html"
+                    },
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "6.7 Fever and Sepsis",
+                        "href": "c6-7.html"
+                    },
+                    {
+                        "label": "8.1 General Toxicology",
+                        "href": "c8-1.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the defining feature that distinguishes heat stroke from heat exhaustion?",
-            options: ["Core temperature >40�C", "Altered mental status", "Hot, dry skin", "All of the above"],
-            correct: 1,
-            explanation: "Heat stroke is characterized by central nervous system dysfunction (altered mental status, seizures, coma), often with core temperature >40�C."
+            "q": "What distinguishes heat stroke from heat exhaustion?",
+            "options": [
+                "CNS dysfunction",
+                "Sweating",
+                "Headache",
+                "Heat cramps"
+            ],
+            "correct": 0,
+            "explanation": "Heat stroke: delirium, confusion, seizures or loss of consciousness."
         },
         {
-            q: "What is the initial cooling intervention for a patient with heat stroke?",
-            options: ["Administer paracetamol", "Cold water immersion or ice packs to axilla/groin", "Give cold IV fluids", "Place in a cool environment only"],
-            correct: 1,
-            explanation: "Aggressive active cooling (cold water immersion or ice packs) is the priority for heat stroke."
+            "q": "First cooling step for any heat-exposed patient?",
+            "options": [
+                "Remove from the heat; strip, spray, fan, ice",
+                "Paracetamol",
+                "Cold IV fluid only",
+                "Wait for hospital"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "A patient with heat exhaustion is alert and able to swallow. What is the appropriate fluid management?",
-            options: ["IV normal saline", "Oral rehydration with electrolyte solution", "No fluids", "Cold IV fluids"],
-            correct: 1,
-            explanation: "Oral rehydration is appropriate if the patient is alert and able to swallow safely."
+            "q": "Heat exhaustion, alert and able to swallow. Fluids?",
+            "options": [
+                "PO fluids with electrolytes",
+                "IV saline for all",
+                "No fluids",
+                "Plain water only, forced"
+            ],
+            "correct": 0,
+            "explanation": "IV only if dehydrated or shocked."
         },
         {
-            q: "What is the target cooling rate for heat stroke?",
-            options: ["0.05�C/min", "0.15�C/min or more", "0.5�C/min", "1�C/min"],
-            correct: 1,
-            explanation: "Aim for cooling rate of at least 0.15�C/min to rapidly reduce core temperature."
+            "q": "What cooling rate is the aim in heat stroke?",
+            "options": [
+                "0.15°C/min or more",
+                "0.05°C/min",
+                "1°C/hour",
+                "As slow as possible"
+            ],
+            "correct": 0,
+            "explanation": "Aggressive cooling is the priority."
         },
         {
-            q: "What is the initial IV fluid bolus for an adult with heat stroke?",
-            options: ["250 mL", "500 mL", "1000 mL", "2000 mL"],
-            correct: 1,
-            explanation: "Initial bolus is 500 mL crystalloid; repeat as needed up to 2000 mL."
+            "q": "Adult IV crystalloid bolus?",
+            "options": [
+                "500 mL, repeat as required",
+                "250 mL once",
+                "2 L stat",
+                "100 mL"
+            ],
+            "correct": 0,
+            "explanation": "IV/IO, EMT level."
         },
         {
-            q: "Which of the following is NOT a recommended cooling method for heat stroke?",
-            options: ["Cold water immersion", "Ice packs to axilla and groin", "Alcohol sponges", "Evaporative cooling with fans and mist"],
-            correct: 2,
-            explanation: "Alcohol sponges are not recommended; they can cause peripheral vasoconstriction and are ineffective."
+            "q": "Gold-standard cooling for heat stroke if available?",
+            "options": [
+                "Cold water immersion",
+                "Paracetamol",
+                "A cool drink",
+                "A blanket"
+            ],
+            "correct": 0,
+            "explanation": "Otherwise ice packs and fans during transport."
         },
         {
-            q: "A patient with heat exhaustion has a blood pressure of 85/50. What should you do?",
-            options: ["Give oral fluids only", "Start IV fluids", "Administer vasopressors", "Transport without intervention"],
-            correct: 1,
-            explanation: "Hypotension with heat exhaustion may indicate dehydration; IV fluid resuscitation is indicated."
+            "q": "Heat exhaustion with BP 85/50. What do you do?",
+            "options": [
+                "IV crystalloid bolus",
+                "Oral fluids only",
+                "Vasopressors",
+                "Transport with no treatment"
+            ],
+            "correct": 0,
+            "explanation": "IV fluid for dehydration or shock."
         },
         {
-            q: "What is the pediatric IV fluid bolus for a child with heat stroke?",
-            options: ["5 mL/kg", "10 mL/kg", "20 mL/kg", "40 mL/kg"],
-            correct: 1,
-            explanation: "Pediatric initial bolus is 10 mL/kg; may repeat up to 40 mL/kg total."
+            "q": "Pediatric IV bolus?",
+            "options": [
+                "10 mL/kg",
+                "5 mL/kg",
+                "20 mL/kg",
+                "40 mL/kg"
+            ],
+            "correct": 0,
+            "explanation": "Repeat as required, max 40 mL/kg."
         },
         {
-            q: "Why should antipyretics like paracetamol not be given for heat stroke?",
-            options: ["They are ineffective; the hyperthermia is not from a fever", "They cause liver damage", "They interact with cooling methods", "They are not in the formulary"],
-            correct: 0,
-            explanation: "Antipyretics do not lower core temperature in heat stroke because the mechanism is not a reset hypothalamic set point."
+            "q": "Why not give paracetamol for heat stroke?",
+            "options": [
+                "It is ineffective; cool externally",
+                "It damages the liver immediately",
+                "It interferes with ice packs",
+                "It is not stocked"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight: avoid antipyretics."
         },
         {
-            q: "What is the target core temperature during cooling for heat stroke?",
-            options: ["<37�C", "38.6�39.4�C", "36�C", "40�C"],
-            correct: 1,
-            explanation: "Cool to 38.6�39.4�C to avoid overcooling and complications."
+            "q": "At what temperature do you stop active cooling?",
+            "options": [
+                "38.6–39.4°C",
+                "Below 37°C",
+                "36°C",
+                "40°C"
+            ],
+            "correct": 0,
+            "explanation": "To avoid overcooling."
         },
         {
-            q: "A patient with heat stroke has a seizure. What is the priority?",
-            options: ["Administer benzodiazepine", "Protect airway and continue cooling", "Give IV fluids", "Transport immediately"],
-            correct: 1,
-            explanation: "Airway protection and continued cooling are priorities; benzodiazepines may be given if the seizure is prolonged."
+            "q": "Heat stroke patient seizing. Management?",
+            "options": [
+                "Continue cooling; benzodiazepines per the Seizures CPG; protect the airway",
+                "Stop cooling",
+                "Paracetamol",
+                "Fluids only"
+            ],
+            "correct": 0,
+            "explanation": "Seizure management is in the CPG."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with heat stroke?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "How is the adult bolus repeated?",
+            "options": [
+                "As required, reassessing after each bolus",
+                "Never",
+                "Every minute regardless",
+                "Only in hospital"
+            ],
+            "correct": 0,
+            "explanation": "500 mL boluses, repeat as required."
         },
         {
-            q: "A patient with heat exhaustion is found to have a heart rate of 120. What is the likely cause?",
-            options: ["Dehydration", "Pain", "Anxiety", "All of the above"],
-            correct: 3,
-            explanation: "Tachycardia can result from dehydration, pain, or anxiety; treat underlying cause."
+            "q": "Where are cold packs placed?",
+            "options": [
+                "Axilla, groin and posterior neck",
+                "Forehead only",
+                "Hands and feet",
+                "Chest only"
+            ],
+            "correct": 0,
+            "explanation": "Large vessels close to the skin."
         },
         {
-            q: "What is the role of ice packs in heat stroke cooling?",
-            options: ["Apply to all extremities", "Apply to neck, axilla, and groin", "Apply to forehead only", "Avoid ice packs"],
-            correct: 1,
-            explanation: "Ice packs to areas with high blood flow (neck, axilla, groin) are effective for cooling."
+            "q": "Why stop cooling at 38.6–39.4°C?",
+            "options": [
+                "To avoid overcooling",
+                "Because ice runs out",
+                "Because cooling is harmful at any temperature",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Target reduction range."
         },
         {
-            q: "Why should you avoid overcooling a heat stroke patient?",
-            options: ["Risk of hypothermia", "May cause shivering which increases heat production", "May cause vasodilation", "Both A and B"],
-            correct: 3,
-            explanation: "Overcooling can cause shivering, which increases metabolic heat production, and may lead to hypothermia."
+            "q": "Which fluids are used IV?",
+            "options": [
+                "Normal saline or Lactated Ringer's",
+                "5% dextrose",
+                "Hypotonic saline",
+                "Colloid only"
+            ],
+            "correct": 0,
+            "explanation": "Crystalloid."
         },
         {
-            q: "What is the target SpO2 for a patient with hyperthermia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What does 'cool first, transport second' mean?",
+            "options": [
+                "Start aggressive cooling before and during transport",
+                "Transport first",
+                "Cool only in hospital",
+                "Cool only mild cases"
+            ],
+            "correct": 0,
+            "explanation": "Heat stroke priority."
         },
         {
-            q: "A patient with heat stroke has a blood pressure of 80/50 after 1 L normal saline. What is the next step?",
-            options: ["Give another 500 mL fluid bolus", "Start dopamine", "Administer adrenaline", "Transport only"],
-            correct: 0,
-            explanation: "Fluid resuscitation may be continued up to 2000 mL; if no improvement, consider vasopressors."
+            "q": "What is the KPI?",
+            "options": [
+                "Body temperature assessed and documented",
+                "Antibiotics given",
+                "12-lead ECG for all",
+                "Glucose for all"
+            ],
+            "correct": 0,
+            "explanation": "Single KPI."
         },
         {
-            q: "What is the key performance indicator for hyperthermia?",
-            options: ["Administer antibiotics", "Assess and document body temperature", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Documenting body temperature is a key KPI."
+            "q": "Which patient is excluded?",
+            "options": [
+                "Fever from sepsis",
+                "Labourer collapsing in the sun",
+                "Marathon runner confused at the finish",
+                "Elderly person in a hot flat"
+            ],
+            "correct": 0,
+            "explanation": "Intrinsic causes are excluded."
         },
         {
-            q: "A patient with heat exhaustion has a blood glucose of 45 mg/dL. What should you do?",
-            options: ["Give 50% dextrose 25 g IV", "Give glucagon IM", "Give oral glucose", "Transport only"],
-            correct: 0,
-            explanation: "Hypoglycemia should be treated with IV dextrose if the patient cannot safely swallow."
+            "q": "Pediatric maximum IV bolus total?",
+            "options": [
+                "40 mL/kg",
+                "20 mL/kg",
+                "60 mL/kg",
+                "80 mL/kg"
+            ],
+            "correct": 0,
+            "explanation": "10 mL/kg boluses."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with hyperthermia?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 1,
-            explanation: "Maximum 40 mL/kg (four 10 mL/kg boluses) in the prehospital setting."
+            "q": "Who is at higher risk of heat illness?",
+            "options": [
+                "Elderly, children and people with comorbidities",
+                "Only athletes",
+                "Only the elderly",
+                "Nobody in particular"
+            ],
+            "correct": 0,
+            "explanation": "Exertional heat stroke is common in athletes."
         },
         {
-            q: "Which of the following is a risk factor for heat stroke?",
-            options: ["Age >65 years", "Strenuous exercise", "Obesity", "All of the above"],
-            correct: 3,
-            explanation: "Elderly, athletes, and obese individuals are at higher risk for heat stroke."
+            "q": "Heat stroke patient is agitated and combative. Management?",
+            "options": [
+                "Benzodiazepines per the Seizures CPG, with continued cooling",
+                "Restraint and no cooling",
+                "Paracetamol",
+                "Leave on scene"
+            ],
+            "correct": 0,
+            "explanation": "Manage seizures or agitation with benzodiazepines."
         },
         {
-            q: "A patient with heat stroke is agitated and combative. What is the appropriate management?",
-            options: ["Physical restraint", "Benzodiazepines for sedation", "Cooling and reassurance", "Both B and C"],
-            correct: 3,
-            explanation: "Agitation may be due to CNS dysfunction; benzodiazepines may be used, while continuing cooling."
+            "q": "Which is a heat stroke feature on the flowchart?",
+            "options": [
+                "CNS involvement, temperature >40°C, hot dry skin or hypotension",
+                "Heat cramps alone",
+                "Headache alone",
+                "Sweating alone"
+            ],
+            "correct": 0,
+            "explanation": "Any of these."
         },
         {
-            q: "Why should you avoid using alcohol sponges for cooling?",
-            options: ["They cause skin irritation", "They can cause peripheral vasoconstriction", "They are flammable", "They are ineffective"],
-            correct: 1,
-            explanation: "Alcohol evaporates quickly and can cause vasoconstriction, which impairs heat loss."
+            "q": "Which level gives IV crystalloid?",
+            "options": [
+                "EMT",
+                "ER",
+                "EMR",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "What is the dose of benzodiazepines for a seizure in heat stroke?",
-            options: ["Midazolam 5 mg IV/IM (adult)", "Diazepam 5 mg IV", "Both A and B", "Only IV paracetamol"],
-            correct: 2,
-            explanation: "Benzodiazepines are used for seizure control; doses as per Seizures CPG."
+            "q": "Heat exhaustion, vomiting, can't take oral fluids. What do you do?",
+            "options": [
+                "IV crystalloid",
+                "Force oral fluids",
+                "Transport only",
+                "Paracetamol"
+            ],
+            "correct": 0,
+            "explanation": "PO only if able to swallow."
         },
         {
-            q: "A patient with heat exhaustion is vomiting and unable to take oral fluids. What should you do?",
-            options: ["Give IV fluids", "Give oral fluids slowly", "Transport only", "Give antiemetic"],
-            correct: 0,
-            explanation: "IV fluids are indicated when oral intake is not possible or ineffective."
+            "q": "What should you think about if mental status does not improve with cooling?",
+            "options": [
+                "Alternative causes",
+                "More paracetamol",
+                "Nothing",
+                "Stop all treatment"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "What is the preferred fluid for IV resuscitation in hyperthermia?",
-            options: ["5% dextrose", "Normal saline", "Ringer's lactate", "Both B and C"],
-            correct: 3,
-            explanation: "Isotonic crystalloids (normal saline or Ringer's lactate) are preferred."
+            "q": "Why monitor the ECG?",
+            "options": [
+                "Arrhythmias from electrolyte imbalance",
+                "To measure temperature",
+                "To guide fan speed",
+                "It is not needed"
+            ],
+            "correct": 0,
+            "explanation": "Assessment point."
         },
         {
-            q: "A patient with heat stroke has a respiratory rate of 8. What is the priority?",
-            options: ["Cooling", "Airway and ventilatory support", "IV fluids", "Benzodiazepines"],
-            correct: 1,
-            explanation: "Respiratory depression requires immediate airway management and ventilation."
+            "q": "Heat stroke: what else to consider early?",
+            "options": [
+                "ALS back-up",
+                "Discharge",
+                "Antipyretics",
+                "Hot drinks"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "Why should you monitor ECG in hyperthermic patients?",
-            options: ["Risk of arrhythmias from electrolyte imbalance", "Risk of myocardial infarction", "Risk of heart block", "All of the above"],
-            correct: 3,
-            explanation: "Electrolyte abnormalities and cardiovascular strain can cause arrhythmias."
+            "q": "Heat exhaustion untreated may…",
+            "options": [
+                "Progress rapidly to heat stroke",
+                "Always resolve",
+                "Cause hypothermia",
+                "Never change"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "What is the role of ice water immersion for heat stroke?",
-            options: ["First-line if available", "Only if no other methods", "Contraindicated", "For mild cases only"],
-            correct: 0,
-            explanation: "Cold water immersion is the gold standard for rapid cooling in heat stroke."
+            "q": "No immersion available. How do you cool en route?",
+            "options": [
+                "Ice packs and fans, misting with tepid water",
+                "Blankets",
+                "Nothing",
+                "Hot packs"
+            ],
+            "correct": 0,
+            "explanation": "Evaporative cooling."
         },
         {
-            q: "A patient with heat stroke has a core temperature of 41�C. After 15 minutes of cooling, temperature is 39.5�C. What should you do?",
-            options: ["Continue cooling until <38�C", "Stop cooling", "Continue cooling to 38.6-39.4�C", "Switch to passive cooling"],
-            correct: 2,
-            explanation: "Cool to 38.6�39.4�C to avoid overcooling; once achieved, stop active cooling."
+            "q": "Core 41°C, now 39.5°C after cooling. What next?",
+            "options": [
+                "Continue cooling to 38.6–39.4°C",
+                "Cool until below 37°C",
+                "Stop now",
+                "Give paracetamol"
+            ],
+            "correct": 0,
+            "explanation": "Target range not yet reached."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is heat stroke?", answer: "Life-threatening condition with core temperature >40�C and CNS dysfunction." },
-        { category: "Heat exhaustion", question: "What is heat exhaustion?", answer: "Milder form with elevated temperature, dehydration, but no CNS involvement." },
-        { category: "Cooling goal", question: "What is the target cooling rate for heat stroke?", answer: "0.15�C/min or more." },
-        { category: "Target temperature", question: "What core temperature should be achieved during cooling?", answer: "38.6�39.4�C to avoid overcooling." },
-        { category: "Active cooling methods", question: "What are effective active cooling methods?", answer: "Cold water immersion, ice packs to neck/axilla/groin, evaporative cooling (mist + fans)." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial IV fluid bolus for an adult with heat stroke?", answer: "500 mL normal saline or Ringer's lactate; repeat as needed up to 2000 mL." },
-        { category: "Fluid resuscitation � pediatric", question: "What is the initial IV fluid bolus for a child with hyperthermia?", answer: "10 mL/kg crystalloid; may repeat up to 40 mL/kg total." },
-        { category: "Antipyretics", question: "Are antipyretics effective for heat stroke?", answer: "No, because hyperthermia is not due to a reset hypothalamic set point." },
-        { category: "Seizure management", question: "How are seizures in heat stroke managed?", answer: "Protect airway, give benzodiazepines (midazolam or diazepam)." },
-        { category: "Risk factors", question: "What are risk factors for heat stroke?", answer: "Age extremes, exertion, obesity, dehydration, medications (anticholinergics, diuretics)." },
-        { category: "Exertional vs. non-exertional", question: "What is the difference between exertional and non-exertional heat stroke?", answer: "Exertional occurs during physical activity, often in young; non-exertional affects elderly and vulnerable during heat waves." },
-        { category: "Cool first, transport second", question: "What does 'cool first, transport second' mean?", answer: "Initiate aggressive cooling immediately, then transport; do not delay cooling for transport." },
-        { category: "KPI", question: "What is the key performance indicator for hyperthermia?", answer: "Assess and document body temperature." },
-        { category: "Pediatric considerations", question: "Why are children at higher risk for heat illness?", answer: "Higher metabolic rate, lower sweat rate, larger surface area to body mass." },
-        { category: "Elderly considerations", question: "Why are elderly at higher risk for heat stroke?", answer: "Impaired thermoregulation, chronic illness, medications, reduced thirst response." },
-        { category: "Rhabdomyolysis", question: "What complication can occur with heat stroke?", answer: "Rhabdomyolysis, acute kidney injury, disseminated intravascular coagulation." },
-        { category: "Electrolyte abnormalities", question: "What electrolyte abnormalities occur in heat stroke?", answer: "Hyponatremia (if drinking water without salt), hyperkalemia from muscle breakdown." },
-        { category: "Cooling and shivering", question: "What happens if a patient shivers during cooling?", answer: "Shivering increases heat production; may require sedation (benzodiazepines) to suppress." },
-        { category: "IV fluids vs oral", question: "When is IV fluids preferred over oral?", answer: "When patient cannot swallow, is vomiting, or has altered mental status." },
-        { category: "Transport decision", question: "Should all heat stroke patients be transported?", answer: "Yes, urgently; cooling should be continued en route." }
+    "flashcards": [
+        {
+            "question": "Heat stroke",
+            "answer": "CNS dysfunction, usually >40°C, hot dry skin, hypotension; life-threatening."
+        },
+        {
+            "question": "Heat exhaustion",
+            "answer": "Typically 37–40°C: headache, nausea, syncope, cramps, dehydration; no CNS involvement."
+        },
+        {
+            "question": "Cooling rate",
+            "answer": "0.15°C/min or more in heat stroke."
+        },
+        {
+            "question": "Cooling target",
+            "answer": "38.6–39.4°C, to avoid overcooling."
+        },
+        {
+            "question": "Strip, spray, fan, ice",
+            "answer": "Remove clothing; tepid water mist; fan in a cool ventilated area; cold packs to axilla, groin and posterior neck."
+        },
+        {
+            "question": "Adult IV fluid",
+            "answer": "500 mL NS or LR bolus, repeat as required (EMT)."
+        },
+        {
+            "question": "Pediatric IV fluid",
+            "answer": "10 mL/kg bolus, repeat as required, max 40 mL/kg (EMT)."
+        },
+        {
+            "question": "Antipyretics",
+            "answer": "Avoid: ineffective. Focus on external cooling."
+        },
+        {
+            "question": "Seizures or agitation",
+            "answer": "Benzodiazepines as per the Seizures CPG."
+        },
+        {
+            "question": "Higher-risk groups",
+            "answer": "Elderly, children, people with comorbidities; exertional heat stroke in athletes."
+        },
+        {
+            "question": "Exertional vs non-exertional",
+            "answer": "Exertional: from activity. Non-exertional: vulnerable people such as the elderly."
+        },
+        {
+            "question": "Cool first, transport second",
+            "answer": "Start aggressive cooling immediately and continue it en route."
+        },
+        {
+            "question": "KPI",
+            "answer": "Assess and document body temperature."
+        },
+        {
+            "question": "Gold-standard cooling",
+            "answer": "Cold water immersion, if available."
+        },
+        {
+            "question": "Oral fluids",
+            "answer": "Heat exhaustion: PO fluids with electrolytes if alert and able to swallow."
+        },
+        {
+            "question": "IV fluid indications",
+            "answer": "Heat exhaustion with dehydration or shock; heat stroke."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Hyperthermia or fever from an intrinsic cause such as sepsis."
+        },
+        {
+            "question": "Non-environmental causes",
+            "answer": "Infection, medications, drug toxicity, malignant hyperthermia."
+        },
+        {
+            "question": "ECG",
+            "answer": "Monitor for arrhythmias from electrolyte imbalance."
+        },
+        {
+            "question": "Progression",
+            "answer": "Heat exhaustion can deteriorate rapidly to heat stroke if untreated."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_8_10_1",
-            scenario: "A 25-year-old athlete collapses after a marathon. He is unresponsive, has hot, dry skin, and a core temperature of 41�C. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Start IV fluids", f: "Fluids are important, but cooling is the priority." },
-                { t: "Initiate cold water immersion or ice packs to axilla/groin", f: "Correct. Aggressive cooling is the priority." },
-                { t: "Administer paracetamol", f: "Ineffective." },
-                { t: "Transport immediately", f: "Cooling should start before transport." }
+            "id": "crit_8_10_1",
+            "scenario": "A runner collapses at the end of a marathon: unresponsive, hot dry skin, core 41°C.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Aggressive cooling now (cold water immersion if available, otherwise strip, spray, fan, ice), then transport",
+                    "f": "Correct: cool first, transport second."
+                },
+                {
+                    "t": "Paracetamol",
+                    "f": "Antipyretics are ineffective."
+                },
+                {
+                    "t": "Load and go without cooling",
+                    "f": "Cooling is the priority."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "He is unresponsive."
+                }
             ],
-            correct: 1,
-            explanation: "Cool first, transport second; rapid cooling is critical to reduce mortality.",
-            kpi: "Cooling initiated within 1 minute."
+            "correct": 0,
+            "explanation": "Heat stroke: aim for 0.15°C/min or more.",
+            "kpi": "Body temperature assessed and documented."
         },
         {
-            id: "crit_8_10_2",
-            scenario: "A 70-year-old male is found in a non-air-conditioned home during a heat wave. He is confused, with a core temperature of 40.5�C, BP 90/60, HR 120. What is the priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Give 500 mL normal saline IV", f: "Fluids are needed, but cooling is the priority." },
-                { t: "Remove clothing and apply ice packs to axilla and groin", f: "Correct. Start cooling immediately." },
-                { t: "Administer paracetamol", f: "Ineffective." },
-                { t: "Transport only", f: "Cooling should begin on scene." }
+            "id": "crit_8_10_2",
+            "scenario": "An elderly man is found in a flat without air conditioning in a heat wave: confused, core 40.5°C, BP 90/60, HR 120.",
+            "ecg": "stach",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Strip, spray, fan, ice; IV crystalloid 500 mL bolus; consider ALS; continuous cooling en route",
+                    "f": "Correct: non-exertional heat stroke."
+                },
+                {
+                    "t": "Blankets",
+                    "f": "He needs cooling."
+                },
+                {
+                    "t": "Paracetamol",
+                    "f": "Ineffective."
+                },
+                {
+                    "t": "PO fluids only",
+                    "f": "He is confused and hypotensive."
+                }
             ],
-            correct: 1,
-            explanation: "Active cooling is the priority; fluids can be given concurrently.",
-            kpi: "Cooling initiated."
+            "correct": 0,
+            "explanation": "CNS dysfunction and hypotension: heat stroke.",
+            "kpi": "Body temperature assessed and documented."
         },
         {
-            id: "crit_8_10_3",
-            scenario: "A patient with heat stroke has a seizure lasting 2 minutes. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Administer diazepam 5 mg IV", f: "Correct if seizure is prolonged; continue cooling." },
-                { t: "Continue cooling and protect airway", f: "Also correct; both actions should be done simultaneously." },
-                { t: "Give oral glucose", f: "Not indicated." },
-                { t: "Stop cooling", f: "No; cooling must continue." }
+            "id": "crit_8_10_3",
+            "scenario": "During cooling, a heat stroke patient has a generalised seizure.",
+            "question": "What is the management?",
+            "options": [
+                {
+                    "t": "Protect the airway, benzodiazepines per the Seizures CPG, continue cooling",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop cooling",
+                    "f": "Cooling continues."
+                },
+                {
+                    "t": "Paracetamol",
+                    "f": "Ineffective."
+                },
+                {
+                    "t": "Restrain only",
+                    "f": "Treat with benzodiazepines."
+                }
             ],
-            correct: 1,
-            explanation: "Seizure management includes airway protection and benzodiazepines if prolonged; cooling must continue.",
-            kpi: "Airway protected and cooling ongoing."
+            "correct": 0,
+            "explanation": "Manage seizures or agitation with benzodiazepines.",
+            "kpi": "Body temperature assessed and documented."
         },
         {
-            id: "crit_8_10_4",
-            scenario: "A 45-year-old with heat exhaustion is alert and oriented but has a BP of 85/50 after 1 L normal saline. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Give another 500 mL fluid bolus", f: "Correct. Continue fluid resuscitation up to 2000 mL." },
-                { t: "Start dopamine", f: "Not first-line; fluids first." },
-                { t: "Administer adrenaline", f: "Not indicated." },
-                { t: "Transport without further fluids", f: "Hypotension persists; more fluids are needed." }
+            "id": "crit_8_10_4",
+            "scenario": "A labourer with heat exhaustion is alert but still hypotensive after a 500 mL crystalloid bolus.",
+            "question": "Next step?",
+            "options": [
+                {
+                    "t": "Repeat the 500 mL bolus and reassess, with continued cooling",
+                    "f": "Correct: repeat as required."
+                },
+                {
+                    "t": "Vasopressors",
+                    "f": "Not in this CPG."
+                },
+                {
+                    "t": "Stop fluids",
+                    "f": "Boluses repeat as required."
+                },
+                {
+                    "t": "Paracetamol",
+                    "f": "Ineffective."
+                }
             ],
-            correct: 0,
-            explanation: "Continue fluid resuscitation; hypotension may be due to volume depletion.",
-            kpi: "IV fluids continued."
+            "correct": 0,
+            "explanation": "Adult 500 mL boluses, repeated as required.",
+            "kpi": "Body temperature assessed and documented."
         },
         {
-            id: "crit_8_10_5",
-            scenario: "A 30-year-old male with heat stroke has been cooled to 38.8�C and is now shivering. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Stop cooling", f: "Correct. Target reached; stop active cooling to prevent afterdrop." },
-                { t: "Continue cooling until shivering stops", f: "No; shivering will increase heat production." },
-                { t: "Give benzodiazepine to stop shivering", f: "May be considered, but cooling is complete." },
-                { t: "Increase cooling", f: "Contraindicated." }
+            "id": "crit_8_10_5",
+            "scenario": "A heat stroke patient has been cooled to 38.8°C.",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Stop active cooling: target 38.6–39.4°C reached; keep monitoring",
+                    "f": "Correct: avoid overcooling."
+                },
+                {
+                    "t": "Continue cooling to below 37°C",
+                    "f": "Risk of overcooling."
+                },
+                {
+                    "t": "Restart with cold water immersion",
+                    "f": "Target reached."
+                },
+                {
+                    "t": "Give paracetamol",
+                    "f": "Ineffective."
+                }
             ],
-            correct: 0,
-            explanation: "Once target temperature (38.6�39.4�C) is reached, stop active cooling to avoid overcooling and shivering.",
-            kpi: "Cooling discontinued appropriately."
+            "correct": 0,
+            "explanation": "Stop at 38.6–39.4°C to avoid overcooling.",
+            "kpi": "Body temperature assessed and documented."
         }
     ]
 };
