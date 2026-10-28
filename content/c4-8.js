@@ -1,391 +1,841 @@
-/* ========== Chapter 4.8 – Starting, Stopping and Transferring CPR ========== */
+/* ========== CPG 4.8 – Starting, Stopping and Transferring CPR ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c4-8",
-    title: "Starting, Stopping and Transferring CPR",
-    shortTitle: "4.8 Starting/Stopping CPR",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#play"/></svg>️ Starting, Stopping and Transferring CPR</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Promptly initiate high‑quality CPR for patients in cardiac arrest.</li>
-                <li>Make informed decisions about stopping or transferring CPR based on clinical criteria and futility to avoid unnecessary prolongation of resuscitation.</li>
-                <li>Maintain effective CPR during transfer.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with cardiac arrest, including unresponsiveness with no signs of life (no pulse, no breathing, or agonal gasps).</li>
-                <li>Patients requiring decisions about initiating, continuing, or terminating CPR.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Cardiac arrest confirmation:</strong> Verify unresponsiveness (AVPU: U), absent pulse (carotid/femoral) for 5‑10 seconds, absent normal breathing or only agonal gasps.</li>
-                <li><strong>Bystander CPR:</strong> Note presence/absence and quality of bystander CPR.</li>
-                <li><strong>Cardiac rhythm:</strong> Apply monitor to identify rhythm (VF/VT/PEA/asystole).</li>
-                <li><strong>Time patient last seen alive:</strong> Note time of arrest onset or when patient was last seen alive.</li>
-                <li><strong>Signs of irreversible death:</strong> Assess for decomposition, rigor mortis, dependent lividity (hypostasis), incineration, decapitation, injuries totally incompatible with life.</li>
-                <li><strong>Futile resuscitation in trauma assessment:</strong> In unwitnessed traumatic cardiac arrest, assess for: blunt or penetrating trauma, no spontaneous movement, no pupillary response, apnoeic and pulseless, ECG shows no organized rhythm – if ALL present, CPR not indicated.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Starting CPR:</strong>
-                    <ul>
-                        <li>CPR does not need to be started if any sign of irreversible death is present.</li>
-                        <li>In unwitnessed traumatic arrest, if ALL futility criteria met, do not start CPR.</li>
-                        <li>CPR should be started on all other patients.</li>
-                        <li>Once started, CPR should generally be continued for at least 20 minutes.</li>
-                    </ul>
-                </li>
-                <li><strong>Transferring CPR:</strong>
-                    <ul>
-                        <li>Mandatory transfer with ongoing CPR for: age <18 years, drowning, hypothermia, pregnancy, clearly identified reversible cause that cannot be corrected prehospitally.</li>
-                        <li>Initial resuscitation efforts (airway, BVM, IV access, medications) should be performed prior to transport when feasible.</li>
-                        <li>Transport should be prioritised if hospital arrival will provide clear benefit (e.g., haemorrhage control).</li>
-                        <li>If family requests transfer, it is appropriate to transport.</li>
-                    </ul>
-                </li>
-                <li><strong>Stopping CPR:</strong>
-                    <ul>
-                        <li>Only Paramedic, Advanced Paramedic, or Emergency Physician may stop resuscitation efforts. EMTs cannot stop CPR – must transfer or wait for ALS.</li>
-                        <li><strong>Stopping CPR in non‑trauma patient:</strong> May stop if ALL of the following are met:
-                            <ul>
-                                <li>Patient not in mandatory transfer criteria (age <18, drowning, hypothermia, pregnancy, reversible cause).</li>
-                                <li>No pulse, no respirations.</li>
-                                <li>Appropriate ALS interventions administered.</li>
-                                <li>No ROSC after 20 minutes of resuscitation.</li>
-                                <li>Rhythm asystole.</li>
-                                <li>EtCO₂ <20 mmHg.</li>
-                                <li>No heart sounds, no palpable pulse, no neurological function (non‑reactive pupils, no response to pain, no movement).</li>
-                                <li>All clinicians agree.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Stopping CPR in trauma patient:</strong> Under normal circumstances, transfer with ongoing CPR is preferred; may stop only in exceptional circumstances (e.g., difficult extrication) if same criteria as above are met.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>If any doubt about starting CPR, start CPR.</li>
-                <li>Transport should be prioritised when fast arrival at hospital provides clear benefit (e.g., exsanguination).</li>
-                <li>ALS back‑up should be routinely requested for all patients undergoing CPR.</li>
-                <li>If transferring under CPR, effective resuscitation must be maintained during extrication and transport (chest compressions, airway, ventilation, medications).</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>In most cases, appropriate initial resuscitation should be performed on‑scene before starting transfer (airway management, BVM, chest compressions, defibrillation, IV access, medications, reversal of identified causes).</li>
-                <li>If it is difficult to perform some procedures (e.g., IV access) prior to transfer, a clinical decision must balance time taken vs. ability to perform en route.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism/medical complaint, injuries/information, signs (rhythm, EtCO₂, response to CPR, ROSC signs).</li>
-                <li>Treatment: time CPR started/stopped, defibrillation, medications, ventilation method, airway management, transfer decision rationale.</li>
-                <li>Allergies, medications, background, other (scene conditions, staff involved, consensus notes for stopping CPR).</li>
-                <li>Ensure accurate time‑stamping of key actions.</li>
-                <li>If CPR stopped, include signs of irreversible death or futility criteria met.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Ensure all relevant information surrounding the decision to start/stop or transfer CPR is captured in the patient care report.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c4-8",
+    "title": "Starting, Stopping and Transferring CPR",
+    "shortTitle": "4.8 Starting/Stopping CPR",
+    "guide": {
+        "cpg": "4.8",
+        "group": "resus",
+        "groupLabel": "Resuscitation",
+        "title": "Starting, Stopping and Transferring CPR",
+        "lead": "If in doubt, start CPR. Once started, continue for at least 20 minutes. Five groups must always be transferred with CPR running. Only a Paramedic or higher may stop, and only when every termination criterion is met and the team agrees.",
+        "source": {
+            "label": "CPG 4.8",
+            "pages": "125–131",
+            "pdf": "../pdf_sections/4_8_Starting_Stopping_and_Transferring_CPR.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Cardiac arrest: unresponsive with no signs of life (no pulse, no breathing or agonal gasps), or suspected PEA, VF, VT or asystole.",
+                    "Any decision to start, continue or stop CPR."
+                ],
+                "exclude": [
+                    "None noted."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "items": [
+                    "Unresponsive (AVPU: U); no carotid or femoral pulse for 5–10 seconds; no normal breathing or agonal gasps only.",
+                    "Monitor the rhythm: VF, VT, PEA or asystole.",
+                    "Bystander CPR: present or not, and its quality.",
+                    "Time of arrest, or when last seen alive."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Starting CPR",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Signs of irreversible death",
+                        "level": "EMT",
+                        "text": "Any one present: CPR not required. If unsure whether a sign is present, start CPR.",
+                        "items": [
+                            "Decomposition; obvious rigor mortis; obvious pooling (hypostasis).",
+                            "Incineration; decapitation; injuries totally incompatible with life."
+                        ]
+                    },
+                    {
+                        "title": "Medical cause",
+                        "text": "Start CPR."
+                    },
+                    {
+                        "title": "Trauma, witnessed by EMS",
+                        "text": "Start CPR."
+                    },
+                    {
+                        "title": "Trauma, unwitnessed by EMS",
+                        "level": "EMT",
+                        "text": "CPR not required only if <b>all</b> are present: blunt or penetrating trauma; no spontaneous movement; no pupillary response; apneic and pulseless; ECG with no organized rhythm. Otherwise start CPR."
+                    },
+                    {
+                        "title": "Once started",
+                        "text": "Continue for at least 20 minutes. Request ALS back-up routinely for every patient receiving CPR."
+                    }
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Transferring CPR to hospital",
+                "icon": "ambulance",
+                "question": "Mandatory transfer criteria: is any present?",
+                "items": [
+                    "Age &lt;18 years.",
+                    "Drowning.",
+                    "Hypothermia.",
+                    "Pregnancy.",
+                    "A clearly identified reversible cause that cannot be corrected prehospital."
+                ],
+                "no": "Continue CPR for at least 20 minutes; then transfer, or a Paramedic may consider stopping.",
+                "yes": "Transfer to hospital with CPR running, after initial resuscitation on scene."
+            },
+            {
+                "type": "groups",
+                "title": "Before and during transfer",
+                "icon": "list",
+                "groups": [
+                    {
+                        "title": "On scene first",
+                        "items": [
+                            "Airway, BVM ventilation, compressions, defibrillation if needed, IV/IO and drugs, reversal of identified causes.",
+                            "If a procedure (e.g. IV access) is difficult, the crew balances its time against its benefit."
+                        ]
+                    },
+                    {
+                        "title": "Go early",
+                        "items": [
+                            "When fast arrival will clearly help, e.g. arrest from blood loss.",
+                            "Trauma arrest with CPR started: transfer and keep scene time short."
+                        ]
+                    },
+                    {
+                        "title": "During transfer",
+                        "items": [
+                            "Keep resuscitation effective through extrication and transport: compressions, airway, ventilation, drugs.",
+                            "If the family asks for transfer to hospital, transfer is appropriate."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Who may stop CPR",
+                "icon": "ban",
+                "groups": [
+                    {
+                        "title": "Paramedic, Advanced Paramedic or Emergency Physician",
+                        "items": [
+                            "Once CPR has started, only these clinicians may stop it."
+                        ]
+                    },
+                    {
+                        "title": "EMT",
+                        "items": [
+                            "Cannot stop resuscitation: transfer, or wait for ALS.",
+                            "If ALS is far away and more hands are needed for effective CPR during extrication and transfer, request another BLS ambulance."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Stopping CPR (P and above)",
+                "icon": "clipboard-list",
+                "steps": [
+                    {
+                        "title": "Medical arrest",
+                        "level": "P",
+                        "text": "May stop when <b>every</b> criterion below is met."
+                    },
+                    {
+                        "title": "Trauma arrest",
+                        "level": "P",
+                        "text": "Normally transfer. Only in uncommon circumstances (e.g. difficult extrication) may a Paramedic stop, using the same criteria."
+                    },
+                    {
+                        "title": "Termination criteria",
+                        "items": [
+                            "Not in a mandatory transfer group.",
+                            "No pulse (carotid or femoral), no respirations, no heart sounds.",
+                            "Appropriate ALS interventions given for the rhythm.",
+                            "No ROSC after 20 minutes of resuscitation.",
+                            "Rhythm is asystole, and EtCO<sub>2</sub> is less than 20 mmHg.",
+                            "No neurological function: non-reactive pupils, no response to pain, no spontaneous movement.",
+                            "All clinicians involved agree."
+                        ]
+                    },
+                    {
+                        "title": "Not terminated",
+                        "text": "Transfer to hospital."
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Only asystole meets the rhythm criterion",
+                        "items": [
+                            {
+                                "ecg": "asystole",
+                                "label": "Asystole",
+                                "sub": "Can meet the termination criteria"
+                            },
+                            {
+                                "ecg": "pea",
+                                "label": "PEA",
+                                "sub": "Organized rhythm: does not meet them"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Documentation",
+                "icon": "notebook-pen",
+                "items": [
+                    "Arrest type, cause if known, witnessed or not, bystander CPR, last seen alive.",
+                    "Initial rhythm, EtCO<sub>2</sub> values, response to treatment, ROSC signs.",
+                    "Time-stamped CPR start and stop, shocks, drugs, rhythm changes; airway and ventilation; mechanical CPR.",
+                    "Rationale for transferring or stopping, the consensus to stop, and the irreversible-death signs or futility criteria met."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "All information behind the decision to start, stop or transfer CPR is in the patient care report."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "4.3 Adult Cardiac Arrest",
+                        "href": "c4-3.html"
+                    },
+                    {
+                        "label": "4.5 Cardiac Arrest in Trauma",
+                        "href": "c4-5.html"
+                    },
+                    {
+                        "label": "4.9 Verification of Death",
+                        "href": "c4-9.html"
+                    },
+                    {
+                        "label": "8.7 Drowning",
+                        "href": "c8-7.html"
+                    },
+                    {
+                        "label": "8.9 Hypothermia",
+                        "href": "c8-9.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "Which of the following is a sign of irreversible death and a contraindication to starting CPR?",
-            options: ["Hypothermia", "Rigor mortis", "Agonal gasps", "Pulseless electrical activity"],
-            correct: 1,
-            explanation: "Rigor mortis, decomposition, dependent lividity, incineration, decapitation are signs of irreversible death; CPR should not be started."
+            "q": "Which finding means CPR is not required?",
+            "options": [
+                "Obvious rigor mortis",
+                "Hypothermia",
+                "Agonal gasps",
+                "PEA"
+            ],
+            "correct": 0,
+            "explanation": "Any one sign of irreversible death: decomposition, obvious rigor mortis, obvious pooling, incineration, decapitation or injuries totally incompatible with life."
         },
         {
-            q: "In an unwitnessed traumatic cardiac arrest, all the following must be present to withhold CPR except:",
-            options: ["Blunt or penetrating trauma", "No spontaneous movement", "Reactive pupils", "ECG shows no organized rhythm"],
-            correct: 2,
-            explanation: "Criteria for withholding CPR in unwitnessed traumatic arrest include: blunt/penetrating trauma, no movement, no pupillary response, apnoeic and pulseless, ECG no organized rhythm. Reactive pupils would indicate possible neurological function."
+            "q": "In an unwitnessed trauma arrest, which finding means you must start CPR?",
+            "options": [
+                "Reactive pupils",
+                "Blunt trauma",
+                "No spontaneous movement",
+                "No organized rhythm"
+            ],
+            "correct": 0,
+            "explanation": "All five futility criteria must be met to withhold CPR."
         },
         {
-            q: "Once CPR is started, how long should it generally be continued before considering termination?",
-            options: ["5 minutes", "10 minutes", "20 minutes", "30 minutes"],
-            correct: 2,
-            explanation: "CPR should generally be continued for at least 20 minutes before considering termination, unless signs of irreversible death or futility criteria are met earlier."
+            "q": "Once started, how long should CPR generally continue?",
+            "options": [
+                "At least 20 minutes",
+                "5 minutes",
+                "Until the first rhythm check",
+                "As long as the family wants"
+            ],
+            "correct": 0,
+            "explanation": "CPR should generally continue for at least 20 minutes."
         },
         {
-            q: "Which of the following patients must be transported to hospital with ongoing CPR?",
-            options: ["Age 65 with asystole", "Drowning victim", "Witnessed arrest with VF", "Trauma arrest with exsanguination"],
-            correct: 1,
-            explanation: "Mandatory transfer criteria include age <18, drowning, hypothermia, pregnancy, and clearly identified reversible cause that cannot be corrected prehospitally."
+            "q": "Which patient must be transferred with ongoing CPR?",
+            "options": [
+                "A drowning victim",
+                "A 65-year-old in asystole",
+                "A witnessed VF arrest",
+                "Any patient over 80"
+            ],
+            "correct": 0,
+            "explanation": "Mandatory: <18 years, drowning, hypothermia, pregnancy, or an uncorrectable reversible cause."
         },
         {
-            q: "Who is authorised to stop resuscitation efforts in the prehospital setting?",
-            options: ["EMT", "Paramedic", "Any trained rescuer", "Police officer"],
-            correct: 1,
-            explanation: "Only a Paramedic, Advanced Paramedic, or Emergency Physician may stop resuscitation efforts. EMTs cannot stop CPR."
+            "q": "Who may stop resuscitation once started?",
+            "options": [
+                "Paramedic, Advanced Paramedic or Emergency Physician",
+                "EMT",
+                "Any trained rescuer",
+                "Police"
+            ],
+            "correct": 0,
+            "explanation": "EMTs cannot stop resuscitation."
         },
         {
-            q: "What is the minimum EtCO₂ value required as part of the criteria to stop CPR in a non‑trauma patient?",
-            options: ["<10 mmHg", "<20 mmHg", "<30 mmHg", "<40 mmHg"],
-            correct: 1,
-            explanation: "EtCO₂ <20 mmHg is one of the criteria that must be met to consider stopping CPR."
+            "q": "What EtCO₂ is part of the termination criteria?",
+            "options": [
+                "Less than 20 mmHg",
+                "Less than 40 mmHg",
+                "More than 20 mmHg",
+                "Not used"
+            ],
+            "correct": 0,
+            "explanation": "EtCO₂ less than 20 mmHg, with asystole and the other criteria."
         },
         {
-            q: "In a non‑trauma patient, after how many minutes of resuscitation without ROSC may stopping CPR be considered?",
-            options: ["10 minutes", "20 minutes", "30 minutes", "40 minutes"],
-            correct: 1,
-            explanation: "No ROSC after 20 minutes of resuscitation is one of the criteria for considering termination."
+            "q": "After how long without ROSC may a Paramedic consider stopping?",
+            "options": [
+                "20 minutes",
+                "5 minutes",
+                "60 minutes",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "No ROSC after 20 minutes of resuscitation, with all other criteria met."
         },
         {
-            q: "Which rhythm must be present to consider stopping CPR in a non‑trauma patient?",
-            options: ["PEA", "VF", "Asystole", "VT"],
-            correct: 2,
-            explanation: "Asystole is the required rhythm as part of the termination criteria."
+            "q": "Which rhythm is required to stop CPR?",
+            "options": [
+                "Asystole",
+                "PEA",
+                "VF",
+                "VT"
+            ],
+            "correct": 0,
+            "explanation": "The rhythm must be asystole."
         },
         {
-            q: "A patient is in cardiac arrest and meets all criteria for stopping CPR except that the family requests continued resuscitation. What should you do?",
-            options: ["Stop CPR as per criteria", "Continue CPR and transport", "Consult Tele‑EMS", "Wait for police"],
-            correct: 1,
-            explanation: "If family requests transport, it is appropriate to transfer the patient to hospital with ongoing CPR."
+            "q": "Termination criteria are met but the family asks for transfer. What do you do?",
+            "options": [
+                "Transfer to hospital",
+                "Stop CPR anyway",
+                "Leave the scene",
+                "Ask the police to decide"
+            ],
+            "correct": 0,
+            "explanation": "If the family requests transfer, it is appropriate to transfer."
         },
         {
-            q: "Which of the following is NOT a mandatory transfer criterion for ongoing CPR?",
-            options: ["Age <18", "Hypothermia", "Pregnancy", "Age >80"],
-            correct: 3,
-            explanation: "Mandatory transfer criteria: age <18, drowning, hypothermia, pregnancy, and clearly identified reversible cause not correctable prehospitally."
+            "q": "Which is NOT a mandatory transfer criterion?",
+            "options": [
+                "Advanced age",
+                "Age under 18",
+                "Hypothermia",
+                "Pregnancy"
+            ],
+            "correct": 0,
+            "explanation": "Age is a criterion only below 18."
         },
         {
-            q: "In a trauma patient with difficult extrication, who may stop resuscitation efforts?",
-            options: ["EMT", "Paramedic only", "Any crew member", "Police"],
-            correct: 1,
-            explanation: "Only a Paramedic or higher may stop resuscitation, even in trauma, but only in exceptional circumstances and if all criteria are met."
+            "q": "Difficult extrication of a trauma arrest. Who may stop resuscitation?",
+            "options": [
+                "A Paramedic or higher, using the medical criteria",
+                "An EMT",
+                "Any crew member",
+                "Nobody: always transfer"
+            ],
+            "correct": 0,
+            "explanation": "In uncommon circumstances a Paramedic may stop, using the same criteria."
         },
         {
-            q: "What is the role of bystander CPR documentation?",
-            options: ["Not important", "It affects termination criteria", "It is required for transport decisions", "It helps determine quality of CPR"],
-            correct: 3,
-            explanation: "Documenting bystander CPR and its quality is important for clinical decision‑making and handover."
+            "q": "Why document bystander CPR?",
+            "options": [
+                "Its presence and quality are part of the assessment",
+                "It is optional",
+                "It decides the hospital",
+                "It replaces the rhythm"
+            ],
+            "correct": 0,
+            "explanation": "Note the presence or absence of bystander CPR, and its quality."
         },
         {
-            q: "A patient in cardiac arrest has no pulse, apnoeic, asystole on ECG, and EtCO₂ 15 mmHg after 20 minutes of ALS. The patient is 25 years old with no reversible cause. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport", "Give another dose of adrenaline", "Perform bilateral needle decompression"],
-            correct: 0,
-            explanation: "If all criteria are met (including age not <18, no reversible cause, asystole, EtCO₂ <20, no ROSC after 20 min, and no neurological signs), stopping CPR is appropriate."
+            "q": "25-year-old, medical arrest, no reversible cause: asystole, EtCO₂ 15 mmHg, no heart sounds, no neurological function after 20 minutes of full ALS; the team agrees.",
+            "options": [
+                "A Paramedic may stop resuscitation",
+                "Must transfer: under 30",
+                "Give more adrenaline indefinitely",
+                "An EMT may stop"
+            ],
+            "correct": 0,
+            "explanation": "All termination criteria are met and the patient is not in a mandatory transfer group."
         },
         {
-            q: "A 3‑year‑old child is in cardiac arrest. After 25 minutes of resuscitation, there is no ROSC. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport", "Give amiodarone", "Terminate resuscitation"],
-            correct: 1,
-            explanation: "Age <18 is a mandatory transfer criterion; the child must be transported with ongoing CPR."
+            "q": "A 3-year-old has no ROSC after 25 minutes. What do you do?",
+            "options": [
+                "Continue CPR and transfer",
+                "Stop CPR",
+                "Leave the child at home",
+                "Wait for police"
+            ],
+            "correct": 0,
+            "explanation": "Age <18 is a mandatory transfer criterion."
         },
         {
-            q: "What is the recommended action if ALS back‑up is significantly delayed?",
-            options: ["Stop CPR", "Request another BLS unit for assistance", "Transport with ongoing CPR", "Wait for ALS"],
-            correct: 2,
-            explanation: "If ALS is delayed, consider transport to hospital with ongoing CPR, especially if hospital is closer."
+            "q": "You are an EMT crew and ALS is far away. What are your options?",
+            "options": [
+                "Transfer with CPR or wait for ALS; request another BLS ambulance if more staff are needed",
+                "Stop CPR after 20 minutes",
+                "Leave CPR to bystanders",
+                "Stop if EtCO₂ is low"
+            ],
+            "correct": 0,
+            "explanation": "EMTs cannot stop resuscitation."
         },
         {
-            q: "Which of the following neurological signs is part of the criteria to stop CPR?",
-            options: ["Pupils reactive to light", "Spontaneous movement", "Withdrawal to pain", "No response to pain"],
-            correct: 3,
-            explanation: "No evidence of neurological function (non‑reactive pupils, no response to pain, no spontaneous movement) is required."
+            "q": "Which neurological finding is a termination criterion?",
+            "options": [
+                "No response to pain",
+                "Reactive pupils",
+                "Spontaneous movement",
+                "Withdrawal to pain"
+            ],
+            "correct": 0,
+            "explanation": "No neurological function: non-reactive pupils, no response to pain, no spontaneous movement."
         },
         {
-            q: "A patient with hypothermic cardiac arrest has been resuscitated for 30 minutes without ROSC. Core temperature is 28°C. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport", "Give another dose of adrenaline", "Double defibrillation energy"],
-            correct: 1,
-            explanation: "Hypothermia is a mandatory transfer criterion; continue CPR and transport."
+            "q": "A hypothermic patient in arrest: no ROSC after 30 minutes. What do you do?",
+            "options": [
+                "Continue CPR and transfer",
+                "Stop CPR",
+                "Stop if asystole",
+                "Wait for rewarming on scene"
+            ],
+            "correct": 0,
+            "explanation": "Hypothermia is a mandatory transfer criterion."
         },
         {
-            q: "What is the maximum on‑scene time goal for a trauma patient in cardiac arrest?",
-            options: ["<5 minutes", "<10 minutes", "<15 minutes", "<20 minutes"],
-            correct: 1,
-            explanation: "Scene time should be minimized; goal <10 minutes for red priority patients."
+            "q": "A trauma arrest with CPR started. What is the usual plan?",
+            "options": [
+                "Transfer to hospital with minimal scene time",
+                "Twenty minutes on scene, then stop",
+                "Wait for ALS on scene",
+                "Stop CPR after 5 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Under normal circumstances transfer, keeping scene time short."
         },
         {
-            q: "A patient achieves ROSC during transport. What is the next priority?",
-            options: ["Stop transport", "Continue to hospital with post‑resuscitation care", "Return to scene", "Wait for ALS"],
-            correct: 1,
-            explanation: "Continue transport to hospital and provide post‑ROSC care en route."
+            "q": "ROSC occurs during transfer. What next?",
+            "options": [
+                "Continue to hospital with post-arrest care",
+                "Return to scene",
+                "Stop and wait for ALS",
+                "Stop monitoring"
+            ],
+            "correct": 0,
+            "explanation": "Continue with post-cardiac arrest care (Post Cardiac Arrest Care CPG)."
         },
         {
-            q: "Which of the following is a requirement for stopping CPR in a non‑trauma patient?",
-            options: ["All clinicians agree", "Patient age >80", "Family consent", "Pupils fixed and dilated"],
-            correct: 0,
-            explanation: "All clinicians involved in the patient's care must agree that stopping resuscitation is appropriate."
+            "q": "Which is a requirement for stopping CPR?",
+            "options": [
+                "All clinicians involved agree",
+                "Family consent in writing",
+                "Patient age over 80",
+                "Police present"
+            ],
+            "correct": 0,
+            "explanation": "All clinicians must agree that stopping is appropriate."
         },
         {
-            q: "In a witnessed traumatic cardiac arrest, what is the priority?",
-            options: ["Stop CPR", "Start CPR immediately", "Wait for ALS", "Apply pelvic binder first"],
-            correct: 1,
-            explanation: "Witnessed arrest by EMS requires immediate initiation of CPR."
+            "q": "An EMS-witnessed trauma arrest. What do you do?",
+            "options": [
+                "Start CPR",
+                "Assess futility criteria first",
+                "Withhold CPR",
+                "Wait for ALS"
+            ],
+            "correct": 0,
+            "explanation": "Witnessed by EMS: start CPR."
         },
         {
-            q: "What should be documented when CPR is stopped?",
-            options: ["Time of death", "Signs of irreversible death or futility criteria met", "Names of all clinicians", "All of the above"],
-            correct: 3,
-            explanation: "All relevant information, including time, criteria met, and staff involved, should be documented."
+            "q": "What must be documented if CPR is stopped?",
+            "options": [
+                "Rationale, consensus, times, and the signs or criteria met",
+                "Only the time",
+                "Only the rhythm",
+                "Nothing extra"
+            ],
+            "correct": 0,
+            "explanation": "Include the irreversible-death signs or all futility criteria met."
         },
         {
-            q: "A patient with a clearly identified reversible cause of arrest (e.g., opioid overdose) has received naloxone and there is no ROSC after 20 minutes. Should CPR be stopped?",
-            options: ["Yes", "No, continue and transport"],
-            correct: 1,
-            explanation: "Reversible cause that cannot be corrected prehospitally? Opioid overdose may respond to naloxone, but if no response, transport is still indicated as it may be a mandatory criterion? Actually, if the cause is reversible but not corrected, it's a mandatory transfer criterion. So continue CPR and transport."
+            "q": "Arrest from massive blood loss: what does the CPG advise?",
+            "options": [
+                "Prioritise fast transport to hospital",
+                "Twenty minutes on scene first",
+                "Stop CPR at once",
+                "Wait for ALS on scene"
+            ],
+            "correct": 0,
+            "explanation": "Prioritise transport when fast arrival clearly benefits the patient."
         },
         {
-            q: "Who can stop CPR in a trauma patient with difficult extrication?",
-            options: ["EMT", "Paramedic", "Police", "Any crew member"],
-            correct: 1,
-            explanation: "Only a Paramedic or higher may stop resuscitation, even in trauma, and only under exceptional circumstances."
+            "q": "Is an EMT ever allowed to stop CPR?",
+            "options": [
+                "No",
+                "Yes, after 20 minutes",
+                "Yes, in asystole",
+                "Yes, with family consent"
+            ],
+            "correct": 0,
+            "explanation": "EMTs must transfer or wait for ALS."
         },
         {
-            q: "What is the role of EtCO₂ monitoring in termination of resuscitation decisions?",
-            options: ["It is not used", "EtCO₂ <20 mmHg supports termination", "EtCO₂ >40 mmHg supports termination", "EtCO₂ is only for ROSC"],
-            correct: 1,
-            explanation: "EtCO₂ <20 mmHg after 20 minutes of resuscitation is one of the criteria supporting termination."
+            "q": "What is EtCO₂'s role in stopping CPR?",
+            "options": [
+                "EtCO₂ below 20 mmHg is one of the criteria",
+                "It is not used",
+                "EtCO₂ above 40 mmHg supports stopping",
+                "It replaces the 20-minute rule"
+            ],
+            "correct": 0,
+            "explanation": "It is one criterion among all the others."
         },
         {
-            q: "A 20‑year‑old drowning victim is in cardiac arrest. After 25 minutes of ALS, no ROSC. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport"],
-            correct: 1,
-            explanation: "Drowning is a mandatory transfer criterion; continue CPR and transport."
+            "q": "A 20-year-old drowning victim: no ROSC after 25 minutes of ALS. What do you do?",
+            "options": [
+                "Continue CPR and transfer",
+                "Stop CPR",
+                "Stop if asystole",
+                "Ask the family"
+            ],
+            "correct": 0,
+            "explanation": "Drowning (and age under 18) are mandatory transfer criteria; drowning applies here."
         },
         {
-            q: "What is the recommended action if a patient's family requests transport even though termination criteria are met?",
-            options: ["Stop CPR as per criteria", "Continue CPR and transport", "Explain futility and stop", "Wait for police"],
-            correct: 1,
-            explanation: "If family requests transport, it is appropriate to transfer the patient to hospital with ongoing CPR."
+            "q": "You are unsure whether a sign of irreversible death is present. What do you do?",
+            "options": [
+                "Start CPR",
+                "Do not start CPR",
+                "Wait for police",
+                "Call the family doctor"
+            ],
+            "correct": 0,
+            "explanation": "If in doubt, start CPR."
         },
         {
-            q: "Which of the following is NOT required to stop CPR in a non‑trauma patient?",
-            options: ["No ROSC after 20 minutes", "Asystole", "EtCO₂ <20 mmHg", "Patient age >80"],
-            correct: 3,
-            explanation: "Age >80 is not a criterion; age <18 is a mandatory transfer criterion, but older age alone does not justify termination."
+            "q": "Which is NOT a termination criterion?",
+            "options": [
+                "Advanced age",
+                "No ROSC after 20 minutes",
+                "Asystole",
+                "EtCO₂ less than 20 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Age is not a criterion."
         },
         {
-            q: "In a patient with PEA, after 20 minutes of ALS, there is no ROSC and EtCO₂ is 15 mmHg. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport", "Give atropine", "Change to VF protocol"],
-            correct: 1,
-            explanation: "Termination criteria require asystole, not PEA. So continue CPR and transport."
+            "q": "PEA persists after 20 minutes of ALS with EtCO₂ 15 mmHg. Can a Paramedic stop?",
+            "options": [
+                "No: the rhythm must be asystole",
+                "Yes",
+                "Yes, if the family agrees",
+                "Only an EMT can decide"
+            ],
+            "correct": 0,
+            "explanation": "Asystole is required; otherwise transfer."
         },
         {
-            q: "A patient is in cardiac arrest and you are the only EMT on scene. ALS is 20 minutes away. What should you do?",
-            options: ["Stop CPR", "Continue CPR and transport", "Wait for ALS", "Request police assistance"],
-            correct: 1,
-            explanation: "EMTs cannot stop CPR; if ALS is delayed, consider transport with ongoing CPR."
+            "q": "Which sign of irreversible death appears in this CPG but not in the trauma CPG?",
+            "options": [
+                "Obvious pooling (hypostasis)",
+                "Decapitation",
+                "Incineration",
+                "Rigor mortis"
+            ],
+            "correct": 0,
+            "explanation": "4.8 adds obvious pooling (hypostasis) and injuries totally incompatible with life."
+        },
+        {
+            "q": "What does the KPI require?",
+            "options": [
+                "All information behind the start, stop or transfer decision in the patient care report",
+                "Transport within 10 minutes",
+                "Every arrest stopped at 20 minutes",
+                "A physician on scene"
+            ],
+            "correct": 0,
+            "explanation": "Capture the decision and its rationale."
         }
     ],
-    flashcards: [
-        { category: "Starting CPR", question: "When should CPR NOT be started?", answer: "If signs of irreversible death (rigor mortis, decomposition, dependent lividity, incineration, decapitation) are present, or in unwitnessed trauma if all futility criteria met." },
-        { category: "Irreversible death", question: "List five signs of irreversible death.", answer: "Decomposition, rigor mortis, dependent lividity, incineration, decapitation." },
-        { category: "Futility criteria (trauma)", question: "What five criteria must ALL be met to withhold CPR in unwitnessed traumatic cardiac arrest?", answer: "Blunt/penetrating trauma, no spontaneous movement, no pupillary response, apnoeic and pulseless, ECG no organized rhythm." },
-        { category: "Mandatory transfer", question: "Which patients must be transported with ongoing CPR?", answer: "Age <18, drowning, hypothermia, pregnancy, clearly identified reversible cause not correctable prehospitally." },
-        { category: "Stopping CPR", question: "Who can stop CPR in the prehospital setting?", answer: "Paramedic, Advanced Paramedic, or Emergency Physician." },
-        { category: "Stopping criteria (non‑trauma)", question: "List the criteria for stopping CPR in a non‑trauma patient.", answer: "Not in mandatory transfer group, no pulse/no respirations, ALS given, no ROSC after 20 min, asystole, EtCO₂ <20 mmHg, no heart sounds, no pulse, no neuro function, all clinicians agree." },
-        { category: "EtCO₂ threshold", question: "What EtCO₂ value supports termination of resuscitation?", answer: "<20 mmHg after 20 minutes of resuscitation." },
-        { category: "CPR duration", question: "How long should CPR generally be continued before considering termination?", answer: "At least 20 minutes." },
-        { category: "EMT role", question: "Can an EMT stop CPR?", answer: "No; EMTs must either transfer the patient or wait for ALS." },
-        { category: "Transport decision", question: "If family requests transport despite meeting termination criteria, what should you do?", answer: "Transport with ongoing CPR." },
-        { category: "Scene time", question: "What is the goal on‑scene time for trauma cardiac arrest?", answer: "<10 minutes." },
-        { category: "Hypothermia", question: "Is hypothermia a mandatory transfer criterion?", answer: "Yes." },
-        { category: "Drowning", question: "Is drowning a mandatory transfer criterion?", answer: "Yes." },
-        { category: "Pregnancy", question: "Is pregnancy a mandatory transfer criterion?", answer: "Yes." },
-        { category: "Reversible cause", question: "If a reversible cause is identified but cannot be corrected prehospitally, what should you do?", answer: "Transport with ongoing CPR." },
-        { category: "Neurological criteria", question: "What neurological findings are required to stop CPR?", answer: "No response to pain, no spontaneous movement, non‑reactive pupils." },
-        { category: "Heart sounds", question: "What cardiac finding is part of termination criteria?", answer: "No heart sounds." },
-        { category: "Rhythm", question: "What rhythm must be present to stop CPR in non‑trauma?", answer: "Asystole." },
-        { category: "Agreement", question: "What agreement is required to stop CPR?", answer: "All clinicians involved must agree." },
-        { category: "ALS backup", question: "Should ALS back‑up be requested for all CPR patients?", answer: "Yes." },
-        { category: "Documentation", question: "What must be documented if CPR is stopped?", answer: "Time, criteria met, staff involved, signs of irreversible death." },
-        { category: "ROSC", question: "If ROSC is achieved during transport, what should you do?", answer: "Continue to hospital with post‑resuscitation care." },
-        { category: "Witnessed arrest", question: "If EMS witnesses a cardiac arrest, what should you do?", answer: "Start CPR immediately." },
-        { category: "PEA", question: "Can CPR be stopped if the rhythm is PEA after 20 minutes?", answer: "No, termination criteria require asystole." },
-        { category: "EtCO₂ after ROSC", question: "What EtCO₂ suggests ROSC?", answer: "Sudden rise >40 mmHg." },
-        { category: "Trauma arrest", question: "In trauma arrest, what is the preferred action after starting CPR?", answer: "Rapid transport to trauma centre." },
-        { category: "Difficult extrication", question: "In trauma with difficult extrication, when may CPR be stopped?", answer: "In exceptional circumstances, by a Paramedic, if all termination criteria met." },
-        { category: "KPI", question: "What is the KPI for starting/stopping CPR?", answer: "Ensure all relevant information is captured in the patient care report." },
-        { category: "Family request", question: "If family requests transport, what should you do?", answer: "Transport with ongoing CPR." },
-        { category: "Reassessment", question: "How often should you check for ROSC during CPR?", answer: "Every 2 minutes." }
+    "flashcards": [
+        {
+            "question": "When is CPR not required?",
+            "answer": "Any sign of irreversible death; or an unwitnessed trauma arrest meeting all five futility criteria."
+        },
+        {
+            "question": "Signs of irreversible death",
+            "answer": "Decomposition, obvious rigor mortis, obvious pooling (hypostasis), incineration, decapitation, injuries totally incompatible with life."
+        },
+        {
+            "question": "Trauma futility criteria",
+            "answer": "Blunt or penetrating trauma; no spontaneous movement; no pupillary response; apneic and pulseless; no organized rhythm. All five."
+        },
+        {
+            "question": "If in doubt",
+            "answer": "Start CPR."
+        },
+        {
+            "question": "Minimum duration once started",
+            "answer": "Generally at least 20 minutes."
+        },
+        {
+            "question": "Mandatory transfer criteria",
+            "answer": "Age <18, drowning, hypothermia, pregnancy, a reversible cause that cannot be corrected prehospital."
+        },
+        {
+            "question": "Who may stop CPR?",
+            "answer": "Paramedic, Advanced Paramedic or Emergency Physician."
+        },
+        {
+            "question": "Can an EMT stop CPR?",
+            "answer": "No. Transfer, or wait for ALS."
+        },
+        {
+            "question": "ALS far away, not enough hands",
+            "answer": "Request another BLS ambulance."
+        },
+        {
+            "question": "Termination: circulation",
+            "answer": "No pulse (carotid or femoral), no respirations, no heart sounds."
+        },
+        {
+            "question": "Termination: treatment and time",
+            "answer": "Appropriate ALS for the rhythm, and no ROSC after 20 minutes."
+        },
+        {
+            "question": "Termination: rhythm and EtCO₂",
+            "answer": "Asystole, and EtCO₂ less than 20 mmHg."
+        },
+        {
+            "question": "Termination: neurology",
+            "answer": "Non-reactive pupils, no response to pain, no spontaneous movement."
+        },
+        {
+            "question": "Termination: team",
+            "answer": "All clinicians involved agree."
+        },
+        {
+            "question": "Not terminated",
+            "answer": "Transfer to hospital."
+        },
+        {
+            "question": "Trauma arrest, CPR started",
+            "answer": "Normally transfer with minimal scene time; a Paramedic may stop only in uncommon circumstances (e.g. difficult extrication)."
+        },
+        {
+            "question": "Family asks for transfer",
+            "answer": "Transfer is appropriate."
+        },
+        {
+            "question": "Early transport",
+            "answer": "When fast arrival clearly helps, e.g. arrest from blood loss."
+        },
+        {
+            "question": "Before transfer",
+            "answer": "Airway, BVM, compressions, defibrillation, IV/IO and drugs, reversal of identified causes."
+        },
+        {
+            "question": "Difficult procedure before transfer",
+            "answer": "The crew weighs the time it takes against its benefit."
+        },
+        {
+            "question": "During transfer",
+            "answer": "Keep compressions, airway, ventilation and drugs effective through extrication and transport."
+        },
+        {
+            "question": "ALS back-up",
+            "answer": "Request routinely for every patient receiving CPR."
+        },
+        {
+            "question": "PEA after 20 minutes",
+            "answer": "Does not meet the termination criteria (asystole required): transfer."
+        },
+        {
+            "question": "Pulse and breathing check",
+            "answer": "Carotid or femoral pulse for 5–10 seconds; no normal breathing or agonal gasps."
+        },
+        {
+            "question": "History to note",
+            "answer": "Bystander CPR and its quality; time of arrest or last seen alive."
+        },
+        {
+            "question": "EMS-witnessed trauma arrest",
+            "answer": "Start CPR."
+        },
+        {
+            "question": "Documentation when stopping",
+            "answer": "Time-stamped actions, consensus, rationale, and the signs or criteria met."
+        },
+        {
+            "question": "Rhythms to identify",
+            "answer": "VF, VT, PEA, asystole."
+        },
+        {
+            "question": "Exclusion criteria",
+            "answer": "None noted."
+        },
+        {
+            "question": "KPI",
+            "answer": "All information behind starting, stopping or transferring CPR is in the patient care report."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_4_8_1",
-            scenario: "You are called to a 75‑year‑old male in cardiac arrest. Bystander CPR is in progress. The arrest was unwitnessed. There are no signs of irreversible death. ECG shows asystole. What is your next action?",
-            question: "What should you do?",
-            options: [
-                { t: "Start CPR and request ALS back‑up", f: "Correct. No contraindications; start CPR." },
-                { t: "Do not start CPR – asystole is not shockable", f: "Asystole is a rhythm in cardiac arrest; CPR should be started." },
-                { t: "Wait for ALS to arrive", f: "CPR should be initiated immediately." },
-                { t: "Check for a pulse for 20 seconds", f: "Prolonged pulse check delays CPR." }
+            "id": "crit_4_8_1",
+            "scenario": "A 75-year-old man collapsed at home, unwitnessed. A neighbour is doing CPR. No signs of irreversible death. The monitor shows asystole.",
+            "ecg": "asystole",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Continue CPR and request ALS back-up",
+                    "f": "Correct. A medical arrest without irreversible-death signs gets CPR."
+                },
+                {
+                    "t": "Do not start: asystole and unwitnessed",
+                    "f": "Futility criteria are for trauma; termination needs 20 minutes of ALS and a Paramedic."
+                },
+                {
+                    "t": "Transfer immediately without CPR",
+                    "f": "Resuscitate on scene."
+                },
+                {
+                    "t": "Pronounce death",
+                    "f": "No sign of irreversible death is present."
+                }
             ],
-            correct: 0,
-            explanation: "In the absence of signs of irreversible death, CPR should be started immediately. Asystole is a non‑shockable rhythm but requires CPR and medications.",
-            kpi: "CPR initiated within 1 minute."
+            "correct": 0,
+            "explanation": "Medical cause, no irreversible-death signs: start CPR, continue for at least 20 minutes, request ALS routinely.",
+            "kpi": "All information behind the decision to start, stop or transfer CPR is in the patient care report."
         },
         {
-            id: "crit_4_8_2",
-            scenario: "You are managing a 45‑year‑old female in cardiac arrest. After 20 minutes of ALS, there is no ROSC. The rhythm remains asystole, EtCO₂ is 12 mmHg, pupils fixed and dilated, no response to pain. She is not pregnant, not hypothermic, and the arrest is not drowning‑related. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Continue CPR and transport", f: "All termination criteria are met; consider stopping." },
-                { t: "Stop resuscitation efforts", f: "Correct. All criteria for termination are met." },
-                { t: "Give another dose of adrenaline", f: "No further benefit if criteria met." },
-                { t: "Change to VF protocol", f: "Rhythm is asystole, not VF." }
+            "id": "crit_4_8_2",
+            "scenario": "A 45-year-old woman, medical arrest. After 20 minutes of full ALS: asystole, EtCO₂ 12 mmHg, no heart sounds, fixed pupils, no response to pain. Not pregnant, not hypothermic, not drowned, no uncorrectable reversible cause. Everyone agrees. You are a Paramedic.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Stop resuscitation and document the criteria and consensus",
+                    "f": "Correct. Every criterion is met."
+                },
+                {
+                    "t": "Must transfer: she is under 50",
+                    "f": "Age matters only below 18."
+                },
+                {
+                    "t": "Continue another 20 minutes routinely",
+                    "f": "Termination is permitted when all criteria are met."
+                },
+                {
+                    "t": "Ask the EMT to decide",
+                    "f": "Only P, AP or an Emergency Physician may stop."
+                }
             ],
-            correct: 1,
-            explanation: "All criteria for termination are met: not in mandatory transfer group, no ROSC after 20 min, asystole, EtCO₂ <20, no neurological function, all clinicians agree. Stopping CPR is appropriate.",
-            kpi: "Termination decision documented."
+            "correct": 0,
+            "explanation": "All termination criteria are met. Document the time, rationale and consensus.",
+            "kpi": "All information behind the decision to start, stop or transfer CPR is in the patient care report."
         },
         {
-            id: "crit_4_8_3",
-            scenario: "A 2‑year‑old child is in cardiac arrest. After 25 minutes of resuscitation, there is no ROSC. The rhythm is asystole, EtCO₂ 10 mmHg. What should you do?",
-            question: "What is the next action?",
-            options: [
-                { t: "Stop CPR", f: "Age <18 is a mandatory transfer criterion." },
-                { t: "Continue CPR and transport", f: "Correct. The child must be transported with ongoing CPR." },
-                { t: "Give amiodarone", f: "Not indicated for asystole." },
-                { t: "Double defibrillation energy", f: "Not indicated." }
+            "id": "crit_4_8_3",
+            "scenario": "A 2-year-old in cardiac arrest: no ROSC after 25 minutes; asystole; EtCO₂ 10 mmHg.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Continue CPR and transfer to hospital",
+                    "f": "Correct. Age <18 is a mandatory transfer criterion."
+                },
+                {
+                    "t": "Stop: all other criteria are met",
+                    "f": "Children are always transferred."
+                },
+                {
+                    "t": "Stop if the parents agree",
+                    "f": "Mandatory transfer applies."
+                },
+                {
+                    "t": "Wait on scene for ALS",
+                    "f": "Transfer, meeting ALS en route."
+                }
             ],
-            correct: 1,
-            explanation: "Paediatric age (<18 years) is a mandatory transfer criterion. Continue CPR and transport to hospital.",
-            kpi: "Transport initiated with ongoing CPR."
+            "correct": 0,
+            "explanation": "Mandatory transfer: age <18, drowning, hypothermia, pregnancy, uncorrectable reversible cause.",
+            "kpi": "All information behind the decision to start, stop or transfer CPR is in the patient care report."
         },
         {
-            id: "crit_4_8_4",
-            scenario: "You are an EMT on scene with a patient in cardiac arrest. ALS is 20 minutes away. You have been performing CPR for 10 minutes with no ROSC. What should you do?",
-            question: "What is your priority?",
-            options: [
-                { t: "Stop CPR and wait for ALS", f: "EMTs cannot stop CPR." },
-                { t: "Continue CPR and consider transport to hospital", f: "Correct. If ALS is delayed, transport with ongoing CPR is appropriate." },
-                { t: "Wait for ALS on scene", f: "Transport may be faster; consider moving." },
-                { t: "Request police assistance", f: "Not indicated." }
+            "id": "crit_4_8_4",
+            "scenario": "You are an EMT crew. CPR has run for 20 minutes without ROSC. ALS is still far away and the patient is upstairs.",
+            "question": "What is your plan?",
+            "options": [
+                {
+                    "t": "Continue CPR; transfer or wait for ALS; request another BLS ambulance for extrication",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop CPR at 20 minutes",
+                    "f": "EMTs cannot stop resuscitation."
+                },
+                {
+                    "t": "Stop if asystole and EtCO₂ is low",
+                    "f": "Only P and above may apply the termination criteria."
+                },
+                {
+                    "t": "Carry the patient down without CPR",
+                    "f": "Maintain effective CPR during extrication."
+                }
             ],
-            correct: 1,
-            explanation: "EMTs cannot terminate resuscitation. If ALS is significantly delayed, consider transport to the nearest hospital with ongoing CPR.",
-            kpi: "Transport decision made and documented."
+            "correct": 0,
+            "explanation": "EMTs must transfer or wait for ALS; request extra staff to keep CPR effective during extrication.",
+            "kpi": "All information behind the decision to start, stop or transfer CPR is in the patient care report."
         },
         {
-            id: "crit_4_8_5",
-            scenario: "A 30‑year‑old pregnant woman (32 weeks) is in cardiac arrest. After 20 minutes of ALS, there is no ROSC. The rhythm is asystole, EtCO₂ 15 mmHg. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Stop CPR – criteria met", f: "Pregnancy is a mandatory transfer criterion." },
-                { t: "Continue CPR and transport to hospital with obstetric capability", f: "Correct. Pregnancy requires transport with ongoing CPR." },
-                { t: "Perform peri‑mortem caesarean section on scene", f: "Not within prehospital scope; transport rapidly." },
-                { t: "Give oxytocin", f: "Not indicated." }
+            "id": "crit_4_8_5",
+            "scenario": "A 30-year-old woman, 32 weeks pregnant, in cardiac arrest. After 20 minutes of ALS there is no ROSC; asystole; EtCO₂ 15 mmHg.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Continue CPR and transfer",
+                    "f": "Correct. Pregnancy is a mandatory transfer criterion."
+                },
+                {
+                    "t": "Stop resuscitation",
+                    "f": "She is in a mandatory transfer group."
+                },
+                {
+                    "t": "Stop if the husband agrees",
+                    "f": "Transfer is mandatory."
+                },
+                {
+                    "t": "Wait on scene for ALS",
+                    "f": "Transfer with ongoing CPR."
+                }
             ],
-            correct: 1,
-            explanation: "Pregnancy is a mandatory transfer criterion. Continue CPR and transport urgently to a hospital capable of obstetric care and peri‑mortem caesarean section.",
-            kpi: "Transport initiated; hospital notified."
+            "correct": 0,
+            "explanation": "Pregnancy: transfer to hospital with effective CPR running.",
+            "kpi": "All information behind the decision to start, stop or transfer CPR is in the patient care report."
         }
     ]
 };
