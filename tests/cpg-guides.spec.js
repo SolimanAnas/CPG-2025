@@ -147,13 +147,14 @@ for (const [chapter, sections] of Object.entries(CHAPTER_SECTIONS)) {
   }
 }
 
-// The single-page guidelines of chapters 3 to 7: summary, study tabs,
+// The single-page guidelines of chapters 3 to 8: summary, study tabs,
 // related links and source PDF, phone layout, and any rhythm strips.
 const FLAT_PAGES = [
   'c3-1', 'c3-3', 'c3-4', 'c4-1', 'c4-2', 'c4-4', 'c4-5', 'c4-6', 'c4-7', 'c4-8', 'c4-9',
   'c5-1', 'c5-2', 'c6-1', 'c6-2', 'c6-3', 'c6-4', 'c6-5', 'c6-6', 'c6-7', 'c6-8', 'c6-9',
   'c6-10', 'c6-11', 'c6-12', 'c6-13', 'c6-14',
   'c7-1', 'c7-2', 'c7-3', 'c7-4', 'c7-5', 'c7-6',
+  'c8-1', 'c8-2', 'c8-3', 'c8-4', 'c8-5', 'c8-6', 'c8-7', 'c8-8', 'c8-9', 'c8-10',
 ];
 for (const id of FLAT_PAGES) {
   test(`${id}: summary, study tabs, links, strips and phone layout`, async ({ page, request }) => {
