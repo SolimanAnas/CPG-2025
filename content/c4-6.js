@@ -1,400 +1,869 @@
-/* ========== Chapter 4.6 – Newborn Resuscitation ========== */
+/* ========== CPG 4.6 – Newborn and Preterm Infant Resuscitation ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c4-6",
-    title: "Newborn Resuscitation",
-    shortTitle: "4.6 Newborn Resuscitation",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#baby"/></svg> Newborn Resuscitation (&lt;4 weeks, including pre‑term)</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Provide routine care to the newborn infant.</li>
-                <li>Rapidly identify newborns requiring resuscitative efforts.</li>
-                <li>Establish spontaneous breathing and a stable heart rate.</li>
-                <li>Maintain normothermia and adequate oxygenation while avoiding complications.</li>
-                <li>Deliver high‑quality chest compressions/CPR with minimal interruptions.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Newborns (< 4 weeks) and preterm infants requiring resuscitation due to:
-                    <ul>
-                        <li>Apnoea or gasping respiration.</li>
-                        <li>Heart rate < 100 bpm at 1 minute post‑delivery.</li>
-                        <li>Cyanosis or pale appearance.</li>
-                        <li>Poor muscle tone or lack of crying.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Infants > 4 weeks of age (see Pediatric Resuscitation CPG).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Patient history:</strong> Date/time of birth, prenatal history (substance abuse, multiple gestation, maternal illness), birth history (maternal fever, meconium, maternal bleeding, difficult delivery, prolapsed cord, nuchal cord, breech), estimated gestational age.</li>
-                <li><strong>Physical examination:</strong> Respiratory rate and effort (strong, weak, regular, irregular); signs of distress (grunting, flaring, retractions, gasping); heart rate (fast, slow, absent – auscultation preferred); muscle tone; colour/appearance (cyanosis, pallor).</li>
-                <li><strong>APGAR score:</strong> At 1 and 5 minutes post‑delivery (Appearance, Pulse, Grimace, Activity, Respiration).</li>
-                <li><strong>Triage category:</strong> All patients requiring ventilatory support or chest compressions are Red Priority (even if improved).</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Immediately after delivery:</strong>
-                    <ul>
-                        <li>Assess tone, breathing/crying. If adequate, no resuscitation needed <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> go to Childbirth CPG.</li>
-                        <li>If weak cry, distress, poor tone, or preterm: position airway (sniffing), clear airway (suction mouth then nose if obstruction; routine suction not recommended), dry, warm, stimulate. Wrap in dry towel/plastic bag, cover head.</li>
-                    </ul>
-                </li>
-                <li><strong>Reassess breathing and heart rate:</strong>
-                    <ul>
-                        <li><strong>Laboured breathing/persistent cyanosis:</strong> Attach SpO₂ monitor, consider supplementary O₂ (start low FiO₂).</li>
-                        <li><strong>Apnoea/gasping:</strong> Position airway, consider adjuncts (OPA/NPA/intubation), assist ventilation (PPV) at 40‑60 bpm with room air initially. Attach ECG monitor.</li>
-                        <li><strong>Consider cord clamping:</strong> If no rapid improvement or immediate resuscitation needed, clamp cord in three places (10, 15, 20 cm) and cut between clamps furthest from newborn.</li>
-                    </ul>
-                </li>
-                <li><strong>If HR < 100 bpm:</strong>
-                    <ul>
-                        <li>Initiate BVM ventilation with room air at 40‑60 breaths/min for 90 seconds. Primary indicator of effectiveness is improvement in heart rate.</li>
-                        <li>If no improvement after 90 seconds, change to 100% O₂ until heart rate normalises.</li>
-                    </ul>
-                </li>
-                <li><strong>If HR < 60 bpm:</strong>
-                    <ul>
-                        <li>Initiate chest compressions (two‑thumb encircling hands technique preferred).</li>
-                        <li>Compression:ventilation ratio 3:1 (90 compressions, 30 ventilations per minute).</li>
-                        <li>Consider endotracheal intubation or supraglottic airway.</li>
-                        <li>Establish IV/IO access.</li>
-                        <li>Administer epinephrine (adrenaline) 0.01 mg/kg IV/IO every 3‑5 minutes if HR remains <60 bpm.</li>
-                        <li>If signs of shock or post‑resuscitation, give 20 mL/kg normal saline IV/IO.</li>
-                        <li>Check blood glucose.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Hypothermia is common and worsens outcomes – dry, warm, cover head, use kangaroo care if stable.</li>
-                <li>Preterm infants <23 weeks may receive comfort care based on parental wishes; resuscitation not routinely recommended.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Most newborns need only drying, warming, and stimulation.</li>
-                <li>Resuscitation sequence: Dry, Warm, Stimulate – Ventilate – Evaluate – Resuscitate.</li>
-                <li>If placenta delivered, place in biohazard bag and transport with patient.</li>
-                <li>Pulse oximetry on right hand best; target 60‑65% at 1 minute, rising 5%/min to 85‑90% at 10 minutes.</li>
-                <li>Both hypoxia and excess oxygen harmful – titrate to 85‑95%.</li>
-                <li>Increase in heart rate is the most reliable indicator of effective resuscitation.</li>
-                <li>Acrocyanosis (blue extremities) normal; distinguish from central cyanosis.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification: gender, estimated gestational age, time of birth.</li>
-                <li>Mechanism/medical complaint: symptoms (apnoea, gasping, poor tone, cyanosis).</li>
-                <li>Injuries/information: prenatal/birth history, maternal medications.</li>
-                <li>Signs: vital signs, APGAR at 1 and 5 minutes, physical findings, blood glucose.</li>
-                <li>Treatment: airway management, warming, stimulation, ventilations, chest compressions, medications, cord management, oxygen therapy.</li>
-                <li>Allergies: not typically applicable.</li>
-                <li>Medications: any given.</li>
-                <li>Background: maternal history, obstetric complications.</li>
-                <li>Other: placenta management, hospital notification, parental wishes.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Provide chest compressions and ventilation within 30 seconds of HR <60 bpm.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c4-6",
+    "title": "Newborn and Preterm Infant Resuscitation",
+    "shortTitle": "4.6 Newborn Resuscitation",
+    "guide": {
+        "cpg": "4.6",
+        "group": "resus",
+        "groupLabel": "Resuscitation",
+        "title": "Newborn and Preterm Infant Resuscitation",
+        "lead": "Most newborns need only drying, warming and stimulation. Ventilation is the key intervention: start with room air, and judge every step by the heart rate. Compress at 3:1 only when the heart rate is below 60.",
+        "source": {
+            "label": "CPG 4.6",
+            "pages": "115–119",
+            "pdf": "../pdf_sections/4_6_Newborn_4_weeks_and_Pre-term_Infant_Resuscitation.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "baby",
+                "include": [
+                    "Newborns (&lt;4 weeks) and preterm infants needing resuscitation for apnea or gasping, heart rate &lt;100 bpm at 1 minute, cyanosis or pallor, poor tone or no cry."
+                ],
+                "exclude": [
+                    "Infants &gt;4 weeks: Pediatric Cardiac Arrest CPG."
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "At birth",
+                "icon": "circle-help",
+                "question": "Term gestation, good tone, breathing or crying?",
+                "yes": "Routine care: Childbirth CPG.",
+                "no": "Consider ALS back-up and start the first steps below."
+            },
+            {
+                "type": "steps",
+                "title": "Resuscitation sequence",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "First steps (within the first minute)",
+                        "text": "Warm and keep normothermic; position the airway (sniffing position); dry and stimulate. Wrap in a dry towel, thermal blanket or clean plastic bag up to the neck; cover the head. Suction mouth then nose only for respiratory distress with obstruction: routine suctioning is not recommended."
+                    },
+                    {
+                        "title": "Labored breathing or persistent cyanosis",
+                        "text": "Position the airway, SpO<sub>2</sub> monitor, supplemental oxygen as needed (start with low FiO<sub>2</sub>); consider CPAP."
+                    },
+                    {
+                        "title": "Apnea, gasping or HR &lt;100/min: ventilate",
+                        "text": "PPV by BVM at 40–60 breaths per minute with room air for 90 seconds; do not add oxygen initially. SpO<sub>2</sub> and ECG monitor. Consider OPA, NPA or intubation."
+                    },
+                    {
+                        "title": "Reassess the heart rate every 30 seconds",
+                        "text": "A rising heart rate is the main sign of effective ventilation. Use only the rate and volume needed for chest rise and a change in heart rate.",
+                        "items": [
+                            "HR still &lt;100/min: check chest movement, take corrective ventilation steps, ETT or supraglottic airway if needed.",
+                            "No improvement after 90 seconds: change to 100% FiO<sub>2</sub> until the heart rate normalises."
+                        ]
+                    },
+                    {
+                        "title": "HR &lt;60/min: compressions",
+                        "text": "Two-thumb-encircling-hands technique at 3:1 compressions to ventilations, with 100% oxygen via BVM. Consider intubation or a supraglottic airway; connect the ventilator with PEEP; IV or IO access."
+                    },
+                    {
+                        "title": "HR persistently &lt;60/min: adrenaline",
+                        "doses": [
+                            {
+                                "drug": "Adrenaline",
+                                "dose": "0.01 mg/kg IV/IO",
+                                "note": "Every 3–5 minutes while the HR stays below 60 bpm"
+                            },
+                            {
+                                "drug": "Normal saline",
+                                "dose": "20 mL/kg IV/IO",
+                                "note": "Signs of shock, or post-resuscitation care"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Blood glucose",
+                        "text": "Check it."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Cord and placenta",
+                "icon": "bandage",
+                "groups": [
+                    {
+                        "title": "Cutting the cord",
+                        "items": [
+                            "If the baby does not improve rapidly, or needs immediate resuscitation: clamp in three places (10 cm, 15 cm, 20 cm) and cut between the two clamps furthest from the newborn."
+                        ]
+                    },
+                    {
+                        "title": "Placenta",
+                        "items": [
+                            "If delivered, place it in a biohazard bag and transport it with the patient."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "APGAR score (1 and 5 minutes)",
+                "icon": "clipboard-list",
+                "stack": true,
+                "columns": [
+                    "Sign",
+                    "2 points",
+                    "1 point",
+                    "0 points"
+                ],
+                "rows": [
+                    [
+                        "Appearance (skin colour)",
+                        "Normal over entire body",
+                        "Normal except extremities",
+                        "Cyanotic or pale all over"
+                    ],
+                    [
+                        "Pulse",
+                        "&gt;100 bpm",
+                        "&lt;100 bpm",
+                        "Absent"
+                    ],
+                    [
+                        "Grimace (reflex irritability)",
+                        "Sneezes, coughs or vigorous cry",
+                        "Grimaces",
+                        "No response"
+                    ],
+                    [
+                        "Activity (muscle tone)",
+                        "Active",
+                        "Arms and legs flexed",
+                        "Absent"
+                    ],
+                    [
+                        "Respirations",
+                        "Good, crying",
+                        "Gasping, irregular",
+                        "Absent"
+                    ]
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Expected SpO₂ after birth (right hand)",
+                "icon": "activity",
+                "columns": [
+                    "Time since birth",
+                    "SpO<sub>2</sub>"
+                ],
+                "rows": [
+                    [
+                        "1 minute",
+                        "60–65%"
+                    ],
+                    [
+                        "2 minutes",
+                        "65–70%"
+                    ],
+                    [
+                        "3 minutes",
+                        "70–75%"
+                    ],
+                    [
+                        "4 minutes",
+                        "75–80%"
+                    ],
+                    [
+                        "5 minutes",
+                        "80–85%"
+                    ],
+                    [
+                        "10 minutes",
+                        "85–90%"
+                    ]
+                ],
+                "notes": [
+                    "The right hand gives the most accurate reading during the transition from fetal circulation.",
+                    "Both hypoxia and excess oxygen harm. If prolonged oxygen is needed, titrate to SpO<sub>2</sub> 85%–95%."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assessment and safety",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Heart rate",
+                        "items": [
+                            "Precordium, umbilical stump or brachial pulse. Auscultation is preferred: palpating the stump is less accurate."
+                        ]
+                    },
+                    {
+                        "title": "Colour",
+                        "items": [
+                            "Acrocyanosis (blue hands and feet) is common in transition; distinguish it from central cyanosis."
+                        ]
+                    },
+                    {
+                        "title": "Hypothermia",
+                        "items": [
+                            "Common, and worsens nearly every complication; can cause hypoglycemia, hypoxia and lethargy.",
+                            "Dry thoroughly, cover the head, swaddle. Skin-to-skin (kangaroo) care when no resuscitation is needed."
+                        ]
+                    },
+                    {
+                        "title": "Prematurity",
+                        "items": [
+                            "Any doubt about gestational age: start resuscitation.",
+                            "&lt;23 weeks: comfort care may be given according to parental wishes.",
+                            "Avoid routine resuscitation &lt;22 weeks unless parental wishes and clinical judgement indicate otherwise."
+                        ]
+                    },
+                    {
+                        "title": "Triage",
+                        "items": [
+                            "Any baby who needed ventilation or compressions after delivery is Red priority, even if improved."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator",
+                                "sub": "Adrenaline and fluid by weight",
+                                "href": "../pages/drug-calculator.html?drug=Epinephrine%20(Adrenaline)",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Compressions and ventilation within 30 seconds of the heart rate falling below 60 bpm."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "10.1 Childbirth",
+                        "href": "c10-1.html"
+                    },
+                    {
+                        "label": "4.2 Pediatric BLS",
+                        "href": "c4-2.html"
+                    },
+                    {
+                        "label": "4.4 Pediatric Cardiac Arrest",
+                        "href": "c4-4.html"
+                    },
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the recommended compression‑ventilation ratio for newborn CPR?",
-            options: ["3:1", "15:2", "30:2", "5:1"],
-            correct: 0,
-            explanation: "Newborn resuscitation uses a 3:1 compression‑to‑ventilation ratio (90 compressions, 30 breaths per minute)."
+            "q": "What compression to ventilation ratio is used in newborn CPR?",
+            "options": [
+                "3:1",
+                "15:2",
+                "30:2",
+                "5:1"
+            ],
+            "correct": 0,
+            "explanation": "Newborns: 3:1 with the two-thumb-encircling-hands technique."
         },
         {
-            q: "What is the preferred technique for chest compressions in a newborn with two rescuers?",
-            options: ["Two‑finger technique", "Two‑thumb encircling hands technique", "One hand", "Heel of one hand"],
-            correct: 1,
-            explanation: "The two‑thumb encircling hands technique is preferred for newborn CPR as it generates better coronary perfusion pressure."
+            "q": "Which compression technique is preferred in a newborn?",
+            "options": [
+                "Two-thumb-encircling-hands",
+                "Two-finger",
+                "Heel of one hand",
+                "Two hands, adult style"
+            ],
+            "correct": 0,
+            "explanation": "The two-thumb-encircling-hands technique is preferred."
         },
         {
-            q: "At what heart rate should positive pressure ventilation (PPV) be initiated in a newborn?",
-            options: ["<60 bpm", "<80 bpm", "<100 bpm", "<120 bpm"],
-            correct: 2,
-            explanation: "PPV should be started if HR <100 bpm, apnoea, or gasping."
+            "q": "At what heart rate do you start PPV?",
+            "options": [
+                "<100/min, or apnea or gasping",
+                "<60/min only",
+                "<160/min",
+                "Only when pulseless"
+            ],
+            "correct": 0,
+            "explanation": "Apnea, gasping or HR <100/min: assist ventilation."
         },
         {
-            q: "At what heart rate should chest compressions be started in a newborn?",
-            options: ["<60 bpm despite adequate ventilation", "<80 bpm", "<100 bpm", "<120 bpm"],
-            correct: 0,
-            explanation: "Chest compressions are indicated if HR remains <60 bpm despite effective ventilation for 30 seconds."
+            "q": "At what heart rate do you start compressions?",
+            "options": [
+                "<60/min despite ventilation",
+                "<100/min",
+                "<80/min",
+                "Only at zero"
+            ],
+            "correct": 0,
+            "explanation": "HR <60/min: start CPR at 3:1 with 100% oxygen."
         },
         {
-            q: "What is the initial oxygen concentration for ventilating a newborn?",
-            options: ["100%", "Room air (21%)", "40%", "60%"],
-            correct: 1,
-            explanation: "Start with room air; increase to 100% if no improvement after 90 seconds."
+            "q": "What gas do you ventilate with first?",
+            "options": [
+                "Room air",
+                "100% oxygen",
+                "Oxygen via CPAP only",
+                "Nitrous oxide"
+            ],
+            "correct": 0,
+            "explanation": "Start PPV with room air for 90 seconds; do not add oxygen initially."
         },
         {
-            q: "What is the target SpO₂ at 1 minute of life?",
-            options: ["40‑50%", "60‑65%", "70‑75%", "85‑90%"],
-            correct: 1,
-            explanation: "At 1 minute, target SpO₂ is 60‑65%, increasing by 5% each minute to reach 85‑90% at 10 minutes."
+            "q": "What SpO₂ is expected at 1 minute?",
+            "options": [
+                "60–65%",
+                "85–90%",
+                "95–100%",
+                "40–45%"
+            ],
+            "correct": 0,
+            "explanation": "60–65% at 1 minute, rising to 80–85% at 5 minutes and 85–90% at 10 minutes."
         },
         {
-            q: "What is the dose of epinephrine for a newborn in cardiac arrest?",
-            options: ["0.01 mg/kg IV/IO", "0.1 mg/kg IV/IO", "0.5 mg IV", "1 mg IV"],
-            correct: 0,
-            explanation: "Epinephrine 0.01 mg/kg (0.1 mL/kg of 1:10,000) IV/IO every 3‑5 minutes."
+            "q": "What is the IV/IO adrenaline dose?",
+            "options": [
+                "0.01 mg/kg",
+                "0.1 mg/kg",
+                "1 mg",
+                "0.5 mg"
+            ],
+            "correct": 0,
+            "explanation": "Adrenaline 0.01 mg/kg IV/IO every 3–5 minutes while the HR stays below 60."
         },
         {
-            q: "If IV/IO access is not available, what is the alternative route for epinephrine in a newborn?",
-            options: ["IM", "Endotracheal (ETT)", "Intranasal", "Subcutaneous"],
-            correct: 1,
-            explanation: "Epinephrine may be given via ETT at a dose of 0.05‑0.1 mg/kg (0.5‑1 mL/kg of 1:10,000)."
+            "q": "When is adrenaline given?",
+            "options": [
+                "When the HR stays <60/min despite ventilation and compressions",
+                "At HR <100/min",
+                "Before ventilation",
+                "Only after ROSC"
+            ],
+            "correct": 0,
+            "explanation": "Ventilation first, then compressions; adrenaline if the HR stays below 60."
         },
         {
-            q: "What is the normal APGAR score range?",
-            options: ["0‑5", "0‑10", "1‑8", "5‑15"],
-            correct: 1,
-            explanation: "APGAR score ranges from 0 to 10; 7‑10 is reassuring, 4‑6 moderately abnormal, 0‑3 low."
+            "q": "What does APGAR score?",
+            "options": [
+                "Appearance, pulse, grimace, activity, respirations",
+                "Airway, pulse, glucose, alertness, rhythm",
+                "Age, pressure, gestation, apnea, reflexes",
+                "Only colour and pulse"
+            ],
+            "correct": 0,
+            "explanation": "Five signs each scored 2, 1 or 0, at 1 and 5 minutes after delivery."
         },
         {
-            q: "Which of the following is a component of the APGAR score?",
-            options: ["Pulse", "Blood pressure", "Temperature", "Capillary refill"],
-            correct: 0,
-            explanation: "APGAR: Appearance, Pulse, Grimace, Activity, Respiration."
+            "q": "A baby's pulse is below 100 bpm. What APGAR score does pulse get?",
+            "options": [
+                "1",
+                "2",
+                "0",
+                "3"
+            ],
+            "correct": 0,
+            "explanation": ">100 bpm scores 2, <100 bpm scores 1, absent scores 0."
         },
         {
-            q: "What is the first step in managing a newborn with poor tone and apnoea?",
-            options: ["Start chest compressions", "Dry, warm, stimulate", "Give epinephrine", "Intubate"],
-            correct: 1,
-            explanation: "Initial steps: dry, warm, position, clear airway, stimulate. Then reassess breathing and HR."
+            "q": "A floppy, apneic newborn. What comes first?",
+            "options": [
+                "Warm, position the airway, dry and stimulate",
+                "Compressions",
+                "Adrenaline",
+                "Intubation"
+            ],
+            "correct": 0,
+            "explanation": "First steps, then ventilate if still apneic or HR <100."
         },
         {
-            q: "How long should you ventilate a newborn with PPV before reassessing heart rate?",
-            options: ["15 seconds", "30 seconds", "60 seconds", "90 seconds"],
-            correct: 1,
-            explanation: "Reassess HR after 30 seconds of effective PPV."
+            "q": "How often is the heart rate re-evaluated during ventilation?",
+            "options": [
+                "Every 30 seconds",
+                "Every 5 minutes",
+                "Only at the end",
+                "Every 2 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Evaluate the heart rate every 30 seconds."
         },
         {
-            q: "What is the preferred site for pulse oximetry in a newborn?",
-            options: ["Left hand", "Right hand", "Foot", "Earlobe"],
-            correct: 1,
-            explanation: "The right hand (pre‑ductal) gives the most accurate reading for transitioning circulation."
+            "q": "Where should the SpO₂ probe go?",
+            "options": [
+                "Right hand",
+                "Left foot",
+                "Earlobe",
+                "Left hand"
+            ],
+            "correct": 0,
+            "explanation": "The right hand is most accurate during transition from fetal circulation."
         },
         {
-            q: "What is a sign of effective resuscitation in a newborn?",
-            options: ["Increase in heart rate", "Decrease in heart rate", "Cyanosis", "Poor muscle tone"],
-            correct: 0,
-            explanation: "Increase in heart rate is the most reliable indicator of effective ventilation and resuscitation."
+            "q": "What is the best sign that resuscitation is working?",
+            "options": [
+                "Rising heart rate",
+                "Pink hands and feet",
+                "Crying mother",
+                "Falling SpO₂"
+            ],
+            "correct": 0,
+            "explanation": "An increase in heart rate is the most reliable indicator."
         },
         {
-            q: "At what gestational age is resuscitation not routinely recommended?",
-            options: ["<22 weeks", "<24 weeks", "<26 weeks", "<28 weeks"],
-            correct: 0,
-            explanation: "Resuscitation is not routinely recommended for infants <22 weeks gestation; comfort care may be considered based on parental wishes."
+            "q": "Below what gestation is routine resuscitation avoided?",
+            "options": [
+                "22 weeks",
+                "28 weeks",
+                "32 weeks",
+                "36 weeks"
+            ],
+            "correct": 0,
+            "explanation": "Avoid routine resuscitation <22 weeks unless parental wishes and clinical judgement indicate otherwise."
         },
         {
-            q: "What is the recommended fluid bolus dose for a newborn with signs of shock?",
-            options: ["10 mL/kg", "20 mL/kg", "30 mL/kg", "40 mL/kg"],
-            correct: 1,
-            explanation: "Normal saline 20 mL/kg IV/IO over 5‑10 minutes; may repeat if needed."
+            "q": "What fluid bolus is given for shock?",
+            "options": [
+                "20 mL/kg normal saline IV/IO",
+                "5 mL/kg dextrose",
+                "Fluids are never given",
+                "A fixed 500 mL"
+            ],
+            "correct": 0,
+            "explanation": "20 mL/kg normal saline for signs of shock or post-resuscitation care."
         },
         {
-            q: "Which of the following indicates a need for advanced airway (intubation) in a newborn?",
-            options: ["Ineffective bag‑mask ventilation", "HR <100 bpm", "Central cyanosis", "Poor tone"],
-            correct: 0,
-            explanation: "Intubation is considered if bag‑mask ventilation is ineffective or prolonged, or if chest compressions are required."
+            "q": "The HR is still below 100 after starting PPV. What do you check first?",
+            "options": [
+                "Chest movement, then corrective ventilation steps",
+                "Give adrenaline",
+                "Start compressions",
+                "Stop ventilating"
+            ],
+            "correct": 0,
+            "explanation": "Check chest movement, correct ventilation, and use an ETT or supraglottic airway if needed."
         },
         {
-            q: "What is the correct depth for chest compressions in a newborn?",
-            options: ["1/3 anterior‑posterior chest diameter", "1/2 chest diameter", "1 cm", "2 cm"],
-            correct: 0,
-            explanation: "Compress to one‑third the chest depth (approx. 3‑4 cm)."
+            "q": "What PPV rate is used?",
+            "options": [
+                "40–60 breaths per minute",
+                "10 breaths per minute",
+                "80–100 breaths per minute",
+                "As fast as possible"
+            ],
+            "correct": 0,
+            "explanation": "BVM ventilation at 40–60 breaths per minute."
         },
         {
-            q: "How many breaths per minute should be given during PPV in a newborn?",
-            options: ["20‑30", "30‑40", "40‑60", "60‑80"],
-            correct: 2,
-            explanation: "Positive pressure ventilation should be delivered at 40‑60 breaths per minute."
+            "q": "No improvement after 90 seconds of room-air PPV. What changes?",
+            "options": [
+                "Oxygen to 100% FiO₂ until the HR normalises",
+                "Stop ventilation",
+                "Give adrenaline at once",
+                "Reduce the rate"
+            ],
+            "correct": 0,
+            "explanation": "After 90 seconds without improvement, change to 100% FiO₂."
         },
         {
-            q: "What is the initial FiO₂ for PPV in a term newborn?",
-            options: ["21% (room air)", "40%", "60%", "100%"],
-            correct: 0,
-            explanation: "Start with room air (21% O₂) and titrate up if no improvement after 90 seconds."
+            "q": "How is the umbilical cord cut when resuscitation is needed?",
+            "options": [
+                "Clamp at 10, 15 and 20 cm; cut between the two clamps furthest from the baby",
+                "Cut flush with the abdomen",
+                "Never cut it before hospital",
+                "One clamp at 5 cm"
+            ],
+            "correct": 0,
+            "explanation": "Three clamps; cut between the two furthest from the newborn."
         },
         {
-            q: "What is the purpose of the APGAR score?",
-            options: ["To guide resuscitation", "To assess the newborn's condition after delivery", "To determine need for oxygen", "All of the above"],
-            correct: 1,
-            explanation: "APGAR score assesses the newborn's condition at 1 and 5 minutes; it is not used to guide ongoing resuscitation."
+            "q": "When is suctioning indicated?",
+            "options": [
+                "Respiratory distress with airway obstruction: mouth then nose",
+                "Routinely in every baby",
+                "Nose then mouth in every baby",
+                "Only with meconium, always"
+            ],
+            "correct": 0,
+            "explanation": "Routine suctioning is not recommended."
         },
         {
-            q: "When should umbilical cord clamping be delayed?",
-            options: ["In all vigorous newborns", "Only if the mother requests", "If resuscitation is needed immediately", "Never"],
-            correct: 0,
-            explanation: "Delayed cord clamping (at least 1 minute) is recommended for vigorous newborns; if resuscitation is needed, clamp early to facilitate care."
+            "q": "A newborn needed PPV and is now pink and crying. What triage category?",
+            "options": [
+                "Red",
+                "Green",
+                "Yellow",
+                "No triage needed"
+            ],
+            "correct": 0,
+            "explanation": "Any newborn who needed ventilation or compressions is Red, even if improved."
         },
         {
-            q: "What is a sign of respiratory distress in a newborn?",
-            options: ["Grunting", "Nasal flaring", "Retractions", "All of the above"],
-            correct: 3,
-            explanation: "Grunting, nasal flaring, and retractions are all signs of respiratory distress."
+            "q": "Which is a sign of respiratory distress in a newborn?",
+            "options": [
+                "Grunting, nasal flaring or retractions",
+                "Acrocyanosis alone",
+                "Strong cry",
+                "Flexed limbs"
+            ],
+            "correct": 0,
+            "explanation": "Also gasping and apnea."
         },
         {
-            q: "A newborn has a heart rate of 50 bpm despite 30 seconds of effective PPV. What is the next step?",
-            options: ["Continue PPV and reassess", "Start chest compressions", "Give epinephrine", "Increase FiO₂ to 100%"],
-            correct: 1,
-            explanation: "If HR <60 bpm after 30 seconds of PPV, start chest compressions with a 3:1 ratio."
+            "q": "A newborn has a HR of 50 despite 30 seconds of effective ventilation. What next?",
+            "options": [
+                "Compressions at 3:1 with 100% oxygen",
+                "Keep ventilating and recheck in 5 minutes",
+                "Adrenaline before compressions",
+                "Reduce oxygen"
+            ],
+            "correct": 0,
+            "explanation": "HR <60: start CPR at 3:1."
         },
         {
-            q: "What is the preferred method for maintaining temperature in a stable newborn?",
-            options: ["Radiant warmer", "Kangaroo care (skin‑to‑skin)", "Warm blankets only", "Incubator"],
-            correct: 1,
-            explanation: "Kangaroo care (skin‑to‑skin with the mother) is effective for temperature maintenance and bonding."
+            "q": "Which warming method suits a well baby who needs no resuscitation?",
+            "options": [
+                "Kangaroo care (skin-to-skin with the mother)",
+                "Leave uncovered to cool",
+                "Cold towel",
+                "A fan"
+            ],
+            "correct": 0,
+            "explanation": "Skin-to-skin care is an effective warming technique when no resuscitation is needed."
         },
         {
-            q: "A newborn with meconium‑stained amniotic fluid is vigorous at birth. What should you do?",
-            options: ["Suction the trachea immediately", "Routine care, no suctioning needed", "Intubate and suction", "Give oxygen"],
-            correct: 1,
-            explanation: "For vigorous newborns, routine care is appropriate; tracheal suctioning is not recommended."
+            "q": "How should a premature newborn be wrapped?",
+            "options": [
+                "Dry towel, thermal blanket or clean plastic bag up to the neck, head covered",
+                "Leave the head uncovered",
+                "Wet towel",
+                "No wrapping until hospital"
+            ],
+            "correct": 0,
+            "explanation": "Keep the infant as warm as possible; hypothermia worsens outcomes."
         },
         {
-            q: "What is the dose of epinephrine via ETT in a newborn?",
-            options: ["0.01 mg/kg", "0.03 mg/kg", "0.05‑0.1 mg/kg", "1 mg"],
-            correct: 2,
-            explanation: "ETT dose is 0.05‑0.1 mg/kg (0.5‑1 mL/kg of 1:10,000)."
+            "q": "What target SpO₂ range applies if oxygen is needed for a long time?",
+            "options": [
+                "85%–95%",
+                "100%",
+                "70%–75%",
+                "Above 98%"
+            ],
+            "correct": 0,
+            "explanation": "Titrate to SpO₂ 85%–95%: both hypoxia and excess oxygen harm."
         },
         {
-            q: "How often should epinephrine be repeated during newborn resuscitation?",
-            options: ["Every 1 minute", "Every 3‑5 minutes", "Every 10 minutes", "Once only"],
-            correct: 1,
-            explanation: "Epinephrine may be repeated every 3‑5 minutes if HR remains <60 bpm."
+            "q": "How often is adrenaline repeated?",
+            "options": [
+                "Every 3–5 minutes while HR <60",
+                "Every minute",
+                "Once only",
+                "Every 15 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Adrenaline 0.01 mg/kg IV/IO every 3–5 minutes."
         },
         {
-            q: "What is the target SpO₂ at 10 minutes of life?",
-            options: ["75‑80%", "80‑85%", "85‑90%", "90‑95%"],
-            correct: 2,
-            explanation: "Target SpO₂ gradually rises to 85‑90% by 10 minutes after birth."
+            "q": "What SpO₂ is expected at 10 minutes?",
+            "options": [
+                "85–90%",
+                "60–65%",
+                "75–80%",
+                "100%"
+            ],
+            "correct": 0,
+            "explanation": "See the projected SpO₂ table."
         },
         {
-            q: "A preterm infant (<32 weeks) requires resuscitation. What additional measure is important?",
-            options: ["Use higher oxygen concentration", "Cover with plastic wrap to prevent heat loss", "Delayed cord clamping for 3 minutes", "Give prophylactic antibiotics"],
-            correct: 1,
-            explanation: "Preterm infants are at high risk of hypothermia; covering with plastic wrap/wrap helps maintain temperature."
+            "q": "Gestational age is uncertain in the field. What do you do?",
+            "options": [
+                "Start resuscitation",
+                "Withhold resuscitation",
+                "Wait for parental consent",
+                "Call the hospital first"
+            ],
+            "correct": 0,
+            "explanation": "If there is any doubt about gestational age, start resuscitation."
         }
     ],
-    flashcards: [
-        { category: "Initial steps", question: "What are the initial steps of newborn resuscitation?", answer: "Dry, warm, position, clear airway, stimulate." },
-        { category: "PPV indication", question: "When should positive pressure ventilation be started in a newborn?", answer: "Apnoea, gasping, or HR <100 bpm." },
-        { category: "PPV rate", question: "What is the recommended ventilation rate for PPV in a newborn?", answer: "40‑60 breaths/min." },
-        { category: "Compression indication", question: "When should chest compressions be started in a newborn?", answer: "HR <60 bpm despite 30 seconds of effective PPV." },
-        { category: "Compression ratio", question: "What is the compression‑ventilation ratio for newborn CPR?", answer: "3:1 (90 compressions : 30 breaths per minute)." },
-        { category: "Compression technique", question: "What is the preferred chest compression technique in a newborn?", answer: "Two‑thumb encircling hands technique." },
-        { category: "Oxygen initial", question: "What oxygen concentration should be used initially for PPV in a term newborn?", answer: "Room air (21%)." },
-        { category: "Oxygen titration", question: "If no improvement after 90 seconds of PPV with room air, what should you do?", answer: "Increase to 100% O₂ until HR improves." },
-        { category: "Epinephrine dose", question: "What is the IV/IO dose of epinephrine in a newborn?", answer: "0.01 mg/kg (0.1 mL/kg of 1:10,000)." },
-        { category: "Epinephrine ETT dose", question: "What is the ETT dose of epinephrine in a newborn?", answer: "0.05‑0.1 mg/kg (0.5‑1 mL/kg of 1:10,000)." },
-        { category: "Epinephrine interval", question: "How often can epinephrine be repeated?", answer: "Every 3‑5 minutes." },
-        { category: "Fluid bolus", question: "What is the fluid bolus dose for a newborn with shock?", answer: "20 mL/kg normal saline IV/IO." },
-        { category: "APGAR", question: "What does APGAR stand for?", answer: "Appearance, Pulse, Grimace, Activity, Respiration." },
-        { category: "APGAR timing", question: "When are APGAR scores assessed?", answer: "At 1 and 5 minutes after birth." },
-        { category: "Cord clamping", question: "When should umbilical cord clamping be delayed?", answer: "For at least 1 minute in vigorous newborns." },
-        { category: "Temperature", question: "How can you prevent hypothermia in a newborn?", answer: "Dry, wrap in warm blanket/plastic, cover head, use skin‑to‑skin contact." },
-        { category: "Preterm", question: "What additional measure helps prevent heat loss in preterm infants?", answer: "Cover with plastic wrap without drying." },
-        { category: "Meconium", question: "What is the management of a vigorous newborn with meconium‑stained fluid?", answer: "Routine care; no suctioning needed." },
-        { category: "SpO₂ targets", question: "What is the target SpO₂ at 1 minute of life?", answer: "60‑65%." },
-        { category: "SpO₂ targets", question: "What is the target SpO₂ at 5 minutes of life?", answer: "80‑85%." },
-        { category: "SpO₂ probe", question: "Where should the SpO₂ probe be placed in a newborn?", answer: "Right hand (pre‑ductal)." },
-        { category: "HR indicator", question: "What is the most reliable indicator of effective resuscitation?", answer: "Increase in heart rate." },
-        { category: "Gestational age", question: "At what gestational age is resuscitation not routinely recommended?", answer: "<22 weeks." },
-        { category: "Airway adjuncts", question: "What airway adjuncts can be used in a newborn?", answer: "OPA, NPA, laryngeal mask, endotracheal tube." },
-        { category: "Resuscitation sequence", question: "What is the resuscitation sequence mnemonic?", answer: "Dry, Warm, Stimulate – Ventilate – Evaluate – Resuscitate." },
-        { category: "Acrocyanosis", question: "What is acrocyanosis and is it normal?", answer: "Bluish discolouration of hands and feet; normal in the first hours." },
-        { category: "Central cyanosis", question: "What does central cyanosis indicate?", answer: "Hypoxia; requires intervention." },
-        { category: "Kangaroo care", question: "What is kangaroo care?", answer: "Skin‑to‑skin contact with the mother for warmth and bonding." },
-        { category: "Placenta", question: "If the placenta is delivered, what should you do with it?", answer: "Place in a biohazard bag and transport with the newborn." },
-        { category: "KPI", question: "What is a key performance indicator for newborn resuscitation?", answer: "Chest compressions started within 30 seconds of HR <60 bpm." }
+    "flashcards": [
+        {
+            "question": "First steps for a newborn who is not vigorous",
+            "answer": "Warm, position the airway, gentle suction if needed (mouth then nose), dry, stimulate; consider ALS back-up."
+        },
+        {
+            "question": "Indications for PPV",
+            "answer": "Apnea, gasping or HR <100/min."
+        },
+        {
+            "question": "PPV rate",
+            "answer": "40–60 breaths per minute."
+        },
+        {
+            "question": "Compression trigger",
+            "answer": "HR <60/min despite ventilation."
+        },
+        {
+            "question": "Compression ratio",
+            "answer": "3:1 compressions to ventilations."
+        },
+        {
+            "question": "Compression technique",
+            "answer": "Two-thumb-encircling-hands."
+        },
+        {
+            "question": "Starting gas for PPV",
+            "answer": "Room air for 90 seconds; do not add oxygen initially."
+        },
+        {
+            "question": "No improvement after 90 seconds",
+            "answer": "Change to 100% FiO₂ until the heart rate normalises."
+        },
+        {
+            "question": "Adrenaline dose",
+            "answer": "0.01 mg/kg IV/IO every 3–5 minutes while HR <60 bpm."
+        },
+        {
+            "question": "Heart rate re-evaluation",
+            "answer": "Every 30 seconds."
+        },
+        {
+            "question": "Fluid bolus",
+            "answer": "20 mL/kg normal saline IV/IO for shock or post-resuscitation care."
+        },
+        {
+            "question": "APGAR",
+            "answer": "Appearance, pulse, grimace, activity, respirations; each scored 2, 1 or 0; at 1 and 5 minutes."
+        },
+        {
+            "question": "APGAR pulse scores",
+            "answer": ">100 bpm = 2; <100 bpm = 1; absent = 0."
+        },
+        {
+            "question": "Cord cutting in resuscitation",
+            "answer": "Clamp at 10 cm, 15 cm and 20 cm; cut between the two clamps furthest from the baby."
+        },
+        {
+            "question": "Preventing hypothermia",
+            "answer": "Dry thoroughly, cover the head, wrap in a dry towel, thermal blanket or plastic bag up to the neck."
+        },
+        {
+            "question": "Kangaroo care",
+            "answer": "Skin-to-skin with the mother, wrapped together; for babies who need no resuscitation."
+        },
+        {
+            "question": "Suctioning",
+            "answer": "Only for respiratory distress with airway obstruction: mouth then nose. Not routine."
+        },
+        {
+            "question": "SpO₂ at 1 minute",
+            "answer": "60–65%."
+        },
+        {
+            "question": "SpO₂ at 5 minutes",
+            "answer": "80–85%."
+        },
+        {
+            "question": "SpO₂ probe site",
+            "answer": "Right hand."
+        },
+        {
+            "question": "Most reliable sign of effective resuscitation",
+            "answer": "Rising heart rate."
+        },
+        {
+            "question": "Limits of viability in this CPG",
+            "answer": "<23 weeks: comfort care may follow parental wishes. <22 weeks: avoid routine resuscitation unless wishes and judgement indicate otherwise."
+        },
+        {
+            "question": "Airway adjuncts",
+            "answer": "OPA, NPA, endotracheal tube or supraglottic airway."
+        },
+        {
+            "question": "Resuscitation sequence",
+            "answer": "Dry, warm and stimulate – ventilate – evaluate – resuscitate."
+        },
+        {
+            "question": "Acrocyanosis",
+            "answer": "Blue hands and feet: common in transition. Distinguish from central cyanosis."
+        },
+        {
+            "question": "Heart rate measurement",
+            "answer": "Auscultate the precordium (preferred), or umbilical stump or brachial pulse."
+        },
+        {
+            "question": "Oxygen target for prolonged use",
+            "answer": "SpO₂ 85%–95%."
+        },
+        {
+            "question": "Placenta",
+            "answer": "Biohazard bag, transported with the patient."
+        },
+        {
+            "question": "Triage after resuscitation",
+            "answer": "Red, even if the baby improved."
+        },
+        {
+            "question": "KPI",
+            "answer": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_4_6_1",
-            scenario: "You are called to a home birth. The newborn is apnoeic, limp, and cyanotic. Heart rate is 50 bpm. What is your first action?",
-            question: "What should you do first?",
-            options: [
-                { t: "Start chest compressions immediately", f: "Not yet; first provide ventilation." },
-                { t: "Dry, warm, stimulate, and initiate PPV with room air", f: "Correct. Initial steps include drying, warming, positioning, and starting PPV." },
-                { t: "Give epinephrine 0.01 mg/kg", f: "Epinephrine is given if HR remains <60 after ventilation." },
-                { t: "Suction the airway vigorously", f: "Routine suction is not recommended; only if obvious obstruction." }
+            "id": "crit_4_6_1",
+            "scenario": "At a home birth the baby is limp, apneic and blue. After drying, warming and stimulating there is still no breathing and the heart rate is 80/min.",
+            "question": "What do you start?",
+            "options": [
+                {
+                    "t": "PPV with room air at 40–60 breaths per minute, SpO₂ on the right hand, ECG",
+                    "f": "Correct. Apnea with HR <100: ventilate with room air."
+                },
+                {
+                    "t": "Compressions at 3:1",
+                    "f": "Compressions start only when HR is <60."
+                },
+                {
+                    "t": "100% oxygen by facemask, no ventilation",
+                    "f": "An apneic baby needs PPV; start with room air."
+                },
+                {
+                    "t": "Adrenaline",
+                    "f": "Ventilation is the key intervention."
+                }
             ],
-            correct: 1,
-            explanation: "For a newborn with apnoea and HR <100, start PPV with room air after initial steps. Reassess HR after 30 seconds.",
-            kpi: "PPV initiated within 1 minute."
+            "correct": 0,
+            "explanation": "Apnea, gasping or HR <100/min: PPV with room air for 90 seconds, re-evaluating the HR every 30 seconds.",
+            "kpi": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
         },
         {
-            id: "crit_4_6_2",
-            scenario: "A newborn has been receiving PPV for 30 seconds. Heart rate remains 50 bpm. What is your next action?",
-            question: "What should you do now?",
-            options: [
-                { t: "Continue PPV and reassess in another 30 seconds", f: "No improvement; need to escalate." },
-                { t: "Start chest compressions with 3:1 ratio", f: 'Correct. HR <60 despite 30 seconds PPV <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#arrow-right"/></svg> start compressions.' },
-                { t: "Increase FiO₂ to 100%", f: "Compressions are the priority; oxygen can be increased simultaneously." },
-                { t: "Give epinephrine 0.01 mg/kg IV", f: "Epinephrine is given after compressions are started if no response." }
+            "id": "crit_4_6_2",
+            "scenario": "After 30 seconds of good-quality ventilation with visible chest rise, the newborn's heart rate is 50/min.",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Compressions at 3:1 (two-thumb technique) with 100% oxygen",
+                    "f": "Correct. HR <60: start CPR."
+                },
+                {
+                    "t": "Keep ventilating and recheck in 5 minutes",
+                    "f": "HR <60 needs compressions within 30 seconds."
+                },
+                {
+                    "t": "Adrenaline before compressions",
+                    "f": "Compressions first; adrenaline if HR stays <60."
+                },
+                {
+                    "t": "15:2 compressions",
+                    "f": "Newborns use 3:1."
+                }
             ],
-            correct: 1,
-            explanation: "If HR remains <60 after 30 seconds of effective PPV, begin chest compressions at a 3:1 ratio.",
-            kpi: "Chest compressions started within 30 seconds of indicated HR."
+            "correct": 0,
+            "explanation": "HR <60/min: CPR at 3:1, 100% oxygen, consider intubation or a supraglottic airway, IV/IO access.",
+            "kpi": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
         },
         {
-            id: "crit_4_6_3",
-            scenario: "A newborn is in cardiac arrest. Chest compressions and PPV are ongoing. IV access is obtained. HR remains 40 bpm. What medication should be given?",
-            question: "What is the next step?",
-            options: [
-                { t: "Epinephrine 0.01 mg/kg IV", f: "Correct. Give epinephrine every 3‑5 minutes if HR <60." },
-                { t: "Sodium bicarbonate", f: "Not routinely indicated." },
-                { t: "Atropine", f: "Not indicated in newborn resuscitation." },
-                { t: "Amiodarone", f: "Not indicated." }
+            "id": "crit_4_6_3",
+            "scenario": "Compressions and ventilation with 100% oxygen continue and an IO is in. The heart rate remains 40/min.",
+            "question": "Which drug and dose?",
+            "options": [
+                {
+                    "t": "Adrenaline 0.01 mg/kg IV/IO, repeat every 3–5 minutes while HR <60",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adrenaline 0.1 mg/kg IV/IO",
+                    "f": "Ten times the newborn dose."
+                },
+                {
+                    "t": "Atropine",
+                    "f": "Not in this CPG."
+                },
+                {
+                    "t": "No drugs in newborns",
+                    "f": "Adrenaline is given for persistent HR <60."
+                }
             ],
-            correct: 0,
-            explanation: "Epinephrine 0.01 mg/kg IV/IO is indicated for HR <60 despite compressions and ventilation.",
-            kpi: "Epinephrine given within 3 minutes of arrest."
+            "correct": 0,
+            "explanation": "Adrenaline 0.01 mg/kg IV/IO every 3–5 minutes; 20 mL/kg normal saline for signs of shock; check glucose.",
+            "kpi": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
         },
         {
-            id: "crit_4_6_4",
-            scenario: "A preterm infant (28 weeks) is born limp and with poor respiratory effort. What is a critical additional consideration?",
-            question: "What is important to remember for this preterm infant?",
-            options: [
-                { t: "Use higher initial oxygen concentration", f: "No, start with room air." },
-                { t: "Wrap the infant in plastic wrap without drying to prevent hypothermia", f: "Correct. Preterm infants lose heat rapidly; use plastic wrap." },
-                { t: "Delayed cord clamping for 3 minutes", f: "May not be possible if resuscitation needed." },
-                { t: "Give surfactant immediately", f: "Not in prehospital setting." }
+            "id": "crit_4_6_4",
+            "scenario": "A preterm baby is born limp with weak breathing. The parents are unsure of the dates.",
+            "question": "What is your approach?",
+            "options": [
+                {
+                    "t": "Start resuscitation; wrap in a plastic bag up to the neck, cover the head, keep warm",
+                    "f": "Correct. Doubt about gestational age means resuscitate, and preterm babies lose heat fast."
+                },
+                {
+                    "t": "Withhold resuscitation until gestation is known",
+                    "f": "Any doubt: start resuscitation."
+                },
+                {
+                    "t": "Leave uncovered for assessment",
+                    "f": "Hypothermia worsens outcomes."
+                },
+                {
+                    "t": "Start with 100% oxygen by facemask",
+                    "f": "Ventilate with room air first if apneic or HR <100."
+                }
             ],
-            correct: 1,
-            explanation: "Preterm infants are at high risk of hypothermia; covering with plastic wrap (without drying) helps maintain temperature.",
-            kpi: "Temperature management initiated immediately."
+            "correct": 0,
+            "explanation": "If gestational age is in doubt, resuscitate. Routine resuscitation is avoided only below 22 weeks, guided by parental wishes and judgement.",
+            "kpi": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
         },
         {
-            id: "crit_4_6_5",
-            scenario: "A newborn was delivered with meconium‑stained amniotic fluid. The infant is vigorous, with good tone, heart rate >100, and spontaneous breathing. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Intubate and suction the trachea", f: "Not indicated for vigorous infants." },
-                { t: "Provide routine care; no suctioning needed", f: "Correct. Routine care includes drying, warming, and monitoring." },
-                { t: "Suction the mouth and nose vigorously", f: "Routine suction is not recommended." },
-                { t: "Start PPV with 100% oxygen", f: "Not indicated." }
+            "id": "crit_4_6_5",
+            "scenario": "A term baby is born through meconium-stained fluid. She cries vigorously, has good tone and a heart rate over 100.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Routine care as per the Childbirth CPG; no suctioning",
+                    "f": "Correct. Term, good tone, breathing or crying: no resuscitation needed."
+                },
+                {
+                    "t": "Suction mouth and nose routinely",
+                    "f": "Routine suctioning is not recommended."
+                },
+                {
+                    "t": "Intubate and suction the trachea",
+                    "f": "Not indicated in a vigorous baby."
+                },
+                {
+                    "t": "Start PPV",
+                    "f": "She is breathing well."
+                }
             ],
-            correct: 1,
-            explanation: "For vigorous newborns with meconium, routine care is appropriate; tracheal suctioning is not recommended.",
-            kpi: "Appropriate non‑intervention."
+            "correct": 0,
+            "explanation": "Suction only for respiratory distress with airway obstruction. Keep her warm; skin-to-skin care is ideal.",
+            "kpi": "Compressions and ventilation within 30 seconds of HR falling below 60 bpm."
         }
     ]
 };

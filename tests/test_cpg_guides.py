@@ -39,7 +39,7 @@ SKIP_KEYS = {
 
 UNITS = (
     r"mcg/kg/min|mg/kg|mcg/min|mcg|mg|ml|l/min|breaths/min|/min|bpm|mmhg|°c|%|j|cm|"
-    r"minutes|minute|seconds|weeks|years|st|nd|rd|th"
+    r"minute|second|hour|week|year|st|nd|rd|th"
 )
 NUMBER = re.compile(
     r"(?<![a-z0-9.])(\d+(?:\.\d+)?(?:\s*-\s*\d+(?:\.\d+)?)?)(?:\s*(" + UNITS + r")(?![a-z]))?"
@@ -47,7 +47,9 @@ NUMBER = re.compile(
 
 
 def unify(text: str) -> str:
-    return re.sub(r"[‐-―−]", "-", text.lower())
+    text = re.sub(r"[‐-―−]", "-", text.lower())
+    # "60 seconds" and the PDF's "60second" are the same value.
+    return re.sub(r"\b(second|minute|hour|week|year)s\b", r"\1", text)
 
 
 def page_text(text: str) -> str:

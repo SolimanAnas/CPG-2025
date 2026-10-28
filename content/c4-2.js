@@ -1,400 +1,813 @@
-/* ========== Chapter 4.2 – Pediatric Basic Life Support ========== */
+/* ========== CPG 4.2 – Pediatric Basic Life Support ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c4-2",
-    title: "Pediatric Basic Life Support",
-    shortTitle: "4.2 Pediatric BLS",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#baby"/></svg> Pediatric Basic Life Support (BLS)</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Promptly recognize cardiac arrest in infants and children: unresponsiveness, abnormal or absent breathing, absence of a pulse or inadequate perfusion.</li>
-                <li>Provide immediate, high‑quality chest compressions and effective ventilations with minimal interruptions.</li>
-                <li>Use defibrillation promptly when indicated (shockable rhythms).</li>
-                <li>Maintain normoxia and avoid hyperventilation.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Infants and children ≤13 years found unresponsive, not breathing normally, and/or pulseless.</li>
-                <li>Infants and children with inadequate circulation requiring BLS interventions.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Obvious signs of irreversible death (rigor mortis, dependent lividity, decapitation).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Scene safety & initial impression:</strong> Confirm scene safety. Assess responsiveness using tactile and verbal stimuli. Use the Pediatric Assessment Triangle (PAT): Appearance, Work of Breathing, Circulation to Skin.</li>
-                <li><strong>Breathing assessment:</strong> Check for normal breathing (no more than 10 seconds). Gasping is not normal breathing.</li>
-                <li><strong>Circulation:</strong> Check central pulse (carotid in children >1 year, brachial in infants <1 year) within 10 seconds. If no pulse or HR <60 bpm with poor perfusion despite oxygenation and ventilation, begin chest compressions.</li>
-                <li><strong>Triage category:</strong> All unconscious patients and patients in cardiac arrest are Red Priority.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Check responsiveness</strong> – tap and shout.</li>
-                <li><strong>Request ALS back‑up</strong> – specify "pediatric cardiac arrest" and confirm ETA.</li>
-                <li><strong>Retrieve emergency equipment</strong> – first rescuer stays with patient, second retrieves AED and emergency equipment.</li>
-                <li><strong>Primary survey (C‑A‑B):</strong>
-                    <ul>
-                        <li><strong>Circulation:</strong> Start chest compressions immediately if no pulse felt within 10 seconds.
-                            <ul>
-                                <li>Depth: at least 1/3 anterior‑posterior chest diameter (~4 cm in infants, ~5 cm in children).</li>
-                                <li>Rate: 100‑120/min.</li>
-                                <li>Allow full chest recoil.</li>
-                                <li>Minimise interruptions (<10 seconds).</li>
-                                <li>Compression:ventilation ratio: single rescuer 30:2; two or more rescuers 15:2.</li>
-                                <li>Rotate compressors every 2 minutes if possible.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Airway:</strong> Open airway (head‑tilt/chin‑lift if no trauma; jaw‑thrust if trauma suspected). Use OPA/NPA when available. Supraglottic airways (laryngeal tubes) should be routinely placed when available.</li>
-                        <li><strong>Breathing:</strong> Provide 2 effective breaths after every set of compressions. Use BVM with 100% oxygen as soon as available. Target SpO₂ ≥94% (avoid hyperoxia). Maintain EtCO₂ 35‑45 mmHg if monitored. Consider advanced airway management if supraglottic airway provides inadequate ventilation or there is excessive secretion/vomit.</li>
-                    </ul>
-                </li>
-                <li><strong>Defibrillation:</strong> Attach AED or manual defibrillator as soon as available. Use pediatric pads if available; otherwise use adult pads. For shockable rhythms (VF/pVT):
-                    <ul>
-                        <li>First shock: 2 J/kg.</li>
-                        <li>Subsequent shocks: 4 J/kg, up to max 10 J/kg (not exceeding adult dose).</li>
-                        <li>Resume CPR immediately after shock.</li>
-                    </ul>
-                </li>
-                <li><strong>IV/IO access:</strong> Obtain IV access; if not readily available or may be delayed, consider IO access.</li>
-                <li><strong>Medications:</strong>
-                    <ul>
-                        <li>Epinephrine (adrenaline): 0.01 mg/kg (1:10,000) IV/IO every 3‑5 minutes. If no IV/IO access, via ETT at 0.03 mg/kg.</li>
-                        <li>Amiodarone (refractory VF/pVT): 5 mg/kg IV/IO after 3rd shock; repeat 5 mg/kg after 5th shock.</li>
-                    </ul>
-                </li>
-                <li><strong>Check blood glucose</strong> – treat hypoglycaemia if present (Hypoglycaemia CPG).</li>
-                <li><strong>Consider reversible causes (4 Hs & 4 Ts):</strong> Hypoxia, hypovolemia, hypothermia, hypo/hyperkalemia, tension pneumothorax, tamponade, toxins, thrombosis.</li>
-                <li><strong>Reassess for ROSC</strong> – check pulse every 2 minutes.</li>
-                <li><strong>Transfer:</strong> All pediatric cardiac arrest patients must be transported to hospital. See Starting, Stopping or Transferring CPR CPG for guidance on transferring under CPR.</li>
-            </ul>
-
-            <h4>Special Considerations</h4>
-            <ul>
-                <li><strong>Defibrillation with Lifepak 15:</strong> Pediatric pads in AED mode do not adjust joules appropriately – use manual mode and select appropriate Joules (2 J/kg then 4 J/kg).</li>
-                <li><strong>Equipment:</strong> Always use appropriate‑sized equipment; Broselow tape is recommended to quickly estimate weight and select correct equipment sizes and medication doses.</li>
-                <li><strong>Team coordination:</strong> Communicate clearly and assign roles during resuscitation.</li>
-                <li><strong>If ALS back‑up is delayed:</strong> Maintain effective CPR and consider transport if hospital is closer.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Avoid over‑ventilation or excessive oxygenation.</li>
-                <li>Use correct compression depth and rate.</li>
-                <li>Defibrillate promptly if indicated; avoid delays.</li>
-                <li>Rotate compressors to prevent fatigue.</li>
-                <li>Protect airway and cervical spine if trauma suspected.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification: name, age, sex, estimated weight.</li>
-                <li>Medical complaint: pediatric cardiac arrest – specify if witnessed/unwitnessed.</li>
-                <li>Information: relevant history (trauma, drowning, pre‑existing conditions).</li>
-                <li>Signs: initial and ongoing HR, rhythm, SpO₂, EtCO₂, skin color, responsiveness.</li>
-                <li>Treatment: CPR start time, quality (rate/depth), defibrillation (number, energy), airway interventions, oxygen, glucose, medications.</li>
-                <li>Allergies: any known allergies.</li>
-                <li>Medications: any medications administered.</li>
-                <li>Background: medical history if available, time of collapse, bystander CPR.</li>
-                <li>Other: name & role of receiving hospital staff.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Initiate CPR within 1 minute of recognition of cardiac arrest.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c4-2",
+    "title": "Pediatric Basic Life Support",
+    "shortTitle": "4.2 Pediatric BLS",
+    "guide": {
+        "cpg": "4.2",
+        "group": "resus",
+        "groupLabel": "Resuscitation",
+        "title": "Pediatric Basic Life Support",
+        "lead": "Children usually arrest from respiratory failure or shock, so oxygenation and ventilation come first. Compress one third of the chest depth at 100–120/min, use 15:2 with two rescuers, and get the AED on early.",
+        "source": {
+            "label": "CPG 4.2",
+            "pages": "97–100",
+            "pdf": "../pdf_sections/4_2_Pediatric_Basic_Life_Support.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Infants and children ≤13 years who are unresponsive, not breathing normally and/or pulseless (the flowchart title says &lt;13 years).",
+                    "Infants and children with inadequate circulation needing BLS."
+                ],
+                "exclude": [
+                    "Obvious irreversible death (rigor mortis, dependent lividity, decapitation)."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "BLS sequence",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Scene safety and responsiveness",
+                        "text": "Tactile and verbal stimuli (AVPU)."
+                    },
+                    {
+                        "title": "Request ALS back-up",
+                        "text": "Within 5 minutes of arrival if not already activated. Say \"pediatric cardiac arrest\" and confirm the ALS ETA. The second rescuer brings the defibrillator and equipment."
+                    },
+                    {
+                        "title": "Airway, breathing and pulse together",
+                        "text": "Head-tilt/chin-lift, or jaw thrust if trauma is suspected. Check breathing (gasping is not normal) and a central pulse within 10 seconds: carotid over 1 year, brachial under 1 year."
+                    },
+                    {
+                        "title": "No breathing or only gasping, no pulse: CPR",
+                        "level": "EMR",
+                        "text": "1 rescuer 30:2; 2 or more rescuers 15:2. Also start compressions if the heart rate is &lt;60 bpm with poor perfusion despite oxygenation and ventilation."
+                    },
+                    {
+                        "title": "Defibrillator",
+                        "level": "EMR",
+                        "text": "As soon as available; follow the AED. Shock advised: 1 shock, then CPR for 2 minutes. Not shockable: CPR immediately for 2 minutes."
+                    },
+                    {
+                        "title": "Blood glucose",
+                        "text": "Check during resuscitation; treat hypoglycemia as per the Hypoglycemia CPG."
+                    },
+                    {
+                        "title": "Continue until ALS arrives",
+                        "text": "Check for ROSC (spontaneous pulse, normal breathing) every 2 minutes. If ALS is delayed and hospital is near, consider transport with effective CPR."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Other findings",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "No normal breathing, pulse felt",
+                        "items": [
+                            "Rescue breathing: 1 breath every 2–3 seconds (20–30 breaths/min).",
+                            "Check the pulse every 2 minutes. No pulse, or HR &lt;60 with poor perfusion despite ventilation: start CPR.",
+                            "Possible opioid overdose: Overdose/Poisoning CPG."
+                        ]
+                    },
+                    {
+                        "title": "Normal breathing, pulse felt",
+                        "items": [
+                            "Go to the Universal Care CPG."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "High-quality pediatric CPR",
+                "icon": "activity",
+                "columns": [
+                    "",
+                    "Infant (&lt;1 year)",
+                    "Child"
+                ],
+                "rows": [
+                    [
+                        "Pulse check",
+                        "Brachial",
+                        "Carotid"
+                    ],
+                    [
+                        "Depth",
+                        "At least 1/3 chest depth (~4 cm)",
+                        "At least 1/3 chest depth (~5 cm)"
+                    ],
+                    [
+                        "Rate",
+                        "100–120/min",
+                        "100–120/min"
+                    ],
+                    [
+                        "Ratio",
+                        "30:2 (1 rescuer); 15:2 (2+)",
+                        "30:2 (1 rescuer); 15:2 (2+)"
+                    ],
+                    [
+                        "Rescue breathing (pulse present)",
+                        "1 breath every 2–3 seconds",
+                        "1 breath every 2–3 seconds"
+                    ]
+                ],
+                "notes": [
+                    "Full recoil, no leaning on the chest; interruptions under 10 seconds.",
+                    "Two effective breaths after each set of compressions; BVM with 100% oxygen as soon as available.",
+                    "Avoid hyperventilation: aim for SpO<sub>2</sub> ≥94% and EtCO<sub>2</sub> 35–45 mmHg."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Pads and safety",
+                "icon": "zap",
+                "groups": [
+                    {
+                        "title": "Pads",
+                        "items": [
+                            "Use adult pads if the child is &gt;13 years or &gt;55 kg.",
+                            "No pediatric pads available: use adult pads."
+                        ]
+                    },
+                    {
+                        "title": "Safety",
+                        "items": [
+                            "Correct depth and rate; minimal interruptions.",
+                            "Size-appropriate equipment.",
+                            "Protect the airway and cervical spine if trauma is suspected.",
+                            "Defibrillate as soon as possible for a shockable rhythm."
+                        ]
+                    },
+                    {
+                        "title": "Reversible causes (4 H's and 4 T's)",
+                        "items": [
+                            "Hypoxia, hypovolemia, hypothermia, hypo/hyperkalemia.",
+                            "Toxins, tamponade, tension pneumothorax, thrombosis."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "CPR within 1 minute of recognising cardiac arrest."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "4.1 Adult BLS",
+                        "href": "c4-1.html"
+                    },
+                    {
+                        "label": "4.4 Pediatric Cardiac Arrest",
+                        "href": "c4-4.html"
+                    },
+                    {
+                        "label": "4.6 Newborn Resuscitation",
+                        "href": "c4-6.html"
+                    },
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the compression‑ventilation ratio for single‑rescuer CPR in a child?",
-            options: ["15:2", "30:2", "20:2", "5:1"],
-            correct: 1,
-            explanation: "For single rescuer, the ratio is 30:2 for all ages (adult, child, infant)."
+            "q": "What is the compression-ventilation ratio for one rescuer in pediatric BLS?",
+            "options": [
+                "15:2",
+                "30:2",
+                "3:1",
+                "5:1"
+            ],
+            "correct": 1,
+            "explanation": "Single rescuer 30:2; two or more rescuers 15:2."
         },
         {
-            q: "What is the compression‑ventilation ratio for two‑rescuer CPR in a child?",
-            options: ["15:2", "30:2", "20:2", "5:1"],
-            correct: 0,
-            explanation: "For two rescuers, the child/infant ratio is 15:2."
+            "q": "What is the ratio with two or more rescuers?",
+            "options": [
+                "30:2",
+                "15:2",
+                "3:1",
+                "10:1"
+            ],
+            "correct": 1,
+            "explanation": "Two or more rescuers: 15:2."
         },
         {
-            q: "What is the recommended compression depth for an infant?",
-            options: ["At least 2 cm", "At least 4 cm (1.5 inches) or 1/3 chest depth", "At least 5 cm", "3‑4 cm"],
-            correct: 1,
-            explanation: "Compression depth should be at least one‑third the anterior‑posterior chest diameter, approximately 4 cm (1.5 inches) in infants."
+            "q": "What compression depth is used in infants?",
+            "options": [
+                "~2 cm",
+                "At least 1/3 of the chest depth (~4 cm)",
+                "~6 cm",
+                "Half the chest depth"
+            ],
+            "correct": 1,
+            "explanation": "At least 1/3 the anterior-posterior diameter: ~4 cm in infants, ~5 cm in children."
         },
         {
-            q: "What is the recommended compression depth for a child?",
-            options: ["At least 3 cm", "At least 5 cm (2 inches) or 1/3 chest depth", "At least 6 cm", "4‑5 cm"],
-            correct: 1,
-            explanation: "For children, compress at least one‑third the chest depth, about 5 cm (2 inches)."
+            "q": "What compression depth is used in children?",
+            "options": [
+                "~3 cm",
+                "At least 1/3 of the chest depth (~5 cm)",
+                "~7 cm",
+                "As deep as possible"
+            ],
+            "correct": 1,
+            "explanation": "~5 cm in children (at least one third of the chest depth)."
         },
         {
-            q: "What is the recommended chest compression rate for infants and children?",
-            options: ["80‑100/min", "100‑120/min", "120‑140/min", "60‑80/min"],
-            correct: 1,
-            explanation: "The compression rate for all ages is 100‑120 per minute."
+            "q": "What compression rate is used?",
+            "options": [
+                "80–100/min",
+                "100–120/min",
+                "120–140/min",
+                "60/min"
+            ],
+            "correct": 1,
+            "explanation": "100–120 per minute with full recoil."
         },
         {
-            q: "Where should you check for a pulse in an infant (<1 year)?",
-            options: ["Carotid", "Brachial", "Femoral", "Radial"],
-            correct: 1,
-            explanation: "The brachial pulse (upper arm) is the recommended site for pulse check in infants."
+            "q": "Where is the pulse checked in an infant under 1 year?",
+            "options": [
+                "Carotid",
+                "Brachial",
+                "Radial",
+                "Femoral"
+            ],
+            "correct": 1,
+            "explanation": "Brachial in infants <1 year; carotid in children >1 year."
         },
         {
-            q: "Where should you check for a pulse in a child >1 year?",
-            options: ["Carotid", "Brachial", "Femoral", "Radial"],
-            correct: 0,
-            explanation: "The carotid artery is used in children over 1 year."
+            "q": "Where is the pulse checked in a child over 1 year?",
+            "options": [
+                "Brachial",
+                "Carotid",
+                "Pedal",
+                "Temporal"
+            ],
+            "correct": 1,
+            "explanation": "Carotid in children >1 year."
         },
         {
-            q: "What is the first step when using an AED on a child?",
-            options: ["Apply pediatric pads", "Turn on the AED", "Check for pulse", "Start CPR"],
-            correct: 1,
-            explanation: "Turn on the AED first, then follow its prompts. CPR should be ongoing."
+            "q": "How long may the breathing and pulse check take?",
+            "options": [
+                "No more than 10 seconds",
+                "30 seconds",
+                "1 minute",
+                "As long as needed"
+            ],
+            "correct": 0,
+            "explanation": "Check breathing and pulse within 10 seconds."
         },
         {
-            q: "If pediatric pads are not available, what should you do?",
-            options: ["Do not use AED", "Use adult pads", "Wait for pediatric pads", "Use manual defibrillator only"],
-            correct: 1,
-            explanation: "If pediatric pads are not available, use adult pads, ensuring they do not overlap."
+            "q": "Is gasping normal breathing?",
+            "options": [
+                "Yes",
+                "No",
+                "Only in infants",
+                "Only after a shock"
+            ],
+            "correct": 1,
+            "explanation": "Gasping is not normal breathing."
         },
         {
-            q: "What is the initial shock energy for a child in VF/pVT?",
-            options: ["2 J/kg", "4 J/kg", "6 J/kg", "10 J/kg"],
-            correct: 0,
-            explanation: "The first shock should be 2 J/kg. Subsequent shocks are 4 J/kg, up to 10 J/kg (not exceeding adult dose)."
+            "q": "A child has a pulse of 50 with poor perfusion despite good ventilation. What do you do?",
+            "options": [
+                "Continue rescue breathing only",
+                "Start chest compressions",
+                "Shock with the AED",
+                "Wait for ALS"
+            ],
+            "correct": 1,
+            "explanation": "No pulse, or HR <60 with poor perfusion despite oxygenation and ventilation: begin compressions."
         },
         {
-            q: "After delivering a shock to a child, what should you do immediately?",
-            options: ["Check pulse", "Re‑analyze rhythm", "Resume CPR for 2 minutes", "Give epinephrine"],
-            correct: 2,
-            explanation: "Resume CPR immediately after shock, starting with compressions."
+            "q": "What is the rescue breathing rate for a child with a pulse?",
+            "options": [
+                "1 breath every 6 seconds",
+                "1 breath every 2–3 seconds (20–30 breaths/min)",
+                "1 breath every 10 seconds",
+                "40 breaths/min"
+            ],
+            "correct": 1,
+            "explanation": "Pediatric rescue breathing: 1 breath every 2–3 seconds (20–30 breaths/min)."
         },
         {
-            q: "What is the dose of epinephrine (adrenaline) for pediatric cardiac arrest?",
-            options: ["0.01 mg/kg IV/IO", "0.1 mg/kg IV/IO", "0.5 mg IV", "1 mg IV"],
-            correct: 0,
-            explanation: "Epinephrine 0.01 mg/kg (0.1 mL/kg of 1:10,000) IV/IO every 3‑5 minutes."
+            "q": "Within what time should ALS back-up be requested?",
+            "options": [
+                "Within 5 minutes of arrival if not already activated",
+                "Within 30 minutes",
+                "Only after ROSC",
+                "Never for children"
+            ],
+            "correct": 0,
+            "explanation": "Request ALS within 5 minutes of arrival, specifying 'pediatric cardiac arrest' and confirming the ETA."
         },
         {
-            q: "If IV/IO access is not available, how can epinephrine be given?",
-            options: ["IM", "SC", "Endotracheal (ETT)", "Intranasal"],
-            correct: 2,
-            explanation: "Epinephrine may be administered via ETT at a dose of 0.1 mg/kg (1:1,000) diluted in 3‑5 mL saline."
+            "q": "What should you tell dispatch when requesting ALS?",
+            "options": [
+                "Nothing extra",
+                "'Pediatric cardiac arrest', and confirm the ALS ETA",
+                "The child's school",
+                "Only the address"
+            ],
+            "correct": 1,
+            "explanation": "Specify 'pediatric cardiac arrest' and confirm the ETA."
         },
         {
-            q: "What is the dose of amiodarone for refractory VF/pVT in a child?",
-            options: ["1 mg/kg", "5 mg/kg", "10 mg/kg", "15 mg/kg"],
-            correct: 1,
-            explanation: "Amiodarone 5 mg/kg IV/IO bolus; may be repeated once."
+            "q": "No pediatric pads are available. What do you do?",
+            "options": [
+                "Do not use the AED",
+                "Use adult pads",
+                "Cut the adult pads",
+                "Wait for ALS"
+            ],
+            "correct": 1,
+            "explanation": "If no pediatric pads are available, use adult pads."
         },
         {
-            q: "What is the maximum single dose of amiodarone in a child?",
-            options: ["150 mg", "300 mg", "5 mg/kg", "No maximum"],
-            correct: 2,
-            explanation: "Dose is 5 mg/kg; maximum single dose is typically 300 mg (adult dose), but weight‑based dosing is used."
+            "q": "When are adult pads used anyway?",
+            "options": [
+                "Over 5 years",
+                "Over 13 years or over 55 kg",
+                "Over 20 kg",
+                "Never in children"
+            ],
+            "correct": 1,
+            "explanation": "Use adult pads if the patient is >13 years old or >55 kg."
         },
         {
-            q: "How often should you check for ROSC during pediatric CPR?",
-            options: ["After every shock", "Every 2 minutes", "Every 5 minutes", "Only if patient moves"],
-            correct: 1,
-            explanation: "Check for ROSC every 2 minutes (rhythm check) with minimal interruption."
+            "q": "The AED advises a shock. What after the shock?",
+            "options": [
+                "Pulse check for 30 seconds",
+                "Resume CPR immediately for 2 minutes",
+                "Second shock immediately",
+                "Stop CPR"
+            ],
+            "correct": 1,
+            "explanation": "Give 1 shock, then CPR immediately for 2 minutes until the AED prompts."
         },
         {
-            q: "What is the target SpO₂ during pediatric resuscitation?",
-            options: ["88‑92%", "94‑98%", "97‑100%", "As high as possible"],
-            correct: 1,
-            explanation: "Target SpO₂ 94‑98% to avoid both hypoxia and hyperoxia."
+            "q": "What should be checked during pediatric resuscitation besides rhythm?",
+            "options": [
+                "Temperature only",
+                "Blood glucose",
+                "Pupils only",
+                "Nothing"
+            ],
+            "correct": 1,
+            "explanation": "Check blood glucose during resuscitation; treat hypoglycemia per the Hypoglycemia CPG."
         },
         {
-            q: "What is a common cause of cardiac arrest in children?",
-            options: ["Primary cardiac", "Hypoxia from respiratory failure", "Trauma", "Drug overdose"],
-            correct: 1,
-            explanation: "Pediatric cardiac arrest is often secondary to respiratory failure or shock; hypoxia is the most common cause."
+            "q": "What is the most common cause of pediatric cardiac arrest according to the CPG?",
+            "options": [
+                "Primary heart disease",
+                "Respiratory failure or shock",
+                "Trauma only",
+                "Hyperthermia"
+            ],
+            "correct": 1,
+            "explanation": "Often secondary to respiratory failure or shock; prioritize oxygenation and ventilation."
         },
         {
-            q: "What is the Broselow tape used for?",
-            options: ["Measuring height", "Estimating weight and equipment sizes", "Determining drug allergies", "Measuring blood pressure"],
-            correct: 1,
-            explanation: "Broselow tape estimates weight based on length, guiding equipment sizes and drug doses."
+            "q": "What SpO2 do the goals aim for, avoiding hyperoxia?",
+            "options": [
+                "≥94%",
+                "100%",
+                "88–92%",
+                "≥85%"
+            ],
+            "correct": 0,
+            "explanation": "Provide just enough oxygen for SpO2 ≥94%."
         },
         {
-            q: "In a child with suspected trauma, which airway maneuver should be used?",
-            options: ["Head‑tilt/chin‑lift", "Jaw thrust", "Neck hyperextension", "OPA insertion"],
-            correct: 1,
-            explanation: "Jaw thrust without head tilt maintains cervical spine alignment."
+            "q": "What EtCO2 range do the goals aim for to avoid hyperventilation?",
+            "options": [
+                "10–20 mmHg",
+                "35–45 mmHg",
+                ">50 mmHg",
+                "20–30 mmHg"
+            ],
+            "correct": 1,
+            "explanation": "Maintain EtCO2 in the normal range (35–45 mmHg)."
         },
         {
-            q: "What is the correct initial ventilation rate for a child with a pulse but not breathing?",
-            options: ["1 breath every 2‑3 seconds (20‑30/min)", "1 breath every 5‑6 seconds (10‑12/min)", "1 breath every 6‑8 seconds", "2 breaths every 30 compressions"],
-            correct: 0,
-            explanation: "For a child with a pulse but inadequate breathing, give 1 breath every 2‑3 seconds (20‑30 breaths/min)."
+            "q": "How should the airway be opened if trauma is suspected?",
+            "options": [
+                "Head-tilt/chin-lift",
+                "Jaw thrust",
+                "Neck extension",
+                "Prone position"
+            ],
+            "correct": 1,
+            "explanation": "Jaw thrust if trauma suspected; head-tilt/chin-lift if not."
         },
         {
-            q: "How long should you take to check for a pulse in a child?",
-            options: ["5‑10 seconds", "10‑15 seconds", "At least 10 seconds", "Up to 1 minute"],
-            correct: 0,
-            explanation: "Check for a pulse for at least 5 seconds but no more than 10 seconds; if unsure, start CPR."
+            "q": "ALS is delayed and the hospital is close. What does CPG 4.2 suggest?",
+            "options": [
+                "Wait on scene regardless",
+                "Consider transport while maintaining effective CPR",
+                "Stop CPR",
+                "Call the family"
+            ],
+            "correct": 1,
+            "explanation": "If ALS is delayed and hospital is nearby, consider transport while maintaining effective CPR."
         },
         {
-            q: "What is the preferred method for chest compressions in an infant with two rescuers?",
-            options: ["Two‑finger technique", "Two‑thumb encircling hands technique", "One hand", "Heel of one hand"],
-            correct: 1,
-            explanation: "The two‑thumb encircling hands technique is preferred for two‑rescuer infant CPR as it generates better coronary perfusion."
+            "q": "Which is one of the 4 H's in CPG 4.2?",
+            "options": [
+                "Hyperthermia",
+                "Hypovolemia",
+                "Hypertension",
+                "Hyperglycemia"
+            ],
+            "correct": 1,
+            "explanation": "4 H's: hypoxia, hypovolemia, hypothermia, hypo/hyperkalemia."
         },
         {
-            q: "What is the correct ratio for chest compressions to ventilations in a newborn?",
-            options: ["3:1", "15:2", "30:2", "5:1"],
-            correct: 0,
-            explanation: "Newborn resuscitation uses a 3:1 compression‑to‑ventilation ratio."
+            "q": "Which is one of the 4 T's in CPG 4.2?",
+            "options": [
+                "Trauma",
+                "Tamponade",
+                "Tachycardia",
+                "Temperature"
+            ],
+            "correct": 1,
+            "explanation": "4 T's: toxins, tamponade, tension pneumothorax, thrombosis."
         },
         {
-            q: "A 3‑year‑old is in cardiac arrest. The AED says 'no shock advised'. What should you do?",
-            options: ["Check pulse", "Resume CPR for 2 minutes", "Give epinephrine", "Re‑analyze rhythm"],
-            correct: 1,
-            explanation: "If no shock advised, immediately resume CPR for 2 minutes, then re‑analyze."
+            "q": "How often are signs of ROSC checked?",
+            "options": [
+                "Every 30 seconds",
+                "Every 2 minutes",
+                "Every 10 minutes",
+                "Never"
+            ],
+            "correct": 1,
+            "explanation": "Every 2 minutes."
         },
         {
-            q: "What is the first step in managing a pediatric cardiac arrest?",
-            options: ["Start CPR", "Call for ALS back‑up", "Apply AED", "Give oxygen"],
-            correct: 1,
-            explanation: "After confirming unresponsiveness and apnea, call for help/ALS back‑up before starting CPR if alone? Actually sequence: check responsiveness, shout for help, start CPR. But ALS back‑up should be called as soon as possible."
+            "q": "What is the lowest clinical level for pediatric CPR and AED?",
+            "options": [
+                "EMR",
+                "EMT",
+                "P",
+                "AP"
+            ],
+            "correct": 0,
+            "explanation": "CPR and defibrillator use are marked EMR."
         },
         {
-            q: "Which of the following is a reversible cause (H's and T's) of pediatric cardiac arrest?",
-            options: ["Hypoxia", "Hyperthermia", "Bradycardia", "Tachycardia"],
-            correct: 0,
-            explanation: "Hypoxia is a common reversible cause; others include hypovolemia, hypothermia, hypo/hyperkalemia, tension pneumothorax, tamponade, toxins, thrombosis."
+            "q": "What is the maximum interruption in compressions?",
+            "options": [
+                "Under 10 seconds",
+                "20 seconds",
+                "30 seconds",
+                "1 minute"
+            ],
+            "correct": 0,
+            "explanation": "Minimize interruptions to under 10 seconds."
         },
         {
-            q: "A child with a witnessed collapse has VF. After the first shock, CPR is resumed. When should epinephrine be given?",
-            options: ["Immediately after shock", "After 2 minutes of CPR", "After the second shock", "Only if still in VF"],
-            correct: 1,
-            explanation: "Epinephrine is given after the second shock (i.e., after 2 minutes of CPR) if VF persists."
+            "q": "When should BVM with 100% oxygen be used?",
+            "options": [
+                "Only after ROSC",
+                "As soon as available",
+                "Never in infants",
+                "Only by ALS"
+            ],
+            "correct": 1,
+            "explanation": "Use BVM with 100% oxygen as soon as available."
         },
         {
-            q: "What is the correct dose of epinephrine via ETT if no IV/IO access?",
-            options: ["0.01 mg/kg", "0.1 mg/kg", "1 mg", "0.3 mg/kg"],
-            correct: 1,
-            explanation: "ETT dose is 0.1 mg/kg (1:1,000) diluted in 3‑5 mL saline."
+            "q": "What triage category is an unconscious child?",
+            "options": [
+                "Yellow",
+                "Red",
+                "Green",
+                "Depends on age"
+            ],
+            "correct": 1,
+            "explanation": "All unconscious and cardiac arrest patients are Red Priority."
         },
         {
-            q: "What is the target EtCO₂ during pediatric CPR?",
-            options: ["10‑20 mmHg", ">20 mmHg", "35‑45 mmHg", ">40 mmHg"],
-            correct: 2,
-            explanation: "During CPR, aim for EtCO₂ >10 mmHg (indicates adequate compressions). After ROSC, target 35‑45 mmHg."
+            "q": "What is the KPI of CPG 4.2?",
+            "options": [
+                "AED within 1 minute",
+                "CPR within 1 minute of recognition",
+                "ALS within 1 minute",
+                "Transport within 10 minutes"
+            ],
+            "correct": 1,
+            "explanation": "KPI: initiate CPR within 1 minute of recognising cardiac arrest."
         }
     ],
-    flashcards: [
-        { category: "CPR basics", question: "What is the compression‑ventilation ratio for single‑rescuer pediatric CPR?", answer: "30:2." },
-        { category: "CPR basics", question: "What is the compression‑ventilation ratio for two‑rescuer pediatric CPR?", answer: "15:2." },
-        { category: "CPR basics", question: "What is the recommended compression depth for an infant?", answer: "At least 1/3 chest depth (~4 cm)." },
-        { category: "CPR basics", question: "What is the recommended compression depth for a child?", answer: "At least 1/3 chest depth (~5 cm)." },
-        { category: "CPR basics", question: "What is the recommended compression rate for children?", answer: "100‑120/min." },
-        { category: "Pulse check", question: "Where do you check pulse in an infant?", answer: "Brachial artery." },
-        { category: "Pulse check", question: "Where do you check pulse in a child >1 year?", answer: "Carotid artery." },
-        { category: "Airway", question: "What airway maneuver is used in a child with suspected spinal injury?", answer: "Jaw thrust." },
-        { category: "Airway", question: "What adjunct can be used in an unconscious child to maintain airway?", answer: "OPA or NPA (size‑appropriate)." },
-        { category: "Ventilation", question: "What is the ventilation rate for a child with a pulse but not breathing?", answer: "1 breath every 2‑3 seconds (20‑30/min)." },
-        { category: "Defibrillation", question: "What is the first shock energy for a child in VF/pVT?", answer: "2 J/kg." },
-        { category: "Defibrillation", question: "What is the second shock energy for a child in VF/pVT?", answer: "4 J/kg." },
-        { category: "Defibrillation", question: "What is the maximum shock energy for a child?", answer: "10 J/kg or adult dose, whichever is lower." },
-        { category: "Defibrillation", question: "If pediatric pads are unavailable, what should you use?", answer: "Adult pads (ensure no overlap)." },
-        { category: "Medications", question: "What is the dose of epinephrine in pediatric cardiac arrest?", answer: "0.01 mg/kg IV/IO (1:10,000)." },
-        { category: "Medications", question: "What is the ETT dose of epinephrine in a child?", answer: "0.1 mg/kg (1:1,000)." },
-        { category: "Medications", question: "How often is epinephrine repeated during pediatric arrest?", answer: "Every 3‑5 minutes." },
-        { category: "Medications", question: "What is the dose of amiodarone for refractory VF/pVT in a child?", answer: "5 mg/kg IV/IO." },
-        { category: "ROSC", question: "How often should you check for ROSC during CPR?", answer: "Every 2 minutes." },
-        { category: "Monitoring", question: "What is the target SpO₂ after ROSC?", answer: "94‑98%." },
-        { category: "Monitoring", question: "What does EtCO₂ >10 mmHg indicate during CPR?", answer: "Adequate chest compressions." },
-        { category: "Reversible causes", question: "What are the 4 Hs of reversible causes?", answer: "Hypoxia, hypovolemia, hypothermia, hypo/hyperkalemia." },
-        { category: "Reversible causes", question: "What are the 4 Ts of reversible causes?", answer: "Tension pneumothorax, tamponade, toxins, thrombosis." },
-        { category: "Equipment", question: "What is the Broselow tape used for?", answer: "Estimating weight, drug doses, and equipment sizes." },
-        { category: "Technique", question: "What is the preferred two‑rescuer infant compression technique?", answer: "Two‑thumb encircling hands." },
-        { category: "Newborn", question: "What is the compression‑ventilation ratio for newborn resuscitation?", answer: "3:1." },
-        { category: "Documentation", question: "What key times should be documented in pediatric arrest?", answer: "Time of arrest, CPR start, defibrillation, ROSC." },
-        { category: "KPI", question: "What is the key performance indicator for pediatric BLS?", answer: "Initiate CPR within 1 minute of recognition." },
-        { category: "Transport", question: "Should a child in cardiac arrest be transported?", answer: "Yes, if ALS back‑up delayed and hospital nearby, or if ROSC achieved." },
-        { category: "Hypothermia", question: "How long should you check pulse in severe hypothermia?", answer: "Up to 60 seconds." }
+    "flashcards": [
+        {
+            "category": "Ratio",
+            "question": "Pediatric compression-ventilation ratio?",
+            "answer": "1 rescuer 30:2; 2 or more rescuers 15:2."
+        },
+        {
+            "category": "Depth",
+            "question": "Compression depth?",
+            "answer": "At least 1/3 of chest depth: ~4 cm infant, ~5 cm child."
+        },
+        {
+            "category": "Rate",
+            "question": "Compression rate?",
+            "answer": "100–120/min, full recoil, no leaning."
+        },
+        {
+            "category": "Pulse",
+            "question": "Pulse check site?",
+            "answer": "Brachial under 1 year; carotid over 1 year; within 10 seconds."
+        },
+        {
+            "category": "Breathing",
+            "question": "Is gasping breathing?",
+            "answer": "No: gasping is not normal breathing."
+        },
+        {
+            "category": "Bradycardia",
+            "question": "When to compress a child with a pulse?",
+            "answer": "HR <60 with poor perfusion despite oxygenation and ventilation."
+        },
+        {
+            "category": "Rescue breathing",
+            "question": "Pediatric rescue breathing rate?",
+            "answer": "1 breath every 2–3 seconds (20–30 breaths/min); pulse check every 2 minutes."
+        },
+        {
+            "category": "ALS",
+            "question": "ALS request in pediatric arrest?",
+            "answer": "Within 5 minutes of arrival; say 'pediatric cardiac arrest'; confirm ETA."
+        },
+        {
+            "category": "Pads",
+            "question": "No pediatric pads?",
+            "answer": "Use adult pads."
+        },
+        {
+            "category": "Pads",
+            "question": "When adult pads anyway?",
+            "answer": ">13 years or >55 kg."
+        },
+        {
+            "category": "AED",
+            "question": "Shock advised?",
+            "answer": "1 shock, then CPR immediately for 2 minutes until the AED prompts."
+        },
+        {
+            "category": "AED",
+            "question": "Not shockable?",
+            "answer": "Resume CPR immediately for 2 minutes."
+        },
+        {
+            "category": "Glucose",
+            "question": "Glucose in pediatric arrest?",
+            "answer": "Check during resuscitation; treat hypoglycemia per the Hypoglycemia CPG."
+        },
+        {
+            "category": "Causes",
+            "question": "Usual cause of pediatric arrest?",
+            "answer": "Respiratory failure or shock: prioritize oxygenation and ventilation."
+        },
+        {
+            "category": "Causes",
+            "question": "4 H's?",
+            "answer": "Hypoxia, hypovolemia, hypothermia, hypo/hyperkalemia."
+        },
+        {
+            "category": "Causes",
+            "question": "4 T's?",
+            "answer": "Toxins, tamponade, tension pneumothorax, thrombosis."
+        },
+        {
+            "category": "Ventilation",
+            "question": "Ventilation targets?",
+            "answer": "Avoid hyperventilation; SpO2 ≥94%; EtCO2 35–45 mmHg."
+        },
+        {
+            "category": "Ventilation",
+            "question": "Breaths during CPR?",
+            "answer": "2 effective breaths after each set of compressions; BVM with 100% oxygen as soon as available."
+        },
+        {
+            "category": "Airway",
+            "question": "Opening the airway?",
+            "answer": "Head-tilt/chin-lift; jaw thrust if trauma suspected."
+        },
+        {
+            "category": "ROSC",
+            "question": "ROSC checks?",
+            "answer": "Spontaneous pulse, normal breathing; every 2 minutes."
+        },
+        {
+            "category": "Transport",
+            "question": "ALS delayed, hospital near?",
+            "answer": "Consider transport while maintaining effective CPR."
+        },
+        {
+            "category": "Scope",
+            "question": "Level for pediatric CPR and AED?",
+            "answer": "EMR and above."
+        },
+        {
+            "category": "Inclusion",
+            "question": "Who is included in CPG 4.2?",
+            "answer": "Infants and children ≤13 (title: <13) who are unresponsive, not breathing normally and/or pulseless, or with inadequate circulation."
+        },
+        {
+            "category": "Exclusion",
+            "question": "Who is excluded?",
+            "answer": "Obvious irreversible death."
+        },
+        {
+            "category": "Safety",
+            "question": "Safety points?",
+            "answer": "Avoid over-ventilation; correct depth and rate; minimal pauses; right-sized equipment; protect airway and C-spine in trauma."
+        },
+        {
+            "category": "Interruptions",
+            "question": "Maximum pause in compressions?",
+            "answer": "Under 10 seconds."
+        },
+        {
+            "category": "Opioids",
+            "question": "Possible opioid overdose with a pulse?",
+            "answer": "Overdose/Poisoning CPG."
+        },
+        {
+            "category": "Triage",
+            "question": "Triage?",
+            "answer": "Unconscious and cardiac arrest patients are Red Priority."
+        },
+        {
+            "category": "Teamwork",
+            "question": "Team point in the clinical insights?",
+            "answer": "Clear communication and delegation of tasks."
+        },
+        {
+            "category": "KPI",
+            "question": "CPG 4.2 KPI?",
+            "answer": "CPR within 1 minute of recognising cardiac arrest."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_4_2_1",
-            scenario: "You are called to a 2‑year‑old child found unresponsive by parents. Bystander CPR is in progress. On arrival, the child is not breathing and has no pulse. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Check for a pulse for 20 seconds", f: "Prolonged pulse check delays CPR." },
-                { t: "Take over CPR and request ALS back‑up", f: "Correct. Continue high‑quality CPR (15:2 if two rescuers) and send someone to get AED." },
-                { t: "Give two rescue breaths", f: "Breaths are part of the cycle, but compressions should not be delayed." },
-                { t: "Apply AED pads", f: "Apply AED as soon as available, but CPR must continue without interruption." }
+            "id": "crit_4_2_1",
+            "scenario": "A 2-year-old is found unresponsive and not breathing. You cannot feel a carotid pulse within 10 seconds. You are alone; your partner is fetching the bag.",
+            "question": "What do you start?",
+            "options": [
+                {
+                    "t": "CPR at 30:2, compressions at least 1/3 chest depth (~5 cm), 100–120/min",
+                    "f": "Correct. A single rescuer uses 30:2."
+                },
+                {
+                    "t": "CPR at 15:2",
+                    "f": "15:2 is for two or more rescuers."
+                },
+                {
+                    "t": "Rescue breathing only",
+                    "f": "There is no pulse: start CPR."
+                },
+                {
+                    "t": "Wait for your partner before doing anything",
+                    "f": "Start CPR now; KPI is within 1 minute."
+                }
             ],
-            correct: 1,
-            explanation: "Continue high‑quality CPR, rotate compressors every 2 minutes, and apply AED as soon as it arrives. Request ALS back‑up immediately.",
-            kpi: "CPR continued without interruption; AED applied within 3 minutes."
+            "correct": 0,
+            "explanation": "No breathing (or gasping) and no pulse: start CPR. Single rescuer 30:2, switching to 15:2 when your partner joins. Defibrillator as soon as available.",
+            "kpi": "CPR within 1 minute of recognising cardiac arrest."
         },
         {
-            id: "crit_4_2_2",
-            scenario: "A 6‑month‑old infant is in cardiac arrest. Two rescuers are present. What is the correct compression‑ventilation ratio and compression technique?",
-            question: "What ratio and technique should be used?",
-            options: [
-                { t: "30:2 with two‑finger technique", f: "30:2 is for single rescuer." },
-                { t: "15:2 with two‑thumb encircling hands technique", f: "Correct. Two‑rescuer infant CPR uses 15:2 ratio and two‑thumb encircling technique." },
-                { t: "15:2 with two‑finger technique", f: "Two‑finger is less effective for two rescuers." },
-                { t: "30:2 with two‑thumb technique", f: "Ratio is wrong for two rescuers." }
+            "id": "crit_4_2_2",
+            "scenario": "A 6-month-old is not breathing normally. A brachial pulse is present at 50 bpm and the baby is mottled and floppy despite good BVM ventilation with oxygen.",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Start chest compressions (15:2 with two rescuers)",
+                    "f": "Correct. HR <60 with poor perfusion despite oxygenation and ventilation means compressions."
+                },
+                {
+                    "t": "Rescue breathing only and recheck in 10 minutes",
+                    "f": "Recheck every 2 minutes; with HR <60 and poor perfusion, compress now."
+                },
+                {
+                    "t": "Shock with the AED",
+                    "f": "Follow the AED; first start CPR."
+                },
+                {
+                    "t": "Transport without CPR",
+                    "f": "Start compressions."
+                }
             ],
-            correct: 1,
-            explanation: "For two‑rescuer infant CPR, use 15:2 ratio and the two‑thumb encircling hands technique for compressions.",
-            kpi: "Correct ratio and technique used."
+            "correct": 0,
+            "explanation": "If no pulse, or HR <60 bpm with poor perfusion despite oxygenation and ventilation, begin chest compressions.",
+            "kpi": "CPR within 1 minute of recognising cardiac arrest."
         },
         {
-            id: "crit_4_2_3",
-            scenario: "You are resuscitating a 4‑year‑old in cardiac arrest. The AED arrives and you apply pads. The AED analyzes and advises a shock. After delivering the shock, what is your immediate next action?",
-            question: "What should you do immediately after the shock?",
-            options: [
-                { t: "Check for a pulse", f: "Resume CPR first; pulse check can wait." },
-                { t: "Give epinephrine", f: "Not yet; resume CPR." },
-                { t: "Resume CPR for 2 minutes", f: "Correct. Immediately resume CPR, starting with compressions." },
-                { t: "Re‑analyze rhythm", f: "AED will prompt re‑analysis after 2 minutes of CPR." }
+            "id": "crit_4_2_3",
+            "scenario": "A 4-year-old is in cardiac arrest. The defibrillator arrives but there are no pediatric pads.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Use adult pads and follow the AED",
+                    "f": "Correct. If no pediatric pads are available, use adult pads."
+                },
+                {
+                    "t": "Do not defibrillate",
+                    "f": "Defibrillate as soon as possible when shockable."
+                },
+                {
+                    "t": "Wait for ALS to bring pediatric pads",
+                    "f": "Use adult pads now."
+                },
+                {
+                    "t": "Cut the adult pads smaller",
+                    "f": "Use adult pads as they are."
+                }
             ],
-            correct: 2,
-            explanation: "After any shock, immediately resume CPR for 2 minutes (starting with compressions) before re‑analyzing rhythm.",
-            kpi: "CPR resumed within 10 seconds of shock."
+            "correct": 0,
+            "explanation": "Apply the AED as soon as available; use adult pads if pediatric pads are not available (and routinely for >13 years or >55 kg).",
+            "kpi": "CPR within 1 minute of recognising cardiac arrest."
         },
         {
-            id: "crit_4_2_4",
-            scenario: "A 3‑year‑old child is in cardiac arrest with a shockable rhythm. After the second shock, IV access is obtained. What medication should be given next?",
-            question: "What is the appropriate medication and dose?",
-            options: [
-                { t: "Epinephrine 0.01 mg/kg IV", f: "Correct. Epinephrine is given after the second shock." },
-                { t: "Amiodarone 5 mg/kg IV", f: "Amiodarone is given after the third shock." },
-                { t: "Atropine 0.02 mg/kg", f: "Not indicated in cardiac arrest." },
-                { t: "Sodium bicarbonate", f: "Not routinely indicated." }
+            "id": "crit_4_2_4",
+            "scenario": "A 5-year-old is in cardiac arrest after a drowning. The AED says no shock advised.",
+            "ecg": "asystole",
+            "question": "What should you prioritise?",
+            "options": [
+                {
+                    "t": "Resume CPR at once, with effective ventilation and oxygen; check glucose; consider transport if ALS is delayed and hospital is near",
+                    "f": "Correct. Pediatric arrest is often respiratory: prioritize oxygenation and ventilation."
+                },
+                {
+                    "t": "Compressions only, no breaths",
+                    "f": "Children need effective ventilations."
+                },
+                {
+                    "t": "Stop: no shock means no hope",
+                    "f": "Continue CPR until ALS arrives."
+                },
+                {
+                    "t": "Hyperventilate to clear CO2",
+                    "f": "Avoid hyperventilation; target EtCO2 35–45 mmHg."
+                }
             ],
-            correct: 0,
-            explanation: "After the second shock, epinephrine 0.01 mg/kg IV/IO is indicated. Amiodarone is given after the third shock if still in VF/pVT.",
-            kpi: "Epinephrine given at correct time and dose."
+            "correct": 0,
+            "explanation": "Pediatric arrest is often secondary to respiratory failure; give 2 effective breaths per cycle with BVM and 100% oxygen, check glucose and consider early transport if ALS is delayed.",
+            "kpi": "CPR within 1 minute of recognising cardiac arrest."
         },
         {
-            id: "crit_4_2_5",
-            scenario: "A 5‑year‑old child was pulled from a swimming pool. Bystanders started CPR. On arrival, you confirm cardiac arrest. What is a critical consideration in this drowning victim?",
-            question: "What additional step is important in drowning?",
-            options: [
-                { t: "Give 5 initial rescue breaths before starting compressions", f: "Correct. In drowning, hypoxia is the primary cause; give 5 initial breaths then start CPR." },
-                { t: "Start with compressions first", f: "Breaths are prioritized in hypoxic arrest." },
-                { t: "Apply AED immediately", f: "AED is important, but breaths come first." },
-                { t: "Check blood glucose", f: "Not the priority." }
+            "id": "crit_4_2_5",
+            "scenario": "A 13-year-old weighing 60 kg collapses during football and is in cardiac arrest.",
+            "question": "Which pads do you use?",
+            "options": [
+                {
+                    "t": "Adult pads (over 55 kg)",
+                    "f": "Correct. Use adult pads if the patient is >13 years or >55 kg."
+                },
+                {
+                    "t": "Pediatric pads because he is 13",
+                    "f": "At 60 kg, use adult pads."
+                },
+                {
+                    "t": "No pads",
+                    "f": "Defibrillate as soon as possible."
+                },
+                {
+                    "t": "Whatever is on top of the bag",
+                    "f": "Choose by age and weight."
+                }
             ],
-            correct: 0,
-            explanation: "In drowning, the arrest is due to hypoxia. Give 5 initial rescue breaths before starting chest compressions. Then continue CPR with 15:2 ratio.",
-            kpi: "Initial breaths given within 1 minute."
+            "correct": 0,
+            "explanation": "Adult pads for patients >13 years or >55 kg. Start CPR within 1 minute and apply the AED as soon as available.",
+            "kpi": "CPR within 1 minute of recognising cardiac arrest."
         }
     ]
 };

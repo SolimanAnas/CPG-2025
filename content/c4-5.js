@@ -1,384 +1,851 @@
-/* ========== Chapter 4.5 – Trauma Cardiac Arrest ========== */
+/* ========== CPG 4.5 – Cardiac Arrest in Trauma ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c4-5",
-    title: "Trauma Cardiac Arrest",
-    shortTitle: "4.5 Trauma Cardiac Arrest",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#ambulance"/></svg> Trauma Cardiac Arrest</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and manage traumatic cardiac arrest.</li>
-                <li>Perform high‑quality resuscitation (CPR) and specific interventions related to traumatic arrest to maximize survival.</li>
-                <li>Ensure safe transport to a trauma center.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Adult and pediatric patients presenting with traumatic cardiac arrest, including unresponsiveness with no signs of life (no pulse, no breathing, or agonal gasps) following significant trauma.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Non‑traumatic cardiac arrest patients.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Traumatic cardiac arrest confirmation:</strong> Perform primary survey as per Universal Care CPG. Verify unresponsiveness (AVPU: U), absent pulse (carotid or femoral) for 5‑10 seconds, absent normal breathing or agonal gasps.</li>
-                <li><strong>Trauma mechanism assessment:</strong> Identify mechanism of injury (blunt vs. penetrating, location such as chest, abdomen, or head). Assess for high‑risk injuries likely causing arrest (e.g., tension pneumothorax, massive hemothorax, cardiac tamponade).</li>
-                <li><strong>Signs of irreversible death:</strong> In unwitnessed traumatic cardiac arrest, identify decapitation, incineration, body decomposition, rigor mortis – if any present, CPR not required.</li>
-                <li><strong>Futile resuscitation assessment:</strong> For unwitnessed traumatic arrest, if ALL of the following are present: blunt or penetrating trauma, no spontaneous movement, no pupillary response, apneic and pulseless, ECG shows no organized rhythm – then CPR is not indicated.</li>
-                <li><strong>Triage category:</strong> All cardiac arrest patients are Red Priority.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Deciding to start CPR:</strong>
-                    <ul>
-                        <li><strong>Witnessed cardiac arrest:</strong> If arrest witnessed by ambulance staff, CPR should be initiated.</li>
-                        <li><strong>Unwitnessed cardiac arrest:</strong> Check for signs of irreversible death. If any present, do not start CPR. If none, assess futility criteria; if all criteria met, do not start CPR. Otherwise, start CPR.</li>
-                    </ul>
-                </li>
-                <li><strong>Request ALS back‑up:</strong> Consider requirement for ALS back‑up as per Universal Care CPG. If resuscitation started, ALS back‑up should be considered. Transfer to hospital prioritized; do not wait on scene – meet ALS en route.</li>
-                <li><strong>Perform resuscitation (CPR):</strong> As per Adult or Pediatric Cardiac Arrest CPG.</li>
-                <li><strong>Consider specific trauma interventions:</strong>
-                    <ul>
-                        <li><strong>Pelvic binder:</strong> Consider placement if pelvic fracture suspected (e.g., mechanism, instability). Should be placed before chest compressions start; time permitted for placement limited to 30 seconds after no pulse is felt.</li>
-                        <li><strong>Bilateral chest needle decompression:</strong> Consider if cause of arrest unclear (e.g., polytrauma) or tension pneumothorax suspected. Perform in the 2nd intercostal space, midclavicular line on both sides.</li>
-                        <li><strong>Control active external bleeding:</strong> Identify and immediately control using direct pressure, wound packing, or tourniquets as appropriate.</li>
-                        <li><strong>Tranexamic acid (TXA):</strong> Consider if arrest witnessed or signs of massive hemorrhage (penetrating trauma, major limb injury, severe pelvic fracture). Dose: Adults 1g IV/IO over 10 minutes; Pediatrics 15mg/kg IV/IO over 10 minutes (max 1g). Contraindicated if unwitnessed with prolonged downtime or non‑survivable injuries.</li>
-                    </ul>
-                </li>
-                <li><strong>Transport:</strong> All traumatic cardiac arrest patients must be transported to a trauma center. Minimize scene time. See Starting, Stopping or Transferring CPR CPG for guidance.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Resuscitation should be initiated in cases where mechanism of injury does not correlate with clinical condition, suggesting non‑traumatic cause.</li>
-                <li>Pelvic binder placement should not delay chest compressions beyond 30 seconds.</li>
-                <li>Needle decompression may be life‑saving if tension pneumothorax present.</li>
-                <li>TXA should be given early (within 3 hours of injury).</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>For guidance on stopping or transferring CPR cases in trauma, see the Starting, Stopping or Transferring CPR CPG.</li>
-                <li>TXA is not routinely indicated in patients already in cardiac arrest unless high suspicion that arrest is due to massive hemorrhage and ROSC achievable.</li>
-                <li>Uncontrolled hemorrhage is a common reversible cause of traumatic cardiac arrest – address rapidly.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification: Patient's full name, age, gender.</li>
-                <li>Mechanism / Medical Complaint: Mechanism of injury (blunt, penetrating), suspected traumatic cardiac arrest.</li>
-                <li>Injuries / Information: Injury pattern noted, signs of irreversible death, resuscitation criteria met/unmet.</li>
-                <li>Signs: Initial rhythm, unresponsiveness, pulse and breathing status, GCS if regained, pupil response.</li>
-                <li>Treatment: CPR and trauma‑specific interventions (pelvic binder, bilateral chest decompression, hemorrhage control methods). IV/IO access, airway management, medications (TXA if given).</li>
-                <li>Allergies: Known drug or environmental allergies.</li>
-                <li>Medications: Pre‑arrest medications if known.</li>
-                <li>Background: History if available from bystanders.</li>
-                <li>Other: ECG rhythm strips, time CPR started/stopped, transfer or termination rationale.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Immediately initiate CPR for traumatic cardiac arrests witnessed by EMS.</li>
-                <li>Request ALS back‑up (where appropriate) for all traumatic cardiac arrests.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c4-5",
+    "title": "Cardiac Arrest in Trauma",
+    "shortTitle": "4.5 Trauma Cardiac Arrest",
+    "guide": {
+        "cpg": "4.5",
+        "group": "resus",
+        "groupLabel": "Resuscitation",
+        "title": "Cardiac Arrest in Trauma",
+        "lead": "Start CPR at once in any arrest EMS witnesses. In an unwitnessed arrest, withhold CPR only for injuries incompatible with life or when all five futility signs are present. Otherwise treat the reversible causes (bleeding, pelvis, chest) and move: meet ALS en route.",
+        "source": {
+            "label": "CPG 4.5",
+            "pages": "111–114",
+            "pdf": "../pdf_sections/4_5_Cardiac_Arrest_in_Trauma.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Adults and children in traumatic cardiac arrest: unresponsive with no signs of life (no pulse, no breathing or agonal gasps) after significant trauma."
+                ],
+                "exclude": [
+                    "Non-traumatic cardiac arrest."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Confirm the arrest",
+                "icon": "stethoscope",
+                "steps": [
+                    {
+                        "title": "Primary survey",
+                        "text": "As per the Universal Care CPG. Unresponsive to voice and pain (AVPU: U)."
+                    },
+                    {
+                        "title": "Pulse and breathing",
+                        "text": "No carotid or femoral pulse for 5–10 seconds; no normal breathing, or agonal gasps only, for 5–10 seconds."
+                    },
+                    {
+                        "title": "Mechanism",
+                        "text": "Blunt or penetrating; chest, abdomen or head. Look for injuries likely to have caused the arrest: tension pneumothorax, massive hemothorax, cardiac tamponade."
+                    },
+                    {
+                        "title": "Triage",
+                        "text": "Every cardiac arrest is Red priority (Patient Triage Categories CPG)."
+                    }
+                ]
+            },
+            {
+                "type": "pathways",
+                "title": "Start CPR or not",
+                "icon": "circle-help",
+                "paths": [
+                    {
+                        "title": "EMS-witnessed arrest",
+                        "tone": "shock",
+                        "steps": [
+                            {
+                                "text": "Start CPR immediately."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Unwitnessed arrest",
+                        "tone": "noshock",
+                        "steps": [
+                            {
+                                "text": "Any injury incompatible with life (decapitation, incineration, body decomposition, rigor mortis): CPR not required.",
+                                "level": "EMT"
+                            },
+                            {
+                                "text": "Otherwise, if <b>all</b> five futility signs are present: CPR not required.",
+                                "level": "EMT"
+                            },
+                            {
+                                "text": "Any futility sign absent: start CPR."
+                            }
+                        ]
+                    }
+                ],
+                "after": "Start CPR when the mechanism of injury does not match the clinical picture: the arrest may be medical."
+            },
+            {
+                "type": "gate",
+                "title": "Futility signs (unwitnessed arrest)",
+                "icon": "clipboard-list",
+                "question": "Are all five present?",
+                "items": [
+                    "Victim of blunt or penetrating trauma.",
+                    "No spontaneous movement (unresponsive on AVPU).",
+                    "No pupillary response (pupils non-reactive to light).",
+                    "Apneic and pulseless.",
+                    "ECG shows no organized rhythm (asystole)."
+                ],
+                "no": "Start CPR.",
+                "yes": "CPR not required."
+            },
+            {
+                "type": "steps",
+                "title": "Resuscitation",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Control external bleeding",
+                        "text": "Direct pressure, wound packing or tourniquets. Uncontrolled hemorrhage is a common reversible cause and must be addressed rapidly."
+                    },
+                    {
+                        "title": "ALS back-up",
+                        "text": "Consider whenever resuscitation is started. Prioritise transfer: do not wait on scene; meet the ALS unit en route."
+                    },
+                    {
+                        "title": "Pelvic binder",
+                        "level": "EMT",
+                        "text": "Place before compressions start, within 30 seconds of finding no pulse."
+                    },
+                    {
+                        "title": "Bilateral needle chest decompression",
+                        "level": "P"
+                    },
+                    {
+                        "title": "CPR",
+                        "text": "As per the Adult or Pediatric Cardiac Arrest CPG."
+                    },
+                    {
+                        "title": "Tranexamic acid",
+                        "level": "P",
+                        "text": "Witnessed arrest with signs of massive hemorrhage.",
+                        "doses": [
+                            {
+                                "drug": "Tranexamic acid",
+                                "dose": "1 g IV/IO",
+                                "note": "Adults only (flowchart). As early as possible, ideally within 3 hours of injury.",
+                                "level": "P"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Pelvic binder and decompression",
+                "icon": "shield",
+                "groups": [
+                    {
+                        "title": "Indication",
+                        "items": [
+                            "The cause of arrest is not clear, e.g. polytrauma in a road traffic collision: consider both the binder and bilateral decompression."
+                        ]
+                    },
+                    {
+                        "title": "Contraindication",
+                        "items": [
+                            "A clear injury that will not cause a pelvic fracture or pneumothorax, e.g. arterial limb bleeding or isolated traumatic brain injury."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "TXA in traumatic arrest",
+                "icon": "pill",
+                "groups": [
+                    {
+                        "title": "Give when",
+                        "items": [
+                            "Not routine in arrest: only with high suspicion of massive hemorrhage and achievable ROSC.",
+                            "Witnessed arrest, and signs of massive hemorrhage (penetrating trauma, major limb injury, severe pelvic fracture)."
+                        ]
+                    },
+                    {
+                        "title": "Do not give when",
+                        "items": [
+                            "Unwitnessed arrest with prolonged downtime.",
+                            "Clearly non-survivable injury (massive head injury, decapitation, hemicorporectomy).",
+                            "Hemorrhage is not the suspected cause (e.g. isolated TBI)."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Futility sign: no organized rhythm",
+                        "items": [
+                            {
+                                "ecg": "asystole",
+                                "label": "Asystole",
+                                "sub": "One of the five signs; all five are needed to withhold CPR"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Documentation",
+                "icon": "notebook-pen",
+                "items": [
+                    "Mechanism (blunt, penetrating), injury pattern, signs of irreversible death, futility criteria met or unmet.",
+                    "Initial rhythm, responsiveness, pulse, breathing, pupils; GCS if regained.",
+                    "Pelvic binder, bilateral decompression, bleeding control, IV/IO, airway and drugs.",
+                    "ECG strips, times CPR started and stopped, transfer or termination rationale."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "CPR started immediately for traumatic arrests witnessed by EMS.",
+                    "Back-up requested (where appropriate) for all traumatic cardiac arrests."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "4.3 Adult Cardiac Arrest",
+                        "href": "c4-3.html"
+                    },
+                    {
+                        "label": "4.4 Pediatric Cardiac Arrest",
+                        "href": "c4-4.html"
+                    },
+                    {
+                        "label": "4.8 Starting, Stopping and Transferring CPR",
+                        "href": "c4-8.html"
+                    },
+                    {
+                        "label": "7.1 General Trauma Management",
+                        "href": "c7-1.html"
+                    },
+                    {
+                        "label": "1.3 Patient Triage Categories",
+                        "href": "c1.html?section=c1s3"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "In a witnessed traumatic cardiac arrest by EMS, what is the priority?",
-            options: ["Wait for ALS back‑up", "Start CPR immediately", "Apply pelvic binder first", "Perform bilateral chest decompression"],
-            correct: 1,
-            explanation: "If the arrest is witnessed by ambulance staff, CPR should be initiated immediately."
+            "q": "EMS witnesses a trauma patient go into cardiac arrest. What do you do?",
+            "options": [
+                "Start CPR immediately",
+                "Check the futility signs first",
+                "Apply a pelvic binder, then decide",
+                "Wait for ALS"
+            ],
+            "correct": 0,
+            "explanation": "Any arrest witnessed by ambulance staff gets CPR at once; the futility assessment applies only to unwitnessed arrests."
         },
         {
-            q: "Which of the following is a sign of irreversible death and a contraindication to starting CPR?",
-            options: ["Hypothermia", "Decapitation", "Tension pneumothorax", "Agonal gasps"],
-            correct: 1,
-            explanation: "Decapitation, incineration, decomposition, and rigor mortis are signs of irreversible death; CPR should not be started."
+            "q": "Which is an injury incompatible with life in this CPG?",
+            "options": [
+                "Decapitation",
+                "Fixed dilated pupils",
+                "Open femur fracture",
+                "Agonal gasps"
+            ],
+            "correct": 0,
+            "explanation": "Decapitation, incineration, body decomposition and rigor mortis: any one means CPR is not required in an unwitnessed arrest."
         },
         {
-            q: "In an unwitnessed traumatic cardiac arrest, all the following must be present to withhold CPR except:",
-            options: ["Blunt or penetrating trauma", "No spontaneous movement", "Pupils reactive to light", "ECG shows no organized rhythm"],
-            correct: 2,
-            explanation: "Criteria for withholding CPR include: blunt/penetrating trauma, no spontaneous movement, no pupillary response, apneic and pulseless, ECG no organized rhythm. Reactive pupils would indicate possible neurological function."
+            "q": "In an unwitnessed traumatic arrest, which finding means you must start CPR?",
+            "options": [
+                "Pupils react to light",
+                "Blunt trauma",
+                "No spontaneous movement",
+                "Asystole on the ECG"
+            ],
+            "correct": 0,
+            "explanation": "All five futility signs are needed to withhold CPR; a pupillary response means one is missing."
         },
         {
-            q: "What is the time limit for placing a pelvic binder after no pulse is felt in traumatic cardiac arrest?",
-            options: ["10 seconds", "30 seconds", "1 minute", "2 minutes"],
-            correct: 1,
-            explanation: "The pelvic binder should be placed before chest compressions start, and the time permitted is limited to 30 seconds after no pulse is felt."
+            "q": "How many of the five futility signs must be present to withhold CPR?",
+            "options": [
+                "Any one",
+                "Any three",
+                "All five",
+                "Two plus asystole"
+            ],
+            "correct": 2,
+            "explanation": "All signs must be present to not start resuscitation."
         },
         {
-            q: "When should bilateral chest needle decompression be considered in traumatic cardiac arrest?",
-            options: ["Only if obvious chest injury", "When the cause of arrest is unclear (e.g., polytrauma)", "After 10 minutes of CPR", "Only in penetrating trauma"],
-            correct: 1,
-            explanation: "Bilateral chest needle decompression should be considered when the cause of arrest is not clear, such as in polytrauma."
+            "q": "How long may you take to place a pelvic binder after finding no pulse?",
+            "options": [
+                "30 seconds",
+                "2 minutes",
+                "Until the first rhythm check",
+                "No limit"
+            ],
+            "correct": 0,
+            "explanation": "The binder goes on before compressions start, within 30 seconds of no pulse being felt."
         },
         {
-            q: "What is the dose of tranexamic acid (TXA) for an adult in traumatic cardiac arrest?",
-            options: ["500 mg IV", "1 g IV over 10 minutes", "2 g IV bolus", "15 mg/kg"],
-            correct: 1,
-            explanation: "TXA dose for adults is 1 g IV/IO, diluted in 100 mL normal saline, given over 10 minutes."
+            "q": "When should a pelvic binder and bilateral decompression both be considered?",
+            "options": [
+                "When the cause of arrest is not clear, e.g. polytrauma in an RTC",
+                "Only with an obvious open-book pelvis",
+                "Only after ROSC",
+                "In every medical arrest"
+            ],
+            "correct": 0,
+            "explanation": "Where the cause is unclear, apply both."
         },
         {
-            q: "In which of the following is TXA contraindicated in traumatic cardiac arrest?",
-            options: ["Witnessed arrest with massive hemorrhage", "Unwitnessed arrest with prolonged downtime", "Penetrating trauma to the chest", "Pelvic fracture with instability"],
-            correct: 1,
-            explanation: "TXA is contraindicated in unwitnessed arrest with prolonged downtime, or when death is clearly non‑survivable (e.g., massive head injury, decapitation)."
+            "q": "Which TXA dose is listed for an adult in traumatic arrest?",
+            "options": [
+                "1 g IV/IO",
+                "2 g IV/IO",
+                "500 mg IM",
+                "1 g orally"
+            ],
+            "correct": 0,
+            "explanation": "TXA 1 g IV/IO, as early as possible, ideally within 3 hours of injury."
         },
         {
-            q: "What is the first step in managing a traumatic cardiac arrest patient with uncontrolled limb bleeding?",
-            options: ["Start chest compressions", "Apply a tourniquet", "Give TXA", "Insert an advanced airway"],
-            correct: 1,
-            explanation: "Uncontrolled hemorrhage is a common reversible cause; control external bleeding immediately with direct pressure, wound packing, or tourniquets."
+            "q": "When is TXA contraindicated in traumatic arrest?",
+            "options": [
+                "Unwitnessed arrest with prolonged downtime",
+                "Witnessed arrest with a major limb injury",
+                "Penetrating trauma with massive hemorrhage",
+                "Severe pelvic fracture"
+            ],
+            "correct": 0,
+            "explanation": "Also with clearly non-survivable injury or when hemorrhage is not the suspected cause."
         },
         {
-            q: "After ROSC in traumatic cardiac arrest, what is a key consideration?",
-            options: ["Rapid transport to trauma center", "Administer TXA", "Perform bilateral chest decompression", "Apply pelvic binder"],
-            correct: 0,
-            explanation: "After ROSC, the patient should be rapidly transported to a trauma center for definitive care."
+            "q": "A trauma arrest has torrential bleeding from a leg. What comes first?",
+            "options": [
+                "Control the bleeding (tourniquet, packing, pressure)",
+                "TXA",
+                "Advanced airway",
+                "12-lead ECG"
+            ],
+            "correct": 0,
+            "explanation": "Uncontrolled hemorrhage is a common reversible cause and must be addressed immediately."
         },
         {
-            q: "Which of the following is NOT a reversible cause of traumatic cardiac arrest?",
-            options: ["Tension pneumothorax", "Cardiac tamponade", "Hypovolemia", "Ventricular fibrillation"],
-            correct: 3,
-            explanation: "Ventricular fibrillation may be a primary cardiac cause, but in trauma, reversible causes include tension pneumothorax, tamponade, hypovolemia, and hypoxia."
+            "q": "How should ALS back-up and transport be handled?",
+            "options": [
+                "Prioritise transfer and meet ALS en route",
+                "Wait on scene for ALS",
+                "Do not request ALS for trauma",
+                "Request ALS only after ROSC"
+            ],
+            "correct": 0,
+            "explanation": "Consider ALS back-up whenever resuscitation starts; do not wait on scene."
         },
         {
-            q: "How should TXA be administered in a pediatric patient with traumatic cardiac arrest?",
-            options: ["1 g IV", "15 mg/kg IV over 10 minutes (max 1 g)", "0.1 mg/kg", "5 mg/kg bolus"],
-            correct: 1,
-            explanation: "Pediatric TXA dose is 15 mg/kg IV/IO over 10 minutes, maximum 1 g."
+            "q": "Which is NOT one of the high-risk injuries this CPG names as a likely cause of arrest?",
+            "options": [
+                "Ventricular fibrillation",
+                "Tension pneumothorax",
+                "Massive hemothorax",
+                "Cardiac tamponade"
+            ],
+            "correct": 0,
+            "explanation": "VF is a rhythm, not an injury. The CPG names tension pneumothorax, massive hemothorax and cardiac tamponade."
         },
         {
-            q: "What is the primary goal of placing a pelvic binder in traumatic cardiac arrest?",
-            options: ["Stabilize femur fractures", "Reduce pelvic volume and control hemorrhage", "Prevent further spinal injury", "Facilitate chest compressions"],
-            correct: 1,
-            explanation: "A pelvic binder helps reduce pelvic volume and control hemorrhage from pelvic fractures."
+            "q": "TXA in a child in traumatic arrest: what does the flowchart say?",
+            "options": [
+                "TXA is listed for adults only",
+                "Give 1 g regardless of age",
+                "Give it IM",
+                "Double the adult dose"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart restricts TXA in traumatic arrest to adults: 1 g IV/IO."
         },
         {
-            q: "In an unwitnessed traumatic cardiac arrest with blunt trauma, no movement, non‑reactive pupils, apnea, and asystole, what should you do?",
-            options: ["Start CPR", "Apply pelvic binder", "Do not start CPR", "Give TXA"],
-            correct: 2,
-            explanation: "All criteria for futile resuscitation are met; CPR should not be started."
+            "q": "What does a pelvic binder do in traumatic arrest?",
+            "options": [
+                "Reduces pelvic volume and bleeding from a pelvic fracture",
+                "Splints femur fractures",
+                "Immobilises the spine",
+                "Makes compressions easier"
+            ],
+            "correct": 0,
+            "explanation": "It treats a pelvic fracture as a cause of hemorrhagic arrest, so it goes on before compressions."
         },
         {
-            q: "What is the preferred site for needle decompression in traumatic cardiac arrest?",
-            options: ["5th intercostal space, anterior axillary line", "2nd intercostal space, midclavicular line", "4th intercostal space, midaxillary line", "Suprasternal notch"],
-            correct: 1,
-            explanation: "Needle decompression is performed in the 2nd intercostal space, midclavicular line on the affected side."
+            "q": "Unwitnessed arrest: blunt trauma, no movement, non-reactive pupils, apneic, pulseless, asystole. What do you do?",
+            "options": [
+                "CPR is not required",
+                "Start CPR",
+                "Pelvic binder, then CPR",
+                "TXA, then CPR"
+            ],
+            "correct": 0,
+            "explanation": "All five futility signs are present."
         },
         {
-            q: "In traumatic cardiac arrest, what is the maximum on‑scene time goal?",
-            options: ["<5 minutes", "<10 minutes", "<15 minutes", "<20 minutes"],
-            correct: 1,
-            explanation: "Scene time should be minimized; goal is under 10 minutes for red priority patients."
+            "q": "Who may perform bilateral needle chest decompression?",
+            "options": [
+                "P and above",
+                "EMR",
+                "EMT",
+                "Any bystander"
+            ],
+            "correct": 0,
+            "explanation": "Decompression is a Paramedic intervention; the pelvic binder is EMT."
         },
         {
-            q: "A patient with penetrating chest trauma arrests. You suspect tension pneumothorax. What is your immediate action?",
-            options: ["Start CPR", "Perform needle decompression", "Give TXA", "Apply pelvic binder"],
-            correct: 1,
-            explanation: "Needle decompression should be performed immediately if tension pneumothorax is suspected."
+            "q": "Who may apply the pelvic binder?",
+            "options": [
+                "EMT and above",
+                "P only",
+                "AP only",
+                "Hospital staff only"
+            ],
+            "correct": 0,
+            "explanation": "The binder is an EMT-level intervention."
         },
         {
-            q: "When should ALS back‑up be requested in traumatic cardiac arrest?",
-            options: ["After 10 minutes of CPR", "Immediately if resuscitation is started", "Only if ROSC achieved", "After bilateral decompression"],
-            correct: 1,
-            explanation: "ALS back‑up should be considered as soon as resuscitation is started; do not wait on scene, meet en route."
+            "q": "When is bilateral decompression contraindicated?",
+            "options": [
+                "A clear injury that cannot cause pneumothorax, e.g. isolated TBI",
+                "Polytrauma",
+                "Unknown mechanism",
+                "Penetrating chest trauma"
+            ],
+            "correct": 0,
+            "explanation": "Also arterial limb bleeding: an injury that will not cause a pelvic fracture or pneumothorax."
         },
         {
-            q: "What is the correct compression‑ventilation ratio during CPR for an adult traumatic cardiac arrest with an advanced airway?",
-            options: ["30:2", "15:2", "Continuous compressions with 10 breaths/min", "5:1"],
-            correct: 2,
-            explanation: "With an advanced airway, deliver continuous compressions at 100‑120/min and 1 breath every 6 seconds (10 breaths/min)."
+            "q": "When should ALS back-up be considered?",
+            "options": [
+                "Whenever resuscitation is started",
+                "After 20 minutes of CPR",
+                "Only with ROSC",
+                "Never in trauma"
+            ],
+            "correct": 0,
+            "explanation": "If resuscitation is started, ALS back-up should be considered."
         },
         {
-            q: "Which of the following is a sign of cardiac tamponade in trauma?",
-            options: ["Tracheal deviation", "Muffled heart sounds", "Subcutaneous emphysema", "Unilateral breath sounds"],
-            correct: 1,
-            explanation: "Beck's triad (muffled heart sounds, hypotension, JVD) suggests cardiac tamponade, though in arrest these may be difficult to assess."
+            "q": "Which CPG guides the CPR itself?",
+            "options": [
+                "Adult or Pediatric Cardiac Arrest CPG",
+                "Universal Care CPG",
+                "Burns CPG",
+                "Treated at Scene CPG"
+            ],
+            "correct": 0,
+            "explanation": "Perform resuscitation as per the Adult or Pediatric Cardiac Arrest CPG."
         },
         {
-            q: "In traumatic cardiac arrest, what is the role of bilateral chest decompression?",
-            options: ["Treat bilateral hemothorax", "Rule out tension pneumothorax as cause", "Improve ventilation", "Facilitate CPR"],
-            correct: 1,
-            explanation: "Bilateral decompression may be performed when the cause is unclear, to rule out tension pneumothorax on either side."
+            "q": "How long is the pulse checked?",
+            "options": [
+                "5–10 seconds",
+                "1 minute",
+                "30 seconds",
+                "Until ALS arrives"
+            ],
+            "correct": 0,
+            "explanation": "Carotid or femoral pulse for 5–10 seconds; breathing for 5–10 seconds."
         },
         {
-            q: "What is the recommended dose of TXA for an adult traumatic cardiac arrest with massive hemorrhage?",
-            options: ["500 mg IV push", "1 g IV over 10 minutes", "2 g IV bolus", "0.5 g IM"],
-            correct: 1,
-            explanation: "TXA 1 g IV/IO diluted in 100 mL normal saline, infused over 10 minutes."
+            "q": "Which pulse sites are used?",
+            "options": [
+                "Carotid or femoral",
+                "Radial or pedal",
+                "Brachial only",
+                "Temporal"
+            ],
+            "correct": 0,
+            "explanation": "Check carotid or femoral."
         },
         {
-            q: "A trauma patient is in cardiac arrest and has a suspected pelvic fracture. When should the pelvic binder be applied?",
-            options: ["After 2 minutes of CPR", "Before starting chest compressions, within 30 seconds", "After intubation", "During transport"],
-            correct: 1,
-            explanation: "The pelvic binder should be placed before chest compressions start, limited to 30 seconds after no pulse is felt."
+            "q": "The injuries look minor but the patient is in arrest. What do you do?",
+            "options": [
+                "Start CPR: the arrest may be medical",
+                "Withhold CPR",
+                "Apply a pelvic binder only",
+                "Give TXA"
+            ],
+            "correct": 0,
+            "explanation": "When the mechanism does not match the clinical condition, start CPR."
         },
         {
-            q: "What is the primary indication for withholding CPR in an unwitnessed traumatic cardiac arrest?",
-            options: ["Age >65", "Mechanism of injury", "Signs of irreversible death", "Pupils fixed and dilated"],
-            correct: 2,
-            explanation: "If any sign of irreversible death (decapitation, incineration, decomposition, rigor mortis) is present, CPR should not be started."
+            "q": "What triage category is any cardiac arrest?",
+            "options": [
+                "Red",
+                "Yellow",
+                "Green",
+                "Black"
+            ],
+            "correct": 0,
+            "explanation": "All cardiac arrest patients are Red priority."
         },
         {
-            q: "In traumatic cardiac arrest, after initiating CPR, what is the next priority?",
-            options: ["Transport to trauma center", "Obtain IV access", "Give adrenaline", "Perform 12‑lead ECG"],
-            correct: 0,
-            explanation: "Transport to a trauma center should be prioritized; interventions can be performed en route."
+            "q": "Which TXA indication applies in traumatic arrest?",
+            "options": [
+                "Witnessed arrest with signs of massive hemorrhage",
+                "Any unwitnessed arrest",
+                "Isolated head injury",
+                "All trauma arrests routinely"
+            ],
+            "correct": 0,
+            "explanation": "TXA is not routine; it needs a witnessed arrest and suspected massive hemorrhage with achievable ROSC."
         },
         {
-            q: "A patient with traumatic cardiac arrest has massive external bleeding from a leg amputation. What is your immediate action?",
-            options: ["Start CPR", "Apply tourniquet", "Give TXA", "Insert supraglottic airway"],
-            correct: 1,
-            explanation: "Control catastrophic hemorrhage first (C‑ABC). Apply a tourniquet immediately."
+            "q": "What is the time window for TXA?",
+            "options": [
+                "As early as possible, ideally within 3 hours of injury",
+                "Only after ROSC",
+                "Any time within 24 hours",
+                "Only in hospital"
+            ],
+            "correct": 0,
+            "explanation": "Give it as early as possible, ideally within the first 3 hours."
         },
         {
-            q: "Which of the following is a component of the C‑ABC approach in trauma?",
-            options: ["Circulation, Airway, Breathing, Cervical spine", "Catastrophic hemorrhage, Airway, Breathing, Circulation", "Compressions, Airway, Breathing, Circulation", "C‑spine, Airway, Breathing, Circulation"],
-            correct: 1,
-            explanation: "C‑ABC stands for Catastrophic hemorrhage control, Airway, Breathing, Circulation."
+            "q": "How is massive external bleeding controlled?",
+            "options": [
+                "Direct pressure, wound packing or tourniquets",
+                "Elevation only",
+                "TXA alone",
+                "Ice packs"
+            ],
+            "correct": 0,
+            "explanation": "As appropriate to the wound."
         },
         {
-            q: "What is the maximum time allowed for a pelvic binder application before chest compressions start?",
-            options: ["10 seconds", "30 seconds", "60 seconds", "2 minutes"],
-            correct: 1,
-            explanation: "The time permitted for pelvic binder placement is limited to 30 seconds after no pulse is felt."
+            "q": "Which ECG finding is a futility sign?",
+            "options": [
+                "No organized rhythm (asystole)",
+                "VF",
+                "Sinus tachycardia",
+                "PEA at a normal rate"
+            ],
+            "correct": 0,
+            "explanation": "The ECG must show no organized rhythm (asystole)."
         },
         {
-            q: "In traumatic cardiac arrest, when should adrenaline be given?",
-            options: ["Immediately after starting CPR", "After defibrillation if VF/VT", "Every 3‑5 minutes as per adult cardiac arrest protocol", "Only after ROSC"],
-            correct: 2,
-            explanation: "Adrenaline is given every 3‑5 minutes as per standard cardiac arrest protocols."
+            "q": "Which documentation item is specific to this CPG?",
+            "options": [
+                "Signs of irreversible death and whether resuscitation criteria were met",
+                "Home address only",
+                "Shoe size",
+                "Insurance number"
+            ],
+            "correct": 0,
+            "explanation": "Also injury pattern, binder, decompression and bleeding control."
         },
         {
-            q: "A patient with traumatic cardiac arrest has a tension pneumothorax. After needle decompression, you hear a gush of air and chest rise improves. What is your next action?",
-            options: ["Repeat decompression on the other side", "Continue CPR and transport", "Give TXA", "Insert chest tube"],
-            correct: 1,
-            explanation: "After successful decompression, continue CPR and transport; a chest tube may be placed at hospital."
+            "q": "TXA in an isolated traumatic brain injury arrest?",
+            "options": [
+                "No: hemorrhage is not the suspected cause",
+                "Yes, 1 g",
+                "Yes, double dose",
+                "Only IM"
+            ],
+            "correct": 0,
+            "explanation": "TXA is contraindicated when hemorrhage is not the suspected cause."
         },
         {
-            q: "Which of the following is a contraindication to TXA in traumatic cardiac arrest?",
-            options: ["Penetrating trauma", "Hypovolemic shock", "Unwitnessed arrest with prolonged downtime", "Pelvic fracture"],
-            correct: 2,
-            explanation: "TXA is contraindicated if arrest is unwitnessed with prolonged downtime, or if injuries are non‑survivable."
+            "q": "What are the two KPIs?",
+            "options": [
+                "Immediate CPR for EMS-witnessed arrests, and back-up requested",
+                "TXA within 3 hours and pelvic binder in all",
+                "Scene time and hospital choice",
+                "Intubation rate and IV access"
+            ],
+            "correct": 0,
+            "explanation": "Immediate CPR when EMS witnesses the arrest; request back-up (where appropriate) for all traumatic arrests."
         },
         {
-            q: "What is the role of bilateral chest decompression in traumatic cardiac arrest?",
-            options: ["Treat bilateral hemothorax", "Rule out tension pneumothorax as a reversible cause", "Improve ventilation", "All of the above"],
-            correct: 1,
-            explanation: "Bilateral decompression may help exclude tension pneumothorax as a cause of arrest when the mechanism is unclear."
+            "q": "Which CPG covers stopping or transferring CPR in trauma?",
+            "options": [
+                "Starting, Stopping and Transferring CPR",
+                "Verification of Death",
+                "Treated at Scene",
+                "Patient Refusal"
+            ],
+            "correct": 0,
+            "explanation": "See the Starting, Stopping and Transferring CPR CPG."
         }
     ],
-    flashcards: [
-        { category: "Indications", question: "When should CPR be started in traumatic cardiac arrest?", answer: "In witnessed arrest by EMS, or in unwitnessed arrest if no signs of irreversible death and futility criteria not met." },
-        { category: "Contraindications", question: "What are signs of irreversible death that preclude starting CPR?", answer: "Decapitation, incineration, decomposition, rigor mortis." },
-        { category: "Futility criteria", question: "What five criteria must ALL be met to withhold CPR in unwitnessed traumatic cardiac arrest?", answer: "Blunt/penetrating trauma, no spontaneous movement, no pupillary response, apneic and pulseless, ECG no organized rhythm." },
-        { category: "C‑ABC", question: "What does C‑ABC stand for in trauma?", answer: "Catastrophic hemorrhage, Airway, Breathing, Circulation." },
-        { category: "Pelvic binder", question: "When should a pelvic binder be placed in traumatic cardiac arrest?", answer: "Before chest compressions start, within 30 seconds after no pulse is felt." },
-        { category: "Needle decompression", question: "Where is needle decompression performed for tension pneumothorax?", answer: "2nd intercostal space, midclavicular line." },
-        { category: "Bilateral decompression", question: "Why consider bilateral chest decompression in traumatic cardiac arrest?", answer: "When cause of arrest is unclear (e.g., polytrauma) to rule out tension pneumothorax." },
-        { category: "Hemorrhage control", question: "What is the priority in traumatic cardiac arrest with external bleeding?", answer: "Control catastrophic hemorrhage with tourniquet, direct pressure, or wound packing." },
-        { category: "TXA", question: "What is the adult dose of TXA in traumatic cardiac arrest?", answer: "1 g IV/IO over 10 minutes (diluted in 100 mL normal saline)." },
-        { category: "TXA pediatric", question: "What is the pediatric dose of TXA in trauma?", answer: "15 mg/kg IV/IO over 10 minutes (max 1 g)." },
-        { category: "TXA timing", question: "Within what time window should TXA be given after injury?", answer: "Within 3 hours of injury." },
-        { category: "TXA contraindications", question: "When is TXA contraindicated in traumatic cardiac arrest?", answer: "Unwitnessed arrest with prolonged downtime, or non‑survivable injuries." },
-        { category: "Reversible causes", question: "Name three reversible causes of traumatic cardiac arrest.", answer: "Tension pneumothorax, cardiac tamponade, hypovolemia (hemorrhage)." },
-        { category: "Transport", question: "What is the transport priority in traumatic cardiac arrest?", answer: "Rapid transport to a trauma center; minimize scene time (<10 minutes)." },
-        { category: "ALS backup", question: "Should ALS backup be requested in traumatic cardiac arrest?", answer: "Yes, immediately after starting resuscitation; meet en route." },
-        { category: "CPR ratio", question: "What is the CPR ratio for adult traumatic cardiac arrest without an advanced airway?", answer: "30:2." },
-        { category: "Advanced airway", question: "What is the ventilation rate with an advanced airway during CPR?", answer: "1 breath every 6 seconds (10/min) without pausing compressions." },
-        { category: "ROSC", question: "What should be done after ROSC in traumatic cardiac arrest?", answer: "Continue monitoring, maintain airway/breathing/circulation, and transport rapidly to trauma center." },
-        { category: "Scene time", question: "What is the goal on‑scene time for traumatic cardiac arrest?", answer: "<10 minutes." },
-        { category: "Witnessed arrest", question: "If EMS witnesses a traumatic cardiac arrest, what should be done?", answer: "Start CPR immediately." },
-        { category: "Unwitnessed arrest", question: "In unwitnessed traumatic cardiac arrest, what is the first step?", answer: "Check for signs of irreversible death; if none, assess futility criteria." },
-        { category: "Pupils", question: "What pupil finding is part of the futility criteria?", answer: "No pupillary response." },
-        { category: "ECG rhythm", question: "What rhythm on ECG is part of the futility criteria?", answer: "No organized rhythm (asystole)." },
-        { category: "Massive hemorrhage", question: "What is a common reversible cause of traumatic cardiac arrest?", answer: "Uncontrolled hemorrhage." },
-        { category: "Pelvic binder placement", question: "What is the time limit for placing a pelvic binder after no pulse?", answer: "30 seconds." },
-        { category: "Needle decompression site", question: "In which intercostal space is needle decompression performed?", answer: "2nd intercostal space, midclavicular line." },
-        { category: "Bilateral decompression", question: "When is bilateral chest decompression indicated?", answer: "When the cause of arrest is unclear (e.g., polytrauma)." },
-        { category: "TXA mechanism", question: "What is the mechanism of action of TXA?", answer: "Antifibrinolytic; inhibits plasminogen activation, reducing clot breakdown." },
-        { category: "Cardiac tamponade", question: "What is a classic sign of cardiac tamponade in trauma?", answer: "Beck's triad: muffled heart sounds, hypotension, JVD." },
-        { category: "KPI", question: "What are two key performance indicators for traumatic cardiac arrest?", answer: "Immediate CPR for witnessed arrest; ALS backup requested." }
+    "flashcards": [
+        {
+            "question": "When must CPR start in traumatic arrest?",
+            "answer": "Immediately in any EMS-witnessed arrest; in an unwitnessed arrest unless there is an injury incompatible with life or all five futility signs are present."
+        },
+        {
+            "question": "Injuries incompatible with life",
+            "answer": "Decapitation, incineration, body decomposition, rigor mortis."
+        },
+        {
+            "question": "The five futility signs",
+            "answer": "Blunt or penetrating trauma; no spontaneous movement; no pupillary response; apneic and pulseless; ECG with no organized rhythm (asystole). All five must be present."
+        },
+        {
+            "question": "Which rescuer level may decide CPR is not required?",
+            "answer": "EMT."
+        },
+        {
+            "question": "Pelvic binder timing",
+            "answer": "Before compressions start, within 30 seconds of finding no pulse."
+        },
+        {
+            "question": "Pelvic binder level",
+            "answer": "EMT."
+        },
+        {
+            "question": "Needle decompression level",
+            "answer": "P (bilateral)."
+        },
+        {
+            "question": "When to use both binder and decompression",
+            "answer": "When the cause of arrest is unclear, e.g. polytrauma in a road traffic collision."
+        },
+        {
+            "question": "When not to use binder or decompression",
+            "answer": "A clear injury that will not cause a pelvic fracture or pneumothorax: arterial limb bleeding, isolated TBI."
+        },
+        {
+            "question": "External bleeding in traumatic arrest",
+            "answer": "Identify and control immediately: direct pressure, wound packing, tourniquets."
+        },
+        {
+            "question": "Adult TXA dose in traumatic arrest",
+            "answer": "1 g IV/IO (P), adults only."
+        },
+        {
+            "question": "TXA timing",
+            "answer": "As early as possible, ideally within 3 hours of injury."
+        },
+        {
+            "question": "TXA indications in arrest",
+            "answer": "Witnessed arrest plus signs of massive hemorrhage (penetrating trauma, major limb injury, severe pelvic fracture)."
+        },
+        {
+            "question": "TXA contraindications in arrest",
+            "answer": "Unwitnessed arrest with prolonged downtime; non-survivable injury; hemorrhage not the suspected cause (isolated TBI)."
+        },
+        {
+            "question": "Is TXA routine in traumatic arrest?",
+            "answer": "No. Only with high suspicion of massive hemorrhage and achievable ROSC."
+        },
+        {
+            "question": "High-risk injuries causing arrest",
+            "answer": "Tension pneumothorax, massive hemothorax, cardiac tamponade."
+        },
+        {
+            "question": "Common reversible cause of traumatic arrest",
+            "answer": "Uncontrolled hemorrhage."
+        },
+        {
+            "question": "ALS back-up",
+            "answer": "Consider whenever resuscitation starts; do not wait on scene, meet ALS en route."
+        },
+        {
+            "question": "Pulse check",
+            "answer": "Carotid or femoral, 5–10 seconds."
+        },
+        {
+            "question": "Breathing check",
+            "answer": "Absent normal breathing or agonal gasps, 5–10 seconds."
+        },
+        {
+            "question": "Responsiveness",
+            "answer": "No response to voice or pain (AVPU: U)."
+        },
+        {
+            "question": "Mechanism does not fit the findings",
+            "answer": "Start CPR: the arrest may be non-traumatic."
+        },
+        {
+            "question": "How is CPR performed?",
+            "answer": "As per the Adult or Pediatric Cardiac Arrest CPG."
+        },
+        {
+            "question": "Triage category",
+            "answer": "Red."
+        },
+        {
+            "question": "Futility pupil finding",
+            "answer": "No pupillary response (non-reactive to light)."
+        },
+        {
+            "question": "Futility ECG finding",
+            "answer": "No organized rhythm (asystole)."
+        },
+        {
+            "question": "Futility movement finding",
+            "answer": "No spontaneous movement: unresponsive on AVPU."
+        },
+        {
+            "question": "Documentation essentials",
+            "answer": "Mechanism, injury pattern, irreversible-death signs, criteria met or unmet, interventions, ECG strips, CPR times, transfer or termination rationale."
+        },
+        {
+            "question": "KPIs",
+            "answer": "Immediate CPR for EMS-witnessed traumatic arrest; back-up requested where appropriate for all."
+        },
+        {
+            "question": "Exclusion criterion",
+            "answer": "Non-traumatic cardiac arrest."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_4_5_1",
-            scenario: "You are called to a 30‑year‑old male involved in a high‑speed motor vehicle collision. He is unresponsive, not breathing, and has no pulse. The arrest was witnessed by bystanders. There is obvious deformity of the pelvis and a large laceration to the thigh with active bleeding. What is your priority action?",
-            question: "What should you do first?",
-            options: [
-                { t: "Start CPR and apply a tourniquet to the leg", f: "Correct. Control catastrophic hemorrhage first, then start CPR." },
-                { t: "Start CPR only", f: "Bleeding must be controlled; otherwise, CPR is ineffective." },
-                { t: "Apply pelvic binder and start CPR", f: "Pelvic binder is important, but active limb bleeding should be controlled first." },
-                { t: "Give TXA 1 g IV", f: "TXA can be given later; hemorrhage control and CPR are immediate priorities." }
+            "id": "crit_4_5_1",
+            "scenario": "A young man is pulled from a high-speed collision by bystanders and arrests in front of you. The pelvis is deformed and a thigh wound is bleeding heavily.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Start CPR; control the thigh bleeding; pelvic binder before compressions (within 30 seconds); ALS back-up and early transfer",
+                    "f": "Correct. Witnessed by EMS: resuscitate, and fix the reversible causes."
+                },
+                {
+                    "t": "Assess the five futility signs first",
+                    "f": "Futility assessment is only for unwitnessed arrests."
+                },
+                {
+                    "t": "Give TXA before anything else",
+                    "f": "Bleeding control and CPR come first; TXA is a P consideration."
+                },
+                {
+                    "t": "Wait on scene for ALS",
+                    "f": "Do not wait; meet ALS en route."
+                }
             ],
-            correct: 0,
-            explanation: "In trauma, catastrophic hemorrhage must be controlled first (C‑ABC). Apply a tourniquet to the leg, then start CPR.",
-            kpi: "Tourniquet applied within 1 minute."
+            "correct": 0,
+            "explanation": "EMS-witnessed traumatic arrest: start CPR immediately, control external bleeding, place the pelvic binder before compressions, consider decompression (P) and TXA 1 g IV/IO (P, adult).",
+            "kpi": "Immediately initiate CPR for traumatic cardiac arrests witnessed by EMS."
         },
         {
-            id: "crit_4_5_2",
-            scenario: "A 45‑year‑old male was found unresponsive after a fall from height. On arrival, he is apneic and pulseless. Pupils are fixed and dilated. ECG shows asystole. There are no signs of irreversible death. What is your next action?",
-            question: "What should you do?",
-            options: [
-                { t: "Start CPR and prepare for rapid transport", f: "Correct. No futility criteria are fully met; start CPR." },
-                { t: "Do not start CPR – death is inevitable", f: "Without signs of irreversible death, resuscitation should be attempted." },
-                { t: "Give TXA first", f: "CPR and hemorrhage control come first." },
-                { t: "Perform bilateral needle decompression", f: "No indication yet; start CPR." }
+            "id": "crit_4_5_2",
+            "scenario": "An unwitnessed fall from height. The man is apneic and pulseless with no movement and fixed, non-reactive pupils. The monitor shows the strip below.",
+            "ecg": "asystole",
+            "question": "What do you decide?",
+            "options": [
+                {
+                    "t": "All five futility signs are present: CPR is not required",
+                    "f": "Correct. Blunt trauma, no movement, no pupillary response, apneic and pulseless, asystole."
+                },
+                {
+                    "t": "Start CPR because there is no decapitation",
+                    "f": "No irreversible-death sign, but all five futility signs are present."
+                },
+                {
+                    "t": "Shock",
+                    "f": "Asystole is not shockable."
+                },
+                {
+                    "t": "Pelvic binder, then reassess",
+                    "f": "Resuscitation is not indicated."
+                }
             ],
-            correct: 0,
-            explanation: "The patient does not meet futility criteria (no signs of irreversible death, and not all five futility criteria are checked? Actually, unwitnessed arrest but mechanism unclear; we have asystole, apneic, no movement, fixed pupils – but need all five. Since not all met, start CPR.",
-            kpi: "CPR initiated within 1 minute."
+            "correct": 0,
+            "explanation": "In an unwitnessed traumatic arrest, CPR is not required when all five futility signs are present. Document the criteria met.",
+            "kpi": "Document resuscitation criteria met or unmet."
         },
         {
-            id: "crit_4_5_3",
-            scenario: "You are managing a traumatic cardiac arrest patient with a suspected pelvic fracture. You have started CPR. What specific intervention should you consider within the first 30 seconds?",
-            question: "What should you do next?",
-            options: [
-                { t: "Apply a pelvic binder", f: "Correct. Place pelvic binder before or during initial CPR, within 30 seconds." },
-                { t: "Perform needle decompression", f: "Not indicated unless tension pneumothorax suspected." },
-                { t: "Give adrenaline", f: "Adrenaline can be given later; pelvic binder is a trauma‑specific priority." },
-                { t: "Insert an advanced airway", f: "Airway can be managed after initial interventions." }
+            "id": "crit_4_5_3",
+            "scenario": "A motorcyclist is found in arrest after an unwitnessed crash. Pupils react sluggishly; the monitor shows a slow organized rhythm with no pulse.",
+            "ecg": "pea",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Start CPR: not all futility signs are present",
+                    "f": "Correct. A pupillary response and an organized rhythm both mean resuscitate."
+                },
+                {
+                    "t": "CPR is not required",
+                    "f": "All five signs must be present to withhold CPR."
+                },
+                {
+                    "t": "Shock the organized rhythm",
+                    "f": "PEA is not shockable."
+                },
+                {
+                    "t": "Wait for ALS before starting",
+                    "f": "Start CPR and meet ALS en route."
+                }
             ],
-            correct: 0,
-            explanation: "In suspected pelvic fracture, apply a pelvic binder within 30 seconds of confirming no pulse, before or during initial chest compressions.",
-            kpi: "Pelvic binder applied within 30 seconds."
+            "correct": 0,
+            "explanation": "Pupils react and the ECG shows an organized rhythm: two futility signs are missing, so start CPR and treat the reversible causes.",
+            "kpi": "Request back-up (where appropriate) for all traumatic cardiac arrests."
         },
         {
-            id: "crit_4_5_4",
-            scenario: "A 25‑year‑old male sustained a gunshot wound to the chest. He is in cardiac arrest. You have controlled external bleeding and started CPR. You suspect tension pneumothorax as a possible cause. What is your next intervention?",
-            question: "What should you do?",
-            options: [
-                { t: "Perform needle decompression on the affected side", f: "Correct. Decompress the chest to relieve tension pneumothorax." },
-                { t: "Give TXA 1 g IV", f: "TXA may be considered but decompression is more urgent." },
-                { t: "Perform bilateral decompression", f: "Start with the affected side; if no improvement, consider the other side." },
-                { t: "Apply a pelvic binder", f: "Not indicated." }
+            "id": "crit_4_5_4",
+            "scenario": "A 25-year-old with a stab wound to the chest arrests as you arrive. Bleeding is controlled and CPR has started. You are a Paramedic.",
+            "question": "Which trauma-specific intervention do you add?",
+            "options": [
+                {
+                    "t": "Bilateral needle chest decompression",
+                    "f": "Correct. Tension pneumothorax is a reversible cause; decompression is a P skill."
+                },
+                {
+                    "t": "Stop CPR: penetrating chest trauma is futile",
+                    "f": "The arrest was witnessed: resuscitate."
+                },
+                {
+                    "t": "Tourniquet to the arm",
+                    "f": "No limb bleeding to control."
+                },
+                {
+                    "t": "Nothing until hospital",
+                    "f": "Treat reversible causes on the way."
+                }
             ],
-            correct: 0,
-            explanation: "With penetrating chest trauma and arrest, tension pneumothorax is a likely reversible cause. Perform needle decompression immediately.",
-            kpi: "Needle decompression performed within 2 minutes."
+            "correct": 0,
+            "explanation": "Consider bilateral needle decompression (P). With massive hemorrhage in a witnessed adult arrest, consider TXA 1 g IV/IO.",
+            "kpi": "Immediately initiate CPR for traumatic cardiac arrests witnessed by EMS."
         },
         {
-            id: "crit_4_5_5",
-            scenario: "A 60‑year‑old female was involved in a high‑speed RTC. She is in traumatic cardiac arrest. You have controlled external bleeding, started CPR, applied a pelvic binder, and performed bilateral needle decompression. After 10 minutes of resuscitation, there is no ROSC. What should you consider?",
-            question: "What is the next appropriate action?",
-            options: [
-                { t: "Continue CPR and transport to a trauma center", f: "Correct. Transport should be initiated as soon as possible; do not delay for further on‑scene interventions." },
-                { t: "Stop resuscitation efforts", f: "Unless all criteria for termination are met, continue and transport." },
-                { t: "Give a second dose of TXA", f: "TXA is given once." },
-                { t: "Perform pericardiocentesis", f: "Not indicated without signs of tamponade." }
+            "id": "crit_4_5_5",
+            "scenario": "A pedestrian is found pulseless after an unwitnessed collision with an isolated severe head injury. Downtime is unknown but long.",
+            "question": "A colleague wants to give TXA. What do you say?",
+            "options": [
+                {
+                    "t": "No: unwitnessed with prolonged downtime, and bleeding is not the suspected cause",
+                    "f": "Correct. Both are TXA contraindications in traumatic arrest."
+                },
+                {
+                    "t": "Yes, 1 g IV/IO",
+                    "f": "TXA is contraindicated here."
+                },
+                {
+                    "t": "Yes, but IM",
+                    "f": "TXA is not indicated."
+                },
+                {
+                    "t": "Only after ROSC",
+                    "f": "The contraindications still apply."
+                }
             ],
-            correct: 0,
-            explanation: "Transport to a trauma center should be prioritized. Continue CPR en route and notify the receiving hospital.",
-            kpi: "Scene time <10 minutes; transport initiated."
+            "correct": 0,
+            "explanation": "TXA is for witnessed arrests with signs of massive hemorrhage. Decide on CPR using the irreversible-death and futility criteria.",
+            "kpi": "Document resuscitation criteria met or unmet."
         }
     ]
 };

@@ -135,9 +135,15 @@
         </div>`).join('')
     };
 
+    // `lead` (default II) picks the strip's lead; 12-lead patterns such as
+    // STEMI open the simulator on its 12-lead view at that lead.
+    function ecgHref(key, lead) {
+        return `../pages/ecg.html?r=${encodeURIComponent(key)}${lead && lead !== 'II' ? `&view=12&lead=${encodeURIComponent(lead)}` : ''}`;
+    }
+
     function strip(t) {
-        const href = `../pages/ecg.html?r=${encodeURIComponent(t.ecg)}`;
-        const wave = window.CPGStrip ? CPGStrip.svg(t.ecg, { label: t.label }) : '';
+        const href = ecgHref(t.ecg, t.lead);
+        const wave = window.CPGStrip ? CPGStrip.svg(t.ecg, { label: t.label, lead: t.lead || 'II' }) : '';
         return `<figure class="g-strip">
             ${wave}
             <figcaption>
@@ -213,5 +219,5 @@
         </article>`;
     }
 
-    window.CPGGuide = { renderGuide, renderDrug, LEVELS };
+    window.CPGGuide = { renderGuide, renderDrug, ecgHref, LEVELS };
 })();

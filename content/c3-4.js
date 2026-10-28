@@ -1,363 +1,779 @@
-/* ========== Chapter 3.4 – Acute Pulmonary Edema ========== */
+/* ========== CPG 3.4 – Acute Pulmonary Edema ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c3-4",
-    title: "Acute Pulmonary Edema",
-    shortTitle: "3.4 Acute Pulmonary Edema",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#wind"/></svg> Acute Pulmonary Edema</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Stabilize patients presenting with pulmonary edema.</li>
-                <li>Enhance oxygenation and ventilation.</li>
-                <li>Provide CPAP to moderate and severe cases.</li>
-                <li>Identify and address underlying causes (e.g., ACS, fluid overload).</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <p>Patients with a provisional diagnosis of pulmonary edema.</p>
-
-            <h4>Exclusion Criteria</h4>
-            <p>Difficulty of breathing secondary to another cause (e.g., asthma, COPD).</p>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Respiratory assessment:</strong> Common signs include dyspnoea on exertion or when lying down, wheezing, coughing, pink sputum/haemoptysis, chest pain, cyanosis/pallor/anxiety, tachycardia, hypotension, crackles on auscultation.</li>
-                <li><strong>Severity determination:</strong> Mild, moderate, or severe based on general appearance, respiratory rate, work of breathing, words per breath, air movement, SpO₂.</li>
-                <li><strong>Consider alternative causes:</strong> Pneumonia, ARDS.</li>
-                <li><strong>Cardiac assessment:</strong> 12‑lead ECG to include or exclude concurrent STEMI or arrhythmia.</li>
-                <li><strong>Triage category:</strong> As per Patient Triage Categories CPG. Red priority if severe distress, hypoxia, or haemodynamic instability.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back‑up</strong> – for severe cases, or in moderate cases where CPAP is not available.</li>
-                <li><strong>Position the patient</strong> – seated with head and torso elevated as much as possible; feet and legs dependent.</li>
-                <li><strong>Administer oxygen</strong> – titrate to maintain SpO₂ ≥92%.</li>
-                <li><strong>Consider Tele‑EMS consultation</strong> – if diagnosis unclear or to confirm CPAP settings.</li>
-                <li><strong>GTN (Glyceryl Trinitrate)</strong> – if SBP >100 mmHg: 0.4 mg SL every 5 minutes (max 3 doses).</li>
-                <li><strong>CPAP (Continuous Positive Airway Pressure)</strong> – initiate if SpO₂ <90% on room air or obvious respiratory distress. Start at 5 cmH₂O and increase as tolerated. Provide reassurance; do not remove mask for oral medications if good seal is achieved.</li>
-                <li><strong>BiPAP (Bilevel Positive Airway Pressure)</strong> – if inspiratory support is required: IPAP 10 cmH₂O, EPAP 5–10 cmH₂O.</li>
-                <li><strong>Furosemide</strong> – only for patients with signs of fluid overload. Dose: 40 mg IV/IO. Routine administration is not recommended.</li>
-                <li><strong>Salbutamol</strong> – if CPAP is available, administer nebulized salbutamol via the CPAP mask. If no CPAP, a single dose of 5 mg nebulized may be given; repeat after 10–15 minutes only if respiratory function improves. If no improvement, no further doses.</li>
-                <li><strong>If cardiac chest pain or STEMI</strong> – treat as per Chest Pain / ACS CPG.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Monitor for signs of fluid overload before administering furosemide.</li>
-                <li>Request ALS back‑up for moderate, severe, or deteriorating patients.</li>
-                <li>Ensure proper mask fit for CPAP/BiPAP; coach the patient to reduce claustrophobia.</li>
-                <li>Avoid removing CPAP mask for oral medications if a good seal is achieved.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Attaining a proper mask fit is key to effective pressure delivery.</li>
-                <li>Consider starting with a lower pressure (5 cmH₂O) and increase as the patient becomes comfortable.</li>
-                <li>Do not delay transport in severe cases; continue CPAP en route.</li>
-                <li>Salbutamol should be given via CPAP mask if possible to ensure delivery.</li>
-                <li>Furosemide should be reserved for definite fluid overload; avoid in hypovolaemic patients.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism (suspected cause), injuries/illness, signs (cyanosis, crackles), vital signs, SpO₂, ECG findings.</li>
-                <li>Treatment: oxygen, GTN doses, CPAP/BiPAP use, furosemide, salbutamol, response to interventions.</li>
-                <li>Allergies, medications, background, other (e.g., Tele‑EMS consultation).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Apply CPAP/BiPAP for all severe pulmonary edema patients.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c3-4",
+    "title": "Acute Pulmonary Edema",
+    "shortTitle": "3.4 Acute Pulmonary Edema",
+    "guide": {
+        "cpg": "3.4",
+        "group": "cardio",
+        "groupLabel": "Cardiovascular",
+        "title": "Acute Pulmonary Edema",
+        "lead": "Sit the patient up with legs down, give oxygen and GTN if the blood pressure allows, and start CPAP early in moderate and severe cases. Furosemide only for clear fluid overload.",
+        "source": {
+            "label": "CPG 3.4",
+            "pages": "88–91",
+            "pdf": "../pdf_sections/3_4_Acute_Pulmonary_Edema.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Provisional diagnosis of pulmonary edema."
+                ],
+                "exclude": [
+                    "Breathing difficulty from another cause (e.g. asthma, COPD)."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assessment",
+                "icon": "stethoscope",
+                "items": [
+                    "<b>Signs:</b> breathlessness on exertion or lying down; wheeze and cough; pink sputum or hemoptysis; chest pain; cyanosis, pallor, anxiety; tachycardia; hypotension; crackles.",
+                    "<b>Severity</b> (mild, moderate, severe): appearance, rate, work of breathing, words per breath, air movement, SpO<sub>2</sub>.",
+                    "<b>Other causes:</b> pneumonia, ARDS.",
+                    "<b>12-lead ECG</b> to include or exclude STEMI or arrhythmia; cardiac chest pain or STEMI: also follow the Chest Pain CPG."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "wind",
+                "steps": [
+                    {
+                        "title": "Consider ALS back-up",
+                        "text": "Request it for severe cases, or moderate cases where CPAP is not available."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "Seated, head and torso as upright as possible, feet and legs dependent."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "level": "EMR",
+                        "text": "Keep SpO<sub>2</sub> ≥92% (flowchart: &gt;94%)."
+                    },
+                    {
+                        "title": "GTN if systolic BP &gt;100",
+                        "level": "EMT",
+                        "doses": [
+                            {
+                                "drug": "GTN",
+                                "dose": "0.4 mg SL",
+                                "note": "Every 5 minutes; maximum 3 doses",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CPAP",
+                        "level": "EMT-A",
+                        "text": "Start when SpO<sub>2</sub> &lt;90% on room air or the patient is in obvious respiratory distress. Flowsafe CPAP. Begin at 5 cmH<sub>2</sub>O and increase as tolerated. Coach and reassure; mask fit is key. With a good seal, do not remove the mask for GTN or other oral medicines. Consider Tele-EMS to confirm settings."
+                    },
+                    {
+                        "title": "BiPAP if inspiratory support is needed",
+                        "level": "P",
+                        "text": "Initial IPAP 10 cmH<sub>2</sub>O, EPAP 5–10 cmH<sub>2</sub>O."
+                    },
+                    {
+                        "title": "Furosemide only for signs of fluid overload",
+                        "level": "P",
+                        "text": "Routine furosemide is not recommended.",
+                        "doses": [
+                            {
+                                "drug": "Furosemide",
+                                "dose": "40 mg IV/IO",
+                                "note": "",
+                                "level": "P"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Salbutamol",
+                        "level": "EMT",
+                        "text": "With CPAP: nebulize through the CPAP mask. Without CPAP: one dose; repeat after 10–15 minutes only if breathing improved. No improvement: no further doses.",
+                        "doses": [
+                            {
+                                "drug": "Salbutamol",
+                                "dose": "5 mg neb",
+                                "note": "",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Frequently, as per Universal Care."
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Safety",
+                "icon": "triangle-alert",
+                "tone": "alert",
+                "items": [
+                    "Check for fluid overload before furosemide.",
+                    "Request ALS back-up for moderate, severe or deteriorating patients.",
+                    "CPAP contraindications (Airway Management CPG): unconscious or altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "CPAP or BiPAP for every severe pulmonary edema patient."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs and drug sheets",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "2.1 Airway Management (CPAP)",
+                        "href": "c2.html?section=c2s1"
+                    },
+                    {
+                        "label": "3.1 Chest Pain / ACS",
+                        "href": "c3-1.html"
+                    },
+                    {
+                        "label": "M18 GTN",
+                        "href": "m18.html"
+                    },
+                    {
+                        "label": "M15 Furosemide",
+                        "href": "m15.html"
+                    },
+                    {
+                        "label": "M36 Salbutamol",
+                        "href": "m36.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is a common symptom of acute pulmonary edema?",
-            options: ["Frothy pink sputum", "Productive cough with green sputum", "Stridor", "Unilateral leg swelling"],
-            correct: 0,
-            explanation: "Pink, frothy sputum is classic for pulmonary edema due to transudation of fluid into the alveoli."
+            "q": "Which sign is listed for pulmonary edema in CPG 3.4?",
+            "options": [
+                "Pink sputum or hemoptysis",
+                "Green sputum",
+                "Stridor",
+                "Unilateral leg swelling"
+            ],
+            "correct": 0,
+            "explanation": "Signs include pink sputum/hemoptysis, orthopnea, wheeze, cough, crackles, tachycardia."
         },
         {
-            q: "Which position is recommended for a patient with acute pulmonary edema?",
-            options: ["Supine", "Left lateral recumbent", "Sitting upright with legs dependent", "Trendelenburg"],
-            correct: 2,
-            explanation: "Sitting upright with legs dependent reduces venous return (preload) and helps improve breathing."
+            "q": "How should the patient be positioned?",
+            "options": [
+                "Supine",
+                "Seated, head and torso up, legs dependent",
+                "Recovery position",
+                "Legs raised"
+            ],
+            "correct": 1,
+            "explanation": "Seated position with head and torso elevated, feet and legs dependent."
         },
         {
-            q: "What is the target SpO₂ for a patient with acute pulmonary edema?",
-            options: ["88‑92%", "≥92%", "100%", "94‑98%"],
-            correct: 1,
-            explanation: "Oxygen should be titrated to maintain SpO₂ ≥92% to avoid both hypoxia and hyperoxia."
+            "q": "What SpO2 does the CPG 3.4 text target?",
+            "options": [
+                "≥92%",
+                "88–92%",
+                "100%",
+                "≥98%"
+            ],
+            "correct": 0,
+            "explanation": "Text: maintain SpO2 ≥92% (the flowchart says >94%)."
         },
         {
-            q: "When should GTN be administered in acute pulmonary edema?",
-            options: ["SBP >100 mmHg", "SBP <90 mmHg", "HR <50 bpm", "All patients"],
-            correct: 0,
-            explanation: "GTN is indicated if SBP >100 mmHg. It reduces preload and afterload, relieving pulmonary congestion."
+            "q": "When is GTN given in pulmonary edema?",
+            "options": [
+                "Systolic BP >100",
+                "Any blood pressure",
+                "Systolic BP <90",
+                "Only with chest pain"
+            ],
+            "correct": 0,
+            "explanation": "GTN is indicated for systolic BP >100."
         },
         {
-            q: "What is the dose and route of GTN for acute pulmonary edema?",
-            options: ["0.4 mg SL every 5 minutes (max 3 doses)", "0.4 mg IV bolus", "5 mg nebulized", "10 mg PO"],
-            correct: 0,
-            explanation: "GTN 0.4 mg sublingual (spray or tablet) every 5 minutes, up to three doses, as long as SBP remains >100 mmHg."
+            "q": "What is the GTN regimen in CPG 3.4?",
+            "options": [
+                "0.4 mg SL every 5 minutes, maximum 3 doses",
+                "0.4 mg every 3–5 minutes, maximum 1.2 mg IV",
+                "0.8 mg once",
+                "5 mg neb"
+            ],
+            "correct": 0,
+            "explanation": "0.4 mg SL every 5 minutes, maximum 3 doses."
         },
         {
-            q: "What is the initial CPAP pressure setting recommended for acute pulmonary edema?",
-            options: ["5 cmH₂O", "10 cmH₂O", "15 cmH₂O", "20 cmH₂O"],
-            correct: 0,
-            explanation: "Start at 5 cmH₂O and increase as tolerated to improve patient comfort and compliance."
+            "q": "When should CPAP be started?",
+            "options": [
+                "Only when unconscious",
+                "SpO2 <90% on room air, or obvious respiratory distress",
+                "Only after furosemide",
+                "Never prehospital"
+            ],
+            "correct": 1,
+            "explanation": "CPAP when SpO2 <90% on room air or the patient is in obvious respiratory distress."
         },
         {
-            q: "What is an absolute contraindication to CPAP?",
-            options: ["Hypoxia", "Tachypnoea", "Unconscious patient", "Hypertension"],
-            correct: 2,
-            explanation: "CPAP requires a conscious, cooperative patient who can protect their airway. Unconsciousness/apnoea is an absolute contraindication."
+            "q": "What CPAP pressure should you start with?",
+            "options": [
+                "5 cmH2O, increasing as tolerated",
+                "15 cmH2O",
+                "20 cmH2O",
+                "0 cmH2O"
+            ],
+            "correct": 0,
+            "explanation": "Consider starting at 5 cmH2O and increase as the patient becomes comfortable."
         },
         {
-            q: "A patient with pulmonary edema is on CPAP and needs GTN. What should you do?",
-            options: ["Remove CPAP mask to give GTN", "Give GTN through the CPAP mask if there is a port", "Wait until CPAP is discontinued", "Give IM GTN"],
-            correct: 1,
-            explanation: "Do not remove the CPAP mask if a good seal is achieved. Use a medication port if available, or briefly break the seal to administer SL GTN."
+            "q": "The patient on CPAP needs another GTN dose and the mask seal is good. What do you do?",
+            "options": [
+                "Remove the mask for the tablet",
+                "Do not remove the mask for GTN or other oral medicines",
+                "Increase CPAP to 20",
+                "Stop CPAP"
+            ],
+            "correct": 1,
+            "explanation": "With a good seal, do not remove the CPAP mask to give GTN or other oral medications."
         },
         {
-            q: "When is furosemide indicated in acute pulmonary edema?",
-            options: ["All patients with pulmonary edema", "Only if signs of fluid overload are present", "Only if SBP <90 mmHg", "Routinely with every CPAP patient"],
-            correct: 1,
-            explanation: "Furosemide should only be given to patients with definite signs of fluid overload (e.g., JVD, oedema). Routine administration is not recommended."
+            "q": "Which CPAP device does the 3.4 flowchart name?",
+            "options": [
+                "BVM with PEEP valve",
+                "Flowsafe CPAP",
+                "Ventilator only",
+                "Nasal cannula"
+            ],
+            "correct": 1,
+            "explanation": "Flowsafe CPAP (EMT-A); CPAP/BiPAP on the ventilator is P."
         },
         {
-            q: "What is the dose of furosemide for an adult with fluid overload?",
-            options: ["20 mg IV", "40 mg IV", "80 mg IV", "100 mg IV"],
-            correct: 1,
-            explanation: "The initial dose is 40 mg IV/IO. May be repeated based on response and hospital guidance."
+            "q": "What are the initial BiPAP settings?",
+            "options": [
+                "IPAP 10, EPAP 5–10 cmH2O",
+                "IPAP 5, EPAP 5",
+                "IPAP 20, EPAP 10",
+                "IPAP 15, EPAP 0"
+            ],
+            "correct": 0,
+            "explanation": "IPAP 10 cmH2O; EPAP 5–10 cmH2O."
         },
         {
-            q: "What is the role of salbutamol in acute pulmonary edema?",
-            options: ["First‑line treatment", "Only if wheezing is present", "Routine administration with CPAP", "Contraindicated"],
-            correct: 1,
-            explanation: "Salbutamol may be given if bronchospasm/wheezing is present. If CPAP is used, administer via nebulizer integrated with CPAP."
+            "q": "When is furosemide given?",
+            "options": [
+                "Routinely",
+                "Only with signs of fluid overload",
+                "Only if SBP <90",
+                "Never"
+            ],
+            "correct": 1,
+            "explanation": "Only for signs of fluid overload; routine furosemide is not recommended."
         },
         {
-            q: "If CPAP is not available, how should salbutamol be given?",
-            options: ["IV bolus", "Single nebulized dose (5 mg)", "Continuous nebulization", "Not given"],
-            correct: 1,
-            explanation: "A single dose of nebulized salbutamol 5 mg may be given; repeat only if there is clear improvement. No improvement indicates no further doses."
+            "q": "What is the furosemide dose?",
+            "options": [
+                "20 mg IV",
+                "40 mg IV/IO",
+                "80 mg IV",
+                "100 mg PO"
+            ],
+            "correct": 1,
+            "explanation": "Furosemide 40 mg IV/IO."
         },
         {
-            q: "What is the initial BiPAP setting for acute pulmonary edema?",
-            options: ["IPAP 5, EPAP 5", "IPAP 10, EPAP 5‑10", "IPAP 15, EPAP 5", "IPAP 20, EPAP 10"],
-            correct: 1,
-            explanation: "Initial BiPAP settings are IPAP 10 cmH₂O and EPAP 5‑10 cmH₂O, titrated to clinical response."
+            "q": "What is the lowest level for furosemide in CPG 3.4?",
+            "options": [
+                "EMT",
+                "EMT-A",
+                "P",
+                "AP"
+            ],
+            "correct": 2,
+            "explanation": "Furosemide is P on the flowchart."
         },
         {
-            q: "Which ECG finding may accompany acute pulmonary edema?",
-            options: ["STEMI", "Atrial fibrillation", "Left ventricular hypertrophy", "All of the above"],
-            correct: 3,
-            explanation: "Pulmonary edema can be caused by or associated with various cardiac abnormalities; a 12‑lead ECG should be obtained to identify STEMI or arrhythmias."
+            "q": "With CPAP available, how is salbutamol given?",
+            "options": [
+                "Not at all",
+                "Nebulized through the CPAP mask",
+                "IV",
+                "Mask off, then neb"
+            ],
+            "correct": 1,
+            "explanation": "Administer CPAP and nebulize salbutamol via the CPAP mask."
         },
         {
-            q: "What is a sign of severe respiratory distress in pulmonary edema?",
-            options: ["Speaking in full sentences", "Accessory muscle use", "SpO₂ 95%", "Lying flat comfortably"],
-            correct: 1,
-            explanation: "Accessory muscle use, inability to speak, and hypoxia indicate severe distress requiring immediate intervention."
+            "q": "Without CPAP, when may a second salbutamol dose be given?",
+            "options": [
+                "Always after 5 minutes",
+                "After 10–15 minutes, only if breathing improved",
+                "Never",
+                "Every 5 minutes until better"
+            ],
+            "correct": 1,
+            "explanation": "Repeat after 10–15 minutes only if improvement was noted; no improvement means no further doses."
         },
         {
-            q: "A patient with pulmonary edema has SBP 85 mmHg and is diaphoretic. What should you do?",
-            options: ["Give GTN", "Start CPAP", "Give fluid bolus cautiously and consider inotropes", "Give furosemide"],
-            correct: 2,
-            explanation: "Hypotension in pulmonary edema may indicate cardiogenic shock. GTN is contraindicated. Cautious fluid may help if hypovolaemic, but often inotropes/pressors are needed. CPAP may still be used but monitor BP closely."
+            "q": "What is the salbutamol dose?",
+            "options": [
+                "2.5 mg",
+                "5 mg neb",
+                "10 mg",
+                "0.5 mg"
+            ],
+            "correct": 1,
+            "explanation": "5 mg nebulized."
         },
         {
-            q: "Why is CPAP effective in pulmonary edema?",
-            options: ["Increases preload", "Decreases intrathoracic pressure", "Increases alveolar pressure, reducing transudation", "Stimulates diuresis"],
-            correct: 2,
-            explanation: "CPAP increases alveolar pressure, opposing hydrostatic pressure and reducing fluid transudation into alveoli. It also reduces preload and afterload."
+            "q": "When should ALS back-up be requested?",
+            "options": [
+                "Mild cases only",
+                "Severe cases, or moderate cases where CPAP is not available",
+                "Never",
+                "Only on scene arrival"
+            ],
+            "correct": 1,
+            "explanation": "Request ALS for severe cases, or moderate where CPAP isn't available (and for deteriorating patients)."
         },
         {
-            q: "What is the maximum number of GTN doses that can be given prehospital?",
-            options: ["1", "2", "3", "Unlimited"],
-            correct: 2,
-            explanation: "Up to three doses (total 1.2 mg) may be given, provided SBP remains ≥100 mmHg."
+            "q": "When should Tele-EMS be consulted?",
+            "options": [
+                "To confirm CPAP settings, or if the diagnosis is unclear",
+                "Never",
+                "Before oxygen",
+                "For every patient"
+            ],
+            "correct": 0,
+            "explanation": "Consult Tele-EMS for CPAP settings or an unclear diagnosis."
         },
         {
-            q: "A patient on CPAP becomes hypotensive. What should you consider?",
-            options: ["Increase CPAP pressure", "Remove CPAP", "Check for tension pneumothorax", "Give furosemide"],
-            correct: 2,
-            explanation: "Hypotension in a patient on CPAP may indicate tension pneumothorax, especially if associated with respiratory distress or tracheal deviation."
+            "q": "Which alternative causes does CPG 3.4 name?",
+            "options": [
+                "Asthma and COPD",
+                "Pneumonia and ARDS",
+                "Anxiety",
+                "Anemia"
+            ],
+            "correct": 1,
+            "explanation": "Consider other causes such as pneumonia and ARDS."
         },
         {
-            q: "Which of the following is NOT a typical finding in pulmonary edema?",
-            options: ["Crackles on auscultation", "Peripheral oedema", "Pleuritic chest pain", "Jugular venous distension"],
-            correct: 2,
-            explanation: "Pleuritic chest pain is more typical of pericarditis or pulmonary embolism; pulmonary edema usually presents with dull, retrosternal discomfort or no pain."
+            "q": "The 12-lead shows a STEMI. What applies?",
+            "options": [
+                "Ignore it until edema resolves",
+                "Also treat as per the Chest Pain / ACS CPG",
+                "Give furosemide first",
+                "Stop GTN"
+            ],
+            "correct": 1,
+            "explanation": "Cardiac chest pain or STEMI: treat as per the Cardiac Chest Pain CPG."
         },
         {
-            q: "How should you reassess a patient with pulmonary edema after starting CPAP?",
-            options: ["Check SpO₂ and respiratory rate every 5 minutes", "Wait 20 minutes before reassessing", "Remove CPAP to auscultate", "Only reassess if patient deteriorates"],
-            correct: 0,
-            explanation: "Frequent reassessment of vital signs, SpO₂, and clinical status is essential to gauge response to therapy."
+            "q": "Which is used to judge severity?",
+            "options": [
+                "Age",
+                "Words per breath, work of breathing, rate, air movement, SpO2",
+                "Temperature only",
+                "Blood glucose"
+            ],
+            "correct": 1,
+            "explanation": "Assess appearance, rate, work of breathing, words per breath, air movement and SpO2."
         },
         {
-            q: "What is the preferred route for furosemide administration?",
-            options: ["Oral", "Sublingual", "IV/IO", "IM"],
-            correct: 2,
-            explanation: "IV/IO is preferred for rapid onset in acute pulmonary edema."
+            "q": "What is the lowest level for CPAP (Flowsafe)?",
+            "options": [
+                "EMR",
+                "EMT",
+                "EMT-A",
+                "P"
+            ],
+            "correct": 2,
+            "explanation": "Flowsafe CPAP is EMT-A."
         },
         {
-            q: "A patient with known renal failure presents with pulmonary edema. What medication should be used with caution?",
-            options: ["GTN", "Furosemide", "Salbutamol", "CPAP"],
-            correct: 1,
-            explanation: "Furosemide may be less effective in renal failure and can cause ototoxicity; use cautiously and monitor response."
+            "q": "What is the lowest level for GTN in CPG 3.4?",
+            "options": [
+                "EMR",
+                "EMT",
+                "P",
+                "AP"
+            ],
+            "correct": 1,
+            "explanation": "GTN is EMT."
         },
         {
-            q: "What is the mechanism of action of GTN in pulmonary edema?",
-            options: ["Positive inotropy", "Vasodilation (reduces preload and afterload)", "Bronchodilation", "Diuresis"],
-            correct: 1,
-            explanation: "GTN dilates veins (reducing preload) and arteries (reducing afterload), decreasing the workload of the heart and pulmonary congestion."
+            "q": "The patient finds the CPAP mask claustrophobic. What helps?",
+            "options": [
+                "Remove it",
+                "Reassurance and coaching, starting at a lower pressure",
+                "Sedate immediately",
+                "Higher pressure"
+            ],
+            "correct": 1,
+            "explanation": "Provide reassurance and coaching; start at a lower pressure and increase as tolerated."
         },
         {
-            q: "A patient with pulmonary edema has a 12‑lead ECG showing ST elevation in leads II, III, aVF. What should you do?",
-            options: ["Treat as inferior STEMI and follow ACS CPG", "Give only CPAP", "Avoid GTN", "Both A and C"],
-            correct: 3,
-            explanation: "This is an inferior STEMI. Treat as per Chest Pain CPG, including aspirin and consideration of GTN (but cautious if RV involvement). CPAP may still be used."
+            "q": "What is key to effective CPAP pressure delivery?",
+            "options": [
+                "A good mask fit",
+                "A high oxygen flow only",
+                "The patient lying flat",
+                "Furosemide first"
+            ],
+            "correct": 0,
+            "explanation": "Attaining a proper mask fit is key to effective pressure delivery."
         },
         {
-            q: "Which of the following is a potential complication of excessive CPAP pressure?",
-            options: ["Hypotension", "Pneumothorax", "Gastric distension", "All of the above"],
-            correct: 3,
-            explanation: "High pressures can cause hypotension (reduced venous return), pneumothorax (barotrauma), and gastric distension (if air is swallowed)."
+            "q": "What must you check before giving furosemide?",
+            "options": [
+                "Glucose",
+                "Signs of fluid overload",
+                "Temperature",
+                "Pupils"
+            ],
+            "correct": 1,
+            "explanation": "Monitor for signs of fluid overload before administering furosemide."
         },
         {
-            q: "A patient with pulmonary edema improves on CPAP and GTN. What is the next priority?",
-            options: ["Discontinue CPAP", "Transport to hospital for further evaluation", "Give oral furosemide", "Repeat 12‑lead ECG"],
-            correct: 1,
-            explanation: "Even if improved, the patient requires hospital evaluation for underlying cause. Continue CPAP and monitor en route."
+            "q": "Pulmonary edema with BP 82/50. Is CPAP appropriate?",
+            "options": [
+                "Yes",
+                "No – hypotension is a CPAP contraindication (Airway Management CPG)",
+                "Yes, at high pressure",
+                "Only BiPAP"
+            ],
+            "correct": 1,
+            "explanation": "Hypotension is an absolute contraindication to CPAP."
         },
         {
-            q: "What is the dose of nebulized salbutamol for an adult with pulmonary edema and wheezing?",
-            options: ["2.5 mg", "5 mg", "10 mg", "1.25 mg"],
-            correct: 1,
-            explanation: "The standard adult dose is 5 mg nebulized, diluted to a total volume of 5 mL with normal saline or sterile water."
+            "q": "Which CPG 3.4 goal concerns CPAP?",
+            "options": [
+                "CPAP for every patient",
+                "Provide CPAP to moderate and severe cases",
+                "Avoid CPAP",
+                "CPAP only after furosemide"
+            ],
+            "correct": 1,
+            "explanation": "Goal: provide CPAP to moderate and severe cases."
         },
         {
-            q: "A patient with pulmonary edema becomes increasingly agitated on CPAP. What should you do?",
-            options: ["Sedate immediately", "Remove CPAP and use NRB", "Check mask fit and provide reassurance; consider reducing pressure", "Increase CPAP pressure"],
-            correct: 2,
-            explanation: "Agitation is often due to claustrophobia or discomfort. Reassure, check fit, and consider lowering pressure temporarily. Sedation may be needed but only after non‑pharmacological measures."
+            "q": "Can a single salbutamol dose be given without CPAP?",
+            "options": [
+                "Yes, one dose may be given",
+                "No",
+                "Only IV",
+                "Only to children"
+            ],
+            "correct": 0,
+            "explanation": "If no CPAP is available, a single dose of nebulized salbutamol may be given."
         },
         {
-            q: "What is the recommended initial CPAP device in DCAS?",
-            options: ["Flow‑safe CPAP", "BVM with PEEP valve", "Ventilator", "Non‑rebreather mask"],
-            correct: 0,
-            explanation: "Flow‑safe CPAP is the DCAS device for prehospital CPAP."
+            "q": "What is the KPI of CPG 3.4?",
+            "options": [
+                "Furosemide for all",
+                "CPAP/BiPAP for all severe pulmonary edema",
+                "GTN for all",
+                "Transport in 10 minutes"
+            ],
+            "correct": 1,
+            "explanation": "KPI: apply CPAP/BiPAP for all severe pulmonary edema patients."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is acute pulmonary edema?", answer: "Accumulation of fluid in the lung interstitium and alveoli, often due to elevated pulmonary capillary pressure (e.g., heart failure)." },
-        { category: "Symptoms", question: "List three common symptoms of pulmonary edema.", answer: "Dyspnoea, orthopnoea, cough with pink frothy sputum, crackles, wheezing." },
-        { category: "Signs", question: "What are typical auscultatory findings in pulmonary edema?", answer: "Bibasilar crackles (may progress to all lung fields), sometimes wheezes." },
-        { category: "Positioning", question: "How should a patient with pulmonary edema be positioned?", answer: "Sitting upright with legs dependent to reduce venous return." },
-        { category: "Oxygen", question: "What is the target SpO₂ in pulmonary edema?", answer: "≥92%." },
-        { category: "GTN", question: "What is the dose of GTN for pulmonary edema?", answer: "0.4 mg SL every 5 minutes, max 3 doses, provided SBP >100 mmHg." },
-        { category: "GTN contraindication", question: "When is GTN contraindicated in pulmonary edema?", answer: "SBP <90 mmHg, or suspected right ventricular infarction." },
-        { category: "CPAP", question: "What is the initial CPAP pressure?", answer: "5 cmH₂O, then titrate up as tolerated." },
-        { category: "CPAP contraindication", question: "What is an absolute contraindication to CPAP?", answer: "Unconscious/apnoeic patient." },
-        { category: "BiPAP", question: "What are typical initial BiPAP settings?", answer: "IPAP 10 cmH₂O, EPAP 5‑10 cmH₂O." },
-        { category: "Furosemide", question: "When should furosemide be given in pulmonary edema?", answer: "Only if there are definite signs of fluid overload (e.g., JVD, peripheral oedema)." },
-        { category: "Furosemide dose", question: "What is the dose of furosemide in acute pulmonary edema?", answer: "40 mg IV/IO." },
-        { category: "Salbutamol", question: "When is salbutamol indicated in pulmonary edema?", answer: "If wheezing/bronchospasm is present." },
-        { category: "Salbutamol dose", question: "What is the dose of nebulized salbutamol for an adult?", answer: "5 mg." },
-        { category: "CPAP + medications", question: "How do you give medications to a patient on CPAP?", answer: "Use a nebulizer port integrated with the CPAP circuit; avoid removing mask." },
-        { category: "Monitoring", question: "How often should you reassess a patient with pulmonary edema?", answer: "Every 5 minutes for unstable patients." },
-        { category: "Differential", question: "Name two conditions that mimic pulmonary edema.", answer: "COPD exacerbation, pneumonia, ARDS." },
-        { category: "ECG", question: "Why obtain a 12‑lead ECG in pulmonary edema?", answer: "To identify STEMI, arrhythmias, or other cardiac causes." },
-        { category: "Complication", question: "What is a potential complication of high CPAP pressures?", answer: "Hypotension, pneumothorax, gastric insufflation." },
-        { category: "Claustrophobia", question: "What should you do if a patient becomes claustrophobic on CPAP?", answer: "Reassure, coach, and consider starting with a lower pressure." },
-        { category: "KPI", question: "What is the key performance indicator for pulmonary edema?", answer: "Apply CPAP/BiPAP for all severe cases." },
-        { category: "ALS backup", question: "When should ALS backup be requested in pulmonary edema?", answer: "For severe cases, or moderate cases where CPAP is not available." },
-        { category: "Tele‑EMS", question: "When should Tele‑EMS be consulted?", answer: "If diagnosis unclear, or for guidance on CPAP settings." },
-        { category: "Fluid overload", question: "What signs suggest fluid overload?", answer: "Jugular venous distension, peripheral oedema, ascites." },
-        { category: "Hypotension", question: "What should you consider if a patient with pulmonary edema is hypotensive?", answer: "Cardiogenic shock, RV infarction, or tension pneumothorax." },
-        { category: "Transport", question: "Should a patient who improves on CPAP still be transported?", answer: "Yes, for evaluation of underlying cause and continued monitoring." },
-        { category: "Pink sputum", question: "What does pink frothy sputum indicate?", answer: "Fluid in the alveoli with small amounts of blood, typical of pulmonary edema." },
-        { category: "Wheezing", question: "What causes wheezing in pulmonary edema?", answer: "Fluid around airways causing bronchial compression or reflex bronchospasm ('cardiac asthma')." },
-        { category: "Device", question: "What CPAP device is used by DCAS?", answer: "Flow‑safe CPAP." },
-        { category: "Documentation", question: "What key elements should be documented in pulmonary edema?", answer: "Vital signs, SpO₂, CPAP settings, medications given, response, ECG findings." }
+    "flashcards": [
+        {
+            "category": "Signs",
+            "question": "Signs of pulmonary edema?",
+            "answer": "Breathless on exertion or lying flat; wheeze, cough; pink sputum; chest pain; cyanosis, pallor, anxiety; tachycardia; hypotension; crackles."
+        },
+        {
+            "category": "Severity",
+            "question": "Severity assessment?",
+            "answer": "Appearance, rate, work of breathing, words per breath, air movement, SpO2: mild, moderate or severe."
+        },
+        {
+            "category": "Differentials",
+            "question": "Alternative causes?",
+            "answer": "Pneumonia, ARDS."
+        },
+        {
+            "category": "Position",
+            "question": "Positioning?",
+            "answer": "Seated, head and torso up, legs dependent."
+        },
+        {
+            "category": "Oxygen",
+            "question": "Oxygen target?",
+            "answer": "SpO2 ≥92% (flowchart >94%)."
+        },
+        {
+            "category": "GTN",
+            "question": "GTN in pulmonary edema?",
+            "answer": "If SBP >100: 0.4 mg SL every 5 minutes, maximum 3 doses (EMT)."
+        },
+        {
+            "category": "CPAP",
+            "question": "When to start CPAP?",
+            "answer": "SpO2 <90% on room air, or obvious respiratory distress."
+        },
+        {
+            "category": "CPAP",
+            "question": "CPAP technique?",
+            "answer": "Flowsafe CPAP (EMT-A); start at 5 cmH2O and increase as tolerated; good mask fit; coach and reassure."
+        },
+        {
+            "category": "CPAP",
+            "question": "Oral medicines on CPAP?",
+            "answer": "With a good seal, do not remove the mask for GTN or other oral medicines."
+        },
+        {
+            "category": "BiPAP",
+            "question": "BiPAP settings?",
+            "answer": "IPAP 10 cmH2O; EPAP 5–10 cmH2O (P), when inspiratory support is needed."
+        },
+        {
+            "category": "Furosemide",
+            "question": "Furosemide?",
+            "answer": "Only with signs of fluid overload: 40 mg IV/IO (P). Not routine."
+        },
+        {
+            "category": "Salbutamol",
+            "question": "Salbutamol with CPAP?",
+            "answer": "Nebulize 5 mg through the CPAP mask."
+        },
+        {
+            "category": "Salbutamol",
+            "question": "Salbutamol without CPAP?",
+            "answer": "Single 5 mg neb; repeat after 10–15 minutes only if improved; no improvement, no more."
+        },
+        {
+            "category": "ALS",
+            "question": "When ALS back-up?",
+            "answer": "Severe; moderate without CPAP; deteriorating patients."
+        },
+        {
+            "category": "Tele-EMS",
+            "question": "When Tele-EMS?",
+            "answer": "To confirm CPAP settings, or if the diagnosis is unclear."
+        },
+        {
+            "category": "ECG",
+            "question": "Why a 12-lead?",
+            "answer": "To include or exclude STEMI or arrhythmia; STEMI or cardiac pain → Chest Pain CPG."
+        },
+        {
+            "category": "Safety",
+            "question": "Before furosemide?",
+            "answer": "Look for signs of fluid overload."
+        },
+        {
+            "category": "Safety",
+            "question": "CPAP contraindications?",
+            "answer": "Unconscious/altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension (Airway Management CPG)."
+        },
+        {
+            "category": "Scope",
+            "question": "Levels in CPG 3.4?",
+            "answer": "Oxygen EMR; GTN and salbutamol EMT; Flowsafe CPAP EMT-A; CPAP/BiPAP and furosemide P."
+        },
+        {
+            "category": "Goals",
+            "question": "CPG 3.4 goals?",
+            "answer": "Stabilize; improve oxygenation and ventilation; CPAP for moderate and severe; address underlying causes."
+        },
+        {
+            "category": "Exclusions",
+            "question": "Who is excluded?",
+            "answer": "Breathing difficulty from another cause, e.g. asthma or COPD."
+        },
+        {
+            "category": "CPAP",
+            "question": "Patient claustrophobic on CPAP?",
+            "answer": "Reassure, coach, start at a lower pressure and increase gradually."
+        },
+        {
+            "category": "GTN",
+            "question": "Systolic BP 95 and pulmonary edema: GTN?",
+            "answer": "No: GTN needs systolic BP >100."
+        },
+        {
+            "category": "Furosemide",
+            "question": "Is routine furosemide recommended?",
+            "answer": "No."
+        },
+        {
+            "category": "Salbutamol",
+            "question": "No response to the first salbutamol dose?",
+            "answer": "Give no further doses."
+        },
+        {
+            "category": "Reassessment",
+            "question": "Reassessment?",
+            "answer": "Frequently, as per Universal Care."
+        },
+        {
+            "category": "Triage",
+            "question": "Triage?",
+            "answer": "As per the Patient Triage Categories CPG."
+        },
+        {
+            "category": "Documentation",
+            "question": "Treatment documentation?",
+            "answer": "Oxygen, GTN doses, CPAP/BiPAP use, furosemide or salbutamol given."
+        },
+        {
+            "category": "Documentation",
+            "question": "Other documentation?",
+            "answer": "ALS back-up request and telemedicine call."
+        },
+        {
+            "category": "KPI",
+            "question": "CPG 3.4 KPI?",
+            "answer": "CPAP/BiPAP for all severe pulmonary edema patients."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_3_4_1",
-            scenario: "A 70‑year‑old male presents with sudden onset of severe dyspnoea, pink frothy sputum, and crackles up to the apices. He is sitting upright, anxious, and diaphoretic. HR 130 bpm, BP 170/100, RR 32, SpO₂ 84% on room air. What is your priority intervention?",
-            question: "What should you do first?",
-            options: [
-                { t: "Give GTN 0.4 mg SL and reassess", f: "GTN is indicated, but oxygenation and positioning are higher priority." },
-                { t: "Position him upright, give high‑flow oxygen, and initiate CPAP at 5 cmH₂O", f: "Correct. Immediate CPAP and oxygen are the priority." },
-                { t: "Start IV and give furosemide 40 mg", f: "Furosemide may be given later; CPAP and GTN come first." },
-                { t: "Perform a 12‑lead ECG", f: "ECG is important but should not delay CPAP." }
+            "id": "crit_3_4_1",
+            "scenario": "A 70-year-old man has sudden severe breathlessness, pink frothy sputum and crackles to the apices. Sitting upright, anxious, sweaty. SpO2 84% on air, BP 170/100, alert. EMT-A crew.",
+            "question": "What is your treatment plan?",
+            "options": [
+                {
+                    "t": "Sit him up with legs down, oxygen, GTN 0.4 mg SL, and Flowsafe CPAP from 5 cmH2O; request ALS back-up",
+                    "f": "Correct. Severe pulmonary edema with good blood pressure."
+                },
+                {
+                    "t": "Lay him flat and give furosemide",
+                    "f": "Position him upright; furosemide is a P drug and only for clear fluid overload."
+                },
+                {
+                    "t": "Oxygen only and transport",
+                    "f": "SpO2 <90% and obvious distress: start CPAP."
+                },
+                {
+                    "t": "Salbutamol repeated every 5 minutes",
+                    "f": "Salbutamol is not the main treatment; repeats only if it helped."
+                }
             ],
-            correct: 1,
-            explanation: "This patient has severe pulmonary edema. Immediate CPAP with oxygen is the priority. GTN can be given concurrently if BP permits. Furosemide and ECG can follow.",
-            kpi: "CPAP initiated within 5 minutes."
+            "correct": 0,
+            "explanation": "Position, oxygen, GTN if SBP >100 (every 5 minutes, maximum 3), and CPAP when SpO2 <90% or in obvious distress. Severe cases need ALS back-up.",
+            "kpi": "CPAP or BiPAP for every severe pulmonary edema patient."
         },
         {
-            id: "crit_3_4_2",
-            scenario: "A 65‑year‑old female with acute pulmonary edema is on CPAP at 10 cmH₂O and has received two doses of GTN. Her SpO₂ has improved to 94%, but she remains tachypnoeic and her BP is now 95/60. What should you do?",
-            question: "What is the next appropriate action?",
-            options: [
-                { t: "Give another dose of GTN", f: "GTN is contraindicated with SBP <100 mmHg." },
-                { t: "Increase CPAP to 15 cmH₂O", f: "Higher CPAP may further reduce venous return and worsen hypotension." },
-                { t: "Decrease CPAP to 5 cmH₂O and reassess", f: "Correct. Reducing CPAP may improve venous return and BP while maintaining oxygenation." },
-                { t: "Give furosemide 40 mg IV", f: "Furosemide may not help and could worsen hypotension." }
+            "id": "crit_3_4_2",
+            "scenario": "Your patient is on CPAP with a good seal and has had one GTN dose. Systolic BP is still 160 and he is still distressed.",
+            "question": "How do you give the next GTN dose?",
+            "options": [
+                {
+                    "t": "Do not remove the CPAP mask for oral medicines; keep CPAP running and reassess",
+                    "f": "Correct. With a good seal, the CPAP mask should not be removed for GTN or other oral medications."
+                },
+                {
+                    "t": "Take the mask off to give GTN",
+                    "f": "CPG 3.4 says not to remove a well-sealed CPAP mask for oral medicines."
+                },
+                {
+                    "t": "Give GTN IV",
+                    "f": "GTN in CPG 3.4 is sublingual."
+                },
+                {
+                    "t": "Stop CPAP",
+                    "f": "He still needs CPAP."
+                }
             ],
-            correct: 2,
-            explanation: "Hypotension on CPAP may be due to reduced preload. Lowering CPAP can improve venous return. Monitor response and consider fluid bolus if signs of hypoperfusion persist.",
-            kpi: "CPAP adjusted appropriately for hypotension."
+            "correct": 0,
+            "explanation": "CPAP is the key treatment in severe cases. Keep a good seal, coach the patient, titrate pressure as tolerated, and consult Tele-EMS on settings if needed.",
+            "kpi": "CPAP or BiPAP for every severe pulmonary edema patient."
         },
         {
-            id: "crit_3_4_3",
-            scenario: "You are called to a 60‑year‑old with dyspnoea. He has crackles and wheezes, SpO₂ 89%. He is alert and can speak in short sentences. He has no history of asthma. What is your initial management?",
-            question: "What is the most appropriate initial treatment?",
-            options: [
-                { t: "Nebulized salbutamol 5 mg", f: "Wheezing may be due to 'cardiac asthma'; CPAP and GTN are more appropriate first." },
-                { t: "CPAP and GTN", f: "Correct. This is likely pulmonary edema; CPAP addresses the primary problem." },
-                { t: "Furosemide 40 mg IV", f: "Not first‑line without signs of fluid overload." },
-                { t: "IV fluids", f: "Fluids could worsen pulmonary edema." }
+            "id": "crit_3_4_3",
+            "scenario": "A 60-year-old with crackles and wheeze, SpO2 89%, speaks in short sentences. No CPAP is available on this unit.",
+            "question": "How do you use salbutamol?",
+            "options": [
+                {
+                    "t": "One 5 mg neb; repeat after 10–15 minutes only if breathing improved; request ALS back-up",
+                    "f": "Correct. Without CPAP: a single dose, repeated only if it helped, and ALS for moderate cases without CPAP."
+                },
+                {
+                    "t": "Back-to-back salbutamol every 5 minutes",
+                    "f": "Repeat only after 10–15 minutes and only if there was improvement."
+                },
+                {
+                    "t": "No oxygen, salbutamol only",
+                    "f": "Give oxygen to SpO2 ≥92%."
+                },
+                {
+                    "t": "Furosemide 40 mg as an EMT",
+                    "f": "Furosemide is P level and only for fluid overload."
+                }
             ],
-            correct: 1,
-            explanation: "Wheezing in this context may be cardiac asthma. CPAP and GTN are the priority. Salbutamol can be added if wheezing persists after CPAP.",
-            kpi: "CPAP initiated before bronchodilators."
+            "correct": 0,
+            "explanation": "If no CPAP is available, a single dose of nebulized salbutamol may be given and repeated after 10–15 minutes only if respiratory function improves. Request ALS back-up for moderate cases where CPAP is not available.",
+            "kpi": "CPAP or BiPAP for every severe pulmonary edema patient."
         },
         {
-            id: "crit_3_4_4",
-            scenario: "A patient with pulmonary edema on CPAP suddenly becomes more agitated and complains of severe chest pain. You note tracheal deviation to the left and absent breath sounds on the right. What is the most likely diagnosis and immediate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Increase CPAP pressure", f: "Will worsen tension pneumothorax." },
-                { t: "Perform needle decompression on the right chest", f: "Correct. Tension pneumothorax is a life‑threatening complication." },
-                { t: "Give GTN for chest pain", f: "GTN may worsen hypotension." },
-                { t: "Remove CPAP and give oxygen via NRB", f: "Not adequate; decompression is needed." }
+            "id": "crit_3_4_4",
+            "scenario": "A patient with pulmonary edema has BP 84/50, cold clammy skin and confusion.",
+            "question": "What is correct?",
+            "options": [
+                {
+                    "t": "No GTN and no CPAP (hypotension, altered mental status); oxygen, upright position, urgent ALS back-up",
+                    "f": "Correct. GTN needs SBP >100; hypotension and altered mental status are CPAP contraindications."
+                },
+                {
+                    "t": "GTN 0.4 mg",
+                    "f": "Systolic BP must be above 100."
+                },
+                {
+                    "t": "CPAP at 10 cmH2O",
+                    "f": "Hypotension and altered mental status contraindicate CPAP."
+                },
+                {
+                    "t": "Furosemide routinely",
+                    "f": "Routine furosemide is not recommended."
+                }
             ],
-            correct: 1,
-            explanation: "Sudden deterioration with tracheal deviation and absent breath sounds suggests tension pneumothorax. Immediate needle decompression (second intercostal space, midclavicular line) is required.",
-            kpi: "Decompression performed within 2 minutes."
+            "correct": 0,
+            "explanation": "Check contraindications before each treatment. Hypotension excludes GTN (needs SBP >100) and CPAP; request ALS back-up for severe or deteriorating patients and do a 12-lead for STEMI.",
+            "kpi": "CPAP or BiPAP for every severe pulmonary edema patient."
         },
         {
-            id: "crit_3_4_5",
-            scenario: "A 75‑year‑old with pulmonary edema improves on CPAP and GTN. His SpO₂ is 96% on CPAP 7.5 cmH₂O, BP 130/80. He has received three GTN doses. You are 10 minutes from hospital. What is your ongoing management?",
-            question: "What should you do next?",
-            options: [
-                { t: "Continue CPAP en route, monitor vitals, and prepare for handover", f: "Correct. Maintain therapy and transport." },
-                { t: "Wean CPAP to room air", f: "Premature weaning may cause deterioration." },
-                { t: "Give another dose of GTN", f: "Maximum three doses reached." },
-                { t: "Start furosemide infusion", f: "Not indicated prehospital; continue current management." }
+            "id": "crit_3_4_5",
+            "scenario": "A breathless 75-year-old has crackles, swollen legs and raised neck veins. A paramedic is on scene, CPAP is running and he has had 3 GTN doses.",
+            "question": "Is furosemide appropriate?",
+            "options": [
+                {
+                    "t": "Yes: signs of fluid overload are present; furosemide 40 mg IV/IO (P)",
+                    "f": "Correct. Furosemide is for patients with signs of fluid overload."
+                },
+                {
+                    "t": "No, it is never given",
+                    "f": "It is given when there are signs of fluid overload."
+                },
+                {
+                    "t": "Yes, 80 mg",
+                    "f": "The CPG 3.4 dose is 40 mg IV/IO."
+                },
+                {
+                    "t": "Yes, a fourth GTN instead",
+                    "f": "GTN is limited to 3 doses."
+                }
             ],
-            correct: 0,
-            explanation: "Continue CPAP and monitoring during transport. Provide handover including therapies given and response.",
-            kpi: "Therapy maintained during transport; complete documentation."
+            "correct": 0,
+            "explanation": "Furosemide only for signs of fluid overload, 40 mg IV/IO; routine administration is not recommended. GTN maximum is 3 doses.",
+            "kpi": "CPAP or BiPAP for every severe pulmonary edema patient."
         }
     ]
 };

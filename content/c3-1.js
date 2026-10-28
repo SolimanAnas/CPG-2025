@@ -1,353 +1,911 @@
-/* ========== Chapter 3.1 – Chest Pain / Acute Coronary Syndrome ========== */
+/* ========== CPG 3.1 – Chest Pain / Acute Coronary Syndrome ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c3-1",
-    title: "Chest Pain / Acute Coronary Syndrome",
-    shortTitle: "3.1 Chest Pain / ACS",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#heart"/></svg> Chest Pain / Acute Coronary Syndrome (ACS)</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Conduct a full vital signs assessment and obtain a 12‑lead ECG promptly, considering right‑sided and posterior leads when indicated.</li>
-                <li>Determine the exact time of symptom onset – this is critical for reperfusion decisions.</li>
-                <li>Expedite transport to an appropriate cardiac hospital while initiating prehospital management.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <p>Patients with ischemic‑type symptoms (chest pain/pressure, dyspnoea, diaphoresis, nausea, dizziness, syncope, palpitations) or ECG changes suggestive of ACS (STEMI, NSTEMI, new LBBB, ischemic T‑wave inversions/ST depressions). Also include non‑specific presentations where a cardiac cause cannot be excluded, or hemodynamic compromise with suspected cardiac origin.</p>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>12‑lead ECG:</strong> Obtain as soon as possible. Consider right‑sided leads (V4R) for inferior STEMI and posterior leads (V7‑V9) if high suspicion of posterior infarction.</li>
-                <li><strong>Time of onset:</strong> Ask precisely when the discomfort began; this determines eligibility for reperfusion therapy.</li>
-                <li><strong>Pain characteristics:</strong> Use OPQRST to differentiate ischemic from non‑ischemic or non‑cardiac chest pain (see table below).</li>
-                <li><strong>Triage category:</strong> Red priority if STEMI, haemodynamic instability, or chest pain with signs of shock.</li>
-            </ul>
-
-            <h4>Management</h4>
-            <ul>
-                <li><strong>Oxygen:</strong> Only if SpO₂ < 94% (or respiratory distress). Target 94‑98%.</li>
-                <li><strong>Aspirin:</strong> 162‑324 mg chewed immediately. If the patient has taken aspirin within the last 60 minutes, give additional aspirin to reach a total of 324 mg.</li>
-                <li><strong>GTN (Glyceryl Trinitrate):</strong> 0.4 mg sublingual every 3‑5 minutes for ongoing ischaemic pain, provided SBP ≥ 100 mmHg. Maximum 3 doses. Contraindicated if phosphodiesterase inhibitors (e.g., sildenafil) taken in last 24 hours, or inferior STEMI with suspected right ventricular involvement.</li>
-                <li><strong>Morphine:</strong> For severe pain only (not routinely). Give 1‑2 mg IV increments every 5‑10 minutes (max 10 mg).</li>
-                <li><strong>Fluids:</strong> If SBP < 90 mmHg and no signs of pulmonary oedema, give 250 mL normal saline IV/IO bolus; repeat cautiously.</li>
-                <li><strong>ALS back‑up:</strong> Request early if haemodynamically unstable, refractory pain, or if sedation/cardioversion may be needed.</li>
-                <li><strong>ECG monitoring:</strong> Continuous 4‑lead monitoring; apply defibrillator pads to all STEMI patients.</li>
-            </ul>
-
-            <h4>ECG Interpretation & Special Situations</h4>
-            <ul>
-                <li><strong>STEMI:</strong> ST elevation at the J point in two contiguous leads (≥1 mm in limb leads, ≥2 mm in precordial leads) or new LBBB. Expedite transport to a PCI‑capable hospital.</li>
-                <li><strong>NSTEMI / unstable angina:</strong> ST depression, T‑wave inversions, or no dynamic changes. Perform serial ECGs. Contact Tele‑EMS if Occlusion Myocardial Infarction (OMI) is suspected (subtle signs: hyperacute T‑waves, reciprocal changes, ST depression in multiple leads).</li>
-                <li><strong>Right ventricular infarct:</strong> Suspect in inferior STEMI; avoid GTN and give fluids cautiously. Obtain right‑sided ECG (V4R).</li>
-                <li><strong>Posterior infarct:</strong> Look for tall R waves and ST depression in V1‑V3; obtain posterior leads V7‑V9.</li>
-            </ul>
-
-            <h4>Differential Features of Chest Pain</h4>
-            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-                <tr style="background:var(--glass-bg);"><th></th><th>Ischemic (ACS)</th><th>Non‑Ischemic (Pericarditis, PE, Aortic Dissection)</th><th>Non‑Cardiac (GI, Musculoskeletal)</th></tr>
-                <tr><td><strong>Location</strong></td><td>Substernal, radiates to arms/neck/jaw/back</td><td>Variable: retrosternal (pericarditis), chest/back (dissection), lateral (PE)</td><td>Epigastric, localized, pleuritic</td></tr>
-                <tr><td><strong>Quality</strong></td><td>Pressure, squeezing, heaviness</td><td>Sharp, pleuritic, tearing/ripping</td><td>Burning, sharp, aching</td></tr>
-                <tr><td><strong>Duration</strong></td><td>2‑30 minutes</td><td>Hours to days, sudden & persistent</td><td>Variable</td></tr>
-                <tr><td><strong>Worsening factors</strong></td><td>Exertion, stress</td><td>Inspiration, supine (pericarditis); deep breath (PE)</td><td>Meals, movement, palpation</td></tr>
-                <tr><td><strong>Relieving factors</strong></td><td>Rest, nitroglycerin</td><td>Leaning forward (pericarditis)</td><td>Antacids, NSAIDs</td></tr>
-            </table>
-
-            <h4>Transport & Handover</h4>
-            <p>Transport the patient to the nearest appropriate cardiac hospital (preferably with PCI capability). Notify the receiving facility early, especially if STEMI or high‑risk features. Provide a concise handover using IMIST‑AMBO, including ECG findings and time of symptom onset.</p>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>12‑lead ECG obtained within 5 minutes of arrival (or as soon as possible).</li>
-                <li>Aspirin administered to all ACS patients unless contraindicated.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c3-1",
+    "title": "Chest Pain / Acute Coronary Syndrome",
+    "shortTitle": "3.1 Chest Pain / ACS",
+    "guide": {
+        "cpg": "3.1",
+        "group": "cardio",
+        "groupLabel": "Cardiovascular",
+        "title": "Chest Pain / Acute Coronary Syndrome",
+        "lead": "Get a full set of vital signs and a 12-lead ECG early, find the time of onset, treat ischemic pain, and move STEMI patients quickly to an appropriate cardiac hospital with pads on.",
+        "source": {
+            "label": "CPG 3.1",
+            "pages": "73–78",
+            "pdf": "../pdf_sections/3_1_Chest_Pain___Acute_Coronary_Syndrome.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Ischemic-type symptoms, with or without ECG changes: chest pain, pressure or discomfort; radiation to arms, jaw, back or shoulders; dyspnea; diaphoresis; nausea or vomiting; dizziness, syncope, palpitations.",
+                    "ACS on the 12-lead: STEMI, or NSTEMI / ischemic changes (T-wave inversion, ST depression, new LBBB).",
+                    "Atypical or non-specific pain when a cardiac cause cannot be excluded; epigastric discomfort, syncope or palpitations with no clear non-cardiac cause.",
+                    "Hemodynamic compromise or arrhythmia without chest pain when an acute cardiac cause is likely."
+                ],
+                "exclude": [
+                    "A clear non-cardiac cause of chest pain."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assessment",
+                "icon": "stethoscope",
+                "items": [
+                    "<b>Full vital signs and a 12-lead ECG.</b> Consider right-sided and posterior ECGs.",
+                    "<b>Time of symptom onset:</b> it changes management.",
+                    "<b>OPQRST</b> and associated symptoms: is the pain ischemic, non-ischemic or non-cardiac?",
+                    "<b>Red priority:</b> signs of severe shock; STEMI; chest pain, dysrhythmia or ECG changes with significant cardiovascular compromise."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Oxygen",
+                        "level": "EMR",
+                        "text": "Target SpO<sub>2</sub> 90%, with an appropriate mask."
+                    },
+                    {
+                        "title": "Aspirin",
+                        "level": "EMR",
+                        "text": "Standard dose 324 mg (4 tablets). If aspirin was taken in the last 60 minutes, confirm the dose and top up to a maximum total of 324 mg.",
+                        "doses": [
+                            {
+                                "drug": "Aspirin",
+                                "dose": "162–324 mg PO",
+                                "note": "Maximum total 324 mg",
+                                "level": "EMR"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "GTN for ischemic pain",
+                        "level": "EMT",
+                        "text": "Only while systolic BP stays at or above 100 mmHg. Reassess vital signs before each repeat.",
+                        "doses": [
+                            {
+                                "drug": "GTN",
+                                "dose": "0.4 mg SL",
+                                "note": "Every 3–5 minutes while symptoms persist; maximum 1.2 mg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Morphine for severe pain only",
+                        "level": "EP",
+                        "doses": [
+                            {
+                                "drug": "Morphine",
+                                "dose": "1–2 mg IV/IO increments",
+                                "note": "Every 5–10 minutes; maximum 10 mg",
+                                "level": "EP"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Hypotension (systolic BP &lt;90 mmHg)",
+                        "text": "Consider normal saline 250 ml IV/IO, repeat as required. Watch for fluid overload; stop if pulmonary edema develops."
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Frequently, as per Universal Care; continuous ECG monitoring for all cardiac chest pain."
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "GTN contraindications",
+                "icon": "ban",
+                "tone": "alert",
+                "items": [
+                    "Phosphodiesterase inhibitor use (typically for erectile dysfunction; also used for other conditions, so check the medication list).",
+                    "Inferior STEMI with suspected right ventricular involvement.",
+                    "Avoid in tachy- and bradyarrhythmias: treat the rate first."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "By ECG finding",
+                "icon": "activity",
+                "groups": [
+                    {
+                        "title": "STEMI",
+                        "items": [
+                            "Apply pads (AED) in preparation for cardiac arrest, and use 4-lead monitoring too, so pacing and cardioversion are ready.",
+                            "Expedite transport, without neglecting assessment and treatment. Coordinate with Dispatch 2 for an appropriate cardiac hospital."
+                        ]
+                    },
+                    {
+                        "title": "Non-STEMI",
+                        "items": [
+                            "Serial 12-leads, one with each set of vital signs, to watch for progression.",
+                            "Look for occlusion MI (OMI) without classic STEMI criteria: hyperacute T waves, reciprocal changes, ST depression in multiple leads. Contact Telemedicine to confirm and escalate."
+                        ]
+                    },
+                    {
+                        "title": "Unclear ECG",
+                        "items": [
+                            "Consult Telemedicine for a second opinion when the ECG is non-specific or you are unsure.",
+                            "EMTs should use Telemedicine routinely when the ECG is not a clear STEMI."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "When to call ALS back-up",
+                "icon": "ambulance",
+                "items": [
+                    "Hemodynamically unstable.",
+                    "VT, or runs of VT.",
+                    "Severe difficulty breathing.",
+                    "Agitation that prevents care.",
+                    "You suspect the patient will deteriorate into cardiac arrest."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Telling chest pain apart",
+                "icon": "search",
+                "stack": true,
+                "columns": [
+                    "",
+                    "Ischemic (angina, ACS)",
+                    "Non-ischemic (pericarditis, dissection, PE)",
+                    "Non-cardiac (GI, musculoskeletal, respiratory)"
+                ],
+                "rows": [
+                    [
+                        "Location",
+                        "Substernal; may radiate to arms, neck, jaw, shoulders, back",
+                        "Retrosternal (pericarditis); chest/back (dissection); lateral (PE)",
+                        "Retrosternal (GERD); localized (MSK); lateral (respiratory)"
+                    ],
+                    [
+                        "Quality",
+                        "Pressure, squeezing, heaviness, tightness, burning",
+                        "Sharp, pleuritic (pericarditis, PE); tearing (dissection)",
+                        "Burning (GERD); sharp, aching (MSK); pleuritic (respiratory)"
+                    ],
+                    [
+                        "Duration",
+                        "2–30 minutes",
+                        "Hours to days (pericarditis); sudden, persistent (dissection, PE)",
+                        "Minutes to hours (GERD); variable (MSK)"
+                    ],
+                    [
+                        "Worse with",
+                        "Exertion, emotional stress",
+                        "Inspiration, lying flat (pericarditis); deep breath (PE)",
+                        "Meals, lying down (GERD); movement, palpation (MSK)"
+                    ],
+                    [
+                        "Relieved by",
+                        "Rest, nitroglycerin",
+                        "Leaning forward (pericarditis)",
+                        "Antacids (GERD); NSAIDs (MSK)"
+                    ],
+                    [
+                        "Associated",
+                        "Dyspnea, nausea, vomiting, diaphoresis, palpitations",
+                        "Fever, rub (pericarditis); neuro signs, unequal BP/pulses (dissection); dyspnea, hemoptysis, tachycardia (PE)",
+                        "Regurgitation (GERD); tenderness (MSK); cough, fever (respiratory)"
+                    ]
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "ECG patterns, as drawn by the ECG Simulator",
+                        "items": [
+                            {
+                                "ecg": "stemiInf",
+                                "label": "Inferior STEMI",
+                                "sub": "ST elevation in II, III, aVF"
+                            },
+                            {
+                                "ecg": "stemiInfRv",
+                                "lead": "V4R",
+                                "label": "Inferior STEMI with RV involvement",
+                                "sub": "Right-sided lead V4R: GTN is contraindicated"
+                            },
+                            {
+                                "ecg": "stemiAnt",
+                                "lead": "V3",
+                                "label": "Anterior STEMI",
+                                "sub": "Lead V3"
+                            },
+                            {
+                                "ecg": "stemiPost",
+                                "lead": "V2",
+                                "label": "Posterior STEMI",
+                                "sub": "ST depression in V1–V3: take a posterior ECG"
+                            },
+                            {
+                                "ecg": "lbbb",
+                                "lead": "V1",
+                                "label": "Left bundle branch block",
+                                "sub": "A new LBBB is an ischemic change"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "A 12-lead ECG for every patient with cardiac chest pain.",
+                    "Aspirin for every ACS patient (where appropriate)."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs and drug sheets",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "1.1 Universal Care",
+                        "href": "c1.html?section=c1s1"
+                    },
+                    {
+                        "label": "3.2 Adult Bradycardia",
+                        "href": "c3-2.html"
+                    },
+                    {
+                        "label": "3.3 Adult Tachycardia",
+                        "href": "c3-3.html"
+                    },
+                    {
+                        "label": "3.4 Acute Pulmonary Edema",
+                        "href": "c3-4.html"
+                    },
+                    {
+                        "label": "M4 Aspirin",
+                        "href": "m4.html"
+                    },
+                    {
+                        "label": "M18 GTN",
+                        "href": "m18.html"
+                    },
+                    {
+                        "label": "M28 Morphine",
+                        "href": "m28.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the target oxygen saturation for a patient with suspected ACS?",
-            options: ["88‑92%", "94‑98%", "97‑100%", "As high as possible"],
-            correct: 1,
-            explanation: "Oxygen should be titrated to achieve SpO₂ 94‑98% to avoid hyperoxia; routine high‑flow oxygen is not recommended unless the patient is hypoxic."
+            "q": "What SpO2 does CPG 3.1 target with oxygen in suspected ACS?",
+            "options": [
+                "90%",
+                "94–98%",
+                "100%",
+                "88–92%"
+            ],
+            "correct": 0,
+            "explanation": "Consider oxygen therapy to a target SpO2 of 90%."
         },
         {
-            q: "A 55‑year‑old male with crushing substernal chest pain has taken 162 mg of aspirin at home 30 minutes ago. What additional aspirin dose should you administer?",
-            options: ["81 mg", "162 mg", "324 mg", "None, he already took aspirin"],
-            correct: 1,
-            explanation: "The total aspirin dose should be 324 mg. Since he took 162 mg, give an additional 162 mg (two tablets)."
+            "q": "What is the aspirin dose range in ACS?",
+            "options": [
+                "81 mg",
+                "162–324 mg PO",
+                "500 mg",
+                "1000 mg"
+            ],
+            "correct": 1,
+            "explanation": "Aspirin 162–324 mg PO; the standard dose is 324 mg (4 tablets)."
         },
         {
-            q: "What is the maximum total dose of GTN (sublingual) that can be given in the prehospital setting?",
-            options: ["0.4 mg", "1.2 mg", "2.4 mg", "No maximum"],
-            correct: 1,
-            explanation: "GTN 0.4 mg SL may be repeated every 3‑5 minutes up to a maximum of 1.2 mg (3 sprays)."
+            "q": "What is the standard aspirin dose?",
+            "options": [
+                "162 mg (2 tablets)",
+                "324 mg (4 tablets)",
+                "300 mg",
+                "81 mg"
+            ],
+            "correct": 1,
+            "explanation": "Standard dose 324 mg (4 tablets)."
         },
         {
-            q: "Which of the following is an absolute contraindication to administering GTN?",
-            options: ["Heart rate 110 bpm", "SBP 100 mmHg", "Use of sildenafil (Viagra) within 24 hours", "History of inferior wall MI"],
-            correct: 2,
-            explanation: "GTN is contraindicated in patients who have taken phosphodiesterase‑5 inhibitors (e.g., sildenafil, tadalafil) within the previous 24 hours because of the risk of severe hypotension."
+            "q": "A patient took 162 mg of aspirin 30 minutes ago. What do you give?",
+            "options": [
+                "Nothing",
+                "Top up to a maximum total of 324 mg",
+                "A full 324 mg",
+                "81 mg"
+            ],
+            "correct": 1,
+            "explanation": "Aspirin taken within the last 60 minutes: confirm the dose and top up to a maximum total of 324 mg."
         },
         {
-            q: "A patient presents with inferior STEMI. You note that he is hypotensive and has clear lung fields. You should suspect:",
-            options: ["Left ventricular failure", "Right ventricular infarction", "Pulmonary embolism", "Cardiogenic shock due to massive anterior MI"],
-            correct: 1,
-            explanation: "Hypotension with clear lungs and inferior STEMI suggests right ventricular infarction. Avoid GTN and give fluid cautiously."
+            "q": "What is the GTN dose?",
+            "options": [
+                "0.4 mg SL every 3–5 minutes, maximum 1.2 mg",
+                "0.8 mg SL once",
+                "0.4 mg IV",
+                "1 mg SL every minute"
+            ],
+            "correct": 0,
+            "explanation": "GTN 0.4 mg SL every 3–5 minutes while symptoms persist, maximum 1.2 mg."
         },
         {
-            q: "What additional ECG leads should be obtained when right ventricular infarction is suspected?",
-            options: ["V4R", "V7‑V9", "I and aVL", "Lead II only"],
-            correct: 0,
-            explanation: "Right‑sided leads, particularly V4R, are used to detect right ventricular infarction in the setting of inferior STEMI."
+            "q": "GTN may be repeated only while systolic BP is at least:",
+            "options": [
+                "80 mmHg",
+                "90 mmHg",
+                "100 mmHg",
+                "120 mmHg"
+            ],
+            "correct": 2,
+            "explanation": "Repeat while systolic BP remains ≥100 mmHg; reassess vital signs before each dose."
         },
         {
-            q: "Which of the following is NOT an ischemic‑type symptom?",
-            options: ["Diaphoresis", "Nausea", "Sharp pleuritic chest pain", "Radiation to the jaw"],
-            correct: 2,
-            explanation: "Sharp, pleuritic pain is more characteristic of pericarditis or pulmonary embolism, not typical myocardial ischemia."
+            "q": "Which is a contraindication to GTN in CPG 3.1?",
+            "options": [
+                "Heart rate of 80",
+                "Phosphodiesterase inhibitor use",
+                "Age over 65",
+                "Aspirin given"
+            ],
+            "correct": 1,
+            "explanation": "Contraindications: phosphodiesterase inhibitor use; inferior STEMI with suspected RV involvement."
         },
         {
-            q: "You are treating a 60‑year‑old female with chest pain, ECG shows ST depression in leads V1‑V4. What is the most likely diagnosis?",
-            options: ["Anterior STEMI", "Posterior infarction", "Pericarditis", "Early repolarisation"],
-            correct: 1,
-            explanation: "ST depression in the anterior leads can be a mirror image of posterior infarction. Consider obtaining posterior leads V7‑V9."
+            "q": "Which STEMI makes GTN contraindicated?",
+            "options": [
+                "Anterior",
+                "Lateral",
+                "Inferior with suspected right ventricular involvement",
+                "Septal"
+            ],
+            "correct": 2,
+            "explanation": "Inferior STEMI with suspected RV involvement is a contraindication."
         },
         {
-            q: "What is the recommended initial dose of morphine for severe cardiac pain in an adult?",
-            options: ["0.5 mg", "1‑2 mg IV", "5 mg IV", "10 mg IM"],
-            correct: 1,
-            explanation: "Morphine should be given in small increments (1‑2 mg IV) every 5‑10 minutes, titrated to effect, with a maximum of 10 mg."
+            "q": "Why might a patient take a phosphodiesterase inhibitor besides erectile dysfunction?",
+            "options": [
+                "They never do",
+                "They may be used for other conditions: check the medication list closely",
+                "Only for headaches",
+                "Only women take them"
+            ],
+            "correct": 1,
+            "explanation": "Phosphodiesterase inhibitors may be used for other conditions; investigate medications closely."
         },
         {
-            q: "A patient with suspected ACS has an SBP of 85 mmHg and is cool and clammy. There are no signs of pulmonary oedema. What is the appropriate fluid management?",
-            options: ["250 mL normal saline bolus", "Rapid 1‑litre bolus", "No fluids, start dopamine", "GTN to reduce preload"],
-            correct: 0,
-            explanation: "In suspected cardiogenic shock without pulmonary oedema, a cautious 250 mL fluid bolus can be given and reassessed. Avoid over‑resuscitation."
+            "q": "Should GTN be given in tachy- or bradyarrhythmias?",
+            "options": [
+                "Yes, always",
+                "No – avoid it and prioritize rate management",
+                "Only IV",
+                "Only with morphine"
+            ],
+            "correct": 1,
+            "explanation": "Avoid GTN in tachy and brady arrhythmias; manage the rate first."
         },
         {
-            q: "In a patient with new left bundle branch block (LBBB) and symptoms consistent with ACS, the ECG should be interpreted as:",
-            options: ["Non‑diagnostic for STEMI", "STEMI equivalent if symptoms are typical", "Probable pericarditis", "Normal variant"],
-            correct: 1,
-            explanation: "New or presumably new LBBB in the setting of ischaemic symptoms is considered a STEMI equivalent and should activate the same treatment pathway."
+            "q": "When is morphine indicated in CPG 3.1?",
+            "options": [
+                "Any chest pain",
+                "Severe pain only",
+                "Before aspirin",
+                "Never"
+            ],
+            "correct": 1,
+            "explanation": "Morphine is indicated for severe pain only."
         },
         {
-            q: "Which of the following findings is most suggestive of aortic dissection rather than ACS?",
-            options: ["Substernal pressure radiating to left arm", "Tearing chest pain radiating to the back", "Nausea and diaphoresis", "ST elevation in inferior leads"],
-            correct: 1,
-            explanation: "Tearing or ripping pain that radiates to the back is classic for aortic dissection. ACS pain is usually described as pressure or squeezing."
+            "q": "What is the morphine regimen?",
+            "options": [
+                "5 mg IM",
+                "1–2 mg IV/IO increments every 5–10 minutes, maximum 10 mg",
+                "10 mg IV bolus",
+                "0.1 mg/kg"
+            ],
+            "correct": 1,
+            "explanation": "Morphine 1–2 mg IV/IO increments, repeat every 5–10 minutes, maximum 10 mg."
         },
         {
-            q: "A 45‑year‑old male with chest pain has an ECG showing ST elevation in leads II, III, and aVF. What is the diagnosis?",
-            options: ["Anterior STEMI", "Inferior STEMI", "Lateral STEMI", "Posterior infarction"],
-            correct: 1,
-            explanation: "ST elevation in the inferior leads (II, III, aVF) indicates inferior STEMI."
+            "q": "What is the lowest clinical level that can give morphine for chest pain?",
+            "options": [
+                "EMT",
+                "EMT-A",
+                "AP",
+                "EP"
+            ],
+            "correct": 3,
+            "explanation": "Morphine is marked EP on the CPG 3.1 flowchart."
         },
         {
-            q: "What is the correct dose of aspirin for a patient with suspected ACS?",
-            options: ["81 mg", "162‑324 mg", "500 mg", "1000 mg"],
-            correct: 1,
-            explanation: "The recommended dose is 162‑324 mg (two to four 81 mg tablets) chewed immediately."
+            "q": "What is the lowest level that can give GTN?",
+            "options": [
+                "EMR",
+                "EMT",
+                "AP",
+                "EP"
+            ],
+            "correct": 1,
+            "explanation": "GTN is EMT; aspirin and oxygen are EMR."
         },
         {
-            q: "Which of the following is a contraindication to aspirin in ACS?",
-            options: ["History of asthma", "Active peptic ulcer disease", "Age >80 years", "Concurrent use of GTN"],
-            correct: 1,
-            explanation: "Aspirin is contraindicated in active peptic ulcer disease due to bleeding risk. Asthma is a relative caution but not an absolute contraindication."
+            "q": "A patient with suspected ACS has systolic BP 85 mmHg and clear lungs. What fluid?",
+            "options": [
+                "1 litre rapidly",
+                "Normal saline 250 ml IV/IO, watching for pulmonary edema",
+                "No fluid ever",
+                "500 ml Ringer's"
+            ],
+            "correct": 1,
+            "explanation": "If systolic BP <90 mmHg, consider normal saline 250 ml; stop if pulmonary edema develops; repeat as required."
         },
         {
-            q: "You have given GTN to a patient with ongoing chest pain. Before repeating the dose, you must:",
-            options: ["Check the patient's blood pressure", "Perform another 12‑lead ECG", "Give aspirin", "Start an IV line"],
-            correct: 0,
-            explanation: "Reassess vital signs, particularly blood pressure, before each repeat dose of GTN to ensure SBP is ≥100 mmHg."
+            "q": "What should you do if pulmonary edema develops during a fluid bolus?",
+            "options": [
+                "Speed up",
+                "Stop the bolus",
+                "Add GTN",
+                "Give furosemide"
+            ],
+            "correct": 1,
+            "explanation": "Stop the fluid bolus if pulmonary edema develops."
         },
         {
-            q: "A patient with inferior STEMI becomes hypotensive after GTN. The most likely cause is:",
-            options: ["Anaphylaxis", "Right ventricular involvement", "Pulmonary embolism", "Vasovagal syncope"],
-            correct: 1,
-            explanation: "Inferior STEMI can involve the right ventricle; right ventricular infarction makes the patient preload‑dependent, so GTN can cause profound hypotension."
+            "q": "What must be done for every STEMI on the 12-lead?",
+            "options": [
+                "Wait for symptoms to resolve",
+                "Apply pads, monitor continuously and expedite transport",
+                "Give morphine first",
+                "Repeat the ECG in 30 minutes"
+            ],
+            "correct": 1,
+            "explanation": "STEMI: apply AED pads, continuous ECG monitoring, expedite transport."
         },
         {
-            q: "What is the purpose of applying defibrillator pads to a patient with STEMI?",
-            options: ["To obtain a better ECG", "To prepare for possible cardiac arrest", "To provide pacing", "To monitor oxygen saturation"],
-            correct: 1,
-            explanation: "STEMI patients are at high risk of ventricular arrhythmias; pads allow immediate defibrillation if cardiac arrest occurs."
+            "q": "Why are pads applied in STEMI?",
+            "options": [
+                "To record a better ECG",
+                "In preparation for cardiac arrest, and ready for pacing or cardioversion",
+                "To relieve pain",
+                "To measure BP"
+            ],
+            "correct": 1,
+            "explanation": "STEMI patients are at high risk of arrest and arrhythmias."
         },
         {
-            q: "A patient's 12‑lead ECG shows ST depression in V1‑V4 and tall R waves in V1‑V2. You should suspect:",
-            options: ["Anterior STEMI", "Posterior MI", "Pericarditis", "Early repolarisation"],
-            correct: 1,
-            explanation: "Tall R waves and ST depression in V1‑V4 are reciprocal changes of a posterior infarction. Posterior leads (V7‑V9) may show ST elevation."
+            "q": "Who do you coordinate with to reach an appropriate cardiac hospital?",
+            "options": [
+                "Family",
+                "Dispatch 2",
+                "Police",
+                "Any hospital directly"
+            ],
+            "correct": 1,
+            "explanation": "Coordinate with Dispatch 2 for an appropriate cardiac hospital."
         },
         {
-            q: "Which of the following is a feature of pericarditis rather than myocardial infarction?",
-            options: ["Pain relieved by leaning forward", "Pain radiating to the left arm", "Nausea and vomiting", "ST elevation in a regional distribution"],
-            correct: 0,
-            explanation: "Pericarditic pain is often sharp, pleuritic, and relieved by sitting up and leaning forward. ST elevation in pericarditis is diffuse, not confined to a vascular territory."
+            "q": "What is done for Non-STEMI changes?",
+            "options": [
+                "Nothing extra",
+                "Serial 12-leads with each set of vital signs",
+                "One ECG only",
+                "Defibrillate"
+            ],
+            "correct": 1,
+            "explanation": "Perform serial 12-leads to watch for progression."
         },
         {
-            q: "In a patient with suspected ACS, what information is most critical to obtain for reperfusion decision‑making?",
-            options: ["Family history", "Time of symptom onset", "Blood glucose level", "Allergies"],
-            correct: 1,
-            explanation: "The time of symptom onset (or last known well) determines eligibility for thrombolysis or primary PCI."
+            "q": "Which subtle sign may indicate occlusion MI (OMI) without STEMI criteria?",
+            "options": [
+                "Normal T waves",
+                "Hyperacute T waves",
+                "Sinus rhythm",
+                "Normal axis"
+            ],
+            "correct": 1,
+            "explanation": "Look for hyperacute T waves, reciprocal changes or ST depression in multiple leads."
         },
         {
-            q: "A 70‑year‑old diabetic presents with epigastric discomfort and nausea. Vital signs are stable, ECG is normal. What should you do?",
-            options: ["Reassure and discharge", "Obtain serial ECGs and consider ACS", "Treat as gastritis", "Give GTN"],
-            correct: 1,
-            explanation: "Diabetics and elderly may present with atypical symptoms. A normal ECG does not rule out ACS; serial ECGs and close monitoring are indicated."
+            "q": "Who confirms a suspected OMI?",
+            "options": [
+                "The patient",
+                "Telemedicine",
+                "Dispatch",
+                "Nobody"
+            ],
+            "correct": 1,
+            "explanation": "Contact Telemedicine for OMI confirmation and escalation."
         },
         {
-            q: "What is the maximum single dose of morphine for severe cardiac pain in an adult?",
-            options: ["2 mg", "5 mg", "10 mg", "20 mg"],
-            correct: 2,
-            explanation: "The maximum total dose of morphine for ACS is 10 mg; individual increments should be 1‑2 mg."
+            "q": "When should EMTs routinely use Telemedicine in chest pain?",
+            "options": [
+                "Never",
+                "When the ECG is not a clear STEMI",
+                "Only for children",
+                "Only at night"
+            ],
+            "correct": 1,
+            "explanation": "Telemedicine should be used routinely by EMTs when the diagnosis is not clear STEMI."
         },
         {
-            q: "Which of the following is a sign of cardiogenic shock?",
-            options: ["SBP <90 mmHg with signs of poor perfusion", "Heart rate 110 bpm", "Jugular venous distension", "All of the above"],
-            correct: 3,
-            explanation: "Cardiogenic shock is defined by hypotension (SBP <90) and evidence of end‑organ hypoperfusion (cool skin, altered mental status, oliguria). Tachycardia and JVD may be present."
+            "q": "Which extra ECGs should be considered?",
+            "options": [
+                "None",
+                "Right-sided and posterior",
+                "Only lead II",
+                "Only V1"
+            ],
+            "correct": 1,
+            "explanation": "Consider right-sided and posterior ECGs."
         },
         {
-            q: "In a patient with suspected ACS, what is the role of supplemental oxygen if SpO₂ is 96% on room air?",
-            options: ["Give 2 L/min nasal cannula", "Give 15 L/min non‑rebreather", "No oxygen required", "Give oxygen only if chest pain persists"],
-            correct: 2,
-            explanation: "Oxygen is not indicated in normoxic patients with ACS; it may cause vasoconstriction and harm. Administer only if SpO₂ <94%."
+            "q": "Why is the time of symptom onset important?",
+            "options": [
+                "For billing",
+                "It influences patient management",
+                "It is not important",
+                "Only for documentation"
+            ],
+            "correct": 1,
+            "explanation": "Determine the time of onset as it will influence management."
         },
         {
-            q: "A 50‑year‑old male with chest pain has an ECG showing 1 mm ST elevation in V2‑V4. He is pain‑free and haemodynamically stable. What is your priority?",
-            options: ["Give aspirin and GTN", "Start an IV line", "Contact Tele‑EMS for STEMI confirmation", "Transport without delay to a PCI centre"],
-            correct: 3,
-            explanation: "ST elevation in contiguous leads meets STEMI criteria. Even if pain‑free, he requires immediate transport to a PCI‑capable hospital. Aspirin and GTN can be given en route."
+            "q": "Which is a reason to call ALS back-up in ACS?",
+            "options": [
+                "Stable pain resolved with GTN",
+                "Runs of VT",
+                "Mild nausea",
+                "Normal ECG"
+            ],
+            "correct": 1,
+            "explanation": "ALS if unstable, VT or runs of VT, severe breathing difficulty, agitation preventing care, or expected arrest."
         },
         {
-            q: "What is the recommended dose of IV morphine for a paediatric patient with severe cardiac pain?",
-            options: ["0.05 mg/kg", "0.1 mg/kg", "0.2 mg/kg", "1 mg/kg"],
-            correct: 1,
-            explanation: "Morphine dose in children is 0.1 mg/kg IV/IM (max 5 mg). However, ACS is extremely rare in paediatrics."
+            "q": "What is the typical duration of ischemic chest pain in the CPG table?",
+            "options": [
+                "Seconds",
+                "2–30 minutes",
+                "Days",
+                "Weeks"
+            ],
+            "correct": 1,
+            "explanation": "Ischemic pain typically lasts 2–30 minutes; pericarditis hours to days."
         },
         {
-            q: "Which of the following findings on ECG is most suggestive of Occlusion Myocardial Infarction (OMI) without overt ST elevation?",
-            options: ["Hyperacute T‑waves", "Pathological Q waves", "Left anterior fascicular block", "Sinus bradycardia"],
-            correct: 0,
-            explanation: "Hyperacute T‑waves (tall, peaked, symmetric) can be an early sign of coronary occlusion before ST elevation appears. Contact Tele‑EMS for further guidance."
+            "q": "Pain relieved by leaning forward suggests:",
+            "options": [
+                "Ischemic pain",
+                "Pericarditis",
+                "GERD",
+                "Musculoskeletal pain"
+            ],
+            "correct": 1,
+            "explanation": "Leaning forward relieves pericarditis pain."
         },
         {
-            q: "A patient with chest pain has taken tadalafil for erectile dysfunction 12 hours ago. Can GTN be administered?",
-            options: ["Yes, if SBP >100", "No, it is contraindicated", "Yes, but at half dose", "Only if the pain is severe"],
-            correct: 1,
-            explanation: "Phosphodiesterase‑5 inhibitors (sildenafil, tadalafil, vardenafil) are contraindications to GTN for at least 24 hours (48 hours for tadalafil) due to risk of severe hypotension."
+            "q": "Tearing pain with unequal pulses suggests:",
+            "options": [
+                "Angina",
+                "Aortic dissection",
+                "GERD",
+                "Pneumonia"
+            ],
+            "correct": 1,
+            "explanation": "Tearing/ripping quality and unequal BP or pulses suggest aortic dissection."
         },
         {
-            q: "What is the appropriate initial fluid bolus for an adult with suspected ACS and hypotension without pulmonary oedema?",
-            options: ["50 mL", "250 mL", "500 mL", "1000 mL"],
-            correct: 1,
-            explanation: "A cautious 250 mL bolus of normal saline is recommended; reassess after each bolus and stop if signs of fluid overload appear."
+            "q": "What are the two KPIs of CPG 3.1?",
+            "options": [
+                "Morphine for all and fluids for all",
+                "12-lead ECG for cardiac chest pain, and aspirin for ACS patients (where appropriate)",
+                "Oxygen for all and GTN for all",
+                "Transport within 10 minutes and pads for all"
+            ],
+            "correct": 1,
+            "explanation": "KPIs: 12-lead ECG for all cardiac chest pain; aspirin for all ACS patients where appropriate."
         }
     ],
-    flashcards: [
-        { category: "Assessment", question: "What are the key components of the OPQRST assessment for chest pain?", answer: "Onset, Provocation/Palliation, Quality, Radiation, Severity, Time." },
-        { category: "Assessment", question: "What is the target SpO₂ for a patient with suspected ACS?", answer: "94‑98% (oxygen only if <94%)." },
-        { category: "Assessment", question: "What additional ECG leads should be considered in inferior STEMI?", answer: "Right‑sided leads (V4R) to detect RV infarction." },
-        { category: "Assessment", question: "What leads are used for posterior ECG?", answer: "V7, V8, V9 (placed on the posterior chest wall)." },
-        { category: "Assessment", question: "What are the ECG criteria for STEMI?", answer: "ST elevation at the J point in two contiguous leads: ≥1 mm in limb leads, ≥2 mm in precordial leads, or new LBBB." },
-        { category: "Assessment", question: "Name three atypical presentations of ACS.", answer: "Epigastric pain, isolated dyspnoea, syncope, nausea/vomiting, diaphoresis." },
-        { category: "Assessment", question: "What is the significance of hyperacute T‑waves?", answer: "They may indicate early coronary occlusion before ST elevation appears (OMI)." },
-        { category: "Medications", question: "What is the dose of aspirin for ACS?", answer: "162‑324 mg (2‑4 tablets) chewed immediately." },
-        { category: "Medications", question: "How is GTN administered in ACS?", answer: "0.4 mg sublingual every 3‑5 minutes, up to 1.2 mg, provided SBP ≥100 mmHg." },
-        { category: "Medications", question: "What are the contraindications to GTN?", answer: "SBP <90 mmHg, phosphodiesterase inhibitors in last 24‑48 hours, inferior STEMI with RV involvement." },
-        { category: "Medications", question: "What is the dose of morphine for severe cardiac pain?", answer: "1‑2 mg IV increments every 5‑10 minutes (max 10 mg)." },
-        { category: "Medications", question: "What is the initial fluid bolus for hypotension in suspected ACS?", answer: "250 mL normal saline IV/IO, reassess for pulmonary oedema." },
-        { category: "ECG", question: "What is the most common ECG finding in acute pericarditis?", answer: "Diffuse ST elevation (concave upward) and PR depression." },
-        { category: "ECG", question: "What ECG finding suggests posterior MI?", answer: "ST depression in V1‑V3 with tall R waves; ST elevation in posterior leads V7‑V9." },
-        { category: "ECG", question: "What is a STEMI equivalent?", answer: "New LBBB in the setting of ischaemic symptoms." },
-        { category: "ECG", question: "What are the ECG features of NSTEMI?", answer: "ST depression, T‑wave inversions, or dynamic changes without ST elevation." },
-        { category: "Differential", question: "What are features of pericarditis?", answer: "Sharp, pleuritic pain relieved by sitting forward, diffuse ST elevation, pericardial friction rub." },
-        { category: "Differential", question: "What are features of aortic dissection?", answer: "Tearing pain radiating to back, pulse or BP differential, widened mediastinum." },
-        { category: "Differential", question: "What are features of pulmonary embolism?", answer: "Pleuritic chest pain, dyspnoea, tachycardia, possible haemoptysis, signs of right heart strain on ECG." },
-        { category: "Management", question: "When should ALS back‑up be requested in ACS?", answer: "Haemodynamic instability, refractory pain, need for sedation/cardioversion, or if the patient deteriorates." },
-        { category: "Management", question: "Why should defibrillator pads be applied to STEMI patients?", answer: "To enable immediate defibrillation if ventricular fibrillation/tachycardia occurs." },
-        { category: "Management", question: "What is the role of Tele‑EMS in ACS?", answer: "For ECG interpretation, confirmation of OMI, or guidance on complex cases (e.g., uncertainty about STEMI)." },
-        { category: "Management", question: "What should you do if a patient with inferior STEMI becomes hypotensive after GTN?", answer: "Stop GTN, give fluid bolus, and consider right ventricular infarction." },
-        { category: "Transport", question: "What information is critical to relay to the receiving hospital?", answer: "Time of symptom onset, ECG findings, treatments given, and suspected diagnosis." },
-        { category: "Transport", question: "What type of hospital is preferred for STEMI?", answer: "A hospital with percutaneous coronary intervention (PCI) capability." },
-        { category: "KPIs", question: "What are two key performance indicators for ACS care?", answer: "1. 12‑lead ECG obtained within 5 minutes. 2. Aspirin administered to all ACS patients." },
-        { category: "Safety", question: "Why should GTN be avoided in right ventricular infarction?", answer: "RV infarct patients are preload‑dependent; GTN reduces preload and can cause severe hypotension." },
-        { category: "Safety", question: "What is the danger of excessive oxygen in ACS?", answer: "Hyperoxia can cause coronary vasoconstriction and increase oxidative stress, potentially worsening outcomes." },
-        { category: "General", question: "What is the 'Golden Hour' in STEMI?", answer: "The first hour after symptom onset, when timely reperfusion offers the greatest benefit." },
-        { category: "General", question: "What is the difference between unstable angina and NSTEMI?", answer: "Both involve ischaemia without ST elevation; NSTEMI shows elevated cardiac biomarkers (troponin), unstable angina does not." }
+    "flashcards": [
+        {
+            "category": "Oxygen",
+            "question": "SpO2 target in ACS?",
+            "answer": "90%, using an appropriate oxygen mask."
+        },
+        {
+            "category": "Aspirin",
+            "question": "Aspirin dose?",
+            "answer": "162–324 mg PO; standard 324 mg (4 tablets)."
+        },
+        {
+            "category": "Aspirin",
+            "question": "Aspirin already taken?",
+            "answer": "Within the last 60 minutes: confirm the dose and top up to a maximum total of 324 mg."
+        },
+        {
+            "category": "GTN",
+            "question": "GTN dose?",
+            "answer": "0.4 mg SL every 3–5 minutes while symptoms persist and SBP ≥100 mmHg; maximum 1.2 mg."
+        },
+        {
+            "category": "GTN",
+            "question": "Before each repeat GTN?",
+            "answer": "Reassess vital signs."
+        },
+        {
+            "category": "GTN",
+            "question": "GTN contraindications?",
+            "answer": "Phosphodiesterase inhibitor use; inferior STEMI with suspected RV involvement."
+        },
+        {
+            "category": "GTN",
+            "question": "GTN and arrhythmias?",
+            "answer": "Avoid in tachy- and bradyarrhythmias; manage the rate first."
+        },
+        {
+            "category": "Morphine",
+            "question": "Morphine in ACS?",
+            "answer": "Severe pain only: 1–2 mg IV/IO increments every 5–10 minutes, maximum 10 mg (EP)."
+        },
+        {
+            "category": "Fluids",
+            "question": "Hypotension in ACS?",
+            "answer": "SBP <90 mmHg: consider NS 250 ml IV/IO, repeat as required; stop if pulmonary edema develops."
+        },
+        {
+            "category": "Scope",
+            "question": "Levels in CPG 3.1?",
+            "answer": "Oxygen and aspirin EMR; GTN EMT; morphine EP."
+        },
+        {
+            "category": "STEMI",
+            "question": "STEMI on the 12-lead?",
+            "answer": "Apply pads, 4-lead monitoring, expedite transport via Dispatch 2 to an appropriate cardiac hospital."
+        },
+        {
+            "category": "STEMI",
+            "question": "Why pads in STEMI?",
+            "answer": "High risk of arrest and arrhythmia: ready for defibrillation, pacing or cardioversion."
+        },
+        {
+            "category": "NSTEMI",
+            "question": "Non-STEMI on the 12-lead?",
+            "answer": "Serial 12-leads with each set of vital signs; look for OMI; Telemedicine."
+        },
+        {
+            "category": "OMI",
+            "question": "Subtle signs of OMI?",
+            "answer": "Hyperacute T waves, reciprocal changes, ST depression in multiple leads."
+        },
+        {
+            "category": "Telemedicine",
+            "question": "When consult Telemedicine?",
+            "answer": "Non-specific or unclear ECG, or uncertainty; routinely by EMTs when not a clear STEMI; to confirm OMI."
+        },
+        {
+            "category": "ECG",
+            "question": "Extra ECG views to consider?",
+            "answer": "Right-sided and posterior ECGs."
+        },
+        {
+            "category": "Assessment",
+            "question": "Why record the time of onset?",
+            "answer": "It influences patient management."
+        },
+        {
+            "category": "Assessment",
+            "question": "Ischemic-type symptoms?",
+            "answer": "Chest pain/pressure; radiation to arms, jaw, back, shoulders; dyspnea; diaphoresis; nausea/vomiting; dizziness, syncope, palpitations."
+        },
+        {
+            "category": "ECG",
+            "question": "ECG changes counted as ACS?",
+            "answer": "STEMI; NSTEMI or ischemic changes: T-wave inversion, ST depression, new LBBB."
+        },
+        {
+            "category": "Triage",
+            "question": "Red priority in chest pain?",
+            "answer": "Severe shock; STEMI; chest pain, dysrhythmia or ECG changes with significant cardiovascular compromise."
+        },
+        {
+            "category": "ALS",
+            "question": "ALS back-up triggers?",
+            "answer": "Unstable; VT or runs of VT; severe breathing difficulty; agitation preventing care; expected arrest."
+        },
+        {
+            "category": "Pain types",
+            "question": "Ischemic pain features?",
+            "answer": "Substernal pressure or tightness radiating to arms/neck/jaw/back; 2–30 minutes; with exertion or stress; relieved by rest and nitroglycerin."
+        },
+        {
+            "category": "Pain types",
+            "question": "Pericarditis features?",
+            "answer": "Sharp pleuritic pain; hours to days; worse lying flat or on inspiration; better leaning forward; fever, pericardial rub."
+        },
+        {
+            "category": "Pain types",
+            "question": "Aortic dissection features?",
+            "answer": "Sudden tearing pain to the chest/back; neurologic symptoms; unequal BP or pulses."
+        },
+        {
+            "category": "Pain types",
+            "question": "PE features?",
+            "answer": "Lateral pleuritic pain, sudden; worse on deep breath; dyspnea, hemoptysis, tachycardia."
+        },
+        {
+            "category": "Pain types",
+            "question": "Non-cardiac pain clues?",
+            "answer": "Burning after meals/lying down (GERD); localized, worse on movement or palpation (MSK); cough, fever (respiratory)."
+        },
+        {
+            "category": "Monitoring",
+            "question": "Monitoring for cardiac chest pain?",
+            "answer": "Continuous ECG monitoring for all; frequent reassessment."
+        },
+        {
+            "category": "Fluids",
+            "question": "Fluid caution in cardiac patients?",
+            "answer": "Small volumes can cause fluid overload in cardiac failure."
+        },
+        {
+            "category": "Transport",
+            "question": "Destination?",
+            "answer": "The closest most appropriate cardiac hospital, with SpO2 and ECG monitoring."
+        },
+        {
+            "category": "KPI",
+            "question": "CPG 3.1 KPIs?",
+            "answer": "12-lead ECG for all cardiac chest pain; aspirin for all ACS patients (where appropriate)."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_3_1_1",
-            scenario: "You are called to a 58‑year‑old male with crushing central chest pain radiating to the left arm, associated with diaphoresis and nausea. He is pale and clammy. HR 110, BP 130/85, RR 20, SpO₂ 94% on room air. Your 12‑lead ECG shows 3 mm ST elevation in leads II, III, and aVF, with reciprocal ST depression in I and aVL. He has taken no medications. What is your immediate management?",
-            question: "What is the priority intervention for this patient?",
-            options: [
-                { t: "Give GTN 0.4 mg SL and reassess", f: "While GTN may be given, aspirin and oxygen should come first, and he needs rapid transport for PCI. GTN alone is insufficient." },
-                { t: "Administer aspirin 324 mg chewed, apply defibrillator pads, and expedite transport to a PCI centre", f: "Correct. This is a clear inferior STEMI. Aspirin, monitoring, and rapid transport are essential. GTN can be given en route if BP permits." },
-                { t: "Start an IV and give 2 mg morphine", f: "Morphine is for severe pain, but aspirin and transport are the highest priorities. Morphine can be given later if needed." },
-                { t: "Request ALS back‑up and wait on scene until they arrive", f: "Delaying transport for ALS is not appropriate; the patient needs a PCI centre as soon as possible. Meet ALS en route if needed." }
+            "id": "crit_3_1_1",
+            "scenario": "A 58-year-old man has crushing central chest pain radiating to his left arm, with sweating. BP 130/85, SpO2 94% on air. The 12-lead shows ST elevation in II, III and aVF; right-sided leads show ST elevation in V4R.",
+            "ecg": "stemiInfRv",
+            "ecgLead": "V4R",
+            "question": "Which treatment is right?",
+            "options": [
+                {
+                    "t": "Aspirin 324 mg, pads on, expedite transport to a cardiac hospital; withhold GTN",
+                    "f": "Correct. Inferior STEMI with RV involvement is a GTN contraindication."
+                },
+                {
+                    "t": "GTN 0.4 mg SL, repeated to 1.2 mg",
+                    "f": "GTN is contraindicated in inferior STEMI with suspected RV involvement."
+                },
+                {
+                    "t": "High-flow oxygen to SpO2 100%",
+                    "f": "CPG 3.1 targets SpO2 90%; his SpO2 is already above that."
+                },
+                {
+                    "t": "Morphine 10 mg IV now",
+                    "f": "Morphine is for severe pain only, in 1–2 mg increments, by an EP."
+                }
             ],
-            correct: 1,
-            explanation: "This patient has a clear inferior STEMI. Immediate aspirin, application of defibrillator pads, and rapid transport to a PCI‑capable hospital are paramount. GTN and morphine can be administered en route, but they should not delay transport.",
-            kpi: "Aspirin administered within 5 minutes; transport time ≤10 minutes on scene."
+            "correct": 0,
+            "explanation": "STEMI: aspirin, pads, continuous monitoring and expedited transport via Dispatch 2. Right-sided leads showing RV involvement in an inferior STEMI make GTN contraindicated.",
+            "kpi": "Aspirin for every ACS patient (where appropriate)."
         },
         {
-            id: "crit_3_1_2",
-            scenario: "A 62‑year‑old female with a history of hypertension presents with sudden onset of severe 'tearing' chest pain that radiates to her back. Her BP is 150/95 in the right arm but 110/70 in the left arm. ECG shows sinus rhythm with no significant ST changes. What is the most likely diagnosis and appropriate action?",
-            question: "What should you suspect and how should you manage this patient?",
-            options: [
-                { t: "Acute coronary syndrome – give aspirin and GTN", f: "The pain quality and BP differential are not typical for ACS; aspirin could worsen bleeding if dissection is present." },
-                { t: "Aortic dissection – withhold aspirin, provide pain relief, and expedite transport to a facility with cardiothoracic surgery", f: "Correct. Tearing pain radiating to the back and BP differential strongly suggest aortic dissection. Aspirin is contraindicated; manage pain and transport urgently." },
-                { t: "Pulmonary embolism – start oxygen and prepare for thrombolysis", f: "No signs of PE (no dyspnoea, tachypnoea, or hypoxia)." },
-                { t: "Musculoskeletal pain – reassure and discharge", f: "The severity and BP differential indicate a life‑threatening condition; this is not musculoskeletal." }
+            "id": "crit_3_1_2",
+            "scenario": "A 62-year-old woman has sudden severe tearing chest pain going through to her back. BP 150/95 in the right arm and 110/70 in the left.",
+            "question": "What does the CPG's chest pain table suggest?",
+            "options": [
+                {
+                    "t": "Aortic dissection: a non-ischemic cause; treat carefully and transport",
+                    "f": "Correct. Sudden tearing pain to the back with unequal BP fits aortic dissection."
+                },
+                {
+                    "t": "Typical ischemic pain: give GTN and aspirin as standard",
+                    "f": "Tearing pain with unequal BP points to dissection, a non-ischemic cause."
+                },
+                {
+                    "t": "GERD",
+                    "f": "Burning pain related to meals suggests GERD, not this picture."
+                },
+                {
+                    "t": "Musculoskeletal pain",
+                    "f": "Musculoskeletal pain is localized and worse on movement or palpation."
+                }
             ],
-            correct: 1,
-            explanation: "Aortic dissection is a time‑critical emergency. Aspirin may increase bleeding risk; BP control and urgent transfer are key. Notify the receiving hospital early.",
-            kpi: "Recognition of aortic dissection and avoidance of inappropriate medications."
+            "correct": 0,
+            "explanation": "The CPG table lists aortic dissection as non-ischemic: tearing/ripping, sudden and persistent, chest or back, with neurologic symptoms or unequal BP or pulses.",
+            "kpi": "A 12-lead ECG for every patient with cardiac chest pain."
         },
         {
-            id: "crit_3_1_3",
-            scenario: "A 55‑year‑old male with chest pain has an ECG showing 1 mm ST elevation in leads V2‑V4. He is currently pain‑free and haemodynamically stable. He states the pain started 2 hours ago and lasted 30 minutes, then resolved spontaneously. He has no cardiac history. What is your next step?",
-            question: "What is the most appropriate management?",
-            options: [
-                { t: "Repeat the ECG and observe; if unchanged, he may refuse transport", f: "Even though pain resolved, ST elevation indicates STEMI; he requires urgent PCI evaluation." },
-                { t: "Administer aspirin, apply pads, and transport emergently to a PCI centre", f: "Correct. The ECG still shows ST elevation, consistent with STEMI. Reperfusion therapy is time‑sensitive; do not delay." },
-                { t: "Give GTN and wait for symptoms to return", f: "GTN is not harmful, but waiting is inappropriate; he needs definitive care." },
-                { t: "Contact Tele‑EMS for advice on thrombolysis", f: "Tele‑EMS may be consulted, but transport should not be delayed. Thrombolysis decisions are usually made in hospital." }
+            "id": "crit_3_1_3",
+            "scenario": "A 55-year-old man had 30 minutes of chest pain 2 hours ago and is now pain-free and stable. His 12-lead has no STEMI but shows hyperacute T waves with reciprocal changes. You are an EMT crew.",
+            "question": "What should you do?",
+            "options": [
+                {
+                    "t": "Contact Telemedicine about possible OMI, give aspirin, and repeat 12-leads with each set of vital signs",
+                    "f": "Correct. OMI can need urgent intervention without classic STEMI criteria."
+                },
+                {
+                    "t": "Reassure and leave: no STEMI",
+                    "f": "Possible OMI and ischemic symptoms need treatment and transport."
+                },
+                {
+                    "t": "GTN despite no pain",
+                    "f": "GTN is for ischemic pain while symptoms persist."
+                },
+                {
+                    "t": "Wait for symptoms to return before acting",
+                    "f": "Act now: confirm OMI with Telemedicine."
+                }
             ],
-            correct: 1,
-            explanation: "Persistent ST elevation after symptom resolution still indicates an occluded artery. The patient needs immediate transfer for primary PCI.",
-            kpi: "Recognition of ongoing STEMI despite symptom resolution."
+            "correct": 0,
+            "explanation": "Look for subtle OMI signs (hyperacute T waves, reciprocal changes, ST depression in several leads), contact Telemedicine, and do serial 12-leads. EMTs should routinely use Telemedicine when the ECG is not a clear STEMI.",
+            "kpi": "Aspirin for every ACS patient (where appropriate)."
         },
         {
-            id: "crit_3_1_4",
-            scenario: "You are managing a 68‑year‑old female with epigastric discomfort, nausea, and diaphoresis. Vital signs: HR 115, BP 95/70, RR 22, SpO₂ 95%. Her ECG shows ST depression in V1‑V3 and tall R waves in V1‑V2. She has a history of diabetes. What is your interpretation and management?",
-            question: "What is the most likely ECG finding and appropriate intervention?",
-            options: [
-                { t: "Anterior STEMI – give GTN and aspirin", f: "Anterior STEMI would show ST elevation, not depression. GTN may worsen hypotension." },
-                { t: "Posterior MI – administer aspirin, cautious fluid bolus, and urgent transport", f: "Correct. The findings are classic for posterior infarction. She is hypotensive but without pulmonary oedema; a 250 mL fluid bolus is appropriate. Aspirin should be given." },
-                { t: "Pericarditis – give NSAIDs and transport", f: "No pericardial rub or diffuse ST elevation; unlikely." },
-                { t: "Early repolarisation – discharge with follow‑up", f: "Not with symptoms and haemodynamic instability." }
+            "id": "crit_3_1_4",
+            "scenario": "A 68-year-old woman has epigastric discomfort, nausea and sweating. HR 115, BP 85/60, clear lungs. Her ECG shows ischemic changes.",
+            "question": "Which is correct?",
+            "options": [
+                {
+                    "t": "Aspirin; consider normal saline 250 ml, watching for pulmonary edema; no GTN while SBP is below 100",
+                    "f": "Correct. GTN needs systolic BP ≥100 mmHg; hypotension (<90) is treated with a cautious fluid bolus."
+                },
+                {
+                    "t": "GTN 0.4 mg for the pain",
+                    "f": "Her systolic BP is below 100 mmHg."
+                },
+                {
+                    "t": "A 1-litre fluid bolus",
+                    "f": "CPG 3.1 uses 250 ml, repeated as required, watching for overload."
+                },
+                {
+                    "t": "Treat as GI upset and leave",
+                    "f": "Epigastric pain with a possible cardiac cause meets ACS inclusion."
+                }
             ],
-            correct: 1,
-            explanation: "Posterior MI can present with ST depression in V1‑V3 and tall R waves. Obtain posterior leads if possible. Fluids cautiously, aspirin, and expedite transport.",
-            kpi: "Recognition of posterior MI; appropriate fluid management."
+            "correct": 0,
+            "explanation": "Epigastric discomfort can be ACS when a cardiac cause is possible. She is hypotensive: consider 250 ml normal saline, monitor for pulmonary edema, and call ALS back-up because she is hemodynamically unstable.",
+            "kpi": "A 12-lead ECG for every patient with cardiac chest pain."
         },
         {
-            id: "crit_3_1_5",
-            scenario: "A 45‑year‑old male with chest pain and diaphoresis has an ECG showing sinus tachycardia with 2 mm ST elevation in leads II, III, aVF. He suddenly becomes unresponsive, pulseless, and apnoeic. The monitor now shows ventricular fibrillation. What is your immediate action?",
-            question: "What is the priority at this moment?",
-            options: [
-                { t: "Perform a pulse check for 10 seconds", f: "He is already pulseless; start CPR immediately." },
-                { t: "Start CPR and defibrillate as soon as possible", f: "Correct. For witnessed VF, immediate CPR and defibrillation are the priorities." },
-                { t: "Administer 1 mg adrenaline IV", f: "Adrenaline is important, but defibrillation comes first for shockable rhythms." },
-                { t: "Continue with the ACS protocol while assessing", f: "He is in cardiac arrest; the ACS protocol is now secondary to resuscitation." }
+            "id": "crit_3_1_5",
+            "scenario": "A 45-year-old man with an anterior STEMI is on the stretcher with pads applied. He suddenly becomes unresponsive and pulseless. The monitor shows VF.",
+            "ecg": "vfFine",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Shock immediately and follow the Adult Cardiac Arrest CPG",
+                    "f": "Correct. This is why pads go on every STEMI patient."
+                },
+                {
+                    "t": "Give GTN",
+                    "f": "He is in cardiac arrest."
+                },
+                {
+                    "t": "Take another 12-lead",
+                    "f": "Defibrillate first."
+                },
+                {
+                    "t": "Morphine for pain",
+                    "f": "He is in cardiac arrest."
+                }
             ],
-            correct: 1,
-            explanation: "This is a witnessed cardiac arrest from VF. Immediate defibrillation (as soon as defibrillator is ready) and high‑quality CPR are the priorities. Follow cardiac arrest protocols.",
-            kpi: "Time to first shock <3 minutes."
+            "correct": 0,
+            "explanation": "STEMI patients are at high risk of cardiac arrest and arrhythmias; pads are applied so defibrillation (and pacing or cardioversion) can happen at once.",
+            "kpi": "A 12-lead ECG for every patient with cardiac chest pain."
         }
     ]
 };
