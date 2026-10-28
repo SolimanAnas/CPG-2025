@@ -59,15 +59,22 @@ def squash(text: str) -> str:
     return re.sub(r"\s+", "", text)
 
 
-def load(path: Path) -> dict | None:
-    """The page data a content file defines, via node (it is plain JS)."""
+def load(path: Path) -> list[dict]:
+    """The rewritten pages a content file defines, via node (it is plain JS).
+
+    A chapter file may hold one guideline (CPG_DATA.guide) or several sections
+    (CPG_DATA.sections[].guide); a drug sheet sets CPG_DRUG. Each page comes
+    with its study sets."""
     script = (
         "global.window = {};"
         f"require({json.dumps(str(path))});"
         "const d = window.CPG_DATA || {};"
-        "const page = d.guide || window.CPG_DRUG || null;"
-        "console.log(JSON.stringify(page && {page, quiz: d.quiz || [],"
-        " flashcards: d.flashcards || [], critical: d.critical || []}));"
+        "const units = d.sections ? d.sections : [d];"
+        "const pages = units.filter(u => u.guide).map(u => ({name: u.id, page: u.guide,"
+        " quiz: u.quiz || [], flashcards: u.flashcards || [], critical: u.critical || []}));"
+        "if (window.CPG_DRUG) pages.push({name: window.CPG_DRUG.code, page: window.CPG_DRUG,"
+        " quiz: [], flashcards: [], critical: []});"
+        "console.log(JSON.stringify(pages));"
     )
     out = subprocess.run(  # nosec B603 B607
         ["node", "-e", script], check=True, capture_output=True, text=True
@@ -109,36 +116,34 @@ def rewritten_pages():
     pages = []
     for path in sorted([*CONTENT.glob("*.js"), *CONTENT.glob("drugs/*.js")]):
         text = path.read_text(encoding="utf-8")
-        if "guide:" in text or "window.CPG_DRUG" in text:
-            pages.append(path)
+        if re.search(r"""["']?guide["']?\s*:""", text) or "window.CPG_DRUG" in text:
+            pages += [(f"{path.name}:{p['name']}", p) for p in load(path)]
     return pages
 
 
 PAGES = rewritten_pages()
+IDS = [name for name, _ in PAGES]
 
 
 @pytest.mark.skipif(not shutil.which("node"), reason="node is needed to read content files")
 def test_pilot_pages_are_rewritten():
-    names = {p.name for p in PAGES}
+    names = {name.split(":")[0] for name in IDS}
     assert {"c3-2.js", "c4-3.js", "m3.js"} <= names
 
 
-@pytest.mark.parametrize("path", PAGES, ids=[p.name for p in PAGES])
-def test_study_sets_are_well_formed(path):
-    data = load(path)
+@pytest.mark.parametrize("name,data", PAGES, ids=IDS)
+def test_study_sets_are_well_formed(name, data):
     for q in data["quiz"]:
         assert 0 <= q["correct"] < len(q["options"]), q["q"]
         assert len(set(q["options"])) == len(q["options"]), q["q"]
     for c in data["critical"]:
         assert 0 <= c["correct"] < len(c["options"]), c["id"]
     if data["page"].get("cpg"):  # guidelines keep all three study sets
-        assert data["quiz"] and data["flashcards"] and data["critical"], path.name
+        assert data["quiz"] and data["flashcards"] and data["critical"], name
 
 
-@pytest.mark.parametrize("path", PAGES, ids=[p.name for p in PAGES])
-def test_numbers_match_the_official_text(path):
-    data = load(path)
-    assert data, f"{path.name} defines no guide or drug sheet"
+@pytest.mark.parametrize("name,data", PAGES, ids=IDS)
+def test_numbers_match_the_official_text(name, data):
     pdf = Path(data["page"]["source"]["pdf"]).name
     source_file = SOURCES / pdf.replace(".pdf", ".txt")
     assert source_file.is_file(), (
@@ -151,6 +156,10 @@ def test_numbers_match_the_official_text(path):
     for text in [*strings(data["page"]), *study_strings(data)]:
         for number, unit in NUMBER.findall(page_text(text)):
             token = squash(number + (unit or ""))
+            # Tables in the PDF give units in the header ("Systolic BP (mmHg)"),
+            # so a range like "67-84" stands alone there; it is specific enough.
+            if "-" in number and squash(number) in source:
+                continue
             if token not in source:
                 missing.append(f"{token!r} in: {html.unescape(re.sub('<[^>]+>', '', text))}")
     assert not missing, "Not in the official text:\n" + "\n".join(missing)

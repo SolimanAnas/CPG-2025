@@ -20,6 +20,9 @@
         'EP': 'Emergency Physician'
     };
 
+    // Table cells that are just a number or range ("120–160") never wrap.
+    const NUMERIC = /^[\d.,\s\u2013\u2212<>&;ltg-]+$/;
+
     const ICON = (name) => `<svg class="lucide" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#${name}"/></svg>`;
 
     function level(code) {
@@ -87,6 +90,18 @@
             ${s.after ? `<p class="g-after">${s.after}</p>` : ''}`,
 
         doses: (s) => doseTable(s.rows),
+
+        // A reference table from the CPG (normal vital signs, GCS, …).
+        // Scrolls inside its box on phones; `notes` follow as a list.
+        // A row of the form { group: "…" } is a sub-heading row.
+        table: (s) => `<div class="g-table-wrap" tabindex="0" role="region" aria-label="${s.title}">
+            <table class="g-table">
+                <thead><tr>${s.columns.map(c => `<th scope="col">${c}</th>`).join('')}</tr></thead>
+                <tbody>${s.rows.map(r => r.group
+                    ? `<tr class="g-tgroup"><th colspan="${s.columns.length}" scope="rowgroup">${r.group}</th></tr>`
+                    : `<tr>${r.map((c, i) => i ? `<td${NUMERIC.test(c) ? ' class="g-n"' : ''}>${c}</td>` : `<th scope="row">${c}</th>`).join('')}</tr>`).join('')}</tbody>
+            </table></div>
+            ${list(s.notes)}`,
 
         groups: (s) => s.groups.map(g => `<div class="g-group"><h4>${g.title}</h4>${list(g.items)}</div>`).join(''),
 
