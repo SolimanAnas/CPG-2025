@@ -215,6 +215,8 @@
                 ${row('Administration notes', list(d.notes))}
                 ${row('Mechanism', d.mechanism ? `<p>${d.mechanism}</p>` : '')}
             </section>
+            ${d.tools ? section({ type: 'tools', title: 'Tools', icon: 'monitor', groups: d.tools }) : ''}
+            ${d.related ? section({ type: 'related', title: 'Related', icon: 'link', items: d.related }) : ''}
             ${source(d.source)}
         </article>`;
     }
