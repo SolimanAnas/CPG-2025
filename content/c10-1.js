@@ -115,6 +115,7 @@ window.CPG_DATA = {
                 "type": "table",
                 "title": "APGAR score",
                 "icon": "clipboard-list",
+                "stack": true,
                 "columns": [
                     "Sign",
                     "2",

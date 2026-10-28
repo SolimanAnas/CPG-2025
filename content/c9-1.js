@@ -69,59 +69,29 @@ window.CPG_DATA = {
                 "title": "Croup severity score",
                 "icon": "clipboard-list",
                 "columns": [
-                    "",
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5"
+                    "Sign",
+                    "Points"
                 ],
                 "rows": [
                     [
                         "Inspiratory stridor",
-                        "Not present",
-                        "When agitated / active",
-                        "At rest",
-                        "",
-                        "",
-                        ""
+                        "None 0 · when agitated or active 1 · at rest 2"
                     ],
                     [
                         "Intercostal recession",
-                        "None",
-                        "Mild",
-                        "Moderate",
-                        "Severe",
-                        "",
-                        ""
+                        "None 0 · mild 1 · moderate 2 · severe 3"
                     ],
                     [
                         "Air entry",
-                        "Normal",
-                        "Mildly decreased",
-                        "Severely decreased",
-                        "",
-                        "",
-                        ""
+                        "Normal 0 · mildly decreased 1 · severely decreased 2"
                     ],
                     [
                         "Cyanosis",
-                        "None",
-                        "",
-                        "",
-                        "",
-                        "With agitation / activity",
-                        "At rest"
+                        "None 0 · with agitation or activity 4 · at rest 5"
                     ],
                     [
                         "Level of consciousness",
-                        "Normal",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "Altered"
+                        "Normal 0 · altered 5"
                     ]
                 ],
                 "notes": [
