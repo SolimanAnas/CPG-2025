@@ -231,3 +231,16 @@ test('M1–38 formulary: every drug sheet listed once and linked', async ({ page
   expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
   expect(errors).toEqual([]);
 });
+
+test("c0 what's new: every chapter listed and every guideline link opens", async ({ page, request }) => {
+  const errors = trackErrors(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('chapters/c0.html', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cpg-guide h2')).toHaveText("What's New in 2025");
+  const hrefs = new Set();
+  for (const a of await page.locator('.g-related a, .g-tools a').all()) hrefs.add(new URL(await a.getAttribute('href'), page.url()).href);
+  expect(hrefs.size).toBeGreaterThan(60);
+  for (const href of hrefs) expect((await request.get(href)).status(), href).toBe(200);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+  expect(errors).toEqual([]);
+});
