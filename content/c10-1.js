@@ -1,396 +1,915 @@
-/* ========== Chapter 10.1 � Childbirth ========== */
+/* ========== CPG 10.1 – Childbirth ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c10-1",
-    title: "Childbirth",
-    shortTitle: "10.1 Childbirth",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Childbirth</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Obtain the necessary history to plan for the birth and resuscitation of the newborn.</li>
-                <li>Recognize imminent birth.</li>
-                <li>Assist with the uncomplicated delivery of term newborns.</li>
-                <li>Recognize complicated delivery situations (e.g., nuchal or prolapsed umbilical cord, breech delivery, shoulder dystocia).</li>
-                <li>Apply appropriate techniques when an obstetric complication exists.</li>
-                <li>Safely manage imminent and non-imminent childbirth to ensure the health and safety of both mother and infant.</li>
-                <li>Facilitate delivery with minimal complications and provide timely resuscitation if required.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients with signs of imminent birth with crowning:
-                    <ul>
-                        <li>Painful contractions lasting 45-60 seconds at 1�2-minute intervals.</li>
-                        <li>Bearing down/urge to open bowels.</li>
-                        <li>Bloody show, bulging perineum, fetal head crowning, or membrane rupture.</li>
-                    </ul>
-                </li>
-                <li>Patients with non-imminent birth: irregular contractions, no bloody show, no visible infant body parts at the vulva, membranes intact.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Vaginal bleeding in any stage of pregnancy (see PV Hemorrhage in Pregnancy CPG).</li>
-                <li>Emergencies in the first or second trimester of pregnancy.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Identify Features of Active Labor/Imminent Delivery:</strong> Increasing frequency and severity of contractions with an urge to push; membrane rupture (note color of amniotic fluid if ruptured); loss of mucous plug or bloody show; bulging perineum or appearance of presenting part at the vulva.</li>
-                <li><strong>Identify Delivery Complications:</strong> Cord presentation or prolapse; breech birth; shoulder dystocia; nuchal cord.</li>
-                <li><strong>Determine Obstetric History:</strong> Onset of labor symptoms; gestational age; gravida/para status (number of pregnancies and births); potential complications or risk factors (e.g., gestational diabetes, pre-eclampsia, multiple pregnancy, mal-presentation, previous childbirth, obstetric or gynecological problems). Concurrent symptoms (e.g., pain level, vaginal bleeding, fever). Treatments or actions prior to EMS arrival.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for imminent delivery (until baby delivered without complication) and complications in pregnancy (e.g., prolapsed cord, presenting limb).</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back-up:</strong> Routinely for imminent delivery (can be cancelled if not required); if ALS not available, request a second BLS ambulance. Also for delivery complications.</li>
-                <li><strong>Primary and Secondary Survey:</strong> As per Universal Care CPG; determine obstetric history.</li>
-                <li><strong>If No Signs of Imminent Delivery:</strong> Transport to appropriate receiving facility.</li>
-                <li><strong>Active Labor / Imminent Delivery:</strong>
-                    <ul>
-                        <li>Delivery should be controlled to allow slow, controlled delivery to prevent injury to the mother.</li>
-                        <li>Do not routinely suction the infant�s airway (even with bulb syringe) during delivery.</li>
-                        <li><strong>Deliver the Newborn:</strong> Support infant�s head as needed and apply gentle counterpressure to help prevent sudden popping out. Grasping the head with hand over the ears, gently guide head down to allow delivery of the anterior shoulder. Gently guide the head up to allow delivery of the posterior shoulder. Slowly deliver the remainder of the infant.</li>
-                        <li><strong>Cord Clamping:</strong> After 1 minute, clamp the cord in three places (10cm, 15cm, 20cm from the abdomen); cut the cord between the last two clamps. While cord is attached, take care to ensure baby is not significantly higher than the mother to prevent blood from flowing backwards.</li>
-                        <li>If resuscitation is needed: start resuscitation immediately after birth and then clamp and cut the cord at 1 minute.</li>
-                        <li><strong>Warm and stimulate:</strong> Dry, warm, and stimulate infant, wrap in towel and place on maternal chest unless resuscitation is needed.</li>
-                        <li><strong>APGAR Scores:</strong> Record at 1 and 5 minutes once the neonate is stabilized. Resuscitation takes priority over recording APGAR scores.</li>
-                    </ul>
-                </li>
-                <li><strong>After Delivery � Mother:</strong>
-                    <ul>
-                        <li>The placenta will deliver spontaneously, often within 5-15 minutes. Do not force the placenta to deliver, do not pull on the umbilical cord. Place placenta in biohazard bag and transport with the mother.</li>
-                        <li>Monitor for post partum hemorrhage (see Post-Partum Hemorrhage CPG).</li>
-                        <li>Uterine massage: after delivery, massaging the uterus (located at about the umbilicus) and allowing the infant to breastfeed will promote uterine contraction and help control bleeding.</li>
-                    </ul>
-                </li>
-                <li><strong>After Delivery � Child:</strong> Keep the infant warm during transport; kangaroo care/skin-to-skin is suitable; place towel or blanket over mother and infant where possible.</li>
-                <li><strong>Delivery Complications:</strong>
-                    <ul>
-                        <li><strong>Shoulder Dystocia:</strong> Discourage pushing; transport must be prioritized, maneuvers continued en route. McRoberts maneuver (hyperflex mother�s hips) with suprapubic pressure. If fails, attempt posterior arm delivery or internal rotational maneuvers (Rubin II or Woods corkscrew) after consultation. If all fail, roll patient onto all fours.</li>
-                        <li><strong>Nuchal Cord:</strong> After head delivered, palpate neck. If cord present, slip over head. If too tight, attempt to slip over shoulders and deliver body through loop.</li>
-                        <li><strong>Cord Rupture:</strong> Apply direct pressure with sterile dressing; position clamp proximally to tear if possible.</li>
-                        <li><strong>Prolapsed Cord:</strong> Insert fingers into vagina and gently push presenting part away from cord; minimize handling of cord; maintain pressure until birth. If cord prolapsed outside vagina, cover with pad soaked in warm saline. Consider tocolysis (nebulized salbutamol 10-20 mg) if birth not imminent.</li>
-                        <li><strong>Breech Birth:</strong> Allow buttocks, feet, trunk to deliver spontaneously, then support body while head delivers. If head fails to deliver, place gloved hand in vagina with fingers between infant�s face and uterine wall to create an airway. NEVER pull on the body.</li>
-                        <li><strong>Compound Presentation (arm/leg):</strong> Prioritize transport; C-section likely needed.</li>
-                        <li><strong>Excessive Bleeding During Active Labor:</strong> Place large bore IV and administer IV fluids as per PV Hemorrhage in Pregnancy CPG; expedite transport.</li>
-                    </ul>
-                </li>
-                <li><strong>Maternal Cardiac Arrest:</strong> Apply manual pressure to displace uterus to the left; treat per Adult Cardiac Arrest CPG. If infant >24 weeks, rapid transfer to hospital for peri-mortem C-section (most successful if started within 5 minutes of maternal cardiac arrest).</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess mother (vital signs, signs of hypovolemia, uterine atony) and infant (APGAR, warmth, respiratory effort, need for resuscitation).</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Supine Hypotension Syndrome: If mother has hypotension before delivery, place patient in left lateral recumbent position or manually displace gravid uterus to the left in supine position.</li>
-                <li>Knee-chest position may create safety issues during rapid ambulance transport.</li>
-                <li>Do not routinely suction the infant�s airway during delivery (even with bulb syringe).</li>
-                <li>Newborns are very slippery, take care not to drop the infant.</li>
-                <li>Do not pull on the umbilical cord while the placenta is delivering.</li>
-                <li>If possible, transport between deliveries if the mother is expecting twins.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Information</h4>
-            <ul>
-                <li><strong>Determining Between Imminent Birth and Non-Imminent Birth:</strong> Imminent birth: painful contractions 45-60 secs at 1-2 min intervals; bearing down; bloody show; bulging perineum, fetal head crowning, membrane rupture. Non-imminent: irregular contractions, no bloody show, no visible body parts.</li>
-                <li><strong>Requesting Back-up:</strong> Routinely for imminent birth; ideally ALS, but if not available, a second BLS unit should be requested in case neonatal resuscitation is required.</li>
-                <li><strong>Male Clinicians:</strong> It is acceptable for a male clinician to assist in delivery � providing this is acceptable to the patient. If not, request a maternity ambulance (MAMA unit).</li>
-                <li><strong>Dispatch 2 Coordination:</strong> Notify dispatch of antepartum hemorrhage, post partum hemorrhage, breech presentation, limb presentation, complicated nuchal cord, prolapsed cord, shoulder dystocia, maternal cardiac arrest to determine appropriate receiving facility.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Mother�s identity, infant details if delivered, gestational age or estimated due date.</li>
-                <li>Focused obstetric history (length of pregnancy, Gravida/Para, prenatal care, complications, drug use) and signs of labor (contraction timing, crowning, bloody show).</li>
-                <li>Any complications (shoulder dystocia, prolapsed cord, post-partum hemorrhage) and maternal/infant conditions.</li>
-                <li>Vital signs for mother and APGAR scores for infant at 1 and 5 minutes post-delivery.</li>
-                <li>Interventions: controlled delivery, nuchal cord management, resuscitation, IV fluids, TXA.</li>
-                <li>Allergies, medications, handover details: time of delivery, placenta management, estimated maternal blood loss, and transfer details ensuring mother and infant go to the same facility.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Record APGAR scores at 1 and 5 minutes post-delivery.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c10-1",
+    "title": "Childbirth",
+    "shortTitle": "10.1 Childbirth",
+    "guide": {
+        "cpg": "10.1",
+        "group": "obstetric",
+        "groupLabel": "Obstetrics",
+        "title": "Childbirth",
+        "lead": "Take a focused obstetric history and decide whether birth is imminent. If it is not, transport. If it is, request back-up, consider delivering on scene, and control the delivery. Do not suction routinely. Delay cord clamping by at least 1 minute, dry, warm and stimulate the baby, and record APGAR at 1 and 5 minutes. For complications, give the mother high-flow oxygen, start the specific manoeuvres and prioritise transport.",
+        "source": {
+            "label": "CPG 10.1",
+            "pages": "308–318",
+            "pdf": "../pdf_sections/10_1_Childbirth.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Labor with imminent or non-imminent birth."
+                ],
+                "exclude": [
+                    "Vaginal bleeding at any stage of pregnancy: PV Hemorrhage in Pregnancy CPG.",
+                    "Emergencies in the first or second trimester."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Imminent or not?",
+                "icon": "stethoscope",
+                "columns": [
+                    "Imminent birth",
+                    "Non-imminent birth"
+                ],
+                "rows": [
+                    [
+                        "Painful contractions 45–60 seconds long, at 1–2 minute intervals",
+                        "Irregular contractions in timing and strength"
+                    ],
+                    [
+                        "Bearing down, urge to open bowels",
+                        "Abdominal tightening without pain"
+                    ],
+                    [
+                        "Bloody show",
+                        "No bloody show"
+                    ],
+                    [
+                        "Bulging perineum, crowning, membrane rupture",
+                        "No infant parts visible at the vulva; membranes intact"
+                    ]
+                ],
+                "notes": [
+                    "History: gestation, gravida/para, prenatal care, onset and timing of contractions, risk factors (gestational diabetes, pre-eclampsia, multiple pregnancy, malpresentation, previous shoulder dystocia or PPH), bleeding, fever, treatment before arrival.",
+                    "Ruptured membranes: note the colour of the amniotic fluid."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Before delivery",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Not imminent",
+                        "text": "Transport to the appropriate receiving facility. Absorbent pad to the perineum, time contractions, monitor continuously."
+                    },
+                    {
+                        "title": "Imminent",
+                        "text": "Red priority. Consider delivering on scene. Request back-up routinely: ALS (it can be cancelled), or a second EMT or paramedic ambulance if ALS is not available."
+                    },
+                    {
+                        "title": "Consent",
+                        "text": "Any clinician, of any gender, may assist with the patient's consent. A maternity ambulance is optional; request one only if the patient does not consent. Avoid routine requests."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "The mother's preference: semi-recumbent, all fours or lateral. Hypotension before delivery: left lateral, or manual displacement of the uterus to the left."
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Uncomplicated delivery",
+                "icon": "baby",
+                "steps": [
+                    {
+                        "title": "Control",
+                        "text": "Slow, controlled delivery with gentle counterpressure on the head. Do not suction routinely, even with a bulb syringe."
+                    },
+                    {
+                        "title": "Shoulders",
+                        "text": "Hands over the ears: guide the head down to deliver the anterior shoulder under the symphysis pubis, then up for the posterior shoulder. Check for a nuchal cord after the head delivers."
+                    },
+                    {
+                        "title": "Baby",
+                        "text": "Newborns are slippery. Dry, warm and stimulate; wrap and place on the mother's chest, skin-to-skin, unless resuscitation is needed. Keep the baby level with the mother, not much higher, while the cord is attached."
+                    },
+                    {
+                        "title": "Cord",
+                        "text": "Clamp after at least 1 minute (1–3 minutes) at 10 cm, 15 cm and 20 cm from the umbilicus; cut between the two clamps furthest from the baby. Do not milk the cord. A baby needing resuscitation still gets the delay: start resuscitation, then clamp at 1 minute."
+                    },
+                    {
+                        "title": "APGAR",
+                        "text": "At 1 and 5 minutes, once stable. Resuscitation takes priority. Unstable infant: Newborn Resuscitation CPG."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "APGAR score",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Sign",
+                    "2",
+                    "1",
+                    "0"
+                ],
+                "rows": [
+                    [
+                        "Appearance (colour)",
+                        "Normal all over",
+                        "Normal except extremities",
+                        "Cyanotic or pale all over"
+                    ],
+                    [
+                        "Pulse",
+                        "&gt;100 bpm",
+                        "&lt;100 bpm",
+                        "Absent"
+                    ],
+                    [
+                        "Grimace (reflex irritability)",
+                        "Sneezes, coughs or vigorous cry",
+                        "Grimaces",
+                        "No response"
+                    ],
+                    [
+                        "Activity (tone)",
+                        "Active",
+                        "Arms and legs flexed",
+                        "Absent"
+                    ],
+                    [
+                        "Respirations",
+                        "Good, crying",
+                        "Gasping, irregular",
+                        "Absent"
+                    ]
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "After delivery",
+                "icon": "heart-pulse",
+                "groups": [
+                    {
+                        "title": "Placenta",
+                        "items": [
+                            "Usually delivers spontaneously within 5–15 minutes.",
+                            "Never pull on the cord or force it. Bag it and transport it with the mother."
+                        ]
+                    },
+                    {
+                        "title": "Mother",
+                        "items": [
+                            "Estimate blood loss; vital signs every 5–10 minutes.",
+                            "Uterine massage at about the umbilicus, and breastfeeding, help the uterus contract.",
+                            "Hypovolemia or uterine atony: Post-Partum Hemorrhage CPG."
+                        ]
+                    },
+                    {
+                        "title": "Baby",
+                        "items": [
+                            "Keep warm in transport: skin-to-skin, towel or blanket over both.",
+                            "Suction only for obvious obstruction or if PPV is needed.",
+                            "Mother and baby go to the same facility."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Complications: oxygen 15 lpm NRB to the mother and expedite transport",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Nuchal cord",
+                        "items": [
+                            "Slip the cord over the head.",
+                            "Too tight: slip it over the shoulders and deliver the body through the loop."
+                        ]
+                    },
+                    {
+                        "title": "Cord rupture",
+                        "items": [
+                            "Direct pressure on the tear with a sterile dressing.",
+                            "Clamp proximal to the tear if possible."
+                        ]
+                    },
+                    {
+                        "title": "Prolapsed cord",
+                        "items": [
+                            "Gloved hand in the vagina: push the presenting part off the cord and keep it there until relieved at hospital.",
+                            "Minimise handling; cover an exposed cord with a pad soaked in warm saline (moist sterile gauze).",
+                            "Position: all fours or exaggerated Sims; if unsuccessful, prone knee-chest or extreme Trendelenburg with hips raised.",
+                            "Birth not imminent: consider tocolysis with nebulised salbutamol 10–20 mg (AP)."
+                        ]
+                    },
+                    {
+                        "title": "Breech",
+                        "items": [
+                            "Prioritise transport. Mother supine (kneeling if needed); let buttocks, legs and trunk deliver spontaneously, then support the body.",
+                            "Check for cord prolapse. Support the body to avoid hyperextending the head; keep the baby off the cord.",
+                            "Head doesn't deliver: gloved fingers between the face and uterine wall to make an airway, index and ring fingers in a “V” on the cheeks to flex the neck.",
+                            "Never pull on the body."
+                        ]
+                    },
+                    {
+                        "title": "Compound presentation",
+                        "items": [
+                            "An arm or leg presenting: immediate transport."
+                        ]
+                    },
+                    {
+                        "title": "Bleeding in active labor",
+                        "items": [
+                            "Possible placenta previa or abruption: large-bore IV and fluids per the PV Hemorrhage in Pregnancy CPG; C-section likely, so expedite transport."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Shoulder dystocia (HELPR)",
+                "icon": "hand",
+                "steps": [
+                    {
+                        "title": "Recognise",
+                        "text": "Difficult delivery of face and chin, head retracting against the perineum (turtle sign), no restitution, shoulders not delivered within 60 seconds of the head. Discourage pushing; prioritise transport and continue manoeuvres en route."
+                    },
+                    {
+                        "title": "H: Help",
+                        "text": "ALS back-up."
+                    },
+                    {
+                        "title": "E: Legs",
+                        "text": "McRoberts: mother supine, hips hyperflexed, knees to chest."
+                    },
+                    {
+                        "title": "L: Pressure",
+                        "text": "Firm suprapubic pressure with the heel of the hand, downward and lateral on the anterior shoulder; often needs two clinicians. Angle the head posteriorly but never pull."
+                    },
+                    {
+                        "title": "E: Enter",
+                        "text": "Internal rotation after consulting Tele-EMS: Rubin II (behind the anterior shoulder, rotate it towards the chest) or Woods corkscrew (at least 2 fingers on the front of the posterior shoulder)."
+                    },
+                    {
+                        "title": "P: Posterior arm",
+                        "text": "Hand in the vagina, find the posterior arm and sweep it across the chest."
+                    },
+                    {
+                        "title": "R: Roll",
+                        "text": "All fours, then repeat the manoeuvres."
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Maternal cardiac arrest",
+                "icon": "zap",
+                "steps": [
+                    {
+                        "title": "Displace the uterus",
+                        "text": "Manually, to the left."
+                    },
+                    {
+                        "title": "Resuscitate",
+                        "text": "Adult Cardiac Arrest CPG."
+                    },
+                    {
+                        "title": "Over 24 weeks",
+                        "text": "Rapid transfer for perimortem C-section, most successful if started within 5 minutes of arrest."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Also",
+                "icon": "clipboard-list",
+                "groups": [
+                    {
+                        "title": "Safety",
+                        "items": [
+                            "Knee-chest position may be unsafe during rapid transport.",
+                            "Twins: transport between deliveries if possible."
+                        ]
+                    },
+                    {
+                        "title": "Tell Dispatch 2",
+                        "items": [
+                            "Antepartum or post-partum hemorrhage, breech or limb presentation, complicated nuchal cord, prolapsed cord, shoulder dystocia, maternal arrest."
+                        ]
+                    },
+                    {
+                        "title": "Obstetric kit",
+                        "items": [
+                            "Linen saver, pads, sterile gloves, sterile gauze, cord cutting tool, scalpel, plastic sheet, plastic bag."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: salbutamol",
+                                "sub": "Tocolysis for cord prolapse (AP)",
+                                "href": "../pages/drug-calculator.html?drug=Salbutamol",
+                                "icon": "wind"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "APGAR recorded at 1 and 5 minutes after delivery."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "4.6 Newborn and Preterm Infant Resuscitation",
+                        "href": "c4-6.html"
+                    },
+                    {
+                        "label": "10.2 Post-Partum Hemorrhage",
+                        "href": "c10-2.html"
+                    },
+                    {
+                        "label": "10.3 PV Hemorrhage in Pregnancy",
+                        "href": "c10-3.html"
+                    },
+                    {
+                        "label": "10.4 Eclampsia and Pre-eclampsia",
+                        "href": "c10-4.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What are signs of imminent birth?",
-            options: ["Irregular contractions, no bloody show", "Painful contractions 45-60 seconds at 1-2 minute intervals, bloody show, crowning", "Membrane rupture only", "Back pain only"],
-            correct: 1,
-            explanation: "Imminent birth is characterized by regular, strong contractions, bloody show, and crowning of the presenting part."
+            "q": "Which signs indicate imminent birth?",
+            "options": [
+                "Painful contractions 45–60 seconds long at 1–2 minute intervals, bloody show, crowning",
+                "Irregular contractions, no bloody show",
+                "Membranes intact, painless tightening",
+                "Back pain only"
+            ],
+            "correct": 0,
+            "explanation": "Also bearing down and a bulging perineum."
         },
         {
-            q: "What is the first step when a patient is in active labor with crowning?",
-            options: ["Transport immediately", "Prepare for controlled delivery", "Administer oxygen to mother", "Apply sterile gloves"],
-            correct: 1,
-            explanation: "Prepare to assist with controlled delivery to prevent injury to mother and infant."
+            "q": "Crowning in active labor. First step?",
+            "options": [
+                "Request back-up and prepare for a controlled delivery on scene",
+                "Load and transport immediately",
+                "Ask her not to push and drive",
+                "Call a maternity ambulance routinely"
+            ],
+            "correct": 0,
+            "explanation": "Imminent birth: consider delivering on scene."
         },
         {
-            q: "After delivery, when should the umbilical cord be clamped?",
-            options: ["Immediately", "After 1 minute", "After 3 minutes", "Only after placental delivery"],
-            correct: 1,
-            explanation: "Delayed cord clamping (=1 minute) is recommended to allow blood transfer to the infant, unless immediate resuscitation is needed."
+            "q": "When is the cord clamped in a well baby?",
+            "options": [
+                "After at least 1 minute",
+                "Immediately",
+                "Only after the placenta",
+                "After 10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Delay 1–3 minutes."
         },
         {
-            q: "What is the McRoberts maneuver used for?",
-            options: ["Nuchal cord", "Prolapsed cord", "Shoulder dystocia", "Breech birth"],
-            correct: 2,
-            explanation: "McRoberts maneuver (hyperflexion of mother's hips) is used to relieve shoulder dystocia."
+            "q": "What is the McRoberts manoeuvre for?",
+            "options": [
+                "Shoulder dystocia",
+                "Nuchal cord",
+                "Prolapsed cord",
+                "Breech"
+            ],
+            "correct": 0,
+            "explanation": "Hips hyperflexed, knees to chest."
         },
         {
-            q: "What is the appropriate management for a nuchal cord?",
-            options: ["Cut the cord immediately", "Slip the cord over the head or shoulders", "Clamp and cut before delivery", "Pull the cord to release"],
-            correct: 1,
-            explanation: "If the cord is around the neck, slip it over the head; if too tight, slip over shoulders and deliver body through loop."
+            "q": "Nuchal cord management?",
+            "options": [
+                "Slip over the head; if too tight, over the shoulders and deliver through the loop",
+                "Cut immediately",
+                "Pull the cord",
+                "Push the head back"
+            ],
+            "correct": 0,
+            "explanation": "Per the CPG."
         },
         {
-            q: "A patient presents with a prolapsed umbilical cord. What is the priority?",
-            options: ["Push the cord back in", "Elevate the mother's hips and gently lift presenting part off the cord", "Cut the cord", "Start IV fluids"],
-            correct: 1,
-            explanation: "Relieve pressure on the cord by lifting the presenting part; position mother in knee-chest or Trendelenburg."
+            "q": "Prolapsed cord. Priority?",
+            "options": [
+                "Push the presenting part off the cord and keep it there; position and transport",
+                "Push the cord back in",
+                "Cut the cord",
+                "Pull the baby"
+            ],
+            "correct": 0,
+            "explanation": "Minimise handling of the cord."
         },
         {
-            q: "What is the dose of nebulized salbutamol for tocolysis in a prolapsed cord when birth is not imminent?",
-            options: ["2.5 mg", "5 mg", "10-20 mg", "0.5 mg"],
-            correct: 2,
-            explanation: "Tocolysis with salbutamol 10-20 mg nebulized may be considered to delay delivery until hospital."
+            "q": "Tocolysis for a prolapsed cord when birth is not imminent?",
+            "options": [
+                "Nebulised salbutamol 10–20 mg (AP)",
+                "Salbutamol 2.5 mg",
+                "Adrenaline",
+                "Magnesium"
+            ],
+            "correct": 0,
+            "explanation": "Consider tocolysis."
         },
         {
-            q: "What is the correct technique for delivering a breech presentation?",
-            options: ["Pull on the legs", "Allow spontaneous delivery of the trunk, then support the head", "Sweep the arms across the chest", "Apply fundal pressure"],
-            correct: 1,
-            explanation: "Allow the buttocks, feet, and trunk to deliver spontaneously; then support the body while the head delivers. Do not pull."
+            "q": "Breech technique?",
+            "options": [
+                "Let buttocks, legs and trunk deliver spontaneously, then support the body",
+                "Pull on the legs",
+                "Fundal pressure",
+                "Push the baby back"
+            ],
+            "correct": 0,
+            "explanation": "Never pull on the body."
         },
         {
-            q: "What is the APGAR score component for heart rate?",
-            options: ["0 absent, 1 <100, 2 >100", "0 absent, 1 <60, 2 >60", "0 absent, 1 <80, 2 >80", "0 absent, 1 <100, 2 >120"],
-            correct: 0,
-            explanation: "APGAR: Pulse 0 absent, 1 <100 bpm, 2 >100 bpm."
+            "q": "APGAR pulse scoring?",
+            "options": [
+                "0 absent, 1 <100, 2 >100",
+                "0 absent, 1 <60, 2 >60",
+                "0 absent, 1 <80, 2 >80",
+                "0 absent, 1 <100, 2 >120"
+            ],
+            "correct": 0,
+            "explanation": "Per the APGAR table."
         },
         {
-            q: "What is the APGAR score for a newborn with good crying and active movement?",
-            options: ["Score 0", "Score 1", "Score 2", "Score 3"],
-            correct: 2,
-            explanation: "APGAR: Activity (2 = active), Respirations (2 = good, crying)."
+            "q": "Good cry and active movement score how much for respirations and activity?",
+            "options": [
+                "2 each",
+                "0 each",
+                "1 each",
+                "3 each"
+            ],
+            "correct": 0,
+            "explanation": "Each sign scores 0–2."
         },
         {
-            q: "A mother has delivered the infant but the placenta has not delivered after 15 minutes. What should you do?",
-            options: ["Pull the cord to assist delivery", "Massage the uterus and transport", "Administer oxytocin", "Perform manual extraction"],
-            correct: 1,
-            explanation: "Do not pull the cord; transport with placenta attached; fundal massage may help."
+            "q": "The placenta hasn't delivered 15 minutes after the baby. What do you do?",
+            "options": [
+                "Don't pull the cord; uterine massage, monitor bleeding and transport",
+                "Pull the cord",
+                "Manual extraction",
+                "Wait an hour on scene"
+            ],
+            "correct": 0,
+            "explanation": "Usually within 5–15 minutes; never force it."
         },
         {
-            q: "What is the target SpO2 for a mother during labor?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What should you avoid during delivery of the head?",
+            "options": [
+                "Routine suctioning, even with a bulb syringe",
+                "Counterpressure",
+                "Supporting the head",
+                "Checking for a nuchal cord"
+            ],
+            "correct": 0,
+            "explanation": "Suction only for obstruction or PPV."
         },
         {
-            q: "What is the dose of TXA for post-partum hemorrhage?",
-            options: ["0.5 g IV", "1 g IV over 10 minutes", "2 g IV", "5 g IV"],
-            correct: 1,
-            explanation: "TXA 1 gram IV diluted in 100 mL normal saline over 10 minutes for postpartum hemorrhage."
+            "q": "Post-delivery bleeding with a soft uterus. Which CPG next?",
+            "options": [
+                "Post-Partum Hemorrhage CPG, after uterine massage",
+                "Eclampsia CPG",
+                "Croup CPG",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Treat hypovolemia per the PPH CPG."
         },
         {
-            q: "A patient with shoulder dystocia has been in McRoberts with suprapubic pressure for 60 seconds without success. What should you do next?",
-            options: ["Continue pushing", "Attempt delivery of the posterior arm", "Roll patient onto all fours", "All of the above"],
-            correct: 3,
-            explanation: "Progress to other maneuvers (posterior arm delivery, all-fours position) as per HELPERR mnemonic."
+            "q": "McRoberts and suprapubic pressure have failed. Next?",
+            "options": [
+                "Deliver the posterior arm, then internal rotation (with Tele-EMS), then all fours",
+                "Pull harder on the head",
+                "Ask the mother to push harder",
+                "Give up and wait"
+            ],
+            "correct": 0,
+            "explanation": "HELPR sequence."
         },
         {
-            q: "What is the recommended fluid bolus for an adult with post-partum hemorrhage and hypotension?",
-            options: ["250-500 mL", "500-1000 mL", "1000-2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults with postpartum hemorrhage and hypotension should receive 500-1000 mL crystalloid bolus."
+            "q": "Oxygen for the mother when a delivery complication occurs?",
+            "options": [
+                "15 lpm via NRB",
+                "2 L/min nasal cannula",
+                "None",
+                "6 L/min mask"
+            ],
+            "correct": 0,
+            "explanation": "Maternal resuscitation is critical for the fetus."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with postpartum hemorrhage?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Where do the clamps go?",
+            "options": [
+                "10 cm, 15 cm and 20 cm from the umbilicus",
+                "2 cm and 4 cm",
+                "At the placenta",
+                "Anywhere"
+            ],
+            "correct": 0,
+            "explanation": "Cut between the two furthest from the baby."
         },
         {
-            q: "A newborn has APGAR scores of 5 at 1 minute and 7 at 5 minutes. What does this indicate?",
-            options: ["Normal", "Mild depression, improving", "Severe depression", "Need for resuscitation"],
-            correct: 1,
-            explanation: "APGAR 5 at 1 minute indicates mild depression; improvement to 7 is favorable."
+            "q": "When are APGAR scores recorded?",
+            "options": [
+                "1 and 5 minutes",
+                "Only at 10 minutes",
+                "At birth only",
+                "On arrival at hospital"
+            ],
+            "correct": 0,
+            "explanation": "Resuscitation takes priority."
         },
         {
-            q: "What is the preferred position for a mother with a prolapsed cord?",
-            options: ["Supine", "Left lateral", "Knee-chest or exaggerated Sims", "Semi-Fowler's"],
-            correct: 2,
-            explanation: "Knee-chest or exaggerated Sims position reduces pressure on the cord."
+            "q": "Prolapsed cord positions?",
+            "options": [
+                "All fours or exaggerated Sims; then prone knee-chest or extreme Trendelenburg",
+                "Supine flat",
+                "Sitting upright",
+                "Standing"
+            ],
+            "correct": 0,
+            "explanation": "To take pressure off the cord."
         },
         {
-            q: "What is the key performance indicator for childbirth?",
-            options: ["Administer oxygen", "Record APGAR scores at 1 and 5 minutes", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Recording APGAR scores is a key KPI for newborn assessment."
+            "q": "KPI?",
+            "options": [
+                "APGAR at 1 and 5 minutes",
+                "Oxygen for all mothers",
+                "12-lead ECG",
+                "Glucose"
+            ],
+            "correct": 0,
+            "explanation": "Single KPI."
         },
         {
-            q: "What is the dose of oxygen for a mother in labor?",
-            options: ["2-4 L/min via nasal cannula", "10-15 L/min via non-rebreather if hypoxic", "No oxygen needed", "6-8 L/min via mask"],
-            correct: 1,
-            explanation: "Administer oxygen if SpO2 <94% or signs of distress."
+            "q": "Is a maternity ambulance required for every delivery?",
+            "options": [
+                "No: only if the patient declines another clinician",
+                "Yes, always",
+                "Only at night",
+                "Only for twins"
+            ],
+            "correct": 0,
+            "explanation": "Routine requests should be avoided."
         },
         {
-            q: "A newborn requires resuscitation. When should the cord be clamped?",
-            options: ["Immediately", "After 1 minute of resuscitation", "After 3 minutes", "After placental delivery"],
-            correct: 1,
-            explanation: "Start resuscitation immediately; cord can be clamped at 1 minute to allow some placental transfusion."
+            "q": "The newborn needs resuscitation. When is the cord clamped?",
+            "options": [
+                "At 1 minute, with resuscitation started immediately",
+                "Immediately",
+                "After 3 minutes",
+                "After the placenta"
+            ],
+            "correct": 0,
+            "explanation": "The baby still benefits from the delay."
         },
         {
-            q: "What is the correct technique for applying suprapubic pressure in shoulder dystocia?",
-            options: ["Push on the fundus", "Push on the pubic symphysis downward and laterally", "Push on the abdomen", "Push on the perineum"],
-            correct: 1,
-            explanation: "Suprapubic pressure is applied to the pubic symphysis downward and laterally to dislodge the anterior shoulder."
+            "q": "How is suprapubic pressure applied?",
+            "options": [
+                "Heel of the hand on the pubic symphysis, downward and lateral",
+                "On the fundus",
+                "On the perineum",
+                "On the baby's head"
+            ],
+            "correct": 0,
+            "explanation": "To dislodge the anterior shoulder."
         },
         {
-            q: "What is the dose of oxytocin for postpartum hemorrhage?",
-            options: ["Not in DCAS prehospital formulary", "10 units IM", "20 units IV", "5 units IV"],
-            correct: 0,
-            explanation: "Oxytocin is not part of the DCAS prehospital formulary; focus on fluids and TXA."
+            "q": "Within how long should shoulders deliver after the head before you suspect dystocia?",
+            "options": [
+                "60 seconds",
+                "10 seconds",
+                "5 minutes",
+                "10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "Plus turtle sign and failed restitution."
         },
         {
-            q: "A mother delivers twins. After the first twin is delivered, what should you do?",
-            options: ["Wait for second twin", "Transport immediately", "Clamp and cut cord and prepare for second delivery", "Administer oxytocin"],
-            correct: 2,
-            explanation: "Manage the cord and prepare for second delivery; transport if time-critical or complications."
+            "q": "Mother is expecting twins; the first is born. What does the CPG advise?",
+            "options": [
+                "Transport between deliveries if possible",
+                "Wait on scene for the second",
+                "Pull on the second cord",
+                "No action"
+            ],
+            "correct": 0,
+            "explanation": "Patient safety consideration."
         },
         {
-            q: "What is the pediatric fluid bolus for a neonate with signs of shock?",
-            options: ["5 mL/kg", "10 mL/kg", "20 mL/kg", "40 mL/kg"],
-            correct: 2,
-            explanation: "Neonatal fluid bolus is 10-20 mL/kg isotonic crystalloid."
+            "q": "Maternal cardiac arrest: when is rapid transfer for perimortem C-section needed?",
+            "options": [
+                "Gestation over 24 weeks",
+                "Any gestation",
+                "Over 40 weeks only",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Most successful within 5 minutes of arrest."
         },
         {
-            q: "What is the role of fundal massage after delivery?",
-            options: ["To deliver the placenta", "To reduce postpartum hemorrhage", "To relieve pain", "To assess uterine tone"],
-            correct: 1,
-            explanation: "Fundal massage helps the uterus contract, reducing postpartum hemorrhage."
+            "q": "What does uterine massage do?",
+            "options": [
+                "Promotes contraction and controls bleeding",
+                "Delivers the baby",
+                "Relieves pain",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "So does breastfeeding."
         },
         {
-            q: "What should you do if the umbilical cord tears during delivery?",
-            options: ["Apply direct pressure to the tear", "Clamp both ends", "Transport with pressure", "All of the above"],
-            correct: 3,
-            explanation: "Control bleeding with direct pressure; if possible, clamp proximal to the tear."
+            "q": "The cord tears during delivery. What do you do?",
+            "options": [
+                "Direct pressure with sterile dressing; clamp proximal to the tear",
+                "Ignore it",
+                "Pull the cord",
+                "Cut it further"
+            ],
+            "correct": 0,
+            "explanation": "Cord rupture."
         },
         {
-            q: "A mother is in active labor but there is no imminent birth. What should you do?",
-            options: ["Stay on scene until delivery", "Transport to hospital", "Administer tocolytics", "Perform vaginal exam"],
-            correct: 1,
-            explanation: "If birth is not imminent, transport to hospital for delivery."
+            "q": "In labor, no signs of imminent birth. What do you do?",
+            "options": [
+                "Transport to the appropriate facility",
+                "Stay until delivery",
+                "Give tocolytics",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Monitor continuously en route."
         },
         {
-            q: "What is the dose of normal saline bolus for a mother with postpartum hemorrhage and hypotension?",
-            options: ["250-500 mL", "500-1000 mL", "1000-2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Initial bolus 500-1000 mL, repeat as needed."
+            "q": "An arm presents at the vulva. What do you do?",
+            "options": [
+                "Immediate transport",
+                "Pull the arm",
+                "Push it back and deliver",
+                "Wait on scene"
+            ],
+            "correct": 0,
+            "explanation": "Compound presentation."
         },
         {
-            q: "A newborn has an APGAR score of 3 at 1 minute. What actions are required?",
-            options: ["Routine care", "Stimulation and oxygen", "Resuscitation (PPV, compressions, medications)", "Observation only"],
-            correct: 2,
-            explanation: "APGAR 0-3 indicates severe depression; full resuscitation is required."
+            "q": "APGAR 3 at 1 minute, infant unstable. What do you do?",
+            "options": [
+                "Newborn Resuscitation CPG",
+                "Routine care",
+                "Observe only",
+                "Record APGAR again before acting"
+            ],
+            "correct": 0,
+            "explanation": "Resuscitation takes priority over scoring."
         }
     ],
-    flashcards: [
-        { category: "Imminent birth signs", question: "What are signs of imminent birth?", answer: "Regular strong contractions (45-60 sec, 1-2 min intervals), bloody show, bulging perineum, crowning, urge to push." },
-        { category: "Cord clamping", question: "When should the cord be clamped?", answer: "Delay at least 1 minute unless immediate resuscitation needed." },
-        { category: "APGAR", question: "What does APGAR stand for?", answer: "Appearance, Pulse, Grimace, Activity, Respirations." },
-        { category: "APGAR scoring", question: "What are the APGAR score components?", answer: "0, 1, or 2 for each: skin color, heart rate, reflex irritability, muscle tone, respiratory effort." },
-        { category: "Shoulder dystocia", question: "What is the first maneuver for shoulder dystocia?", answer: "McRoberts maneuver (hyperflex mother's hips) with suprapubic pressure." },
-        { category: "Prolapsed cord", question: "How is a prolapsed cord managed?", answer: "Elevate presenting part off cord, position mother knee-chest or exaggerated Sims, cover cord with moist gauze, transport urgently." },
-        { category: "Nuchal cord", question: "How is a nuchal cord managed?", answer: "Slip cord over head; if too tight, slip over shoulders and deliver body through loop." },
-        { category: "Breech delivery", question: "How is a breech delivery managed?", answer: "Allow spontaneous delivery; support body; do not pull; if head fails to deliver, create airway with fingers." },
-        { category: "Postpartum hemorrhage", question: "What is the initial management of postpartum hemorrhage?", answer: "Fundal massage, IV fluids, TXA, oxygen, transport." },
-        { category: "TXA dose", question: "What is the dose of TXA for postpartum hemorrhage?", answer: "1 g IV diluted in 100 mL normal saline over 10 minutes." },
-        { category: "Fluid resuscitation � adult", question: "What is the initial fluid bolus for postpartum hemorrhage?", answer: "500-1000 mL crystalloid." },
-        { category: "Placenta delivery", question: "How should the placenta be managed?", answer: "Allow spontaneous delivery; do not pull cord; place in biohazard bag and transport." },
-        { category: "Uterine massage", question: "What is the purpose of fundal massage?", answer: "Promote uterine contraction and reduce postpartum hemorrhage." },
-        { category: "Maternal cardiac arrest", question: "How is maternal cardiac arrest managed?", answer: "Left uterine displacement, standard CPR, expedite transport for peri-mortem C-section if >20 weeks." },
-        { category: "Tocolysis", question: "When is tocolysis used?", answer: "For prolapsed cord when birth not imminent; nebulized salbutamol 10-20 mg." },
-        { category: "KPI", question: "What is the key performance indicator for childbirth?", answer: "Record APGAR scores at 1 and 5 minutes post-delivery." },
-        { category: "Male clinician", question: "Can a male clinician assist in delivery?", answer: "Yes, with patient consent; if not, request a maternity ambulance." },
-        { category: "Supine hypotension", question: "How is supine hypotension in pregnancy managed?", answer: "Left lateral tilt or manual uterine displacement." },
-        { category: "Newborn warmth", question: "How should a newborn be kept warm?", answer: "Dry, wrap in towel, place on mother's chest (kangaroo care), cover head." },
-        { category: "HELPERR mnemonic", question: "What does HELPERR stand for in shoulder dystocia?", answer: "Help, Legs (McRoberts), Pressure (suprapubic), Enter maneuvers, Remove posterior arm, Roll patient." }
+    "flashcards": [
+        {
+            "question": "Imminent birth",
+            "answer": "Contractions 45–60 seconds at 1–2 minute intervals, urge to push, bloody show, bulging perineum, crowning."
+        },
+        {
+            "question": "Cord clamping",
+            "answer": "After at least 1 minute (1–3 minutes); clamps at 10, 15 and 20 cm; cut between the two furthest from the baby."
+        },
+        {
+            "question": "APGAR",
+            "answer": "Appearance, Pulse, Grimace, Activity, Respirations: 0–2 each."
+        },
+        {
+            "question": "APGAR timing",
+            "answer": "1 and 5 minutes; resuscitation comes first."
+        },
+        {
+            "question": "Shoulder dystocia signs",
+            "answer": "Turtle sign, no restitution, shoulders not delivered within 60 seconds."
+        },
+        {
+            "question": "Prolapsed cord",
+            "answer": "Lift the presenting part off the cord and hold; warm saline pad; all fours or exaggerated Sims; transport."
+        },
+        {
+            "question": "Nuchal cord",
+            "answer": "Over the head; if tight, over the shoulders and deliver through the loop."
+        },
+        {
+            "question": "Breech",
+            "answer": "Hands off until the trunk delivers; support the body; never pull; make an airway if the head is stuck."
+        },
+        {
+            "question": "Placenta",
+            "answer": "Spontaneous in 5–15 minutes; never pull the cord; bag and transport."
+        },
+        {
+            "question": "Bleeding after delivery",
+            "answer": "Uterine massage, breastfeeding; Post-Partum Hemorrhage CPG for hypovolemia."
+        },
+        {
+            "question": "Complications",
+            "answer": "Oxygen 15 lpm NRB to the mother and expedite transport."
+        },
+        {
+            "question": "Suprapubic pressure",
+            "answer": "Heel of the hand on the pubic symphysis, downward and lateral; often needs two clinicians."
+        },
+        {
+            "question": "Maternal arrest",
+            "answer": "Manual left uterine displacement; Adult Cardiac Arrest CPG; over 24 weeks: perimortem C-section, ideally within 5 minutes."
+        },
+        {
+            "question": "Tocolysis",
+            "answer": "Prolapsed cord, birth not imminent: nebulised salbutamol 10–20 mg (AP)."
+        },
+        {
+            "question": "KPI",
+            "answer": "APGAR at 1 and 5 minutes."
+        },
+        {
+            "question": "Consent",
+            "answer": "Any clinician may assist with consent; maternity ambulance only if the patient declines."
+        },
+        {
+            "question": "Supine hypotension",
+            "answer": "Left lateral, or manual displacement of the uterus to the left."
+        },
+        {
+            "question": "Keeping the baby warm",
+            "answer": "Dry, wrap, skin-to-skin on the mother's chest, cover both."
+        },
+        {
+            "question": "HELPR",
+            "answer": "Help, Legs (McRoberts), Pressure (suprapubic), Enter (rotation), Posterior arm, Roll (all fours)."
+        },
+        {
+            "question": "Suctioning",
+            "answer": "Not routine, even with a bulb syringe; only for obstruction or PPV."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_10_1_1",
-            scenario: "A 28-year-old female in active labor has been pushing for 20 minutes. The head delivers but then retracts against the perineum (turtle sign). What is the likely complication?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Nuchal cord; slip cord over head", f: "Signs suggest shoulder dystocia." },
-                { t: "Shoulder dystocia; perform McRoberts maneuver with suprapubic pressure", f: "Correct. Turtle sign is classic for shoulder dystocia." },
-                { t: "Breech presentation; prepare for breech delivery", f: "Head is already delivered." },
-                { t: "Prolapsed cord; relieve pressure", f: "Not applicable." }
+            "id": "crit_10_1_1",
+            "scenario": "The head delivers, then retracts against the perineum. The shoulders don't deliver after 60 seconds.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Stop pushing, call ALS, McRoberts with suprapubic pressure, prioritise transport",
+                    "f": "Correct: shoulder dystocia."
+                },
+                {
+                    "t": "Pull on the head",
+                    "f": "Never pull."
+                },
+                {
+                    "t": "Fundal pressure",
+                    "f": "Use suprapubic pressure."
+                },
+                {
+                    "t": "Wait for the next contraction",
+                    "f": "Act now."
+                }
             ],
-            correct: 1,
-            explanation: "Turtle sign indicates shoulder dystocia; immediate McRoberts and suprapubic pressure.",
-            kpi: "Shoulder dystocia maneuvers initiated."
+            "correct": 0,
+            "explanation": "Turtle sign: HELPR sequence.",
+            "kpi": "APGAR recorded at 1 and 5 minutes."
         },
         {
-            id: "crit_10_1_2",
-            scenario: "A mother delivers the head, and you notice the umbilical cord is wrapped tightly around the neck. You cannot slip it over the head. What should you do?",
-            question: "What is the appropriate action?",
-            options: [
-                { t: "Cut the cord immediately", f: "May be needed if cannot slip." },
-                { t: "Clamp and cut the cord, then deliver", f: "If too tight to slip, clamp and cut before delivery of shoulders." },
-                { t: "Attempt to slip over shoulders and deliver body through loop", f: "If too tight over head, try to deliver shoulders through loop." },
-                { t: "Pull the cord to release", f: "Not recommended." }
+            "id": "crit_10_1_2",
+            "scenario": "After the head delivers, you feel the cord tight around the neck. It won't slip over the head.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Slip it over the shoulders and deliver the body through the loop",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Pull the cord",
+                    "f": "Never."
+                },
+                {
+                    "t": "Push the head back",
+                    "f": "Not indicated."
+                },
+                {
+                    "t": "Leave it",
+                    "f": "Manage it."
+                }
             ],
-            correct: 2,
-            explanation: "If cord is too tight to slip over head, attempt to deliver the shoulders through the loop; if not possible, clamp and cut.",
-            kpi: "Nuchal cord managed."
+            "correct": 0,
+            "explanation": "Tell Dispatch 2 about a complicated nuchal cord.",
+            "kpi": "APGAR recorded at 1 and 5 minutes."
         },
         {
-            id: "crit_10_1_3",
-            scenario: "A 32-week pregnant woman presents with sudden gush of fluid and a loop of cord visible at the vaginal opening. The fetus is alive with a heart rate of 140. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Push the cord back in", f: "Never push cord back." },
-                { t: "Cover cord with moist gauze, position mother knee-chest, and transport urgently", f: "Correct. Prolapsed cord requires immediate relief of pressure and rapid transport." },
-                { t: "Attempt to deliver the baby", f: "Not yet; relieve cord pressure first." },
-                { t: "Start IV fluids", f: "Secondary." }
+            "id": "crit_10_1_3",
+            "scenario": "At 32 weeks, membranes rupture and a loop of cord is visible at the vulva. Not crowning.",
+            "question": "What do you do first?",
+            "options": [
+                {
+                    "t": "Gloved hand to lift the presenting part off the cord, warm saline pad, all fours or exaggerated Sims, oxygen, urgent transport; AP may consider salbutamol tocolysis",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Push the cord back",
+                    "f": "Minimise handling."
+                },
+                {
+                    "t": "Supine and drive",
+                    "f": "Relieve cord compression."
+                },
+                {
+                    "t": "Cut the cord",
+                    "f": "Never."
+                }
             ],
-            correct: 1,
-            explanation: "Prolapsed cord is an obstetric emergency; elevate presenting part, position mother to reduce pressure, cover cord, and transport.",
-            kpi: "Cord prolapse managed and transport expedited."
+            "correct": 0,
+            "explanation": "Maintain pressure until relieved at hospital.",
+            "kpi": "APGAR recorded at 1 and 5 minutes."
         },
         {
-            id: "crit_10_1_4",
-            scenario: "A mother delivers the trunk of a breech infant, but the head does not deliver after 30 seconds. The infant is not breathing. What should you do?",
-            question: "What is the immediate action?",
-            options: [
-                { t: "Pull on the legs to deliver head", f: "Never pull; can cause spinal injury." },
-                { t: "Place gloved hand in vagina, create airway by pushing face away from uterine wall", f: "Correct. Create airway while supporting body." },
-                { t: "Apply suprapubic pressure", f: "Not indicated." },
-                { t: "Begin CPR", f: "Not yet; airway first." }
+            "id": "crit_10_1_4",
+            "scenario": "A breech baby's trunk has delivered, but the head is stuck.",
+            "question": "Immediate action?",
+            "options": [
+                {
+                    "t": "Gloved fingers between face and uterine wall to make an airway; V on the cheeks to flex the head",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Pull the body",
+                    "f": "Never."
+                },
+                {
+                    "t": "Hyperextend the neck",
+                    "f": "Support the body to avoid hyperextension."
+                },
+                {
+                    "t": "Wait",
+                    "f": "Make an airway."
+                }
             ],
-            correct: 1,
-            explanation: "In breech with head trapped, insert fingers to create an airway; do not pull.",
-            kpi: "Airway created and head delivery assisted."
+            "correct": 0,
+            "explanation": "Prioritise transport; continue manoeuvres en route.",
+            "kpi": "APGAR recorded at 1 and 5 minutes."
         },
         {
-            id: "crit_10_1_5",
-            scenario: "After delivery of the placenta, the mother has brisk vaginal bleeding, a boggy uterus, and her BP is 85/50. What is the priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer TXA 1 g IV", f: "Correct; TXA is indicated for postpartum hemorrhage." },
-                { t: "Fundal massage", f: "Also correct; both should be done." },
-                { t: "Start IV fluids", f: "Correct; all are priorities." },
-                { t: "All of the above", f: "Correct. Immediate management includes massage, fluids, TXA, and transport." }
+            "id": "crit_10_1_5",
+            "scenario": "After the placenta delivers, the mother bleeds briskly. The uterus is soft and BP is 85/50.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Uterine massage, breastfeeding, estimate blood loss, treat hypovolemia per the PPH CPG, transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Pull more tissue from the cord",
+                    "f": "Never pull."
+                },
+                {
+                    "t": "Observe only",
+                    "f": "She is hypotensive."
+                },
+                {
+                    "t": "Lay her head-down and wait",
+                    "f": "Treat and transport."
+                }
             ],
-            correct: 3,
-            explanation: "Postpartum hemorrhage with shock requires simultaneous fundal massage, IV fluids, TXA, and urgent transport.",
-            kpi: "Postpartum hemorrhage managed."
+            "correct": 0,
+            "explanation": "Uterine atony: massage at about the umbilicus.",
+            "kpi": "APGAR recorded at 1 and 5 minutes."
         }
     ]
 };
