@@ -11,123 +11,8 @@
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#0056b3">
     <link rel="apple-touch-icon" href="../icons/icon.png">
+    <link rel="stylesheet" href="../cpg-guide.css">
     <style>
-        .med-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 14px;
-            padding: 20px 24px;
-            margin-bottom: 16px;
-        }
-        .med-card h4 {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin: 0 0 6px 0;
-        }
-        .med-card p {
-            font-size: 0.95rem;
-            color: var(--text-primary);
-            margin: 0;
-            line-height: 1.6;
-        }
-        .med-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 8px;
-        }
-        .med-emoji {
-            font-size: 2.2rem;
-            flex-shrink: 0;
-        }
-        .med-title-block h2 {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--primary-accent);
-            margin: 0 0 4px 0;
-            line-height: 1.2;
-        }
-        .med-num {
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-        }
-        .scope-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            margin-top: 6px;
-        }
-        .scope-emr  { background: #2a4a2a; color: #6ddc6d; border: 1px solid #3d7a3d; }
-        .scope-emt  { background: #1e3a5f; color: #60a8e0; border: 1px solid #2d5a8f; }
-        .scope-emta { background: #3a2a5f; color: #a87fe0; border: 1px solid #5a3a8f; }
-        .scope-p    { background: #4a3a1a; color: #e0b060; border: 1px solid #8a6a2a; }
-        .scope-ap   { background: #4a1a1a; color: #e06060; border: 1px solid #8a2a2a; }
-        .scope-ep   { background: #1a1a4a; color: #6060e0; border: 1px solid #2a2a8a; }
-        .scope-multi{ background: var(--glass-bg); color: var(--text-secondary); border: 1px solid var(--glass-border); font-size: 0.68rem; }
-        .med-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-        }
-        @media (max-width: 600px) { .med-grid { grid-template-columns: 1fr; } }
-        .med-dose-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 16px 18px;
-        }
-        .med-dose-card h4 {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin: 0 0 8px 0;
-        }
-        .med-dose-card p {
-            font-size: 0.9rem;
-            line-height: 1.65;
-            color: var(--text-primary);
-            margin: 0;
-        }
-        .warn-box {
-            background: var(--glass-bg);
-            border: 1px solid rgba(220,53,69,0.5);
-            border-left: 4px solid #dc3545;
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin-bottom: 14px;
-        }
-        .warn-box h4 { color: #dc3545; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
-        .warn-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
-        .caution-box {
-            background: var(--glass-bg);
-            border: 1px solid rgba(230,140,0,0.5);
-            border-left: 4px solid #e68c00;
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin-bottom: 14px;
-        }
-        .caution-box h4 { color: #c97a00; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
-        .caution-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
-        .info-box {
-            background: var(--glass-bg);
-            border: 1px solid rgba(0,86,179,0.4);
-            border-left: 4px solid var(--primary-accent);
-            border-radius: 10px;
-            padding: 14px 18px;
-            margin-bottom: 14px;
-        }
-        .info-box h4 { color: var(--primary-accent); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 0 0 6px 0; }
-        .info-box p { color: var(--text-primary); font-size: 0.9rem; margin: 0; }
         .nav-bar {
             display: flex;
             justify-content: space-between;
@@ -175,75 +60,9 @@
 </header>
 
 <main id="mainContent">
-<div style="max-width:760px;margin:0 auto;padding:16px 16px 32px;">
+<div style="max-width:860px;margin:0 auto;padding:16px 16px 32px;">
 
-    <!-- Header card -->
-    <div class="med-card" style="border-color:var(--primary-accent);border-width:2px;">
-        <div class="med-header">
-            <div class="med-emoji"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#pill"/></svg></div>
-            <div class="med-title-block">
-                <div class="med-num">M16 · Hormone</div>
-                <h2>Glucagon</h2>
-                <span class="scope-badge scope-emt" title="Emergency Medical Technician (EMT) and above">EMT</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Presentation & Mechanism -->
-    <div class="med-card">
-        <h4>Presentation</h4>
-        <p>1 mg/1 mL vial.</p>
-    </div>
-    <div class="med-card">
-        <h4>Mechanism of Action</h4>
-        <p>Glucagon stimulates glycogenolysis (the breakdown of glycogen into glucose) predominantly in the liver, increasing blood glucose levels.</p>
-    </div>
-
-    <!-- Indications -->
-    <div class="med-card" style="border-left:3px solid #28a745;">
-        <h4>Indications <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#circle-check-big"/></svg></h4>
-        <p>Hypoglycemia; Beta‑Blocker overdose; Calcium Channel Blocker overdose.</p>
-    </div>
-
-    <!-- Contraindications & Precautions -->
-    <div class="warn-box">
-        <h4><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#ban"/></svg> Contraindications</h4>
-        <p>Known allergy.</p>
-    </div>
-    <div class="caution-box">
-        <h4><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#triangle-alert"/></svg>️ Precautions</h4>
-        <p>Patients where glycogen stores may be depleted (see Additional Information).</p>
-    </div>
-
-    <!-- Side Effects -->
-    <div class="med-card">
-        <h4>Side Effects</h4>
-        <p>Reported difficulty maintaining stable glucose levels for up to two weeks following administration.</p>
-    </div>
-
-    <!-- Dose -->
-    <div class="med-grid">
-        <div class="med-dose-card">
-            <h4><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#user"/></svg> Adult Dose &amp; Administration</h4>
-            <p><strong>Hypoglycemia:</strong> 1 mg IM/SC.<br><strong>Beta‑Blocker &amp; CCB Overdose:</strong> 1 mg IM. Administer up to 5 mg IM (different injection sites) if additional glucagon available. Repeat every 10‑15 minutes if required.</p>
-        </div>
-        <div class="med-dose-card">
-            <h4><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#baby"/></svg> Pediatric Dose &amp; Administration</h4>
-            <p><strong>Hypoglycemia:</strong> &gt;6 years (or &gt;25 kg): 1 mg IM/SC; &lt;6 years (or &lt;25 kg): 0.5 mg IM/SC.<br><strong>Beta‑Blocker &amp; CCB Overdose:</strong> &gt;6 years (or &gt;25 kg): 1 mg IM; &lt;6 years (or &lt;25 kg): 0.5 mg IM. Repeat every 10‑15 minutes if required.</p>
-        </div>
-    </div>
-
-    <!-- Pregnancy -->
-    <div class="info-box" style="margin-top:14px;">
-        <h4><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#baby"/></svg> Use in Pregnancy and Lactation</h4>
-        <p>Pregnancy: Safety has not been established. However, glucagon should be administered if clinically indicated. Lactation: Safety has not been established. If essential, the mother should be advised to stop breast feeding until advised by their physician.</p>
-    </div>
-
-    <!-- Additional -->
-    <div class="med-card">
-        <h4>Additional Information</h4>
-        <p>Glycogen stores may be depleted in: non‑diabetics, septic patients, young children, patients after extreme exercise, patients who have not eaten in more than 12 hours, adrenal insufficiency, chronic hypoglycemia, alcohol‑induced hypoglycemia. Glucagon is unlikely to be effective in these patients but may be considered if no IV access is obtainable and the patient remains significantly hypoglycemic.</p>
-    </div>
+    <div id="drugSheet"></div>
 
     <!-- Prev / Next navigation -->
     <div class="nav-bar">
@@ -259,6 +78,13 @@
     <div><a href="../pages/about.html">About &amp; Disclaimer</a> · Refer to DCAS CPG and memo for procedures and protocols.</div>
 </footer>
 
+<script src="../content/drugs/m16.js"></script>
+<script src="../pages/ecg-engine.js"></script>
+<script src="../cpg-strip.js"></script>
+<script src="../cpg-guide.js"></script>
+<script>
+    document.getElementById('drugSheet').innerHTML = CPGGuide.renderDrug(window.CPG_DRUG);
+</script>
 <script>
 (function() {
     // Theme

@@ -187,3 +187,35 @@ for (const id of FLAT_PAGES) {
     expect(errors).toEqual([]);
   });
 }
+
+// The medication formulary: every drug sheet M1–M38 renders from its data,
+// names its source PDF, links only to pages that exist and fits a phone.
+for (let n = 1; n <= 38; n++) {
+  test(`m${n}: drug sheet, links and phone layout`, async ({ page, request }) => {
+    const errors = trackErrors(page);
+    await page.setViewportSize({ width: 360, height: 780 });
+    await page.goto(`chapters/m${n}.html`, { waitUntil: 'networkidle' });
+    await expect(page.locator('.cpg-drug h2')).toBeVisible();
+    await expect(page.locator('.d-scope li').first()).toBeVisible();
+    await expect(page.locator('.d-row > h4', { hasText: /^Indications$/ })).toBeVisible();
+    await expect(page.locator('a.g-source')).toHaveAttribute('href', new RegExp(`/M${n}_[^/]+\\.pdf$`));
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+    const hrefs = new Set();
+    for (const a of await page.locator('.g-related a, a.g-source, .g-tools a, .g-strip figcaption a, .nav-bar a').all()) {
+      hrefs.add(new URL(await a.getAttribute('href'), page.url()).href);
+    }
+    for (const href of hrefs) expect((await request.get(href)).status(), href).toBe(200);
+    expect(errors).toEqual([]);
+  });
+}
+
+test('S1 scope of practice: every matrix row, levels as in the PDF', async ({ page }) => {
+  const errors = trackErrors(page);
+  await page.goto('chapters/s1.html', { waitUntil: 'networkidle' });
+  await expect(page.locator('.sr')).toHaveCount(83);
+  const row = (name) => page.locator('.sr', { hasText: name }).first();
+  await expect(row('Racemic Epinephrine')).toHaveAttribute('data-lvl', '3');
+  await expect(row('Oxygen')).toHaveAttribute('data-lvl', '1');
+  await expect(row('Labetalol')).toHaveAttribute('data-lvl', '5');
+  expect(errors).toEqual([]);
+});

@@ -49,8 +49,9 @@ NUMBER = re.compile(
 def unify(text: str) -> str:
     text = re.sub(r"[‐-―−]", "-", text.lower())
     # "60 seconds" and the PDF's "60second" are the same value, as are
-    # "11 years" and the PDF's "11yrs".
+    # "11 years" and the PDF's "11yrs", and "38°C" and the PDF's "38oC".
     text = re.sub(r"(?<=\d)(\s*)yrs?\b", r"\1year", text)
+    text = re.sub(r"(?<=\d)(\s*)oc\b", r"\1°c", text)
     return re.sub(r"\b(second|minute|hour|week|year)s\b", r"\1", text)
 
 
