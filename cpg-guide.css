@@ -52,6 +52,7 @@
     font-size: .72rem; font-weight: 800; letter-spacing: .03em; line-height: 1.4;
     color: #fff; background: #5c6773; white-space: nowrap; flex-shrink: 0;
 }
+.g-lvl[data-lvl="EMR"]   { background: #6f42c1; }
 .g-lvl[data-lvl="EMT"]   { background: #3d72b8; }
 .g-lvl[data-lvl="EMT-A"] { background: #1f4e79; }
 .g-lvl[data-lvl="P"]     { background: #c92a2a; }
@@ -248,3 +249,32 @@
 
 /* A strip inside a scenario card (app.js) */
 .scen-strip { margin-top: 10px; border-radius: 10px; overflow: hidden; }
+/* ---------- Reference tables (normal vital signs, GCS, …) ---------- */
+.g-table-wrap { overflow-x: auto; margin: 0 0 10px; border-radius: 10px; border: 1px solid var(--g-line); }
+.g-table { width: 100%; border-collapse: collapse; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.g-table th, .g-table td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--g-line); white-space: nowrap; color: var(--text-secondary); }
+.g-table thead th { font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; background: var(--g-tint); }
+.g-table tbody th { font-weight: 650; color: var(--text-primary); }
+.g-table tbody tr:last-child > * { border-bottom: 0; }
+.g-table .g-tgroup th { background: var(--g-tint); color: var(--g-accent); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.g-table-wrap + .g-list { margin-top: 4px; }
+.cpg-guide[data-group="universal"] { --g-accent: var(--accent-universal); }
+.cpg-guide[data-group="airway"]    { --g-accent: var(--accent-airway); }
+@media (max-width: 600px) {
+    .g-table { font-size: .78rem; }
+    .g-table th, .g-table td { padding: 6px 5px; white-space: normal; }
+    .g-table thead th { font-size: .66rem; letter-spacing: .02em; }
+}
+.g-table td.g-n { white-space: nowrap; }
+
+/* Wide tables marked `stack`: one card per column on phones */
+.g-stack { display: none; }
+@media (max-width: 600px) {
+    .g-table-wrap.g-has-stack { display: none; }
+    .g-stack { display: grid; gap: 8px; margin-bottom: 10px; }
+    .g-stack-card { padding: 10px 12px; border-radius: 10px; background: var(--g-tint); border: 1px solid var(--g-line); }
+    .g-stack-card h4 { margin: 0 0 6px; color: var(--g-accent); }
+    .g-stack-card dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 0; font-size: .88rem; }
+    .g-stack-card dt { font-weight: 650; color: var(--text-primary); }
+    .g-stack-card dd { margin: 0; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+}

@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v7.0';   // Pilot pages: study sets restored, rhythm strips
+const CACHE_VERSION = 'dcas-cpg-v7.1';   // Chapters 1–2 rewritten from the official CPG
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 

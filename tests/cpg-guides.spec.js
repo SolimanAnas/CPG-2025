@@ -112,3 +112,37 @@ test('a scenario that names a rhythm shows its strip and links to the ECG Simula
   await expect(page.locator('.scen-strip path.ecg-trace')).toHaveCount(1);
   await expect(page.locator('a.scen-ecg')).toHaveAttribute('href', '../pages/ecg.html?r=vfFine');
 });
+
+// Every rewritten section of the multi-section chapters: summary, study
+// tabs, related links and phone layout.
+const CHAPTER_SECTIONS = {
+  c1: ['c1s1', 'c1s2', 'c1s3', 'c1s4', 'c1s5', 'c1s6'],
+  c2: ['c2s1', 'c2s2', 'c2s3', 'c2s4', 'c2s5'],
+};
+for (const [chapter, sections] of Object.entries(CHAPTER_SECTIONS)) {
+  for (const id of sections) {
+    test(`${chapter} ${id}: summary, study tabs, links and phone layout`, async ({ page, request }) => {
+      const errors = trackErrors(page);
+      await page.setViewportSize({ width: 360, height: 780 });
+      const url = `chapters/${chapter}.html?section=${id}`;
+      await page.goto(url, { waitUntil: 'networkidle' });
+      await expect(page.locator('.cpg-guide h2')).toBeVisible();
+      await expect(page.locator('.bottom-nav .nav-pill')).toHaveCount(4);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+
+      const hrefs = new Set();
+      for (const a of await page.locator('.g-related a, a.g-source').all()) {
+        hrefs.add(new URL(await a.getAttribute('href'), page.url()).href);
+      }
+      for (const href of hrefs) expect((await request.get(href)).status(), href).toBe(200);
+
+      await page.goto(`${url}&view=flashcards`, { waitUntil: 'networkidle' });
+      await expect(page.locator('.fc-progress')).toContainText('Card 1 of');
+      await page.goto(`${url}&view=quiz`, { waitUntil: 'networkidle' });
+      await expect(page.locator('.setup-btn').first()).toBeVisible();
+      await page.goto(`${url}&view=critical`, { waitUntil: 'networkidle' });
+      await expect(page.locator('.critical-card')).toBeVisible();
+      expect(errors).toEqual([]);
+    });
+  }
+}
