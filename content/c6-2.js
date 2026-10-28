@@ -1,403 +1,844 @@
-/* ========== Chapter 6.2 – Abnormal Behavior ========== */
+/* ========== CPG 6.2 – Abnormal Behavior ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-2",
-    title: "Abnormal Behavior",
-    shortTitle: "6.2 Abnormal Behavior",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#brain"/></svg> Abnormal Behavior</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Adequate assessment and treatment of agitated, violent or uncooperative patients.</li>
-                <li>Maximizing and maintaining safety for the patient, EMS personnel, and others.</li>
-                <li>Ensure appropriate pharmacological management when indicated.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with abnormal or unusual behavior who are a danger to themselves or others.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Patients with abnormal behavior secondary to medical conditions such as traumatic brain injury or hypoxia (address underlying cause first).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Secondary survey:</strong> Once patient compliance is gained, obtain history and physical examination to exclude reversible causes as per Universal Care CPG (vital signs, blood glucose).</li>
-                <li><strong>Investigation of alternative causes:</strong> Consider hypoglycemia, hypoxia, head injury, intoxication, withdrawal, infection, psychiatric illness.</li>
-                <li><strong>Sedation Assessment Tool (SAT):</strong> Use to guide patient management and communication (see table). Scoring: +3 (combative, violent), +2 (very anxious/agitated, loud outbursts), +1 (anxious/restless), 0 (awake and calm), -1 (asleep but rouses), -2 (responds to physical stimulation), -3 (no response).</li>
-                <li><strong>Determine triage category:</strong> Per Patient Triage Categories CPG.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and secondary survey:</strong> As per Universal Care CPG. May need to delay until patient compliant.</li>
-                <li><strong>Attempt verbal de‑escalation:</strong>
-                    <ul>
-                        <li>Allow sufficient time.</li>
-                        <li>Have only one person speak with the patient.</li>
-                        <li>Introduce yourself, state you are there to help.</li>
-                        <li>Use short, simple messages; repetition is key.</li>
-                        <li>Limit unnecessary noise (radios, lights, sirens).</li>
-                        <li>Try to establish rapport.</li>
-                    </ul>
-                </li>
-                <li><strong>Request police assistance:</strong> If risk of harm to patient, staff, or bystanders; if restraint anticipated.</li>
-                <li><strong>Consider ALS back‑up:</strong> If sedation required. Contact Tele‑EMS if unsure.</li>
-                <li><strong>Sedation/pharmacological management:</strong>
-                    <ul>
-                        <li>Goal: Achieve SAT score of 0 to -1 to gain compliance and facilitate safe transfer.</li>
-                        <li>Medication selection based on SAT score (see table).</li>
-                        <li><strong>For SAT +3:</strong>
-                            <ul>
-                                <li>Ketamine IM: 3‑4 mg/kg (max 400 mg). <60kg: 200 mg; 60‑90kg: 300 mg; >90kg: 400 mg. May repeat once after 10 min.</li>
-                                <li>Ketamine IV: 1 mg/kg (50‑100 mg).</li>
-                                <li>OR Midazolam IM/IV: 5 mg (repeat once after 10 min).</li>
-                                <li>OR Diazepam IV: 5 mg.</li>
-                            </ul>
-                        </li>
-                        <li><strong>For SAT +2:</strong>
-                            <ul>
-                                <li>Diazepam IV: 5 mg.</li>
-                                <li>OR Midazolam IM/IV: 5 mg (repeat once after 10 min).</li>
-                                <li>AND/OR Haloperidol IM: 10 mg (for suspected worsening mental health illness only).</li>
-                            </ul>
-                        </li>
-                        <li><strong>For SAT +1:</strong>
-                            <ul>
-                                <li>Haloperidol 10 mg IM (for suspected worsening mental health illness only).</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Post‑sedation monitoring:</strong>
-                    <ul>
-                        <li>Once compliant, complete full assessment including vital signs.</li>
-                        <li>Continuous pulse oximetry, EtCO₂ (via nasal cannula), 4‑lead ECG mandatory.</li>
-                        <li>Consider oxygen (nasal cannula) for SAT -1 or less.</li>
-                        <li>Establish IV access as soon as possible.</li>
-                        <li>Position sedated patients with altered mental status in recovery position.</li>
-                        <li>EMS physician or Advanced Paramedic must accompany the patient to hospital after sedation.</li>
-                    </ul>
-                </li>
-                <li><strong>Patient positioning:</strong> Stretcher in sitting position reduces aspiration risk and patient's physical strength. Do not place prone.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>All sedatives carry risk of respiratory depression, apnea, hypotension.</li>
-                <li>Patients receiving multiple doses or multiple medications have increased risk of adverse events; may require airway management.</li>
-                <li>Work with police to reposition restrained patients to ensure airway, breathing, and circulation are not impaired.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Verbal de‑escalation is under‑utilized; attempt before pharmacological intervention.</li>
-                <li>All patients who have received sedation must be transported to hospital.</li>
-                <li>Haloperidol may take up to 20 minutes to take effect; may not work in some patients.</li>
-                <li>Benzodiazepines are preferred for alcohol withdrawal; haloperidol for psychiatric agitation.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism/medical complaint, injuries/information (physical injuries, psychiatric history), signs (GCS, vital signs, blood glucose, SAT score).</li>
-                <li>Treatment: verbal de‑escalation methods, sedation (drug, dose, route, response), physical restraint (indication, duration, staff).</li>
-                <li>Allergies, medications, background (mental health history, recent events), other (police involvement, caregiver input).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>When sedation is administered, ensure documentation of the medication name, dose, and effect.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-2",
+    "title": "Abnormal Behavior",
+    "shortTitle": "6.2 Abnormal Behavior",
+    "guide": {
+        "cpg": "6.2",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Abnormal Behavior",
+        "lead": "Safety first: police for risk or restraint, then genuine verbal de-escalation. Sedate only when safety requires it, choosing the drug by the Sedation Assessment Tool score and aiming for a score of 0 to −1. Every sedated patient is monitored with SpO<sub>2</sub>, EtCO<sub>2</sub> and ECG and taken to hospital.",
+        "source": {
+            "label": "CPG 6.2",
+            "pages": "153–157",
+            "pdf": "../pdf_sections/6_2_Abnormal_Behavior.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Abnormal or unusual behavior with danger to self or others."
+                ],
+                "exclude": [
+                    "Abnormal behavior from a medical condition such as traumatic brain injury or hypoxia."
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Is there a safety risk?",
+                "icon": "circle-help",
+                "question": "Aggressive or violent, and/or a risk to self or others and uncooperative?",
+                "no": "Assess to exclude other causes and transport.",
+                "yes": "Request police and attempt verbal de-escalation. If it fails: physical restraint by police, consider ALS back-up and sedation by score."
+            },
+            {
+                "type": "list",
+                "title": "Verbal de-escalation",
+                "icon": "message-circle-question",
+                "items": [
+                    "Under-used: allow it enough time.",
+                    "One person speaks. Introduce yourself, say you are here to help, reassure.",
+                    "Short, simple sentences, repeated: attention spans are short.",
+                    "Cut noise and disturbance: radios, lights, sirens, harsh vehicle movement. Build rapport."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Sedation Assessment Tool",
+                "icon": "clipboard-list",
+                "columns": [
+                    "Score",
+                    "Responsiveness",
+                    "Speech"
+                ],
+                "rows": [
+                    [
+                        "+3",
+                        "Combative, violent, out of control",
+                        "Continual loud outbursts"
+                    ],
+                    [
+                        "+2",
+                        "Very anxious and agitated",
+                        "Loud outbursts"
+                    ],
+                    [
+                        "+1",
+                        "Anxious, restless",
+                        "Normal, talkative"
+                    ],
+                    [
+                        "0",
+                        "Awake and calm, cooperative",
+                        "Speaks normally"
+                    ],
+                    [
+                        "−1",
+                        "Asleep but rouses to name",
+                        "Slurring or prominent slowing"
+                    ],
+                    [
+                        "−2",
+                        "Responds to physical stimulation",
+                        "Few recognizable words"
+                    ],
+                    [
+                        "−3",
+                        "No response to stimulation",
+                        "Nil"
+                    ]
+                ],
+                "notes": [
+                    "Observational: needs no cooperation. Use it to guide treatment and to talk to Tele-EMS and other clinicians.",
+                    "Target for most patients: 0 to −1."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Medication by score (EP on the flowchart)",
+                "icon": "syringe",
+                "columns": [
+                    "Score",
+                    "Options"
+                ],
+                "rows": [
+                    [
+                        "+3",
+                        "<b>Ketamine IM</b> 3–4 mg/kg (&lt;60 kg 200 mg; 60–90 kg 300 mg; 90 kg+ 400 mg), repeat once after 10 minutes; or <b>ketamine IV</b> 1 mg/kg (50–100 mg); or <b>midazolam IM/IV</b> 5 mg, repeat once after 10 minutes; or <b>diazepam IV</b> 5 mg"
+                    ],
+                    [
+                        "+2",
+                        "<b>Diazepam IV</b> 5 mg or <b>midazolam IM/IV</b> 5 mg (repeat once after 10 minutes), and/or <b>haloperidol IM</b> 10 mg for suspected worsening mental illness only"
+                    ],
+                    [
+                        "+1",
+                        "<b>Haloperidol IM</b> 10 mg, for suspected worsening mental illness only"
+                    ]
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Choosing the drug",
+                "icon": "pill",
+                "groups": [
+                    {
+                        "title": "Principle",
+                        "items": [
+                            "No sedation for a compliant patient who poses no safety risk.",
+                            "The first drug should aim to gain compliance with a single intervention: violent patients risk staff injury and needle-stick."
+                        ]
+                    },
+                    {
+                        "title": "Ketamine",
+                        "items": [
+                            "Preferred for exceptionally violent patients."
+                        ]
+                    },
+                    {
+                        "title": "Benzodiazepines",
+                        "items": [
+                            "+3: if one dose is likely to gain compliance. IM route: midazolam (faster onset).",
+                            "+2: first-line agent."
+                        ]
+                    },
+                    {
+                        "title": "Haloperidol",
+                        "items": [
+                            "Only for agitation believed due to worsening mental illness.",
+                            "First line if there is no immediate safety risk and one injection should suffice; otherwise a second agent after benzodiazepines.",
+                            "May take up to 20 minutes, and may not work in some patients."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "After sedation",
+                "icon": "heart-pulse",
+                "steps": [
+                    {
+                        "title": "Monitor (mandatory)",
+                        "text": "Continuous SpO<sub>2</sub>, nasal-cannula EtCO<sub>2</sub> and 4-lead ECG. The clinician who sedated stays at the patient's side."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "text": "At least nasal cannula for a score of −1 or less."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "Recovery position if mental status is altered. Agitated patients: stretcher sitting up (prevents aspiration, reduces strength). Never prone."
+                    },
+                    {
+                        "title": "Assess the cause",
+                        "text": "Full vital signs once compliant; exclude reversible causes such as hypoglycemia. IV access as soon as possible."
+                    },
+                    {
+                        "title": "Transport",
+                        "text": "Every sedated patient goes to hospital, accompanied by an EMS physician or Advanced Paramedic."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Safety",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Sedative risks",
+                        "items": [
+                            "Respiratory depression, apnea, hypotension, airway compromise.",
+                            "Higher risk with repeated doses or several drugs: be ready to manage the airway."
+                        ]
+                    },
+                    {
+                        "title": "Restraint",
+                        "items": [
+                            "Work with police to reposition restrained patients so airway, breathing and circulation are not impaired."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: haloperidol",
+                                "sub": "Dose check",
+                                "href": "../pages/drug-calculator.html?drug=Haloperidol",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "When sedation is given: drug name, dose and effect documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    },
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "6.14 Suspected Alcohol Intoxication",
+                        "href": "c6-14.html"
+                    },
+                    {
+                        "label": "1.6 Patient Refusal of Transfer",
+                        "href": "c1.html?section=c1s6"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first step in managing a patient with abnormal behavior?",
-            options: ["Pharmacological sedation", "Verbal de‑escalation", "Physical restraint", "Immediate transport"],
-            correct: 1,
-            explanation: "Attempt verbal de‑escalation before considering pharmacological or physical interventions."
+            "q": "What comes before any sedation in an agitated patient?",
+            "options": [
+                "Police for safety and verbal de-escalation",
+                "Ketamine",
+                "Physical restraint by EMS",
+                "Immediate transport"
+            ],
+            "correct": 0,
+            "explanation": "Sedation follows failed de-escalation and police restraint."
         },
         {
-            q: "What is the goal of sedation in an agitated patient?",
-            options: ["Achieve SAT score of +1", "Achieve SAT score of 0 to -1", "Achieve SAT score of -3", "Achieve sleep"],
-            correct: 1,
-            explanation: "The goal is to gain patient compliance and facilitate safe transfer, typically SAT 0 to -1."
+            "q": "What score is the sedation target for most patients?",
+            "options": [
+                "0 to −1",
+                "+1",
+                "−3",
+                "+2"
+            ],
+            "correct": 0,
+            "explanation": "Enough to gain compliance and transfer safely."
         },
         {
-            q: "What is the dose of IM ketamine for a violent patient weighing 70 kg?",
-            options: ["200 mg", "300 mg", "400 mg", "100 mg"],
-            correct: 1,
-            explanation: "Ketamine IM dose is 3‑4 mg/kg. For 70 kg, 210‑280 mg, so 300 mg is appropriate (rounded)."
+            "q": "What IM ketamine dose does a 70 kg patient at +3 receive?",
+            "options": [
+                "300 mg",
+                "200 mg",
+                "400 mg",
+                "100 mg"
+            ],
+            "correct": 0,
+            "explanation": "60–90 kg: 300 mg (3–4 mg/kg)."
         },
         {
-            q: "A patient with SAT score +2 is agitated and suspected of worsening mental health illness. What medication combination may be used?",
-            options: ["Ketamine alone", "Midazolam and haloperidol", "Diazepam alone", "Haloperidol alone"],
-            correct: 1,
-            explanation: "For SAT +2, midazolam or diazepam may be used, and haloperidol can be added for suspected psychiatric illness."
+            "q": "Score +2 with suspected worsening mental illness. Which options are listed?",
+            "options": [
+                "Diazepam IV or midazolam, and/or haloperidol 10 mg IM",
+                "Ketamine only",
+                "Nothing",
+                "Haloperidol IV"
+            ],
+            "correct": 0,
+            "explanation": "Haloperidol is reserved for suspected worsening mental illness."
         },
         {
-            q: "What is the dose of haloperidol IM for agitation in suspected mental health illness?",
-            options: ["5 mg", "10 mg", "15 mg", "20 mg"],
-            correct: 1,
-            explanation: "Haloperidol dose is 10 mg IM."
+            "q": "What is the haloperidol dose?",
+            "options": [
+                "10 mg IM",
+                "1 mg IV",
+                "20 mg IV",
+                "50 mg IM"
+            ],
+            "correct": 0,
+            "explanation": "For suspected worsening mental illness only."
         },
         {
-            q: "A patient with SAT score +1 and suspected mental health illness should receive:",
-            options: ["Midazolam", "Ketamine", "Haloperidol 10 mg IM", "No medication"],
-            correct: 2,
-            explanation: "Haloperidol may be used for mild agitation if psychiatric cause suspected."
+            "q": "Score +1, suspected worsening mental illness. What is listed?",
+            "options": [
+                "Haloperidol 10 mg IM",
+                "Ketamine",
+                "Midazolam IV",
+                "Nothing ever"
+            ],
+            "correct": 0,
+            "explanation": "Haloperidol is the only +1 option."
         },
         {
-            q: "Which of the following is a contraindication to haloperidol?",
-            options: ["Prolonged QT", "Hypotension", "Seizure disorder", "All of the above"],
-            correct: 3,
-            explanation: "Haloperidol can prolong QT, cause hypotension, and lower seizure threshold; use with caution."
+            "q": "How long can haloperidol take to work?",
+            "options": [
+                "Up to 20 minutes",
+                "Seconds",
+                "Two hours",
+                "It works instantly"
+            ],
+            "correct": 0,
+            "explanation": "It may also not work in some patients."
         },
         {
-            q: "After administering sedation, what monitoring is mandatory?",
-            options: ["Pulse oximetry", "EtCO₂", "4‑lead ECG", "All of the above"],
-            correct: 3,
-            explanation: "Continuous pulse oximetry, EtCO₂, and ECG monitoring are mandatory."
+            "q": "Which monitoring is mandatory after sedation?",
+            "options": [
+                "SpO₂, nasal-cannula EtCO₂ and 4-lead ECG",
+                "BP only",
+                "Temperature only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Continuous, for all sedated patients."
         },
         {
-            q: "How should a sedated patient with altered mental status be positioned?",
-            options: ["Supine", "Prone", "Recovery position", "Trendelenburg"],
-            correct: 2,
-            explanation: "Recovery position helps maintain airway and prevent aspiration."
+            "q": "How is a sedated patient with altered mental status positioned?",
+            "options": [
+                "Recovery position",
+                "Prone",
+                "Supine flat",
+                "Trendelenburg"
+            ],
+            "correct": 0,
+            "explanation": "Never prone."
         },
         {
-            q: "What is the maximum repeat dose of IM ketamine for agitation?",
-            options: ["Once after 5 minutes", "Once after 10 minutes", "Twice", "No repeat"],
-            correct: 1,
-            explanation: "IM ketamine may be repeated once after 10 minutes if needed."
+            "q": "How often may IM ketamine be repeated?",
+            "options": [
+                "Once, after 10 minutes",
+                "Every 2 minutes",
+                "Never",
+                "Three times"
+            ],
+            "correct": 0,
+            "explanation": "Repeat after 10 minutes, once only."
         },
         {
-            q: "A patient with alcohol withdrawal presents with agitation. Which medication is preferred?",
-            options: ["Haloperidol", "Ketamine", "Benzodiazepines", "Antipsychotics"],
-            correct: 2,
-            explanation: "Benzodiazepines (e.g., midazolam, diazepam) are preferred for alcohol withdrawal."
+            "q": "Which drug is preferred for an exceptionally violent patient?",
+            "options": [
+                "Ketamine",
+                "Haloperidol",
+                "Paracetamol",
+                "Diazepam PR"
+            ],
+            "correct": 0,
+            "explanation": "Ketamine is preferred for exceptional violence."
         },
         {
-            q: "What is the IV dose of ketamine for sedation?",
-            options: ["0.5 mg/kg", "1 mg/kg", "2 mg/kg", "3 mg/kg"],
-            correct: 1,
-            explanation: "IV ketamine dose is 1 mg/kg (typical 50‑100 mg)."
+            "q": "What is the IV ketamine dose?",
+            "options": [
+                "1 mg/kg (50–100 mg)",
+                "3–4 mg/kg",
+                "10 mg/kg",
+                "0.1 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "IV ketamine 1 mg/kg."
         },
         {
-            q: "A patient with SAT score +3 is violent. What is the preferred IM medication?",
-            options: ["Midazolam", "Ketamine", "Haloperidol", "Diazepam"],
-            correct: 1,
-            explanation: "Ketamine is preferred for exceptionally violent patients due to rapid onset."
+            "q": "Which benzodiazepine is preferred IM?",
+            "options": [
+                "Midazolam",
+                "Diazepam",
+                "Either equally",
+                "Neither"
+            ],
+            "correct": 0,
+            "explanation": "Faster onset by the IM route."
         },
         {
-            q: "What is the onset time of IM haloperidol?",
-            options: ["1‑2 minutes", "5‑10 minutes", "15‑20 minutes", "30‑60 minutes"],
-            correct: 2,
-            explanation: "Haloperidol may take up to 20 minutes to take effect."
+            "q": "Which is NOT part of the Sedation Assessment Tool?",
+            "options": [
+                "Blood pressure",
+                "Responsiveness",
+                "Speech",
+                "The score"
+            ],
+            "correct": 0,
+            "explanation": "It scores responsiveness and speech."
         },
         {
-            q: "Which of the following is NOT a component of the Sedation Assessment Tool?",
-            options: ["Responsiveness", "Speech", "Motor activity", "Blood pressure"],
-            correct: 3,
-            explanation: "SAT assesses responsiveness and speech; vital signs are separate."
+            "q": "Score −2 after sedation. What is needed?",
+            "options": [
+                "Close monitoring, oxygen and airway protection",
+                "More sedation",
+                "Haloperidol",
+                "Restraint"
+            ],
+            "correct": 0,
+            "explanation": "Oxygen for −1 or less; watch the airway."
         },
         {
-            q: "A patient with SAT score -2 (responds to physical stimulation) requires:",
-            options: ["Immediate sedation", "Close monitoring and airway protection", "Haloperidol", "Ketamine"],
-            correct: 1,
-            explanation: "This patient is deeply sedated; monitor airway and vital signs."
+            "q": "What is the IM ketamine dose above 90 kg?",
+            "options": [
+                "400 mg",
+                "300 mg",
+                "200 mg",
+                "600 mg"
+            ],
+            "correct": 0,
+            "explanation": "90 kg+: 400 mg."
         },
         {
-            q: "What is the maximum single IM dose of ketamine for a patient >90 kg?",
-            options: ["300 mg", "400 mg", "500 mg", "600 mg"],
-            correct: 1,
-            explanation: "For >90 kg, dose is 400 mg."
+            "q": "When is police assistance requested?",
+            "options": [
+                "Risk of harm, or restraint expected",
+                "Always, for every patient",
+                "Only after sedation",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Police perform any physical restraint."
         },
         {
-            q: "Why should police be involved in managing an agitated patient?",
-            options: ["To restrain the patient", "For scene safety if risk of violence", "To administer medication", "All of the above"],
-            correct: 1,
-            explanation: "Police assist with scene safety if there is risk of harm; they do not administer meds."
+            "q": "Who accompanies a sedated patient to hospital?",
+            "options": [
+                "An EMS physician or Advanced Paramedic",
+                "Any EMT",
+                "The police only",
+                "Nobody"
+            ],
+            "correct": 0,
+            "explanation": "And all sedated patients must go to hospital."
         },
         {
-            q: "After sedation, who must accompany the patient to hospital?",
-            options: ["Any EMT", "EMS physician or Advanced Paramedic", "Police", "Family member"],
-            correct: 1,
-            explanation: "An EMS physician or Advanced Paramedic must accompany the patient after sedation."
+            "q": "What is the midazolam dose for agitation?",
+            "options": [
+                "5 mg IM/IV, repeat once after 10 minutes",
+                "15 mg IV",
+                "0.5 mg",
+                "10 mg every 2 minutes"
+            ],
+            "correct": 0,
+            "explanation": "+3 or +2."
         },
         {
-            q: "What is the dose of midazolam for agitation in an adult?",
-            options: ["2.5 mg", "5 mg", "10 mg", "15 mg"],
-            correct: 1,
-            explanation: "Midazolam dose is 5 mg IM/IV, may repeat once after 10 minutes."
+            "q": "Which glucose finding changes management?",
+            "options": [
+                "Hypoglycemia: a reversible cause",
+                "Normal glucose",
+                "Glucose is never checked",
+                "Mild hyperglycemia only"
+            ],
+            "correct": 0,
+            "explanation": "Assess alternative causes such as hypoglycemia."
         },
         {
-            q: "A patient with suspected drug‑induced agitation may benefit from:",
-            options: ["Benzodiazepines", "Haloperidol", "Ketamine", "All of the above"],
-            correct: 3,
-            explanation: "Choice depends on the drug; stimulant agitation may respond to benzodiazepines, while psychosis may need haloperidol."
+            "q": "Is sedation needed for a compliant patient with no safety risk?",
+            "options": [
+                "No",
+                "Yes, always",
+                "Only haloperidol",
+                "Only ketamine"
+            ],
+            "correct": 0,
+            "explanation": "Avoid drugs unless safety requires them."
         },
         {
-            q: "What is the risk of using haloperidol in a patient with prolonged QT?",
-            options: ["Torsades de pointes", "Bradycardia", "Hypertension", "Seizures"],
-            correct: 0,
-            explanation: "Haloperidol can prolong QT and increase risk of torsades."
+            "q": "Which oxygen rule applies after sedation?",
+            "options": [
+                "At least nasal cannula for a score of −1 or less",
+                "No oxygen",
+                "Only if SpO₂ <80%",
+                "Only with a mask at +3"
+            ],
+            "correct": 0,
+            "explanation": "Consider oxygen for all sedated patients at −1 or less."
         },
         {
-            q: "How often should you reassess a sedated patient?",
-            options: ["Every 5 minutes", "Every 10 minutes", "Continuously", "Every 15 minutes"],
-            correct: 2,
-            explanation: "Sedated patients require continuous monitoring."
+            "q": "How is an agitated patient positioned on the stretcher?",
+            "options": [
+                "Sitting up",
+                "Prone",
+                "Flat",
+                "Head down"
+            ],
+            "correct": 0,
+            "explanation": "Prevents aspiration and reduces physical strength."
         },
         {
-            q: "A patient with SAT score +2 receives midazolam 5 mg IM. After 10 minutes, the score is still +2. What should you do?",
-            options: ["Repeat midazolam 5 mg", "Give haloperidol", "Wait another 10 minutes", "Increase to ketamine"],
-            correct: 0,
-            explanation: "Midazolam may be repeated once after 10 minutes."
+            "q": "What are the main sedative risks?",
+            "options": [
+                "Respiratory depression, apnea, hypotension, airway compromise",
+                "Hyperglycemia",
+                "Hypertension only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Greater with multiple doses or drugs."
         },
         {
-            q: "Which of the following is a sign of respiratory depression after sedation?",
-            options: ["RR <12", "SpO₂ <94%", "EtCO₂ >50 mmHg", "All of the above"],
-            correct: 3,
-            explanation: "Monitor for hypoventilation."
+            "q": "What is the IV diazepam dose here?",
+            "options": [
+                "5 mg",
+                "20 mg",
+                "0.5 mg",
+                "50 mg"
+            ],
+            "correct": 0,
+            "explanation": "+3 or +2."
         },
         {
-            q: "What is the preferred position for the stretcher during transport of an agitated patient?",
-            options: ["Flat supine", "Sitting position", "Trendelenburg", "Prone"],
-            correct: 1,
-            explanation: "Sitting position reduces aspiration risk and patient's physical strength."
+            "q": "When is haloperidol first line?",
+            "options": [
+                "Worsening mental illness, no immediate safety risk, one injection likely enough",
+                "Every +3 patient",
+                "Alcohol intoxication",
+                "Children"
+            ],
+            "correct": 0,
+            "explanation": "Otherwise use it as a second agent after benzodiazepines."
         },
         {
-            q: "A patient with abnormal behavior has a blood glucose of 45 mg/dL. What should you do first?",
-            options: ["Give dextrose", "Sedate", "Transport", "Call police"],
-            correct: 0,
-            explanation: "Hypoglycemia can cause abnormal behavior; treat first."
+            "q": "Who scores the Sedation Assessment Tool?",
+            "options": [
+                "The clinician, by observation",
+                "The patient, by questionnaire",
+                "Police",
+                "Family"
+            ],
+            "correct": 0,
+            "explanation": "It needs no cooperation."
         },
         {
-            q: "What is the dose of diazepam IV for agitation?",
-            options: ["2.5 mg", "5 mg", "10 mg", "15 mg"],
-            correct: 1,
-            explanation: "Diazepam IV dose is 5 mg."
+            "q": "Restrained patients: what is your role?",
+            "options": [
+                "Work with police so airway, breathing and circulation are not impaired",
+                "Leave restraint to police entirely",
+                "Tighten restraints",
+                "Place prone"
+            ],
+            "correct": 0,
+            "explanation": "Reposition as needed."
         },
         {
-            q: "A patient with SAT score +3 receives ketamine 300 mg IM. After 5 minutes, he remains agitated. What should you do?",
-            options: ["Repeat ketamine", "Wait 5 more minutes", "Give midazolam", "Consider alternative causes"],
-            correct: 1,
-            explanation: "Ketamine may take 5‑10 minutes; wait before repeating."
+            "q": "What must the KPI documentation include?",
+            "options": [
+                "Drug name, dose and effect",
+                "Only the time",
+                "Only the police number",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "For every sedation."
         },
         {
-            q: "Which medication should be avoided in a patient with suspected neuroleptic malignant syndrome?",
-            options: ["Haloperidol", "Midazolam", "Ketamine", "Diazepam"],
-            correct: 0,
-            explanation: "Haloperidol can worsen NMS; supportive care and benzodiazepines are preferred."
+            "q": "Which patient is excluded from this CPG?",
+            "options": [
+                "Abnormal behavior from TBI or hypoxia",
+                "A violent patient",
+                "A patient at risk to self",
+                "An uncooperative patient"
+            ],
+            "correct": 0,
+            "explanation": "Treat the medical cause."
         }
     ],
-    flashcards: [
-        { category: "Assessment", question: "What is the Sedation Assessment Tool (SAT) used for?", answer: "To guide patient management and communication; scores range from +3 (combative) to -3 (unresponsive)." },
-        { category: "SAT +3", question: "Describe a patient with SAT +3.", answer: "Combative, violent, out of control, continual loud outbursts." },
-        { category: "SAT +2", question: "Describe a patient with SAT +2.", answer: "Very anxious and agitated, loud outbursts." },
-        { category: "SAT +1", question: "Describe a patient with SAT +1.", answer: "Anxious/restless, normal/talkative." },
-        { category: "SAT 0", question: "Describe a patient with SAT 0.", answer: "Awake and calm/cooperative, speaks normally." },
-        { category: "SAT -1", question: "Describe a patient with SAT -1.", answer: "Asleep but rouses if name is called, slurring or prominent slowing." },
-        { category: "SAT -2", question: "Describe a patient with SAT -2.", answer: "Responds to physical stimulation, few recognizable words." },
-        { category: "SAT -3", question: "Describe a patient with SAT -3.", answer: "No response to stimulation." },
-        { category: "Verbal de‑escalation", question: "Name three verbal de‑escalation techniques.", answer: "One person speaking, short simple messages, limit noise, establish rapport." },
-        { category: "Police involvement", question: "When should police be requested?", answer: "If risk of harm or restraint anticipated." },
-        { category: "Ketamine IM dose", question: "What is the IM dose of ketamine for agitation?", answer: "3‑4 mg/kg (max 400 mg); may repeat once after 10 min." },
-        { category: "Ketamine IV dose", question: "What is the IV dose of ketamine for agitation?", answer: "1 mg/kg (50‑100 mg)." },
-        { category: "Midazolam dose", question: "What is the dose of midazolam for agitation?", answer: "5 mg IM/IV, may repeat once after 10 min." },
-        { category: "Diazepam dose", question: "What is the dose of diazepam IV for agitation?", answer: "5 mg." },
-        { category: "Haloperidol dose", question: "What is the dose of haloperidol IM for agitation?", answer: "10 mg." },
-        { category: "Haloperidol onset", question: "What is the onset time of IM haloperidol?", answer: "Up to 20 minutes." },
-        { category: "Sedation goal", question: "What is the goal of sedation in abnormal behavior?", answer: "SAT 0 to -1 to gain compliance and safe transfer." },
-        { category: "Post‑sedation monitoring", question: "What monitoring is mandatory after sedation?", answer: "Pulse oximetry, EtCO₂, 4‑lead ECG." },
-        { category: "Positioning", question: "How should a sedated patient be positioned?", answer: "Recovery position." },
-        { category: "Stretcher position", question: "What stretcher position helps reduce agitation?", answer: "Sitting position." },
-        { category: "Contraindication", question: "What position is contraindicated?", answer: "Prone." },
-        { category: "Adverse effects", question: "What are risks of sedatives?", answer: "Respiratory depression, apnea, hypotension." },
-        { category: "Alcohol withdrawal", question: "What medication is preferred for alcohol withdrawal agitation?", answer: "Benzodiazepines." },
-        { category: "Psychiatric agitation", question: "What medication may be added for suspected psychiatric agitation?", answer: "Haloperidol." },
-        { category: "Reversible causes", question: "Name three reversible causes of abnormal behavior.", answer: "Hypoglycemia, hypoxia, head injury, intoxication, withdrawal, infection." },
-        { category: "Documentation", question: "What must be documented when sedation is used?", answer: "Medication name, dose, route, response." },
-        { category: "KPI", question: "What is the KPI for abnormal behavior?", answer: "Document medication name, dose, and effect." },
-        { category: "Transport", question: "Must sedated patients be transported?", answer: "Yes, all patients who have received sedation must be transported to hospital." },
-        { category: "Staff requirement", question: "Who must accompany a sedated patient to hospital?", answer: "EMS physician or Advanced Paramedic." },
-        { category: "Hypoglycemia", question: "What glucose level requires treatment in abnormal behavior?", answer: "<70 mg/dL." }
+    "flashcards": [
+        {
+            "question": "Sedation Assessment Tool range",
+            "answer": "+3 (combative) to −3 (no response); observational."
+        },
+        {
+            "question": "SAT +3",
+            "answer": "Combative, violent, out of control; continual loud outbursts."
+        },
+        {
+            "question": "SAT +2",
+            "answer": "Very anxious and agitated; loud outbursts."
+        },
+        {
+            "question": "SAT +1",
+            "answer": "Anxious, restless; normal or talkative speech."
+        },
+        {
+            "question": "SAT 0",
+            "answer": "Awake, calm, cooperative; speaks normally."
+        },
+        {
+            "question": "SAT −1",
+            "answer": "Asleep, rouses to name; slurring or slowing."
+        },
+        {
+            "question": "SAT −2",
+            "answer": "Responds to physical stimulation; few recognizable words."
+        },
+        {
+            "question": "SAT −3",
+            "answer": "No response to stimulation; no speech."
+        },
+        {
+            "question": "Sedation target",
+            "answer": "0 to −1 for most patients."
+        },
+        {
+            "question": "Verbal de-escalation",
+            "answer": "Time; one speaker; introduce and reassure; short repeated sentences; reduce noise; build rapport."
+        },
+        {
+            "question": "Police",
+            "answer": "For risk of harm or expected restraint; restraint is by police."
+        },
+        {
+            "question": "Ketamine IM (+3)",
+            "answer": "3–4 mg/kg: <60 kg 200 mg; 60–90 kg 300 mg; 90 kg+ 400 mg; repeat once after 10 minutes."
+        },
+        {
+            "question": "Ketamine IV (+3)",
+            "answer": "1 mg/kg (50–100 mg)."
+        },
+        {
+            "question": "Midazolam",
+            "answer": "5 mg IM/IV; repeat once after 10 minutes (+3 or +2)."
+        },
+        {
+            "question": "Diazepam",
+            "answer": "5 mg IV (+3 or +2)."
+        },
+        {
+            "question": "Haloperidol",
+            "answer": "10 mg IM, only for suspected worsening mental illness (+2 or +1); up to 20 minutes to act."
+        },
+        {
+            "question": "Preferred drug for extreme violence",
+            "answer": "Ketamine."
+        },
+        {
+            "question": "First-line at +2",
+            "answer": "Benzodiazepines."
+        },
+        {
+            "question": "IM benzodiazepine of choice",
+            "answer": "Midazolam (faster onset)."
+        },
+        {
+            "question": "Level for sedation on the flowchart",
+            "answer": "EP."
+        },
+        {
+            "question": "Mandatory monitoring",
+            "answer": "Continuous SpO₂, nasal-cannula EtCO₂, 4-lead ECG."
+        },
+        {
+            "question": "Oxygen after sedation",
+            "answer": "At least nasal cannula when the score is −1 or less."
+        },
+        {
+            "question": "Position after sedation",
+            "answer": "Recovery position if mental status is altered; never prone."
+        },
+        {
+            "question": "Stretcher position when agitated",
+            "answer": "Sitting up."
+        },
+        {
+            "question": "Transport after sedation",
+            "answer": "Always, with an EMS physician or Advanced Paramedic."
+        },
+        {
+            "question": "Sedative risks",
+            "answer": "Respiratory depression, apnea, hypotension, airway compromise; worse with repeat or combined drugs."
+        },
+        {
+            "question": "Reversible causes",
+            "answer": "Assess alternatives such as hypoglycemia once compliant; full vital signs."
+        },
+        {
+            "question": "IV access",
+            "answer": "As soon as possible after the patient becomes compliant."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Behavior due to a medical condition such as TBI or hypoxia."
+        },
+        {
+            "question": "KPI",
+            "answer": "Drug name, dose and effect documented for every sedation."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_2_1",
-            scenario: "You are called to a 30‑year‑old male who is extremely agitated, shouting, and throwing objects. He is a danger to himself and others. Police are on scene. SAT score is +3. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Attempt verbal de‑escalation", f: "Safety first; may not be possible." },
-                { t: "Administer ketamine 300 mg IM", f: "Correct. For SAT +3, rapid sedation with ketamine is indicated." },
-                { t: "Restrain physically with police help", f: "May be necessary but sedation is preferred." },
-                { t: "Wait for patient to tire", f: "Unsafe." }
+            "id": "crit_6_2_1",
+            "scenario": "A 30-year-old man (about 75 kg) is shouting and throwing objects; de-escalation has failed and police have restrained him. Score +3.",
+            "question": "Which sedation is listed?",
+            "options": [
+                {
+                    "t": "Ketamine 300 mg IM (60–90 kg), repeat once after 10 minutes if needed",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Haloperidol 10 mg IM alone",
+                    "f": "Haloperidol is not a +3 option."
+                },
+                {
+                    "t": "Ketamine 400 mg IM",
+                    "f": "400 mg is for 90 kg and above."
+                },
+                {
+                    "t": "No sedation",
+                    "f": "Safety requires it here."
+                }
             ],
-            correct: 1,
-            explanation: "For a violent patient (SAT +3), IM ketamine is the preferred agent. Ensure scene safety and administer.",
-            kpi: "Ketamine administered and documented."
+            "correct": 0,
+            "explanation": "Ketamine is preferred for exceptional violence; then monitor SpO₂, EtCO₂ and ECG continuously.",
+            "kpi": "Drug name, dose and effect documented."
         },
         {
-            id: "crit_6_2_2",
-            scenario: "A 45‑year‑old male is agitated and confused. Family states he has a history of schizophrenia and stopped his medication. SAT score is +2. He is not violent but very anxious. What medication should you consider?",
-            question: "What is the appropriate pharmacological intervention?",
-            options: [
-                { t: "Midazolam 5 mg IM", f: "Correct. Midazolam can be used, and haloperidol may be added if psychiatric cause." },
-                { t: "Haloperidol 10 mg IM alone", f: "May be considered, but benzodiazepine first often." },
-                { t: "Ketamine", f: "Too aggressive for SAT +2." },
-                { t: "No medication", f: "Patient requires intervention." }
+            "id": "crit_6_2_2",
+            "scenario": "A 45-year-old man with schizophrenia stopped his medication. He is very anxious and agitated (+2) but not violent, and you expect one injection to be enough.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Haloperidol 10 mg IM as first line",
+                    "f": "Correct. Worsening mental illness, no immediate safety risk, single injection."
+                },
+                {
+                    "t": "Ketamine 400 mg IM",
+                    "f": "Not a +2 option."
+                },
+                {
+                    "t": "Prone restraint",
+                    "f": "Never prone."
+                },
+                {
+                    "t": "Haloperidol IV",
+                    "f": "IM only."
+                }
             ],
-            correct: 0,
-            explanation: "Midazolam 5 mg IM is appropriate for SAT +2. Haloperidol can be added if psychosis suspected.",
-            kpi: "Medication administered and response monitored."
+            "correct": 0,
+            "explanation": "Haloperidol may take up to 20 minutes. Benzodiazepines remain first line at +2 otherwise.",
+            "kpi": "Drug name, dose and effect documented."
         },
         {
-            id: "crit_6_2_3",
-            scenario: "You administer midazolam 5 mg IM to an agitated patient. After 10 minutes, he is still agitated (SAT +2). What should you do?",
-            question: "What is your next action?",
-            options: [
-                { t: "Repeat midazolam 5 mg", f: "Correct. Midazolam may be repeated once." },
-                { t: "Switch to ketamine", f: "Can consider if no response." },
-                { t: "Give haloperidol", f: "May be added." },
-                { t: "Wait longer", f: "Action needed." }
+            "id": "crit_6_2_3",
+            "scenario": "You gave midazolam 5 mg IM. Ten minutes later the score is still +2.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Repeat midazolam 5 mg once",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Repeat every 2 minutes until calm",
+                    "f": "Once only, after 10 minutes."
+                },
+                {
+                    "t": "Add ketamine IV 3–4 mg/kg",
+                    "f": "That is the IM ketamine dose."
+                },
+                {
+                    "t": "Stop monitoring",
+                    "f": "Monitoring is mandatory."
+                }
             ],
-            correct: 0,
-            explanation: "Midazolam can be repeated once after 10 minutes. If still ineffective, consider haloperidol or ketamine.",
-            kpi: "Repeat dose documented."
+            "correct": 0,
+            "explanation": "Haloperidol may be added as a second agent if worsening mental illness is suspected.",
+            "kpi": "Drug name, dose and effect documented."
         },
         {
-            id: "crit_6_2_4",
-            scenario: "A patient with SAT +3 receives ketamine 300 mg IM. After 5 minutes, he is calmer (SAT 0). You start monitoring. What is essential now?",
-            question: "What is the priority post‑sedation?",
-            options: [
-                { t: "Transport immediately", f: "Yes, but monitoring en route." },
-                { t: "Continuous monitoring of SpO₂, EtCO₂, ECG", f: "Correct. Mandatory after sedation." },
-                { t: "Obtain IV access", f: "Should be done as soon as possible." },
-                { t: "Position in recovery position", f: "Important, but monitoring is ongoing." }
+            "id": "crit_6_2_4",
+            "scenario": "After ketamine the patient is calm (score 0).",
+            "question": "What is essential now?",
+            "options": [
+                {
+                    "t": "Continuous SpO₂, EtCO₂ and ECG; full vital signs; look for a cause; IV access; transport with EP or AP",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Leave him at home with police",
+                    "f": "All sedated patients go to hospital."
+                },
+                {
+                    "t": "Remove monitoring for comfort",
+                    "f": "Monitoring is mandatory."
+                },
+                {
+                    "t": "Prone position for transport",
+                    "f": "Never prone."
+                }
             ],
-            correct: 1,
-            explanation: "Continuous monitoring is mandatory. Also obtain IV access, position safely, and transport with Advanced Paramedic.",
-            kpi: "Monitoring documented."
+            "correct": 0,
+            "explanation": "The sedating clinician stays at the patient's side throughout.",
+            "kpi": "Drug name, dose and effect documented."
         },
         {
-            id: "crit_6_2_5",
-            scenario: "You sedate a patient with midazolam. En route, his respiratory rate drops to 8, SpO₂ 88%. What is your immediate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Give flumazenil", f: "Not routinely recommended." },
-                { t: "Stimulate patient", f: "May help, but airway first." },
-                { t: "Open airway, provide BVM ventilation", f: "Correct. Support ventilation." },
-                { t: "Increase oxygen flow", f: "Not enough." }
+            "id": "crit_6_2_5",
+            "scenario": "En route after midazolam the patient's respiratory rate falls to 8 and SpO₂ to 88%; the score is −2.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Open the airway, give oxygen and support ventilation (BVM)",
+                    "f": "Correct. Respiratory depression is a known sedative risk."
+                },
+                {
+                    "t": "More sedation",
+                    "f": "He is over-sedated."
+                },
+                {
+                    "t": "Sit him upright and ignore it",
+                    "f": "Manage the airway."
+                },
+                {
+                    "t": "Remove the oximeter",
+                    "f": "Monitoring must continue."
+                }
             ],
-            correct: 2,
-            explanation: "Airway and ventilation support is priority. Consider reversal agent only if known benzodiazepine overdose.",
-            kpi: "Airway management documented."
+            "correct": 0,
+            "explanation": "All sedatives risk respiratory depression and apnea, especially with repeated doses; be ready to manage the airway.",
+            "kpi": "Drug name, dose and effect documented."
         }
     ]
 };

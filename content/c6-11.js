@@ -1,391 +1,758 @@
-/* ========== Chapter 6.11 � Non-Traumatic Shock ========== */
+/* ========== CPG 6.11 – Non-Traumatic Shock ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-11",
-    title: "Non-Traumatic Shock",
-    shortTitle: "6.11 Non-Traumatic Shock",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Non-Traumatic Shock</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identification and management of life-threatening non-traumatic shock (e.g., hypovolemic, cardiogenic, distributive, or obstructive).</li>
-                <li>Improve the patient's hemodynamic status through administration of fluids, vasopressors, and supportive care.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms of shock which is not related to trauma, including:
-                    <ul>
-                        <li>Hypotension (SBP &lt;90 mmHg in adults, or age-specific for pediatrics).</li>
-                        <li>Tachycardia (HR &gt;100 in adults, or age-specific for pediatrics).</li>
-                        <li>Poor perfusion (e.g., cool, clammy skin, delayed capillary refill &gt;2 seconds).</li>
-                        <li>Altered mental status, weakness, or respiratory distress.</li>
-                    </ul>
-                </li>
-                <li>Suspected underlying causes such as sepsis, anaphylaxis, cardiogenic shock, or internal bleeding (e.g., gastrointestinal or ectopic pregnancy).</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Shock clearly attributable to trauma.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Shock Type Identification:</strong>
-                    <ul>
-                        <li>Hypovolemic: History of fluid loss (vomiting, diarrhea, occult bleeding).</li>
-                        <li>Cardiogenic: Chest pain, dyspnea, history of heart disease.</li>
-                        <li>Distributive: Signs of sepsis (fever, infection) or anaphylaxis (urticaria, wheezing).</li>
-                        <li>Obstructive: Symptoms suggestive of pulmonary embolism or pericardial tamponade (e.g., jugular vein distension, muffled heart sounds).</li>
-                    </ul>
-                </li>
-                <li><strong>Perfusion Status:</strong> Skin temperature, color, moisture; capillary refill; mental status; urine output if known.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for any patient with shock.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG. Titrate oxygen to maintain SpO2 =94% if hypoxia or respiratory distress.</li>
-                <li><strong>Consider ALS back-up:</strong> For all shock patients, especially those requiring vasopressors.</li>
-                <li><strong>Establish IV Access:</strong> Indicated for hypotension, suspected shock, or anticipated medication/fluid administration. Consider IO access if IV access cannot be obtained.</li>
-                <li><strong>Condition-Specific Treatment:</strong> For septic and anaphylactic shock, refer to appropriate CPG for additional treatment considerations.</li>
-                <li><strong>Fluid Resuscitation:</strong>
-                    <ul>
-                        <li>Fluid administration targets:
-                            <ul>
-                                <li>Adults: MAP (mean arterial pressure) =65 mmHg.</li>
-                                <li>Pediatrics: SBP =5th percentile for age, strong distal pulses, warm skin, capillary refill &lt;2 seconds, improving mental status.</li>
-                            </ul>
-                        </li>
-                        <li>Administer Normal Saline or Ringer's Lactate:
-                            <ul>
-                                <li>Adults: 250-500 mL bolus IV, repeat as needed (up to 2000 mL).</li>
-                                <li>Pediatrics: 20 mL/kg bolus IV, repeat as needed (max 40 mL/kg).</li>
-                            </ul>
-                        </li>
-                        <li>Use caution in obstructive/cardiogenic shock; administer smaller boluses.</li>
-                    </ul>
-                </li>
-                <li><strong>Consider Vasopressors (Dopamine):</strong>
-                    <ul>
-                        <li>Indications: Fluid-refractory hypotension after fluid resuscitation (once fluid maximums have been reached); hypotension with pulmonary edema (e.g., obstructive/cardiogenic shock).</li>
-                        <li>Dopamine: Adults and pediatrics: 5-20 mcg/kg/min IV infusion.</li>
-                        <li>Use syringe driver wherever possible.</li>
-                    </ul>
-                </li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, mental status, and perfusion every 5-15 minutes.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li><strong>Elderly Patients:</strong> Shock may present atypically (e.g., confusion, minimal tachycardia due to beta-blocker use). Use caution with fluid boluses in patients with heart failure; consult Tele-EMS for guidance.</li>
-                <li><strong>Fluid Resuscitation:</strong> Avoid over-resuscitation in cardiogenic or obstructive shock; monitor for signs of pulmonary edema (e.g., crackles, dyspnea).</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li><strong>Common Causes:</strong>
-                    <ul>
-                        <li>Hypovolemic: Dehydration, gastrointestinal bleeding, ruptured ectopic pregnancy.</li>
-                        <li>Cardiogenic: Myocardial infarction, heart failure, arrhythmias.</li>
-                        <li>Distributive: Sepsis, anaphylaxis, neurogenic shock (e.g., spinal cord injury).</li>
-                        <li>Obstructive: Pulmonary embolism, pericardial tamponade, tension pneumothorax.</li>
-                    </ul>
-                </li>
-                <li><strong>Possible Alternative Causes:</strong> Traumatic shock, adrenal insufficiency, hypoglycemia, drug overdose (e.g., antihypertensives).</li>
-                <li>If the patient is in septic or anaphylactic shock, follow the respective CPG for specific management.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Suspected type of shock, underlying cause, vital signs, mental status, skin perfusion.</li>
-                <li>IV access, fluid type and volume administered, response.</li>
-                <li>Vasopressor used (dopamine) � dose, rate, response.</li>
-                <li>Hospital notification and transport details.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer IV fluid to hypotensive patients.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-11",
+    "title": "Non-Traumatic Shock",
+    "shortTitle": "6.11 Non-Traumatic Shock",
+    "guide": {
+        "cpg": "6.11",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Non-Traumatic Shock",
+        "lead": "Name the type of shock, because the fluid plan depends on it. Give small, fast boluses (250–500 mL adult) to a MAP of 65 in hypovolemic and distributive shock; in cardiogenic or obstructive shock listen to the lungs first. Fluid-refractory hypotension or hypotension with pulmonary edema: dopamine (AP).",
+        "source": {
+            "label": "CPG 6.11",
+            "pages": "192–195",
+            "pdf": "../pdf_sections/6_11_Non-Traumatic_Shock.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Shock not related to trauma: SBP &lt;90 mmHg or HR &gt;100 (adults; age-specific in children), poor perfusion (capillary refill &gt;2 seconds), altered mental status, weakness or respiratory distress.",
+                    "Suspected sepsis, anaphylaxis, cardiogenic shock or internal bleeding (GI, ectopic pregnancy)."
+                ],
+                "exclude": [
+                    "Shock clearly due to trauma."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Types of shock",
+                "icon": "search",
+                "columns": [
+                    "Type",
+                    "Clues",
+                    "Common causes"
+                ],
+                "rows": [
+                    [
+                        "Hypovolemic",
+                        "Fluid loss: vomiting, diarrhea, occult bleeding",
+                        "Dehydration, GI bleeding, ruptured ectopic pregnancy"
+                    ],
+                    [
+                        "Distributive",
+                        "Fever, infection; urticaria, wheeze",
+                        "Sepsis, anaphylaxis, neurogenic shock"
+                    ],
+                    [
+                        "Cardiogenic",
+                        "Chest pain, dyspnea, heart disease",
+                        "MI, heart failure, arrhythmias"
+                    ],
+                    [
+                        "Obstructive",
+                        "Distended neck veins, muffled heart sounds",
+                        "Pulmonary embolism, tamponade, tension pneumothorax"
+                    ]
+                ],
+                "stack": true,
+                "notes": [
+                    "Also consider adrenal insufficiency, hypoglycemia and drug overdose (e.g. antihypertensives)."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "IV access",
+                        "level": "EMT",
+                        "text": "Two large-bore IVs for severe shock; IO if IV fails."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "level": "EMR",
+                        "text": "SpO<sub>2</sub> ≥94% if hypoxic or distressed (flowchart: &gt;94%)."
+                    },
+                    {
+                        "title": "Septic or anaphylactic shock",
+                        "text": "Also follow the Fever and Sepsis or Anaphylaxis CPG."
+                    },
+                    {
+                        "title": "Fluid bolus",
+                        "level": "EMT",
+                        "text": "NS or RL over 5–10 minutes; repeat while SBP &lt;90 mmHg, MAP &lt;65 mmHg or the radial pulse is absent.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "250–500 mL IV",
+                                "note": "Up to 2000 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg IV",
+                                "note": "Flowchart: 10–20 mL/kg; maximum 40 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Cardiogenic or obstructive",
+                        "text": "Assess lung sounds first; give fluid only if clear, in smaller boluses. Watch for pulmonary edema (crackles, dyspnea)."
+                    },
+                    {
+                        "title": "Dopamine",
+                        "level": "AP",
+                        "text": "Fluid-refractory hypotension once fluid maximums are reached, or hypotension with pulmonary edema.",
+                        "doses": [
+                            {
+                                "drug": "Dopamine",
+                                "dose": "5–20 mcg/kg/min IV infusion",
+                                "note": "Adults and children; flowchart: 2–20",
+                                "level": "AP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Targets and red flags",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Fluid targets",
+                        "items": [
+                            "Adults: MAP 65 mmHg.",
+                            "Children: SBP at least the fifth percentile for age, strong distal pulses, warm skin, capillary refill &lt;2 seconds, improving mental status."
+                        ]
+                    },
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Hypotension persisting despite fluid.",
+                            "Severe altered mental status.",
+                            "SpO<sub>2</sub> &lt;90% or respiratory failure.",
+                            "Cardiogenic or obstructive shock."
+                        ]
+                    },
+                    {
+                        "title": "Elderly",
+                        "items": [
+                            "Atypical: confusion, little tachycardia on beta-blockers.",
+                            "Heart failure: caution with fluid; consult Tele-EMS."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Rhythms behind cardiogenic and obstructive shock",
+                        "items": [
+                            {
+                                "ecg": "chb",
+                                "label": "Complete heart block",
+                                "sub": "Arrhythmia: cardiogenic cause"
+                            },
+                            {
+                                "ecg": "alternans",
+                                "label": "Electrical alternans",
+                                "sub": "Tamponade: obstructive cause"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "IV fluid given to hypotensive patients."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.7 Fever and Sepsis",
+                        "href": "c6-7.html"
+                    },
+                    {
+                        "label": "6.4 Anaphylaxis",
+                        "href": "c6-4.html"
+                    },
+                    {
+                        "label": "6.3 Adrenal Insufficiency",
+                        "href": "c6-3.html"
+                    },
+                    {
+                        "label": "3.1 Chest Pain / ACS",
+                        "href": "c3-1.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "Which of the following is a sign of non-traumatic shock?",
-            options: ["Hypotension", "Tachycardia", "Altered mental status", "All of the above"],
-            correct: 3,
-            explanation: "All are signs of shock due to inadequate tissue perfusion."
+            "q": "Which signs define shock here?",
+            "options": [
+                "SBP <90, HR >100, poor perfusion, altered mental status",
+                "Fever alone",
+                "Hypertension",
+                "Bradypnea"
+            ],
+            "correct": 0,
+            "explanation": "Age-specific values in children."
         },
         {
-            q: "What is the initial fluid bolus for an adult with non-traumatic shock?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "Adults should receive 250-500 mL crystalloid bolus (or 500-1000 mL per the CPG), repeated as needed."
+            "q": "What is the adult bolus?",
+            "options": [
+                "250–500 mL over 5–10 minutes",
+                "1000 mL over an hour",
+                "50 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Repeat up to 2000 mL."
         },
         {
-            q: "A patient with cardiogenic shock and pulmonary edema should receive:",
-            options: ["Aggressive fluid boluses", "Small fluid boluses with caution and consider vasopressors", "No fluids", "Colloids only"],
-            correct: 1,
-            explanation: "In cardiogenic shock with pulmonary edema, fluids are given cautiously to avoid worsening overload; vasopressors may be needed."
+            "q": "Cardiogenic shock with crackles. Fluid?",
+            "options": [
+                "No fluid; consider dopamine (AP)",
+                "Large boluses",
+                "Colloids",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Fluid only if the lung sounds are clear; dopamine for hypotension with pulmonary edema."
         },
         {
-            q: "What is the pediatric fluid bolus for shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "The initial bolus is 20 mL/kg crystalloid, repeated as needed up to 40 mL/kg total."
+            "q": "What is the pediatric bolus in the text?",
+            "options": [
+                "20 mL/kg",
+                "5 mL/kg",
+                "60 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 40 mL/kg."
         },
         {
-            q: "Which vasopressor is used in the DCAS formulary for shock?",
-            options: ["Norepinephrine", "Dopamine", "Adrenaline", "Phenylephrine"],
-            correct: 1,
-            explanation: "Dopamine is the vasopressor listed in the DCAS formulary for shock management."
+            "q": "Which vasopressor does this CPG use?",
+            "options": [
+                "Dopamine",
+                "Adrenaline push",
+                "Atropine",
+                "Amiodarone"
+            ],
+            "correct": 0,
+            "explanation": "AP level."
         },
         {
-            q: "What is the dose of dopamine infusion for an adult with shock?",
-            options: ["2-5 mcg/kg/min", "5-20 mcg/kg/min", "20-50 mcg/kg/min", "0.5-2 mcg/kg/min"],
-            correct: 1,
-            explanation: "Dopamine is typically infused at 5-20 mcg/kg/min for its inotropic and vasopressor effects."
+            "q": "What dopamine dose does the text give?",
+            "options": [
+                "5–20 mcg/kg/min",
+                "0.5–1 mcg/kg/min",
+                "50 mcg/kg/min",
+                "1 mg/min"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart prints 2–20."
         },
         {
-            q: "A patient with septic shock has received 2 L normal saline but remains hypotensive. What is the next step?",
-            options: ["Give another fluid bolus", "Start dopamine infusion", "Administer adrenaline push", "Transport immediately"],
-            correct: 1,
-            explanation: "Fluid-refractory septic shock requires vasopressor support; dopamine is indicated."
+            "q": "When is dopamine indicated?",
+            "options": [
+                "Fluid-refractory hypotension at the fluid maximum, or hypotension with pulmonary edema",
+                "First line in every shock",
+                "Never",
+                "Only in children"
+            ],
+            "correct": 0,
+            "explanation": "As listed."
         },
         {
-            q: "Which type of shock is caused by an allergic reaction?",
-            options: ["Hypovolemic", "Cardiogenic", "Distributive", "Obstructive"],
-            correct: 2,
-            explanation: "Anaphylactic shock is a distributive shock due to widespread vasodilation and increased capillary permeability."
+            "q": "Anaphylactic shock is which type?",
+            "options": [
+                "Distributive",
+                "Hypovolemic",
+                "Cardiogenic",
+                "Obstructive"
+            ],
+            "correct": 0,
+            "explanation": "With sepsis and neurogenic shock."
         },
         {
-            q: "What is the target MAP for an adult in shock?",
-            options: [">50 mmHg", ">65 mmHg", ">80 mmHg", ">90 mmHg"],
-            correct: 1,
-            explanation: "Target MAP is =65 mmHg to maintain organ perfusion."
+            "q": "What MAP is the adult fluid target?",
+            "options": [
+                "65 mmHg",
+                "40 mmHg",
+                "100 mmHg",
+                "120 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Children: SBP at least the fifth percentile for age, plus perfusion signs."
         },
         {
-            q: "A patient with suspected shock has a history of heart failure. How should fluid resuscitation be approached?",
-            options: ["Give full boluses as usual", "Give smaller boluses and monitor for signs of overload", "Avoid fluids entirely", "Use only colloids"],
-            correct: 1,
-            explanation: "Patients with heart failure are at risk for fluid overload; smaller boluses and close monitoring are prudent."
+            "q": "Shock in a patient with heart failure. Fluid?",
+            "options": [
+                "With caution; consult Tele-EMS",
+                "Full boluses",
+                "Never",
+                "Only oral"
+            ],
+            "correct": 0,
+            "explanation": "Elderly and heart failure considerations."
         },
         {
-            q: "Which of the following is a cause of obstructive shock?",
-            options: ["Myocardial infarction", "Pulmonary embolism", "Sepsis", "Dehydration"],
-            correct: 1,
-            explanation: "Pulmonary embolism can cause obstructive shock by blocking blood flow out of the right ventricle."
+            "q": "Which is a cause of obstructive shock?",
+            "options": [
+                "Pulmonary embolism",
+                "Myocardial infarction",
+                "Sepsis",
+                "Dehydration"
+            ],
+            "correct": 0,
+            "explanation": "Also tamponade and tension pneumothorax."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with shock?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "What is the adult fluid maximum?",
+            "options": [
+                "2000 mL",
+                "500 mL",
+                "1000 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Then consider dopamine."
         },
         {
-            q: "A patient with neurogenic shock from spinal cord injury presents with:",
-            options: ["Hypotension and bradycardia", "Hypertension and tachycardia", "Hypotension and tachycardia", "Hypertension and bradycardia"],
-            correct: 0,
-            explanation: "Neurogenic shock causes hypotension and bradycardia due to loss of sympathetic tone."
+            "q": "What is the pediatric fluid maximum?",
+            "options": [
+                "40 mL/kg",
+                "20 mL/kg",
+                "60 mL/kg",
+                "100 mL/kg"
+            ],
+            "correct": 0,
+            "explanation": "Per this CPG."
         },
         {
-            q: "What is the target SpO2 for a patient in shock?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to ensure adequate oxygenation."
+            "q": "What oxygen target applies?",
+            "options": [
+                "SpO₂ ≥94% if hypoxic or distressed",
+                "100% always",
+                "88%",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "EMR level."
         },
         {
-            q: "A patient with shock has a blood glucose of 45 mg/dL. What should you do?",
-            options: ["Give 50% dextrose", "Give glucagon", "Treat hypoglycemia then reassess", "All of the above"],
-            correct: 3,
-            explanation: "Hypoglycemia can cause or contribute to shock; treat immediately."
+            "q": "Shock with RBS 45 mg/dL. What do you consider?",
+            "options": [
+                "Hypoglycemia as an alternative cause: Hypoglycemia CPG",
+                "Ignore it",
+                "Dopamine first",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Listed alternative cause."
         },
         {
-            q: "Which of the following is a sign of poor perfusion?",
-            options: ["Capillary refill <2 seconds", "Warm, dry skin", "Delayed capillary refill >2 seconds", "Normal mental status"],
-            correct: 2,
-            explanation: "Delayed capillary refill (>2 seconds) indicates poor peripheral perfusion."
+            "q": "Which is a sign of poor perfusion?",
+            "options": [
+                "Capillary refill >2 seconds",
+                "Warm, dry skin",
+                "Normal mental status",
+                "Strong radial pulse"
+            ],
+            "correct": 0,
+            "explanation": "Also cool, pale, mottled skin."
         },
         {
-            q: "What is the preferred fluid for initial resuscitation in shock?",
-            options: ["Dextrose 5%", "Normal saline", "Ringer's lactate", "Both B and C"],
-            correct: 3,
-            explanation: "Isotonic crystalloids (normal saline or Ringer's lactate) are preferred for initial resuscitation."
+            "q": "Which fluids are used?",
+            "options": [
+                "Normal saline or Ringer's lactate",
+                "Dextrose 5%",
+                "Colloids",
+                "Oral water"
+            ],
+            "correct": 0,
+            "explanation": "Isotonic crystalloids."
         },
         {
-            q: "A patient with suspected cardiogenic shock has crackles on auscultation. What is the priority?",
-            options: ["Give a 500 mL fluid bolus", "Give furosemide", "Consider dopamine and cautious fluids", "Transport without intervention"],
-            correct: 2,
-            explanation: "In cardiogenic shock with pulmonary edema, fluids are given cautiously and vasopressors may be needed."
+            "q": "Suspected cardiogenic shock with clear lungs. Fluid?",
+            "options": [
+                "A smaller bolus with close reassessment",
+                "No fluid ever",
+                "2000 mL at once",
+                "Dopamine only"
+            ],
+            "correct": 0,
+            "explanation": "Lung sounds clear: fluid is allowed, cautiously."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient in shock?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 1,
-            explanation: "The maximum total crystalloid in the prehospital setting is 40 mL/kg (two 20 mL/kg boluses)."
+            "q": "How fast is each bolus given?",
+            "options": [
+                "Over 5–10 minutes",
+                "Over 2 hours",
+                "Over 30 seconds",
+                "No limit"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "A patient with shock has a heart rate of 40 and BP 80/50. What type of shock is most likely?",
-            options: ["Septic shock", "Cardiogenic shock with bradycardia", "Anaphylactic shock", "Hypovolemic shock"],
-            correct: 1,
-            explanation: "Bradycardia with hypotension suggests a primary cardiac issue or beta-blocker toxicity, not distributive shock."
+            "q": "HR 40 and BP 80/50 with no trauma. Which type?",
+            "options": [
+                "Cardiogenic (arrhythmia)",
+                "Anaphylactic",
+                "Hypovolemic",
+                "Septic"
+            ],
+            "correct": 0,
+            "explanation": "Arrhythmias cause cardiogenic shock."
         },
         {
-            q: "Which of the following is a red flag in a patient with shock?",
-            options: ["Altered mental status", "Respiratory distress", "Persistent hypotension despite fluids", "All of the above"],
-            correct: 3,
-            explanation: "All indicate severe shock requiring immediate intervention."
+            "q": "Which is a red flag?",
+            "options": [
+                "Hypotension despite fluid",
+                "HR 95",
+                "SBP 110",
+                "Warm skin"
+            ],
+            "correct": 0,
+            "explanation": "Also severe AMS, hypoxia, cardiogenic or obstructive shock."
         },
         {
-            q: "What is the role of dopamine in shock?",
-            options: ["Vasodilation", "Inotropic and vasopressor effects", "Diuretic effect", "Antiemetic effect"],
-            correct: 1,
-            explanation: "Dopamine has dose-dependent inotropic (increased contractility) and vasopressor (vasoconstriction) effects."
+            "q": "When is the fluid bolus repeated?",
+            "options": [
+                "SBP <90, MAP <65 or no radial pulse",
+                "Always",
+                "Never",
+                "Only if febrile"
+            ],
+            "correct": 0,
+            "explanation": "Up to the maximum."
         },
         {
-            q: "A patient with anaphylactic shock has received epinephrine. What is the next step?",
-            options: ["Give dopamine", "Give fluid bolus", "Give diphenhydramine", "Transport"],
-            correct: 1,
-            explanation: "Fluid resuscitation is critical in anaphylactic shock to restore intravascular volume."
+            "q": "Septic shock refractory to fluids. Which CPG adds vasopressor guidance?",
+            "options": [
+                "Fever and Sepsis",
+                "Epistaxis",
+                "Stroke",
+                "Pain"
+            ],
+            "correct": 0,
+            "explanation": "Refer to the condition-specific CPG."
         },
         {
-            q: "Which of the following is a cause of hypovolemic shock?",
-            options: ["Gastrointestinal bleeding", "Diabetic ketoacidosis", "Severe vomiting", "All of the above"],
-            correct: 3,
-            explanation: "All can lead to significant fluid loss and hypovolemia."
+            "q": "Which is a cause of hypovolemic shock?",
+            "options": [
+                "GI bleeding",
+                "Pulmonary embolism",
+                "Tamponade",
+                "Anaphylaxis"
+            ],
+            "correct": 0,
+            "explanation": "Also dehydration and ruptured ectopic pregnancy."
         },
         {
-            q: "What is the target SBP for a pediatric patient in shock?",
-            options: [">70 mmHg", "=5th percentile for age", ">90 mmHg", ">100 mmHg"],
-            correct: 1,
-            explanation: "Target is age-appropriate systolic blood pressure (=5th percentile)."
+            "q": "What is the pediatric target?",
+            "options": [
+                "SBP at least the fifth percentile for age with good perfusion",
+                "SBP 140",
+                "MAP 100",
+                "HR 200"
+            ],
+            "correct": 0,
+            "explanation": "Strong pulses, warm skin, CRT <2 seconds, better mental status."
         },
         {
-            q: "A patient with shock has a history of renal failure. What is a concern with fluid resuscitation?",
-            options: ["Fluid overload", "Electrolyte imbalance", "Pulmonary edema", "All of the above"],
-            correct: 3,
-            explanation: "Renal impairment increases risk of fluid overload and electrolyte disturbances; monitor closely."
+            "q": "How might shock look in the elderly?",
+            "options": [
+                "Confusion with little tachycardia (beta-blockers)",
+                "Always obvious",
+                "Always febrile",
+                "Hypertensive"
+            ],
+            "correct": 0,
+            "explanation": "Atypical presentation."
         },
         {
-            q: "What is the dose of dopamine infusion for a child with shock?",
-            options: ["2-5 mcg/kg/min", "5-20 mcg/kg/min", "0.5-2 mcg/kg/min", "20-40 mcg/kg/min"],
-            correct: 1,
-            explanation: "Pediatric dopamine dose is the same as adults: 5-20 mcg/kg/min."
+            "q": "Which IV access for severe shock?",
+            "options": [
+                "Two large-bore IVs",
+                "One small cannula",
+                "None",
+                "Oral"
+            ],
+            "correct": 0,
+            "explanation": "EMT level."
         },
         {
-            q: "A patient with suspected shock has jugular vein distension and muffled heart sounds. What type of shock is suspected?",
-            options: ["Hypovolemic", "Cardiogenic", "Obstructive (cardiac tamponade)", "Distributive"],
-            correct: 2,
-            explanation: "Beck's triad (hypotension, JVD, muffled heart sounds) is classic for cardiac tamponade, an obstructive shock."
+            "q": "Distended neck veins and muffled heart sounds suggest…",
+            "options": [
+                "Obstructive shock (tamponade)",
+                "Hypovolemic shock",
+                "Anaphylaxis",
+                "Sepsis"
+            ],
+            "correct": 0,
+            "explanation": "Assess lung sounds before fluid."
         },
         {
-            q: "What is the key performance indicator for non-traumatic shock?",
-            options: ["Administer vasopressors", "Administer IV fluid to hypotensive patients", "Perform 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "Administering IV fluid to hypotensive patients is a key KPI."
+            "q": "What is the KPI?",
+            "options": [
+                "IV fluid for hypotensive patients",
+                "Dopamine for all",
+                "12-lead in all",
+                "Transport within 10 minutes"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         },
         {
-            q: "A patient with shock after a myocardial infarction is found to have a BP of 80/50, HR 110, and crackles. What is the appropriate management?",
-            options: ["Aggressive fluid bolus", "Cautious fluid and consider inotropes", "Furosemide", "Nitroglycerin"],
-            correct: 1,
-            explanation: "Cardiogenic shock with pulmonary edema requires careful fluid management and inotropic support (e.g., dopamine)."
+            "q": "What is the main risk of over-resuscitation in cardiogenic shock?",
+            "options": [
+                "Pulmonary edema",
+                "Hypoglycemia",
+                "Hyperthermia",
+                "Seizures"
+            ],
+            "correct": 0,
+            "explanation": "Monitor for crackles and dyspnea."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is shock?", answer: "A state of inadequate tissue perfusion leading to cellular dysfunction and organ failure." },
-        { category: "Types of shock", question: "What are the four main types of non-traumatic shock?", answer: "Hypovolemic, cardiogenic, distributive, and obstructive." },
-        { category: "Hypovolemic shock", question: "What causes hypovolemic shock?", answer: "Loss of intravascular volume from hemorrhage, vomiting, diarrhea, or third-spacing." },
-        { category: "Cardiogenic shock", question: "What causes cardiogenic shock?", answer: "Pump failure due to myocardial infarction, heart failure, or arrhythmias." },
-        { category: "Distributive shock", question: "What causes distributive shock?", answer: "Widespread vasodilation from sepsis, anaphylaxis, or neurogenic injury." },
-        { category: "Obstructive shock", question: "What causes obstructive shock?", answer: "Mechanical obstruction of blood flow (e.g., pulmonary embolism, tamponade, tension pneumothorax)." },
-        { category: "Signs of shock", question: "What are common signs of shock?", answer: "Hypotension, tachycardia, altered mental status, cool/clammy skin, delayed capillary refill." },
-        { category: "Fluid resuscitation", question: "What is the initial fluid bolus for an adult in shock?", answer: "250-500 mL (or 500-1000 mL) crystalloid, repeated as needed." },
-        { category: "Pediatric fluid bolus", question: "What is the pediatric fluid bolus for shock?", answer: "20 mL/kg crystalloid, repeated as needed up to 40 mL/kg total." },
-        { category: "Vasopressors", question: "When are vasopressors indicated in shock?", answer: "When hypotension persists despite adequate fluid resuscitation." },
-        { category: "Dopamine dose", question: "What is the dose of dopamine infusion?", answer: "5-20 mcg/kg/min IV." },
-        { category: "Target MAP", question: "What is the target mean arterial pressure (MAP) in shock?", answer: "=65 mmHg in adults." },
-        { category: "Neurogenic shock", question: "What are features of neurogenic shock?", answer: "Hypotension and bradycardia due to loss of sympathetic tone." },
-        { category: "Cardiogenic shock with pulmonary edema", question: "How should fluids be given in cardiogenic shock with pulmonary edema?", answer: "Cautiously, with smaller boluses and consideration of vasopressors." },
-        { category: "Septic shock", question: "What is the first-line treatment for septic shock?", answer: "Fluid resuscitation and antibiotics (in hospital); vasopressors if fluid-refractory." },
-        { category: "Anaphylactic shock", question: "What is the first-line treatment for anaphylactic shock?", answer: "Epinephrine IM, then fluids." },
-        { category: "Capillary refill", question: "What is a normal capillary refill time?", answer: "<2 seconds." },
-        { category: "Cool, clammy skin", question: "What does cool, clammy skin indicate in shock?", answer: "Sympathetic activation and peripheral vasoconstriction." },
-        { category: "KPI", question: "What is the key performance indicator for non-traumatic shock?", answer: "Administer IV fluid to hypotensive patients." },
-        { category: "Transport decision", question: "Should all shock patients be transported?", answer: "Yes, all patients with signs of shock require urgent transport to hospital." }
+    "flashcards": [
+        {
+            "question": "Four types",
+            "answer": "Hypovolemic, distributive, cardiogenic, obstructive."
+        },
+        {
+            "question": "Hypovolemic causes",
+            "answer": "Dehydration, GI bleeding, ruptured ectopic pregnancy."
+        },
+        {
+            "question": "Distributive causes",
+            "answer": "Sepsis, anaphylaxis, neurogenic shock."
+        },
+        {
+            "question": "Cardiogenic causes",
+            "answer": "MI, heart failure, arrhythmias."
+        },
+        {
+            "question": "Obstructive causes",
+            "answer": "Pulmonary embolism, tamponade, tension pneumothorax."
+        },
+        {
+            "question": "Adult bolus",
+            "answer": "250–500 mL NS or RL over 5–10 minutes, up to 2000 mL (EMT)."
+        },
+        {
+            "question": "Pediatric bolus",
+            "answer": "20 mL/kg (flowchart 10–20), maximum 40 mL/kg."
+        },
+        {
+            "question": "Repeat trigger",
+            "answer": "SBP <90, MAP <65 or absent radial pulse."
+        },
+        {
+            "question": "Adult target",
+            "answer": "MAP 65 mmHg."
+        },
+        {
+            "question": "Pediatric target",
+            "answer": "SBP ≥fifth percentile for age, strong pulses, warm skin, CRT <2 s, improving mental status."
+        },
+        {
+            "question": "Cardiogenic/obstructive fluid",
+            "answer": "Lung sounds first; fluid only if clear, in smaller boluses."
+        },
+        {
+            "question": "Dopamine",
+            "answer": "5–20 mcg/kg/min IV (AP); flowchart 2–20."
+        },
+        {
+            "question": "Dopamine indications",
+            "answer": "Fluid-refractory hypotension at the maximum, or hypotension with pulmonary edema."
+        },
+        {
+            "question": "IV access",
+            "answer": "Two large-bore for severe shock; IO if needed."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "SpO₂ ≥94% if hypoxic or distressed (EMR)."
+        },
+        {
+            "question": "Red flags",
+            "answer": "Hypotension despite fluid; severe AMS; SpO₂ <90%; cardiogenic or obstructive shock."
+        },
+        {
+            "question": "Elderly",
+            "answer": "Atypical presentation; caution with fluid in heart failure; Tele-EMS."
+        },
+        {
+            "question": "Alternative causes",
+            "answer": "Trauma, adrenal insufficiency, hypoglycemia, drug overdose."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Shock clearly due to trauma."
+        },
+        {
+            "question": "KPI",
+            "answer": "IV fluid for hypotensive patients."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_11_1",
-            scenario: "A 50-year-old male with chest pain and diaphoresis is now hypotensive (BP 80/50) with crackles on auscultation. Heart rate 120. What type of shock is most likely?",
-            question: "What is the most likely type of shock and appropriate management?",
-            options: [
-                { t: "Hypovolemic shock; give 1 L fluid bolus", f: "Crackles suggest pulmonary edema, not hypovolemia." },
-                { t: "Cardiogenic shock; give cautious fluids and consider dopamine", f: "Correct. This is likely cardiogenic shock from myocardial infarction." },
-                { t: "Septic shock; give fluids and dopamine", f: "No signs of infection." },
-                { t: "Anaphylactic shock; give epinephrine", f: "No allergen exposure or wheezing." }
+            "id": "crit_6_11_1",
+            "scenario": "A 50-year-old with chest pain is now hypotensive (80/50), HR 120, with crackles at both bases.",
+            "question": "Which shock and what treatment?",
+            "options": [
+                {
+                    "t": "Cardiogenic with pulmonary edema: no fluid bolus; dopamine (AP)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Hypovolemic: 2000 mL fast",
+                    "f": "Crackles mean no fluid."
+                },
+                {
+                    "t": "Anaphylaxis: adrenaline IM",
+                    "f": "No allergic features."
+                },
+                {
+                    "t": "Observe",
+                    "f": "He is in shock."
+                }
             ],
-            correct: 1,
-            explanation: "Chest pain, hypotension, and pulmonary edema suggest cardiogenic shock; fluids are given cautiously and inotropes may be needed.",
-            kpi: "Fluids given cautiously and dopamine considered."
+            "correct": 0,
+            "explanation": "Assess lung sounds before fluid in cardiogenic or obstructive shock; hypotension with pulmonary edema is a dopamine indication.",
+            "kpi": "IV fluid given to hypotensive patients (where appropriate)."
         },
         {
-            id: "crit_6_11_2",
-            scenario: "A 30-year-old female with abdominal pain and syncope. She is pale, BP 85/50, HR 110. She has a positive pregnancy test. What is the most likely diagnosis?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Gastroenteritis; give fluids", f: "Abdominal pain and shock in early pregnancy suggest ectopic pregnancy." },
-                { t: "Ectopic pregnancy; give fluids and transport urgently", f: "Correct. Shock in early pregnancy is ectopic until proven otherwise." },
-                { t: "Appendicitis; give fluids and transport", f: "Less likely with pregnancy and syncope." },
-                { t: "Pyelonephritis; give antibiotics", f: "No fever or dysuria." }
+            "id": "crit_6_11_2",
+            "scenario": "A 30-year-old woman with abdominal pain and a positive pregnancy test fainted. She is pale; BP 85/50, HR 110.",
+            "question": "What do you suspect and do?",
+            "options": [
+                {
+                    "t": "Hypovolemic shock from a ruptured ectopic pregnancy: two large-bore IVs, 250–500 mL boluses to MAP 65, urgent transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Vasovagal faint: no treatment",
+                    "f": "She is shocked."
+                },
+                {
+                    "t": "Dopamine first",
+                    "f": "Fluid first."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Not in shock."
+                }
             ],
-            correct: 1,
-            explanation: "Ectopic pregnancy can cause intra-abdominal hemorrhage and shock; fluid resuscitation and urgent transport are critical.",
-            kpi: "IV fluids administered and patient transported."
+            "correct": 0,
+            "explanation": "Ruptured ectopic pregnancy is a listed hypovolemic cause.",
+            "kpi": "IV fluid given to hypotensive patients."
         },
         {
-            id: "crit_6_11_3",
-            scenario: "A 65-year-old male with fever, cough, and confusion. BP 80/50, HR 110, RR 28, temperature 39�C. He has received 1 L normal saline with no improvement. What is the next step?",
-            question: "What should you do next?",
-            options: [
-                { t: "Give another 500 mL fluid bolus", f: "Fluid-refractory septic shock requires vasopressors." },
-                { t: "Start dopamine infusion", f: "Correct. Vasopressors are indicated after adequate fluids." },
-                { t: "Give adrenaline push dose", f: "Adrenaline is an alternative, but dopamine is the vasopressor in the formulary." },
-                { t: "Transport without further intervention", f: "Vasopressors should be initiated en route." }
+            "id": "crit_6_11_3",
+            "scenario": "An adult in hypovolemic shock has had 2000 mL and is still hypotensive with no radial pulse.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Dopamine 5–20 mcg/kg/min (AP)",
+                    "f": "Correct. The fluid maximum has been reached."
+                },
+                {
+                    "t": "Another 2000 mL",
+                    "f": "The maximum is 2000 mL."
+                },
+                {
+                    "t": "Stop and wait",
+                    "f": "Treat the refractory hypotension."
+                },
+                {
+                    "t": "Oral fluids",
+                    "f": "Not appropriate."
+                }
             ],
-            correct: 1,
-            explanation: "Septic shock with hypotension after 1-2 L fluids requires vasopressor support (dopamine).",
-            kpi: "Vasopressor initiated."
+            "correct": 0,
+            "explanation": "Fluid-refractory hypotension after the maximum: dopamine.",
+            "kpi": "IV fluid given to hypotensive patients."
         },
         {
-            id: "crit_6_11_4",
-            scenario: "A 45-year-old male with a history of aortic stenosis presents with syncope and hypotension. He has no chest pain, but has JVD and muffled heart sounds. What is the likely cause?",
-            question: "What type of shock is this and what is the priority?",
-            options: [
-                { t: "Cardiogenic shock; give fluids and dopamine", f: "JVD and muffled sounds suggest tamponade, not pump failure." },
-                { t: "Obstructive shock from cardiac tamponade; give fluids and transport urgently", f: "Correct. Beck's triad suggests tamponade; fluids may help temporarily." },
-                { t: "Hypovolemic shock; give fluids", f: "No history of fluid loss." },
-                { t: "Septic shock; give antibiotics", f: "No signs of infection." }
+            "id": "crit_6_11_4",
+            "scenario": "A hypotensive man has distended neck veins and muffled heart sounds. The monitor shows the pattern below.",
+            "ecg": "alternans",
+            "question": "What type of shock?",
+            "options": [
+                {
+                    "t": "Obstructive (tamponade): assess lungs; cautious small boluses only if clear; urgent transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Hypovolemic: large boluses",
+                    "f": "Neck veins are distended."
+                },
+                {
+                    "t": "Distributive",
+                    "f": "No sepsis or allergy features."
+                },
+                {
+                    "t": "No shock",
+                    "f": "He is hypotensive."
+                }
             ],
-            correct: 1,
-            explanation: "Beck's triad (hypotension, JVD, muffled heart sounds) is classic for cardiac tamponade, an obstructive shock.",
-            kpi: "IV fluids given and transport expedited."
+            "correct": 0,
+            "explanation": "Obstructive shock is a red flag; avoid over-resuscitation.",
+            "kpi": "IV fluid given to hypotensive patients (where appropriate)."
         },
         {
-            id: "crit_6_11_5",
-            scenario: "A 25-year-old male with a history of spinal cord injury at C5 presents with hypotension (BP 80/50) and bradycardia (HR 50). He is warm and dry. What is the likely diagnosis?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Hypovolemic shock; give fluids", f: "No evidence of volume loss; bradycardia is not typical." },
-                { t: "Neurogenic shock; give fluids and consider vasopressors", f: "Correct. Loss of sympathetic tone causes hypotension and bradycardia." },
-                { t: "Cardiogenic shock; give dopamine", f: "No cardiac history." },
-                { t: "Anaphylactic shock; give epinephrine", f: "No allergen exposure." }
+            "id": "crit_6_11_5",
+            "scenario": "A 4-year-old (16 kg) with severe gastroenteritis has cool mottled skin, weak pulses and capillary refill of 4 seconds.",
+            "question": "What fluid plan?",
+            "options": [
+                {
+                    "t": "20 mL/kg bolus, reassess, repeat to a maximum of 40 mL/kg",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Adult 500 mL",
+                    "f": "Use weight-based dosing."
+                },
+                {
+                    "t": "60 mL/kg at once",
+                    "f": "Above this CPG's maximum."
+                },
+                {
+                    "t": "No fluid in children",
+                    "f": "She needs fluid."
+                }
             ],
-            correct: 1,
-            explanation: "Neurogenic shock after spinal injury presents with hypotension and bradycardia; fluid resuscitation and vasopressors may be needed.",
-            kpi: "IV fluids administered and patient transported."
+            "correct": 0,
+            "explanation": "Target SBP ≥fifth percentile, strong pulses, warm skin, CRT <2 s.",
+            "kpi": "IV fluid given to hypotensive patients."
         }
     ]
 };

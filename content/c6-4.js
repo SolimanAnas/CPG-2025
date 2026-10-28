@@ -1,385 +1,835 @@
-/* ========== Chapter 6.4 � Anaphylaxis / Allergic Reaction ========== */
+/* ========== CPG 6.4 – Anaphylaxis / Allergic Reaction ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-4",
-    title: "Anaphylaxis / Allergic Reaction",
-    shortTitle: "6.4 Anaphylaxis / Allergic Reaction",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">??? Anaphylaxis / Allergic Reaction</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and treat life-threatening anaphylaxis or severe allergic reactions.</li>
-                <li>Alleviate symptoms and prevent progression through timely administration of medications.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms of an allergic reaction or anaphylaxis, including:
-                    <ul>
-                        <li>Mild to moderate allergic reaction: Localized urticaria (hives), itching, or mild swelling without systemic symptoms.</li>
-                        <li>Anaphylaxis: Systemic symptoms involving two or more organ systems (e.g., skin/mucosa, respiratory, cardiovascular, gastrointestinal).</li>
-                        <li>Respiratory distress (e.g., wheezing, stridor, shortness of breath).</li>
-                        <li>Hypotension (SBP <90 mmHg in adults, or age-specific for pediatrics).</li>
-                        <li>Angioedema (swelling of face, lips, tongue, or throat).</li>
-                        <li>Gastrointestinal symptoms (e.g., nausea, vomiting, abdominal pain).</li>
-                    </ul>
-                </li>
-                <li>Known or suspected exposure to an allergen (e.g., food, medication, insect sting, environmental trigger).</li>
-                <li>History of previous allergic reactions or anaphylaxis.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Allergen Exposure History:</strong> Identify recent exposure to potential allergens (foods, medications, insect stings, latex). Confirm history of known allergies or previous anaphylaxis. Check for medical alert bracelets.</li>
-                <li><strong>Severity Assessment:</strong> Differentiate mild/moderate allergic reaction (localized hives) from anaphylaxis (systemic involvement of =2 organ systems or hypotension).</li>
-                <li><strong>Airway:</strong> Assess for stridor, hoarseness, throat swelling.</li>
-                <li><strong>Breathing:</strong> Evaluate for wheezing, bronchospasm, tachypnea, hypoxia.</li>
-                <li><strong>Circulation:</strong> Check for hypotension, tachycardia, poor perfusion.</li>
-                <li><strong>Skin/Mucosa:</strong> Urticaria, angioedema, flushing.</li>
-                <li><strong>Gastrointestinal:</strong> Nausea, vomiting, abdominal pain.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> For anaphylaxis, severe symptoms, or anticipated deterioration.</li>
-                <li><strong>Oxygen:</strong> Titrate to maintain SpO2 =94% if hypoxia or respiratory distress.</li>
-                <li><strong>Mild Reaction:</strong> Generally does not require treatment; recommend transport and reassess.</li>
-                <li><strong>Moderate Reaction:</strong>
-                    <ul>
-                        <li>Diphenhydramine: Adults 25-50 mg IV/IM/PO; Pediatrics 1 mg/kg (max 50 mg).</li>
-                        <li>Hydrocortisone: Adults 100-200 mg IV/IM; Pediatrics 2 mg/kg (max 200 mg).</li>
-                        <li>If bronchospasm: Salbutamol 2.5-5 mg nebulized; Combivent (adults only) 0.5 mg ipratropium + 3 mg salbutamol.</li>
-                    </ul>
-                </li>
-                <li><strong>Severe Reaction (Anaphylaxis):</strong>
-                    <ul>
-                        <li><strong>Epinephrine (Adrenaline):</strong>
-                            <ul>
-                                <li>Adults: 0.3-0.5 mg IM (1:1000) in anterolateral thigh. Repeat every 5-15 minutes as needed.</li>
-                                <li>Pediatrics: 0.01 mg/kg IM (max 0.3 mg). Use pediatric EpiPen if available.</li>
-                            </ul>
-                        </li>
-                        <li>Diphenhydramine and hydrocortisone as above.</li>
-                        <li>IV fluids: Normal saline 500-1000 mL bolus (adults) or 20 mL/kg (pediatrics) for hypotension/shock.</li>
-                        <li>Consider repeat adrenaline if no improvement.</li>
-                    </ul>
-                </li>
-                <li><strong>Establish IV Access:</strong> For moderate to severe cases.</li>
-                <li><strong>Patient Reassessment:</strong> Every 5-10 minutes; monitor for deterioration or improvement.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Airway edema can progress rapidly; have a low threshold for IM adrenaline.</li>
-                <li>Invasive airway management may be required if symptoms do not resolve.</li>
-                <li>Use caution with epinephrine in patients with known cardiovascular disease; consult Telemedicine if needed.</li>
-                <li>Elderly patients may present atypically (e.g., hypotension without skin symptoms).</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Epinephrine is the first-line treatment for anaphylaxis; do not delay.</li>
-                <li>Hydrocortisone should be given after epinephrine.</li>
-                <li>All patients who have received epinephrine or have severe reactions must be transported to hospital.</li>
-                <li>Notify Dispatch 2 of patients with significant airway edema or poor response to treatment.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Allergen exposure, symptom onset and progression.</li>
-                <li>Vital signs, SpO2, airway/respiratory/cardiovascular status.</li>
-                <li>Medications given: dose, route, time, response.</li>
-                <li>IV fluids, oxygen therapy.</li>
-                <li>Hospital notification and transport details.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer adrenaline for anaphylaxis within 5 minutes of recognition.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-4",
+    "title": "Anaphylaxis / Allergic Reaction",
+    "shortTitle": "6.4 Anaphylaxis / Allergic Reaction",
+    "guide": {
+        "cpg": "6.4",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Anaphylaxis / Allergic Reaction",
+        "lead": "Grade the reaction. Anaphylaxis (two or more systems, or hypotension) needs IM adrenaline in the thigh within 5 minutes, repeated every 5–15 minutes as needed, with fluid for shock. Antihistamine, steroid and bronchodilator are additions, never substitutes.",
+        "source": {
+            "label": "CPG 6.4",
+            "pages": "163–166",
+            "pdf": "../pdf_sections/6_4_Anaphylaxis___Allergic_Reaction.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Mild to moderate reaction: localized hives, itching or mild swelling without systemic symptoms.",
+                    "Anaphylaxis: two or more systems (skin/mucosa, respiratory, cardiovascular, gastrointestinal), e.g. wheeze or stridor, hypotension, angioedema, vomiting or abdominal pain.",
+                    "Known or suspected allergen exposure; previous reactions."
+                ],
+                "exclude": [
+                    "None noted."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "History",
+                        "items": [
+                            "Exposure: food, medication, sting, latex, environment.",
+                            "Known allergies, previous anaphylaxis, alert bracelet."
+                        ]
+                    },
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Rapidly progressing respiratory distress or airway obstruction (stridor, wheeze, cyanosis).",
+                            "SBP &lt;90 mmHg (adults) or age-specific hypotension; capillary refill &gt;2 seconds.",
+                            "Altered mental status.",
+                            "Persistent or worsening angioedema, especially of the airway.",
+                            "Known history of severe anaphylaxis."
+                        ]
+                    },
+                    {
+                        "title": "Elderly",
+                        "items": [
+                            "May present atypically: hypotension without skin signs."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Mild and moderate reactions",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Mild",
+                        "text": "No routine treatment. Recommend transport and reassess en route."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "text": "If hypoxic or in respiratory distress: SpO<sub>2</sub> ≥94% (flowchart: &gt;94%)."
+                    },
+                    {
+                        "title": "Diphenhydramine",
+                        "level": "EMT",
+                        "text": "Urticaria, itching, mild symptoms.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "25–50 mg IV/IM/PO",
+                                "note": "Flowchart: 1 mg/kg IM/IV, maximum 50 mg",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "1 mg/kg IV/IM/PO (maximum 50 mg)",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Hydrocortisone",
+                        "level": "EMT",
+                        "text": "IM: EMT; IV: EMT-A. In anaphylaxis, give it after adrenaline.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "100–200 mg IV/IM",
+                                "note": "Flowchart: 100 mg",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "2 mg/kg IV/IM (maximum 200 mg)",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Bronchospasm",
+                        "level": "EMT",
+                        "text": "Dilute each nebule to a maximum of 5 mL with saline or sterile water.",
+                        "doses": [
+                            {
+                                "drug": "Salbutamol, adult",
+                                "dose": "2.5–5 mg nebulized",
+                                "note": "Flowchart: 5 mg",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Salbutamol, pediatric",
+                                "dose": "2.5 mg (&lt;20 kg) or 5 mg (≥20 kg)",
+                                "note": "Flowchart: by age, &lt;5 years 2.5 mg, &gt;5 years 5 mg",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Combivent (adults only)",
+                                "dose": "0.5 mg ipratropium + 3 mg salbutamol (1 nebule)",
+                                "note": "Flowchart: EMT (moderate), P (severe)",
+                                "level": "EMT"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Severe reaction: anaphylaxis",
+                "icon": "siren",
+                "steps": [
+                    {
+                        "title": "Adrenaline IM (1:1000), anterolateral thigh",
+                        "level": "EMT",
+                        "text": "First, and within 5 minutes. Repeat every 5–15 minutes for persistent symptoms or deterioration. The EpiPen is preferred for speed.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "0.3–0.5 mg IM",
+                                "note": "Adult EpiPen 0.3 mg",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "0.01 mg/kg IM (maximum 0.3 mg)",
+                                "note": "Pediatric EpiPen 0.15 mg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "For hypotension, moderate to severe symptoms or expected drugs; IO if IV fails."
+                    },
+                    {
+                        "title": "Fluid for shock",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate; reassess, repeat as needed; watch for overload.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL IV",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg IV",
+                                "note": "Flowchart: 5–20 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Then",
+                        "text": "Diphenhydramine (P on the severe side of the flowchart), hydrocortisone and bronchodilators as for moderate reactions. Continuous ECG and SpO<sub>2</sub>."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Airway edema and cardiac disease",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Airway edema",
+                        "items": [
+                            "Low threshold for IM adrenaline: a small increase in swelling can block the airway.",
+                            "No improvement: invasive airway management may be needed; transfer rapidly and inform Dispatch 2."
+                        ]
+                    },
+                    {
+                        "title": "Cardiovascular disease",
+                        "items": [
+                            "Use adrenaline with caution; consult Telemedicine if needed."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: adrenaline",
+                                "sub": "0.01 mg/kg IM, maximum 0.3 mg",
+                                "href": "../pages/drug-calculator.html?drug=Epinephrine%20(Adrenaline)",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: diphenhydramine",
+                                "sub": "1 mg/kg, maximum 50 mg",
+                                "href": "../pages/drug-calculator.html?drug=Diphenhydramine",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Adrenaline for anaphylaxis within 5 minutes of recognition."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "2.3 Asthma",
+                        "href": "c2.html?section=c2s3"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "2.1 Airway and Breathing",
+                        "href": "c2.html?section=c2s1"
+                    },
+                    {
+                        "label": "8.8 Envenomation",
+                        "href": "c8-8.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first-line medication for anaphylaxis?",
-            options: ["Diphenhydramine", "Hydrocortisone", "Epinephrine (adrenaline)", "Salbutamol"],
-            correct: 2,
-            explanation: "Epinephrine is the first-line treatment for anaphylaxis; it reverses bronchospasm, hypotension, and mucosal edema."
+            "q": "What is the first-line drug for anaphylaxis?",
+            "options": [
+                "Adrenaline IM",
+                "Diphenhydramine",
+                "Hydrocortisone",
+                "Salbutamol"
+            ],
+            "correct": 0,
+            "explanation": "Within 5 minutes of recognition (KPI)."
         },
         {
-            q: "What is the recommended IM dose of epinephrine for an adult with anaphylaxis?",
-            options: ["0.1 mg", "0.3-0.5 mg", "1 mg", "2 mg"],
-            correct: 1,
-            explanation: "Adult IM epinephrine dose is 0.3-0.5 mg (1:1000)."
+            "q": "What is the adult IM adrenaline dose?",
+            "options": [
+                "0.3–0.5 mg (1:1000)",
+                "1 mg IV",
+                "0.05 mg",
+                "5 mg"
+            ],
+            "correct": 0,
+            "explanation": "The adult EpiPen (0.3 mg) is preferred for speed."
         },
         {
-            q: "A child with anaphylaxis weighs 20 kg. What is the correct IM epinephrine dose?",
-            options: ["0.01 mg/kg (0.2 mg)", "0.1 mg/kg (2 mg)", "0.3 mg total", "0.5 mg total"],
-            correct: 0,
-            explanation: "Pediatric epinephrine dose is 0.01 mg/kg IM (max 0.3 mg)."
+            "q": "What is the pediatric IM adrenaline dose?",
+            "options": [
+                "0.01 mg/kg (maximum 0.3 mg)",
+                "0.1 mg/kg",
+                "0.5 mg for all",
+                "1 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Or the pediatric EpiPen 0.15 mg."
         },
         {
-            q: "What is the preferred site for IM epinephrine in anaphylaxis?",
-            options: ["Deltoid", "Ventrogluteal", "Anterolateral thigh", "Dorsogluteal"],
-            correct: 2,
-            explanation: "The anterolateral thigh provides the best absorption for IM epinephrine."
+            "q": "Where is IM adrenaline given?",
+            "options": [
+                "Anterolateral thigh",
+                "Deltoid",
+                "Buttock",
+                "Abdomen"
+            ],
+            "correct": 0,
+            "explanation": "As per the CPG."
         },
         {
-            q: "A patient with anaphylaxis remains hypotensive after epinephrine and 1 L normal saline. What should you do?",
-            options: ["Give a second dose of epinephrine", "Give diphenhydramine", "Start dopamine infusion", "Transport without further intervention"],
-            correct: 0,
-            explanation: "Repeat epinephrine every 5-15 minutes if symptoms persist or deteriorate."
+            "q": "Hypotension persists after adrenaline and a fluid bolus. What next?",
+            "options": [
+                "Repeat adrenaline (every 5–15 minutes) and continue fluids",
+                "Diphenhydramine only",
+                "Wait 30 minutes",
+                "Stop treatment"
+            ],
+            "correct": 0,
+            "explanation": "Repeat for persistent symptoms."
         },
         {
-            q: "Which of the following is NOT a sign of anaphylaxis?",
-            options: ["Wheezing", "Urticaria", "Bradycardia", "Hypotension"],
-            correct: 2,
-            explanation: "Anaphylaxis typically causes tachycardia due to compensatory mechanisms and vasodilation."
+            "q": "What defines anaphylaxis here?",
+            "options": [
+                "Two or more organ systems involved, or hypotension",
+                "Any hives",
+                "Itching alone",
+                "Fever"
+            ],
+            "correct": 0,
+            "explanation": "Skin, respiratory, cardiovascular, gastrointestinal."
         },
         {
-            q: "What is the dose of diphenhydramine for an adult with moderate allergic reaction?",
-            options: ["10 mg", "25-50 mg", "100 mg", "200 mg"],
-            correct: 1,
-            explanation: "Diphenhydramine adult dose is 25-50 mg IV/IM/PO."
+            "q": "What is the adult diphenhydramine dose in the text?",
+            "options": [
+                "25–50 mg IV/IM/PO",
+                "200 mg",
+                "5 mg",
+                "1 g"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 1 mg/kg, maximum 50 mg."
         },
         {
-            q: "What is the dose of hydrocortisone for an adult with anaphylaxis?",
-            options: ["25 mg", "50 mg", "100-200 mg", "500 mg"],
-            correct: 2,
-            explanation: "Hydrocortisone 100-200 mg IV/IM is used as an adjunct in anaphylaxis."
+            "q": "What is the adult hydrocortisone dose in the text?",
+            "options": [
+                "100–200 mg IV/IM",
+                "10 mg",
+                "1 g",
+                "500 mg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 100 mg."
         },
         {
-            q: "A patient with anaphylaxis develops wheezing. Which medication should be administered?",
-            options: ["Diphenhydramine", "Salbutamol nebulized", "Hydrocortisone", "All of the above"],
-            correct: 3,
-            explanation: "Salbutamol relieves bronchospasm; hydrocortisone and diphenhydramine address inflammation and histamine release."
+            "q": "In anaphylaxis, when is hydrocortisone given?",
+            "options": [
+                "After adrenaline",
+                "Before adrenaline",
+                "Instead of adrenaline",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Adrenaline comes first."
         },
         {
-            q: "What is the maximum number of epinephrine doses recommended prehospital?",
-            options: ["1", "2", "3", "No limit"],
-            correct: 1,
-            explanation: "No strict limit, but repeated doses should be guided by clinical response; typically up to 2-3 doses may be needed."
+            "q": "How often may adrenaline be repeated?",
+            "options": [
+                "Every 5–15 minutes as needed",
+                "Once only",
+                "Every hour",
+                "Every minute"
+            ],
+            "correct": 0,
+            "explanation": "For persistent symptoms."
         },
         {
-            q: "A patient with anaphylaxis has stridor and difficulty breathing. What is the priority?",
-            options: ["Diphenhydramine", "IV fluids", "Epinephrine IM", "Hydrocortisone"],
-            correct: 2,
-            explanation: "Epinephrine is the priority for airway edema; it rapidly reduces swelling."
+            "q": "Stridor and a swollen tongue after peanuts. What first?",
+            "options": [
+                "IM adrenaline",
+                "Diphenhydramine",
+                "IV fluid",
+                "Hydrocortisone"
+            ],
+            "correct": 0,
+            "explanation": "Low threshold for adrenaline with airway edema."
         },
         {
-            q: "What is the target SpO2 for a patient with anaphylaxis?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Target SpO2 =94% to prevent hypoxia."
+            "q": "What is the oxygen target?",
+            "options": [
+                "SpO₂ ≥94% if hypoxic or distressed",
+                "100% always",
+                "88–92%",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Titrate oxygen."
         },
         {
-            q: "Which of the following is a contraindication to giving epinephrine in anaphylaxis?",
-            options: ["Pregnancy", "Age >65 years", "Hypertension", "None � it is life-saving"],
-            correct: 3,
-            explanation: "There are no absolute contraindications to epinephrine in anaphylaxis; the benefits outweigh risks."
+            "q": "How is adrenaline used in known cardiovascular disease?",
+            "options": [
+                "With caution; consult Telemedicine if needed",
+                "Never",
+                "Only IV",
+                "At double dose"
+            ],
+            "correct": 0,
+            "explanation": "As per the safety considerations."
         },
         {
-            q: "A patient with mild urticaria after eating peanuts has no respiratory symptoms. What is the appropriate management?",
-            options: ["Epinephrine IM", "Diphenhydramine PO and observation", "IV fluids", "Transport immediately"],
-            correct: 1,
-            explanation: "Mild reactions may be treated with oral antihistamines and monitored for progression."
+            "q": "Localized hives only, no systemic symptoms. Management?",
+            "options": [
+                "No routine treatment; recommend transport and reassess",
+                "IM adrenaline",
+                "IV fluids",
+                "Intubation"
+            ],
+            "correct": 0,
+            "explanation": "A mild reaction."
         },
         {
-            q: "What is the dose of salbutamol nebulized for an adult with bronchospasm in anaphylaxis?",
-            options: ["2.5 mg", "5 mg", "10 mg", "0.5 mg"],
-            correct: 1,
-            explanation: "Adult salbutamol nebulized dose is 5 mg."
+            "q": "What is the adult salbutamol dose in the text?",
+            "options": [
+                "2.5–5 mg nebulized",
+                "20 mg",
+                "0.5 mg",
+                "100 mg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 5 mg."
         },
         {
-            q: "Which of the following is an indication for IV fluids in anaphylaxis?",
-            options: ["Tachycardia", "Hypotension", "Urticaria", "Wheezing"],
-            correct: 1,
-            explanation: "IV fluids are indicated for hypotension or shock to maintain perfusion."
+            "q": "When are IV fluids given?",
+            "options": [
+                "Shock or dehydration",
+                "Hives only",
+                "Itching only",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Prioritise adrenaline and fluid in anaphylactic shock."
         },
         {
-            q: "A child with anaphylaxis has hypotension after epinephrine. What volume of normal saline should be given?",
-            options: ["5 mL/kg", "10 mL/kg", "20 mL/kg", "40 mL/kg"],
-            correct: 2,
-            explanation: "Pediatric fluid bolus is 20 mL/kg crystalloid, repeated as needed."
+            "q": "What is the pediatric fluid bolus in the text?",
+            "options": [
+                "20 mL/kg",
+                "5 mL/kg only",
+                "40 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 5–20 mL/kg."
         },
         {
-            q: "What is the maximum adult dose of diphenhydramine?",
-            options: ["25 mg", "50 mg", "100 mg", "200 mg"],
-            correct: 1,
-            explanation: "Maximum single dose is 50 mg."
+            "q": "What is the pediatric diphenhydramine maximum?",
+            "options": [
+                "50 mg",
+                "5 mg",
+                "100 mg",
+                "200 mg"
+            ],
+            "correct": 0,
+            "explanation": "1 mg/kg, maximum 50 mg."
         },
         {
-            q: "A patient with anaphylaxis receives epinephrine but remains in respiratory distress. What should you consider?",
-            options: ["Repeat epinephrine", "Nebulized salbutamol", "Airway management (e.g., intubation)", "All of the above"],
-            correct: 3,
-            explanation: "Reassess and escalate treatment; prepare for airway compromise."
+            "q": "Respiratory distress persists after adrenaline. What applies?",
+            "options": [
+                "Repeat adrenaline, bronchodilators, and prepare for airway management",
+                "Nothing",
+                "Antihistamine only",
+                "Sit and wait"
+            ],
+            "correct": 0,
+            "explanation": "Invasive airway may be needed; transfer rapidly."
         },
         {
-            q: "What is the dose of Combivent for an adult with bronchospasm?",
-            options: ["0.5 mg ipratropium + 3 mg salbutamol", "1 mg ipratropium + 5 mg salbutamol", "0.25 mg ipratropium + 2.5 mg salbutamol", "Not recommended"],
-            correct: 0,
-            explanation: "Combivent nebule contains 0.5 mg ipratropium bromide and 3 mg salbutamol."
+            "q": "What is the Combivent dose?",
+            "options": [
+                "0.5 mg ipratropium + 3 mg salbutamol, adults only",
+                "Same in children",
+                "1 mg ipratropium",
+                "Not used"
+            ],
+            "correct": 0,
+            "explanation": "Not recommended for children."
         },
         {
-            q: "Which of the following is NOT a component of the definition of anaphylaxis?",
-            options: ["Involvement of at least two organ systems", "Hypotension", "Fever", "Respiratory distress"],
-            correct: 2,
-            explanation: "Fever is not a feature of anaphylaxis; it suggests infection."
+            "q": "Which is NOT a feature of anaphylaxis listed here?",
+            "options": [
+                "Fever",
+                "Wheeze",
+                "Hypotension",
+                "Angioedema"
+            ],
+            "correct": 0,
+            "explanation": "Fever is not listed."
         },
         {
-            q: "How often can epinephrine be repeated in anaphylaxis?",
-            options: ["Every 5-15 minutes as needed", "Once only", "Every 30 minutes", "Only after IV fluids"],
-            correct: 0,
-            explanation: "Epinephrine may be repeated every 5-15 minutes if symptoms persist."
+            "q": "The adult EpiPen dose is…",
+            "options": [
+                "0.3 mg",
+                "0.15 mg",
+                "1 mg",
+                "0.05 mg"
+            ],
+            "correct": 0,
+            "explanation": "The pediatric EpiPen is 0.15 mg."
         },
         {
-            q: "What is the mechanism of action of epinephrine in anaphylaxis?",
-            options: ["Alpha-adrenergic vasoconstriction", "Beta-adrenergic bronchodilation", "Mast cell stabilization", "All of the above"],
-            correct: 3,
-            explanation: "Epinephrine has alpha and beta effects: vasoconstriction, bronchodilation, and reduces mast cell mediator release."
+            "q": "Who must be told about significant airway edema not improving?",
+            "options": [
+                "Dispatch 2",
+                "Nobody",
+                "The police",
+                "The family only"
+            ],
+            "correct": 0,
+            "explanation": "Inform Dispatch 2."
         },
         {
-            q: "A patient with known allergy to peanuts develops urticaria, abdominal pain, and wheezing. What is the priority?",
-            options: ["Oral diphenhydramine", "IM epinephrine", "IV hydrocortisone", "Nebulized salbutamol"],
-            correct: 1,
-            explanation: "Two organ systems involved (skin and respiratory) defines anaphylaxis; epinephrine is first line."
+            "q": "Hives, abdominal pain and wheeze after peanuts. What is it and what first?",
+            "options": [
+                "Anaphylaxis: IM adrenaline",
+                "Mild reaction: observe",
+                "Gastroenteritis",
+                "Asthma only"
+            ],
+            "correct": 0,
+            "explanation": "Two or more systems involved."
         },
         {
-            q: "What is the initial dose of epinephrine for a 5-year-old child (weight 18 kg)?",
-            options: ["0.15 mg IM (EpiPen Jr)", "0.3 mg IM", "0.01 mg/kg = 0.18 mg", "0.5 mg IM"],
-            correct: 0,
-            explanation: "For children, either use weight-based 0.01 mg/kg (0.18 mg) or pediatric EpiPen 0.15 mg. Both are acceptable."
+            "q": "What level gives IM adrenaline?",
+            "options": [
+                "EMT",
+                "P only",
+                "AP only",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "IM adrenaline and fluids are EMT."
         },
         {
-            q: "What is the role of hydrocortisone in anaphylaxis?",
-            options: ["Immediate relief of bronchospasm", "Prevents biphasic reactions", "Treats hypotension", "Antihistamine effect"],
-            correct: 1,
-            explanation: "Corticosteroids help prevent biphasic reactions and reduce inflammation, but are not first line."
+            "q": "What level gives IV hydrocortisone?",
+            "options": [
+                "EMT-A",
+                "EMR",
+                "ER",
+                "Bystander"
+            ],
+            "correct": 0,
+            "explanation": "IM hydrocortisone is EMT; IV is EMT-A."
         },
         {
-            q: "A patient with anaphylaxis has been given epinephrine but remains hypotensive. Which fluid is preferred?",
-            options: ["5% dextrose", "Normal saline", "Ringer�s lactate", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid (normal saline) is preferred for resuscitation."
+            "q": "What is the pediatric salbutamol dose in the text?",
+            "options": [
+                "2.5 mg under 20 kg, 5 mg at 20 kg or more",
+                "10 mg for all",
+                "0.5 mg",
+                "Not given"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart uses age (<5 or >5 years)."
         },
         {
-            q: "Which of the following is a common trigger for anaphylaxis in children?",
-            options: ["Peanuts", "Milk", "Insect stings", "All of the above"],
-            correct: 3,
-            explanation: "Common triggers include foods, insect stings, medications, and latex."
+            "q": "How might anaphylaxis present in the elderly?",
+            "options": [
+                "Hypotension without skin signs",
+                "Always with hives",
+                "Only with fever",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Atypical presentation."
         },
         {
-            q: "What is the maximum total dose of epinephrine recommended in the field?",
-            options: ["0.5 mg", "1 mg", "2 mg", "No absolute maximum; titrate to effect"],
-            correct: 3,
-            explanation: "Epinephrine should be titrated to clinical response; repeated doses are guided by symptoms and response."
+            "q": "What is the pediatric hydrocortisone dose?",
+            "options": [
+                "2 mg/kg IV/IM (maximum 200 mg)",
+                "20 mg/kg",
+                "0.2 mg/kg",
+                "500 mg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart does not state a maximum."
         },
         {
-            q: "After administering epinephrine for anaphylaxis, the patient�s wheezing improves. What should you do next?",
-            options: ["Transport immediately", "Give diphenhydramine and hydrocortisone", "Repeat epinephrine", "Discharge home"],
-            correct: 1,
-            explanation: "Continue care with antihistamines and steroids; all anaphylaxis patients require transport."
+            "q": "What is the KPI?",
+            "options": [
+                "Adrenaline within 5 minutes of recognising anaphylaxis",
+                "Hydrocortisone within 30 minutes",
+                "Fluids in all",
+                "Transport within 1 hour"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is anaphylaxis?", answer: "A severe, life-threatening systemic allergic reaction involving two or more organ systems (e.g., skin, respiratory, cardiovascular, GI)." },
-        { category: "First-line treatment", question: "What is the first-line treatment for anaphylaxis?", answer: "Epinephrine (adrenaline) IM." },
-        { category: "Epinephrine adult dose", question: "What is the IM dose of epinephrine for an adult?", answer: "0.3-0.5 mg (1:1000) in the anterolateral thigh." },
-        { category: "Epinephrine pediatric dose", question: "What is the IM dose of epinephrine for a child?", answer: "0.01 mg/kg (max 0.3 mg)." },
-        { category: "Site of injection", question: "Where should IM epinephrine be given?", answer: "Anterolateral thigh (vastus lateralis)." },
-        { category: "Diphenhydramine dose", question: "What is the dose of diphenhydramine for moderate allergic reaction?", answer: "Adults 25-50 mg; Pediatrics 1 mg/kg (max 50 mg)." },
-        { category: "Hydrocortisone dose", question: "What is the dose of hydrocortisone for anaphylaxis?", answer: "Adults 100-200 mg IV/IM; Pediatrics 2 mg/kg (max 200 mg)." },
-        { category: "Salbutamol dose", question: "What is the dose of nebulized salbutamol for bronchospasm?", answer: "Adults 5 mg; Pediatrics (<5 years) 2.5 mg, (>5 years) 5 mg." },
-        { category: "Combivent dose", question: "What is the dose of Combivent for bronchospasm?", answer: "Adults only: 0.5 mg ipratropium + 3 mg salbutamol." },
-        { category: "IV fluids", question: "When are IV fluids indicated in anaphylaxis?", answer: "Hypotension or signs of shock; adult bolus 500-1000 mL, pediatric 20 mL/kg." },
-        { category: "Airway compromise", question: "What are signs of airway compromise in anaphylaxis?", answer: "Stridor, hoarseness, throat swelling, drooling." },
-        { category: "Biphasic reaction", question: "What is a biphasic reaction?", answer: "Recurrence of anaphylaxis symptoms after initial resolution, typically within 1-8 hours." },
-        { category: "KPI", question: "What is the key performance indicator for anaphylaxis?", answer: "Administer adrenaline within 5 minutes of recognition." },
-        { category: "Contraindications to epinephrine", question: "What are the contraindications to epinephrine in anaphylaxis?", answer: "None � it is life-saving; use even with cardiovascular disease." },
-        { category: "Allergen identification", question: "Why is identifying the allergen important?", answer: "To prevent future exposure and guide management." },
-        { category: "Monitoring after epinephrine", question: "How often should a patient with anaphylaxis be reassessed?", answer: "Every 5-10 minutes for vital signs and response." },
-        { category: "Transport decision", question: "Should all anaphylaxis patients be transported to hospital?", answer: "Yes, even if symptoms resolve, due to risk of biphasic reaction." },
-        { category: "Medications that may cause anaphylaxis", question: "Name three common medications that can cause anaphylaxis.", answer: "Penicillins, NSAIDs, aspirin, vaccines, contrast media." },
-        { category: "Food triggers", question: "What are common food triggers for anaphylaxis?", answer: "Peanuts, tree nuts, fish, shellfish, milk, eggs, wheat, soy." },
-        { category: "Role of antihistamines", question: "What is the role of antihistamines in anaphylaxis?", answer: "Adjunct to epinephrine; relieve itching and urticaria but do not reverse respiratory or cardiovascular effects." }
+    "flashcards": [
+        {
+            "question": "Anaphylaxis",
+            "answer": "Systemic reaction involving two or more organ systems, or hypotension."
+        },
+        {
+            "question": "First-line treatment",
+            "answer": "IM adrenaline (EMT), within 5 minutes."
+        },
+        {
+            "question": "Adult adrenaline",
+            "answer": "0.3–0.5 mg IM (1:1000), anterolateral thigh; adult EpiPen 0.3 mg; repeat every 5–15 minutes."
+        },
+        {
+            "question": "Pediatric adrenaline",
+            "answer": "0.01 mg/kg IM (maximum 0.3 mg); pediatric EpiPen 0.15 mg; repeat every 5–15 minutes."
+        },
+        {
+            "question": "Diphenhydramine",
+            "answer": "Adult 25–50 mg IV/IM/PO; child 1 mg/kg (maximum 50 mg)."
+        },
+        {
+            "question": "Hydrocortisone",
+            "answer": "Adult 100–200 mg IV/IM; child 2 mg/kg (maximum 200 mg); after adrenaline in anaphylaxis."
+        },
+        {
+            "question": "Hydrocortisone levels",
+            "answer": "IM: EMT; IV: EMT-A."
+        },
+        {
+            "question": "Salbutamol",
+            "answer": "Adult 2.5–5 mg; child 2.5 mg (<20 kg) or 5 mg (≥20 kg); dilute to 5 mL maximum."
+        },
+        {
+            "question": "Combivent",
+            "answer": "Adults only: 0.5 mg ipratropium + 3 mg salbutamol."
+        },
+        {
+            "question": "Fluid bolus",
+            "answer": "Adult 500–1000 mL; child 20 mL/kg; NS or RL; reassess."
+        },
+        {
+            "question": "Mild reaction",
+            "answer": "No routine treatment; recommend transport; reassess en route."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "If hypoxic or distressed: SpO₂ ≥94%."
+        },
+        {
+            "question": "Red flags",
+            "answer": "Progressing respiratory distress or obstruction; SBP <90; altered mental status; worsening angioedema; history of severe anaphylaxis."
+        },
+        {
+            "question": "Airway edema",
+            "answer": "Low threshold for IM adrenaline; rapid transfer; inform Dispatch 2."
+        },
+        {
+            "question": "Cardiovascular disease",
+            "answer": "Adrenaline with caution; consult Telemedicine if needed."
+        },
+        {
+            "question": "Elderly",
+            "answer": "May present with hypotension without skin signs."
+        },
+        {
+            "question": "Monitoring",
+            "answer": "Continuous ECG and SpO₂."
+        },
+        {
+            "question": "IV access",
+            "answer": "Hypotension, moderate-severe symptoms, expected drugs; IO if needed."
+        },
+        {
+            "question": "Documentation of adrenaline",
+            "answer": "Dose, route, time and number of doses."
+        },
+        {
+            "question": "KPI",
+            "answer": "Adrenaline within 5 minutes of recognition."
+        },
+        {
+            "question": "Antihistamines and steroids",
+            "answer": "Additions after adrenaline, not substitutes."
+        },
+        {
+            "question": "Exposure history",
+            "answer": "Foods, medications, stings, latex, environment; alert bracelets."
+        },
+        {
+            "question": "Poor perfusion",
+            "answer": "Cool clammy skin, capillary refill >2 seconds."
+        },
+        {
+            "question": "Severe reaction drugs after adrenaline",
+            "answer": "Fluids, diphenhydramine, hydrocortisone, bronchodilators."
+        },
+        {
+            "question": "Nebule dilution",
+            "answer": "Up to a maximum volume of 5 mL."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_4_1",
-            scenario: "You are called to a restaurant for a 35-year-old male who ate peanuts and now has difficulty breathing, hives, and a swollen tongue. BP 100/70, HR 110, SpO2 91% on room air. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer diphenhydramine 50 mg IM", f: "Antihistamines are not first line for airway compromise." },
-                { t: "Administer epinephrine 0.3 mg IM", f: "Correct. Epinephrine is indicated for anaphylaxis with respiratory symptoms." },
-                { t: "Start high-flow oxygen", f: "Oxygen is important, but epinephrine is the priority." },
-                { t: "Establish IV access", f: "IV access is secondary to immediate epinephrine." }
+            "id": "crit_6_4_1",
+            "scenario": "A 35-year-old man ate peanuts and now has hives, a swollen tongue and difficulty breathing. BP 100/70, SpO₂ 91%.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Adrenaline 0.3–0.5 mg IM (adult EpiPen) in the thigh, oxygen",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Diphenhydramine first",
+                    "f": "Adrenaline comes first in anaphylaxis."
+                },
+                {
+                    "t": "Hydrocortisone first",
+                    "f": "Give it after adrenaline."
+                },
+                {
+                    "t": "Observe",
+                    "f": "Airway edema: low threshold for adrenaline."
+                }
             ],
-            correct: 1,
-            explanation: "Epinephrine is the first-line treatment for anaphylaxis, especially with airway involvement.",
-            kpi: "Epinephrine administered within 5 minutes."
+            "correct": 0,
+            "explanation": "Two systems involved with airway edema: anaphylaxis. Adrenaline within 5 minutes.",
+            "kpi": "Adrenaline within 5 minutes of recognition."
         },
         {
-            id: "crit_6_4_2",
-            scenario: "A 45-year-old woman stung by a wasp develops wheezing, hypotension (BP 80/50), and generalized urticaria. She receives epinephrine 0.3 mg IM. Five minutes later, her BP is 85/55 and wheezing persists. What should you do next?",
-            question: "What is the appropriate next step?",
-            options: [
-                { t: "Repeat epinephrine 0.3 mg IM", f: "Correct. Persistent symptoms warrant repeat epinephrine." },
-                { t: "Give diphenhydramine 50 mg IV", f: "Antihistamines are adjuncts, not primary." },
-                { t: "Administer hydrocortisone 100 mg IV", f: "Steroids are not immediate life-saving agents." },
-                { t: "Start IV fluids", f: "Fluids are important, but epinephrine is still needed." }
+            "id": "crit_6_4_2",
+            "scenario": "A woman stung by a wasp received adrenaline 0.3 mg IM. Five minutes later BP is 85/55 and the wheeze persists.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Repeat adrenaline IM, fluid bolus 500–1000 mL, salbutamol",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Wait 30 minutes",
+                    "f": "Repeat every 5–15 minutes as needed."
+                },
+                {
+                    "t": "Antihistamine only",
+                    "f": "Not enough for persistent shock."
+                },
+                {
+                    "t": "Stop: adrenaline failed",
+                    "f": "Repeat it."
+                }
             ],
-            correct: 0,
-            explanation: "If symptoms persist after initial epinephrine, repeat doses every 5-15 minutes as needed.",
-            kpi: "Repeat epinephrine given and response documented."
+            "correct": 0,
+            "explanation": "Persistent symptoms: repeat adrenaline, treat shock with fluids, treat bronchospasm.",
+            "kpi": "Adrenaline within 5 minutes of recognition."
         },
         {
-            id: "crit_6_4_3",
-            scenario: "A 6-year-old child (weight 22 kg) with known peanut allergy develops lip swelling, hives, and stridor after eating a snack. The child is alert but anxious. What is the correct epinephrine dose?",
-            question: "Which dose should you administer?",
-            options: [
-                { t: "0.15 mg IM (pediatric EpiPen)", f: "Correct for weight 10-25 kg." },
-                { t: "0.3 mg IM (adult EpiPen)", f: "Adult dose is too high for this weight." },
-                { t: "0.01 mg/kg = 0.22 mg IM", f: "Also acceptable, but pediatric EpiPen is easier." },
-                { t: "0.5 mg IM", f: "Too high." }
+            "id": "crit_6_4_3",
+            "scenario": "A 6-year-old (22 kg) with peanut allergy has lip swelling, hives and stridor.",
+            "question": "Which adrenaline dose?",
+            "options": [
+                {
+                    "t": "Pediatric EpiPen 0.15 mg, or 0.01 mg/kg IM (maximum 0.3 mg)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "0.5 mg IM",
+                    "f": "Above the pediatric maximum."
+                },
+                {
+                    "t": "0.1 mg/kg IM",
+                    "f": "Ten times the dose."
+                },
+                {
+                    "t": "Diphenhydramine only",
+                    "f": "Stridor means anaphylaxis."
+                }
             ],
-            correct: 0,
-            explanation: "The pediatric EpiPen (0.15 mg) is appropriate for children weighing 10-25 kg. Weight-based 0.01 mg/kg is also correct but the auto-injector is preferred for rapid administration.",
-            kpi: "Epinephrine administered."
+            "correct": 0,
+            "explanation": "Use the drug calculator for weight-based dosing; repeat every 5–15 minutes as needed.",
+            "kpi": "Adrenaline within 5 minutes of recognition."
         },
         {
-            id: "crit_6_4_4",
-            scenario: "A patient with anaphylaxis receives epinephrine and improves. Ten minutes later, while en route, he becomes wheezy again and his BP drops to 80/50. What is the most likely explanation?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Biphasic reaction; administer another dose of epinephrine", f: "Correct. Recurrence of symptoms after initial improvement is typical of biphasic anaphylaxis." },
-                { t: "Inadequate initial dose; give diphenhydramine", f: "Diphenhydramine will not reverse hypotension." },
-                { t: "Pneumothorax; perform needle decompression", f: "No evidence of tension pneumothorax." },
-                { t: "Normal course; continue transport without intervention", f: "Deterioration requires immediate action." }
+            "id": "crit_6_4_4",
+            "scenario": "After adrenaline a patient improved, but 10 minutes later en route he is wheezy again with BP 80/50.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Repeat adrenaline IM, fluids and bronchodilator; continuous monitoring",
+                    "f": "Correct. Deterioration: repeat adrenaline."
+                },
+                {
+                    "t": "Hydrocortisone instead of adrenaline",
+                    "f": "Adrenaline first."
+                },
+                {
+                    "t": "Nothing: it will settle",
+                    "f": "He is deteriorating."
+                },
+                {
+                    "t": "IV adrenaline 1 mg",
+                    "f": "This is IM 1:1000 dosing."
+                }
             ],
-            correct: 0,
-            explanation: "Biphasic reactions can occur; repeat epinephrine is indicated.",
-            kpi: "Repeat epinephrine administered."
+            "correct": 0,
+            "explanation": "If deterioration: repeat adrenaline (flowchart).",
+            "kpi": "Adrenaline within 5 minutes of recognition."
         },
         {
-            id: "crit_6_4_5",
-            scenario: "A 70-year-old male with known coronary artery disease develops anaphylaxis after a bee sting. He has hives, stridor, and BP 85/55. What is your main concern regarding treatment?",
-            question: "Should you withhold epinephrine because of his cardiac history?",
-            options: [
-                { t: "Yes, epinephrine could cause a heart attack", f: "Incorrect; epinephrine is life-saving even with cardiac disease." },
-                { t: "No, epinephrine is indicated; the risk of anaphylaxis outweighs cardiac risk", f: "Correct. Anaphylaxis can be fatal; epinephrine is essential." },
-                { t: "Give a reduced dose of epinephrine", f: "Full dose is recommended; titrate based on response." },
-                { t: "Use IV fluids and steroids instead", f: "Inadequate for airway and hypotension." }
+            "id": "crit_6_4_5",
+            "scenario": "A 70-year-old man with coronary artery disease has hives, stridor and BP 85/55 after a bee sting.",
+            "question": "Do you withhold adrenaline?",
+            "options": [
+                {
+                    "t": "No: give IM adrenaline with caution and consult Telemedicine if needed",
+                    "f": "Correct. This is life-threatening anaphylaxis."
+                },
+                {
+                    "t": "Yes: cardiac disease is a contraindication",
+                    "f": "It calls for caution, not withholding."
+                },
+                {
+                    "t": "Give IV adrenaline 1 mg",
+                    "f": "Not the anaphylaxis dose."
+                },
+                {
+                    "t": "Antihistamine only",
+                    "f": "Insufficient."
+                }
             ],
-            correct: 1,
-            explanation: "There are no absolute contraindications to epinephrine in anaphylaxis; the benefit far outweighs the risk.",
-            kpi: "Epinephrine administered despite cardiac history."
+            "correct": 0,
+            "explanation": "Use caution with adrenaline in known cardiovascular disease, but treat anaphylaxis.",
+            "kpi": "Adrenaline within 5 minutes of recognition."
         }
     ]
 };

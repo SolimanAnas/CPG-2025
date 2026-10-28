@@ -1,372 +1,816 @@
-/* ========== Chapter 5.1 – Stroke ========== */
+/* ========== CPG 5.1 – Stroke ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c5-1",
-    title: "Stroke",
-    shortTitle: "5.1 Stroke",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#brain"/></svg> Stroke</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify suspected acute stroke or transient ischemic attack (TIA) to facilitate time‑sensitive transfer.</li>
-                <li>Minimize secondary brain injury through supportive care.</li>
-                <li>Ensure rapid transport to a stroke‑capable medical facility for definitive evaluation and treatment within the therapeutic window.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with signs and symptoms suggestive of acute stroke or TIA, including sudden onset of focal neurological deficits (e.g., weakness, numbness, or paralysis of face, arm, or leg).</li>
-                <li>Speech difficulties (e.g., slurred speech, aphasia, or inability to speak).</li>
-                <li>Vision changes (e.g., sudden loss of vision, double vision).</li>
-                <li>Dizziness, loss of balance, or coordination problems.</li>
-                <li>Severe headache with no known cause (e.g., suggestive of hemorrhagic stroke).</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Symptoms clearly attributable to another cause (e.g., hypoglycemia, seizure, or trauma) without stroke‑like features.</li>
-                <li>Patients with resolved symptoms and no ongoing neurological deficits (e.g., prior TIA with no new symptoms).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Stroke screening:</strong> Perform a 'BEFAST' assessment: Balance (sudden loss), Eyes (vision loss), Face (droop), Arms (drift), Speech (slurred), Time (last known well).</li>
-                <li><strong>Neurological deficit assessment:</strong> Identify focal neurological signs, gaze deviation, pupil asymmetry, facial paralysis. Use AVPU or GCS to quantify level of consciousness.</li>
-                <li><strong>Time of onset:</strong> Confirm the precise time symptoms began or when the patient was last known well (critical for thrombolytic or endovascular therapy eligibility).</li>
-                <li><strong>Glucose assessment:</strong> Check random blood sugar (RBS) to rule out hypoglycemia (<70 mg/dL) or hyperglycemia (>400 mg/dL), which can mimic stroke symptoms.</li>
-                <li><strong>Stroke mimics:</strong> Consider intracerebral lesions (tumor, abscess), seizures/post‑ictal states (Todd's paralysis), hemiplegic migraine, electrolyte abnormalities, conversion disorder.</li>
-                <li><strong>Triage category:</strong> All patients with signs of acute stroke are Red Priority.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary & secondary survey:</strong> As per Universal Care CPG.</li>
-                <li><strong>Consider ALS back‑up:</strong> As per Universal Care CPG.</li>
-                <li><strong>Patient positioning:</strong> Semi‑recumbent or with head elevated 15‑30° if alert.</li>
-                <li><strong>Oxygen:</strong> Administer to maintain SpO₂ ≥94% if hypoxia present; avoid routine oxygen in normoxic patients.</li>
-                <li><strong>Consider red flags:</strong> Onset within 4.5 hours (thrombolytic window) or up to 24 hours (endovascular window), rapidly deteriorating GCS, signs of increased ICP (unequal pupils, severe headache, vomiting), respiratory distress, suspected hemorrhagic stroke.</li>
-                <li><strong>12‑lead ECG:</strong> Perform, but do not delay transfer; can be done en route.</li>
-                <li><strong>IV access:</strong> Establish if needed; large bore (18g or larger) preferred for contrast CT, but do not delay scene time.</li>
-                <li><strong>Blood pressure management:</strong> Do not lower BP unless >220/120 mmHg with signs of end‑organ dysfunction (consult Tele‑EMS).</li>
-                <li><strong>Patient reassessment:</strong> Frequently reassess per Universal Care CPG (neurological status, GCS).</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Time‑sensitive transport: Patients with stroke symptoms and onset <4.5 hours should be rapidly transported to a stroke centre. Communicate clearly with Dispatch.</li>
-                <li>Accurate last known well (LKW) time is essential.</li>
-                <li>Do not lower blood pressure unless extreme; maintain cerebral perfusion.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>BEFAST is more sensitive than FAST alone.</li>
-                <li>Patients with resolving symptoms may still be candidates for treatment; transport.</li>
-                <li>If patient is on anticoagulants, note for hospital.</li>
-                <li>Consider seizure as a stroke mimic; if post‑ictal, still transport.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism/medical complaint (sudden onset, BEFAST findings), injuries/information (stroke mimics ruled out).</li>
-                <li>Signs: neurological exam, GCS, pupils, vital signs, RBS.</li>
-                <li>Treatment: time of onset/LKW, oxygen, IV access, ECG, stroke alert activation.</li>
-                <li>Allergies, medications (especially anticoagulants), background, other (scene findings, witness statements).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Perform and document a BEFAST assessment for all suspected stroke cases.</li>
-                <li>Perform an RBS for all patients with suspected stroke.</li>
-                <li>Initiate transport for all patients with stroke symptoms <4.5 hours from onset within 15 minutes of EMS arrival.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c5-1",
+    "title": "Stroke",
+    "shortTitle": "5.1 Stroke",
+    "guide": {
+        "cpg": "5.1",
+        "group": "neuro",
+        "groupLabel": "Neurology",
+        "title": "Stroke",
+        "lead": "Stroke is a time-critical transfer. Fix the time last known well, run a BEFAST, check glucose, and leave: onset under 4.5 hours goes to a stroke center within 15 minutes of arrival. Do not lower blood pressure unless it exceeds 220/120 with end-organ dysfunction.",
+        "source": {
+            "label": "CPG 5.1",
+            "pages": "139–142",
+            "pdf": "../pdf_sections/5_1_Stroke.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Suspected acute stroke or TIA: sudden focal weakness, numbness or paralysis; speech difficulty; sudden vision change; dizziness or loss of balance; severe headache with no known cause.",
+                    "A positive stroke screen (BEFAST)."
+                ],
+                "exclude": [
+                    "Symptoms clearly due to another cause (hypoglycemia, seizure, trauma) without stroke-like features.",
+                    "Resolved symptoms with no ongoing deficit (e.g. a prior TIA with no new symptoms)."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "BEFAST",
+                "icon": "brain",
+                "columns": [
+                    "",
+                    "Look for"
+                ],
+                "rows": [
+                    [
+                        "<b>B</b>alance",
+                        "Sudden loss of balance"
+                    ],
+                    [
+                        "<b>E</b>yes",
+                        "Vision loss"
+                    ],
+                    [
+                        "<b>F</b>ace",
+                        "Facial droop or asymmetry; uneven smile"
+                    ],
+                    [
+                        "<b>A</b>rms",
+                        "Unilateral weakness or drift"
+                    ],
+                    [
+                        "<b>S</b>peech",
+                        "Slurred speech or inability to speak clearly"
+                    ],
+                    [
+                        "<b>T</b>ime",
+                        "Exact time of onset, or last known well"
+                    ]
+                ],
+                "notes": [
+                    "Last known well is the moment the patient was last known normal. It decides eligibility for treatment and the destination hospital.",
+                    "Also: gaze deviation, pupil asymmetry, sensory loss or neglect; AVPU or GCS."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Surveys and back-up",
+                        "text": "Primary and secondary survey (Universal Care CPG); consider ALS back-up. All acute stroke patients are Red priority."
+                    },
+                    {
+                        "title": "Position",
+                        "text": "Semi-reclined, head up 15–30°, unless the patient must be supine for airway management."
+                    },
+                    {
+                        "title": "Oxygen only if hypoxic",
+                        "level": "EMR",
+                        "text": "Titrate to SpO<sub>2</sub> ≥94% (flowchart: &gt;94%). Avoid routine oxygen in normoxic patients."
+                    },
+                    {
+                        "title": "Glucose",
+                        "text": "Rule out hypoglycemia (&lt;70 mg/dL) and hyperglycemia. Abnormal: Hypoglycemia or Hyperglycemia CPG."
+                    },
+                    {
+                        "title": "Blood pressure",
+                        "text": "Do not lower it unless &gt;220/120 mmHg with signs of end-organ dysfunction: lowering it reduces cerebral perfusion in ischemic stroke. Contact Tele-EMS for exceptionally hypertensive patients."
+                    },
+                    {
+                        "title": "12-lead ECG",
+                        "level": "EMT",
+                        "text": "Do not delay transport: record it en route."
+                    },
+                    {
+                        "title": "IV access",
+                        "level": "EMT",
+                        "text": "18g or larger in a large peripheral vein: needed for contrast CT. Do not delay scene time for it."
+                    },
+                    {
+                        "title": "Reassess frequently",
+                        "text": "As per the Universal Care CPG."
+                    }
+                ]
+            },
+            {
+                "type": "pathways",
+                "title": "Destination (via Dispatch 2)",
+                "icon": "ambulance",
+                "paths": [
+                    {
+                        "title": "Onset or last known well &lt;4.5 hours",
+                        "tone": "shock",
+                        "steps": [
+                            {
+                                "text": "Stroke center, rapidly. Tell Dispatch 2 the symptoms and onset time."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "&gt;4.5 hours",
+                        "tone": "noshock",
+                        "steps": [
+                            {
+                                "text": "Other appropriate hospital, as directed by dispatch."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and mimics",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Onset within 4.5 hours (thrombolysis) or up to 24 hours (endovascular therapy).",
+                            "Rapidly falling GCS or loss of consciousness.",
+                            "Raised intracranial pressure: unequal pupils, severe headache, vomiting.",
+                            "Respiratory distress or SpO<sub>2</sub> &lt;90%.",
+                            "Suspected hemorrhage: sudden severe headache, seizures."
+                        ]
+                    },
+                    {
+                        "title": "Stroke mimics",
+                        "items": [
+                            "Hypoglycemia; electrolyte abnormalities (e.g. hyponatremia).",
+                            "Seizures and post-ictal states (Todd's paralysis).",
+                            "Intracerebral lesions (tumour, abscess); hemiplegic migraine.",
+                            "Conversion disorder (acute psychosocial stressors)."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "On the 12-lead",
+                        "items": [
+                            {
+                                "ecg": "afib",
+                                "label": "Atrial fibrillation",
+                                "sub": "Document it: a relevant history in stroke"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Documentation",
+                "icon": "notebook-pen",
+                "items": [
+                    "Time of onset or last known well, and the symptom timeline.",
+                    "BEFAST findings, GCS, pupils, vital signs and glucose; mimics considered.",
+                    "Oxygen and SpO<sub>2</sub>, IV and cannula size, stroke alert and hospital notification.",
+                    "Anticoagulants and antiplatelets; previous stroke, cardiovascular disease, atrial fibrillation."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "BEFAST performed and documented in every suspected stroke.",
+                    "Glucose (RBS) checked in every suspected stroke.",
+                    "Onset &lt;4.5 hours: transport started within 15 minutes of EMS arrival."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "6.9 Hyperglycemia",
+                        "href": "c6-9.html"
+                    },
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What does the 'B' in BEFAST stand for?",
-            options: ["Blood pressure", "Balance", "Breathing", "Bradycardia"],
-            correct: 1,
-            explanation: "BEFAST: Balance (sudden loss of balance/coordination), Eyes (vision loss), Face (droop), Arms (drift), Speech (slurred), Time."
+            "q": "What does the B in BEFAST stand for?",
+            "options": [
+                "Balance",
+                "Blood pressure",
+                "Breathing",
+                "Bradycardia"
+            ],
+            "correct": 0,
+            "explanation": "Balance, Eyes, Face, Arms, Speech, Time."
         },
         {
-            q: "A patient presents with sudden onset of right arm weakness and slurred speech. What is the priority assessment?",
-            options: ["Check blood glucose", "Perform 12‑lead ECG", "Obtain IV access", "Administer aspirin"],
-            correct: 0,
-            explanation: "Blood glucose should be checked immediately to rule out hypoglycemia, which can mimic stroke."
+            "q": "Sudden right arm weakness and slurred speech. Which check must not be missed?",
+            "options": [
+                "Blood glucose",
+                "Temperature",
+                "Peak flow",
+                "Capillary refill"
+            ],
+            "correct": 0,
+            "explanation": "Hypoglycemia is a common stroke mimic; RBS in every suspected stroke is a KPI."
         },
         {
-            q: "What is the time window for thrombolytic therapy in acute ischemic stroke?",
-            options: ["Within 3 hours", "Within 4.5 hours", "Within 6 hours", "Within 12 hours"],
-            correct: 1,
-            explanation: "Thrombolytics are typically administered within 4.5 hours of symptom onset."
+            "q": "What is the thrombolysis window used for destination decisions?",
+            "options": [
+                "4.5 hours",
+                "1 hour",
+                "12 hours",
+                "48 hours"
+            ],
+            "correct": 0,
+            "explanation": "Onset or last known well <4.5 hours: stroke center."
         },
         {
-            q: "A patient with suspected stroke has a blood glucose of 50 mg/dL. What should you do?",
-            options: ["Administer dextrose and reassess", "Transport as stroke alert", "Give aspirin", "Perform CT scan"],
-            correct: 0,
-            explanation: "Hypoglycemia can mimic stroke; treat and reassess neurological deficits."
+            "q": "Suspected stroke with glucose 50 mg/dL. What do you do?",
+            "options": [
+                "Treat as per the Hypoglycemia CPG and reassess",
+                "Stroke alert, no glucose",
+                "Give aspirin",
+                "Lower the BP"
+            ],
+            "correct": 0,
+            "explanation": "Glucose <70 mg/dL: go to the Hypoglycemia CPG."
         },
         {
-            q: "What is the target SpO₂ for a patient with suspected stroke?",
-            options: ["88‑92%", "94‑98%", "97‑100%", "As high as possible"],
-            correct: 1,
-            explanation: "Maintain SpO₂ ≥94% to avoid hypoxia; avoid hyperoxia unless necessary."
+            "q": "When is oxygen given in stroke?",
+            "options": [
+                "Only if hypoxic, to SpO₂ ≥94%",
+                "Always at 15 L/min",
+                "Never",
+                "Only if GCS <8"
+            ],
+            "correct": 0,
+            "explanation": "Avoid routine oxygen in normoxic patients."
         },
         {
-            q: "Which of the following is a stroke mimic?",
-            options: ["Hypoglycemia", "Migraine", "Seizure", "All of the above"],
-            correct: 3,
-            explanation: "Hypoglycemia, hemiplegic migraine, and post‑ictal (Todd's) paralysis can all mimic stroke."
+            "q": "Which is a stroke mimic?",
+            "options": [
+                "Todd's paralysis after a seizure",
+                "Atrial fibrillation",
+                "Hypertension",
+                "Facial droop"
+            ],
+            "correct": 0,
+            "explanation": "Mimics: hypoglycemia, seizures and post-ictal states, lesions, hemiplegic migraine, electrolyte disorders, conversion disorder."
         },
         {
-            q: "In a patient with suspected stroke, when should a 12‑lead ECG be obtained?",
-            options: ["Before transport", "En route, not delaying transport", "Only if chest pain present", "After hospital arrival"],
-            correct: 1,
-            explanation: "ECG can be performed en route; do not delay transport for it."
+            "q": "When is the 12-lead ECG recorded?",
+            "options": [
+                "En route: do not delay transport",
+                "Before leaving scene, always",
+                "Only with chest pain",
+                "Never in stroke"
+            ],
+            "correct": 0,
+            "explanation": "Perform it, but en route if stroke is suspected."
         },
         {
-            q: "What is the recommended position for a stroke patient with an intact airway?",
-            options: ["Supine flat", "Head elevated 15‑30°", "Trendelenburg", "Left lateral"],
-            correct: 1,
-            explanation: "Elevating the head 15‑30° may help reduce intracranial pressure."
+            "q": "How is an alert stroke patient positioned?",
+            "options": [
+                "Head up 15–30° (semi-reclined)",
+                "Flat supine",
+                "Head down",
+                "Prone"
+            ],
+            "correct": 0,
+            "explanation": "Unless supine positioning is needed for airway management."
         },
         {
-            q: "A patient with suspected stroke has a BP of 210/120 mmHg. What is the appropriate prehospital action?",
-            options: ["Give GTN to lower BP", "Administer labetalol", "Do not lower BP unless signs of end‑organ damage, consult Tele‑EMS", "Transport urgently"],
-            correct: 2,
-            explanation: "BP should generally not be lowered prehospital unless extreme (>220/120) with end‑organ dysfunction; consult Tele‑EMS."
+            "q": "BP 210/120 mmHg, no end-organ dysfunction. What do you do?",
+            "options": [
+                "Do not lower it",
+                "GTN",
+                "Give a beta-blocker",
+                "Fluid bolus"
+            ],
+            "correct": 0,
+            "explanation": "Lower BP only above 220/120 mmHg with end-organ dysfunction; contact Tele-EMS for exceptional hypertension."
         },
         {
-            q: "Which of the following is a sign of hemorrhagic stroke?",
-            options: ["Sudden severe headache", "Gradual weakness", "Slurred speech", "Facial droop"],
-            correct: 0,
-            explanation: "Sudden severe headache is classic for hemorrhagic stroke."
+            "q": "Which suggests hemorrhagic stroke?",
+            "options": [
+                "Sudden severe headache or seizures",
+                "Gradual weakness over weeks",
+                "Normal glucose",
+                "Mild facial droop alone"
+            ],
+            "correct": 0,
+            "explanation": "A red flag for suspected hemorrhage."
         },
         {
-            q: "What is the most critical piece of information to obtain for a suspected stroke patient?",
-            options: ["Past medical history", "Time of onset or last known well", "Medication list", "Family history"],
-            correct: 1,
-            explanation: "Time of onset determines eligibility for time‑sensitive treatments."
+            "q": "What is the most important time to establish?",
+            "options": [
+                "Last known well",
+                "Time of the 911 call",
+                "Last meal",
+                "Time of the last medication"
+            ],
+            "correct": 0,
+            "explanation": "It decides treatment eligibility and the destination."
         },
         {
-            q: "A patient with suspected stroke has a GCS of 8 and is unable to protect their airway. What should you do?",
-            options: ["Position supine", "Insert an advanced airway", "Give oxygen only", "Transport immediately"],
-            correct: 1,
-            explanation: "If GCS ≤8 and unable to protect airway, secure airway with supraglottic device or intubation."
+            "q": "Which level may give oxygen in this CPG?",
+            "options": [
+                "EMR",
+                "EMT only",
+                "P only",
+                "AP only"
+            ],
+            "correct": 0,
+            "explanation": "Oxygen is EMR; 12-lead and IV are EMT."
         },
         {
-            q: "Which of the following is part of the BEFAST assessment?",
-            options: ["Eyes (vision loss)", "Electrocardiogram", "Blood glucose", "Blood pressure"],
-            correct: 0,
-            explanation: "Eyes assess sudden vision loss or double vision."
+            "q": "Which is part of BEFAST?",
+            "options": [
+                "Eyes: vision loss",
+                "ECG",
+                "Electrolytes",
+                "End-tidal CO₂"
+            ],
+            "correct": 0,
+            "explanation": "E is for eyes."
         },
         {
-            q: "A patient with sudden onset of left-sided weakness and slurred speech has a blood glucose of 120 mg/dL. What is your next action?",
-            options: ["Treat as stroke and transport", "Give glucose", "Administer aspirin", "Perform 12‑lead ECG"],
-            correct: 0,
-            explanation: "Glucose is normal; proceed with stroke care and transport."
+            "q": "Left-sided weakness, slurred speech, glucose 120 mg/dL, onset 1 hour ago. Destination?",
+            "options": [
+                "Stroke center",
+                "Nearest clinic",
+                "Home",
+                "Any hospital after observation"
+            ],
+            "correct": 0,
+            "explanation": "Under 4.5 hours: stroke center, transport within 15 minutes of arrival."
         },
         {
-            q: "What is the 'golden hour' for stroke care?",
-            options: ["Time from onset to thrombolysis", "Time from EMS arrival to hospital arrival", "Time to CT scan", "Time to symptom recognition"],
-            correct: 0,
-            explanation: "Earlier treatment improves outcomes; aim for thrombolysis within 60 minutes of hospital arrival."
+            "q": "What is the scene-time KPI for onset under 4.5 hours?",
+            "options": [
+                "Transport within 15 minutes of EMS arrival",
+                "Within 45 minutes",
+                "No target",
+                "Within 2 hours"
+            ],
+            "correct": 0,
+            "explanation": "KPI 3."
         },
         {
-            q: "A patient with stroke symptoms has a history of atrial fibrillation. What is the significance?",
-            options: ["Increased risk of hemorrhagic stroke", "Increased risk of embolic stroke", "Contraindication to thrombolysis", "None"],
-            correct: 1,
-            explanation: "Atrial fibrillation increases risk of cardioembolic stroke."
+            "q": "Why document atrial fibrillation?",
+            "options": [
+                "It is relevant stroke history",
+                "It excludes stroke",
+                "It means hemorrhage",
+                "It is not relevant"
+            ],
+            "correct": 0,
+            "explanation": "Background history includes previous stroke, cardiovascular disease and atrial fibrillation."
         },
         {
-            q: "Which of the following is a contraindication to thrombolysis that you can identify prehospital?",
-            options: ["Recent surgery", "Active bleeding", "Stroke symptoms >4.5 hours", "All of the above"],
-            correct: 3,
-            explanation: "Many contraindications exist; note any history of bleeding, recent surgery, trauma, or anticoagulant use."
+            "q": "Why is an 18g or larger cannula preferred?",
+            "options": [
+                "It is needed for contrast CT",
+                "For blood transfusion only",
+                "It is easier to insert",
+                "It is not preferred"
+            ],
+            "correct": 0,
+            "explanation": "But do not delay scene time to place it."
         },
         {
-            q: "A patient with stroke symptoms has a witnessed seizure at onset. What should you consider?",
-            options: ["Stroke mimic (Todd's paralysis)", "Hemorrhagic stroke", "Embolic stroke", "None"],
-            correct: 0,
-            explanation: "Seizure at onset may indicate a stroke mimic; still transport for evaluation."
+            "q": "A seizure was witnessed at onset of weakness. What do you consider?",
+            "options": [
+                "A post-ictal state (Todd's paralysis) or hemorrhage",
+                "Nothing changes",
+                "TIA only",
+                "Migraine only"
+            ],
+            "correct": 0,
+            "explanation": "Post-ictal states mimic stroke; seizures are also a red flag for hemorrhage."
         },
         {
-            q: "What is the recommended fluid for a stroke patient who is hypotensive?",
-            options: ["D5W", "Normal saline bolus", "Ringers lactate", "No fluids"],
-            correct: 1,
-            explanation: "If hypotensive, give normal saline bolus; avoid over‑resuscitation."
+            "q": "When does the endovascular window extend to?",
+            "options": [
+                "Up to 24 hours",
+                "1 hour",
+                "4.5 hours only",
+                "72 hours"
+            ],
+            "correct": 0,
+            "explanation": "Thrombolysis within 4.5 hours; endovascular therapy up to 24 hours."
         },
         {
-            q: "A patient with stroke symptoms has a BP of 180/100 and is otherwise stable. Should you lower BP?",
-            options: ["Yes, give GTN", "Yes, give labetalol", "No, unless >220/120", "No, never"],
-            correct: 2,
-            explanation: "BP is below threshold for prehospital intervention; maintain cerebral perfusion."
+            "q": "BP 180/100 mmHg in a stable stroke patient. Do you lower it?",
+            "options": [
+                "No",
+                "Yes, with GTN",
+                "Yes, with fluids",
+                "Yes, to 120/80"
+            ],
+            "correct": 0,
+            "explanation": "Only above 220/120 with end-organ dysfunction."
         },
         {
-            q: "What is the role of supplemental oxygen in a normoxic stroke patient?",
-            options: ["Routine", "Not recommended", "Only if SpO₂ <94%", "Only if chest pain"],
-            correct: 2,
-            explanation: "Oxygen should only be given if SpO₂ <94%; hyperoxia may be harmful."
+            "q": "A normoxic stroke patient, SpO₂ 97%. Oxygen?",
+            "options": [
+                "No",
+                "Yes, high flow",
+                "Yes, 2 L/min routinely",
+                "Only via BVM"
+            ],
+            "correct": 0,
+            "explanation": "Routine oxygen should be avoided."
         },
         {
-            q: "Which of the following is a stroke mimic that may resolve with treatment?",
-            options: ["Hypoglycemia", "Migraine", "Seizure", "All of the above"],
-            correct: 3,
-            explanation: "Hypoglycemia, migraine, and post‑ictal states can resolve with appropriate treatment."
+            "q": "Which SpO₂ is a red flag?",
+            "options": [
+                "Below 90%",
+                "96%",
+                "98%",
+                "100%"
+            ],
+            "correct": 0,
+            "explanation": "Respiratory distress or hypoxia (SpO₂ <90%)."
         },
         {
-            q: "A patient with suspected stroke has a GCS of 15 and no deficits now, but family reports weakness 1 hour ago. What should you do?",
-            options: ["Discharge with advice", "Transport for evaluation", "Observe for 30 minutes", "Call Tele‑EMS"],
-            correct: 1,
-            explanation: "Transient ischemic attack (TIA) requires evaluation; transport."
+            "q": "Weakness lasted 30 minutes and has fully resolved; no ongoing deficit. Where does this sit?",
+            "options": [
+                "Excluded from this CPG: assess under Universal Care",
+                "Stroke center alert",
+                "Thrombolysis candidate",
+                "Red flag"
+            ],
+            "correct": 0,
+            "explanation": "Resolved symptoms with no ongoing deficit are excluded; the patient still needs assessment."
         },
         {
-            q: "What is the most common cause of ischemic stroke?",
-            options: ["Hemorrhage", "Embolism", "Thrombosis", "Vasospasm"],
-            correct: 2,
-            explanation: "Thrombosis (often from atherosclerosis) is common, but embolism (from heart) is also frequent."
+            "q": "Which sign suggests raised intracranial pressure?",
+            "options": [
+                "Unequal pupils, severe headache, vomiting",
+                "Warm skin",
+                "Normal GCS",
+                "Bradypnea from opioids"
+            ],
+            "correct": 0,
+            "explanation": "A red flag."
         },
         {
-            q: "A patient with stroke symptoms has a GCS of 6. What is the priority?",
-            options: ["Airway management", "12‑lead ECG", "IV access", "Blood glucose"],
-            correct: 0,
-            explanation: "Airway protection is priority in unconscious patient."
+            "q": "What triage category is acute stroke?",
+            "options": [
+                "Red",
+                "Yellow",
+                "Green",
+                "Depends on age"
+            ],
+            "correct": 0,
+            "explanation": "All patients with signs of acute stroke are Red priority."
         },
         {
-            q: "What is the target systolic blood pressure for a stroke patient with intracranial hemorrhage?",
-            options: ["<140 mmHg", "<160 mmHg", "<180 mmHg", "<200 mmHg"],
-            correct: 2,
-            explanation: "Guidelines vary; prehospital, avoid extremes and consult Tele‑EMS."
+            "q": "Who directs the destination decision?",
+            "options": [
+                "Dispatch 2, based on onset time",
+                "The family",
+                "The patient's GP",
+                "Nearest hospital always"
+            ],
+            "correct": 0,
+            "explanation": "Communicate symptoms and onset time to Dispatch 2."
         },
         {
-            q: "A patient with suspected stroke is on warfarin. What should you document?",
-            options: ["INR if known", "Last dose", "Reason for anticoagulation", "All of the above"],
-            correct: 3,
-            explanation: "Anticoagulation status is critical for treatment decisions."
+            "q": "Which medicines must be documented?",
+            "options": [
+                "Anticoagulants and antiplatelets",
+                "Vitamins only",
+                "None",
+                "Only insulin"
+            ],
+            "correct": 0,
+            "explanation": "Document chronic medications, especially anticoagulants and antiplatelets."
         },
         {
-            q: "Which of the following is a sign of increased intracranial pressure?",
-            options: ["Cushing's triad", "Decerebrate posturing", "Unequal pupils", "All of the above"],
-            correct: 3,
-            explanation: "Cushing's triad (hypertension, bradycardia, irregular breathing), posturing, and pupil changes indicate increased ICP."
+            "q": "Onset 6 hours ago. Destination per the flowchart?",
+            "options": [
+                "Other appropriate hospital, as directed by dispatch",
+                "Stroke center for thrombolysis",
+                "Home",
+                "Treat at scene"
+            ],
+            "correct": 0,
+            "explanation": "Over 4.5 hours: other appropriate hospital as directed."
         },
         {
-            q: "A patient with stroke symptoms has a rapid improvement in the ambulance. What should you do?",
-            options: ["Continue transport", "Return to scene", "Discharge", "Stop monitoring"],
-            correct: 0,
-            explanation: "Symptoms may recur; continue transport for evaluation."
+            "q": "Symptoms improve rapidly in the ambulance. What do you do?",
+            "options": [
+                "Continue transport and reassess",
+                "Return home",
+                "Stop monitoring",
+                "Discharge on scene"
+            ],
+            "correct": 0,
+            "explanation": "Reassess frequently; the patient still needs stroke evaluation."
         },
         {
-            q: "What is the maximum scene time goal for a suspected stroke patient?",
-            options: ["<10 minutes", "<15 minutes", "<20 minutes", "<30 minutes"],
-            correct: 1,
-            explanation: "Scene time should be minimised; goal <15 minutes for stroke patients."
+            "q": "Which are the KPIs?",
+            "options": [
+                "BEFAST, RBS, and transport within 15 minutes if onset <4.5 hours",
+                "CT in the ambulance",
+                "BP below 140",
+                "Oxygen in all"
+            ],
+            "correct": 0,
+            "explanation": "Three KPIs."
         }
     ],
-    flashcards: [
-        { category: "Assessment", question: "What does BEFAST stand for?", answer: "Balance, Eyes, Face, Arms, Speech, Time." },
-        { category: "Assessment", question: "What are common stroke mimics?", answer: "Hypoglycemia, seizure/post‑ictal (Todd's), migraine, electrolyte imbalance, conversion disorder." },
-        { category: "Time", question: "Why is time of onset important in stroke?", answer: "Determines eligibility for thrombolysis (within 4.5 hours) and endovascular therapy." },
-        { category: "Glucose", question: "Why check blood glucose in suspected stroke?", answer: "To rule out hypoglycemia, which can mimic stroke." },
-        { category: "Oxygen", question: "What is the oxygen target in stroke?", answer: "SpO₂ ≥94% if hypoxic; avoid routine oxygen." },
-        { category: "Positioning", question: "How should a stroke patient be positioned?", answer: "Semi‑recumbent with head elevated 15‑30° if alert." },
-        { category: "BP management", question: "When should BP be lowered in stroke?", answer: "Only if extreme (>220/120) with end‑organ damage, consult Tele‑EMS." },
-        { category: "ECG", question: "When should a 12‑lead ECG be performed?", answer: "En route, do not delay transport." },
-        { category: "IV access", question: "What size IV is preferred for stroke patients?", answer: "18g or larger for contrast CT, but do not delay scene time." },
-        { category: "Transport", question: "What is the scene time goal for stroke?", answer: "<15 minutes." },
-        { category: "Thrombolysis window", question: "What is the time window for thrombolysis?", answer: "Within 4.5 hours of symptom onset." },
-        { category: "Endovascular window", question: "What is the time window for endovascular therapy?", answer: "Up to 24 hours in select patients." },
-        { category: "Hemorrhagic stroke", question: "What is a classic symptom of hemorrhagic stroke?", answer: "Sudden severe headache." },
-        { category: "Ischemic stroke", question: "What is a common cause of ischemic stroke?", answer: "Thrombosis or embolism." },
-        { category: "Seizure mimic", question: "What is Todd's paralysis?", answer: "Post‑ictal focal weakness mimicking stroke." },
-        { category: "AVPU", question: "What is the AVPU scale used for?", answer: "Assess level of consciousness." },
-        { category: "GCS", question: "What is the Glasgow Coma Scale range?", answer: "3‑15." },
-        { category: "Airway", question: "When is advanced airway needed in stroke?", answer: "If GCS ≤8 or unable to protect airway." },
-        { category: "Cushing's triad", question: "What is Cushing's triad?", answer: "Hypertension, bradycardia, irregular breathing – sign of increased ICP." },
-        { category: "Anticoagulants", question: "Why is anticoagulant use important in stroke?", answer: "Contraindication or caution for thrombolysis." },
-        { category: "KPI", question: "What are the KPIs for stroke?", answer: "BEFAST documented, RBS checked, transport <15 minutes if within window." },
-        { category: "Stroke centre", question: "What type of hospital is preferred for stroke?", answer: "Comprehensive stroke centre with thrombolysis and endovascular capability." },
-        { category: "Dispatch", question: "What information should be given to Dispatch?", answer: "Stroke alert, time of onset, symptoms, patient age." },
-        { category: "Handover", question: "What is critical in stroke handover?", answer: "Last known well time, symptoms, BEFAST findings, glucose, anticoagulants." },
-        { category: "TIA", question: "What is a transient ischemic attack?", answer: "Temporary neurological deficit without infarction; still requires evaluation." },
-        { category: "Post‑ictal", question: "Can post‑ictal state mimic stroke?", answer: "Yes (Todd's paralysis)." },
-        { category: "Migraine", question: "Can migraine mimic stroke?", answer: "Yes (hemiplegic migraine)." },
-        { category: "Conversion disorder", question: "What is conversion disorder?", answer: "Psychological condition mimicking neurological deficit." },
-        { category: "Reassessment", question: "How often should stroke patient be reassessed?", answer: "Every 5‑10 minutes (neurological status)." },
-        { category: "Red flags", question: "What are red flags in stroke?", answer: "Rapid deterioration, GCS drop, seizures, severe headache." }
+    "flashcards": [
+        {
+            "question": "BEFAST",
+            "answer": "Balance, Eyes, Face, Arms, Speech, Time (last known well)."
+        },
+        {
+            "question": "Stroke mimics",
+            "answer": "Hypoglycemia; seizures and post-ictal states (Todd's); intracerebral lesions; hemiplegic migraine; electrolyte abnormalities; conversion disorder."
+        },
+        {
+            "question": "Why the onset time matters",
+            "answer": "Thrombolysis within 4.5 hours, endovascular therapy up to 24 hours; it decides the destination."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Check in every suspected stroke; <70 mg/dL or high: Hypo/Hyperglycemia CPG."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "Only if hypoxic: SpO₂ ≥94% (EMR). No routine oxygen."
+        },
+        {
+            "question": "Position",
+            "answer": "Head up 15–30°, unless supine is needed for the airway."
+        },
+        {
+            "question": "Blood pressure",
+            "answer": "Do not lower unless >220/120 mmHg with end-organ dysfunction; Tele-EMS for exceptional hypertension."
+        },
+        {
+            "question": "12-lead ECG",
+            "answer": "EMT; en route, never delaying transport."
+        },
+        {
+            "question": "IV access",
+            "answer": "EMT; 18g or larger (contrast CT); do not delay scene time."
+        },
+        {
+            "question": "Destination",
+            "answer": "<4.5 hours: stroke center. >4.5 hours: other appropriate hospital. Directed by Dispatch 2."
+        },
+        {
+            "question": "Scene time KPI",
+            "answer": "Transport within 15 minutes of EMS arrival if onset <4.5 hours."
+        },
+        {
+            "question": "Hemorrhagic stroke clues",
+            "answer": "Sudden severe headache, seizures."
+        },
+        {
+            "question": "Raised ICP signs",
+            "answer": "Unequal pupils, severe headache, vomiting."
+        },
+        {
+            "question": "Hypoxia red flag",
+            "answer": "SpO₂ <90% or respiratory distress."
+        },
+        {
+            "question": "Neurological red flag",
+            "answer": "Rapidly falling GCS or loss of consciousness."
+        },
+        {
+            "question": "Todd's paralysis",
+            "answer": "Post-ictal focal weakness that mimics stroke."
+        },
+        {
+            "question": "Last known well",
+            "answer": "The moment the patient was last known normal."
+        },
+        {
+            "question": "Triage",
+            "answer": "Red priority."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "Clear other cause without stroke-like features; resolved symptoms with no ongoing deficit."
+        },
+        {
+            "question": "Neurological examination",
+            "answer": "Focal signs, gaze deviation, pupils, facial paralysis; AVPU or GCS."
+        },
+        {
+            "question": "Communication",
+            "answer": "Tell Dispatch 2 the stroke symptoms and onset time."
+        },
+        {
+            "question": "Documentation essentials",
+            "answer": "Onset/LKW, BEFAST, GCS, pupils, vitals, RBS, cannula size, stroke alert, anticoagulants."
+        },
+        {
+            "question": "Relevant history",
+            "answer": "Previous stroke, cardiovascular disease, atrial fibrillation; anticoagulants and antiplatelets."
+        },
+        {
+            "question": "Why not lower BP routinely?",
+            "answer": "Autoregulation is impaired in ischemic stroke; lowering BP reduces cerebral perfusion."
+        },
+        {
+            "question": "Hemiplegic migraine",
+            "answer": "A stroke mimic."
+        },
+        {
+            "question": "Hyponatremia",
+            "answer": "An electrolyte stroke mimic."
+        },
+        {
+            "question": "Conversion disorder",
+            "answer": "A mimic linked to acute psychosocial stressors."
+        },
+        {
+            "question": "Inclusion symptoms",
+            "answer": "Sudden focal deficit, speech difficulty, vision change, loss of balance, unexplained severe headache."
+        },
+        {
+            "question": "TIA",
+            "answer": "Included when there is an acute deficit; excluded once resolved with no new symptoms."
+        },
+        {
+            "question": "KPIs",
+            "answer": "BEFAST documented; RBS performed; transport within 15 minutes if onset <4.5 hours."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_5_1_1",
-            scenario: "You are called to a 70‑year‑old male with sudden onset of left-sided weakness and slurred speech. Symptoms started 2 hours ago. Blood glucose is 110 mg/dL. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Perform BEFAST assessment", f: "Correct. Assess and document findings." },
-                { t: "Administer aspirin", f: "Not indicated without confirming ischemic stroke." },
-                { t: "Start oxygen", f: "Only if hypoxic." },
-                { t: "Give GTN", f: "Not indicated." }
+            "id": "crit_5_1_1",
+            "scenario": "A 70-year-old man has sudden left-sided weakness and slurred speech that began 2 hours ago. Glucose is 110 mg/dL, SpO₂ 97%.",
+            "question": "What is your plan?",
+            "options": [
+                {
+                    "t": "BEFAST, confirm last known well, notify Dispatch 2, leave within 15 minutes for a stroke center; 12-lead and IV en route",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Oxygen 15 L/min, 12-lead and IV before moving",
+                    "f": "No routine oxygen; do not delay transport for the ECG or IV."
+                },
+                {
+                    "t": "Lower his BP first",
+                    "f": "Only above 220/120 with end-organ dysfunction."
+                },
+                {
+                    "t": "Nearest hospital without pre-alert",
+                    "f": "Under 4.5 hours: stroke center via Dispatch 2."
+                }
             ],
-            correct: 0,
-            explanation: "Perform and document BEFAST to confirm stroke symptoms. Then initiate rapid transport and stroke alert.",
-            kpi: "BEFAST documented."
+            "correct": 0,
+            "explanation": "Time is the treatment: BEFAST, RBS, LKW, and transport within 15 minutes of arrival.",
+            "kpi": "Onset <4.5 hours: transport within 15 minutes of EMS arrival."
         },
         {
-            id: "crit_5_1_2",
-            scenario: "A 65‑year‑old female with sudden onset of right arm and leg weakness, facial droop, and aphasia. Last known well was 6 hours ago. Blood glucose 95 mg/dL. What is the appropriate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Transport to nearest stroke centre with endovascular capability", f: "Correct. Outside thrombolysis window but may be candidate for thrombectomy up to 24 hours." },
-                { t: "Administer aspirin", f: "Not prehospital." },
-                { t: "Do not transport – window missed", f: "Incorrect; thrombectomy possible." },
-                { t: "Give oxygen 15 L/min", f: "Not indicated." }
+            "id": "crit_5_1_2",
+            "scenario": "A 65-year-old woman has right-sided weakness and aphasia. She was last known well 6 hours ago. Glucose 95 mg/dL.",
+            "question": "Where do you go?",
+            "options": [
+                {
+                    "t": "The appropriate hospital as directed by dispatch (over 4.5 hours)",
+                    "f": "Correct. Note the endovascular window reaches up to 24 hours."
+                },
+                {
+                    "t": "Home: too late for treatment",
+                    "f": "She needs hospital care."
+                },
+                {
+                    "t": "Treat at scene",
+                    "f": "Transport."
+                },
+                {
+                    "t": "Any clinic",
+                    "f": "Follow the destination decision via Dispatch 2."
+                }
             ],
-            correct: 0,
-            explanation: "Even beyond 4.5 hours, patients may be candidates for endovascular therapy up to 24 hours. Transport to a comprehensive stroke centre.",
-            kpi: "Transport initiated; hospital notified of late window."
+            "correct": 0,
+            "explanation": "Last known well drives the destination; give Dispatch 2 the exact time.",
+            "kpi": "BEFAST performed and documented."
         },
         {
-            id: "crit_5_1_3",
-            scenario: "A 55‑year‑old male with sudden severe headache, vomiting, and GCS 12. BP 210/118. Pupils are unequal. What is your priority?",
-            question: "What is the most likely diagnosis and action?",
-            options: [
-                { t: "Ischemic stroke – give aspirin", f: "Signs suggest hemorrhagic stroke." },
-                { t: "Hemorrhagic stroke – rapid transport, elevate head, manage airway", f: "Correct. Suspect intracranial hemorrhage." },
-                { t: "Hypertensive emergency – give GTN", f: "GTN may worsen ICP." },
-                { t: "Migraine – treat with oxygen", f: "Incorrect." }
+            "id": "crit_5_1_3",
+            "scenario": "A 55-year-old man has a sudden severe headache, vomiting and GCS 12. BP 210/118 mmHg; pupils unequal.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat as suspected hemorrhage with raised ICP: airway, head up, rapid transport; do not lower BP",
+                    "f": "Correct. BP is below 220/120."
+                },
+                {
+                    "t": "GTN to bring BP down",
+                    "f": "Not indicated at this BP."
+                },
+                {
+                    "t": "Lie him flat",
+                    "f": "Head up 15–30° unless the airway requires supine."
+                },
+                {
+                    "t": "Wait to see if the headache settles",
+                    "f": "Red flags: transport rapidly."
+                }
             ],
-            correct: 1,
-            explanation: "Sudden severe headache, vomiting, and unequal pupils suggest hemorrhagic stroke. Rapid transport, elevate head, and protect airway.",
-            kpi: "Transport initiated; hospital notified."
+            "correct": 0,
+            "explanation": "Sudden severe headache, vomiting, unequal pupils and a falling GCS are red flags. Contact Tele-EMS for exceptional hypertension.",
+            "kpi": "Glucose (RBS) checked in every suspected stroke."
         },
         {
-            id: "crit_5_1_4",
-            scenario: "A 60‑year‑old female with acute onset of left-sided weakness and slurred speech. Blood glucose is 45 mg/dL. After IV dextrose, symptoms resolve completely. What should you do?",
-            question: "What is your next action?",
-            options: [
-                { t: "Discharge with advice", f: "Hypoglycemia treated, but still recommend evaluation." },
-                { t: "Transport for medical evaluation", f: "Correct. Hypoglycemia may have underlying cause; patient should be assessed." },
-                { t: "Repeat blood glucose in 15 minutes", f: "Can do en route." },
-                { t: "Give oral glucose and observe", f: "Transport still needed." }
+            "id": "crit_5_1_4",
+            "scenario": "A 60-year-old woman has left-sided weakness and slurred speech. Glucose is 45 mg/dL.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat as per the Hypoglycemia CPG, reassess the deficit, and transport",
+                    "f": "Correct. Hypoglycemia is a mimic."
+                },
+                {
+                    "t": "Stroke alert without treating glucose",
+                    "f": "Correct the glucose first."
+                },
+                {
+                    "t": "Lower BP",
+                    "f": "Not the problem."
+                },
+                {
+                    "t": "Leave her if she improves",
+                    "f": "She still needs medical evaluation."
+                }
             ],
-            correct: 1,
-            explanation: "Even though symptoms resolved, the patient should be transported for evaluation of the cause of hypoglycemia and to rule out other issues.",
-            kpi: "Transport recommended."
+            "correct": 0,
+            "explanation": "Glucose <70 mg/dL: Hypoglycemia CPG. If the deficit persists after correction, continue as stroke.",
+            "kpi": "Glucose (RBS) checked in every suspected stroke."
         },
         {
-            id: "crit_5_1_5",
-            scenario: "A 75‑year‑old male with sudden onset of right-sided weakness and aphasia. Last known well 1 hour ago. He is on warfarin for atrial fibrillation. BP 160/90, GCS 15. What is your priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer aspirin", f: "Contraindicated if on warfarin and possible hemorrhage." },
-                { t: "Rapid transport to stroke centre, note anticoagulation", f: "Correct. Thrombolysis may be contraindicated, but thrombectomy may be possible." },
-                { t: "Give vitamin K", f: "Not prehospital." },
-                { t: "Lower BP with labetalol", f: "BP not extreme." }
+            "id": "crit_5_1_5",
+            "scenario": "A 75-year-old man on an anticoagulant for atrial fibrillation has right-sided weakness and aphasia; last known well 1 hour ago. BP 160/90, GCS 15. The rhythm is shown below.",
+            "ecg": "afib",
+            "question": "What is your priority?",
+            "options": [
+                {
+                    "t": "Rapid transport to a stroke center; document the anticoagulant and AF",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stay to complete a 12-lead first",
+                    "f": "Record it en route."
+                },
+                {
+                    "t": "Lower BP to 120/80",
+                    "f": "Do not lower BP."
+                },
+                {
+                    "t": "Oxygen at high flow",
+                    "f": "Only if hypoxic."
+                }
             ],
-            correct: 1,
-            explanation: "Anticoagulation is critical information for hospital. Rapid transport for evaluation and possible thrombectomy.",
-            kpi: "Transport initiated; anticoagulation documented."
+            "correct": 0,
+            "explanation": "Under 4.5 hours: stroke center. Anticoagulants and AF are key handover information.",
+            "kpi": "Onset <4.5 hours: transport within 15 minutes of EMS arrival."
         }
     ]
 };

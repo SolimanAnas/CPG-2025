@@ -1,377 +1,756 @@
-/* ========== Chapter 6.3 � Adrenal Insufficiency ========== */
+/* ========== CPG 6.3 – Adrenal Insufficiency ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-3",
-    title: "Adrenal Insufficiency",
-    shortTitle: "6.3 Adrenal Insufficiency",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Adrenal Insufficiency (Addisonian Crisis)</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapid recognition and treatment of adrenal crisis to prevent cardiovascular collapse.</li>
-                <li>Prompt administration of hydrocortisone and fluid resuscitation.</li>
-                <li>Identify and manage precipitating factors (infection, trauma, stress, medication non-compliance).</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Known adrenal insufficiency (Addison�s disease) with signs of crisis (hypotension, altered mental status, vomiting, abdominal pain).</li>
-                <li>Suspected adrenal crisis in undiagnosed patient with shock not responding to standard therapy.</li>
-                <li>Patients on long-term corticosteroids with acute illness or injury.</li>
-                <li>Patients with medical alert bracelets indicating adrenal insufficiency.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None � treat empirically if suspicion is high.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Patient History:</strong> Known adrenal insufficiency, recent steroid use, autoimmune disease, recent infection, surgery, or trauma; check for medical alert bracelets.</li>
-                <li><strong>Symptoms:</strong> Severe weakness, fatigue, dizziness, nausea, vomiting, abdominal pain, confusion, seizures.</li>
-                <li><strong>Signs:</strong> Hypotension (especially postural), tachycardia, fever, hyperpigmentation (chronic), hypoglycemia, hyponatremia (if labs available).</li>
-                <li><strong>Consider in any patient with:</strong> Unexplained hypotension, poor response to fluids, or hyperkalemia (if known).</li>
-                <li><strong>Exclude other causes:</strong> Sepsis, hypovolemia, cardiac shock, anaphylaxis.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary Survey:</strong> Ensure airway patency, adequate breathing, and circulation. Give high-flow oxygen if hypoxic.</li>
-                <li><strong>Circulation:</strong>
-                    <ul>
-                        <li>Establish IV/IO access.</li>
-                        <li>Administer fluid bolus: <strong>500-1000 mL crystalloid (e.g., normal saline)</strong> rapidly; reassess.</li>
-                        <li>If no improvement, consider additional fluids and immediate corticosteroid administration.</li>
-                    </ul>
-                </li>
-                <li><strong>Glucose:</strong> Check blood glucose. If <70 mg/dL, give 50% dextrose 25 g IV (or 10% dextrose infusion).</li>
-                <li><strong>Hydrocortisone:</strong>
-                    <ul>
-                        <li>Administer hydrocortisone <strong>100 mg IV/IM</strong> as soon as possible.</li>
-                        <li>If hydrocortisone unavailable, consider methylprednisolone 50-100 mg IV or dexamethasone 4-8 mg IV.</li>
-                        <li>Do not delay steroids for diagnostic tests.</li>
-                    </ul>
-                </li>
-                <li><strong>Monitoring:</strong>
-                    <ul>
-                        <li>Continuous ECG, pulse oximetry, blood pressure every 5-10 minutes.</li>
-                        <li>Observe for response to fluids and steroids (usually improves within 30-60 minutes).</li>
-                    </ul>
-                </li>
-                <li><strong>Transport:</strong> Priority to nearest appropriate facility; notify receiving hospital of adrenal crisis.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Rapid deterioration can occur � monitor closely.</li>
-                <li>Fluid resuscitation may need to be repeated; avoid excessive fluid in patients with heart failure.</li>
-                <li>If patient has known steroid use, do not withhold steroids even if crisis not definite.</li>
-                <li>Hypoglycemia is common � treat aggressively.</li>
-                <li>Addisonian crisis is difficult to diagnose; most patients will inform you � check for medical alert bracelets.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Adrenal crisis can mimic septic shock; give steroids early if there is any suspicion.</li>
-                <li>Patients on chronic steroids may not have the classic hyperpigmentation.</li>
-                <li>If patient is unable to take oral maintenance steroids, IM/IV hydrocortisone is life-saving.</li>
-                <li>Document time of steroid administration � crucial for ongoing hospital care.</li>
-                <li>Common causes: medication non-compliance, infection, trauma, surgery, dehydration.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>History of adrenal insufficiency, steroid use, presenting symptoms.</li>
-                <li>Vital signs, blood glucose, response to fluids and steroids.</li>
-                <li>Medication(s) given (dose, route, time).</li>
-                <li>Fluids administered.</li>
-                <li>Hospital notification and transport details.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Hydrocortisone administered to suspected adrenal crisis within 30 minutes of identification.</li>
-                <li>Blood glucose checked and treated if <70 mg/dL.</li>
-                <li>Documentation of steroid administration (drug, dose, route, time).</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-3",
+    "title": "Adrenal Insufficiency",
+    "shortTitle": "6.3 Adrenal Insufficiency",
+    "guide": {
+        "cpg": "6.3",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Adrenal Insufficiency",
+        "lead": "Adrenal (Addisonian) crisis is rare and hard to spot: most patients will tell you, or wear an alert bracelet. Check glucose, treat hypotension with fluid, and give hydrocortisone (EMT) early in suspected crisis.",
+        "source": {
+            "label": "CPG 6.3",
+            "pages": "159–161",
+            "pdf": "../pdf_sections/6_3_Adrenal_Insufficiency.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Suspected adrenal insufficiency or crisis: severe fatigue or weakness; nausea, vomiting or abdominal pain; hypotension; confusion.",
+                    "Known adrenal insufficiency, chronic steroid use or recent steroid withdrawal; precipitants such as infection, trauma, stress or missed medication."
+                ],
+                "exclude": [
+                    "Symptoms clearly due to another cause (traumatic shock, anaphylaxis, cardiac arrest).",
+                    "No history or clinical suspicion of adrenal insufficiency."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "items": [
+                    "History: Addison's disease, chronic steroids or recent stopping; precipitating illness, fever, trauma, surgery or stress; alert bracelet.",
+                    "Severe weakness, fatigue or collapse; nausea, vomiting, diffuse abdominal pain without rigidity or rebound.",
+                    "Hyperpigmentation (darkened skin creases, buccal mucosa) in primary adrenal insufficiency.",
+                    "Glucose: hypoglycemia is &lt;70 mg/dL."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "SBP &lt;90 mmHg (adults) or age-specific hypotension.",
+                            "Persistent vomiting or unable to take oral intake.",
+                            "Altered mental status or unresponsiveness.",
+                            "Suspected infection: fever &gt;38°C, tachycardia.",
+                            "Known adrenal insufficiency with acute deterioration."
+                        ]
+                    },
+                    {
+                        "title": "Shock",
+                        "items": [
+                            "Hypotension, tachycardia, altered mental status, poor perfusion (capillary refill &gt;2 seconds): start fluid and hydrocortisone promptly."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Surveys and back-up",
+                        "text": "Primary and secondary survey; consider ALS back-up."
+                    },
+                    {
+                        "title": "Glucose",
+                        "text": "Hypoglycemia: Hypoglycemia CPG."
+                    },
+                    {
+                        "title": "IV access"
+                    },
+                    {
+                        "title": "Fluid for shock or dehydration",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate; reassess and repeat as needed; watch for fluid overload in patients with comorbidities.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL IV",
+                                "note": "Flowchart: 250–500 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg IV",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Hydrocortisone",
+                        "level": "EMT",
+                        "text": "Suspected adrenal crisis.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "100 mg IV/IM",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "2 mg/kg IV/IM (maximum 100 mg)",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tele-EMS",
+                        "text": "If the diagnosis is unclear or advice is needed."
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "SBP still &lt;90 mmHg: repeat the fluid bolus. Reassess frequently."
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Background",
+                "icon": "lightbulb",
+                "items": [
+                    "A sudden, severe deficiency of cortisol and often aldosterone; life-threatening.",
+                    "Most common cause: medication non-compliance. Others: infection, trauma, surgery, dehydration."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: hydrocortisone",
+                                "sub": "2 mg/kg, maximum 100 mg",
+                                "href": "../pages/drug-calculator.html?drug=Hydrocortisone",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Hydrocortisone given in suspected adrenal crisis.",
+                    "RBS performed and documented in suspected adrenal crisis."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "6.7 Fever and Sepsis",
+                        "href": "c6-7.html"
+                    },
+                    {
+                        "label": "6.10 Nausea and Vomiting",
+                        "href": "c6-10.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the initial fluid bolus for suspected adrenal crisis?",
-            options: ["250 mL crystalloid", "500-1000 mL crystalloid", "1-2 L colloid", "No fluids"],
-            correct: 1,
-            explanation: "Administer 500-1000 mL normal saline rapidly; reassess for further need."
+            "q": "What adult fluid bolus does the text give for shock or dehydration?",
+            "options": [
+                "500–1000 mL IV, reassess, repeat",
+                "100 mL",
+                "Two litres of colloid",
+                "No fluid"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 250–500 mL."
         },
         {
-            q: "What is the recommended dose of hydrocortisone for adrenal crisis?",
-            options: ["50 mg IV", "100 mg IV/IM", "200 mg IV", "25 mg IM"],
-            correct: 1,
-            explanation: "Hydrocortisone 100 mg IV/IM is the standard dose."
+            "q": "What is the adult hydrocortisone dose?",
+            "options": [
+                "100 mg IV/IM",
+                "10 mg IV",
+                "500 mg IV",
+                "25 mg orally"
+            ],
+            "correct": 0,
+            "explanation": "For suspected adrenal crisis (EMT)."
         },
         {
-            q: "A patient with known Addison�s disease presents with hypotension, vomiting, and confusion. What is the priority?",
-            options: ["IV fluids", "Hydrocortisone", "Blood glucose check", "All of the above"],
-            correct: 3,
-            explanation: "All are critical; fluids and steroids should be given rapidly, and glucose checked early."
+            "q": "Known Addison's disease with hypotension, vomiting and confusion. What do you do?",
+            "options": [
+                "Glucose, fluid bolus and hydrocortisone",
+                "Fluids only",
+                "Antiemetic only",
+                "Advise rest"
+            ],
+            "correct": 0,
+            "explanation": "Shock in suspected crisis: fluid and hydrocortisone promptly."
         },
         {
-            q: "Which of the following is a common precipitant of adrenal crisis?",
-            options: ["Infection", "Trauma", "Surgery", "All of the above"],
-            correct: 3,
-            explanation: "Stressors such as infection, trauma, or surgery can trigger adrenal crisis."
+            "q": "What is the most common cause of adrenal crisis?",
+            "options": [
+                "Medication non-compliance",
+                "Overdose of steroids",
+                "Hypertension",
+                "Asthma"
+            ],
+            "correct": 0,
+            "explanation": "Others: infection, trauma, surgery, dehydration."
         },
         {
-            q: "A patient with adrenal crisis has a blood glucose of 55 mg/dL. What should you administer?",
-            options: ["Glucagon", "Oral glucose", "50% dextrose 25 g IV", "No treatment"],
-            correct: 2,
-            explanation: "Treat hypoglycemia with IV dextrose."
+            "q": "Glucose 55 mg/dL in suspected crisis. What do you do?",
+            "options": [
+                "Treat as per the Hypoglycemia CPG",
+                "Ignore it",
+                "Hydrocortisone only",
+                "Wait for hospital"
+            ],
+            "correct": 0,
+            "explanation": "Hypoglycemia is <70 mg/dL."
         },
         {
-            q: "What finding on physical exam may suggest chronic adrenal insufficiency?",
-            options: ["Hyperpigmentation", "Pallor", "Cyanosis", "Jaundice"],
-            correct: 0,
-            explanation: "Hyperpigmentation of skin and mucous membranes can occur due to elevated ACTH."
+            "q": "Which sign suggests primary adrenal insufficiency?",
+            "options": [
+                "Hyperpigmentation of skin creases and buccal mucosa",
+                "Pallor of the nails",
+                "Jaundice",
+                "Cyanosis"
+            ],
+            "correct": 0,
+            "explanation": "Darkened skin creases and buccal mucosa."
         },
         {
-            q: "If hydrocortisone is unavailable, which alternative can be given?",
-            options: ["Prednisone 50 mg IV", "Methylprednisolone 50-100 mg IV", "Fludrocortisone", "No alternative"],
-            correct: 1,
-            explanation: "Methylprednisolone or dexamethasone can be substituted."
+            "q": "What is the pediatric hydrocortisone dose?",
+            "options": [
+                "2 mg/kg IV/IM (maximum 100 mg)",
+                "10 mg/kg",
+                "0.2 mg/kg",
+                "100 mg for all ages"
+            ],
+            "correct": 0,
+            "explanation": "Maximum 100 mg."
         },
         {
-            q: "What is the expected response time after IV hydrocortisone?",
-            options: ["Immediate", "30-60 minutes", "2-4 hours", "12 hours"],
-            correct: 1,
-            explanation: "Improvement in blood pressure and mental status usually occurs within 30-60 minutes."
+            "q": "Which level may give hydrocortisone?",
+            "options": [
+                "EMT",
+                "P only",
+                "AP only",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "Fluid and hydrocortisone are EMT on the flowchart."
         },
         {
-            q: "A patient on long-term prednisone presents with fever and hypotension. Should you give steroids?",
-            options: ["Yes, they may have adrenal suppression", "No, wait for hospital", "Only if cortisol level low", "Give fluids only"],
-            correct: 0,
-            explanation: "Chronic steroid use causes adrenal suppression; stress doses are indicated."
+            "q": "A patient on long-term steroids is febrile and hypotensive. Is this in scope?",
+            "options": [
+                "Yes: chronic steroid use with a precipitant",
+                "No",
+                "Only with Addison's",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "Chronic steroid use and infection are inclusion features."
         },
         {
-            q: "What electrolyte abnormality is often seen in adrenal crisis?",
-            options: ["Hyperkalemia", "Hyponatremia", "Both A and B", "Hypercalcemia"],
-            correct: 2,
-            explanation: "Adrenal insufficiency causes aldosterone deficiency ? sodium loss and potassium retention."
+            "q": "What does the abdominal examination usually show?",
+            "options": [
+                "Diffuse pain without rigidity or rebound",
+                "Board-like rigidity",
+                "A pulsatile mass",
+                "Rebound tenderness always"
+            ],
+            "correct": 0,
+            "explanation": "Rigidity or rebound points elsewhere."
         },
         {
-            q: "Which of the following is a contraindication to giving hydrocortisone?",
-            options: ["Hypotension", "Pregnancy", "Infection", "None � it is life-saving"],
-            correct: 3,
-            explanation: "In suspected adrenal crisis, do not withhold steroids � they are life-saving."
+            "q": "When should Tele-EMS be called?",
+            "options": [
+                "If the diagnosis is unclear or advice is needed",
+                "Before every fluid bolus",
+                "Never",
+                "Only after arrival"
+            ],
+            "correct": 0,
+            "explanation": "Consider Tele-EMS consultation."
         },
         {
-            q: "What is the most common cause of death in untreated adrenal crisis?",
-            options: ["Hypoglycemia", "Cardiovascular collapse", "Hyperkalemia", "Seizures"],
-            correct: 1,
-            explanation: "Hypotension and shock from lack of cortisol and aldosterone can be fatal."
+            "q": "Why is crisis life-threatening?",
+            "options": [
+                "Sudden severe cortisol (and often aldosterone) deficiency",
+                "Excess cortisol",
+                "Excess insulin",
+                "Allergy"
+            ],
+            "correct": 0,
+            "explanation": "As described in the CPG."
         },
         {
-            q: "A patient with adrenal crisis is unresponsive to fluids. What is the next step?",
-            options: ["Repeat fluids", "Administer vasopressors", "Give hydrocortisone", "Transport immediately"],
-            correct: 2,
-            explanation: "Steroids are essential; do not delay."
+            "q": "SBP stays below 90 mmHg after hydrocortisone and a bolus. What next?",
+            "options": [
+                "Repeat the fluid bolus and reassess",
+                "Stop all fluids",
+                "Second hydrocortisone dose at once",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart repeats the bolus after reassessment."
         },
         {
-            q: "What is the dose of dexamethasone if hydrocortisone is not available?",
-            options: ["2-4 mg IV", "10-15 mg IV", "20 mg IV", "0.5 mg IV"],
-            correct: 0,
-            explanation: "Dexamethasone 4-8 mg IV is acceptable."
+            "q": "What should you look for on the wrist?",
+            "options": [
+                "A medical alert bracelet",
+                "A watch",
+                "Tattoos",
+                "Pulse only"
+            ],
+            "correct": 0,
+            "explanation": "Most patients will tell you, or wear a bracelet."
         },
         {
-            q: "Which of the following should be monitored closely in adrenal crisis?",
-            options: ["Blood pressure", "Heart rhythm", "Oxygen saturation", "All of the above"],
-            correct: 3,
-            explanation: "Continuous monitoring is essential."
+            "q": "What must be watched during fluid therapy?",
+            "options": [
+                "Fluid overload, especially with comorbidities",
+                "Hyperthermia",
+                "Hypertension only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Reassess after each bolus."
         },
         {
-            q: "What is the typical Glasgow Coma Scale score in severe adrenal crisis?",
-            options: ["Normal", "Mildly decreased", "Severely decreased due to hypoglycemia and hypotension", "Always normal"],
-            correct: 2,
-            explanation: "Altered mental status is common from hypotension and hypoglycemia."
+            "q": "Which red flag suggests infection?",
+            "options": [
+                "Fever >38°C with tachycardia",
+                "Normal temperature",
+                "Bradycardia",
+                "Hyperpigmentation"
+            ],
+            "correct": 0,
+            "explanation": "A listed red flag."
         },
         {
-            q: "Why should you not delay steroids for diagnostic tests?",
-            options: ["Tests are unreliable", "Steroids are harmless", "Delaying increases mortality", "All of the above"],
-            correct: 2,
-            explanation: "Early steroid administration reduces mortality."
+            "q": "Which is excluded?",
+            "options": [
+                "Shock clearly due to trauma or anaphylaxis",
+                "Known Addison's with vomiting",
+                "Chronic steroids with fever",
+                "Recent steroid withdrawal"
+            ],
+            "correct": 0,
+            "explanation": "Symptoms clearly attributable to another cause."
         },
         {
-            q: "What is the preferred IV fluid for resuscitation in adrenal crisis?",
-            options: ["Dextrose 5%", "Normal saline", "Ringer�s lactate", "Colloids"],
-            correct: 1,
-            explanation: "Isotonic crystalloid (normal saline) is recommended."
+            "q": "What is the capillary refill threshold for poor perfusion?",
+            "options": [
+                ">2 seconds",
+                ">10 seconds",
+                ">30 seconds",
+                "Any value"
+            ],
+            "correct": 0,
+            "explanation": "Delayed capillary refill >2 seconds."
         },
         {
-            q: "A patient with adrenal insufficiency develops vomiting. They cannot take oral steroids. What should you do?",
-            options: ["Give IM hydrocortisone", "Wait for hospital", "Give oral steroids if tolerated", "Give fluids only"],
-            correct: 0,
-            explanation: "IM hydrocortisone is indicated when oral route is not possible."
+            "q": "A known Addisonian has been vomiting all day and cannot keep tablets down. What fits?",
+            "options": [
+                "Red flag: suspected adrenal crisis",
+                "Simple gastroenteritis, no action",
+                "Food poisoning only",
+                "Appendicitis"
+            ],
+            "correct": 0,
+            "explanation": "Persistent vomiting is a red flag."
         },
         {
-            q: "Which medication may precipitate adrenal crisis?",
-            options: ["Aspirin", "Metformin", "Etomidate", "Paracetamol"],
-            correct: 2,
-            explanation: "Etomidate (used for rapid sequence intubation) can suppress adrenal function."
+            "q": "Which fluids are used?",
+            "options": [
+                "Normal saline or Ringer's lactate",
+                "Dextrose 5% only",
+                "Colloids",
+                "Oral water"
+            ],
+            "correct": 0,
+            "explanation": "Crystalloid boluses."
         },
         {
-            q: "What is the KPI for adrenal crisis management?",
-            options: ["Fluid administration", "Hydrocortisone given within 30 minutes", "Blood glucose checked", "All of the above"],
-            correct: 3,
-            explanation: "All are important performance indicators."
+            "q": "What is the pediatric fluid bolus?",
+            "options": [
+                "20 mL/kg IV",
+                "5 mL/kg",
+                "40 mL/kg at once",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Reassess and repeat as needed."
         },
         {
-            q: "What is the role of hydrocortisone in adrenal crisis?",
-            options: ["Replaces cortisol", "Reverses hypoglycemia", "Improves vascular tone", "All of the above"],
-            correct: 3,
-            explanation: "Hydrocortisone provides both glucocorticoid and mineralocorticoid activity, improving blood pressure and glucose."
+            "q": "How common is Addisonian crisis in Dubai's ambulance setting?",
+            "options": [
+                "Relatively rare",
+                "The commonest call",
+                "Never seen",
+                "Daily"
+            ],
+            "correct": 0,
+            "explanation": "Rare, and difficult to diagnose."
         },
         {
-            q: "A known Addisonian patient has been vomiting for 24 hours. What should you suspect?",
-            options: ["Gastroenteritis", "Adrenal crisis", "Food poisoning", "Appendicitis"],
-            correct: 1,
-            explanation: "Vomiting and inability to take oral steroids can precipitate adrenal crisis."
+            "q": "What are the KPIs?",
+            "options": [
+                "Hydrocortisone in suspected crisis; RBS documented",
+                "Scene time under 5 minutes",
+                "Antibiotics given",
+                "CT ordered"
+            ],
+            "correct": 0,
+            "explanation": "Two KPIs."
         },
         {
-            q: "What is the recommended dose of 50% dextrose in an adult with hypoglycemia and adrenal crisis?",
-            options: ["25 g IV (50 mL)", "50 g IV", "10 g IV", "100 mL of 10% dextrose"],
-            correct: 0,
-            explanation: "Standard adult dose is 25 g (50 mL of 50% dextrose)."
+            "q": "Which history finding supports the diagnosis?",
+            "options": [
+                "Recent steroid discontinuation",
+                "Recent travel",
+                "A peanut allergy",
+                "Asthma"
+            ],
+            "correct": 0,
+            "explanation": "Chronic use or recent discontinuation of steroids."
         },
         {
-            q: "After administering hydrocortisone, what should you expect?",
-            options: ["Increased heart rate", "Rise in blood pressure", "Decreased consciousness", "Seizures"],
-            correct: 1,
-            explanation: "Blood pressure should improve within 30-60 minutes."
+            "q": "Which is NOT a feature of adrenal crisis listed here?",
+            "options": [
+                "Hypertension",
+                "Hypotension",
+                "Vomiting",
+                "Confusion"
+            ],
+            "correct": 0,
+            "explanation": "Hypotension, not hypertension."
         },
         {
-            q: "What should you do if a patient with adrenal crisis has a seizure?",
-            options: ["Give diazepam", "Check glucose", "Support airway", "All of the above"],
-            correct: 3,
-            explanation: "Seizure may be due to hypoglycemia or hypotension; treat ABCs and glucose."
+            "q": "What must be documented about hydrocortisone?",
+            "options": [
+                "Dose, route and time",
+                "Only the brand",
+                "Nothing",
+                "Only the batch"
+            ],
+            "correct": 0,
+            "explanation": "Plus fluid type, volume and response."
         },
         {
-            q: "Which of the following is NOT a sign of adrenal crisis?",
-            options: ["Hyperpigmentation", "Hypertension", "Abdominal pain", "Hypoglycemia"],
-            correct: 1,
-            explanation: "Hypertension is not a sign; hypotension is typical."
+            "q": "What is the hydrocortisone route?",
+            "options": [
+                "IV or IM",
+                "Oral only",
+                "Inhaled",
+                "Rectal"
+            ],
+            "correct": 0,
+            "explanation": "IV/IM."
         },
         {
-            q: "What is the primary goal of prehospital management?",
-            options: ["Definitive diagnosis", "Stabilization and rapid transport", "Withholding steroids", "IV antibiotics"],
-            correct: 1,
-            explanation: "Stabilize with fluids and steroids, then transport."
+            "q": "When is shock treated with hydrocortisone and fluids?",
+            "options": [
+                "Promptly, as soon as shock is recognised in suspected crisis",
+                "Only after hospital tests",
+                "After 2 hours",
+                "Never together"
+            ],
+            "correct": 0,
+            "explanation": "Initiate fluid and corticosteroid promptly."
         },
         {
-            q: "When should you suspect adrenal crisis in an undiagnosed patient?",
-            options: ["Unexplained shock", "Hypotension not responding to fluids", "Nausea, vomiting, weakness", "All of the above"],
-            correct: 3,
-            explanation: "Adrenal crisis should be considered in any patient with shock, especially with gastrointestinal symptoms."
+            "q": "Which allergies are specifically documented?",
+            "options": [
+                "Corticosteroid allergies",
+                "Pollen",
+                "Latex only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Known allergies, especially corticosteroids."
         },
         {
-            q: "What is the effect of hydrocortisone on potassium?",
-            options: ["Increases potassium", "Lowers potassium", "No effect", "Causes hyperkalemia"],
-            correct: 1,
-            explanation: "Hydrocortisone has mineralocorticoid activity, promoting potassium excretion."
+            "q": "Where does the flowchart send a patient without recent illness or injury?",
+            "options": [
+                "Non-Traumatic Shock CPG",
+                "Discharge",
+                "Stroke CPG",
+                "Burns CPG"
+            ],
+            "correct": 0,
+            "explanation": "Treat as per the Non-Traumatic Shock CPG."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is adrenal insufficiency?", answer: "A condition where the adrenal glands do not produce enough cortisol (and often aldosterone)." },
-        { category: "Addisonian crisis", question: "What is an Addisonian crisis?", answer: "Acute, life-threatening adrenal insufficiency with hypotension, shock, and altered mental status." },
-        { category: "Precipitants", question: "Name three common triggers of adrenal crisis.", answer: "Infection, trauma, surgery, stress, vomiting/diarrhea, or sudden cessation of steroids." },
-        { category: "Symptoms", question: "What are typical symptoms of adrenal crisis?", answer: "Weakness, nausea, vomiting, abdominal pain, confusion, hypotension, hypoglycemia." },
-        { category: "Physical signs", question: "What physical sign may suggest chronic adrenal insufficiency?", answer: "Hyperpigmentation of skin and mucous membranes (due to high ACTH)." },
-        { category: "Hydrocortisone dose", question: "What is the dose of hydrocortisone for adrenal crisis?", answer: "100 mg IV/IM." },
-        { category: "Alternative steroids", question: "If hydrocortisone is unavailable, what can you use?", answer: "Methylprednisolone 50-100 mg IV or dexamethasone 4-8 mg IV." },
-        { category: "Fluid resuscitation", question: "How much fluid should be given?", answer: "500-1000 mL normal saline bolus, reassess." },
-        { category: "Hypoglycemia treatment", question: "What glucose level requires treatment?", answer: "<70 mg/dL; give 25 g 50% dextrose IV." },
-        { category: "Electrolyte abnormalities", question: "What electrolyte changes occur in adrenal crisis?", answer: "Hyponatremia, hyperkalemia, hypoglycemia." },
-        { category: "Monitoring", question: "What should you monitor continuously?", answer: "ECG, SpO2, blood pressure (every 5-10 min), mental status." },
-        { category: "Response time", question: "How soon does hydrocortisone work?", answer: "Improvement usually seen within 30-60 minutes." },
-        { category: "KPI", question: "What is a key performance indicator for adrenal crisis?", answer: "Hydrocortisone administered within 30 minutes of identification." },
-        { category: "Steroid withdrawal", question: "Why do chronic steroid users need stress doses?", answer: "Adrenal suppression means they cannot mount a stress response." },
-        { category: "Etomidate risk", question: "Why should etomidate be used with caution?", answer: "It can cause adrenal suppression and precipitate crisis." },
-        { category: "Documentation", question: "What must be documented regarding steroid administration?", answer: "Drug, dose, route, time." },
-        { category: "Transport priority", question: "What is the transport priority for adrenal crisis?", answer: "Priority to nearest appropriate facility after stabilization." },
-        { category: "Common misdiagnosis", question: "What is adrenal crisis often mistaken for?", answer: "Septic shock, hypovolemic shock, gastroenteritis." },
-        { category: "Prevention", question: "How can adrenal crisis be prevented?", answer: "Stress-dose steroids during illness/injury and patient education." },
-        { category: "Hydrocortisone mechanism", question: "How does hydrocortisone help?", answer: "Replaces cortisol, improves vascular tone, corrects electrolyte imbalance, increases glucose." }
+    "flashcards": [
+        {
+            "question": "Adrenal crisis",
+            "answer": "Sudden severe cortisol (and often aldosterone) deficiency; life-threatening."
+        },
+        {
+            "question": "Most common cause",
+            "answer": "Medication non-compliance."
+        },
+        {
+            "question": "Other causes",
+            "answer": "Infection, trauma, surgery, dehydration."
+        },
+        {
+            "question": "Typical features",
+            "answer": "Severe weakness or collapse, nausea, vomiting, abdominal pain, hypotension, confusion."
+        },
+        {
+            "question": "Hyperpigmentation",
+            "answer": "Darkened skin creases and buccal mucosa in primary adrenal insufficiency."
+        },
+        {
+            "question": "Adult hydrocortisone",
+            "answer": "100 mg IV/IM (EMT)."
+        },
+        {
+            "question": "Pediatric hydrocortisone",
+            "answer": "2 mg/kg IV/IM, maximum 100 mg (EMT)."
+        },
+        {
+            "question": "Adult fluid bolus",
+            "answer": "500–1000 mL NS or RL (text); 250–500 mL on the flowchart."
+        },
+        {
+            "question": "Pediatric fluid bolus",
+            "answer": "20 mL/kg IV."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Check in all; <70 mg/dL: Hypoglycemia CPG."
+        },
+        {
+            "question": "Red flags",
+            "answer": "SBP <90; persistent vomiting; altered mental status; fever >38°C with tachycardia; known AI deteriorating."
+        },
+        {
+            "question": "Shock in suspected crisis",
+            "answer": "Fluid and hydrocortisone promptly."
+        },
+        {
+            "question": "Tele-EMS",
+            "answer": "When the diagnosis is unclear or advice is needed."
+        },
+        {
+            "question": "Persistent hypotension",
+            "answer": "Reassess and repeat the fluid bolus."
+        },
+        {
+            "question": "Fluid caution",
+            "answer": "Watch for overload in patients with comorbidities."
+        },
+        {
+            "question": "Diagnosis in the field",
+            "answer": "Difficult; patients usually tell you; check for alert bracelets."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "Another clear cause (traumatic shock, anaphylaxis, cardiac arrest); no suspicion of AI."
+        },
+        {
+            "question": "Abdominal findings",
+            "answer": "Diffuse pain without rigidity or rebound."
+        },
+        {
+            "question": "KPIs",
+            "answer": "Hydrocortisone in suspected crisis; RBS documented."
+        },
+        {
+            "question": "Documentation",
+            "answer": "History, precipitant, alert bracelet, vitals, cap refill, temperature, RBS, fluids and response, hydrocortisone dose/route/time."
+        },
+        {
+            "question": "Inclusion history",
+            "answer": "Adrenal insufficiency, chronic steroid use or recent withdrawal."
+        },
+        {
+            "question": "Level for fluids",
+            "answer": "EMT."
+        },
+        {
+            "question": "Poor perfusion",
+            "answer": "Cool clammy skin, capillary refill >2 seconds."
+        },
+        {
+            "question": "Flowchart branch without recent illness/injury",
+            "answer": "Non-Traumatic Shock CPG."
+        },
+        {
+            "question": "Frequency",
+            "answer": "Relatively rare in the Dubai ambulance setting."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_3_1",
-            scenario: "A 55-year-old known Addison�s disease patient is found collapsed at home. He is confused, BP 80/50, HR 120, blood glucose 45 mg/dL. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Give 50% dextrose 25 g IV", f: "Correct. Hypoglycemia is life-threatening; correct glucose first." },
-                { t: "Administer hydrocortisone 100 mg IV", f: "Important, but glucose should be given immediately." },
-                { t: "Start fluid bolus", f: "Also needed, but glucose first." },
-                { t: "Transport immediately", f: "Not without treatment." }
+            "id": "crit_6_3_1",
+            "scenario": "A 55-year-old man with Addison's disease is found collapsed and confused. BP 80/50, HR 120, glucose 45 mg/dL.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat hypoglycemia, fluid bolus, and hydrocortisone 100 mg IV/IM",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Fluids only",
+                    "f": "Hydrocortisone is the KPI in suspected crisis."
+                },
+                {
+                    "t": "Hydrocortisone only, ignore glucose",
+                    "f": "Correct the hypoglycemia too."
+                },
+                {
+                    "t": "Wait for hospital tests",
+                    "f": "Treat promptly."
+                }
             ],
-            correct: 0,
-            explanation: "Hypoglycemia must be treated urgently with IV dextrose. After that, give hydrocortisone and fluids.",
-            kpi: "Glucose checked and treated; hydrocortisone administered."
+            "correct": 0,
+            "explanation": "Check RBS, treat per the Hypoglycemia CPG, give fluid for shock, and hydrocortisone.",
+            "kpi": "Hydrocortisone given; RBS documented."
         },
         {
-            id: "crit_6_3_2",
-            scenario: "A 28-year-old with known Addison�s presents with vomiting and weakness. She is alert but pale. BP 90/60, HR 110. She took her morning hydrocortisone. What should you do?",
-            question: "What is the best next step?",
-            options: [
-                { t: "Administer additional hydrocortisone 100 mg IV", f: "Correct. Stress doses are needed despite morning dose." },
-                { t: "Wait for hospital", f: "She needs immediate steroids." },
-                { t: "Give fluids only", f: "Inadequate without steroids." },
-                { t: "Check cortisol level", f: "Not possible prehospital; treat empirically." }
+            "id": "crit_6_3_2",
+            "scenario": "A 28-year-old with Addison's disease has vomited all day and cannot keep her tablets down. BP 88/60, HR 110.",
+            "question": "What is the best next step?",
+            "options": [
+                {
+                    "t": "Hydrocortisone 100 mg IV/IM with a fluid bolus",
+                    "f": "Correct. Persistent vomiting and hypotension are red flags."
+                },
+                {
+                    "t": "Oral tablets again",
+                    "f": "She cannot tolerate oral intake."
+                },
+                {
+                    "t": "Antiemetic and leave",
+                    "f": "This is suspected crisis."
+                },
+                {
+                    "t": "No action: she took a morning dose",
+                    "f": "She has vomited it."
+                }
             ],
-            correct: 0,
-            explanation: "Even if she took her maintenance dose, stress dosing is required during illness.",
-            kpi: "Hydrocortisone given and documented."
+            "correct": 0,
+            "explanation": "Known adrenal insufficiency with acute deterioration: hydrocortisone and fluids.",
+            "kpi": "Hydrocortisone given; RBS documented."
         },
         {
-            id: "crit_6_3_3",
-            scenario: "A 45-year-old with no known adrenal disease presents with shock after a bout of gastroenteritis. He does not respond to two fluid boluses. What should you suspect?",
-            question: "What is the most likely diagnosis and next step?",
-            options: [
-                { t: "Septic shock � start antibiotics", f: "Possible, but adrenal crisis should be considered." },
-                { t: "Adrenal crisis � give hydrocortisone", f: "Correct. Unexplained shock after illness with poor fluid response is classic." },
-                { t: "Cardiogenic shock � give dopamine", f: "Not indicated." },
-                { t: "Hypovolemia � give more fluids", f: "Already done." }
+            "id": "crit_6_3_3",
+            "scenario": "A 6-year-old (20 kg) on long-term steroids for a chronic condition is febrile, lethargic and hypotensive for age.",
+            "question": "Which hydrocortisone dose?",
+            "options": [
+                {
+                    "t": "2 mg/kg IV/IM, by weight",
+                    "f": "Correct; maximum 100 mg."
+                },
+                {
+                    "t": "100 mg regardless of weight",
+                    "f": "Use the weight-based dose."
+                },
+                {
+                    "t": "None in children",
+                    "f": "Pediatric dosing is listed."
+                },
+                {
+                    "t": "0.2 mg/kg",
+                    "f": "Ten times too low."
+                }
             ],
-            correct: 1,
-            explanation: "Adrenal crisis can present as shock not responding to fluids; empiric steroids are indicated.",
-            kpi: "Steroids administered without delay."
+            "correct": 0,
+            "explanation": "Plus 20 mL/kg fluid bolus and a glucose check.",
+            "kpi": "Hydrocortisone given; RBS documented."
         },
         {
-            id: "crit_6_3_4",
-            scenario: "You administer hydrocortisone 100 mg IV and 1000 mL normal saline to a patient with adrenal crisis. His BP remains 85/55. What should you do next?",
-            question: "What is your next action?",
-            options: [
-                { t: "Give another fluid bolus", f: "Correct. Repeat fluid bolus as needed." },
-                { t: "Give additional hydrocortisone", f: "One dose is usually sufficient initially." },
-                { t: "Start norepinephrine infusion", f: "Consider if refractory, but fluids first." },
-                { t: "Transport immediately", f: "Stabilize before transport." }
+            "id": "crit_6_3_4",
+            "scenario": "After hydrocortisone and a fluid bolus, the BP of a patient in adrenal crisis is still 85/55.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Reassess and repeat the fluid bolus, watching for overload",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop treatment",
+                    "f": "Hypotension persists."
+                },
+                {
+                    "t": "Give a second hydrocortisone dose immediately",
+                    "f": "The flowchart repeats the fluid, not the steroid."
+                },
+                {
+                    "t": "Lie the patient flat and wait",
+                    "f": "Treat the hypotension."
+                }
             ],
-            correct: 0,
-            explanation: "Repeat fluid boluses until BP improves. Steroid effect may take time.",
-            kpi: "Fluid response documented."
+            "correct": 0,
+            "explanation": "Reassess; SBP <90 mmHg: crystalloid bolus. Consider Tele-EMS.",
+            "kpi": "Hydrocortisone given; RBS documented."
         },
         {
-            id: "crit_6_3_5",
-            scenario: "A patient with adrenal crisis becomes unresponsive with agonal breathing after IV dextrose. What is your immediate priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Re-check glucose", f: "Not the first step if breathing is agonal." },
-                { t: "Open airway and provide BVM ventilation", f: "Correct. Airway and breathing come first." },
-                { t: "Give naloxone", f: "Not indicated." },
-                { t: "Give additional hydrocortisone", f: "Will not reverse airway compromise." }
+            "id": "crit_6_3_5",
+            "scenario": "A man in shock has no history of adrenal disease, no steroid use and no recent illness.",
+            "question": "Which guideline applies?",
+            "options": [
+                {
+                    "t": "Non-Traumatic Shock CPG",
+                    "f": "Correct. No suspicion of adrenal insufficiency excludes this CPG."
+                },
+                {
+                    "t": "Give hydrocortisone routinely",
+                    "f": "Only in suspected adrenal crisis."
+                },
+                {
+                    "t": "Adrenal crisis protocol anyway",
+                    "f": "He is excluded."
+                },
+                {
+                    "t": "No treatment",
+                    "f": "Treat the shock."
+                }
             ],
-            correct: 1,
-            explanation: "Airway and breathing are always first. Support ventilation immediately.",
-            kpi: "Airway management performed."
+            "correct": 0,
+            "explanation": "Patients with no history or suspicion of adrenal insufficiency are excluded.",
+            "kpi": "RBS documented."
         }
     ]
 };

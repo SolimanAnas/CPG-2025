@@ -1,357 +1,816 @@
-/* ========== Chapter 6.1 – Abdominal Pain ========== */
+/* ========== CPG 6.1 – Abdominal Pain ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-1",
-    title: "Abdominal Pain",
-    shortTitle: "6.1 Abdominal Pain",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#stethoscope"/></svg> Abdominal Pain</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify life‑threatening causes of abdominal pain.</li>
-                <li>Improve patient comfort through appropriate pain management.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Abdominal pain or discomfort related to a non‑traumatic cause.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Abdominal pain due to trauma.</li>
-                <li>Abdominal pain related to pregnancy (see PV Hemorrhage in Pregnancy or Childbirth CPG).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Abdominal examination:</strong> Inspect for distension, bruising, visible abnormalities. Palpate for tenderness, rigidity, masses. Note rebound tenderness or guarding.</li>
-                <li><strong>Patient history:</strong> Use OPQRST and SAMPLE to identify likely cause. Investigate possibility of pregnancy.</li>
-                <li><strong>Consider red flags:</strong> Severe unrelenting pain, fever (>38°C), persistent vomiting or hematemesis, suspected pregnancy complications (ectopic, miscarriage).</li>
-                <li><strong>Evaluate for shock or instability:</strong> Hypotension (SBP <90 mmHg), tachycardia, altered mental status, poor perfusion.</li>
-                <li><strong>12‑lead ECG:</strong> Consider in patients >40 years or with ≥3 cardiac risk factors (smoking, obesity, diabetes, hypertension, high cholesterol, cardiovascular disease, family history).</li>
-                <li><strong>Determine triage category:</strong> Per Patient Triage Categories CPG.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and secondary survey:</strong> As per Universal Care CPG.</li>
-                <li><strong>Consider ALS back‑up:</strong> As per Universal Care CPG.</li>
-                <li><strong>Establish IV access:</strong> Indicated for dehydration, hypotension, or anticipated medication.</li>
-                <li><strong>Fluid resuscitation:</strong> If signs of shock or dehydration: adults 500‑1000 mL bolus, reassess; pediatrics 20 mL/kg bolus, reassess.</li>
-                <li><strong>Pain management:</strong> Assess and manage as per Pain Management CPG.</li>
-                <li><strong>If nausea/vomiting present:</strong> Manage as per Nausea & Vomiting CPG.</li>
-                <li><strong>Patient reassessment:</strong> Frequently reassess per Universal Care CPG.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Abdominal pain can be a medical emergency poorly detected prehospitally. All patients with non‑specific abdominal pain or persistent vomiting should be recommended to see a doctor.</li>
-                <li>Patients with early shock signs, unstable vitals, or suspected serious cause (e.g., appendicitis) should be transported routinely.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Common causes: gastroenteritis, appendicitis, bowel obstruction, pancreatitis, kidney stones, ectopic pregnancy, DKA, mesenteric ischemia.</li>
-                <li>Possible alternative causes: myocardial infarction (especially inferior MI), pneumonia, pulmonary embolism, aortic dissection, AAA.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Identification, mechanism/medical complaint, injuries/information (relevant history), signs (vital signs, abdominal exam findings), treatment (medications, IV fluids, pain scores), allergies, medications, background, other (ECG findings, pregnancy status).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Assess and document initial and post‑treatment pain score.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-1",
+    "title": "Abdominal Pain",
+    "shortTitle": "6.1 Abdominal Pain",
+    "guide": {
+        "cpg": "6.1",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Abdominal Pain",
+        "lead": "Abdominal pain hides emergencies that are hard to detect in an ambulance. Look for red flags and shock, think beyond the abdomen (MI, aortic disease, ectopic pregnancy), treat pain and fluid loss, and transport whenever a serious cause cannot be ruled out.",
+        "source": {
+            "label": "CPG 6.1",
+            "pages": "149–151",
+            "pdf": "../pdf_sections/6_1_Abdominal_Pain.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Non-traumatic abdominal pain or discomfort."
+                ],
+                "exclude": [
+                    "Abdominal pain due to trauma.",
+                    "Abdominal pain related to pregnancy."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "items": [
+                    "Inspect: distension, bruising, visible abnormalities.",
+                    "Palpate: tenderness, rigidity, masses; rebound tenderness or guarding.",
+                    "OPQRST and SAMPLE history; establish whether pregnancy is possible."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and shock",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Severe, unrelenting pain.",
+                            "Fever (&gt;38°C).",
+                            "Persistent vomiting or hematemesis.",
+                            "Suspected pregnancy complications (ectopic pregnancy, miscarriage)."
+                        ]
+                    },
+                    {
+                        "title": "Shock or instability",
+                        "items": [
+                            "SBP &lt;90 mmHg (adults) or age-specific hypotension.",
+                            "HR &gt;100 (adults) or age-specific tachycardia.",
+                            "Altered mental status.",
+                            "Poor perfusion: cool, clammy skin, delayed capillary refill."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Surveys and back-up",
+                        "text": "Primary and secondary survey (Universal Care CPG); consider ALS back-up."
+                    },
+                    {
+                        "title": "12-lead ECG",
+                        "text": "Age &gt;40 and 3 or more cardiac risk factors: smoking (current or stopped within 3 months), obesity, diabetes, hypertension, high cholesterol, cardiovascular disease, family history."
+                    },
+                    {
+                        "title": "IV access",
+                        "text": "For dehydration, hypotension or expected medication."
+                    },
+                    {
+                        "title": "Fluid for shock or dehydration",
+                        "level": "EMT",
+                        "text": "Normal saline or Ringer's lactate; reassess after each bolus and repeat as needed.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL bolus",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "20 mL/kg bolus",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Pain",
+                        "text": "Assess and treat as per the Pain Management CPG; record the score before and after."
+                    },
+                    {
+                        "title": "Hyoscine butylbromide",
+                        "level": "P",
+                        "text": "Abdominal or menstrual cramping (flowchart).",
+                        "doses": [
+                            {
+                                "drug": "Hyoscine butylbromide",
+                                "dose": "20 mg IV/IM",
+                                "note": "Adults only",
+                                "level": "P"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Nausea and vomiting",
+                        "text": "As per the Nausea and Vomiting CPG."
+                    },
+                    {
+                        "title": "Reassess frequently",
+                        "text": "As per the Universal Care CPG."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Causes to keep in mind",
+                "icon": "search",
+                "groups": [
+                    {
+                        "title": "Common",
+                        "items": [
+                            "Gastroenteritis, appendicitis, bowel obstruction, pancreatitis, kidney stones, ectopic pregnancy, DKA, mesenteric ischemia."
+                        ]
+                    },
+                    {
+                        "title": "Outside the gut",
+                        "items": [
+                            "Myocardial infarction, pneumonia or pulmonary embolus, CHF.",
+                            "Aortic dissection or aneurysm.",
+                            "Pregnancy, including ectopic."
+                        ]
+                    },
+                    {
+                        "title": "Other abdominal",
+                        "items": [
+                            "Peptic ulcer, gallbladder disease, GI bleeding."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Transport",
+                "icon": "ambulance",
+                "items": [
+                    "Transport routinely with early shock, unstable vital signs, a suspected serious cause (e.g. appendicitis), or when a serious cause cannot be ruled out.",
+                    "Non-specific pain or persistent vomiting with refusal: advise seeing a doctor as soon as possible."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Why the 12-lead matters",
+                        "items": [
+                            {
+                                "ecg": "stemiInf",
+                                "lead": "III",
+                                "label": "Inferior STEMI (lead III)",
+                                "sub": "Can present as epigastric pain"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator",
+                                "sub": "Weight-based fluid bolus",
+                                "href": "../pages/drug-calculator.html?drug=Normal%20Saline",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Initial and post-treatment pain scores assessed and documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    },
+                    {
+                        "label": "6.10 Nausea and Vomiting",
+                        "href": "c6-10.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    },
+                    {
+                        "label": "3.1 Chest Pain / ACS",
+                        "href": "c3-1.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "Which of the following is a red flag in a patient with abdominal pain?",
-            options: ["Mild tenderness", "Fever >38°C", "Intermittent pain", "Flatulence"],
-            correct: 1,
-            explanation: "Fever suggests infection or inflammation and is a red flag for serious pathology."
+            "q": "Which is a red flag in abdominal pain?",
+            "options": [
+                "Fever above 38°C",
+                "Mild tenderness",
+                "Intermittent mild pain",
+                "Flatulence"
+            ],
+            "correct": 0,
+            "explanation": "Also severe unrelenting pain, persistent vomiting or hematemesis, suspected pregnancy complications."
         },
         {
-            q: "A 55‑year‑old male with epigastric pain, nausea, and diaphoresis. He has a history of smoking and hypertension. What should you consider?",
-            options: ["Gastroenteritis", "Inferior myocardial infarction", "Pancreatitis", "Cholecystitis"],
-            correct: 1,
-            explanation: "Epigastric pain with cardiac risk factors may be an inferior MI. Perform a 12‑lead ECG."
+            "q": "A 55-year-old smoker with hypertension and diabetes has epigastric pain and sweating. What must you do?",
+            "options": [
+                "Record a 12-lead ECG: MI can present as abdominal pain",
+                "Treat as gastritis",
+                "Give an antiemetic only",
+                "Ignore cardiac causes"
+            ],
+            "correct": 0,
+            "explanation": "Over 40 with 3 or more cardiac risk factors: 12-lead ECG."
         },
         {
-            q: "What is the initial fluid bolus for an adult with abdominal pain and signs of shock?",
-            options: ["100 mL", "250‑500 mL", "500‑1000 mL", "2000 mL"],
-            correct: 2,
-            explanation: "Initial fluid bolus for adults is 500‑1000 mL crystalloid, reassess."
+            "q": "What is the adult fluid bolus for shock or dehydration?",
+            "options": [
+                "500–1000 mL, reassess, repeat as needed",
+                "100 mL",
+                "Two litres rapidly",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Normal saline or Ringer's lactate (EMT)."
         },
         {
-            q: "A 30‑year‑old female with RLQ pain, nausea, and low‑grade fever. What is a likely diagnosis?",
-            options: ["Appendicitis", "Ectopic pregnancy", "Ovarian cyst", "Gastroenteritis"],
-            correct: 0,
-            explanation: "RLQ pain with fever suggests appendicitis, but ectopic pregnancy must be ruled out in females of childbearing age."
+            "q": "What is the pediatric fluid bolus?",
+            "options": [
+                "20 mL/kg, reassess, repeat as needed",
+                "5 mL/kg",
+                "50 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Reassess after each bolus."
         },
         {
-            q: "What is the first step in pain management for a patient with severe abdominal pain?",
-            options: ["IV morphine", "Assess pain scale and treat per Pain CPG", "Oral paracetamol", "No analgesia until diagnosis"],
-            correct: 1,
-            explanation: "Assess pain using a scale and treat according to Pain Management CPG. Analgesia should not be withheld."
+            "q": "How is pain managed?",
+            "options": [
+                "As per the Pain Management CPG, with scores before and after",
+                "Withheld until diagnosis",
+                "Only at hospital",
+                "Only with oral drugs"
+            ],
+            "correct": 0,
+            "explanation": "Pain scoring before and after treatment is the KPI."
         },
         {
-            q: "A patient with abdominal pain is hypotensive and tachycardic. What is the priority?",
-            options: ["Pain relief", "IV fluid resuscitation", "Transport immediately", "12‑lead ECG"],
-            correct: 1,
-            explanation: "Treat shock with fluid resuscitation while preparing for transport."
+            "q": "Abdominal pain with SBP 80 and HR 125. What is the priority?",
+            "options": [
+                "Treat shock: IV access and fluid bolus, and transport",
+                "Pain relief first",
+                "12-lead first",
+                "Advice and discharge"
+            ],
+            "correct": 0,
+            "explanation": "Signs of shock: fluid resuscitation; transport routinely."
         },
         {
-            q: "Which of the following is a contraindication to giving opioids for abdominal pain?",
-            options: ["Hypotension", "Nausea", "Age >65", "None, use with caution"],
-            correct: 3,
-            explanation: "Opioids can be used with caution; hypotension is a relative contraindication, but pain relief is important."
+            "q": "Which drug relieves abdominal or menstrual cramping on the flowchart?",
+            "options": [
+                "Hyoscine butylbromide 20 mg IV/IM (adults, P)",
+                "Morphine 20 mg",
+                "Diclofenac for children",
+                "Metoclopramide"
+            ],
+            "correct": 0,
+            "explanation": "Adults only; Paramedic level."
         },
         {
-            q: "A 70‑year‑old male with sudden onset severe tearing abdominal pain radiating to the back. He has a history of hypertension. What should you suspect?",
-            options: ["Appendicitis", "AAA rupture or dissection", "Pancreatitis", "Bowel obstruction"],
-            correct: 1,
-            explanation: "Tearing pain radiating to the back in an elderly patient with hypertension suggests abdominal aortic aneurysm or dissection."
+            "q": "A 70-year-old hypertensive with sudden tearing pain radiating to the back. What do you suspect?",
+            "options": [
+                "Aortic dissection or aneurysm",
+                "Appendicitis",
+                "Gastroenteritis",
+                "Constipation"
+            ],
+            "correct": 0,
+            "explanation": "Aortic disease is a listed cause of abdominal pain."
         },
         {
-            q: "What is the role of a 12‑lead ECG in abdominal pain?",
-            options: ["Routine for all patients", "Only if >40 years or cardiac risk factors", "Not indicated", "Only if chest pain"],
-            correct: 1,
-            explanation: "Consider ECG in patients >40 years or with ≥3 cardiac risk factors to rule out MI."
+            "q": "Who needs a 12-lead ECG?",
+            "options": [
+                "Over 40 with 3 or more cardiac risk factors",
+                "Every patient",
+                "Nobody with abdominal pain",
+                "Only those with chest pain"
+            ],
+            "correct": 0,
+            "explanation": "As per the assessment criteria."
         },
         {
-            q: "A 25‑year‑female with lower abdominal pain and vaginal bleeding. What must be considered?",
-            options: ["Ectopic pregnancy", "Appendicitis", "PID", "Ovarian torsion"],
-            correct: 0,
-            explanation: "Ectopic pregnancy is a life‑threatening emergency; assess pregnancy status and transport rapidly."
+            "q": "Is pain related to pregnancy covered by this CPG?",
+            "options": [
+                "No: it is excluded",
+                "Yes, always",
+                "Only in the third trimester",
+                "Only with bleeding"
+            ],
+            "correct": 0,
+            "explanation": "Pregnancy-related and traumatic abdominal pain are excluded."
         },
         {
-            q: "What is the target pain score reduction after analgesia?",
-            options: ["At least 1 point", "At least 2 points", "At least 3 points", "To zero"],
-            correct: 2,
-            explanation: "Aim for a reduction of at least 3 points on a 0‑10 scale."
+            "q": "Which smoking history counts as a cardiac risk factor?",
+            "options": [
+                "Current, or stopped within the last 3 months",
+                "Stopped 10 years ago",
+                "Passive only",
+                "Never smoked"
+            ],
+            "correct": 0,
+            "explanation": "As defined in the ECG criteria."
         },
         {
-            q: "Which of the following is a sign of peritonitis?",
-            options: ["Rebound tenderness", "Guarding", "Rigidity", "All of the above"],
-            correct: 3,
-            explanation: "Rebound tenderness, guarding, and rigidity are signs of peritoneal irritation."
+            "q": "Which examination findings suggest peritoneal irritation?",
+            "options": [
+                "Rebound tenderness, guarding, rigidity",
+                "Soft, non-tender abdomen",
+                "Normal bowel sounds only",
+                "A healed scar"
+            ],
+            "correct": 0,
+            "explanation": "Note rebound and guarding on palpation."
         },
         {
-            q: "A patient with abdominal pain has a blood glucose of 450 mg/dL. What condition should be considered?",
-            options: ["DKA", "Pancreatitis", "Gastroenteritis", "Appendicitis"],
-            correct: 0,
-            explanation: "Hyperglycemia with abdominal pain may indicate DKA; check for other signs."
+            "q": "Abdominal pain with glucose 450 mg/dL. Which common cause fits?",
+            "options": [
+                "DKA",
+                "Appendicitis",
+                "Gastroenteritis only",
+                "Kidney stone"
+            ],
+            "correct": 0,
+            "explanation": "DKA is a listed common cause."
         },
         {
-            q: "What is the appropriate analgesia for moderate abdominal pain in an adult?",
-            options: ["IV morphine", "Oral paracetamol", "IV paracetamol", "Ketamine"],
-            correct: 2,
-            explanation: "IV paracetamol is appropriate for moderate pain; opioids for severe."
+            "q": "What is the HR threshold for adult tachycardia here?",
+            "options": [
+                ">100",
+                ">140",
+                ">60",
+                ">180"
+            ],
+            "correct": 0,
+            "explanation": "HR >100 in adults, age-specific in children."
         },
         {
-            q: "A patient with abdominal pain is vomiting. What medication can be considered?",
-            options: ["Metoclopramide", "Ondansetron", "Prochlorperazine", "All of the above"],
-            correct: 3,
-            explanation: "Antiemetics can be used; metoclopramide is commonly available."
+            "q": "The patient is vomiting persistently. Which CPG applies?",
+            "options": [
+                "Nausea and Vomiting",
+                "Seizures",
+                "Stroke",
+                "Epistaxis"
+            ],
+            "correct": 0,
+            "explanation": "Manage as per the Nausea and Vomiting CPG."
         },
         {
-            q: "What is the most common cause of abdominal pain in the elderly?",
-            options: ["Appendicitis", "Bowel obstruction", "Cholecystitis", "Diverticulitis"],
-            correct: 2,
-            explanation: "Cholecystitis and diverticulitis are common; presentation may be atypical."
+            "q": "When is IV access indicated?",
+            "options": [
+                "Dehydration, hypotension or expected medication",
+                "Every patient routinely",
+                "Never",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "As per the CPG."
         },
         {
-            q: "A patient with known AAA complains of sudden back pain and hypotension. What is the priority?",
-            options: ["Fluid resuscitation", "Pain relief", "Rapid transport to vascular centre", "12‑lead ECG"],
-            correct: 2,
-            explanation: "Suspected ruptured AAA requires immediate transport to a vascular centre."
+            "q": "A patient with non-specific pain refuses transport. What do you advise?",
+            "options": [
+                "See a doctor as soon as possible",
+                "Nothing",
+                "Wait a week",
+                "Take antibiotics"
+            ],
+            "correct": 0,
+            "explanation": "Abdominal emergencies are poorly detected in the ambulance."
         },
         {
-            q: "Which of the following is NOT a cardiac risk factor?",
-            options: ["Smoking", "Obesity", "Asthma", "Diabetes"],
-            correct: 2,
-            explanation: "Asthma is not a cardiac risk factor; smoking, obesity, diabetes, hypertension, hyperlipidemia, and family history are."
+            "q": "Which is NOT one of the cardiac risk factors listed?",
+            "options": [
+                "Asthma",
+                "Smoking",
+                "Obesity",
+                "Diabetes"
+            ],
+            "correct": 0,
+            "explanation": "Also hypertension, high cholesterol, cardiovascular disease, family history."
         },
         {
-            q: "A patient with abdominal pain has a rigid, board‑like abdomen. What does this indicate?",
-            options: ["Bowel obstruction", "Peritonitis", "Constipation", "Gas"],
-            correct: 1,
-            explanation: "Rigid abdomen suggests peritonitis, often from perforation."
+            "q": "Which patients should be transported routinely?",
+            "options": [
+                "Early shock, unstable vitals, or a serious cause suspected or not ruled out",
+                "Only those who ask",
+                "None",
+                "Only children"
+            ],
+            "correct": 0,
+            "explanation": "When a serious cause cannot be ruled out, transport."
         },
         {
-            q: "What is the maximum fluid bolus for an adult with abdominal pain and shock?",
-            options: ["1000 mL", "1500 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Maximum total fluid bolus is 2000 mL, with frequent reassessment."
+            "q": "What SBP defines adult hypotension here?",
+            "options": [
+                "<90 mmHg",
+                "<120 mmHg",
+                "<70 mmHg",
+                "<50 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Age-specific values for children."
         },
         {
-            q: "A 40‑year‑old male with epigastric pain radiating to the back, relieved by leaning forward. What is the likely diagnosis?",
-            options: ["Pancreatitis", "Cholecystitis", "Gastritis", "MI"],
-            correct: 0,
-            explanation: "Pancreatitis pain often radiates to the back and may be relieved by leaning forward."
+            "q": "Which is a non-abdominal cause of abdominal pain?",
+            "options": [
+                "Pneumonia or pulmonary embolus",
+                "Appendicitis",
+                "Gallbladder disease",
+                "Peptic ulcer"
+            ],
+            "correct": 0,
+            "explanation": "Also MI, CHF and aortic disease."
         },
         {
-            q: "In a female of childbearing age with abdominal pain, what question is essential?",
-            options: ["Last menstrual period", "Contraception use", "History of STIs", "All of the above"],
-            correct: 3,
-            explanation: "LMP helps assess possibility of pregnancy; contraception and STI history may guide differential."
+            "q": "A woman of child-bearing age has lower abdominal pain. What must the history establish?",
+            "options": [
+                "Whether pregnancy is possible",
+                "Her favourite food",
+                "Her blood group",
+                "Nothing extra"
+            ],
+            "correct": 0,
+            "explanation": "Exclude pregnancy; suspected pregnancy complications are a red flag."
         },
         {
-            q: "What is the initial management for suspected ectopic pregnancy?",
-            options: ["IV fluids, pain relief, rapid transport", "Pelvic exam", "Give oxytocin", "Ultrasound"],
-            correct: 0,
-            explanation: "Supportive care and rapid transport to a facility with surgical capability."
+            "q": "A suspected ectopic pregnancy with shock. What do you do?",
+            "options": [
+                "Treat shock and transport urgently",
+                "Advise rest at home",
+                "Hyoscine and discharge",
+                "Wait for pain to settle"
+            ],
+            "correct": 0,
+            "explanation": "A red flag with shock: fluids and transport."
         },
         {
-            q: "A patient with abdominal pain has a history of gastric bypass surgery. What complication should be considered?",
-            options: ["Internal hernia", "Bowel obstruction", "Anastomotic leak", "All of the above"],
-            correct: 3,
-            explanation: "Post‑surgical patients are at risk for various complications; transport for evaluation."
+            "q": "Which history items are documented?",
+            "options": [
+                "Food intake, medications, bowel habits, associated symptoms",
+                "Only the pain score",
+                "Only allergies",
+                "Only vital signs"
+            ],
+            "correct": 0,
+            "explanation": "Plus fever, diarrhea, hematemesis."
         },
         {
-            q: "Which of the following is a sign of hypovolemic shock in abdominal pain?",
-            options: ["Tachycardia", "Hypotension", "Delayed capillary refill", "All of the above"],
-            correct: 3,
-            explanation: "All are signs of shock; early recognition is key."
+            "q": "Which is a sign of poor perfusion?",
+            "options": [
+                "Cool, clammy skin and delayed capillary refill",
+                "Warm pink skin",
+                "Normal BP",
+                "Bradycardia"
+            ],
+            "correct": 0,
+            "explanation": "A sign of shock or instability."
         },
         {
-            q: "A patient with abdominal pain and jaundice may have which condition?",
-            options: ["Cholecystitis", "Choledocholithiasis", "Pancreatitis", "Hepatitis"],
-            correct: 3,
-            explanation: "Jaundice suggests liver or biliary involvement; hepatitis, cholangitis, or gallstones."
+            "q": "Who may give hyoscine butylbromide for cramping?",
+            "options": [
+                "Paramedic, adults only",
+                "EMR",
+                "EMT for children",
+                "Any responder"
+            ],
+            "correct": 0,
+            "explanation": "20 mg IV/IM, adults only."
         },
         {
-            q: "What is the role of Trendelenburg position in abdominal pain?",
-            options: ["Improve cardiac output", "Not recommended", "Reduce pain", "Prevent aspiration"],
-            correct: 1,
-            explanation: "Trendelenburg is not recommended; it may impair breathing."
+            "q": "Abdominal pain with an irregular rhythm (AF) and severe diffuse pain. Which listed cause fits?",
+            "options": [
+                "Mesenteric ischemia",
+                "Gastroenteritis",
+                "Constipation",
+                "Menstrual cramps"
+            ],
+            "correct": 0,
+            "explanation": "Mesenteric ischemia is a listed common cause."
         },
         {
-            q: "A patient with abdominal pain has a history of atrial fibrillation. What should you consider?",
-            options: ["Mesenteric ischemia", "Splenic infarction", "Renal infarction", "All of the above"],
-            correct: 3,
-            explanation: "AF can cause emboli to mesenteric, splenic, or renal arteries."
+            "q": "Hematemesis with abdominal pain is…",
+            "options": [
+                "A red flag",
+                "Normal",
+                "A sign of constipation",
+                "Not relevant"
+            ],
+            "correct": 0,
+            "explanation": "Persistent vomiting or hematemesis."
         },
         {
-            q: "What is the correct triage category for a patient with abdominal pain and signs of shock?",
-            options: ["Green", "Yellow", "Red", "Blue"],
-            correct: 2,
-            explanation: "Signs of shock indicate Red Priority."
+            "q": "What does the KPI measure?",
+            "options": [
+                "Pain scores before and after treatment",
+                "Scene time",
+                "ECG within 5 minutes",
+                "Fluid volume"
+            ],
+            "correct": 0,
+            "explanation": "Assess and document both scores."
         },
         {
-            q: "How often should you reassess a stable patient with abdominal pain?",
-            options: ["Every 5 min", "Every 10 min", "Every 15 min", "Every 30 min"],
-            correct: 2,
-            explanation: "Yellow/green priority patients require reassessment every 15 minutes."
+            "q": "Which survey is done first?",
+            "options": [
+                "Primary and secondary survey per Universal Care",
+                "Pain score only",
+                "Pelvic exam",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Then consider ALS back-up and red flags."
         }
     ],
-    flashcards: [
-        { category: "Red flags", question: "Name four red flags in abdominal pain.", answer: "Severe unrelenting pain, fever >38°C, persistent vomiting/hematemesis, suspected ectopic pregnancy." },
-        { category: "Causes", question: "List five common causes of abdominal pain.", answer: "Gastroenteritis, appendicitis, bowel obstruction, pancreatitis, kidney stones, cholecystitis." },
-        { category: "Causes", question: "What cardiac conditions can present as abdominal pain?", answer: "Inferior MI, aortic dissection, AAA." },
-        { category: "Examination", question: "What does rebound tenderness indicate?", answer: "Peritoneal irritation (peritonitis)." },
-        { category: "Examination", question: "What is guarding?", answer: "Involuntary muscle contraction over an inflamed area." },
-        { category: "Examination", question: "What does a rigid, board‑like abdomen suggest?", answer: "Perforation with peritonitis." },
-        { category: "Assessment", question: "Why is a 12‑lead ECG indicated in some abdominal pain patients?", answer: "To rule out inferior MI or ischaemia." },
-        { category: "Cardiac risk factors", question: "List cardiac risk factors that warrant ECG in abdominal pain.", answer: "Age >40, smoking, obesity, diabetes, hypertension, high cholesterol, CVD, family history." },
-        { category: "Shock", question: "What are signs of shock in abdominal pain?", answer: "Hypotension, tachycardia, altered mental status, poor perfusion." },
-        { category: "Fluids", question: "What is the initial fluid bolus for an adult with abdominal pain and shock?", answer: "500‑1000 mL crystalloid." },
-        { category: "Fluids pediatric", question: "What is the initial fluid bolus for a child with abdominal pain and shock?", answer: "20 mL/kg." },
-        { category: "Pain management", question: "What is the goal of pain management in abdominal pain?", answer: "Reduce pain score by at least 3 points." },
-        { category: "Pain scale", question: "What pain scales are used for adults and children?", answer: "0‑10 numeric scale; Wong‑Baker FACES for children." },
-        { category: "Nausea", question: "What antiemetic can be used for vomiting with abdominal pain?", answer: "Metoclopramide 10 mg IV/IM." },
-        { category: "Ectopic pregnancy", question: "What are signs of ectopic pregnancy?", answer: "Lower abdominal pain, vaginal bleeding, missed period, possibly shock." },
-        { category: "Ectopic management", question: "What is the prehospital management of suspected ectopic?", answer: "IV fluids, pain relief, rapid transport." },
-        { category: "AAA", question: "What are symptoms of ruptured AAA?", answer: "Sudden tearing back/abdominal pain, hypotension, pulsatile mass." },
-        { category: "AAA management", question: "What is the priority for suspected AAA?", answer: "Rapid transport to vascular centre." },
-        { category: "Pancreatitis", question: "What is a classic symptom of pancreatitis?", answer: "Epigastric pain radiating to the back, relieved by leaning forward." },
-        { category: "Appendicitis", question: "What are typical symptoms of appendicitis?", answer: "RLQ pain, fever, nausea, anorexia." },
-        { category: "Cholecystitis", question: "What are symptoms of cholecystitis?", answer: "RUQ pain, fever, nausea, pain after fatty meals." },
-        { category: "Bowel obstruction", question: "What are signs of bowel obstruction?", answer: "Distension, vomiting, constipation, abdominal pain." },
-        { category: "Diverticulitis", question: "What are symptoms of diverticulitis?", answer: "LLQ pain, fever, change in bowel habits." },
-        { category: "Mesenteric ischaemia", question: "Who is at risk for mesenteric ischaemia?", answer: "Elderly with AF, heart failure, or hypercoagulable states." },
-        { category: "DKA", question: "What abdominal symptoms can DKA cause?", answer: "Nausea, vomiting, abdominal pain." },
-        { category: "KPI", question: "What is the key performance indicator for abdominal pain?", answer: "Assess and document pain score before and after treatment." },
-        { category: "Transport", question: "When should a patient with abdominal pain be transported?", answer: "If unstable, red flags present, or serious cause suspected." },
-        { category: "Reassessment", question: "How often should a stable patient with abdominal pain be reassessed?", answer: "Every 15 minutes." },
-        { category: "Unstable", question: "How often should an unstable patient be reassessed?", answer: "Every 5 minutes." },
-        { category: "Pregnancy test", question: "Why ask about last menstrual period?", answer: "To assess possibility of pregnancy and ectopic." }
+    "flashcards": [
+        {
+            "question": "Red flags",
+            "answer": "Severe unrelenting pain; fever >38°C; persistent vomiting or hematemesis; suspected pregnancy complications."
+        },
+        {
+            "question": "Signs of shock",
+            "answer": "SBP <90 (adult), HR >100 (adult), altered mental status, poor perfusion; age-specific in children."
+        },
+        {
+            "question": "12-lead ECG criteria",
+            "answer": "Age >40 with 3 or more cardiac risk factors."
+        },
+        {
+            "question": "Cardiac risk factors",
+            "answer": "Smoking (current or stopped within 3 months), obesity, diabetes, hypertension, high cholesterol, cardiovascular disease, family history."
+        },
+        {
+            "question": "Adult fluid bolus",
+            "answer": "500–1000 mL NS or RL (EMT), reassess, repeat as needed."
+        },
+        {
+            "question": "Pediatric fluid bolus",
+            "answer": "20 mL/kg (EMT), reassess, repeat as needed."
+        },
+        {
+            "question": "Hyoscine butylbromide",
+            "answer": "20 mg IV/IM, adults only (P), for abdominal or menstrual cramping."
+        },
+        {
+            "question": "Pain",
+            "answer": "Pain Management CPG; scores before and after (KPI)."
+        },
+        {
+            "question": "Nausea and vomiting",
+            "answer": "Nausea and Vomiting CPG."
+        },
+        {
+            "question": "IV access indications",
+            "answer": "Dehydration, hypotension, expected medication."
+        },
+        {
+            "question": "Examination",
+            "answer": "Inspect (distension, bruising); palpate (tenderness, rigidity, masses); rebound or guarding."
+        },
+        {
+            "question": "History",
+            "answer": "OPQRST and SAMPLE; establish whether pregnancy is possible."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "Traumatic abdominal pain; pregnancy-related pain."
+        },
+        {
+            "question": "Common causes",
+            "answer": "Gastroenteritis, appendicitis, obstruction, pancreatitis, kidney stones, ectopic pregnancy, DKA, mesenteric ischemia."
+        },
+        {
+            "question": "Non-abdominal causes",
+            "answer": "MI, pneumonia or PE, CHF, aortic dissection or aneurysm."
+        },
+        {
+            "question": "Transport routinely when…",
+            "answer": "Early shock, unstable vitals, a serious cause suspected or not ruled out."
+        },
+        {
+            "question": "Refusal advice",
+            "answer": "See a doctor as soon as possible."
+        },
+        {
+            "question": "Why caution?",
+            "answer": "Abdominal emergencies are poorly detected in the ambulance."
+        },
+        {
+            "question": "Peritoneal signs",
+            "answer": "Rebound tenderness, guarding, rigidity."
+        },
+        {
+            "question": "Documentation",
+            "answer": "Duration, severity, modifying factors, intake, medications, bowel habits, exam, pain scores, ECG, pregnancy status, transport rationale."
+        },
+        {
+            "question": "Fever threshold",
+            "answer": ">38°C."
+        },
+        {
+            "question": "Gallbladder or pancreatic disease",
+            "answer": "Listed abdominal causes."
+        },
+        {
+            "question": "GI bleeding",
+            "answer": "A listed cause; hematemesis is a red flag."
+        },
+        {
+            "question": "Kidney stones",
+            "answer": "A listed common cause."
+        },
+        {
+            "question": "Mesenteric ischemia",
+            "answer": "A listed common cause of abdominal pain."
+        },
+        {
+            "question": "DKA",
+            "answer": "A listed common cause; check glucose."
+        },
+        {
+            "question": "Aortic disease",
+            "answer": "Dissection and aneurysm can present as abdominal pain."
+        },
+        {
+            "question": "ALS back-up",
+            "answer": "Consider per the Universal Care CPG."
+        },
+        {
+            "question": "Reassessment",
+            "answer": "Frequently, as per the Universal Care CPG."
+        },
+        {
+            "question": "KPI",
+            "answer": "Pain scores before and after treatment documented."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_1_1",
-            scenario: "A 65‑year‑old male presents with sudden onset of severe epigastric pain radiating to the back. He is diaphoretic, with BP 85/50, HR 120, and a pulsatile abdominal mass. What is your priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Give morphine for pain", f: "Pain relief is important, but transport is urgent." },
-                { t: "Start IV fluids and transport emergently to a vascular centre", f: "Correct. Suspected ruptured AAA requires immediate transport." },
-                { t: "Perform 12‑lead ECG", f: "Can be done en route." },
-                { t: "Give GTN for presumed MI", f: "GTN may worsen hypotension." }
+            "id": "crit_6_1_1",
+            "scenario": "A 65-year-old man has sudden severe epigastric pain radiating to the back. He is sweaty; BP 85/50, HR 120; a pulsatile abdominal mass is felt.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat shock (IV, fluid bolus) and transport urgently: suspected aortic aneurysm",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Hyoscine for cramping and observe",
+                    "f": "Shock with suspected aortic disease needs urgent transport."
+                },
+                {
+                    "t": "Advice and discharge",
+                    "f": "Never with shock."
+                },
+                {
+                    "t": "Lengthy scene workup",
+                    "f": "Move."
+                }
             ],
-            correct: 1,
-            explanation: "This is a classic presentation of ruptured AAA. Fluid resuscitation and immediate transport to a vascular centre are critical.",
-            kpi: "Transport initiated <10 minutes."
+            "correct": 0,
+            "explanation": "Aortic aneurysm and dissection are listed causes; signs of shock mean fluid and routine transport.",
+            "kpi": "Pain scores before and after treatment documented."
         },
         {
-            id: "crit_6_1_2",
-            scenario: "A 28‑year‑old female with lower abdominal pain and light vaginal bleeding. She is 8 weeks pregnant by LMP. BP 100/60, HR 110. What is the likely diagnosis and priority?",
-            question: "What should you suspect and do?",
-            options: [
-                { t: "Miscarriage – provide emotional support", f: "Ectopic pregnancy is more likely with pain and bleeding." },
-                { t: "Ectopic pregnancy – IV access, fluid, rapid transport", f: "Correct. Ectopic can rupture and cause life‑threatening haemorrhage." },
-                { t: "Normal pregnancy – reassure", f: "Incorrect." },
-                { t: "PID – give antibiotics", f: "Not indicated prehospital." }
+            "id": "crit_6_1_2",
+            "scenario": "A 28-year-old woman, 8 weeks pregnant, has lower abdominal pain and light vaginal bleeding. BP 100/60, HR 110.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat as a suspected ectopic pregnancy: red flag, IV access, fluid if shocked, urgent transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Hyoscine and home",
+                    "f": "Pregnancy complications are red flags."
+                },
+                {
+                    "t": "Treat as gastroenteritis",
+                    "f": "Consider ectopic pregnancy."
+                },
+                {
+                    "t": "Wait for the bleeding to stop",
+                    "f": "Transport."
+                }
             ],
-            correct: 1,
-            explanation: "Ectopic pregnancy is a possibility with pain, bleeding, and pregnancy. Establish IV, give fluids if hypotensive, and transport rapidly.",
-            kpi: "Transport initiated; hospital notified."
+            "correct": 0,
+            "explanation": "Pregnancy-related pain is excluded from this CPG; follow the obstetric guidance and transport.",
+            "kpi": "Pain scores before and after treatment documented."
         },
         {
-            id: "crit_6_1_3",
-            scenario: "A 55‑year‑old male with epigastric pain, nausea, and diaphoresis. He has hypertension and smokes. ECG shows ST elevation in leads II, III, aVF. BP 130/80, HR 90. What is your priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Give aspirin and GTN, transport to PCI centre", f: "Correct. This is an inferior STEMI." },
-                { t: "Treat as abdominal pain with paracetamol", f: "Incorrect." },
-                { t: "Give morphine and observe", f: "Aspirin and GTN are first‑line." },
-                { t: "Transport to nearest hospital", f: "PCI centre is preferred if available." }
+            "id": "crit_6_1_3",
+            "scenario": "A 55-year-old smoker with hypertension and diabetes has epigastric pain, nausea and sweating. Lead III of his 12-lead is shown.",
+            "ecg": "stemiInf",
+            "ecgLead": "III",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Treat as STEMI as per the Chest Pain / ACS CPG",
+                    "f": "Correct. Inferior MI can present as abdominal pain."
+                },
+                {
+                    "t": "Antiemetic and home",
+                    "f": "The ECG shows STEMI."
+                },
+                {
+                    "t": "Hyoscine for cramping",
+                    "f": "This is cardiac."
+                },
+                {
+                    "t": "No ECG needed for abdominal pain",
+                    "f": "He meets the ECG criteria."
+                }
             ],
-            correct: 0,
-            explanation: "Inferior STEMI can present with epigastric pain. Aspirin, GTN, and transport to a PCI‑capable hospital are priorities.",
-            kpi: "Aspirin given; hospital notified."
+            "correct": 0,
+            "explanation": "Over 40 with 3 or more risk factors: record a 12-lead. MI is a listed alternative cause.",
+            "kpi": "Pain scores before and after treatment documented."
         },
         {
-            id: "crit_6_1_4",
-            scenario: "A 40‑year‑old female with RLQ pain, fever 38.5°C, and vomiting. She is tender in the RLQ with guarding. Vital signs stable. What is the likely diagnosis and appropriate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Appendicitis – transport for surgical evaluation", f: "Correct. Suspected appendicitis requires hospital evaluation." },
-                { t: "Gastroenteritis – treat with antiemetics and observe", f: "Fever and localised tenderness suggest appendicitis." },
-                { t: "PID – give antibiotics", f: "Not indicated prehospital." },
-                { t: "Renal colic – give analgesia and discharge", f: "Incorrect." }
+            "id": "crit_6_1_4",
+            "scenario": "A 40-year-old woman has right lower quadrant pain, fever 38.5°C and vomiting, with guarding. Vital signs are stable.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Analgesia per the Pain CPG, antiemetic per the N&V CPG, and transport: suspected appendicitis",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Advice only: vital signs are stable",
+                    "f": "A serious cause is suspected: transport."
+                },
+                {
+                    "t": "Hyoscine and discharge",
+                    "f": "Not with red flags."
+                },
+                {
+                    "t": "No analgesia until diagnosis",
+                    "f": "Treat pain and record the scores."
+                }
             ],
-            correct: 0,
-            explanation: "RLQ pain with fever and guarding suggests appendicitis. Transport to hospital for surgical evaluation.",
-            kpi: "Pain assessed; transport initiated."
+            "correct": 0,
+            "explanation": "Fever and persistent vomiting are red flags; suspected appendicitis is transported routinely.",
+            "kpi": "Pain scores before and after treatment documented."
         },
         {
-            id: "crit_6_1_5",
-            scenario: "A 70‑year‑old male with sudden diffuse abdominal pain, distension, and vomiting. He has a history of atrial fibrillation. Vital signs: BP 100/70, HR 130, irregular. What should you suspect?",
-            question: "What is the likely diagnosis?",
-            options: [
-                { t: "Bowel obstruction", f: "Possible, but AF suggests embolism." },
-                { t: "Mesenteric ischaemia", f: "Correct. AF increases risk of mesenteric artery embolism." },
-                { t: "Diverticulitis", f: "Less likely with diffuse pain." },
-                { t: "Gastroenteritis", f: "Unlikely with AF and acute onset." }
+            "id": "crit_6_1_5",
+            "scenario": "A 70-year-old man has sudden diffuse abdominal pain and distension. The monitor shows the rhythm below; BP 100/70, HR 130.",
+            "ecg": "afib",
+            "question": "Which cause should you consider?",
+            "options": [
+                {
+                    "t": "Mesenteric ischemia: transport urgently",
+                    "f": "Correct. AF predisposes to it."
+                },
+                {
+                    "t": "Simple constipation",
+                    "f": "Severe diffuse pain with AF is a warning sign."
+                },
+                {
+                    "t": "Menstrual cramps",
+                    "f": "Not applicable."
+                },
+                {
+                    "t": "No concern",
+                    "f": "He is tachycardic and in pain."
+                }
             ],
-            correct: 1,
-            explanation: "Sudden abdominal pain in a patient with AF suggests mesenteric ischaemia. Rapid transport is essential.",
-            kpi: "Transport initiated; hospital notified of suspected mesenteric ischaemia."
+            "correct": 0,
+            "explanation": "Mesenteric ischemia is a listed cause. Treat pain and any shock, and transport.",
+            "kpi": "Pain scores before and after treatment documented."
         }
     ]
 };

@@ -1,361 +1,749 @@
-/* ========== Chapter 6.8 � Hypoglycemia ========== */
+/* ========== CPG 6.8 – Hypoglycemia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-8",
-    title: "Hypoglycemia",
-    shortTitle: "6.8 Hypoglycemia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Hypoglycemia</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and manage hypoglycemia to prevent neurological injury.</li>
-                <li>Restore blood glucose levels to a safe range.</li>
-                <li>Prevent hypoglycemia recurrence and ensure appropriate disposition.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with symptoms suggestive of hypoglycemia, including:
-                    <ul>
-                        <li>Confusion, irritability, sweating, shakiness, seizures, or unresponsiveness.</li>
-                        <li>Random blood sugar (RBS) <70 mg/dL.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Hyperglycemia without hypoglycemic symptoms.</li>
-                <li>Altered mental status or symptoms clearly attributable to another cause (e.g., stroke, trauma, drug overdose) without glucose abnormality.</li>
-                <li>Patients with normal blood glucose levels and no clinical suspicion of glycemic disturbance.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Glucose Measurement:</strong> Check RBS to confirm hypoglycemia (<70 mg/dL). Repeat after interventions to monitor response.</li>
-                <li><strong>History Specific to Glycemic Disorders:</strong> Confirm history of diabetes (type 1 or type 2), insulin use, or oral hypoglycemic agents. Inquire about recent medication compliance (e.g., excess hypoglycemic agents). Identify precipitating factors (infection, stress, dietary changes).</li>
-                <li><strong>Symptoms of Hypoglycemia:</strong> Autonomic symptoms (sweating, tremors, anxiety, palpitations). Neurological symptoms (confusion, irritability, seizures, coma).</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for severe hypoglycemia with seizures, unresponsiveness, or hypotension.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG. Unconscious patients should be placed in the recovery position while treatment is administered.</li>
-                <li><strong>Oxygen:</strong> Consider oxygen if symptoms of hypoxia or respiratory distress; titrate to maintain SpO2 =94%.</li>
-                <li><strong>Consider ALS back-up:</strong> For severe hypoglycemia with seizures, unresponsiveness, or hypotension.</li>
-                <li><strong>Establish IV Access:</strong> For administration of IV dextrose or fluids. Consider IO access if IV unsuccessful and patient is critical. Avoid fluids in uncomplicated hypoglycemia unless hypotension is present.</li>
-                <li><strong>Dextrose 10%:</strong> Adults: 100-200 mL IV (10-20 g), repeat as needed if RBS remains <70 mg/dL. Pediatrics: 2-4 mL/kg IV (0.2-0.4 g/kg, max 25 g).</li>
-                <li><strong>Glucose 40% Oral Paste:</strong> Adults: 15-20 g orally if conscious and able to swallow. Pediatrics: 0.5-1 g/kg orally (max 15 g).</li>
-                <li><strong>Glucagon:</strong> Indicated if IV access is unavailable and patient is unresponsive. Adults: 1 mg IM (once only). Pediatrics: 0.5 mg IM (<20 kg) or 1 mg (=20 kg), once only.</li>
-                <li><strong>Patient Reassessment:</strong> Recheck RBS after each intervention. Frequently reassess mental status and vital signs.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Ensure airway is secure before administering oral glucose.</li>
-                <li>Monitor closely for seizures or vomiting.</li>
-                <li>Reassess blood glucose after treatment to ensure response.</li>
-                <li>Document all treatment and timing of reassessment.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Rule out alternative causes of altered mental status such as stroke, head trauma, or overdose.</li>
-                <li>Consider hypoglycemia as a secondary complication in seizure patients.</li>
-                <li>If family or caregivers administered treatment prior to EMS arrival, confirm substance and dose.</li>
-                <li>Patients with repeated hypoglycemia should be advised to follow up with their diabetes care provider.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Pre- and post-treatment RBS, vital signs, AVPU/GCS.</li>
-                <li>Diabetes history, medications, precipitating factors.</li>
-                <li>Treatment given (oral glucose, IV dextrose, glucagon), dose, route, response.</li>
-                <li>Transport decision and hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Perform and document RBS before and after treatment.</li>
-                <li>Administer glucose (as appropriate) for all patients with an RBS <70 mg/dL.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-8",
+    "title": "Hypoglycemia",
+    "shortTitle": "6.8 Hypoglycemia",
+    "guide": {
+        "cpg": "6.8",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Hypoglycemia",
+        "lead": "RBS below 70 mg/dL with symptoms: give glucose by the safest route the patient allows (oral if they can swallow, IV 10% dextrose, or IM glucagon if there is no IV and they are unresponsive). Recheck the RBS after every treatment.",
+        "source": {
+            "label": "CPG 6.8",
+            "pages": "181–184",
+            "pdf": "../pdf_sections/6_8_Hypoglycemia.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Confusion, irritability, sweating, shakiness, seizures or unresponsiveness with RBS &lt;70 mg/dL."
+                ],
+                "exclude": [
+                    "Hyperglycemia without hypoglycemic symptoms.",
+                    "Symptoms clearly due to another cause (stroke, trauma, overdose) without a glucose abnormality.",
+                    "Normal glucose and no suspicion of a glycemic disturbance."
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "items": [
+                    "RBS: hypoglycemia is &lt;70 mg/dL; repeat after each intervention.",
+                    "Diabetes type, insulin or oral agents, excess dosing; infection, stress, diet changes.",
+                    "Autonomic: sweating, tremor, anxiety, palpitations. Neurological: confusion, irritability, seizures, coma.",
+                    "If family gave treatment before arrival, confirm what and how much."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Airway first",
+                        "text": "Unresponsive: airway management; recovery position at least while treating. Oxygen to SpO<sub>2</sub> ≥94% if hypoxic or distressed. Never give oral glucose unless the airway is secure."
+                    },
+                    {
+                        "title": "Oral glucose 40% paste: conscious and able to swallow",
+                        "level": "EMR",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "15–20 g orally",
+                                "note": "Flowchart: 15 g (1 tube)",
+                                "level": "EMR"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "0.5–1 g/kg orally (maximum 15 g)",
+                                "note": "Flowchart: ½ tube, adjusted to weight",
+                                "level": "EMR"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Or dextrose 10% IV/IO",
+                        "level": "EMT",
+                        "text": "Repeat if RBS stays &lt;70 mg/dL. IO only if IV fails and the patient is critical.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "100–200 mL (10–20 g)",
+                                "note": "Flowchart: 125 mL–250 mL",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "2–4 mL/kg (0.2–0.4 g/kg, maximum 25 g)",
+                                "note": "Flowchart: 10 mL/kg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Or glucagon IM: no IV access and unresponsive",
+                        "level": "EMT",
+                        "text": "Once only.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "1 mg IM",
+                                "level": "EMT"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "0.5 mg (&lt;20 kg) or 1 mg (≥20 kg) IM",
+                                "note": "Flowchart: &lt;6 years 0.5 mg, &gt;6 years 1 mg",
+                                "level": "EMT"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Reassess",
+                        "text": "Recheck RBS after every intervention. Still altered: repeat RBS and treat. No improvement despite maximal dextrose: look for other causes (stroke, head injury, overdose) and consider Tele-EMS."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and fluids",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "Severe hypoglycemia: RBS &lt;70 mg/dL with seizures, unresponsiveness or coma.",
+                            "SBP &lt;90 mmHg (adults), age-specific hypotension, or shock; bradycardia.",
+                            "Symptoms or altered mental status persisting after treatment."
+                        ]
+                    },
+                    {
+                        "title": "Fluids",
+                        "items": [
+                            "Avoid fluid in uncomplicated hypoglycemia unless hypotensive.",
+                            "Watch for overload in cardiac or renal disease."
+                        ]
+                    },
+                    {
+                        "title": "Safety",
+                        "items": [
+                            "Watch for seizures and vomiting.",
+                            "Consider hypoglycemia as a complication in seizure patients.",
+                            "Repeated episodes: advise follow-up with the diabetes care provider."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: dextrose 10%",
+                                "sub": "2–4 mL/kg",
+                                "href": "../pages/drug-calculator.html?drug=Dextrose%2010%25",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: glucagon",
+                                "sub": "0.5 or 1 mg IM",
+                                "href": "../pages/drug-calculator.html?drug=Glucagon",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "RBS performed and documented before and after treatment.",
+                    "Glucose given (as appropriate) to every patient with RBS &lt;70 mg/dL."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.9 Hyperglycemia",
+                        "href": "c6-9.html"
+                    },
+                    {
+                        "label": "6.5 Altered Mental Status",
+                        "href": "c6-5.html"
+                    },
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "5.1 Stroke",
+                        "href": "c5-1.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the threshold for hypoglycemia in adults?",
-            options: ["<60 mg/dL", "<70 mg/dL", "<80 mg/dL", "<50 mg/dL"],
-            correct: 1,
-            explanation: "Hypoglycemia is defined as blood glucose <70 mg/dL."
+            "q": "What RBS defines hypoglycemia?",
+            "options": [
+                "<70 mg/dL",
+                "<100 mg/dL",
+                "<40 mg/dL",
+                "<120 mg/dL"
+            ],
+            "correct": 0,
+            "explanation": "With symptoms such as confusion, sweating or seizures."
         },
         {
-            q: "A patient with hypoglycemia is unconscious. What is the first step?",
-            options: ["Give oral glucose", "Administer glucagon IM", "Protect airway and give IV dextrose", "Transport immediately"],
-            correct: 2,
-            explanation: "Airway protection is paramount; give IV dextrose if accessible."
+            "q": "An unresponsive hypoglycemic patient. What comes first?",
+            "options": [
+                "Airway and recovery position, then IV dextrose or IM glucagon",
+                "Oral glucose",
+                "Fluids",
+                "Transport without treatment"
+            ],
+            "correct": 0,
+            "explanation": "Never oral glucose without a secure airway."
         },
         {
-            q: "What is the dose of 50% dextrose for an adult with hypoglycemia?",
-            options: ["10 mL (5 g)", "25 mL (12.5 g)", "50 mL (25 g)", "100 mL (50 g)"],
-            correct: 2,
-            explanation: "The standard adult dose is 25 g (50 mL of 50% dextrose)."
+            "q": "What concentration of IV dextrose does this CPG use?",
+            "options": [
+                "10%",
+                "50%",
+                "5%",
+                "25%"
+            ],
+            "correct": 0,
+            "explanation": "Dextrose 10%."
         },
         {
-            q: "A conscious diabetic patient has a glucose of 55 mg/dL and is able to swallow. What should you give?",
-            options: ["IV dextrose", "Glucagon IM", "Oral glucose paste", "Normal saline"],
-            correct: 2,
-            explanation: "Oral glucose is appropriate if the patient is conscious and able to swallow safely."
+            "q": "A conscious patient who can swallow, RBS 55 mg/dL. What do you give?",
+            "options": [
+                "Oral glucose 40% paste",
+                "Glucagon IM",
+                "IV dextrose only",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Oral glucose (EMR)."
         },
         {
-            q: "What is the dose of glucagon for an adult with hypoglycemia?",
-            options: ["0.5 mg IM", "1 mg IM", "2 mg IM", "0.1 mg IV"],
-            correct: 1,
-            explanation: "Adult dose of glucagon is 1 mg IM."
+            "q": "What is the adult glucagon dose?",
+            "options": [
+                "1 mg IM, once only",
+                "0.5 mg IV",
+                "2 mg IM repeated",
+                "0.1 mg"
+            ],
+            "correct": 0,
+            "explanation": "When IV access is unavailable and the patient is unresponsive."
         },
         {
-            q: "A child weighing 15 kg has hypoglycemia and no IV access. What is the appropriate glucagon dose?",
-            options: ["0.25 mg IM", "0.5 mg IM", "1 mg IM", "0.1 mg IM"],
-            correct: 1,
-            explanation: "For children <20 kg, glucagon dose is 0.5 mg IM."
+            "q": "A 15 kg child, unresponsive, no IV. Glucagon dose?",
+            "options": [
+                "0.5 mg IM",
+                "1 mg IM",
+                "2 mg IM",
+                "0.1 mg IM"
+            ],
+            "correct": 0,
+            "explanation": "<20 kg: 0.5 mg."
         },
         {
-            q: "After giving IV dextrose, the patient becomes alert. What is the next step?",
-            options: ["Discharge with dietary advice", "Transport to hospital", "Give oral glucose", "Repeat dextrose"],
-            correct: 1,
-            explanation: "Patients requiring EMS intervention for hypoglycemia should be transported to hospital for evaluation and monitoring."
+            "q": "What is the adult D10 dose in the text?",
+            "options": [
+                "100–200 mL (10–20 g)",
+                "500 mL",
+                "20 mL",
+                "1000 mL"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 125 mL–250 mL."
         },
         {
-            q: "Which of the following is a symptom of hypoglycemia?",
-            options: ["Polyuria", "Polydipsia", "Sweating and tremors", "Fruity breath"],
-            correct: 2,
-            explanation: "Sweating, tremors, and anxiety are autonomic symptoms of hypoglycemia."
+            "q": "Which is an autonomic symptom?",
+            "options": [
+                "Sweating and tremor",
+                "Polyuria",
+                "Fruity breath",
+                "Kussmaul breathing"
+            ],
+            "correct": 0,
+            "explanation": "Also anxiety and palpitations."
         },
         {
-            q: "What is the target SpO2 for a patient with hypoglycemia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What is the oxygen target if hypoxic?",
+            "options": [
+                "SpO₂ ≥94%",
+                "100%",
+                "88%",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Titrate."
         },
         {
-            q: "A patient with hypoglycemia is on insulin. What is the most likely cause?",
-            options: ["Missed meal", "Excess insulin", "Infection", "All of the above"],
-            correct: 3,
-            explanation: "Hypoglycemia in diabetics can result from excess insulin, missed meals, or increased metabolic demand (e.g., infection)."
+            "q": "What is the pediatric D10 dose in the text?",
+            "options": [
+                "2–4 mL/kg (maximum 25 g)",
+                "20 mL/kg",
+                "50 mL/kg",
+                "0.5 mL/kg"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 10 mL/kg."
         },
         {
-            q: "What is the pediatric dose of 50% dextrose for hypoglycemia?",
-            options: ["0.5 g/kg", "1 g/kg", "2 g/kg", "0.1 g/kg"],
-            correct: 0,
-            explanation: "Pediatric dose is 0.5-1 g/kg (typically 0.5 g/kg = 1 mL/kg of 50% dextrose, but diluted to 10% is preferred)."
+            "q": "Why no oral glucose in an unconscious patient?",
+            "options": [
+                "Aspiration risk: the airway must be secure",
+                "It is too slow",
+                "It raises BP",
+                "It is too expensive"
+            ],
+            "correct": 0,
+            "explanation": "Ensure the airway is secure first."
         },
         {
-            q: "Why should oral glucose not be given to an unconscious patient?",
-            options: ["It is ineffective", "It may cause aspiration", "It increases blood pressure", "It delays transport"],
-            correct: 1,
-            explanation: "Oral glucose carries a high risk of aspiration in patients with an unprotected airway."
+            "q": "How often is glucagon given?",
+            "options": [
+                "Once only",
+                "Every 5 minutes",
+                "Every 15 minutes",
+                "Hourly"
+            ],
+            "correct": 0,
+            "explanation": "Adults and children."
         },
         {
-            q: "A patient with hypoglycemia has a seizure. What is the priority?",
-            options: ["Give oral glucose", "Protect airway, administer benzodiazepine, and treat hypoglycemia", "Transport immediately", "Check glucose"],
-            correct: 1,
-            explanation: "Seizure management includes airway protection, benzodiazepines, and correction of hypoglycemia."
+            "q": "RBS is still 45 after D10. What do you do?",
+            "options": [
+                "Repeat D10 and recheck",
+                "Glucagon IV",
+                "Stop treatment",
+                "Fluids only"
+            ],
+            "correct": 0,
+            "explanation": "Repeat if RBS remains <70 mg/dL."
         },
         {
-            q: "What is the dose of 10% dextrose for an adult with hypoglycemia?",
-            options: ["100-200 mL", "250-500 mL", "50 mL", "20 mL"],
-            correct: 0,
-            explanation: "10% dextrose provides 10 g per 100 mL; 100-200 mL (10-20 g) is appropriate."
+            "q": "When is glucagon indicated?",
+            "options": [
+                "No IV access and unresponsive",
+                "Every patient",
+                "Conscious patients",
+                "Hyperglycemia"
+            ],
+            "correct": 0,
+            "explanation": "Otherwise use oral glucose or IV dextrose."
         },
         {
-            q: "A patient with hypoglycemia is unconscious and has no IV access. What should you do?",
-            options: ["Give oral glucose", "Administer glucagon IM", "Wait for IV access", "Transport without treatment"],
-            correct: 1,
-            explanation: "Glucagon IM is indicated when IV access is not available and the patient is unresponsive."
+            "q": "Which is a red flag?",
+            "options": [
+                "Hypoglycemia with seizures or coma",
+                "RBS 75 with no symptoms",
+                "Mild hunger",
+                "Normal vitals"
+            ],
+            "correct": 0,
+            "explanation": "Severe hypoglycemia."
         },
         {
-            q: "Which of the following is a contraindication to glucagon?",
-            options: ["Hypoglycemia", "Diabetes", "Known allergy", "Pheochromocytoma (rare)"],
-            correct: 2,
-            explanation: "Allergy to glucagon is a contraindication; otherwise, it is safe in emergencies."
+            "q": "When are IV fluids given?",
+            "options": [
+                "Only if hypotensive",
+                "Always",
+                "Never",
+                "In every child"
+            ],
+            "correct": 0,
+            "explanation": "Avoid fluids in uncomplicated hypoglycemia."
         },
         {
-            q: "What is the maximum single dose of 50% dextrose for an adult?",
-            options: ["25 g", "50 g", "100 g", "No maximum"],
-            correct: 0,
-            explanation: "Standard single dose is 25 g; may repeat if needed, but careful to avoid hyperglycemia."
+            "q": "What is the adult oral glucose dose in the text?",
+            "options": [
+                "15–20 g",
+                "50 g",
+                "5 g",
+                "100 g"
+            ],
+            "correct": 0,
+            "explanation": "Flowchart: 15 g (1 tube)."
         },
         {
-            q: "A patient with hypoglycemia has a blood glucose of 40 mg/dL after 25 g IV dextrose. What should you do?",
-            options: ["Repeat dextrose", "Give glucagon", "Transport only", "Give oral glucose"],
-            correct: 0,
-            explanation: "If hypoglycemia persists, repeat dextrose or consider infusion of 10% dextrose."
+            "q": "What is the pediatric oral glucose dose?",
+            "options": [
+                "0.5–1 g/kg (maximum 15 g)",
+                "5 g/kg",
+                "Adult dose",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Flowchart: ½ tube adjusted to weight."
         },
         {
-            q: "What is the mechanism of action of glucagon?",
-            options: ["Increases insulin release", "Stimulates glycogenolysis and gluconeogenesis", "Blocks glucose absorption", "Increases glucose excretion"],
-            correct: 1,
-            explanation: "Glucagon stimulates the liver to release stored glucose (glycogenolysis) and produce new glucose (gluconeogenesis)."
+            "q": "Altered mental status persists despite maximal dextrose. What next?",
+            "options": [
+                "Look for other causes and consider Tele-EMS",
+                "More glucagon",
+                "Stop",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Stroke, head trauma, overdose."
         },
         {
-            q: "Which of the following is a sign of severe hypoglycemia?",
-            options: ["Sweating", "Tachycardia", "Unresponsiveness", "Hunger"],
-            correct: 2,
-            explanation: "Unresponsiveness indicates severe cerebral glucose deprivation."
+            "q": "Which is a neurological symptom?",
+            "options": [
+                "Confusion or seizures",
+                "Palpitations",
+                "Sweating",
+                "Tremor"
+            ],
+            "correct": 0,
+            "explanation": "Also irritability and coma."
         },
         {
-            q: "What is the role of oral glucose paste?",
-            options: ["Buccal absorption", "Must be swallowed to be effective", "Sublingual absorption", "Topical application"],
-            correct: 1,
-            explanation: "Glucose paste must be swallowed for systemic absorption; it is not absorbed through the oral mucosa."
+            "q": "Which level may give oral glucose?",
+            "options": [
+                "EMR",
+                "P only",
+                "AP only",
+                "EP only"
+            ],
+            "correct": 0,
+            "explanation": "D10 and glucagon are EMT."
         },
         {
-            q: "A patient with hypoglycemia is on a sulfonylurea. Why is this important?",
-            options: ["They are at risk for prolonged hypoglycemia", "They require higher doses of dextrose", "Glucagon is ineffective", "No special consideration"],
-            correct: 0,
-            explanation: "Sulfonylureas can cause prolonged hypoglycemia lasting hours to days; patients require observation."
+            "q": "What do you recheck after each treatment?",
+            "options": [
+                "RBS",
+                "Temperature",
+                "Lactate",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "A KPI: RBS before and after."
         },
         {
-            q: "What is the target blood glucose after treatment?",
-            options: [">70 mg/dL", ">100 mg/dL", ">120 mg/dL", ">150 mg/dL"],
-            correct: 0,
-            explanation: "Goal is to raise glucose above 70 mg/dL and improve symptoms."
+            "q": "A hypoglycemic patient is hypotensive. What do you consider?",
+            "options": [
+                "Glucose plus fluids (red flag)",
+                "Glucose only",
+                "No treatment",
+                "Oral glucose while unresponsive"
+            ],
+            "correct": 0,
+            "explanation": "Hypotension is a red flag; fluids are indicated."
         },
         {
-            q: "A patient with hypoglycemia is also hypotensive. What should you consider?",
-            options: ["Give only dextrose", "Give dextrose and fluid bolus", "Give glucagon", "Transport without treatment"],
-            correct: 1,
-            explanation: "Hypotension may indicate hypovolemia or another cause; treat both."
+            "q": "Family gave glucose before arrival. What do you do?",
+            "options": [
+                "Confirm what and how much",
+                "Ignore it",
+                "Repeat it blindly",
+                "Give glucagon"
+            ],
+            "correct": 0,
+            "explanation": "As per the guidance."
         },
         {
-            q: "What is the dose of 10% dextrose for a 20 kg child with hypoglycemia?",
-            options: ["20-40 mL", "40-80 mL", "100-200 mL", "10-20 mL"],
-            correct: 1,
-            explanation: "2-4 mL/kg of 10% dextrose gives 0.2-0.4 g/kg; for 20 kg, that is 40-80 mL."
+            "q": "Which IO rule applies?",
+            "options": [
+                "IO if IV fails and the patient is critical",
+                "IO first always",
+                "Never IO",
+                "IO for oral glucose"
+            ],
+            "correct": 0,
+            "explanation": "Consider IO when critical."
         },
         {
-            q: "Which of the following is NOT a cause of hypoglycemia in a non-diabetic?",
-            options: ["Alcohol ingestion", "Liver failure", "Insulinoma", "Hyperthyroidism"],
-            correct: 3,
-            explanation: "Hyperthyroidism causes hypermetabolism but not typically hypoglycemia; alcohol, liver failure, and insulinoma can cause hypoglycemia."
+            "q": "A seizure patient has low glucose. Why?",
+            "options": [
+                "Hypoglycemia can be a complication of seizures",
+                "Seizures raise glucose only",
+                "Unrelated",
+                "Lab error"
+            ],
+            "correct": 0,
+            "explanation": "Consider it as a secondary complication."
         },
         {
-            q: "What is the preferred route for glucagon when IV access is unavailable?",
-            options: ["IV", "IM", "SC", "IN"],
-            correct: 1,
-            explanation: "Glucagon is given IM or SC; IM is preferred for faster absorption."
+            "q": "What is the pediatric glucagon dose at 20 kg or more?",
+            "options": [
+                "1 mg IM",
+                "0.5 mg IM",
+                "2 mg IM",
+                "0.1 mg"
+            ],
+            "correct": 0,
+            "explanation": "Text: by weight; flowchart: by age."
         },
         {
-            q: "A patient with hypoglycemia has a glucose of 65 mg/dL after treatment but remains confused. What should you suspect?",
-            options: ["Recurrent hypoglycemia", "Stroke", "Post-hypoglycemic encephalopathy", "All of the above"],
-            correct: 3,
-            explanation: "Persistent confusion may be due to ongoing hypoglycemia, underlying stroke, or prolonged cerebral effects."
+            "q": "What advice for repeated hypoglycemia?",
+            "options": [
+                "Follow up with the diabetes care provider",
+                "None",
+                "Stop insulin",
+                "Double the dose"
+            ],
+            "correct": 0,
+            "explanation": "As per the clinical guidance."
         },
         {
-            q: "What is the key performance indicator for hypoglycemia?",
-            options: ["Administer oxygen", "Check RBS before and after treatment", "Transport all patients", "Give oral glucose"],
-            correct: 1,
-            explanation: "Documenting RBS before and after treatment is a key KPI."
+            "q": "Which is excluded?",
+            "options": [
+                "Hyperglycemia without hypoglycemic symptoms",
+                "Confused diabetic with RBS 50",
+                "Seizure with RBS 40",
+                "Sweaty, shaky, RBS 60"
+            ],
+            "correct": 0,
+            "explanation": "See the Hyperglycemia CPG."
         },
         {
-            q: "A patient with hypoglycemia is on a beta-blocker. Why is this significant?",
-            options: ["Beta-blockers mask tachycardia", "They increase glucose", "They cause hypoglycemia", "No significance"],
-            correct: 0,
-            explanation: "Beta-blockers can blunt the sympathetic response (tachycardia, tremors), making hypoglycemia harder to recognize."
+            "q": "What are the KPIs?",
+            "options": [
+                "RBS before and after; glucose for RBS <70",
+                "Transport all",
+                "Glucagon in all",
+                "Oxygen in all"
+            ],
+            "correct": 0,
+            "explanation": "Two KPIs."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is hypoglycemia?", answer: "Blood glucose level <70 mg/dL with or without symptoms." },
-        { category: "Symptoms", question: "What are the autonomic symptoms of hypoglycemia?", answer: "Sweating, tremor, palpitations, anxiety, hunger." },
-        { category: "Neuroglycopenic symptoms", question: "What are neuroglycopenic symptoms of hypoglycemia?", answer: "Confusion, drowsiness, seizures, coma, behavioral changes." },
-        { category: "Causes", question: "What are common causes of hypoglycemia in diabetics?", answer: "Excess insulin/oral agents, missed meals, increased physical activity, alcohol, infection." },
-        { category: "Treatment � conscious", question: "How should a conscious hypoglycemic patient be treated?", answer: "Oral glucose (15-20 g) or glucose paste, followed by complex carbohydrate if available." },
-        { category: "Treatment � unconscious with IV", question: "How should an unconscious hypoglycemic patient with IV access be treated?", answer: "IV dextrose 25 g (50 mL of 50% dextrose) or 10-20 g of 10% dextrose." },
-        { category: "Treatment � unconscious without IV", question: "How should an unconscious hypoglycemic patient without IV access be treated?", answer: "Glucagon 1 mg IM (adult) or 0.5 mg IM (child <20 kg)." },
-        { category: "Glucagon", question: "When is glucagon ineffective?", answer: "In patients with depleted glycogen stores (e.g., alcoholics, malnutrition, liver disease)." },
-        { category: "Pediatric dextrose", question: "What is the preferred dextrose concentration for children?", answer: "10% dextrose (2-4 mL/kg) to avoid hyperosmolar injury." },
-        { category: "Recurrence", question: "Why might hypoglycemia recur after treatment?", answer: "Long-acting insulin or sulfonylureas can cause prolonged hypoglycemia." },
-        { category: "Transport decision", question: "Should all EMS-treated hypoglycemic patients be transported?", answer: "Yes, to evaluate the cause and monitor for recurrence." },
-        { category: "Hypoglycemia unawareness", question: "What is hypoglycemia unawareness?", answer: "Lack of autonomic symptoms due to recurrent hypoglycemia or beta-blocker use." },
-        { category: "Alcohol and hypoglycemia", question: "How does alcohol cause hypoglycemia?", answer: "Inhibits gluconeogenesis; risk is higher in fasting state." },
-        { category: "KPI", question: "What is the key performance indicator for hypoglycemia?", answer: "Document RBS before and after treatment." },
-        { category: "Dextrose 10%", question: "What is the advantage of 10% dextrose over 50%?", answer: "Less hyperosmolar, lower risk of tissue necrosis if extravasated." },
-        { category: "Glucagon side effects", question: "What are common side effects of glucagon?", answer: "Nausea, vomiting, hyperglycemia after recovery." },
-        { category: "Hypoglycemia in infants", question: "What is a common cause of hypoglycemia in infants?", answer: "Prolonged fasting, maternal diabetes, sepsis, inborn errors of metabolism." },
-        { category: "Differential diagnosis", question: "What conditions can mimic hypoglycemia?", answer: "Stroke, seizure, alcohol intoxication, head injury, sepsis." },
-        { category: "Post-treatment monitoring", question: "How often should RBS be rechecked after treatment?", answer: "Every 15-30 minutes until stable." },
-        { category: "Prevention", question: "How can hypoglycemia be prevented?", answer: "Regular meals, appropriate insulin dosing, sick day management, glucose monitoring." }
+    "flashcards": [
+        {
+            "question": "Hypoglycemia",
+            "answer": "RBS <70 mg/dL with symptoms."
+        },
+        {
+            "question": "Autonomic symptoms",
+            "answer": "Sweating, tremor, anxiety, palpitations."
+        },
+        {
+            "question": "Neurological symptoms",
+            "answer": "Confusion, irritability, seizures, coma."
+        },
+        {
+            "question": "Oral glucose 40% paste",
+            "answer": "Adult 15–20 g; child 0.5–1 g/kg (max 15 g); only if conscious and able to swallow (EMR)."
+        },
+        {
+            "question": "Dextrose 10% adult",
+            "answer": "100–200 mL (10–20 g) IV, repeat if RBS <70 (EMT). Flowchart: 125 mL–250 mL."
+        },
+        {
+            "question": "Dextrose 10% child",
+            "answer": "2–4 mL/kg (0.2–0.4 g/kg, max 25 g). Flowchart: 10 mL/kg."
+        },
+        {
+            "question": "Glucagon indication",
+            "answer": "No IV access and unresponsive."
+        },
+        {
+            "question": "Glucagon dose",
+            "answer": "Adult 1 mg IM; child 0.5 mg (<20 kg) or 1 mg (≥20 kg); once only (EMT)."
+        },
+        {
+            "question": "Airway",
+            "answer": "Recovery position at least; never oral glucose without a secure airway."
+        },
+        {
+            "question": "Reassessment",
+            "answer": "Recheck RBS after each intervention."
+        },
+        {
+            "question": "Persistent AMS after maximal dextrose",
+            "answer": "Look for other causes; consider Tele-EMS."
+        },
+        {
+            "question": "Fluids",
+            "answer": "Only if hypotensive; watch for overload."
+        },
+        {
+            "question": "Red flags",
+            "answer": "Seizures, unresponsiveness or coma; hypotension or shock; bradycardia; persistent symptoms."
+        },
+        {
+            "question": "History",
+            "answer": "Diabetes type, insulin or oral agents, excess dosing, infection, stress, diet."
+        },
+        {
+            "question": "Pre-arrival treatment",
+            "answer": "Confirm the substance and dose."
+        },
+        {
+            "question": "Seizures",
+            "answer": "Hypoglycemia may be a secondary complication."
+        },
+        {
+            "question": "Repeated episodes",
+            "answer": "Advise follow-up with the diabetes care provider."
+        },
+        {
+            "question": "Exclusions",
+            "answer": "Hyperglycemia without symptoms; another clear cause; normal glucose without suspicion."
+        },
+        {
+            "question": "KPIs",
+            "answer": "RBS before and after; glucose for every RBS <70 mg/dL."
+        },
+        {
+            "question": "IO",
+            "answer": "If IV fails and the patient is critical."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_8_1",
-            scenario: "A 60-year-old diabetic male is found unresponsive by his wife. He is sweating and has a blood glucose of 32 mg/dL. What is your first action?",
-            question: "What should you do immediately?",
-            options: [
-                { t: "Give oral glucose", f: "The patient is unresponsive; oral glucose is contraindicated." },
-                { t: "Establish IV access and give 50% dextrose 25 g IV", f: "Correct. IV dextrose is indicated for unresponsive hypoglycemia." },
-                { t: "Administer glucagon IM", f: "Glucagon is an option if no IV access, but IV is preferred." },
-                { t: "Transport without treatment", f: "Treatment must be initiated." }
+            "id": "crit_6_8_1",
+            "scenario": "A 60-year-old diabetic is unresponsive and sweaty; RBS 32 mg/dL. You obtain IV access.",
+            "question": "What do you give?",
+            "options": [
+                {
+                    "t": "Dextrose 10% 100–200 mL IV, then recheck RBS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Oral glucose paste",
+                    "f": "Not with an unprotected airway."
+                },
+                {
+                    "t": "Glucagon first despite IV access",
+                    "f": "Glucagon is for when IV access is unavailable."
+                },
+                {
+                    "t": "Dextrose 50%",
+                    "f": "This CPG uses dextrose 10%."
+                }
             ],
-            correct: 1,
-            explanation: "Unresponsive patient with severe hypoglycemia requires immediate IV dextrose.",
-            kpi: "IV dextrose administered."
+            "correct": 0,
+            "explanation": "Airway and recovery position, D10, recheck RBS; repeat if still <70 mg/dL.",
+            "kpi": "RBS before and after treatment."
         },
         {
-            id: "crit_6_8_2",
-            scenario: "A 25-year-old diabetic is found confused and diaphoretic. He is able to swallow. His blood glucose is 55 mg/dL. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Give IV dextrose", f: "IV is not necessary if the patient can safely take oral glucose." },
-                { t: "Give oral glucose paste and reassess", f: "Correct. Oral glucose is appropriate for conscious patients." },
-                { t: "Administer glucagon", f: "Glucagon is for unconscious patients without IV access." },
-                { t: "Transport without treatment", f: "Treatment should be given." }
+            "id": "crit_6_8_2",
+            "scenario": "A 25-year-old diabetic is confused and sweaty but can swallow; RBS 55 mg/dL.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Oral glucose 40% paste 15–20 g, then recheck RBS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Glucagon IM",
+                    "f": "He can swallow."
+                },
+                {
+                    "t": "No treatment",
+                    "f": "RBS <70 with symptoms needs glucose."
+                },
+                {
+                    "t": "IV fluids",
+                    "f": "Not indicated without hypotension."
+                }
             ],
-            correct: 1,
-            explanation: "Conscious patient with mild hypoglycemia can be treated with oral glucose.",
-            kpi: "Oral glucose administered and glucose rechecked."
+            "correct": 0,
+            "explanation": "Oral glucose is an EMR treatment for patients able to swallow.",
+            "kpi": "Glucose for RBS <70 mg/dL."
         },
         {
-            id: "crit_6_8_3",
-            scenario: "A patient with hypoglycemia receives 25 g IV dextrose and becomes alert. Fifteen minutes later, while en route, he becomes confused again. Blood glucose is 45 mg/dL. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Give another dose of IV dextrose", f: "Correct. Recurrent hypoglycemia requires additional dextrose." },
-                { t: "Administer glucagon", f: "IV access is already established; dextrose is preferred." },
-                { t: "Give oral glucose", f: "The patient is now confused; oral glucose is unsafe." },
-                { t: "Transport without further treatment", f: "Recurrent hypoglycemia requires treatment." }
+            "id": "crit_6_8_3",
+            "scenario": "After D10 a patient wakes, but 15 minutes later he is confused again with RBS 45 mg/dL.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Repeat D10 and recheck RBS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Oral glucose while confused",
+                    "f": "Only if he can swallow safely."
+                },
+                {
+                    "t": "Stop treatment",
+                    "f": "He is hypoglycemic."
+                },
+                {
+                    "t": "Look for other causes only",
+                    "f": "Treat the hypoglycemia first."
+                }
             ],
-            correct: 0,
-            explanation: "Recurrent hypoglycemia may occur due to long-acting insulin; repeat dextrose or start 10% dextrose infusion.",
-            kpi: "Repeat dextrose administered."
+            "correct": 0,
+            "explanation": "Repeat dextrose while RBS remains <70 mg/dL; recheck after each dose.",
+            "kpi": "RBS before and after treatment."
         },
         {
-            id: "crit_6_8_4",
-            scenario: "A 45-year-old diabetic is found unresponsive. You attempt IV access but cannot obtain it after two attempts. Blood glucose is 28 mg/dL. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Continue attempting IV access", f: "Delay is harmful; consider alternative route." },
-                { t: "Administer glucagon 1 mg IM", f: "Correct. Glucagon is indicated when IV access is unavailable." },
-                { t: "Give oral glucose", f: "Unsafe in unresponsive patient." },
-                { t: "Transport without treatment", f: "Treatment is needed." }
+            "id": "crit_6_8_4",
+            "scenario": "A 45-year-old diabetic is unresponsive; RBS 28 mg/dL; two IV attempts have failed.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Glucagon 1 mg IM (once only)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Oral glucose",
+                    "f": "He is unresponsive."
+                },
+                {
+                    "t": "Keep trying IV indefinitely",
+                    "f": "Use glucagon; IO is for the critical patient."
+                },
+                {
+                    "t": "Repeat glucagon every 5 minutes",
+                    "f": "Once only."
+                }
             ],
-            correct: 1,
-            explanation: "When IV access is not feasible, glucagon IM is an effective alternative.",
-            kpi: "Glucagon administered."
+            "correct": 0,
+            "explanation": "No IV access and unresponsive: IM glucagon.",
+            "kpi": "Glucose for RBS <70 mg/dL."
         },
         {
-            id: "crit_6_8_5",
-            scenario: "A 70-year-old diabetic with a history of heart failure is found confused and diaphoretic. Glucose is 45 mg/dL. You give IV dextrose. The patient becomes alert. What is your next priority?",
-            question: "What should you consider?",
-            options: [
-                { t: "Discharge with dietary advice", f: "Not safe; patient should be transported." },
-                { t: "Transport to hospital for evaluation", f: "Correct. Even after correction, underlying cause needs assessment." },
-                { t: "Give oral glucose and leave", f: "Inadequate." },
-                { t: "Administer glucagon", f: "Not needed." }
+            "id": "crit_6_8_5",
+            "scenario": "A 4-year-old (16 kg) is unresponsive with RBS 40 mg/dL and an IV in place.",
+            "question": "Which D10 dose does the text give?",
+            "options": [
+                {
+                    "t": "2–4 mL/kg IV (maximum 25 g)",
+                    "f": "Correct. The flowchart prints 10 mL/kg: a discrepancy to report."
+                },
+                {
+                    "t": "Adult 100–200 mL",
+                    "f": "Use the weight-based dose."
+                },
+                {
+                    "t": "50 mL/kg",
+                    "f": "Far too much."
+                },
+                {
+                    "t": "Oral paste",
+                    "f": "Unresponsive."
+                }
             ],
-            correct: 1,
-            explanation: "All patients treated for hypoglycemia should be transported to hospital to identify the cause and prevent recurrence.",
-            kpi: "Patient transported."
+            "correct": 0,
+            "explanation": "Use the drug calculator and recheck RBS after the dose.",
+            "kpi": "RBS before and after treatment."
         }
     ]
 };
