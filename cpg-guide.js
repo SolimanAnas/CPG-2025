@@ -91,8 +91,34 @@
         groups: (s) => s.groups.map(g => `<div class="g-group"><h4>${g.title}</h4>${list(g.items)}</div>`).join(''),
 
         related: (s) => `<ul class="g-related">${s.items.map(r =>
-            `<li><a href="${r.href}">${r.label}</a></li>`).join('')}</ul>`
+            `<li><a href="${r.href}">${r.label}</a></li>`).join('')}</ul>`,
+
+        // Links into the app's own tools. Items with `ecg` (an ECG Simulator
+        // rhythm key) show the rhythm strip itself (cpg-strip.js) and open it
+        // in the simulator.
+        tools: (s) => s.groups.map(g => g.items.some(t => t.ecg) ? `<div class="g-group">
+            <h4>${g.title}</h4>
+            <div class="g-strips">${g.items.map(strip).join('')}</div>
+        </div>` : `<div class="g-group">
+            <h4>${g.title}</h4>
+            <ul class="g-tools">${g.items.map(t => `<li><a href="${t.href}">
+                ${ICON(t.icon || g.icon || 'arrow-right')}
+                <span><b>${t.label}</b>${t.sub ? `<small>${t.sub}</small>` : ''}</span>
+            </a></li>`).join('')}</ul>
+        </div>`).join('')
     };
+
+    function strip(t) {
+        const href = `../pages/ecg.html?r=${encodeURIComponent(t.ecg)}`;
+        const wave = window.CPGStrip ? CPGStrip.svg(t.ecg, { label: t.label }) : '';
+        return `<figure class="g-strip">
+            ${wave}
+            <figcaption>
+                <span><b>${t.label}</b>${t.sub ? `<small>${t.sub}</small>` : ''}</span>
+                <a href="${href}">${ICON('heart-pulse')}Open in ECG Simulator</a>
+            </figcaption>
+        </figure>`;
+    }
 
     function section(s) {
         const body = (SECTION[s.type] || SECTION.list)(s);

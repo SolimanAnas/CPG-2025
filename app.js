@@ -587,7 +587,7 @@ const render = {
         const tabs = renderSectionTabs(section.id);  
         // FIX #3: exclude c-index from special pages so bottom nav appears
         const isSpecialPage = chapterData && (chapterData.id === 'c0');  
-        // Rewritten guidelines (cpg-guide.js) are reference pages: no study tabs.
+        // Rewritten guidelines render from structured data (cpg-guide.js).
         const isGuide = !!(section.guide && window.CPGGuide);
         const summaryContent = isGuide ? CPGGuide.renderGuide(section.guide)
             : section.summary || '<div class="sum-card">No summary available.</div>';  
@@ -602,10 +602,10 @@ const render = {
                     <button data-action="backHome"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#house"/></svg> Home</button>
                 </div>
             </div>  
-            ${!isSpecialPage && !isGuide ? renderBottomNav('summary') : ''}  
+            ${!isSpecialPage ? renderBottomNav('summary') : ''}  
         `;  
         setMainContent(html);  
-        updateHeader(utils.escapeHTML(section.shortTitle), isGuide ? 'DCAS CPG 2025' : 'Summary', true);  
+        updateHeader(utils.escapeHTML(section.shortTitle), 'Summary', true);  
         utils.safeScrollTop();  
 
         if (chapterData && chapterData.id === 'c-index') {  
@@ -613,8 +613,7 @@ const render = {
         }  
     },  
 
-    flashcards: function() {
-        if (state.activeSection && state.activeSection.guide) { render.summary(); return; }
+    flashcards: function() {  
         if (isChapterMissing) { renderComingSoon(); return; }  
         const section = state.activeSection;  
         if (!section) {   
@@ -678,8 +677,7 @@ const render = {
         utils.safeScrollTop();  
     },  
 
-    quizSetup: function() {
-        if (state.activeSection && state.activeSection.guide) { render.summary(); return; }
+    quizSetup: function() {  
         if (isChapterMissing) { renderComingSoon(); return; }  
         const section = state.activeSection;  
         if (!section) {   
@@ -760,8 +758,7 @@ const render = {
         utils.safeScrollTop();  
     },  
 
-    criticalGame: function() {
-        if (state.activeSection && state.activeSection.guide) { render.summary(); return; }
+    criticalGame: function() {  
         if (isChapterMissing) { renderComingSoon(); return; }  
         const section = state.activeSection;  
         if (!section) {   
@@ -798,6 +795,8 @@ const render = {
                 <div style="background: var(--btn-grad-scen); padding:15px; border-radius:12px; margin-bottom:20px; border:1px solid var(--border-scen);">  
                     <strong style="color:var(--text-scen);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#siren"/></svg> Scenario</strong>  
                     <p style="margin-top:8px; color:var(--text-primary);">${utils.escapeHTML(q.scenario)}</p>  
+                    ${q.ecg && window.CPGStrip ? `<div class="scen-strip">${CPGStrip.svg(q.ecg)}</div>` : ''}
+                    ${q.ecg ? `<a class="scen-ecg" href="../pages/ecg.html?r=${encodeURIComponent(q.ecg)}" target="_blank" rel="noopener"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#heart-pulse"/></svg> Open in the ECG Simulator</a>` : ''}
                 </div>  
                 <div style="font-weight:600; margin-bottom:15px;">${utils.escapeHTML(q.question)}</div>  
                 <div class="quiz-options" id="criticalOptionsContainer">${optionsHtml}</div>  

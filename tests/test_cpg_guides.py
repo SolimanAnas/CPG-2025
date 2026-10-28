@@ -4,7 +4,8 @@ Every guideline written for cpg-guide.js (content/*.js with a `guide`) and
 every drug sheet (content/drugs/*.js setting window.CPG_DRUG) names its source
 PDF. Each number on the page – doses, rates, ages, times, thresholds – must
 appear in that PDF's text (data/cpg-source/), so a typo or an invented value
-fails the build.
+fails the build. The same goes for the right answers and explanations in the
+page's quiz, flashcards and scenarios.
 """
 
 import html
@@ -33,6 +34,7 @@ SKIP_KEYS = {
     "start",
     "level",
     "label",
+    "ecg",
 }
 
 UNITS = (
@@ -62,13 +64,30 @@ def load(path: Path) -> dict | None:
     script = (
         "global.window = {};"
         f"require({json.dumps(str(path))});"
-        "const d = window.CPG_DATA, g = d && d.guide;"
-        "console.log(JSON.stringify(g || window.CPG_DRUG || null));"
+        "const d = window.CPG_DATA || {};"
+        "const page = d.guide || window.CPG_DRUG || null;"
+        "console.log(JSON.stringify(page && {page, quiz: d.quiz || [],"
+        " flashcards: d.flashcards || [], critical: d.critical || []}));"
     )
     out = subprocess.run(  # nosec B603 B607
         ["node", "-e", script], check=True, capture_output=True, text=True
     ).stdout
     return json.loads(out)
+
+
+def study_strings(data: dict):
+    """The parts of the study sets that state facts: right answers and
+    explanations. Wrong options and scenario stems (made-up vital signs) are
+    not facts from the CPG, so they are not checked."""
+    for q in data["quiz"]:
+        yield q["options"][q["correct"]]
+        yield q["explanation"]
+    for card in data["flashcards"]:
+        yield card["answer"]
+    for c in data["critical"]:
+        yield c["options"][c["correct"]]["t"]
+        yield c["explanation"]
+        yield c.get("kpi", "")
 
 
 def strings(node, key=None):
@@ -105,10 +124,22 @@ def test_pilot_pages_are_rewritten():
 
 
 @pytest.mark.parametrize("path", PAGES, ids=[p.name for p in PAGES])
+def test_study_sets_are_well_formed(path):
+    data = load(path)
+    for q in data["quiz"]:
+        assert 0 <= q["correct"] < len(q["options"]), q["q"]
+        assert len(set(q["options"])) == len(q["options"]), q["q"]
+    for c in data["critical"]:
+        assert 0 <= c["correct"] < len(c["options"]), c["id"]
+    if data["page"].get("cpg"):  # guidelines keep all three study sets
+        assert data["quiz"] and data["flashcards"] and data["critical"], path.name
+
+
+@pytest.mark.parametrize("path", PAGES, ids=[p.name for p in PAGES])
 def test_numbers_match_the_official_text(path):
     data = load(path)
     assert data, f"{path.name} defines no guide or drug sheet"
-    pdf = Path(data["source"]["pdf"]).name
+    pdf = Path(data["page"]["source"]["pdf"]).name
     source_file = SOURCES / pdf.replace(".pdf", ".txt")
     assert source_file.is_file(), (
         f"Missing {source_file.relative_to(ROOT)}: run scripts/extract_cpg_source.py {pdf[:-4]}"
@@ -117,7 +148,7 @@ def test_numbers_match_the_official_text(path):
     source = squash(unify(source_file.read_text(encoding="utf-8")))
 
     missing = []
-    for text in strings(data):
+    for text in [*strings(data["page"]), *study_strings(data)]:
         for number, unit in NUMBER.findall(page_text(text)):
             token = squash(number + (unit or ""))
             if token not in source:

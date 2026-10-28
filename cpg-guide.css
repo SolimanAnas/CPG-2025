@@ -144,6 +144,18 @@
 /* ---------- Grouped notes ---------- */
 .g-group + .g-group { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--g-line); }
 
+/* ---------- Tool links (ECG Simulator, Megacode, …) ---------- */
+.g-tools { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.g-tools a {
+    display: flex; align-items: center; gap: 10px; height: 100%; box-sizing: border-box;
+    padding: 10px 12px; border-radius: 12px; text-decoration: none;
+    background: var(--g-tint); border: 1px solid var(--g-line); color: var(--text-primary);
+}
+.g-tools a:hover { border-color: var(--g-accent); }
+.g-tools .lucide { width: 1.3em; height: 1.3em; color: var(--g-accent); }
+.g-tools b { display: block; font-size: .9rem; font-weight: 650; color: var(--text-primary); }
+.g-tools small { display: block; margin-top: 1px; font-size: .78rem; color: var(--text-secondary); line-height: 1.35; }
+
 /* ---------- Related and source ---------- */
 .g-related { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .g-related a {
@@ -196,3 +208,43 @@
     .cpg-guide { animation: none; }
     .g-head, .g-sec { box-shadow: none; break-inside: avoid; }
 }
+
+/* ---------- Rhythm strips (cpg-strip.js) ----------
+ * Monitor-style paper: a 1 mm / 5 mm grid drawn as a background.
+ * --ecg-cols / --ecg-rows are the strip's size in mm (set by cpg-strip.js).
+ */
+.g-strips { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 900px) { .g-strips { grid-template-columns: 1fr 1fr; } }
+.g-strip { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--g-line); background: var(--g-tint); }
+.g-strip figcaption {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px;
+    padding: 9px 12px;
+}
+.g-strip figcaption > span { flex: 1 1 200px; }
+.g-strip figcaption b { display: block; font-size: .92rem; font-weight: 700; color: var(--text-primary); }
+.g-strip figcaption small { display: block; font-size: .8rem; color: var(--text-secondary); line-height: 1.35; }
+.g-strip figcaption a {
+    flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px;
+    font-size: .8rem; font-weight: 700; color: var(--g-accent); text-decoration: none; white-space: nowrap;
+}
+.g-strip figcaption a .lucide { width: 1.05em; height: 1.05em; }
+.ecg-paper {
+    --mmx: calc(100% / var(--ecg-cols, 150));
+    --mmy: calc(100% / var(--ecg-rows, 30));
+    position: relative; width: 100%;
+    background-color: #08130e;
+    background-image:
+        linear-gradient(to right, rgba(46, 204, 113, .32) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(46, 204, 113, .32) 1px, transparent 1px),
+        linear-gradient(to right, rgba(46, 204, 113, .12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(46, 204, 113, .12) 1px, transparent 1px);
+    background-size:
+        calc(var(--mmx) * 5) calc(var(--mmy) * 5), calc(var(--mmx) * 5) calc(var(--mmy) * 5),
+        var(--mmx) var(--mmy), var(--mmx) var(--mmy);
+}
+.ecg-strip { display: block; width: 100%; height: 100%; }
+.ecg-trace { fill: none; stroke: #4dff9a; stroke-width: 1.6px; stroke-linejoin: round; stroke-linecap: round; }
+.ecg-lead { font: 700 3px/1 Inter, system-ui, sans-serif; fill: rgba(160, 255, 200, .85); }
+
+/* A strip inside a scenario card (app.js) */
+.scen-strip { margin-top: 10px; border-radius: 10px; overflow: hidden; }
