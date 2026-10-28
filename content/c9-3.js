@@ -1,421 +1,854 @@
-/* ========== Chapter 9.3 � Pediatric Tachycardia ========== */
+/* ========== CPG 9.3 – Pediatric Tachycardia ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c9-3",
-    title: "Pediatric Tachycardia",
-    shortTitle: "9.3 Pediatric Tachycardia",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Pediatric Tachycardia</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify tachycardia in infants and children and determine whether it is compromising perfusion or mental status.</li>
-                <li>Distinguish between physiologic sinus tachycardia (often a response to stress, pain, or fever) and dangerous tachyarrhythmias requiring intervention.</li>
-                <li>Maintain adequate oxygenation, perfusion, and cerebral function.</li>
-                <li>Systematically explore and correct potential underlying causes: excessive stimulants, illicit drug use, pre-existing cardiac conditions, cardiac failure, severe infections.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Infants and children =13 years presenting with a heart rate above normal for age, with or without signs of instability.</li>
-                <li>Age-specific concerning heart rates: infant (<1 yr) >220 bpm; child (1�10 yrs) >180 bpm; adolescent (>10 yrs) >180 bpm.</li>
-                <li>Signs of poor perfusion: altered mental status, weak pulses, hypotension, prolonged capillary refill (>3 seconds), pallor, cyanosis, respiratory distress.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Age-appropriate sinus tachycardia (e.g., due to fever, pain, dehydration) without instability.</li>
-                <li>Known chronic arrhythmias in stable condition.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Primary Survey:</strong> Use the Pediatric Assessment Triangle (PAT) to assess appearance, work of breathing, circulation. Look for evidence of shock or impending cardiac/respiratory arrest.</li>
-                <li><strong>Airway & Breathing:</strong> Check for signs of respiratory distress, hypoxia, or failure; auscultate for wheezing, stridor, or silent chest.</li>
-                <li><strong>Circulation:</strong> Assess central and peripheral pulses for rate, regularity, strength; capillary refill, skin color, temperature; blood pressure if feasible.</li>
-                <li><strong>Heart Rate & Rhythm Assessment:</strong> Count HR for a full minute. Apply ECG to differentiate:
-                    <ul>
-                        <li>Sinus tachycardia: gradual onset, HR appropriate for age & context, variable R-R interval.</li>
-                        <li>Supraventricular tachycardia (SVT): abrupt onset, very high rate (>220 infant, >180 child), narrow QRS, poor perfusion.</li>
-                        <li>Ventricular tachycardia (VT): widened QRS, monomorphic or polymorphic.</li>
-                    </ul>
-                </li>
-                <li><strong>Reversible Causes:</strong> Fever, dehydration, pain, hypoxia, anxiety, toxins, metabolic disorders.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for HR >220 in infants or >180 in children with signs of poor perfusion (altered mental status, hypotension, weak pulses, cyanosis, respiratory distress). Yellow priority for HR elevated but stable perfusion, normal mental status, responsive to initial vagal maneuvers.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back-up:</strong> Routinely for pediatric tachycardia with instability.</li>
-                <li><strong>Calm and Systematic Approach:</strong> Keep child warm, minimize stress; allow caregiver presence if calming.</li>
-                <li><strong>Oxygenation & Ventilation:</strong> Ensure patent airway; administer oxygen titrated to target SpO2 =94% and normocapnia (EtCO2 35-45 mmHg). If respiratory failure or apnea, start BVM ventilation.</li>
-                <li><strong>12-Lead ECG:</strong> Perform if possible; continuously monitor rhythm.</li>
-                <li><strong>Blood Glucose:</strong> Check and treat hypoglycemia or hyperglycemia as per appropriate CPG.</li>
-                <li><strong>IV Access:</strong> Establish if at risk of deterioration or requiring fluid/medication; IO if IV fails.</li>
-                <li><strong>Cardiopulmonary Compromise Assessment:</strong>
-                    <ul>
-                        <li><strong>Stable:</strong> Tachyarrhythmia with adequate perfusion (no significant hypotension, good mental status, warm extremities, normal capillary refill).</li>
-                        <li><strong>Unstable:</strong> Tachyarrhythmia with signs of poor perfusion: altered mental status, hypotension, weak/absent peripheral pulses, cool/mottled skin, respiratory distress.</li>
-                    </ul>
-                </li>
-                <li><strong>Stable Tachycardia:</strong>
-                    <ul>
-                        <li>Narrow-complex (likely sinus tachycardia or SVT):
-                            <ul>
-                                <li>Assess underlying causes (fever, pain, dehydration, anxiety).</li>
-                                <li>If sinus tachycardia: treat underlying cause.</li>
-                                <li>If SVT suspected: attempt vagal maneuvers (modified Valsalva, ice water to face).</li>
-                                <li>If vagal maneuvers ineffective and IV/IO access available: administer Adenosine.
-                                    <ul>
-                                        <li>1st dose: 0.1 mg/kg IV/IO rapid push (max 6 mg).</li>
-                                        <li>2nd dose: 0.2 mg/kg IV/IO rapid push (max 12 mg).</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Wide-complex (likely VT):
-                            <ul>
-                                <li>If rhythm is regular and monomorphic: adenosine may be considered after Tele-EMS consultation (routine administration not recommended).</li>
-                                <li>If irregular or polymorphic ? consult expert; avoid adenosine.</li>
-                                <li>Prepare for possible deterioration; have cardioversion equipment ready.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Unstable Tachycardia (with a pulse):</strong>
-                    <ul>
-                        <li>Narrow-complex (likely SVT):
-                            <ul>
-                                <li>Consider vagal maneuvers if clinical condition sufficiently stable.</li>
-                                <li>If ineffective or too unstable: consider Adenosine (same doses as above).</li>
-                                <li>If adenosine fails or child deteriorates: synchronized cardioversion.
-                                    <ul>
-                                        <li>1st dose: 0.5�1 J/kg; if ineffective: 2 J/kg.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Wide-complex (likely VT):
-                            <ul>
-                                <li>Proceed directly to synchronized cardioversion (same doses).</li>
-                                <li>If rhythm is regular and monomorphic and child remains stable enough, consider adenosine (after Tele-EMS consultation).</li>
-                                <li>Administer sedation if time and stability permit, but do not delay cardioversion.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess vital signs, rhythm, response to interventions. Continuous ECG monitoring required.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Avoid delays in cardioversion if the patient is unstable.</li>
-                <li>Ensure correct dosing of adenosine and monitor for transient asystole.</li>
-                <li>Be prepared to escalate to CPR if interventions fail.</li>
-                <li>Minimize patient agitation to reduce cardiac demand.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Pediatric tachycardia is often secondary to hypoxia or shock � address underlying causes promptly.</li>
-                <li>If rhythm is unclear, patient deteriorates, or advanced interventions (e.g., cardioversion, advanced airway) may be needed, consult Tele-EMS.</li>
-                <li>Differentiate between sinus tachycardia (common with fever, pain, dehydration) and SVT (abrupt onset, often >220 in infants).</li>
-                <li>Vagal maneuvers: modified Valsalva (blowing through a syringe) or ice water applied to face (diving reflex) may be effective in infants.</li>
-                <li>Sedation for cardioversion: consider midazolam or ketamine if time permits.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Name, age, sex, weight.</li>
-                <li>Pediatric tachycardia � specify if stable or unstable, suspected type (SVT, VT, sinus).</li>
-                <li>Relevant history: congenital heart disease, recent infection, medications, previous episodes.</li>
-                <li>Heart rate and rhythm (trends and response to treatment), blood pressure, SpO2, mental status, skin perfusion.</li>
-                <li>Treatment: oxygen, airway support, vagal maneuvers, medications (adenosine � dose & response), cardioversion (energy level & response).</li>
-                <li>Allergies, medications given at scene and home meds.</li>
-                <li>Background medical history, family history if relevant.</li>
-                <li>Time of onset, changes during care, ALS back-up requested, equipment used, Tele-EMS consultation.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Perform an appropriate intervention (e.g., vagal maneuvers, adenosine, or cardioversion) for unstable tachycardia patients.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c9-3",
+    "title": "Pediatric Tachycardia",
+    "shortTitle": "9.3 Pediatric Tachycardia",
+    "guide": {
+        "cpg": "9.3",
+        "group": "pediatric",
+        "groupLabel": "Pediatrics",
+        "title": "Pediatric Tachycardia",
+        "lead": "First separate sinus tachycardia, which needs its cause treated, from SVT or VT. Then decide whether the child is compromised, and read the QRS. Narrow-complex SVT: vagal manoeuvres, then adenosine, with synchronized cardioversion if the child is unstable and adenosine fails. Unstable wide-complex: cardiovert. Do not delay cardioversion in an unstable child.",
+        "source": {
+            "label": "CPG 9.3",
+            "pages": "301–307",
+            "pdf": "../pdf_sections/9_3_Pediatric_Tachycardia.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Infants and children ≤13 years with a heart rate above normal for age, with or without poor perfusion (altered mental status, weak pulses, hypotension, capillary refill &gt;3 seconds, pallor, cyanosis, respiratory distress)."
+                ],
+                "exclude": [
+                    "Age-appropriate sinus tachycardia (fever, pain, dehydration) without instability.",
+                    "Known chronic arrhythmia in a stable condition."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Heart rate by age",
+                "icon": "stethoscope",
+                "columns": [
+                    "Age",
+                    "Normal (awake)",
+                    "Concerning"
+                ],
+                "rows": [
+                    [
+                        "Infant (&lt;1 year)",
+                        "100–160 bpm",
+                        "&gt;220 bpm"
+                    ],
+                    [
+                        "Child (1–10 years)",
+                        "70–150 bpm",
+                        "&gt;180 bpm"
+                    ],
+                    [
+                        "Adolescent (&gt;10 years)",
+                        "60–100 bpm",
+                        "&gt;180 bpm"
+                    ]
+                ],
+                "notes": [
+                    "Count HR over a full minute."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Sinus tachycardia or SVT?",
+                "icon": "heart-pulse",
+                "columns": [
+                    "",
+                    "Probable sinus tachycardia",
+                    "Probable SVT"
+                ],
+                "rows": [
+                    [
+                        "P waves",
+                        "Present and normal",
+                        "Absent"
+                    ],
+                    [
+                        "R-R interval",
+                        "Variable",
+                        "Not variable"
+                    ],
+                    [
+                        "Rate",
+                        "Infant &lt;220/min; child usually &lt;180 bpm",
+                        "Infant usually &gt;220; child usually &gt;180"
+                    ],
+                    [
+                        "Onset",
+                        "Gradual, fits the context (fever, pain, dehydration)",
+                        "Abrupt rate change"
+                    ],
+                    [
+                        "Action",
+                        "Identify and treat the cause",
+                        "Treat the rhythm"
+                    ]
+                ],
+                "notes": [
+                    "QRS ≤0.09 sec is narrow; wider suggests possible VT."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "All patients",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely requested."
+                    },
+                    {
+                        "title": "Calm",
+                        "text": "Keep the child warm, minimise stress, caregiver present if it helps."
+                    },
+                    {
+                        "title": "Airway and breathing",
+                        "text": "Oxygen to SpO<sub>2</sub> ≥94% and EtCO<sub>2</sub> 35–45 mmHg; BVM for respiratory failure or apnea."
+                    },
+                    {
+                        "title": "ECG",
+                        "text": "12-lead, then continuous monitoring."
+                    },
+                    {
+                        "title": "Glucose",
+                        "text": "Treat hypo- or hyperglycemia per the relevant CPG."
+                    },
+                    {
+                        "title": "Access",
+                        "text": "IV if at risk of deterioration or needing fluid or drugs; IO if IV fails or is impractical."
+                    },
+                    {
+                        "title": "Causes",
+                        "text": "Fever, dehydration, pain, hypoxia, shock, anxiety, toxins (stimulants, amphetamines, cocaine), metabolic disorders, heart disease, sepsis."
+                    }
+                ]
+            },
+            {
+                "type": "gate",
+                "title": "Cardiopulmonary compromise?",
+                "icon": "triangle-alert",
+                "question": "Any sign of compromise?",
+                "items": [
+                    "Acutely altered mental status",
+                    "Signs of shock: weak pulses, cool mottled skin, slow capillary refill",
+                    "Hypotension",
+                    "Respiratory distress or failure"
+                ],
+                "yes": "Unstable: immediate adenosine or synchronized cardioversion.",
+                "no": "Stable: monitor, investigate and treat the cause; treat SVT with vagal manoeuvres and adenosine."
+            },
+            {
+                "type": "pathways",
+                "title": "Unstable (compromised)",
+                "icon": "zap",
+                "paths": [
+                    {
+                        "title": "Narrow QRS: probable SVT",
+                        "tone": "noshock",
+                        "steps": [
+                            {
+                                "text": "Vagal manoeuvres only if stable enough."
+                            },
+                            {
+                                "text": "Adenosine IV/IO rapid push: 0.1 mg/kg (max 6 mg), then 0.2 mg/kg (max 12 mg).",
+                                "level": "P"
+                            },
+                            {
+                                "text": "Adenosine fails or the child deteriorates: synchronized cardioversion 0.5–1 J/kg, then 2 J/kg.",
+                                "level": "AP"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Wide QRS: possible VT",
+                        "tone": "shock",
+                        "steps": [
+                            {
+                                "text": "Synchronized cardioversion straight away: 0.5–1 J/kg, then 2 J/kg.",
+                                "level": "AP"
+                            },
+                            {
+                                "text": "Sedate if time and stability permit, but never delay cardioversion."
+                            },
+                            {
+                                "text": "Regular, monomorphic and still stable enough: adenosine may be considered."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "pathways",
+                "title": "Stable (no compromise)",
+                "icon": "list",
+                "paths": [
+                    {
+                        "title": "Narrow QRS",
+                        "tone": "noshock",
+                        "steps": [
+                            {
+                                "text": "Sinus tachycardia: treat the cause."
+                            },
+                            {
+                                "text": "SVT: vagal manoeuvres."
+                            },
+                            {
+                                "text": "Ineffective, with IV/IO access: adenosine 0.1 mg/kg (max 6 mg), then 0.2 mg/kg (max 12 mg).",
+                                "level": "P"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Wide QRS",
+                        "tone": "shock",
+                        "steps": [
+                            {
+                                "text": "Consult Tele-EMS."
+                            },
+                            {
+                                "text": "Regular and monomorphic: adenosine after consultation (not routine).",
+                                "level": "AP"
+                            },
+                            {
+                                "text": "Irregular or polymorphic: avoid adenosine; seek expert advice."
+                            }
+                        ]
+                    }
+                ],
+                "after": "Have cardioversion and resuscitation equipment ready. Watch for transient asystole after adenosine; be ready to start CPR."
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Rhythms",
+                        "items": [
+                            {
+                                "ecg": "stach",
+                                "label": "Sinus tachycardia",
+                                "sub": "Treat the cause"
+                            },
+                            {
+                                "ecg": "svt",
+                                "label": "SVT",
+                                "sub": "Vagal, adenosine, cardioversion"
+                            },
+                            {
+                                "ecg": "vt",
+                                "label": "Ventricular tachycardia",
+                                "sub": "Unstable: cardiovert"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: adenosine",
+                                "sub": "0.1 then 0.2 mg/kg",
+                                "href": "../pages/drug-calculator.html?drug=Adenosine",
+                                "icon": "syringe"
+                            },
+                            {
+                                "label": "Defibrillator",
+                                "sub": "Synchronized cardioversion energies",
+                                "href": "../pages/defib.html",
+                                "icon": "zap"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "An appropriate intervention (vagal manoeuvres, adenosine or cardioversion) for unstable tachycardia."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "9.2 Pediatric Bradycardia",
+                        "href": "c9-2.html"
+                    },
+                    {
+                        "label": "4.4 Pediatric Cardiac Arrest",
+                        "href": "c4-4.html"
+                    },
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the concerning heart rate threshold for an infant (<1 year) with possible tachyarrhythmia?",
-            options: [">180 bpm", ">200 bpm", ">220 bpm", ">240 bpm"],
-            correct: 2,
-            explanation: "SVT in infants is typically >220 bpm; sinus tachycardia is usually <220."
+            "q": "Concerning heart rate in an infant?",
+            "options": [
+                ">220 bpm",
+                ">180 bpm",
+                ">200 bpm",
+                ">240 bpm"
+            ],
+            "correct": 0,
+            "explanation": "Child and adolescent: >180 bpm."
         },
         {
-            q: "What is the first step in managing a child with tachycardia and signs of poor perfusion?",
-            options: ["Adenosine", "Synchronized cardioversion", "Assess airway, breathing, and oxygenation", "Vagal maneuvers"],
-            correct: 2,
-            explanation: "The primary survey (ABCs) is the priority; treat hypoxia and shock before specific antiarrhythmics."
+            "q": "First step for a tachycardic child with poor perfusion?",
+            "options": [
+                "Airway, breathing and oxygen, with cardiac monitoring",
+                "Adenosine before anything else",
+                "Fluids only",
+                "Leave on scene"
+            ],
+            "correct": 0,
+            "explanation": "Initial assessment and support."
         },
         {
-            q: "A 2-year-old child has a heart rate of 250, is pale, and has weak pulses. What is the most likely rhythm?",
-            options: ["Sinus tachycardia", "Supraventricular tachycardia (SVT)", "Ventricular tachycardia", "Atrial fibrillation"],
-            correct: 1,
-            explanation: "SVT presents with abrupt onset, very high rate, and often narrow QRS."
+            "q": "A 2-year-old: HR 250, pale, weak pulses, no P waves, fixed R-R. Rhythm?",
+            "options": [
+                "SVT",
+                "Sinus tachycardia",
+                "VT",
+                "Atrial fibrillation"
+            ],
+            "correct": 0,
+            "explanation": "Child usually >180, abrupt onset."
         },
         {
-            q: "What is the initial dose of adenosine for a 10 kg child with SVT?",
-            options: ["0.1 mg/kg (1 mg) rapid IV push", "0.2 mg/kg (2 mg) rapid IV push", "0.5 mg/kg", "1 mg/kg"],
-            correct: 0,
-            explanation: "First dose is 0.1 mg/kg (max 6 mg); second dose 0.2 mg/kg (max 12 mg)."
+            "q": "First adenosine dose?",
+            "options": [
+                "0.1 mg/kg rapid IV/IO push, max 6 mg",
+                "0.2 mg/kg, max 12 mg",
+                "0.5 mg/kg",
+                "1 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Second dose 0.2 mg/kg, max 12 mg."
         },
         {
-            q: "A child with unstable tachycardia and poor perfusion has a wide QRS complex. What is the appropriate intervention?",
-            options: ["Adenosine", "Synchronized cardioversion", "Amiodarone", "Vagal maneuvers"],
-            correct: 1,
-            explanation: "Unstable wide-complex tachycardia (presumed VT) should be treated with synchronized cardioversion."
+            "q": "Unstable child with wide-complex tachycardia. Intervention?",
+            "options": [
+                "Synchronized cardioversion",
+                "Vagal manoeuvres",
+                "Wait for Tele-EMS",
+                "Oral fluids"
+            ],
+            "correct": 0,
+            "explanation": "Proceed directly to cardioversion."
         },
         {
-            q: "What is the energy dose for synchronized cardioversion in a child?",
-            options: ["0.5-1 J/kg", "2-4 J/kg", "5 J/kg", "10 J/kg"],
-            correct: 0,
-            explanation: "Initial dose is 0.5-1 J/kg; if ineffective, increase to 2 J/kg."
+            "q": "First synchronized cardioversion energy?",
+            "options": [
+                "0.5–1 J/kg",
+                "2–4 J/kg",
+                "5 J/kg",
+                "10 J/kg"
+            ],
+            "correct": 0,
+            "explanation": "Then 2 J/kg."
         },
         {
-            q: "What is the target SpO2 for a child with tachycardia?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "Oxygen target?",
+            "options": [
+                "SpO₂ ≥94%",
+                "≥88%",
+                "≥90%",
+                "No oxygen"
+            ],
+            "correct": 0,
+            "explanation": "With EtCO₂ 35–45 mmHg."
         },
         {
-            q: "A 5-year-old child has a heart rate of 200, is alert, and has warm extremities. The rhythm is narrow complex. What is the first step?",
-            options: ["Synchronized cardioversion", "Adenosine", "Vagal maneuvers", "Assess for underlying causes (fever, pain, dehydration)"],
-            correct: 3,
-            explanation: "Stable narrow-complex tachycardia may be sinus tachycardia; treat underlying cause first."
+            "q": "A 5-year-old: HR 170, alert, warm, febrile, P waves present. First step?",
+            "options": [
+                "Treat the cause (fever, pain, dehydration)",
+                "Cardioversion",
+                "Adenosine",
+                "Vagal manoeuvres"
+            ],
+            "correct": 0,
+            "explanation": "Probable sinus tachycardia."
         },
         {
-            q: "What is the dose of adenosine for a second dose in a child?",
-            options: ["0.1 mg/kg", "0.2 mg/kg", "0.3 mg/kg", "0.5 mg/kg"],
-            correct: 1,
-            explanation: "Second dose is 0.2 mg/kg (max 12 mg)."
+            "q": "Second adenosine dose?",
+            "options": [
+                "0.2 mg/kg, max 12 mg",
+                "0.1 mg/kg",
+                "0.3 mg/kg",
+                "0.5 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Rapid IV/IO push."
         },
         {
-            q: "Which of the following differentiates sinus tachycardia from SVT?",
-            options: ["Abrupt onset/offset", "HR >220 in infant", "Narrow QRS", "All of the above"],
-            correct: 3,
-            explanation: "SVT often has abrupt onset/offset, very high rate, and narrow QRS."
+            "q": "Which favours SVT over sinus tachycardia?",
+            "options": [
+                "Absent P waves and a fixed R-R interval",
+                "Gradual onset with fever",
+                "Variable R-R",
+                "Rate <180 in a child"
+            ],
+            "correct": 0,
+            "explanation": "Plus abrupt onset and very high rate."
         },
         {
-            q: "A 6-month-old infant has a heart rate of 280 and is lethargic. After opening the airway and giving oxygen, the rhythm persists. What is the next step?",
-            options: ["Synchronized cardioversion", "Adenosine", "Vagal maneuvers", "IV fluids"],
-            correct: 1,
-            explanation: "Stable but persistent SVT may be treated with adenosine; if unstable, cardioversion is indicated."
+            "q": "A lethargic 6-month-old with narrow-complex HR 280 and IO access. Next?",
+            "options": [
+                "Adenosine 0.1 mg/kg",
+                "Wait and observe",
+                "IV fluids only",
+                "Defibrillate unsynchronized"
+            ],
+            "correct": 0,
+            "explanation": "Cardioversion if adenosine fails or the child deteriorates."
         },
         {
-            q: "What is the maximum single dose of adenosine for a child?",
-            options: ["6 mg", "12 mg", "18 mg", "24 mg"],
-            correct: 1,
-            explanation: "Maximum single dose is 12 mg (0.2 mg/kg up to 12 mg)."
+            "q": "Maximum single adenosine dose?",
+            "options": [
+                "12 mg (second dose)",
+                "6 mg",
+                "18 mg",
+                "24 mg"
+            ],
+            "correct": 0,
+            "explanation": "First dose max 6 mg."
         },
         {
-            q: "A child with a wide complex tachycardia is stable. What should you do?",
-            options: ["Synchronized cardioversion", "Adenosine (if regular and monomorphic, after consultation)", "Amiodarone", "Vagal maneuvers"],
-            correct: 1,
-            explanation: "For stable wide-complex tachycardia, adenosine may be considered if the rhythm is regular and monomorphic, but consultation is recommended."
+            "q": "Stable child with regular monomorphic wide-complex tachycardia. Management?",
+            "options": [
+                "Tele-EMS; adenosine only after consultation",
+                "Immediate cardioversion",
+                "Vagal manoeuvres only",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Routine adenosine is not recommended."
         },
         {
-            q: "What is the preferred vagal maneuver in an infant?",
-            options: ["Carotid massage", "Modified Valsalva", "Ice water to face", "Coughing"],
-            correct: 2,
-            explanation: "Ice water applied to the face can elicit the diving reflex and is effective in infants."
+            "q": "Stable SVT. What comes first?",
+            "options": [
+                "Vagal manoeuvres",
+                "Cardioversion",
+                "Adenosine 0.2 mg/kg",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Then adenosine if ineffective."
         },
         {
-            q: "What is the key performance indicator for pediatric tachycardia?",
-            options: ["Administer adenosine", "Perform appropriate intervention for unstable tachycardia", "Obtain 12-lead ECG", "Check blood glucose"],
-            correct: 1,
-            explanation: "The KPI is to perform an appropriate intervention (vagal maneuvers, adenosine, or cardioversion) for unstable tachycardia."
+            "q": "KPI?",
+            "options": [
+                "Appropriate intervention for unstable tachycardia",
+                "Adenosine for all",
+                "Glucose for all",
+                "Fluids for all"
+            ],
+            "correct": 0,
+            "explanation": "Vagal manoeuvres, adenosine or cardioversion."
         },
         {
-            q: "A child with SVT receives adenosine and develops transient asystole lasting 4 seconds, then sinus rhythm. What should you do?",
-            options: ["Start CPR", "Give atropine", "Observe and monitor", "Give another dose of adenosine"],
-            correct: 2,
-            explanation: "Transient asystole is expected with adenosine; monitor rhythm and support if prolonged."
+            "q": "After adenosine, the monitor shows a few seconds of asystole, then sinus rhythm. What do you do?",
+            "options": [
+                "Monitor: transient asystole is expected",
+                "Start CPR immediately",
+                "Atropine",
+                "Another adenosine dose"
+            ],
+            "correct": 0,
+            "explanation": "Monitor for transient asystole; be ready to escalate."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with tachycardia and signs of shock?",
-            options: ["5 mL/kg", "10 mL/kg", "20 mL/kg", "40 mL/kg"],
-            correct: 2,
-            explanation: "Initial fluid bolus is 20 mL/kg isotonic crystalloid."
+            "q": "Which level gives adenosine for narrow-complex SVT?",
+            "options": [
+                "P",
+                "EMT",
+                "EMR",
+                "ER"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "A child with a heart rate of 200 and a fever of 39.5�C is alert and has good perfusion. What is the most likely rhythm?",
-            options: ["SVT", "Sinus tachycardia", "VT", "Atrial flutter"],
-            correct: 1,
-            explanation: "Sinus tachycardia is common with fever; treat the underlying fever."
+            "q": "HR 200 with fever of 39.5°C, alert, good perfusion, P waves visible. Rhythm?",
+            "options": [
+                "Sinus tachycardia",
+                "SVT",
+                "VT",
+                "Atrial flutter"
+            ],
+            "correct": 0,
+            "explanation": "Treat the fever and cause."
         },
         {
-            q: "What is the maximum adenosine dose for an adolescent?",
-            options: ["6 mg", "12 mg", "18 mg", "24 mg"],
-            correct: 1,
-            explanation: "Maximum single dose is 12 mg (same as adult)."
+            "q": "Which level gives synchronized cardioversion?",
+            "options": [
+                "AP",
+                "P",
+                "EMT",
+                "EMR"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "Why should you avoid excessive vagal maneuvers in a child with suspected SVT?",
-            options: ["May cause bradycardia", "May cause hypotension", "May cause respiratory compromise", "No harm"],
-            correct: 0,
-            explanation: "Excessive vagal stimulation can cause profound bradycardia; use carefully."
+            "q": "Irregular or polymorphic wide-complex tachycardia. Adenosine?",
+            "options": [
+                "Avoid; consult an expert",
+                "Give 0.1 mg/kg",
+                "Give 0.2 mg/kg",
+                "Give 12 mg"
+            ],
+            "correct": 0,
+            "explanation": "Per the CPG."
         },
         {
-            q: "A child with unstable tachycardia has a BP of 80/40 and is lethargic. The rhythm is narrow complex. What is the appropriate action?",
-            options: ["Adenosine", "Synchronized cardioversion", "Vagal maneuvers", "IV fluids"],
-            correct: 1,
-            explanation: "Unstable tachycardia with poor perfusion requires immediate synchronized cardioversion."
+            "q": "Lethargic child with narrow-complex SVT; two adenosine doses have failed. Next?",
+            "options": [
+                "Synchronized cardioversion 0.5–1 J/kg",
+                "A third adenosine dose",
+                "Vagal manoeuvres",
+                "Wait"
+            ],
+            "correct": 0,
+            "explanation": "Then 2 J/kg."
         },
         {
-            q: "What is the dose of synchronized cardioversion for a child if the initial shock fails?",
-            options: ["0.5-1 J/kg", "2 J/kg", "4 J/kg", "5 J/kg"],
-            correct: 1,
-            explanation: "Second dose is 2 J/kg."
+            "q": "Second cardioversion energy if the first fails?",
+            "options": [
+                "2 J/kg",
+                "0.5–1 J/kg",
+                "4 J/kg",
+                "5 J/kg"
+            ],
+            "correct": 0,
+            "explanation": "Per the flowchart."
         },
         {
-            q: "A child with a wide complex tachycardia is unstable. What is the priority?",
-            options: ["Adenosine", "Amiodarone", "Synchronized cardioversion", "Magnesium"],
-            correct: 2,
-            explanation: "Unstable wide-complex tachycardia requires immediate synchronized cardioversion."
+            "q": "Unstable wide-complex tachycardia. Priority?",
+            "options": [
+                "Synchronized cardioversion",
+                "Adenosine first",
+                "Magnesium",
+                "Vagal manoeuvres"
+            ],
+            "correct": 0,
+            "explanation": "Don't delay."
         },
         {
-            q: "What is the role of sedation before cardioversion?",
-            options: ["Always required", "If time permits and patient stable enough", "Never given", "Only for adults"],
-            correct: 1,
-            explanation: "Sedation should be given if possible, but do not delay cardioversion for unstable patients."
+            "q": "Sedation before cardioversion?",
+            "options": [
+                "If time and stability permit, without delaying cardioversion",
+                "Always required first",
+                "Never",
+                "Only for adults"
+            ],
+            "correct": 0,
+            "explanation": "Per the CPG."
         },
         {
-            q: "A 3-year-old child has a heart rate of 220 and is in SVT. After vagal maneuvers, the rhythm persists. The child is stable. What is the next step?",
-            options: ["Repeat vagal maneuvers", "Adenosine 0.1 mg/kg IV", "Synchronized cardioversion", "Amiodarone"],
-            correct: 1,
-            explanation: "For stable SVT after failed vagal maneuvers, adenosine is indicated."
+            "q": "A stable 3-year-old in SVT after failed vagal manoeuvres, IV in place. Next?",
+            "options": [
+                "Adenosine 0.1 mg/kg IV",
+                "Repeat vagal manoeuvres indefinitely",
+                "Cardioversion",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Stable narrow-complex pathway."
         },
         {
-            q: "What is the target EtCO2 during bag-valve-mask ventilation in a child with tachycardia?",
-            options: ["30-35 mmHg", "35-45 mmHg", "45-55 mmHg", ">50 mmHg"],
-            correct: 1,
-            explanation: "Maintain normocapnia (35-45 mmHg) to avoid cerebral vasoconstriction or vasodilation."
+            "q": "EtCO₂ target if ventilating?",
+            "options": [
+                "35–45 mmHg",
+                "20–25 mmHg",
+                "45–55 mmHg",
+                ">60 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Normocapnia."
         },
         {
-            q: "A child with a known history of Wolff-Parkinson-White syndrome presents with SVT. What medication should be avoided?",
-            options: ["Adenosine", "Digoxin", "Verapamil", "Amiodarone"],
-            correct: 2,
-            explanation: "Verapamil is contraindicated in infants and children with WPW due to risk of ventricular fibrillation."
+            "q": "Why check blood glucose?",
+            "options": [
+                "Treat hypo- or hyperglycemia per their CPGs",
+                "To dose adenosine",
+                "To choose the energy",
+                "Not needed"
+            ],
+            "correct": 0,
+            "explanation": "Management step 4."
         },
         {
-            q: "What is the maximum total fluid bolus for a child in shock?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum total crystalloid is 60 mL/kg (three 20 mL/kg boluses)."
+            "q": "Which QRS duration is narrow?",
+            "options": [
+                "≤0.09 sec",
+                "≥0.12 seconds only",
+                "Any",
+                "≤0.2 seconds"
+            ],
+            "correct": 0,
+            "explanation": "Wider suggests possible VT."
         },
         {
-            q: "A child with SVT receives adenosine and remains in SVT. What is the next step?",
-            options: ["Repeat adenosine at 0.2 mg/kg", "Synchronized cardioversion", "Give amiodarone", "Repeat vagal maneuvers"],
-            correct: 0,
-            explanation: "If the first dose fails, repeat adenosine at 0.2 mg/kg (max 12 mg)."
+            "q": "SVT persists after the first adenosine dose. Next?",
+            "options": [
+                "Second dose 0.2 mg/kg (max 12 mg)",
+                "Repeat 0.1 mg/kg",
+                "Amiodarone",
+                "Stop treatment"
+            ],
+            "correct": 0,
+            "explanation": "Then cardioversion if unstable."
         },
         {
-            q: "What is the dose of epinephrine for a child with bradycardia during resuscitation?",
-            options: ["0.01 mg/kg", "0.1 mg/kg", "0.001 mg/kg", "0.5 mg/kg"],
-            correct: 0,
-            explanation: "Epinephrine for bradycardia with poor perfusion is 0.01 mg/kg IV/IO."
+            "q": "Which drug toxicity can cause tachycardia?",
+            "options": [
+                "Amphetamines or cocaine",
+                "Paracetamol",
+                "Insulin",
+                "Antacids"
+            ],
+            "correct": 0,
+            "explanation": "Also caffeine, decongestants, thyroid preparations."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is pediatric tachycardia?", answer: "Heart rate above normal for age; concerning thresholds: infant >220 bpm, child >180 bpm, adolescent >180 bpm." },
-        { category: "Sinus tachycardia", question: "What are features of sinus tachycardia?", answer: "Gradual onset, HR appropriate for condition (fever, pain), variable R-R interval, usually <220 in infants." },
-        { category: "SVT", question: "What are features of supraventricular tachycardia?", answer: "Abrupt onset, very high rate (>220 infant, >180 child), narrow QRS, poor perfusion often present." },
-        { category: "VT", question: "What are features of ventricular tachycardia?", answer: "Wide QRS, monomorphic or polymorphic, may be stable or unstable." },
-        { category: "Initial action", question: "What is the first step in pediatric tachycardia?", answer: "Assess airway, breathing, circulation; correct hypoxia and shock." },
-        { category: "Stable SVT", question: "How is stable SVT managed?", answer: "Vagal maneuvers, then adenosine if unsuccessful." },
-        { category: "Adenosine dose � child", question: "What is the first dose of adenosine for a child?", answer: "0.1 mg/kg IV/IO rapid push (max 6 mg)." },
-        { category: "Adenosine second dose", question: "What is the second dose of adenosine?", answer: "0.2 mg/kg IV/IO (max 12 mg)." },
-        { category: "Unstable tachycardia", question: "What is the treatment for unstable tachycardia?", answer: "Synchronized cardioversion (0.5-1 J/kg, then 2 J/kg)." },
-        { category: "Cardioversion dose", question: "What is the initial synchronized cardioversion energy dose for a child?", answer: "0.5-1 J/kg." },
-        { category: "Vagal maneuvers", question: "What vagal maneuvers can be used in children?", answer: "Modified Valsalva, ice water to face (diving reflex) in infants." },
-        { category: "Wide complex stable", question: "How is stable wide-complex tachycardia managed?", answer: "If regular and monomorphic, may consider adenosine (with consultation); otherwise, consult expert." },
-        { category: "Sedation", question: "When is sedation used for cardioversion?", answer: "If time and stability permit, to reduce pain and anxiety." },
-        { category: "Reversible causes", question: "What are common reversible causes of tachycardia?", answer: "Fever, pain, dehydration, hypoxia, anxiety, toxins, anemia." },
-        { category: "KPI", question: "What is the key performance indicator for pediatric tachycardia?", answer: "Perform appropriate intervention (vagal maneuvers, adenosine, cardioversion) for unstable tachycardia." },
-        { category: "Fluid resuscitation", question: "What is the fluid bolus for pediatric shock?", answer: "20 mL/kg isotonic crystalloid." },
-        { category: "Hypoglycemia", question: "Why check blood glucose in tachycardia?", answer: "Hypoglycemia can cause tachycardia and altered mental status." },
-        { category: "WPW contraindication", question: "What medication is contraindicated in WPW with SVT?", answer: "Verapamil (risk of ventricular fibrillation)." },
-        { category: "Adenosine side effects", question: "What are common side effects of adenosine?", answer: "Transient asystole, facial flushing, chest tightness, dyspnea." },
-        { category: "Transport decision", question: "Should all children with tachycardia be transported?", answer: "Yes, especially if unstable or SVT/VT suspected." }
+    "flashcards": [
+        {
+            "question": "Concerning HR",
+            "answer": "Infant >220 bpm; child and adolescent >180 bpm."
+        },
+        {
+            "question": "Normal awake HR",
+            "answer": "Infant 100–160; child 70–150; adolescent 60–100 bpm."
+        },
+        {
+            "question": "Sinus tachycardia",
+            "answer": "P waves present, variable R-R, gradual onset; infant <220, child usually <180."
+        },
+        {
+            "question": "SVT",
+            "answer": "No P waves, fixed R-R, abrupt onset; infant usually >220, child >180; narrow QRS."
+        },
+        {
+            "question": "VT",
+            "answer": "Wide QRS: possible VT."
+        },
+        {
+            "question": "Compromise",
+            "answer": "Acutely altered mental status, signs of shock, hypotension."
+        },
+        {
+            "question": "Stable SVT",
+            "answer": "Vagal manoeuvres, then adenosine (P)."
+        },
+        {
+            "question": "Adenosine 1st dose",
+            "answer": "0.1 mg/kg rapid IV/IO push, max 6 mg."
+        },
+        {
+            "question": "Adenosine 2nd dose",
+            "answer": "0.2 mg/kg rapid IV/IO push, max 12 mg."
+        },
+        {
+            "question": "Unstable narrow",
+            "answer": "Vagal if stable enough, adenosine, then synchronized cardioversion if it fails."
+        },
+        {
+            "question": "Unstable wide",
+            "answer": "Synchronized cardioversion directly (AP)."
+        },
+        {
+            "question": "Cardioversion energy",
+            "answer": "0.5–1 J/kg, then 2 J/kg."
+        },
+        {
+            "question": "Stable wide",
+            "answer": "Tele-EMS; adenosine only if regular and monomorphic, after consultation."
+        },
+        {
+            "question": "Polymorphic or irregular wide",
+            "answer": "Avoid adenosine; seek expert advice."
+        },
+        {
+            "question": "Sedation",
+            "answer": "If time and stability permit; never delay cardioversion."
+        },
+        {
+            "question": "Adenosine safety",
+            "answer": "Correct dosing; monitor for transient asystole."
+        },
+        {
+            "question": "Causes to look for",
+            "answer": "Fever, dehydration, pain, hypoxia, anxiety, toxins, metabolic disorders, sepsis, heart disease."
+        },
+        {
+            "question": "Glucose",
+            "answer": "Check; treat per the Hypoglycemia or Hyperglycemia CPG."
+        },
+        {
+            "question": "KPI",
+            "answer": "Appropriate intervention for unstable tachycardia."
+        },
+        {
+            "question": "ALS back-up",
+            "answer": "Routinely requested."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_9_3_1",
-            scenario: "A 3-year-old child presents with sudden onset of rapid heart rate, is pale, and has weak pulses. Heart rate 280, BP 70/40. What is the priority?",
-            question: "What should you do?",
-            options: [
-                { t: "Vagal maneuvers", f: "May delay definitive treatment; patient is unstable." },
-                { t: "Adenosine 0.1 mg/kg IV", f: "May be considered, but cardioversion is faster for unstable patient." },
-                { t: "Synchronized cardioversion", f: "Correct. Unstable tachycardia requires immediate cardioversion." },
-                { t: "IV fluids", f: "Not the priority." }
+            "id": "crit_9_3_1",
+            "scenario": "A 3-year-old is pale and drowsy with weak pulses and BP 70/40. The monitor shows a regular wide-complex tachycardia at 240.",
+            "ecg": "vt",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Synchronized cardioversion 0.5–1 J/kg, then 2 J/kg; sedate only if it causes no delay",
+                    "f": "Correct: unstable wide-complex."
+                },
+                {
+                    "t": "Vagal manoeuvres",
+                    "f": "Unstable: don't delay cardioversion."
+                },
+                {
+                    "t": "Wait for Tele-EMS",
+                    "f": "Tele-EMS is for the stable wide-complex child."
+                },
+                {
+                    "t": "Unsynchronized defibrillation",
+                    "f": "She has a pulse: synchronize."
+                }
             ],
-            correct: 2,
-            explanation: "Unstable tachycardia with poor perfusion requires immediate synchronized cardioversion.",
-            kpi: "Cardioversion performed."
+            "correct": 0,
+            "explanation": "Wide QRS with compromise: proceed directly to synchronized cardioversion (AP).",
+            "kpi": "Appropriate intervention for unstable tachycardia."
         },
         {
-            id: "crit_9_3_2",
-            scenario: "A 6-month-old infant has a heart rate of 260, is irritable but has normal blood pressure and capillary refill. What is the appropriate next step after oxygen?",
-            question: "What should you do?",
-            options: [
-                { t: "Synchronized cardioversion", f: "Patient is stable; cardioversion not first-line." },
-                { t: "Adenosine 0.1 mg/kg IV", f: "Correct. Stable SVT after vagal maneuvers or as first-line if IV available." },
-                { t: "Vagal maneuvers (ice water to face)", f: "Also appropriate; vagal maneuvers may be attempted first." },
-                { t: "Amiodarone", f: "Not first-line." }
+            "id": "crit_9_3_2",
+            "scenario": "A 6-month-old has HR 260, narrow QRS, no P waves. Irritable but pink, normal capillary refill.",
+            "ecg": "svt",
+            "question": "What next, after oxygen and monitoring?",
+            "options": [
+                {
+                    "t": "Vagal manoeuvres; if ineffective, adenosine 0.1 mg/kg via IV/IO",
+                    "f": "Correct: stable SVT."
+                },
+                {
+                    "t": "Immediate cardioversion",
+                    "f": "The infant is stable."
+                },
+                {
+                    "t": "Treat as sinus tachycardia",
+                    "f": "No P waves and rate >220: SVT."
+                },
+                {
+                    "t": "Adenosine 0.2 mg/kg first",
+                    "f": "Start at 0.1 mg/kg."
+                }
             ],
-            correct: 2,
-            explanation: "For stable SVT, vagal maneuvers are safe and often effective; if unsuccessful, adenosine is next.",
-            kpi: "Vagal maneuvers attempted."
+            "correct": 0,
+            "explanation": "Stable narrow-complex pathway.",
+            "kpi": "Appropriate intervention for unstable tachycardia."
         },
         {
-            id: "crit_9_3_3",
-            scenario: "A 5-year-old child with SVT receives adenosine 0.1 mg/kg IV. There is transient asystole for 3 seconds, then the heart rate returns to 200 with narrow complex. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Give another dose of adenosine", f: "Not yet; assess if conversion occurred." },
-                { t: "Repeat adenosine 0.2 mg/kg", f: "The rhythm is still SVT; repeat with higher dose." },
-                { t: "Start CPR", f: "Not indicated; asystole was transient." },
-                { t: "Observe and consider second dose", f: "Correct. If SVT persists, give second dose." }
+            "id": "crit_9_3_3",
+            "scenario": "A 5-year-old in SVT receives adenosine 0.1 mg/kg. A brief asystole follows, then narrow-complex tachycardia at 200 returns.",
+            "question": "Next step?",
+            "options": [
+                {
+                    "t": "Second dose 0.2 mg/kg (max 12 mg) rapid push",
+                    "f": "Correct."
+                },
+                {
+                    "t": "CPR for the asystole",
+                    "f": "Transient asystole is expected after adenosine."
+                },
+                {
+                    "t": "Repeat 0.1 mg/kg",
+                    "f": "The second dose is 0.2 mg/kg."
+                },
+                {
+                    "t": "Stop: it didn't work",
+                    "f": "Give the second dose."
+                }
             ],
-            correct: 3,
-            explanation: "Transient asystole is expected; if SVT persists, repeat adenosine at 0.2 mg/kg.",
-            kpi: "Second dose of adenosine administered."
+            "correct": 0,
+            "explanation": "Monitor for transient asystole after adenosine.",
+            "kpi": "Appropriate intervention for unstable tachycardia."
         },
         {
-            id: "crit_9_3_4",
-            scenario: "A 10-year-old child has a heart rate of 220, wide QRS, and is alert with good perfusion. What is the appropriate management?",
-            question: "What should you do?",
-            options: [
-                { t: "Synchronized cardioversion", f: "Patient is stable; consider other options." },
-                { t: "Adenosine after Tele-EMS consultation (if regular monomorphic)", f: "Correct. Stable wide-complex tachycardia may be VT or SVT with aberrancy; adenosine can be considered if regular and monomorphic." },
-                { t: "Amiodarone", f: "Not first-line." },
-                { t: "Lidocaine", f: "Not first-line." }
+            "id": "crit_9_3_4",
+            "scenario": "A 10-year-old has a regular, monomorphic wide-complex tachycardia at 220. Alert, warm, normal BP.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Monitor, prepare for deterioration, consult Tele-EMS; adenosine only after consultation",
+                    "f": "Correct: stable wide-complex."
+                },
+                {
+                    "t": "Immediate cardioversion",
+                    "f": "The child is stable."
+                },
+                {
+                    "t": "Routine adenosine without consultation",
+                    "f": "Not recommended."
+                },
+                {
+                    "t": "Vagal manoeuvres and discharge",
+                    "f": "Possible VT: transport."
+                }
             ],
-            correct: 1,
-            explanation: "For stable wide-complex tachycardia, if regular and monomorphic, adenosine may be considered after consultation.",
-            kpi: "Tele-EMS consulted and adenosine considered."
+            "correct": 0,
+            "explanation": "Have cardioversion equipment ready.",
+            "kpi": "Appropriate intervention for unstable tachycardia."
         },
         {
-            id: "crit_9_3_5",
-            scenario: "A 2-year-old child is in SVT with a heart rate of 250. You have attempted ice water to face and two doses of adenosine without success. The child is now becoming lethargic with a BP of 70/40. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Repeat adenosine", f: "Not after two doses; now unstable." },
-                { t: "Synchronized cardioversion", f: "Correct. Unstable patient requires immediate cardioversion." },
-                { t: "Amiodarone infusion", f: "Not first-line." },
-                { t: "Vagal maneuvers again", f: "Ineffective and patient unstable." }
+            "id": "crit_9_3_5",
+            "scenario": "A 2-year-old in SVT at 250 has had vagal manoeuvres and two adenosine doses without success, and is now lethargic with BP 70/40.",
+            "ecg": "svt",
+            "question": "Next step?",
+            "options": [
+                {
+                    "t": "Synchronized cardioversion 0.5–1 J/kg, then 2 J/kg",
+                    "f": "Correct: adenosine failed and the child deteriorated."
+                },
+                {
+                    "t": "A third adenosine dose",
+                    "f": "Two doses only."
+                },
+                {
+                    "t": "More vagal manoeuvres",
+                    "f": "Too unstable."
+                },
+                {
+                    "t": "Wait for hospital",
+                    "f": "Avoid delays in cardioversion."
+                }
             ],
-            correct: 1,
-            explanation: "When stable becomes unstable or after failed adenosine, synchronized cardioversion is indicated.",
-            kpi: "Cardioversion performed."
+            "correct": 0,
+            "explanation": "Unstable narrow-complex pathway.",
+            "kpi": "Appropriate intervention for unstable tachycardia."
         }
     ]
 };

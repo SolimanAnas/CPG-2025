@@ -264,6 +264,9 @@
 .cpg-guide[data-group="medical"]   { --g-accent: var(--accent-medical); }
 .cpg-guide[data-group="trauma"]    { --g-accent: var(--g-amber); }
 .cpg-guide[data-group="environmental"] { --g-accent: var(--accent-environmental); }
+.cpg-guide[data-group="pediatric"]  { --g-accent: var(--accent-pediatric); }
+.cpg-guide[data-group="obstetric"]  { --g-accent: var(--accent-obstetric); }
+.cpg-guide[data-group="mci"]        { --g-accent: var(--accent-mci); }
 @media (max-width: 600px) {
     .g-table { font-size: .78rem; }
     .g-table th, .g-table td { padding: 6px 5px; white-space: normal; }
