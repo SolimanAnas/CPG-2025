@@ -1,382 +1,767 @@
-/* ========== Chapter 6.5 � Altered Mental Status ========== */
+/* ========== CPG 6.5 – Altered Mental Status ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c6-5",
-    title: "Altered Mental Status",
-    shortTitle: "6.5 Altered Mental Status",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Altered Mental Status</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Identify and manage life-threatening causes of altered mental status.</li>
-                <li>Stabilize the patient�s condition through appropriate interventions to restore normal mental status or prevent further deterioration.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients presenting with altered mental status, including:
-                    <ul>
-                        <li>Confusion, disorientation, or impaired responsiveness.</li>
-                        <li>Lethargy, agitation, or unresponsiveness.</li>
-                        <li>Inability to follow commands or respond appropriately to stimuli.</li>
-                        <li>Symptoms ranging from mild confusion to coma.</li>
-                    </ul>
-                </li>
-                <li>Suspected underlying causes such as hypoglycemia, hypoxia, stroke, overdose, infection, or trauma.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>None noted.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Neurological Status:</strong> Evaluate level of consciousness using AVPU (Alert, Verbal, Painful, Unresponsive) or Glasgow Coma Scale (GCS). Assess for focal neurological deficits (unequal pupils, motor weakness, speech impairment). Note behavioral changes (agitation, combativeness, lethargy).</li>
-                <li><strong>History:</strong> Identify potential causes through SAMPLE history: recent events (trauma, drug use, medication changes), medical history (diabetes, epilepsy, stroke, psychiatric disorders), medication use (insulin, sedatives, missed doses). Check for medical alert bracelets.</li>
-                <li><strong>Differential Diagnosis (AEIOU TIPS):</strong>
-                    <ul>
-                        <li>A � Alcohol, Abuse, Atypical migraine</li>
-                        <li>E � Epilepsy, Electrolytes</li>
-                        <li>I � Insulin (hypoglycemia)</li>
-                        <li>O � Oxygen, Overdose</li>
-                        <li>U � Uremia (kidney failure)</li>
-                        <li>T � Trauma, Tumor</li>
-                        <li>I � Infection</li>
-                        <li>P � Psych, Poisoning</li>
-                        <li>S � Seizure, Subarachnoid hemorrhage, Sepsis</li>
-                    </ul>
-                </li>
-                <li><strong>Glucose and Oxygen Assessment:</strong> Check random blood sugar (RBS) to identify hypoglycemia (&lt;70 mg/dL) or hyperglycemia (&gt;200 mg/dL). Assess for hypoxia via pulse oximetry (SpO2 &lt;94%).</li>
-                <li><strong>Environmental and Toxicological Clues:</strong> Look for evidence of drug or alcohol use (pill bottles, drug paraphernalia). Assess for environmental exposures (carbon monoxide, chemicals).</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary and Secondary Surveys:</strong> Perform as per Universal Care CPG.</li>
-                <li><strong>Consider ALS back-up:</strong> For patients with GCS &lt;13, seizures, or significant cardiovascular compromise.</li>
-                <li><strong>Red Flags:</strong>
-                    <ul>
-                        <li>Unresponsiveness or coma (AVPU).</li>
-                        <li>Hypoglycemia (RBS &lt;70 mg/dL) ? go to Hypoglycemia CPG.</li>
-                        <li>Severe hyperglycemia (RBS &gt;400 mg/dL) ? go to Hyperglycemia CPG.</li>
-                        <li>Hypoxia (SpO2 &lt;90%) or respiratory distress.</li>
-                        <li>Suspected stroke (focal neurological deficits, sudden onset) ? go to Stroke CPG.</li>
-                        <li>Signs of overdose (pinpoint pupils, respiratory depression) ? go to Overdose CPG.</li>
-                    </ul>
-                </li>
-                <li><strong>Evaluate for Signs of Shock or Instability:</strong> Hypotension (SBP &lt;90 mmHg in adults, or age-specific for pediatrics), tachycardia, or poor perfusion (cool, clammy skin, delayed capillary refill &gt;2 seconds). If shock present, initiate fluid resuscitation and address underlying causes. Manage shock as per appropriate Shock Guideline.</li>
-                <li><strong>Establish IV Access:</strong> For hypotension, suspected hypoglycemia, or anticipated medication administration. Consider IO access if IV access cannot be obtained.</li>
-                <li><strong>Oxygen Therapy:</strong> Administer oxygen to maintain SpO2 =94% if hypoxic.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess neurological status (AVPU/GCS) every 5-15 minutes depending on triage category.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>It is difficult to accurately assess patients with an altered mental status. All patients with altered mental status should be transported to hospital.</li>
-                <li>Protect the airway and be prepared for vomiting or aspiration.</li>
-                <li>If patient is agitated, consider sedation only if necessary for safety (see Abnormal Behavior CPG).</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>Hypoglycemia is a common and reversible cause; always check blood glucose.</li>
-                <li>Consider naloxone for suspected opioid overdose (pinpoint pupils, respiratory depression).</li>
-                <li>Elderly patients may present with subtle changes (e.g., lethargy, infection) without fever.</li>
-                <li>Pediatric patients: consider fever, infection, ingestion, or trauma.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Neurological status (GCS/AVPU), pupil size/reactivity, vital signs, RBS.</li>
-                <li>Possible underlying cause identified (e.g., hypoglycemia, overdose).</li>
-                <li>Interventions performed (oxygen, IV fluids, glucose, naloxone, sedation).</li>
-                <li>Response to treatment and changes in mental status.</li>
-                <li>Hospital notification and transport details.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Perform and document an RBS on all patients with altered mental status.</li>
-                <li>Assess and document the initial AVPU or GCS score.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c6-5",
+    "title": "Altered Mental Status",
+    "shortTitle": "6.5 Altered Mental Status",
+    "guide": {
+        "cpg": "6.5",
+        "group": "medical",
+        "groupLabel": "Medical",
+        "title": "Altered Mental Status",
+        "lead": "Treat what kills first: airway, breathing, shock. Then work through the reversible causes in order (glucose, opioids, trauma, seizure, stroke) and hand over to the matching CPG. Every patient gets an RBS and a recorded AVPU or GCS, and every patient goes to hospital.",
+        "source": {
+            "label": "CPG 6.5",
+            "pages": "168–171",
+            "pdf": "../pdf_sections/6_5_Altered_Mental_Status.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Confusion, disorientation, lethargy, agitation or unresponsiveness; from mild confusion to coma.",
+                    "Suspected hypoglycemia, hypoxia, stroke, overdose, infection or trauma."
+                ],
+                "exclude": [
+                    "None noted."
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Work through the causes",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Airway or respiratory compromise?",
+                        "text": "Airway and Breathing CPG."
+                    },
+                    {
+                        "title": "Signs of shock?",
+                        "text": "SBP &lt;90 mmHg (adults) or age-specific, tachycardia, capillary refill &gt;2 seconds: Non-Traumatic Shock CPG; IV or IO access."
+                    },
+                    {
+                        "title": "Glucose low?",
+                        "text": "RBS &lt;70 mg/dL (flowchart: &lt;72 mg/dL): Hypoglycemia CPG. Severe hyperglycemia &gt;400 mg/dL: Hyperglycemia CPG."
+                    },
+                    {
+                        "title": "Opioid overdose?",
+                        "text": "Pinpoint pupils, respiratory depression: Opioid Overdose CPG."
+                    },
+                    {
+                        "title": "Obvious trauma?",
+                        "text": "Trauma management CPGs."
+                    },
+                    {
+                        "title": "Recent or current seizure?",
+                        "text": "Seizures CPG."
+                    },
+                    {
+                        "title": "Signs of stroke?",
+                        "text": "Focal deficit, sudden onset: Stroke CPG."
+                    },
+                    {
+                        "title": "None of these",
+                        "text": "Consider encephalopathy, dysrhythmia, hypoxia, hypercapnia, carbon monoxide poisoning, toxicology; consider Tele-EMS."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "AEIOU TIPS",
+                "icon": "search",
+                "columns": [
+                    "",
+                    "Causes"
+                ],
+                "rows": [
+                    [
+                        "A",
+                        "Alcohol, abuse, atypical migraine"
+                    ],
+                    [
+                        "E",
+                        "Epilepsy, electrolytes"
+                    ],
+                    [
+                        "I",
+                        "Insulin (hypoglycemia)"
+                    ],
+                    [
+                        "O",
+                        "Oxygen, overdose"
+                    ],
+                    [
+                        "U",
+                        "Uremia (kidney failure)"
+                    ],
+                    [
+                        "T",
+                        "Trauma, tumour"
+                    ],
+                    [
+                        "I",
+                        "Infection"
+                    ],
+                    [
+                        "P",
+                        "Psych, poisoning"
+                    ],
+                    [
+                        "S",
+                        "Seizure, subarachnoid hemorrhage, sepsis"
+                    ]
+                ],
+                "notes": [
+                    "The PDF prints the mnemonic as \"AEIOD TIPS\"; the list spells AEIOU TIPS."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Neurology",
+                        "items": [
+                            "AVPU or GCS; focal deficits (unequal pupils, weakness, speech); behavior change."
+                        ]
+                    },
+                    {
+                        "title": "History and scene",
+                        "items": [
+                            "SAMPLE: recent trauma, drugs, medication changes; diabetes, epilepsy, stroke, psychiatric history; insulin or sedatives.",
+                            "Alert bracelets; pill bottles, paraphernalia; carbon monoxide or chemicals."
+                        ]
+                    },
+                    {
+                        "title": "Numbers",
+                        "items": [
+                            "Hypoglycemia &lt;70 mg/dL; hyperglycemia &gt;200 mg/dL.",
+                            "Hypoxia: SpO<sub>2</sub> &lt;94%; red flag below 90%."
+                        ]
+                    },
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "GCS 9 or less, or a falling GCS.",
+                            "Responds only to pain, or unresponsive."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Always",
+                "icon": "ambulance",
+                "items": [
+                    "Consider ALS back-up; reassess AVPU or GCS frequently.",
+                    "Transport every patient with altered mental status: it is hard to assess accurately on scene."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "A dysrhythmia can cause AMS",
+                        "items": [
+                            {
+                                "ecg": "chb",
+                                "label": "Complete heart block",
+                                "sub": "Bradycardia with poor perfusion"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicators",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "RBS performed and documented for every patient with altered mental status.",
+                    "Initial AVPU or GCS documented."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "6.8 Hypoglycemia",
+                        "href": "c6-8.html"
+                    },
+                    {
+                        "label": "8.2 Opioid Overdose",
+                        "href": "c8-2.html"
+                    },
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "5.1 Stroke",
+                        "href": "c5-1.html"
+                    },
+                    {
+                        "label": "6.11 Non-Traumatic Shock",
+                        "href": "c6-11.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first step in assessing a patient with altered mental status?",
-            options: ["Check blood glucose", "Perform primary survey (ABC)", "Obtain SAMPLE history", "Administer oxygen"],
-            correct: 1,
-            explanation: "The primary survey (Airway, Breathing, Circulation) is the priority to identify life threats."
+            "q": "What comes first in an altered patient?",
+            "options": [
+                "Primary survey: airway, breathing, shock",
+                "SAMPLE history",
+                "Glucose before anything",
+                "Pupils"
+            ],
+            "correct": 0,
+            "explanation": "Airway or respiratory compromise and shock come first on the flowchart."
         },
         {
-            q: "Which of the following is a reversible cause of altered mental status that should be checked immediately?",
-            options: ["Hypoglycemia", "Hypoxia", "Opioid overdose", "All of the above"],
-            correct: 3,
-            explanation: "Hypoglycemia, hypoxia, and opioid overdose are common reversible causes and should be rapidly identified and treated."
+            "q": "Which reversible cause is checked in every AMS patient?",
+            "options": [
+                "Blood glucose",
+                "Cholesterol",
+                "Hemoglobin",
+                "Temperature only"
+            ],
+            "correct": 0,
+            "explanation": "RBS in all AMS patients is a KPI."
         },
         {
-            q: "What is the target SpO2 for a patient with altered mental status?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia, which can worsen cerebral function."
+            "q": "What SpO₂ defines hypoxia in the assessment?",
+            "options": [
+                "<94%",
+                "<99%",
+                "<80%",
+                "<70%"
+            ],
+            "correct": 0,
+            "explanation": "SpO₂ <90% is a red flag."
         },
         {
-            q: "A patient with altered mental status has a blood glucose of 55 mg/dL. What should you do?",
-            options: ["Give oral glucose", "Administer glucagon IM", "Give 50% dextrose 25 g IV", "Transport without intervention"],
-            correct: 2,
-            explanation: "Hypoglycemia (&lt;70 mg/dL) with altered mental status should be treated with IV dextrose if the patient cannot safely swallow."
+            "q": "Glucose 55 mg/dL. Where do you go?",
+            "options": [
+                "Hypoglycemia CPG",
+                "Stroke CPG",
+                "Seizures CPG",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "RBS <70 mg/dL."
         },
         {
-            q: "Which of the following is NOT part of the AEIOU TIPS mnemonic for causes of altered mental status?",
-            options: ["Alcohol", "Insulin (hypoglycemia)", "Hyperthermia", "Trauma"],
-            correct: 2,
-            explanation: "AEIOU TIPS includes A (Alcohol), E (Epilepsy/Electrolytes), I (Insulin), O (Oxygen/Overdose), U (Uremia), T (Trauma/Tumor), I (Infection), P (Psych/Poisoning), S (Seizure/Subarachnoid/Sepsis). Hyperthermia is not in the classic mnemonic."
+            "q": "Which is NOT in AEIOU TIPS?",
+            "options": [
+                "Hypertension",
+                "Alcohol",
+                "Insulin",
+                "Trauma"
+            ],
+            "correct": 0,
+            "explanation": "The letters cover alcohol, epilepsy, insulin, oxygen/overdose, uremia, trauma, infection, psych/poisoning, seizure/SAH/sepsis."
         },
         {
-            q: "A patient is found unresponsive with pinpoint pupils and respiratory rate of 8. What is the most likely cause?",
-            options: ["Hypoglycemia", "Opioid overdose", "Stroke", "Seizure"],
-            correct: 1,
-            explanation: "Pinpoint pupils and respiratory depression are classic signs of opioid overdose."
+            "q": "Unresponsive with pinpoint pupils and RR 6. Most likely?",
+            "options": [
+                "Opioid overdose",
+                "Hypoglycemia",
+                "Stroke",
+                "Seizure"
+            ],
+            "correct": 0,
+            "explanation": "Go to the Opioid Overdose CPG."
         },
         {
-            q: "What is the dose of naloxone for an adult with suspected opioid overdose?",
-            options: ["0.4 mg IV/IM", "4 mg IN", "Both A and B are acceptable", "1 mg IV only"],
-            correct: 2,
-            explanation: "Naloxone can be given 0.4 mg IV/IM or 4 mg IN; both are acceptable initial doses."
+            "q": "What does U stand for?",
+            "options": [
+                "Uremia (kidney failure)",
+                "Ulcer",
+                "Urine infection",
+                "Unconsciousness"
+            ],
+            "correct": 0,
+            "explanation": "Uremia."
         },
         {
-            q: "A patient with altered mental status has a GCS of 9. What is the appropriate triage category?",
-            options: ["Green", "Yellow", "Red", "Black"],
-            correct: 2,
-            explanation: "GCS =9 is considered a red priority (critical) due to severe neurological compromise."
+            "q": "GCS 9. Triage?",
+            "options": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Black"
+            ],
+            "correct": 0,
+            "explanation": "GCS 9 or less is Red."
         },
         {
-            q: "Which of the following is a red flag in a patient with altered mental status?",
-            options: ["Hypotension", "Hypoxia", "Seizures", "All of the above"],
-            correct: 3,
-            explanation: "Hypotension, hypoxia, and seizures are all red flags indicating life-threatening conditions."
+            "q": "Which is a red flag?",
+            "options": [
+                "SpO₂ below 90%",
+                "GCS 15",
+                "Normal glucose",
+                "Mild anxiety"
+            ],
+            "correct": 0,
+            "explanation": "Also unresponsiveness, hypoglycemia, severe hyperglycemia, stroke and overdose signs."
         },
         {
-            q: "What is the preferred position for an unconscious patient with altered mental status?",
-            options: ["Supine", "Prone", "Recovery position", "Semi-Fowler's"],
-            correct: 2,
-            explanation: "The recovery position protects the airway and allows drainage of secretions to prevent aspiration."
+            "q": "Which glucose level sends you to the Hyperglycemia CPG as a red flag?",
+            "options": [
+                ">400 mg/dL",
+                ">100 mg/dL",
+                ">150 mg/dL",
+                "Any"
+            ],
+            "correct": 0,
+            "explanation": "Hyperglycemia is >200 mg/dL; severe >400 mg/dL."
         },
         {
-            q: "A patient with altered mental status has a blood glucose of 300 mg/dL. What is the appropriate next step?",
-            options: ["Give insulin", "Administer dextrose", "Assess for signs of DKA (e.g., Kussmaul respirations)", "Transport without intervention"],
-            correct: 2,
-            explanation: "Hyperglycemia may indicate diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS); assess for other signs and manage accordingly."
+            "q": "Which patients with AMS are transported?",
+            "options": [
+                "All of them",
+                "Only GCS below 8",
+                "Only diabetics",
+                "Only those who agree"
+            ],
+            "correct": 0,
+            "explanation": "AMS is difficult to assess accurately."
         },
         {
-            q: "What is the dose of midazolam for an actively seizing adult?",
-            options: ["5 mg IV/IM", "10 mg IV", "2 mg IM", "1 mg IV"],
-            correct: 0,
-            explanation: "The adult dose for seizures is 5 mg IV/IM (may repeat once)."
+            "q": "When is IV access indicated?",
+            "options": [
+                "Hypotension, suspected hypoglycemia, expected drugs",
+                "Never",
+                "Every patient over 80",
+                "Only seizures"
+            ],
+            "correct": 0,
+            "explanation": "IO if IV fails."
         },
         {
-            q: "A patient with altered mental status is agitated and combative. What is the priority?",
-            options: ["Physical restraint", "Chemical sedation", "Ensure scene safety and request police if needed", "Transport immediately"],
-            correct: 2,
-            explanation: "Scene safety is paramount; involve police if there is risk of harm."
+            "q": "A combative AMS patient. Which CPG covers safe management?",
+            "options": [
+                "Abnormal Behavior",
+                "Epistaxis",
+                "Burns",
+                "Childbirth"
+            ],
+            "correct": 0,
+            "explanation": "Police, de-escalation and score-based sedation."
         },
         {
-            q: "Which of the following is a potential cause of altered mental status in an elderly patient?",
-            options: ["Urinary tract infection", "Dehydration", "Medication side effects", "All of the above"],
-            correct: 3,
-            explanation: "Elderly patients often have altered mental status from infections, dehydration, or polypharmacy."
+            "q": "Which elderly finding fits the I in AEIOU TIPS?",
+            "options": [
+                "Infection",
+                "Insomnia",
+                "Itching",
+                "Iron"
+            ],
+            "correct": 0,
+            "explanation": "Infection, e.g. sepsis, is a cause."
         },
         {
-            q: "What is the most common cause of altered mental status in children?",
-            options: ["Hypoglycemia", "Febrile illness", "Trauma", "Poisoning"],
-            correct: 1,
-            explanation: "Fever and infections (e.g., meningitis, sepsis) are common causes of altered mental status in children."
+            "q": "After all flowchart questions are negative, what do you consider?",
+            "options": [
+                "Encephalopathy, dysrhythmia, hypoxia, hypercapnia, CO poisoning, toxicology",
+                "Nothing",
+                "Discharge",
+                "Psychiatric only"
+            ],
+            "correct": 0,
+            "explanation": "And consider Tele-EMS."
         },
         {
-            q: "A patient with altered mental status has a heart rate of 40 and BP 80/50. What should you suspect?",
-            options: ["Sepsis", "Opioid overdose", "Cardiogenic shock or bradyarrhythmia", "Hyperglycemia"],
-            correct: 2,
-            explanation: "Bradycardia with hypotension suggests a cardiac cause such as heart block or medication toxicity (e.g., beta-blockers)."
+            "q": "HR 40, BP 80/50 and confusion. Which cause and CPG fit?",
+            "options": [
+                "Dysrhythmia with shock: shock management",
+                "Opioid overdose",
+                "Hyperglycemia",
+                "Alcohol"
+            ],
+            "correct": 0,
+            "explanation": "Shock goes first on the flowchart; a dysrhythmia is a listed cause."
         },
         {
-            q: "What is the initial fluid bolus for an adult with altered mental status and hypotension?",
-            options: ["250 mL", "500-1000 mL", "2000 mL", "No fluids"],
-            correct: 1,
-            explanation: "A 500-1000 mL bolus of crystalloid is recommended for hypotension in adults."
+            "q": "Which history matters?",
+            "options": [
+                "Diabetes, epilepsy, stroke, psychiatric disorders, insulin, sedatives",
+                "Shoe size",
+                "Holiday plans",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Through SAMPLE."
         },
         {
-            q: "A patient with altered mental status has a fever of 39.5�C. What condition should you suspect?",
-            options: ["Heat stroke", "Sepsis", "Meningitis", "All of the above"],
-            correct: 3,
-            explanation: "Fever with altered mental status can be due to sepsis, meningitis, or hyperthermia; treat accordingly."
+            "q": "Fever and confusion. Which letter applies?",
+            "options": [
+                "S: sepsis (and I: infection)",
+                "U: uremia",
+                "A: alcohol",
+                "E: electrolytes"
+            ],
+            "correct": 0,
+            "explanation": "Infection and sepsis are causes."
         },
         {
-            q: "What is the Glasgow Coma Scale score for a patient who opens eyes to pain, makes incomprehensible sounds, and withdraws to pain?",
-            options: ["8", "9", "10", "11"],
-            correct: 0,
-            explanation: "Eye opening to pain = 2, incomprehensible sounds = 2, withdrawal to pain = 4; total 8."
+            "q": "Which is a Red-priority finding?",
+            "options": [
+                "Responds only to pain",
+                "Alert and oriented",
+                "GCS 15",
+                "Mild confusion"
+            ],
+            "correct": 0,
+            "explanation": "Unresponsive or responds only to pain."
         },
         {
-            q: "Which of the following is a contraindication to oral glucose in an altered patient?",
-            options: ["Hypoglycemia", "Inability to swallow", "GCS 15", "Patient refusal"],
-            correct: 1,
-            explanation: "Oral glucose should not be given if the patient cannot swallow safely due to risk of aspiration."
+            "q": "What is checked on the wrist?",
+            "options": [
+                "Medical alert bracelets",
+                "A watch",
+                "Tattoos",
+                "Rings"
+            ],
+            "correct": 0,
+            "explanation": "They may show diabetes or epilepsy."
         },
         {
-            q: "A patient with altered mental status has a history of diabetes and is found with a glucose of 45 mg/dL. After giving IV dextrose, the patient becomes alert but then becomes confused again 30 minutes later. What should you suspect?",
-            options: ["Recurrent hypoglycemia", "Stroke", "Seizure", "Withdrawal"],
-            correct: 0,
-            explanation: "Patients with hypoglycemia may require ongoing glucose monitoring; dextrose can wear off, especially if the patient has taken long-acting insulin or oral agents."
+            "q": "A diabetic improves after glucose, then becomes confused again. What do you do?",
+            "options": [
+                "Recheck glucose and treat per the Hypoglycemia CPG",
+                "Leave",
+                "Stop monitoring",
+                "Stroke alert immediately"
+            ],
+            "correct": 0,
+            "explanation": "Reassess frequently."
         },
         {
-            q: "What is the dose of 50% dextrose for an adult with hypoglycemia?",
-            options: ["10 mL (5 g)", "25 mL (12.5 g)", "50 mL (25 g)", "100 mL (50 g)"],
-            correct: 2,
-            explanation: "Standard adult dose is 25 g (50 mL of 50% dextrose)."
+            "q": "What scene clues are sought?",
+            "options": [
+                "Pill bottles, paraphernalia, carbon monoxide or chemicals",
+                "Furniture style",
+                "Wall colour",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Environmental and toxicological clues."
         },
         {
-            q: "A patient with altered mental status has a respiratory rate of 40 and SpO2 88% on room air. What is the priority?",
-            options: ["Check blood glucose", "Administer oxygen", "Obtain IV access", "Perform 12-lead ECG"],
-            correct: 1,
-            explanation: "Hypoxia is a life threat; administer high-flow oxygen immediately."
+            "q": "RR 40 and SpO₂ 88%. Which step comes first?",
+            "options": [
+                "Airway and breathing (Airway CPG)",
+                "Glucose",
+                "12-lead",
+                "History"
+            ],
+            "correct": 0,
+            "explanation": "Respiratory compromise first."
         },
         {
-            q: "Which of the following medications is used to reverse opioid overdose?",
-            options: ["Naloxone", "Flumazenil", "Glucagon", "Atropine"],
-            correct: 0,
-            explanation: "Naloxone is an opioid antagonist that reverses respiratory depression and sedation."
+            "q": "Which drug class does O stand for in part?",
+            "options": [
+                "Overdose",
+                "Oral contraceptives",
+                "Opium only",
+                "Oxytocin"
+            ],
+            "correct": 0,
+            "explanation": "Oxygen and overdose."
         },
         {
-            q: "A patient with altered mental status has a history of alcohol abuse and is found tremulous, agitated, and diaphoretic. What is the likely cause?",
-            options: ["Hypoglycemia", "Alcohol withdrawal", "Hepatic encephalopathy", "Stroke"],
-            correct: 1,
-            explanation: "Tremor, agitation, and diaphoresis are signs of alcohol withdrawal, which can progress to seizures or delirium tremens."
+            "q": "What does T stand for?",
+            "options": [
+                "Trauma, tumour",
+                "Temperature",
+                "Thyroid",
+                "Tachycardia"
+            ],
+            "correct": 0,
+            "explanation": "Trauma and tumour."
         },
         {
-            q: "What is the preferred route of naloxone administration in a patient with suspected opioid overdose?",
-            options: ["IV", "IM", "IN", "All are acceptable; choose based on access"],
-            correct: 3,
-            explanation: "Naloxone can be given IV, IM, or IN; all routes are effective. IV has fastest onset."
+            "q": "How often is the GCS reassessed?",
+            "options": [
+                "Frequently",
+                "Once",
+                "Only at hospital",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "To detect deterioration or improvement."
         },
         {
-            q: "A patient with altered mental status has a GCS of 14 and is combative. What is the appropriate triage category?",
-            options: ["Red", "Yellow", "Green", "Black"],
-            correct: 1,
-            explanation: "GCS 14 with combative behavior is serious (yellow priority) but not immediately life-threatening unless deterioration occurs."
+            "q": "Which documentation is specific?",
+            "options": [
+                "Glucose given: route, dose and time; response",
+                "Only the address",
+                "Only the age",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Also GCS, pupils, vital signs, RBS."
         },
         {
-            q: "Which of the following is a sign of increased intracranial pressure?",
-            options: ["Cushing's triad (hypertension, bradycardia, irregular breathing)", "Hypotension", "Tachycardia", "Hyperthermia"],
-            correct: 0,
-            explanation: "Cushing's triad is a late sign of increased ICP; it includes hypertension, bradycardia, and irregular respirations."
+            "q": "Focal weakness and sudden onset. Where do you go?",
+            "options": [
+                "Stroke CPG",
+                "Seizures CPG",
+                "Burns CPG",
+                "Hypoglycemia CPG only"
+            ],
+            "correct": 0,
+            "explanation": "After excluding hypoglycemia."
         },
         {
-            q: "A patient with altered mental status has a blood glucose of 25 mg/dL and is unresponsive. What is the appropriate treatment?",
-            options: ["Oral glucose paste", "Glucagon IM", "50% dextrose 25 g IV", "Normal saline bolus"],
-            correct: 2,
-            explanation: "Severe hypoglycemia with unresponsiveness requires IV dextrose immediately."
+            "q": "A known epileptic is drowsy after a witnessed fit. Where?",
+            "options": [
+                "Seizures CPG",
+                "Stroke CPG",
+                "Epistaxis CPG",
+                "Discharge"
+            ],
+            "correct": 0,
+            "explanation": "Recent or current seizure activity."
         },
         {
-            q: "What is the key performance indicator for altered mental status?",
-            options: ["Administer oxygen to all patients", "Check blood glucose", "Perform 12-lead ECG", "Transport within 10 minutes"],
-            correct: 1,
-            explanation: "Checking blood glucose in all patients with altered mental status is a key indicator to identify reversible hypoglycemia."
+            "q": "What are the KPIs?",
+            "options": [
+                "RBS and initial AVPU/GCS documented",
+                "Naloxone in all",
+                "Transport in 10 minutes",
+                "Oxygen in all"
+            ],
+            "correct": 0,
+            "explanation": "Two KPIs."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is altered mental status?", answer: "Any change in a patient's level of consciousness, cognition, or behavior, ranging from confusion to coma." },
-        { category: "AVPU scale", question: "What does AVPU stand for?", answer: "Alert, responds to Voice, responds to Pain, Unresponsive." },
-        { category: "Glasgow Coma Scale (GCS)", question: "What are the three components of GCS?", answer: "Eye opening, verbal response, motor response." },
-        { category: "AEIOU TIPS mnemonic", question: "List the causes of altered mental status in AEIOU TIPS.", answer: "Alcohol, Epilepsy/Electrolytes, Insulin, Oxygen/Overdose, Uremia, Trauma/Tumor, Infection, Psych/Poisoning, Seizure/Subarachnoid/Sepsis." },
-        { category: "Hypoglycemia treatment", question: "What is the treatment for hypoglycemia with altered mental status?", answer: "IV dextrose (25 g 50% dextrose) or IM glucagon if no IV access." },
-        { category: "Naloxone dose", question: "What is the dose of naloxone for opioid overdose?", answer: "0.4-2 mg IV/IM or 4 mg IN; may repeat every 3-5 minutes." },
-        { category: "Red flags", question: "Name three red flags in altered mental status.", answer: "Hypoxia (SpO2 <90%), hypotension (SBP <90 mmHg), GCS =9, seizures, hypoglycemia." },
-        { category: "Hypoxia treatment", question: "What is the target SpO2 for a patient with altered mental status?", answer: "=94%." },
-        { category: "Recovery position", question: "When should the recovery position be used?", answer: "For unconscious patients with spontaneous breathing to protect the airway." },
-        { category: "Seizure treatment", question: "What medication is used for active seizures?", answer: "Midazolam (5 mg IV/IM for adults) or diazepam." },
-        { category: "Stroke screening", question: "What is the BEFAST mnemonic for stroke?", answer: "Balance, Eyes, Face, Arms, Speech, Time." },
-        { category: "Sepsis in elderly", question: "Why might elderly patients with sepsis not have fever?", answer: "Impaired immune response; may present with lethargy or confusion only." },
-        { category: "Ketamine sedation", question: "When is ketamine used for agitated patients?", answer: "For severe agitation posing a safety risk; dose 0.5-1 mg/kg IV/IM." },
-        { category: "Glucagon use", question: "When is glucagon used for hypoglycemia?", answer: "When IV access cannot be obtained and patient is unresponsive; dose 1 mg IM." },
-        { category: "Cushing's triad", question: "What are the components of Cushing's triad?", answer: "Hypertension, bradycardia, irregular respirations (sign of increased ICP)." },
-        { category: "Pediatric considerations", question: "What are common causes of altered mental status in children?", answer: "Febrile illness, seizures, ingestion, trauma, dehydration." },
-        { category: "Elderly considerations", question: "What common conditions cause altered mental status in elderly?", answer: "UTI, pneumonia, dehydration, medication side effects, hypoglycemia." },
-        { category: "Documentation", question: "What must be documented for altered mental status?", answer: "Initial AVPU/GCS, vital signs, blood glucose, interventions, response to treatment." },
-        { category: "KPI", question: "What is the key performance indicator for altered mental status?", answer: "Perform and document an RBS on all patients with altered mental status." },
-        { category: "Transport decision", question: "Should all patients with altered mental status be transported?", answer: "Yes, unless the cause is clearly benign and resolved (e.g., brief vasovagal episode with full recovery)." }
+    "flashcards": [
+        {
+            "question": "Altered mental status",
+            "answer": "Any change from mild confusion to coma: disorientation, lethargy, agitation, unresponsiveness."
+        },
+        {
+            "question": "AVPU",
+            "answer": "Alert, Voice, Pain, Unresponsive."
+        },
+        {
+            "question": "AEIOU TIPS",
+            "answer": "Alcohol/abuse/atypical migraine; Epilepsy/electrolytes; Insulin; Oxygen/overdose; Uremia; Trauma/tumour; Infection; Psych/poisoning; Seizure/SAH/sepsis."
+        },
+        {
+            "question": "Flowchart order",
+            "answer": "Airway → shock → glucose → opioids → trauma → seizure → stroke → other causes."
+        },
+        {
+            "question": "Hypoglycemia threshold",
+            "answer": "<70 mg/dL in the text; <72 mg/dL on the flowchart."
+        },
+        {
+            "question": "Hyperglycemia",
+            "answer": ">200 mg/dL; red flag >400 mg/dL (Hyperglycemia CPG)."
+        },
+        {
+            "question": "Hypoxia",
+            "answer": "SpO₂ <94%; red flag <90%."
+        },
+        {
+            "question": "Opioid clues",
+            "answer": "Pinpoint pupils, respiratory depression: Opioid Overdose CPG."
+        },
+        {
+            "question": "Red priority",
+            "answer": "GCS ≤9 or falling; responds only to pain or unresponsive."
+        },
+        {
+            "question": "Shock signs",
+            "answer": "SBP <90 (adult), tachycardia, capillary refill >2 seconds."
+        },
+        {
+            "question": "Other causes",
+            "answer": "Encephalopathy, dysrhythmia, hypoxia, hypercapnia, carbon monoxide, toxicology."
+        },
+        {
+            "question": "Tele-EMS",
+            "answer": "Consider when no cause is found."
+        },
+        {
+            "question": "Transport",
+            "answer": "All AMS patients."
+        },
+        {
+            "question": "IV access",
+            "answer": "Hypotension, suspected hypoglycemia, expected drugs; IO if needed."
+        },
+        {
+            "question": "History",
+            "answer": "SAMPLE: trauma, drugs, medication changes, diabetes, epilepsy, stroke, psychiatric history."
+        },
+        {
+            "question": "Scene clues",
+            "answer": "Pill bottles, paraphernalia, CO, chemicals."
+        },
+        {
+            "question": "Neurological assessment",
+            "answer": "AVPU/GCS, pupils, motor weakness, speech, behavior."
+        },
+        {
+            "question": "Reassessment",
+            "answer": "AVPU or GCS frequently."
+        },
+        {
+            "question": "KPIs",
+            "answer": "RBS documented; initial AVPU/GCS documented."
+        },
+        {
+            "question": "Documentation",
+            "answer": "Progression, suspected cause, clues, GCS, pupils, vitals, RBS, glucose given, response."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_6_5_1",
-            scenario: "You are called to a 45-year-old male found unresponsive by his wife. He has a history of diabetes and takes insulin. His blood glucose is 35 mg/dL. You administer 50% dextrose 25 g IV. He becomes alert and oriented. What is your next step?",
-            question: "What should you do after the patient improves?",
-            options: [
-                { t: "Discharge him at scene with advice to eat", f: "Incorrect; patients with hypoglycemia requiring EMS intervention should be transported due to risk of recurrence." },
-                { t: "Transport to hospital for further evaluation", f: "Correct. Hypoglycemia can recur; underlying cause must be assessed." },
-                { t: "Administer another dose of dextrose", f: "Not needed as patient is alert." },
-                { t: "Give oral glucose and leave", f: "Not safe; transport is required." }
+            "id": "crit_6_5_1",
+            "scenario": "A 45-year-old insulin-dependent diabetic is found unresponsive; glucose 35 mg/dL. After treatment he is alert and oriented.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Transport to hospital with reassessment",
+                    "f": "Correct. All AMS patients are transported; see the Hypoglycemia CPG for its refusal rules."
+                },
+                {
+                    "t": "Leave him at home",
+                    "f": "Transport is the rule in AMS."
+                },
+                {
+                    "t": "Stop monitoring",
+                    "f": "Reassess frequently."
+                },
+                {
+                    "t": "Give more glucose routinely",
+                    "f": "Treat according to the recheck."
+                }
             ],
-            correct: 1,
-            explanation: "Patients with hypoglycemia requiring EMS intervention should be transported to hospital for evaluation of the cause and monitoring for recurrence.",
-            kpi: "Patient transported after treatment."
+            "correct": 0,
+            "explanation": "RBS and GCS documented; Hypoglycemia CPG for treatment.",
+            "kpi": "RBS documented for every AMS patient."
         },
         {
-            id: "crit_6_5_2",
-            scenario: "A 22-year-old female is found in a park, unresponsive, with pinpoint pupils and a respiratory rate of 6. She has track marks on her arms. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer naloxone 0.4 mg IV", f: "Correct. Opioid overdose is likely; naloxone is first line." },
-                { t: "Start CPR", f: "She has a pulse; CPR is not indicated." },
-                { t: "Check blood glucose", f: "Important, but airway and breathing are priority." },
-                { t: "Establish IV access", f: "Secondary to ventilation and naloxone." }
+            "id": "crit_6_5_2",
+            "scenario": "A 22-year-old is found in a park unresponsive with pinpoint pupils and RR 6.",
+            "question": "What first?",
+            "options": [
+                {
+                    "t": "Support the airway and ventilation, then the Opioid Overdose CPG",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stroke alert",
+                    "f": "Pinpoint pupils and respiratory depression suggest opioids."
+                },
+                {
+                    "t": "Glucose before breathing",
+                    "f": "Airway and breathing first."
+                },
+                {
+                    "t": "Wait for her to wake",
+                    "f": "RR 6 needs ventilation."
+                }
             ],
-            correct: 0,
-            explanation: "The presentation is classic for opioid overdose; naloxone should be given immediately while supporting ventilation.",
-            kpi: "Naloxone administered."
+            "correct": 0,
+            "explanation": "Airway or respiratory compromise first; then the reversible causes.",
+            "kpi": "Initial AVPU or GCS documented."
         },
         {
-            id: "crit_6_5_3",
-            scenario: "A 70-year-old male is brought from a nursing home with confusion. He is afebrile, BP 110/70, HR 100, SpO2 96%. His glucose is 120 mg/dL. He has no focal deficits. What should you suspect?",
-            question: "What is the most likely cause and next step?",
-            options: [
-                { t: "Stroke; perform BEFAST and transport", f: "No focal deficits; stroke less likely." },
-                { t: "Sepsis; assess for source, transport", f: "Correct. Elderly patients often have infection without fever; altered mental status may be the only sign." },
-                { t: "Hypoglycemia; give dextrose", f: "Glucose is normal." },
-                { t: "Psychiatric; leave at facility", f: "Altered mental status warrants transport for medical evaluation." }
+            "id": "crit_6_5_3",
+            "scenario": "An 80-year-old from a care home is newly confused; glucose 120 mg/dL, no focal deficits, SpO₂ 96%, temperature 38.6°C.",
+            "question": "What fits best?",
+            "options": [
+                {
+                    "t": "Infection or sepsis (I, S): assess for a source and transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Normal ageing: leave",
+                    "f": "Acute confusion needs transport."
+                },
+                {
+                    "t": "Stroke alert",
+                    "f": "No focal deficit."
+                },
+                {
+                    "t": "Uremia only",
+                    "f": "Fever points to infection."
+                }
             ],
-            correct: 1,
-            explanation: "Altered mental status in elderly is often due to infection (e.g., UTI, pneumonia) even without fever; transport for evaluation.",
-            kpi: "Patient transported."
+            "correct": 0,
+            "explanation": "Work through AEIOU TIPS; see the Fever and Sepsis CPG.",
+            "kpi": "RBS documented for every AMS patient."
         },
         {
-            id: "crit_6_5_4",
-            scenario: "A 35-year-old male with history of epilepsy is actively seizing. The seizure has lasted 4 minutes. What should you do?",
-            question: "What is the appropriate management?",
-            options: [
-                { t: "Wait for seizure to stop spontaneously", f: "Status epilepticus is defined as seizure >5 minutes or recurrent without recovery; active seizure warrants treatment." },
-                { t: "Administer midazolam 5 mg IV", f: "Correct. Benzodiazepines should be given for prolonged seizures." },
-                { t: "Restrain the patient", f: "Restraint can cause injury; protect airway and administer medication." },
-                { t: "Give oral glucose", f: "Not appropriate; patient cannot swallow." }
+            "id": "crit_6_5_4",
+            "scenario": "A confused 70-year-old has the rhythm below; BP 80/50.",
+            "ecg": "chb",
+            "question": "Which path do you take?",
+            "options": [
+                {
+                    "t": "Shock from a dysrhythmia: treat as per the shock and bradycardia CPGs",
+                    "f": "Correct. Shock is assessed early on the flowchart."
+                },
+                {
+                    "t": "Psychiatric cause",
+                    "f": "There is a cardiac cause."
+                },
+                {
+                    "t": "Stroke alert",
+                    "f": "Treat the shock and rhythm."
+                },
+                {
+                    "t": "Leave if glucose is normal",
+                    "f": "All AMS patients are transported."
+                }
             ],
-            correct: 1,
-            explanation: "Seizures lasting >5 minutes constitute status epilepticus and require pharmacological intervention.",
-            kpi: "Benzodiazepine administered."
+            "correct": 0,
+            "explanation": "Dysrhythmia is a listed cause of AMS; signs of shock go to the shock CPG.",
+            "kpi": "Initial AVPU or GCS documented."
         },
         {
-            id: "crit_6_5_5",
-            scenario: "A patient with altered mental status is combative and poses a safety risk. You have tried verbal de-escalation without success. What is the appropriate next step?",
-            question: "How should you proceed?",
-            options: [
-                { t: "Physically restrain the patient", f: "Physical restraint should be a last resort and may require police assistance." },
-                { t: "Request police assistance and consider chemical sedation", f: "Correct. Safety first; involve police and consider sedation per Abnormal Behavior CPG." },
-                { t: "Leave the scene", f: "Not appropriate; patient requires care." },
-                { t: "Transport without further intervention", f: "Unsafe." }
+            "id": "crit_6_5_5",
+            "scenario": "An AMS patient becomes combative and dangerous; de-escalation fails.",
+            "question": "How do you proceed?",
+            "options": [
+                {
+                    "t": "Police for safety, then the Abnormal Behavior CPG (score-based sedation, monitoring)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Physically restrain him yourselves",
+                    "f": "Restraint is by police."
+                },
+                {
+                    "t": "Leave the scene permanently",
+                    "f": "Ensure safety, then treat."
+                },
+                {
+                    "t": "Prone restraint",
+                    "f": "Never prone."
+                }
             ],
-            correct: 1,
-            explanation: "Scene safety is paramount. Request police and consider sedation (e.g., ketamine or midazolam) if indicated.",
-            kpi: "Police requested and sedation administered if indicated."
+            "correct": 0,
+            "explanation": "Look for reversible causes (e.g. hypoglycemia) once compliant.",
+            "kpi": "RBS documented for every AMS patient."
         }
     ]
 };
