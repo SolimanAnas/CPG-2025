@@ -1,639 +1,3423 @@
-/* ========== Chapter 2 – Airway & Breathing (Full Content 2.1–2.5) ========== */
+/* ========== Chapter 2 – Airway and Breathing (CPG 2.1–2.5) ==========
+ * Sections with a `guide` are written from the official DCAS CPG 2025 PDF
+ * (data/cpg-source/) and rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c2",
-    title: "Airway Management",
-    shortTitle: "2.0 Airway & Breathing",
-    sections: [
+    "id": "c2",
+    "title": "Airway Management",
+    "shortTitle": "2.0 Airway & Breathing",
+    "sections": [
         {
-            id: "c2s1",
-            shortTitle: "2.1 Airway Management",
-            summary: `
-                <div class="sum-card">
-                    <h3 style="color:#0056b3;"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#book"/></svg> Airway Management – Full Guideline Summary</h3>
-                    
-                    <h4 style="color:#004e92; margin:20px 0 10px;">1. AIRWAY ASSESSMENT</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Signs of airway compromise:</strong> noisy breathing (stridor, gurgling, snoring), inability to speak, altered mental status (GCS <8), see-saw respirations, cyanosis.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Difficult airway predictors:</strong> short jaw, limited mouth opening, large tongue, obesity, facial hair, tracheal deviation, previous neck surgery, facial trauma.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">2. BASIC AIRWAY MANOEUVRES</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Head‑tilt/chin‑lift</strong> – no trauma suspected.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Jaw thrust</strong> – trauma / suspected c‑spine injury.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Suction</strong> – rigid (Yankauer) for oropharynx, soft catheter for nasopharynx/ETT.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>OPA sizing:</strong> corner of mouth to earlobe; insert upside down and rotate 180°.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>NPA sizing:</strong> nostril to tragus; lubricate, insert bevel towards septum.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">3. SUPRAGLOTTIC AIRWAYS (LARYNGEAL TUBE)</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Indications:</strong> cardiac arrest, profoundly unconscious with no gag reflex, failure of basic adjuncts.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Contraindications:</strong> conscious patient, intact gag reflex, known oesophageal disease, caustic ingestion.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Confirmation:</strong> waveform capnography (EtCO₂) – mandatory.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> EMTs may insert LT only in cardiac arrest.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">4. ENDOTRACHEAL INTUBATION</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Indications:</strong> cardiac arrest, profound unconsciousness (GCS <8) with failed basic/supraglottic airway, severe airway obstruction, need for prolonged ventilation.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>ETT size:</strong> adult female 7.0‑8.0, adult male 8.0‑9.0; paediatric (uncuffed): (age/4)+4.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Depth:</strong> adult – 21‑23 cm at teeth; paediatric – 3× ETT size (e.g., 4.0 ETT at 12 cm).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Confirmation:</strong> waveform capnography (EtCO₂) + bilateral chest rise + auscultation + absence of gastric sounds.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Failed intubation:</strong> max 2 attempts; revert to supraglottic airway / BVM.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">5. VENTILATION</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>BVM ventilation:</strong> rate – adult 10‑12/min, child/infant 20‑30/min; volume – visible chest rise.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>With advanced airway:</strong> 1 breath every 6 seconds (10/min), no pause in compressions.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Oxygen therapy:</strong> target SpO₂ 94‑98% (88‑92% COPD).</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Capnography:</strong> EtCO₂ 35‑45 mmHg normal; during CPR, EtCO₂ <10 mmHg indicates poor compressions, >40 mmHg suggests ROSC.</li>
-                    </ul>
-
-                    <h4 style="color:#004e92; margin:20px 0 10px;">6. SPECIAL CIRCUMSTANCES</h4>
-                    <ul style="list-style-type: none; padding-left:0;">
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Laryngectomy / tracheostomy:</strong> remove obstructions, suction stoma, ventilate via stoma if needed.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Facial trauma:</strong> jaw thrust, NPA preferred over OPA, avoid nasal route if basal skull fracture suspected.</li>
-                        <li style="margin-bottom:8px;"><span style="background:#004e92; color:white; padding:2px 10px; border-radius:20px;">•</span> <strong>Paediatric:</strong> larger occiput, narrowest part at cricoid, uncuffed tubes preferred <8 years, avoid overinflation.</li>
-                    </ul>
-
-                    <div class="highlight-box" style="margin-top:15px;">
-                        <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#pin"/></svg> <strong>Key KPIs:</strong> Document initial airway findings. Administer O₂ if SpO₂ <92%. First‑pass intubation success.
-                    </div>
-                </div>
-            `,
-            quiz: [
-                { q: "What is the first step in managing a patient with suspected airway compromise?", options: ["Insert OPA", "Head‑tilt/chin‑lift", "Assess responsiveness and breathing", "Suction the airway"], correct: 2, explanation: "Assessment always precedes intervention. Check for signs of life, breathing, and level of consciousness first." },
-                { q: "Which airway manoeuvre is indicated in a trauma patient with possible c‑spine injury?", options: ["Head‑tilt/chin‑lift", "Jaw thrust", "Neck hyperextension", "Tongue traction"], correct: 1, explanation: "Jaw thrust moves the mandible forward without moving the neck, maintaining spinal alignment." },
-                { q: "How do you size an oropharyngeal airway (OPA)?", options: ["Earlobe to corner of mouth", "Tragus to corner of mouth", "Nostril to tragus", "Incisors to angle of mandible"], correct: 0, explanation: "Measure from the corner of the mouth to the earlobe. This approximates the distance from teeth to pharynx." },
-                { q: "What is a contraindication for nasopharyngeal airway (NPA) insertion?", options: ["Conscious patient", "Suspected basal skull fracture", "Gag reflex present", "Age <1 year"], correct: 1, explanation: "NPA is contraindicated in suspected basal skull fracture (CSF leak, raccoon eyes, Battle's sign) due to risk of intracranial placement." },
-                { q: "Which of the following is a sign of complete airway obstruction?", options: ["Audible wheezing", "Snoring respirations", "Silent chest with no air movement", "Gurgling"], correct: 2, explanation: "Complete obstruction presents with absent breath sounds, no air movement, and paradoxical chest/abdominal movement." },
-                { q: "What is the maximum suction pressure recommended for airway suctioning in adults?", options: ["80‑100 mmHg", "100‑120 mmHg", "120‑150 mmHg", "150‑200 mmHg"], correct: 2, explanation: "Suction should be set at 120‑150 mmHg (adults); higher pressures cause mucosal trauma." },
-                { q: "How long should each suction attempt last?", options: ["5 seconds", "10 seconds", "15 seconds", "20 seconds"], correct: 1, explanation: "Suction ≤10 seconds to prevent hypoxia. Preoxygenate and allow recovery between attempts." },
-                { q: "What is the correct method of OPA insertion in an adult?", options: ["Directly backwards along tongue", "Upside down, rotate 180°", "Laterally then rotate", "With the tip pointing cephalad"], correct: 1, explanation: "Insert OPA upside down, advance until resistance, then rotate 180° to cradle the tongue." },
-                { q: "What is the primary reason for avoiding head‑tilt/chin‑lift in trauma?", options: ["It is ineffective", "It causes tongue obstruction", "It may exacerbate cervical spine injury", "It is painful"], correct: 2, explanation: "Head‑tilt causes cervical spine movement; jaw thrust is preferred." },
-                { q: "What does 'stridor' indicate?", options: ["Lower airway obstruction", "Upper airway obstruction", "Pulmonary oedema", "Bronchospasm"], correct: 1, explanation: "Stridor is a high‑pitched inspiratory sound caused by upper airway narrowing (larynx/trachea)." },
-                { q: "An OPA is appropriate in which patient?", options: ["Conscious with gag reflex", "Unconscious with no gag reflex", "Conscious and coughing", "Semi‑conscious with intact swallow"], correct: 1, explanation: "OPA is only tolerated in unconscious patients without a gag reflex." },
-                { q: "What is the correct size for an NPA in an average adult?", options: ["28‑30 Fr", "32‑34 Fr", "34‑36 Fr", "36‑40 Fr"], correct: 2, explanation: "Typical adult NPA sizes are 34‑36 Fr (6‑7 mm internal diameter)." },
-                { q: "How do you measure an NPA?", options: ["Corner of mouth to earlobe", "Nostril to tragus", "Nostril to mandible", "Tip of nose to angle of jaw"], correct: 1, explanation: "Measure from the nostril to the tragus of the ear." },
-                { q: "Which NPA insertion technique is correct?", options: ["Bevel toward septum", "Bevel toward turbinates", "Perpendicular to face", "With force if resistance met"], correct: 0, explanation: "Insert with bevel facing the septum; rotate if obstruction is met." },
-                { q: "What is the most common complication of NPA use?", options: ["Aspiration", "Epistaxis", "Intracranial placement", "Laryngospasm"], correct: 1, explanation: "Epistaxis (nosebleed) is the most frequent complication; gentle lubrication and technique reduce risk." },
-                { q: "What type of suction catheter is preferred for oropharyngeal suction?", options: ["Soft whistle‑tip", "Yankauer (rigid)", "Flexible 14 Fr", "Tonsil tip"], correct: 1, explanation: "Yankauer is rigid, wide‑bore, ideal for thick secretions and vomitus in the oropharynx." },
-                { q: "What is the recommended suction pressure for paediatric patients?", options: ["60‑80 mmHg", "80‑100 mmHg", "100‑120 mmHg", "120‑150 mmHg"], correct: 1, explanation: "Paediatric suction pressure 80‑100 mmHg; lower pressures minimise mucosal injury." },
-                { q: "You attempt to insert an NPA and meet resistance. What should you do?", options: ["Apply more force", "Try the other nostril", "Use a smaller size", "Both B and C"], correct: 3, explanation: "If resistance, stop, try the other nostril or a smaller size. Never force." },
-                { q: "Which patient is most likely to tolerate an OPA?", options: ["GCS 15", "GCS 12", "GCS 8", "GCS 6"], correct: 3, explanation: "OPA requires absent gag reflex; GCS ≤8 usually indicates loss of protective reflexes." },
-                { q: "What is the purpose of the flange on an OPA?", options: ["Prevent over‑insertion", "Anchor to teeth/lips", "Facilitate insertion", "Both A and B"], correct: 3, explanation: "The flange rests against the lips/teeth, preventing the airway from advancing too far." },
-                { q: "What is the preferred supraglottic airway in DCAS?", options: ["LMA", "i‑gel", "Laryngeal tube (LT)", "Combitube"], correct: 2, explanation: "The laryngeal tube (LT) is the supraglottic airway used in DCAS protocols." },
-                { q: "In which patients may EMTs insert an LT airway?", options: ["Respiratory arrest", "Cardiac arrest only", "Severe TBI", "Any unconscious patient"], correct: 1, explanation: "EMTs may only insert supraglottic airways (LT) in cardiac arrest." },
-                { q: "How is correct LT placement confirmed?", options: ["Chest rise", "Bilateral breath sounds", "Waveform capnography", "All of the above"], correct: 3, explanation: "Waveform capnography is mandatory; chest rise and auscultation are also used." },
-                { q: "What is an absolute contraindication to LT insertion?", options: ["Obesity", "Conscious patient with intact gag reflex", "Facial trauma", "Age >70"], correct: 1, explanation: "LT requires an unconscious patient with no gag reflex." },
-                { q: "What is the recommended LT cuff inflation volume based on?", options: ["Patient weight", "Colour‑coded labels on the syringe", "Age", "Gender"], correct: 1, explanation: "LT syringes are colour‑coded to indicate cuff volume; use as directed." },
-                { q: "After successful LT insertion, what ventilation rate is used during CPR?", options: ["30:2", "1 breath every 6 seconds", "1 breath every 3 seconds", "Continuous chest compressions only"], correct: 1, explanation: "With an advanced airway, deliver 1 breath every 6 seconds (10/min) without pausing compressions." },
-                { q: "What should you do if the LT fails to provide adequate ventilation?", options: ["Remove and try again", "Switch to OPA/NPA + BVM", "Attempt intubation", "All of the above"], correct: 3, explanation: "Failed LT can be re‑attempted; if still fails, revert to basic airway or consider intubation." },
-                { q: "What does EtCO₂ waveform confirm?", options: ["Tube position", "Cardiac output", "Patency of airway", "All of the above"], correct: 3, explanation: "Waveform capnography confirms tube position, detects ROSC, and indicates ventilation adequacy." },
-                { q: "After patient movement, what must be reassessed?", options: ["LT cuff pressure", "Tube placement (EtCO₂)", "Ventilation rate", "Oxygen saturation"], correct: 1, explanation: "Reassess tube placement with EtCO₂ after any patient movement (ground to stretcher, etc.)." },
-                { q: "What is the normal EtCO₂ range in a perfusing patient?", options: ["25‑35 mmHg", "35‑45 mmHg", "45‑55 mmHg", "50‑60 mmHg"], correct: 1, explanation: "Normal EtCO₂ is 35‑45 mmHg." },
-                { q: "What is the recommended endotracheal tube size for an adult female?", options: ["6.0‑7.0 mm", "7.0‑8.0 mm", "8.0‑9.0 mm", "9.0‑10.0 mm"], correct: 1, explanation: "Typical adult female ETT size is 7.0‑8.0 mm internal diameter." },
-                { q: "What is the formula for paediatric (uncuffed) ETT size?", options: ["(Age/2)+2", "(Age/4)+4", "(Age/3)+3", "Age+10"], correct: 1, explanation: "Paediatric uncuffed ETT size = (age/4)+4. For cuffed ETT, (age/4)+3." },
-                { q: "At what depth (at teeth) is an ETT typically secured in an adult male?", options: ["19‑21 cm", "21‑23 cm", "23‑25 cm", "25‑27 cm"], correct: 1, explanation: "Adult male depth 21‑23 cm; adult female 20‑22 cm." },
-                { q: "Which of the following is the GOLD STANDARD for confirming ETT placement?", options: ["Bilateral chest auscultation", "Absence of gastric sounds", "Mist in the tube", "Waveform capnography"], correct: 3, explanation: "Continuous waveform capnography is the gold standard for confirming and monitoring ETT placement." },
-                { q: "What is the maximum number of intubation attempts recommended before reverting to a supraglottic airway?", options: ["1", "2", "3", "4"], correct: 1, explanation: "A maximum of 2 attempts at endotracheal intubation are permitted; if unsuccessful, insert an LT airway." },
-                { q: "What is the Sellick manoeuvre?", options: ["Backward, upward, rightward pressure on thyroid", "Cricoid pressure", "Laryngeal manipulation", "Bimanual laryngoscopy"], correct: 1, explanation: "Sellick manoeuvre (cricoid pressure) was previously used to prevent aspiration, but is no longer routinely recommended and may impair ventilation." },
-                { q: "Which view on laryngoscopy indicates a difficult intubation?", options: ["Grade I", "Grade IIa", "Grade IIb", "Grade IV"], correct: 3, explanation: "Cormack‑Lehane Grade IV (no glottic structures visible) predicts difficult/failed intubation." },
-                { q: "What is the Broselow tape used for?", options: ["Estimating paediatric weight", "Measuring ETT depth", "Selecting OPA size", "All of the above"], correct: 3, explanation: "Broselow tape estimates weight, ETT size, depth, drug doses, and equipment sizes for paediatric emergencies." },
-                { q: "What should be done if the patient has a suspected basal skull fracture and requires an advanced airway?", options: ["Use NPA", "Use OPA", "Oral intubation (avoid nasal)", "Insert LT"], correct: 2, explanation: "Nasal route is contraindicated; perform orotracheal intubation." },
-                { q: "What is the first sign of ROSC on capnography?", options: ["EtCO₂ <10 mmHg", "EtCO₂ 20‑30 mmHg", "Sudden sustained rise in EtCO₂ (>40 mmHg)", "Loss of waveform"], correct: 2, explanation: "A rapid, sustained increase in EtCO₂ during CPR often indicates ROSC." },
-                { q: "What is the target SpO₂ for a patient receiving oxygen therapy (standard medical)?", options: ["88‑92%", "94‑98%", "100%", "90‑94%"], correct: 1, explanation: "Target SpO₂ is 94‑98%; avoid hyperoxia (100%) as it may cause vasoconstriction." },
-                { q: "What is the target SpO₂ for a COPD patient?", options: ["88‑92%", "94‑98%", "100%", ">95%"], correct: 0, explanation: "COPD patients require 88‑92% to avoid suppressing hypoxic drive." },
-                { q: "What is the initial CPAP setting for acute pulmonary oedema?", options: ["5 cmH₂O", "10 cmH₂O", "15 cmH₂O", "20 cmH₂O"], correct: 0, explanation: "Start at 5 cmH₂O and titrate up as tolerated." },
-                { q: "What is an absolute contraindication to CPAP?", options: ["Hypoxia", "Tachypnoea", "Unconscious patient", "Hypertension"], correct: 2, explanation: "CPAP requires a conscious, cooperative patient. Unconsciousness/apnoea is an absolute contraindication." },
-                { q: "What is the recommended BVM ventilation rate for an adult in respiratory arrest?", options: ["6‑8/min", "10‑12/min", "16‑20/min", "20‑24/min"], correct: 1, explanation: "Adult ventilation rate is 10‑12 breaths/min (1 breath every 5‑6 seconds)." },
-                { q: "What is the recommended BVM ventilation rate for an infant?", options: ["12‑20/min", "20‑30/min", "30‑40/min", "40‑50/min"], correct: 1, explanation: "Infant/child ventilation rate is 20‑30 breaths/min." },
-                { q: "What is the primary indicator of adequate BVM ventilation?", options: ["Oxygen saturation", "Visible chest rise", "Peak airway pressure", "EtCO₂"], correct: 1, explanation: "Visible chest rise is the most reliable clinical indicator of adequate tidal volume." },
-                { q: "What is the purpose of PEEP (positive end‑expiratory pressure)?", options: ["Increase oxygenation", "Prevent alveolar collapse", "Reduce work of breathing", "All of the above"], correct: 3, explanation: "PEEP improves oxygenation, prevents atelectasis, and may reduce work of breathing." },
-                { q: "Which device is preferred for delivering CPAP in the prehospital setting?", options: ["Flow‑safe CPAP", "BVM with PEEP valve", "Ventilator", "Non‑rebreather mask"], correct: 0, explanation: "Flow‑safe CPAP is the DCAS device for prehospital CPAP." },
-                { q: "When should BiPAP be considered over CPAP?", options: ["Hypoxic patient", "Patient with hypercapnia", "Patient with facial trauma", "Unconscious patient"], correct: 1, explanation: "BiPAP provides inspiratory support and is indicated for hypercapnic respiratory failure (e.g., COPD exacerbation)." },
-                { q: "What is the preferred airway management for a patient with a laryngectomy?", options: ["Oral intubation", "Ventilation via stoma", "NPA", "LT"], correct: 1, explanation: "Patients with laryngectomy breathe through a stoma; ventilation must be applied directly to the stoma." },
-                { q: "What is the most common cause of airway obstruction in an unconscious patient?", options: ["Foreign body", "Tongue", "Vomitus", "Laryngospasm"], correct: 1, explanation: "The tongue is the most common cause of airway obstruction in unconsciousness due to loss of muscle tone." },
-                { q: "What is the first intervention for suspected foreign body airway obstruction (FBAO) in a conscious patient?", options: ["Back blows", "Abdominal thrusts", "Chest thrusts", "Encourage coughing"], correct: 3, explanation: "If the patient can cough effectively, encourage coughing. If ineffective, proceed to back blows/chest thrusts." },
-                { q: "What is the compression:ventilation ratio for adult CPR (single rescuer)?", options: ["15:2", "30:2", "20:2", "10:1"], correct: 1, explanation: "Single rescuer adult CPR uses 30:2 ratio." },
-                { q: "What is the paediatric CPR ratio for two rescuers?", options: ["30:2", "15:2", "20:2", "5:1"], correct: 1, explanation: "Two‑rescuer paediatric CPR uses 15:2 ratio." },
-                { q: "What is the recommended EtCO₂ target during CPR?", options: ["<10 mmHg", ">20 mmHg", ">10 mmHg", "35‑45 mmHg"], correct: 2, explanation: "EtCO₂ >10 mmHg indicates adequate compressions; <10 mmHg suggests need to improve CPR quality." },
-                { q: "What is a sign of oesophageal intubation?", options: ["Chest rise", "EtCO₂ waveform", "Gastric insufflation sounds", "Mist in tube"], correct: 2, explanation: "Oesophageal intubation produces gurgling over epigastrium, no EtCO₂ waveform, and absent breath sounds." },
-                { q: "What is the maximum interruption time for chest compressions during airway management?", options: ["5 seconds", "10 seconds", "15 seconds", "20 seconds"], correct: 1, explanation: "Interruptions in chest compressions should be <10 seconds." },
-                { q: "What is the first drug administered in paediatric cardiac arrest?", options: ["Amiodarone", "Atropine", "Epinephrine 0.01 mg/kg", "Sodium bicarbonate"], correct: 2, explanation: "Epinephrine 0.01 mg/kg IV/IO is first line for paediatric cardiac arrest." },
-                { q: "What is the correct tidal volume setting for an adult with normal lungs on a ventilator?", options: ["4‑6 mL/kg IBW", "6‑8 mL/kg IBW", "8‑10 mL/kg IBW", "10‑12 mL/kg IBW"], correct: 1, explanation: "Normal lungs: tidal volume 6‑8 mL/kg ideal body weight." }
+            "id": "c2s1",
+            "shortTitle": "2.1 Airway Management",
+            "guide": {
+                "cpg": "2.1",
+                "group": "airway",
+                "groupLabel": "Airway and Breathing",
+                "title": "Airway Management",
+                "lead": "Keep the airway open and the patient oxygenated and ventilated, using the simplest method that works and monitoring with SpO<sub>2</sub> and EtCO<sub>2</sub>. Move to advanced airways only in cardiac arrest or deep unconsciousness.",
+                "source": {
+                    "label": "CPG 2.1",
+                    "pages": "47–52",
+                    "pdf": "../pdf_sections/2_1_Airway_and_Breathing.pdf"
+                },
+                "sections": [
+                    {
+                        "type": "criteria",
+                        "title": "Who this applies to",
+                        "icon": "user",
+                        "include": [
+                            "Airway compromise on primary assessment: significantly altered mental status (GCS &lt;8 or unresponsive on AVPU), noisy breathing, stridor, ineffective ventilation, foreign body airway obstruction."
+                        ],
+                        "exclude": [
+                            "No airway compromise."
+                        ]
+                    },
+                    {
+                        "type": "steps",
+                        "title": "Step by step",
+                        "icon": "list",
+                        "steps": [
+                            {
+                                "title": "Primary survey and triage",
+                                "text": "As per Universal Care and Patient Triage Categories. Consider ALS back-up."
+                            },
+                            {
+                                "title": "Basic airway management",
+                                "text": "Clear the airway (suction, Magill's forceps; see FBAO CPG). Head-tilt/chin-lift or jaw thrust, avoiding neck movement if cervical injury is suspected. Attach SpO<sub>2</sub>, EtCO<sub>2</sub> and ECG monitoring."
+                            },
+                            {
+                                "title": "Airway adjuncts: OPA or NPA",
+                                "level": "EMR",
+                                "text": "Correct size; watch for gagging and bleeding."
+                            },
+                            {
+                                "title": "Oxygen and ventilation",
+                                "text": "15 L/min via non-rebreather mask, or BVM with 100% oxygen if breathing is inadequate. Keep SpO<sub>2</sub> &gt;94%; NC-EtCO<sub>2</sub> 35–45 mmHg.",
+                                "items": [
+                                    "BVM / supported ventilation: adult 10–12, child 20–30, infant 20–30 breaths/min.",
+                                    "Monitor EtCO<sub>2</sub> continuously for tidal volume and minute ventilation."
+                                ]
+                            },
+                            {
+                                "title": "Consider CPAP",
+                                "level": "EMT-A",
+                                "text": "For acute pulmonary edema, or moderate to severe COPD not responding to initial nebulizers (see below)."
+                            },
+                            {
+                                "title": "Reassess the airway",
+                                "text": "Pooling secretions, blood or vomit? Unable to swallow? Consider impending airway failure: FBAO, inhalation burns, anaphylaxis or life-threatening asthma, TBI, multiple trauma, altered mental status unable to maintain the airway."
+                            },
+                            {
+                                "title": "Supraglottic airway (LT)",
+                                "level": "EMT",
+                                "text": "Only in cardiac arrest or deep unconsciousness (no gag reflex anticipated) when OPA/NPA fail. EMTs may insert an LT only in cardiac arrest."
+                            },
+                            {
+                                "title": "Endotracheal intubation",
+                                "level": "P",
+                                "text": "Same indications. Prepare equipment and team first."
+                            },
+                            {
+                                "title": "Confirm or fall back",
+                                "text": "Confirm placement with waveform EtCO<sub>2</sub>, chest rise and lung sounds, and SpO<sub>2</sub>. If unsuccessful: consider a second attempt, or revert to OPA and basic airway management."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Assessment",
+                        "icon": "stethoscope",
+                        "groups": [
+                            {
+                                "title": "Airway",
+                                "items": [
+                                    "Mental status; obstruction by a foreign body or swelling (e.g. angioedema, pharyngeal or laryngeal infection).",
+                                    "<b>Difficult airway signs:</b> short jaw or limited jaw thrust or mobility, small thyromental space, upper airway obstruction, large tongue, obesity, large tonsils, large neck, craniofacial abnormality, excessive facial hair, tracheostomy scar or other neck/facial surgery, trismus."
+                                ]
+                            },
+                            {
+                                "title": "Breathing",
+                                "items": [
+                                    "Pattern, rate and effort; accessory muscles; ability to speak; depth and equality of breath sounds; abnormal sounds (wheeze, rhonchi, rales, stridor); cough.",
+                                    "Cyanosis or pallor, diaphoresis, anxiety, signs of fluid overload.",
+                                    "Injuries affecting breathing: facial, high spinal (phrenic nerve, intercostals), neck (expanding hematoma, tracheal injury), chest wall (rib or sternal fracture, paradoxical movement, subcutaneous air, sucking chest wound)."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Advanced airways",
+                        "icon": "stethoscope",
+                        "groups": [
+                            {
+                                "title": "Supraglottic airway (LT)",
+                                "items": [
+                                    "Indications: cardiac arrest; or profoundly unconscious and OPA/NPA fail to maintain the airway.",
+                                    "EMTs may insert an LT only in cardiac arrest.",
+                                    "Choose size and cuff volume from the colour-coded labels on the syringe.",
+                                    "Confirm placement with waveform capnography."
+                                ]
+                            },
+                            {
+                                "title": "Endotracheal intubation",
+                                "items": [
+                                    "Indications: cardiac arrest; or profoundly unconscious and OPA/NPA fail.",
+                                    "Success: confirm with waveform EtCO<sub>2</sub>; ventilate at 1 breath every 6 seconds or as indicated; connect a ventilator where available (Invasive Ventilation CPG).",
+                                    "First attempt fails: consider a second attempt with ETT or supraglottic device, with minimal delay, after optimising position and cord view.",
+                                    "Second attempt fails: revert to an LT airway or OPA/NPA; consider Tele-EMS for other strategies."
+                                ]
+                            },
+                            {
+                                "title": "After placement",
+                                "items": [
+                                    "Reassess LT and ETT placement after every patient movement (e.g. ground to stretcher, stretcher to hospital bed).",
+                                    "Monitor SpO<sub>2</sub>, ECG and EtCO<sub>2</sub> continuously; waveform capnography detects deterioration."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "CPAP / BiPAP",
+                        "icon": "wind",
+                        "groups": [
+                            {
+                                "title": "Indications",
+                                "items": [
+                                    "Acute pulmonary edema.",
+                                    "Moderate to severe COPD not responding to initial nebulizer treatment."
+                                ]
+                            },
+                            {
+                                "title": "Cautions",
+                                "items": [
+                                    "Severe pneumonia / ARDS (pneumothorax more likely).",
+                                    "Emphysema (pressure may rupture bullae).",
+                                    "Asthma (may worsen dynamic hyperinflation)."
+                                ]
+                            },
+                            {
+                                "title": "Absolute contraindications",
+                                "items": [
+                                    "Unconscious or altered mental status; apnea.",
+                                    "Facial trauma or deformity (no mask seal).",
+                                    "Untreated pneumothorax.",
+                                    "Hypotension."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "When to request ALS back-up",
+                        "icon": "ambulance",
+                        "tone": "alert",
+                        "items": [
+                            "Cardiac arrest, or deeply unconscious (no gag reflex anticipated).",
+                            "Severe respiratory distress or impending respiratory failure.",
+                            "A foreign body seen in the airway that cannot be removed.",
+                            "If basic measures fail and ALS is unavailable, consult Tele-EMS."
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "title": "Signs of ineffective ventilation",
+                        "icon": "triangle-alert",
+                        "columns": [
+                            "Sign",
+                            "Adults",
+                            "Children"
+                        ],
+                        "rows": [
+                            [
+                                "Chest movement",
+                                "Inadequate rise or minimal movement",
+                                "Same, adjusted for size"
+                            ],
+                            [
+                                "Breath sounds",
+                                "Absent or diminished",
+                                "Same, allowing for smaller airways and faster rates"
+                            ],
+                            [
+                                "Oxygenation",
+                                "SpO<sub>2</sub> &lt;92% despite oxygen",
+                                "Same, adjusted for pediatric norms"
+                            ],
+                            [
+                                "Effort",
+                                "Retractions, flaring, accessory muscles without air movement",
+                                "Same"
+                            ],
+                            [
+                                "Mental status",
+                                "Altered or unresponsive from hypoxia or hypercapnia",
+                                "Same; children change quickly"
+                            ],
+                            [
+                                "EtCO<sub>2</sub>",
+                                "&gt;43 mmHg, or no waveform",
+                                "&gt;43 school age, &gt;42 infants/toddlers, &gt;40 neonates, or no waveform"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "title": "Normal pediatric EtCO2",
+                        "icon": "baby",
+                        "columns": [
+                            "Age group",
+                            "EtCO<sub>2</sub> (mmHg)"
+                        ],
+                        "rows": [
+                            [
+                                "Neonates (0–1 month)",
+                                "30–40"
+                            ],
+                            [
+                                "Infants (1 month–1 year)",
+                                "32–42"
+                            ],
+                            [
+                                "Toddlers/preschool (1–5 years)",
+                                "33–43"
+                            ],
+                            [
+                                "School age (6–12 years)",
+                                "35–43"
+                            ]
+                        ],
+                        "notes": [
+                            "Healthy children generally 30–43 mmHg at sea level. Use age- and size-appropriate equipment and pediatric norms."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key performance indicators",
+                        "icon": "chart-no-axes-column",
+                        "items": [
+                            "Document initial airway findings for all patients with airway compromise.",
+                            "Give oxygen to all patients with SpO<sub>2</sub> &lt;92% (when appropriate).",
+                            "Intubation successful on the first attempt."
+                        ]
+                    },
+                    {
+                        "type": "related",
+                        "title": "Related CPGs",
+                        "icon": "link",
+                        "items": [
+                            {
+                                "label": "1.1 Universal Care",
+                                "href": "c1.html?section=c1s1"
+                            },
+                            {
+                                "label": "2.2 FBAO",
+                                "href": "c2.html?section=c2s2"
+                            },
+                            {
+                                "label": "2.5 Invasive Ventilation",
+                                "href": "c2.html?section=c2s5"
+                            },
+                            {
+                                "label": "3.4 Acute Pulmonary Edema",
+                                "href": "c3-4.html"
+                            },
+                            {
+                                "label": "4.3 Adult Cardiac Arrest",
+                                "href": "c4-3.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quiz": [
+                {
+                    "q": "Which finding brings a patient into CPG 2.1?",
+                    "options": [
+                        "SpO2 97% and talking",
+                        "GCS <8 or unresponsive on AVPU",
+                        "Mild cough",
+                        "Normal speech with a sore throat"
+                    ],
+                    "correct": 1,
+                    "explanation": "Inclusion: significantly altered mental status (GCS <8 or unresponsive), noisy breathing, stridor, ineffective ventilation, FBAO."
+                },
+                {
+                    "q": "Which is listed as airway compromise in CPG 2.1?",
+                    "options": [
+                        "Stridor",
+                        "Headache",
+                        "Nausea",
+                        "Fever"
+                    ],
+                    "correct": 0,
+                    "explanation": "Noisy breathing, stridor, ineffective ventilation and FBAO are listed."
+                },
+                {
+                    "q": "In suspected cervical injury, how should you open the airway?",
+                    "options": [
+                        "Head-tilt/chin-lift with full extension",
+                        "Jaw thrust, avoiding neck manipulation",
+                        "Turn the head to the side",
+                        "Sit the patient up"
+                    ],
+                    "correct": 1,
+                    "explanation": "Use head-tilt/chin-lift or jaw thrust as appropriate, avoiding neck manipulation if cervical injury is suspected."
+                },
+                {
+                    "q": "What may be used to remove a visible foreign body or debris?",
+                    "options": [
+                        "Fingers only",
+                        "Suction or Magill's forceps",
+                        "Abdominal thrusts only",
+                        "Nothing until hospital"
+                    ],
+                    "correct": 1,
+                    "explanation": "Remove obstructions using suction or Magill's forceps where indicated (FBAO CPG)."
+                },
+                {
+                    "q": "What is the lowest clinical level for OPA/NPA insertion?",
+                    "options": [
+                        "EMR",
+                        "EMT",
+                        "EMT-A",
+                        "P"
+                    ],
+                    "correct": 0,
+                    "explanation": "OPA/NPA is marked EMR in the CPG 2.1 flowchart."
+                },
+                {
+                    "q": "What is the lowest clinical level for CPAP?",
+                    "options": [
+                        "EMR",
+                        "EMT",
+                        "EMT-A",
+                        "AP"
+                    ],
+                    "correct": 2,
+                    "explanation": "CPAP is marked EMT-A."
+                },
+                {
+                    "q": "What is the lowest clinical level for a supraglottic airway (LT)?",
+                    "options": [
+                        "EMR",
+                        "EMT",
+                        "P",
+                        "AP"
+                    ],
+                    "correct": 1,
+                    "explanation": "Supraglottic airway (LT) is marked EMT – but EMTs may only insert it in cardiac arrest."
+                },
+                {
+                    "q": "What is the lowest clinical level for endotracheal intubation?",
+                    "options": [
+                        "EMT",
+                        "EMT-A",
+                        "P",
+                        "EP"
+                    ],
+                    "correct": 2,
+                    "explanation": "Endotracheal intubation is marked P."
+                },
+                {
+                    "q": "When may an EMT insert an LT airway?",
+                    "options": [
+                        "Any unconscious patient",
+                        "Only in cardiac arrest",
+                        "Severe asthma",
+                        "Any trauma"
+                    ],
+                    "correct": 1,
+                    "explanation": "EMTs may only insert supraglottic airways (LT) in cardiac arrest."
+                },
+                {
+                    "q": "Which supraglottic airway does DCAS use?",
+                    "options": [
+                        "LMA",
+                        "i-gel",
+                        "LT (laryngeal tube) airway",
+                        "Combitube"
+                    ],
+                    "correct": 2,
+                    "explanation": "CPG 2.1 names the supraglottic airway as the LT airway."
+                },
+                {
+                    "q": "When should advanced airway management be considered?",
+                    "options": [
+                        "Any patient with low SpO2",
+                        "Only in cardiac arrest or deep unconsciousness (no gag reflex anticipated)",
+                        "Every trauma patient",
+                        "Whenever ALS arrives"
+                    ],
+                    "correct": 1,
+                    "explanation": "Consider advanced airways only if the patient is in cardiac arrest or deeply unconscious."
+                },
+                {
+                    "q": "A profoundly unconscious patient (not in arrest) cannot be kept open with OPA/NPA. Which device is indicated?",
+                    "options": [
+                        "Nothing more",
+                        "Supraglottic airway (LT)",
+                        "CPAP",
+                        "Nasal cannula"
+                    ],
+                    "correct": 1,
+                    "explanation": "LT indications: cardiac arrest, or profoundly unconscious AND OPA/NPA fail."
+                },
+                {
+                    "q": "How do you choose LT size and cuff volume?",
+                    "options": [
+                        "Patient's age",
+                        "Colour-coded labels on the syringe",
+                        "Guess and adjust",
+                        "Patient's weight only"
+                    ],
+                    "correct": 1,
+                    "explanation": "Select LT size and cuff inflation volume according to the colour-coded labels on the syringe."
+                },
+                {
+                    "q": "How is LT placement confirmed?",
+                    "options": [
+                        "Patient's colour",
+                        "Waveform capnography (EtCO2)",
+                        "Pupil size",
+                        "Blood pressure"
+                    ],
+                    "correct": 1,
+                    "explanation": "Confirm successful LT placement with waveform capnography."
+                },
+                {
+                    "q": "How is ETT placement confirmed?",
+                    "options": [
+                        "Mist in the tube only",
+                        "EtCO2 waveform capnography",
+                        "Patient coughing",
+                        "Heart rate"
+                    ],
+                    "correct": 1,
+                    "explanation": "Confirm ET tube placement with EtCO2 waveform capnography."
+                },
+                {
+                    "q": "After a successful intubation, what ventilation rate does CPG 2.1 give?",
+                    "options": [
+                        "1 breath every 3 seconds",
+                        "1 breath every 6 seconds or as clinically indicated",
+                        "30:2",
+                        "20 breaths/min"
+                    ],
+                    "correct": 1,
+                    "explanation": "Provide ventilations at 1 breath every 6 seconds, or as clinically indicated."
+                },
+                {
+                    "q": "The first intubation attempt fails. What next?",
+                    "options": [
+                        "Stop all airway management",
+                        "Consider a second attempt with ETT or supraglottic device, with minimal delay",
+                        "Keep trying until success",
+                        "Wait for hospital"
+                    ],
+                    "correct": 1,
+                    "explanation": "Consider a second attempt with ET or a supraglottic device, after optimising position and cord view."
+                },
+                {
+                    "q": "The second intubation attempt fails. What now?",
+                    "options": [
+                        "A third attempt",
+                        "Revert to an LT airway or OPA/NPA; consider Tele-EMS",
+                        "Remove all airways",
+                        "Sedate the patient"
+                    ],
+                    "correct": 1,
+                    "explanation": "Revert to a supraglottic device (LT) or OPA/NPA, and consider Tele-EMS for alternative strategies."
+                },
+                {
+                    "q": "When must LT or ETT placement be reassessed?",
+                    "options": [
+                        "Only at hospital",
+                        "After every patient movement",
+                        "Every 30 minutes",
+                        "Never once confirmed"
+                    ],
+                    "correct": 1,
+                    "explanation": "Reassess placement after each patient movement, e.g. ground to stretcher and stretcher to hospital bed."
+                },
+                {
+                    "q": "What oxygen flow does the flowchart give for supporting ventilation?",
+                    "options": [
+                        "2 L/min",
+                        "6 L/min",
+                        "15 L/min via NRB or BVM",
+                        "Oxygen not needed"
+                    ],
+                    "correct": 2,
+                    "explanation": "Administer 15 L/min oxygen via NRB mask or BVM as required."
+                },
+                {
+                    "q": "What SpO2 does the management section aim for?",
+                    "options": [
+                        ">88%",
+                        ">94%",
+                        "100%",
+                        ">90%"
+                    ],
+                    "correct": 1,
+                    "explanation": "Administer oxygen to maintain SpO2 >94% (the goals also mention 92–98%)."
+                },
+                {
+                    "q": "What is the target nasal-cannula EtCO2 (NC-EtCO2) range on the flowchart?",
+                    "options": [
+                        "10–20 mmHg",
+                        "35–45 mmHg",
+                        "45–55 mmHg",
+                        "20–30 mmHg"
+                    ],
+                    "correct": 1,
+                    "explanation": "Respiratory monitoring: SpO2 >94%, NC-EtCO2 35–45 mmHg."
+                },
+                {
+                    "q": "What BVM ventilation rate is given for an adult?",
+                    "options": [
+                        "6–8 breaths/min",
+                        "10–12 breaths/min",
+                        "20–30 breaths/min",
+                        "30–40 breaths/min"
+                    ],
+                    "correct": 1,
+                    "explanation": "Adult 10–12, child 20–30, infant 20–30 breaths/min."
+                },
+                {
+                    "q": "What BVM ventilation rate is given for an infant?",
+                    "options": [
+                        "10–12 breaths/min",
+                        "12–20 breaths/min",
+                        "20–30 breaths/min",
+                        "40–60 breaths/min"
+                    ],
+                    "correct": 2,
+                    "explanation": "Infant (and child) 20–30 breaths/min."
+                },
+                {
+                    "q": "During supported ventilation, what monitors tidal volume and minute ventilation?",
+                    "options": [
+                        "Pulse oximetry",
+                        "Continuous EtCO2",
+                        "Blood pressure",
+                        "Temperature"
+                    ],
+                    "correct": 1,
+                    "explanation": "Continuously monitor EtCO2 for tidal volume and minute ventilation."
+                },
+                {
+                    "q": "When is BVM ventilation with 100% oxygen indicated?",
+                    "options": [
+                        "In all patients",
+                        "When spontaneous breathing is inadequate or ineffective",
+                        "Only in children",
+                        "Only after intubation"
+                    ],
+                    "correct": 1,
+                    "explanation": "Provide BVM ventilation with 100% oxygen if spontaneous breathing is inadequate or ineffective."
+                },
+                {
+                    "q": "Which is an indication for CPAP?",
+                    "options": [
+                        "Acute pulmonary edema",
+                        "Untreated pneumothorax",
+                        "Hypotension",
+                        "Apnea"
+                    ],
+                    "correct": 0,
+                    "explanation": "Indications: acute pulmonary edema; moderate to severe COPD unresponsive to initial nebulizers."
+                },
+                {
+                    "q": "When is CPAP indicated in COPD?",
+                    "options": [
+                        "Mild COPD at rest",
+                        "Moderate to severe COPD unresponsive to initial nebulizers",
+                        "Any COPD",
+                        "Never"
+                    ],
+                    "correct": 1,
+                    "explanation": "Moderate to severe COPD unresponsive to initial nebulizer treatments."
+                },
+                {
+                    "q": "Which is an absolute contraindication to CPAP?",
+                    "options": [
+                        "Hypertension",
+                        "Hypotension",
+                        "Tachycardia",
+                        "Wheeze"
+                    ],
+                    "correct": 1,
+                    "explanation": "Absolute contraindications: unconscious/altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension."
+                },
+                {
+                    "q": "Why is facial trauma an absolute contraindication to CPAP?",
+                    "options": [
+                        "It causes bleeding",
+                        "A mask seal cannot be achieved",
+                        "It raises ICP",
+                        "It is painful"
+                    ],
+                    "correct": 1,
+                    "explanation": "Facial trauma or deformities prevent an adequate mask seal."
+                },
+                {
+                    "q": "Why is CPAP a caution in emphysema?",
+                    "options": [
+                        "It lowers oxygen",
+                        "Increased pressure may rupture lung bullae",
+                        "It causes bradycardia",
+                        "It worsens fever"
+                    ],
+                    "correct": 1,
+                    "explanation": "Emphysema: increased pressure may rupture lung bullae."
+                },
+                {
+                    "q": "Why is CPAP a caution in asthma?",
+                    "options": [
+                        "It may worsen dynamic hyperinflation",
+                        "It causes hypoglycemia",
+                        "It is ineffective",
+                        "It raises blood pressure"
+                    ],
+                    "correct": 0,
+                    "explanation": "Asthma: CPAP may further increase dynamic hyperinflation."
+                },
+                {
+                    "q": "Why is CPAP a caution in severe pneumonia/ARDS?",
+                    "options": [
+                        "Increased likelihood of pneumothorax",
+                        "It causes sepsis",
+                        "It worsens fever",
+                        "No reason"
+                    ],
+                    "correct": 0,
+                    "explanation": "Severe pneumonia/ARDS: increased likelihood of pneumothorax."
+                },
+                {
+                    "q": "Which is NOT an absolute contraindication to CPAP?",
+                    "options": [
+                        "Apnea",
+                        "Altered mental status",
+                        "Acute pulmonary edema",
+                        "Untreated pneumothorax"
+                    ],
+                    "correct": 2,
+                    "explanation": "Acute pulmonary edema is an indication."
+                },
+                {
+                    "q": "Which is a sign of a difficult airway in CPG 2.1?",
+                    "options": [
+                        "Long thin neck",
+                        "Small thyromental space",
+                        "Normal jaw movement",
+                        "Clear voice"
+                    ],
+                    "correct": 1,
+                    "explanation": "Difficult airway signs include short jaw, small thyromental space, large tongue, obesity, large neck, trismus and more."
+                },
+                {
+                    "q": "Which is listed as a difficult-airway sign?",
+                    "options": [
+                        "Trismus",
+                        "Normal dentition",
+                        "Wide mouth opening",
+                        "Short hair"
+                    ],
+                    "correct": 0,
+                    "explanation": "Trismus, excessive facial hair, tracheostomy scar or neck surgery, and craniofacial abnormalities are listed."
+                },
+                {
+                    "q": "During airway reassessment, which finding means the airway is not being maintained?",
+                    "options": [
+                        "Patient talking normally",
+                        "Pooling of secretions, blood or vomit in the mouth",
+                        "SpO2 98%",
+                        "Normal swallow"
+                    ],
+                    "correct": 1,
+                    "explanation": "Pooling of secretions, blood or vomit, or inability to swallow."
+                },
+                {
+                    "q": "Which condition suggests impending airway failure?",
+                    "options": [
+                        "Ankle fracture",
+                        "Inhalation burns",
+                        "Mild headache",
+                        "Controlled nosebleed"
+                    ],
+                    "correct": 1,
+                    "explanation": "Impending airway failure: FBAO, inhalation burns, anaphylaxis or life-threatening asthma, TBI, multiple trauma, altered mental status."
+                },
+                {
+                    "q": "Which injury can impair breathing by affecting the phrenic nerve?",
+                    "options": [
+                        "Wrist fracture",
+                        "High spine injury",
+                        "Knee injury",
+                        "Scalp laceration"
+                    ],
+                    "correct": 1,
+                    "explanation": "High spine injury affects the phrenic nerve and intercostals."
+                },
+                {
+                    "q": "Which neck finding is listed as a traumatic threat to the airway?",
+                    "options": [
+                        "Expanding hematoma",
+                        "Neck pain on turning",
+                        "Stiff neck from sleeping",
+                        "Old scar"
+                    ],
+                    "correct": 0,
+                    "explanation": "Neck injury: expanding hematoma, tracheal injury."
+                },
+                {
+                    "q": "Which chest wall finding is listed in the breathing assessment?",
+                    "options": [
+                        "Paradoxical chest motion",
+                        "Normal symmetrical rise",
+                        "Clear sounds",
+                        "Normal rate"
+                    ],
+                    "correct": 0,
+                    "explanation": "Chest wall injury: rib or sternal fracture, paradoxical motion, subcutaneous air, sucking chest wound."
+                },
+                {
+                    "q": "When should ALS back-up be requested for advanced airway management?",
+                    "options": [
+                        "Mild asthma",
+                        "A foreign body seen in the airway that cannot be removed",
+                        "A cough",
+                        "Any patient on oxygen"
+                    ],
+                    "correct": 1,
+                    "explanation": "Also: cardiac arrest or deeply unconscious, severe respiratory distress or impending failure."
+                },
+                {
+                    "q": "Basic airway measures fail and ALS is unavailable. What should you do?",
+                    "options": [
+                        "Wait",
+                        "Consult Tele-EMS for guidance",
+                        "Leave the scene",
+                        "Stop ventilating"
+                    ],
+                    "correct": 1,
+                    "explanation": "Request ALS back-up, or if unavailable consult Tele-EMS for guidance."
+                },
+                {
+                    "q": "Which monitors should be attached during basic airway management?",
+                    "options": [
+                        "Temperature only",
+                        "SpO2, EtCO2 and ECG",
+                        "Blood glucose only",
+                        "None"
+                    ],
+                    "correct": 1,
+                    "explanation": "Attach SpO2, EtCO2 and ECG and monitor continuously."
+                },
+                {
+                    "q": "Which SpO2 despite oxygen is a sign of ineffective ventilation?",
+                    "options": [
+                        "<98%",
+                        "<92%",
+                        "<95%",
+                        "<99%"
+                    ],
+                    "correct": 1,
+                    "explanation": "Persistent hypoxemia: SpO2 <92% despite oxygen therapy."
+                },
+                {
+                    "q": "Which adult EtCO2 suggests poor ventilation?",
+                    "options": [
+                        ">43 mmHg",
+                        "35–40 mmHg",
+                        "38 mmHg",
+                        "40 mmHg"
+                    ],
+                    "correct": 0,
+                    "explanation": "Elevated EtCO2 >43 mmHg (or no waveform) indicates poor ventilation in adults."
+                },
+                {
+                    "q": "Which EtCO2 suggests poor ventilation in a neonate?",
+                    "options": [
+                        ">40 mmHg",
+                        ">50 mmHg",
+                        ">35 mmHg",
+                        ">60 mmHg"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pediatric thresholds: >43 school age, >42 infants/toddlers, >40 neonates."
+                },
+                {
+                    "q": "What is the normal EtCO2 range for infants (1 month to 1 year)?",
+                    "options": [
+                        "30–40",
+                        "32–42",
+                        "35–45",
+                        "25–35"
+                    ],
+                    "correct": 1,
+                    "explanation": "Neonates 30–40, infants 32–42, toddlers 33–43, school age 35–43 mmHg."
+                },
+                {
+                    "q": "What is the normal EtCO2 range for school-age children (6–12 years)?",
+                    "options": [
+                        "30–40",
+                        "32–42",
+                        "35–43",
+                        "40–50"
+                    ],
+                    "correct": 2,
+                    "explanation": "School-age children: 35–43 mmHg."
+                },
+                {
+                    "q": "What does absence of an EtCO2 waveform indicate?",
+                    "options": [
+                        "Normal ventilation",
+                        "Poor ventilation (or a misplaced airway)",
+                        "Hyperventilation",
+                        "ROSC"
+                    ],
+                    "correct": 1,
+                    "explanation": "Absence of the EtCO2 waveform indicates poor ventilation."
+                },
+                {
+                    "q": "What is the first KPI of CPG 2.1?",
+                    "options": [
+                        "Intubate every unconscious patient",
+                        "Document initial airway findings for all patients with airway compromise",
+                        "Use CPAP for all",
+                        "Transport within 5 minutes"
+                    ],
+                    "correct": 1,
+                    "explanation": "KPIs: document initial airway findings; oxygen for SpO2 <92%; first-pass intubation."
+                },
+                {
+                    "q": "Below what SpO2 should all patients receive oxygen (KPI, when appropriate)?",
+                    "options": [
+                        "98%",
+                        "94%",
+                        "92%",
+                        "88%"
+                    ],
+                    "correct": 2,
+                    "explanation": "KPI: administer oxygen to all patients with SpO2 <92% (when appropriate)."
+                },
+                {
+                    "q": "What is the intubation KPI?",
+                    "options": [
+                        "Within 3 attempts",
+                        "Successful on the first attempt",
+                        "Within 10 minutes",
+                        "By an EP only"
+                    ],
+                    "correct": 1,
+                    "explanation": "Intubation should be successful on the first intubation attempt."
+                },
+                {
+                    "q": "What must be documented if an advanced airway was withheld?",
+                    "options": [
+                        "Nothing",
+                        "The justification",
+                        "Only the time",
+                        "The patient's consent"
+                    ],
+                    "correct": 1,
+                    "explanation": "Documentation includes justification if an advanced airway was withheld."
+                },
+                {
+                    "q": "An intubated patient needs a ventilator. Which CPG applies?",
+                    "options": [
+                        "COPD",
+                        "Invasive Mechanical Ventilation",
+                        "Asthma",
+                        "FBAO"
+                    ],
+                    "correct": 1,
+                    "explanation": "Connect to a ventilator where available – refer to the Invasive Ventilation CPG."
+                },
+                {
+                    "q": "Before intubating, what must be ensured?",
+                    "options": [
+                        "Family consent",
+                        "Equipment and team readiness",
+                        "Hospital pre-alert only",
+                        "IV fluids running"
+                    ],
+                    "correct": 1,
+                    "explanation": "Ensure equipment and team readiness prior to performing the procedure."
+                },
+                {
+                    "q": "Which conditions are indications for both LT and ETT in CPG 2.1?",
+                    "options": [
+                        "Asthma and COPD",
+                        "Cardiac arrest; or profound unconsciousness with OPA/NPA failing",
+                        "Any hypoxia",
+                        "Any trauma"
+                    ],
+                    "correct": 1,
+                    "explanation": "Both share these indications (EMTs only in arrest for LT)."
+                },
+                {
+                    "q": "What should be adjusted in children to avoid under- or over-treatment?",
+                    "options": [
+                        "Nothing",
+                        "Age- and size-appropriate equipment and pediatric vital sign norms",
+                        "Adult doses",
+                        "Adult ventilation rates"
+                    ],
+                    "correct": 1,
+                    "explanation": "Use age- and size-appropriate equipment and adjust vital sign norms."
+                },
+                {
+                    "q": "What SpO2 range is listed among CPG 2.1's goals?",
+                    "options": [
+                        "88–92%",
+                        "92–98%",
+                        "94–100%",
+                        "90–95%"
+                    ],
+                    "correct": 1,
+                    "explanation": "Goal: target oxygen saturation of 92–98%. The management section keeps SpO2 >94%."
+                },
+                {
+                    "q": "What does waveform capnography help detect during monitoring?",
+                    "options": [
+                        "Deterioration",
+                        "Blood glucose",
+                        "Temperature",
+                        "Pain"
+                    ],
+                    "correct": 0,
+                    "explanation": "Detect deterioration using waveform capnography."
+                }
             ],
-            flashcards: [
-                // 60 flashcards (unchanged) – truncated for brevity
-                { category: "Airway Assessment", question: "Signs of airway compromise?", answer: "Noisy breathing (stridor, gurgling, snoring), inability to speak, cyanosis, GCS <8, see‑saw respirations." },
-                { category: "Airway Assessment", question: "Difficult airway predictors?", answer: "Short jaw, limited mouth opening, large tongue, obesity, facial hair, facial trauma, previous neck surgery, tracheal deviation." },
-                { category: "Basic Airway", question: "Head‑tilt/chin‑lift – indication?", answer: "Non‑trauma patient – opens airway by lifting tongue." },
-                { category: "Basic Airway", question: "Jaw thrust – indication?", answer: "Trauma / suspected c‑spine injury – moves mandible forward without neck movement." },
-                { category: "OPA", question: "How to size an OPA?", answer: "Corner of mouth to earlobe." },
-                { category: "OPA", question: "How to insert an OPA?", answer: "Upside down, advance, rotate 180°." },
-                { category: "OPA", question: "Contraindication for OPA?", answer: "Conscious patient with intact gag reflex." },
-                { category: "NPA", question: "How to size an NPA?", answer: "Nostril to tragus of ear." },
-                { category: "NPA", question: "Contraindication for NPA?", answer: "Suspected basal skull fracture (CSF leak, raccoon eyes, Battle's sign)." },
-                { category: "NPA", question: "NPA insertion technique?", answer: "Lubricate, bevel toward septum, gentle rotation if resistance." },
-                { category: "Suction", question: "Maximum suction pressure – adult?", answer: "120‑150 mmHg." },
-                { category: "Suction", question: "Maximum suction pressure – paediatric?", answer: "80‑100 mmHg." },
-                { category: "Suction", question: "Maximum suction duration?", answer: "≤10 seconds per attempt." },
-                { category: "Suction", question: "Yankauer suction is used for?", answer: "Oropharynx (thick secretions, vomitus)." },
-                { category: "Suction", question: "Flexible whistle‑tip catheter is used for?", answer: "Nasopharynx, ETT suction." },
-                { category: "Supraglottic Airway", question: "LT – indication for EMT?", answer: "Cardiac arrest only." },
-                { category: "Supraglottic Airway", question: "LT – confirmation of placement?", answer: "Waveform capnography (mandatory) + chest rise + breath sounds." },
-                { category: "Supraglottic Airway", question: "LT cuff volume guide?", answer: "Colour‑coded syringe labels." },
-                { category: "Supraglottic Airway", question: "Ventilation rate with advanced airway during CPR?", answer: "1 breath every 6 seconds (10/min), no pause in compressions." },
-                { category: "Capnography", question: "Normal EtCO₂ range?", answer: "35‑45 mmHg." },
-                { category: "Capnography", question: "EtCO₂ during CPR – target?", answer: ">10 mmHg indicates adequate compressions." },
-                { category: "Capnography", question: "EtCO₂ sudden rise >40 mmHg suggests?", answer: "ROSC (return of spontaneous circulation)." },
-                { category: "Capnography", question: "Absent EtCO₂ waveform after intubation suggests?", answer: "Oesophageal intubation." },
-                { category: "Endotracheal Intubation", question: "ETT size – adult female?", answer: "7.0‑8.0 mm ID." },
-                { category: "Endotracheal Intubation", question: "ETT size – adult male?", answer: "8.0‑9.0 mm ID." },
-                { category: "Endotracheal Intubation", question: "Paediatric ETT size formula (uncuffed)?", answer: "(Age/4)+4." },
-                { category: "Endotracheal Intubation", question: "Paediatric ETT size formula (cuffed)?", answer: "(Age/4)+3." },
-                { category: "Endotracheal Intubation", question: "ETT depth (adult male)?", answer: "21‑23 cm at teeth." },
-                { category: "Endotracheal Intubation", question: "ETT depth (adult female)?", answer: "20‑22 cm at teeth." },
-                { category: "Endotracheal Intubation", question: "ETT depth (paediatric)?", answer: "3 × ETT size (e.g., 4.0 ETT = 12 cm)." },
-                { category: "Endotracheal Intubation", question: "Gold standard for confirmation?", answer: "Continuous waveform capnography." },
-                { category: "Endotracheal Intubation", question: "Maximum intubation attempts?", answer: "2." },
-                { category: "Endotracheal Intubation", question: "Failed intubation – next step?", answer: "Insert supraglottic airway (LT) or revert to BVM." },
-                { category: "Ventilation", question: "Adult BVM rate (respiratory arrest)?", answer: "10‑12 breaths/min." },
-                { category: "Ventilation", question: "Paediatric BVM rate?", answer: "20‑30 breaths/min." },
-                { category: "Ventilation", question: "Infant BVM rate?", answer: "20‑30 breaths/min." },
-                { category: "Ventilation", question: "Adequate ventilation indicator?", answer: "Visible chest rise." },
-                { category: "Oxygen", question: "Target SpO₂ – standard medical?", answer: "94‑98%." },
-                { category: "Oxygen", question: "Target SpO₂ – COPD?", answer: "88‑92%." },
-                { category: "Oxygen", question: "Oxygen flow rate for NRB?", answer: "10‑15 L/min to keep reservoir inflated." },
-                { category: "CPAP", question: "Initial CPAP setting?", answer: "5 cmH₂O." },
-                { category: "CPAP", question: "Absolute contraindication for CPAP?", answer: "Unconscious / apnoeic patient." },
-                { category: "CPAP", question: "DCAS CPAP device?", answer: "Flow‑safe CPAP." },
-                { category: "BiPAP", question: "When to consider BiPAP?", answer: "Hypercapnic respiratory failure (e.g., COPD)." },
-                { category: "FBAO", question: "Mild FBAO (partial obstruction) – management?", answer: "Encourage coughing, monitor." },
-                { category: "FBAO", question: "Severe FBAO – conscious adult?", answer: "5 back blows, 5 chest thrusts (no abdominal thrusts)." },
-                { category: "FBAO", question: "Severe FBAO – unconscious?", answer: "Start CPR; look in mouth before breaths, remove object if visible." },
-                { category: "Special Populations", question: "Laryngectomy – ventilation method?", answer: "Ventilate via stoma." },
-                { category: "Special Populations", question: "Tracheostomy – emergency management?", answer: "Suction stoma, remove inner cannula, ventilate via stoma." },
-                { category: "Special Populations", question: "Basal skull fracture – airway contraindication?", answer: "Nasal airways (NPA, nasotracheal)." },
-                { category: "Paediatric", question: "Paediatric airway differences?", answer: "Larger occiput, narrower at cricoid, tongue larger relative to mouth." },
-                { category: "Paediatric", question: "Uncuffed ETT recommended under what age?", answer: "<8 years (cuffed may be used in some cases)." },
-                { category: "Paediatric", question: "Broselow tape used for?", answer: "Weight, ETT size, depth, drug doses." },
-                { category: "Complications", question: "Oesophageal intubation signs?", answer: "No EtCO₂, gurgling over epigastrium, no chest rise, cyanosis." },
-                { category: "Complications", question: "Mainstem intubation signs?", answer: "Unilateral breath sounds, asymmetrical chest rise." },
-                { category: "Complications", question: "Barotrauma causes?", answer: "Excessive tidal volume, high PEEP, lung disease." },
-                { category: "CPR", question: "Compression:ventilation ratio – adult (single rescuer)?", answer: "30:2." },
-                { category: "CPR", question: "Compression:ventilation ratio – paediatric (2 rescuers)?", answer: "15:2." },
-                { category: "CPR", question: "Maximum pause in compressions for airway?", answer: "<10 seconds." },
-                { category: "Documentation", question: "Airway KPI #1?", answer: "Document initial airway findings on all patients with airway compromise." },
-                { category: "Documentation", question: "Airway KPI #2?", answer: "Administer oxygen to all patients with SpO₂ <92% (when appropriate)." }
+            "flashcards": [
+                {
+                    "category": "Inclusion",
+                    "question": "Airway compromise in CPG 2.1?",
+                    "answer": "GCS <8 or unresponsive; noisy breathing; stridor; ineffective ventilation; FBAO."
+                },
+                {
+                    "category": "Basic",
+                    "question": "Basic airway management?",
+                    "answer": "Clear the airway (suction, Magill's forceps), head-tilt/chin-lift or jaw thrust, OPA/NPA, oxygen or BVM, monitoring."
+                },
+                {
+                    "category": "Basic",
+                    "question": "Suspected cervical injury?",
+                    "answer": "Open the airway avoiding neck manipulation (jaw thrust)."
+                },
+                {
+                    "category": "Scope",
+                    "question": "Level for OPA/NPA?",
+                    "answer": "EMR and above."
+                },
+                {
+                    "category": "Scope",
+                    "question": "Level for CPAP?",
+                    "answer": "EMT-A and above."
+                },
+                {
+                    "category": "Scope",
+                    "question": "Level for LT airway?",
+                    "answer": "EMT and above; EMTs only in cardiac arrest."
+                },
+                {
+                    "category": "Scope",
+                    "question": "Level for intubation?",
+                    "answer": "P and above."
+                },
+                {
+                    "category": "Oxygen",
+                    "question": "Oxygen for supported ventilation?",
+                    "answer": "15 L/min via NRB mask or BVM."
+                },
+                {
+                    "category": "Monitoring",
+                    "question": "Respiratory monitoring targets?",
+                    "answer": "SpO2 >94%; NC-EtCO2 35–45 mmHg."
+                },
+                {
+                    "category": "Ventilation",
+                    "question": "BVM rates?",
+                    "answer": "Adult 10–12; child 20–30; infant 20–30 breaths/min."
+                },
+                {
+                    "category": "Ventilation",
+                    "question": "What monitors tidal volume and minute ventilation?",
+                    "answer": "Continuous EtCO2."
+                },
+                {
+                    "category": "Ventilation",
+                    "question": "When BVM with 100% oxygen?",
+                    "answer": "When spontaneous breathing is inadequate or ineffective."
+                },
+                {
+                    "category": "Advanced",
+                    "question": "When consider an advanced airway?",
+                    "answer": "Only in cardiac arrest or deep unconsciousness (no gag reflex anticipated)."
+                },
+                {
+                    "category": "LT",
+                    "question": "LT indications?",
+                    "answer": "Cardiac arrest; or profoundly unconscious and OPA/NPA fail."
+                },
+                {
+                    "category": "LT",
+                    "question": "LT size and cuff volume?",
+                    "answer": "From the colour-coded labels on the syringe."
+                },
+                {
+                    "category": "LT",
+                    "question": "Confirming LT placement?",
+                    "answer": "Waveform capnography."
+                },
+                {
+                    "category": "ETT",
+                    "question": "ETT indications?",
+                    "answer": "Cardiac arrest; or profoundly unconscious and OPA/NPA fail."
+                },
+                {
+                    "category": "ETT",
+                    "question": "Confirming ETT placement?",
+                    "answer": "EtCO2 waveform capnography; also chest rise, lung sounds, SpO2."
+                },
+                {
+                    "category": "ETT",
+                    "question": "Ventilation after intubation?",
+                    "answer": "1 breath every 6 seconds or as indicated; ventilator where available."
+                },
+                {
+                    "category": "ETT",
+                    "question": "Failed first attempt?",
+                    "answer": "Consider a second attempt (ETT or supraglottic) with minimal delay, after optimising position and view."
+                },
+                {
+                    "category": "ETT",
+                    "question": "Failed second attempt?",
+                    "answer": "Revert to LT or OPA/NPA; consider Tele-EMS."
+                },
+                {
+                    "category": "Reassessment",
+                    "question": "When to recheck LT/ETT placement?",
+                    "answer": "After every patient movement."
+                },
+                {
+                    "category": "CPAP",
+                    "question": "CPAP indications?",
+                    "answer": "Acute pulmonary edema; moderate to severe COPD unresponsive to initial nebulizers."
+                },
+                {
+                    "category": "CPAP",
+                    "question": "CPAP cautions?",
+                    "answer": "Severe pneumonia/ARDS (pneumothorax), emphysema (bullae rupture), asthma (dynamic hyperinflation)."
+                },
+                {
+                    "category": "CPAP",
+                    "question": "CPAP absolute contraindications?",
+                    "answer": "Unconscious or altered mental status, apnea, facial trauma or deformity, untreated pneumothorax, hypotension."
+                },
+                {
+                    "category": "Assessment",
+                    "question": "Difficult airway signs?",
+                    "answer": "Short jaw/limited jaw thrust, small thyromental space, upper airway obstruction, large tongue, obesity, large tonsils, large neck, craniofacial abnormality, facial hair, neck surgery or tracheostomy scar, trismus."
+                },
+                {
+                    "category": "Assessment",
+                    "question": "Breathing assessment items?",
+                    "answer": "Pattern, rate, effort, accessory muscles, speech, air entry, abnormal sounds, cough, color, diaphoresis, anxiety, fluid overload, injuries."
+                },
+                {
+                    "category": "Assessment",
+                    "question": "Injuries that impair breathing?",
+                    "answer": "Facial; high spinal (phrenic nerve); neck (expanding hematoma, tracheal); chest wall (fractures, paradoxical motion, subcutaneous air, sucking wound)."
+                },
+                {
+                    "category": "Reassessment",
+                    "question": "Airway not maintained?",
+                    "answer": "Pooling secretions, blood or vomit; unable to swallow."
+                },
+                {
+                    "category": "Reassessment",
+                    "question": "Impending airway failure causes?",
+                    "answer": "FBAO, inhalation burns, anaphylaxis or life-threatening asthma, TBI, multiple trauma, altered mental status."
+                },
+                {
+                    "category": "ALS back-up",
+                    "question": "When to request ALS for the airway?",
+                    "answer": "Cardiac arrest or deep unconsciousness; severe distress or impending failure; foreign body that can't be removed."
+                },
+                {
+                    "category": "ALS back-up",
+                    "question": "Basic measures fail, ALS unavailable?",
+                    "answer": "Consult Tele-EMS."
+                },
+                {
+                    "category": "Ineffective ventilation",
+                    "question": "Signs of ineffective ventilation?",
+                    "answer": "Poor chest rise, absent/diminished breath sounds, SpO2 <92% despite oxygen, high effort without air movement, altered mental status, EtCO2 high or absent."
+                },
+                {
+                    "category": "Ineffective ventilation",
+                    "question": "Adult EtCO2 suggesting poor ventilation?",
+                    "answer": ">43 mmHg, or no waveform."
+                },
+                {
+                    "category": "Ineffective ventilation",
+                    "question": "Pediatric EtCO2 thresholds?",
+                    "answer": ">43 school age; >42 infants/toddlers; >40 neonates."
+                },
+                {
+                    "category": "Pediatric EtCO2",
+                    "question": "Neonates?",
+                    "answer": "30–40 mmHg."
+                },
+                {
+                    "category": "Pediatric EtCO2",
+                    "question": "Infants (1 month–1 year)?",
+                    "answer": "32–42 mmHg."
+                },
+                {
+                    "category": "Pediatric EtCO2",
+                    "question": "Toddlers/preschool (1–5 years)?",
+                    "answer": "33–43 mmHg."
+                },
+                {
+                    "category": "Pediatric EtCO2",
+                    "question": "School age (6–12 years)?",
+                    "answer": "35–43 mmHg."
+                },
+                {
+                    "category": "Pediatric EtCO2",
+                    "question": "Healthy children overall?",
+                    "answer": "Generally 30–43 mmHg at sea level."
+                },
+                {
+                    "category": "Monitoring",
+                    "question": "Monitors during airway management?",
+                    "answer": "SpO2, EtCO2 and ECG, continuously."
+                },
+                {
+                    "category": "Goals",
+                    "question": "SpO2 range in CPG 2.1 goals?",
+                    "answer": "92–98% (management keeps SpO2 >94%)."
+                },
+                {
+                    "category": "KPI",
+                    "question": "CPG 2.1 KPIs?",
+                    "answer": "Document initial airway findings; oxygen for SpO2 <92% (when appropriate); first-pass intubation."
+                },
+                {
+                    "category": "Documentation",
+                    "question": "Treatment documentation for airway?",
+                    "answer": "Airway steps and oxygen; OPA/NPA, BVM, advanced airway attempts and response; justification if advanced airway withheld."
+                },
+                {
+                    "category": "Documentation",
+                    "question": "Signs documentation?",
+                    "answer": "Full vital signs including SpO2 and EtCO2; two sets unless critical; airway findings."
+                },
+                {
+                    "category": "Pediatrics",
+                    "question": "Pediatric airway considerations?",
+                    "answer": "Age- and size-appropriate equipment; pediatric vital sign norms; Tele-EMS or ALS for complex cases."
+                },
+                {
+                    "category": "Obstruction",
+                    "question": "Causes of swelling obstruction?",
+                    "answer": "e.g. angioedema, posterior pharyngeal and laryngeal infections."
+                },
+                {
+                    "category": "Obstruction",
+                    "question": "Foreign body or debris removal?",
+                    "answer": "Suction or Magill's forceps (FBAO CPG)."
+                },
+                {
+                    "category": "Adjuncts",
+                    "question": "OPA/NPA complications to avoid?",
+                    "answer": "Gagging and bleeding: use the proper size."
+                },
+                {
+                    "category": "Intubation",
+                    "question": "Before intubating?",
+                    "answer": "Ensure equipment and team readiness."
+                },
+                {
+                    "category": "Intubation",
+                    "question": "Before a second attempt?",
+                    "answer": "Optimise airway position and vocal cord view."
+                },
+                {
+                    "category": "Ventilator",
+                    "question": "Intubated patient and ventilator?",
+                    "answer": "Connect where available: Invasive Ventilation CPG."
+                },
+                {
+                    "category": "Advanced",
+                    "question": "Advanced airway confirmed by?",
+                    "answer": "EtCO2, chest rise/lung sounds, SpO2."
+                },
+                {
+                    "category": "Advanced",
+                    "question": "Advanced airway unsuccessful?",
+                    "answer": "Second attempt, or revert to OPA / basic airway management."
+                },
+                {
+                    "category": "Monitoring",
+                    "question": "How is deterioration detected?",
+                    "answer": "Waveform capnography."
+                },
+                {
+                    "category": "Triage",
+                    "question": "Triage in airway compromise?",
+                    "answer": "As per the Patient Triage Categories CPG."
+                },
+                {
+                    "category": "Reassessment",
+                    "question": "What to reassess continuously?",
+                    "answer": "Airway, breathing and response to treatment using SpO2, ECG and EtCO2."
+                },
+                {
+                    "category": "Oxygen",
+                    "question": "Oxygen in airway management?",
+                    "answer": "As needed to keep SpO2 >94%."
+                },
+                {
+                    "category": "LT",
+                    "question": "Who may place an LT in a deeply unconscious patient not in arrest?",
+                    "answer": "Not EMTs (arrest only); higher levels when OPA/NPA fail."
+                },
+                {
+                    "category": "CPAP",
+                    "question": "Is a hypotensive pulmonary edema patient a CPAP candidate?",
+                    "answer": "No: hypotension is an absolute contraindication."
+                },
+                {
+                    "category": "Pediatrics",
+                    "question": "Pediatric BVM rate?",
+                    "answer": "20–30 breaths/min for children and infants."
+                }
             ],
-            critical: [
-            
+            "critical": [
                 {
-                    id: "crit1",
-                    scenario: "You are called to a nursing home for an 82‑year‑old female found unresponsive in bed. She has a history of dementia and COPD. She has agonal breathing at 4/min, central cyanosis, and a weak carotid pulse at 50 bpm. SpO₂ is unreadable. What is your FIRST airway intervention?",
-                    question: "What is the priority action?",
-                    options: [
-                        { t: "Insert OPA", f: "Insufficient." },
-                        { t: "Apply non‑rebreather mask at 15 L/min", f: "Patient is not breathing adequately." },
-                        { t: "Open airway with head‑tilt/chin‑lift", f: "Good first step, but needs ventilation." },
-                        { t: "Open airway with jaw thrust and begin BVM ventilation", f: "Correct. Immediate ventilation is required." }
+                    "id": "crit_2_1_1",
+                    "scenario": "A 60-year-old man is found unresponsive at home after a suspected overdose. He is not in cardiac arrest. Snoring respirations at 8/min, SpO2 86%. No trauma.",
+                    "question": "What are your first airway actions?",
+                    "options": [
+                        {
+                            "t": "Head-tilt/chin-lift, suction if needed, OPA or NPA, BVM with 100% oxygen, monitoring, and consider ALS back-up",
+                            "f": "Correct. Basic airway management first, supporting inadequate breathing with BVM."
+                        },
+                        {
+                            "t": "Insert an LT airway straight away as an EMT",
+                            "f": "EMTs may only insert an LT in cardiac arrest, and basic measures come first."
+                        },
+                        {
+                            "t": "Start CPAP",
+                            "f": "Altered mental status is an absolute contraindication to CPAP."
+                        },
+                        {
+                            "t": "Nasal cannula at 2 L/min and observe",
+                            "f": "Breathing is inadequate: he needs BVM ventilation."
+                        }
                     ],
-                    correct: 3,
-                    explanation: "This patient has respiratory failure with agonal breathing and bradycardia. Immediate BVM ventilation is required. Jaw thrust is preferred due to unknown trauma history and to maintain cervical alignment.",
-                    kpi: "BVM ventilation initiated within 1 minute of recognition"
+                    "correct": 0,
+                    "explanation": "Clear and open the airway, place an adjunct (EMR level), ventilate with BVM and 100% oxygen if breathing is inadequate, attach SpO2/EtCO2/ECG, and consider ALS back-up for a deeply unconscious patient.",
+                    "kpi": "Document initial airway findings for all patients with airway compromise."
                 },
                 {
-                    id: "crit2",
-                    scenario: "A 45‑year‑old male is found in cardiac arrest. Bystander CPR is in progress. You take over compressions and your partner prepares the LT airway. After insertion, you see EtCO₂ waveform at 8 mmHg and hear gurgling over the epigastrium. Chest rise is minimal. What is the most likely problem?",
-                    question: "What should you do next?",
-                    options: [
-                        { t: "Increase ventilation rate", f: "Will worsen gastric inflation." },
-                        { t: "Remove the LT and re‑attempt", f: "Correct. The airway is misplaced." },
-                        { t: "Continue CPR, EtCO₂ is adequate", f: "Incorrect. EtCO2 < 10 is failure." },
-                        { t: "Administer epinephrine", f: "Drug won't fix the airway." }
+                    "id": "crit_2_1_2",
+                    "scenario": "An EMT crew is ventilating a deeply unconscious (not arrested) patient with an OPA and BVM, but the airway keeps obstructing.",
+                    "question": "What should the EMT crew do?",
+                    "options": [
+                        {
+                            "t": "Insert an LT airway",
+                            "f": "EMTs may only insert an LT in cardiac arrest."
+                        },
+                        {
+                            "t": "Continue basic airway management, request ALS back-up for advanced airway management, and consult Tele-EMS if ALS is unavailable",
+                            "f": "Correct. A deeply unconscious patient whose basic airway is failing needs ALS for an advanced airway."
+                        },
+                        {
+                            "t": "Stop ventilating and transport",
+                            "f": "Keep ventilating: the patient needs support."
+                        },
+                        {
+                            "t": "Start CPAP",
+                            "f": "Unconsciousness is an absolute contraindication to CPAP."
+                        }
                     ],
-                    correct: 1,
-                    explanation: "Gurgling over epigastrium and low EtCO₂ (<10 mmHg) with poor chest rise indicates oesophageal placement. Remove LT immediately, ventilate with BVM, and re‑attempt airway insertion.",
-                    kpi: "Recognition of misplaced airway and correction within 30 seconds"
+                    "correct": 1,
+                    "explanation": "Request ALS back-up for advanced airway management when the patient is deeply unconscious or basic measures fail. If ALS is unavailable, consult Tele-EMS.",
+                    "kpi": "Document initial airway findings for all patients with airway compromise."
                 },
                 {
-                    id: "crit3",
-                    scenario: "A 6‑year‑old child presents with severe respiratory distress, drooling, and tripod positioning. Temperature 39.5°C. There is no history of choking. What is the most likely diagnosis and appropriate airway management?",
-                    question: "What is the correct approach?",
-                    options: [
-                        { t: "Attempt direct laryngoscopy for foreign body", f: "Dangerous. Can cause laryngospasm." },
-                        { t: "Apply CPAP", f: "Contraindicated in upper airway obstruction." },
-                        { t: "Minimal manipulation, supplemental oxygen, rapid transport", f: "Correct. Keep child calm." },
-                        { t: "Insert NPA", f: "Will cause distress/obstruction." }
+                    "id": "crit_2_1_3",
+                    "scenario": "During cardiac arrest you insert an LT airway. When you ventilate, there is no EtCO2 waveform and little chest rise.",
+                    "question": "What does this mean and what do you do?",
+                    "options": [
+                        {
+                            "t": "Placement is not confirmed: reassess, and if it cannot be confirmed, re-attempt or revert to OPA and BVM",
+                            "f": "Correct. Waveform capnography confirms LT placement; without it, the airway is not working."
+                        },
+                        {
+                            "t": "Ignore it and continue",
+                            "f": "No waveform means poor ventilation: act on it."
+                        },
+                        {
+                            "t": "Increase oxygen flow only",
+                            "f": "The problem is the airway, not the oxygen flow."
+                        },
+                        {
+                            "t": "Stop CPR to check",
+                            "f": "Keep pauses minimal; fix the airway with compressions continuing."
+                        }
                     ],
-                    correct: 2,
-                    explanation: "This presentation suggests epiglottitis. Any airway manipulation (laryngoscopy, OPA, NPA) may cause complete obstruction. Keep child calm, allow position of comfort, administer high‑flow oxygen, and expedite transport to a paediatric facility.",
-                    kpi: "Recognition of epiglottitis and avoidance of airway instrumentation"
+                    "correct": 0,
+                    "explanation": "Confirm LT placement with waveform capnography; absence of the waveform indicates poor ventilation. If an advanced airway is unsuccessful, consider a second attempt or revert to OPA and basic airway management.",
+                    "kpi": "Document initial airway findings for all patients with airway compromise."
                 },
                 {
-                    id: "crit4",
-                    scenario: "A 28‑year‑old male involved in a high‑speed RTC has significant facial trauma, suspected basal skull fracture (raccoon eyes, Battle's sign), and GCS 6. He has snoring respirations and SpO₂ 82% on 15 L O₂ via NRB. Jaw thrust is ineffective. What is the most appropriate airway intervention?",
-                    question: "How should you secure the airway?",
-                    options: [
-                        { t: "Insert NPA", f: "Contraindicated in basal skull fracture." },
-                        { t: "Insert OPA", f: "May not be sufficient." },
-                        { t: "Attempt orotracheal intubation", f: "Correct. Definitive airway needed." },
-                        { t: "Insert LT", f: "Contraindicated if gag reflex present (though GCS 6 suggests otherwise, intubation is preferred in trauma if skilled)." }
+                    "id": "crit_2_1_4",
+                    "scenario": "A 70-year-old woman with acute pulmonary edema is breathless and alert. SpO2 84%, BP 82/50. You are an EMT-A crew.",
+                    "question": "Is CPAP appropriate?",
+                    "options": [
+                        {
+                            "t": "Yes, pulmonary edema is an indication",
+                            "f": "It is an indication, but hypotension is an absolute contraindication."
+                        },
+                        {
+                            "t": "No: hypotension is an absolute contraindication; give high-flow oxygen, support ventilation and request ALS back-up",
+                            "f": "Correct. Check contraindications before CPAP."
+                        },
+                        {
+                            "t": "Yes, at a higher pressure",
+                            "f": "Hypotension rules CPAP out."
+                        },
+                        {
+                            "t": "Intubate as an EMT-A",
+                            "f": "Intubation is a P skill and is reserved for arrest or deep unconsciousness."
+                        }
                     ],
-                    correct: 2,
-                    explanation: "NPA is contraindicated in basal skull fracture. OPA may be used if gag reflex is absent. Given GCS 6 and failed jaw thrust, orotracheal intubation is indicated. C‑spine immobilisation must be maintained during intubation.",
-                    kpi: "Successful intubation on first attempt in difficult airway"
+                    "correct": 1,
+                    "explanation": "CPAP absolute contraindications: unconscious or altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension. See also the Acute Pulmonary Edema CPG.",
+                    "kpi": "Give oxygen to all patients with SpO2 <92% (when appropriate)."
                 },
                 {
-                    id: "crit5",
-                    scenario: "You are called to a 3‑year‑old child who was found face‑down in a swimming pool. Bystander removed him from water, he is apnoeic and pulseless. What is the sequence of airway and breathing interventions?",
-                    question: "What is the correct initial approach?",
-                    options: [
-                        { t: "Start chest compressions immediately", f: "Incorrect. Hypoxic arrest needs breaths." },
-                        { t: "Give 2 initial ventilations, then start CPR 30:2", f: "Old protocol." },
-                        { t: "Give 5 initial rescue breaths, then start CPR 15:2", f: "Correct. Paediatric drowning protocol." },
-                        { t: "Suction airway for 20 seconds then ventilate", f: "Delay in ventilation." }
+                    "id": "crit_2_1_5",
+                    "scenario": "You intubated a patient on the ground. After moving him onto the stretcher, the EtCO2 waveform disappears.",
+                    "question": "What is the priority?",
+                    "options": [
+                        {
+                            "t": "Reassess tube placement immediately",
+                            "f": "Correct. Placement must be reassessed after every movement; a lost waveform suggests displacement."
+                        },
+                        {
+                            "t": "Assume the monitor is faulty",
+                            "f": "Treat a lost waveform as a displaced tube until proven otherwise."
+                        },
+                        {
+                            "t": "Continue to hospital without checking",
+                            "f": "Placement must be reassessed after each patient movement."
+                        },
+                        {
+                            "t": "Remove the tube without checking",
+                            "f": "Reassess first; if it is displaced, re-attempt or revert to an LT or OPA/NPA."
+                        }
                     ],
-                    correct: 2,
-                    explanation: "In paediatric drowning, hypoxia is the primary cause of arrest. Give 5 initial rescue breaths before starting compressions. Use 15:2 ratio if two rescuers.",
-                    kpi: "Initial rescue breaths delivered within 1 minute"
+                    "correct": 0,
+                    "explanation": "Reassess LT and ETT placement after every patient movement (ground to stretcher, stretcher to bed). Absence of the EtCO2 waveform indicates poor ventilation.",
+                    "kpi": "Intubation successful on the first attempt."
                 }
             ]
         },
-
-        // ============================================================
-        // 2.2 FOREIGN BODY AIRWAY OBSTRUCTION (FBAO) – EXPANDED
-        // ============================================================
         {
-            id: "c2s2",
-            shortTitle: "2.2 FBAO",
-            summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#drumstick"/></svg> 2.2 Foreign Body Airway Obstruction</h3>
-                    
-                    <h4>1. Assessment of Severity</h4>
-                    <ul>
-                        <li><strong>Mild Obstruction (Effective Cough):</strong> Patient can speak, cry, or cough effectively. loud noise.</li>
-                        <li><strong>Severe Obstruction (Ineffective Cough):</strong> Patient cannot speak, breath sounds are quiet/silent, cyanosis, conscious but distressed.</li>
-                    </ul>
-
-                    <h4>2. Management - Conscious Adult</h4>
-                    <ul>
-                        <li><strong>Mild:</strong> Encourage coughing. Do NOT intervene physically. Monitor.</li>
-                        <li><strong>Severe:</strong> 
-                            <ol>
-                                <li>Give <strong>5 Back Blows</strong> (between shoulder blades).</li>
-                                <li>If unsuccessful, give <strong>5 Chest Thrusts</strong> (sternal compression, similar to CPR but sharper/slower).</li>
-                                <li><strong>Note:</strong> DCAS Protocol prioritises Chest Thrusts over Abdominal Thrusts (Heimlich) to reduce organ injury risk.</li>
-                                <li>Repeat 5 Back Blows : 5 Chest Thrusts.</li>
-                            </ol>
-                        </li>
-                    </ul>
-
-                    <h4>3. Management - Unconscious Adult</h4>
-                    <ul>
-                        <li><strong>Start CPR immediately</strong> (30 compressions : 2 breaths).</li>
-                        <li>Do not check for a pulse.</li>
-                        <li><strong>Visual Check:</strong> Before each ventilation attempt, look in the mouth. Only remove a foreign body if it is <strong>solid and visible</strong>. Do not perform blind finger sweeps.</li>
-                        <li>Continue CPR until recovery or handover.</li>
-                    </ul>
-
-                    <h4>4. Special Groups (Paediatric/Infant)</h4>
-                    <ul>
-                        <li><strong>Infant (<1 year):</strong> 5 Back Blows (head down) : 5 Chest Thrusts (two fingers). <strong>NO abdominal thrusts.</strong></li>
-                        <li><strong>Child (>1 year):</strong> 5 Back Blows : 5 Chest Thrusts.</li>
-                    </ul>
-                </div>
-            `,
-            flashcards: [
-                { category: "Assessment", question: "What are the signs of severe airway obstruction?", answer: "Silent cough, inability to speak/breathe, cyanosis." },
-                { category: "Assessment", question: "How do you distinguish mild from severe FBAO?", answer: "Mild: patient can speak, cough effectively, and has good air exchange. Severe: cannot speak, has a weak or silent cough, stridor, and signs of hypoxia." },
-                { category: "Adult", question: "What is the sequence for a conscious adult with severe FBAO?", answer: "1. Up to 5 back blows. 2. Up to 5 chest thrusts. Repeat cycles." },
-                { category: "Adult", question: "Why are abdominal thrusts (Heimlich) no longer recommended?", answer: "They carry a risk of internal organ injury (liver, spleen rupture) and are less effective than chest thrusts." },
-                { category: "Unconscious", question: "What is the first action when an FBAO patient becomes unresponsive?", answer: "Start CPR immediately with compressions. Before giving breaths, look in the mouth." },
-                { category: "Unconscious", question: "When should you perform a finger sweep?", answer: "Only if you can see a solid object. No blind sweeps." },
-                { category: "Technique", question: "What is the correct technique for chest thrusts?", answer: "Same location as chest compressions (centre of chest, lower sternum)." },
-                { category: "Infant", question: "How do you manage FBAO in an infant (<1 year)?", answer: "5 back blows (head down), then 5 chest thrusts (two fingers). Never use abdominal thrusts." },
-                { category: "Paediatric", question: "What objects are especially hazardous if ingested by a child?", answer: "Button batteries, magnets, sharp objects – require urgent transport." },
-                { category: "Esophageal", question: "How do you manage suspected esophageal obstruction without airway compromise?", answer: "Offer small sips of water. If unsuccessful or object hazardous, transport." }
-            ],
-            quiz: [
-                { q: "What is the first step in managing a conscious patient with suspected mild FBAO (partial obstruction)?", options: ["Start with 5 back blows immediately", "Encourage the patient to cough forcefully", "Perform abdominal thrusts (Heimlich manoeuvre)", "Insert an oropharyngeal airway (OPA)"], correct: 1, explanation: "If the patient can cough effectively, encourage coughing – it may expel the object. Intervene only if the cough becomes ineffective, or the patient shows signs of severe obstruction (silent cough, cyanosis, inability to speak)." },
-                { q: "For a conscious adult with severe FBAO (ineffective cough, unable to speak), what is the recommended sequence of interventions?", options: ["5 abdominal thrusts, then 5 back blows", "5 back blows, then 5 chest thrusts", "Start CPR immediately", "5 chest thrusts, then 5 back blows"], correct: 1, explanation: "The Heimlich manoeuvre (abdominal thrusts) is no longer recommended due to risk of internal injury. DCAS protocols advise: up to 5 back blows (between the shoulder blades), then up to 5 chest thrusts (similar to chest compressions but sharper and slower). Repeat cycles until the object is expelled or the patient becomes unconscious." },
-                { q: "In an unresponsive patient with suspected FBAO, what should you do first?", options: ["Check for a pulse for 10 seconds", "Start CPR with 30 chest compressions", "Look in the mouth and remove any visible object", "Give 2 rescue breaths"], correct: 1, explanation: "Once unresponsive, start CPR immediately with compressions (30:2). Before giving rescue breaths, open the mouth and look for a visible object. If seen, remove it with a finger sweep – but do not perform blind sweeps." },
-                { q: "What is the maximum number of attempts allowed for removing a foreign body under direct laryngoscopy (using Magill forceps) in the prehospital setting?", options: ["1 attempt", "2 attempts", "3 attempts", "Unlimited attempts if oxygen saturations remain above 90%"], correct: 1, explanation: "A maximum of 2 attempts at removal under direct laryngoscopy is permitted. If unsuccessful, revert to basic airway management (BVM, supraglottic airway) and transport urgently." },
-                { q: "Which patient populations are at higher risk for FBAO?", options: ["Young children only", "Older adults only", "People with intellectual disabilities only", "All of the above"], correct: 3, explanation: "All these groups are at increased risk: young children (exploring by mouth), older adults (dental issues, swallowing disorders), and individuals with intellectual disabilities or neurological impairment (poor coordination of swallowing)." },
-                { q: "For a suspected esophageal foreign body (no airway compromise, patient can speak and breathe), what is an appropriate prehospital action?", options: ["Perform immediate laryngoscopy", "Offer small amounts of liquid to assist passage", "Apply abdominal thrusts", "Insert a nasopharyngeal airway"], correct: 1, explanation: "If the object is likely in the oesophagus (not causing airway obstruction), small sips of liquid may help it pass. However, if the object is hazardous (e.g., button battery, sharp object) or the patient cannot swallow, transport urgently without delay." },
-                { q: "What is the hallmark sign of severe airway obstruction?", options: ["Audible wheezing", "Stridor (high‑pitched inspiratory sound)", "Productive cough", "Hoarseness"], correct: 1, explanation: "Stridor indicates upper airway narrowing and is a sign of severe obstruction. Complete obstruction may present with a silent chest and no audible breath sounds." },
-                { q: "In a child who has ingested a button battery, what is the correct prehospital action?", options: ["Observe at home for symptoms", "Induce vomiting", "Transport urgently to hospital", "Give milk to drink"], correct: 2, explanation: "Button batteries are hazardous – they can cause severe caustic injury and necrosis within hours. Do not induce vomiting (may cause re‑impaction or aspiration). Transport immediately to a facility with surgical capability." },
-                { q: "When should ALS back‑up be requested for a patient with FBAO?", options: ["All cases of choking, regardless of severity", "Only if the patient becomes unconscious", "If severe obstruction is present or basic measures fail to clear the airway", "Never; BLS management is sufficient"], correct: 2, explanation: "ALS back‑up is indicated for severe obstruction (ineffective cough, stridor, cyanosis) or if basic interventions (back blows, chest thrusts) do not relieve the obstruction. Early ALS can provide advanced airway management if needed." },
-                { q: "What is the correct technique for chest thrusts in a conscious choking adult?", options: ["Thrusts in the centre of the chest, similar to chest compressions", "Thrusts on the upper abdomen, just below the xiphoid process", "Thrusts on the lower sternum, angled upward", "Thrusts on the back, between the shoulder blades"], correct: 0, explanation: "Chest thrusts are performed in the same location as chest compressions (centre of the chest, lower half of the sternum). They generate airway pressure and can dislodge the object. Abdominal thrusts are avoided due to risk of injury." }
-            ],
-            critical: [
+            "id": "c2s2",
+            "shortTitle": "2.2 FBAO",
+            "guide": {
+                "cpg": "2.2",
+                "group": "airway",
+                "groupLabel": "Airway and Breathing",
+                "title": "Foreign Body Airway Obstruction",
+                "lead": "Remove the foreign body by the most appropriate means and activate ALS back-up early. A patient who can still cough is helped by coughing; a patient who cannot gets back blows and chest thrusts, and CPR once unresponsive.",
+                "source": {
+                    "label": "CPG 2.2",
+                    "pages": "54–57",
+                    "pdf": "../pdf_sections/2_2_Foreign_Body_Airway_Obstruction_FBAO.pdf"
+                },
+                "sections": [
+                    {
+                        "type": "criteria",
+                        "title": "Who this applies to",
+                        "icon": "user",
+                        "include": [
+                            "Mild choking: can breathe, cough or speak effectively, with mild distress.",
+                            "Severe obstruction: stridor, ineffective cough, severe respiratory distress.",
+                            "Unresponsive patient with suspected foreign body obstruction."
+                        ],
+                        "exclude": [
+                            "No history of foreign body ingestion."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Assessment and triage",
+                        "icon": "stethoscope",
+                        "tone": "alert",
+                        "items": [
+                            "Look for choking, noisy breathing, stridor, inability to speak, ineffective ventilation.",
+                            "Can the patient breathe, cough or speak effectively?",
+                            "<b>All moderate and severe FBAO are Red Priority.</b>"
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Mild choking (partial obstruction)",
+                        "icon": "wind",
+                        "groups": [
+                            {
+                                "title": "Management",
+                                "items": [
+                                    "Reassure, keep the patient in a position of comfort, and encourage coughing. Do not interfere with effective coughing.",
+                                    "Avoid interventions unless symptoms worsen; monitor SpO<sub>2</sub> and ECG for deterioration (e.g. SpO<sub>2</sub> &lt;92%, increasing effort).",
+                                    "Request ALS back-up if symptoms worsen, and reassess frequently."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "steps",
+                        "title": "Severe choking: conscious",
+                        "icon": "triangle-alert",
+                        "steps": [
+                            {
+                                "title": "Request ALS back-up",
+                                "text": "It can be cancelled if not needed."
+                            },
+                            {
+                                "title": "Position",
+                                "text": "Bent over, head lower than shoulders, so gravity helps (if safe and feasible)."
+                            },
+                            {
+                                "title": "Up to 5 back blows",
+                                "level": "EMT",
+                                "text": "Between the shoulder blades."
+                            },
+                            {
+                                "title": "Then up to 5 chest thrusts",
+                                "level": "EMT",
+                                "text": "Avoid abdominal thrusts: the Heimlich maneuver is no longer recommended (risk of abdominal injury)."
+                            },
+                            {
+                                "title": "Repeat",
+                                "text": "Reassess after each cycle; repeat until the object clears or the patient becomes unconscious. Monitor SpO<sub>2</sub> and ECG."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "steps",
+                        "title": "Severe choking: unresponsive",
+                        "icon": "siren",
+                        "steps": [
+                            {
+                                "title": "Start CPR with compressions",
+                                "text": "Adults 30:2. Consider ALS back-up."
+                            },
+                            {
+                                "title": "Look before each ventilation",
+                                "text": "Remove the object with a finger sweep <b>only if visible</b>. Suction as required."
+                            },
+                            {
+                                "title": "Direct laryngoscopy and Magill's forceps",
+                                "level": "AP",
+                                "text": "As soon as possible after the patient becomes unresponsive. Maximum 2 attempts."
+                            },
+                            {
+                                "title": "If below the cords or retrieval fails",
+                                "level": "AP",
+                                "text": "Consider intubation, placing the tube deep then pulling back slightly, to push the object into the right main bronchus and ventilate the other lung."
+                            },
+                            {
+                                "title": "Oxygen",
+                                "text": "15 L/min via non-rebreather or BVM."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Special situations",
+                        "icon": "lightbulb",
+                        "groups": [
+                            {
+                                "title": "Who is at risk",
+                                "items": [
+                                    "Young children, older adults and people with intellectual disabilities: adapt assessment and expect communication or compliance challenges."
+                                ]
+                            },
+                            {
+                                "title": "Esophageal obstruction",
+                                "items": [
+                                    "Discomfort or difficulty swallowing saliva: offer small amounts of liquid; if unsuccessful, transport to the closest appropriate hospital. Avoid airway interventions unless the airway is compromised."
+                                ]
+                            },
+                            {
+                                "title": "Ingested objects in children",
+                                "items": [
+                                    "Look for excess saliva, difficulty swallowing, abdominal pain.",
+                                    "Hazardous objects (batteries, magnets, sharp items, especially button batteries): urgent transport to the closest appropriate surgical-capable hospital."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key performance indicators",
+                        "icon": "chart-no-axes-column",
+                        "items": [
+                            "Document the initial airway assessment for all patients with FBAO.",
+                            "First intervention (e.g. back blows or chest thrusts) within 1 minute of identification."
+                        ]
+                    },
+                    {
+                        "type": "related",
+                        "title": "Related CPGs",
+                        "icon": "link",
+                        "items": [
+                            {
+                                "label": "2.1 Airway Management",
+                                "href": "c2.html?section=c2s1"
+                            },
+                            {
+                                "label": "4.1 Adult BLS",
+                                "href": "c4-1.html"
+                            },
+                            {
+                                "label": "4.2 Pediatric BLS",
+                                "href": "c4-2.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quiz": [
                 {
-                    id: "crit_2_2_1",
-                    scenario: "A 50-year-old male is choking at a restaurant. He is conscious but cannot speak or cough effectively. He is clutching his throat (universal sign). You have performed 5 back blows without success.",
-                    question: "What is your next specific intervention?",
-                    options: [
-                        { t: "Heimlich Maneuver (Abdominal Thrusts)", f: "Incorrect. DCAS protocol prefers Chest Thrusts." },
-                        { t: "5 Chest Thrusts", f: "Correct. Perform 5 chest thrusts (sternal compressions) standing behind the patient." },
-                        { t: "Start CPR", f: "Incorrect. Patient is still conscious." }
+                    "q": "A conscious choking patient can cough and speak effectively. What do you do?",
+                    "options": [
+                        "Five back blows immediately",
+                        "Encourage coughing, keep them comfortable, and monitor",
+                        "Abdominal thrusts",
+                        "Insert an OPA"
                     ],
-                    correct: 1,
-                    explanation: "Follow the cycle: 5 Back Blows -> 5 Chest Thrusts. Chest thrusts generate airway pressure with less risk of visceral injury than abdominal thrusts.",
-                    kpi: "Correct FBAO Cycle (5:5)"
+                    "correct": 1,
+                    "explanation": "Mild choking: encourage coughing and do not interfere; avoid interventions unless symptoms worsen."
                 },
                 {
-                    id: "crit_2_2_2",
-                    scenario: "While treating a choking infant, the infant becomes limp and unresponsive.",
-                    question: "What is the priority action?",
-                    options: [
-                        { t: "Continue back blows", f: "Incorrect. Patient is now unconscious." },
-                        { t: "Place on firm surface and start CPR (30:2) or (15:2)", f: "Correct. Initiate CPR. Look in mouth before breaths." },
-                        { t: "Intubate immediately", f: "Incorrect. Basic CPR and visualization come first." }
+                    "q": "What is the sequence for a conscious patient with severe obstruction?",
+                    "options": [
+                        "5 abdominal thrusts then 5 back blows",
+                        "Up to 5 back blows then up to 5 chest thrusts",
+                        "CPR immediately",
+                        "5 chest thrusts then 5 back blows"
                     ],
-                    correct: 1,
-                    explanation: "Unconsciousness mandates immediate CPR. The chest compressions may help dislodge the object. Check airway before ventilation.",
-                    kpi: "Transition to CPR upon unconsciousness"
+                    "correct": 1,
+                    "explanation": "Up to 5 back blows between the shoulder blades, then up to 5 chest thrusts; repeat."
+                },
+                {
+                    "q": "Why does CPG 2.2 avoid abdominal thrusts?",
+                    "options": [
+                        "They are too slow",
+                        "To prevent abdominal injury; the Heimlich maneuver is no longer recommended",
+                        "They only work in children",
+                        "They need two rescuers"
+                    ],
+                    "correct": 1,
+                    "explanation": "Avoid abdominal thrusts to prevent abdominal injury."
+                },
+                {
+                    "q": "How should a conscious, severely choking patient be positioned (if safe)?",
+                    "options": [
+                        "Supine",
+                        "Bent over with head lower than shoulders",
+                        "Sitting upright",
+                        "Recovery position"
+                    ],
+                    "correct": 1,
+                    "explanation": "Bent over with the head lower than the shoulders so gravity assists."
+                },
+                {
+                    "q": "What triage category is moderate or severe FBAO?",
+                    "options": [
+                        "Green",
+                        "Yellow",
+                        "Red",
+                        "Depends on age"
+                    ],
+                    "correct": 2,
+                    "explanation": "All moderate and severe FBAO should be considered Red Priority."
+                },
+                {
+                    "q": "The choking patient becomes unresponsive. What first?",
+                    "options": [
+                        "Two rescue breaths",
+                        "Start CPR, beginning with compressions",
+                        "Blind finger sweep",
+                        "Check pulse for 30 seconds"
+                    ],
+                    "correct": 1,
+                    "explanation": "Begin CPR starting with compressions."
+                },
+                {
+                    "q": "When may you perform a finger sweep?",
+                    "options": [
+                        "Always",
+                        "Only if the object is visible",
+                        "Never",
+                        "Only in children"
+                    ],
+                    "correct": 1,
+                    "explanation": "Look in the mouth before each ventilation and remove the object with a finger sweep only if visible."
+                },
+                {
+                    "q": "How many attempts at removal under direct laryngoscopy are permitted?",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "Unlimited"
+                    ],
+                    "correct": 1,
+                    "explanation": "A maximum of 2 attempts with Magill's forceps."
+                },
+                {
+                    "q": "What is the lowest clinical level for removal under direct laryngoscopy?",
+                    "options": [
+                        "EMT",
+                        "EMT-A",
+                        "P",
+                        "AP"
+                    ],
+                    "correct": 3,
+                    "explanation": "Direct laryngoscopy removal is marked AP in the flowchart."
+                },
+                {
+                    "q": "The object is below the vocal cords and cannot be retrieved. What may be considered?",
+                    "options": [
+                        "Leave it and transport",
+                        "Intubate deep then pull back to push the object into the right main bronchus",
+                        "Abdominal thrusts",
+                        "Blind finger sweeps"
+                    ],
+                    "correct": 1,
+                    "explanation": "Consider intentionally pushing the object into the right main bronchus to ventilate the other lung."
+                },
+                {
+                    "q": "Within what time should the first intervention be given (KPI)?",
+                    "options": [
+                        "1 minute of identification",
+                        "5 minutes",
+                        "10 minutes",
+                        "On arrival at hospital"
+                    ],
+                    "correct": 0,
+                    "explanation": "KPI: provide an initial intervention within 1 minute of identification."
+                },
+                {
+                    "q": "A child has swallowed a button battery but is breathing normally. What do you do?",
+                    "options": [
+                        "Observe at home",
+                        "Urgent transport to the closest appropriate surgical-capable hospital",
+                        "Give liquids and leave",
+                        "Induce vomiting"
+                    ],
+                    "correct": 1,
+                    "explanation": "Hazardous objects, especially button batteries, need urgent transport to a surgical-capable hospital."
+                }
+            ],
+            "flashcards": [
+                {
+                    "category": "Mild FBAO",
+                    "question": "Mild choking criteria?",
+                    "answer": "Can breathe, cough or speak effectively, with mild distress."
+                },
+                {
+                    "category": "Mild FBAO",
+                    "question": "Mild choking management?",
+                    "answer": "Reassure, position of comfort, encourage coughing, don't interfere; monitor SpO2 and ECG; ALS if worsening."
+                },
+                {
+                    "category": "Severe FBAO",
+                    "question": "Severe obstruction signs?",
+                    "answer": "Stridor, ineffective cough, severe respiratory distress; inability to speak, breathe or cough; silent chest, cyanosis, unconsciousness."
+                },
+                {
+                    "category": "Severe FBAO",
+                    "question": "Conscious severe FBAO sequence?",
+                    "answer": "Bent over, head below shoulders; up to 5 back blows then up to 5 chest thrusts; repeat until clear or unconscious."
+                },
+                {
+                    "category": "Severe FBAO",
+                    "question": "Abdominal thrusts?",
+                    "answer": "Avoid: risk of abdominal injury; the Heimlich maneuver is no longer recommended."
+                },
+                {
+                    "category": "Unresponsive",
+                    "question": "FBAO patient becomes unresponsive?",
+                    "answer": "Start CPR with compressions; look in the mouth before each ventilation; finger sweep only if visible."
+                },
+                {
+                    "category": "Unresponsive",
+                    "question": "Direct laryngoscopy removal?",
+                    "answer": "AP level; Magill's forceps; maximum 2 attempts."
+                },
+                {
+                    "category": "Unresponsive",
+                    "question": "Object below the cords?",
+                    "answer": "Consider pushing it into the right main bronchus with a deep ETT, then pulling back to ventilate."
+                },
+                {
+                    "category": "Triage",
+                    "question": "Triage for moderate/severe FBAO?",
+                    "answer": "Red Priority."
+                },
+                {
+                    "category": "At-risk groups",
+                    "question": "Who is at higher risk of FBAO?",
+                    "answer": "Young children, older adults, people with intellectual disabilities."
+                },
+                {
+                    "category": "Esophageal",
+                    "question": "Suspected esophageal foreign body?",
+                    "answer": "Small amounts of liquid; transport if unsuccessful; avoid airway interventions unless compromised."
+                },
+                {
+                    "category": "KPI",
+                    "question": "CPG 2.2 KPIs?",
+                    "answer": "Document initial airway findings; first intervention within 1 minute of identification."
+                }
+            ],
+            "critical": [
+                {
+                    "id": "crit_2_2_1",
+                    "scenario": "A 50-year-old man is choking in a restaurant. He is conscious but cannot speak or cough. You have given 5 back blows without success.",
+                    "question": "What is your next intervention?",
+                    "options": [
+                        {
+                            "t": "Up to 5 chest thrusts",
+                            "f": "Correct. Alternate up to 5 back blows and up to 5 chest thrusts until the object clears or he becomes unconscious."
+                        },
+                        {
+                            "t": "Abdominal thrusts",
+                            "f": "Avoid abdominal thrusts: the Heimlich maneuver is no longer recommended."
+                        },
+                        {
+                            "t": "A blind finger sweep",
+                            "f": "Finger sweeps are only for visible objects in an unresponsive patient."
+                        },
+                        {
+                            "t": "Start CPR",
+                            "f": "He is still conscious."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Severe FBAO, conscious: request ALS back-up, position bent over, then cycles of up to 5 back blows and up to 5 chest thrusts, reassessing after each.",
+                    "kpi": "First intervention within 1 minute of identification."
+                },
+                {
+                    "id": "crit_2_2_2",
+                    "scenario": "During chest thrusts the patient becomes limp and unresponsive.",
+                    "question": "What now?",
+                    "options": [
+                        {
+                            "t": "Lower him to the floor and start CPR with compressions; look in the mouth before each ventilation",
+                            "f": "Correct. Unresponsive FBAO is managed with CPR, removing a visible object only."
+                        },
+                        {
+                            "t": "Keep giving back blows",
+                            "f": "Once unresponsive, start CPR."
+                        },
+                        {
+                            "t": "Do blind finger sweeps until something is found",
+                            "f": "Finger sweep only if the object is visible."
+                        },
+                        {
+                            "t": "Wait for ALS before doing anything",
+                            "f": "Start CPR now; ALS can perform laryngoscopy when they arrive."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Begin CPR starting with compressions (30:2 adult), look for the object before each ventilation, give oxygen 15 L/min, and an AP can attempt removal under direct laryngoscopy (maximum 2 attempts).",
+                    "kpi": "Document the initial airway assessment for all patients with FBAO."
+                },
+                {
+                    "id": "crit_2_2_3",
+                    "scenario": "A 3-year-old swallowed a coin-sized round battery 20 minutes ago. She is breathing comfortably but drooling slightly.",
+                    "question": "What is the right plan?",
+                    "options": [
+                        {
+                            "t": "Reassure the parents and leave",
+                            "f": "Button batteries are hazardous and need urgent hospital care."
+                        },
+                        {
+                            "t": "Urgent transport to the closest appropriate surgical-capable hospital",
+                            "f": "Correct. Batteries, magnets and sharp objects, especially button batteries, need urgent transport."
+                        },
+                        {
+                            "t": "Back blows and chest thrusts",
+                            "f": "She is not obstructed: these are for severe airway obstruction."
+                        },
+                        {
+                            "t": "Give lots of water and observe at home",
+                            "f": "Liquids are for suspected esophageal obstruction; a button battery still needs urgent transport."
+                        }
+                    ],
+                    "correct": 1,
+                    "explanation": "For ingested objects in children, assess for saliva, difficulty swallowing and abdominal pain, and transport urgently to a surgical-capable hospital if the object is hazardous.",
+                    "kpi": "Document the initial airway assessment for all patients with FBAO."
                 }
             ]
         },
-
-        // ============================================================
-        // 2.3 ASTHMA – EXPANDED
-        // ============================================================
         {
-            id: "c2s3",
-            shortTitle: "2.3 Asthma",
-            summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#wind"/></svg> 2.3 Asthma Management</h3>
-                    
-                    <h4>1. Assessment & Severity</h4>
-                    <ul>
-                        <li><strong>Moderate:</strong> Speaking in phrases, SpO₂ >92%, moderate wheeze.</li>
-                        <li><strong>Severe:</strong> Speaking in words, SpO₂ <92%, HR >110, RR >25, accessory muscle use.</li>
-                        <li><strong>Life-Threatening:</strong> Silent chest, cyanosis, poor respiratory effort, confusion/exhaustion, SpO₂ <92% despite O₂.</li>
-                    </ul>
-
-                    <h4>2. Pharmacological Management</h4>
-                    <ul>
-                        <li><strong>Salbutamol (Ventolin):</strong> 5 mg Nebulized (repeat back-to-back).</li>
-                        <li><strong>Ipratropium Bromide (Atrovent):</strong> 500 mcg Nebulized (repeat x3).</li>
-                        <li><strong>Hydrocortisone:</strong> 100 mg IV/IM (slow push).</li>
-                        <li><strong>Magnesium Sulfate:</strong> 2 g IV infusion over 20 mins (for severe/life-threatening).</li>
-                        <li><strong>Adrenaline (Epinephrine) 1:1000:</strong> 500 mcg IM (0.5 mL) if life-threatening/anaphylactic component or no response to nebs.</li>
-                    </ul>
-
-                    <h4>3. Ventilation Strategy</h4>
-                    <ul>
-                        <li><strong>Oxygen:</strong> Titrate to 94-98%.</li>
-                        <li><strong>BVM:</strong> If assisting, allow prolonged expiratory phase (to prevent air trapping/stacking).</li>
-                        <li><strong>CPAP:</strong> Use with caution. Only if exhausting and alert.</li>
-                    </ul>
-                </div>
-            `,
-            flashcards: [
-                { category: "Assessment", question: "What are the signs of life‑threatening asthma?", answer: "Silent chest, cyanosis, poor respiratory effort, exhaustion, confusion, or bradycardia. SpO₂ <92% despite oxygen." },
-                { category: "Drugs", question: "Salbutamol dose (adult)?", answer: "5 mg nebulised. May be repeated back‑to‑back in severe cases." },
-                { category: "Drugs", question: "Ipratropium dose (adult)?", answer: "500 mcg nebulised. Usually combined with salbutamol; may be repeated up to 3 times." },
-                { category: "Drugs", question: "Hydrocortisone dose in acute asthma?", answer: "100 mg IV/IM (or 200 mg in life‑threatening). Paediatrics: 4 mg/kg." },
-                { category: "Drugs", question: "Magnesium sulfate dose for severe asthma?", answer: "2 g IV infusion over 20 minutes (diluted in 100 mL saline)." },
-                { category: "Drugs", question: "Adrenaline dose in life‑threatening asthma?", answer: "500 mcg (0.5 mL) of 1:1000 IM. May be repeated after 5 minutes if no response." },
-                { category: "Ventilation", question: "Why is a prolonged expiratory time important in asthma?", answer: "To prevent air trapping (auto‑PEEP) and breath‑stacking, which can cause hypotension and barotrauma." },
-                { category: "Paediatric", question: "Salbutamol dose for a child under 5 years?", answer: "2.5 mg nebulised." },
-                { category: "Assessment", question: "What does a silent chest indicate?", answer: "Minimal air movement due to severe obstruction – a pre‑arrest sign." },
-                { category: "Oxygen", question: "What is the target SpO₂ in asthma?", answer: "94–98%." }
-            ],
-            quiz: [
-                { q: "A 30‑year‑old asthmatic speaks in words only, has a respiratory rate of 28, heart rate 120, and SpO₂ 91% on room air. How would you classify this exacerbation?", options: ["Mild", "Moderate", "Severe", "Life‑threatening"], correct: 2, explanation: "Severe asthma is defined by: speaking in words (not sentences), respiratory rate >25, heart rate >110, and SpO₂ <92%. This patient meets all these criteria." },
-                { q: "Which clinical sign indicates life‑threatening asthma?", options: ["Expiratory wheezing", "Accessory muscle use", "Silent chest on auscultation", "Tachycardia >120"], correct: 2, explanation: "A silent chest is an ominous sign – it indicates minimal air movement due to severe bronchospasm and exhaustion. It is a pre‑arrest sign and requires immediate aggressive intervention (e.g., IM adrenaline, assisted ventilation)." },
-                { q: "What is the correct dose of nebulised salbutamol for an adult with acute severe asthma?", options: ["2.5 mg", "5 mg", "7.5 mg", "10 mg"], correct: 1, explanation: "The standard adult dose is 5 mg nebulised salbutamol. It can be repeated back‑to‑back if necessary (continuous nebulisation in severe cases)." },
-                { q: "In a patient with life‑threatening asthma who is not improving with nebulised therapy, what is the next pharmacological intervention?", options: ["IV magnesium sulfate 2 g over 20 minutes", "IV hydrocortisone 200 mg", "IM adrenaline 500 mcg (1:1000)", "IV aminophylline"], correct: 2, explanation: "IM adrenaline (500 mcg, 0.5 mL of 1:1000) is indicated in life‑threatening asthma, especially when there is doubt about anaphylaxis or no response to nebulisers. It provides rapid bronchodilation and circulatory support." },
-                { q: "What is the recommended dose and administration rate for IV magnesium sulfate in severe asthma?", options: ["2 g IV bolus over 1–2 minutes", "2 g IV infusion over 20 minutes", "4 g IV over 10 minutes", "1 g IV over 5 minutes"], correct: 1, explanation: "Magnesium sulfate 2 g should be diluted in 100 mL normal saline and infused over 20 minutes to avoid hypotension and arrhythmias. It is not a first‑line drug but may help in severe cases." },
-                { q: "When ventilating an asthmatic patient with a bag‑valve‑mask, what is the most important consideration?", options: ["Ventilate rapidly to lower CO₂", "Use high PEEP to keep airways open", "Allow a prolonged expiratory time", "Hyperventilate to compensate for acidosis"], correct: 2, explanation: "Asthmatics have prolonged expiration due to airway narrowing. Rapid ventilation leads to breath‑stacking (air trapping) and auto‑PEEP, which can cause hypotension and barotrauma. Allow enough time for exhalation – a rate of 6–8 breaths/min is often appropriate." },
-                { q: "What is the role of corticosteroids (e.g., hydrocortisone) in acute asthma?", options: ["Immediate bronchodilation", "Reduction of airway inflammation (onset hours)", "Relief of anxiety", "Prevention of infection"], correct: 1, explanation: "Corticosteroids reduce airway inflammation, but their onset of action is 4–6 hours. They should be given early in moderate‑severe exacerbations to prevent deterioration and reduce relapse." },
-                { q: "A 5‑year‑old child with acute asthma is in moderate respiratory distress. What is the correct dose of nebulised salbutamol?", options: ["1.25 mg", "2.5 mg", "5 mg", "7.5 mg"], correct: 1, explanation: "For children under 5 years, the usual dose is 2.5 mg nebulised salbutamol. Children over 5 years receive the adult dose (5 mg)." },
-                { q: "What is the target oxygen saturation for a patient with acute asthma?", options: ["88–92%", "94–98%", "97–100%", "90–94%"], correct: 1, explanation: "Target SpO₂ is 94–98% for most patients. Avoid hyperoxia (100%) as it may cause vasoconstriction and doesn't improve outcomes." },
-                { q: "Which of the following is a contraindication to using CPAP in an asthmatic patient?", options: ["SpO₂ 90% on 15 L O₂", "Accessory muscle use", "Exhaustion", "Unconsciousness"], correct: 3, explanation: "CPAP requires a conscious, cooperative patient who can protect their airway. Unconsciousness is an absolute contraindication – these patients need intubation and mechanical ventilation." }
-            ],
-            critical: [
+            "id": "c2s3",
+            "shortTitle": "2.3 Asthma",
+            "guide": {
+                "cpg": "2.3",
+                "group": "airway",
+                "groupLabel": "Airway and Breathing",
+                "title": "Asthma",
+                "lead": "Grade the attack (mild, moderate, severe, life-threatening) and treat in steps: each level adds to the treatment of the one before. Severe and life-threatening asthma can arrest: call for back-up early.",
+                "source": {
+                    "label": "CPG 2.3",
+                    "pages": "58–62",
+                    "pdf": "../pdf_sections/2_3_Asthma.pdf"
+                },
+                "sections": [
+                    {
+                        "type": "criteria",
+                        "title": "Who this applies to",
+                        "icon": "user",
+                        "include": [
+                            "Mild, moderate, severe or life-threatening asthma on respiratory assessment."
+                        ],
+                        "exclude": [
+                            "Breathing difficulty from another cause (e.g. COPD, bronchiolitis, pulmonary edema)."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Assessment and monitoring",
+                        "icon": "stethoscope",
+                        "items": [
+                            "SpO<sub>2</sub> and ECG on every patient; add nasal-cannula EtCO<sub>2</sub> for moderate, severe and life-threatening cases.",
+                            "Listen (wheeze, silent chest, diminished sounds), look (rate, effort, accessory muscles) and feel (chest deformity or tenderness).",
+                            "<b>Severe or life-threatening signs:</b> silent chest, GCS &lt;14, BP &lt;90/60 mmHg, very slow or gasping breathing."
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "title": "Severity",
+                        "icon": "activity",
+                        "stack": true,
+                        "columns": [
+                            "",
+                            "Mild",
+                            "Moderate",
+                            "Severe",
+                            "Life-threatening"
+                        ],
+                        "rows": [
+                            [
+                                "Talks in",
+                                "Sentences",
+                                "Phrases",
+                                "Words",
+                                "Unable to speak"
+                            ],
+                            [
+                                "Consciousness",
+                                "Conscious",
+                                "Conscious",
+                                "Agitated, distressed",
+                                "Drowsy, collapsed"
+                            ],
+                            [
+                                "Exhaustion",
+                                "No",
+                                "No",
+                                "Visibly breathless",
+                                "Exhausted"
+                            ],
+                            [
+                                "Accessory muscles",
+                                "Nil",
+                                "Mild",
+                                "Moderate",
+                                "Severe, or minimal from tiring"
+                            ],
+                            [
+                                "Pulse",
+                                "Normal",
+                                "Tachycardia",
+                                "Tachycardia",
+                                "Tachycardia or pre-arrest bradycardia"
+                            ],
+                            [
+                                "Resp. rate",
+                                "Normal or raised",
+                                "Tachypnea",
+                                "May have tachypnea",
+                                "Poor effort; may be apneic"
+                            ],
+                            [
+                                "SpO<sub>2</sub> in air",
+                                "Usually &gt;95%",
+                                "Usually 92–95%",
+                                "90–94%",
+                                "&lt;90%"
+                            ],
+                            [
+                                "Cyanosis",
+                                "No",
+                                "No",
+                                "May be present",
+                                "Present"
+                            ]
+                        ],
+                        "notes": [
+                            "<b>Severe</b> needs only one of: speaking words only, or visibly breathless.",
+                            "<b>Life-threatening</b> needs only one of: drowsy, collapsed, exhausted, cyanosed, poor respiratory effort, or SpO<sub>2</sub> &lt;90%.",
+                            "Wheeze volume is a poor predictor of severity: little air movement makes it quiet."
+                        ]
+                    },
+                    {
+                        "type": "steps",
+                        "title": "Treatment by severity",
+                        "icon": "pill",
+                        "steps": [
+                            {
+                                "title": "Oxygen",
+                                "level": "EMR",
+                                "text": "If no nebulizer is available and SpO<sub>2</sub> &lt;94%: non-rebreather mask, aiming for SpO<sub>2</sub> 94–98%. Consider ALS back-up."
+                            },
+                            {
+                                "title": "Mild: nebulized salbutamol",
+                                "level": "EMT",
+                                "text": "Repeat after 15 minutes if required. Dilute with normal saline or sterile water to a maximum of 5 ml.",
+                                "doses": [
+                                    {
+                                        "drug": "Salbutamol (adult)",
+                                        "dose": "5 mg neb",
+                                        "note": "",
+                                        "level": "EMT"
+                                    },
+                                    {
+                                        "drug": "Salbutamol (&lt;5 years)",
+                                        "dose": "2.5 mg neb",
+                                        "note": "",
+                                        "level": "EMT"
+                                    },
+                                    {
+                                        "drug": "Salbutamol (&gt;5 years)",
+                                        "dose": "5 mg neb",
+                                        "note": "",
+                                        "level": "EMT"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Moderate: add Combivent and hydrocortisone",
+                                "level": "EMT",
+                                "doses": [
+                                    {
+                                        "drug": "Combivent (adults only)",
+                                        "dose": "Ipratropium 0.5 mg + salbutamol 2.5 mg neb",
+                                        "note": "Repeat after 20 minutes if required; maximum 3 doses",
+                                        "level": "EMT"
+                                    },
+                                    {
+                                        "drug": "Hydrocortisone IM",
+                                        "dose": "Adult 100 mg",
+                                        "note": "&lt;1 year 25 mg; 1–5 years 50 mg; &gt;5 years 100 mg",
+                                        "level": "EMT"
+                                    },
+                                    {
+                                        "drug": "Hydrocortisone IV",
+                                        "dose": "Adult 100 mg",
+                                        "note": "Same pediatric doses",
+                                        "level": "EMT-A"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Severe: add magnesium sulphate",
+                                "level": "AP",
+                                "text": "Request ALS back-up.",
+                                "doses": [
+                                    {
+                                        "drug": "Magnesium sulphate",
+                                        "dose": "Adult 2 g IV/IM",
+                                        "note": "Pediatric 40 mg/kg (maximum 2 g). IV infusion over 20 minutes",
+                                        "level": "AP"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Life-threatening: add adrenaline",
+                                "level": "AP",
+                                "doses": [
+                                    {
+                                        "drug": "Adrenaline IM",
+                                        "dose": "Adult 0.3–0.5 mg",
+                                        "note": "Pediatric 0.15–0.3 mg",
+                                        "level": "AP"
+                                    },
+                                    {
+                                        "drug": "Adrenaline IV infusion",
+                                        "dose": "Adult 2–10 mcg/min",
+                                        "note": "Pediatric 0.1–1 mcg/kg/min. Use a syringe driver",
+                                        "level": "AP"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Reassess",
+                                "text": "Frequently, as per the Universal Care CPG."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Clinical notes",
+                        "icon": "lightbulb",
+                        "groups": [
+                            {
+                                "title": "Hydrocortisone",
+                                "items": [
+                                    "IV is preferred in adults with severe asthma.",
+                                    "In severe asthma the dose can be increased to 200 mg (adults) or 4 mg/kg (children).",
+                                    "If the patient deteriorates after hydrocortisone has been given, a top-up dose is not a priority."
+                                ]
+                            },
+                            {
+                                "title": "IV adrenaline",
+                                "items": [
+                                    "Give via a syringe driver; IV infusions without one are not recommended in adults or children.",
+                                    "Before increasing the rate, assess carefully: is it worsening asthma or the effect of adrenaline? Monitor children especially closely."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key performance indicators",
+                        "icon": "chart-no-axes-column",
+                        "items": [
+                            "Document the respiratory assessment.",
+                            "Treatment (e.g. salbutamol) for moderate to life-threatening asthma within 10 minutes of EMS arrival."
+                        ]
+                    },
+                    {
+                        "type": "related",
+                        "title": "Related CPGs and drug sheets",
+                        "icon": "link",
+                        "items": [
+                            {
+                                "label": "2.1 Airway Management",
+                                "href": "c2.html?section=c2s1"
+                            },
+                            {
+                                "label": "2.4 COPD",
+                                "href": "c2.html?section=c2s4"
+                            },
+                            {
+                                "label": "M36 Salbutamol",
+                                "href": "m36.html"
+                            },
+                            {
+                                "label": "M6 Combivent",
+                                "href": "m6.html"
+                            },
+                            {
+                                "label": "M20 Hydrocortisone",
+                                "href": "m20.html"
+                            },
+                            {
+                                "label": "M24 Magnesium Sulphate",
+                                "href": "m24.html"
+                            },
+                            {
+                                "label": "M13 Adrenaline",
+                                "href": "m13.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quiz": [
                 {
-                    id: "crit_2_3_1",
-                    scenario: "A 22-year-old male with asthma presents with confusion, 'silent chest' on auscultation, and SpO2 85%. He is too exhausted to hold the nebulizer mask. HR 140, dropping to 100.",
-                    question: "What is the immediate priority intervention?",
-                    options: [
-                        { t: "Set up IV Magnesium", f: "Too slow. Patient is peri-arrest." },
-                        { t: "Administer IM Adrenaline 500mcg and assist ventilation", f: "Correct. IM Adrenaline is the fastest bronchodilator for life-threats. BVM support is needed." },
-                        { t: "Wait for hydrocortisone to work", f: "Incorrect. Steroids take hours." }
+                    "q": "A 30-year-old asthmatic can speak only single words. What is the severity?",
+                    "options": [
+                        "Mild",
+                        "Moderate",
+                        "Severe",
+                        "Cannot tell"
                     ],
-                    correct: 1,
-                    explanation: "Confusion and silent chest indicate imminent arrest. IM Adrenaline is indicated immediately while preparing for BVM ventilation.",
-                    kpi: "Recognition of Silent Chest & IM Adrenaline use"
+                    "correct": 2,
+                    "explanation": "Severe needs only one of: speaking words only, or visibly breathless."
                 },
                 {
-                    id: "crit_2_3_2",
-                    scenario: "You are ventilating an asthmatic patient who has arrested. You notice the BVM is becoming hard to squeeze and BP is dropping.",
-                    question: "What is the likely cause and solution?",
-                    options: [
-                        { t: "Equipment failure; change BVM", f: "Unlikely." },
-                        { t: "Breath stacking (Air trapping); disconnect BVM to allow exhalation", f: "Correct. Allow trapped air to escape (apnea period)." },
-                        { t: "Pneumothorax; ignore it", f: "Incorrect." }
+                    "q": "Which single finding makes asthma life-threatening?",
+                    "options": [
+                        "Speaking in phrases",
+                        "SpO2 <90% in air",
+                        "Mild accessory muscle use",
+                        "Tachycardia alone"
                     ],
-                    correct: 1,
-                    explanation: "Dynamic hyperinflation (gas trapping) increases intrathoracic pressure, reducing venous return. Disconnecting the bag allows passive exhalation and restores circulation.",
-                    kpi: "Management of breath stacking in arrest"
+                    "correct": 1,
+                    "explanation": "Life-threatening: drowsy, collapsed, exhausted, cyanosed, poor effort, or SpO2 <90%."
+                },
+                {
+                    "q": "What does a quiet wheeze in a very breathless asthmatic suggest?",
+                    "options": [
+                        "Improvement",
+                        "Poor air movement; wheeze is a poor guide to severity",
+                        "Mild asthma",
+                        "Wrong diagnosis"
+                    ],
+                    "correct": 1,
+                    "explanation": "With poor air movement, wheeze may be low volume; it is a poor predictor of severity."
+                },
+                {
+                    "q": "What is the adult dose of nebulized salbutamol?",
+                    "options": [
+                        "2.5 mg",
+                        "5 mg",
+                        "7.5 mg",
+                        "10 mg"
+                    ],
+                    "correct": 1,
+                    "explanation": "Adult 5 mg; under 5 years 2.5 mg; over 5 years 5 mg. Repeat after 15 minutes if required."
+                },
+                {
+                    "q": "What is the nebulized salbutamol dose for a 3-year-old?",
+                    "options": [
+                        "1.25 mg",
+                        "2.5 mg",
+                        "5 mg",
+                        "Not given under 5"
+                    ],
+                    "correct": 1,
+                    "explanation": "Pediatric under 5 years: 2.5 mg."
+                },
+                {
+                    "q": "What is the maximum nebulizer volume after dilution?",
+                    "options": [
+                        "3 ml",
+                        "5 ml",
+                        "10 ml",
+                        "No limit"
+                    ],
+                    "correct": 1,
+                    "explanation": "Dilute with normal saline or sterile water to a maximum of 5 ml."
+                },
+                {
+                    "q": "What is added for moderate asthma in adults?",
+                    "options": [
+                        "Magnesium",
+                        "Combivent and hydrocortisone",
+                        "IV adrenaline",
+                        "Nothing"
+                    ],
+                    "correct": 1,
+                    "explanation": "Moderate: treatment as for mild, plus nebulized Combivent (adults) and hydrocortisone."
+                },
+                {
+                    "q": "Is Combivent given to children under CPG 2.3?",
+                    "options": [
+                        "Yes, half dose",
+                        "No, adults only",
+                        "Only over 5",
+                        "Only IV"
+                    ],
+                    "correct": 1,
+                    "explanation": "Combivent is not recommended for pediatric administration."
+                },
+                {
+                    "q": "How often can Combivent be repeated, and to what maximum?",
+                    "options": [
+                        "Every 5 minutes, unlimited",
+                        "After 20 minutes if required, maximum 3 doses",
+                        "Once only",
+                        "Every 15 minutes, maximum 2"
+                    ],
+                    "correct": 1,
+                    "explanation": "May be repeated after 20 minutes if required; maximum 3 doses."
+                },
+                {
+                    "q": "What is the hydrocortisone dose for a child aged 1–5 years?",
+                    "options": [
+                        "25 mg",
+                        "50 mg",
+                        "100 mg",
+                        "4 mg/kg always"
+                    ],
+                    "correct": 1,
+                    "explanation": "<1 year 25 mg; 1–5 years 50 mg; >5 years 100 mg; adult 100 mg IV/IM."
+                },
+                {
+                    "q": "Which level can give hydrocortisone IV?",
+                    "options": [
+                        "EMR",
+                        "EMT",
+                        "EMT-A",
+                        "AP only"
+                    ],
+                    "correct": 2,
+                    "explanation": "Hydrocortisone IM is EMT; hydrocortisone IV is EMT-A."
+                },
+                {
+                    "q": "What is the adult magnesium sulphate dose in severe asthma?",
+                    "options": [
+                        "1 g bolus",
+                        "2 g IV/IM, as an infusion over 20 minutes",
+                        "4 g over 10 minutes",
+                        "40 mg/kg bolus"
+                    ],
+                    "correct": 1,
+                    "explanation": "Adults 2 g; pediatric 40 mg/kg (maximum 2 g); infuse over 20 minutes."
+                },
+                {
+                    "q": "What is the adult IM adrenaline dose in life-threatening asthma?",
+                    "options": [
+                        "0.01 mg",
+                        "0.15–0.3 mg",
+                        "0.3–0.5 mg",
+                        "1 mg"
+                    ],
+                    "correct": 2,
+                    "explanation": "Adults 0.3–0.5 mg IM; pediatric 0.15–0.3 mg IM."
+                },
+                {
+                    "q": "How should an IV adrenaline infusion be given?",
+                    "options": [
+                        "Free-flowing",
+                        "Via a syringe driver",
+                        "As a bolus",
+                        "Through the nebulizer"
+                    ],
+                    "correct": 1,
+                    "explanation": "Use a syringe driver; infusions without one are not recommended."
+                },
+                {
+                    "q": "What is the KPI time for treating moderate to life-threatening asthma?",
+                    "options": [
+                        "Within 5 minutes",
+                        "Within 10 minutes of EMS arrival",
+                        "Within 30 minutes",
+                        "On arrival at hospital"
+                    ],
+                    "correct": 1,
+                    "explanation": "KPI: treatment within 10 minutes of EMS arrival."
+                },
+                {
+                    "q": "A patient deteriorates to severe after hydrocortisone was given. Is a top-up dose a priority?",
+                    "options": [
+                        "Yes, immediately",
+                        "No, it is not a priority",
+                        "Only IM",
+                        "Only in children"
+                    ],
+                    "correct": 1,
+                    "explanation": "A top-up dose is not a priority once hydrocortisone has been given."
+                }
+            ],
+            "flashcards": [
+                {
+                    "category": "Severity",
+                    "question": "Severe asthma criteria (any one)?",
+                    "answer": "Speaking words only, or visibly breathless."
+                },
+                {
+                    "category": "Severity",
+                    "question": "Life-threatening asthma criteria (any one)?",
+                    "answer": "Drowsy, collapsed, exhausted, cyanosed, poor respiratory effort, or SpO2 <90%."
+                },
+                {
+                    "category": "Severity",
+                    "question": "SpO2 in air by severity?",
+                    "answer": "Mild usually >95%; moderate usually 92–95%; severe 90–94%; life-threatening <90%."
+                },
+                {
+                    "category": "Monitoring",
+                    "question": "Monitoring in asthma?",
+                    "answer": "SpO2 and ECG for all; nasal-cannula EtCO2 for moderate, severe and life-threatening."
+                },
+                {
+                    "category": "Salbutamol",
+                    "question": "Salbutamol doses?",
+                    "answer": "Adult 5 mg; <5 years 2.5 mg; >5 years 5 mg; repeat after 15 minutes if required."
+                },
+                {
+                    "category": "Combivent",
+                    "question": "Combivent dose?",
+                    "answer": "Adults only: ipratropium 0.5 mg + salbutamol 2.5 mg; repeat after 20 minutes, maximum 3 doses."
+                },
+                {
+                    "category": "Hydrocortisone",
+                    "question": "Hydrocortisone doses?",
+                    "answer": "Adult 100 mg IV/IM; <1 year 25 mg; 1–5 years 50 mg; >5 years 100 mg."
+                },
+                {
+                    "category": "Hydrocortisone",
+                    "question": "Hydrocortisone in severe asthma?",
+                    "answer": "IV preferred in adults; can increase to 200 mg (adult) or 4 mg/kg (child)."
+                },
+                {
+                    "category": "Magnesium",
+                    "question": "Magnesium sulphate?",
+                    "answer": "Adult 2 g; pediatric 40 mg/kg (max 2 g); IV infusion over 20 minutes. AP level."
+                },
+                {
+                    "category": "Adrenaline",
+                    "question": "Adrenaline IM?",
+                    "answer": "Adult 0.3–0.5 mg; pediatric 0.15–0.3 mg. AP level."
+                },
+                {
+                    "category": "Adrenaline",
+                    "question": "Adrenaline IV infusion?",
+                    "answer": "Adult 2–10 mcg/min; pediatric 0.1–1 mcg/kg/min; via syringe driver. AP level."
+                },
+                {
+                    "category": "Scope",
+                    "question": "Levels in asthma?",
+                    "answer": "Oxygen EMR; salbutamol, Combivent, hydrocortisone IM EMT; hydrocortisone IV EMT-A; magnesium and adrenaline AP."
+                },
+                {
+                    "category": "Oxygen",
+                    "question": "Oxygen without a nebulizer?",
+                    "answer": "If SpO2 <94%: non-rebreather to SpO2 94–98%."
+                },
+                {
+                    "category": "KPI",
+                    "question": "CPG 2.3 KPIs?",
+                    "answer": "Document respiratory assessment; treat moderate to life-threatening asthma within 10 minutes of arrival."
+                }
+            ],
+            "critical": [
+                {
+                    "id": "crit_2_3_1",
+                    "scenario": "A 22-year-old asthmatic is drowsy, with a silent chest and SpO2 85%. He has had salbutamol, Combivent and hydrocortisone, and an AP is on scene. Magnesium is running.",
+                    "question": "What is the next drug?",
+                    "options": [
+                        {
+                            "t": "IM adrenaline 0.3–0.5 mg, then consider an IV adrenaline infusion",
+                            "f": "Correct. Life-threatening asthma: treatment as for severe, plus adrenaline."
+                        },
+                        {
+                            "t": "A second hydrocortisone dose",
+                            "f": "A top-up dose is not a priority."
+                        },
+                        {
+                            "t": "More salbutamol only",
+                            "f": "He is life-threatening: escalate to adrenaline."
+                        },
+                        {
+                            "t": "CPAP",
+                            "f": "He is drowsy: altered mental status is an absolute contraindication to CPAP (CPG 2.1), and CPAP is a caution in asthma."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Drowsiness, silent chest and SpO2 <90% are life-threatening features. Add adrenaline IM 0.3–0.5 mg and an IV infusion of 2–10 mcg/min via syringe driver.",
+                    "kpi": "Treatment for moderate to life-threatening asthma within 10 minutes of EMS arrival."
+                },
+                {
+                    "id": "crit_2_3_2",
+                    "scenario": "A 3-year-old with known asthma speaks in phrases, uses mild accessory muscles, SpO2 93% in air. You are an EMT crew.",
+                    "question": "How do you treat?",
+                    "options": [
+                        {
+                            "t": "Salbutamol 2.5 mg neb plus hydrocortisone 50 mg IM",
+                            "f": "Correct. Moderate asthma in a 1–5-year-old: salbutamol 2.5 mg and hydrocortisone 50 mg (IM is within EMT scope). Combivent is adults only."
+                        },
+                        {
+                            "t": "Combivent neb",
+                            "f": "Combivent is not recommended for children."
+                        },
+                        {
+                            "t": "Magnesium 40 mg/kg",
+                            "f": "Magnesium is for severe asthma and is an AP drug."
+                        },
+                        {
+                            "t": "Salbutamol 5 mg only",
+                            "f": "Under 5 years the dose is 2.5 mg, and moderate asthma adds hydrocortisone."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Phrases and mild accessory muscle use with SpO2 92–95% is moderate. Treat as mild (salbutamol) plus hydrocortisone; Combivent is adults only.",
+                    "kpi": "Treatment for moderate to life-threatening asthma within 10 minutes of EMS arrival."
+                },
+                {
+                    "id": "crit_2_3_3",
+                    "scenario": "An adult asthmatic is visibly breathless and speaking in words. SpO2 92% in air. Salbutamol and Combivent have had little effect.",
+                    "question": "What is the severity and the next step?",
+                    "options": [
+                        {
+                            "t": "Severe: request ALS back-up; hydrocortisone, and magnesium sulphate 2 g as an infusion over 20 minutes (AP)",
+                            "f": "Correct. Severe asthma: moderate treatment plus magnesium, with ALS back-up."
+                        },
+                        {
+                            "t": "Mild: repeat salbutamol only",
+                            "f": "Speaking words and visibly breathless is severe."
+                        },
+                        {
+                            "t": "Life-threatening: IM adrenaline now",
+                            "f": "No life-threatening features yet (not drowsy, SpO2 not <90%)."
+                        },
+                        {
+                            "t": "Moderate: no escalation needed",
+                            "f": "Words only means severe."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Severe asthma (words only, visibly breathless) adds magnesium sulphate to moderate treatment and needs ALS back-up early: severe asthmatics are at high risk of respiratory arrest.",
+                    "kpi": "Document the respiratory assessment."
                 }
             ]
         },
-
-        // ============================================================
-        // 2.4 COPD – EXPANDED
-        // ============================================================
         {
-            id: "c2s4",
-            shortTitle: "2.4 COPD",
-            summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#cigarette"/></svg> 2.4 COPD Exacerbation</h3>
-                    
-                    <h4>1. Assessment (The 'Blue Bloater' vs 'Pink Puffer')</h4>
-                    <ul>
-                        <li><strong>History:</strong> Smoking, home O2, previous ICU admits.</li>
-                        <li><strong>Signs:</strong> Pursed-lip breathing, barrel chest, wheeze/crackles, CO2 retention (drowsiness).</li>
-                    </ul>
-
-                    <h4>2. Oxygen Therapy (Critical)</h4>
-                    <ul>
-                        <li><strong>Target SpO₂:</strong> 88-92%.</li>
-                        <li><strong>Caution:</strong> High O₂ can suppress hypoxic drive and cause CO₂ narcosis (respiratory failure).</li>
-                        <li>Use Venturi mask if available for precise delivery, or nasal cannula.</li>
-                    </ul>
-
-                    <h4>3. Pharmacological Management</h4>
-                    <ul>
-                        <li><strong>Salbutamol:</strong> 5 mg Nebulized.</li>
-                        <li><strong>Ipratropium Bromide:</strong> 500 mcg Nebulized.</li>
-                        <li><strong>Hydrocortisone:</strong> 100 mg IV.</li>
-                        <li>Note: Use medical air to drive nebs if available/protocol allows, otherwise limit O₂ duration.</li>
-                    </ul>
-
-                    <h4>4. CPAP / BiPAP</h4>
-                    <ul>
-                        <li><strong>BiPAP (Bilevel):</strong> Preferred for COPD with hypercapnia (high CO₂). Helps unload respiratory muscles.</li>
-                        <li><strong>CPAP:</strong> Alternative if BiPAP unavailable. PEEP usually 5-10 cmH₂O.</li>
-                        <li><strong>Indications:</strong> Moderate-severe distress, tachypnoea, accessory muscle use, not improving with nebs.</li>
-                    </ul>
-                </div>
-            `,
-            flashcards: [
-                { category: "Oxygen", question: "What is the target SpO₂ in acute COPD exacerbation?", answer: "88–92%." },
-                { category: "Pathophysiology", question: "Why is high‑flow oxygen dangerous in COPD?", answer: "It can suppress the hypoxic drive, leading to hypoventilation and CO₂ narcosis (respiratory failure)." },
-                { category: "Drugs", question: "What nebulisers are used in COPD exacerbation?", answer: "Salbutamol (beta‑agonist) and ipratropium bromide (anticholinergic)." },
-                { category: "Ventilation", question: "Which NIV mode is preferred for COPD?", answer: "BiPAP (bilevel) – provides inspiratory support and expiratory pressure." },
-                { category: "Assessment", question: "What are signs of CO₂ retention?", answer: "Drowsiness, confusion, bounding pulse, warm peripheries, tremor." },
-                { category: "Drugs", question: "Steroid dose in COPD?", answer: "Hydrocortisone 100 mg IV (or prednisolone 40–50 mg PO)." },
-                { category: "Assessment", question: "What does a 'shark fin' capnography waveform indicate?", answer: "Bronchospasm / obstructive lung disease (asthma/COPD)." },
-                { category: "Management", question: "What gas should drive nebulisers in COPD if prolonged?", answer: "Medical air, to avoid hyperoxia." },
-                { category: "History", question: "What key history question helps assess COPD severity?", answer: "Previous intubations or ICU admissions." },
-                { category: "Contraindications", question: "Absolute contraindication to BiPAP?", answer: "Inability to protect airway (GCS <8, vomiting, etc.)." }
-            ],
-            quiz: [
-                { q: "What is the target oxygen saturation for a patient with an acute exacerbation of COPD?", options: ["94–98%", "88–92%", "97–100%", "85–90%"], correct: 1, explanation: "In COPD, high oxygen levels can suppress the hypoxic drive and worsen hypercapnia (CO₂ retention). Target SpO₂ is 88–92% to maintain adequate oxygenation while avoiding CO₂ narcosis." },
-                { q: "Which non‑invasive ventilation mode is preferred for a COPD patient with hypercapnic respiratory failure?", options: ["CPAP", "BiPAP", "High‑flow nasal cannula", "Bag‑valve‑mask"], correct: 1, explanation: "BiPAP (bilevel positive airway pressure) provides both inspiratory support (IPAP) to help unload respiratory muscles and expiratory pressure (EPAP) to keep airways open. It is more effective than CPAP for hypercapnia." },
-                { q: "A 70‑year‑old COPD patient on high‑flow oxygen becomes drowsy and confused. What is the most likely cause?", options: ["Stroke", "Hypoglycaemia", "CO₂ narcosis", "Myocardial infarction"], correct: 2, explanation: "Excessive oxygen in COPD can reduce the hypoxic drive, leading to hypoventilation and rising CO₂ levels (hypercapnia). This causes drowsiness, confusion, and eventually respiratory depression." },
-                { q: "What is the initial dose of nebulised salbutamol for an adult with COPD exacerbation?", options: ["2.5 mg", "5 mg", "10 mg", "1.25 mg"], correct: 1, explanation: "The standard adult dose is 5 mg nebulised salbutamol. It can be repeated as needed." },
-                { q: "Ipratropium bromide is best described as:", options: ["A beta‑2 agonist", "An anticholinergic bronchodilator", "A corticosteroid", "A mucolytic"], correct: 1, explanation: "Ipratropium bromide is an anticholinergic that blocks muscarinic receptors in the airways, leading to bronchodilation and reduced secretions." },
-                { q: "What is a classic sign of CO₂ retention in a COPD patient?", options: ["Bounding pulse", "Tachycardia", "Hypertension", "Crackles on auscultation"], correct: 0, explanation: "Hypercapnia causes peripheral vasodilation, leading to warm extremities and a bounding pulse. Other signs include drowsiness, confusion, and tremors." },
-                { q: "A patient with COPD exacerbation is not improving with nebulisers and is becoming exhausted. What is the next appropriate step?", options: ["Repeat nebulisers again", "Start BiPAP", "Intubate immediately", "Give IV adrenaline"], correct: 1, explanation: "BiPAP is indicated for moderate‑severe distress not responding to initial therapy. It can prevent the need for intubation. Intubation is reserved for failure of NIV or contraindications." },
-                { q: "Which of the following is an absolute contraindication to BiPAP?", options: ["SpO₂ 90% on oxygen", "Respiratory rate 32", "GCS 12", "Unable to protect airway (GCS <8)"], correct: 3, explanation: "BiPAP requires a conscious patient who can protect their airway. A GCS <8 (or any inability to maintain airway) is an absolute contraindication – these patients need intubation." },
-                { q: "What does a 'shark fin' capnography waveform indicate?", options: ["Normal breathing", "Bronchospasm (obstructive pattern)", "Pneumothorax", "Apnoea"], correct: 1, explanation: "A 'shark fin' (or sloping) waveform indicates prolonged expiratory phase due to lower airway obstruction, as seen in asthma and COPD." },
-                { q: "In a COPD patient, why is it important to use medical air to drive nebulisers if available?", options: ["It is cheaper", "To avoid delivering excessive oxygen during prolonged nebulisation", "It improves drug deposition", "It causes less irritation"], correct: 1, explanation: "Prolonged nebulisation with oxygen can deliver high FiO₂, risking hypercapnia. Using medical air (or limiting oxygen to 2–4 L/min via nasal cannula during nebulisation) helps maintain target SpO₂ 88–92%." }
-            ],
-            critical: [
+            "id": "c2s4",
+            "shortTitle": "2.4 COPD",
+            "guide": {
+                "cpg": "2.4",
+                "group": "airway",
+                "groupLabel": "Airway and Breathing",
+                "title": "COPD Exacerbation",
+                "lead": "Give controlled oxygen to SpO<sub>2</sub> 88–92%, bronchodilators, then hydrocortisone, and CPAP or BiPAP if nebulizers fail. Too much oxygen risks hypercapnic respiratory failure.",
+                "source": {
+                    "label": "CPG 2.4",
+                    "pages": "63–66",
+                    "pdf": "../pdf_sections/2_4_COPD.pdf"
+                },
+                "sections": [
+                    {
+                        "type": "criteria",
+                        "title": "Who this applies to",
+                        "icon": "user",
+                        "include": [
+                            "Known COPD with features of exacerbation: more cough, sputum or dyspnea than usual; worsening hypoxemia; tachycardia; hypertension; cyanosis; altered mental status; hypercapnia; accessory muscle use; pursed-lip exhalation."
+                        ],
+                        "exclude": [
+                            "Breathing difficulty from another cause (e.g. asthma)."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "History to take",
+                        "icon": "clipboard-list",
+                        "items": [
+                            "Onset, and concurrent symptoms (fever, cough, rhinorrhea, tongue or lip swelling, rash, foreign body).",
+                            "Usual triggers (cigarette smoke, weather change, respiratory infection, exercise).",
+                            "Treatment before EMS arrival: oxygen, inhalers, nebulizers, chronic or recent steroids.",
+                            "Past year: ED visits and admissions; ever in ICU; ever intubated."
+                        ]
+                    },
+                    {
+                        "type": "steps",
+                        "title": "Treatment",
+                        "icon": "pill",
+                        "steps": [
+                            {
+                                "title": "Controlled oxygen",
+                                "level": "EMR",
+                                "text": "Nasal cannula from 2 L/min, up to 6 L/min. If no improvement, non-rebreather 10–15 L/min. Target SpO<sub>2</sub> 88–92% to avoid hyperoxia. Consider ALS back-up."
+                            },
+                            {
+                                "title": "Nebulized salbutamol (first choice)",
+                                "level": "EMT",
+                                "doses": [
+                                    {
+                                        "drug": "Salbutamol",
+                                        "dose": "5 mg neb",
+                                        "note": "Repeat every 5 minutes as required",
+                                        "level": "EMT"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "If not resolving or severe distress: Combivent and hydrocortisone",
+                                "level": "EMT",
+                                "doses": [
+                                    {
+                                        "drug": "Combivent",
+                                        "dose": "Ipratropium 0.5 mg + salbutamol 3 mg neb",
+                                        "note": "Single dose",
+                                        "level": "EMT"
+                                    },
+                                    {
+                                        "drug": "Hydrocortisone IV",
+                                        "dose": "100–200 mg",
+                                        "note": "Slow IV over 2 minutes, or in 100 ml saline over 2–5 minutes. IV preferred",
+                                        "level": "EMT-A"
+                                    },
+                                    {
+                                        "drug": "Hydrocortisone IM",
+                                        "dose": "100 mg",
+                                        "note": "",
+                                        "level": "EMT-A"
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Reassess",
+                                "text": "Severe distress or worsening symptoms? If not, continue care and transport."
+                            },
+                            {
+                                "title": "CPAP if nebulizers are ineffective",
+                                "level": "EMT-A",
+                                "text": "Consider Tele-EMS for complicated cases or for CPAP/BiPAP settings."
+                            },
+                            {
+                                "title": "BiPAP if inspiratory support is needed",
+                                "level": "AP"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "CPAP / BiPAP contraindications",
+                        "icon": "ban",
+                        "tone": "alert",
+                        "items": [
+                            "Altered mental status.",
+                            "Apnea.",
+                            "Facial trauma or deformity.",
+                            "Untreated pneumothorax.",
+                            "Hypotension."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Safety considerations",
+                        "icon": "triangle-alert",
+                        "items": [
+                            "Moderate to severe COPD risks hypercapnic respiratory failure: keep SpO<sub>2</sub> 88–92% to prevent respiratory acidosis, organ dysfunction or coma.",
+                            "If adequate oxygenation needs more than low FiO<sub>2</sub>, consider other causes (pulmonary embolism, pneumonia, ARDS, pulmonary edema).",
+                            "Consider triggers (infection, pollution), even in patients without a known COPD diagnosis.",
+                            "Dilute nebulized salbutamol and Combivent with saline or sterile water to a maximum of 5 ml."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key performance indicator",
+                        "icon": "chart-no-axes-column",
+                        "items": [
+                            "Bronchodilators for moderate to severe cases within 10 minutes of EMS arrival."
+                        ]
+                    },
+                    {
+                        "type": "related",
+                        "title": "Related CPGs and drug sheets",
+                        "icon": "link",
+                        "items": [
+                            {
+                                "label": "2.1 Airway Management (CPAP)",
+                                "href": "c2.html?section=c2s1"
+                            },
+                            {
+                                "label": "2.3 Asthma",
+                                "href": "c2.html?section=c2s3"
+                            },
+                            {
+                                "label": "M36 Salbutamol",
+                                "href": "m36.html"
+                            },
+                            {
+                                "label": "M6 Combivent",
+                                "href": "m6.html"
+                            },
+                            {
+                                "label": "M20 Hydrocortisone",
+                                "href": "m20.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quiz": [
                 {
-                    id: "crit_2_4_1",
-                    scenario: "A 70-year-old male with COPD is extremely short of breath. RR 36, SpO2 82% on room air. He is alert but exhausted. You hear tight wheezes. Nebulizers have been started.",
-                    question: "The patient is not improving. What is the next best intervention?",
-                    options: [
-                        { t: "Intubate immediately", f: "Too aggressive. Try NIV first." },
-                        { t: "Start BiPAP (or CPAP)", f: "Correct. NIV is the gold standard to avoid intubation in COPD." },
-                        { t: "Increase O2 to 15L NRB", f: "Risk of hypercapnic failure." }
+                    "q": "What SpO2 does CPG 2.4 target in a COPD exacerbation?",
+                    "options": [
+                        "94–98%",
+                        "88–92%",
+                        "100%",
+                        "85–88%"
                     ],
-                    correct: 1,
-                    explanation: "Non-Invasive Ventilation (BiPAP/CPAP) supports the tiring respiratory muscles and improves gas exchange, often preventing the need for intubation.",
-                    kpi: "Early utilisation of CPAP/BiPAP in COPD"
+                    "correct": 1,
+                    "explanation": "Titrate to SpO2 88–92% to avoid hyperoxia and hypercapnic respiratory failure."
                 },
                 {
-                    id: "crit_2_4_2",
-                    scenario: "You are treating a 65-year-old with a known COPD exacerbation. He is on BiPAP with settings IPAP 12, EPAP 5, FiO2 0.4. His SpO2 is 91% and he remains tachypneic. You notice his breathing is becoming more laboured and he is increasingly drowsy.",
-                    question: "What is your priority action?",
-                    options: [
-                        { t: "Increase IPAP to 15", f: "May help, but airway protection is the main concern." },
-                        { t: "Prepare for intubation", f: "Correct. Drowsiness indicates impending respiratory failure." },
-                        { t: "Switch to CPAP", f: "Incorrect; he needs more support, but airway is the issue." },
-                        { t: "Give another dose of Salbutamol", f: "Not the priority." }
+                    "q": "How does oxygen start in COPD?",
+                    "options": [
+                        "Non-rebreather 15 L/min",
+                        "Nasal cannula 2 L/min, up to 6 L/min",
+                        "BVM",
+                        "No oxygen at all"
                     ],
-                    correct: 1,
-                    explanation: "Drowsiness on NIV suggests hypercapnic coma or exhaustion. The patient can no longer protect the airway; intubation is indicated.",
-                    kpi: "Recognition of NIV failure and need for intubation"
+                    "correct": 1,
+                    "explanation": "Start with nasal oxygen at 2 L/min and increase as needed up to 6 L/min."
+                },
+                {
+                    "q": "Nasal cannula at 6 L/min is not enough. What next?",
+                    "options": [
+                        "Stop oxygen",
+                        "Non-rebreather at 10–15 L/min, still targeting 88–92%",
+                        "CPAP straight away",
+                        "BVM"
+                    ],
+                    "correct": 1,
+                    "explanation": "Change to a non-rebreather at 10–15 L/min to maintain SpO2 88–92%."
+                },
+                {
+                    "q": "What is the first-choice bronchodilator?",
+                    "options": [
+                        "Combivent",
+                        "Nebulized salbutamol 5 mg",
+                        "Adrenaline",
+                        "Magnesium"
+                    ],
+                    "correct": 1,
+                    "explanation": "Salbutamol 5 mg nebulized is first choice, repeatable every 5 minutes as required."
+                },
+                {
+                    "q": "How often can salbutamol be repeated in COPD?",
+                    "options": [
+                        "Every 5 minutes as required",
+                        "Every 15 minutes",
+                        "Every 20 minutes",
+                        "Once only"
+                    ],
+                    "correct": 0,
+                    "explanation": "CPG 2.4: repeatable as required every 5 minutes."
+                },
+                {
+                    "q": "What is the Combivent dose in COPD?",
+                    "options": [
+                        "Ipratropium 0.5 mg + salbutamol 2.5 mg, up to 3 doses",
+                        "Ipratropium 0.5 mg + salbutamol 3 mg, single dose",
+                        "Ipratropium 1 mg alone",
+                        "Salbutamol 10 mg"
+                    ],
+                    "correct": 1,
+                    "explanation": "COPD: 0.5 mg ipratropium + 3 mg salbutamol, single dose. (The Asthma CPG uses a smaller salbutamol dose and allows repeats.)"
+                },
+                {
+                    "q": "What is the IV hydrocortisone dose in COPD?",
+                    "options": [
+                        "25 mg",
+                        "50 mg",
+                        "100–200 mg",
+                        "4 mg/kg"
+                    ],
+                    "correct": 2,
+                    "explanation": "100–200 mg IV, slow over 2 minutes or in 100 ml saline over 2–5 minutes; or 100 mg IM."
+                },
+                {
+                    "q": "Which hydrocortisone route is preferred in COPD?",
+                    "options": [
+                        "IM",
+                        "IV",
+                        "Oral",
+                        "Nebulized"
+                    ],
+                    "correct": 1,
+                    "explanation": "Hydrocortisone is preferred via the IV route when possible."
+                },
+                {
+                    "q": "When should CPAP be considered?",
+                    "options": [
+                        "First line for everyone",
+                        "If nebulizer treatments are ineffective",
+                        "Only with altered mental status",
+                        "Never in COPD"
+                    ],
+                    "correct": 1,
+                    "explanation": "Consider CPAP if nebulizer treatments are ineffective; BiPAP if inspiratory support is required."
+                },
+                {
+                    "q": "Which level can apply BiPAP?",
+                    "options": [
+                        "EMT",
+                        "EMT-A",
+                        "AP",
+                        "EMR"
+                    ],
+                    "correct": 2,
+                    "explanation": "CPAP is EMT-A; BiPAP is AP."
+                },
+                {
+                    "q": "A COPD patient on CPAP becomes drowsy. What does CPG 2.4 say?",
+                    "options": [
+                        "Increase pressure",
+                        "Altered mental status is a contraindication to CPAP/BiPAP",
+                        "Add salbutamol",
+                        "Nothing"
+                    ],
+                    "correct": 1,
+                    "explanation": "CPAP/BiPAP contraindications: altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension."
+                },
+                {
+                    "q": "Oxygenation is poor despite low FiO2 treatment. What should you consider?",
+                    "options": [
+                        "Only COPD",
+                        "Other causes: PE, pneumonia, ARDS, pulmonary edema",
+                        "Faulty oximeter only",
+                        "Give more salbutamol"
+                    ],
+                    "correct": 1,
+                    "explanation": "Consider other causes if adequate oxygenation cannot be achieved with low FiO2."
+                },
+                {
+                    "q": "What is the KPI in CPG 2.4?",
+                    "options": [
+                        "CPAP within 5 minutes",
+                        "Bronchodilators for moderate to severe cases within 10 minutes of arrival",
+                        "Hydrocortisone for all",
+                        "Transport within 30 minutes"
+                    ],
+                    "correct": 1,
+                    "explanation": "KPI: bronchodilators within 10 minutes of EMS arrival for moderate to severe cases."
+                }
+            ],
+            "flashcards": [
+                {
+                    "category": "Oxygen",
+                    "question": "SpO2 target in COPD?",
+                    "answer": "88–92%."
+                },
+                {
+                    "category": "Oxygen",
+                    "question": "Oxygen escalation in COPD?",
+                    "answer": "Nasal cannula 2 L/min up to 6 L/min; then non-rebreather 10–15 L/min, keeping 88–92%."
+                },
+                {
+                    "category": "Risk",
+                    "question": "Why avoid hyperoxia in COPD?",
+                    "answer": "Risk of hypercapnic respiratory failure: respiratory acidosis, organ dysfunction, coma."
+                },
+                {
+                    "category": "Salbutamol",
+                    "question": "Salbutamol in COPD?",
+                    "answer": "5 mg neb, first choice, repeat every 5 minutes as required."
+                },
+                {
+                    "category": "Combivent",
+                    "question": "Combivent in COPD?",
+                    "answer": "Ipratropium 0.5 mg + salbutamol 3 mg neb, single dose (second choice)."
+                },
+                {
+                    "category": "Hydrocortisone",
+                    "question": "Hydrocortisone in COPD?",
+                    "answer": "100–200 mg IV (slow over 2 minutes or in 100 ml saline over 2–5 minutes) or 100 mg IM; IV preferred. EMT-A."
+                },
+                {
+                    "category": "Ventilation",
+                    "question": "CPAP vs BiPAP in COPD?",
+                    "answer": "CPAP (EMT-A) if nebulizers fail; BiPAP (AP) if inspiratory support is needed. Tele-EMS for settings."
+                },
+                {
+                    "category": "Ventilation",
+                    "question": "CPAP/BiPAP contraindications?",
+                    "answer": "Altered mental status, apnea, facial trauma, untreated pneumothorax, hypotension."
+                },
+                {
+                    "category": "Features",
+                    "question": "Features of a COPD exacerbation?",
+                    "answer": "More cough, sputum or dyspnea; worsening hypoxemia; tachycardia; hypertension; cyanosis; altered mental status; hypercapnia; accessory muscles; pursed-lip exhalation."
+                },
+                {
+                    "category": "History",
+                    "question": "Severity history to ask?",
+                    "answer": "ED visits and admissions in the past year; ICU admission or intubation ever."
+                },
+                {
+                    "category": "Differentials",
+                    "question": "Poor oxygenation on low FiO2?",
+                    "answer": "Consider PE, pneumonia, ARDS, pulmonary edema."
+                },
+                {
+                    "category": "KPI",
+                    "question": "CPG 2.4 KPI?",
+                    "answer": "Bronchodilators for moderate to severe cases within 10 minutes of EMS arrival."
+                }
+            ],
+            "critical": [
+                {
+                    "id": "crit_2_4_1",
+                    "scenario": "A 70-year-old man with COPD is very short of breath. RR 32, SpO2 82% on room air, alert but tiring. Salbutamol and Combivent have been given with little effect.",
+                    "question": "What is the next step?",
+                    "options": [
+                        {
+                            "t": "Hydrocortisone, reassess, and consider CPAP (EMT-A) with Tele-EMS advice on settings",
+                            "f": "Correct. Nebulizers have failed and he is alert, with no CPAP contraindication."
+                        },
+                        {
+                            "t": "Oxygen to SpO2 100%",
+                            "f": "Target 88–92% to avoid hypercapnic respiratory failure."
+                        },
+                        {
+                            "t": "Magnesium sulphate",
+                            "f": "That is asthma treatment, not in CPG 2.4."
+                        },
+                        {
+                            "t": "Intubate now",
+                            "f": "Intubation is for arrest or deep unconsciousness (CPG 2.1)."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "If nebulizers are ineffective, consider CPAP; if inspiratory support is needed, BiPAP (AP). Keep SpO2 88–92%.",
+                    "kpi": "Bronchodilators for moderate to severe cases within 10 minutes of EMS arrival."
+                },
+                {
+                    "id": "crit_2_4_2",
+                    "scenario": "A COPD patient on high-flow oxygen from a bystander has SpO2 99% and is becoming drowsy.",
+                    "question": "What should you do with the oxygen?",
+                    "options": [
+                        {
+                            "t": "Keep high-flow oxygen: SpO2 is excellent",
+                            "f": "Hyperoxia risks hypercapnic respiratory failure in COPD."
+                        },
+                        {
+                            "t": "Titrate oxygen down to SpO2 88–92% and reassess closely",
+                            "f": "Correct. Drowsiness on high oxygen suggests hypercapnia."
+                        },
+                        {
+                            "t": "Remove all oxygen",
+                            "f": "Titrate rather than stop: aim for 88–92%."
+                        },
+                        {
+                            "t": "Start CPAP",
+                            "f": "Altered mental status is a contraindication to CPAP."
+                        }
+                    ],
+                    "correct": 1,
+                    "explanation": "Patients with moderate to severe COPD risk hypercapnic respiratory failure: titrate to SpO2 88–92% to prevent respiratory acidosis, organ dysfunction or coma.",
+                    "kpi": "Bronchodilators for moderate to severe cases within 10 minutes of EMS arrival."
+                },
+                {
+                    "id": "crit_2_4_3",
+                    "scenario": "A COPD patient needs 15 L/min via non-rebreather and still has SpO2 84%. She has a fever and focal crackles.",
+                    "question": "What does CPG 2.4 tell you to consider?",
+                    "options": [
+                        {
+                            "t": "Another cause, such as pneumonia, PE, ARDS or pulmonary edema",
+                            "f": "Correct. Failure to oxygenate on low FiO2 suggests a different or additional cause."
+                        },
+                        {
+                            "t": "That her oximeter is broken",
+                            "f": "Treat the patient, and consider other causes."
+                        },
+                        {
+                            "t": "Lowering oxygen to 2 L/min",
+                            "f": "She is hypoxic: titrate to 88–92%, not below."
+                        },
+                        {
+                            "t": "Only giving more salbutamol",
+                            "f": "Look for a different cause."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Consider other causes (pulmonary embolism, pneumonia, ARDS, pulmonary edema) if adequate oxygenation cannot be achieved with low FiO2.",
+                    "kpi": "Bronchodilators for moderate to severe cases within 10 minutes of EMS arrival."
                 }
             ]
         },
-
-        // ============================================================
-        // 2.5 INVASIVE VENTILATION – EXPANDED
-        // ============================================================
         {
-            id: "c2s5",
-            shortTitle: "2.5 Invasive Vent",
-            summary: `
-                <div class="sum-card">
-                    <h3 style="color:var(--accent-airway);"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../icons/sprite.svg#plug"/></svg> 2.5 Invasive Mechanical Ventilation</h3>
-                    <p><strong>Note:</strong> This section applies to Paramedics managing intubated patients.</p>
-
-                    <h4>1. Indications</h4>
-                    <ul>
-                        <li>Post-intubation management.</li>
-                        <li>GCS < 8 (inability to protect airway).</li>
-                        <li>Respiratory failure refractory to NIV.</li>
-                    </ul>
-
-                    <h4>2. Initial Ventilator Settings (Adult)</h4>
-                    <ul>
-                        <li><strong>Mode:</strong> SIMV or AC (Volume Control).</li>
-                        <li><strong>Tidal Volume (TV):</strong> 6-8 mL/kg of <em>Ideal Body Weight</em>.</li>
-                        <li><strong>Rate (f):</strong> 10-12 bpm (higher for acidosis/head injury, lower for asthma).</li>
-                        <li><strong>PEEP:</strong> 5 cmH₂O (higher if hypoxic/pulmonary edema).</li>
-                        <li><strong>FiO₂:</strong> 1.0 (100%) initially, then titrate to SpO₂ 94-98%.</li>
-                        <li><strong>I:E Ratio:</strong> 1:2 (standard). Adjust to 1:4 for Asthma/COPD.</li>
-                    </ul>
-
-                    <h4>3. Monitoring & D.O.P.E Mnemonic</h4>
-                    <p>If patient deteriorates (desaturation, hypotension, high pressure alarm):</p>
-                    <div class="highlight-box">
-                        <strong>D</strong> - Dislodgement (Tube moved?)<br>
-                        <strong>O</strong> - Obstruction (Secretions/kink?)<br>
-                        <strong>P</strong> - Pneumothorax (Decompression needed?)<br>
-                        <strong>E</strong> - Equipment (Ventilator/Oxygen failure?)
-                    </div>
-                    <p><strong>Action:</strong> Disconnect ventilator, bag manually with 100% O₂, assess chest.</p>
-                </div>
-            `,
-            flashcards: [
-                { category: "Settings", question: "What is the standard tidal volume for an adult on a ventilator?", answer: "6–8 mL/kg ideal body weight." },
-                { category: "Settings", question: "What is the initial respiratory rate for an adult?", answer: "10–12 breaths/min." },
-                { category: "Settings", question: "What is the typical initial PEEP setting?", answer: "5 cmH₂O." },
-                { category: "Settings", question: "What I:E ratio is used for asthma?", answer: "1:4 (prolonged expiration)." },
-                { category: "Troubleshooting", question: "DOPE mnemonic – what does D stand for?", answer: "Dislodgement (tube moved)." },
-                { category: "Troubleshooting", question: "DOPE mnemonic – what does O stand for?", answer: "Obstruction (kink, secretions)." },
-                { category: "Troubleshooting", question: "DOPE mnemonic – what does P stand for?", answer: "Pneumothorax." },
-                { category: "Troubleshooting", question: "DOPE mnemonic – what does E stand for?", answer: "Equipment failure." },
-                { category: "Alarms", question: "Causes of a high‑pressure alarm?", answer: "Kinked tube, secretions, pneumothorax, coughing, biting." },
-                { category: "Alarms", question: "Causes of a low‑pressure alarm?", answer: "Disconnection, cuff leak, tube dislodgement." }
-            ],
-            quiz: [
-                { q: "What is the recommended initial tidal volume setting for an adult on mechanical ventilation (volume‑controlled mode)?", options: ["10–12 mL/kg actual body weight", "6–8 mL/kg ideal body weight", "500 mL fixed for all adults", "4–6 mL/kg ideal body weight"], correct: 1, explanation: "To prevent ventilator‑induced lung injury (volutrauma), tidal volume should be 6–8 mL/kg of ideal body weight (IBW). IBW is based on height and gender, not actual weight." },
-                { q: "If a ventilated patient suddenly desaturates and becomes hypotensive, what is the FIRST action?", options: ["Increase FiO₂ to 100%", "Suction the endotracheal tube", "Disconnect the ventilator and manually bag the patient with 100% oxygen", "Increase PEEP"], correct: 2, explanation: "Disconnecting the ventilator and manually bagging allows you to assess lung compliance, feel for obstructions, and rule out ventilator malfunction. It is the first step in the DOPE mnemonic (Dislodgement, Obstruction, Pneumothorax, Equipment)." },
-                { q: "In the DOPE mnemonic, what does 'P' stand for?", options: ["PEEP", "Pneumonia", "Pneumothorax", "Position"], correct: 2, explanation: "P = Pneumothorax (especially tension pneumothorax), a life‑threatening cause of sudden deterioration in ventilated patients." },
-                { q: "A low‑pressure alarm on a ventilator usually indicates:", options: ["Kinked endotracheal tube", "Patient biting the tube", "Circuit disconnection or cuff leak", "Pneumothorax"], correct: 2, explanation: "Low pressure means the ventilator is meeting little resistance – typically due to a disconnection, leak, or cuff deflation." },
-                { q: "For an asthmatic patient on a ventilator, what I:E (inspiratory:expiratory) ratio is appropriate?", options: ["1:1", "1:2", "1:4", "2:1"], correct: 2, explanation: "Asthmatics need prolonged expiration to prevent air trapping (auto‑PEEP). A ratio of 1:4 or even 1:5 is often used." },
-                { q: "What is the purpose of PEEP (positive end‑expiratory pressure) in mechanical ventilation?", options: ["To increase tidal volume", "To prevent alveolar collapse at end‑expiration", "To decrease CO₂", "To increase respiratory rate"], correct: 1, explanation: "PEEP maintains alveolar patency at the end of expiration, improving oxygenation and preventing atelectasis." },
-                { q: "After intubation, waveform capnography shows a sudden drop to zero with no waveform. What is the most likely cause?", options: ["Hypotension", "Oesophageal intubation or tube dislodgement", "Bronchospasm", "Secretions in the tube"], correct: 1, explanation: "Sudden loss of capnography waveform suggests that CO₂ is not reaching the sensor – most often due to oesophageal intubation, dislodgement, or complete obstruction." },
-                { q: "What is the typical initial PEEP setting for an adult with normal lungs?", options: ["0 cmH₂O", "5 cmH₂O", "10 cmH₂O", "15 cmH₂O"], correct: 1, explanation: "Initial PEEP is usually 5 cmH₂O to prevent atelectasis. Higher levels are used for refractory hypoxaemia (e.g., ARDS)." },
-                { q: "Which of the following is a sign of tension pneumothorax in a ventilated patient?", options: ["Low‑pressure alarm", "Hypotension, high airway pressures, and absent breath sounds on one side", "Bradycardia and hypertension", "Decreased peak pressure"], correct: 1, explanation: "Tension pneumothorax presents with hypotension, high airway pressures (high‑pressure alarm), absent breath sounds, and possibly tracheal deviation." },
-                { q: "What is the ideal body weight (IBW) calculation used for?", options: ["Calculating drug doses", "Determining endotracheal tube size", "Setting tidal volume", "Setting PEEP"], correct: 2, explanation: "IBW is used to determine appropriate tidal volume (6–8 mL/kg IBW) to prevent lung injury." }
-            ],
-            critical: [
+            "id": "c2s5",
+            "shortTitle": "2.5 Invasive Vent",
+            "guide": {
+                "cpg": "2.5",
+                "group": "airway",
+                "groupLabel": "Airway and Breathing",
+                "title": "Invasive Ventilation",
+                "lead": "Listen to the lungs, decide whether they are normal, obstructive or restrictive (or the patient is in cardiac arrest), and start from that column of settings. Then titrate to SpO<sub>2</sub> &gt;94% and EtCO<sub>2</sub> 35–45 mmHg.",
+                "source": {
+                    "label": "CPG 2.5",
+                    "pages": "67–71",
+                    "pdf": "../pdf_sections/2_5_Invasive_Mechanical_Ventilation.pdf"
+                },
+                "sections": [
+                    {
+                        "type": "criteria",
+                        "title": "Who this applies to",
+                        "icon": "user",
+                        "include": [
+                            "Patients needing invasive ventilation: cardiac arrest (during CPR), obstructive lung disease (asthma, COPD, anaphylaxis), restrictive lung disease (pulmonary edema, ARDS, sepsis, pneumonia), or normal lungs."
+                        ],
+                        "exclude": [
+                            "No ventilator needed.",
+                            "Ventilator used for non-invasive ventilation (CPAP/BiPAP)."
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Auscultate: which lungs?",
+                        "icon": "stethoscope",
+                        "groups": [
+                            {
+                                "title": "Normal lungs",
+                                "items": [
+                                    "Clear lung sounds, no chest trauma, equal air entry."
+                                ]
+                            },
+                            {
+                                "title": "Obstructive",
+                                "items": [
+                                    "Wheezing, asthma or COPD, silent chest, anaphylaxis."
+                                ]
+                            },
+                            {
+                                "title": "Restrictive",
+                                "items": [
+                                    "Crackles, pulmonary edema, pulmonary contusion (chest trauma), ARDS (e.g. sepsis), pneumonia."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "table",
+                        "title": "Initial ventilator settings",
+                        "icon": "sliders-horizontal",
+                        "stack": true,
+                        "columns": [
+                            "Setting",
+                            "Normal",
+                            "Obstructive",
+                            "Restrictive",
+                            "During CPR"
+                        ],
+                        "rows": [
+                            [
+                                "Mode",
+                                "IPPV/SIMV",
+                                "IPPV/SIMV",
+                                "IPPV/SIMV",
+                                "IPPV/Manual"
+                            ],
+                            [
+                                "Rate",
+                                "12–15",
+                                "8–10",
+                                "15–25",
+                                "10"
+                            ],
+                            [
+                                "Tidal volume (mL/kg IBW)",
+                                "6–8",
+                                "6–8",
+                                "4–6",
+                                "6–8"
+                            ],
+                            [
+                                "Pmax",
+                                "25–30",
+                                "35–50",
+                                "30–40",
+                                "30–35"
+                            ],
+                            [
+                                "PEEP",
+                                "5",
+                                "5",
+                                "5–15",
+                                "5"
+                            ],
+                            [
+                                "I:E",
+                                "1:2",
+                                "1:3–1:4",
+                                "1:2",
+                                "1:2"
+                            ],
+                            [
+                                "FiO<sub>2</sub>",
+                                "1.0",
+                                "1.0",
+                                "1.0",
+                                "1.0"
+                            ]
+                        ],
+                        "notes": [
+                            "PEEP as in the management text. The flowchart shows 3–5 for obstructive lungs and 3 during CPR.",
+                            "If a setting is not available on the ventilator, consider a bag-valve-mask instead."
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Adjusting for the lungs",
+                        "icon": "wind",
+                        "groups": [
+                            {
+                                "title": "Obstructive",
+                                "items": [
+                                    "Lower rates, lower PEEP and longer I:E to allow exhalation.",
+                                    "Watch for auto-PEEP and air trapping.",
+                                    "Do not try to lower hypercapnia by raising the rate."
+                                ]
+                            },
+                            {
+                                "title": "Restrictive",
+                                "items": [
+                                    "Higher rates, more PEEP and shorter I:E for poor compliance."
+                                ]
+                            },
+                            {
+                                "title": "Cardiac arrest",
+                                "items": [
+                                    "Ventilate via an ET tube. A supraglottic airway is acceptable if it works well with no gastric inflation; take great care with it when the ambulance moves.",
+                                    "No EtCO<sub>2</sub> reading or low minute volumes: change to a bag-valve-mask.",
+                                    "After ROSC, switch to the settings for the patient's lung type."
+                                ]
+                            },
+                            {
+                                "title": "Children",
+                                "items": [
+                                    "Adjust rate and tidal volume for weight and age, using IBW; other settings unchanged."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "After starting",
+                        "icon": "activity",
+                        "items": [
+                            "Once stable, adjust FiO<sub>2</sub> to keep SpO<sub>2</sub> &gt;94%.",
+                            "Raise the head 30° unless hypotensive or contraindicated (reduces aspiration).",
+                            "Monitor SpO<sub>2</sub>, ECG and EtCO<sub>2</sub> continuously; target EtCO<sub>2</sub> 35–45 mmHg.",
+                            "Use a cuff pressure manometer when available to protect the trachea."
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Risks to prevent",
+                        "icon": "triangle-alert",
+                        "tone": "alert",
+                        "items": [
+                            "<b>Barotrauma or pneumothorax:</b> correct tidal volume for lung type; watch Pmax.",
+                            "<b>Over-ventilation and auto-PEEP:</b> avoid excessive rate or volume, especially in obstructive lungs.",
+                            "<b>Hypoxemia or hypercapnia:</b> titrate FiO<sub>2</sub> and confirm ventilation with EtCO<sub>2</sub>.",
+                            "<b>Aspiration:</b> head up 30°. <b>Infection:</b> sterile technique."
+                        ]
+                    },
+                    {
+                        "type": "groups",
+                        "title": "Reference",
+                        "icon": "book",
+                        "groups": [
+                            {
+                                "title": "Ideal body weight (IBW)",
+                                "items": [
+                                    "Males: 50 + 0.91 × (height in cm − 152.4).",
+                                    "Females: 45.5 + 0.91 × (height in cm − 152.4).",
+                                    "Always use IBW for tidal volume."
+                                ]
+                            },
+                            {
+                                "title": "Modes",
+                                "items": [
+                                    "<b>IPPV:</b> a set tidal volume with each breath, controlled by the ventilator.",
+                                    "<b>SIMV:</b> mandatory breaths plus patient-triggered breaths; useful when weaning."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "list",
+                        "title": "Key performance indicator",
+                        "icon": "chart-no-axes-column",
+                        "items": [
+                            "Document initial ventilator settings for every patient on a ventilator."
+                        ]
+                    },
+                    {
+                        "type": "related",
+                        "title": "Related CPGs",
+                        "icon": "link",
+                        "items": [
+                            {
+                                "label": "2.1 Airway Management",
+                                "href": "c2.html?section=c2s1"
+                            },
+                            {
+                                "label": "4.3 Adult Cardiac Arrest",
+                                "href": "c4-3.html"
+                            },
+                            {
+                                "label": "4.7 Post-ROSC Care",
+                                "href": "c4-7.html"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "quiz": [
                 {
-                    id: "crit_2_5_1",
-                    scenario: "You have intubated a trauma patient. En route, the 'High Pressure' alarm sounds constantly, SpO2 drops to 85%, and BP drops to 70/40. Trachea is deviated.",
-                    question: "What is the priority intervention?",
-                    options: [
-                        { t: "Suction the tube", f: "Incorrect. Signs point to tension pneumo." },
-                        { t: "Needle Decompression (Thoracostomy)", f: "Correct. High pressure + shock + deviation = Tension Pneumothorax." },
-                        { t: "Increase PEEP", f: "Dangerous. Will worsen hypotension." }
+                    "q": "What tidal volume is used for normal lungs?",
+                    "options": [
+                        "4–6 mL/kg IBW",
+                        "6–8 mL/kg IBW",
+                        "10–12 mL/kg actual weight",
+                        "500 mL for all adults"
                     ],
-                    correct: 1,
-                    explanation: "This is a classic description of Tension Pneumothorax in a ventilated patient (P in DOPE). Immediate decompression is required.",
-                    kpi: "Recognition of Tension Pneumothorax in ventilated patient"
+                    "correct": 1,
+                    "explanation": "Normal and obstructive lungs: 6–8 mL/kg IBW; restrictive: 4–6 mL/kg IBW."
                 },
                 {
-                    id: "crit_2_5_2",
-                    scenario: "You are transporting an intubated patient with a head injury. Suddenly, the ventilator low-pressure alarm sounds, and the patient's SpO2 drops to 80%. You notice the chest is not rising.",
-                    question: "What is your immediate action?",
-                    options: [
-                        { t: "Check the tube position and reconnect if dislodged", f: "Correct. Likely disconnection." },
-                        { t: "Suction the tube", f: "Not the first step." },
-                        { t: "Increase FiO2", f: "Address the cause first." },
-                        { t: "Start chest compressions", f: "Not indicated yet." }
+                    "q": "What tidal volume is used for restrictive lungs?",
+                    "options": [
+                        "4–6 mL/kg IBW",
+                        "6–8 mL/kg IBW",
+                        "8–10 mL/kg IBW",
+                        "10–12 mL/kg IBW"
                     ],
-                    correct: 0,
-                    explanation: "Low-pressure alarm with no chest rise suggests disconnection or cuff leak. Quickly check tube position and reconnect.",
-                    kpi: "Rapid recognition of disconnection"
+                    "correct": 0,
+                    "explanation": "Restrictive lungs: 4–6 mL/kg IBW."
+                },
+                {
+                    "q": "What respiratory rate is set for obstructive lungs?",
+                    "options": [
+                        "8–10",
+                        "12–15",
+                        "15–25",
+                        "20–30"
+                    ],
+                    "correct": 0,
+                    "explanation": "Obstructive: 8–10; normal: 12–15; restrictive: 15–25; CPR: 10."
+                },
+                {
+                    "q": "What I:E ratio is used for obstructive lungs?",
+                    "options": [
+                        "1:1",
+                        "1:2",
+                        "1:3–1:4",
+                        "2:1"
+                    ],
+                    "correct": 2,
+                    "explanation": "Longer I:E (1:3–1:4) gives time to exhale and limits air trapping."
+                },
+                {
+                    "q": "An asthmatic on the ventilator has a high EtCO2. Should you raise the rate?",
+                    "options": [
+                        "Yes",
+                        "No – do not try to lower hypercapnia by raising the rate in obstructive lungs",
+                        "Only double it",
+                        "Only in children"
+                    ],
+                    "correct": 1,
+                    "explanation": "Raising the rate risks auto-PEEP and air trapping."
+                },
+                {
+                    "q": "What PEEP range is used for restrictive lungs?",
+                    "options": [
+                        "0",
+                        "3",
+                        "5",
+                        "5–15"
+                    ],
+                    "correct": 3,
+                    "explanation": "Restrictive lungs need more PEEP: 5–15."
+                },
+                {
+                    "q": "What ventilator rate is set during CPR?",
+                    "options": [
+                        "6",
+                        "10",
+                        "15",
+                        "20"
+                    ],
+                    "correct": 1,
+                    "explanation": "CPR: IPPV/Manual, rate 10."
+                },
+                {
+                    "q": "During CPR, the EtCO2 reading is lost and minute volumes are low on the ventilator. What do you do?",
+                    "options": [
+                        "Increase Pmax",
+                        "Change to a bag-valve-mask",
+                        "Stop ventilating",
+                        "Raise the rate to 30"
+                    ],
+                    "correct": 1,
+                    "explanation": "If EtCO2 cannot be obtained or minute volumes are low, consider changing to a BVM."
+                },
+                {
+                    "q": "Can a ventilator be used through a supraglottic airway during CPR?",
+                    "options": [
+                        "Never",
+                        "Yes, if it is working correctly with no gastric inflation, with care during movement",
+                        "Only in children",
+                        "Only with Pmax 50"
+                    ],
+                    "correct": 1,
+                    "explanation": "Acceptable if functioning correctly and no gastric inflation; significant care during ambulance movement."
+                },
+                {
+                    "q": "Once stable on the ventilator, what is FiO2 titrated to?",
+                    "options": [
+                        "SpO2 88–92%",
+                        "SpO2 >94%",
+                        "SpO2 100%",
+                        "EtCO2 only"
+                    ],
+                    "correct": 1,
+                    "explanation": "Adjust FiO2 to maintain SpO2 >94%."
+                },
+                {
+                    "q": "What EtCO2 target is given in CPG 2.5?",
+                    "options": [
+                        "20–30 mmHg",
+                        "35–45 mmHg",
+                        "45–55 mmHg",
+                        ">10 mmHg"
+                    ],
+                    "correct": 1,
+                    "explanation": "Ensure capnography targets (e.g. EtCO2 35–45 mmHg) are met."
+                },
+                {
+                    "q": "How high should the head of the bed be raised, unless contraindicated?",
+                    "options": [
+                        "Flat",
+                        "15°",
+                        "30°",
+                        "60°"
+                    ],
+                    "correct": 2,
+                    "explanation": "Raise the head 30° unless hypotensive or otherwise contraindicated, to reduce aspiration."
+                },
+                {
+                    "q": "Which formula gives ideal body weight for a male?",
+                    "options": [
+                        "50 + 0.91 × (height in cm − 152.4)",
+                        "45.5 + 0.91 × (height in cm − 152.4)",
+                        "Height in cm − 100",
+                        "Actual weight × 0.8"
+                    ],
+                    "correct": 0,
+                    "explanation": "Males: 50 + 0.91 × (height − 152.4); females: 45.5 + 0.91 × (height − 152.4). Use IBW for tidal volume."
+                },
+                {
+                    "q": "What is the KPI in CPG 2.5?",
+                    "options": [
+                        "Intubate within 5 minutes",
+                        "Document initial ventilator settings for every patient on a ventilator",
+                        "Use SIMV for all",
+                        "Keep Pmax under 20"
+                    ],
+                    "correct": 1,
+                    "explanation": "KPI: document initial ventilator settings for all patients on a ventilator."
+                }
+            ],
+            "flashcards": [
+                {
+                    "category": "Settings",
+                    "question": "Normal lungs settings?",
+                    "answer": "IPPV/SIMV; rate 12–15; Vt 6–8 mL/kg IBW; Pmax 25–30; PEEP 5; I:E 1:2; FiO2 1.0."
+                },
+                {
+                    "category": "Settings",
+                    "question": "Obstructive lungs settings?",
+                    "answer": "IPPV/SIMV; rate 8–10; Vt 6–8 mL/kg IBW; Pmax 35–50; PEEP 5 (flowchart 3–5); I:E 1:3–1:4; FiO2 1.0."
+                },
+                {
+                    "category": "Settings",
+                    "question": "Restrictive lungs settings?",
+                    "answer": "IPPV/SIMV; rate 15–25; Vt 4–6 mL/kg IBW; Pmax 30–40; PEEP 5–15; I:E 1:2; FiO2 1.0."
+                },
+                {
+                    "category": "Settings",
+                    "question": "CPR settings?",
+                    "answer": "IPPV/Manual; rate 10; Vt 6–8 mL/kg IBW; Pmax 30–35; PEEP 5 (flowchart 3); I:E 1:2; FiO2 1.0."
+                },
+                {
+                    "category": "Lung type",
+                    "question": "Signs of obstructive lungs?",
+                    "answer": "Wheezing, asthma/COPD, silent chest, anaphylaxis."
+                },
+                {
+                    "category": "Lung type",
+                    "question": "Signs of restrictive lungs?",
+                    "answer": "Crackles, pulmonary edema, pulmonary contusion, ARDS, pneumonia."
+                },
+                {
+                    "category": "Obstructive",
+                    "question": "Ventilating obstructive lungs?",
+                    "answer": "Lower rate, lower PEEP, longer I:E; watch for auto-PEEP; don't raise the rate to treat hypercapnia."
+                },
+                {
+                    "category": "Cardiac arrest",
+                    "question": "Ventilator problems during CPR?",
+                    "answer": "No EtCO2 or low minute volume: change to a BVM. After ROSC: settings for the lung type."
+                },
+                {
+                    "category": "Targets",
+                    "question": "Targets on the ventilator?",
+                    "answer": "SpO2 >94% (titrate FiO2); EtCO2 35–45 mmHg."
+                },
+                {
+                    "category": "Safety",
+                    "question": "Aspiration prevention?",
+                    "answer": "Head of bed 30° unless hypotensive or contraindicated."
+                },
+                {
+                    "category": "IBW",
+                    "question": "IBW formulas?",
+                    "answer": "Male 50 + 0.91 × (cm − 152.4); female 45.5 + 0.91 × (cm − 152.4)."
+                },
+                {
+                    "category": "KPI",
+                    "question": "CPG 2.5 KPI?",
+                    "answer": "Document initial ventilator settings for every patient on a ventilator."
+                }
+            ],
+            "critical": [
+                {
+                    "id": "crit_2_5_1",
+                    "scenario": "An intubated patient with life-threatening asthma has a silent chest. You are setting up the ventilator.",
+                    "question": "Which starting settings fit?",
+                    "options": [
+                        {
+                            "t": "Rate 8–10, Vt 6–8 mL/kg IBW, I:E 1:3–1:4, Pmax 35–50",
+                            "f": "Correct. Obstructive lungs need a low rate and long expiration."
+                        },
+                        {
+                            "t": "Rate 15–25, Vt 4–6 mL/kg IBW, PEEP 5–15",
+                            "f": "These are restrictive-lung settings."
+                        },
+                        {
+                            "t": "Rate 20 to blow off CO2",
+                            "f": "Do not raise the rate to treat hypercapnia in obstructive lungs."
+                        },
+                        {
+                            "t": "Rate 12–15, I:E 1:2",
+                            "f": "These are normal-lung settings; asthma needs longer expiration."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Obstructive pathology: lower respiratory rate, lower PEEP and longer I:E ratio to permit exhalation, and monitor closely for auto-PEEP.",
+                    "kpi": "Document initial ventilator settings for every patient on a ventilator."
+                },
+                {
+                    "id": "crit_2_5_2",
+                    "scenario": "A patient with acute pulmonary edema has been intubated. Crackles throughout, SpO2 88% on the ventilator.",
+                    "question": "Which settings fit best?",
+                    "options": [
+                        {
+                            "t": "Rate 15–25, Vt 4–6 mL/kg IBW, PEEP 5–15, I:E 1:2",
+                            "f": "Correct. Restrictive lungs need higher rates and PEEP, with small tidal volumes."
+                        },
+                        {
+                            "t": "Rate 8–10, I:E 1:4",
+                            "f": "These are obstructive settings."
+                        },
+                        {
+                            "t": "Vt 10 mL/kg actual body weight",
+                            "f": "Use IBW; restrictive lungs take 4–6 mL/kg."
+                        },
+                        {
+                            "t": "PEEP 0",
+                            "f": "Restrictive lungs need more PEEP, not less."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "Restrictive lung pathology requires higher rates and PEEP for poor compliance, with tidal volume 4–6 mL/kg IBW. Titrate FiO2 to SpO2 >94%.",
+                    "kpi": "Document initial ventilator settings for every patient on a ventilator."
+                },
+                {
+                    "id": "crit_2_5_3",
+                    "scenario": "During CPR you are using the ventilator through an LT airway. The EtCO2 reading disappears and the displayed minute volume is very low.",
+                    "question": "What should you do?",
+                    "options": [
+                        {
+                            "t": "Change to bag-valve-mask ventilation and check the airway",
+                            "f": "Correct. No EtCO2 or low minute volumes on the ventilator means switch to a BVM."
+                        },
+                        {
+                            "t": "Raise Pmax to 60",
+                            "f": "That risks barotrauma and does not fix a failing airway."
+                        },
+                        {
+                            "t": "Continue unchanged",
+                            "f": "Act on the loss of EtCO2."
+                        },
+                        {
+                            "t": "Pause CPR to troubleshoot",
+                            "f": "Keep compressions going."
+                        }
+                    ],
+                    "correct": 0,
+                    "explanation": "During cardiac arrest, ensure the ET or supraglottic airway is functioning; if EtCO2 cannot be obtained or minute volumes are low, consider a BVM.",
+                    "kpi": "Document initial ventilator settings for every patient on a ventilator."
                 }
             ]
         }

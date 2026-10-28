@@ -49,6 +49,16 @@
             </tr>`).join('')}</tbody></table>`;
     }
 
+    // The phone form of a wide table: one card per column, rows as label/value.
+    function stackedTable(s) {
+        const rows = s.rows.filter(r => !r.group);
+        return `<div class="g-stack">${s.columns.slice(1).map((col, i) => `
+            <div class="g-stack-card"><h4>${col}</h4><dl>${rows
+                .filter(r => r[i + 1])
+                .map(r => `<dt>${r[0]}</dt><dd>${r[i + 1]}</dd>`).join('')}</dl></div>`).join('')}
+        </div>`;
+    }
+
     function step(s, n) {
         // A step that is one drug shows its dose on a line, not as a table.
         const single = s.doses && s.doses.length === 1 && s.doses[0].drug === s.title && s.doses[0].level === s.level ? s.doses[0] : null;
@@ -94,13 +104,15 @@
         // A reference table from the CPG (normal vital signs, GCS, …).
         // Scrolls inside its box on phones; `notes` follow as a list.
         // A row of the form { group: "…" } is a sub-heading row.
-        table: (s) => `<div class="g-table-wrap" tabindex="0" role="region" aria-label="${s.title}">
+        // `stack: true` (wide tables): on phones each column becomes a card.
+        table: (s) => `<div class="g-table-wrap${s.stack ? ' g-has-stack' : ''}" tabindex="0" role="region" aria-label="${s.title}">
             <table class="g-table">
                 <thead><tr>${s.columns.map(c => `<th scope="col">${c}</th>`).join('')}</tr></thead>
                 <tbody>${s.rows.map(r => r.group
                     ? `<tr class="g-tgroup"><th colspan="${s.columns.length}" scope="rowgroup">${r.group}</th></tr>`
                     : `<tr>${r.map((c, i) => i ? `<td${NUMERIC.test(c) ? ' class="g-n"' : ''}>${c}</td>` : `<th scope="row">${c}</th>`).join('')}</tr>`).join('')}</tbody>
             </table></div>
+            ${s.stack ? stackedTable(s) : ''}
             ${list(s.notes)}`,
 
         groups: (s) => s.groups.map(g => `<div class="g-group"><h4>${g.title}</h4>${list(g.items)}</div>`).join(''),
