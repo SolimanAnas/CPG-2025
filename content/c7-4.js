@@ -1,373 +1,772 @@
-/* ========== Chapter 7.4 � Limb Injuries ========== */
+/* ========== CPG 7.4 – Limb Injuries ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c7-4",
-    title: "Limb Injuries",
-    shortTitle: "7.4 Limb Injuries",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Limb Injuries</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Control external hemorrhage and prevent hemorrhagic shock.</li>
-                <li>Stabilize fractures and dislocations to minimize further injury and pain.</li>
-                <li>Manage pain effectively while maintaining patient safety.</li>
-                <li>Assess and maintain neurovascular function in affected limbs.</li>
-                <li>Facilitate timely transport to appropriate facilities for definitive care.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients with suspected or confirmed fractures, dislocations, or soft tissue injuries to extremities.</li>
-                <li>Traumatic amputations or open wounds with potential for significant bleeding.</li>
-                <li>Limb injuries from crush mechanisms or high-energy trauma.</li>
-                <li>Neurovascular compromise or compartment syndrome suspicion.</li>
-                <li>Scene information indicating mechanism likely to cause limb injury.</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Limbs which are entrapped (see Crush Injury CPG).</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Initial Impression:</strong> Scene safety, mechanism of injury, energy involved; number of patients, need for additional resources.</li>
-                <li><strong>Airway & Breathing:</strong> Ensure airway patency, assess for associated chest trauma; administer oxygen if SpO2 <94% or respiratory distress.</li>
-                <li><strong>Circulation & Perfusion:</strong> Check for external bleeding, signs of shock; evaluate pulses, capillary refill, skin color/temperature in affected limb.</li>
-                <li><strong>Neurovascular Status (CMS):</strong> Assess sensation, motor function, distal pulses; check for deformity, swelling, crepitus, open wounds.</li>
-                <li><strong>Compartment Syndrome Signs:</strong> Pain on passive stretch, pallor, pulselessness, paresthesia, paralysis (late signs).</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for life-threatening hemorrhage, hypotensive shock, neurovascular compromise.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Primary Survey:</strong> Use C-ABC algorithm (Catastrophic Hemorrhage, Airway, Breathing, Circulation). Focus on catastrophic bleeding, airway obstruction, tension pneumothorax, or signs of shock.</li>
-                <li><strong>Hemorrhage Control:</strong> Apply direct pressure, tourniquet if uncontrolled bleeding; use hemostatic agents for junctional wounds.</li>
-                <li><strong>Secondary Survey:</strong> Expose affected limb, assess CMS (Color, Movement, Sensation).</li>
-                <li><strong>Pain Management:</strong> Assess and administer analgesia per Pain Management CPG; consider ALS back-up for severe pain.</li>
-                <li><strong>IV Access & Fluid Resuscitation:</strong> Manage shock as per General Trauma Management CPG.</li>
-                <li><strong>Splinting and Immobilization:</strong> Splint fractures/dislocations in anatomic position; realign if neurovascular compromise, with analgesia.</li>
-                <li><strong>Limb Amputations:</strong> Stump care: cover with moist sterile dressing, apply moderate compression; apply tourniquet if bleeding not controlled. Amputated part: wrap in moist sterile gauze, place in plastic bag, then surround with ice water mixture (not direct ice).</li>
-                <li><strong>Impaled Objects:</strong> Do not remove; secure in place with bulky dressing.</li>
-                <li><strong>Femur Fractures:</strong> Traction splints for isolated mid-shaft femur fractures; may be used on distal third with careful assessment; delay transfer only to apply splint if no other time-critical injuries.</li>
-                <li><strong>Dislocations:</strong> Anterior shoulder and patella dislocations may be reduced (if no fracture suspected); use appropriate technique; other dislocations splinted in place. Pain management for reduction: methoxyflurane as minimum.</li>
-                <li><strong>Patient Reassessment:</strong> Reassess limb CMS immediately after splinting and every 15 minutes.</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li>Ensure scene safety before approaching patient.</li>
-                <li>Avoid manipulation without analgesia if possible.</li>
-                <li>Reassess neurovascular status after splinting.</li>
-                <li>Use caution with tourniquets; document time applied.</li>
-                <li>Prevent hypothermia by covering patient.</li>
-                <li>Be prepared for deterioration during transport.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>The use of a tourniquet for uncontrolled limb bleeding is exceptionally important. Ensure tourniquets are applied when indicated.</li>
-                <li>Manipulation of fractured limbs to apply a splint will likely increase pain. Ensure adequate analgesia is administered prior to splinting.</li>
-                <li>Traction splint for mid-shaft femur fracture limits blood loss and pain; it is appropriate to delay transfer to apply it, providing there are no other signs/symptoms that require immediate transfer.</li>
-                <li>Reduction of anterior shoulder dislocation: position patient supine, flex elbow to 90�, apply gentle longitudinal traction, then slowly externally rotate forearm until reduction occurs.</li>
-                <li>Patella dislocation reduction: extend knee while applying medial pressure to lateral edge of patella.</li>
-                <li>Amputated part viability: cooling slows chemical processes and extends viability from 4 hours to up to 18 hours.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Age, gender, weight.</li>
-                <li>Limb injury description, mechanism.</li>
-                <li>Affected limb, deformity, neurovascular status (CMS).</li>
-                <li>Vitals, pain score, bleeding assessment.</li>
-                <li>Hemorrhage control, splinting, analgesia.</li>
-                <li>Time of tourniquet application (if used).</li>
-                <li>Amputated part management (if applicable).</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Apply a traction splint for mid-shaft fracture femurs, when no time-critical injuries are present.</li>
-                <li>Document initial and post-treatment pain score.</li>
-                <li>Reassess CMS after splinting.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c7-4",
+    "title": "Limb Injuries",
+    "shortTitle": "7.4 Limb Injuries",
+    "guide": {
+        "cpg": "7.4",
+        "group": "trauma",
+        "groupLabel": "Trauma",
+        "title": "Limb Injuries",
+        "lead": "Stop major bleeding first (a tourniquet when it is uncontrolled), then expose, give analgesia before you move the limb, splint, and recheck colour, movement and sensation. A mid-shaft femur gets a traction splint. An AP may reduce anterior shoulder and patella dislocations.",
+        "source": {
+            "label": "CPG 7.4",
+            "pages": "228–232",
+            "pdf": "../pdf_sections/7_4_Limb_Injuries.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Suspected or confirmed limb fractures, dislocations or soft tissue injuries.",
+                    "Traumatic amputations or open wounds that may bleed heavily.",
+                    "Neurovascular compromise or suspected compartment syndrome; high-energy or crush mechanism."
+                ],
+                "exclude": [
+                    "Entrapped limbs: Crush Injuries CPG."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "stethoscope",
+                "groups": [
+                    {
+                        "title": "Primary survey",
+                        "items": [
+                            "C-ABC: catastrophic bleeding, airway, tension pneumothorax, shock.",
+                            "Oxygen if SpO<sub>2</sub> &lt;94% or respiratory distress."
+                        ]
+                    },
+                    {
+                        "title": "The limb",
+                        "items": [
+                            "Expose and support. CMS: colour, movement, sensation (flowchart: PMS); distal pulses, capillary refill.",
+                            "Deformity, swelling, crepitus, open wounds."
+                        ]
+                    },
+                    {
+                        "title": "Compartment syndrome",
+                        "items": [
+                            "Pain on passive stretch, pallor, pulselessness, paresthesia, paralysis."
+                        ]
+                    },
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "Life-threatening hemorrhage, hypotensive shock, neurovascular compromise."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "Hemorrhage control",
+                        "text": "Direct pressure; tourniquet for uncontrolled bleeding (note the time); hemostatic agents for junctional wounds."
+                    },
+                    {
+                        "title": "Pain before movement",
+                        "text": "Analgesia per the Pain Management CPG before splinting; request ALS routinely for severe pain."
+                    },
+                    {
+                        "title": "Shock",
+                        "text": "IV access and fluid as per the General Trauma Management CPG. Femur fractures can bleed heavily."
+                    },
+                    {
+                        "title": "Dress and splint",
+                        "text": "Dress open wounds. Splint fractures and dislocations in the anatomic position; realign only for neurovascular compromise, with analgesia."
+                    },
+                    {
+                        "title": "Impaled objects",
+                        "text": "Do not remove: removal can cause severe hemorrhage. Secure in place with a bulky dressing."
+                    },
+                    {
+                        "title": "Reassess CMS",
+                        "text": "Immediately after splinting, then every 15 minutes."
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Femur fractures",
+                "icon": "bone",
+                "groups": [
+                    {
+                        "title": "Traction splint (EMT)",
+                        "items": [
+                            "Routinely for isolated mid-shaft femur fractures; it limits blood loss, so delaying transfer to apply it is appropriate unless other injuries need immediate transfer.",
+                            "May be used for distal-third fractures after careful assessment that the knee joint is not involved.",
+                            "Consider ALS for the pain of application."
+                        ]
+                    },
+                    {
+                        "title": "Patella fracture",
+                        "items": [
+                            "Splint in the position found."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Amputations",
+                "icon": "bandage",
+                "groups": [
+                    {
+                        "title": "Stump",
+                        "items": [
+                            "Moist sterile dressing; uniform moderate pressure with an elastic or compression dressing; tourniquet if bleeding continues."
+                        ]
+                    },
+                    {
+                        "title": "Amputated part",
+                        "items": [
+                            "Retrieve it unless that significantly delays transport.",
+                            "Wrap in moist sterile dressing, place in a plastic bag, then surround the bag with ice and water.",
+                            "Never ice alone, never dry ice, no direct contact with ice.",
+                            "Cooling extends viability from 4 hours to up to 18 hours."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Dislocation reduction (AP)",
+                "icon": "hand",
+                "steps": [
+                    {
+                        "title": "Which dislocations",
+                        "level": "AP",
+                        "text": "Anterior shoulder and patella dislocations without a suspected fracture may be reduced. Splint all others in place. Penthrox at least for analgesia."
+                    },
+                    {
+                        "title": "Anterior shoulder",
+                        "level": "AP",
+                        "text": "Supine or sitting upright. Flex the elbow to 90 degrees and apply gentle, steady longitudinal traction; keep it on while you slowly externally rotate the forearm to about 70–90 degrees or until resistance. Pause to let muscles relax if painful."
+                    },
+                    {
+                        "title": "Lateral patella",
+                        "level": "AP",
+                        "text": "Supine with the hip flexed about 20–30 degrees (or sitting with the leg supported). Slowly extend the knee while pushing the lateral edge of the patella medially; it often reduces with a clunk."
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Safety",
+                "icon": "triangle-alert",
+                "items": [
+                    "Apply tourniquets whenever limb bleeding is uncontrolled: this matters enormously. Document the time.",
+                    "Avoid manipulation without analgesia; recheck neurovascular status after splinting.",
+                    "Keep the patient warm and be ready for deterioration en route."
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Tools",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Drug calculator: methoxyflurane",
+                                "sub": "Analgesia for reductions and splinting",
+                                "href": "../pages/drug-calculator.html?drug=Methoxyflurane%20(Penthrox)",
+                                "icon": "pill"
+                            },
+                            {
+                                "label": "Pediatric drug calculator: morphine",
+                                "sub": "Severe pain",
+                                "href": "../pages/drug-calculator.html?drug=Morphine",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "Traction splint for mid-shaft femur fractures when no time-critical injuries are present."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "7.1 General Trauma Management",
+                        "href": "c7-1.html"
+                    },
+                    {
+                        "label": "7.3 Crush Injuries",
+                        "href": "c7-3.html"
+                    },
+                    {
+                        "label": "6.12 Pain Management",
+                        "href": "c6-12.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first step in managing a patient with a traumatic limb injury?",
-            options: ["Splint the limb", "Control catastrophic hemorrhage", "Obtain X-ray", "Administer pain medication"],
-            correct: 1,
-            explanation: "The C-ABC approach prioritizes Catastrophic Hemorrhage control before other interventions."
+            "q": "What comes first with a limb injury?",
+            "options": [
+                "Control major bleeding",
+                "Splint",
+                "X-ray",
+                "Reduce the dislocation"
+            ],
+            "correct": 0,
+            "explanation": "C-ABC first."
         },
         {
-            q: "What is the preferred method for controlling uncontrolled arterial bleeding from a limb?",
-            options: ["Direct pressure", "Tourniquet", "Hemostatic dressing", "Elevation"],
-            correct: 1,
-            explanation: "A tourniquet is indicated for uncontrolled arterial limb bleeding."
+            "q": "Uncontrolled limb bleeding despite pressure. What do you use?",
+            "options": [
+                "Tourniquet",
+                "Elevation only",
+                "Ice",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "Document the time applied."
         },
         {
-            q: "A patient with a mid-shaft femur fracture should have which intervention?",
-            options: ["Pelvic binder", "Traction splint", "Long leg splint", "KED"],
-            correct: 1,
-            explanation: "Traction splints are routinely applied to isolated mid-shaft femur fractures to reduce pain and blood loss."
+            "q": "Isolated mid-shaft femur fracture. Which splint?",
+            "options": [
+                "Traction splint",
+                "Pelvic binder",
+                "Sling",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "A KPI when no time-critical injuries."
         },
         {
-            q: "What is the dose of morphine for an adult with severe pain from a limb injury?",
-            options: ["2.5 mg IV increments", "10 mg IV push", "5 mg IM", "0.1 mg/kg"],
-            correct: 0,
-            explanation: "Morphine is titrated in 2.5 mg IV increments every 5-10 minutes."
+            "q": "What are junctional wounds treated with?",
+            "options": [
+                "Hemostatic agents",
+                "Tourniquet always",
+                "Ice",
+                "Nothing"
+            ],
+            "correct": 0,
+            "explanation": "With direct pressure."
         },
         {
-            q: "How should an amputated part be preserved for transport?",
-            options: ["Place directly on ice", "Wrap in dry gauze and place on ice", "Wrap in moist sterile gauze, place in plastic bag, then surround with ice water mixture", "Discard"],
-            correct: 2,
-            explanation: "The amputated part should be wrapped in moist sterile gauze, placed in a plastic bag, then surrounded by ice water (not direct ice) to preserve viability."
+            "q": "How is an amputated part preserved?",
+            "options": [
+                "Moist sterile dressing, plastic bag, surrounded by ice and water",
+                "Directly on ice",
+                "Dry ice",
+                "In a dry bag at room temperature only"
+            ],
+            "correct": 0,
+            "explanation": "Never in direct contact with ice."
         },
         {
-            q: "What is the target SpO2 for a patient with a limb injury?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "How long can cooling extend viability?",
+            "options": [
+                "From 4 to up to 18 hours",
+                "From 1 to 2 hours",
+                "Indefinitely",
+                "It does not help"
+            ],
+            "correct": 0,
+            "explanation": "Cooling slows chemical processes."
         },
         {
-            q: "Which of the following is a sign of compartment syndrome?",
-            options: ["Pain on passive stretch", "Pulselessness", "Paresthesia", "All of the above"],
-            correct: 3,
-            explanation: "Compartment syndrome presents with the 5 P's: pain (especially on passive stretch), pallor, pulselessness, paresthesia, paralysis."
+            "q": "Which is a sign of compartment syndrome?",
+            "options": [
+                "Pain on passive stretch",
+                "Warm pink limb",
+                "Normal sensation",
+                "Strong pulse"
+            ],
+            "correct": 0,
+            "explanation": "Also pallor, pulselessness, paresthesia, paralysis."
         },
         {
-            q: "What is the preferred position for reducing an anterior shoulder dislocation?",
-            options: ["Sitting upright with arm adducted", "Supine with elbow flexed 90�, apply gentle traction and external rotation", "Prone with arm hanging", "Standing with arm raised"],
-            correct: 1,
-            explanation: "The technique involves supine position, elbow flexion, gentle longitudinal traction, then slow external rotation of the forearm."
+            "q": "Who may reduce an anterior shoulder dislocation?",
+            "options": [
+                "AP",
+                "EMR",
+                "EMT",
+                "Any responder"
+            ],
+            "correct": 0,
+            "explanation": "Without suspected fracture."
         },
         {
-            q: "A patient with a fractured femur has a BP of 85/50. What is the likely cause and next step?",
-            options: ["Hemorrhage from fracture; give fluid bolus", "Cardiogenic shock; give dopamine", "Tension pneumothorax; decompress", "Neurogenic shock; give fluids"],
-            correct: 0,
-            explanation: "Femur fractures can lose up to 1-2 L of blood; fluid resuscitation is indicated."
+            "q": "What is the shoulder reduction technique?",
+            "options": [
+                "Elbow flexed 90°, steady traction, slow external rotation",
+                "Forceful jerk",
+                "Internal rotation",
+                "Pull the arm overhead"
+            ],
+            "correct": 0,
+            "explanation": "Maintain traction while rotating."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with hemorrhagic shock from a limb injury?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, with reassessment after each bolus."
+            "q": "Femur fracture with BP 85/50. What do you do?",
+            "options": [
+                "Treat shock per the General Trauma CPG; traction splint",
+                "Ignore the BP",
+                "Pelvic binder only",
+                "Reduce the femur forcibly"
+            ],
+            "correct": 0,
+            "explanation": "Femur fractures may bleed heavily."
         },
         {
-            q: "How should an impaled object in a limb be managed?",
-            options: ["Remove immediately", "Cut the object flush with the skin", "Secure in place with bulky dressing", "Apply traction to remove"],
-            correct: 2,
-            explanation: "Impaled objects should not be removed; they should be secured in place with a bulky dressing."
+            "q": "An impaled object in the thigh. What do you do?",
+            "options": [
+                "Secure it in place with a bulky dressing",
+                "Remove it",
+                "Cut it flush and remove",
+                "Twist it out"
+            ],
+            "correct": 0,
+            "explanation": "Removal can cause severe hemorrhage."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with a limb injury and signs of shock?",
-            options: ["10 mL/kg", "20 mL/kg", "40 mL/kg", "5 mL/kg"],
-            correct: 1,
-            explanation: "Initial bolus is 20 mL/kg crystalloid; may repeat up to 60 mL/kg total."
+            "q": "When should CMS be reassessed?",
+            "options": [
+                "Immediately after splinting and every 15 minutes",
+                "Once",
+                "Hourly",
+                "Only on arrival"
+            ],
+            "correct": 0,
+            "explanation": "Specific reassessment point."
         },
         {
-            q: "Which of the following is a red flag requiring ALS back-up in a limb injury?",
-            options: ["Isolated finger fracture", "Severe pain (7-10/10)", "Minor laceration", "Contusion"],
-            correct: 1,
-            explanation: "Severe pain may require advanced analgesia and is an indication for ALS back-up."
+            "q": "What does CMS stand for?",
+            "options": [
+                "Colour, movement, sensation",
+                "Capillary, muscle, skin",
+                "Circulation, mobility, swelling",
+                "Cramp, motion, size"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart writes PMS."
         },
         {
-            q: "What is the technique for reducing a lateral patella dislocation?",
-            options: ["Flex knee, apply lateral pressure", "Extend knee while applying medial pressure", "Straight leg raise", "Pull patella upward"],
-            correct: 1,
-            explanation: "Gently extend the knee while applying medial pressure to the lateral edge of the patella."
+            "q": "How is a lateral patella dislocation reduced?",
+            "options": [
+                "Extend the knee while pushing the patella medially",
+                "Flex the knee and push laterally",
+                "Pull the patella up",
+                "Do not touch"
+            ],
+            "correct": 0,
+            "explanation": "Hip flexed about 20–30 degrees."
         },
         {
-            q: "When should a tourniquet be applied to a limb injury?",
-            options: ["For all open fractures", "For uncontrolled arterial bleeding not controlled by direct pressure", "For venous bleeding", "For all amputations"],
-            correct: 1,
-            explanation: "A tourniquet is indicated when direct pressure fails to control severe arterial bleeding."
+            "q": "Which minimum analgesia is used for reduction?",
+            "options": [
+                "Penthrox",
+                "None",
+                "Paracetamol PO only",
+                "Ice"
+            ],
+            "correct": 0,
+            "explanation": "Generally required as a minimum."
         },
         {
-            q: "What is the dose of methoxyflurane (Penthrox) for procedural pain in a limb injury?",
-            options: ["1.5 mL", "3 mL", "6 mL", "9 mL"],
-            correct: 1,
-            explanation: "Methoxyflurane dose is 3 mL inhalation; may repeat once (max 6 mL in 24 hours)."
+            "q": "When is ALS routinely requested?",
+            "options": [
+                "Severe pain management",
+                "Every limb injury",
+                "Minor sprains",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "Per the CPG."
         },
         {
-            q: "A patient with a femur fracture is in severe pain. What is the appropriate analgesic?",
-            options: ["Paracetamol 1 g PO", "Morphine 2.5 mg IV", "Diclofenac 75 mg IM", "Ibuprofen 400 mg PO"],
-            correct: 1,
-            explanation: "Severe pain requires IV opioids; morphine is indicated."
+            "q": "A patella fracture. How is it splinted?",
+            "options": [
+                "In the position found",
+                "Fully straightened",
+                "Reduced first",
+                "Not splinted"
+            ],
+            "correct": 0,
+            "explanation": "On the flowchart."
         },
         {
-            q: "How often should neurovascular status (CMS) be reassessed after splinting?",
-            options: ["Immediately after splinting and every 15 minutes", "Only before transport", "Every hour", "Only if patient complains"],
-            correct: 0,
-            explanation: "CMS should be reassessed immediately after splinting and every 15 minutes."
+            "q": "Which dislocations are splinted in place?",
+            "options": [
+                "All except anterior shoulder and patella",
+                "None",
+                "All of them",
+                "Only shoulders"
+            ],
+            "correct": 0,
+            "explanation": "And any with suspected fracture."
         },
         {
-            q: "What is the key performance indicator for limb injuries?",
-            options: ["Administer antibiotics", "Apply traction splint for mid-shaft femur fracture (when no time-critical injuries)", "Perform X-ray", "Apply cast"],
-            correct: 1,
-            explanation: "Applying a traction splint for mid-shaft femur fracture is a key KPI."
+            "q": "When may a limb be realigned?",
+            "options": [
+                "Neurovascular compromise, with analgesia",
+                "Always",
+                "Never",
+                "Only fingers"
+            ],
+            "correct": 0,
+            "explanation": "Otherwise splint in the anatomic position."
         },
         {
-            q: "A patient has a dislocated shoulder with no neurovascular compromise. What is the appropriate action?",
-            options: ["Transport without reduction", "Attempt reduction using gentle external rotation technique", "Apply ice and wait", "Give oral analgesia"],
-            correct: 1,
-            explanation: "Anterior shoulder dislocations may be reduced using the gentle external rotation technique, if no fracture suspected."
+            "q": "Is it acceptable to delay transfer to apply a traction splint?",
+            "options": [
+                "Yes, if no other injury needs immediate transfer",
+                "Never",
+                "Always, even with tension pneumothorax",
+                "Only at night"
+            ],
+            "correct": 0,
+            "explanation": "It limits blood loss."
         },
         {
-            q: "What is the maximum 24-hour dose of methoxyflurane?",
-            options: ["3 mL", "6 mL", "9 mL", "12 mL"],
-            correct: 1,
-            explanation: "Maximum 6 mL (two doses) in 24 hours."
+            "q": "Distal-third femur fracture: traction splint?",
+            "options": [
+                "May be used after checking the knee is not involved",
+                "Never",
+                "Always without assessment",
+                "Only with a pelvic binder"
+            ],
+            "correct": 0,
+            "explanation": "Careful assessment first."
         },
         {
-            q: "Why should a traction splint be applied to a femur fracture?",
-            options: ["To reduce pain", "To limit blood loss", "To prevent further soft tissue damage", "All of the above"],
-            correct: 3,
-            explanation: "Traction splints reduce pain, limit blood loss, and prevent further injury."
+            "q": "How is the stump managed?",
+            "options": [
+                "Moist sterile dressing and uniform pressure; tourniquet if needed",
+                "Leave open",
+                "Ice directly",
+                "Dry gauze only"
+            ],
+            "correct": 0,
+            "explanation": "Elastic or compression dressing."
         },
         {
-            q: "A patient with a forearm fracture has a splint applied. After splinting, you note that the fingers are pale and cold. What should you do?",
-            options: ["Remove the splint", "Loosen the splint and reassess", "Transport immediately", "Apply heat"],
-            correct: 1,
-            explanation: "Signs of compromised circulation require loosening the splint and reassessing neurovascular status."
+            "q": "Which entrapped limbs are excluded?",
+            "options": [
+                "All entrapped limbs: Crush Injuries CPG",
+                "None",
+                "Only arms",
+                "Only legs"
+            ],
+            "correct": 0,
+            "explanation": "Exclusion criterion."
         },
         {
-            q: "What is the dose of normal saline bolus for an adult with a limb injury and hypotension?",
-            options: ["250 mL", "500 mL", "1000 mL", "2000 mL"],
-            correct: 1,
-            explanation: "Initial bolus is 500 mL; may repeat up to 2000 mL."
+            "q": "Why give analgesia before splinting?",
+            "options": [
+                "Manipulation increases pain",
+                "It speeds healing",
+                "It is a legal rule",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Clinical insight."
         },
         {
-            q: "Which of the following is NOT a component of the CMS assessment?",
-            options: ["Color", "Movement", "Sensation", "Capillary refill"],
-            correct: 3,
-            explanation: "CMS stands for Color, Movement, Sensation. Capillary refill is part of perfusion assessment but not part of CMS specifically."
+            "q": "Which is NOT part of CMS?",
+            "options": [
+                "Capillary refill",
+                "Colour",
+                "Movement",
+                "Sensation"
+            ],
+            "correct": 0,
+            "explanation": "Capillary refill is assessed separately."
         },
         {
-            q: "A patient has a partial amputation of the hand with arterial bleeding. What is the priority?",
-            options: ["Apply tourniquet", "Reattach the part", "Splint the hand", "Give pain medication"],
-            correct: 0,
-            explanation: "Uncontrolled arterial bleeding requires immediate tourniquet application."
+            "q": "Partial hand amputation with arterial bleeding. Priority?",
+            "options": [
+                "Control bleeding: pressure, then tourniquet",
+                "Reattach on scene",
+                "Splint first",
+                "X-ray"
+            ],
+            "correct": 0,
+            "explanation": "Hemorrhage control first."
         },
         {
-            q: "What is the recommended method for splinting a fractured tibia?",
-            options: ["Traction splint", "Long leg splint in anatomic position", "Air splint", "Cast"],
-            correct: 1,
-            explanation: "Fractures below the knee should be splinted in anatomic position with a long leg splint."
+            "q": "To what angle is the forearm externally rotated?",
+            "options": [
+                "About 70–90 degrees or until resistance",
+                "180 degrees",
+                "10 degrees",
+                "No rotation"
+            ],
+            "correct": 0,
+            "explanation": "Slowly, letting muscles relax."
         },
         {
-            q: "A patient with a knee dislocation has a pulse deficit in the foot. What should you suspect?",
-            options: ["Compartment syndrome", "Vascular injury", "Nerve injury", "Fracture"],
-            correct: 1,
-            explanation: "Knee dislocation can cause popliteal artery injury; pulse deficit indicates vascular compromise."
+            "q": "Which oxygen threshold?",
+            "options": [
+                "SpO₂ <94% or respiratory distress",
+                "Always 15 L/min",
+                "Never",
+                "SpO₂ <80%"
+            ],
+            "correct": 0,
+            "explanation": "Assessment point."
         },
         {
-            q: "What is the maximum total fluid bolus for a pediatric patient with hemorrhagic shock?",
-            options: ["20 mL/kg", "40 mL/kg", "60 mL/kg", "80 mL/kg"],
-            correct: 2,
-            explanation: "Maximum 60 mL/kg crystalloid in the prehospital setting (three 20 mL/kg boluses)."
+            "q": "What does the KPI require?",
+            "options": [
+                "Traction splint for mid-shaft femur fractures (no time-critical injuries)",
+                "Tourniquet for all",
+                "Reduce all dislocations",
+                "X-ray"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         },
         {
-            q: "A patient with a limb injury has a blood pressure of 90/60 and heart rate of 120. What is the priority?",
-            options: ["Splint the limb", "Give fluid bolus", "Administer pain medication", "Transport immediately"],
-            correct: 1,
-            explanation: "Hypotension and tachycardia indicate shock; fluid resuscitation is the priority."
+            "q": "What is retrieved at an amputation scene?",
+            "options": [
+                "The amputated part, unless it significantly delays transport",
+                "Nothing",
+                "Only jewellery",
+                "Only the patient"
+            ],
+            "correct": 0,
+            "explanation": "Then preserve it correctly."
         }
     ],
-    flashcards: [
-        { category: "Hemorrhage control", question: "What is the first step for uncontrolled arterial limb bleeding?", answer: "Apply a tourniquet proximal to the wound." },
-        { category: "Tourniquet", question: "When should a tourniquet be used?", answer: "For uncontrolled arterial bleeding not controlled by direct pressure." },
-        { category: "Traction splint", question: "What is the indication for a traction splint?", answer: "Isolated mid-shaft femur fracture." },
-        { category: "CMS assessment", question: "What does CMS stand for?", answer: "Color, Movement, Sensation." },
-        { category: "Compartment syndrome", question: "What are the signs of compartment syndrome?", answer: "Pain on passive stretch, pallor, pulselessness, paresthesia, paralysis." },
-        { category: "Amputated part", question: "How should an amputated part be preserved?", answer: "Wrap in moist sterile gauze, place in plastic bag, then surround with ice water mixture." },
-        { category: "Impaled object", question: "How should an impaled object be managed?", answer: "Do not remove; secure with bulky dressing." },
-        { category: "Shoulder reduction", question: "How is an anterior shoulder dislocation reduced?", answer: "Supine, elbow flexed 90�, gentle traction, then slow external rotation." },
-        { category: "Patella dislocation reduction", question: "How is a lateral patella dislocation reduced?", answer: "Extend knee while applying medial pressure." },
-        { category: "Femur fracture blood loss", question: "How much blood can be lost from a femur fracture?", answer: "1-2 L." },
-        { category: "Methoxyflurane dose", question: "What is the dose of methoxyflurane for procedural pain?", answer: "3 mL inhalation; may repeat once (max 6 mL/24h)." },
-        { category: "Morphine dose", question: "What is the IV morphine dose for an adult?", answer: "2.5 mg increments every 5-10 minutes, max 20 mg." },
-        { category: "Pain assessment", question: "How is pain severity assessed?", answer: "0-10 numeric scale; Wong-Baker FACES for non-verbal; FLACC for children <3 years." },
-        { category: "Splinting", question: "What is the goal of splinting?", answer: "Immobilize the injury to reduce pain and prevent further damage." },
-        { category: "Reassessment interval", question: "How often should CMS be reassessed after splinting?", answer: "Immediately after splinting and every 15 minutes." },
-        { category: "Vascular injury signs", question: "What are signs of vascular injury in a limb?", answer: "Pulselessness, pallor, coolness, delayed capillary refill." },
-        { category: "Open fracture", question: "What is an open fracture?", answer: "A fracture where the bone penetrates the skin." },
-        { category: "Pelvic binder", question: "When is a pelvic binder used?", answer: "For suspected unstable pelvic fracture; not for isolated limb injury." },
-        { category: "KPI", question: "What is a key performance indicator for limb injuries?", answer: "Apply traction splint for mid-shaft femur fracture when no time-critical injuries are present." },
-        { category: "Transport decision", question: "Should all limb injury patients be transported?", answer: "Yes, especially those with fractures, dislocations, neurovascular compromise, or significant mechanism." }
+    "flashcards": [
+        {
+            "question": "First priority",
+            "answer": "Control major bleeding (C-ABC)."
+        },
+        {
+            "question": "Tourniquet",
+            "answer": "For uncontrolled limb bleeding; document the time."
+        },
+        {
+            "question": "Junctional wounds",
+            "answer": "Hemostatic agents with direct pressure."
+        },
+        {
+            "question": "CMS",
+            "answer": "Colour, movement, sensation; recheck after splinting and every 15 minutes."
+        },
+        {
+            "question": "Compartment syndrome",
+            "answer": "Pain on passive stretch, pallor, pulselessness, paresthesia, paralysis."
+        },
+        {
+            "question": "Splinting",
+            "answer": "Anatomic position; realign only for neurovascular compromise, with analgesia."
+        },
+        {
+            "question": "Traction splint",
+            "answer": "Isolated mid-shaft femur fractures (EMT); distal-third only after checking the knee."
+        },
+        {
+            "question": "Patella fracture",
+            "answer": "Splint in the position found."
+        },
+        {
+            "question": "Impaled object",
+            "answer": "Do not remove; secure with a bulky dressing."
+        },
+        {
+            "question": "Amputated part",
+            "answer": "Moist sterile dressing, plastic bag, surrounded by ice and water; no direct ice or dry ice."
+        },
+        {
+            "question": "Viability",
+            "answer": "Cooling extends it from 4 to up to 18 hours."
+        },
+        {
+            "question": "Stump",
+            "answer": "Moist sterile dressing, uniform pressure, tourniquet if needed."
+        },
+        {
+            "question": "Reducible dislocations",
+            "answer": "Anterior shoulder and patella without suspected fracture (AP)."
+        },
+        {
+            "question": "Shoulder technique",
+            "answer": "Elbow 90°, steady traction, slow external rotation to 70–90° or resistance."
+        },
+        {
+            "question": "Patella technique",
+            "answer": "Hip flexed 20–30°, extend knee, push patella medially."
+        },
+        {
+            "question": "Reduction analgesia",
+            "answer": "Penthrox at least."
+        },
+        {
+            "question": "ALS",
+            "answer": "Routinely for severe pain."
+        },
+        {
+            "question": "Shock",
+            "answer": "Per the General Trauma Management CPG; femurs bleed heavily."
+        },
+        {
+            "question": "Exclusion",
+            "answer": "Entrapped limbs: Crush Injuries CPG."
+        },
+        {
+            "question": "KPI",
+            "answer": "Traction splint for mid-shaft femur fractures when no time-critical injuries."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_7_4_1",
-            scenario: "A 35-year-old male is involved in a motorcycle crash. He has an obvious deformity of the right femur, with a large hematoma. He is alert, BP 100/70, HR 110. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Apply traction splint", f: "Correct. Isolated femur fracture with signs of blood loss requires traction splint to reduce pain and bleeding." },
-                { t: "Give 1 L fluid bolus", f: "Fluids are important, but splinting should be done first." },
-                { t: "Apply tourniquet", f: "Not indicated; no arterial bleeding." },
-                { t: "Transport immediately", f: "Splinting can be done on scene without significant delay." }
+            "id": "crit_7_4_1",
+            "scenario": "A motorcyclist has an obvious mid-thigh deformity with a large hematoma; alert, BP 100/70, HR 110, no other injuries.",
+            "question": "What is the priority?",
+            "options": [
+                {
+                    "t": "Analgesia (ALS for severe pain), then a traction splint; monitor for shock",
+                    "f": "Correct."
+                },
+                {
+                    "t": "No splint: go now",
+                    "f": "Delaying transfer for a traction splint is appropriate here."
+                },
+                {
+                    "t": "Pelvic binder",
+                    "f": "This is a femur fracture."
+                },
+                {
+                    "t": "Splint without analgesia",
+                    "f": "Analgesia first."
+                }
             ],
-            correct: 0,
-            explanation: "Applying a traction splint reduces pain, limits blood loss, and prevents further injury.",
-            kpi: "Traction splint applied."
+            "correct": 0,
+            "explanation": "A traction splint limits blood loss; KPI.",
+            "kpi": "Traction splint for mid-shaft femur fractures."
         },
         {
-            id: "crit_7_4_2",
-            scenario: "A 45-year-old male has a deep laceration to the forearm with spurting bright red blood. Direct pressure is not controlling the bleeding. What should you do?",
-            question: "What is the appropriate intervention?",
-            options: [
-                { t: "Apply additional gauze and pressure", f: "Direct pressure is already failing." },
-                { t: "Apply a tourniquet proximal to the wound", f: "Correct. Uncontrolled arterial bleeding requires a tourniquet." },
-                { t: "Apply a pressure dressing", f: "Inadequate for arterial spurting." },
-                { t: "Elevate the arm", f: "Will not control arterial bleeding." }
+            "id": "crit_7_4_2",
+            "scenario": "A deep forearm laceration spurts bright red blood despite firm direct pressure.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Apply a tourniquet and note the time",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Keep pressing for 30 minutes",
+                    "f": "Uncontrolled bleeding needs a tourniquet."
+                },
+                {
+                    "t": "Ice and elevation",
+                    "f": "Not adequate."
+                },
+                {
+                    "t": "Splint first",
+                    "f": "Bleeding first."
+                }
             ],
-            correct: 1,
-            explanation: "Tourniquet is indicated for uncontrolled arterial limb bleeding when direct pressure fails.",
-            kpi: "Tourniquet applied and time documented."
+            "correct": 0,
+            "explanation": "Tourniquets for uncontrolled limb bleeding are exceptionally important.",
+            "kpi": "Traction splint for mid-shaft femur fractures."
         },
         {
-            id: "crit_7_4_3",
-            scenario: "A 20-year-old male has a traumatic amputation of the lower leg from a train accident. The stump is bleeding moderately, and the amputated part is nearby. What is the priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Recover the amputated part", f: "Control hemorrhage first." },
-                { t: "Apply a tourniquet to control bleeding", f: "Correct. Hemorrhage control is the priority." },
-                { t: "Wrap the stump in sterile gauze", f: "Bleeding control first." },
-                { t: "Start IV fluids", f: "Not the priority." }
+            "id": "crit_7_4_3",
+            "scenario": "A train accident has amputated a lower leg. The stump bleeds moderately; the part lies nearby.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Stump: moist dressing and pressure (tourniquet if needed); part: moist dressing, plastic bag, in ice and water",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Put the part directly on ice",
+                    "f": "Never in direct contact with ice."
+                },
+                {
+                    "t": "Leave the part behind",
+                    "f": "Retrieve it unless it delays transport."
+                },
+                {
+                    "t": "Dry ice",
+                    "f": "Never."
+                }
             ],
-            correct: 1,
-            explanation: "Life-threatening hemorrhage must be controlled first; then manage the amputated part.",
-            kpi: "Tourniquet applied and bleeding controlled."
+            "correct": 0,
+            "explanation": "Cooling extends viability up to 18 hours.",
+            "kpi": "Traction splint for mid-shaft femur fractures."
         },
         {
-            id: "crit_7_4_4",
-            scenario: "A 55-year-old female falls and sustains a left hip deformity. She is in severe pain (9/10), and the left leg is shortened and externally rotated. Her BP is 110/70, HR 100. What is the most likely injury and next step?",
-            question: "What is the likely injury and appropriate intervention?",
-            options: [
-                { t: "Femoral neck fracture; apply traction splint", f: "Traction splints are for mid-shaft femur fractures; hip fractures are splinted differently." },
-                { t: "Hip fracture; splint with pillow between legs and transport", f: "Correct. Hip fractures are managed with positioning and padding, not traction." },
-                { t: "Pelvic fracture; apply pelvic binder", f: "No pelvic instability." },
-                { t: "Knee dislocation; reduce", f: "Not likely." }
+            "id": "crit_7_4_4",
+            "scenario": "A 25-year-old has an anterior shoulder dislocation after a fall, with no suspected fracture. You are an AP.",
+            "question": "What may you do?",
+            "options": [
+                {
+                    "t": "Analgesia (Penthrox at least), then reduce: elbow 90°, traction, slow external rotation",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Forceful rapid rotation",
+                    "f": "Slow and gentle."
+                },
+                {
+                    "t": "Reduce without analgesia",
+                    "f": "Penthrox is generally required."
+                },
+                {
+                    "t": "Reduce a suspected fracture-dislocation",
+                    "f": "Splint in place if fracture is suspected."
+                }
             ],
-            correct: 1,
-            explanation: "Hip fractures are common in elderly; splint with padding and transport for surgical repair.",
-            kpi: "Injury identified and appropriately splinted."
+            "correct": 0,
+            "explanation": "Recheck CMS after reduction and splint.",
+            "kpi": "Traction splint for mid-shaft femur fractures."
         },
         {
-            id: "crit_7_4_5",
-            scenario: "A 30-year-old male has a forearm fracture that was splinted. After splinting, you note that his fingers are pale, cold, and he has decreased sensation. What should you do?",
-            question: "What is the next step?",
-            options: [
-                { t: "Remove the splint and reassess", f: "Correct. Neurovascular compromise requires splint adjustment." },
-                { t: "Apply a tourniquet", f: "Not indicated." },
-                { t: "Give pain medication", f: "Not the priority." },
-                { t: "Transport immediately", f: "Splint must be adjusted first." }
+            "id": "crit_7_4_5",
+            "scenario": "After you splint a forearm fracture, the fingers are pale and cold with reduced sensation.",
+            "question": "What next?",
+            "options": [
+                {
+                    "t": "Reassess and adjust the splint; with analgesia, realign for neurovascular compromise; recheck CMS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Ignore: it was fine before",
+                    "f": "CMS has deteriorated."
+                },
+                {
+                    "t": "Remove all splinting",
+                    "f": "Adjust, don't abandon."
+                },
+                {
+                    "t": "Recheck only at hospital",
+                    "f": "Reassess now."
+                }
             ],
-            correct: 0,
-            explanation: "Signs of vascular compromise (pale, cold, decreased sensation) indicate the splint is too tight; remove or loosen and reassess CMS.",
-            kpi: "CMS reassessed after splint adjustment."
+            "correct": 0,
+            "explanation": "Reassess neurovascular status after splinting.",
+            "kpi": "Traction splint for mid-shaft femur fractures."
         }
     ]
 };
