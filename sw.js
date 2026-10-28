@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v6.7';   // Exam pages: Practice / Exam wording
+const CACHE_VERSION = 'dcas-cpg-v6.8';   // ECG Simulator v4, shared exam engine, BDLS pre-test
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
@@ -43,7 +43,8 @@ const CONTENT_CACHE = [
   'pages/megacode.html', 'pages/megacode.js', 'pages/megacode-scenarios.js',
   'images/defib/pads-adult-anterolateral.webp', 'images/defib/pads-paed-anteroposterior.webp',
   'pdf_sections/Defibrillation-Quick-Reference.pdf',
-  'pages/ecg-engine.js', 'pages/ecg-engine2.js',
+  'pages/ecg-engine.js', 'pages/ecg-rhythms.js',
+  'pages/exam-review.js', 'pages/exam-review.css',
   'pages/drug-calculator.js', 'pages/drug-data.json',
   // Prometric engine + bank
   'src/prometric/exam.html', 'src/prometric/exam.css', 'src/prometric/exam.js',
@@ -52,11 +53,12 @@ const CONTENT_CACHE = [
   'src/ACLS/acls.json',
   'src/BLS/bls.json',
   'src/PALS/pals.json',
-  'src/BDLS/BDLS.json',
+  'src/BDLS/BDLS.json', 'src/BDLS/BDLS-pre.json',
   'src/MCI/MCI-exam1.json', 'src/MCI/pearls.json', 'src/MCI/officers.json',
   'images/mci/start-adult-triage.webp', 'images/mci/methane-report.webp', 'images/mci/hazmat-placards.webp',
   'fonts/fonts.css', 'fonts/barlow-400.woff2', 'fonts/barlow-500.woff2', 'fonts/barlow-600.woff2',
   'fonts/barlow-700.woff2', 'fonts/barlow-condensed-600.woff2', 'fonts/barlow-condensed-700.woff2',
+  'fonts/dm-mono-400.woff2', 'fonts/dm-mono-500.woff2',
   'src/Medical/medical.json',
   'src/PEPP/exam_a.json', 'src/PEPP/exam_b.json', 'src/PEPP/exam_c.json',
   'src/PEPP/exam_d.json', 'src/PEPP/pearls.json',

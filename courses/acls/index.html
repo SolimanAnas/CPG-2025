@@ -376,7 +376,9 @@ async function boot() {
     }
   }
   renderSidebar();
-  const first = DATA.manifest.chapters.find(c => DATA.chapters[c.id]) || DATA.manifest.chapters[0];
+  // index.html#c04 opens that chapter (the ACLS exam page links to each one)
+  const linked = DATA.manifest.chapters.find(c => c.id === location.hash.slice(1) && DATA.chapters[c.id]);
+  const first = linked || DATA.manifest.chapters.find(c => DATA.chapters[c.id]) || DATA.manifest.chapters[0];
   selectChapter(first.id);
   document.getElementById("brandSub").textContent = DATA.manifest.subtitle || "";
 }
