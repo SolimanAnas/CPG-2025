@@ -1,365 +1,819 @@
-/* ========== Chapter 7.6 � Traumatic Brain Injuries ========== */
+/* ========== CPG 7.6 – Traumatic Brain Injuries ==========
+ * Written from the official DCAS CPG 2025 PDF (data/cpg-source/) and
+ * rendered by cpg-guide.js.
+ */
 window.CPG_DATA = {
-    id: "c7-6",
-    title: "Traumatic Brain Injuries",
-    shortTitle: "7.6 Traumatic Brain Injuries",
-    summary: `
-        <div class="sum-card">
-            <h3 style="color:var(--primary-accent);">?? Traumatic Brain Injuries</h3>
-            
-            <h4>Patient Care Goals</h4>
-            <ul>
-                <li>Rapidly identify and manage traumatic brain injuries (TBI) to prevent secondary brain injury and optimize neurological outcomes.</li>
-                <li>Stabilize the patient�s condition through targeted interventions, including oxygenation, ventilation and blood pressure management.</li>
-                <li>Ensure rapid transport to a trauma center with neurosurgical capabilities for definitive evaluation and treatment.</li>
-            </ul>
-
-            <h4>Inclusion Criteria</h4>
-            <ul>
-                <li>Patients with suspected TBI based on trauma history or clinical findings, including:
-                    <ul>
-                        <li>Blunt or penetrating head trauma (e.g., motor vehicle crashes, falls, assaults, gunshot wounds).</li>
-                        <li>Symptoms such as altered mental status, loss of consciousness, headache, vomiting, or neurological deficits (weakness, sensory loss).</li>
-                        <li>Signs of severe TBI (e.g., unequal pupils, posturing, or seizures).</li>
-                    </ul>
-                </li>
-                <li>Patients requiring assessment and management to prevent secondary brain injury (e.g., hypoxia, hypotension, or increased intracranial pressure).</li>
-            </ul>
-
-            <h4>Exclusion Criteria</h4>
-            <ul>
-                <li>Patients with no history of head trauma or clinical findings suggestive of TBI.</li>
-                <li>Non-traumatic neurological conditions (e.g., stroke, hypoglycemia) mimicking TBI symptoms.</li>
-            </ul>
-
-            <h4>Key Assessment Points</h4>
-            <ul>
-                <li><strong>Mechanism of Injury:</strong> Identify blunt vs. penetrating trauma; height of fall, impact force, presence of secondary injuries (facial fractures, cervical spine injury).</li>
-                <li><strong>Neurological Assessment:</strong> Evaluate level of consciousness using AVPU or Glasgow Coma Scale (GCS). Assess for focal neurological deficits (unilateral weakness, sensory loss, cranial nerve abnormalities). Check pupil size and reactivity (unequal pupils, sluggish response) for signs of increased ICP.</li>
-                <li><strong>Signs of Severe TBI:</strong> Cushing�s triad (hypertension, bradycardia, irregular respirations). Posturing (decorticate or decerebrate), seizures, CSF leakage from ears/nose.</li>
-                <li><strong>Trauma-Specific Findings:</strong> Inspect for scalp lacerations, skull deformities, open fractures. Assess for associated injuries (cervical spine, chest, abdomen) that may contribute to hypoxia or hypotension.</li>
-                <li><strong>Determine Triage Category:</strong> Red priority for GCS =9 or progressive deterioration in GCS.</li>
-            </ul>
-
-            <h4>Patient Management & Interventions</h4>
-            <ul>
-                <li><strong>Consider ALS back-up:</strong> For patients responding only to Pain or Unresponsive on AVPU scale.</li>
-                <li><strong>Primary Survey:</strong> Perform as per Universal Care CPG. Control catastrophic external bleeding. Spinal Motion Restriction: The use of c-collars is contraindicated in patients with Traumatic Brain Injuries as it impedes cerebral venous drainage, further increasing ICP. Provide in-line stabilization and support the head using head block plate and head blocks � forehead and chin straps are not required. Secure patient to stretcher.</li>
-                <li><strong>Oxygenation:</strong> Titrate oxygen to maintain SpO2 =94% to prevent hypoxia. Secure airway with advanced techniques (e.g., endotracheal intubation) if GCS =8 or airway compromise. Avoid hyperventilation; target EtCO2 35-45 mmHg to prevent cerebral vasoconstriction.</li>
-                <li><strong>Fluid Resuscitation:</strong> Administer Normal Saline or Ringer�s Lactate for hypotension. Adults: 250-500 mL bolus IV/IO, reassess, target SBP =120 mmHg (or MAP =90 mmHg). Avoid over-resuscitation to prevent cerebral edema.</li>
-                <li><strong>Advanced Airway Management:</strong> If GCS <8: perform open airway maneuvers (jaw thrust). OPA/NPA may be used if airway cannot be maintained. Consider supraglottic airway/intubation only if patient is profoundly unconscious (GCS=3) and airway cannot be maintained with basic adjuncts, or if medication-facilitated intubation is available.</li>
-                <li><strong>Head Positioning:</strong> If signs of impending herniation, elevate head of bed 30 degrees (if no spinal precautions) to reduce ICP. Maintain neutral head alignment.</li>
-                <li><strong>Hyperventilation:</strong> Only initiate in patients who have had hypoxemia and hypotension corrected, and have one or more of: GCS <9 with extensor posturing; GCS <9 with asymmetric, dilated, or non-reactive pupils; initial GCS <9 that drops by >2 points. Ventilate to target EtCO2 30-35 mmHg (adults: 20 breaths/min; children: 25 breaths/min; infants: 30 breaths/min).</li>
-                <li><strong>Sedation:</strong> For agitation, use ketamine as preferred agent (0.5-1 mg/kg IV/IO/IM, max 100 mg). Reduced doses of midazolam (0.5-5 mg IV/IO/IM adult; 0.05 mg/kg pediatric) or morphine (2-5 mg adult; 0.1 mg/kg pediatric) may be used if ketamine unavailable. Avoid IM when possible; establish IV access as soon as possible.</li>
-                <li><strong>Patient Reassessment:</strong> Frequently reassess GCS (every 5 minutes for red priority, 10 minutes for yellow, 15 minutes for green).</li>
-            </ul>
-
-            <h4>Patient Safety Considerations</h4>
-            <ul>
-                <li><strong>Elderly Patients (>65):</strong> Increased risk of TBI from low-energy mechanisms (ground-level falls) due to brain atrophy or anticoagulant use. Monitor closely for delayed deterioration (e.g., subdural hematoma).</li>
-                <li><strong>Pediatric Patients (<13):</strong> Pediatric TBI may present with subtle signs; prioritize transport for any neurological changes.</li>
-                <li><strong>ICP Management:</strong> Avoid hypoxia, hypotension, or hyperventilation, as these exacerbate secondary brain injury. Maintain normocapnia (EtCO2 35-45 mmHg) if intubated to prevent cerebral vasoconstriction.</li>
-                <li>C-collars are contraindicated in TBI as they may increase ICP.</li>
-            </ul>
-
-            <h4>Clinical Insights & Additional Guidance</h4>
-            <ul>
-                <li>It is very difficult to hyperventilate a patient who is not intubated and spontaneously breathing.</li>
-                <li>Sedation should be administered to agitated patients to prevent increased ICP and allow safe transport.</li>
-                <li>IV ketamine is preferred for sedation in TBI as it does not significantly increase ICP.</li>
-                <li>In patients with suspected herniation, hyperventilation may be life-saving.</li>
-            </ul>
-
-            <h4>Documentation</h4>
-            <ul>
-                <li>Mechanism of injury, GCS, pupil size and reactivity.</li>
-                <li>Vital signs, SpO2, EtCO2.</li>
-                <li>Airway management, oxygen, IV fluids, sedation given.</li>
-                <li>Signs of increased ICP (Cushing�s triad, posturing).</li>
-                <li>Transport decision, hospital notification.</li>
-            </ul>
-
-            <h4>Key Performance Indicators</h4>
-            <ul>
-                <li>Administer IV fluid for patients with a systolic blood pressure <120 mmHg or MAP <90 mmHg (for isolated TBI).</li>
-                <li>Maintain SpO2 =94%.</li>
-            </ul>
-        </div>
-    `,
-    quiz: [
+    "id": "c7-6",
+    "title": "Traumatic Brain Injuries",
+    "shortTitle": "7.6 Traumatic Brain Injuries",
+    "guide": {
+        "cpg": "7.6",
+        "group": "trauma",
+        "groupLabel": "Trauma",
+        "title": "Traumatic Brain Injuries",
+        "lead": "Prevent the second injury: no hypoxia (SpO<sub>2</sub> ≥94%), no hypotension (SBP ≥120 mmHg), normal EtCO<sub>2</sub>. No collar: support the head with blocks instead. Sedate agitation, ketamine first, and hyperventilate only for signs of herniation.",
+        "source": {
+            "label": "CPG 7.6",
+            "pages": "239–243",
+            "pdf": "../pdf_sections/7_6_Traumatic_Brain_Injuries.pdf"
+        },
+        "sections": [
+            {
+                "type": "criteria",
+                "title": "Who this applies to",
+                "icon": "user",
+                "include": [
+                    "Blunt or penetrating head trauma (MVC, falls, assaults, gunshot wounds).",
+                    "Altered mental status, loss of consciousness, headache, vomiting or neurological deficit after trauma; unequal pupils, posturing or seizures."
+                ],
+                "exclude": [
+                    "No head trauma or TBI findings.",
+                    "Non-traumatic mimics (stroke, hypoglycemia)."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Assess",
+                "icon": "brain",
+                "groups": [
+                    {
+                        "title": "Neurology",
+                        "items": [
+                            "AVPU or GCS; focal deficits; pupil size and reactivity."
+                        ]
+                    },
+                    {
+                        "title": "Severe TBI and herniation",
+                        "items": [
+                            "Cushing's triad: hypertension, bradycardia, irregular respirations.",
+                            "Decorticate or decerebrate posturing, seizures, CSF from ears or nose."
+                        ]
+                    },
+                    {
+                        "title": "Basilar skull fracture",
+                        "items": [
+                            "Battle's sign, raccoon eyes, CSF otorrhea or rhinorrhea."
+                        ]
+                    },
+                    {
+                        "title": "Red priority",
+                        "items": [
+                            "GCS ≤9, or a falling GCS."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "steps",
+                "title": "Management",
+                "icon": "list",
+                "steps": [
+                    {
+                        "title": "ALS back-up",
+                        "text": "Routinely for patients responding only to pain or unresponsive (flowchart: V, P or U, or agitated); as soon as possible if agitated."
+                    },
+                    {
+                        "title": "Bleeding and c-spine",
+                        "text": "Control catastrophic bleeding. No c-collar: it impedes cerebral venous drainage and raises ICP. In-line stabilisation with head plate and blocks (no forehead or chin straps); secure to the stretcher."
+                    },
+                    {
+                        "title": "Oxygen",
+                        "level": "EMR",
+                        "text": "SpO<sub>2</sub> ≥94% (flowchart &gt;94%). Avoid hyperventilation: EtCO<sub>2</sub> 35–45 mmHg."
+                    },
+                    {
+                        "title": "Airway if GCS &lt;8",
+                        "level": "EMR",
+                        "text": "Jaw thrust; OPA or NPA if the airway cannot otherwise be maintained."
+                    },
+                    {
+                        "title": "Advanced airway",
+                        "level": "P",
+                        "text": "Avoid unless medication-facilitated intubation is available. Consider only if GCS 3 and the airway cannot be kept with basic adjuncts."
+                    },
+                    {
+                        "title": "Fluid for hypotension",
+                        "text": "NS or RL; target SBP ≥120 mmHg (or MAP ≥90 mmHg); avoid over-resuscitation.",
+                        "doses": [
+                            {
+                                "drug": "Adult",
+                                "dose": "500–1000 mL IV/IO, reassess",
+                                "note": "Flowchart: 250–500 mL"
+                            },
+                            {
+                                "drug": "Pediatric",
+                                "dose": "10–20 mL/kg IV/IO",
+                                "note": "Flowchart"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Impending herniation",
+                        "text": "Head up 30 degrees if no spinal precautions are needed; neutral alignment. Consider hyperventilation (below)."
+                    },
+                    {
+                        "title": "Reassess GCS",
+                        "text": "Red every 5 minutes, Yellow every 10, Green every 15."
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Sedation for agitation (EP)",
+                "icon": "syringe",
+                "columns": [
+                    "",
+                    "Adult",
+                    "Pediatric"
+                ],
+                "rows": [
+                    [
+                        "Ketamine (preferred)",
+                        "0.5–1 mg/kg (max 100 mg)",
+                        "0.5–1 mg/kg (max 100 mg)"
+                    ],
+                    [
+                        "Midazolam",
+                        "0.5 mg–5 mg, repeat after 5–10 minutes",
+                        "0.05 mg/kg (max 5 mg)"
+                    ],
+                    [
+                        "Morphine",
+                        "2–5 mg",
+                        "0.1 mg/kg (max 5 mg)"
+                    ]
+                ],
+                "stack": true,
+                "notes": [
+                    "IV/IO/IM; IV preferred. If given IM, get IV/IO access once sedated. Ketamine and pediatric doses repeat after 10 minutes if required.",
+                    "Reduced benzodiazepine or morphine doses if ketamine is unavailable or contraindicated."
+                ]
+            },
+            {
+                "type": "table",
+                "title": "Hyperventilation for herniation",
+                "icon": "wind",
+                "columns": [
+                    "Age",
+                    "Normal (EtCO₂ 35–45)",
+                    "Hyperventilation (EtCO₂ 30–35)"
+                ],
+                "rows": [
+                    [
+                        "Adults",
+                        "12 breaths/min",
+                        "20 breaths/min"
+                    ],
+                    [
+                        "Children",
+                        "15 breaths/min",
+                        "25 breaths/min"
+                    ],
+                    [
+                        "Infants",
+                        "20 breaths/min",
+                        "30 breaths/min"
+                    ]
+                ],
+                "notes": [
+                    "Only once hypoxemia and hypotension are corrected, and with: GCS &lt;9 with extensor (decerebrate) posturing; GCS &lt;9 with asymmetric, dilated or non-reactive pupils; or initial GCS &lt;9 falling by more than 2 points.",
+                    "Very difficult in a spontaneously breathing, non-intubated patient."
+                ]
+            },
+            {
+                "type": "groups",
+                "title": "Red flags and special groups",
+                "icon": "triangle-alert",
+                "groups": [
+                    {
+                        "title": "Red flags",
+                        "items": [
+                            "GCS ≤8 or deteriorating.",
+                            "Unequal pupils, posturing or seizures.",
+                            "SBP &lt;90 mmHg or SpO<sub>2</sub> &lt;90%.",
+                            "Basilar skull fracture signs.",
+                            "Associated polytrauma."
+                        ]
+                    },
+                    {
+                        "title": "Elderly (&gt;65)",
+                        "items": [
+                            "TBI from low-energy falls (atrophy, anticoagulants); watch for delayed deterioration (subdural hematoma)."
+                        ]
+                    },
+                    {
+                        "title": "Children (&lt;13)",
+                        "items": [
+                            "Subtle signs: prioritise transport for any neurological change."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "tools",
+                "title": "Practise with the app",
+                "icon": "monitor",
+                "groups": [
+                    {
+                        "title": "Cushing's triad on the monitor",
+                        "items": [
+                            {
+                                "ecg": "sbrady",
+                                "label": "Sinus bradycardia",
+                                "sub": "With hypertension and irregular breathing: herniation"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tools",
+                        "items": [
+                            {
+                                "label": "Pediatric drug calculator: morphine",
+                                "sub": "0.1 mg/kg, maximum 5 mg",
+                                "href": "../pages/drug-calculator.html?drug=Morphine",
+                                "icon": "pill"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "title": "Key performance indicator",
+                "icon": "chart-no-axes-column",
+                "items": [
+                    "IV fluid for SBP &lt;120 mmHg or MAP &lt;90 mmHg."
+                ]
+            },
+            {
+                "type": "related",
+                "title": "Related CPGs",
+                "icon": "link",
+                "items": [
+                    {
+                        "label": "7.1 General Trauma Management",
+                        "href": "c7-1.html"
+                    },
+                    {
+                        "label": "7.5 Spinal Motion Restriction",
+                        "href": "c7-5.html"
+                    },
+                    {
+                        "label": "5.2 Seizures",
+                        "href": "c5-2.html"
+                    },
+                    {
+                        "label": "6.2 Abnormal Behavior",
+                        "href": "c6-2.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "quiz": [
         {
-            q: "What is the first priority in managing a patient with traumatic brain injury?",
-            options: ["Administer mannitol", "Perform CT scan", "Maintain airway and oxygenation", "Elevate head of bed"],
-            correct: 2,
-            explanation: "Airway, breathing, and oxygenation are the primary priorities to prevent secondary brain injury."
+            "q": "What prevents secondary brain injury?",
+            "options": [
+                "Avoiding hypoxia, hypotension and hyperventilation",
+                "Routine hyperventilation",
+                "Fluid restriction",
+                "Lying flat"
+            ],
+            "correct": 0,
+            "explanation": "ICP management."
         },
         {
-            q: "What is the target systolic blood pressure for an adult with isolated TBI?",
-            options: [">90 mmHg", ">100 mmHg", "=120 mmHg", ">140 mmHg"],
-            correct: 2,
-            explanation: "Target SBP =120 mmHg to maintain cerebral perfusion."
+            "q": "What SBP is targeted in adult TBI?",
+            "options": [
+                "≥120 mmHg (or MAP ≥90)",
+                "≥90 mmHg",
+                "≥160 mmHg",
+                "≥70 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "A KPI."
         },
         {
-            q: "What is the target SpO2 for a patient with TBI?",
-            options: ["=90%", "=94%", "=88%", "100%"],
-            correct: 1,
-            explanation: "Maintain SpO2 =94% to prevent hypoxia."
+            "q": "What SpO₂ is targeted?",
+            "options": [
+                "≥94%",
+                "≥88%",
+                "100% only",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Titrate oxygen."
         },
         {
-            q: "Which of the following is a sign of increased intracranial pressure?",
-            options: ["Hypotension", "Tachycardia", "Cushing�s triad (hypertension, bradycardia, irregular respirations)", "Fever"],
-            correct: 2,
-            explanation: "Cushing�s triad is a late sign of increased ICP."
+            "q": "Which is Cushing's triad?",
+            "options": [
+                "Hypertension, bradycardia, irregular respirations",
+                "Hypotension, tachycardia, fever",
+                "Hypoxia, cough, rash",
+                "Tachycardia, hypertension, sweating"
+            ],
+            "correct": 0,
+            "explanation": "A sign of herniation."
         },
         {
-            q: "What is the preferred sedation agent for an agitated patient with TBI?",
-            options: ["Midazolam", "Morphine", "Ketamine", "Diazepam"],
-            correct: 2,
-            explanation: "Ketamine is preferred as it does not significantly increase ICP and provides rapid sedation."
+            "q": "Which sedative is preferred?",
+            "options": [
+                "Ketamine",
+                "Midazolam",
+                "Morphine",
+                "Haloperidol"
+            ],
+            "correct": 0,
+            "explanation": "Benzodiazepines or morphine at reduced doses if ketamine is unavailable."
         },
         {
-            q: "In a patient with TBI and GCS 7, what is the appropriate airway management?",
-            options: ["OPA only", "NPA only", "Supraglottic airway or intubation", "Await ALS backup"],
-            correct: 2,
-            explanation: "GCS =8 indicates need for advanced airway management to protect the airway and optimize ventilation."
+            "q": "GCS 7, airway maintainable with jaw thrust and OPA. Advanced airway?",
+            "options": [
+                "Avoid unless medication-facilitated intubation is available",
+                "Always intubate",
+                "Supraglottic for everyone",
+                "No airway care"
+            ],
+            "correct": 0,
+            "explanation": "Consider only if GCS 3 and basic adjuncts fail."
         },
         {
-            q: "What is the target EtCO2 for a patient with TBI who is intubated?",
-            options: ["25-30 mmHg", "30-35 mmHg", "35-45 mmHg", "45-50 mmHg"],
-            correct: 2,
-            explanation: "Maintain normocapnia (35-45 mmHg) to avoid cerebral vasoconstriction or vasodilation."
+            "q": "What EtCO₂ is normal ventilation?",
+            "options": [
+                "35–45 mmHg",
+                "20–25 mmHg",
+                "50–60 mmHg",
+                "Not measured"
+            ],
+            "correct": 0,
+            "explanation": "Hyperventilation targets 30–35."
         },
         {
-            q: "When is hyperventilation indicated in TBI?",
-            options: ["For all TBI patients", "Only when signs of herniation are present and hypoxemia/hypotension corrected", "When SpO2 <90%", "For pediatric patients only"],
-            correct: 1,
-            explanation: "Hyperventilation (target EtCO2 30-35 mmHg) is reserved for patients with signs of herniation after correcting hypoxia and hypotension."
+            "q": "When is hyperventilation used?",
+            "options": [
+                "Signs of herniation after correcting hypoxemia and hypotension",
+                "All TBI",
+                "Whenever SpO₂ <90%",
+                "Never"
+            ],
+            "correct": 0,
+            "explanation": "GCS <9 with posturing, pupil changes or a fall of more than 2 points."
         },
         {
-            q: "What is the contraindication to using a cervical collar in a patient with TBI?",
-            options: ["May cause airway obstruction", "May increase intracranial pressure", "May cause skin breakdown", "May delay transport"],
-            correct: 1,
-            explanation: "Cervical collars can impede cerebral venous drainage, increasing ICP, and should be avoided in TBI."
+            "q": "Why no c-collar in TBI?",
+            "options": [
+                "It impedes cerebral venous drainage and raises ICP",
+                "It is uncomfortable",
+                "It is too expensive",
+                "It is fine"
+            ],
+            "correct": 0,
+            "explanation": "Use head blocks instead."
         },
         {
-            q: "What is the initial fluid bolus for an adult with TBI and hypotension?",
-            options: ["250-500 mL", "500-1000 mL", "1000-2000 mL", "No fluids"],
-            correct: 0,
-            explanation: "Adults with TBI and hypotension should receive 250-500 mL crystalloid bolus to avoid over-resuscitation."
+            "q": "What adult bolus does the text give?",
+            "options": [
+                "500–1000 mL",
+                "50 mL",
+                "3000 mL",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "The flowchart gives 250–500 mL."
         },
         {
-            q: "A patient with TBI has a GCS of 8 and is combative. What is the appropriate sedation?",
-            options: ["No sedation", "Ketamine 0.5-1 mg/kg IV", "Midazolam 10 mg IV", "Morphine 10 mg IV"],
-            correct: 1,
-            explanation: "Ketamine is preferred for sedation in TBI; dose 0.5-1 mg/kg IV/IO/IM."
+            "q": "A combative patient with TBI. What do you do?",
+            "options": [
+                "Request ALS early; ketamine 0.5–1 mg/kg (EP)",
+                "Restrain prone",
+                "No sedation",
+                "Midazolam 15 mg"
+            ],
+            "correct": 0,
+            "explanation": "Sedation is given for agitation."
         },
         {
-            q: "What is the dose of ketamine for sedation in an adult with TBI?",
-            options: ["0.1 mg/kg", "0.5-1 mg/kg", "2-3 mg/kg", "5 mg/kg"],
-            correct: 1,
-            explanation: "Ketamine dose for agitation in TBI is 0.5-1 mg/kg IV/IO/IM, max 100 mg."
+            "q": "What is the ketamine dose?",
+            "options": [
+                "0.5–1 mg/kg (max 100 mg)",
+                "3–4 mg/kg",
+                "10 mg/kg",
+                "0.05 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Adults and children."
         },
         {
-            q: "Which of the following is a sign of brain herniation?",
-            options: ["Pinpoint pupils", "Bilateral dilated pupils", "Unilateral dilated pupil", "Normal pupils"],
-            correct: 2,
-            explanation: "A unilateral dilated pupil (blown pupil) indicates herniation on the same side."
+            "q": "Which pupil finding suggests herniation?",
+            "options": [
+                "Asymmetric, dilated or non-reactive",
+                "Equal and reactive",
+                "Pinpoint both",
+                "Normal"
+            ],
+            "correct": 0,
+            "explanation": "A hyperventilation criterion with GCS <9."
         },
         {
-            q: "What is the recommended head position for a patient with suspected increased ICP?",
-            options: ["Flat supine", "Trendelenburg", "Head of bed elevated 30 degrees", "Prone"],
-            correct: 2,
-            explanation: "Elevating the head of bed to 30 degrees helps reduce ICP, provided no spinal precautions contraindicate."
+            "q": "How is the head positioned with impending herniation?",
+            "options": [
+                "30 degrees head up if no spinal precautions are needed",
+                "Flat",
+                "Head down",
+                "Prone"
+            ],
+            "correct": 0,
+            "explanation": "Neutral alignment."
         },
         {
-            q: "What is the pediatric dose of ketamine for sedation in TBI?",
-            options: ["0.1 mg/kg", "0.5-1 mg/kg", "2 mg/kg", "5 mg/kg"],
-            correct: 1,
-            explanation: "Pediatric dose is the same: 0.5-1 mg/kg IV/IO/IM, max 100 mg."
+            "q": "What is the pediatric midazolam dose?",
+            "options": [
+                "0.05 mg/kg (max 5 mg)",
+                "0.5 mg/kg",
+                "5 mg/kg",
+                "1 mg/kg"
+            ],
+            "correct": 0,
+            "explanation": "Repeat after 10 minutes if required."
         },
         {
-            q: "A patient with TBI has a blood pressure of 90/50. What is the next step?",
-            options: ["Give 250-500 mL fluid bolus", "Start dopamine", "Administer mannitol", "Transport only"],
-            correct: 0,
-            explanation: "Hypotension in TBI requires fluid resuscitation to maintain SBP =120 mmHg."
+            "q": "Adult hyperventilation rate?",
+            "options": [
+                "20 breaths/min",
+                "12",
+                "40",
+                "8"
+            ],
+            "correct": 0,
+            "explanation": "Normal 12 breaths/min."
         },
         {
-            q: "What is the target EtCO2 during hyperventilation for TBI?",
-            options: ["25-30 mmHg", "30-35 mmHg", "35-45 mmHg", "45-50 mmHg"],
-            correct: 1,
-            explanation: "Hyperventilation targets EtCO2 30-35 mmHg to induce cerebral vasoconstriction."
+            "q": "What EtCO₂ during hyperventilation?",
+            "options": [
+                "30–35 mmHg",
+                "20–25 mmHg",
+                "35–45 mmHg",
+                "50 mmHg"
+            ],
+            "correct": 0,
+            "explanation": "Per the table."
         },
         {
-            q: "Which of the following is a contraindication to hyperventilation?",
-            options: ["GCS <9", "Decerebrate posturing", "Corrected hypoxemia", "Normal mental status"],
-            correct: 3,
-            explanation: "Hyperventilation is only indicated in patients with signs of herniation; it may be harmful in others."
+            "q": "Which route is preferred for sedation?",
+            "options": [
+                "IV",
+                "IM",
+                "Oral",
+                "Rectal"
+            ],
+            "correct": 0,
+            "explanation": "Avoid IM whenever possible."
         },
         {
-            q: "What is the role of mannitol in prehospital TBI management?",
-            options: ["First-line treatment", "Given for all TBI patients", "Not part of DCAS prehospital formulary", "Given for hypotension"],
-            correct: 2,
-            explanation: "Mannitol is not in the DCAS prehospital formulary; fluid and airway management are priorities."
+            "q": "What is the Red-priority threshold?",
+            "options": [
+                "GCS ≤9 or a falling GCS",
+                "GCS 15",
+                "Any headache",
+                "GCS 14"
+            ],
+            "correct": 0,
+            "explanation": "Per the triage criteria."
         },
         {
-            q: "A patient with TBI has a GCS of 14 after a fall. What is the triage category?",
-            options: ["Green", "Yellow", "Red", "Not applicable"],
-            correct: 1,
-            explanation: "GCS 14 is serious but not immediately life-threatening; yellow priority, but may change if deteriorates."
+            "q": "Which is a sign of basilar skull fracture?",
+            "options": [
+                "Battle's sign",
+                "Unilateral wheeze",
+                "Pinpoint pupils",
+                "Bradycardia alone"
+            ],
+            "correct": 0,
+            "explanation": "Also raccoon eyes and CSF leak."
         },
         {
-            q: "Why should you avoid hyperventilation in a patient without signs of herniation?",
-            options: ["It increases ICP", "It causes cerebral vasoconstriction and ischemia", "It causes hypotension", "It causes bradycardia"],
-            correct: 1,
-            explanation: "Hyperventilation causes cerebral vasoconstriction, which may reduce cerebral blood flow and cause ischemia."
+            "q": "Why avoid hyperventilation otherwise?",
+            "options": [
+                "It causes cerebral vasoconstriction",
+                "It raises BP",
+                "It causes fever",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Maintain normocapnia."
         },
         {
-            q: "What is the maximum total fluid bolus for an adult with TBI?",
-            options: ["500 mL", "1000 mL", "2000 mL", "No maximum"],
-            correct: 2,
-            explanation: "Up to 2000 mL crystalloid may be given, but avoid over-resuscitation."
+            "q": "What is the adult midazolam dose?",
+            "options": [
+                "0.5 mg–5 mg, repeat after 5–10 minutes",
+                "10–15 mg",
+                "0.05 mg/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Reduced if ketamine is unavailable."
         },
         {
-            q: "Which of the following is a sign of basilar skull fracture?",
-            options: ["Battle�s sign", "Raccoon eyes", "CSF otorrhea", "All of the above"],
-            correct: 3,
-            explanation: "Battle�s sign (mastoid ecchymosis), raccoon eyes (periorbital ecchymosis), and CSF leak are signs of basilar skull fracture."
+            "q": "What is the adult morphine dose here?",
+            "options": [
+                "2–5 mg",
+                "20 mg",
+                "0.5 mg",
+                "50 mg"
+            ],
+            "correct": 0,
+            "explanation": "Repeat after 10 minutes if required."
         },
         {
-            q: "What is the dose of midazolam for sedation in an adult with TBI?",
-            options: ["0.5-5 mg IV/IO/IM", "10 mg IV", "0.1 mg/kg", "5 mg IM only"],
-            correct: 0,
-            explanation: "Midazolam dose for sedation is 0.5-5 mg IV/IO/IM."
+            "q": "An elderly patient on anticoagulants falls from standing. What do you watch for?",
+            "options": [
+                "Delayed deterioration (subdural hematoma)",
+                "Nothing",
+                "Hyperglycemia",
+                "Sunburn"
+            ],
+            "correct": 0,
+            "explanation": "Low-energy mechanisms can cause TBI."
         },
         {
-            q: "A patient with TBI has a seizure. What is the first step?",
-            options: ["Administer midazolam", "Protect airway and give benzodiazepine", "Check glucose", "Transport immediately"],
-            correct: 1,
-            explanation: "Seizure management includes airway protection and administration of benzodiazepines."
+            "q": "What is the pediatric bolus on the flowchart?",
+            "options": [
+                "10–20 mL/kg",
+                "60 mL/kg",
+                "1 mL/kg",
+                "None"
+            ],
+            "correct": 0,
+            "explanation": "Target normal SBP for age."
         },
         {
-            q: "What is the pediatric fluid bolus for a child with TBI and hypotension?",
-            options: ["5-10 mL/kg", "10-20 mL/kg", "20-30 mL/kg", "30-40 mL/kg"],
-            correct: 1,
-            explanation: "Pediatric fluid bolus is 10-20 mL/kg; repeat as needed to maintain age-appropriate SBP."
+            "q": "When does GCS get reassessed for Red priority?",
+            "options": [
+                "Every 5 minutes",
+                "Every 30 minutes",
+                "Once",
+                "Hourly"
+            ],
+            "correct": 0,
+            "explanation": "Yellow 10, Green 15."
         },
         {
-            q: "What is the key performance indicator for TBI?",
-            options: ["Administer mannitol", "Administer IV fluid for SBP <120 mmHg", "Perform CT scan", "Give steroids"],
-            correct: 1,
-            explanation: "Administering IV fluid to maintain SBP =120 mmHg in isolated TBI is a key KPI."
+            "q": "What does the KPI require?",
+            "options": [
+                "IV fluid for SBP <120 or MAP <90",
+                "Collar on all",
+                "Hyperventilation for all",
+                "CT scan"
+            ],
+            "correct": 0,
+            "explanation": "A single KPI."
         },
         {
-            q: "A patient with TBI has a GCS of 3 and is apneic. What is the priority?",
-            options: ["Intubate and ventilate", "Administer sedation", "Give fluids", "Transport immediately"],
-            correct: 0,
-            explanation: "Apneic patient requires immediate airway control and ventilation."
+            "q": "GCS 3, airway cannot be kept with OPA and jaw thrust. What may be considered?",
+            "options": [
+                "Advanced airway (P)",
+                "Nothing",
+                "Sedation",
+                "Sit up"
+            ],
+            "correct": 0,
+            "explanation": "Both conditions are met."
         },
         {
-            q: "What is the recommended ventilation rate for an adult with TBI during hyperventilation?",
-            options: ["10 breaths/min", "12 breaths/min", "20 breaths/min", "30 breaths/min"],
-            correct: 2,
-            explanation: "Hyperventilation for TBI uses a rate of approximately 20 breaths/min to achieve EtCO2 30-35 mmHg."
+            "q": "Why avoid over-resuscitation?",
+            "options": [
+                "It can worsen cerebral edema",
+                "It causes hypothermia only",
+                "It raises glucose",
+                "No reason"
+            ],
+            "correct": 0,
+            "explanation": "Titrate fluids."
         },
         {
-            q: "Why should you avoid giving large fluid boluses in TBI?",
-            options: ["May cause hypotension", "May increase ICP", "May cause bradycardia", "May cause hyperglycemia"],
-            correct: 1,
-            explanation: "Excessive fluids can increase ICP and worsen cerebral edema."
+            "q": "Which level gives sedation on the flowchart?",
+            "options": [
+                "EP",
+                "EMR",
+                "EMT",
+                "ER"
+            ],
+            "correct": 0,
+            "explanation": "Request ALS early for agitated patients."
         }
     ],
-    flashcards: [
-        { category: "Definition", question: "What is traumatic brain injury (TBI)?", answer: "Injury to the brain resulting from external mechanical force, leading to temporary or permanent impairment." },
-        { category: "Primary brain injury", question: "What is primary brain injury?", answer: "Direct damage from the initial impact (contusion, laceration, hemorrhage)." },
-        { category: "Secondary brain injury", question: "What is secondary brain injury?", answer: "Progressive damage from hypoxia, hypotension, increased ICP, or inflammation after the initial injury." },
-        { category: "Cushing�s triad", question: "What is Cushing�s triad?", answer: "Hypertension, bradycardia, irregular respirations � a late sign of increased ICP." },
-        { category: "Decerebrate posturing", question: "What is decerebrate posturing?", answer: "Arms extended, internally rotated; indicates severe brain injury." },
-        { category: "Decorticate posturing", question: "What is decorticate posturing?", answer: "Arms flexed, legs extended; indicates damage above the brainstem." },
-        { category: "GCS thresholds", question: "What GCS indicates severe TBI?", answer: "GCS =8." },
-        { category: "Target SBP in TBI", question: "What is the target systolic BP for an adult with isolated TBI?", answer: "=120 mmHg." },
-        { category: "Target SpO2 in TBI", question: "What is the target SpO2 in TBI?", answer: "=94%." },
-        { category: "Target EtCO2", question: "What is the target EtCO2 in normocapnic TBI?", answer: "35-45 mmHg." },
-        { category: "Hyperventilation target", question: "What is the target EtCO2 during hyperventilation?", answer: "30-35 mmHg." },
-        { category: "Hyperventilation indication", question: "When is hyperventilation indicated in TBI?", answer: "Signs of herniation after correcting hypoxia and hypotension." },
-        { category: "C-collar contraindication", question: "Why are c-collars contraindicated in TBI?", answer: "They may increase ICP by impeding cerebral venous drainage." },
-        { category: "Sedation in TBI", question: "What is the preferred sedation agent for TBI?", answer: "Ketamine 0.5-1 mg/kg IV/IO/IM." },
-        { category: "Fluid resuscitation", question: "What fluid is used for hypotension in TBI?", answer: "Normal saline or Ringer�s lactate; small boluses (250-500 mL in adults)." },
-        { category: "Avoid hyperventilation", question: "Why is hyperventilation harmful without herniation?", answer: "It causes cerebral vasoconstriction and ischemia." },
-        { category: "Pediatric considerations", question: "What is different about pediatric TBI?", answer: "Subtle signs; use Broselow tape; avoid over-resuscitation." },
-        { category: "Elderly considerations", question: "Why are elderly at higher risk?", answer: "Brain atrophy, anticoagulants, falls; may have delayed deterioration." },
-        { category: "KPI", question: "What is the key performance indicator for TBI?", answer: "Administer IV fluid for SBP <120 mmHg." },
-        { category: "Transport decision", question: "Should all patients with TBI be transported?", answer: "Yes, especially those with altered mental status, GCS changes, or mechanism of injury." }
+    "flashcards": [
+        {
+            "question": "Secondary injury",
+            "answer": "Avoid hypoxia, hypotension and hyperventilation."
+        },
+        {
+            "question": "Oxygen",
+            "answer": "SpO₂ ≥94% (EMR)."
+        },
+        {
+            "question": "BP target",
+            "answer": "Adult SBP ≥120 mmHg or MAP ≥90 mmHg."
+        },
+        {
+            "question": "EtCO₂",
+            "answer": "Normal 35–45 mmHg; hyperventilation 30–35 mmHg."
+        },
+        {
+            "question": "C-collar",
+            "answer": "Contraindicated: raises ICP. Head plate and blocks; no straps."
+        },
+        {
+            "question": "Airway if GCS <8",
+            "answer": "Jaw thrust; OPA/NPA if needed (EMR)."
+        },
+        {
+            "question": "Advanced airway",
+            "answer": "Avoid unless MFI is available; consider only GCS 3 with failed basic airway (P)."
+        },
+        {
+            "question": "Adult fluid",
+            "answer": "500–1000 mL (text) or 250–500 mL (flowchart); avoid over-resuscitation."
+        },
+        {
+            "question": "Pediatric fluid",
+            "answer": "10–20 mL/kg (flowchart)."
+        },
+        {
+            "question": "Ketamine",
+            "answer": "0.5–1 mg/kg IV/IO/IM, max 100 mg (preferred)."
+        },
+        {
+            "question": "Midazolam",
+            "answer": "Adult 0.5 mg–5 mg; child 0.05 mg/kg (max 5 mg)."
+        },
+        {
+            "question": "Morphine",
+            "answer": "Adult 2–5 mg; child 0.1 mg/kg (max 5 mg)."
+        },
+        {
+            "question": "Sedation route",
+            "answer": "IV preferred; if IM, gain IV/IO once sedated."
+        },
+        {
+            "question": "Hyperventilation criteria",
+            "answer": "Hypoxia and hypotension corrected plus GCS <9 with decerebrate posturing, pupil changes, or a fall >2 points."
+        },
+        {
+            "question": "Hyperventilation rates",
+            "answer": "Adults 20, children 25, infants 30 breaths/min."
+        },
+        {
+            "question": "Herniation signs",
+            "answer": "Cushing's triad, posturing, unilateral or fixed dilated pupils."
+        },
+        {
+            "question": "Basilar skull fracture",
+            "answer": "Battle's sign, raccoon eyes, CSF otorrhea or rhinorrhea."
+        },
+        {
+            "question": "Head position",
+            "answer": "30° head up for impending herniation if no spinal precautions are needed."
+        },
+        {
+            "question": "Reassessment",
+            "answer": "GCS: Red 5, Yellow 10, Green 15 minutes."
+        },
+        {
+            "question": "KPI",
+            "answer": "IV fluid for SBP <120 mmHg or MAP <90 mmHg."
+        }
     ],
-    critical: [
+    "critical": [
         {
-            id: "crit_7_6_1",
-            scenario: "A 45-year-old male is thrown from a vehicle. He is unconscious with a GCS of 6. His BP is 100/60, HR 100, SpO2 92% on room air. What is your priority?",
-            question: "What should you do first?",
-            options: [
-                { t: "Administer 250 mL fluid bolus", f: "Hypotension (SBP <120) requires fluids, but airway and oxygenation are first." },
-                { t: "Open airway with jaw thrust and provide BVM ventilation", f: "Correct. Airway and oxygenation are the immediate priority." },
-                { t: "Apply cervical collar", f: "C-collar is contraindicated in TBI; use manual stabilization." },
-                { t: "Administer ketamine for sedation", f: "Not the priority; airway comes first." }
+            "id": "crit_7_6_1",
+            "scenario": "A man thrown from a vehicle has GCS 6, BP 100/60, SpO₂ 92%.",
+            "question": "What do you do?",
+            "options": [
+                {
+                    "t": "Jaw thrust and OPA/NPA, oxygen to ≥94%, head blocks (no collar), fluid to SBP ≥120, ALS",
+                    "f": "Correct."
+                },
+                {
+                    "t": "C-collar and long board",
+                    "f": "Collars raise ICP in TBI."
+                },
+                {
+                    "t": "Hyperventilate at once",
+                    "f": "Only for herniation signs after correcting hypoxia and hypotension."
+                },
+                {
+                    "t": "Intubate without drugs",
+                    "f": "Avoid unless MFI available or GCS 3 with failed basic airway."
+                }
             ],
-            correct: 1,
-            explanation: "Unconscious patient with GCS <8 requires airway management; use jaw thrust and BVM to improve oxygenation.",
-            kpi: "Airway managed and ventilation initiated."
+            "correct": 0,
+            "explanation": "Prevent hypoxia and hypotension.",
+            "kpi": "IV fluid for SBP <120 mmHg."
         },
         {
-            id: "crit_7_6_2",
-            scenario: "A 60-year-old male on warfarin fell from standing height and now has a severe headache and is vomiting. GCS 14, pupils equal, BP 150/90. What is your concern?",
-            question: "What is the most likely diagnosis and next step?",
-            options: [
-                { t: "Migraine; give analgesia", f: "History of anticoagulation with head trauma is a red flag." },
-                { t: "Subdural hematoma; transport urgently", f: "Correct. Anticoagulated patient with head trauma is at high risk for intracranial hemorrhage." },
-                { t: "Hypertensive crisis; give GTN", f: "BP is not severely elevated; priority is transport." },
-                { t: "Concussion; observe", f: "Not safe with anticoagulation." }
+            "id": "crit_7_6_2",
+            "scenario": "A 70-year-old on warfarin fell from standing; now severe headache and vomiting, GCS 14.",
+            "question": "What is your concern?",
+            "options": [
+                {
+                    "t": "Intracranial bleeding with risk of delayed deterioration: monitor GCS closely and transport",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Minor fall: no transport",
+                    "f": "Elderly and anticoagulated patients deteriorate late."
+                },
+                {
+                    "t": "Hyperventilate",
+                    "f": "No herniation signs."
+                },
+                {
+                    "t": "Collar",
+                    "f": "Contraindicated in TBI."
+                }
             ],
-            correct: 1,
-            explanation: "Anticoagulated patients with head trauma are at high risk for intracranial hemorrhage; urgent transport is required.",
-            kpi: "Patient transported with priority."
+            "correct": 0,
+            "explanation": "Watch for subdural hematoma.",
+            "kpi": "IV fluid for SBP <120 mmHg."
         },
         {
-            id: "crit_7_6_3",
-            scenario: "A 30-year-old male with TBI has a GCS of 9, and you note a right pupil that is dilated and non-reactive. His BP is 140/90, HR 50. What is your immediate action?",
-            question: "What should you do?",
-            options: [
-                { t: "Administer mannitol", f: "Not available prehospital." },
-                { t: "Hyperventilate to target EtCO2 30-35 mmHg", f: "Correct. Signs of herniation warrant hyperventilation." },
-                { t: "Give fluid bolus", f: "BP is adequate; hyperventilation is the priority." },
-                { t: "Transport without intervention", f: "Hyperventilation may be life-saving." }
+            "id": "crit_7_6_3",
+            "scenario": "A head-injured man is intubated (GCS 6). The right pupil is now dilated and non-reactive; BP 150/90, HR 50. SpO₂ 98%.",
+            "question": "What now?",
+            "options": [
+                {
+                    "t": "Head up 30°, hyperventilate at 20 breaths/min to EtCO₂ 30–35 mmHg",
+                    "f": "Correct. GCS <9 with a dilated non-reactive pupil."
+                },
+                {
+                    "t": "Normal ventilation only",
+                    "f": "Herniation signs justify hyperventilation."
+                },
+                {
+                    "t": "Lie him flat",
+                    "f": "Head up."
+                },
+                {
+                    "t": "Give a large fluid bolus",
+                    "f": "BP is above target."
+                }
             ],
-            correct: 1,
-            explanation: "Unilateral dilated pupil indicates herniation; hyperventilation is indicated to lower ICP.",
-            kpi: "Hyperventilation initiated."
+            "correct": 0,
+            "explanation": "Hypoxemia and hypotension are already corrected.",
+            "kpi": "IV fluid for SBP <120 mmHg."
         },
         {
-            id: "crit_7_6_4",
-            scenario: "A 25-year-old female with TBI is combative and attempting to remove her oxygen mask. She is not cooperating with care. What is the appropriate management?",
-            question: "What should you do?",
-            options: [
-                { t: "Restrain her", f: "Chemical sedation is preferred to reduce agitation and ICP." },
-                { t: "Administer ketamine 0.5-1 mg/kg IV", f: "Correct. Ketamine is preferred for sedation in TBI to control agitation." },
-                { t: "Administer midazolam 10 mg IM", f: "Midazolam may be used, but ketamine is preferred; dose may be too high." },
-                { t: "Transport without sedation", f: "Agitation increases ICP and risks injury." }
+            "id": "crit_7_6_4",
+            "scenario": "A 25-year-old with TBI is combative and tearing off her oxygen mask.",
+            "question": "What is appropriate?",
+            "options": [
+                {
+                    "t": "Request ALS; ketamine 0.5–1 mg/kg IV preferred (EP)",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Prone restraint",
+                    "f": "Never."
+                },
+                {
+                    "t": "High-dose midazolam",
+                    "f": "Ketamine first; reduced benzodiazepine doses."
+                },
+                {
+                    "t": "Ignore it",
+                    "f": "Agitation should be sedated."
+                }
             ],
-            correct: 1,
-            explanation: "Ketamine is the preferred sedative for TBI as it does not increase ICP and effectively controls agitation.",
-            kpi: "Sedation administered and patient controlled."
+            "correct": 0,
+            "explanation": "If IM is needed, get IV/IO access once sedated.",
+            "kpi": "IV fluid for SBP <120 mmHg."
         },
         {
-            id: "crit_7_6_5",
-            scenario: "A 55-year-old male with isolated TBI has a BP of 110/70 after 500 mL fluid. His GCS is 10. What is the next step?",
-            question: "What should you do regarding fluid management?",
-            options: [
-                { t: "Give another 250-500 mL fluid bolus", f: "Correct. Target SBP =120 mmHg for isolated TBI." },
-                { t: "Stop fluids; BP is adequate", f: "Target is higher for TBI to maintain cerebral perfusion." },
-                { t: "Start dopamine", f: "Not indicated; fluid is first-line." },
-                { t: "Give hypertonic saline", f: "Not in DCAS formulary." }
+            "id": "crit_7_6_5",
+            "scenario": "A man with isolated TBI has BP 110/70 after a first bolus; GCS 10.",
+            "question": "Fluid?",
+            "options": [
+                {
+                    "t": "Further bolus and reassess, aiming for SBP ≥120 without over-resuscitating",
+                    "f": "Correct."
+                },
+                {
+                    "t": "Stop: SBP is over 90",
+                    "f": "The TBI target is 120."
+                },
+                {
+                    "t": "Two litres fast",
+                    "f": "Avoid over-resuscitation."
+                },
+                {
+                    "t": "Vasopressor first",
+                    "f": "Fluid first in this CPG."
+                }
             ],
-            correct: 0,
-            explanation: "In isolated TBI, maintain SBP =120 mmHg; additional fluid is indicated.",
-            kpi: "IV fluids administered to achieve target BP."
+            "correct": 0,
+            "explanation": "KPI: fluid for SBP <120 or MAP <90.",
+            "kpi": "IV fluid for SBP <120 mmHg."
         }
     ]
 };
