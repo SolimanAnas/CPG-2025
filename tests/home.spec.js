@@ -59,3 +59,13 @@ test('the statistics row opens the progress panel', async ({ page }) => {
   await expect(page.locator('.stats-modal-content')).toBeVisible();
   expect(errors).toEqual([]);
 });
+
+test('row action icons have a visible key, a tooltip and a screen-reader label', async ({ page }) => {
+  await page.goto('/index.html', { waitUntil: 'networkidle' });
+  await expect(page.locator('.h-legend')).toContainText('Flashcards');
+  await expect(page.locator('.h-legend')).toContainText('Quiz');
+  await expect(page.locator('.h-legend')).toContainText('Scenarios');
+  const bad = await page.locator('.h-act').evaluateAll(els => els.filter(a =>
+    !/^(Flashcards|Quiz|Scenarios): .+/.test(a.getAttribute('aria-label') || '') || !a.dataset.tip).length);
+  expect(bad).toBe(0);
+});

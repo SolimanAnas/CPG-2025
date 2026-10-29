@@ -521,13 +521,13 @@
             background: var(--h-surface); border: 1px solid var(--h-line); border-radius: 18px;
             box-shadow: 0 6px 20px rgba(0,0,0,.14); color: var(--text-primary);
         }
-        .h-hero { padding: 16px 18px 14px; margin-top: 8px; }
-        .h-hero-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
-        .h-greet { font-size: 1.25rem; font-weight: 800; letter-spacing: -.01em; }
-        .h-sub { font-size: .85rem; color: var(--h-muted); margin-top: 2px; }
-        .h-pct { font-size: 1.6rem; font-weight: 800; color: var(--primary-accent); line-height: 1; }
+        .h-hero { padding: 10px 14px; margin-top: 6px; }
+        .h-hero-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+        .h-greet { font-size: 1rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.25; }
+        .h-sub { font-size: .76rem; color: var(--h-muted); margin-top: 1px; }
+        .h-pct { font-size: 1.15rem; font-weight: 800; color: var(--primary-accent); line-height: 1; }
         .h-pct small { font-size: .8rem; margin-left: 1px; }
-        .h-bar { height: 6px; border-radius: 99px; background: var(--h-line); margin-top: 12px; overflow: hidden; }
+        .h-bar { height: 4px; border-radius: 99px; background: var(--h-line); margin-top: 8px; overflow: hidden; }
         .h-bar span { display: block; height: 100%; min-width: 6px; border-radius: inherit; background: linear-gradient(90deg, #0ca678, #2dd4bf); transition: width .4s ease; }
 
         #mainContent .h-search { margin: 12px 0 0; padding: 0 14px; min-height: 50px; }
@@ -580,7 +580,16 @@
         .h-rt small { font-size: .72rem; font-weight: 500; color: var(--h-muted); }
         .h-row.is-done .h-rt { color: var(--h-muted); }
         .h-acts { display: flex; gap: 2px; flex-shrink: 0; }
-        .h-act { width: 32px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--h-muted); text-decoration: none; }
+        .h-act { position: relative; width: 32px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--h-muted); text-decoration: none; }
+        /* Tooltip on hover and keyboard focus (touch users have the key above). */
+        .h-act[data-tip]:hover::after, .h-act[data-tip]:focus-visible::after {
+            content: attr(data-tip); position: absolute; right: calc(100% + 4px); top: 50%; transform: translateY(-50%);
+            background: #0f172a; color: #fff; font-size: .7rem; font-weight: 600; padding: 4px 8px; border-radius: 6px;
+            white-space: nowrap; pointer-events: none; z-index: 5;
+        }
+        .h-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: -2px 2px 10px; font-size: .74rem; color: var(--h-label); }
+        .h-legend span { display: inline-flex; align-items: center; gap: 5px; }
+        .h-legend .lucide { opacity: .9; }
         .h-act:hover, .h-act:focus-visible { background: var(--h-line); color: var(--c); }
         .h-check { position: relative; flex-shrink: 0; width: 26px; height: 26px; cursor: pointer; }
         .h-check input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
@@ -1313,6 +1322,7 @@
             };
             const openGroups = loadStorage(OPEN_GROUPS_KEY, {});
             chaptersHtml = `<div class="section-label h-label">CPG guidelines <span class="h-label-n">${regularChapters.length}</span></div>
+                <div class="h-legend" aria-hidden="true"><span>${ICO('zap')} Flashcards</span><span>${ICO('notebook-pen')} Quiz</span><span>${ICO('ambulance')} Scenarios</span></div>
                 <div id="cpgChaptersContainer" class="h-groups">`;
             Object.keys(groups).forEach(grp => {
                 const chs = groups[grp];
@@ -1335,7 +1345,7 @@
                     const isChecked = completion[ch.id] || false;
                     const m = ch.shortTitle.match(/^(\S+)\s+(.*)$/) || [null, '', ch.shortTitle];
                     const study = ch.id !== 's1';
-                    const act = (view, icon, label) => `<a href="chapters/${baseFile}.html?view=${view}${sec}" class="h-act" title="${label}" aria-label="${label}: ${ch.shortTitle}">${ICO(icon)}</a>`;
+                    const act = (view, icon, label) => `<a href="chapters/${baseFile}.html?view=${view}${sec}" class="h-act" data-tip="${label}" aria-label="${label}: ${ch.shortTitle}">${ICO(icon)}</a>`;
                     chaptersHtml += `
                             <div class="chapter-card h-row${isChecked ? ' is-done' : ''}" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
                                 <label class="h-check" title="Mark reviewed">

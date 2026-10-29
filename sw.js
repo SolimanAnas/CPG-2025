@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v8.1';   // Home page redesign
+const CACHE_VERSION = 'dcas-cpg-v8.2';   // Thinner greeting card; action icon key and tooltips
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
