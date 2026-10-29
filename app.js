@@ -280,7 +280,21 @@ if (!state.sections && chapterData) {
 
 // ---------- UTILITIES ----------  
 const utils = {  
-    shuffle: (arr) => [...arr].sort(() => Math.random() - 0.5),  
+    // Fisher–Yates: every order equally likely (sort-based shuffles are biased).
+    shuffle: (arr) => {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    },
+    // A copy of a quiz or scenario question with its options in random order,
+    // so the right answer is not always in the same place.
+    shuffleOptions: (q) => {
+        const order = utils.shuffle(q.options.map((_, i) => i));
+        return { ...q, options: order.map(i => q.options[i]), correct: order.indexOf(q.correct) };
+    },
     safeScrollTop: () => {  
         window.scrollTo(0,0);  
         document.body.scrollTop = 0;  
@@ -535,7 +549,7 @@ function switchSection(sectionId, updateUrl = true) {
     state.score = 0;  
     state.flashData = section.flashcards || [];  
     state.fIndex = 0;  
-    state.criticalData = section.critical || [];  
+    state.criticalData = (section.critical || []).map(utils.shuffleOptions);  
     state.criticalIndex = 0;  
     state.criticalScore = 0;  
 
@@ -942,7 +956,7 @@ const quizEngine = {
         if (isChapterMissing) { renderComingSoon(); return; }  
         const section = state.activeSection;  
         if (!section || !section.quiz) return;  
-        state.quizData = utils.shuffle(section.quiz).slice(0, size);  
+        state.quizData = utils.shuffle(section.quiz).slice(0, size).map(utils.shuffleOptions);  
         state.qIndex = 0;  
         state.score = 0;  
         state.stats.totalAttempts = (state.stats.totalAttempts || 0) + 1;  

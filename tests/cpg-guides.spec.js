@@ -244,3 +244,31 @@ test("c0 what's new: every chapter listed and every guideline link opens", async
   expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
   expect(errors).toEqual([]);
 });
+
+test('M1–38 formulary: quiz, flashcards and scenarios open', async ({ page }) => {
+  const errors = trackErrors(page);
+  await page.goto('chapters/m1-38.html?view=flashcards', { waitUntil: 'networkidle' });
+  await expect(page.locator('.fc-progress')).toContainText('Card 1 of');
+  await page.goto('chapters/m1-38.html?view=quiz', { waitUntil: 'networkidle' });
+  await expect(page.locator('.setup-btn').first()).toBeVisible();
+  await page.goto('chapters/m1-38.html?view=critical', { waitUntil: 'networkidle' });
+  await expect(page.locator('.critical-card')).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+// c10-1 stores every right answer first: only the shuffle can move it.
+test('quiz options are shuffled, so the right answer moves', async ({ page }) => {
+  await page.goto('chapters/c10-1.html?view=quiz', { waitUntil: 'networkidle' });
+  await page.locator('.setup-btn[data-quiz-size="30"]').first().click();
+  const positions = new Set();
+  for (let i = 0; i < 30; i++) {
+    await page.locator('.option-btn').first().click();
+    const opts = page.locator('.option-btn');
+    const n = await opts.count();
+    for (let j = 0; j < n; j++) {
+      if (await opts.nth(j).evaluate(b => b.classList.contains('correct'))) positions.add(j);
+    }
+    if (i < 29) await page.locator('#nextQuizBtn').click();
+  }
+  expect(positions.size).toBeGreaterThan(2);
+});

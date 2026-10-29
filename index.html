@@ -503,6 +503,116 @@
 .popup-title svg.lucide,
 .amoled-badge svg.lucide,
 .res-ttl svg.lucide { width: 1em; height: 1em; margin-right: 4px; }
+
+        /* ═══════ HOME (h-*): compact, high-contrast layout ═══════ */
+        :root { --h-surface: rgba(255,255,255,.95); --h-line: rgba(15,23,42,.08); --h-label: rgba(255,255,255,.82); --h-muted: #52627a; }
+        [data-theme="light"]  { --h-surface: #ffffff; --h-label: #334155; }
+        [data-theme="sepia"]  { --h-surface: #fffaf0; --h-label: #5b4a36; --h-muted: #6b5a45; }
+        [data-theme="forest"] { --h-surface: rgba(240,247,232,.97); --h-muted: #3b5446; }
+        [data-theme="amoled"] { --h-surface: #0d0f12; --h-line: rgba(255,255,255,.08); --h-label: #9fb3c8; --h-muted: #9fb3c8; }
+        #mainContent .h-label {
+            background: none; border: 0; padding: 0; margin: 26px 2px 10px; text-shadow: none;
+            font-size: .72rem; letter-spacing: .12em; color: var(--h-label);
+        }
+        #mainContent .h-label::after { display: none; }
+        .h-label-n { margin-left: auto; font-size: .72rem; letter-spacing: 0; opacity: .8; }
+
+        .h-hero, .h-tile, .h-mega, .h-group, .h-links, .h-search {
+            background: var(--h-surface); border: 1px solid var(--h-line); border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,.14); color: var(--text-primary);
+        }
+        .h-hero { padding: 16px 18px 14px; margin-top: 8px; }
+        .h-hero-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+        .h-greet { font-size: 1.25rem; font-weight: 800; letter-spacing: -.01em; }
+        .h-sub { font-size: .85rem; color: var(--h-muted); margin-top: 2px; }
+        .h-pct { font-size: 1.6rem; font-weight: 800; color: var(--primary-accent); line-height: 1; }
+        .h-pct small { font-size: .8rem; margin-left: 1px; }
+        .h-bar { height: 6px; border-radius: 99px; background: var(--h-line); margin-top: 12px; overflow: hidden; }
+        .h-bar span { display: block; height: 100%; min-width: 6px; border-radius: inherit; background: linear-gradient(90deg, #0ca678, #2dd4bf); transition: width .4s ease; }
+
+        #mainContent .h-search { margin: 12px 0 0; padding: 0 14px; min-height: 50px; }
+        #mainContent .h-search input { color: var(--text-primary); font-size: .95rem; }
+        #mainContent .h-search input::placeholder { color: var(--h-muted); opacity: 1; }
+
+        .h-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        a.h-tile {
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 6px 12px; text-decoration: none; text-align: center; min-height: 92px;
+            transition: transform .15s ease, box-shadow .15s ease;
+        }
+        a.h-tile:active { transform: scale(.97); }
+        .h-ico {
+            width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0;
+            background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); font-size: 1.25rem;
+        }
+        .h-tile-t { font-size: .8rem; font-weight: 700; line-height: 1.2; color: var(--text-primary); }
+
+        a.h-mega {
+            display: flex; align-items: center; gap: 12px; margin-top: 10px; padding: 10px 14px; text-decoration: none;
+            background: linear-gradient(120deg, #9b1c1c, #dc2626); border: 0; color: #fff; position: relative;
+        }
+        .h-mega img { border-radius: 10px; }
+        .h-mega-t { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+        .h-mega-t b { font-size: 1rem; }
+        .h-mega-t small { opacity: .85; font-size: .78rem; }
+        .h-new { font-size: .65rem; font-weight: 800; letter-spacing: .08em; background: #fde047; color: #713f12; padding: 3px 7px; border-radius: 6px; }
+        .h-chev { opacity: .55; display: grid; place-items: center; }
+
+        .h-groups { display: flex; flex-direction: column; gap: 8px; }
+        .h-group { overflow: hidden; border-left: 4px solid var(--c); }
+        .h-group > summary {
+            list-style: none; display: flex; align-items: center; gap: 12px; padding: 12px 14px; cursor: pointer;
+            -webkit-tap-highlight-color: transparent; user-select: none;
+        }
+        .h-group > summary::-webkit-details-marker { display: none; }
+        .h-gico { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); }
+        .h-gname { flex: 1; font-weight: 700; font-size: .98rem; }
+        .h-gcount { font-size: .78rem; font-weight: 700; color: var(--h-muted); background: var(--h-line); padding: 3px 8px; border-radius: 99px; }
+        .h-gchev { color: var(--h-muted); transition: transform .2s ease; display: grid; }
+        .h-group[open] .h-gchev { transform: rotate(180deg); }
+        .h-rows { border-top: 1px solid var(--h-line); }
+
+        .h-row { display: flex; align-items: center; gap: 4px; padding: 4px 8px 4px 10px; border-top: 1px solid var(--h-line); animation: none; }
+        .h-row:first-child { border-top: 0; }
+        .h-row-main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 10px 2px; text-decoration: none; color: var(--text-primary); }
+        .h-num { font-size: .7rem; font-weight: 800; color: var(--c); background: color-mix(in srgb, var(--c) 12%, transparent); padding: 2px 6px; border-radius: 6px; min-width: 30px; text-align: center; flex-shrink: 0; }
+        .h-rt { font-size: .92rem; font-weight: 600; line-height: 1.25; display: flex; flex-direction: column; }
+        .h-rt small { font-size: .72rem; font-weight: 500; color: var(--h-muted); }
+        .h-row.is-done .h-rt { color: var(--h-muted); }
+        .h-acts { display: flex; gap: 2px; flex-shrink: 0; }
+        .h-act { width: 32px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--h-muted); text-decoration: none; }
+        .h-act:hover, .h-act:focus-visible { background: var(--h-line); color: var(--c); }
+        .h-check { position: relative; flex-shrink: 0; width: 26px; height: 26px; cursor: pointer; }
+        .h-check input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+        .h-check span { width: 22px; height: 22px; margin: 2px; border-radius: 50%; border: 2px solid var(--h-muted); display: grid; place-items: center; color: transparent; font-size: .8rem; opacity: .7; }
+        .h-check input:checked + span { background: #0ca678; border-color: #0ca678; color: #fff; opacity: 1; }
+        .h-check input:focus-visible + span { outline: 2px solid var(--primary-accent); outline-offset: 2px; }
+
+        .h-links { overflow: hidden; }
+        .h-link { display: flex; align-items: center; gap: 12px; padding: 12px 14px; text-decoration: none; color: var(--text-primary); border-top: 1px solid var(--h-line); cursor: pointer; }
+        .h-link:first-child { border-top: 0; }
+        .h-link-t { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .h-link-t b { font-size: .95rem; }
+        .h-link-t small { font-size: .78rem; color: var(--h-muted); }
+        .h-tile.filtered-out, .h-row.filtered-out, .h-link.filtered-out, .h-mega.filtered-out { display: none !important; }
+        /* Neutralise the old card styles these elements still carry. */
+        #mainContent .h-row {
+            opacity: 1; transform: none; animation: none; background: none; box-shadow: none;
+            border: 0; border-top: 1px solid var(--h-line); border-radius: 0; padding: 4px 8px 4px 10px;
+        }
+        #mainContent .h-row:first-child { border-top: 0; }
+        #mainContent .h-row:hover { transform: none; box-shadow: none; }
+        #mainContent .menu-card.h-link {
+            background: none; box-shadow: none; border: 0; border-top: 1px solid var(--h-line); border-radius: 0;
+            padding: 12px 14px; margin: 0; animation: none; opacity: 1; transform: none;
+        }
+        #mainContent .menu-card.h-link:first-child { border-top: 0; }
+        #mainContent .menu-card.h-tile, #mainContent .menu-card.h-mega { animation: none; opacity: 1; transform: none; }
+        #mainContent a.h-mega { background: linear-gradient(120deg, #9b1c1c, #dc2626); border: 0; padding: 10px 14px; border-radius: 18px; }
+        #mainContent .menu-card.h-tile { padding: 14px 6px 12px; border-radius: 18px; background: var(--h-surface); }
+        @media (max-width: 420px) { #headerCoursesBtn, #headerIndexBtn, #batteryIndicator { display: none !important; } }
+        @media (min-width: 700px) { .h-tiles { grid-template-columns: repeat(6, 1fr); } }
+        @media (prefers-reduced-motion: reduce) { .h-bar span, .h-gchev, a.h-tile { transition: none; } }
 </style>
 </head>
 <body>
@@ -626,7 +736,6 @@
 (function(){
     "use strict";
 
-    let showCpgChapters = false;
     let showStats = false;
 
     // ══════════════════════════════════════════════════════════
@@ -1047,13 +1156,14 @@
         { id:"c10-4", shortTitle:"10.4 Eclampsia",         title:"Eclampsia / Pre‑eclampsia",                  hasCritical:true,  isFirstInChapter:false, chapterGroup:"obstetric" },
         { id:"c11-1", shortTitle:"11.1 START Triage",      title:"S.T.A.R.T Triage (MCI Triage)",              hasCritical:true,  isFirstInChapter:true,  chapterGroup:"mci" },
         { id:"s1",    shortTitle:"S1 Scope of Practice",   title:"Scope of Practice Matrix",                    hasCritical:false, isFirstInChapter:true,  chapterGroup:"scope" },
-        { id:"m1-38", shortTitle:"M1–38 Formulary",        title:"Medication Formulary (38 drugs)",             hasCritical:false, isFirstInChapter:false, chapterGroup:"scope", chapterFile:"m1-38" }
+        { id:"m1-38", shortTitle:"M1–38 Formulary",        title:"Medication Formulary (38 drugs)",             hasCritical:true,  isFirstInChapter:false, chapterGroup:"scope", chapterFile:"m1-38" }
     ];
 
     // ══════════════════════════════════════════════════════════
     //  STORAGE
     // ══════════════════════════════════════════════════════════
     const COMPLETION_KEY = 'dcas_cpg_completion';
+    const OPEN_GROUPS_KEY = 'dcas_home_open_groups';
     const STATS_KEY      = 'dcas_cpg_stats';
     const EXAM_STATS_KEY = 'examStats';
 
@@ -1084,15 +1194,33 @@
         document.getElementById('drawerAcc').innerText         = `${critAcc}%`;
     }
 
+    // The home page's progress bar and per-group counts, without a re-render.
+    function refreshHomeProgress() {
+        const { done, total, pct } = chapterProgress();
+        const bar = document.getElementById('heroBar');
+        if (bar) { bar.style.width = pct + '%'; bar.parentElement.setAttribute('aria-valuenow', pct); }
+        const pctEl = document.getElementById('heroPct');
+        if (pctEl) pctEl.innerHTML = `${pct}<small>%</small>`;
+        const sub = document.getElementById('heroSub');
+        if (sub) sub.textContent = `${done} of ${total} guidelines reviewed`;
+        const completion = loadStorage(COMPLETION_KEY, {});
+        document.querySelectorAll('[data-group-count]').forEach(el => {
+            const grp = el.dataset.groupCount;
+            const chs = CHAPTERS.filter(c => !c.isSpecial && c.chapterGroup === grp);
+            el.textContent = `${chs.filter(c => completion[c.id]).length}/${chs.length}`;
+        });
+    }
+
     window.app = window.app || {};
     window.app.toggleCompletion = function(checkbox, chapterId) {
         const checked    = checkbox.checked;
         const completion = loadStorage(COMPLETION_KEY, {});
         completion[chapterId] = checked;
         saveStorage(COMPLETION_KEY, completion);
-        const textSpan = checkbox.previousElementSibling;
-        if (textSpan && textSpan.tagName === 'SPAN') textSpan.textContent = checked ? 'Completed' : 'Mark Done';
+        const row = checkbox.closest('.h-row');
+        if (row) row.classList.toggle('is-done', checked);
         updateAllProgress();
+        refreshHomeProgress();
     };
 
     // ══════════════════════════════════════════════════════════
@@ -1120,120 +1248,54 @@
         const { done: completedCount, total: totalChaps, pct: overallPercent } = chapterProgress();
         const { C, offset } = buildRingPath(overallPercent);
 
-        // ── Hero progress card ──
+        const ICO = (n) => `<svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#${n}"/></svg>`;
+
+        // ── Greeting + progress ──
         const heroHtml = `
-            <div class="hero-card" id="heroCard">
-                <div class="hero-text">
-                    <div class="hero-greeting">${getGreeting()} <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#hand"/></svg></div>
-                    <div class="hero-sub">${completedCount}/${totalChaps} chapters · keep it up!</div>
-                </div>
-                <div class="hero-ring">
-                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="ring-track" cx="32" cy="32" r="28"/>
-                        <circle class="ring-fill" cx="32" cy="32" r="28"
-                            stroke-dasharray="${C.toFixed(2)}"
-                            stroke-dashoffset="${offset.toFixed(2)}"/>
-                    </svg>
-                    <div class="ring-label">
-                        <span class="ring-pct">${overallPercent}%</span>
-                        <span class="ring-done">done</span>
+            <section class="h-hero" id="heroCard">
+                <div class="h-hero-top">
+                    <div>
+                        <div class="h-greet">${getGreeting()}</div>
+                        <div class="h-sub" id="heroSub">${completedCount} of ${totalChaps} guidelines reviewed</div>
                     </div>
+                    <div class="h-pct" id="heroPct">${overallPercent}<small>%</small></div>
                 </div>
-            </div>`;
+                <div class="h-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${overallPercent}" aria-label="Guidelines reviewed"><span id="heroBar" style="width:${overallPercent}%"></span></div>
+            </section>`;
 
         // ── Search bar ──
         const searchHtml = `
-            <div class="search-container">
-                <span><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#search"/></svg></span>
-                <input type="text" id="searchInput" placeholder="Search all CPG chapters &amp; guidelines…" value="${filterText.replace(/"/g,'&quot;')}">
-                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#x"/></svg></button>
-            </div>
-            <div class="cpg-search-hint" id="cpgSearchHint"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#search"/></svg> Searching across all ${CHAPTERS.filter(c=>!c.isSpecial).length} CPG chapters &amp; guidelines</div>`;
+            <div class="search-container h-search">
+                <span>${ICO('search')}</span>
+                <input type="text" id="searchInput" placeholder="Search guidelines, drugs, tools…" aria-label="Search" value="${filterText.replace(/"/g,'&quot;')}">
+                <button id="searchClearBtn" ${filterText ? '' : 'style="display:none;"'} aria-label="Clear search">${ICO('x')}</button>
+            </div>`;
 
-        // ── Quick Access (2-col) ──
+        // ── Quick tools: icon tiles ──
+        const tile = (href, icon, color, label, search) => `
+                <a href="${href}" class="menu-card h-tile" style="--c:${color}" data-search="${search}">
+                    <span class="h-ico">${ICO(icon)}</span><span class="h-tile-t">${label}</span>
+                </a>`;
         const quickHtml = `
-            <div class="section-label">Quick Access</div>
-            <div class="quick-grid" data-section="quick">
-                <a href="chapters/c0.html?view=summary" class="menu-card special-card"
-                   data-chapter="updates" data-search="What's New 2025 Updates c0">
-                    <span class="sc-icon">🆕</span>
-                    <h2>What's New</h2>
-                    <p>2025 Updates</p>
-                </a>
-                <a href="chapters/c-index.html?view=summary" class="menu-card special-card"
-                   data-chapter="index" data-search="Index Full Table of Contents c-index">
-                    <span class="sc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#clipboard-list"/></svg></span>
-                    <h2>Full Index</h2>
-                    <p>Table of Contents</p>
-                </a>
-            </div>`;
-
-        // ── Courses & Exams ──
-        const coursesExamsHtml = `
-            <div class="section-label">Courses &amp; Exams</div>
-            <div class="menu-grid" data-section="courses">
-                <a href="pages/courses.html" class="menu-card special-card"
-                   data-chapter="courses" data-search="Courses Training ITLS EMPACT ACLS BLS">
-                    <span class="sc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#graduation-cap"/></svg></span>
-                    <h2>Courses Preparation</h2>
-                    <p>Training &amp; mock tests — ITLS, EMPACT, ACLS, BLS…</p>
-                    <span class="sc-arrow">›</span>
-                </a>
-                <a href="src/prometric/exam.html" class="menu-card special-card"
-                   data-chapter="prometric" data-search="Prometric NREMT EMT Exam Practice Questions">
-                    <span class="sc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#notebook-pen"/></svg></span>
-                    <h2>Prometric EMT Exam</h2>
-                    <p>NREMT-style practice questions with analytics</p>
-                    <span class="sc-arrow">›</span>
+            <div class="section-label h-label">Quick access</div>
+            <div class="h-tiles" data-section="quick">
+                ${tile('chapters/c0.html?view=summary', 'sparkles', '#d63384', "What's New", "What's New 2025 Updates c0")}
+                ${tile('chapters/c-index.html?view=summary', 'clipboard-list', '#0056b3', 'Full Index', 'Index Full Table of Contents c-index')}
+                ${tile('pages/drug-calculator.html', 'pill', '#0ca678', 'Drug Calculator', 'Drug Calculator dose doses medication')}
+                ${tile('pages/ecg.html', 'heart-pulse', '#e03131', 'ECG Simulator', 'ECG Simulator rhythms arrhythmia')}
+                ${tile('pages/aha.html', 'activity', '#f76707', 'AHA Algorithms', 'AHA Algorithms ACLS PALS flowcharts')}
+                ${tile('pages/ems-tools.html', 'layout-grid', '#6741d9', 'More Tools', 'EMS Tools GCS calculators more tools')}
+            </div>
+            <div data-section="mega">
+                <a href="pages/megacode.html" class="menu-card h-mega" data-search="ACLS Megacode scenarios simulation monitor">
+                    <img src="icons/courses/thumb/megacode.png" alt="" width="44" height="44" loading="lazy" decoding="async">
+                    <span class="h-mega-t"><b>ACLS Megacode</b><small>12 live-monitor scenarios</small></span>
+                    <span class="h-new">NEW</span>
+                    <span class="h-chev">${ICO('chevron-right')}</span>
                 </a>
             </div>`;
 
-        // ── EMS Tools ──
-        const emsHtml = `
-            <div class="section-label">EMS Tools</div>
-            <div class="menu-grid" data-section="ems">
-                <div class="menu-card special-card"
-                     data-chapter="ems" data-search="EMS Essentials Drug Calculations ECG GCS AHA Algorithms Tools">
-                    <span class="sc-icon"></span>
-                    <h2>EMS Essentials</h2>
-                    <p>Quick-access clinical tools</p>
-                    <div class="ems-tools-grid">
-                        <a href="pages/aha.html"            class="ems-btn ems-btn-aha">AHA Algorithms</a>
-                        <a href="pages/drug-calculator.html" class="ems-btn ems-btn-drug">Drug Calculator</a>
-                        <a href="pages/ecg.html"             class="ems-btn ems-btn-ecg">ECG Simulator</a>
-                        <a href="pages/ems-tools.html"       class="ems-btn ems-btn-more">More Tools</a>
-                        <a href="pages/megacode.html"        class="ems-btn ems-btn-mega">
-                            <img src="icons/courses/thumb/megacode.png" alt="" width="34" height="34" loading="lazy" decoding="async">
-                            <span class="mega-txt"><b>ACLS Megacode</b><small>12 live-monitor scenarios</small></span>
-                            <span class="mega-ribbon" aria-label="New">NEW</span>
-                        </a>
-                    </div>
-                </div>
-            </div>`;
-
-        // ── CPG Reference ──
-        const cpgRefHtml = `
-            <div class="section-label">CPG Reference</div>
-            <div class="menu-grid" data-section="cpg-ref">
-                <div class="menu-card special-card"
-                     data-chapter="dcas-cpg" data-search="DCAS CPG Chapters 1.1 Universal Care protocols guidelines">
-                    <span class="sc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#library"/></svg></span>
-                    <h2>DCAS CPG 2025</h2>
-                    <p>All clinical practice guidelines — Chapters 1.1 onwards</p>
-                    <button class="dcas-expand-btn" id="dcasExpandBtn">
-                        ${showCpgChapters ? '▲ Hide chapters' : '▼ Browse all chapters'}
-                    </button>
-                </div>
-                <div class="menu-card special-card"
-                     data-chapter="statistics" data-search="Statistics Progress Dashboard accuracy attempts">
-                    <span class="sc-icon"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#chart-no-axes-column"/></svg></span>
-                    <h2>Statistics &amp; Progress</h2>
-                    <p>Detailed study analytics and performance dashboard</p>
-                    <span class="sc-arrow">›</span>
-                </div>
-            </div>`;
-
-        // ── CPG Chapter list (always rendered; CSS-hidden when collapsed for global search) ──
+        // ── CPG chapters: one collapsible group per chapter ──
         let chaptersHtml = '';
         {
             const regularChapters = CHAPTERS.filter(ch => !ch.isSpecial);
@@ -1243,57 +1305,70 @@
                 if (!groups[g]) groups[g] = [];
                 groups[g].push(ch);
             });
-            const groupLabels = {
-                universal:'Universal Care', airway:'Airway & Breathing', cardio:'Cardiology',
-                resus:'Resuscitation', neuro:'Neurology', medical:'Medical Emergencies',
-                trauma:'Trauma', environmental:'Environmental & Toxicology',
-                pediatric:'Pediatrics', obstetric:'Obstetrics', mci:'MCI & Triage', scope:'Scope & Formulary'
+            const groupInfo = {
+                universal:['Universal Care','user'], airway:['Airway & Breathing','wind'], cardio:['Cardiovascular','heart-pulse'],
+                resus:['Resuscitation','zap'], neuro:['Neurological','brain'], medical:['General Medical','stethoscope'],
+                trauma:['Trauma','bandage'], environmental:['Toxicology & Environmental','triangle-alert'],
+                pediatric:['Pediatrics','baby'], obstetric:['Obstetrics','heart'], mci:['MCI & Triage','siren'], scope:['Scope & Formulary','pill']
             };
-            let idx = 0;
-            chaptersHtml = `<div id="cpgChaptersContainer" class="${showCpgChapters ? '' : 'cpg-section-hidden'}">
-                <div class="section-label" id="cpgAllChaptersLabel" style="margin-top:24px;">All Chapters</div>`;
+            const openGroups = loadStorage(OPEN_GROUPS_KEY, {});
+            chaptersHtml = `<div class="section-label h-label">CPG guidelines <span class="h-label-n">${regularChapters.length}</span></div>
+                <div id="cpgChaptersContainer" class="h-groups">`;
             Object.keys(groups).forEach(grp => {
                 const chs = groups[grp];
+                const [gName, gIcon] = groupInfo[grp] || [grp, 'book'];
+                const gDone = chs.filter(ch => completion[ch.id]).length;
                 chaptersHtml += `
-                    <div class="section-label" style="margin-top:16px;font-size:0.65rem;opacity:0.75;">${groupLabels[grp]||grp}</div>
-                    <div class="menu-grid" data-section="chapters-${grp}">`;
+                    <details class="h-group" data-section="chapters-${grp}" data-group="${grp}" style="--c:var(--accent-${grp})" ${openGroups[grp] ? 'open' : ''}>
+                        <summary>
+                            <span class="h-gico">${ICO(gIcon)}</span>
+                            <span class="h-gname">${gName}</span>
+                            <span class="h-gcount" data-group-count="${grp}">${gDone}/${chs.length}</span>
+                            <span class="h-gchev">${ICO('chevron-down')}</span>
+                        </summary>
+                        <div class="h-rows">`;
                 chs.forEach(ch => {
                     const s        = stats.chapters[ch.id] || { attempts:0, totalScore:0, totalMax:0 };
                     const avg      = s.totalMax ? Math.round((s.totalScore / s.totalMax) * 100) : 0;
                     const baseFile = ch.chapterFile || ch.id;
                     const sec      = ch.sectionParam ? `&section=${ch.sectionParam}` : '';
                     const isChecked = completion[ch.id] || false;
-                    const delay = Math.min(idx * 0.025, 0.4);
-                    idx++;
+                    const m = ch.shortTitle.match(/^(\S+)\s+(.*)$/) || [null, '', ch.shortTitle];
+                    const study = ch.id !== 's1';
+                    const act = (view, icon, label) => `<a href="chapters/${baseFile}.html?view=${view}${sec}" class="h-act" title="${label}" aria-label="${label}: ${ch.shortTitle}">${ICO(icon)}</a>`;
                     chaptersHtml += `
-                        <div class="chapter-card" data-chapter="${ch.chapterGroup||'none'}"
-                             style="animation-delay:${delay}s;"
-                             data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
-                            <div class="card-header">
-                                <span class="status-badge">${ch.id.toUpperCase()}</span>
-                                <div class="toggle-wrapper">
-                                    <label class="toggle-label">
-                                        <span>${isChecked ? 'Completed' : 'Mark Done'}</span>
-                                        <input type="checkbox" class="toggle-input"
-                                            ${isChecked ? 'checked' : ''}
-                                            onchange="window.app.toggleCompletion(this, '${ch.id}')">
-                                        <span class="toggle-track"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <h2>${ch.shortTitle}</h2>
-                            <p>${ch.title}${s.attempts ? ` · ${s.attempts} attempts · Avg ${avg}%` : ''}</p>
-                            <div class="menu-sub-options">
-<a href="${ch.id === 'm1-38' ? 'pages/med-index.html' : `chapters/${baseFile}.html?view=summary${sec}`}" class="btn-action btn-summary"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#book"/></svg> Summary</a>                                <a href="chapters/${baseFile}.html?view=flashcards${sec}" class="btn-action btn-flash"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#zap"/></svg> Flashcards</a>
-                                <a href="chapters/${baseFile}.html?view=quiz${sec}"       class="btn-action btn-quiz"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#notebook-pen"/></svg> Quiz</a>
-                                <a href="chapters/${baseFile}.html?view=critical${sec}"   class="btn-action btn-scenario"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="icons/sprite.svg#ambulance"/></svg> Scenario</a>
-                            </div>
-                        </div>`;
+                            <div class="chapter-card h-row${isChecked ? ' is-done' : ''}" data-search="${ch.shortTitle} ${ch.title} ${ch.id}">
+                                <label class="h-check" title="Mark reviewed">
+                                    <input type="checkbox" ${isChecked ? 'checked' : ''} aria-label="Reviewed: ${ch.shortTitle}"
+                                        onchange="window.app.toggleCompletion(this, '${ch.id}')">
+                                    <span>${ICO('check')}</span>
+                                </label>
+                                <a class="h-row-main" href="chapters/${baseFile}.html?view=summary${sec}">
+                                    <span class="h-num">${m[1]}</span>
+                                    <span class="h-rt">${m[2]}${s.attempts ? `<small>${s.attempts} attempts · avg ${avg}%</small>` : ''}</span>
+                                </a>
+                                ${study ? `<span class="h-acts">${act('flashcards', 'zap', 'Flashcards')}${act('quiz', 'notebook-pen', 'Quiz')}${ch.hasCritical ? act('critical', 'ambulance', 'Scenarios') : ''}</span>` : ''}
+                            </div>`;
                 });
-                chaptersHtml += `</div>`;
+                chaptersHtml += `</div></details>`;
             });
             chaptersHtml += `</div>`; // close #cpgChaptersContainer
         }
+
+        // ── Courses, exams and statistics: a compact list ──
+        const link = (href, icon, color, title, sub, search, extra) => `
+                <a ${href ? `href="${href}"` : 'role="button" tabindex="0"'} class="menu-card h-link" style="--c:${color}" data-search="${search}" ${extra || ''}>
+                    <span class="h-ico">${ICO(icon)}</span>
+                    <span class="h-link-t"><b>${title}</b><small>${sub}</small></span>
+                    <span class="h-chev">${ICO('chevron-right')}</span>
+                </a>`;
+        const coursesExamsHtml = `
+            <div class="section-label h-label">Courses &amp; exams</div>
+            <div class="h-links" data-section="courses">
+                ${link('pages/courses.html', 'graduation-cap', '#6741d9', 'Courses', 'ITLS, EMPACT, ACLS, BLS and more', 'Courses Training ITLS EMPACT ACLS BLS')}
+                ${link('src/prometric/exam.html', 'notebook-pen', '#0056b3', 'Prometric EMT exam', 'NREMT-style practice with analytics', 'Prometric NREMT EMT Exam Practice Questions')}
+                ${link('', 'chart-no-axes-column', '#0ca678', 'Statistics &amp; progress', 'Your study analytics', 'Statistics Progress Dashboard accuracy attempts', 'data-chapter="statistics"')}
+            </div>`;
 
         // ── Offline download ──
         const downloadHtml = `
@@ -1311,8 +1386,8 @@
             </div>`;
 
         document.getElementById('mainContent').innerHTML =
-            heroHtml + searchHtml + quickHtml + coursesExamsHtml + emsHtml +
-            cpgRefHtml + chaptersHtml + downloadHtml + emptyHtml;
+            heroHtml + searchHtml + quickHtml + chaptersHtml + coursesExamsHtml +
+            downloadHtml + emptyHtml;
 
         updateAllProgress();
 
@@ -1361,36 +1436,21 @@
 
         if (filterText) filterCards(filterText);
 
-        // DCAS CPG expand button
-        const dcasExpandBtn = document.getElementById('dcasExpandBtn');
-        if (dcasExpandBtn) {
-            dcasExpandBtn.addEventListener('click', function(e) {
-                e.preventDefault(); e.stopPropagation();
-                showCpgChapters = !showCpgChapters;
-                // Toggle visibility without a full re-render (chapters are always in DOM)
-                const container = document.getElementById('cpgChaptersContainer');
-                if (container) container.classList.toggle('cpg-section-hidden', !showCpgChapters);
-                dcasExpandBtn.textContent = showCpgChapters ? '▲ Hide chapters' : '▼ Browse all chapters';
-                // Hide search hint if user manually expanded
-                const srchHint = document.getElementById('cpgSearchHint');
-                if (srchHint) srchHint.classList.remove('visible');
-                if (showCpgChapters) {
-                    setTimeout(() => {
-                        const sec = document.querySelector('[data-section="chapters-universal"]') ||
-                                    document.getElementById('cpgChaptersContainer');
-                        if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
+        // Remember which chapter groups are open
+        document.querySelectorAll('details.h-group').forEach(d => {
+            d.addEventListener('toggle', () => {
+                if (document.getElementById('searchInput')?.value) return;
+                const open = loadStorage(OPEN_GROUPS_KEY, {});
+                open[d.dataset.group] = d.open;
+                saveStorage(OPEN_GROUPS_KEY, open);
             });
-        }
+        });
 
         // Statistics card click
-        const statsCard = document.querySelector('.menu-card.special-card[data-chapter="statistics"]');
+        const statsCard = document.querySelector('.h-link[data-chapter="statistics"]');
         if (statsCard) {
-            statsCard.addEventListener('click', function(e) {
-                if (e.target.closest('.dcas-expand-btn')) return;
-                showGlobalStatsModal();
-            });
+            statsCard.addEventListener('click', showGlobalStatsModal);
+            statsCard.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showGlobalStatsModal(); } });
         }
     }
 
@@ -1576,18 +1636,6 @@
         const isSearching = lower.length > 0;
         let anyVisible = false;
 
-        // Global search: reveal all chapters when searching, collapse when done
-        const cpgContainer = document.getElementById('cpgChaptersContainer');
-        if (cpgContainer) {
-            if (isSearching) {
-                cpgContainer.classList.remove('cpg-section-hidden');
-            } else if (!showCpgChapters) {
-                cpgContainer.classList.add('cpg-section-hidden');
-            }
-        }
-        // Show global-search hint
-        const srchHint = document.getElementById('cpgSearchHint');
-        if (srchHint) srchHint.classList.toggle('visible', isSearching && !showCpgChapters);
 
         // Hide/show section labels and their grids together
         document.querySelectorAll('[data-section]').forEach(section => {
@@ -1611,6 +1659,13 @@
             const match = !lower || (card.dataset.search || '').toLowerCase().includes(lower);
             card.classList.toggle('filtered-out', !match);
             if (match) anyVisible = true;
+        });
+
+        // Chapter groups: open the ones with matches while searching, then
+        // return to the groups the user had open.
+        const openGroups = loadStorage(OPEN_GROUPS_KEY, {});
+        document.querySelectorAll('details.h-group').forEach(d => {
+            d.open = lower ? d.style.display !== 'none' : !!openGroups[d.dataset.group];
         });
 
         // Hero card: hide when searching
