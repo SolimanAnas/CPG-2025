@@ -165,3 +165,64 @@ The scan flags ~25 questions with only 2 options (ACLS 6/8, PALS 19, Medical 4/5
 ---
 
 *Audit performed read-only. No question data, pages, or counts were modified. Awaiting approval before any changes.*
+
+---
+
+## 6. Follow-up: Prometric bank cleanup (November 2026)
+
+The Prometric findings above were acted on in `src/prometric/exam-db.json`, applying the same edits as the SmartCare copy of this bank. This bank has no paramedic (ALS) set or `level` field. The 13 single-option questions (713–729) are unchanged here; SmartCare had already given them four answer choices before this cleanup.
+
+### What changed
+
+| Change | Questions |
+|---|---|
+| Exact duplicates removed (same question and answers, kept the lower id) | 59 |
+| Source watermarks removed from answers (`–emt-basic practice exam 386`) | 101 |
+| Stray dashes from line wrapping removed (`and -circulation`) | 194 |
+| `→` arrows restored in hints and explanations where import had turned them into `?` (ids 513–779) | 247 |
+| Arrows, symbols and a word restored by hand where `?` was ambiguous (531, 535, 536, 537, 547, 553, 562, 569, 585, 636, 687, 773) | 12 |
+| Explanations that named an answer by letter, which shuffling makes wrong (732, 734, 738, 748, 755, 758, 760, 765, 773) | 9 |
+| Space before punctuation, broken hyphens (`bag--mask`, `size- up`, `two - way`), double spaces | 52 |
+| New explanations written for questions that had none | 409 |
+
+That left 2,500 questions before the clinical decisions below. Removed duplicate ids: 249, 251, 290, 309, 388, 718, 830–879, 1485, 1511 and 1674.
+
+Question 773's third answer read `insulin and ?`; it was restored as `insulin and glucose`, which matches the explanation and keeps it a wrong answer (it includes lidocaine).
+
+### Clinical decisions (22 questions)
+
+These were flagged during the cleanup because the key looked wrong or taught outdated practice. Each was then resolved as below and given an explanation, so every question in the bank now has one.
+
+| ID | Question | Decision | Answer now |
+|---|---|---|---|
+| 4 | The S in the "OPQRST" acronym stands for: | Key fixed (was A. swelling) | D. severity |
+| 11 | The first step in the focused history and physical exam performed on an uncon… | Key fixed (was B. obtain a focused history) | D. Rapidly assess the patient from head to toe |
+| 189 | When assessing patient adult, EMTs should start with the: | Key fixed (was C. toe-head) | B. Head to-toe. |
+| 335 | When you assign patient you found his skin PALE this: | Key fixed (was B, the description for cyanosis) | A. Indicates poor perfusion. |
+| 501 | You are dispatched to a home for an 85 year old female who is not feeling wel… | Key fixed (was C. delirium) | D. Dementia |
+| 805 | You are dispatched to a soccer game for a 12-year-old female with signs and s… | Key fixed (was B. administer the epi-pen) | C. begin the primary assessment |
+| 825 | Which of the following signs of hypoxia is more common in pediatric patients? | Key fixed (was C. tachycardia) | A. bradycardia |
+| 39 | The single most important factor in determining survival from cardiac arrest is: | Key fixed (was A. early CPR) | B. Early defibrillation. |
+| 151 | Blood that oozes and is dark is most likely from a: | Key fixed (was A. venous) | C. Capillary |
+| 164 | Information using a standard medical format called: | Key fixed (was C. prehospital care report) | B. Patient narrative |
+| 198 | postical state is a term refers to a patients complains of: | Key fixed (was B) | D. B+C |
+| 507 | Which of the following statements about delirium tremens is not true? | Key fixed (was C) | B. They occur in individuals who have experienced recent binge drinking |
+| 780 | The primary assessment of an adult with chest pain includes: | Key fixed (was B. ensuring the scene is safe) | C. Determine the transport priority |
+| 45 | The preferred method of ventilation a nonbreathing patient is: | Key moved to two-person bag-mask (was A. mouth-to-mask) | B. Tow person bag-valve-mask |
+| 16 | A 63-year-old man is complaining of substernal chest pain radiating to his le… | Answer rewritten: aspirin, with oxygen only if SpO2 is below 94% (was routine high-concentration oxygen) | D. Place the patient in a position of comfort, give aspirin if there are no c… |
+| 156 | The right order of procedures for controlling severe external bleeding from a… | Answer rewritten: direct pressure, then a tourniquet (was elevation and pressure points) | A. Direct pressure, then a tourniquet above the wound if pressure does not co… |
+| 319 | To further reduce bleeding, the next action may be to: | Answer rewritten: a tourniquet above an extremity wound (was elevation) | C. Apply a tourniquet above the wound if it is on an extremity and direct pre… |
+| 366 | What modifications of the usual management of cardiac arrest should be made f… | Answer rewritten: manual left uterine displacement (was compressions higher on the sternum) | C. Manually displace the uterus to the patient's left during compressions |
+| 13 | During the assessment of the patient's pelvis, you should: | Options clarified: one gentle press toward the midline, then posteriorly; the other order replaced with rocking, which is wrong | B. Gently press the pelvic wings toward the midline and then posteriorly, onl… |
+
+Removed, leaving **2,497** questions:
+
+| ID | Reason |
+|---|---|
+| 38 | Near-duplicate of 16 with the same outdated oxygen answer |
+| 152 | PASG is obsolete for controlling bleeding |
+| 498 | All four answers are parts of the SEA-3 mental status exam, so it had no correct answer |
+
+Wording: question 502's answer "Mental retardation" now reads "Intellectual disability", and the stems of 13, 14, 15, 19, 20 and 29 no longer end in `:-`.
+
+The new explanations follow the key of each question and current EMT teaching, but like the rest of this bank (`review_status: unreviewed`) they have not had a clinical review.
