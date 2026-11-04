@@ -170,7 +170,7 @@ The scan flags ~25 questions with only 2 options (ACLS 6/8, PALS 19, Medical 4/5
 
 ## 6. Follow-up: Prometric bank cleanup (November 2026)
 
-The Prometric findings above were acted on in `src/prometric/exam-db.json`, applying the same edits as the SmartCare copy of this bank. This bank has no paramedic (ALS) set or `level` field. The 13 single-option questions (713–729) now have the four answer choices and explanations SmartCare gave them; their answer keys are unchanged, and the correct answers of 719 and 728 use SmartCare's tighter wording. The garbled characters (`â€”`, `Â°`) in 17 questions (59, 65, 66, 72, 73, 74, 78, 80, 85, 87, 91, 94, 117, 132, 143, 146, 339) are also fixed, as in SmartCare. Question 721's answer now reads "Protect the airway and suction secretions as needed", so it no longer teaches routine suctioning during a seizure.
+The Prometric findings above were acted on in `src/prometric/exam-db.json`, applying the same edits as the SmartCare copy of this bank. This bank has no paramedic (ALS) set or `level` field. The 13 single-option questions (713–729) now have the four answer choices and explanations SmartCare gave them; their answer keys are unchanged, and the correct answers of 719 and 728 use SmartCare's tighter wording. The garbled characters (`â€”`, `Â°`) in 17 questions (59, 65, 66, 72, 73, 74, 78, 80, 85, 87, 91, 94, 117, 132, 143, 146, 339) are also fixed, as in SmartCare. Question 721's answer now reads "Protect the airway and suction secretions as needed", so it no longer teaches routine suctioning during a seizure. Its explanation adds checking blood glucose as the second step.
 
 ### What changed
 
