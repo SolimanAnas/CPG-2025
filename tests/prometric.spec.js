@@ -20,7 +20,8 @@ test('exam-db.json has 2497 questions and 17 categories', async ({ request }) =>
     expect(typeof q.text).toBe('string');
     expect(q.text.length).toBeGreaterThan(5);
     expect(Array.isArray(q.options)).toBe(true);
-    expect(q.options.length).toBeGreaterThanOrEqual(1);
+    // Every question needs at least two choices (true/false is the smallest)
+    expect(q.options.length).toBeGreaterThanOrEqual(2);
     expect(['A', 'B', 'C', 'D']).toContain(q.correct_answer);
     expect(['easy', 'medium', 'hard']).toContain(q.difficulty);
     expect(typeof q.subject).toBe('string');
