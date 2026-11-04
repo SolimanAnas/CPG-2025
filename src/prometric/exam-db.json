@@ -41589,6 +41589,1468 @@
       "difficulty": "medium",
       "topic": "Operations",
       "source": "paramedic-practice-exam-4"
+    },
+    {
+      "id": 2750,
+      "text": "An MCI is BEST defined as:",
+      "options": [
+        "Any incident where casualties exceed immediately available resources",
+        "Any incident requiring a helicopter",
+        "Any incident with 10 or more patients",
+        "Any incident declared by a hospital"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "An MCI is defined by the gap between patient needs and the resources immediately available, not by a fixed number of patients. A set patient count is only a local activation threshold.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2751,
+      "text": "A tour bus rolls over with 32 passengers aboard. All are accounted for. This is a(n):",
+      "options": [
+        "Compound incident",
+        "Open incident",
+        "Closed incident",
+        "Uncompensated incident"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "When the number of victims is known and fixed, as with every passenger accounted for, the incident is closed (contained). An open incident has an unknown or growing number of victims.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2752,
+      "text": "An earthquake damages the regional hospital and cuts the main highway. This is BEST described as:",
+      "options": [
+        "Simple, closed",
+        "Simple, open",
+        "Compound, open",
+        "Compound, closed"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Damage to hospitals and roads makes the incident compound, because the response infrastructure itself is affected. An earthquake's victim count is unknown and growing, which makes it open.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2753,
+      "text": "Which pairing of disaster type and dominant injury is CORRECT?",
+      "options": [
+        "Earthquake — crush injury",
+        "Flood — blast lung",
+        "Tornado — drowning",
+        "Heat wave — penetrating trauma"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Earthquakes trap people under collapsed structures, so crush injuries dominate. Tornadoes mainly cause blunt and penetrating trauma from flying debris, and floods cause drowning.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2754,
+      "text": "Three days after a hurricane, several family members are found confused with headache in a closed house running a generator. Most likely cause:",
+      "options": [
+        "Carbon monoxide poisoning",
+        "Heat stroke",
+        "Dehydration",
+        "Food poisoning"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Running a generator inside a closed house after a storm is a classic cause of carbon monoxide poisoning. Get everyone into fresh air and give high-concentration oxygen.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2755,
+      "text": "The MCI mindset shift is from:",
+      "options": [
+        "Maximum care for each patient to the most good for the most patients",
+        "Speed to accuracy",
+        "BLS to ALS",
+        "Transport to treatment"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "In an MCI, care shifts from doing everything possible for each patient to doing the most good for the most patients with the resources available.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2756,
+      "text": "Which phase of the disaster cycle includes MCI drills and stocking triage tags?",
+      "options": [
+        "Recovery",
+        "Preparedness",
+        "Mitigation",
+        "Response"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Planning, training, drills and stocking equipment such as triage tags all belong to the preparedness phase of the disaster cycle.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2757,
+      "text": "A second explosion occurs 20 minutes after the first at the same scene. Your FIRST consideration is:",
+      "options": [
+        "Gas leak only",
+        "Industrial accident",
+        "Intentional event with secondary devices targeting responders",
+        "Hoax"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "A second explosion at the same scene suggests an intentional attack with secondary devices aimed at responders. Withdraw, stage at a safe distance and coordinate with law enforcement.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2758,
+      "text": "Night call to a rural two-car head-on collision 40 minutes from the nearest hospital. You are the only unit; the next is 30 minutes away. You find three critically injured patients. Is this an MCI?",
+      "options": [
+        "No — MCIs need at least 10 patients.",
+        "Only if a hospital declares it.",
+        "Yes — casualties exceed immediately available resources; declare and request resources.",
+        "Only if one patient dies."
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Three critical patients for a single crew in a remote area exceed the resources immediately available, so it is an MCI. Declare it early so more help starts moving; you can downgrade later.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "MCI Fundamentals",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2759,
+      "text": "Which is a Command Staff position?",
+      "options": [
+        "Operations Section Chief",
+        "Logistics Section Chief",
+        "Triage Unit Leader",
+        "Safety Officer"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "The Command Staff is the Safety Officer, Public Information Officer and Liaison Officer, who report directly to the Incident Commander. Section Chiefs belong to the General Staff.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2760,
+      "text": "The optimal span of control in ICS is approximately:",
+      "options": [
+        "1:2",
+        "1:5",
+        "1:12",
+        "1:20"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "ICS aims for each supervisor to manage 3 to 7 people, with about 5 considered ideal.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2761,
+      "text": "A battalion chief arrives on scene. Command is transferred when:",
+      "options": [
+        "The chief arrives",
+        "Dispatch decides",
+        "The chief's rank is higher",
+        "A face-to-face briefing occurs and the transfer is announced"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Command does not change just because a higher-ranking officer arrives. It transfers after a face-to-face briefing, when the new commander accepts and the change is announced to all units.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2762,
+      "text": "Unified Command is used when:",
+      "options": [
+        "Multiple agencies share jurisdiction over an incident",
+        "The incident is over",
+        "The IC is injured",
+        "Only one agency responds"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Unified Command is used when several agencies share jurisdiction. Fire, police, EMS and others work to one set of objectives without giving up their own authority.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2763,
+      "text": "Which section would source extra oxygen cylinders and backboards for a prolonged incident?",
+      "options": [
+        "Planning",
+        "Operations",
+        "Finance",
+        "Logistics"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "The Logistics Section supplies the incident with equipment, facilities and supplies, such as extra oxygen cylinders and backboards.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2764,
+      "text": "Who may immediately stop an unsafe act on scene without waiting for the IC?",
+      "options": [
+        "PIO",
+        "Finance Chief",
+        "Safety Officer",
+        "Liaison Officer"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "The Safety Officer can stop an unsafe act immediately, without waiting for the Incident Commander's approval.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2765,
+      "text": "An off-duty EMT drives to the scene and starts treating patients without checking in. This is:",
+      "options": [
+        "Freelancing — an accountability and safety problem",
+        "Mutual aid",
+        "Encouraged in MCIs",
+        "Unified command"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Working at an incident without checking in and getting an assignment is freelancing. Command cannot track or protect freelancers, which puts them and others at risk.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Incident Command",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2766,
+      "text": "The decontamination corridor is located in the:",
+      "options": [
+        "Hot zone",
+        "Cold zone",
+        "Staging area",
+        "Warm zone"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Decontamination takes place in the warm zone, also called the contamination reduction zone, between the hot zone and the clean cold zone.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Scene Management",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2767,
+      "text": "The treatment area should be:",
+      "options": [
+        "At the hospital",
+        "Inside the hot zone for speed",
+        "Downwind for ventilation",
+        "In the cold zone, upwind, next to the loading zone"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Put the treatment area in the cold zone, upwind of any hazard, and next to the ambulance loading zone so patients flow safely to transport.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Scene Management",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2768,
+      "text": "Which part of the treatment area should be closest to the ambulance loading exit?",
+      "options": [
+        "Green",
+        "Yellow",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Red (immediate) patients are transported first, so their part of the treatment area should be closest to the ambulance loading exit.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Scene Management",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2769,
+      "text": "Ambulances should move through the scene:",
+      "options": [
+        "In any direction",
+        "On a one-way loop: staging → loading zone → hospital",
+        "By reversing into the treatment area",
+        "Only after all patients are treated"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "A one-way loop from staging to the loading zone and out to the hospital keeps ambulances moving and avoids backing up near patients and staff.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Scene Management",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2770,
+      "text": "Which statement about zones is TRUE?",
+      "options": [
+        "Zones can move as wind, threat, or structure changes",
+        "The cold zone has no hazards ever",
+        "Only police mark zones",
+        "Zones are fixed once set"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Hot, warm and cold zones are not fixed. Re-evaluate them as the wind, the threat or a structure changes, especially at chemical incidents.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Scene Management",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2771,
+      "text": "Staging during a suspected terrorist bombing should be:",
+      "options": [
+        "At the hospital entrance",
+        "Next to the blast site",
+        "At the most obvious nearby parking lot",
+        "Out of sight, in a location checked for secondary devices"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Secondary devices may target places where responders predictably gather, so after a suspected bombing stage out of sight in an area checked for devices.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2772,
+      "text": "Under START, a patient who walks to the designated area is tagged:",
+      "options": [
+        "Deceased",
+        "Immediate",
+        "Delayed",
+        "Minor"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Under START, anyone who can walk to the designated area is tagged Minor (green) and re-triaged later.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2773,
+      "text": "A non-ambulatory adult has RR 32, radial pulse present, follows commands. START category:",
+      "options": [
+        "Minor",
+        "Delayed",
+        "Deceased",
+        "Immediate"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "A respiratory rate above 30 makes an adult Immediate (red) under START, even with a radial pulse and normal mental status.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2774,
+      "text": "An adult is apneic. After you reposition the airway, he begins breathing. Tag:",
+      "options": [
+        "Immediate",
+        "Minor",
+        "Delayed",
+        "Deceased"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "An adult who starts breathing only after the airway is repositioned is tagged Immediate (red). If breathing does not start, the patient is tagged deceased.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2775,
+      "text": "An adult has RR 18, absent radial pulse. Tag:",
+      "options": [
+        "Deceased",
+        "Delayed",
+        "Minor",
+        "Immediate"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "An absent radial pulse (or capillary refill over 2 seconds) shows poor perfusion, which makes the patient Immediate under START.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2776,
+      "text": "An adult has RR 16, strong radial pulse, but cannot follow simple commands. Tag:",
+      "options": [
+        "Expectant",
+        "Delayed",
+        "Immediate",
+        "Minor"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "A patient who cannot follow simple commands has altered mental status, which makes them Immediate under START even when breathing and perfusion are normal.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2777,
+      "text": "JumpSTART: a 4-year-old is apneic after airway positioning but has a palpable pulse. Next step:",
+      "options": [
+        "Give 5 rescue breaths and reassess",
+        "Tag deceased",
+        "Tag immediate without breaths",
+        "Start CPR"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "JumpSTART gives a child who is not breathing but has a pulse 5 rescue breaths. If breathing resumes, tag Immediate; if not, tag deceased. Full CPR is not done during triage.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2778,
+      "text": "JumpSTART: a 3-year-old has RR 12. Tag:",
+      "options": [
+        "Delayed",
+        "Minor",
+        "Immediate",
+        "Deceased"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "In JumpSTART, a child's respiratory rate below 15 or above 45 means Immediate. A rate of 12 is too slow.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2779,
+      "text": "JumpSTART: a 6-year-old has RR 30, palpable peripheral pulse, alert, deformed femur, can't walk. Tag:",
+      "options": [
+        "Deceased",
+        "Minor",
+        "Immediate",
+        "Delayed"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "A rate between 15 and 45, a palpable pulse and an alert mental status make a child who cannot walk Delayed (yellow) under JumpSTART.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2780,
+      "text": "Which is NOT performed during START primary triage?",
+      "options": [
+        "CPR",
+        "Tourniquet for arterial bleeding",
+        "Positioning the airway",
+        "Asking the patient to follow a command"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "CPR is not performed during mass-casualty triage because it ties up a rescuer with a patient unlikely to survive. Opening the airway and controlling major bleeding are done.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2781,
+      "text": "A night-time winter MCI. The best START perfusion check is:",
+      "options": [
+        "Capillary refill",
+        "Radial pulse",
+        "Blood pressure",
+        "Skin color"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Cold and darkness make capillary refill unreliable, so check the radial pulse to judge perfusion.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2782,
+      "text": "Train derailment. A man pinned by the legs (can't walk) is breathing 30/min, radial pulse strong, capillary refill 1.5 seconds, and answers 'yes' when asked to squeeze your hand, and does it. START category?",
+      "options": [
+        "Minor",
+        "Expectant",
+        "Delayed: his rate is not above 30, and perfusion and mental status are normal",
+        "Immediate: his breathing rate is high"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "START's cut-off is a respiratory rate above 30, so a rate of exactly 30 passes. With good perfusion and normal mental status he is Delayed, but re-triage him, because prolonged entrapment can lead to crush syndrome.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2783,
+      "text": "45 minutes after a bus crash, a woman tagged GREEN at the walking-wounded point is now pale, sweaty, and says she feels faint. She has left-upper-quadrant abdominal pain. What does this teach?",
+      "options": [
+        "Walkers can hide internal bleeding: re-triage greens; she now meets Immediate criteria (perfusion)",
+        "Tag her deceased",
+        "She is anxious; reassure her",
+        "Green tags are permanent"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "START captures a patient's condition at one moment, and an injury such as a ruptured spleen can show up later. Re-triage the green area regularly; she now has signs of poor perfusion and is Immediate.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2784,
+      "text": "In SALT, which group is assessed FIRST after global sorting?",
+      "options": [
+        "Wavers",
+        "Walkers",
+        "Still casualties / obvious life threats",
+        "Children"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "In SALT, after the global sort, patients who are still or have obvious life threats are assessed first, because they are the most likely to need lifesaving interventions.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2785,
+      "text": "Which is a SALT lifesaving intervention?",
+      "options": [
+        "Chest decompression",
+        "Spinal immobilization",
+        "IV fluids",
+        "Splinting"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "SALT's lifesaving interventions are hemorrhage control, opening the airway (with 2 rescue breaths for children), chest decompression and antidote auto-injectors. Splinting, IVs and spinal immobilization wait.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2786,
+      "text": "A breathing patient obeys commands, has a peripheral pulse, no respiratory distress, hemorrhage controlled, and an open femur fracture. SALT category:",
+      "options": [
+        "Expectant",
+        "Minimal",
+        "Immediate",
+        "Delayed"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "This patient passes every SALT check (obeys commands, peripheral pulse, no respiratory distress, bleeding controlled), but an open femur fracture is not a minor injury, so the category is Delayed.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2787,
+      "text": "A breathing patient has no peripheral pulse but is likely to survive with care available. SALT category:",
+      "options": [
+        "Delayed",
+        "Minimal",
+        "Immediate",
+        "Expectant"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "In SALT, failing any check, such as having no peripheral pulse, makes a patient Immediate if they are likely to survive with the care available.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2788,
+      "text": "Expectant patients should receive:",
+      "options": [
+        "Comfort care and re-triage when resources allow",
+        "CPR",
+        "Immediate transport",
+        "Nothing"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Expectant patients are unlikely to survive with current resources. They still receive comfort care and are re-triaged as resources become available.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2789,
+      "text": "Which is the BEST place to attach a triage tag?",
+      "options": [
+        "Shoe",
+        "Jacket zipper",
+        "Stretcher only",
+        "Limb or neck"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Attach the triage tag to a limb or the neck. Clothing is cut off in treatment, and tags attached to it get lost.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2790,
+      "text": "High over-triage rates in an MCI are associated with:",
+      "options": [
+        "Higher critical mortality",
+        "Lower critical mortality",
+        "No effect",
+        "Faster transport"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Over-triage sends resources to patients who don't need them, which delays care for the truly critical and raises their death rate.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2791,
+      "text": "A patient tagged yellow deteriorates in the treatment area. The correct action:",
+      "options": [
+        "Leave the yellow tag",
+        "Add a second tag",
+        "Move to green",
+        "Re-triage to red, note the time, and inform the treatment/transport officers"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Re-triage a deteriorating patient to red, note the time on the tag and tell the treatment and transport leaders so the patient moves up the transport list.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2792,
+      "text": "Which statement about triage systems is TRUE?",
+      "options": [
+        "SALT is only for chemical events",
+        "START includes an Expectant step",
+        "SALT includes LSIs and an Expectant category",
+        "Triage Sieve is only for children"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "SALT includes lifesaving interventions and an Expectant category. START has neither, and sorts patients only by walking, breathing, perfusion and mental status.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Triage",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2793,
+      "text": "Which is the MOST appropriate intervention in the MCI treatment area?",
+      "options": [
+        "Two large-bore IVs for every yellow",
+        "Routine spinal immobilization of all patients",
+        "Full secondary survey on every patient",
+        "Tourniquet and wound packing for hemorrhage"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Controlling major bleeding with tourniquets and wound packing saves lives. Routine IVs, spinal immobilization and full exams on everyone slow the flow without matching benefit.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2794,
+      "text": "The nearest hospital is usually overwhelmed early because:",
+      "options": [
+        "Self-presenting walking wounded arrive first",
+        "It has no ED",
+        "It's the trauma center",
+        "EMS sends no one there"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "The walking wounded often take themselves to the closest hospital before EMS arrives, so it fills with less injured patients (upside-down triage).",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2795,
+      "text": "A hospital receives 30 casualties in the first hour. Its likely total is about:",
+      "options": [
+        "30",
+        "45",
+        "60",
+        "300"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "As a rule of thumb, a hospital can expect roughly double its first-hour casualty count in total, so 30 in the first hour suggests about 60 overall.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2796,
+      "text": "Which patient should be transported FIRST?",
+      "options": [
+        "Stable ankle fracture",
+        "Penetrating torso wound with signs of shock",
+        "Minor burns to the hand",
+        "Anxious walking patient"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "A penetrating torso wound with shock may be bleeding where pressure cannot reach, so this patient needs a surgeon first.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2797,
+      "text": "The main reason to log every transport is to:",
+      "options": [
+        "Measure crew speed",
+        "Track each patient's location for families, hospitals, and accountability",
+        "Bill correctly",
+        "Satisfy media"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Logging every transport tracks each patient's location so families, hospitals and command can account for everyone.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2798,
+      "text": "Which statement about hypothermia in MCIs is TRUE?",
+      "options": [
+        "Insulating from the ground is as important as covering",
+        "Only a winter issue",
+        "Warm patients do worse",
+        "Irrelevant for trauma"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Lying on the ground draws heat away quickly, so insulate patients from below as well as covering them. Hypothermia worsens bleeding in trauma patients.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Treatment and Transport",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2799,
+      "text": "You arrive to find 4 workers collapsed near a loading dock, no trauma. Per Step 1-2-3:",
+      "options": [
+        "Start CPR",
+        "Approach with caution",
+        "Approach normally",
+        "Do not approach; withdraw, report, isolate"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Step 1-2-3: one casualty, approach normally; two, approach with caution; three or more with no obvious cause, do not approach. Withdraw, report and isolate the area.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2800,
+      "text": "ERG pages listing materials by 4-digit ID number are:",
+      "options": [
+        "Blue",
+        "Yellow",
+        "Orange",
+        "Green"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "In the Emergency Response Guidebook, yellow pages list materials by their 4-digit ID number, blue pages by name, orange pages give the response guide, and green pages give isolation distances.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2801,
+      "text": "In the NFPA 704 diamond, the blue section indicates:",
+      "options": [
+        "Special hazard",
+        "Flammability",
+        "Health hazard",
+        "Instability"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "In the NFPA 704 diamond, blue is health hazard, red is flammability, yellow is instability (reactivity) and white is special hazards.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2802,
+      "text": "Which PPE level uses an air-purifying respirator?",
+      "options": [
+        "Level A",
+        "Level B",
+        "Level C",
+        "Level D"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Level C PPE uses an air-purifying respirator, so it requires a known agent and enough oxygen in the air. Levels A and B use self-contained breathing apparatus.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2803,
+      "text": "The most effective initial decon step is:",
+      "options": [
+        "Scrubbing with bleach",
+        "Removing clothing",
+        "Wrapping in blankets",
+        "Antibiotic ointment"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Removing clothing is the fastest and most effective first decontamination step, taking away most of the contamination.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2804,
+      "text": "A critical contaminated patient with arterial bleeding in the decon line should:",
+      "options": [
+        "Be tagged expectant",
+        "Receive LSIs (tourniquet) from protected staff during rapid gross decon",
+        "Wait at the end of the line",
+        "Skip decon and be transported"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Protected staff give lifesaving interventions such as a tourniquet during rapid gross decontamination. Never transport a contaminated patient.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Hazardous Materials",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2805,
+      "text": "A subway passenger has pinpoint pupils, copious secretions, wheezing, and muscle twitching. Most likely agent:",
+      "options": [
+        "Nerve agent",
+        "Cyanide",
+        "Mustard",
+        "Chlorine"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Pinpoint pupils, heavy secretions, wheezing and muscle twitching together point to a nerve agent, which overstimulates the nervous system.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Chemical Agents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2809,
+      "text": "A factory worker exposed to a gas smelling of 'freshly mown hay' feels fine. You should:",
+      "options": [
+        "Advise rest and observation for ~24 h for delayed pulmonary edema",
+        "Give hydroxocobalamin",
+        "Release him",
+        "Give atropine"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "A smell of freshly mown hay suggests phosgene, which can cause pulmonary edema hours later. The patient should rest and be observed for about 24 hours, even without symptoms.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Chemical Agents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2810,
+      "text": "Which agent causes painless exposure with blisters appearing hours later?",
+      "options": [
+        "Sulfur mustard",
+        "CS gas",
+        "Chlorine",
+        "Lewisite"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Sulfur mustard causes no pain at the time of exposure; blisters appear 2 to 24 hours later. Lewisite and chlorine cause immediate pain.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Chemical Agents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2811,
+      "text": "A theater crowd collapses with pinpoint pupils, slow shallow breathing, dry skin, no twitching. Best treatment:",
+      "options": [
+        "Atropine",
+        "Ventilation and naloxone",
+        "Pralidoxime",
+        "Hydroxocobalamin"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Pinpoint pupils with slow, shallow breathing but dry skin and no twitching point to an opioid agent rather than a nerve agent. Ventilate and give naloxone.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Chemical Agents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2812,
+      "text": "Chlorine causes early upper-airway symptoms because it is:",
+      "options": [
+        "An enzyme inhibitor",
+        "Highly water-soluble",
+        "Radioactive",
+        "Poorly water-soluble"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Chlorine dissolves easily in water, so it reacts with the moist upper airway at once, causing early burning and coughing.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Chemical Agents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2813,
+      "text": "Which bioterrorism agent requires airborne + contact precautions?",
+      "options": [
+        "Tularemia",
+        "Anthrax",
+        "Smallpox",
+        "Botulism"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Smallpox spreads through the air and by contact, so it needs airborne and contact precautions. Anthrax, botulism and tularemia do not spread from person to person.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2814,
+      "text": "A cluster of previously healthy postal workers presents with severe pneumonia, shock, and widened mediastinum. Most likely:",
+      "options": [
+        "Inhalational anthrax",
+        "Botulism",
+        "Influenza",
+        "Smallpox"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Severe pneumonia, shock and a widened mediastinum in a cluster of healthy people, such as postal workers, is the classic picture of inhalational anthrax. It does not spread from person to person.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2815,
+      "text": "An alert, afebrile patient has double vision, slurred speech, and difficulty swallowing that is progressing downward. Suspect:",
+      "options": [
+        "Botulism",
+        "Guillain–Barré",
+        "Nerve agent",
+        "Stroke"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Double vision, slurred speech and trouble swallowing, with paralysis moving downward in an alert patient without fever, point to botulism.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2816,
+      "text": "A patient exposed to radiation from a hidden source (no contamination) is:",
+      "options": [
+        "Requires Level A PPE",
+        "Not radioactive — no risk to responders",
+        "Contagious",
+        "Radioactive and dangerous"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Exposure to a radiation source does not make a person radioactive. Without contamination on the body, the patient poses no radiation risk to responders.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2817,
+      "text": "A dirty-bomb victim has an amputated leg with arterial bleeding and is contaminated. Priority:",
+      "options": [
+        "Wait for radiation team",
+        "Decon first",
+        "Tourniquet and trauma care now, decon as part of care",
+        "KI tablet"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Treat life threats first: apply the tourniquet and give trauma care now, with decontamination as part of care. Radioactive contamination is rarely an immediate danger.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2818,
+      "text": "Doubling your distance from a radiation source reduces your dose rate to:",
+      "options": [
+        "1/4",
+        "No change",
+        "1/8",
+        "1/2"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Radiation follows the inverse-square law, so doubling your distance from a source cuts the dose rate to one quarter.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2819,
+      "text": "Potassium iodide is indicated when:",
+      "options": [
+        "Treating ARS",
+        "Any radiation event occurs",
+        "Radioactive iodine release threatens thyroid uptake",
+        "For dirty bombs with cesium"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Potassium iodide only protects the thyroid from radioactive iodine. It does nothing for other radioactive materials or for radiation sickness.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2820,
+      "text": "You receive a call about a white powder in an opened envelope at an office. Best initial action:",
+      "options": [
+        "Vacuum the powder",
+        "Shake the envelope to see contents",
+        "Isolate the area, keep the envelope still, wash hands with soap and water, notify law enforcement/HazMat",
+        "Give everyone antibiotics"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Isolate the area, leave the envelope undisturbed, have exposed people wash their hands with soap and water, and notify law enforcement and HazMat. Antibiotics are given only if testing confirms a threat.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Biological and Radiological",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2821,
+      "text": "The most common mechanism of injury in explosions is:",
+      "options": [
+        "Secondary",
+        "Tertiary",
+        "Quinary",
+        "Primary"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Secondary blast injuries, from flying fragments and debris, injure the most people in an explosion.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2822,
+      "text": "Which organ is MOST susceptible to primary blast injury?",
+      "options": [
+        "Liver",
+        "Lungs",
+        "Spleen",
+        "Femur"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "The blast wave damages air-filled organs most: the lungs, the eardrums and the bowel.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2823,
+      "text": "A bus-bombing survivor with intact eardrums becomes hypoxic 6 hours later. This:",
+      "options": [
+        "Is CO only",
+        "Excludes blast lung",
+        "Is consistent with delayed blast lung",
+        "Is anxiety"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Blast lung can appear hours after an explosion, and intact eardrums do not rule it out. New hypoxia 6 hours later fits delayed blast lung.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2824,
+      "text": "In TECC Direct Threat (hot zone), the recommended medical intervention is:",
+      "options": [
+        "IV access",
+        "Intubation",
+        "Tourniquet for life-threatening extremity hemorrhage",
+        "Spinal immobilization"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Under direct threat (the hot zone), the only care is a tourniquet for life-threatening limb bleeding and moving the casualty to cover. Other care waits until the threat is controlled.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2825,
+      "text": "THREAT's 'H' stands for:",
+      "options": [
+        "Hospital",
+        "Hazards",
+        "Hot zone",
+        "Hemorrhage control"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "THREAT stands for Threat suppression, Hemorrhage control, Rapid Extrication to safety, Assessment by medical providers and Transport. H is hemorrhage control.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2826,
+      "text": "A Rescue Task Force typically operates in the:",
+      "options": [
+        "Hospital",
+        "Hot zone without escort",
+        "Cold zone only",
+        "Warm zone with law-enforcement escort"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "A Rescue Task Force enters the warm zone, an area cleared but not fully secured, with a law enforcement escort to treat and remove casualties.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Explosive and Hostile Events",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2830,
+      "text": "Crowd crush victims mostly die from:",
+      "options": [
+        "Heat stroke",
+        "Trampling head injuries",
+        "Compressive asphyxia",
+        "Cardiac contusion"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "In a crowd crush, people are packed so tightly they cannot expand their chests, so most die from compressive asphyxia rather than trampling.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2831,
+      "text": "The FIRST hazard control at a rail derailment is:",
+      "options": [
+        "Calling the media",
+        "Extrication",
+        "Triage",
+        "Isolating electrical power"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "At a rail derailment, isolate electrical power first. Overhead lines and live third rails can kill rescuers.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2832,
+      "text": "Floodwater depth that can knock an adult off their feet if moving:",
+      "options": [
+        "~6 inches",
+        "~3 feet",
+        "Only above waist",
+        "~5 feet"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "About 6 inches of moving floodwater can knock an adult off their feet, so never walk or drive through moving water.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2833,
+      "text": "A marathon runner collapses, confused, temp 41.5 °C. Best initial action:",
+      "options": [
+        "Cold-water immersion on scene",
+        "Antipyretics",
+        "Transport immediately",
+        "Oral fluids only"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "Exertional heat stroke needs rapid cooling, ideally cold-water immersion, on scene before transport. Antipyretics do not work for heat stroke.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2834,
+      "text": "An unaccompanied 6-year-old at an MCI should be:",
+      "options": [
+        "Identified, photographed, tagged, and kept supervised until a verified guardian is found",
+        "Sent home by taxi",
+        "Left with green patients",
+        "Released to any adult who claims them"
+      ],
+      "correct_answer": "A",
+      "hint": null,
+      "explanation": "An unaccompanied child must be identified, documented and kept supervised until a verified guardian is found. Never release a child to an unverified adult.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2835,
+      "text": "During a prolonged power outage, which patients are highest priority for proactive outreach?",
+      "options": [
+        "Mild colds",
+        "Healthy adults",
+        "Ankle sprains",
+        "Ventilator and home O2-dependent patients"
+      ],
+      "correct_answer": "D",
+      "hint": null,
+      "explanation": "Patients who depend on ventilators or home oxygen deteriorate quickly without power, so they are the highest priority for outreach in a long outage.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Special Incidents",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2836,
+      "text": "Before terminating command, the MOST important check is:",
+      "options": [
+        "Media have left",
+        "Overtime is approved",
+        "Patient counts reconcile across tags, transport log, and hospitals",
+        "All units are home"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Before ending command, check that patient counts match across triage tags, the transport log and hospital reports. A mismatch may mean a patient is missing.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2837,
+      "text": "A hot wash is best described as:",
+      "options": [
+        "A media briefing",
+        "Decontamination of equipment",
+        "A brief informal debrief right after the incident",
+        "A formal written report weeks later"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "A hot wash is a short, informal debrief held right after the incident, focused on facts and safety issues.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2838,
+      "text": "Which approach to responder mental health is recommended?",
+      "options": [
+        "Ignore reactions",
+        "Psychological First Aid with voluntary peer support and follow-up",
+        "Immediate medication",
+        "Mandatory group debriefing for everyone"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Psychological First Aid, voluntary peer support and follow-up are recommended for responders. Mandatory group debriefing is not.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2839,
+      "text": "A paramedic reports nightmares and avoidance six weeks after an MCI and is drinking more. Best action:",
+      "options": [
+        "Tell them it's normal and will pass",
+        "Refer to professional mental-health support and peer support",
+        "Wait another 6 months",
+        "Discipline"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Nightmares, avoidance and increased drinking lasting over a month and affecting daily life need a referral to professional mental-health care, alongside peer support.",
+      "subject": "Disaster",
+      "difficulty": "medium",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2840,
+      "text": "Equipment used at a chemical MCI must be:",
+      "options": [
+        "Returned to service immediately",
+        "Decontaminated before returning to service",
+        "Left on scene",
+        "Discarded always"
+      ],
+      "correct_answer": "B",
+      "hint": null,
+      "explanation": "Equipment from a chemical incident must be decontaminated before it goes back into service, or it can harm the next crew and patient.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
+    },
+    {
+      "id": 2841,
+      "text": "The three PFA actions are:",
+      "options": [
+        "Sort, Assess, Treat",
+        "Stop, Drop, Roll",
+        "Look, Listen, Link",
+        "Assess, Treat, Transport"
+      ],
+      "correct_answer": "C",
+      "hint": null,
+      "explanation": "Psychological First Aid follows three actions: Look for people in need, Listen to them and Link them to help.",
+      "subject": "Disaster",
+      "difficulty": "easy",
+      "topic": "Recovery and Resilience",
+      "source": "smartcare-mci-course"
     }
   ]
 }
