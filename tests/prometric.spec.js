@@ -5,13 +5,13 @@ const EXAM_PAGE = `${BASE}/src/prometric/exam.html`;
 const DB_URL = `${BASE}/src/prometric/exam-db.json`;
 
 // ── 1. Database integrity ──────────────────────────────────────────────
-test('exam-db.json has 2497 questions and 17 categories', async ({ request }) => {
+test('exam-db.json has 2583 questions and 17 categories', async ({ request }) => {
   const resp = await request.get(DB_URL);
   expect(resp.ok()).toBeTruthy();
   const db = await resp.json();
 
   expect(db.title).toBe('EMT Basic Exam Database');
-  expect(db.questions.length).toBe(2497);
+  expect(db.questions.length).toBe(2583);
   expect(db.categories.length).toBe(17);
 
   // Every question must have the required fields
@@ -20,7 +20,8 @@ test('exam-db.json has 2497 questions and 17 categories', async ({ request }) =>
     expect(typeof q.text).toBe('string');
     expect(q.text.length).toBeGreaterThan(5);
     expect(Array.isArray(q.options)).toBe(true);
-    expect(q.options.length).toBeGreaterThanOrEqual(1);
+    // Every question needs at least two choices (true/false is the smallest)
+    expect(q.options.length).toBeGreaterThanOrEqual(2);
     expect(['A', 'B', 'C', 'D']).toContain(q.correct_answer);
     expect(['easy', 'medium', 'hard']).toContain(q.difficulty);
     expect(typeof q.subject).toBe('string');
@@ -29,7 +30,7 @@ test('exam-db.json has 2497 questions and 17 categories', async ({ request }) =>
 
   // Newly imported questions (id > 879) must all have 4 options + source
   const imported = db.questions.filter(q => q.id > 879);
-  expect(imported.length).toBe(1677);
+  expect(imported.length).toBe(1763);
   for (const q of imported) {
     expect(q.options.length).toBe(4);
     expect(typeof q.source).toBe('string');
@@ -52,6 +53,7 @@ test('question bank has no import artifacts or duplicates', async ({ request }) 
       if (/\S \? \S/.test(v)) problems.push(`${q.id} '?' in place of an arrow`);
       if (/\s+[,.;:?!]$/.test(v)) problems.push(`${q.id} space before punctuation`);
       if (/:-\s*$/.test(v)) problems.push(`${q.id} ends with ':-'`);
+      if (/â€|Â|Ã/.test(v)) problems.push(`${q.id} garbled characters: ${v.slice(0, 50)}`);
     }
     if (/\b(?:option|answer|choice)\s+[A-D]\b|\([A-D]\)/.test(q.explanation || '')) problems.push(`${q.id} explanation names a letter`);
     const key = norm(q.text) + '|' + q.options.map(norm).sort().join('|');
@@ -89,7 +91,7 @@ test('every category is selectable and the whole bank is available', async ({ pa
   await expect(page.locator('.topic-checkbox input')).toHaveCount(db.categories.length);
   const topics = await page.locator('.topic-checkbox input').evaluateAll(els => els.map(e => e.value));
   expect([...topics].sort()).toEqual([...db.categories].sort());
-  await expect(page.locator('#available-count')).toHaveText('2,497 questions match');
+  await expect(page.locator('#available-count')).toHaveText('2,583 questions match');
 });
 
 test('topic drill only uses the chosen topics and needs at least one', async ({ page }) => {
@@ -102,13 +104,13 @@ test('topic drill only uses the chosen topics and needs at least one', async ({ 
   await expect(page.locator('#available-count')).toHaveText('0 questions match');
   await expect(page.locator('#start-exam')).toBeDisabled();
 
-  await page.locator('.topic-checkbox', { hasText: 'Disaster' }).click();
-  await expect(page.locator('#available-count')).toHaveText('15 questions match');
-  await expect(page.locator('#start-exam')).toHaveText('Start 15-question exam');
+  await page.locator('.topic-checkbox', { hasText: 'Patient Safety' }).click();
+  await expect(page.locator('#available-count')).toHaveText('6 questions match');
+  await expect(page.locator('#start-exam')).toHaveText('Start 6-question exam');
   await page.locator('#start-exam').click();
   await expect(page.locator('#exam-screen')).toBeVisible();
   const subjects = await page.evaluate(() => [...new Set(window.examEngine.questions.map(q => q.subject))]);
-  expect(subjects).toEqual(['Disaster']);
+  expect(subjects).toEqual(['Patient Safety']);
 });
 
 test('setup choices are remembered on the next visit', async ({ page }) => {

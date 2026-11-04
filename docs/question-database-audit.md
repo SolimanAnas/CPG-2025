@@ -170,7 +170,7 @@ The scan flags ~25 questions with only 2 options (ACLS 6/8, PALS 19, Medical 4/5
 
 ## 6. Follow-up: Prometric bank cleanup (November 2026)
 
-The Prometric findings above were acted on in `src/prometric/exam-db.json`, applying the same edits as the SmartCare copy of this bank. This bank has no paramedic (ALS) set or `level` field. The 13 single-option questions (713–729) are unchanged here; SmartCare had already given them four answer choices before this cleanup.
+The Prometric findings above were acted on in `src/prometric/exam-db.json`, applying the same edits as the SmartCare copy of this bank. This bank has no paramedic (ALS) set or `level` field. The 13 single-option questions (713–729) now have the four answer choices and explanations SmartCare gave them; their answer keys are unchanged, and the correct answers of 719 and 728 use SmartCare's tighter wording. The garbled characters (`â€”`, `Â°`) in 17 questions (59, 65, 66, 72, 73, 74, 78, 80, 85, 87, 91, 94, 117, 132, 143, 146, 339) are also fixed, as in SmartCare. Question 721's answer now reads "Protect the airway and suction secretions as needed", so it no longer teaches routine suctioning during a seizure. Its explanation adds checking blood glucose as the second step.
 
 ### What changed
 
@@ -226,3 +226,28 @@ Removed, leaving **2,497** questions:
 Wording: question 502's answer "Mental retardation" now reads "Intellectual disability", and the stems of 13, 14, 15, 19, 20 and 29 no longer end in `:-`.
 
 The new explanations follow the key of each question and current EMT teaching, but like the rest of this bank (`review_status: unreviewed`) they have not had a clinical review.
+
+---
+
+## 7. Disaster questions added from the MCI course (November 2026)
+
+The Disaster category had 15 questions, all from the BDLS course. 86 EMT-level questions from the MCI course practice bank were added, the same set as the SmartCare copy of this bank with the same ids (2750–2841, minus the six paramedic-level ones), bringing it to 101. They carry `source: "smartcare-mci-course"`.
+
+| Area | Questions |
+|---|---|
+| Triage (START, JumpSTART, SALT, tags, re-triage) | 21 |
+| Explosive and hostile events (blast, secondary devices, TECC, Rescue Task Force) | 8 |
+| MCI fundamentals (definitions, open/closed and simple/compound incidents) | 8 |
+| Chemical agents (nerve agents, cyanide, phosgene, mustard, opioids, chlorine) | 5 |
+| Biological and radiological (smallpox, anthrax, botulism, dirty bombs, KI) | 8 |
+| Special incidents (crush, crowds, floods, heat, power outages, unaccompanied children) | 6 |
+| Incident command (ICS roles, span of control, Unified Command, freelancing) | 7 |
+| Treatment area and transport | 6 |
+| Hazardous materials (Step 1-2-3, ERG, NFPA 704, PPE, decon) | 6 |
+| Recovery and responder resilience | 6 |
+| Scene management (zones, treatment area, vehicle flow) | 5 |
+
+This bank is EMT-only, so the six that need advanced skills (atropine titration, antidote kits plus a benzodiazepine for severe nerve-agent poisoning, hydroxocobalamin, blast-lung ventilation, and crush-syndrome fluids and calcium) were not added.
+
+Left out: questions on local officer roles and action cards, the METHANE and CSCATTT report formats, and questions that repeated a concept already covered. Each added question has a new full-sentence explanation; the course's terse notes and its "Review Chapter" hints were not carried over. Answer choices were reworded in four questions: PPE levels now read "Level A" to "Level D", and two scenario answers and one option no longer use `>` or capitals for emphasis.
+
