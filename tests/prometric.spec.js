@@ -53,6 +53,7 @@ test('question bank has no import artifacts or duplicates', async ({ request }) 
       if (/\S \? \S/.test(v)) problems.push(`${q.id} '?' in place of an arrow`);
       if (/\s+[,.;:?!]$/.test(v)) problems.push(`${q.id} space before punctuation`);
       if (/:-\s*$/.test(v)) problems.push(`${q.id} ends with ':-'`);
+      if (/â€|Â|Ã/.test(v)) problems.push(`${q.id} garbled characters: ${v.slice(0, 50)}`);
     }
     if (/\b(?:option|answer|choice)\s+[A-D]\b|\([A-D]\)/.test(q.explanation || '')) problems.push(`${q.id} explanation names a letter`);
     const key = norm(q.text) + '|' + q.options.map(norm).sort().join('|');
