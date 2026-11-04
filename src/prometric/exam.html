@@ -2,404 +2,377 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>EMT Exam Engine — NREMT Prometric</title>
-<meta name="description" content="NREMT Prometric Mock Test Engine for EMT Basic Practice — 2,559 questions, 17 categories">
-<meta name="theme-color" content="#3b82f6">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="NREMT Prometric Mock Test Engine for EMT Basic Practice — 2,497 questions, 17 categories">
+<meta name="theme-color" content="#08111f">
+<link rel="stylesheet" href="../../fonts/fonts.css">
 <link rel="stylesheet" href="exam.css">
+<script src="../../src/theme.js"></script>
+<script>SmartTheme.init();</script>
 </head>
 <body>
 
-<div id="loading-overlay" class="loading-overlay">
-  <div class="loading-spinner"></div>
-  <span class="loading-text">Loading Exam Engine…</span>
+<div id="loading-overlay" class="loading-overlay" role="status">
+  <div class="loading-spinner" aria-hidden="true"></div>
+  <span class="loading-text">Loading the question bank…</span>
 </div>
 
-<a href="../../index.html" class="home-btn" title="Back to Home">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-</a>
-
 <div id="app">
-  <div class="theme-header">
-    <button class="theme-btn" data-theme="light" title="Light">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
-    <button class="theme-btn" data-theme="dark" title="Dark">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-    <button class="theme-btn" data-theme="sepia" title="Sepia">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-    </button>
-  </div>
 
-  <div id="start-screen" class="screen active">
-    <div class="wizard-container">
-      <div class="wizard-header">
-        <div class="wizard-badge">NREMT</div>
-        <h1>Prometric Mock Test</h1>
-        <p class="subtitle">EMT Basic Practice Engine — 2,559 Questions</p>
-      </div>
-
-      <div class="wizard-steps">
-        <div class="step-indicator active" data-step="1">
-          <span class="step-number">1</span>
-          <span class="step-label">Mode</span>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step-indicator" data-step="2">
-          <span class="step-number">2</span>
-          <span class="step-label">Topics</span>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step-indicator" data-step="3">
-          <span class="step-number">3</span>
-          <span class="step-label">Settings</span>
-        </div>
-      </div>
-
-      <div class="wizard-step active" data-step="1">
-        <h3>Choose Your Exam Mode</h3>
-        <div class="mode-cards">
-          <div class="mode-card selected" data-mode="random">
-            <div class="mode-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="8" height="8" rx="1"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="18" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="18" r="1" fill="currentColor"/><circle cx="18" cy="18" r="1" fill="currentColor"/></svg></div>
-            <h4>Random Mixed</h4>
-            <p>All topics, shuffled</p>
-          </div>
-          <div class="mode-card" data-mode="topic">
-            <div class="mode-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-            <h4>Topic-Based</h4>
-            <p>Selected subjects</p>
-          </div>
-          <div class="mode-card" data-mode="cat">
-            <div class="mode-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20.66 7A10 10 0 0 0 14 2v6h6.66z" opacity="0.4"/></svg></div>
-            <h4>CAT Mode</h4>
-            <p>Adaptive</p>
-          </div>
-          <div class="mode-card" data-mode="spaced">
-            <div class="mode-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
-            <h4>Spaced Repetition</h4>
-            <p>Weak areas</p>
-          </div>
-        </div>
-        <div class="wizard-nav">
-          <button class="btn-primary wizard-next" data-next="2">Next <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-right"/></svg></button>
-        </div>
-      </div>
-
-      <div class="wizard-step" data-step="2">
-        <h3>Select Topics <span class="optional-note">(Optional)</span></h3>
-        <p class="step-hint">Skip to include all topics</p>
-        <div class="topics-grid">
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Fundamentals and Operations" checked>
-            <span class="topic-name">Fundamentals and Operations</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Trauma" checked>
-            <span class="topic-name">Trauma</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Shock and Resuscitation" checked>
-            <span class="topic-name">Shock and Resuscitation</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Pediatrics" checked>
-            <span class="topic-name">Pediatrics</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="OB/GYN" checked>
-            <span class="topic-name">OB/GYN</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Airway" checked>
-            <span class="topic-name">Airway</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Patient Assessment" checked>
-            <span class="topic-name">Patient Assessment</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Medical/Behavioral/Geriatric" checked>
-            <span class="topic-name">Medical/Behavioral/Geriatric</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Environmental and Toxicology" checked>
-            <span class="topic-name">Environmental and Toxicology</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Disaster" checked>
-            <span class="topic-name">Disaster</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Professionalism and Ethics" checked>
-            <span class="topic-name">Professionalism and Ethics</span>
-          </label>
-          <label class="topic-checkbox">
-            <input type="checkbox" value="Patient Safety" checked>
-            <span class="topic-name">Patient Safety</span>
-          </label>
-        </div>
-        <div class="select-all-row">
-          <button class="btn-link" id="select-all-topics">Select All</button>
-          <button class="btn-link" id="clear-all-topics">Clear All</button>
-        </div>
-        <div class="wizard-nav">
-          <button class="btn-secondary wizard-prev" data-prev="1"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg> Back</button>
-          <button class="btn-primary wizard-next" data-next="3">Next <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-right"/></svg></button>
-        </div>
-      </div>
-
-      <div class="wizard-step" data-step="3">
-        <h3>Configure Your Exam</h3>
-        <div class="settings-grid">
-          <div class="setting-card">
-            <label>Number of Questions</label>
-            <div class="setting-options">
-              <button class="setting-btn" data-value="10" data-setting="count">10</button>
-              <button class="setting-btn" data-value="25" data-setting="count">25</button>
-              <button class="setting-btn selected" data-value="50" data-setting="count">50</button>
-              <button class="setting-btn" data-value="100" data-setting="count">100</button>
-            </div>
-            <div id="available-count" class="available-count"></div>
-          </div>
-          <div class="setting-card" id="difficulty-filter-card">
-            <label>Difficulty Filter</label>
-            <div class="setting-options">
-              <button class="setting-btn selected" data-value="all" data-setting="difficulty">All</button>
-              <button class="setting-btn" data-value="easy" data-setting="difficulty">Easy</button>
-              <button class="setting-btn" data-value="medium" data-setting="difficulty">Medium</button>
-              <button class="setting-btn" data-value="hard" data-setting="difficulty">Hard</button>
-            </div>
-          </div>
-          <div class="setting-card">
-            <label>Timer Mode</label>
-            <div class="setting-options">
-              <button class="setting-btn" data-value="timed" data-setting="timer">Timed</button>
-              <button class="setting-btn selected" data-value="tutor" data-setting="timer">Tutor Mode</button>
-            </div>
-          </div>
-          <div class="setting-card">
-            <label>Show Score During Exam</label>
-            <div class="setting-options">
-              <button class="setting-btn" data-value="hide" data-setting="score">Hide</button>
-              <button class="setting-btn selected" data-value="show" data-setting="score">Show</button>
-            </div>
-          </div>
-        </div>
-        <div class="wizard-nav">
-          <button class="btn-secondary wizard-prev" data-prev="2"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg> Back</button>
-          <button id="start-exam" class="btn-primary start-btn">Start Exam</button>
-        </div>
-      </div>
-
-      <div class="quick-links">
-        <a href="#" id="view-analytics-home" class="link-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 6px;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          Analytics Dashboard
-        </a>
-      </div>
+  <!-- App bar: shown on every screen except the exam itself -->
+  <header class="app-bar" id="app-bar">
+    <a href="../../index.html" class="icon-btn" aria-label="Back to SmartCare home">
+      <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg>
+    </a>
+    <div class="app-title">
+      <span class="app-name">Prometric mock exam</span>
+      <span class="app-sub">NREMT-style EMT practice</span>
     </div>
-  </div>
+    <button type="button" id="view-analytics-home" class="icon-btn" aria-label="Your progress">
+      <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#chart-no-axes-column"/></svg>
+    </button>
+    <button type="button" class="icon-btn theme-toggle" aria-label="Change theme">
+      <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#moon"/></svg>
+    </button>
+  </header>
 
-  <div id="exam-screen" class="screen">
-    <div class="progress-bar-container">
-      <div class="progress-bar-fill" id="progress-fill"></div>
+  <!-- ── Setup ─────────────────────────────────────────────── -->
+  <section id="start-screen" class="screen active" aria-labelledby="setup-title">
+    <div class="setup">
+      <h1 id="setup-title" class="sr-only">Set up your exam</h1>
+
+      <div id="progress-summary" class="progress-summary" hidden>
+        <div class="ps-figures">
+          <div class="ps-figure">
+            <span class="ps-value" id="ps-last">0%</span>
+            <span class="ps-label">Last exam</span>
+          </div>
+          <div class="ps-figure">
+            <span class="ps-value" id="ps-avg">0%</span>
+            <span class="ps-label" id="ps-avg-label">Average</span>
+          </div>
+        </div>
+        <button type="button" class="btn-ghost" id="ps-analytics">See progress</button>
+      </div>
+
+      <fieldset class="setup-section">
+        <legend class="section-title">Exam type</legend>
+        <div class="mode-list">
+          <label class="mode-option" data-mode="random">
+            <input type="radio" name="mode" value="random" checked>
+            <span class="mode-icon" aria-hidden="true"><svg class="lucide"><use href="../../icons/sprite.svg#layout-grid"/></svg></span>
+            <span class="mode-text">
+              <span class="mode-name">Mixed practice</span>
+              <span class="mode-desc">Shuffled questions from every topic</span>
+            </span>
+          </label>
+          <label class="mode-option" data-mode="topic">
+            <input type="radio" name="mode" value="topic">
+            <span class="mode-icon" aria-hidden="true"><svg class="lucide"><use href="../../icons/sprite.svg#book-open"/></svg></span>
+            <span class="mode-text">
+              <span class="mode-name">Topic drill</span>
+              <span class="mode-desc">Pick the subjects you want to practice</span>
+            </span>
+          </label>
+          <label class="mode-option" data-mode="cat">
+            <input type="radio" name="mode" value="cat">
+            <span class="mode-icon" aria-hidden="true"><svg class="lucide"><use href="../../icons/sprite.svg#trending-up"/></svg></span>
+            <span class="mode-text">
+              <span class="mode-name">Adaptive</span>
+              <span class="mode-desc">Gets harder or easier as you answer</span>
+            </span>
+          </label>
+          <label class="mode-option" data-mode="spaced">
+            <input type="radio" name="mode" value="spaced">
+            <span class="mode-icon" aria-hidden="true"><svg class="lucide"><use href="../../icons/sprite.svg#target"/></svg></span>
+            <span class="mode-text">
+              <span class="mode-name">Weak areas</span>
+              <span class="mode-desc" id="spaced-desc">Topics you score under 70% in, then questions you haven't seen</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <section class="setup-section" id="topic-section" hidden aria-labelledby="topics-title">
+        <div class="section-head">
+          <h2 class="section-title" id="topics-title">Topics</h2>
+          <div class="section-actions">
+            <button type="button" class="btn-link" id="select-all-topics">Select all</button>
+            <button type="button" class="btn-link" id="clear-all-topics">Clear</button>
+          </div>
+        </div>
+        <div class="topics-grid" id="topics-grid"></div>
+      </section>
+
+      <section class="setup-section" aria-labelledby="options-title">
+        <h2 class="section-title" id="options-title">Options</h2>
+
+
+        <div class="setting-row">
+          <span class="setting-label" id="lbl-count">Questions</span>
+          <div class="segmented" role="group" aria-labelledby="lbl-count">
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="10" data-setting="count">10</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="25" data-setting="count">25</button>
+            <button type="button" class="setting-btn selected" aria-pressed="true" data-value="50" data-setting="count">50</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="100" data-setting="count">100</button>
+          </div>
+        </div>
+
+        <div class="setting-row" id="difficulty-row">
+          <span class="setting-label" id="lbl-difficulty">Difficulty</span>
+          <div class="segmented" role="group" aria-labelledby="lbl-difficulty">
+            <button type="button" class="setting-btn selected" aria-pressed="true" data-value="all" data-setting="difficulty">All</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="easy" data-setting="difficulty">Easy</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="medium" data-setting="difficulty">Medium</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="hard" data-setting="difficulty">Hard</button>
+          </div>
+          <p class="setting-hint" id="difficulty-hint" hidden>Adaptive exams set the difficulty for you.</p>
+        </div>
+
+        <div class="setting-row">
+          <span class="setting-label" id="lbl-timer">Timer</span>
+          <div class="segmented" role="group" aria-labelledby="lbl-timer">
+            <button type="button" class="setting-btn selected" aria-pressed="true" data-value="tutor" data-setting="timer">Untimed</button>
+            <button type="button" class="setting-btn" aria-pressed="false" data-value="timed" data-setting="timer">Timed</button>
+          </div>
+          <p class="setting-hint" id="timer-hint">The clock counts up so you can see your pace.</p>
+        </div>
+
+        <label class="switch-row">
+          <span class="switch-text">
+            <span class="setting-label">Show my score during the exam</span>
+          </span>
+          <input type="checkbox" id="score-toggle" class="switch" checked>
+        </label>
+      </section>
+
+      <p class="disclaimer">
+        Study aid only, not for direct patient care.
+        <a href="../../pages/about.html#disclaimer">Read the disclaimer</a>
+      </p>
     </div>
 
-    <div class="exam-layout">
-      <div class="left-panel">
-        <div class="nav-header">
-          <h4>Questions</h4>
-          <span id="question-counter">1 of 50</span>
-        </div>
-        <div id="question-nav" class="question-nav"></div>
-        <div class="nav-legend">
-          <span class="legend-item"><span class="dot answered"></span> Answered</span>
-          <span class="legend-item"><span class="dot flagged"></span> Flagged</span>
-          <span class="legend-item"><span class="dot current"></span> Current</span>
-        </div>
+    <div class="start-bar">
+      <div class="start-bar-inner">
+        <p class="start-summary">
+          <span id="available-count" class="available-count"></span>
+          <span id="exam-length" class="exam-length"></span>
+        </p>
+        <button type="button" id="start-exam" class="btn-primary start-btn">Start exam</button>
       </div>
+    </div>
+  </section>
 
-      <div class="main-panel">
-        <button id="focus-mode" class="focus-toggle" title="Toggle Focus Mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+  <!-- ── Exam ──────────────────────────────────────────────── -->
+  <section id="exam-screen" class="screen" aria-label="Exam">
+    <header class="exam-bar">
+      <div class="exam-bar-row">
+        <button type="button" id="exit-exam" class="icon-btn" aria-label="End exam">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg>
         </button>
+        <span id="question-counter" class="question-counter">1 / 50</span>
+        <span class="bar-spacer"></span>
+        <span id="live-score" class="live-score hidden" title="Correct so far">
+          <span id="current-score">0%</span><span class="score-suffix"> correct</span>
+        </span>
+        <button type="button" id="pause-exam" class="timer-btn" aria-describedby="timer-label">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#pause"/></svg>
+          <span id="timer" class="timer">00:00</span>
+          <span id="timer-label" class="sr-only">Elapsed. Select to pause.</span>
+        </button>
+        <button type="button" id="flag-question" class="icon-btn bar-btn" aria-pressed="false">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#flag"/></svg>
+          <span class="btn-label">Flag</span>
+        </button>
+        <button type="button" id="toggle-navigator" class="icon-btn bar-btn" aria-controls="nav-panel" aria-expanded="false">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#layout-grid"/></svg>
+          <span class="btn-label">Questions</span>
+        </button>
+      </div>
+      <div id="status-strip" class="status-strip" aria-hidden="true"></div>
+    </header>
 
-        <div class="question-header">
-          <span id="question-subject" class="subject-badge"></span>
-          <span id="question-difficulty" class="difficulty-badge"></span>
-          <span id="question-topic" class="topic-badge"></span>
-          <div id="cat-indicator" class="cat-indicator hidden"></div>
+    <div class="exam-body">
+      <div class="question-col">
+        <div class="question-scroll" id="question-scroll">
+          <article class="question-inner">
+            <div class="question-meta">
+              <span id="question-subject" class="subject-badge"></span>
+              <span id="question-difficulty" class="difficulty-badge"></span>
+              <span id="question-topic" class="topic-badge"></span>
+              <span id="cat-indicator" class="cat-indicator hidden"></span>
+            </div>
+            <h2 id="question-stem" class="question-stem"></h2>
+            <div id="options-container" class="options-container" role="group" aria-label="Answer choices"></div>
+            <div id="hint-container" class="hint-container hidden">
+              <button type="button" id="show-hint" class="btn-ghost hint-btn">
+                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#lightbulb"/></svg>
+                Show hint
+              </button>
+              <p id="hint-text" class="hint-text" tabindex="-1" hidden>
+                <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#lightbulb"/></svg>
+                <span></span>
+              </p>
+            </div>
+            <div id="explanation-container" class="explanation-container hidden" role="status"></div>
+          </article>
         </div>
-        <div id="question-stem" class="question-stem"></div>
-        <div id="options-container" class="options-container"></div>
-        <div id="explanation-container" class="explanation-container hidden"></div>
-        <div class="question-actions">
-          <button id="flag-question" class="btn-secondary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-            Mark for Review
+
+        <footer class="exam-actions">
+          <button type="button" id="prev-question" class="btn-nav" aria-label="Previous question">
+            <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg>
           </button>
-          <button id="submit-answer" class="btn-primary" disabled>Select an Answer</button>
-        </div>
+          <button type="button" id="submit-answer" class="btn-primary" disabled>Select an answer</button>
+          <button type="button" id="next-question" class="btn-nav" aria-label="Next question">
+            <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-right"/></svg>
+          </button>
+        </footer>
       </div>
 
-      <div class="right-panel">
-        <div class="timer-container">
-          <div id="timer" class="timer">60:00</div>
-          <span class="timer-label">Time Remaining</span>
-        </div>
-        <div id="live-score" class="live-score hidden">
-          <div class="score-label">Current Score</div>
-          <div id="current-score" class="score-value">--%</div>
-        </div>
-        <div class="control-buttons">
-          <button id="pause-exam" class="btn-secondary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
-            Pause
-          </button>
-          <button id="end-exam" class="btn-danger">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
-            End Exam
+      <aside id="nav-panel" class="nav-panel" aria-labelledby="nav-title">
+        <div class="sheet-handle" aria-hidden="true"></div>
+        <div class="nav-head">
+          <h2 id="nav-title">Questions</h2>
+          <button type="button" id="close-navigator" class="icon-btn" aria-label="Close question list">
+            <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#x"/></svg>
           </button>
         </div>
-        <div class="progress-info">
-          <div class="progress-item">
-            <span class="progress-label">Answered</span>
-            <span id="answered-count" class="progress-value">0</span>
-          </div>
-          <div class="progress-item">
-            <span class="progress-label">Flagged</span>
-            <span id="flagged-count" class="progress-value">0</span>
-          </div>
-          <div class="progress-item">
-            <span class="progress-label">Remaining</span>
-            <span id="remaining-count" class="progress-value">50</span>
-          </div>
+
+        <dl class="nav-stats">
+          <div><dt>Answered</dt><dd id="answered-count">0</dd></div>
+          <div><dt>Flagged</dt><dd id="flagged-count">0</dd></div>
+          <div><dt>Left</dt><dd id="remaining-count">50</dd></div>
+          <div id="nav-score-cell" hidden><dt>Score</dt><dd id="nav-score">–</dd></div>
+        </dl>
+
+        <div id="question-nav" class="question-nav"></div>
+
+        <ul class="nav-legend">
+          <li><span class="dot is-current"></span>Current</li>
+          <li><span class="dot is-correct"></span>Correct</li>
+          <li><span class="dot is-incorrect"></span>Incorrect</li>
+          <li><span class="dot is-flagged"></span>Flagged</li>
+        </ul>
+
+        <div class="nav-tools">
+          <button type="button" class="btn-secondary theme-toggle" aria-label="Change theme">
+            <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#moon"/></svg>
+            <span class="theme-name">Dark</span>
+          </button>
+          <button type="button" id="end-exam" class="btn-danger-outline">End exam</button>
         </div>
-      </div>
+
+        <p class="kbd-hint">
+          <kbd>A</kbd>–<kbd>D</kbd> choose, <kbd>Enter</kbd> check, <kbd>F</kbd> flag, <kbd>H</kbd> hint,
+          <kbd>←</kbd> <kbd>→</kbd> move
+        </p>
+      </aside>
     </div>
 
-    <div class="mobile-tabs">
-      <button class="mobile-tab active" data-panel="question">Question</button>
-      <button class="mobile-tab" data-panel="nav">Navigator</button>
-      <button class="mobile-tab" data-panel="stats">Stats</button>
-    </div>
+    <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  </section>
 
-    <div class="exam-footer">
-      <button id="prev-question" class="btn-nav"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg> Previous</button>
-      <div class="kbd-hint">
-        <kbd>A</kbd><kbd>B</kbd><kbd>C</kbd><kbd>D</kbd> select
-        <kbd>Enter</kbd> submit
-        <kbd>F</kbd> flag
-        <kbd><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg></kbd><kbd><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-right"/></svg></kbd> navigate
-      </div>
-      <button id="next-question" class="btn-nav">Next <svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-right"/></svg></button>
-    </div>
-  </div>
-
-  <div id="review-screen" class="screen">
-    <div class="review-container">
-      <div class="review-header">
-        <h2>Exam Complete!</h2>
-        <div class="pass-indicator" id="pass-indicator"></div>
-      </div>
+  <!-- ── Score summary ─────────────────────────────────────── -->
+  <section id="review-screen" class="screen" aria-labelledby="review-title">
+    <div class="page">
       <div class="score-summary">
-        <div class="score-circle">
+        <div class="score-circle" id="score-circle" style="--pct: 0">
           <span id="final-score">0%</span>
         </div>
-        <div class="score-details">
-          <div class="score-stat">
-            <span class="stat-value correct" id="correct-count">0</span>
-            <span class="stat-label">Correct</span>
-          </div>
-          <div class="score-stat">
-            <span class="stat-value incorrect" id="incorrect-count">0</span>
-            <span class="stat-label">Incorrect</span>
-          </div>
-          <div class="score-stat">
-            <span class="stat-value" id="time-spent">00:00</span>
-            <span class="stat-label">Time Spent</span>
-          </div>
+        <div class="score-text">
+          <h1 id="review-title" class="review-title">Exam complete</h1>
+          <p class="pass-indicator" id="pass-indicator"></p>
         </div>
       </div>
+
+      <dl class="score-details">
+        <div class="score-stat"><dt>Correct</dt><dd class="stat-value correct" id="correct-count">0</dd></div>
+        <div class="score-stat"><dt>Incorrect</dt><dd class="stat-value incorrect" id="incorrect-count">0</dd></div>
+        <div class="score-stat"><dt>Unanswered</dt><dd class="stat-value" id="unanswered-count">0</dd></div>
+        <div class="score-stat"><dt>Time</dt><dd class="stat-value" id="time-spent">00:00</dd></div>
+      </dl>
+
+      <div class="review-actions">
+        <button type="button" id="review-questions" class="btn-primary">Review answers</button>
+        <button type="button" id="retry-incorrect" class="btn-secondary">Retry missed</button>
+        <button type="button" id="new-exam" class="btn-secondary">New exam</button>
+      </div>
+
       <div id="exam-insights" class="exam-insights"></div>
       <div id="topic-performance" class="topic-performance"></div>
-      <div class="review-actions">
-        <button id="review-questions" class="btn-primary">Review Questions</button>
-        <button id="retry-incorrect" class="btn-secondary">Retry Incorrect</button>
-        <button id="new-exam" class="btn-secondary">New Exam</button>
-      </div>
     </div>
-  </div>
+  </section>
 
-  <div id="results-screen" class="screen">
-    <div class="results-container">
-      <h2>Question Review</h2>
+  <!-- ── Question review ───────────────────────────────────── -->
+  <section id="results-screen" class="screen" aria-labelledby="results-title">
+    <div class="page">
+      <div class="page-head">
+        <button type="button" id="back-to-review" class="btn-ghost">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg>
+          Score summary
+        </button>
+        <h1 id="results-title" class="page-title">Review answers</h1>
+      </div>
+      <div class="filter-chips" id="results-filters" role="group" aria-label="Show questions"></div>
       <div id="results-list" class="results-list"></div>
-      <div class="results-actions">
-        <button id="back-to-review" class="btn-primary">Back to Summary</button>
-      </div>
     </div>
-  </div>
+  </section>
 
-  <div id="analytics-screen" class="screen">
-    <div class="analytics-container">
-      <div class="analytics-header">
-        <h2>Performance Analytics</h2>
-        <button id="analytics-back" class="btn-secondary"><svg class="lucide" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg> Back to Exam</button>
+  <!-- ── Analytics ─────────────────────────────────────────── -->
+  <section id="analytics-screen" class="screen" aria-labelledby="analytics-title">
+    <div class="page page-wide">
+      <div class="page-head">
+        <button type="button" id="analytics-back" class="btn-ghost">
+          <svg class="lucide" aria-hidden="true" focusable="false"><use href="../../icons/sprite.svg#arrow-left"/></svg>
+          Back
+        </button>
+        <h1 id="analytics-title" class="page-title">Your progress</h1>
       </div>
 
-      <div class="analytics-grid">
+      <div id="analytics-empty" class="empty-state" hidden>
+        <p>Finish an exam and your scores, trend and topic mastery will show up here.</p>
+        <button type="button" class="btn-primary" id="analytics-start">Set up an exam</button>
+      </div>
+
+      <div class="analytics-grid" id="analytics-content">
         <div class="analytics-card">
-          <h3>Overall Progress</h3>
-          <div class="stat-grid">
-            <div class="stat-box">
-              <span class="stat-number" id="total-exams">0</span>
-              <span class="stat-label">Exams Taken</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number" id="avg-score">0%</span>
-              <span class="stat-label">Average Score</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number" id="total-questions">0</span>
-              <span class="stat-label">Questions</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number" id="best-score">0%</span>
-              <span class="stat-label">Best Score</span>
-            </div>
-          </div>
+          <h2>Overview</h2>
+          <dl class="stat-grid">
+            <div class="stat-box"><dt>Exams taken</dt><dd class="stat-number" id="total-exams">0</dd></div>
+            <div class="stat-box"><dt>Average score</dt><dd class="stat-number" id="avg-score">0%</dd></div>
+            <div class="stat-box"><dt>Questions answered</dt><dd class="stat-number" id="total-questions">0</dd></div>
+            <div class="stat-box"><dt>Best score</dt><dd class="stat-number" id="best-score">0%</dd></div>
+          </dl>
         </div>
 
         <div class="analytics-card">
-          <h3>Improvement Curve</h3>
+          <h2>Score trend</h2>
           <div class="chart-container">
-            <canvas id="improvement-chart"></canvas>
+            <canvas id="improvement-chart" aria-label="Scores from your last 10 exams" role="img"></canvas>
           </div>
         </div>
 
         <div class="analytics-card full-width">
-          <h3>Topic Mastery Heatmap</h3>
+          <h2>Topic mastery</h2>
           <div id="heatmap-container" class="heatmap-container"></div>
         </div>
 
         <div class="analytics-card">
-          <h3>Strengths</h3>
+          <h2>Strongest topics</h2>
           <div id="strengths-list" class="performance-list"></div>
         </div>
 
         <div class="analytics-card">
-          <h3>Areas for Improvement</h3>
+          <h2>Topics to work on</h2>
           <div id="weaknesses-list" class="performance-list"></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 
+<script src="progress.js"></script>
 <script src="exam.js"></script>
 </body>
 </html>

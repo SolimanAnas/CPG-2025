@@ -4,7 +4,7 @@
 //  Goal: full offline support with a resilient app shell.
 // ============================================================
 
-const CACHE_VERSION = 'dcas-cpg-v8.2';   // Thinner greeting card; action icon key and tooltips
+const CACHE_VERSION = 'dcas-cpg-v8.3';   // Prometric exam redesign and question bank cleanup
 const CACHE_TIMEOUT = 5000;              // ms before falling back to cache
 const OFFLINE_URL   = 'offline.html';    // synthetic branded fallback page
 
@@ -51,7 +51,7 @@ const CONTENT_CACHE = [
   'pages/drug-calculator.js', 'pages/drug-data.json',
   // Prometric engine + bank
   'src/prometric/exam.html', 'src/prometric/exam.css', 'src/prometric/exam.js',
-  'src/prometric/exam-db.json',
+  'src/prometric/exam-db.json', 'src/prometric/progress.js', 'src/theme.js',
   // Question banks
   'src/ACLS/acls.json',
   'src/BLS/bls.json',
@@ -61,7 +61,7 @@ const CONTENT_CACHE = [
   'images/mci/start-adult-triage.webp', 'images/mci/methane-report.webp', 'images/mci/hazmat-placards.webp',
   'fonts/fonts.css', 'fonts/barlow-400.woff2', 'fonts/barlow-500.woff2', 'fonts/barlow-600.woff2',
   'fonts/barlow-700.woff2', 'fonts/barlow-condensed-600.woff2', 'fonts/barlow-condensed-700.woff2',
-  'fonts/dm-mono-400.woff2', 'fonts/dm-mono-500.woff2',
+  'fonts/dm-mono-400.woff2', 'fonts/dm-mono-500.woff2', 'fonts/inter-var.woff2',
   'src/Medical/medical.json',
   'src/PEPP/exam_a.json', 'src/PEPP/exam_b.json', 'src/PEPP/exam_c.json',
   'src/PEPP/exam_d.json', 'src/PEPP/pearls.json',

@@ -36,6 +36,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96x96.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/prometric/progress.js"></script>
     
     <style>
         /* ── Search ── */
@@ -1174,7 +1175,12 @@
     const COMPLETION_KEY = 'dcas_cpg_completion';
     const OPEN_GROUPS_KEY = 'dcas_home_open_groups';
     const STATS_KEY      = 'dcas_cpg_stats';
-    const EXAM_STATS_KEY = 'examStats';
+    // Prometric results come from src/prometric/progress.js.
+    function loadExamResults() {
+        const exams = window.PrometricProgress ? PrometricProgress.loadExams() : [];
+        // score is the number correct out of max, as the views below expect.
+        return exams.filter(e => e.total).map(e => ({ exam: 'Prometric mock exam', date: e.date, score: e.correct, max: e.total }));
+    }
 
     function loadStorage(key, def) { try { return JSON.parse(localStorage.getItem(key)) || def; } catch(e) { return def; } }
     function saveStorage(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {} }
@@ -1467,7 +1473,7 @@
     function showGlobalStatsModal() {
         const stats = loadStorage(STATS_KEY, { chapters: {}, totalAttempts: 0, critical: {total: 0, correct: 0}, flashcards: [], quizzes: [] });
         const completion = loadStorage(COMPLETION_KEY, {});
-        const examFromEngine = loadStorage(EXAM_STATS_KEY, []);
+        const examFromEngine = loadExamResults();
         
         const { done: completedCount, total: totalChaps, pct: overallPercent } = chapterProgress();
         
@@ -1636,7 +1642,7 @@
         if (confirm('Clear all statistics? This cannot be undone.')) {
             localStorage.removeItem(STATS_KEY);
             localStorage.removeItem(COMPLETION_KEY);
-            localStorage.removeItem(EXAM_STATS_KEY);
+            if (window.PrometricProgress) PrometricProgress.clear();
             location.reload();
         }
     }
